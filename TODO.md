@@ -7,7 +7,9 @@
 
 ----
 
-Prezado @leonardodias, agradeço pela cessão das imagens de sua famosa thread sobre "lawfare", assisti sua live "Guerra da Informação". Com base nela e nas investigações do @david_agape_ e @EliVieiraJr fiquei inspirado a criar uma área com as linhas de tempo de vários episódios de falhas sistêmicas e escândalos no Brasil usando 6 ferramentas de IA e 15 programas em python.
+Prezado @PastorMalafaia, agora que o senhor faz parte da grade de vítimas, lhe apresento um portal com a linha de tempo de eventos que estão em curso no Brasi, baseado em analises da investigação do cientista de dados @leonardodias, o quel cedeu imagens de seu famoso artigo "lawfare", ele tem um projeto chamado "Guerra da Informação" que estuda este cenário. 
+
+O portal usa as investigações dos jornalistas investigativos @david_agape_ e @EliVieiraJr, e foi inspirado no projeto "Guerra da Informação" para criar uma área com linhas de tempo de vários episódios de falhas sistêmicas e escândalos no Brasil usando várias ferramentas de IA e diversos programas em python.
 
 Incluo na conversa algumas pessoas cujo trabalho e opinião valorizo muito. Forte abraço. 🤝
 
@@ -72,6 +74,7 @@ Mais Lawfare: 🔗 https://tinyurl.com/lawfare-br
 
 --- CC: ---
 - @ClaudioLessa
+- @pfigueiredo08
 - @LeoVilhenaReal
 - @fabio_talhari
 - @auriverdebrasil
