@@ -12,13 +12,32 @@ mermaid: true
 - &nbsp;
 {:toc .large-only}
 
-Análise 5W2H do [dossiê](/estudos/lawfare-a-guerra-silenciosa-que-destroi-democracias) estruturando as informações e argumentos apresentados no documento.
+Análise 5W2H do [dossiê](/posts/lawfare-a-guerra-silenciosa-que-destroi-democracias) estruturando as informações e argumentos apresentados no documento.
 
 
 ### **⚖️⚔️ O Quê? (What?)**
 **O quê é o Lawfare, segundo o documento.**
 
-O [dossiê](/estudos/lawfare-a-guerra-silenciosa-que-destroi-democracias) define o Lawfare como a **guerra jurídica do século XXI**, uma estratégia que utiliza o sistema legal como uma arma para fins políticos, substituindo os meios militares tradicionais. Não se trata de buscar justiça, mas de usar processos, investigações e decisões judiciais para perseguir, deslegitimar e neutralizar adversários.
+```mermaid
+mindmap
+  root((O Quê? Definição e Táticas))
+    Definição
+      Guerra Jurídica do Século XXI
+      Uso da lei como arma política
+    Características
+      Disfarce de Legalidade
+      Seletividade Cirúrgica
+      Timing Político
+      Coordenação Institucional
+      O Processo como Punição
+    Táticas
+      Vazamentos Seletivos para Mídia
+      Prisões Preventivas Prolongadas
+      Lawfare Coletivo (Caso 8/1)
+      Criminalização Retroativa
+```
+
+O [dossiê](/posts/lawfare-a-guerra-silenciosa-que-destroi-democracias) define o Lawfare como a **guerra jurídica do século XXI**, uma estratégia que utiliza o sistema legal como uma arma para fins políticos, substituindo os meios militares tradicionais. Não se trata de buscar justiça, mas de usar processos, investigações e decisões judiciais para perseguir, deslegitimar e neutralizar adversários.
 
 O fenômeno é caracterizado por cinco elementos principais:
 * **Disfarce de Legalidade:** As ações são mascaradas com a aparência de processos legais legítimos.
@@ -34,7 +53,22 @@ O texto argumenta que o Lawfare evoluiu para uma forma tecnológica, o "Lawfare 
 ### **🎯 Porquê? (Why?)**
 **O porquê do Lawfare, conforme os objetivos descritos no texto.**
 
-[Dossiê](/estudos/lawfare-a-guerra-silenciosa-que-destroi-democracias), o principal objetivo do Lawfare é **alcançar metas políticas, geopolíticas e de controle social** que não poderiam ser atingidas por meios democráticos ou militares convencionais. A motivação central é a manutenção do poder pelo *establishment* global e a supressão de qualquer desafio à sua agenda.
+```mermaid
+mindmap
+  root((Porquê? Objetivos))
+    Subversão Política
+      Derrubar governos
+      Eliminar adversários
+    Dominação Geopolítica
+      Controle de nações soberanas
+      Servir a interesses estrangeiros
+    Controle Social Total
+      Censura Digital (PL 2630, DSA)
+      Controle Financeiro (CBDCs/DREX)
+      Sistema de Crédito Social
+```
+
+[Dossiê](/posts/lawfare-a-guerra-silenciosa-que-destroi-democracias), o principal objetivo do Lawfare é **alcançar metas políticas, geopolíticas e de controle social** que não poderiam ser atingidas por meios democráticos ou militares convencionais. A motivação central é a manutenção do poder pelo *establishment* global e a supressão de qualquer desafio à sua agenda.
 
 As razões detalhadas no texto incluem:
 * **Subversão Política:** Derrubar governos, destruir adversários e impedir que líderes populares concorram ou governem de forma eficaz.
@@ -47,7 +81,33 @@ As razões detalhadas no texto incluem:
 ### **👥 Quem? (Who?)**
 **Quem são os atores envolvidos no Lawfare, de acordo com o anexo.**
 
-O [dossiê](/estudos/lawfare-a-guerra-silenciosa-que-destroi-democracias) descreve uma complexa rede de atores nacionais e transnacionais que atuam de forma coordenada. Eles são divididos em arquitetos, executores, alvos e a resistência.
+```mermaid
+mindmap
+  root((Quem? Atores))
+    Arquitetos & Financiadores
+      ONGs Bilionárias
+        George Soros / OSF
+        USAID / NED
+      Fóruns Globais
+        WEF / Klaus Schwab
+        FMI / BIS
+    Executores
+      Judiciário
+        STF (Alexandre de Moraes)
+      Big Tech
+        Google, Meta, OpenAI
+      Mídia Tradicional
+      Redes de "Fact-Checking"
+    Alvos & Vítimas
+      Líderes Políticos
+        Donald Trump, Bolsonaro, Le Pen
+      Jornalistas
+        Julian Assange, Glenn Greenwald
+      Cidadãos
+        Manifestantes do 8 de Janeiro
+```
+
+O [dossiê](/posts/lawfare-a-guerra-silenciosa-que-destroi-democracias) descreve uma complexa rede de atores nacionais e transnacionais que atuam de forma coordenada. Eles são divididos em arquitetos, executores, alvos e a resistência.
 
 * **Arquitetos e Financiadores:**
     * **ONGs e Bilionários:** George Soros (Open Society Foundations), que financia "reformas judiciais" e redes de "fact-checking".
@@ -70,7 +130,20 @@ O [dossiê](/estudos/lawfare-a-guerra-silenciosa-que-destroi-democracias) descre
 ### **🗺️ Onde? (Where?)**
 **Onde o Lawfare ocorre, segundo a análise geográfica do texto.**
 
-O [dossiê](/estudos/lawfare-a-guerra-silenciosa-que-destroi-democracias) argumenta que o Lawfare é um fenômeno **global**, mas com epicentros e laboratórios específicos onde as táticas são testadas e refinadas antes de serem exportadas.
+```mermaid
+mindmap
+  root((Onde? Local do Conflito))
+    Laboratório Principal
+      Brasil (Lava Jato, Vaza Toga, 8 de Janeiro)
+    Modelos de Controle
+      China (Sistema de Crédito Social)
+      Europa (Digital Services Act)
+      Canadá (Bills C-11 & C-18)
+    Origem e Aplicação
+      EUA (Definição militar, Twitter Files, processos contra Trump)
+```
+
+O [dossiê](/posts/lawfare-a-guerra-silenciosa-que-destroi-democracias) argumenta que o Lawfare é um fenômeno **global**, mas com epicentros e laboratórios específicos onde as táticas são testadas e refinadas antes de serem exportadas.
 
 * **Principal Laboratório:** O **Brasil** é descrito repetidamente como o "laboratório mundial do lawfare moderno", onde as táticas de guerra jurídica, censura e controle judicial atingiram o nível mais avançado.
 * **Origem e Aplicação (EUA):** O termo militar foi popularizado nos **Estados Unidos**, que o utiliza como ferramenta de política externa (Lei Magnitsky) e onde ele é aplicado internamente contra figuras como Donald Trump. O conluio entre FBI e Big Techs (Twitter Files) também é localizado nos EUA.
@@ -85,7 +158,23 @@ O [dossiê](/estudos/lawfare-a-guerra-silenciosa-que-destroi-democracias) argume
 ### **⏳ Quando? (When?)**
 **Quando o Lawfare se desenvolveu e se intensificou, de acordo com a linha do tempo do documento.**
 
-O [estudo](/estudos/lawfare-a-guerra-silenciosa-que-destroi-democracias) traça uma linha do tempo que vai de origens históricas a uma rápida aceleração nos últimos anos, culminando em projeções futuras.
+```mermaid
+mindmap
+  root((Quando? Linha do Tempo))
+    Origens
+      Século XVIII (Colonialismo)
+      2001 (Definição Militar)
+    Aceleração Recente
+      2014 (Lava Jato)
+      2016 (Pós-eleição de Trump)
+      2019 (Inquérito das Fake News)
+    Momento Atual
+      2024-2025 (Sanções, Vaza Toga)
+    Projeção Futura
+      Lawfare Algorítmico
+```
+
+O [estudo](/posts/lawfare-a-guerra-silenciosa-que-destroi-democracias) traça uma linha do tempo que vai de origens históricas a uma rápida aceleração nos últimos anos, culminando em projeções futuras.
 
 * **Origens Históricas e Coloniais:** As raízes do Lawfare são traçadas até o **século XVIII**, com as potências coloniais usando a lei para subjugar povos na África do Sul. O termo foi documentado pela primeira vez em **1975** e definido no contexto militar moderno em **2001** por Charles J. Dunlap Jr.
 * **Aceleração no Século XXI:**
@@ -97,6 +186,39 @@ O [estudo](/estudos/lawfare-a-guerra-silenciosa-que-destroi-democracias) traça 
     * **2025:** Data usada como marco para eventos críticos, como a aplicação de sanções a Alexandre de Moraes, o avanço do PL da Censura e do DREX no Brasil. O texto posiciona o momento atual como uma "encruzilhada civilizacional".
     * **Futuro:** O documento projeta um futuro próximo onde o Lawfare se tornará totalmente tecnológico e algorítmico, com a implementação global de CBDCs e sistemas de crédito social, caso a "resistência digital" não seja bem-sucedida.
 
+## Frentes de Combate
+
+```mermaid
+mindmap
+  root((Ferramentas))
+    Evolução Tecnológica
+      Vigilância e Censura
+        IA com Viés Progressista
+        Censura Automatizada (Llama Guard)
+      Controle Financeiro
+        CBDCs (DREX, Yuan Digital)
+        Dinheiro Programável
+      Controle Social
+        Sistema de Crédito Social
+        Identidade Digital Global
+```
+
+## Resistência 
+
+```mermaid
+mindmap
+  root((A Resistência))
+    Figuras Políticas
+      Trump, Poilievre, Milei
+    Plataformas Livres
+      Rumble, Substack, X (sob Musk)
+    Jornalismo Independente
+      Greenwald, Taibbi
+    Tecnologias de Liberdade
+      Criptomoedas
+      Redes Descentralizadas
+      VPNs
+```
 
 ### 🧠 Mapa Mental Lawfare - O Quê, Porquê, Quem, Onde, Quando
 

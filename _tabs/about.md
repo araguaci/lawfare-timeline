@@ -102,3 +102,21 @@ Não se trata da produção de novas evidências. O nosso trabalho é uma curado
 
 > **Alerta de Uso Responsável**
 > Este aplicativo não deve ser usado para difamar indivíduos sem evidências. Em caso de suspeita de informação incorreta, o usuário pode reportar via “Denúncia de Fato”. O conteúdo será revisado por equipe de verificação antes de qualquer publicação.
+{: .prompt-warning }
+
+> Esta é uma dica.
+{: .prompt-tip }
+
+> Informação importante.
+{: .prompt-info }
+
+> Atenção, procedimento sensível!
+{: .prompt-warning }
+
+> Cuidado! Erro crítico.
+{: .prompt-danger }
+
+> Uma nota de destaque.
+{: .destaque }
+
+
