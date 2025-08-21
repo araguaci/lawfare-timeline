@@ -2,6 +2,8 @@
 layout: post
 title:  Venda de Decisões no TJ-MS
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Esquema de corrupção envolvendo venda de decisões judiciais por desembargadores✧  com intermediação de advogados e filhos dos magistrados.Desembargadores Alexandre Aguiar Bastos✧  Marcos José de Brito Rodrigues✧  Sideni Soncini Pimentel✧  Vladimir Abreu da Silva✧  Sergio Fernandes Martins✧  Julio Roberto Siqueira Cardoso (aposentado)✧  Divoncir Schreiner Maran (aposentado)✧  advogado Felix Jayme da Cunha✧  conselheiro Osmar Domingues Jeronymo.
 tags: ['judiciario','ms']
 ---

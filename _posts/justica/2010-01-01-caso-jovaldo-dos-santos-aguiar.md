@@ -2,6 +2,8 @@
 layout: post
 title:  Caso Jovaldo dos Santos Aguiar
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Corregedor cobrou decisão de empresário e advogado✧  deixando 31 processos parados✧  e foi denunciado por não entregar decisão negociada.Jovaldo dos Santos Aguiar
 tags: ['judiciario','amazonas']
 ---

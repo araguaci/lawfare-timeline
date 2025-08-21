@@ -2,6 +2,8 @@
 layout: post
 title:  Operação Faroeste
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Esquema de grilagem de terras e venda de sentenças envolvendo desembargadores do TJ‑BA✧  advogados e servidores públicos.Desembargadores Maria do Socorro Barreto Santiago✧  Ilona Reis✧  Lígia Cunha✧  José Olegário Monção✧  Maria da Graça Osórioprodutores rurais✧  advogados✧  servidoras e servidores do MP‑BA
 tags: ['judiciario','ba']
 ---

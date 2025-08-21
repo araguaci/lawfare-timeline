@@ -2,6 +2,8 @@
 layout: post
 title:  Processo contra desembargadora aposentada
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Ação aberta em 2022 contra uma desembargadora aposentada do Tribunal de Justiça do Amazonas✧  sob suspeita de beneficiar traficantes e outras organizações criminosas.Uma desembargadora aposentada do TJ-AM
 tags: ['judiciario','amazonas']
 ---

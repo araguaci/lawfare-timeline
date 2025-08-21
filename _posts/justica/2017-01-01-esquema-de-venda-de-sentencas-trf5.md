@@ -2,6 +2,8 @@
 layout: post
 title:  Esquema de venda de sentenças (TRF‑5)
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Desembargador aposentado e outros envolvidos condenados por exploração de prestígio✧  falsidade ideológica✧  lavagem de dinheiro✧  associação criminosa entre 2015–2017.Desembargador Francisco Barros Dias (aposentado)outros seis acusados
 tags: ['judiciario','rn']
 ---

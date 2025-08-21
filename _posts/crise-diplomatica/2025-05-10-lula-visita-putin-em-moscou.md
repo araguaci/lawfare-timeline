@@ -2,22 +2,24 @@
 layout: post
 title: "Lula visita Putin em Moscou"
 categories: crise-diplomatica
-faicon: fa-handshake-slash
-image:
-  path: "/assets/solid/handshake-slash.svg"
 description: > 
   "O presidente Lula visitou Moscou para participar da parada do Dia da Vitória e realizar reunião bilateral com Putin, discutindo paz na Ucrânia, cooperação econômica e fortalecimento dos laços Brasil-Rússia, destacando autonomia diplomática."
+faicon: fa-handshake
 tags: ['luiz-inacio-lula-da-silva', 'vladimir-putin', 'governo-do-brasil', 'governo-da-russia', 'gravidade-baixa']
+image:
+  path: "/assets/solid/handshake.svg"
 ---
 
 # Ação em 2025/05/10 com violações, envolvidos, fontes e gravidade baixa
 
+> O presidente Lula visitou Moscou para participar da parada do Dia da Vitória e realizar reunião bilateral com Putin, discutindo paz na Ucrânia, cooperação econômica e fortalecimento dos laços Brasil-Rússia, destacando autonomia diplomática.
+{: .prompt-info }
+
 ## Detalhes
 - **Data**: 2025/05/10
 - **Ano**: 2025
-- **Gravidade**: baixa
-- **Descrição Completa**: O presidente Lula visitou Moscou para participar da parada do Dia da Vitória e realizar reunião bilateral com Putin, discutindo paz na Ucrânia, cooperação econômica e fortalecimento dos laços Brasil-Rússia, destacando autonomia diplomática.
-- **Gravidade**: baixa <i class="fas fa-handshake fa-2x"></i>
+- **Gravidade**: **baixa** <i class="fas fa-handshake"></i>
+
 - **Violações**:
   - Nenhuma violação listada
 - **Envolvidos**:

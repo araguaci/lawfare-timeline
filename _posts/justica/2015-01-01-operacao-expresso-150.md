@@ -2,6 +2,8 @@
 layout: post
 title:  Operação Expresso 150
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Desembargadores e juízes do Ceará investigados por venda de habeas corpus e liminares durante plantões judiciais.Desembargadores Francisco Pedrosa Teixeira✧  Sergia Maria Mendonça Miranda✧  Váldsen da Silva Alves Pereira (aposentado)advogados e traficantes beneficiados
 tags: ['judiciario','ce']
 ---

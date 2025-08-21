@@ -2,6 +2,8 @@
 layout: post
 title:  Caso Rubem Dário Peregrino Cunha
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Desembargador cobrou R$ 400 mil para livrar prefeito de acusação de corrupção✧  além de pedir cargo para a namorada do filho.Rubem Dário Peregrino CunhaAntônio Pascoal BatistaNizan Gomes Cunha Neto
 tags: ['judiciario','bahia']
 ---

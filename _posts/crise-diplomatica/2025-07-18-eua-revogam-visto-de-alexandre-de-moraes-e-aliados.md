@@ -2,22 +2,24 @@
 layout: post
 title: "EUA revogam visto de Alexandre de Moraes e aliados"
 categories: crise-diplomatica
-faicon: fa-passport
-image:
-  path: "/assets/solid/passport.svg"
 description: > 
   "O secretário de Estado dos EUA anunciou a revogação do visto americano do ministro Alexandre de Moraes e de seus aliados no STF, citando censura e violações à liberdade de expressão, escalando a crise diplomática."
+faicon: fa-passport
 tags: ['liberdade-de-expressao', 'devido-processo-legal', 'governo-dos-eua', 'alexandre-de-moraes', 'stf', 'gravidade-alta']
+image:
+  path: "/assets/solid/passport.svg"
 ---
 
 # Ação em 2025/07/18 com violações, envolvidos, fontes e gravidade alta
 
+> O secretário de Estado dos EUA anunciou a revogação do visto americano do ministro Alexandre de Moraes e de seus aliados no STF, citando censura e violações à liberdade de expressão, escalando a crise diplomática.
+{: .prompt-danger }
+
 ## Detalhes
 - **Data**: 2025/07/18
 - **Ano**: 2025
-- **Gravidade**: alta
-- **Descrição Completa**: O secretário de Estado dos EUA anunciou a revogação do visto americano do ministro Alexandre de Moraes e de seus aliados no STF, citando censura e violações à liberdade de expressão, escalando a crise diplomática.
-- **Gravidade**: alta <i class="fas fa-passport fa-2x"></i>
+- **Gravidade**: **alta** <i class="fas fa-passport"></i>
+
 - **Violações**:
   - Liberdade de Expressão
   - Devido Processo Legal

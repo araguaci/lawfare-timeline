@@ -2,6 +2,8 @@
 layout: post
 title:  Caso Witzel
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Investigação sobre esquema de corrupção durante a gestão do ex-governador Wilson Witzel✧  com condenações de desembargadores.Wilson WitzelDesembargadores condenados
 tags: ['judiciario','rio-de-janeiro']
 ---

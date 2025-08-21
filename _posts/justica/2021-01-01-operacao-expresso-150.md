@@ -2,6 +2,8 @@
 layout: post
 title:  Operação Expresso 150
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Investigação sobre esquema de venda de liminares no Tribunal de Justiça do Ceará.Quatro desembargadoresJuízesAdvogados
 tags: ['judiciario','ceara']
 ---

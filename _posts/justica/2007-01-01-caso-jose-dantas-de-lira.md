@@ -2,6 +2,8 @@
 layout: post
 title:  Caso José Dantas de Lira
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Juiz cobrava R$ 750 por liminar em esquema com filho✧  advogado✧  funcionário do tribunal e corretores✧  movimentando mais de R$ 3 milhões entre 2007 e 2009.José Dantas de LiraFilho de José Dantas de LiraIvan Holanda PereiraFuncionário do tribunalDois corretores
 tags: ['judiciario','rio-grande-do-norte']
 ---

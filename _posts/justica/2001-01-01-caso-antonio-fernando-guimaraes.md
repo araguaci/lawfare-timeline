@@ -2,6 +2,8 @@
 layout: post
 title:  Caso Antônio Fernando Guimarães
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Desembargador teve aluguel de apartamento de luxo pago por escritório de advocacia em troca de decisões favoráveis.Antônio Fernando GuimarãesEscritório Vilhena&Vilhena
 tags: ['judiciario','minas-gerais']
 ---

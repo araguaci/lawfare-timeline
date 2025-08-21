@@ -2,22 +2,24 @@
 layout: post
 title: "EUA iniciam investigação formal contra o Brasil por barreiras a big techs"
 categories: crise-diplomatica
-faicon: fa-search-dollar
-image:
-  path: "/assets/solid/search-dollar.svg"
 description: > 
   "USTR aciona Seção 301 para investigar restrições e multas impostas a empresas americanas, processos judiciais contra plataformas, e políticas do governo e do STF consideradas prejudiciais à liberdade de expressão e negócios dos EUA."
+faicon: fa-search-dollar
 tags: ['liberdade-economica', 'devido-processo-legal', 'liberdade-de-expressao', 'ustr', 'governo-dos-eua', 'alexandre-de-moraes', 'big-techs', 'gravidade-alta']
+image:
+  path: "/assets/solid/search-dollar.svg"
 ---
 
 # Ação em 2025/07/15 com violações, envolvidos, fontes e gravidade alta
 
+> USTR aciona Seção 301 para investigar restrições e multas impostas a empresas americanas, processos judiciais contra plataformas, e políticas do governo e do STF consideradas prejudiciais à liberdade de expressão e negócios dos EUA.
+{: .prompt-danger }
+
 ## Detalhes
 - **Data**: 2025/07/15
 - **Ano**: 2025
-- **Gravidade**: alta
-- **Descrição Completa**: USTR aciona Seção 301 para investigar restrições e multas impostas a empresas americanas, processos judiciais contra plataformas, e políticas do governo e do STF consideradas prejudiciais à liberdade de expressão e negócios dos EUA.
-- **Gravidade**: alta <i class="fas fa-search-dollar fa-2x"></i>
+- **Gravidade**: **alta** <i class="fas fa-search-dollar"></i>
+
 - **Violações**:
   - Liberdade Econômica
   - Devido Processo Legal

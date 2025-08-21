@@ -2,6 +2,8 @@
 layout: post
 title:  Venda de Sentenças no TJ-MA
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Esquema de venda de sentenças com propinas fracionadas contra o Banco do Nordeste.Desembargadores e juízes do TJ-MA.
 tags: ['judiciario','ma']
 ---

@@ -2,6 +2,8 @@
 layout: post
 title:  Operação Naufrágio - Corrupção na Justiça do ES
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Esquema de corrupção e venda de sentenças deflagrado em 2008✧  com condenações finais em 2025.Juízes✧  advogados✧  desembargadores do TJ-ES.
 tags: ['judiciario','es']
 ---

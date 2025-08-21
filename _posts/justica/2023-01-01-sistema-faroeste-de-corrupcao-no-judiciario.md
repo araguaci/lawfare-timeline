@@ -2,6 +2,8 @@
 layout: post
 title:  Sistema Faroeste de Corrupção no Judiciário
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Investigações sobre venda de decisões atingindo 14 tribunais de justiça.Magistrados de vários TJs estaduais.
 tags: ['judiciario','federal']
 ---

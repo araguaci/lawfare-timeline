@@ -2,22 +2,24 @@
 layout: post
 title: "Exportações de terras raras do Brasil para China triplicam"
 categories: crise-diplomatica
-faicon: fa-globe
-image:
-  path: "/assets/solid/globe.svg"
 description: > 
   "As vendas de terras raras brasileiras para a China triplicaram no primeiro semestre de 2025 em comparação com 2024, fortalecendo laços econômicos e diversificando parcerias em meio a tensões com os EUA."
+faicon: fa-globe
 tags: ['governo-do-brasil', 'governo-da-china', 'setor-de-mineracao', 'gravidade-baixa']
+image:
+  path: "/assets/solid/globe.svg"
 ---
 
 # Ação em 2025/07/27 com violações, envolvidos, fontes e gravidade baixa
 
+> As vendas de terras raras brasileiras para a China triplicaram no primeiro semestre de 2025 em comparação com 2024, fortalecendo laços econômicos e diversificando parcerias em meio a tensões com os EUA.
+{: .prompt-info }
+
 ## Detalhes
 - **Data**: 2025/07/27
 - **Ano**: 2025
-- **Gravidade**: baixa
-- **Descrição Completa**: As vendas de terras raras brasileiras para a China triplicaram no primeiro semestre de 2025 em comparação com 2024, fortalecendo laços econômicos e diversificando parcerias em meio a tensões com os EUA.
-- **Gravidade**: baixa <i class="fas fa-globe fa-2x"></i>
+- **Gravidade**: **baixa** <i class="fas fa-globe"></i>
+
 - **Violações**:
   - Nenhuma violação listada
 - **Envolvidos**:

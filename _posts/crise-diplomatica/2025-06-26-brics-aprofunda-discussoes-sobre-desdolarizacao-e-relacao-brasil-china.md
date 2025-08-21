@@ -2,22 +2,24 @@
 layout: post
 title: "BRICS aprofunda discussões sobre desdolarização e relação Brasil-China"
 categories: crise-diplomatica
-faicon: fa-microphone
-image:
-  path: "/assets/solid/microphone.svg"
 description: > 
   "Em foco na arquitetura financeira internacional, o BRICS discute desdolarização, com Brasil ampliando reservas em yuan e promovendo uso de moedas locais, fortalecendo laços com China."
+faicon: fa-coins
 tags: ['brics', 'governo-do-brasil', 'governo-da-china', 'gravidade-baixa']
+image:
+  path: "/assets/solid/coins.svg"
 ---
 
 # Ação em 2025/06/26 com violações, envolvidos, fontes e gravidade baixa
 
+> Em foco na arquitetura financeira internacional, o BRICS discute desdolarização, com Brasil ampliando reservas em yuan e promovendo uso de moedas locais, fortalecendo laços com China.
+{: .prompt-info }
+
 ## Detalhes
 - **Data**: 2025/06/26
 - **Ano**: 2025
-- **Gravidade**: baixa
-- **Descrição Completa**: Em foco na arquitetura financeira internacional, o BRICS discute desdolarização, com Brasil ampliando reservas em yuan e promovendo uso de moedas locais, fortalecendo laços com China.
-- **Gravidade**: baixa <i class="fas fa-coins fa-2x"></i>
+- **Gravidade**: **baixa** <i class="fas fa-coins"></i>
+
 - **Violações**:
   - Nenhuma violação listada
 - **Envolvidos**:

@@ -2,6 +2,8 @@
 layout: post
 title:  Operação Habeas Pater
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Operação de 2023 que investigou um juiz do TRF-1 por decisões que beneficiaram organização criminosa envolvida em tráfico internacional de drogas✧  lavagem de dinheiro e crimes financeiros.Um juiz do TRF-1 (aposentado após a operação)
 tags: ['judiciario','regiao-nao-especificada-trf-1']
 ---

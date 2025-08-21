@@ -2,6 +2,8 @@
 layout: post
 title:  Venda de Liminares por Ex-Desembargadores
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Recurso contra sentença de ex-desembargadores acusados de venda de liminares.Ex-desembargadores do TJ-CE e esposa de um deles.
 tags: ['judiciario','ce']
 ---

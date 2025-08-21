@@ -2,6 +2,8 @@
 layout: post
 title:  Operação 18 Minutos
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Investigação sobre suposta corrupção no Tribunal de Justiça do Maranhão✧  envolvendo liberação de alvarás em prejuízo do Banco do Nordeste✧  com estimativa de prejuízo de R$ 17 milhões e tentativa de nova fraude de R$ 29 milhões.Desembargador Luiz Gonzaga Almeida FilhoDesembargador Marcelino Everton ChavesDesembargadora Nelma Celeste Sousa Silva Sarney CostaDesembargador Antônio Pacheco Guerreiro JúniorJuiz Cristiano Simas de SousaJuiz Alice de Sousa RochaEx-advogado do Banco (F.X. de S.F.)
 tags: ['judiciario','maranhao']
 ---

@@ -2,22 +2,24 @@
 layout: post
 title: "Cúpula dos BRICS em Kazan discute desdolarização"
 categories: crise-diplomatica
-faicon: fa-globe
-image:
-  path: "/assets/solid/globe.svg"
 description: > 
   "Na cúpula dos BRICS em Kazan, Rússia, os líderes discutiram a criação de uma plataforma para transações em moedas locais, priorizando a desdolarização e ampliando o uso de moedas nacionais no comércio global."
+faicon: fa-globe
 tags: ['brics', 'governo-do-brasil', 'governo-da-russia', 'governo-da-china', 'gravidade-baixa']
+image:
+  path: "/assets/solid/globe.svg"
 ---
 
 # Ação em 2024/10/22 com violações, envolvidos, fontes e gravidade baixa
 
+> Na cúpula dos BRICS em Kazan, Rússia, os líderes discutiram a criação de uma plataforma para transações em moedas locais, priorizando a desdolarização e ampliando o uso de moedas nacionais no comércio global.
+{: .prompt-info }
+
 ## Detalhes
 - **Data**: 2024/10/22
 - **Ano**: 2024
-- **Gravidade**: baixa
-- **Descrição Completa**: Na cúpula dos BRICS em Kazan, Rússia, os líderes discutiram a criação de uma plataforma para transações em moedas locais, priorizando a desdolarização e ampliando o uso de moedas nacionais no comércio global.
-- **Gravidade**: baixa <i class="fas fa-globe fa-2x"></i>
+- **Gravidade**: **baixa** <i class="fas fa-globe"></i>
+
 - **Violações**:
   - Nenhuma violação listada
 - **Envolvidos**:

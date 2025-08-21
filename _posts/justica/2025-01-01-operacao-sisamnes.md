@@ -2,6 +2,8 @@
 layout: post
 title:  Operação Sisamnes
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Investigação da Polícia Federal sobre esquema milionário de vazamento de informações sigilosas e venda de sentenças judiciais✧  iniciado em 2020 e intensificado após o assassinato do advogado Roberto Zampieri em 2023✧  em Cuiabá (MT). Envolve corrupção✧  violação de sigilo funcional✧  exploração de prestígio✧  lavagem de dinheiro✧  obstrução de Justiça e homicídios por encomenda✧  com indícios de acesso privilegiado a decisões judiciais e possíveis envolvimentos de servidores e gabinetes do STJ.Roberto Zampieri (advogado assassinado)Eduardo Siqueira Campos (prefeito de Palmas✧  TO)Andreson Gonçalves (lobista)Advogado e policial civil (presos na 9ª fase)Assessores do Ministério Público (TO)Desembargadores e servidores do Tribunal de Justiça de Mato GrossoChefes de gabinete do STJGrupo 'Comando C4' (civis e militares)
 tags: ['judiciario','mato-grosso']
 ---

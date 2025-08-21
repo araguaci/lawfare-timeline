@@ -2,22 +2,24 @@
 layout: post
 title: "50% de tarifa dos EUA sobre produtos brasileiros entra em vigor"
 categories: crise-diplomatica
-faicon: fa-percentage
-image:
-  path: "/assets/solid/percentage.svg"
 description: > 
   "Por ordem de Trump, EUA impõem tarifa de 50% sobre importações do Brasil citando interferências judiciais, censura a empresas e aliados, processos judiciais e tratamento a Bolsonaro. Brasil reage com tarifação recíproca e leva disputa à OMC."
+faicon: fa-percentage
 tags: ['comercio-internacional', 'livre-concorrencia', 'governo-dos-eua', 'governo-do-brasil', 'omc', 'gravidade-alta']
+image:
+  path: "/assets/solid/percentage.svg"
 ---
 
 # Ação em 2025/08/04 com violações, envolvidos, fontes e gravidade alta
 
+> Por ordem de Trump, EUA impõem tarifa de 50% sobre importações do Brasil citando interferências judiciais, censura a empresas e aliados, processos judiciais e tratamento a Bolsonaro. Brasil reage com tarifação recíproca e leva disputa à OMC.
+{: .prompt-danger }
+
 ## Detalhes
 - **Data**: 2025/08/04
 - **Ano**: 2025
-- **Gravidade**: alta
-- **Descrição Completa**: Por ordem de Trump, EUA impõem tarifa de 50% sobre importações do Brasil citando interferências judiciais, censura a empresas e aliados, processos judiciais e tratamento a Bolsonaro. Brasil reage com tarifação recíproca e leva disputa à OMC.
-- **Gravidade**: alta <i class="fas fa-percentage fa-2x"></i>
+- **Gravidade**: **alta** <i class="fas fa-percentage"></i>
+
 - **Violações**:
   - Comércio Internacional
   - Livre Concorrência

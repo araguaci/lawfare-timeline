@@ -2,22 +2,24 @@
 layout: post
 title: "Brasil recebe avião cargueiro russo sancionado pelos EUA"
 categories: crise-diplomatica
-faicon: fa-plane
-image:
-  path: "/assets/solid/plane.svg"
 description: > 
   "Um avião cargueiro russo Ilyushin IL-76, de empresa sancionada pelos EUA por transportar material militar à Venezuela, pousou em Brasília e permaneceu por três dias, levantando suspeitas e sem registro oficial na ANAC, antes de seguir para Venezuela e Cuba."
+faicon: fa-plane
 tags: ['comercio-internacional', 'governo-do-brasil', 'governo-da-russia', 'governo-dos-eua', 'venezuela', 'gravidade-media']
+image:
+  path: "/assets/solid/plane.svg"
 ---
 
 # Ação em 2025/08/10 com violações, envolvidos, fontes e gravidade media
 
+> Um avião cargueiro russo Ilyushin IL-76, de empresa sancionada pelos EUA por transportar material militar à Venezuela, pousou em Brasília e permaneceu por três dias, levantando suspeitas e sem registro oficial na ANAC, antes de seguir para Venezuela e Cuba.
+{: .prompt-warning }
+
 ## Detalhes
 - **Data**: 2025/08/10
 - **Ano**: 2025
-- **Gravidade**: media
-- **Descrição Completa**: Um avião cargueiro russo Ilyushin IL-76, de empresa sancionada pelos EUA por transportar material militar à Venezuela, pousou em Brasília e permaneceu por três dias, levantando suspeitas e sem registro oficial na ANAC, antes de seguir para Venezuela e Cuba.
-- **Gravidade**: media <i class="fas fa-plane fa-2x"></i>
+- **Gravidade**: **media** <i class="fas fa-plane"></i>
+
 - **Violações**:
   - Comércio Internacional
 - **Envolvidos**:

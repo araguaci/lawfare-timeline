@@ -2,6 +2,8 @@
 layout: post
 title:  Esquema no TJ-MT
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Investigação sobre suposto esquema de venda de sentenças no Tribunal de Justiça de Mato Grosso✧  com base em conversas no celular de Roberto Zampieri✧  apontado como lobista✧  incluindo suspeitas de propinas via Pix e barra de ouro.Desembargador Sebastião de Moraes FilhoDesembargador João Ferreira FilhoJuiz Ivan Lúcio AmaranteRoberto Zampieri
 tags: ['judiciario','mato-grosso']
 ---

@@ -2,22 +2,24 @@
 layout: post
 title: "Brasil amplia reservas em yuan e discute desdolarização no BRICS"
 categories: crise-diplomatica
-faicon: fa-coins
-image:
-  path: "/assets/solid/coins.svg"
 description: > 
   "Parte das reservas internacionais brasileiras passa a ser mantida em yuan chinês. BRICS aprofunda discussões para diversificação cambial e uso de moedas nacionais em comércio e investimentos."
+faicon: fa-coins
 tags: ['banco-central-do-brasil', 'ministerio-da-fazenda', 'brics', 'gravidade-baixa']
+image:
+  path: "/assets/solid/coins.svg"
 ---
 
 # Ação em 2024/06/26 com violações, envolvidos, fontes e gravidade baixa
 
+> Parte das reservas internacionais brasileiras passa a ser mantida em yuan chinês. BRICS aprofunda discussões para diversificação cambial e uso de moedas nacionais em comércio e investimentos.
+{: .prompt-info }
+
 ## Detalhes
 - **Data**: 2024/06/26
 - **Ano**: 2024
-- **Gravidade**: baixa
-- **Descrição Completa**: Parte das reservas internacionais brasileiras passa a ser mantida em yuan chinês. BRICS aprofunda discussões para diversificação cambial e uso de moedas nacionais em comércio e investimentos.
-- **Gravidade**: baixa <i class="fas fa-coins fa-2x"></i>
+- **Gravidade**: **baixa** <i class="fas fa-coins"></i>
+
 - **Violações**:
   - Nenhuma violação listada
 - **Envolvidos**:

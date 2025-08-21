@@ -2,6 +2,8 @@
 layout: post
 title:  Vaza Jato - Vazamento de Mensagens da Lava Jato
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Vazamento de conversas mostrando colaboração imprópria entre juiz e procuradores✧  sugerindo parcialidade.Juiz Sergio Moro✧  procurador Deltan Dallagnol✧  equipe da Lava Jato.
 tags: ['judiciario','pr']
 ---

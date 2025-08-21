@@ -2,6 +2,8 @@
 layout: post
 title:  Caso José Admilson Gomes Pereira
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Juiz cobrou R$ 70 mil por habeas corpus que garantiu liberdade de acusado de contratar pistoleiros.José Admilson Gomes PereiraCarlos José Campos SoutoIrmã de Carlos José Campos SoutoIrmão do magistrado
 tags: ['judiciario','para']
 ---

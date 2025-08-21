@@ -2,6 +2,8 @@
 layout: post
 title:  Esquema de Corrupção com Ex-Governador Witzel
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Condenação por corrupção no Poder Judiciário durante gestão de Wilson Witzel✧  envolvendo venda de decisões.Desembargadores do TJ-RJ✧  ex-governador Wilson Witzel.
 tags: ['judiciario','rj']
 ---

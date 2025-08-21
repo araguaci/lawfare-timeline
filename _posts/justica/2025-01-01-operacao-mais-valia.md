@@ -2,6 +2,8 @@
 layout: post
 title:  Operação Mais Valia
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: STJ condena desembargadores do Rio por esquema com ex-governador Wilson Witzel.DesembargadoresWilson Witzel
 tags: ['judiciario','rio-de-janeiro']
 ---

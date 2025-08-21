@@ -7,6 +7,7 @@ image:
 tags: [estudos, lawfare, usaid, tse, stf]
 categories: [estudos]
 mermaid: true
+pin: true
 ---
 
 - &nbsp;

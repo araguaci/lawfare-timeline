@@ -2,6 +2,8 @@
 layout: post
 title:  Caso do Fórum do TRT-SP
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Esquema de corrupção envolvendo a construção do fórum do Tribunal Regional do Trabalho em São Paulo✧  com desvios de verbas iniciados em 1992✧  detectados por auditorias do TCU em 1995✧  e obra abandonada em 1998.Nicolau dos Santos NetoLuiz EstevãoConstrutora IncalGrupo OK
 tags: ['judiciario','sao-paulo']
 ---

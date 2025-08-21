@@ -2,22 +2,24 @@
 layout: post
 title: "Brasil retira embaixador de Israel"
 categories: crise-diplomatica
-faicon: fa-building-flag
-image:
-  path: "/assets/solid/building-flag.svg"
 description: > 
   "O presidente Lula removeu o embaixador brasileiro em Israel em meio a disputas diplomáticas sobre a guerra em Gaza, escalando a crise após declarações comparando o conflito ao Holocausto."
+faicon: fa-building-flag
 tags: ['governo-do-brasil', 'governo-de-israel', 'luiz-inacio-lula-da-silva', 'gravidade-alta']
+image:
+  path: "/assets/solid/building-flag.svg"
 ---
 
 # Ação em 2024/05/29 com violações, envolvidos, fontes e gravidade alta
 
+> O presidente Lula removeu o embaixador brasileiro em Israel em meio a disputas diplomáticas sobre a guerra em Gaza, escalando a crise após declarações comparando o conflito ao Holocausto.
+{: .prompt-danger }
+
 ## Detalhes
 - **Data**: 2024/05/29
 - **Ano**: 2024
-- **Gravidade**: alta
-- **Descrição Completa**: O presidente Lula removeu o embaixador brasileiro em Israel em meio a disputas diplomáticas sobre a guerra em Gaza, escalando a crise após declarações comparando o conflito ao Holocausto.
-- **Gravidade**: alta <i class="fas fa-building-flag fa-2x"></i>
+- **Gravidade**: **alta** <i class="fas fa-building-flag"></i>
+
 - **Violações**:
   - Nenhuma violação listada
 - **Envolvidos**:

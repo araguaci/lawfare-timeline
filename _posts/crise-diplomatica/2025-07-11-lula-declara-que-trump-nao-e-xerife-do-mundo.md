@@ -2,23 +2,24 @@
 layout: post
 title: "Lula declara que Trump não é xerife do mundo"
 categories: crise-diplomatica
-faicon: fa-microphone
-image:
-  path: "/assets/solid/microphone.svg"
-
 description: > 
   "Em resposta ao anúncio de tarifas dos EUA, o presidente Lula afirmou que Trump não é o xerife do mundo e que o Brasil não aceitará tutelas, defendendo a soberania nacional e criticando interferências americanas."
+faicon: fa-microphone
 tags: ['luiz-inacio-lula-da-silva', 'donald-trump', 'governo-do-brasil', 'governo-dos-eua', 'gravidade-media']
+image:
+  path: "/assets/solid/microphone.svg"
 ---
 
 # Ação em 2025/07/11 com violações, envolvidos, fontes e gravidade media
 
+> Em resposta ao anúncio de tarifas dos EUA, o presidente Lula afirmou que Trump não é o xerife do mundo e que o Brasil não aceitará tutelas, defendendo a soberania nacional e criticando interferências americanas.
+{: .prompt-warning }
+
 ## Detalhes
 - **Data**: 2025/07/11
 - **Ano**: 2025
-- **Gravidade**: media
-- **Descrição Completa**: Em resposta ao anúncio de tarifas dos EUA, o presidente Lula afirmou que Trump não é o xerife do mundo e que o Brasil não aceitará tutelas, defendendo a soberania nacional e criticando interferências americanas.
-- **Gravidade**: media <i class="fas fa-microphone fa-2x"></i>
+- **Gravidade**: **media** <i class="fas fa-microphone"></i>
+
 - **Violações**:
   - Nenhuma violação listada
 - **Envolvidos**:

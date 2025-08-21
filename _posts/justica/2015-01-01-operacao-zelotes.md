@@ -2,6 +2,8 @@
 layout: post
 title:  Operação Zelotes
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Operação iniciada em março de 2015 investigando corrupção no CARF✧  com empresas pagando propinas para anular multas fiscais✧  causando prejuízo estimado de R$ 19 bilhões.GerdauBradescoSantanderRBSBanco SafraAndré GerdauGuido MantegaLuiz Claudio (filho de Lula)Lobistas
 tags: ['judiciario','nacional']
 ---

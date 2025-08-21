@@ -2,6 +2,8 @@
 layout: post
 title:  Operação Naufrágio
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Investigação iniciada em 2008 sobre suspeitas de nepotismo e venda de decisões no Tribunal de Justiça do Espírito Santo✧  com ação penal ainda não julgada pelo STJ.Três desembargadores (presos em 2008)Um desembargador (réu atual)26 pessoas denunciadas em 2010 pelo Ministério Público Federal
 tags: ['judiciario','espirito-santo']
 ---

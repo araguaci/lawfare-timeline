@@ -2,6 +2,8 @@
 layout: post
 title:  Operação Faroeste
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Investigação que levou seis desembargadores do Tribunal de Justiça da Bahia a se tornarem réus✧  com conexão a grilagem de terra e delação premiada rescindida.Seis desembargadores (réus)Uma desembargadora (colaboração premiada✧  rescindida em 2024)68 nomes citados na delação (magistrados✧  advogados✧  servidores públicos✧  empresários)Adailton Maturino (empresário✧  falso cônsul)
 tags: ['judiciario','bahia']
 ---

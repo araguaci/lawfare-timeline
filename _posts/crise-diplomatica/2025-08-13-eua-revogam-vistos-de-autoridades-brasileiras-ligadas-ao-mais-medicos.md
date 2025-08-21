@@ -2,22 +2,24 @@
 layout: post
 title: "EUA revogam vistos de autoridades brasileiras ligadas ao Mais Médicos"
 categories: crise-diplomatica
-faicon: fa-passport
-image:
-  path: "/assets/solid/passport.svg"
 description: > 
   "Em retaliação a autoridades brasileiras, o governo Trump revogou vistos de brasileiros ligados ao programa Mais Médicos, intensificando a pressão diplomática em meio a controvérsias sobre direitos humanos e regulação de big techs."
-tags: ['devido-processo-legal', 'liberdade-economica', 'governo-dos-eua', 'governo-do-brasil', 'autoridades-brasileiras', 'gravidade-alta']
+faicon: fa-passport
+tags: ['devido-processo-legal', 'liberdade-economica', 'governo-dos-eua', 'governo-do-brasil', 'autoridades-brasileiras', 'gravidade-alta', 'sancoes', 'judicial', 'bancos', 'crise-diplomatica']
+image:
+  path: "/assets/solid/passport.svg"
 ---
 
 # Ação em 2025/08/13 com violações, envolvidos, fontes e gravidade alta
 
+> Em retaliação a autoridades brasileiras, o governo Trump revogou vistos de brasileiros ligados ao programa Mais Médicos, intensificando a pressão diplomática em meio a controvérsias sobre direitos humanos e regulação de big techs.
+{: .prompt-danger }
+
 ## Detalhes
 - **Data**: 2025/08/13
 - **Ano**: 2025
-- **Gravidade**: alta
-- **Descrição Completa**: Em retaliação a autoridades brasileiras, o governo Trump revogou vistos de brasileiros ligados ao programa Mais Médicos, intensificando a pressão diplomática em meio a controvérsias sobre direitos humanos e regulação de big techs.
-- **Gravidade**: alta <i class="fas fa-passport fa-2x"></i>
+- **Gravidade**: **alta** <i class="fas fa-passport"></i>
+
 - **Violações**:
   - Devido Processo Legal
   - Liberdade Econômica

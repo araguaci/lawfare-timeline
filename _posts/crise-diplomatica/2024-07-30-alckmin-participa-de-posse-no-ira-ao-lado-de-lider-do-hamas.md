@@ -2,22 +2,24 @@
 layout: post
 title: "Alckmin participa de posse no Irã ao lado de líder do Hamas"
 categories: crise-diplomatica
-faicon: fa-handshake-slash
-image:
-  path: "/assets/solid/handshake-slash.svg"
 description: > 
   "O vice-presidente Geraldo Alckmin representou o Brasil na posse do presidente iraniano e foi fotografado próximo ao líder do Hamas, Ismail Haniyeh, gerando controvérsias e críticas de bolsonaristas e aliados de Israel."
+faicon: fa-handshake
 tags: ['geraldo-alckmin', 'ismail-haniyeh', 'governo-do-ira', 'hamas', 'governo-do-brasil', 'gravidade-media']
+image:
+  path: "/assets/solid/handshake.svg"
 ---
 
 # Ação em 2024/07/30 com violações, envolvidos, fontes e gravidade media
 
+> O vice-presidente Geraldo Alckmin representou o Brasil na posse do presidente iraniano e foi fotografado próximo ao líder do Hamas, Ismail Haniyeh, gerando controvérsias e críticas de bolsonaristas e aliados de Israel.
+{: .prompt-warning }
+
 ## Detalhes
 - **Data**: 2024/07/30
 - **Ano**: 2024
-- **Gravidade**: media
-- **Descrição Completa**: O vice-presidente Geraldo Alckmin representou o Brasil na posse do presidente iraniano e foi fotografado próximo ao líder do Hamas, Ismail Haniyeh, gerando controvérsias e críticas de bolsonaristas e aliados de Israel.
-- **Gravidade**: media <i class="fas fa-handshake fa-2x"></i>
+- **Gravidade**: **media** <i class="fas fa-handshake"></i>
+
 - **Violações**:
   - Nenhuma violação listada
 - **Envolvidos**:

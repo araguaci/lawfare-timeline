@@ -6,11 +6,9 @@ description: Ação em 2019/03/14 com violações, envolvidos, fontes e gravidad
 tags: ['juiz-natural', 'imparcialidade', 'devido-processo-legal', 'separacao-dos-poderes', 'sistema-acusatorio', 'proibicao-de-tribunal-de-excecao', 'dias-toffoli', 'alexandre-de-moraes', 'stf', 'gravidade-media']
 gravidade: media
 faicon: fas fa-exclamation-triangle
-image:
-  path: "/assets/solid/exclamation-triangle.svg"
 ---
 
-# Ação em 2019/03/14 com violações, envolvidos, fontes e gravidade media
+# Dias Toffoli instaura, por meio de Portaria nº 69 do Gabinete da Presidência do STF, o Inquérito das Fake News e designa Alexandre de Moraes como seu condutor
 
 ## Detalhes
 - **Data**: 2019/03/14

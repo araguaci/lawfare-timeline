@@ -2,6 +2,8 @@
 layout: post
 title:  Operação Última Ratio
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Investigação sobre esquema de venda de sentenças no Tribunal de Justiça de Mato Grosso do Sul✧  com afastamento de desembargadores e uso de tornozeleiras eletrônicas para monitoramento.Desembargador Vladimir Abreu da SilvaDesembargador Alexandre Aguiar BastosDesembargador Sideni Soncini PimentelDesembargador Marcos José de Brito RodriguesDesembargador Sérgio Fernandes MartinsConselheiro do TCE-MS Osmar Domingues JeronymoServidor do TJ-MS Danillo Moya JeronymoEmpresário Andreson de Oliveira Gonçalves
 tags: ['judiciario','mato-grosso-do-sul']
 ---

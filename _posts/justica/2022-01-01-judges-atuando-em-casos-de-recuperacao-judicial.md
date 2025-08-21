@@ -2,6 +2,8 @@
 layout: post
 title:  Judges atuando em casos de recuperação judicial
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Juízes que atuaram em grandes recuperações judiciais aceitaram cargos ou consultorias em empresas envolvidas nos processos✧  violando impedimentos legais.Juiz do ES responsável por recuperações da Itapemirim e outras empresasadministradores judiciais e credores
 tags: ['judiciario','es']
 ---

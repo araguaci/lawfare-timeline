@@ -2,6 +2,8 @@
 layout: post
 title:  Venda de Sentenças por Desembargador de SP
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Desembargador acusado de vender sentenças em quatro processos✧  incluindo revogação de prisões e decisões favoráveis a réus.Desembargador Ivo de Almeida✧  quatro outros denunciados.
 tags: ['judiciario','sp']
 ---

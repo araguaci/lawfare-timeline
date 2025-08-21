@@ -2,6 +2,8 @@
 layout: post
 title:  Investigações em cortes estaduais
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Investigações recentes sobre venda de decisões judiciais✧  com conexão a grilagem de terra e envolvimento de filhos de desembargadores.Cinco desembargadores (afastados pelo STJ)Andreson Oliveira (lobista✧  preso desde 26/11/2023)
 tags: ['judiciario','mato-grosso-do-sul']
 ---

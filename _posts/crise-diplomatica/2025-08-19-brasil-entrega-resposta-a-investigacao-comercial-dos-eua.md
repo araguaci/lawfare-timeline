@@ -1,23 +1,25 @@
 ---
 layout: post
 title: "Brasil entrega resposta à investigação comercial dos EUA"
+categories: crise-diplomatica
 description: > 
   "O governo brasileiro enviou documento contestando acusações de práticas discriminatórias contra empresas americanas, defendendo regulação digital, sistema do PIX, e justificando regras para big techs, alegando não discriminar comércio dos EUA."
+faicon: fa-file-alt
 tags: ['liberdade-economica', 'devido-processo-legal', 'livre-concorrencia', 'governo-do-brasil', 'ustr', 'big-techs-americanas', 'gravidade-alta']
-categories: crise-diplomatica
-faicon: fa-handshake-slash
 image:
-  path: "/assets/solid/handshake-slash.svg"
+  path: "/assets/solid/file-alt.svg"
 ---
 
 # Ação em 2025/08/19 com violações, envolvidos, fontes e gravidade alta
 
+> O governo brasileiro enviou documento contestando acusações de práticas discriminatórias contra empresas americanas, defendendo regulação digital, sistema do PIX, e justificando regras para big techs, alegando não discriminar comércio dos EUA.
+{: .prompt-danger }
+
 ## Detalhes
 - **Data**: 2025/08/19
 - **Ano**: 2025
-- **Gravidade**: alta
-- **Descrição Completa**: O governo brasileiro enviou documento contestando acusações de práticas discriminatórias contra empresas americanas, defendendo regulação digital, sistema do PIX, e justificando regras para big techs, alegando não discriminar comércio dos EUA.
-- **Gravidade**: alta <i class="fas fa-handshake-slash fa-2x"></i>
+- **Gravidade**: **alta** <i class="fas fa-file-alt"></i>
+
 - **Violações**:
   - Liberdade Econômica
   - Devido Processo Legal

@@ -2,6 +2,8 @@
 layout: post
 title:  Rede de Venda de Sentenças Envolvendo STJ
 categories: justica
+image:
+  path: "/assets/solid/balance-scale-left.svg"
 description: Investigação de venda de sentenças em gabinetes de ministros do STJ.Funcionários e ministros do STJ✧  advogados e lobistas.
 tags: ['judiciario','federal']
 ---

@@ -2,22 +2,24 @@
 layout: post
 title: "EUA impõem sanções da Lei Magnitsky a Alexandre de Moraes"
 categories: crise-diplomatica
-faicon: fa-handshake-slash
-image:
-  path: "/assets/solid/handshake-slash.svg"
 description: > 
   "O governo Trump incluiu o ministro Alexandre de Moraes na lista de sanções da Lei Magnitsky, citando violações de direitos humanos e censura, o que inclui congelamento de ativos e proibição de entrada nos EUA, agravando a crise diplomática."
+faicon: fa-gavel
 tags: ['devido-processo-legal', 'liberdade-de-expressao', 'separacao-de-poderes', 'governo-dos-eua', 'alexandre-de-moraes', 'stf', 'donald-trump', 'gravidade-alta']
+image:
+  path: "/assets/solid/gavel.svg"
 ---
 
 # Ação em 2025/07/31 com violações, envolvidos, fontes e gravidade alta
 
+> O governo Trump incluiu o ministro Alexandre de Moraes na lista de sanções da Lei Magnitsky, citando violações de direitos humanos e censura, o que inclui congelamento de ativos e proibição de entrada nos EUA, agravando a crise diplomática.
+{: .prompt-danger }
+
 ## Detalhes
 - **Data**: 2025/07/31
 - **Ano**: 2025
-- **Gravidade**: alta
-- **Descrição Completa**: O governo Trump incluiu o ministro Alexandre de Moraes na lista de sanções da Lei Magnitsky, citando violações de direitos humanos e censura, o que inclui congelamento de ativos e proibição de entrada nos EUA, agravando a crise diplomática.
-- **Gravidade**: alta <i class="fas fa-gavel fa-2x"></i>
+- **Gravidade**: **alta** <i class="fas fa-gavel"></i>
+
 - **Violações**:
   - Devido Processo Legal
   - Liberdade de Expressão

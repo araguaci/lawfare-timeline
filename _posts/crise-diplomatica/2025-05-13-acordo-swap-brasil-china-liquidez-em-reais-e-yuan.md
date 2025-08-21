@@ -2,22 +2,24 @@
 layout: post
 title: "Acordo Swap Brasil-China: liquidez em reais e yuan"
 categories: crise-diplomatica
-faicon: fa-exchange-alt
-image:
-  path: "/assets/solid/exchange-alt.svg"
 description: > 
   "Brasil e China assinam acordo de swap cambial permitindo trocas temporárias entre real e yuan sem uso do dólar. Nova etapa na agenda de desdolarização do BRICS, abre caminho para financiamento interbancário e operações de comércio bilateral."
+faicon: fa-exchange-alt
 tags: ['banco-central-do-brasil', 'banco-popular-da-china', 'brics', 'gravidade-baixa']
+image:
+  path: "/assets/solid/exchange-alt.svg"
 ---
 
 # Ação em 2025/05/13 com violações, envolvidos, fontes e gravidade baixa
 
+> Brasil e China assinam acordo de swap cambial permitindo trocas temporárias entre real e yuan sem uso do dólar. Nova etapa na agenda de desdolarização do BRICS, abre caminho para financiamento interbancário e operações de comércio bilateral.
+{: .prompt-info }
+
 ## Detalhes
 - **Data**: 2025/05/13
 - **Ano**: 2025
-- **Gravidade**: baixa
-- **Descrição Completa**: Brasil e China assinam acordo de swap cambial permitindo trocas temporárias entre real e yuan sem uso do dólar. Nova etapa na agenda de desdolarização do BRICS, abre caminho para financiamento interbancário e operações de comércio bilateral.
-- **Gravidade**: baixa <i class="fas fa-exchange-alt fa-2x"></i>
+- **Gravidade**: **baixa** <i class="fas fa-exchange-alt"></i>
+
 - **Violações**:
   - Nenhuma violação listada
 - **Envolvidos**:

@@ -2,22 +2,24 @@
 layout: post
 title: "Israel declara Lula persona non grata"
 categories: crise-diplomatica
-faicon: fa-ban
-image:
-  path: "/assets/solid/ban.svg"
 description: > 
   "O governo israelense declarou o presidente Lula persona non grata após ele comparar a guerra em Gaza ao Holocausto, exigindo retratação e gerando uma crise diplomática entre Brasil e Israel."
+faicon: fa-ban
 tags: ['liberdade-de-expressao', 'governo-de-israel', 'luiz-inacio-lula-da-silva', 'governo-do-brasil', 'gravidade-alta']
+image:
+  path: "/assets/solid/ban.svg"
 ---
 
 # Ação em 2024/02/19 com violações, envolvidos, fontes e gravidade alta
 
+> O governo israelense declarou o presidente Lula persona non grata após ele comparar a guerra em Gaza ao Holocausto, exigindo retratação e gerando uma crise diplomática entre Brasil e Israel.
+{: .prompt-danger }
+
 ## Detalhes
 - **Data**: 2024/02/19
 - **Ano**: 2024
-- **Gravidade**: alta
-- **Descrição Completa**: O governo israelense declarou o presidente Lula persona non grata após ele comparar a guerra em Gaza ao Holocausto, exigindo retratação e gerando uma crise diplomática entre Brasil e Israel.
-- **Gravidade**: alta <i class="fas fa-ban fa-2x"></i>
+- **Gravidade**: **alta** <i class="fas fa-ban"></i>
+
 - **Violações**:
   - Liberdade de Expressão
 - **Envolvidos**:

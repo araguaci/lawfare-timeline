@@ -2,22 +2,24 @@
 layout: post
 title: "Conversa telefônica entre Lula e Putin"
 categories: crise-diplomatica
-faicon: fa-phone
-image:
-  path: "/assets/solid/handshake-slash.svg"
 description: > 
   "O presidente Lula recebeu ligação do presidente russo Vladimir Putin para discutir paz na Ucrânia, relações bilaterais e cooperação no BRICS, reforçando laços diplomáticos apesar de tensões globais."
+faicon: fa-phone
 tags: ['luiz-inacio-lula-da-silva', 'vladimir-putin', 'governo-do-brasil', 'governo-da-russia', 'gravidade-baixa']
+image:
+  path: "/assets/solid/phone.svg"
 ---
 
 # Ação em 2025/08/18 com violações, envolvidos, fontes e gravidade baixa
 
+> O presidente Lula recebeu ligação do presidente russo Vladimir Putin para discutir paz na Ucrânia, relações bilaterais e cooperação no BRICS, reforçando laços diplomáticos apesar de tensões globais.
+{: .prompt-info }
+
 ## Detalhes
 - **Data**: 2025/08/18
 - **Ano**: 2025
-- **Gravidade**: baixa
-- **Descrição Completa**: O presidente Lula recebeu ligação do presidente russo Vladimir Putin para discutir paz na Ucrânia, relações bilaterais e cooperação no BRICS, reforçando laços diplomáticos apesar de tensões globais.
-- **Gravidade**: baixa <i class="fas fa-phone fa-2x"></i>
+- **Gravidade**: **baixa** <i class="fas fa-phone"></i>
+
 - **Violações**:
   - Nenhuma violação listada
 - **Envolvidos**:

@@ -2,22 +2,24 @@
 layout: post
 title: "Brasil e China firmam acordo para comércio direto em reais e yuan"
 categories: crise-diplomatica
-faicon: fa-money-bill-wave
-image:
-  path: "/assets/solid/money-bill-wave.svg"
 description: > 
   "Tratado inédito prevê transações financeiras diretas entre real e yuan, sem intermediação do dólar, para fortalecer parceria sino-brasileira e diversificar redes de pagamentos internacionais."
+faicon: fa-money-bill-wave
 tags: ['governo-do-brasil', 'governo-da-china', 'brics', 'gravidade-baixa']
+image:
+  path: "/assets/solid/money-bill-wave.svg"
 ---
 
 # Ação em 2024/09/30 com violações, envolvidos, fontes e gravidade baixa
 
+> Tratado inédito prevê transações financeiras diretas entre real e yuan, sem intermediação do dólar, para fortalecer parceria sino-brasileira e diversificar redes de pagamentos internacionais.
+{: .prompt-info }
+
 ## Detalhes
 - **Data**: 2024/09/30
 - **Ano**: 2024
-- **Gravidade**: baixa
-- **Descrição Completa**: Tratado inédito prevê transações financeiras diretas entre real e yuan, sem intermediação do dólar, para fortalecer parceria sino-brasileira e diversificar redes de pagamentos internacionais.
-- **Gravidade**: baixa <i class="fas fa-money-bill-wave fa-2x"></i>
+- **Gravidade**: **baixa** <i class="fas fa-money-bill-wave"></i>
+
 - **Violações**:
   - Nenhuma violação listada
 - **Envolvidos**:
