@@ -5,7 +5,7 @@ categories: crise-diplomatica
 description: > 
   "O ministro Alexandre de Moraes adverte que tribunais podem punir instituições financeiras brasileiras por bloquear ativos domésticos em resposta a ordens dos EUA, elevando tensões em meio a sanções Magnitsky."
 faicon: fa-bank
-tags: ['devido-processo-legal', 'soberania-nacional', 'alexandre-de-moraes', 'stf', 'bancos-brasileiros', 'governo-dos-eua', 'gravidade-alta', 'sancoes', 'judicial', 'bancos', 'crise-diplomatica']
+tags: ['devido-processo-legal', 'soberania', 'alexandre-de-moraes', 'stf', 'bancos-brasileiros', 'governo-dos-eua', 'gravidade-alta', 'sancoes', 'judicial', 'bancos', 'crise-diplomatica']
 image:
   path: "/assets/solid/bank.svg"
 ---

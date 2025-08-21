@@ -1,0 +1,88 @@
+/* CSS para densidade de tags */
+.tag .text-muted {
+  font-size: 1em;
+  font-weight: 500;
+  margin-left: 4px;
+  transition: font-size 0.2s;
+}
+
+/* Mais de 5 posts */
+.tag[data-count="6"] .text-muted,
+.tag[data-count="7"] .text-muted,
+.tag[data-count="8"] .text-muted,
+.tag[data-count="9"] .text-muted,
+.tag[data-count="10"] .text-muted {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #1976d2;
+}
+
+/* Mais de 10 posts */
+.tag[data-count="11"] .text-muted,
+.tag[data-count="12"] .text-muted,
+.tag[data-count="13"] .text-muted,
+.tag[data-count="14"] .text-muted,
+.tag[data-count="15"] .text-muted {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #d32f2f;
+}
+
+/* Acima de 15 posts */
+.tag[data-count="16"] .text-muted,
+.tag[data-count="17"] .text-muted,
+.tag[data-count="18"] .text-muted,
+.tag[data-count="19"] .text-muted,
+.tag[data-count="20"] .text-muted {
+  font-size: 1.6em;
+  font-weight: 800;
+  color: #388e3c;
+}
+
+.nav-item active, .nav-item a active, .nav-item i active {
+  color: var(--bs-warning);
+}
+
+.tag {
+  border: 1px solid #620b47 !important;
+}
+
+.site-subtitle p {
+  font: message-box !important;
+  margin-bottom: 1rem;
+  font-size: small !important;
+}
+
+#sidebar .site-title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#sidebar ul li.nav-item a.nav-link {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+
+#sidebar ul li.nav-item.active .nav-link span, #sidebar ul li.nav-item.active .nav-link i{
+  color: var(--bs-warning);
+}
+
+#sidebar .site-title {
+  text-align: center !important;
+  margin-top: 0.217rem;
+}
+
+#sidebar ul li.nav-item .nav-link:hover{
+  background-color: var(--bs-body-color);
+}
+
+#sidebar ul li.nav-item:not(:first-child) {
+    margin-top: .15rem;
+}
+
+#sidebar #avatar {
+  width: 6rem;
+  height: 6rem;
+}

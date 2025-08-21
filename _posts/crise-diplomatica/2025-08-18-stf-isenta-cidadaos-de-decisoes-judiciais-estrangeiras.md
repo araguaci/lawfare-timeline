@@ -5,7 +5,7 @@ categories: crise-diplomatica
 description: > 
   "O ministro Flavio Dino decide que cidadãos brasileiros não podem ser automaticamente sujeitos a leis ou decisões estrangeiras no território nacional, em meio a disputas com os EUA sobre sanções."
 faicon: fa-gavel
-tags: ['soberania-nacional', 'devido-processo-legal', 'stf', 'flavio-dino', 'governo-dos-eua', 'gravidade-alta', 'decisoes-judiciais', 'sancoes', 'soberania']
+tags: ['soberania', 'devido-processo-legal', 'stf', 'flavio-dino', 'governo-dos-eua', 'gravidade-alta', 'decisoes-judiciais', 'sancoes', 'soberania']
 image:
   path: "/assets/solid/gavel.svg"
 ---

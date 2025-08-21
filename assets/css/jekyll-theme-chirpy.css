@@ -67,10 +67,10 @@ aside {
 }
 
 #sidebar .profile-wrapper {
-  margin-top: 1.2rem;
-  margin-bottom: 1.2rem;
-  padding-left: 2.1rem;
-  padding-right: 2.1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 section,
@@ -106,7 +106,6 @@ section,
   padding-bottom: 0.3rem;
 }
 
-/* CSS para densidade de tags */
 .tag .text-muted {
   font-size: 1em;
   font-weight: 500;
@@ -114,7 +113,6 @@ section,
   transition: font-size 0.2s;
 }
 
-/* Mais de 5 posts */
 .tag[data-count="6"] .text-muted,
 .tag[data-count="7"] .text-muted,
 .tag[data-count="8"] .text-muted,
@@ -125,7 +123,6 @@ section,
   color: #1976d2;
 }
 
-/* Mais de 10 posts */
 .tag[data-count="11"] .text-muted,
 .tag[data-count="12"] .text-muted,
 .tag[data-count="13"] .text-muted,
@@ -136,7 +133,6 @@ section,
   color: #d32f2f;
 }
 
-/* Acima de 15 posts */
 .tag[data-count="16"] .text-muted,
 .tag[data-count="17"] .text-muted,
 .tag[data-count="18"] .text-muted,
@@ -155,15 +151,17 @@ section,
   border: 1px solid #620b47 !important;
 }
 
-.sidebar-about p {
-  font: message-box;
+.site-subtitle p {
+  font: message-box !important;
   margin-bottom: 1rem;
-  font-size: small;
+  font-size: small !important;
 }
 
-#sidebar .profile-wrapper {
+#sidebar .site-title {
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 #sidebar ul li.nav-item a.nav-link {
@@ -178,6 +176,11 @@ section,
 #sidebar .site-title {
   text-align: center !important;
   margin-top: 0.217rem;
+  margin-bottom: 0.5rem;
+}
+
+#sidebar .site-title h1 {
+    margin: 0.1rem;
 }
 
 #sidebar ul li.nav-item .nav-link:hover{
@@ -188,3 +191,12 @@ section,
     margin-top: .15rem;
 }
 
+#sidebar #avatar {
+  width: 6rem;
+  height: 6rem;
+}
+
+#sidebar .site-subtitle {
+    margin-top: .25rem;
+    font: -webkit-control;
+}

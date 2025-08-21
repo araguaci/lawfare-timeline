@@ -7,52 +7,47 @@
 
 ----
 
-Prezado @leonardodias, agradeço pela cessão das imagens de sua famosa thread sobre "lawfare", assisti sua live "Guerra da Informação". Com base nela e nas investigações do @david_agape_ e @EliVieiraJr fiquei inspirado a criar uma área com as linhas de tempo de vários episódios de falhas sistêmicas e escândalos no Brasil usando 6 ferramentas de IA e 15 programas em python.
+Prezado @PastorMalafaia, agora que o senhor faz parte da grade de vítimas, lhe apresento um portal com a linha de tempo de eventos que estão em curso no Brasil, baseado em analises da investigação do cientista de dados @leonardodias, que cedeu imagens de seu famoso artigo "lawfare", ele tem um projeto chamado "Guerra da Informação" que estuda este cenário. 
+
+O portal usa as investigações dos jornalistas investigativos @david_agape_ e @EliVieiraJr, inspirado no projeto "Guerra da Informação" para criar uma área com linhas de tempo de vários episódios de falhas sistêmicas e escândalos no Brasil usando várias ferramentas de IA e diversos programas em python.
 
 Incluo na conversa algumas pessoas cujo trabalho e opinião valorizo muito. Forte abraço. 🤝
 
 ## Linhas de Tempo Montadas:
 
--📜 Interferências Judiciais no Processo Eleitoral Brasileiro
-🔗 https://tinyurl.com/linhadetempo-stf
+-🏛️ Crise diplomática Brasil-EUA em 2025 📜
+🔗 https://tinyurl.com/crise-diplomatica
 
--✒️ STF e TSE no Contexto Político Brasileiro (2018-2023) ⚖️
-🔗 https://tinyurl.com/linhadetempo-4781
+-📜 Interferências Judiciais Sistêmicas no Brasil
+🔗 https://tinyurl.com/linhadetempo-lawfare
+
+-✒️ STF no Contexto Político Brasileiro (2018-2025) ⚖️
+🔗 https://tinyurl.com/linhadetempo-stf
 
 -🌐 Parceria entre o Tribunal Superior Eleitoral (TSE) e USAID ⚖️
 🔗 https://tinyurl.com/linhadetempo-tse
 
--📝 Ações do Violador de Direitos Humanos
+-📝 Ações do Violador de Direitos Humanos 💥
 🔗 https://tinyurl.com/linhadetempo-dossie
 
 -💰 Escândalos Políticos no Brasil
 🔗 https://tinyurl.com/linhadetempo-gov
 
--⚖️ Casos de Corrupção no Sistema Judiciário Brasileiro
-🔗 https://tinyurl.com/linhadetempo-jus
-
 -🏛️ Escândalos Financeiros no Brasil (1995-2025)
 🔗 https://tinyurl.com/linhadetempo-fin
 
--🚔 Notáveis Operações Policiais Federais no Brasil (1992-2025)
-🔗 https://tinyurl.com/linhadetempo-ope
+-⚖️ Casos de Corrupção no Sistema Judiciário Brasileiro
+🔗 https://tinyurl.com/linhadetempo-jus
 
--⚖️ Penduricalhos no Sistema Judiciário
-🔗 https://tinyurl.com/linhadetempo-farra
-
--🎭 Gastos Extravagantes de Órgãos Públicos no Brasil (2000-2025)
-🔗 https://tinyurl.com/linhadetempo-leieluxo
-
--⛓️ Decisões Judiciais Beneficiando Criminosos no Brasil💥
+-⛓️ Decisões Judiciais Beneficiando Criminosos no Brasil 💥
 🔗 https://tinyurl.com/linhadetempo-impunes
 
--🗣️ Gilmar Mendes, um ministro ou ator político?
-🔗 https://tinyurl.com/linhadetempo-vidaloka
+---
 
--🤷 Declarações controversas de ministros...
-🔗 https://tinyurl.com/linhadetempo-pleno
+-⚖️ Linhas de Tempo da Guerra Silenciosa contra a Nação ⚔️
+🔗 https://lawfare-timeline.vercel.app/
 
-----
+---
 
 ## 🤖 Ferramentas de Analise IA:
 
@@ -68,10 +63,9 @@ Incluo na conversa algumas pessoas cujo trabalho e opinião valorizo muito. Fort
 - ✨ Sistema de Análise de Supersalários
 🔗 https://tinyurl.com/supersalarios-ia
 
-Mais Lawfare: 🔗 https://tinyurl.com/lawfare-br
-
 --- CC: ---
 - @ClaudioLessa
+- @pfigueiredo08
 - @LeoVilhenaReal
 - @fabio_talhari
 - @auriverdebrasil

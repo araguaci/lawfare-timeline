@@ -65,18 +65,20 @@ O conteúdo deste portal limita-se à agregação e organização de dados preex
 
 Não se trata da produção de novas evidências. O nosso trabalho é uma curadoria imparcial, focada em facilitar o entendimento de padrões sistémicos relacionados com a corrupção, o sistema judiciário e as interferências políticas.
 
-### 🧭 Ver a Linha do Tempo
+### 🧭 Linhas do Tempo de Uma Crise Institucional Sistêmica
+
+- [🏦 Crise diplomática Brasil-EUA em 2025 com Sanções a Autoridades](/crise-diplomatica/)
 - [📜 Análise das Interferências Judiciais no Processo Eleitoral Brasileiro](/lawfare/)
 - [✒️ Democracia Abalada: STF e TSE no Contexto Político Brasileiro (2018-2023) ⚖️](/stf/)
 - [🌐 Parceria entre o Tribunal Superior Eleitoral (TSE) e USAID ⚖️](/tse/)
 - [📝 Dossiê sobre Ações do Ministro Alexandre de Moraes](/dossie/)
-- [💰 Escândalos Políticos no Brasil](/escandalos/)
+- [💰 Escândalos Políticos no Brasil em Todos os Governos da República](/escandalos/)
 - [⚖️ Casos de Corrupção no Sistema Judiciário Brasileiro](/justica/)
 - [🏛️ Análise dos Escândalos Financeiros no Brasil (1995-2025)](/bancos/)
 - [🚔 Notáveis Operações Policiais Federais no Brasil (1992-2025)](/operacoes/)
 - [🎭 Gastos Extravagantes de Órgãos Públicos no Brasil (2000-2025)](/extravagancia/)
 - [⛓️‍💥 Decisões Judiciais Beneficiando Criminosos no Brasil](/impunidade/)
-- [⚖️ Juristas sobre Decisões Judiciais Beneficiando Criminosos](/estudos/opinioes-de-juristas-sobre-decisoes-judiciais-beneficiando-criminosos-no-brasil/)
+- [⚖️ Juristas sobre Decisões Judiciais Beneficiando Criminosos](/posts/opinioes-de-juristas-sobre-decisoes-judiciais-beneficiando-criminosos-no-brasil/)
 
 ### 🔍 Investigação Vaza Toga 1 (David Ágape e Eli Vieira):
 - [Revelações Independentes sobre a Censura Online](https://www.twitterfilesbrazil.com/pt/)
@@ -97,26 +99,12 @@ Não se trata da produção de novas evidências. O nosso trabalho é uma curado
 - [✨ A Arquitetura do Privilégio](/posts/arquitetura-do-privilegio/)
 - [✨ Sistema de Análise de Supersalários](/posts/analise-de-supersalarios/)
 
-### 🕵️ Estudos
+### 🕵️ Estudos e Ferramentas de Análises
 - [✨ Coletânia de Estudos](/tags/estudos/)
 
 > **Alerta de Uso Responsável**
 > Este aplicativo não deve ser usado para difamar indivíduos sem evidências. Em caso de suspeita de informação incorreta, o usuário pode reportar via “Denúncia de Fato”. O conteúdo será revisado por equipe de verificação antes de qualquer publicação.
 {: .prompt-warning }
 
-> Esta é uma dica.
+> “Clama a mim, e responder-te-ei, e anunciar-te-ei coisas grandes e firmes que não sabes.” <br/>~~ Jeremias 33:3
 {: .prompt-tip }
-
-> Informação importante.
-{: .prompt-info }
-
-> Atenção, procedimento sensível!
-{: .prompt-warning }
-
-> Cuidado! Erro crítico.
-{: .prompt-danger }
-
-> Uma nota de destaque.
-{: .destaque }
-
-

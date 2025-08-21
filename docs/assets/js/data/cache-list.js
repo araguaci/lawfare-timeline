@@ -40,6 +40,8 @@ const include = [
   
     '/extravagancia/',
   
+    '/operacoes/',
+  
     '/penduricalhos/',
   
     '/timeline/',

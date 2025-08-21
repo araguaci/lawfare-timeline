@@ -5,7 +5,7 @@ categories: crise-diplomatica
 description: > 
   "Em meio à crise diplomática, os EUA cancelam a participação em evento militar com a Força Aérea Brasileira (FAB), afetando a Operação Formosa que contaria com mobilização de militares da Marinha do Brasil e colaboração de fuzileiros navais americanos."
 faicon: fa-fighter-jet
-tags: ['soberania-nacional', 'governo-dos-eua', 'forcas-armadas-brasileiras', 'marinha-do-brasil', 'gravidade-media', 'crise-diplomatica', 'cooperacao-militar', 'sancoes-indiretas']
+tags: ['soberania', 'governo-dos-eua', 'forcas-armadas-brasileiras', 'marinha-do-brasil', 'gravidade-media', 'crise-diplomatica', 'cooperacao-militar', 'sancoes-indiretas']
 image:
   path: "/assets/solid/fighter-jet.svg"
 ---
