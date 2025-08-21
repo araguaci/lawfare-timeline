@@ -3,7 +3,7 @@ layout: post
 title:  CPI do Crime Organizado
 categories: escandalos
 description: Crime organizado.
-tags: ['governo-fernando-henrique', '2001']
+tags: ['governo-fhc', '2001']
 date: 2001-01-01
 ---
 

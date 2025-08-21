@@ -3,7 +3,7 @@ layout: post
 title:  Escândalo da Administração de Paulo Maluf
 categories: escandalos
 description: Corrupção em SP.
-tags: ['governo-fernando-henrique', '1996']
+tags: ['governo-fhc', '1996']
 date: 1996-01-01
 ---
 

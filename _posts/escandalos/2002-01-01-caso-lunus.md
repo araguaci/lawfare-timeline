@@ -3,7 +3,7 @@ layout: post
 title:  Caso Lunus
 categories: escandalos
 description: Caso Roseana Sarney com dinheiro em empresa.
-tags: ['governo-fernando-henrique', '2002']
+tags: ['governo-fhc', '2002']
 date: 2002-01-01
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title:  Abuso de Medidas Provisórias
 categories: escandalos
 description: Excesso de MPs (5.491).
-tags: ['governo-fernando-henrique', '1995-2002']
+tags: ['governo-fhc', '1995-2002']
 date: 1995-01-01
 ---
 

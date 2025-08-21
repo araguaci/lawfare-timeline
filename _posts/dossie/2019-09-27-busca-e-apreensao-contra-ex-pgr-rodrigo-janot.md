@@ -3,7 +3,7 @@ layout: post
 title:  Busca e apreensão contra ex-PGR Rodrigo Janot
 categories: dossie
 description: Ação em 2019/09/27 com violações, envolvidos, fontes e gravidade alta
-tags: ['inviolabilidade-do-domicilio', 'devido-processo-legal', 'proporcionalidade', 'separacao-de-poderes', 'alexandre-de-moraes', 'rodrigo-janot', 'gravidade-alta']
+tags: ['domicilio-violado', 'devido-processo-legal', 'proporcionalidade', 'separacao-de-poderes', 'alexandre-de-moraes', 'rodrigo-janot', 'gravidade-alta']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:

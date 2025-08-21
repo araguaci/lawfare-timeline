@@ -3,7 +3,7 @@ layout: post
 title:  Acidentes Ambientais da Petrobras
 categories: escandalos
 description: Vazamentos de óleo.
-tags: ['governo-fernando-henrique', '2000-2001']
+tags: ['governo-fhc', '2000-2001']
 date: 2000-01-01
 ---
 

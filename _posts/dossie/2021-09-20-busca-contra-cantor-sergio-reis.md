@@ -3,7 +3,7 @@ layout: post
 title:  Busca contra cantor Sérgio Reis
 categories: dossie
 description: Ação em 2021/09/20 com violações, envolvidos, fontes e gravidade alta
-tags: ['liberdade-de-expressao', 'inviolabilidade-do-domicilio', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'sergio-reis', 'gravidade-alta']
+tags: ['liberdade-de-expressao', 'domicilio-violado', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'sergio-reis', 'gravidade-alta']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:

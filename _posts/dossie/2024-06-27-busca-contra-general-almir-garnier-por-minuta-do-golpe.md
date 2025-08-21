@@ -3,7 +3,7 @@ layout: post
 title:  Busca contra general Almir Garnier por minuta do golpe
 categories: dossie
 description: Ação em 2024/06/27 com violações, envolvidos, fontes e gravidade alta
-tags: ['inviolabilidade-do-domicilio', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'almir-garnier', 'gravidade-alta']
+tags: ['domicilio-violado', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'almir-garnier', 'gravidade-alta']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:

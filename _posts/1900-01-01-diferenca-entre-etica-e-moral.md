@@ -2,7 +2,12 @@
 title: A diferença entre Ética e Moral
 tags: [sabedoria, sociedade, ética, moral,virtude]
 categories: [sabedoria]
+image:
+  path: 'assets/solid/lightbulb.svg'
 ---
+
+- &nbsp;
+{:toc .large-only}
 
 ## Mário Ferreira dos Santos - A diferença entre Ética e Moral [^1]
 

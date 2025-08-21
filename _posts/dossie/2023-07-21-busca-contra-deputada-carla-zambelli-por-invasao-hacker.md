@@ -3,7 +3,7 @@ layout: post
 title:  Busca contra deputada Carla Zambelli por invasão hacker
 categories: dossie
 description: Ação em 2023/07/21 com violações, envolvidos, fontes e gravidade alta
-tags: ['prerrogativas-parlamentares', 'inviolabilidade-do-domicilio', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'carla-zambelli', 'gravidade-alta']
+tags: ['prerrogativas-parlamentares', 'domicilio-violado', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'carla-zambelli', 'gravidade-alta']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:

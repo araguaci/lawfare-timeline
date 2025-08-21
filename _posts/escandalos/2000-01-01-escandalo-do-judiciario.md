@@ -3,7 +3,7 @@ layout: post
 title:  Escândalo do Judiciário
 categories: escandalos
 description: Corrupção no Judiciário.
-tags: ['governo-fernando-henrique', '2000']
+tags: ['governo-fhc', '2000']
 date: 2000-01-01
 ---
 

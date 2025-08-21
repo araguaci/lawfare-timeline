@@ -3,7 +3,7 @@ layout: post
 title:  Busca contra Valdemar Costa Neto e Geraldo Alckmin por atos de 8/1
 categories: dossie
 description: Ação em 2023/02/08 com violações, envolvidos, fontes e gravidade alta
-tags: ['inviolabilidade-do-domicilio', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'valdemar-costa-neto', 'geraldo-alckmin', 'gravidade-alta']
+tags: ['domicilio-violado', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'valdemar-costa-neto', 'geraldo-alckmin', 'gravidade-alta']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:

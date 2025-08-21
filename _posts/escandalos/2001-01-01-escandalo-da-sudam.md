@@ -3,7 +3,7 @@ layout: post
 title:  Escândalo da Sudam
 categories: escandalos
 description: Desvios na Superintendência da Amazônia.
-tags: ['governo-fernando-henrique', '2001']
+tags: ['governo-fhc', '2001']
 date: 2001-01-01
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title:  Busca contra influenciadores por desinformação eleitoral
 categories: dossie
 description: Ação em 2024/11/05 com violações, envolvidos, fontes e gravidade alta
-tags: ['liberdade-de-expressao', 'inviolabilidade-do-domicilio', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'influenciadores-nao-especificados', 'gravidade-alta']
+tags: ['liberdade-de-expressao', 'domicilio-violado', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'influenciadores-nao-especificados', 'gravidade-alta']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:

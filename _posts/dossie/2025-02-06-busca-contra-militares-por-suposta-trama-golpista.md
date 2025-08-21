@@ -3,7 +3,7 @@ layout: post
 title:  Busca contra militares por suposta trama golpista
 categories: dossie
 description: Ação em 2025/02/06 com violações, envolvidos, fontes e gravidade alta
-tags: ['inviolabilidade-do-domicilio', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'militares-nao-especificados', 'gravidade-alta']
+tags: ['domicilio-violado', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'militares-nao-especificados', 'gravidade-alta']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:

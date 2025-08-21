@@ -3,7 +3,7 @@ layout: post
 title:  Busca contra deputado Daniel Silveira no inquérito das fake news
 categories: dossie
 description: Ação em 2021/02/03 com violações, envolvidos, fontes e gravidade alta
-tags: ['prerrogativas-parlamentares', 'inviolabilidade-do-domicilio', 'devido-processo-legal', 'liberdade-de-expressao', 'alexandre-de-moraes', 'daniel-silveira', 'gravidade-alta']
+tags: ['prerrogativas-parlamentares', 'domicilio-violado', 'devido-processo-legal', 'liberdade-de-expressao', 'alexandre-de-moraes', 'daniel-silveira', 'gravidade-alta']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:

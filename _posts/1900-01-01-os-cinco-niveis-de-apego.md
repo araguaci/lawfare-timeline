@@ -2,6 +2,8 @@
 title: Os Cinco Níveis de Apego
 tags: [filosofia, personalidade, carater]
 categories: [sabedoria]
+image:
+  path: 'assets/solid/lightbulb.svg'
 ---
 
 Seguindo os ensinamentos de Don Miguel Ruiz, o leitor agora tem a oportunidade de ler um afinado estudo de seu filho, Don Miguel Ruiz Jr., sobre a busca da liberdade e do equilíbrio interior.

@@ -3,7 +3,7 @@ layout: post
 title:  Busca contra Luciano Hang no inquérito das fake news
 categories: dossie
 description: Ação em 2020/09/16 com violações, envolvidos, fontes e gravidade alta
-tags: ['inviolabilidade-do-domicilio', 'devido-processo-legal', 'proporcionalidade', 'liberdade-de-expressao', 'alexandre-de-moraes', 'luciano-hang', 'gravidade-alta']
+tags: ['domicilio-violado', 'devido-processo-legal', 'proporcionalidade', 'liberdade-de-expressao', 'alexandre-de-moraes', 'luciano-hang', 'gravidade-alta']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:

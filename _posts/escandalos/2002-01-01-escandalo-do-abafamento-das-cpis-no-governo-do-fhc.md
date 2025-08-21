@@ -3,7 +3,7 @@ layout: post
 title:  Escândalo do Abafamento das CPIs no Governo do FHC
 categories: escandalos
 description: Bloqueio de investigações.
-tags: ['governo-fernando-henrique', '2002']
+tags: ['governo-fhc', '2002']
 date: 2002-01-01
 ---
 

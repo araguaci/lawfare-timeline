@@ -3,7 +3,7 @@ layout: post
 title:  Caso PC Farias
 categories: escandalos
 description: Assassinato ligado a corrupção.
-tags: ['governo-fernando-henrique', '1996']
+tags: ['governo-fhc', '1996']
 date: 1996-01-01
 ---
 

@@ -7,6 +7,9 @@ image:
   path: 'assets/img/o-poder-usurpado.png'
 ---
 
+- &nbsp;
+{:toc .large-only}
+
 A sugestão, ou antes a auto-sugestão, é um assunto completamente novo e ao mesmo tempo tão antigo quanto o mundo.
 
 É um assunto novo porque, até hoje, foi mal estudado e, por conseguinte, não muito conhecido; é antigo, por datar da aparição do homem na terra. De fato, a auto-sugestão é um instrumento que nasce connosco, e este instrumento, ou melhor esta força, é dotada de um poder inaudito, incalculável, que, conforme as circunstâncias, produz os melhores ou os piores efeitos. O conhecimento desta força é útil a cada um de nós e, particularmente, é indispensável aos médicos, aos magistrados, aos advogados e aos educadores da mocidade.

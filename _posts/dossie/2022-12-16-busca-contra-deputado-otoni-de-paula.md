@@ -3,7 +3,7 @@ layout: post
 title:  Busca contra deputado Otoni de Paula
 categories: dossie
 description: Ação em 2022/12/16 com violações, envolvidos, fontes e gravidade alta
-tags: ['prerrogativas-parlamentares', 'inviolabilidade-do-domicilio', 'devido-processo-legal', 'liberdade-de-expressao', 'alexandre-de-moraes', 'otoni-de-paula', 'gravidade-alta']
+tags: ['prerrogativas-parlamentares', 'domicilio-violado', 'devido-processo-legal', 'liberdade-de-expressao', 'alexandre-de-moraes', 'otoni-de-paula', 'gravidade-alta']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:

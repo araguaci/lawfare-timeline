@@ -12,6 +12,9 @@ image:
   path: 'assets/img/quatro-elementos.jpg'
 ---
 
+- &nbsp;
+{:toc .large-only}
+
 O ser humano é um complexo entrelaçamento de energia, vibração e matéria. Este processo energético e vibracional permeia não apenas a estrutura corporal, mas também a mente e a alma, criando um sistema holístico de existência e experiência.
 
 ## Corpo Físico: A Base Material da Energia

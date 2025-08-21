@@ -3,7 +3,7 @@ layout: post
 title:  Escândalo do BNDES
 categories: escandalos
 description: Verbas para estatais privatizadas.
-tags: ['governo-fernando-henrique', '1998']
+tags: ['governo-fhc', '1998']
 date: 1998-01-01
 ---
 

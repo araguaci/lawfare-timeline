@@ -3,7 +3,7 @@ layout: post
 title:  Busca contra general Paulo Sérgio por fraude em cartão de vacinação
 categories: dossie
 description: Ação em 2024/05/08 com violações, envolvidos, fontes e gravidade alta
-tags: ['inviolabilidade-do-domicilio', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'paulo-sergio', 'gravidade-alta']
+tags: ['domicilio-violado', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'paulo-sergio', 'gravidade-alta']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:

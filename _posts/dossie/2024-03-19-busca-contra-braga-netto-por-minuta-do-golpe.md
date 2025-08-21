@@ -3,7 +3,7 @@ layout: post
 title:  Busca contra Braga Netto por minuta do golpe
 categories: dossie
 description: Ação em 2024/03/19 com violações, envolvidos, fontes e gravidade alta
-tags: ['inviolabilidade-do-domicilio', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'braga-netto', 'gravidade-alta']
+tags: ['domicilio-violado', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'braga-netto', 'gravidade-alta']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:

@@ -3,7 +3,7 @@ layout: post
 title:  Busca contra coronel da PMDF por atos de 8/1
 categories: dossie
 description: Ação em 2023/08/11 com violações, envolvidos, fontes e gravidade alta
-tags: ['inviolabilidade-do-domicilio', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'coronel-da-pmdf', 'gravidade-alta']
+tags: ['domicilio-violado', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'coronel-da-pmdf', 'gravidade-alta']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:

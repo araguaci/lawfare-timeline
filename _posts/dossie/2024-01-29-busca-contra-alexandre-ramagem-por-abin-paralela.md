@@ -3,7 +3,7 @@ layout: post
 title:  Busca contra Alexandre Ramagem por Abin paralela
 categories: dossie
 description: Ação em 2024/01/29 com violações, envolvidos, fontes e gravidade alta
-tags: ['inviolabilidade-do-domicilio', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'alexandre-ramagem', 'gravidade-alta']
+tags: ['domicilio-violado', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'alexandre-ramagem', 'gravidade-alta']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:

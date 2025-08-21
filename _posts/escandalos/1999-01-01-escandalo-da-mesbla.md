@@ -3,7 +3,7 @@ layout: post
 title:  Escândalo da Mesbla
 categories: escandalos
 description: Irregularidades em varejo.
-tags: ['governo-fernando-henrique', '1999']
+tags: ['governo-fhc', '1999']
 date: 1999-01-01
 ---
 

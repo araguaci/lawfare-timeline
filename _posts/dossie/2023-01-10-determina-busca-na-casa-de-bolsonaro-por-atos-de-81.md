@@ -3,7 +3,7 @@ layout: post
 title:  Determina busca na casa de Bolsonaro por atos de 8/1
 categories: dossie
 description: Ação em 2023/01/10 com violações, envolvidos, fontes e gravidade alta
-tags: ['inviolabilidade-do-domicilio', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'jair-bolsonaro', 'gravidade-alta']
+tags: ['domicilio-violado', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'jair-bolsonaro', 'gravidade-alta']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:

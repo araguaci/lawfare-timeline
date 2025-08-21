@@ -3,7 +3,7 @@ layout: post
 title:  Busca contra deputados federais por crítica ao STF
 categories: dossie
 description: Ação em 2024/09/19 com violações, envolvidos, fontes e gravidade alta
-tags: ['prerrogativas-parlamentares', 'liberdade-de-expressao', 'inviolabilidade-do-domicilio', 'devido-processo-legal', 'alexandre-de-moraes', 'deputados-federais-nao-especificados', 'gravidade-alta']
+tags: ['prerrogativas-parlamentares', 'liberdade-de-expressao', 'domicilio-violado', 'devido-processo-legal', 'alexandre-de-moraes', 'deputados-federais-nao-especificados', 'gravidade-alta']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:

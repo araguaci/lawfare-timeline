@@ -3,7 +3,7 @@ layout: post
 title:  Escândalo dos Precatórios
 categories: escandalos
 description: Fraudes em pagamentos judiciais.
-tags: ['governo-fernando-henrique', '1997']
+tags: ['governo-fhc', '1997']
 date: 1997-01-01
 ---
 

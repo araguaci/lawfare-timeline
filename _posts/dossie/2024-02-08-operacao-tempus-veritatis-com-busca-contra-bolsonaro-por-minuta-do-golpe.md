@@ -3,7 +3,7 @@ layout: post
 title:  Operação Tempus Veritatis com busca contra Bolsonaro por minuta do golpe
 categories: dossie
 description: Ação em 2024/02/08 com violações, envolvidos, fontes e gravidade alta
-tags: ['inviolabilidade-do-domicilio', 'devido-processo-legal', 'proporcionalidade', 'liberdade-de-locomocao-retencao-de-passaporte', 'alexandre-de-moraes', 'jair-bolsonaro', 'gravidade-alta']
+tags: ['domicilio-violado', 'devido-processo-legal', 'proporcionalidade', 'liberdade-de-locomocao-retencao-de-passaporte', 'alexandre-de-moraes', 'jair-bolsonaro', 'gravidade-alta']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:

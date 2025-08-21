@@ -3,7 +3,7 @@ layout: post
 title:  Escândalo da Banda Podre
 categories: escandalos
 description: Corrupção policial.
-tags: ['governo-fernando-henrique', '2001']
+tags: ['governo-fhc', '2001']
 date: 2001-01-01
 ---
 

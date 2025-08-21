@@ -3,7 +3,7 @@ layout: post
 title:  Escândalo da Administração do PT
 categories: escandalos
 description: Denúncias contra PT.
-tags: ['governo-fernando-henrique', '1998']
+tags: ['governo-fhc', '1998']
 date: 1998-01-01
 ---
 

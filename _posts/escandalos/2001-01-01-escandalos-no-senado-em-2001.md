@@ -3,7 +3,7 @@ layout: post
 title:  Escândalos no Senado em 2001
 categories: escandalos
 description: Múltiplos casos.
-tags: ['governo-fernando-henrique', '2001']
+tags: ['governo-fhc', '2001']
 date: 2001-01-01
 ---
 

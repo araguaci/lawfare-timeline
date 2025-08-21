@@ -2,6 +2,8 @@
 title: Os Quatro Compromissos
 tags: [filosofia, personalidade, carater, virtude]
 categories: [sabedoria]
+image:
+  path: 'assets/solid/lightbulb.svg'
 ---
 
 ## Don Miguel Ruiz - Os Quatro Compromissos

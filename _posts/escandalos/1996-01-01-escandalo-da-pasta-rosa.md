@@ -3,7 +3,7 @@ layout: post
 title:  Escândalo da Pasta Rosa
 categories: escandalos
 description: Dossiê com acusações contra opositores.
-tags: ['governo-fernando-henrique', '1996']
+tags: ['governo-fhc', '1996']
 date: 1996-01-01
 ---
 

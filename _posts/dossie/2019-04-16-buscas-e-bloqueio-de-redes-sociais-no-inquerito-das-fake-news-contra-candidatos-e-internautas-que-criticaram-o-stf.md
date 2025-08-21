@@ -3,7 +3,7 @@ layout: post
 title:  Buscas e bloqueio de redes sociais no Inquérito das Fake News contra candidatos e internautas que criticaram o STF
 categories: dossie
 description: Ação em 2019/04/16 com violações, envolvidos, fontes e gravidade alta
-tags: ['liberdade-de-expressao', 'inviolabilidade-do-domicilio', 'devido-processo-legal', 'separacao-de-poderes', 'alexandre-de-moraes', 'candidatos-e-internautas', 'gravidade-alta']
+tags: ['liberdade-de-expressao', 'domicilio-violado', 'devido-processo-legal', 'separacao-de-poderes', 'alexandre-de-moraes', 'candidatos-e-internautas', 'gravidade-alta']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:

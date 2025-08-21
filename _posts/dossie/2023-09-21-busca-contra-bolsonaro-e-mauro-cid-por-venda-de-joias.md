@@ -3,7 +3,7 @@ layout: post
 title:  Busca contra Bolsonaro e Mauro Cid por venda de joias
 categories: dossie
 description: Ação em 2023/09/21 com violações, envolvidos, fontes e gravidade alta
-tags: ['inviolabilidade-do-domicilio', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'jair-bolsonaro', 'mauro-cid', 'gravidade-alta']
+tags: ['domicilio-violado', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'jair-bolsonaro', 'mauro-cid', 'gravidade-alta']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:

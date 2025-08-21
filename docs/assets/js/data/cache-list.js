@@ -44,7 +44,7 @@ const include = [
   
     '/timeline/',
   
-    '/sabedoria/',
+    '/book/',
   
     '/tags/',
   

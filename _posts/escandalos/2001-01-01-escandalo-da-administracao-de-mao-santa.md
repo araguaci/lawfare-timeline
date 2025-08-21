@@ -3,7 +3,7 @@ layout: post
 title:  Escândalo da Administração de Mão Santa
 categories: escandalos
 description: Corrupção no PI.
-tags: ['governo-fernando-henrique', '2001']
+tags: ['governo-fhc', '2001']
 date: 2001-01-01
 ---
 

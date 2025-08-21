@@ -3,7 +3,7 @@ layout: post
 title:  Escândalo da Telebrás
 categories: escandalos
 description: Privatização suspeita.
-tags: ['governo-fernando-henrique', '1998']
+tags: ['governo-fhc', '1998']
 date: 1998-01-01
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title:  Escândalo dos Desvios de Verbas do TRT-SP
 categories: escandalos
 description: Desvios no Tribunal Regional do Trabalho.
-tags: ['governo-fernando-henrique', '2000']
+tags: ['governo-fhc', '2000']
 date: 2000-01-01
 ---
 

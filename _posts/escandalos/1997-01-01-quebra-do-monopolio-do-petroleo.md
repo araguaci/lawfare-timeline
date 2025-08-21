@@ -3,7 +3,7 @@ layout: post
 title:  Quebra do Monopólio do Petróleo
 categories: escandalos
 description: Criação da ANP com irregularidades.
-tags: ['governo-fernando-henrique', '1997']
+tags: ['governo-fhc', '1997']
 date: 1997-01-01
 ---
 

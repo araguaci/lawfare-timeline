@@ -3,7 +3,7 @@ layout: post
 title:  Escândalo da Pane DDD do Sistema Telefônico Privatizado
 categories: escandalos
 description: Falha no sistema telefônico.
-tags: ['governo-fernando-henrique', '1999']
+tags: ['governo-fhc', '1999']
 date: 1999-07-01
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title:  Busca contra militares por minuta do golpe
 categories: dossie
 description: Ação em 2023/11/09 com violações, envolvidos, fontes e gravidade alta
-tags: ['inviolabilidade-do-domicilio', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'militares', 'gravidade-alta']
+tags: ['domicilio-violado', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'militares', 'gravidade-alta']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:

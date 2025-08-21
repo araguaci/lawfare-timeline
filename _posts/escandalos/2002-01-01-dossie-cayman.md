@@ -3,7 +3,7 @@ layout: post
 title:  Dossiê Cayman
 categories: escandalos
 description: Dossiê falso contra opositores.
-tags: ['governo-fernando-henrique', '2002']
+tags: ['governo-fhc', '2002']
 date: 2002-01-01
 ---
 

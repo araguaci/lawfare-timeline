@@ -3,7 +3,7 @@ layout: post
 title:  Corrupção na Prefeitura de São Paulo
 categories: escandalos
 description: Caso Celso Pitta.
-tags: ['governo-fernando-henrique', '2000']
+tags: ['governo-fhc', '2000']
 date: 2000-01-01
 ---
 

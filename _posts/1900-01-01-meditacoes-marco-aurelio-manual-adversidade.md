@@ -9,6 +9,8 @@ image:
   path: 'https://media.gazetadopovo.com.br/2024/03/19180029/meditacoes-marco-aurelio-83906221920-960x540.jpg'
 ---
 
+- &nbsp;
+{:toc .large-only}
 
 A ideia de que a sabedoria é encontrada através da exploração está há muito tempo conosco. É uma pedra angular de muitas culturas e a força motriz por trás da investigação científica. Nos aventuramos pelo desconhecido, deixando para trás o familiar e as distrações e tentações nele contidas, como os primeiros cristãos fizeram no Egito. Não é necessário viajar muito para satisfazer esse impulso. Experiências extremas têm alimentado a iluminação há muito tempo, como as memórias de exílio, devassidão e desastre prometem até hoje. Muitos dos aventureiros não tinham escolha, no entanto. Boécio escreveu 'A Consolação da Filosofia' enquanto estava preso, enfrentando a execução por acusações forjadas de traição. E enquanto escrevia 'Dom Quixote', Cervantes baseou-se em parte em experiências de cinco anos como escravo de galé dos corsários bárbaros.
 

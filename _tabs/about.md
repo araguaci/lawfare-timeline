@@ -65,11 +65,6 @@ O conteúdo deste portal limita-se à agregação e organização de dados preex
 
 Não se trata da produção de novas evidências. O nosso trabalho é uma curadoria imparcial, focada em facilitar o entendimento de padrões sistémicos relacionados com a corrupção, o sistema judiciário e as interferências políticas.
 
-
-> **Alerta de Uso Responsável**
-> Este aplicativo não deve ser usado para difamar indivíduos sem evidências. Em caso de suspeita de informação incorreta, o usuário pode reportar via “Denúncia de Fato”. O conteúdo será revisado por equipe de verificação antes de qualquer publicação.
-
-
 ### 🧭 Ver a Linha do Tempo
 - [📜 Análise das Interferências Judiciais no Processo Eleitoral Brasileiro](/lawfare/)
 - [✒️ Democracia Abalada: STF e TSE no Contexto Político Brasileiro (2018-2023) ⚖️](/stf/)
@@ -90,6 +85,7 @@ Não se trata da produção de novas evidências. O nosso trabalho é uma curado
 - [Relatório sobre a Política de Censura no Brasil e a Resposta dos EUA](https://www.twitterfilesbrazil.com/pt/desdobramentos/relatorio-sobre-a-politica-de-censura-no-brasil-e-a-resposta-dos-eua)
 
 ### 🔍 Investigação Vaza Toga 2 (David Ágape e Eli Vieira):
+- [🕵️ Vazatoga2 - Os Arquivos do 8 de Janeiro](/categories/vazatoga/)
 - Versão curta: [https://bit.ly/vaza-toga-public](https://bit.ly/vaza-toga-public)
 - Versão de relatório: [https://bit.ly/vaza-toga](https://bit.ly/vaza-toga)
 - [Depoimento de David Ágape na Câmara dos Deputados](https://www.ainvestigacao.com/p/vaza-toga-2-depoimento-de-david-agape)
@@ -100,3 +96,9 @@ Não se trata da produção de novas evidências. O nosso trabalho é uma curado
 - [✨ Soberania do Brasil - Análise Estratégica](/posts/soberania-do-brasil/)
 - [✨ A Arquitetura do Privilégio](/posts/arquitetura-do-privilegio/)
 - [✨ Sistema de Análise de Supersalários](/posts/analise-de-supersalarios/)
+
+### 🕵️ Estudos
+- [✨ Coletânia de Estudos](/tags/estudos/)
+
+> **Alerta de Uso Responsável**
+> Este aplicativo não deve ser usado para difamar indivíduos sem evidências. Em caso de suspeita de informação incorreta, o usuário pode reportar via “Denúncia de Fato”. O conteúdo será revisado por equipe de verificação antes de qualquer publicação.

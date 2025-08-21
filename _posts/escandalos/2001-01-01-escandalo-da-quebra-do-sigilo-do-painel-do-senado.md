@@ -3,7 +3,7 @@ layout: post
 title:  Escândalo da Quebra do Sigilo do Painel do Senado
 categories: escandalos
 description: Violação de sigilo em votações.
-tags: ['governo-fernando-henrique', '2001']
+tags: ['governo-fhc', '2001']
 date: 2001-01-01
 ---
 

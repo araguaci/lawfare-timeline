@@ -3,7 +3,7 @@ layout: post
 title:  Escândalo da Compra de Votos Para Emenda da Reeleição
 categories: escandalos
 description: Compra de votos para reeleição.
-tags: ['governo-fernando-henrique', '1997']
+tags: ['governo-fhc', '1997']
 date: 1997-01-01
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title:  Busca contra Luciano Ayan por fake news
 categories: dossie
 description: Ação em 2023/09/27 com violações, envolvidos, fontes e gravidade alta
-tags: ['liberdade-de-expressao', 'inviolabilidade-do-domicilio', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'luciano-ayan', 'gravidade-alta']
+tags: ['liberdade-de-expressao', 'domicilio-violado', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'luciano-ayan', 'gravidade-alta']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:

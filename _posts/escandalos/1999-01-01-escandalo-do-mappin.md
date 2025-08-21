@@ -3,7 +3,7 @@ layout: post
 title:  Escândalo do Mappin
 categories: escandalos
 description: Fraudes em varejo.
-tags: ['governo-fernando-henrique', '1999']
+tags: ['governo-fhc', '1999']
 date: 1999-01-01
 ---
 

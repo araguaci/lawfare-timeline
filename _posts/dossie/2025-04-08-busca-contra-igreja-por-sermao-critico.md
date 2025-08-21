@@ -3,7 +3,7 @@ layout: post
 title:  Busca contra igreja por sermão crítico
 categories: dossie
 description: Ação em 2025/04/08 com violações, envolvidos, fontes e gravidade alta
-tags: ['liberdade-religiosa', 'inviolabilidade-do-domicilio', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'lideres-da-igreja', 'gravidade-alta']
+tags: ['liberdade-religiosa', 'domicilio-violado', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'lideres-da-igreja', 'gravidade-alta']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:

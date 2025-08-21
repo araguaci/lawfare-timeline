@@ -3,7 +3,7 @@ layout: post
 title:  Busca contra Daniel Silveira em sua cela
 categories: dossie
 description: Ação em 2021/02/17 com violações, envolvidos, fontes e gravidade alta
-tags: ['prerrogativas-parlamentares', 'inviolabilidade-do-domicilio', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'daniel-silveira', 'gravidade-alta']
+tags: ['prerrogativas-parlamentares', 'domicilio-violado', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'daniel-silveira', 'gravidade-alta']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:

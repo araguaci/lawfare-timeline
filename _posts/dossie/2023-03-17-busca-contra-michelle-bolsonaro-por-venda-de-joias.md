@@ -3,7 +3,7 @@ layout: post
 title:  Busca contra Michelle Bolsonaro por venda de joias
 categories: dossie
 description: Ação em 2023/03/17 com violações, envolvidos, fontes e gravidade alta
-tags: ['inviolabilidade-do-domicilio', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'michelle-bolsonaro', 'gravidade-alta']
+tags: ['domicilio-violado', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'michelle-bolsonaro', 'gravidade-alta']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:

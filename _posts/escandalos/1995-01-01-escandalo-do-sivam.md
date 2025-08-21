@@ -3,7 +3,7 @@ layout: post
 title:  Escândalo do Sivam
 categories: escandalos
 description: Fraudes em sistema de vigilância da Amazônia.
-tags: ['governo-fernando-henrique', '1995']
+tags: ['governo-fhc', '1995']
 date: 1995-01-01
 ---
 
