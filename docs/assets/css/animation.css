@@ -1,0 +1,414 @@
+@charset "UTF-8";
+/* 生成动画 */
+@keyframes infirot {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.icon-loading1 {
+  display: inline-block;
+  animation: infirot 1s linear infinite;
+  -webkit-animation: infirot 1s linear infinite;
+}
+
+#animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+  100% {
+    transform: translateY(-1200px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+@media all and (min-width: 1200px) {
+  #animation .animation-circle {
+    position: absolute;
+    left: var(--circle-left);
+    bottom: -300px;
+    display: block;
+    background: var(--circle-background);
+    width: var(--circle-side-length);
+    height: var(--circle-side-length);
+    animation: animate 25s linear infinite;
+    animation-duration: var(--circle-time);
+    animation-delay: var(--circle-delay);
+    pointer-events: none;
+  }
+  #animation .animation-circle:nth-child(0) {
+    --circle-left: 31%;
+    --circle-background: rgba(119, 147, 255, 0.06);
+    --circle-side-length: 141px;
+    --circle-time: 39s;
+    --circle-delay: 15s;
+  }
+  #animation .animation-circle:nth-child(1) {
+    --circle-left: 41%;
+    --circle-background: rgba(46, 141, 45, 0.06);
+    --circle-side-length: 103px;
+    --circle-time: 42s;
+    --circle-delay: 11s;
+  }
+  #animation .animation-circle:nth-child(2) {
+    --circle-left: 50%;
+    --circle-background: rgba(248, 83, 52, 0.06);
+    --circle-side-length: 160px;
+    --circle-time: 17s;
+    --circle-delay: 22s;
+  }
+  #animation .animation-circle:nth-child(3) {
+    --circle-left: 81%;
+    --circle-background: rgba(52, 1, 30, 0.06);
+    --circle-side-length: 24px;
+    --circle-time: 21s;
+    --circle-delay: 4s;
+  }
+  #animation .animation-circle:nth-child(4) {
+    --circle-left: 48%;
+    --circle-background: rgba(31, 19, 44, 0.06);
+    --circle-side-length: 83px;
+    --circle-time: 42s;
+    --circle-delay: 16s;
+  }
+  #animation .animation-circle:nth-child(5) {
+    --circle-left: 31%;
+    --circle-background: rgba(166, 71, 212, 0.06);
+    --circle-side-length: 135px;
+    --circle-time: 14s;
+    --circle-delay: 6s;
+  }
+  #animation .animation-circle:nth-child(6) {
+    --circle-left: 62%;
+    --circle-background: rgba(126, 178, 241, 0.06);
+    --circle-side-length: 104px;
+    --circle-time: 20s;
+    --circle-delay: 15s;
+  }
+  #animation .animation-circle:nth-child(7) {
+    --circle-left: 83%;
+    --circle-background: rgba(214, 241, 61, 0.06);
+    --circle-side-length: 86px;
+    --circle-time: 20s;
+    --circle-delay: 1s;
+  }
+  #animation .animation-circle:nth-child(8) {
+    --circle-left: 37%;
+    --circle-background: rgba(50, 82, 12, 0.06);
+    --circle-side-length: 175px;
+    --circle-time: 18s;
+    --circle-delay: 13s;
+  }
+  #animation .animation-circle:nth-child(9) {
+    --circle-left: 66%;
+    --circle-background: rgba(152, 65, 127, 0.06);
+    --circle-side-length: 175px;
+    --circle-time: 11s;
+    --circle-delay: 1s;
+  }
+  #animation .animation-circle:nth-child(10) {
+    --circle-left: 16%;
+    --circle-background: rgba(0, 98, 211, 0.06);
+    --circle-side-length: 28px;
+    --circle-time: 34s;
+    --circle-delay: 15s;
+  }
+  #animation .animation-circle:nth-child(11) {
+    --circle-left: 42%;
+    --circle-background: rgba(63, 76, 67, 0.06);
+    --circle-side-length: 77px;
+    --circle-time: 10s;
+    --circle-delay: 19s;
+  }
+  #animation .animation-circle:nth-child(12) {
+    --circle-left: 5%;
+    --circle-background: rgba(94, 120, 72, 0.06);
+    --circle-side-length: 101px;
+    --circle-time: 39s;
+    --circle-delay: 9s;
+  }
+  #animation .animation-circle:nth-child(13) {
+    --circle-left: 71%;
+    --circle-background: rgba(125, 85, 140, 0.06);
+    --circle-side-length: 120px;
+    --circle-time: 24s;
+    --circle-delay: 0s;
+  }
+  #animation .animation-circle:nth-child(14) {
+    --circle-left: 79%;
+    --circle-background: rgba(134, 254, 91, 0.06);
+    --circle-side-length: 197px;
+    --circle-time: 32s;
+    --circle-delay: 24s;
+  }
+  #animation .animation-circle:nth-child(15) {
+    --circle-left: 7%;
+    --circle-background: rgba(50, 223, 139, 0.06);
+    --circle-side-length: 80px;
+    --circle-time: 33s;
+    --circle-delay: 1s;
+  }
+  #animation .animation-circle:nth-child(16) {
+    --circle-left: 10%;
+    --circle-background: rgba(70, 21, 40, 0.06);
+    --circle-side-length: 27px;
+    --circle-time: 43s;
+    --circle-delay: 7s;
+  }
+  #animation .animation-circle:nth-child(17) {
+    --circle-left: 69%;
+    --circle-background: rgba(112, 115, 101, 0.06);
+    --circle-side-length: 135px;
+    --circle-time: 39s;
+    --circle-delay: 8s;
+  }
+  #animation .animation-circle:nth-child(18) {
+    --circle-left: 36%;
+    --circle-background: rgba(227, 136, 5, 0.06);
+    --circle-side-length: 41px;
+    --circle-time: 11s;
+    --circle-delay: 5s;
+  }
+  #animation .animation-circle:nth-child(19) {
+    --circle-left: 84%;
+    --circle-background: rgba(213, 155, 13, 0.06);
+    --circle-side-length: 82px;
+    --circle-time: 25s;
+    --circle-delay: 4s;
+  }
+  #animation .animation-circle:nth-child(20) {
+    --circle-left: 34%;
+    --circle-background: rgba(79, 26, 43, 0.06);
+    --circle-side-length: 87px;
+    --circle-time: 28s;
+    --circle-delay: 18s;
+  }
+  #animation .animation-circle:nth-child(21) {
+    --circle-left: 68%;
+    --circle-background: rgba(59, 107, 171, 0.06);
+    --circle-side-length: 32px;
+    --circle-time: 15s;
+    --circle-delay: 22s;
+  }
+  #animation .animation-circle:nth-child(22) {
+    --circle-left: 50%;
+    --circle-background: rgba(199, 201, 194, 0.06);
+    --circle-side-length: 98px;
+    --circle-time: 44s;
+    --circle-delay: 11s;
+  }
+  #animation .animation-circle:nth-child(23) {
+    --circle-left: 26%;
+    --circle-background: rgba(220, 31, 225, 0.06);
+    --circle-side-length: 101px;
+    --circle-time: 44s;
+    --circle-delay: 3s;
+  }
+  #animation .animation-circle:nth-child(24) {
+    --circle-left: 68%;
+    --circle-background: rgba(20, 116, 234, 0.06);
+    --circle-side-length: 157px;
+    --circle-time: 29s;
+    --circle-delay: 5s;
+  }
+  #animation .animation-circle:nth-child(25) {
+    --circle-left: 45%;
+    --circle-background: rgba(108, 155, 176, 0.06);
+    --circle-side-length: 114px;
+    --circle-time: 12s;
+    --circle-delay: 14s;
+  }
+  #animation .animation-circle:nth-child(26) {
+    --circle-left: 96%;
+    --circle-background: rgba(72, 222, 174, 0.06);
+    --circle-side-length: 94px;
+    --circle-time: 24s;
+    --circle-delay: 21s;
+  }
+  #animation .animation-circle:nth-child(27) {
+    --circle-left: 56%;
+    --circle-background: rgba(167, 58, 179, 0.06);
+    --circle-side-length: 38px;
+    --circle-time: 11s;
+    --circle-delay: 2s;
+  }
+  #animation .animation-circle:nth-child(28) {
+    --circle-left: 62%;
+    --circle-background: rgba(49, 223, 244, 0.06);
+    --circle-side-length: 51px;
+    --circle-time: 15s;
+    --circle-delay: 5s;
+  }
+  #animation .animation-circle:nth-child(29) {
+    --circle-left: 89%;
+    --circle-background: rgba(17, 230, 12, 0.06);
+    --circle-side-length: 171px;
+    --circle-time: 45s;
+    --circle-delay: 3s;
+  }
+  #animation .animation-circle:nth-child(30) {
+    --circle-left: 2%;
+    --circle-background: rgba(47, 247, 178, 0.06);
+    --circle-side-length: 102px;
+    --circle-time: 14s;
+    --circle-delay: 1s;
+  }
+  #animation .animation-circle:nth-child(31) {
+    --circle-left: 82%;
+    --circle-background: rgba(107, 109, 80, 0.06);
+    --circle-side-length: 85px;
+    --circle-time: 19s;
+    --circle-delay: 15s;
+  }
+  #animation .animation-circle:nth-child(32) {
+    --circle-left: 66%;
+    --circle-background: rgba(108, 149, 65, 0.06);
+    --circle-side-length: 84px;
+    --circle-time: 36s;
+    --circle-delay: 4s;
+  }
+  #animation .animation-circle:nth-child(33) {
+    --circle-left: 9%;
+    --circle-background: rgba(109, 89, 185, 0.06);
+    --circle-side-length: 64px;
+    --circle-time: 39s;
+    --circle-delay: 9s;
+  }
+  #animation .animation-circle:nth-child(34) {
+    --circle-left: 76%;
+    --circle-background: rgba(9, 12, 255, 0.06);
+    --circle-side-length: 184px;
+    --circle-time: 40s;
+    --circle-delay: 20s;
+  }
+  #animation .animation-circle:nth-child(35) {
+    --circle-left: 39%;
+    --circle-background: rgba(32, 34, 113, 0.06);
+    --circle-side-length: 54px;
+    --circle-time: 15s;
+    --circle-delay: 21s;
+  }
+  #animation .animation-circle:nth-child(36) {
+    --circle-left: 32%;
+    --circle-background: rgba(241, 253, 121, 0.06);
+    --circle-side-length: 75px;
+    --circle-time: 11s;
+    --circle-delay: 3s;
+  }
+  #animation .animation-circle:nth-child(37) {
+    --circle-left: 57%;
+    --circle-background: rgba(102, 147, 36, 0.06);
+    --circle-side-length: 168px;
+    --circle-time: 30s;
+    --circle-delay: 24s;
+  }
+  #animation .animation-circle:nth-child(38) {
+    --circle-left: 75%;
+    --circle-background: rgba(224, 234, 95, 0.06);
+    --circle-side-length: 22px;
+    --circle-time: 36s;
+    --circle-delay: 18s;
+  }
+  #animation .animation-circle:nth-child(39) {
+    --circle-left: 6%;
+    --circle-background: rgba(242, 232, 4, 0.06);
+    --circle-side-length: 115px;
+    --circle-time: 25s;
+    --circle-delay: 12s;
+  }
+  #animation .animation-circle:nth-child(40) {
+    --circle-left: 98%;
+    --circle-background: rgba(40, 148, 195, 0.06);
+    --circle-side-length: 150px;
+    --circle-time: 20s;
+    --circle-delay: 5s;
+  }
+  #animation .animation-circle:nth-child(41) {
+    --circle-left: 5%;
+    --circle-background: rgba(146, 231, 173, 0.06);
+    --circle-side-length: 58px;
+    --circle-time: 31s;
+    --circle-delay: 10s;
+  }
+  #animation .animation-circle:nth-child(42) {
+    --circle-left: 16%;
+    --circle-background: rgba(115, 203, 222, 0.06);
+    --circle-side-length: 197px;
+    --circle-time: 29s;
+    --circle-delay: 15s;
+  }
+  #animation .animation-circle:nth-child(43) {
+    --circle-left: 100%;
+    --circle-background: rgba(144, 169, 62, 0.06);
+    --circle-side-length: 31px;
+    --circle-time: 33s;
+    --circle-delay: 24s;
+  }
+  #animation .animation-circle:nth-child(44) {
+    --circle-left: 79%;
+    --circle-background: rgba(86, 241, 32, 0.06);
+    --circle-side-length: 24px;
+    --circle-time: 28s;
+    --circle-delay: 11s;
+  }
+  #animation .animation-circle:nth-child(45) {
+    --circle-left: 11%;
+    --circle-background: rgba(221, 82, 51, 0.06);
+    --circle-side-length: 49px;
+    --circle-time: 24s;
+    --circle-delay: 25s;
+  }
+  #animation .animation-circle:nth-child(46) {
+    --circle-left: 90%;
+    --circle-background: rgba(160, 100, 56, 0.06);
+    --circle-side-length: 144px;
+    --circle-time: 25s;
+    --circle-delay: 7s;
+  }
+  #animation .animation-circle:nth-child(47) {
+    --circle-left: 93%;
+    --circle-background: rgba(202, 213, 46, 0.06);
+    --circle-side-length: 72px;
+    --circle-time: 19s;
+    --circle-delay: 24s;
+  }
+  #animation .animation-circle:nth-child(48) {
+    --circle-left: 83%;
+    --circle-background: rgba(27, 149, 119, 0.06);
+    --circle-side-length: 155px;
+    --circle-time: 26s;
+    --circle-delay: 3s;
+  }
+  #animation .animation-circle:nth-child(49) {
+    --circle-left: 73%;
+    --circle-background: rgba(247, 12, 113, 0.06);
+    --circle-side-length: 118px;
+    --circle-time: 22s;
+    --circle-delay: 14s;
+  }
+  #animation .animation-circle:nth-child(50) {
+    --circle-left: 20%;
+    --circle-background: rgba(29, 10, 160, 0.06);
+    --circle-side-length: 54px;
+    --circle-time: 19s;
+    --circle-delay: 20s;
+  }
+}
+@media all and (max-width: 1199px) {
+  #animation .animation-circle {
+    display: none;
+  }
+}/*# sourceMappingURL=animation.css.map */

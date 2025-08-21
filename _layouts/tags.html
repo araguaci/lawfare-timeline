@@ -1,0 +1,31 @@
+---
+layout: page
+# All the Tags of posts.
+---
+
+<div id="tags" class="d-flex flex-wrap mx-xl-2">
+  {% assign tags_with_counts = '' | split: '' %}
+  {% for tag_item in site.tags %}
+    {% assign tag_name = tag_item[0] %}
+    {% assign tag_count = tag_item[1].size %}
+    {% if tag_count > 1 %}
+      {% assign pair = tag_name | append: '|' | append: tag_count %}
+      {% assign tags_with_counts = tags_with_counts | push: pair %}
+    {% endif %}
+  {% endfor %}
+
+  {%- assign tags_with_counts_sorted = tags_with_counts | sort_natural: "split:'|',1" | reverse -%}
+
+  {% for pair in tags_with_counts_sorted %}
+    {% assign tag_name = pair | split: '|' | first %}
+    {% assign tag_count = pair | split: '|' | last %}
+    <div>
+      <a class="tag" href="{{ tag_name | slugify | url_encode | prepend: '/tags/' | append: '/' | relative_url }}">
+        {{ tag_name }}
+        <span class="text-muted">{{ tag_count }}</span>
+      </a>
+    </div>
+  {% endfor %}
+</div>
+
+

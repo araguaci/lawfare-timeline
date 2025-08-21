@@ -1,0 +1,30 @@
+---
+layout: post
+title:  Campanhas de combate à desinformação e incentivo ao voto promovidas por canais do YouTube e blogueiros
+categories: tse
+description: Durante o período eleitoral, diversos canais do YouTube e blogueiros de grande influência participaram de campanhas de incentivo ao voto, defesa do processo eleitoral e combate à desinformação, muitas vezes em parceria com ONGs e projetos apoiados por verba internacional. Os conteúdos incluíram lives, vídeos explicativos, debates com especialistas, entrevistas com lideranças políticas e séries temáticas sobre checagem de fatos e direitos políticos. Os comunicadores progressistas concentraram esforços em desconstruir fake news associadas à disputa presidencial. Não há comprovação pública de financiamento estrangeiro direto para campanhas de candidatos, mas parte dos canais atuou em projetos contemplados por editais e parcerias de ONGs financiadas pela USAID.
+tags: ['tse', 'online', 'nacional', 'usaid']
+---
+
+# Campanhas de combate à desinformação e incentivo ao voto promovidas por canais do YouTube e blogueiros
+
+## Detalhes
+- **Data**: 2022-09-20
+- **Ano**: 2022
+- **Local**: Online (Brasil inteiro)
+- **Gravidade**: média
+- **Envolvidos**:
+  - Canais do YouTube (ex: Meteoro Brasil, Manual do Mundo, Felipe Neto)
+  - Blogueiros e jornalistas independentes (ex: Leonardo Sakamoto, Sabrina Fernandes)
+  - ONGs de checagem e educação digital
+- **Fontes**:
+  - [https://eyesonbrasil.com/usaid-and-brazils-2022-elections-a-controversial-intersection/](https://eyesonbrasil.com/usaid-and-brazils-2022-elections-a-controversial-intersection/)
+  - [https://www.gazetadopovo.com.br/republica/mais-de-duas-dezenas-de-ongs-brasileiras-receberam-r-267-milhoes-da-usaid/](https://www.gazetadopovo.com.br/republica/mais-de-duas-dezenas-de-ongs-brasileiras-receberam-r-267-milhoes-da-usaid/)
+
+## Analise por IA
+- [🤖 Investigar com IA](https://www.perplexity.ai/search?q=%22Alexandre%20de%20Moraes%22%20Campanhas%20de%20combate%20%C3%A0%20desinforma%C3%A7%C3%A3o%20e%20incentivo%20ao%20voto%20promovidas%20por%20canais%20do%20YouTube%20e%20blogueiros%20Durante%20o%20per%C3%ADodo%20eleitoral%2C%20diversos%20canais%20do%20YouTube%20e%20blogueiros%20de%20grande%20influ%C3%AAncia%20participaram%20de%20campanhas%20de%20incentivo%20ao%20voto%2C%20defesa%20do%20processo%20eleitoral%20e%20combate%20%C3%A0%20desinforma%C3%A7%C3%A3o%2C%20muitas%20vezes%20em%20parceria%20com%20ONGs%20e%20projetos%20apoiados%20por%20verba%20internacional.%20Os%20conte%C3%BAdos%20inclu%C3%ADram%20lives%2C%20v%C3%ADdeos%20explicativos%2C%20debates%20com%20especialistas%2C%20entrevistas%20com%20lideran%C3%A7as%20pol%C3%ADticas%20e%20s%C3%A9ries%20tem%C3%A1ticas%20sobre%20checagem%20de%20fatos%20e%20direitos%20pol%C3%ADticos.%20Os%20comunicadores%20progressistas%20concentraram%20esfor%C3%A7os%20em%20desconstruir%20fake%20news%20associadas%20%C3%A0%20disputa%20presidencial.%20N%C3%A3o%20h%C3%A1%20comprova%C3%A7%C3%A3o%20p%C3%BAblica%20de%20financiamento%20estrangeiro%20direto%20para%20campanhas%20de%20candidatos%2C%20mas%20parte%20dos%20canais%20atuou%20em%20projetos%20contemplados%20por%20editais%20e%20parcerias%20de%20ONGs%20financiadas%20pela%20USAID.%20Online%20%28Brasil%20inteiro%29%202022)
+
+## Links Relacionados
+- [🌐🔍 Busca no Google para o título e descrição](https://www.google.com/search?q=%22Alexandre%20de%20Moraes%22%20Campanhas%20de%20combate%20%C3%A0%20desinforma%C3%A7%C3%A3o%20e%20incentivo%20ao%20voto%20promovidas%20por%20canais%20do%20YouTube%20e%20blogueiros%20Durante%20o%20per%C3%ADodo%20eleitoral%2C%20diversos%20canais%20do%20YouTube%20e%20blogueiros%20de%20grande%20influ%C3%AAncia%20participaram%20de%20campanhas%20de%20incentivo%20ao%20voto%2C%20defesa%20do%20processo%20eleitoral%20e%20combate%20%C3%A0%20desinforma%C3%A7%C3%A3o%2C%20muitas%20vezes%20em%20parceria%20com%20ONGs%20e%20projetos%20apoiados%20por%20verba%20internacional.%20Os%20conte%C3%BAdos%20inclu%C3%ADram%20lives%2C%20v%C3%ADdeos%20explicativos%2C%20debates%20com%20especialistas%2C%20entrevistas%20com%20lideran%C3%A7as%20pol%C3%ADticas%20e%20s%C3%A9ries%20tem%C3%A1ticas%20sobre%20checagem%20de%20fatos%20e%20direitos%20pol%C3%ADticos.%20Os%20comunicadores%20progressistas%20concentraram%20esfor%C3%A7os%20em%20desconstruir%20fake%20news%20associadas%20%C3%A0%20disputa%20presidencial.%20N%C3%A3o%20h%C3%A1%20comprova%C3%A7%C3%A3o%20p%C3%BAblica%20de%20financiamento%20estrangeiro%20direto%20para%20campanhas%20de%20candidatos%2C%20mas%20parte%20dos%20canais%20atuou%20em%20projetos%20contemplados%20por%20editais%20e%20parcerias%20de%20ONGs%20financiadas%20pela%20USAID.%20Online%20%28Brasil%20inteiro%29%202022)
+- [📖🔍 Busca na Wikipedia para o título e descrição](https://pt.wikipedia.org/w/index.php?search=%22Alexandre%20de%20Moraes%22%20Campanhas%20de%20combate%20%C3%A0%20desinforma%C3%A7%C3%A3o%20e%20incentivo%20ao%20voto%20promovidas%20por%20canais%20do%20YouTube%20e%20blogueiros%20Durante%20o%20per%C3%ADodo%20eleitoral%2C%20diversos%20canais%20do%20YouTube%20e%20blogueiros%20de%20grande%20influ%C3%AAncia%20participaram%20de%20campanhas%20de%20incentivo%20ao%20voto%2C%20defesa%20do%20processo%20eleitoral%20e%20combate%20%C3%A0%20desinforma%C3%A7%C3%A3o%2C%20muitas%20vezes%20em%20parceria%20com%20ONGs%20e%20projetos%20apoiados%20por%20verba%20internacional.%20Os%20conte%C3%BAdos%20inclu%C3%ADram%20lives%2C%20v%C3%ADdeos%20explicativos%2C%20debates%20com%20especialistas%2C%20entrevistas%20com%20lideran%C3%A7as%20pol%C3%ADticas%20e%20s%C3%A9ries%20tem%C3%A1ticas%20sobre%20checagem%20de%20fatos%20e%20direitos%20pol%C3%ADticos.%20Os%20comunicadores%20progressistas%20concentraram%20esfor%C3%A7os%20em%20desconstruir%20fake%20news%20associadas%20%C3%A0%20disputa%20presidencial.%20N%C3%A3o%20h%C3%A1%20comprova%C3%A7%C3%A3o%20p%C3%BAblica%20de%20financiamento%20estrangeiro%20direto%20para%20campanhas%20de%20candidatos%2C%20mas%20parte%20dos%20canais%20atuou%20em%20projetos%20contemplados%20por%20editais%20e%20parcerias%20de%20ONGs%20financiadas%20pela%20USAID.%20Online%20%28Brasil%20inteiro%29%202022)
+

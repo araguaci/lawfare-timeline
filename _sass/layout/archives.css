@@ -1,0 +1,112 @@
+/*
+  Style for Archives
+*/
+#archives {
+  letter-spacing: 0.03rem;
+  /* #archives ul */
+}
+#archives ul li::before, #archives .year:first-child::before, #archives .year::before {
+  content: "";
+  width: 4px;
+  position: relative;
+  float: left;
+  background-color: var(--timeline-color);
+}
+#archives .year {
+  height: 3.5rem;
+  font-size: 1.5rem;
+  position: relative;
+  left: 2px;
+  margin-left: -4px;
+  /* Year dot */
+}
+#archives .year::before {
+  height: 72px;
+  left: 79px;
+  bottom: 16px;
+}
+#archives .year:first-child::before {
+  height: 32px;
+  top: 24px;
+}
+#archives .year::after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  left: 21.5px;
+  border: 3px solid;
+  background-color: var(--timeline-year-dot-color);
+  border-color: var(--timeline-node-bg);
+  box-shadow: 0 0 2px 0 #c2c6cc;
+  z-index: 1;
+}
+#archives ul li {
+  font-size: 1.1rem;
+  line-height: 3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#archives ul li:nth-child(odd) {
+  background-color: var(--main-bg, #ffffff);
+  background-image: linear-gradient(to left, #ffffff, #fbfbfb, #fbfbfb, #fbfbfb, #ffffff);
+}
+#archives ul li::before {
+  top: 0;
+  left: 77px;
+  height: 3.1rem;
+}
+#archives ul:last-child li:last-child::before {
+  height: 1.5rem;
+}
+#archives .date {
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  right: 0.5rem;
+}
+#archives .date.month {
+  width: 1.4rem;
+  text-align: center;
+}
+#archives .date.day {
+  font-size: 85%;
+  font-family: Lato, sans-serif;
+}
+#archives a {
+  /* post title in Archvies */
+  margin-left: 2.5rem;
+  position: relative;
+  top: 0.1rem;
+}
+#archives a:hover {
+  border-bottom: none;
+}
+#archives a::before {
+  /* the dot before post title */
+  content: "";
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  float: left;
+  top: 1.35rem;
+  left: 71px;
+  background-color: var(--timeline-node-bg);
+  box-shadow: 0 0 3px 0 #c2c6cc;
+  z-index: 1;
+}
+
+/* #archives */
+@media all and (max-width: 576px) {
+  #archives {
+    margin-top: -1rem;
+  }
+  #archives ul {
+    letter-spacing: 0;
+  }
+}/*# sourceMappingURL=archives.css.map */
