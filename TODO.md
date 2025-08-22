@@ -15,7 +15,10 @@ Incluo na conversa algumas pessoas cujo trabalho e opinião valorizo muito. Fort
 
 ## Linhas de Tempo Montadas:
 
--🏛️ Crise diplomática Brasil-EUA em 2025 📜
+-🏛️ Resumo Crise diplomática Brasil-EUA em 2025 📜
+🔗 https://tinyurl.com/crise-diplomatica-resumo
+
+-🧭 Linha do Tempo Crise diplomática Brasil-EUA em 2025  
 🔗 https://tinyurl.com/crise-diplomatica
 
 -📜 Interferências Judiciais Sistêmicas no Brasil

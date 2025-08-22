@@ -119,6 +119,12 @@ mindmap
       Especulação: impactos de mercado e postura geopolítica não são oficiais.
 ```
 
+*** 
+
+### 🧭 Linha do Tempo Crise Diplomática
+
+- [🏦 Crise diplomática Brasil-EUA em 2025 com Sanções a Autoridades](/crise-diplomatica/)
+
 ***
 
 ### 📚 Referências
