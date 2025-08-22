@@ -3,7 +3,7 @@ layout: post
 title:  Campanhas de combate à desinformação e incentivo ao voto promovidas por canais do YouTube e blogueiros
 categories: tse
 description: Durante o período eleitoral, diversos canais do YouTube e blogueiros de grande influência participaram de campanhas de incentivo ao voto, defesa do processo eleitoral e combate à desinformação, muitas vezes em parceria com ONGs e projetos apoiados por verba internacional. Os conteúdos incluíram lives, vídeos explicativos, debates com especialistas, entrevistas com lideranças políticas e séries temáticas sobre checagem de fatos e direitos políticos. Os comunicadores progressistas concentraram esforços em desconstruir fake news associadas à disputa presidencial. Não há comprovação pública de financiamento estrangeiro direto para campanhas de candidatos, mas parte dos canais atuou em projetos contemplados por editais e parcerias de ONGs financiadas pela USAID.
-tags: ['tse', 'tse', 'online', 'nacional', 'usaid']
+tags: ['tse', 'tse', 'online', 'nacional', 'usaid', 'felipe-neto']
 ---
 
 # Campanhas de combate à desinformação e incentivo ao voto promovidas por canais do YouTube e blogueiros

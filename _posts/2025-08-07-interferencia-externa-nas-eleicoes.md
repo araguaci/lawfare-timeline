@@ -5,7 +5,7 @@ date: 2025-08-11T00:32:28.544Z
 image:
   path: /assets/img/usaid.webp
 tags: ['estudos', 'usaid', 'tse', 'ongs', 'cepps', 'mpf', 'mavs', 'bots', 'influenciadores', 'felipe-neto', 'anitta', 'justica']
-categories: estudos
+categories: estudos, 'felipe-neto'
 ---
 
 - &nbsp;

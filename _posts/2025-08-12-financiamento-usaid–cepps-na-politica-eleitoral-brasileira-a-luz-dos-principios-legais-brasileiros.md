@@ -4,7 +4,7 @@ description: "Exame dos conteúdos anexos sobre as conexões entre financiamento
 date: 2025-08-12T23:10:28.003Z
 image:
   path: /assets/img/justica.jpg
-tags: ['censura', 'estudos', 'eleicoes', 'usaid', 'cepps', 'tse', 'ongs', 'financiamento-estrangeiro', 'lawfare', 'stf', 'justica']
+tags: ['censura', 'estudos', 'eleicoes', 'usaid', 'cepps', 'tse', 'ongs', 'financiamento-estrangeiro', 'lawfare', 'stf', 'justica', 'felipe-neto']
 categories: estudos
 ---
 

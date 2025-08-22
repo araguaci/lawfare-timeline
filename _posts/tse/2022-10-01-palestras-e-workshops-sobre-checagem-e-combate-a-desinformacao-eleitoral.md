@@ -3,7 +3,7 @@ layout: post
 title:  Palestras e workshops sobre checagem e combate à desinformação eleitoral
 categories: tse
 description: ONGs, jornalistas e fact-checkers promoveram workshops e palestras presenciais e online para estudantes, jornalistas e ativistas, com foco em ferramentas digitais de checagem e estratégias para combater conteúdos falsos nas eleições. Diversas dessas iniciativas tiveram apoio financeiro de fundos internacionais.
-tags: ['tse', 'tse', 'centros-culturais', 'campus-universitarios', 'universidades',  'usaid']
+tags: ['tse', 'tse', 'centros-culturais', 'campus-universitarios', 'universidades',  'usaid', 'felipe-neto']
 ---
 
 # Palestras e workshops sobre checagem e combate à desinformação eleitoral

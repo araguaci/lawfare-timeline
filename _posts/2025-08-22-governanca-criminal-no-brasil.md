@@ -16,6 +16,51 @@ mermaid: true
 
 ### Mapa Mental 
 
+```mermaid
+mindmap
+  root((Decisões Judiciais e Impunidade))
+    Categories
+      Trafico de Drogas
+        Andre Oliveira Macedo
+        15 Integrantes Quadrilha
+        Tesoureiro CV
+        Valter Lima Nascimento
+      Crime Organizado Faccoes
+        Mais de 30 Membros PCC
+        PCC e CV
+        53 Faccoes
+        10 Chefoes PCC
+      Corrupcao Lava Jato
+        Marcelo Odebrecht
+        Presos Lava Jato
+      Homicidio Roubo
+        Claudio Roberto Ferreira
+        Sidney Aparecido Piovesan
+      Direitos Humanos Prisional
+        Criminosos Prisoes
+        Homicidas Confessos
+      Outros Impunidade
+        21 Criminosos
+        18 Mil Habeas Corpus
+    Trend Words
+      Description
+        Soltura
+        Habeas Corpus
+        Impunidade
+        Expansao
+        Fuga Foragido
+        Anulacao
+        Liberdade Provisoria
+      Tags
+        Lider Faccao
+        Lavagem Dinheiro
+        Fornecedor Drogas
+        Inseguranca Juridica
+        Porta da Frente
+        Alta Periculosidade
+        Reincidente
+```
+
 I. Resumo Executivo  
   - 📊 26% da população brasileira percebe viver sob influência de facções criminosas, maior índice na América Latina  
   - 🔍 Governança criminal é fenômeno complexo, com coexistência tensa entre Estado e organizações criminosas  

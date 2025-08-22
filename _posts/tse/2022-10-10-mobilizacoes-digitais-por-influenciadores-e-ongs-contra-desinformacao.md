@@ -3,7 +3,7 @@ layout: post
 title:  Mobilizações digitais por influenciadores e ONGs contra desinformação
 categories: tse
 description: Influenciadores digitais com milhões de seguidores uniram-se a ONGs e plataformas para difundir campanhas de checagem de fatos e combater notícias falsas. A campanha incluiu uso intensivo de hashtags, vídeos virais, lives temáticas e integração com movimentos ativistas.
-tags: ['tse', 'tse', 'grandes-cidades-sao-paulo', 'rio-de-janeiro', 'brasilia',  'usaid']
+tags: ['tse', 'tse', 'grandes-cidades-sao-paulo', 'rio-de-janeiro', 'brasilia',  'usaid', 'felipe-neto', 'ongs', 'lupa', 'aos-fatos']
 ---
 
 # Mobilizações digitais por influenciadores e ONGs contra desinformação

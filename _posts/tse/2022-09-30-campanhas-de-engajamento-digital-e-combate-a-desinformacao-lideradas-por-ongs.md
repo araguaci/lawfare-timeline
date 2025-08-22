@@ -3,7 +3,7 @@ layout: post
 title:  Campanhas de engajamento digital e combate à desinformação lideradas por ONGs, artistas e influenciadores
 categories: tse
 description: Durante o período eleitoral, ONGs brasileiras financiadas com verba internacional, artistas e influenciadores digitais participaram de campanhas para mobilizar jovens e combater a desinformação, promovendo pautas progressistas e cívicas. As campanhas incluíram divulgação em redes sociais, lives, shows institucionais e ações educativas, com ênfase nas plataformas digitais. Não há comprovação de financiamento estrangeiro direto para campanhas de candidatos, mas as ações beneficiaram indiretamente causas políticas progressistas.
-tags: ['tse', 'tse', 'nacional', 'usaid']
+tags: ['tse', 'tse', 'nacional', 'usaid', 'felipe-neto', 'ongs']
 ---
 
 # Campanhas de engajamento digital e combate à desinformação lideradas por ONGs, artistas e influenciadores

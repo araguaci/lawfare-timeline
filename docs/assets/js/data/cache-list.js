@@ -44,6 +44,8 @@ const include = [
   
     '/penduricalhos/',
   
+    '/felipe-neto/',
+  
     '/timeline/',
   
     '/book/',
