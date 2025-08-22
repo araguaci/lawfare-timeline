@@ -16,7 +16,7 @@ image:
 - **Data**: 2023/01/10
 - **Ano**: 2023
 - **Descrição Completa**: Determinação de busca na casa de Bolsonaro por atos de 8 de janeiro.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Inviolabilidade do Domicílio
   - Devido Processo Legal

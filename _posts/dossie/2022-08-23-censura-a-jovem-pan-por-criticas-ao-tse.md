@@ -3,7 +3,7 @@ layout: post
 title:  Censura à Jovem Pan por críticas ao TSE
 categories: dossie
 description: Ação em 2022/08/23 com violações, envolvidos, fontes e gravidade media
-tags: ['liberdade-de-imprensa', 'liberdade-de-expressao', 'devido-processo-legal', 'proporcionalidade', 'nao-censura-previa', 'alexandre-de-moraes', 'jovem-pan', 'gravidade-media']
+tags: ['liberdade-de-imprensa', 'liberdade-de-expressao', 'devido-processo-legal', 'proporcionalidade', 'censura', 'alexandre-de-moraes', 'jovem-pan', 'gravidade-media']
 gravidade: media
 faicon: fas fa-exclamation-triangle
 image:
@@ -16,7 +16,7 @@ image:
 - **Data**: 2022/08/23
 - **Ano**: 2022
 - **Descrição Completa**: Censura à Jovem Pan por críticas ao TSE.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Liberdade de Imprensa
   - Liberdade de Expressão

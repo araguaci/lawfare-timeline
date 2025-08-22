@@ -16,7 +16,7 @@ image:
 - **Data**: 2022/09/02
 - **Ano**: 2022
 - **Descrição Completa**: Bloqueio de salários de empresários investigados.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Direito à Propriedade
   - Devido Processo Legal

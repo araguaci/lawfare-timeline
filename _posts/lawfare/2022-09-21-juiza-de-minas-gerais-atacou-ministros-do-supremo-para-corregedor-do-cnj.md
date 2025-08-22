@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id157
 description: 2022-09-21-g1-CNJ-STF
-tags: ['cnj', 'stf']
+tags: ['lawfare', 'cnj', 'stf']
 ---
 
 # Juíza de Minas Gerais atacou ministros do Supremo; para corregedor do CNJ, atitude pode ter violado deveres funcionais da magistratura.

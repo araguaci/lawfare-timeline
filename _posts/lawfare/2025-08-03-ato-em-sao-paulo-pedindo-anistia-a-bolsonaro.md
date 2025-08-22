@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Manifestação em São Paulo pede anistia a Bolsonaro e exalta Trump, alegando perseguição política."
 faicon: fa-fist-raised
-tags: ['liberdade-de-associacao', 'liberdade-de-expressao', 'apoiadores-de-bolsonaro', 'oposicao', 'gravidade-media', 'manifestacao', 'anistia', 'perseguicao-politica']
+tags: ['lawfare', 'liberdade-de-associacao', 'liberdade-de-expressao', 'apoiadores-de-bolsonaro', 'oposicao', 'gravidade-media', 'manifestacao', 'anistia', 'perseguicao-politica']
 image:
   path: "/assets/solid/fist-raised.svg"
 ---

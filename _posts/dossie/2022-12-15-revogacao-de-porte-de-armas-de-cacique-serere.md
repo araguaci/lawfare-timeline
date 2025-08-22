@@ -16,7 +16,7 @@ image:
 - **Data**: 2022/12/15
 - **Ano**: 2022
 - **Descrição Completa**: Revogação de porte de armas do cacique Serere.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Direito à Propriedade
   - Devido Processo Legal

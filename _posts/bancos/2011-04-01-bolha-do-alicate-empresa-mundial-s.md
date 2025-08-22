@@ -5,7 +5,7 @@ title: Bolha do Alicate (empresa Mundial S.A.)
 categories: bancos
 description: > 
   Manipulação de mercado e fraude contábil para inflar artificialmente o valor das ações da Mundial.
-tags: ['financeiro', 'rs']
+tags: ['corrupcao-financeira', 'financeiro', 'rs']
 ---
 
 # Bolha do Alicate (empresa Mundial S.A.)

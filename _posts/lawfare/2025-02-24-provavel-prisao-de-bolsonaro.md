@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Narrativa de perseguição política contra Bolsonaro e aliados da direita, com possibilidade de prisão."
 faicon: fa-handcuffs
-tags: ['presuncao-de-inocencia', 'devido-processo-legal', 'jair-bolsonaro', 'governo-brasileiro', 'gravidade-alta', 'prisao', 'perseguicao-politica']
+tags: ['lawfare', 'presuncao-de-inocencia', 'devido-processo-legal', 'jair-bolsonaro', 'governo-brasileiro', 'gravidade-alta', 'prisao', 'perseguicao-politica']
 image:
   path: "/assets/solid/handcuffs.svg"
 ---

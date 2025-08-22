@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id086
 description: 2021-02-27-saopaulo-Governo Federal-Rosa Weber
-tags: ['governo-federal', 'rosa-weber', 'determinou']
+tags: ['lawfare', 'governo-federal', 'rosa-weber', 'determinou']
 ---
 
 # Em 27 de fevereiro de 2021, a ministra Rosa Weber determinou que o Governo Federal repassasse R$ 245 milhões por mês às UTIs em SP.

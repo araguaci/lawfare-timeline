@@ -16,7 +16,7 @@ image:
 - **Data**: 2021/06/24
 - **Ano**: 2021
 - **Descrição Completa**: Prisão de Roberto Jefferson por críticas ao STF.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Liberdade de Expressão
   - Devido Processo Legal

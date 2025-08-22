@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id123
 description: 2021-08-16-g1-Governo Federal-Cármen Lúcia
-tags: ['governo-federal', 'carmen-lucia', 'urnas']
+tags: ['lawfare', 'governo-federal', 'carmen-lucia', 'urnas']
 ---
 
 # Também em 16 de agosto de 2021, a ministra Cármen Lúcia cobrou uma manifestação da PGR sobre críticas de Bolsonaro às urnas eletrônicas.

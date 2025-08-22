@@ -5,7 +5,7 @@ title: Caso BTG Pactual
 categories: bancos
 description: > 
   André Esteves preso na Lava Jato por obstrução de justiça e corrupção.
-tags: ['financeiro', 'nacional']
+tags: ['corrupcao-financeira', 'financeiro', 'nacional']
 ---
 
 # Caso BTG Pactual

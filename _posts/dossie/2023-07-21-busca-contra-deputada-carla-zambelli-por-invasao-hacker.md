@@ -16,7 +16,7 @@ image:
 - **Data**: 2023/07/21
 - **Ano**: 2023
 - **Descrição Completa**: Busca contra deputada Carla Zambelli por envolvimento em invasão hacker.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Prerrogativas Parlamentares
   - Inviolabilidade do Domicílio

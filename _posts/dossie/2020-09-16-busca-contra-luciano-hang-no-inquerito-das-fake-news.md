@@ -16,7 +16,7 @@ image:
 - **Data**: 2020/09/16
 - **Ano**: 2020
 - **Descrição Completa**: Busca contra Luciano Hang no inquérito das fake news.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Inviolabilidade do Domicílio
   - Devido Processo Legal

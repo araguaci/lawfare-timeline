@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id180
 description: 2018-09-20-apublica-Extrapola-Inconstitucional
-tags: ['extrapola', 'inconstitucional', 'constituicao']
+tags: ['lawfare', 'extrapola', 'inconstitucional', 'constituicao']
 ---
 
 # Semanalmente, juízes do Supremo decidem sozinhos sobre aplicação da Constituição.

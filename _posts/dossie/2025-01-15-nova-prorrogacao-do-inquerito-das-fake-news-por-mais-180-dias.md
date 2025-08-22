@@ -16,7 +16,7 @@ image:
 - **Data**: 2025/01/15
 - **Ano**: 2025
 - **Descrição Completa**: Mais uma prorrogação do inquérito das fake news por 180 dias, estendendo o processo além do razoável.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Duração Razoável do Processo
   - Devido Processo Legal

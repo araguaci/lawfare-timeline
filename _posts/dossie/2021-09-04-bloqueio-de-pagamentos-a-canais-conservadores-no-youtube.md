@@ -3,7 +3,7 @@ layout: post
 title:  Bloqueio de pagamentos a canais conservadores no YouTube
 categories: dossie
 description: Ação em 2021/09/04 com violações, envolvidos, fontes e gravidade media
-tags: ['liberdade-de-expressao', 'direito-a-propriedade', 'devido-processo-legal', 'proporcionalidade', 'nao-censura-previa', 'alexandre-de-moraes', 'canais-conservadores', 'gravidade-media']
+tags: ['liberdade-de-expressao', 'direito-a-propriedade', 'devido-processo-legal', 'proporcionalidade', 'censura', 'alexandre-de-moraes', 'canais-conservadores', 'gravidade-media']
 gravidade: media
 faicon: fas fa-exclamation-triangle
 image:
@@ -16,7 +16,7 @@ image:
 - **Data**: 2021/09/04
 - **Ano**: 2021
 - **Descrição Completa**: Bloqueio de pagamentos a canais conservadores no YouTube.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Liberdade de Expressão
   - Direito à Propriedade

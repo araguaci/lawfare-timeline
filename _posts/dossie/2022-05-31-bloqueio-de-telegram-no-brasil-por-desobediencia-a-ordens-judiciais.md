@@ -3,7 +3,7 @@ layout: post
 title:  Bloqueio de Telegram no Brasil por desobediência a ordens judiciais
 categories: dossie
 description: Ação em 2022/05/31 com violações, envolvidos, fontes e gravidade media
-tags: ['liberdade-de-expressao', 'devido-processo-legal', 'proporcionalidade', 'nao-censura-previa', 'alexandre-de-moraes', 'telegram', 'gravidade-media']
+tags: ['liberdade-de-expressao', 'devido-processo-legal', 'proporcionalidade', 'censura', 'alexandre-de-moraes', 'telegram', 'gravidade-media']
 gravidade: media
 faicon: fas fa-exclamation-triangle
 image:
@@ -16,7 +16,7 @@ image:
 - **Data**: 2022/05/31
 - **Ano**: 2022
 - **Descrição Completa**: Bloqueio do Telegram no Brasil por desobediência a ordens judiciais.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Liberdade de Expressão
   - Devido Processo Legal

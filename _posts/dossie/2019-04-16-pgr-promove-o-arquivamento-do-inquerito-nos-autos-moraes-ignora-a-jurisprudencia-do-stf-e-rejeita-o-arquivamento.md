@@ -16,7 +16,7 @@ image:
 - **Data**: 2019/04/16
 - **Ano**: 2019
 - **Descrição Completa**: PGR promove arquivamento do inquérito; Moraes rejeita, ignorando jurisprudência.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Juiz Natural
   - Imparcialidade

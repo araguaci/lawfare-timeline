@@ -3,7 +3,7 @@ layout: post
 title:  Remoção de conteúdo de Nikolas Ferreira sobre eleições
 categories: dossie
 description: Ação em 2022/10/13 com violações, envolvidos, fontes e gravidade media
-tags: ['liberdade-de-expressao', 'devido-processo-legal', 'proporcionalidade', 'nao-censura-previa', 'alexandre-de-moraes', 'nikolas-ferreira', 'gravidade-media']
+tags: ['liberdade-de-expressao', 'devido-processo-legal', 'proporcionalidade', 'censura', 'alexandre-de-moraes', 'nikolas-ferreira', 'gravidade-media']
 gravidade: media
 faicon: fas fa-exclamation-triangle
 image:
@@ -16,7 +16,7 @@ image:
 - **Data**: 2022/10/13
 - **Ano**: 2022
 - **Descrição Completa**: Remoção de conteúdo de Nikolas Ferreira sobre eleições.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Liberdade de Expressão
   - Devido Processo Legal

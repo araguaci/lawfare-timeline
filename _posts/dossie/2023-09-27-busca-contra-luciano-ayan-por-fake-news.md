@@ -16,7 +16,7 @@ image:
 - **Data**: 2023/09/27
 - **Ano**: 2023
 - **Descrição Completa**: Busca contra Luciano Ayan por disseminação de fake news.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Liberdade de Expressão
   - Inviolabilidade do Domicílio

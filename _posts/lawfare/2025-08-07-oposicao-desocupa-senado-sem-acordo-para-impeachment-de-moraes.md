@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Parlamentares da oposição desocupam o plenário do Senado após ocupação em protesto, sem acordo para impeachment de Alexandre de Moraes e anistia aos envolvidos no 8 de janeiro."
 faicon: fa-users
-tags: ['separacao-dos-poderes', 'liberdade-de-associacao', 'liberdade-de-expressao', 'oposicao-no-congresso', 'alexandre-de-moraes', 'gravidade-media', 'protesto-no-senado', 'impeachment-moraes', 'anistia']
+tags: ['lawfare', 'separacao-dos-poderes', 'liberdade-de-associacao', 'liberdade-de-expressao', 'oposicao-no-congresso', 'alexandre-de-moraes', 'gravidade-media', 'protesto-no-senado', 'impeachment-moraes', 'anistia']
 image:
   path: "/assets/solid/users.svg"
 ---

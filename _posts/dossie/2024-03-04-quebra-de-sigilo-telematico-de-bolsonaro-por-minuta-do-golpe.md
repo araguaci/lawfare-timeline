@@ -16,7 +16,7 @@ image:
 - **Data**: 2024/03/04
 - **Ano**: 2024
 - **Descrição Completa**: Quebra de sigilo telemático de Bolsonaro em investigação sobre minuta de golpe.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Direito à Privacidade
   - Devido Processo Legal

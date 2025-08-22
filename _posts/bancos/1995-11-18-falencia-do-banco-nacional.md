@@ -5,7 +5,7 @@ title: Falência do Banco Nacional
 categories: bancos
 description: > 
   Fraudes e desvios no Banco Nacional, levando à falência e intervenção, com rombo estimado em R$ 2 bilhões.
-tags: ['financeiro', 'minas-gerais']
+tags: ['corrupcao-financeira', 'financeiro', 'minas-gerais']
 ---
 
 # Falência do Banco Nacional

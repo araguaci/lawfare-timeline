@@ -4,7 +4,7 @@ description: "Lawfare é definido como uso estratégico do sistema legal para fi
 date: 2025-08-20T04:53:29.881Z
 image:
   path: /assets/img/lawfare.png
-tags: [estudos, lawfare, usaid, tse, stf]
+tags: ['censura', estudos, lawfare, usaid, tse, stf]
 categories: [estudos]
 mermaid: true
 pin: true

@@ -5,7 +5,7 @@ title: Caso Daniel Dantas - Opportunity
 categories: bancos
 description: > 
   Fraudes e corrupção envolvendo o Banco Opportunity em disputas societárias e subornos.
-tags: ['financeiro', 'nacional']
+tags: ['corrupcao-financeira', 'financeiro', 'nacional']
 ---
 
 # Caso Daniel Dantas - Opportunity

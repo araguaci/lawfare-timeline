@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Administração Trump mira juiz brasileiro por 'censura' em meio a perseguição política."
 faicon: fa-ban
-tags: ['liberdade-de-expressao', 'imparcialidade-judicial', 'governo-trump', 'alexandre-de-moraes', 'gravidade-alta', 'censura', 'sancoes-eua']
+tags: ['lawfare', 'liberdade-de-expressao', 'imparcialidade', 'governo-trump', 'alexandre-de-moraes', 'gravidade-alta', 'censura', 'sancoes-eua']
 image:
   path: "/assets/solid/ban.svg"
 ---

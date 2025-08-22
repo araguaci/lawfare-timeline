@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Filipe Martins é preso preventivamente pela PF na Operação Tempus Veritatis por suposto envolvimento em minuta de golpe. Passaporte apreendido, proibição de viagens, baseado em alegada viagem aos EUA como risco de fuga."
 faicon: fa-search
-tags: ['inviolabilidade-do-domicilio', 'liberdade-de-locomocao', 'juiz-natural', 'policia-federal', 'alexandre-de-moraes', 'jair-bolsonaro', 'gravidade-alta', 'filipe-martins', 'prisao', 'busca', 'passaporte']
+tags: ['lawfare', 'domicilio-violado', 'liberdade-de-locomocao', 'juiz-natural', 'policia-federal', 'alexandre-de-moraes', 'jair-bolsonaro', 'gravidade-alta', 'filipe-martins', 'prisao', 'busca', 'passaporte']
 image:
   path: "/assets/solid/search.svg"
 ---

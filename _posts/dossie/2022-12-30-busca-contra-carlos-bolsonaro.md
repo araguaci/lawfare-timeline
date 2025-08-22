@@ -16,7 +16,7 @@ image:
 - **Data**: 2022/12/30
 - **Ano**: 2022
 - **Descrição Completa**: Busca contra Carlos Bolsonaro por investigações relacionadas a fake news ou abin.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Devido Processo Legal
   - Proporcionalidade

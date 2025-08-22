@@ -16,7 +16,7 @@ image:
 - **Data**: 2023/08/11
 - **Ano**: 2023
 - **Descrição Completa**: Busca contra coronel da PMDF por omissão nos atos de 8/1.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Inviolabilidade do Domicílio
   - Devido Processo Legal

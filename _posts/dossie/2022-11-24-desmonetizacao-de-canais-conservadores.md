@@ -16,7 +16,7 @@ image:
 - **Data**: 2022/11/24
 - **Ano**: 2022
 - **Descrição Completa**: Desmonetização de canais conservadores em plataformas digitais.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Liberdade de Expressão
   - Direito à Propriedade

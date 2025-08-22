@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id176
 description: 2022-09-26-r7-Alexandre Moraes-Extrapola
-tags: ['alexandre-de-moraes', 'extrapola', 'abuso-de-autoridade']
+tags: ['lawfare', 'alexandre-de-moraes', 'extrapola', 'abuso-de-autoridade']
 ---
 
 # 131 delegados federais apresentam queixa-crime contra Moraes à PGR. Servidores afirmam que o ministro do STF cometeu abuso de autoridade ao autorizar ação contra empresários.

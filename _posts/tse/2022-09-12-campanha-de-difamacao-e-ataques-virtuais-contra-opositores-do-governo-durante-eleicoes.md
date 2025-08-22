@@ -4,7 +4,7 @@ title:  Campanha de difamação e ataques virtuais contra opositores do governo 
 categories: tse
 description: > 
   Diversos perfis coordenados por bots e MAVs (Militância em Ambiente Virtual do PT) engajaram em ataques sistemáticos contra opositores do governo, como a advogada Stefanny Papaiano, o jornalista Alexandre Garcia e o deputado Gustavo Gayer. 
-tags: ['tse', 'redes-sociais', 'plataformas']
+tags: ['tse', 'tse', 'redes-sociais', 'plataformas']
 ---
 
 # Campanha de difamação e ataques virtuais contra opositores do governo durante eleições

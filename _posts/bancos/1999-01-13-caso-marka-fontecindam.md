@@ -5,7 +5,7 @@ title: Caso Marka-FonteCindam
 categories: bancos
 description: > 
   Manipulação cambial durante a desvalorização do real, com ajuda do Banco Central, causando prejuízo de R$ 1,5 bilhão aos cofres públicos.
-tags: ['financeiro', 'nacional']
+tags: ['corrupcao-financeira', 'financeiro', 'nacional']
 ---
 
 # Caso Marka-FonteCindam

@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id171
 description: 2022-06-06-causaoperaria-Censura-Alexandre Moraes
-tags: ['censura', 'alexandre-de-moraes', 'eleicoes']
+tags: ['lawfare', 'censura', 'alexandre-de-moraes', 'eleicoes']
 ---
 
 # Moraes bloqueia contas partidárias nas vésperas do pleito. Por determinação monocrática do Ministro do STF Alexandre de Moraes, as contas nas redes sociais do PCO foram bloqueadas.

@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id001
 description: 2019-05-10-diariodonordeste-Celso de Mello-Governo Federal
-tags: ['celso-de-mello', 'governo-federal', 'pdt']
+tags: ['lawfare', 'celso-de-mello', 'governo-federal', 'pdt']
 ---
 
 # Corte no orçamento de universidades será julgado por Plenário do STF.

@@ -3,7 +3,7 @@ layout: post
 title:  Moraes manda PF colher depoimento de Monark | Rádio BandNews FM.
 categories: stf
 article_id: id145
-tags: ['alexandre-de-moraes', 'mandou', 'censura', 'monark']
+tags: ['stf', 'alexandre-de-moraes', 'mandou', 'censura', 'monark']
 ---
 
 # Moraes manda PF colher depoimento de Monark | Rádio BandNews FM.

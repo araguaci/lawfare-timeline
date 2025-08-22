@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Alexandre de Moraes determina prisão domiciliar de Jair Bolsonaro por descumprimento de medidas cautelares, incluindo uso de redes sociais e aparição em atos públicos."
 faicon: fa-house-lock
-tags: ['liberdade-de-expressao', 'liberdade-de-locomocao', 'presuncao-de-inocencia', 'jair-bolsonaro', 'stf', 'alexandre-de-moraes', 'gravidade-alta', 'prisao-domiciliar', 'bolsonaro', 'censura']
+tags: ['lawfare', 'liberdade-de-expressao', 'liberdade-de-locomocao', 'presuncao-de-inocencia', 'jair-bolsonaro', 'stf', 'alexandre-de-moraes', 'gravidade-alta', 'prisao-domiciliar', 'bolsonaro', 'censura']
 image:
   path: "/assets/solid/house-lock.svg"
 ---

@@ -16,7 +16,7 @@ image:
 - **Data**: 2021/08/04
 - **Ano**: 2021
 - **Descrição Completa**: Inclusão de Bolsonaro no inquérito das fake news por lives sobre urnas eletrônicas.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Liberdade de Expressão
   - Devido Processo Legal

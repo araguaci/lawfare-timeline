@@ -3,7 +3,7 @@ layout: post
 title:  Difamação eleitoral e campanhas de desinformação com perfis falsos e influenciadores
 categories: tse
 description: Perfis de fofoca e cultura pop, influenciadoras e grupos políticos promoveram campanhas para associar Jair Bolsonaro ao satanismo e outros temas negativos, visando romper vínculos do então candidato com o eleitorado evangélico. Entre os envolvidos, destacam-se os perfis Choquei, PopTime, PopOnze, QG do Pop, Fórum Pandlr, influenciadoras Bic Müller e Babi Magalhães, o deputado André Janones (Avante-MG) e o grupo Boca de Lobo. Vários perfis utilizaram imagens geradas por Inteligência Artificial. Não houve responsabilização ou processo pelo TSE.
-tags: ['tse', 'redes-sociais', 'internet-nacional', 'plataformas']
+tags: ['tse', 'tse', 'redes-sociais', 'internet-nacional', 'plataformas']
 ---
 
 # Difamação eleitoral e campanhas de desinformação com perfis falsos e influenciadores

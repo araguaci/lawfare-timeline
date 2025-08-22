@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "AGU amplia escopo de atuação com processo contra Brasil Paralelo por desinformação no documentário sobre Maria da Penha."
 faicon: fa-gavel
-tags: ['liberdade-de-expressao', 'nao-censura-previa', 'agu', 'brasil-paralelo', 'gravidade-media', 'processo-judicial', 'desinformacao', 'maria-da-penha']
+tags: ['lawfare', 'liberdade-de-expressao', 'nao-censura-previa', 'agu', 'brasil-paralelo', 'gravidade-media', 'processo-judicial', 'desinformacao', 'maria-da-penha']
 image:
   path: "/assets/solid/gavel.svg"
 ---

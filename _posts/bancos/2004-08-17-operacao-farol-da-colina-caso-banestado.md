@@ -5,7 +5,7 @@ title: Operação Farol da Colina (caso Banestado)
 categories: bancos
 description: > 
   Mega vencimento de divisas e evasão de dólares via contas offshore ligadas ao Banestado.
-tags: ['financeiro', 'pr', 'sp', 'rj', 'am', 'nacional']
+tags: ['corrupcao-financeira', 'financeiro', 'pr', 'sp', 'rj', 'am', 'nacional']
 ---
 
 # Operação Farol da Colina (caso Banestado)

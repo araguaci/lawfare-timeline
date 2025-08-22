@@ -16,7 +16,7 @@ image:
 - **Data**: 2023/05/03
 - **Ano**: 2023
 - **Descrição Completa**: Busca contra Bolsonaro por fraude em cartão de vacinação.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Inviolabilidade do Domicílio
   - Devido Processo Legal

@@ -16,7 +16,7 @@ image:
 - **Data**: 2022/11/07
 - **Ano**: 2022
 - **Descrição Completa**: Multa de R$23 milhões a caminhoneiros por bloqueios pós-eleições.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Direito à Propriedade
   - Devido Processo Legal

@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id051
 description: 2020-08-04-g1-Governo Federal-Cármen Lúcia
-tags: ['governo-federal', 'carmen-lucia', 'prazo']
+tags: ['lawfare', 'governo-federal', 'carmen-lucia', 'prazo']
 ---
 
 # Ainda em 04 de agosto de 2020, a ministra Cármen Lúcia deu 48 horas para o Ministério da Justiça explicar o relatório sobre os servidores ligados a movimentos autointitulados antifascistas.

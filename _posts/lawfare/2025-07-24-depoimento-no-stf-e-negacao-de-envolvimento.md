@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Filipe Martins depõe no STF, negando conhecimento da minuta do golpe, viagem aos EUA e se considerando preso político. Acusa Mauro Cid de mentir e relata sofrimento como forma de tortura na prisão, incluindo isolamento em cela sem iluminação por 10 dias."
 faicon: fa-microphone
-tags: ['presuncao-de-inocencia', 'proibicao-de-tratamento-desumano-ou-degradante', 'dignidade-da-pessoa-humana', 'alexandre-de-moraes', 'mauro-cid', 'stf', 'gravidade-alta', 'filipe-martins', 'depoimento', 'tortura', 'preso-politico']
+tags: ['lawfare', 'presuncao-de-inocencia', 'proibicao-de-tratamento-desumano-ou-degradante', 'dignidade-da-pessoa-humana', 'alexandre-de-moraes', 'mauro-cid', 'stf', 'gravidade-alta', 'filipe-martins', 'depoimento', 'tortura', 'preso-politico']
 image:
   path: "/assets/solid/microphone.svg"
 ---

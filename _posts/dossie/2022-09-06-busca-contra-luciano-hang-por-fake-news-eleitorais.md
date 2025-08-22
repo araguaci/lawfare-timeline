@@ -16,7 +16,7 @@ image:
 - **Data**: 2022/09/06
 - **Ano**: 2022
 - **Descrição Completa**: Busca contra Luciano Hang por fake news eleitorais.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Liberdade de Expressão
   - Inviolabilidade do Domicílio

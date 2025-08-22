@@ -16,7 +16,7 @@ image:
 - **Data**: 2023/09/21
 - **Ano**: 2023
 - **Descrição Completa**: Busca contra Bolsonaro e Mauro Cid por venda de joias recebidas officially.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Inviolabilidade do Domicílio
   - Devido Processo Legal

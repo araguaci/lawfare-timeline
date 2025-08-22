@@ -3,7 +3,7 @@ layout: post
 title:  CNJ suspende redes sociais de juiz do TRF-2 acusado de atuar como ‘coach’ de advogados...
 categories: stf
 article_id: id158
-tags: ['cnj', 'censura']
+tags: ['stf', 'cnj', 'censura']
 ---
 
 # CNJ suspende redes sociais de juiz do TRF-2 acusado de atuar como ‘coach’ de advogados...

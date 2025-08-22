@@ -16,7 +16,7 @@ image:
 - **Data**: 2023/03/17
 - **Ano**: 2023
 - **Descrição Completa**: Busca contra Michelle Bolsonaro por venda de joias.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Inviolabilidade do Domicílio
   - Devido Processo Legal

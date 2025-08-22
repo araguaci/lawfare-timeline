@@ -16,7 +16,7 @@ image:
 - **Data**: 2019/09/27
 - **Ano**: 2019
 - **Descrição Completa**: Busca e apreensão contra ex-PGR Rodrigo Janot.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Inviolabilidade do Domicílio
   - Devido Processo Legal

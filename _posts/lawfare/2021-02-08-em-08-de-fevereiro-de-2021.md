@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id080
 description: 2021-02-08-migalhas-Governo Federal-Lewandowski
-tags: ['governo-federal', 'lewandowski', 'prazo']
+tags: ['lawfare', 'governo-federal', 'lewandowski', 'prazo']
 ---
 
 # Em 08 de fevereiro de 2021, o ministro Lewandowski deu um prazo para o Governo Federal fixar grupos de prioridade na vacinação.

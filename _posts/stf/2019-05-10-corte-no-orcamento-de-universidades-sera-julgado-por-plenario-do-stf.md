@@ -3,7 +3,7 @@ layout: post
 title:  Corte no orçamento de universidades será julgado por Plenário do STF.
 categories: stf
 article_id: id001
-tags: ['celso-de-mello', 'governo-federal', 'pdt']
+tags: ['stf', 'celso-de-mello', 'governo-federal', 'pdt']
 ---
 
 # Corte no orçamento de universidades será julgado por Plenário do STF.

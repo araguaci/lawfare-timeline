@@ -3,7 +3,7 @@ layout: post
 title:  Conferência nos EUA reunirá ministros do STF, Temer e Meirelles Autoridades e empresários debatem o futuro da democracia e da economia no “Lide Brazil Conference – New York” nos 14 e 15 de novembro...
 categories: stf
 article_id: id189
-tags: ['lide', 'temer', 'alexandre-de-moraes']
+tags: ['stf', 'lide', 'temer', 'alexandre-de-moraes']
 ---
 
 # Conferência nos EUA reunirá ministros do STF, Temer e Meirelles Autoridades e empresários debatem o futuro da democracia e da economia no “Lide Brazil Conference – New York” nos 14 e 15 de novembro...

@@ -5,7 +5,7 @@ title: Dois Trilhões de Suspeitas
 categories: bancos
 description: > 
   Bancos globais como HSBC, JPMorgan moveram US$ 2 tri suspeitos, incluindo fluxos no Brasil.
-tags: ['financeiro', 'nacional']
+tags: ['corrupcao-financeira', 'financeiro', 'nacional']
 ---
 
 # Dois Trilhões de Suspeitas

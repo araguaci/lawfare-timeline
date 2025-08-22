@@ -5,7 +5,7 @@ title: Liquidação do Banco Econômico
 categories: bancos
 description: > 
   Falência fraudulenta do Banco Econômico, com desvios e fraudes contábeis que levaram à intervenção do Banco Central, causando prejuízo de bilhões aos cofres públicos.
-tags: ['financeiro', 'bahia']
+tags: ['corrupcao-financeira', 'financeiro', 'bahia']
 ---
 
 # Liquidação do Banco Econômico

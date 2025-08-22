@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id165
 description: 2022-03-18-g1-Censura-Alexandre Moraes
-tags: ['censura', 'alexandre-de-moraes', 'eleicoes']
+tags: ['lawfare', 'censura', 'alexandre-de-moraes', 'eleicoes']
 ---
 
 # Alexandre de Moraes, do Supremo Tribunal Federal (STF), determinou a suspensão do aplicativo de mensagens A ordem atende a um pedido da e foi encaminhada a plataformas digitais e provedores de internet, que devem adotar os mecanismos para inviabilizar a utilização do aplicativo Telegram no país.

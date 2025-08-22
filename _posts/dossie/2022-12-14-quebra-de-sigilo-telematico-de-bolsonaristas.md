@@ -16,7 +16,7 @@ image:
 - **Data**: 2022/12/14
 - **Ano**: 2022
 - **Descrição Completa**: Quebra de sigilo telemático de bolsonaristas em investigações.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Direito à Privacidade
   - Devido Processo Legal

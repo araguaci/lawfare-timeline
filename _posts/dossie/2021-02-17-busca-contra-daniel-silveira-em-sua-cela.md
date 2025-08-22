@@ -16,7 +16,7 @@ image:
 - **Data**: 2021/02/17
 - **Ano**: 2021
 - **Descrição Completa**: Busca contra Daniel Silveira em sua cela na prisão.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Prerrogativas Parlamentares
   - Inviolabilidade do Domicílio

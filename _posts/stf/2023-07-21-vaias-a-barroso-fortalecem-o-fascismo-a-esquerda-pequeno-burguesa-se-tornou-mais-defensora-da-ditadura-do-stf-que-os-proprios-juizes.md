@@ -3,7 +3,7 @@ layout: post
 title:  Vaias a Barroso fortalecem o fascismo? A esquerda pequeno burguesa se tornou mais defensora da ditadura do STF que os próprios juízes, é uma subserviência total que levará a um desastre para os trabalhadores.
 categories: stf
 article_id: id172
-tags: ['censura', 'barroso', 'eleicoes', 'abuso-de-autoridade']
+tags: ['stf', 'censura', 'barroso', 'eleicoes', 'abuso-de-autoridade']
 ---
 
 # Vaias a Barroso fortalecem o fascismo? A esquerda pequeno burguesa se tornou mais defensora da ditadura do STF que os próprios juízes, é uma subserviência total que levará a um desastre para os trabalhadores.

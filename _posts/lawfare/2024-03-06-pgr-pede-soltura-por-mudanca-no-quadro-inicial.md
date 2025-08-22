@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "PGR pede soltura de Filipe Martins após comprovação de que ele nunca saiu do Brasil, contrariando alegações da PF usadas para prisão."
 faicon: fa-release
-tags: ['presuncao-de-inocencia', 'legalidade', 'pgr', 'policia-federal', 'gravidade-alta', 'filipe-martins', 'soltura', 'pgr']
+tags: ['lawfare', 'presuncao-de-inocencia', 'legalidade', 'pgr', 'policia-federal', 'gravidade-alta', 'filipe-martins', 'soltura', 'pgr']
 image:
   path: "/assets/solid/release.svg"
 ---

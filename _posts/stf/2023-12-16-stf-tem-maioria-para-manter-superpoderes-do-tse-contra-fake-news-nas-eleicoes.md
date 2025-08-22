@@ -3,7 +3,7 @@ layout: post
 title:  STF tem maioria para manter 'superpoderes' do TSE contra fake news nas eleições
 categories: stf
 article_id: id203
-tags: ['fake-news', 'eleicoes', 'censura', 'poderes-do-tse', 'liberdade-de-expressao']
+tags: ['stf', 'fake-news', 'eleicoes', 'censura', 'poderes-do-tse', 'liberdade-de-expressao']
 ---
 
 # STF tem maioria para manter 'superpoderes' do TSE contra fake news nas eleições

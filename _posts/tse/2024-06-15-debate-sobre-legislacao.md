@@ -3,7 +3,7 @@ layout: post
 title:  Debate sobre legislação, soberania e investigações
 categories: tse
 description: Avanço do debate público e jurídico sobre os limites de influência internacional, doações estrangeiras e necessidade de investigações parlamentares e do MPF, com base em denúncias de possível afronta à soberania eleitoral.
-tags: ['tse', 'nacional',  'usaid']
+tags: ['tse', 'tse', 'nacional',  'usaid']
 ---
 
 # Debate sobre legislação, soberania e investigações

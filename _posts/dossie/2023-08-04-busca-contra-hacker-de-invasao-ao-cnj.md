@@ -16,7 +16,7 @@ image:
 - **Data**: 2023/08/04
 - **Ano**: 2023
 - **Descrição Completa**: Busca contra hacker responsável por invasão ao CNJ.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Devido Processo Legal
   - Proporcionalidade

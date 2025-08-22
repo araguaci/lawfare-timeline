@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Investigação revela que Brasil Paralelo usou laudo falso em documentário atacando Maria da Penha."
 faicon: fa-file-signature
-tags: ['direito-ao-acesso-a-informacao', 'moralidade', 'brasil-paralelo', 'maria-da-penha', 'gravidade-media', 'documento-falso', 'maria-da-penha']
+tags: ['lawfare', 'direito-ao-acesso-a-informacao', 'moralidade', 'brasil-paralelo', 'maria-da-penha', 'gravidade-media', 'documento-falso', 'maria-da-penha']
 image:
   path: "/assets/solid/file-signature.svg"
 ---

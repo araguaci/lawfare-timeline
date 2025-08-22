@@ -16,7 +16,7 @@ image:
 - **Data**: 2021/11/24
 - **Ano**: 2021
 - **Descrição Completa**: Condenação de Daniel Silveira a 8 anos e 9 meses.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Prerrogativas Parlamentares
   - Liberdade de Expressão

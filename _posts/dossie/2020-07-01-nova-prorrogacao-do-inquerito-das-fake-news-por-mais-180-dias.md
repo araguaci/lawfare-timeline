@@ -16,7 +16,7 @@ image:
 - **Data**: 2020/07/01
 - **Ano**: 2020
 - **Descrição Completa**: Prorrogação do inquérito das fake news por mais 180 dias.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Duração Razoável do Processo
   - Devido Processo Legal

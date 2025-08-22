@@ -3,7 +3,7 @@ layout: post
 title:  Censura a reportagem da Crusoé ligando Toffoli à Odebrecht por citar Amigo do amigo do meu pai
 categories: dossie
 description: Ação em 2019/04/15 com violações, envolvidos, fontes e gravidade media
-tags: ['liberdade-de-expressao', 'liberdade-de-imprensa', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'revista-crusoe', 'dias-toffoli', 'gravidade-media']
+tags: ['censura', 'liberdade-de-expressao', 'liberdade-de-imprensa', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'revista-crusoe', 'dias-toffoli', 'gravidade-media']
 gravidade: media
 faicon: fas fa-exclamation-triangle
 image:
@@ -16,7 +16,7 @@ image:
 - **Data**: 2019/04/15
 - **Ano**: 2019
 - **Descrição Completa**: Censura a reportagem da Crusoé ligando Toffoli à Odebrecht.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Liberdade de Expressão
   - Liberdade de Imprensa

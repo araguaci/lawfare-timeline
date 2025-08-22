@@ -2,8 +2,8 @@
 layout: post
 title:  Alegações públicas de interferência e censura eleitoral
 categories: tse
-description: Após início da campanha eleitoral, lideranças políticas de direita e imprensa alternativa passam a alegar que ONGs beneficiadas com verbas da USAID praticaram censura seletiva e ajudaram a direcionar o debate público. Não foram apresentados indícios técnicos de censura coordenada entre TSE e USAID.
-tags: ['tse', 'nacional',  'usaid']
+description: Após início da campanha eleitoral, lideranças políticas de direita e imprensa alternativa passam a alegar que ONGs beneficiadas com verbas da USAID praticaram censura seletiva e ajudaram a direcionar o debate público.
+tags: ['censura', 'tse', 'tse', 'nacional',  'usaid']
 ---
 
 # Alegações públicas de interferência e censura eleitoral

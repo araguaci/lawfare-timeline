@@ -16,7 +16,7 @@ image:
 - **Data**: 2019/12/16
 - **Ano**: 2019
 - **Descrição Completa**: Primeira prorrogação do inquérito das fake news por 180 dias.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Segurança Jurídica
   - Devido Processo Legal

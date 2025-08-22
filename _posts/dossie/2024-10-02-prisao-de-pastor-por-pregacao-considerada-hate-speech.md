@@ -16,7 +16,7 @@ image:
 - **Data**: 2024/10/02
 - **Ano**: 2024
 - **Descrição Completa**: Prisão de pastor por pregação classificada como discurso de ódio, violando liberdade religiosa.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Liberdade Religiosa
   - Liberdade de Expressão

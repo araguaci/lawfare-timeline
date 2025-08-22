@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Eduardo Bolsonaro denuncia prisão do advogado de Filipe Martins, violando prerrogativas de advogados."
 faicon: fa-handcuffs
-tags: ['ampla-defesa', 'prerrogativas-parlamentares', 'eduardo-bolsonaro', 'stf', 'gravidade-alta', 'filipe-martins', 'advogado', 'prisao']
+tags: ['lawfare', 'ampla-defesa', 'prerrogativas-parlamentares', 'eduardo-bolsonaro', 'stf', 'gravidade-alta', 'filipe-martins', 'advogado', 'prisao']
 image:
   path: "/assets/solid/handcuffs.svg"
 ---

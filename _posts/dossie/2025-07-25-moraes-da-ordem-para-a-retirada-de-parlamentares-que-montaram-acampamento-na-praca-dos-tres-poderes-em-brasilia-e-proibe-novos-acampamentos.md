@@ -16,7 +16,7 @@ image:
 - **Data**: 2025/07/25
 - **Ano**: 2025
 - **Descrição Completa**: Ordem para retirada de parlamentares que montaram acampamento na Praça dos Três Poderes e proibição de novos, alegando manutenção da ordem pública, mas questionada por limitar associação e expressão.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Liberdade de Associação
   - Devido Processo Legal

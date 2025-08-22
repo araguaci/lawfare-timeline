@@ -16,7 +16,7 @@ image:
 - **Data**: 2023/12/15
 - **Ano**: 2023
 - **Descrição Completa**: Quebra de sigilo da Abin em investigação sobre operações paralelas.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Direito à Privacidade
   - Devido Processo Legal

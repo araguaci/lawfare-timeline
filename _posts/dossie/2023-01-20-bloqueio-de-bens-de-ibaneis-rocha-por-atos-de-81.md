@@ -16,7 +16,7 @@ image:
 - **Data**: 2023/01/20
 - **Ano**: 2023
 - **Descrição Completa**: Bloqueio de bens de Ibaneis Rocha por omissão nos atos de 8 de janeiro.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Direito à Propriedade
   - Devido Processo Legal

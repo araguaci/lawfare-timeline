@@ -16,7 +16,7 @@ image:
 - **Data**: 2020/08/01
 - **Ano**: 2020
 - **Descrição Completa**: Quebra de sigilo bancário de 102 alvos no inquérito das fake news.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Direito à Privacidade
   - Devido Processo Legal

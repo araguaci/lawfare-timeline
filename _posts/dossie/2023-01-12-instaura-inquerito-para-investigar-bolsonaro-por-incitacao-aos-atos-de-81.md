@@ -16,7 +16,7 @@ image:
 - **Data**: 2023/01/12
 - **Ano**: 2023
 - **Descrição Completa**: Instauração de inquérito contra Bolsonaro por incitação aos atos de 8 de janeiro.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Liberdade de Expressão
   - Devido Processo Legal

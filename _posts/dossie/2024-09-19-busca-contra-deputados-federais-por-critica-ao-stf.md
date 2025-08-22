@@ -16,7 +16,7 @@ image:
 - **Data**: 2024/09/19
 - **Ano**: 2024
 - **Descrição Completa**: Buscas contra deputados federais por críticas ao STF, afetando prerrogativas parlamentares.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Prerrogativas Parlamentares
   - Liberdade de Expressão

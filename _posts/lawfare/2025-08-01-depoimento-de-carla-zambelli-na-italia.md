@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Carla Zambelli depõe na justiça italiana, declarando-se vítima de perseguição política."
 faicon: fa-balance-scale
-tags: ['devido-processo-legal', 'presuncao-de-inocencia', 'carla-zambelli', 'justica-italiana', 'gravidade-alta', 'depoimento', 'perseguicao-politica', 'zambelli']
+tags: ['lawfare', 'devido-processo-legal', 'presuncao-de-inocencia', 'carla-zambelli', 'justica-italiana', 'gravidade-alta', 'depoimento', 'perseguicao-politica', 'zambelli']
 image:
   path: "/assets/solid/balance-scale.svg"
 ---

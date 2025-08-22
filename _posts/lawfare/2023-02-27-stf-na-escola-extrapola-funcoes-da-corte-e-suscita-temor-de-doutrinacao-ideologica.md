@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id175
 description: 2023-02-27-gazetadopovo-Rosa Weber-Extrapola
-tags: ['rosa-weber', 'extrapola', 'abuso-de-autoridade']
+tags: ['lawfare', 'rosa-weber', 'extrapola', 'abuso-de-autoridade']
 ---
 
 # STF na escola extrapola funções da Corte e suscita temor de doutrinação ideológica.

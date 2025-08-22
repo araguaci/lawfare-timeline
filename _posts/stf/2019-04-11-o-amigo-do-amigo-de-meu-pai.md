@@ -3,7 +3,7 @@ layout: post
 title:  O amigo do amigo de meu pai.
 categories: stf
 article_id: id137
-tags: ['odebrecht', 'toffoli', 'lava-jato']
+tags: ['stf', 'odebrecht', 'toffoli', 'lava-jato']
 ---
 
 # O amigo do amigo de meu pai.

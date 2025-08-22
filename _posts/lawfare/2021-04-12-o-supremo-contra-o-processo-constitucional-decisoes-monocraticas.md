@@ -7,7 +7,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id179
 description: 2021-04-12-gazetadopovo-Alexandre Moraes-Extrapola
-tags: ['alexandre-de-moraes', 'extrapola', 'inconstitucional']
+tags: ['lawfare', 'alexandre-de-moraes', 'extrapola', 'inconstitucional']
 ---
 
 # O Supremo contra o processo constitucional: decisões monocráticas, transação da constitucionalidade e o silêncio do Plenário.

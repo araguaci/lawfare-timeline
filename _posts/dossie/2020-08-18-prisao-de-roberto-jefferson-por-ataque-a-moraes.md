@@ -16,7 +16,7 @@ image:
 - **Data**: 2020/08/18
 - **Ano**: 2020
 - **Descrição Completa**: Prisão de Roberto Jefferson por ataque verbal a Moraes.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Liberdade de Expressão
   - Devido Processo Legal

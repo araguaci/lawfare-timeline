@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id172
 description: 2023-07-21-causaoperaria-Censura-Barroso
-tags: ['censura', 'barroso', 'eleicoes']
+tags: ['lawfare', 'censura', 'barroso', 'eleicoes']
 ---
 
 # Vaias a Barroso fortalecem o fascismo? A esquerda pequeno burguesa se tornou mais defensora da ditadura do STF que os próprios juízes, é uma subserviência total que levará a um desastre para os trabalhadores.

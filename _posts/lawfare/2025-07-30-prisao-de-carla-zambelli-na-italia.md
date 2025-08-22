@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Deputada Carla Zambelli é presa na Itália por condenação no Brasil relacionada a invasão de sistemas e perseguição armada a jornalista."
 faicon: fa-handcuffs
-tags: ['liberdade-de-locomocao', 'presuncao-de-inocencia', 'direito-a-privacidade', 'carla-zambelli', 'justica-brasileira', 'justica-italiana', 'gravidade-alta', 'prisao-internacional', 'extradicao', 'zambelli']
+tags: ['lawfare', 'liberdade-de-locomocao', 'presuncao-de-inocencia', 'direito-a-privacidade', 'carla-zambelli', 'justica-brasileira', 'justica-italiana', 'gravidade-alta', 'prisao-internacional', 'extradicao', 'zambelli']
 image:
   path: "/assets/solid/handcuffs.svg"
 ---

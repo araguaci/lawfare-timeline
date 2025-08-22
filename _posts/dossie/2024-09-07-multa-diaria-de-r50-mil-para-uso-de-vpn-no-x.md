@@ -16,7 +16,7 @@ image:
 - **Data**: 2024/09/07
 - **Ano**: 2024
 - **Descrição Completa**: Imposição de multa diária de R$50 mil para usuários que acessam X via VPN, violando privacidade.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Direito à Privacidade
   - Liberdade de Expressão

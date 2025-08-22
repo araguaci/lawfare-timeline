@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id141
 description: 2023-06-21-intercept-Lula-Gastos
-tags: ['lula', 'gastos', 'licitacao']
+tags: ['lawfare', 'lula', 'gastos', 'licitacao']
 ---
 
 # Ministro de Lula já supera 4 anos de Bolsonaro em gastos sem licitação.

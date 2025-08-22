@@ -16,7 +16,7 @@ image:
 - **Data**: 2024/07/18
 - **Ano**: 2024
 - **Descrição Completa**: Prorrogação adicional do inquérito das fake news por 180 dias, prolongando o processo.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Duração Razoável do Processo
   - Devido Processo Legal

@@ -16,7 +16,7 @@ image:
 - **Data**: 2022/03/24
 - **Ano**: 2022
 - **Descrição Completa**: Prisão de Daniel Silveira por descumprimento de uso de tornozeleira.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Prerrogativas Parlamentares
   - Devido Processo Legal

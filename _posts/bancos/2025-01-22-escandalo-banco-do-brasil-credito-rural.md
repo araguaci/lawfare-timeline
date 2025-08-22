@@ -5,7 +5,7 @@ title: Escândalo Banco do Brasil - Crédito Rural
 categories: bancos
 description: > 
   Venda casada ilegal no crédito rural, prejuízo de R$ 841 bi ao agronegócio.
-tags: ['financeiro', 'nacional']
+tags: ['corrupcao-financeira', 'financeiro', 'nacional']
 ---
 
 # Escândalo Banco do Brasil - Crédito Rural

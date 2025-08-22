@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id181
 description: 2023-06-16-revistaforum-Extrapola-Inconstitucional
-tags: ['extrapola', 'inconstitucional', 'barroso']
+tags: ['lawfare', 'extrapola', 'inconstitucional', 'barroso']
 ---
 
 # A matéria da revista fórum afirma que o Ministro Barroso montou o seu próprio ministério das relações exteriores para conseguir semicondutores em 2021.

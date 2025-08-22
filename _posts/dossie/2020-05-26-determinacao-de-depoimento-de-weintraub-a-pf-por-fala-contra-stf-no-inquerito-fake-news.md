@@ -16,7 +16,7 @@ image:
 - **Data**: 2020/05/26
 - **Ano**: 2020
 - **Descrição Completa**: Determinação de depoimento de Weintraub à PF por fala contra STF.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Liberdade de Expressão
   - Devido Processo Legal

@@ -3,7 +3,7 @@ layout: post
 title:  Moraes bloqueia bens, contas e Pix de Eduardo Bolsonaro e sua mulher nos EUA por incitar tarifaço de Trump
 categories: dossie
 description: Ação em 2025/07/21 com violações, envolvidos, fontes e gravidade alta
-tags: ['devido-processo-legal', 'direito-a-propriedade', 'proporcionalidade', 'imparcialidade-judicial', 'liberdade-de-locomocao', 'alexandre-de-moraes', 'eduardo-bolsonaro', 'heloisa-bolsonaro', 'donald-trump', 'gravidade-alta']
+tags: ['devido-processo-legal', 'direito-a-propriedade', 'proporcionalidade', 'imparcialidade', 'liberdade-de-locomocao', 'alexandre-de-moraes', 'eduardo-bolsonaro', 'heloisa-bolsonaro', 'donald-trump', 'gravidade-alta']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:
@@ -16,7 +16,7 @@ image:
 - **Data**: 2025/07/21
 - **Ano**: 2025
 - **Descrição Completa**: Bloqueio de bens, contas e Pix de Eduardo Bolsonaro e sua esposa nos EUA por incitação a tarifas de Trump, como resposta a campanhas contra o STF, levantando questões de propriedade e locomoção.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Devido Processo Legal
   - Direito à Propriedade

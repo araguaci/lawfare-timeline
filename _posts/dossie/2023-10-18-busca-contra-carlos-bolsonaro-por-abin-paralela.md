@@ -16,7 +16,7 @@ image:
 - **Data**: 2023/10/18
 - **Ano**: 2023
 - **Descrição Completa**: Busca contra Carlos Bolsonaro por Abin paralela.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Devido Processo Legal
   - Proporcionalidade

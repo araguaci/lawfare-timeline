@@ -5,7 +5,7 @@ title: Caso Bamerindus
 categories: bancos
 description: > 
   Fraudes e má gestão levando à falência do Bamerindus, com intervenção do BC e prejuízo de R$ 4 bilhões.
-tags: ['financeiro', 'parana']
+tags: ['corrupcao-financeira', 'financeiro', 'parana']
 ---
 
 # Caso Bamerindus

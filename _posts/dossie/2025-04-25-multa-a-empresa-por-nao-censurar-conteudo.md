@@ -16,7 +16,7 @@ image:
 - **Data**: 2025/04/25
 - **Ano**: 2025
 - **Descrição Completa**: Imposição de multa a empresa por falha em censurar conteúdo considerado ofensivo, afetando legalidade e expressão.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Liberdade de Expressão
   - Devido Processo Legal

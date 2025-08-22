@@ -16,7 +16,7 @@ image:
 - **Data**: 2023/08/09
 - **Ano**: 2023
 - **Descrição Completa**: Prisão de 5 pessoas por planejamento de assassinato contra Moraes.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Devido Processo Legal
   - Proporcionalidade

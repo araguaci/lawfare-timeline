@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "EUA restringem vistos para autoridades brasileiras envolvidas na 'caça às bruxas' contra Bolsonaro."
 faicon: fa-passport
-tags: ['liberdade-de-locomocao', 'devido-processo-legal', 'governo-trump', 'alexandre-de-moraes', 'gravidade-alta', 'vistos', 'perseguicao-politica', 'bolsonaro']
+tags: ['lawfare', 'liberdade-de-locomocao', 'devido-processo-legal', 'governo-trump', 'alexandre-de-moraes', 'gravidade-alta', 'vistos', 'perseguicao-politica', 'bolsonaro']
 image:
   path: "/assets/solid/passport.svg"
 ---

@@ -5,7 +5,7 @@ title: Caso Odebrecht - Departamento de Propinas
 categories: bancos
 description: > 
   Uso de bancos suíços e offshores para pagamento de propinas.
-tags: ['financeiro', 'nacional']
+tags: ['corrupcao-financeira', 'financeiro', 'nacional']
 ---
 
 # Caso Odebrecht - Departamento de Propinas

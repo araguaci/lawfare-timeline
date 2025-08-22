@@ -5,7 +5,7 @@ title: Operação Disfarces de Mamom (Banco Paulista)
 categories: bancos
 description: > 
   Lavagem de aproximadamente R$ 48 milhões via contratos falsos entre Odebrecht e empresa financeira.
-tags: ['financeiro', 'sp-nacional']
+tags: ['corrupcao-financeira', 'financeiro', 'sp-nacional']
 ---
 
 # Operação Disfarces de Mamom (Banco Paulista)

@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id154
 description: 2020-10-13-metropoles-Marco Aurélio-
-tags: ['marco-aurelio']
+tags: ['lawfare', 'marco-aurelio']
 ---
 
 # Cerca de 231 mil presos podem ser beneficiados com soltura de André do Rap.

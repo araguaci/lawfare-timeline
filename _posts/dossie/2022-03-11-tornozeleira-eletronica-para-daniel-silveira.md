@@ -16,7 +16,7 @@ image:
 - **Data**: 2022/03/11
 - **Ano**: 2022
 - **Descrição Completa**: Imposição de tornozeleira eletrônica a Daniel Silveira.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Prerrogativas Parlamentares
   - Devido Processo Legal

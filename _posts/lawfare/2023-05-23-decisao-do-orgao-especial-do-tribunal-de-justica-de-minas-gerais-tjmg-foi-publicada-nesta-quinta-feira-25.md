@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id156
 description: 2023-05-23-g1-CNJ-STF
-tags: ['cnj', 'stf']
+tags: ['lawfare', 'cnj', 'stf']
 ---
 
 # Decisão do Órgão Especial do Tribunal de Justiça de Minas Gerais (TJMG) foi publicada nesta quinta-feira (25). Vídeo em que Ludmila Lins Grilo ´ensinava´ a andar sem máscara em shopping viralizou em 2021.

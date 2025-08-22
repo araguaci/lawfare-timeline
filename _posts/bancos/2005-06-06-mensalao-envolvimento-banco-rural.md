@@ -5,7 +5,7 @@ title: Mensalão - Envolvimento Banco Rural
 categories: bancos
 description: > 
   Banco Rural usado para empréstimos fictícios e lavagem de dinheiro no esquema do Mensalão.
-tags: ['financeiro', 'nacional']
+tags: ['corrupcao-financeira', 'financeiro', 'nacional']
 ---
 
 # Mensalão - Envolvimento Banco Rural

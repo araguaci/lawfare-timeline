@@ -16,7 +16,7 @@ image:
 - **Data**: 2020/04/29
 - **Ano**: 2020
 - **Descrição Completa**: Suspensão da nomeação de Alexandre Ramagem para diretor da PF.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Separação de Poderes
   - Proporcionalidade

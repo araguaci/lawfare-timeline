@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id161
 description: 2021-08-16-tse-Censura-Eleições
-tags: ['censura', 'eleicoes', 'tse']
+tags: ['lawfare', 'censura', 'eleicoes', 'tse']
 ---
 
 # Corregedor do TSE determina que plataformas digitais suspendam repasses financeiros a páginas que propagam desinformação.

@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id084
 description: 2021-02-24-redebrasilatual-Governo Federal-Prazo
-tags: ['governo-federal', 'prazo', 'quilombolas']
+tags: ['lawfare', 'governo-federal', 'prazo', 'quilombolas']
 ---
 
 # Em 24 de fevereiro de 2021, o STF deu o prazo de 30 dias para o Governo Federal apresentar um plano de proteção a quilombolas.

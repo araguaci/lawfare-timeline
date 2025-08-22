@@ -3,7 +3,7 @@ layout: post
 title:  Prisões em massa após protestos de 8 de janeiro
 categories: tse
 description: Após os protestos de apoiadores de Jair Bolsonaro em 8 de janeiro, foram realizadas prisões em massa com acusações severas como tentativa de golpe e associação criminosa, com sentenças altas mesmo para os não violentos. STF e TSE, sob Alexandre de Moraes, centralizaram decisões e usaram relatórios informais.
-tags: ['tse', 'brasilia-df']
+tags: ['tse', 'tse', 'brasilia-df']
 ---
 
 # Prisões em massa após protestos de 8 de janeiro

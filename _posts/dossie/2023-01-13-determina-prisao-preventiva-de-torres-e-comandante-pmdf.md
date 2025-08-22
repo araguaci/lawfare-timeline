@@ -16,7 +16,7 @@ image:
 - **Data**: 2023/01/13
 - **Ano**: 2023
 - **Descrição Completa**: Determinação de prisão preventiva de Anderson Torres e comandante da PMDF por omissão.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Devido Processo Legal
   - Proporcionalidade

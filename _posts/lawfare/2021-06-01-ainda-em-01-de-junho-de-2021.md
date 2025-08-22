@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id109
 description: 2021-06-01-terra-Governo Federal-Lewandowski
-tags: ['governo-federal', 'lewandowski', 'prazo']
+tags: ['lawfare', 'governo-federal', 'lewandowski', 'prazo']
 ---
 
 # Ainda em 01 de junho de 2021, o ministro Lewandowski deu cinco dias para Bolsonaro explicar a Copa América no Brasil.

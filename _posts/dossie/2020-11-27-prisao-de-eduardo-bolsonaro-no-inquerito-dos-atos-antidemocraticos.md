@@ -16,7 +16,7 @@ image:
 - **Data**: 2020/11/27
 - **Ano**: 2020
 - **Descrição Completa**: Prisão de Eduardo Bolsonaro no inquérito dos atos antidemocráticos.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Prerrogativas Parlamentares
   - Devido Processo Legal

@@ -3,7 +3,7 @@ layout: post
 title:  Formação do grupo 'Custody Hearings' para coordenação de prisões
 categories: tse
 description: Grupo secreto via WhatsApp criado para coordenar audiências de custódia pós-8 de janeiro, com servidores do STF e TSE sob comando direto de Alexandre de Moraes e Cristina Yukiko Kusahara, usando relatórios sigilosos.
-tags: ['tse', 'brasilia-df-e-orgaos-judiciais']
+tags: ['tse', 'tse', 'brasilia-df-e-orgaos-judiciais']
 ---
 
 # Formação do grupo 'Custody Hearings' para coordenação de prisões

@@ -16,7 +16,7 @@ image:
 - **Data**: 2020/10/20
 - **Ano**: 2020
 - **Descrição Completa**: Prisão de Oswaldo Eustáquio no inquérito dos atos antidemocráticos.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Devido Processo Legal
   - Proporcionalidade

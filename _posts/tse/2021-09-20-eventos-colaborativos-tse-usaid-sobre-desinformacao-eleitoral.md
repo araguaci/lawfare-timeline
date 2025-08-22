@@ -3,7 +3,7 @@ layout: post
 title:  Eventos colaborativos TSE-USAID sobre desinformação eleitoral
 categories: tse
 description: TSE e USAID, através do consórcio CEPPS, realizam eventos (presenciais e virtuais) envolvendo servidores eleitorais, representantes internacionais e ONGs para debater o combate à desinformação e estruturar programas institucionais de cooperação técnica visando as eleições de 2022.
-tags: ['tse', 'brasilia', 'virtual', 'usaid', 'cepps']
+tags: ['tse', 'tse', 'brasilia', 'virtual', 'usaid', 'cepps']
 ---
 
 # Eventos colaborativos TSE-USAID sobre desinformação eleitoral

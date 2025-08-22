@@ -16,7 +16,7 @@ image:
 - **Data**: 2023/01/19
 - **Ano**: 2023
 - **Descrição Completa**: Manutenção das prisões de investigados pelos atos de 8 de janeiro.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Devido Processo Legal
   - Proporcionalidade

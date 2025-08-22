@@ -3,7 +3,7 @@ layout: post
 title:  Moraes intima defesa de Bolsonaro em 24h com ameaça de prisão por declaração à imprensa sobre tornozeleira
 categories: dossie
 description: Ação em 2025/07/25 com violações, envolvidos, fontes e gravidade media
-tags: ['liberdade-de-expressao', 'devido-processo-legal', 'proporcionalidade', 'legalidade', 'imparcialidade-judicial', 'nao-censura-previa', 'alexandre-de-moraes', 'jair-bolsonaro', 'equipe-de-defesa', 'gravidade-media']
+tags: ['liberdade-de-expressao', 'devido-processo-legal', 'proporcionalidade', 'legalidade', 'imparcialidade', 'censura', 'alexandre-de-moraes', 'jair-bolsonaro', 'equipe-de-defesa', 'gravidade-media']
 gravidade: media
 faicon: fas fa-exclamation-triangle
 image:
@@ -16,7 +16,7 @@ image:
 - **Data**: 2025/07/25
 - **Ano**: 2025
 - **Descrição Completa**: Intimação à defesa de Bolsonaro em 24 horas com ameaça de prisão por declarações à imprensa sobre uso de tornozeleira, vista como tentativa de censura e violação à liberdade de expressão.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Liberdade de Expressão
   - Devido Processo Legal

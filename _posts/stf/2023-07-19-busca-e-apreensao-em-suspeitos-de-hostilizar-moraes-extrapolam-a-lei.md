@@ -3,7 +3,7 @@ layout: post
 title:  Busca e apreensão em suspeitos de hostilizar Moraes ‘extrapolam’ a lei, dizem constitucionalistas.
 categories: stf
 article_id: id173
-tags: ['alexandre-de-moraes', 'rosa-weber', 'extrapola', 'abuso-de-autoridade', 'constituicao']
+tags: ['stf', 'alexandre-de-moraes', 'rosa-weber', 'extrapola', 'abuso-de-autoridade', 'constituicao']
 ---
 
 # Busca e apreensão em suspeitos de hostilizar Moraes ‘extrapolam’ a lei, dizem constitucionalistas.

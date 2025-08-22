@@ -5,7 +5,7 @@ title: Operação Zelotes
 categories: bancos
 description: > 
   Fraudes no CARF envolvendo bancos como Bradesco e Santander para redução de multas fiscais.
-tags: ['financeiro', 'nacional']
+tags: ['corrupcao-financeira', 'financeiro', 'nacional']
 ---
 
 # Operação Zelotes

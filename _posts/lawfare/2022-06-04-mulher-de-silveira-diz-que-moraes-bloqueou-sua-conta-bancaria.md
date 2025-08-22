@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id168
 description: 2022-06-04-poder360-Censura-Alexandre Moraes
-tags: ['censura', 'alexandre-de-moraes', 'eleicoes']
+tags: ['lawfare', 'censura', 'alexandre-de-moraes', 'eleicoes']
 ---
 
 # Mulher de Silveira diz que Moraes bloqueou sua conta bancária. Defesa diz que não há processo ou ordem escrita no sistema do STF; Supremo afirma que processo está em sigilo...

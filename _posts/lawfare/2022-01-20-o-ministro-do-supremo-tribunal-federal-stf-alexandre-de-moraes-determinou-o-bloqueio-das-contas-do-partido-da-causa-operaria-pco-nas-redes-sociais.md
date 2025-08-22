@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id167
 description: 2022-01-20-tecnoblog-Censura-Alexandre Moraes
-tags: ['censura', 'alexandre-de-moraes', 'eleicoes']
+tags: ['lawfare', 'censura', 'alexandre-de-moraes', 'eleicoes']
 ---
 
 # O ministro do Supremo Tribunal Federal (STF) Alexandre de Moraes determinou o bloqueio das contas do Partido da Causa Operária (PCO) nas redes sociais. A medida vale para Twitter, Instagram,...

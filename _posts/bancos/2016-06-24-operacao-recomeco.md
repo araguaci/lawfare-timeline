@@ -5,7 +5,7 @@ title: Operação Recomeço
 categories: bancos
 description: > 
   Desvios de cerca de R$ 100 milhões dos fundos de pensão Petros, Postalis, etc., usados para financiar a Galileo e afetar universidades.
-tags: ['financeiro', 'rj', 'sp-nacional']
+tags: ['corrupcao-financeira', 'financeiro', 'rj', 'sp-nacional']
 ---
 
 # Operação Recomeço

@@ -3,7 +3,7 @@ layout: post
 title:  Censura a rádio Jovem Pan
 categories: dossie
 description: Ação em 2022/10/21 com violações, envolvidos, fontes e gravidade media
-tags: ['liberdade-de-imprensa', 'liberdade-de-expressao', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'radio-jovem-pan', 'gravidade-media']
+tags: ['censura', 'liberdade-de-imprensa', 'liberdade-de-expressao', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'radio-jovem-pan', 'gravidade-media']
 gravidade: media
 faicon: fas fa-exclamation-triangle
 image:
@@ -16,7 +16,7 @@ image:
 - **Data**: 2022/10/21
 - **Ano**: 2022
 - **Descrição Completa**: Censura a rádio Jovem Pan por críticas ao TSE.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Liberdade de Imprensa
   - Liberdade de Expressão

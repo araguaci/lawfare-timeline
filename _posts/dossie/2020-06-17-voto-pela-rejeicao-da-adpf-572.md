@@ -3,7 +3,7 @@ layout: post
 title:  Voto pela rejeição da ADPF 572, defendendo continuidade do inquérito das fake news
 categories: dossie
 description: Ação em 2020/06/17 com violações, envolvidos, fontes e gravidade media
-tags: ['imparcialidade-do-juiz', 'devido-processo-legal', 'principio-acusatorio', 'separacao-dos-poderes', 'alexandre-de-moraes', 'gravidade-media']
+tags: ['imparcialidade', 'devido-processo-legal', 'principio-acusatorio', 'separacao-dos-poderes', 'alexandre-de-moraes', 'gravidade-media']
 gravidade: media
 faicon: fas fa-exclamation-triangle
 image:
@@ -16,7 +16,7 @@ image:
 - **Data**: 2020/06/17
 - **Ano**: 2020
 - **Descrição Completa**: Voto pela rejeição da ADPF 572, mantendo o inquérito das fake news.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Imparcialidade do Juiz
   - Devido Processo Legal

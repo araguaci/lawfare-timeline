@@ -3,7 +3,7 @@ layout: post
 title:  4 ministros do STF vão a NY em evento com Merval Pereira Lide realizará o Brazil Conference em novembro nos EUA; Fux, Moraes, Toffoli e Gilmar estão confirmados...
 categories: stf
 article_id: id188
-tags: ['lide', 'gilmar-mendes', 'alexandre-de-moraes', 'toffoli', 'luiz-fux', 'lide']
+tags: ['stf', 'lide', 'gilmar-mendes', 'alexandre-de-moraes', 'toffoli', 'luiz-fux', 'lide']
 ---
 
 # 4 ministros do STF vão a NY em evento com Merval Pereira Lide realizará o Brazil Conference em novembro nos EUA; Fux, Moraes, Toffoli e Gilmar estão confirmados...

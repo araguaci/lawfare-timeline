@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Alexandre de Moraes impõe medidas cautelares a Jair Bolsonaro, classificadas pela oposição como arbitrárias e perseguição política."
 faicon: fa-gavel
-tags: ['presuncao-de-inocencia', 'devido-processo-legal', 'liberdade-de-expressao', 'jair-bolsonaro', 'alexandre-de-moraes', 'oposicao', 'gravidade-alta', 'medidas-cautelares', 'perseguicao-politica', 'bolsonaro']
+tags: ['lawfare', 'presuncao-de-inocencia', 'devido-processo-legal', 'liberdade-de-expressao', 'jair-bolsonaro', 'alexandre-de-moraes', 'oposicao', 'gravidade-alta', 'medidas-cautelares', 'perseguicao-politica', 'bolsonaro']
 image:
   path: "/assets/solid/gavel.svg"
 ---

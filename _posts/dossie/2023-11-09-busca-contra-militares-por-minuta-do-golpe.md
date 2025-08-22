@@ -16,7 +16,7 @@ image:
 - **Data**: 2023/11/09
 - **Ano**: 2023
 - **Descrição Completa**: Buscas contra militares por elaboração de minuta de golpe.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Inviolabilidade do Domicílio
   - Devido Processo Legal

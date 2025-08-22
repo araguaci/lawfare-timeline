@@ -4,7 +4,7 @@ title:  >
   STF: Toffoli nega novo recurso de Dallagnol e mantém cassação pelo TSE.
 categories: stf
 article_id: id142
-tags: ['toffoli', 'dallagnol']
+tags: ['stf', 'toffoli', 'dallagnol']
 ---
 
 # STF: Toffoli nega novo recurso de Dallagnol e mantém cassação pelo TSE.

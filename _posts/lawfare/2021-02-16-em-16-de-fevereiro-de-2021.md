@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id081
 description: 2021-02-16-dw-Governo Federal-Lewandowski
-tags: ['governo-federal', 'lewandowski', 'ordenou']
+tags: ['lawfare', 'governo-federal', 'lewandowski', 'ordenou']
 ---
 
 # Em 16 de fevereiro de 2021, o ministro Lewandowski ordenou diligências para apurar os gastos do governo Bolsonaro com cloroquina.

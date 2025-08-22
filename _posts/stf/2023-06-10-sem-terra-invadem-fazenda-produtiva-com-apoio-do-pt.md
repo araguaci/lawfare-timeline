@@ -3,7 +3,7 @@ layout: post
 title:  Sem-terra invadem fazenda produtiva com apoio do PT.
 categories: stf
 article_id: id140
-tags: ['mst', 'pt']
+tags: ['stf', 'mst', 'pt']
 ---
 
 # Sem-terra invadem fazenda produtiva com apoio do PT.

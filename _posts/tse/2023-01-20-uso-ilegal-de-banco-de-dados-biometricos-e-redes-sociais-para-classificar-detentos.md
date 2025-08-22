@@ -3,7 +3,7 @@ layout: post
 title:  Uso ilegal de banco de dados biométricos e redes sociais para classificar detentos
 categories: tse
 description: Equipe do TSE utilizou dados biométricos, redes sociais e sistemas para classificar pessoas como 'positivas' ou 'negativas', baseando detenções em postagens e opiniões políticas sem avaliação jurídica adequada.
-tags: ['tse', 'brasil-diversos-locais']
+tags: ['tse', 'tse', 'brasil-diversos-locais']
 ---
 
 # Uso ilegal de banco de dados biométricos e redes sociais para classificar detentos

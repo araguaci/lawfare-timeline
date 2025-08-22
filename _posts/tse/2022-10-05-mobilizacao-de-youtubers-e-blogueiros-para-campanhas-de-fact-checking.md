@@ -3,7 +3,7 @@ layout: post
 title:  Mobilização de youtubers e blogueiros para campanhas de fact-checking
 categories: tse
 description: Influenciadores digitais e youtubers participaram de ações integradas a ONGs como Lupa, Aos Fatos e Redes Cordiais, promovendo vídeos, threads e blogs de checagem eleitoral. Em alguns casos, produziram materiais multimídia educativos e participaram de debates e entrevistas institucionais promovidos por entidades parceiras do TSE.
-tags: ['tse', 'redes-sociais', 'plataformas']
+tags: ['tse', 'tse', 'redes-sociais', 'plataformas']
 ---
 
 # Mobilização de youtubers e blogueiros para campanhas de fact-checking

@@ -3,7 +3,7 @@ layout: post
 title:  Bloqueio nacional do X (Twitter) por não nomear representante legal
 categories: dossie
 description: Ação em 2024/08/29 com violações, envolvidos, fontes e gravidade media
-tags: ['liberdade-de-expressao', 'devido-processo-legal', 'proporcionalidade', 'nao-censura-previa', 'direito-ao-acesso-a-informacao', 'alexandre-de-moraes', 'x-twitter', 'gravidade-media']
+tags: ['liberdade-de-expressao', 'devido-processo-legal', 'proporcionalidade', 'censura', 'direito-ao-acesso-a-informacao', 'alexandre-de-moraes', 'x-twitter', 'gravidade-media']
 gravidade: media
 faicon: fas fa-exclamation-triangle
 image:
@@ -16,7 +16,7 @@ image:
 - **Data**: 2024/08/29
 - **Ano**: 2024
 - **Descrição Completa**: Bloqueio nacional da plataforma X por falha em nomear representante legal no Brasil.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Liberdade de Expressão
   - Devido Processo Legal

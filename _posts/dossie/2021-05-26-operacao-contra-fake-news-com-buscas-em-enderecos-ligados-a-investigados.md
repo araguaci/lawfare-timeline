@@ -16,7 +16,7 @@ image:
 - **Data**: 2021/05/26
 - **Ano**: 2021
 - **Descrição Completa**: Operação contra fake news com buscas em endereços de investigados.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Liberdade de Expressão
   - Inviolabilidade do Domicílio

@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id144
 description: 2023-06-22-band-PCC-juízes
-tags: ['pcc', 'juizes', 'promotores']
+tags: ['lawfare', 'pcc', 'juizes', 'promotores']
 ---
 
 # PCC investe na formação de candidatos de concursos para juízes e promotores.

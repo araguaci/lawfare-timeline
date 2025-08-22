@@ -16,7 +16,7 @@ image:
 - **Data**: 2023/07/06
 - **Ano**: 2023
 - **Descrição Completa**: Indiciamento de Bolsonaro por incitação aos atos de 8 de janeiro.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Liberdade de Expressão
   - Devido Processo Legal

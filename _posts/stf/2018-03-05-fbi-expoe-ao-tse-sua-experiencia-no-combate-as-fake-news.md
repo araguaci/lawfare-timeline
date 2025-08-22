@@ -3,7 +3,7 @@ layout: post
 title:  FBI expõe ao TSE sua experiência no combate às fake news
 categories: stf
 article_id: id186
-tags: ['eleicoes', 'fake-news', 'marco-aurelio', 'tse']
+tags: ['stf', 'eleicoes', 'fake-news', 'marco-aurelio', 'tse']
 ---
 
 # FBI expõe ao TSE sua experiência no combate às fake news

@@ -16,7 +16,7 @@ image:
 - **Data**: 2023/01/09
 - **Ano**: 2023
 - **Descrição Completa**: Ordem de prisão de Anderson Torres por omissão nos atos de 8 de janeiro.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Devido Processo Legal
   - Presunção de Inocência

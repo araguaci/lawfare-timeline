@@ -16,7 +16,7 @@ image:
 - **Data**: 2024/09/13
 - **Ano**: 2024
 - **Descrição Completa**: Bloqueio de contas bancárias de Elon Musk e X Corp por desobediência a ordens judiciais.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Direito à Propriedade
   - Devido Processo Legal

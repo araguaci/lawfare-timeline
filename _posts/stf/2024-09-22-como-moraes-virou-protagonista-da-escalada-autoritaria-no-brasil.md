@@ -3,7 +3,7 @@ layout: post
 title:  Como Moraes virou protagonista da escalada autoritária no Brasil
 categories: stf
 article_id: id205
-tags: ['censura', 'abuso-de-autoridade', 'liberdade-de-expressao', 'eleicoes', 'impeachment']
+tags: ['stf', 'censura', 'abuso-de-autoridade', 'liberdade-de-expressao', 'eleicoes', 'impeachment']
 ---
 
 # Como Moraes virou protagonista da escalada autoritária no Brasil

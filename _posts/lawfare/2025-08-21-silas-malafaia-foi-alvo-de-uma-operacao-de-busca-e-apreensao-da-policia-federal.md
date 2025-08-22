@@ -4,7 +4,7 @@ description: ""
 date: 2025-08-21T00:49:38.778Z
 image: 
   path: "/assets/solid/gavel.svg"
-tags: [justica, 'silas-malafaia', soberania, 'perseguicao-politica']
+tags: ['lawfare', justica, 'silas-malafaia', soberania, 'perseguicao-politica']
 categories: [lawfare]
 ---
 

@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id159
 description: 2023-05-15-revistapepper-Censura-Eleições
-tags: ['censura', 'eleicoes', 'tse']
+tags: ['lawfare', 'censura', 'eleicoes', 'tse']
 ---
 
 # Bárbara Destefani participa de audiência sobre censura e acaba censurada no YouTube.

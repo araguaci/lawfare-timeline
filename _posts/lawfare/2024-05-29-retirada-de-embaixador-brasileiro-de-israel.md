@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Lula retira embaixador brasileiro de Israel em meio a tensões diplomáticas, declarando-o persona non grata."
 faicon: fa-globe
-tags: ['liberdade-religiosa', 'separacao-dos-poderes', 'governo-lula', 'israel', 'gravidade-media', 'diplomacia', 'israel', 'lula']
+tags: ['lawfare', 'liberdade-religiosa', 'separacao-dos-poderes', 'governo-lula', 'israel', 'gravidade-media', 'diplomacia', 'israel', 'lula']
 image:
   path: "/assets/solid/globe.svg"
 ---

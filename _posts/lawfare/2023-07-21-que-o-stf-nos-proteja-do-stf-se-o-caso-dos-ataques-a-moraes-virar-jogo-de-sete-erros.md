@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id174
 description: 2023-07-21-estadao-Alexandre Moraes-Extrapola
-tags: ['alexandre-de-moraes', 'extrapola', 'abuso-de-autoridade']
+tags: ['lawfare', 'alexandre-de-moraes', 'extrapola', 'abuso-de-autoridade']
 ---
 
 # Que o STF nos proteja do STF se o caso dos ataques a Moraes virar jogo de sete erros.

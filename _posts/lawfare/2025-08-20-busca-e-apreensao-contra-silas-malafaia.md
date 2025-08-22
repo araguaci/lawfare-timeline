@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "O ministro Alexandre de Moraes determina busca e apreensão contra o pastor Silas Malafaia, incluindo apreensão de celular e proibição de deixar o país, por suposta obstrução de justiça relacionada a ações de coação envolvendo Bolsonaro."
 faicon: fa-search
-tags: ['liberdade-de-expressao', 'liberdade-de-locomocao', 'inviolabilidade-do-domicilio', 'silas-malafaia', 'alexandre-de-moraes', 'policia-federal', 'gravidade-alta', 'busca-e-apreensao', 'proibicao-de-viagem', 'perseguicao-religiosa', 'malafaia']
+tags: ['lawfare', 'liberdade-de-expressao', 'liberdade-de-locomocao', 'domicilio-violado', 'silas-malafaia', 'alexandre-de-moraes', 'policia-federal', 'gravidade-alta', 'busca-e-apreensao', 'proibicao-de-viagem', 'perseguicao-religiosa', 'malafaia']
 image:
   path: "/assets/solid/search.svg"
 ---

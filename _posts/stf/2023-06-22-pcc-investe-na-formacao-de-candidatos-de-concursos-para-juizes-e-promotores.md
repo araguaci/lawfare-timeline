@@ -3,7 +3,7 @@ layout: post
 title:  PCC investe na formação de candidatos de concursos para juízes e promotores.
 categories: stf
 article_id: id144
-tags: ['pcc', 'juizes', 'promotores']
+tags: ['stf', 'pcc', 'juizes', 'promotores']
 ---
 
 # PCC investe na formação de candidatos de concursos para juízes e promotores.

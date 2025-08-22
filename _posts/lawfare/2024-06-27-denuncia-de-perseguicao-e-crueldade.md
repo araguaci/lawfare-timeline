@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Jornalista Paula Schmitt denuncia a perseguição cruel contra Filipe Martins, preso sem processo ou inquérito, destacando violações à justiça e lógica."
 faicon: fa-exclamation-triangle
-tags: ['dignidade-da-pessoa-humana', 'devido-processo-legal', 'stf', 'paula-schmitt', 'gravidade-alta', 'filipe-martins', 'perseguicao', 'crueldade']
+tags: ['lawfare', 'dignidade-da-pessoa-humana', 'devido-processo-legal', 'stf', 'paula-schmitt', 'gravidade-alta', 'filipe-martins', 'perseguicao', 'crueldade']
 image:
   path: "/assets/solid/exclamation-triangle.svg"
 ---

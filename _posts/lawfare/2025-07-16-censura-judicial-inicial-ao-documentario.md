@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Justiça de Fortaleza censura documentário da Brasil Paralelo sobre Maria da Penha por 90 dias, a pedido do MP."
 faicon: fa-gavel
-tags: ['liberdade-de-expressao', 'liberdade-de-imprensa', 'nao-censura-previa', 'brasil-paralelo', 'ministerio-publico', 'justica-de-fortaleza', 'gravidade-alta', 'censura-judicial', 'maria-da-penha', 'documentario']
+tags: ['lawfare', 'liberdade-de-expressao', 'liberdade-de-imprensa', 'nao-censura-previa', 'brasil-paralelo', 'ministerio-publico', 'justica-de-fortaleza', 'gravidade-alta', 'censura-judicial', 'maria-da-penha', 'documentario']
 image:
   path: "/assets/solid/gavel.svg"
 ---

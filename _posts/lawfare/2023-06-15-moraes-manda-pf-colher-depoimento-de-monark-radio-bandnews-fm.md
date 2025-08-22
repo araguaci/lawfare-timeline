@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id145
 description: 2023-06-15-band-Alexandre Moraes-Mandou
-tags: ['alexandre-de-moraes', 'mandou', 'censura']
+tags: ['lawfare', 'alexandre-de-moraes', 'mandou', 'censura']
 ---
 
 # Moraes manda PF colher depoimento de Monark | Rádio BandNews FM.

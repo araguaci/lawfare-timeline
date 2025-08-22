@@ -3,7 +3,7 @@ layout: post
 title:  The semiconductor crisis could have cost Brazil its democracy. The Brazilian Report tells the story of how former diplomats from Brazil and the U.S. championed an effort to unclog semiconductor supplies to electronic voting machines — without which the 2022 election would have been in jeopardy
 categories: stf
 article_id: id184
-tags: ['extrapola', 'inconstitucional', 'diplomatas', 'eleicoes']
+tags: ['stf', 'extrapola', 'inconstitucional', 'diplomatas', 'eleicoes']
 ---
 
 # The semiconductor crisis could have cost Brazil its democracy. The Brazilian Report tells the story of how former diplomats from Brazil and the U.S. championed an effort to unclog semiconductor supplies to electronic voting machines — without which the 2022 election would have been in jeopardy

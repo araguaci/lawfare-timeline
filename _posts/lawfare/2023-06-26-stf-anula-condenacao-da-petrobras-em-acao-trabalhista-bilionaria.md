@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id139
 description: 2023-06-26-metropoles-Condenação-Petrobras
-tags: ['condenacao', 'petrobras']
+tags: ['lawfare', 'condenacao', 'petrobras']
 ---
 
 # STF anula condenação da Petrobras em ação trabalhista bilionária.

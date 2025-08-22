@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id083
 description: 2021-02-23-r7-Governo Federal-Rosa Weber
-tags: ['governo-federal', 'rosa-weber', 'prazo']
+tags: ['lawfare', 'governo-federal', 'rosa-weber', 'prazo']
 ---
 
 # Em 23 de fevereiro de 2021, a ministra Rosa Weber deu o prazo de 5 dias para o Governo Federal explicar os novos decretos sobre armas.

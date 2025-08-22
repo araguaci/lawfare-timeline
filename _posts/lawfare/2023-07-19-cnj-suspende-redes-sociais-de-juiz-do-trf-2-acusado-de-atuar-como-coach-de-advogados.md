@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id158
 description: 2023-07-19-cartacapital-CNJ-Censura
-tags: ['cnj', 'censura']
+tags: ['lawfare', 'cnj', 'censura']
 ---
 
 # CNJ suspende redes sociais de juiz do TRF-2 acusado de atuar como ‘coach’ de advogados... Leia mais em https://www.cartacapital.com.br/justica/cnj-suspende-redes-sociais-de-juiz-do-trf-2-acusado-de-atuar-como-coach-de-advogados/. O conteúdo de CartaCapital está protegido pela legislação brasileira sobre direito autoral. Essa defesa é necessária para manter o jornalismo corajoso e transparente de CartaCapital vivo e acessível a todos.

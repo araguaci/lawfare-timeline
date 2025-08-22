@@ -5,7 +5,7 @@ title: Fraude contábil das Lojas Americanas
 categories: bancos
 description: > 
   Manipulação de balanços omitindo dívidas e superestimando ativos; uso indevido de risco sacado.
-tags: ['financeiro', 'nacional']
+tags: ['corrupcao-financeira', 'financeiro', 'nacional']
 ---
 
 # Fraude contábil das Lojas Americanas

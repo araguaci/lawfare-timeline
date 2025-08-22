@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "PF informa a Moraes que não conseguiu extrair dados do celular de Filipe Martins após TIM entregar geolocalização provando que ele estava no Brasil, não nos EUA, durante o período alegado."
 faicon: fa-mobile
-tags: ['devido-processo-legal', 'direito-a-privacidade', 'policia-federal', 'tim', 'gravidade-media', 'filipe-martins', 'dados', 'geolocalizacao', 'celular']
+tags: ['lawfare', 'devido-processo-legal', 'direito-a-privacidade', 'policia-federal', 'tim', 'gravidade-media', 'filipe-martins', 'dados', 'geolocalizacao', 'celular']
 image:
   path: "/assets/solid/mobile.svg"
 ---

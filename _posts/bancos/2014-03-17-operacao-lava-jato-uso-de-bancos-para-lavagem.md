@@ -5,7 +5,7 @@ title: Operação Lava Jato - Uso de bancos para lavagem
 categories: bancos
 description: > 
   Bancos usados para lavagem de dinheiro em propinas da Petrobras, envolvendo contas no exterior.
-tags: ['financeiro', 'nacional']
+tags: ['corrupcao-financeira', 'financeiro', 'nacional']
 ---
 
 # Operação Lava Jato - Uso de bancos para lavagem

@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id185
 description: 2018-02-05-veja-Eleições-Raquel Dodge
-tags: ['eleicoes', 'raquel-dodge', 'voto-impresso']
+tags: ['lawfare', 'eleicoes', 'raquel-dodge', 'voto-impresso']
 ---
 
 # Raquel Dodge entra com ação no STF contra voto impresso em 2018 | VEJA

@@ -16,7 +16,7 @@ image:
 - **Data**: 2020/06/15
 - **Ano**: 2020
 - **Descrição Completa**: Prisão temporária de Sara Winter e ativistas bolsonaristas.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Devido Processo Legal
   - Proporcionalidade

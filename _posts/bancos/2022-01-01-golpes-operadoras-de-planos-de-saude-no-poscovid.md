@@ -5,7 +5,7 @@ title: golpes operadoras de planos de saúde no pós‑Covid
 categories: bancos
 description: > 
   Fraudes massivas via reembolsos duplicados, falsas cobranças, laudos fraudulentos e prestadores fantasmas.
-tags: ['financeiro', 'nacional']
+tags: ['corrupcao-financeira', 'financeiro', 'nacional']
 ---
 
 # golpes operadoras de planos de saúde no pós‑Covid

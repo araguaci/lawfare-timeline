@@ -3,7 +3,7 @@ layout: post
 title:  Grandes shows e eventos culturais com viés cívico e eleitoral
 categories: tse
 description: Artistas de renome nacional (especialmente do cenário pop e hip-hop) promoveram shows e eventos com mensagens de valorização do voto, incentivo à participação cívica e defesa da democracia. Embora os eventos fossem oficialmente suprapartidários, a maior associação se deu a pautas críticas ao conservadorismo.
-tags: ['tse', 'nacional', 'usaid']
+tags: ['tse', 'tse', 'nacional', 'usaid']
 ---
 
 # Grandes shows e eventos culturais com viés cívico e eleitoral

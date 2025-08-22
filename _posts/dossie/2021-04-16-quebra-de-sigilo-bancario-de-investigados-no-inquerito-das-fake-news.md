@@ -16,7 +16,7 @@ image:
 - **Data**: 2021/04/16
 - **Ano**: 2021
 - **Descrição Completa**: Quebra de sigilo bancário de investigados no inquérito das fake news.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Direito à Privacidade
   - Devido Processo Legal

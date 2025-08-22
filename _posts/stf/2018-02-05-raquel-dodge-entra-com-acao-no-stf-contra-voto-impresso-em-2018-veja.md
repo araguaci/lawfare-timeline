@@ -3,7 +3,7 @@ layout: post
 title:  Raquel Dodge entra com ação no STF contra voto impresso em 2018 | VEJA
 categories: stf
 article_id: id185
-tags: ['eleicoes', 'raquel-dodge', 'voto-impresso']
+tags: ['stf', 'eleicoes', 'raquel-dodge', 'voto-impresso']
 ---
 
 # Raquel Dodge entra com ação no STF contra voto impresso em 2018 | VEJA

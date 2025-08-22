@@ -4,7 +4,7 @@ description: "Linha do tempo dos atritos STF-EUA: sanções a Moraes, debate pú
 date: 2025-08-20T11:51:50.969Z
 image: 
   path: "/assets/solid/gavel.svg"
-tags: [justica, bancos, soberania, sancoes]
+tags: ['lawfare', justica, bancos, soberania, sancoes]
 categories: [lawfare]
 ---
 

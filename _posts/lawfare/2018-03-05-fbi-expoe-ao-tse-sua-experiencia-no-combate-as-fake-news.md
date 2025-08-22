@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id186
 description: 2018-03-05-tse-Eleições-Fake News
-tags: ['eleicoes', 'fake-news', 'marco-aurelio']
+tags: ['lawfare', 'eleicoes', 'fake-news', 'marco-aurelio']
 ---
 
 # FBI expõe ao TSE sua experiência no combate às fake news

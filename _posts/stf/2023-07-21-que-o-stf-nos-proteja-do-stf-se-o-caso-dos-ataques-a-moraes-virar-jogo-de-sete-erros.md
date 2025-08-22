@@ -3,7 +3,7 @@ layout: post
 title:  Que o STF nos proteja do STF se o caso dos ataques a Moraes virar jogo de sete erros.
 categories: stf
 article_id: id174
-tags: ['alexandre-de-moraes', 'extrapola', 'abuso-de-autoridade']
+tags: ['stf', 'alexandre-de-moraes', 'extrapola', 'abuso-de-autoridade']
 ---
 
 # Que o STF nos proteja do STF se o caso dos ataques a Moraes virar jogo de sete erros.

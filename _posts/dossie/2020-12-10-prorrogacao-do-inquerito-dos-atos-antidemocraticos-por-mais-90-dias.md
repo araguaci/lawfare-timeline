@@ -16,7 +16,7 @@ image:
 - **Data**: 2020/12/10
 - **Ano**: 2020
 - **Descrição Completa**: Prorrogação do inquérito dos atos antidemocráticos por mais 90 dias.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Duração Razoável do Processo
   - Devido Processo Legal

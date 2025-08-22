@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Alexandre de Moraes revoga a prisão preventiva de Filipe Martins após 6 meses, mas impõe tornozeleira eletrônica, recolhimento noturno, proibição de redes sociais, contato com investigados, viagens e porte de armas, e entrega de passaporte."
 faicon: fa-ankle
-tags: ['liberdade-de-locomocao', 'proporcionalidade', 'duracao-razoavel-do-processo', 'alexandre-de-moraes', 'stf', 'gravidade-media', 'filipe-martins', 'tornozeleira', 'medidas-cautelares', 'liberacao']
+tags: ['lawfare', 'liberdade-de-locomocao', 'proporcionalidade', 'duracao-razoavel-do-processo', 'alexandre-de-moraes', 'stf', 'gravidade-media', 'filipe-martins', 'tornozeleira', 'medidas-cautelares', 'liberacao']
 image:
   path: "/assets/solid/ankle.svg"
 ---

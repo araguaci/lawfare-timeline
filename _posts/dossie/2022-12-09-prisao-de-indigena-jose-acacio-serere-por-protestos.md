@@ -16,7 +16,7 @@ image:
 - **Data**: 2022/12/09
 - **Ano**: 2022
 - **Descrição Completa**: Prisão de indígena José Acácio Serere por participação em protestos.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Liberdade de Expressão
   - Devido Processo Legal

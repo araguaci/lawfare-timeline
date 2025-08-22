@@ -5,7 +5,7 @@ title: Caso Banco Master
 categories: bancos
 description: > 
   Suspeitas de lavagem de dinheiro via Banco Master em esquemas de corrupção.
-tags: ['financeiro', 'nacional']
+tags: ['corrupcao-financeira', 'financeiro', 'nacional']
 ---
 
 # Caso Banco Master

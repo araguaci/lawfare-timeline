@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "STF decide que redes sociais devem remover conteúdos ilegais imediatamente após notificação, responsabilizando plataformas por postagens."
 faicon: fa-ban
-tags: ['liberdade-de-expressao', 'nao-censura-previa', 'proporcionalidade', 'stf', 'plataformas-de-redes-sociais', 'gravidade-alta', 'censura', 'redes-sociais', 'responsabilizacao']
+tags: ['lawfare', 'liberdade-de-expressao', 'nao-censura-previa', 'proporcionalidade', 'stf', 'plataformas-de-redes-sociais', 'gravidade-alta', 'censura', 'redes-sociais', 'responsabilizacao']
 image:
   path: "/assets/solid/ban.svg"
 ---

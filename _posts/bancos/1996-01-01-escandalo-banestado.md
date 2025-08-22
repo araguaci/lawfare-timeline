@@ -5,7 +5,7 @@ title: Escândalo Banestado
 categories: bancos
 description: > 
   Desvios de R$ 42 bilhões via remessas ilegais para contas CC5 no exterior, envolvendo doleiros e corrupção no Banco do Estado do Paraná.
-tags: ['financeiro', 'parana']
+tags: ['corrupcao-financeira', 'financeiro', 'parana']
 ---
 
 # Escândalo Banestado

@@ -3,7 +3,7 @@ layout: post
 title:  “Enfia essa pergunta na bunda”, diz Gilmar Mendes a repórter. O repórter questionou quem foi o responsável por custear as despesas de passagem aérea do ministro para Portugal
 categories: stf
 article_id: id183
-tags: ['extrapola', 'gilmar-mendes', 'eleicoes']
+tags: ['stf', 'extrapola', 'gilmar-mendes', 'eleicoes']
 ---
 
 # “Enfia essa pergunta na bunda”, diz Gilmar Mendes a repórter. O repórter questionou quem foi o responsável por custear as despesas de passagem aérea do ministro para Portugal

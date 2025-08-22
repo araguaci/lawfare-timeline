@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id142
 description: 2023-06-28-metropoles-Toffoli-Dallagnol
-tags: ['toffoli', 'dallagnol']
+tags: ['lawfare', 'toffoli', 'dallagnol']
 ---
 
 # STF: Toffoli nega novo recurso de Dallagnol e mantém cassação pelo TSE.

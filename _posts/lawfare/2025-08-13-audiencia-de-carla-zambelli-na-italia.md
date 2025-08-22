@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Carla Zambelli passa mal durante audiência na Itália, permanece presa e é levada ao hospital. Ela alega perseguição política e deseja novo julgamento."
 faicon: fa-handcuffs
-tags: ['direito-a-saude', 'presuncao-de-inocencia', 'liberdade-de-locomocao', 'carla-zambelli', 'justica-italiana', 'gravidade-alta', 'prisao-na-italia', 'perseguicao-politica', 'zambelli', 'exilio']
+tags: ['lawfare', 'direito-a-saude', 'presuncao-de-inocencia', 'liberdade-de-locomocao', 'carla-zambelli', 'justica-italiana', 'gravidade-alta', 'prisao-na-italia', 'perseguicao-politica', 'zambelli', 'exilio']
 image:
   path: "/assets/solid/handcuffs.svg"
 ---

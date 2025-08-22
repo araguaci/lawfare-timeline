@@ -3,7 +3,7 @@ layout: post
 title:  Shows e festivais cívicos pró-democracia
 categories: tse
 description: Durante o segundo semestre de 2022, grandes artistas e coletivos culturais promoveram shows gratuitos e festivais com mensagens pelo voto consciente, combate à desinformação e defesa da democracia. Os eventos incentivaram o engajamento jovem, foram transmitidos online e promovidos por ONGs e movimentos que receberam recursos internacionais. Apesar do viés suprapartidário, as mensagens eram predominantemente críticas aos candidatos conservadores.
-tags: ['tse', 'sao-paulo', 'rio-de-janeiro', 'recife', 'grandes-capitais', 'usaid']
+tags: ['tse', 'tse', 'sao-paulo', 'rio-de-janeiro', 'recife', 'grandes-capitais', 'usaid']
 ---
 
 # Shows e festivais cívicos pró-democracia

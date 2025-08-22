@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id140
 description: 2023-06-10-comprerural-MST-Invasão
-tags: ['mst', 'invasao']
+tags: ['lawfare', 'mst', 'invasao']
 ---
 
 # Sem-terra invadem fazenda produtiva com apoio do PT.

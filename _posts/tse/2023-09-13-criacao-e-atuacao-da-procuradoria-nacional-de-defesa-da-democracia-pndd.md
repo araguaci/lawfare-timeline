@@ -3,7 +3,7 @@ layout: post
 title:  Criação e atuação da Procuradoria Nacional de Defesa da Democracia (PNDD)
 categories: tse
 description: No início do governo Lula, a PNDD foi criada vinculada à Advocacia-Geral da União (AGU) para atuar no combate à desinformação sobre políticas públicas. Segundo críticos, o órgão foi utilizado para perseguir juridicamente opositores, jornalistas e figuras públicas contrárias ao governo, baseando-se em denúncias subjetivas de fake news. Casos de atuação mais visível ocorreram após repercussão de notícias sobre a calamidade no Sul do país.
-tags: ['tse', 'brasilia', 'redes-sociais', 'plataformas', 'usaid']
+tags: ['tse', 'tse', 'brasilia', 'redes-sociais', 'plataformas', 'usaid']
 ---
 
 # Criação e atuação da Procuradoria Nacional de Defesa da Democracia (PNDD)

@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id032
 description: 2020-04-29-conjur-Governo Federal-Alexandre Moraes
-tags: ['governo-federal', 'alexandre-de-moraes', 'nomeacao']
+tags: ['lawfare', 'governo-federal', 'alexandre-de-moraes', 'nomeacao']
 ---
 
 # Também em 29 de abril de 2020, o ministro Alexandre de Moraes suspendeu a nomeação de Ramagem para a Polícia Federal.

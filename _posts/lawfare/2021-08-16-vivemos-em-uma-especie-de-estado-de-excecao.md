@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id163
 description: 2021-08-16-jovempan-Censura-TSE
-tags: ['censura', 'tse', 'eleicoes']
+tags: ['lawfare', 'censura', 'tse', 'eleicoes']
 ---
 
 # ‘Vivemos em uma espécie de Estado de exceção’, critica Van Hattem sobre STF e TSE.

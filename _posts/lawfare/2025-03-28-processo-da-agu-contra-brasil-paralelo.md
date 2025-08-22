@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "AGU processa portal Brasil Paralelo por desinformação sobre caso Maria da Penha, cobrando indenização."
 faicon: fa-gavel
-tags: ['direito-ao-acesso-a-informacao', 'moralidade', 'agu', 'brasil-paralelo', 'gravidade-media', 'processo', 'desinformacao', 'maria-da-penha']
+tags: ['lawfare', 'direito-ao-acesso-a-informacao', 'moralidade', 'agu', 'brasil-paralelo', 'gravidade-media', 'processo', 'desinformacao', 'maria-da-penha']
 image:
   path: "/assets/solid/gavel.svg"
 ---

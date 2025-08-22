@@ -3,7 +3,7 @@ layout: post
 title:  A matéria da revista fórum afirma que o Ministro Barroso montou o seu próprio ministério das relações exteriores para conseguir semicondutores em 2021.
 categories: stf
 article_id: id181
-tags: ['extrapola', 'inconstitucional', 'barroso', 'eleicoes']
+tags: ['stf', 'extrapola', 'inconstitucional', 'barroso', 'eleicoes']
 ---
 
 # A matéria da revista fórum afirma que o Ministro Barroso montou o seu próprio ministério das relações exteriores para conseguir semicondutores em 2021.

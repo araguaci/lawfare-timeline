@@ -16,7 +16,7 @@ image:
 - **Data**: 2022/04/20
 - **Ano**: 2022
 - **Descrição Completa**: Condenação de Daniel Silveira a 8 anos e 9 meses por crimes contra a segurança nacional.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Prerrogativas Parlamentares
   - Liberdade de Expressão

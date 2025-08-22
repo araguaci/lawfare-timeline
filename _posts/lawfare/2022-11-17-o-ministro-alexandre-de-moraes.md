@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id166
 description: 2022-11-17-valor-Censura-Alexandre Moraes
-tags: ['censura', 'alexandre-de-moraes', 'eleicoes']
+tags: ['lawfare', 'censura', 'alexandre-de-moraes', 'eleicoes']
 ---
 
 # O ministro Alexandre de Moraes, do Supremo Tribunal Federal (STF), determinou o bloqueio de contas de 43 pessoas e empresas que podem ter relação com a organização de atos antidemocráticos que se espalharam pelo país após a derrota do presidente Jair Bolsonaro (PL) nas eleições.

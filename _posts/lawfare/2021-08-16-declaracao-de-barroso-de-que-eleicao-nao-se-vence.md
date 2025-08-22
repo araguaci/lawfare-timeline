@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id162
 description: 2021-08-16-jovempan-Barroso-Eleições
-tags: ['barroso', 'eleicoes', 'tse']
+tags: ['lawfare', 'barroso', 'eleicoes', 'tse']
 ---
 
 # Declaração de Barroso de que ‘eleição não se vence, se toma’ acirra guerra com Bolsonaro.

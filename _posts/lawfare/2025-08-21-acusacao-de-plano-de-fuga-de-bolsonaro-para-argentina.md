@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "A polícia brasileira acusa o ex-presidente Jair Bolsonaro de planejar fugir para a Argentina e buscar asilo político, alegando perseguição política. Foi encontrada uma carta de 33 páginas endereçada ao presidente Milei solicitando asilo."
 faicon: fa-plane-departure
-tags: ['liberdade-de-locomocao', 'presuncao-de-inocencia', 'devido-processo-legal', 'jair-bolsonaro', 'eduardo-bolsonaro', 'policia-federal', 'gravidade-alta', 'fuga', 'asilo-politico', 'perseguicao', 'bolsonaro']
+tags: ['lawfare', 'liberdade-de-locomocao', 'presuncao-de-inocencia', 'devido-processo-legal', 'jair-bolsonaro', 'eduardo-bolsonaro', 'policia-federal', 'gravidade-alta', 'fuga', 'asilo-politico', 'perseguicao', 'bolsonaro']
 image:
   path: "/assets/solid/plane-departure.svg"
 ---

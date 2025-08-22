@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id169
 description: 2022-06-18-causaoperaria-Censura-Alexandre Moraes
-tags: ['censura', 'alexandre-de-moraes', 'eleicoes']
+tags: ['lawfare', 'censura', 'alexandre-de-moraes', 'eleicoes']
 ---
 
 # STF fora do controle popular é ditadura! A esquerda de conjunto precisa se levantar em defesa de uma mudança profunda no judiciário e em todo o regime político.

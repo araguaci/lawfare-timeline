@@ -16,7 +16,7 @@ image:
 - **Data**: 2021/09/14
 - **Ano**: 2021
 - **Descrição Completa**: Prisão de Oswaldo Eustáquio por atos antidemocráticos.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Liberdade de Expressão
   - Devido Processo Legal

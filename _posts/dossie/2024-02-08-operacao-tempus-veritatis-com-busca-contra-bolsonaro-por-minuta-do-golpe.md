@@ -16,7 +16,7 @@ image:
 - **Data**: 2024/02/08
 - **Ano**: 2024
 - **Descrição Completa**: Operação Tempus Veritatis com buscas contra Bolsonaro por minuta de golpe, incluindo retenção de passaporte.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Inviolabilidade do Domicílio
   - Devido Processo Legal

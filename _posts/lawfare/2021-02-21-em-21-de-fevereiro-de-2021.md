@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id082
 description: 2021-02-21-correiobraziliense-Governo Federal-Rosa Weber
-tags: ['governo-federal', 'rosa-weber', 'cv19']
+tags: ['lawfare', 'governo-federal', 'rosa-weber', 'cv19']
 ---
 
 # Em 21 de fevereiro de 2021, a ministra Rosa Weber encaminhou uma notícia-crime para a PGR acusando Bolsonaro por indicar tratamento precoce com cloroquina.

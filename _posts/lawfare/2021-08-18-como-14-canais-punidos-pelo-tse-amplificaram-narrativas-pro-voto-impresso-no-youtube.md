@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id160
 description: 2021-08-18-aosfatos-Censura-Eleições
-tags: ['censura', 'eleicoes', 'tse']
+tags: ['lawfare', 'censura', 'eleicoes', 'tse']
 ---
 
 # Como 14 canais punidos pelo TSE amplificaram narrativas pró-voto impresso no YouTube.

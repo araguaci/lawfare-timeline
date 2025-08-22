@@ -16,7 +16,7 @@ image:
 - **Data**: 2021/09/20
 - **Ano**: 2021
 - **Descrição Completa**: Busca contra cantor Sérgio Reis por ameaças a instituições.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Liberdade de Expressão
   - Inviolabilidade do Domicílio

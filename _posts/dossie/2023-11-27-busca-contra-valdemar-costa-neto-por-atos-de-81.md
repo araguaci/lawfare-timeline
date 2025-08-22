@@ -16,7 +16,7 @@ image:
 - **Data**: 2023/11/27
 - **Ano**: 2023
 - **Descrição Completa**: Busca contra Valdemar Costa Neto por participação nos atos de 8 de janeiro.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Inviolabilidade do Domicílio
   - Devido Processo Legal

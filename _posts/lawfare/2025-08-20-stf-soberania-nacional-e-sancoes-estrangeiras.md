@@ -4,7 +4,7 @@ description: "Resumo das decisões do STF sobre ordens estrangeiras: cumprimento
 date: 2025-08-20T11:47:48.407Z
 image:
   path: /assets/img/stfxsancoes.png
-tags: [justica, bancos, soberania, sancoes]
+tags: ['lawfare', justica, bancos, soberania, sancoes]
 categories: [lawfare]
 mermaid: true
 ---

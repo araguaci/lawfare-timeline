@@ -3,7 +3,7 @@ layout: post
 title:  Relatórios detalham repasses da USAID a ONGs
 categories: tse
 description: Reportagens revelam que ao menos duas dezenas de ONGs brasileiras receberam mais de R$ 267 milhões da USAID entre 2022-2024, com parte significativa destinada a iniciativas voltadas à comunicação, ativismo, minorias e políticas ambientais em contexto eleitoral.
-tags: ['tse', 'nacional',  'usaid']
+tags: ['tse', 'tse', 'nacional',  'usaid']
 ---
 
 # Relatórios detalham repasses da USAID a ONGs

@@ -3,7 +3,7 @@ layout: post
 title:  Censura a livro sobre Moraes
 categories: dossie
 description: Ação em 2025/02/27 com violações, envolvidos, fontes e gravidade media
-tags: ['liberdade-de-expressao', 'nao-censura-previa', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'autor-do-livro', 'gravidade-media']
+tags: ['liberdade-de-expressao', 'censura', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'autor-do-livro', 'gravidade-media']
 gravidade: media
 faicon: fas fa-exclamation-triangle
 image:
@@ -16,7 +16,7 @@ image:
 - **Data**: 2025/02/27
 - **Ano**: 2025
 - **Descrição Completa**: Censura a publicação de livro crítico sobre Alexandre de Moraes, proibindo distribuição.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Liberdade de Expressão
   - Não Censura Prévia

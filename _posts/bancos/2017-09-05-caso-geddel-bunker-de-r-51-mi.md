@@ -5,7 +5,7 @@ title: Caso Geddel - Bunker de R$ 51 mi
 categories: bancos
 description: > 
   Dinheiro encontrado em apartamento ligado a Geddel, proveniente de corrupção via Caixa Econômica.
-tags: ['financeiro', 'bahia']
+tags: ['corrupcao-financeira', 'financeiro', 'bahia']
 ---
 
 # Caso Geddel - Bunker de R$ 51 mi

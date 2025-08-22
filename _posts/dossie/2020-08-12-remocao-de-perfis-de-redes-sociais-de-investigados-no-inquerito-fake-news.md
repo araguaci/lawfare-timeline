@@ -3,7 +3,7 @@ layout: post
 title:  Remoção de perfis de redes sociais de investigados no inquérito fake news
 categories: dossie
 description: Ação em 2020/08/12 com violações, envolvidos, fontes e gravidade media
-tags: ['liberdade-de-expressao', 'devido-processo-legal', 'proporcionalidade', 'nao-censura-previa', 'alexandre-de-moraes', 'investigados', 'gravidade-media']
+tags: ['liberdade-de-expressao', 'devido-processo-legal', 'proporcionalidade', 'censura', 'alexandre-de-moraes', 'investigados', 'gravidade-media']
 gravidade: media
 faicon: fas fa-exclamation-triangle
 image:
@@ -16,7 +16,7 @@ image:
 - **Data**: 2020/08/12
 - **Ano**: 2020
 - **Descrição Completa**: Remoção de perfis de redes sociais de investigados no inquérito das fake news.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Liberdade de Expressão
   - Devido Processo Legal

@@ -96,8 +96,7 @@ O IDP foi fundado em 1998 por Gilmar Mendes, atual ministro do STF e professor d
 <br/>    Logo, entre 2015 e 2017, houve uma relação financeira clara entre o instituto ligado a Gilmar Mendes e o grupo J\&F, coordenada juridicamente por advogados da própria empresa, com valores relevantes de patrocínio que levantaram questões públicas após as delações premiadas da JBS se tornarem públicas[^1][^2][^3][^5][^7][^9].
 <hr>
     <div style="text-align: center">✧</div>
-
-
+<hr>
 </details>
 
 <details>
@@ -113,8 +112,7 @@ O IDP foi fundado em 1998 por Gilmar Mendes, atual ministro do STF e professor d
 <br/>    Em resumo, em 2017, Gilmar Mendes esteve envolvido na organização de eventos patrocinados pela Itaipu Binacional, que concedeu recursos substanciais para esses eventos, ressaltando um relacionamento estreito entre a estatal e instituições ligadas ao ministro, além da nomeação controversa da ex-mulher do ministro para o conselho da própria Itaipu[^1][^2][^3][^4][^5][^6][^7].
 <hr>
     <div style="text-align: center">✧</div>
-
-    
+<hr>
 </details>
 
 <details>
@@ -130,8 +128,7 @@ O IDP foi fundado em 1998 por Gilmar Mendes, atual ministro do STF e professor d
 <br/>    Em resumo, o período foi marcado por uma intensa conexão institucional, financeira e pessoal entre Gilmar Mendes, FGV e Fecomércio-RJ, que financiavam e organizavam diversos seminários jurídicos, levantando questionamentos sobre eventuais conflitos de interesse e a origem dos recursos envolvidos nos patrocínios desses eventos[^1][^2][^3].
 <hr>
     <div style="text-align: center">✧</div>
-
-
+<hr>
 </details>
 
 <details>
@@ -149,8 +146,7 @@ O IDP foi fundado em 1998 por Gilmar Mendes, atual ministro do STF e professor d
 <br/>    Em resumo, a parceria entre CBF e IDP rendeu ao instituto a quase totalidade da receita anual da academia de cursos da confederação, teve participação direta de Ednaldo Rodrigues, e resultou em questionamentos éticos e jurídicos em função da concomitante atuação de Gilmar Mendes em decisões relativas à presidência da CBF enquanto seu instituto lucrava com a mesma entidade.
 <hr>
     <div style="text-align: center">✧</div>
-
-
+<hr>
 </details>
 
 <details>
@@ -177,8 +173,7 @@ O IDP foi fundado em 1998 por Gilmar Mendes, atual ministro do STF e professor d
 <br/>    Esses eventos demonstram o papel central de Gilmar Mendes na promoção do debate jurídico-político nacional, por meio da articulação de seminários, homenagens, fóruns internacionais e espaços de diálogo com políticos, magistrados e empresários de ampla influência no cenário brasileiro[^1][^2][^5][^4][^3][^6][^7][^10][^8][^9].
 <hr>
     <div style="text-align: center">✧</div>
-
-
+<hr>
 </details>
 
 ## 3. Declarações e Posicionamentos Públicos
@@ -194,8 +189,7 @@ O IDP foi fundado em 1998 por Gilmar Mendes, atual ministro do STF e professor d
 <br/>    Portanto, em 2015 Gilmar Mendes defendeu o financiamento privado nas votações do STF, alinhando seu posicionamento a argumentos sobre a necessidade de pluralidade de fontes de recursos e controle transparente, embora o STF tenha decidido pela proibição dessas doações para combater desequilíbrios e corrupção nas eleições brasileiras.
 <hr>
     <div style="text-align: center">✧</div>
-
-
+<hr>
 </details>
 
 <details>
@@ -209,8 +203,7 @@ O IDP foi fundado em 1998 por Gilmar Mendes, atual ministro do STF e professor d
 <br/>    Portanto, em 2017, Gilmar Mendes discutiu ética na administração pública sobretudo em eventos acadêmicos e públicos amplos, sem material específico detalhado sobre suas referências ou abordagens diretamente vinculadas ao IDP naquele ano.
 <hr>
     <div style="text-align: center">✧</div>
-
-
+<hr>
 </details>
 
 <details>
@@ -224,8 +217,7 @@ O IDP foi fundado em 1998 por Gilmar Mendes, atual ministro do STF e professor d
 <br/>    Portanto, no IDP, Gilmar Mendes aprofundou a compreensão da jurisdição constitucional, enfatizando o papel do STF como guardião da Carta Magna, mediador entre poderes e defensor dos direitos fundamentais, tudo isso no contexto do ensino jurídico voltado para os desafios atuais do Direito Constitucional no Brasil[^1][^2][^3][^7].
 <hr>
     <div style="text-align: center">✧</div>
-
-
+<hr>
 </details>
 
 <details>
@@ -239,8 +231,7 @@ O IDP foi fundado em 1998 por Gilmar Mendes, atual ministro do STF e professor d
 <br/>    No evento de 2024, Gilmar Mendes destacou que a democracia enfrenta desafios inéditos, especialmente com as transformações exponenciais causadas pela tecnologia, e que o direito deve buscar preservar a dignidade humana como pilar central no contexto desses avanços. O fórum em Lisboa tem se tornado um ponto fundamental para debater a democracia constitucional e seus desafios no mundo contemporâneo[^1][^4][^5][^6][^9][^10].
 <hr>
     <div style="text-align: center">✧</div>
-
-
+<hr>
 </details>
 
 <details>
@@ -256,7 +247,7 @@ O IDP foi fundado em 1998 por Gilmar Mendes, atual ministro do STF e professor d
 <br/>    Resumidamente, Gilmar Mendes tem sido ativo em manifestações públicas sobre desenvolvimento regional, especialmente no contexto das obras da Rumo em Mato Grosso, destacando os benefícios econômicos e ambientais do projeto, enquanto rejeita alegações de conflito de interesses em sua atuação judicial.
 <hr>
     <div style="text-align: center">✧</div>
-
+<hr>
 </details>
 
 ## 4. Conexões Financeiras e Patrimoniais
@@ -280,7 +271,7 @@ O IDP foi fundado em 1998 por Gilmar Mendes, atual ministro do STF e professor d
 <br/>    Esta é a informação consolidada conforme reportagens da Folha de S.Paulo, notícias do Instituto e cobertura da mídia em 2017.
 <hr>
     <div style="text-align: center">✧</div>
-
+<hr>
 </details>
 
 <details>
@@ -321,7 +312,7 @@ O IDP foi fundado em 1998 por Gilmar Mendes, atual ministro do STF e professor d
 <br/>    - Para a CBF, essa parceria visa melhorar a capacitação técnica e administrativa dos profissionais ligados ao futebol, contando com a estrutura do IDP para isso.
 <hr>
     <div style="text-align: center">✧</div>
-    
+<hr>
 </details>
 
 <details>
@@ -338,8 +329,7 @@ O IDP foi fundado em 1998 por Gilmar Mendes, atual ministro do STF e professor d
 <br/>    Assim, as contribuições e interações mais evidentes e documentadas foram entre Gilmar Mendes e a CNA em reuniões setoriais, além da relação financeira polêmica ligada ao Bradesco e ao IDP, sua faculdade. Não há informações públicas claras sobre envolvimento de CSN e Google em contribuições para congressos ou grupos de estudo ligadas a ele neste intervalo.
 <hr>
     <div style="text-align: center">✧</div>
-
-
+<hr>
 </details>
 
 <details>
@@ -374,7 +364,7 @@ O IDP foi fundado em 1998 por Gilmar Mendes, atual ministro do STF e professor d
 <br/>    Posso também ajudar a obter ou analisar cláusulas específicas se você indicar quais pontos quer detalhar.
 <hr>
     <div style="text-align: center">✧</div>
-
+<hr>
 </details>
 
 <details>
@@ -392,8 +382,7 @@ O IDP foi fundado em 1998 por Gilmar Mendes, atual ministro do STF e professor d
 <br/>    Portanto, há evidências claras de correlações temporais e relações quanto a patrocínios de empresas que têm processos no STF e eventos do IDP ligados a Gilmar Mendes, o que tem gerado debates públicos sobre ética e conflito de interesses no âmbito do Supremo Tribunal Federal.
 <hr>
     <div style="text-align: center">✧</div>
-
-
+<hr>
 </details>
 
 ## 5. Viagens e Visitas

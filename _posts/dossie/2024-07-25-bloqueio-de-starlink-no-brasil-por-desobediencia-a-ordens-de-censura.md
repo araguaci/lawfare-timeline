@@ -3,7 +3,7 @@ layout: post
 title:  Bloqueio de Starlink no Brasil por desobediência a ordens de censura
 categories: dossie
 description: Ação em 2024/07/25 com violações, envolvidos, fontes e gravidade media
-tags: ['liberdade-de-expressao', 'devido-processo-legal', 'proporcionalidade', 'nao-censura-previa', 'direito-ao-acesso-a-informacao', 'alexandre-de-moraes', 'starlink', 'gravidade-media']
+tags: ['liberdade-de-expressao', 'devido-processo-legal', 'proporcionalidade', 'censura', 'direito-ao-acesso-a-informacao', 'alexandre-de-moraes', 'starlink', 'gravidade-media']
 gravidade: media
 faicon: fas fa-exclamation-triangle
 image:
@@ -16,7 +16,7 @@ image:
 - **Data**: 2024/07/25
 - **Ano**: 2024
 - **Descrição Completa**: Bloqueio da Starlink no Brasil por não cumprir ordens de censura, afetando acesso à informação.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Liberdade de Expressão
   - Devido Processo Legal

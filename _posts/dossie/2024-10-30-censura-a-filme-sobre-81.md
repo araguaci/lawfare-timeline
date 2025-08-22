@@ -3,7 +3,7 @@ layout: post
 title:  Censura a filme sobre 8/1
 categories: dossie
 description: Ação em 2024/10/30 com violações, envolvidos, fontes e gravidade media
-tags: ['liberdade-artistica', 'liberdade-de-expressao', 'nao-censura-previa', 'devido-processo-legal', 'alexandre-de-moraes', 'produtores-do-filme', 'gravidade-media']
+tags: ['liberdade-artistica', 'liberdade-de-expressao', 'censura', 'devido-processo-legal', 'alexandre-de-moraes', 'produtores-do-filme', 'gravidade-media']
 gravidade: media
 faicon: fas fa-exclamation-triangle
 image:
@@ -16,7 +16,7 @@ image:
 - **Data**: 2024/10/30
 - **Ano**: 2024
 - **Descrição Completa**: Censura a filme sobre os eventos de 8 de janeiro, proibindo exibição.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Liberdade Artística
   - Liberdade de Expressão

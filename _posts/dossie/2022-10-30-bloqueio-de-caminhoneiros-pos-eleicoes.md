@@ -16,7 +16,7 @@ image:
 - **Data**: 2022/10/30
 - **Ano**: 2022
 - **Descrição Completa**: Bloqueio de estradas por caminhoneiros pós-eleições, com ordens judiciais para desbloqueio.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Liberdade de Associação
   - Devido Processo Legal

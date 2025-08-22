@@ -3,7 +3,7 @@ layout: post
 title:  STF anula condenação da Petrobras em ação trabalhista bilionária.
 categories: stf
 article_id: id139
-tags: ['condenacao', 'petrobras']
+tags: ['stf', 'condenacao', 'petrobras']
 ---
 
 # STF anula condenação da Petrobras em ação trabalhista bilionária.

@@ -16,7 +16,7 @@ image:
 - **Data**: 2025/02/06
 - **Ano**: 2025
 - **Descrição Completa**: Operações de busca contra militares acusados de trama golpista, violando domicílio sem proporcionalidade clara.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Inviolabilidade do Domicílio
   - Devido Processo Legal

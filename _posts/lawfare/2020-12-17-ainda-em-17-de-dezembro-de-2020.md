@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id072
 description: 2020-12-17-bbc-Governo Federal-Lewandowski
-tags: ['governo-federal', 'lewandowski', 'decidiu']
+tags: ['lawfare', 'governo-federal', 'lewandowski', 'decidiu']
 ---
 
 # Ainda em 17 de dezembro de 2020, o STF decidiu que União, estados e municípios poderiam obrigar a vacinação contra Covid-19.

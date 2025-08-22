@@ -3,7 +3,7 @@ layout: post
 title:  Ministro de Lula já supera 4 anos de Bolsonaro em gastos sem licitação.
 categories: stf
 article_id: id141
-tags: ['lula', 'gastos', 'licitacao']
+tags: ['stf', 'lula', 'gastos', 'licitacao']
 ---
 
 # Ministro de Lula já supera 4 anos de Bolsonaro em gastos sem licitação.

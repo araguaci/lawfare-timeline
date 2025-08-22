@@ -3,7 +3,7 @@ layout: post
 title:  Audiências de custódia simuladas e controle centralizado por Alexandre de Moraes
 categories: tse
 description: Audiências de custódia foram meramente formalidades para validar prisões decididas pela equipe de Moraes, violando prazos e removendo poderes de magistrados locais.
-tags: ['tse', 'brasil']
+tags: ['tse', 'tse', 'brasil']
 ---
 
 # Audiências de custódia simuladas e controle centralizado por Alexandre de Moraes

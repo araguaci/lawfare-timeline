@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id137
 description: 2019-04-11-crusoe-Odebrecht-Toffoli
-tags: ['odebrecht', 'toffoli', 'lava-jato']
+tags: ['lawfare', 'odebrecht', 'toffoli', 'lava-jato']
 ---
 
 # O amigo do amigo de meu pai.

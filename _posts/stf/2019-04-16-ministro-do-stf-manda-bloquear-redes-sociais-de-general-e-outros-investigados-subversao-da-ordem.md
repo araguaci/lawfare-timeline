@@ -4,7 +4,7 @@ title:  >
   Ministro do STF manda bloquear redes sociais de general e outros investigados: 'Subversão da ordem'. Determinação de Alexandre de Moraes leva em conta 'graves ofensas' ao Supremo.
 categories: stf
 article_id: id177
-tags: ['alexandre-de-moraes', 'extrapola', 'abuso-de-autoridade', 'eleicoes', 'bloqueio']
+tags: ['stf', 'alexandre-de-moraes', 'extrapola', 'abuso-de-autoridade', 'eleicoes', 'bloqueio']
 ---
 
 # Ministro do STF manda bloquear redes sociais de general e outros investigados: 'Subversão da ordem'. Determinação de Alexandre de Moraes leva em conta 'graves ofensas' ao Supremo.

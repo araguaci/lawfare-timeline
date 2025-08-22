@@ -5,7 +5,7 @@ title: Caso JBS - Empréstimos BNDES
 categories: bancos
 description: > 
   Propinas para empréstimos favorecidos do BNDES à JBS.
-tags: ['financeiro', 'nacional']
+tags: ['corrupcao-financeira', 'financeiro', 'nacional']
 ---
 
 # Caso JBS - Empréstimos BNDES

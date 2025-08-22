@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Polícia Federal acusa formalmente Jair Bolsonaro e 36 aliados, incluindo Filipe Martins, de conspiração para derrubar instituições democráticas, com planos de assassinato de Lula, Alckmin e Moraes. Martins é listado como assessor de política externa envolvido."
 faicon: fa-gavel
-tags: ['separacao-dos-poderes', 'sistema-acusatorio', 'legalidade', 'jair-bolsonaro', 'policia-federal', 'alexandre-de-moraes', 'gravidade-alta', 'filipe-martins', 'golpe', 'indiciamento', 'conspiracao']
+tags: ['lawfare', 'separacao-dos-poderes', 'sistema-acusatorio', 'legalidade', 'jair-bolsonaro', 'policia-federal', 'alexandre-de-moraes', 'gravidade-alta', 'filipe-martins', 'golpe', 'indiciamento', 'conspiracao']
 image:
   path: "/assets/solid/gavel.svg"
 ---

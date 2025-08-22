@@ -3,7 +3,7 @@ layout: post
 title:  Semanalmente, juízes do Supremo decidem sozinhos sobre aplicação da Constituição.
 categories: stf
 article_id: id180
-tags: ['extrapola', 'inconstitucional', 'constituicao']
+tags: ['stf', 'extrapola', 'inconstitucional', 'constituicao']
 ---
 
 # Semanalmente, juízes do Supremo decidem sozinhos sobre aplicação da Constituição.

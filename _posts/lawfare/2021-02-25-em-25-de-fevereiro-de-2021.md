@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id130
 description: 2021-02-25-agoraparana-Procuradores-Lava Jato
-tags: ['procuradores', 'lava-jato', 'complo']
+tags: ['lawfare', 'procuradores', 'lava-jato', 'complo']
 ---
 
 # Em 25 de fevereiro de 2021, Diálogos de procuradores da Lava Jato revelam complô contra família Bolsonaro.

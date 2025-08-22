@@ -16,7 +16,7 @@ image:
 - **Data**: 2020/04/21
 - **Ano**: 2020
 - **Descrição Completa**: Instauração do inquérito dos atos antidemocráticos após o Dia do Exército.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Liberdade de Expressão
   - Liberdade de Associação

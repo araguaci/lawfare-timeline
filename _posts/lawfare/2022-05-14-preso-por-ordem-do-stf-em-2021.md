@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id178
 description: 2022-05-14-gazetadopovo-Alexandre Moraes-Extrapola
-tags: ['alexandre-de-moraes', 'extrapola', 'abuso-de-autoridade']
+tags: ['lawfare', 'alexandre-de-moraes', 'extrapola', 'abuso-de-autoridade']
 ---
 
 # Preso por ordem do STF em 2021, jornalista ainda não sabe por qual crime é investigado. Jornalista Wellington Macedo ficou 42 dias preso no Complexo da Papuda até passar à prisão domiciliar.

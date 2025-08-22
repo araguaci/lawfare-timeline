@@ -3,7 +3,7 @@ layout: post
 title:  Aplicação de sanções financeiras pelo governo Trump a Alexandre de Moraes, em contexto de acusações de violações de direitos humanos relacionadas ao inquérito das fake news; reação inclui críticas de Malafaia e Figueiredo
 categories: dossie
 description: Ação em 2025/07/30 com violações, envolvidos, fontes e gravidade alta
-tags: ['separacao-de-poderes', 'devido-processo-legal', 'proporcionalidade', 'imparcialidade-judicial', 'direito-a-propriedade', 'alexandre-de-moraes', 'governo-trump', 'silas-malafaia', 'paulo-figueiredo', 'gravidade-alta']
+tags: ['separacao-de-poderes', 'devido-processo-legal', 'proporcionalidade', 'imparcialidade', 'direito-a-propriedade', 'alexandre-de-moraes', 'governo-trump', 'silas-malafaia', 'paulo-figueiredo', 'gravidade-alta']
 gravidade: alta
 faicon: fa-exclamation-triangle
 image:

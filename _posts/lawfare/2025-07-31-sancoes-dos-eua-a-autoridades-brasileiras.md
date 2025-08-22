@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "EUA impõem tarifas de 50% e sanções judiciais ao Brasil, citando perseguição política."
 faicon: fa-ban
-tags: ['separacao-dos-poderes', 'seguranca-juridica', 'governo-trump', 'governo-brasileiro', 'alexandre-de-moraes', 'gravidade-alta', 'sancoes-eua', 'perseguicao-politica']
+tags: ['lawfare', 'separacao-dos-poderes', 'seguranca-juridica', 'governo-trump', 'governo-brasileiro', 'alexandre-de-moraes', 'gravidade-alta', 'sancoes-eua', 'perseguicao-politica']
 image:
   path: "/assets/solid/ban.svg"
 ---

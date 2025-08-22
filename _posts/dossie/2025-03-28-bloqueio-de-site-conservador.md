@@ -3,7 +3,7 @@ layout: post
 title:  Bloqueio de site conservador
 categories: dossie
 description: Ação em 2025/03/28 com violações, envolvidos, fontes e gravidade media
-tags: ['liberdade-de-imprensa', 'liberdade-de-expressao', 'devido-processo-legal', 'nao-censura-previa', 'alexandre-de-moraes', 'administradores-do-site', 'gravidade-media']
+tags: ['liberdade-de-imprensa', 'liberdade-de-expressao', 'devido-processo-legal', 'censura', 'alexandre-de-moraes', 'administradores-do-site', 'gravidade-media']
 gravidade: media
 faicon: fas fa-exclamation-triangle
 image:
@@ -16,7 +16,7 @@ image:
 - **Data**: 2025/03/28
 - **Ano**: 2025
 - **Descrição Completa**: Bloqueio de site conservador por disseminação de conteúdo crítico, configurando censura prévia.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Liberdade de Imprensa
   - Liberdade de Expressão

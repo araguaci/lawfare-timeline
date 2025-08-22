@@ -16,7 +16,7 @@ image:
 - **Data**: 2022/12/16
 - **Ano**: 2022
 - **Descrição Completa**: Busca contra deputado Otoni de Paula por críticas.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Prerrogativas Parlamentares
   - Inviolabilidade do Domicílio

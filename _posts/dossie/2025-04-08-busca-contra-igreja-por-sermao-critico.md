@@ -16,7 +16,7 @@ image:
 - **Data**: 2025/04/08
 - **Ano**: 2025
 - **Descrição Completa**: Busca e apreensão em igreja por sermão crítico ao governo, violando liberdade religiosa e domicílio.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Liberdade Religiosa
   - Inviolabilidade do Domicílio

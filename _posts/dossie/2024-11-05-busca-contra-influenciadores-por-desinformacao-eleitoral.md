@@ -16,7 +16,7 @@ image:
 - **Data**: 2024/11/05
 - **Ano**: 2024
 - **Descrição Completa**: Buscas contra influenciadores acusados de disseminar desinformação eleitoral.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Liberdade de Expressão
   - Inviolabilidade do Domicílio

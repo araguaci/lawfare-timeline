@@ -3,7 +3,7 @@ layout: post
 title:  Diretor da CIA teria alertado governo Bolsonaro a não questionar eleições no Brasil
 categories: stf
 article_id: id187
-tags: ['eleicoes', 'cia', 'voto-impresso']
+tags: ['stf', 'eleicoes', 'cia', 'voto-impresso']
 ---
 
 # Diretor da CIA teria alertado governo Bolsonaro a não questionar eleições no Brasil

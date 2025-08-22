@@ -3,7 +3,7 @@ layout: post
 title:  Alexandre de Moraes abusou de seus poderes no TSE?
 categories: stf
 article_id: id200
-tags: ['abuso-de-autoridade', 'censura', 'desinformacao', 'eleicoes', 'poder-de-policia']
+tags: ['stf', 'abuso-de-autoridade', 'censura', 'desinformacao', 'eleicoes', 'poder-de-policia']
 ---
 
 # Alexandre de Moraes abusou de seus poderes no TSE?

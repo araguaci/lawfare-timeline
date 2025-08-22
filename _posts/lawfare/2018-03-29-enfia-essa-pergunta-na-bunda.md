@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id183
 description: 2018-03-29-metropoles-Extrapola-Gilmar Mendes
-tags: ['extrapola', 'gilmar-mendes', 'eleicoes']
+tags: ['lawfare', 'extrapola', 'gilmar-mendes', 'eleicoes']
 ---
 
 # “Enfia essa pergunta na bunda”, diz Gilmar Mendes a repórter. O repórter questionou quem foi o responsável por custear as despesas de passagem aérea do ministro para Portugal

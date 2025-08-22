@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "A Polícia Federal indicia Jair Bolsonaro e Eduardo Bolsonaro por obstrução de justiça, alegando uso de contas de esposas para ocultar transferências financeiras e evitar bloqueios judiciais."
 faicon: fa-gavel
-tags: ['presuncao-de-inocencia', 'devido-processo-legal', 'direito-a-privacidade', 'jair-bolsonaro', 'eduardo-bolsonaro', 'policia-federal', 'gravidade-alta', 'indiciamento', 'obstrucao-de-justica', 'transferencias-financeiras', 'bolsonaro']
+tags: ['lawfare', 'presuncao-de-inocencia', 'devido-processo-legal', 'direito-a-privacidade', 'jair-bolsonaro', 'eduardo-bolsonaro', 'policia-federal', 'gravidade-alta', 'indiciamento', 'obstrucao-de-justica', 'transferencias-financeiras', 'bolsonaro']
 image:
   path: "/assets/solid/gavel.svg"
 ---

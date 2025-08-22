@@ -16,7 +16,7 @@ image:
 - **Data**: 2025/03/12
 - **Ano**: 2025
 - **Descrição Completa**: Prisão de ativista por organização de protesto online contra o STF, limitando expressão.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Liberdade de Expressão
   - Devido Processo Legal

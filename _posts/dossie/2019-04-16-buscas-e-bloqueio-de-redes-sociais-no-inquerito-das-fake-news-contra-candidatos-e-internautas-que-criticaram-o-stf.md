@@ -16,7 +16,7 @@ image:
 - **Data**: 2019/04/16
 - **Ano**: 2019
 - **Descrição Completa**: Buscas e bloqueio de redes sociais contra candidatos e internautas críticos ao STF.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Liberdade de Expressão
   - Inviolabilidade do Domicílio

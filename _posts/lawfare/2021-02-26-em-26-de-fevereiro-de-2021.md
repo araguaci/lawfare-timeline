@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id085
 description: 2021-02-26-abcdoabc-Governo Federal-Alexandre Moraes
-tags: ['governo-federal', 'alexandre-de-moraes', 'vistas']
+tags: ['lawfare', 'governo-federal', 'alexandre-de-moraes', 'vistas']
 ---
 
 # Em 26 de fevereiro de 2021, o ministro Alexandre de Moraes pediu vistas em processo que suspende o zeramento da alíquota de importação de pistolas e revólveres.

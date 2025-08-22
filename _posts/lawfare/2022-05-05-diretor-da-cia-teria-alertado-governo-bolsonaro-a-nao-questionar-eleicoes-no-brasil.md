@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id187
 description: 2022-05-05-gazetadopovo-Eleições-CIA
-tags: ['eleicoes', 'cia', 'voto-impresso']
+tags: ['lawfare', 'eleicoes', 'cia', 'voto-impresso']
 ---
 
 # Diretor da CIA teria alertado governo Bolsonaro a não questionar eleições no Brasil

@@ -3,7 +3,7 @@ layout: post
 title:  Censura a Telegram por campanha contra PL das Fake News
 categories: dossie
 description: Ação em 2023/04/25 com violações, envolvidos, fontes e gravidade media
-tags: ['liberdade-de-expressao', 'devido-processo-legal', 'proporcionalidade', 'nao-censura-previa', 'alexandre-de-moraes', 'telegram', 'gravidade-media']
+tags: ['liberdade-de-expressao', 'devido-processo-legal', 'proporcionalidade', 'censura', 'alexandre-de-moraes', 'telegram', 'gravidade-media']
 gravidade: media
 faicon: fas fa-exclamation-triangle
 image:
@@ -16,7 +16,7 @@ image:
 - **Data**: 2023/04/25
 - **Ano**: 2023
 - **Descrição Completa**: Censura à Telegram por campanha contra PL das Fake News.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Liberdade de Expressão
   - Devido Processo Legal

@@ -3,7 +3,7 @@ layout: post
 title:  As principais controvérsias do ministro Alexandre de Moraes nos últimos anos
 categories: stf
 article_id: id202
-tags: ['abuso-de-autoridade', 'censura', 'eleicoes', 'milicias-digitais', 'estado-democratico-de-direito']
+tags: ['stf', 'abuso-de-autoridade', 'censura', 'eleicoes', 'milicias-digitais', 'estado-democratico-de-direito']
 ---
 
 # As principais controvérsias do ministro Alexandre de Moraes nos últimos anos

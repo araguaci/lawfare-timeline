@@ -16,7 +16,7 @@ image:
 - **Data**: 2024/06/06
 - **Ano**: 2024
 - **Descrição Completa**: Quebra de sigilo telemático de Carla Zambelli em investigação por invasão hacker.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Direito à Privacidade
   - Devido Processo Legal

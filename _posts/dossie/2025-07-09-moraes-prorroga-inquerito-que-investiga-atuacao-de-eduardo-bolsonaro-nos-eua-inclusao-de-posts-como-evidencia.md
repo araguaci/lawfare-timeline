@@ -16,7 +16,7 @@ image:
 - **Data**: 2025/07/09
 - **Ano**: 2025
 - **Descrição Completa**: Prorrogação do inquérito investigando ações de Eduardo Bolsonaro nos EUA, incluindo posts como evidência de articulações contra instituições brasileiras, questionando duração razoável do processo.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Duração Razoável do Processo
   - Devido Processo Legal

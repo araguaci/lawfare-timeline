@@ -16,7 +16,7 @@ image:
 - **Data**: 2022/08/10
 - **Ano**: 2022
 - **Descrição Completa**: Busca contra empresários bolsonaristas por mensagens contra o STF.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Liberdade de Expressão
   - Inviolabilidade do Domicílio

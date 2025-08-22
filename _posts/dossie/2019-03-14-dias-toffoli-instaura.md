@@ -14,7 +14,7 @@ faicon: fas fa-exclamation-triangle
 - **Data**: 2019/03/14
 - **Ano**: 2019
 - **Descrição Completa**: Instauração do inquérito das fake news por Toffoli, conduzido por Moraes.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Juiz Natural
   - Imparcialidade

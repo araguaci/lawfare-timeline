@@ -3,7 +3,7 @@ layout: post
 title:  Críticas de especialistas sobre ilegalidades e violações constitucionais
 categories: tse
 description: Juristas renomados criticaram operações de Moraes e TSE por abuso de poder, violação do devido processo, concentração indevida e uso político da justiça, destacando incompatibilidade com a Constituição.
-tags: ['tse', 'brasil-instituicoes-juridicas']
+tags: ['tse', 'tse', 'brasil-instituicoes-juridicas']
 ---
 
 # Críticas de especialistas sobre ilegalidades e violações constitucionais

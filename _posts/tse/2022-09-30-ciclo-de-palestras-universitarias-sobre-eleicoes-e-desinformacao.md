@@ -3,7 +3,7 @@ layout: post
 title:  Ciclo de palestras universitárias sobre eleições e desinformação
 categories: tse
 description: Universidades públicas receberam eventos e ciclos de palestras sobre democracia, desinformação e participação política, organizados em parceria com ONGs de fact-checking e coletivos acadêmicos. As atividades, com presença de influenciadores e autoridades eleitorais, tinham como objetivo formar multiplicadores na checagem de fatos, diálogo cívico e defesa do processo eleitoral.
-tags: ['tse', 'universidades', 'auditorios-de-centros-urbanos', 'usaid']
+tags: ['tse', 'tse', 'universidades', 'auditorios-de-centros-urbanos', 'usaid']
 ---
 
 # Ciclo de palestras universitárias sobre eleições e desinformação

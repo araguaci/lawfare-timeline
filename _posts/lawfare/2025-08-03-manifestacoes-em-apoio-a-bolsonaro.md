@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Manifestações no Brasil em apoio a Bolsonaro, alegando perseguição política e comparando com casos nos EUA."
 faicon: fa-fist-raised
-tags: ['liberdade-de-associacao', 'liberdade-de-expressao', 'apoiadores-de-bolsonaro', 'oposicao', 'gravidade-media', 'manifestacao', 'perseguicao-politica', 'bolsonaro']
+tags: ['lawfare', 'liberdade-de-associacao', 'liberdade-de-expressao', 'apoiadores-de-bolsonaro', 'oposicao', 'gravidade-media', 'manifestacao', 'perseguicao-politica', 'bolsonaro']
 image:
   path: "/assets/solid/fist-raised.svg"
 ---

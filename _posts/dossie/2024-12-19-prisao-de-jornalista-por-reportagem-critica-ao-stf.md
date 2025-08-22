@@ -16,7 +16,7 @@ image:
 - **Data**: 2024/12/19
 - **Ano**: 2024
 - **Descrição Completa**: Prisão de jornalista por publicação de reportagem crítica ao STF, afetando liberdade de imprensa.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Liberdade de Imprensa
   - Liberdade de Expressão

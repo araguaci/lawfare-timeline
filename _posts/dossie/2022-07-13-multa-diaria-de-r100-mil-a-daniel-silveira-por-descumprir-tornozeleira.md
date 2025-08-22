@@ -16,7 +16,7 @@ image:
 - **Data**: 2022/07/13
 - **Ano**: 2022
 - **Descrição Completa**: Multa diária de R$100 mil a Daniel Silveira por descumprimento de tornozeleira.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Prerrogativas Parlamentares
   - Devido Processo Legal

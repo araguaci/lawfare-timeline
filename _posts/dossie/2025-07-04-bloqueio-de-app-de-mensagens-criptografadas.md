@@ -16,7 +16,7 @@ image:
 - **Data**: 2025/07/04
 - **Ano**: 2025
 - **Descrição Completa**: Bloqueio de aplicativo de mensagens criptografadas por desobediência a ordens judiciais, afetando privacidade e expressão de usuários.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Direito à Privacidade
   - Liberdade de Expressão

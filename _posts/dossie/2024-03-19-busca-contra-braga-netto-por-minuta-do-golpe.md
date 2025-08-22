@@ -16,7 +16,7 @@ image:
 - **Data**: 2024/03/19
 - **Ano**: 2024
 - **Descrição Completa**: Busca contra Braga Netto por envolvimento em minuta de golpe.
-- **Gravidade**: alta <i class="fas fas fa-skull-crossbones fa-2x"></i>
+- **Gravidade**: alta <i class="fas fa-skull-crossbones fa-2x"></i>
 - **Violações**:
   - Inviolabilidade do Domicílio
   - Devido Processo Legal

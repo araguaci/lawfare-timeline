@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "O Wall Street Journal publica artigo destacando suspeitas de armação contra Filipe Martins com registros falsos de entrada nos EUA, usados para justificar sua detenção preventiva como risco de fuga. Isso agrava o cerco internacional a Alexandre de Moraes, com implicações nos EUA por possível conluio entre autoridades brasileiras e americanas."
 faicon: fa-balance-scale
-tags: ['devido-processo-legal', 'presuncao-de-inocencia', 'legalidade', 'alexandre-de-moraes', 'policia-federal', 'cbp-eua', 'gravidade-alta', 'filipe-martins', 'armacao', 'registros-falsos', 'eua']
+tags: ['lawfare', 'devido-processo-legal', 'presuncao-de-inocencia', 'legalidade', 'alexandre-de-moraes', 'policia-federal', 'cbp-eua', 'gravidade-alta', 'filipe-martins', 'armacao', 'registros-falsos', 'eua']
 image:
   path: "/assets/solid/balance-scale.svg"
 ---

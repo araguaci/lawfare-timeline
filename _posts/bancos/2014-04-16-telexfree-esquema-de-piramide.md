@@ -5,7 +5,7 @@ title: Telexfree – esquema de pirâmide
 categories: bancos
 description: > 
   Operação Ponzi bilionária sem autorização da CVM, milionárias captações via afiliados.
-tags: ['financeiro', 'ma', 'br-nacional']
+tags: ['corrupcao-financeira', 'financeiro', 'ma', 'br-nacional']
 ---
 
 # Telexfree – esquema de pirâmide

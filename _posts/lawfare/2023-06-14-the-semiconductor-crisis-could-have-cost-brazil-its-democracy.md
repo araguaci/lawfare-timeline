@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id184
 description: 2023-06-14-brazilian-Extrapola-Inconstitucional
-tags: ['extrapola', 'inconstitucional', 'diplomatas']
+tags: ['lawfare', 'extrapola', 'inconstitucional', 'diplomatas']
 ---
 
 # The semiconductor crisis could have cost Brazil its democracy. The Brazilian Report tells the story of how former diplomats from Brazil and the U.S. championed an effort to unclog semiconductor supplies to electronic voting machines — without which the 2022 election would have been in jeopardy

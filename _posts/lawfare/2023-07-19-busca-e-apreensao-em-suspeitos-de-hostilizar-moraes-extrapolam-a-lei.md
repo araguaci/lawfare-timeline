@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id173
 description: 2023-07-19-estadao-Alexandre Moraes-Rosa Weber
-tags: ['alexandre-de-moraes', 'rosa-weber', 'extrapola']
+tags: ['lawfare', 'alexandre-de-moraes', 'rosa-weber', 'extrapola']
 ---
 
 # Busca e apreensão em suspeitos de hostilizar Moraes ‘extrapolam’ a lei, dizem constitucionalistas.

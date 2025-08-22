@@ -16,7 +16,7 @@ image:
 - **Data**: 2021/04/09
 - **Ano**: 2021
 - **Descrição Completa**: Prorrogação do inquérito das fake news por mais 90 dias.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Duração Razoável do Processo
   - Devido Processo Legal

@@ -5,7 +5,7 @@ title: Banco Panamericano (Grupo Silvio Santos)
 categories: bancos
 description: > 
   Rombo contábil de cerca de R$ 4 bilhões devido a fraude em balanços e empréstimos irregulares.
-tags: ['financeiro', 'sp-nacional']
+tags: ['corrupcao-financeira', 'financeiro', 'sp-nacional']
 ---
 
 # Banco Panamericano (Grupo Silvio Santos)

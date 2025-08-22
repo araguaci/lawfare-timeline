@@ -3,7 +3,7 @@ layout: post
 title:  Deflagração da Operação Lupa com buscas contra desafetos no inquérito das fake news
 categories: dossie
 description: Ação em 2020/05/27 com violações, envolvidos, fontes e gravidade media
-tags: ['imparcialidade-judicial', 'devido-processo-legal', 'liberdade-de-expressao', 'separacao-de-poderes', 'principio-acusatorio', 'proibicao-de-juiz-de-excecao', 'alexandre-de-moraes', 'desafetos', 'gravidade-media']
+tags: ['imparcialidade', 'devido-processo-legal', 'liberdade-de-expressao', 'separacao-de-poderes', 'principio-acusatorio', 'proibicao-de-juiz-de-excecao', 'alexandre-de-moraes', 'desafetos', 'gravidade-media']
 gravidade: media
 faicon: fas fa-exclamation-triangle
 image:
@@ -16,7 +16,7 @@ image:
 - **Data**: 2020/05/27
 - **Ano**: 2020
 - **Descrição Completa**: Deflagração da Operação Lupa com buscas contra desafetos no inquérito das fake news.
-- **Gravidade**: media <i class="fas fas fa-exclamation-triangle fa-2x"></i>
+- **Gravidade**: media <i class="fas fa-exclamation-triangle fa-2x"></i>
 - **Violações**:
   - Imparcialidade Judicial
   - Devido Processo Legal

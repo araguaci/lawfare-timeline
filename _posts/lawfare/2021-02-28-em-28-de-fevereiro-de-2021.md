@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id087
 description: 2021-02-28-bahia-Governo Federal-Determinou
-tags: ['governo-federal', 'determinou', 'custear']
+tags: ['lawfare', 'governo-federal', 'determinou', 'custear']
 ---
 
 # Em 28 de fevereiro de 2021, o STF determinou que a União voltasse a custear leitos de UTI na Bahia.
