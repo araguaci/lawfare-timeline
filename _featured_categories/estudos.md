@@ -12,7 +12,7 @@ slug: estudos
 
 # (Optional) Write a short (~150 characters) description of this featured tag.
 description: >
-  Estudos e analises das Linhas de Tempo de Eventos no Sistema Institucional Brasileiro 🏛️ 
+  📰 Estudos e analises das Linhas de Tempo de Eventos no Sistema Institucional Brasileiro 🏛️ 
 
 # (Optional) You can disable grouping posts by date.
 no_groups: true

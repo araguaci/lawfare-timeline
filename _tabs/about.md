@@ -42,7 +42,7 @@ mindmap
       - Polarização e ataques ao STF
       - Centralidade na recente crise
     🌐 Parceria TSE-USAID
-      - Cooperação em eleições e fortalecimento institucional
+      - Cooperação em eleições e interferência institucional
       - Questionamento sobre dependência externa
       - Desconfiança em segurança eleitoral
     📝 Violação de Direitos Humanos

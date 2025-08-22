@@ -12,7 +12,7 @@ slug: projects
 
 # (Optional) Write a short (~150 characters) description of this featured tag.
 description: >
-  Ferramentas de Analise IA, Projetos Relacionados e Outros Estudos 🤖✨📦
+  ✨ Ferramentas de Analise IA, Projetos Relacionados e Outros Estudos 🤖✨📦
 
 # (Optional) You can disable grouping posts by date.
 no_groups: true
