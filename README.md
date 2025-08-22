@@ -1,5 +1,143 @@
 # LAWFARE, A GUERRA SILENCIOSA QUE DESTRÓI DEMOCRACIAS ✨
 
+
+```mermaid
+mindmap
+  root((Censura, Eleições, Escândalos, Abusos e Violações no Brasil))
+    1. Introdução
+      Objetivo do relatório
+        Mapear práticas de censura no ambiente digital e institucional
+        Identificar atores e estruturas envolvidas
+        Analisar impactos na democracia e nos direitos fundamentais
+      Ênfase analítica
+        Atuação do TSE e STF
+        Operações policiais e inquéritos
+        Táticas informacionais e manipulação de narrativas
+        Influência de ONGs e think tanks estrangeiros
+        Consequências políticas e sociais
+
+    2. Detalhamento
+      2.1 Censura Sistêmica e Bastidores
+        Estrutura paralela de monitoramento e remoção de conteúdo crítico ao TSE e STF
+        Letícia Sallorenzo ("Bruxa da Vaza Toga")
+          Atua como colaboradora informal
+          Produz e envia dossiês
+          Pressiona plataformas e autoridades
+          Sem vínculo oficial com o TSE
+        Negativa institucional
+          TSE nega colaboração
+          Relatos internos confirmam pressões
+          Foco em críticos de Alexandre de Moraes
+
+      2.2 Relatórios Técnicos e Criminalização do Dissenso
+        Uso da tese de firehosing (inundação informacional)
+          Por PF e TSE
+          Justificativa para reprimir conteúdos críticos
+          Aplicado sem evidência robusta
+        Alvos principais
+          Instituto Voto Legal (IVL)
+          Carlos Rocha e Éder Balbino
+        Criminalização de falhas técnicas
+          Apontar vulnerabilidades = "golpismo"
+          Sem análise técnica independente
+        Distorção internacional
+          Influenciadores como Fernando Cerimedo
+          Estudos técnicos distorcidos
+          Resulta em censura e inquéritos sem base
+
+      2.3 Lawfare e Repressão Judicial
+        Liderança de Alexandre de Moraes (STF)
+          Centralização de inquéritos
+          Decisões monocráticas e sigilosas
+        Características do lawfare
+          Inquéritos sem prazo definido
+          Multas excessivas por opiniões
+          Sanções a advogados e jornalistas
+          Ataques ao contraditório e à ampla defesa
+        Medidas abusivas
+          Censura prévia de reportagens
+          Bloqueios de contas sem processo
+          Ausência de transparência nas decisões
+
+    3. Pontos Importantes
+      Bastidores da censura digital
+        Núcleo paralelo fora de canais oficiais
+      Criminalização da auditoria técnica
+        Especialistas perseguidos por relatórios
+      Difusão internacional de alegações
+        ONGs e consultores amplificam narrativas
+      Lawfare sistêmico
+        Multas altas, bloqueios, censura prévia
+        Ausência de defesa
+      Ingerência internacional
+        Apoio de NED, USAID, DFRLab
+      Ocultamento institucional
+        TSE e STF não divulgam dados sobre bloqueios
+
+    4. Modus Operandi
+      4.1 Estrutura Paralela de Monitoramento
+        Ativistas informais na Assessoria Especial do TSE
+        Produção de dossiês sem registro
+        Pressão indireta sobre plataformas
+      4.2 Centralização e Opacidade
+        Decisões monocráticas (Alexandre de Moraes)
+        Processos físicos sem sorteio de relatoria
+        Investigação sigilosa sem acesso
+      4.3 Instrumentalização de Especialistas e ONGs
+        Importação de conceitos como firehosing
+        Origem: RAND Corporation
+        Legitimação de ações via think tanks
+      4.4 Censura via Plataformas
+        Exigência de dados sem ordem judicial
+        Perseguição a jornalistas e críticos
+        Colaboração de big techs (Twitter, Meta)
+      4.5 Sanções Desproporcionais
+        Multas altas para induzir autocensura
+        Alvos: criadores pequenos e institutos técnicos
+      4.6 Difusão de Escândalos sem Investigação
+        Denúncias de fraude → repressão
+        Falta de auditoria técnica
+        Prioridade à censura, não verificação
+
+    5. Atores Envolvidos
+      5.1 Individuais
+        Letícia Sallorenzo
+          Articuladora de dossiês
+          Influência junto a auxiliares de Moraes
+        Alexandre de Moraes (STF)
+          Principal agente de inquéritos
+          Centraliza poder de decisão
+        Carlos Rocha e Éder Balbino
+          Engenheiros criminalizados
+          Relatórios técnicos sobre urnas
+        Fernando Cerimedo
+          Consultor argentino
+          Internacionalizou alegações
+          Posteriormente indiciado
+      5.2 Instituições e Redes
+        Tribunal Superior Eleitoral (TSE)
+          Epicentro da censura digital
+          Bloqueios sem transparência
+          Expansão de poder sem prestação de contas
+        Supremo Tribunal Federal (STF)
+          Viabiliza lawfare
+          Inquéritos sigilosos
+          Decisões sem contraditório
+        Polícia Federal (PF)
+          Elabora relatórios frágeis
+          Braço técnico de inquéritos políticos
+        ONGs e Think Tanks Estrangeiros
+          NED
+            Financiamento de controle informacional
+          USAID
+            Apoio a iniciativas de "desinformação"
+          DFRLab (Atlantic Council)
+            Metodologia de análise de redes
+          RAND Corporation
+            Desenvolveu conceito de firehosing
+
+```
+
 ## Introdução ao Lawfare
 - ⚖️ Lawfare é a guerra jurídica do século XXI, onde o sistema legal é usado como arma política.
 - 🎯 Processos judiciais deixam de buscar justiça para perseguir adversários políticos com seletividade e manipulação.
