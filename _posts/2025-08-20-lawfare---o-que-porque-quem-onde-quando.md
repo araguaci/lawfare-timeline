@@ -365,3 +365,32 @@ mindmap
         Redes Descentralizadas
         VPNs
 ```
+
+### 🧭 Linhas do Tempo de Uma Crise Institucional Sistêmica
+
+- [🏦 Crise diplomática Brasil-EUA em 2025 com Sanções a Autoridades](/crise-diplomatica/)
+- [📜 Análise das Interferências Judiciais no Processo Eleitoral Brasileiro](/lawfare/)
+- [✒️ Democracia Abalada: STF e TSE no Contexto Político Brasileiro (2018-2023) ⚖️](/stf/)
+- [🌐 Parceria entre o Tribunal Superior Eleitoral (TSE) e USAID ⚖️](/tse/)
+- [📝 Dossiê sobre Ações do Ministro Alexandre de Moraes](/dossie/)
+- [💰 Escândalos Políticos no Brasil em Todos os Governos da República](/escandalos/)
+- [⚖️ Casos de Corrupção no Sistema Judiciário Brasileiro](/justica/)
+- [🏛️ Análise dos Escândalos Financeiros no Brasil (1995-2025)](/bancos/)
+- [🚔 Notáveis Operações Policiais Federais no Brasil (1992-2025)](/operacoes/)
+- [🎭 Gastos Extravagantes de Órgãos Públicos no Brasil (2000-2025)](/extravagancia/)
+- [⛓️‍💥 Decisões Judiciais Beneficiando Criminosos no Brasil](/impunidade/)
+- [⚖️ Juristas sobre Decisões Judiciais Beneficiando Criminosos](/posts/opinioes-de-juristas-sobre-decisoes-judiciais-beneficiando-criminosos-no-brasil/)
+
+### 🔍 Investigação Vaza Toga 1 (David Ágape e Eli Vieira):
+- [Revelações Independentes sobre a Censura Online](https://www.twitterfilesbrazil.com/pt/)
+- [O influenciador usa de sua influência](https://www.twitterfilesbrazil.com/pt/twitter-files-brasil-2)
+- [Expondo a Falta de Transparência](https://www.twitterfilesbrazil.com/pt/alexandre-files)
+- [Relatório sobre a Política de Censura no Brasil e a Resposta dos EUA](https://www.twitterfilesbrazil.com/pt/desdobramentos/relatorio-sobre-a-politica-de-censura-no-brasil-e-a-resposta-dos-eua)
+
+### 🔍 Investigação Vaza Toga 2 (David Ágape e Eli Vieira):
+- [🕵️ Vazatoga2 - Os Arquivos do 8 de Janeiro](/categories/vazatoga/)
+- Versão curta: [https://bit.ly/vaza-toga-public](https://bit.ly/vaza-toga-public)
+- Versão de relatório: [https://bit.ly/vaza-toga](https://bit.ly/vaza-toga)
+- [Depoimento de David Ágape na Câmara dos Deputados](https://www.ainvestigacao.com/p/vaza-toga-2-depoimento-de-david-agape)
+- [**Inquérito das Fake News**: seis anos de juristocracia no Brasil](https://www.ainvestigacao.com/p/inquerito-das-fake-news-seis-anos)
+

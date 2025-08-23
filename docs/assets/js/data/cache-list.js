@@ -26,6 +26,8 @@ const include = [
   
     '/dossie/',
   
+    '/censura/',
+  
     '/escandalos/',
   
     '/bancos/',

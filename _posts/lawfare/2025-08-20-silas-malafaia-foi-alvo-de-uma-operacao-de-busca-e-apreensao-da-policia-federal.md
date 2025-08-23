@@ -1,7 +1,7 @@
 ---
 title: Silas Malafaia foi alvo de uma operação de busca e apreensão da Polícia Federal
-description: ""
-date: 2025-08-21T00:49:38.778Z
+description: "Em **20 de agosto de 2025**, o pastor **Silas Malafaia**, conhecido aliado do ex-presidente **Jair Bolsonaro**, foi alvo de uma operação de **busca e apreensão executada pela Polícia Federal (PF)**, autorizada pelo ministro do **Supremo Tribunal Federal (STF) Alexandre de Moraes**"
+date: 2025-08-20T12:49:38.778Z
 image: 
   path: "/assets/solid/gavel.svg"
 tags: ['lawfare', justica, 'silas-malafaia', soberania, 'perseguicao-politica']

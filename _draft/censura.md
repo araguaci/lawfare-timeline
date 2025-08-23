@@ -1,5 +1,15 @@
 
-Aqui está um resumo dos principais pontos do artigo:
+```mermaid
+mindmap
+  root((Censura))
+    🚫 Acesso Proibido
+    🤐 Silenciamento
+    📵 Bloqueio Digital
+    🔇 Mídia Censurada
+    🖊️❌ Edição de Conteúdo
+    🧻 Gíria
+    🔒 Informação Restrita
+```
 
 1. **Compilação de dados de censura judicial:** O autor compilou 118 notícias sobre censura judicial no Brasil de 2019 a fevereiro de 2025, excluindo casos relacionados a parlamentares ou aos réus do 8 de Janeiro.
 

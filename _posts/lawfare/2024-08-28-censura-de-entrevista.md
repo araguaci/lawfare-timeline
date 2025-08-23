@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Alexandre de Moraes proíbe Filipe Martins de dar entrevista à Folha de S.Paulo, configurando censura prévia após sua liberação da prisão, mas sob medidas cautelares que incluem proibição de uso de redes sociais."
 faicon: fa-ban
-tags: ['lawfare', 'liberdade-de-expressao', 'nao-censura-previa', 'liberdade-de-imprensa', 'alexandre-de-moraes', 'folha-de-spaulo', 'gravidade-alta', 'filipe-martins', 'censura', 'entrevista', 'proibicao']
+tags: ['lawfare', 'liberdade-de-expressao', 'censura', 'liberdade-de-imprensa', 'alexandre-de-moraes', 'folha-de-spaulo', 'gravidade-alta', 'filipe-martins', 'censura', 'entrevista', 'proibicao']
 image:
   path: "/assets/solid/ban.svg"
 ---

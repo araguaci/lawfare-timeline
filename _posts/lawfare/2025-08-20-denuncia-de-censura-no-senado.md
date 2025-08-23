@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Senador Eduardo Girão denuncia censura e perseguição à produtora Brasil Paralelo por documentário sobre Maria da Penha, que foi suspenso por decisão judicial."
 faicon: fa-ban
-tags: ['lawfare', 'liberdade-de-expressao', 'liberdade-de-imprensa', 'nao-censura-previa', 'senador-eduardo-girao', 'brasil-paralelo', 'justica-de-fortaleza', 'gravidade-alta', 'censura', 'documentario', 'maria-da-penha', 'brasil-paralelo', 'senado']
+tags: ['lawfare', 'liberdade-de-expressao', 'liberdade-de-imprensa', 'censura', 'senador-eduardo-girao', 'brasil-paralelo', 'justica-de-fortaleza', 'gravidade-alta', 'censura', 'documentario', 'maria-da-penha', 'brasil-paralelo', 'senado']
 image:
   path: "/assets/solid/ban.svg"
 ---

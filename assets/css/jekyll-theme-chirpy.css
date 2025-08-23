@@ -165,8 +165,8 @@ section,
 }
 
 #sidebar ul li.nav-item a.nav-link {
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
+  padding-top: 0.19rem;
+  padding-bottom: 0.19rem;
 }
 
 #sidebar ul li.nav-item.active .nav-link span, #sidebar ul li.nav-item.active .nav-link i{
@@ -188,7 +188,9 @@ section,
 }
 
 #sidebar ul li.nav-item:not(:first-child) {
-    margin-top: .15rem;
+    margin-top: 0.03rem;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
 }
 
 #sidebar #avatar {

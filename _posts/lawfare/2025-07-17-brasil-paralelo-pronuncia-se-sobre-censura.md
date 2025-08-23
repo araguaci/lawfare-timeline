@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Brasil Paralelo considera censura prévia de documentário sobre Maria da Penha como ato grave."
 faicon: fa-ban
-tags: ['lawfare', 'nao-censura-previa', 'liberdade-de-expressao', 'brasil-paralelo', 'justica', 'gravidade-alta', 'censura', 'documentario']
+tags: ['lawfare', 'censura', 'liberdade-de-expressao', 'brasil-paralelo', 'justica', 'gravidade-alta', 'censura', 'documentario']
 image:
   path: "/assets/solid/ban.svg"
 ---

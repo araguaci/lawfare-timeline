@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Brasil Paralelo tira do ar o documentário 'Investigação Paralela: o caso Maria da Penha' após ser alvo de censura judicial, alegando desinformação e acusações infundadas de fraude."
 faicon: fa-ban
-tags: ['lawfare', 'liberdade-de-expressao', 'liberdade-de-imprensa', 'nao-censura-previa', 'proporcionalidade', 'brasil-paralelo', 'ministerio-publico', 'justica-de-fortaleza', 'gravidade-alta', 'censura', 'documentario', 'maria-da-penha', 'desinformacao']
+tags: ['lawfare', 'liberdade-de-expressao', 'liberdade-de-imprensa', 'censura', 'proporcionalidade', 'brasil-paralelo', 'ministerio-publico', 'justica-de-fortaleza', 'gravidade-alta', 'censura', 'documentario', 'maria-da-penha', 'desinformacao']
 image:
   path: "/assets/solid/ban.svg"
 ---

@@ -5,7 +5,7 @@ categories: tse
 description: > 
   "Governo dos EUA financiou Sleeping Giants e Instituto Vero de Felipe Neto para combater desinformação, visto como potencial censura, com implicações em eleições de 2022 e 2024."
 faicon: fa-dollar-sign
-tags: ['liberdade-de-expressao', 'nao-censura-previa', 'imparcialidade', 'instituto-vero', 'felipe-neto', 'governo-eua', 'sleeping-giants', 'gravidade-alta', 'financiamento', 'censura', 'desinformacao', 'eua']
+tags: ['liberdade-de-expressao', 'censura', 'imparcialidade', 'instituto-vero', 'felipe-neto', 'governo-eua', 'sleeping-giants', 'gravidade-alta', 'financiamento', 'censura', 'desinformacao', 'eua']
 image:
   path: "/assets/solid/dollar-sign.svg"
 ---

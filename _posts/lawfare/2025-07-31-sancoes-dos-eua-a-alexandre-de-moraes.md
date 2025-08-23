@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Departamento do Tesouro dos EUA impõe sanções a Alexandre de Moraes sob a Lei Magnitsky por violações de direitos humanos e censura."
 faicon: fa-ban
-tags: ['lawfare', 'liberdade-de-expressao', 'nao-censura-previa', 'separacao-dos-poderes', 'alexandre-de-moraes', 'governo-trump', 'gravidade-alta', 'sancoes-eua', 'censura', 'moraes']
+tags: ['lawfare', 'liberdade-de-expressao', 'censura', 'separacao-dos-poderes', 'alexandre-de-moraes', 'governo-trump', 'gravidade-alta', 'sancoes-eua', 'censura', 'moraes']
 image:
   path: "/assets/solid/ban.svg"
 ---

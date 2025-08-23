@@ -146,240 +146,121 @@ Você pode combinar esses emojis nos seus mapas mentais, relatórios e linhas do
 
 ****
 
----- 
+Aqui está uma **lista completa de ícones (emojis)** sugeridos para cada um dos **princípios, direitos e garantias fundamentais** que você listou. Os ícones foram escolhidos com base em **relevância simbólica**, **uso comum em infográficos jurídicos** e **clareza visual**, sendo ideais para uso em:
 
-Para uma página com textos em **linha do tempo**, você pode usar ícones que transmitam a ideia de **história, passagem do tempo, sequência e etapas**. Eis algumas opções (pensando em bibliotecas como **Font Awesome** ou **Lucide**):
-
-### Ícones diretos (tempo)
-
-* ⏳ **ampulheta** → passagem do tempo
-* 🕰️ **relógio de ponteiros** → tempo histórico
-* ⏱️ **cronômetro** → marcação de eventos
-* 📅 **calendário** → datas específicas
-* 🌐 **globo com relógio** → tempo no mundo, cronologia
-
-### Ícones de sequência e etapas
-
-* ➡️ **setas** → continuidade, próximo passo
-* 🔗 **elos de corrente** → eventos conectados
-* 🧩 **peças de quebra-cabeça** → encaixe de fases
-* 📈 **gráfico de linha** → evolução ao longo do tempo
-* 🛤️ **trilho/caminho** → trajetória
-
-### Ícones de narrativa e memória
-
-* 📝 **documento/anotações** → registros históricos
-* 📖 **livro aberto** → contar uma história
-* 🗂️ **pastas/arquivos** → organização cronológica
-* 🧭 **bússola** → direção e jornada
-* 🗿 **monumento/estátua** → marcos históricos
-
-👉 Uma ideia prática: usar **um ícone fixo (relógio, calendário ou trilho)** no topo da página para simbolizar “linha do tempo” e depois ícones diferentes em cada ponto do timeline (ex.: documento, livro, gráfico, bússola), reforçando o tipo de conteúdo.
-
-Quer que eu monte um **pack pronto em Tailwind + Lucide/Font Awesome** com alguns desses ícones aplicados num layout de “timeline”?
-
-----
-
-Para uma página com textos sobre **corrupção**, o ideal é escolher ícones que transmitam a ideia de **ilegalidade, desvio, poder, dinheiro sujo e justiça**. Eis algumas opções:
+- Mapas mentais (Mermaid)
+- Apresentações (PowerPoint, Canva)
+- Infográficos
+- Painéis de direitos fundamentais
 
 ---
 
-### Ícones relacionados a dinheiro
+### 📜 **Ícones para Princípios e Direitos Fundamentais**
 
-* 💰 **saco de dinheiro** → enriquecimento ilícito
-* 💵 **cédulas de dinheiro** → propina
-* 🪙 **moedas** → suborno pequeno
-* 🏦 **banco** → movimentação de dinheiro suspeita
-
-### Ícones de ilegalidade / crime
-
-* 🕵️ **detetive/lupa** → investigação
-* 🚔 **carro de polícia** → repressão
-* 🔒 **cadeado** → prisão
-* 🧾 **documento com selo** → fraude documental
-* 🕳️ **buraco** → “rombo” nos cofres públicos
-
-### Ícones de poder e abuso
-
-* 🏛️ **prédio do governo** → corrupção estatal
-* 👔 **gravata** → políticos/empresários corruptos
-* ⚖️ **balança da justiça** → combate à corrupção
-* 🪙➡️🤝 **mão passando moeda** → suborno (pode ser estilizado com “hand coins” no Lucide ou FA)
-
-### Ícones simbólicos/metafóricos
-
-* 🐍 **cobra** → traição, astúcia corrupta
-* 🕸️ **teia de aranha** → rede de corrupção
-* ⚠️ **triângulo de alerta** → perigo/cuidado
-* 🗑️ **lixeira** → desperdício, desvio
-* 💣 **bomba** → escândalo/explosão midiática
-
----
-
-👉 Dica:
-
-* Se a página for mais **acadêmica/jornalística**, use ícones sóbrios: 🏛️ ⚖️ 💰 👔
-* Se for mais **didática/crítica**, pode ousar com ícones simbólicos/metafóricos: 🐍 🕸️ 🗑️
-
-Quer que eu prepare um **set de ícones já mapeados no Lucide/Font Awesome**, prontos pra você usar no front-end?
-
----- 
-
-Para uma página com textos sobre **justiça**, dá pra usar ícones que remetem tanto à **lei** quanto a valores como **equilíbrio, ética, julgamento e proteção social**. Aqui vai uma lista:
-
----
-
-### Ícones clássicos de Justiça
-
-* ⚖️ **Balança** → símbolo universal da justiça e equilíbrio
-* 🏛️ **Prédio clássico (tribunal)** → poder judiciário
-* 👩‍⚖️ / 👨‍⚖️ **Juiz** → julgamento e autoridade legal
-* 📜 **Pergaminho/documento** → leis e constituições
-
-### Ícones de lei e julgamento
-
-* 🔨 **Martelo de juiz (gavel)** → decisão judicial
-* 📚 **Livros** → códigos, doutrinas, jurisprudência
-* 🧾 **Documento legal** → processos, contratos
-* 🕵️ **Detetive** → investigação que leva à justiça
-
-### Ícones de proteção e segurança
-
-* 🛡️ **Escudo** → proteção dos direitos
-* 🔒 **Cadeado** → aplicação da lei, garantia
-* 🚔 **Carro de polícia** → força da lei
-* 👮 **Policial** → agentes que garantem a justiça
-
-### Ícones simbólicos/metafóricos
-
-* 🌐 **Globo** → justiça universal
-* 🕊️ **Pomba** → justiça ligada à paz
-* ✊ **Punho erguido** → justiça social, igualdade
-* ⏳ **Ampulheta** → tempo para a justiça, prescrição
+| Direito / Princípio | Ícone Recomendado | Justificativa |
+|---------------------|--------------------|-------------|
+| **Ampla Defesa** | ⚖️ | Balança simboliza justiça e defesa no processo |
+| **Devido Processo Legal** | 📜 | Pergaminho = legalidade formal e processo |
+| **Dignidade da Pessoa Humana** | 🫶 | Mão em forma de coração: valor supremo da pessoa |
+| **Direito ao Acesso à Informação** | 🔍 | Lupa: busca e transparência |
+| **Direito à Privacidade** | 🔐 | Cadeado fechado: proteção de dados e intimidade |
+| **Direito à Propriedade** | 🏠 | Casa: símbolo universal de propriedade imóvel |
+| **Direito à Saúde** | 🏥 | Hospital: direito social à saúde |
+| **Direitos Indígenas** | 🌿 | Folha verde: conexão com terras, natureza e culturas tradicionais |
+| **Duração Razoável do Processo** | ⏳ | Ampulheta: tempo justo no processo |
+| **Imparcialidade** | ⚖️ | Balança: neutralidade na decisão |
+| **Imparcialidade Judicial** | 👨‍⚖️ | Juiz com expressão neutra (ou ⚖️) |
+| **Imparcialidade do Juiz** | 🧍‍♂️⚖️ | Juiz equilibrado (pode usar 👨‍⚖️) |
+| **Impessoalidade** | 🧍 | Figura neutra: ausência de interesse pessoal |
+| **Imunidade Parlamentar** | 🏛️ | Capitólio: proteção a parlamentares |
+| **Imunidade de Opinião** | 🗣️ | Fala protegida: liberdade de expressão parlamentar |
+| **Individualização das Penas** | 🔢 | Número específico: pena ajustada à pessoa |
+| **Inviolabilidade do Domicílio** | 🏠🔒 | Casa + cadeado: proteção contra invasão |
+| **Juiz Natural** | 🏛️👨‍⚖️ | Juiz legítimo, previamente estabelecido |
+| **Legalidade** | 📚 | Livro de leis: "não há crime sem lei" |
+| **Liberdade Artística** | 🎨 | Pincel: expressão criativa livre |
+| **Liberdade Religiosa** | ✝️, ☪️, 🕉️, 🕎 | Símbolos religiosos variados (ou 🙏) |
+| **Liberdade de Associação** | 👥 | Grupo de pessoas: união livre |
+| **Liberdade de Expressão** | 🗣️ | Fala livre, sem censura |
+| **Liberdade de Imprensa** | 📰 | Jornal: mídia livre |
+| **Liberdade de Locomoção** | 🚶‍♂️ | Pessoa andando: livre circulação |
+| **Moralidade** | 🧭 | Bússola: orientação ética |
+| **Não Censura Prévia** | 🤐🚫 | Boca fechada com proibição: ausência de censura |
+| **Prerrogativas Parlamentares** | 🎤 | Microfone: direitos de fala e proteção |
+| **Presunção de Inocência** | 🧍‍♂️⚖️ | Pessoa sob balança: "inocente até prova em contrário" |
+| **Princípio Acusatório** | ⚖️👥 | Juiz neutro entre acusação e defesa |
+| **Princípio do Mínimo Existencial** | 🍞 | Pão: mínimo vital para sobrevivência |
+| **Proibição de Juiz de Exceção** | 🚫👨‍⚖️ | Juiz improvisado proibido |
+| **Proibição de Tribunal de Exceção** | 🚫🏛️ | Tribunal criado para perseguir, proibido |
+| **Proibição de tratamento desumano ou degradante** | 🚫⛓️ | Correntes proibidas: tortura e degradação |
+| **Proporcionalidade** | ⚖️📏 | Balança + régua: medida adequada e necessária |
+| **Publicidade dos Atos Processuais** | 📢 | Alto-falante: transparência processual |
+| **Razoabilidade** | 🧠 | Cérebro: decisão lógica e justa |
+| **Razoável Duração do Processo** | ⏳✅ | Ampulheta com ok: tempo justo garantido |
+| **Segurança Jurídica** | 🛡️ | Escudo: previsibilidade do direito |
+| **Separação de Poderes** | 🏛️⚖️👑 | Três poderes: Executivo, Legislativo, Judiciário |
+| **Sistema Acusatório** | ⚖️🗣️👥 | Acusação, defesa e juiz neutro |
 
 ---
 
-👉 Sugestão:
+### ✅ **Exemplo de Uso em Mermaid (Mindmap)**
 
-* Para uma **página institucional**, use ⚖️ 🏛️ 📜 🔨.
-* Para uma **página de direitos humanos/justiça social**, use ✊ 🕊️ 🌐 🛡️.
+```mermaid
+mindmap
+  root((Direitos e Princípios Fundamentais))
 
-Quer que eu monte um **quadro comparativo com ícones (em Font Awesome e Lucide)** já prontos para você colar no código do site?
-
----- 
-
-Numa página com textos sobre **eleição**, o ideal é usar ícones que remetam a **voto, democracia, urna, participação popular e representatividade**. Aqui vai uma lista organizada:
-
----
-
-### Ícones diretos de votação
-
-* 🗳️ **Urna com cédula** → votar
-* ✅ **Marca de seleção (check)** → voto confirmado
-* ☑️ **Caixa marcada** → escolha feita
-* ✍️ **Mão escrevendo** → registrar voto
-
-### Ícones de democracia e cidadania
-
-* 🏛️ **Prédio governamental** → parlamento, congresso
-* 🗽 **Estátua da Liberdade** (em versão FA/Lucide) → democracia
-* 👥 **Grupo de pessoas** → eleitores
-* 🙋 **Pessoa levantando a mão** → participação cidadã
-
-### Ícones de política e campanhas
-
-* 📣 **Megafone** → campanha eleitoral
-* 🎤 **Microfone** → debates, discursos
-* 📊 **Gráfico de barras** → resultados da eleição
-* 📰 **Jornal** → cobertura eleitoral
-
-### Ícones de decisão e escolha
-
-* 🔄 **Setas em círculo** → alternância de poder
-* ⚖️ **Balança** → escolhas equilibradas
-* ➡️⬅️ **Setas opostas** → diferentes candidatos/partidos
-* 🔑 **Chave** → poder concedido pelo voto
-
----
-
-👉 Dica prática:
-
-* Para algo **mais formal/institucional**, use 🗳️ ✅ 🏛️ 📊.
-* Para algo **mais popular/didático**, use 📣 👥 🙋 📰.
-
-Quer que eu prepare um **exemplo de “timeline eleitoral”** com ícones (Lucide ou Font Awesome) já aplicados em um layout de página?
-
-----
-
-Boa 👌 vou montar uma lista **já pensando em Lucide e Font Awesome**, organizada por tema. Assim você pode escolher direto no front-end quais aplicar em cada página.
+    ⚖️ Ampla Defesa
+    📜 Devido Processo Legal
+    🫶 Dignidade da Pessoa Humana
+    🔍 Acesso à Informação
+    🔐 Direito à Privacidade
+    🏠 Direito à Propriedade
+    🏥 Direito à Saúde
+    🌿 Direitos Indígenas
+    ⏳ Duração Razoável do Processo
+    ⚖️ Imparcialidade
+    👨‍⚖️ Imparcialidade Judicial
+    🧍‍♂️⚖️ Imparcialidade do Juiz
+    🧍 Impessoalidade
+    🏛️ Imunidade Parlamentar
+    🗣️ Imunidade de Opinião
+    🔢 Individualização das Penas
+    🏠🔒 Inviolabilidade do Domicílio
+    🏛️👨‍⚖️ Juiz Natural
+    📚 Legalidade
+    🎨 Liberdade Artística
+    🙏 Liberdade Religiosa
+    👥 Liberdade de Associação
+    🗣️ Liberdade de Expressão
+    📰 Liberdade de Imprensa
+    🚶‍♂️ Liberdade de Locomoção
+    🧭 Moralidade
+    🤐🚫 Não Censura Prévia
+    🎤 Prerrogativas Parlamentares
+    🧍‍♂️⚖️ Presunção de Inocência
+    ⚖️👥 Sistema Acusatório
+    🍞 Princípio do Mínimo Existencial
+    🚫👨‍⚖️ Proibição de Juiz de Exceção
+    🚫🏛️ Proibição de Tribunal de Exceção
+    🚫⛓️ Tratamento Desumano
+    ⚖️📏 Proporcionalidade
+    📢 Publicidade Processual
+    🧠 Razoabilidade
+    ⏳✅ Razoável Duração
+    🛡️ Segurança Jurídica
+    🏛️⚖️👑 Separação de Poderes
+```
 
 ---
 
-## 🗳️ Eleição
+### 📎 Dicas de Uso
 
-**Lucide**
-
-* `Vote` (ícone pronto de urna/cédula, se disponível)
-* `CheckSquare` → voto confirmado
-* `Users` → eleitores
-* `Megaphone` → campanha eleitoral
-* `BarChart3` → apuração/resultados
-* `Landmark` → prédio público (parlamento)
-
-**Font Awesome**
-
-* `fa-solid fa-person-booth` → cabine de votação
-* `fa-solid fa-square-check` → voto marcado
-* `fa-solid fa-users` → povo/eleitores
-* `fa-solid fa-bullhorn` → campanha
-* `fa-solid fa-chart-bar` → resultados
-* `fa-solid fa-landmark` → congresso, instituições
+- ✅ **Evite ícones ambíguos**: Prefira os mais universais.
+- ✅ **Use em conjunto com cores**: Ex: vermelho para proibições (🚫), verde para direitos (✅).
+- ✅ **Ideal para infográficos jurídicos**, painéis de controle de constitucionalidade, ou educação cívica.
 
 ---
 
-## ⚖️ Justiça
-
-**Lucide**
-
-* `Scale` → balança da justiça
-* `Gavel` → martelo de juiz
-* `Landmark` → tribunal
-* `BookOpenText` → leis e códigos
-* `ShieldCheck` → proteção de direitos
-* `ScrollText` → constituição/documentos
-
-**Font Awesome**
-
-* `fa-solid fa-scale-balanced` → balança da justiça
-* `fa-solid fa-gavel` → decisão judicial
-* `fa-solid fa-landmark` → corte/tribunal
-* `fa-solid fa-book` → código de leis
-* `fa-solid fa-shield-halved` → proteção/defesa
-* `fa-solid fa-file-contract` → contratos, leis
-
----
-
-## 💰 Corrupção
-
-**Lucide**
-
-* `HandCoins` → suborno
-* `DollarSign` → dinheiro ilícito
-* `Building` → governo/empresas
-* `FileWarning` → fraude documental
-* `Siren` → operação policial
-* `SpiderWeb` → rede de corrupção
-
-**Font Awesome**
-
-* `fa-solid fa-hand-holding-dollar` → suborno/dinheiro ilícito
-* `fa-solid fa-sack-dollar` → dinheiro desviado
-* `fa-solid fa-building-columns` → instituições envolvidas
-* `fa-solid fa-file-invoice-dollar` → corrupção documental
-* `fa-solid fa-triangle-exclamation` → alerta/escândalo
-* `fa-solid fa-spider` → teia de corrupção
-
----
 
 👉 Dica: você pode manter uma **coerência visual** usando sempre a mesma lib (Lucide ou FA), mas também dá pra misturar se precisar de ícones bem específicos.
 

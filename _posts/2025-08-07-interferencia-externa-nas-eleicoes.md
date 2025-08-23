@@ -33,6 +33,12 @@ A gravidade média dessas alegações reside na potencial violação do princíp
 
 ## 💻 Campanhas Digitais, Ataques Virtuais e Mobilização de Influenciadores
 
+### 🎭 Mapa Mental Campanhas Digitais
+
+![](/assets/img/felipe-neto-usaid.png)
+
+- 🔗 [Mapa Mental USAID/Felipe Nato/Insituto Vero](https://tinyurl.com/usaid-felipe-neto-mapa)
+
 Durante o período eleitoral, perfis falsos e influenciadores promoveram campanhas associando candidatos conservadores a temas negativos, utilizando inteligência artificial para gerar conteúdo difamatório. Essa conduta, de gravidade alta, infringe o artigo 323 do Código Eleitoral (Lei nº 4.737/1965), que pune a calúnia e difamação em contextos eleitorais. O envolvimento de grupos como Boca de Lobo e deputados como André Janones destaca a necessidade de investigações pelo Ministério Público Federal (MPF) sob a Lei nº 7.170/1983 (Lei de Segurança Nacional), adaptada para ameaças à democracia.
 
 Paralelamente, canais do YouTube e blogueiros progressistas, em parceria com ONGs apoiadas pela USAID, conduziram campanhas de fact-checking e incentivo ao voto. Embora de gravidade baixa a média, essas ações levantam questões sobre financiamento estrangeiro indireto, proibido pela Resolução TSE nº 23.659/2021 para campanhas eleitorais. A mobilização de influenciadores como Felipe Neto e Sabrina Fernandes em lives e debates institucionais pode ser vista como extensão de soft power internacional, demandando análise sob o prisma da Lei nº 9.504/1997 (Lei das Eleições), que veda doações estrangeiras.

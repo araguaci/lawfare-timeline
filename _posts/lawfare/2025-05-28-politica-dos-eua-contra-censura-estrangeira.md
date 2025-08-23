@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "EUA anunciam política de restrição de vistos a estrangeiros responsáveis por censura a americanos, visando decisões judiciais brasileiras."
 faicon: fa-globe
-tags: ['lawfare', 'liberdade-de-expressao', 'liberdade-de-imprensa', 'governo-trump', 'autoridades-brasileiras', 'gravidade-media', 'censura-internacional', 'eua-vs-brasil']
+tags: ['lawfare', 'liberdade-de-expressao', 'liberdade-de-imprensa', 'governo-trump', 'autoridades-brasileiras', 'gravidade-media', 'censura-internacional', 'eua-vs-brasil', 'censura']
 image:
   path: "/assets/solid/globe.svg"
 ---

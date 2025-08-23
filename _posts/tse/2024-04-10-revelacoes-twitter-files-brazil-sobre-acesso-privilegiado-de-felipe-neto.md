@@ -5,7 +5,7 @@ categories: tse
 description: > 
   "Twitter Files revelam que Instituto Vero, fundado por Felipe Neto, tinha parcerias com TSE e acesso VIP no Twitter para moderação, pressionando contra opositores."
 faicon: fa-twitter
-tags: ['liberdade-de-expressao', 'imparcialidade', 'nao-censura-previa', 'instituto-vero', 'felipe-neto', 'tse', 'twitter', 'gravidade-alta', 'twitter-files', 'censura', 'parceria-tse', 'acesso-privilegiado']
+tags: ['liberdade-de-expressao', 'imparcialidade', 'censura', 'instituto-vero', 'felipe-neto', 'tse', 'twitter', 'gravidade-alta', 'twitter-files', 'censura', 'parceria-tse', 'acesso-privilegiado']
 image:
   path: "/assets/solid/twitter.svg"
 ---
