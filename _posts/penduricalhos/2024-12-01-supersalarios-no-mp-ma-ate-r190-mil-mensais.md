@@ -7,7 +7,7 @@ image:
 article_id: 20241201
 description: >
   2024-12-01-Maranhão-supersalario-penduricalho
-tags: ['procurador', 'maranhao']
+tags: ['procurador', 'maranhao', 'ma']
 ---
 
 # Supersalários No Mp-Ma - Até R$190 mil mensais - Concessão de Penduricalho

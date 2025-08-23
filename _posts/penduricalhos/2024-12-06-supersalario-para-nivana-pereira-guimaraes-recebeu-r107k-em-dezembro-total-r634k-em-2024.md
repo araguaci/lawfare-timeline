@@ -7,7 +7,7 @@ image:
 article_id: 20241206
 description: >
   2024-12-06-Maranhão-supersalario-penduricalho
-tags: ['juiz', 'maranhao']
+tags: ['juiz', 'maranhao', 'ma']
 ---
 
 # Supersalário Para Nivana Pereira Guimarães - Recebeu R$107k em dezembro, total R$634k em 2024 - Concessão de Penduricalho

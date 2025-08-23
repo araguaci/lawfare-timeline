@@ -7,7 +7,7 @@ image:
 article_id: 20241207
 description: >
   2024-12-07-Maranhão-supersalario-penduricalho
-tags: ['juiz', 'maranhao']
+tags: ['juiz', 'maranhao', 'ma']
 ---
 
 # Supersalário Para Rodrigo Otávio Terças Santos - Recebeu R$111k em um mês, total R$585k em 2024 - Concessão de Penduricalho

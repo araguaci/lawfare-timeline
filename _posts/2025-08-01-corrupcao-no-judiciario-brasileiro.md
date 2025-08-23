@@ -4,7 +4,7 @@ description: Análise de casos (1992-2025) expõe venda de sentenças (45%), apo
 date: 2025-08-08T22:22:22.222Z
 image:
   path: /assets/img/decisao-comprada.jpg
-tags: ['corrupcao']
+tags: ['corrupcao', 'maranhao', 'ma']
 categories:
     - estudos
     - justica

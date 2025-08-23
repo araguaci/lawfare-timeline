@@ -7,7 +7,7 @@ image:
 article_id: 20241209
 description: >
   2024-12-09-Maranhão-supersalario-penduricalho
-tags: ['juiz', 'maranhao']
+tags: ['juiz', 'maranhao', 'ma']
 ---
 
 # Supersalário Para Flor De Lys Ferreira Amaral - Recebeu R$83.997,49 em um mês, avg R$42.5k - Concessão de Penduricalho
