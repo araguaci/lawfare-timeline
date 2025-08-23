@@ -28,11 +28,11 @@ const include = [
   
     '/censura/',
   
-    '/escandalos/',
+    '/justica/',
   
     '/bancos/',
   
-    '/justica/',
+    '/escandalos/',
   
     '/impunidade/',
   

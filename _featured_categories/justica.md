@@ -5,5 +5,6 @@ title: Justiça ⚖️
 slug: justica
 sidebar: true
 description: >
- ⚖️ Análise de 37 casos de corrupção no Judiciário (1992-2025) revela padrões de venda de sentenças e nepotismo, com prejuízos bilionários em estados como BA e MS. Desembargadores estão envolvidos em 70% dos casos. Falhas na accountability exigem reformas urgentes para restaurar a integridade.
+ ⚖️ A linha do tempo revela que, entre 1992 e 2025, o Judiciário brasileiro enfrentou dezenas de casos emblemáticos de corrupção, nepotismo e venda de sentenças. Desembargadores aparecem em 70% dos escândalos, com prejuízos bilionários em estados como Bahia e Mato Grosso do Sul. O padrão recorrente de impunidade e fraudes compromete a confiança pública, demonstrando a urgência de reformas para restaurar a integridade e accountability do sistema judicial.
+
 ---
