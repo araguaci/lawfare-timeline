@@ -68,7 +68,7 @@ aside {
 
 #sidebar .profile-wrapper {
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -185,6 +185,11 @@ section,
 
 #sidebar ul li.nav-item .nav-link:hover{
   background-color: var(--bs-body-color);
+}
+
+#sidebar ul li.nav-item {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
 }
 
 #sidebar ul li.nav-item:not(:first-child) {

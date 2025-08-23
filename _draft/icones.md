@@ -56,8 +56,6 @@ Aqui estão as melhores opções em Font Awesome, com suas justificativas:
 
 ****
 
-Aqui estão algumas sugestões de ícones (usando emojis) para enriquecer tópicos em um gráfico Mermaid mindmap:
-
 - 🟥 Crise, bloqueio, alerta, conflito
 - ⚖️ Justiça, decisão judicial, tribunal, STF
 - 🇧🇷 Brasil, contexto nacional
@@ -91,36 +89,6 @@ Aqui estão algumas sugestões de ícones (usando emojis) para enriquecer tópic
 - 🤝 Diplomacia, acordo  
 - 🔮 Futuro, previsão  
 - 🛡️ Proteção, defesa
-
-Estes ícones ajudam a diferenciar assuntos principais e tornam o mapa mental mais visual e fácil de memorizar.
-Você pode usar estes emojis diretamente nos nós do mindmap em Mermaid para tornar a visualização mais intuitiva!
-
-*** 
-
-Aqui estão sugestões de ícones FontAwesome (em formato class) para eventos de Crise Diplomática e temas relacionados:
-
-- Crise Diplomática: `fa-solid fa-handshake-slash`
-- Bloqueio/Sanção/Estrangulamento: `fa-solid fa-ban`
-- Justiça/Decisão Judicial: `fa-solid fa-gavel`
-- Sanções Econômicas: `fa-solid fa-dollar-sign`
-- Cancelamento de Visto: `fa-solid fa-passport`
-- Protesto/Declaração Pública: `fa-solid fa-bullhorn`
-- Relações Exteriores/Diplomacia: `fa-solid fa-globe`
-- Comércio Internacional/Tarifa: `fa-solid fa-percentage`
-- Moeda/Troca Cambial: `fa-solid fa-exchange-alt`
-- Aeronave/Avião Militar: `fa-solid fa-plane`
-- Navio/Navio Militar: `fa-solid fa-ship`
-- Reunião Política: `fa-solid fa-handshake`
-- Persona non grata: `fa-solid fa-user-slash`
-- Rússia: `fa-brands fa-rust` (não existe um específico para Rússia; use genéricos para países)
-- China: `fa-solid fa-dragon` (representativo)
-- BRICS: `fa-solid fa-globe` (genérico para blocos multilaterais)
-
-Esses ícones facilitam a visualização de cada evento no seu sistema ou infográfico!
-
-*** 
-
-Aqui estão sugestões de ícones (emojis) para representar Crise Diplomática e eventos relacionados:
 
 - 🌐 Diplomacia internacional  
 - 🤝 Reunião entre líderes  
@@ -251,6 +219,88 @@ mindmap
     🏛️⚖️👑 Separação de Poderes
 ```
 
+Aqui está uma sugestão de **ícones (emojis ou símbolos visuais)** para cada item do seu menu, com foco em **clareza, identificação rápida e apelo visual** — ideal para uso em **sites, blogs jurídicos, dashboards, infográficos ou interfaces** (como em Mermaid, HTML, Notion, etc).
+
+Os ícones foram escolhidos com base no **significado simbólico**, **reconhecimento universal** e **contexto temático** (jurídico, político, investigativo).
+
+---
+
+### 📋 **Ícones para os Itens do Menu**
+
+| Item do Menu | Ícone Recomendado | Justificativa |
+|--------------|--------------------|-------------|
+| **[HOME](/)** | 🏠 | Símbolo universal de início/página principal |
+| **[CRISE DIPLOMÁTICA](/crise-diplomatica/)** | 🌍⚔️ ou 🤝❌ | Globo + conflito ou aperto de mão rompido |
+| **[LAWFARE](/lawfare/)** | ⚖️💣 ou ⚖️🎯 | "Guerra jurídica": justiça usada como arma |
+| **[STF](/stf/)** | 🏛️ | Prédio do Supremo (Capitólio) — símbolo institucional |
+| **[TSE/USAID](/tse/)** | 🗳️🌐 | Urna eletrônica + globo: eleições e interferência externa |
+| **[DOSSIÊ](/dossie/)** | 📁🔍 | Pasta + lupa: investigação, coleta de provas |
+| **[CENSURA](/censura/)** | 🤐🚫 | Boca fechada com proibição: silenciamento |
+| **[ESCÂNDALOS](/escandalos/)** | 📢💥 | Alto-falante + explosão: revelação de escândalos |
+| **[BANCOS](/bancos/)** | 💰🏦 | Dinheiro + banco: sistema financeiro |
+| **[JUSTIÇA](/justica/)** | ⚖️ | Balança: símbolo universal da justiça |
+| **[IMPUNIDADE](/impunidade/)** | 🕳️👤 ou 🚔❌ | Pessoa desaparecendo / polícia com "não": crime sem punição |
+| **[INDECORO](/indecoro/)** | 🎩🔥 ou 🤡 | Chapéu em chamas / palhaço: conduta vergonhosa |
+| **[GILMAR MENDES](/decano/)** | 👴⚖️👓 | Velho, justiça, óculos — reconhecível e irônico |
+| **[EXTRAVAGÂNCIA](/extravagancia/)** | 💸🎭 | Dinheiro + máscara de teatro: luxo exagerado |
+| **[OPERAÇÕES](/operacoes/)** | 🕵️‍♂️📁 | Detetive + pasta: operações policiais/investigativas |
+| **[PENDURICALHOS](/penduricalhos/)** | 🎗️💎 | Medalhas/joias: símbolos de status e privilégios |
+| **[FELIPE NETO / USAID](/felipe-neto/)** | 🎥🌐 | Câmera + globo: influenciador com apoio externo |
+| **[LINHA DO TEMPO](/timeline/)** | 📅⏳ | Calendário + ampulheta: cronologia de eventos |
+| **[ESTUDOS](/book/)** | 📚🎓 | Livro + diploma: pesquisa e análise |
+| **[TAGS](/tags/)** | 🔖🏷️ | Etiquetas: categorização e marcação |
+| **[CATEGORIAS](/categories/)** | 📂🗂️ | Pastas organizadas: classificação temática |
+| **[SOBRE](/about/)** | ℹ️ | Informação: detalhes institucionais |
+
+---
+
+### ✅ **Exemplo de Menu com Ícones (Markdown)**
+
+```markdown
+- 🏠 [HOME](/)
+- 🌍⚔️ [CRISE DIPLOMÁTICA](/crise-diplomatica/)
+- ⚖️💣 [LAWFARE](/lawfare/)
+- 🏛️ [STF](/stf/)
+- 🗳️🌐 [TSE/USAID](/tse/)
+- 📁🔍 [DOSSIÊ](/dossie/)
+- 🤐🚫 [CENSURA](/censura/)
+- 📢💥 [ESCÂNDALOS](/escandalos/)
+- 💰🏦 [BANCOS](/bancos/)
+- ⚖️ [JUSTIÇA](/justica/)
+- 🕳️👤 [IMPUNIDADE](/impunidade/)
+- 🎩🔥 [INDECORO](/indecoro/)
+- 👴⚖️👓 [GILMAR MENDES](/decano/)
+- 💸🎭 [EXTRAVAGÂNCIA](/extravagancia/)
+- 🕵️‍♂️📁 [OPERAÇÕES](/operacoes/)
+- 🎗️💎 [PENDURICALHOS](/penduricalhos/)
+- 🎥🌐 [FELIPE NETO / USAID](/felipe-neto/)
+- 📅⏳ [LINHA DO TEMPO](/timeline/)
+- 📚🎓 [ESTUDOS](/book/)
+- 🔖 [TAGS](/tags/)
+- 📂🗂️ [CATEGORIAS](/categories/)
+- ℹ️ [SOBRE](/about/)
+```
+
+---
+
+### 💡 Dicas de Uso
+
+- **Consistência**: Use um estilo único (só emojis, ou com texto).
+- **Responsividade**: Em mobile, ícones ajudam na navegação rápida.
+- **Ironia moderada**: Em contextos críticos (ex: Gilmar, penduricalhos), o emoji pode ter tom satírico, mas use com cuidado.
+- **Alternativas em SVG**: Para sites profissionais, substitua emojis por ícones SVG (ex: Font Awesome, Feather Icons).
+
+---
+
+### 🎨 Sugestão de Tema por Cor (opcional)
+
+| Tema | Cor Sugerida (ícone de fundo) |
+|------|-------------------------------|
+| Crítica/Jurídico | ⚫ ou 🔴 |
+| Investigação | 🟨 ou 🟦 |
+| Neutralidade | ⚪ |
+| Alerta | 🟧 |
+
 ---
 
 ### 📎 Dicas de Uso
@@ -264,7 +314,141 @@ mindmap
 
 👉 Dica: você pode manter uma **coerência visual** usando sempre a mesma lib (Lucide ou FA), mas também dá pra misturar se precisar de ícones bem específicos.
 
-Quer que eu monte um **mini wireframe de cards** (com Tailwind + Lucide/FA) mostrando como ficariam os três temas lado a lado, cada um com seus ícones?
+*** 
+
+Aqui está uma **lista completa com ícones do Font Awesome 6 (Free)** recomendados para:
+
+1. ✅ **Menu do site**  
+2. ✅ **Princípios e direitos fundamentais**
+
+Todos os ícones são da **versão gratuita (Free)** do **Font Awesome 6**, compatíveis com `fa-solid`, `fa-regular` ou `fa-brands` quando aplicável. Você pode usá-los em HTML com a CDN oficial.
+
+---
+
+## 🔗 **1. Ícones Font Awesome para o Menu do Site**
+
+| Item do Menu | Ícone Font Awesome | Código HTML |
+|--------------|--------------------|------------|
+| **[HOME](/)** | `fa-house` | `<i class="fas fa-house"></i>` |
+| **[CRISE DIPLOMÁTICA](/crise-diplomatica/)** | `fa-handshake-slash` ou `fa-globe-americas` + `fa-triangle-exclamation` | `<i class="fas fa-handshake-slash"></i>` |
+| **[LAWFARE](/lawfare/)** | `fa-balance-scale-left` | `<i class="fas fa-balance-scale-left"></i>` *(justiça desequilibrada)* |
+| **[STF](/stf/)** | `fa-building-columns` | `<i class="fas fa-building-columns"></i>` *(Supremo como instituição)* |
+| **[TSE/USAID](/tse/)** | `fa-ballot` + `fa-earth-americas` | `<i class="fas fa-ballot fa-earth-americas"></i>` |
+| **[DOSSIÊ](/dossie/)** | `fa-folder-open` | `<i class="fas fa-folder-open"></i>` |
+| **[CENSURA](/censura/)** | `fa-comment-slash` | `<i class="fas fa-comment-slash"></i>` |
+| **[ESCÂNDALOS](/escandalos/)** | `fa-bullhorn` ou `fa-fire` | `<i class="fas fa-bullhorn"></i>` ou `<i class="fas fa-fire"></i>` |
+| **[BANCOS](/bancos/)** | `fa-building` ou `fa-landmark` | `<i class="fas fa-building"></i>` |
+| **[JUSTIÇA](/justica/)** | `fa-balance-scale` | `<i class="fas fa-balance-scale"></i>` |
+| **[IMPUNIDADE](/impunidade/)** | `fa-gavel` + `fa-xmark` | `<i class="fas fa-gavel"></i> <i class="fas fa-xmark"></i>` ou `fa-people-roof` *(proteção indevida)* |
+| **[INDECORO](/indecoro/)** | `fa-face-angry` ou `fa-triangle-exclamation` | `<i class="fas fa-triangle-exclamation"></i>` |
+| **[GILMAR MENDES](/decano/)** | `fa-user-tie` + `fa-crown` | `<i class="fas fa-user-tie"></i> <i class="fas fa-crown"></i>` *(irônico)* |
+| **[EXTRAVAGÂNCIA](/extravagancia/)** | `fa-gem` ou `fa-money-bill-wave` | `<i class="fas fa-gem"></i>` |
+| **[OPERAÇÕES](/operacoes/)** | `fa-magnifying-glass` ou `fa-shield-halved` | `<i class="fas fa-magnifying-glass"></i>` |
+| **[PENDURICALHOS](/penduricalhos/)** | `fa-medal` ou `fa-star` | `<i class="fas fa-medal"></i>` |
+| **[FELIPE NETO / USAID](/felipe-neto/)** | `fa-video` + `fa-earth-americas` | `<i class="fas fa-video fa-earth-americas"></i>` |
+| **[LINHA DO TEMPO](/timeline/)** | `fa-timeline` | `<i class="fas fa-timeline"></i>` *(disponível no FA6 Pro)*<br>Alternativa Free: `fa-clock-rotate-left` |
+| **[ESTUDOS](/book/)** | `fa-book` | `<i class="fas fa-book"></i>` |
+| **[TAGS](/tags/)** | `fa-tags` | `<i class="fas fa-tags"></i>` |
+| **[CATEGORIAS](/categories/)** | `fa-layer-group` | `<i class="fas fa-layer-group"></i>` |
+| **[SOBRE](/about/)** | `fa-circle-info` | `<i class="fas fa-circle-info"></i>` |
+
+> ✅ **Nota**: `fa-timeline` é Pro. Use `fa-clock-rotate-left` como alternativa gratuita.
+
+---
+
+## ⚖️ **2. Ícones Font Awesome para Direitos e Princípios Fundamentais**
+
+| Princípio / Direito | Ícone Font Awesome | Código HTML |
+|---------------------|--------------------|------------|
+| **Ampla Defesa** | `fa-scale-balanced` | `<i class="fas fa-scale-balanced"></i>` |
+| **Devido Processo Legal** | `fa-book-law` | `<i class="fas fa-book-law"></i>` |
+| **Dignidade da Pessoa Humana** | `fa-hands-holding` | `<i class="fas fa-hands-holding"></i>` |
+| **Direito ao Acesso à Informação** | `fa-magnifying-glass` | `<i class="fas fa-magnifying-glass"></i>` |
+| **Direito à Privacidade** | `fa-lock` | `<i class="fas fa-lock"></i>` |
+| **Direito à Propriedade** | `fa-house` | `<i class="fas fa-house"></i>` |
+| **Direito à Saúde** | `fa-house-medical` | `<i class="fas fa-house-medical"></i>` |
+| **Direitos Indígenas** | `fa-people-group` | `<i class="fas fa-people-group"></i>` |
+| **Duração Razoável do Processo** | `fa-hourglass-half` | `<i class="fas fa-hourglass-half"></i>` |
+| **Imparcialidade** | `fa-balance-scale` | `<i class="fas fa-balance-scale"></i>` |
+| **Imparcialidade Judicial** | `fa-jedi` *(metafórico)* ou `fa-scale-balanced` | `<i class="fas fa-scale-balanced"></i>` |
+| **Imparcialidade do Juiz** | `fa-user-judge` | `<i class="fas fa-user-judge"></i>` |
+| **Impessoalidade** | `fa-mask` ou `fa-user-secret` | `<i class="fas fa-user-secret"></i>` |
+| **Imunidade Parlamentar** | `fa-shield-alt` | `<i class="fas fa-shield-alt"></i>` |
+| **Imunidade de Opinião** | `fa-comment-medical` | `<i class="fas fa-comment-medical"></i>` |
+| **Individualização das Penas** | `fa-id-card` | `<i class="fas fa-id-card"></i>` |
+| **Inviolabilidade do Domicílio** | `fa-house-lock` | `<i class="fas fa-house-lock"></i>` |
+| **Juiz Natural** | `fa-judge` | `<i class="fas fa-user-judge"></i>` |
+| **Legalidade** | `fa-scale-balanced` | `<i class="fas fa-scale-balanced"></i>` |
+| **Liberdade Artística** | `fa-palette` | `<i class="fas fa-palette"></i>` |
+| **Liberdade Religiosa** | `fa-church` ou `fa-mosque` | `<i class="fas fa-church"></i>` |
+| **Liberdade de Associação** | `fa-people-group` | `<i class="fas fa-people-group"></i>` |
+| **Liberdade de Expressão** | `fa-comment-dots` | `<i class="fas fa-comment-dots"></i>` |
+| **Liberdade de Imprensa** | `fa-newspaper` | `<i class="fas fa-newspaper"></i>` |
+| **Liberdade de Locomoção** | `fa-walkie-talkie` ou `fa-person-walking` | `<i class="fas fa-person-walking"></i>` |
+| **Moralidade** | `fa-heart-circle-check` | `<i class="fas fa-heart-circle-check"></i>` |
+| **Não Censura Prévia** | `fa-comment-slash` | `<i class="fas fa-comment-slash"></i>` |
+| **Prerrogativas Parlamentares** | `fa-crown` | `<i class="fas fa-crown"></i>` *(irônico/metafórico)* |
+| **Presunção de Inocência** | `fa-person-circle-check` | `<i class="fas fa-person-circle-check"></i>` |
+| **Princípio Acusatório** | `fa-scale-balanced` + `fa-user` | `<i class="fas fa-scale-balanced"></i>` |
+| **Princípio do mínimo existencial** | `fa-bread-slice` | `<i class="fas fa-bread-slice"></i>` |
+| **Proibição de Juiz de Exceção** | `fa-user-secret` + `fa-ban` | `<i class="fas fa-user-secret"></i> <i class="fas fa-ban"></i>` |
+| **Proibição de Tribunal de Exceção** | `fa-building` + `fa-ban` | `<i class="fas fa-building"></i> <i class="fas fa-ban"></i>` |
+| **Proibição de tratamento desumano ou degradante** | `fa-handcuffs` + `fa-ban` | `<i class="fas fa-handcuffs"></i> <i class="fas fa-ban"></i>` |
+| **Proporcionalidade** | `fa-ruler-combined` | `<i class="fas fa-ruler-combined"></i>` |
+| **Publicidade dos Atos Processuais** | `fa-bullhorn` | `<i class="fas fa-bullhorn"></i>` |
+| **Razoabilidade** | `fa-brain` | `<i class="fas fa-brain"></i>` |
+| **Razoável Duração do Processo** | `fa-hourglass-end` | `<i class="fas fa-hourglass-end"></i>` |
+| **Segurança Jurídica** | `fa-shield-halved` | `<i class="fas fa-shield-halved"></i>` |
+| **Separação de Poderes** | `fa-building-group` | `<i class="fas fa-building-group"></i>` |
+| **Sistema Acusatório** | `fa-scale-balanced` | `<i class="fas fa-scale-balanced"></i>` |
+
+> 💡 **Dica**: Use `fa-stack` para combinar ícones (ex: casa + cadeado = `fa-house-lock`).
+
+---
+
+## 📦 Como usar no seu site
+
+Adicione a CDN do Font Awesome no `<head>`:
+
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+```
+
+Exemplo de item do menu:
+
+```html
+<a href="/censura/">
+  <i class="fas fa-comment-slash"></i> CENSURA
+</a>
+```
+
+---
+
+## 🎨 Sugestão de Estilo CSS (opcional)
+
+```css
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  color: #2c3e50;
+  text-decoration: none;
+  border-radius: 8px;
+}
+.menu-item:hover {
+  background: #f8f9fa;
+}
+.menu-item i {
+  color: #3498db;
+  width: 24px;
+  text-align: center;
+}
+```
+
+***
+
+# Um **mini wireframe de cards** (com Tailwind + Lucide/FA) mostrando como ficariam os três temas lado a lado, cada um com seus ícones?
 
 ----
 

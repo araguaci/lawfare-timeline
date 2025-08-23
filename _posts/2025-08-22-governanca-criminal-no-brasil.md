@@ -1,5 +1,5 @@
 ---
-title: Governança criminal no Brasil
+title: Governança Criminal no Brasil, 26% da população vive sob regras de facções
 description: "No Brasil, 26% da população (mais de 50 milhões) vive sob regras de facções, o maior índice da América Latina. O estudo revela avanço territorial dessas organizações, afetando segurança, serviços públicos e vida comunitária."
 date: 2025-08-22T13:33:11.383Z
 image: 
