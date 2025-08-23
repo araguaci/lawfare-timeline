@@ -1,0 +1,37 @@
+---
+layout: post
+title: Luiz Fux - Vem ao lume notícias de atos preparatórios de terrorismos contra o STF...
+categories: indecoro
+description: Frase dita por Luiz Fux em defendendo inquérito de fake news e Moraes, alegando sigilo necessário
+tags: ['indecoro', 'polêmica', 'ameaça terrorismo']
+faicon: fas fa-thumbs-down
+image:
+  path: "/assets/solid/bomb.svg"
+---
+
+> Vem ao lume notícias de atos preparatórios de terrorismos contra o STF ~~Luiz Fux
+{: .prompt-danger }
+
+## Detalhes
+- **Data**: 2022-05-01
+- **Ministro**: Luiz Fux
+- **Frase**: Vem ao lume notícias de atos preparatórios de terrorismos contra o STF
+- **Local**: defendendo inquérito de fake news e Moraes, alegando sigilo necessário
+- **Gravidade**: **alta** <i class="fas fa-bomb"></i>
+
+- **Marcadores**: 
+
+   - [polêmica](/tags/polêmica/)
+
+   - [ameaça-terrorismo](/tags/ameaça-terrorismo/)
+- **Fontes**:
+  - [O Globo](O Globo)
+  - [Gazeta do Povo](Gazeta do Povo)
+
+## Analise por IA
+- [🤖 Investigar com IA](https://www.perplexity.ai/search?q=%22Luiz%20Fux%22%2BVem%20ao%20lume%20not%C3%ADcias%20de%20atos%20preparat%C3%B3rios%20de%20terrorismos%20contra%20o%20STF%2Bdefendendo%20inqu%C3%A9rito%20de%20fake%20news%20e%20Moraes%2C%20alegando%20sigilo%20necess%C3%A1rio)
+
+## Links Relacionados
+- [🌐🔍 Busca no Google para o título e descrição](https://www.google.com/search?q=%22Luiz%20Fux%22%2BVem%20ao%20lume%20not%C3%ADcias%20de%20atos%20preparat%C3%B3rios%20de%20terrorismos%20contra%20o%20STF%2Bdefendendo%20inqu%C3%A9rito%20de%20fake%20news%20e%20Moraes%2C%20alegando%20sigilo%20necess%C3%A1rio)
+- [📖🔍 Busca na Wikipedia para o título e descrição](https://pt.wikipedia.org/w/index.php?search=%22Luiz%20Fux%22%2BVem%20ao%20lume%20not%C3%ADcias%20de%20atos%20preparat%C3%B3rios%20de%20terrorismos%20contra%20o%20STF%2Bdefendendo%20inqu%C3%A9rito%20de%20fake%20news%20e%20Moraes%2C%20alegando%20sigilo%20necess%C3%A1rio)
+
