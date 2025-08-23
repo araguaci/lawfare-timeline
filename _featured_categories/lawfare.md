@@ -5,14 +5,6 @@ title: Lawfare 📜
 slug: lawfare
 sidebar: true
 description: >
-  📜 Análise de 38 artigos aponta um padrão de intervenções do STF e TSE que ameaçam a democracia desde 2018. Casos de censura, abuso de autoridade e decisões unilaterais violam a Constituição, erodem a confiança pública e geram polarização, exigindo reformas e accountability para evitar um risco autoritário.
-
-
-
-
-
-
-
-
+  📜 Lawfare é o uso estratégico do sistema legal para fins políticos, sob aparência de legalidade e seletividade. Intensificado no Brasil e no mundo, envolve atores estatais e privados, ampliando-se com IA e moedas digitais. Inicia com censura e abusos de autoridade, mina a Constituição e a confiança pública, polariza a sociedade e pode culminar em regime autoritário.
 
 ---

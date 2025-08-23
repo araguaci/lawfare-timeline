@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Soltura Indevida por Quantidade Pequena de Droga"
+title: "Soltura Indevida por Quantidade Pequena de Droga (200 kg cocaína)"
 categories: justica
 description: > 
   "Juiz libera homem preso com 200 kg de cocaína considerando quantidade pequena e aplicando tráfico privilegiado."

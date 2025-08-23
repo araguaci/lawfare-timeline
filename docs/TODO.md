@@ -13,6 +13,14 @@ O portal usa as investigações dos jornalistas investigativos @david_agape_ e @
 
 Incluo na conversa algumas pessoas cujo trabalho e opinião valorizo muito. Forte abraço. 🤝
 
+## Lawfare
+
+-🏛️ Lawfare - O Quê, Porquê, Quem, Onde, Quando
+🔗 https://tinyurl.com/lawfare-5w
+
+- 💥 Governança Criminal, 26% do BR vive sob regras de facções
+🔗 https://tinyurl.com/governanca-criminal
+
 ## Linhas de Tempo Montadas:
 
 -🏛️ Resumo Crise diplomática Brasil-EUA 📜
