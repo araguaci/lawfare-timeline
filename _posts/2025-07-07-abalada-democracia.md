@@ -1,5 +1,5 @@
 ---
-title: Abalada Democracia
+title: Abalada Democracia 💥✨
 description: "Análise da instabilidade democrática no Brasil: uma linha do tempo de escândalos como Lava Jato, fraudes no INSS e a pior nota do país no Índice de Percepção da Corrupção de 2024."
 date: 2025-07-07T07:07:07.222Z
 image:

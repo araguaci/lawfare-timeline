@@ -1,5 +1,5 @@
 ---
-title: Democracia Abalada ⚖️
+title: Democracia Abalada ⚖️✨
 description: >
     "Compilação de 38 artigos (2018-2025) sobre controvérsias no STF/TSE: abusos de autoridade, censura judicial, interferências eleitorais e decisões inconstitucionais. "
 date: 2025-06-13T22:22:22.222Z

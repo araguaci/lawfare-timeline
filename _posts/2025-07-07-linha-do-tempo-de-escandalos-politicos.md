@@ -1,5 +1,5 @@
 ---
-title: Linha do Tempo de Escândalos Políticos
+title: Linha do Tempo de Escândalos Políticos 💥✨
 description: "Uma retrospectiva dos casos que revelaram as falhas sistêmicas nos poderes político, financeiro e judiciário do país."
 date: 2025-07-07T07:07:07.222Z
 image:

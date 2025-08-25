@@ -13,6 +13,38 @@ O portal usa as investigações dos jornalistas investigativos @david_agape_ e @
 
 Incluo na conversa algumas pessoas cujo trabalho e opinião valorizo muito. Forte abraço. 🤝
 
+## Aplicações
+
+-🤐🕵️‍♂️ Censura no Brasil (2019-2025) 🌐
+🔗 https://tinyurl.com/abusosupremo
+
+- https://tinyurl.com/abusosupremo
+- https://tinyurl.com/lawfare-5w
+- https://tinyurl.com/guiana-crime-transnacional
+- https://tinyurl.com/crime-transnacionalNC
+- https://tinyurl.com/crime-transnacional
+- https://tinyurl.com/usaid-felipe-neto-mapa
+- https://tinyurl.com/usaid-felipe-neto
+- https://tinyurl.com/crise-diplomatica-stf-x-eua
+- https://tinyurl.com/crise-diplomatica-resumo
+- https://tinyurl.com/governanca-criminal
+- https://tinyurl.com/vazatoga-mapa
+- https://tinyurl.com/vazatoga2
+- https://tinyurl.com/linhadetempo-impunes
+- https://tinyurl.com/linhadetempo-jus
+- https://tinyurl.com/linhadetempo-fin
+- https://tinyurl.com/linhadetempo-gov
+- https://tinyurl.com/linhadetempo-dossie
+- https://tinyurl.com/linhadetempo-violador
+- https://tinyurl.com/linhadetempo-tse
+- https://tinyurl.com/linhadetempo-stf
+- https://tinyurl.com/linhadetempo-lawfare
+- https://tinyurl.com/crise-diplomatica
+- https://tinyurl.com/supersalarios-ia
+- https://tinyurl.com/privilegio-ia
+
+
+
 ## Lawfare
 
 -🏛️ Lawfare - O Quê, Porquê, Quem, Onde, Quando

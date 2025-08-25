@@ -1,5 +1,5 @@
 ---
-title: Painel da Corrupção no Brasil
+title: Painel da Corrupção no Brasil ✨
 description: "Uma visão geral dos dados de escândalos desde a década de 1980."
 date: 2025-08-17T01:15:46.234Z
 image:

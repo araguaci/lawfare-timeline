@@ -1,5 +1,5 @@
 ---
-title: Abusos Federais
+title: Abusos Federais 🔥✨
 description: "Democracia abalada... Democracia usurpada... Democracia fraudada...Democracia NÃO EXISTE COM CENSURA!"
 date: 2025-07-07T07:07:07.222Z
 image:
