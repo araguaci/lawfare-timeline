@@ -5,7 +5,7 @@ categories: crise-diplomatica
 description: > 
   "O governo brasileiro enviou documento contestando acusações de práticas discriminatórias contra empresas americanas, defendendo regulação digital, sistema do PIX, e justificando regras para big techs, alegando não discriminar comércio dos EUA."
 faicon: fa-file-alt
-tags: ['liberdade-economica', 'devido-processo-legal', 'livre-concorrencia', 'governo-do-brasil', 'ustr', 'big-techs-americanas', 'gravidade-alta']
+tags: ['liberdade-economica', 'devido-processo-legal', 'livre-concorrencia', 'governo-do-brasil', 'ustr', 'big-techs-americanas', 'gravidade-alta', 'big-techs']
 image:
   path: "/assets/solid/file-alt.svg"
 ---

@@ -5,7 +5,7 @@ description: >
 date: 2025-06-13T22:22:22.222Z
 image:
   path: /assets/img/lawfare2.jpeg
-tags: ['estudos', 'eleicoes', 'stf', 'gilmar-mendes', 'lide', 'projetos', 'justica', 'tse']
+tags: ['estudos', 'eleicoes', 'stf', 'gilmar-mendes', 'lide', 'projetos', 'justica', 'tse', 'big-techs']
 categories: estudos
 ---
 

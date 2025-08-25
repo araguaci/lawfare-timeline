@@ -5,7 +5,7 @@ description: >
 date: 2025-08-11T00:32:28.544Z
 image:
   path: /assets/img/lawfare5.jpeg
-tags: ['censura', 'estudos', 'usaid', 'cepps', 'justica', 'corrupcao', 'tse', 'perseguicao-politica']
+tags: ['censura', 'estudos', 'usaid', 'cepps', 'justica', 'corrupcao', 'tse', 'perseguicao-politica', 'big-techs', 'plataformas']
 categories: estudos
 ---
 

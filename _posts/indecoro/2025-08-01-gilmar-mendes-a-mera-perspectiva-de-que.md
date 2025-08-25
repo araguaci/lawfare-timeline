@@ -3,7 +3,7 @@ layout: post
 title: Gilmar Mendes - A mera perspectiva de que elas [as big techs] possam vir a ter deveres triviais -- os mesmos que já são exigidos de todas as empresas que operam no Brasil -- despertou lobbies poderosos. Esses agentes reage
 categories: indecoro
 description: Frase dita por Gilmar Mendes em Sessão do STF
-tags: ['indecoro', 'indecoro', 'polêmica']
+tags: ['indecoro', 'indecoro', 'polêmica', 'liberdade de expressão', 'big-techs']
 faicon: fas fa-thumbs-down
 image:
   path: "/assets/solid/building.svg"

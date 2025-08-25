@@ -4,7 +4,7 @@ description: "Lawfare é o uso estratégico do sistema legal para fins político
 date: 2025-08-20T04:53:29.881Z
 image:
   path: /assets/img/lawfare.png
-tags: ['censura', estudos, lawfare, usaid, tse, stf]
+tags: ['censura', estudos, lawfare, usaid, tse, stf, 'big-techs']
 categories: [estudos]
 mermaid: true
 pin: true

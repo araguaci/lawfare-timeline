@@ -7,7 +7,7 @@ description: >
 faicon: fa-solid fa-gavel
 tags: ['venda_de_sentencas', 'corrupcao_judiciaria', 'lavagem_de_dinheiro', 'ivo-de-almeida', 'filho-do-desembargador', 'advogado-luiz-pires-moraes-neto', 'sociedade', 'estado-de-sao-paulo', 'denuncia-formal-por-corrupcao', 'afastamento-do-cargo', 'investigacao-em-curso', 'gravidade-alta', 'judiciario']
 image:
-  path: "/assets/solid/solid gavel.svg"
+  path: "/assets/solid/gavel.svg"
 ---
 
 # Ação em 2025-06-16 com violações, envolvidos, fontes e gravidade alta
@@ -20,7 +20,7 @@ image:
 - **Ano**: 2025
 - **Resumo**: Desembargador Ivo de Almeida é denunciado pela PGR por corrupção, lavagem de dinheiro e associação criminosa.
 - **Setor**: Judiciario
-- **Gravidade**: **alta** <i class="fas fa-solid fa-gavel"></i>
+- **Gravidade**: **alta** <i class="fas fa-gavel"></i>
 - **Localidade**: Estado: São Paulo, Abrangência: estadual
 - **Contexto Político**: Governo: Tarcísio de Freitas
 - **Dados Financeiros**: Valor Estimado: R$ 641,000, Montante de propina identificada em investigações

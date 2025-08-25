@@ -7,7 +7,7 @@ description: >
 faicon: fa-solid fa-user-secret
 tags: ['prisao_domiciliar', 'crime_organizado', 'corrupcao', 'cnj', 'luiz-fernando-lima', 'ednaldo-freire-ferreira-dada', 'joao-bosco-oliveira-seixas', 'sociedade-baiana', 'vitimas-da-organizacao-criminosa', 'fuga-de-lider-criminoso', 'afastamento-do-desembargador', 'investigacao-formal-pelo-cnj', 'gravidade-alta', 'judiciario']
 image:
-  path: "/assets/solid/solid user-secret.svg"
+  path: "/assets/solid/user-secret.svg"
 ---
 
 # Ação em 2024-11-24 com violações, envolvidos, fontes e gravidade alta
@@ -20,7 +20,7 @@ image:
 - **Ano**: 2024
 - **Resumo**: Luiz Fernando Lima aposentado após conceder prisão domiciliar a Ednaldo Ferreira, líder de organização criminosa.
 - **Setor**: Judiciario
-- **Gravidade**: **alta** <i class="fas fa-solid fa-user-secret"></i>
+- **Gravidade**: **alta** <i class="fas fa-user-secret"></i>
 - **Localidade**: Estado: Bahia, Abrangência: estadual
 - **Contexto Político**: Governo: Jerônimo Rodrigues
 - **Dados Financeiros**: Valor Estimado: R$ 0, Prejuízos sociais e ausência de bloqueio patrimonial reportado.

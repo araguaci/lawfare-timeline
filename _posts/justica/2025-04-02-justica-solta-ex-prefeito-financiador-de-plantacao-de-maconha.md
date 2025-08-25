@@ -7,7 +7,7 @@ description: >
 faicon: fa-solid fa-leaf
 tags: ['plantacao_de_maconha', 'corrupcao', 'lavagem_de_dinheiro', 'desvio_de_verba_publica', 'sergio-garcia-nobrega', 'juiz-savio-jose-de-amorim-santos', 'outros-10-envolvidos', 'sociedade-de-vista-serrana', 'administracao-publica', 'soltura-dos-acusados', 'operacoes-policiais', 'apuracao-do-desvio-de-recursos', 'gravidade-alta', 'judiciario']
 image:
-  path: "/assets/solid/solid leaf.svg"
+  path: "/assets/solid/leaf.svg"
 ---
 
 # Ação em 2025-04-02 com violações, envolvidos, fontes e gravidade alta
@@ -20,7 +20,7 @@ image:
 - **Ano**: 2025
 - **Resumo**: Ex-prefeito de Vista Serrana, detido por financiar plantação de 60 mil pés de maconha com dinheiro público, foi solto por decisão judicial.
 - **Setor**: Judiciario
-- **Gravidade**: **alta** <i class="fas fa-solid fa-leaf"></i>
+- **Gravidade**: **alta** <i class="fas fa-leaf"></i>
 - **Localidade**: Estado: Paraíba, Abrangência: municipal
 - **Contexto Político**: Governo: João Azevêdo
 - **Dados Financeiros**: Valor Estimado: R$ 13,000,000, Valor estimado pelo potencial de lucro da plantação financiada com recursos públicos.

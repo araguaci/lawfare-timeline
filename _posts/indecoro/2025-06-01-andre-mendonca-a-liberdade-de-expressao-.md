@@ -3,7 +3,7 @@ layout: post
 title: André Mendonça - A liberdade de expressão nas redes sociais é fundamental para a publicação de informações que responsabilizem instituições públicas poderosas, incluindo governos, elites políticas e plataformas digitais...
 categories: indecoro
 description: Frase dita por André Mendonça em sobre responsabilidade de big techs
-tags: ['indecoro', 'polêmica', 'liberdade de expressão']
+tags: ['indecoro', 'polêmica', 'liberdade de expressão', 'big-techs']
 faicon: fas fa-thumbs-down
 image:
   path: "/assets/solid/comment.svg"

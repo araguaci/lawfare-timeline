@@ -7,7 +7,7 @@ description: >
 faicon: fa-solid fa-user-secret
 tags: ['trafico_de_drogas', 'pcc', 'habeas_corpus', 'crime_organizado', 'claudemir-antonio-bernardino-da-silva-guinho', '15-condenados', 'ministro-edson-fachin', 'sociedade', 'comunidades-de-campinas', 'estado-de-sao-paulo', 'liberacao-dos-reus', 'fortalecimento-do-pcc-local', 'prejuizo-para-operacoes-policiais', 'gravidade-alta', 'judiciario']
 image:
-  path: "/assets/solid/solid user-secret.svg"
+  path: "/assets/solid/user-secret.svg"
 ---
 
 # Ação em 2024-11-19 com violações, envolvidos, fontes e gravidade alta
@@ -20,7 +20,7 @@ image:
 - **Ano**: 2024
 - **Resumo**: STF concede habeas corpus para 15 condenados por tráfico de drogas ligados ao PCC em Campinas.
 - **Setor**: Judiciario
-- **Gravidade**: **alta** <i class="fas fa-solid fa-user-secret"></i>
+- **Gravidade**: **alta** <i class="fas fa-user-secret"></i>
 - **Localidade**: Estado: São Paulo, Abrangência: municipal
 - **Contexto Político**: Governo: Tarcísio de Freitas
 - **Dados Financeiros**: Valor Estimado: R$ 308,000, Dinheiro apreendido com líder do grupo

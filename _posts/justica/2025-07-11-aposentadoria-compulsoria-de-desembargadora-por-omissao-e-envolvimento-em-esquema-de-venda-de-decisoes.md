@@ -7,7 +7,7 @@ description: >
 faicon: fa-solid fa-gavel
 tags: ['operacao_faroeste', 'venda_de_sentencas', 'grilagem_de_terras', 'cnj', 'corrupcao', 'cassinelza-da-costa-santos-lopes', 'sergio-humberto-de-quadros-sampaio', 'maria-do-socorro-barreto-santiago', 'sandra-ines', 'proprietarios-legitimos-de-terras', 'estado-da-bahia', 'sociedade-baiana', 'afastamento-e-aposentadoria-de-magistrados', 'prisoes-preventivas', 'investigacoes-federais-em-curso', 'gravidade-alta', 'judiciario']
 image:
-  path: "/assets/solid/solid gavel.svg"
+  path: "/assets/solid/gavel.svg"
 ---
 
 # Ação em 2025-07-11 com violações, envolvidos, fontes e gravidade alta
@@ -20,7 +20,7 @@ image:
 - **Ano**: 2025
 - **Resumo**: Desembargadora Cassinelza Lopes é aposentada compulsoriamente após investigação da Operação Faroeste por omissão e possível favorecimento em venda de decisões.
 - **Setor**: Judiciario
-- **Gravidade**: **alta** <i class="fas fa-solid fa-gavel"></i>
+- **Gravidade**: **alta** <i class="fas fa-gavel"></i>
 - **Localidade**: Estado: Bahia, Abrangência: estadual
 - **Contexto Político**: Governo: Jerônimo Rodrigues
 - **Dados Financeiros**: Valor Estimado: R$ 1,000,000,000, Estimativa bilionária de enriquecimento ilícito e legalização de terras.

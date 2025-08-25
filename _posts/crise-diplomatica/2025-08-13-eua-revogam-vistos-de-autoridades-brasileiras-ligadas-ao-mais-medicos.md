@@ -5,7 +5,7 @@ categories: crise-diplomatica
 description: > 
   "Em retaliação a autoridades brasileiras, o governo Trump revogou vistos de brasileiros ligados ao programa Mais Médicos, intensificando a pressão diplomática em meio a controvérsias sobre direitos humanos e regulação de big techs."
 faicon: fa-passport
-tags: ['devido-processo-legal', 'liberdade-economica', 'governo-dos-eua', 'governo-do-brasil', 'autoridades-brasileiras', 'gravidade-alta', 'sancoes', 'judicial', 'bancos', 'crise-diplomatica']
+tags: ['devido-processo-legal', 'liberdade-economica', 'governo-dos-eua', 'governo-do-brasil', 'autoridades-brasileiras', 'gravidade-alta', 'sancoes', 'judicial', 'bancos', 'crise-diplomatica', 'big-techs']
 image:
   path: "/assets/solid/passport.svg"
 ---

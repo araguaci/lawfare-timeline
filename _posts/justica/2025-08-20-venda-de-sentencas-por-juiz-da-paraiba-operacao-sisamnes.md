@@ -7,7 +7,7 @@ description: >
 faicon: fa-solid fa-gavel
 tags: ['corrupcao', 'venda_de_sentencas', 'lavagem_de_dinheiro', 'organizacao_criminosa', 'ivan-lucio-amarante', 'andreson-goncalves-de-oliveira', 'sociedade-paraibana', 'justica-estadual', 'afastamento-do-juiz-pelo-cnj', 'indiciamento-criminal', 'possibilidade-de-denuncia-judicial', 'gravidade-alta', 'judiciario']
 image:
-  path: "/assets/solid/solid gavel.svg"
+  path: "/assets/solid/gavel.svg"
 ---
 
 # Ação em 2025-08-20 com violações, envolvidos, fontes e gravidade alta
@@ -20,7 +20,7 @@ image:
 - **Ano**: 2025
 - **Resumo**: Juiz Ivan Lúcio Amarante recebeu R$ 6 milhões em propina por venda de sentenças judiciárias.
 - **Setor**: Judiciario
-- **Gravidade**: **alta** <i class="fas fa-solid fa-gavel"></i>
+- **Gravidade**: **alta** <i class="fas fa-gavel"></i>
 - **Localidade**: Estado: Paraíba, Abrangência: estadual
 - **Contexto Político**: Governo: João Azevêdo
 - **Dados Financeiros**: Valor Estimado: R$ 6,000,000, Total de propinas identificadas
