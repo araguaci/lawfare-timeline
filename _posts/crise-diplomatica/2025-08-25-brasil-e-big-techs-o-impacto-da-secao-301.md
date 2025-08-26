@@ -18,7 +18,7 @@ categories: crise-diplomatica
 
 ## 🧭 Resumo 
 
-O avanço da regulação digital brasileira, notadamente após decisões do STF e novas normas da Anatel, gerou forte reação de grandes plataformas digitais dos EUA, que solicitaram ao USTR investigação sob a Seção 301 por barreiras e hostilidade ao setor tech. Com risco real de retaliações às exportações brasileiras e aumento da insegurança jurídica, destacam-se a importância de diálogo multilateral, revisão normativa e aproximação regulatória internacional para evitar danos econômicos e manter o acesso do país à inovação e investimento estrangeiro.
+O avanço da regulação digital brasileira, notadamente após decisões do STF e novas normas da Anatel, gerou forte reação de grandes plataformas digitais dos EUA, que solicitaram ao USTR investigação sob a [Seção 301](/posts/crise-brasil-eua-inq-4781-vaza-toga-e-sancoes/#-o-que-é-a-seção-301) por barreiras e hostilidade ao setor tech. Com risco real de retaliações às exportações brasileiras e aumento da insegurança jurídica, destacam-se a importância de diálogo multilateral, revisão normativa e aproximação regulatória internacional para evitar danos econômicos e manter o acesso do país à inovação e investimento estrangeiro.
 
 ***
 
@@ -33,7 +33,7 @@ O avanço da regulação digital brasileira, notadamente após decisões do STF 
 **Palavras-chave:**  
   - Soberania
   - Big Techs
-  - Seção 301
+  - [Seção 301](/posts/crise-brasil-eua-inq-4781-vaza-toga-e-sancoes/#-o-que-é-a-seção-301)
   - Responsabilidade civil
   - Tributação digital
   - Marco Civil
@@ -46,7 +46,7 @@ O avanço da regulação digital brasileira, notadamente após decisões do STF 
 
 ## 🏁 Introdução
 
-O Brasil é alvo de pressão internacional após gigantes digitais, alegando ambiente regulatório hostil, pedirem investigação comercial ao USTR via Seção 301. A crescente responsabilização de plataformas, a transferência de obrigações por agências reguladoras e planos tributários intensificam o debate sobre soberania digital, inovação e segurança jurídica, em meio a risco concreto de um conflito comercial com Washington.
+O Brasil é alvo de pressão internacional após gigantes digitais, alegando ambiente regulatório hostil, pedirem investigação comercial ao USTR via [Seção 301](/posts/crise-brasil-eua-inq-4781-vaza-toga-e-sancoes/#-o-que-é-a-seção-301). A crescente responsabilização de plataformas, a transferência de obrigações por agências reguladoras e planos tributários intensificam o debate sobre soberania digital, inovação e segurança jurídica, em meio a risco concreto de um conflito comercial com Washington.
 
 ***
 
@@ -56,7 +56,7 @@ O Brasil é alvo de pressão internacional após gigantes digitais, alegando amb
 - 🏛️ O STF mudou o Marco Civil da Internet (art. 19), permitindo responsabilização extrajudicial das plataformas, aumentando o risco de sanções e ampliações de compliance.[^5][^6]
 - 🏪 A Anatel exige que marketplaces fiscalizem rigorosamente produtos de terceiros, sob risco de multas e bloqueios.[^7][^8]
 - 💸 Em andamento, projetos do Executivo e Legislativo ampliam a carga tributária digital e tensionam o ambiente de inovação nacional.[^3][^9]
-- 🇺🇸 O processo da Seção 301 pode escalar para sanções tarifárias, incertezas institucionais e restrições à competitividade global do Brasil.[^2][^10]
+- 🇺🇸 O processo da [Seção 301](/posts/crise-brasil-eua-inq-4781-vaza-toga-e-sancoes/#-o-que-é-a-seção-301) pode escalar para sanções tarifárias, incertezas institucionais e restrições à competitividade global do Brasil.[^2][^10]
 
 ***
 
@@ -77,7 +77,7 @@ O Brasil é alvo de pressão internacional após gigantes digitais, alegando amb
 - Impulso pela soberania digital, proteção de dados e combate à desinformação.
 - Insuficiência de canais para consulta pública e diálogo estável com agentes disruptivos.
 - Divergências entre as expectativas de uniformização jurídica e inovação das big techs e o papel do Estado neste ambiente.
-- Resistência do ambiente internacional – via Seção 301 – à ruptura de modelos de autorregulação e isenções relacionadas.
+- Resistência do ambiente internacional – via [Seção 301](/posts/crise-brasil-eua-inq-4781-vaza-toga-e-sancoes/#-o-que-é-a-seção-301) – à ruptura de modelos de autorregulação e isenções relacionadas.
 
 ***
 
@@ -151,7 +151,7 @@ flowchart LR
 
 ### 💣 Quais cenários de retaliação via Seção 301 podem afetar exportações brasileiras
 
-- Caso os EUA concluam pela procedência da denúncia das big techs sob a Seção 301, os cenários de retaliação mais prováveis incluem:
+- Caso os EUA concluam pela procedência da denúncia das big techs sob a [Seção 301](/posts/crise-brasil-eua-inq-4781-vaza-toga-e-sancoes/#-o-que-é-a-seção-301), os cenários de retaliação mais prováveis incluem:
   - **Imposição de tarifas adicionais (sanções) sobre produtos brasileiros** exportados aos EUA, afetando desde commodities a manufaturados com grande valor agregado;
   - **Restrições à importação de bens específicos** ou bloqueio temporário de acordos setoriais, impactando setores como aço, alumínio, carne, café, etanol e até manufaturados têxteis;[^13][^14]
   - Pressão para mudança legislativa, inclusive condicionando acordos bilaterais de livre comércio ou preferências tarifárias à reversão de dispositivos legais considerados restritivos.[^13]
@@ -195,7 +195,7 @@ graph TB
 
 ### ⚠️ Análise de Riscos
 
-- **Comercial:** Possibilidade real de tarifas sobre exportações brasileiras devido à Seção 301.
+- **Comercial:** Possibilidade real de tarifas sobre exportações brasileiras devido à [Seção 301](/posts/crise-brasil-eua-inq-4781-vaza-toga-e-sancoes/#-o-que-é-a-seção-301).
 - **Jurídico:** Aumento da litigiosidade, com instabilidades no ambiente de negócios digitais.
 - **Tecnológico:** Risco de retirada de serviços, menos acesso a inovação e fuga de talentos.
 - **Político:** Tensão diplomática Brasil–EUA, com possível escalada para outros setores estratégicos.

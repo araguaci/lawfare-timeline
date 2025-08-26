@@ -21,24 +21,7 @@ Análise 5W2H do [dossiê](/posts/lawfare-a-guerra-silenciosa-que-destroi-democr
 ### **⚖️⚔️ O Quê? (What?)**
 **O quê é o Lawfare, segundo o documento.**
 
-```mermaid
-mindmap
-  root((O Quê? Definição e Táticas))
-    Definição
-      Guerra Jurídica do Século XXI
-      Uso da lei como arma política
-    Características
-      Disfarce de Legalidade
-      Seletividade Cirúrgica
-      Timing Político
-      Coordenação Institucional
-      O Processo como Punição
-    Táticas
-      Vazamentos Seletivos para Mídia
-      Prisões Preventivas Prolongadas
-      Lawfare Coletivo (Caso 8/1)
-      Criminalização Retroativa
-```
+![](/assets/img/oque-w1.png)
 
 O [dossiê](/posts/lawfare-a-guerra-silenciosa-que-destroi-democracias) define o Lawfare como a **guerra jurídica do século XXI**, uma estratégia que utiliza o sistema legal como uma arma para fins políticos, substituindo os meios militares tradicionais. Não se trata de buscar justiça, mas de usar processos, investigações e decisões judiciais para perseguir, deslegitimar e neutralizar adversários.
 
@@ -56,20 +39,7 @@ O texto argumenta que o Lawfare evoluiu para uma forma tecnológica, o "Lawfare 
 ### **🎯 Porquê? (Why?)**
 **O porquê do Lawfare, conforme os objetivos descritos no texto.**
 
-```mermaid
-mindmap
-  root((Porquê? Objetivos))
-    Subversão Política
-      Derrubar governos
-      Eliminar adversários
-    Dominação Geopolítica
-      Controle de nações soberanas
-      Servir a interesses estrangeiros
-    Controle Social Total
-      Censura Digital (PL 2630, DSA)
-      Controle Financeiro (CBDCs/DREX)
-      Sistema de Crédito Social
-```
+![](/assets/img/porque-w2.png)
 
 [Dossiê](/posts/lawfare-a-guerra-silenciosa-que-destroi-democracias), o principal objetivo do Lawfare é **alcançar metas políticas, geopolíticas e de controle social** que não poderiam ser atingidas por meios democráticos ou militares convencionais. A motivação central é a manutenção do poder pelo *establishment* global e a supressão de qualquer desafio à sua agenda.
 
@@ -84,31 +54,7 @@ As razões detalhadas no texto incluem:
 ### **👥 Quem? (Who?)**
 **Quem são os atores envolvidos no Lawfare, de acordo com o anexo.**
 
-```mermaid
-mindmap
-  root((Quem? Atores))
-    Arquitetos & Financiadores
-      ONGs Bilionárias
-        George Soros / OSF
-        USAID / NED
-      Fóruns Globais
-        WEF / Klaus Schwab
-        FMI / BIS
-    Executores
-      Judiciário
-        STF (Alexandre de Moraes)
-      Big Tech
-        Google, Meta, OpenAI
-      Mídia Tradicional
-      Redes de "Fact-Checking"
-    Alvos & Vítimas
-      Líderes Políticos
-        Donald Trump, Bolsonaro, Le Pen
-      Jornalistas
-        Julian Assange, Glenn Greenwald
-      Cidadãos
-        Manifestantes do 8 de Janeiro
-```
+![](/assets/img/quem-w3.png)
 
 O [dossiê](/posts/lawfare-a-guerra-silenciosa-que-destroi-democracias) descreve uma complexa rede de atores nacionais e transnacionais que atuam de forma coordenada. Eles são divididos em arquitetos, executores, alvos e a resistência.
 
@@ -133,18 +79,7 @@ O [dossiê](/posts/lawfare-a-guerra-silenciosa-que-destroi-democracias) descreve
 ### **🗺️ Onde? (Where?)**
 **Onde o Lawfare ocorre, segundo a análise geográfica do texto.**
 
-```mermaid
-mindmap
-  root((Onde? Local do Conflito))
-    Laboratório Principal
-      Brasil (Lava Jato, Vaza Toga, 8 de Janeiro)
-    Modelos de Controle
-      China (Sistema de Crédito Social)
-      Europa (Digital Services Act)
-      Canadá (Bills C-11 & C-18)
-    Origem e Aplicação
-      EUA (Definição militar, Twitter Files, processos contra Trump)
-```
+![](/assets/img/onde-w4.png)
 
 O [dossiê](/posts/lawfare-a-guerra-silenciosa-que-destroi-democracias) argumenta que o Lawfare é um fenômeno **global**, mas com epicentros e laboratórios específicos onde as táticas são testadas e refinadas antes de serem exportadas.
 
@@ -161,21 +96,7 @@ O [dossiê](/posts/lawfare-a-guerra-silenciosa-que-destroi-democracias) argument
 ### **⏳ Quando? (When?)**
 **Quando o Lawfare se desenvolveu e se intensificou, de acordo com a linha do tempo do documento.**
 
-```mermaid
-mindmap
-  root((Quando? Linha do Tempo))
-    Origens
-      Século XVIII (Colonialismo)
-      2001 (Definição Militar)
-    Aceleração Recente
-      2014 (Lava Jato)
-      2016 (Pós-eleição de Trump)
-      2019 (Inquérito das Fake News)
-    Momento Atual
-      2024-2025 (Sanções, Vaza Toga)
-    Projeção Futura
-      Lawfare Algorítmico
-```
+![](/assets/img/quando-w5.png)
 
 O [estudo](/posts/lawfare-a-guerra-silenciosa-que-destroi-democracias) traça uma linha do tempo que vai de origens históricas a uma rápida aceleração nos últimos anos, culminando em projeções futuras.
 
@@ -191,20 +112,7 @@ O [estudo](/posts/lawfare-a-guerra-silenciosa-que-destroi-democracias) traça um
 
 ### 👉 Estratégias para as Frentes de Combate
 
-```mermaid
-mindmap
-  root((Ferramentas))
-    Evolução Tecnológica
-      Vigilância e Censura
-        IA com Viés Progressista
-        Censura Automatizada (Llama Guard)
-      Controle Financeiro
-        CBDCs (DREX, Yuan Digital)
-        Dinheiro Programável
-      Controle Social
-        Sistema de Crédito Social
-        Identidade Digital Global
-```
+![](/assets/img/como-h1.png)
 
 1. 🛰️ **Vigilância e Censura**
    - Desenvolver algoritmos de IA transparentes e auditáveis para evitar vieses na identificação de conteúdos e garantir direitos fundamentais.
@@ -225,20 +133,8 @@ mindmap
 
 ### 🛡️ Estratégias para a Resistência
 
-```mermaid
-mindmap
-  root((A Resistência))
-    Figuras Políticas
-      Trump, Poilievre, Milei
-    Plataformas Livres
-      Rumble, Substack, X (sob Musk)
-    Jornalismo Independente
-      Greenwald, Taibbi
-    Tecnologias de Liberdade
-      Criptomoedas
-      Redes Descentralizadas
-      VPNs
-```
+![](/assets/img/resistencia.png)
+
 
 1. 🗳️ **Figuras Políticas e Sociais**
    - Construir alianças pluripartidárias em defesa de liberdades civis e do devido processo legal.
@@ -257,116 +153,27 @@ mindmap
 Em síntese, o enfrentamento eficaz ao lawfare exige um tripé: soluções legais institucionais, inovação tecnológica libertadora e mobilização cívica transnacional. O objetivo central dessas estratégias é equilibrar os avanços tecnológicos com a proteção integral das liberdades fundamentais, da privacidade e da democracia.
 
 
-### 🧠 Mapa Mental Lawfare - O Quê, Porquê, Quem, Onde, Quando
+### 🧠 Mapa Mental O Quê, Porquê, Quem, Onde, Quando, Como, Quanto
 
-```mermaid
-mindmap
-  root((Lawfare: A Guerra Silenciosa))
+![](/assets/img/5wh2.png)
 
-    %% O QUE É E COMO FUNCIONA
-    O Quê? (Definição e Táticas)
-      Definição
-        Guerra Jurídica do Século XXI
-        Uso da lei como arma política
-      Características
-        Disfarce de Legalidade
-        Seletividade Cirúrgica
-        Timing Político
-        Coordenação Institucional
-        O Processo como Punição
-      Táticas
-        Vazamentos Seletivos para Mídia
-        Prisões Preventivas Prolongadas
-        Lawfare Coletivo (Caso 8/1)
-        Criminalização Retroativa
-  
-    %% OBJETIVOS ESTRATÉGICOS
-    Porquê? (Objetivos)
-      Subversão Política
-        Derrubar governos
-        Eliminar adversários
-      Dominação Geopolítica
-        Controle de nações soberanas
-        Servir a interesses estrangeiros
-      Controle Social Total
-        Censura Digital (PL 2630, DSA)
-        Controle Financeiro (CBDCs/DREX)
-        Sistema de Crédito Social
-  
-    %% REDE DE ATORES
-    Quem? (Atores Envolvidos)
-      Arquitetos & Financiadores
-        ONGs Bilionárias
-          George Soros / OSF
-          USAID / NED
-        Fóruns Globais
-          WEF / Klaus Schwab
-          FMI / BIS
-      Executores
-        Judiciário
-          STF (Alexandre de Moraes)
-        Big Tech
-          Google, Meta, OpenAI
-        Mídia Tradicional
-        Redes de "Fact-Checking"
-      Alvos & Vítimas
-        Líderes Políticos
-          Donald Trump, Bolsonaro, Le Pen
-        Jornalistas
-          Julian Assange, Glenn Greenwald
-        Cidadãos
-          Manifestantes do 8 de Janeiro
-  
-    %% GEOGRAFIA DO CONFLITO
-    Onde? (Geografia do Conflito)
-      Laboratório Principal
-        Brasil (Lava Jato, Vaza Toga, 8 de Janeiro)
-      Modelos de Controle
-        China (Sistema de Crédito Social)
-        Europa (Digital Services Act)
-        Canadá (Bills C-11 & C-18)
-      Origem e Aplicação
-        EUA (Definição militar, Twitter Files, processos contra Trump)
-  
-    %% LINHA DO TEMPO
-    Quando? (Linha do Tempo)
-      Origens
-        Século XVIII (Colonialismo)
-        2001 (Definição Militar)
-      Aceleração Recente
-        2014 (Lava Jato)
-        2016 (Pós-eleição de Trump)
-        2019 (Inquérito das Fake News)
-      Momento Atual
-        2024-2025 (Sanções, Vaza Toga)
-      Projeção Futura
-        Lawfare Algorítmico
-  
-    %% EVOLUÇÃO TECNOLÓGICA
-    Evolução Tecnológica
-      Vigilância e Censura
-        IA com Viés Progressista
-        Censura Automatizada (Llama Guard)
-      Controle Financeiro
-        CBDCs (DREX, Yuan Digital)
-        Dinheiro Programável
-      Controle Social
-        Sistema de Crédito Social
-        Identidade Digital Global
-  
-    %% A RESISTÊNCIA
-    A Resistência
-      Figuras Políticas
-        Trump, Poilievre, Milei
-      Plataformas Livres
-        Rumble, Substack, X (sob Musk)
-      Jornalismo Independente
-        Greenwald, Taibbi
-      Tecnologias de Liberdade
-        Criptomoedas
-        Redes Descentralizadas
-        VPNs
-```
+## 🛠️ Como será feito? (How)
+
+- 🤖 Transparência em IA: Desenvolvimento de algoritmos abertos e auditáveis para rastrear vieses e garantir direitos fundamentais, sob monitoramento independente.
+- 🏛️ Reforma Institucional: Atualização de leis e processos para coibir abusos judiciais, com campanhas de educação jurídica na sociedade.
+- 🌐 Plataformas Livres: Incentivo à criação e uso de mídias e redes sociais descentralizadas, protegidas contra censura.
+- 🔐 Proteção Digital: Fomento ao uso de criptografia ponta a ponta, VPNs, mensageiros seguros e técnicas de anonimização para fortalecer a privacidade.
+- 🕊️ Mobilização Cívica: Campanhas de conscientização sobre riscos do crédito social, defesa da liberdade de expressão e articulação entre atores nacionais e internacionais.
+- 🌍 Cooperação Internacional: Parcerias para fiscalizar sistemas digitais, responsabilizar abusos e apoiar vítimas e defensores de direitos digitais.[^1][^2]
+
+## 💰 Quanto vai custar? (How much)
+
+- 🧑‍💻 Investimento em Tecnologia: Desenvolvimento e manutenção de sistemas de auditoria, criptografia e redes seguras.
+- 🎓 Capacitação e Educação: Treinamentos técnicos e jurídicos, produção de materiais informativos e campanhas públicas.
+- ⚖️ Suporte Legal: Estruturação de assistência jurídica gratuita, entidades fiscalizadoras independentes e atualização do aparato judicial.
+- 🌱 Recursos Financeiros: Financiamento por meio de ONGs, crowdfunding, partidos, fundações internacionais e cooperação internacional.
+- 🔄 Custos Operacionais: Atualização contínua das ferramentas, investimentos em infraestrutura tecnológica e manutenção das iniciativas de resistência.
+- 🌏 Benchmark Internacional: Análise de custos baseada em experiências de países como França e China para dimensionar entidades de fiscalização digital e sistemas educativos de larga escala.[^2][^1]
 
 ### 🧭 Linhas do Tempo de Uma Crise Institucional Sistêmica
 
@@ -396,3 +203,6 @@ mindmap
 - [Depoimento de David Ágape na Câmara dos Deputados](https://www.ainvestigacao.com/p/vaza-toga-2-depoimento-de-david-agape)
 - [**Inquérito das Fake News**: seis anos de juristocracia no Brasil](https://www.ainvestigacao.com/p/inquerito-das-fake-news-seis-anos)
 
+## Referências
+- [^1]: [lawfare-no-direito-estrategias-e-impactos-juridicos](https://legale.com.br/blog/lawfare-no-direito-estrategias-e-impactos-juridicos/)
+- [^2]: [rede-lawfare-nunca-mais-denuncia-crimes-da-lava-jato](https://www.congressoemfoco.com.br/coluna/109194/rede-lawfare-nunca-mais-denuncia-crimes-da-lava-jato)

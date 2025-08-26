@@ -9,6 +9,8 @@ tags: [soberania, 'big-techs', 'liberdade de expressão', 'plataformas', 'secao3
 categories: crise-diplomatica
 ---
 
+- &nbsp;
+{:toc .large-only}
 
 ## 📆 Linha do Tempo: Disputa entre Big Techs, STF e Governo Brasileiro
 
@@ -39,7 +41,7 @@ categories: crise-diplomatica
 
 ### **2024–2025: Propostas Tributárias e Pressão ao Setor Digital**
 - 💰 Governo e Congresso discutem novas formas de tributação do setor digital, como a Contribuição Social sobre Serviços Digitais (CSD) e regras no bojo da reforma tributária.[7]
-- 🌐 Big techs denunciam “ambiente hostil” e recorrem ao USTR (Seção 301), pedindo investigação das práticas brasileiras e ameaçando transferir investimentos para outros países.[8][9]
+- 🌐 Big techs denunciam “ambiente hostil” e recorrem ao USTR [Seção 301](/posts/crise-brasil-eua-inq-4781-vaza-toga-e-sancoes/#-o-que-é-a-seção-301), pedindo investigação das práticas brasileiras e ameaçando transferir investimentos para outros países.[8][9]
 
 ***
 
