@@ -18,6 +18,9 @@ Incluo na conversa algumas pessoas cujo trabalho e opinião valorizo muito. Fort
 -🤐🕵️‍♂️ Censura no Brasil (2019-2025) 🌐
 🔗 https://tinyurl.com/abusosupremo
 
+Brasil e Big Techs: Impacto da Seção 301
+🔗 https://tinyurl.com/brasil-x-bigtechs
+
 - https://tinyurl.com/abusosupremo
 - https://tinyurl.com/lawfare-5w
 - https://tinyurl.com/guiana-crime-transnacional

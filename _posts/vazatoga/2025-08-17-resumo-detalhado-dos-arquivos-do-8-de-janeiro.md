@@ -4,7 +4,7 @@ description: "Arquivos do 8 de Janeiro e o Sistema Paralelo do STF/TSE"
 date: 2025-08-17T16:58:13.184Z
 image: 
   path: "/assets/img/vazatoga.jpg"
-tags: ['vazatoga', 'prisao-em-massa', 'biometria', 'viés político', 'repressão judicial', 'direitos fundamentais',  'abuso-de-poder',  'processo-legal', 'perseguicao-politica']
+tags: ['vazatoga', 'prisao-em-massa', 'biometria', 'viés político', 'repressão judicial', 'direitos fundamentais',  'abuso-de-poder',  'processo-legal', 'perseguicao-politica', 'certidões']
 categories: [vazatoga]
 ---
 

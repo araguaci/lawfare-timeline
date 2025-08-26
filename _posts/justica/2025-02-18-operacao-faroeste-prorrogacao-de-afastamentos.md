@@ -5,7 +5,7 @@ categories: justica
 description: > 
   "STJ prorroga por mais um ano afastamentos de desembargadora e juíza investigadas por venda de sentenças na Bahia."
 faicon: gavel
-tags: ['venda-de-sentencas', 'afastamento-judicial', 'corrupcao', 'grilagem-de-terras', 'maria-do-socorro-barreto-santiago', 'marivalda-almeida-moutinho', 'sociedade-baiana', 'vitimas-de-grilagem', 'prorrogacao-de-afastamentos-ate-fevereiro-2026', 'manutencao-de-medidas-cautelares', 'gravidade-alta', 'judiciario']
+tags: ['venda-de-sentencas', 'afastamento-judicial', 'corrupcao', 'grilagem-de-terras', 'ba', 'vitimas-de-grilagem', 'gravidade-alta', 'judiciario']
 image:
   path: "/assets/solid/gavel.svg"
 ---

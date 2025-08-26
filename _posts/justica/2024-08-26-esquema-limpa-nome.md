@@ -5,7 +5,7 @@ categories: justica
 description: > 
   "CNJ instaura PAD contra juiz por suposta participação em esquema de liminares para remover nomes de listas de inadimplentes, com manipulação de distribuição de processos."
 faicon: balance-scale
-tags: ['manipulacao-processos', 'liminares-indevidas', 'corrupcao-judicial', 'limpa-nome', 'infracoes-disciplinares', 'josivaldo-felix-de-oliveira-juiz', 'advogados-do-grupo-amigos-do-consumidor-gac', 'associacao-nacional-dos-bureau-de-credito-denunciante', 'sistemas-de-credito-serasa-spc-ieptb', 'credores-legitimos', 'sociedade-paraibana', 'instaurado-processo-administrativo-disciplinar-pad-pelo-cnj', 'investigacao-de-infracoes-a-lei-organica-da-magistratura', 'inspecao-da-corregedoria-nacional-no-tjpb', 'gravidade-alta', 'judiciario']
+tags: ['manipulacao-processos', 'liminares-indevidas', 'corrupcao-judicial', 'limpa-nome', 'infracoes-disciplinares', 'pa', 'gravidade-alta', 'judiciario']
 image:
   path: "/assets/solid/balance-scale.svg"
 ---

@@ -14,9 +14,9 @@ tags: ['judiciario','federal']
 - **Estado**: Federal
 - **Ano**: 2023
 - **Envolvidos**:
-  - M- a- g- i- s- t- r- a- d- o- s-  - d- e-  - v- á- r- i- o- s-  - T- J- s-  - e- s- t- a- d- u- a- i- s- .
+  - Magistrados de vários TJs estaduais.
 - **Consequências**:
-  - A- f- a- s- t- a- m- e- n- t- o- s-  - d- e-  - 1- 6-  - d- e- s- e- m- b- a- r- g- a- d- o- r- e- s-  - e-  - 7-  - j- u- í- z- e- s- ,-  - a- ç- õ- e- s-  - p- e- n- a- i- s-  - e- m-  - c- u- r- s- o- .
+  - Afastamentos de 16 desembargadores e 7 juízes, ações penais em curso.
 
 ## Analise por IA
 - [🤖 Investigar com IA](https://www.perplexity.ai/search?q=Sistema%20Faroeste%20de%20Corrup%C3%A7%C3%A3o%20no%20Judici%C3%A1rio%20Investiga%C3%A7%C3%B5es%20sobre%20venda%20de%20decis%C3%B5es%20atingindo%2014%20tribunais%20de%20justi%C3%A7a.%20Federal)

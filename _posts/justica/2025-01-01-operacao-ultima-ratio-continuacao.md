@@ -5,7 +5,7 @@ categories: justica
 image:
   path: "/assets/solid/balance-scale-left.svg"
 description: PF pede ação contra 7 desembargadores por venda de decisão✧  com provas de corrupção.Sete desembargadores
-tags: ['judiciario','mato-grosso-do-sul']
+tags: ['judiciario','mato-grosso-do-sul', 'venda-de-sentencas']
 ---
 
 # PF pede ação contra 7 desembargadores por venda de decisão, com provas de corrupção.

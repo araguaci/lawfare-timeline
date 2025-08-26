@@ -5,7 +5,7 @@ categories: justica
 description: > 
   "STJ aceita denúncia contra desembargadora do TJ-BA e seus filhos por envolvimento em esquema de venda de sentenças."
 faicon: gavel
-tags: ['venda-de-sentencas', 'corrupcao-judicial', 'grilagem-de-terras', 'organizacao-criminosa', 'lavagem-de-dinheiro', 'ligia-maria-ramos-cunha', 'rui-barata-lima', 'artur-gabriel-ramos-barata-lima', 'comunidades-rurais', 'erario-publico', 'sociedade-baiana', 'aceitacao-da-denuncia-tornando-os-reus', 'continuacao-das-investigacoes-no-stj', 'gravidade-alta', 'judiciario']
+tags: ['venda-de-sentencas', 'corrupcao-judicial', 'grilagem-de-terras', 'organizacao-criminosa', 'lavagem-de-dinheiro', 'ba', 'stj', 'gravidade-alta', 'judiciario']
 image:
   path: "/assets/solid/gavel.svg"
 ---

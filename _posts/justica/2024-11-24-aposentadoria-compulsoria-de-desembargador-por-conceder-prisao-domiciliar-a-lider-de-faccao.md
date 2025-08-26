@@ -5,7 +5,7 @@ categories: justica
 description: > 
   "Luiz Fernando Lima aposentado após conceder prisão domiciliar a Ednaldo Ferreira, líder de organização criminosa."
 faicon: fa-solid fa-user-secret
-tags: ['prisao_domiciliar', 'crime_organizado', 'corrupcao', 'cnj', 'luiz-fernando-lima', 'ednaldo-freire-ferreira-dada', 'joao-bosco-oliveira-seixas', 'sociedade-baiana', 'vitimas-da-organizacao-criminosa', 'fuga-de-lider-criminoso', 'afastamento-do-desembargador', 'investigacao-formal-pelo-cnj', 'gravidade-alta', 'judiciario']
+tags: ['prisao_domiciliar', 'crime_organizado', 'corrupcao', 'cnj', 'ba', 'gravidade-alta', 'judiciario']
 image:
   path: "/assets/solid/user-secret.svg"
 ---

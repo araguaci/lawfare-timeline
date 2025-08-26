@@ -5,7 +5,7 @@ categories: justica
 image:
   path: "/assets/solid/balance-scale-left.svg"
 description: Desembargador recebeu três aposentadorias compulsórias por venda de sentenças✧  incluindo decisão para urgência no pagamento de dívida do governo.Edgard Antônio Lippmann Júnior
-tags: ['judiciario','rio-grande-do-sul']
+tags: ['judiciario','rio-grande-do-sul', 'venda-de-sentencas']
 ---
 
 # Desembargador recebeu três aposentadorias compulsórias por venda de sentenças, incluindo decisão para urgência no pagamento de dívida do governo.

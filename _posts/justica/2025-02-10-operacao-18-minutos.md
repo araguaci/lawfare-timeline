@@ -5,7 +5,7 @@ categories: justica
 description: > 
   "PF indicia desembargadores, juízes, ex-deputado e prefeito por esquema de corrupção no TJ-MA envolvendo venda de sentenças e liberação fraudulenta de alvarás."
 faicon: gavel
-tags: ['venda-de-sentencas', 'corrupcao-judicial', 'lavagem-de-dinheiro', 'organizacao-criminosa', 'desvio-de-recursos', 'antonio-pacheco-guerreiro-junior', 'luiz-gonzaga-almeida', 'nelma-celeste-souza-silva-sarney-costa', 'alice-de-sousa-rocha', 'cristiano-simas-de-sousa', 'edilazio-junior', 'fred-campos', 'francisco-xavier-de-sousa-filho', 'janaina-moreira-lobao-coelho', 'banco-do-nordeste', 'erario-publico', 'sociedade-maranhense', 'afastamento-de-tres-desembargadores-e-dois-juizes-por-um-ano', 'indiciamento-de-23-pessoas-por-corrupcao-lavagem-de-dinheiro-e-organizacao-criminosa', 'prorrogacao-do-afastamento-em-2025', 'buscas-e-apreensoes-em-gabinetes-do-tj-ma', 'gravidade-alta', 'judiciario']
+tags: ['venda-de-sentencas', 'corrupcao-judicial', 'lavagem-de-dinheiro', 'organizacao-criminosa', 'desvio-de-recursos', 'ma', 'gravidade-alta', 'judiciario']
 image:
   path: "/assets/solid/gavel.svg"
 ---

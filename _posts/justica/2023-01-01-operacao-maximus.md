@@ -5,7 +5,7 @@ categories: justica
 image:
   path: "/assets/solid/balance-scale-left.svg"
 description: Investigação sobre suposto esquema de venda de sentenças no Tribunal de Justiça do Tocantins✧  envolvendo cinco desembargadores✧  três juízes e o governador✧  com áudios revelando insatisfação com pagamentos de propina.Desembargador Helvécio de Brito Maia NetoDesembargadora Angela Issa HaonatDesembargadora Angela Maria Ribeiro PrudenteDesembargadora Etelvina Maria Sampaio FelipeDesembargador João Rigo GuimarãesJuiz José Maria LimaJuiz Marcelo Eliseu RostirollaJuiz Ocelio Nobre da SilvaJuiz Roniclay Alves de MoraisGovernador Wanderlei BarbosaThales André Pereira MaiaAdvogado Thiago SulinoAdvogado Kledson de Moura Lima
-tags: ['judiciario','tocantins']
+tags: ['judiciario','tocantins', 'venda-de-sentencas']
 ---
 
 # Investigação sobre suposto esquema de venda de sentenças no Tribunal de Justiça do Tocantins, envolvendo cinco desembargadores, três juízes e o governador, com áudios revelando insatisfação com pagamentos de propina.

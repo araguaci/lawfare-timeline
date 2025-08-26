@@ -5,7 +5,7 @@ categories: justica
 description: > 
   "Ex-juiz Nicolau dos Santos Neto, condenado por desvios no Fórum Trabalhista de SP, morre em 2020 após indulto."
 faicon: gavel
-tags: ['desvios-trt-sp', 'indulto-nicolau', 'corrupcao-judicial', 'venda-sentencas', 'nicolau-dos-santos-neto', 'luiz-estevao', 'fabio-monteiro-de-barros', 'erario-publico', 'trabalhadores', 'morte-do-ex-juiz', 'cassacao-de-aposentadoria', 'batalha-por-pensao', 'gravidade-alta', 'judiciario']
+tags: ['desvios-trt-sp', 'indulto-nicolau', 'corrupcao-judicial', 'venda-de-sentencas', 'nicolau-dos-santos-neto', 'luiz-estevao', 'fabio-monteiro-de-barros', 'erario-publico', 'trabalhadores', 'morte-do-ex-juiz', 'cassacao-de-aposentadoria', 'batalha-por-pensao', 'gravidade-alta', 'judiciario']
 image:
   path: "/assets/solid/gavel.svg"
 ---

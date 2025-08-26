@@ -5,7 +5,7 @@ categories: justica
 image:
   path: "/assets/solid/balance-scale-left.svg"
 description: Esquema de venda de sentenças com propinas fracionadas contra o Banco do Nordeste.Desembargadores e juízes do TJ-MA.
-tags: ['judiciario','ma']
+tags: ['judiciario','ma', 'venda-de-sentencas']
 ---
 
 # Esquema de venda de sentenças com propinas fracionadas contra o Banco do Nordeste.
@@ -14,9 +14,9 @@ tags: ['judiciario','ma']
 - **Estado**: MA
 - **Ano**: 2024
 - **Envolvidos**:
-  - D- e- s- e- m- b- a- r- g- a- d- o- r- e- s-  - e-  - j- u- í- z- e- s-  - d- o-  - T- J- -- M- A- .
+  - Desembargadores e juízes do TJ-MA.
 - **Consequências**:
-  - A- f- a- s- t- a- m- e- n- t- o-  - d- o- s-  - e- n- v- o- l- v- i- d- o- s- ,-  - i- n- v- e- s- t- i- g- a- ç- õ- e- s-  - p- e- l- a-  - P- F-  - e-  - S- T- J- .
+  - Afastamento dos envolvidos, investigações pela PF e STJ.
 
 ## Analise por IA
 - [🤖 Investigar com IA](https://www.perplexity.ai/search?q=Venda%20de%20Senten%C3%A7as%20no%20TJ-MA%20Esquema%20de%20venda%20de%20senten%C3%A7as%20com%20propinas%20fracionadas%20contra%20o%20Banco%20do%20Nordeste.%20MA)

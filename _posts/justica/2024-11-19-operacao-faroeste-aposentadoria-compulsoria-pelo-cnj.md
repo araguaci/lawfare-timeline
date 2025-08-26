@@ -5,7 +5,7 @@ categories: justica
 description: > 
   "CNJ aplica aposentadoria compulsória a desembargadora do TJ-BA por participação em esquema de venda de sentenças."
 faicon: gavel
-tags: ['aposentadoria-compulsoria', 'venda-de-sentencas', 'grilagem-de-terras', 'corrupcao-judicial', 'ligia-maria-ramos-cunha-lima', 'sandra-ines-moraes-rusciolelli-azevedo', 'vasco-rusciolelli', 'comunidades-afetadas-por-grilagem', 'integridade-do-judiciario', 'remocao-da-desembargadora-com-beneficios-proporcionais', 'rescisao-de-delacao-premiada-de-outra-envolvida', 'gravidade-alta', 'judiciario']
+tags: ['aposentadoria-compulsoria', 'venda-de-sentencas', 'grilagem-de-terras', 'corrupcao-judicial', 'integridade-do-judiciario', 'gravidade-alta', 'judiciario']
 image:
   path: "/assets/solid/gavel.svg"
 ---

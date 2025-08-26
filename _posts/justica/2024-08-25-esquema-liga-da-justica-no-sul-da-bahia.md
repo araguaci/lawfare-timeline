@@ -5,7 +5,7 @@ categories: justica
 description: > 
   "Juízes afastados por esquema de corrupção envolvendo agiotagem, venda de sentenças e grilagem de terras no sul da Bahia."
 faicon: gavel
-tags: ['grilagem-de-terras', 'venda-de-sentencas', 'corrupcao-judicial', 'agiotagem', 'fernando-machado-paropat', 'andre-marcelo-strogenski', 'rogerio-barbosa-de-sousa-e-silva', 'promotor-nao-identificado', 'empresarios-e-advogados', 'proprietarios-legitimos-de-terras', 'sociedade-baiana', 'afastamento-dos-tres-juizes', 'investigacao-pela-corregedoria-geral-da-justica', 'gravidade-alta', 'judiciario']
+tags: ['grilagem-de-terras', 'venda-de-sentencas', 'corrupcao-judicial', 'agiotagem', 'ba', 'afastamento-dos-tres-juizes', 'investigacao-pela-corregedoria-geral-da-justica', 'gravidade-alta', 'judiciario']
 image:
   path: "/assets/solid/gavel.svg"
 ---

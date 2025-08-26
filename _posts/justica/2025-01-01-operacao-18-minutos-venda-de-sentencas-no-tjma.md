@@ -5,7 +5,7 @@ categories: justica
 image:
   path: "/assets/solid/balance-scale-left.svg"
 description: Indiciamento de desembargadores e juízes por corrupção✧  lavagem e organização criminosa por liberação fraudulenta de alvarás judiciais.Desembargadores Nelma Sarney✧  Antônio Guerreiro Júnior✧  Luiz Gonzaga Almeidajuízes Alice de Sousa Rocha✧  Cristiano Simas de Sousaadvogados e servidores
-tags: ['judiciario','ma']
+tags: ['judiciario','ma', 'venda-de-sentencas']
 ---
 
 # Indiciamento de desembargadores e juízes por corrupção, lavagem e organização criminosa por liberação fraudulenta de alvarás judiciais.

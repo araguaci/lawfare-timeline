@@ -5,7 +5,7 @@ categories: justica
 description: > 
   "PF investiga ligação entre quadrilha de venda de sentenças na Bahia e ministro do STJ."
 faicon: gavel
-tags: ['venda-de-sentencas', 'corrupcao-stj', 'organizacao-criminosa', 'propina', 'roberto-zampieri', 'andreson-de-oliveira-goncalves', 'isabel-gallotti', 'og-fernandes', 'nancy-andrighi', 'paulo-moura-ribeiro', 'sistema-judiciario', 'partes-processuais-lesadas', 'investigacao-de-transacoes-financeiras-atipicas', 'analise-de-mensagens-e-documentos', 'gravidade-alta', 'judiciario']
+tags: ['venda-de-sentencas', 'corrupcao-stj', 'organizacao-criminosa', 'propina', 'gravidade-alta', 'judiciario']
 image:
   path: "/assets/solid/gavel.svg"
 ---
