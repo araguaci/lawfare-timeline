@@ -127,4 +127,17 @@ O caso é sério porque a **Seção 301** é uma arma legal real que os EUA já 
 
 - [Brasil e Big Techs: O Impacto da Seção 301](/posts/brasil-e-big-techs-o-impacto-da-secao-301/)
 
+*** 
 
+### 🔗 Referências
+1. Migalhas. STF: Redes respondem por posts mesmo sem ordem judicial. Disponível em: https://www.migalhas.com.br/quentes/433462/stf-redes-respondem-por-posts-mesmo-sem-ordem-judicial-veja-tese. Acesso em: 26 ago. 2025.[1]
+2. TozziniFreire Advogados. Mudanças relevantes trazidas pela Resolução Anatel nº 780/2025. Disponível em: https://tozzinifreire.com.br/boletins/mudancas-relevantes-trazidas-pela-resolucao-anatel-n-7802025. Acesso em: 26 ago. 2025.[2]
+3. Tribuna do Poder. 81 big techs enviam carta a Trump sobre a Seção 301 contra o Brasil. Disponível em: https://tribunadopoder.com.br/mundo/81-big-techs-enviam-carta-a-trump-sobre-a-secao-301-contra-o-brasil/. Acesso em: 26 ago. 2025.[3]
+4. Teletime. A USTR, associações de techs dos EUA reclamam da Anatel, Congresso e Supremo. Disponível em: https://teletime.com.br/19/08/2025/a-ustr-associacoes-de-techs-dos-eua-reclamam-da-anatel-congresso-e-supremo/. Acesso em: 26 ago. 2025.[4]
+5. Gazeta do Povo. Trump ameaça tarifas a países que regularem big techs. Disponível em: https://www.gazetadopovo.com.br/mundo/trump-ameaca-impor-tarifas-e-restringir-exportacao-de-tecnologia-a-paises-que-regularem-big-techs/. Acesso em: 26 ago. 2025.[5]
+
+[1](https://www.migalhas.com.br/quentes/433462/stf-redes-respondem-por-posts-mesmo-sem-ordem-judicial-veja-tese)
+[2](https://tozzinifreire.com.br/boletins/mudancas-relevantes-trazidas-pela-resolucao-anatel-n-7802025)
+[3](https://tribunadopoder.com.br/mundo/81-big-techs-enviam-carta-a-trump-sobre-a-secao-301-contra-o-brasil/)
+[4](https://teletime.com.br/19/08/2025/a-ustr-associacoes-de-techs-dos-eua-reclamam-da-anatel-congresso-e-supremo/)
+[5](https://www.gazetadopovo.com.br/mundo/trump-ameaca-impor-tarifas-e-restringir-exportacao-de-tecnologia-a-paises-que-regularem-big-techs/)

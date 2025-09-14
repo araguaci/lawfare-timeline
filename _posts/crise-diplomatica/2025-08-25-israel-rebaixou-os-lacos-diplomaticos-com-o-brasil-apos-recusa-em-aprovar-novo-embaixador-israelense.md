@@ -165,28 +165,29 @@ O rebaixamento dos laços Brasil-Israel exemplifica o impacto de incidentes pol�
 
 ## 📚 Referências (Conforme ABNT)
 
-1. GLOBO.COM. Itamaraty ignora indicação de embaixador, e Israel rebaixa relações com o Brasil. G1 Globo, 25 ago. 2025. Disponível em: https://g1.globo.com/mundo/noticia/2025/08/25/itamaraty-ignora-indicacao-de-embaixador-de-israel-e-pais-rebaixa-relacoes-com-o-brasil.ghtml. Acesso em: 25 ago. 2025.
+1. GLOBO.COM. Itamaraty ignora indicação de embaixador, e Israel rebaixa relações com o Brasil. G1 Globo, 25 ago. 2025. Disponível em: [https://g1.globo.com/mundo/noticia/2025/08/25/itamaraty-ignora-indicacao-de-embaixador-de-israel-e-pais-rebaixa-relacoes-com-o-brasil.ghtml](https://g1.globo.com/mundo/noticia/2025/08/25/itamaraty-ignora-indicacao-de-embaixador-de-israel-e-pais-rebaixa-relacoes-com-o-brasil.ghtml). Acesso em: 25 ago. 2025.
 
-2. DIÁRIO DO BRASIL NOTÍCIAS. Itamaraty ignora indicação de embaixador e Israel rebaixa relações com o Brasil. 2025. Disponível em: https://diariodobrasilnoticias.com.br/noticia/itamaraty-ignora-indicacao-de-embaixador-e-israel-rebaixa-relacoes-com-o-brasil-eles-humilharam-nosso-embaixador-la-diz-celso-amorim-68acded45e096. Acesso em: 25 ago. 2025.
+2. DIÁRIO DO BRASIL NOTÍCIAS. Itamaraty ignora indicação de embaixador e Israel rebaixa relações com o Brasil. 2025. Disponível em: [https://diariodobrasilnoticias.com.br/noticia/itamaraty-ignora-indicacao-de-embaixador-e-israel-rebaixa-relacoes-com-o-brasil-eles-humilharam-nosso-embaixador-la-diz-celso-amorim-68acded45e096](https://diariodobrasilnoticias.com.br/noticia/itamaraty-ignora-indicacao-de-embaixador-e-israel-rebaixa-relacoes-com-o-brasil-eles-humilharam-nosso-embaixador-la-diz-celso-amorim-68acded45e096). Acesso em: 25 ago. 2025.
 
-3. UNITED STATES. Department of State. Normalization of U.S.-China Relations. Washington, 1979. Disponível em: https://history.state.gov/milestones/1969-1976/USChina. Acesso em: 25 ago. 2025.
+3. UNITED STATES. Department of State. Normalization of U.S.-China Relations. Washington, 1979. Disponível em: [https://history.state.gov/milestones/1969-1976/USChina](https://history.state.gov/milestones/1969-1976/USChina). Acesso em: 25 ago. 2025.
 
-4. LE MONDE DIPLOMATIQUE. Relações Bélgica-Ruanda pós-genocídio. Paris, 2004. Disponível em: https://diplomatique.org.br/re-lacoes-entre-belgica-e-ruanda-apos-o-genocidio/. Acesso em: 25 ago. 2025.
+4. LE MONDE DIPLOMATIQUE. Relações Bélgica-Ruanda pós-genocídio. Paris, 2004. Disponível em: [https://diplomatique.org.br/re-lacoes-entre-belgica-e-ruanda-apos-o-genocidio/](https://diplomatique.org.br/re-lacoes-entre-belgica-e-ruanda-apos-o-genocidio/). Acesso em: 25 ago. 2025.
 
-5. DEUTSCHE WELLE. Relações Israel-Alemanha e reparação pós-guerra. Berlim, 2021. Disponível em: https://www.dw.com/pt-br/israel-e-alemanha-uma-rela%C3%A7%C3%A3o-marco/a-56786188. Acesso em: 25 ago. 2025.
+5. DEUTSCHE WELLE. Relações Israel-Alemanha e reparação pós-guerra. Berlim, 2021. Disponível em: [https://www.dw.com/pt-br/israel-e-alemanha-uma-rela%C3%A7%C3%A3o-marco/a-56786188](https://www.dw.com/pt-br/israel-e-alemanha-uma-rela%C3%A7%C3%A3o-marco/a-56786188). Acesso em: 25 ago. 2025.
 
-6. BBC. Crises diplomáticas UK–Russia. Londres, 2018. Disponível em: https://www.bbc.com/news/world-europe-42448802. Acesso em: 25 ago. 2025.
+6. BBC. Crises diplomáticas UK–Russia. Londres, 2018. Disponível em: [https://www.bbc.com/news/world-europe-42448802](https://www.bbc.com/news/world-europe-42448802). Acesso em: 25 ago. 2025.
 
-7. LE FIGARO. França e Marrocos retomam relações após crise. Paris, 2015. Disponível em: https://www.lefigaro.fr/international/2015/01/31/01003-20150131ARTFIG00084-le-maroc-et-la-france-tournent-la-page-de-la-crise.php. Acesso em: 25 ago. 2025.
+7. LE FIGARO. França e Marrocos retomam relações após crise. Paris, 2015. Disponível em: [https://www.lefigaro.fr/international/2015/01/31/01003-20150131ARTFIG00084-le-maroc-et-la-france-tournent-la-page-de-la-crise.php](https://www.lefigaro.fr/international/2015/01/31/01003-20150131ARTFIG00084-le-maroc-et-la-france-tournent-la-page-de-la-crise.php). Acesso em: 25 ago. 2025.
+
+[1](https://g1.globo.com/mundo/noticia/2025/08/25/itamaraty-ignora-indicacao-de-embaixador-de-isra)
+[2](https://support.zendesk.com/hc/pt-br/articles/4408846544922-Formata%C3%A7%C3%A3o-de-texto-com-Markdown)
+[3](https://experienceleague.adobe.com/pt-br/docs/contributor/contributor-guide/writing-essentials/markdown)
+[4](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+[5](https://pt.meta.stackoverflow.com/questions/4813/como-formatar-uma-cita%C3%A7%C3%A3o-bibliogr%C3%A1fica-utilizando-o-padr%C3%A3o-abnt-em-uma-resposta)
+[6](https://bibtex.eu/pt/rmarkdown/)
+[7](https://www.inteligenciaurbana.org/2021/05/markdown-parte3-limarka.html)
+[8](https://learn.microsoft.com/pt-br/contribute/content/markdown-reference)
+[9](https://portal.revendadesoftware.com.br/manuais/base-de-conhecimento/sintaxe-markdown)
+[10](https://pt.stackoverflow.com/help/formatting)
 
 ---
-
-[1](https://www.fatectatuape.edu.br/h/d/CTG/ManualRelatorioCientifico.pdf)
-[2](https://www.pucminas.br/biblioteca/DocumentoBiblioteca/ABNT-Elaborar-formatar-relatorio-tecnico-e-ou-cientifico.pdf)
-[3](https://blog.fastformat.co/relatorio-tecnico-e-ou-cientifico-normas-abnt/)
-[4](https://portal.ifrn.edu.br/documents/10130/Modelo_de_relat%C3%B3rio_oficial.docx)
-[5](https://exame.com/tecnologia/examelab/referencias-bibliograficas-no-padrao-abnt-saiba-como-fazer/)
-[6](https://www.fca.unesp.br/Home/Biblioteca/folheto_modelos-de_referencias-e-citacoes_2017_mar.pdf)
-[7](https://www.pucsp.br/sites/default/files/download/biblioteca/2025/manual-para-elaboracao-do-trabalho-academico-com-citacoes-e-referencias-em-padrao-abnt.pdf)
-[8](https://www2.unifap.br/alexandresantiago/files/2012/03/Normas-da-ABNT.pdf)
-[9](https://aluno.facha.edu.br/pdf/tcc/roteiro-para-elaboracao-de-relatorio-tecnico-cientifico-2022.pdf)

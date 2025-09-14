@@ -128,17 +128,28 @@ A decisão ajustada de Moraes permitiu a continuidade das investigações mais r
 
 ## 🔗 Referências (ABNT, máximo 20) 
 
-1. Migalhas. Moraes restringe decisão em que suspendeu ações sobre dados do Coaf. Disponível em: https://www.migalhas.com.br/quentes/438531/moraes-restringe-decisao-em-que-suspendeu-acoes-sobre-dados-do-coaf. Acesso em: 26 ago. 2025.[3]
-2. CartaCapital. O ajuste de Moraes após suspender ações sobre o uso de relatórios do coaf. Disponível em: https://www.cartacapital.com.br/politica/o-ajuste-de-moraes-apos-suspender-acoes-sobre-o-uso-de-relatorios-do-coaf/. Acesso em: 26 ago. 2025.[3]
-3. Correio do Povo AL. Decisão de Moraes impacta operações contra facções e lavagem. Disponível em: https://www.correiodopovo-al.com.br/noticia/2025/08/24/decisao-de-moraes-impacta-operacoes-contra-faccoes-e-lavagem. Acesso em: 26 ago. 2025.[5]
-4. G1. MP questiona decisão de Moraes sobre Coaf. Disponível em: https://g1.globo.com/sp/sao-paulo/noticia/2025/08/25/mp-questiona-decisao-de-moares-sobre-coaf-que-pode-prejudicar-investigacoes-contra-faccoes.ghtml. Acesso em: 26 ago. 2025.[1]
-5. Agência Brasil. Moraes esclarece decisão que suspende processos sobre dados do Coaf. Disponível em: https://agenciabrasil.ebc.com.br/justica/noticia/2025-08/moraes-esclarece-decisao-que-suspende-processos-sobre-dados-do-coaf. Acesso em: 26 ago. 2025.
-6. UOL. Gilmar Mendes diverge de Moraes. Disponível em: https://noticias.uol.com.br/ultimas-noticias/agencia-estado/2025/08/25/gilmar-mendes-diverge-de-moraes-e-impede-emissao-de-relatorios-do-coaf-sem-autorizacao-judicial.htm. Acesso em: 26 ago. 2025.
-7. Instagram. Moraes revisa decisão. Disponível em: https://www.instagram.com/p/DNy8GyR5L9i/. Acesso em: 26 ago. 2025.
-8. YouTube. MP questiona decisão de Moraes. Disponível em: https://www.youtube.com/watch?v=lCNJ0me7JSs. Acesso em: 26 ago. 2025.
-9. Instagram. Pedido do MP-SP sobre facções criminosas. Disponível em: https://www.instagram.com/reel/DNyQuAEwGK5/. Acesso em: 26 ago. 2025.
-10. Revista Oeste. STF: divergência sobre relatórios do Coaf gera incertezas jurídicas. Disponível em: https://revistaoeste.com/politica/stf-divergencia-sobre-relatorios-do-coaf-gera-incertezas-juridicas/. Acesso em: 26 ago. 2025.
-11. YouTube. Alexandre de Moraes revisa decisão sobre provas do Coaf. Disponível em: https://www.youtube.com/watch?v=qONo8tXIj88. Acesso em: 26 ago. 2025.
+1. Migalhas. Moraes restringe decisão em que suspendeu ações sobre dados do Coaf. Disponível em: [https://www.migalhas.com.br/quentes/438531/moraes-restringe-decisao-em-que-suspendeu-acoes-sobre-dados-do-coaf](https://www.migalhas.com.br/quentes/438531/moraes-restringe-decisao-em-que-suspendeu-acoes-sobre-dados-do-coaf). Acesso em: 26 ago. 2025.[3]
+2. CartaCapital. O ajuste de Moraes após suspender ações sobre o uso de relatórios do coaf. Disponível em: [https://www.cartacapital.com.br/politica/o-ajuste-de-moraes-apos-suspender-acoes-sobre-o-uso-de-relatorios-do-coaf/](https://www.cartacapital.com.br/politica/o-ajuste-de-moraes-apos-suspender-acoes-sobre-o-uso-de-relatorios-do-coaf/). Acesso em: 26 ago. 2025.[3]
+3. Correio do Povo AL. Decisão de Moraes impacta operações contra facções e lavagem. Disponível em: [https://www.correiodopovo-al.com.br/noticia/2025/08/24/decisao-de-moraes-impacta-operacoes-contra-faccoes-e-lavagem](https://www.correiodopovo-al.com.br/noticia/2025/08/24/decisao-de-moraes-impacta-operacoes-contra-faccoes-e-lavagem). Acesso em: 26 ago. 2025.[5]
+4. G1. MP questiona decisão de Moraes sobre Coaf. Disponível em: [https://g1.globo.com/sp/sao-paulo/noticia/2025/08/25/mp-questiona-decisao-de-moares-sobre-coaf-que-pode-prejudicar-investigacoes-contra-faccoes.ghtml](https://g1.globo.com/sp/sao-paulo/noticia/2025/08/25/mp-questiona-decisao-de-moares-sobre-coaf-que-pode-prejudicar-investigacoes-contra-faccoes.ghtml). Acesso em: 26 ago. 2025.[1]
+5. Agência Brasil. Moraes esclarece decisão que suspende processos sobre dados do Coaf. Disponível em: [https://agenciabrasil.ebc.com.br/justica/noticia/2025-08/moraes-esclarece-decisao-que-suspende-processos-sobre-dados-do-coaf](https://agenciabrasil.ebc.com.br/justica/noticia/2025-08/moraes-esclarece-decisao-que-suspende-processos-sobre-dados-do-coaf). Acesso em: 26 ago. 2025.
+6. UOL. Gilmar Mendes diverge de Moraes. Disponível em: [https://noticias.uol.com.br/ultimas-noticias/agencia-estado/2025/08/25/gilmar-mendes-diverge-de-moraes-e-impede-emissao-de-relatorios-do-coaf-sem-autorizacao-judicial.htm](https://noticias.uol.com.br/ultimas-noticias/agencia-estado/2025/08/25/gilmar-mendes-diverge-de-moraes-e-impede-emissao-de-relatorios-do-coaf-sem-autorizacao-judicial.htm). Acesso em: 26 ago. 2025.
+7. Instagram. Moraes revisa decisão. Disponível em: [https://www.instagram.com/p/DNy8GyR5L9i/](https://www.instagram.com/p/DNy8GyR5L9i/). Acesso em: 26 ago. 2025.
+8. YouTube. MP questiona decisão de Moraes. Disponível em: [https://www.youtube.com/watch?v=lCNJ0me7JSs](https://www.youtube.com/watch?v=lCNJ0me7JSs). Acesso em: 26 ago. 2025.
+9. Instagram. Pedido do MP-SP sobre facções criminosas. Disponível em: [https://www.instagram.com/reel/DNyQuAEwGK5/](https://www.instagram.com/reel/DNyQuAEwGK5/). Acesso em: 26 ago. 2025.
+10. Revista Oeste. STF: divergência sobre relatórios do Coaf gera incertezas jurídicas. Disponível em: [https://revistaoeste.com/politica/stf-divergencia-sobre-relatorios-do-coaf-gera-incertezas-juridicas/](https://revistaoeste.com/politica/stf-divergencia-sobre-relatorios-do-coaf-gera-incertezas-juridicas/). Acesso em: 26 ago. 2025.
+11. YouTube. Alexandre de Moraes revisa decisão sobre provas do Coaf. Disponível em: [https://www.youtube.com/watch?v=qONo8tXIj88](https://www.youtube.com/watch?v=qONo8tXIj88). Acesso em: 26 ago. 2025.
+
+[1](https://www.migalhas.com.br/quentes/438531/moraes-restringe-decisao-em-que-suspendeu-acoes-sobre-dados-do-coaf.)
+[2](https://support.zendesk.com/hc/pt-br/articles/4408846544922-Formata%C3%A7%C3%A3o-de-texto-com-Markdown)
+[3](https://www.freecodecamp.org/portuguese/news/como-formatar-codigo-em-markdown/)
+[4](https://experienceleague.adobe.com/pt-br/docs/contributor/contributor-guide/writing-essentials/markdown)
+[5](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+[6](https://pt.stackoverflow.com/help/formatting)
+[7](https://www.youtube.com/watch?v=W4lwpeDNbY4)
+[8](https://portal.revendadesoftware.com.br/manuais/base-de-conhecimento/sintaxe-markdown)
+[9](https://learn.microsoft.com/pt-br/contribute/content/markdown-reference)
+[10](https://support.discord.com/hc/pt-br/articles/210298617-Texto-em-Markdown-101-formata%C3%A7%C3%A3o-de-chat-negrito-it%C3%A1lico-sublinhado)
 
 ***
 

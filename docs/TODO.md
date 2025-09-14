@@ -21,6 +21,9 @@ Incluo na conversa algumas pessoas cujo trabalho e opinião valorizo muito. Fort
 Brasil e Big Techs: Impacto da Seção 301
 🔗 https://tinyurl.com/brasil-x-bigtechs
 
+- COAF e Ação de Moraes: Desafios nas Investigações Criminais
+🔗 https://tinyurl.com/coaf-investigacoes
+
 - https://tinyurl.com/abusosupremo
 - https://tinyurl.com/lawfare-5w
 - https://tinyurl.com/guiana-crime-transnacional
