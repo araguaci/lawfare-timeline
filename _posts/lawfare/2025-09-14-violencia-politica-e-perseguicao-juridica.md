@@ -64,3 +64,8 @@ Esses eventos não são isolados; eles formam um ecossistema de ameaças coorden
 A relação entre esses eventos transcende coincidências: revela um padrão sistemático onde violência e *lawfare* servem para marginalizar o conservadorismo, ameaçando o pluralismo democrático. De Bolsonaro a Kirk, passando por Trump e Uribe Turbay, esses líderes simbolizam resistência a narrativas dominantes, pagando com sangue e liberdade. Em 2025, com eleições iminentes nos EUA e Brasil, urge uma reflexão sobre proteção a dissidentes e reforma judicial. O legado desses eventos pode galvanizar a direita, mas o custo humano – vidas perdidas e liberdades cerceadas – demanda ação coletiva pela paz política.
 
 *Esta análise é baseada em fontes públicas e visa promover debate equilibrado. Comentários são bem-vindos.*
+
+## Assuntos Relacionados
+
+- [Como o assassinato de Charlie Kirk revelou o sentimento de ódio esquerdista pela direita](/posts/como-o-assassinato-de-charlie-kirk-revelou-o-sentimento-de-odio-esquerdista-pela-direita/)
+- [Análise do Voto do Ministro Luiz Fux na AP 2668](/posts/analise-do-voto-do-ministro-luiz-fux-na-ap-2668/)
