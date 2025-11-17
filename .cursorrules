@@ -1,0 +1,404 @@
+# Regras de Uso do Cursor - Lawfare Timeline
+
+## 📋 Visão Geral do Projeto
+
+Este é um site Jekyll (tema Chirpy) sobre **Lawfare** - a guerra jurídica que destrói democracias. O projeto documenta:
+- Censura e abusos de autoridade no Brasil
+- Corrupção no sistema judiciário
+- Crise diplomática Brasil-EUA
+- Escândalos políticos e financeiros
+- Operações policiais e investigações
+- Vaza Toga e revelações sobre o STF/TSE
+
+**Idioma:** Português (pt-BR)  
+**Tema:** Jekyll Chirpy  
+**URL Base:** https://lawfare-timeline.vercel.app
+
+---
+
+## 🏷️ TAGS PADRÃO
+
+Use tags em português, minúsculas, com hífens para palavras compostas. Tags devem ser relevantes ao conteúdo.
+
+### Tags Principais (usar frequentemente):
+- `lawfare` - Guerra jurídica
+- `censura` - Censura digital/institucional
+- `stf` - Supremo Tribunal Federal
+- `tse` - Tribunal Superior Eleitoral
+- `soberania` - Soberania nacional
+- `big-techs` - Grandes empresas de tecnologia
+- `liberdade de expressão` - Direitos fundamentais
+- `usaid` - Agência dos EUA para Desenvolvimento
+- `corrupcao` - Corrupção sistêmica
+- `justica` - Sistema judiciário
+- `crise-diplomatica` - Conflitos diplomáticos
+- `vazatoga` - Revelações sobre o STF
+- `operacoes` - Operações policiais
+- `escandalos` - Escândalos políticos
+- `impunidade` - Impunidade judicial
+- `indecoro` - Indecoro de autoridades
+- `penduricalhos` - Benefícios extras do judiciário
+- `extravagancia` - Gastos públicos excessivos
+- `bancos` - Escândalos financeiros
+- `dossie` - Dossiês sobre autoridades
+- `decano` - Decanos e autoridades antigas
+- `estudos` - Análises e estudos
+
+### Tags Secundárias (usar quando relevante):
+- `plataformas` - Plataformas digitais
+- `secao301` - Seção 301 dos EUA
+- `coaf` - Conselho de Controle de Atividades Financeiras
+- `faccoes-criminosas` - Crime organizado
+- `investigacao-criminal` - Investigações
+- `lavagem-de-dinheiro` - Crimes financeiros
+- `pcc` - Primeiro Comando da Capital
+- `crime-organizado` - Organizações criminosas
+- `ministerio-publico` - MP
+- `gaeco` - Grupos de Atuação Especializada
+- `decisao-judicial` - Decisões judiciais
+- `relatorios-financeiros` - Relatórios financeiros
+- `seguranca-publica` - Segurança pública
+- `israel` - Relações com Israel
+- `bolsonaro` - Político específico
+- `trump` - Político específico
+- `alexandre-de-moraes` - Ministro específico
+
+**Regra:** Máximo de 10 tags por post. Use apenas tags relevantes ao conteúdo.
+
+---
+
+## 📁 CATEGORIAS
+
+As categorias correspondem a pastas em `_posts/`. Use apenas uma categoria por post.
+
+### Categorias Disponíveis:
+
+1. **`lawfare`** - Guerra jurídica, censura, abusos judiciais
+2. **`crise-diplomatica`** - Conflitos diplomáticos, sanções, relações internacionais
+3. **`justica`** - Corrupção no judiciário, operações, escândalos judiciais
+4. **`vazatoga`** - Revelações sobre STF/TSE, vazamentos, investigações
+5. **`stf`** - Específico sobre o Supremo Tribunal Federal
+6. **`tse`** - Específico sobre o Tribunal Superior Eleitoral
+7. **`escandalos`** - Escândalos políticos gerais
+8. **`bancos`** - Escândalos financeiros e bancários
+9. **`operacoes`** - Operações policiais (PF, etc.)
+10. **`impunidade`** - Decisões que beneficiam criminosos
+11. **`indecoro`** - Declarações indecorosas de autoridades
+12. **`penduricalhos`** - Benefícios extras do judiciário
+13. **`extravagancia`** - Gastos públicos excessivos
+14. **`dossie`** - Dossiês sobre autoridades específicas
+15. **`decano`** - Decanos e autoridades antigas
+16. **`estudos`** - Análises, estudos, pesquisas (sem categoria específica)
+
+**Regra:** Se o post não se encaixa em nenhuma categoria específica, use `estudos`.
+
+---
+
+## 📝 FORMATO DE POSTS
+
+### Estrutura do Front Matter (obrigatório):
+
+```yaml
+---
+title: "Título do Post em Português"
+description: "Descrição curta (máx 160 caracteres) para SEO e preview"
+date: 2025-08-25T19:53:48.208Z
+preview: ""  # Opcional
+image:
+  path: "/assets/img/nome-imagem.png"  # ou "/assets/solid/icone.svg"
+tags: [tag1, tag2, 'tag com espaço']
+categories: categoria-sem-hifen
+mermaid: true  # Se usar diagramas Mermaid
+pin: false  # Fixar no topo (usar raramente)
+---
+```
+
+### Estrutura do Conteúdo:
+
+1. **TOC (Table of Contents)** - Sempre incluir:
+```markdown
+- &nbsp;
+{:toc .large-only}
+```
+
+2. **Título Principal** - Use emojis relevantes:
+```markdown
+# 🇧🇷💻 Título Principal
+```
+
+3. **Seções** - Use hierarquia clara:
+```markdown
+## 🧭 Resumo
+## ⚠️ Classificação de Segurança
+## 🏁 Introdução
+## 📊 Análise
+## 🎯 Conclusão
+```
+
+4. **Emojis** - Use emojis para melhorar legibilidade:
+- 🇧🇷 Brasil
+- ⚖️ Justiça
+- 🏛️ Instituições
+- 📜 Documentos
+- 🕵️ Investigação
+- 💰 Financeiro
+- 🚨 Operações
+- ⚠️ Avisos
+- 🎯 Objetivos
+- 📊 Análises
+
+5. **Links Internos** - Use formato:
+```markdown
+[Texto do Link](/posts/titulo-do-post/)
+[Texto do Link](/categories/categoria/)
+```
+
+6. **Referências** - Use notas de rodapé:
+```markdown
+Texto com referência[^1]
+
+[^1]: URL ou descrição da referência
+```
+
+---
+
+## 🖼️ REGRAS PARA IMAGENS
+
+### Localização:
+- **Imagens principais:** `/assets/img/`
+- **Ícones SVG:** `/assets/solid/` (biblioteca Heroicons)
+- **Diagramas Mermaid:** Gerados automaticamente
+
+### Nomenclatura:
+- Use **kebab-case** (minúsculas com hífens)
+- Seja descritivo: `lawfare-timeline.png`, `stf-decisao-2025.jpg`
+- Evite espaços e caracteres especiais
+
+### Formatos Suportados:
+- `.png` - Para imagens com transparência
+- `.jpg` / `.jpeg` - Para fotos
+- `.svg` - Para ícones e gráficos vetoriais
+- `.webp` - Para otimização (opcional)
+
+### Uso no Front Matter:
+```yaml
+image:
+  path: "/assets/img/nome-imagem.png"
+```
+
+### Uso no Conteúdo:
+```markdown
+![](/assets/img/nome-imagem.png)
+![Descrição da imagem](/assets/img/nome-imagem.png)
+```
+
+### Tamanhos Recomendados:
+- **Imagens de destaque:** 1200x630px (og:image)
+- **Imagens no conteúdo:** 800-1200px de largura
+- **Ícones:** SVG preferencialmente
+
+### Otimização:
+- Comprima imagens antes de adicionar
+- Use formatos modernos (WebP quando possível)
+- Mantenha arquivos < 500KB quando possível
+
+---
+
+## 📂 ESTRUTURA DE ARQUIVOS
+
+### Nomenclatura de Posts:
+```
+YYYY-MM-DD-titulo-do-post-em-kebab-case.md
+```
+
+**Exemplo:**
+```
+2025-08-25-brasil-e-big-techs-o-impacto-da-secao-301.md
+```
+
+### Organização em Pastas:
+```
+_posts/
+  categoria/
+    YYYY-MM-DD-titulo.md
+```
+
+**Exemplo:**
+```
+_posts/
+  crise-diplomatica/
+    2025-08-25-brasil-e-big-techs.md
+  lawfare/
+    2025-08-26-coaf-e-acao-de-moraes.md
+```
+
+---
+
+## 🎨 CONTEÚDO E ESTILO
+
+### Tom e Linguagem:
+- **Formal mas acessível** - Evite jargão excessivo
+- **Neutro e factual** - Apresente fatos, evite opiniões pessoais
+- **Português brasileiro** - Use pt-BR
+- **Clareza** - Seja direto e objetivo
+
+### Elementos de Formatação:
+
+1. **Citações:**
+```markdown
+> Citação importante
+```
+
+2. **Listas:**
+```markdown
+- Item 1
+- Item 2
+  - Subitem
+```
+
+3. **Destaques:**
+```markdown
+***  # Separador visual
+```
+
+4. **Código:**
+```markdown
+`código inline`
+```
+
+5. **Links Externos:**
+```markdown
+[Texto](https://url.com)
+```
+
+### Diagramas Mermaid:
+
+Quando usar diagramas, adicione `mermaid: true` no front matter:
+
+```markdown
+```mermaid
+graph TD
+  A[Node A] --> B[Node B]
+```
+```
+
+---
+
+## ✅ CHECKLIST ANTES DE CRIAR/EDITAR POSTS
+
+- [ ] Front matter completo e correto
+- [ ] Título descritivo e em português
+- [ ] Descrição curta (máx 160 caracteres)
+- [ ] Data no formato ISO 8601
+- [ ] Tags relevantes (máx 10)
+- [ ] Categoria correta
+- [ ] Imagem de destaque (se aplicável)
+- [ ] TOC incluído
+- [ ] Emojis usados adequadamente
+- [ ] Links internos funcionando
+- [ ] Referências formatadas
+- [ ] Nomenclatura de arquivo correta
+- [ ] Conteúdo revisado (ortografia/gramática)
+- [ ] Imagens otimizadas e nomeadas corretamente
+
+---
+
+## 🔍 CONVENÇÕES ESPECÍFICAS
+
+### Datas:
+- Use formato ISO 8601: `2025-08-25T19:53:48.208Z`
+- Para posts históricos, use data aproximada: `2019-01-01`
+
+### Nomes Próprios:
+- **Ministros:** Use nome completo na primeira menção, depois apenas sobrenome
+- **Instituições:** Use siglas após primeira menção completa
+- **Leis:** Use nome completo ou número da lei
+
+### Links:
+- **Internos:** Sempre relativos ao site
+- **Externos:** Sempre completos com https://
+- **Ancoras:** Use IDs de seção quando possível
+
+### Mermaid:
+- Use para diagramas complexos, fluxogramas, mindmaps
+- Mantenha diagramas simples e legíveis
+- Teste no Mermaid Live Editor antes de adicionar
+
+---
+
+## 🚫 O QUE EVITAR
+
+- ❌ Tags genéricas demais (`geral`, `outros`)
+- ❌ Múltiplas categorias (use apenas uma)
+- ❌ Imagens sem otimização
+- ❌ Links quebrados
+- ❌ Conteúdo duplicado
+- ❌ Opiniões pessoais sem fundamentação
+- ❌ Informações não verificadas
+- ❌ Textos muito longos sem estruturação
+- ❌ Emojis excessivos
+- ❌ Nomes de arquivos com espaços ou caracteres especiais
+
+---
+
+## 📚 RECURSOS ÚTEIS
+
+### Documentação:
+- Jekyll: https://jekyllrb.com/docs/
+- Chirpy Theme: https://github.com/cotes2020/jekyll-theme-chirpy
+- Mermaid: https://mermaid.js.org/
+
+### Ferramentas:
+- Mermaid Live Editor: https://mermaid.live/
+- Image Optimization: TinyPNG, Squoosh
+- Markdown Editor: Typora, Mark Text
+
+---
+
+## 🎯 EXEMPLO COMPLETO DE POST
+
+```markdown
+---
+title: "Brasil e Big Techs: O Impacto da Seção 301"
+description: "Conflito Brasil–Big Techs diante da Seção 301 dos EUA, expondo fatos, causas, riscos, alternativas globais e recomendações para políticas digitais resilientes."
+date: 2025-08-25T19:53:48.208Z
+image:
+  path: "/assets/solid/globe.svg"
+tags: [soberania, 'big-techs', 'liberdade de expressão', 'plataformas', 'secao301']
+categories: crise-diplomatica
+---
+
+- &nbsp;
+{:toc .large-only}
+
+# 🇧🇷💻 Brasil, Big Techs e Seção 301: Desafios Regulatórios
+
+***
+
+## 🧭 Resumo
+
+Conteúdo do resumo...
+
+***
+
+## 🏁 Introdução
+
+Conteúdo da introdução...
+
+## 📊 Análise
+
+Conteúdo da análise...
+
+## 🎯 Conclusão
+
+Conteúdo da conclusão...
+
+## Referências
+
+- [^1]: URL da referência
+```
+
+---
+
+**Última atualização:** 2025-01-27
+**Mantenedor:** @araguaci

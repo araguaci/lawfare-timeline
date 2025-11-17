@@ -8,13 +8,13 @@ order: 5
 
 ## Presença nas Redes e Outros Links
 
-- Conta pessoal [@araguaci](https://x.com/araguaci)
+- [substack](https://araguaci.substack.com/)
+- 𝕏 [@araguaci](https://x.com/araguaci)
 - Instagram [@araguaci.andrade](https://www.instagram.com/araguaci.andrade/)
-- Divulgação de meus projetos [@artesdosul](https://x.com/artesdosul)
-- Conta de reserva [@artesdosulweb](https://x.com/artesdosulweb)
+- Projetos [@artesdosul](https://x.com/artesdosul)
 - Design criativos [dribbble](https://dribbble.com/araguaci)
-- Blog de principais projetos [artesdosul](https://artesdosul.github.io)
-- Blog de tecnologia [araguaci](https://araguaci.github.io)
+- Blog de projetos [artesdosul](https://artesdosul.github.io)
+- Blog [araguaci](https://araguaci.github.io)
 - Frases de sabedoria estratégica
   - [suntzu EN](https://suntzu.vercel.app/)
   - [suntzu PT](https://sabedoria-suntzu.vercel.app/)
