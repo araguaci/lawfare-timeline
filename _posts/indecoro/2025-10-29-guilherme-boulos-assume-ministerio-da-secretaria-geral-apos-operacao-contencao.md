@@ -3,7 +3,7 @@ title: "Guilherme Boulos assume Ministério da Secretaria-Geral após Operação
 description: "Boulos toma posse como ministro da Secretaria-Geral um dia após a Operação Contenção, pedindo minuto de silêncio pelas 121 vítimas."
 date: 2025-10-29T14:00:00.000Z
 image:
-  path: "/assets/solid/circle-exclamation.svg"
+  path: "/assets/solid/exclamation-triangle.svg"
 tags: ['governo-lula', 'guilherme-boulos', 'operacao-contencao', 'nomeacoes']
 categories: indecoro
 ---

@@ -3,7 +3,7 @@ title: "David Ágape denuncia tentativa de criminalizar jornalismo investigativo
 description: "Jornalista David Ágape afirma que ação judicial repete padrão de criminalização de jornalistas independentes e garante que não vai recuar."
 date: 2025-11-12T10:00:00.000Z
 image:
-  path: "/assets/solid/shield.svg"
+  path: "/assets/solid/gavel.svg"
 tags: ['lawfare', 'david-agape', 'perseguicao-jornalistas', 'censura', 'stf', 'vazatoga', 'liberdade de expressão']
 categories: lawfare
 ---

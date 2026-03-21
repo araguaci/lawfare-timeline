@@ -3,7 +3,7 @@ title: "Escândalo do INSS: R$ 6,3 bilhões desviados de aposentados entre 2019-
 description: "Esquema bilionário desvia R$ 6,3 bi de 5,4 milhões de aposentados via descontos indevidos. Desvios explodiram 270% no governo Lula."
 date: 2025-05-12T10:00:00.000Z
 image:
-  path: "/assets/solid/circle-exclamation.svg"
+  path: "/assets/solid/exclamation-triangle.svg"
 tags: ['escandalos', 'corrupcao', 'inss', 'aposentados', 'governo-lula', 'carlos-lupi']
 categories: escandalos
 ---

@@ -3,7 +3,7 @@ title: "Risco de suspensão de emissão de passaportes por falta de R$ 97,5 milh
 description: "PF alerta sobre suspensão da emissão de passaportes a partir de 3/11 por esgotamento de 95% do orçamento anual, necessitando R$ 97,5 milhões."
 date: 2025-11-03T10:00:00.000Z
 image:
-  path: "/assets/solid/circle-exclamation.svg"
+  path: "/assets/solid/exclamation-triangle.svg"
 tags: ['gastos-publicos', 'passaportes', 'policia-federal', 'gestao-publica', 'orcamento']
 categories: extravagancia
 ---

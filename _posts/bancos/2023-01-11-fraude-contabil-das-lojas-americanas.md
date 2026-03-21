@@ -6,6 +6,8 @@ categories: bancos
 description: > 
   Manipulação de balanços omitindo dívidas e superestimando ativos; uso indevido de risco sacado.
 tags: ['corrupcao-financeira', 'financeiro', 'nacional']
+image:
+  path: 
 ---
 
 # Fraude contábil das Lojas Americanas

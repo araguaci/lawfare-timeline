@@ -3,7 +3,7 @@ title: "Brasil atinge pior pontuação em Índice de Percepção da Corrupção"
 description: "Brasil obteve 34 pontos no IPC 2024, caindo para 107ª posição entre 180 países, sua pior nota histórica."
 date: 2025-02-11T10:00:00.000Z
 image:
-  path: "/assets/solid/circle-exclamation.svg"
+  path: "/assets/solid/exclamation-triangle.svg"
 tags: ['escandalos', 'corrupcao', 'transparencia-internacional', 'ranking', 'governanca']
 categories: escandalos
 ---
