@@ -3,7 +3,7 @@ title: "Desembargador do TJGO é aposentado compulsoriamente pelo CNJ por asséd
 description: "O CNJ aprova por unanimidade a aposentadoria compulsória do desembargador Orloff Neves Rocha, do TJGO. Em 2021, ele propôs encontro a servidora e tentou beijá-la."
 date: 2026-02-24T00:00:00.000Z
 image:
-  path: "/assets/solid/balance-scale-left.svg.svg"
+  path: "/assets/solid/balance-scale-left.svg"
 tags: ['justica', 'judiciario', 'assedio-sexual', 'impunidade', 'gravidade-alta', 'cnj']
 categories: justica
 ---
