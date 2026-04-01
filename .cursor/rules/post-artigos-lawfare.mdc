@@ -1,0 +1,35 @@
+---
+description: Padrão de artigos Markdown (Jekyll) do repositório lawfare-timeline
+globs: _posts/**/*.md
+---
+
+# Artigos em `_posts`
+
+## Front matter obrigatório
+
+- `title`: string entre aspas.
+- `description`: uma linha; pode espelhar o lead do resumo.
+- `date`: ISO 8601 com `Z` (ex.: `2026-02-27T00:00:00.000Z`). Se o evento for só mês no JSON de origem, usar o dia `01` desse mês.
+- `image`: objeto com `path` apontando para SVG em `/assets/solid/` (ex.: `exclamation-triangle.svg`, `balance-scale-left.svg`, `gavel.svg`).
+- `tags`: lista de slugs em minúsculas, hífens; incluir categoria temática, entidades e `gravidade-alta` ou `gravidade-media` quando couber.
+- `categories`: um slug alinhado à subpasta (`justica`, `stf`, `bancos`, `governo`, `escandalos`, `operacoes`, `lawfare`, `crise-diplomatica`, `extravagancia`, `vazatoga`, `indecoro`, etc.).
+
+Campos opcionais úteis para rastreio: `timeline_id`, `source_data` (nome do JSON de origem).
+
+## Corpo do texto (ordem fixa)
+
+1. Bloco TOC Kramdown: linha `- &nbsp;` seguida de `{:toc .large-only}`.
+2. `#` H1 com um ou mais emojis + título (pode condensar o `title` do front matter).
+3. Linha `***`.
+4. `## 🧭 Resumo` — parágrafo(s); em negrito **`**Impacto Diplomático:**`** (ou variante temática, ex. liberdade de imprensa) e **`**Tipo de Escândalo:**`** (ou tipo equivalente).
+5. `***`.
+6. `## 🏁 Introdução`.
+7. `## 📊 Análise` — subseções `###` conforme o caso (atores, valores, bases legais).
+8. `## 🎯 Conclusão`.
+9. `## Referências` — lista de links markdown `[Fonte — título](url)`.
+
+Não alterar este esquema em novos artigos gerados a partir de dados estruturados (JSON), salvo exceção documentada.
+
+## Geração a partir de `lawfare-timeline-124-145.json`
+
+O script `scripts/gerar_posts_timeline_124_145.py` lê `_data/lawfare-timeline-124-145.json` e grava arquivos `YYYY-MM-DD-timeline-{id}-{slug}.md` nas pastas conforme o tipo de evento: `operacoes` (operações policiais), `bancos` (atos institucionais regulatórios), `stf` (foco STF/ministro, exceto entradas de status), `governo` (atos legislativos/normativos), `justica` (atos judiciais sem foco STF), `escandalos` (demais, incluindo revelações, falhas, lacunas e atualização de status).
