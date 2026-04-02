@@ -104,6 +104,12 @@ Não se trata da produção de novas evidências. O nosso trabalho é uma curado
 ### 🕵️ Estudos e Ferramentas de Análises
 - [✨ Coletânia de Estudos](/tags/estudos/)
 
+### 🔍 Observatório Civil BR — Brasil em Estado Crítico
+
+Central de inteligência civil sobre crime organizado, corrupção sistêmica, captura do judiciário e colapso institucional no Brasil. Dados abertos, artefatos investigativos e análises baseadas em evidências.
+
+- [✨ Observatório Civil BR](https://observatorio-civil-br.vercel.app/)
+
 > **Alerta de Uso Responsável**
 > Este aplicativo não deve ser usado para difamar indivíduos sem evidências. Em caso de suspeita de informação incorreta, o usuário pode reportar via “Denúncia de Fato”. O conteúdo será revisado por equipe de verificação antes de qualquer publicação.
 {: .prompt-warning }
