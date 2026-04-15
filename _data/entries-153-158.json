@@ -1,0 +1,121 @@
+[
+  {
+    "id": 153,
+    "data": "2026-01-01",
+    "data_fim": "2026-04-11",
+    "titulo": "R$ 793 milhões em CDBs do Master sem titular identificado",
+    "descricao": "Investigadores do BC, Coaf, PF e MPF identificam quase R$ 800 milhões em CDBs do Banco Master liquidado cujos titulares não reclamaram os valores. A hipótese investigativa é que os CDBs funcionavam como veículo de remuneração de contratos de consultoria firmados com políticos, assessores, familiares de magistrados e outras figuras ligadas ao Judiciário, evitando rastreabilidade direta. A cadeia de propriedade está sendo mapeada.",
+    "categoria": "falha_institucional",
+    "operacao": "Compliance Zero",
+    "padroes": ["P5", "P3"],
+    "atores": ["Daniel Vorcaro", "BC", "Coaf", "PF", "MPF"],
+    "fontes": [
+      { "tipo": "jornalistica", "veiculo": "Revista Liberta", "url": "https://revistaliberta.com.br/digital/cdbs-banco-master-793-milhoes-sem-dono/", "data": "2026-04-10" }
+    ],
+    "status": "em_investigacao",
+    "impacto": "alto",
+    "tags": ["CDBs sem titular", "remuneração disfarçada", "captura judicial", "captura legislativa"],
+    "nota_editorial": "Mecanismo inovador de pagamento a atores protegidos: em vez de contratos nominais, aplicações financeiras no próprio banco investigado. Duplamente eficiente — remunera e cria conflito de interesse no investigador potencial."
+  },
+  {
+    "id": 154,
+    "data": "2026-03-04",
+    "titulo": "Operação Compliance Zero — 3ª fase: servidores do BC presos por corrupção interna",
+    "descricao": "A PF cumpre 7 mandados de prisão e 25 de busca e apreensão. Paulo Sérgio Neves de Souza (ex-diretor de Fiscalização do BC, 2017–2023) e Belline Santana (ex-chefe do Departamento de Supervisão Bancária – Desup) são alvos de medidas cautelares por decisão do min. André Mendonça. Ambos são acusados de atuar como 'consultores informais' de Daniel Vorcaro dentro da autarquia: revisavam documentos do Master, sugeriam argumentos para reuniões com o BC, participavam de grupo de WhatsApp com Vorcaro para compartilhar estratégias, recebiam vantagens indevidas via mecanismos financeiros indiretos. Vorcaro é preso pela 3ª vez.",
+    "categoria": "corrupção_regulatória",
+    "operacao": "Compliance Zero",
+    "padroes": ["P3", "P5"],
+    "atores": [
+      "Paulo Sérgio Neves de Souza",
+      "Belline Santana",
+      "Daniel Vorcaro",
+      "André Mendonça",
+      "Polícia Federal"
+    ],
+    "fontes": [
+      { "tipo": "oficial", "veiculo": "STF — despacho André Mendonça", "data": "2026-03-04" },
+      { "tipo": "jornalistica", "veiculo": "Correio Braziliense", "url": "https://www.correiobraziliense.com.br/economia/2026/03/7369594-escandalo-do-banco-master-gera-tensao-entre-servidores-do-banco-central.html", "data": "2026-03-06" },
+      { "tipo": "jornalistica", "veiculo": "Brasil 247", "url": "https://www.brasil247.com/economia/banco-central-avalia-reforcar-supervisao-apos-escandalo-no-banco-master", "data": "2026-03-11" }
+    ],
+    "status": "cautelar_ativo",
+    "impacto": "critico",
+    "tags": ["corrupção BC", "regulador capturado", "consultor informal", "vazamento sigiloso", "supervisão bancária"],
+    "nota_editorial": "Pela primeira vez na história do BC, servidores do alto escalão (Diretoria de Fiscalização + Desup) são formalmente acusados de corrupção. Os dois têm ~28 anos de carreira. Souza estava no cargo durante o período em que Vorcaro adquiriu e expandiu o banco (2018–2023). A captura não foi posterior ao crime — foi concomitante ao crescimento fraudulento."
+  },
+  {
+    "id": 155,
+    "data": "2026-03-10",
+    "titulo": "CGU instala inquérito preliminar contra servidores do BC após sindicância interna",
+    "descricao": "O BC finaliza sindicância interna e envia material à CGU em 10/mar/2026. A CGU abre 'inquérito preliminar' para verificar admissibilidade. Prazo para conclusão: 180 dias. Se confirmados indícios, poderá ser instaurado PAD (Processo Administrativo Disciplinar) — com possibilidade de expulsão do serviço público — e PAR (Processo Administrativo de Responsabilização) contra o próprio banco, por corrupção ativa de servidor. O BC também avalia pente-fino em ~1 dúzia de servidores que podem ter mantido relações informais com instituições supervisionadas.",
+    "categoria": "falha_institucional",
+    "operacao": "Compliance Zero",
+    "padroes": ["P3"],
+    "atores": ["CGU", "Banco Central", "Paulo Sérgio Neves de Souza", "Belline Santana"],
+    "fontes": [
+      { "tipo": "jornalistica", "veiculo": "Brasil em Folhas", "url": "https://www.brasilemfolhas.com.br/2026/03/cgu-investiga-servidores-banco-central-caso-master/", "data": "2026-03-12" }
+    ],
+    "status": "em_apuracao",
+    "impacto": "alto",
+    "tags": ["CGU", "PAD", "PAR", "banco central", "corrupção estrutural"],
+    "nota_editorial": "A hipótese de 'uma dúzia de servidores' com relações informais sugere que a captura do regulador não foi pontual, mas sistêmica. Isso muda a natureza do risco: não é um caso de maçã podre — é uma questão estrutural de governança do regulador financeiro mais importante do país."
+  },
+  {
+    "id": 156,
+    "data": "2026-03-11",
+    "titulo": "CPI do Banco Master: quebra de sigilos e investigação de aeronave Embraer Legacy 650",
+    "descricao": "A CPI aprova requerimentos para obter lista de passageiros e registros de propriedade de aeronave Embraer Legacy 650, suspeita de uso por Vorcaro e sócios para deslocamentos estratégicos. Os diários de bordo podem revelar encontros entre 2025–2026 e conexões com organizações criminosas. CPI também convoca o presidente do BC Gabriel Galípolo a explicar processos internos que levaram ao afastamento dos dois servidores.",
+    "categoria": "investigação_parlamentar",
+    "operacao": "Compliance Zero",
+    "padroes": ["P3", "P5"],
+    "atores": ["CPI do Banco Master", "Gabriel Galípolo", "Daniel Vorcaro", "João Carlos Mansur"],
+    "fontes": [
+      { "tipo": "jornalistica", "veiculo": "Gazeta do Povo", "url": "https://www.gazetadopovo.com.br/republica/quem-sao-os-novos-alvos-da-cpi-que-investiga-fraudes-no-banco-master/", "data": "2026-03-11" }
+    ],
+    "status": "em_andamento",
+    "impacto": "medio",
+    "tags": ["CPI", "aeronave", "diário de bordo", "PCC", "conexões criminosas"],
+    "lacuna_investigativa": "Zanin negou instauração da CPI do Banco Master no Congresso. A CPI que opera é de instância inferior. A decisão de Zanin sobre competência merece análise separada — padrão P3 aplicado via Judiciário para limitar investigação parlamentar."
+  },
+  {
+    "id": 157,
+    "data": "2026-04-11",
+    "titulo": "Análise editorial: 'Todo Poder Emana do Polvo' — Dr. Paulo Faria",
+    "descricao": "Advogado e jornalista Paulo Faria (@drpaulofaria22) publica análise nomeando o padrão estrutural de captura institucional no caso Banco Master. Identifica o mecanismo de monetização de capital simbólico acumulado em funções públicas: ex-presidentes da OAB (Marcus Vinicius Furtado Coêlho, Felipe Santa Cruz), ex-ministros da Fazenda, ex-dirigentes do BC contratados via escritórios de advocacia — R$ 300 mi a R$ 500 mi em consultorias. Aponta permeabilidade entre OAB, STF, TCU, BC, PF, Senado, Câmara e Executivo petista. Cunha o termo 'Polvorcaro' para descrever o sistema. Fonte primária da perspectiva interna da advocacia sobre captura institucional.",
+    "categoria": "analise_editorial",
+    "operacao": "Compliance Zero",
+    "padroes": ["P3", "P4"],
+    "atores": [
+      "Paulo Faria (@drpaulofaria22)",
+      "Marcus Vinicius Furtado Coêlho",
+      "Felipe Santa Cruz",
+      "OAB",
+      "Dias Toffoli",
+      "Alexandre de Moraes"
+    ],
+    "fontes": [
+      { "tipo": "analise_profissional", "veiculo": "X/@drpaulofaria22", "data": "2026-04-11", "nota": "Advogado e jornalista — voz interna da profissão jurídica" }
+    ],
+    "status": "registrado",
+    "impacto": "medio",
+    "tags": ["captura OAB", "porta giratória", "monetização de capital simbólico", "Polvorcaro", "análise interna advocacia"],
+    "nota_editorial": "Relevância documental além do conteúdo: é a voz de um advogado, com responsabilidade ética profissional, nomeando publicamente o padrão em colegas de profissão. O silêncio institucional da OAB mencionado no texto é ele mesmo um dado investigativo."
+  },
+  {
+    "id": 158,
+    "data": "2026-01-01",
+    "data_fim": "2026-04-11",
+    "titulo": "Lacuna investigativa: quem são os beneficiários dos CDBs Master não reclamados e qual sua relação com decisões judiciais favoráveis ao banco?",
+    "descricao": "R$ 793 milhões em CDBs do Banco Master liquidado permanecem sem titular identificado. A hipótese investigativa é que funcionaram como veículo de remuneração indireta de atores com influência sobre processos regulatórios ou judiciais. A correlação temporal entre aplicações em CDBs Master e decisões favoráveis ao banco (por qualquer instituição — STF, TCU, Câmara, Senado, BC) nunca foi mapeada sistematicamente. Esta lacuna é o próximo passo analítico mais urgente do projeto.",
+    "categoria": "lacuna_investigativa",
+    "operacao": "Compliance Zero",
+    "padroes": ["P3", "P5"],
+    "atores": ["desconhecidos — objeto da investigação"],
+    "fontes": [
+      { "tipo": "jornalistica", "veiculo": "Revista Liberta", "url": "https://revistaliberta.com.br/digital/cdbs-banco-master-793-milhoes-sem-dono/", "data": "2026-04-10" }
+    ],
+    "status": "lacuna_aberta",
+    "impacto": "critico",
+    "tags": ["CDBs sem dono", "remuneração disfarçada", "correlação temporal", "captura judicial", "próximo passo analítico"],
+    "pergunta_central": "Existe correlação entre posse de CDBs Master e padrão de votos/decisões favoráveis ao banco no período 2018–2025? Se sim, isso configura corrupção estrutural não investigada."
+  }
+]

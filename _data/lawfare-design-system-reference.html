@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lawfare Timeline — Design System Reference</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #080c10; --bg1: #0d1218; --bg2: #121820; --bg3: #1a2230;
+  --border: rgba(255,255,255,0.06); --border2: rgba(255,255,255,0.12);
+  --fg: #e8ecf0; --fg2: #8a9ab0; --fg3: #4a5a6a;
+  --red: #e84040; --red2: rgba(232,64,64,0.15);
+  --amber: #e8a020; --amber2: rgba(232,160,32,0.15);
+  --blue: #3090e8; --blue2: rgba(48,144,232,0.12);
+  --green: #28c880; --green2: rgba(40,200,128,0.12);
+  --purple: #a060e8; --purple2: rgba(160,96,232,0.12);
+  --cyan: #20d0e8;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --font-display: 'Syne', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-mono); font-size: 13px; line-height: 1.6; min-height: 100vh; }
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--bg1); }
+::-webkit-scrollbar-thumb { background: var(--bg3); border-radius: 2px; }
+
+/* HEADER */
+.header { background: var(--bg1); border-bottom: 1px solid var(--border2); padding: 24px 20px; position: relative; overflow: hidden; }
+@media(min-width:768px){ .header { padding: 32px 40px 24px; } }
+.header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--red), var(--amber), var(--blue), var(--green)); background-size: 200% 100%; animation: scanline 4s linear infinite; }
+@keyframes scanline { to { background-position: 200% 0; } }
+.header-badge { display: inline-flex; align-items: center; gap: 6px; padding: 3px 8px; border-radius: 3px; font-size: 10px; font-weight: 600; letter-spacing: 0.10em; text-transform: uppercase; background: var(--blue2); color: var(--blue); border: 1px solid rgba(48,144,232,0.3); margin-bottom: 12px; }
+.header-title { font-family: var(--font-display); font-size: clamp(24px,4vw,42px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 8px; }
+.header-title span { color: var(--blue); }
+.header-sub { font-size: 13px; color: var(--fg2); margin-bottom: 20px; }
+.header-version { font-size: 11px; color: var(--fg3); }
+
+/* NAV */
+.nav-tabs { display: flex; background: var(--bg1); border-bottom: 1px solid var(--border); padding: 0 20px; overflow-x: auto; scrollbar-width: none; }
+.nav-tabs::-webkit-scrollbar { display: none; }
+@media(min-width:768px){ .nav-tabs { padding: 0 40px; } }
+.nav-tab { padding: 14px 16px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg3); cursor: pointer; border: none; background: none; border-bottom: 2px solid transparent; white-space: nowrap; transition: all 0.15s; font-family: var(--font-mono); }
+.nav-tab:hover { color: var(--fg2); }
+.nav-tab.active { color: var(--fg); border-bottom-color: var(--blue); }
+
+/* MAIN */
+.main { padding: 24px 20px; max-width: 1400px; margin: 0 auto; }
+@media(min-width:768px){ .main { padding: 32px 40px; } }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; animation: fadeIn 0.25s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: none; } }
+
+/* SECTION TITLE */
+.section-title { font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--fg3); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+.section-note { font-size: 12px; color: var(--fg2); margin-bottom: 20px; line-height: 1.7; }
+
+/* GRIDS */
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 16px; margin-bottom: 24px; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px; margin-bottom: 24px; }
+.grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: 12px; margin-bottom: 24px; }
+.grid-colors { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 140px), 1fr)); gap: 8px; margin-bottom: 24px; }
+
+/* CARD */
+.card { background: var(--bg1); border: 1px solid var(--border); border-radius: 6px; padding: 20px; }
+.card-title { font-family: var(--font-display); font-size: 14px; font-weight: 700; margin-bottom: 8px; }
+.card-body { font-size: 12px; color: var(--fg2); line-height: 1.7; }
+.card-compact { background: var(--bg1); border: 1px solid var(--border); border-radius: 6px; padding: 14px 16px; }
+.card-accent { background: var(--bg2); border-left: 3px solid var(--blue); border-radius: 0 6px 6px 0; padding: 16px 20px; margin-bottom: 12px; }
+.card-accent-title { font-size: 10px; color: var(--blue); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 4px; }
+.card-accent-body { font-size: 12px; color: var(--fg2); line-height: 1.6; }
+
+/* COLOR SWATCHES */
+.color-swatch { border-radius: 6px; padding: 14px; }
+.swatch-color { width: 100%; height: 32px; border-radius: 4px; margin-bottom: 10px; }
+.swatch-name { font-size: 11px; font-weight: 600; margin-bottom: 2px; }
+.swatch-hex { font-size: 10px; color: var(--fg3); font-family: var(--font-mono); }
+.swatch-use { font-size: 10px; color: var(--fg2); margin-top: 4px; line-height: 1.5; }
+
+/* BADGES */
+.badge { display: inline-flex; align-items: center; gap: 6px; padding: 3px 8px; border-radius: 3px; font-size: 10px; font-weight: 600; letter-spacing: 0.10em; text-transform: uppercase; font-family: var(--font-mono); }
+.b-red    { background: var(--red2);    color: var(--red);    border: 1px solid rgba(232,64,64,0.3); }
+.b-amber  { background: var(--amber2);  color: var(--amber);  border: 1px solid rgba(232,160,32,0.3); }
+.b-blue   { background: var(--blue2);   color: var(--blue);   border: 1px solid rgba(48,144,232,0.3); }
+.b-green  { background: var(--green2);  color: var(--green);  border: 1px solid rgba(40,200,128,0.3); }
+.b-purple { background: var(--purple2); color: var(--purple); border: 1px solid rgba(160,96,232,0.3); }
+.badges-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+
+/* STAT */
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%,160px),1fr)); gap: 12px; max-width: 900px; margin-bottom: 24px; }
+.stat-item { background: var(--bg2); border: 1px solid var(--border); border-radius: 6px; padding: 12px 16px; }
+.stat-num { font-family: var(--font-display); font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
+.stat-lbl { font-size: 10px; color: var(--fg3); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 2px; }
+
+/* ALERT */
+.alert { border-radius: 6px; padding: 16px 20px; margin-bottom: 16px; display: flex; gap: 12px; }
+.al-red    { background: var(--red2);   border: 1px solid rgba(232,64,64,0.25); }
+.al-amber  { background: var(--amber2); border: 1px solid rgba(232,160,32,0.25); }
+.al-blue   { background: var(--blue2);  border: 1px solid rgba(48,144,232,0.25); }
+.al-icon { font-size: 16px; flex-shrink: 0; }
+.al-title { font-size: 12px; font-weight: 600; margin-bottom: 4px; }
+.al-desc { font-size: 12px; color: var(--fg2); line-height: 1.6; }
+
+/* TYPOGRAPHY DEMOS */
+.type-demo { background: var(--bg1); border: 1px solid var(--border); border-radius: 6px; padding: 20px; margin-bottom: 12px; }
+.type-label { font-size: 10px; color: var(--fg3); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+.type-sample { }
+.type-spec { font-size: 11px; color: var(--fg3); margin-top: 8px; font-family: var(--font-mono); }
+
+/* TIMELINE DEMO */
+.timeline { position: relative; padding-left: 24px; }
+.timeline::before { content: ''; position: absolute; left: 7px; top: 0; bottom: 0; width: 1px; background: var(--border2); }
+.tl-item { position: relative; margin-bottom: 20px; }
+.tl-dot { position: absolute; left: -20px; top: 5px; width: 10px; height: 10px; border-radius: 50%; border: 2px solid var(--bg); }
+.tl-date { font-size: 10px; color: var(--fg3); letter-spacing: 0.06em; margin-bottom: 4px; }
+.tl-title { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+.tl-desc { font-size: 12px; color: var(--fg2); line-height: 1.6; }
+
+/* TABLE DEMO */
+.data-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
+.data-table th { font-size: 10px; letter-spacing: 0.10em; text-transform: uppercase; color: var(--fg3); text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--border2); white-space: nowrap; }
+.data-table td { padding: 10px 12px; font-size: 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.data-table tr:hover td { background: var(--bg2); }
+
+/* PATTERN CARDS */
+.pattern-card { background: var(--bg1); border: 1px solid var(--border); border-radius: 6px; padding: 16px; position: relative; overflow: hidden; }
+.pattern-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; }
+.pc-red::before    { background: var(--red); }
+.pc-amber::before  { background: var(--amber); }
+.pc-blue::before   { background: var(--blue); }
+.pc-purple::before { background: var(--purple); }
+.pattern-id { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 4px; }
+.pattern-name { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+.pattern-desc { font-size: 11px; color: var(--fg2); line-height: 1.6; }
+
+/* CODE BLOCK */
+.code-block { background: var(--bg3); border: 1px solid var(--border); border-radius: 4px; padding: 14px 16px; font-size: 11px; color: var(--fg2); line-height: 1.8; overflow-x: auto; white-space: pre; margin-bottom: 16px; font-family: var(--font-mono); }
+
+/* GRID DEMO */
+.grid-demo-item { background: var(--bg2); border: 1px solid var(--border); border-radius: 4px; padding: 12px; text-align: center; font-size: 11px; color: var(--fg3); }
+
+/* PROGRESS */
+.progress-wrap { margin-bottom: 16px; }
+.progress-head { display: flex; justify-content: space-between; margin-bottom: 6px; }
+.progress-label { font-size: 12px; }
+.progress-pct { font-size: 11px; color: var(--fg3); }
+.progress-bar { height: 4px; background: var(--bg3); border-radius: 2px; overflow: hidden; }
+.progress-fill { height: 100%; border-radius: 2px; }
+
+/* MOBILE WARN */
+.mobile-warn { background: var(--amber2); border: 1px solid rgba(232,160,32,0.25); border-radius: 6px; padding: 12px 16px; font-size: 12px; color: var(--fg2); margin-bottom: 16px; }
+.mobile-warn strong { color: var(--amber); }
+
+/* FOOTER */
+.footer { margin-top: 48px; padding: 20px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+@media(min-width:768px){ .footer { padding: 20px 40px; } }
+.footer-text { font-size: 11px; color: var(--fg3); }
+
+/* UTILS */
+.mb-8  { margin-bottom: 8px; }
+.mb-16 { margin-bottom: 16px; }
+.mb-24 { margin-bottom: 24px; }
+.text-red    { color: var(--red); }
+.text-amber  { color: var(--amber); }
+.text-blue   { color: var(--blue); }
+.text-green  { color: var(--green); }
+.text-purple { color: var(--purple); }
+.text-muted  { color: var(--fg2); }
+.text-dim    { color: var(--fg3); }
+.font-display { font-family: var(--font-display); }
+
+@media print {
+  body { background: #fff; color: #111; }
+  .nav-tabs { display: none !important; }
+  .tab-panel { display: block !important; page-break-inside: avoid; }
+  :root { --bg:#fff;--bg1:#f8f8f8;--bg2:#f0f0f0;--bg3:#e8e8e8;--border:rgba(0,0,0,.12);--border2:rgba(0,0,0,.2);--fg:#111;--fg2:#444;--fg3:#888; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-badge">Design System · v1.0.0</div>
+  <div class="header-title">Lawfare <span>Timeline</span></div>
+  <div class="header-sub">Design System Reference — Mobile-first · Dark Theme · Investigative Artifacts</div>
+  <div class="header-version">CC0 1.0 · lawfare-timeline.vercel.app · IBM Plex Mono + Syne</div>
+</div>
+
+<!-- NAV -->
+<div class="nav-tabs">
+  <button class="nav-tab active"  onclick="showTab('colors')">Cores</button>
+  <button class="nav-tab"         onclick="showTab('typography')">Tipografia</button>
+  <button class="nav-tab"         onclick="showTab('components')">Componentes</button>
+  <button class="nav-tab"         onclick="showTab('grids')">Grids</button>
+  <button class="nav-tab"         onclick="showTab('patterns')">Padrões P1–P8</button>
+  <button class="nav-tab"         onclick="showTab('rules')">Regras AI</button>
+</div>
+
+<div class="main">
+
+<!-- ═══ CORES ═══ -->
+<div id="tab-colors" class="tab-panel active">
+
+  <div class="section-title">Backgrounds — Hierarquia de 4 Níveis</div>
+  <div class="section-note">A hierarquia é criada por cor de fundo, nunca por sombras. Dark mode absorve sombras — usar border + background shift.</div>
+  <div class="grid-4 mb-24">
+    <div class="color-swatch" style="background:var(--bg1);border:1px solid var(--border2)">
+      <div class="swatch-color" style="background:#080c10;border:1px solid rgba(255,255,255,.1)"></div>
+      <div class="swatch-name">--bg</div>
+      <div class="swatch-hex">#080c10</div>
+      <div class="swatch-use">Fundo geral do documento</div>
+    </div>
+    <div class="color-swatch" style="background:var(--bg1);border:1px solid var(--border2)">
+      <div class="swatch-color" style="background:#0d1218;border:1px solid rgba(255,255,255,.1)"></div>
+      <div class="swatch-name">--bg1</div>
+      <div class="swatch-hex">#0d1218</div>
+      <div class="swatch-use">Cards, header, painéis primários</div>
+    </div>
+    <div class="color-swatch" style="background:var(--bg1);border:1px solid var(--border2)">
+      <div class="swatch-color" style="background:#121820;border:1px solid rgba(255,255,255,.1)"></div>
+      <div class="swatch-name">--bg2</div>
+      <div class="swatch-hex">#121820</div>
+      <div class="swatch-use">Cards aninhados, tabelas, hover</div>
+    </div>
+    <div class="color-swatch" style="background:var(--bg1);border:1px solid var(--border2)">
+      <div class="swatch-color" style="background:#1a2230;border:1px solid rgba(255,255,255,.1)"></div>
+      <div class="swatch-name">--bg3</div>
+      <div class="swatch-hex">#1a2230</div>
+      <div class="swatch-use">Insets, code blocks, destaques</div>
+    </div>
+  </div>
+
+  <div class="section-title">Foreground — Hierarquia de 3 Níveis</div>
+  <div class="grid-3 mb-24">
+    <div class="card-compact">
+      <div style="font-size:18px;font-family:var(--font-display);font-weight:700;color:#e8ecf0;margin-bottom:6px">--fg · #e8ecf0</div>
+      <div class="card-body">Texto principal, títulos de cards, dados críticos</div>
+    </div>
+    <div class="card-compact">
+      <div style="font-size:18px;font-family:var(--font-display);font-weight:700;color:#8a9ab0;margin-bottom:6px">--fg2 · #8a9ab0</div>
+      <div class="card-body">Corpo de texto, descrições, conteúdo secundário</div>
+    </div>
+    <div class="card-compact">
+      <div style="font-size:18px;font-family:var(--font-display);font-weight:700;color:#4a5a6a;margin-bottom:6px">--fg3 · #4a5a6a</div>
+      <div class="card-body">Metadata, timestamps, labels de eixo, auxiliares</div>
+    </div>
+  </div>
+
+  <div class="section-title">Semântica — Cor como Linguagem de Status</div>
+  <div class="section-note">Cor SOMENTE para comunicar status. Nunca decorativa. Cada cor mapeia para uma severidade investigativa.</div>
+  <div class="grid-colors mb-24">
+    <div class="color-swatch" style="background:var(--bg1);border:1px solid rgba(232,64,64,0.4)">
+      <div class="swatch-color" style="background:#e84040"></div>
+      <div class="swatch-name text-red">--red</div>
+      <div class="swatch-hex">#e84040</div>
+      <div class="swatch-use">CRÍTICO — prisões, mortes, ilícitos confirmados, alertas máximos</div>
+    </div>
+    <div class="color-swatch" style="background:var(--bg1);border:1px solid rgba(232,160,32,0.4)">
+      <div class="swatch-color" style="background:#e8a020"></div>
+      <div class="swatch-name text-amber">--amber</div>
+      <div class="swatch-hex">#e8a020</div>
+      <div class="swatch-use">ALTO — em andamento, riscos altos, pendentes</div>
+    </div>
+    <div class="color-swatch" style="background:var(--bg1);border:1px solid rgba(48,144,232,0.4)">
+      <div class="swatch-color" style="background:#3090e8"></div>
+      <div class="swatch-name text-blue">--blue</div>
+      <div class="swatch-hex">#3090e8</div>
+      <div class="swatch-use">MÉDIO — judicial, informação, arquivados, referência</div>
+    </div>
+    <div class="color-swatch" style="background:var(--bg1);border:1px solid rgba(40,200,128,0.4)">
+      <div class="swatch-color" style="background:#28c880"></div>
+      <div class="swatch-name text-green">--green</div>
+      <div class="swatch-hex">#28c880</div>
+      <div class="swatch-use">POSITIVO — documentado, concluído, delações</div>
+    </div>
+    <div class="color-swatch" style="background:var(--bg1);border:1px solid rgba(160,96,232,0.4)">
+      <div class="swatch-color" style="background:#a060e8"></div>
+      <div class="swatch-name text-purple">--purple</div>
+      <div class="swatch-hex">#a060e8</div>
+      <div class="swatch-use">ESPECIAL — terrorismo, geopolítica, STF/sigilo</div>
+    </div>
+    <div class="color-swatch" style="background:var(--bg1);border:1px solid rgba(32,208,232,0.4)">
+      <div class="swatch-color" style="background:#20d0e8"></div>
+      <div class="swatch-name text-muted" style="color:var(--cyan)">--cyan</div>
+      <div class="swatch-hex">#20d0e8</div>
+      <div class="swatch-use">AUXILIAR — ativos digitais, apostas, categorias adicionais</div>
+    </div>
+  </div>
+
+  <div class="section-title">Badges — Aplicação dos Status</div>
+  <div class="badges-row mb-8">
+    <span class="badge b-red">PRESO · CRÍTICO</span>
+    <span class="badge b-amber">PENDENTE · ALTO</span>
+    <span class="badge b-blue">JUDICIAL · MÉDIO</span>
+    <span class="badge b-green">DOCUMENTADO</span>
+    <span class="badge b-purple">STF · SIGILO</span>
+  </div>
+  <div class="badges-row mb-16">
+    <span class="badge b-red">INVESTIGAÇÃO ATIVA</span>
+    <span class="badge b-amber">PF + GAECO-SP</span>
+    <span class="badge b-blue">DEFLAGRADA: 25.02.2025</span>
+    <span class="badge b-green">CC0 1.0</span>
+  </div>
+</div>
+
+<!-- ═══ TIPOGRAFIA ═══ -->
+<div id="tab-typography" class="tab-panel">
+
+  <div class="section-title">Famílias Tipográficas</div>
+  <div class="grid-2 mb-24">
+    <div class="card">
+      <div class="type-label">Display — Syne</div>
+      <div style="font-family:var(--font-display);font-size:32px;font-weight:800;letter-spacing:-0.02em;line-height:1.1;margin-bottom:8px">Operação Hydra</div>
+      <div style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:8px;color:var(--fg2)">Títulos, Stats, Hero</div>
+      <div class="type-spec">Weights: 400 · 600 · 700 · 800<br>Use: headings, stats, títulos de cards</div>
+    </div>
+    <div class="card">
+      <div class="type-label">Mono — IBM Plex Mono</div>
+      <div style="font-family:var(--font-mono);font-size:14px;line-height:1.8;margin-bottom:8px">R$ 6.000.000.000 · PCC + Hezbollah<br>Operação deflagrada: 25.02.2025<br>15+ países · 3× prisões · CC0 1.0</div>
+      <div class="type-spec">Weights: 400 · 500 · 600<br>Use: corpo, labels, badges, código, metadados</div>
+    </div>
+  </div>
+
+  <div class="section-title">Escala Tipográfica</div>
+  <div class="card mb-24">
+    <div class="type-demo" style="border:none;padding:12px 0;border-bottom:1px solid var(--border);margin-bottom:12px">
+      <div class="type-label">Hero Title — clamp(24px, 4vw, 48px) · Syne 800</div>
+      <div class="font-display" style="font-size:clamp(24px,4vw,48px);font-weight:800;letter-spacing:-0.02em;line-height:1.1">OPERAÇÃO <span class="text-red">HYDRA</span></div>
+    </div>
+    <div style="padding:10px 0;border-bottom:1px solid var(--border);margin-bottom:10px">
+      <div class="type-label">Section Title — 11px · Mono 700 · uppercase · tracked</div>
+      <div class="section-title" style="margin:0;border:none;padding:0">Atores da Operação</div>
+    </div>
+    <div style="padding:10px 0;border-bottom:1px solid var(--border);margin-bottom:10px">
+      <div class="type-label">Card Title — 14px · Syne 700</div>
+      <div class="font-display" style="font-size:14px;font-weight:700">Cyllas Salerno Elia Júnior</div>
+    </div>
+    <div style="padding:10px 0;border-bottom:1px solid var(--border);margin-bottom:10px">
+      <div class="type-label">Body — 12px · Mono 400 · line-height 1.7 · fg2</div>
+      <div style="font-size:12px;color:var(--fg2);line-height:1.7">Policial civil do DEIC, fundador e CEO da 2GO Bank. Lavagem de R$ 6 bilhões do PCC via contas-bolsão, smurfing e criptoativos em 15 países. Preso três vezes em 10 meses.</div>
+    </div>
+    <div style="padding:10px 0;border-bottom:1px solid var(--border);margin-bottom:10px">
+      <div class="type-label">Stat Number — 22px · Syne 700 · letter-spacing -0.02em</div>
+      <div class="font-display" style="font-size:22px;font-weight:700;color:var(--red);letter-spacing:-0.02em">R$ 6bi</div>
+    </div>
+    <div style="padding:10px 0">
+      <div class="type-label">Timestamp / Label — 10px · Mono · fg3 · tracked</div>
+      <div style="font-size:10px;color:var(--fg3);letter-spacing:0.08em;text-transform:uppercase">25.02.2025 · MPSP + PF + GAECO-SP · CC0 1.0</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ COMPONENTES ═══ -->
+<div id="tab-components" class="tab-panel">
+
+  <div class="section-title">Stats / KPI Grid</div>
+  <div class="stat-grid">
+    <div class="stat-item"><div class="stat-num text-red">R$ 6bi</div><div class="stat-lbl">Volume documentado</div></div>
+    <div class="stat-item"><div class="stat-num text-amber">15+</div><div class="stat-lbl">Países envolvidos</div></div>
+    <div class="stat-item"><div class="stat-num text-blue">3×</div><div class="stat-lbl">Prisões Cyllas</div></div>
+    <div class="stat-item"><div class="stat-num text-purple">2</div><div class="stat-lbl">Fintechs hub</div></div>
+    <div class="stat-item"><div class="stat-num text-green">1</div><div class="stat-lbl">Whistleblower</div></div>
+  </div>
+
+  <div class="section-title">Alert Boxes</div>
+  <div class="alert al-red mb-16">
+    <div class="al-icon">🎯</div>
+    <div><div class="al-title">Alert Crítico — Vermelho</div><div class="al-desc">Beneficiários finais das LLCs em Delaware não identificados. Denúncia do MP sem nomes públicos. Padrão P3 ativo: STF como chokepoint terminal.</div></div>
+  </div>
+  <div class="alert al-amber mb-16">
+    <div class="al-icon">⚠</div>
+    <div><div class="al-title">Alert de Atenção — Âmbar</div><div class="al-desc">MLAT Brasil-EUA não ativado formalmente. Janela eleitoral de outubro/2026 cria pressão de tempo crítica para o avanço investigativo.</div></div>
+  </div>
+  <div class="alert al-blue mb-24">
+    <div class="al-icon">ℹ</div>
+    <div><div class="al-title">Nota Informativa — Azul</div><div class="al-desc">A brecha regulatória da e-Financeira foi revertida em dez/2024. Quem financiou a campanha de fake news permanece sem investigação pública.</div></div>
+  </div>
+
+  <div class="section-title">Cards — Variantes</div>
+  <div class="grid-3">
+    <div class="card">
+      <div class="card-title">Card Default</div>
+      <div class="card-body">Uso padrão para análises, textos e conteúdo narrativo. Background bg1, border sutil, border-radius 6px, padding 20px.</div>
+      <div class="badges-row" style="margin-top:12px">
+        <span class="badge b-red">PRESO</span>
+        <span class="badge b-amber">PENDENTE</span>
+      </div>
+    </div>
+    <div class="card" style="background:var(--bg2)">
+      <div class="card-title">Card Elevated</div>
+      <div class="card-body">Fundo bg2 para criar hierarquia visual. Usado dentro de um card-default ou em grids de segundo nível.</div>
+    </div>
+    <div class="card" style="border-left:3px solid var(--red);border-radius:0 6px 6px 0">
+      <div style="font-size:10px;color:var(--red);font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px">P1 — Hydra</div>
+      <div class="card-title" style="font-size:13px">Accent Left Card</div>
+      <div class="card-body">Usado para padrões sistêmicos e destaques analíticos. Border-left 3px na cor semântica.</div>
+    </div>
+  </div>
+
+  <div class="section-title">Timeline</div>
+  <div class="timeline mb-24">
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--red)"></div>
+      <div class="tl-date">NOV/2024</div>
+      <div class="tl-title">Gritzbach executado em Guarulhos</div>
+      <div class="tl-desc">8 dias após depoimento à Corregedoria. Tiro de fuzil no aeroporto. Dot vermelho = evento crítico.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--amber)"></div>
+      <div class="tl-date">25/FEV/2025</div>
+      <div class="tl-title">Operação Hydra deflagrada</div>
+      <div class="tl-desc">MPSP + PF + GAECO. Cyllas preso pela 2ª vez. Dot âmbar = operação investigativa.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--green)"></div>
+      <div class="tl-date">MAR/2025</div>
+      <div class="tl-title">MPSP formaliza denúncia</div>
+      <div class="tl-desc">3 pessoas denunciadas por lavagem de R$ 6bi. Dot verde = documentação/conclusão.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--fg3)"></div>
+      <div class="tl-date">ABR/2026</div>
+      <div class="tl-title">Status atual — beneficiários desconhecidos</div>
+      <div class="tl-desc">Dot cinza = evento neutro, informativo, sem resolução.</div>
+    </div>
+  </div>
+
+  <div class="section-title">Tabela de Atores</div>
+  <div style="overflow-x:auto;margin-bottom:24px">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Ator</th><th>Função</th><th>Status</th><th>Padrão</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Cyllas Salerno</strong><br><span class="text-dim" style="font-size:11px">Policial DEIC / CEO 2GO Bank</span></td>
+          <td class="text-muted">Operador central — engenharia de contas-bolsão</td>
+          <td><span class="badge b-red">Preso 3×</span></td>
+          <td><span class="badge b-blue" style="font-size:9px">P1</span></td>
+        </tr>
+        <tr>
+          <td><strong>A. V. Gritzbach</strong><br><span class="text-dim" style="font-size:11px">Whistleblower</span></td>
+          <td class="text-muted">Delatou o esquema à Corregedoria</td>
+          <td><span class="badge b-red">Executado</span></td>
+          <td><span class="badge b-red" style="font-size:9px">P2</span></td>
+        </tr>
+        <tr>
+          <td><strong>3 denunciados</strong><br><span class="text-dim" style="font-size:11px">Identidade ocultada · MP</span></td>
+          <td class="text-muted">Beneficiários e operadores — não identificados</td>
+          <td><span class="badge b-amber">Identidade oculta</span></td>
+          <td><span class="badge b-purple" style="font-size:9px">P3</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-title">Progress Bar — Checklist</div>
+  <div class="mb-24">
+    <div class="progress-wrap">
+      <div class="progress-head"><span class="progress-label">Investigação — status geral</span><span class="progress-pct">22%</span></div>
+      <div class="progress-bar"><div class="progress-fill" style="width:22%;background:var(--red)"></div></div>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-head"><span class="progress-label">Documentação judicial</span><span class="progress-pct">55%</span></div>
+      <div class="progress-bar"><div class="progress-fill" style="width:55%;background:var(--amber)"></div></div>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-head"><span class="progress-label">Cooperação internacional</span><span class="progress-pct">80%</span></div>
+      <div class="progress-bar"><div class="progress-fill" style="width:80%;background:var(--green)"></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ GRIDS ═══ -->
+<div id="tab-grids" class="tab-panel">
+
+  <div class="section-title">Princípio Fundamental</div>
+  <div class="alert al-blue mb-24">
+    <div class="al-icon">📐</div>
+    <div>
+      <div class="al-title">Mobile-first + auto-fit + minmax — SEMPRE</div>
+      <div class="al-desc">Nunca usar <code style="color:var(--red)">grid-template-columns: 1fr 1fr</code> fixo. Sempre <code style="color:var(--green)">repeat(auto-fit, minmax(min(100%, Xpx), 1fr))</code>. O <code>min(100%, Xpx)</code> garante que nenhum card ultrapasse o container em mobile.</div>
+    </div>
+  </div>
+
+  <div class="section-title">grid-2col — 2 Colunas (min 340px)</div>
+  <div class="code-block">grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));</div>
+  <div class="grid-2 mb-24">
+    <div class="grid-demo-item" style="padding:20px;text-align:left">
+      <div style="color:var(--fg2);font-size:12px;margin-bottom:6px">Card A — estrutura simétrica</div>
+      <div class="text-dim" style="font-size:11px">Colapsa para 1 col em mobile (&lt; 340px disponível). Padding 20px. Mesma estrutura interna dos cards do lado.</div>
+    </div>
+    <div class="grid-demo-item" style="padding:20px;text-align:left">
+      <div style="color:var(--fg2);font-size:12px;margin-bottom:6px">Card B — estrutura simétrica</div>
+      <div class="text-dim" style="font-size:11px">Ambos os cards devem ter o mesmo padding, altura aproximada e estrutura interna. Simetria visual é obrigatória.</div>
+    </div>
+  </div>
+
+  <div class="section-title">grid-3col — 3 Colunas (min 260px)</div>
+  <div class="code-block">grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));</div>
+  <div class="grid-3 mb-24">
+    <div class="grid-demo-item" style="padding:16px">Card A</div>
+    <div class="grid-demo-item" style="padding:16px">Card B</div>
+    <div class="grid-demo-item" style="padding:16px">Card C</div>
+  </div>
+
+  <div class="section-title">grid-4col — Stats / KPI (min 180px)</div>
+  <div class="code-block">grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));</div>
+  <div class="grid-4 mb-24">
+    <div class="grid-demo-item">Stat A</div>
+    <div class="grid-demo-item">Stat B</div>
+    <div class="grid-demo-item">Stat C</div>
+    <div class="grid-demo-item">Stat D</div>
+  </div>
+
+  <div class="section-title">Regras de Simetria</div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title text-green">✓ Correto</div>
+      <div class="card-body" style="line-height:2">
+        · Todos os cards no grid com <strong>mesmo padding</strong><br>
+        · Todos os cards com <strong>mesma variant</strong> (default ou accent)<br>
+        · gap horizontal = gap vertical<br>
+        · auto-fit + minmax com min(100%, X)<br>
+        · border-radius consistente entre cards irmãos
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title text-red">✗ Errado</div>
+      <div class="card-body" style="line-height:2">
+        · Misturar card default e card accent-left no mesmo grid<br>
+        · padding: 20px em um, padding: 14px em outro<br>
+        · gap: 16px 8px (assimétrico)<br>
+        · grid-template-columns: 1fr 1fr (sem auto-fit)<br>
+        · Card com 3 elementos internos ao lado de card com 1
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PADRÕES P1-P8 ═══ -->
+<div id="tab-patterns" class="tab-panel">
+
+  <div class="section-title">8 Padrões Sistêmicos — Lawfare Timeline</div>
+  <div class="section-note">Estes padrões recorrem em todas as operações documentadas. Cada artefato deve identificar quais padrões estão presentes e marcá-los com a cor correta.</div>
+
+  <div class="grid-2">
+    <div class="pattern-card pc-red">
+      <div class="pattern-id text-red">P1</div>
+      <div class="pattern-name">Anulação via Defecto Processual</div>
+      <div class="pattern-desc">HC, nulidades e recursos processuais como instrumento de blindagem. Investigados liberados antes do fim do processo.</div>
+      <div class="badges-row" style="margin-top:10px">
+        <span class="badge b-red">CRÍTICO</span>
+        <span class="badge b-blue" style="font-size:9px">Lava Jato · Hydra · Compliance Zero</span>
+      </div>
+    </div>
+    <div class="pattern-card pc-red">
+      <div class="pattern-id text-red">P2</div>
+      <div class="pattern-name">Investigadores/Delatores se Tornam Alvos</div>
+      <div class="pattern-desc">Whistleblowers executados, investigadores processados. Inversão do vetor de perseguição. O informante vira o perseguido.</div>
+      <div class="badges-row" style="margin-top:10px">
+        <span class="badge b-red">CRÍTICO</span>
+        <span class="badge b-blue" style="font-size:9px">Hydra (Gritzbach) · Satiagraha · Castelo de Areia</span>
+      </div>
+    </div>
+    <div class="pattern-card pc-purple">
+      <div class="pattern-id text-purple">P3</div>
+      <div class="pattern-name">Captura Judicial Emergencial — STF como Terminal</div>
+      <div class="pattern-desc">Casos que chegam ao STF param antes dos beneficiários finais. Sigilo judicial como mecanismo de proteção.</div>
+      <div class="badges-row" style="margin-top:10px">
+        <span class="badge b-purple">ESPECIAL</span>
+        <span class="badge b-blue" style="font-size:9px">Compliance Zero · Hydra · Lava Jato</span>
+      </div>
+    </div>
+    <div class="pattern-card pc-amber">
+      <div class="pattern-id text-amber">P4</div>
+      <div class="pattern-name">Weaponização da Mídia / Desinformação</div>
+      <div class="pattern-desc">Campanhas de fake news para reverter regulações, desgastar investigadores ou criar narrativas alternativas.</div>
+      <div class="badges-row" style="margin-top:10px">
+        <span class="badge b-amber">ALTO</span>
+        <span class="badge b-blue" style="font-size:9px">Hydra (e-Financeira) · 8 de Janeiro</span>
+      </div>
+    </div>
+    <div class="pattern-card pc-amber">
+      <div class="pattern-id text-amber">P5</div>
+      <div class="pattern-name">Uso de Fundos Públicos como Vetores</div>
+      <div class="pattern-desc">INSS, FGC, BRB, Petrobras como artérias do esquema. O cidadão financia a própria espoliação via tributos e contribuições.</div>
+      <div class="badges-row" style="margin-top:10px">
+        <span class="badge b-amber">ALTO</span>
+        <span class="badge b-blue" style="font-size:9px">Sem Desconto · Compliance Zero · Lava Jato</span>
+      </div>
+    </div>
+    <div class="pattern-card pc-blue">
+      <div class="pattern-id text-blue">P6</div>
+      <div class="pattern-name">Uso Estratégico da Prescrição</div>
+      <div class="pattern-desc">Investigações deliberadamente retardadas até que crimes prescrevam. O tempo como arma jurídica contra a accountability.</div>
+      <div class="badges-row" style="margin-top:10px">
+        <span class="badge b-blue">MÉDIO</span>
+        <span class="badge b-blue" style="font-size:9px">Castelo de Areia · Satiagraha · Poço de Lobato</span>
+      </div>
+    </div>
+    <div class="pattern-card pc-amber">
+      <div class="pattern-id text-amber">P7</div>
+      <div class="pattern-name">Captura Transgeracional — Previdência Social</div>
+      <div class="pattern-desc">Fraudes em benefícios previdenciários e consignados afetando aposentados de forma sistemática e continuada.</div>
+      <div class="badges-row" style="margin-top:10px">
+        <span class="badge b-amber">ALTO</span>
+        <span class="badge b-blue" style="font-size:9px">Sem Desconto (INSS) · Compliance Zero</span>
+      </div>
+    </div>
+    <div class="pattern-card pc-blue">
+      <div class="pattern-id text-blue">P8 — NOVO</div>
+      <div class="pattern-name">Captura do Sistema de Pagamentos Digital</div>
+      <div class="pattern-desc">Infiltração de crime organizado em fintechs reguladas como 'instituições de pagamento'. Crime se antecipa à regulação em 5+ anos.</div>
+      <div class="badges-row" style="margin-top:10px">
+        <span class="badge b-blue">EMERGENTE</span>
+        <span class="badge b-blue" style="font-size:9px">Hydra (2GO/InvBank) · Carbono Oculto (BK Bank)</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ REGRAS AI ═══ -->
+<div id="tab-rules" class="tab-panel">
+
+  <div class="section-title">Checklist para AIs — Criação de Artefatos</div>
+
+  <div class="card-accent" style="border-left-color:var(--red)">
+    <div class="card-accent-title" style="color:var(--red)">Antes de Começar</div>
+    <div class="card-accent-body" style="line-height:2">
+      1. Identificar o tipo de artefato (dossie, dashboard, mapa mental, timeline, jurídico, popular)<br>
+      2. Copiar o :root CSS template — nunca modificar as variáveis base<br>
+      3. Usar o combined_import das Google Fonts (Syne + IBM Plex Mono)<br>
+      4. Definir a cor accent da operação (red = crimes graves, amber = investigação, blue = judicial)
+    </div>
+  </div>
+
+  <div class="card-accent" style="border-left-color:var(--amber);margin-top:12px">
+    <div class="card-accent-title" style="color:var(--amber)">Grids e Layout</div>
+    <div class="card-accent-body" style="line-height:2">
+      5. Todos os grids: auto-fit + minmax(min(100%, Xpx), 1fr) — nunca colunas fixas<br>
+      6. Começar pelo mobile (base CSS) → adicionar @media (min-width: 768px) para desktop<br>
+      7. Padding lateral: 20px mobile → 40px desktop<br>
+      8. Verificar simetria: todos os cards num grid com mesmo padding e estrutura
+    </div>
+  </div>
+
+  <div class="card-accent" style="border-left-color:var(--blue);margin-top:12px">
+    <div class="card-accent-title" style="color:var(--blue)">Conteúdo e Semântica</div>
+    <div class="card-accent-body" style="line-height:2">
+      9. Usar badges com a cor correta do severity_map para cada status<br>
+      10. Identificar e marcar os padrões P1-P8 presentes na operação<br>
+      11. Separar claramente fatos documentados de hipóteses analíticas<br>
+      12. Incluir @media print e footer CC0 obrigatório
+    </div>
+  </div>
+
+  <div class="section-title" style="margin-top:24px">Anti-Patterns — O Que Nunca Fazer</div>
+  <div class="grid-3">
+    <div class="card">
+      <div class="card-title text-red">Visual</div>
+      <div class="card-body" style="line-height:2">
+        ✗ Fundo branco ou claro<br>
+        ✗ Inter, Roboto, Arial<br>
+        ✗ Gradientes decorativos<br>
+        ✗ Sombras pesadas<br>
+        ✗ border-radius > 8px em cards<br>
+        ✗ Cores sem semântica<br>
+        ✗ 4+ cols fixas em mobile
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title text-red">Conteúdo</div>
+      <div class="card-body" style="line-height:2">
+        ✗ Omitir CC0 footer<br>
+        ✗ Afirmação sem fonte<br>
+        ✗ Hipótese como fato<br>
+        ✗ Omitir contestação da defesa<br>
+        ✗ Identificar beneficiários sem prova<br>
+        ✗ Uso de ! para enforcement<br>
+        ✗ Linguagem de conclusão prematura
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title text-red">Código</div>
+      <div class="card-body" style="line-height:2">
+        ✗ localStorage / sessionStorage<br>
+        ✗ CDN externo para CSS crítico<br>
+        ✗ Form tags (usar div + onclick)<br>
+        ✗ !important para layout<br>
+        ✗ Omitir meta viewport<br>
+        ✗ grid: 1fr 1fr fixo<br>
+        ✗ Inline styles em loop
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">Árvoree de Decisão Rápida</div>
+  <div class="card mb-24">
+    <div class="card-body" style="line-height:2.2">
+      <span class="text-blue">COR:</span> É status? → severity_map. É conexão SVG? → solid/dashed/dotted. É decorativo? → <span class="text-red">NÃO usar cor</span>.<br>
+      <span class="text-blue">GRID:</span> 1 item → 1col. 2-3 comparáveis → grid_2col. 4-6 → grid_3col. Métricas → grid_4col. <span class="text-green">Sempre auto-fit</span>.<br>
+      <span class="text-blue">BADGE:</span> Crítico/ativo/preso → red. Pendente/risco → amber. Judicial/info → blue. Confirmado → green. STF/geo → purple.<br>
+      <span class="text-blue">CARD:</span> Texto/análise → default. Destaque/padrão → accent-left. Alerta → alert variant. Métrica → stat-item.<br>
+      <span class="text-blue">FONTE:</span> Título/número → Syne. Todo resto → IBM Plex Mono. <span class="text-red">Nunca</span> Inter/Roboto/Arial.
+    </div>
+  </div>
+</div>
+
+</div><!-- /main -->
+
+<div class="footer">
+  <div class="footer-text">Lawfare Timeline — Design System v1.0.0 · Reference Documentation</div>
+  <div class="footer-text">CC0 1.0 Universal — Domínio Público · lawfare-timeline.vercel.app</div>
+  <div class="footer-text">Artes do Sul Desenvolvimento Web / AI Nativo Brasil · 2026</div>
+</div>
+
+<script>
+function showTab(id) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+</body>
+</html>

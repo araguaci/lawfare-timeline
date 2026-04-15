@@ -1,0 +1,675 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lawfare-timeline.vercel.app/design-system/v1.0",
+  "meta": {
+    "name": "Lawfare Timeline — Design System",
+    "version": "1.0.0",
+    "description": "Design system completo para artefatos investigativos do projeto lawfare-timeline. Mobile-first, dark theme, simetria de cards, legibilidade máxima. Para uso por AIs na criação de artefatos HTML standalone.",
+    "license": "CC0 1.0 Universal",
+    "author": "Artes do Sul Desenvolvimento Web / AI Nativo Brasil",
+    "project_url": "https://lawfare-timeline.vercel.app",
+    "last_updated": "2026-04-11",
+    "usage_note": "Todos os artefatos gerados com este design system são standalone HTML com CSS inline. Nenhuma dependência externa além das Google Fonts especificadas. Sempre incluir print support e CC0 footer."
+  },
+
+  "fonts": {
+    "display": {
+      "family": "Syne",
+      "weights": [400, 600, 700, 800],
+      "google_import": "https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&display=swap",
+      "use_for": ["headings", "hero_titles", "stat_numbers", "tab_headers"],
+      "css_var": "--font-display",
+      "css_value": "'Syne', sans-serif"
+    },
+    "mono": {
+      "family": "IBM Plex Mono",
+      "weights": [400, 500, 600],
+      "google_import": "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap",
+      "use_for": ["body_text", "labels", "badges", "code", "metadata", "timestamps", "data"],
+      "css_var": "--font-mono",
+      "css_value": "'IBM Plex Mono', monospace"
+    },
+    "combined_import": "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@400;600;700;800&display=swap",
+    "rationale": "Syne provê caráter editorial forçado; IBM Plex Mono garante legibilidade de dados e metadados técnicos. A combinação é distintiva e evita fonts genéricas como Inter/Roboto."
+  },
+
+  "color_system": {
+    "rationale": "Dark theme técnico inspirado em terminais de inteligência. Paleta fria com acentos de severidade. Hierarquia de 3 níveis de foreground. Cor usada APENAS para semântica, nunca decorativa.",
+    "backgrounds": {
+      "bg_base":    { "hex": "#080c10", "var": "--bg",      "use": "Fundo geral do documento" },
+      "bg_surface": { "hex": "#0d1218", "var": "--bg1",     "use": "Cards, header, painéis primários" },
+      "bg_elevated":{ "hex": "#121820", "var": "--bg2",     "use": "Cards aninhados, tabelas, linhas hover" },
+      "bg_inset":   { "hex": "#1a2230", "var": "--bg3",     "use": "Campos, áreas de código, insets de destaque" }
+    },
+    "borders": {
+      "border_subtle": { "value": "rgba(255,255,255,0.06)", "var": "--border",  "use": "Separadores padrão, borders de cards" },
+      "border_default":{ "value": "rgba(255,255,255,0.12)", "var": "--border2", "use": "Borders de destaque, header lines, tabs" }
+    },
+    "foreground": {
+      "fg_primary":  { "hex": "#e8ecf0", "var": "--fg",  "use": "Texto principal, títulos de cards" },
+      "fg_secondary":{ "hex": "#8a9ab0", "var": "--fg2", "use": "Corpo de texto, descrições" },
+      "fg_muted":    { "hex": "#4a5a6a", "var": "--fg3", "use": "Metadata, timestamps, labels de eixo" }
+    },
+    "semantic": {
+      "red": {
+        "solid":  { "hex": "#e84040", "var": "--red"  },
+        "tinted": { "value": "rgba(232,64,64,0.15)",  "var": "--red2"   },
+        "border": { "value": "rgba(232,64,64,0.30)"             },
+        "use": "CRÍTICO — prisões, mortes, ilícitos confirmados, alertas máximos, status ATIVO/PRESO"
+      },
+      "amber": {
+        "solid":  { "hex": "#e8a020", "var": "--amber"  },
+        "tinted": { "value": "rgba(232,160,32,0.15)", "var": "--amber2"  },
+        "border": { "value": "rgba(232,160,32,0.30)"             },
+        "use": "ALTO — investigações em andamento, riscos altos, status PENDENTE/MONITORAMENTO"
+      },
+      "blue": {
+        "solid":  { "hex": "#3090e8", "var": "--blue"   },
+        "tinted": { "value": "rgba(48,144,232,0.12)",  "var": "--blue2"  },
+        "border": { "value": "rgba(48,144,232,0.30)"              },
+        "use": "MÉDIO — informação, judicial, referência, links, status ARQUIVADO/SUSPENSO"
+      },
+      "green": {
+        "solid":  { "hex": "#28c880", "var": "--green"  },
+        "tinted": { "value": "rgba(40,200,128,0.12)",  "var": "--green2" },
+        "border": { "value": "rgba(40,200,128,0.30)"             },
+        "use": "POSITIVO — conclusões, delações, evidências documentadas, status CONCLUÍDO"
+      },
+      "purple": {
+        "solid":  { "hex": "#a060e8", "var": "--purple" },
+        "tinted": { "value": "rgba(160,96,232,0.12)",  "var": "--purple2"},
+        "border": { "value": "rgba(160,96,232,0.30)"             },
+        "use": "ESPECIAL — terrorismo, geopolítica, conexões transnacionais, STF/sigilo"
+      },
+      "cyan": {
+        "solid":  { "hex": "#20d0e8", "var": "--cyan"   },
+        "use": "INFORMATIVO — apostas, ativos digitais, categorias auxiliares"
+      }
+    },
+    "severity_map": {
+      "CRÍTICO":   "red",
+      "ALTO":      "amber",
+      "MÉDIO":     "blue",
+      "BAIXO":     "green",
+      "ESPECIAL":  "purple",
+      "NEUTRO":    "fg_muted"
+    }
+  },
+
+  "typography": {
+    "scale": [10, 11, 12, 13, 14, 16, 18, 22, 28, 36, 48],
+    "base_size": "13px",
+    "base_line_height": 1.6,
+    "roles": {
+      "hero_title": {
+        "font": "display",
+        "size": "clamp(28px, 4vw, 48px)",
+        "weight": 800,
+        "letter_spacing": "-0.02em",
+        "line_height": 1.1,
+        "note": "Usar clamp() sempre para responsividade"
+      },
+      "section_title": {
+        "font": "mono",
+        "size": "11px",
+        "weight": 700,
+        "letter_spacing": "0.15em",
+        "text_transform": "uppercase",
+        "color": "fg_muted",
+        "decoration": "border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-bottom: 16px"
+      },
+      "card_title": {
+        "font": "display",
+        "size": "14px",
+        "weight": 700,
+        "letter_spacing": "0.02em"
+      },
+      "body": {
+        "font": "mono",
+        "size": "12px",
+        "color": "fg_secondary",
+        "line_height": 1.7
+      },
+      "label": {
+        "font": "mono",
+        "size": "10px",
+        "weight": 600,
+        "letter_spacing": "0.08em",
+        "text_transform": "uppercase",
+        "color": "fg_muted"
+      },
+      "stat_number": {
+        "font": "display",
+        "size": "22px",
+        "weight": 700,
+        "letter_spacing": "-0.02em"
+      },
+      "badge_text": {
+        "font": "mono",
+        "size": "10px",
+        "weight": 600,
+        "letter_spacing": "0.10em",
+        "text_transform": "uppercase"
+      },
+      "timestamp": {
+        "font": "mono",
+        "size": "10px",
+        "color": "fg_muted",
+        "letter_spacing": "0.06em"
+      },
+      "table_header": {
+        "font": "mono",
+        "size": "10px",
+        "weight": 400,
+        "letter_spacing": "0.10em",
+        "text_transform": "uppercase",
+        "color": "fg_muted"
+      }
+    }
+  },
+
+  "spacing": {
+    "system": "4px grid",
+    "tokens": {
+      "xs":  "4px",
+      "sm":  "8px",
+      "md":  "12px",
+      "base":"16px",
+      "lg":  "20px",
+      "xl":  "24px",
+      "2xl": "32px",
+      "3xl": "40px",
+      "4xl": "48px"
+    },
+    "padding": {
+      "card":         "20px",
+      "card_compact": "14px 16px",
+      "header":       "24px 20px",
+      "header_desktop":"32px 40px 24px",
+      "nav_tab":      "14px 16px",
+      "badge":        "3px 8px",
+      "table_cell":   "10px 12px"
+    },
+    "gap": {
+      "cards":   "16px",
+      "badges":  "8px",
+      "nav":     "0px",
+      "stats":   "12px",
+      "sections":"24px"
+    }
+  },
+
+  "border_radius": {
+    "system": "Sharp — 4-8px max. Nunca > 8px em cards.",
+    "tokens": {
+      "badge":  "3px",
+      "card":   "6px",
+      "button": "4px",
+      "input":  "4px",
+      "dot":    "50%"
+    }
+  },
+
+  "shadows": {
+    "system": "Borders-only approach. Dark backgrounds absorvem sombras.",
+    "card": "none — usar border 1px solid var(--border)",
+    "elevated": "none — usar background shift (bg1 → bg2)",
+    "rationale": "Sombras são inúteis em dark mode. A hierarquia é criada por cor de fundo e borders."
+  },
+
+  "layout": {
+    "max_width": "1400px",
+    "container": {
+      "css": "max-width: 1400px; margin: 0 auto; padding: 0 20px 80px",
+      "note": "padding lateral 20px em mobile, 40px em desktop"
+    },
+    "header": {
+      "position": "relative (nunca sticky — conteúdo investigativo deve ser scrollável)",
+      "accent_line": "2px no topo com gradiente animado na cor primária da operação",
+      "structure": ["meta-badges row", "hero title", "subtitle", "stats grid"]
+    }
+  },
+
+  "grid_system": {
+    "philosophy": "Mobile-first com auto-fit. Nunca forçar colunas em telas pequenas. Cards sempre centralizados e simétricos.",
+    "breakpoints": {
+      "mobile":  "< 480px",
+      "tablet":  "480px - 768px",
+      "desktop": "> 768px",
+      "wide":    "> 1200px"
+    },
+    "templates": {
+      "grid_1col": {
+        "css": "display: grid; grid-template-columns: 1fr; gap: 16px",
+        "use": "Mobile fallback universal"
+      },
+      "grid_2col": {
+        "css": "display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 16px",
+        "use": "Cards duplos — atores, análises, risco. minmax garante colapso em mobile.",
+        "note": "NUNCA usar '1fr 1fr' fixo — sempre auto-fit com minmax"
+      },
+      "grid_3col": {
+        "css": "display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px",
+        "use": "Cards triplos — referências, tags, categorias"
+      },
+      "grid_4col": {
+        "css": "display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: 12px",
+        "use": "Stats/KPIs — colapsa para 2 cols em tablet, 1 em mobile"
+      },
+      "grid_stats": {
+        "css": "display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr)); gap: 12px; max-width: 900px",
+        "use": "Header stats — números de destaque da operação"
+      }
+    },
+    "symmetry_rules": [
+      "Todos os grids usam auto-fit + minmax — nunca colunas fixas",
+      "gap sempre igual horizontal e vertical (não assimétrico)",
+      "Cards dentro de um grid devem ter padding idêntico",
+      "Se um card tem 3 elementos internos, todos no grid devem ter estrutura comparável",
+      "min() com 100% garante que nenhum card ultrapasse o container em mobile"
+    ]
+  },
+
+  "components": {
+
+    "header": {
+      "description": "Header padrão de operação investigativa",
+      "structure": {
+        "accent_line": "2px topo animado — gradiente da cor primária",
+        "meta_row": "badges de status + instituições + data",
+        "hero_title": "Nome da operação com palavra-chave em accent color",
+        "subtitle": "Descrição curta em fg2, font-mono",
+        "stats_grid": "4-5 métricas numéricas chave"
+      },
+      "css_snippet": ".header { background: var(--bg1); border-bottom: 1px solid var(--border2); padding: 24px 20px; position: relative; overflow: hidden; } @media (min-width: 768px) { .header { padding: 32px 40px 24px; } } .header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--red), var(--amber), var(--red)); background-size: 200% 100%; animation: scanline 3s linear infinite; } @keyframes scanline { to { background-position: 200% 0; } }"
+    },
+
+    "nav_tabs": {
+      "description": "Navegação por abas horizontal com scroll em mobile",
+      "css_snippet": ".nav-tabs { display: flex; background: var(--bg1); border-bottom: 1px solid var(--border); padding: 0 20px; overflow-x: auto; scrollbar-width: none; } .nav-tabs::-webkit-scrollbar { display: none; } @media (min-width: 768px) { .nav-tabs { padding: 0 40px; } } .nav-tab { padding: 14px 16px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg3); cursor: pointer; border: none; background: none; border-bottom: 2px solid transparent; white-space: nowrap; transition: all 0.15s; font-family: var(--font-mono); } .nav-tab:hover { color: var(--fg2); } .nav-tab.active { color: var(--fg); border-bottom-color: var(--red); }",
+      "js_snippet": "function showTab(id) { document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active')); document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active')); document.getElementById('tab-' + id).classList.add('active'); event.target.classList.add('active'); }"
+    },
+
+    "card": {
+      "description": "Card base — container universal de conteúdo",
+      "variants": {
+        "default": {
+          "css": "background: var(--bg1); border: 1px solid var(--border); border-radius: 6px; padding: 20px;",
+          "use": "Card padrão para análises e textos"
+        },
+        "with_icon": {
+          "structure": ["card-head (icon + title + date)", "card-body", "card-tags"],
+          "icon_css": "width: 32px; height: 32px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0;",
+          "use": "Card com ícone emoji e cabeçalho estruturado"
+        },
+        "accent_left": {
+          "css": "background: var(--bg2); border-left: 3px solid var(--red); border-radius: 0 6px 6px 0; padding: 16px 20px;",
+          "use": "Card de padrão sistêmico, destaque de análise"
+        },
+        "alert_red": {
+          "css": "background: var(--red2); border: 1px solid rgba(232,64,64,0.25); border-radius: 6px; padding: 16px 20px; display: flex; gap: 12px;",
+          "use": "Alerta crítico com ícone à esquerda"
+        },
+        "alert_amber": {
+          "css": "background: var(--amber2); border: 1px solid rgba(232,160,32,0.25); border-radius: 6px; padding: 16px 20px; display: flex; gap: 12px;",
+          "use": "Alerta de atenção"
+        },
+        "alert_blue": {
+          "css": "background: var(--blue2); border: 1px solid rgba(48,144,232,0.25); border-radius: 6px; padding: 16px 20px; display: flex; gap: 12px;",
+          "use": "Nota informativa"
+        }
+      },
+      "symmetry_note": "Ao usar cards em grid, todos devem ter o mesmo variant. Misturar variants default e accent_left no mesmo grid quebra a simetria visual."
+    },
+
+    "badge": {
+      "description": "Badge inline de status/categoria",
+      "base_css": "display: inline-flex; align-items: center; gap: 6px; padding: 3px 8px; border-radius: 3px; font-size: 10px; font-weight: 600; letter-spacing: 0.10em; text-transform: uppercase; font-family: var(--font-mono);",
+      "variants": {
+        "red":    "background: var(--red2); color: var(--red); border: 1px solid rgba(232,64,64,0.3);",
+        "amber":  "background: var(--amber2); color: var(--amber); border: 1px solid rgba(232,160,32,0.3);",
+        "blue":   "background: var(--blue2); color: var(--blue); border: 1px solid rgba(48,144,232,0.3);",
+        "green":  "background: var(--green2); color: var(--green); border: 1px solid rgba(40,200,128,0.3);",
+        "purple": "background: var(--purple2); color: var(--purple); border: 1px solid rgba(160,96,232,0.3);"
+      },
+      "use_cases": {
+        "red":    "PRESO, CRÍTICO, ATIVO, EXECUTADO, ILÍCITO CONFIRMADO",
+        "amber":  "PENDENTE, ALTO RISCO, EM ANDAMENTO, INVESTIGADO",
+        "blue":   "ARQUIVADO, MÉDIO RISCO, JUDICIAL, SUSPENSO",
+        "green":  "DOCUMENTADO, CONCLUÍDO, BAIXO RISCO, DELAÇÃO",
+        "purple": "STF/SIGILO, TERRORISMO, GEOPOLÍTICA, ESPECIAL"
+      }
+    },
+
+    "stat_card": {
+      "description": "Card de métrica numérica para header stats",
+      "css": "background: var(--bg2); border: 1px solid var(--border); border-radius: 6px; padding: 12px 16px;",
+      "children": {
+        "stat_num": "font-family: var(--font-display); font-size: 22px; font-weight: 700; letter-spacing: -0.02em;",
+        "stat_label": "font-size: 10px; color: var(--fg3); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 2px;"
+      },
+      "color_note": "stat_num recebe a cor semântica do dado: red para volumes ilícitos, amber para riscos, blue para judicial, green para positivos"
+    },
+
+    "timeline": {
+      "description": "Linha do tempo vertical com marcadores coloridos",
+      "css_snippet": ".timeline { position: relative; padding-left: 24px; } .timeline::before { content: ''; position: absolute; left: 7px; top: 0; bottom: 0; width: 1px; background: var(--border2); } .tl-item { position: relative; margin-bottom: 20px; } .tl-dot { position: absolute; left: -20px; top: 5px; width: 10px; height: 10px; border-radius: 50%; border: 2px solid var(--bg); } .tl-date { font-size: 10px; color: var(--fg3); letter-spacing: 0.06em; margin-bottom: 4px; } .tl-title { font-size: 13px; font-weight: 600; margin-bottom: 4px; } .tl-desc { font-size: 12px; color: var(--fg2); line-height: 1.6; }",
+      "dot_colors": {
+        "red":    "var(--red)   — evento crítico, prisão, execução",
+        "amber":  "var(--amber) — investigação, alerta, operação",
+        "green":  "var(--green) — delação, documentação",
+        "fg3":    "var(--fg3)   — evento neutro/informativo"
+      }
+    },
+
+    "table": {
+      "description": "Tabela de atores ou dados tabulares",
+      "css_snippet": ".data-table { width: 100%; border-collapse: collapse; } .data-table th { font-size: 10px; letter-spacing: 0.10em; text-transform: uppercase; color: var(--fg3); text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--border2); white-space: nowrap; } .data-table td { padding: 10px 12px; font-size: 12px; border-bottom: 1px solid var(--border); vertical-align: top; } .data-table tr:hover td { background: var(--bg2); }",
+      "responsive_note": "Em mobile (< 480px), tabelas devem ter overflow-x: auto no container pai."
+    },
+
+    "progress_bar": {
+      "description": "Barra de progresso simples para checklist",
+      "css_snippet": ".progress-bar { height: 4px; background: var(--bg3); border-radius: 2px; overflow: hidden; } .progress-fill { height: 100%; border-radius: 2px; transition: width 0.8s ease; }",
+      "color_logic": "0-29%: red; 30-69%: amber; 70-100%: green"
+    },
+
+    "checklist_item": {
+      "description": "Item interativo de checklist com toggle",
+      "css_snippet": ".check-item { background: var(--bg1); border: 1px solid var(--border); border-radius: 6px; padding: 14px 16px; display: flex; align-items: flex-start; gap: 12px; cursor: pointer; transition: border-color 0.15s; } .check-item:hover { border-color: var(--border2); } .check-item.done { opacity: 0.5; } .check-item.done .check-text { text-decoration: line-through; color: var(--fg3); } .check-box { width: 18px; height: 18px; border-radius: 4px; border: 1.5px solid var(--border2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; } .check-item.done .check-box { background: var(--green2); border-color: var(--green); }",
+      "js_snippet": "function toggleCheck(el) { el.classList.toggle('done'); updateProgress(); }"
+    },
+
+    "section_title": {
+      "description": "Título de seção dentro de tab panel",
+      "css_snippet": ".section-title { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--fg3); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }"
+    },
+
+    "mindmap_svg": {
+      "description": "Mapa mental SVG inline",
+      "viewport": "viewBox='0 0 1100 700'",
+      "background": "rect fill='#080c10' — sempre preencher o background do SVG",
+      "font_in_svg": "font-family='IBM Plex Mono, monospace'",
+      "node_structure": {
+        "center": "rect com stroke da cor primária, 2px width",
+        "primary": "rect com stroke da cor semântica, 1.5px",
+        "secondary": "rect com stroke dashed, 1px, background bg1",
+        "dead_node": "rect com stroke dashed + opacity reduzida"
+      },
+      "connection_lines": {
+        "confirmed": "stroke-width 2, opacity 0.7-0.8, solid",
+        "suspected": "stroke-dasharray 4,3, opacity 0.5-0.6",
+        "weak": "stroke-dasharray 2,4, opacity 0.3-0.4"
+      },
+      "responsive_wrap": ".mindmap-svg-wrap { padding: 20px; overflow-x: auto; } svg.mindmap { width: 100%; max-width: 1200px; height: auto; display: block; margin: 0 auto; }"
+    },
+
+    "footer": {
+      "description": "Footer obrigatório CC0 em todos os artefatos",
+      "css_snippet": ".footer { margin-top: 48px; padding: 20px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; } @media (min-width: 768px) { .footer { padding: 20px 40px; } } .footer-text { font-size: 11px; color: var(--fg3); }",
+      "required_content": [
+        "Nome do artefato + projeto",
+        "CC0 1.0 Universal — Domínio Público",
+        "Fontes primárias utilizadas"
+      ]
+    }
+  },
+
+  "mobile_first_rules": {
+    "priority": "CRÍTICO — todo CSS deve começar pelo mobile",
+    "base_padding": {
+      "mobile":  "padding: 0 20px",
+      "desktop": "@media (min-width: 768px) { padding: 0 40px }"
+    },
+    "font_sizes": {
+      "hero_title": "clamp(24px, 5vw, 48px) — nunca fixo",
+      "body": "13px — legível em mobile sem zoom",
+      "label": "10px mínimo — não usar abaixo disso"
+    },
+    "touch_targets": {
+      "min_height": "44px para tabs e botões interativos",
+      "check_items": "padding 14px 16px garante área de toque adequada"
+    },
+    "overflow": {
+      "nav_tabs": "overflow-x: auto; scrollbar-width: none",
+      "tables": "overflow-x: auto no container pai",
+      "svg_maps": "overflow-x: auto no wrapper, height: auto no SVG"
+    },
+    "grid_collapse": "Todos os grids usam auto-fit + minmax(min(100%, Xpx), 1fr) — colapso automático",
+    "never_do": [
+      "Nunca usar px fixos para font-size de títulos",
+      "Nunca usar grid-template-columns com px fixos sem auto-fit",
+      "Nunca usar position: absolute para layout de conteúdo em mobile",
+      "Nunca forçar largura > 100vw sem overflow: auto"
+    ]
+  },
+
+  "animations": {
+    "scanline": {
+      "use": "Accent line no topo do header",
+      "css": "@keyframes scanline { to { background-position: 200% 0; } }",
+      "duration": "3s linear infinite"
+    },
+    "pulse": {
+      "use": "Dot de status 'ao vivo' no header badge",
+      "css": "@keyframes pulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(0.8); } }",
+      "duration": "2s infinite"
+    },
+    "fade_in": {
+      "use": "Tab panels ao ativar",
+      "css": "@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }",
+      "apply": ".tab-panel.active { animation: fadeIn 0.3s ease; }"
+    },
+    "principles": [
+      "150ms para micro-interações (hover, toggle)",
+      "200-300ms para transições de conteúdo",
+      "Nenhum bounce/spring — contexto é sério",
+      "Todas as animações são opcionais para conteúdo — nunca bloqueiam leitura"
+    ]
+  },
+
+  "print_support": {
+    "required": true,
+    "css_snippet": "@media print { body { background: #fff; color: #111; } .nav-tabs, .footer-nav { display: none !important; } .tab-panel { display: block !important; page-break-inside: avoid; } .tab-panel + .tab-panel { page-break-before: always; } :root { --bg: #fff; --bg1: #f8f8f8; --bg2: #f0f0f0; --bg3: #e8e8e8; --border: rgba(0,0,0,0.12); --border2: rgba(0,0,0,0.20); --fg: #111; --fg2: #444; --fg3: #888; } }",
+    "note": "Print transforma o dark theme em white para legibilidade em papel. Cada tab panel vira uma página."
+  },
+
+  "css_root_template": {
+    "description": "Template completo do :root CSS para colar em qualquer artefato",
+    "css": ":root { --bg: #080c10; --bg1: #0d1218; --bg2: #121820; --bg3: #1a2230; --border: rgba(255,255,255,0.06); --border2: rgba(255,255,255,0.12); --fg: #e8ecf0; --fg2: #8a9ab0; --fg3: #4a5a6a; --red: #e84040; --red2: rgba(232,64,64,0.15); --amber: #e8a020; --amber2: rgba(232,160,32,0.15); --blue: #3090e8; --blue2: rgba(48,144,232,0.12); --green: #28c880; --green2: rgba(40,200,128,0.12); --purple: #a060e8; --purple2: rgba(160,96,232,0.12); --cyan: #20d0e8; --font-mono: 'IBM Plex Mono', monospace; --font-display: 'Syne', sans-serif; }"
+  },
+
+  "html_boilerplate": {
+    "description": "Estrutura HTML mínima obrigatória para todo artefato",
+    "template": "<!DOCTYPE html>\n<html lang='pt-BR'>\n<head>\n<meta charset='UTF-8'>\n<meta name='viewport' content='width=device-width, initial-scale=1.0'>\n<title>{OPERACAO} — {TIPO} {ANO}</title>\n<link href='https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@400;600;700;800&display=swap' rel='stylesheet'>\n<style>\n/* :root CSS template aqui */\n/* Reset */\n*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }\nbody { background: var(--bg); color: var(--fg); font-family: var(--font-mono); font-size: 13px; line-height: 1.6; min-height: 100vh; }\n/* Scrollbar customizado */\n::-webkit-scrollbar { width: 4px; height: 4px; }\n::-webkit-scrollbar-track { background: var(--bg1); }\n::-webkit-scrollbar-thumb { background: var(--bg3); border-radius: 2px; }\n/* Print support */\n</style>\n</head>\n<body>\n<!-- HEADER -->\n<!-- NAV TABS -->\n<!-- MAIN CONTENT -->\n<div class='main'>\n  <!-- Tab Panels -->\n</div>\n<!-- FOOTER -->\n</body>\n</html>"
+  },
+
+  "artifact_types": {
+    "description": "Tipos de artefato e suas configurações específicas",
+    "types": {
+      "dossie_operacao": {
+        "tabs_default": ["Mapa Mental", "Atores", "Mecanismo", "Conexões Sistêmicas", "Riscos & Lacunas", "Checklist", "Padrão Sistêmico", "Cronologia"],
+        "accent_color": "red",
+        "header_stats_count": "4-5",
+        "examples": ["operacao-hydra-2026.html", "operacao_lava_jato.html"]
+      },
+      "dashboard_intel": {
+        "tabs_default": ["Overview", "Rede", "Financeiro", "Judicial", "Geopolítica", "Lacunas"],
+        "accent_color": "red",
+        "has_charts": true,
+        "has_network_graph": true,
+        "examples": ["PCC-CV-Intel-Dashboard-2026.html", "republica-capturada.html"]
+      },
+      "mapa_mental": {
+        "tabs_default": ["Mapa", "Atores", "Padrões", "Referências"],
+        "accent_color": "amber",
+        "primary_component": "SVG mindmap",
+        "examples": ["lava-jato-mapa-mental.html", "corrida-dos-ratos-mindmap.html"]
+      },
+      "timeline_operacao": {
+        "tabs_default": ["Cronologia", "Atores", "Documentos", "Análise"],
+        "accent_color": "red",
+        "primary_component": "timeline vertical",
+        "examples": ["oliver-ortiz-timeline.html"]
+      },
+      "dossie_juridico": {
+        "tabs_default": ["Diagnóstico", "Nulidades", "Argumentos", "Referências Legais"],
+        "accent_color": "blue",
+        "primary_component": "accordion + citações",
+        "examples": ["inq4781.html"]
+      },
+      "relatorio_popular": {
+        "tabs_default": ["O que aconteceu", "Como funciona", "Quem se beneficia", "O que fazer"],
+        "accent_color": "amber",
+        "has_social_threads": true,
+        "examples": ["thread-operacoes-brasil.html"]
+      }
+    }
+  },
+
+  "content_schema": {
+    "description": "Estrutura de dados para alimentar artefatos — conecta com JSON do lawfare-timeline",
+    "operacao_entry": {
+      "id": "string — ex: OP-HYDRA",
+      "nome": "string",
+      "subtitulo": "string",
+      "tipo": "enum: dossie_operacao | dashboard_intel | mapa_mental | timeline | juridico | popular",
+      "status": "enum: ATIVA | ARQUIVADA | PARALISADA | CONCLUÍDA | SILENCIADA",
+      "status_color": "enum: red | amber | blue | green | purple",
+      "periodo": { "inicio": "YYYY-MM", "fim": "YYYY-MM | null" },
+      "orgaos": ["PF", "MPSP", "GAECO", "etc"],
+      "volume_financeiro": "string — ex: R$ 6bi",
+      "paises_envolvidos": "number",
+      "stats": [
+        { "valor": "string", "label": "string", "cor": "red|amber|blue|green|purple" }
+      ],
+      "atores": [
+        {
+          "nome": "string",
+          "alcunha": "string | null",
+          "funcao": "string",
+          "status": "string",
+          "status_color": "enum: red | amber | blue | green",
+          "conexao_sistemica": "string"
+        }
+      ],
+      "padroes_sistemicos": ["P1", "P2", "P3"],
+      "conexoes_operacoes": ["OP-CARBONO-OCULTO", "OP-COMPLIANCE-ZERO"],
+      "lacunas_investigativas": ["string"],
+      "referencias": [
+        { "titulo": "string", "fonte": "string", "url": "string", "data": "YYYY-MM" }
+      ],
+      "json_entries": ["152", "153", "154"],
+      "cc0": true
+    }
+  },
+
+  "patterns_library": {
+    "description": "Os 8 padrões sistêmicos do lawfare-timeline — usar como tags em todos os artefatos",
+    "patterns": {
+      "P1": {
+        "id": "P1",
+        "nome": "Anulação via Defecto Processual",
+        "descricao": "Uso de habeas corpus, nulidades e recursos processuais como instrumento de blindagem. Investigados liberados antes do fim do processo.",
+        "cor": "red",
+        "operacoes_exemplo": ["Lava Jato", "Compliance Zero", "Hydra"]
+      },
+      "P2": {
+        "id": "P2",
+        "nome": "Investigadores/Delatores se Tornam Alvos",
+        "descricao": "Whistleblowers executados, investigadores processados, delatores ameaçados. Inversão do vetor de perseguição.",
+        "cor": "red",
+        "operacoes_exemplo": ["Hydra (Gritzbach)", "Satiagraha", "Castelo de Areia"]
+      },
+      "P3": {
+        "id": "P3",
+        "nome": "Captura Judicial Emergencial — STF como Terminal",
+        "descricao": "Casos que chegam ao STF param antes dos beneficiários finais serem identificados. Sigilo judicial como mecanismo de proteção.",
+        "cor": "purple",
+        "operacoes_exemplo": ["Compliance Zero", "Hydra", "Lava Jato"]
+      },
+      "P4": {
+        "id": "P4",
+        "nome": "Weaponização da Mídia / Desinformação",
+        "descricao": "Campanhas de fake news para reverter regulações, desgastar investigadores ou criar narrativas alternativas.",
+        "cor": "amber",
+        "operacoes_exemplo": ["Hydra (e-Financeira)", "Lava Jato", "8 de Janeiro"]
+      },
+      "P5": {
+        "id": "P5",
+        "nome": "Uso de Fundos Públicos como Vetores",
+        "descricao": "Recursos do INSS, FGC, BRB, Petrobras usados como artérias do esquema. Cidadão financia a própria espoliação.",
+        "cor": "amber",
+        "operacoes_exemplo": ["Sem Desconto", "Compliance Zero", "Lava Jato"]
+      },
+      "P6": {
+        "id": "P6",
+        "nome": "Uso Estratégico da Prescrição",
+        "descricao": "Investigações deliberadamente retardadas até que crimes prescrevam. Uso do tempo como arma.",
+        "cor": "blue",
+        "operacoes_exemplo": ["Castelo de Areia", "Satiagraha", "Poco de Lobato"]
+      },
+      "P7": {
+        "id": "P7",
+        "nome": "Captura Transgeracional — Previdência Social",
+        "descricao": "Fraudes em benefícios previdenciários e consignados afetando aposentados de forma sistemática.",
+        "cor": "amber",
+        "operacoes_exemplo": ["Sem Desconto (INSS)", "Compliance Zero (INSS/Master)"]
+      },
+      "P8": {
+        "id": "P8",
+        "nome": "Captura do Sistema de Pagamentos Digital",
+        "descricao": "Infiltração de crime organizado em fintechs reguladas como 'instituições de pagamento'. Crime se antecipa à regulação.",
+        "cor": "blue",
+        "operacoes_exemplo": ["Hydra (2GO/InvBank)", "Carbono Oculto (BK Bank)"]
+      }
+    }
+  },
+
+  "anti_patterns": {
+    "description": "O que NUNCA fazer em artefatos do lawfare-timeline",
+    "visual": [
+      "Nunca usar fundo branco ou claro — dark theme é obrigatório",
+      "Nunca usar Inter, Roboto, Arial — usar Syne + IBM Plex Mono",
+      "Nunca usar gradientes decorativos — apenas no accent line animado do header",
+      "Nunca usar sombras pesadas — borders only em dark mode",
+      "Nunca usar border-radius > 8px em cards",
+      "Nunca usar cores sem semântica — cor só quando comunica status",
+      "Nunca colocar 4+ cols em mobile sem auto-fit"
+    ],
+    "content": [
+      "Nunca omitir CC0 footer",
+      "Nunca publicar afirmações sem fonte primária documentada",
+      "Nunca apresentar hipóteses como fatos — usar 'suspeita', 'aponta para', 'indício'",
+      "Nunca omitir a defesa/contestação dos investigados quando existir",
+      "Nunca identificar beneficiários finais sem prova documental"
+    ],
+    "code": [
+      "Nunca usar localStorage/sessionStorage — tudo em memória",
+      "Nunca depender de CDN externo para CSS crítico — inline tudo",
+      "Nunca usar form tags — usar div + onclick handlers",
+      "Nunca usar !important para layout — refatorar a especificidade",
+      "Nunca omitir meta viewport"
+    ]
+  },
+
+  "ai_instructions": {
+    "description": "Instruções diretas para AIs que usarem este design system",
+    "when_creating_artifact": [
+      "1. Identificar o tipo de artefato (dossie_operacao, dashboard_intel, etc.)",
+      "2. Copiar o css_root_template para o <style> e nunca modificar as variáveis base",
+      "3. Usar combined_import das Google Fonts",
+      "4. Aplicar grid_system com auto-fit + minmax — nunca colunas fixas",
+      "5. Começar todos os estilos pelo mobile, adicionar @media para desktop",
+      "6. Usar badges com a cor correta do severity_map para cada status",
+      "7. Incluir footer com CC0 e fontes",
+      "8. Incluir @media print",
+      "9. Verificar se todos os cards num grid têm padding e estrutura simétrica",
+      "10. Testar mentalmente: 'como isso parece em tela de 375px?'"
+    ],
+    "color_decision_tree": "1. É um status de investigação? → usar severity_map. 2. É uma conexão em SVG? → confirmed=solid, suspected=dashed, weak=dotted. 3. É decorativo? → NÃO usar cor, usar fg3.",
+    "grid_decision_tree": "1. 1 item? → 1col. 2. 2-3 itens comparáveis? → grid_2col. 3. 4-6 itens? → grid_3col. 4. Métricas numéricas? → grid_4col. 5. Sempre usar auto-fit.",
+    "tone": "Jornalismo investigativo. Técnico sem ser inacessível. Dados sempre com fonte. Análise separada de fato.",
+    "language": "Português brasileiro. Termos técnicos jurídicos e financeiros mantidos. Siglas explicadas na primeira ocorrência."
+  }
+}

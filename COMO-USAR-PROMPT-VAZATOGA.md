@@ -204,17 +204,17 @@ def criar_post_vazatoga(assunto, output_dir="_posts"):
     
     # Escolher ícone baseado na categoria
     icones = {
-        'vazatoga': '/assets/solid/shield-exclamation.svg',
+        'vazatoga': '/assets/solid/shield-virus.svg',
         'lawfare': '/assets/solid/scale.svg',
         'censura': '/assets/solid/ban.svg',
-        'escandalos': '/assets/solid/document-text.svg',
+        'escandalos': '/assets/solid/file-shield.svg',
         'stf': '/assets/solid/gavel.svg',
         'tse': '/assets/solid/check-circle.svg',
         'operacoes': '/assets/solid/shield-check.svg',
         'dossie': '/assets/solid/folder.svg',
-        'estudos': '/assets/solid/document-text.svg'
+        'estudos': '/assets/solid/file-shield.svg'
     }
-    icone = icones.get(categoria, '/assets/solid/document-text.svg')
+    icone = icones.get(categoria, '/assets/solid/file-shield.svg')
     
     # Criar front matter
     front_matter = f"""---

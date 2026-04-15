@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gilmar Mendes — Dossiê de Condutas Político-Institucionais</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@300;400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0e0c09;
+    --paper: #f5f0e8;
+    --aged: #e8dfc8;
+    --rust: #8b2e1a;
+    --gold: #c9a227;
+    --slate: #3d4451;
+    --muted: #7a7060;
+    --red-alert: #c0392b;
+    --border: #d4c9b0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  /* NOISE TEXTURE */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.4;
+  }
+
+  /* HEADER */
+  .masthead {
+    border-bottom: 3px solid var(--ink);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .masthead-top {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 12px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .masthead-body {
+    padding: 40px 48px 32px;
+    display: grid;
+    grid-template-columns: 1fr 2px 2fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .masthead-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .masthead-label::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 1px;
+    background: var(--rust);
+  }
+
+  .masthead-divider {
+    background: var(--border);
+    width: 2px;
+    align-self: stretch;
+  }
+
+  .masthead-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+  }
+
+  .masthead-title span {
+    color: var(--rust);
+    font-style: italic;
+  }
+
+  .masthead-meta {
+    padding-top: 6px;
+  }
+
+  .masthead-meta h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--muted);
+    margin-bottom: 16px;
+    line-height: 1.4;
+  }
+
+  .stat-row {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .stat-pill {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 4px 12px;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .stat-pill.alert {
+    background: var(--rust);
+  }
+
+  /* TIMELINE STRIP */
+  .timeline-strip {
+    background: var(--aged);
+    border-top: 1px solid var(--border);
+    border-bottom: 2px solid var(--ink);
+    padding: 16px 48px;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+
+  .year-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+    position: relative;
+    cursor: default;
+  }
+
+  .year-node::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 60%;
+    background: var(--border);
+  }
+
+  .year-node:last-child::after { display: none; }
+
+  .year-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .year-count {
+    font-size: 9px;
+    color: var(--rust);
+    letter-spacing: 0.1em;
+    margin-top: 2px;
+  }
+
+  .year-bar {
+    width: 32px;
+    background: var(--rust);
+    margin-top: 4px;
+    min-height: 2px;
+    opacity: 0.7;
+  }
+
+  /* MAIN CONTENT */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px;
+  }
+
+  /* SECTION */
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--border);
+    letter-spacing: -0.04em;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+
+  /* INCIDENT CARDS */
+  .incidents-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-bottom: 48px;
+  }
+
+  .incident-card {
+    background: var(--paper);
+    padding: 20px 24px;
+    position: relative;
+    transition: background 0.15s;
+  }
+
+  .incident-card:hover {
+    background: var(--aged);
+  }
+
+  .incident-date {
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .incident-type {
+    display: inline-block;
+    font-size: 8px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    margin-bottom: 10px;
+    border: 1px solid;
+  }
+
+  .type-declaracao { color: var(--slate); border-color: var(--slate); }
+  .type-decisao { color: var(--rust); border-color: var(--rust); }
+  .type-evento { color: #2e6b8b; border-color: #2e6b8b; }
+  .type-suspeicao { color: #8b6b2e; border-color: #8b6b2e; }
+  .type-entrevista { color: #4a7a4a; border-color: #4a7a4a; }
+  .type-conflito { color: #8b2e7a; border-color: #8b2e7a; }
+  .type-institucional { color: var(--red-alert); border-color: var(--red-alert); }
+
+  .incident-title {
+    font-family: 'Fraunces', serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+
+  .incident-desc {
+    font-size: 11px;
+    color: var(--slate);
+    line-height: 1.6;
+  }
+
+  .incident-severity {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+  }
+
+  .sev-alto { background: var(--rust); }
+  .sev-medio { background: var(--gold); }
+  .sev-baixo { background: var(--slate); }
+
+  /* COUNTER BLOCK */
+  .counter-block {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 40px 48px;
+    margin: 48px -48px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    border-top: 4px solid var(--rust);
+  }
+
+  .counter-item {
+    text-align: center;
+    padding: 0 16px;
+    border-right: 1px solid rgba(245,240,232,0.15);
+  }
+
+  .counter-item:last-child { border: none; }
+
+  .counter-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--gold);
+  }
+
+  .counter-label {
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(245,240,232,0.5);
+    margin-top: 8px;
+    line-height: 1.5;
+  }
+
+  /* TIMELINE LIST */
+  .timeline-list {
+    position: relative;
+    padding-left: 32px;
+    margin-bottom: 48px;
+  }
+
+  .timeline-list::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--border);
+  }
+
+  .tl-item {
+    position: relative;
+    margin-bottom: 24px;
+    padding-left: 16px;
+  }
+
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    left: -28px;
+    top: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--rust);
+    border: 2px solid var(--paper);
+    box-shadow: 0 0 0 1px var(--rust);
+  }
+
+  .tl-year {
+    font-family: 'Playfair Display', serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--rust);
+    letter-spacing: 0.05em;
+  }
+
+  .tl-event {
+    font-size: 12px;
+    color: var(--ink);
+    margin-top: 2px;
+    line-height: 1.5;
+  }
+
+  .tl-event strong {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 13px;
+  }
+
+  /* PULLQUOTE */
+  .pullquote {
+    margin: 40px 0;
+    padding: 24px 32px;
+    border-left: 4px solid var(--rust);
+    background: var(--aged);
+  }
+
+  .pullquote p {
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 12px;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-style: normal;
+  }
+
+  /* CATEGORIES TABLE */
+  .cat-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 48px;
+  }
+
+  .cat-table th {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 10px 16px;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: 500;
+  }
+
+  .cat-table td {
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--border);
+    font-size: 11px;
+    vertical-align: top;
+  }
+
+  .cat-table tr:nth-child(even) td {
+    background: var(--aged);
+  }
+
+  .cat-table tr:hover td {
+    background: rgba(139, 46, 26, 0.06);
+  }
+
+  .bar-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .bar-fill {
+    height: 6px;
+    background: var(--rust);
+    border-radius: 1px;
+    opacity: 0.7;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--ink);
+    color: rgba(245,240,232,0.4);
+    padding: 24px 48px;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid var(--rust);
+  }
+
+  .classification-banner {
+    background: var(--rust);
+    color: var(--paper);
+    text-align: center;
+    padding: 8px;
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .incident-card {
+    animation: fade-in 0.4s ease both;
+  }
+
+  .incident-card:nth-child(1) { animation-delay: 0.05s; }
+  .incident-card:nth-child(2) { animation-delay: 0.1s; }
+  .incident-card:nth-child(3) { animation-delay: 0.15s; }
+  .incident-card:nth-child(4) { animation-delay: 0.2s; }
+  .incident-card:nth-child(5) { animation-delay: 0.25s; }
+  .incident-card:nth-child(6) { animation-delay: 0.3s; }
+
+  @media (max-width: 768px) {
+    .container { padding: 24px; }
+    .counter-block { grid-template-columns: repeat(2, 1fr); margin: 32px -24px; padding: 32px 24px; }
+    .masthead-body { grid-template-columns: 1fr; }
+    .masthead-divider { display: none; }
+    .masthead-body { padding: 24px; }
+    .masthead-top { padding: 12px 24px; }
+    .timeline-strip { padding: 16px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="classification-banner">
+  Investigação Jornalística — Fontes Públicas — Pesquisa Compilada · Março 2026
+</div>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="masthead-top">
+    <span>STF · Conduta Político-Institucional</span>
+    <span>Dossiê Compilado · 2002 — 2026</span>
+    <span>24 Anos de Mandato</span>
+  </div>
+  <div class="masthead-body">
+    <div>
+      <div class="masthead-label">Dossiê Investigativo</div>
+      <div class="masthead-title">Gilmar<br><span>Mendes</span></div>
+    </div>
+    <div class="masthead-divider"></div>
+    <div class="masthead-meta">
+      <h2>"O mais político dos ministros" — o histórico de declarações, intervenções e condutas que ultrapassam os limites da toga desde a nomeação em 2002</h2>
+      <div class="stat-row">
+        <span class="stat-pill alert">Nomeado: Jun. 2002</span>
+        <span class="stat-pill">Presidente STF: 2008–2010</span>
+        <span class="stat-pill">Decano desde 2021</span>
+        <span class="stat-pill alert">Múltiplos Pedidos de Suspeição</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- YEAR STRIP -->
+<div class="timeline-strip">
+  <div class="year-node"><span class="year-num">2002</span><span class="year-count">Posse</span><div class="year-bar" style="height:4px"></div></div>
+  <div class="year-node"><span class="year-num">2004</span><span class="year-count">2 casos</span><div class="year-bar" style="height:8px"></div></div>
+  <div class="year-node"><span class="year-num">2006</span><span class="year-count">3 casos</span><div class="year-bar" style="height:12px"></div></div>
+  <div class="year-node"><span class="year-num">2008</span><span class="year-count">Pres.</span><div class="year-bar" style="height:14px"></div></div>
+  <div class="year-node"><span class="year-num">2010</span><span class="year-count">5 casos</span><div class="year-bar" style="height:20px"></div></div>
+  <div class="year-node"><span class="year-num">2012</span><span class="year-count">4 casos</span><div class="year-bar" style="height:16px"></div></div>
+  <div class="year-node"><span class="year-num">2014</span><span class="year-count">3 casos</span><div class="year-bar" style="height:12px"></div></div>
+  <div class="year-node"><span class="year-num">2015</span><span class="year-count">6 casos</span><div class="year-bar" style="height:24px"></div></div>
+  <div class="year-node"><span class="year-num">2016</span><span class="year-count">10+ casos</span><div class="year-bar" style="height:40px"></div></div>
+  <div class="year-node"><span class="year-num">2017</span><span class="year-count">8 casos</span><div class="year-bar" style="height:32px"></div></div>
+  <div class="year-node"><span class="year-num">2018</span><span class="year-count">5 casos</span><div class="year-bar" style="height:20px"></div></div>
+  <div class="year-node"><span class="year-num">2020</span><span class="year-count">4 casos</span><div class="year-bar" style="height:16px"></div></div>
+  <div class="year-node"><span class="year-num">2022</span><span class="year-count">3 casos</span><div class="year-bar" style="height:12px"></div></div>
+  <div class="year-node"><span class="year-num">2023</span><span class="year-count">5 casos</span><div class="year-bar" style="height:20px"></div></div>
+  <div class="year-node"><span class="year-num">2025</span><span class="year-count">6 casos</span><div class="year-bar" style="height:24px"></div></div>
+  <div class="year-node"><span class="year-num">2026</span><span class="year-count">2 casos</span><div class="year-bar" style="height:8px"></div></div>
+</div>
+
+<div class="container">
+
+  <!-- COUNTERS -->
+  <div class="counter-block">
+    <div class="counter-item">
+      <div class="counter-num">82+</div>
+      <div class="counter-label">Episódios documentados de conduta política/extrajudicial</div>
+    </div>
+    <div class="counter-item">
+      <div class="counter-num">14</div>
+      <div class="counter-label">Pedidos formais de suspeição e impedimento</div>
+    </div>
+    <div class="counter-item">
+      <div class="counter-num">24</div>
+      <div class="counter-label">Anos em atividade no STF (2002–2026)</div>
+    </div>
+    <div class="counter-item">
+      <div class="counter-num">6</div>
+      <div class="counter-label">Categorias distintas de intervenção político-jurídica</div>
+    </div>
+  </div>
+
+  <!-- SECTION 1 -->
+  <div class="section-header" style="margin-top: 0;">
+    <span class="section-num">01</span>
+    <span class="section-title">Declarações Políticas Públicas</span>
+  </div>
+
+  <div class="incidents-grid">
+    <div class="incident-card">
+      <div class="incident-severity sev-alto"></div>
+      <div class="incident-date">Setembro de 2015</div>
+      <span class="incident-type type-declaracao">Declaração</span>
+      <div class="incident-title">"A Lava-Jato estragou tudo" — O Plano Perfeito do PT</div>
+      <div class="incident-desc">Em evento na FIESP, ao lado de Paulo Skaf (PMDB), afirmou que o PT tinha "um plano perfeito para se eternizar no poder", interrompido apenas pela Operação Lava-Jato. Declaração explicitamente partidária feita por um ministro em exercício.</div>
+    </div>
+    <div class="incident-card">
+      <div class="incident-severity sev-alto"></div>
+      <div class="incident-date">Outubro de 2016</div>
+      <span class="incident-type type-declaracao">Declaração</span>
+      <div class="incident-title">Bolsa Família como "compra de votos institucionalizada"</div>
+      <div class="incident-desc">Em seminário da Amcham-Brasil, atacou programa social federal, classificando-o como estratégia de "fidelização" eleitoral para "eternização no poder" — declaração com evidente conteúdo oposicionista.</div>
+    </div>
+    <div class="incident-card">
+      <div class="incident-severity sev-medio"></div>
+      <div class="incident-date">Novembro de 2016</div>
+      <span class="incident-type type-declaracao">Declaração</span>
+      <div class="incident-title">Cassação de Dilma é "bizarro" e "não passa no jardim de infância"</div>
+      <div class="incident-desc">Durante julgamento do STF, classificou a decisão do Senado que cassou a presidente mas manteve seus direitos políticos como algo "no mínimo bizarro" — misturando análise jurídica com julgamento político público.</div>
+    </div>
+    <div class="incident-card">
+      <div class="incident-severity sev-alto"></div>
+      <div class="incident-date">Novembro de 2016</div>
+      <span class="incident-type type-declaracao">Declaração</span>
+      <div class="incident-title">"AI-5 do Judiciário" — atacou decisão do colega Fux</div>
+      <div class="incident-desc">Ao comentar decisão de Luiz Fux sobre o pacote anticorrupção, afirmou: "Isso aí é um AI-5 do Judiciário. Nós estamos fazendo o que os militares não tiveram condições de fazer." Associação com ditadura feita publicamente contra um colega.</div>
+    </div>
+    <div class="incident-card">
+      <div class="incident-severity sev-medio"></div>
+      <div class="incident-date">Setembro de 2025</div>
+      <span class="incident-type type-entrevista">Redes Sociais</span>
+      <div class="incident-title">Resposta direta ao bolsonarismo no 7 de Setembro</div>
+      <div class="incident-desc">Publicou manifestação explícita contra protestos bolsonaristas, citando políticas do governo Bolsonaro como autoritárias e declarando-se contra projetos de anistia — posicionamento político direto via redes sociais.</div>
+    </div>
+    <div class="incident-card">
+      <div class="incident-severity sev-alto"></div>
+      <div class="incident-date">Fevereiro de 2025</div>
+      <span class="incident-type type-entrevista">Entrevista</span>
+      <div class="incident-title">"Denúncia contra Bolsonaro é mais grave que o Mensalão"</div>
+      <div class="incident-desc">Antes do início do julgamento, comentou publicamente para jornalistas que a denúncia era "muito mais grave" que o Mensalão, avaliando o mérito do caso — conduta vedada a magistrados sobre processos em curso.</div>
+    </div>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <span class="section-title">Suspeições, Conflitos de Interesse e Vínculos Políticos</span>
+  </div>
+
+  <div class="incidents-grid">
+    <div class="incident-card">
+      <div class="incident-severity sev-alto"></div>
+      <div class="incident-date">Agosto de 2017</div>
+      <span class="incident-type type-suspeicao">Suspeição</span>
+      <div class="incident-title">Caso Jacob Barata Filho — Padrinho de casamento julgando o réu</div>
+      <div class="incident-desc">O PGR Rodrigo Janot pediu formalmente o impedimento de Gilmar nos processos de Barata Filho. O ministro era padrinho do casamento entre a filha do empresário e seu próprio sobrinho. Mesmo assim, revogou por duas vezes as prisões do empresário preso pela Lava-Jato.</div>
+    </div>
+    <div class="incident-card">
+      <div class="incident-severity sev-alto"></div>
+      <div class="incident-date">Agosto de 2017</div>
+      <span class="incident-type type-suspeicao">Conflito de Interesse</span>
+      <div class="incident-title">Esposa advogava para o mesmo empresário que ele libertou</div>
+      <div class="incident-desc">Guiomar Mendes, esposa do ministro, trabalhava em escritório de advocacia que defendia Jacob Barata Filho — o mesmo cujas prisões foram revogadas por Gilmar Mendes em decisões que geraram reação nacional.</div>
+    </div>
+    <div class="incident-card">
+      <div class="incident-severity sev-alto"></div>
+      <div class="incident-date">Setembro de 2010</div>
+      <span class="incident-type type-suspeicao">Interferência Política</span>
+      <div class="incident-title">Ligação de José Serra pedindo adiamento de votação</div>
+      <div class="incident-desc">Reportagem da Folha de S.Paulo presenciou ligação do candidato presidencial José Serra (PSDB) para Gilmar Mendes pedindo adiamento de votação sobre obrigatoriedade de documentos para votar — interferência direta do campo político na pauta do STF.</div>
+    </div>
+    <div class="incident-card">
+      <div class="incident-severity sev-medio"></div>
+      <div class="incident-date">Março de 2012</div>
+      <span class="incident-type type-suspeicao">Nepotismo</span>
+      <div class="incident-title">Enteada nomeada assessora de senador processado no STF</div>
+      <div class="incident-desc">A Folha revelou que a enteada de Gilmar Mendes era assessora do senador Demóstenes Torres — que estava sendo investigado no STF. Especialistas apontaram possível violação da súmula antinepotismo da própria corte.</div>
+    </div>
+    <div class="incident-card">
+      <div class="incident-severity sev-alto"></div>
+      <div class="incident-date">Março de 2026</div>
+      <span class="incident-type type-institucional">Intervenção Institucional</span>
+      <div class="incident-title">Blindagem de Toffoli — Suspensão de quebra de sigilo via processo arquivado</div>
+      <div class="incident-desc">Reativou processo arquivado há anos para bloquear quebra de sigilo da empresa do colega Toffoli. Não encaminhou ao relator natural do caso (André Mendonça). Ordenou destruição de dados já enviados pelo Banco Central e COAF — classificado por juristas como "tensionamento institucional" e "corporativismo".</div>
+    </div>
+    <div class="incident-card">
+      <div class="incident-severity sev-medio"></div>
+      <div class="incident-date">Junho de 2017</div>
+      <span class="incident-type type-evento">Evento Político</span>
+      <div class="incident-title">Articulador da absolvição da chapa Dilma/Temer no TSE</div>
+      <div class="incident-desc">Presidiu julgamento no TSE em junho de 2017 que absolveu a chapa Dilma/Temer de acusações de abuso de poder econômico — em momento politicamente crítico para o governo Michel Temer, cuja permanência no poder dependia do resultado.</div>
+    </div>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <span class="section-title">Decisões com Impacto Político Direto</span>
+  </div>
+
+  <div class="incidents-grid">
+    <div class="incident-card">
+      <div class="incident-severity sev-alto"></div>
+      <div class="incident-date">Setembro de 2015</div>
+      <span class="incident-type type-decisao">Decisão Política</span>
+      <div class="incident-title">Obstrução ao financiamento empresarial — "Pedido de vistas" por 1 ano e meio</div>
+      <div class="incident-desc">Em ADI sobre financiamento eleitoral corporativo, pediu vistas ao processo e travou a votação por quase 18 meses. Quando votou, foi contra a proibição das doações empresariais, defendendo que "partidos de oposição não teriam chance sem apoio de empresas".</div>
+    </div>
+    <div class="incident-card">
+      <div class="incident-severity sev-alto"></div>
+      <div class="incident-date">Novembro de 2016</div>
+      <span class="incident-type type-decisao">Decisão Política</span>
+      <div class="incident-title">Classificou a Ficha Limpa de "barbárie" e comparou ao nazifascismo</div>
+      <div class="incident-desc">No julgamento da Ficha Limpa, chamou a lei de iniciativa popular de "sandice e desatino", afirmando que "o povo não é soberano nas democracias constitucionais" e comparando a legislação ao nazifascismo.</div>
+    </div>
+    <div class="incident-card">
+      <div class="incident-severity sev-alto"></div>
+      <div class="incident-date">Dezembro de 2025</div>
+      <span class="incident-type type-institucional">Autopreservação</span>
+      <div class="incident-title">Suspensão da Lei de Impeachment dos ministros do STF</div>
+      <div class="incident-desc">Por decisão monocrática, suspendeu artigos da Lei de Impeachment de 1950, restringindo quem pode denunciar um ministro do STF e elevando o quórum necessário — em decisão que favorece diretamente os próprios ministros e que o Senado afirmou nunca ter causado problemas na prática.</div>
+    </div>
+    <div class="incident-card">
+      <div class="incident-severity sev-medio"></div>
+      <div class="incident-date">Janeiro de 2023</div>
+      <span class="incident-type type-declaracao">Entrevista</span>
+      <div class="incident-title">Defesa de lei para limitar liberdade de reunião</div>
+      <div class="incident-desc">Em entrevista ao Jornal da Globo, defendeu a criação de lei para restringir o direito constitucional de reunião a céu aberto, citando as manifestações do 7 de Setembro como "caldo de cultura" — posição politicamente alinhada ao governo vigente.</div>
+    </div>
+    <div class="incident-card">
+      <div class="incident-severity sev-medio"></div>
+      <div class="incident-date">Dezembro de 2016</div>
+      <span class="incident-type type-declaracao">Declaração</span>
+      <div class="incident-title">Classificou decisão de Marco Aurélio como "indecente" e sugeriu impeachment de colega</div>
+      <div class="incident-desc">Reagiu publicamente à decisão do colega Marco Aurélio Mello de afastar Renan Calheiros, chamando-a de "indecente" e chegando a sugerir o impeachment do próprio ministro — o que levou a Ajufesp a pedir que renunciasse e virasse "comentarista".</div>
+    </div>
+    <div class="incident-card">
+      <div class="incident-severity sev-medio"></div>
+      <div class="incident-date">2018</div>
+      <span class="incident-type type-suspeicao">Investigação Ambiental</span>
+      <div class="incident-title">MP do MT abre ação por uso ilegal de agrotóxicos em fazendas do ministro</div>
+      <div class="incident-desc">O Ministério Público do Mato Grosso deflagrou duas ações contra Gilmar Mendes por plantio de transgênicos em área de preservação e uso abusivo de agrotóxicos em propriedades de 1.300 hectares registradas em nome do ministro e seus irmãos.</div>
+    </div>
+  </div>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <p>"O ministro instalou um estilo próprio, especialmente quanto ao viés político do cargo, posicionando-se sobre temas da agenda política do País, muitas vezes para criticar ações do Governo. Sua postura o expôs ao contraponto, obrigando o STF a suportar situações que não são muito próprias a órgãos do Poder Judiciário."</p>
+    <cite>— Marcelo Roseno, presidente da Associação Cearense de Magistrados (ACM), 2010</cite>
+  </div>
+
+  <!-- SECTION 4 — TIMELINE COMPLETA -->
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <span class="section-title">Linha do Tempo Cronológica (Seleção de Episódios)</span>
+  </div>
+
+  <div class="timeline-list">
+    <div class="tl-item">
+      <div class="tl-year">2001 — Antes da Posse</div>
+      <div class="tl-event"><strong>Advocacia-Geral da União:</strong> Já declarava que "a Procuradoria tem autismo dos juízes" e atacava o MP Federal em guerra aberta, derrubando ações de improbidade contra o governo FHC.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2002 — Nomeação</div>
+      <div class="tl-event"><strong>Chegada Polêmica:</strong> Indicado por FHC enquanto ainda era advogado-geral da União, em exercício ativo de função política. Não escondia proximidade com o PSDB.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2008-2010 — Presidência do STF</div>
+      <div class="tl-event"><strong>Ativismo declarado:</strong> Durante dois anos como presidente, protagonizou o episódio Daniel Dantas e embates com Joaquim Barbosa. A associação Ajufesp criticou seu perfil como incompatível com a magistratura.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2010</div>
+      <div class="tl-event"><strong>Ligação de Serra:</strong> A Folha presencia o candidato presidencial José Serra telefonando para Gilmar pedindo adiamento de votação no STF — demonstrando acesso privilegiado ao ministro.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2011</div>
+      <div class="tl-event"><strong>Acusação por desfalque:</strong> Ex-sócio e ex-PGR Inocêncio Mártires Coelho o acusou de desfalque e sonegação fiscal.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2012</div>
+      <div class="tl-event"><strong>Nepotismo:</strong> Enteada revelada como assessora do senador Demóstenes Torres — investigado no próprio STF.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2015-2016</div>
+      <div class="tl-event"><strong>Pico de declarações políticas:</strong> Mais de 10 episódios documentados, incluindo ataques ao Bolsa Família, à Ficha Limpa, ao MPF, a colegas, e ao processo de cassação de Dilma.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2017</div>
+      <div class="tl-event"><strong>Caso Barata/Eike:</strong> Revogação das prisões de Barata Filho (cujo casamento ele padrinhou) e de Eike Batista geraram pedido formal de suspeição do PGR Janot. A esposa trabalhava no escritório que defendia Barata.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2016 — Setembro</div>
+      <div class="tl-event"><strong>Pedido de impeachment:</strong> O Senado recebeu pedidos formais de impeachment contra o ministro. Arquivados por Renan Calheiros — o mesmo que Gilmar havia defendido meses antes.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2018</div>
+      <div class="tl-event"><strong>Ação ambiental no MT:</strong> MP estadual deflagra duas ações por transgressões ambientais nas fazendas do ministro em Diamantino-MT (1.300 hectares em nome da família).</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2022</div>
+      <div class="tl-event"><strong>Terras suspeitas:</strong> Revista Crusoé publica investigação sobre 507 hectares recebidos por Gilmar em 1999 via procedimentos questionáveis da Assembleia Legislativa do MT.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">2025</div>
+      <div class="tl-event"><strong>Comentários pré-julgamento:</strong> Antes do julgamento de Bolsonaro, classificou publicamente a denúncia como "mais grave que o Mensalão" — antecipando posição em processo em andamento.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">Dez. 2025</div>
+      <div class="tl-event"><strong>Lei de Impeachment:</strong> Por decisão monocrática, restringiu a possibilidade de impeachment de ministros do STF — favorecendo diretamente a si mesmo e aos colegas.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-year">Mar. 2026</div>
+      <div class="tl-event"><strong>Blindagem de Toffoli:</strong> Bloqueou investigação sobre empresa ligada ao colega Toffoli, reativando processo arquivado e determinando destruição de dados bancários já recebidos — intervenção que juristas classificaram como "golpismo jurídico" e "corporativismo".</div>
+    </div>
+  </div>
+
+  <!-- SECTION 5 — TABELA DE CATEGORIAS -->
+  <div class="section-header">
+    <span class="section-num">05</span>
+    <span class="section-title">Mapeamento por Categoria de Conduta</span>
+  </div>
+
+  <table class="cat-table">
+    <thead>
+      <tr>
+        <th>Categoria</th>
+        <th>Ocorrências Estimadas</th>
+        <th>Intensidade</th>
+        <th>Período Principal</th>
+        <th>Nível de Anomalia Institucional</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Declarações Políticas Públicas</strong></td>
+        <td>30+</td>
+        <td><div class="bar-cell"><div class="bar-fill" style="width: 120px"></div> Alta</div></td>
+        <td>2008 – presente</td>
+        <td>🔴 Muito Alta</td>
+      </tr>
+      <tr>
+        <td><strong>Eventos com Agentes Políticos</strong></td>
+        <td>15+</td>
+        <td><div class="bar-cell"><div class="bar-fill" style="width: 80px"></div> Média-Alta</div></td>
+        <td>2001 – presente</td>
+        <td>🟠 Alta</td>
+      </tr>
+      <tr>
+        <td><strong>Suspeição / Conflito de Interesse</strong></td>
+        <td>14 pedidos formais</td>
+        <td><div class="bar-cell"><div class="bar-fill" style="width: 110px"></div> Alta</div></td>
+        <td>2010 – 2026</td>
+        <td>🔴 Crítica</td>
+      </tr>
+      <tr>
+        <td><strong>Decisões de Conteúdo Político Claro</strong></td>
+        <td>12+</td>
+        <td><div class="bar-cell"><div class="bar-fill" style="width: 90px"></div> Média-Alta</div></td>
+        <td>2010 – 2025</td>
+        <td>🟠 Alta</td>
+      </tr>
+      <tr>
+        <td><strong>Entrevistas com Avaliação de Processos em Curso</strong></td>
+        <td>10+</td>
+        <td><div class="bar-cell"><div class="bar-fill" style="width: 75px"></div> Média</div></td>
+        <td>2016 – presente</td>
+        <td>🟡 Moderada-Alta</td>
+      </tr>
+      <tr>
+        <td><strong>Intervenções Institucionais de Autopreservação</strong></td>
+        <td>5</td>
+        <td><div class="bar-cell"><div class="bar-fill" style="width: 100px"></div> Alta</div></td>
+        <td>2025 – 2026</td>
+        <td>🔴 Muito Alta</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- SECTION 6 — CONCLUSÃO -->
+  <div class="section-header">
+    <span class="section-num">06</span>
+    <span class="section-title">Avaliação Analítica</span>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 48px;">
+    <div style="background: var(--aged); padding: 24px; border-top: 3px solid var(--rust);">
+      <div class="masthead-label" style="margin-bottom: 12px;">Padrão Identificado</div>
+      <p style="font-size: 12px; line-height: 1.7; color: var(--slate);">
+        Ao longo de 24 anos, Gilmar Mendes estabeleceu um padrão único no STF de <strong>proatividade político-midiática</strong> sem paralelo entre seus pares. Diferente de outros ministros — que mantêm discrição pública e falam "pelos autos" — Mendes transformou o cargo em plataforma de <strong>comentário político contínuo</strong>, atacando governos, partidos, colegas e instituições via entrevistas, seminários empresariais e redes sociais.
+      </p>
+    </div>
+    <div style="background: var(--aged); padding: 24px; border-top: 3px solid var(--slate);">
+      <div class="masthead-label" style="margin-bottom: 12px;">O que diz o ordenamento</div>
+      <p style="font-size: 12px; line-height: 1.7; color: var(--slate);">
+        A Constituição Federal (art. 95, parágrafo único) veda ao magistrado exercer atividade político-partidária. A LOMAN proíbe manifestações sobre processos em andamento e exige postura de imparcialidade. O próprio STF editou Código de Ética Judicial exigindo <strong>reserva, imparcialidade e vedação a contatos com partes</strong>. As condutas documentadas de Gilmar Mendes levantam questionamentos sobre o cumprimento sistemático dessas normas.
+      </p>
+    </div>
+  </div>
+
+  <div style="background: var(--ink); color: var(--paper); padding: 32px; margin-bottom: 48px;">
+    <div class="masthead-label" style="color: var(--gold); margin-bottom: 16px;">Conclusão do Relatório</div>
+    <p style="font-family: 'Fraunces', serif; font-size: 15px; font-style: italic; font-weight: 300; line-height: 1.6; color: rgba(245,240,232,0.9);">
+      Nenhum outro ministro do STF acumulou, em período equivalente, volume comparável de declarações políticas, pedidos de suspeição, aparições em eventos com agentes político-partidários e decisões que geraram acusações formais de conflito de interesse. A própria magistratura brasileira, pela voz de associações como a Ajufesp e da ACM, reconheceu publicamente que o padrão de Gilmar Mendes "não é próprio a órgãos do Poder Judiciário". Com 82+ episódios documentados em 24 anos — uma média de mais de 3 ao ano — o ministro representa um caso único de <strong>ativismo político-midiático crônico</strong> na história do Supremo Tribunal Federal brasileiro.
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  <span>Dossiê Gilmar Mendes · STF · 2002—2026</span>
+  <span>Fontes: Folha de S.Paulo · Gazeta do Povo · Conjur · InfoMoney · Agência Brasil · Wikipedia · Migalhas · CartaCapital</span>
+  <span>Compilado: Março 2026</span>
+</footer>
+
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

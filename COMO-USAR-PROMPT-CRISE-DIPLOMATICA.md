@@ -228,16 +228,16 @@ def criar_post_crise_diplomatica(assunto, output_dir="_posts"):
     # Escolher ícone baseado na categoria
     icones = {
         'crise-diplomatica': '/assets/solid/globe.svg',
-        'escandalos': '/assets/solid/shield-exclamation.svg',
+        'escandalos': '/assets/solid/shield-virus.svg',
         'extravagancia': '/assets/solid/currency-dollar.svg',
         'indecoro': '/assets/solid/face-frown.svg',
         'bancos': '/assets/solid/banknotes.svg',
         'operacoes': '/assets/solid/shield-check.svg',
         'lawfare': '/assets/solid/scale.svg',
         'justica': '/assets/solid/gavel.svg',
-        'estudos': '/assets/solid/document-text.svg'
+        'estudos': '/assets/solid/file-shield.svg'
     }
-    icone = icones.get(categoria, '/assets/solid/document-text.svg')
+    icone = icones.get(categoria, '/assets/solid/file-shield.svg')
     
     # Criar front matter
     front_matter = f"""---

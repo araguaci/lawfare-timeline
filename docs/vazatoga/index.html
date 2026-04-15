@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VAZA TOGA — Dossiê Completo | INQ 4.781 / STF</title>
+<meta name="description" content="Dossiê investigativo completo sobre a Vaza Toga: o escândalo de instrumentalização paralela do TSE pelo gabinete do ministro Alexandre de Moraes para produzir provas no Inquérito das Fake News (INQ 4.781/STF).">
+<meta name="author" content="lawfare-timeline.vercel.app — CC0 1.0 Universal">
+<link rel="canonical" href="https://lawfare-timeline.vercel.app/vaza-toga">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VAZA TOGA — Dossiê Completo INQ 4.781">
+<meta property="og:description" content="Sistema paralelo de produção de provas: o gabinete do STF instrumentalizou o TSE para justificar decisões judiciais fora dos ritos processuais.">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg:           #06080b;
+  --surface:      #0a0d12;
+  --surface2:     #0d1219;
+  --surface3:     #111820;
+  --border:       #1a2535;
+  --border-hot:   #2a3a50;
+
+  --red:          #c0392b;
+  --red-hot:      #e84040;
+  --red-dim:      rgba(192,57,43,0.15);
+  --amber:        #d4830a;
+  --amber-hot:    #f0a020;
+  --amber-dim:    rgba(212,131,10,0.15);
+  --gold:         #b8972a;
+  --gold-hot:     #e8c840;
+  --blue:         #2471a3;
+  --blue-hot:     #3498db;
+  --teal:         #148a76;
+  --teal-hot:     #1abc9c;
+  --purple:       #7d3c98;
+  --purple-hot:   #9b59b6;
+
+  --sev-critical: #e84040;
+  --sev-high:     #f0a020;
+  --sev-medium:   #e8c840;
+  --sev-low:      #27ae60;
+  --sev-info:     #3498db;
+
+  --text:         #c8cdd5;
+  --text-dim:     #6a7a8a;
+  --text-bright:  #eef0f3;
+  --text-muted:   #3d4e5f;
+
+  --mono: 'IBM Plex Mono', monospace;
+  --sans: 'IBM Plex Sans', sans-serif;
+  --display: 'Syne', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  line-height: 1.65;
+  font-size: 14px;
+}
+
+/* SCANLINES */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.025) 2px, rgba(0,0,0,0.025) 4px);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ═══════════════ ALERT BANNER ═══════════════ */
+.alert-banner {
+  background: linear-gradient(90deg, #1a0505, #2a0808, #1a0505);
+  border-bottom: 2px solid var(--red);
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--red-hot);
+}
+.alert-banner .blink {
+  width: 8px; height: 8px;
+  background: var(--red-hot);
+  border-radius: 50%;
+  animation: blink 1s ease-in-out infinite;
+  flex-shrink: 0;
+}
+@keyframes blink {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0.1; }
+}
+
+/* ═══════════════ HEADER ═══════════════ */
+.header {
+  background: linear-gradient(135deg, #06080b 0%, #0c1520 40%, #08101a 100%);
+  border-bottom: 1px solid var(--red);
+  padding: 60px 60px 50px;
+  position: relative;
+  overflow: hidden;
+}
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, transparent, var(--red), var(--amber-hot), var(--red), transparent);
+}
+.header::after {
+  content: '';
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(192,57,43,0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.header-tag {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border: 1px solid var(--border-hot);
+  background: var(--surface);
+}
+.header-tag.alert { color: var(--red-hot); border-color: var(--red); background: var(--red-dim); }
+
+.header-body {
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 60px;
+  align-items: end;
+}
+
+.inq-number {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  color: var(--red);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.main-title {
+  font-family: var(--display);
+  font-size: clamp(52px, 8vw, 100px);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  color: var(--text-bright);
+  margin-bottom: 8px;
+}
+.main-title .accent { color: var(--red-hot); }
+.main-title .sub { font-size: 0.38em; font-weight: 400; color: var(--text-dim); display: block; letter-spacing: 0.05em; margin-top: 12px; }
+
+.header-subtitle {
+  font-size: 15px;
+  color: var(--text-dim);
+  max-width: 680px;
+  margin-top: 20px;
+  line-height: 1.7;
+  border-left: 2px solid var(--red);
+  padding-left: 16px;
+}
+
+.header-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--red);
+  padding: 16px 20px;
+}
+.stat-card.amber { border-left-color: var(--amber-hot); }
+.stat-card.gold { border-left-color: var(--gold-hot); }
+.stat-value {
+  font-family: var(--mono);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text-bright);
+  line-height: 1;
+}
+.stat-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* ═══════════════ NAV TABS ═══════════════ */
+.nav-tabs {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0 60px;
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-tabs::-webkit-scrollbar { display: none; }
+.tab-btn {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 16px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.tab-btn:hover { color: var(--text); border-bottom-color: var(--border-hot); }
+.tab-btn.active { color: var(--red-hot); border-bottom-color: var(--red-hot); }
+
+/* ═══════════════ MAIN LAYOUT ═══════════════ */
+.main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 60px 80px;
+}
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* ═══════════════ SECTION TITLES ═══════════════ */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.section-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+}
+.section-title {
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-bright);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ═══════════════ SEVERITY BADGES ═══════════════ */
+.sev-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+.sev-critico { background: rgba(232,64,64,0.15); color: var(--sev-critical); border: 1px solid var(--sev-critical); }
+.sev-alto    { background: rgba(240,160,32,0.15); color: var(--sev-high);     border: 1px solid var(--sev-high); }
+.sev-medio   { background: rgba(232,200,64,0.15); color: var(--sev-medium);   border: 1px solid var(--sev-medium); }
+.sev-baixo   { background: rgba(39,174,96,0.15);  color: var(--sev-low);      border: 1px solid var(--sev-low); }
+.sev-info    { background: rgba(52,152,219,0.15); color: var(--sev-info);     border: 1px solid var(--sev-info); }
+
+/* ═══════════════ ALERT BOXES ═══════════════ */
+.alert-box {
+  border-left: 3px solid var(--red);
+  background: var(--red-dim);
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.alert-box.amber { border-left-color: var(--amber-hot); background: var(--amber-dim); }
+.alert-box.blue  { border-left-color: var(--blue-hot);  background: rgba(52,152,219,0.08); }
+.alert-box .alert-icon { font-size: 16px; flex-shrink: 0; line-height: 1.4; }
+.alert-box .alert-title {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--red-hot);
+  margin-bottom: 6px;
+}
+.alert-box.amber .alert-title { color: var(--amber-hot); }
+.alert-box.blue  .alert-title { color: var(--blue-hot); }
+.alert-box .alert-text { font-size: 13px; color: var(--text); line-height: 1.6; }
+
+/* ═══════════════ CARDS GRID ═══════════════ */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 24px;
+  position: relative;
+  transition: border-color 0.2s;
+}
+.card:hover { border-color: var(--border-hot); }
+.card-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+.card-title {
+  font-family: var(--display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.card-body { font-size: 12.5px; color: var(--text); line-height: 1.65; }
+.card-severity {
+  position: absolute;
+  top: 0; right: 0;
+  width: 4px;
+  height: 100%;
+}
+.sev-c { background: var(--sev-critical); }
+.sev-h { background: var(--sev-high); }
+.sev-m { background: var(--sev-medium); }
+.sev-l { background: var(--sev-low); }
+
+/* ═══════════════ TIMELINE ═══════════════ */
+.timeline { position: relative; }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 120px; top: 0; bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+.tl-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 0;
+  margin-bottom: 0;
+  position: relative;
+}
+.tl-date {
+  padding: 24px 20px 24px 0;
+  text-align: right;
+  position: relative;
+}
+.tl-date::after {
+  content: '';
+  position: absolute;
+  right: -5px;
+  top: 32px;
+  width: 9px; height: 9px;
+  background: var(--surface2);
+  border: 2px solid var(--red);
+  border-radius: 50%;
+  z-index: 1;
+}
+.tl-item.major .tl-date::after { background: var(--red); width: 11px; height: 11px; right: -6px; top: 30px; }
+.tl-date-year {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--red);
+  display: block;
+}
+.tl-date-full {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text-muted);
+  display: block;
+  margin-top: 2px;
+}
+.tl-content {
+  border-left: 1px solid transparent;
+  padding: 20px 0 20px 28px;
+  border-bottom: 1px solid var(--border);
+}
+.tl-item:last-child .tl-content { border-bottom: none; }
+.tl-event-title {
+  font-family: var(--display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin-bottom: 8px;
+}
+.tl-event-desc { font-size: 12.5px; color: var(--text); line-height: 1.65; margin-bottom: 10px; }
+.tl-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.tl-tag {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border: 1px solid var(--border-hot);
+  color: var(--text-dim);
+}
+.tl-tag.red { border-color: var(--red); color: var(--red); }
+.tl-tag.amber { border-color: var(--amber-hot); color: var(--amber-hot); }
+.tl-tag.blue { border-color: var(--blue-hot); color: var(--blue-hot); }
+
+/* ═══════════════ ACTOR CARDS ═══════════════ */
+.actors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.actor-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 0;
+  overflow: hidden;
+}
+.actor-header {
+  background: var(--surface2);
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.actor-name {
+  font-family: var(--display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-bright);
+}
+.actor-role {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+.role-judge { background: rgba(192,57,43,0.15); color: var(--red-hot); border: 1px solid var(--red); }
+.role-assessor { background: rgba(212,131,10,0.15); color: var(--amber-hot); border: 1px solid var(--amber-hot); }
+.role-journalist { background: rgba(52,152,219,0.15); color: var(--blue-hot); border: 1px solid var(--blue-hot); }
+.role-target { background: rgba(232,200,64,0.15); color: var(--sev-medium); border: 1px solid var(--sev-medium); }
+.actor-position {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text-dim);
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255,255,255,0.01);
+}
+.actor-desc { font-size: 12.5px; color: var(--text); padding: 16px 20px; line-height: 1.65; }
+.actor-flag {
+  margin: 0 20px 16px;
+  padding: 8px 12px;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--red);
+  border: 1px solid var(--red-dim);
+  background: var(--red-dim);
+}
+
+/* ═══════════════ LEGAL ANALYSIS ═══════════════ */
+.legal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.legal-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 24px;
+}
+.legal-card-title {
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-bright);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.legal-card-title .dot { width: 6px; height: 6px; background: var(--red); flex-shrink: 0; }
+.legal-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
+  align-items: flex-start;
+}
+.legal-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  padding-top: 1px;
+}
+.legal-text { font-size: 12.5px; color: var(--text); line-height: 1.6; }
+.legal-text strong { color: var(--text-bright); font-weight: 600; }
+.legal-text .art {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--amber-hot);
+}
+
+/* ═══════════════ PATTERN INDICATORS ═══════════════ */
+.pattern-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+.pattern-item {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  align-items: center;
+  gap: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 16px 20px;
+  transition: border-color 0.2s;
+}
+.pattern-item:hover { border-color: var(--border-hot); }
+.pattern-id {
+  font-family: var(--mono);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--red-hot);
+}
+.pattern-name {
+  font-family: var(--display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin-bottom: 4px;
+}
+.pattern-desc { font-size: 12px; color: var(--text-dim); line-height: 1.5; }
+.pattern-status {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.ps-confirmado { background: var(--red-dim); color: var(--red-hot); border: 1px solid var(--red); }
+.ps-parcial    { background: var(--amber-dim); color: var(--amber-hot); border: 1px solid var(--amber-hot); }
+.ps-hipotese   { background: rgba(52,152,219,0.1); color: var(--blue-hot); border: 1px solid var(--blue); }
+
+/* ═══════════════ SOURCES TABLE ═══════════════ */
+.sources-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+  font-size: 12.5px;
+}
+.sources-table th {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 2px solid var(--border);
+  background: var(--surface);
+}
+.sources-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.sources-table tr:hover td { background: rgba(255,255,255,0.02); }
+.source-link {
+  color: var(--blue-hot);
+  text-decoration: none;
+  font-family: var(--mono);
+  font-size: 11px;
+}
+.source-link:hover { text-decoration: underline; }
+.source-type {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+/* ═══════════════ VERDICT BOX ═══════════════ */
+.verdict-box {
+  background: var(--surface);
+  border: 1px solid var(--red);
+  padding: 32px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.verdict-box::before {
+  content: 'ANÁLISE EDITORIAL';
+  position: absolute;
+  top: -1px; left: 24px;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  background: var(--red);
+  color: white;
+  padding: 2px 8px;
+}
+.verdict-text {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--text);
+}
+.verdict-text strong { color: var(--text-bright); }
+
+/* ═══════════════ DOSSIÊ LINK ═══════════════ */
+.dossie-link-box {
+  background: linear-gradient(135deg, var(--surface) 0%, var(--surface2) 100%);
+  border: 1px solid var(--border-hot);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+  text-decoration: none;
+  transition: border-color 0.2s;
+}
+.dossie-link-box:hover { border-color: var(--red); }
+.dossie-link-info { flex: 1; }
+.dossie-link-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.dossie-link-title { font-family: var(--display); font-size: 14px; font-weight: 700; color: var(--text-bright); }
+.dossie-link-arrow {
+  font-family: var(--mono);
+  font-size: 20px;
+  color: var(--red);
+}
+
+/* ═══════════════ QUOTE BLOCK ═══════════════ */
+.quote-block {
+  border-left: 3px solid var(--red);
+  margin: 24px 0;
+  padding: 16px 20px;
+  background: var(--surface);
+}
+.quote-text {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text-bright);
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+.quote-source {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+}
+
+/* ═══════════════ FOOTER ═══════════════ */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 40px 60px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: center;
+  background: var(--surface);
+  margin-top: 80px;
+}
+.footer-license {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+.footer-license a { color: var(--blue-hot); text-decoration: none; }
+.footer-cc {
+  font-family: var(--mono);
+  font-size: 20px;
+  color: var(--text-muted);
+}
+
+/* ═══════════════ RESPONSIVE ═══════════════ */
+@media (max-width: 900px) {
+  .header { padding: 40px 24px 36px; }
+  .header-body { grid-template-columns: 1fr; gap: 30px; }
+  .header-stats { flex-direction: row; flex-wrap: wrap; }
+  .stat-card { flex: 1; min-width: 120px; }
+  .nav-tabs { padding: 0 16px; }
+  .main { padding: 28px 20px 60px; }
+  .legal-grid { grid-template-columns: 1fr; }
+  .pattern-item { grid-template-columns: 60px 1fr; }
+  .pattern-status { display: none; }
+  .footer { grid-template-columns: 1fr; gap: 16px; padding: 32px 24px; }
+  .timeline::before { left: 80px; }
+  .tl-item { grid-template-columns: 80px 1fr; }
+  .tl-date-full { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ALERT BANNER -->
+<div class="alert-banner">
+  <div class="blink"></div>
+  <span>DOCUMENTO VIVO — ÚLTIMA ATUALIZAÇÃO: ABRIL 2026 · FONTES: FOLHA DE S.PAULO · G1 · PGR · STF · CC0 1.0 UNIVERSAL — SEM DIREITOS RESERVADOS</span>
+</div>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-top">
+    <div class="header-tag alert">⚠ ESCÂNDALO ATIVO</div>
+    <div class="header-tag">INQ 4.781/STF</div>
+    <div class="header-tag">LAWFARE-TIMELINE.VERCEL.APP</div>
+  </div>
+  <div class="header-body">
+    <div>
+      <div class="inq-number">DOSSIÊ INVESTIGATIVO · AGOSTO 2024 — PRESENTE</div>
+      <div class="main-title">
+        <span class="accent">VAZA</span><br>TOGA
+        <span class="sub">Sistema Paralelo de Produção de Provas · STF / TSE</span>
+      </div>
+      <div class="header-subtitle">
+        Como o gabinete do ministro Alexandre de Moraes instrumentalizou informalmente a AEED/TSE para produzir relatórios extrajudiciais contra alvos do Inquérito das Fake News (INQ 4.781/STF), burlando os ritos processuais e comprometendo a cadeia de custódia probatória.
+      </div>
+    </div>
+    <div class="header-stats">
+      <div class="stat-card">
+        <div class="stat-value">6 GB</div>
+        <div class="stat-label">Volume de dados vazados</div>
+      </div>
+      <div class="stat-card amber">
+        <div class="stat-value">+20</div>
+        <div class="stat-label">Casos extraoficiais documentados</div>
+      </div>
+      <div class="stat-card gold">
+        <div class="stat-value">155+</div>
+        <div class="stat-label">Atos de Moraes no Dossiê público</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NAV TABS -->
+<div class="nav-tabs">
+  <button class="tab-btn active" onclick="showTab('visao-geral')">01 · Visão Geral</button>
+  <button class="tab-btn" onclick="showTab('cronologia')">02 · Cronologia</button>
+  <button class="tab-btn" onclick="showTab('atores')">03 · Atores</button>
+  <button class="tab-btn" onclick="showTab('anatomia')">04 · Anatomia</button>
+  <button class="tab-btn" onclick="showTab('juridico')">05 · Análise Jurídica</button>
+  <button class="tab-btn" onclick="showTab('padroes')">06 · Padrões Sistêmicos</button>
+  <button class="tab-btn" onclick="showTab('fontes')">07 · Fontes &amp; Referências</button>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- ═══ TAB 1: VISÃO GERAL ═══ -->
+  <div id="tab-visao-geral" class="tab-content active">
+
+    <div class="alert-box" style="margin-top:32px;">
+      <div class="alert-icon">🚨</div>
+      <div>
+        <div class="alert-title">Alerta de Gravidade Crítica</div>
+        <div class="alert-text">Este dossiê documenta evidências de <strong>fraude processual estrutural</strong>: a produção de provas fora do rito legal, por canais informais de WhatsApp, comprometendo a validade de decisões que resultaram em bloqueios de contas, apreensão de passaportes, prisões preventivas e suspensão de mandatos. O sistema de custódia probatória foi deliberadamente contornado.</div>
+      </div>
+    </div>
+
+    <div style="margin-bottom:40px; margin-top:40px;">
+      <div class="section-header">
+        <span class="section-num">01.1</span>
+        <span class="section-title">O Que É a Vaza Toga</span>
+      </div>
+      <div style="max-width:900px; font-size:14px; line-height:1.8; color:var(--text);">
+        <p style="margin-bottom:16px;">A <strong style="color:var(--text-bright)">Vaza Toga</strong> é um escândalo de vazamento de mensagens e áudios de WhatsApp iniciado em <strong style="color:var(--amber-hot)">13 de agosto de 2024</strong>, quando o jornalista Glenn Greenwald e Fabio Serapião publicaram reportagem na <em>Folha de S.Paulo</em> com base em 6 gigabytes de dados obtidos de grupos de WhatsApp de auxiliares do ministro Alexandre de Moraes no STF e no TSE.</p>
+        <p style="margin-bottom:16px;">As mensagens expõem um <strong style="color:var(--text-bright)">"sistema paralelo"</strong> de inteligência sob demanda: o gabinete de Moraes solicitava informalmente à AEED (Assessoria Especial de Enfrentamento à Desinformação) do TSE a produção de relatórios contra alvos do Inquérito das Fake News (INQ 4.781/STF) — sem ordens judiciais formais, sem registro processual, e com instruções para que os relatórios parecessem "espontâneos", encobrindo sua origem.</p>
+        <p style="margin-bottom:16px;">O nome foi cunhado pelo site <em>O Antagonista</em>, numa referência à "Vaza Jato" (2019), o vazamento de mensagens do ex-juiz Sergio Moro que revelou coordenação ilegal entre MPF e juízo na Lava Jato.</p>
+        <p>Uma segunda fase, publicada em agosto de 2025 pelo jornalista americano Michael Shellenberger, revelou uma alegada <strong style="color:var(--text-bright)">"força-tarefa secreta"</strong> montada no TSE para vasculhar redes sociais de investigados do 8 de Janeiro, visando justificar prisões retroativamente.</p>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <span class="section-num">01.2</span>
+      <span class="section-title">Frases-Chave Documentadas nas Mensagens</span>
+    </div>
+
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-severity sev-c"></div>
+        <div class="card-label">Ordem direta · Airton Vieira / AEED</div>
+        <div class="card-title">"Usa a criatividade"</div>
+        <div class="card-body">Instrução do juiz instrutor Airton Vieira à AEED para que o assessor Eduardo Tagliaferro "encontrasse" ou adaptasse pretextos para incluir alvos em investigações — em caso específico, para justificar desmonetização da <em>Revista Oeste</em>, mesmo após Tagliaferro informar que só encontrara "material jornalístico".</div>
+      </div>
+      <div class="card">
+        <div class="card-severity sev-c"></div>
+        <div class="card-label">Mensagem de Moraes reencaminhada</div>
+        <div class="card-title">"Vamos endurecer com eles. Prepare relatórios e mande para o inq das fake"</div>
+        <div class="card-body">Ordem de Moraes sobre a rede X (Twitter), reencaminhada no grupo pelo juiz auxiliar Marco Antônio Vargas, que acrescentou: <em>"Vamos caprichar."</em> A mensagem foi enviada após o X recusar remoções de conteúdo. Meses depois, Moraes ordenou o bloqueio nacional da plataforma.</div>
+      </div>
+      <div class="card">
+        <div class="card-severity sev-h"></div>
+        <div class="card-label">Relato de auxiliar sobre Moraes</div>
+        <div class="card-title">"Ele cismou. Quando ele cisma, é uma tragédia."</div>
+        <div class="card-body">Frase de Airton Vieira após Moraes expressar insatisfação com a demora em cumprir uma ordem. Revela o funcionamento inquisitorial do gabinete e a pressão informal sobre servidores do TSE para produzir resultados sem observância dos ritos legais.</div>
+      </div>
+      <div class="card">
+        <div class="card-severity sev-c"></div>
+        <div class="card-label">Operação extrajudicial pessoal</div>
+        <div class="card-title">Reforma no apartamento de Moraes: pedreiros fichados pelo TSE</div>
+        <div class="card-body">Mensagens reveladas pela Folha mostram que o segurança pessoal de Moraes (PM Macedo) pediu à AEED consulta sigilosa em banco de dados da Polícia Civil de SP sobre funcionários que fariam reforma em seu apartamento — uso de infraestrutura estatal para fins pessoais, fora de qualquer processo judicial.</div>
+      </div>
+    </div>
+
+    <div class="alert-box amber" style="margin-bottom:40px;">
+      <div class="alert-icon">⚠️</div>
+      <div>
+        <div class="alert-title">Posição Institucional do Contraditório</div>
+        <div class="alert-text">O gabinete de Moraes publicou nota afirmando que "todos os procedimentos foram oficiais, regulares e devidamente documentados, com integral participação da PGR." O ex-presidente do STF, Luís Roberto Barroso, classificou as revelações como "tempestades fictícias." O advogado Fernando Hideo Lacerda argumentou que Moraes, por presidir simultaneamente o TSE e ser ministro do STF, tinha atribuição para requisitar informações da AEED. A veracidade e a legalidade das mensagens são objeto de disputa judicial.</div>
+      </div>
+    </div>
+
+    <div class="verdict-box">
+      <div class="verdict-text">
+        <p style="margin-bottom:14px;">A Vaza Toga não é simplesmente um vazamento de mensagens íntimas. É a documentação de um <strong>circuito de produção probatória extrajudicial</strong>: um tribunal (STF) instrui informalmente um segundo tribunal (TSE) a fabricar os insumos que justificarão as decisões do primeiro. O ciclo se fecha sem jamais ter passado por uma requisição formal, um contraditório, ou uma cadeia de custódia rastreável.</p>
+        <p style="margin-bottom:14px;">O que torna o caso estruturalmente diferente da Vaza Jato é que ali a comunicação era entre acusação (MPF) e juízo — dois poderes distintos. Aqui, a comunicação era interna ao próprio judiciário, com Moraes presidindo simultaneamente os dois tribunais envolvidos. A fusão das funções de investigador, requisitante de provas e julgador na mesma pessoa configura o modelo inquisitorial clássico que a Constituição de 1988 expressamente vedou.</p>
+        <p>A resposta institucional ao escândalo — a abertura de um inquérito sigiloso <em>pelo próprio Moraes</em> para apurar o vazamento, a inclusão dos jornalistas da Folha no mesmo inquérito, e o indiciamento do ex-assessor que forneceu os dados — descreve o padrão sistêmico P3 (captura judicial de emergência) em operação: o aparato judicial usado como instrumento de autopreservação.</p>
+      </div>
+    </div>
+
+  </div><!-- /visao-geral -->
+
+  <!-- ═══ TAB 2: CRONOLOGIA ═══ -->
+  <div id="tab-cronologia" class="tab-content">
+    <div style="margin-top:32px; margin-bottom:32px;">
+      <div class="section-header">
+        <span class="section-num">02.1</span>
+        <span class="section-title">Linha do Tempo Completa</span>
+      </div>
+      <div class="timeline">
+
+        <div class="tl-item">
+          <div class="tl-date">
+            <span class="tl-date-year">2019</span>
+            <span class="tl-date-full">14 Mar.</span>
+          </div>
+          <div class="tl-content">
+            <div class="tl-event-title">Instauração do INQ 4.781 — Inquérito das Fake News</div>
+            <div class="tl-event-desc">O presidente do STF, Dias Toffoli, abre o inquérito por Portaria nº 69 e designa Moraes como relator. Juristas apontam violação do sistema acusatório: o tribunal abre investigação sobre si mesmo, sem provocação do MP.</div>
+            <div class="tl-tags">
+              <span class="tl-tag red">P3 · Captura Judicial</span>
+              <span class="tl-tag">Instauração</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">
+            <span class="tl-date-year">2022</span>
+            <span class="tl-date-full">09 Ago.</span>
+          </div>
+          <div class="tl-content">
+            <div class="tl-event-title">Início das Solicitações Informais via WhatsApp (documentado)</div>
+            <div class="tl-event-desc">Primeiros registros documentados de pedidos informais do juiz auxiliar Airton Vieira à AEED/TSE para produção de relatórios sobre alvos do INQ 4.781, sem requisição judicial formal. Moraes é simultaneamente ministro do STF e presidente do TSE.</div>
+            <div class="tl-tags">
+              <span class="tl-tag red">P1 · Engenharia Paralela</span>
+              <span class="tl-tag amber">Extrajudicial</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">
+            <span class="tl-date-year">2022</span>
+            <span class="tl-date-full">Nov.</span>
+          </div>
+          <div class="tl-content">
+            <div class="tl-event-title">Uso do TSE como "braço investigativo" pós-eleições</div>
+            <div class="tl-event-desc">Certidões do TSE classificam pessoas por opinião política após monitoramento de redes. A AEED vira instrumento de vigilância político-partidária. Relatórios produzidos tornam-se base para bloqueios e ordens judiciais no STF.</div>
+            <div class="tl-tags">
+              <span class="tl-tag red">Vigilância Política</span>
+              <span class="tl-tag">TSE Oracle</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">
+            <span class="tl-date-year">2023</span>
+            <span class="tl-date-full">Jan.</span>
+          </div>
+          <div class="tl-content">
+            <div class="tl-event-title">8 de Janeiro: Força-Tarefa Secreta (alegada)</div>
+            <div class="tl-event-desc">Fase 2 da Vaza Toga (Michael Shellenberger, ago/2025) alega que Moraes criou força-tarefa secreta no TSE para vasculhar redes sociais dos detidos, com objetivo de justificar retroativamente as 942 prisões preventivas convertidas em massa.</div>
+            <div class="tl-tags">
+              <span class="tl-tag red">Fase 2</span>
+              <span class="tl-tag amber">Alegada</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">
+            <span class="tl-date-year">2023</span>
+            <span class="tl-date-full">Feb.</span>
+          </div>
+          <div class="tl-content">
+            <div class="tl-event-title">AEED acessa banco de dados sigiloso para checar pedreiros de reforma</div>
+            <div class="tl-event-desc">O segurança pessoal de Moraes (PM Macedo) solicita informalmente à AEED consulta no banco da Polícia Civil de SP sobre funcionários para reforma no apartamento do ministro. Tagliaferro acessa dados sigilosos — nome, filiação, telefone, histórico criminal — e envia relatório em ~1 hora.</div>
+            <div class="tl-tags">
+              <span class="tl-tag red">Uso Pessoal Ilícito</span>
+              <span class="tl-tag">Dados Sigilosos</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">
+            <span class="tl-date-year">2023</span>
+            <span class="tl-date-full">Mar.</span>
+          </div>
+          <div class="tl-content">
+            <div class="tl-event-title">Ordem para "endurecer com o X" — produção de relatórios antisociais</div>
+            <div class="tl-event-desc">Após o X (Twitter) recusar remoções de conteúdo solicitadas pelo gabinete, Moraes instrui: <em>"Vamos endurecer. Prepare relatórios e mande para o inq das fake. Vou mandar tirar sob pena de multa."</em> Vargas acrescenta: <em>"Vamos caprichar."</em> Os relatórios produzidos pela AEED tornam-se base das decisões contra o X nos anos seguintes.</div>
+            <div class="tl-tags">
+              <span class="tl-tag red">Frase Icônica</span>
+              <span class="tl-tag amber">Censura Prévia</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item major">
+          <div class="tl-date">
+            <span class="tl-date-year">2024</span>
+            <span class="tl-date-full">13 Ago.</span>
+          </div>
+          <div class="tl-content">
+            <div class="tl-event-title">🔴 FASE 1 — Primeira Reportagem da Folha / Glenn Greenwald</div>
+            <div class="tl-event-desc">Publicação da reportagem inicial baseada nos 6 GB de dados. O gabinete de Moraes solicita informações extraoficiais à AEED em "pelo menos duas dezenas de casos". O escândalo é apelidado de "Vaza Toga". Em horas, surgem pedidos de impeachment de Moraes.</div>
+            <div class="tl-tags">
+              <span class="tl-tag red">Marco Fundador</span>
+              <span class="tl-tag blue">Folha de S.Paulo</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">
+            <span class="tl-date-year">2024</span>
+            <span class="tl-date-full">14 Ago.</span>
+          </div>
+          <div class="tl-content">
+            <div class="tl-event-title">Barroso minimiza: "tempestades fictícias"</div>
+            <div class="tl-event-desc">O presidente do STF, Luís Roberto Barroso, classifica as revelações como "tempestades fictícias". A cobertura da grande imprensa é descrita pelo senador Amin como tímida — "por medo de retaliações".</div>
+            <div class="tl-tags">
+              <span class="tl-tag">Reação Institucional</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">
+            <span class="tl-date-year">2024</span>
+            <span class="tl-date-full">22 Ago.</span>
+          </div>
+          <div class="tl-content">
+            <div class="tl-event-title">Eduardo Tagliaferro depõe; celular apreendido por ordem de Moraes</div>
+            <div class="tl-event-desc">Tagliaferro presta depoimento no inquérito aberto pelo próprio Moraes. Durante a oitiva, Moraes ordena a apreensão do celular do ex-assessor. Em 29/ago, Moraes decide não devolver o aparelho. O Novo apresenta queixa-crime contra Moraes por falsidade ideológica e formação de quadrilha; a PGR rejeita a ação.</div>
+            <div class="tl-tags">
+              <span class="tl-tag red">Autopreservação</span>
+              <span class="tl-tag amber">Inquérito Reflexivo</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">
+            <span class="tl-date-year">2024</span>
+            <span class="tl-date-full">04 Set.</span>
+          </div>
+          <div class="tl-content">
+            <div class="tl-event-title">Novas mensagens: ordem de endurecer com X publicada</div>
+            <div class="tl-event-desc">Segunda rodada de publicações revela a mensagem de Moraes sobre o X em detalhes. Fica claro que o bloqueio nacional da plataforma (ago/2024) foi precedido de produção informal de relatórios pela AEED, cujo único rito era a instrução pessoal do ministro.</div>
+            <div class="tl-tags">
+              <span class="tl-tag red">Censura Extrajudicial</span>
+              <span class="tl-tag">X (Twitter)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">
+            <span class="tl-date-year">2025</span>
+            <span class="tl-date-full">02 Abr.</span>
+          </div>
+          <div class="tl-content">
+            <div class="tl-event-title">PF indicia Tagliaferro por violação de sigilo funcional</div>
+            <div class="tl-event-desc">A Polícia Federal encerra as investigações e indicia Eduardo Tagliaferro por violação de sigilo funcional com dano à administração pública. A PF enquadra o vazamento como tentativa de "prejudicar a imagem do ministro, tumultuar o cenário político e interferir nas investigações."</div>
+            <div class="tl-tags">
+              <span class="tl-tag amber">Indiciamento</span>
+              <span class="tl-tag">PF</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">
+            <span class="tl-date-year">2025</span>
+            <span class="tl-date-full">Abr.</span>
+          </div>
+          <div class="tl-content">
+            <div class="tl-event-title">Glenn Greenwald depõe no Senado — CPI das Fake News</div>
+            <div class="tl-event-desc">Greenwald presta depoimento na Comissão de Segurança Pública do Senado, detalhando o mecanismo de instrumentalização do TSE e o uso do INQ 4.781 como ferramenta de supressão de imprensa. Relata ter sido incluído no mesmo inquérito que investigava as fontes do vazamento.</div>
+            <div class="tl-tags">
+              <span class="tl-tag blue">Senado</span>
+              <span class="tl-tag">Liberdade de Imprensa</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item major">
+          <div class="tl-date">
+            <span class="tl-date-year">2025</span>
+            <span class="tl-date-full">22 Ago.</span>
+          </div>
+          <div class="tl-content">
+            <div class="tl-event-title">🔴 PGR denuncia Tagliaferro com 4 crimes — incluindo tentativa de subversão do Estado</div>
+            <div class="tl-event-desc">O PGR Paulo Gonet apresenta denúncia contra Tagliaferro por: (1) violação de sigilo funcional, (2) coação no curso do processo, (3) obstrução de investigação de organização criminosa, (4) <strong>tentativa de subversão violenta do Estado Democrático de Direito</strong>. A inclusão do 4º crime é considerada por juristas uma escalada desproporcional.</div>
+            <div class="tl-tags">
+              <span class="tl-tag red">Denúncia PGR</span>
+              <span class="tl-tag amber">Proporcionalidade?</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">
+            <span class="tl-date-year">2025</span>
+            <span class="tl-date-full">04 Ago.</span>
+          </div>
+          <div class="tl-content">
+            <div class="tl-event-title">FASE 2 — Michael Shellenberger publica força-tarefa secreta no 8/1</div>
+            <div class="tl-event-desc">O jornalista americano publica supostos arquivos revelando que Moraes criou uma "força-tarefa secreta e ilegal" no TSE para varredura de redes sociais dos detidos do 8 de Janeiro, com objetivo de justificar as prisões retroativamente. Os arquivos teriam origem no mesmo acervo de 6 GB da Vaza Toga.</div>
+            <div class="tl-tags">
+              <span class="tl-tag red">Fase 2</span>
+              <span class="tl-tag blue">Shellenberger</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">
+            <span class="tl-date-year">2025</span>
+            <span class="tl-date-full">13 Nov.</span>
+          </div>
+          <div class="tl-content">
+            <div class="tl-event-title">STF torna Tagliaferro réu por unanimidade na 1ª Turma</div>
+            <div class="tl-event-desc">Por unanimidade, a 1ª Turma do STF — presidida pelo próprio Moraes — decide tornar réu o ex-assessor Eduardo Tagliaferro, ignorando questionamentos sobre impedimento do ministro no caso. O julgamento em Plenário Virtual é mantido sem defesa presencial, em decisão criticada por advogados.</div>
+            <div class="tl-tags">
+              <span class="tl-tag red">Réu</span>
+              <span class="tl-tag amber">Impedimento Ignorado</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">
+            <span class="tl-date-year">2026</span>
+            <span class="tl-date-full">Mar.</span>
+          </div>
+          <div class="tl-content">
+            <div class="tl-event-title">Moraes nega ser alvo de mensagens vazadas; peritos da PF desmentem</div>
+            <div class="tl-event-desc">O ministro nega publicamente conteúdo de mensagens atribuídas a ele. Peritos do IPED (Instituto de Pesquisa e Desenvolvimento da PF) contradizem a versão em laudo técnico. O caso passa a envolver discussão sobre autenticidade e cadeia de custódia dos arquivos.</div>
+            <div class="tl-tags">
+              <span class="tl-tag red">Disputa Pericial</span>
+              <span class="tl-tag">IPED/PF</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /timeline -->
+    </div>
+  </div><!-- /cronologia -->
+
+  <!-- ═══ TAB 3: ATORES ═══ -->
+  <div id="tab-atores" class="tab-content">
+    <div style="margin-top:32px; margin-bottom:32px;">
+      <div class="section-header">
+        <span class="section-num">03.1</span>
+        <span class="section-title">Atores Centrais</span>
+      </div>
+      <div class="actors-grid">
+
+        <div class="actor-card">
+          <div class="actor-header">
+            <span class="actor-name">Alexandre de Moraes</span>
+            <span class="actor-role role-judge">Ministro STF</span>
+          </div>
+          <div class="actor-position">Relator INQ 4.781 · Ex-presidente TSE (2022–2024)</div>
+          <div class="actor-desc">Figura central da Vaza Toga. Acumulou simultaneamente os cargos de ministro do STF (relator do INQ 4.781) e presidente do TSE (controlador da AEED), configurando a fusão de funções que permitiu o circuito paralelo de produção probatória. Abriu inquérito sigiloso sobre o próprio vazamento e incluiu os jornalistas que o expuseram no mesmo processo investigado.</div>
+          <div class="actor-flag">⚡ Padrão Inquisitorial: investigador + requisitante de provas + julgador</div>
+        </div>
+
+        <div class="actor-card">
+          <div class="actor-header">
+            <span class="actor-name">Eduardo Tagliaferro</span>
+            <span class="actor-role role-assessor">Ex-chefe AEED/TSE</span>
+          </div>
+          <div class="actor-position">Chefe da AEED/TSE (2022–2023) · Réu · Indiciado</div>
+          <div class="actor-desc">Nomeado por Moraes para chefiar a AEED em 2022. Receptor das solicitações informais via WhatsApp, produtor dos relatórios extrajudiciais. Saiu do cargo em 2023 após prisão por violência doméstica. Forneceu os 6 GB de dados aos jornalistas, tornando-se o alvo da resposta judicial de Moraes. Réu por 4 crimes, incluindo tentativa de subversão do Estado — tipificação que juristas questionam como desproporcional.</div>
+          <div class="actor-flag">⚠ Único réu formal do escândalo — posição de denunciante tratado como inimigo</div>
+        </div>
+
+        <div class="actor-card">
+          <div class="actor-header">
+            <span class="actor-name">Airton Vieira</span>
+            <span class="actor-role role-assessor">Juiz Instrutor STF</span>
+          </div>
+          <div class="actor-position">Braço direito de Moraes no STF · Interlocutor com AEED</div>
+          <div class="actor-desc">Juiz instrutor do gabinete de Moraes no STF, principal elo entre o STF e a AEED/TSE. Aparece nas mensagens pedindo relatórios informalmente, orientando Tagliaferro a "usar a criatividade", e transmitindo a insatisfação de Moraes com resultados. Sua frase <em>"Quando ele cisma, é uma tragédia"</em> sintetiza o clima de pressão no grupo de WhatsApp.</div>
+          <div class="actor-flag">🔗 Elo operacional do circuito paralelo</div>
+        </div>
+
+        <div class="actor-card">
+          <div class="actor-header">
+            <span class="actor-name">Marco Antônio Vargas</span>
+            <span class="actor-role role-assessor">Juiz Auxiliar TSE</span>
+          </div>
+          <div class="actor-position">Juiz auxiliar de Moraes na presidência do TSE</div>
+          <div class="actor-desc">Membro do grupo de WhatsApp do esquema. Responsável por reencaminhar mensagens de Moraes para a AEED, inclusive a ordem sobre o X: <em>"Vamos caprichar."</em> Sua presença confirma que o circuito envolvia simultaneamente o aparato do STF e do TSE sob o mesmo comando informal.</div>
+          <div class="actor-flag">🔗 Nó de coordenação STF–TSE</div>
+        </div>
+
+        <div class="actor-card">
+          <div class="actor-header">
+            <span class="actor-name">Glenn Greenwald</span>
+            <span class="actor-role role-journalist">Jornalista</span>
+          </div>
+          <div class="actor-position">Co-autor das reportagens · Folha de S.Paulo</div>
+          <div class="actor-desc">Jornalista americano radicado no Brasil, co-autor (com Fabio Serapião) das reportagens inaugurais da Vaza Toga na Folha de S.Paulo (ago/2024). Foi incluído no INQ 4.781 por Moraes logo após a publicação, junto com a Folha e o colega Serapião — configurando o padrão de inclusão de jornalistas em inquéritos como mecanismo de intimidação. Depôs no Senado em abril/2025.</div>
+          <div class="actor-flag">📰 Incluído no INQ 4.781 após publicar o escândalo</div>
+        </div>
+
+        <div class="actor-card">
+          <div class="actor-header">
+            <span class="actor-name">Cristina Kusahara</span>
+            <span class="actor-role role-assessor">Chefe de Gabinete</span>
+          </div>
+          <div class="actor-position">Chefe de Gabinete de Moraes no STF</div>
+          <div class="actor-desc">Aparece no grupo de WhatsApp revelado pelas mensagens vazadas. Sua presença confirma que o circuito paralelo envolvia não apenas assessores intermediários, mas a cúpula administrativa do gabinete do ministro no STF.</div>
+          <div class="actor-flag">🔗 Presença no grupo confirma ciência institucional</div>
+        </div>
+
+      </div><!-- /actors-grid -->
+
+      <div class="section-header" style="margin-top:40px;">
+        <span class="section-num">03.2</span>
+        <span class="section-title">Alvos Documentados do Sistema Paralelo</span>
+      </div>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-severity sev-c"></div>
+          <div class="card-label">Mídia · Desmonetização</div>
+          <div class="card-title">Revista Oeste</div>
+          <div class="card-body">A AEED foi instruída a produzir relatório para justificar a desmonetização do canal do YouTube da Revista Oeste — mesmo após Tagliaferro informar que encontrara apenas "material jornalístico". Airton Vieira ordenou: <em>"Seja criativo."</em> O canal foi desmonetizado meses depois, aparentemente sem notificação formal.</div>
+        </div>
+        <div class="card">
+          <div class="card-severity sev-c"></div>
+          <div class="card-label">Pessoa física · Bloqueio</div>
+          <div class="card-title">Rodrigo Constantino &amp; Paulo Figueiredo</div>
+          <div class="card-body">Conteúdo de Constantino foi objeto de pedido de alteração de relatório para "satisfazer sua excelência." Dois dias após a troca de mensagens, Moraes e Vieira assinaram ordem judicial derrubando contas de Constantino e Paulo Figueiredo no X. Nove dias depois: 8 de Janeiro.</div>
+        </div>
+        <div class="card">
+          <div class="card-severity sev-h"></div>
+          <div class="card-label">Plataforma · Bloqueio nacional</div>
+          <div class="card-title">Rede X (Twitter) / Elon Musk</div>
+          <div class="card-body">A recusa do X em cumprir ordens de remoção disparou a cadeia de produção de relatórios da AEED documentada nas mensagens. A ordem informal de Moraes ("vamos endurecer") precedeu o bloqueio nacional da plataforma em agosto de 2024 e a inclusão de Musk no inquérito das milícias digitais.</div>
+        </div>
+        <div class="card">
+          <div class="card-severity sev-h"></div>
+          <div class="card-label">Uso pessoal · Dados sigilosos</div>
+          <div class="card-title">Prestadores de serviço (apartamento)</div>
+          <div class="card-body">Funcionários contratados para reforma do apartamento de Moraes foram fichados pela AEED sem qualquer fundamento processual. O sistema de inteligência judicial foi usado para triagem pessoal de trabalhadores, acessando dados da Polícia Civil de SP que o ministro afirmou serem públicos — contradizendo a perícia.</div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /atores -->
+
+  <!-- ═══ TAB 4: ANATOMIA ═══ -->
+  <div id="tab-anatomia" class="tab-content">
+    <div style="margin-top:32px; margin-bottom:32px;">
+
+      <div class="section-header">
+        <span class="section-num">04.1</span>
+        <span class="section-title">Anatomia do Sistema Paralelo</span>
+      </div>
+
+      <div class="alert-box" style="margin-bottom:32px;">
+        <div class="alert-icon">🔍</div>
+        <div>
+          <div class="alert-title">O "TSE Oracle" — Máquina Profética de Inteligência</div>
+          <div class="alert-text">O termo "TSE Oracultivo" / "TSE Oracle" ironiza o TSE transformado em fonte de inteligência sob demanda para o STF — uma "máquina profética" que produzia os relatórios que o STF precisava ver para tomar as decisões que já havia decidido tomar.</div>
+        </div>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-severity sev-c"></div>
+          <div class="card-label">Passo 1</div>
+          <div class="card-title">Alvo identificado, decisão pré-tomada</div>
+          <div class="card-body">O gabinete de Moraes identifica um alvo (pessoa, veículo, plataforma) sobre o qual já tem intenção de agir — seja por razão política, pessoal ou estratégica. A decisão é tomada antes da produção da prova.</div>
+        </div>
+        <div class="card">
+          <div class="card-severity sev-c"></div>
+          <div class="card-label">Passo 2</div>
+          <div class="card-title">Pedido informal via WhatsApp</div>
+          <div class="card-body">O juiz instrutor Airton Vieira (ou Marco Vargas) contata Eduardo Tagliaferro na AEED/TSE pelo grupo de WhatsApp. O pedido não tem número de processo, não tem ofício, não tem data de protocolo, não tem cadeia de custódia.</div>
+        </div>
+        <div class="card">
+          <div class="card-severity sev-c"></div>
+          <div class="card-label">Passo 3</div>
+          <div class="card-title">Relatório "espontâneo" produzido</div>
+          <div class="card-body">A AEED produz um relatório formatado, com aspecto de iniciativa própria do TSE. Se o primeiro rascunho não satisfaz ("ele cismou"), volta ao assessor com instruções de ajuste ("seja criativo"). O produto final aparece como documentação técnica independente.</div>
+        </div>
+        <div class="card">
+          <div class="card-severity sev-c"></div>
+          <div class="card-label">Passo 4</div>
+          <div class="card-title">Relatório juntado ao INQ 4.781</div>
+          <div class="card-body">O relatório é encaminhado ao Inquérito das Fake News no STF como se fosse prova documental produzida de forma independente. Sua origem informal nunca aparece nos autos. A decisão judicial é assinada com base nesse documento.</div>
+        </div>
+        <div class="card">
+          <div class="card-severity sev-c"></div>
+          <div class="card-label">Passo 5</div>
+          <div class="card-title">Decisão judicial executada</div>
+          <div class="card-body">Bloqueio de contas, apreensão de passaporte, suspensão de monetização, intimação à PF — a consequência para o alvo é real e imediata. O alvo não sabe da origem informal da prova. Não pode impugnar o que não viu.</div>
+        </div>
+        <div class="card">
+          <div class="card-severity sev-h"></div>
+          <div class="card-label">Passo 6</div>
+          <div class="card-title">Circuito de autopreservação</div>
+          <div class="card-body">Quando o sistema vaza, um novo inquérito é aberto — pelo próprio Moraes — para investigar o vazamento. Os jornalistas que publicaram são incluídos. O ex-assessor é indiciado. O ciclo se fecha: o aparato judicial protege o aparato judicial.</div>
+        </div>
+      </div>
+
+      <div class="section-header" style="margin-top:40px;">
+        <span class="section-num">04.2</span>
+        <span class="section-title">O "Inquérito Reflexivo" — Autopreservação Judicial</span>
+      </div>
+
+      <div class="alert-box amber" style="margin-bottom:24px;">
+        <div class="alert-icon">⚠️</div>
+        <div>
+          <div class="alert-title">Anomalia Processual de Alta Gravidade</div>
+          <div class="alert-text">Moraes abriu inquérito sobre o vazamento de mensagens que o expõem, sendo ele mesmo o potencial investigado. Além disso, incluiu os jornalistas que publicaram o escândalo no mesmo INQ 4.781 que eles estavam cobrindo — o instrumento de sua exposição foi usado como instrumento de sua proteção.</div>
+        </div>
+      </div>
+
+      <div class="quote-block">
+        <div class="quote-text">"Não paramos com a reportagem. Mesmo que não tenhamos publicado nas últimas semanas, não é porque tenhamos sido ameaçados — na verdade, estamos sendo ameaçados. Uma das coisas que Moraes fez nas primeiras semanas foi incluir, não só as supostas fontes, mas também a Folha de São Paulo e os dois jornalistas que assinam o material dentro do inquérito criminal sobre Fake News."</div>
+        <div class="quote-source">— Glenn Greenwald, setembro de 2024</div>
+      </div>
+
+    </div>
+  </div><!-- /anatomia -->
+
+  <!-- ═══ TAB 5: JURÍDICO ═══ -->
+  <div id="tab-juridico" class="tab-content">
+    <div style="margin-top:32px; margin-bottom:32px;">
+
+      <div class="section-header">
+        <span class="section-num">05.1</span>
+        <span class="section-title">Análise de Gravidade Jurídica</span>
+      </div>
+
+      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:32px;">
+        <span class="sev-badge sev-critico">Gravidade: Crítica</span>
+        <span class="sev-badge sev-alto">Impacto: Nacional</span>
+        <span class="sev-badge sev-alto">Nível: Sistêmico</span>
+      </div>
+
+      <div class="legal-grid">
+        <div class="legal-card">
+          <div class="legal-card-title"><span class="dot"></span>Princípios Constitucionais Comprometidos</div>
+          <div class="legal-item">
+            <span class="legal-num">01</span>
+            <div class="legal-text"><strong>Devido Processo Legal</strong> <span class="art">(Art. 5º, LIV CF/88)</span> — Provas produzidas fora dos ritos processuais formais violam a garantia fundamental de que ninguém será privado da liberdade ou de seus bens sem o devido processo legal.</div>
+          </div>
+          <div class="legal-item">
+            <span class="legal-num">02</span>
+            <div class="legal-text"><strong>Ampla Defesa e Contraditório</strong> <span class="art">(Art. 5º, LV CF/88)</span> — O investigado que não sabe da origem informal das provas não pode impugná-las. A assimetria é estrutural e deliberada.</div>
+          </div>
+          <div class="legal-item">
+            <span class="legal-num">03</span>
+            <div class="legal-text"><strong>Juiz Natural e Sistema Acusatório</strong> <span class="art">(Art. 5º, LIII; Art. 129, I CF/88)</span> — O relator não pode ser investigador. A fusão de funções entre requisição de provas, instrução e julgamento viola o modelo acusatório constitucionalmente exigido.</div>
+          </div>
+          <div class="legal-item">
+            <span class="legal-num">04</span>
+            <div class="legal-text"><strong>Imparcialidade Judicial</strong> — Moraes julga processos cujas provas ele mesmo encomendou, sobre alvos que ele mesmo selecionou, usando relatórios formatados para satisfazer sua própria conclusão prévia.</div>
+          </div>
+          <div class="legal-item">
+            <span class="legal-num">05</span>
+            <div class="legal-text"><strong>Separação dos Poderes</strong> <span class="art">(Art. 2º CF/88)</span> — O TSE foi instrumentalizado como extensão operacional do STF fora de suas competências eleitorais, criando fusão funcional entre dois tribunais sob comando informal de uma mesma pessoa.</div>
+          </div>
+        </div>
+
+        <div class="legal-card">
+          <div class="legal-card-title"><span class="dot"></span>Tipos Penais Potencialmente Configurados</div>
+          <div class="legal-item">
+            <span class="legal-num">01</span>
+            <div class="legal-text"><strong>Abuso de Autoridade</strong> <span class="art">(Lei 13.869/2019, Art. 9º)</span> — Requisitar informações ou documentos fora das hipóteses legais, sem autorização judicial, configura abuso de autoridade.</div>
+          </div>
+          <div class="legal-item">
+            <span class="legal-num">02</span>
+            <div class="legal-text"><strong>Falsidade Ideológica</strong> <span class="art">(Art. 299 CP)</span> — A instrução para que relatórios parecessem "espontâneos" quando foram encomendados, visa induzir a erro sobre a origem dos documentos juntados nos autos.</div>
+          </div>
+          <div class="legal-item">
+            <span class="legal-num">03</span>
+            <div class="legal-text"><strong>Pesca Probatória (Fishing Expedition)</strong> — A busca de relatórios sem suspeita específica prévia, apenas para encontrar fundamentos que justifiquem uma ação já decidida, é vedada pelo ordenamento processual brasileiro e pela jurisprudência do STF.</div>
+          </div>
+          <div class="legal-item">
+            <span class="legal-num">04</span>
+            <div class="legal-text"><strong>Acesso Indevido a Dados Sigilosos</strong> <span class="art">(Art. 325 CP; LGPD)</span> — A consulta a banco de dados da Polícia Civil de SP para fins pessoais (pedreiros do apartamento) sem processo judicial configura violação de sigilo funcional e possivelmente outros tipos.</div>
+          </div>
+          <div class="legal-item">
+            <span class="legal-num">05</span>
+            <div class="legal-text"><strong>Censura Prévia</strong> <span class="art">(Art. 5º, IX; Art. 220 CF/88)</span> — A instrução para produzir relatórios para justificar desmonetização de veículo de comunicação — antes de qualquer processo — configura censura prévia constitucionalmente vedada.</div>
+          </div>
+        </div>
+
+        <div class="legal-card">
+          <div class="legal-card-title"><span class="dot"></span>Cadeia de Custódia e Nulidade Probatória</div>
+          <div class="legal-item">
+            <span class="legal-num">01</span>
+            <div class="legal-text"><strong>Prova ilícita por derivação</strong> <span class="art">(Art. 5º, LVI CF/88; Art. 157 CPP)</span> — Todas as decisões judiciais baseadas em relatórios de origem informal podem ser nulas. A teoria dos "frutos da árvore envenenada" se aplica: se o relatório é ilícito, a decisão que nele se funda é igualmente viciada.</div>
+          </div>
+          <div class="legal-item">
+            <span class="legal-num">02</span>
+            <div class="legal-text"><strong>Ausência de cadeia de custódia</strong> — Relatórios produzidos por WhatsApp, sem protocolo formal, sem número de processo, sem data de recebimento oficial, não satisfazem os requisitos de documentação probatória do CPP.</div>
+          </div>
+          <div class="legal-item">
+            <span class="legal-num">03</span>
+            <div class="legal-text"><strong>Impedimento do relator</strong> — <span class="art">(Art. 144 CPP; Art. 135 CPC)</span> Moraes, como requisitante informal das provas, está impedido de julgar os casos que nelas se baseiam. A manutenção da relatoria é em si uma violação processual.</div>
+          </div>
+        </div>
+
+        <div class="legal-card">
+          <div class="legal-card-title"><span class="dot"></span>Precedentes Comparados</div>
+          <div class="legal-item">
+            <span class="legal-num">▸</span>
+            <div class="legal-text"><strong>Vaza Jato (2019)</strong> — Comunicação informal entre MPF e juízo da Lava Jato resultou na anulação de todas as condenações de Lula por suspeição de Moro. O STF reconheceu que a imparcialidade foi comprometida. O precedente deveria, por simetria, ser aplicado aos processos derivados da Vaza Toga.</div>
+          </div>
+          <div class="legal-item">
+            <span class="legal-num">▸</span>
+            <div class="legal-text"><strong>CIEDOVID / STF (2020–2021)</strong> — O próprio STF, em outros contextos, anulou condenações baseadas em provas sem cadeia de custódia adequada, reconhecendo que a origem documental é pressuposto de validade probatória.</div>
+          </div>
+          <div class="legal-item">
+            <span class="legal-num">▸</span>
+            <div class="legal-text"><strong>ECHR — Tribunal Europeu de Direitos Humanos</strong> — Em múltiplos casos, o TEDH entendeu que a fusão das funções investigativa e judicante em uma mesma pessoa compromete a equidade do processo de forma irremediável, gerando anulações.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /juridico -->
+
+  <!-- ═══ TAB 6: PADRÕES SISTÊMICOS ═══ -->
+  <div id="tab-padroes" class="tab-content">
+    <div style="margin-top:32px; margin-bottom:32px;">
+
+      <div class="section-header">
+        <span class="section-num">06.1</span>
+        <span class="section-title">Padrões Sistêmicos Identificados (P1–P8)</span>
+      </div>
+
+      <div class="alert-box blue" style="margin-bottom:28px;">
+        <div class="alert-icon">🔬</div>
+        <div>
+          <div class="alert-title">Framework Analítico — Lawfare Timeline</div>
+          <div class="alert-text">O projeto lawfare-timeline identificou 8 padrões recorrentes (P1–P8) que aparecem transversalmente em todas as grandes operações anticorrupção e nos inquéritos do STF. A Vaza Toga é o caso que melhor evidencia a articulação simultânea de P1, P3, P5 e P6.</div>
+        </div>
+      </div>
+
+      <div class="pattern-list">
+        <div class="pattern-item">
+          <span class="pattern-id">P1</span>
+          <div>
+            <div class="pattern-name">Engenharia Probatória Paralela</div>
+            <div class="pattern-desc">Criação de estruturas informais de produção de provas fora dos ritos processuais — relatórios, relatórios de inteligência, monitoramento extrajudicial — que alimentam decisões formais cujas bases reais nunca aparecem nos autos.</div>
+          </div>
+          <span class="pattern-status ps-confirmado">Confirmado · Vaza Toga</span>
+        </div>
+        <div class="pattern-item">
+          <span class="pattern-id">P2</span>
+          <div>
+            <div class="pattern-name">Evasão do Relator Natural</div>
+            <div class="pattern-desc">Concentração de processos em um único relator politicamente motivado, contornando a distribuição aleatória e os critérios de competência — garantindo que as decisões cheguem às mãos certas.</div>
+          </div>
+          <span class="pattern-status ps-confirmado">Confirmado · INQ 4.781</span>
+        </div>
+        <div class="pattern-item">
+          <span class="pattern-id">P3</span>
+          <div>
+            <div class="pattern-name">Captura Judicial de Emergência</div>
+            <div class="pattern-desc">Uso do aparato judicial como instrumento de autopreservação institucional: abertura de inquéritos sobre os próprios investigadores, inclusão de jornalistas em processos criminais, uso da toga para silenciar quem expõe a toga. O único padrão presente em todas as operações estudadas.</div>
+          </div>
+          <span class="pattern-status ps-confirmado">Confirmado · Único Universal</span>
+        </div>
+        <div class="pattern-item">
+          <span class="pattern-id">P4</span>
+          <div>
+            <div class="pattern-name">Anulação por Defeito Procedimental</div>
+            <div class="pattern-desc">Terminal clássico das investigações: quando inevitável, o processo é arquivado ou anulado por vício procedimental — nunca por mérito, nunca responsabilizando o beneficiário final.</div>
+          </div>
+          <span class="pattern-status ps-hipotese">Hipótese · Pendente</span>
+        </div>
+        <div class="pattern-item">
+          <span class="pattern-id">P5</span>
+          <div>
+            <div class="pattern-name">Saturação Informacional ("Flooding the Zone")</div>
+            <div class="pattern-desc">Produção de volume excessivo de casos, decisões e incidentes simultâneos para esgotar a atenção pública e impedir que qualquer episódio específico sustente pressão suficiente para gerar consequências. Cada revelação da Vaza Toga foi rapidamente soterrada por novos eventos.</div>
+          </div>
+          <span class="pattern-status ps-confirmado">Confirmado</span>
+        </div>
+        <div class="pattern-item">
+          <span class="pattern-id">P6</span>
+          <div>
+            <div class="pattern-name">Captura de Instâncias de Controle</div>
+            <div class="pattern-desc">Instrumentalização dos órgãos formalmente responsáveis por controle (PGR, CNJ, PF) para defender o poder que deveria investigar. A PF indicia o denunciante; a PGR apresenta denúncia com tipificação máxima; o CNJ permanece omisso.</div>
+          </div>
+          <span class="pattern-status ps-confirmado">Confirmado</span>
+        </div>
+        <div class="pattern-item">
+          <span class="pattern-id">P7</span>
+          <div>
+            <div class="pattern-name">Captura Transgeracional Previdenciária</div>
+            <div class="pattern-desc">Padrão identificado na Operação Sem Desconto/INSS — desvio sistemático de recursos previdenciários via estruturas de consignado. Não diretamente relacionado à Vaza Toga.</div>
+          </div>
+          <span class="pattern-status ps-hipotese">Não Aplicável</span>
+        </div>
+        <div class="pattern-item">
+          <span class="pattern-id">P8</span>
+          <div>
+            <div class="pattern-name">Infraestrutura Jurídico-Financeira Compartilhada</div>
+            <div class="pattern-desc">Padrão emergente: a mesma estrutura jurídica, financeira ou de assessoria aparece em investigações não relacionadas — sugerindo infraestrutura de serviços ilícitos compartilhada entre diferentes grupos de poder.</div>
+          </div>
+          <span class="pattern-status ps-parcial">Hipótese Emergente</span>
+        </div>
+      </div>
+
+      <div class="verdict-box" style="margin-top:40px;">
+        <div class="verdict-text">
+          <p style="margin-bottom:14px;"><strong>A hipótese do chokepoint terminal:</strong> A Vaza Toga demonstra que o STF funciona simultaneamente como tribunal investigador e como teto estrutural que impede que investigações cheguem aos beneficiários finais do sistema. Quando Moraes usa o TSE como braço investigativo informal e depois abre inquérito sigiloso contra quem o expôs, ele não está apenas cometendo um excesso individual — ele está operando como garantidor de última instância de um sistema maior.</p>
+          <p>A questão que permanece estruturalmente sem resposta: <strong>quantas investigações foram abertas no INQ 4.781 e silenciosamente arquivadas antes de chegar aos beneficiários finais que o sistema paralelo protegia?</strong> O acervo de 6 GB responde parcialmente — mas a pergunta mais importante é o que não estava nesse acervo.</p>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /padroes -->
+
+  <!-- ═══ TAB 7: FONTES ═══ -->
+  <div id="tab-fontes" class="tab-content">
+    <div style="margin-top:32px; margin-bottom:32px;">
+
+      <div class="section-header">
+        <span class="section-num">07.1</span>
+        <span class="section-title">Fontes Primárias e Referências</span>
+      </div>
+
+      <div class="alert-box blue" style="margin-bottom:28px;">
+        <div class="alert-icon">📚</div>
+        <div>
+          <div class="alert-title">Nota Metodológica</div>
+          <div class="alert-text">Este dossiê é baseado exclusivamente em fontes públicas verificáveis. Dados do Dossiê Moraes (dossiemoraes.com.br) foram incorporados como fonte documental independente. A veracidade das mensagens da Vaza Toga está sujeita a disputa pericial em curso — o dossiê documenta os fatos alegados e verificados por múltiplas fontes, não faz afirmações de culpa criminal.</div>
+        </div>
+      </div>
+
+      <table class="sources-table">
+        <thead>
+          <tr>
+            <th>Tipo</th>
+            <th>Fonte</th>
+            <th>Relevância</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="source-type">Jornalismo</span></td>
+            <td style="color:var(--text-bright);">Folha de S.Paulo — Glenn Greenwald &amp; Fabio Serapião</td>
+            <td style="font-size:12px;color:var(--text-dim);">Reportagens inaugurais · ago/2024. Fonte primária dos 6 GB.</td>
+            <td><a href="https://www.folha.uol.com.br" target="_blank" class="source-link">folha.uol.com.br ↗</a></td>
+          </tr>
+          <tr>
+            <td><span class="source-type">Enciclopédia</span></td>
+            <td style="color:var(--text-bright);">Wikipedia BR — Vaza Toga</td>
+            <td style="font-size:12px;color:var(--text-dim);">Síntese cronológica com referências primárias verificadas</td>
+            <td><a href="https://pt.wikipedia.org/wiki/Vaza_Toga" target="_blank" class="source-link">pt.wikipedia.org ↗</a></td>
+          </tr>
+          <tr>
+            <td><span class="source-type">Dossiê Cívico</span></td>
+            <td style="color:var(--text-bright);">Dossiê Moraes — dossiemoraes.com.br</td>
+            <td style="font-size:12px;color:var(--text-dim);">155+ atos documentados com princípios violados. Base de dados colaborativa.</td>
+            <td><a href="https://www.dossiemoraes.com.br" target="_blank" class="source-link">dossiemoraes.com.br ↗</a></td>
+          </tr>
+          <tr>
+            <td><span class="source-type">TV/Portal</span></td>
+            <td style="color:var(--text-bright);">G1 / Globo — Márcio Falcão</td>
+            <td style="font-size:12px;color:var(--text-dim);">Cobertura do indiciamento de Tagliaferro · abr e ago/2025</td>
+            <td><a href="https://g1.globo.com" target="_blank" class="source-link">g1.globo.com ↗</a></td>
+          </tr>
+          <tr>
+            <td><span class="source-type">Revista</span></td>
+            <td style="color:var(--text-bright);">Revista Oeste — cobertura completa</td>
+            <td style="font-size:12px;color:var(--text-dim);">Alvo direto da Vaza Toga · 6 GB de mensagens · desmonetização documentada</td>
+            <td><a href="https://revistaoeste.com" target="_blank" class="source-link">revistaoeste.com ↗</a></td>
+          </tr>
+          <tr>
+            <td><span class="source-type">Jornalismo</span></td>
+            <td style="color:var(--text-bright);">Gazeta do Povo — Greenwald incluso no INQ</td>
+            <td style="font-size:12px;color:var(--text-dim);">Detalhe sobre inclusão de jornalistas no mesmo inquérito</td>
+            <td><a href="https://www.gazetadopovo.com.br" target="_blank" class="source-link">gazetadopovo.com.br ↗</a></td>
+          </tr>
+          <tr>
+            <td><span class="source-type">Portal SC</span></td>
+            <td style="color:var(--text-bright);">ND Mais — Vaza Toga Fase 2</td>
+            <td style="font-size:12px;color:var(--text-dim);">Força-tarefa secreta 8/1 · Shellenberger · ago/2025</td>
+            <td><a href="https://ndmais.com.br" target="_blank" class="source-link">ndmais.com.br ↗</a></td>
+          </tr>
+          <tr>
+            <td><span class="source-type">Análise</span></td>
+            <td style="color:var(--text-bright);">Intercept Brasil — Fernando Hideo Lacerda</td>
+            <td style="font-size:12px;color:var(--text-dim);">Contraponto jurídico: argumento da atribuição simultânea TSE/STF</td>
+            <td><a href="https://www.intercept.com.br" target="_blank" class="source-link">intercept.com.br ↗</a></td>
+          </tr>
+          <tr>
+            <td><span class="source-type">Senado</span></td>
+            <td style="color:var(--text-bright);">Depoimento de Greenwald na Comissão de Segurança Pública</td>
+            <td style="font-size:12px;color:var(--text-dim);">Testemunho formal sobre instrumentalização e retaliação · abr/2025</td>
+            <td><a href="https://www25.senado.leg.br" target="_blank" class="source-link">senado.leg.br ↗</a></td>
+          </tr>
+          <tr>
+            <td><span class="source-type">Substack</span></td>
+            <td style="color:var(--text-bright);">Leandro Ruschel — análise de censura extrajudicial</td>
+            <td style="font-size:12px;color:var(--text-dim);">Análise sobre Revista Oeste e desmonetização sem processo formal</td>
+            <td><a href="https://leandroruschel.substack.com" target="_blank" class="source-link">leandroruschel.substack.com ↗</a></td>
+          </tr>
+          <tr>
+            <td><span class="source-type">Projeto</span></td>
+            <td style="color:var(--text-bright);">lawfare-timeline.vercel.app</td>
+            <td style="font-size:12px;color:var(--text-dim);">Projeto de documentação sistêmica dos padrões P1–P8 · CC0 1.0</td>
+            <td><a href="https://lawfare-timeline.vercel.app" target="_blank" class="source-link">lawfare-timeline.vercel.app ↗</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="section-header" style="margin-top:40px;">
+        <span class="section-num">07.2</span>
+        <span class="section-title">Documentos Relacionados neste Projeto</span>
+      </div>
+
+      <a href="inq4781.html" class="dossie-link-box">
+        <div class="dossie-link-info">
+          <div class="dossie-link-label">Artefato Complementar</div>
+          <div class="dossie-link-title">INQ 4.781 — Mapa Mental Completo do Inquérito das Fake News</div>
+        </div>
+        <span class="dossie-link-arrow">→</span>
+      </a>
+
+      <a href="alem-da-toga.html" class="dossie-link-box">
+        <div class="dossie-link-info">
+          <div class="dossie-link-label">Artefato Complementar</div>
+          <div class="dossie-link-title">Além da Toga — Dossiê Gilmar Mendes: 24 Anos de Mandato</div>
+        </div>
+        <span class="dossie-link-arrow">→</span>
+      </a>
+
+      <a href="republica-capturada.html" class="dossie-link-box">
+        <div class="dossie-link-info">
+          <div class="dossie-link-label">Artefato Complementar</div>
+          <div class="dossie-link-title">República Capturada — Mapa Sistêmico dos Padrões P1–P8</div>
+        </div>
+        <span class="dossie-link-arrow">→</span>
+      </a>
+
+      <div class="section-header" style="margin-top:40px;">
+        <span class="section-num">07.3</span>
+        <span class="section-title">Lacunas Investigativas Identificadas</span>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-severity sev-c"></div>
+          <div class="card-label">Lacuna Crítica</div>
+          <div class="card-title">Quantas investigações foram silenciosamente arquivadas?</div>
+          <div class="card-body">O acervo de 6 GB documenta o que foi feito. A questão estrutural maior é: quantos inquéritos foram abertos e arquivados antes de chegar a alvos que o sistema protegia? Nenhum levantamento sistemático foi produzido sobre os casos encerrados sem ação.</div>
+        </div>
+        <div class="card">
+          <div class="card-severity sev-h"></div>
+          <div class="card-label">Lacuna Alta</div>
+          <div class="card-title">Extensão real do uso da AEED fora do escopo eleitoral</div>
+          <div class="card-body">Os 6 GB são um recorte. A extensão total do uso da AEED para fins não eleitorais — outros ministros, outros tribunais, outras instâncias — permanece sem mapeamento. A AEED foi criada em 2019 e se tornou permanente em 2021.</div>
+        </div>
+        <div class="card">
+          <div class="card-severity sev-h"></div>
+          <div class="card-label">Lacuna Alta</div>
+          <div class="card-title">Autenticidade pericial integral das mensagens</div>
+          <div class="card-body">Moraes negou algumas mensagens; peritos do IPED/PF produziram laudo técnico contradizendo a versão. O processo pericial integral — quais mensagens foram autenticadas, quais não — não está disponível publicamente. A disputabilidade é parte do mecanismo de neutralização.</div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /fontes -->
+
+</div><!-- /main -->
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-license">
+    <div style="font-size:12px; color:var(--text-dim); margin-bottom:8px; font-family:var(--display); font-weight:700;">VAZA TOGA — Dossiê Investigativo INQ 4.781</div>
+    Produzido por <a href="https://lawfare-timeline.vercel.app" target="_blank">lawfare-timeline.vercel.app</a> · Artes do Sul Desenvolvimento Web · AI Nativo Brasil<br>
+    Licença: <strong>CC0 1.0 Universal</strong> — Domínio Público — Sem Direitos Reservados<br>
+    Última atualização: Abril 2026 · Este documento é projetado para sobreviver a bloqueios e deindexação<br>
+    Espelhos: GitHub Pages · IPFS · archive.org · <a href="https://dossiemoraes.com.br" target="_blank">dossiemoraes.com.br</a>
+  </div>
+  <div class="footer-cc" title="Creative Commons Zero">CC0</div>
+</div>
+
+<script>
+function showTab(id) {
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+  const content = document.getElementById('tab-' + id);
+  if (content) content.classList.add('active');
+  event.target.classList.add('active');
+  window.scrollTo({ top: document.querySelector('.nav-tabs').offsetTop - 10, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
