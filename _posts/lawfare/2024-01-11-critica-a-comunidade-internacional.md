@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Ed Raposo critica a comunidade internacional por apoiar Lula apesar de condenações, destacando hipocrisia em relação à censura e perseguição política."
 faicon: fa-globe
-tags: ['liberdade-de-expressao', 'separacao-dos-poderes', 'imunidade-de-opiniao', 'ed-raposo', 'lula', 'comunidade-internacional', 'gravidade-baixa', 'critica', 'internacional', 'hipocrisia', 'perseguicao', 'censura']
+tags: ['lawfare', 'liberdade-de-expressao', 'separacao-dos-poderes', 'imunidade-de-opiniao', 'ed-raposo', 'lula', 'comunidade-internacional', 'gravidade-baixa', 'critica', 'internacional', 'hipocrisia', 'perseguicao', 'censura']
 image:
   path: "/assets/solid/globe.svg"
 ---

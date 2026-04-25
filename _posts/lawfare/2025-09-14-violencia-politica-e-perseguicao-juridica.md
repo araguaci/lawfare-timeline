@@ -2,7 +2,7 @@
 title: Violência Política e Perseguição Jurídica
 date: 2025-09-14T19:53:33.153Z
 categories: lawfare
-tags: [Bolsonaro, Trump, Uribe, Charlie Kirk, Lawfare, Atentados]
+tags: ['lawfare', 'bolsonaro', 'trump', 'uribe', 'charlie-kirk', 'atentados']
 layout: post
 description: "Uma análise formal das relações entre eventos recentes que revelam um padrão sistemático de supressão a vozes de direita através de violência e manipulação legal."
 image:

@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id143
 description: 2023-06-01-oparana-Marco Temporal-
-tags: 'Marco Temporal'
+tags: ['lawfare', 'marco-temporal', 'stf', 'propriedade-rural']
 ---
 
 # Guaíra e Terra Roxa perderão 22 mil hectares se Suprema Corte “reprovar” Marco Temporal.

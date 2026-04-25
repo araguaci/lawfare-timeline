@@ -159,7 +159,6 @@ section,
 
 #sidebar .site-title {
   margin-top: 1rem;
-  margin-bottom: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -171,12 +170,6 @@ section,
 
 #sidebar ul li.nav-item.active .nav-link span, #sidebar ul li.nav-item.active .nav-link i{
   color: var(--bs-warning);
-}
-
-#sidebar .site-title {
-  text-align: center !important;
-  margin-top: 0.217rem;
-  margin-bottom: 0.5rem;
 }
 
 #sidebar .site-title h1 {
@@ -210,4 +203,16 @@ section,
 
 #sidebar ul li.nav-item a.nav-link i {
     margin-right: 0.5rem;
+}
+
+
+#sidebar .site-title {
+  text-align: center !important;
+  margin-top: 0.217rem;
+  margin-bottom: 0.05rem;
+}
+
+#sidebar ul li.nav-item a.nav-link{
+  padding-top:.36rem;
+  padding-bottom:.36rem;
 }

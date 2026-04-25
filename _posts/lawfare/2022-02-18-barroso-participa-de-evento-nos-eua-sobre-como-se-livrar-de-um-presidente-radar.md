@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id155
 description: 2022-02-18-veja-Barroso-
-tags: 'Barroso'
+tags: ['lawfare', 'barroso', 'crise-diplomatica']
 ---
 
 # Barroso participa de evento nos EUA sobre como se livrar de um presidente | Radar

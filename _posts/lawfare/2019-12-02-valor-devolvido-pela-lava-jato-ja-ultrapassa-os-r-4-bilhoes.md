@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id150
 description: 2019-12-02-mpf-Lava Jato-
-tags: 'lava-jato'
+tags: ['lawfare', 'lava-jato', 'corrupcao']
 ---
 
 # Valor devolvido pela Lava Jato já ultrapassa os R$ 4 bilhões.

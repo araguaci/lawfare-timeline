@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Perfis bloqueados pelo STF, incluindo o de Ed Raposo, retornam ao X com autorização judicial, ganhando mais de 300 mil seguidores coletivamente, explorando narrativa de censura."
 faicon: fa-gavel
-tags: ['liberdade-de-expressao', 'devido-processo-legal', 'imparcialidade-judicial', 'stf', 'ed-raposo', 'elon-musk', 'gravidade-alta', 'retorno', 'seguidores', 'censura', 'stf']
+tags: ['lawfare', 'liberdade-de-expressao', 'devido-processo-legal', 'imparcialidade-judicial', 'stf', 'ed-raposo', 'elon-musk', 'gravidade-alta', 'retorno', 'seguidores', 'censura', 'stf']
 image:
   path: "/assets/solid/gavel.svg"
 ---

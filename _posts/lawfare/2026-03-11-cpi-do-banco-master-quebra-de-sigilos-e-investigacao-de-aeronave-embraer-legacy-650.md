@@ -4,7 +4,7 @@ description: "A CPI aprova requerimentos para obter lista de passageiros e regis
 date: 2026-03-11T12:00:00.000Z
 image:
   path: "/assets/solid/scale.svg"
-tags: ['CPI', 'aeronave', 'diário de bordo', 'PCC', 'conexões criminosas']
+tags: ['lawfare', 'CPI', 'aeronave', 'diário de bordo', 'PCC', 'conexões criminosas']
 categories: lawfare
 ---
 

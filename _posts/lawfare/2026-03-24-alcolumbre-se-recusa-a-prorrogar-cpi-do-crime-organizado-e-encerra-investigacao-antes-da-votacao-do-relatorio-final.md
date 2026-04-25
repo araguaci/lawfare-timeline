@@ -4,7 +4,7 @@ description: "O presidente do Senado, Davi Alcolumbre, recusa-se a prorrogar o p
 date: 2026-03-24T12:00:00.000Z
 image:
   path: "/assets/solid/scale.svg"
-tags: ['alcolumbre', 'senado', 'cpi-crime-organizado', 'obstrucao', 'stf', 'banco-master', 'gravidade-alta']
+tags: ['lawfare', 'alcolumbre', 'senado', 'cpi-crime-organizado', 'obstrucao', 'stf', 'banco-master', 'gravidade-alta']
 categories: lawfare
 ---
 

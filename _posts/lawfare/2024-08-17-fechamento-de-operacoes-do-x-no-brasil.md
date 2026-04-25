@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "X fecha operações no Brasil devido a ordens de censura, incluindo ameaças de prisão à representante legal, relacionadas a perfis como o de Ed Raposo."
 faicon: fa-ban
-tags: ['liberdade-de-expressao', 'liberdade-de-imprensa', 'censura', 'separacao-dos-poderes', 'alexandre-de-moraes', 'elon-musk', 'ed-raposo', 'stf', 'gravidade-alta', 'censura', 'x', 'fechamento', 'ameaca']
+tags: ['lawfare', 'liberdade-de-expressao', 'liberdade-de-imprensa', 'censura', 'separacao-dos-poderes', 'alexandre-de-moraes', 'elon-musk', 'ed-raposo', 'stf', 'gravidade-alta', 'censura', 'x', 'fechamento', 'ameaca']
 image:
   path: "/assets/solid/ban.svg"
 ---

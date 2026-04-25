@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id151
 description: 2022-02-17-metropoles-Luiz Fux-
-tags: 'Luiz Fux'
+tags: ['lawfare', 'luiz-fux', 'corrupcao']
 ---
 
 # Procurador Lucas Furtado, do TCU, recebeu auxílio-moradia mesmo com mansão em Brasília.

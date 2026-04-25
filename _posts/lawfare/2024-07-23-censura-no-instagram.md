@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Ed Raposo relata censura no Instagram, com bloqueio de conteúdo e dificuldades para apelar, destacando censura repetida em plataformas da Meta."
 faicon: fa-ban
-tags: ['liberdade-de-expressao', 'censura', 'liberdade-de-imprensa', 'meta', 'instagram', 'ed-raposo', 'gravidade-media', 'censura', 'instagram', 'meta', 'bloqueio']
+tags: ['lawfare', 'liberdade-de-expressao', 'censura', 'liberdade-de-imprensa', 'meta', 'instagram', 'ed-raposo', 'gravidade-media', 'censura', 'instagram', 'meta', 'bloqueio']
 image:
   path: "/assets/solid/ban.svg"
 ---

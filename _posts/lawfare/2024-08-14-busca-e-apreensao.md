@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Polícia Federal realiza operação contra Ed Raposo, com busca e apreensão, confisco de laptop, celular e passaporte, após divulgação de decisão sigilosa pelo X, sob alegação de adesão a campanha de exposição de policiais."
 faicon: fa-search
-tags: ['domicilio-violado', 'liberdade-de-locomocao', 'devido-processo-legal', 'direito-a-privacidade', 'policia-federal', 'alexandre-de-moraes', 'ed-raposo', 'stf', 'gravidade-alta', 'busca', 'apreensao', 'passaporte', 'perseguicao']
+tags: ['lawfare', 'domicilio-violado', 'liberdade-de-locomocao', 'devido-processo-legal', 'direito-a-privacidade', 'policia-federal', 'alexandre-de-moraes', 'ed-raposo', 'stf', 'gravidade-alta', 'busca', 'apreensao', 'passaporte', 'perseguicao']
 image:
   path: "/assets/solid/search.svg"
 ---

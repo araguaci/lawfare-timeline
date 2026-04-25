@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id152
 description: 2018-11-26-conjur-Luiz Fux-
-tags: 'luiz-fux'
+tags: ['lawfare', 'luiz-fux', 'penduricalhos']
 ---
 
 # Fux revoga auxílio-moradia para juízes após sanção de reajuste para STF.

@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Moraes ordena o desbloqueio do X no Brasil, mas perfis como o de Ed Raposo permanecem bloqueados, destacando a censura seletiva contra bolsonaristas."
 faicon: fa-gavel
-tags: ['liberdade-de-expressao', 'liberdade-de-imprensa', 'imparcialidade-judicial', 'separacao-dos-poderes', 'alexandre-de-moraes', 'stf', 'ed-raposo', 'elon-musk', 'gravidade-alta', 'desbloqueio', 'x', 'censura', 'bolsonaristas']
+tags: ['lawfare', 'liberdade-de-expressao', 'liberdade-de-imprensa', 'imparcialidade-judicial', 'separacao-dos-poderes', 'alexandre-de-moraes', 'stf', 'ed-raposo', 'elon-musk', 'gravidade-alta', 'desbloqueio', 'x', 'censura', 'bolsonaristas']
 image:
   path: "/assets/solid/gavel.svg"
 ---

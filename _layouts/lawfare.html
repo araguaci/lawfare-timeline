@@ -1,6 +1,6 @@
 ---
 layout: page
-# The Archives of posts, apenas categoria: lawfare
+# The Archives of posts, categoria ou tag: lawfare
 ---
 
 {% include lang.html %}
@@ -8,13 +8,26 @@ layout: page
 {% assign df_strftime_m = site.data.locales[lang].df.archives.strftime | default: '/ %m' %}
 {% assign df_dayjs_m = site.data.locales[lang].df.archives.dayjs | default: '/ MM' %}
 
-{%- assign lawfare_category = site.featured_categories | where: "slug", "lawfare" | first -%}
-{%- if lawfare_category and lawfare_category.description -%}
-  <p class="category-description">{{ lawfare_category.description }}</p>
+{%- if page.description -%}
+  <p class="category-description">{{ page.description }}</p>
+{%- elsif page.type == 'tags' -%}
+  {%- assign lawfare_tag = site.featured_tags | where: "slug", "lawfare" | first -%}
+  {%- if lawfare_tag and lawfare_tag.description -%}
+    <p class="category-description">{{ lawfare_tag.description }}</p>
+  {%- endif -%}
+{%- else -%}
+  {%- assign lawfare_category = site.featured_categories | where: "slug", "lawfare" | first -%}
+  {%- if lawfare_category and lawfare_category.description -%}
+    <p class="category-description">{{ lawfare_category.description }}</p>
+  {%- endif -%}
 {%- endif -%}
 
 <div id="archives" class="pl-xl-3">
-  {% assign lawfare_posts = site.posts | where_exp:"post","post.categories contains 'lawfare'" %}
+  {%- if page.type == 'tags' -%}
+    {%- assign lawfare_posts = site.posts | where_exp:"post","post.tags contains 'lawfare'" -%}
+  {%- else -%}
+    {%- assign lawfare_posts = site.posts | where_exp:"post","post.categories contains 'lawfare'" -%}
+  {%- endif -%}
   {% assign last_year = "" %}
   {% for post in lawfare_posts %}
     {% assign cur_year = post.date | date: '%Y' %}

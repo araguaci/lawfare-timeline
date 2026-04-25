@@ -19,7 +19,7 @@ title: LAWFARE # the main title
 tagline: NA GUERRA SILENCIOSA QUE DESTRÓI DEMOCRACIAS # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  Lawfare é definido como uso estratégico do sistema legal para fins políticos, mascarado de legalidade e com alvos seletivos. O fenômeno se intensificou no Brasil e globalmente, envolve atores estatais e privados, e prevê controle via IA e moedas digitais.
+  Lawfare é o uso estratégico do sistema legal para fins políticos, sob aparência de legalidade e seletividade. Intensificado no Brasil e no mundo, envolve atores estatais e privados, ampliando-se com IA e moedas digitais. Inicia com censura e abusos de autoridade, mina a Constituição e a confiança pública, polariza a sociedade e pode culminar em regime autoritário.
 
 # Fill in the protocol & hostnamdeste for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -167,7 +167,7 @@ backgroud_animation: true
 # ------------ The following options are not recommended to be modified ------------------
 
 destination: docs
-incremental: true
+# incremental: false
 
 kramdown:
   footnote_backlink: "&#8617;&#xfe0e;"
@@ -188,6 +188,9 @@ collections:
   featured_categories:
     output: true
     permalink: /featured_categories/:name/
+  featured_tags:
+    output: true
+    permalink: /featured_tags/:name/
 
 defaults:
   - scope:
@@ -244,4 +247,5 @@ jekyll-archives:
     tag: tag
   permalinks:
     tag: /tags/:name/
-    category: /categories/:name/
+    category: /categories/:name/ 
+

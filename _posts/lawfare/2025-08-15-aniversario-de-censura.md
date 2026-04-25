@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Marca o primeiro aniversário desde que Alexandre de Moraes silenciou Ed Raposo nas redes sociais, com posts e artigos destacando a censura contínua sem denúncia formal ou julgamento, afetando sua liberdade de expressão."
 faicon: fa-ban
-tags: ['liberdade-de-expressao', 'censura', 'presuncao-de-inocencia', 'devido-processo-legal', 'alexandre-de-moraes', 'stf', 'ed-raposo', 'gravidade-alta', 'censura', 'stf', 'perseguicao', 'bolsonarista']
+tags: ['lawfare', 'liberdade-de-expressao', 'censura', 'presuncao-de-inocencia', 'devido-processo-legal', 'alexandre-de-moraes', 'stf', 'ed-raposo', 'gravidade-alta', 'censura', 'stf', 'perseguicao', 'bolsonarista']
 image:
   path: "/assets/solid/ban.svg"
 ---

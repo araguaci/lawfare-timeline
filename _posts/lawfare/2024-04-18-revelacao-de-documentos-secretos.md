@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Ed Raposo menciona juiz responsável por documentos secretos ordenando censura contra ele, ligado a outras decisões políticas."
 faicon: fa-file-alt
-tags: ['liberdade-de-expressao', 'censura', 'imparcialidade-judicial', 'stf', 'ed-raposo', 'michelle-bolsonaro', 'gravidade-media', 'documentos', 'censura', 'juiz', 'secreto']
+tags: ['lawfare', 'liberdade-de-expressao', 'censura', 'imparcialidade-judicial', 'stf', 'ed-raposo', 'michelle-bolsonaro', 'gravidade-media', 'documentos', 'censura', 'juiz', 'secreto']
 image:
   path: "/assets/solid/file-alt.svg"
 ---

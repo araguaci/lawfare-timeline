@@ -5,7 +5,7 @@ categories: lawfare
 description: > 
   "Para permitir o retorno do X ao Brasil, a plataforma bloqueou perfis incluindo o de Ed Raposo, sob ordens do STF, como condição para operar."
 faicon: fa-ban
-tags: ['liberdade-de-expressao', 'censura', 'devido-processo-legal', 'proporcionalidade', 'stf', 'ed-raposo', 'sergio-fischer', 'josias-pereira-lima', 'gravidade-alta', 'bloqueio', 'x', 'stf', 'censura']
+tags: ['lawfare', 'liberdade-de-expressao', 'censura', 'devido-processo-legal', 'proporcionalidade', 'stf', 'ed-raposo', 'sergio-fischer', 'josias-pereira-lima', 'gravidade-alta', 'bloqueio', 'x', 'stf', 'censura']
 image:
   path: "/assets/solid/ban.svg"
 ---

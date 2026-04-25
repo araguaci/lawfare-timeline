@@ -4,7 +4,7 @@ description: "Na data da votação do relatório da CPI do Crime Organizado, o g
 date: 2026-03-24T12:00:00.000Z
 image:
   path: "/assets/solid/scale.svg"
-tags: ['lula', 'cpi-crime-organizado', 'senado', 'obstrucao', 'stf', 'banco-master', 'gravidade-alta']
+tags: ['lawfare', 'lula', 'cpi-crime-organizado', 'senado', 'obstrucao', 'stf', 'banco-master', 'gravidade-alta']
 categories: lawfare
 ---
 

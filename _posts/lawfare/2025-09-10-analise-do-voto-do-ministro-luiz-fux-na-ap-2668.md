@@ -3,7 +3,7 @@ title: Análise do Voto do Ministro Luiz Fux na AP 2668
 date: 2025-09-10T20:38:43.890Z
 description: "Com extensão de aproximadamente 429 páginas e duração de cerca de 13 horas, o voto adota uma abordagem técnica e minimalista, priorizando a objetividade jurídica e rejeitando juízos políticos. "
 categories: lawfare
-tags: ["justiça", "voto", "stf", "fux", "direito"]
+tags: ['lawfare', "justiça", "voto", "stf", "fux", "direito"]
 image: 
   path: /assets/solid/gavel.svg
 ---

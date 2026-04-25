@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 article_id: id153
 description: 2022-12-22-conjur-DPVAT-
-tags: 'DPVAT'
+tags: ['lawfare', 'justica', 'decisao-judicial']
 ---
 
 # Ressarcimento por retenção de valores do DPVAT prescreve em 5 anos, diz STJ.
