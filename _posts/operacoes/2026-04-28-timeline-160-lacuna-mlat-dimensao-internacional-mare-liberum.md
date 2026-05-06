@@ -22,7 +22,7 @@ source_data: lawfare-mare-liberum-timeline.json
 As 17.000 DIs envolvem mercadorias importadas com origem em outros países. A frente 2 (óleo e gás, admissão temporária de embarcações) pode envolver equipamentos com fabricantes na Europa, EUA ou Ásia. Se empresas com matriz estrangeira estão entre os beneficiários, há dimensão FCPA/cooperação latente. Nenhuma fonte menciona pedido de MLAT no contexto da Mare Liberum. Paralelo com Poço de Lobato: MLAT Brasil-EUA invocado por Haddad junto a Trump — sem resposta pública até hoje.
 
 **Tipo:** Lacuna Investigativa  
-**Operação:** [Mare Liberum](/mare-liberum)  
+**Operação:** [Mare Liberum](/mare-liberum.html)  
 **Padrão sistêmico:** P03  
 **Status:** em_aberto  
 **Verificado:** sim
@@ -54,7 +54,7 @@ Uma operação que apura corrupção na importação de mercadorias estrangeiras
 ### Padrão sistêmico ativado
 
 - **P03** — Captura judicial de emergência: a ausência de MLAT cria uma lacuna de cooperação que pode ser explorada pela defesa — se a prova está em jurisdição estrangeira e o Brasil não a solicitou formalmente, a prova pode ser inacessível por tempo indefinido
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### A frente de óleo e gás como vetor internacional (Frente 2)
 
@@ -89,6 +89,6 @@ A dimensão internacional da Mare Liberum é a lacuna de mais longa maturação 
 
 ## Referências
 
-- [Operação Mare Liberum](/mare-liberum)
+- [Operação Mare Liberum](/mare-liberum.html)
 - [PF deflagra operação para combater corrupção na alfândega do Porto do Rio — Gov.br](https://www.gov.br/pf/pt-br/assuntos/noticias/2026/04/pf-deflagra-operacao-para-combater-corrupcao-na-alfandega-do-porto-do-rio)
 - [Operação Poço de Lobato — Receita Federal e órgãos parceiros desarticulam esquema bilionário — Gov.br/Receita Federal](https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2025/novembro/operacao-poco-de-lobato-receita-federal-e-orgaos-parceiros-desarticulam-esquema-bilionario-ligado-a-operacao-carbono-oculto)

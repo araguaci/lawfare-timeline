@@ -40,7 +40,7 @@ Crescimento ano a ano em três governos distintos (Bolsonaro→Lula): 2022 R$ 26
 
 - **P06**
 - **P07**
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### Fontes
 

@@ -74,7 +74,7 @@ Em 28 de abril de 2026, Polícia Federal (SR/RJ), GAECO/MPF e Corregedoria da Re
 
 - **P04** — Investigação de longa duração sem mandado declarado (ver ID 147): risco de contestação da cadeia probatória
 - **P05** — Cofres públicos como vetor: R$ 500 milhões em prejuízo fiscal direto; sistema aduaneiro como mecanismo de sub-tributação sistematizada
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### As três frentes do esquema
 
@@ -90,8 +90,8 @@ A Mare Liberum é, no dia zero, a operação com o perfil de risco mais alto do 
 
 ## Referências
 
-- [Operação Mare Liberum](/mare-liberum)
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Operação Mare Liberum](/mare-liberum.html)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 - [PF deflagra operação para combater corrupção na alfândega do Porto do Rio — Gov.br](https://www.gov.br/pf/pt-br/assuntos/noticias/2026/04/pf-deflagra-operacao-para-combater-corrupcao-na-alfandega-do-porto-do-rio)
 - [PF deflagra operação contra esquema bilionário na Alfândega do Rio de Janeiro — Brasil 247](https://www.brasil247.com/regionais/sudeste/pf-deflagra-operacao-contra-esquema-bilionario-na-alfandega-do-rio-de-janeiro)
 - [PF faz operação contra corrupção na Alfândega do Porto do Rio — CNN Brasil](https://www.cnnbrasil.com.br/nacional/sudeste/rj/pf-faz-operacao-contra-corrupcao-na-alfandega-do-porto-do-rio)

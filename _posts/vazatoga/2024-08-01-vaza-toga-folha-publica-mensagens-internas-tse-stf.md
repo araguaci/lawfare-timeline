@@ -67,7 +67,7 @@ A estrutura viola o princípio latino *nemo judex in causa propria* — ninguém
 |--------|-----------|
 | **P2** | Informante de imprensa torna-se investigado criminal por seu ex-superior |
 | **P3** | STF/TSE como ponto de captura — ministro como investigador e julgador de seu próprio escandalizador |
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### Lacuna investigativa
 
@@ -79,7 +79,7 @@ A Vaza Toga é o evento-raiz da AP 2720/DF — a ação penal que desde agosto d
 
 ## Referências
 
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 - [Folha de S.Paulo / A Investigação](https://www.ainvestigacao.com/p/moraes-e-forcado-a-anular-audiencia) — Reconstituição processual completa do caso
 - [CartaCapital](https://www.cartacapital.com.br/politica/por-4-a-0-stf-torna-reu-eduardo-tagliaferro-ex-assessor-de-moraes/) — Cobertura do recebimento da denúncia (novembro de 2025)
 - [Revista Oeste](https://revistaoeste.com/no-ponto/tagliaferro-moraes-stf/) — Análise da trajetória processual e seus vícios documentados

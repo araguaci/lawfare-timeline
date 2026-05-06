@@ -80,7 +80,7 @@ O caso Flávia Magalhães foi citado como um dos fundamentos factuais para a apl
 | **P1** | Uso do poder judicial para perseguição de pessoa sem nexo criminal comprovado |
 | **P3** | STF como ponto de captura — ministro como ator político extraterritorial |
 | **P7** | Uso de agente em jurisdição estrangeira (Marcelo Ivo/Miami) como vetor de persecução |
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ## 🎯 Conclusão
 
@@ -88,7 +88,7 @@ O caso Flávia Magalhães é o registro mais documentado de extensão ilegal da 
 
 ## Referências
 
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 - [Gazeta do Povo](https://www.gazetadopovo.com.br/republica/flavia-magalhaes-moraes-miami-pf-monitoramento) — Documentação do ofício e da cadeia de comando
 - [A Investigação — 17/04/2026](https://www.ainvestigacao.com.br/p/moraes-e-forcado-a-anular-audiencia) — Reconstituição completa com documentação primária
 - [Paulo Faria — advogado de Flávia](https://x.com/drpaulofaria22) — Declarações sobre os relatos de vigilância em território americano

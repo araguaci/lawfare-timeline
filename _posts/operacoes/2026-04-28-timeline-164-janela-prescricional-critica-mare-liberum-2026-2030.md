@@ -22,7 +22,7 @@ source_data: lawfare-mare-liberum-timeline.json
 Cálculo prescricional de risco: fatos mais antigos datam de jul/2021. Para crimes tributários qualificados, o prazo pode correr a partir de cada DI individual. Sequência de risco projetada: deflagração abr/2026 → denúncia esperada 2027 → recursos de incompetência territorial (Porto vs. Galeão, ou RJ vs. Brasília) → redistribuição → 2029/2030. Lição direta da Lava Jato: os casos do tríplex e sítio de Atibaia prescreveram na redistribuição Curitiba–Brasília. O mecanismo é replicável na Mare Liberum se houver questão de competência.
 
 **Tipo:** Análise de Risco  
-**Operação:** [Mare Liberum](/mare-liberum)  
+**Operação:** [Mare Liberum](/mare-liberum.html)  
 **Padrão sistêmico:** P06  
 **Status:** análise  
 **Verificado:** não (análise autoral)
@@ -96,7 +96,7 @@ Se o MPF enquadrar as 17.000 DIs como crime continuado ou organização criminos
 ### Padrões sistêmicos ativados
 
 - **P06** — Prescrição por competência: a combinação de duas alfândegas distintas (Porto + Galeão) com 17.000 DIs como possíveis fatos autônomos cria a estrutura prescricional mais vulnerável do corpus desde a Lava Jato
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ## 🎯 Conclusão
 
@@ -104,6 +104,6 @@ A janela prescricional de 2026 a 2030 é o período em que a Mare Liberum será 
 
 ## Referências
 
-- [Operação Mare Liberum](/mare-liberum)
+- [Operação Mare Liberum](/mare-liberum.html)
 - [Operação mira esquema de propina no Porto do Rio e afasta servidores da Receita — Jornal de Brasília](https://jornaldebrasilia.com.br/noticias/brasil/operacao-mira-esquema-de-propina-no-porto-do-rio-e-afasta-servidores-da-receita/)
 - [PF cumpre mandados em Niterói contra esquema no Porto do Rio — A Tribuna RJ](https://www.atribunarj.com.br/materia/pf-cumpre-mandados-em-niteroi-contra-esquema-no-porto-do-rio)

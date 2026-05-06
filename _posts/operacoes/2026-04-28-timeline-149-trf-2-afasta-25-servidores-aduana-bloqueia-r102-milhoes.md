@@ -57,7 +57,7 @@ Simultaneamente à deflagração da Operação Mare Liberum em 28 de abril de 20
 - **P01** — Contestação da fase de coleta de provas sem mandado judicial na Corregedoria (2022–2026) — argumento pré-formatado para todas as 25 defesas
 - **P03** — Captura judicial de emergência: 25 servidores = 25 potenciais habeas corpus no STJ/STF nos próximos 90 dias; cada HC individual é uma janela de paralisação do processo
 - **P06** — Prescrição por competência: afastamentos via TRF-2 podem ser questionados por competência territorial (Porto do Rio vs. Galeão) ou por competência material, gerando redistribuição e risco prescricional
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### Análise do risco processual (Padrão P03)
 
@@ -81,7 +81,7 @@ A decisão do TRF-2 é, ao mesmo tempo, o instrumento de proteção social imedi
 
 ## Referências
 
-- [Operação Mare Liberum](/mare-liberum)
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Operação Mare Liberum](/mare-liberum.html)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 - [PF cumpre mandados em Niterói contra esquema no Porto do Rio — A Tribuna RJ](https://www.atribunarj.com.br/materia/pf-cumpre-mandados-em-niteroi-contra-esquema-no-porto-do-rio)
 - [Operação mira esquema de propina no Porto do Rio e afasta servidores da Receita — Jornal de Brasília](https://jornaldebrasilia.com.br/noticias/brasil/operacao-mira-esquema-de-propina-no-porto-do-rio-e-afasta-servidores-da-receita/)

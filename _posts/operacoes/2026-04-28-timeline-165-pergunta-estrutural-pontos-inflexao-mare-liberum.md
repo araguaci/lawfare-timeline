@@ -22,7 +22,7 @@ source_data: lawfare-mare-liberum-timeline.json
 A pergunta mais importante que o corpus não consegue ainda responder sobre a Mare Liberum: em qual momento a investigação vai parar de avançar em direção aos beneficiários finais e começar a circular sobre os operadores de nível médio (os servidores corruptos)? O ponto de inflexão foi documentado em Satiagraha, Castelo de Areia, Lava Jato e Banco Master. Aqui ele ainda não ocorreu — mas a ausência dos nomes dos importadores/empresários na deflagração é o primeiro sinal de contenção.
 
 **Tipo:** Pergunta Aberta  
-**Operação:** [Mare Liberum](/mare-liberum)  
+**Operação:** [Mare Liberum](/mare-liberum.html)  
 **Padrões sistêmicos:** P01 · P02 · P03  
 **Status:** em_aberto  
 **Verificado:** sim
@@ -76,7 +76,7 @@ O corpus identifica três indicadores que historicamente precedem o ponto de inf
 - **P01** — Coleta de provas sem mandado: argumento pré-formatado disponível para a defesa de todos os 25 servidores desde o dia zero
 - **P02** — Weaponização do processo administrativo: o afastamento dos servidores via Corregedoria pode ser contestado como excesso de poder administrativo
 - **P03** — Captura judicial de emergência: o ponto de inflexão, quando ocorrer, provavelmente se manifestará via HC coletivo ou questão de competência em instância superior
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### A pergunta que o corpus não responde (ainda)
 
@@ -103,8 +103,8 @@ A pergunta estrutural aberta da Mare Liberum não pode ser respondida no dia zer
 
 ## Referências
 
-- [Operação Mare Liberum](/mare-liberum)
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Operação Mare Liberum](/mare-liberum.html)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 - [PF deflagra operação para combater corrupção na alfândega do Porto do Rio — Gov.br](https://www.gov.br/pf/pt-br/assuntos/noticias/2026/04/pf-deflagra-operacao-para-combater-corrupcao-na-alfandega-do-porto-do-rio)
 - [PF deflagra operação contra esquema bilionário na Alfândega do Rio de Janeiro — Brasil 247](https://www.brasil247.com/regionais/sudeste/pf-deflagra-operacao-contra-esquema-bilionario-na-alfandega-do-rio-de-janeiro)
 - [PF cumpre mandados em Niterói contra esquema no Porto do Rio — A Tribuna RJ](https://www.atribunarj.com.br/materia/pf-cumpre-mandados-em-niteroi-contra-esquema-no-porto-do-rio)

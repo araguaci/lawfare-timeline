@@ -39,7 +39,7 @@ Dado macroeconômico de contexto para o conjunto de registros de extravagância:
 ### Padrões sistêmicos ativados
 
 - **P06**
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### Fontes
 

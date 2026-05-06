@@ -54,7 +54,7 @@ A diferença entre esses dois níveis é a diferença entre retórica e **respon
 - **P03** — Captura judicial de emergência (documentada com datas e decisores)
 - **P04** — Weaponização da mídia (operada involuntariamente pelos críticos)
 - **P05** — Cofres públicos como vetor (documentados com valores e operações)
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ## 🔧 Resposta do projeto
 
@@ -72,7 +72,7 @@ Este é o gap estrutural que o lawfare-timeline foi criado para fechar.
 
 ## Referências
 
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 - ID 146 — Schüler / Estadão: diagnóstico com dados, sem atores nomeados
 - ID 147 — @Jeffssss_ / X: diagnóstico sem dados, sem atores nomeados
 - ID 148 — Cruzamento: narrativa pública vs. documentação forense

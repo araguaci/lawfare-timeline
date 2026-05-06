@@ -39,7 +39,7 @@ O arquivamento pelo TCU da representação sobre Paris (setembro 2024) antes de 
 ### Padrões sistêmicos ativados
 
 - **P06**
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### Fontes
 

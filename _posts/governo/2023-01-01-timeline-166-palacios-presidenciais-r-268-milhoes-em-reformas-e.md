@@ -39,7 +39,7 @@ Valor supera qualquer ano anterior para a mesma rubrica. Câmara dos Deputados c
 ### Padrões sistêmicos ativados
 
 - **P06**
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### Fontes
 

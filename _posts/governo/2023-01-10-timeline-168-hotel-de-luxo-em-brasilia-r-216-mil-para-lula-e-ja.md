@@ -39,7 +39,7 @@ Episódio inicial que estabelece o padrão de gastos suntuários justificados po
 ### Padrões sistêmicos ativados
 
 - **P06**
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### Fontes
 

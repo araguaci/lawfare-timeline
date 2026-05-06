@@ -22,7 +22,7 @@ source_data: lawfare-mare-liberum-timeline.json
 Segunda frente do esquema: uso do regime de admissão temporária para favorecer empresas privadas do setor de óleo e gás. Criação de procedimentos artificiais para permitir a entrada de embarcações e equipamentos offshore sem respaldo legal mediante pagamento de propina. Mecanismo estruturalmente distinto da Carbono Oculto — aqui o vetor é o regime aduaneiro especial para ativos de alto valor da indústria de exploração offshore.
 
 **Tipo:** Modus Operandi  
-**Operação:** [Mare Liberum](/mare-liberum)  
+**Operação:** [Mare Liberum](/mare-liberum.html)  
 **Status:** documentado  
 **Categoria:** lacuna_investigativa
 
@@ -61,7 +61,7 @@ O regime de admissão temporária (RAT) é um instrumento legítimo criado para 
 
 - **P05** — Cofres públicos como vetor: equipamentos de alto valor (plataformas offshore valem centenas de milhões) sob regime de admissão temporária corrompida representam tributação zero sobre ativos bilionários
 - **P07** — Infraestrutura advisória compartilhada: a natureza técnica do RAT exige conhecimento especializado de direito aduaneiro — sugere assessoria jurídico-fiscal de alto nível compartilhada entre empresas beneficiárias
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### Lacuna investigativa crítica
 
@@ -87,6 +87,6 @@ A Frente 2 é a de maior valor investigativo potencial e a de menor divulgação
 
 ## Referências
 
-- [Operação Mare Liberum](/mare-liberum)
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Operação Mare Liberum](/mare-liberum.html)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 - [PF deflagra operação contra esquema bilionário na Alfândega do Rio de Janeiro — Brasil 247](https://www.brasil247.com/regionais/sudeste/pf-deflagra-operacao-contra-esquema-bilionario-na-alfandega-do-rio-de-janeiro)

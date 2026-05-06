@@ -40,7 +40,7 @@ Estrutura operacional relevante: o evento não foi contratado pela Presidência 
 
 - **P06**
 - **P05**
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### Fontes
 

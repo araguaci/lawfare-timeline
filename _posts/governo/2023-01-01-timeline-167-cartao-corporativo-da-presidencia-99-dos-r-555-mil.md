@@ -40,7 +40,7 @@ Padrão estrutural: o sigilo não é exceção de segurança — é o modo de op
 
 - **P06**
 - **P07**
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### Fontes
 

@@ -63,7 +63,7 @@ A Operação Poço de Lobato (novembro de 2025) desarticulou um esquema bilioná
 
 - **P05** — Cofres públicos como vetor: diesel russo importado irregularmente sem recolhimento de impostos via portais aduaneiros corrompidos
 - **P07** — Infraestrutura advisória compartilhada: estrutura offshore Delaware/Houston documentada na Poço de Lobato pode ser compartilhada ou inspiradora para a estrutura de lavagem das propinas da Mare Liberum
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### A pergunta investigativa de alto valor
 
@@ -86,5 +86,5 @@ A conexão Mare Liberum — Poço de Lobato é a hipótese de maior impacto sist
 
 ## Referências
 
-- [Operação Mare Liberum](/mare-liberum)
+- [Operação Mare Liberum](/mare-liberum.html)
 - [Operação Poço de Lobato — Receita Federal e órgãos parceiros desarticulam esquema bilionário ligado à Operação Carbono Oculto — Gov.br/Receita Federal](https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2025/novembro/operacao-poco-de-lobato-receita-federal-e-orgaos-parceiros-desarticulam-esquema-bilionario-ligado-a-operacao-carbono-oculto)

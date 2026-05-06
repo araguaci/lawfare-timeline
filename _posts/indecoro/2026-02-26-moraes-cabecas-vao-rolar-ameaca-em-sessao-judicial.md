@@ -61,7 +61,7 @@ O ministro, ao dizer "querem me derrubar", posiciona-se como alvo político — 
 |--------|-----------|
 | **P3** | Ministro do STF como ator político — coloca-se como vítima de perseguição durante sessão judicial |
 | **P5** | Uso da posição institucional para autodefesa e intimidação de críticos |
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### Comparação com o padrão DARVO no corpus
 
@@ -83,5 +83,5 @@ A declaração circulou massivamente nas redes sociais. Críticos apontaram que 
 
 ## Referências
 
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 - [Gazeta do Povo — 26/02/2026](https://www.gazetadopovo.com.br/sem-rodeios/querem-me-derrubar-moraes-causa-polemica-em-fala-no-stf/) — Cobertura com transcrição da declaração e análise do contexto

@@ -22,7 +22,7 @@ source_data: lawfare-mare-liberum-timeline.json
 Análise da diferença entre o valor das mercadorias (R$ 86,6 bilhões) e o prejuízo fiscal estimado (R$ 500 milhões) revela a natureza do esquema: não era contrabando puro, mas principalmente sub-tributação e classificação indevida de mercadorias. Mercadorias declaradas como produto A (alíquota menor) quando eram produto B (alíquota maior). O canal vermelho e cinza existe exatamente para detectar essas divergências — os servidores corrompidos os anulavam sistematicamente.
 
 **Tipo:** Dado Quantitativo — Análise  
-**Operação:** [Mare Liberum](/mare-liberum)  
+**Operação:** [Mare Liberum](/mare-liberum.html)  
 **Valor envolvido:** R$ 86,6B (mercadorias) · R$ 500M (prejuízo fiscal) · ratio: 0,58%  
 **Status:** documentado  
 **Verificado:** sim
@@ -73,7 +73,7 @@ No sistema aduaneiro brasileiro, cada produto tem um código NCM (Nomenclatura C
 ### Padrões sistêmicos ativados
 
 - **P05** — Cofres públicos como vetor: R$ 500 milhões em prejuízo fiscal é o resultado direto de 17.000 episódios de anulação do mecanismo de fiscalização; cada DI liberada irregularmente é uma sub-transferência dos cofres públicos para o importador
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### Implicações para a pena
 
@@ -85,5 +85,5 @@ O ratio de 0,58% é o dado mais diagnóstico da Mare Liberum. Ele confirma que o
 
 ## Referências
 
-- [Operação Mare Liberum](/mare-liberum)
+- [Operação Mare Liberum](/mare-liberum.html)
 - [Operação mira esquema de propina no Porto do Rio e afasta servidores da Receita — Jornal de Brasília](https://jornaldebrasilia.com.br/noticias/brasil/operacao-mira-esquema-de-propina-no-porto-do-rio-e-afasta-servidores-da-receita/)

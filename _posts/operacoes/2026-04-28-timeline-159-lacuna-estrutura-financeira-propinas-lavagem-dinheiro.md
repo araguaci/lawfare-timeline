@@ -22,7 +22,7 @@ source_data: lawfare-mare-liberum-timeline.json
 As propinas recebidas pelos 25 servidores afastados são estimadas em "dezenas de milhões de reais". Para servidores de carreira, receber essa quantia requer estrutura de lavagem sofisticada — contas, SPEs, fundos, offshores. A Justiça bloqueou R$ 102 milhões em bens, indicando rastreamento parcial. Porém a estrutura de lavagem — veículos utilizados — não foi descrita em nenhuma fonte pública. Se fundos fechados aparecerem nessa estrutura, confirma o Padrão 07 na Mare Liberum.
 
 **Tipo:** Lacuna Investigativa  
-**Operação:** [Mare Liberum](/mare-liberum)  
+**Operação:** [Mare Liberum](/mare-liberum.html)  
 **Padrão sistêmico:** P07  
 **Status:** em_aberto  
 **Verificado:** sim
@@ -57,7 +57,7 @@ Um servidor de carreira com salário de R$ 300 mil anuais não pode acumular R$ 
 ### Padrões sistêmicos ativados
 
 - **P07** — Infraestrutura advisória compartilhada: se os veículos de lavagem incluem fundos fechados de cota única ou SPEs offshore — estrutura documentada na Carbono Oculto (40 fundos para R$ 30 bilhões) — isso conecta a Mare Liberum ao Padrão 07 identificado como emergente em 2025
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### Estruturas típicas de lavagem para servidores públicos
 
@@ -83,5 +83,5 @@ A estrutura financeira das propinas é a lacuna que pode confirmar — ou descar
 
 ## Referências
 
-- [Operação Mare Liberum](/mare-liberum)
+- [Operação Mare Liberum](/mare-liberum.html)
 - [PF deflagra operação para combater corrupção na alfândega do Porto do Rio — Gov.br](https://www.gov.br/pf/pt-br/assuntos/noticias/2026/04/pf-deflagra-operacao-para-combater-corrupcao-na-alfandega-do-porto-do-rio)

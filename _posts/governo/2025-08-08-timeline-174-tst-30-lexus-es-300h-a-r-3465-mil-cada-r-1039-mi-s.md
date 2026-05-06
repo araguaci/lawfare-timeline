@@ -41,7 +41,7 @@ Este é o registro de maior relevância sistêmica do período 2023-2025 para o 
 - **P06**
 - **P03**
 - **P05**
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### Fontes
 

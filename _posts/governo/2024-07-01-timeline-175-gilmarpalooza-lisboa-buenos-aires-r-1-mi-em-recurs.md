@@ -41,7 +41,7 @@ Padrão de captura por convívio: o STF financia indiretamente a lealdade do Leg
 - **P06**
 - **P03**
 - **P08**
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### Fontes
 

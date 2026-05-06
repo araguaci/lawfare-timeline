@@ -86,8 +86,8 @@ O Padrão 07 na Mare Liberum é, no momento desta análise, uma hipótese de tra
 
 ## Referências
 
-- [Operação Mare Liberum](/mare-liberum)
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Operação Mare Liberum](/mare-liberum.html)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 - [PF deflagra operação para combater corrupção na alfândega do Porto do Rio — Gov.br](https://www.gov.br/pf/pt-br/assuntos/noticias/2026/04/pf-deflagra-operacao-para-combater-corrupcao-na-alfandega-do-porto-do-rio)
 - [Operação Carbono Oculto — Gov.br/Receita Federal](https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2025/agosto/operacao-carbono-oculto-rrb-e-orgaos-parceiros-combatem-organizacao-responsavel-por-sonegacao-e-lavagem-de-dinheiro-no-setor-de-combustiveis)
 - [Operação Poço de Lobato — Gov.br/Receita Federal](https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2025/novembro/operacao-poco-de-lobato-receita-federal-e-orgaos-parceiros-desarticulam-esquema-bilionario-ligado-a-operacao-carbono-oculto)

@@ -22,7 +22,7 @@ source_data: lawfare-mare-liberum-timeline.json
 Primeira frente do esquema identificada pela Receita Federal: liberação direta de cargas classificadas nos canais de maior rigor aduaneiro (vermelho e cinza), ignorando inconsistências e exigências legais. Mecanismo operacional central da corrupção ativa dos servidores — o servidor é o nó de verificação estatal comprado diretamente por despachantes. Qualitativamente mais grave que a Lava Jato: aqui o servidor é o próprio mecanismo de fraude.
 
 **Tipo:** Modus Operandi  
-**Operação:** [Mare Liberum](/mare-liberum)  
+**Operação:** [Mare Liberum](/mare-liberum.html)  
 **Status:** documentado
 
 ***
@@ -58,7 +58,7 @@ A Frente 1 da Operação Mare Liberum descreve o mecanismo mais direto e estrutu
 ### Padrões sistêmicos ativados
 
 - **P05** — Cofres públicos como vetor: a sub-tributação sistematizada via liberação em canal vermelho/cinza gerou R$ 500 milhões em prejuízo fiscal estimado sobre R$ 86,6 bilhões em mercadorias (ratio: 0,58%)
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### Comparação qualitativa com Lava Jato
 
@@ -79,6 +79,6 @@ A Frente 1 é o núcleo duro da Mare Liberum: é o mecanismo mais simples, mais 
 
 ## Referências
 
-- [Operação Mare Liberum](/mare-liberum)
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Operação Mare Liberum](/mare-liberum.html)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 - [PF deflagra operação contra esquema bilionário na Alfândega do Rio de Janeiro — Brasil 247](https://www.brasil247.com/regionais/sudeste/pf-deflagra-operacao-contra-esquema-bilionario-na-alfandega-do-rio-de-janeiro)

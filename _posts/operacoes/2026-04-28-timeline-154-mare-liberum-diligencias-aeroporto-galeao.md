@@ -22,7 +22,7 @@ source_data: lawfare-mare-liberum-timeline.json
 Dado com distribuição restrita nas fontes de imprensa: as diligências da Mare Liberum incluíram endereços ligados à alfândega do Aeroporto do Galeão, além da sede da Receita no RJ e cidades do interior fluminense (Nilópolis, Nova Friburgo). O esquema não se limitava ao Porto do Rio, mas abrangia toda a estrutura aduaneira do estado. Implicação processual crítica: Porto do Rio e Aeroporto do Galeão são alfândegas juridicamente distintas, o que pode ser explorado como questão de competência territorial.
 
 **Tipo:** Dado Novo  
-**Operação:** [Mare Liberum](/mare-liberum)  
+**Operação:** [Mare Liberum](/mare-liberum.html)  
 **Status:** documentado  
 **Categoria:** lacuna_investigativa
 
@@ -63,7 +63,7 @@ Ao contrário do que a maioria das fontes de imprensa reportou, a Operação Mar
 
 - **P01** — Contestação processual: a inclusão do Galeão nas diligências sem menção detalhada nas fontes primárias cria zona de incerteza sobre a extensão exata do acervo probatório coletado
 - **P06** — Questão de competência territorial: Porto do Rio e Aeroporto do Galeão são alfândegas juridicamente distintas — a defesa pode arguir que os fatos do Galeão devem ser apurados em processo separado, com distribuição em vara distinta
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### A questão de competência como vetor prescricional
 
@@ -86,6 +86,6 @@ A inclusão silenciosa do Aeroporto do Galeão nas diligências é o detalhe de 
 
 ## Referências
 
-- [Operação Mare Liberum](/mare-liberum)
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Operação Mare Liberum](/mare-liberum.html)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 - [Operação mira esquema de propina no Porto do Rio e afasta servidores da Receita — Jornal de Brasília](https://jornaldebrasilia.com.br/noticias/brasil/operacao-mira-esquema-de-propina-no-porto-do-rio-e-afasta-servidores-da-receita/)

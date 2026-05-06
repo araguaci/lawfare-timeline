@@ -39,7 +39,7 @@ O reajuste de 60% nas diárias foi aprovado enquanto o governo anunciava conten�
 ### Padrões sistêmicos ativados
 
 - **P06**
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### Fontes
 

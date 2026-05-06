@@ -22,7 +22,7 @@ source_data: lawfare-mare-liberum-timeline.json
 Marco inicial do intervalo temporal coberto pelas 17.000 Declarações de Importação irregulares identificadas pela Corregedoria da Receita Federal. Porto do Rio e Aeroporto do Galeão como alfândegas-alvo. Início do que virá a ser a Operação Mare Liberum.
 
 **Tipo:** Marco Temporal  
-**Operação:** [Mare Liberum](/mare-liberum)  
+**Operação:** [Mare Liberum](/mare-liberum.html)  
 **Valor envolvido:** R$ 86,6 bilhões (acumulado Jul/2021–Mar/2026)
 
 ***
@@ -53,7 +53,7 @@ Julho de 2021 marca o início do intervalo temporal coberto pela investigação 
 ### Padrões sistêmicos ativados
 
 - **P05** — Cofres públicos como vetor: mercadorias de alto valor em canal de maior rigor fiscal liberadas irregularmente
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### Implicação processual
 
@@ -65,5 +65,5 @@ O marco de julho de 2021 é o ponto zero a partir do qual as 17.000 DIs irregula
 
 ## Referências
 
-- [Operação Mare Liberum](/mare-liberum)
+- [Operação Mare Liberum](/mare-liberum.html)
 - [PF deflagra operação para combater corrupção na alfândega do Porto do Rio — Gov.br](https://www.gov.br/pf/pt-br/assuntos/noticias/2026/04/pf-deflagra-operacao-para-combater-corrupcao-na-alfandega-do-porto-do-rio)

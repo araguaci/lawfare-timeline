@@ -54,7 +54,7 @@ Barroso era, no período das eleições de 2022, **presidente do TSE** — órg�
 |--------|-----------|
 | **P3** | Ministro do STF/TSE como ator político — captura de instância jurisdicional para fins além da adjudicação |
 | **P7** | Uso de agente externo (governo dos EUA, Departamento de Estado) como vetor de pressão institucional sobre as Forças Armadas |
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### Repercussão institucional
 
@@ -80,6 +80,6 @@ A declaração de Barroso em Nova York é rara porque foi feita voluntariamente,
 
 ## Referências
 
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 - [CartaCapital — 13/05/2025](https://www.cartacapital.com.br/politica/barroso-diz-que-pediu-apoio-dos-eua-para-evitar-um-golpe-de-estado-no-brasil/) — Cobertura original com transcrição da declaração
 - [Senado Federal — 20/05/2025](https://www.senado.gov.br/noticias/barroso-convocado-seguranca-publica) — Convocação pela Comissão de Segurança Pública

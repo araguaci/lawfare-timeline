@@ -22,7 +22,7 @@ source_data: lawfare-mare-liberum-timeline.json
 Análise transversal posiciona a Mare Liberum com o perfil de risco mais alto do corpus no momento da deflagração: 5,5 de 7 padrões sistêmicos ativos ou em risco imediato. P03 (captura judicial) e P05 (cofres públicos) plenamente documentados; P01, P04 e P06 com forte evidência estrutural; P02 latente; P07 como hipótese. Supera o Banco Master no perfil de risco inicial.
 
 **Tipo:** Análise Editorial  
-**Operação:** [Mare Liberum](/mare-liberum)  
+**Operação:** [Mare Liberum](/mare-liberum.html)  
 **Status:** análise (não constitui afirmação factual sobre desfecho)  
 **Verificado:** não (análise autoral)
 
@@ -82,7 +82,7 @@ A Mare Liberum é a operação com o maior potencial de impacto institucional do
 
 ## Referências
 
-- [Operação Mare Liberum](/mare-liberum)
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Operação Mare Liberum](/mare-liberum.html)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 - [PF deflagra operação para combater corrupção na alfândega do Porto do Rio — Gov.br](https://www.gov.br/pf/pt-br/assuntos/noticias/2026/04/pf-deflagra-operacao-para-combater-corrupcao-na-alfandega-do-porto-do-rio)
 - [PF deflagra operação contra esquema bilionário na Alfândega do Rio de Janeiro — Brasil 247](https://www.brasil247.com/regionais/sudeste/pf-deflagra-operacao-contra-esquema-bilionario-na-alfandega-do-rio-de-janeiro)

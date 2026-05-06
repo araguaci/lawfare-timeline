@@ -53,7 +53,7 @@ Schüler formula a oposição estrutural que define o diagnóstico: **"A oposiç
 
 - **P03** — Captura judicial de emergência
 - **P05** — Cofres públicos como vetor
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### Relevância para o projeto
 
@@ -71,6 +71,6 @@ Valor documental: primeiro sinal de convergência entre narrativa de grande impr
 
 ## Referências
 
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 - O Estado de S. Paulo, Editoria Política, A12, 26/04/2026 — Fernando Schüler, "A captura do Estado"
 - Entradas cruzadas: IDs 147, 148, 149 (lawfare-timeline-IDs-146-149.json)

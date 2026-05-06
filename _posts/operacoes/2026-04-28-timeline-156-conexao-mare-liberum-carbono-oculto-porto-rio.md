@@ -57,7 +57,7 @@ A análise comparativa entre a Operação Mare Liberum e a Operação Carbono Oc
 
 - **P05** — Cofres públicos como vetor: ambas as operações têm o Porto do Rio como infraestrutura de fraude fiscal de larga escala
 - **P07** — Infraestrutura advisória compartilhada: a Carbono Oculto revelou uso de 40 fundos fechados para blindar R$ 30 bilhões; se a Mare Liberum usar estrutura similar para as propinas dos 25 servidores, o denominador comum pode ser a mesma assessoria jurídico-financeira
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### A hipótese das 17.000 DIs como denominador comum
 
@@ -79,6 +79,6 @@ A conexão Mare Liberum — Carbono Oculto é, no estado atual das fontes, uma h
 
 ## Referências
 
-- [Operação Mare Liberum](/mare-liberum)
+- [Operação Mare Liberum](/mare-liberum.html)
 - [Operação Carbono Oculto — Receita Federal e órgãos parceiros combatem organização no setor de combustíveis — Gov.br/Receita Federal](https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2025/agosto/operacao-carbono-oculto-rrb-e-orgaos-parceiros-combatem-organizacao-responsavel-por-sonegacao-e-lavagem-de-dinheiro-no-setor-de-combustiveis)
 - [PF deflagra operação contra esquema bilionário na Alfândega do Rio de Janeiro — Brasil 247](https://www.brasil247.com/regionais/sudeste/pf-deflagra-operacao-contra-esquema-bilionario-na-alfandega-do-rio-de-janeiro)

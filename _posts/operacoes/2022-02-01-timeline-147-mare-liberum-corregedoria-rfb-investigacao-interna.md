@@ -22,7 +22,7 @@ source_data: lawfare-mare-liberum-timeline.json
 A Corregedoria da Receita Federal identifica indícios de irregularidades no despacho aduaneiro do Porto do Rio a partir de mecanismos internos de controle e de denúncias. Início formal das investigações que culminarão na Operação Mare Liberum 4 anos depois. A investigação interna, sem mandado judicial declarado nesta fase, será posteriormente um vetor de contestação processual pela defesa.
 
 **Tipo:** Abertura de Investigação  
-**Operação:** [Mare Liberum](/mare-liberum)  
+**Operação:** [Mare Liberum](/mare-liberum.html)  
 **Status:** documentado
 
 ***
@@ -50,7 +50,7 @@ Em fevereiro de 2022, a Corregedoria da Receita Federal do Brasil (RFB) inicia f
 
 - **P01** — Coleta de provas sem autorização judicial declarada: 4 anos de monitoramento interno sem mandado expresso é material para a defesa questionar a legalidade de cada fase da coleta de evidências
 - **P04** — Vazamento/weaponização da investigação: investigação interna de longa duração cria risco de contaminação de prova por divulgação prematura
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### Dimensão processual (Padrão P01)
 
@@ -70,5 +70,5 @@ A abertura da investigação interna em fevereiro de 2022 é o momento zero da c
 
 ## Referências
 
-- [Operação Mare Liberum](/mare-liberum)
+- [Operação Mare Liberum](/mare-liberum.html)
 - [PF deflagra operação contra esquema bilionário na Alfândega do Rio de Janeiro — Brasil 247](https://www.brasil247.com/regionais/sudeste/pf-deflagra-operacao-contra-esquema-bilionario-na-alfandega-do-rio-de-janeiro)

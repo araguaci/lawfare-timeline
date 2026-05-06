@@ -22,7 +22,7 @@ source_data: lawfare-mare-liberum-timeline.json
 A investigação interna da Corregedoria da RFB iniciada em fev/2022 é tanto a força da operação (cadeia de custódia institucional, sem agente externo como a ABIN na Satiagraha) quanto sua principal vulnerabilidade. Quatro anos de monitoramento interno sem mandado judicial declarado é material rico para a defesa questionar a legalidade de cada fase da coleta de provas. O paralelo com a Satiagraha é estrutural: lá foi a participação informal da ABIN; aqui pode ser a ausência de autorização judicial formal para fases específicas da corregedoria.
 
 **Tipo:** Análise de Risco  
-**Operação:** [Mare Liberum](/mare-liberum)  
+**Operação:** [Mare Liberum](/mare-liberum.html)  
 **Padrão sistêmico:** P01  
 **Status:** análise  
 **Verificado:** não (análise autoral)
@@ -88,7 +88,7 @@ O Padrão P01 na Mare Liberum é o risco mais difícil de avaliar externamente, 
 
 ## Referências
 
-- [Operação Mare Liberum](/mare-liberum)
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Operação Mare Liberum](/mare-liberum.html)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 - [PF deflagra operação para combater corrupção na alfândega do Porto do Rio — Gov.br](https://www.gov.br/pf/pt-br/assuntos/noticias/2026/04/pf-deflagra-operacao-para-combater-corrupcao-na-alfandega-do-porto-do-rio)
 - [PF deflagra operação contra esquema bilionário na Alfândega do Rio de Janeiro — Brasil 247](https://www.brasil247.com/regionais/sudeste/pf-deflagra-operacao-contra-esquema-bilionario-na-alfandega-do-rio-de-janeiro)

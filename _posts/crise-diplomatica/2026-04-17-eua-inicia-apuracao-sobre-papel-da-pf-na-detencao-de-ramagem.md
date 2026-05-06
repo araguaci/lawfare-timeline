@@ -65,7 +65,7 @@ O ICE, ao agir por canal migratório, não realiza nenhuma dessas avaliações. 
 ### Padrões sistêmicos
 
 O uso do canal migratório para fins de persecução penal política replica, em âmbito internacional, o **Padrão P7** documentado no corpus do lawfare-timeline: uso de agentes externos como vetores de pressão institucional contra alvos políticos.
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ## 🎯 Conclusão
 

@@ -22,7 +22,7 @@ source_data: lawfare-mare-liberum-timeline.json
 Corregedoria da Receita Federal identifica 17.000 Declarações de Importação (DI) contaminadas por irregularidades, cobrindo R$ 86,6 bilhões em mercadorias no período julho de 2021 a março de 2026. Propina estimada em "dezenas de milhões de reais". Prejuízo fiscal direto estimado em R$ 500 milhões. A fragmentação do caso em 17.000 episódios individuais é um risco prescricional imediato — cada DI pode ser arguida como fato autônomo com prazo próprio.
 
 **Tipo:** Dado Quantitativo  
-**Operação:** [Mare Liberum](/mare-liberum)  
+**Operação:** [Mare Liberum](/mare-liberum.html)  
 **Valor envolvido:** R$ 86,6 bilhões (mercadorias) · R$ 500 milhões (prejuízo fiscal) · dezenas de milhões (propinas)
 
 ***
@@ -60,7 +60,7 @@ O ratio entre mercadorias (R$ 86,6 bilhões) e prejuízo fiscal (R$ 500 milhões
 
 - **P05** — Cofres públicos como vetor: R$ 500 milhões em prejuízo fiscal direto; R$ 86,6 bilhões em base tributável sub-declarada
 - **P06** — Prescrição: cada DI individual pode ser arguida como episódio autônomo com prazo prescricional próprio, fragmentando o caso em 17.000 processos menores
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### Risco prescricional (Padrão P06)
 
@@ -87,5 +87,5 @@ As 17.000 DIs são simultaneamente a prova mais sólida de sistematicidade (nenh
 
 ## Referências
 
-- [Operação Mare Liberum](/mare-liberum)
+- [Operação Mare Liberum](/mare-liberum.html)
 - [PF faz operação contra corrupção na Alfândega do Porto do Rio — CNN Brasil](https://www.cnnbrasil.com.br/nacional/sudeste/rj/pf-faz-operacao-contra-corrupcao-na-alfandega-do-porto-do-rio)

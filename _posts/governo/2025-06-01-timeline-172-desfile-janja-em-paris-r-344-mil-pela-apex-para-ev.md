@@ -40,7 +40,7 @@ O uso da Apex como canal de financiamento é estruturalmente idêntico ao padrã
 
 - **P06**
 - **P05**
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### Fontes
 

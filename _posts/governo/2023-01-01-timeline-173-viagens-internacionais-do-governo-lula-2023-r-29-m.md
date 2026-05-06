@@ -39,7 +39,7 @@ Série histórica relevante: R$ 47 mi em hospedagem em 28 meses, aceleração co
 ### Padrões sistêmicos ativados
 
 - **P06**
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### Fontes
 

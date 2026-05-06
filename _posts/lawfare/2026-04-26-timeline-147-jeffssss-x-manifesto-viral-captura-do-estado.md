@@ -49,7 +49,7 @@ Post público no X de conta @Jeffssss_ formula tese sobre captura do Estado em l
 
 - **P04** — Weaponização da mídia
 - **P05** — Cofres públicos como vetor
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### Relevância para o projeto
 
@@ -70,6 +70,6 @@ Valor documental como termômetro de percepção coletiva. Não constitui fonte 
 
 ## Referências
 
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 - X (Twitter), @Jeffssss_, post público, circulação abr/2026
 - Entradas cruzadas: IDs 146, 148, 149 (lawfare-timeline-IDs-146-149.json)

@@ -22,7 +22,7 @@ source_data: lawfare-mare-liberum-timeline.json
 A nota oficial da PF e todas as fontes de imprensa disponíveis mencionam "importadores" como categoria de investigados, mas não identificam nenhum importador ou empresário pelo nome. O sigilo investigativo está mantido para os beneficiários do lado privado. Padrão histórico do corpus: quando os beneficiários finais são de alto perfil, o caso frequentemente para exatamente neste nível.
 
 **Tipo:** Lacuna Investigativa  
-**Operação:** [Mare Liberum](/mare-liberum)  
+**Operação:** [Mare Liberum](/mare-liberum.html)  
 **Status:** em_aberto  
 **Verificado:** sim
 
@@ -54,7 +54,7 @@ A principal ausência da deflagração da Operação Mare Liberum é a identidad
 
 - **P01** — Coleta de provas sem autorização declarada: o sigilo sobre beneficiários pode indicar que o inquérito ainda está investigando o lado privado sem autorização judicial suficiente para tornar público
 - **P03** — Captura judicial de emergência: se os beneficiários finais incluem grupos econômicos com capacidade jurídica sofisticada, a notificação de indiciamento pode desencadear o mecanismo P03 com intensidade proporcional ao poder dos investigados
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### O padrão histórico do corpus
 
@@ -83,5 +83,5 @@ A ausência dos beneficiários finais no dia zero não é, por si só, evidênci
 
 ## Referências
 
-- [Operação Mare Liberum](/mare-liberum)
+- [Operação Mare Liberum](/mare-liberum.html)
 - [PF deflagra operação para combater corrupção na alfândega do Porto do Rio — Gov.br](https://www.gov.br/pf/pt-br/assuntos/noticias/2026/04/pf-deflagra-operacao-para-combater-corrupcao-na-alfandega-do-porto-do-rio)

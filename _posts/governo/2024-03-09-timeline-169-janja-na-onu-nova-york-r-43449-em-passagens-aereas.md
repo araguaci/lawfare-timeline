@@ -39,7 +39,7 @@ A estrutura informal é o mecanismo: sem cargo, sem diárias atribuídas diretam
 ### Padrões sistêmicos ativados
 
 - **P06**
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### Fontes
 

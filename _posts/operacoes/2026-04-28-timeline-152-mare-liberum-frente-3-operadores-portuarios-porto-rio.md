@@ -22,7 +22,7 @@ source_data: lawfare-mare-liberum-timeline.json
 Terceira frente do esquema: recebimento sistemático de vantagens indevidas de operadores portuários, consolidando um sistema contínuo de facilitação de irregularidades no comércio exterior. Inclui práticas de redução indevida de tributos, reversão irregular de penalidades e redistribuição direcionada de processos. Esta frente conecta o esquema às estruturas formais de operação do Porto do Rio — operadores com licença ANTAQ.
 
 **Tipo:** Modus Operandi  
-**Operação:** [Mare Liberum](/mare-liberum)  
+**Operação:** [Mare Liberum](/mare-liberum.html)  
 **Status:** documentado  
 **Categoria:** lacuna_investigativa
 
@@ -58,7 +58,7 @@ A Frente 3 da Operação Mare Liberum descreve um sistema de corrupção mais in
 ### Padrões sistêmicos ativados
 
 - **P05** — Cofres públicos como vetor: a redução indevida de tributos é um desvio direto de arrecadação; a reversão de penalidades elimina o mecanismo sancionatório do Estado
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 
 ### Distinção em relação às Frentes 1 e 2
 
@@ -83,6 +83,6 @@ A Frente 3 é a que indica maior institucionalização do esquema: não é corru
 
 ## Referências
 
-- [Operação Mare Liberum](/mare-liberum)
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Operação Mare Liberum](/mare-liberum.html)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 - [PF deflagra operação contra esquema bilionário na Alfândega do Rio de Janeiro — Brasil 247](https://www.brasil247.com/regionais/sudeste/pf-deflagra-operacao-contra-esquema-bilionario-na-alfandega-do-rio-de-janeiro)

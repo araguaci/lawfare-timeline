@@ -62,7 +62,7 @@ O lawfare-timeline está documentalmente à frente do debate público. O gap ent
 
 ## Referências
 
-- [Padrões sistêmicos](/padroes-sistemicos)
+- [Padrões sistêmicos](/padroes-sistemicos.html)
 - ID 146 — Schüler / Estadão, 26/04/2026
 - ID 147 — @Jeffssss_ / X, abr/2026
 - Entrada complementar: ID 149 (falha institucional de segundo nível)
