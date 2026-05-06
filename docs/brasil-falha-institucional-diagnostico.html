@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Falha Institucional: Diagnóstico Sistêmico Brasil (2025)</title>
+  
+  <!-- Design System Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      /* Lawfare Design System 1.0 Tokens */
+      --bg: #080c10;
+      --bg1: #0d1218;
+      --bg2: #121820;
+      --bg3: #1a2230;
+      --border: rgba(255,255,255,0.06);
+      --border2: rgba(255,255,255,0.12);
+      --fg: #e8ecf0;
+      --fg2: #8a9ab0;
+      --fg3: #4a5a6a;
+      --red: #e84040;
+      --red2: rgba(232,64,64,0.15);
+      --amber: #e8a020;
+      --amber2: rgba(232,160,32,0.15);
+      --blue: #3090e8;
+      --blue2: rgba(48,144,232,0.12);
+      --blue-bright: #4eb5ff;
+      --green: #28c880;
+      --green2: rgba(40,200,128,0.12);
+      --purple: #a060e8;
+      --purple2: rgba(160,96,232,0.12);
+      --cyan: #20d0e8;
+      --font-mono: 'IBM Plex Mono', monospace;
+      --font-display: 'Syne', sans-serif;
+    }
+
+    /* Reset & Base */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { 
+      background: var(--bg); 
+      color: var(--fg); 
+      font-family: var(--font-mono); 
+      font-size: 13px; 
+      line-height: 1.6; 
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Layout */
+    .container { max-width: 1400px; margin: 0 auto; padding: 0 0 80px; }
+    .main { padding: 0 20px; }
+    @media (min-width: 768px) { .main { padding: 0 40px; } }
+
+    /* Header Component */
+    .header { 
+      background: var(--bg1); 
+      border-bottom: 1px solid var(--border2); 
+      padding: 24px 20px; 
+      position: relative; 
+      overflow: hidden; 
+      margin-bottom: 0;
+    }
+    @media (min-width: 768px) { .header { padding: 40px 40px 32px; } }
+    .header::before { 
+      content: ''; 
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+      right: 0; 
+      height: 2px; 
+      background: linear-gradient(90deg, var(--red), var(--purple), var(--red)); 
+      background-size: 200% 100%; 
+      animation: scanline 3s linear infinite; 
+    }
+    @keyframes scanline { to { background-position: 200% 0; } }
+
+    .hero-title { 
+      font-family: var(--font-display); 
+      font-size: clamp(28px, 5vw, 42px); 
+      font-weight: 800; 
+      letter-spacing: -0.02em; 
+      line-height: 1.1; 
+      margin: 16px 0 8px;
+    }
+    .hero-title span { color: var(--red); }
+    .subtitle { font-size: 13px; color: var(--fg2); max-width: 700px; }
+
+    /* Nav Tabs */
+    .nav-tabs { 
+      display: flex; 
+      background: var(--bg1); 
+      border-bottom: 1px solid var(--border); 
+      padding: 0 20px; 
+      overflow-x: auto; 
+      scrollbar-width: none; 
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      margin-bottom: 32px;
+    }
+    .nav-tabs::-webkit-scrollbar { display: none; }
+    @media (min-width: 768px) { .nav-tabs { padding: 0 40px; } }
+    .nav-tab { 
+      padding: 14px 16px; 
+      font-size: 11px; 
+      letter-spacing: 0.08em; 
+      text-transform: uppercase; 
+      color: var(--fg3); 
+      cursor: pointer; 
+      border: none; 
+      background: none; 
+      border-bottom: 2px solid transparent; 
+      white-space: nowrap; 
+      transition: all 0.15s; 
+      font-family: var(--font-mono);
+      font-weight: 700;
+    }
+    .nav-tab:hover { color: var(--fg2); }
+    .nav-tab.active { color: var(--fg); border-bottom-color: var(--red); }
+
+    /* Cards & Grids */
+    .grid-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr)); gap: 12px; margin-top: 32px; }
+    .grid-2col { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); gap: 16px; }
+    .grid-3col { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px; }
+    
+    .card { background: var(--bg1); border: 1px solid var(--border); border-radius: 6px; padding: 20px; position: relative; }
+    .card-title { font-family: var(--font-display); font-size: 14px; font-weight: 700; letter-spacing: 0.02em; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+    .section-title { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--fg3); margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+
+    /* Stat Card */
+    .stat-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 6px; padding: 12px 16px; }
+    .stat-num { font-family: var(--font-display); font-size: 22px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; }
+    .stat-label { font-size: 10px; color: var(--fg3); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 2px; }
+
+    /* Bars */
+    .bar-row { margin-bottom: 16px; }
+    .bar-header { display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 6px; font-family: var(--font-mono); }
+    .bar-track { height: 6px; background: var(--bg3); border-radius: 3px; overflow: hidden; }
+    .bar-fill { height: 100%; transition: width 1s ease-out; }
+
+    /* Verdict Box */
+    .verdict-box { border-left: 3px solid var(--red); padding: 16px; background: var(--bg2); border-radius: 0 6px 6px 0; margin-bottom: 16px; }
+    .verdict-title { font-size: 13px; font-weight: 700; color: var(--fg); margin-bottom: 4px; }
+    .verdict-desc { font-size: 12px; color: var(--fg2); line-height: 1.6; }
+
+    /* LDS 1.0 UTILS */
+    .agrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 24px; }
+    .acard { background: var(--bg1); border: 1px solid var(--border); border-radius: 4px; padding: 18px; text-decoration: none; transition: all 0.2s; display: flex; flex-direction: column; }
+    .acard:hover { border-color: var(--red); background: var(--bg2); }
+    .abadge { display: inline-flex; font-family: var(--font-mono); font-size: 9px; font-weight: 700; padding: 2px 7px; border-radius: 2px; text-transform: uppercase; letter-spacing: 0.1em; width: fit-content; margin-bottom: 10px; }
+    .ab-gold { background: var(--amber2); color: var(--amber); border: 1px solid var(--amber); }
+    .ab-red { background: var(--red2); color: var(--red); border: 1px solid var(--red); }
+    .ab-blue { background: var(--blue2); color: var(--blue); border: 1px solid var(--blue); }
+    .atitle { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--fg); margin-bottom: 6px; }
+    .adesc { font-size: 11px; color: var(--fg2); line-height: 1.5; }
+
+    /* Flow Component */
+    .flow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 24px; }
+    .flow-item { background: var(--bg2); border: 1px solid var(--border); padding: 8px 14px; border-radius: 4px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+    .flow-arrow { color: var(--fg3); font-size: 16px; }
+
+    /* Badge */
+    .badge { display: inline-flex; align-items: center; gap: 6px; padding: 3px 8px; border-radius: 3px; font-size: 10px; font-weight: 600; letter-spacing: 0.10em; text-transform: uppercase; font-family: var(--font-mono); }
+    .badge-red { background: var(--red2); color: var(--red); border: 1px solid rgba(232,64,64,0.3); }
+    .badge-amber { background: var(--amber2); color: var(--amber); border: 1px solid rgba(232,160,32,0.3); }
+    .badge-blue { background: var(--blue2); color: var(--blue); border: 1px solid rgba(48,144,232,0.3); }
+
+    /* Tabs Management */
+    .tab-panel { display: block; padding-top: 60px; margin-top: -30px; }
+    .tab-panel:not(:first-child) { border-top: 1px solid var(--border); margin-top: 40px; padding-top: 80px; }
+
+    /* Footer */
+    .footer { margin-top: 64px; padding: 32px 20px; background: var(--bg1); border-top: 1px solid var(--border2); }
+    @media (min-width: 768px) { .footer { padding: 40px 40px; } }
+    .footer-content { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: flex-start; }
+    .footer-meta { flex: 1; min-width: 300px; }
+    .footer-text { font-size: 11px; color: var(--fg3); line-height: 1.6; max-width: 800px; }
+    .footer-text a { color: var(--blue-bright); text-decoration: none; font-weight: 700; }
+
+    .text-red { color: var(--red); }
+    .text-amber { color: var(--amber); }
+    .text-blue { color: var(--blue); }
+
+    @media print {
+      body { background: #fff; color: #111; }
+      .nav-tabs { display: none !important; }
+      .tab-panel { display: block !important; page-break-inside: avoid; }
+      .header::before { display: none; }
+      :root { --bg: #fff; --bg1: #f8f8f8; --bg2: #f0f0f0; --fg: #111; --fg2: #444; --fg3: #888; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header class="header">
+    <div class="meta-badges">
+      <span class="badge badge-red">Diagnóstico Sistêmico</span>
+      <span class="badge badge-amber">Brasil 2025</span>
+    </div>
+    <h1 class="hero-title">Estado Caro que não protege. <span>Crime que supera o Estado.</span></h1>
+    <p class="subtitle">Análise transversal de falhas estruturais, captura orçamentária e o paradoxo da segurança pública no Brasil. Dados consolidados 2022–2025.</p>
+    
+    <div class="grid-stats">
+      <div class="stat-card">
+        <div class="stat-num text-red">~3%</div>
+        <div class="stat-label">Gasto PIB (Ordem)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num text-red">1,55%</div>
+        <div class="stat-label">Judiciário / PIB</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num text-amber">R$ 146bi</div>
+        <div class="stat-label">Faturam. Ilícito</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num text-red">64%</div>
+        <div class="stat-label">Impunidade Homic.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num text-blue">11%</div>
+        <div class="stat-label">Custo Total Crime</div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-tabs">
+    <a class="nav-tab active" href="#tab-overview">Overview</a>
+    <a class="nav-tab" href="#tab-economia">Economia Ilícita</a>
+    <a class="nav-tab" href="#tab-eficiencia">Eficiência</a>
+    <a class="nav-tab" href="#tab-estrutural">Diagnóstico</a>
+  </nav>
+
+  <main class="main">
+    <!-- TAB: OVERVIEW -->
+    <div id="tab-overview" class="tab-panel">
+      <div class="section-title">Gasto Público vs Retorno · Benchmarks Globais</div>
+      <div class="grid-4">
+        <div class="stat-card">
+          <div class="stat-num text-red">3%</div>
+          <div class="stat-label">Brasil (Ordem/Seg)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num text-blue">1,9%</div>
+          <div class="stat-label">Média Global</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num text-red">1,55%</div>
+          <div class="stat-label">Judiciário Brasil</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num text-blue">0,3%</div>
+          <div class="stat-label">Média OCDE</div>
+        </div>
+      </div>
+
+      <div class="section-title">Composição do Gasto Judiciário (2024)</div>
+      <div class="card">
+        <div class="bar-row">
+          <div class="bar-header"><span>Salários e Aposentadorias</span><span class="text-red">84%</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width: 84%; background: var(--red);"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-header"><span>Manutenção, Bens e Serviços</span><span>14%</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width: 14%; background: var(--fg3);"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-header"><span>Investimentos Estruturais</span><span>2%</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width: 2%; background: var(--fg3);"></div></div>
+        </div>
+        <p class="footnote">Gasto real: R$ 131 bi/ano apenas em folha de pagamento. O sistema é desenhado para sustentar a si mesmo, não para a eficácia operacional na ponta.</p>
+      </div>
+
+      <div class="section-title">Veredito do Diagnóstico</div>
+      <div class="grid-2col">
+        <div class="verdict-box">
+          <div class="verdict-title">Captura Orçamentária</div>
+          <div class="verdict-desc">O Brasil ostenta o Judiciário mais caro do mundo proporcionalmente. O crescimento do orçamento (R$ 181,5 bi) não se traduz em maior segurança.</div>
+        </div>
+        <div class="verdict-box">
+          <div class="verdict-title">Vetor de Impunidade</div>
+          <div class="verdict-desc">Com 64% de homicídios impunes, o sinal institucional emitido é de baixíssimo risco para o crime violento e organizado.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: ECONOMIA -->
+    <div id="tab-economia" class="tab-panel">
+      <div class="section-title">A Outra Economia · Faturamento do Crime Organizado</div>
+      <div class="grid-3col">
+        <div class="stat-card">
+          <div class="stat-num text-red">R$ 146bi</div>
+          <div class="stat-label">Bebidas, Ouro, fumo</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num text-red">R$ 335bi</div>
+          <div class="stat-label">Potencial Cocaína</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num text-blue">11%</div>
+          <div class="stat-label">Custo % PIB BR</div>
+        </div>
+      </div>
+
+      <div class="section-title">Infiltração na Economia Formal (CNI/FIESP)</div>
+      <div class="card">
+        <div class="bar-row">
+          <div class="bar-header"><span>Combustíveis Ilegais</span><span class="text-red">R$ 61,5 bi</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width: 100%; background: var(--red);"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-header"><span>Bebidas Ilegais</span><span class="text-amber">R$ 56,9 bi</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width: 93%; background: var(--amber);"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-header"><span>Extração Ilegal de Ouro</span><span>R$ 18,2 bi</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width: 30%; background: var(--fg3);"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-header"><span>Contrabando de Cigarros</span><span>R$ 10,3 bi</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width: 17%; background: var(--fg3);"></div></div>
+        </div>
+        <p class="footnote" style="margin-top: 16px;">Total infiltrado: <strong>R$ 453,5 bi</strong>. Este montante superou o PIB anual de Santa Catarina no período analisado.</p>
+      </div>
+    </div>
+
+    <!-- TAB: EFICIENCIA -->
+    <div id="tab-eficiencia" class="tab-panel">
+      <div class="section-title">Eficiência de Elucidação de Homicídios</div>
+      <div class="grid-2col">
+        <div class="card">
+          <div class="card-title">Comparativo Brasil vs Mundo</div>
+          <div class="bar-row">
+            <div class="bar-header"><span>Brasil (Média 2023)</span><span class="text-red">36%</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width: 36%; background: var(--red);"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-header"><span>Média Global</span><span class="text-blue">63%</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width: 63%; background: var(--blue);"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-header"><span>Bahia (Menor Taxa)</span><span class="text-red">13%</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width: 13%; background: #922b21;"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-header"><span>DF (Maior Taxa)</span><span class="text-blue">96%</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width: 96%; background: var(--green);"></div></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">Paradoxo do Encarceramento</div>
+          <p class="verdict-desc" style="margin-bottom: 16px;">3ª maior população carcerária do mundo (670k), mas com foco enviesado.</p>
+          <div class="bar-row">
+            <div class="bar-header"><span>Crimes Patrimoniais</span><span class="text-red">40%</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width: 40%; background: var(--red);"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-header"><span>Tráfico de Drogas</span><span class="text-red">28%</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width: 28%; background: var(--amber);"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-header"><span>Homicídio</span><span class="text-blue">11%</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width: 11%; background: var(--fg3);"></div></div>
+          </div>
+          <p class="footnote">O sistema pune agressivamente o pequeno delito patrimonial e o varejo do tráfico, enquanto 64% dos matadores permanecem livres.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: ESTRUTURAL -->
+    <div id="tab-estrutural" class="tab-panel">
+      <div class="section-title">Diagnóstico Estrutural · 5 Falhas Críticas</div>
+      <div class="verdict-box">
+        <div class="verdict-title">1. Modelo Policial Ineficiente</div>
+        <div class="verdict-desc">A separação PM/PC gera duplicação e lacunas. Países desenvolvidos centralizam sob polícia judiciária e ciclo completo.</div>
+      </div>
+      <div class="verdict-box">
+        <div class="verdict-title">2. Impunidade como Incentivo</div>
+        <div class="verdict-desc">Matar no Brasil tem baixo risco. O crime organizado usa essa assimetria estratégica para se consolidar.</div>
+      </div>
+      <div class="verdict-box">
+        <div class="verdict-title">3. Externalidade Econômica</div>
+        <div class="verdict-desc">Cada morte custa R$ 1M ao erário. 40.000 mortes/ano = R$ 40 bi em custos ocultos de saúde e previdência.</div>
+      </div>
+      <div class="verdict-box">
+        <div class="verdict-title">4. Opacidade de Dados</div>
+        <div class="verdict-desc">Sem indicador nacional padronizado. A falta de métricas serve como blindagem operacional para instituições ineficientes.</div>
+      </div>
+      <div class="verdict-box">
+        <div class="verdict-title">5. Hegemonia da Economia Ilícita</div>
+        <div class="verdict-desc">O crime organizado fatura mais do que o Estado gasta para contê-lo (R$ 453 bi infiltrados vs R$ 153 bi orçamento).</div>
+      </div>
+
+      <div class="section-title">Ciclo de Retroalimentação Sistêmica</div>
+      <div class="flow">
+        <div class="flow-item">Gasto alto s/ eficiência</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-item">Impunidade estrutural</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-item">Crime se expande</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-item">Demanda por mais gasto</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-item">Ciclo se repete</div>
+      </div>
+    </div>
+
+    <!-- Related Artifacts (Standardized) -->
+    <div class="section-title">Investigação Transversal & Projetos Relacionados</div>
+    <div class="agrid">
+      <a href="/pcc-cv-ameaca-nacional" class="acard">
+        <div class="abadge ab-red">Metodologia</div>
+        <div class="atitle">PCC e CV — Ameaça Global</div>
+        <div class="adesc">Dashboard analítico sobre a governança criminal e o desmonte dos argumentos da PF.</div>
+      </a>
+      <a href="/global-kompromat" class="acard">
+        <div class="abadge ab-gold">Dossiê</div>
+        <div class="atitle">Global Kompromat</div>
+        <div class="adesc">Mapa de captura institucional, lawfare e redes de kompromat global.</div>
+      </a>
+      <a href="/padroes-sistemicos-dashboard" class="acard">
+        <div class="abadge ab-blue">Analytics</div>
+        <div class="atitle">Padrões Sistêmicos</div>
+        <div class="adesc">Análise transversal de 10 padrões identificados em 25 anos de operações brasileiras.</div>
+      </a>
+      <a href="/operacao-silencio-digital" class="acard">
+        <div class="abadge ab-red">Censura</div>
+        <div class="atitle">Silêncio Digital</div>
+        <div class="adesc">O regime de censura judicial e o uso de ordens sigilosas para proteger a teia.</div>
+      </a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-meta">
+        <div class="badge badge-blue"><strong><a href="https://lawfare-timeline.vercel.app">lawfare-timeline.vercel.app</a></strong></div>
+        <p class="footer-text" style="margin-top: 12px;">Brasil: Falha Institucional & Diagnóstico Sistêmico | Dossier v2.0</p>
+        <p class="footer-text">CC0 1.0 Universal — Domínio Público. Livre para redistribuição analítica.</p>
+      </div>
+      <div class="footer-text">
+        Fontes: Tesouro Nacional, FBSP 2025, Igarapé, CNI/FIESP, UNODC, IPEA e Atlas da Violência. 
+        Dados primários de 2022–2025. Comparações internacionais via metodologia COFOG/FMI.
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+// SCROLL SPY LOGIC
+document.addEventListener('DOMContentLoaded', () => {
+    const panels = document.querySelectorAll('.tab-panel');
+    const navLinks = document.querySelectorAll('.nav-tab');
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '-10% 0px -80% 0px',
+        threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + id) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }, observerOptions);
+
+    panels.forEach(panel => observer.observe(panel));
+});
+</script>
+
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

@@ -58,6 +58,7 @@ A Polícia Federal brasileira, ao anunciar "cooperação policial internacional"
 |--------|-----------|
 | **P3** | Captura de instância jurisdicional estrangeira como ator político em persecução brasileira |
 | **P7** | Uso de agente externo (ICE) como vetor de pressão institucional contra alvo político |
+- [Padrões sistêmicos](/padroes-sistemicos)
 
 ### Consequências imediatas
 

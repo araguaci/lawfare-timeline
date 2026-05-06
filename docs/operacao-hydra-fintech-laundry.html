@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Operação Hydra — Dossiê Investigativo 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #080c10;
+  --bg1: #0d1218;
+  --bg2: #121820;
+  --bg3: #1a2230;
+  --border: rgba(255,255,255,0.06);
+  --border2: rgba(255,255,255,0.12);
+  --fg: #e8ecf0;
+  --fg2: #8a9ab0;
+  --fg3: #4a5a6a;
+  --red: #e84040;
+  --red2: rgba(232,64,64,0.15);
+  --amber: #e8a020;
+  --amber2: rgba(232,160,32,0.15);
+  --blue: #3090e8;
+  --blue2: rgba(48,144,232,0.12);
+  --green: #28c880;
+  --green2: rgba(40,200,128,0.12);
+  --purple: #a060e8;
+  --purple2: rgba(160,96,232,0.12);
+  --cyan: #20d0e8;
+  --mono: 'IBM Plex Mono', monospace;
+  --display: 'Syne', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ── HEADER ── */
+.header {
+  background: var(--bg1);
+  border-bottom: 1px solid var(--border2);
+  padding: 32px 40px 24px;
+  position: relative;
+  overflow: hidden;
+}
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--red), var(--amber), var(--red));
+  animation: scanline 3s linear infinite;
+}
+@keyframes scanline {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
+}
+.header-meta {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 16px;
+  font-size: 11px; color: var(--fg3); letter-spacing: 0.08em;
+}
+.badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 3px 8px; border-radius: 3px;
+  font-size: 10px; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.badge-red { background: var(--red2); color: var(--red); border: 1px solid rgba(232,64,64,0.3); }
+.badge-amber { background: var(--amber2); color: var(--amber); border: 1px solid rgba(232,160,32,0.3); }
+.badge-blue { background: var(--blue2); color: var(--blue); border: 1px solid rgba(48,144,232,0.3); }
+.badge-green { background: var(--green2); color: var(--green); border: 1px solid rgba(40,200,128,0.3); }
+.badge-purple { background: var(--purple2); color: var(--purple); border: 1px solid rgba(160,96,232,0.3); }
+
+.header-title {
+  font-family: var(--display);
+  font-size: clamp(28px,4vw,48px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+.header-title span { color: var(--red); }
+.header-sub {
+  font-size: 14px; color: var(--fg2);
+  font-family: var(--mono);
+  margin-bottom: 24px;
+}
+.header-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px,1fr));
+  gap: 12px;
+  max-width: 900px;
+}
+.stat-item {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 12px 16px;
+}
+.stat-num {
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--red);
+  letter-spacing: -0.02em;
+}
+.stat-lbl { font-size: 10px; color: var(--fg3); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 2px; }
+
+/* ── NAV TABS ── */
+.nav-tabs {
+  display: flex; gap: 0;
+  background: var(--bg1);
+  border-bottom: 1px solid var(--border);
+  padding: 0 40px;
+  overflow-x: auto;
+}
+.nav-tab {
+  padding: 14px 20px;
+  font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--fg3); cursor: pointer; border: none; background: none;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap; transition: all 0.15s;
+  font-family: var(--mono);
+}
+.nav-tab:hover { color: var(--fg2); }
+.nav-tab.active { color: var(--fg); border-bottom-color: var(--red); }
+
+/* ── LAYOUT ── */
+.main { padding: 32px 40px; max-width: 1400px; margin: 0 auto; }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* ── MINDMAP ── */
+.mindmap-wrap {
+  background: var(--bg1);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.mindmap-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.mindmap-title { font-family: var(--display); font-size: 13px; font-weight: 700; letter-spacing: 0.02em; }
+.mindmap-svg-wrap { padding: 20px; overflow-x: auto; }
+
+svg.mindmap {
+  width: 100%; max-width: 1200px;
+  height: auto; display: block; margin: 0 auto;
+}
+
+/* ── GRID SECTIONS ── */
+.section-title {
+  font-family: var(--display); font-size: 11px; font-weight: 700;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--fg3); margin-bottom: 16px; padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px,1fr)); gap: 16px; margin-bottom: 24px; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 16px; margin-bottom: 24px; }
+
+.card {
+  background: var(--bg1);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 20px;
+}
+.card-head {
+  display: flex; align-items: flex-start; gap: 12px;
+  margin-bottom: 14px;
+}
+.card-icon {
+  width: 32px; height: 32px; border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 15px; flex-shrink: 0;
+}
+.icon-red { background: var(--red2); }
+.icon-amber { background: var(--amber2); }
+.icon-blue { background: var(--blue2); }
+.icon-green { background: var(--green2); }
+.icon-purple { background: var(--purple2); }
+
+.card-title { font-family: var(--display); font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+.card-date { font-size: 10px; color: var(--fg3); letter-spacing: 0.06em; }
+.card-body { font-size: 12px; color: var(--fg2); line-height: 1.7; }
+
+.card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.tag { font-size: 10px; padding: 2px 7px; border-radius: 3px; font-weight: 500; letter-spacing: 0.05em; }
+
+/* ── ACTORS TABLE ── */
+.actor-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
+.actor-table th {
+  font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--fg3); text-align: left; padding: 8px 12px;
+  border-bottom: 1px solid var(--border2);
+}
+.actor-table td {
+  padding: 10px 12px; font-size: 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.actor-table tr:hover td { background: var(--bg2); }
+.actor-name { font-weight: 600; color: var(--fg); }
+.actor-role { font-size: 11px; color: var(--fg2); margin-top: 2px; }
+
+/* ── RISK MATRIX ── */
+.risk-matrix { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 12px; margin-bottom: 24px; }
+.risk-item {
+  background: var(--bg1); border: 1px solid var(--border);
+  border-radius: 6px; padding: 16px;
+  display: flex; gap: 12px;
+}
+.risk-severity {
+  width: 4px; border-radius: 2px; flex-shrink: 0;
+}
+.sev-critical { background: var(--red); }
+.sev-high { background: var(--amber); }
+.sev-medium { background: var(--blue); }
+.risk-title { font-size: 12px; font-weight: 600; margin-bottom: 4px; }
+.risk-desc { font-size: 11px; color: var(--fg2); line-height: 1.6; }
+.risk-badge { font-size: 10px; color: var(--fg3); margin-top: 6px; }
+
+/* ── CHECKLIST ── */
+.checklist { display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
+.check-item {
+  background: var(--bg1); border: 1px solid var(--border);
+  border-radius: 6px; padding: 14px 16px;
+  display: flex; align-items: flex-start; gap: 12px;
+  cursor: pointer; transition: border-color 0.15s;
+}
+.check-item:hover { border-color: var(--border2); }
+.check-item.done { opacity: 0.5; }
+.check-item.done .check-text { text-decoration: line-through; color: var(--fg3); }
+.check-box {
+  width: 18px; height: 18px; border-radius: 4px;
+  border: 1.5px solid var(--border2);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 1px; transition: all 0.15s;
+}
+.check-item.done .check-box { background: var(--green2); border-color: var(--green); }
+.check-item.done .check-box::after { content: '✓'; font-size: 11px; color: var(--green); }
+.check-text { font-size: 12px; flex: 1; line-height: 1.6; }
+.check-meta { font-size: 10px; color: var(--fg3); margin-top: 3px; }
+.check-priority { font-size: 10px; font-weight: 600; padding: 2px 6px; border-radius: 3px; }
+
+/* ── TIMELINE ── */
+.timeline { position: relative; padding-left: 24px; margin-bottom: 24px; }
+.timeline::before {
+  content: ''; position: absolute; left: 7px; top: 0; bottom: 0;
+  width: 1px; background: var(--border2);
+}
+.tl-item { position: relative; margin-bottom: 20px; }
+.tl-dot {
+  position: absolute; left: -20px; top: 5px;
+  width: 10px; height: 10px; border-radius: 50%;
+  border: 2px solid var(--bg);
+}
+.tl-date { font-size: 10px; color: var(--fg3); letter-spacing: 0.06em; margin-bottom: 4px; }
+.tl-title { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+.tl-desc { font-size: 12px; color: var(--fg2); line-height: 1.6; }
+
+/* ── CONNECTIONS MAP ── */
+.conn-wrap {
+  background: var(--bg1); border: 1px solid var(--border);
+  border-radius: 8px; padding: 24px; margin-bottom: 24px;
+}
+.conn-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 16px; }
+.conn-node {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 6px; padding: 16px; position: relative;
+}
+.conn-node-title { font-size: 12px; font-weight: 600; margin-bottom: 8px; }
+.conn-links { display: flex; flex-direction: column; gap: 4px; }
+.conn-link { font-size: 11px; color: var(--fg2); padding-left: 12px; position: relative; }
+.conn-link::before {
+  content: '→'; position: absolute; left: 0;
+  color: var(--fg3);
+}
+
+/* ── PATTERN BOX ── */
+.pattern-box {
+  background: var(--bg2);
+  border-left: 3px solid var(--red);
+  border-radius: 0 6px 6px 0;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+}
+.pattern-id { font-size: 10px; color: var(--red); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 4px; }
+.pattern-title { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+.pattern-desc { font-size: 12px; color: var(--fg2); line-height: 1.6; }
+
+/* ── PROGRESS BAR ── */
+.progress-wrap { margin-bottom: 24px; }
+.progress-item { margin-bottom: 12px; }
+.progress-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.progress-label { font-size: 12px; }
+.progress-pct { font-size: 11px; color: var(--fg3); }
+.progress-bar { height: 4px; background: var(--bg3); border-radius: 2px; overflow: hidden; }
+.progress-fill { height: 100%; border-radius: 2px; transition: width 1s ease; }
+
+/* ── ALERT BOX ── */
+.alert {
+  border-radius: 6px; padding: 16px 20px; margin-bottom: 16px;
+  display: flex; gap: 12px; align-items: flex-start;
+}
+.alert-red { background: var(--red2); border: 1px solid rgba(232,64,64,0.25); }
+.alert-amber { background: var(--amber2); border: 1px solid rgba(232,160,32,0.25); }
+.alert-blue { background: var(--blue2); border: 1px solid rgba(48,144,232,0.25); }
+.alert-icon { font-size: 16px; flex-shrink: 0; }
+.alert-content { flex: 1; }
+.alert-title { font-size: 12px; font-weight: 600; margin-bottom: 4px; }
+.alert-desc { font-size: 12px; color: var(--fg2); line-height: 1.6; }
+
+/* ── CC0 FOOTER ── */
+.footer {
+  margin-top: 48px; padding: 20px 40px;
+  border-top: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 8px;
+}
+.footer-text { font-size: 11px; color: var(--fg3); }
+
+/* UTILS */
+.mono { font-family: var(--mono); }
+.text-red { color: var(--red); }
+.text-amber { color: var(--amber); }
+.text-blue { color: var(--blue); }
+.text-green { color: var(--green); }
+.text-muted { color: var(--fg2); }
+.text-dim { color: var(--fg3); }
+.mb-24 { margin-bottom: 24px; }
+.mb-16 { margin-bottom: 16px; }
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
+
+@media(max-width:600px){
+  .header, .main, .nav-tabs { padding-left: 20px; padding-right: 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<div class="header">
+  <div class="header-meta">
+    <span class="badge badge-red">⚠ Investigação Ativa</span>
+    <span class="badge badge-amber">PGR + PF + GAECO-SP</span>
+    <span class="badge badge-blue">Deflagrada: 25.02.2025</span>
+    <span>// lawfare-timeline.vercel.app · CC0 1.0</span>
+  </div>
+  <div class="header-title"><span>OPERAÇÃO</span> HYDRA</div>
+  <div class="header-sub">A Lavanderia Global das Fintechs — Dossiê Investigativo 2026</div>
+  <div class="header-stats">
+    <div class="stat-item"><div class="stat-num text-red">R$ 6bi</div><div class="stat-lbl">Volume documentado</div></div>
+    <div class="stat-item"><div class="stat-num text-amber">15+</div><div class="stat-lbl">Países envolvidos</div></div>
+    <div class="stat-item"><div class="stat-num text-blue">3×</div><div class="stat-lbl">Prisões de Cyllas Salerno</div></div>
+    <div class="stat-item"><div class="stat-num text-purple">2</div><div class="stat-lbl">Fintechs — hub central</div></div>
+    <div class="stat-item"><div class="stat-num text-green">1</div><div class="stat-lbl">Whistleblower executado</div></div>
+  </div>
+</div>
+
+<!-- ═══ TABS ═══ -->
+<div class="nav-tabs">
+  <button class="nav-tab active" onclick="showTab('mindmap')">Mapa Mental</button>
+  <button class="nav-tab" onclick="showTab('atores')">Atores</button>
+  <button class="nav-tab" onclick="showTab('mecanismo')">Mecanismo</button>
+  <button class="nav-tab" onclick="showTab('conexoes')">Conexões Sistêmicas</button>
+  <button class="nav-tab" onclick="showTab('riscos')">Riscos & Lacunas</button>
+  <button class="nav-tab" onclick="showTab('checklist')">Checklist 2026</button>
+  <button class="nav-tab" onclick="showTab('padrao')">Padrão Sistêmico</button>
+  <button class="nav-tab" onclick="showTab('timeline')">Cronologia</button>
+</div>
+
+<div class="main">
+
+<!-- ══════════════════════════════ MAPA MENTAL ══════════════════════════════ -->
+<div id="tab-mindmap" class="tab-panel active">
+  <div class="section-title">Mapa Mental — Estrutura da Operação Hydra</div>
+
+  <div class="alert alert-red mb-24">
+    <div class="alert-icon">🎯</div>
+    <div class="alert-content">
+      <div class="alert-title">Ponto Cego Central: Beneficiários Finais não identificados</div>
+      <div class="alert-desc">O MP denunciou 3 pessoas em março/2025, mas não divulgou as identidades. As LLCs em Delaware e Hong Kong que receberam os R$ 6bi permanecem sem proprietários identificados publicamente. Este é o mesmo padrão recorrente do lawfare-timeline: a investigação para antes de chegar ao topo.</div>
+    </div>
+  </div>
+
+  <div class="mindmap-wrap">
+    <div class="mindmap-header">
+      <div class="mindmap-title">OPERAÇÃO HYDRA — Grafo de Relações</div>
+      <span class="badge badge-red">Legenda abaixo</span>
+    </div>
+    <div class="mindmap-svg-wrap">
+      <svg class="mindmap" viewBox="0 0 1100 700" xmlns="http://www.w3.org/2000/svg" font-family="'IBM Plex Mono', monospace">
+        <!-- Background -->
+        <rect width="1100" height="700" fill="#080c10"/>
+
+        <!-- CONNECTION LINES -->
+        <!-- Center to 2GO Bank -->
+        <line x1="550" y1="350" x2="350" y2="200" stroke="#e84040" stroke-width="2" stroke-dasharray="4,3" opacity="0.7"/>
+        <!-- Center to InvBank -->
+        <line x1="550" y1="350" x2="750" y2="200" stroke="#e84040" stroke-width="2" stroke-dasharray="4,3" opacity="0.7"/>
+        <!-- Center to Gritzbach -->
+        <line x1="550" y1="350" x2="550" y2="140" stroke="#28c880" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
+        <!-- Center to PCC -->
+        <line x1="550" y1="350" x2="200" y2="350" stroke="#e84040" stroke-width="2.5" opacity="0.8"/>
+        <!-- Center to Hezbollah -->
+        <line x1="550" y1="350" x2="900" y2="350" stroke="#a060e8" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.6"/>
+        <!-- Center to Delaware -->
+        <line x1="550" y1="350" x2="350" y2="530" stroke="#e8a020" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
+        <!-- Center to Crypto -->
+        <line x1="550" y1="350" x2="750" y2="530" stroke="#3090e8" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
+        <!-- PCC to Cara Preta (InvBank) -->
+        <line x1="200" y1="350" x2="750" y2="200" stroke="#e84040" stroke-width="1" stroke-dasharray="3,4" opacity="0.4"/>
+        <!-- Hezbollah to Crypto -->
+        <line x1="900" y1="350" x2="750" y2="530" stroke="#a060e8" stroke-width="1" stroke-dasharray="3,4" opacity="0.4"/>
+        <!-- 2GO to Tai-Pan -->
+        <line x1="350" y1="200" x2="160" y2="110" stroke="#e8a020" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+        <!-- Delaware to Houston -->
+        <line x1="350" y1="530" x2="180" y2="620" stroke="#e8a020" stroke-width="1" stroke-dasharray="3,3" opacity="0.4"/>
+        <!-- Hong Kong line -->
+        <line x1="750" y1="530" x2="940" y2="630" stroke="#3090e8" stroke-width="1" stroke-dasharray="3,3" opacity="0.4"/>
+        <!-- 2GO to Bankrow -->
+        <line x1="350" y1="200" x2="120" y2="290" stroke="#e84040" stroke-width="1" stroke-dasharray="2,4" opacity="0.4"/>
+        <!-- InvBank to Cara Preta -->
+        <line x1="750" y1="200" x2="980" y2="130" stroke="#e84040" stroke-width="1" stroke-dasharray="2,4" opacity="0.4"/>
+        <!-- Apostas line -->
+        <line x1="550" y1="350" x2="550" y2="580" stroke="#20d0e8" stroke-width="1" stroke-dasharray="3,4" opacity="0.4"/>
+
+        <!-- ═══ CENTER NODE ═══ -->
+        <rect x="450" y="305" width="200" height="90" rx="8" fill="#1a0808" stroke="#e84040" stroke-width="2"/>
+        <text x="550" y="335" text-anchor="middle" fill="#e84040" font-size="11" font-weight="700" letter-spacing="2">HYDRA HUB</text>
+        <text x="550" y="355" text-anchor="middle" fill="#e8ecf0" font-size="13" font-weight="600">2GO + InvBank</text>
+        <text x="550" y="373" text-anchor="middle" fill="#8a9ab0" font-size="10">R$ 6bi · 15 países · 2019-2025</text>
+        <text x="550" y="389" text-anchor="middle" fill="#4a5a6a" font-size="9">MPSP + PF + GAECO</text>
+
+        <!-- ═══ 2GO BANK ═══ -->
+        <rect x="240" y="155" width="220" height="80" rx="6" fill="#120808" stroke="#e84040" stroke-width="1.5"/>
+        <text x="350" y="178" text-anchor="middle" fill="#e84040" font-size="10" font-weight="700">2GO BANK</text>
+        <text x="350" y="196" text-anchor="middle" fill="#e8ecf0" font-size="11" font-weight="600">Cyllas Salerno Elia Jr.</text>
+        <text x="350" y="212" text-anchor="middle" fill="#8a9ab0" font-size="9">Policial Civil / DEIC / CEO</text>
+        <text x="350" y="226" text-anchor="middle" fill="#4a5a6a" font-size="9">Preso 3× · HC 2024</text>
+
+        <!-- ═══ INVBANK ═══ -->
+        <rect x="640" y="155" width="220" height="80" rx="6" fill="#120808" stroke="#e84040" stroke-width="1.5"/>
+        <text x="750" y="178" text-anchor="middle" fill="#e84040" font-size="10" font-weight="700">INVBANK</text>
+        <text x="750" y="196" text-anchor="middle" fill="#e8ecf0" font-size="11" font-weight="600">Cara Preta · Japa</text>
+        <text x="750" y="212" text-anchor="middle" fill="#8a9ab0" font-size="9">PCC como cotistas diretos</text>
+        <text x="750" y="226" text-anchor="middle" fill="#4a5a6a" font-size="9">Cara Preta morto em 2021</text>
+
+        <!-- ═══ GRITZBACH ═══ -->
+        <rect x="450" y="60" width="200" height="70" rx="6" fill="#081208" stroke="#28c880" stroke-width="1.5"/>
+        <text x="550" y="83" text-anchor="middle" fill="#28c880" font-size="10" font-weight="700">WHISTLEBLOWER</text>
+        <text x="550" y="100" text-anchor="middle" fill="#e8ecf0" font-size="11" font-weight="600">A. V. Gritzbach</text>
+        <text x="550" y="116" text-anchor="middle" fill="#8a9ab0" font-size="9">Executado em GRU · Nov/2024</text>
+        <text x="550" y="128" text-anchor="middle" fill="#4a5a6a" font-size="9">Delação: out/2024 · 8 dias antes</text>
+
+        <!-- ═══ PCC ═══ -->
+        <rect x="60" y="295" width="180" height="110" rx="6" fill="#120808" stroke="#e84040" stroke-width="2"/>
+        <text x="150" y="318" text-anchor="middle" fill="#e84040" font-size="11" font-weight="700">PCC</text>
+        <text x="150" y="336" text-anchor="middle" fill="#8a9ab0" font-size="9">Anselmo "Cara Preta"</text>
+        <text x="150" y="350" text-anchor="middle" fill="#8a9ab0" font-size="9">Rafael "Japa" (suicídio forçado)</text>
+        <text x="150" y="365" text-anchor="middle" fill="#4a5a6a" font-size="9">Smurfing + laranjas</text>
+        <text x="150" y="379" text-anchor="middle" fill="#4a5a6a" font-size="9">Criptoativos + câmbio</text>
+        <text x="150" y="393" text-anchor="middle" fill="#4a5a6a" font-size="9">13 setores economia formal</text>
+
+        <!-- ═══ HEZBOLLAH ═══ -->
+        <rect x="820" y="295" width="200" height="100" rx="6" fill="#100810" stroke="#a060e8" stroke-width="1.5" stroke-dasharray="5,3"/>
+        <text x="920" y="318" text-anchor="middle" fill="#a060e8" font-size="10" font-weight="700">HEZBOLLAH</text>
+        <text x="920" y="335" text-anchor="middle" fill="#e8ecf0" font-size="11" font-weight="600">Conexão Terrorista</text>
+        <text x="920" y="351" text-anchor="middle" fill="#8a9ab0" font-size="9">Alerta: Ministério Defesa Israel</text>
+        <text x="920" y="366" text-anchor="middle" fill="#4a5a6a" font-size="9">Carteiras cripto compartilhadas</text>
+        <text x="920" y="380" text-anchor="middle" fill="#4a5a6a" font-size="9">R$ 500bi? em carteiras PCC</text>
+
+        <!-- ═══ DELAWARE ═══ -->
+        <rect x="210" y="490" width="200" height="80" rx="6" fill="#100a00" stroke="#e8a020" stroke-width="1.5"/>
+        <text x="310" y="513" text-anchor="middle" fill="#e8a020" font-size="10" font-weight="700">OFFSHORES</text>
+        <text x="310" y="530" text-anchor="middle" fill="#e8ecf0" font-size="11" font-weight="600">Delaware · Cayman</text>
+        <text x="310" y="547" text-anchor="middle" fill="#8a9ab0" font-size="9">LLCs — beneficiários OCULTOS</text>
+        <text x="310" y="562" text-anchor="middle" fill="#4a5a6a" font-size="9">Padrão: Carbono Oculto + Master</text>
+
+        <!-- ═══ CRYPTO ═══ -->
+        <rect x="640" y="490" width="220" height="80" rx="6" fill="#000a10" stroke="#3090e8" stroke-width="1.5"/>
+        <text x="750" y="513" text-anchor="middle" fill="#3090e8" font-size="10" font-weight="700">CRIPTOATIVOS</text>
+        <text x="750" y="530" text-anchor="middle" fill="#e8ecf0" font-size="11" font-weight="600">Hong Kong · China</text>
+        <text x="750" y="547" text-anchor="middle" fill="#8a9ab0" font-size="9">Carteiras PCC + Hezbollah</text>
+        <text x="750" y="562" text-anchor="middle" fill="#4a5a6a" font-size="9">Blockchain rastreamento OFAC</text>
+
+        <!-- ═══ TAI-PAN (operação anterior) ═══ -->
+        <rect x="55" y="65" width="180" height="70" rx="5" fill="#0d1218" stroke="#e8a020" stroke-width="1" stroke-dasharray="4,3"/>
+        <text x="145" y="86" text-anchor="middle" fill="#e8a020" font-size="9" font-weight="700">OP. TAI-PAN (nov/2024)</text>
+        <text x="145" y="102" text-anchor="middle" fill="#8a9ab0" font-size="9">Cyllas preso 1ª vez</text>
+        <text x="145" y="116" text-anchor="middle" fill="#4a5a6a" font-size="9">Lavagem para chineses</text>
+        <text x="145" y="128" text-anchor="middle" fill="#4a5a6a" font-size="9">Solto: jan/2025 (HC)</text>
+
+        <!-- ═══ BANKROW ═══ -->
+        <rect x="25" y="243" width="165" height="55" rx="5" fill="#0d1218" stroke="#3090e8" stroke-width="1" stroke-dasharray="3,4"/>
+        <text x="107" y="262" text-anchor="middle" fill="#3090e8" font-size="9" font-weight="700">BANKROW</text>
+        <text x="107" y="278" text-anchor="middle" fill="#8a9ab0" font-size="9">Inst. pagamento paralela</text>
+        <text x="107" y="292" text-anchor="middle" fill="#4a5a6a" font-size="9">Carbono Oculto · BK Bank</text>
+
+        <!-- ═══ CARA PRETA node ═══ -->
+        <rect x="870" y="85" width="185" height="55" rx="5" fill="#0d1218" stroke="#e84040" stroke-width="1" stroke-dasharray="3,4"/>
+        <text x="962" y="107" text-anchor="middle" fill="#e84040" font-size="9" font-weight="700">CARA PRETA (morto)</text>
+        <text x="962" y="123" text-anchor="middle" fill="#8a9ab0" font-size="9">Emboscada: dez/2021</text>
+        <text x="962" y="136" text-anchor="middle" fill="#4a5a6a" font-size="9">Mandante: Gritzbach</text>
+
+        <!-- ═══ APOSTAS ═══ -->
+        <rect x="460" y="585" width="180" height="60" rx="5" fill="#0d1218" stroke="#20d0e8" stroke-width="1" stroke-dasharray="3,4"/>
+        <text x="550" y="607" text-anchor="middle" fill="#20d0e8" font-size="9" font-weight="700">CASAS DE APOSTAS</text>
+        <text x="550" y="623" text-anchor="middle" fill="#8a9ab0" font-size="9">Canal adicional lavagem</text>
+        <text x="550" y="636" text-anchor="middle" fill="#4a5a6a" font-size="9">→ Op. Spare (set/2025)</text>
+
+        <!-- ═══ HOUSTON ═══ -->
+        <rect x="80" y="590" width="175" height="60" rx="5" fill="#0d1218" stroke="#e8a020" stroke-width="1" stroke-dasharray="3,4"/>
+        <text x="167" y="612" text-anchor="middle" fill="#e8a020" font-size="9" font-weight="700">EXPORTADORA HOUSTON</text>
+        <text x="167" y="628" text-anchor="middle" fill="#8a9ab0" font-size="9">Texas (EUA) — fachada</text>
+        <text x="167" y="641" text-anchor="middle" fill="#4a5a6a" font-size="9">OFAC relevante / MLAT?</text>
+
+        <!-- ═══ HONG KONG ═══ -->
+        <rect x="850" y="625" width="185" height="55" rx="5" fill="#0d1218" stroke="#3090e8" stroke-width="1" stroke-dasharray="3,4"/>
+        <text x="942" y="647" text-anchor="middle" fill="#3090e8" font-size="9" font-weight="700">HONG KONG · CHINA</text>
+        <text x="942" y="662" text-anchor="middle" fill="#8a9ab0" font-size="9">Destino final cripto</text>
+        <text x="942" y="673" text-anchor="middle" fill="#4a5a6a" font-size="9">← Cyllas: lavagem chineses</text>
+
+        <!-- LEGEND -->
+        <rect x="30" y="640" width="260" height="50" rx="4" fill="#0d1218" stroke="#1a2230" stroke-width="1"/>
+        <text x="42" y="657" fill="#4a5a6a" font-size="9" font-weight="700">LEGENDA</text>
+        <line x1="42" y1="667" x2="60" y2="667" stroke="#e84040" stroke-width="2"/>
+        <text x="64" y="670" fill="#8a9ab0" font-size="9">Conexão PCC</text>
+        <line x1="130" y1="667" x2="148" y2="667" stroke="#a060e8" stroke-width="1.5" stroke-dasharray="4,2"/>
+        <text x="152" y="670" fill="#8a9ab0" font-size="9">Conexão terrorismo</text>
+        <line x1="42" y1="682" x2="60" y2="682" stroke="#e8a020" stroke-width="1.5" stroke-dasharray="4,2"/>
+        <text x="64" y="685" fill="#8a9ab0" font-size="9">Fluxo financeiro</text>
+        <line x1="130" y1="682" x2="148" y2="682" stroke="#28c880" stroke-width="1.5" stroke-dasharray="4,2"/>
+        <text x="152" y="685" fill="#8a9ab0" font-size="9">Whistleblower</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- LEGEND CARDS -->
+  <div class="grid-3">
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon icon-red">🏦</div>
+        <div><div class="card-title">Hub Central</div><div class="card-date">2GO Bank + InvBank</div></div>
+      </div>
+      <div class="card-body">Fintechs não reguladas operando como "paraíso fiscal doméstico". Sem supervisão direta do Banco Central para escala de movimentação. Modelo de contas-bolsão pulverizava recursos via laranjas.</div>
+      <div class="card-tags">
+        <span class="tag badge-red">Shadow Banking</span>
+        <span class="tag badge-amber">Contas-bolsão</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon icon-green">🕵️</div>
+        <div><div class="card-title">Fonte: Delação Gritzbach</div><div class="card-date">Depoimento: 31/out/2024</div></div>
+      </div>
+      <div class="card-body">Antônio Vinicius Lopes Gritzbach prestou depoimento à Corregedoria da Polícia Civil 8 dias antes de ser executado com tiros de fuzil no Aeroporto de Guarulhos. Foi o gatilho da Operação Hydra.</div>
+      <div class="card-tags">
+        <span class="tag badge-green">Delação Premiada</span>
+        <span class="tag badge-red">Silenciado</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon icon-purple">🌍</div>
+        <div><div class="card-title">Dimensão Geopolítica</div><div class="card-date">Alerta: Tel Aviv</div></div>
+      </div>
+      <div class="card-body">Ministério da Defesa de Israel alertou o Brasil sobre carteiras de criptomoedas compartilhadas entre PCC e Hezbollah no 2GO Bank. Primeira conexão documentada entre facção brasileira e terrorismo internacional.</div>
+      <div class="card-tags">
+        <span class="tag badge-purple">Mossad Intel</span>
+        <span class="tag badge-blue">OFAC Relevante</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ ATORES ══════════════════════════════ -->
+<div id="tab-atores" class="tab-panel">
+  <div class="section-title">Mapeamento de Atores — Hydra</div>
+
+  <div class="alert alert-amber mb-24">
+    <div class="alert-icon">⚠</div>
+    <div class="alert-content">
+      <div class="alert-title">Identidades ocultadas pelo MP</div>
+      <div class="alert-desc">O MPSP denunciou 3 pessoas em março/2025 sem divulgar nomes. Este padrão — denúncia sem identificação pública — dificulta o rastreamento dos beneficiários finais dos R$ 6 bilhões. Ponto crítico de investigação.</div>
+    </div>
+  </div>
+
+  <table class="actor-table mb-24">
+    <thead>
+      <tr>
+        <th>Ator</th>
+        <th>Função no Esquema</th>
+        <th>Status</th>
+        <th>Conexão Sistêmica</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="actor-name text-red">Cyllas Salerno Elia Júnior</div>
+          <div class="actor-role">Policial Civil (DEIC) / CEO 2GO Bank</div>
+        </td>
+        <td class="text-muted">Fundador e operador da 2GO Bank. Arquitetou a engenharia financeira de contas-bolsão. Sócio dos líderes do PCC no esquema de lavagem.</td>
+        <td><span class="badge badge-red">Preso 3×</span></td>
+        <td class="text-dim">Op. Tai-Pan (nov/24) → HC (jan/25) → Op. Hydra (fev/25) → 3ª prisão (set/25)</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="actor-name text-red">Anselmo Santa Fausta</div>
+          <div class="actor-role">"Cara Preta" — liderança PCC</div>
+        </td>
+        <td class="text-muted">Cotista direto da InvBank. Apontado como sócio de Cyllas na 2GO Bank. Comandava o fluxo financeiro da facção via fintechs.</td>
+        <td><span class="badge badge-amber">Morto (dez/2021)</span></td>
+        <td class="text-dim">Morto em emboscada no Tatuapé-SP. Gritzbach apontado como mandante do crime.</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="actor-name text-red">Rafael Maeda Pires</div>
+          <div class="actor-role">"Japa" — liderança PCC</div>
+        </td>
+        <td class="text-muted">Cotista direto da InvBank. Participou da estruturação financeira das fintechs como canal de lavagem do PCC.</td>
+        <td><span class="badge badge-amber">Morto (suicídio forçado)</span></td>
+        <td class="text-dim">Teria sido obrigado a cometer suicídio por membros da própria facção.</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="actor-name text-green">A. V. Lopes Gritzbach</div>
+          <div class="actor-role">Whistleblower / empresário</div>
+        </td>
+        <td class="text-muted">Também lavava dinheiro para o PCC. Entrou em conflito com a facção após o caso Cara Preta. Delatou o esquema à Corregedoria. Informações usadas pelo MPSP na Hydra.</td>
+        <td><span class="badge badge-red">Executado (nov/2024)</span></td>
+        <td class="text-dim">Executado a tiros de fuzil no Aeroporto de Guarulhos, 8 dias após o depoimento.</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="actor-name text-amber">3 Denunciados (identidade oculta)</div>
+          <div class="actor-role">MPSP — denúncia março/2025</div>
+        </td>
+        <td class="text-muted">MP denunciou 3 pessoas em março/2025 por lavagem de R$ 6 bilhões. Identidades não divulgadas publicamente até o momento.</td>
+        <td><span class="badge badge-blue">Identidade ocultada</span></td>
+        <td class="text-dim">Lacuna investigativa crítica — potencial proteção de beneficiários de topo.</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="actor-name text-blue">Garip Uç</div>
+          <div class="actor-role">Químico turco — laboratório Dry Marroquino</div>
+        </td>
+        <td class="text-muted">Preso em operação que desmantelou laboratório PCC de produção de Dry Marroquino (haxixe turco). Solicitou refúgio no Brasil em 2020. Evidencia conexão PCC-Hezbollah via rotas de drogas.</td>
+        <td><span class="badge badge-amber">Preso (2023)</span></td>
+        <td class="text-dim">Conexão PCC-Hezbollah via produção compartilhada de drogas. Op. 2023.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section-title">Padrão de Silenciamento</div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon icon-red">💀</div>
+        <div><div class="card-title">Cadeia de Mortes e Silêncios</div><div class="card-date">2021 → 2024 → 2025</div></div>
+      </div>
+      <div class="card-body">Cara Preta (morto 2021) → Japa (morto forçado, data imprecisa) → Gritzbach executa depoimento e é executado 8 dias depois (nov/2024). O padrão é claro: os que sabem demais são eliminados antes de completar a cooperação. Cyllas, por sua vez, é preso, solta via HC, preso novamente — 3 vezes em 10 meses.</div>
+      <div class="card-tags">
+        <span class="tag badge-red">P2 — Investigado vira alvo</span>
+        <span class="tag badge-amber">Whistleblower silenciado</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon icon-amber">⚖️</div>
+        <div><div class="card-title">Habeas Corpus como Escudo</div><div class="card-date">Jan/2025 — padrão recorrente</div></div>
+      </div>
+      <div class="card-body">Cyllas Salerno foi preso em nov/2024 na Op. Tai-Pan, obteve HC em jan/2025, foi preso novamente na Op. Hydra em fev/2025, e preso uma terceira vez em set/2025. O uso de habeas corpus para liberação temporária de investigados é o Padrão 1 do lawfare-timeline: anulação por defecto processual / instrumento judicial como escudo.</div>
+      <div class="card-tags">
+        <span class="tag badge-red">P1 — Anulação processual</span>
+        <span class="tag badge-blue">HC como blindagem</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ MECANISMO ══════════════════════════════ -->
+<div id="tab-mecanismo" class="tab-panel">
+  <div class="section-title">O Mecanismo de Lavagem — 7 Camadas</div>
+
+  <div class="alert alert-blue mb-24">
+    <div class="alert-icon">🔬</div>
+    <div class="alert-content">
+      <div class="alert-title">Inovação vs. Lava Jato: o salto tecnológico do crime</div>
+      <div class="alert-desc">Na Lava Jato, o veículo era o doleiro com conta no exterior. Na Carbono Oculto, eram postos de combustível e fundos REAG. Na Hydra, são fintechs reguladas como "instituições de pagamento" — um upgrade regulatório que criou uma brecha sistêmica de proporções inéditas.</div>
+    </div>
+  </div>
+
+  <div class="card mb-24">
+    <div class="card-title mb-16" style="font-size:16px">Tipologias documentadas pelo MPSP</div>
+    <div class="grid-3">
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:14px">
+        <div style="color:var(--red);font-size:11px;font-weight:700;margin-bottom:6px;letter-spacing:.08em">01 · SMURFING</div>
+        <div class="card-body">Fracionamento sistemático de transações abaixo dos limites de monitoramento do COAF. Milhares de depósitos pequenos que somados constituem R$ 6 bilhões.</div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:14px">
+        <div style="color:var(--amber);font-size:11px;font-weight:700;margin-bottom:6px;letter-spacing:.08em">02 · CONTAS LARANJA</div>
+        <div class="card-body">Contas de terceiros sob controle total das fintechs. Depósitos recebidos eram imediatamente transferidos para cadeia de laranjas que pulverizava a origem.</div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:14px">
+        <div style="color:var(--blue);font-size:11px;font-weight:700;margin-bottom:6px;letter-spacing:.08em">03 · CRIPTOATIVOS</div>
+        <div class="card-body">Conversão de reais em criptomoedas via carteiras não-custodiais. Destino: Hong Kong e China. Carteiras compartilhadas com o Hezbollah — alerta israelense.</div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:14px">
+        <div style="color:var(--green);font-size:11px;font-weight:700;margin-bottom:6px;letter-spacing:.08em">04 · EMPRESAS FACHADA</div>
+        <div class="card-body">Constituição de pessoas jurídicas sem atividade real para receber e repassar valores. Padrão idêntico ao documentado no Carbono Oculto e Compliance Zero.</div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:14px">
+        <div style="color:var(--purple);font-size:11px;font-weight:700;margin-bottom:6px;letter-spacing:.08em">05 · EMPRÉSTIMOS FICTÍCIOS</div>
+        <div class="card-body">Recursos ilícitos reinjetados na economia formal como "empréstimos" contraídos por empresas fachada junto às próprias fintechs — ciclo fechado de lavagem.</div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:14px">
+        <div style="color:var(--cyan);font-size:11px;font-weight:700;margin-bottom:6px;letter-spacing:.08em">06 · CÂMBIO INTERNACIONAL</div>
+        <div class="card-body">Triangulação em 15 países: EUA, Paraguai, Peru, Holanda, Argentina, Bolívia, Canadá, Panamá, Colômbia, UK, Itália, Turquia, Dubai, HK e China. Estrutura de dispersão internacional.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">Fluxo de Capital — Visualização</div>
+  <div class="card mb-24">
+    <div style="display:flex;align-items:center;gap:0;overflow-x:auto;padding-bottom:8px">
+      <div style="background:var(--red2);border:1px solid rgba(232,64,64,.3);border-radius:6px;padding:10px 14px;text-align:center;flex-shrink:0;min-width:120px">
+        <div style="font-size:10px;color:var(--red);font-weight:700">ORIGEM</div>
+        <div style="font-size:11px;margin-top:4px">Tráfico + Crimes</div>
+        <div style="font-size:10px;color:var(--fg3)">PCC</div>
+      </div>
+      <div style="color:var(--fg3);padding:0 8px;font-size:18px;flex-shrink:0">→</div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:10px 14px;text-align:center;flex-shrink:0;min-width:120px">
+        <div style="font-size:10px;color:var(--amber);font-weight:700">INSERÇÃO</div>
+        <div style="font-size:11px;margin-top:4px">2GO + InvBank</div>
+        <div style="font-size:10px;color:var(--fg3)">contas-bolsão</div>
+      </div>
+      <div style="color:var(--fg3);padding:0 8px;font-size:18px;flex-shrink:0">→</div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:10px 14px;text-align:center;flex-shrink:0;min-width:120px">
+        <div style="font-size:10px;color:var(--blue);font-weight:700">PULVERIZAÇÃO</div>
+        <div style="font-size:11px;margin-top:4px">Smurfing</div>
+        <div style="font-size:10px;color:var(--fg3)">1000+ contas</div>
+      </div>
+      <div style="color:var(--fg3);padding:0 8px;font-size:18px;flex-shrink:0">→</div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:10px 14px;text-align:center;flex-shrink:0;min-width:120px">
+        <div style="font-size:10px;color:var(--purple);font-weight:700">CONVERSÃO</div>
+        <div style="font-size:11px;margin-top:4px">Cripto + Câmbio</div>
+        <div style="font-size:10px;color:var(--fg3)">15 países</div>
+      </div>
+      <div style="color:var(--fg3);padding:0 8px;font-size:18px;flex-shrink:0">→</div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:10px 14px;text-align:center;flex-shrink:0;min-width:120px">
+        <div style="font-size:10px;color:var(--amber);font-weight:700">SAÍDA</div>
+        <div style="font-size:11px;margin-top:4px">Delaware + HK</div>
+        <div style="font-size:10px;color:var(--fg3)">offshores ocultos</div>
+      </div>
+      <div style="color:var(--fg3);padding:0 8px;font-size:18px;flex-shrink:0">→</div>
+      <div style="background:var(--green2);border:1px solid rgba(40,200,128,.3);border-radius:6px;padding:10px 14px;text-align:center;flex-shrink:0;min-width:120px">
+        <div style="font-size:10px;color:var(--green);font-weight:700">RETORNO</div>
+        <div style="font-size:11px;margin-top:4px">"Investimento"</div>
+        <div style="font-size:10px;color:var(--fg3)">dinheiro limpo</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">Por que fintechs e não bancos tradicionais?</div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title mb-16">Brecha regulatória explorada por design</div>
+      <div class="card-body" style="line-height:2">
+        <span class="text-red">►</span> Instituições de pagamento (IP) têm supervisão menos rigorosa que bancos<br>
+        <span class="text-red">►</span> COAF recebe relatórios, mas rastreamento é retroativo, não preventivo<br>
+        <span class="text-red">►</span> Modelo "conta-bolsão" legalmente permitido — recursos de vários clientes numa só conta<br>
+        <span class="text-red">►</span> Velocidade de abertura de contas sem KYC robusto<br>
+        <span class="text-red">►</span> Brecha da e-Financeira: em dez/2024, normativas de transparência foram <strong>revogadas após fake news</strong>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title mb-16">Comparativo: BK Bank vs 2GO Bank vs InvBank</div>
+      <div class="card-body" style="line-height:2">
+        <span class="text-amber">BK Bank</span> (Carbono Oculto): R$ 46bi · artéria PCC na Faria Lima<br>
+        <span class="text-red">2GO Bank</span> (Hydra): R$ 6bi · policial como CEO · PCC direto<br>
+        <span class="text-blue">InvBank</span> (Hydra): cotistas = lideranças PCC (Cara Preta + Japa)<br>
+        <span class="text-green">Bankrow</span> (Carbono Oculto): canal paralelo adicional<br><br>
+        <span class="text-dim">Hipótese sistêmica: infraestrutura jurídico-financeira comum atrás dos três casos.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ CONEXÕES ══════════════════════════════ -->
+<div id="tab-conexoes" class="tab-panel">
+  <div class="section-title">Conexões Sistêmicas — Hydra no Ecossistema Lawfare-Timeline</div>
+
+  <div class="alert alert-red mb-24">
+    <div class="alert-icon">🔗</div>
+    <div class="alert-content">
+      <div class="alert-title">Hipótese central: infraestrutura jurídico-financeira transversal</div>
+      <div class="alert-desc">A Hydra não é isolada. Os mesmos padrões (fintechs não reguladas, contas-bolsão, offshores Delaware, blindagem via Judiciário) aparecem em Carbono Oculto, Compliance Zero e Sem Desconto. A pergunta não respondida: são escritórios, estruturadores ou pessoas físicas comuns a todos esses esquemas?</div>
+    </div>
+  </div>
+
+  <div class="conn-wrap">
+    <div class="section-title" style="margin-bottom:16px">Nós de Conexão Identificados</div>
+    <div class="conn-grid">
+      <div class="conn-node">
+        <div class="conn-node-title text-red">🏦 Fintechs como Banco Paralelo</div>
+        <div class="conn-links">
+          <div class="conn-link">Hydra: 2GO + InvBank (R$ 6bi)</div>
+          <div class="conn-link">Carbono Oculto: BK Bank (R$ 46bi)</div>
+          <div class="conn-link">Carbono Oculto: Bankrow</div>
+          <div class="conn-link" style="color:var(--fg3)">Brecha regulatória compartilhada</div>
+        </div>
+      </div>
+      <div class="conn-node">
+        <div class="conn-node-title text-amber">🌐 Offshores Delaware</div>
+        <div class="conn-links">
+          <div class="conn-link">Hydra: LLCs destino R$ 6bi</div>
+          <div class="conn-link">Carbono Oculto: Houston exportadora</div>
+          <div class="conn-link">Compliance Zero: estrutura Vorcaro</div>
+          <div class="conn-link" style="color:var(--fg3)">Beneficiários: todos ocultos</div>
+        </div>
+      </div>
+      <div class="conn-node">
+        <div class="conn-node-title text-blue">⚖️ STF como Chokepoint</div>
+        <div class="conn-links">
+          <div class="conn-link">Compliance Zero → STF sigilo Toffoli</div>
+          <div class="conn-link">Cyllas: 3 prisões + HCs</div>
+          <div class="conn-link">Hydra: denúncia sem nomes públicos</div>
+          <div class="conn-link" style="color:var(--fg3)">P1: anulação processual</div>
+        </div>
+      </div>
+      <div class="conn-node">
+        <div class="conn-node-title text-purple">🔴 PCC em todos os casos</div>
+        <div class="conn-links">
+          <div class="conn-link">Hydra: PCC via fintechs direto</div>
+          <div class="conn-link">Carbono Oculto: PCC Faria Lima</div>
+          <div class="conn-link">Spare: PCC motéis + apostas</div>
+          <div class="conn-link" style="color:var(--fg3)">13 setores economia formal</div>
+        </div>
+      </div>
+      <div class="conn-node">
+        <div class="conn-node-title text-green">💬 Whistleblowers eliminados</div>
+        <div class="conn-links">
+          <div class="conn-link">Hydra: Gritzbach executado</div>
+          <div class="conn-link">Sem Desconto: delator sob proteção</div>
+          <div class="conn-link">Lava Jato: Youssef → preso 3x</div>
+          <div class="conn-link" style="color:var(--fg3)">P2: investigados viram alvos</div>
+        </div>
+      </div>
+      <div class="conn-node">
+        <div class="conn-node-title text-cyan">🌎 Cooperação EUA — ausente</div>
+        <div class="conn-links">
+          <div class="conn-link">MLAT não ativado (Hydra)</div>
+          <div class="conn-link">DOJ tem registros Delaware</div>
+          <div class="conn-link">Haddad levou caso a Trump</div>
+          <div class="conn-link" style="color:var(--fg3)">Resposta americana: sem retorno</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">Linha do Tempo das Operações Conectadas</div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title mb-16">Nov/2024 — Op. Tai-Pan → Hydra</div>
+      <div class="card-body">Cyllas Salerno preso na Op. Tai-Pan (PF) por lavagem de R$ 6bi via fintechs. Solto via HC em jan/2025. Gritzbach delatou o esquema à Corregedoria em out/2024, sendo executado em nov/2024. A Op. Hydra (fev/2025) é diretamente construída sobre essa delação.</div>
+    </div>
+    <div class="card">
+      <div class="card-title mb-16">Ago/2025 — Carbono Oculto → Hydra</div>
+      <div class="card-body">A Op. Carbono Oculto (ago/2025) expõe o BK Bank como banco paralelo do PCC com R$ 46bi. O mesmo padrão de fintechs não reguladas como artéria financeira do crime organizado. Evidência de ecossistema financeiro ilícito compartilhado.</div>
+    </div>
+    <div class="card">
+      <div class="card-title mb-16">Nov/2025 — BC denuncia ao MPF</div>
+      <div class="card-body">Banco Central denuncia ao MPF a intersecção entre fundos REAG (investigados PCC no Carbono Oculto) e o Banco Master (Compliance Zero). Primeiro elo formal público conectando crime organizado, mercado financeiro e banco comercial regulado.</div>
+    </div>
+    <div class="card">
+      <div class="card-title mb-16">Set/2025 — 3ª prisão de Cyllas</div>
+      <div class="card-body">Cyllas Salerno é preso pela terceira vez, desta vez por suspeita de aplicar golpes. A progressão — Tai-Pan → Hydra → 3ª prisão — ilustra a dificuldade de manter investigados presos quando o sistema judicial oferece múltiplos recursos de liberação.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ RISCOS ══════════════════════════════ -->
+<div id="tab-riscos" class="tab-panel">
+  <div class="section-title">Matriz de Riscos — Investigação Ativa 2026</div>
+
+  <div class="risk-matrix">
+    <div class="risk-item">
+      <div class="risk-severity sev-critical"></div>
+      <div>
+        <div class="risk-title text-red">Beneficiários finais ocultos permanentemente</div>
+        <div class="risk-desc">O MP denunciou 3 pessoas sem revelar identidades. As LLCs em Delaware que receberam os R$ 6bi não tiveram beneficiários identificados publicamente. Com o prazo prescricional correndo, o silêncio pode ser intencional.</div>
+        <div class="risk-badge">CRÍTICO · P6 — Prescrição estratégica</div>
+      </div>
+    </div>
+    <div class="risk-item">
+      <div class="risk-severity sev-critical"></div>
+      <div>
+        <div class="risk-title text-red">Chokepoint STF / Sigilo Judicial</div>
+        <div class="risk-desc">O caso Compliance Zero (conexo) está no STF sob sigilo com Toffoli como relator. O padrão do lawfare-timeline indica que casos que chegam ao STF tendem a parar antes dos beneficiários finais.</div>
+        <div class="risk-badge">CRÍTICO · P3 — Captura judicial emergencial</div>
+      </div>
+    </div>
+    <div class="risk-item">
+      <div class="risk-severity sev-critical"></div>
+      <div>
+        <div class="risk-title text-red">Execução de testemunhas / delatores</div>
+        <div class="risk-desc">Gritzbach foi executado 8 dias após depoimento. Cara Preta e Japa (cotistas InvBank) já estão mortos. O padrão de eliminação de fontes é um risco ativo para qualquer novo colaborador.</div>
+        <div class="risk-badge">CRÍTICO · P2 — Investigados se tornam alvos</div>
+      </div>
+    </div>
+    <div class="risk-item">
+      <div class="risk-severity sev-high"></div>
+      <div>
+        <div class="risk-title text-amber">Habeas Corpus como instrumento de liberação serial</div>
+        <div class="risk-desc">Cyllas preso 3 vezes, com pelo menos 1 liberação via HC. O STJ/STF como revisores de prisões preventivas cria oportunidades de liberação que fragmentam a investigação e permite destruição de evidências.</div>
+        <div class="risk-badge">ALTO · P1 — Anulação processual</div>
+      </div>
+    </div>
+    <div class="risk-item">
+      <div class="risk-severity sev-high"></div>
+      <div>
+        <div class="risk-title text-amber">MLAT EUA não ativado — janela se fecha</div>
+        <div class="risk-desc">Os registros das LLCs em Delaware e da exportadora em Houston estão no DOJ. O MLAT existe mas não foi formalmente ativado. Com as eleições de 2026 e mudanças políticas, a cooperação americana pode tornar-se ainda mais improvável.</div>
+        <div class="risk-badge">ALTO · Cooperação internacional em risco</div>
+      </div>
+    </div>
+    <div class="risk-item">
+      <div class="risk-severity sev-high"></div>
+      <div>
+        <div class="risk-title text-amber">Brecha e-Financeira não corrigida</div>
+        <div class="risk-desc">As normativas de transparência para fintechs (e-Financeira) foram revogadas pela Receita Federal em dez/2024 após campanha de fake news. A brecha estrutural que permitiu a Hydra permanece aberta. Quem produziu as fake news? Pergunta sem investigação.</div>
+        <div class="risk-badge">ALTO · P4 — Weaponização da mídia</div>
+      </div>
+    </div>
+    <div class="risk-item">
+      <div class="risk-severity sev-medium"></div>
+      <div>
+        <div class="risk-title text-blue">Janela eleitoral 2026 — risco de arquivamento</div>
+        <div class="risk-desc">Com eleições em outubro/2026, há incentivo político para que investigações que envolvam múltiplos atores econômicos sejam paralisadas ou arquivadas silenciosamente antes do pleito.</div>
+        <div class="risk-badge">MÉDIO · Padrão histórico de paralisia pré-eleitoral</div>
+      </div>
+    </div>
+    <div class="risk-item">
+      <div class="risk-severity sev-medium"></div>
+      <div>
+        <div class="risk-title text-blue">Dispersão investigativa: PGR + PF + GAECO-SP</div>
+        <div class="risk-desc">Sem um GAECO Nacional, a investigação está fragmentada entre procuradoria federal, polícia federal e ministério público estadual. Sobreposição de competências pode criar conflitos jurisdicionais exploráveis pela defesa.</div>
+        <div class="risk-badge">MÉDIO · Lacuna institucional estrutural</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">Perguntas Não Respondidas — Lacunas Investigativas</div>
+  <div class="card">
+    <div class="card-body" style="line-height:2.2">
+      <span class="text-red">?01</span> Quem são os 3 denunciados cujas identidades o MP ocultou em março/2025?<br>
+      <span class="text-red">?02</span> Quem são os beneficiários finais das LLCs em Delaware que receberam os R$ 6bi?<br>
+      <span class="text-red">?03</span> Qual é a sobreposição entre a carteira cripto do 2GO Bank e as carteiras do Hezbollah identificadas por Israel?<br>
+      <span class="text-amber">?04</span> Existe infraestrutura jurídico-financeira comum entre Hydra (2GO/InvBank), Carbono Oculto (BK Bank) e Compliance Zero (REAG/Master)?<br>
+      <span class="text-amber">?05</span> Quem produziu e disseminou as fake news que resultaram na revogação das normativas e-Financeira em dez/2024?<br>
+      <span class="text-amber">?06</span> Qual a extensão da conexão PCC-Hezbollah via Dry Marroquino além do químico turco Garip Uç?<br>
+      <span class="text-blue">?07</span> Por que o MLAT Brasil-EUA não foi ativado apesar de Haddad ter levado o material formalmente a Trump?<br>
+      <span class="text-blue">?08</span> Há outros policiais civis ativos além de Cyllas com participação em fintechs de lavagem?<br>
+      <span class="text-blue">?09</span> O esquema Hydra está conectado ao consignado fraudulento do INSS (Sem Desconto) via financeiras não bancárias?<br>
+      <span class="text-dim">?10</span> Qual o valor real movimentado — R$ 6bi documentados ou valor superior ainda não rastreado?
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ CHECKLIST ══════════════════════════════ -->
+<div id="tab-checklist" class="tab-panel">
+  <div class="section-title">Checklist Investigativo 2026 — Operação Hydra</div>
+
+  <div class="progress-wrap mb-24">
+    <div class="progress-item">
+      <div class="progress-head"><span class="progress-label">Progresso geral da investigação</span><span class="progress-pct" id="pct-total">0%</span></div>
+      <div class="progress-bar"><div class="progress-fill" id="bar-total" style="width:0%;background:var(--red)"></div></div>
+    </div>
+  </div>
+
+  <div class="grid-2 mb-16">
+    <div>
+      <div class="section-title">🔴 PRIORIDADE CRÍTICA</div>
+      <div class="checklist" id="cl-critico">
+        <div class="check-item" onclick="toggleCheck(this)">
+          <div class="check-box"></div>
+          <div>
+            <div class="check-text">Identificar beneficiários das contas em Delaware e LLCs receptoras dos R$ 6bi</div>
+            <div class="check-meta">Instrumento: MLAT Brasil-EUA · DOJ acesso registros Delaware · Ação prioritária</div>
+          </div>
+          <span class="check-priority badge-red tag">CRÍTICO</span>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this)">
+          <div class="check-box"></div>
+          <div>
+            <div class="check-text">Divulgar publicamente a identidade dos 3 denunciados pelo MPSP em março/2025</div>
+            <div class="check-meta">Status: identidades retidas pelo MP · Risco: prescrição ou arquivamento silencioso</div>
+          </div>
+          <span class="check-priority badge-red tag">CRÍTICO</span>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this)">
+          <div class="check-box"></div>
+          <div>
+            <div class="check-text">Mapear carteiras cripto PCC × Hezbollah — cruzamento com alerta israelense</div>
+            <div class="check-meta">Instrumento: OFAC blockchain analytics · Cooperação Mossad/DEA · Tel Aviv alert</div>
+          </div>
+          <span class="check-priority badge-red tag">CRÍTICO</span>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this)">
+          <div class="check-box"></div>
+          <div>
+            <div class="check-text">Investigar quem produziu as fake news que reverteram a e-Financeira em dez/2024</div>
+            <div class="check-meta">Brecha continua aberta · Possível ação coordenada de beneficiários do esquema</div>
+          </div>
+          <span class="check-priority badge-red tag">CRÍTICO</span>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this)">
+          <div class="check-box"></div>
+          <div>
+            <div class="check-text">Protocolo de proteção de delatores: aprender com o caso Gritzbach</div>
+            <div class="check-meta">Executado 8 dias após depoimento · Ausência de protocolo de proteção evidenciada</div>
+          </div>
+          <span class="check-priority badge-red tag">CRÍTICO</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="section-title">🟡 PRIORIDADE ALTA</div>
+      <div class="checklist" id="cl-alto">
+        <div class="check-item" onclick="toggleCheck(this)">
+          <div class="check-box"></div>
+          <div>
+            <div class="check-text">Rastrear fluxo de criptoativos via 2GO Bank — destino Hong Kong/China</div>
+            <div class="check-meta">Ferramenta: Chainalysis / TRM Labs · Cooperação INTERPOL · COAF análise on-chain</div>
+          </div>
+          <span class="check-priority badge-amber tag">ALTA</span>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this)">
+          <div class="check-box"></div>
+          <div>
+            <div class="check-text">Mapear triangulação Hydra × Carbono Oculto × Banco Master (infraestrutura comum)</div>
+            <div class="check-meta">Fintechs + REAG + BK Bank = mesmo ecossistema? · Consultores jurídicos comuns?</div>
+          </div>
+          <span class="check-priority badge-amber tag">ALTA</span>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this)">
+          <div class="check-box"></div>
+          <div>
+            <div class="check-text">Auditar conivência de consultorias internacionais no compliance das fintechs</div>
+            <div class="check-meta">Quem auditou 2GO e InvBank? Certificações PCI/SOC de fachada?</div>
+          </div>
+          <span class="check-priority badge-amber tag">ALTA</span>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this)">
+          <div class="check-box"></div>
+          <div>
+            <div class="check-text">Ativar formalmente MLAT Brasil-EUA para acesso a registros Delaware e Houston</div>
+            <div class="check-meta">Haddad já levou material a Trump · Resposta americana: pendente · Janela eleitoral 2026</div>
+          </div>
+          <span class="check-priority badge-amber tag">ALTA</span>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this)">
+          <div class="check-box"></div>
+          <div>
+            <div class="check-text">Investigar outros policiais civis ativos com participação em fintechs de lavagem</div>
+            <div class="check-meta">Cyllas atuou no DEIC — departamento estratégico · Padrão de infiltração institucional</div>
+          </div>
+          <span class="check-priority badge-amber tag">ALTA</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">🔵 PRIORIDADE MÉDIA — Análise Sistêmica</div>
+  <div class="checklist">
+    <div class="check-item" onclick="toggleCheck(this)">
+      <div class="check-box"></div>
+      <div>
+        <div class="check-text">Verificar conexão Hydra × Sem Desconto: financeiras não bancárias + crédito consignado fraudulento</div>
+        <div class="check-meta">Hipótese: mesmo vetor de fintechs não reguladas utilizado em duas frentes criminosas distintas</div>
+      </div>
+      <span class="check-priority badge-blue tag">MÉDIA</span>
+    </div>
+    <div class="check-item" onclick="toggleCheck(this)">
+      <div class="check-box"></div>
+      <div>
+        <div class="check-text">Dimensionar extensão real da rede PCC-Hezbollah além do Dry Marroquino (Garip Uç)</div>
+        <div class="check-meta">Rotas de drogas + lavagem compartilhada + carteiras cripto = cooperação estrutural?</div>
+      </div>
+      <span class="check-priority badge-blue tag">MÉDIA</span>
+    </div>
+    <div class="check-item" onclick="toggleCheck(this)">
+      <div class="check-box"></div>
+      <div>
+        <div class="check-text">Propor legislação para fechar brecha de "contas-bolsão" em instituições de pagamento</div>
+        <div class="check-meta">Regulação do BC deve exigir contas segregadas por cliente — como no modelo europeu PSD2</div>
+      </div>
+      <span class="check-priority badge-blue tag">MÉDIA</span>
+    </div>
+    <div class="check-item" onclick="toggleCheck(this)">
+      <div class="check-box"></div>
+      <div>
+        <div class="check-text">Gerar entrada JSON lawfare-timeline: IDs 153-160 cobrindo Hydra e operações conexas</div>
+        <div class="check-meta">Categorias: lacuna_investigativa + falha_institucional + padrão_sistêmico · CC0</div>
+      </div>
+      <span class="check-priority badge-blue tag">MÉDIA</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ PADRÃO SISTÊMICO ══════════════════════════════ -->
+<div id="tab-padrao" class="tab-panel">
+  <div class="section-title">Padrões Sistêmicos Identificados — Hydra no Contexto do Lawfare-Timeline</div>
+
+  <div class="alert alert-blue mb-24">
+    <div class="alert-icon">🧬</div>
+    <div class="alert-content">
+      <div class="alert-title">Padrão emergente confirmado: P7 — Captura do sistema de pagamentos digital</div>
+      <div class="alert-desc">A Hydra confirma um padrão novo (além dos 6 originais + P7 do INSS): a infiltração sistemática do ecossistema fintech como substituto dos canais tradicionais de lavagem. O crime organizado se antecipou à regulação — e a brecha foi mantida aberta por ação política documentada (revogação e-Financeira).</div>
+    </div>
+  </div>
+
+  <div class="pattern-box">
+    <div class="pattern-id">P1 — Hydra</div>
+    <div class="pattern-title">Anulação via Defecto Processual / HC como Escudo</div>
+    <div class="pattern-desc">Cyllas Salerno preso 3 vezes, com liberação via habeas corpus entre a 1ª e 2ª prisões. O HC como instrumento legítimo de garantia fundamental é sistematicamente explorado como ferramenta de postergação. Padrão idêntico ao de Lava Jato (STJ revisando prisões preventivas) e Compliance Zero (Vorcaro).</div>
+  </div>
+
+  <div class="pattern-box">
+    <div class="pattern-id">P2 — Hydra</div>
+    <div class="pattern-title">Investigadores/Delatores se Tornam Alvos</div>
+    <div class="pattern-desc">Gritzbach foi o whistleblower e foi executado 8 dias após seu depoimento. Cara Preta e Japa (cotistas da InvBank) estão mortos antes mesmo da operação ser deflagrada. O padrão de silenciamento físico de fontes é o mais extremo da escala: antes havia prisões e processos — agora há eliminações.</div>
+  </div>
+
+  <div class="pattern-box">
+    <div class="pattern-id">P3 — Hydra + Compliance Zero</div>
+    <div class="pattern-title">Captura Judicial Emergencial — STF como Terminal</div>
+    <div class="pattern-desc">O caso conexo Compliance Zero está no STF sob sigilo com Toffoli. A Hydra tem MP ocultando identidade de denunciados. Em ambos, o mecanismo é o mesmo: a informação que permitiria rastrear beneficiários finais está protegida por sigilo judicial ou por omissão institucional.</div>
+  </div>
+
+  <div class="pattern-box" style="border-left-color:var(--amber)">
+    <div class="pattern-id" style="color:var(--amber)">P4 — Hydra (novo)</div>
+    <div class="pattern-title">Weaponização da Regulação via Desinformação</div>
+    <div class="pattern-desc">Em dezembro/2024, normativas da Receita Federal que ampliariam a transparência das fintechs (e-Financeira) foram revogadas após uma campanha de fake news. Quem produziu e financiou essa campanha? A pergunta permanece sem investigação pública. O timing — meses antes da Hydra ser deflagrada — é sugestivo.</div>
+  </div>
+
+  <div class="pattern-box" style="border-left-color:var(--blue)">
+    <div class="pattern-id" style="color:var(--blue)">P8 — NOVO — Hydra</div>
+    <div class="pattern-title">Captura do Sistema de Pagamentos Digital</div>
+    <div class="pattern-desc">A infiltração de organizações criminosas em fintechs reguladas como "instituições de pagamento" representa um upgrade estrutural em relação a todos os mecanismos anteriores. Não são mais doleiros ou offshores — é a própria infraestrutura de pagamentos digital sendo usada como canal de lavagem. O crime antecipou a regulação em pelo menos 5 anos.</div>
+  </div>
+
+  <div class="section-title mt-24 mb-16" style="margin-top:24px">Comparativo Internacional</div>
+  <div class="grid-3">
+    <div class="card">
+      <div class="card-title">Mani Pulite (Itália, 1992)</div>
+      <div class="card-body">Operação chegou a financiadores reais de partidos. No Brasil, investigações sistematicamente param na camada operacional, nunca nos beneficiários políticos finais. A Hydra para em Cyllas Salerno — o gerente, não o dono.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">FinCEN Files (EUA, 2020)</div>
+      <div class="card-body">Vazamento revelou bancos americanos processando lavagem apesar de alertas internos. No Brasil, a Hydra mostra que a cumplicidade não está nos bancos tradicionais mas nas fintechs — um setor que os reguladores escolheram deliberadamente não regular com o mesmo rigor.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">CPIB Singapore</div>
+      <div class="card-body">Singapura processa investigados até o topo e confisca ativos preventivamente. No Brasil, a ausência de lei antimáfia equivalente impede o bloqueio preventivo dos R$ 6bi — permitindo que os recursos sejam movimentados durante o próprio processo.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ TIMELINE ══════════════════════════════ -->
+<div id="tab-timeline" class="tab-panel">
+  <div class="section-title">Cronologia da Operação Hydra</div>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--fg3)"></div>
+      <div class="tl-date">2019–2024</div>
+      <div class="tl-title">Esquema ativo — R$ 6bi movimentados em 5 anos</div>
+      <div class="tl-desc">2GO Bank e InvBank operam como artérias financeiras do PCC por pelo menos 5 anos sem interrupção. Smurfing, criptoativos, empresas fachada e câmbio internacional em 15 países. Cyllas Salerno, policial do DEIC com salário de R$ 10mil, comanda fintech milionária.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--amber)"></div>
+      <div class="tl-date">DEZ/2021</div>
+      <div class="tl-title">Cara Preta assassinado — primeiro nó se rompe</div>
+      <div class="tl-desc">Anselmo Santa Fausta ("Cara Preta"), cotista direto da InvBank, é morto em emboscada no Tatuapé. Gritzbach é apontado como mandante do crime — ele próprio era parte do esquema de lavagem. A morte de Cara Preta altera o equilíbrio de poder interno do PCC e cria uma cadeia de eventos que levará à delação.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--red)"></div>
+      <div class="tl-date">2023</div>
+      <div class="tl-title">Conexão PCC-Hezbollah via Dry Marroquino — primeiro sinal</div>
+      <div class="tl-desc">Operação desvenda laboratório PCC de haxixe turco em solo brasileiro. Preso: Garip Uç, químico turco que pediu refúgio em 2020. Israel começa a monitorar carteiras digitais brasileiras com suspeita de sobreposição PCC-Hezbollah.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--fg3)"></div>
+      <div class="tl-date">2023</div>
+      <div class="tl-title">Cyllas Salerno preso pela 1ª vez — lavagem para chineses</div>
+      <div class="tl-desc">Polícia Federal prende Cyllas em operação contra lavagem de dinheiro para criminosos chineses. Esta é a primeira de três prisões. O padrão se estabelece: preso, solto, preso novamente.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--fg3)"></div>
+      <div class="tl-date">DEZ/2024</div>
+      <div class="tl-title">Receita revoga e-Financeira — brecha mantida por fake news</div>
+      <div class="tl-desc">Alterações da e-Financeira que ampliariam a transparência das fintechs são revogadas após campanha de fake news. Pergunta não investigada: quem produziu e financiou a desinformação? Timing suspeito — meses antes da Hydra.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--red)"></div>
+      <div class="tl-date">26/NOV/2024</div>
+      <div class="tl-title">Op. Tai-Pan — Cyllas preso pela 2ª vez</div>
+      <div class="tl-desc">PF deflagra Operação Tai-Pan contra crimes financeiros. Cyllas Salerno é preso. Os R$ 6bi em 5 anos são documentados pela primeira vez. O esquema Hydra começa a ser formalmente mapeado.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--green)"></div>
+      <div class="tl-date">31/OUT/2024</div>
+      <div class="tl-title">Gritzbach depõe à Corregedoria da Polícia Civil</div>
+      <div class="tl-desc">Antônio Vinicius Gritzbach, em delação premiada, detalha como as fintechs 2GO Bank e InvBank eram usadas pelo PCC. Cita Cyllas Salerno como sócio de Cara Preta e Japa na 2GO Bank. Este depoimento é o gatilho direto da Operação Hydra.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--red)"></div>
+      <div class="tl-date">08/NOV/2024</div>
+      <div class="tl-title">Gritzbach executado no Aeroporto de Guarulhos</div>
+      <div class="tl-desc">8 dias após seu depoimento, Gritzbach é morto a tiros de fuzil no Aeroporto Internacional de Guarulhos. O silenciamento é cirúrgico e rápido. O caso evidencia a ausência de protocolo de proteção efetivo para colaboradores premiados em casos de crime organizado.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--fg3)"></div>
+      <div class="tl-date">JAN/2025</div>
+      <div class="tl-title">Cyllas obtém habeas corpus — solto</div>
+      <div class="tl-desc">Decisão judicial libera Cyllas Salerno após a prisão na Op. Tai-Pan. Permanece afastado das funções da Polícia Civil, respondendo a procedimento na Corregedoria. A liberação permite potencial destruição de evidências no intervalo.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--red)"></div>
+      <div class="tl-date">25/FEV/2025</div>
+      <div class="tl-title">Operação Hydra deflagrada — Cyllas preso pela 3ª vez</div>
+      <div class="tl-desc">MPSP e PF deflagam a Operação Hydra. Cyllas Salerno é preso. Mandados de busca e apreensão em SP, Santo André e SBC. 8 contas bloqueadas. Atividades das fintechs suspensas temporariamente. Israel confirma alerta sobre carteiras PCC-Hezbollah.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--amber)"></div>
+      <div class="tl-date">MAR/2025</div>
+      <div class="tl-title">MPSP denuncia 3 — identidades não divulgadas</div>
+      <div class="tl-desc">Ministério Público de São Paulo denuncia formalmente 3 pessoas pelos R$ 6 bilhões de lavagem. As identidades não são divulgadas publicamente. Esta é a lacuna crítica que permanece aberta até hoje.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--red)"></div>
+      <div class="tl-date">SET/2025</div>
+      <div class="tl-title">Cyllas preso pela 3ª vez — novos crimes</div>
+      <div class="tl-desc">Policial é preso pela terceira vez, desta vez sob suspeita de aplicar golpes. A progressão de crimes e prisões sem condenação definitiva ilustra a capacidade operacional mantida mesmo sob investigação. O processo judicial continua.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--fg3)"></div>
+      <div class="tl-date">ABR/2026 — HOJE</div>
+      <div class="tl-title">Status: investigação ativa — beneficiários finais: desconhecidos</div>
+      <div class="tl-desc">4 frentes convergem: CPI Crime Organizado + CPMI INSS + Compliance Zero (STF/sigilo) + Hydra (MPSP). MLAT EUA: sem resposta. Delaware: beneficiários ocultos. Eleições de outubro/2026 criam pressão de tempo crítica para avanço investigativo.</div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /main -->
+
+<!-- ═══ FOOTER ═══ -->
+<div class="footer">
+  <div class="footer-text">Operação Hydra · Dossiê Investigativo 2026 · lawfare-timeline.vercel.app</div>
+  <div class="footer-text">CC0 1.0 Universal — Domínio Público · Sem direitos reservados</div>
+  <div class="footer-text">Fontes: MPSP · PF · GAECO-SP · CNN Brasil · Metrópoles · A Tarde · O Antagonista</div>
+</div>
+
+<script>
+function showTab(id) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  event.target.classList.add('active');
+}
+
+function toggleCheck(el) {
+  el.classList.toggle('done');
+  updateProgress();
+}
+
+function updateProgress() {
+  const all = document.querySelectorAll('.check-item');
+  const done = document.querySelectorAll('.check-item.done');
+  const pct = all.length ? Math.round((done.length / all.length) * 100) : 0;
+  document.getElementById('pct-total').textContent = pct + '%';
+  document.getElementById('bar-total').style.width = pct + '%';
+  const color = pct < 30 ? 'var(--red)' : pct < 70 ? 'var(--amber)' : 'var(--green)';
+  document.getElementById('bar-total').style.background = color;
+}
+
+// Animate stats on load
+window.addEventListener('load', () => {
+  updateProgress();
+});
+</script>
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

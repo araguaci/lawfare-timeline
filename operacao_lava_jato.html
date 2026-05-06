@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-analytics-domain="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operação Lava Jato — Dashboard Investigativo</title>
+  <meta name="description" content="Análise detalhada da Operação Lava Jato: corrupção sistêmica, impacto institucional e ondas de anulações jurídicas.">
+  <link rel="canonical" href="https://gosurf.site/operacao-lava-jato">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://gosurf.site/operacao-lava-jato">
+  <meta property="og:title" content="Operação Lava Jato — Dashboard Investigativo">
+  <meta property="og:description" content="Investigação sobre o maior esquema de corrupção do país envolvendo Petrobras, empreiteiras e partidos políticos.">
+  <meta property="og:image" content="https://gosurf.site/og_card_operacao_lava_jato.png">
+  <meta property="og:locale" content="pt_BR">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Operação Lava Jato — Dashboard Investigativo">
+  <meta name="twitter:description" content="Investigação sobre o maior esquema de corrupção do país.">
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#08111e;--bg2:#0f1d2e;--bg3:#162030;
+    --blue:#3a8fff;--blue2:#7ab8ff;--blue-dim:#1a3d7a;
+    --gold:#e8b84b;--gold2:#f5d07a;--gold-dim:#a07830;
+    --red:#e85555;--red2:#ff7575;--red-dim:#7a2828;
+    --teal:#2ecfb0;--teal2:#60ffd8;--teal-dim:#0e6050;
+    --orange:#ff8c42;--orange2:#ffb07a;
+    --purple:#b07aff;--purple2:#d0a8ff;
+    --green:#4fcb7a;--green2:#88eeaa;
+    --border:rgba(255,255,255,0.07);
+    --text:#e8eaf0;--text2:#8899aa;
+    --font:'Syne',sans-serif;--mono:'JetBrains Mono',monospace;
+  }
+  body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh}
+
+  header{
+    padding:28px 32px 20px;border-bottom:2px solid var(--blue-dim);
+    background:linear-gradient(135deg,#08111e 0%,#0d1e35 60%,#08111e 100%);
+    position:relative;overflow:hidden;
+  }
+  header::before{
+    content:'';position:absolute;inset:0;
+    background:radial-gradient(ellipse at 70% 50%,rgba(58,143,255,0.07) 0%,transparent 60%);
+  }
+  .hbadge{display:inline-flex;align-items:center;gap:6px;background:rgba(58,143,255,0.1);border:1px solid var(--blue-dim);border-radius:4px;padding:4px 12px;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--blue);text-transform:uppercase;margin-bottom:10px}
+  header h1{font-size:28px;font-weight:800;letter-spacing:-0.5px;color:#fff;line-height:1.1}
+  header h1 span{color:var(--blue2)}
+  .hmeta{display:flex;gap:20px;margin-top:10px;flex-wrap:wrap}
+  .hm{font-size:12px;color:var(--text2);font-family:var(--mono)}
+  .hm b{color:var(--blue2)}
+
+  nav{display:flex;gap:4px;padding:10px 28px;background:rgba(15,29,46,0.9);border-bottom:1px solid var(--border);overflow-x:auto;flex-wrap:wrap;position:sticky;top:0;z-index:100;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+  .nb{padding:6px 13px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--text2);font-family:var(--font);font-size:12px;font-weight:500;cursor:pointer;transition:all .2s;white-space:nowrap}
+  .nb:hover{border-color:var(--blue-dim);color:var(--blue2)}
+  .nb.act{background:rgba(58,143,255,0.12);border-color:var(--blue);color:var(--blue);font-weight:700}
+
+  main{padding:0 22px 32px;max-width:1200px;margin:0 auto}
+  .sec{display:block;padding-top:30px;scroll-margin-top:70px}
+
+  /* KPI grid */
+  .kgrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    padding: 18px 0 10px;
+  }
+  @media (max-width: 900px) { .kgrid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 500px) { .kgrid { grid-template-columns: 1fr; } }
+  .kcard {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 15px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, background 0.2s, border-color 0.2s;
+    cursor: default;
+  }
+  .kcard:hover {
+    transform: translateY(-2px);
+    background: var(--bg3);
+    border-color: rgba(255,255,255,0.15);
+  }
+  .kcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+  .kb::before{background:linear-gradient(90deg,var(--blue),var(--blue2))}
+  .kg::before{background:linear-gradient(90deg,var(--gold),var(--gold2))}
+  .kr::before{background:linear-gradient(90deg,var(--red),var(--red2))}
+  .kt::before{background:linear-gradient(90deg,var(--teal),var(--teal2))}
+  .ko::before{background:linear-gradient(90deg,var(--orange),var(--orange2))}
+  .kp::before{background:linear-gradient(90deg,var(--purple),var(--purple2))}
+  .kn::before{background:linear-gradient(90deg,var(--green),var(--green2))}
+  .klabel{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);margin-bottom:5px}
+  .kval{font-size:22px;font-weight:800;line-height:1}
+  .ksub{font-size:11px;color:var(--text2);margin-top:3px;font-family:var(--mono)}
+  .kb:hover .kval { text-shadow: 0 0 15px rgba(58,143,255,0.4); }
+  .kr:hover .kval { text-shadow: 0 0 15px rgba(232,85,85,0.4); }
+  .kb .kval{color:var(--blue2)}
+  .kg .kval{color:var(--gold)}
+  .kr .kval{color:var(--red2)}
+  .kt .kval{color:var(--teal)}
+  .ko .kval{color:var(--orange)}
+  .kp .kval{color:var(--purple2)}
+  .kn .kval{color:var(--green2)}
+
+  /* Gravity */
+  .gbar{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin-bottom:12px}
+  .gtitle{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);margin-bottom:10px}
+  .gtrack{height:10px;background:var(--bg3);border-radius:999px;overflow:hidden}
+  .gfill{height:100%;border-radius:999px;background:linear-gradient(90deg,#3a8fff,#e8b84b,#e85555);transition:width 1.2s ease;width:0}
+  .glabels{display:flex;justify-content:space-between;font-size:10px;color:var(--text2);margin-top:5px;font-family:var(--mono)}
+  .gscore{font-size:24px;font-weight:800;color:var(--red2);margin-top:8px}
+  .gnote{font-size:11px;color:var(--text2);margin-top:2px}
+
+  /* Panels */
+  .pgrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+  @media (max-width: 850px) { .pgrid { grid-template-columns: 1fr; } }
+  .panel{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:18px 20px}
+  .ptitle{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+  .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+  .db{background:var(--blue)}.dg{background:var(--gold)}.dr{background:var(--red)}.dt{background:var(--teal)}.do{background:var(--orange)}.dp{background:var(--purple)}.dn{background:var(--green)}
+
+  .tag{display:inline-block;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:600;margin:2px 2px 2px 0;font-family:var(--mono)}
+  .tb{background:rgba(58,143,255,0.1);color:var(--blue2);border:1px solid rgba(58,143,255,0.2)}
+  .tg{background:rgba(232,184,75,0.1);color:var(--gold);border:1px solid rgba(232,184,75,0.2)}
+  .tr{background:rgba(232,85,85,0.12);color:var(--red2);border:1px solid rgba(232,85,85,0.2)}
+  .tt{background:rgba(46,207,176,0.08);color:var(--teal);border:1px solid rgba(46,207,176,0.18)}
+  .to{background:rgba(255,140,66,0.1);color:var(--orange);border:1px solid rgba(255,140,66,0.18)}
+  .tp{background:rgba(176,122,255,0.1);color:var(--purple2);border:1px solid rgba(176,122,255,0.2)}
+  .tn{background:rgba(79,203,122,0.1);color:var(--green2);border:1px solid rgba(79,203,122,0.2)}
+  .tgr{background:rgba(136,153,170,0.12);color:var(--text2);border:1px solid rgba(136,153,170,0.2)}
+
+  /* Timeline */
+  .tli{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)}
+  .tli:last-child{border-bottom:none}
+  .tld{font-family:var(--mono);font-size:11px;color:var(--blue);min-width:95px;font-weight:600;padding-top:2px;flex-shrink:0}
+  .tltitle{font-size:13px;font-weight:600;margin-bottom:2px}
+  .tldesc{font-size:12px;color:var(--text2);line-height:1.5}
+
+  /* Actors */
+  .agrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  @media (max-width: 1100px) { .agrid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .agrid { grid-template-columns: 1fr; } }
+  
+  /* Investigados grid (10 items) */
+  .agrid-large {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+  }
+  @media (max-width: 1200px) { .agrid-large { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) { .agrid-large { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .agrid-large { grid-template-columns: 1fr; } }
+
+  .acard{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px 14px}
+  .aname{font-size:13px;font-weight:700;margin-bottom:3px}
+  .arole{font-size:11px;color:var(--text2);font-family:var(--mono);margin-bottom:6px}
+  .astatus{font-size:12px;color:var(--text2);line-height:1.5}
+
+  /* Risks */
+  .ritem{padding:10px 12px;border-radius:8px;margin-bottom:8px;border-left:3px solid;background:var(--bg3)}
+  .rcrit{border-color:var(--red)}
+  .ralto{border-color:var(--orange)}
+  .rmedio{border-color:var(--gold)}
+  .rbaixo{border-color:var(--teal)}
+  .rheader{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px}
+  .rname{font-size:13px;font-weight:600}
+  .rbadge{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;border-radius:3px;font-family:var(--mono)}
+  .bcrit{background:rgba(232,85,85,0.2);color:var(--red2)}
+  .balto{background:rgba(255,140,66,0.2);color:var(--orange2)}
+  .bmedio{background:rgba(232,184,75,0.15);color:var(--gold2)}
+  .bbaixo{background:rgba(46,207,176,0.1);color:var(--teal2)}
+  .rdesc{font-size:12px;color:var(--text2);line-height:1.5}
+
+  /* Alerts */
+  .alitem{display:flex;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:8px;background:var(--bg3)}
+  .alic{font-size:16px;flex-shrink:0;margin-top:1px}
+  .altitle{font-size:13px;font-weight:600;margin-bottom:2px}
+  .aldesc{font-size:12px;color:var(--text2);line-height:1.5}
+
+  /* Learn */
+  .litem{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--border)}
+  .litem:last-child{border-bottom:none}
+  .lnum{font-family:var(--mono);font-size:20px;font-weight:800;min-width:36px;text-align:center;-webkit-text-stroke:1px var(--blue);color:var(--bg3);line-height:1}
+  .ltitle{font-size:13px;font-weight:700;color:var(--blue2);margin-bottom:3px}
+  .ldesc{font-size:12px;color:var(--text2);line-height:1.6}
+
+  /* Strategy cards */
+  .scard{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:13px 15px;margin-bottom:9px}
+  .sheader{display:flex;align-items:center;gap:9px;margin-bottom:7px}
+  .sico{font-size:16px}
+  .sname{font-size:13px;font-weight:700}
+  .sdesc{font-size:12px;color:var(--text2);line-height:1.6}
+  .sresult{font-size:11px;margin-top:7px;padding:5px 9px;border-radius:5px;background:var(--bg2);font-family:var(--mono)}
+
+  /* Refs */
+  .refitem{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);align-items:flex-start}
+  .refitem:last-child{border-bottom:none}
+  .refnum{font-family:var(--mono);font-size:11px;color:var(--text2);min-width:28px;margin-top:2px}
+  .reftitle{font-size:13px;font-weight:600;color:var(--blue);margin-bottom:2px}
+  .refsrc{font-size:11px;color:var(--text2);font-family:var(--mono)}
+
+  .full{grid-column:1/-1}
+
+  /* flowmap */
+  .frow{display:flex;align-items:center;gap:8px;padding:7px 0;font-size:12px;flex-wrap:wrap}
+  .fnode{padding:5px 11px;border-radius:5px;font-weight:600;font-size:11px}
+  .farr{color:var(--text2);font-size:16px}
+  .flabel{font-size:11px;color:var(--text2);font-family:var(--mono)}
+
+  p.body{font-size:13px;color:var(--text2);line-height:1.75;margin-bottom:10px}
+  .dual{display:flex;gap:8px;margin-bottom:8px;padding:10px 12px;border-radius:8px;background:var(--bg3);border-left:3px solid var(--border)}
+  .dual-a{font-size:12px;line-height:1.6}
+  .dual-label{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px;font-family:var(--mono)}
+
+  /* === RELATED ARTIFACTS === */
+  .related-wrap {
+    padding: 64px 32px;
+    background: linear-gradient(to bottom, var(--bg), var(--bg2));
+    border-top: 2px solid var(--blue-dim);
+    margin-top: 40px;
+  }
+  .related-title {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--text2);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .related-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  @media (max-width: 1000px) { .related-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) { .related-grid { grid-template-columns: 1fr; } }
+  .related-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    padding: 20px;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+  }
+  .related-card:hover {
+    border-color: var(--blue);
+    background: var(--bg3);
+    transform: translateY(-2px);
+  }
+  .related-card-cat {
+    font-size: 9px;
+    color: var(--blue2);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-family: var(--mono);
+  }
+  .related-card-title {
+    font-family: var(--font);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text);
+    line-height: 1.4;
+  }
+  .related-card-arrow {
+    margin-top: 12px;
+    font-size: 10px;
+    color: var(--text2);
+    text-align: right;
+    font-family: var(--mono);
+  }
+  @media (max-width: 600px) {
+    .related-wrap { padding: 40px 22px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="hbadge">MAPA MENTAL • ANÁLISE JURÍDICO-INVESTIGATIVA</div>
+  <h1>Operação <span>Lava Jato</span></h1>
+  <div class="hmeta">
+    <span class="hm"><b>Deflagração:</b> 17 mar 2014</span>
+    <span class="hm"><b>Encerramento:</b> jan 2021 (força-tarefa)</span>
+    <span class="hm"><b>Duração:</b> ~7 anos • 79 fases</span>
+    <span class="hm"><b>Sede:</b> 13ª Vara Federal — Curitiba/PR</span>
+    <span class="hm"><b>Juiz:</b> Sérgio Moro</span>
+    <span class="hm"><b>Coordenador MPF:</b> Deltan Dallagnol</span>
+  </div>
+</header>
+
+<nav id="scroll-spy-nav">
+  <button class="nb act" data-target="sec-visao">Visão Geral</button>
+  <button class="nb" data-target="sec-timeline">Linha do Tempo</button>
+  <button class="nb" data-target="sec-atores">Atores</button>
+  <button class="nb" data-target="sec-esquema">Esquema & Crimes</button>
+  <button class="nb" data-target="sec-estrategias">Estratégias</button>
+  <button class="nb" data-target="sec-controversias">Controvérsias</button>
+  <button class="nb" data-target="sec-riscos">Riscos & Alertas</button>
+  <button class="nb" data-target="sec-aprendizados">Aprendizados</button>
+  <button class="nb" data-target="sec-refs">Referências</button>
+</nav>
+
+<main>
+
+<!-- ══════ VISÃO GERAL ══════ -->
+<div id="sec-visao" class="sec act">
+  <div class="kgrid">
+    <div class="kcard kb"><div class="klabel">Fases</div><div class="kval">79</div><div class="ksub">mar 2014 — jan 2021</div></div>
+    <div class="kcard kg"><div class="klabel">Mandados (BA)</div><div class="kval">1.000+</div><div class="ksub">busca, prisão, coercitiva</div></div>
+    <div class="kcard kr"><div class="klabel">Denúncias</div><div class="kval">130</div><div class="ksub">553 denunciados</div></div>
+    <div class="kcard kt"><div class="klabel">Condenações 1ª inst.</div><div class="kval">278</div><div class="ksub">muitas contestadas/anuladas</div></div>
+    <div class="kcard ko"><div class="klabel">Devolvido ao erário</div><div class="kval">R$4,3bi</div><div class="ksub">+R$2,1bi em multas</div></div>
+    <div class="kcard kp"><div class="klabel">Prejuízo Petrobras</div><div class="kval">R$6,2bi</div><div class="ksub">TCU estima R$29bi</div></div>
+    <div class="kcard kn"><div class="klabel">Acordo Odebrecht</div><div class="kval">77 exec.</div><div class="ksub">maior delação do mundo</div></div>
+    <div class="kcard kb"><div class="klabel">Operações derivadas</div><div class="kval">55+</div><div class="ksub">Calicute, Patmos, etc.</div></div>
+  </div>
+
+  <div class="gbar">
+    <div class="gtitle">Índice de Gravidade & Complexidade Institucional</div>
+    <div class="gtrack"><div class="gfill" id="gfill"></div></div>
+    <div class="glabels"><span>Baixo</span><span>Médio</span><span>Alto</span><span>Crítico</span></div>
+    <div class="gscore">98 / 100</div>
+    <div class="gnote">Maior operação anticorrupção da história brasileira. Corrupção sistêmica de R$29bi, impacto político eleitoral direto, suspeição judicial confirmada pelo STF, Vaza Jato, conluio entre juiz e MP, colapso de grandes empresas e ondas de anulações em cascata</div>
+  </div>
+
+  <div class="pgrid">
+    <div class="panel">
+      <div class="ptitle"><span class="dot db"></span>Contexto & Origem</div>
+      <p class="body">Nasceu de investigações sobre uma rede de <b style="color:var(--blue2)">doleiros em Brasília</b> que usavam um posto de gasolina e lava a jato para movimentar recursos ilícitos. Em 20 dias, alcançou a Petrobras com a prisão de Paulo Roberto Costa — revelando o maior esquema de corrupção do país: diretores da estatal direcionavam licitações para um cartel de empreiteiras em troca de propina sistemática.</p>
+      <div style="margin-top:10px">
+        <span class="tag tb">Lavagem de dinheiro</span>
+        <span class="tag tb">Corrupção ativa/passiva</span>
+        <span class="tag tb">Fraude em licitação</span>
+        <span class="tag tb">Cartel de empreiteiras</span>
+        <span class="tag tb">Evasão de divisas</span>
+        <span class="tag tb">Org. criminosa</span>
+        <span class="tag tb">Peculato</span>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot dr"></span>Derrocada & Controvérsias</div>
+      <p class="body">Em 2019, o <b style="color:var(--red2)">Vaza Jato</b> (The Intercept) revelou conversas entre Moro e Dallagnol mostrando coordenação indevida entre juiz e acusação. O STF declarou Moro suspeito e incompetente para julgar Lula, anulando suas condenações. O efeito cascata de anulações alcançou Alberto Youssef, Palocci, OAS e dezenas de outros réus.</p>
+      <div style="margin-top:10px">
+        <span class="tag tr">Vaza Jato — 2019</span>
+        <span class="tag tr">Moro suspeito — STF</span>
+        <span class="tag tr">Incompetência da 13ª Vara</span>
+        <span class="tag tr">Anulações em cascata</span>
+        <span class="tag tr">Conluio juiz-MP</span>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot dg"></span>Resultados Positivos</div>
+      <p class="body">Apesar das controvérsias, a operação revelou o funcionamento interno de um mega-esquema sistêmico, gerou acordos de delação premiada inéditos, recuperou bilhões para o erário, resultou em cooperação internacional com 20+ países, e cataliticamente reformou a legislação anticorrupção brasileira.</p>
+      <div style="margin-top:10px">
+        <span class="tag tn">R$4,3bi devolvidos</span>
+        <span class="tag tn">Cooperação internacional</span>
+        <span class="tag tn">Reforma legislativa</span>
+        <span class="tag tn">Delações premiadas</span>
+        <span class="tag tn">Transparência pública</span>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot dp"></span>Impacto Político & Social</div>
+      <p class="body">A operação derrubou presidentes de câmara (Cunha), governadores (Cabral, 280 anos de pena cumulada), ministros e ex-ministros. Prendeu <b style="color:var(--purple2)">Lula por 580 dias</b>, impedindo sua candidatura em 2018. Alimentou o clima político que levou à eleição de Bolsonaro. Moro tornou-se ministro da Justiça em 2019, o que foi posteriormente usado como evidência de parcialidade.</p>
+      <div style="margin-top:10px">
+        <span class="tag tp">Lula preso 580 dias</span>
+        <span class="tag tp">Cunha — cassado</span>
+        <span class="tag tp">Cabral — 280 anos</span>
+        <span class="tag tp">Polarização política</span>
+        <span class="tag tp">Moro — ministro 2019</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ TIMELINE ══════ -->
+<div id="sec-timeline" class="sec">
+  <div class="panel" style="margin-top:16px">
+    <div class="ptitle"><span class="dot db"></span>Linha do Tempo — Marcos Principais</div>
+    <div class="tli"><div class="tld">17 mar 2014</div><div><div class="tltitle" style="color:var(--blue2)">1ª Fase — Deflagração</div><div class="tldesc">PF cumpre mandados em 6 estados + DF contra 4 organizações criminosas de doleiros. Alvo: rede de câmbio clandestino ligada a posto de gasolina em Brasília. 81 alvos de B&A. Surge o nome histórico: Operação Lava Jato.</div></div></div>
+    <div class="tli"><div class="tld">20 mar 2014</div><div><div class="tltitle">2ª Fase — Petrobras entra no radar</div><div class="tldesc">Paulo Roberto Costa, ex-diretor de Refino da Petrobras, é preso por suspeita de destruição de provas. A estatal passa a ser o centro das investigações. Alberto Youssef preso na mesma fase.</div></div></div>
+    <div class="tli"><div class="tld">abr 2014</div><div><div class="tltitle">Força-tarefa do MPF criada</div><div class="tldesc">PGR Rodrigo Janot designa força-tarefa para analisar material apreendido. Curitiba (Deltan Dallagnol), Rio de Janeiro, São Paulo e PGR formam os núcleos principais.</div></div></div>
+    <div class="tli"><div class="tld">2014–2015</div><div><div class="tltitle">Expansão — Cartel de empreiteiras revelado</div><div class="tldesc">Delações de Costa e Youssef expõem o cartel: Odebrecht, Andrade Gutierrez, OAS, Camargo Corrêa, Queiroz Galvão. Superfaturamento de contratos da Petrobras com propina sistemática aos diretores da estatal e aos partidos PT, PMDB, PP, PSDB.</div></div></div>
+    <div class="tli"><div class="tld">set 2015</div><div><div class="tltitle">Lula como informante → alvo</div><div class="tldesc">Ex-presidente presta depoimento como informante. Meses depois passa a ser investigado no caso do tríplex no Guarujá (OAS) e sítio em Atibaia (Odebrecht).</div></div></div>
+    <div class="tli"><div class="tld">4 mar 2016</div><div><div class="tltitle" style="color:var(--red2)">Condução coercitiva de Lula</div><div class="tldesc">PF vai à casa de Lula de manhã cedo para condução coercitiva — ato considerado desnecessário e odiosa por críticos. Moro autoriza. Lula convoca coletiva e critica o tratamento.</div></div></div>
+    <div class="tli"><div class="tld">2016</div><div><div class="tltitle" style="color:var(--red2)">Coletiva do PowerPoint — Dallagnol</div><div class="tldesc">Força-tarefa reúne imprensa em hotel de Curitiba para apresentar denúncia contra Lula com slides de PowerPoint usando a expressão "comandante e maestro". STJ condenará Dallagnol a pagar R$75 mil de indenização a Lula em 2022.</div></div></div>
+    <div class="tli"><div class="tld">mar 2016</div><div><div class="tltitle">Intercepção ilegal — Dilma e Lula</div><div class="tldesc">Conversa telefônica entre a presidente Dilma Rousseff e Lula (sobre nomeação ministerial) é interceptada e vazada seletivamente à Globo pela Lava Jato — ato considerado ilegal por críticos e constitucionalistas.</div></div></div>
+    <div class="tli"><div class="tld">2016–2017</div><div><div class="tltitle">Acordo Odebrecht — maior delação do mundo</div><div class="tldesc">77 executivos delatam. 83 inquéritos abertos no STF. Confissão ao DOJ americano de propinas em mais de US$ 1 bilhão no exterior. Maior acordo de leniência da história mundial até então.</div></div></div>
+    <div class="tli"><div class="tld">2017</div><div><div class="tltitle">Condenação de Lula — 1ª instância</div><div class="tldesc">Moro condena Lula a 9 anos e 6 meses no caso do tríplex. TRF-4 aumenta para 12 anos. Lula fica impedido de concorrer em 2018.</div></div></div>
+    <div class="tli"><div class="tld">7 abr 2018</div><div><div class="tltitle" style="color:var(--red2)">Lula se entrega — 580 dias preso</div><div class="tldesc">Após decisão do STF negando habeas corpus, Lula se entrega à PF em Curitiba. Permanece preso até novembro de 2019, perdendo a eleição presidencial de 2018.</div></div></div>
+    <div class="tli"><div class="tld">jun 2019</div><div><div class="tltitle" style="color:var(--red2)">Vaza Jato — The Intercept</div><div class="tldesc">Publicação de mensagens do Telegram entre Moro e Dallagnol revela coordenação entre juiz e acusação: orientações sobre andamento de investigações, combinação de prazos e estratégia. Episódio central para as anulações posteriores.</div></div></div>
+    <div class="tli"><div class="tld">nov 2019</div><div><div class="tltitle">Lula solto — STF reconhece prescrição</div><div class="tldesc">STF decide por 6×5 que execução antecipada da pena é inconstitucional. Lula é solto após 580 dias. Meses depois, condenações são anuladas por incompetência da vara de Curitiba e suspeição de Moro.</div></div></div>
+    <div class="tli"><div class="tld">abr 2020</div><div><div class="tltitle">Moro deixa o Ministério da Justiça</div><div class="tldesc">Após conflitos com Bolsonaro sobre a indicação do chefe da PF, Moro pede demissão. Sua passagem pelo ministério reforça a narrativa de parcialidade na condução da Lava Jato.</div></div></div>
+    <div class="tli"><div class="tld">jan 2021</div><div><div class="tltitle" style="color:var(--teal)">Encerramento da força-tarefa</div><div class="tldesc">PGR Augusto Aras extingue a força-tarefa da Lava Jato em Curitiba. Processos remanescentes migram para o GAECO/MPF Paraná. Em ~7 anos: 79 fases, 130 denúncias, 278 condenações (1ª inst.), R$4,3bi devolvidos.</div></div></div>
+    <div class="tli"><div class="tld">2021</div><div><div class="tltitle" style="color:var(--red2)">STF — Moro suspeito + incompetência da 13ª Vara</div><div class="tldesc">2ª Turma do STF, por maioria, declara suspeição de Moro para julgar Lula (caso tríplex). STF também declara incompetência da 13ª Vara de Curitiba. Condenações de Lula anuladas. Todos seus direitos políticos restaurados — torna-se elegível para 2022.</div></div></div>
+    <div class="tli"><div class="tld">2022–2025</div><div><div class="tltitle">Ondas de anulações em cascata</div><div class="tldesc">Min. Toffoli anula atos contra Alberto Youssef (raiz da operação), Palocci, ex-presidente da OAS e dezenas de réus por conluio entre Moro e procuradores. Dallagnol tem mandato cassado pela Justiça Eleitoral em 2023. MP/TCU pede apuração de prejuízos da Lava Jato à União.</div></div></div>
+  </div>
+</div>
+
+<!-- ══════ ATORES ══════ -->
+<div id="sec-atores" class="sec">
+  <div style="margin-top:16px">
+    <div class="panel" style="margin-bottom:12px">
+      <div class="ptitle"><span class="dot db"></span>Protagonistas Investigadores</div>
+      <div class="agrid">
+        <div class="acard"><div class="aname" style="color:var(--blue2)">Sérgio Moro</div><div class="arole">Juiz — 13ª Vara Federal Curitiba</div><div class="astatus">Conduziu julgamentos 2014–2018. STF declarou sua suspeição (2021). Tornou-se Ministro da Justiça (2019) e depois Senador (2022). Mandato sob risco por abuso de poder.</div></div>
+        <div class="acard"><div class="aname" style="color:var(--blue2)">Deltan Dallagnol</div><div class="arole">Procurador — coord. força-tarefa</div><div class="astatus">Coordenou FT de Curitiba 2014–2020. Condenado a pagar R$75mi a Lula pela "coletiva do PowerPoint". Eleito deputado federal; mandato cassado em 2023 pela Justiça Eleitoral.</div></div>
+        <div class="acard"><div class="aname" style="color:var(--blue2)">Força-Tarefa Curitiba</div><div class="arole">MPF — Procuradoria no Paraná</div><div class="astatus">Núcleo central da Lava Jato. Instaurou 1.700+ procedimentos, 900+ B&A, 120 prisões temporárias. Encerrada em jan/2021 por Augusto Aras.</div></div>
+        <div class="acard"><div class="aname" style="color:var(--blue2)">Polícia Federal — DRCOR</div><div class="arole">Órgão de investigação</div><div class="astatus">Delegados Erika Marena e Márcio Anselmo, entre outros. Cumprimento dos mandados e investigações de campo. 79 fases operacionais.</div></div>
+      </div>
+    </div>
+    <div class="panel" style="margin-bottom:12px">
+      <div class="ptitle"><span class="dot dr"></span>Investigados de Alto Perfil</div>
+      <div class="agrid-large">
+        <div class="acard"><div class="aname" style="color:var(--red2)">Lula (PT)</div><div class="arole">Ex-presidente da República</div><div class="astatus">Preso 580 dias. Condenações anuladas pelo STF (2021) por suspeição de Moro e incompetência da 13ª Vara. Eleito presidente em 2022.</div></div>
+        <div class="acard"><div class="aname" style="color:var(--red2)">Marcelo Odebrecht</div><div class="arole">CEO — Grupo Odebrecht</div><div class="astatus">Preso 2015. Delação de 77 executivos. Maior acordo de leniência da história mundial. Atos da Lava Jato contra ele progressivamente anulados.</div></div>
+        <div class="acard"><div class="aname" style="color:var(--red2)">Eduardo Cunha (PMDB)</div><div class="arole">Ex-presidente da Câmara</div><div class="astatus">Condenado a 15 anos e 4 meses por Moro. Cassado da Câmara. Símbolo da corrupção parlamentar. Responsável por abrir impeachment de Dilma enquanto era investigado.</div></div>
+        <div class="acard"><div class="aname" style="color:var(--red2)">Sérgio Cabral (PMDB/RJ)</div><div class="arole">Ex-governador do Rio de Janeiro</div><div class="astatus">Penas acumuladas: 280+ anos. Preso 2016 via Op. Calicute. Um dos maiores casos de corrupção estadual do Brasil.</div></div>
+        <div class="acard"><div class="aname" style="color:var(--red2)">Alberto Youssef</div><div class="arole">Doleiro — operador central</div><div class="astatus">Preso na 1ª fase. Delação premiada chave. Em 2025, Min. Toffoli anula todos os atos da Lava Jato contra ele por conluio Moro-MP. "Raiz" da operação.</div></div>
+        <div class="acard"><div class="aname" style="color:var(--red2)">Paulo Roberto Costa</div><div class="arole">Ex-diretor Petrobras — Refino</div><div class="astatus">1ª prisão de grande impacto da Lava Jato (mar 2014). Primeiro delator da operação. Revelou o esquema de propinas entre empreiteiras e diretores da estatal.</div></div>
+        <div class="acard"><div class="aname" style="color:var(--red2)">José Dirceu (PT)</div><div class="arole">Ex-ministro chefe da Casa Civil</div><div class="astatus">Condenado a 23 anos de prisão na Lava Jato. Já havia sido cassado do mandato parlamentar no Mensalão.</div></div>
+        <div class="acard"><div class="aname" style="color:var(--red2)">Antônio Palocci (PT)</div><div class="arole">Ex-ministro da Fazenda</div><div class="astatus">Delator da Lava Jato. Em 2025, STF anula todos os atos contra ele por conluio Moro-MP. Também ator central no caso Castelo de Areia.</div></div>
+        <div class="acard"><div class="aname" style="color:var(--red2)">Eike Batista</div><div class="arole">Empresário</div><div class="astatus">Preso 2017 no âmbito de investigações no RJ. Símbolo da corrupção nos megacontratos de infraestrutura.</div></div>
+        <div class="acard"><div class="aname" style="color:var(--red2)">Geddel Vieira Lima</div><div class="arole">Ex-ministro PMDB</div><div class="astatus">Maior apreensão de dinheiro vivo da história do Brasil: R$51 milhões em malas e caixas (set 2017).</div></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot dt"></span>STF — Atores Judiciais</div>
+      <div class="agrid">
+        <div class="acard"><div class="aname" style="color:var(--teal)">Min. Dias Toffoli</div><div class="arole">STF — relator chave</div><div class="astatus">Declarou nulidade de todos os atos da Lava Jato contra Youssef, Palocci e outros por conluio entre Moro e procuradores. Anulações com potencial de efeito cascata.</div></div>
+        <div class="acard"><div class="aname" style="color:var(--teal)">Min. Edson Fachin</div><div class="arole">STF — relator originário Lava Jato</div><div class="astatus">Declarou incompetência da 13ª Vara de Curitiba para julgar Lula em 2021. Retirou sigilo das delações Odebrecht em 2017. Posição mais favorável à operação.</div></div>
+        <div class="acard"><div class="aname" style="color:var(--teal)">Min. Gilmar Mendes</div><div class="arole">STF — crítico da Lava Jato</div><div class="astatus">Faz "balanço negativo" da operação. Afirmou que ela "terminou como organização criminosa". Estendeu suspeição de Moro para casos do sítio de Atibaia e Instituto Lula.</div></div>
+        <div class="acard"><div class="aname" style="color:var(--teal)">Ricardo Lewandowski</div><div class="arole">STF — ex-presidente</div><div class="astatus">Em 2015, afirmou que a Lava Jato representava uma "revolução" no Brasil. Depois presidiu o julgamento de vários habeas corpus dos investigados.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ ESQUEMA ══════ -->
+<div id="sec-esquema" class="sec">
+  <div class="pgrid" style="margin-top:16px">
+    <div class="panel">
+      <div class="ptitle"><span class="dot dg"></span>Crimes Investigados</div>
+      <div class="frow"><span class="fnode tg">Corrupção passiva</span><span class="farr">→</span><span class="flabel">Art. 317 CP — diretores Petrobras</span></div>
+      <div class="frow"><span class="fnode tg">Corrupção ativa</span><span class="farr">→</span><span class="flabel">Art. 333 CP — empreiteiras</span></div>
+      <div class="frow"><span class="fnode tg">Lavagem de dinheiro</span><span class="farr">→</span><span class="flabel">Lei 9.613/98</span></div>
+      <div class="frow"><span class="fnode tg">Cartel em licitação</span><span class="farr">→</span><span class="flabel">Lei 8.666/93 + Lei 12.529/11</span></div>
+      <div class="frow"><span class="fnode tg">Org. criminosa</span><span class="farr">→</span><span class="flabel">Lei 12.850/13</span></div>
+      <div class="frow"><span class="fnode tg">Evasão de divisas</span><span class="farr">→</span><span class="flabel">Lei 7.492/86</span></div>
+      <div class="frow"><span class="fnode tg">Peculato</span><span class="farr">→</span><span class="flabel">Art. 312 CP — desvio de verbas públicas</span></div>
+      <div class="frow"><span class="fnode tg">Fraude fiscal</span><span class="farr">→</span><span class="flabel">Lei 8.137/90</span></div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot dr"></span>Estrutura do Esquema</div>
+      <div class="scard">
+        <div class="sheader"><span class="sico">🏛</span><span class="sname">Núcleo 1 — Diretores da Petrobras</span></div>
+        <div class="sdesc">Paulo Roberto Costa (Refino), Renato Duque (Serviços), Jorge Zelada (Int. Petróleo) e outros diretores indicados pelos partidos PMDB, PT e PP. Recebiam propinas (2–3% do valor dos contratos) e direcionavam licitações ao cartel.</div>
+      </div>
+      <div class="scard">
+        <div class="sheader"><span class="sico">🏗</span><span class="sname">Núcleo 2 — Cartel de Empreiteiras</span></div>
+        <div class="sdesc">Odebrecht, Andrade Gutierrez, OAS, Camargo Corrêa, Queiroz Galvão e outras. Dividiam os contratos entre si, superfaturavam obras e pagavam propinas sistemáticas aos diretores da Petrobras e aos partidos políticos.</div>
+      </div>
+      <div class="scard">
+        <div class="sheader"><span class="sico">💱</span><span class="sname">Núcleo 3 — Operadores Financeiros</span></div>
+        <div class="sdesc">Alberto Youssef e outros doleiros intermediavam a lavagem do dinheiro das propinas — câmbio paralelo, contas offshores, transferências internacionais e fundos de investimento estruturados para dissimular a origem ilícita.</div>
+      </div>
+      <div class="scard">
+        <div class="sheader"><span class="sico">🗳</span><span class="sname">Núcleo 4 — Partidos & Políticos</span></div>
+        <div class="sdesc">PT, PMDB, PP, PSDB e outros recebiam repasses das empreiteiras via caixa dois (doações eleitorais ilegais e financiamento de campanhas) em troca de manutenção da indicação de diretores e de contratos favoráveis.</div>
+      </div>
+    </div>
+    <div class="panel full">
+      <div class="ptitle"><span class="dot db"></span>Fluxo Financeiro do Esquema</div>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px;padding:8px 0;font-size:12px">
+        <div style="background:var(--bg3);border:1px solid var(--border);padding:10px 14px;border-radius:8px;text-align:center"><div style="color:var(--text2);font-size:10px;margin-bottom:3px">ORIGEM</div><div style="font-weight:700;color:var(--blue2)">Contratos Petrobras</div><div style="font-size:10px;color:var(--text2)">licitações superfaturadas</div></div>
+        <div style="color:var(--text2);font-size:20px">→</div>
+        <div style="background:var(--bg3);border:1px solid var(--border);padding:10px 14px;border-radius:8px;text-align:center"><div style="color:var(--text2);font-size:10px;margin-bottom:3px">PROPINA (2-3%)</div><div style="font-weight:700;color:var(--orange)">Empreiteiras → Diretores</div><div style="font-size:10px;color:var(--text2)">R$ bilhões desviados</div></div>
+        <div style="color:var(--text2);font-size:20px">→</div>
+        <div style="background:var(--bg3);border:1px solid var(--border);padding:10px 14px;border-radius:8px;text-align:center"><div style="color:var(--text2);font-size:10px;margin-bottom:3px">LAVAGEM</div><div style="font-weight:700;color:var(--red2)">Doleiros (Youssef)</div><div style="font-size:10px;color:var(--text2)">câmbio + offshores</div></div>
+        <div style="color:var(--text2);font-size:20px">→</div>
+        <div style="background:var(--bg3);border:1px solid var(--border);padding:10px 14px;border-radius:8px;text-align:center"><div style="color:var(--text2);font-size:10px;margin-bottom:3px">DISTRIBUIÇÃO</div><div style="font-weight:700;color:var(--purple2)">Partidos / Campanhas</div><div style="font-size:10px;color:var(--text2)">PT, PMDB, PP, PSDB</div></div>
+        <div style="color:var(--text2);font-size:20px">⟳</div>
+        <div style="background:var(--bg3);border:1px solid var(--border);padding:10px 14px;border-radius:8px;text-align:center"><div style="color:var(--text2);font-size:10px;margin-bottom:3px">RETORNO</div><div style="font-weight:700;color:var(--gold)">Novos Contratos</div><div style="font-size:10px;color:var(--text2)">ciclo sistêmico</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ ESTRATÉGIAS ══════ -->
+<div id="sec-estrategias" class="sec">
+  <div class="pgrid" style="margin-top:16px">
+    <div class="panel">
+      <div class="ptitle"><span class="dot dt"></span>Inovações Estratégicas da Acusação</div>
+      <div class="scard">
+        <div class="sheader"><span class="sico">🤝</span><span class="sname">Delação Premiada em Escala</span></div>
+        <div class="sdesc">Uso massivo e inovador da Lei 12.850/13. Delatores incluíam Paulo Roberto Costa, Alberto Youssef e os 77 executivos da Odebrecht. "Motor" da operação segundo Dallagnol. Gerou mais de 80 inquéritos no STF.</div>
+        <div class="sresult" style="color:var(--teal)">✓ EFICAZ — Revelou estrutura completa do esquema. Porém alguns acordos posteriormente contestados</div>
+      </div>
+      <div class="scard">
+        <div class="sheader"><span class="sico">🏢</span><span class="sname">Acordos de Leniência Empresarial</span></div>
+        <div class="sdesc">Odebrecht firmou o maior acordo de leniência da história mundial com o DOJ (EUA), CGU e AGU no Brasil, prevendo multas de R$2,6bi. Permitiu recuperação de recursos e cooperação internacional inédita.</div>
+        <div class="sresult" style="color:var(--teal)">✓ INÉDITO globalmente — mas acordos acusados de "revolving door" e lawfare por agentes estaduais</div>
+      </div>
+      <div class="scard">
+        <div class="sheader"><span class="sico">🌍</span><span class="sname">Cooperação Internacional</span></div>
+        <div class="sdesc">400+ pedidos de cooperação. DOJ americano, Suíça (US$400mi bloqueados), Portugal, Peru, Colômbia, Angola, Moçambique e 15+ países. Permitiu rastrear offshores e ativos ocultos no exterior.</div>
+        <div class="sresult" style="color:var(--teal)">✓ PIONEIRO no Brasil — estabeleceu novo padrão de cooperação transnacional</div>
+      </div>
+      <div class="scard">
+        <div class="sheader"><span class="sico">📺</span><span class="sname">Comunicação Pública / Transparência</span></div>
+        <div class="sdesc">Força-tarefa adotou postura de ampla divulgação: site, conferências à imprensa, site de acompanhamento. Dallagnol tornou-se personagem público. Vaza Jato revelaria depois o lado problemático dessa visibilidade.</div>
+        <div class="sresult" style="color:var(--orange)">⚠ CONTROVERSO — transparência positiva vs. espetacularização midiática e pressão pública sobre réus</div>
+      </div>
+      <div class="scard">
+        <div class="sheader"><span class="sico">⚡</span><span class="sname">Prisões Preventivas como Pressão</span></div>
+        <div class="sdesc">Uso de prisão preventiva como instrumento de pressão para obter delações: réus eram presos e mantidos até firmar acordo. Estratégia criticada como uso ilegal do sistema para forçar confissões.</div>
+        <div class="sresult" style="color:var(--red2)">✗ CONTESTADO — STF limitou conduções coercitivas; críticos apontam cerceamento do direito de defesa</div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot dr"></span>Estratégias da Defesa</div>
+      <div class="scard">
+        <div class="sheader"><span class="sico">⚖</span><span class="sname">Incompetência da 13ª Vara de Curitiba</span></div>
+        <div class="sdesc">Tese de que a 13ª Vara não tinha competência para julgar crimes sem conexão direta com a Petrobras (casos de Lula, por ex.). STF acolheu em 2021: crimes não ligados à Petrobras não poderiam ser julgados em Curitiba.</div>
+        <div class="sresult" style="color:var(--teal)">✓ ACEITA pelo STF — anulação das condenações de Lula</div>
+      </div>
+      <div class="scard">
+        <div class="sheader"><span class="sico">🕵</span><span class="sname">Suspeição de Sérgio Moro</span></div>
+        <div class="sdesc">Após o Vaza Jato (2019), defesas passaram a alegar que Moro demonstrou parcialidade ao orientar a acusação. O fato de Moro aceitar ser ministro de Bolsonaro reforçou a tese de motivação política.</div>
+        <div class="sresult" style="color:var(--teal)">✓ ACEITA pelo STF — 2ª Turma declarou Moro suspeito para casos de Lula (2021)</div>
+      </div>
+      <div class="scard">
+        <div class="sheader"><span class="sico">📱</span><span class="sname">Vaza Jato como Prova de Conluio</span></div>
+        <div class="sdesc">Mensagens do Telegram obtidas por hackers revelaram coordenação entre Moro e Dallagnol. Advogados passaram a usar os diálogos como prova de conluio processual em pedidos de anulação.</div>
+        <div class="sresult" style="color:var(--orange)">⚠ PARCIALMENTE ACEITO — Toffoli usou em decisões; outros ministros questionaram validade da prova obtida por hackers</div>
+      </div>
+      <div class="scard">
+        <div class="sheader"><span class="sico">💥</span><span class="sname">Efeito Cascata das Anulações</span></div>
+        <div class="sdesc">Cada anulação (Lula, Youssef, Palocci, OAS) abre precedente para os demais réus pedirem extensão da decisão. Estratégia defensiva de expansão progressiva das nulidades.</div>
+        <div class="sresult" style="color:var(--orange)">⚠ EM CURSO — potencial de atingir dezenas a centenas de condenações ainda em litígio</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ CONTROVÉRSIAS ══════ -->
+<div id="sec-controversias" class="sec">
+  <div class="pgrid" style="margin-top:16px">
+    <div class="panel">
+      <div class="ptitle"><span class="dot dr"></span>As 6 Grandes Controvérsias</div>
+      <div class="dual" style="border-color:var(--red)">
+        <div class="dual-a">
+          <div class="dual-label" style="color:var(--red2)">1. Vaza Jato</div>
+          The Intercept publicou mensagens do Telegram (jun/2019) mostrando Moro orientando estratégia da acusação, pedindo agilidade em investigações e comentando notícias sobre réus — violando o princípio do juiz natural imparcial. A obtenção das mensagens via hacker criou debate sobre validade probatória.
+        </div>
+      </div>
+      <div class="dual" style="border-color:var(--orange)">
+        <div class="dual-a">
+          <div class="dual-label" style="color:var(--orange)">2. Condução Coercitiva de Lula</div>
+          PF foi à casa de Lula às 6h de uma sexta-feira para condução coercitiva. Considerada desnecessária e humilhante por juristas. O STF depois limitou o uso de conduções coercitivas para fins espetaculares, sem necessidade real de urgência.
+        </div>
+      </div>
+      <div class="dual" style="border-color:var(--gold)">
+        <div class="dual-a">
+          <div class="dual-label" style="color:var(--gold)">3. Coletiva do PowerPoint</div>
+          Dallagnol realizou coletiva em hotel de Curitiba para apresentar denúncia contra Lula com slides acusatórios antes de qualquer condenação. STJ condenou Dallagnol a pagar R$75 mil em danos morais a Lula pela apresentação.
+        </div>
+      </div>
+      <div class="dual" style="border-color:var(--purple)">
+        <div class="dual-a">
+          <div class="dual-label" style="color:var(--purple2)">4. Vazamento da Conversa Dilma-Lula</div>
+          Interceptação e vazamento seletivo à Rede Globo de conversa entre a presidente Dilma e Lula (nomeação ministerial) foi considerado ato ilegal de instrumentalização política da Lava Jato para interferir no processo de impeachment.
+        </div>
+      </div>
+      <div class="dual" style="border-color:var(--teal)">
+        <div class="dual-a">
+          <div class="dual-label" style="color:var(--teal)">5. Moro como Ministro de Bolsonaro</div>
+          Ao aceitar o Ministério da Justiça de Bolsonaro em 2019, Moro entregou o argumento mais forte para a tese de parcialidade: sua atuação na Lava Jato teria sido instrumento de projeto político pessoal. STF usou isso na declaração de suspeição.
+        </div>
+      </div>
+      <div class="dual" style="border-color:var(--blue)">
+        <div class="dual-a">
+          <div class="dual-label" style="color:var(--blue2)">6. Impacto Geopolítico</div>
+          Tese crescente de que a Lava Jato serviu interesses estratégicos dos EUA: destruiu a Odebrecht (concorrente global da construção), enfraqueceu o Brasil geopoliticamente, utilizou o DOJ como instrumento de pressão via FCPA. The Intercept e pesquisadores como Fábio de Sá e Silva documentaram a relação com agentes do governo americano.
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot dg"></span>O Debate: Acertos vs. Excessos</div>
+      <p class="body" style="margin-bottom:12px">A Lava Jato é debatida como um caso de estudo em tensão permanente entre eficiência investigativa e garantias constitucionais:</p>
+      <div class="scard">
+        <div class="sheader"><span class="sico">✅</span><span class="sname">Argumentos a Favor</span></div>
+        <div class="sdesc">Revelou esquema de corrupção sistêmica impossível de provar por métodos tradicionais. Recuperou R$4,3bi. Condenou políticos e empresários antes "intocáveis". Reformou a cultura jurídica anticorrupção no Brasil. Criou cooperação internacional inédita. Delações premiadas funcionaram como quebra do "omertà" corporativo brasileiro.</div>
+      </div>
+      <div class="scard">
+        <div class="sheader"><span class="sico">❌</span><span class="sname">Críticas Fundamentadas</span></div>
+        <div class="sdesc">Conluio entre juiz e acusação comprovado pelo STF. Prisões preventivas usadas como pressão para delatar. Competência territorial indevida. Vazamentos seletivos e espetacularização. Destruição econômica da Odebrecht e 60+ empresas. Impacto eleitoral direto em 2018. Revolving door dos agentes para o setor privado. Possível uso geopolítico por potência estrangeira.</div>
+      </div>
+      <div style="font-size:12px;color:var(--text2);margin-top:12px;padding:10px 12px;background:var(--bg3);border-radius:8px;font-family:var(--mono)">
+        ⚡ Nota: O debate é genuinamente dividido. Houve corrupção real e gigantesca — e houve abusos reais na investigação. Ambos podem ser verdadeiros simultaneamente.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ RISCOS & ALERTAS ══════ -->
+<div id="sec-riscos" class="sec">
+  <div class="pgrid" style="margin-top:16px">
+    <div class="panel">
+      <div class="ptitle"><span class="dot dr"></span>Mapa de Riscos</div>
+      <div class="ritem rcrit"><div class="rheader"><span class="rname" style="color:var(--red2)">Conluio Juiz-Acusação (Confirmed)</span><span class="rbadge bcrit">CRÍTICO</span></div><div class="rdesc">STF confirmou parcialidade de Moro. Mensagens do Vaza Jato mostram coordenação processual indevida. Risco estrutural máximo: quando o julgador e o acusador operam como um único time, o processo não existe — é uma peça de teatro com resultado predeterminado.</div></div>
+      <div class="ritem rcrit"><div class="rheader"><span class="rname" style="color:var(--red2)">Anulações em Cascata (Em Curso)</span><span class="rbadge bcrit">CRÍTICO</span></div><div class="rdesc">Cada nulidade reconhecida pelo STF — Lula, Youssef (raiz da operação), Palocci, OAS — cria precedente expansivo. Risco de que centenas de condenações sejam anuladas progressivamente, varrendo o legado da operação.</div></div>
+      <div class="ritem rcrit"><div class="rheader"><span class="rname" style="color:var(--red2)">Instrumentalização Político-Eleitoral</span><span class="rbadge bcrit">CRÍTICO</span></div><div class="rdesc">Lula preso 580 dias, impedido de concorrer em 2018. Moro aceita cargo de ministro. Polarização política extrema. A operação foi usada (ou se deixou usar) como ator num jogo político, contaminando sua legitimidade.</div></div>
+      <div class="ritem ralto"><div class="rheader"><span class="rname" style="color:var(--orange)">Destruição Econômica Colateral</span><span class="rbadge balto">ALTO</span></div><div class="rdesc">Odebrecht levada à beira da falência; 60+ empresas do setor de construção afetadas; 300.000+ empregos impactados; perda de arrecadação tributária bilionária. MP/TCU investiga se o dano ao erário foi proporcional ou maior que o recuperado.</div></div>
+      <div class="ritem ralto"><div class="rheader"><span class="rname" style="color:var(--orange)">Revolving Door dos Agentes Públicos</span><span class="rbadge balto">ALTO</span></div><div class="rdesc">Moro (US$45 mil/mês da Alvarez & Marsal), procuradores e delegados migrando para escritórios de advocacia, consultorias e cargos políticos ligados aos próprios casos que investigaram. TCU apura conflito de interesses.</div></div>
+      <div class="ritem rmedio"><div class="rheader"><span class="rname" style="color:var(--gold)">Uso por Potência Estrangeira</span><span class="rbadge bmedio">MÉDIO-ALTO</span></div><div class="rdesc">Alegações documentadas de que o DOJ americano usou a operação estrategicamente via FCPA para destruir concorrentes brasileiros e enfraquecer a autonomia geopolítica do Brasil. Relação entre agentes da PF/MPF e governo americano desde o caso Banestado (2003).</div></div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot do"></span>Alertas Críticos</div>
+      <div class="alitem"><div class="alic">🔴</div><div><div class="altitle" style="color:var(--red2)">Alerta: Juiz Imparcial é Irrenunciável</div><div class="aldesc">O princípio do juiz natural não é protocolo burocrático — é a garantia de que o julgamento existe. Quando o juiz orienta a acusação, o processo deixa de ser contraditório. A Lava Jato é o exemplo mais custoso desse erro na história brasileira.</div></div></div>
+      <div class="alitem"><div class="alic">🔴</div><div><div class="altitle" style="color:var(--red2)">Alerta: Prisão Preventiva ≠ Instrumento de Confissão</div><div class="aldesc">Usar a custódia para pressionar delatores é inconstitucional e produz provas contaminadas. Vários acordos da Lava Jato foram firmados por réus presos há meses sem condenação — condição que vicia a voluntariedade da colaboração.</div></div></div>
+      <div class="alitem"><div class="alic">🟠</div><div><div class="altitle" style="color:var(--orange)">Alerta: Espetacularização Midiática Destrói Presunção de Inocência</div><div class="aldesc">Coletivas com PowerPoint, prisões filmadas, condução coercitiva de madrugada — todos atos que constroem culpa pública antes do julgamento. A pressão midiática pode ser mais danosa que a sentença, sem nenhum contraditório.</div></div></div>
+      <div class="alitem"><div class="alic">🟠</div><div><div class="altitle" style="color:var(--orange)">Alerta: Competência Territorial Não É Detalhe</div><div class="aldesc">A 13ª Vara de Curitiba não tinha competência sobre crimes sem nexo com a Petrobras. Anos de investigação, prisões e condenações foram anuladas por um erro de competência que poderia ter sido evitado com rigor processual desde o início.</div></div></div>
+      <div class="alitem"><div class="alic">🟡</div><div><div class="altitle" style="color:var(--gold)">Alerta: Forças-Tarefa Precisam de Accountability Externo</div><div class="aldesc">A força-tarefa de Curitiba operou por anos sem supervisão efetiva do PGR ou do CNJ. A ausência de controle externo permitiu o desenvolvimento de um ethos de grupo com crença na própria infalibilidade moral.</div></div></div>
+      <div class="alitem"><div class="alic">🟡</div><div><div class="altitle" style="color:var(--gold)">Alerta: Combate à Corrupção Não Justifica Corrupção Processual</div><div class="aldesc">Este é o paradoxo central da Lava Jato: havia corrupção real e gigantesca para combater. Mas a forma de combatê-la violou as mesmas garantias constitucionais que a corrupção também viola. Como dizia Kakay: "os fins não justificam os meios" — princípio que a própria PF invocou na Castelo de Areia.</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ APRENDIZADOS ══════ -->
+<div id="sec-aprendizados" class="sec">
+  <div class="panel" style="margin-top:16px">
+    <div class="ptitle"><span class="dot dt"></span>Aprendizados Fundamentais</div>
+    <div class="litem"><div class="lnum">01</div><div><div class="ltitle">Imparcialidade Judicial É a Pedra Angular do Estado de Direito</div><div class="ldesc">A Lava Jato mostrou que quando um juiz "veste a camisa" da acusação, o processo inteiro colapsa — e anos de investigação, bilhões gastos e centenas de condenações se tornam papel rasgado. Não existe operação anticorrupção eficaz que sobreviva à parcialidade do julgador. Mecanismos de controle da imparcialidade (corregedoria ativa, vedação de relações informais entre juiz e MP) são tão essenciais quanto as investigações em si.</div></div></div>
+    <div class="litem"><div class="lnum">02</div><div><div class="ltitle">Delação Premiada É Instrumento Poderoso — e Frágil</div><div class="ldesc">O acordo de 77 executivos da Odebrecht revelou um esquema que levaria décadas para ser provado de outra forma. Mas colaborações obtidas sob pressão de custódia, sem corroboração independente, e homologadas por um juiz depois declarado suspeito, são estruturalmente vulneráveis. Delação exige ambiente de voluntariedade real, corroboração sólida e julgamento imparcial — sem esse tripé, ela produz mais nulidades que condenações.</div></div></div>
+    <div class="litem"><div class="lnum">03</div><div><div class="ltitle">Competência Territorial Correta Desde o Início Evita Catástrofes</div><div class="ldesc">A decisão de concentrar tudo na 13ª Vara de Curitiba foi estratégica — mas juridicamente incorreta para casos sem nexo com a Petrobras. O STF derrubou condenações por esse erro anos depois. Investigações complexas e multijurisdicionais exigem mapeamento rigoroso de competências antes da denúncia, não durante os recursos.</div></div></div>
+    <div class="litem"><div class="lnum">04</div><div><div class="ltitle">Forças-Tarefa Precisam de Supervisão Independente e Contínua</div><div class="ldesc">A força-tarefa de Curitiba operou por quase 7 anos com autonomia quase irrestrita. Sem controle externo efetivo, desenvolveu dinâmicas internas de "cruzada moral" que comprometeram o rigor processual. Qualquer força-tarefa investigativa de longa duração precisa de supervisão externa regular — corregedoria, CNJ, PGR — para evitar a erosão dos limites institucionais.</div></div></div>
+    <div class="litem"><div class="lnum">05</div><div><div class="ltitle">Comunicação Pública Requer Protocolo Estrito</div><div class="ldesc">A Lava Jato transformou a comunicação com a imprensa em arma processual. Coletivas com PowerPoint acusatório, vazamentos seletivos e posts de Dallagnol nas redes sociais criaram condenação pública antes da sentença. Investigações devem comunicar resultados com rigor: fatos provados, não narrativas, e nunca antes do julgamento.</div></div></div>
+    <div class="litem"><div class="lnum">06</div><div><div class="ltitle">O "Revolving Door" Deve Ser Vedado Estruturalmente</div><div class="ldesc">Quando os agentes que construíram a operação migraram para escritórios privados beneficiando-se da reputação e dos contatos da própria investigação, o conflito de interesse retroativo contaminou a percepção de toda a atuação pública. Períodos de quarentena mais longos, vedações específicas e punições efetivas são necessidades estruturais, não ética voluntária.</div></div></div>
+    <div class="litem"><div class="lnum">07</div><div><div class="ltitle">Eficiência Investigativa e Garantias Constitucionais Não São Opostos</div><div class="ldesc">O maior legado negativo da Lava Jato é a falsa narrativa de que, para combater corrupção sistêmica, é necessário sacrificar garantias processuais. Não é. A forma como se investiga define a legitimidade do resultado. Investigações que respeitam o contraditório, a imparcialidade e a proporcionalidade produzem condenações que sobrevivem ao tempo — as que não respeitam produzem anulações em cascata décadas depois.</div></div></div>
+    <div class="litem"><div class="lnum">08</div><div><div class="ltitle">Geopolítica É Variável Real em Grandes Operações</div><div class="ldesc">A hipótese de que potências estrangeiras utilizaram a Lava Jato estrategicamente para enfraquecer empresas e o Estado brasileiro merece investigação séria — não como conspiração, mas como questão de soberania e política externa. Operações que envolvem acordos com o DOJ americano e cooperação com agências de inteligência estrangeiras precisam de supervisão parlamentar e da AGU com olhar para interesses nacionais.</div></div></div>
+  </div>
+</div>
+
+<!-- ══════ REFERÊNCIAS ══════ -->
+<div id="sec-refs" class="sec">
+  <div class="panel" style="margin-top:16px">
+    <div class="ptitle"><span class="dot db"></span>Referências Documentais & Fontes</div>
+    <div class="refitem"><div class="refnum">[01]</div><div><div class="reftitle">Operação Lava Jato — Wikipédia</div><div class="refsrc">pt.wikipedia.org • Histórico completo, fases, estatísticas, personagens e desdobramentos</div></div></div>
+    <div class="refitem"><div class="refnum">[02]</div><div><div class="reftitle">O que foi a Operação Lava Jato — CNN Brasil</div><div class="refsrc">cnnbrasil.com.br • Síntese da operação, Moro, Dallagnol, Lula e anulações pelo STF</div></div></div>
+    <div class="refitem"><div class="refnum">[03]</div><div><div class="reftitle">Relembre as 79 fases da Lava Jato — CNN Brasil</div><div class="refsrc">cnnbrasil.com.br • Cronologia completa das 79 fases operacionais (mar 2014 – jan 2021)</div></div></div>
+    <div class="refitem"><div class="refnum">[04]</div><div><div class="reftitle">Lava Jato: maior operação da PF completa 10 anos — Radioagência Nacional</div><div class="refsrc">agenciabrasil.ebc.com.br • Balanço do 10º aniversário: resultados, controvérsias, personagens (mar 2024)</div></div></div>
+    <div class="refitem"><div class="refnum">[05]</div><div><div class="reftitle">De juízes a políticos: trajetórias na Lava Jato — Agência Brasil</div><div class="refsrc">agenciabrasil.ebc.com.br • Onde estão Moro, Dallagnol e demais personagens 10 anos depois</div></div></div>
+    <div class="refitem"><div class="refnum">[06]</div><div><div class="reftitle">Lava Jato distorceu Justiça e abalou economia — Conjur</div><div class="refsrc">conjur.com.br • Análise crítica: Lenio Streck, Alberto Toron, Ligia Maura Costa • mar 2024</div></div></div>
+    <div class="refitem"><div class="refnum">[07]</div><div><div class="reftitle">Erros da Lava Jato podem gerar onda de indenizações — Conjur</div><div class="refsrc">conjur.com.br • Análise de processos anuláveis e potencial de responsabilização civil</div></div></div>
+    <div class="refitem"><div class="refnum">[08]</div><div><div class="reftitle">STF — Moro suspeito: HC 164.493 (caso Lula / tríplex)</div><div class="refsrc">portal.stf.jus.br • Decisão oficial da 2ª Turma do STF reconhecendo suspeição de Moro</div></div></div>
+    <div class="refitem"><div class="refnum">[09]</div><div><div class="reftitle">Anulação de atos contra Youssef atinge raiz da Lava Jato — Conjur</div><div class="refsrc">conjur.com.br • Decisão de Toffoli, conluio processual e efeito cascata • jul 2025</div></div></div>
+    <div class="refitem"><div class="refnum">[10]</div><div><div class="reftitle">MP no TCU pede apuração de prejuízos da Lava Jato à União — Conjur</div><div class="refsrc">conjur.com.br • Sub-PGR Lucas Furtado, revolving door, lawfare, Odebrecht • fev 2022</div></div></div>
+    <div class="refitem"><div class="refnum">[11]</div><div><div class="reftitle">Juristas e deputados: erros e acertos da Lava Jato — Câmara dos Deputados</div><div class="refsrc">camara.leg.br • Debate na Comissão de Fiscalização Financeira • mar 2024</div></div></div>
+    <div class="refitem"><div class="refnum">[12]</div><div><div class="reftitle">Linha do Tempo Lava Jato — MPF</div><div class="refsrc">linhadotempo.mpf.mp.br • Fonte oficial do Ministério Público Federal</div></div></div>
+    <div class="refitem"><div class="refnum">[13]</div><div><div class="reftitle">As Origens da Lava Jato — Museu da Lava Jato</div><div class="refsrc">museudalavajato.com.br • Contexto histórico, Banestado, FCPA, conexão EUA-Brasil</div></div></div>
+    <div class="refitem"><div class="refnum">[14]</div><div><div class="reftitle">STF confirma anulação de condenações de Lula na Lava Jato</div><div class="refsrc">portal.stf.jus.br • Decisão plenária sobre incompetência da 13ª Vara de Curitiba</div></div></div>
+    <div class="refitem"><div class="refnum">[15]</div><div><div class="reftitle">Lei 12.850/2013 — Organizações Criminosas e Colaboração Premiada</div><div class="refsrc">planalto.gov.br • Base legal dos acordos de delação premiada usados na operação</div></div></div>
+  </div>
+</div>
+
+</main>
+
+<div class="related-wrap">
+  <div class="related-title">Artefatos Relacionados</div>
+  <div class="related-grid">
+    <a href="/rede" class="related-card">
+      <div class="related-card-cat">Investigação</div>
+      <div class="related-card-title">Rede Recorrente: Atores por Função 1999–2026</div>
+      <div class="related-card-arrow">ACESSAR ARTEFATO ➔</div>
+    </a>
+    <a href="/master" class="related-card">
+      <div class="related-card-cat">Crimes Financeiros</div>
+      <div class="related-card-title">Banco Master: Pirâmide de CDBs e Captura do STF</div>
+      <div class="related-card-arrow">ACESSAR ARTEFATO ➔</div>
+    </a>
+    <a href="/pcc" class="related-card">
+      <div class="related-card-cat">Inteligência</div>
+      <div class="related-card-title">PCC & CV: Dashboard de Inteligência 2026</div>
+      <div class="related-card-arrow">ACESSAR ARTEFATO ➔</div>
+    </a>
+    <a href="/republica-capturada" class="related-card">
+      <div class="related-card-cat">Estrutura</div>
+      <div class="related-card-title">República Capturada: O Brasil do Lawfare</div>
+      <div class="related-card-arrow">ACESSAR ARTEFATO ➔</div>
+    </a>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelectorAll('.nb');
+  
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const targetId = tab.getAttribute('data-target');
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        targetEl.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '-100px 0px -50% 0px',
+    threshold: 0
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        tabs.forEach(t => t.classList.remove('act'));
+        const activeTab = document.querySelector(`.nb[data-target="${entry.target.id}"]`);
+        if (activeTab) {
+          activeTab.classList.add('act');
+          activeTab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.sec').forEach(sec => observer.observe(sec));
+});
+
+setTimeout(()=>{
+  const f=document.getElementById('gfill');
+  if(f) f.style.width='98%';
+},400);
+</script>
+</body>
+</html>

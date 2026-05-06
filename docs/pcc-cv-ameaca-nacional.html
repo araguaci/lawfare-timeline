@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PCC e CV — Ameaça à Soberania Nacional e Global (2026)</title>
+  
+  <!-- Design System Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      /* Lawfare Design System 1.0 Tokens */
+      --bg: #080c10;
+      --bg1: #0d1218;
+      --bg2: #121820;
+      --bg3: #1a2230;
+      --border: rgba(255,255,255,0.06);
+      --border2: rgba(255,255,255,0.12);
+      --fg: #e8ecf0;
+      --fg2: #8a9ab0;
+      --fg3: #4a5a6a;
+      --red: #e84040;
+      --red2: rgba(232,64,64,0.15);
+      --amber: #e8a020;
+      --amber2: rgba(232,160,32,0.15);
+      --blue: #3090e8;
+      --blue2: rgba(48,144,232,0.12);
+      --green: #28c880;
+      --green2: rgba(40,200,128,0.12);
+      --purple: #a060e8;
+      --purple2: rgba(160,96,232,0.12);
+      --cyan: #20d0e8;
+      --font-mono: 'IBM Plex Mono', monospace;
+      --font-display: 'Syne', sans-serif;
+    }
+
+    /* Reset & Base */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { 
+      background: var(--bg); 
+      color: var(--fg); 
+      font-family: var(--font-mono); 
+      font-size: 13px; 
+      line-height: 1.6; 
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 4px; height: 4px; }
+    ::-webkit-scrollbar-track { background: var(--bg1); }
+    ::-webkit-scrollbar-thumb { background: var(--bg3); border-radius: 2px; }
+
+    /* Layout */
+    .container { max-width: 1400px; margin: 0 auto; padding: 0 0 80px; }
+    .main { padding: 0 20px; }
+    @media (min-width: 768px) { .main { padding: 0 40px; } }
+
+    html { scroll-behavior: smooth; }
+
+    /* Header Component */
+    .header { 
+      background: var(--bg1); 
+      border-bottom: 1px solid var(--border2); 
+      padding: 24px 20px; 
+      position: relative; 
+      overflow: hidden; 
+      margin-bottom: 0;
+    }
+    @media (min-width: 768px) { 
+      .header { padding: 40px 40px 32px; } 
+    }
+    .header::before { 
+      content: ''; 
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+      right: 0; 
+      height: 2px; 
+      background: linear-gradient(90deg, var(--red), var(--purple), var(--red)); 
+      background-size: 200% 100%; 
+      animation: scanline 3s linear infinite; 
+    }
+    @keyframes scanline { to { background-position: 200% 0; } }
+
+    .hero-title { 
+      font-family: var(--font-display); 
+      font-size: clamp(28px, 5vw, 48px); 
+      font-weight: 800; 
+      letter-spacing: -0.02em; 
+      line-height: 1.1; 
+      margin: 16px 0 8px;
+    }
+    .hero-title span { color: var(--red); }
+    .subtitle { font-size: 13px; color: var(--fg2); max-width: 700px; }
+
+    /* Badge Component */
+    .badge { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 6px; 
+      padding: 3px 8px; 
+      border-radius: 3px; 
+      font-size: 10px; 
+      font-weight: 600; 
+      letter-spacing: 0.10em; 
+      text-transform: uppercase; 
+      font-family: var(--font-mono); 
+    }
+    .badge-red { background: var(--red2); color: var(--red); border: 1px solid rgba(232,64,64,0.3); }
+    .badge-purple { background: var(--purple2); color: var(--purple); border: 1px solid rgba(160,96,232,0.3); }
+    .badge-amber { background: var(--amber2); color: var(--amber); border: 1px solid rgba(232,160,32,0.3); }
+    .badge-blue { background: var(--blue2); color: var(--blue); border: 1px solid rgba(48,144,232,0.3); }
+    .badge-green { background: var(--green2); color: var(--green); border: 1px solid rgba(40,200,128,0.3); }
+
+    /* Nav Tabs Component */
+    .nav-tabs { 
+      display: flex; 
+      background: var(--bg1); 
+      border-bottom: 1px solid var(--border); 
+      padding: 0 20px; 
+      overflow-x: auto; 
+      scrollbar-width: none; 
+      margin-bottom: 32px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .nav-tabs::-webkit-scrollbar { display: none; }
+    @media (min-width: 768px) { .nav-tabs { padding: 0 40px; } }
+    .nav-tab { 
+      padding: 14px 16px; 
+      font-size: 11px; 
+      letter-spacing: 0.08em; 
+      text-transform: uppercase; 
+      color: var(--fg3); 
+      cursor: pointer; 
+      border: none; 
+      background: none; 
+      border-bottom: 2px solid transparent; 
+      white-space: nowrap; 
+      transition: all 0.15s; 
+      font-family: var(--font-mono);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .nav-tab:hover { color: var(--fg2); }
+    .nav-tab.active { color: var(--fg); border-bottom-color: var(--red); }
+
+    /* Expanded Content Mode */
+    .tab-panel { display: block; margin-bottom: 80px; scroll-margin-top: 80px; }
+
+    /* Grid Templates */
+    .grid-stats { 
+      display: grid; 
+      grid-template-columns: repeat(4, 1fr); 
+      gap: 12px; 
+      margin-top: 32px;
+    }
+    @media (max-width: 1024px) {
+      .grid-stats { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .grid-stats { grid-template-columns: 1fr; }
+    }
+    .grid-2col { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); 
+      gap: 16px; 
+    }
+    .grid-3col { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); 
+      gap: 16px; 
+    }
+
+    /* Card Components */
+    .card { 
+      background: var(--bg1); 
+      border: 1px solid var(--border); 
+      border-radius: 6px; 
+      padding: 20px; 
+      position: relative;
+    }
+    .card-title { 
+      font-family: var(--font-display); 
+      font-size: 14px; 
+      font-weight: 700; 
+      letter-spacing: 0.02em; 
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-title { 
+      font-family: var(--font-mono); 
+      font-size: 11px; 
+      font-weight: 700; 
+      letter-spacing: 0.15em; 
+      text-transform: uppercase; 
+      color: var(--fg3); 
+      margin: 40px 0 16px; 
+      padding-bottom: 8px; 
+      border-bottom: 1px solid var(--border); 
+    }
+
+    /* Stat Card */
+    .stat-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 6px; padding: 12px 16px; }
+    .stat-num { font-family: var(--font-display); font-size: 20px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; }
+    .stat-label { font-size: 9px; color: var(--fg3); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 2px; }
+
+    /* Alert Components */
+    .alert-amber { background: var(--amber2); border: 1px solid rgba(232,160,32,0.25); border-radius: 6px; padding: 16px 20px; display: flex; gap: 12px; margin-bottom: 32px; }
+    .alert-red { background: var(--red2); border: 1px solid rgba(232,64,64,0.25); border-radius: 6px; padding: 16px 20px; display: flex; gap: 12px; margin-bottom: 32px; }
+
+    /* Refute Component */
+    .refute-pair { display: grid; grid-template-columns: 1fr; gap: 1px; background: var(--border2); border: 1px solid var(--border2); border-radius: 6px; overflow: hidden; margin-bottom: 16px; }
+    @media (min-width: 640px) { .refute-pair { grid-template-columns: 1fr 1fr; } }
+    .refute-box { padding: 16px; background: var(--bg1); }
+    .refute-box.alega { background: var(--bg1); }
+    .refute-box.real { background: var(--bg2); }
+    .refute-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; font-family: var(--font-mono); }
+
+    /* Chain Component */
+    .chain { position: relative; padding-left: 32px; }
+    .chain::before { content: ''; position: absolute; left: 11px; top: 0; bottom: 0; width: 1px; background: var(--border2); }
+    .chain-item { position: relative; margin-bottom: 24px; }
+    .chain-num { 
+      position: absolute; 
+      left: -32px; 
+      top: 0; 
+      width: 22px; 
+      height: 22px; 
+      border-radius: 50%; 
+      background: var(--red); 
+      color: #fff; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      font-weight: 700; 
+      font-size: 11px; 
+      z-index: 1;
+      border: 2px solid var(--bg1);
+    }
+    .chain-title { font-size: 13px; font-weight: 700; color: var(--fg); margin-bottom: 4px; }
+    .chain-desc { font-size: 12px; color: var(--fg2); line-height: 1.6; }
+
+    /* Timeline Component */
+    .timeline { position: relative; padding-left: 24px; }
+    .timeline::before { content: ''; position: absolute; left: 7px; top: 0; bottom: 0; width: 1px; background: var(--border2); }
+    .tl-item { position: relative; margin-bottom: 20px; }
+    .tl-dot { position: absolute; left: -20px; top: 5px; width: 10px; height: 10px; border-radius: 50%; border: 2px solid var(--bg); background: var(--fg3); }
+    .tl-date { font-size: 10px; color: var(--fg3); letter-spacing: 0.06em; margin-bottom: 4px; font-weight: 700; }
+    .tl-title { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+    .tl-desc { font-size: 12px; color: var(--fg2); line-height: 1.6; }
+    .tl-src { font-size: 10px; margin-top: 4px; }
+    .tl-src a { color: var(--blue); text-decoration: none; }
+
+    /* General List Items */
+    .list-item { display: flex; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+    .list-item:last-child { border-bottom: none; }
+    .list-dot { width: 6px; height: 6px; border-radius: 50%; margin-top: 8px; flex-shrink: 0; }
+    .list-text { font-size: 12px; color: var(--fg2); line-height: 1.6; flex: 1; }
+    .list-source { font-size: 9px; color: var(--fg3); text-transform: uppercase; margin-top: 4px; letter-spacing: 0.05em; }
+
+    /* Tab Management - LEGACY (Replaced by Scroll Mode) */
+    /* .tab-panel { display: none; } */
+    /* .tab-panel.active { display: block; } */
+
+    /* Footer Component */
+    .footer { 
+      margin-top: 64px; 
+      padding: 32px 20px; 
+      background: var(--bg1);
+      border-top: 1px solid var(--border2); 
+    }
+    @media (min-width: 768px) { .footer { padding: 40px 40px; } }
+    .footer-content { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: flex-start; }
+    .footer-meta { flex: 1; min-width: 300px; }
+    .footer-text { font-size: 11px; color: var(--fg3); line-height: 1.6; max-width: 800px; }
+    .sources-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .src-badge { 
+      background: var(--bg2); 
+      border: 1px solid var(--border); 
+      padding: 4px 10px; 
+      border-radius: 4px; 
+      font-size: 10px; 
+      color: var(--fg2); 
+      text-decoration: none; 
+      font-family: var(--font-mono);
+      transition: all 0.2s;
+    }
+    .src-badge:hover { border-color: var(--blue); color: var(--fg); }
+
+    /* Utilities */
+    .text-red { color: var(--red); }
+    .text-amber { color: var(--amber); }
+    .text-purple { color: var(--purple); }
+    .text-blue { color: var(--blue); }
+    .full-width { grid-column: 1 / -1; }
+
+    @media print {
+      body { background: #fff; color: #111; }
+      .nav-tabs { display: none !important; }
+      .tab-panel { display: block !important; page-break-inside: avoid; }
+      .tab-panel + .tab-panel { page-break-before: always; }
+      .header::before { display: none; }
+      :root { 
+        --bg: #fff; --bg1: #f8f8f8; --bg2: #f0f0f0; --bg3: #e8e8e8; 
+        --border: rgba(0,0,0,0.12); --border2: rgba(0,0,0,0.20); 
+        --fg: #111; --fg2: #444; --fg3: #888; 
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header class="header">
+    <div class="meta-badges">
+      <span class="badge badge-red">Alerta de Segurança Nacional</span>
+      <span class="badge badge-purple">Monitoramento 2026</span>
+    </div>
+    <h1 class="hero-title">PCC e CV — Ameaça à <span>Soberania Nacional</span></h1>
+    <p class="subtitle">Dashboard analítico com desmontagem dos argumentos institucionais e evidências de urgência de combate sistêmico. Dados processados 2024–2026.</p>
+    
+    <div class="grid-stats">
+      <div class="stat-card">
+        <div class="stat-num text-red">61M</div>
+        <div class="stat-label">Governança Criminal</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num text-red">90+</div>
+        <div class="stat-label">Facções Ativas</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num text-amber">US$ 1bi</div>
+        <div class="stat-label">Receita Anual PCC</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num text-purple">10%</div>
+        <div class="stat-label">Homicídios Mundiais</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num text-amber">40k</div>
+        <div class="stat-label">Integrantes PCC</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num text-red">44.127</div>
+        <div class="stat-label">Mortes Violent. (24)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num text-amber">R$ 153bi</div>
+        <div class="stat-label">Gasto Segurança (24)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num text-red">+1T</div>
+        <div class="stat-label">Cocaína Exp. Santos</div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-tabs">
+    <a href="#overview" class="nav-tab active">Overview</a>
+    <a href="#sistemico" class="nav-tab">Análise Sistêmica</a>
+    <a href="#operacional" class="nav-tab">Rotas & Global</a>
+    <a href="#cronologia" class="nav-tab">Cronologia</a>
+    <a href="#fontes" class="nav-tab">Fontes</a>
+  </nav>
+
+  <main class="main">
+    <!-- TAB: OVERVIEW -->
+    <div id="overview" class="tab-panel">
+      <div class="alert-red">
+        <div style="font-size: 20px;">⚠</div>
+        <div>
+          <p style="font-weight: 700; margin-bottom: 4px;">DADO CRÍTICO: Cambridge Peer-Reviewed Update 2025</p>
+          <p>O Brasil lidera o ranking de população sob "governança criminal" na América Latina (entre 25% e 30%). Superior a México, El Salvador e Colômbia. 61 milhões de cidadãos vivem sob regras de facções, não do Estado brasileiro.</p>
+        </div>
+      </div>
+
+      <div class="section-title">Desmontagem dos Argumentos — PF vs. Realidade</div>
+      
+      <div class="refute-pair">
+        <div class="refute-box alega">
+          <div class="refute-label text-red">PF ALEGA</div>
+          <p class="chain-desc">"Violência direcionada contra adversários específicos — policiais e grupos rivais. Não há terror indiscriminado."</p>
+        </div>
+        <div class="refute-box real">
+          <div class="refute-label text-green">REALIDADE VERIFICADA</div>
+          <p class="chain-desc">61 milhões sob toque de recolher, cobrança de taxas e proibição de acionar a polícia. Terror coercitivo sobre civis é a definição operacional de terrorismo.</p>
+        </div>
+      </div>
+
+      <div class="refute-pair">
+        <div class="refute-box alega">
+          <div class="refute-label text-red">PF ALEGA</div>
+          <p class="chain-desc">"Motivação primordial é o lucro. Sem agenda política ou ideológica — portanto não configura terrorismo."</p>
+        </div>
+        <div class="refute-box real">
+          <div class="refute-label text-green">REALIDADE VERIFICADA</div>
+          <p class="chain-desc">Infiltração eleitoral sistemática, financiamento de campanhas e veto a candidatos. "Sintonia dos Gravatas" infiltrando os 3 poderes e o Judiciário.</p>
+        </div>
+      </div>
+
+      <div class="refute-pair">
+        <div class="refute-box alega">
+          <div class="refute-label text-red">PF ALEGA</div>
+          <p class="chain-desc">"Aplicar a Lei Antiterrorismo viola o princípio da legalidade penal, podendo anular provas."</p>
+        </div>
+        <div class="refute-box real">
+          <div class="refute-label text-green">REALIDADE VERIFICADA</div>
+          <p class="chain-desc">Câmara aprovou em comissões PL 2428/25 e PL 4260/25, classificando PCC/CV como terroristas. A "legalidade" invocada é o obstáculo que o Congresso remove agora.</p>
+        </div>
+      </div>
+
+      <div class="refute-pair">
+        <div class="refute-box alega">
+          <div class="refute-label text-red">PF ALEGA</div>
+          <p class="chain-desc">"Sem vínculo com potência estrangeira. Organizações criminosas com fins econômicos internos."</p>
+        </div>
+        <div class="refute-box real">
+          <div class="refute-label text-green">REALIDADE VERIFICADA</div>
+          <p class="chain-desc">Alianças formais com Cartéis Bolivianos, Mexicanos e FARC dissidentes. Bolívia operando como matriz de produção imbricada ao PCC. Cooperação transnacional detectada via Eurojust.</p>
+        </div>
+      </div>
+
+      <div class="grid-2col" style="margin-top: 32px;">
+        <div class="card">
+          <div class="card-title text-amber">KPIs Segurança Pública</div>
+          <div class="list-item">
+            <div class="list-dot" style="background: var(--red);"></div>
+            <div class="list-text">
+              44.127 mortes violentas em 2024. Menor taxa desde 2012, mas redução ligada à reorganização de rotas (trégua racional entre facções) e subnotificação.
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="list-dot" style="background: var(--amber);"></div>
+            <div class="list-text">
+              Gasto recorde de R$ 153 bi em segurança pública (2024). Resultados não proporcionais ao investimento devido à captura e imobilismo sistêmico.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title text-blue">Status Legislativo</div>
+          <div class="list-item">
+            <div class="list-dot" style="background: var(--green);"></div>
+            <div class="list-text">
+              PL 2428/25 aprovado em comissões — classifica PCC e CV como terroristas junto a 11 cartéis latinos. Aguardando plenário definitivo.
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="list-dot" style="background: var(--purple);"></div>
+            <div class="list-text">
+              Designação Estratégica EUA: PCC e CV considerados organizações de preocupação de segurança nacional para inteligência americana.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: SISTEMICO -->
+    <div id="sistemico" class="tab-panel">
+      <div class="section-title">Arquitetura de Imunidade — 5 Camadas de Captura</div>
+      <div class="grid-2col">
+        <div class="card">
+          <div class="chain">
+            <div class="chain-item">
+              <div class="chain-num">1</div>
+              <div class="chain-title">Poder Local Capturado</div>
+              <p class="chain-desc">Financiamento de prefeituras e câmaras. 4 vereadores presos em SP (2024). Vice-prefeito de Cubatão condenado. Conexões multipartidárias.</p>
+            </div>
+            <div class="chain-item">
+              <div class="chain-num">2</div>
+              <div class="chain-title">Segurança Infiltrada</div>
+              <p class="chain-desc">Vazamento de operações e fornecimento de logística. "Sintonia dos Gravatas" com 40+ advogados intermediando o crime desde 2016.</p>
+            </div>
+            <div class="chain-item">
+              <div class="chain-num">3</div>
+              <div class="chain-title">Bloqueio Judicial</div>
+              <p class="chain-desc">ADPF 635 suspendeu operações policiais no RJ. Habeas corpus sistemáticos. CPI do Crime Organizado paralisada por decisões monocráticas no STF.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="chain">
+            <div class="chain-item">
+              <div class="chain-num">4</div>
+              <div class="chain-title">Legislativo Conivente</div>
+              <p class="chain-desc">PLs vitais contra crime paralisados por anos. Parlamentares com empresas ligadas a facções sob investigação. CPI paralisada por design.</p>
+            </div>
+            <div class="chain-item">
+              <div class="chain-num">5</div>
+              <div class="chain-title">Forças Armadas Paralisadas</div>
+              <p class="chain-desc">Inexistência de GLO para combate estrutural. Precedente pós-8/jan gera omissão permanente por receio de responsabilidade civil/criminal no STF.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-title">O que a Lei exige e o Estado Omite</div>
+      <div class="grid-2col">
+        <div class="card">
+          <div class="card-title text-red">Deveres Constitucionais</div>
+          <div class="list-item">
+            <div class="list-dot" style="background: var(--red);"></div>
+            <div class="list-text">
+              <strong>CF/88 Art. 142:</strong> Forças Armadas destinam-se à defesa da Pátria e garantia da lei e da ordem. Dever vinculante ante 60M sob soberania paralela.
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="list-dot" style="background: var(--amber);"></div>
+            <div class="list-text">
+              <strong>CPM Art. 326 (Omissão de Lealdade):</strong> Militar que conhece conspiração contra segurança nacional e não denuncia responde criminalmente.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title text-purple">Compliance Jurídico</div>
+          <div class="list-item">
+            <div class="list-dot" style="background: var(--purple);"></div>
+            <div class="list-text">
+              <strong>Prevaricação (CP Art. 319):</strong> Servidores que retardam ato de ofício para satisfazer interesse pessoal ou político, ignorando alertas de inteligência.
+            </div>
+          </div>
+          <div class="list-item">
+            <div class="list-dot" style="background: var(--blue);"></div>
+            <div class="list-text">
+              <strong>Art. 142 e Art. 5 (Segurança):</strong> O Estado brasileiro omite a proteção fundamental ao permitir a expansão da jurisdição criminal sobre o civis.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: OPERACIONAL -->
+    <div id="operacional" class="tab-panel">
+      <div class="section-title">Logística Transnacional — Hub Porto de Santos</div>
+      <div class="card" style="margin-bottom: 24px;">
+        <div class="card-title text-amber">Monitoramento Forense Santos</div>
+        <p class="chain-desc" style="margin-bottom: 12px;">Operação Costeau (Mar/2026): MPF + PF + Eurojust detectaram cocaína em navio vindo de Santos com rastreadores eletrônicos. Maior porto do Hemisfério Sul sob tutela logística criminosa.</p>
+        <div class="list-item">
+          <div class="list-dot" style="background: var(--red);"></div>
+          <div class="list-text"><strong>Despencamento de Apreensões:</strong> Queda de 56% (2022: 16T → 2023: 7,1T). Estratégia de diversificação para portos do NE e Sul (SC/PR) detectada pela Receita.</div>
+        </div>
+        <div class="list-item">
+          <div class="list-dot" style="background: var(--blue);"></div>
+          <div class="list-text"><strong>Sebastián Marset:</strong> "El Jugador", aliado do PCC, exportou 16T via rota Bolívia-Santos-Europa. Bolívia: produção acelerada e modificação genética.</div>
+        </div>
+      </div>
+
+      <div class="section-title">Vetor de Saúde Pública Global</div>
+      <div class="grid-2col">
+        <div class="card">
+          <div class="list-item">
+            <div class="list-dot" style="background: var(--red);"></div>
+            <div class="list-text">Brasil é o 2º maior consumidor de cocaína mundial e hub para África e Europa — funcionando como artéria de epidemia transnacional.</div>
+          </div>
+          <div class="list-item">
+            <div class="list-dot" style="background: var(--red);"></div>
+            <div class="list-text">PCC exporta 4 toneladas/mês de pasta base via Santos, abastecendo mercados europeus com substâncias letais em escala industrial.</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="list-item">
+            <div class="list-dot" style="background: var(--amber);"></div>
+            <div class="list-text"><strong>Tribunais do Crime:</strong> IPEA estima 6 mil mortes violentas ocultas anuais. Execuções sem registro oficial distorcendo as estatísticas do Governo.</div>
+          </div>
+          <div class="list-item">
+            <div class="list-dot" style="background: var(--amber);"></div>
+            <div class="list-text">Subnotificação crônica gera falsa sensação de redução de violência, omitindo a reorganização do crime organizado.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: CRONOLOGIA -->
+    <div id="cronologia" class="tab-panel">
+      <div class="section-title">Escalada da Ameaça e Omissões</div>
+      <div class="card">
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot" style="background: var(--red);"></div>
+            <div class="tl-date">1993</div>
+            <div class="tl-title">Fundação PCC (Taubaté)</div>
+            <div class="tl-desc">Nascimento da organização em sistema de custódia. Estado subestima capacidade de expansão sistêmica.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot" style="background: var(--amber);"></div>
+            <div class="tl-date">2001</div>
+            <div class="tl-title">Beira-Mar: Alerta FARC</div>
+            <div class="tl-desc">Revelação de pagamentos de US$ 10M mensais — primeira prova de vínculo transnacional brasileiro com potência paramilitar estrangeira.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot" style="background: var(--red);"></div>
+            <div class="tl-date">2006</div>
+            <div class="tl-title">Ataques em São Paulo</div>
+            <div class="tl-desc">PCC paralisa SP. 299 ataques em 4 dias. Estado negocia cessar-fogo em vez de resposta militar antiterrorismo.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot" style="background: var(--blue);"></div>
+            <div class="tl-date">2016</div>
+            <div class="tl-title">Sintonia dos Gravatas</div>
+            <div class="tl-desc">Formalização do núcleo jurídico de infiltração nos poderes. 40+ advogados operando logística criminal complexa.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot" style="background: var(--red);"></div>
+            <div class="tl-date">2017</div>
+            <div class="tl-title">Guerra das Rotas (N/NE)</div>
+            <div class="tl-desc">Massacres criminais em Manaus e Boa Vista. Início do colapso de segurança no Norte/Nordeste sob disputa de facções.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot" style="background: var(--purple);"></div>
+            <div class="tl-date">2020</div>
+            <div class="tl-title">ADPF 635 (STF)</div>
+            <div class="tl-desc">Suspensão de operações em favelas cariocas. Facções assumem funções de Estado (logística de alimentos, segurança).</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot" style="background: var(--amber);"></div>
+            <div class="tl-date">2024-25</div>
+            <div class="tl-title">Designação EUA / Cambridge</div>
+            <div class="tl-desc">EUA designam PCC/CV organizações de preocupação nacional. Cambridge valida 61M sob governança criminal no BR.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot" style="background: var(--red);"></div>
+            <div class="tl-date">2026</div>
+            <div class="tl-title">PL Terrorismo (Comissões)</div>
+            <div class="tl-desc">Câmara aprova equiparação de PCC/CV a terrorismo. Enfrentamento direto ao imobilismo jurídico da Polícia Federal.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: FONTES -->
+    <div id="fontes" class="tab-panel">
+      <div class="section-title">Fontes Primárias & Referências</div>
+      <div class="card">
+        <div class="sources-grid">
+          <a class="src-badge" href="#">IPEA Atlas da Violência 2025</a>
+          <a class="src-badge" href="#">Anuário FBSP 19ª Ed. 2025</a>
+          <a class="src-badge" href="#">Cambridge Perspectives on Politics</a>
+          <a class="src-badge" href="#">MPF Operação Costeau 2026</a>
+          <a class="src-badge" href="#">Câmara PL 2428/25</a>
+          <a class="src-badge" href="#">Promotor Lincoln Gakiya / MPSP</a>
+          <a class="src-badge" href="#">SENAPPEN — Database 2025</a>
+          <a class="src-badge" href="#">UNODC World Drug Report 2024</a>
+          <a class="src-badge" href="#">Gazeta do Povo Investigação 2026</a>
+          <a class="src-badge" href="#">Metrópoles — PF vs EUA abr/26</a>
+          <a class="src-badge" href="#">STF ADPF 635</a>
+          <a class="src-badge" href="#">Eurojust / Europol Intelligence</a>
+          <a class="src-badge" href="#">GAECO SP Database</a>
+          <a class="src-badge" href="#">InSight Crime Analysis 2025</a>
+          <a class="src-badge" href="#">Latinobarómetro Security Survey</a>
+          <a class="src-badge" href="#">CPI Crime Organizado Final Rep.</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Related Artifacts -->
+    <div class="section-title">Objetos Relacionados & Inteligência Transversal</div>
+    <div class="grid-3col">
+      <a href="global-kompromat.html" style="text-decoration: none; color: inherit;">
+        <div class="card">
+          <div class="badge badge-purple" style="margin-bottom: 12px;">Dossiê Forense</div>
+          <div class="card-title">Global Kompromat</div>
+          <p class="chain-desc">Mapa de captura institucional, lawfare e redes de kompromat global.</p>
+        </div>
+      </a>
+      <a href="operacao-narco-fluxo.html" style="text-decoration: none; color: inherit;">
+        <div class="card">
+          <div class="badge badge-red" style="margin-bottom: 12px;">Operação</div>
+          <div class="card-title">Narco Fluxo</div>
+          <p class="chain-desc">R$ 1,6 bi lavados via narcoestética e infraestrutura de serviço compartilhada.</p>
+        </div>
+      </a>
+      <a href="padroes-sistemicos-dashboard.html" style="text-decoration: none; color: inherit;">
+        <div class="card">
+          <div class="badge badge-blue" style="margin-bottom: 12px;">Analytics</div>
+          <div class="card-title">Padrões Sistêmicos</div>
+          <p class="chain-desc">Análise transversal de 10 padrões identificados em 25 anos de operações.</p>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-meta">
+        <div class="badge badge-blue"><strong><a href="https://lawfare-timeline.vercel.app" style="color:var(--blue-bright);">lawfare-timeline.vercel.app</a></strong></div>
+        <p class="footer-text" style="margin-top: 12px;">PCC e CV — Ameaça à Soberania Nacional | Dossier de Inteligência v1.5</p>
+        <p class="footer-text">CC0 1.0 Universal — Domínio Público. Livre para redistribuição analítica.</p>
+      </div>
+      <div class="footer-text">
+        Afirmações baseadas em decisões judiciais, relatórios do SENAPPEN, MPF, PF e estudos acadêmicos da 
+        Cambridge University Press. Nenhum dado foi extrapolado sem base documental direta. Ref: abr/2026.
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+  // SCROLL SPY LOGIC
+  const sections = document.querySelectorAll('.tab-panel');
+  const navTabs = document.querySelectorAll('.nav-tab');
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '-20% 0px -70% 0px',
+    threshold: 0
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navTabs.forEach(tab => {
+          tab.classList.remove('active');
+          if (tab.getAttribute('href') === '#' + entry.target.id) {
+            tab.classList.add('active');
+          }
+        });
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach(section => observer.observe(section));
+
+  // SMOOTH SCROLL FOR ANCHORS
+  navTabs.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href');
+      document.querySelector(targetId).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

@@ -62,6 +62,7 @@ A estrutura replica, com linguagem diferente, o padrão identificado na declara�
 |--------|-----------|
 | **P3** | Blindagem do STF como instituição acima do escrutínio público |
 | **P8** | Retórica de deslegitimação: quem critica não tem maturidade para compreender |
+- [Padrões sistêmicos](/padroes-sistemicos)
 
 ### A segunda declaração da mesma entrevista
 
@@ -73,4 +74,5 @@ A declaração "é preciso ter adultos na sala" é a síntese verbal do paternal
 
 ## Referências
 
+- [Padrões sistêmicos](/padroes-sistemicos)
 - [Revista Oeste — 22/04/2026](https://revistaoeste.com/politica/gilmar-critica-200-milhoes-de-juristas-com-opinioes-sobre-o-stf/) — Cobertura unificada das declarações de Gilmar sobre o Caso Master e os críticos do STF

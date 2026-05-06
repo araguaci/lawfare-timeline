@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Operação Silêncio Digital — Regime de Censura Judicial nas Redes Sociais 2020–2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #060a0d;
+  --surface: #0b1015;
+  --surface2: #0f1820;
+  --surface3: #141e28;
+  --border: #1a2530;
+  --border-bright: #243040;
+  --red: #c0392b;
+  --red-hot: #e74c3c;
+  --amber: #e67e22;
+  --gold: #f0c040;
+  --blue: #2471a3;
+  --blue-bright: #3498db;
+  --teal: #1a9a85;
+  --green: #27ae60;
+  --purple: #7d3c98;
+  --text: #cdd5de;
+  --text-dim: #6a7d8e;
+  --text-bright: #eaf0f6;
+  --text-muted: #404f5e;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  line-height: 1.65;
+  scroll-behavior: smooth;
+}
+
+body::after {
+  content: '';
+  position: fixed; top:0;left:0;right:0;bottom:0;
+  background: repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.025) 2px,rgba(0,0,0,0.025) 4px);
+  pointer-events: none; z-index: 9999;
+}
+
+/* ═══════════════════════════════════
+   HEADER
+═══════════════════════════════════ */
+.header {
+  background: linear-gradient(160deg, #090e14 0%, #0d1a24 60%, #090e14 100%);
+  border-bottom: 1px solid var(--red);
+  padding: 48px 48px 40px;
+  position: relative; overflow: hidden;
+}
+.header::before {
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background: linear-gradient(90deg,transparent,var(--red),var(--amber),var(--gold),var(--amber),var(--red),transparent);
+}
+.header::after {
+  content:'CLASSIFIED';
+  position:absolute;right:48px;top:48px;
+  font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:6px;
+  color:var(--red);opacity:.15;font-weight:500;
+}
+
+.header-inner { max-width: 1400px; margin: 0 auto; }
+
+.op-tag {
+  font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:5px;
+  color:var(--red);text-transform:uppercase;margin-bottom:16px;
+}
+.header h1 {
+  font-family:'Syne',sans-serif;font-size:clamp(28px,4vw,52px);
+  font-weight:800;color:var(--text-bright);line-height:1.1;
+  margin-bottom:12px;
+}
+.header h1 em { color:var(--red); font-style:normal; }
+.header-sub {
+  font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--text-dim);
+  letter-spacing:1px;margin-bottom:28px;
+}
+.header-meta {
+  display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px;
+}
+.badge {
+  font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:2px;
+  padding:4px 10px;border-radius:2px;text-transform:uppercase;
+}
+.badge-red { background:rgba(192,57,43,.15);color:var(--red);border:1px solid rgba(192,57,43,.3); }
+.badge-amber { background:rgba(230,126,34,.12);color:var(--amber);border:1px solid rgba(230,126,34,.25); }
+.badge-blue { background:rgba(36,113,163,.15);color:var(--blue-bright);border:1px solid rgba(36,113,163,.3); }
+.badge-gold { background:rgba(240,192,64,.1);color:var(--gold);border:1px solid rgba(240,192,64,.2); }
+.badge-green { background:rgba(39,174,96,.12);color:var(--green);border:1px solid rgba(39,174,96,.25); }
+.badge-purple { background:rgba(125,60,152,.15);color:#a569bd;border:1px solid rgba(125,60,152,.3); }
+
+.header-stats {
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));
+  gap:1px;background:var(--border);border:1px solid var(--border);
+  border-radius:4px;overflow:hidden;
+}
+.stat-box {
+  background:var(--surface);padding:16px 20px;
+}
+.stat-num {
+  font-family:'Syne',sans-serif;font-size:28px;font-weight:800;line-height:1;
+  margin-bottom:4px;
+}
+.stat-lbl {
+  font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:2px;
+  color:var(--text-dim);text-transform:uppercase;
+}
+.stat-red .stat-num { color:var(--red); }
+.stat-amber .stat-num { color:var(--amber); }
+.stat-gold .stat-num { color:var(--gold); }
+.stat-blue .stat-num { color:var(--blue-bright); }
+.stat-green .stat-num { color:var(--green); }
+
+/* ═══════════════════════════════════
+   TABS
+═══════════════════════════════════ */
+.tabs {
+  background:rgba(11, 16, 21, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding:0 48px;display:flex;gap:0;flex-wrap:wrap;position:sticky;top:0;z-index:100;
+}
+.tab {
+  font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;
+  text-transform:uppercase;padding:16px 20px;cursor:pointer;
+  border:none;background:transparent;color:var(--text-dim);
+  border-bottom:2px solid transparent;margin-bottom:-1px;transition:.2s;
+  white-space:nowrap;
+  text-decoration: none;
+}
+.tab:hover { color:var(--text); }
+.tab.active { color:var(--text-bright);border-bottom-color:var(--red); }
+
+.panel { display:block; padding:40px 48px; max-width:1400px; margin:0 auto; margin-bottom: 120px; scroll-margin-top: 80px; }
+
+/* ═══════════════════════════════════
+   SECTION LABELS / TITLES
+═══════════════════════════════════ */
+.section-label {
+  font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:4px;
+  color:var(--text-muted);text-transform:uppercase;margin-bottom:16px;
+  padding-bottom:8px;border-bottom:1px solid var(--border);
+}
+.section-title {
+  font-family:'Syne',sans-serif;font-size:18px;font-weight:700;
+  color:var(--text-bright);margin:32px 0 16px;
+}
+.section-title:first-of-type { margin-top:0; }
+
+/* ═══════════════════════════════════
+   GRID SYSTEM
+═══════════════════════════════════ */
+.grid-2 { display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,480px),1fr));gap:16px;margin-bottom:24px; }
+.grid-3 { display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:16px;margin-bottom:24px; }
+.grid-4 { display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:16px;margin-bottom:24px; }
+
+/* ═══════════════════════════════════
+   CARDS
+═══════════════════════════════════ */
+.card {
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:4px;padding:24px;
+  display:flex;flex-direction:column;height:100%;
+}
+.card-red { border-left:3px solid var(--red); }
+.card-amber { border-left:3px solid var(--amber); }
+.card-blue { border-left:3px solid var(--blue-bright); }
+.card-gold { border-left:3px solid var(--gold); }
+.card-green { border-left:3px solid var(--green); }
+.card-purple { border-left:3px solid #a569bd; }
+.card-teal { border-left:3px solid var(--teal); }
+
+.card-tag {
+  font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:3px;
+  text-transform:uppercase;margin-bottom:10px;
+}
+.tag-red { color:var(--red); }
+.tag-amber { color:var(--amber); }
+.tag-blue { color:var(--blue-bright); }
+.tag-gold { color:var(--gold); }
+.tag-green { color:var(--green); }
+.tag-purple { color:#a569bd; }
+.tag-teal { color:var(--teal); }
+
+.card-title {
+  font-family:'Syne',sans-serif;font-size:15px;font-weight:700;
+  color:var(--text-bright);margin-bottom:12px;
+}
+.card-body { font-size:13.5px;line-height:1.65;color:var(--text);flex:1; }
+.card-body p { margin-bottom:8px; }
+.card-body p:last-child { margin-bottom:0; }
+.card-body ul { padding-left:16px;margin:8px 0; }
+.card-body ul li { margin-bottom:4px; }
+
+/* ═══════════════════════════════════
+   TIMELINE
+═══════════════════════════════════ */
+.timeline { position:relative;padding-left:28px; }
+.timeline::before {
+  content:'';position:absolute;left:8px;top:8px;bottom:8px;
+  width:1px;background:linear-gradient(180deg,var(--red),var(--amber),var(--border));
+}
+.tl-item {
+  position:relative;margin-bottom:24px;
+}
+.tl-dot {
+  position:absolute;left:-24px;top:6px;
+  width:10px;height:10px;border-radius:50%;
+  background:var(--surface);border:2px solid var(--border);
+  flex-shrink:0;
+}
+.tl-item.critical .tl-dot { border-color:var(--red);background:rgba(192,57,43,.3); }
+.tl-item.high .tl-dot { border-color:var(--amber);background:rgba(230,126,34,.2); }
+.tl-item.medium .tl-dot { border-color:var(--blue-bright);background:rgba(52,152,219,.15); }
+.tl-item.info .tl-dot { border-color:var(--teal);background:rgba(26,154,133,.15); }
+
+.tl-date {
+  font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:2px;
+  color:var(--text-muted);margin-bottom:4px;
+}
+.tl-title {
+  font-family:'Syne',sans-serif;font-size:14px;font-weight:700;
+  color:var(--text-bright);margin-bottom:6px;
+}
+.tl-body { font-size:13px;color:var(--text);line-height:1.6; }
+.tl-platforms {
+  display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;
+}
+.tl-tag {
+  font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:1px;
+  padding:2px 7px;border-radius:2px;
+}
+
+/* ═══════════════════════════════════
+   PLATFORM TABLE
+═══════════════════════════════════ */
+.plat-table { width:100%;border-collapse:collapse;margin-bottom:24px; }
+.plat-table th {
+  font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:2px;
+  text-transform:uppercase;color:var(--text-dim);padding:10px 16px;
+  background:var(--surface);border:1px solid var(--border);text-align:left;
+}
+.plat-table td {
+  padding:12px 16px;border:1px solid var(--border);font-size:13px;
+  vertical-align:top;
+}
+.plat-table tr:nth-child(even) td { background:rgba(255,255,255,.015); }
+.plat-table tr:hover td { background:rgba(255,255,255,.03); }
+
+.plat-name {
+  font-family:'Syne',sans-serif;font-size:14px;font-weight:700;
+  color:var(--text-bright);display:flex;align-items:center;gap:8px;
+}
+.plat-icon { font-size:16px; }
+
+.status-complied { color:var(--amber); }
+.status-refused { color:var(--red); }
+.status-left { color:var(--text-dim); }
+.status-blocked { color:var(--red); }
+.status-sued { color:#a569bd; }
+
+.pill {
+  display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:9px;
+  letter-spacing:1px;padding:2px 7px;border-radius:10px;margin:2px;
+  text-transform:uppercase;
+}
+.pill-red { background:rgba(192,57,43,.15);color:var(--red);border:1px solid rgba(192,57,43,.25); }
+.pill-amber { background:rgba(230,126,34,.12);color:var(--amber);border:1px solid rgba(230,126,34,.2); }
+.pill-blue { background:rgba(52,152,219,.12);color:var(--blue-bright);border:1px solid rgba(52,152,219,.2); }
+.pill-green { background:rgba(39,174,96,.12);color:var(--green);border:1px solid rgba(39,174,96,.2); }
+.pill-purple { background:rgba(125,60,152,.15);color:#a569bd;border:1px solid rgba(125,60,152,.25); }
+.pill-gold { background:rgba(240,192,64,.1);color:var(--gold);border:1px solid rgba(240,192,64,.2); }
+.pill-dim { background:rgba(255,255,255,.05);color:var(--text-dim);border:1px solid rgba(255,255,255,.08); }
+
+/* ═══════════════════════════════════
+   LEGAL VIOLATIONS
+═══════════════════════════════════ */
+.violation {
+  background:var(--surface);border:1px solid var(--border);
+  border-left:3px solid var(--red);border-radius:4px;
+  padding:20px 24px;display:flex;flex-direction:column;height:100%;
+}
+.violation-art {
+  font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:2px;
+  color:var(--red);margin-bottom:6px;
+}
+.violation-title {
+  font-family:'Syne',sans-serif;font-size:14px;font-weight:700;
+  color:var(--text-bright);margin-bottom:8px;
+}
+.violation-body { font-size:13px;color:var(--text);line-height:1.6;flex:1; }
+.violation-evidence {
+  margin-top:10px;padding:10px 14px;
+  background:rgba(192,57,43,.08);border:1px solid rgba(192,57,43,.2);
+  border-radius:2px;font-family:'IBM Plex Mono',monospace;font-size:11px;
+  color:var(--text-dim);line-height:1.5;
+}
+
+/* ═══════════════════════════════════
+   REPORT CARDS
+═══════════════════════════════════ */
+.report-card {
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:4px;padding:24px;display:flex;flex-direction:column;height:100%;
+}
+.report-n {
+  font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:3px;
+  color:var(--gold);margin-bottom:8px;text-transform:uppercase;
+}
+.report-title {
+  font-family:'Syne',sans-serif;font-size:16px;font-weight:700;
+  color:var(--text-bright);margin-bottom:6px;
+}
+.report-meta {
+  font-family:'IBM Plex Mono',monospace;font-size:10px;
+  color:var(--text-dim);margin-bottom:14px;letter-spacing:1px;
+}
+.report-body { font-size:13.5px;color:var(--text);line-height:1.65;flex:1; }
+.report-annex {
+  margin-top:16px;padding:12px 16px;
+  background:var(--surface2);border:1px solid var(--border);border-radius:2px;
+}
+.report-annex-title {
+  font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:3px;
+  color:var(--gold);text-transform:uppercase;margin-bottom:8px;
+}
+.annex-list { list-style:none;padding:0; }
+.annex-list li {
+  font-size:12px;color:var(--text-dim);padding:4px 0;
+  border-bottom:1px solid rgba(255,255,255,.04);
+  display:flex;align-items:baseline;gap:8px;
+}
+.annex-list li:last-child { border-bottom:none; }
+.annex-list li::before {
+  content:'→';color:var(--gold);font-family:'IBM Plex Mono',monospace;font-size:10px;
+  flex-shrink:0;
+}
+
+/* ═══════════════════════════════════
+   PATTERN BOXES
+═══════════════════════════════════ */
+.pattern {
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:4px;padding:20px;display:flex;flex-direction:column;height:100%;
+}
+.pattern-n {
+  font-family:'Syne',sans-serif;font-size:36px;font-weight:800;
+  color:rgba(192,57,43,.2);line-height:1;margin-bottom:8px;
+}
+.pattern-title {
+  font-family:'Syne',sans-serif;font-size:13px;font-weight:700;
+  color:var(--text-bright);margin-bottom:8px;
+}
+.pattern-body { font-size:12.5px;color:var(--text);line-height:1.6;flex:1; }
+.pattern-evidence {
+  margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:10px;
+  color:var(--teal);letter-spacing:.5px;
+}
+
+/* ═══════════════════════════════════
+   CALLOUT / ALERT
+═══════════════════════════════════ */
+.callout {
+  border-radius:4px;padding:20px 24px;margin:16px 0;
+}
+.callout-red { background:rgba(192,57,43,.1);border:1px solid rgba(192,57,43,.3); }
+.callout-amber { background:rgba(230,126,34,.08);border:1px solid rgba(230,126,34,.25); }
+.callout-blue { background:rgba(52,152,219,.08);border:1px solid rgba(52,152,219,.2); }
+.callout-gold { background:rgba(240,192,64,.07);border:1px solid rgba(240,192,64,.2); }
+
+.callout-title {
+  font-family:'Syne',sans-serif;font-size:13px;font-weight:700;margin-bottom:8px;
+}
+.callout-red .callout-title { color:var(--red-hot); }
+.callout-amber .callout-title { color:var(--amber); }
+.callout-blue .callout-title { color:var(--blue-bright); }
+.callout-gold .callout-title { color:var(--gold); }
+.callout-body { font-size:13px;color:var(--text);line-height:1.65; }
+
+/* ═══════════════════════════════════
+   FOOTER
+═══════════════════════════════════ */
+.footer {
+  margin-top:60px;padding:24px 48px;
+  border-top:1px solid var(--border);
+  font-family:'IBM Plex Mono',monospace;font-size:10px;
+  color:var(--text-muted);letter-spacing:1px;
+  display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;
+}
+
+/* ═══════════════════════════════════
+   HIGHLIGHT COLORS
+═══════════════════════════════════ */
+.hl-red { color:var(--red-hot); font-weight:600; }
+.hl-amber { color:var(--amber); font-weight:600; }
+.hl-gold { color:var(--gold); font-weight:600; }
+.hl-blue { color:var(--blue-bright); font-weight:600; }
+.hl-green { color:var(--green); font-weight:600; }
+.hl-purple { color:#a569bd; font-weight:600; }
+.hl-teal { color:var(--teal); font-weight:600; }
+
+/* ═══════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════ */
+@media (max-width:640px) {
+  .header { padding:32px 20px 28px; }
+  .tabs { padding:0 20px; }
+  .panel { padding:28px 20px; }
+  .footer { padding:20px; }
+  .header::after { display:none; }
+}
+
+/* ═══════════════════════════════════
+   QUOTE BLOCK
+═══════════════════════════════════ */
+.quote-block {
+  border-left:3px solid var(--red);padding:16px 20px;margin:16px 0;
+  background:rgba(192,57,43,.06);border-radius:0 4px 4px 0;
+}
+.quote-text {
+  font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.7;
+  color:var(--text);font-style:italic;margin-bottom:8px;
+}
+.quote-source {
+  font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:2px;
+  color:var(--red);text-transform:uppercase;
+}
+
+/* === COMPARE TABLE === */
+.compare-row {
+  display:grid;grid-template-columns:180px 1fr 1fr;gap:1px;
+  background:var(--border);margin-bottom:1px;
+}
+.compare-row.header-row { background:var(--surface2); }
+.compare-cell {
+  background:var(--surface);padding:12px 16px;font-size:12.5px;
+}
+.compare-label {
+  font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1px;
+  color:var(--text-dim);display:flex;align-items:center;
+}
+.compare-moraes { color:var(--text); }
+.compare-law { color:var(--teal); }
+.compare-head {
+  font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:3px;
+  color:var(--text-muted);text-transform:uppercase;padding:10px 16px;
+  background:var(--surface2);
+}
+.compare-wrapper { border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-bottom:24px; }
+.grid-span-2 { grid-column: span 2; }
+.grid-span-all { grid-column: 1 / -1; }
+
+@media (max-width: 900px) {
+  .grid-span-2, .grid-span-all { grid-column: auto; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     HEADER
+═══════════════════════════════════════════════════ -->
+<div class="header">
+  <div class="header-inner">
+    <div class="op-tag">⬛ Dossiê Investigativo · Censura Digital Sistêmica</div>
+    <h1>Operação <em>Silêncio Digital</em></h1>
+    <div class="header-sub">O Regime de Censura Judicial nas Redes Sociais — 2020 a 2026 · Ministro Alexandre de Moraes / STF</div>
+    <div class="header-meta">
+      <span class="badge badge-red">Lawfare Digital</span>
+      <span class="badge badge-amber">Sigilo Inconstitucional</span>
+      <span class="badge badge-blue">7 Plataformas Atingidas</span>
+      <span class="badge badge-gold">3 Relatórios EUA</span>
+      <span class="badge badge-red">@AlexandreFiles Documentado</span>
+      <span class="badge badge-purple">Jurisdição Extraterritorial</span>
+    </div>
+    <div class="header-stats">
+      <div class="stat-box stat-red">
+        <div class="stat-num">7+</div>
+        <div class="stat-lbl">Plataformas alvejadas</div>
+      </div>
+      <div class="stat-box stat-amber">
+        <div class="stat-num">100+</div>
+        <div class="stat-lbl">Contas suspensas (STF)</div>
+      </div>
+      <div class="stat-box stat-gold">
+        <div class="stat-num">R$18M</div>
+        <div class="stat-lbl">Multas impostas ao X</div>
+      </div>
+      <div class="stat-box stat-blue">
+        <div class="stat-num">3</div>
+        <div class="stat-lbl">Relatórios Congresso EUA</div>
+      </div>
+      <div class="stat-box stat-red">
+        <div class="stat-num">2</div>
+        <div class="stat-lbl">Plataformas bloqueadas BR</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num" style="color:var(--teal)">CC0</div>
+        <div class="stat-lbl">Domínio público total</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TABS -->
+<div class="tabs">
+  <a href="#visao" class="tab active">🗺 Visão Geral</a>
+  <a href="#plataformas" class="tab">📡 Plataformas</a>
+  <a href="#cronologia" class="tab">📅 Cronologia</a>
+  <a href="#documentos" class="tab">📄 @AlexandreFiles</a>
+  <a href="#violacoes" class="tab">⚖️ Violações</a>
+  <a href="#relatorios" class="tab">🇺🇸 Relatórios EUA</a>
+  <a href="#padroes" class="tab">🔴 Padrões</a>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     TAB 1 — VISÃO GERAL
+═══════════════════════════════════════════════════ -->
+<div id="visao" class="panel">
+
+  <div class="section-label">Estrutura Central · Mecanismo de Censura Judicial Sistêmica</div>
+
+  <div class="callout callout-red">
+    <div class="callout-title">⚠ Tese Central deste Dossiê</div>
+    <div class="callout-body">
+      Entre 2020 e 2026, o ministro Alexandre de Moraes instrumentalizou o aparato judicial do STF para impor um regime de censura digital que atingiu ao menos 7 grandes plataformas internacionais. As ordens eram emitidas em <strong class="hl-red">segredo</strong>, sem motivação pública, sem contraditório prévio, e sob ameaça de prisão de representantes legais. Apenas duas plataformas resistiram: <strong class="hl-red">X (Twitter)</strong>, bloqueada no Brasil por 39 dias (ago–set/2024), e <strong class="hl-red">Rumble</strong>, bloqueada em fevereiro de 2025. As demais — Meta (Facebook/Instagram/WhatsApp), Google (YouTube), TikTok, Telegram e Spotify — cumpriram as ordens sigilosas e, portanto, o regime de censura permanece <em>funcional e invisível</em> nessas plataformas até hoje.
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card card-red">
+      <div class="card-tag tag-red">Mecanismo Central</div>
+      <div class="card-title">O Sistema de Censura em Segredo</div>
+      <div class="card-body">
+        <p>Moraes emitia ordens de bloqueio de contas, entrega de dados telemáticos e suspensão de monetização <strong>de forma sigilosa</strong>, proibindo as próprias plataformas de comunicar aos usuários investigados que estavam sendo vigiados ou censurados.</p>
+        <p>As plataformas recebiam os ofícios com prazo de cumprimento de <strong class="hl-red">2 horas</strong>, sob pena de multa diária e prisão do representante legal no Brasil.</p>
+        <p>O sistema é análogo ao das <em>National Security Letters</em> americanas — mas sem a legislação específica que as autoriza, e aplicado por um único ministro sem revisão colegiada.</p>
+        <div style="margin-top:12px;">
+          <span class="pill pill-red">Sigilo inconstitucional</span>
+          <span class="pill pill-amber">Sem contraditório</span>
+          <span class="pill pill-red">Prazo de 2 horas</span>
+          <span class="pill pill-dim">Ameaça de prisão</span>
+        </div>
+      </div>
+    </div>
+    <div class="card card-amber">
+      <div class="card-tag tag-amber">Ponto de Ruptura</div>
+      <div class="card-title">Por que só o X Resistiu Publicamente</div>
+      <div class="card-body">
+        <p>Todas as demais plataformas operaram em conformidade silenciosa desde pelo menos 2020, cumprindo as ordens sem resistência pública. O X de Elon Musk foi a única a:</p>
+        <ul>
+          <li>Publicar as ordens sigilosas recebidas</li>
+          <li>Questionar publicamente a legalidade das determinações</li>
+          <li>Recusar cumprimento de ordens específicas</li>
+          <li>Acionar o Congresso dos EUA via intimação judicial</li>
+        </ul>
+        <p style="margin-top:10px;">O resultado: bloqueio de 39 dias no Brasil (30/ago a 8/out/2024), confisco de R$18,35 milhões em ativos e abertura de inquérito criminal contra Elon Musk pelo próprio Moraes.</p>
+        <div style="margin-top:12px;">
+          <span class="pill pill-blue">@AlexandreFiles criado</span>
+          <span class="pill pill-gold">Documentos públicos</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">O que ficou invisível: as plataformas que cederam</div>
+
+  <div class="callout callout-amber">
+    <div class="callout-title">Silêncio Estrutural das Plataformas Colaborativas</div>
+    <div class="callout-body">
+      A decisão de Moraes ao bloquear o X em agosto de 2024 explicitamente reconheceu que <strong class="hl-amber">Google (YouTube) e Meta (Facebook, Instagram, WhatsApp)</strong> cumpriram todas as ordens de bloqueio de contas "em fiel observância ao ordenamento jurídico brasileiro". Isso significa que centenas de contas foram bloqueadas nessas plataformas sem que nenhum usuário fosse notificado, sem que nenhum documento se tornasse público, e sem que nenhuma resistência fosse registrada. O regime de censura sobre essas plataformas é estruturalmente idêntico ao que foi imposto ao X — apenas invisível.
+    </div>
+  </div>
+
+  <div class="grid-3">
+    <div class="card card-red">
+      <div class="card-tag tag-red">Alvo I</div>
+      <div class="card-title">Cidadãos Comuns</div>
+      <div class="card-body">Contas com poucos seguidores, manifestamente conservadoras, bloqueadas sem referência a postagens específicas ilegais. @AlexandreFiles documenta casos com zero postagens citadas como ilegais.</div>
+    </div>
+    <div class="card card-amber">
+      <div class="card-tag tag-amber">Alvo II</div>
+      <div class="card-title">Parlamentares em Exercício</div>
+      <div class="card-body">Senador Marcos do Val (Podemos-ES) teve todas as contas bloqueadas em múltiplas plataformas, foi proibido de usar redes sociais "por intermédio de terceiros" e teve passaportes apreendidos.</div>
+    </div>
+    <div class="card card-blue">
+      <div class="card-tag tag-blue">Alvo III</div>
+      <div class="card-title">Jornalistas e Influenciadores</div>
+      <div class="card-body">Allan dos Santos (exilado nos EUA), Oswaldo Eustáquio, Monark (bloqueado em 24 plataformas incluindo Spotify), Rodrigo Constantino (cidadão americano desde 2024), entre outros.</div>
+    </div>
+    <div class="card card-purple">
+      <div class="card-tag tag-purple">Alvo IV</div>
+      <div class="card-title">Menores de Idade</div>
+      <div class="card-body">O X documenta o bloqueio de conta de jovem de 16 anos. Filha do jornalista Oswaldo Eustáquio, menor à época, teve vídeo que postou classificado como crime por Moraes.</div>
+    </div>
+    <div class="card card-gold">
+      <div class="card-tag tag-gold">Alvo V</div>
+      <div class="card-title">Empresários</div>
+      <div class="card-body">Luciano Hang bloqueado simultaneamente em Facebook, Instagram, TikTok, Twitter e YouTube em única decisão de 2022.</div>
+    </div>
+    <div class="card card-teal">
+      <div class="card-tag tag-teal">Alvo VI</div>
+      <div class="card-title">Residentes nos EUA</div>
+      <div class="card-body">Moraes emitiu ordens para bloqueio global de contas de cidadãos americanos residindo nos EUA — ultrapassando a jurisdição brasileira e violando a Primeira Emenda.</div>
+    </div>
+    <div class="card card-red">
+      <div class="card-tag tag-red">Alvo VII</div>
+      <div class="card-title">Exilados e Expatriados</div>
+      <div class="card-body">Cidadãos brasileiros vivendo no exterior que tiveram seus passaportes cancelados e contas bancárias congeladas sem o devido processo legal em solo estrangeiro.</div>
+    </div>
+    <div class="card card-amber">
+      <div class="card-tag tag-amber">Alvo VIII</div>
+      <div class="card-title">Comentaristas de Opinião</div>
+      <div class="card-body">Analistas políticos e comentaristas de mídia independente cujas contas foram silenciadas por críticas sistemáticas à condução dos inquéritos pelo STF.</div>
+    </div>
+    <div class="card card-blue">
+      <div class="card-tag tag-blue">Alvo IX</div>
+      <div class="card-title">Ativistas Digitais</div>
+      <div class="card-body">Pequenos perfis de apoio que compartilharam convocações para manifestações, categorizados como parte de uma "rede de desinformação" estrutural.</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     TAB 2 — PLATAFORMAS
+═══════════════════════════════════════════════════ -->
+<div id="plataformas" class="panel">
+
+  <div class="section-label">Tabela Comparativa · Resposta de Cada Plataforma às Ordens Sigilosas</div>
+
+  <div class="callout callout-blue">
+    <div class="callout-title">Chave de Interpretação</div>
+    <div class="callout-body">
+      A tabela abaixo mapeia o comportamento documentado de cada plataforma. <span class="hl-amber">Compliance silencioso</span> significa que a plataforma cumpriu as ordens sigilosas sem resistência pública, tornando o regime de censura invisível para a sociedade. <span class="hl-red">Resistência</span> significa recusa em cumprir ordens consideradas ilegais, com publicização dos documentos — postura que resultou em bloqueio total no Brasil.
+    </div>
+  </div>
+
+  <table class="plat-table">
+    <thead>
+      <tr>
+        <th>Plataforma</th>
+        <th>Postura</th>
+        <th>Período das Ordens</th>
+        <th>Consequência</th>
+        <th>Status atual</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="plat-name"><span class="plat-icon">▓</span> X (Twitter)</div>
+          <div style="font-size:11px;color:var(--text-dim);margin-top:4px;">Elon Musk · EUA</div>
+        </td>
+        <td>
+          <div class="status-refused" style="font-weight:700;font-family:'IBM Plex Mono',monospace;font-size:12px;">RESISTÊNCIA PÚBLICA</div>
+          <div style="font-size:12px;color:var(--text-dim);margin-top:4px;">Publicou ordens sigilosas. Recusou cumprimento. Criou @AlexandreFiles. Acionou Congresso dos EUA.</div>
+        </td>
+        <td style="font-size:12px;">2020 → 2026 (contínuo)<br><span style="color:var(--text-dim)">Escalada em ago/2024</span></td>
+        <td>
+          <span class="pill pill-red">Bloqueio 39 dias</span><br>
+          <span class="pill pill-amber">R$18,35M confiscados</span><br>
+          <span class="pill pill-red">Inquérito criminal vs. Musk</span><br>
+          <span class="pill pill-dim">Starlink bloqueada</span>
+        </td>
+        <td>
+          <span class="pill pill-amber">Retornou em out/2024</span><br>
+          <span style="font-size:11px;color:var(--text-dim);">Após indicar representante legal e pagar multas</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="plat-name"><span class="plat-icon">📘</span> Meta</div>
+          <div style="font-size:11px;color:var(--text-dim);margin-top:4px;">Facebook · Instagram · WhatsApp</div>
+        </td>
+        <td>
+          <div class="status-complied" style="font-weight:700;font-family:'IBM Plex Mono',monospace;font-size:12px;">COMPLIANCE SILENCIOSO</div>
+          <div style="font-size:12px;color:var(--text-dim);margin-top:4px;">Cumpriu ordens de bloqueio de contas e entrega de dados sem resistência pública. Citada por Moraes como modelo de obediência.</div>
+        </td>
+        <td style="font-size:12px;">2020 → 2026 (contínuo)</td>
+        <td>
+          <span class="pill pill-green">Sem penalidades aplicadas</span><br>
+          <span class="pill pill-dim">Opera normalmente no Brasil</span>
+        </td>
+        <td>
+          <span class="pill pill-green">Ativa · Sem restrições</span><br>
+          <span style="font-size:11px;color:var(--text-dim);">Regime de censura invisível em curso</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="plat-name"><span class="plat-icon">▶</span> Google / YouTube</div>
+          <div style="font-size:11px;color:var(--text-dim);margin-top:4px;">Alphabet Inc. · EUA</div>
+        </td>
+        <td>
+          <div class="status-complied" style="font-weight:700;font-family:'IBM Plex Mono',monospace;font-size:12px;">COMPLIANCE SILENCIOSO</div>
+          <div style="font-size:12px;color:var(--text-dim);margin-top:4px;">Cumpriu ordens de bloqueio e remoção de conteúdo. Advogado do Google disse em plenário que "toda censura começa com bons propósitos" mas a empresa continuou cumprindo.</div>
+        </td>
+        <td style="font-size:12px;">2020 → 2026 (contínuo)<br><span style="color:var(--text-dim)">Bloqueio Monark: 4 ordens ao Spotify + YouTube</span></td>
+        <td>
+          <span class="pill pill-green">Sem penalidades aplicadas</span><br>
+          <span class="pill pill-dim">Opera normalmente no Brasil</span>
+        </td>
+        <td>
+          <span class="pill pill-green">Ativo · Sem restrições</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="plat-name"><span class="plat-icon">✈</span> Telegram</div>
+          <div style="font-size:11px;color:var(--text-dim);margin-top:4px;">Telegram FZ-LLC · Dubai</div>
+        </td>
+        <td>
+          <div style="font-weight:700;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--text-dim);">RESISTÊNCIA PARCIAL → COMPLIANCE</div>
+          <div style="font-size:12px;color:var(--text-dim);margin-top:4px;">Recusou ordem de bloquear canal de Nikolas Ferreira em jan/2023. Foi multado. Moraes voltou atrás. Depois passou a cumprir ordens. Em 2025–2026, entrega dados de usuários a pedido sigiloso.</div>
+        </td>
+        <td style="font-size:12px;">Jan/2022 (1º bloqueio)<br>Jan/2023 (2º bloqueio)<br>2025–2026 (entrega de dados)</td>
+        <td>
+          <span class="pill pill-amber">2 bloqueios temporários</span><br>
+          <span class="pill pill-dim">Revertidos após compliance</span>
+        </td>
+        <td>
+          <span class="pill pill-gold">Ativo · Cooperando com ordens sigilosas</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="plat-name"><span class="plat-icon">🎵</span> TikTok</div>
+          <div style="font-size:11px;color:var(--text-dim);margin-top:4px;">ByteDance · China/EUA</div>
+        </td>
+        <td>
+          <div class="status-complied" style="font-weight:700;font-family:'IBM Plex Mono',monospace;font-size:12px;">COMPLIANCE SILENCIOSO</div>
+          <div style="font-size:12px;color:var(--text-dim);margin-top:4px;">Documentos mostram ByteDance contatando sede em Singapura para efetivar bloqueios determinados por Moraes.</div>
+        </td>
+        <td style="font-size:12px;">2022 → 2026 (documentado)</td>
+        <td>
+          <span class="pill pill-green">Sem penalidades</span>
+        </td>
+        <td>
+          <span class="pill pill-green">Ativo · Sem restrições</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="plat-name"><span class="plat-icon">🎧</span> Spotify</div>
+          <div style="font-size:11px;color:var(--text-dim);margin-top:4px;">Spotify AB · Suécia/EUA</div>
+        </td>
+        <td>
+          <div class="status-complied" style="font-weight:700;font-family:'IBM Plex Mono',monospace;font-size:12px;">COMPLIANCE SILENCIOSO</div>
+          <div style="font-size:12px;color:var(--text-dim);margin-top:4px;">Relatório do Congresso dos EUA (2024) anexa 4 ordens diferentes de Moraes para remoção de conteúdos do Monark. Plataforma de áudio nunca se manifestou publicamente.</div>
+        </td>
+        <td style="font-size:12px;">2022 → 2024 (documentado)</td>
+        <td>
+          <span class="pill pill-green">Sem penalidades</span>
+        </td>
+        <td>
+          <span class="pill pill-green">Ativo · Sem restrições</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="plat-name"><span class="plat-icon">▶</span> Rumble</div>
+          <div style="font-size:11px;color:var(--text-dim);margin-top:4px;">Rumble Inc. · EUA/Canadá</div>
+        </td>
+        <td>
+          <div class="status-refused" style="font-weight:700;font-family:'IBM Plex Mono',monospace;font-size:12px;">RESISTÊNCIA PÚBLICA</div>
+          <div style="font-size:12px;color:var(--text-dim);margin-top:4px;">Recusou ordens. Saiu do Brasil (dez/2023). Voltou (fev/2025). Foi bloqueada novamente (fev/2025). Acionou Justiça federal nos EUA (Flórida) com Trump Media. Retornou após pagar multas.</div>
+        </td>
+        <td style="font-size:12px;">2023 → 2025 (escalada)<br>Jul/2025: nova ordem vs. Constantino</td>
+        <td>
+          <span class="pill pill-red">1º bloqueio: dez/2023</span><br>
+          <span class="pill pill-red">2º bloqueio: fev/2025</span><br>
+          <span class="pill pill-purple">Processo na Flórida vs. Moraes</span><br>
+          <span class="pill pill-amber">Multas acumuladas</span>
+        </td>
+        <td>
+          <span class="pill pill-gold">Status intermitente</span><br>
+          <span style="font-size:11px;color:var(--text-dim);">Jul/2025: nova ordem de Moraes. Nova ação na Flórida.</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout-gold">
+    <div class="callout-title">Conclusão Estrutural: A Assimetria da Visibilidade</div>
+    <div class="callout-body">
+      O bloqueio do X foi <strong class="hl-gold">o único evento que tornou o regime de censura visível</strong> ao público. Mas o regime existia — e continua existindo — sobre todas as demais plataformas de forma idêntica. A diferença não é de escala, é de visibilidade. A Meta cumpre em silêncio as mesmas ordens que levaram ao bloqueio do X. O YouTube remove as mesmas contas. O Telegram entrega os mesmos dados. O Spotify bloqueia os mesmos criadores. Nenhum desses eventos tem nome, documentação pública ou @AlexandreFiles próprio.
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     TAB 3 — CRONOLOGIA
+═══════════════════════════════════════════════════ -->
+<div id="cronologia" class="panel">
+
+  <div class="section-label">Linha do Tempo · 2020–2026 · Principais Eventos Documentados</div>
+
+  <div class="grid-2">
+    <div>
+      <div class="section-title">2020–2022: Fase de Implantação Silenciosa</div>
+      <div class="timeline">
+
+        <div class="tl-item medium">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2020</div>
+          <div class="tl-title">Início das Ordens Sigilosas de Bloqueio</div>
+          <div class="tl-body">Moraes começa a emitir ordens sigilosas de bloqueio de contas no contexto do INQ 4.781 (Inquérito das Fake News). Plataformas cumprem sem resistência pública. Nenhum usuário é notificado.</div>
+          <div class="tl-platforms">
+            <span class="tl-tag pill pill-blue">Twitter</span>
+            <span class="tl-tag pill pill-amber">Facebook</span>
+            <span class="tl-tag pill pill-amber">Instagram</span>
+          </div>
+        </div>
+
+        <div class="tl-item high">
+          <div class="tl-dot"></div>
+          <div class="tl-date">Ago/2022</div>
+          <div class="tl-title">Bloqueio Simultâneo em 5 Plataformas — Caso Luciano Hang</div>
+          <div class="tl-body">Moraes emite ordem bloqueando empresário Luciano Hang simultaneamente em Facebook, Instagram, TikTok, Twitter e YouTube em única decisão. Primeira vez que a escala multiplataforma se torna documentada.</div>
+          <div class="tl-platforms">
+            <span class="tl-tag pill pill-amber">Facebook</span>
+            <span class="tl-tag pill pill-amber">Instagram</span>
+            <span class="tl-tag pill pill-blue">TikTok</span>
+            <span class="tl-tag pill pill-blue">Twitter</span>
+            <span class="tl-tag pill pill-red">YouTube</span>
+          </div>
+        </div>
+
+        <div class="tl-item high">
+          <div class="tl-dot"></div>
+          <div class="tl-date">Jan/2022 e Jan/2023</div>
+          <div class="tl-title">Telegram: dois bloqueios, dois recuos</div>
+          <div class="tl-body">Moraes bloqueia o Telegram duas vezes. Em jan/2023, Telegram recusou ordem de bloquear canal de Nikolas Ferreira por ser "flagrantemente ilegal". Multado. Moraes voltou atrás. Precedente: resistência tem custo, mas também tem efeito.</div>
+          <div class="tl-platforms">
+            <span class="tl-tag pill pill-gold">Telegram</span>
+          </div>
+        </div>
+
+        <div class="tl-item high">
+          <div class="tl-dot"></div>
+          <div class="tl-date">Dez/2023</div>
+          <div class="tl-title">Rumble sai do Brasil em protesto</div>
+          <div class="tl-body">Rumble anuncia encerramento das atividades no Brasil, alegando censura contra criadores de conteúdo e parlamentares. Afirma ter sido obrigada a manter sigilo sobre as ordens recebidas. Primeira plataforma a sair voluntariamente em protesto.</div>
+          <div class="tl-platforms">
+            <span class="tl-tag pill pill-red">Rumble</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div>
+      <div class="section-title">2024–2026: Fase de Exposição e Internacionalização</div>
+      <div class="timeline">
+
+        <div class="tl-item high">
+          <div class="tl-dot"></div>
+          <div class="tl-date">Abr/2024</div>
+          <div class="tl-title">Twitter Files Brasil — 1º Relatório do Congresso dos EUA</div>
+          <div class="tl-body">X envia ao Comitê Judiciário da Câmara dos EUA 86 documentos de ordens sigilosas de Moraes (2021–2023). Comitê publica relatório "The Attack on Free Speech Abroad". Ordens abrangem Twitter, Facebook, Instagram, TikTok, YouTube e Kwai.</div>
+          <div class="tl-platforms">
+            <span class="tl-tag pill pill-gold">Congresso EUA</span>
+            <span class="tl-tag pill pill-blue">86 documentos</span>
+          </div>
+        </div>
+
+        <div class="tl-item critical">
+          <div class="tl-dot"></div>
+          <div class="tl-date">7–17 Ago/2024</div>
+          <div class="tl-title">Escalada Final: Ameaça de Prisão, Contas Bloqueadas, Saída do X</div>
+          <div class="tl-body">7/ago: Moraes ordena bloqueio de contas em 2 horas, incluindo senador Marcos do Val. 13/ago: novas ordens + quebra de sigilo telemático. 17/ago: Moraes ameaça representante legal de prisão → X fecha escritório no Brasil. 18/ago: Moraes bloqueia contas bancárias e bens do X.</div>
+          <div class="tl-platforms">
+            <span class="tl-tag pill pill-red">X bloqueado</span>
+            <span class="tl-tag pill pill-red">Prisão ameaçada</span>
+            <span class="tl-tag pill pill-amber">Ativos confiscados</span>
+          </div>
+        </div>
+
+        <div class="tl-item critical">
+          <div class="tl-dot"></div>
+          <div class="tl-date">30 Ago / 31 Ago/2024</div>
+          <div class="tl-title">X bloqueado no Brasil · @AlexandreFiles criado</div>
+          <div class="tl-body">30/ago: Moraes suspende o X em todo o Brasil — 20 milhões de usuários. Determina remoção dos apps da Apple Store e Google Play. Proíbe VPN com multa de R$50k. 31/ago: Musk cria @AlexandreFiles e começa a publicar ordens sigilosas. "Justiça secreta não é justiça."</div>
+          <div class="tl-platforms">
+            <span class="tl-tag pill pill-red">X: BLOQUEADO 39 DIAS</span>
+            <span class="tl-tag pill pill-gold">@AlexandreFiles: nasce</span>
+          </div>
+        </div>
+
+        <div class="tl-item high">
+          <div class="tl-dot"></div>
+          <div class="tl-date">1–3 Set/2024</div>
+          <div class="tl-title">@AlexandreFiles publica documentos sigilosos</div>
+          <div class="tl-body">X publica íntegra de decisão de 18/ago, ordens vs. senador Marcos do Val, documentos de vigilância telemática de Allan dos Santos, Oswaldo Eustáquio e filha menor de idade, quebra de sigilo de Sergio Fischer, Ed Raposo, Paola da Silva Daniel.</div>
+          <div class="tl-platforms">
+            <span class="tl-tag pill pill-gold">Documentos primários</span>
+            <span class="tl-tag pill pill-blue">Violações identificadas</span>
+          </div>
+        </div>
+
+        <div class="tl-item medium">
+          <div class="tl-dot"></div>
+          <div class="tl-date">8 Out/2024</div>
+          <div class="tl-title">X retorna ao Brasil após 39 dias bloqueado</div>
+          <div class="tl-body">X retorna após indicar representante legal, pagar parte das multas e cumprir ordens pendentes. O retorno implicou compliance com o mesmo sistema que havia resistido — mas a documentação publicada permanece acessível.</div>
+          <div class="tl-platforms">
+            <span class="tl-tag pill pill-green">X retornou</span>
+            <span class="tl-tag pill pill-amber">Compliance parcial</span>
+          </div>
+        </div>
+
+        <div class="tl-item high">
+          <div class="tl-dot"></div>
+          <div class="tl-date">Fev/2025</div>
+          <div class="tl-title">Rumble bloqueada definitivamente · Processo na Flórida</div>
+          <div class="tl-body">Moraes bloqueia Rumble após recusa de cumprir ordens vs. Allan dos Santos. Rumble e Trump Media processam Moraes pessoalmente em tribunal federal na Flórida por censura. Processo cita "ordens da mordaça" e pede "danos compensatórios".</div>
+          <div class="tl-platforms">
+            <span class="tl-tag pill pill-red">Rumble: BLOQUEADA</span>
+            <span class="tl-tag pill pill-purple">Processo EUA vs. Moraes</span>
+          </div>
+        </div>
+
+        <div class="tl-item high">
+          <div class="tl-dot"></div>
+          <div class="tl-date">Jul/2025</div>
+          <div class="tl-title">Nova ordem vs. Rumble — 2 dias após carta de Trump a Lula</div>
+          <div class="tl-body">Moraes emite nova ordem de bloqueio contra conta de Rodrigo Constantino no Rumble — cidadão americano — 2 dias após Trump enviar carta formal a Lula citando "centenas de ordens" de censura. Rumble aciona novamente a Justiça da Flórida.</div>
+          <div class="tl-platforms">
+            <span class="tl-tag pill pill-red">Nova ordem</span>
+            <span class="tl-tag pill pill-gold">Crise diplomática EUA-Brasil</span>
+          </div>
+        </div>
+
+        <div class="tl-item critical">
+          <div class="tl-dot"></div>
+          <div class="tl-date">Ago/2025 e Abr/2026</div>
+          <div class="tl-title">Dep. Estado EUA + 3º Relatório do Congresso — Véspera das Eleições</div>
+          <div class="tl-body">Ago/2025: Dep. Estado dos EUA nomeia Moraes em relatório anual de direitos humanos — "ordenou suspensão de mais de 100 contas, suprimindo desproporcionalmente apoiadores de Bolsonaro". Abr/2026: 3º relatório do Congresso alerta que censura de Moraes pode interferir nas eleições de outubro/2026.</div>
+          <div class="tl-platforms">
+            <span class="tl-tag pill pill-gold">Dep. State EUA</span>
+            <span class="tl-tag pill pill-blue">3º Relatório Congresso</span>
+            <span class="tl-tag pill pill-red">Eleições 2026: risco</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     TAB 4 — @ALEXANDREFILES
+═══════════════════════════════════════════════════ -->
+<div id="documentos" class="panel">
+
+  <div class="section-label">@AlexandreFiles · Corpus Documental · Publicado a partir de 31/ago/2024</div>
+
+  <div class="callout callout-red">
+    <div class="callout-title">Sobre o @AlexandreFiles</div>
+    <div class="callout-body">
+      Conta criada pela própria plataforma X em 31/agosto/2024 — dia seguinte ao bloqueio no Brasil. Finalidade declarada: "revelar as ordens ilegais emitidas ao X por Alexandre de Moraes". Em uma hora, atingiu 35–41 mil seguidores. Publica em português e inglês. Todos os documentos eram mantidos sob sigilo judicial até sua publicação. É a única fonte primária pública de ordens individuais de censura emitidas por Moraes a plataformas digitais.
+    </div>
+  </div>
+
+  <div class="section-title">Documentos Publicados — Conteúdo Mapeado</div>
+
+  <div class="grid-2">
+    <div class="card card-red">
+      <div class="card-tag tag-red">Documento 01 · 31/ago/2024</div>
+      <div class="card-title">Ordem de 8 de agosto: Bloqueio em 2 horas + Vigilância Telemática</div>
+      <div class="card-body">
+        <p>Primeira ordem publicada. Determina bloqueio de contas — incluindo de senador em exercício — no prazo de <strong class="hl-red">duas horas</strong>, sem referência a uma única postagem ilegal de nenhuma das contas. Exige afastamento de sigilo de registros, conexões e dados telemáticos dos perfis no período de 01/abril a 17/julho/2024.</p>
+        <p><strong>Contas na ordem de vigilância:</strong> Senador Marcos do Val, Ed Raposo, Paola da Silva Daniel (esposa de Daniel Silveira), Claudio Rogasane da Luz, Josias Pereira Lima, Sergio Fischer.</p>
+      </div>
+      <div class="violation-evidence">
+        VIOLAÇÃO DOCUMENTADA → Art. 5º, LX CF/88: decisões judiciais devem ser públicas · Art. 5º, IV e IX: liberdade de expressão · Art. 220, §2º: proibição de censura · Art. 19, §1º Marco Civil: especificidade de conteúdo ilegal
+      </div>
+    </div>
+
+    <div class="card card-amber">
+      <div class="card-tag tag-amber">Documento 02 · 1/set/2024</div>
+      <div class="card-title">Decisão de 18 de agosto: Justificativa das Ordens Ilegais</div>
+      <div class="card-body">
+        <p>Íntegra da decisão de 18/ago publicada pelo X. Moraes justifica as ordens sigilosas e articula sua teoria jurídica: qualquer pessoa que busque expô-lo ou expor seus aliados <em>"de qualquer maneira"</em> deve ser silenciada em nome da "democracia". Na mesma decisão: bloqueio de contas bancárias, veículos, embarcações e aeronaves do X no Brasil.</p>
+        <div class="quote-block">
+          <div class="quote-text">"A conduta ilícita da TWITTER INTERNATIONAL UNLIMITED COMPANY [...] pretende, claramente, continuar a incentivar as postagens de discursos extremistas, de ódio e antidemocráticos [...] com real perigo, inclusive, de influenciar negativamente o eleitorado em 2024."</div>
+          <div class="quote-source">Moraes, decisão de 18/ago/2024 — publicada pelo @AlexandreFiles</div>
+        </div>
+        <p>Nota: a própria motivação revela o objetivo eleitoral das ordens.</p>
+      </div>
+    </div>
+
+    <div class="card card-blue">
+      <div class="card-tag tag-blue">Documento 03 · 2/set/2024</div>
+      <div class="card-title">Caso Marcos do Val: Crimes Inexistentes</div>
+      <div class="card-body">
+        <p>Moraes aponta como "crimes" do senador Marcos do Val (Podemos-ES):</p>
+        <ul style="margin:10px 0 10px 20px;">
+          <li>Publicar texto denunciando o Delegado Federal Fábio Alvarez Shor</li>
+          <li>Repostar vídeo de menor de idade (filha do jornalista Oswaldo Eustáquio) relatando abuso policial</li>
+          <li>Postagem que constrangeu Moraes e a PF — mesmo sem alegar que era falsa</li>
+          <li>Dizer que "investigaria" a PF que executa ordens de Moraes</li>
+        </ul>
+        <p>Resultado: bloqueio de <strong>todas as redes sociais</strong> do senador, proibição de usar qualquer rede "por intermédio de terceiros", apreensão de passaportes (incluindo diplomático), ameaça de prisão por R$50 mil.</p>
+      </div>
+      <div class="violation-evidence">
+        VIOLAÇÃO DOCUMENTADA → Art. 53 CF/88: imunidade parlamentar · Art. 5º CF/88: devido processo legal · Separação dos poderes
+      </div>
+    </div>
+
+    <div class="card card-purple">
+      <div class="card-tag tag-purple">Documento 04 · 2–3/set/2024</div>
+      <div class="card-title">Menor de 16 anos como alvo · Família de jornalista vigiada</div>
+      <div class="card-body">
+        <p>O X documenta que Moraes classificou como crime o fato de uma menor de idade (filha do jornalista Oswaldo Eustáquio) ter publicado um vídeo relatando abuso policial durante busca e apreensão na casa da família. O senador Marcos do Val foi perseguido por ter apenas repostado o vídeo da menor.</p>
+        <p>Além disso: quebra de sigilo telemático de Mariana Eustáquio e Sandra Eustáquio (filha e esposa do jornalista), ambas sem qualquer investigação criminal própria.</p>
+      </div>
+      <div class="violation-evidence">
+        VIOLAÇÃO DOCUMENTADA → ECA: proteção especial a menores · Art. 5º, X: privacidade familiar · Art. 5º, LVI: provas obtidas por meios ilícitos
+      </div>
+    </div>
+
+    <div class="card card-gold grid-span-all">
+      <div class="card-tag tag-gold">Documento 05 · 31/ago/2024</div>
+      <div class="card-title">Ameaça de Prisão da Representante Legal Rachel de Oliveira</div>
+      <div class="card-body">
+        <p>Moraes ordena a prisão de Rachel de Oliveira Villa Nova Conceição — representante legal do X no Brasil — "por desobediência à determinação judicial". Após sua renúncia do cargo para se proteger, Moraes congela <strong>todas as suas contas bancárias pessoais</strong>.</p>
+        <div class="quote-block">
+          <div class="quote-text">"Quando tentamos nos defender no tribunal, o Ministro ameaçou prender nossa representante legal no Brasil. Mesmo após sua renúncia, ele congelou todas as suas contas bancárias."</div>
+          <div class="quote-source">X Global Government Affairs · @GlobalAffairs · ago/2024</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     TAB 5 — VIOLAÇÕES CONSTITUCIONAIS
+═══════════════════════════════════════════════════ -->
+<div id="violacoes" class="panel">
+
+  <div class="section-label">Violações Constitucionais e Legais · Base Jurídica Documentada</div>
+
+  <div class="callout callout-red">
+    <div class="callout-title">Estrutura da Análise</div>
+    <div class="callout-body">As violações abaixo são derivadas diretamente dos documentos publicados pelo @AlexandreFiles e pelos relatórios do Congresso dos EUA. Cada violação cita o artigo específico e a evidência documental correspondente.</div>
+  </div>
+
+  <div class="grid-3">
+    <div class="violation">
+      <div class="violation-art">ART. 5º, LX — CF/88</div>
+      <div class="violation-title">Sigilo Sistemático</div>
+      <div class="violation-body">Moraes emitiu centenas de ordens de bloqueio em segredo absoluto — proibindo inclusive as plataformas de notificar os próprios usuários afetados.</div>
+      <div class="violation-evidence">EVIDÊNCIA → @AlexandreFiles: "A ordem foi emitida em segredo, violando o Art. 5º, LX da CF/88".</div>
+    </div>
+
+    <div class="violation">
+      <div class="violation-art">ART. 5º, IV e IX — CF/88</div>
+      <div class="violation-title">Censura Prévia</div>
+      <div class="violation-body">Bloqueio de contas inteiras "sem referência a uma única postagem ilegal". Moraes aplica censura prévia sobre perfis inteiros.</div>
+      <div class="violation-evidence">EVIDÊNCIA → Decisão 8/ago/24: "X must block the following accounts without reference to a single illegal post".</div>
+    </div>
+
+    <div class="violation">
+      <div class="violation-art">ART. 220, §2º — CF/88</div>
+      <div class="violation-title">Proibição de Censura</div>
+      <div class="violation-body">A CF/88 proíbe expressamente toda forma de censura. O sistema de ordens sigilosas configura censura prévia estrutural intermediada.</div>
+      <div class="violation-evidence">EVIDÊNCIA → Glenn Greenwald: "pessoas não receberam aviso prévio nem explicações dos motivos".</div>
+    </div>
+
+    <div class="violation">
+      <div class="violation-art">ART. 53 — CF/88</div>
+      <div class="violation-title">Imunidade Parlamentar</div>
+      <div class="violation-body">O senador Marcos do Val teve todas as contas bloqueadas por posts sobre sua atividade parlamentar fiscalizatória.</div>
+      <div class="violation-evidence">EVIDÊNCIA → OAB questionou a multa de R$50k por uso de VPN como violação do contraditório.</div>
+    </div>
+
+    <div class="violation">
+      <div class="violation-art">SISTEMA ACUSATÓRIO</div>
+      <div class="violation-title">Juiz e Acusador</div>
+      <div class="violation-body">Moraes criou o INQ 4.781 por iniciativa própria, conduz as investigações como "vítima" e julga os mesmos casos.</div>
+      <div class="violation-evidence">EVIDÊNCIA → INQ 4.781: inquérito sem prazo definido e sem participação do MP na acusação.</div>
+    </div>
+
+    <div class="violation">
+      <div class="violation-art">JURISDIÇÃO EXTERNA</div>
+      <div class="violation-title">Bloqueio Global EUA</div>
+      <div class="violation-body">Moraes determinou bloqueio de contas de residentes nos EUA em todo o mundo — ultrapassando a jurisdição brasileira sem MLAT.</div>
+      <div class="violation-evidence">EVIDÊNCIA → DOJ ao STF: "a ordem não foi entregue através de qualquer mecanismo legal de tratado".</div>
+    </div>
+
+    <div class="violation">
+      <div class="violation-art">ART. 5º, XIII — CF/88</div>
+      <div class="violation-title">Livre Exercício Profissional</div>
+      <div class="violation-body">A suspensão de canais de jornalistas e comunicadores impede o exercício da profissão e o acesso ao sustento.</div>
+      <div class="violation-evidence">EVIDÊNCIA → Bloqueio de Monark em 24 plataformas, incluindo Spotify e YouTube.</div>
+    </div>
+
+    <div class="violation">
+      <div class="violation-art">ART. 5º, LIV e LV</div>
+      <div class="violation-title">Devido Processo Legal</div>
+      <div class="violation-body">O cerceamento à ampla defesa mediante a negativa de acesso aos autos e aos fundamentos das ordens de bloqueio.</div>
+      <div class="violation-evidence">EVIDÊNCIA → Defesa de parlamentares alega "ausência de acesso ao conteúdo integral das decisões".</div>
+    </div>
+
+    <div class="violation">
+      <div class="violation-art">ART. 5º, LIII</div>
+      <div class="violation-title">Princípio do Juiz Natural</div>
+      <div class="violation-body">A designação direta de relator por conveniência, sem o sorteio eletrônico obrigatório imposto pela regimentalidade.</div>
+      <div class="violation-evidence">EVIDÊNCIA → Instalação do Inquérito das Fake News por ofício do então presidente do STF.</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     TAB 6 — RELATÓRIOS EUA
+═══════════════════════════════════════════════════ -->
+<div id="relatorios" class="panel">
+
+  <div class="section-label">Documentação Internacional · 3 Relatórios do Congresso dos EUA · 2024–2026</div>
+
+  <div class="callout callout-gold">
+    <div class="callout-title">Importância Estratégica dos Relatórios Americanos</div>
+    <div class="callout-body">
+      Os relatórios do Comitê Judiciário da Câmara dos EUA são a única fonte externa com poder coercitivo de intimar plataformas a entregar documentos sigilosos brasileiros. As 86 ordens de Moraes (relatório de 2024) foram obtidas por intimação judicial americana ao X — mecanismo que a Justiça brasileira nunca tornou público. São evidência cross-jurisdicional que escapa ao controle do STF.
+    </div>
+  </div>
+
+  <div class="grid-3">
+    <div class="report-card">
+      <div class="report-n">Relatório I · Abr/2024</div>
+      <div class="report-title">"The Attack on Free Speech Abroad"</div>
+      <div class="report-meta">Comitê Judiciário da Câmara dos EUA · Subcomitê sobre Uso do Governo Federal como Arma</div>
+      <div class="report-body">
+        <p>Primeiro relatório dedicado ao Brasil. Contém 86 documentos sigilosos obtidos por intimação judicial ao X — abrangendo Facebook, Instagram, TikTok, YouTube e Kwai.</p>
+      </div>
+      <div class="report-annex">
+        <div class="report-annex-title">Conteúdo dos 86 Documentos</div>
+        <ul class="annex-list">
+          <li>Bloqueio de perfis sem base legal</li>
+          <li>Entrega de dados telemáticos</li>
+          <li>10 ordens de reativação</li>
+          <li>Ordens do TSE: Eleições 2022</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="report-card">
+      <div class="report-n">Relatório II · Set/2024</div>
+      <div class="report-title">2º Relatório sobre o Brasil</div>
+      <div class="report-meta">Comitê Judiciário da Câmara dos EUA · Contexto do bloqueio do X no Brasil</div>
+      <div class="report-body">
+        <p>Publicado após a suspensão do X. Contém 85 anexos demonstrando ordens a múltiplas plataformas, inclusive de áudio (Spotify).</p>
+      </div>
+      <div class="report-annex">
+        <div class="report-annex-title">85 Anexos — Amostra</div>
+        <ul class="annex-list">
+          <li>4 ordens ao Spotify (Censura Monark)</li>
+          <li>Bloqueio em 24 plataformas distintas</li>
+          <li>Quebra de sigilos de jornalistas</li>
+          <li>Confisco de R$18,35M do X/Starlink</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="report-card">
+      <div class="report-n">Relatório III · Abr/2026 · MAIS RECENTE</div>
+      <div class="report-title">"Censura Global e Lawfare"</div>
+      <div class="report-meta">Comitê Judiciário da Câmara dos EUA · Publicado em 1/abr/2026</div>
+      <div class="report-body">
+        <p>Relatório mais abrangente com documentos de set/2025 a fev/2026. Alerta sobre interferência nas eleições presidenciais brasileiras de 2026.</p>
+      </div>
+      <div class="report-annex">
+        <div class="report-annex-title">Elementos Documentados</div>
+        <ul class="annex-list">
+          <li>Ordens vs. Eduardo Bolsonaro</li>
+          <li>Proibição de notificar investigados</li>
+          <li>"Censura global" e extraterritorial</li>
+          <li>Ameaça às eleições de out/2026</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout callout-amber">
+    <div class="callout-title">Posição do STF sobre os Relatórios</div>
+    <div class="callout-body">
+      O presidente do STF, ministro Edson Fachin, respondeu ao 3º relatório afirmando que o documento "traz caracterizações distorcidas da natureza e do alcance de decisões específicas do Supremo Tribunal Federal". Prometeu esclarecimentos "pelos canais diplomáticos, no nível adequado". Não contestou especificamente nenhum dos 85+ documentos anexados.
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     TAB 7 — PADRÕES SISTÊMICOS
+═══════════════════════════════════════════════════ -->
+<div id="padroes" class="panel">
+
+  <div class="section-label">Padrões Sistêmicos · Conexão com o Lawfare-Timeline · P1–P8</div>
+
+  <div class="callout callout-red">
+    <div class="callout-title">Convergência com os Padrões Catalogados no Lawfare-Timeline</div>
+    <div class="callout-body">
+      A censura digital sistêmica documentada aqui não é um fenômeno isolado — é a expressão digital dos mesmos padrões transversais identificados em todas as grandes operações investigadas no lawfare-timeline. Os documentos do @AlexandreFiles e dos relatórios do Congresso dos EUA fornecem evidência primária direta para ao menos 5 dos 8 padrões catalogados.
+    </div>
+  </div>
+
+  <div class="grid-3">
+
+    <div class="pattern">
+      <div class="pattern-n">P1</div>
+      <div class="pattern-title">Anulação via Defecto Processual</div>
+      <div class="pattern-body">Nulidades e recursos processuais como instrumento de blindagem. O uso de vícios técnicos para invalidar provas e soltar réus antes do julgamento final.</div>
+      <div class="pattern-evidence">→ Evidência: Anulações de condenações na Lava Jato.</div>
+    </div>
+
+    <div class="pattern">
+      <div class="pattern-n">P2</div>
+      <div class="pattern-title">Investigadores se Tornam Alvos</div>
+      <div class="pattern-body">O senador Marcos do Val investigado por denunciar o delegado Shor. Elon Musk incluído em inquérito por expor as ordens de Moraes. O informante vira o perseguido.</div>
+      <div class="pattern-evidence">→ Evidência: @AlexandreFiles docs · Inquérito criminal vs. Musk.</div>
+    </div>
+
+    <div class="pattern">
+      <div class="pattern-n">P3</div>
+      <div class="pattern-title">STF como Chokepoint Terminal</div>
+      <div class="pattern-body">Casos que chegam ao STF param antes dos beneficiários finais. O sigilo judicial como mecanismo de proteção das cúpulas de poder.</div>
+      <div class="pattern-evidence">→ Evidência: INQ 4.781 sem prazo · Moraes como relator vitimista.</div>
+    </div>
+
+    <div class="pattern">
+      <div class="pattern-n">P4</div>
+      <div class="pattern-title">Weaponização da Mídia</div>
+      <div class="pattern-body">A censura digital serve para controlar o ecossistema informacional antes de eleições. Bloqueio do X ocorreu 40 dias antes das eleições de 2024.</div>
+      <div class="pattern-evidence">→ Evidência: Decisão de Moraes: "real perigo de influenciar o eleitorado".</div>
+    </div>
+
+    <div class="pattern">
+      <div class="pattern-n">P5</div>
+      <div class="pattern-title">Uso de Fundos Públicos</div>
+      <div class="pattern-body">Utilização de estruturas estatais e recursos tributários como artérias do esquema de controle e manutenção do poder institucional.</div>
+      <div class="pattern-evidence">→ Evidência: Operação Hydra (fintechs hub) e outros.</div>
+    </div>
+
+    <div class="pattern">
+      <div class="pattern-n">P6</div>
+      <div class="pattern-title">Uso Estratégico do Tempo</div>
+      <div class="pattern-body">Investigações retardadas até que crimes prescrevam. Inquéritos sem fim mantêm investigados em estado permanente de incerteza jurídica.</div>
+      <div class="pattern-evidence">→ Evidência: INQ 4.781: "ausência de prazo" para conclusão.</div>
+    </div>
+
+    <div class="pattern">
+      <div class="pattern-n">P7</div>
+      <div class="pattern-title">Captura Transgeracional</div>
+      <div class="pattern-body">Fraudes sistêmicas que afetam seguridade e previdência, garantindo a extração de recursos de longo prazo da base da sociedade.</div>
+      <div class="pattern-evidence">→ Evidência: Casos documentados no Compliance Zero.</div>
+    </div>
+
+    <div class="pattern">
+      <div class="pattern-n">P8</div>
+      <div class="pattern-title">Captura Extraterritorial</div>
+      <div class="pattern-body">Bloqueio global de contas de cidadãos americanos residindo nos EUA — sem passar por tratados internacionais legalmente exigidos.</div>
+      <div class="pattern-evidence">→ Evidência: Caso Rodrigo Constantino · DOJ ao STF.</div>
+    </div>
+
+    <div class="pattern">
+      <div class="pattern-n">P3+</div>
+      <div class="pattern-title">Sigilo como Arma Estratégica</div>
+      <div class="pattern-body">O sigilo não é exceção, é o design. Impede a contestação judicial e fiscalização parlamentar, garantindo o silêncio das plataformas.</div>
+      <div class="pattern-evidence">→ Evidência: Relatório EUA 2026: proibição de notificar investigados.</div>
+    </div>
+
+  </div>
+
+  <div class="section-title">Hipótese de Trabalho: Infraestrutura Comum</div>
+
+  <div class="callout callout-blue">
+    <div class="callout-title">Conexão com o Thread Transversal do Lawfare-Timeline</div>
+    <div class="callout-body">
+      <p>A censura digital sistêmica compartilha com as operações financeiras documentadas no lawfare-timeline uma característica estrutural fundamental: o <strong class="hl-blue">STF como chokepoint terminal</strong>. Assim como as investigações de lavagem de dinheiro param antes de chegar aos beneficiários finais quando chegam ao STF, as contestações ao regime de censura digital também param no STF — onde o próprio Moraes é ministro e os colegas "estão impossibilitados de ou não querem enfrentá-lo" (nas palavras do próprio X).</p>
+      <p style="margin-top:10px;">Hipótese de trabalho: o mesmo design institucional que protege os beneficiários finais dos esquemas financeiros protege os beneficiários políticos do regime de censura. A infraestrutura não é a mesma, mas a <strong class="hl-blue">lógica é idêntica</strong>.</p>
+    </div>
+  </div>
+
+  <div class="callout callout-amber" style="margin-top:16px;">
+    <div class="callout-title">Lacuna Investigativa Identificada</div>
+    <div class="callout-body">
+      O corpus documental do @AlexandreFiles e dos relatórios americanos cobre o período <strong>2021–2026</strong> e as plataformas <strong>X e Rumble</strong> — as únicas que resistiram. O que aconteceu com as centenas de ordens cumpridas silenciosamente por Meta, Google, TikTok, Telegram e Spotify no mesmo período? Esses documentos não existem publicamente. A única forma de obtê-los seria por intimação judicial em jurisdição americana — o mesmo mecanismo que o Congresso dos EUA usou para obter os 86 documentos do Relatório I. Essa é a principal lacuna investigativa deste dossiê.
+    </div>
+  </div>
+
+  <div style="margin-top:32px;padding:20px;background:var(--surface2);border:1px solid var(--border);border-radius:4px;">
+    <div class="section-label" style="margin-bottom:8px;">Licença e Repositório</div>
+    <div style="font-size:13px;color:var(--text);">
+      <strong class="hl-gold">Este dossiê é CC0 1.0 Universal — Domínio Público Total.</strong> Nenhum direito reservado. Fork livre, redistribuição sem restrições.<br>
+      Parte do projeto <strong><a href="https://lawfare-timeline.vercel.app" style="color:var(--blue-bright);">lawfare-timeline.vercel.app</a></strong> · Documentação de padrões sistêmicos de captura institucional no Brasil.
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div>Operação Silêncio Digital · Dossiê Investigativo · CC0 1.0 Universal · Domínio Público</div>
+  <div>Fontes: @AlexandreFiles · House Judiciary Committee (US) · Gazeta do Povo · Poder360 · Agência Brasil · STF</div>
+  <div>lawfare-timeline.vercel.app · Atualizado: abr/2026</div>
+</div>
+
+<script>
+// SCROLL SPY LOGIC
+const sections = document.querySelectorAll('.panel');
+const tabs = document.querySelectorAll('.tab');
+
+const observerOptions = {
+  root: null,
+  rootMargin: '-20% 0px -70% 0px',
+  threshold: 0
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      tabs.forEach(tab => {
+        tab.classList.remove('active');
+        if (tab.getAttribute('href') === '#' + entry.target.id) {
+          tab.classList.add('active');
+        }
+      });
+    }
+  });
+}, observerOptions);
+
+sections.forEach(section => observer.observe(section));
+
+// SMOOTH SCROLL FOR ANCHORS
+tabs.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const targetId = link.getAttribute('href');
+    document.querySelector(targetId).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+</script>
+</body>
+</html>

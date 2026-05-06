@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dossiê Jurídico — Nulidades do 8 de Janeiro</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,500&family=JetBrains+Mono:wght@300;400;500&family=Barlow+Condensed:wght@400;600;700;800&display=swap');
+
+:root {
+  --bg:       #f8f5ef;
+  --bg2:      #f0ece2;
+  --bg3:      #e6e0d2;
+  --bg4:      #d8d0be;
+  --ink:      #1a1710;
+  --ink2:     #3a3628;
+  --ink3:     #6a6450;
+  --ink4:     #9a9278;
+  --red:      #7a1010;
+  --red2:     #a01818;
+  --amber:    #6a4008;
+  --amber2:   #986010;
+  --green:    #104820;
+  --green2:   #186830;
+  --blue:     #0a1e50;
+  --blue2:    #142e78;
+  --rule:     rgba(26,23,16,.12);
+  --rule2:    rgba(26,23,16,.22);
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body:    'EB Garamond', Georgia, serif;
+  --font-mono:    'JetBrains Mono', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg2);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+/* PAPER */
+.page {
+  max-width: 920px; margin: 0 auto;
+  background: var(--bg);
+  box-shadow: 0 2px 40px rgba(0,0,0,.12);
+  padding: 64px 72px 100px;
+  position: relative;
+}
+
+@media(max-width:700px){ .page { padding: 32px 24px 60px; } }
+
+/* COVER */
+.cover {
+  border-top: 6px double var(--ink);
+  border-bottom: 6px double var(--ink);
+  padding: 40px 0;
+  margin-bottom: 56px;
+  text-align: center;
+}
+.cover-series {
+  font-family: var(--font-mono);
+  font-size: 9px; letter-spacing: .3em;
+  text-transform: uppercase; color: var(--ink3);
+  margin-bottom: 20px;
+}
+.cover-title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 6vw, 64px);
+  font-weight: 800; line-height: 1;
+  letter-spacing: -.01em; color: var(--ink);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.cover-title span { color: var(--red); }
+.cover-subtitle {
+  font-family: var(--font-body);
+  font-size: 17px; font-style: italic;
+  color: var(--ink3); margin-bottom: 28px;
+  line-height: 1.5;
+}
+.cover-rule {
+  width: 60px; height: 1px;
+  background: var(--ink4); margin: 20px auto;
+}
+.cover-meta {
+  display: flex; justify-content: center;
+  flex-wrap: wrap; gap: 24px;
+  font-family: var(--font-mono);
+  font-size: 10px; letter-spacing: .15em;
+  text-transform: uppercase; color: var(--ink3);
+}
+
+/* AVISO */
+.aviso {
+  background: var(--bg3);
+  border: 1px solid var(--rule2);
+  border-left: 4px solid var(--amber2);
+  padding: 14px 18px; margin-bottom: 40px;
+  font-size: 13px; color: var(--ink3);
+  font-style: italic; line-height: 1.6;
+}
+.aviso strong { color: var(--amber); font-style: normal; }
+
+/* SECTION */
+.section { margin-bottom: 48px; }
+
+.section-header {
+  display: flex; align-items: baseline; gap: 16px;
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 8px; margin-bottom: 24px;
+}
+.section-num {
+  font-family: var(--font-display);
+  font-size: 13px; font-weight: 700;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: var(--ink3);
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 700; text-transform: uppercase;
+  letter-spacing: .02em; color: var(--ink);
+  line-height: 1.1;
+}
+.section-title span { color: var(--red); }
+
+/* BODY */
+p { margin-bottom: 14px; text-align: justify; }
+p:last-child { margin-bottom: 0; }
+
+.lead {
+  font-size: 18px; font-style: italic;
+  color: var(--ink2); margin-bottom: 24px;
+  line-height: 1.65;
+}
+
+/* NULIDADE CARDS */
+.nulidade {
+  border: 1px solid var(--rule2);
+  margin-bottom: 20px; background: var(--bg);
+}
+.nulidade-header {
+  background: var(--ink); color: var(--bg);
+  padding: 12px 18px;
+  display: flex; justify-content: space-between;
+  align-items: center; gap: 12px; flex-wrap: wrap;
+}
+.nulidade-num {
+  font-family: var(--font-display);
+  font-size: 11px; font-weight: 700;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: rgba(248,245,239,.5);
+}
+.nulidade-title {
+  font-family: var(--font-display);
+  font-size: 17px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .02em;
+  color: var(--bg); flex: 1;
+}
+.nulidade-badge {
+  font-family: var(--font-mono);
+  font-size: 9px; letter-spacing: .1em;
+  text-transform: uppercase; padding: 3px 8px;
+  border: 1px solid rgba(248,245,239,.3);
+  color: rgba(248,245,239,.7); white-space: nowrap;
+}
+.nulidade-body { padding: 16px 18px; }
+.nulidade-body .fact {
+  font-size: 14px; color: var(--ink2);
+  margin-bottom: 12px; line-height: 1.65;
+}
+.nulidade-body .fact strong { color: var(--ink); }
+
+.norm-row {
+  display: flex; gap: 12px; flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.norm-tag {
+  font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: .08em; padding: 3px 8px;
+  background: var(--bg3); border: 1px solid var(--rule2);
+  color: var(--ink3); white-space: nowrap;
+}
+.norm-tag.violated {
+  background: rgba(122,16,16,.07);
+  border-color: rgba(122,16,16,.3);
+  color: var(--red);
+}
+
+.argument {
+  background: var(--bg2); border: 1px solid var(--rule);
+  border-left: 3px solid var(--rule2);
+  padding: 10px 14px; margin-top: 12px;
+  font-size: 13px; color: var(--ink3); line-height: 1.6;
+}
+.argument strong { color: var(--ink2); }
+.argument.strong-arg { border-left-color: var(--red); }
+.argument.medium-arg { border-left-color: var(--amber2); }
+.argument.weak-arg   { border-left-color: var(--green2); }
+
+/* PRECEDENTE */
+.precedente {
+  border: 1px solid var(--rule2); margin-bottom: 14px;
+  background: var(--bg);
+}
+.prec-header {
+  background: var(--bg3); padding: 10px 16px;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 8px;
+}
+.prec-case {
+  font-family: var(--font-mono); font-size: 11px;
+  font-weight: 500; color: var(--ink2);
+}
+.prec-tribunal {
+  font-family: var(--font-mono); font-size: 9px;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--ink4);
+}
+.prec-body {
+  padding: 12px 16px; font-size: 13px;
+  color: var(--ink2); line-height: 1.65;
+}
+.prec-body strong { color: var(--ink); }
+.prec-relevancia {
+  border-top: 1px solid var(--rule); padding-top: 10px;
+  margin-top: 10px; font-size: 12px;
+  color: var(--ink3); font-style: italic;
+}
+
+/* COMPARAÇÃO */
+.compare-box {
+  border: 1px solid var(--rule2); margin-bottom: 20px;
+}
+.compare-header {
+  background: var(--bg3); padding: 10px 16px;
+  font-family: var(--font-display); font-size: 13px;
+  font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--ink2);
+}
+.compare-cols {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+@media(max-width:600px){ .compare-cols { grid-template-columns: 1fr; } }
+.compare-col {
+  padding: 14px 16px;
+  border-right: 1px solid var(--rule);
+}
+.compare-col:last-child { border-right: none; }
+.compare-col-title {
+  font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: .15em; text-transform: uppercase;
+  color: var(--ink3); margin-bottom: 8px;
+}
+.compare-col ul { padding-left: 16px; }
+.compare-col li {
+  font-size: 13px; color: var(--ink2);
+  margin-bottom: 4px; line-height: 1.5;
+}
+.compare-col li strong { color: var(--ink); }
+
+/* QUADRO NORMATIVO */
+.norm-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 13px; }
+.norm-table th {
+  background: var(--ink2); color: var(--bg);
+  padding: 9px 12px; text-align: left;
+  font-family: var(--font-mono); font-size: 9px;
+  letter-spacing: .15em; text-transform: uppercase; font-weight: 400;
+}
+.norm-table td {
+  padding: 10px 12px; border-bottom: 1px solid var(--rule);
+  vertical-align: top; line-height: 1.5; color: var(--ink2);
+}
+.norm-table tr:last-child td { border-bottom: none; }
+.norm-table td:first-child {
+  font-family: var(--font-mono); font-size: 11px;
+  color: var(--red); white-space: nowrap; font-weight: 500;
+}
+.norm-table td:nth-child(2) { color: var(--ink); font-weight: 500; font-size: 13px; }
+.norm-table .violated td { background: rgba(122,16,16,.04); }
+
+/* PULL QUOTE */
+.pull {
+  border-left: 3px solid var(--red);
+  padding: 6px 0 6px 20px; margin: 24px 0;
+}
+.pull-text {
+  font-family: var(--font-body);
+  font-size: 17px; font-style: italic;
+  color: var(--ink2); line-height: 1.5;
+}
+.pull-src {
+  font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--ink4); margin-top: 8px;
+}
+
+/* CONCLUSÃO */
+.conclusao {
+  background: var(--ink); color: var(--bg);
+  padding: 32px 36px; margin-bottom: 40px;
+}
+.conclusao-label {
+  font-family: var(--font-mono); font-size: 9px;
+  letter-spacing: .25em; text-transform: uppercase;
+  color: rgba(248,245,239,.4); margin-bottom: 14px;
+}
+.conclusao-text {
+  font-family: var(--font-body);
+  font-size: 15px; line-height: 1.8;
+  color: var(--bg);
+}
+.conclusao-text strong { color: #ffdd88; }
+.conclusao-text em { font-style: italic; color: rgba(248,245,239,.7); }
+.conclusao-items {
+  margin-top: 20px; padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,.1);
+}
+.conclusao-item {
+  display: flex; gap: 12px; margin-bottom: 10px;
+  font-size: 13px; line-height: 1.5;
+}
+.conclusao-item-num {
+  font-family: var(--font-mono); font-size: 10px;
+  color: rgba(248,245,239,.3); flex-shrink: 0;
+  padding-top: 2px;
+}
+.conclusao-item-text { color: rgba(248,245,239,.8); }
+.conclusao-item-text strong { color: #ffdd88; }
+
+/* FOOTER */
+.footer {
+  border-top: 1px solid var(--rule2);
+  padding-top: 24px; margin-top: 60px;
+  display: flex; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+}
+.footer p {
+  font-family: var(--font-mono); font-size: 9px;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--ink4); line-height: 1.7;
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-series">Lawfare-Timeline · Série Jurídica · Documento 01 · CC0 1.0</div>
+  <div class="cover-title">DOSSIÊ JURÍDICO<br><span>NULIDADES</span> DO<br>8 DE JANEIRO</div>
+  <div class="cover-subtitle">
+    Análise técnica das violações constitucionais e processuais<br>
+    documentadas nos processos do 8 de janeiro de 2023
+  </div>
+  <div class="cover-rule"></div>
+  <div class="cover-meta">
+    <span>Abril 2026</span>
+    <span>Versão 1.0</span>
+    <span>Para uso por advogados, defensores e pesquisadores</span>
+    <span>CC0 · Reprodução livre</span>
+  </div>
+</div>
+
+<!-- AVISO -->
+<div class="aviso">
+  <strong>Aviso técnico:</strong> Este dossiê é uma análise jurídica fundamentada em documentos primários, jurisprudência e manifestações de especialistas citados publicamente. Não substitui consulta a advogado habilitado na OAB. Destinado a operadores do direito, pesquisadores e defensores atuando nos casos do 8 de janeiro.
+</div>
+
+<!-- SEÇÃO I — QUADRO NORMATIVO -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num">I</div>
+    <div class="section-title">Quadro <span>Normativo</span> Aplicável</div>
+  </div>
+
+  <p class="lead">As normas abaixo foram identificadas como sistematicamente violadas nos processos do 8 de janeiro, com base nos documentos da força-tarefa secreta e nos pareceres de especialistas.</p>
+
+  <table class="norm-table">
+    <thead>
+      <tr>
+        <th>Norma</th>
+        <th>Conteúdo</th>
+        <th>Violação Identificada</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="violated">
+        <td>CF/88 Art. 5º, LIV</td>
+        <td>Ninguém será privado da liberdade sem o devido processo legal</td>
+        <td>Detenção baseada em certidões informais não integrantes dos autos, sem contraditório</td>
+      </tr>
+      <tr class="violated">
+        <td>CF/88 Art. 5º, LV</td>
+        <td>Contraditório e ampla defesa, com os meios e recursos a ela inerentes</td>
+        <td>Certidões da AEED nunca compartilhadas com advogados de defesa</td>
+      </tr>
+      <tr class="violated">
+        <td>CF/88 Art. 5º, LVII</td>
+        <td>Presunção de inocência até trânsito em julgado</td>
+        <td>Detenção prolongada sem condenação; penas comparáveis a crimes violentos</td>
+      </tr>
+      <tr class="violated">
+        <td>CF/88 Art. 93, IX</td>
+        <td>Dever de fundamentação das decisões judiciais</td>
+        <td>Decisões de manutenção de prisão sem acesso aos fundamentos reais (certidões ocultas)</td>
+      </tr>
+      <tr class="violated">
+        <td>CF/88 Art. 37</td>
+        <td>Princípio da legalidade estrita da Administração Pública</td>
+        <td>AEED atuou como força policial investigativa sem mandato constitucional ou legal</td>
+      </tr>
+      <tr class="violated">
+        <td>CPP Art. 3º-A</td>
+        <td>O processo penal terá estrutura acusatória; vedados ao juiz iniciativa na fase investigatória e substituição do MP na atividade probatória</td>
+        <td>STF/AEED produziram provas e conduziram investigação paralela ao MP</td>
+      </tr>
+      <tr class="violated">
+        <td>CPP Arts. 158-A a 158-F</td>
+        <td>Cadeia de custódia da prova — coleta, preservação e rastreamento até apresentação em juízo</td>
+        <td>Screenshots entregues informalmente sem registro de apreensão, sem hash de integridade</td>
+      </tr>
+      <tr class="violated">
+        <td>CPP Art. 157</td>
+        <td>Inadmissibilidade das provas ilícitas (fruit of the poisonous tree)</td>
+        <td>Provas obtidas por infiltração sem mandado e sem cadeia de custódia contaminam processos derivados</td>
+      </tr>
+      <tr class="violated">
+        <td>CPP Art. 312</td>
+        <td>Requisitos cumulativos da prisão preventiva — materialidade, indícios de autoria, fundamento legal</td>
+        <td>Manutenção de prisão baseada em posts políticos, não em risco concreto</td>
+      </tr>
+      <tr class="violated">
+        <td>CPP Art. 316 §único</td>
+        <td>Revisão obrigatória da preventiva a cada 90 dias</td>
+        <td>Prazos ignorados; detenções prorrogadas por meses sem nova fundamentação</td>
+      </tr>
+      <tr>
+        <td>CP Art. 299</td>
+        <td>Falsidade ideológica — inserir declaração falsa em documento público</td>
+        <td>Tese aplicável aos relatórios retroativos conforme análise de Campanari e Dallagnol</td>
+      </tr>
+      <tr>
+        <td>Lei 13.869/2019</td>
+        <td>Abuso de autoridade</td>
+        <td>Decisões baseadas em provas informais sem base legal configuram abuso documentável</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SEÇÃO II — AS NULIDADES -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num">II</div>
+    <div class="section-title">As <span>Nulidades</span> Documentadas</div>
+  </div>
+
+  <p class="lead">Oito nulidades independentes, cada uma suficiente para contestar a legalidade das prisões e condenações. A presença simultânea de todas agrava a situação jurídica dos processos.</p>
+
+  <!-- NULIDADE 1 -->
+  <div class="nulidade">
+    <div class="nulidade-header">
+      <div class="nulidade-num">Nulidade 01</div>
+      <div class="nulidade-title">Órgão investigativo sem mandato constitucional</div>
+      <div class="nulidade-badge">Absoluta</div>
+    </div>
+    <div class="nulidade-body">
+      <div class="fact">
+        A AEED — Assessoria Especial de Combate à Desinformação do TSE — foi criada para monitorar conteúdo eleitoral durante o período eleitoral. <strong>As eleições de 2022 encerraram em 30 de outubro.</strong> A AEED continuou operando em janeiro de 2023, investigando crimes penais, acessando bancos de dados biométricos e produzindo certidões que determinavam quem ficava preso — funções exclusivas da Polícia Judiciária e do Ministério Público.
+      </div>
+      <div class="norm-row">
+        <span class="norm-tag violated">CF/88 Art. 37</span>
+        <span class="norm-tag violated">CPP Art. 3º-A</span>
+        <span class="norm-tag">Resolução TSE 23.714/2022</span>
+        <span class="norm-tag">Lei 12.850/2013</span>
+      </div>
+      <div class="argument strong-arg">
+        <strong>Argumento de nulidade:</strong> A Resolução TSE 23.714/2022 autorizava medidas excepcionais apenas até 30/10/2022. Qualquer ato praticado pela AEED após essa data carece de fundamento legal, configurando usurpação de funções investigativas constitucionalmente reservadas à Polícia e ao MP. Conforme o princípio da legalidade estrita (CF Art. 37), a Administração Pública só pode fazer o que a lei expressamente autoriza.
+      </div>
+      <div class="argument strong-arg">
+        <strong>Precedente aplicável — Operação Satiagraha (2011):</strong> O STJ anulou a investigação porque agentes da ABIN participaram clandestinamente de atos da Polícia Federal. O STF aplicou a doutrina dos "frutos da árvore envenenada". O papel da AEED nos inquéritos do 8 de janeiro é estruturalmente idêntico: órgão sem competência penal atuando em investigação criminal.
+      </div>
+    </div>
+  </div>
+
+  <!-- NULIDADE 2 -->
+  <div class="nulidade">
+    <div class="nulidade-header">
+      <div class="nulidade-num">Nulidade 02</div>
+      <div class="nulidade-title">Quebra da cadeia de custódia das provas</div>
+      <div class="nulidade-badge">Absoluta</div>
+    </div>
+    <div class="nulidade-body">
+      <div class="fact">
+        Screenshots e exportações de grupos privados foram entregues informalmente a funcionários do tribunal via WhatsApp e Signal, <strong>sem registro de apreensão, sem exame forense, sem hash de integridade.</strong> O delegado Fábio Shor — identificado nas mensagens como "PF de confiança" — assinou o relatório oficial que justificou a operação de agosto/2022 depois que as buscas já haviam ocorrido.
+      </div>
+      <div class="norm-row">
+        <span class="norm-tag violated">CPP Arts. 158-A a 158-F</span>
+        <span class="norm-tag violated">CPP Art. 157</span>
+        <span class="norm-tag">CF/88 Art. 5º, LV</span>
+      </div>
+      <div class="argument strong-arg">
+        <strong>Argumento de nulidade:</strong> Os arts. 158-A a 158-F do CPP exigem que qualquer vestígio digital seja coletado com registro formal, preservado com integridade e rastreado até apresentação em juízo. Material entregue informalmente via aplicativo de mensagens, sem esses procedimentos, é prova ilícita (CPP Art. 157) e contamina todas as provas derivadas — doutrina dos frutos da árvore envenenada.
+      </div>
+      <div class="argument strong-arg">
+        <strong>Precedente aplicável — Operação Castelo de Areia (STJ, 2011):</strong> A 6ª Turma do STJ rejeitou o caso após considerar ilegais as interceptações que partiram de denúncia anônima sem corroboração independente. A lição central: "razões ocultas" — decidir com base em informações conhecidas pelo juiz mas ausentes dos autos — invalida o processo. Exatamente o que ocorreu com as certidões da AEED.
+      </div>
+    </div>
+  </div>
+
+  <!-- NULIDADE 3 -->
+  <div class="nulidade">
+    <div class="nulidade-header">
+      <div class="nulidade-num">Nulidade 03</div>
+      <div class="nulidade-title">Certidões ocultas — supressão de material exculpatório</div>
+      <div class="nulidade-badge">Absoluta</div>
+    </div>
+    <div class="nulidade-body">
+      <div class="fact">
+        As certidões produzidas pela AEED — tanto as "positivas" quanto as "negativas" — <strong>nunca foram incluídas nos autos processuais</strong> e nunca foram compartilhadas com os advogados de defesa. A ASFAV confirmou em relatório de 100 páginas e os advogados dos réus confirmaram individualmente: os documentos existem nos sistemas internos do TSE mas são invisíveis nos processos formais.
+      </div>
+      <div class="norm-row">
+        <span class="norm-tag violated">CF/88 Art. 5º, LV</span>
+        <span class="norm-tag violated">CF/88 Art. 93, IX</span>
+        <span class="norm-tag">CPP Art. 155</span>
+        <span class="norm-tag">Princípio Brady (analogia)</span>
+      </div>
+      <div class="argument strong-arg">
+        <strong>Argumento de nulidade:</strong> O contraditório (CF Art. 5º, LV) exige que toda prova usada contra o réu seja a ele comunicada. Decisões de manutenção de prisão baseadas em certidões que a defesa desconhece violam estruturalmente o due process. Nos EUA, a Regra Brady exige divulgação de material exculpatório — princípio análogo ao contraditório brasileiro. Certidões "negativas" que poderiam embasar a soltura e que foram ocultadas configuram supressão de prova favorável ao réu.
+      </div>
+      <div class="argument medium-arg">
+        <strong>Impacto prático:</strong> A mensagem interna "A PGR pediu a LP deles, mas o ministro não quer soltar sem antes a gente ver nas redes se tem alguma coisa" documenta que a decisão de manter prisões foi tomada com base em material extra-autos. A fundamentação judicial não refletia a realidade do que embasava a decisão — violação direta do Art. 93, IX da CF.
+      </div>
+    </div>
+  </div>
+
+  <!-- NULIDADE 4 -->
+  <div class="nulidade">
+    <div class="nulidade-header">
+      <div class="nulidade-num">Nulidade 04</div>
+      <div class="nulidade-title">Concentração inconstitucional — impedimento do relator</div>
+      <div class="nulidade-badge">Absoluta</div>
+    </div>
+    <div class="nulidade-body">
+      <div class="fact">
+        O ministro Alexandre de Moraes ocupou simultaneamente: <strong>(a) Presidente do TSE</strong>, administrando o processo eleitoral de 2022; <strong>(b) Relator do Inquérito das Fake News</strong> no STF, investigando opositores; <strong>(c) Relator das ações penais do 8 de janeiro</strong>, julgando os mesmos eventos que sua própria unidade de desinformação havia instruído. O CPP art. 3º-A veda que o juiz substitua o MP na atividade probatória. A AEED era, na prática, a "PGR pessoal" de Moraes.
+      </div>
+      <div class="norm-row">
+        <span class="norm-tag violated">CPP Art. 3º-A</span>
+        <span class="norm-tag violated">CPP Arts. 252–254</span>
+        <span class="norm-tag violated">CF/88 Art. 5º, XXXVII</span>
+        <span class="norm-tag">Princípio do juiz natural</span>
+      </div>
+      <div class="argument strong-arg">
+        <strong>Argumento de nulidade:</strong> O CPP Art. 252, I estabelece que o juiz é impedido quando tiver funcionado como MP no mesmo processo. Moraes direcionou a produção de provas (via AEED) e depois julgou os casos baseados nessas provas. A estrutura acusatória brasileira (CPP Art. 3º-A) veda precisamente esse arranjo: quem investiga não pode julgar. O impedimento é causa de nulidade absoluta de todos os atos decisórios.
+      </div>
+      <div class="argument strong-arg">
+        <strong>Precedente direto — Caso Moro/Lava Jato:</strong> O STF declarou Moro parcial e anulou suas decisões porque ele orientou a acusação e depois julgou. A estrutura de Moraes com a AEED é funcionalmente idêntica — e mais grave, pois envolve fabricação documental documentada por whistleblower.
+      </div>
+    </div>
+  </div>
+
+  <!-- NULIDADE 5 -->
+  <div class="nulidade">
+    <div class="nulidade-header">
+      <div class="nulidade-num">Nulidade 05</div>
+      <div class="nulidade-title">Audiências de custódia simuladas — juiz natural destituído</div>
+      <div class="nulidade-badge">Absoluta</div>
+    </div>
+    <div class="nulidade-body">
+      <div class="fact">
+        Por ordem de 10/01/2023, Moraes centralizou todas as decisões sobre detenção. Juízes de primeira instância foram autorizados a <strong>conduzir as audiências mas proibidos de conceder liberdade</strong>. A mensagem interna do juiz Airton Vieira ao encerrar suas funções confirma o caráter simulado: <em>"Que nas audiências de custódia possamos dar a cada um o que lhe é de direito: a prisão!"</em> — com emojis de zombaria.
+      </div>
+      <div class="norm-row">
+        <span class="norm-tag violated">CF/88 Art. 5º, LXII</span>
+        <span class="norm-tag violated">CPP Art. 287</span>
+        <span class="norm-tag violated">Convenção Americana Art. 7.5</span>
+        <span class="norm-tag">Resolução CNJ 213/2015</span>
+      </div>
+      <div class="argument strong-arg">
+        <strong>Argumento de nulidade:</strong> A audiência de custódia existe para que um juiz <em>diferente</em> do que decretou a prisão avalie sua legalidade — garantia processual de controle horizontal. Um juiz que conduz a audiência mas não pode libertar o preso não exerce jurisdição: executa uma formalidade. A Convenção Americana (art. 7.5) exige apresentação "sem demora" a um juiz com poder de decidir sobre a prisão. O relatório conjunto da DPU, DPDF e MNPCT de 23/01/2023 documentou as violações formalmente.
+      </div>
+      <div class="argument medium-arg">
+        <strong>Prazo legal violado:</strong> O CPP exige audiência em até 24 horas após a prisão. A ASFAV documentou atrasos de até 22 dias. Cada dia de detenção além do prazo sem audiência constitui constrangimento ilegal independente, suscetível de habeas corpus.
+      </div>
+    </div>
+  </div>
+
+  <!-- NULIDADE 6 -->
+  <div class="nulidade">
+    <div class="nulidade-header">
+      <div class="nulidade-num">Nulidade 06</div>
+      <div class="nulidade-title">Critério ideológico — prisão por opinião política</div>
+      <div class="nulidade-badge">Absoluta</div>
+    </div>
+    <div class="nulidade-body">
+      <div class="fact">
+        As certidões documentadas mostram que o critério para "positivo" (permanecer preso) incluía: criticar o STF, apoiar Bolsonaro, usar verde e amarelo, compartilhar posts sobre as eleições, assinar petições favoráveis à liberdade de expressão. <strong>Um vendedor ambulante ficou preso por posts de 2018 criticando o PT</strong> — posts sem relação com o 8 de janeiro ou com as eleições de 2022.
+      </div>
+      <div class="norm-row">
+        <span class="norm-tag violated">CF/88 Art. 5º, IV</span>
+        <span class="norm-tag violated">CF/88 Art. 220, §2º</span>
+        <span class="norm-tag violated">CF/88 Art. 5º, LVII</span>
+        <span class="norm-tag">CP Art. 20 — vedação à penalização de opiniões</span>
+      </div>
+      <div class="argument strong-arg">
+        <strong>Argumento de nulidade:</strong> A CF/88 Art. 5º, IV garante a livre manifestação do pensamento. O Art. 220, §2º veda qualquer censura de natureza política ou ideológica. Manter alguém preso com base em sua orientação política — não em atos concretos — é inconstitucional em absoluto. O CPP Art. 312 exige que a preventiva seja fundamentada em risco concreto, não em posição ideológica. Decisões baseadas em "certidões positivas" lastreadas em opinião política são nulas de pleno direito.
+      </div>
+    </div>
+  </div>
+
+  <!-- NULIDADE 7 -->
+  <div class="nulidade">
+    <div class="nulidade-header">
+      <div class="nulidade-num">Nulidade 07</div>
+      <div class="nulidade-title">Acusação genérica — ausência de individualização</div>
+      <div class="nulidade-badge">Relativa — suscetível de sanatória</div>
+    </div>
+    <div class="nulidade-body">
+      <div class="fact">
+        Múltiplos réus foram denunciados por golpe de Estado, abolição violenta do Estado Democrático e participação em organização criminosa com base em <strong>textos "copiados e colados"</strong>, sem individualização da conduta específica de cada um. Três pessoas em situação de rua foram incluídas. Uma idosa de 74 anos foi condenada a quase 12 anos por se esconder do gás lacrimogêneo dentro do Palácio do Planalto.
+      </div>
+      <div class="norm-row">
+        <span class="norm-tag violated">CPP Art. 41</span>
+        <span class="norm-tag violated">CF/88 Art. 5º, XLVI</span>
+        <span class="norm-tag">Princípio da personalidade da pena</span>
+        <span class="norm-tag">Súmula STF 718/719</span>
+      </div>
+      <div class="argument medium-arg">
+        <strong>Argumento de nulidade:</strong> O CPP Art. 41 exige que a denúncia descreva o fato criminoso com todas as suas circunstâncias — não é suficiente imputar a todos os réus as mesmas condutas genéricas. A individualização da pena (CF Art. 5º, XLVI) e o princípio da personalidade da pena (que não pode ultrapassar a pessoa do condenado) exigem que cada réu responda pelo que efetivamente fez. Denúncias "copy-paste" violam estruturalmente esses princípios.
+      </div>
+    </div>
+  </div>
+
+  <!-- NULIDADE 8 -->
+  <div class="nulidade">
+    <div class="nulidade-header">
+      <div class="nulidade-num">Nulidade 08</div>
+      <div class="nulidade-title">Incompetência do acusador — vício de legitimidade processual</div>
+      <div class="nulidade-badge">Relativa — em discussão</div>
+    </div>
+    <div class="nulidade-body">
+      <div class="fact">
+        A vice-PGR Lindôra Araújo — formalmente competente para atuar perante o STF — havia demonstrado resistência a investigações politicamente motivadas. Foi contornada pela nomeação ad hoc do procurador Carlos Frederico dos Santos para liderar a força-tarefa dos "atos antidemocráticos", <strong>sem a competência constitucional para apresentar denúncias perante o STF.</strong>
+      </div>
+      <div class="norm-row">
+        <span class="norm-tag violated">CF/88 Art. 128</span>
+        <span class="norm-tag">Lei Orgânica do MPF</span>
+        <span class="norm-tag">Analogia: US v. Trump (Jack Smith, 2024)</span>
+      </div>
+      <div class="argument medium-arg">
+        <strong>Argumento de nulidade:</strong> A Constituição reserva ao Procurador-Geral da República — ou ao vice com plenos poderes — a função de acusador perante o STF. Nomeação ad hoc para caso específico, contornando a PGR formal que havia sinalizado resistência, levanta questão de legitimidade processual comparável ao caso Jack Smith nos EUA em 2024, onde um juiz federal declarou a nomeação ilegal por falta de mandato adequado.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SEÇÃO III — PRECEDENTES -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num">III</div>
+    <div class="section-title"><span>Precedentes</span> Aplicáveis</div>
+  </div>
+
+  <div class="precedente">
+    <div class="prec-header">
+      <div class="prec-case">Operação Satiagraha — HC 96.905 / AP 470</div>
+      <div class="prec-tribunal">STJ · 5ª Turma · 07/06/2011 · STF · Dez/2014</div>
+    </div>
+    <div class="prec-body">
+      <strong>Fato:</strong> Agentes da ABIN participaram clandestinamente de atos da Polícia Federal na Operação Satiagraha contra o banqueiro Daniel Dantas, sem autorização legal para atividade investigativa criminal.<br><br>
+      <strong>Decisão STJ:</strong> Anulação da investigação. O tribunal comparou o esquema a uma "polícia secreta" e aplicou a doutrina dos frutos da árvore envenenada — tudo obtido por meio do canal ilegal foi contaminado.<br><br>
+      <strong>Decisão STF:</strong> Confirmou as anulações em dezembro de 2014.
+      <div class="prec-relevancia">
+        <strong>Relevância para o 8 de Janeiro:</strong> A participação da AEED — órgão sem competência penal — na instrução dos processos é estruturalmente idêntica ao papel da ABIN em Satiagraha. Se o STF aplicou a doutrina da árvore envenenada naquele caso, a mesma lógica exige aplicação aqui.
+      </div>
+    </div>
+  </div>
+
+  <div class="precedente">
+    <div class="prec-header">
+      <div class="prec-case">Operação Castelo de Areia — HC 137.438</div>
+      <div class="prec-tribunal">STJ · 6ª Turma · 05/04/2011</div>
+    </div>
+    <div class="prec-body">
+      <strong>Fato:</strong> Investigação iniciada a partir de denúncia anônima sem corroboração independente. Interceptações telefônicas realizadas sem base probatória prévia adequada.<br><br>
+      <strong>Decisão:</strong> STJ rejeitou o caso integralmente. Fundamento central: condenação das "razões ocultas" — decidir com base em informações conhecidas apenas pelos investigadores e pelo juiz, mas ausentes dos autos e inacessíveis à defesa.
+      <div class="prec-relevancia">
+        <strong>Relevância para o 8 de Janeiro:</strong> As certidões da AEED que determinaram quem ficava preso nunca constaram dos autos. Funcionários e juízes tomavam decisões com base em material que a defesa desconhecia — exatamente as "razões ocultas" que o STJ condenou em Castelo de Areia.
+      </div>
+    </div>
+  </div>
+
+  <div class="precedente">
+    <div class="prec-header">
+      <div class="prec-case">Caso Moro/Lava Jato — AP 470 e derivadas</div>
+      <div class="prec-tribunal">STF · 2ª Turma · 2021–2024</div>
+    </div>
+    <div class="prec-body">
+      <strong>Fato:</strong> Mensagens da Vaza Jato revelaram que Moro orientou a acusação, sugeriu provas, antecipou decisões e coordenou estratégias com a força-tarefa — violando sua obrigação de imparcialidade.<br><br>
+      <strong>Decisão:</strong> STF declarou Moro parcial. Condenações anuladas. Lula teve direitos políticos restaurados. Gilmar Mendes listou 7 indícios de parcialidade em decisão de outubro/2024.
+      <div class="prec-relevancia">
+        <strong>Relevância para o 8 de Janeiro:</strong> O STF estabeleceu que a orientação extrajudicial da acusação configura parcialidade suficiente para anular condenações. Moraes dirigiu a AEED, que produziu as provas usadas nos processos que ele mesmo relatou — configuração mais grave que a de Moro, segundo análise de Dallagnol e outros especialistas.
+      </div>
+    </div>
+  </div>
+
+  <div class="precedente">
+    <div class="prec-header">
+      <div class="prec-case">United States v. Trump (Jack Smith) — Caso de analogia</div>
+      <div class="prec-tribunal">US District Court · Judge Cannon · 2024</div>
+    </div>
+    <div class="prec-body">
+      <strong>Fato:</strong> Juíza federal declarou que o procurador especial Jack Smith havia sido nomeado ilegalmente para processar Trump, sem o mandato legal adequado.<br><br>
+      <strong>Relevância conceitual:</strong> O princípio — de que apenas o acusador constitucionalmente designado tem legitimidade para apresentar denúncias — é universalmente reconhecido em sistemas acusatórios. A nomeação ad hoc de Carlos Frederico, contornando a vice-PGR formal, levanta questão análoga no direito brasileiro.
+      <div class="prec-relevancia">
+        <strong>Nota de cautela:</strong> A analogia é conceitual, não vinculante. O sistema americano difere do brasileiro em aspectos estruturais. O argumento serve como reforço doutrinário, não como precedente direto.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SEÇÃO IV — COMPARAÇÃO SATIAGRAHA/8JAN -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num">IV</div>
+    <div class="section-title">Satiagraha vs. <span>8 de Janeiro</span></div>
+  </div>
+
+  <p>A comparação estrutural direta evidencia que o STF criou um padrão jurídico em Satiagraha que — se aplicado consistentemente — exige as mesmas consequências nos processos do 8 de janeiro.</p>
+
+  <div class="compare-box">
+    <div class="compare-header">Comparação Estrutural de Ilegalidades</div>
+    <div class="compare-cols">
+      <div class="compare-col">
+        <div class="compare-col-title">Operação Satiagraha (2008)</div>
+        <ul>
+          <li>ABIN participou de investigação criminal</li>
+          <li>Sem mandato legal para atividade policial</li>
+          <li>Provas obtidas fora dos canais formais</li>
+          <li>Canal ilegal contaminava os legais</li>
+          <li>Juiz não dirigiu a investigação ilegal</li>
+          <li><strong>Resultado: anulação total pelo STJ e STF</strong></li>
+        </ul>
+      </div>
+      <div class="compare-col">
+        <div class="compare-col-title">8 de Janeiro (2023)</div>
+        <ul>
+          <li>AEED participou de investigação criminal</li>
+          <li>Sem mandato legal após 30/10/2022</li>
+          <li>Certidões fora dos autos e dos canais formais</li>
+          <li>Material informal determinava quem ficava preso</li>
+          <li><strong>O juiz relator dirigia a investigação ilegal</strong></li>
+          <li><strong>Resultado: ?</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="pull">
+    <div class="pull-text">"A participação secreta da AEED em inquéritos criminais é um paralelo direto com Satiagraha: servidores públicos agiram sem autoridade legal, o que deveria contaminar os casos. O Brasil assiste, com passividade alarmante, à expansão do poder judicial além dos limites constitucionais."</div>
+    <div class="pull-src">Deltan Dallagnol — análise jurídica publicada nos Arquivos do 8 de Janeiro, 2025</div>
+  </div>
+</div>
+
+<!-- SEÇÃO V — CONCLUSÃO -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num">V</div>
+    <div class="section-title"><span>Conclusão</span> e Síntese Jurídica</div>
+  </div>
+
+  <div class="conclusao">
+    <div class="conclusao-label">Síntese Jurídica · Abril 2026</div>
+    <div class="conclusao-text">
+      Com base na documentação primária disponível e na jurisprudência dos tribunais superiores, <strong>há fundamento jurídico sólido para contestar a validade dos processos do 8 de janeiro</strong> em múltiplas frentes independentes. A presença simultânea das oito nulidades identificadas cria o que os especialistas consultados caracterizam como <em>"vício estrutural desde a origem"</em> — situação em que o processo inteiro está comprometido, não apenas atos isolados.
+    </div>
+    <div class="conclusao-items">
+      <div class="conclusao-item">
+        <div class="conclusao-item-num">01</div>
+        <div class="conclusao-item-text"><strong>É indubitável</strong> que a AEED atuou fora do seu mandato temporal e material — a Resolução TSE 23.714/2022 expirou em 30/10/2022 e não autorizava investigação criminal.</div>
+      </div>
+      <div class="conclusao-item">
+        <div class="conclusao-item-num">02</div>
+        <div class="conclusao-item-text"><strong>É indubitável</strong> que as certidões nunca constaram dos autos formais — os próprios advogados confirmaram e a ASFAV documentou sistematicamente.</div>
+      </div>
+      <div class="conclusao-item">
+        <div class="conclusao-item-num">03</div>
+        <div class="conclusao-item-text"><strong>Há fundamento jurídico sólido</strong> para tese de impedimento do relator, com base na estrutura Moro/Lava Jato aplicada de forma mais grave — relator que dirigia a produção de provas.</div>
+      </div>
+      <div class="conclusao-item">
+        <div class="conclusao-item-num">04</div>
+        <div class="conclusao-item-text"><strong>É controverso mas arguível</strong> se o precedente Satiagraha vincula o STF a anular processos baseados em instrução por órgão sem competência penal — a discussão depende de como o tribunal enquadrará a AEED.</div>
+      </div>
+      <div class="conclusao-item">
+        <div class="conclusao-item-num">05</div>
+        <div class="conclusao-item-text"><strong>O obstáculo central</strong> não é jurídico — é institucional: o tribunal que deveria aplicar essas nulidades é o mesmo tribunal cujo funcionamento está em questão. A resolução, se vier, virá por pressão externa, mudança de composição ou ruptura interna.</div>
+      </div>
+    </div>
+  </div>
+
+  <p>A análise jurídica aqui apresentada não expressa simpatia por qualquer posição política. Expressa a constatação de que <strong>as mesmas garantias constitucionais que o STF invocou para anular a Lava Jato devem ser aplicadas aos processos do 8 de janeiro</strong> — ou o sistema judicial brasileiro opera com dois pesos e duas medidas, o que por definição não é Estado de Direito.</p>
+
+  <p>O ex-ministro Marco Aurélio Mello, ao comentar as sentenças de 15 a 17 anos aplicadas a manifestantes que não cometeram atos violentos, foi preciso: <em>"Não consigo entender como eles podem ser condenados a 15, 16, 17 anos de prisão. Essas são sentenças para assassinos ou assaltantes à mão armada, não para manifestantes ou vândalos."</em></p>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>
+    DOSSIÊ JURÍDICO · NULIDADES DO 8 DE JANEIRO<br>
+    lawfare-timeline.vercel.app · Série Jurídica · Doc. 01<br>
+    CC0 1.0 Universal — Reprodução irrestrita
+  </p>
+  <p>
+    Abril 2026 · Versão 1.0<br>
+    Análise não substitui consulta a advogado OAB<br>
+    Fontes primárias verificáveis disponíveis no projeto
+  </p>
+</div>
+
+</div><!-- /page -->
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

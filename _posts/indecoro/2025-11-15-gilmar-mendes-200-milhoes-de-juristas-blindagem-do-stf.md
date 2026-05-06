@@ -59,6 +59,7 @@ O efeito prático: *quem detém o poder coercitivo de censurar, prender e julgar
 |--------|-----------|
 | **P3** | STF como ponto de captura — blindagem corporativa de instituição que se julga acima do escrutínio público |
 | **P8** | Deslegitimação preventiva da crítica pública antes que ela ganhe escopo institucional |
+- [Padrões sistêmicos](/padroes-sistemicos)
 
 ### O padrão sistêmico de novembro de 2025
 
@@ -75,4 +76,5 @@ A declaração de Gilmar Mendes equivale funcionalmente a dizer: "cidadãos sem 
 
 ## Referências
 
+- [Padrões sistêmicos](/padroes-sistemicos)
 - [Revista Oeste — 22/04/2026](https://revistaoeste.com/politica/gilmar-critica-200-milhoes-de-juristas-com-opinioes-sobre-o-stf/) — Cobertura com análise do contexto do Caso Master

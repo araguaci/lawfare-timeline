@@ -61,6 +61,7 @@ A ironia documentada: o mesmo delegado que matou com CNH vencida e foi absolvido
 | **P3** | Uso de aparato estatal brasileiro além de suas fronteiras para perseguição política |
 | **P6** | Proteção do operador (Marcelo Ivo) mesmo após falha operacional catastrófica |
 | **P7** | Instrumentalização de agente em jurisdição estrangeira como vetor de persecução |
+- [Padrões sistêmicos](/padroes-sistemicos)
 
 ### Omissão institucional
 

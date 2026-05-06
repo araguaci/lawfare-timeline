@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Kompromat | Mapa de Captura Institucional</title>
+  <meta name="description" content="Dossiê forense sobre captura institucional, lawfare e redes de kompromat global.">
+  
+  <!-- Design System Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      /* Lawfare Design System 1.0 Tokens */
+      --bg: #050505;
+      --bg1: #0a0a0a;
+      --bg2: #111111;
+      --bg3: #1a1a1a;
+      --fg: #ffffff;
+      --fg2: #a0a0a0;
+      --fg3: #606060;
+      --border: #222222;
+      --border2: #333333;
+      --red: #e84040;
+      --amber: #e8a020;
+      --blue: #2080e8;
+      --green: #28c880;
+      --purple: #a040e8;
+      --font-display: 'Syne', sans-serif;
+      --font-mono: 'IBM Plex Mono', monospace;
+      --grid: 4px;
+      --border-radius-sm: 2px;
+      --border-radius-md: 4px;
+      --border-radius-lg: 6px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { 
+      background: var(--bg); 
+      color: var(--fg); 
+      font-family: var(--font-mono); 
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      scroll-behavior: smooth;
+    }
+
+    /* Layout Containers */
+    .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+    
+    /* Header & Hero */
+    .header { margin-bottom: 48px; border-bottom: 1px solid var(--border); padding-bottom: 32px; position: relative; }
+    .header::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 60px; height: 1px; background: var(--red); box-shadow: 0 0 10px var(--red); }
+    
+    .meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+    .badge { font-family: var(--font-mono); font-size: 10px; padding: 2px 8px; border-radius: var(--border-radius-sm); text-transform: uppercase; font-weight: 600; letter-spacing: 0.05em; }
+    .b-red { background: rgba(232, 64, 64, 0.15); color: var(--red); border: 0.5px solid var(--red); }
+    .b-amber { background: rgba(232, 160, 32, 0.15); color: var(--amber); border: 0.5px solid var(--amber); }
+    .b-blue { background: rgba(32, 128, 232, 0.15); color: var(--blue); border: 0.5px solid var(--blue); }
+    .b-purple { background: rgba(160, 64, 232, 0.15); color: var(--purple); border: 0.5px solid var(--purple); }
+    
+    .hero-title { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.5rem); line-height: 0.9; margin-bottom: 8px; text-transform: uppercase; }
+    .hero-title span { color: var(--fg3); -webkit-text-stroke: 1px var(--fg3); color: transparent; }
+    .subtitle { color: var(--fg2); max-width: 600px; font-size: 13px; }
+
+    /* Stats Grid */
+    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1px; background: var(--border); margin-top: 32px; border: 1px solid var(--border); }
+    .stat-item { background: var(--bg); padding: 16px; text-align: left; }
+    .stat-num { font-family: var(--font-display); font-size: 24px; font-weight: 800; line-height: 1; margin-bottom: 4px; }
+    .stat-label { font-size: 10px; color: var(--fg3); text-transform: uppercase; letter-spacing: 0.1em; }
+    .text-red { color: var(--red); }
+    .text-amber { color: var(--amber); }
+    .text-purple { color: var(--purple); }
+    .text-blue { color: var(--blue); }
+
+    /* Navigation Tabs */
+    .nav-tabs { 
+      display: flex; 
+      gap: 2px; 
+      margin-bottom: 32px; 
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(5,5,5,0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .nav-tab { background: transparent; border: none; color: var(--fg3); padding: 12px 24px; font-family: var(--font-mono); font-size: 11px; font-weight: 600; text-transform: uppercase; cursor: pointer; transition: all 0.2s; position: relative; text-decoration: none; }
+    .nav-tab:hover { color: var(--fg); }
+    .nav-tab.active { color: var(--fg); }
+    .nav-tab.active::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: var(--red); }
+
+    /* Main Sections */
+    .section-title { font-family: var(--font-display); font-size: 18px; margin-bottom: 24px; text-transform: uppercase; display: flex; align-items: center; gap: 12px; }
+    .section-title::after { content: ''; height: 1px; flex: 1; background: var(--border); }
+
+    /* Filter & Search Bar */
+    .filter-ui { display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px; }
+    .search-wrap { position: relative; }
+    .search-input { width: 100%; padding: 14px 16px; background: var(--bg2); border: 1px solid var(--border); border-radius: var(--border-radius-md); color: var(--fg); font-family: var(--font-mono); font-size: 13px; transition: all 0.2s; }
+    .search-input:focus { outline: none; border-color: var(--fg3); background: var(--bg1); }
+    .search-clear { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); cursor: pointer; color: var(--fg3); font-size: 16px; display: none; }
+    .search-clear.visible { display: block; }
+
+    .filter-bar { display: flex; flex-wrap: wrap; gap: 8px; }
+    .filter-btn { background: var(--bg1); border: 1px solid var(--border); color: var(--fg2); padding: 6px 14px; border-radius: 20px; font-size: 10px; font-weight: 600; text-transform: uppercase; cursor: pointer; transition: all 0.2s; }
+    .filter-btn span { opacity: 0.5; margin-left: 4px; font-size: 9px; }
+    .filter-btn:hover { border-color: var(--fg3); color: var(--fg); }
+    .filter-btn.active { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+
+    /* Legend */
+    .legend { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 24px; }
+    .legend-item { display: flex; align-items: center; gap: 6px; font-size: 10px; color: var(--fg3); text-transform: uppercase; }
+    .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+
+    /* Analysis Grid */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 16px; }
+    .card { background: var(--bg1); border: 1px solid var(--border); border-radius: var(--border-radius-lg); padding: 20px; transition: all 0.2s; cursor: pointer; position: relative; display: flex; flex-direction: column; }
+    .card:hover { border-color: var(--border2); transform: translateY(-2px); background: var(--bg2); }
+    .card.expanded { grid-column: 1 / -1; cursor: default; transform: none; background: var(--bg1); border-color: var(--fg3); }
+    
+    .card-header { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
+    .flag { font-size: 24px; line-height: 1; }
+    .card-title-group { flex: 1; }
+    .card-name { font-family: var(--font-display); font-size: 16px; font-weight: 700; line-height: 1.2; }
+    .card-region { font-size: 10px; color: var(--fg3); text-transform: uppercase; letter-spacing: 0.1em; }
+    
+    .severity-bar { height: 2px; background: var(--border); border-radius: 2px; margin-bottom: 12px; overflow: hidden; }
+    .severity-fill { height: 100%; transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1); }
+    
+    .badges { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 16px; }
+    .card-desc { font-size: 12px; color: var(--fg2); line-height: 1.5; flex: 1; }
+
+    /* Expanded Content */
+    .expand-detail { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border); animation: slideDown 0.3s ease-out; }
+    @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+    
+    .detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 16px; margin-top: 16px; }
+    .detail-item { background: var(--bg); border: 1px solid var(--border); border-radius: var(--border-radius-md); padding: 12px; }
+    .detail-label { font-size: 9px; color: var(--fg3); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; display: block; }
+    .detail-value { font-size: 12px; color: var(--fg); line-height: 1.5; }
+    
+    .collapse-btn { background: transparent; border: 1px solid var(--border); color: var(--fg3); padding: 8px 16px; border-radius: 4px; font-size: 10px; font-weight: 600; text-transform: uppercase; cursor: pointer; margin-top: 24px; transition: all 0.2s; }
+    .collapse-btn:hover { color: var(--red); border-color: var(--red); }
+
+    /* Related Section */
+    .related-section { margin-top: 80px; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px; }
+    .related-card { background: var(--bg1); border: 1px solid var(--border); border-radius: var(--border-radius-md); padding: 20px; text-decoration: none; display: flex; flex-direction: column; gap: 8px; transition: all 0.2s; }
+    .related-card:hover { border-color: var(--blue); background: var(--bg2); transform: translateX(4px); }
+    .related-tag { font-size: 9px; color: var(--blue); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+    .related-title { font-family: var(--font-display); font-size: 14px; color: var(--fg); }
+    .related-desc { font-size: 11px; color: var(--fg3); line-height: 1.4; }
+
+    /* Footer */
+    .footer { margin-top: 120px; padding: 48px 0; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 24px; }
+    @media (min-width: 768px) { .footer { flex-direction: row; justify-content: space-between; align-items: flex-start; } }
+    .footer-info { display: flex; flex-direction: column; gap: 4px; }
+    .footer-text { font-size: 10px; color: var(--fg3); text-transform: uppercase; letter-spacing: 0.05em; }
+    .footer-links { display: flex; gap: 16px; }
+    .footer-link { color: var(--fg3); text-decoration: none; font-size: 10px; text-transform: uppercase; transition: color 0.2s; }
+    .footer-link:hover { color: var(--fg); }
+
+    /* Tab Panels */
+    .tab-panel { display: block; margin-bottom: 100px; scroll-margin-top: 80px; }
+
+    @media print {
+      body { background: #fff; color: #000; font-family: serif; }
+      .container { max-width: 100%; padding: 0; }
+      .nav-tabs, .filter-ui, .collapse-btn { display: none !important; }
+      .header::after { display: none; }
+      .card { border: 1px solid #ddd !important; background: #fff !important; page-break-inside: avoid; }
+      .card.expanded { grid-column: auto; }
+      .expand-detail { display: block !important; }
+      .detail-item { border: 1px solid #eee !important; background: #fdfdfd !important; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header" role="banner">
+    <div class="meta-row">
+      <span class="badge b-red">Intelligence Hub</span>
+      <span class="badge b-purple">Security: Restricted</span>
+      <span class="badge b-blue">Monitor: Global 2026</span>
+    </div>
+    <h1 class="hero-title">Global <span>Kompromat</span></h1>
+    <p class="subtitle">Mapeamento forense de captura institucional via lawfare, vigilância e subordinação de elites nacionais.</p>
+    
+    <div class="stat-grid">
+      <div class="stat-item"><div class="stat-num text-red" id="stat-total">12</div><div class="stat-label">Jurisdições Ativas</div></div>
+      <div class="stat-item"><div class="stat-num text-amber" id="stat-critical">5</div><div class="stat-label">Nível Crítico</div></div>
+      <div class="stat-item"><div class="stat-num text-purple">2</div><div class="stat-label">Modelos Matriz</div></div>
+      <div class="stat-item"><div class="stat-num text-blue">140+</div><div class="stat-label">Países Expostos</div></div>
+    </div>
+  </div>
+
+  <nav class="nav-tabs" role="tablist">
+    <a href="#mapa" class="nav-tab active">Mapa de Captura</a>
+    <a href="#origens" class="nav-tab">Matrizes do Modelo</a>
+    <a href="#padroes" class="nav-tab">Padrões Forenses</a>
+  </nav>
+
+  <main id="app-root">
+    <!-- TAB: MAPA -->
+    <div id="mapa" class="tab-panel">
+      <div class="filter-ui">
+        <div class="search-wrap">
+          <input type="text" class="search-input" placeholder="Buscar por nação, região ou padrão criminal..." oninput="app.handleSearch(event)">
+          <span class="search-clear" onclick="app.clearSearch()">✕</span>
+        </div>
+        <div class="filter-bar" id="filter-bar"></div>
+      </div>
+      
+      <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:var(--red);"></div><span>Crítico</span></div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--amber);"></div><span>Avançado</span></div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--green);"></div><span>Disputa</span></div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--fg3);"></div><span>Outros</span></div>
+      </div>
+      
+      <div id="results-count" class="footer-text" style="margin-bottom: 24px;"></div>
+      
+      <div class="grid" id="main-grid"></div>
+    </div>
+
+    <!-- TAB: ORIGENS -->
+    <div id="origens" class="tab-panel">
+      <div class="section-title">Gênese Tecnocrática do Kompromat</div>
+      <div class="grid">
+        <div class="card">
+          <div class="card-header">
+            <span class="flag">🇷🇺</span>
+            <div class="card-title-group">
+              <div class="card-name">Matriz Russa (KGB/FSB)</div>
+              <div class="card-region">O Modelo Estruturante</div>
+            </div>
+          </div>
+          <div class="card-desc">Sistematização do uso de segredos íntimos e financeiros para subordinação absoluta de lideranças políticas e oligarquias. O kompromat é a espinha dorsal da governança estatal.</div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <span class="flag">🇺🇸</span>
+            <div class="card-title-group">
+              <div class="card-name">A Variante Epstein</div>
+              <div class="card-region">O Modelo de Hospitalidade</div>
+            </div>
+          </div>
+          <div class="card-desc">Adaptação ocidental utilizando redes de lazer e abuso para captura de elites globais de negócios, academia e política. Infraestrutura privada com proteção estatal.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: PADROES -->
+    <div id="padroes" class="tab-panel">
+      <div class="section-title">Nomenclatura Forense de Captura</div>
+      <div class="grid">
+        <div class="card">
+          <div class="card-name">P1: Judicial Chokehold</div>
+          <div class="card-desc">Controle absoluto das cortes superiores via indicação política coordenada e chantagem (kompromat).</div>
+        </div>
+        <div class="card">
+          <div class="card-name">P5: Narrative Mirroring</div>
+          <div class="card-desc">Alinhamento total de grandes conglomerados de mídia a agendas estatais via subsídios ou medo.</div>
+        </div>
+        <div class="card">
+          <div class="card-name">P10: Lawfare Blitz</div>
+          <div class="card-desc">Saturação judicial contra vozes dissidentes com o objetivo de falência financeira e exílio.</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- RELATED OBJECTS -->
+  <section class="related-section">
+    <div class="section-title">Dossiês Correlacionados</div>
+    <div class="related-grid">
+      <a href="brazil-democratic-erosion-2026.html" class="related-card">
+        <div class="related-tag">Lawfare · BR</div>
+        <div class="related-title">Brazil Democratic Erosion</div>
+        <div class="related-desc">Análise técnica sobre a supressão de direitos civis.</div>
+      </a>
+      <a href="republica-capturada.html" class="related-card">
+        <div class="related-tag">Estruturação</div>
+        <div class="related-title">República Capturada</div>
+        <div class="related-desc">Forensics das conexões institucionais.</div>
+      </a>
+      <a href="operacao-silencio-digital.html" class="related-card">
+        <div class="related-tag">Censura</div>
+        <div class="related-title">Operação Silêncio Digital</div>
+        <div class="related-desc">Regime de censura judicial e bloqueios.</div>
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-info">
+      <div class="footer-text">Global Kompromat Dashboard — Analytics v1.5</div>
+      <div class="footer-text">lawfare-timeline.site — 2026 Forensic Report</div>
+      <div class="footer-text">CC0 1.0 Universal — Public Domain Data</div>
+    </div>
+    <div class="footer-links">
+      <a href="#" class="footer-link">Metodologia</a>
+      <a href="#" class="footer-link">Base de Dados</a>
+      <a href="#" class="footer-link">Protocolo Artes do Sul</a>
+    </div>
+  </footer>
+</div>
+
+<script>
+/**
+ * Global Kompromat - App Logic
+ */
+const app = {
+  state: {
+    activeTab: 'mapa',
+    activeFilter: 'todos',
+    searchQuery: '',
+    expandedId: null,
+    nations: [
+      { id: "br", name: "Brasil", flag: "🇧🇷", region: "América do Sul", severity: "critico", color: "#e84040", tags: ["judicial","lawfare","media"], desc: "Lawfare institucional via STF. Captura total da mídia corporativa.", vector: "Supressão do legislativo por ordens judiciais monocráticas.", actors: "Cúpula do STF, Agentes do Executivo, Consórcio de Mídia.", resistance: "Redes sociais independentes, jornalismo no exílio.", kompromat: "Visitas de Epstein documentadas; conexões com ONGs locais." },
+      { id: "us", name: "EUA", flag: "🇺🇸", region: "América do Norte", severity: "critico", color: "#e84040", tags: ["kompromat","judicial","media"], desc: "Instrumentalização do DOJ contra rivais políticos. Deep State ativo.", vector: "Uso do sistema judicial para interferência eleitoral direta.", actors: "Burocracia federal, tech companies, conglomerados de mídia.", resistance: "Nova estrutura de accountability, redes descentralizadas.", kompromat: "Origem do modelo contemporâneo; arquivos Epstein selados." },
+      { id: "gb", name: "Reino Unido", flag: "🇬🇧", region: "Europa", severity: "avancado", color: "#e8a020", tags: ["kompromat","media"], desc: "Histórico de abusos em Westminster suprimidos. Censura digital rígida.", vector: "Regulação draconiana de discurso online via Online Safety Act.", actors: "Establishment bipartidário, Agências de Inteligência, BBC.", resistance: "Lideranças independentes, portais de vazamento interno.", kompromat: "Base estratégica de Ghislaine Maxwell e rede de influência." },
+      { id: "fr", name: "França", flag: "🇫🇷", region: "Europa", severity: "avancado", color: "#e8a020", tags: ["captura","media"], desc: "Captura bancária do executivo. Judiciário centralizado.", vector: "Governança por decreto e supressão de protestos civis.", actors: "Elite financeira, Redes ENA, Cúpula da União Europeia.", resistance: "Movimentos soberanistas, mídia alternativa local.", kompromat: "Hub europeu de logística e entretenimento de elites." },
+      { id: "es", name: "Espanha", flag: "🇪🇸", region: "Europa", severity: "avancado", color: "#e8a020", tags: ["judicial","lawfare"], desc: "Anistia inconstitucional para ganhos políticos. Magistratura cooptada.", vector: "Troca de permanência no poder por perdão judicial de aliados.", actors: "Cúpula do PSOE, grupos separatistas, justiça alinhada.", resistance: "Associações de juízes independentes, oposição civil.", kompromat: "Conexões empresariais em Marbella ligadas a redes externas." },
+      { id: "it", name: "Itália", flag: "🇮🇹", region: "Europa", severity: "moderado", color: "#d4ac0d", tags: ["judicial","media"], desc: "Resistência de Meloni a burocracia de Bruxelas sob ameaça.", vector: "Chantagem via fundos europeus e ativismo judicial interno.", actors: "Magistratura Democrática, burocracia da UE.", resistance: "Governo soberanista, canais de comunicação populares.", kompromat: "Uso de inteligência para vigilância de rivais de direita." },
+      { id: "mx", name: "México", flag: "🇲🇽", region: "América Central", severity: "critico", color: "#e84040", tags: ["captura","kompromat"], desc: "Narcocartéis infiltrados no Estado. Eleição sob tutela criminosa.", vector: "Filiabilidade política decidida por força paramilitar e financeira.", actors: "Cartéis dominantes, agências federais capturadas.", resistance: "Autodefesas locais, jornalismo investigativo de risco.", kompromat: "Redes de tráfico humano integradas a fluxos de kompromat." },
+      { id: "ru", name: "Rússia", flag: "🇷🇺", region: "Eurásia", severity: "critico", color: "#e84040", tags: ["kompromat","judicial"], desc: "Estado operado como rede de inteligência. Oposição zerada.", vector: "Sistema de governança baseado inteiramente em arquivos de chantagem.", actors: "Vertical do Poder, FSB/GRU, Oligarquia dependente.", resistance: "Dissidência clandestina e no exílio.", kompromat: "Exportador global do método kompromat como arma estatal." },
+      { id: "cn", name: "China", flag: "🇨🇳", region: "Ásia", severity: "critico", color: "#e84040", tags: ["captura","media","kompromat"], desc: "Vigilância digital total. Exportação de infraestrutura de controle.", vector: "Chantagem tecnológica e captura de dados em escala orbital.", actors: "PCC, MSS, Gigantes de Tech controlados pelo partido.", resistance: "Movimentos soberanistas em países satélites.", kompromat: "Operações massivas de honeytrap digital e financeira." },
+      { id: "ar", name: "Argentina", flag: "🇦🇷", region: "América do Sul", severity: "disputa", color: "#28c880", tags: ["judicial","lawfare"], desc: "Administração Milei confrontando a casta estatal e sua rede.", vector: "Desmonte de estruturas de propaganda e auditoria forense.", actors: "Resíduos do Peronismo, Sindicatos, Mídia capturada.", resistance: "Governo atual, movimentos de liberdade econômica.", kompromat: "Exposição de redes de inteligência paralelas da era anterior." },
+      { id: "ve", name: "Venezuela", flag: "🇻🇪", region: "América do Sul", severity: "critico", color: "#e84040", tags: ["captura","eleicao"], desc: "Ditadura consolidada via narcopolítica e fraude documental.", vector: "Aparelhamento total das forças armadas e justiça eleitoral.", actors: "Cúpula do PSUV, Inteligência cubana, Cartel dos Sóis.", resistance: "Oposição reprimida, diáspora massiva.", kompromat: "Arquivos de cumplicidade regional com o regime atual." },
+      { id: "de", name: "Alemanha", flag: "🇩🇪", region: "Europa", severity: "avancado", color: "#e8a020", tags: ["judicial","media"], desc: "Tentativa de banimento de oposição popular. Mídia subsidiada.", vector: "Uso do serviço de inteligência interno contra partidos rivais.", actors: "Coalizão de governo, Verfassungsschutz.", resistance: "Crescimento de movimentos soberanistas (AfD).", kompromat: "Vulnerabilidade energética capturada por interesses externos." }
+    ],
+    tagLabels: { 
+      judicial: "Captura Judicial", 
+      lawfare: "Lawfare", 
+      media: "Controle de Mídia", 
+      kompromat: "Rede Kompromat", 
+      captura: "Captura Estatal", 
+      eleicao: "Fraude Eleitoral" 
+    }
+  },
+
+  init() {
+    this.render();
+    this.updateStats();
+    this.initScrollSpy();
+  },
+
+  initScrollSpy() {
+    const sections = document.querySelectorAll('.tab-panel');
+    const tabs = document.querySelectorAll('.nav-tab');
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -70% 0px',
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tabs.forEach(tab => {
+            tab.classList.remove('active');
+            if (tab.getAttribute('href') === '#' + entry.target.id) {
+              tab.classList.add('active');
+            }
+          });
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => observer.observe(section));
+
+    // Smooth scroll for anchors
+    tabs.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        document.querySelector(targetId).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  },
+
+  setFilter(filter) {
+    this.state.activeFilter = filter;
+    this.state.expandedId = null;
+    this.render();
+  },
+
+  handleSearch(e) {
+    this.state.searchQuery = e.target.value.toLowerCase();
+    this.state.expandedId = null;
+    
+    const clearBtn = document.querySelector('.search-clear');
+    if (this.state.searchQuery) {
+      clearBtn.classList.add('visible');
+    } else {
+      clearBtn.classList.remove('visible');
+    }
+    
+    this.render();
+  },
+
+  clearSearch() {
+    this.state.searchQuery = '';
+    document.querySelector('.search-input').value = '';
+    document.querySelector('.search-clear').classList.remove('visible');
+    this.render();
+  },
+
+  toggleExpand(id) {
+    if (this.state.expandedId === id) {
+      this.state.expandedId = null;
+    } else {
+      this.state.expandedId = id;
+      setTimeout(() => {
+        const el = document.getElementById(`card-${id}`);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 50);
+    }
+    this.render();
+  },
+
+  updateStats() {
+    const total = this.state.nations.length;
+    const critical = this.state.nations.filter(n => n.severity === 'critico').length;
+    document.getElementById('stat-total').innerText = total;
+    document.getElementById('stat-critical').innerText = critical;
+  },
+
+  render() {
+    const container = document.getElementById('main-grid');
+    const filterContainer = document.getElementById('filter-bar');
+    if (!container || !filterContainer) return;
+    
+    // Filter & Search Logic
+    const filtered = this.state.nations.filter(n => {
+      const matchFilter = this.state.activeFilter === 'todos' || n.tags.includes(this.state.activeFilter);
+      const matchSearch = n.name.toLowerCase().includes(this.state.searchQuery) || 
+                          n.region.toLowerCase().includes(this.state.searchQuery) ||
+                          n.desc.toLowerCase().includes(this.state.searchQuery);
+      return matchFilter && matchSearch;
+    });
+
+    document.getElementById('results-count').innerText = `${filtered.length} jurisdições sob monitoramento`;
+
+    // Render Filters
+    const tags = ['todos', ...Object.keys(this.state.tagLabels)];
+    filterContainer.innerHTML = tags.map(t => {
+      const count = t === 'todos' ? this.state.nations.length : this.state.nations.filter(n => n.tags.includes(t)).length;
+      return `<button class="filter-btn ${this.state.activeFilter === t ? 'active' : ''}" onclick="app.setFilter('${t}')">
+        ${t === 'todos' ? 'Todas' : this.state.tagLabels[t]} <span>(${count})</span>
+      </button>`;
+    }).join('');
+
+    // Render Grid
+    if (filtered.length === 0) {
+      container.innerHTML = `<div style="grid-column: 1/-1; padding: 48px; text-align: center; color: var(--fg3); border: 1px dashed var(--border);">Nenhum registro encontrado para os critérios atuais.</div>`;
+      return;
+    }
+
+    container.innerHTML = filtered.map(n => {
+      const isExp = this.state.expandedId === n.id;
+      const sevWidth = n.severity === 'critico' ? '100%' : n.severity === 'avancado' ? '70%' : n.severity === 'moderado' ? '40%' : '15%';
+      
+      return `
+        <div id="card-${n.id}" class="card ${isExp ? 'expanded' : ''}" onclick="app.toggleExpand('${n.id}')">
+          <div class="card-header">
+            <span class="flag" aria-hidden="true">${n.flag}</span>
+            <div class="card-title-group">
+              <div class="card-name">${n.name}</div>
+              <div class="card-region">${n.region}</div>
+            </div>
+            ${!isExp ? `<span class="badge ${n.severity === 'critico' ? 'b-red' : 'b-amber'}">${n.severity}</span>` : ''}
+          </div>
+          
+          <div class="severity-bar">
+            <div class="severity-fill" style="width: ${sevWidth}; background: ${n.color};"></div>
+          </div>
+          
+          <div class="badges">
+            ${n.tags.map(t => `<span class="badge b-blue">${this.state.tagLabels[t]}</span>`).join('')}
+          </div>
+          
+          <div class="card-desc">${n.desc}</div>
+          
+          ${isExp ? `
+            <div class="expand-detail">
+              <div class="section-title">Análise de Vetores</div>
+              <div class="detail-grid">
+                <div class="detail-item">
+                  <span class="detail-label">Modus Operandi</span>
+                  <div class="detail-value">${n.vector}</div>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Operadores Chave</span>
+                  <div class="detail-value">${n.actors}</div>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Inibidores / Resistência</span>
+                  <div class="detail-value">${n.resistance}</div>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Vínculo Kompromat</span>
+                  <div class="detail-value">${n.kompromat}</div>
+                </div>
+              </div>
+              <button class="collapse-btn" onclick="event.stopPropagation(); app.toggleExpand('${n.id}')">▲ Fechar Análise</button>
+            </div>
+          ` : ''}
+        </div>
+      `;
+    }).join('');
+  }
+};
+
+// Start Application
+document.addEventListener('DOMContentLoaded', () => app.init());
+</script>
+
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

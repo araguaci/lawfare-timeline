@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operação Mineração — Ecossistema Master & Minerais Críticos | Lawfare Timeline</title>
+  <meta name="description" content="Mapa completo da rede mineral do ecossistema Banco Master: leilão ANM fraudado, Tamisa/Serra do Curral, ItaMinas, captura do MME e a disputa geopolítica EUA-China por minerais críticos.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lawfare-timeline.vercel.app/operacao-mineracao">
+  <meta property="og:title" content="Operação Mineração — Ecossistema Master & Minerais Críticos">
+  <meta property="og:description" content="Como o Banco Master financiou a captura do maior leilão de minerais críticos da história do Brasil — e por que isso importa para a disputa EUA-China.">
+  <meta property="og:image" content="https://lawfare-timeline.vercel.app/og-operacao-mineracao.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Operação Mineração — Ecossistema Master & Minerais Críticos">
+  <meta name="twitter:description" content="Mapa completo: Vorcaro, Wanderley, ANM capturada, Serra do Curral, ItaMinas, Moraes, Silveira.">
+
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#0a0c0f;--bg2:#111520;--bg3:#191e2e;
+    --amber:#e8b84b;--amber2:#f5d07a;--amber-dim:#7a5c10;
+    --red:#e85555;--red2:#ff7575;--red-dim:#7a2020;
+    --blue:#4a9eff;--blue2:#7ab8ff;--blue-dim:#1a3d7a;
+    --teal:#2ecfb0;--teal2:#60ffd8;--teal-dim:#0f5a4a;
+    --green:#3ecb6f;--green2:#78f5a8;--green-dim:#1a6030;
+    --orange:#ff8c42;--orange2:#ffb07a;
+    --purple:#b07aff;--purple2:#d0a8ff;
+    --copper:#d4845a;--copper2:#f0a882;
+    --border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);
+    --text:#e8eaf0;--text2:#8a90a8;--text3:#4a5070;
+    --font:'Syne',sans-serif;--mono:'JetBrains Mono',monospace;
+  }
+
+  body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh}
+
+  /* ═══ HEADER ═══ */
+  header{
+    padding:28px 30px 20px;
+    border-bottom:2px solid rgba(232,184,75,0.3);
+    background:linear-gradient(135deg,#0a0c0f 0%,#12100a 60%,#0a0c0f 100%);
+    position:relative;overflow:hidden;
+  }
+  header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 70%,rgba(232,184,75,0.05) 0%,transparent 60%)}
+  header::after{content:'';position:absolute;top:0;right:0;width:300px;height:100%;background:radial-gradient(ellipse at 80% 30%,rgba(74,158,255,0.04) 0%,transparent 60%)}
+  .hbadge{display:inline-flex;align-items:center;gap:6px;background:rgba(232,184,75,0.1);border:1px solid var(--amber-dim);border-radius:4px;padding:4px 12px;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--amber);text-transform:uppercase;margin-bottom:10px}
+  .live-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(232,85,85,0.15);border:1px solid var(--red-dim);border-radius:4px;padding:3px 10px;font-size:10px;font-weight:700;letter-spacing:1.5px;color:var(--red2);text-transform:uppercase;margin-left:8px}
+  .live-dot{width:6px;height:6px;border-radius:50%;background:var(--red2);animation:pulse 1.2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+  header h1{font-size:clamp(20px,4vw,30px);font-weight:800;letter-spacing:-0.5px;color:#fff;line-height:1.1;position:relative;z-index:1}
+  header h1 span{color:var(--amber2)}
+  .hmeta{display:flex;gap:18px;margin-top:10px;flex-wrap:wrap;position:relative;z-index:1}
+  .hm{font-size:12px;color:var(--text2);font-family:var(--mono)}
+  .hm b{color:var(--amber2)}
+
+  /* ═══ NAV ═══ */
+  nav{
+    display:flex;gap:4px;padding:10px 26px;
+    background:rgba(17,21,32,0.95);border-bottom:1px solid var(--border);
+    overflow-x:auto;flex-wrap:wrap;
+    position:sticky;top:0;z-index:100;
+    backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)
+  }
+  .nb{padding:6px 13px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--text2);font-family:var(--font);font-size:12px;font-weight:500;cursor:pointer;transition:all .2s;white-space:nowrap}
+  .nb:hover{border-color:var(--amber-dim);color:var(--amber2)}
+  .nb.act{background:rgba(232,184,75,0.12);border-color:var(--amber);color:var(--amber);font-weight:700}
+
+  /* ═══ MAIN ═══ */
+  main{padding:0 20px 40px;max-width:1200px;margin:0 auto}
+  .sec{display:none;padding-top:6px}
+  .sec.act{display:block}
+
+  /* ═══ KPI CARDS ═══ */
+  .kgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:16px 0 12px}
+  @media(max-width:900px){.kgrid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:480px){.kgrid{grid-template-columns:1fr}}
+  .kcard{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 16px;position:relative;overflow:hidden}
+  .kcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+  .ka::before{background:linear-gradient(90deg,var(--amber),var(--amber2))}
+  .kr::before{background:linear-gradient(90deg,var(--red),var(--red2))}
+  .kb::before{background:linear-gradient(90deg,var(--blue),var(--blue2))}
+  .kt::before{background:linear-gradient(90deg,var(--teal),var(--teal2))}
+  .kg::before{background:linear-gradient(90deg,var(--green),var(--green2))}
+  .ko::before{background:linear-gradient(90deg,var(--copper),var(--copper2))}
+  .kp::before{background:linear-gradient(90deg,var(--purple),var(--purple2))}
+  .klabel{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);margin-bottom:5px}
+  .kval{font-size:22px;font-weight:800;line-height:1}
+  .ksub{font-size:11px;color:var(--text2);margin-top:3px;font-family:var(--mono)}
+  .ka .kval{color:var(--amber2)}.kr .kval{color:var(--red2)}.kb .kval{color:var(--blue2)}.kt .kval{color:var(--teal)}.kg .kval{color:var(--green2)}.ko .kval{color:var(--copper2)}.kp .kval{color:var(--purple2)}
+
+  /* ═══ PANELS ═══ */
+  .pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:14px}
+  @media(max-width:768px){.pgrid{grid-template-columns:1fr}}
+  .pgrid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}
+  @media(max-width:900px){.pgrid3{grid-template-columns:1fr}}
+  .panel{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:18px 20px}
+  .panel-full{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:18px 20px;margin-bottom:14px}
+  .ptitle{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+  .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+  .da{background:var(--amber)}.dr{background:var(--red)}.db{background:var(--blue)}.dt{background:var(--teal)}.dg{background:var(--green)}.do{background:var(--orange)}.dp{background:var(--purple)}.dc{background:var(--copper)}
+
+  /* ═══ TAGS ═══ */
+  .tag{display:inline-block;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:600;margin:2px 2px 2px 0;font-family:var(--mono)}
+  .ta{background:rgba(232,184,75,0.1);color:var(--amber);border:1px solid rgba(232,184,75,0.2)}
+  .tr{background:rgba(232,85,85,0.12);color:var(--red2);border:1px solid rgba(232,85,85,0.2)}
+  .tb{background:rgba(74,158,255,0.1);color:var(--blue2);border:1px solid rgba(74,158,255,0.2)}
+  .tt{background:rgba(46,207,176,0.08);color:var(--teal);border:1px solid rgba(46,207,176,0.18)}
+  .tg{background:rgba(62,203,111,0.1);color:var(--green2);border:1px solid rgba(62,203,111,0.2)}
+  .to{background:rgba(255,140,66,0.1);color:var(--orange2);border:1px solid rgba(255,140,66,0.2)}
+  .tp{background:rgba(176,122,255,0.1);color:var(--purple2);border:1px solid rgba(176,122,255,0.2)}
+  .tc{background:rgba(212,132,90,0.1);color:var(--copper2);border:1px solid rgba(212,132,90,0.2)}
+
+  /* ═══ TIMELINE ═══ */
+  .tli{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)}
+  .tli:last-child{border-bottom:none}
+  .tld{font-family:var(--mono);font-size:11px;color:var(--amber);min-width:110px;font-weight:600;padding-top:2px;flex-shrink:0}
+  .tltitle{font-size:13px;font-weight:600;margin-bottom:3px}
+  .tldesc{font-size:12px;color:var(--text2);line-height:1.5}
+
+  /* ═══ ACTOR CARDS ═══ */
+  .agrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:10px}
+  .acard{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:14px 16px;position:relative}
+  .acard-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px}
+  .aname{font-size:13px;font-weight:700;color:var(--text)}
+  .arole{font-size:11px;color:var(--text2);font-family:var(--mono);margin-bottom:6px}
+  .astatus{font-size:12px;color:var(--text2);line-height:1.5}
+  .abadge{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:2px 7px;border-radius:3px}
+  .ab-red{background:rgba(232,85,85,0.2);color:var(--red2);border:1px solid var(--red-dim)}
+  .ab-amber{background:rgba(232,184,75,0.15);color:var(--amber);border:1px solid var(--amber-dim)}
+  .ab-teal{background:rgba(46,207,176,0.1);color:var(--teal);border:1px solid var(--teal-dim)}
+  .ab-blue{background:rgba(74,158,255,0.1);color:var(--blue2);border:1px solid var(--blue-dim)}
+
+  /* ═══ FLOW / CHAIN ═══ */
+  .chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0}
+  .cn{background:var(--bg3);border:1px solid var(--border2);border-radius:6px;padding:6px 12px;font-size:12px;font-weight:600}
+  .ca{color:var(--amber)}.cr{color:var(--red2)}.cb{color:var(--blue2)}.ct{color:var(--teal)}.cg{color:var(--green2)}
+  .carr{color:var(--text3);font-size:14px;font-weight:400}
+
+  /* ═══ PATTERN CARDS ═══ */
+  .pcard{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px 18px;margin-bottom:10px;border-left:3px solid}
+  .pc-red{border-left-color:var(--red)}
+  .pc-amber{border-left-color:var(--amber)}
+  .pc-blue{border-left-color:var(--blue)}
+  .pc-teal{border-left-color:var(--teal)}
+  .pc-purple{border-left-color:var(--purple)}
+  .pcard-head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+  .pcard-badge{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:4px;font-family:var(--mono)}
+  .pcard-title{font-size:13px;font-weight:700}
+  .pcard-body{font-size:12px;color:var(--text2);line-height:1.7}
+
+  /* ═══ GEO BOX ═══ */
+  .geo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:10px;margin-top:10px}
+  .geo-item{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px 14px}
+  .geo-country{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text2);margin-bottom:4px;font-family:var(--mono)}
+  .geo-val{font-size:18px;font-weight:800;color:var(--amber2)}
+  .geo-note{font-size:11px;color:var(--text2);margin-top:3px}
+
+  /* ═══ RISK ITEMS ═══ */
+  .ritem{padding:10px 12px;border-radius:8px;margin-bottom:8px;border-left:3px solid;background:var(--bg3)}
+  .rcrit{border-left-color:var(--red)}.ralto{border-left-color:var(--orange)}.rmedio{border-left-color:var(--amber)}.rbaixo{border-left-color:var(--teal)}
+  .rtitle{font-size:12px;font-weight:700;margin-bottom:3px}
+  .rdesc{font-size:11px;color:var(--text2);line-height:1.5}
+
+  /* ═══ LACUNA ═══ */
+  .lacuna{background:rgba(176,122,255,0.05);border:1px solid rgba(176,122,255,0.2);border-radius:8px;padding:14px 16px;margin-bottom:10px}
+  .lacuna-head{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--purple2);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+  .lacuna-body{font-size:12px;color:var(--text2);line-height:1.7}
+
+  /* ═══ SOURCE FOOTNOTE ═══ */
+  .footnote{font-size:11px;color:var(--text3);font-family:var(--mono);padding:14px 0;border-top:1px solid var(--border);margin-top:20px;line-height:1.8}
+  .footnote a{color:var(--text2);text-decoration:none}
+  .footnote a:hover{color:var(--amber)}
+
+  /* ═══ ALERT BOX ═══ */
+  .alert{background:rgba(232,85,85,0.06);border:1px solid rgba(232,85,85,0.2);border-radius:8px;padding:14px 16px;margin-bottom:14px}
+  .alert-head{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--red2);margin-bottom:5px}
+  .alert-body{font-size:12px;color:var(--text2);line-height:1.7}
+
+  /* ═══ NOTE BOX ═══ */
+  .note{background:rgba(232,184,75,0.05);border:1px solid rgba(232,184,75,0.15);border-radius:8px;padding:12px 15px;margin:10px 0}
+  .note-body{font-size:12px;color:var(--text2);line-height:1.7}
+  .note-body b{color:var(--amber)}
+
+  /* ═══ SCROLL AREA ═══ */
+  ::-webkit-scrollbar{height:4px;width:4px}
+  ::-webkit-scrollbar-track{background:var(--bg)}
+  ::-webkit-scrollbar-thumb{background:var(--border2);border-radius:4px}
+
+  /* ═══ LICENSE ═══ */
+  .cc0{display:inline-flex;align-items:center;gap:6px;font-size:10px;color:var(--text3);font-family:var(--mono);margin-top:12px}
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <span class="hbadge">⛏ Operação Mineração</span>
+    <span class="live-badge"><span class="live-dot"></span>em investigação</span>
+  </div>
+  <h1>Rede Mineral do <span>Ecossistema Master</span><br>& Minerais Críticos do Brasil</h1>
+  <div class="hmeta">
+    <span class="hm">Período: <b>dez/2023 – abr/2026</b></span>
+    <span class="hm">Arenas: <b>ANM · MME · Serra do Curral · ItaMinas · TCU · CADE</b></span>
+    <span class="hm">Atualizado: <b>15 abr 2026</b></span>
+    <span class="hm">Fonte primária: <b>ainvestigacao.com · Agência Pública · Folha · Metrópoles</b></span>
+  </div>
+  <div class="cc0">CC0 1.0 Universal — Domínio Público · lawfare-timeline.vercel.app</div>
+</header>
+
+<nav id="mainnav">
+  <button class="nb act" onclick="show('overview')">Visão Geral</button>
+  <button class="nb" onclick="show('atores')">Rede de Atores</button>
+  <button class="nb" onclick="show('leilao')">Leilão ANM</button>
+  <button class="nb" onclick="show('tamisa')">Tamisa / Serra do Curral</button>
+  <button class="nb" onclick="show('itaminas')">ItaMinas</button>
+  <button class="nb" onclick="show('geopolitica')">Dimensão Geopolítica</button>
+  <button class="nb" onclick="show('padroes')">Padrões Sistêmicos</button>
+  <button class="nb" onclick="show('lacunas')">Lacunas</button>
+</nav>
+
+<main>
+
+<!-- ══════════════════════════════════════════
+     VISÃO GERAL
+══════════════════════════════════════════ -->
+<div id="sec-overview" class="sec act">
+
+  <div class="kgrid">
+    <div class="kcard ka">
+      <div class="klabel">Leilão ANM — 8ª Rodada</div>
+      <div class="kval">R$54,8M</div>
+      <div class="ksub">compromisso da 3D Minerals</div>
+    </div>
+    <div class="kcard kr">
+      <div class="klabel">Capital fundador (3D Minerals)</div>
+      <div class="kval">R$5 mil</div>
+      <div class="ksub">0,009% do compromisso assumido</div>
+    </div>
+    <div class="kcard kb">
+      <div class="klabel">Áreas arrematadas</div>
+      <div class="kval">116</div>
+      <div class="ksub">6.462 km² — 7 estados brasileiros</div>
+    </div>
+    <div class="kcard kt">
+      <div class="klabel">Redução de lance pedida</div>
+      <div class="kval">–90%</div>
+      <div class="ksub">de R$37,5M para R$3,7M (Parauapebas)</div>
+    </div>
+    <div class="kcard ka">
+      <div class="klabel">ItaMinas — Venda Vorcaro</div>
+      <div class="kval">R$700M</div>
+      <div class="ksub">50% em earnout, nov/2025 (suspeita)</div>
+    </div>
+    <div class="kcard kr">
+      <div class="klabel">Dano estimado — Serra do Curral</div>
+      <div class="kval">R$832M</div>
+      <div class="ksub">extração ilegal — inquérito PF (Kallas)</div>
+    </div>
+    <div class="kcard kb">
+      <div class="klabel">Reserva de nióbio — Brasil</div>
+      <div class="kval">94%</div>
+      <div class="ksub">do total mundial — disputa geopolítica</div>
+    </div>
+    <div class="kcard kt">
+      <div class="klabel">Demanda minerais críticos até 2050</div>
+      <div class="kval">+1.500%</div>
+      <div class="ksub">terras raras · nióbio · níquel · tântalo</div>
+    </div>
+  </div>
+
+  <div class="alert">
+    <div class="alert-head">⚠ Status da investigação — abr/2026</div>
+    <div class="alert-body">
+      O TCU decidiu por unanimidade em 8 de abril de 2026 autorizar a ANM a retomar lotes com suspeita de irregularidade, citando expressamente a 3D Minerals. A Procuradoria da República pediu a suspensão integral do leilão em agosto de 2025. A liquidação do Banco Master transferiu o penhor de 50% das ações da 3D Minerals para a massa falida. A venda da fatia de Vorcaro na ItaMinas está sob apuração do liquidante por indícios de preço vil.
+    </div>
+  </div>
+
+  <div class="pgrid">
+    <div class="panel">
+      <div class="ptitle"><span class="dot da"></span>Cadeia Central Documentada</div>
+      <div class="chain">
+        <span class="cn ca">Banco Master<br><small style="font-size:10px;color:var(--text2)">Vorcaro</small></span>
+        <span class="carr">→</span>
+        <span class="cn ca">FIP Victoria Falls</span>
+        <span class="carr">→</span>
+        <span class="cn ct">5W Participações<br><small style="font-size:10px;color:var(--text2)">família Wanderley</small></span>
+        <span class="carr">→</span>
+        <span class="cn ct">Tamisa / Mineradoras</span>
+      </div>
+      <div class="chain">
+        <span class="cn ca">Banco Master<br><small style="font-size:10px;color:var(--text2)">empréstimo</small></span>
+        <span class="carr">→</span>
+        <span class="cn cr">3D Minerals<br><small style="font-size:10px;color:var(--text2)">R$5k capital</small></span>
+        <span class="carr">→</span>
+        <span class="cn cr">8ª Rodada ANM<br><small style="font-size:10px;color:var(--text2)">116 áreas / R$54,8M</small></span>
+      </div>
+      <div class="chain">
+        <span class="cn ca">Vorcaro + AVG + Geo</span>
+        <span class="carr">→</span>
+        <span class="cn cb">RDA Mineração S.A.</span>
+        <span class="carr">→</span>
+        <span class="cn cb">ItaMinas<br><small style="font-size:10px;color:var(--text2)">~US$300M</small></span>
+        <span class="carr">→</span>
+        <span class="cn cr">Venda R$700M<br><small style="font-size:10px;color:var(--text2)">3 dias antes da prisão?</small></span>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot dr"></span>Conexão com Compliance Zero</div>
+      <div class="tli">
+        <div class="tld">FIP Cowan → FIP Victoria Falls</div>
+        <div><div class="tltitle">Estrutura criada pelo Master para administrar interesses Wanderley</div><div class="tldesc">Fundo da família Cowan/Wanderley migrou para o ecossistema Master, que assumiu o controle como controlador do FIP Victoria Falls com Smart Agro (Reag) como administradora. Padrão FIDC/FIP recorrente já identificado em Carbono Oculto e Compliance Zero.</div></div>
+      </div>
+      <div class="tli">
+        <div class="tld">Fabiano Zettel</div>
+        <div><div class="tltitle">Cunhado de Vorcaro — sócio na Tamisa e no jato PS-FSW</div><div class="tldesc">WJ Consultoria de Zettel era sócia minoritária da Tamisa S.A. O mesmo Zettel foi preso na 2ª fase da Compliance Zero (jan/2026) tentando embarcar para Dubai. Sócio com Saulo Wanderley na FSW SPE Ltda. (jato PS-FSW).</div></div>
+      </div>
+      <div class="tli">
+        <div class="tld">Operação Rejeito</div>
+        <div><div class="tltitle">Delegado da PF indicado pelo MME preso em set/2025</div><div class="tldesc">Rodrigo de Melo Teixeira (delegado PF) e Caio Seabra Filho (diretor ANM) presos. Rodrigo Franco (ex-FEAM) e Breno Lasmar (IEF) afastados por propina a mineradoras. O MME supervisionava todos esses órgãos.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pgrid">
+    <div class="panel">
+      <div class="ptitle"><span class="dot db"></span>Conexão Alexandre de Moraes — Jato PS-FSW</div>
+      <div class="note">
+        <div class="note-body">
+          Em <b>7 de agosto de 2025</b> — oito dias após ser sancionado pelo OFAC com base na Lei Magnitsky —, Alexandre de Moraes e a mulher Viviane Barci de Moraes aparecem nos registros de passageiros do <b>Dassault Falcon 2000 PS-FSW</b>, de propriedade da FSW SPE Ltda. Os sócios da FSW SPE são: Saulo Wanderley Filho (tio de Eduardo "Duda" Wanderley), Fabiano Zettel (cunhado de Vorcaro, preso na Compliance Zero) e Marcelo Cohen (holding Belvitur / BeFly, financiada pelo Master). A aeronave não tem autorização ANAC para táxi aéreo — é de uso estritamente privado. Este foi o 8º deslocamento do casal identificado em cinco meses em aeronaves ligadas ao entorno de Vorcaro.
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot dp"></span>Contexto: Disputa Geopolítica Subjacente</div>
+      <div class="note">
+        <div class="note-body">
+          O Brasil detém <b>94% das reservas mundiais de nióbio</b>, 23% das reservas de terras raras e 12% do níquel global. Em fevereiro de 2026, os EUA lançaram o "Projeto Cofre" — plano de US$ 12 bilhões para constituir uma reserva estratégica de minerais críticos e reduzir a dependência da China. A 8ª Rodada da ANM — o leilão capturado pela 3D Minerals — foi desenhada especificamente para <b>minerais críticos</b>: a categoria que concentra a principal disputa geopolítica entre EUA e China pela dominância na transição energética e na indústria de defesa. Ausência de MLAT ativado com os EUA — apesar de violações OFAC documentadas.
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════
+     REDE DE ATORES
+══════════════════════════════════════════ -->
+<div id="sec-atores" class="sec">
+
+  <div class="panel-full">
+    <div class="ptitle"><span class="dot da"></span>Núcleo Master — Braço Mineral</div>
+    <div class="agrid">
+      <div class="acard">
+        <div class="acard-top"><div class="aname">Daniel Vorcaro</div><div class="abadge ab-red">preso 2x</div></div>
+        <div class="arole">Banco Master — controlador</div>
+        <div class="astatus">Financiou 3D Minerals via empréstimo com penhor de 50% das ações. Sócio de 50% na ItaMinas via RDA Mineração. Vendeu ItaMinas por R$700M antes da prisão (nov/2025). Chamou Wanderley de "meu sócio" em mensagem para Martha Graeff.</div>
+        <div style="margin-top:8px"><span class="tag tr">Compliance Zero</span><span class="tag ta">Mineração</span><span class="tag tr">ItaMinas</span></div>
+      </div>
+      <div class="acard">
+        <div class="acard-top"><div class="aname">Fabiano Zettel</div><div class="abadge ab-red">preso</div></div>
+        <div class="arole">Cunhado de Vorcaro</div>
+        <div class="astatus">Sócio na WJ Consultoria (sócia minoritária da Tamisa). Sócio na FSW SPE Ltda. (jato PS-FSW) junto a Saulo Wanderley e Marcelo Cohen. Preso na 2ª fase da Compliance Zero (jan/2026) tentando embarcar para Dubai.</div>
+        <div style="margin-top:8px"><span class="tag tr">Compliance Zero</span><span class="tag ta">Tamisa</span><span class="tag tb">Jato PS-FSW</span></div>
+      </div>
+      <div class="acard">
+        <div class="acard-top"><div class="aname">Eduardo "Duda" Wanderley</div><div class="abadge ab-amber">investigado</div></div>
+        <div class="arole">Empresário BH — sócio-admin 3D Minerals</div>
+        <div class="astatus">Reuniu-se com Vorcaro na mansão de Brasília em 27/out/2024 (segundo turno). Fundou ou ingressou em 4 mineradoras entre dez/2023 e jun/2024. "Moreno" da Operação Patmos (Lava Jato / Aécio). Empresa Conserva de Estradas usada para intermediar doação ao PSDB (PGR Dodge, 2018).</div>
+        <div style="margin-top:8px"><span class="tag tr">3D Minerals</span><span class="tag ta">Serra Verde</span><span class="tag to">Lava Jato / Patmos</span></div>
+      </div>
+      <div class="acard">
+        <div class="acard-top"><div class="aname">Saulo Wanderley Filho</div><div class="abadge ab-amber">monitorado</div></div>
+        <div class="arole">Tio de Eduardo — Construtora Cowan</div>
+        <div class="astatus">Sócio-administrador da FSW SPE Ltda. (jato PS-FSW) junto a Zettel e Cohen. A Cowan apareceu em vistorias na área da Empabra. Consórcio Cowan Conserva investigado pela PGR por intermediar doação ao PSDB.</div>
+        <div style="margin-top:8px"><span class="tag tb">Jato PS-FSW</span><span class="tag to">Cowan</span><span class="tag ta">PSDB / Lava Jato</span></div>
+      </div>
+      <div class="acard">
+        <div class="acard-top"><div class="aname">Rodrigo Medrado Geo</div><div class="abadge ab-amber">monitorado</div></div>
+        <div class="arole">Família Geo — hub entre Wanderley e ItaMinas</div>
+        <div class="astatus">Sócio-administrador da 5A Holding Participações. Administrador da Serra Verde Mineração desde o dia 1. Diretor da RDA Mineração S.A. (veículo de R$1,27bi para compra da ItaMinas). Diretor da ItaMinas desde nov/2024.</div>
+        <div style="margin-top:8px"><span class="tag ta">Serra Verde</span><span class="tag tb">RDA Mineração</span><span class="tag tb">ItaMinas</span></div>
+      </div>
+      <div class="acard">
+        <div class="acard-top"><div class="aname">Lucas Kallas</div><div class="abadge ab-amber">investigado</div></div>
+        <div class="arole">Sócio de Vorcaro na Biomm</div>
+        <div class="astatus">Indicado por Alexandre Silveira ao Conselhão de Lula em mai/2023 — quando já era citado em inquérito da PF sobre extração ilegal na Serra do Curral (dano: R$832M). Green Metals / Empabra. Linha de comando MME → ANM → Serra do Curral.</div>
+        <div style="margin-top:8px"><span class="tag tr">Serra do Curral</span><span class="tag to">Empabra</span><span class="tag tp">MME / Silveira</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pgrid">
+    <div class="panel">
+      <div class="ptitle"><span class="dot dp"></span>Atores Institucionais — Órgãos Capturados</div>
+      <div class="agrid" style="grid-template-columns:1fr">
+        <div class="acard">
+          <div class="acard-top"><div class="aname">Alexandre Silveira — MME</div><div class="abadge ab-amber">investigado</div></div>
+          <div class="arole">Ministério de Minas e Energia</div>
+          <div class="astatus">Supervisiona a ANM e o SGB. Indicou Kallas ao Conselhão quando já investigado pela PF. Não negou conhecer Wanderley, afirmou ser "natural" para quem tem vida pública em MG há 30 anos. Reuniu com Vorcaro no Planalto em dez/2024 para discutir situação do banco.</div>
+        </div>
+        <div class="acard">
+          <div class="acard-top"><div class="aname">Diretoria ANM</div><div class="abadge ab-red">voto irregular</div></div>
+          <div class="arole">Agência Nacional de Mineração</div>
+          <div class="astatus">Autorizou redução de 90% do lance da 3D Minerals contrariando parecer técnico e o próprio diretor-geral Mauro Sousa. Caio Seabra Filho (diretor ANM) preso na Operação Rejeito. TCU abriu diligências. MPF pediu suspensão integral do leilão.</div>
+        </div>
+        <div class="acard">
+          <div class="acard-top"><div class="aname">Marília Palhares Machado — Iepha-MG</div><div class="abadge ab-amber">nomeada politicamente</div></div>
+          <div class="arole">Instituto Estadual do Patrimônio Histórico e Artístico — MG</div>
+          <div class="astatus">Empossada por Zema em mai/2022 — o mesmo mês do TC da Tamisa. Prima em 1º grau do diretor responsável da Tamisa (Guilherme Machado). O Iepha é consultado nos processos de licenciamento de mineradoras em MG.</div>
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot db"></span>Conexão Judicial — Jato PS-FSW</div>
+      <div class="agrid" style="grid-template-columns:1fr">
+        <div class="acard">
+          <div class="acard-top"><div class="aname">Alexandre de Moraes</div><div class="abadge ab-red">OFAC / Magnitsky</div></div>
+          <div class="arole">Ministro STF</div>
+          <div class="astatus">Sancionado pelo OFAC em jul/2025. Registros de passageiro no PS-FSW em 7/ago/2025 — 8 dias após sanção. 8 deslocamentos em 5 meses em aeronaves do entorno de Vorcaro. Pagamentos do Master ao escritório de Viviane: R$80,2M em 22 meses sem desconto correspondente ao valor dos voos (checagem Estadão). Caso Compliance Zero tramitou inicialmente com Toffoli; redistribuído para André Mendonça em fev/2026.</div>
+        </div>
+        <div class="acard">
+          <div class="acard-top"><div class="aname">Dias Toffoli</div><div class="abadge ab-amber">relator removido</div></div>
+          <div class="arole">Ministro STF — ex-relator Compliance Zero</div>
+          <div class="astatus">Toffoli e Zettel tinham relação indireta no resort Tayayá via Maridt Participações (irmãos de Toffoli) e Fundo Arleen (Zettel). PF encontrou nos arquivos de Vorcaro mensagens diretas entre os dois combinando encontros. Relatoria transferida para Mendonça em fev/2026.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════
+     LEILÃO ANM
+══════════════════════════════════════════ -->
+<div id="sec-leilao" class="sec">
+
+  <div class="kgrid" style="grid-template-columns:repeat(3,1fr)">
+    <div class="kcard ka">
+      <div class="klabel">8ª Rodada ANM</div>
+      <div class="kval">116 áreas</div>
+      <div class="ksub">6.462 km² em 7 estados</div>
+    </div>
+    <div class="kcard kr">
+      <div class="klabel">Diferença de lance (Parauapebas)</div>
+      <div class="kval">4.114%</div>
+      <div class="ksub">R$37,5M vs R$890K (2ª oferta)</div>
+    </div>
+    <div class="kcard kb">
+      <div class="klabel">Redução pedida após vitória</div>
+      <div class="kval">–R$33,8M</div>
+      <div class="ksub">"erro de digitação" — 90% de corte</div>
+    </div>
+  </div>
+
+  <div class="panel-full">
+    <div class="ptitle"><span class="dot da"></span>Cronologia do Leilão e das Irregularidades</div>
+    <div class="tli">
+      <div class="tld">20 dez 2023</div>
+      <div><div class="tltitle">Fundação da Serra Verde Mineração</div><div class="tldesc">1ª mineradora do grupo Wanderley. Capital: R$500 mil. Rodrigo Medrado Geo já como administrador e 5A Holding como sócia — a mesma estrutura que se repetirá nas empresas seguintes.</div></div>
+    </div>
+    <div class="tli">
+      <div class="tld">jun 2024</div>
+      <div><div class="tltitle">Sprint de 20 dias — 3 mineradoras + 4 holdings</div><div class="tldesc">3D Minerals Ltda., Brazil Minerals Ltda. e Conta História Mineração Ltda. abertas em menos de três semanas. Capitais de R$5 mil cada. Ways Participações, Way Infra, Way Minerals e MN25 constituídas em paralelo. Todos os endereços concentrados no prédio da Rua Venezuela, 208, Sion, BH.</div></div>
+    </div>
+    <div class="tli">
+      <div class="tld">ago 2024</div>
+      <div><div class="tltitle">3D Minerals entra na 8ª Rodada — 46 dias após fundação</div><div class="tldesc">Empresa com R$5 mil de capital e zero histórico operacional participa do maior leilão de minerais críticos da história do Brasil. 116 áreas distribuídas em 6.462 km²: 101 de cobre, 13 de níquel e 2 de tântalo. Compromisso assumido: R$54,8 milhões.</div></div>
+    </div>
+    <div class="tli">
+      <div class="tld">set 2024</div>
+      <div><div class="tltitle">3D Minerals declarada vencedora</div><div class="tldesc">Para área de cobre em Parauapebas (PA): lance de R$37,5 milhões. Segunda maior oferta: R$890 mil. Diferença de 4.114%. Empresa ganha com folga em praticamente todos os lotes disputados.</div></div>
+    </div>
+    <div class="tli">
+      <div class="tld">out 2024</div>
+      <div><div class="tltitle">"Erro de digitação" — pedido de redução de 90%</div><div class="tldesc">Após ser declarada vencedora, 3D Minerals pede redução do lance de R$37,5M para R$3,7M alegando erro. A diretoria colegiada da ANM autoriza a correção, contrariando o parecer técnico da autarquia. Único voto contrário: diretor-geral Mauro Sousa.</div></div>
+    </div>
+    <div class="tli">
+      <div class="tld">27 out 2024</div>
+      <div><div class="tltitle">Reunião Wanderley–Vorcaro na mansão de Brasília</div><div class="tldesc">No dia do segundo turno das eleições municipais, Eduardo Wanderley (3D Minerals) reúne-se com Vorcaro na mansão do QI 26, Lago Sul. Vorcaro relata à namorada Martha: "To em reuniao com Duda aqui" e depois "Ele e ministro." Identidade do ministro não confirmada.</div></div>
+    </div>
+    <div class="tli">
+      <div class="tld">nov 2024</div>
+      <div><div class="tltitle">Banco Master formaliza empréstimo à 3D Minerals</div><div class="tldesc">3 meses após o leilão, sem recursos próprios para honrar o compromisso, 3D Minerals recebe empréstimo do Banco Master com penhor de 50% das ações como garantia. O dinheiro foi usado para quitar a dívida do leilão. À época, o BC já investigava o Master sigilosamente desde dez/2023.</div></div>
+    </div>
+    <div class="tli">
+      <div class="tld">ago 2025</div>
+      <div><div class="tltitle">MPF pede suspensão integral do leilão</div><div class="tldesc">Procuradoria da República vai além das diligências do TCU e solicita a suspensão total da 8ª Rodada ANM. TCU já havia intervido e cancelado a oferta alterada da 3D Minerals. Investigações em andamento.</div></div>
+    </div>
+    <div class="tli">
+      <div class="tld">18 nov 2025</div>
+      <div><div class="tltitle">Compliance Zero — liquidação do Master</div><div class="tldesc">Com a liquidação extrajudicial do Banco Master, o penhor de 50% das ações da 3D Minerals passa para a massa falida. A empresa fundada com R$5 mil de capital, detentora de 116 áreas de minerais críticos, torna-se ativo do liquidante.</div></div>
+    </div>
+    <div class="tli">
+      <div class="tld">8 abr 2026</div>
+      <div><div class="tltitle">TCU autoriza retomada dos lotes suspeitos — citando 3D Minerals</div><div class="tldesc">Plenário do TCU decide por unanimidade autorizar a ANM a retomar lotes com irregularidades. A 3D Minerals é citada expressamente na decisão. Investigação em curso no momento da publicação.</div></div>
+    </div>
+  </div>
+
+  <div class="panel-full">
+    <div class="ptitle"><span class="dot dr"></span>Anatomia da Irregularidade no Leilão</div>
+    <div class="pgrid">
+      <div>
+        <div class="ritem rcrit">
+          <div class="rtitle">Lance desproporcional — 4.114% acima do segundo colocado</div>
+          <div class="rdesc">Empresa com R$5 mil de capital apresenta lance de R$37,5M para uma área, quando o segundo concorrente ofertou R$890K. Nenhuma empresa legítima sem funding prévio apresentaria tal lance sem garantia de financiamento externo — o que só se tornou explícito um mês depois (reunião com Vorcaro) e três meses depois (empréstimo formalizado).</div>
+        </div>
+        <div class="ritem rcrit">
+          <div class="rtitle">Decisão da diretoria contra parecer técnico e diretor-geral</div>
+          <div class="rdesc">A autorização da redução de 90% partiu da diretoria colegiada, contra o parecer técnico da própria ANM e contra o único voto do diretor-geral Mauro Sousa. Dois dos diretores da ANM foram depois presos na Operação Rejeito.</div>
+        </div>
+      </div>
+      <div>
+        <div class="ritem ralto">
+          <div class="rtitle">Empréstimo retroativo do banco sob investigação sigilosa</div>
+          <div class="rdesc">O Banco Central havia aberto inquérito sigiloso sobre o Master em dezembro de 2023 — antes mesmo da fundação da 3D Minerals. O empréstimo foi formalizado em novembro de 2024, quando o inquérito estava ativo e o banco em espiral de deterioração.</div>
+        </div>
+        <div class="ritem ralto">
+          <div class="rtitle">Minerals críticos — implicação de segurança nacional</div>
+          <div class="rdesc">O leilão foi especificamente desenhado para minerais críticos (nióbio, terras raras, níquel, tântalo). A captura regulatória de áreas desse perfil, com financiamento de banco insolvente e penhor transferido para massa falida, cria incerteza sobre quem controla esses ativos estratégicos.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════
+     TAMISA / SERRA DO CURRAL
+══════════════════════════════════════════ -->
+<div id="sec-tamisa" class="sec">
+
+  <div class="panel-full">
+    <div class="ptitle"><span class="dot dc"></span>Tamisa S.A. — Serra do Curral, Belo Horizonte</div>
+    <div class="pgrid">
+      <div>
+        <div class="note"><div class="note-body">
+          A <b>Taquaril S.A. (Tamisa)</b> extrai minério de ferro de área tombada pelo Iphan, vizinha ao quilombo Manzo Ngunzo Kaiango, às encostas da Serra do Curral em Belo Horizonte. Operou por anos amparada em <b>Termos de Compromisso (TCs) e Termos de Ajustamento de Conduta (TACs)</b> firmados durante o governo Romeu Zema, dispensando licença ambiental plena.
+        </div></div>
+        <div class="tli">
+          <div class="tld">mai 2022</div>
+          <div><div class="tltitle">Tamisa assina TC com o governo Zema</div><div class="tldesc">No mesmo mês, Zema empossa Marília Palhares Machado na presidência do Iepha — prima em 1º grau do diretor responsável da Tamisa, Guilherme Machado. O Iepha é consultado nos licenciamentos.</div></div>
+        </div>
+        <div class="tli">
+          <div class="tld">2019–2022</div>
+          <div><div class="tltitle">FIP Victoria Falls entra como sócio majoritário</div><div class="tldesc">O fundo controlado pelo Master chega a deter mais de 90% do capital da Tamisa. WJ Consultoria de Fabiano Zettel (cunhado de Vorcaro) como sócia minoritária.</div></div>
+        </div>
+        <div class="tli">
+          <div class="tld">set 2025</div>
+          <div><div class="tltitle">Operação Rejeito alcança o escalão ambiental estadual</div><div class="tldesc">Rodrigo Franco (ex-FEAM) preso preventivamente. Breno Lasmar (IEF) afastado. Ambos suspeitos de receber propina para favorecer mineradoras com licenças, TACs e TCs durante o governo Zema.</div></div>
+        </div>
+        <div class="tli">
+          <div class="tld">9 mar 2026</div>
+          <div><div class="tltitle">Liminar suspende 57 processos na Serra do Curral</div><div class="tldesc">Decisão liminar da Justiça Federal acolhe ação civil pública do quilombo Manzo. Todas as atividades minerárias na Serra do Curral suspensas. ANM multada em R$4 milhões por ignorar autuações, embargos e ordens anteriores.</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="ritem rcrit">
+          <div class="rtitle">Operação coordenada de 4 mineradoras — CPI Municipal (2019)</div>
+          <div class="rdesc">CPI da Mineração da Câmara Municipal de BH identificou que Tamisa, Empabra, Fleurs Global e Gute Sitch não agiam como concorrentes, mas de forma coordenada. Em vistorias na área da Empabra, vereadores encontraram materiais com inscrição da Cowan — a construtora da família Wanderley.</div>
+        </div>
+        <div class="ritem rcrit">
+          <div class="rtitle">Lucas Kallas / Empabra — mesma área, mesmo esquema</div>
+          <div class="rdesc">Lucas Kallas (sócio de Vorcaro na Biomm) é apontado pela PF como integrante do ecossistema da Empabra, que operava também na Serra do Curral. Dano estimado da extração ilegal: R$832 milhões.</div>
+        </div>
+        <div class="ritem ralto">
+          <div class="rtitle">Fleurs e Gute — grupo Alan Cavalcante / ex-dep. João Lages (MDB)</div>
+          <div class="rdesc">PF concluiu no inquérito da Operação Rejeito que Fleurs Global e Gute Sitch pertenciam ao mesmo grupo: Alan Cavalcante, Helder Freitas e ex-deputado João Alberto Lages (MDB). Rede de captura regulatória ambiental com múltiplos braços políticos.</div>
+        </div>
+        <div class="ritem rmedio">
+          <div class="rtitle">Quilombo Manzo Ngunzo Kaiango — impacto direto</div>
+          <div class="rdesc">Comunidade quilombola vizinha à Serra do Curral foi diretamente afetada pelas extrações. A ação civil pública do quilombo foi o instrumento que finalmente obteve a liminar de suspensão em março de 2026, após anos de embargos ignorados pela ANM.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════
+     ITAMINAS
+══════════════════════════════════════════ -->
+<div id="sec-itaminas" class="sec">
+
+  <div class="kgrid" style="grid-template-columns:repeat(3,1fr)">
+    <div class="kcard ka">
+      <div class="klabel">Aquisição — RDA Mineração</div>
+      <div class="kval">~US$300M</div>
+      <div class="ksub">Vorcaro 50% + AVG/Geo 50%</div>
+    </div>
+    <div class="kcard kr">
+      <div class="klabel">Venda da fatia Vorcaro</div>
+      <div class="kval">R$700M</div>
+      <div class="ksub">earnout — suspeita de preço vil</div>
+    </div>
+    <div class="kcard kb">
+      <div class="klabel">Capital pós-reestruturação</div>
+      <div class="kval">R$876,6M</div>
+      <div class="ksub">aprovada CADE 1º nov 2024</div>
+    </div>
+  </div>
+
+  <div class="panel-full">
+    <div class="ptitle"><span class="dot db"></span>Cronologia ItaMinas</div>
+    <div class="tli">
+      <div class="tld">jan 2024</div>
+      <div><div class="tltitle">Rodrigo Medrado Geo na RDA Mineração S.A.</div><div class="tldesc">O mesmo administrador que entrou na Serra Verde dos Wanderley no primeiro dia já figurava como diretor da RDA Mineração — veículo de R$1,27bi criado para a compra da ItaMinas — antes mesmo do CADE aprovar a operação.</div></div>
+    </div>
+    <div class="tli">
+      <div class="tld">1 nov 2024</div>
+      <div><div class="tltitle">CADE aprova aquisição da ItaMinas</div><div class="tldesc">Mesmo mês em que o Banco Master formalizou o empréstimo à 3D Minerals. Vorcaro (50%) + Rodrigo Gontijo/AVG + Argeu Geo (50%) consolidam a maior mineradora de ferro de Brumadinho via RDA Mineração.</div></div>
+    </div>
+    <div class="tli">
+      <div class="tld">mai 2025</div>
+      <div><div class="tltitle">Trio quita antecipadamente ~US$155M com "recursos próprios e debêntures"</div><div class="tldesc">Parcelas finais quitadas antecipadamente enquanto o Master estava em espiral de liquidação. Origem dos recursos e identidade dos subscritores das debêntures não esclarecidas publicamente.</div></div>
+    </div>
+    <div class="tli">
+      <div class="tld">set–nov 2025</div>
+      <div><div class="tltitle">Venda da fatia de Vorcaro — data disputada</div><div class="tldesc">ItaMinas afirma que a venda foi concluída em set/2025. Valor Econômico e O Tempo reportam nov/2025 — dias antes da prisão de Vorcaro. O liquidante do Master encontrou nos documentos internos indícios de venda por "valor vil". ItaMinas invocou acordo de confidencialidade sobre o preço real.</div></div>
+    </div>
+    <div class="tli">
+      <div class="tld">17 nov 2025</div>
+      <div><div class="tltitle">Vorcaro preso — Operação Compliance Zero</div><div class="tldesc">Preso no Aeroporto de Guarulhos tentando embarcar para Dubai. Liquidação do Master decretada no dia seguinte. A massa falida herdou as investigações sobre a venda da ItaMinas e o penhor da 3D Minerals.</div></div>
+    </div>
+  </div>
+
+  <div class="alert">
+    <div class="alert-head">⚠ Questão em aberto — Liquidante vs ItaMinas</div>
+    <div class="alert-body">
+      O liquidante do Banco Master encontrou nos documentos internos do banco indícios de venda da fatia da ItaMinas por "valor vil" — preço significativamente abaixo do mercado. A ItaMinas nega irregularidades, afirma que os valores divulgados "não guardam correspondência com os termos pactuados", invoca confidencialidade sobre o preço real e declara nunca ter sido consultada pelo liquidante. A estrutura de earnout, a divergência sobre a data de fechamento e a ausência de informação sobre os subscritores das debêntures de US$155M permanecem sem resposta pública.
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════
+     DIMENSÃO GEOPOLÍTICA
+══════════════════════════════════════════ -->
+<div id="sec-geopolitica" class="sec">
+
+  <div class="panel-full">
+    <div class="ptitle"><span class="dot db"></span>Brasil — Reservas de Minerais Críticos (posição global)</div>
+    <div class="geo-grid">
+      <div class="geo-item">
+        <div class="geo-country">Nióbio</div>
+        <div class="geo-val">94%</div>
+        <div class="geo-note">das reservas mundiais</div>
+      </div>
+      <div class="geo-item">
+        <div class="geo-country">Terras Raras</div>
+        <div class="geo-val">2ª</div>
+        <div class="geo-note">maior reserva do mundo</div>
+      </div>
+      <div class="geo-item">
+        <div class="geo-country">Níquel</div>
+        <div class="geo-val">12%</div>
+        <div class="geo-note">do total global</div>
+      </div>
+      <div class="geo-item">
+        <div class="geo-country">Demanda 2050</div>
+        <div class="geo-val">+1.500%</div>
+        <div class="geo-note">terras raras e minerais de transição</div>
+      </div>
+      <div class="geo-item">
+        <div class="geo-country">Projeto Cofre (EUA)</div>
+        <div class="geo-val">US$12B</div>
+        <div class="geo-note">reserva estratégica americana — fev/2026</div>
+      </div>
+      <div class="geo-item">
+        <div class="geo-country">MLAT com EUA</div>
+        <div class="geo-val">não ativado</div>
+        <div class="geo-note">apesar de violações OFAC documentadas</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pgrid">
+    <div class="panel">
+      <div class="ptitle"><span class="dot db"></span>Por que o Leilão ANM importa geopoliticamente</div>
+      <div class="pcard pc-blue">
+        <div class="pcard-head"><span class="pcard-badge" style="background:rgba(74,158,255,0.15);color:var(--blue2);border:1px solid rgba(74,158,255,0.25)">CONTEXTO</span><span class="pcard-title">A 8ª Rodada era especificamente de minerais críticos</span></div>
+        <div class="pcard-body">A ANM não realizou um leilão genérico de mineração. A 8ª Rodada foi desenhada para minerais críticos — a categoria que define a nova geopolítica da transição energética e da indústria de defesa. Nióbio, terras raras, níquel e tântalo são insumos para baterias EV, satélites, armamentos e semicondutores. A disputa EUA–China por essas cadeias de fornecimento é o conflito geoeconômico central da década.</div>
+      </div>
+      <div class="pcard pc-blue">
+        <div class="pcard-head"><span class="pcard-badge" style="background:rgba(74,158,255,0.15);color:var(--blue2);border:1px solid rgba(74,158,255,0.25)">RISCO</span><span class="pcard-title">Quem controla as 116 áreas com a liquidação do Master?</span></div>
+        <div class="pcard-body">Com o penhor de 50% das ações da 3D Minerals transferido para a massa falida, e a investigação do TCU sobre as irregularidades do leilão em curso, o status jurídico e econômico das 116 áreas arrematadas está em suspense. Em um contexto de disputa geopolítica ativa por minerais críticos, essa incerteza não é apenas jurídica — é de segurança nacional.</div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot dr"></span>OFAC / Magnitsky — dimensão internacional</div>
+      <div class="pcard pc-red">
+        <div class="pcard-head"><span class="pcard-badge" style="background:rgba(232,85,85,0.15);color:var(--red2);border:1px solid rgba(232,85,85,0.25)">SANÇÃO</span><span class="pcard-title">Alexandre de Moraes — sancionado OFAC jul/2025</span></div>
+        <div class="pcard-body">A sanção do OFAC com base na Lei Magnitsky implica bloqueio de bens sob jurisdição americana, proibição de transações com pessoas e empresas dos EUA, e revogação de visto para Moraes e familiares. Oito dias após a sanção, Moraes foi identificado nos registros do jato PS-FSW — de propriedade de sócios de Vorcaro. A questão de quem pagou o voo e como a aeronave chegou à agenda do casal permanece sem resposta.</div>
+      </div>
+      <div class="pcard pc-amber">
+        <div class="pcard-head"><span class="pcard-badge" style="background:rgba(232,184,75,0.15);color:var(--amber);border:1px solid rgba(232,184,75,0.25)">LACUNA</span><span class="pcard-title">MLAT com EUA não ativado</span></div>
+        <div class="pcard-body">Apesar de violações OFAC documentadas (petróleo russo via Houston, Delaware LLCs em operações mapeadas), o Tratado de Assistência Jurídica Mútua com os EUA não foi formalmente ativado. As Delaware LLCs identificadas nas cadeias de lavagem — em Operação Hydra e Poço de Lobato — continuam sem contrapartes americanas no inquérito.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════
+     PADRÕES SISTÊMICOS
+══════════════════════════════════════════ -->
+<div id="sec-padroes" class="sec">
+
+  <div class="panel-full">
+    <div class="ptitle"><span class="dot da"></span>Padrões Sistêmicos Identificados neste Caso</div>
+
+    <div class="pcard pc-red">
+      <div class="pcard-head">
+        <span class="pcard-badge" style="background:rgba(232,85,85,0.15);color:var(--red2);border:1px solid rgba(232,85,85,0.25)">P3</span>
+        <span class="pcard-title">Captura Judicial de Emergência</span>
+      </div>
+      <div class="pcard-body">
+        O padrão mais presente: relações documentadas entre Vorcaro e os ministros Moraes (voos no PS-FSW + pagamentos ao escritório de Viviane) e Toffoli (mensagens diretas + relacionamento via Zettel no resort Tayayá). O caso Compliance Zero foi inicialmente distribuído a Toffoli — o mesmo ministro com vínculos documentados com o principal réu. A redistribuição para André Mendonça ocorreu apenas em fev/2026, após pressão pública.
+      </div>
+    </div>
+
+    <div class="pcard pc-amber">
+      <div class="pcard-head">
+        <span class="pcard-badge" style="background:rgba(232,184,75,0.15);color:var(--amber);border:1px solid rgba(232,184,75,0.25)">P5</span>
+        <span class="pcard-title">Cofres Públicos como Vetor de Captura</span>
+      </div>
+      <div class="pcard-body">
+        A 8ª Rodada da ANM é um recurso público — a concessão de áreas minerais pertencentes à União. A captura regulatória documentada (parecer técnico ignorado, diretores da ANM presos, delegado da PF indicado pelo MME também preso) revela o Estado como mecanismo de transferência de ativos estratégicos para o ecossistema privado. O padrão de TCs/TACs concedidos durante o governo Zema à Tamisa segue a mesma lógica: cofres públicos (aqui, o patrimônio ambiental público) como vetor.
+      </div>
+    </div>
+
+    <div class="pcard pc-teal">
+      <div class="pcard-head">
+        <span class="pcard-badge" style="background:rgba(46,207,176,0.12);color:var(--teal);border:1px solid rgba(46,207,176,0.2)">P7</span>
+        <span class="pcard-title">Captura Transgeracional de Estrutura Regulatória</span>
+      </div>
+      <div class="pcard-body">
+        A Tamisa operou por anos com TCs e TACs — instrumentos que permitem a extração sem licença ambiental plena. A nomeação da prima do diretor da Tamisa para presidir o Iepha-MG no mesmo mês da assinatura do TC com o governo Zema é a manifestação clássica deste padrão: a construção gradual e transversal de relacionamentos nos órgãos de controle para garantir janelas regulatórias duráveis.
+      </div>
+    </div>
+
+    <div class="pcard pc-teal" style="border-left-color:var(--purple)">
+      <div class="pcard-head">
+        <span class="pcard-badge" style="background:rgba(176,122,255,0.15);color:var(--purple2);border:1px solid rgba(176,122,255,0.25)">P8 — EMERGENTE</span>
+        <span class="pcard-title">Infraestrutura Jurídico-Financeira Compartilhada</span>
+      </div>
+      <div class="pcard-body">
+        O mesmo padrão de estrutura FIP/FIDC → participação em empresa operacional aparece simultaneamente em Carbono Oculto, Compliance Zero e agora na mineração (FIP Victoria Falls → Tamisa; 3D Minerals garantida ao Master). A questão em aberto: é coincidência de método, ou evidência de assessoria jurídico-financeira comum? A Reag Investimentos aparece como administradora no FIP Victoria Falls — a mesma Reag já mapeada em Carbono Oculto como hub central.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════════════════
+     LACUNAS INVESTIGATIVAS
+══════════════════════════════════════════ -->
+<div id="sec-lacunas" class="sec">
+
+  <div class="panel-full">
+    <div class="ptitle"><span class="dot dp"></span>Lacunas Investigativas — Perguntas sem Resposta Pública</div>
+
+    <div class="lacuna">
+      <div class="lacuna-head">⬛ LACUNA 1 — O vetor de pressão na ANM</div>
+      <div class="lacuna-body">A decisão de autorizar a redução de 90% do lance da 3D Minerals partiu da diretoria colegiada da ANM, contra o parecer técnico e o diretor-geral. Dois diretores da ANM foram depois presos na Operação Rejeito. A cadeia de comando é clara: MME (Silveira) supervisiona a ANM. Lucas Kallas, sócio de Vorcaro, foi indicado pelo MME a cargo público. A pergunta que nenhuma investigação respondeu publicamente: <b>quem instruiu a diretoria colegiada a votar contra o parecer técnico?</b></div>
+    </div>
+
+    <div class="lacuna">
+      <div class="lacuna-head">⬛ LACUNA 2 — A identidade do ministro na reunião de 27/out/2024</div>
+      <div class="lacuna-body">Nas mensagens de WhatsApp, Vorcaro informou à namorada que Wanderley estava acompanhado de "um ministro" na reunião. A reunião ocorreu em momento de pressão máxima sobre o banco, um mês antes do empréstimo formalizado à 3D Minerals e um mês após o CADE aprovar a aquisição da ItaMinas. A identidade do ministro não foi revelada pela reportagem nem confirmada por nenhum investigador até a publicação.</div>
+    </div>
+
+    <div class="lacuna">
+      <div class="lacuna-head">⬛ LACUNA 3 — Quem pagou o voo de 7/ago/2025 no PS-FSW</div>
+      <div class="lacuna-body">O voo de Alexandre de Moraes e Viviane no Dassault Falcon 2000 PS-FSW — oito dias após a sanção do OFAC — não recebeu nenhuma explicação pública do gabinete de Moraes ou dos sócios da FSW SPE. A explicação do "abatimento de honorários" apresentada para os voos da Prime Aviation já foi desmentida pelos dados da Receita Federal. Para este voo, nenhuma explicação sequer foi tentada.</div>
+    </div>
+
+    <div class="lacuna">
+      <div class="lacuna-head">⬛ LACUNA 4 — Origem dos US$155M das debêntures (ItaMinas)</div>
+      <div class="lacuna-body">O trio Vorcaro–Gontijo–Geo quitou antecipadamente em mai/2025 parcelas finais da ItaMinas no valor de ~US$155M com "recursos próprios e debêntures", enquanto o Master estava em espiral de liquidação. Os subscritores das debêntures não foram identificados em nenhuma investigação pública. Em um banco insolvente, a origem de US$155M em "recursos próprios" é uma questão material para o liquidante.</div>
+    </div>
+
+    <div class="lacuna">
+      <div class="lacuna-head">⬛ LACUNA 5 — Status das 116 áreas da ANM com massa falida</div>
+      <div class="lacuna-body">Com o penhor de 50% das ações da 3D Minerals transferido para a massa falida, e o TCU investigando irregularidades no leilão, quem detém efetivamente o direito de exploração das 116 áreas de minerais críticos? O liquidante, a família Wanderley (que detém os outros 50%), ou ninguém (se o leilão for anulado)? Em um contexto de disputa geopolítica EUA–China por esses minerais, essa lacuna tem implicações que vão além do processo de insolvência.</div>
+    </div>
+
+    <div class="lacuna">
+      <div class="lacuna-head">⬛ LACUNA 6 — Assessoria jurídico-financeira comum (hipótese P8)</div>
+      <div class="lacuna-body">A estrutura FIP → participação em empresa operacional → penhor/garantia ao banco financiador aparece em múltiplas operações não relacionadas (Carbono Oculto, Compliance Zero, mineração). A Reag Investimentos aparece em pelo menos dois pontos desta rede. A hipótese: existe um assessor jurídico-financeiro comum que instruiu a construção dessas estruturas? Se confirmada, seria o elo que transformaria coincidência de método em infraestrutura compartilhada do esquema.</div>
+    </div>
+  </div>
+
+  <div class="panel-full" style="background: rgba(74, 158, 255, 0.05); border-color: rgba(74, 158, 255, 0.2);">
+    <div class="ptitle"><span class="dot db"></span>Artefatos Relacionados — Inteligência Coletiva</div>
+    <div class="agrid">
+      <a href="operacao-hydra-fintech-laundry.html" style="text-decoration:none">
+        <div class="acard">
+          <div class="abadge ab-red">Infiltração</div>
+          <div class="aname">Operação Hydra</div>
+          <div class="arole">A Lavanderia Global das Fintechs</div>
+          <div class="astatus">R$ 6bi não rastreáveis entre 2020–2024. IPs e a morte de Gritzbach.</div>
+        </div>
+      </a>
+      <a href="operacao-poco-de-lobato.html" style="text-decoration:none">
+        <div class="acard">
+          <div class="abadge ab-amber">Combustíveis</div>
+          <div class="aname">Poço de Lobato</div>
+          <div class="arole">Esquema de extração mineral e fraudes</div>
+          <div class="astatus">A interface entre a extração mineral ilegal e o duto de lavagem.</div>
+        </div>
+      </a>
+      <a href="carbono_oculto.html" style="text-decoration:none">
+        <div class="acard">
+          <div class="abadge ab-teal">Recursos</div>
+          <div class="aname">Carbono Oculto</div>
+          <div class="arole">Captura Ambiental na Amazônia</div>
+          <div class="astatus">O hub REAG/Master mapeado na grilagem de créditos de carbono fictícios.</div>
+        </div>
+      </a>
+      <a href="banco-master-compliance-zero.html" style="text-decoration:none">
+        <div class="acard">
+          <div class="abadge ab-blue">Financeiro</div>
+          <div class="aname">Banco Master</div>
+          <div class="arole">Operação Compliance Zero</div>
+          <div class="astatus">O hub central de financiamento de 1000% de crescimento atípico.</div>
+        </div>
+      </a>
+      <a href="padroes-sistemicos-dashboard.html" style="text-decoration:none">
+        <div class="acard">
+          <div class="abadge ab-red">Sistêmico</div>
+          <div class="aname">Padrões Sistêmicos</div>
+          <div class="arole">Matriz P1–P10 × Operações</div>
+          <div class="astatus">A arquitetura da impunidade e os padrões emergentes (P9/P10) de 2026.</div>
+        </div>
+      </a>
+      <a href="emaranhamento-operacoes.html" style="text-decoration:none">
+        <div class="acard">
+          <div class="abadge ab-purple">Matriz</div>
+          <div class="aname">Emaranhamento</div>
+          <div class="arole">Mapa de Intersecções Master/PCC</div>
+          <div class="astatus">Visualização matricial de como as operações se fundem em infraestrutura.</div>
+        </div>
+      </a>
+      <a href="rede-recorrente-1999-2026.html" style="text-decoration:none">
+        <div class="acard">
+          <div class="abadge ab-amber">Histórico</div>
+          <div class="aname">Rede Recorrente</div>
+          <div class="arole">Atores por Ciclo (1999–2026)</div>
+          <div class="astatus">A prova de que os nomes mudam, mas as funções estruturais permanecem.</div>
+        </div>
+      </a>
+      <a href="republica-capturada.html" style="text-decoration:none">
+        <div class="acard">
+          <div class="abadge ab-blue">Dossiê Mestre</div>
+          <div class="aname">República Capturada</div>
+          <div class="arole">Mega-Mapa Forense</div>
+          <div class="astatus">Visão panorâmica da captura das instituições brasileiras.</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="footnote">
+    Fontes primárias: A Investigação (ainvestigacao.com) · Agência Pública · Folha de S.Paulo · Valor Econômico · Metrópoles · O Tempo · Estadão · CNN Brasil · TCU (portal.tcu.gov.br) · CADE · Polícia Federal (pf.gov.br) · ANM · STF<br>
+    Licença: CC0 1.0 Universal — Domínio Público · <a href="https://lawfare-timeline.vercel.app">lawfare-timeline.vercel.app</a> · Última atualização: 15 abr 2026
+  </div>
+</div>
+
+</main>
+
+<script>
+function show(id) {
+  document.querySelectorAll('.sec').forEach(s => s.classList.remove('act'));
+  document.querySelectorAll('.nb').forEach(b => b.classList.remove('act'));
+  document.getElementById('sec-' + id).classList.add('act');
+  event.target.classList.add('act');
+}
+
+// Animate bars on load
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.querySelectorAll('.gfill').forEach(el => {
+      el.style.width = el.dataset.w || '0%';
+    });
+  }, 300);
+});
+</script>
+
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

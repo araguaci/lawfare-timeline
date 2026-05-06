@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matriz de Emaranhamento de Operações — Análise Sistêmica da Corrupção</title>
+  <meta name="description" content="Visualização e análise da conexão sistêmica entre as grandes operações de combate à corrupção no Brasil: Lava Jato, Castelo de Areia, Satiagraha, e outras.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gosurf.site/emaranhamento-operacoes">
+  <meta property="og:title" content="Matriz de Emaranhamento de Operações — Análise Sistêmica da Corrupção">
+  <meta property="og:description" content="Visualização e análise da conexão sistêmica entre as grandes operações de combate à corrupção no Brasil.">
+  <meta property="og:image" content="https://gosurf.site/og-image-emaranhamento.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://gosurf.site/emaranhamento-operacoes">
+  <meta property="twitter:title" content="Matriz de Emaranhamento de Operações — Análise Sistêmica da Corrupção">
+  <meta property="twitter:description" content="Visualização e análise da conexão sistêmica entre as grandes operações de combate à corrupção no Brasil.">
+  <meta property="twitter:image" content="https://gosurf.site/og-image-emaranhamento.png">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+  
+  :root {
+    --font-sans: 'Syne', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    
+    --bg-primary: #0f1115;
+    --bg-secondary: #181a20;
+    --bg-tertiary: #23262d;
+
+    --border-primary: #333640;
+    --border-secondary: #4d515f;
+
+    --text-primary: #e8eaed;
+    --text-secondary: #9aa0a6;
+    --text-tertiary: #6b717a;
+
+    --red: #ff7575;
+    --amber: #f5d07a;
+    --green: #78f5a8;
+    --blue: #7ab8ff;
+    --purple: #d0a8ff;
+    --teal: #60ffd8;
+  }
+  
+  *{box-sizing:border-box;margin:0;padding:0}
+
+  body{
+    background:var(--bg-primary);
+    color:var(--text-primary);
+    font-family:var(--font-sans);
+    min-height:100vh;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  header{
+    padding: 32px 30px 24px;
+    border-bottom: 1px solid var(--border-primary);
+    background: linear-gradient(145deg, var(--bg-primary) 0%, #1c1e24 100%);
+    position:relative;
+    overflow:hidden;
+  }
+  .hbadge{
+    display:inline-flex; align-items:center; gap:6px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-primary);
+    border-radius:6px; padding:6px 14px; font-size:12px;
+    font-weight:700; letter-spacing:1.5px; color:var(--text-secondary);
+    text-transform:uppercase; margin-bottom:12px;
+  }
+  header h1{font-size:34px; font-weight:800; letter-spacing:-0.5px; color:#fff; line-height:1.15}
+  header h1 span{color:var(--text-secondary)}
+  .hmeta{display:flex; gap:24px; margin-top:14px; flex-wrap:wrap}
+  .hm{font-size:13px; color:var(--text-secondary); font-family:var(--font-mono)}
+  .hm b{color:var(--text-primary); font-weight: 500;}
+  
+  main {
+    padding: 24px 20px 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .wrap{padding:0 0 2rem}
+  
+  .nav{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap; border-bottom: 1px solid var(--border-primary); padding-bottom: 12px;}
+  .nav-btn{
+    font-size:13px; padding:8px 16px; border-radius:8px;
+    border:1px solid var(--border-primary);
+    background:var(--bg-secondary);
+    color:var(--text-secondary);
+    font-family: var(--font-sans);
+    font-weight: 600;
+    cursor:pointer;
+    transition: all .15s ease;
+  }
+  .nav-btn:hover {
+    background: var(--bg-tertiary);
+    border-color: var(--border-secondary);
+    color: var(--text-primary);
+  }
+  .nav-btn.active{
+    background: var(--purple);
+    border-color: var(--purple);
+    color: #0f1115;
+    font-weight: 700;
+  }
+  
+  .page{display:none}
+  .page.active{display:block}
+  
+  .kpi-row{display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:12px;margin-bottom:24px}
+  .kpi{
+    background:var(--bg-secondary);
+    border:1px solid var(--border-primary);
+    border-radius:10px;
+    padding:16px 18px;
+    text-align:center;
+  }
+  .kpi-n{font-size:28px; font-weight:700; line-height:1.1; margin-bottom:5px; font-family: var(--font-mono);}
+  .kpi-l{font-size:12px; color:var(--text-secondary); line-height:1.4}
+  
+  .text-red { color: var(--red); }
+  .text-amber { color: var(--amber); }
+
+  .section-title{
+    font-size:13px; font-weight:700;
+    color:var(--text-secondary);
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin: 28px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-primary);
+  }
+
+  .matrix{width:100%;border-collapse:collapse;font-size:14px}
+  .matrix th{font-size:11px;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.06em;padding:10px 8px;border-bottom:1px solid var(--border-primary);text-align:left; font-family: var(--font-mono);}
+  .matrix th.dim-h{text-align:center;writing-mode:horizontal-tb;max-width:70px;font-size:11px;padding:8px 6px}
+  .matrix td{padding:6px 5px;border-bottom:1px solid var(--border-primary);vertical-align:middle}
+  .matrix td.op-label{font-size:13px;font-weight:600;color:var(--text-primary);white-space:nowrap;padding-right:12px}
+  
+  .cell{display:flex;align-items:center;justify-content:center;width:38px;height:34px;border-radius:6px;cursor:pointer;transition:transform .1s, background-color .15s}
+  .cell:hover{transform:scale(1.15); background-color: var(--bg-tertiary);}
+  .cell svg{width:20px;height:20px;flex-shrink:0}
+  
+  .heat-00{background:transparent}
+  .heat-10{background:rgba(120,245,168,.05); border: 1px solid rgba(120,245,168,.1);}
+  .heat-20{background:rgba(120,245,168,.1); border: 1px solid rgba(120,245,168,.2);}
+  .heat-30{background:rgba(245,208,122,.1); border: 1px solid rgba(245,208,122,.2);}
+  .heat-40{background:rgba(245,208,122,.2); border: 1px solid rgba(245,208,122,.3);}
+  .heat-50{background:rgba(255,117,117,.15); border: 1px solid rgba(255,117,117,.25);}
+  .heat-60{background:rgba(255,117,117,.25); border: 1px solid rgba(255,117,117,.35);}
+  .heat-70{background:rgba(255,117,117,.35); border: 1px solid rgba(255,117,117,.45);}
+
+  #cell-detail{
+    background:var(--bg-secondary); border:1px solid var(--border-primary);
+    border-radius:10px; padding:18px 20px; margin-top:18px;
+  }
+  #cd-title{font-size:13px;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px; font-family: var(--font-mono);}
+  #cd-body{font-size:15px;color:var(--text-primary);line-height:1.65; margin-bottom: 8px;}
+  #cd-meta{font-size:12px;color:var(--text-tertiary);font-family: var(--font-mono);}
+
+  .legend-row { margin-top:14px;display:flex;gap:16px;flex-wrap:wrap;align-items:center }
+  .legend-label { font-size:12px;color:var(--text-secondary) }
+  .legend-item { font-size:12px;display:flex;align-items:center;gap:6px }
+  .legend-swatch { display:inline-block;width:14px;height:14px;border-radius:3px; }
+
+  .panel{background:var(--bg-secondary);border:1px solid var(--border-primary);border-radius:10px;padding:18px 20px;margin-bottom:10px}
+  
+  .tag{display:inline-block;font-size:11px;padding:4px 8px;border-radius:5px;font-weight:600;margin:2px; font-family: var(--font-mono);}
+
+  #atores-list .panel-meta { font-size: 13px; line-height: 1.5; font-family: var(--font-mono); color: var(--text-secondary); }
+  #atores-list .panel { padding: 16px 18px; }
+
+  #padroes-list .panel-desc { font-size: 14px; color:var(--text-secondary); line-height:1.6 }
+  #padroes-list .panel { padding: 16px 18px; }
+
+  #perguntas-list .panel { border-left-width: 4px; border-radius: 4px 10px 10px 4px; padding: 16px 18px;}
+  #perguntas-list .q-title { font-size:15px;font-weight:600;color:var(--text-primary);margin-bottom:6px }
+  #perguntas-list .q-desc { font-size:14px;color:var(--text-secondary);line-height:1.6 }
+  #perguntas-list .q-meta { display:flex;justify-content:space-between;align-items:center;margin-bottom:8px }
+  #perguntas-list .q-op { font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing: 1px; }
+  #perguntas-list .q-status { font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing: 1px; padding: 3px 8px; border-radius: 5px;}
+
+</style>
+</head>
+<body>
+<header>
+  <div class="hbadge">ANÁLISE SISTÊMICA</div>
+  <h1>Matriz de <span>Emaranhamento</span></h1>
+  <div class="hmeta">
+    <span class="hm"><b>Operações:</b> 6</span>
+    <span class="hm"><b>Dimensões:</b> 9</span>
+    <span class="hm"><b>Padrões:</b> 6</span>
+    <span class="hm"><b>Atores:</b> 12</span>
+  </div>
+</header>
+<main>
+<div class="wrap">
+
+<div class="nav">
+  <button class="nav-btn active" onclick="goto('matriz')">Matriz de emaranhamento</button>
+  <button class="nav-btn" onclick="goto('atores')">Atores recorrentes</button>
+  <button class="nav-btn" onclick="goto('padroes')">Padrões sistêmicos</button>
+  <button class="nav-btn" onclick="goto('perguntas')">Perguntas não feitas</button>
+</div>
+
+<!-- PAGE 1: MATRIZ -->
+<div id="pg-matriz" class="page active">
+
+<div class="kpi-row">
+  <div class="kpi"><div class="kpi-n text-red">R$140B+</div><div class="kpi-l">Movimentação ilícita documentada</div></div>
+  <div class="kpi"><div class="kpi-n text-amber">75%</div><div class="kpi-l">Operações anuladas</div></div>
+  <div class="kpi"><div class="kpi-n text-red">~4%</div><div class="kpi-l">Valor efetivamente recuperado</div></div>
+  <div class="kpi"><div class="kpi-n text-amber">2,4a</div><div class="kpi-l">Tempo médio até anulação</div></div>
+</div>
+
+<div class="section-title">Operações × Dimensões analíticas — intensidade de emaranhamento</div>
+
+<div style="overflow-x:auto">
+<table class="matrix" id="tbl">
+<thead>
+<tr>
+  <th style="min-width:100px">Operação</th>
+  <th class="dim-h">Ficha</th>
+  <th class="dim-h">Padrões</th>
+  <th class="dim-h">Atores</th>
+  <th class="dim-h">Estratégias</th>
+  <th class="dim-h">Mortes</th>
+  <th class="dim-h">Riscos</th>
+  <th class="dim-h">Aprendizados</th>
+  <th class="dim-h">Impunidade</th>
+  <th class="dim-h">Perguntas</th>
+</tr>
+</thead>
+<tbody id="tbody"></tbody>
+</table>
+</div>
+
+<div id="cell-detail" class="panel" style="margin-top:12px;display:none">
+  <div class="panel-title" id="cd-title"></div>
+  <div class="panel-content" id="cd-body"></div>
+  <div class="panel-meta" id="cd-meta"></div>
+</div>
+
+<div class="legend-row">
+  <span class="legend-label">Intensidade:</span>
+  <div class="legend-item"><span class="legend-swatch" style="background:rgba(120,245,168,.2)"></span>Baixa</div>
+  <div class="legend-item"><span class="legend-swatch" style="background:rgba(245,208,122,.3)"></span>Média</div>
+  <div class="legend-item"><span class="legend-swatch" style="background:rgba(255,117,117,.3)"></span>Alta</div>
+  <div class="legend-item"><span class="legend-swatch" style="background:rgba(255,117,117,.5)"></span>Crítica</div>
+  <span class="legend-label" style="margin-left:8px">↳ clique numa célula para detalhes</span>
+</div>
+
+</div>
+
+<!-- PAGE 2: ATORES -->
+<div id="pg-atores" class="page">
+<div class="section-title">Nós de alta conectividade — atores que aparecem em múltiplas operações</div>
+
+<div id="atores-list"></div>
+</div>
+
+<!-- PAGE 3: PADRÕES -->
+<div id="pg-padroes" class="page">
+<div class="section-title">6 padrões sistêmicos identificados — presença por operação</div>
+<div id="padroes-list"></div>
+</div>
+
+<!-- PAGE 4: PERGUNTAS -->
+<div id="pg-perguntas" class="page">
+<div class="section-title">Perguntas que o sistema evita responder</div>
+<div id="perguntas-list"></div>
+</div>
+
+</div>
+</main>
+<script>
+const OPS = [
+  {id:'ca', label:'Castelo de Areia', short:'CA', color:'#185FA5', year:'2009'},
+  {id:'sa', label:'Satiagraha', short:'SA', color:'#534AB7', year:'2008'},
+  {id:'lj', label:'Lava Jato', short:'LJ', color:'#BA7517', year:'2014'},
+  {id:'ma', label:'Banco Master', short:'MA', color:'#A32D2D', year:'2025'},
+  {id:'co', label:'Carbono Oculto', short:'CO', color:'#0F6E56', year:'2025'},
+  {id:'pcc', label:'PCC-CV Intel', short:'PCC', color:'#3C3489', year:'2026'},
+];
+
+const DIMS = ['Ficha','Padrões','Atores','Estratégias','Mortes','Riscos','Aprendizados','Impunidade','Perguntas'];
+
+// heat level 0-7 + short summary
+const DATA = {
+  ca:{
+    Ficha:{h:6,s:'Camargo Corrêa, R$16bi, vício de denúncia anônima'},
+    Padrões:{h:7,s:'P01 anulação por vício + P03 liminar presidência STJ'},
+    Atores:{h:5,s:'Asfor Rocha, De Sanctis, MPF'},
+    Estratégias:{h:6,s:'Ataque ao processo, não ao mérito. Liminar em recesso'},
+    Mortes:{h:4,s:'Marcio Thomaz Bastos — testemunha-chave morreu antes de confirmar Palocci'},
+    Riscos:{h:5,s:'Too big to jail. Cadeia de custódia frágil'},
+    Aprendizados:{h:6,s:'Legalidade de investigação preliminar inegociável'},
+    Impunidade:{h:7,s:'Nenhum condenado. Custo: 6 anos perdidos antes da LJ'},
+    Perguntas:{h:6,s:'R$5M para Asfor Rocha — nunca investigado formalmente'},
+  },
+  sa:{
+    Ficha:{h:5,s:'Daniel Dantas, Naji Nahas, uso irregular de ABIN'},
+    Padrões:{h:7,s:'P02 investigador vira réu + P03 2 HC em 48h por Gilmar'},
+    Atores:{h:6,s:'Gilmar Mendes, Protógenes Queiroz, Paulo Lacerda'},
+    Estratégias:{h:7,s:'HC imediato. Contaminar toda a prova via ABIN. Condenar delegado'},
+    Mortes:{h:2,s:'Celso Pitta morreu antes da anulação — processos extintos'},
+    Riscos:{h:5,s:'ABIN como vetor de contaminação processual'},
+    Aprendizados:{h:5,s:'Blindagem institucional de investigações de alto impacto'},
+    Impunidade:{h:7,s:'Delegado condenado, banqueiro solto. Inversão total de polo'},
+    Perguntas:{h:6,s:'Quem ordenou os 80 agentes da ABIN? Paulo Lacerda agiu só?'},
+  },
+  lj:{
+    Ficha:{h:7,s:'Petrobras, Odebrecht, R$6bi desvio + R$50bi perdas estimadas'},
+    Padrões:{h:7,s:'Todos os 6 padrões presentes simultaneamente'},
+    Atores:{h:7,s:'Moro, Dallagnol, Lula, Marcelo Odebrecht, Temer, Fachin, Moraes'},
+    Estratégias:{h:7,s:'Incompetência territorial + prescrição + Vaza Jato + suspeição'},
+    Mortes:{h:6,s:'Teori Zavascki — relator morreu 1 dia antes de homologar delações Odebrecht'},
+    Riscos:{h:6,s:'Vaza Jato expôs conluio. Força-tarefa desativada em 2021'},
+    Aprendizados:{h:7,s:'Independência acusação-julgamento é estrutural, não opcional'},
+    Impunidade:{h:7,s:'Condenações anuladas. Casos prescritos. 0 reais recuperados via LJ mantida'},
+    Perguntas:{h:7,s:'Se Teori vivesse, as 900 delações Odebrecht teriam derrubado quem?'},
+  },
+  ma:{
+    Ficha:{h:6,s:'Vorcaro, Banco Master, R$56bi FGC, 2 prisões em 4 meses'},
+    Padrões:{h:5,s:'P03 Toffoli + relatoria redistribuída + P02 delegado Andrei'},
+    Atores:{h:6,s:'Vorcaro, Toffoli, Moraes, Ciro Nogueira, Nelson Tanure'},
+    Estratégias:{h:5,s:'Sigilo máximo. Toffoli como firewall. PEC do FGC como cobertura'},
+    Mortes:{h:1,s:'Sem mortes documentadas — operação em andamento'},
+    Riscos:{h:6,s:'FGC como socialização de perdas. Relatoria comprometida'},
+    Aprendizados:{h:5,s:'Aprovação regulatória de controlador precisa ser mais rigorosa'},
+    Impunidade:{h:4,s:'Em curso — 3ª prisão em 4 meses é sinal atípico. Resultado indefinido'},
+    Perguntas:{h:7,s:'Nelson Tanure é o dono oculto? Quem financiou a PEC do FGC?'},
+  },
+  co:{
+    Ficha:{h:6,s:'PCC + REAG + fintechs Faria Lima, R$98bi + carbono fictício R$45bi'},
+    Padrões:{h:6,s:'Captura regulatória CVM. Lavagem via fundos formais'},
+    Atores:{h:5,s:'REAG, Golden Green, Global Carbon, gestores CVM-regulados'},
+    Estratégias:{h:6,s:'Ativos fictícios (UECs ilegais). 40+ fundos como escudo'},
+    Mortes:{h:0,s:'Sem mortes documentadas'},
+    Riscos:{h:7,s:'Infiltração sistêmica no mercado financeiro formal confirmada'},
+    Aprendizados:{h:6,s:'Rendimento anormal é sinal de alarme estrutural'},
+    Impunidade:{h:5,s:'CVM regulava sem perceber. BC demorou 2 anos após denúncia formal'},
+    Perguntas:{h:7,s:'Quem mais na Faria Lima? Quantos outros fundos não identificados?'},
+  },
+  pcc:{
+    Ficha:{h:5,s:'PCC vs CV, 30+ estados, presença em 19 países, expansão financeira'},
+    Padrões:{h:5,s:'Estado dentro do estado. Lavagem sistêmica. Captura de agentes'},
+    Atores:{h:4,s:'Lideranças carcerária e externa. Políticos municipais. Agentes capturados'},
+    Estratégias:{h:5,s:'Controle territorial + lavagem via empresas + cooptação institucional'},
+    Mortes:{h:7,s:'6.243 mortes por ação policial em 2024. Rebeliões e execuções documentadas'},
+    Riscos:{h:7,s:'Salves de escalada. Fusis e calibres pesados. Disputas de fronteira'},
+    Aprendizados:{h:4,s:'Inteligência prisional e financeira precisam ser integradas'},
+    Impunidade:{h:6,s:'Lideranças operam de dentro de presídios. Estado não detecta salves'},
+    Perguntas:{h:6,s:'Quantos agentes públicos estão ativamente cooptados? Qual extensão real?'},
+  },
+};
+
+const CELL_DETAIL = {
+  ca:{
+    Mortes:"Márcio Thomaz Bastos era o único corroborador da acusação de Palocci sobre R$5M ao Min. Asfor Rocha. Morreu de câncer em 2014. Sem ele, a acusação ficou sem prova material possível — TRF-1 suspendeu o inquérito por falta de evidências.",
+    Impunidade:"A Operação Castelo de Areia é o caso-zero do padrão brasileiro: nenhum investigado foi absolvido no mérito. O STJ mudou de posição em 33 decisões anteriores para anular especificamente este caso por 'denúncia anônima'. O Brasil perdeu 6+ anos de investigação preventiva.",
+    Perguntas:"R$5 milhões teriam sido pagos ao Presidente do STJ durante recesso judicial para suspender a operação. A testemunha morreu. O inquérito foi suspenso. Nunca julgado no mérito.",
+  },
+  sa:{
+    Padrões:"Gilmar Mendes concedeu 2 habeas corpus a Daniel Dantas em menos de 48 horas — segunda entrou preso, quarta saiu. O STF pleno referendou 9×1. O único condenado da operação foi o delegado Protógenes Queiroz, que a conduziu.",
+    Impunidade:"Inversão completa do polo persecutório: o investigador (Protógenes) foi condenado a 2,5 anos, expulso da PF e hoje vive como asilado político na Suíça. O banqueiro investigado (Dantas) foi solto em 48h e nunca condenado.",
+    Perguntas:"Paulo Lacerda, diretor da ABIN, cedeu 80 agentes informalmente ao delegado. Foi afastado. Mas quem autorizou? A cadeia de comando nunca foi integralmente investigada.",
+  },
+  lj:{
+    Mortes:"Teori Zavascki morreu em queda de avião em 19/jan/2017 — um dia antes de homologar as delações da Odebrecht: 78 executivos, 900 depoimentos. A PF, FAB e MPF descartaram sabotagem. O caso foi arquivado. Mas a consequência concreta: a vaga foi ocupada por Alexandre de Moraes (indicado por Temer) e a relatoria redistribuída.",
+    Estratégias:"Ciclo completo do P06 aplicado: incompetência territorial (Curitiba→Brasília) + redistribuição + prescrição. Os casos do tríplex e sítio de Atibaia prescreveram durante a redistribuição. Lula completou 70 anos em 2015 — prazo prescricional reduzido pela metade.",
+    Perguntas:"Se Teori vivesse e homologasse as 900 delações da Odebrecht, quantos mandatos seriam cassados? Quantas condenações com trânsito em julgado? Essa é a pergunta que o sistema estruturalmente impediu de ser respondida.",
+  },
+  ma:{
+    Riscos:"O FGC (Fundo Garantidor de Créditos) foi transformado pelo Master de rede de segurança sistêmica em instrumento de captação agressiva. R$56bi a serem repostos pelo sistema financeiro coletivo. Socialização de perdas privadas como mecanismo de escape.",
+    Atores:"Nelson Tanure foi identificado pela PF como possível controlador oculto do Master em 2024 — o BC foi alertado. Nunca formalizado. Ciro Nogueira, 'grande amigo de vida' de Vorcaro, apresentou PEC que quadruplicaria o teto do FGC enquanto a investigação corria.",
+    Perguntas:"Tanure é o dono oculto? Quem redigiu a PEC do FGC — e a pedido de quem? O resort da família Toffoli foi o único investimento do cunhado de Vorcaro? Essas perguntas não foram feitas em audiência pública.",
+  },
+  co:{
+    Riscos:"A Operação Carbono Oculto confirmou infiltração sistêmica do PCC no mercado financeiro regulado da Faria Lima: 40+ fundos CVM-regulados, R$30bi de patrimônio, REAG como hub. O Ministro da Justiça confirmou publicamente. A CVM regulava sem detectar.",
+    Perguntas:"168,8 milhões de UECs geradas sobre terras públicas da União (ilegais) foram incorporadas a fundos REAG. Golden Green e Global Carbon atingiram R$45,5bi de avaliação — sem vender uma única UEC. Quantos outros fundos não identificados? Qual o tamanho real?",
+  },
+  pcc:{
+    Mortes:"6.243 mortes por ação policial em 2024 — 14,1% de todas as mortes violentas. SP: +61% no ano. Isso não é apenas estatística: é a expressão mais visível do colapso do monopólio estatal do uso legítimo da força em territórios disputados.",
+    Perguntas:"Quantos agentes públicos estão ativamente cooptados? Quantas empresas de fachada não identificadas? Os 'salves' que circulam em presídios são monitorados em tempo real? A resposta pública: não se sabe.",
+  },
+};
+
+const ATORES = [
+  {nome:'Gilmar Mendes', ops:['sa'], papel:'Presidente STF — concedeu 2 HC a Dantas em 48h', tipo:'judicial', ncross:2},
+  {nome:'Dias Toffoli', ops:['ma','lj'], papel:'Relator Master (removido) — decretou sigilo pós-prisão Vorcaro. Anulou acordo Odebrecht em 2024', tipo:'judicial', ncross:2},
+  {nome:'Asfor Rocha', ops:['ca'], papel:'Presidente STJ — concedeu liminar durante recesso. Acusado (sem prova) de R$5M', tipo:'judicial', ncross:1},
+  {nome:'Ciro Nogueira', ops:['lj','ma'], papel:'Investigado na LJ (Op. Patmos). "Grande amigo de vida" de Vorcaro. PEC do FGC', tipo:'político', ncross:2},
+  {nome:'Protógenes Queiroz', ops:['sa'], papel:'Delegado-chefe Satiagraha. Condenado pelo STF, expulso da PF, asilado na Suíça', tipo:'investigador', ncross:1},
+  {nome:'Sérgio Moro', ops:['lj'], papel:'Juiz LJ — declarado parcial pelo STF. Mensagens com Dallagnol (Vaza Jato)', tipo:'investigador', ncross:1},
+  {nome:'Deltan Dallagnol', ops:['lj'], papel:'Procurador-chefe LJ — mandato cassado pela Justiça Eleitoral', tipo:'investigador', ncross:1},
+  {nome:'Daniel Vorcaro', ops:['ma'], papel:'Banco Master — 2 prisões em 4 meses em 2025/26', tipo:'investigado', ncross:1},
+  {nome:'Nelson Tanure', ops:['ma'], papel:'Possível controlador oculto do Master — PF alertou BC em 2024, nunca formalizado', ncross:1},
+  {nome:'Teori Zavascki', ops:['lj'], papel:'Relator LJ no STF — morreu 1 dia antes de homologar 900 delações Odebrecht', tipo:'judicial', ncross:1},
+  {nome:'Alexandre de Moraes', ops:['lj','pcc','ma'], papel:'Substituiu Teori (indicado por Temer). Atua em múltiplos processos sensíveis', tipo:'judicial', ncross:3},
+  {nome:'REAG / PCC', ops:['co','pcc'], papel:'Hub de lavagem: 40+ fundos CVM-regulados na Faria Lima, R$30bi', tipo:'organização', ncross:2},
+];
+
+const PADROES = [
+  {id:'P01', cor:'#A32D2D', titulo:'Anulação por vício processual', ops:['ca','sa','lj'], desc:'Em nenhuma das 3 operações extintas o investigado foi absolvido no mérito. Todos foram soltos por irregularidades formais — nunca porque eram inocentes. Estratégia defensiva padrão: atacar o processo, nunca os fatos.'},
+  {id:'P02', cor:'#BA7517', titulo:'Investigador vira investigado', ops:['sa','lj','ma'], desc:'Protógenes (condenado + exilado), Moro (declarado parcial), Dallagnol (mandato cassado), Andrei Rodrigues (relatório chamado de "lixo jurídico"). A intimidação não precisa ser explícita — os casos já são o recado.'},
+  {id:'P03', cor:'#534AB7', titulo:'Captura judicial de emergência', ops:['ca','sa','lj','ma'], desc:'Um ou mais ministros concederam liminares ou HC em circunstâncias atípicas no momento crítico. Gilmar 48h. Asfor Rocha no recesso. Toffoli sigilo imediato. O padrão é sistêmico, não episódico.'},
+  {id:'P04', cor:'#185FA5', titulo:'Weaponização da mídia', ops:['sa','lj','ma'], desc:'Uso estratégico da imprensa nos dois sentidos: vazamentos seletivos que constroem ou destroem narrativas sobre investigados e investigadores. Vaza Jato como inversão do vetor.'},
+  {id:'P05', cor:'#0F6E56', titulo:'Cofres públicos como vetor', ops:['ca','lj','ma','co'], desc:'FGC socializado (Master), Petrobras como caixa 2 (LJ), dinheiro público em obras infladas (CA), fundos regulados como lavanderia (Carbono Oculto). O dinheiro público é sempre o meio, nunca o fim.'},
+  {id:'P06', cor:'#639922', titulo:'Prescrição como âncora estratégica', ops:['ca','lj'], desc:'Anular → redistribuir → aguardar → prescrever. Os advogados criminais conhecem o ciclo. Uma investigação não precisa ser destruída — só precisa ser suficientemente atrasada. Para maiores de 70: prazo reduzido pela metade.'},
+];
+
+const PERGUNTAS = [
+  {op:'Castelo de Areia', cor:'#185FA5', q:'R$5M foram pagos ao Presidente do STJ durante recesso?', status:'sem resposta', d:'A testemunha (Marcio Thomaz Bastos) morreu em 2014 antes de confirmar. O inquérito foi suspenso. Nunca julgado no mérito.'},
+  {op:'Satiagraha', cor:'#534AB7', q:'Quem autorizou os 80 agentes da ABIN? A cadeia de comando foi investigada?', status:'parcial', d:'Paulo Lacerda foi afastado. A decisão de ceder agentes nunca foi rastreada formalmente até cima.'},
+  {op:'Lava Jato', cor:'#BA7517', q:'Se Teori vivesse, quantos mandatos as 900 delações derrubavam?', status:'sem resposta', d:'78 executivos, 900 depoimentos homologados teriam impacto em dezenas de políticos com foro privilegiado. A pergunta é estruturalmente impossível de responder agora.'},
+  {op:'Lava Jato', cor:'#BA7517', q:'As mensagens do Vaza Jato foram todas públicas? Há conversas não divulgadas?', status:'sem resposta', d:'O Intercept afirmou ter mais material. Nunca integralmente publicado. A extensão da coordenação Moro-Dallagnol é desconhecida.'},
+  {op:'Banco Master', cor:'#A32D2D', q:'Nelson Tanure é o verdadeiro controlador do Master?', status:'sem resposta', d:'PF alertou BC em 2024. BC não formalizou. Tanure nunca foi indiciado. A questão do controle oculto permanece aberta.'},
+  {op:'Banco Master', cor:'#A32D2D', q:'Quem redigiu a PEC que quadruplicaria o FGC — e a pedido de quem?', status:'sem resposta', d:'Ciro Nogueira apresentou. Vorcaro é seu "grande amigo de vida". A correlação temporal com as prisões nunca foi investigada formalmente.'},
+  {op:'Carbono Oculto', cor:'#0F6E56', q:'Quantos outros fundos na Faria Lima ainda não identificados?', status:'sem resposta', d:'40+ fundos identificados. A CVM regulava sem perceber. Escala real desconhecida. Auditoria completa ainda não concluída.'},
+  {op:'Todos', cor:'#7F77DD', q:'É possível condenar com trânsito em julgado alguém com poder para acionar os 6 padrões simultaneamente?', status:'sem resposta', d:'Em 17 anos e 4 operações, a resposta empírica brasileira é: não sabemos. Nunca chegamos até o fim com a condenação intacta.'},
+];
+
+function heat(h){
+  if(h===0) return 'heat-00';
+  if(h<=1) return 'heat-10';
+  if(h<=2) return 'heat-20';
+  if(h<=3) return 'heat-30';
+  if(h<=4) return 'heat-40';
+  if(h<=5) return 'heat-50';
+  if(h<=6) return 'heat-60';
+  return 'heat-70';
+}
+
+function icon(h){
+  if(h===0) return '<svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="3" fill="var(--color-border-tertiary)"/></svg>';
+  if(h<=2) return '<svg viewBox="0 0 16 16"><rect x="4" y="4" width="8" height="8" rx="1" fill="rgba(99,153,34,.6)"/></svg>';
+  if(h<=4) return '<svg viewBox="0 0 16 16"><polygon points="8,2 14,14 2,14" fill="rgba(186,117,23,.7)"/></svg>';
+  if(h<=6) return '<svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="5" fill="rgba(226,75,74,.75)"/></svg>';
+  return '<svg viewBox="0 0 16 16"><polygon points="8,1 15,7 13,15 3,15 1,7" fill="rgba(163,45,45,.9)"/></svg>';
+}
+
+function buildMatrix(){
+  const tb = document.getElementById('tbody');
+  OPS.forEach(op=>{
+    const row = document.createElement('tr');
+    let cells = `<td class="op-label"><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:${op.color};margin-right:5px;vertical-align:middle"></span>${op.label}</td>`;
+    DIMS.forEach(dim=>{
+      const d = DATA[op.id]?.[dim];
+      const h = d?d.h:0;
+      const s = d?d.s:'';
+      cells += `<td><div class="cell ${heat(h)}" title="${s}" onclick="showCell('${op.id}','${dim}','${op.label}')">${icon(h)}</div></td>`;
+    });
+    row.innerHTML = cells;
+    tb.appendChild(row);
+  });
+}
+
+function showCell(opId, dim, opLabel){
+  const d = DATA[opId]?.[dim];
+  if(!d){return;}
+  const detail = CELL_DETAIL[opId]?.[dim];
+  const el = document.getElementById('cell-detail');
+  document.getElementById('cd-title').textContent = `${opLabel} — ${dim}`;
+  document.getElementById('cd-body').textContent = detail || d.s;
+  document.getElementById('cd-meta').textContent = `Intensidade de emaranhamento: ${d.h}/7`;
+  el.style.display = 'block';
+  el.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+function buildAtores(){
+  const el = document.getElementById('atores-list');
+  const sorted = [...ATORES].sort((a,b)=>b.ncross-a.ncross);
+  sorted.forEach(a=>{
+    const opBadges = a.ops.map(oid=>{
+      const op = OPS.find(o=>o.id===oid);
+      return op?`<span class="tag" style="background:${op.color}2A;color:${op.color}; border: 1px solid ${op.color}44;">${op.short}</span>`:'';
+    }).join('');
+    const div = document.createElement('div');
+    div.className='panel';
+    div.innerHTML=`<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px">
+      <span style="font-size:15px;font-weight:600;color:var(--text-primary)">${a.nome}</span>
+      <div>${opBadges}</div>
+    </div>
+    <div class="panel-meta">${a.papel}</div>`;
+    el.appendChild(div);
+  });
+}
+
+function buildPadroes(){
+  const el = document.getElementById('padroes-list');
+  PADROES.forEach(p=>{
+    const opBadges = p.ops.map(oid=>{
+      const op = OPS.find(o=>o.id===oid);
+      return op?`<span class="tag" style="background:${op.color}2A;color:${op.color}; border: 1px solid ${op.color}44;">${op.short}</span>`:'';
+    }).join('');
+    const div = document.createElement('div');
+    div.className='panel';
+    div.innerHTML=`<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px">
+      <span style="font-size:15px;font-weight:600;color:${p.cor}">${p.id} — ${p.titulo}</span>
+      <div>${opBadges}</div>
+    </div>
+    <div class="panel-desc">${p.desc}</div>`;
+    el.appendChild(div);
+  });
+}
+
+function buildPerguntas(){
+  const el = document.getElementById('perguntas-list');
+  const statusColor = {parcial: 'var(--amber)', 'sem resposta': 'var(--red)'};
+  const statusBg = {parcial: 'rgba(245,208,122,.1)', 'sem resposta': 'rgba(255,117,117,.1)'};
+  PERGUNTAS.forEach(p=>{
+    const sc = statusColor[p.status] || 'var(--text-tertiary)';
+    const sbg = statusBg[p.status] || 'var(--bg-tertiary)';
+    const div = document.createElement('div');
+    div.className='panel';
+    div.style.borderColor = p.cor;
+    div.innerHTML=`<div class="q-meta">
+        <span class="q-op" style="color:${p.cor}">${p.op.toUpperCase()}</span>
+        <span class="q-status" style="color:${sc}; background-color: ${sbg}">${p.status.toUpperCase()}</span>
+    </div>
+    <div class="q-title">${p.q}</div>
+    <div class="q-desc">${p.d}</div>`;
+    el.appendChild(div);
+  });
+}
+
+function goto(page){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('pg-'+page).classList.add('active');
+  event.currentTarget.classList.add('active');
+}
+
+buildMatrix();
+buildAtores();
+buildPadroes();
+buildPerguntas();
+</script>
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

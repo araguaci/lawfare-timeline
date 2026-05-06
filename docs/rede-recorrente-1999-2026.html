@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rede Recorrente — Brasil 1999–2026</title>
+<style>
+  :root {
+    --bg: #0a0a0b;
+    --bg2: #111113;
+    --bg3: #18181c;
+    --border: rgba(255,255,255,0.08);
+    --border2: rgba(255,255,255,0.14);
+    --text: #e8e6e0;
+    --text2: #9e9c96;
+    --text3: #5c5a56;
+    --red: #e05c5c;
+    --red2: #ff8080;
+    --amber: #e09a30;
+    --amber2: #ffc060;
+    --teal: #3dbf8f;
+    --teal2: #7de8c0;
+    --purple: #9b7de8;
+    --purple2: #c4a8ff;
+    --blue: #5b9de0;
+    --blue2: #8bc4ff;
+    --gray: #7a7875;
+    --gray2: #b0ada6;
+    --coral: #e07055;
+    --coral2: #ff9e80;
+    --pink: #e070a0;
+    --ink: #12121a;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
+
+  /* === HEADER === */
+  .site-header {
+    border-bottom: 1px solid var(--border);
+    padding: 32px 40px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .site-header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.015) 39px, rgba(255,255,255,0.015) 40px);
+    pointer-events: none;
+  }
+  .header-eyebrow {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--text3);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .header-title {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: clamp(22px, 4vw, 42px);
+    font-weight: 600;
+    letter-spacing: -1px;
+    color: var(--text);
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+  .header-title span { color: var(--red2); }
+  .header-sub {
+    font-size: 12px;
+    color: var(--text3);
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+  .header-meta {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .header-meta span {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--text3);
+    text-transform: uppercase;
+  }
+  .header-meta .stamp {
+    color: var(--red);
+    border: 1px solid var(--red);
+    padding: 2px 8px;
+    letter-spacing: 2px;
+    font-size: 10px;
+    opacity: 0.7;
+  }
+
+  /* === NAV TABS === */
+  .nav-tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid var(--border);
+    padding: 0 40px;
+    background: var(--bg2);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .nav-tabs::-webkit-scrollbar { display: none; }
+  .tab-btn {
+    padding: 14px 20px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text3);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    white-space: nowrap;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .tab-btn:hover { color: var(--text2); }
+  .tab-btn.active { color: var(--text); border-bottom-color: var(--red); }
+
+  /* === PANELS === */
+  .panel { display: none; }
+  .panel.active { display: block; }
+
+  /* === CYCLE TIMELINE === */
+  .cycle-wrap {
+    padding: 32px 40px;
+  }
+  .cycle-intro {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 13px;
+    color: var(--text2);
+    line-height: 1.8;
+    max-width: 780px;
+    margin-bottom: 32px;
+    padding: 16px 20px;
+    border-left: 3px solid var(--amber);
+    background: var(--bg2);
+  }
+
+  .cycle-row {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 0;
+    margin-bottom: 0;
+  }
+
+  .cycle-year-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 18px;
+  }
+  .cycle-year {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--text3);
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    height: 60px;
+    text-align: center;
+  }
+  .cycle-line {
+    width: 1px;
+    flex: 1;
+    background: var(--border);
+    margin-top: 8px;
+  }
+
+  .cycle-event {
+    border: 1px solid var(--border);
+    border-left: 3px solid transparent;
+    background: var(--bg2);
+    margin-bottom: 2px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    position: relative;
+  }
+  .cycle-event:hover { border-color: var(--border2); background: var(--bg3); }
+  .cycle-event.expanded { background: var(--bg3); }
+
+  .cycle-event-header {
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .event-year-badge {
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 3px 8px;
+    background: var(--bg);
+    border: 1px solid var(--border2);
+    color: var(--text2);
+    flex-shrink: 0;
+  }
+  .event-op-badge {
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 3px 8px;
+    flex-shrink: 0;
+  }
+  .event-title {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+    flex: 1;
+    min-width: 200px;
+  }
+  .event-arrow {
+    font-size: 10px;
+    color: var(--text3);
+    transition: transform 0.2s;
+  }
+  .cycle-event.expanded .event-arrow { transform: rotate(90deg); }
+
+  .cycle-event-body {
+    display: none;
+    padding: 0 16px 16px;
+    border-top: 1px solid var(--border);
+    margin-top: 0;
+  }
+  .cycle-event.expanded .cycle-event-body { display: block; }
+
+  .event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    margin-top: 14px;
+  }
+  .event-section {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    padding: 12px 14px;
+  }
+  .event-section-title {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--text3);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .event-section-body {
+    font-size: 12px;
+    color: var(--text2);
+    line-height: 1.7;
+  }
+  .event-section-body strong { color: var(--text); font-weight: 500; }
+
+  .actor-pill {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border: 1px solid;
+    margin: 2px 3px 2px 0;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: rgba(255,255,255,0.02);
+  }
+  .actor-pill:hover { background: rgba(255,255,255,0.05); transform: translateY(-1px); }
+  .actor-pill.active { background: rgba(255,255,255,0.1); border-color: currentColor !important; }
+  .actor-pill .actor-id {
+    font-size: 9px;
+    opacity: 0.9;
+    color: currentColor;
+    margin-right: 4px;
+    font-weight: 700;
+    padding-right: 4px;
+    border-right: 1px solid rgba(255,255,255,0.15);
+  }
+
+  /* Actor Detail Box */
+  .actor-detail-box {
+    margin-top: 12px;
+    padding: 15px;
+    background: var(--bg2);
+    border: 1px solid var(--border2);
+    border-left: 3px solid var(--red);
+    display: none;
+    animation: fadeIn 0.2s ease-out;
+  }
+  .actor-detail-box.active { display: block; }
+  .actor-detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .actor-detail-title {
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+  .actor-detail-id {
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: var(--text3);
+    text-transform: uppercase;
+  }
+  .actor-detail-body {
+    font-size: 11px;
+    line-height: 1.6;
+    color: var(--text2);
+  }
+  .actor-detail-meta {
+    margin-top: 10px;
+    font-size: 10px;
+    color: var(--text3);
+    border-top: 1px solid var(--border);
+    padding-top: 8px;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* Cycle accent colors */
+  .cycle-marka { border-left-color: var(--blue) !important; }
+  .cycle-marka .event-op-badge { background: rgba(91,157,224,0.12); color: var(--blue2); border: 1px solid rgba(91,157,224,0.3); }
+  .cycle-marka .event-year-badge { border-color: var(--blue); }
+
+  .cycle-santos { border-left-color: var(--purple) !important; }
+  .cycle-santos .event-op-badge { background: rgba(155,125,232,0.12); color: var(--purple2); border: 1px solid rgba(155,125,232,0.3); }
+
+  .cycle-mensalao { border-left-color: var(--amber) !important; }
+  .cycle-mensalao .event-op-badge { background: rgba(224,154,48,0.12); color: var(--amber2); border: 1px solid rgba(224,154,48,0.3); }
+
+  .cycle-correios { border-left-color: var(--coral) !important; }
+  .cycle-correios .event-op-badge { background: rgba(224,112,85,0.12); color: var(--coral2); border: 1px solid rgba(224,112,85,0.3); }
+
+  .cycle-satiagraha { border-left-color: var(--teal) !important; }
+  .cycle-satiagraha .event-op-badge { background: rgba(61,191,143,0.12); color: var(--teal2); border: 1px solid rgba(61,191,143,0.3); }
+
+  .cycle-castelo { border-left-color: var(--pink) !important; }
+  .cycle-castelo .event-op-badge { background: rgba(224,112,160,0.12); color: #ff9de0; border: 1px solid rgba(224,112,160,0.3); }
+
+  .cycle-lavajato { border-left-color: var(--red) !important; }
+  .cycle-lavajato .event-op-badge { background: rgba(224,92,92,0.12); color: var(--red2); border: 1px solid rgba(224,92,92,0.3); }
+
+  .cycle-inss { border-left-color: var(--gray) !important; }
+  .cycle-inss .event-op-badge { background: rgba(122,120,117,0.12); color: var(--gray2); border: 1px solid rgba(122,120,117,0.3); }
+
+  .cycle-master { border-left-color: var(--amber) !important; }
+  .cycle-master .event-op-badge { background: rgba(224,154,48,0.12); color: var(--amber2); border: 1px solid rgba(224,154,48,0.3); }
+
+  /* === FUNCTIONS PANEL === */
+  .functions-wrap {
+    padding: 32px 40px;
+  }
+  .fn-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .fn-card {
+    border: 1px solid var(--border);
+    background: var(--bg2);
+    padding: 20px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .fn-card:hover { border-color: var(--border2); background: var(--bg3); }
+  .fn-card.selected { background: var(--bg3); }
+  .fn-number {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--text3);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  .fn-title {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .fn-desc {
+    font-size: 12px;
+    color: var(--text2);
+    line-height: 1.7;
+  }
+  .fn-actors-list {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .fn-count {
+    font-size: 10px;
+    color: var(--text3);
+    margin-top: 8px;
+  }
+
+  /* === MATRIX PANEL === */
+  .matrix-wrap {
+    padding: 32px 40px;
+    overflow-x: auto;
+  }
+  .matrix-table {
+    border-collapse: collapse;
+    min-width: 700px;
+    width: 100%;
+  }
+  .matrix-table th {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text3);
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border2);
+    white-space: nowrap;
+  }
+  .matrix-table td {
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+    vertical-align: top;
+  }
+  .matrix-table tr:hover td { background: var(--bg2); }
+  .actor-name-cell {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+    color: var(--text);
+    font-size: 13px;
+    white-space: nowrap;
+  }
+  .cycle-dot {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 18px;
+    font-size: 9px;
+    font-weight: 600;
+  }
+  .dot-present { background: var(--red); color: #fff; }
+  .dot-adjacent { background: rgba(224,92,92,0.2); color: var(--red); border: 1px solid rgba(224,92,92,0.4); }
+  .dot-empty { color: var(--text3); }
+  .fn-tag {
+    display: inline-block;
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 2px;
+  }
+
+  /* === PATTERNS PANEL === */
+  .patterns-wrap {
+    padding: 32px 40px;
+  }
+  .pattern-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .pattern-card {
+    border: 1px solid var(--border);
+    background: var(--bg2);
+    padding: 20px;
+  }
+  .pattern-code {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--text3);
+    margin-bottom: 8px;
+  }
+  .pattern-title {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .pattern-body {
+    font-size: 12px;
+    color: var(--text2);
+    line-height: 1.8;
+  }
+  .pattern-body strong { color: var(--text); font-weight: 500; }
+  .pattern-instances {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+  }
+  .pattern-instance {
+    font-size: 11px;
+    color: var(--text3);
+    margin-bottom: 4px;
+    padding-left: 10px;
+    position: relative;
+  }
+  .pattern-instance::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--red);
+  }
+  .pattern-instance strong { color: var(--text2); }
+
+  /* === QUESTION PANEL === */
+  .question-wrap {
+    padding: 32px 40px;
+  }
+  .question-card {
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--red);
+    background: var(--bg2);
+    padding: 20px 24px;
+    margin-bottom: 12px;
+  }
+  .question-n {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--text3);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  .question-text {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .question-note {
+    font-size: 12px;
+    color: var(--text2);
+    line-height: 1.7;
+  }
+  .question-note strong { color: var(--text); font-weight: 500; }
+
+  /* === LEGEND === */
+  .legend {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    padding: 12px 16px;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    font-size: 11px;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text2);
+  }
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 1px;
+  }
+
+  /* === SCROLLBAR === */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border2); }
+
+  /* === RESPONSIVE === */
+  @media (max-width: 600px) {
+    .site-header, .cycle-wrap, .functions-wrap, .matrix-wrap, .patterns-wrap, .question-wrap { padding: 20px 16px; }
+    .nav-tabs { padding: 0 16px; }
+    .cycle-row { grid-template-columns: 1fr; }
+    .cycle-year-col { display: none; }
+  }
+
+  /* === TOOLTIP === */
+  .tooltip {
+    position: fixed;
+    background: var(--bg3);
+    border: 1px solid var(--border2);
+    padding: 8px 12px;
+    font-size: 11px;
+    color: var(--text2);
+    max-width: 240px;
+    z-index: 999;
+    pointer-events: none;
+    display: none;
+    line-height: 1.6;
+  }
+  .tooltip.visible { display: block; }
+
+  /* Print */
+  @media print {
+    .nav-tabs { display: none; }
+    .panel { display: block !important; }
+    body { background: #fff; color: #000; }
+  }
+
+  /* === RELATED ARTIFACTS === */
+  .related-wrap {
+    padding: 64px 40px;
+    background: linear-gradient(to bottom, var(--bg), var(--bg2));
+    border-top: 1px solid var(--border);
+  }
+  .related-title {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--text3);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .related-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  .related-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    padding: 20px;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .related-card:hover {
+    border-color: var(--red);
+    background: var(--bg3);
+    transform: translateY(-2px);
+  }
+  .related-card-cat {
+    font-size: 9px;
+    color: var(--red);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .related-card-title {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text);
+    line-height: 1.4;
+  }
+  .related-card-arrow {
+    margin-top: 12px;
+    font-size: 10px;
+    color: var(--text3);
+    text-align: right;
+  }
+  @media (max-width: 600px) {
+    .related-wrap { padding: 40px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="site-header">
+  <div class="header-eyebrow">◼ ANÁLISE ESTRUTURAL · CORRUPÇÃO SISTÊMICA BRASILEIRA</div>
+  <div class="header-title">REDE <span>RECORRENTE</span></div>
+  <div class="header-sub">ATORES POR FUNÇÃO / CICLO · 1999–2026 · CC0 DOMÍNIO PÚBLICO</div>
+  <div class="header-meta">
+    <span>9 CICLOS DOCUMENTADOS</span>
+    <span>6 FUNÇÕES ESTRUTURAIS</span>
+    <span>27 ANOS DE PADRÃO</span>
+    <span class="stamp">LAWFARE-TIMELINE</span>
+  </div>
+</div>
+
+<div class="nav-tabs">
+  <button class="tab-btn active" onclick="showTab('ciclos')">Ciclos 1999–2026</button>
+  <button class="tab-btn" onclick="showTab('funcoes')">Funções Estruturais</button>
+  <button class="tab-btn" onclick="showTab('matriz')">Matriz de Atores</button>
+  <button class="tab-btn" onclick="showTab('padroes')">Padrões Sistêmicos</button>
+  <button class="tab-btn" onclick="showTab('perguntas')">Perguntas Abertas</button>
+</div>
+
+<!-- ============================== CICLOS ============================== -->
+<div id="panel-ciclos" class="panel active">
+<div class="cycle-wrap">
+
+<div class="cycle-intro">
+  O mesmo conjunto de <strong>funções estruturais</strong> se repete em todos os ciclos: banqueiro frágil, político-operador, doleiro/operador financeiro, regulador omisso, juiz capturável, e a mídia como vetor. Os nomes mudam; a arquitetura não. A questão analítica não é <em>quem</em> — é <em>por que o sistema os reproduz</em>.
+</div>
+
+<div id="ciclos-container"></div>
+
+</div>
+</div>
+
+<!-- ============================== FUNÇÕES ============================== -->
+<div id="panel-funcoes" class="panel">
+<div class="functions-wrap">
+
+<div class="cycle-intro">
+  Seis funções estruturais identificadas. Cada ciclo precisa de ao menos uma instância de cada função para operar. A função persiste mesmo quando o ocupante é preso — é substituído.
+</div>
+
+<div class="fn-grid" id="fn-grid"></div>
+
+</div>
+</div>
+
+<!-- ============================== MATRIZ ============================== -->
+<div id="panel-matriz" class="panel">
+<div class="matrix-wrap">
+
+<div class="cycle-intro" style="margin-bottom:20px">
+  Atores com presença documentada ou adjacente em múltiplos ciclos. <strong>●</strong> = investigado/condenado/preso no ciclo. <strong>◌</strong> = conexão documentada. Vazio = sem registro identificado.
+</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:var(--red)"></div> Investigado / condenado / preso</div>
+  <div class="legend-item"><div class="legend-dot" style="background:rgba(224,92,92,0.25); border:1px solid rgba(224,92,92,0.5)"></div> Conexão documentada / adjacente</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--bg3); border:1px solid var(--border)"></div> Sem registro</div>
+</div>
+
+<table class="matrix-table" id="matrix-table">
+  <thead id="matrix-head"></thead>
+  <tbody id="matrix-body"></tbody>
+</table>
+
+</div>
+</div>
+
+<!-- ============================== PADRÕES ============================== -->
+<div id="panel-padroes" class="panel">
+<div class="patterns-wrap">
+
+<div class="cycle-intro">
+  Seis padrões que se repetem com precisão cirúrgica em todos os ciclos. Não são coincidências — são a <em>tecnologia de impunidade</em> que o sistema aprendeu a operar.
+</div>
+
+<div class="pattern-grid" id="pattern-grid"></div>
+
+</div>
+</div>
+
+<!-- ============================== PERGUNTAS ============================== -->
+<div id="panel-perguntas" class="panel">
+<div class="question-wrap">
+
+<div class="cycle-intro">
+  As perguntas que as investigações nunca fizeram. A pergunta não formulada é o mapa do território protegido.
+</div>
+
+<div id="questions-container"></div>
+
+</div>
+</div>
+
+<!-- TOOLTIP -->
+<div class="tooltip" id="tooltip"></div>
+
+<div class="related-wrap">
+  <div class="related-title">Artefatos Relacionados</div>
+  <div class="related-grid">
+    <a href="/lava-jato" class="related-card">
+      <div class="related-card-cat">Operações</div>
+      <div class="related-card-title">Operação Lava Jato: Mapa Mental Analítico</div>
+      <div class="related-card-arrow">ACESSAR ARTEFATO ➔</div>
+    </a>
+    <a href="/master" class="related-card">
+      <div class="related-card-cat">Crimes Financeiros</div>
+      <div class="related-card-title">Banco Master: Pirâmide de CDBs e Captura do STF</div>
+      <div class="related-card-arrow">ACESSAR ARTEFATO ➔</div>
+    </a>
+    <a href="/pcc" class="related-card">
+      <div class="related-card-cat">Inteligência</div>
+      <div class="related-card-title">PCC & CV: Dashboard de Inteligência 2026</div>
+      <div class="related-card-arrow">ACESSAR ARTEFATO ➔</div>
+    </a>
+    <a href="/republica-capturada" class="related-card">
+      <div class="related-card-cat">Estrutura</div>
+      <div class="related-card-title">República Capturada: O Brasil do Lawfare</div>
+      <div class="related-card-arrow">ACESSAR ARTEFATO ➔</div>
+    </a>
+  </div>
+</div>
+
+<script>
+// ===== DATA =====
+
+const CYCLES = [
+  {
+    id: 'marka',
+    year: '1999',
+    op: 'Banco Marka / FonteCindam',
+    title: 'Crise cambial — empréstimo emergencial do Bacen salva banqueiro conectado',
+    cls: 'cycle-marka',
+    events: [
+      { date: 'Jan 1999', text: 'Desvalorização do real. Banco Marka e FonteCindam fizeram apostas cambiais incompatíveis with sua estrutura de capital.' },
+      { date: 'Jan 1999', text: 'Bacen concede empréstimo emergencial a taxa subsidiada para cobrir prejuízos. Decisão favorece acionistas privados with recurso público.' },
+      { date: '1999–2001', text: 'CPI dos Bancos identifica irregularidades mas não resulta em condenações.' },
+      { date: '2002', text: 'Inquérito arquivado. Nenhum gestor do Bacen ou controlador do banco preso.' },
+    ],
+    atores: [
+      { name: 'Salvatore Cacciola', fn: 'FN-02', color: 'var(--blue)' },
+      { name: 'Francisco Lopes (Bacen)', fn: 'FN-04', color: 'var(--blue2)' },
+      { name: 'Gustavo Franco (Bacen)', fn: 'FN-04', color: 'var(--blue2)' },
+    ],
+    rombo: 'Prejuízo estimado R$ 1,5 bi (equivalência 1999)',
+    resultado: 'Arquivado — zero condenações',
+    padrao: 'Socialização de prejuízo privado via Bacen. Desfecho: arquivo do inquérito.',
+  },
+  {
+    id: 'santos',
+    year: '2004',
+    op: 'Banco Santos — Edemar Cid Ferreira',
+    title: 'Banco médio cresce via pirâmide de passivos — colapso socializado',
+    cls: 'cycle-santos',
+    events: [
+      { date: '2002–2004', text: 'Banco Santos cresce rapidamente captando a taxas acima do mercado. Passivo inflado with garantias fictícias e obras de arte como colateral.' },
+      { date: 'Nov 2004', text: 'Bacen decreta intervenção. Rombo de R$ 2,2 bi. Liquidação extrajudicial.' },
+      { date: '2005–2006', text: 'Edemar Cid Ferreira preso. Coleção de arte avaliada em R$ 1 bi usada para lavagem.' },
+      { date: '2008', text: 'Condenado a 21 anos por gestão fraudulenta, lavagem e evasão de divisas.' },
+      { date: '2011', text: 'Pena reduzida em recurso. Cumpriu regime semiaberto.' },
+    ],
+    atores: [
+      { name: 'Edemar Cid Ferreira', fn: 'FN-02', color: 'var(--purple)' },
+      { name: 'Bacen — omissão regulatória', fn: 'FN-04', color: 'var(--purple2)' },
+      { name: 'Desvio via arte / offshore', fn: 'FN-03', color: 'var(--gray2)' },
+    ],
+    rombo: 'R$ 2,2 bi',
+    resultado: 'Condenado (21 anos) → pena reduzida em recurso',
+    padrao: 'Banco frágil + passivos inflados + colapso socializado. Desfecho: condenação parcial.',
+  },
+  {
+    id: 'correios',
+    year: '2005',
+    op: 'Escândalo dos Correios / Mensalão',
+    title: 'Esquema de propinas em estatais — financiamento de votos parlamentares',
+    cls: 'cycle-correios',
+    events: [
+      { date: 'Mai 2005', text: 'Vídeo de Maurício Marinho recebendo propina expõe esquema nos Correios. Roberto Jefferson delata o Mensalão.' },
+      { date: 'Jun–Jul 2005', text: 'Revelação de que PT pagava mesada a deputados da base aliada para votar with o governo (R$ 30 mil/mês).' },
+      { date: '2005', text: 'CPI dos Correios. Marcos Valério identificado como operador central do esquema.' },
+      { date: 'Ago 2007', text: 'STF recebe Ação Penal 470 (Mensalão). Maior julgamento da história do STF.' },
+      { date: 'Out 2012', text: 'Condenação histórica: José Dirceu, Marcos Valério, João Paulo Cunha entre os 25 condenados.' },
+      { date: '2013–2014', text: 'Progressão de regime. José Dirceu retorna ao convívio social. Reaparece na Lava Jato.' },
+    ],
+    atores: [
+      { name: 'José Dirceu', fn: 'FN-01', color: 'var(--coral)' },
+      { name: 'Marcos Valério', fn: 'FN-03', color: 'var(--coral2)' },
+      { name: 'Roberto Jefferson', fn: 'FN-01', color: 'var(--gray2)' },
+      { name: 'Delúbio Soares', fn: 'FN-03', color: 'var(--coral2)' },
+    ],
+    rombo: 'R$ 150+ mi em propinas / caixa 2',
+    resultado: '25 condenados pelo STF → progressão de regime, maioria em liberdade em 3 anos',
+    padrao: 'Propina institucionalizada via operador público. Desfecho: condenação simbólica.',
+  },
+  {
+    id: 'mensalao',
+    year: '2005',
+    op: 'Mensalão',
+    title: 'Financiamento de base parlamentar with recursos de estatais',
+    cls: 'cycle-mensalao',
+    events: [
+      { date: '2003–2005', text: 'PT usa empresas públicas (Correios, Casa da Moeda, Banco do Brasil) como fonte de propinas. Dinheiro transferido via publicidade para Marcos Valério.' },
+      { date: '2005', text: 'Sistema descoberto. José Dirceu cassado. Partido não extinto por decisão TSE.' },
+      { date: '2012–2013', text: 'STF condena 25 em novembro de 2012. Penas entre 7 e 40 anos.' },
+      { date: '2014', text: 'José Dirceu preso novamente na Lava Jato — mesmo padrão, nova operação.' },
+    ],
+    atores: [
+      { name: 'José Dirceu', fn: 'FN-01', color: 'var(--amber)' },
+      { name: 'Antonio Palocci', fn: 'FN-01', color: 'var(--amber)' },
+      { name: 'Marcos Valério', fn: 'FN-03', color: 'var(--amber2)' },
+      { name: 'Delúbio Soares', fn: 'FN-03', color: 'var(--amber2)' },
+      { name: 'Ministros STF', fn: 'FN-05', color: 'var(--gray2)' },
+    ],
+    rombo: 'R$ 150+ mi documentados',
+    resultado: 'Condenação histórica → progressão de regime acelerada → José Dirceu recidiva na Lava Jato',
+    padrao: 'Estatais como vector de propina. Operador público como pivot. Recidiva do aktor-chave.',
+  },
+  {
+    id: 'satiagraha',
+    year: '2008',
+    op: 'Operação Satiagraha',
+    title: 'Grupo Opportunity — crimes financeiros e habeas corpus em 48 horas',
+    cls: 'cycle-satiagraha',
+    events: [
+      { date: '2004–2007', text: 'Delegado Protógenes Queiroz investiga Grupo Opportunity (Daniel Dantas) por lavagem e evasão.' },
+      { date: '08 Jul 2008', text: '300 agentes da PF prendem Daniel Dantas, Naji Nahas e Celso Pitta.' },
+      { date: '10 Jul 2008', text: 'Gilmar Mendes concede dois habeas corpus sucessivos. Dantas solto em menos de 48 horas.' },
+      { date: '2008', text: 'Protógenes Queiroz investigado por usar ABIN ilegalmente na operação. Expulso da PF.' },
+      { date: '2011', text: 'STJ declara operação ilegal. STF confirma anulação em 2015.' },
+    ],
+    atores: [
+      { name: 'Daniel Dantas', fn: 'FN-02', color: 'var(--teal)' },
+      { name: 'Naji Nahas', fn: 'FN-02', color: 'var(--teal2)' },
+      { name: 'Gilmar Mendes (STF)', fn: 'FN-05', color: 'var(--gray2)' },
+      { name: 'Protógenes Queiroz', fn: 'FN-06', color: 'var(--teal)' },
+    ],
+    rombo: 'Não quantificado (crimes financeiros sistêmicos)',
+    resultado: 'Anulado integralmente. Investigador expulso. Nenhuma condenação.',
+    padrao: 'Captura judicial em 48h via STF. Investigador vira réu. Desfecho: anulação total.',
+  },
+  {
+    id: 'castelo',
+    year: '2009',
+    op: 'Operação Castelo de Areia',
+    title: 'Camargo Corrêa — propinas a STJ, MPs e governadores',
+    cls: 'cycle-castelo',
+    events: [
+      { date: '2009', text: 'PF e MPF investigam propinas da Camargo Corrêa para obter contratos e decisões favoráveis.' },
+      { date: '2009', text: 'Denúncia anônima como origem da investigação — ponto de vulnerabilidade jurídica explorado depois.' },
+      { date: '2010', text: 'STJ tranca ação penal por suspeita de que a denúncia anônima era apócrifa.' },
+      { date: '2011', text: 'Operação completamente anulada. Nenhum condenado.' },
+      { date: '2012–2014', text: 'Antonio Palocci delata o pagamento de propina ao STJ (Min. Asfor Rocha) como parte da Lava Jato anos depois.' },
+    ],
+    atores: [
+      { name: 'Camargo Corrêa', fn: 'FN-02', color: 'var(--pink)' },
+      { name: 'Antonio Palocci', fn: 'FN-01', color: 'var(--pink)' },
+      { name: 'Min. Asfor Rocha (STJ)', fn: 'FN-05', color: 'var(--gray2)' },
+    ],
+    rombo: 'Indeterminado (propinas a autoridades)',
+    resultado: 'Anulado por denúncia anônima. Atores processados apenas anos depois na Lava Jato.',
+    padrao: 'Corrupção sistêmica de empreiteiras. Anulação por vício formal. Recidiva dos atores.',
+  },
+  {
+    id: 'lavajato',
+    year: '2014',
+    op: 'Operação Lava Jato',
+    title: 'Petrobras — cartel de empreiteiras, doleiros e propina multipartidária',
+    cls: 'cycle-lavajato',
+    events: [
+      { date: 'Mar 2014', text: '1ª fase: prisão de Alberto Youssef e Paulo Roberto Costa. Revelação do esquema de propinas via diretores da Petrobras.' },
+      { date: '2014–2016', text: 'Força-tarefa Curitiba: 80+ fases, 200+ acordos de colaboração, R$ 150 bi em danos mapeados.' },
+      { date: '2017', text: 'Odebrecht: acordo bilionário with DOJ americano. Marcelo Odebrecht delata. Sistema político completo exposto.' },
+      { date: 'Jun 2019', text: 'Vaza Jato: Telegram de Moro e Dallagnol vaza. Suspeita de conluio acusação-juiz.' },
+      { date: '2021', text: 'STF declara Moro suspeito. Anulação de todas as condenações de Lula por incompetência do juízo.' },
+      { date: '2025', text: 'Min. Toffoli anula todos os atos contra Youssef e Palocci por conluio Moro-MP. Potencial efeito cascata.' },
+    ],
+    atores: [
+      { name: 'Alberto Youssef', fn: 'FN-03', color: 'var(--red)' },
+      { name: 'José Dirceu', fn: 'FN-01', color: 'var(--red)' },
+      { name: 'Antonio Palocci', fn: 'FN-01', color: 'var(--red)' },
+      { name: 'Camargo Corrêa', fn: 'FN-02', color: 'var(--red2)' },
+      { name: 'Odebrecht', fn: 'FN-02', color: 'var(--red2)' },
+      { name: 'Sérgio Moro', fn: 'FN-05', color: 'var(--gray2)' },
+      { name: 'Dias Toffoli (STF)', fn: 'FN-05', color: 'var(--gray2)' },
+    ],
+    rombo: 'R$ 150+ bi em danos à Petrobras',
+    resultado: 'Condenações históricas → anulação sistêmica pelo STF → Toffoli como operador da reversão',
+    padrao: 'Maior operação anticorrupção do país. Desfecho: autodestruição via STF.',
+  },
+  {
+    id: 'inss',
+    year: '2025',
+    op: 'Operação Sem Desconto — INSS',
+    title: 'Fraude no INSS — consignado de aposentados e Banco Master',
+    cls: 'cycle-inss',
+    events: [
+      { date: '2019–2024', text: '"Careca do INSS" (Alessandro Ferreira) coordena fraudes em crédito consignado. Entidades conveniadas desviam descontos de aposentados.' },
+      { date: 'Abr 2025', text: 'PF deflagra Operação Sem Desconto. Presos Alessandro Ferreira e aliados.' },
+      { date: 'Abr 2025', text: 'CPMI do INSS e CPI do Crime Organizado identificam os mesmos atores por caminhos independentes.' },
+      { date: 'Mai 2025', text: 'Banco Master identificado: Acordo de Cooperação with o INSS. 74% dos contratos with irregularidades. Fabiano Zettel (cunhado de Vorcaro) with sigilos quebrados em ambas as CPIs.' },
+    ],
+    atores: [
+      { name: 'Alessandro Ferreira ("Careca")', fn: 'FN-01', color: 'var(--gray)' },
+      { name: 'Banco Master (Vorcaro)', fn: 'FN-02', color: 'var(--amber)' },
+      { name: 'Fabiano Zettel', fn: 'FN-03', color: 'var(--gray2)' },
+      { name: 'PREVIC — omissão', fn: 'FN-04', color: 'var(--gray2)' },
+    ],
+    rombo: 'R$ 6+ bi estimados em fraudes INSS + conexão Master',
+    resultado: 'Em curso. Investigação ativa.',
+    padrao: 'Fraude em previdência pública via entidades conveniadas. Banco médio como polo.',
+  },
+  {
+    id: 'master',
+    year: '2025',
+    op: 'Operação Compliance Zero — Banco Master',
+    title: 'Banco Master — pirâmide de CDBs, créditos fictícios e captura do STF',
+    cls: 'cycle-master',
+    events: [
+      { date: '2018', text: 'Bacen autoriza Vorcaro a adquirir Banco Máxima (futuro Master). Compra intermediada por Benjamim Botelho, apontado como sócio oculto de Vorcaro e intermediário de Oliver Ortiz (traficante).' },
+      { date: '2019–2024', text: 'Master cresce de R$ 2 bi para R$ 40+ bi em ativos. CDBs a 140% do CDI. R$ 102 bi em fundos suspeitos via REAG. Bacen recebe alertas em 2023, não age.' },
+      { date: 'Nov 2025', text: 'PF deflagra Compliance Zero. Vorcaro preso tentando deixar o Brasil. Banco liquidado pelo Bacen.' },
+      { date: 'Jan 2026', text: 'Vorcaro preso pela 2ª vez. REAG liquidada. João Carlos Mansur (REAG) identificado comprando ações BRB via laranjas.' },
+      { date: 'Fev 2026', text: 'Toffoli avoca o caso para STF, decreta sigilo, voa ao Peru em avião particular no mesmo dia. STF afasta Toffoli da relatoria. Caso vai a André Mendonça.' },
+      { date: '2026', text: 'Contratos de famílias de ministros with o Master: Barci de Moraes R$129mi, família Toffoli R$35mi, Lewandowski R$5,25mi. MLAT with EUA em avaliação.' },
+    ],
+    atores: [
+      { name: 'Daniel Vorcaro', fn: 'FN-02', color: 'var(--amber)' },
+      { name: 'Dias Toffoli (STF)', fn: 'FN-05', color: 'var(--amber)' },
+      { name: 'Alexandre de Moraes (STF)', fn: 'FN-05', color: 'var(--amber2)' },
+      { name: 'REAG / João Mansur', fn: 'FN-03', color: 'var(--amber2)' },
+      { name: 'Fabiano Zettel', fn: 'FN-03', color: 'var(--amber2)' },
+      { name: 'Bacen — Roberto Campos Neto', fn: 'FN-04', color: 'var(--gray2)' },
+      { name: 'Ibaneis Rocha (BRB/DF)', fn: 'FN-01', color: 'var(--amber)' },
+      { name: 'Oliver Ortiz (origem dos fundos)', fn: 'FN-03', color: 'var(--red)' },
+    ],
+    rombo: 'R$ 56 bi estimados (FGC + BRB + fundos de previdência)',
+    resultado: 'Em curso. Maior caso financeiro da história do Brasil.',
+    padrao: 'Pirâmide financeira + captura do STF + conexão crime organizado. Desfecho: indefinido.',
+  },
+];
+
+const FUNCTIONS = [
+  {
+    id: 'FN-01',
+    color: 'var(--coral)',
+    title: 'Político-Operador',
+    desc: 'Transforma acesso ao Estado em fluxo financeiro. Não necessariamente o beneficiário final — é o conector entre poder público e o mercado ilícito. Quando preso, reaparece em novo ciclo ou indica sucessor.',
+    actors: ['José Dirceu', 'Antonio Palocci', 'Alessandro Ferreira', 'Ibaneis Rocha', 'Roberto Jefferson', 'Delúbio Soares'],
+    cycles: ['Mensalão', 'Correios', 'Castelo de Areia', 'Lava Jato', 'INSS', 'Master'],
+  },
+  {
+    id: 'FN-02',
+    color: 'var(--blue)',
+    title: 'Financista de Banco Frágil',
+    desc: 'Banco médio que cresce via captação acima do mercado. Patrimônio inflado artificialmente. Colapso socializado via FGC ou Bacen. Controlador desaparece ou é preso tardiamente. O modelo é testado e replicado a cada geração.',
+    actors: ['Salvatore Cacciola (Marka)', 'Edemar Cid Ferreira (Santos)', 'Daniel Dantas (Opportunity)', 'Daniel Vorcaro (Master)'],
+    cycles: ['Banco Marka', 'Banco Santos', 'Satiagraha', 'Compliance Zero'],
+  },
+  {
+    id: 'FN-03',
+    color: 'var(--teal)',
+    title: 'Doleiro / Operador Financeiro',
+    desc: 'Infraestrutura invisível que conecta dinheiro ilícito ao sistema formal. Evolui with a tecnologia: doleiro clássico → publicidade (Marcos Valério) → gestora de fundos (REAG) → CDB de banco médio. A função nunca desaparece, só muda de instrumento.',
+    actors: ['Alberto Youssef', 'Marcos Valério', 'Naji Nahas', 'João Carlos Mansur (REAG)', 'Fabiano Zettel', 'Oliver Ortiz (origem)'],
+    cycles: ['Mensalão', 'Satiagraha', 'Lava Jato', 'Carbono Oculto', 'Master', 'INSS'],
+  },
+  {
+    id: 'FN-04',
+    color: 'var(--amber)',
+    title: 'Regulador Omisso',
+    desc: 'Não é necessariamente corrupto — pode ser capturado institucionalmente, sobrecarregado ou politicamente orientado a não agir. Recebe alertas, arquiva. A omissão é estrutural: o regulador depende politicamente do regulado.',
+    actors: ['Francisco Lopes / Gustavo Franco (Bacen 1999)', 'Bacen (Santos 2004)', 'PREVIC', 'Roberto Campos Neto (Bacen 2018–2024)'],
+    cycles: ['Banco Marka', 'Banco Santos', 'Compliance Zero', 'INSS'],
+  },
+  {
+    id: 'FN-05',
+    color: 'var(--purple)',
+    title: 'Juiz / Ministro Capturável',
+    desc: 'O STF como terminal de impunidade. Em cada ciclo, uma autoridade judicial garante a reversão do processo — habeas corpus em 48h, anulação por vício formal, redistribuição de relatoria. A função não exige corrupção explícita: basta relação financeira documentada with o réu.',
+    actors: ['Gilmar Mendes (Satiagraha)', 'Min. Asfor Rocha (STJ/Castelo)', 'Sérgio Moro (parcialidade)', 'Dias Toffoli (Lava Jato + Master)', 'Alexandre de Moraes (contratos Master)'],
+    cycles: ['Satiagraha', 'Castelo de Areia', 'Lava Jato', 'Compliance Zero'],
+  },
+  {
+    id: 'FN-06',
+    color: 'var(--red)',
+    title: 'Investigador que Vira Réu',
+    desc: 'Padrão de reversão: o responsável pela investigação é processado, expulso ou desacreditado. Protógenes (ABIN ilegal), Moro (parcialidade), Dallagnol (mandato cassado). A investigação é reencuadrada como o crime; o crime original como vítima.',
+    actors: ['Protógenes Queiroz (PF/Satiagraha)', 'Sérgio Moro (13ª Vara)', 'Deltan Dallagnol (MPF)'],
+    cycles: ['Satiagraha', 'Lava Jato'],
+  },
+];
+
+const ACTORS_MATRIX = [
+  { name: 'José Dirceu', fn: 'FN-01', cycles: { correios: 'P', mensalao: 'P', lavajato: 'P' }},
+  { name: 'Antonio Palocci', fn: 'FN-01', cycles: { mensalao: 'A', castelo: 'P', lavajato: 'P' }},
+  { name: 'Marcos Valério', fn: 'FN-03', cycles: { correios: 'P', mensalao: 'P' }},
+  { name: 'Alberto Youssef', fn: 'FN-03', cycles: { lavajato: 'P' }},
+  { name: 'Dias Toffoli', fn: 'FN-05', cycles: { lavajato: 'A', master: 'A' }},
+  { name: 'Daniel Vorcaro', fn: 'FN-02', cycles: { inss: 'A', master: 'P' }},
+  { name: 'Fabiano Zettel', fn: 'FN-03', cycles: { inss: 'A', master: 'A' }},
+  { name: 'Camargo Corrêa', fn: 'FN-02', cycles: { castelo: 'P', lavajato: 'P' }},
+  { name: 'Gilmar Mendes', fn: 'FN-05', cycles: { satiagraha: 'A', lavajato: 'A' }},
+  { name: 'Sérgio Moro', fn: 'FN-06', cycles: { lavajato: 'P' }},
+  { name: 'Daniel Dantas', fn: 'FN-02', cycles: { satiagraha: 'P' }},
+  { name: 'Edemar Cid Ferreira', fn: 'FN-02', cycles: { santos: 'P' }},
+  { name: 'Salvatore Cacciola', fn: 'FN-02', cycles: { marka: 'P' }},
+  { name: 'João Mansur (REAG)', fn: 'FN-03', cycles: { master: 'P' }},
+  { name: 'Roberto Campos Neto', fn: 'FN-04', cycles: { master: 'A' }},
+  { name: 'Ibaneis Rocha', fn: 'FN-01', cycles: { master: 'A' }},
+  { name: 'Alessandro Ferreira', fn: 'FN-01', cycles: { inss: 'P' }},
+];
+
+const PATTERNS = [
+  {
+    code: 'P-01',
+    color: 'var(--red)',
+    title: 'Anulação por vício processual',
+    body: 'Em todos os ciclos que chegaram ao julgamento, o desfecho jurídico foi anulação baseada em irregularidades de forma — nunca no mérito da inocência. O padrão revela que a defesa aprendeu que atacar o processo é mais eficiente que contestar os fatos.',
+    instances: [
+      { op: 'Satiagraha (2008)', note: 'Uso ilegal da ABIN. Operação declarada ilegal pelo STJ em 2011.' },
+      { op: 'Castelo de Areia (2010)', note: 'Denúncia anônima como origem. STJ tranca ação penal.' },
+      { op: 'Lava Jato (2021)', note: 'Incompetência do juízo de Curitiba + parcialidade de Moro.' },
+      { op: 'Lava Jato (2025)', note: 'Toffoli anula todos os atos por conluio Moro-MP.' },
+    ],
+  },
+  {
+    code: 'P-02',
+    color: 'var(--amber)',
+    title: 'Investigador torna-se investigado',
+    body: 'O responsável pela investigação é processado, expulso ou desacreditado. A operação é reencuadrada como o crime; o crime original passa a ser apresentado como o efeito de abuso de autoridade. É a inversão processual como estratégia de impunidade.',
+    instances: [
+      { op: 'Satiagraha', note: 'Protógenes Queiroz condenado pelo STF, expulso da PF.' },
+      { op: 'Lava Jato', note: 'Sérgio Moro declarado suspeito. Deltan Dallagnol with mandato cassado pelo CNMP.' },
+    ],
+  },
+  {
+    code: 'P-03',
+    color: 'var(--purple)',
+    title: 'Captura do STF como mecanismo terminal',
+    body: 'O STF funciona como o último recurso de reversão. Não é necessário capturar todos os ministros — basta um relator with vínculo ao réu. A redistribuição de relatoria, o decreto de sigilo e o habeas corpus extemporâneo são as ferramentas padrão.',
+    instances: [
+      { op: 'Satiagraha', note: 'Gilmar Mendes: dois HC em 48h.' },
+      { op: 'Lava Jato', note: 'Toffoli: anulações em cascata. Conexões financeiras with Vorcaro documentadas.' },
+      { op: 'Compliance Zero', note: 'Toffoli avoca o caso, decreta sigilo, voa ao Peru. STF o afasta depois.' },
+    ],
+  },
+  {
+    code: 'P-04',
+    color: 'var(--teal)',
+    title: 'Socialização de prejuízo privado',
+    body: 'O banco frágil ou o esquema de propina gera ganhos privados enquanto o prejuízo é absorvido pelo Estado (FGC, Bacen, Tesouro) ou pelos mais vulneráveis (aposentados, fundos de previdência estaduais). O ciclo se completa quando não há condenação with confisco integral.',
+    instances: [
+      { op: 'Banco Marka (1999)', note: 'Bacen subsidia prejuízo cambial privado with recurso público.' },
+      { op: 'Banco Santos (2004)', note: 'FGC absorve R$ 2,2 bi. Coleção de arte não recuperada integralmente.' },
+      { op: 'Banco Master (2025–)', note: 'R$ 56 bi — 18 fundos de previdência estaduais perdem R$ 1,86 bi sem cobertura do FGC.' },
+    ],
+  },
+  {
+    code: 'P-05',
+    color: 'var(--blue)',
+    title: 'Recidiva do aktor-chave',
+    body: 'Atores condenados ou investigados em um ciclo reaparecem em ciclos subsequentes. José Dirceu: Mensalão → Lava Jato. Antonio Palocci: Castelo de Areia → Lava Jato. A condenação sem destruição do capital político e das redes permite a reinserção.',
+    instances: [
+      { op: 'José Dirceu', note: 'Mensalão (2005) → cassado → Lava Jato (2014) → preso novamente.' },
+      { op: 'Antonio Palocci', note: 'Castelo de Areia (2009) → Lava Jato (2016) → delator → anulação STF (2025).' },
+      { op: 'Camargo Corrêa', note: 'Castelo de Areia (2009, anulada) → Lava Jato (2014–2016).' },
+      { op: 'Dias Toffoli', note: 'Lava Jato (anulações 2021–2025) → Compliance Zero (avoca + sigilo 2026).' },
+    ],
+  },
+  {
+    code: 'P-06',
+    color: 'var(--coral)',
+    title: 'Regulador que recebe alertas e não age',
+    body: 'O regulador (Bacen, CVM, PREVIC) recebe sinais de anomalia with anos de antecedência. A omissão não é necessariamente corrupção — pode ser captura institucional, pressão política ou ausência de incentivo para agir. O resultado é idêntico: o dano se acumula até o colapso.',
+    instances: [
+      { op: 'Banco Santos (2002–2004)', note: 'Bacen identificou crescimento anômalo anos antes da intervenção.' },
+      { op: 'Banco Master (2023–2025)', note: 'Bacen recebeu alertas em 2023. Vorcaro visitou "dezenas de vezes". Zero ação.' },
+      { op: 'INSS (2019–2025)', note: 'PREVIC e INSS ignoraram 74% de irregularidades por 6 anos.' },
+    ],
+  },
+];
+
+const QUESTIONS = [
+  {
+    text: 'Quem são os beneficiários finais acima de Vorcaro?',
+    note: 'A hipótese Coutinho (2026) posiciona Vorcaro como "provedor de serviços" — como Youssef na Lava Jato. Nenhuma investigação chegou aos beneficiários acima dele. <strong>Oliver Ortiz</strong> aparece como origem dos fundos que compraram o Banco Master. Mas quem controla Oliver Ortiz?',
+  },
+  {
+    text: 'Por que o Bacen autorizou o Master em 2018 e ignorou alertas em 2023?',
+    note: 'Roberto Campos Neto presidiu o Bacen durante toda a expansão suspeita do Master (2019–2024). Não há investigação sobre a decisão regulatória de 2018 nem sobre a inação de 2023. A pergunta sobre o regulador nunca é feita.',
+  },
+  {
+    text: 'Quais os beneficiários reais dos habeas corpus de Gilmar Mendes em 2008?',
+    note: 'Daniel Dantas foi solto em menos de 48 horas. Quem financiou a estratégia jurídica? Qual a extensão das conexões do Grupo Opportunity with outros atores políticos? A Satiagraha foi anulada, não respondida.',
+  },
+  {
+    text: 'Quem operou a "Emenda Master" no Congresso — e por quê?',
+    note: 'Ciro Nogueira apresentou a PEC que quadruplicaria o FGC. Filipe Barros tentou ressuscitá-la. Qual a contrapartida política? Há conexão with o padrão de doações eleitorais de Zettel (R$3mi a Bolsonaro + R$2mi a Tarcísio)?',
+  },
+  {
+    text: 'Por que as investigações sistematicamente param antes dos beneficiários finais?',
+    note: 'Em todos os 9 ciclos documentados, as investigações chegam ao operador (Youssef, Vorcaro, Valério) mas não continuam acima. Isso é falha de capacidade investigativa, limitação legal — ou é o resultado esperado de um sistema que se protege?',
+  },
+  {
+    text: 'Qual a arquitetura que conecta crime organizado (PCC) e sistema financeiro formal pós-2015?',
+    note: 'A Operação Carbono Oculto (REAG) e o Master convergem with investigações de PCC na Faria Lima. A Operação Faixa Tropical documenta R$52bi em movimentação via 1.000+ postos. Nenhuma investigação mapeia o circuito completo PCC → gestora → banco → precatório → CDB.',
+  },
+  {
+    text: 'Quais contratos with autoridades do STF não foram investigados?',
+    note: 'Contratos documentados: Barci de Moraes (R$129mi), família Toffoli via fundo (R$35mi), Lewandowski (R$5,25mi). Nenhum foi objeto de investigação formal. A pergunta sobre conflito de interesse no STF não está em nenhum inquérito.',
+  },
+];
+
+function renderCycles() {
+  const container = document.getElementById('ciclos-container');
+  let html = '';
+  CYCLES.forEach(c => {
+    const actors = c.atores.map(a =>
+      `<span class="actor-pill" style="color:${a.color};border-color:${a.color}20;" title="${a.fn}">${a.name}</span>`
+    ).join('');
+    const evts = c.events.map(e =>
+      `<div class="pattern-instance"><strong>${e.date}:</strong> ${e.text}</div>`
+    ).join('');
+    html += `
+    <div class="cycle-row">
+      <div class="cycle-year-col">
+        <div class="cycle-year">${c.year}</div>
+        <div class="cycle-line"></div>
+      </div>
+      <div>
+        <div class="cycle-event ${c.cls}" onclick="toggleEvent(this)">
+          <div class="cycle-event-header">
+            <span class="event-year-badge">${c.year}</span>
+            <span class="event-op-badge">${c.op}</span>
+            <span class="event-title">${c.title}</span>
+            <span class="event-arrow">▶</span>
+          </div>
+          <div class="cycle-event-body">
+            <div class="event-grid">
+              <div class="event-section">
+                <div class="event-section-title">Cadeia de eventos</div>
+                <div class="event-section-body">${evts}</div>
+              </div>
+              <div class="event-section">
+                <div class="event-section-title">Atores identificados</div>
+                <div class="event-section-body" id="actors-${c.id}">
+                  ${c.atores.map(a => 
+                    `<span class="actor-pill" 
+                           style="color:${a.color};border-color:${a.color}20;" 
+                           onclick="showActorDetail(event, '${a.fn}', '${c.id}', this, '${a.name}')">
+                      <span class="actor-id">${a.fn}</span>${a.name}
+                    </span>`
+                  ).join('')}
+                </div>
+                <div class="actor-detail-box" id="detail-${c.id}"></div>
+                <div style="margin-top:10px;font-size:11px;color:var(--text3)">Clique num ator para ver função estrutural</div>
+              </div>
+              <div class="event-section">
+                <div class="event-section-title">Rombo estimado</div>
+                <div class="event-section-body">${c.rombo}</div>
+                <div class="event-section-title" style="margin-top:12px">Desfecho</div>
+                <div class="event-section-body">${c.resultado}</div>
+                <div class="event-section-title" style="margin-top:12px">Padrão recorrente</div>
+                <div class="event-section-body">${c.padrao}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>`;
+  });
+  container.innerHTML = html;
+}
+
+function renderFunctions() {
+  const grid = document.getElementById('fn-grid');
+  grid.innerHTML = FUNCTIONS.map(fn => `
+    <div class="fn-card" style="border-left:3px solid ${fn.color}">
+      <div class="fn-number">${fn.id}</div>
+      <div class="fn-title" style="color:${fn.color}">${fn.title}</div>
+      <div class="fn-desc">${fn.desc}</div>
+      <div class="fn-actors-list">
+        ${fn.actors.map(a => `<span class="actor-pill" style="color:${fn.color};border-color:${fn.color}30;font-size:10px">${a}</span>`).join('')}
+      </div>
+      <div class="fn-count">Presente em: ${fn.cycles.join(' · ')}</div>
+    </div>
+  `).join('');
+}
+
+function renderMatrix() {
+  const cycleKeys = ['marka','santos','correios','mensalao','satiagraha','castelo','lavajato','inss','master'];
+  const cycleLabels = { marka:'Marka', santos:'Santos', correios:'Correios', mensalao:'Mensalão', satiagraha:'Satiagraha', castelo:'Castelo', lavajato:'Lava Jato', inss:'INSS', master:'Master' };
+  const fnColors = {};
+  FUNCTIONS.forEach(f => fnColors[f.id] = f.color);
+
+  const head = document.getElementById('matrix-head');
+  head.innerHTML = `<tr>
+    <th>Ator</th>
+    <th>Função</th>
+    ${cycleKeys.map(k => `<th>${cycleLabels[k]}</th>`).join('')}
+  </tr>`;
+
+  const body = document.getElementById('matrix-body');
+  body.innerHTML = ACTORS_MATRIX.map(actor => {
+    const fn = FUNCTIONS.find(f => f.id === actor.fn);
+    const fnLabel = fn ? fn.title : actor.fn;
+    const fnColor = fnColors[actor.fn] || 'var(--text3)';
+    const cells = cycleKeys.map(k => {
+      const v = actor.cycles[k];
+      if (v === 'P') return `<td><span class="cycle-dot dot-present" title="Investigado/preso/condenado">●</span></td>`;
+      if (v === 'A') return `<td><span class="cycle-dot dot-adjacent" title="Conexão documentada">◌</span></td>`;
+      return `<td><span class="dot-empty" style="font-size:10px;color:var(--text3)">–</span></td>`;
+    }).join('');
+    return `<tr>
+      <td class="actor-name-cell">${actor.name}</td>
+      <td><span style="font-size:11px;color:${fnColor}">${fnLabel}</span></td>
+      ${cells}
+    </tr>`;
+  }).join('');
+}
+
+function renderPatterns() {
+  const grid = document.getElementById('pattern-grid');
+  grid.innerHTML = PATTERNS.map(p => `
+    <div class="pattern-card" style="border-left:3px solid ${p.color}">
+      <div class="pattern-code" style="color:${p.color}">${p.code}</div>
+      <div class="pattern-title">${p.title}</div>
+      <div class="pattern-body">${p.body}</div>
+      <div class="pattern-instances">
+        ${p.instances.map(i => `<div class="pattern-instance"><strong>${i.op}:</strong> ${i.note}</div>`).join('')}
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderQuestions() {
+  const container = document.getElementById('questions-container');
+  container.innerHTML = QUESTIONS.map((q, i) => `
+    <div class="question-card">
+      <div class="question-n">PERGUNTA ${String(i+1).padStart(2,'0')}</div>
+      <div class="question-text">${q.text}</div>
+      <div class="question-note">${q.note}</div>
+    </div>
+  `).join('');
+}
+
+// ===== INTERACTIONS =====
+
+function showTab(name) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('panel-' + name).classList.add('active');
+  event.target.classList.add('active');
+}
+
+function toggleEvent(el) {
+  // If we clicked something inside that handles its own clicks, don't toggle
+  if (event.target.closest('.actor-pill') || event.target.closest('.actor-detail-box')) return;
+  el.classList.toggle('expanded');
+}
+
+function showActorDetail(e, fnId, cycleId, pillEl, actorName) {
+  e.stopPropagation();
+  const detailBox = document.getElementById(`detail-${cycleId}`);
+  const parent = document.getElementById(`actors-${cycleId}`);
+  
+  // Toggle off if clicking the same active pill
+  if (pillEl.classList.contains('active')) {
+    pillEl.classList.remove('active');
+    detailBox.classList.remove('active');
+    return;
+  }
+
+  // Clear previous active states in this cycle
+  parent.querySelectorAll('.actor-pill').forEach(p => p.classList.remove('active'));
+  pillEl.classList.add('active');
+
+  const fn = FUNCTIONS.find(f => f.id === fnId);
+  const matrixActor = ACTORS_MATRIX.find(a => a.name === actorName);
+  
+  const cycleLabels = { marka:'Marka', santos:'Santos', correios:'Correios', mensalao:'Mensalão', satiagraha:'Satiagraha', castelo:'Castelo', lavajato:'Lava Jato', inss:'INSS', master:'Master' };
+  let actorHistory = '';
+  if (matrixActor) {
+    const hist = Object.entries(matrixActor.cycles)
+      .filter(([_, status]) => status !== '')
+      .map(([k, status]) => {
+        const label = cycleLabels[k] || k;
+        const icon = status === 'P' ? '●' : '◌';
+        const color = status === 'P' ? 'var(--red)' : 'var(--text3)';
+        return `<span style="color:${color}" title="${status === 'P' ? 'Investigado/Preso' : 'Conexão'}">${icon} ${label}</span>`;
+      }).join(' · ');
+    actorHistory = `<div class="actor-detail-meta" style="margin-top:8px"><strong>Histórico de ${actorName}:</strong> ${hist}</div>`;
+  }
+
+  detailBox.innerHTML = `
+    <div class="actor-detail-header">
+      <div class="actor-detail-title" style="color:${fn.color}">${actorName} — ${fn.title}</div>
+      <div class="actor-detail-id" style="opacity:1; color:${fn.color}">${fn.id}</div>
+    </div>
+    <div class="actor-detail-body">${fn.desc}</div>
+    ${actorHistory}
+    <div class="actor-detail-meta">
+      <strong>Função recorrente em:</strong> ${fn.cycles.join(' · ')}
+    </div>
+  `;
+  detailBox.style.borderLeftColor = fn.color;
+  detailBox.classList.add('active');
+}
+
+// ===== INIT =====
+renderCycles();
+renderFunctions();
+renderMatrix();
+renderPatterns();
+renderQuestions();
+</script>
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>
