@@ -114,12 +114,3 @@ Tabela de referência histórica no painel resume Lava Jato (278 condenações r
 *Dossiê interativo completo (matriz, SVG de nexo e painéis): [gosurf.site/artigos/padroes-sistemicos-dashboard.html](https://gosurf.site/padroes-sistemicos-dashboard.html)*
 
 *Metadados do painel: Matriz de Indulgência Sistêmica v3.1 | Mestre de Padrões 2026 | CC0 1.0 Universal.*
-
-
-
-  
-**Sugestão de primeiro post (promoção)**
-
-> *Dez padrões, dezesseis operações, um grafo: por que anulação, mídia, fintech e cultura popular aparecem no mesmo quadro anticorrupção — leia no Article (link após publicar).*
-
-  
