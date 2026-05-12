@@ -1,0 +1,154 @@
+[
+  {
+    "id": "181",
+    "date": "2026-05-09",
+    "date_precision": "day",
+    "title": "Moraes suspende monocraticamente a Lei 15.402/2026 em 10+ execuções penais do 8J — menos de 24h após promulgação",
+    "summary": "Em 9 de maio de 2026, às 14h26, o ministro Alexandre de Moraes suspendeu a aplicação da Lei 15.402/2026 (Lei da Dosimetria) nas execuções penais dos condenados pelo 8 de janeiro. A lei havia sido promulgada pelo presidente do Senado Davi Alcolumbre na véspera (8/5), após Lula deixar o prazo constitucional expirar sem ação. O mecanismo: decisões monocráticas individuais, cabeçalho trocado por processo, conteúdo idêntico. Justificativa formal: tramitação das ADIs 7966 e 7967 (ajuizadas pela ABI e pela federação PSOL-Rede no mesmo dia 8/5) configura 'fato processual novo e relevante'. Nenhuma cautelar foi concedida nas ADIs. A lei permanece formalmente vigente e materialmente inaplicável para os réus do 8J.",
+    "category": "chokepoint_judicial",
+    "actors": [
+      {"name": "Alexandre de Moraes", "role": "Relator ADIs 7966/7967 + relator execuções penais 8J", "institution": "STF"},
+      {"name": "Nara Faustino de Menezes", "role": "Condenada 8J — caso-piloto, EP 72/DF", "institution": null},
+      {"name": "Débora Rodrigues", "role": "Condenada 8J — pedido negado", "institution": null},
+      {"name": "Davi Alcolumbre", "role": "Presidente do Senado — promulgou a lei em 08/05/2026", "institution": "Senado Federal"},
+      {"name": "Luiz Inácio Lula da Silva", "role": "Presidente da República — deixou prazo expirar", "institution": "Presidência da República"}
+    ],
+    "institutions": ["STF", "Senado Federal", "ABI", "PSOL-Rede"],
+    "legal_basis": [
+      "Lei 15.402/2026 — Lei da Dosimetria (vigente, não suspensa por cautelar)",
+      "LOMAN LC 35/1979 art. 35 I — dever do magistrado de cumprir as disposições legais",
+      "LOMAN LC 35/1979 art. 49 II — responsabilidade civil por recusa sem justo motivo",
+      "Lei 1.079/1950 art. 39 IV e V — crimes de responsabilidade de ministros do STF",
+      "Venire contra factum proprium — proibição de comportamento contraditório processual"
+    ],
+    "patterns": ["P03", "P07"],
+    "values": {
+      "execucoes_penais_afetadas": "10+",
+      "horas_entre_promulgacao_e_suspensao": 24,
+      "cautelares_nas_ADIs": 0,
+      "prazo_suspensao": "indeterminado"
+    },
+    "sources": [
+      {
+        "title": "Moraes suspende aplicação da Lei da Dosimetria",
+        "url": "https://www.gazetadopovo.com.br/republica/moraes-suspende-aplicacao-da-lei-da-dosimetria/",
+        "outlet": "Gazeta do Povo",
+        "date": "2026-05-09"
+      },
+      {
+        "title": "Moraes suspende aplicação da Lei da Dosimetria até decisão do STF",
+        "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-05/moraes-suspende-aplicacao-da-lei-da-dosimetria-ate-decisao-do-stf",
+        "outlet": "Agência Brasil",
+        "date": "2026-05-09"
+      },
+      {
+        "title": "Moraes suspende Lei da Dosimetria até STF julgar ações sobre constitucionalidade",
+        "url": "https://www.metropoles.com/brasil/moraes-suspende-aplicacao-da-lei-da-dosimetria",
+        "outlet": "Metrópoles",
+        "date": "2026-05-09"
+      }
+    ],
+    "result": "Lei 15.402/2026 formalmente vigente, materialmente suspensa para todos os condenados do 8J por decisões monocráticas individuais. Prazo indeterminado — até julgamento das ADIs pelo plenário. Relator das ADIs e executor das penas: mesma pessoa.",
+    "connections": ["id_149", "id_175"],
+    "status": "confirmado",
+    "analise": "Chokepoint de segunda ordem: não requer declaração de inconstitucionalidade nem cautelar formal nas ADIs. A acumulação de funções (relator das ADIs + relator das execuções penais) cria posição estrutural única — o mesmo ator que poderia forçar o julgamento coletivo da lei decide, caso a caso, se a aplica individualmente. Venire contra factum proprium documentado: ausência de cautelar nas ADIs + recusa de aplicação nos casos concretos são logicamente incompatíveis. A lei do Congresso existe; seus efeitos são anulados por inação seletiva.",
+    "lacuna_investigativa": "Quantos pedidos individuais foram negados até 09/05/2026? Existe prazo regimental para pauta das ADIs? Qual o critério de prioridade de julgamento sob controle do relator?"
+  },
+  {
+    "id": "182",
+    "date": "2026-05-09",
+    "date_precision": "day",
+    "title": "Acumulação de funções: mesmo ministro julgou, condenou e é relator da lei que reduziria as penas dos réus do 8J",
+    "summary": "Alexandre de Moraes acumula três funções no mesmo conjunto de casos: (1) conduziu os inquéritos e presidiu a instrução penal dos réus do 8 de janeiro; (2) proferiu as condenações e calculou as penas; (3) foi sorteado relator das ADIs 7966 e 7967, que questionam a constitucionalidade da lei que reduziria exatamente essas penas. A configuração viola estruturalmente o princípio nemo judex in causa propria. Adicionalmente: réus sem foro por prerrogativa de função foram julgados diretamente no STF por conexão processual elástica, desviando do juízo natural de primeira instância. A execução penal, que deveria retornar ao juízo de base, permanece sob controle do mesmo relator. O vício é de origem — a 'roupa velha' sobre a qual a Lei da Dosimetria tenta colocar remendo.",
+    "category": "mecanismo_sistemico",
+    "actors": [
+      {"name": "Alexandre de Moraes", "role": "Julgador original + relator execuções + relator ADIs", "institution": "STF"}
+    ],
+    "institutions": ["STF"],
+    "legal_basis": [
+      "CF/88 art. 5 LIII — princípio do juiz natural",
+      "CF/88 art. 102 I b e c — competência originária do STF (foro por prerrogativa de função)",
+      "Nemo judex in causa propria — vedação de julgamento por magistrado com interesse no resultado",
+      "CF/88 art. 5 LV — contraditório e ampla defesa",
+      "Lei 15.402/2026 — Lei da Dosimetria (materialmente suspensa)"
+    ],
+    "patterns": ["P03", "P07"],
+    "values": {},
+    "sources": [
+      {
+        "title": "Moraes suspende aplicação da Lei da Dosimetria",
+        "url": "https://www.gazetadopovo.com.br/republica/moraes-suspende-aplicacao-da-lei-da-dosimetria/",
+        "outlet": "Gazeta do Povo",
+        "date": "2026-05-09"
+      }
+    ],
+    "result": "Configuração estrutural documentada: julgador original das condenações é simultaneamente relator do controle abstrato da lei que alteraria essas condenações. Prazo de pauta das ADIs sob controle exclusivo do mesmo ministro.",
+    "connections": ["id_149", "id_175", "id_181"],
+    "status": "confirmado",
+    "analise": "A acumulação não é acidental — é produto do sistema de prevenção e sorteio aplicado a um relator que acumulou um volume inédito de processos correlatos. O 'guardião eterno de suas próprias sentenças' (formulação analítica) é a descrição estrutural precisa: nenhum mecanismo processual vigente obriga o relator a pautar as ADIs, a declarar inconstitucionalidade incidental ou a aplicar a lei. A posição é hermeticamente fechada. O vício de origem — julgamento no STF de réus sem foro por prerrogativa de função via conexão elástica — é o substrato que torna a situação irremediável por dentro do próprio sistema.",
+    "lacuna_investigativa": "Existe precedente no direito comparado de ministro acumulando simultaneamente as funções de julgador do caso concreto, parte interessada e relator do controle abstrato da lei que altera o resultado do caso? A conexão processual que levou réus sem foro ao STF foi formalmente contestada e julgada?"
+  },
+  {
+    "id": "183",
+    "date": "2026-05-09",
+    "date_precision": "day",
+    "title": "Geometria 535×1: quatro atos em quatro dias revelam distribuição real do poder institucional brasileiro",
+    "summary": "Entre 29 de abril e 9 de maio de 2026, quatro eventos consecutivos expõem a arquitetura de poder: (1) 29/04 — Senado rejeita Jorge Messias para o STF: primeira rejeição em 132 anos, por 32 a 37. (2) 30/04 — Câmara (318×144) e Senado (49×24) derrubam veto presidencial à Lei da Dosimetria: 535 parlamentares eleitos pelo voto popular aprovam a lei. (3) 08/05 — Lula deixa o prazo constitucional expirar sem assinar; Alcolumbre promulga a lei. (4) 09/05 — Moraes suspende a aplicação da lei via decisões monocráticas individuais, menos de 24 horas após promulgação. Síntese: a vontade de 535 mandatários eleitos foi neutralizada por 1 ministro não eleito em menos de um dia útil.",
+    "category": "analise_editorial",
+    "actors": [
+      {"name": "Alexandre de Moraes", "role": "Relator ADIs + executor execuções penais 8J", "institution": "STF"},
+      {"name": "Luiz Inácio Lula da Silva", "role": "Presidente da República — omissão constitucional", "institution": "Presidência da República"},
+      {"name": "Davi Alcolumbre", "role": "Presidente do Senado — promulgação por omissão do Executivo", "institution": "Senado Federal"},
+      {"name": "Jorge Messias", "role": "Indicado ao STF — rejeitado em sabatina", "institution": "AGU"}
+    ],
+    "institutions": ["STF", "Senado Federal", "Câmara dos Deputados", "Presidência da República"],
+    "legal_basis": [
+      "CF/88 art. 52 III a — sabatina e aprovação de ministros do STF pelo Senado",
+      "CF/88 art. 66 §3 — prazo de 15 dias úteis para sanção ou veto presidencial",
+      "CF/88 art. 66 §7 — promulgação pelo presidente do Congresso em caso de omissão do Executivo",
+      "Lei 15.402/2026 — Lei da Dosimetria (promulgada 08/05, suspensa 09/05)"
+    ],
+    "patterns": ["P03", "P07", "P09"],
+    "values": {
+      "votos_camara_favor": 318,
+      "votos_camara_contra": 144,
+      "votos_senado_favor": 49,
+      "votos_senado_contra": 24,
+      "total_parlamentares_favoraveis": 535,
+      "ministros_para_suspender": 1,
+      "horas_lei_vigente_antes_suspensao": 24,
+      "anos_desde_ultima_rejeicao_sabatina": 132
+    },
+    "sources": [
+      {
+        "title": "Senado rejeita Jorge Messias para o STF — primeira rejeição em 132 anos",
+        "url": "https://www.senado.leg.br",
+        "outlet": "Senado Federal",
+        "date": "2026-04-29"
+      },
+      {
+        "title": "Câmara derruba veto da Dosimetria — 318 a 144",
+        "url": "https://www.camara.leg.br",
+        "outlet": "Câmara dos Deputados",
+        "date": "2026-04-30"
+      },
+      {
+        "title": "Moraes suspende aplicação da Lei da Dosimetria",
+        "url": "https://www.gazetadopovo.com.br/republica/moraes-suspende-aplicacao-da-lei-da-dosimetria/",
+        "outlet": "Gazeta do Povo",
+        "date": "2026-05-09"
+      },
+      {
+        "title": "Moraes suspende aplicação da Lei da Dosimetria até decisão do STF",
+        "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-05/moraes-suspende-aplicacao-da-lei-da-dosimetria-ate-decisao-do-stf",
+        "outlet": "Agência Brasil",
+        "date": "2026-05-09"
+      }
+    ],
+    "result": "Lei aprovada por 535 parlamentares eleitos suspensa por 1 ministro em menos de 24 horas. Rejeição de Messias: primeiro sinal documentado de reequilíbrio institucional Legislativo-Judiciário em 132 anos.",
+    "connections": ["id_149", "id_175", "id_181", "id_182"],
+    "status": "confirmado",
+    "analise": "A sequência de quatro dias expõe a geometria real do poder: o Legislativo pode aprovar por margem expressiva; o Executivo pode omitir-se; o resultado é idêntico — 1 ministro não eleito, com mandato vitalício, detém poder de veto material sobre produção legislativa quando acumula as funções de julgador do caso concreto e relator do controle abstrato. A analogia com o court-packing de Roosevelt (1937) é estruturalmente pertinente: quando o judiciário se torna filtro terminal de toda produção legislativa, o sistema político historicamente encontra mecanismos de reequilíbrio. A rejeição de Messias — primeira em 132 anos — é o primeiro sinal documentado desse reequilíbrio em curso no Brasil. A janela de outubro/2026 é o próximo ponto de inflexão.",
+    "lacuna_investigativa": "Qual o próximo movimento do Congresso após a rejeição de Messias e a suspensão da Dosimetria? Existe articulação para PEC de limite de mandato ou reforma do STF em tramitação? A composição do tribunal até 2028 (aposentadorias previstas) é o dado estratégico mais relevante do ciclo — quem nomeia?"
+  }
+]

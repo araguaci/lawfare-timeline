@@ -4,7 +4,12 @@
       "Bash(ls _pages/)",
       "Bash(ls _tabs/)",
       "Bash(bundle exec *)",
-      "Bash(xargs grep *)"
+      "Bash(xargs grep *)",
+      "Bash(Get-ChildItem -Path \"D:\\\\_deploy\\\\lawfare-timeline\" -Force)",
+      "Bash(Select-Object Name, Mode, LastWriteTime)",
+      "WebSearch",
+      "Bash(grep -r \"^categories:\" \"D:\\\\_deploy\\\\lawfare-timeline\\\\_posts\\\\\" --include=\"*.md\" | sed 's/.*categories: //' | sort -u | head -40)",
+      "PowerShell(Select-String -Path \"D:\\\\_deploy\\\\lawfare-timeline\\\\_data\\\\lawfare-unified-corpus.json\" -Pattern \"crime-organizado-transnacional\" | Select-Object -First 5 | ForEach-Object { Write-Host $_.Line.Trim\\(\\) })"
     ]
   }
 }

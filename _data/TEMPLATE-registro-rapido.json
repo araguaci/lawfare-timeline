@@ -1,0 +1,38 @@
+{
+  "id": "PRÓXIMO_DISPONÍVEL",
+  "slug": "SLUG-CURTO-SEM-ESPAÇO",
+  "tipo": "instancia_padrao",
+  "data_evento": "AAAA-MM-DD",
+  "data_registro": "2026-05-09",
+  "titulo": "TÍTULO FACTUAL — sem adjetivos",
+  "operacao_referencia": "OPERAÇÃO ou CONTEXTO",
+  "padroes_ativados": ["P?"],
+
+  "evidencia_primaria": {
+    "tipo": "declaração | documento | decisão | audio | video",
+    "descricao": "O QUE FOI DITO/FEITO/DECIDIDO — exato, sem interpretação",
+    "classificacao": "primária | secundária | inferida",
+    "fonte": "VEÍCULO ou PROCESSO",
+    "url_referencia": "URL"
+  },
+
+  "cadeia_logica": "ATOR → AÇÃO → BENEFICIÁRIO → RESULTADO — em linha, sem retórica",
+
+  "observacao_analitica": "O que este evento confirma no corpus — máx. 3 linhas",
+
+  "atores": [
+    {
+      "nome": "NOME",
+      "funcao_estrutural": "Função no padrão (não cargo — função)",
+      "cargo_na_epoca": "CARGO"
+    }
+  ],
+
+  "conexoes_corpus": [
+    { "id_ref": 0, "descricao": "por que este evento conecta com aquele ID" }
+  ],
+
+  "status": "confirmado | sob_investigacao | inferido",
+  "visibilidade": "público",
+  "licenca": "CC0 1.0"
+}

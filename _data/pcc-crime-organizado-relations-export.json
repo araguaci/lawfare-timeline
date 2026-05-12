@@ -1,0 +1,1537 @@
+{
+  "meta": {
+    "methodology": "METHODOLOGY.md",
+    "methodology_version": "2.2",
+    "exported_at": "2026-05-11",
+    "scope": "PCC, CV, ʼNdrangheta, crime organizado transnacional, infraestrutura financeira e institucional associada no corpus gosurf.site",
+    "evidence_legend": {
+      "ev-confirmed": "Primário/confirmado ou secundário documentado (§3)",
+      "ev-contested": "Contestado",
+      "ev-alleged": "Alegado",
+      "ev-denied": "Negado pelo autor",
+      "ev-inference": "Inferência analítica"
+    },
+    "internal_sources": [
+      "artigos/lawfare-1481-1496-pcc-ndrangheta.json",
+      "lawfare-json-153-158.json (Trilogia Narco)",
+      "lawfare-timeline-entries-146-166.json (Narco Fluxo / Choquei)",
+      "lawfare-timeline-ids-167-185.json (CPI Crime Organizado)",
+      "lawfare-json-159-163.json (Sem Desconto / REAG)"
+    ]
+  },
+  "entities": [
+    {
+      "id": "ent_pcc",
+      "type": "facção",
+      "label": "PCC (Primeiro Comando da Capital)",
+      "aliases": [
+        "1533",
+        "Primeiro Comando"
+      ]
+    },
+    {
+      "id": "ent_cv",
+      "type": "facção",
+      "label": "CV (Comando Vermelho)",
+      "aliases": []
+    },
+    {
+      "id": "ent_ndrangheta",
+      "type": "facção",
+      "label": "ʼNdrangheta",
+      "aliases": [
+        "Ndrangheta",
+        "máfia calabresa"
+      ]
+    },
+    {
+      "id": "ent_clan_golfo",
+      "type": "facção",
+      "label": "Clã do Golfo",
+      "aliases": [],
+      "region": "Colômbia"
+    },
+    {
+      "id": "ent_reag",
+      "type": "empresa",
+      "label": "REAG Investimentos / ecossistema REAG",
+      "aliases": [
+        "REAG3"
+      ]
+    },
+    {
+      "id": "ent_master",
+      "type": "empresa",
+      "label": "Banco Master / rede Master",
+      "aliases": []
+    },
+    {
+      "id": "ent_inss",
+      "type": "instituição_pública",
+      "label": "INSS",
+      "aliases": []
+    },
+    {
+      "id": "ent_rede_arpar",
+      "type": "estrutura_ilícita",
+      "label": "Rede Arpar (fraude previdenciária documentada na CPMI)",
+      "aliases": []
+    },
+    {
+      "id": "ent_pf",
+      "type": "instituição_pública",
+      "label": "Polícia Federal",
+      "aliases": [
+        "PF"
+      ]
+    },
+    {
+      "id": "ent_pgr",
+      "type": "instituição_pública",
+      "label": "PGR",
+      "aliases": []
+    },
+    {
+      "id": "ent_stf",
+      "type": "instituição_pública",
+      "label": "STF",
+      "aliases": []
+    },
+    {
+      "id": "ent_cpi_co",
+      "type": "instituição_pública",
+      "label": "CPI do Crime Organizado (Senado)",
+      "aliases": []
+    },
+    {
+      "id": "ent_ofac",
+      "type": "instituição_pública",
+      "label": "OFAC / Tesouro EUA",
+      "aliases": []
+    },
+    {
+      "id": "ent_europol",
+      "type": "instituição_pública",
+      "label": "Europol",
+      "aliases": []
+    },
+    {
+      "id": "ent_pj_pt",
+      "type": "instituição_pública",
+      "label": "Polícia Judiciária (Portugal)",
+      "aliases": []
+    },
+    {
+      "id": "ent_choquei",
+      "type": "mídia",
+      "label": "Choquei / Raphael Sousa (op. Narco Fluxo)",
+      "aliases": []
+    },
+    {
+      "id": "ent_narco_fluxo",
+      "type": "operacao",
+      "label": "Operação Narco Fluxo",
+      "aliases": [
+        "Narco Fluxo"
+      ]
+    },
+    {
+      "id": "ent_trilogia",
+      "type": "operacao",
+      "label": "Trilogia Narco (Narcovela → Narcobet → Narco Fluxo)",
+      "aliases": [
+        "153",
+        "154",
+        "155"
+      ]
+    },
+    {
+      "id": "ent_carbono",
+      "type": "operacao",
+      "label": "Operação Carbono Oculto",
+      "aliases": []
+    },
+    {
+      "id": "ent_tank",
+      "type": "operacao",
+      "label": "Operação Tank",
+      "aliases": []
+    },
+    {
+      "id": "ent_torsi",
+      "type": "pessoa",
+      "label": "Irmãos Torsi",
+      "aliases": [
+        "Renato Torsi"
+      ]
+    },
+    {
+      "id": "ent_santos",
+      "type": "infraestrutura",
+      "label": "Porto de Santos",
+      "aliases": []
+    },
+    {
+      "id": "ent_hydra",
+      "type": "operacao",
+      "label": "Operação Hydra (fintechs / crime organizado)",
+      "aliases": []
+    },
+    {
+      "id": "ent_mcryan",
+      "type": "pessoa",
+      "label": "MC Ryan SP (Ryan Santana dos Santos)",
+      "aliases": []
+    },
+    {
+      "id": "ent_magrini",
+      "type": "pessoa",
+      "label": "Frank Magrini (operador financeiro — Narco Fluxo)",
+      "aliases": []
+    },
+    {
+      "id": "ent_mpf_eua",
+      "type": "instituição_pública",
+      "label": "DOJ/MPF EUA (indiciamentos)",
+      "aliases": []
+    },
+    {
+      "id": "ent_politica_municipal",
+      "type": "setor_institucional",
+      "label": "Contratos e mandatos municipais (alvo de infiltração documentada)",
+      "aliases": []
+    }
+  ],
+  "relations": [
+    {
+      "id": "REL001",
+      "from": "ent_ndrangheta",
+      "to": "ent_pcc",
+      "relation_types": [
+        "transferência_organizacional",
+        "mentoria_estrutural"
+      ],
+      "summary": "Documentação sobre irmãos Torsi (ʼNdrangheta) no sistema prisional brasileiro e influência em estatuto/sintonias do PCC.",
+      "evidence_classification": "ev-contested",
+      "patterns": [
+        "P07",
+        "P10"
+      ],
+      "timeline_corpus_ids": [
+        "1481"
+      ],
+      "lacuna_investigativa": "Grau de atribuição causal na formação atual do PCC vs. outros fatores prisionais."
+    },
+    {
+      "id": "REL002",
+      "from": "ent_ndrangheta",
+      "to": "ent_pcc",
+      "relation_types": [
+        "tráfico_transnacional",
+        "logística_cocaína"
+      ],
+      "summary": "Operação Morabito/Pasquino (João Pessoa) e rotas Brasil–Gioia Tauro; contexto de aliança logística.",
+      "evidence_classification": "ev-confirmed",
+      "patterns": [
+        "P10"
+      ],
+      "timeline_corpus_ids": [
+        "1482"
+      ]
+    },
+    {
+      "id": "REL003",
+      "from": "ent_ndrangheta",
+      "to": "ent_pcc",
+      "relation_types": [
+        "cooperação_judicial",
+        "delacao_estrutural"
+      ],
+      "summary": "Delação Pasquino (2024) e acordo PGR–Itália (2025) citando consolidação da relação transnacional.",
+      "evidence_classification": "ev-confirmed",
+      "patterns": [
+        "P10"
+      ],
+      "timeline_corpus_ids": [
+        "1483",
+        "1485"
+      ]
+    },
+    {
+      "id": "REL004",
+      "from": "ent_ndrangheta",
+      "to": "ent_clan_golfo",
+      "relation_types": [
+        "parceria_logística"
+      ],
+      "summary": "Palermo ('Peppe'): euf e América Latina; PCC como nó entrelaçado na rede calabresa–cartéis.",
+      "evidence_classification": "ev-confirmed",
+      "patterns": [
+        "P10"
+      ],
+      "timeline_corpus_ids": [
+        "1484"
+      ]
+    },
+    {
+      "id": "REL005",
+      "from": "ent_clan_golfo",
+      "to": "ent_pcc",
+      "relation_types": [
+        "intermediação_rotas"
+      ],
+      "summary": "Documentação de rede ʼNdrangheta–Clã do Golfo–PCC em relatórios de operação internacional.",
+      "evidence_classification": "ev-alleged",
+      "patterns": [
+        "P10"
+      ],
+      "timeline_corpus_ids": [
+        "1484"
+      ]
+    },
+    {
+      "id": "REL006",
+      "from": "ent_pcc",
+      "to": "ent_carbono",
+      "relation_types": [
+        "infiltração_financeira",
+        "lavagem"
+      ],
+      "summary": "Carbono Oculto: PF associa PCC a fundos/fintechs e patrimônio bloqueado na Faria Lima.",
+      "evidence_classification": "ev-confirmed",
+      "patterns": [
+        "P08",
+        "P10"
+      ],
+      "timeline_corpus_ids": [
+        "1486"
+      ]
+    },
+    {
+      "id": "REL007",
+      "from": "ent_pcc",
+      "to": "ent_tank",
+      "relation_types": [
+        "lavagem_postos_combustível"
+      ],
+      "summary": "Operação Tank (PR): rede de postos e fintech paralela; volumetria documentada pela PF.",
+      "evidence_classification": "ev-confirmed",
+      "patterns": [
+        "P08",
+        "P10"
+      ],
+      "timeline_corpus_ids": [
+        "1487"
+      ]
+    },
+    {
+      "id": "REL008",
+      "from": "ent_pcc",
+      "to": "ent_ofac",
+      "relation_types": [
+        "sanções_financeiras"
+      ],
+      "summary": "Designação OFAC de operador chave (Diego Gonçalves do Carmo) e discurso institucional EUA sobre PCC.",
+      "evidence_classification": "ev-confirmed",
+      "patterns": [
+        "P10"
+      ],
+      "timeline_corpus_ids": [
+        "1488"
+      ]
+    },
+    {
+      "id": "REL009",
+      "from": "ent_pcc",
+      "to": "ent_pj_pt",
+      "relation_types": [
+        "expansão_europa",
+        "logística_portuária"
+      ],
+      "summary": "PJ Portugal: células, portos, lavagem por setores formais (imobiliário, futebol).",
+      "evidence_classification": "ev-confirmed",
+      "patterns": [
+        "P07",
+        "P10"
+      ],
+      "timeline_corpus_ids": [
+        "1489",
+        "1490",
+        "1493"
+      ]
+    },
+    {
+      "id": "REL010",
+      "from": "ent_pcc",
+      "to": "ent_europol",
+      "relation_types": [
+        "cooperação_repressiva_indireta"
+      ],
+      "summary": "PE e Europol: perguntas formais e acordos UE–Brasil no contexto PCC (inteligência portuária).",
+      "evidence_classification": "ev-confirmed",
+      "patterns": [
+        "P10"
+      ],
+      "timeline_corpus_ids": [
+        "1491"
+      ]
+    },
+    {
+      "id": "REL011",
+      "from": "ent_pcc",
+      "to": "ent_santos",
+      "relation_types": [
+        "hub_exportação"
+      ],
+      "summary": "BR-262 / MS e outras rotas documentadas convergem para exportação (Santos) e Europa.",
+      "evidence_classification": "ev-confirmed",
+      "patterns": [
+        "P05",
+        "P10"
+      ],
+      "timeline_corpus_ids": [
+        "1492"
+      ]
+    },
+    {
+      "id": "REL012",
+      "from": "ent_pcc",
+      "to": "ent_santos",
+      "relation_types": [
+        "corrupção_logística_avançada"
+      ],
+      "summary": "Técnicas rip-on/rip-off, sistemas portuários — relato investigativo transnacional.",
+      "evidence_classification": "ev-contested",
+      "patterns": [
+        "P08",
+        "P10"
+      ],
+      "timeline_corpus_ids": [
+        "1493"
+      ]
+    },
+    {
+      "id": "REL013",
+      "from": "ent_pcc",
+      "to": "ent_cv",
+      "relation_types": [
+        "ecossistema_compartilhado_nacional"
+      ],
+      "summary": "Narco Fluxo e dashboards do site tratam PCC e CV como núcleos do esquema cultural-financeiro em múltiplos estados.",
+      "evidence_classification": "ev-inference",
+      "patterns": [
+        "P07",
+        "P09"
+      ],
+      "timeline_corpus_ids": [],
+      "notes": "Ver artigos operacao-narco-fluxo.html, pcc-cv-ameaca-nacional.html"
+    },
+    {
+      "id": "REL014",
+      "from": "ent_choquei",
+      "to": "ent_pcc",
+      "relation_types": [
+        "operador_mídia_remunerado"
+      ],
+      "summary": "Narco Fluxo: PF aponta Choquei/Raphael como operador de mídia de organização ligada ao PCC; R$ 1,63bi no complexo.",
+      "evidence_classification": "ev-confirmed",
+      "patterns": [
+        "P04",
+        "P05",
+        "P09"
+      ],
+      "lawfare_ids": [
+        162
+      ]
+    },
+    {
+      "id": "REL015",
+      "from": "ent_narco_fluxo",
+      "to": "ent_trilogia",
+      "relation_types": [
+        "desdobramento"
+      ],
+      "summary": "Narco Fluxo como terceira fase após Narcovela e Narcobet.",
+      "evidence_classification": "ev-confirmed",
+      "patterns": [
+        "P08"
+      ],
+      "lawfare_ids": [
+        153,
+        154,
+        155
+      ]
+    },
+    {
+      "id": "REL016",
+      "from": "ent_pcc",
+      "to": "ent_rede_arpar",
+      "relation_types": [
+        "cliente_infraestrutura_lavagem"
+      ],
+      "summary": "CPMI/rede Sem Desconto: PCC como fonte de recursos processada pela rede; nexo formal ainda lacunar.",
+      "evidence_classification": "ev-alleged",
+      "patterns": [
+        "P05",
+        "P10"
+      ],
+      "lacuna_investigativa": "Contrato ou vínculo documental direto PCC–Rede Arpar não estabelecido publicamente.",
+      "notes": "operacao-sem-desconto.html · lawfare-json-159-163"
+    },
+    {
+      "id": "REL017",
+      "from": "ent_reag",
+      "to": "ent_pcc",
+      "relation_types": [
+        "hub_lavagem_transversal"
+      ],
+      "summary": "Análise do corpus: REAG como hub conectando Compliance Zero, Carbono Oculto e Sem Desconto; PCC cliente transversal.",
+      "evidence_classification": "ev-inference",
+      "patterns": [
+        "P10"
+      ],
+      "notes": "operacao-sem-desconto.html"
+    },
+    {
+      "id": "REL018",
+      "from": "ent_stf",
+      "to": "ent_cpi_co",
+      "relation_types": [
+        "chokepoint_sobre_investigação"
+      ],
+      "summary": "IDs 167–169: bloqueios e tensão com CPI do Crime Organizado (fundos Master, narrativa institucional).",
+      "evidence_classification": "ev-confirmed",
+      "patterns": [
+        "P03",
+        "P01"
+      ],
+      "lawfare_ids": [
+        167,
+        168,
+        169
+      ]
+    },
+    {
+      "id": "REL019",
+      "from": "ent_pcc",
+      "to": "ent_master",
+      "relation_types": [
+        "paralelo_investigativo"
+      ],
+      "summary": "Mapas do site (Master/PCC): intersecção investigativa e parlamentar sem colapsar funções estruturais.",
+      "evidence_classification": "ev-inference",
+      "patterns": [
+        "P10"
+      ],
+      "notes": "pages.json · grafo mental / dashboards"
+    },
+    {
+      "id": "REL020",
+      "from": "ent_trilogia",
+      "to": "ent_pcc",
+      "relation_types": [
+        "hipótese_não_fechada"
+      ],
+      "summary": "Trilogia Narco (153): lacuna explícita — conexão PCC / Rota Solimões não estabelecida formalmente.",
+      "evidence_classification": "ev-alleged",
+      "patterns": [
+        "P06"
+      ],
+      "lawfare_ids": [
+        153
+      ]
+    },
+    {
+      "id": "REL021",
+      "from": "ent_pcc",
+      "to": "ent_mpf_eua",
+      "relation_types": [
+        "indiciamento_transnacional",
+        "pressão_FTO"
+      ],
+      "summary": "Indiciamentos nos EUA (ex.: Massachusetts) e debate sobre classificação como organização terrorista estrangeira.",
+      "evidence_classification": "ev-contested",
+      "patterns": [
+        "P10"
+      ],
+      "timeline_corpus_ids": [
+        "1496",
+        "1494"
+      ]
+    },
+    {
+      "id": "REL022",
+      "from": "ent_pcc",
+      "to": "ent_politica_municipal",
+      "relation_types": [
+        "captura_política_local",
+        "financiamento_eleitoral"
+      ],
+      "summary": "Financiamento eleitoral municipal / fintech — tese de infiltração em contratos (lixo, transporte, combustível) segundo reportagens citadas no corpus.",
+      "evidence_classification": "ev-contested",
+      "patterns": [
+        "P09",
+        "P05"
+      ],
+      "timeline_corpus_ids": [
+        "1495"
+      ]
+    },
+    {
+      "id": "REL023",
+      "from": "ent_magrini",
+      "to": "ent_pcc",
+      "relation_types": [
+        "financiamento_operacional"
+      ],
+      "summary": "PF/Narco Fluxo: Magrini apontado como operador com conexões ao PCC; financiamento carreira MC Ryan desde 2014.",
+      "evidence_classification": "ev-confirmed",
+      "patterns": [
+        "P05",
+        "P09"
+      ],
+      "lawfare_ids": [
+        163
+      ]
+    },
+    {
+      "id": "REL024",
+      "from": "ent_mcryan",
+      "to": "ent_narco_fluxo",
+      "relation_types": [
+        "organização_central"
+      ],
+      "summary": "MC Ryan SP identificado como figura central no esquema R$ 1,6bi+ (Narco Fluxo).",
+      "evidence_classification": "ev-confirmed",
+      "patterns": [
+        "P08"
+      ],
+      "lawfare_ids": [
+        162
+      ]
+    },
+    {
+      "id": "REL025",
+      "from": "ent_hydra",
+      "to": "ent_pcc",
+      "relation_types": [
+        "mesmo_padrão_setorial"
+      ],
+      "summary": "Hydra: infiltração do crime organizado em fintechs reguladas — paralelo analítico P8 com Carbono/Tank/Narco Bet.",
+      "evidence_classification": "ev-inference",
+      "patterns": [
+        "P08",
+        "P10"
+      ],
+      "notes": "lawfare-timeline-xarticle.md · operacao narco/carbono"
+    }
+  ],
+  "timeline_entries": [
+    {
+      "id": "1481",
+      "date": "1989-01-01",
+      "date_precision": "year",
+      "title": "Irmãos Torsi (ʼNdrangheta) moldam estrutura organizacional do PCC dentro de presídios brasileiros",
+      "summary": "Investigações brasileiras e italianas documentam que os irmãos Torsi, membros da ʼNdrangheta presos no Brasil entre os anos 1980 e 1990, ensinaram aos detentos paulistas os fundamentos da organização mafiosa italiana: estatuto escrito, códigos de conduta, disciplina interna rígida, sintonias (núcleos divididos por atividade e território) e gestão financeira sustentável. Essas estruturas tornaram-se a espinha dorsal do PCC. Renato Torsi foi extraditado à Itália em outubro de 1994; seu irmão, no ano seguinte. Ambos mantiveram contato escrito com liderança do PCC após saída do Brasil. A origem organizacional do PCC tem DNA mafioso italiano documentado — não é coincidência estrutural, é transferência direta de conhecimento.",
+      "category": "operacao_policial",
+      "actors": [
+        {
+          "name": "Renato Torsi",
+          "role": "",
+          "institution": ""
+        },
+        {
+          "name": "Irmão Torsi",
+          "role": "",
+          "institution": ""
+        },
+        {
+          "name": "Mizael (liderança PCC)",
+          "role": "",
+          "institution": ""
+        }
+      ],
+      "institutions": [
+        "PCC",
+        "ʼNdrangheta",
+        "sistema prisional SP"
+      ],
+      "legal_basis": [],
+      "patterns": [
+        "P10"
+      ],
+      "values": {},
+      "sources": [
+        {
+          "title": "",
+          "url": "https://www.brasilparalelo.com.br/noticias/descubra-como-a-mafia-italiana-ajudou-a-criar-o-pcc",
+          "outlet": "",
+          "date": ""
+        },
+        {
+          "title": "",
+          "url": "https://smallwarsjournal.com/2025/04/24/the-expansion-of-the-pcc-in-portugal-challenges-impacts-and-responses/",
+          "outlet": "",
+          "date": ""
+        }
+      ],
+      "result": "Relevância corpus: alta; prioridade 1.",
+      "connections": [],
+      "status": "documentado",
+      "evidence_note": "Classificação evidencial: operação jornalística e/ou fontes citadas no artifacto legado — aplicar §3 METHODOLOGY ao usar em produção."
+    },
+    {
+      "id": "1482",
+      "date": "2021-04-08",
+      "date_precision": "day",
+      "title": "Rocco Morabito e Vincenzo Pasquino (ʼNdrangheta) presos em hotel de luxo em João Pessoa",
+      "summary": "Em operação conjunta da Polícia Federal brasileira, Interpol e polícia italiana, os mafiosos Rocco Morabito (considerado um dos chefes da ʼNdrangheta) e Vincenzo Pasquino foram presos em um hotel de luxo em João Pessoa, Paraíba. Morabito era um dos fugitivos mais procurados da Interpol. Pasquino foi identificado como intermediário de pelo menos 15 remessas de cocaína enviadas ao porto de Gioia Tauro, na Calábria, a partir do Brasil, Colômbia, Equador e Panamá — totalizando 1,2 tonelada documentada. Ambos foram posteriormente extraditados à Itália. Pasquino foi condenado a 14 anos de prisão. A prisão no nordeste brasileiro — não em São Paulo, centro de operações do PCC — sugere uso de rotas alternativas e estrutura logística descentralizada.",
+      "category": "operacao_policial",
+      "actors": [
+        {
+          "name": "Rocco Morabito",
+          "role": "",
+          "institution": ""
+        },
+        {
+          "name": "Vincenzo Pasquino",
+          "role": "",
+          "institution": ""
+        }
+      ],
+      "institutions": [
+        "PCC",
+        "ʼNdrangheta",
+        "Polícia Federal",
+        "Interpol",
+        "Polícia Italiana"
+      ],
+      "legal_basis": [
+        "Lei 12.850/2013 — organização criminosa",
+        "Lei 9.613/1998 — lavagem de capitais",
+        "Lei 11.343/2006 — tráfico de drogas"
+      ],
+      "patterns": [
+        "P10"
+      ],
+      "values": {},
+      "sources": [
+        {
+          "title": "",
+          "url": "https://www.band.com.br/noticias/brasil-urgente/ultimas/mafia-italiana-e-pcc-veja-os-lacos-entre-as-faccoes-no-trafico-de-cocaina-202509051720",
+          "outlet": "",
+          "date": ""
+        },
+        {
+          "title": "",
+          "url": "https://www.diariodocentrodomundo.com.br/acordos-portos-e-rotas-entenda-a-ligacao-entre-o-pcc-e-a-mafia-calabresa/",
+          "outlet": "",
+          "date": ""
+        },
+        {
+          "title": "",
+          "url": "https://faccaopcc1533primeirocomandodacapital.org/2023/02/15/a-alianca-entre-a-ndrangheta-e-o-pcc-1533/",
+          "outlet": "",
+          "date": ""
+        }
+      ],
+      "result": "Relevância corpus: alta; prioridade 1.",
+      "connections": [
+        "id_1481"
+      ],
+      "status": "documentado",
+      "evidence_note": "Classificação evidencial: operação jornalística e/ou fontes citadas no artifacto legado — aplicar §3 METHODOLOGY ao usar em produção."
+    },
+    {
+      "id": "1483",
+      "date": "2024-01-01",
+      "date_precision": "year",
+      "title": "Vincenzo Pasquino firma delação premiada e revela pela primeira vez conexão estrutural ʼNdrangheta–PCC",
+      "summary": "Em 2024, Vincenzo Pasquino — líder mafioso preso e condenado na Itália — firmou acordo de delação premiada com autoridades italianas. Trata-se da primeira vez na história que um membro da ʼNdrangheta revela formalmente conexões com organizações criminosas brasileiras. Pasquino detalhou: rotas de tráfico de cocaína do Brasil à Europa; interesse da ʼNdrangheta em estabelecer novos portos seguros no território brasileiro; e tentativas de envio de armas para organizações paramilitares no Brasil. As revelações desencadearam a negociação do Acordo PGR-Itália (jun/2025) e levaram à criação de equipes conjuntas de investigação permanente. A PGR auxiliou as autoridades italianas no processo de delação desde 2024.",
+      "category": "operacao_policial",
+      "actors": [
+        {
+          "name": "Vincenzo Pasquino",
+          "role": "",
+          "institution": ""
+        },
+        {
+          "name": "Giovanni Bombardieri",
+          "role": "",
+          "institution": ""
+        },
+        {
+          "name": "Giovanni Melillo",
+          "role": "",
+          "institution": ""
+        }
+      ],
+      "institutions": [
+        "ʼNdrangheta",
+        "PCC",
+        "Procuradoria Antimáfia Turim",
+        "PGR Brasil"
+      ],
+      "legal_basis": [
+        "Lei 12.850/2013 — organização criminosa",
+        "Lei 9.613/1998 — lavagem de capitais",
+        "Lei 11.343/2006 — tráfico de drogas"
+      ],
+      "patterns": [
+        "P10"
+      ],
+      "values": {},
+      "sources": [
+        {
+          "title": "",
+          "url": "https://www.portaltela.com/politica/justica/2025/05/31/colaboracao-de-traficante-italiano-revela-lacos-entre-pcc-e-mafia-ndrangheta",
+          "outlet": "",
+          "date": ""
+        },
+        {
+          "title": "",
+          "url": "https://www.diariodocentrodomundo.com.br/acordos-portos-e-rotas-entenda-a-ligacao-entre-o-pcc-e-a-mafia-calabresa/",
+          "outlet": "",
+          "date": ""
+        }
+      ],
+      "result": "Relevância corpus: alta; prioridade 1.",
+      "connections": [
+        "id_1482",
+        "id_1485"
+      ],
+      "status": "documentado",
+      "evidence_note": "Classificação evidencial: operação jornalística e/ou fontes citadas no artifacto legado — aplicar §3 METHODOLOGY ao usar em produção."
+    },
+    {
+      "id": "1484",
+      "date": "2024-06-01",
+      "date_precision": "day",
+      "title": "Giuseppe Palermo ('Peppe') preso em Bogotá — coordenava rede ʼNdrangheta–Clã do Golfo–PCC",
+      "summary": "Giuseppe Palermo, conhecido como 'Peppe', considerado peça-chave na conexão entre a ʼNdrangheta e cartéis da América Latina, foi preso em Bogotá em operação conjunta da Europol e da polícia britânica. Palermo estava na lista de procurados da Interpol e mantinha parceria com o Clã do Golfo — principal cartel produtor de cocaína da Colômbia. Coordenava a compra de carregamentos vindos de Colômbia, Equador e Peru, enviando a droga para múltiplos portos europeus. A operação resultou em 22 prisões, a maioria no sul da Itália. O caso documenta que a ʼNdrangheta opera em múltiplos nós simultâneos na América do Sul — não apenas via PCC no Brasil, mas também via Clã do Golfo na Colômbia.",
+      "category": "operacao_policial",
+      "actors": [
+        {
+          "name": "Giuseppe Palermo ('Peppe')",
+          "role": "",
+          "institution": ""
+        }
+      ],
+      "institutions": [
+        "ʼNdrangheta",
+        "Clã do Golfo",
+        "Europol",
+        "Polícia Britânica",
+        "Interpol"
+      ],
+      "legal_basis": [
+        "Lei 11.343/2006 — tráfico de drogas"
+      ],
+      "patterns": [
+        "P10"
+      ],
+      "values": {},
+      "sources": [
+        {
+          "title": "",
+          "url": "https://www.band.com.br/noticias/brasil-urgente/ultimas/mafia-italiana-e-pcc-veja-os-lacos-entre-as-faccoes-no-trafico-de-cocaina-202509051720",
+          "outlet": "",
+          "date": ""
+        }
+      ],
+      "result": "Relevância corpus: alta; prioridade 1.",
+      "connections": [
+        "id_1483"
+      ],
+      "status": "documentado",
+      "evidence_note": "Classificação evidencial: operação jornalística e/ou fontes citadas no artifacto legado — aplicar §3 METHODOLOGY ao usar em produção."
+    },
+    {
+      "id": "1485",
+      "date": "2025-06-24",
+      "date_precision": "day",
+      "title": "Acordo PGR-Itália cria equipes conjuntas de investigação permanente contra crime organizado transnacional",
+      "summary": "O Procurador-Geral Antimáfia e Antiterrorismo da Itália, Giovanni Melillo, veio a São Paulo nos dias 24 e 25 de junho de 2025 para assinar acordo inédito de cooperação com a PGR brasileira. O acordo cria equipes conjuntas de investigação permanente para combater máfias e organizações criminosas nos dois países, sem prazo definido para encerramento — algo sem precedente nas relações Brasil-Itália. O procurador antimáfia de Turim, Giovanni Bombardieri, declarou: 'O relacionamento da ʼNdrangheta com organizações criminosas brasileiras, em especial com o PCC, é antigo. O que emerge hoje é a consolidação dessa relação em nível transnacional.' O acordo foi viabilizado pelas revelações da delação de Pasquino (2024) e pelo auxílio da PGR às investigações italianas desde então.",
+      "category": "incidente_diplomatico",
+      "actors": [
+        {
+          "name": "Giovanni Melillo",
+          "role": "",
+          "institution": ""
+        },
+        {
+          "name": "Giovanni Bombardieri",
+          "role": "",
+          "institution": ""
+        }
+      ],
+      "institutions": [
+        "PGR Brasil",
+        "Procuradoria Antimáfia Turim",
+        "Procuradoria Antimáfia e Antiterrorismo Itália"
+      ],
+      "legal_basis": [
+        "Lei 12.850/2013 — organização criminosa",
+        "Lei 9.613/1998 — lavagem de capitais"
+      ],
+      "patterns": [
+        "P10"
+      ],
+      "values": {},
+      "sources": [
+        {
+          "title": "",
+          "url": "https://www.diariodocentrodomundo.com.br/acordos-portos-e-rotas-entenda-a-ligacao-entre-o-pcc-e-a-mafia-calabresa/",
+          "outlet": "",
+          "date": ""
+        },
+        {
+          "title": "",
+          "url": "https://www.portaltela.com/politica/justica/2025/05/31/colaboracao-de-traficante-italiano-revela-lacos-entre-pcc-e-mafia-ndrangheta",
+          "outlet": "",
+          "date": ""
+        }
+      ],
+      "result": "Relevância corpus: alta; prioridade 1.",
+      "connections": [
+        "id_1483"
+      ],
+      "status": "confirmado",
+      "evidence_note": "Classificação evidencial: operação jornalística e/ou fontes citadas no artifacto legado — aplicar §3 METHODOLOGY ao usar em produção."
+    },
+    {
+      "id": "1486",
+      "date": "2025-08-28",
+      "date_precision": "day",
+      "title": "Operação Carbono Oculto: PCC infiltra Faria Lima — R$30bi em fundos bloqueados, 1 terminal portuário apreendido",
+      "summary": "Em 28 de agosto de 2025, a Polícia Federal deflagrou a megaoperação Carbono Oculto — descrita pelo ministro da Justiça Ricardo Lewandowski como 'uma das maiores operações da história do Brasil'. Mais de 1.400 agentes cumpriram 350+ mandados de prisão e busca em 8 estados. A investigação revelou que o PCC infiltrou o coração do mercado financeiro brasileiro: 40 fundos de investimento fechados (com um único cotista — geralmente outro fundo) somavam patrimônio acima de R$30bi, incluindo uma frota de 1.600 caminhões, 100 imóveis, 6 fazendas e 1 terminal portuário. Uma fintech criada em 2021 atuava como 'banco paralelo' movimentando R$46bi de 2020 a 2024. A Receita Federal apontou que a revogação da instrução normativa do PIX em janeiro de 2025 — derrubada após campanha de fake news — manteve R$47bi fora do radar fiscal, beneficiando diretamente o esquema criminoso. R$23bi investigados em lavagem; R$1,4bi em tributos federais sonegados; R$7,6bi em tributos estaduais (SP).",
+      "category": "operacao_policial",
+      "actors": [
+        {
+          "name": "Ricardo Lewandowski",
+          "role": "",
+          "institution": ""
+        },
+        {
+          "name": "Robinson Barreirinhas",
+          "role": "",
+          "institution": ""
+        },
+        {
+          "name": "Andrea Costa Chaves",
+          "role": "",
+          "institution": ""
+        },
+        {
+          "name": "Dennis Cali",
+          "role": "",
+          "institution": ""
+        },
+        {
+          "name": "Mohamad Hussein Mourad",
+          "role": "",
+          "institution": ""
+        },
+        {
+          "name": "Daniel Dias Lopes",
+          "role": "",
+          "institution": ""
+        }
+      ],
+      "institutions": [
+        "PCC",
+        "Polícia Federal",
+        "Receita Federal",
+        "PGFN",
+        "Reag Investimentos (REAG3)",
+        "BK Bank"
+      ],
+      "legal_basis": [
+        "Lei 12.850/2013 — organização criminosa",
+        "Lei 9.613/1998 — lavagem de capitais"
+      ],
+      "patterns": [
+        "P08",
+        "P10"
+      ],
+      "values": {},
+      "sources": [
+        {
+          "title": "",
+          "url": "https://www.seudinheiro.com/2025/empresas/fintechs-invisiveis-e-o-banco-paralelo-do-pcc-como-criminosos-se-aproveitaram-da-faria-lima-para-desviar-bilhoes-miql/",
+          "outlet": "",
+          "date": ""
+        },
+        {
+          "title": "",
+          "url": "https://tvtnews.com.br/crime-organizado-faria-lima-fundos-investigados/",
+          "outlet": "",
+          "date": ""
+        },
+        {
+          "title": "",
+          "url": "https://www.poder360.com.br/poder-justica/postos-fintechs-e-portos-saiba-quais-foram-os-alvos-da-pf/",
+          "outlet": "",
+          "date": ""
+        },
+        {
+          "title": "",
+          "url": "https://www.cnnbrasil.com.br/nacional/sudeste/sp/pcc-e-postos-inquerito-comecou-com-distribuidora-e-abertura-de-fintech/",
+          "outlet": "",
+          "date": ""
+        }
+      ],
+      "result": "Relevância corpus: alta; prioridade 1.",
+      "connections": [
+        "id_1485"
+      ],
+      "status": "confirmado",
+      "evidence_note": "Classificação evidencial: operação jornalística e/ou fontes citadas no artifacto legado — aplicar §3 METHODOLOGY ao usar em produção."
+    },
+    {
+      "id": "1487",
+      "date": "2025-08-28",
+      "date_precision": "day",
+      "title": "Operação Tank (PR): rede de postos de combustível lava R$600mi para o PCC via 2.000 depósitos em espécie por dia",
+      "summary": "Deflagrada simultaneamente à Carbono Oculto, a Operação Tank investigou uma rede de lavagem de dinheiro no Paraná. O esquema: Daniel Dias Lopes — recém-saído do regime fechado por tráfico — assumiu uma distribuidora de combustíveis que saltou de faturamento R$0 a R$6mi em um ano, depois adquiriu dezenas de postos em Curitiba. Os postos recebiam em média 2.000 depósitos em espécie por dia, chegando a 12.000 em um único dia. Em 2021, o grupo criou uma fintech para 'contas inteligentes' que não deixavam rastros no dinheiro fracionado. Empresas de transporte de valores legítimas carregavam malotes dos postos à fintech. Resultado: R$23bi movimentados, R$600mi lavados. 14 mandados de prisão e 42 de busca. Bloqueio de bens superior a R$1bi. Os alvos principais — Daniel Lopes e Mohamad Hussein Mourad — fugiram antes da chegada dos agentes. A PF investiga possível vazamento interno da operação.",
+      "category": "operacao_policial",
+      "actors": [
+        {
+          "name": "Daniel Dias Lopes",
+          "role": "",
+          "institution": ""
+        },
+        {
+          "name": "Mohamad Hussein Mourad",
+          "role": "",
+          "institution": ""
+        }
+      ],
+      "institutions": [
+        "PCC",
+        "Polícia Federal",
+        "Receita Federal"
+      ],
+      "legal_basis": [
+        "Lei 12.850/2013 — organização criminosa",
+        "Lei 9.613/1998 — lavagem de capitais"
+      ],
+      "patterns": [
+        "P08",
+        "P10"
+      ],
+      "values": {},
+      "sources": [
+        {
+          "title": "",
+          "url": "https://www.cnnbrasil.com.br/nacional/sudeste/sp/pcc-e-postos-inquerito-comecou-com-distribuidora-e-abertura-de-fintech/",
+          "outlet": "",
+          "date": ""
+        },
+        {
+          "title": "",
+          "url": "https://www.poder360.com.br/poder-justica/postos-fintechs-e-portos-saiba-quais-foram-os-alvos-da-pf/",
+          "outlet": "",
+          "date": ""
+        }
+      ],
+      "result": "Relevância corpus: alta; prioridade 1.",
+      "connections": [
+        "id_1486"
+      ],
+      "status": "confirmado",
+      "evidence_note": "Classificação evidencial: operação jornalística e/ou fontes citadas no artifacto legado — aplicar §3 METHODOLOGY ao usar em produção."
+    },
+    {
+      "id": "1488",
+      "date": "2024-03-14",
+      "date_precision": "day",
+      "title": "OFAC/Tesouro EUA sanciona Diego Gonçalves do Carmo — lavagem de R$1,2bi para o PCC",
+      "summary": "Em 14 de março de 2024, o Office of Foreign Assets Control (OFAC) do Departamento do Tesouro dos EUA designou Diego Macedo Gonçalves do Carmo como membro-chave do PCC, congelando todos os seus ativos americanos. O Tribunal de Justiça de SP o condenara em novembro de 2022 a 7 anos e 11 meses por tráfico de drogas, documentando que coordenava a lavagem de R$1,2bi (US$240mi) para a facção — mesmo preso, continuava operando de dentro da cadeia. O subsecretário do Tesouro para Terrorismo e Inteligência Financeira, Brian E. Nelson, declarou: 'Com uma extensa rede em toda a América Latina e presença global em expansão, o PCC representa uma das organizações de narcotráfico mais significativas e preocupantes da região.' A sanção foi viabilizada pelo acordo de cooperação Tesouro EUA + MPSP firmado em 2022. Após a designação, investigadores identificaram afiliados do PCC em 5 estados americanos: Flórida, Nova York, Nova Jersey, Connecticut e Tennessee.",
+      "category": "operacao_policial",
+      "actors": [
+        {
+          "name": "Diego Macedo Gonçalves do Carmo",
+          "role": "",
+          "institution": ""
+        },
+        {
+          "name": "Brian E. Nelson",
+          "role": "",
+          "institution": ""
+        }
+      ],
+      "institutions": [
+        "PCC",
+        "OFAC",
+        "Departamento do Tesouro EUA",
+        "TJSP",
+        "MPSP"
+      ],
+      "legal_basis": [
+        "Lei 12.850/2013 — organização criminosa",
+        "Lei 9.613/1998 — lavagem de capitais"
+      ],
+      "patterns": [
+        "P10"
+      ],
+      "values": {},
+      "sources": [
+        {
+          "title": "",
+          "url": "https://static.poder360.com.br/2025/07/Sancoes-ao-Tesouro-Operativo-do-Primeiro-Comando-da-Capital-PCC-_-Departamento-do-Tesouro-dos-EUA.pdf",
+          "outlet": "",
+          "date": ""
+        },
+        {
+          "title": "",
+          "url": "https://timesbrasil.com.br/brasil/reportagem-do-wall-street-journal-mostra-como-pcc-virou-potencia-global-na-venda-de-drogas/",
+          "outlet": "",
+          "date": ""
+        },
+        {
+          "title": "",
+          "url": "https://www.gazetadopovo.com.br/republica/made-in-brasil-pcc-cresce-cada-vez-mais-nos-estados-unidos/",
+          "outlet": "",
+          "date": ""
+        }
+      ],
+      "result": "Relevância corpus: alta; prioridade 1.",
+      "connections": [
+        "id_1487"
+      ],
+      "status": "confirmado",
+      "evidence_note": "Classificação evidencial: operação jornalística e/ou fontes citadas no artifacto legado — aplicar §3 METHODOLOGY ao usar em produção."
+    },
+    {
+      "id": "1489",
+      "date": "2025-03-11",
+      "date_precision": "day",
+      "title": "PCC em Portugal: 87 membros identificados, 1 cabecilha confirmado — operações portuárias e lavagem via imobiliário e futebol",
+      "summary": "A Polícia Judiciária portuguesa identificou 87 membros do PCC em Portugal, com 1 cabecilha confirmado. Membro preso no Montijo coordenava a extração de cocaína dos cascos e caixas de leme de navios que atracavam nos portos portugueses — foi detido com 3 armas automáticas, 1 pistola 9mm adaptada para rajadas e equipamentos de mergulho incluindo motos subaquáticas para operações noturnas. A presença do PCC em Portugal não se manifesta pela violência ostensiva do Brasil, mas por 'operações discretas de logística, tráfico e lavagem de dinheiro' — declaração da Polícia Judiciária. Setores utilizados: imobiliário, transferências de jogadores de futebol, restauração e barbearias. O Conselho de Disciplina da FPF abriu investigação sobre o clube de Fafe por suspeita de lavagem via transferências. Investigações documentam que a rota Brasil-Portugal foi a maior em número de apreensões em 2023 (95) e 2024 (101).",
+      "category": "operacao_policial",
+      "actors": [
+        {
+          "name": "'Zago' (detido em Cascais)",
+          "role": "",
+          "institution": ""
+        }
+      ],
+      "institutions": [
+        "PCC",
+        "Polícia Judiciária Portugal",
+        "Conselho de Disciplina FPF"
+      ],
+      "legal_basis": [
+        "Lei 11.343/2006 — tráfico de drogas"
+      ],
+      "patterns": [
+        "P10",
+        "P07"
+      ],
+      "values": {},
+      "sources": [
+        {
+          "title": "",
+          "url": "https://www.jn.pt/justica/artigo/gangue-brasileiro-pcc-ja-tem-87-elementos-infiltrados-em-portugal/17752386",
+          "outlet": "",
+          "date": ""
+        },
+        {
+          "title": "",
+          "url": "https://observador.pt/2025/06/28/pcc-tem-cabecilha-e-87-membros-em-portugal-expressao-do-maior-gang-da-america-do-sul-deveria-preocupar-portugueses/",
+          "outlet": "",
+          "date": ""
+        },
+        {
+          "title": "",
+          "url": "https://folhanacional.pt/2026/04/03/pcc-espalha-se-em-portugal-mafia-brasileira-instala-se-e-redes-criminosas-disparam/",
+          "outlet": "",
+          "date": ""
+        },
+        {
+          "title": "",
+          "url": "https://smallwarsjournal.com/2025/04/24/the-expansion-of-the-pcc-in-portugal-challenges-impacts-and-responses/",
+          "outlet": "",
+          "date": ""
+        }
+      ],
+      "result": "Relevância corpus: alta; prioridade 1.",
+      "connections": [
+        "id_1488"
+      ],
+      "status": "confirmado",
+      "evidence_note": "Classificação evidencial: operação jornalística e/ou fontes citadas no artifacto legado — aplicar §3 METHODOLOGY ao usar em produção."
+    },
+    {
+      "id": "1490",
+      "date": "2025-02-01",
+      "date_precision": "day",
+      "title": "XIV Cimeira Luso-Brasileira: acordos de investigação conjunta PCC assinados entre Portugal e Brasil",
+      "summary": "Em fevereiro de 2025, durante a XIV Cimeira Luso-Brasileira, Portugal e Brasil firmaram acordos formais para compartilhamento de informações e investigações conjuntas voltadas ao monitoramento de suspeitos ligados ao PCC e ao desmantelamento de redes de financiamento do crime organizado. A cimeira reconheceu Portugal como porta de entrada estratégica do PCC para a Europa e os portos de Sines, Leixões e Lisboa como principais pontos de vulnerabilidade. O secretário de Segurança Pública de SP, Guilherme Derrite, participou de conferência no Porto alertando que o PCC utiliza empresas portuguesas para 'regularizar verbas do crime' com foco em moeda forte (euro). Em 23 toneladas apreendidas em Portugal em 2024, a rota Brasil-Portugal foi a mais ativa.",
+      "category": "operacao_policial",
+      "actors": [
+        {
+          "name": "Guilherme Derrite",
+          "role": "",
+          "institution": ""
+        },
+        {
+          "name": "Pedro Sousa Lopes (coronel, Inteligência PM-SP)",
+          "role": "",
+          "institution": ""
+        }
+      ],
+      "institutions": [
+        "Governo Brasil",
+        "Governo Portugal",
+        "Polícia Judiciária",
+        "PM-SP"
+      ],
+      "legal_basis": [
+        "Lei 12.850/2013 — organização criminosa",
+        "Lei 9.613/1998 — lavagem de capitais",
+        "Lei 11.343/2006 — tráfico de drogas"
+      ],
+      "patterns": [
+        "P07"
+      ],
+      "values": {},
+      "sources": [
+        {
+          "title": "",
+          "url": "https://www.publico.pt/2024/10/28/publico-brasil/noticia/atras-euros-pcc-quer-lavar-dinheiro-crime-europa-comecar-portugal-2109767",
+          "outlet": "",
+          "date": ""
+        },
+        {
+          "title": "",
+          "url": "https://diplomatique.org.br/a-expansao-transnacional-do-pcc-em-portugal-e-na-europa-desafios-para-a-seguranca-publica-e-a-economia-criminal/",
+          "outlet": "",
+          "date": ""
+        }
+      ],
+      "result": "Relevância corpus: media; prioridade 2.",
+      "connections": [
+        "id_1489"
+      ],
+      "status": "documentado",
+      "evidence_note": "Classificação evidencial: operação jornalística e/ou fontes citadas no artifacto legado — aplicar §3 METHODOLOGY ao usar em produção."
+    },
+    {
+      "id": "1491",
+      "date": "2025-01-01",
+      "date_precision": "year",
+      "title": "Parlamento Europeu: pergunta formal P-002759/2025 sobre infiltração do PCC na UE e uso do Acordo UE-Brasil com Europol",
+      "summary": "Parlamentar europeu protocolou a pergunta formal P-002759/2025 à Comissão Europeia questionando como a UE pretende reforçar a cooperação policial e judiciária, melhorar o compartilhamento de inteligência e apertar o controle nos portos estratégicos para travar o avanço do PCC no território europeu. A pergunta cita que 'o PCC infiltra-se em prisões, explora falhas nas cadeias logísticas e constrói redes de narcotráfico e branqueamento de capitais, com nível elevado de organização, adaptação e ambição estratégica.' Questiona especificamente como o novo Acordo UE-Brasil com a Europol será utilizado para identificar e travar grupos como o PCC antes que se consolidem na Europa.",
+      "category": "ato_legislativo",
+      "actors": [],
+      "institutions": [
+        "Parlamento Europeu",
+        "Comissão Europeia",
+        "Europol"
+      ],
+      "legal_basis": [
+        "Lei 12.850/2013 — organização criminosa",
+        "Lei 9.613/1998 — lavagem de capitais",
+        "Lei 11.343/2006 — tráfico de drogas"
+      ],
+      "patterns": [
+        "P10"
+      ],
+      "values": {},
+      "sources": [
+        {
+          "title": "",
+          "url": "https://www.europarl.europa.eu/doceo/document/P-10-2025-002759_PT.html",
+          "outlet": "",
+          "date": ""
+        }
+      ],
+      "result": "Relevância corpus: media; prioridade 2.",
+      "connections": [
+        "id_1490"
+      ],
+      "status": "documentado",
+      "evidence_note": "Classificação evidencial: operação jornalística e/ou fontes citadas no artifacto legado — aplicar §3 METHODOLOGY ao usar em produção."
+    },
+    {
+      "id": "1492",
+      "date": "2025-11-01",
+      "date_precision": "day",
+      "title": "Corumbá e BR-262: PCC consolida corredor pantaneiro — 13,7t apreendidas em MS em 2025, operações revelam rota Bolívia-Santos-Europa",
+      "summary": "A BR-262, que parte de Corumbá (MS) e liga o Centro-Oeste ao Sudeste, consolidou-se como principal corredor rodoviário do tráfico de cocaína no Brasil. Apreensões documentadas em 2025: novembro/2025 — 629kg em Terenos; caminhão bitrem vindo de Corumbá apreendido em Uberlândia com 420kg. Fevereiro/2026: 100kg em Campo Grande e 69kg em Terenos. Todos em caminhões de minério de ferro oriundos do Morro de Urucum, em Corumbá — técnica de ocultação em carga pesada. A PRF registrou 13,7t de cocaína no MS em 2025, quase o dobro do segundo colocado (MT: 7,4t). Investigadores confirmam que a rota converge para o Porto de Santos, ponto de exportação à Europa. Três lideranças do PCC presas neste eixo: 'Tuta' (Marcos Roberto de Almeida) em Santa Cruz de la Sierra (mai/2025), 'Chalega' em Santa Cruz entregue à PF em Corumbá, e 'Alê/Colt' (Sidney Augusto Magalhães) em Pedro Juan Caballero (PY).",
+      "category": "operacao_policial",
+      "actors": [
+        {
+          "name": "Marcos Roberto de Almeida ('Tuta')",
+          "role": "",
+          "institution": ""
+        },
+        {
+          "name": "Sidney Augusto Magalhães ('Alê/Colt')",
+          "role": "",
+          "institution": ""
+        },
+        {
+          "name": "'Chalega'",
+          "role": "",
+          "institution": ""
+        }
+      ],
+      "institutions": [
+        "PCC",
+        "PRF",
+        "Polícia Federal",
+        "Polícia Boliviana"
+      ],
+      "legal_basis": [
+        "Lei 11.343/2006 — tráfico de drogas"
+      ],
+      "patterns": [
+        "P10"
+      ],
+      "values": {},
+      "sources": [
+        {
+          "title": "",
+          "url": "https://www.perfilnews.com.br/2026/02/13/br-262-e-corumba-consolidam-rota-da-cocaina-no-coracao-do-pantanal/",
+          "outlet": "",
+          "date": ""
+        }
+      ],
+      "result": "Relevância corpus: alta; prioridade 1.",
+      "connections": [
+        "id_1491"
+      ],
+      "status": "confirmado",
+      "evidence_note": "Classificação evidencial: operação jornalística e/ou fontes citadas no artifacto legado — aplicar §3 METHODOLOGY ao usar em produção."
+    },
+    {
+      "id": "1493",
+      "date": "2024-01-01",
+      "date_precision": "year",
+      "title": "PCC contrata hackers para invadir sistemas portuários e mergulhadores para inserir cocaína em cascos de navios",
+      "summary": "Investigações do Wall Street Journal (abr/2026) e da Polícia Judiciária portuguesa documentam a sofisticação técnica da logística do PCC: (1) Hackers contratados para invadir sistemas de controle portuário, permitindo acesso a informações de manifesto de carga e facilitação da técnica rip-on/rip-off — inserção de cocaína em contêineres de cargas legais sem conhecimento dos exportadores. (2) Equipes de mergulhadores que inserem pacotes de cocaína nos cascos ou caixas de leme de navios ainda no Brasil, antes do embarque. No destino (Lisboa, por exemplo), membros locais do PCC recuperam a droga em operações noturnas, antes que o navio entre na faixa fiscal do porto — usando motos subaquáticas para agilizar a operação. Esta técnica foi documentada com apreensão de equipamentos em Alcochete (Portugal) em março de 2025. O nível de profissionalização operacional equipara o PCC a organizações militares paramilitares em termos de logística encoberta.",
+      "category": "operacao_policial",
+      "actors": [],
+      "institutions": [
+        "PCC",
+        "Polícia Judiciária Portugal",
+        "Polícia Federal Brasil"
+      ],
+      "legal_basis": [
+        "Lei 11.343/2006 — tráfico de drogas"
+      ],
+      "patterns": [
+        "P10"
+      ],
+      "values": {},
+      "sources": [
+        {
+          "title": "",
+          "url": "https://francesnews.com.br/post/2026/04/26/21857-pcc-se-consolida-como-faccao-global-e-amplia-rotas-do-trafico-internacional-de-cocaina",
+          "outlet": "",
+          "date": ""
+        },
+        {
+          "title": "",
+          "url": "https://theconversation.com/resposta-a-expansao-do-pcc-na-europa-impoe-desafios-as-autoridades-de-seguranca-no-brasil-e-em-portugal-252229",
+          "outlet": "",
+          "date": ""
+        },
+        {
+          "title": "",
+          "url": "https://www.jn.pt/justica/artigo/gangue-brasileiro-pcc-ja-tem-87-elementos-infiltrados-em-portugal/17752386",
+          "outlet": "",
+          "date": ""
+        }
+      ],
+      "result": "Relevância corpus: alta; prioridade 1.",
+      "connections": [
+        "id_1492"
+      ],
+      "status": "confirmado",
+      "evidence_note": "Classificação evidencial: operação jornalística e/ou fontes citadas no artifacto legado — aplicar §3 METHODOLOGY ao usar em produção."
+    },
+    {
+      "id": "1494",
+      "date": "2026-04-20",
+      "date_precision": "day",
+      "title": "WSJ compara PCC à máfia italiana e multinacional: 40.000 membros, 30 países, guerras em portos europeus",
+      "summary": "O Wall Street Journal publicou em abril de 2026 reportagem extensa comparando o PCC 'à dimensão dos grupos criminosos organizados italianos e à eficiência de uma corporação multinacional.' Com cerca de 40.000 membros, o PCC opera em quase 30 países em todos os continentes — maior grupo criminoso das Américas. A publicação documenta: guerras territoriais com granadas, tiroteios e sequestros nos portos de Antuérpia, Roterdã e Hamburgo; apreensões recordes de cocaína na Europa; alianças com ʼNdrangheta, Yakuza japonesa, gangues albanesas e sérvias; infiltração no setor político brasileiro (financiamento de campanhas municipais de 2024); e expansão nos EUA (afiliados em 5 estados). O promotor Lincoln Gakiya (SP), responsável pela persecução do PCC há duas décadas, afirmou ao WSJ: 'Eu acredito ser hoje a organização criminosa que cresce mais rápido em todo o mundo.' O PCC é descrito como operando 'mais como um mercado ou agência reguladora do que como uma organização tradicional' — estrutura horizontal sem dependência de liderança única. A reportagem ocorre no contexto de pressão do governo Trump para que o Brasil classifique o PCC como Organização Terrorista Estrangeira (FTO), o que a PF brasileira rejeita formalmente.",
+      "category": "operacao_policial",
+      "actors": [
+        {
+          "name": "Lincoln Gakiya",
+          "role": "",
+          "institution": ""
+        },
+        {
+          "name": "Pedro Lopes (coronel, inteligência PM-SP)",
+          "role": "",
+          "institution": ""
+        },
+        {
+          "name": "Marcola (preso desde 1999)",
+          "role": "",
+          "institution": ""
+        }
+      ],
+      "institutions": [
+        "PCC",
+        "Wall Street Journal",
+        "MPSP",
+        "PM-SP",
+        "Departamento de Estado EUA"
+      ],
+      "legal_basis": [
+        "Lei 11.343/2006 — tráfico de drogas"
+      ],
+      "patterns": [
+        "P10"
+      ],
+      "values": {},
+      "sources": [
+        {
+          "title": "",
+          "url": "https://www.cnnbrasil.com.br/internacional/wsj-compara-pcc-a-dimensao-da-mafia-italiana-e-eficiencia-de-multinacionais/",
+          "outlet": "",
+          "date": ""
+        },
+        {
+          "title": "",
+          "url": "https://primeirojornal.com.br/2026/04/22/wall-street-journal-compara-pcc-a-mafia-italiana-eficiencia-de-multinacional/",
+          "outlet": "",
+          "date": ""
+        },
+        {
+          "title": "",
+          "url": "https://revistaoeste.com/imprensa/pcc-se-tornou-potencia-global-do-crime-organizado-diz-wsj/",
+          "outlet": "",
+          "date": ""
+        },
+        {
+          "title": "",
+          "url": "https://timesbrasil.com.br/brasil/reportagem-do-wall-street-journal-mostra-como-pcc-virou-potencia-global-na-venda-de-drogas/",
+          "outlet": "",
+          "date": ""
+        }
+      ],
+      "result": "Relevância corpus: alta; prioridade 1.",
+      "connections": [
+        "id_1493"
+      ],
+      "status": "confirmado",
+      "evidence_note": "Classificação evidencial: operação jornalística e/ou fontes citadas no artifacto legado — aplicar §3 METHODOLOGY ao usar em produção."
+    },
+    {
+      "id": "1495",
+      "date": "2026-02-01",
+      "date_precision": "day",
+      "title": "Infiltração eleitoral: operador de fintech do PCC preso por financiar campanhas municipais 2024 em troca de contratos de lixo, transporte e combustível",
+      "summary": "Em fevereiro de 2026, a Polícia Federal prendeu o operador de uma fintech milionária identificada pelas autoridades como instrumento de financiamento de campanhas eleitorais municipais de 2024 pelo PCC. O esquema visava garantir contratos de coleta de lixo, concessões de transporte e fornecimento de combustível para empresas controladas pela facção. O então chefe de inteligência da PM-SP, coronel Pedro Lopes, declarou ao Wall Street Journal que 'a infiltração do PCC na política do estado mais rico do Brasil surpreendeu até os investigadores mais experientes.' O caso representa um salto qualitativo na estratégia do PCC — da captura operacional (logística, lavagem) para a captura política (contratos públicos, mandatos eletivos). Documentado pelo WSJ como parte da reportagem de abril/2026 sobre o PCC como potência global.",
+      "category": "operacao_policial",
+      "actors": [
+        {
+          "name": "Pedro Lopes (coronel, inteligência PM-SP)",
+          "role": "",
+          "institution": ""
+        }
+      ],
+      "institutions": [
+        "PCC",
+        "Polícia Federal"
+      ],
+      "legal_basis": [],
+      "patterns": [
+        "P08",
+        "P09"
+      ],
+      "values": {},
+      "sources": [
+        {
+          "title": "",
+          "url": "https://timesbrasil.com.br/brasil/reportagem-do-wall-street-journal-mostra-como-pcc-virou-potencia-global-na-venda-de-drogas/",
+          "outlet": "",
+          "date": ""
+        },
+        {
+          "title": "",
+          "url": "https://revistaoeste.com/imprensa/pcc-se-tornou-potencia-global-do-crime-organizado-diz-wsj/",
+          "outlet": "",
+          "date": ""
+        }
+      ],
+      "result": "Relevância corpus: alta; prioridade 1.",
+      "connections": [
+        "id_1494"
+      ],
+      "status": "confirmado",
+      "evidence_note": "Classificação evidencial: operação jornalística e/ou fontes citadas no artifacto legado — aplicar §3 METHODOLOGY ao usar em produção."
+    },
+    {
+      "id": "1496",
+      "date": "2025-01-01",
+      "date_precision": "year",
+      "title": "EUA indicia 18 brasileiros ligados ao PCC por tráfico de armas e fentanil em Massachusetts",
+      "summary": "O Ministério Público Federal dos EUA (Massachusetts) indiciou 18 brasileiros acusados de envolvimento com o PCC no tráfico de armas — incluindo fuzis e espingardas — e fentanil. As investigações, desencadeadas a partir das sanções OFAC de 2024, levaram à identificação de uma 'divisão americana' do PCC com presença documentada em pelo menos 6 estados: Flórida, Nova York, Nova Jersey, Connecticut, Tennessee e Massachusetts. O caso marca a primeira vez que o PCC é formalmente processado nos EUA por operações domésticas no território americano — não apenas como organização de exportação de cocaína. Em 2025, 18 brasileiros foram acusados pelo MPF dos EUA. O governo Trump incluiu o tema na pressão por classificação do PCC como Organização Terrorista Estrangeira, embora o Brasil resista formalmente à designação.",
+      "category": "operacao_policial",
+      "actors": [],
+      "institutions": [
+        "PCC",
+        "Ministério Público Federal EUA",
+        "Departamento de Estado EUA",
+        "OFAC"
+      ],
+      "legal_basis": [
+        "Lei 11.343/2006 — tráfico de drogas"
+      ],
+      "patterns": [
+        "P10"
+      ],
+      "values": {},
+      "sources": [
+        {
+          "title": "",
+          "url": "https://www.metropoles.com/sao-paulo/jornal-eua-compara-pcc-mafia-italiana",
+          "outlet": "",
+          "date": ""
+        },
+        {
+          "title": "",
+          "url": "https://timesbrasil.com.br/brasil/reportagem-do-wall-street-journal-mostra-como-pcc-virou-potencia-global-na-venda-de-drogas/",
+          "outlet": "",
+          "date": ""
+        }
+      ],
+      "result": "Relevância corpus: alta; prioridade 1.",
+      "connections": [
+        "id_1495"
+      ],
+      "status": "confirmado",
+      "evidence_note": "Classificação evidencial: operação jornalística e/ou fontes citadas no artifacto legado — aplicar §3 METHODOLOGY ao usar em produção."
+    }
+  ],
+  "lawfare_crossrefs": {
+    "trilogia_narco": [
+      153,
+      154,
+      155
+    ],
+    "narco_fluxo_choquei": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165
+    ],
+    "cpi_crime_organizado_stf": [
+      167,
+      168,
+      169
+    ],
+    "description": "IDs numéricos do corpus lawfare-timeline paralelo; cruzar com timeline_entries (1481–1496) pelo campo relations.timeline_corpus_ids"
+  }
+}

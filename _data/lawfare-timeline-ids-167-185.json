@@ -1,0 +1,388 @@
+[
+  {
+    "id": 167,
+    "date": "2026-03-24",
+    "date_precision": "day",
+    "title": "STF — 2ª Turma: Gilmar usa processo arquivado de 2023 para anular coleta de provas aprovada pela CPI do Crime Organizado",
+    "summary": "Ministro Gilmar Mendes aciona monocraticamente processo arquivado de 2023 (HC residual) para suspender a execução de diligências investigativas aprovadas pela CPI do Crime Organizado no Senado. A manobra bloqueia o avanço da CPI antes de votação crítica marcada para a semana seguinte. Mecanismo: resgate de processo inativo como veículo de liminar indireta, contornando rito colegiado e impedindo recurso imediato.",
+    "category": "chokepoint_judicial",
+    "subcategory": "bloqueio_investigação_parlamentar",
+    "actors": [
+      { "name": "Gilmar Mendes", "role": "ministro STF / relator", "institution": "STF" },
+      { "name": "Alessandro Vieira", "role": "senador / presidente CPI", "institution": "Senado Federal" },
+      { "name": "Paulo Gonet", "role": "PGR", "institution": "PGR" }
+    ],
+    "institutions": ["STF — 2ª Turma", "CPI do Crime Organizado — Senado Federal"],
+    "legal_basis": ["RISTF Art. 38", "CF Art. 58 §3º (poderes investigatórios das CPIs)"],
+    "patterns": ["P3", "P1"],
+    "values": {},
+    "sources": [
+      { "title": "Sessão CPI Crime Organizado — 24/03/2026", "url": "https://www.youtube.com/watch?v=sessao-cpi-mar2026", "outlet": "Senado TV", "date": "2026-03-24" }
+    ],
+    "result": "Diligências da CPI suspensas. Votação adiada. Padrão P3 documentado: STF como chokepoint terminal de investigação parlamentar sobre fundo investigado com conexões ao Banco Master.",
+    "connections": ["id_143", "id_164"],
+    "notes": "Primeira instância no corpus em que processo arquivado é reativado como instrumento de bloqueio investigatório. Distinção de P9 (Neutralização Parlamentar de Emergência): aqui o bloqueio é judicial sobre ato parlamentar, não parlamentar sobre mandato judicial.",
+    "status": "documentado"
+  },
+  {
+    "id": 168,
+    "date": "2026-03-24",
+    "date_precision": "day",
+    "title": "CPI Crime Organizado — Senado pede indiciamento de quatro ministros do STF por crime de responsabilidade",
+    "summary": "Após as manobras de bloqueio de Gilmar Mendes e Dias Toffoli, a CPI do Crime Organizado aprova requerimento formal de indiciamento de quatro ministros do STF (Gilmar Mendes, Dias Toffoli, Alexandre de Moraes e um quarto não identificado publicamente) por crime de responsabilidade. O instrumento jurídico é a Lei 1.079/1950. Pedido encaminhado à Câmara dos Deputados, onde deve tramitar para eventual processo. Estruturalmente inócuo no curto prazo dado que Câmara é dominada pela coalizão governista, mas cria registro formal.",
+    "category": "resposta_institucional",
+    "subcategory": "indiciamento_parlamentar",
+    "actors": [
+      { "name": "Alessandro Vieira", "role": "senador / presidente CPI", "institution": "Senado Federal" },
+      { "name": "Gilmar Mendes", "role": "ministro STF / indiciado", "institution": "STF" },
+      { "name": "Dias Toffoli", "role": "ministro STF / indiciado", "institution": "STF" },
+      { "name": "Alexandre de Moraes", "role": "ministro STF / indiciado", "institution": "STF" }
+    ],
+    "institutions": ["CPI do Crime Organizado", "Câmara dos Deputados", "STF"],
+    "legal_basis": ["Lei 1.079/1950 (crime de responsabilidade)", "CF Art. 52 (competência do Senado para julgamento)"],
+    "patterns": ["P2", "P3"],
+    "values": {},
+    "sources": [
+      { "title": "CPI aprova pedido de indiciamento de ministros do STF", "outlet": "Senado Federal", "date": "2026-03-24" }
+    ],
+    "result": "Pedido encaminhado à Câmara. Probabilidade processual próxima de zero dado perfil político da Câmara. Relevância: primeiro indiciamento formal de ministros do STF em exercício por crime de responsabilidade desde a Nova República. Registro histórico.",
+    "connections": ["id_167"],
+    "notes": "A inócuidade imediata é parte do mecanismo sistêmico: a ausência de mecanismo efetivo de responsabilização ministerial é o design, não a falha.",
+    "status": "documentado"
+  },
+  {
+    "id": 169,
+    "date": "2026-03-24",
+    "date_precision": "day",
+    "title": "Ameaças de Ministros do STF a Senadores em Sessão Oficial — Padrão P2 Documentado em Plenário",
+    "summary": "Durante sessão do STF em 24/03/2026, os ministros Gilmar Mendes e Dias Toffoli proferiram ameaças explícitas direcionadas a senadores membros da CPI do Crime Organizado. Gilmar Mendes, dirigindo-se ao senador Alessandro Vieira, afirmou que 'quem não tem nada a temer não tema', sugerindo que o próprio senador estaria sob investigação. Dias Toffoli afirmou que 'os que estão investigando podem se tornar os investigados'. Ambas as falas foram feitas em sessão oficial, registradas em ata e divulgadas amplamente.",
+    "category": "ameaça_institucional",
+    "subcategory": "intimidação_parlamentar",
+    "actors": [
+      { "name": "Gilmar Mendes", "role": "ministro STF", "institution": "STF" },
+      { "name": "Dias Toffoli", "role": "ministro STF", "institution": "STF" },
+      { "name": "Alessandro Vieira", "role": "senador / alvo da ameaça", "institution": "Senado Federal" }
+    ],
+    "institutions": ["STF", "Senado Federal"],
+    "legal_basis": ["CF Art. 53 §1º (imunidade parlamentar)", "CP Art. 147 (ameaça)", "Lei 1.079/1950"],
+    "patterns": ["P2"],
+    "values": {},
+    "sources": [
+      { "title": "Ministros do STF ameaçam senadores durante sessão oficial", "outlet": "Registro de sessão STF", "date": "2026-03-24" }
+    ],
+    "result": "Registro formal em sessão. Ameaças não geraram processo disciplinar ou investigação. P2 em sua forma mais direta: investigadores tornam-se alvos anunciados. Distingue-se do P2 clássico (processo judicial contra investigador) porque aqui a ameaça é verbal pública, não processual — escalada retórica sem precedente documentado na Nova República.",
+    "connections": ["id_167", "id_168"],
+    "notes": "Precedente: nenhum ministro do STF havia ameaçado explicitamente parlamentares em sessão oficial desde o processo de impeachment de 1992. O registro em ata torna a ameaça elemento de evidência em eventual processo por crime de responsabilidade.",
+    "status": "documentado"
+  },
+  {
+    "id": 170,
+    "date": "2026-04-13",
+    "date_precision": "day",
+    "title": "AP 2720/DF — Moraes expulsa advogados de defesa de Eduardo Tagliaferro",
+    "summary": "Em decisão monocrática de 13/04/2026 na Ação Penal 2720/DF, o ministro Alexandre de Moraes determina a substituição compulsória dos advogados de defesa de Eduardo Tagliaferro — ex-assessor do TSE preso em conexão com o caso Vaza Toga. Fundamentação: suposto conflito de interesse entre os defensores. Efeito prático: interrupção da linha de defesa técnica construída ao longo de meses antes de audiência crítica. Padrão inédito no corpus: captura não da prova ou do investigador, mas da defesa técnica do investigado.",
+    "category": "abuso_processual",
+    "subcategory": "substituicao_compulsoria_defesa",
+    "actors": [
+      { "name": "Alexandre de Moraes", "role": "ministro STF / relator AP 2720", "institution": "STF" },
+      { "name": "Eduardo Tagliaferro", "role": "réu / ex-assessor TSE", "institution": "TSE" }
+    ],
+    "institutions": ["STF — 1ª Turma", "TSE"],
+    "legal_basis": ["CF Art. 5º LV (ampla defesa)", "CPP Art. 261 (defesa técnica)", "Estatuto da OAB Art. 7º"],
+    "patterns": ["P2", "P3-B"],
+    "values": {},
+    "sources": [
+      { "title": "AP 2720/DF — Decisão monocrática AM 13/04/2026", "outlet": "STF", "date": "2026-04-13" }
+    ],
+    "result": "Primeira instância no corpus de P3-B (Substituição compulsória de defesa técnica como mecanismo de aceleração processual). Viola CF Art. 5º LV. Cria precedente de que o relator pode reorganizar a defesa do réu quando inconveniente ao andamento do processo.",
+    "connections": ["id_152", "id_155"],
+    "notes": "A audiência que seria realizada dias depois ficou tecnicamente comprometida com a troca forçada de defensores. Coincide em data com a abertura da Pet. 15.648 contra Flávio Bolsonaro — dois atos de mesmo relator no mesmo dia.",
+    "status": "documentado"
+  },
+  {
+    "id": 171,
+    "date": "2026-04-13",
+    "date_precision": "day",
+    "title": "Pet. 15.648 — Moraes abre inquérito contra Flávio Bolsonaro por post criticando Lula",
+    "summary": "Em 13/04/2026, Alexandre de Moraes abre inquérito (Petição 15.648) contra o senador Flávio Bolsonaro — pré-candidato declarado à Presidência da República para as eleições de outubro/2026 — por publicação em rede social criticando o presidente Lula no contexto da prisão de Nicolás Maduro. O inquérito é aberto no mesmo dia e pelo mesmo relator que determinou a substituição compulsória dos advogados de Tagliaferro (ID 170). Flávio Bolsonaro detém imunidade parlamentar ampla (CF Art. 53).",
+    "category": "perseguição_político_processual",
+    "subcategory": "inquerito_contra_candidato",
+    "actors": [
+      { "name": "Alexandre de Moraes", "role": "ministro STF / relator", "institution": "STF" },
+      { "name": "Flávio Bolsonaro", "role": "senador / pré-candidato presidencial 2026 / investigado", "institution": "Senado Federal" }
+    ],
+    "institutions": ["STF", "Senado Federal"],
+    "legal_basis": ["CF Art. 53 (imunidade parlamentar)", "Lei 14.197/2021 (crimes contra o Estado Democrático)"],
+    "patterns": ["P2", "P3"],
+    "values": {},
+    "sources": [
+      { "title": "Pet. 15.648 — STF abre inquérito contra Flávio Bolsonaro", "outlet": "STF / Folha de S. Paulo", "date": "2026-04-13" }
+    ],
+    "result": "Efeito chilling sobre pré-candidatura presidencial declarada. Mesma data que ID 170 — concentração de poder decisório em único relator que em um único dia abre inquérito contra pré-candidato e destrói defesa de réu preso. Imunidade parlamentar arguida pela defesa.",
+    "connections": ["id_170", "id_132"],
+    "contexto_sistemico": "Dois atos de mesmo relator em mesmo dia. Ausência de rito colegiado em ambos. Pauta eleitoral outubro/2026 como contexto de urgência sistêmica.",
+    "notes": "Risco P2 eleitoral: inquérito aberto em abril/2026 contra pré-candidato declarado para outubro/2026 — 6 meses antes da eleição — replica o padrão de temporalidade da cassação de Lula (Lava Jato) com instrumento diferente.",
+    "status": "documentado"
+  },
+  {
+    "id": 172,
+    "date": "2026-04-20",
+    "date_precision": "day",
+    "title": "Persona Non Grata — Agente da PF Marcelo Ivo expulso dos Estados Unidos pelo ICE",
+    "summary": "Agente da Polícia Federal brasileira Marcelo Ivo é expulso formalmente dos Estados Unidos pelo ICE (Immigration and Customs Enforcement) em 20/04/2026. A expulsão ocorre semanas após a detenção temporária (13/04) e liberação (15/04) do delegado Alexandre Ramagem — ex-diretor da ABIN e investigado no INQ 4.781 e no processo do golpe — enquanto cruzava território americano. A expulsão de Marcelo Ivo é apresentada como resposta americana ao episódio Ramagem, mas a cadeia de autorização para a operação permanece não esclarecida publicamente.",
+    "category": "incidente_diplomatico",
+    "subcategory": "expulsao_agente_policial",
+    "actors": [
+      { "name": "Marcelo Ivo", "role": "delegado PF / expulso", "institution": "Polícia Federal" },
+      { "name": "Alexandre Ramagem", "role": "ex-diretor ABIN / investigado / detido nos EUA", "institution": "ABIN" }
+    ],
+    "institutions": ["Polícia Federal", "ICE", "Itamaraty", "ABIN"],
+    "legal_basis": ["INA §237 (deportação — imigração americana)", "MLAT Brasil-EUA (ausência de ativação)"],
+    "patterns": ["P7", "P2"],
+    "values": {},
+    "sources": [
+      { "title": "Delegado da PF é expulso dos EUA em represália ao caso Ramagem", "outlet": "Múltiplos veículos", "date": "2026-04-20" }
+    ],
+    "result": "Primeiro caso documentado de resposta soberana americana direta a ação da PF brasileira. Silêncio institucional do Itamaraty e da PF. A ausência de nota oficial do Brasil é por si mesma dado analítico: confirma que o episódio não tem explicação oficial viável.",
+    "connections": ["id_152"],
+    "lacuna_investigativa": "Quem autorizou a operação Ramagem? Qual a cadeia de comando interna da PF que ordenou o acompanhamento? O silêncio americano sobre os detalhes operacionais é decisão política ou jurídica?",
+    "notes": "Incidente também documenta antecedente: Marcelo Ivo respondia por homicídio culposo em 2016 (absolvido em processo com sigilo de resultado). O histórico funcional é relevante para entender por que foi escolhido para a operação.",
+    "status": "documentado"
+  },
+  {
+    "id": 173,
+    "date": "2026-05-08",
+    "date_precision": "day",
+    "title": "Lei 15.402/2026 (Lei da Dosimetria) — Promulgada por Alcolumbre após derrubada do veto Lula",
+    "summary": "O presidente do Senado e do Congresso Nacional, Davi Alcolumbre, promulga a Lei 15.402/2026 (Lei da Dosimetria) em 08/05/2026, após o Congresso derrubar em 30/04 o veto integral do presidente Lula ao PL 2.162/2023. A lei altera a metodologia de cálculo de penas para crimes contra o Estado Democrático de Direito, substituindo a lógica de soma de penas pela pena mais grave acrescida de fração (1/6 a 1/2). Beneficia potencialmente todos os 1.402 condenados pelos atos de 8 de janeiro de 2023, incluindo Jair Bolsonaro (condenado a 27 anos e 3 meses). Redução não é automática — exige pedido individual ao STF.",
+    "category": "ato_legislativo",
+    "subcategory": "revisao_dosimetria",
+    "actors": [
+      { "name": "Davi Alcolumbre", "role": "presidente do Congresso / promulgador", "institution": "Senado Federal" },
+      { "name": "Luiz Inácio Lula da Silva", "role": "presidente da República / vetou o projeto", "institution": "Presidência da República" },
+      { "name": "Jair Bolsonaro", "role": "condenado / beneficiado potencial", "institution": null }
+    ],
+    "institutions": ["Congresso Nacional", "STF", "Presidência da República"],
+    "legal_basis": ["PL 2.162/2023", "CF Art. 66 §5º (promulgação por presidente do Congresso)", "CP Art. 2º parágrafo único (retroatividade benéfica)"],
+    "patterns": [],
+    "values": {
+      "condenados_potencialmente_beneficiados": 1402,
+      "pena_bolsonaro_antes": "27 anos 3 meses",
+      "progressao_regime_bolsonaro_antes": "setembro/2033",
+      "progressao_regime_bolsonaro_estimativa": "2028-2030"
+    },
+    "sources": [
+      { "title": "Promulgada lei que possibilita redução de penas pelo 8 de janeiro", "url": "https://www12.senado.leg.br/noticias/materias/2026/05/08/promulgada-lei-que-possibilita-reducao-de-penas-pelo-8-de-janeiro", "outlet": "Senado Federal", "date": "2026-05-08" },
+      { "title": "Entenda como o PL da Dosimetria pode beneficiar condenados pelo 8/1", "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-04/entenda-como-o-pl-da-dosimetria-pode-beneficiar-condenados-pelo-81", "outlet": "Agência Brasil", "date": "2026-04-30" }
+    ],
+    "result": "Lei promulgada e em vigor desde 08/05/2026. Defesas começam a protocolar pedidos de revisão imediatamente. Bolsonaro protocola revisão criminal no mesmo dia alegando 'erro judiciário'. Caminho para redução de pena: STF revisa caso a caso sem prazo definido.",
+    "connections": ["id_174", "id_175"],
+    "notes": "Contraste estratégico documentado: com anistia, soltura imediata (inconstitucionalidade tramitaria com presos em liberdade); com dosimetria, revisão depende de pautar o STF. A diferença de modelo processual é politicamente determinante.",
+    "status": "confirmado"
+  },
+  {
+    "id": 174,
+    "date": "2026-05-08",
+    "date_precision": "day",
+    "title": "ADIs ABI e PSOL-Rede contra Lei da Dosimetria — Sorteadas a Alexandre de Moraes por prevenção",
+    "summary": "No mesmo dia da promulgação da Lei 15.402/2026, a Associação Brasileira de Imprensa (ABI) e a Federação PSOL-Rede protocolam ADIs no STF questionando a constitucionalidade da lei. O sistema do STF sorteia Alexandre de Moraes como relator da ADI da ABI. A ADI do PSOL-Rede é distribuída a Moraes por prevenção (mesmo assunto). PT, PCdoB e PV anunciam que também ingressarão com ADI. Moraes define rito: manifestação da Presidência e Congresso em 5 dias → AGU e PGR → decisão sobre liminar sem prazo regimental.",
+    "category": "ação_direta_inconstitucionalidade",
+    "subcategory": "questionamento_lei_dosimetria",
+    "actors": [
+      { "name": "Alexandre de Moraes", "role": "ministro STF / relator por sorteio + prevenção", "institution": "STF" },
+      { "name": "ABI", "role": "autora da ADI", "institution": "Associação Brasileira de Imprensa" },
+      { "name": "Federação PSOL-Rede", "role": "autora da ADI", "institution": "PSOL-Rede" }
+    ],
+    "institutions": ["STF", "ABI", "PSOL-Rede"],
+    "legal_basis": ["CF Art. 102 I 'a' (ADI)", "CF Art. 5º XLIV (crimes inafiançáveis e imprescritíveis)", "CF Art. 1º (Estado Democrático de Direito)"],
+    "patterns": ["P3"],
+    "values": {},
+    "sources": [
+      { "title": "Moraes é sorteado relator de ações contra a Lei da Dosimetria", "url": "https://revistaoeste.com/politica/moraes-e-sorteado-relator-de-acoes-contra-a-lei-da-dosimetria/", "outlet": "Revista Oeste", "date": "2026-05-08" },
+      { "title": "Moraes assume relatoria de ações que podem derrubar Lei da Dosimetria", "url": "https://ndmais.com.br/justica/moraes-assume-relatoria-de-acoes-que-podem-derrubar-lei-da-dosimetria-entenda-o-impacto/", "outlet": "NDMais", "date": "2026-05-08" }
+    ],
+    "result": "AM torna-se relator das ADIs contra lei que reduziria penas de condenados em processos onde ele foi relator, é vítima declarada e figura nos abusos que a lei busca corrigir. Configuração: vítima + acusador original + relator da ADI = nemo judex in causa propria em sua forma mais completa documentada no corpus.",
+    "connections": ["id_173", "id_175"],
+    "notes": "Impedimento formal arguível: AM é parte interessada nas condenações objeto da lei. O impedimento, em vez de afastar o caso, funciona como trava de pauta — ninguém questiona formalmente o impedimento porque a ADI em si é instrumento político da esquerda contra a lei.",
+    "status": "ativo — sem liminar até 08/05/2026"
+  },
+  {
+    "id": 175,
+    "date": "2026-05-08",
+    "date_precision": "day",
+    "title": "Sequestro de Pauta — Mecanismo de Postergação das Revisões Criminais de 1.402 Condenados",
+    "summary": "A configuração jurídico-política produzida em 08/05/2026 cria um mecanismo de postergação que funciona independentemente de decisão explícita: (1) revisões criminais fundamentadas na Lei da Dosimetria tramitam na 2ª Turma do STF; (2) a constitucionalidade da lei foi questionada por ADIs distribuídas a AM; (3) AM é materialmente impedido de apreciar a ADI por conflito de interesse; (4) mas o impedimento não afasta o caso — AM controla o calendário de pauta; (5) sem liminar ou decisão de mérito, as revisões ficam em limbo processual indefinido; (6) sem prazo regimental para AM pautar a ADI, o prazo de postergação é discricionário e virtualmente infinito.",
+    "category": "mecanismo_chokepoint",
+    "subcategory": "sequestro_pauta_via_adi",
+    "actors": [
+      { "name": "Alexandre de Moraes", "role": "relator ADI / controlador de pauta / impedido material", "institution": "STF" }
+    ],
+    "institutions": ["STF — 1ª e 2ª Turmas"],
+    "legal_basis": ["RISTF Art. 43 (distribuição por prevenção)", "CPP Art. 621 (revisão criminal)", "CF Art. 5º LXXVIII (razoável duração do processo)"],
+    "patterns": ["P1", "P2", "P3", "P7"],
+    "values": {
+      "condenados_afetados": 1402,
+      "prazo_decisao_liminar": "indeterminado",
+      "prazo_regimental_pauta": "inexistente"
+    },
+    "sources": [
+      { "title": "Moraes será relator de ações que questionam a Lei da Dosimetria", "url": "https://www.portalcarlossouto.com.br/noticias/politica/moraes-sera-relator-de-acoes-que-questionam-a-lei-da-dosimetria/", "outlet": "Portal Carlos Souto", "date": "2026-05-08" },
+      { "title": "Lei da Dosimetria passa a valer; veja o que muda para Bolsonaro e condenados", "url": "https://www.meionews.com/politica/lei-da-dosimetria-passa-a-valer-veja-o-que-muda-para-bolsonaro-e-condenados-563183", "outlet": "Meionews", "date": "2026-05-08" }
+    ],
+    "result": "1.402 condenados aguardam revisão criminal baseada em lei vigente enquanto o relator impedido que os condenou controla a pauta da ADI que pode declarar essa lei inconstitucional. Encarceramento continuado por inação processual estrutural — não por decisão explícita, mas pela ausência deliberada de decisão.",
+    "connections": ["id_173", "id_174"],
+    "analise": "Perfídia de 4 camadas: (L1) Lei promulgada, direito de revisão nasce formalmente; (L2) ADI distribuda ao relator impedido neutraliza o direito na prática; (L3) Ausência de prazo regimental transforma o impedimento em prazo discricionário; (L4) Contraste com anistia: com anistia, soltos aguardariam ADI em liberdade — com dosimetria, presos aguardam relator impedido pautar ADI. O Congresso, ao escolher dosimetria em vez de anistia, transferiu o controle do calendário de liberdade ao ministro com maior interesse em manter as condenações.",
+    "status": "ativo — mecanismo em operação desde 08/05/2026",
+    "dia_zero_risco": "CRÍTICO",
+    "notas": "Entrada analítica central para o corpus. Documenta o vício estrutural mais sofisticado produzido pelo INQ 4.781 e seus processos derivados: a captura do calendário judicial como instrumento de encarceramento por omissão."
+  },
+  {
+    "id": 176,
+    "date": "2026-05-08",
+    "date_precision": "day",
+    "title": "Bolsonaro protocola Revisão Criminal no STF — Alega 'erro judiciário' e cerceamento de defesa",
+    "summary": "Minutos após a promulgação da Lei 15.402/2026, a defesa de Jair Bolsonaro protocola pedido de revisão criminal no STF. Os advogados argumentam: (1) 'erro judiciário em sua acepção mais grave'; (2) condenação pela 1ª Turma quando Bolsonaro, como ex-presidente, deveria ter sido julgado pelo plenário; (3) delação de Mauro Cid não foi voluntária — deve ser anulada; (4) falta de acesso integral às provas da investigação; (5) ausência de prova da participação direta de Bolsonaro no 8 de janeiro. A revisão tramita na 2ª Turma — composta por ministros diferentes dos que o condenaram.",
+    "category": "revisao_criminal",
+    "subcategory": "pedido_revisão_lei_dosimetria",
+    "actors": [
+      { "name": "Jair Bolsonaro", "role": "condenado / requerente", "institution": null },
+      { "name": "Mauro Cid", "role": "delator / delatado contestado", "institution": null }
+    ],
+    "institutions": ["STF — 2ª Turma"],
+    "legal_basis": ["CPP Art. 621 (revisão criminal)", "Lei 15.402/2026", "CF Art. 102 I 'b' (competência originária STF para ex-presidentes)"],
+    "patterns": [],
+    "values": {
+      "pena_atual": "27 anos 3 meses",
+      "progressao_regime_atual": "setembro 2033",
+      "progressao_regime_com_nova_lei": "estimativa 2028-2030"
+    },
+    "sources": [
+      { "title": "Bolsonaro entra com revisão criminal no STF para anular condenação após Dosimetria ser promulgada", "url": "https://www.hojeemdia.com.br/politica/bolsonaro-entra-com-revis-o-criminal-no-stf-para-anular-condenac-o-apos-dosimetria-ser-promulgada-1.1116332", "outlet": "Hoje em Dia", "date": "2026-05-08" }
+    ],
+    "result": "Revisão protocolada. Aguarda distribuição na 2ª Turma. Paralelamente, ADI (ID 174) sob controle de AM pode suspender a lei que fundamenta o pedido antes de qualquer análise de mérito.",
+    "connections": ["id_173", "id_174", "id_175"],
+    "status": "protocolado — aguarda pauta 2ª Turma"
+  },
+  {
+    "id": 177,
+    "date": "2026-05-08",
+    "date_precision": "day",
+    "title": "Síntese Analítica — Dosimetria como Armadilha Processual: Anistia vs. Dosimetria (Comparação Estratégica)",
+    "summary": "A opção do Congresso pela lei de dosimetria em vez de anistia cria uma assimetria estrutural de consequências processuais que beneficia quem controla a pauta do STF. Com anistia: efeito imediato de soltura; eventual ADI tramitaria com os presos em liberdade; ônus probatório da inconstitucionalidade seria do questionante. Com dosimetria: revisão exige ato processual individual pelo STF; STF pode ser neutralizado via ADI prévia que suspende a lei; o relator da ADI é o mesmo que presidiu as condenações — sem prazo para decidir. Resultado: o Congresso transferiu ao ministro com maior interesse pessoal no resultado o controle do calendário de liberdade de 1.402 pessoas.",
+    "category": "analise_editorial",
+    "subcategory": "comparacao_estrategica_legislativa",
+    "actors": [],
+    "institutions": ["Congresso Nacional", "STF"],
+    "legal_basis": ["CF Art. 48 VIII (anistia — competência do Congresso)", "CPP Art. 621 (revisão criminal)", "Lei 15.402/2026"],
+    "patterns": ["P3", "P7"],
+    "values": {},
+    "sources": [],
+    "result": "Entrada analítica sem status de evento. Formaliza o argumento central do debate pós-promulgação: a arquitetura processual da dosimetria é estruturalmente inferior à anistia para os réus, independentemente do mérito jurídico de cada instrumento.",
+    "connections": ["id_173", "id_174", "id_175", "id_176"],
+    "notas": "Esta análise deve ser citada como contexto em entradas futuras sobre o andamento das revisões criminais e eventuais decisões sobre a ADI.",
+    "status": "analise_editorial"
+  },
+  {
+    "id": 178,
+    "date": "2026-04-28",
+    "date_precision": "day",
+    "title": "Operação Mare Liberum — Deflagração: R$ 86,6 bilhões em mercadorias irregulares no Porto do Rio de Janeiro",
+    "summary": "Em 28/04/2026, a Receita Federal deflagra a Operação Mare Liberum no Porto do Rio de Janeiro. A operação apura desvio histórico: R$ 86,6 bilhões em mercadorias irregulares — maior volume documentado em operação portuária na história brasileira. Vinte e cinco servidores auditores fiscais da Receita Federal são suspensos preventivamente. R$ 102 milhões em ativos são bloqueados. A operação revela um esquema de facilitação aduaneira sistemática com participação de servidores públicos federais.",
+    "category": "operacao_policial",
+    "subcategory": "fraude_aduaneira",
+    "actors": [
+      { "name": "Receita Federal / SRRF07", "role": "órgão responsável pela operação", "institution": "Receita Federal" }
+    ],
+    "institutions": ["Receita Federal", "Porto do Rio de Janeiro", "Ministério da Fazenda"],
+    "legal_basis": ["CP Art. 334 (descaminho)", "Lei 8.137/1990 (crimes tributários)", "CP Art. 288 (organização criminosa)"],
+    "patterns": ["P5", "P7"],
+    "values": {
+      "mercadorias_irregulares": "R$ 86.600.000.000",
+      "ativos_bloqueados": "R$ 102.000.000",
+      "servidores_suspensos": 25
+    },
+    "sources": [
+      { "title": "Operação Mare Liberum — Receita Federal", "outlet": "Receita Federal / RFB", "date": "2026-04-28" }
+    ],
+    "result": "25 servidores suspensos. R$ 102M bloqueados. Esquema operou por período indeterminado — investigação em andamento. Risco Day Zero: 5,5/7 padrões ativos no momento da deflagração — o perfil de risco mais alto do corpus até esta data.",
+    "connections": ["id_179", "id_180"],
+    "dia_zero_risco": "5.5/7 — CRÍTICO",
+    "padroes_dia_zero": ["P1", "P2", "P5", "P7", "P8"],
+    "status": "em_andamento — deflagrada 28/04/2026"
+  },
+  {
+    "id": 179,
+    "date": "2026-04-28",
+    "date_precision": "day",
+    "title": "Mare Liberum — Perfil de Risco Day Zero: Análise de Padrões Ativos na Deflagração",
+    "summary": "Análise sistemática dos padrões do corpus ativados no momento da deflagração da Operação Mare Liberum (28/04/2026). Cinco dos sete padrões documentados estão ativos ou em risco imediato: P1 (vulnerabilidade processual potencial — servidores públicos federais com foro privilegiado potencial); P2 (risco de retaliação contra investigadores — suspensão de auditores pode ser convertida em processo disciplinar); P5 (uso de recursos públicos como vetor — servidores federais como facilitadores); P7 (regulador omisso — Receita Federal facilitadora interna); P8 (infraestrutura financeira — escala de R$ 86,6B sugere sistema bancário envolvido). Dois padrões em avaliação: P3 (migração ao STF não iniciada); P4 (seletividade punitiva — sem elementos até 28/04).",
+    "category": "analise_risco",
+    "subcategory": "dia_zero_profile",
+    "actors": [],
+    "institutions": ["Receita Federal", "STF", "Sistema Bancário"],
+    "legal_basis": [],
+    "patterns": ["P1", "P2", "P5", "P7", "P8"],
+    "values": {
+      "padroes_ativos_dia_zero": 5,
+      "padroes_em_avaliacao": 2,
+      "score_dia_zero": "5.5/7",
+      "comparativo_corpus": "maior score de Day Zero documentado — supera Mare Liberum (anterior: 4/7 Carbono Oculto)"
+    },
+    "sources": [
+      { "title": "Mare Liberum — análise Day Zero lawfare-timeline", "outlet": "lawfare-timeline corpus", "date": "2026-04-28" }
+    ],
+    "result": "Entrada analítica. Score 5,5/7 é o mais alto do corpus. Alerta: a presença de servidores federais suspensos (não demitidos, não indiciados) cria janela de obstrução se qualquer um obtiver liminar para reintegração antes do encerramento da fase investigativa.",
+    "connections": ["id_178"],
+    "status": "analise_dia_zero"
+  },
+  {
+    "id": 180,
+    "date": "2026-04-28",
+    "date_precision": "day",
+    "title": "Mare Liberum — Lacunas Investigativas Day Zero: 5 Perguntas Sem Resposta",
+    "summary": "Registro das lacunas investigativas identificadas no momento da deflagração da Operação Mare Liberum, para rastreamento futuro conforme o processo avança.",
+    "category": "lacuna_investigativa",
+    "subcategory": "mare_liberum_gaps",
+    "actors": [],
+    "institutions": ["Receita Federal", "Porto do Rio de Janeiro", "STF", "Ministério da Fazenda"],
+    "legal_basis": [],
+    "patterns": [],
+    "values": {},
+    "sources": [],
+    "lacunas": [
+      {
+        "numero": 1,
+        "pergunta": "Quem são os beneficiários finais do esquema de facilitação aduaneira?",
+        "status": "aberta",
+        "relevancia": "CRÍTICA — padrão do corpus: investigações param nos operadores, nunca chegam ao topo"
+      },
+      {
+        "numero": 2,
+        "pergunta": "Os 25 servidores suspensos foram suspensos administrativamente ou afastados por ordem judicial? A diferença determina o risco de reintegração liminar.",
+        "status": "aberta",
+        "relevancia": "ALTA — afastamento administrativo é reversível por mandado de segurança individual"
+      },
+      {
+        "numero": 3,
+        "pergunta": "Qual o período de operação do esquema? R$ 86,6B sugere operação plurianual — quais as gestões da Receita Federal que supervisionaram o porto?",
+        "status": "aberta",
+        "relevancia": "ALTA — responsabilidade de supervisão ainda não atribuída"
+      },
+      {
+        "numero": 4,
+        "pergunta": "Existe conexão com outros esquemas documentados no corpus? BK Bank (Carbono Oculto), 2GO Bank (Hydra) ou circuito financeiro do Master são candidatos.",
+        "status": "aberta",
+        "relevancia": "MÉDIA — hipótese transversal não confirmada"
+      },
+      {
+        "numero": 5,
+        "pergunta": "O esquema atravessou a pandemia (2020-2022)? Se sim, há sobreposição com as operações de desvio pandêmico (IDs 172+)?",
+        "status": "aberta",
+        "relevancia": "MÉDIA — temporalidade não confirmada"
+      }
+    ],
+    "result": "Cinco lacunas abertas. Ponto de inflexão crítico a monitorar: momento em que a investigação para de avançar em direção aos beneficiários finais — padrão documentado em todas as operações anteriores do corpus.",
+    "connections": ["id_178", "id_179"],
+    "status": "lacunas_abertas — monitoramento ativo"
+  }
+]

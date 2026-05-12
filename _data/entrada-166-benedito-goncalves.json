@@ -1,0 +1,67 @@
+[
+  {
+    "id": 166,
+    "slug": "benedito-goncalves-missao-dada-missao-cumprida",
+    "tipo": "instancia_padrao",
+    "data_evento": "2022-12-12",
+    "data_registro": "2026-05-09",
+    "titulo": "Missão Dada, Missão Cumprida — Benedito Gonçalves e o Circuito de Recompensa Institucional",
+    "operacao_referencia": "TSE — Ações de Inelegibilidade Bolsonaro (2022–2023)",
+    "padroes_ativados": ["P3", "P8"],
+    "padrao_descricao": {
+      "P3": "Captura Judicial de Emergência — uso da função jurisdicional como instrumento de missão política; relator designado pelo presidente do TSE (Moraes) para conduzir ações de inelegibilidade do principal adversário eleitoral",
+      "P8": "Circuito de Recompensa Institucional — cumprimento de missão jurisdicional seguido de nomeação ao cargo mais relevante do CNJ (Corregedor Nacional de Justiça) via sabatina no Senado e nomeação presidencial pelo beneficiário direto da missão"
+    },
+    "evidencia_primaria": {
+      "tipo": "declaração_documentada_audio",
+      "descricao": "Microfone aberto captou Benedito Gonçalves abraçando Alexandre de Moraes na cerimônia de diplomação de Lula (dez/2022) e sussurrando: 'Missão dada é missão cumprida'",
+      "classificacao": "primária — confissão documentada de vínculo entre função jurisdicional e missão política",
+      "fonte": "Amplamente circulado em vídeo; registrado por Chumbo Grosso e outros veículos",
+      "url_referencia": "https://chumbogrossomanaus.com.br/justica/missao-dada-missao-cumprida-tem-visto-dos-eua-cancelado/"
+    },
+    "evidencia_secundaria": [
+      {
+        "descricao": "Benedito Gonçalves foi relator das duas ações de inelegibilidade no TSE que resultaram em condenação de Bolsonaro por abuso de poder político e econômico — inelegibilidade por 8 anos",
+        "classificacao": "documentada"
+      },
+      {
+        "descricao": "STJ elegeu Benedito Gonçalves, por unanimidade, como próximo Corregedor Nacional de Justiça do CNJ (abril/2026) — cargo que exige sabatina no Senado e nomeação pelo presidente da República (Lula)",
+        "classificacao": "documentada",
+        "fonte": "Migalhas, abril/2026"
+      },
+      {
+        "descricao": "Visto americano de Benedito Gonçalves cancelado pelo Departamento de Estado (set/2025), na mesma rodada de cancelamentos que atingiu outros operadores do ecossistema Moraes",
+        "classificacao": "documentada"
+      }
+    ],
+    "cadeia_logica": "Moraes (presidente TSE) → designa Benedito como relator das ações de inelegibilidade → Benedito conduz e vota pela inelegibilidade de Bolsonaro → na diplomação de Lula, Benedito confirma o vínculo ('missão dada é missão cumprida') → Benedito é eleito Corregedor Nacional de Justiça do CNJ → nomeação cabe ao beneficiário direto da missão (Lula/Executivo) → o órgão correicional que pune juízes corruptos nas comarcas passa a ser comandado por quem confessou ter cumprido missão política",
+    "observacao_analitica": "O caso Benedito é a instância mais documentada do circuito completo de captura: (1) missão atribuída pelo superior hierárquico eleitoral, (2) missão cumprida com resultado determinado, (3) confissão pública não negada, (4) recompensa institucional de alto nível. O microfone aberto não é ruído — é evidência primária de que o ator reconhece a natureza da transação.",
+    "atores": [
+      {
+        "nome": "Benedito Gonçalves",
+        "funcao_estrutural": "Executor de Missão / Beneficiário de Recompensa Institucional",
+        "cargo_na_epoca": "Ministro do STJ e TSE — Relator das ações de inelegibilidade",
+        "cargo_recompensa": "Corregedor Nacional de Justiça do CNJ (indicado abr/2026)"
+      },
+      {
+        "nome": "Alexandre de Moraes",
+        "funcao_estrutural": "Operador-Chefe / Assignador de Missão",
+        "cargo_na_epoca": "Presidente do TSE (2022–2023)"
+      },
+      {
+        "nome": "Luiz Inácio Lula da Silva",
+        "funcao_estrutural": "Beneficiário Final / Nomeador da Recompensa",
+        "cargo_na_epoca": "Presidente eleito (2022) / Presidente da República (nomeação CNJ)"
+      }
+    ],
+    "conexoes_corpus": [
+      {
+        "id_ref": 149,
+        "descricao": "STF como terminal chokepoint — o Corregedor do CNJ que fiscaliza o judiciário é nomeado pelo Executivo beneficiário, completando o circuito de captura"
+      }
+    ],
+    "status": "confirmado",
+    "visibilidade": "público",
+    "licenca": "CC0 1.0"
+  }
+]

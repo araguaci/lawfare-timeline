@@ -1,0 +1,88 @@
+[
+  {
+    "id": 181,
+    "date": "2026-05-09",
+    "date_precision": "day",
+    "time": "14:26",
+    "title": "AM suspende monocraticamente a Lei da Dosimetria — ADIs 7966 e 7967 como trava formal",
+    "summary": "Em 09/05/2026 às 14h26, menos de 24 horas após a promulgação da Lei 15.402/2026, o ministro Alexandre de Moraes suspendeu monocraticamente a aplicação da lei. Fundamento: existência das ADIs 7966 (ABI) e 7967 (PSOL-Rede), das quais é relator, e necessidade de aguardar manifestação do Congresso (5 dias úteis) e da AGU e PGR. Moraes negou individualmente ao menos 10 pedidos de redução de pena protocolados por advogados de condenados do 8 de janeiro. A suspensão é válida até o julgamento final das ADIs pelo STF — sem prazo determinado. A federação PT/PCdoB/PV protocolou uma terceira ADI no mesmo dia (76 páginas, pedido de cautelar), ainda não distribuída.",
+    "category": "decisao_liminar_monocratica",
+    "subcategory": "suspensao_lei_dosimetria",
+    "actors": [
+      {
+        "name": "Alexandre de Moraes",
+        "role": "ministro STF / relator ADIs 7966 e 7967 / vítima declarada dos atos de 8J / suspensor da lei",
+        "institution": "STF"
+      },
+      {
+        "name": "ABI",
+        "role": "autora ADI 7966",
+        "institution": "Associação Brasileira de Imprensa"
+      },
+      {
+        "name": "Federação PSOL-Rede",
+        "role": "autora ADI 7967",
+        "institution": "PSOL-Rede"
+      },
+      {
+        "name": "Federação PT/PCdoB/PV",
+        "role": "autora terceira ADI (76p) — não distribuída",
+        "institution": "PT/PCdoB/PV"
+      },
+      {
+        "name": "Débora Rodrigues dos Santos ('Débora do Batom')",
+        "role": "condenada / primeiro pedido de redução negado",
+        "institution": null
+      }
+    ],
+    "institutions": ["STF — 1ª Turma", "ABI", "PSOL-Rede", "PT/PCdoB/PV"],
+    "legal_basis": [
+      "ADI 7966 — ABI vs. Lei 15.402/2026",
+      "ADI 7967 — PSOL-Rede vs. Lei 15.402/2026",
+      "CF Art. 102 §2º (efeito vinculante de medidas cautelares em ADI)",
+      "RISTF Art. 21 V (poder geral de cautela monocrático do relator)"
+    ],
+    "patterns": ["P01", "P03", "P06"],
+    "values": {
+      "horas_entre_promulgacao_e_suspensao": "< 24h",
+      "pedidos_negados_individualmente": "10+",
+      "prazo_suspensao": "indeterminado — até julgamento final STF",
+      "prazo_congresso_manifestar": "5 dias úteis",
+      "condenados_afetados": 1402
+    },
+    "sources": [
+      {
+        "title": "Moraes suspende aplicação da Lei da Dosimetria, que reduz pena de Bolsonaro e aliados",
+        "url": "https://www.otempo.com.br/politica/judiciario/2026/5/9/moraes-suspende-aplicacao-da-lei-da-dosimetria-que-reduz-pena-de-bolsonaro-e-aliados",
+        "outlet": "O Tempo",
+        "date": "2026-05-09"
+      },
+      {
+        "title": "Moraes suspende primeiros pedidos de aplicação da Dosimetria",
+        "url": "https://www.cnnbrasil.com.br/politica/moraes-suspende-primeiros-pedidos-de-aplicacao-da-dosimetria/",
+        "outlet": "CNN Brasil",
+        "date": "2026-05-09"
+      },
+      {
+        "title": "Moraes suspende a Lei da Dosimetria, que reduziria penas de 8/1, até análise do STF",
+        "url": "https://tmc.com.br/politica/moraes-suspende-a-lei-da-dosimetria-que-reduziria-penas-de-8-1-ate-analise-do-stf/",
+        "outlet": "TMC",
+        "date": "2026-05-09"
+      },
+      {
+        "title": "Tweet Metrópoles @Metropoles — URGENTE | Alexandre de Moraes suspende aplicação da Lei da Dosimetria",
+        "outlet": "Metrópoles / X",
+        "date": "2026-05-09",
+        "time": "14:26"
+      }
+    ],
+    "result": "Lei 15.402/2026 suspensa. 1.402 condenados do 8J não podem solicitar revisão de pena com base na nova lei enquanto as ADIs tramitam. Prazo indefinido. Bolsonaro e demais condenados permanecem com penas originais calculadas pelo mesmo relator que agora suspende a lei que as revisaria.",
+    "connections": ["id_173", "id_174", "id_175", "id_176", "id_177"],
+    "analise": "Confirmação empírica em < 24h do mecanismo documentado no ID 175 (Sequestro de Pauta). A previsão analítica era: AM controla o calendário das revisões via ADI. O resultado observado: suspensão monocrática no dia seguinte à promulgação, negação individual de 10+ pedidos, prazo de suspensão indeterminado. O mecanismo não exigiu manobra processual sofisticada — o poder cautelar monocrático do relator de ADI é suficiente para neutralizar legislação aprovada pelo Congresso com maioria qualificada que derrubou veto presidencial. Três poderes agiram; um ministro suspendeu o resultado de todos.",
+    "ponto_de_inflexao": "A suspensão transforma o debate de 'quando AM vai pautar a ADI' para 'se o STF vai julgar em plenário antes de outubro/2026'. O calendário eleitoral é agora a única pressão política estrutural sobre a pauta.",
+    "lacuna_investigativa": "A terceira ADI (PT/PCdoB/PV, 76p) ainda não foi distribuída — se for distribuída a AM por prevenção, o controle de pauta fica ainda mais concentrado. Se for distribuída a outro relator, cria possibilidade de conflito de relatoria.",
+    "status": "confirmado — suspensão ativa desde 09/05/2026 14:26",
+    "dia_zero_risco": "MÁXIMO — mecanismo P03 em operação plena",
+    "notas": "Entrada de maior relevância sistêmica do corpus em 2026. Documenta pela primeira vez a confirmação empírica de previsão analítica do lawfare-timeline em menos de 24 horas. O corpus previu o mecanismo (ID 175, 08/05); o mecanismo operou (ID 181, 09/05). Distinção metodológica crítica: a suspensão não é ilegal em si — o relator de ADI tem poder cautelar monocrático. O vício é estrutural: o relator que usa esse poder é o mesmo que presidiu as condenações que a lei suspensa revisaria. A legalidade formal do instrumento não sanitiza o conflito de interesse material."
+  }
+]

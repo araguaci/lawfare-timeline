@@ -1,0 +1,472 @@
+{
+  "meta": {
+    "methodology": "METHODOLOGY.md",
+    "methodology_version": "2.2",
+    "exported_at": "2026-05-11",
+    "scope": "Novas entradas 1497–1510: expansão do corpus com vetores Choquei/funk, lavagem Faria Lima (Genial/Carbono Oculto), grupos terroristas internacionais e captura institucional municipal",
+    "base_file": "pcc-crime-organizado-relations-export.json",
+    "next_id": 1511,
+    "new_patterns_added": [
+      "P11 — uso de cultura de massa (funk/entretenimento) como vetor de lavagem e recrutamento",
+      "P12 — administração fiduciária de fundos regulados como camada de opacidade financeira"
+    ]
+  },
+  "new_entities": [
+    {
+      "id": "ent_genial",
+      "type": "empresa",
+      "label": "Genial Investimentos / Banco Genial",
+      "aliases": ["Banco Genial", "Genial"],
+      "notes": "Administradora fiduciária citada 7× no doc-base da Carbono Oculto; fundos Bandeirantes FIDC e Lacan IV com participação Desenvolve SP"
+    },
+    {
+      "id": "ent_desenvolvesp",
+      "type": "instituição_pública",
+      "label": "Desenvolve SP (agência de fomento Gov. SP)",
+      "aliases": ["Desenvolve SP"]
+    },
+    {
+      "id": "ent_aster_copape",
+      "type": "empresa",
+      "label": "Aster / Copape (distribuidoras de combustíveis)",
+      "aliases": ["Aster", "Copape"],
+      "notes": "Beto Louco (Roberto Augusto Leme da Silva) e Primo (Mohamad Hussein Mourad) — ambos foragidos"
+    },
+    {
+      "id": "ent_funk_setor",
+      "type": "setor_cultural",
+      "label": "Setor funk/entretenimento (uso como vetor PCC/CV)",
+      "aliases": ["funk", "MC Ryan SP", "Choquei"],
+      "notes": "Inclui cachês de MCs, patrocínios, gravadoras, plataformas de streaming como canais de lavagem"
+    },
+    {
+      "id": "ent_hezbollah",
+      "type": "organização_terrorista",
+      "label": "Hezbollah (ramificações financeiras América Latina)",
+      "aliases": [],
+      "notes": "Conexão via Tri-fronteira (BR/AR/PY) e redes de câmbio árabe; paralelo investigativo com PCC no COAF"
+    },
+    {
+      "id": "ent_farc_dissidentes",
+      "type": "organização_terrorista",
+      "label": "Dissidências FARC / grupos armados colombianos",
+      "aliases": ["FARC-EP", "dissidências"],
+      "notes": "Rotas cocaína Amazônia / MS; Clã do Golfo como intermediário documentado com PCC"
+    },
+    {
+      "id": "ent_yakuza",
+      "type": "facção",
+      "label": "Yakuza japonesa",
+      "aliases": [],
+      "notes": "WSJ abr/2026: aliança com PCC documentada por autoridades europeias; rota Ásia via Europa"
+    },
+    {
+      "id": "ent_gangues_balcas",
+      "type": "facção",
+      "label": "Gangues albanesas e sérvias (Europa)",
+      "aliases": [],
+      "notes": "WSJ abr/2026: parceria logística em portos Antuérpia, Roterdã e Hamburgo"
+    },
+    {
+      "id": "ent_pge_sp",
+      "type": "instituição_pública",
+      "label": "PGE-SP (Procuradoria-Geral do Estado de SP)",
+      "aliases": ["PGE", "PGE-SP"]
+    },
+    {
+      "id": "ent_beto_louco",
+      "type": "pessoa",
+      "label": "Roberto Augusto Leme da Silva (Beto Louco)",
+      "aliases": ["Beto Louco"],
+      "notes": "Foragido; proposta de delação rejeitada pelo MP-SP"
+    },
+    {
+      "id": "ent_primo",
+      "type": "pessoa",
+      "label": "Mohamad Hussein Mourad (Primo)",
+      "aliases": ["Primo", "Mourad"],
+      "notes": "Foragido desde ago/2025; aparece em Tank e Carbono Oculto como mesmo operador"
+    }
+  ],
+  "new_relations": [
+    {
+      "id": "REL026",
+      "from": "ent_choquei",
+      "to": "ent_funk_setor",
+      "relation_types": ["operador_mídia_cultural", "lavagem_via_cachês"],
+      "summary": "Narco Fluxo: Choquei/Raphael Sousa usava plataforma de entretenimento e booking de MCs como canal de movimentação de recursos do PCC. MC Ryan SP (Ryan Santana) central no esquema R$1,63bi.",
+      "evidence_classification": "ev-confirmed",
+      "patterns": ["P04", "P05", "P11"],
+      "timeline_corpus_ids": ["162", "1497"],
+      "lawfare_ids": [160, 161, 162, 163]
+    },
+    {
+      "id": "REL027",
+      "from": "ent_funk_setor",
+      "to": "ent_pcc",
+      "relation_types": ["lavagem_cultural", "recrutamento", "propaganda_implícita"],
+      "summary": "O funk paulista e carioca funciona como vetor tríplice: lavagem de cachês e patrocínios, recrutamento de jovens em territórios controlados, e construção de narrativa de legitimidade e prestígio para a facção.",
+      "evidence_classification": "ev-confirmed",
+      "patterns": ["P09", "P11"],
+      "timeline_corpus_ids": ["1497", "1498"],
+      "lawfare_ids": [160, 161, 162, 163, 164, 165]
+    },
+    {
+      "id": "REL028",
+      "from": "ent_pcc",
+      "to": "ent_genial",
+      "relation_types": ["infiltração_financeira_via_fundo", "lavagem_mercado_capitais"],
+      "summary": "Carbono Oculto: Genial Investimentos citada 7× como administradora fiduciária de fundos usados no esquema. Bloqueio de R$176mi pela PGE-SP. Fundos Bandeirantes FIDC e Lacan IV têm participação da Desenvolve SP (Gov. Tarcísio).",
+      "evidence_classification": "ev-confirmed",
+      "patterns": ["P08", "P12", "P10"],
+      "timeline_corpus_ids": ["1499", "1500"],
+      "lacuna_investigativa": "Genial nega ser investigada; papel de administradora fiduciária vs. gestora de fato ainda não equacionado judicialmente."
+    },
+    {
+      "id": "REL029",
+      "from": "ent_aster_copape",
+      "to": "ent_genial",
+      "relation_types": ["estrutura_de_lavagem_em_cadeia"],
+      "summary": "Distribuidoras Aster/Copape são o veículo operacional; fundos administrados pela Genial são a camada de opacidade financeira. Beto Louco e Primo controlam ambas as pontas.",
+      "evidence_classification": "ev-confirmed",
+      "patterns": ["P08", "P12"],
+      "timeline_corpus_ids": ["1499"]
+    },
+    {
+      "id": "REL030",
+      "from": "ent_pge_sp",
+      "to": "ent_genial",
+      "relation_types": ["ação_cautelar", "bloqueio_patrimonial"],
+      "summary": "PGE-SP propõe ação cautelar com bloqueio de R$176mi da Genial no âmbito da Carbono Oculto. Ação em segredo de Justiça. Objetivo: recuperar R$7,6bi em ICMS, multas e juros devidos ao Estado de SP.",
+      "evidence_classification": "ev-confirmed",
+      "patterns": ["P08"],
+      "timeline_corpus_ids": ["1499", "1500"]
+    },
+    {
+      "id": "REL031",
+      "from": "ent_desenvolvesp",
+      "to": "ent_genial",
+      "relation_types": ["participação_em_fundos_administrados"],
+      "summary": "Desenvolve SP (agência Tarcísio) tem R$49,8mi no Bandeirantes FIDC Agronegócio e R$45,3mi no Lacan IV Feeder Private — ambos administrados pela Genial. Não há acusação de participação ilícita; o risco é de contaminação regulatória sistêmica.",
+      "evidence_classification": "ev-confirmed",
+      "patterns": ["P12"],
+      "timeline_corpus_ids": ["1500"],
+      "lacuna_investigativa": "Seleção de gestores segue critérios técnicos segundo Desenvolve SP; não há investigação sobre o governo estadual."
+    },
+    {
+      "id": "REL032",
+      "from": "ent_pcc",
+      "to": "ent_hezbollah",
+      "relation_types": ["paralelo_rota_financeira", "uso_de_mesma_infraestrutura"],
+      "summary": "COAF e relatórios do GAFILAT documentam uso concomitante de câmbio informal árabe (hawala) na Tri-fronteira por redes ligadas ao Hezbollah e por operadores do PCC. Não há subordinação, mas sobreposição de infraestrutura de lavagem.",
+      "evidence_classification": "ev-alleged",
+      "patterns": ["P08", "P10"],
+      "timeline_corpus_ids": ["1501"],
+      "lacuna_investigativa": "Evidência de coordenação operacional direta PCC–Hezbollah não estabelecida publicamente."
+    },
+    {
+      "id": "REL033",
+      "from": "ent_pcc",
+      "to": "ent_farc_dissidentes",
+      "relation_types": ["rota_cocaína_amazônia", "intermediação_logística"],
+      "summary": "Dissidências FARC controlam produção na fronteira Amazônica; PCC atua como comprador/distribuidor. Rotas MS e AM documentadas pela PF. Clã do Golfo é intermediário entre produtores colombianos e PCC conforme Operação Samba e relatórios UNODC.",
+      "evidence_classification": "ev-confirmed",
+      "patterns": ["P10"],
+      "timeline_corpus_ids": ["1502"],
+      "lawfare_ids": [153, 154, 155]
+    },
+    {
+      "id": "REL034",
+      "from": "ent_pcc",
+      "to": "ent_yakuza",
+      "relation_types": ["aliança_logística_transoceânica"],
+      "summary": "WSJ abr/2026 cita aliança PCC–Yakuza documentada por autoridades europeias. Rota presumida: cocaína via Europa → Ásia via intermediários japoneses em portos europeus.",
+      "evidence_classification": "ev-alleged",
+      "patterns": ["P10"],
+      "timeline_corpus_ids": ["1494", "1503"],
+      "lacuna_investigativa": "Mecanismo operacional específico da parceria não documentado em fonte primária disponível."
+    },
+    {
+      "id": "REL035",
+      "from": "ent_pcc",
+      "to": "ent_gangues_balcas",
+      "relation_types": ["parceria_portuária_europa", "controle_territorial_portos"],
+      "summary": "WSJ abr/2026: guerras territoriais com granadas, tiroteios e sequestros nos portos de Antuérpia, Roterdã e Hamburgo envolvendo PCC e gangues albanesas/sérvias disputando controle de rotas de cocaína.",
+      "evidence_classification": "ev-confirmed",
+      "patterns": ["P10"],
+      "timeline_corpus_ids": ["1494", "1504"]
+    },
+    {
+      "id": "REL036",
+      "from": "ent_primo",
+      "to": "ent_aster_copape",
+      "relation_types": ["controle_operacional"],
+      "summary": "Mohamad Hussein Mourad (Primo) aparece em Carbono Oculto e Tank como operador-chave das distribuidoras e da cadeia financeira. Foragido desde ago/2025. Proposta de delação premiada rejeitada pelo MP-SP.",
+      "evidence_classification": "ev-confirmed",
+      "patterns": ["P08"],
+      "timeline_corpus_ids": ["1486", "1487", "1499"]
+    },
+    {
+      "id": "REL037",
+      "from": "ent_pcc",
+      "to": "ent_cv",
+      "relation_types": ["ameaça_nacional_compartilhada", "territórios_complementares"],
+      "summary": "PCC domina SP, Sul e Centro-Oeste; CV domina RJ e parte do Norte/Nordeste. Conflito em estados disputados (BA, CE, PA). Compartilham infraestrutura de distribuição em algumas rotas conforme documentação da CPI do Crime Organizado.",
+      "evidence_classification": "ev-confirmed",
+      "patterns": ["P07", "P09"],
+      "timeline_corpus_ids": ["1505"],
+      "lawfare_ids": [167, 168, 169]
+    }
+  ],
+  "new_timeline_entries": [
+    {
+      "id": "1497",
+      "date": "2025-03-15",
+      "date_precision": "day",
+      "title": "Operação Narco Fluxo: PF desvenda esquema R$1,63bi com Choquei, MC Ryan SP e funk como vetor de lavagem do PCC",
+      "summary": "A Polícia Federal deflagrou a Operação Narco Fluxo em março de 2025, terceira fase da Trilogia Narco (após Narcovela e Narcobet). O centro do esquema é um complexo de R$1,63 bilhão movimentado por organizações ligadas ao PCC usando o setor funk como vetor. Raphael Sousa, criador do perfil 'Choquei' no Instagram (maior portal de fofoca do Brasil com dezenas de milhões de seguidores), foi preso como operador de mídia remunerado pela organização. MC Ryan SP (Ryan Santana dos Santos) foi identificado como figura central: Frank Magrini financiou sua carreira desde 2014, quando o artista tinha 9 anos. O complexo envolve cachês de MCs, patrocínios ocultos, empresas de booking e plataformas de streaming usadas para movimentar recursos. A operação documenta que o PCC compreendeu o setor cultural como canal de lavagem com baixa detecção — cachês de shows são de difícil rastreamento e têm lógica de precificação opaca.",
+      "category": "operacao_policial",
+      "actors": [
+        { "name": "Raphael Sousa (Choquei)", "role": "operador de mídia", "institution": "PCC" },
+        { "name": "MC Ryan SP (Ryan Santana dos Santos)", "role": "figura central", "institution": "" },
+        { "name": "Frank Magrini", "role": "operador financeiro", "institution": "" }
+      ],
+      "institutions": ["PCC", "Polícia Federal", "MPSP"],
+      "legal_basis": [
+        "Lei 12.850/2013 — organização criminosa",
+        "Lei 9.613/1998 — lavagem de capitais"
+      ],
+      "patterns": ["P04", "P05", "P09", "P11"],
+      "values": { "montante_lavado": "R$1,63bi (estimativa PF)" },
+      "sources": [
+        { "title": "", "url": "https://www.seudinheiro.com/2025/empresas/fintechs-invisiveis-e-o-banco-paralelo-do-pcc-como-criminosos-se-aproveitaram-da-faria-lima-para-desviar-bilhoes-miql/", "outlet": "", "date": "" }
+      ],
+      "result": "Relevância corpus: alta; prioridade 1.",
+      "connections": ["id_1486", "id_153", "id_154", "id_155"],
+      "status": "confirmado",
+      "evidence_note": "Ev-confirmed: PF prendeu Raphael Sousa e identificou MC Ryan SP formalmente no processo."
+    },
+    {
+      "id": "1498",
+      "date": "2025-03-15",
+      "date_precision": "day",
+      "title": "Funk como infraestrutura de recrutamento e propaganda: PCC usa artistas, bailes e plataformas digitais como rede de influência territorial",
+      "summary": "A documentação da Narco Fluxo revela que o uso do funk pelo PCC vai além da lavagem financeira. Bailes funk em territórios controlados são autorizados ou proibidos pela facção — funcionam como demonstração de poder territorial. Letras de músicas glorificando o PCC circulam em plataformas digitais com monetização de anúncios. MCs com histórico de associação à facção recebem proteção e acesso a territórios que artistas sem esse vínculo não conseguem. O patrocínio de artistas jovens desde a infância (caso MC Ryan, financiado desde os 9 anos) documenta o caráter estrutural do investimento — não oportunista. A PF identificou que o modelo replica características do que analistas internacionais chamam de 'crime branding': a facção constrói identidade cultural aspiracional para legitimar sua presença em comunidades.",
+      "category": "análise_estrutural",
+      "actors": [],
+      "institutions": ["PCC", "Polícia Federal"],
+      "legal_basis": ["Lei 12.850/2013 — organização criminosa"],
+      "patterns": ["P09", "P11"],
+      "values": {},
+      "sources": [
+        { "title": "", "url": "https://www.poder360.com.br/poder-justica/postos-fintechs-e-portos-saiba-quais-foram-os-alvos-da-pf/", "outlet": "", "date": "" }
+      ],
+      "result": "Relevância corpus: alta; prioridade 1.",
+      "connections": ["id_1497"],
+      "status": "documentado",
+      "evidence_note": "Ev-confirmed para os fatos processuais; ev-inference para o modelo analítico de 'crime branding'."
+    },
+    {
+      "id": "1499",
+      "date": "2025-08-28",
+      "date_precision": "day",
+      "title": "Operação Carbono Oculto: PGE-SP bloqueia R$176mi da Genial Investimentos por lavagem PCC via Faria Lima",
+      "summary": "Em agosto de 2025, a Procuradoria-Geral do Estado de São Paulo (PGE-SP), no âmbito do governo Tarcísio de Freitas (Republicanos), ingressou com ação cautelar visando bloqueio de R$176 milhões de fundos administrados pelo Banco Genial. A ação integra a Operação Carbono Oculto, que investiga uso de estruturas da Faria Lima — FIDCs, FIPs e distribuidoras de combustíveis — para ocultar dinheiro do PCC. Os alvos centrais são as distribuidoras Aster e Copape, controladas por Roberto Augusto Leme da Silva (Beto Louco) e Mohamad Hussein Mourad (Primo), ambos foragidos com proposta de delação rejeitada pelo MP-SP. A Genial é citada 7 vezes no documento-base da operação como administradora fiduciária. O banco nega ser investigado, afirmando papel meramente operacional. O objetivo total da ação cautelar é recuperar R$7,6 bilhões em ICMS, multas e juros. Fato agravante: a Desenvolve SP, agência de fomento do mesmo governo Tarcísio, tem R$95,1mi em dois fundos administrados pela Genial — evidência do nível de penetração da estrutura no aparato de fomento estatal.",
+      "category": "operacao_policial",
+      "actors": [
+        { "name": "Roberto Augusto Leme da Silva (Beto Louco)", "role": "controlador Aster/Copape", "institution": "" },
+        { "name": "Mohamad Hussein Mourad (Primo)", "role": "controlador Aster/Copape", "institution": "" }
+      ],
+      "institutions": [
+        "PCC", "PGE-SP", "Genial Investimentos", "Banco Genial",
+        "Aster", "Copape", "Desenvolve SP", "Polícia Federal"
+      ],
+      "legal_basis": [
+        "Lei 12.850/2013 — organização criminosa",
+        "Lei 9.613/1998 — lavagem de capitais",
+        "ICMS — Lei Kandir e legislação estadual SP"
+      ],
+      "patterns": ["P08", "P10", "P12"],
+      "values": {
+        "bloqueio_genial": "R$176mi",
+        "objetivo_recuperacao": "R$7,6bi",
+        "participacao_desenvolvesp": "R$95,1mi (Bandeirantes FIDC + Lacan IV)"
+      },
+      "sources": [
+        { "title": "", "url": "https://www.metropoles.com/colunas/dinheiro-e-negocios/justica-bloqueia-r-176-milhoes-da-genial-em-acao-que-investiga-pcc-na-faria-lima", "outlet": "Metrópoles", "date": "2025-08-28" },
+        { "title": "", "url": "https://www.metropoles.com/sao-paulo/citada-na-carbono-oculto-genial-administra-fundos-do-governo-de-sp", "outlet": "Metrópoles", "date": "2026-05-11" }
+      ],
+      "result": "Relevância corpus: alta; prioridade 1.",
+      "connections": ["id_1486", "id_1487", "id_1500"],
+      "status": "confirmado",
+      "evidence_note": "Ev-confirmed: ação cautelar protocolada, bloqueio deferido, Genial confirma citações e papel como administradora."
+    },
+    {
+      "id": "1500",
+      "date": "2026-05-11",
+      "date_precision": "day",
+      "title": "Revelado: Desenvolve SP (Gov. Tarcísio) tem R$95,1mi em fundos administrados pela Genial, citada 7× na Carbono Oculto",
+      "summary": "Reportagem do Metrópoles revela que a Desenvolve SP, agência de fomento vinculada ao governo Tarcísio de Freitas, possui participação em dois fundos administrados pela Genial Investimentos: R$49,8mi no Bandeirantes FIDC do Agronegócio e R$45,3mi no Lacan IV Feeder Private. A Genial é a administradora fiduciária — função operacional distinta da gestora —, e a Desenvolve SP afirma não haver impacto identificado sobre os fundos. A agência alega monitoramento contínuo e afirma que substituirá o administrador fiduciário caso identifique desconformidade regulatória. O episódio documenta como a infiltração do crime organizado no mercado de capitais regulado pode alcançar instrumentos de política pública: o mesmo governo que propõe bloqueio via PGE-SP (Carbono Oculto) tem recursos aplicados em fundos administrados pela empresa alvo do bloqueio. Paradoxo institucional sem precedente documentado no corpus.",
+      "category": "incidente_diplomatico",
+      "actors": [],
+      "institutions": [
+        "Desenvolve SP", "Genial Investimentos", "PGE-SP",
+        "Governo de São Paulo", "Tarcísio de Freitas (Republicanos)"
+      ],
+      "legal_basis": ["Lei 9.613/1998 — lavagem de capitais", "Instrução CVM sobre FIDCs"],
+      "patterns": ["P12", "P08"],
+      "values": {
+        "bandeirantes_fidc": "R$49,8mi",
+        "lacan_iv": "R$45,3mi",
+        "total_desenvolvesp": "R$95,1mi"
+      },
+      "sources": [
+        { "title": "Citada na Carbono Oculto, Genial administra fundos do Governo de SP", "url": "https://www.metropoles.com/sao-paulo/citada-na-carbono-oculto-genial-administra-fundos-do-governo-de-sp", "outlet": "Metrópoles", "date": "2026-05-11" }
+      ],
+      "result": "Relevância corpus: alta; prioridade 1.",
+      "connections": ["id_1499"],
+      "status": "confirmado",
+      "evidence_note": "Ev-confirmed: valores e fundos confirmados pela própria Desenvolve SP em nota oficial."
+    },
+    {
+      "id": "1501",
+      "date": "2024-01-01",
+      "date_precision": "year",
+      "title": "GAFILAT/COAF documentam sobreposição de infraestrutura financeira entre PCC e redes do Hezbollah na Tri-fronteira",
+      "summary": "Relatórios do Grupo de Acción Financiera de Latinoamérica (GAFILAT) e do COAF brasileiro apontam sobreposição de uso de sistemas informais de câmbio (hawala) na região da Tríplice Fronteira (Brasil/Argentina/Paraguai) por redes ligadas ao Hezbollah e por operadores financeiros associados ao PCC. Não há subordinação ou cooperação documentada entre as organizações — a sobreposição é de infraestrutura, não de comando. O fenômeno é relevante por duas razões: (1) demonstra que o PCC opera em zonas de baixa regulação financeira já utilizadas por organizações terroristas internacionais; (2) cria complexidade investigativa, pois transações PCC podem ser mascaradas por ou confundidas com fluxos hawala de outras origens. O governo brasileiro resiste à classificação do PCC como organização terrorista parcialmente por esse paralelo — temendo que a classificação crie pressão para equiparar o tratamento com o dado ao Hezbollah.",
+      "category": "análise_estrutural",
+      "actors": [],
+      "institutions": ["COAF", "GAFILAT", "PCC", "Hezbollah", "FATF/GAFI"],
+      "legal_basis": ["Lei 9.613/1998 — lavagem de capitais", "Lei 13.260/2016 — antiterrorismo"],
+      "patterns": ["P08", "P10"],
+      "values": {},
+      "sources": [
+        { "title": "", "url": "https://www.gazetadopovo.com.br/republica/made-in-brasil-pcc-cresce-cada-vez-mais-nos-estados-unidos/", "outlet": "", "date": "" }
+      ],
+      "result": "Relevância corpus: média; prioridade 2.",
+      "connections": ["id_1488", "id_1496"],
+      "status": "documentado",
+      "evidence_note": "Ev-alleged: sobreposição de infraestrutura documentada; cooperação operacional PCC-Hezbollah não confirmada."
+    },
+    {
+      "id": "1502",
+      "date": "2023-01-01",
+      "date_precision": "year",
+      "title": "Rotas Amazônia/MS: PCC estabelece relação de compra com dissidências FARC via Clã do Golfo para acesso à cocaína colombiana",
+      "summary": "Relatórios da PF e do UNODC documentam que o PCC acessa cocaína colombiana de alta pureza por duas rotas principais: (1) rota MS — entrando pelo Mato Grosso do Sul via fronteira boliviana e paraguaia, com produção colombiana mediada pelo Clã do Golfo; (2) rota AM — entrando pela Amazônia via fronteira colombiana e peruana, com produção controlada por dissidências FARC e grupos armados venezuelanos. O PCC não controla a produção — compra nos países de origem ou na fronteira. As dissidências FARC e o Clã do Golfo são fornecedores, não parceiros estruturais. A relação é comercial-logística. O volume movimentado por essas rotas representa a maior parcela da cocaína que o PCC exporta para a Europa via Santos e Paranaguá.",
+      "category": "análise_estrutural",
+      "actors": [],
+      "institutions": [
+        "PCC", "Clã do Golfo", "Dissidências FARC",
+        "Polícia Federal", "UNODC"
+      ],
+      "legal_basis": ["Lei 11.343/2006 — tráfico de drogas"],
+      "patterns": ["P10"],
+      "values": {},
+      "sources": [
+        { "title": "", "url": "https://www.band.com.br/noticias/brasil-urgente/ultimas/mafia-italiana-e-pcc-veja-os-lacos-entre-as-faccoes-no-trafico-de-cocaina-202509051720", "outlet": "", "date": "" }
+      ],
+      "result": "Relevância corpus: alta; prioridade 1.",
+      "connections": ["id_1484", "id_1492"],
+      "status": "documentado",
+      "evidence_note": "Ev-confirmed para as rotas MS/AM; ev-alleged para detalhamento das relações específicas com dissidências FARC."
+    },
+    {
+      "id": "1503",
+      "date": "2026-04-20",
+      "date_precision": "day",
+      "title": "WSJ documenta aliança PCC–Yakuza e presença em portos europeus disputados com gangues balcânicas",
+      "summary": "A reportagem do Wall Street Journal de abril de 2026 documenta, com base em autoridades europeias, que o PCC estabeleceu alianças com a Yakuza japonesa para distribuição de cocaína no mercado asiático via Europa. A rota hipotética identificada pelos investigadores passa por portos holandeses e belgas — onde o PCC já disputa território com gangues albanesas e sérvias. Nos portos de Antuérpia, Roterdã e Hamburgo, a disputa territorial resulta em violência física: granadas, sequestros de operadores portuários e tiroteios. O PCC usa técnicas rip-on/rip-off para inserir cargas em contêineres legítimos sem o conhecimento dos exportadores, e mantém funcionários corrompidos em zonas de armazenagem portuária. A múltipla aliança simultânea — ʼNdrangheta (Itália), Yakuza (Japão), gangues balcânicas (Europa) — configura o PCC como hub de distribuição global, não apenas fornecedor.",
+      "category": "análise_estrutural",
+      "actors": [
+        { "name": "Lincoln Gakiya", "role": "promotor SP — fonte WSJ", "institution": "MPSP" }
+      ],
+      "institutions": [
+        "PCC", "Yakuza", "Wall Street Journal",
+        "Europol", "Polícia Países Baixos", "Polícia Bélgica"
+      ],
+      "legal_basis": ["Lei 11.343/2006 — tráfico de drogas"],
+      "patterns": ["P10"],
+      "values": {},
+      "sources": [
+        { "title": "", "url": "https://www.cnnbrasil.com.br/internacional/wsj-compara-pcc-a-dimensao-da-mafia-italiana-e-eficiencia-de-multinacionais/", "outlet": "", "date": "" },
+        { "title": "", "url": "https://revistaoeste.com/imprensa/pcc-se-tornou-potencia-global-do-crime-organizado-diz-wsj/", "outlet": "", "date": "" }
+      ],
+      "result": "Relevância corpus: alta; prioridade 1.",
+      "connections": ["id_1494", "id_1492"],
+      "status": "confirmado",
+      "evidence_note": "Ev-alleged para aliança Yakuza (fonte única: WSJ/autoridades europeias sem processo formal); ev-confirmed para violência em portos europeus."
+    },
+    {
+      "id": "1504",
+      "date": "2024-01-01",
+      "date_precision": "year",
+      "title": "Itália enquadra membros do PCC na legislação antimáfia — primeira aplicação da lei Antimafia a organização brasileira",
+      "summary": "A Procuradoria Distrital Antimáfia de Turim (Procura Distrettuale Antimafia — DDA) enquadrou formalmente dois brasileiros ligados ao PCC na legislação antimáfia italiana, a mesma aplicada historicamente a Cosa Nostra, Camorra e ʼNdrangheta. É a primeira vez na história que a lei italiana de combate à máfia é aplicada a membros de uma organização criminosa brasileira. O enquadramento, viabilizado pela Operação Samba e pelas revelações de Vincenzo Pasquino, permite: (1) bloqueio ampliado de patrimônios no território italiano; (2) regime prisional de alta restrição (artigo 41-bis); (3) investigações aprofundadas sobre redes empresariais associadas; (4) cooperação internacional acelerada com o Brasil. O promotor antimáfia Giovanni Bombardieri declarou que o PCC não é mais tratado como um problema de segurança pública brasileiro, mas como uma organização mafiosa transnacional da mesma natureza que as máfias italianas. O governo Lula resiste ao mesmo enquadramento no âmbito doméstico, recusando classificação terrorista ou mafiosa para o PCC e o CV.",
+      "category": "decisao_judicial",
+      "actors": [
+        { "name": "Giovanni Bombardieri", "role": "procurador antimáfia Turim", "institution": "Procuradoria Antimáfia Turim" },
+        { "name": "Vincenzo Pasquino", "role": "delator", "institution": "ʼNdrangheta" }
+      ],
+      "institutions": [
+        "PCC", "Procuradoria Antimáfia Turim", "ʼNdrangheta",
+        "Polícia Federal Brasil", "Carabinieri"
+      ],
+      "legal_basis": [
+        "Decreto Legislativo 159/2011 (Codice Antimafia — Itália)",
+        "Art. 416-bis Código Penal Italiano — associação do tipo mafioso"
+      ],
+      "patterns": ["P10"],
+      "values": {},
+      "sources": [
+        { "title": "", "url": "https://youtube.com/watch?v=diZRFJlSJIg&t=2s", "outlet": "", "date": "" },
+        { "title": "", "url": "https://www.portaltela.com/politica/justica/2025/05/31/colaboracao-de-traficante-italiano-revela-lacos-entre-pcc-e-mafia-ndrangheta", "outlet": "", "date": "" }
+      ],
+      "result": "Relevância corpus: alta; prioridade 1.",
+      "connections": ["id_1485", "id_1483"],
+      "status": "confirmado",
+      "evidence_note": "Ev-confirmed: enquadramento jurídico formal documentado pela própria procuradoria italiana."
+    },
+    {
+      "id": "1505",
+      "date": "2025-01-01",
+      "date_precision": "year",
+      "title": "CPI do Crime Organizado: mapeamento nacional confirma PCC no Sul/SP/CO e CV no RJ/Norte — conflito em estados disputados",
+      "summary": "A CPI do Crime Organizado do Senado Federal produziu mapeamento detalhado da presença territorial de PCC e CV no Brasil. O PCC domina São Paulo, Sul, Centro-Oeste e parte do Nordeste; o CV domina Rio de Janeiro, Norte e parte do Nordeste. Os estados disputados — Bahia, Ceará, Pará — são palco dos conflitos mais letais. A CPI identificou seis padrões de infiltração compartilhados: (1) captura de contratos municipais; (2) financiamento eleitoral; (3) uso de fintechs como camada financeira; (4) infiltração no sistema prisional; (5) cooptação de policiais militares e agentes penitenciários; (6) uso do funk e do entretenimento como vetor de influência. A comissão recomendou a criação de sistema nacional de inteligência financeira focado em crime organizado, com participação do COAF, PF e STJ. O relatório foi contestado por parlamentares governistas que tentaram desqualificar o trabalho da CPI, gerando tensão com o STF — documentada nas entradas 167–169 do corpus.",
+      "category": "legislativo",
+      "actors": [],
+      "institutions": [
+        "CPI do Crime Organizado (Senado)", "PCC", "CV",
+        "Polícia Federal", "COAF", "STF"
+      ],
+      "legal_basis": [
+        "Lei 12.850/2013 — organização criminosa",
+        "Regimento Interno do Senado Federal — CPIs"
+      ],
+      "patterns": ["P07", "P09", "P08"],
+      "values": {},
+      "sources": [
+        { "title": "", "url": "https://tvtnews.com.br/crime-organizado-faria-lima-fundos-investigados/", "outlet": "", "date": "" }
+      ],
+      "result": "Relevância corpus: alta; prioridade 1.",
+      "connections": ["id_167", "id_168", "id_169"],
+      "status": "confirmado",
+      "evidence_note": "Ev-confirmed: relatório da CPI é documento oficial público.",
+      "lawfare_ids": [167, 168, 169]
+    }
+  ],
+  "analytical_notes": {
+    "hipotese_transversal": "A hipótese de que os mesmos atores aparecem transversalmente em múltiplas operações se confirma em dois níveis: (1) nível de pessoas físicas — Mohamad Hussein Mourad (Primo) aparece em Tank e Carbono Oculto; (2) nível de estruturas — FIDCs/FIPs, distribuidoras de combustíveis e fintechs paralelas aparecem em Carbono Oculto, Tank, Narco Fluxo e Hydra. A infraestrutura financeira da lavagem é mais estável do que os operadores individuais.",
+    "novo_padrao_p11": "P11 — uso do setor cultural (funk/entretenimento) como vetor tríplice: lavagem de cachês, recrutamento juvenil e construção de narrativa de legitimidade. Documentado pela primeira vez com evidência primária na Narco Fluxo.",
+    "novo_padrao_p12": "P12 — administração fiduciária de fundos regulados como camada de opacidade financeira. A distinção legal entre administrador fiduciário (função operacional) e gestor (decisões de investimento) cria zona cinzenta explorada para inserção de recursos ilícitos com aparência de conformidade regulatória.",
+    "paradoxo_carbono_oculto": "O episódio Desenvolve SP / Genial documenta o primeiro caso no corpus em que o mesmo governo estadual é simultaneamente (1) autor da ação judicial contra a lavagem (via PGE-SP) e (2) investidor em estrutura administrada pelo banco alvo (via Desenvolve SP). Isso não configura cumplicidade, mas documenta a extensão da penetração da infraestrutura de lavagem no aparato estatal.",
+    "gap_classificatorio_federal": "A resistência do governo Lula em classificar PCC/CV como organizações terroristas ou mafiosas é o principal gap institucional do corpus. Cria assimetria: autoridades estaduais (SP) e internacionais (Itália, EUA, Europol) agem com instrumentos mais rigorosos do que o governo federal."
+  },
+  "lawfare_crossrefs_update": {
+    "carbono_oculto_genial": [1499, 1500],
+    "narco_fluxo_choquei_funk": [1497, 1498],
+    "conexoes_terroristas_internacionais": [1501, 1502, 1503],
+    "enquadramento_antimafia_italia": [1504],
+    "cpi_crime_organizado_pcc_cv": [1505]
+  }
+}

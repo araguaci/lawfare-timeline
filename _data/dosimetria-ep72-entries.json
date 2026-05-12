@@ -1,0 +1,100 @@
+[
+  {
+    "id": 166,
+    "slug": "lei-dosimetria-tramitacao",
+    "tipo": "evento_legislativo",
+    "operacao": "Lei da Dosimetria / PL 2.162/2023",
+    "titulo": "PL 2.162/2023 — Tramitação e Promulgação da Lei 15.402/2026",
+    "data_inicio": "2023-01-01",
+    "data_fim": "2026-05-08",
+    "status": "lei_vigente",
+    "resumo": "PL originado por Marcelo Crivella (Republicanos-RJ). Aprovado na Câmara em dezembro de 2025 (relator: Paulinho da Força / Solidariedade-SP), aprovado no Senado em seguida. Vetado integralmente por Lula em janeiro de 2026 sob argumento de inconstitucionalidade e contrariedade ao interesse público. Veto derrubado pelo Congresso em 30/04/2026 (Câmara: 318×144; Senado: 49×24). Lula não promulga dentro do prazo constitucional de 48h. Promulgada por Davi Alcolumbre (Senado) em 08/05/2026 como Lei 15.402/2026.",
+    "dispositivos": [
+      "Proibição de soma de penas para crimes de abolição violenta do Estado Democrático de Direito + golpe de Estado praticados no mesmo contexto — prevalece pena mais grave",
+      "Progressão ao semiaberto após cumprimento de 1/6 da pena (réus primários); 20% para reincidentes — reduz o patamar anterior de 25%",
+      "Redução de 1/3 a 2/3 para crimes praticados em 'contexto de multidão' — excluídos líderes, organizadores e financiadores",
+      "Remição por estudo e trabalho compatível com cumprimento em prisão domiciliar",
+      "Trechos sobre progressão de regime para crimes hediondos considerados 'prejudicados' por Alcolumbre antes da votação — evitar colisão com Lei Antifacção (Lei 15.358/2026)"
+    ],
+    "beneficiarios_estimados": {
+      "condenados_definitivos_regime_fechado": 114,
+      "prisao_domiciliar": 50,
+      "prisao_preventiva": 15,
+      "total_estimado": 179,
+      "principal_impacto": "Jair Bolsonaro — condenado a 27 anos e 3 meses; progressão ao semiaberto projetada de set/2033 para aprox. 3 anos e 3 meses de cumprimento"
+    },
+    "padroes_ativos": ["P07", "P08"],
+    "classificacao_evidencia": "primario_documentado",
+    "fontes": [
+      "Agência Câmara — PL 2.162/2023",
+      "Agência Brasil 30/04/2026 — derrubada do veto",
+      "Senado Federal — votação 49×24",
+      "Diário Oficial — promulgação Alcolumbre 08/05/2026"
+    ]
+  },
+  {
+    "id": 167,
+    "slug": "moraes-ep72-suspensao-lei-valida",
+    "tipo": "decisao_judicial",
+    "operacao": "Execução Penal 72/DF — STF",
+    "titulo": "EP 72/DF — Suspensão Monocrática de Lei Federal Válida sem Declaração de Inconstitucionalidade",
+    "data": "2026-05-09",
+    "status": "decisao_vigente_pendente_adi",
+    "relator": "Alexandre de Moraes",
+    "reu": "Nara Faustino de Menezes",
+    "condenacao_base": {
+      "pena": "16 anos e 6 meses (15 anos reclusão + 1 ano e 6 meses detenção) + 100 dias-multa",
+      "regime": "fechado",
+      "crimes": [
+        "Abolição violenta do Estado Democrático de Direito",
+        "Golpe de Estado",
+        "Dano qualificado",
+        "Deterioração de patrimônio tombado",
+        "Associação criminosa armada"
+      ],
+      "dano_civil": "R$ 30 milhões solidários (danos morais coletivos)"
+    },
+    "pedido_defesa": "Aplicação imediata da Lei 15.402/2026 para revisão de pena e progressão de regime",
+    "decisao_moraes": {
+      "dispositivo": "Suspensão da aplicação da Lei 15.402/2026 especificamente nesta execução penal até julgamento das ADIs 7.966 e 7.967",
+      "fundamento_invocado": "Art. 493 do CPC aplicado analogicamente — 'fato processual novo e relevante' (superveniência das ADIs)",
+      "fundamento_concomitante": "Segurança jurídica",
+      "contradição_interna": "Determina suspensão da lei 'por segurança jurídica' e simultaneamente ordena que a execução 'prossiga integralmente' — as premissas são logicamente incompatíveis",
+      "efeito_pratico": "Lei continua vigente e válida para todos os demais jurisdicionados; apenas esta condenada específica está impedida de invocá-la"
+    },
+    "vicio_juridico_central": "Suspensão ad personam de eficácia de lei federal válida sem: (a) declaração de inconstitucionalidade; (b) cautelar em ADI com efeito erga omnes; (c) deliberação plenária. O art. 493 do CPC autoriza apenas consideração de fato superveniente relevante ao julgamento — não suspensão de eficácia normativa.",
+    "dado_agravante": "Moraes foi sorteado relator das próprias ADIs 7.966 e 7.967 na véspera (08/05/2026) — concentra na mesma figura: relator da execução penal, relator das ADIs que podem anular a lei, e ex-presidente do TSE que presidiu as condenações de 8 de janeiro",
+    "padroes_ativos": ["P03", "P07", "P08", "P06"],
+    "padrao_emergente": {
+      "descricao": "Suspensão monocrática ad hoc de eficácia normativa para caso específico — terceira via entre HC e ADI cautelar, sem fundamento constitucional localizável. Candidato a sub-padrão P10 ou entrada autônoma P03-B.",
+      "referencia_analitica": "Rodrigo Chemim, 'Inconstitucionalidade à la carte e o novo normal antidemocrático do STF' (09/05/2026); Nilo Bairros de Brum — 'efeito de legalidade': norma como mecanismo retórico de legitimação de conclusão previamente decidida"
+    },
+    "seletividade_documentavel": {
+      "questao_empirica": "Quantas outras execuções penais com pedido de aplicação da Lei 15.402/2026 receberam a mesma suspensão monocrática? Se apenas EP 72/DF: prova direta de tratamento normativo diferenciado por identidade do jurisdicionado.",
+      "status": "aberto — requer verificação via consulta processual STF"
+    },
+    "adis_pendentes": [
+      {
+        "numero": "ADI 7.966",
+        "autor": "Associação Brasileira de Imprensa (ABI)",
+        "relator": "Alexandre de Moraes",
+        "status": "aguardando informações — prazo 5 dias a Presidência da República e Congresso"
+      },
+      {
+        "numero": "ADI 7.967",
+        "autor": "Federação PSOL-Rede Sustentabilidade",
+        "relator": "Alexandre de Moraes",
+        "status": "aguardando informações"
+      }
+    ],
+    "classificacao_evidencia": "primario_documentado",
+    "fontes": [
+      "Migalhas 09/05/2026 — íntegra da decisão EP 72/DF",
+      "Carta Capital 09/05/2026",
+      "Correio do Estado 09/05/2026",
+      "Diário do Grande ABC 09/05/2026",
+      "Gazeta do Povo 09/05/2026",
+      "Rodrigo Chemim — ulyssesblog.com.br 09/05/2026"
+    ]
+  }
+]

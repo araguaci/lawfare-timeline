@@ -1,0 +1,72 @@
+{
+  "_comentario": "Schema de retorno para eventos da categoria penduricalhos — lawfare-timeline v2.0",
+  "_instrucoes": "Preencha cada campo conforme as regras em tools/prompt-busca-penduricalhos.md. Defina id como null — será atribuído ao inserir em _data/lawfare.json. Remova campos _comentario e _instrucoes antes de inserir.",
+  "meta": {
+    "prompt_versao": "1.0",
+    "data_busca": "YYYY-MM-DD",
+    "periodo_coberto": "YYYY-MM-DD/YYYY-MM-DD",
+    "total_eventos": 0,
+    "fonte_busca": "perplexity|chatgpt|gemini|manual"
+  },
+  "assuntos": [
+    {
+      "id": null,
+      "titulo": "",
+      "data_evento": "YYYY-MM-DD",
+      "data_iso": "YYYY-MM-DDT00:00:00.000Z",
+      "categoria": "penduricalhos",
+      "tags": [],
+      "descricao": "",
+      "relevancia": "alta|media|baixa",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "supersalario|penduricalho|nepotismo|viagem-publica|uso-indevido-erario|fundo-especial|licenca-remunerada",
+      "fontes": [],
+      "pessoas_envolvidas": [],
+      "instituicoes_envolvidas": [],
+      "pais": "Brasil",
+      "valor_envolvido": "R$ 0.000,00",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts/penduricalhos/YYYY-MM-DD-slug.md",
+      "contraste_social": {
+        "indicador": "",
+        "dado": "",
+        "fonte_indicador": "IBGE|SNIS|FGV|IPEA|MDS|INEP"
+      },
+      "vetor_correcao": {
+        "disponivel": true,
+        "mecanismo": "CNJ|CNMP|TCU|TCE|MPF|acao-popular|CPI|legislacao",
+        "status": "pendente|em_andamento|arquivado|sem_previsao"
+      },
+      "artigo": {
+        "front_matter": {
+          "layout": "post",
+          "title": "",
+          "categories": "penduricalhos",
+          "image_path": "/assets/solid/gift.svg",
+          "article_id": "YYYYMMDD",
+          "description": "YYYY-MM-DD-Local-tipo-beneficio",
+          "tags": []
+        },
+        "corpo": {
+          "heading": "",
+          "detalhes": {
+            "ano": "YYYY",
+            "data": "YYYY-MM-DD",
+            "descricao": "",
+            "decisao": "",
+            "beneficiado": "",
+            "departamento": "",
+            "local": "",
+            "valor": ""
+          },
+          "envolvidos": [],
+          "consequencias": [],
+          "subcategorias": ["penduricalho"],
+          "fontes_formatadas": [],
+          "contraste_constitucional": "",
+          "contraste_social": ""
+        }
+      }
+    }
+  ]
+}
