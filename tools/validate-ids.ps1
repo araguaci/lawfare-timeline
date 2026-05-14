@@ -128,12 +128,33 @@ try {
     if ($tOutOfRange) { Warn "IDs temáticos fora do range 100-999: $($tOutOfRange -join ',')" }
     elseif ($tCorpus.Count -gt 0) { Pass "Track temático: $($tCorpus.Count) entradas no range 100-999 ($($tCorpus -join ','))" }
 
-    # Verificar que IDs main do corpus (1400s) estão no range batch_file_only ou confirmado
+    # IDs numéricos >1000: main track — alguns só existem em JSON batch até merge em lawfare.json
     $mCorpus = $cIds | Where-Object { [int]$_ -gt 1000 } | ForEach-Object { [int]$_ } | Sort-Object
     $inMain  = $mCorpus | Where-Object { $_ -le $realLastId }
     $inBatch = $mCorpus | Where-Object { $_ -gt $realLastId }
-    if ($inMain.Count -gt 0)  { Pass "IDs main em lawfare.json: $($inMain -join ',')" }
-    if ($inBatch.Count -gt 0) { Warn "IDs main APENAS em batch files (não em lawfare.json): $($inBatch -join ',')" }
+    if ($inMain.Count -gt 0)  { Pass "IDs main presentes em lawfare.json: $($inMain -join ',')" }
+
+    if ($inBatch.Count -gt 0) {
+        # Esperado quando sync marca confirmed_batches.status=batch_file_only (ex.: 1449–1511)
+        $syncRef          = Get-Content $syncFile -Raw | ConvertFrom-Json
+        $batchOnlyRanges  = @($syncRef.tracks.main.confirmed_batches | Where-Object { $_.status -eq "batch_file_only" })
+        $outsideDeclared = New-Object System.Collections.Generic.List[int]
+        foreach ($nid in $inBatch) {
+            $inside = $false
+            foreach ($b in $batchOnlyRanges) {
+                $lo = [int]$b.range[0]; $hi = [int]$b.range[1]
+                if ($nid -ge $lo -and $nid -le $hi) { $inside = $true; break }
+            }
+            if (-not $inside) { [void]$outsideDeclared.Add($nid) }
+        }
+        if ($batchOnlyRanges.Count -eq 0) {
+            Warn "IDs main > $($realLastId) mas sync não define batch_file_only: $($inBatch -join ',')"
+        } elseif ($outsideDeclared.Count -gt 0) {
+            Warn "IDs main > $($realLastId) fora dos ranges batch_file_only no sync: $($outsideDeclared -join ',')"
+        } else {
+            Pass "IDs main apenas em batch _data/*.json (OK — dentro de batch_file_only sync): $($inBatch -join ',')"
+        }
+    }
 
     # Verificar fontes verificadas (todo entry deve ter >= 1 URL)
     $semFonte = $corpus | Where-Object { $_.fontes_verificadas.Count -eq 0 }

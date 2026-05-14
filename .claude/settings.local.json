@@ -9,7 +9,8 @@
       "Bash(Select-Object Name, Mode, LastWriteTime)",
       "WebSearch",
       "Bash(grep -r \"^categories:\" \"D:\\\\_deploy\\\\lawfare-timeline\\\\_posts\\\\\" --include=\"*.md\" | sed 's/.*categories: //' | sort -u | head -40)",
-      "PowerShell(Select-String -Path \"D:\\\\_deploy\\\\lawfare-timeline\\\\_data\\\\lawfare-unified-corpus.json\" -Pattern \"crime-organizado-transnacional\" | Select-Object -First 5 | ForEach-Object { Write-Host $_.Line.Trim\\(\\) })"
+      "PowerShell(Select-String -Path \"D:\\\\_deploy\\\\lawfare-timeline\\\\_data\\\\lawfare-unified-corpus.json\" -Pattern \"crime-organizado-transnacional\" | Select-Object -First 5 | ForEach-Object { Write-Host $_.Line.Trim\\(\\) })",
+      "WebFetch(domain:gosurf.site)"
     ]
   }
 }

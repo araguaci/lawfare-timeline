@@ -4,7 +4,7 @@ description: "O Fórum Jurídico de Lisboa, organizado pelo IDP (instituto funda
 date: 2024-07-01T12:00:00.000Z
 image:
   path: "/assets/solid/scale-balanced.svg"
-tags: ["Gilmarpalooza", "Lisboa", "IDP", "Gilmar Mendes", "Barroso", "Moraes", "Centrão", "diárias", "viagem", "2024", "2025", "extravagância"]
+tags: ["Gilmarpalooza", "Lisboa", "IDP", "gilmar-mendes", "Barroso", "Moraes", "Centrão", "diárias", "viagem", "2024", "2025", "extravagância"]
 categories: governo
 timeline_id: 175
 source_data: extravagancia-2023-2026.json
