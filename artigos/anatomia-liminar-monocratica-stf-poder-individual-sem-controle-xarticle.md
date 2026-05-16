@@ -130,7 +130,7 @@ Se somar três falhas repetidas observadas pela linha temporal — falta critér
 
 ### Links no site do dossiê
 
-- [EP 72/DF — suspensão monocrática da Lei 15.402/2026](https://lawfare-timeline.vercel.app/posts/ep72-df-suspensao-monocratica-lei-15402-2026/)
+- [EP 72/DF — suspensão monocrática da Lei 15.402/2026](https://lawfare-timeline.vercel.app/posts/moraes-suspende-lei-dosimetria-monocraticamente-10-execucoes-penais-8j/)
 - [Dosimetria da impunidade — Lei 15.402 e EP 72](https://lawfare-timeline.vercel.app/posts/dosimetria-da-impunidade-lei-15402-ep72-tratamento-diferenciado/)
 - [Captura regulatória — BACEN, CVM, INSS](https://lawfare-timeline.vercel.app/posts/captura-regulatoria-bacen-cvm-inss-como-nos-do-sistema/)
 - [HC seletivo — habeas corpus como privilégio processual](https://lawfare-timeline.vercel.app/posts/hc-seletivo-habeas-corpus-como-privilegio-processual/)

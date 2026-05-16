@@ -160,7 +160,7 @@ O habeas corpus seletivo não é uma falha pontual do sistema — é a evidênci
 ### Acervo lawfare-timeline
 - [STJ nega indenização a dentista preso injustamente 210 dias — ID 1511](/posts/stj-nega-indenizacao-dentista-preso-injustamente-210-dias/)
 - [O Estado Como Réu — Weaponização Processual](/posts/estado-como-reu-weaponizacao-processual-contra-cidadaos/)
-- [EP 72/DF — Suspensão Monocrática de Lei Federal Válida](/posts/ep72-df-suspensao-monocratica-lei-15402-2026/)
+- [EP 72/DF — Suspensão Monocrática de Lei Federal Válida](/posts/moraes-suspende-lei-dosimetria-monocraticamente-10-execucoes-penais-8j/)
 
 ### Análises sistêmicas (gosurf.site)
 - [Duplo Padrão Judicial — Dossiê Investigativo](https://gosurf.site/duplo-padrao-judicial)

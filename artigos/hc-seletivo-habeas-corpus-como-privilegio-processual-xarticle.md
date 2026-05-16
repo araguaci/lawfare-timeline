@@ -50,7 +50,7 @@ Por design convenção américana só abre porta após recurso doméstico esgota
 
 - [STJ dentista 210 dias ID1511](https://lawfare-timeline.vercel.app/posts/stj-nega-indenizacao-dentista-preso-injustamente-210-dias/)  
 - [Estado como réu](https://lawfare-timeline.vercel.app/posts/estado-como-reu-weaponizacao-processual-contra-cidadaos/)  
-- [EP 72 DF suspensão lei](https://lawfare-timeline.vercel.app/posts/ep72-df-suspensao-monocratica-lei-15402-2026/)  
+- [EP 72 DF suspensão lei](https://lawfare-timeline.vercel.app/posts/moraes-suspende-lei-dosimetria-monocraticamente-10-execucoes-penais-8j/)  
 
 [Duplo padrão judicial](https://gosurf.site/duplo-padrao-judicial) · [Assimetria punitiva](https://gosurf.site/assimetria-punitiva) · [Weaponized Legalism](https://gosurf.site/brasil-estado-totalitario) · [Retorno zero](https://gosurf.site/retorno-zero) · [Violência estatal captura](https://gosurf.site/violencia-estatal-captura) · [Zero x zero](https://gosurf.site/zero-x-zero)
 

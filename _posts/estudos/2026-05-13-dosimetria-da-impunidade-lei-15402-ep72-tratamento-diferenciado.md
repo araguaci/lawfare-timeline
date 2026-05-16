@@ -174,7 +174,7 @@ As ADIs questionam a constitucionalidade da Lei 15.402/2026. Enquanto não são 
 
 ### Acervo lawfare-timeline
 - [Lei 15.402/2026 — Dosimetria promulgada por Alcolumbre — ID 166](/posts/lei-15402-2026-lei-dosimetria-promulgada-alcolumbre/)
-- [EP 72/DF — Suspensão Monocrática de Lei Federal Válida — ID 167](/posts/ep72-df-suspensao-monocratica-lei-15402-2026/)
+- [EP 72/DF — Suspensão Monocrática de Lei Federal Válida — ID 167](/posts/moraes-suspende-lei-dosimetria-monocraticamente-10-execucoes-penais-8j/)
 - [HC Seletivo — Habeas Corpus como Privilégio Processual](/posts/hc-seletivo-habeas-corpus-como-privilegio-processual/)
 - [Anatomia da Liminar Monocrática](/posts/anatomia-liminar-monocratica-stf-poder-individual/)
 

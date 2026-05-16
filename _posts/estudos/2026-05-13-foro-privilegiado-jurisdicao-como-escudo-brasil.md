@@ -145,7 +145,7 @@ Para fins de comparação: a taxa de condenação no juízo criminal de primeira
 
 ### Acervo lawfare-timeline
 - [Lei 15.402/2026 — Dosimetria](/posts/lei-15402-2026-lei-dosimetria-promulgada-alcolumbre/)
-- [EP 72/DF — Suspensão Monocrática](/posts/ep72-df-suspensao-monocratica-lei-15402-2026/)
+- [EP 72/DF — Suspensão Monocrática](/posts/moraes-suspende-lei-dosimetria-monocraticamente-10-execucoes-penais-8j/)
 - [Dosimetria da Impunidade — Lei 15.402 e EP 72](/posts/dosimetria-da-impunidade-lei-15402-ep72-tratamento-diferenciado/)
 - [Anatomia da Liminar Monocrática](/posts/anatomia-liminar-monocratica-stf-poder-individual-sem-controle/)
 

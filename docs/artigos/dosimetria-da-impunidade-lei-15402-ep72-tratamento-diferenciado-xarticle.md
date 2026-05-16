@@ -74,7 +74,7 @@ Lei válida até decisão contrária; suspensão na EP 72/DF contorna igualdade 
 ## Acervo relacionado
 
 - [Lei 15.402/2026 — dosimetria (ID 166)](https://lawfare-timeline.vercel.app/posts/lei-15402-2026-lei-dosimetria-promulgada-alcolumbre/)  
-- [EP 72/DF — suspensão monocrática (ID 167)](https://lawfare-timeline.vercel.app/posts/ep72-df-suspensao-monocratica-lei-15402-2026/)  
+- [EP 72/DF — suspensão monocrática (ID 167)](https://lawfare-timeline.vercel.app/posts/moraes-suspende-lei-dosimetria-monocraticamente-10-execucoes-penais-8j/)  
 - [HC seletivo](https://lawfare-timeline.vercel.app/posts/hc-seletivo-habeas-corpus-como-privilegio-processual/)  
 - [Anatomia da liminar monocrática](https://lawfare-timeline.vercel.app/posts/anatomia-liminar-monocratica-stf-poder-individual-sem-controle/)  
 

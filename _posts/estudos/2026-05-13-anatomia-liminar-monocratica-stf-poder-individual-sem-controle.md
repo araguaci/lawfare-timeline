@@ -182,7 +182,7 @@ O sistema funciona quando o relator tem critérios previsíveis, conflitos de in
 ## Corpus e referências relacionadas
 
 ### Acervo lawfare-timeline
-- [EP 72/DF — Suspensão Monocrática de Lei Federal Válida — ID 167](/posts/ep72-df-suspensao-monocratica-lei-15402-2026/)
+- [EP 72/DF — Suspensão Monocrática de Lei Federal Válida — ID 167](/posts/moraes-suspende-lei-dosimetria-monocraticamente-10-execucoes-penais-8j/)
 - [Dosimetria da Impunidade — Lei 15.402 e EP 72](/posts/dosimetria-da-impunidade-lei-15402-ep72-tratamento-diferenciado/)
 - [Captura Regulatória — BACEN, CVM, INSS](/posts/captura-regulatoria-bacen-cvm-inss-como-nos-do-sistema/)
 - [HC Seletivo — Habeas Corpus como Privilégio Processual](/posts/hc-seletivo-habeas-corpus-como-privilegio-processual/)

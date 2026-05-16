@@ -99,7 +99,7 @@ Contraste comum nos dados do **CNJ (Justiça em Números)** para primeira instâ
 ## Acervo relacionado (*lawfare-timeline*)
 
 - [Lei 15.402/2026 — dosimetria](https://lawfare-timeline.vercel.app/posts/lei-15402-2026-lei-dosimetria-promulgada-alcolumbre/)
-- [EP 72/DF — suspensão monocrática](https://lawfare-timeline.vercel.app/posts/ep72-df-suspensao-monocratica-lei-15402-2026/)
+- [EP 72/DF — suspensão monocrática](https://lawfare-timeline.vercel.app/posts/moraes-suspende-lei-dosimetria-monocraticamente-10-execucoes-penais-8j/)
 - [Dosimetria da impunidade — Lei 15.402 e EP 72](https://lawfare-timeline.vercel.app/posts/dosimetria-da-impunidade-lei-15402-ep72-tratamento-diferenciado/)
 - [Anatomia da liminar monocrática — STF e poder individual](https://lawfare-timeline.vercel.app/posts/anatomia-liminar-monocratica-stf-poder-individual-sem-controle/)
 
