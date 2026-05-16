@@ -3,7 +3,7 @@ title: "Onze padrões, vinte e cinco anos: a matriz de indulgência sistêmica q
 description: "P1 a P11 — da anulação processual ao loop de extração perpétua. Onze padrões identificados em 17 operações anticorrupção brasileiras (2000–2026), R$ 156 bilhões documentados e uma hipótese incômoda: a falha não é acidental."
 date: 2026-05-05T12:00:00.000Z
 image:
-  path: "/assets/img/og-padroes-sistemicos-dashboard.png"
+  path: "/assets/img/og-padroes-sistemicos-dashboard.webp"
 tags: [operacoes, corrupcao, impunidade, lawfare, investigacao-criminal, lavagem-de-dinheiro, pcc, crime-organizado, bancos, coaf, fintechs, carbono, narco-fluxo, compliance-zero, p11]
 categories: estudos
 mermaid: false
@@ -25,7 +25,7 @@ O painel interativo *Matriz de Indulgência Sistêmica* ([Padrões × Operaçõe
 
 ## Onze padrões — o catálogo
 
-![](/assets/img/og-padroes-sistemicos-dashboard.png)
+![](/assets/img/og-padroes-sistemicos-dashboard.webp)
 
 ### P1 — Anulação via defeito processual
 

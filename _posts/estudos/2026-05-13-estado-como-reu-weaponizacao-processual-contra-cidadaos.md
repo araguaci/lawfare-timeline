@@ -3,7 +3,10 @@ title: "O Estado Como Réu — e Como Ele Não Perde: weaponização processual 
 description: "Um dentista ficou preso 210 dias por crimes que não cometeu. O STJ negou a indenização. A PGE-RJ executou R$ 479 mil em custas. O caso chegou à CIDH. Esse não é um caso isolado — é um padrão documentável de como o Estado brasileiro responde quando o cidadão o processa."
 date: 2026-05-13T12:00:00.000Z
 image:
-  path: "/assets/solid/triangle-exclamation.svg"
+  path: "/assets/img/estudos/estado-como-reu-frontmatter-hero.webp"
+  alt: "Silhueta solitária diante de uma porta de tribunal monumental — metáfora do cidadão contra o Estado"
+  prompt: "A lone tiny human silhouette standing at the base of a monumental cold marble courthouse door five times the person's height. The door is closed. The building shadow completely engulfs the small figure clutching a thin folder of documents. Dramatic top light from a narrow slit above, deep shadows consuming the figure. The building is featureless and oppressive. Editorial investigative photography, dark atmosphere, photorealistic. No faces visible."
+  target: "/assets/img/estudos/estado-como-reu-frontmatter-hero.webp"
 tags: [erro-judiciario, responsabilidade-civil-estado, stj, cidh, due-process, acesso-justica, prisao-preventiva, weaponized-legalism, pge, indenizacao]
 categories: estudos
 pin: false

@@ -1,0 +1,145 @@
+---
+title: "Mestre: Padrões × Operações Anticorrupção — Dossiê 2026"
+description: Análise transversal de 10 padrões identificados em 25 anos de operações brasileiras — incluindo os padrões emergentes de captura cultural (P9) e infraestrutura de serviço compartilhada (P10).
+date: 2026-04-17T12:00:00-03:00
+image:
+  path: "/assets/img/estudos/padroes_sistemicos_dashboard_hero_xarticle.webp"
+tags: ["dashboard", "operacao", "corrupcao", "pcc", "diagnostico", "trafico", "brasil"]
+categories: estudos
+mermaid: false
+pin: false
+---
+
+- &nbsp;
+{:toc .large-only}
+
+Este texto resume o **dashboard mestre** que cruza **11 padrões (P1–P11)** com **17 operações** e linhas de evidência **2000–2026**. Os números de capa do dossiê HTML: **11** padrões mapeados, **17** operações cobertas, volume total estimado **R$ 156 bi+**, **5** nós do **grafo dual**, **P9–P11** como emergências **2026**, taxa de **anulação ~75%**. Referência documental no arquivo: **DOCS 153–175**, verificação **abr/2026**.
+
+A tese do próprio painel é dura: a falha **não** é um “bug” ocasional do sistema; é **desenho recorrente** que se repete sob nomes novos de operação.
+
+> A falha estrutural não é um vício do sistema — é o seu design principal.
+
+## Nota metodológica (do HTML)
+
+**P1–P8:** identificados em análise transversal **2000–2025**. **P9** (captura cultural) e **P10** (infraestrutura compartilhada) emergem da **Operação Narco Fluxo** (**abr/2026**). **P11** (loop de extração perpétua) emerge do cruzamento do dossiê **Prisão Econômica** com **Sem Desconto** e dados macro **2010–2025**. Fontes citadas no rodapé do painel: **PF, COAF, Receita, CVM, CNJ, STF**, cruzamento com **ICL Notícias, GAECO-SP, FBSP 2025**.
+
+[Dossiê interativo completo](https://gosurf.site/padroes-sistemicos-dashboard) · [lawfare-timeline.vercel.app](https://lawfare-timeline.vercel.app)
+
+## Catálogo P1–P11 (síntese operacional)
+
+### P1 · Anulação via defeito processual
+
+Nulidades formais invalidam anos de prova **sem** enfrentamento direto do mérito. **Ops:** Lava Jato, Castelo de Areia, Satiagraha (parcial), Narco Fluxo (risco). **Exemplos no painel:** Castelo anulada por **denúncia anônima** na origem; Lava Jato com **declaração de suspeição** de Moro e **278 condenações** revertidas no arco citado.
+
+### P2 · Inversão: investigadores viram alvo
+
+**Ops:** Satiagraha (Protógenes), Hydra (Gritzbach), INQ 4781, Narco Fluxo (risco). **Pontos:** assassinato do delator **Gritzbach** em Guarulhos sem escolta; INQ transformando **críticos do STF** em réus.
+
+### P3 · Captura judicial emergencial
+
+Liminares **monocráticas** interrompem investigações na **janela** certa (recesso etc.). **Ops:** Compliance Zero (Toffoli), Castelo de Areia, Vaza Toga. **Tese:** um ministro pode suspender investigação nacional **sem** revisão colegiada imediata.
+
+### P4 · Weaponização de mídia e narrativa
+
+Saturação (**firehose**), intimidação institucional, influenciador como **nó** ativo. **Ops:** Firehose 2022/2026, INQ 4781, Narco Fluxo (Choquei), Vaza Toga. **Inovação:** Raphael Sousa Oliveira (Choquei) como **componente operacional**, não só amplificador.
+
+### P5 · Recursos públicos como vetor
+
+INSS, FGC, carbono, cultura: dinheiro público **mistura-se** ao esquema. **Ops:** Sem Desconto, Compliance Zero (FGC), Carbono Oculto; lacuna Narco Fluxo (Rouanet/editiais).
+
+### P6 · Silêncio e prescrição
+
+Atraso **estrutural** consome prazo. **Ops:** Castelo, Satiagraha, Lava Jato; **interseção** com P3 compra meses.
+
+### P7 · Captura transgeracional
+
+Fluxos **decenais**: consignado, concursos, cultura como **recrutamento**. **Ops:** Master/INSS, PCC em Direito (CNJ), Narco Fluxo, Carbono Oculto.
+
+### P8 · Fintechs e cripto
+
+IPs, contas-bolsão, revogação da **e-Financeira** em **jan/2025** no contexto Hydra. **Ops:** Hydra, Carbono Oculto (BK Bank), Narco Fluxo, Poço de Lobato.
+
+### P9 · Captura cultural (novo 2026)
+
+Legitimidade **simbólica** como escudo; narcoestética; **triângulo** narrativa + território + financiamento. **Ops:** Narco Fluxo, PCC, CV, INQ (versão política).
+
+### P10 · Infraestrutura de serviço compartilhada (novo 2026)
+
+**Mesma** arquitetura jurídico-financeira para **cleptocracia política** e **narcocleptocracia cultural**. **Hipótese:** operador de **charneira** entre universos. **Cadeia citada:** Ortiz → Aquilla/Sefer → **Benjamim Botelho** → Master → REAG → PCC. **Cinco nós:** fundos em camadas; advogado-estruturador; fintech sem rastreamento; influenciador/narrativa; offshore final.
+
+### P11 · Loop de extração perpétua (novo 2026)
+
+Macroeconomia que **gera** dependência e **captura** o fluxo de transferência (Selic alta, CadÚnico, consignado, rentismo). **Ops:** Sem Desconto, Compliance Zero (consignado), dossiê Prisão Econômica; **distinção:** P10 é **prestador de serviço**; P11 é **substrato** que torna P10 **lucrativo**.
+
+## Matriz P × operações: o que o painel destaca
+
+- **Narco Fluxo** (**abr/2026**, **R$ 1,6 bi**, **9 estados**): primeira operação a cravar **P7** e **P9** em conjunto elevado; também **P10** como inovação; **P4** e **P8** confirmados; riscos em **P1–P3**.
+- **Sem Desconto** e dossiê **Prisão Econômica:** aparecem como âncoras do **P11** (**★** na matriz).
+- **PCC — infiltração Estado:** único ator com marcação **plena** nos **11** padrões no quadro do dashboard.
+- **Compliance Zero** concentra **P3, P5, P7, P8, P10, P11** com confirmações fortes (sigilo STF, Master).
+- Legenda da matriz no HTML: **✓** fonte primária; **◑** evidência indireta ou risco; **—** não documentado; **★** padrão primário ou inovação.
+
+## Operações em destaque (anatomia rápida)
+
+- **Narco Fluxo.** Core: lavagem via **cultura** (estúdios, shows). Partida: backup em iCloud do contador **Rodrigo de Paula Morgado**. Presos citados: **MC Poze**, **MC Ryan SP**, **Raphael Sousa Oliveira (Choquei)**. Vetores: apostas, rifas, fachadas, cripto, remessas. **Lacunas:** destinos externos não divulgados; Rouanet não verificado; nexo **REAG/Aquilla**.
+
+- **Compliance Zero.** Core: captura regulatória, **CDBs fictícios**, **R$ 12,2 bi** em créditos citados; **Vorcaro**, Tanure, REAG, BRB; **6 fundos PCC** ligados ao Master (referência Revista Fórum **jan/2026**); caso sob **sigilo** com **Toffoli**.
+
+- **Carbono Oculto.** Trilha **PCC → combustíveis → fintechs → fundos CVM → carbono**; **BK Bank** com **R$ 46 bi** não rastreáveis **2020–2024**; **15+ offshores** EUA.
+
+- **Hydra.** **R$ 6 bi**, **15 países**; **2GO/InvBank**; **Gritzbach** morto (**P2**).
+
+- **Oliver Ortiz.** Ponte **tráfico → Aquilla/Sefer → Botelho → Master**; empresa **Bahamas** **9 dias** após liquidação do Master.
+
+## Operações ativas — fraude, carbono, narcoestética e fintech
+
+O bloco seguinte reúne frentes marcadas como **ativas**, com ênfase em lavagem, estruturas de fachada e interface entre economia formal e crime.
+
+- **Sem Desconto — Fraude INSS** ([abrir](https://gosurf.site/operacao-sem-desconto)): associações de fachada e servidores corruptos; **R$ 6,3 bilhões**; linha temporal 2024–2026; padrões **P3** e **P7**.
+- **Greenwashing — Carbono Amazônia** ([abrir](https://gosurf.site/operacao-greenwashing)): maior fraude em créditos de carbono do país na leitura do corpus; **Verra**, mercado voluntário como possível veículo de lavagem; **P8** e **P10**; denúncia pendente no MPF.
+- **Carbono Oculto** ([abrir](https://gosurf.site/carbono-oculto)): combustíveis adulterados, mesma infraestrutura financeira associada ao tráfico; nexo **PCC**; **P8** e **P10**, 2023–2026.
+- **Narco Fluxo — Choquei** ([abrir](https://gosurf.site/operacao-narco-fluxo)): **R$ 1,6 bilhão** lavados via “narcoestética”, influenciadores e gravadoras; **P9** e **P10** documentados pela primeira vez no arcabouço analítico (2026).
+- **Hydra — Fintechs** ([abrir](https://gosurf.site/operacao-hydra-fintech-laundry)): infiltração do crime organizado em fintechs reguladas; **“apagão” da e-Financeira** como tema central; **P8**.
+- **Poço de Lobato** ([abrir](https://gosurf.site/operacao-poco-de-lobato)): cinco camadas de blindagem do lucro ilícito; importação fraudulenta até distribuidoras; **P10**, 2025–2026.
+
+### Histórico (tabela resumida)
+
+
+| Operação         | Período   | Resultado citado                |
+| ---------------- | --------- | ------------------------------- |
+| Lava Jato        | 2014–2021 | 278 condenações revertidas      |
+| Castelo de Areia | 2009–2017 | Anulada (denúncia anônima)      |
+| Satiagraha       | 2008      | Delegado afastado               |
+| Sem Desconto     | 2025      | Em andamento                    |
+| Poço de Lobato   | 2025      | 190 alvos, dívidas **R$ 26 bi** |
+
+
+## Grafo dual-universo (P10)
+
+**Universo A (político):** REAG/fundos Faria Lima · Sintonia dos Gravatas · BK Bank · portais/influenciadores · offshore.
+
+**Universo B (cultural):** gravadoras/shows · escritórios de reversão de custódia · apostas/cripto · Choquei · remessas não divulgadas.
+
+**Conectores documentados:** **Benjamim Botelho** (nós **1, 3, 5** confirmados; **2** parcial); **Aquilla/Sefer**; **PCC** nos **cinco** nós.
+
+**Mapa de nexo:** centro **“Sistema capturado”** (**P10**) com arestas para fundos, jurídico, fintech, narrativa, offshore (diagrama SVG no HTML).
+
+## Lacunas de auditoria (painel)
+
+1. **Aquilla/Sefer × Narco Fluxo:** registros CVM em gravadoras/agências fecham o grafo?
+2. **Remessas Narco Fluxo:** sobrepõem **Delaware/Cayman** da Carbono Oculto?
+3. **Artistas presos × Rouanet/PROAC:** dinheiro público cultural financiou camada do esquema?
+
+## Objetos relacionados no site
+
+- [PCC e CV — ameaça nacional](https://gosurf.site/pcc-cv-ameaca-nacional)
+- [Global Kompromat](https://gosurf.site/global-kompromat)
+- [Brasil: falha institucional (diagnóstico)](https://gosurf.site/brasil-falha-institucional-diagnostico)
+
+## Rodapé analítico
+
+**Matriz de Indulgência Sistêmica v3.1 · Mestre de Padrões 2026** · CC0 1.0
+
+## **Tweet sugerido**
+
+> *Dashboard mestre: 11 padrões × 17 operações, R$156bi+, anulação ~75%. P9–P11 nascem em 2026 (cultura compartilhada + loop macro). PCC marca todos os P; Narco Fluxo fecha P7+P9+P10. Design, não bug. Artigo: [link após publicar]*

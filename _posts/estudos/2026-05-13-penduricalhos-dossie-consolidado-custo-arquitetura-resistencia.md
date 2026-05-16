@@ -3,7 +3,10 @@ title: "Penduricalhos — Dossiê Consolidado: R$ 136 bilhões, 15 auxílios ext
 description: "De 2016 a 2026, magistrados e promotores acumularam R$ 136 bilhões em benefícios extrateto. O STF extinguiu 15 auxílios em março/2026. Em 15 dias, CNJ e CNMP recriaram dois deles. Em dois meses, tribunais já inventaram novas manobras."
 date: 2026-05-13T12:00:00.000Z
 image:
-  path: "/assets/solid/gift.svg"
+  path: "/assets/img/estudos/penduricalhos-frontmatter-hero.webp"
+  alt: "Balança da justiça sobrecarregada com moedas de ouro e selos oficiais — símbolo dos penduricalhos acumulados"
+  prompt: "An ornate brass scale of justice on a marble pedestal, one side collapsed under enormous stacks of gold coins, bundled banknotes, and official government seals, the other side empty and floating upward. The scale arm is bent and cracking. Neoclassical courthouse columns recede into darkness behind it. Deep chiaroscuro lighting, dramatic shadows, muted dark palette with gold and amber accents. Photorealistic editorial photography style. No people."
+  target: "/assets/img/estudos/penduricalhos-frontmatter-hero.webp"
 tags: [penduricalhos, supersalarios, magistratura, ministerio-publico, stf, teto-constitucional, transparencia, servidores-publicos, judiciario, cnj, cnmp]
 categories: estudos
 pin: false

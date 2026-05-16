@@ -3,7 +3,10 @@ title: "HC Seletivo — Quando o Habeas Corpus Vale Mais Para Uns: a liberdade c
 description: "210 dias de prisão preventiva para um dentista absolvido. Habeas corpus deferido em 18 horas para ex-presidentes e generais. O art. 5º LXVIII da CF/88 garante o HC a 'qualquer pessoa' — mas o sistema processa pedidos em velocidades e critérios diferentes conforme a identidade do réu. Um mapeamento do duplo padrão."
 date: 2026-05-13T13:00:00.000Z
 image:
-  path: "/assets/solid/scale-unbalanced.svg"
+  path: "/assets/img/estudos/hc-seletivo-frontmatter-hero.webp"
+  alt: "Duas portas de cela idênticas: uma trancada com correntes, outra aberta — duplo padrão no acesso ao habeas corpus"
+  prompt: "Two identical massive iron prison cell doors side by side in a cold stone corridor. Left door: heavy chains and padlock, a small crouching shadowed figure behind thick bars in near total darkness. Right door: ornate brass handle barely latched, swinging open, warm golden light spills through as a suited silhouette walks out freely. Dramatic split lighting, sharp contrast between cold blue darkness and warm freedom. Photorealistic editorial photography. No faces."
+  target: "/assets/img/estudos/hc-seletivo-frontmatter-hero.webp"
 tags: [hc-seletivo, habeas-corpus, duplo-padrao, stf, prisao-preventiva, due-process, erro-judiciario, seletividade, weaponized-legalism, p3, p2]
 categories: estudos
 pin: false

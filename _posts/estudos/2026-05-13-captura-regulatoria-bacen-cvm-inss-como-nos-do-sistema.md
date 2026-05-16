@@ -3,7 +3,10 @@ title: "Captura Regulatória — BACEN, CVM e INSS como nós do sistema: quando 
 description: "R$ 46 bilhões sem rastreamento pelo BACEN. R$ 6 bilhões lavados por fintechs autorizadas. R$ 7 bilhões desviados do INSS com 91 bancos credenciados. A e-Financeira revogada durante uma operação policial. Um dossiê sobre como as agências reguladoras brasileiras se tornaram parte da arquitetura do crime."
 date: 2026-05-13T12:00:00.000Z
 image:
-  path: "/assets/solid/building-columns.svg"
+  path: "/assets/img/estudos/captura-regulatoria-frontmatter-hero.webp"
+  alt: "Porta giratória entre um banco e uma agência reguladora — metáfora da captura regulatória"
+  prompt: "A large glass and steel revolving door at the center of frame, between two imposing institutional buildings: a sleek modern glass bank tower on the left, a classical stone government regulatory building on the right. Faceless suited silhouettes rotate seamlessly through the door in both directions. Dark rainy night cityscape, wet pavement reflections, cold corporate blue and white lighting. Surveillance documentary photography style. No faces visible."
+  target: "/assets/img/estudos/captura-regulatoria-frontmatter-hero.webp"
 tags: [captura-regulatoria, bacen, cvm, inss, fintech, lavagem-dinheiro, p8, compliance-zero, banco-master, hydra, carbono-oculto, coaf, e-financeira, regulacao]
 categories: estudos
 pin: false

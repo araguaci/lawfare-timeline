@@ -16,11 +16,13 @@ const include = [
   '/index.html',
   '/404.html',
   
-    '/crise-diplomatica/',
-  
     '/lawfare/',
   
+    '/estudos/',
+  
     '/stf/',
+  
+    '/crise-diplomatica/',
   
     '/tse/',
   

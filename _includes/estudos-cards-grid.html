@@ -1,0 +1,42 @@
+<div id="estudos-grid" class="estudos-grid">
+  {% for post in grid_posts %}
+    {% assign card_img_src = nil %}
+    {% assign card_alt = post.title | xml_escape %}
+    {% if post.image %}
+      {% assign card_img_src = post.image.target | default: post.image.path | default: post.image %}
+      {% capture card_img_src %}
+        {% include media-url.html src=card_img_src subpath=post.media_subpath skip_cdn=true %}
+      {% endcapture %}
+      {% assign card_alt = post.image.alt | default: post.title | xml_escape %}
+    {% endif %}
+
+    <article class="estudos-card card h-100 position-relative">
+      <div class="estudos-card__media">
+        {% if card_img_src %}
+          <img
+            class="estudos-card__img"
+            src="{{ card_img_src | strip }}"
+            alt="{{ card_alt }}"
+            loading="lazy"
+            width="640"
+            height="360"
+          >
+        {% else %}
+          <div class="estudos-card__placeholder" aria-hidden="true">
+            <i class="far fa-image fa-fw"></i>
+          </div>
+        {% endif %}
+      </div>
+      <div class="card-body d-flex flex-column">
+        <h2 class="h6 card-title text-body mb-2">{{ post.title }}</h2>
+        <div class="post-meta small text-muted mt-auto">
+          <i class="far fa-calendar fa-fw me-1"></i>
+          {% include datetime.html date=post.date lang=lang %}
+        </div>
+      </div>
+      <a href="{{ post.url | relative_url }}" class="stretched-link">
+        <span class="visually-hidden">{{ post.title }}</span>
+      </a>
+    </article>
+  {% endfor %}
+</div>

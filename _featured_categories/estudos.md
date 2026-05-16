@@ -1,7 +1,7 @@
 ---
 # Featured tags need to have either the `list` or `grid` layout (PRO only).
-layout: redirect
-icon: fas fa-book
+layout: estudos
+icon: fas fa-book-open
 redirect: /categories/estudos/
 
 # The title of the tag's page.

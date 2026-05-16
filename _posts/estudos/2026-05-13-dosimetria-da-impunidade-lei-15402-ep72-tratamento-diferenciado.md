@@ -3,7 +3,10 @@ title: "Dosimetria da Impunidade — Lei 15.402/2026, EP 72/DF e o tratamento no
 description: "Uma lei aprovada com veto presidencial derrubado reduz de 27 para ~3 anos o tempo efetivo de pena do principal réu dos atentados de 8 de janeiro. Um ministro do STF suspende a mesma lei, monocraticamente, para outro réu do mesmo caso — sem declarar inconstitucionalidade. Dosimetria, no Brasil, é quem você é."
 date: 2026-05-13T14:00:00.000Z
 image:
-  path: "/assets/solid/balance-scale.svg"
+  path: "/assets/img/estudos/dosimetria-impunidade-frontmatter-hero.webp"
+  alt: "Estátua da Justiça com balança manipulada: lado pesado sobe, lado vazio desce — dosimetria invertida"
+  prompt: "A blindfolded marble Lady Justice statue on a courthouse pediment. The scale is visibly rigged: the left tray holds heavy gold bars and stacks of legal documents yet floats upward impossibly; the right tray is completely empty yet sinks down, defying physics. Dark stormy sky with dramatic side lighting, marble texture, stone architecture framing the scene. Surreal photorealism. Editorial investigative photography. No real people."
+  target: "/assets/img/estudos/dosimetria-impunidade-frontmatter-hero.webp"
 tags: [dosimetria, lei-15402-2026, ep72, alexandre-moraes, 8-de-janeiro, toffoli, seletividade, monocratica, stf, adi-7966, adi-7967, p3, p7, p8]
 categories: estudos
 pin: false

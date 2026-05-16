@@ -3,7 +3,10 @@ title: "Anatomia da Liminar Monocrática — Quando um Ministro do STF Decide So
 description: "Em 2019, Toffoli suspendeu dados do COAF com uma monocrática — e é hoje relator (sob sigilo) do caso investigado pelo COAF. Em 2026, Moraes suspendeu uma lei válida para um réu específico, sem declarar inconstitucionalidade, sendo relator da execução e das ADIs. A liminar monocrática é o instrumento mais poderoso e menos controlado do STF."
 date: 2026-05-13T15:00:00.000Z
 image:
-  path: "/assets/solid/gavel.svg"
+  path: "/assets/img/estudos/anatomia-liminar-monocratica-frontmatter-hero.webp"
+  alt: "Martelo judicial fragmentando um livro de lei de cristal — metáfora do poder monocrático sem controle"
+  prompt: "A black judicial robe sleeve and hand holding a heavy wooden gavel that has just shattered an open law book made of crystal glass. Frozen glass shards explode outward in midair, suspended. Dramatic bright backlight creates a sharp halo effect behind the destruction, contrasting with the dark surrounding space. Hyperrealistic macro photography. Metaphor of unilateral judicial power overriding legislative process. No faces. Deep black background."
+  target: "/assets/img/estudos/anatomia-liminar-monocratica-frontmatter-hero.webp"
 tags: [liminar-monocratica, stf, toffoli, alexandre-moraes, coaf, ep72, adi, due-process, concentracao-poder, p3, p6, compliance-zero, hydra, dosimetria]
 categories: estudos
 pin: false
