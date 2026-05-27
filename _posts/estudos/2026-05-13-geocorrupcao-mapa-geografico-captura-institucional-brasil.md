@@ -9,7 +9,7 @@ image:
   target: "/assets/img/estudos/geocorrupcao-frontmatter-hero.webp"
 tags: [geocorrupcao, municipios, fronteira, tce, tri-fronteira, pcc, inss, p11, captura-institucional, federalismo, coaf, gafilat]
 categories: estudos
-pin: false
+pin: true
 ---
 
 - &nbsp;
@@ -162,7 +162,7 @@ O território amplifica o loop: regiões onde a renda é mais dependente de tran
 ### Acervo lawfare-timeline
 - [GAFILAT/COAF — Sobreposição PCC/Hezbollah na Tri-Fronteira](/posts/gafilat-coaf-sobreposicao-pcc-hezbollah-tri-fronteira/)
 - [Captura Regulatória — BACEN, CVM, INSS](/posts/captura-regulatoria-bacen-cvm-inss-como-nos-do-sistema/)
-- [Penduricalhos — Dossiê Consolidado](/posts/penduricalhos-dossie-consolidado-custo-arquitetura-resistencia/)
+- [Penduricalhos — Dossiê Consolidado](/posts/penduricalhos-dossie-consolidado-custo-arquitetura-resistencia/)  
 
 ### Análises sistêmicas (gosurf.site)
 - [PCC — Fluxo Completo 2026](https://gosurf.site/pcc-fluxo-completo-2026)

@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mestre: Padrões × Operações Anticorrupção — Dossiê 2026</title>
+<meta name="description" content="Matriz PxOPS: mapeamento transversal P1–P11 — privilégio, proteção e impunidade na arquitetura da exceção. Operações anticorrupção brasileiras, 2019–2026. Dashboard verificável.">
+<link rel="canonical" href="https://gosurf.site/padroes-sistemicos-dashboard">
+<!-- Open Graph / Sharecard -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gosurf.site/padroes-sistemicos-dashboard">
+<meta property="og:title" content="Matriz PxOPS — Padrões Sistêmicos P1–P11 · 2026">
+<meta property="og:description" content="P1–P11 · indulgência sistêmica: padrões de privilégio e blindagem institucional cruzados com operações (OPS). Índice, heatmap e domínios jurídico, institucional, econômico, midiático e social.">
+<meta property="og:image" content="https://gosurf.site/og-padroes-sistemicos-dashboard.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Matriz PxOPS — P1–P11 · indulgência sistêmica · dashboard 2026">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="gosurf.site">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Matriz PxOPS — Padrões Sistêmicos P1–P11 · 2026">
+<meta name="twitter:description" content="P1–P11 · indulgência sistêmica: padrões de privilégio e blindagem cruzados com operações. Dashboard 2026.">
+<meta name="twitter:image" content="https://gosurf.site/og-padroes-sistemicos-dashboard.png">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #080c10;
+  --bg1: #0d1218;
+  --bg2: #121820;
+  --bg3: #1a2230;
+  --border: rgba(255,255,255,0.06);
+  --border2: rgba(255,255,255,0.12);
+  --fg: #e8ecf0;
+  --fg2: #8a9ab0;
+  --fg3: #4a5a6a;
+  --red: #e84040;
+  --red2: rgba(232,64,64,0.15);
+  --amber: #e8a020;
+  --amber2: rgba(232,160,32,0.15);
+  --blue: #3090e8;
+  --blue2: rgba(48,144,232,0.12);
+  --green: #28c880;
+  --green2: rgba(40,200,128,0.12);
+  --purple: #a060e8;
+  --purple2: rgba(160,96,232,0.12);
+  --cyan: #20d0e8;
+  --cyan2: rgba(32,208,232,0.12);
+  --pink: #e84090;
+  --pink2: rgba(232,64,144,0.12);
+  --font-mono: 'IBM Plex Mono', monospace;
+  --font-display: 'Syne', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-mono); font-size: 13px; line-height: 1.6; min-height: 100vh; -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--bg1); }
+::-webkit-scrollbar-thumb { background: var(--bg3); border-radius: 2px; }
+.container { max-width: 1440px; margin: 0 auto; padding: 0 20px 80px; }
+@media (min-width: 768px) { .container { padding: 0 40px 80px; } }
+
+/* HEADER */
+.header { background: var(--bg1); border-bottom: 1px solid var(--border2); padding: 24px 20px; position: relative; overflow: hidden; }
+@media (min-width: 768px) { .header { padding: 32px 40px 24px; } }
+.header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--red), var(--amber), var(--purple), var(--red)); background-size: 200% 100%; animation: scanline 4s linear infinite; }
+@keyframes scanline { to { background-position: 200% 0; } }
+.meta-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.badge { display: inline-flex; align-items: center; gap: 6px; padding: 3px 8px; border-radius: 3px; font-size: 10px; font-weight: 600; letter-spacing: 0.10em; text-transform: uppercase; font-family: var(--font-mono); }
+.badge-red { background: var(--red2); color: var(--red); border: 1px solid rgba(232,64,64,0.3); }
+.badge-amber { background: var(--amber2); color: var(--amber); border: 1px solid rgba(232,160,32,0.3); }
+.badge-blue { background: var(--blue2); color: var(--blue); border: 1px solid rgba(48,144,232,0.3); }
+.badge-purple { background: var(--purple2); color: var(--purple); border: 1px solid rgba(160,96,232,0.3); }
+.badge-green { background: var(--green2); color: var(--green); border: 1px solid rgba(40,200,128,0.3); }
+.badge-cyan { background: var(--cyan2); color: var(--cyan); border: 1px solid rgba(32,208,232,0.3); }
+.badge-pink { background: var(--pink2); color: var(--pink); border: 1px solid rgba(232,64,144,0.3); }
+.badge-gray { background: rgba(255,255,255,0.05); color: var(--fg3); border: 1px solid var(--border); }
+.hero-title { font-family: var(--font-display); font-size: clamp(22px, 5vw, 40px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 8px; color: var(--fg); }
+.hero-title span { color: var(--red); }
+.subtitle { font-size: 12px; color: var(--fg2); max-width: 900px; margin-bottom: 24px; line-height: 1.7; }
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 120px), 1fr)); gap: 10px; }
+.stat-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 6px; padding: 12px 16px; }
+.stat-num { font-family: var(--font-display); font-size: 20px; font-weight: 700; letter-spacing: -0.02em; }
+.stat-label { font-size: 10px; color: var(--fg3); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 2px; }
+
+/* NAV */
+.nav-tabs { display: flex; background: var(--bg1); border-bottom: 1px solid var(--border); padding: 0 20px; overflow-x: auto; scrollbar-width: none; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.nav-tabs::-webkit-scrollbar { display: none; }
+@media (min-width: 768px) { .nav-tabs { padding: 0 40px; } }
+.nav-tab { padding: 14px 14px; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg3); cursor: pointer; border: none; background: none; border-bottom: 2px solid transparent; white-space: nowrap; transition: all 0.15s; font-family: var(--font-mono); font-weight: 700; }
+.nav-tab:hover { color: var(--fg2); }
+.nav-tab.active { color: var(--fg); border-bottom-color: var(--red); }
+
+/* MAIN */
+.main { padding: 24px 0; }
+.tab-panel { display: block; margin-bottom: 100px; scroll-margin-top: 60px; }
+.section-title { font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--fg3); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 14px; margin-bottom: 20px; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 14px; margin-bottom: 20px; }
+.grid-5 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 10px; margin-bottom: 20px; }
+.card { background: var(--bg1); border: 1px solid var(--border); border-radius: 6px; padding: 18px; transition: border-color 0.15s; }
+.card:hover { border-color: var(--border2); }
+.card-accent { background: var(--bg2); border-left: 3px solid var(--red); border-radius: 0 6px 6px 0; padding: 16px 18px; transition: border-color 0.15s; }
+.card-accent:hover { border-color: var(--border2); }
+.card-title { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--fg); margin-bottom: 6px; }
+.card-desc { font-size: 12px; color: var(--fg2); line-height: 1.7; margin-bottom: 10px; }
+.card-meta { font-size: 10px; color: var(--fg3); letter-spacing: 0.05em; margin-bottom: 6px; }
+
+/* PATTERN CARDS */
+.pattern-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 14px; margin-bottom: 24px; }
+.p-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 6px; padding: 16px 18px; border-left: 3px solid; transition: all 0.15s; cursor: pointer; }
+.p-card:hover { transform: translateY(-1px); border-color: var(--border2); }
+.p-card.expanded .p-detail { display: block; }
+.p-num { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 6px; }
+.p-title { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--fg); margin-bottom: 8px; }
+.p-desc { font-size: 12px; color: var(--fg2); line-height: 1.7; margin-bottom: 10px; }
+.p-ops { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px; }
+.p-detail { display: none; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); font-size: 11px; color: var(--fg2); line-height: 1.7; }
+.p-detail strong { color: var(--fg); }
+.p-toggle { font-size: 10px; color: var(--fg3); cursor: pointer; margin-top: 4px; }
+
+/* TABLE */
+.data-table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 12px; }
+.data-table th { font-size: 10px; letter-spacing: 0.10em; text-transform: uppercase; color: var(--fg3); text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--border2); background: var(--bg2); }
+.data-table td { padding: 11px 12px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.6; }
+.data-table tr:hover td { background: rgba(255,255,255,0.02); }
+.dot-yes { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--red); }
+.dot-partial { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--amber); }
+.dot-no { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--bg3); border: 1px solid var(--fg3); }
+
+/* MATRIX */
+.matrix-wrap { overflow-x: auto; margin-bottom: 24px; }
+.matrix { border-collapse: collapse; font-size: 11px; }
+.matrix th { padding: 8px 10px; border: 1px solid var(--border); background: var(--bg2); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg3); text-align: center; white-space: nowrap; }
+.matrix th.row-h { text-align: left; min-width: 180px; }
+.matrix td { padding: 8px 10px; border: 1px solid var(--border); text-align: center; }
+.matrix td.label { text-align: left; color: var(--fg2); font-size: 11px; background: var(--bg1); }
+.matrix td.label strong { color: var(--fg); display: block; }
+.cell-full { background: rgba(232,64,64,0.2); color: var(--red); font-weight: 700; font-size: 11px; }
+.cell-part { background: rgba(232,160,32,0.15); color: var(--amber); font-size: 11px; }
+.cell-none { background: transparent; color: var(--fg3); font-size: 10px; }
+.cell-new { background: rgba(160,96,232,0.15); color: var(--purple); font-weight: 700; font-size: 11px; }
+
+/* OPS DETAIL CARDS */
+.op-card { background: var(--bg1); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; margin-bottom: 14px; }
+.op-header { display: flex; align-items: center; gap: 12px; padding: 14px 18px; background: var(--bg2); border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+.op-name { font-family: var(--font-display); font-size: 16px; font-weight: 800; color: var(--fg); }
+.op-body { padding: 16px 18px; }
+.op-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 600px) { .op-row { grid-template-columns: 1fr; } }
+.op-kv { margin-bottom: 8px; }
+.op-k { font-size: 10px; color: var(--fg3); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 2px; }
+.op-v { font-size: 12px; color: var(--fg2); line-height: 1.6; }
+.op-v strong { color: var(--fg); }
+.op-patterns { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px; }
+
+/* ALERTS */
+.alert { border-radius: 6px; padding: 14px 18px; display: flex; gap: 12px; margin-bottom: 16px; border: 1px solid; }
+.alert-blue { background: var(--blue2); border-color: rgba(48,144,232,0.25); }
+.alert-red { background: var(--red2); border-color: rgba(232,64,64,0.25); }
+.alert-amber { background: var(--amber2); border-color: rgba(232,160,32,0.25); }
+.alert-purple { background: var(--purple2); border-color: rgba(160,96,232,0.25); }
+.alert-icon { font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+.alert-body { font-size: 12px; color: var(--fg2); line-height: 1.7; }
+.alert-body strong { color: var(--fg); }
+
+/* LACUNAS */
+.lacuna-item { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--border); }
+.lacuna-num { font-family: var(--font-display); font-size: 22px; font-weight: 800; color: var(--bg3); min-width: 32px; }
+.lacuna-body strong { color: var(--fg); font-size: 13px; display: block; margin-bottom: 4px; }
+.lacuna-body p { font-size: 12px; color: var(--fg2); line-height: 1.7; }
+
+/* GRAFO DUAL */
+.grafo-section { margin-bottom: 24px; }
+.grafo-split { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border2); border-radius: 6px; overflow: hidden; margin-bottom: 14px; }
+@media (max-width: 700px) { .grafo-split { grid-template-columns: 1fr; } }
+.grafo-col { background: var(--bg1); padding: 18px; }
+.grafo-col-title { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+.grafo-col-title.red { color: var(--red); border-bottom-color: rgba(232,64,64,0.2); }
+.grafo-col-title.purple { color: var(--purple); border-bottom-color: rgba(160,96,232,0.2); }
+.no { display: flex; align-items: flex-start; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--border); }
+.no:last-child { border-bottom: none; }
+.no-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
+.no-label { font-size: 11px; font-weight: 700; color: var(--fg); margin-bottom: 2px; }
+.no-desc { font-size: 11px; color: var(--fg3); line-height: 1.5; }
+.no-tags { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 4px; }
+.connector-zone { background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 16px 18px; margin-bottom: 14px; }
+.connector-title { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--amber); margin-bottom: 12px; }
+.conn-row { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+.conn-row:last-child { border-bottom: none; }
+.conn-actor { font-size: 12px; font-weight: 700; color: var(--fg); min-width: 200px; }
+.conn-nodes { display: flex; gap: 4px; flex-wrap: wrap; }
+.conn-conf { font-size: 10px; color: var(--fg3); margin-left: auto; }
+
+/* FOOTER */
+.footer { margin-top: 48px; padding: 20px 0; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.footer-text { font-size: 11px; color: var(--fg3); font-family: var(--font-mono); }
+
+/* PRINT */
+@media print { body { background: #fff; color: #111; } .nav-tabs, .footer { display: none !important; } .tab-panel { display: block !important; page-break-inside: avoid; margin-bottom: 40px; } }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="meta-badges">
+    <span class="badge badge-red">CRÍTICO</span>
+    <span class="badge badge-purple">ANÁLISE SISTÊMICA</span>
+    <span class="badge badge-blue">DOCS: 153–175</span>
+    <span class="badge badge-cyan">P1–P10 MAPEADOS</span>
+    <span class="badge badge-green">VERIFICADO ABR/2026</span>
+  </div>
+  <h1 class="hero-title">Matriz de <span>Indulgência Sistêmica</span><br>Padrões × Operações Anticorrupção</h1>
+  <p class="subtitle">Análise transversal de 10 padrões identificados em 25 anos de operações brasileiras — incluindo os padrões emergentes de captura cultural (P9) e infraestrutura de serviço compartilhada (P10). A falha estrutural não é um vício do sistema — é o seu design principal.</p>
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-num" style="color:var(--red)">11</div><div class="stat-label">Padrões Mapeados</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:var(--amber)">17</div><div class="stat-label">Operações Cobertas</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:var(--blue)">R$ 156B+</div><div class="stat-label">Volume Total Estimado</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:var(--purple)">5</div><div class="stat-label">Nós do Grafo Dual</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:var(--cyan)">P9–P11</div><div class="stat-label">Padrões Novos 2026</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:var(--green)">75%</div><div class="stat-label">Taxa de Anulação</div></div>
+  </div>
+</header>
+
+<nav class="nav-tabs">
+  <button class="nav-tab active" data-section="section-patterns" onclick="scrollToSection('section-patterns')">Padrões P1–P11</button>
+  <button class="nav-tab" data-section="section-matrix" onclick="scrollToSection('section-matrix')">Matriz P×Ops</button>
+  <button class="nav-tab" data-section="section-ops" onclick="scrollToSection('section-ops')">Operações Detalhadas</button>
+  <button class="nav-tab" data-section="section-grafo" onclick="scrollToSection('section-grafo')">Grafo Dual-Universo</button>
+  <button class="nav-tab" data-section="section-nexus" onclick="scrollToSection('section-nexus')">Mapa de Nexo</button>
+  <button class="nav-tab" data-section="section-audit" onclick="scrollToSection('section-audit')">Lacunas & Auditoria</button>
+</nav>
+
+<div class="container main">
+
+<!-- ══════════════════════════════════════════════
+     SECTION: PADRÕES P1–P10
+══════════════════════════════════════════════ -->
+<div id="section-patterns" class="tab-panel">
+  <h2 class="section-title">Catálogo Completo de Padrões Sistêmicos — P1–P11</h2>
+  <div class="pattern-grid">
+
+    <div class="p-card" style="border-left-color:var(--red)" onclick="togglePattern(this)">
+      <div class="p-num" style="color:var(--red)">P1 · Judicial / Processual</div>
+      <div class="p-title">Anulação via Defeito Processual</div>
+      <div class="p-desc">Uso estratégico de nulidades formais para invalidar anos de investigação sem contestar o mérito do crime. Provas reais tornam-se inadmissíveis por vícios técnicos.</div>
+      <div class="p-ops">
+        <span class="badge badge-red">Lava Jato</span>
+        <span class="badge badge-red">Castelo de Areia</span>
+        <span class="badge badge-amber">Satiagraha</span>
+        <span class="badge badge-gray">Narco Fluxo (risco)</span>
+      </div>
+      <div class="p-toggle">▸ Ver mecanismo detalhado</div>
+      <div class="p-detail">
+        <strong>Mecanismo central:</strong> O sistema jurídico exige cadeia de custódia perfeita. Qualquer irregularidade formal — denúncia anônima, grampo sem autorização específica, prazo de 24h descumprido — invalida tudo acima. Isso cria um incentivo perverso: basta introduzir um vício na fase inicial para blindar toda a prova posterior.<br><br>
+        <strong>Castelo de Areia (2009):</strong> Anulada por denúncia anônima na origem. 6 anos de investigação invalidados por uma liminar monocrática do presidente do STF. O esquema cresceu R$8bi no período de paralisia.<br><br>
+        <strong>Lava Jato (2021–2023):</strong> STF declarou Moro suspeito — retroativamente anulou 278 condenações. A declaração de suspeição foi possível porque Moro trocou mensagens com o MP via Telegram (proibido). O crime processual do investigador destruiu o resultado do investigado.<br><br>
+        <strong>Defesa estratégica:</strong> Identificar todos os pontos de vulnerabilidade processual antes da denúncia. Forças-tarefa com accountability externo criam camada de proteção adicional.
+      </div>
+    </div>
+
+    <div class="p-card" style="border-left-color:var(--red)" onclick="togglePattern(this)">
+      <div class="p-num" style="color:var(--red)">P2 · Inversão / Retaliação</div>
+      <div class="p-title">Investigadores se Tornam Alvos</div>
+      <div class="p-desc">Quando investigações avançam sobre beneficiários finais de alto escalão, o vetor de perseguição se inverte: delegados, juízes e delatores são processados, isolados ou eliminados fisicamente.</div>
+      <div class="p-ops">
+        <span class="badge badge-red">Satiagraha (Protógenes)</span>
+        <span class="badge badge-amber">Hydra (Gritzbach)</span>
+        <span class="badge badge-purple">INQ 4781</span>
+        <span class="badge badge-gray">Narco Fluxo (risco)</span>
+      </div>
+      <div class="p-toggle">▸ Ver mecanismo detalhado</div>
+      <div class="p-detail">
+        <strong>Mecanismo central:</strong> O custo de avançar sobre o alto escalão torna-se maior do que o custo de recuar. Investigadores calculam risco pessoal e institucional. Delatores calculam se o Estado pode protegê-los.<br><br>
+        <strong>Satiagraha:</strong> Delegado Protógenes afastado, depois promovido, depois processado — ciclo completo de destruição de carreira como sinal para outros delegados.<br><br>
+        <strong>Gritzbach (Hydra, 2023):</strong> Delator do PCC assassinado no aeroporto de Guarulhos em plena luz do dia. Nenhuma escolta. A mensagem foi cirúrgica: o Estado não protege quem delata. Fragilizou estruturalmente o instituto da colaboração premiada para todos os casos seguintes.<br><br>
+        <strong>INQ 4781:</strong> Dezenas de parlamentares, jornalistas e advogados transformados em réus por críticas ao STF. A inversão do vetor operada institucionalmente, não por organizações criminosas.<br><br>
+        <strong>Versão cultural (P9 interseção):</strong> Jornalistas que documentam vínculos faccionais no funk são enquadrados como "elitistas racistas". O mecanismo de inversão opera via discurso progressista instrumentalizado.
+      </div>
+    </div>
+
+    <div class="p-card" style="border-left-color:var(--purple)" onclick="togglePattern(this)">
+      <div class="p-num" style="color:var(--purple)">P3 · Judicial / Institucional</div>
+      <div class="p-title">Captura Judicial Emergencial</div>
+      <div class="p-desc">Liminares monocráticas em recesso ou janelas de oportunidade interrompem operações antes da fase de extração final de dados. Um único ministro pode paralisar o Estado.</div>
+      <div class="p-ops">
+        <span class="badge badge-purple">Compliance Zero (Toffoli)</span>
+        <span class="badge badge-red">Castelo de Areia</span>
+        <span class="badge badge-amber">Vaza Toga</span>
+        <span class="badge badge-gray">Narco Fluxo (a observar)</span>
+      </div>
+      <div class="p-toggle">▸ Ver mecanismo detalhado</div>
+      <div class="p-detail">
+        <strong>Mecanismo central:</strong> O STF brasileiro é o único tribunal de alta corte no mundo onde um único ministro pode suspender com liminar monocrática qualquer investigação do país, sem prazo para revisão colegiada. Isso não é disfunção — é design.<br><br>
+        <strong>Compliance Zero:</strong> Caso migrou para o STF sob sigilo com Toffoli como relator — mesmo ministro que ordenou a destruição de dados do COAF em outro caso. Conflito de interesse estrutural documentado, sem corregedoria efetiva.<br><br>
+        <strong>Janela de oportunidade:</strong> A petição chega em recesso de verão, quando o colegiado não se reúne. A liminar monocrática vale até a próxima sessão — que pode ser semanas depois. O timing é calibrado.<br><br>
+        <strong>Castelo de Areia:</strong> Presidente do STF concedeu liminar em plantão natalino de 2009 suspendendo a operação inteira. Nenhum mérito analisado — pura janela temporal.
+      </div>
+    </div>
+
+    <div class="p-card" style="border-left-color:var(--amber)" onclick="togglePattern(this)">
+      <div class="p-num" style="color:var(--amber)">P4 · Midiático / Narrativo</div>
+      <div class="p-title">Weaponização da Mídia e Narrativa</div>
+      <div class="p-desc">Controle da narrativa pública via vazamentos seletivos, campanhas de desmoralização dos órgãos de controle, ou criação de escudos discursivos que tornam o questionamento socialmente custoso.</div>
+      <div class="p-ops">
+        <span class="badge badge-amber">Firehose 2022/2026</span>
+        <span class="badge badge-red">INQ 4781</span>
+        <span class="badge badge-pink">Narco Fluxo (Choquei)</span>
+        <span class="badge badge-purple">Vaza Toga</span>
+      </div>
+      <div class="p-toggle">▸ Ver mecanismo detalhado</div>
+      <div class="p-detail">
+        <strong>Mecanismo central:</strong> O objetivo não é convencer — é saturar. "Firehose of Falsehood": volume de conteúdo tão alto que nenhuma fact-checking consegue acompanhar. Resultado: relativismo epistêmico generalizado, onde "ninguém sabe a verdade" — que é o estado ideal para quem tem algo a esconder.<br><br>
+        <strong>INQ 4781:</strong> Jornalistas e parlamentares críticos ao STF processados por "fake news". A weaponização opera institucionalmente: o inquérito sem réu definido funciona como ferramenta de intimidação permanente.<br><br>
+        <strong>Narco Fluxo — inovação P4:</strong> Raphael Sousa Oliveira (Choquei, 20M+ seguidores) preso como <em>componente operacional</em> do esquema de lavagem — não apenas amplificador passivo. Primeiro caso documentado de influenciador como nó financeiro-narrativo integrado.<br><br>
+        <strong>Vaza Toga:</strong> Mensagens de gabinete do STF vazadas documentando direcionamento informal de decisões — a weaponização opera nos dois sentidos: quem vaza e quem é vazado.<br><br>
+        <strong>Escudo narrativo progressista (interseção P9):</strong> "Questionar o funk é preconceito de classe" funcionou como blindagem de esquema bilionário por 10+ anos. A narrativa não foi comprada — foi cultivada organicamente pelo próprio sistema intelectual.
+      </div>
+    </div>
+
+    <div class="p-card" style="border-left-color:var(--amber)" onclick="togglePattern(this)">
+      <div class="p-num" style="color:var(--amber)">P5 · Financeiro / Público</div>
+      <div class="p-title">Uso de Recursos Públicos como Vetor</div>
+      <div class="p-desc">Fundos públicos — INSS, FGC, Lei Rouanet, editais culturais — são capturados para financiar e legitimar o esquema. O contribuinte financia a infraestrutura de sua própria espoliação.</div>
+      <div class="p-ops">
+        <span class="badge badge-amber">Sem Desconto (INSS)</span>
+        <span class="badge badge-red">Compliance Zero (FGC)</span>
+        <span class="badge badge-blue">Carbono Oculto</span>
+        <span class="badge badge-gray">Narco Fluxo (lacuna)</span>
+      </div>
+      <div class="p-toggle">▸ Ver mecanismo detalhado</div>
+      <div class="p-detail">
+        <strong>Mecanismo central:</strong> O recurso público tem características únicas: volume previsível, diversificação forçada (milhões de beneficiários), credibilidade institucional e dificuldade de auditoria individual. Torna-se veículo ideal para mistura de recursos ilícitos.<br><br>
+        <strong>INSS/Sem Desconto:</strong> 74% dos contratos de consignado com irregularidades. O Banco Master tinha Acordo de Cooperação com o INSS — contrato público servindo como canal de lavagem. Aposentados como laranjas involuntários.<br><br>
+        <strong>FGC/Compliance Zero:</strong> CDBs vendidos com taxas acima do mercado captando dinheiro de investidores de boa-fé — depois garantidos implicitamente pelo FGC (fundo público). Privatização do lucro, socialização do risco.<br><br>
+        <strong>Carbono Oculto:</strong> Terras públicas da União griladas para gerar créditos de carbono fictícios — recursos ambientais públicos convertidos em ativo financeiro privado ilícito.<br><br>
+        <strong>Lacuna crítica — Narco Fluxo:</strong> Verificar se os artistas presos acessaram editais de cultura, Lei Rouanet ou patrocínios de estatais. Se confirmado: esquema de narcotráfico financiado com dinheiro do contribuinte via política cultural.
+      </div>
+    </div>
+
+    <div class="p-card" style="border-left-color:var(--blue)" onclick="togglePattern(this)">
+      <div class="p-num" style="color:var(--blue)">P6 · Temporal / Processual</div>
+      <div class="p-title">Estratégia do Silêncio e Prescrição</div>
+      <div class="p-desc">Atraso deliberado de julgamentos via recursos infinitos até que o Estado perca o poder de punir pelo tempo. Cada ano de atraso é um ganho estrutural para o esquema.</div>
+      <div class="p-ops">
+        <span class="badge badge-blue">Castelo de Areia</span>
+        <span class="badge badge-amber">Satiagraha</span>
+        <span class="badge badge-gray">Narco Fluxo (indireto)</span>
+        <span class="badge badge-purple">Lava Jato</span>
+      </div>
+      <div class="p-toggle">▸ Ver mecanismo detalhado</div>
+      <div class="p-detail">
+        <strong>Mecanismo central:</strong> A prescrição no Brasil é calculada sobre a pena máxima prevista, mas conta a partir do fato — não da investigação. Crimes financeiros complexos levam 5–10 anos para serem provados. A pena máxima para lavagem é 16 anos: prescrevem em 20 anos. Mas se o processo anula e recomeça, o prazo prescricional vai consumindo.<br><br>
+        <strong>Castelo de Areia:</strong> Anulada em 2009, reinvestigada a partir de 2014 — 5 anos de paralisia. O esquema cresceu. Quando recomeçou, parte dos crimes já havia prescrito.<br><br>
+        <strong>Zero × Zero (lição internacional):</strong> Na Itália, a prescrição e as manobras processuais absolveram os maiores nomes da Mani Pulite. Berlusconi reformou a lei de prescrição durante investigações que o envolviam diretamente — o acusado legislando sobre o tempo de sua própria punição.<br><br>
+        <strong>Interseção with P3:</strong> A captura judicial emergencial compra tempo. Cada liminar que paralisa 6 meses é 6 meses a mais de prescrição consumida.
+      </div>
+    </div>
+
+    <div class="p-card" style="border-left-color:var(--cyan)" onclick="togglePattern(this)">
+      <div class="p-num" style="color:var(--cyan)">P7 · Geracional / Sistêmico</div>
+      <div class="p-title">Captura Transgeracional</div>
+      <div class="p-desc">Infiltração em sistemas de longo prazo que garantem extração perpétua de rendas futuras. O objetivo não é o lucro imediato — é o controle da infraestrutura que gera lucro por décadas.</div>
+      <div class="p-ops">
+        <span class="badge badge-cyan">Compliance Zero (Master/INSS)</span>
+        <span class="badge badge-blue">PCC — concursos Direito</span>
+        <span class="badge badge-pink">Narco Fluxo (recrutamento)</span>
+        <span class="badge badge-amber">Carbono Oculto</span>
+      </div>
+      <div class="p-toggle">▸ Ver mecanismo detalhado</div>
+      <div class="p-detail">
+        <strong>Mecanismo central:</strong> Aposentadoria compulsória não cancela contratos de consignado. INSS paga por décadas. Capturar o fluxo de consignado é capturar uma renda perpétua sobre um universo cativo de beneficiários que não podem sair do contrato.<br><br>
+        <strong>PCC — financiamento de faculdades de Direito (CNJ):</strong> Estratégia de infiltração de longo prazo no Judiciário via concurso público. O retorno não é imediato — é o controle crescente do sistema jurídico ao longo de 15–20 anos. Documentado pelo CNJ como estratégia intencional, não coincidência.<br><br>
+        <strong>Narco Fluxo (interseção P9):</strong> A narcoestética como programa de recrutamento geracional. Jovem de 10 anos que cresce cantando hits da facção tem a organização criminosa como referência aspiracional 15 anos antes de ser recrutado. ROI de longo prazo sobre o capital humano da periferia.<br><br>
+        <strong>Carbono Oculto:</strong> Créditos de carbono são instrumentos de 20–30 anos. Grilagem de terras públicas da Amazônia com créditos fictícios captura fluxos de receita ambiental por décadas.
+      </div>
+    </div>
+
+    <div class="p-card" style="border-left-color:var(--blue)" onclick="togglePattern(this)">
+      <div class="p-num" style="color:var(--blue)">P8 · Financeiro / Tecnológico</div>
+      <div class="p-title">Infiltração em Fintechs e Criptoativos</div>
+      <div class="p-desc">Uso de brechas regulatórias em Instituições de Pagamento (IPs) e criptoativos para processar bilhões sem rastreamento. O equivalente digital dos doleiros da 25 de Março.</div>
+      <div class="p-ops">
+        <span class="badge badge-blue">Hydra (2GO/InvBank)</span>
+        <span class="badge badge-amber">Carbono Oculto (BK Bank)</span>
+        <span class="badge badge-red">Narco Fluxo (cripto)</span>
+        <span class="badge badge-purple">Poco de Lobato</span>
+      </div>
+      <div class="p-toggle">▸ Ver mecanismo detalhado</div>
+      <div class="p-detail">
+        <strong>Mecanismo central:</strong> Fintechs e IPs operam sob regulação mais leve que bancos tradicionais. "Contas-bolsão" misturam recursos de múltiplos clientes, tornando o rastreamento individual inviável. A revogação da normativa e-Financeira em jan/2025 — durante a Operação Hydra — removeu a principal ferramenta de auditoria em tempo real.<br><br>
+        <strong>Hydra:</strong> R$6bi lavados via 2GO Bank e InvBank em 15 países. A estrutura replica o modelo dos doleiros da Lava Jato: intermediários que convertem reais físicos em ativos rastreáveis via institucional regulado.<br><br>
+        <strong>BK Bank (Carbono Oculto):</strong> R$46bi movimentados sem rastreamento 2020–2024. Não é bug do sistema regulatório — é feature: o desenho das contas-bolsão foi aprovado pelo Bacen como "inovação financeira".<br><br>
+        <strong>Narco Fluxo (2026):</strong> Criptoativos como camada de separação entre cash físico do tráfico e remessas ao exterior. R$1,6bi confirmados — o uso de cripto é inovação em relação às operações anteriores do mesmo esquema.<br><br>
+        <strong>Paralelo Lava Jato:</strong> Doleiros → casas de câmbio → fintechs → cripto. A lógica é idêntica; o instrumento evolui a cada ciclo investigativo.
+      </div>
+    </div>
+
+    <div class="p-card" style="border-left-color:var(--pink)" onclick="togglePattern(this)">
+      <div class="p-num" style="color:var(--pink)">P9 · Cultural / Simbólico · NOVO 2026</div>
+      <div class="p-title">Captura Cultural e Legitimidade Simbólica</div>
+      <div class="p-desc">O crime organizado em fase avançada investe na produção deliberada de legitimidade cultural como escudo contra investigação e canal de recrutamento geracional. A lavagem de imagem é mais duradoura e difusa do que a lavagem financeira.</div>
+      <div class="p-ops">
+        <span class="badge badge-pink">Narco Fluxo</span>
+        <span class="badge badge-amber">PCC — narcoestética</span>
+        <span class="badge badge-red">CV — funk carioca</span>
+        <span class="badge badge-purple">INQ 4781 (versão política)</span>
+      </div>
+      <div class="p-toggle">▸ Ver mecanismo detalhado</div>
+      <div class="p-detail">
+        <strong>Mecanismo central (Gramscismo criminal):</strong> Quem controla o símbolo, controla a realidade. A facção não precisa derrubar o governo — só precisa tornar-se tão presente, tão naturalizada, tão integrada ao cotidiano que o Estado perca a capacidade de agir contra ela sem parecer opressor.<br><br>
+        <strong>Operação Narco Fluxo (abr/2026):</strong> R$1,6bi lavados via estúdios, gravadoras e shows milionários. Raphael Sousa Oliveira (Choquei, 20M+ seguidores) preso como componente operacional — não apenas amplificador. Primeiro caso documentado de influenciador como nó financeiro.<br><br>
+        <strong>Triângulo estrutural:</strong> Gramscismo criminal (narrativa) + Narcoterrorismo (território) + Cleptocracia (financiamento) = triângulo autossustentável. Destruir um lado enfraquece os outros dois, mas não derruba o sistema.<br><br>
+        <strong>Escudo intelectual:</strong> "Questionar o funk é preconceito de classe" — a narrativa progressista instrumentalizada como blindagem de esquema bilionário. Não houve suborno de intelectuais: a narrativa foi cultivada organicamente e defendida com convicção sincera.<br><br>
+        <strong>Recrutamento de precisão:</strong> Letras com referências a siglas de facções, territórios e lideranças funcionam como publicidade georeferenciada. O jovem de 15 anos que canta cada estrofe de cor já tem a facção como "top of mind" aspiracional antes de qualquer abordagem direta.<br><br>
+        <strong>Versão política:</strong> O padrão P9 tem equivalente no universo da cleptocracia política — uso de institutos, think tanks, portais e influenciadores para construir legitimidade narrativa para o projeto de captura institucional. Mesma lógica, contexto diferente.
+      </div>
+    </div>
+
+    <div class="p-card" style="border-left-color:var(--green)" onclick="togglePattern(this)">
+      <div class="p-num" style="color:var(--green)">P10 · Infraestrutura / Transversal · NOVO 2026</div>
+      <div class="p-title">Infraestrutura de Serviço Compartilhada</div>
+      <div class="p-desc">A mesma arquitetura jurídico-financeira — fundos em camadas, offshores Delaware/Cayman, assessoria especializada — serve simultaneamente à cleptocracia política e à narcocleptocracia cultural. Não são dois sistemas: é uma infraestrutura de serviço contratável por qualquer organização com escala suficiente.</div>
+      <div class="p-ops">
+        <span class="badge badge-green">Oliver Ortiz → Master</span>
+        <span class="badge badge-blue">PCC → REAG → Master</span>
+        <span class="badge badge-amber">Narco Fluxo → cripto → offshore</span>
+        <span class="badge badge-red">Hydra → Delaware</span>
+      </div>
+      <div class="p-toggle">▸ Ver mecanismo detalhado</div>
+      <div class="p-detail">
+        <strong>Hipótese central:</strong> Existe um operador financeiro de charneira — pessoa física ou jurídica — que aparece simultaneamente nos dois universos (cleptocracia política e narcocleptocracia cultural), conectando tráfico internacional, sistema financeiro formal e proteção institucional.<br><br>
+        <strong>Cadeia documentada (ICL Notícias, mar/2026):</strong><br>
+        Oliver Ortiz [tráfico internacional] → Grupo Aquilla/Sefer [fundo lavagem] → Benjamim Botelho [operador PT/BR, ex-Banco Garantia] → Banco Master/Vorcaro [sistema financeiro] → REAG [40+ fundos, R$30bi] → PCC [crime organizado doméstico].<br><br>
+        <strong>Benjamim Botelho como nó central:</strong> Ex-Banco Garantia (origem BTG), dupla nacionalidade PT/BR, residente Lisboa. Intermediou compra do Banco Máxima por Vorcaro em 2017 com participação de fundo onde Ortiz era cotista. Empresa aberta nas Bahamas 9 dias após liquidação do Master. Aparece em 4 dos 5 nós do grafo dual.<br><br>
+        <strong>5 nós do grafo dual:</strong> (1) Sistema de fundos em camadas, (2) Advogado-estruturador / Sintonia dos Gravatas, (3) Fintech sem rastreamento, (4) Influenciador como infraestrutura narrativa, (5) Offshore Delaware/Cayman como camada final.<br><br>
+        <strong>Pergunta em aberto:</strong> Grupo Aquilla, Sefer Investimentos ou fundo vinculado a Botelho tem participação em gravadoras, agências artísticas, plataformas de apostas ou produtoras que aparecem na Narco Fluxo? Se sim, o grafo fecha.
+      </div>
+    </div>
+
+    <div class="p-card" style="border-left-color:var(--amber)" onclick="togglePattern(this)">
+      <div class="p-num" style="color:var(--amber)">P11 · Econômico / Estrutural · NOVO 2026</div>
+      <div class="p-title">Loop de Extração Perpétua</div>
+      <div class="p-desc">A combinação de Selic cronicamente elevada (que suprime FBCF e gera desemprego estrutural), transferência direta para cobrir o déficit de emprego gerado, e captura do fluxo de transferência pelo sistema financeiro cria um ciclo auto-reprodutivo onde o Estado financia simultaneamente a renda do rentista, o benefício do pobre e a extração do benefício. Os 200 milhões pagam três vezes pelo mesmo problema — e o problema nunca é resolvido porque sua reprodução é funcional para quem controla o sistema.</div>
+      <div class="p-ops">
+        <span class="badge badge-amber">Sem Desconto (INSS)</span>
+        <span class="badge badge-purple">Compliance Zero (consignado)</span>
+        <span class="badge badge-blue">Prisão Econômica (dossiê)</span>
+        <span class="badge badge-gray">Estrutural — todos os governos</span>
+      </div>
+      <div class="p-toggle">▸ Ver mecanismo detalhado</div>
+      <div class="p-detail">
+        <strong>Distinção em relação a P10:</strong> P10 é infraestrutura de <em>serviço</em> (quem presta o serviço de lavagem jurídico-financeira). P11 é arquitetura <em>macroeconômica</em> de extração — quem define as regras que tornam a pobreza estruturalmente necessária e a extração do fluxo da pobreza perpetuamente lucrativa. P11 é o substrato que torna P10 economicamente racional.<br><br>
+        <strong>O loop em 6 passos documentados:</strong><br>
+        (1) Selic 14,75% a.a. → destrói investimento produtivo (FBCF/PIB 16,5% — mínimo histórico);<br>
+        (2) Desindustrialização → elimina empregos formais abaixo da taxa de expansão da força de trabalho;<br>
+        (3) Desemprego estrutural → 94M no CadÚnico (jan/2025), 19,8M famílias no Bolsa Família;<br>
+        (4) Estado paga R$ 160B/ano em transferências para cobrir o déficit;<br>
+        (5) Sistema financeiro captura o fluxo antes que chegue ao receptor — Sem Desconto (R$ 6,3B/9,3M vítimas), consignado irregular (91 bancos credenciados pelo INSS);<br>
+        (6) Rentistas com lucro recorde sobre juros da dívida não têm incentivo para industrializar → loop fecha no passo 1.<br><br>
+        <strong>Evidência primária:</strong> Operação Sem Desconto (PF/CGU, abr/2025): R$ 6,3B desviados de aposentados em 5 anos; AMBEC cresceu 11.092.533% entre 2021 e 2022. Banco Master: 74% dos contratos de consignado INSS com irregularidades. CNI (mai/2025): "A Selic favorece o rentismo e a especulação, em detrimento da geração de empregos."<br><br>
+        <strong>Dimensão eleitoral:</strong> A dependência de transferência instrumentaliza eleitoralmente o receptor — que não pode votar contra o benefício sem risco imediato de sobrevivência. Mecanismo bipartidário: Bolsonaro dobrou o Auxílio Brasil em agosto/2022 (3 meses antes da eleição); Lula manteve e ampliou. Nenhum dos dois propôs industrialização real porque o horizonte de 4 anos não comporta o retorno de política industrial. O loop é eleitoralmente funcional para ambos os campos.<br><br>
+        <strong>Diferencial analítico:</strong> P1–P10 documentam como o sistema de captura <em>protege</em> a extração depois que ela ocorre. P11 documenta como o sistema macroeconômico <em>gera</em> a condição que torna a extração necessária e contínua — a pobreza não é falha colateral, é insumo do modelo.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="alert alert-blue">
+    <div class="alert-icon">ℹ</div>
+    <div class="alert-body"><strong>Nota metodológica:</strong> P1–P8 identificados em análise transversal 2000–2025. P9 (Captura Cultural) e P10 (Infraestrutura Compartilhada) emergem da Operação Narco Fluxo (abr/2026). P11 (Loop de Extração Perpétua) emerge do cruzamento do dossiê Prisão Econômica com a Operação Sem Desconto e dados macroeconômicos 2010–2025. Clique em cada padrão para expandir o mecanismo detalhado.</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SECTION: MATRIZ P×OPS
+══════════════════════════════════════════════ -->
+<div id="section-matrix" class="tab-panel">
+  <h2 class="section-title">Matriz de Correspondência — Padrões × Operações</h2>
+  <div class="alert alert-amber">
+    <div class="alert-icon">⚑</div>
+    <div class="alert-body"><strong>Legenda:</strong> <span class="dot-yes"></span> Confirmado com fonte primária &nbsp; <span class="dot-partial"></span> Evidência indireta / risco identificado &nbsp; <span class="dot-no"></span> Não documentado</div>
+  </div>
+  <div class="matrix-wrap">
+    <table class="matrix">
+      <thead>
+        <tr>
+          <th class="row-h">Operação</th>
+          <th>P1<br>Anulação</th>
+          <th>P2<br>Inversão</th>
+          <th>P3<br>Captura Jud.</th>
+          <th>P4<br>Mídia</th>
+          <th>P5<br>Rec. Público</th>
+          <th>P6<br>Prescrição</th>
+          <th>P7<br>Transg.</th>
+          <th>P8<br>Fintech</th>
+          <th>P9<br>Cultural</th>
+          <th>P10<br>Infra Comp.</th>
+          <th>P11<br>Loop Ext.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="label"><strong>Lava Jato</strong><br>2014–2021</td>
+          <td class="cell-full">✓</td><td class="cell-full">✓</td><td class="cell-full">✓</td>
+          <td class="cell-full">✓</td><td class="cell-full">✓</td><td class="cell-part">◑</td>
+          <td class="cell-none">—</td><td class="cell-part">◑</td><td class="cell-none">—</td><td class="cell-part">◑</td>
+          <td class="cell-part">◑</td>
+        </tr>
+        <tr>
+          <td class="label"><strong>Castelo de Areia</strong><br>2009–2017</td>
+          <td class="cell-full">✓</td><td class="cell-part">◑</td><td class="cell-full">✓</td>
+          <td class="cell-part">◑</td><td class="cell-part">◑</td><td class="cell-full">✓</td>
+          <td class="cell-none">—</td><td class="cell-none">—</td><td class="cell-none">—</td><td class="cell-part">◑</td>
+          <td class="cell-none">—</td>
+        </tr>
+        <tr>
+          <td class="label"><strong>Satiagraha</strong><br>2008</td>
+          <td class="cell-part">◑</td><td class="cell-full">✓</td><td class="cell-part">◑</td>
+          <td class="cell-full">✓</td><td class="cell-none">—</td><td class="cell-part">◑</td>
+          <td class="cell-none">—</td><td class="cell-none">—</td><td class="cell-none">—</td><td class="cell-none">—</td>
+          <td class="cell-none">—</td>
+        </tr>
+        <tr>
+          <td class="label"><strong>INQ 4781</strong><br>2019–2026</td>
+          <td class="cell-none">—</td><td class="cell-full">✓</td><td class="cell-full">✓</td>
+          <td class="cell-full">✓</td><td class="cell-none">—</td><td class="cell-none">—</td>
+          <td class="cell-part">◑</td><td class="cell-none">—</td><td class="cell-part">◑</td><td class="cell-none">—</td>
+          <td class="cell-none">—</td>
+        </tr>
+        <tr>
+          <td class="label"><strong>Vaza Toga</strong><br>2024–2025</td>
+          <td class="cell-none">—</td><td class="cell-full">✓</td><td class="cell-full">✓</td>
+          <td class="cell-full">✓</td><td class="cell-none">—</td><td class="cell-none">—</td>
+          <td class="cell-none">—</td><td class="cell-none">—</td><td class="cell-part">◑</td><td class="cell-none">—</td>
+          <td class="cell-none">—</td>
+        </tr>
+        <tr>
+          <td class="label"><strong>Operação Hydra</strong><br>2024–2025</td>
+          <td class="cell-part">◑</td><td class="cell-full">✓</td><td class="cell-part">◑</td>
+          <td class="cell-part">◑</td><td class="cell-none">—</td><td class="cell-none">—</td>
+          <td class="cell-part">◑</td><td class="cell-full">✓</td><td class="cell-none">—</td><td class="cell-full">✓</td>
+          <td class="cell-none">—</td>
+        </tr>
+        <tr>
+          <td class="label"><strong>Compliance Zero</strong><br>2025–2026</td>
+          <td class="cell-part">◑</td><td class="cell-none">—</td><td class="cell-full">✓</td>
+          <td class="cell-part">◑</td><td class="cell-full">✓</td><td class="cell-none">—</td>
+          <td class="cell-full">✓</td><td class="cell-full">✓</td><td class="cell-none">—</td><td class="cell-full">✓</td>
+          <td class="cell-full">✓</td>
+        </tr>
+        <tr>
+          <td class="label"><strong>Carbono Oculto</strong><br>2025</td>
+          <td class="cell-none">—</td><td class="cell-none">—</td><td class="cell-part">◑</td>
+          <td class="cell-part">◑</td><td class="cell-full">✓</td><td class="cell-none">—</td>
+          <td class="cell-full">✓</td><td class="cell-full">✓</td><td class="cell-none">—</td><td class="cell-full">✓</td>
+          <td class="cell-part">◑</td>
+        </tr>
+        <tr>
+          <td class="label"><strong>Sem Desconto</strong><br>2025</td>
+          <td class="cell-part">◑</td><td class="cell-none">—</td><td class="cell-part">◑</td>
+          <td class="cell-none">—</td><td class="cell-full">✓</td><td class="cell-none">—</td>
+          <td class="cell-full">✓</td><td class="cell-full">✓</td><td class="cell-none">—</td><td class="cell-part">◑</td>
+          <td class="cell-new">★</td>
+        </tr>
+        <tr>
+          <td class="label"><strong>Poco de Lobato</strong><br>2025</td>
+          <td class="cell-none">—</td><td class="cell-none">—</td><td class="cell-none">—</td>
+          <td class="cell-none">—</td><td class="cell-part">◑</td><td class="cell-none">—</td>
+          <td class="cell-part">◑</td><td class="cell-full">✓</td><td class="cell-none">—</td><td class="cell-full">✓</td>
+          <td class="cell-part">◑</td>
+        </tr>
+        <tr>
+          <td class="label"><strong>Oliver Ortiz</strong><br>2009–2026</td>
+          <td class="cell-none">—</td><td class="cell-none">—</td><td class="cell-part">◑</td>
+          <td class="cell-none">—</td><td class="cell-none">—</td><td class="cell-none">—</td>
+          <td class="cell-none">—</td><td class="cell-full">✓</td><td class="cell-none">—</td><td class="cell-full">✓</td>
+          <td class="cell-none">—</td>
+        </tr>
+        <tr>
+          <td class="label"><strong>Narco Fluxo</strong><br>Abr/2026 <span class="badge badge-pink" style="font-size:9px;padding:1px 5px">NOVO</span></td>
+          <td class="cell-part">◑</td><td class="cell-part">◑</td><td class="cell-part">◑</td>
+          <td class="cell-full">✓</td><td class="cell-part">◑</td><td class="cell-part">◑</td>
+          <td class="cell-new">★</td><td class="cell-full">✓</td><td class="cell-new">★</td><td class="cell-new">★</td>
+          <td class="cell-part">◑</td>
+        </tr>
+        <tr>
+          <td class="label"><strong>PCC — Infiltração Estado</strong><br>2000–2026</td>
+          <td class="cell-full">✓</td><td class="cell-full">✓</td><td class="cell-part">◑</td>
+          <td class="cell-part">◑</td><td class="cell-full">✓</td><td class="cell-part">◑</td>
+          <td class="cell-full">✓</td><td class="cell-full">✓</td><td class="cell-full">✓</td><td class="cell-full">✓</td>
+          <td class="cell-full">✓</td>
+        </tr>
+        <tr style="background:rgba(232,160,32,0.04)">
+          <td class="label"><strong>Prisão Econômica</strong><br>2026 <span class="badge badge-amber" style="font-size:9px;padding:1px 5px">DOSSIÊ</span></td>
+          <td class="cell-none">—</td><td class="cell-none">—</td><td class="cell-part">◑</td>
+          <td class="cell-none">—</td><td class="cell-full">✓</td><td class="cell-none">—</td>
+          <td class="cell-full">✓</td><td class="cell-full">✓</td><td class="cell-none">—</td><td class="cell-part">◑</td>
+          <td class="cell-new">★</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="alert alert-purple">
+    <div class="alert-icon">★</div>
+    <div class="alert-body"><strong>★ = Padrão primário ou inovação:</strong> Narco Fluxo é a primeira operação a confirmar P7 (recrutamento geracional via cultura) e P9 (captura cultural) simultaneamente. Sem Desconto e Prisão Econômica são os primeiros a confirmar P11 (Loop de Extração Perpétua) como padrão primário. O PCC é o único ator com confirmação plena em todos os 11 padrões.</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SECTION: OPERAÇÕES DETALHADAS
+══════════════════════════════════════════════ -->
+<div id="section-ops" class="tab-panel">
+  <h2 class="section-title">Anatomia das Operações — Detalhamento Expandido</h2>
+
+  <div class="op-card">
+    <div class="op-header">
+      <div class="op-name">Narco Fluxo</div>
+      <span class="badge badge-pink">NOVO ABR/2026</span>
+      <span class="badge badge-red">R$ 1,6 BI</span>
+      <span class="badge badge-amber">9 ESTADOS</span>
+    </div>
+    <div class="op-body">
+      <div class="op-row">
+        <div>
+          <div class="op-kv"><div class="op-k">Core do esquema</div><div class="op-v">Lavagem via cultura popular — estúdios, gravadoras, shows milionários como fachadas</div></div>
+          <div class="op-kv"><div class="op-k">Ponto de partida</div><div class="op-v">Backup esquecido no iCloud do contador <strong>Rodrigo de Paula Morgado</strong></div></div>
+          <div class="op-kv"><div class="op-k">Presos principais</div><div class="op-v">MC Poze do Rodo · MC Ryan SP · Raphael Sousa Oliveira (Choquei)</div></div>
+          <div class="op-kv"><div class="op-k">Inovação operacional</div><div class="op-v">Influenciador digital (Choquei, 20M+ seguidores) como <strong>componente financeiro</strong>, não apenas amplificador narrativo</div></div>
+        </div>
+        <div>
+          <div class="op-kv"><div class="op-k">Vetores de lavagem</div><div class="op-v">Apostas ilegais · rifas · tráfico internacional · empresas fachada · laranjas · criptoativos · remessas exterior</div></div>
+          <div class="op-kv"><div class="op-k">Lacuna crítica</div><div class="op-v">Destinos das remessas ao exterior não divulgados · editais culturais/Lei Rouanet não verificados · conexão com fundos REAG/Aquilla não investigada</div></div>
+          <div class="op-kv"><div class="op-k">Padrões</div></div>
+          <div class="op-patterns">
+            <span class="badge badge-amber">P4 ✓</span><span class="badge badge-pink">P9 ★</span><span class="badge badge-green">P10 ★</span>
+            <span class="badge badge-blue">P8 ✓</span><span class="badge badge-gray">P1 risco</span><span class="badge badge-gray">P2 risco</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="op-card">
+    <div class="op-header">
+      <div class="op-name">Compliance Zero</div>
+      <span class="badge badge-purple">SIGILO STF</span>
+      <span class="badge badge-red">BANCO MASTER</span>
+      <span class="badge badge-amber">R$ 12,2 BI CRÉDITOS FICTÍCIOS</span>
+    </div>
+    <div class="op-body">
+      <div class="op-row">
+        <div>
+          <div class="op-kv"><div class="op-k">Core</div><div class="op-v">Captura do regulador — crescimento atípico 1000× via CDBs FGC enquanto financiava infraestrutura de lavagem</div></div>
+          <div class="op-kv"><div class="op-k">Atores</div><div class="op-v"><strong>Daniel Vorcaro</strong> (preso 2×) · Nelson Tanure (sócio oculto investigado) · João Carlos Mansur (REAG) · Paulo Henrique Costa (BRB)</div></div>
+          <div class="op-kv"><div class="op-k">Conexão PCC</div><div class="op-v">6 fundos ligados ao PCC conectados ao Master (Revista Fórum, jan/2026) · REAG investigada na Carbono Oculto</div></div>
+        </div>
+        <div>
+          <div class="op-kv"><div class="op-k">Conexão Oliver Ortiz</div><div class="op-v">Grupo Aquilla/Sefer (fundo com Ortiz como cotista) participou estruturalmente da compra do Banco Máxima em 2017, via Benjamim Botelho</div></div>
+          <div class="op-kv"><div class="op-k">Ponto cego</div><div class="op-v">Vínculo familiar de ministros com controladores · beneficiários finais offshore não identificados · caso sob sigilo com Toffoli</div></div>
+          <div class="op-patterns">
+            <span class="badge badge-purple">P3 ✓</span><span class="badge badge-cyan">P7 ✓</span><span class="badge badge-blue">P8 ✓</span>
+            <span class="badge badge-amber">P5 ✓</span><span class="badge badge-green">P10 ✓</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="op-card">
+    <div class="op-header">
+      <div class="op-name">Carbono Oculto</div>
+      <span class="badge badge-amber">R$ 140 BI ESTIMADO</span>
+      <span class="badge badge-green">PCC → FARIA LIMA</span>
+    </div>
+    <div class="op-body">
+      <div class="op-row">
+        <div>
+          <div class="op-kv"><div class="op-k">Core</div><div class="op-v">PCC → combustíveis adulterados → fintechs → fundos CVM → créditos de carbono fictícios (Amazônia)</div></div>
+          <div class="op-kv"><div class="op-k">Atores</div><div class="op-v">Beto Louco (1.000+ postos) · Mohamad Mourad · Marcelo Dias de Moraes (Bankrow) · Família Vorcaro (Alliance Participações)</div></div>
+          <div class="op-kv"><div class="op-k">Artéria financeira</div><div class="op-v">BK Bank: R$46bi não rastreáveis 2020–2024 · "Paraíso fiscal doméstico" via contas-bolsão</div></div>
+        </div>
+        <div>
+          <div class="op-kv"><div class="op-k">Inovação</div><div class="op-v">PCC infiltrado em gestoras CVM-reguladas na Faria Lima — fronteira documentada entre crime organizado e mercado formal de capitais</div></div>
+          <div class="op-kv"><div class="op-k">Camada offshore</div><div class="op-v">15+ offshores EUA · mútuo conversível R$1,2bi retornando como "investimento estrangeiro" · beneficiários Delaware desconhecidos</div></div>
+          <div class="op-patterns">
+            <span class="badge badge-amber">P5 ✓</span><span class="badge badge-cyan">P7 ✓</span><span class="badge badge-blue">P8 ✓</span><span class="badge badge-green">P10 ✓</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="op-card">
+    <div class="op-header">
+      <div class="op-name">Operação Hydra</div>
+      <span class="badge badge-blue">R$ 6 BI · 15 PAÍSES</span>
+      <span class="badge badge-red">GRITZBACH ASSASSINADO</span>
+    </div>
+    <div class="op-body">
+      <div class="op-row">
+        <div>
+          <div class="op-kv"><div class="op-k">Core</div><div class="op-v">Infiltração do ecossistema de pagamentos via IPs (2GO Bank + InvBank). Substituição do sistema bancário por "balcões" digitais invisíveis.</div></div>
+          <div class="op-kv"><div class="op-k">Ponto de viragem</div><div class="op-v">Revogação da e-Financeira em jan/2025 — durante a operação — manteve o duto aberto. Coincidência ou design?</div></div>
+        </div>
+        <div>
+          <div class="op-kv"><div class="op-k">Delator eliminado</div><div class="op-v">Gritzbach assassinado em Guarulhos (2023) sem escolta — padrão P2 confirmado. Fragilizou estruturalmente o instituto da colaboração premiada.</div></div>
+          <div class="op-kv"><div class="op-k">Dimensão internacional</div><div class="op-v">Jurisdição extraterritorial EUA · sanções OFAC petróleo russo · MLAT não ativado publicamente</div></div>
+          <div class="op-patterns">
+            <span class="badge badge-red">P2 ✓</span><span class="badge badge-blue">P8 ✓</span><span class="badge badge-green">P10 ✓</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="op-card">
+    <div class="op-header">
+      <div class="op-name">Oliver Ortiz — Linhagem Financeira</div>
+      <span class="badge badge-green">2009–2026</span>
+      <span class="badge badge-amber">PONTE TRÁFICO → MASTER</span>
+    </div>
+    <div class="op-body">
+      <div class="op-row">
+        <div>
+          <div class="op-kv"><div class="op-k">Cadeia documentada</div><div class="op-v">Oliver Ortiz [cocaína Colômbia→Oceania/Europa] → Grupo Aquilla/Sefer → <strong>Benjamim Botelho</strong> → Banco Master/Vorcaro</div></div>
+          <div class="op-kv"><div class="op-k">Botelho</div><div class="op-v">Ex-Banco Garantia (origem BTG). Dupla nacionalidade PT/BR. Lisboa. Empresa Bahamas aberta 9 dias após liquidação do Master.</div></div>
+        </div>
+        <div>
+          <div class="op-kv"><div class="op-k">Relevância P10</div><div class="op-v">Caso documenta como dinheiro de tráfico internacional entra no sistema financeiro formal brasileiro via operador especializado — mesma arquitetura da lavagem política.</div></div>
+          <div class="op-kv"><div class="op-k">Pergunta aberta</div><div class="op-v">Grupo Aquilla/Sefer tem participação em gravadoras, agências artísticas ou plataformas de apostas da Narco Fluxo?</div></div>
+          <div class="op-patterns">
+            <span class="badge badge-blue">P8 ✓</span><span class="badge badge-green">P10 ✓</span><span class="badge badge-gray">P3 ◑</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-title" style="margin-top:24px">Operações Históricas — Referência</h2>
+  <table class="data-table">
+    <thead>
+      <tr><th>Operação</th><th>Período</th><th>Core do Esquema</th><th>Padrões Chave</th><th>Resultado</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Lava Jato</strong></td><td>2014–2021</td><td>Cartel de empreiteiras + propinas Petrobras + doleiros</td><td>P1, P2, P3, P4</td><td><span class="badge badge-red">278 cond. revertidas</span></td></tr>
+      <tr><td><strong>Castelo de Areia</strong></td><td>2009–2017</td><td>Lavagem Camargo Corrêa via offshores</td><td>P1, P3, P6</td><td><span class="badge badge-red">Anulada por denúncia anônima</span></td></tr>
+      <tr><td><strong>Satiagraha</strong></td><td>2008</td><td>Lavagem via fundos e bancos privados</td><td>P2, P4</td><td><span class="badge badge-amber">Delegado afastado</span></td></tr>
+      <tr><td><strong>Sem Desconto</strong></td><td>2025</td><td>Fraude INSS — consignado irregular</td><td>P5, P7</td><td><span class="badge badge-blue">Em andamento</span></td></tr>
+      <tr><td><strong>Poco de Lobato</strong></td><td>2025</td><td>R$26bi em dívidas fiscais — Grupo Refit/PCC combustíveis</td><td>P8, P10</td><td><span class="badge badge-blue">190 alvos</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SECTION: GRAFO DUAL-UNIVERSO
+══════════════════════════════════════════════ -->
+<div id="section-grafo" class="tab-panel">
+  <h2 class="section-title">Grafo Dual-Universo — Cleptocracia Política × Narcocleptocracia Cultural</h2>
+
+  <div class="alert alert-purple">
+    <div class="alert-icon">◈</div>
+    <div class="alert-body"><strong>Hipótese central (P10):</strong> A mesma arquitetura jurídico-financeira serve simultaneamente aos dois universos. Os cinco nós abaixo são funções estruturais — não indivíduos — que aparecem documentadas em ambas as esferas. A questão operacional é se existe um ator que ocupa três ou mais nós simultaneamente nos dois universos.</div>
+  </div>
+
+  <div class="grafo-split">
+    <div class="grafo-col">
+      <div class="grafo-col-title red">Universo A — Cleptocracia Política</div>
+      <div class="no">
+        <div class="no-dot" style="background:var(--red)"></div>
+        <div><div class="no-label">REAG / Fundos Faria Lima</div><div class="no-desc">40+ fundos, R$30bi · PCC infiltrado em gestoras CVM · Carbono Oculto / Compliance Zero</div><div class="no-tags"><span class="badge badge-red" style="font-size:9px">NÓ 1</span><span class="badge badge-gray" style="font-size:9px">Fundos em Camadas</span></div></div>
+      </div>
+      <div class="no">
+        <div class="no-dot" style="background:var(--red)"></div>
+        <div><div class="no-label">Sintonia dos Gravatas / PCC Jurídico</div><div class="no-desc">40+ advogados cativos (CNJ, 2016) · financiamento de faculdades de Direito · infiltração via concurso público</div><div class="no-tags"><span class="badge badge-red" style="font-size:9px">NÓ 2</span><span class="badge badge-gray" style="font-size:9px">Advogado-Estruturador</span></div></div>
+      </div>
+      <div class="no">
+        <div class="no-dot" style="background:var(--red)"></div>
+        <div><div class="no-label">BK Bank / Fintechs sem rastreamento</div><div class="no-desc">R$46bi não rastreáveis · "paraíso fiscal doméstico" · brecha regulatória Bacen</div><div class="no-tags"><span class="badge badge-red" style="font-size:9px">NÓ 3</span><span class="badge badge-gray" style="font-size:9px">Fintech sem Rastreamento</span></div></div>
+      </div>
+      <div class="no">
+        <div class="no-dot" style="background:var(--red)"></div>
+        <div><div class="no-label">Portais / Influenciadores políticos</div><div class="no-desc">Weaponização narrativa · INQ 4781 · Firehose of Falsehood · financiamento de ecossistemas de desinformação</div><div class="no-tags"><span class="badge badge-red" style="font-size:9px">NÓ 4</span><span class="badge badge-gray" style="font-size:9px">Infraestrutura Narrativa</span></div></div>
+      </div>
+      <div class="no">
+        <div class="no-dot" style="background:var(--red)"></div>
+        <div><div class="no-label">Offshores Delaware / Cayman / Bahamas</div><div class="no-desc">15+ offshores documentadas · mútuo conversível como "investimento estrangeiro" · beneficiários finais desconhecidos</div><div class="no-tags"><span class="badge badge-red" style="font-size:9px">NÓ 5</span><span class="badge badge-gray" style="font-size:9px">Offshore Final</span></div></div>
+      </div>
+    </div>
+    <div class="grafo-col">
+      <div class="grafo-col-title purple">Universo B — Narcocleptocracia Cultural</div>
+      <div class="no">
+        <div class="no-dot" style="background:var(--purple)"></div>
+        <div><div class="no-label">Estúdios / Gravadoras / Shows</div><div class="no-desc">Fachadas para fluxo das facções · R$1,6bi · apostas + rifas → empresas fachada → streaming</div><div class="no-tags"><span class="badge badge-purple" style="font-size:9px">NÓ 1</span><span class="badge badge-gray" style="font-size:9px">Fundos em Camadas</span></div></div>
+      </div>
+      <div class="no">
+        <div class="no-dot" style="background:var(--purple)"></div>
+        <div><div class="no-label">Escritórios de reversão de custódia</div><div class="no-desc">Especialistas em reversão de prisão temporária · padrão Oruam (prisão revertida) · risco Narco Fluxo</div><div class="no-tags"><span class="badge badge-purple" style="font-size:9px">NÓ 2</span><span class="badge badge-gray" style="font-size:9px">Advogado-Estruturador</span></div></div>
+      </div>
+      <div class="no">
+        <div class="no-dot" style="background:var(--purple)"></div>
+        <div><div class="no-label">Apostas ilegais / Criptoativos</div><div class="no-desc">Equivalente funcional das fintechs · cash físico → cripto → remessas · mesma brecha regulatória</div><div class="no-tags"><span class="badge badge-purple" style="font-size:9px">NÓ 3</span><span class="badge badge-gray" style="font-size:9px">Fintech sem Rastreamento</span></div></div>
+      </div>
+      <div class="no">
+        <div class="no-dot" style="background:var(--purple)"></div>
+        <div><div class="no-label">Choquei / Influenciadores culturais</div><div class="no-desc">Raphael Sousa Oliveira preso como nó operacional (20M+ seguidores) · amplificação de legitimidade + distribution narrativa</div><div class="no-tags"><span class="badge badge-purple" style="font-size:9px">NÓ 4</span><span class="badge badge-gray" style="font-size:9px">Infraestrutura Narrativa</span></div></div>
+      </div>
+      <div class="no">
+        <div class="no-dot" style="background:var(--purple)"></div>
+        <div><div class="no-label">Remessas ao exterior — destinos não divulgados</div><div class="no-desc">Documentadas pela PF na Narco Fluxo · destinos não revelados · hipótese: sobreposição com rotas Delaware/Cayman</div><div class="no-tags"><span class="badge badge-purple" style="font-size:9px">NÓ 5</span><span class="badge badge-gray" style="font-size:9px">Offshore Final</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="connector-zone">
+    <div class="connector-title">Atores identificados em múltiplos nós — documentação disponível</div>
+    <div class="conn-row">
+      <div class="conn-actor">Benjamim Botelho de Almeida<br><span style="font-size:10px;color:var(--fg3);font-weight:400">Operador financeiro · ex-Banco Garantia · PT/BR · Lisboa</span></div>
+      <div class="conn-nodes">
+        <span class="badge badge-green">NÓ 1 ✓</span>
+        <span class="badge badge-green">NÓ 3 ✓</span>
+        <span class="badge badge-green">NÓ 5 ✓</span>
+        <span class="badge badge-amber">NÓ 2 ◑</span>
+      </div>
+      <div class="conn-conf">ICL Notícias, mar/2026 · Registros CVM · Autos JF/RJ</div>
+    </div>
+    <div class="conn-row">
+      <div class="conn-actor">Grupo Aquilla / Sefer Investimentos<br><span style="font-size:10px;color:var(--fg3);font-weight:400">Fundo com Ortiz como cotista · alvo Op. Compliance Zero</span></div>
+      <div class="conn-nodes">
+        <span class="badge badge-green">NÓ 1 ✓</span>
+        <span class="badge badge-green">NÓ 5 ✓</span>
+        <span class="badge badge-amber">NÓ 3 ◑</span>
+        <span class="badge badge-gray">NÓ 4 ?</span>
+      </div>
+      <div class="conn-conf">CVM · Compliance Zero · Oliver Ortiz timeline</div>
+    </div>
+    <div class="conn-row">
+      <div class="conn-actor">PCC como ator transversal<br><span style="font-size:10px;color:var(--fg3);font-weight:400">14 sintonias · 89 líderes mapeados · 13 setores da economia formal</span></div>
+      <div class="conn-nodes">
+        <span class="badge badge-green">NÓ 1 ✓</span>
+        <span class="badge badge-green">NÓ 2 ✓</span>
+        <span class="badge badge-green">NÓ 3 ✓</span>
+        <span class="badge badge-green">NÓ 4 ✓</span>
+        <span class="badge badge-green">NÓ 5 ✓</span>
+      </div>
+      <div class="conn-conf">GAECO-SP · FBSP 2025 · Carbono Oculto · PCC-CV Dashboard</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SECTION: MAPA DE NEXO
+══════════════════════════════════════════════ -->
+<div id="section-nexus" class="tab-panel">
+  <h2 class="section-title">Mapa de Nexo — Emaranhamento Sistêmico</h2>
+  <div style="overflow-x:auto;background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:16px;margin-bottom:20px">
+    <svg viewBox="0 0 1200 680" xmlns="http://www.w3.org/2000/svg" style="width:100%;min-width:900px;height:auto;display:block" font-family="IBM Plex Mono, monospace">
+      <rect width="1200" height="680" fill="#080c10"/>
+      <!-- BG grid lines -->
+      <g stroke="rgba(255,255,255,0.03)" stroke-width="1">
+        <line x1="0" y1="170" x2="1200" y2="170"/><line x1="0" y1="340" x2="1200" y2="340"/>
+        <line x1="0" y1="510" x2="1200" y2="510"/><line x1="300" y1="0" x2="300" y2="680"/>
+        <line x1="600" y1="0" x2="600" y2="680"/><line x1="900" y1="0" x2="900" y2="680"/>
+      </g>
+      <!-- Center node -->
+      <rect x="460" y="290" width="280" height="70" rx="4" fill="#0d1218" stroke="#e84040" stroke-width="2"/>
+      <text x="600" y="319" text-anchor="middle" fill="#e8ecf0" font-weight="700" font-size="13">SISTEMA CAPTURADO</text>
+      <text x="600" y="340" text-anchor="middle" fill="#8a9ab0" font-size="10">infraestrutura de serviço compartilhada</text>
+      <text x="600" y="356" text-anchor="middle" fill="#e84040" font-size="9" letter-spacing="2">P10</text>
+      <!-- Node: Fundos (NÓ 1) -->
+      <line x1="460" y1="315" x2="220" y2="200" stroke="#e8a020" stroke-width="1.5"/>
+      <rect x="80" y="160" width="200" height="52" rx="4" fill="#121820" stroke="#e8a020" stroke-width="1.5"/>
+      <text x="180" y="183" text-anchor="middle" fill="#e8a020" font-size="11" font-weight="600">NÓ 1 · FUNDOS</text>
+      <text x="180" y="199" text-anchor="middle" fill="#8a9ab0" font-size="9">REAG · Aquilla · Sefer</text>
+      <text x="180" y="213" text-anchor="middle" fill="#4a5a6a" font-size="9">Estúdios · Gravadoras</text>
+      <!-- Node: Jurídico (NÓ 2) -->
+      <line x1="460" y1="310" x2="220" y2="370" stroke="#a060e8" stroke-width="1.5" stroke-dasharray="5,3"/>
+      <rect x="80" y="345" width="200" height="52" rx="4" fill="#121820" stroke="#a060e8" stroke-width="1.5"/>
+      <text x="180" y="368" text-anchor="middle" fill="#a060e8" font-size="11" font-weight="600">NÓ 2 · JURÍDICO</text>
+      <text x="180" y="384" text-anchor="middle" fill="#8a9ab0" font-size="9">Sintonia Gravatas · CNJ</text>
+      <!-- Node: Fintech (NÓ 3) -->
+      <line x1="600" y1="290" x2="600" y2="140" stroke="#3090e8" stroke-width="1.5"/>
+      <rect x="470" y="90" width="200" height="52" rx="4" fill="#121820" stroke="#3090e8" stroke-width="1.5"/>
+      <text x="570" y="113" text-anchor="middle" fill="#3090e8" font-size="11" font-weight="600">NÓ 3 · FINTECH</text>
+      <text x="570" y="129" text-anchor="middle" fill="#8a9ab0" font-size="9">BK Bank · 2GO · InvBank</text>
+      <!-- Node: Narrativa (NÓ 4) -->
+      <line x1="740" y1="310" x2="930" y2="200" stroke="#e84090" stroke-width="1.5"/>
+      <rect x="920" y="160" width="200" height="52" rx="4" fill="#121820" stroke="#e84090" stroke-width="1.5"/>
+      <text x="1020" y="183" text-anchor="middle" fill="#e84090" font-size="11" font-weight="600">NÓ 4 · NARRATIVA</text>
+      <text x="1020" y="199" text-anchor="middle" fill="#8a9ab0" font-size="9">Portais · INQ 4781</text>
+      <text x="1020" y="213" text-anchor="middle" fill="#4a5a6a" font-size="9">Choquei · 20M seguidores</text>
+      <!-- Node: Offshore (NÓ 5) -->
+      <line x1="740" y1="345" x2="930" y2="430" stroke="#28c880" stroke-width="1.5"/>
+      <rect x="920" y="405" width="200" height="52" rx="4" fill="#121820" stroke="#28c880" stroke-width="1.5"/>
+      <text x="1020" y="428" text-anchor="middle" fill="#28c880" font-size="11" font-weight="600">NÓ 5 · OFFSHORE</text>
+      <text x="1020" y="444" text-anchor="middle" fill="#8a9ab0" font-size="9">Delaware · Cayman · Bahamas</text>
+    </svg>
+  </div>
+  <div class="alert alert-blue">
+    <div class="alert-icon">ℹ</div>
+    <div class="alert-body"><strong>Legenda de arestas:</strong> Linhas contínuas = conexões financeiras confirmadas. Linhas tracejadas = inferência lógica com evidência indireta.</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SECTION: LACUNAS & AUDITORIA
+══════════════════════════════════════════════ -->
+<div id="section-audit" class="tab-panel">
+  <h2 class="section-title">Lacunas Investigativas Críticas & Auditoria</h2>
+  <div class="alert alert-red">
+    <div class="alert-icon">⚠</div>
+    <div class="alert-body"><strong>Princípio analítico:</strong> A pergunta mais valiosa é aquela que ainda não foi formulada. As lacunas abaixo são os pontos de ruptura do sistema.</div>
+  </div>
+  <div class="lacuna-item">
+    <div class="lacuna-num">01</div>
+    <div class="lacuna-body"><strong>Grupo Aquilla/Sefer × Narco Fluxo — fecha o grafo?</strong><p>Verificar registros CVM para confirmar participação em gravadoras ou agências da Narco Fluxo.</p></div>
+  </div>
+  <div class="lacuna-item">
+    <div class="lacuna-num">02</div>
+    <div class="lacuna-body"><strong>Destino das remessas ao exterior — Narco Fluxo</strong><p>Identificar se coincidem com jurisdições da Carbono Oculto (Delaware/Cayman).</p></div>
+  </div>
+  <div class="lacuna-item">
+    <div class="lacuna-num">03</div>
+    <div class="lacuna-body"><strong>Artistas presos × Recursos públicos culturais</strong><p>Verificar acesso a Lei Rouanet ou PROAC pelas produtoras investigadas.</p></div>
+  </div>
+</div>
+
+<!-- Related Artifacts -->
+<div class="section-title" style="margin-top: 40px;">Objetos Relacionados & Monitoramento</div>
+<div class="grid-3" style="margin-top: 24px;">
+  <a href="pcc-cv-ameaca-nacional.html" style="text-decoration: none; color: inherit;">
+    <div class="card">
+      <div class="badge badge-red" style="margin-bottom: 12px;">Soberania</div>
+      <div class="card-title">PCC e CV — Ameaça Global</div>
+      <p class="card-desc">Dashboard analítico sobre governança criminal e o desmonte dos argumentos da PF.</p>
+    </div>
+  </a>
+  <a href="global-kompromat.html" style="text-decoration: none; color: inherit;">
+    <div class="card">
+      <div class="badge badge-purple" style="margin-bottom: 12px;">Estado Capturado</div>
+      <div class="card-title">Global Kompromat</div>
+      <p class="card-desc">Mapa de captura institucional, lawfare e redes de kompromat global.</p>
+    </div>
+  </a>
+  <a href="brasil-falha-institucional-diagnostico.html" style="text-decoration: none; color: inherit;">
+    <div class="card">
+      <div class="badge badge-blue" style="margin-bottom: 12px;">Diagnóstico</div>
+      <div class="card-title">Brasil: Falha Institucional</div>
+      <p class="card-desc">Diagnóstico sistêmico sobre gasto público, impunidade e economia ilícita.</p>
+    </div>
+  </a>
+</div>
+
+</div><!-- /container main -->
+
+<footer class="header" style="margin-top: 64px; border-top: 1px solid var(--border2); border-bottom: none;">
+  <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: flex-start; padding: 20px 0;">
+    <div style="flex: 1; min-width: 300px;">
+      <div class="badge badge-blue"><strong><a href="https://lawfare-timeline.vercel.app" style="color:var(--blue); text-decoration:none;">lawfare-timeline.vercel.app</a></strong></div>
+      <p class="card-desc" style="margin-top: 12px;">Matriz de Indulgência Sistêmica v3.1 | Mestre de Padrões 2026</p>
+      <p class="card-desc" style="font-size:11px; color:var(--fg3);">CC0 1.0 Universal — Domínio Público. Livre para redistribuição analítica.</p>
+    </div>
+    <div class="card-desc" style="font-size:11px; color:var(--fg3); max-width: 500px; text-align: right;">
+      Fontes primárias: PF, COAF, Receita Federal, CVM, CNJ e STF. 
+      Análise cruzada via ICL Notícias, GAECO-SP e FBSP 2025.
+    </div>
+  </div>
+</footer>
+
+<script>
+function scrollToSection(id) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth' });
+}
+
+function togglePattern(el) {
+  el.classList.toggle('expanded');
+  const toggle = el.querySelector('.p-toggle');
+  if (toggle) toggle.textContent = el.classList.contains('expanded') ? '▾ Recolher' : '▸ Ver mecanismo detalhado';
+}
+
+// Scroll Spy / Intersection Observer
+const observerOptions = {
+  root: null,
+  rootMargin: '-20% 0px -70% 0px',
+  threshold: 0
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.getAttribute('id');
+      document.querySelectorAll('.nav-tab').forEach(tab => {
+        tab.classList.remove('active');
+        if (tab.getAttribute('data-section') === id) {
+          tab.classList.add('active');
+          // Optional: scroll nav-tabs to show active tab on small screens
+          tab.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        }
+      });
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.tab-panel').forEach(panel => {
+  observer.observe(panel);
+});
+</script>
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

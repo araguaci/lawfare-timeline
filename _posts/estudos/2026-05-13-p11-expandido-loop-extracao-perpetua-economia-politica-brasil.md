@@ -9,7 +9,7 @@ image:
   target: "/assets/img/estudos/p11-expandido-loop-extracao-perpetua-xarticle-hero.webp"
 tags: [p11, loop-extracao, selic, desindustrializacao, inss, consignado, fintechs, rentismo, economia-politica, carry-trade, transferencias, p11-expandido]
 categories: estudos
-pin: false
+pin: true
 ---
 
 - &nbsp;

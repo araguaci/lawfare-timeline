@@ -1,0 +1,235 @@
+{
+  "meta": {
+    "batch": "lawfare-1511-1513-biazucci",
+    "generated": "2026-05-12",
+    "session": "claude.ai",
+    "status": "batch_file_only",
+    "note": "ID 1511 previamente reservado. IDs 1512-1513 novos. Validar com validate-ids.ps1 antes de merge em lawfare.json.",
+    "next_available_after_batch": 1514
+  },
+  "entries": [
+    {
+      "id": 1511,
+      "date": "2013-10-01",
+      "date_precision": "month",
+      "title": "Prisão Preventiva de Inocente por Reconhecimento Fotográfico Viciado — Caso Biazucci",
+      "summary": "O dentista André Luiz Medeiros Biazucci Cardoso, 39 anos, é preso em outubro de 2013 sob acusação de sete estupros em série em Belford Roxo (RJ). A prisão preventiva é decretada com base exclusivamente em reconhecimento fotográfico indutivo — foto retirada de rede social — e reconhecimento pessoal em fila composta por policiais uniformizados com distintivos, em violação ao art. 226 do CPP. O dentista permanece 210 dias (7 meses) segregado, parte em isolamento total. É apresentado algemado à imprensa como 'estuprador em série'. Perde o emprego. A família vende o carro para custear advogados e peritos particulares. A inocência é comprovada por DNA solicitado e custeado pela própria defesa — não pelo Estado. O laudo exclui cabalmente a participação de André em todos os sete processos. Câmeras de segurança e depoimentos confirmam que ele não estava em Belford Roxo nas datas dos crimes. O MP-RJ manifesta-se pela soltura. André é absolvido em todos os sete processos e liberado em 2014.",
+      "category": "abuso_processual",
+      "actors": [
+        {
+          "name": "André Luiz Medeiros Biazucci Cardoso",
+          "role": "vítima — preso injustamente 210 dias",
+          "institution": "civil"
+        },
+        {
+          "name": "Polícia Civil do Rio de Janeiro",
+          "role": "condutora da investigação com método viciado",
+          "institution": "PCERJ"
+        },
+        {
+          "name": "Luiz Antônio Borri",
+          "role": "advogado da defesa",
+          "institution": "advocacia privada"
+        }
+      ],
+      "institutions": ["PCERJ", "TJRJ", "MP-RJ"],
+      "legal_basis": [
+        "CPP art. 226 — procedimento de reconhecimento de pessoas (violado: fila com policiais uniformizados, foto prévia em rede social)",
+        "CF art. 5º LXVIII — habeas corpus",
+        "CF art. 37 §6º — responsabilidade objetiva do Estado por dano"
+      ],
+      "patterns": ["P01"],
+      "values": {
+        "dias_preso": 210,
+        "crimes_imputados": 7,
+        "crimes_cometidos": 0,
+        "custo_defesa_particular": "indeterminado — família vendeu veículo"
+      },
+      "sources": [
+        {
+          "title": "Dentista preso injustamente no Rio recorre à CIDH após STJ negar indenização",
+          "url": "https://www.conjur.com.br/2026-abr-26/dentista-preso-injustamente-no-rio-recorre-a-cidh-apos-stj-negar-indenizacao/",
+          "outlet": "Conjur",
+          "date": "2026-04-26"
+        },
+        {
+          "title": "Homem é preso injustamente, pede indenização e é condenado a pagar R$ 479 mil",
+          "url": "https://revistaforum.com.br/brasil/homem-preso-injustica-indenizacao-condenado/",
+          "outlet": "Revista Fórum",
+          "date": "2026-05-11"
+        }
+      ],
+      "result": "Absolvição em todos os 7 processos após 210 dias de prisão. DNA solicitado e custeado pela defesa. MP-RJ manifesta-se pela soltura. André muda de cidade e reconstrói carreira.",
+      "connections": ["id_1512", "id_1513"],
+      "status": "confirmado",
+      "evidence_level": "ev-confirmed",
+      "lacuna_investigativa": [
+        "Delegado responsável pela decretação da prisão preventiva: identificado? punido?",
+        "Processo disciplinar na PCERJ por uso de método proibido (art. 226 CPP): aberto?",
+        "Quantos outros casos de reconhecimento viciado na mesma delegacia no mesmo período?"
+      ],
+      "analise": "Caso paradigmático de inversão do ônus da prova na prática: o Estado prende com indícios frágeis e metodologia proibida; o inocente financia a própria absolvição. O sistema de reconhecimento viciado (foto em rede social + fila com policiais uniformizados) é documentadamente produtor de falsas memórias — mas a prisão é validada por todas as instâncias como 'exercício regular'. O custo do erro estatal é transferido integralmente para a vítima — padrão que se confirma na fase indenizatória (ID 1512).",
+      "jekyll_categories": ["impunidade", "justica"],
+      "jekyll_filename": "2013-10-01-prisao-preventiva-biazucci-reconhecimento-viciado.md",
+      "jekyll_date": "2013-10-01",
+      "jekyll_permalink": "/timeline/1511/"
+    },
+    {
+      "id": 1512,
+      "date": "2025-09-01",
+      "date_precision": "month",
+      "title": "STJ Nega Indenização a Inocente Preso 210 Dias e Estado Cobra R$478,9 Mil em Honorários",
+      "summary": "Em setembro de 2025, o Superior Tribunal de Justiça rejeita em definitivo a ação indenizatória movida por André Luiz Medeiros Biazucci Cardoso e familiares contra o Estado do Rio de Janeiro. André havia pedido R$4 milhões (corrigidos para R$7 milhões) pelos danos decorrentes de sua prisão injusta de 210 dias em 2013. O STJ nega o pedido com fundamento no entendimento de que a prisão preventiva, ainda que de um inocente, configurou 'exercício regular da atividade repressiva penal' — pois havia indícios de autoria baseados nos relatos das vítimas ao momento da decretação. Com o trânsito em julgado, a sucumbência processual é acionada: André e familiares são condenados a pagar R$478,9 mil referentes a custas processuais e honorários da Procuradoria-Geral do Estado do Rio de Janeiro — o mesmo Estado que o prendeu injustamente.",
+      "category": "chokepoint_judicial",
+      "actors": [
+        {
+          "name": "André Luiz Medeiros Biazucci Cardoso",
+          "role": "autor da ação indenizatória — condenado a pagar ao Estado",
+          "institution": "civil"
+        },
+        {
+          "name": "Superior Tribunal de Justiça (STJ)",
+          "role": "última instância — negou indenização",
+          "institution": "STJ"
+        },
+        {
+          "name": "Procuradoria-Geral do Estado do Rio de Janeiro (PGE-RJ)",
+          "role": "beneficiária dos honorários de sucumbência — R$478,9k",
+          "institution": "PGE-RJ"
+        },
+        {
+          "name": "Inês Maria dos Santos Coimbra de Almeida Prado",
+          "role": "Procuradora-Geral do Estado de SP — conexão temática: mesma PGE-SP do caso abono (ID temático abono-blindado)",
+          "institution": "PGE-SP",
+          "note": "menção conexão temática apenas — não diretamente envolvida neste processo"
+        }
+      ],
+      "institutions": ["STJ", "TJRJ", "PGE-RJ"],
+      "legal_basis": [
+        "Teoria do exercício regular da atividade repressiva penal — fundamento do STJ para negar responsabilidade estatal",
+        "CF art. 37 §6º — responsabilidade objetiva do Estado (afastada pelo STJ no caso concreto)",
+        "CPC art. 85 — honorários de sucumbência aplicados contra o autor que perde",
+        "Convenção Americana sobre Direitos Humanos art. 7º (liberdade), art. 8º (garantias judiciais), art. 10 (indenização por erro judiciário), art. 11 (honra e dignidade) — violações alegadas na CIDH"
+      ],
+      "patterns": ["P03", "P11"],
+      "values": {
+        "indenizacao_pedida_original": 4000000,
+        "indenizacao_pedida_corrigida": 7000000,
+        "indenizacao_concedida": 0,
+        "honorarios_cobrados_do_inocente": 478900,
+        "saldo_liquido_para_vitima": -478900,
+        "anos_de_processo": 10,
+        "transito_em_julgado": "2025-09"
+      },
+      "sources": [
+        {
+          "title": "Dentista preso injustamente no Rio recorre à CIDH após STJ negar indenização",
+          "url": "https://www.conjur.com.br/2026-abr-26/dentista-preso-injustamente-no-rio-recorre-a-cidh-apos-stj-negar-indenizacao/",
+          "outlet": "Conjur",
+          "date": "2026-04-26"
+        },
+        {
+          "title": "Dentista preso por estupros que não cometeu é condenado a pagar R$478 mil ao RJ",
+          "url": "https://revistaoeste.com/brasil/dentista-preso-por-estupros-que-nao-cometeu-e-condenado-a-pagar-r-478-mil-ao-rj/",
+          "outlet": "Revista Oeste",
+          "date": "2026-05-11"
+        },
+        {
+          "title": "Homem preso injustamente no Rio processa o Estado e ainda assim é condenado a pagar dívida",
+          "url": "https://diariodoporto.com.br/homem-injustamente-no-rio-processa-o-estado-e-acaba-condenado-a-pagar-divida-de-r-479-mil/",
+          "outlet": "Diário do Porto",
+          "date": "2026-05-11"
+        }
+      ],
+      "result": "STJ nega indenização. Trânsito em julgado set/2025. André condenado a pagar R$478,9 mil ao Estado que o prendeu injustamente. Saldo líquido da vítima: -R$478.900. Caso levado à CIDH.",
+      "connections": ["id_1511", "id_1513"],
+      "status": "confirmado",
+      "evidence_level": "ev-confirmed",
+      "ponto_de_inflexao": "O STJ aplica a doutrina do 'exercício regular da atividade repressiva penal' para absorver o erro estatal sem responsabilização. O mecanismo que deveria proteger a eficiência investigativa torna-se escudo contra a reparação de vítimas de erro flagrante.",
+      "lacuna_investigativa": [
+        "Texto integral do acórdão STJ: número do processo não confirmado nas fontes disponíveis",
+        "Ministro relator do acórdão STJ: não identificado nas fontes",
+        "Precedentes STJ citados no acórdão para a tese do 'exercício regular': quais?",
+        "Quantos casos análogos (prisão preventiva de inocente, indenização negada) no STJ 2020-2025?"
+      ],
+      "analise": "O mecanismo de sucumbência aplicado contra vítima de erro estatal documentado cria desincentivo estrutural: qualquer inocente preso injustamente que acione o Judiciário assume o risco de pagar os honorários do Estado que o prendeu. O custo esperado do acionamento passa a ser negativo mesmo quando a prisão é comprovadamente ilegítima. Isso é P11 aplicado ao indivíduo: o loop onde o custo do erro do sistema é transferido para quem menos tem condições de absorvê-lo. Conexão com retorno-zero.html: o mesmo sistema que custa R$181,5bi/ano cobra do inocente que ousou pedir conta.",
+      "jekyll_categories": ["impunidade", "justica", "lawfare"],
+      "jekyll_filename": "2025-09-01-stj-nega-indenizacao-biazucci-cobra-478-mil.md",
+      "jekyll_date": "2025-09-01",
+      "jekyll_permalink": "/timeline/1512/"
+    },
+    {
+      "id": 1513,
+      "date": "2026-04-26",
+      "date_precision": "day",
+      "title": "Defesa de Biazucci Recorre à CIDH por Violação de Direitos Fundamentais e Erro Judiciário",
+      "summary": "Os advogados Rafael Júnior Soares e Luiz Antônio Borri protocolam petição na Comissão Interamericana de Direitos Humanos (CIDH) após esgotamento de todos os recursos processuais na jurisdição interna. A representação aponta que o Estado brasileiro violou os artigos 7º (direito à liberdade pessoal), 8º (garantias judiciais), 10 (direito à indenização por erro judiciário) e 11 (proteção da honra e da dignidade) da Convenção Americana sobre Direitos Humanos. A petição questiona especificamente: (1) a prisão preventiva baseada em método de reconhecimento proibido pelo CPP; (2) a negação de indenização por erro judiciário comprovado por DNA; (3) a condenação da vítima inocente a pagar R$478,9 mil ao Estado que a prendeu. O caso torna-se o primeiro registro formal no corpus de internacionalização de erro judiciário brasileiro via CIDH com estas características combinadas.",
+      "category": "lacuna_investigativa",
+      "actors": [
+        {
+          "name": "André Luiz Medeiros Biazucci Cardoso",
+          "role": "peticionário — vítima",
+          "institution": "civil"
+        },
+        {
+          "name": "Rafael Júnior Soares",
+          "role": "advogado — petição CIDH",
+          "institution": "advocacia privada"
+        },
+        {
+          "name": "Luiz Antônio Borri",
+          "role": "advogado — petição CIDH",
+          "institution": "advocacia privada"
+        },
+        {
+          "name": "Estado brasileiro",
+          "role": "réu perante a CIDH",
+          "institution": "República Federativa do Brasil"
+        }
+      ],
+      "institutions": ["CIDH", "OEA", "STJ", "PGE-RJ"],
+      "legal_basis": [
+        "Convenção Americana sobre Direitos Humanos art. 7º — direito à liberdade pessoal",
+        "Convenção Americana sobre Direitos Humanos art. 8º — garantias judiciais",
+        "Convenção Americana sobre Direitos Humanos art. 10 — direito à indenização por erro judiciário",
+        "Convenção Americana sobre Direitos Humanos art. 11 — proteção da honra e da dignidade",
+        "Regras processuais CIDH — esgotamento de recursos internos como condição de admissibilidade (cumprida)"
+      ],
+      "patterns": ["P03", "P11"],
+      "values": {
+        "data_peticao_cidh": "2026-03",
+        "data_divulgacao_conjur": "2026-04-26",
+        "artigos_convenção_violados": 4,
+        "valor_cobrado_do_inocente": 478900
+      },
+      "sources": [
+        {
+          "title": "Dentista preso injustamente no Rio recorre à CIDH após STJ negar indenização",
+          "url": "https://www.conjur.com.br/2026-abr-26/dentista-preso-injustamente-no-rio-recorre-a-cidh-apos-stj-negar-indenizacao/",
+          "outlet": "Conjur",
+          "date": "2026-04-26"
+        }
+      ],
+      "result": "Petição protocolada. Admissibilidade pela CIDH pendente. Caso em aberto na jurisdição internacional.",
+      "connections": ["id_1511", "id_1512"],
+      "status": "em_andamento",
+      "evidence_level": "ev-confirmed",
+      "lacuna_investigativa": [
+        "Número do caso CIDH após protocolo: não divulgado nas fontes disponíveis",
+        "Prazo esperado para decisão de admissibilidade da CIDH: meses a anos",
+        "Brasil reconhecerá a competência da CIDH neste caso ou arguirá inadmissibilidade?",
+        "Precedentes CIDH com Brasil em casos de erro judiciário + negação de indenização: Maria da Penha, Damião Ximenes — padrão de condenação existe"
+      ],
+      "analise": "A internacionalização do caso sinaliza esgotamento de confiança na jurisdição doméstica — não apenas pelo resultado desfavorável, mas pela estrutura lógica do resultado: o sistema que erra cobra do inocente pelo erro. A CIDH tem precedente de condenação do Brasil em casos estruturalmente similares (responsabilidade estatal por omissão/ação que viola direitos fundamentais). O caso Biazucci adiciona o elemento da sucumbência punitiva — cobrar do inocente os honorários do Estado — que não tem precedente claro na jurisprudência interamericana. Essa novidade pode ser o ângulo de maior impacto da petição.",
+      "jekyll_categories": ["impunidade", "justica", "lawfare"],
+      "jekyll_filename": "2026-04-26-biazucci-cidh-peticao-erro-judiciario.md",
+      "jekyll_date": "2026-04-26",
+      "jekyll_permalink": "/timeline/1513/"
+    }
+  ],
+  "sync_update": {
+    "tracks_main_last_id": 1513,
+    "tracks_main_next_available": 1514,
+    "note": "Atualizar claude.ai-corpus-ids-sync.json com estes valores após validação"
+  }
+}

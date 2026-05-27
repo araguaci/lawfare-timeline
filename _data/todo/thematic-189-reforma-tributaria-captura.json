@@ -1,0 +1,138 @@
+{
+  "schema_version": "2.2",
+  "track": "thematic",
+  "id": 189,
+  "id_display": "T-189",
+  "date": "2024-07-11",
+  "date_precision": "day",
+  "date_context": "Promulgação da Emenda Constitucional 132/2023 — implementação em curso",
+  "title": "Reforma Tributária como Captura Regulatória: Split Payment, Dependência Tecnológica Compulsória e Concentração Econômica Estrutural",
+  "slug": "reforma-tributaria-captura-regulatoria",
+  "jekyll_filename": "2024-07-11-reforma-tributaria-captura-regulatoria.md",
+  "jekyll_permalink": "/estudos/reforma-tributaria-captura-regulatoria/",
+  "jekyll_categories": ["estudos", "governo"],
+  "summary": "A Reforma Tributária brasileira (EC 132/2023 e legislação complementar) institui o split payment — separação automática do imposto no momento da transação — eliminando o float tributário de 20–30 dias que serve como capital de giro para milhões de PMEs. Paralelamente, cria exigência compulsória de adaptação a nova arquitetura digital (CBS, IBS, NFS-e unificada, ERP parametrizado), operação simultânea de dois sistemas tributários até 2033, e dependência estrutural de fornecedores de software de gestão. O modelo foi concebido publicamente por Miguel Abuhab, fundador da Datasul (adquirida pela TOTVS em 2008), empresa que já comercializa ferramentas de adequação à reforma. Capital institucional global (BlackRock, CPP Investments, GIC, MFS) está posicionado na TOTVS. O mecanismo produz: transferência de liquidez de PMEs para o Estado; transferência de receita de PMEs para o setor de ERP/consultoria; concentração de mercado nos setores onde PMEs não suportam o custo regulatório de transição.",
+  "category": "mecanismo_sistemico",
+  "subcategory": "captura_regulatoria",
+  "evidence_status": "ev-confirmed",
+  "analise": "O mecanismo documentado é captura regulatória clássica com duas dimensões sobrepostas. Dimensão 1 (P11): o split payment é uma aceleração do Loop de Extração Perpétua — retira do ciclo produtivo das empresas o único buffer de liquidez que não depende de crédito bancário. O resultado estrutural não é simplificação fiscal mas substituição de capital próprio por dependência creditícia. Dimensão 2 (P12-candidato): a obrigatoriedade de conformidade tecnológica cria uma barreira regulatória de entrada que funciona como concentração de mercado induzida por norma — grandes grupos absorvem o custo; PMEs saem do mercado ou são absorvidas. O fato de o idealizador do split payment ser fundador da empresa que mais diretamente se beneficia da digitalização compulsória é documentável como conflito de interesse estrutural — não necessariamente corrupção, mas captura de policy design por interesse privado identificável. A presença de capital institucional global (BlackRock, GIC, CPP) na TOTVS não constitui prova de coordenação, mas evidencia que o vetor de benefício era legível para analistas de capital antes de ser visível no debate público.",
+  "patterns": ["P11", "P05"],
+  "pattern_notes": {
+    "P11": "Split payment como acelerador do Loop de Extração — elimina buffer de liquidez autônoma das PMEs, substituindo por dependência creditícia (bancos ganham) e por dependência tecnológica compulsória (ERP ganha). Pobreza empresarial como insumo estrutural.",
+    "P05": "Reforma normativa cria mercado compulsório capturado por fornecedor privado com conflito de interesse no design da política pública — uso de instrumento regulatório como vetor de transferência para setor privado específico.",
+    "P12_candidato": "Barreira regulatória de entrada induzida por norma como mecanismo de concentração de mercado — custo de conformidade diferenciado por escala produz saída compulsória de PMEs. Padrão a formalizar como P12 se evidência acumulada justificar."
+  },
+  "actors": [
+    {
+      "name": "Miguel Abuhab",
+      "role": "Idealizador público do modelo split payment; fundador da Datasul (vendida à TOTVS em 2008)",
+      "institution": "Datasul / TOTVS (histórico)",
+      "evidence": "ev-confirmed",
+      "source": "https://miguelabuhab.com"
+    },
+    {
+      "name": "TOTVS S.A.",
+      "role": "Principal fornecedor de ERP para adequação à Reforma Tributária; desenvolveu Configurador de Tributos para CBS/IBS/split payment",
+      "institution": "TOTVS S.A. (TOTS3)",
+      "evidence": "ev-confirmed",
+      "source": "https://espacolegislacao.totvs.com/protheus-reforma-tributaria/"
+    },
+    {
+      "name": "BlackRock",
+      "role": "Investidor institucional com posição acionária na TOTVS",
+      "institution": "BlackRock Inc.",
+      "evidence": "ev-confirmed",
+      "source": "https://ri.totvs.com/a-companhia/composicao-acionaria/"
+    },
+    {
+      "name": "CPP Investments",
+      "role": "Investidor institucional — Canada Pension Plan Investment Board — com posição na TOTVS",
+      "institution": "CPP Investments",
+      "evidence": "ev-confirmed",
+      "source": "https://ri.totvs.com/a-companhia/composicao-acionaria/"
+    },
+    {
+      "name": "GIC (Government of Singapore Investment Corporation)",
+      "role": "Fundo soberano de Singapura com posição acionária na TOTVS",
+      "institution": "GIC",
+      "evidence": "ev-confirmed",
+      "source": "https://ri.totvs.com/a-companhia/composicao-acionaria/"
+    }
+  ],
+  "institutions": [
+    "TOTVS S.A.",
+    "Receita Federal do Brasil",
+    "Congresso Nacional",
+    "Comitê Gestor do IBS",
+    "Banco Central do Brasil"
+  ],
+  "legal_basis": [
+    "EC 132/2023 — Emenda Constitucional da Reforma Tributária",
+    "LC 214/2025 — Regulamentação CBS, IBS e Imposto Seletivo",
+    "LC 68/2024 — IBS e CBS sobre operações com bens e serviços",
+    "LC 70/2024 — Regras de transição tributária (período 2026–2033)"
+  ],
+  "values": {
+    "custo_adaptacao_erp_estimado_brasil": "R$ 3 trilhões (estimativa setor)",
+    "periodo_transicao_duplo_sistema": "2026–2033 (7 anos)",
+    "float_tributario_eliminado_dias": "20–30 dias por ciclo de transação",
+    "taxa_juros_credito_empresas_out2024": "24,6% ao ano (Banco Central)",
+    "linhas_luz_sirius_inauguradas": "4 (Tatu, Sapucaia, Quati, Sapê — investimento R$ 230 milhões — nota: evento não relacionado ao mecanismo documentado)"
+  },
+  "sources": [
+    {
+      "title": "Miguel Abuhab — Idealizador do Split Payment",
+      "url": "https://miguelabuhab.com",
+      "outlet": "miguelabuhab.com",
+      "date": "2024-01-01",
+      "evidence_level": "ev-confirmed"
+    },
+    {
+      "title": "TOTVS — Protheus Reforma Tributária (Espaço Legislação)",
+      "url": "https://espacolegislacao.totvs.com/protheus-reforma-tributaria/",
+      "outlet": "TOTVS S.A.",
+      "date": "2024-01-01",
+      "evidence_level": "ev-confirmed"
+    },
+    {
+      "title": "TOTVS — Carga automática CBS e IBS no Configurador de Tributos",
+      "url": "https://centraldeatendimento.totvs.com/hc/pt-br/articles/33147484988823",
+      "outlet": "TOTVS Central de Atendimento",
+      "date": "2024-01-01",
+      "evidence_level": "ev-confirmed"
+    },
+    {
+      "title": "TOTVS — Composição Acionária",
+      "url": "https://ri.totvs.com/a-companhia/composicao-acionaria/",
+      "outlet": "TOTVS Relações com Investidores",
+      "date": "2025-01-01",
+      "evidence_level": "ev-confirmed"
+    },
+    {
+      "title": "Banco Central — Taxa média de juros para empresas out/2024",
+      "url": "https://www.bcb.gov.br/estatisticas/txjuros",
+      "outlet": "Banco Central do Brasil",
+      "date": "2024-10-01",
+      "evidence_level": "ev-confirmed"
+    }
+  ],
+  "result": "Em andamento. Período de transição 2026–2033 em curso. Split payment começa a ser implementado progressivamente. Impacto sobre PMEs mensurável a partir de 2026. Posição acionária da TOTVS favorecida pelo mercado compulsório de adaptação.",
+  "connections": ["id_181", "id_182", "id_183", "id_185", "id_186", "id_187", "id_188"],
+  "ref_artifacts": [
+    "prisao-economica.html",
+    "padroes-sistemicos-dashboard.html",
+    "banco-master-compliance-zero.html"
+  ],
+  "lacuna_investigativa": [
+    "Existe documentação formal de participação de Abuhab em grupos de trabalho legislativos que desenharam o split payment?",
+    "A TOTVS fez lobby direto para inclusão do split payment na EC 132/2023? Há registros no sistema de transparência do Congresso?",
+    "Qual o percentual de PMEs brasileiras sem ERP compatível com CBS/IBS à data de implementação?",
+    "O custo de transição de R$ 3 trilhões tem metodologia auditável ou é estimativa setorial auto-interessada?"
+  ],
+  "status": "analise_editorial",
+  "publish_target": "gosurf.site",
+  "html_artifact": "reforma-tributaria-captura-regulatoria.html",
+  "created_at": "2026-05-20",
+  "created_by": "claude-sonnet-4-6 / lawfare-timeline session",
+  "sync_note": "Atualizar claude.ai-corpus-ids-sync.json: tracks.thematic.last_id = 189, tracks.thematic.next_available = 190"
+}
