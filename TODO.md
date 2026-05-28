@@ -1,4 +1,97 @@
-## TODOs
+# Próximos passos · lawfare-timeline
+
+**Atualizado:** 2026-05-29 (T-205–T-207 publicados)
+
+---
+
+## Snapshot
+
+| Track | Last ID | Próximo | Status |
+| --- | ---: | ---: | --- |
+| Main (timeline) | 1571 | 1572 | Merge 1527–1571 concluído |
+| Thematic (estudos T) | 207 | 208 | 89 estudos em disco |
+| Fila editorial Q2 | — | — | Rodada T-205–207 concluída |
+
+---
+
+## Rodada T-205–T-207 ✅ (29/05/2026)
+
+| ID | Dossiê | Registry |
+| --- | --- | --- |
+| T-205 | [Duplo padrão judicial](/posts/2026-05-29-duplo-padrao-judicial-corpus-bridge/) | T-143 |
+| T-206 | [SPLC modelo Brasil](/posts/2026-05-29-splc-modelo-brasil-corpus-bridge/) | T-129 |
+| T-207 | [Vaza Toga INQ 4781](/posts/2026-05-29-vaza-toga-corpus-bridge/) | T-108 |
+
+**Artefatos HTML restantes sem ID:** narrativa-vs-evidencia · justicawatch-brasil → T-208/T-209
+
+---
+
+## Rodada T-202–T-204 ✅ (29/05/2026)
+
+| ID | Dossiê | Status |
+| --- | --- | --- |
+| T-202 | [Delegada × PCC SP](/posts/2026-05-29-delegada-pcc-infiltracao-institucional-sp/) | ✅ |
+| T-203 | [Zelotes CARF](/posts/2026-05-29-operacao-zelotes-carf-captura-fiscal/) | ✅ |
+| T-204 | [Gastos Paris cluster](/posts/2026-05-29-gastos-paris-cluster-extravagancia-janja/) | ✅ |
+
+---
+
+## Rodada editorial T-191–T-201 ✅ (28/05/2026)
+
+| ID | Dossiê | Status |
+| --- | --- | --- |
+| T-191 | Custeio P11 | ✅ |
+| T-192 | Vorcaro triângulo | ✅ |
+| T-193 | Viagens sigilo | ✅ |
+| T-194 | Índice cluster P11 | ✅ |
+| T-195 | CPI × PCC eleitoral | ✅ |
+| T-196 | Radar Top 30 lacunas | ✅ |
+| T-197 | Operação Rejeito 1552–1571 | ✅ |
+| T-198 | COAF × Moraes | ✅ |
+| T-199 | Lojas Americanas | ✅ |
+| T-200 | Estatais rombo P11 | ✅ |
+| T-201 | PCC transnacional OFAC/EUA/luso | ✅ |
+
+**Resultado:** 0 alertas críticos (score ≥ 40) · 200+ posts excluídos por cobertura
+
+---
+
+## Prioridade 1 — Próxima rodada (T-208+)
+
+| # | Candidato | Escopo |
+| ---: | --- | --- |
+| 1 | **T-208** | Narrativa vs Evidência (artefato HTML) |
+| 2 | **T-209** | JustiçaWatch Brasil (schema + repo) |
+| 3 | **1572+** | Batch Flávio/Trump/Escudo (main track) |
+
+Radar vivo: [T-196](/posts/2026-05-28-top30-alertas-criticos-operacoes-sem-dossie/) · [relatorio-top30-sem-estudo.md](/docs/relatorio-top30-sem-estudo.md)
+
+**Comandos:** `python tools/sync_corpus_ids.py` · `python tools/rank_ops_sem_estudo.py`
+
+---
+
+## Prioridade 2 — Infraestrutura (arquivado T-205–207)
+
+- [ ] Batch main track **1572+** (Flávio/Trump/Escudo)
+- [ ] Faixa **1449–1510** em `_data/` (`batch_file_only`)
+- [ ] 2 artefatos HTML sem ID → T-208/T-209 (narrativa-vs-evidencia, justicawatch)
+- [ ] Formalizar **P04b** em METHODOLOGY-v2.2
+- [ ] IPFS/archive.org · JustiçaWatch
+
+---
+
+## Referências
+
+- Sync: `_data/sync_status_latest.html`
+- Design system: `_data/lawfare-design-system-reference.html`
+- Portal: https://lawfare-timeline.vercel.app/
+
+---
+
+<details>
+<summary>Arquivo legado — links e rascunhos sociais</summary>
+
+## TODOs (ícones)
 
 - drone.svg > plane-departure
 - reflect.svg > sun
@@ -49,8 +142,6 @@ Brasil e Big Techs: Impacto da Seção 301
 - https://tinyurl.com/supersalarios-ia
 - https://tinyurl.com/privilegio-ia
 
-
-
 ## Lawfare
 
 -🏛️ Lawfare - O Quê, Porquê, Quem, Onde, Quando
@@ -91,12 +182,9 @@ Brasil e Big Techs: Impacto da Seção 301
 -⛓️ Decisões Judiciais Beneficiando Criminosos no Brasil 💥
 🔗 https://tinyurl.com/linhadetempo-impunes
 
-
 - 🎭 Felipe Neto e Instituto Vero com ONGs estrangeiras (Open Society, Ford, EUA)
 👉 https://tinyurl.com/usaid-felipe-neto
 🔗 https://tinyurl.com/usaid-felipe-neto-mapa
-
-
 
 Mapa Mental
 
@@ -162,42 +250,4 @@ https://mermaid.live/edit#pako:eNqNV8tu4zYU_RVCGBQJJollJ3Ec7TyOM0gxDyN2UqDIhpZoh
 - @canalsergio2
 - @GringaVidaUsa
 
-
-
-```mermaid
-graph TD
-  %% === NÓS (com emojis e rótulos claros) ===
-  STF[🏛️ STF<br><i>Supremo Tribunal Federal</i>]
-  STJ[⚖️ STJ<br><i>Superior Tribunal de Justiça</i>]
-  CF[👩‍⚖️ Conselho Federal da OAB<br><i>Amicus Curiae, Defesa da Advocacia</i>]
-  COAF[💵 COAF<br><i>Conselho de Controle de Atividades Financeiras</i>]
-  MP[🕵️‍♂️ PGR / MP-SP<br><i>Ministério Público</i>]
-  GAECO[🚨 GAECO<br><i>Grupos de Atuação Especializada</i>]
-  Facções[💣 Facções Criminosas<br><i>PCC, CV, etc.</i>]
-  Polícia[👮‍♂️ Polícia Civil/Militar<br><i>Forças de Execução</i>]
-  Sociedade[👥 Sociedade Civil<br><i>Pressão Pública, Mídia</i>]
-
-  %% === RELACIONAMENTOS ===
-  STF -- <b>Decisão Judicial</b><br>(Mandados, Inquéritos) --> MP
-  STF -- <b>Controle de Recursos</b> --> STJ
-  STF -- <b>Solicitação de Dados</b> --> COAF
-  STJ -- <b>Interpretação Jurisprudencial</b><br>(Restritiva/Ampla) --> GAECO
-  CF -- <b>Amicus Curiae</b><br>(Subsídios Técnicos) --> STF
-  COAF -- <b>Compartilhamento de Dados</b><br>(Movimentações suspeitas) --> MP
-  MP -- <b>Investigação Penal</b> --> Facções
-  MP -- <b>Coordenação Tática</b> --> GAECO
-  GAECO -- <b>Operações Especializadas</b> --> Facções
-  Polícia -- <b>Execução de Mandados</b> --> GAECO
-  Sociedade -- <b>Pressão Pública</b><br>(Campanhas, Denúncias) --> MP
-
-  %% === ESTILOS OPCIONAIS (para cor, se suportado) ===
-  classDef instituicao fill:#2c3e50,stroke:#34495e,color:white,font-size:12px;
-  classDef operacional fill:#e67e22,stroke:#d35400,color:white,font-size:12px;
-  classDef ameaca fill:#c0392b,stroke:#a02c1b,color:white,font-size:12px;
-  classDef sociedade fill:#27ae60,stroke:#219653,color:white,font-size:12px;
-
-  class STF,STJ,CF,COAF,MP instituicao
-  class GAECO,Polícia operacional
-  class Facções ameaca
-  class Sociedade sociedade
-```
+</details>

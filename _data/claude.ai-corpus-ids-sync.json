@@ -72,20 +72,20 @@
             1527,
             1551
           ],
-          "status": "jekyll_published",
-          "notes": "Posts/estudos Jekyll (Biomm 1527-1546, Zema 1547-1550, Homeschooling 1551). lawfare.json termina em 1526 — merge batch pendente."
+          "status": "confirmed",
+          "notes": "Merge lawfare.json 2026-05-28: Biomm 1527-1546, Zema 1547-1550, Homeschooling 1551."
         },
         {
           "range": [
             1552,
             1571
           ],
-          "status": "jekyll_published",
-          "notes": "Operação Rejeito — ~20 posts em _posts/ (source_data lawfare-batch-rejeito-1552-1571.json). IDs reservados; lawfare.json merge pendente (next_available=1527)."
+          "status": "confirmed",
+          "notes": "Merge lawfare.json 2026-05-28: Operação Rejeito 1552-1571."
         }
       ],
-      "last_id": 1526,
-      "next_available": 1527
+      "last_id": 1571,
+      "next_available": 1572
     },
     "thematic": {
       "description": "Sub-corpus temático — análise estrutural e padrões sistêmicos",
@@ -580,10 +580,10 @@
         },
         {
           "id": 180,
-          "status": "pending",
-          "topic": "TSE — seletividade em inelegibilidade e cassação de mandatos (P03 no sistema eleitoral)",
-          "artifact": null,
-          "notes": "Entrada pendente de produção"
+          "status": "confirmed",
+          "topic": "TSE — seletividade em inelegibilidade e cassação (T-180)",
+          "artifact": "tse-seletividade-inelegibilidade-cassacao",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-tse-seletividade-inelegibilidade-cassacao)."
         },
         {
           "id": 181,
@@ -686,32 +686,125 @@
           "status": "confirmed",
           "topic": "Custeio administrativo federal — P11 (T-191)",
           "artifact": "custeio-administrativo-federal-p11",
-          "notes": "Estudo Jekyll 2026-05-27/28."
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-27-custeio-administrativo-federal-p11)."
+        },
+        {
+          "id": 192,
+          "status": "confirmed",
+          "topic": "Vorcaro triângulo carbono–mineração–banco (T-192)",
+          "artifact": "vorcaro-triangulo-carbono-mineracao-banco",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-vorcaro-triangulo-carbono-mineracao-banco)."
+        },
+        {
+          "id": 193,
+          "status": "confirmed",
+          "topic": "Viagens/gastos sigilo — complemento T-191 (T-193)",
+          "artifact": "viagens-gastos-sigilo-complemento-p11",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-viagens-gastos-sigilo-complemento-p11)."
+        },
+        {
+          "id": 194,
+          "status": "confirmed",
+          "topic": "Máquina de Gastos P11 — índice cluster (T-194)",
+          "artifact": "maquina-gastos-p11-indice-cluster",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-maquina-gastos-p11-indice-cluster)."
+        },
+        {
+          "id": 195,
+          "status": "confirmed",
+          "topic": "CPI Crime Organizado × PCC eleitoral (T-195)",
+          "artifact": "cpi-crime-organizado-pcc-infiltracao-eleitoral",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-cpi-crime-organizado-pcc-infiltracao-eleitoral)."
         },
         {
           "id": 196,
           "status": "confirmed",
           "topic": "Radar de Lacunas — Top 30 sem dossiê (T-196)",
           "artifact": "top30-alertas-criticos-operacoes-sem-dossie",
-          "notes": "Artigo Jekyll/artigos; ex-T-191 radar."
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-top30-alertas-criticos-operacoes-sem-dossie)."
+        },
+        {
+          "id": 197,
+          "status": "confirmed",
+          "topic": "Operação Rejeito / Serra do Curral / 3 manuscritos (T-197)",
+          "artifact": "operacao-rejeito-serra-curral-manuscritos",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-operacao-rejeito-serra-curral-manuscritos)."
+        },
+        {
+          "id": 198,
+          "status": "confirmed",
+          "topic": "COAF × Moraes — acumulação de funções / dosimetria (T-198)",
+          "artifact": "coaf-moraes-acumulacao-funcoes-dosimetria",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-coaf-moraes-acumulacao-funcoes-dosimetria)."
+        },
+        {
+          "id": 199,
+          "status": "confirmed",
+          "topic": "Fraude Lojas Americanas — risco sacado (T-199)",
+          "artifact": "fraude-lojas-americanas-risco-sacado",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-fraude-lojas-americanas-risco-sacado)."
+        },
+        {
+          "id": 200,
+          "status": "confirmed",
+          "topic": "Estatais federais rombo P11 — complemento (T-200)",
+          "artifact": "estatais-rombo-p11-complemento",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-estatais-rombo-p11-complemento)."
+        },
+        {
+          "id": 201,
+          "status": "confirmed",
+          "topic": "PCC transnacional — OFAC/EUA/eixo luso (T-201)",
+          "artifact": "pcc-transnacional-ofac-eua-luso",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-pcc-transnacional-ofac-eua-luso)."
+        },
+        {
+          "id": 202,
+          "status": "confirmed",
+          "topic": "Delegada × PCC — infiltração institucional SP (T-202)",
+          "artifact": "delegada-pcc-infiltracao-institucional-sp",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-29-delegada-pcc-infiltracao-institucional-sp)."
+        },
+        {
+          "id": 203,
+          "status": "confirmed",
+          "topic": "Operação Zelotes — captura CARF (T-203)",
+          "artifact": "operacao-zelotes-carf-captura-fiscal",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-29-operacao-zelotes-carf-captura-fiscal)."
+        },
+        {
+          "id": 204,
+          "status": "confirmed",
+          "topic": "Gastos Paris — cluster extravância Janja (T-204)",
+          "artifact": "gastos-paris-cluster-extravagancia-janja",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-29-gastos-paris-cluster-extravagancia-janja)."
+        },
+        {
+          "id": 205,
+          "status": "confirmed",
+          "topic": "Duplo Padrão Judicial — índice corpus (T-205)",
+          "artifact": "duplo-padrao-judicial-corpus-bridge",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-29-duplo-padrao-judicial-corpus-bridge)."
+        },
+        {
+          "id": 206,
+          "status": "confirmed",
+          "topic": "SPLC Modelo Brasil — índice corpus (T-206)",
+          "artifact": "splc-modelo-brasil-corpus-bridge",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-29-splc-modelo-brasil-corpus-bridge)."
+        },
+        {
+          "id": 207,
+          "status": "confirmed",
+          "topic": "Vaza Toga INQ 4781 — índice corpus (T-207)",
+          "artifact": "vaza-toga-corpus-bridge",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-29-vaza-toga-corpus-bridge)."
         }
       ],
-      "last_id": 196,
-      "next_available": 197,
-      "pending": [
-        180,
-        192,
-        193,
-        194,
-        195
-      ],
-      "pending_notes": {
-        "180": "TSE seletividade — entrada pronta para produção",
-        "192": "Operação Rejeito / Serra do Curral / manuscritos (cluster 1552–1571)",
-        "193": "Gastos públicos sob sigilo — parcialmente coberto por T-191",
-        "194": "Vorcaro carbono fictício × Compliance Zero × Rejeito",
-        "195": "CPI Crime Organizado × infiltração eleitoral PCC"
-      }
+      "last_id": 207,
+      "next_available": 208,
+      "pending": [],
+      "pending_notes": {}
     }
   },
   "artifacts_index": {
@@ -1028,26 +1121,18 @@
     "main_track_last_sync": "2026-05-28",
     "thematic_track_last_sync": "2026-05-28",
     "ids_confirmed_total": {
-      "main_track": "1526 (lawfare.json); jekyll batches 1527-1571 merge pendente",
-      "thematic_track": 196
+      "main_track": "1571",
+      "thematic_track": 207
     },
     "ids_pending_production": [
-      180,
-      192,
-      193,
-      194,
-      195
+      180
     ],
     "artifacts_without_thematic_id": [
-      "splc-modelo-brasil.html",
-      "duplo-padrao-judicial.html",
       "narrativa-vs-evidencia.html",
-      "vaza-toga.html",
       "justicawatch-brasil.html"
     ],
     "open_items": [
       "Formalizar P04b como subcategoria em METHODOLOGY-v2.2.md",
-      "Produzir ID 180 (TSE seletividade)",
       "Série Operação Travessia: IDs 189–196 (deslocada; 185-188 = Dosimetria)",
       "Implementar espelhamento IPFS/archive.org",
       "Integrar JustiçaWatch em /data/justicawatch/ no repositório",
@@ -1056,9 +1141,27 @@
       "Zema/mineracao publicado como 1547-1550 (185-188 thematic = Dosimetria)",
       "Homeschooling Jales publicado como 1551",
       "lawfare.json last_id=1526; próximo ID livre=1527",
-      "Merge lawfare.json: batches Jekyll 1527-1551 e Rejeito 1552-1571",
       "Estudos T-189, T-190, T-191, T-196 publicados em _posts/estudos/",
-      "Fila editorial T-192 a T-195 (ver artigos/2026-05-27-top30-alertas-criticos-operacoes-sem-dossie.md)"
+      "Fila editorial 2026-05-28: merge main até 1571; T-192–T-195 publicados",
+      "Pendente: batch 1572+ Flávio/Trump após validação",
+      "lawfare.json last_id=1571; próximo ID livre=1572",
+      "Fila editorial 2026-05-28: merge 1527-1571; T-192–T-195 em _posts/estudos/",
+      "Fila editorial 2026-05-28: merge 1527-1571; T-192–T-197 em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-05-28)",
+      "Fila editorial 2026-05-28: merge 1527-1571; T-192–T-198 em _posts/estudos/",
+      "T-198 COAF × Moraes publicado (2026-05-28)",
+      "Fila editorial 2026-05-28: merge 1527-1571; T-192–T-200 em _posts/estudos/",
+      "T-199 Lojas Americanas publicado (2026-05-28)",
+      "T-200 Estatais rombo P11 publicado (2026-05-28)",
+      "Fila editorial 2026-05-28: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-201 PCC transnacional publicado (2026-05-28)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-05-28)",
+      "T-202 Delegada × PCC publicado (2026-05-28)",
+      "T-203 Zelotes CARF publicado (2026-05-28)",
+      "T-204 Gastos Paris publicado (2026-05-28)",
+      "T-205 Duplo padrão corpus publicado (2026-05-28)",
+      "T-206 SPLC corpus publicado (2026-05-28)",
+      "T-207 Vaza Toga corpus publicado (2026-05-28)"
     ]
   },
   "id_conflict_resolutions": {

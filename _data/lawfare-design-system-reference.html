@@ -194,6 +194,7 @@ body { background: var(--bg); color: var(--fg); font-family: var(--font-mono); f
   <button class="nav-tab"         onclick="showTab('components')">Componentes</button>
   <button class="nav-tab"         onclick="showTab('grids')">Grids</button>
   <button class="nav-tab"         onclick="showTab('patterns')">Padrões P1–P8</button>
+  <button class="nav-tab"         onclick="showTab('sync')">Corpus sync</button>
   <button class="nav-tab"         onclick="showTab('rules')">Regras AI</button>
 </div>
 
@@ -619,6 +620,51 @@ body { background: var(--bg); color: var(--fg); font-family: var(--font-mono); f
         <span class="badge b-blue">EMERGENTE</span>
         <span class="badge b-blue" style="font-size:9px">Hydra (2GO/InvBank) · Carbono Oculto (BK Bank)</span>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CORPUS SYNC ═══ -->
+<div id="tab-sync" class="tab-panel">
+
+  <div class="section-title">Status do corpus · pós-sync</div>
+  <div class="section-note">
+    Painel gerado a partir de <code style="color:var(--fg2)">claude.ai-corpus-ids-sync.json</code>.
+    Atualizar com <code style="color:var(--fg2)">python tools/sync_corpus_ids.py</code> e recarregar o iframe.
+    <a href="sync_status_latest.html" target="_blank" rel="noopener" style="color:var(--blue)">Abrir painel em página isolada ↗</a>
+  </div>
+
+  <div class="stat-grid mb-24">
+    <div class="stat-item">
+      <div class="stat-num text-amber">1526</div>
+      <div class="stat-lbl">lawfare.json last_id</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num text-blue">196</div>
+      <div class="stat-lbl">thematic · next 197</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num text-green">5</div>
+      <div class="stat-lbl">pending 180, 192–195</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num text-red">45</div>
+      <div class="stat-lbl">jekyll 1527–1571 sem merge</div>
+    </div>
+  </div>
+
+  <iframe
+    src="sync_status_latest.html"
+    title="Corpus sync status"
+    style="width:100%;min-height:720px;border:1px solid var(--border);border-radius:6px;background:var(--bg1)"
+    loading="lazy"
+  ></iframe>
+
+  <div class="alert al-blue" style="margin-top:16px">
+    <div class="al-icon">ℹ</div>
+    <div>
+      <div class="al-title">T-192 canônico</div>
+      <div class="al-desc">Fila editorial <strong>T-192</strong> = Vorcaro triângulo (artigos/t192-*.html), não Rejeito. Rejeito permanece no main track 1552–1571 até merge em lawfare.json.</div>
     </div>
   </div>
 </div>

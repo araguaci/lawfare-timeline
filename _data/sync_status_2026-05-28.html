@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corpus sync · 2026-05-28</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#080c10;--bg1:#0d1218;--bg2:#121820;--border:rgba(255,255,255,.06);--border2:rgba(255,255,255,.12);
+  --fg:#e8ecf0;--fg2:#8a9ab0;--fg3:#4a5a6a;
+  --red:#e84040;--amber:#e8a020;--blue:#3090e8;--green:#28c880;
+  --font-mono:'IBM Plex Mono',monospace;--font-display:'Syne',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-mono);font-size:13px;line-height:1.6;padding:24px 20px;max-width:960px;margin:0 auto}
+h1{font-family:var(--font-display);font-size:22px;margin-bottom:4px}
+.sub{font-size:12px;color:var(--fg2);margin-bottom:20px}
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:20px}
+.stat{background:var(--bg1);border:1px solid var(--border);border-radius:6px;padding:12px 14px}
+.stat-n{font-family:var(--font-display);font-size:22px;font-weight:700}
+.stat-l{font-size:10px;color:var(--fg3);margin-top:4px;line-height:1.4}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin-bottom:20px}
+.card{background:var(--bg1);border:1px solid var(--border);border-radius:6px;padding:14px 16px}
+.sh{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--fg3);border-bottom:1px solid var(--border);padding-bottom:8px;margin-bottom:10px}
+.row{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);font-size:12px}
+.row:last-child{border:none}
+.dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;margin-top:5px}
+.d-ok{background:var(--green)}.d-warn{background:var(--amber)}.d-info{background:var(--blue)}.d-danger{background:var(--red)}.d-gray{background:var(--fg3)}
+.tag{font-size:9px;font-weight:600;padding:2px 6px;border-radius:3px;margin-right:6px;text-transform:uppercase;letter-spacing:.06em}
+.t-ok{background:rgba(40,200,128,.12);color:var(--green);border:1px solid rgba(40,200,128,.3)}
+.t-warn{background:rgba(232,160,32,.12);color:var(--amber);border:1px solid rgba(232,160,32,.3)}
+.t-info{background:rgba(48,144,232,.12);color:var(--blue);border:1px solid rgba(48,144,232,.3)}
+.t-gray{background:var(--bg2);color:var(--fg2);border:1px solid var(--border)}
+.t-danger{background:rgba(232,64,64,.12);color:var(--red);border:1px solid rgba(232,64,64,.3)}
+.lbl{font-family:var(--font-mono);font-size:10px;font-weight:600;color:var(--blue);min-width:48px}
+.desc{color:var(--fg2);flex:1;line-height:1.5}
+code{font-size:11px;color:var(--fg)}
+.footer{margin-top:24px;font-size:10px;color:var(--fg3);border-top:1px solid var(--border);padding-top:12px}
+a{color:var(--blue)}
+</style>
+</head>
+<body>
+<h1>Corpus sync · lawfare-timeline</h1>
+<p class="sub">Gerado em 2026-05-28 · <code>python tools/sync_corpus_ids.py</code> · fonte <a href="claude.ai-corpus-ids-sync.json">claude.ai-corpus-ids-sync.json</a></p>
+
+<div class="stat-grid">
+  <div class="stat"><div class="stat-n" style="color:var(--amber)">1571</div><div class="stat-l">last_id lawfare.json<br>next: 1572</div></div>
+  <div class="stat"><div class="stat-n" style="color:var(--blue)">207</div><div class="stat-l">thematic last_id<br>next: 208</div></div>
+  <div class="stat"><div class="stat-n" style="color:var(--green)">0</div><div class="stat-l">pending production<br>—</div></div>
+  <div class="stat"><div class="stat-n" style="color:var(--green)">0</div><div class="stat-l">IDs faixa 1527–1571<br>merged</div></div>
+</div>
+
+<div class="grid2">
+  <div class="card">
+    <div class="sh">main track</div>
+    <div class="row"><div class="dot d-ok"></div><div class="desc"><span class="tag t-ok">confirmed</span>1–1571 em lawfare.json</div></div>
+    <div class="row"><div class="dot d-ok"></div><div class="desc"><span class="tag t-ok">confirmed</span>1527–1571 merge em lawfare.json (2026-05-28)</div></div>
+    <div class="row"><div class="dot d-gray"></div><div class="desc"><span class="tag t-gray">batch_file_only</span>1449–1510 em _data/</div></div>
+    <div class="row"><div class="dot d-info"></div><div class="desc"><span class="tag t-info">próximo</span>ID 1572+ (batch Flávio/Trump)</div></div>
+  </div>
+  <div class="card">
+    <div class="sh">thematic track</div>
+    <div class="row"><div class="dot d-ok"></div><div class="desc"><span class="tag t-ok">confirmed</span>100–207 (estudos T em disco: 20)</div></div>
+    
+    <div class="row"><div class="dot d-gray"></div><div class="desc"><span class="tag t-gray">sem ID</span>5 artefatos → candidatos 208–212</div></div>
+  </div>
+</div>
+
+<div class="card" style="margin-bottom:12px">
+  <div class="sh">fila editorial</div>
+  <div class="row"><div class="dot d-ok"></div><div class="lbl">T-192</div><div class="desc">Vorcaro triângulo — publicado em <code>_posts/estudos/</code></div></div>
+  <div class="row"><div class="dot d-ok"></div><div class="lbl">T-197</div><div class="desc">Operação Rejeito / Serra do Curral — publicado em <code>_posts/estudos/</code></div></div>
+  <div class="row"><div class="dot d-ok"></div><div class="lbl">T-198</div><div class="desc">COAF × Moraes / dosimetria — publicado em <code>_posts/estudos/</code></div></div>
+  <div class="row"><div class="dot d-ok"></div><div class="lbl">T-180</div><div class="desc">TSE seletividade punitiva · <span class="tag t-ok">confirmed</span></div></div>
+  <div class="row"><div class="dot d-ok"></div><div class="lbl">T-199</div><div class="desc">Fraude Lojas Americanas — publicado em <code>_posts/estudos/</code></div></div>
+  <div class="row"><div class="dot d-ok"></div><div class="lbl">T-200</div><div class="desc">Estatais rombo P11 — publicado em <code>_posts/estudos/</code></div></div>
+  <div class="row"><div class="dot d-ok"></div><div class="lbl">T-201</div><div class="desc">PCC transnacional OFAC/EUA/luso — publicado</div></div>
+  <div class="row"><div class="dot d-ok"></div><div class="lbl">T-196</div><div class="desc">Radar Top 30 lacunas — publicado</div></div>
+  <div class="row"><div class="dot d-ok"></div><div class="lbl">T-202</div><div class="desc">Delegada × PCC — publicado</div></div>
+  <div class="row"><div class="dot d-ok"></div><div class="lbl">T-203</div><div class="desc">Zelotes CARF — publicado</div></div>
+  <div class="row"><div class="dot d-ok"></div><div class="lbl">T-204</div><div class="desc">Gastos Paris cluster — publicado</div></div>
+  <div class="row"><div class="dot d-ok"></div><div class="lbl">T-205</div><div class="desc">Duplo padrão corpus — publicado</div></div>
+  <div class="row"><div class="dot d-ok"></div><div class="lbl">T-206</div><div class="desc">SPLC corpus — publicado</div></div>
+  <div class="row"><div class="dot d-ok"></div><div class="lbl">T-207</div><div class="desc">Vaza Toga corpus — publicado</div></div>
+  <div class="row"><div class="dot d-info"></div><div class="lbl">T-208+</div><div class="desc">Narrativa vs Evidência · JustiçaWatch · batch 1572+</div></div>
+</div>
+
+<div class="card">
+  <div class="sh">open items</div>
+  <div class="row"><div class="dot d-warn"></div><div class="desc">IPFS/archive.org · JustiçaWatch · P04b em METHODOLOGY-v2.2 · shadowban @araguaci</div></div>
+</div>
+
+<p class="footer">CC0 · lawfare-timeline · Atualizar: <code>python tools/sync_corpus_ids.py</code></p>
+</body>
+</html>
