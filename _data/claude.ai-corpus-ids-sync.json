@@ -11,20 +11,20 @@
     "tracks": {
       "main": {
         "description": "Track principal — eventos institucionais, decisões judiciais, episódios políticos",
-        "id_range": "1–1571 (confirmed); 1572–1576 pending merge",
+        "id_range": "1–1576 (confirmed)",
         "id_format": "integer",
-        "last_confirmed": 1571,
+        "last_confirmed": 1576,
         "last_jekyll_published": 1571,
         "last_session_produced": 1576,
-        "notes": "lawfare.json confirmado até 1526. Jekyll publica 1527–1571. Batch 1572–1576 produzido nesta sessão — pendente merge."
+        "notes": "lawfare.json confirmado até 1576. Jekyll publica 1527–1571. Batch 1572–1576 merged 2026-05-28."
       },
       "thematic": {
         "description": "Sub-corpus temático — análise estrutural de operações e padrões",
-        "id_range": "100–201",
+        "id_range": "100–209",
         "id_format": "integer",
-        "last_confirmed": 201,
+        "last_confirmed": 209,
         "last_session_produced": 192,
-        "notes": "T-192 produzido nesta sessão. IDs 193–197 reservados para fila editorial."
+        "notes": "T-197 a T-207 confirmados 2026-05-28. T-208/T-209 reserved. Americanas = T-199 (não T-197 como decidido na sessão — repo já tinha T-197=Rejeito). SPLC = T-206 (não T-202 como decidido na sessão — repo já tinha T-202=Delegada×PCC)."
       }
     }
   },
@@ -33,938 +33,187 @@
       "description": "Track principal — IDs sequenciais do corpus histórico 1990–2026",
       "confirmed_batches": [
         {
-          "range": [
-            1,
-            999
-          ],
+          "range": [1, 999],
           "status": "confirmed",
           "notes": "Corpus histórico — operações, decisões, episódios 1990–2020."
         },
         {
-          "range": [
-            1000,
-            1399
-          ],
+          "range": [1000, 1399],
           "status": "confirmed",
           "notes": "Expansão 2020–2024. Lava Jato reversal, INQ 4781 origem, TSE/censura digital."
         },
         {
-          "range": [
-            1400,
-            1448
-          ],
+          "range": [1400, 1448],
           "status": "confirmed",
           "notes": "Batch confirmado em lawfare.json. Último ID verificado: 1448. Banco Master, CPI INSS, Op. Hydra 2026, penduricalhos 2025-2026."
         },
         {
-          "range": [
-            1449,
-            1510
-          ],
+          "range": [1449, 1510],
           "status": "batch_file_only",
           "notes": "NÃO em lawfare.json — apenas em _data/ batch files. PCC/Ndrangheta (1484-1485), Carbono Oculto/Tank (1486-1487), OFAC (1488), PCC Portugal/Europa (1489-1496), Narco Fluxo (1497-1498), Carbono Oculto PGE-SP/Genial (1499-1500), Hezbollah/FARC/Yakuza (1501-1503), Antimáfia (1504), CPI CO (1505). Gap 1449-1480 potencial se houver merge linear futuro.",
           "do_not_overwrite": true,
           "pcc_namespace": "canonical_pcc_ndrangheta — range 1481-1500 protegido"
         },
         {
-          "range": [
-            1511,
-            1526
-          ],
+          "range": [1511, 1526],
           "status": "confirmed",
           "notes": "Merge 2026-05-26. Biazucci 1511-1513; crise diplomática Brasil-EUA 1514-1524; Ramagem/ICE 1525-1526."
         },
         {
-          "range": [
-            1527,
-            1551
-          ],
+          "range": [1527, 1551],
           "status": "confirmed",
           "merge_pending": false,
           "notes": "Merge lawfare.json 2026-05-28: Biomm 1527-1546, Zema 1547-1550, Homeschooling 1551.",
           "source_files": [
-            "_data/processados/lawfare-batch-biomm-1527-1546.json",
-            "_data/processados/lawfare-batch-zema-1547-1550.json",
-            "_data/processados/lawfare-batch-homeschooling-1551.json"
+            "_data/processados/lawfare-1527-1546-biomm-renumerado.json",
+            "_data/processados/zema-1547-1550-renumerado.json"
           ]
         },
         {
-          "range": [
-            1552,
-            1571
-          ],
+          "range": [1552, 1571],
           "status": "confirmed",
           "merge_pending": false,
           "notes": "Merge lawfare.json 2026-05-28: Operação Rejeito 1552-1571.",
           "source_files": [
-            "_data/todo/lawfare-batch-rejeito-1552-1571.json"
+            "_data/processados/lawfare-batch-rejeito-1552-1571.json"
           ]
         },
         {
-          "range": [
-            1572,
-            1576
-          ],
-          "status": "produced",
-          "merge_pending": true,
-          "notes": "Flávio Bolsonaro / Trump / Escudo das Américas — produzido 2026-05-28. Pendente: commit _data/todo/, merge após 1527-1571.",
+          "range": [1572, 1576],
+          "status": "confirmed",
+          "merge_pending": false,
+          "notes": "Merge lawfare.json 2026-05-28: Flávio Bolsonaro / Trump / Escudo das Américas.",
           "source_files": [
-            "_data/todo/lawfare-batch-flavio-trump-1572-1576.json"
+            "_data/processados/lawfare-batch-flavio-trump-1572-1576.json"
           ],
           "entries_summary": [
-            {
-              "id": 1572,
-              "data": "2026-05-27",
-              "titulo": "Flávio Bolsonaro recebido por Trump na Casa Branca — promessa Escudo das Américas"
-            },
-            {
-              "id": 1573,
-              "data": "2026-05-27",
-              "titulo": "Flávio solicita a Trump designação do PCC e CV como organizações terroristas"
-            },
-            {
-              "id": 1574,
-              "data": "2026-05-27",
-              "titulo": "Viagem a Washington após filtração que vincula Flávio a Daniel Vorcaro"
-            },
-            {
-              "id": 1575,
-              "data": "2026-05-27",
-              "titulo": "Minerais críticos brasileiros como alternativa ao monopólio chinês — oferta a Trump"
-            },
-            {
-              "id": 1576,
-              "data": "2026-05-27",
-              "titulo": "Escudo das Américas — governo Lula opõe soberania; Flávio promete adesão se eleito"
-            }
+            {"id": 1572, "data": "2026-05-27", "titulo": "Flávio Bolsonaro recebido por Trump na Casa Branca — promessa Escudo das Américas"},
+            {"id": 1573, "data": "2026-05-27", "titulo": "Flávio solicita a Trump designação do PCC e CV como organizações terroristas"},
+            {"id": 1574, "data": "2026-05-27", "titulo": "Viagem a Washington após filtração que vincula Flávio a Daniel Vorcaro"},
+            {"id": 1575, "data": "2026-05-27", "titulo": "Minerais críticos brasileiros como alternativa ao monopólio chinês — oferta a Trump"},
+            {"id": 1576, "data": "2026-05-27", "titulo": "Escudo das Américas — governo Lula opõe soberania; Flávio promete adesão se eleito"}
           ]
         }
       ],
-      "last_id": 1571,
+      "last_id": 1576,
       "last_jekyll_published": 1571,
       "last_produced": 1576,
-      "next_available_after_merge": 1577,
-      "merge_queue": [
-        {
-          "range": [
-            1527,
-            1551
-          ],
-          "priority": 1,
-          "status": "jekyll_published — merge em lawfare.json"
-        },
-        {
-          "range": [
-            1552,
-            1571
-          ],
-          "priority": 1,
-          "status": "jekyll_published — merge em lawfare.json"
-        },
-        {
-          "range": [
-            1572,
-            1576
-          ],
-          "priority": 2,
-          "status": "produced — commit _data/todo/ + merge"
-        }
-      ],
-      "next_available": 1572
+      "next_available": 1577,
+      "merge_queue": []
     },
     "thematic": {
       "description": "Sub-corpus temático — análise estrutural e padrões sistêmicos",
       "entries": [
-        {
-          "id": 100,
-          "status": "confirmed",
-          "topic": "Padrões sistêmicos — definição P01–P08 inicial",
-          "artifact": "padroes-sistemicos-dashboard.html"
-        },
-        {
-          "id": 101,
-          "status": "confirmed",
-          "topic": "INQ 4.781 — abertura sem provocação da PGR",
-          "artifact": "inq4781.html"
-        },
-        {
-          "id": 102,
-          "status": "confirmed",
-          "topic": "INQ 4.781 — acumulação de funções: vítima + investigador + julgador",
-          "artifact": "inq4781.html"
-        },
-        {
-          "id": 103,
-          "status": "confirmed",
-          "topic": "INQ 4.781 — ausência de revisão independente (P03 chokepoint)",
-          "artifact": "inq4781.html"
-        },
-        {
-          "id": 104,
-          "status": "confirmed",
-          "topic": "Lava Jato — anulação retrospectiva por suspeição (P01)",
-          "artifact": "operacao_lava_jato.html"
-        },
-        {
-          "id": 105,
-          "status": "confirmed",
-          "topic": "Lava Jato — inversão: alvo vira investigador do investigador (P02)",
-          "artifact": "operacao_lava_jato.html"
-        },
-        {
-          "id": 106,
-          "status": "confirmed",
-          "topic": "Lava Jato — captura do chokepoint STF (P03)",
-          "artifact": "operacao_lava_jato.html"
-        },
-        {
-          "id": 107,
-          "status": "confirmed",
-          "topic": "Satiagraha — captura e reversão STJ/STF (P01/P03)",
-          "artifact": "satiagraha.html"
-        },
-        {
-          "id": 108,
-          "status": "confirmed",
-          "topic": "Vaza Toga — mecanismo espelho: weaponized legalism ativo",
-          "artifact": "vaza-toga.html"
-        },
-        {
-          "id": 109,
-          "status": "confirmed",
-          "topic": "Gilmar Mendes — início documentação episódios (alem-da-toga)",
-          "artifact": "alem-da-toga.html"
-        },
-        {
-          "id": 110,
-          "status": "confirmed",
-          "topic": "P03 — Padrão chokepoint: definição e primeiros casos",
-          "artifact": "padroes-sistemicos-dashboard.html"
-        },
-        {
-          "id": 111,
-          "status": "confirmed",
-          "topic": "P06 — Prescrição estratégica: casos documentados 1993–2010",
-          "artifact": "padroes-sistemicos-dashboard.html"
-        },
-        {
-          "id": 112,
-          "status": "confirmed",
-          "topic": "Castelo de Areia — anulação por ilicitude de provas (P01)",
-          "artifact": "operacao_castelo_de_areia.html"
-        },
-        {
-          "id": 113,
-          "status": "confirmed",
-          "topic": "Poço de Lobato — reversão e extinção (P01/P06)",
-          "artifact": "operacao_poco_de_lobato.html"
-        },
-        {
-          "id": 114,
-          "status": "confirmed",
-          "topic": "Banco Master — ascensão atípica: compliance zero documentado",
-          "artifact": "banco-master-compliance-zero.html"
-        },
-        {
-          "id": 115,
-          "status": "confirmed",
-          "topic": "Banco Master — donos e estrutura societária opaca",
-          "artifact": "banco-master-os-donos.html"
-        },
-        {
-          "id": 116,
-          "status": "confirmed",
-          "topic": "Faixa Tropical — P08 fintech como veículo de lavagem",
-          "artifact": "faixa-tropical.html"
-        },
-        {
-          "id": 117,
-          "status": "confirmed",
-          "topic": "PCC/CV — inteligência operacional e expansão transnacional",
-          "artifact": "PCC-CV-Intel-Dashboard-2026.html"
-        },
-        {
-          "id": 118,
-          "status": "confirmed",
-          "topic": "Cocaína Vermelha — fusão narco-política documentada",
-          "artifact": "cocaina-vermelha.html"
-        },
-        {
-          "id": 119,
-          "status": "confirmed",
-          "topic": "Carbono Oculto — greenwashing como P08 (lavagem via ESG)",
-          "artifact": "carbono_oculto.html"
-        },
-        {
-          "id": 120,
-          "status": "confirmed",
-          "topic": "Corrida dos Ratos — mapa mental: estrutura de fuga de capitais",
-          "artifact": "corrida-dos-ratos-mindmap.html"
-        },
-        {
-          "id": 121,
-          "status": "confirmed",
-          "topic": "Oliver Ortiz — timeline: P08 + P10 aplicado a ator individual",
-          "artifact": "oliver-ortiz-timeline.html"
-        },
-        {
-          "id": 122,
-          "status": "confirmed",
-          "topic": "República Capturada — tese central: sistema de extração estrutural",
-          "artifact": "republica-capturada.html"
-        },
-        {
-          "id": 123,
-          "status": "confirmed",
-          "topic": "Zero x Zero — tabela comparativa assimetria punitiva",
-          "artifact": "zero-x-zero.html"
-        },
-        {
-          "id": 124,
-          "status": "confirmed",
-          "topic": "Paralelos — análise comparada: Brasil vs padrões internacionais",
-          "artifact": "paralelos.html"
-        },
-        {
-          "id": 125,
-          "status": "confirmed",
-          "topic": "Thread Operações — nexo entre operações 1993–2026",
-          "artifact": "thread-operacoes-brasil.html"
-        },
-        {
-          "id": 126,
-          "status": "confirmed",
-          "topic": "Paradoxo Constitucional — STF entre guardião e vetor de captura",
-          "artifact": "paradoxo-constitucional.html"
-        },
-        {
-          "id": 127,
-          "status": "confirmed",
-          "topic": "Obediência e Caos — dinâmica sistêmica de conformidade institucional",
-          "artifact": "obediencia-e-caos.html"
-        },
-        {
-          "id": 128,
-          "status": "confirmed",
-          "topic": "Brasil Sangra — extração macroeconômica P11 documentada",
-          "artifact": "brasil-sangra.html"
-        },
-        {
-          "id": 129,
-          "status": "confirmed",
-          "topic": "SPLC Modelo Brasil — infraestrutura narrativa e weaponização",
-          "artifact": "splc-modelo-brasil.html"
-        },
-        {
-          "id": 130,
-          "status": "confirmed",
-          "topic": "Greenwashing — Operação: crimes ambientais + P08",
-          "artifact": "operacao-greenwashing.html"
-        },
-        {
-          "id": 131,
-          "status": "confirmed",
-          "topic": "Lava Jato Mapa Mental — estrutura e atores",
-          "artifact": "lava-jato-mapa-mental.html"
-        },
-        {
-          "id": 132,
-          "status": "confirmed",
-          "topic": "Lava Jato Mapa Mental Analítico — padrões P01–P03 projetados",
-          "artifact": "lava-jato-mapa-mental-analitico.html"
-        },
-        {
-          "id": 133,
-          "status": "confirmed",
-          "topic": "Padrões Sistêmicos Dashboard — P01–P11 consolidado",
-          "artifact": "padroes-sistemicos-dashboard.html"
-        },
-        {
-          "id": 134,
-          "status": "confirmed",
-          "topic": "P09 — Parlamentarismo de fato: neutralização legislativa documentada",
-          "artifact": "padroes-sistemicos-dashboard.html"
-        },
-        {
-          "id": 135,
-          "status": "confirmed",
-          "topic": "P10 — Infraestrutura de serviço compartilhada: definição e casos",
-          "artifact": "padroes-sistemicos-dashboard.html"
-        },
-        {
-          "id": 136,
-          "status": "confirmed",
-          "topic": "P11 — Loop macroeconômico: pobreza como input estrutural",
-          "artifact": "padroes-sistemicos-dashboard.html"
-        },
-        {
-          "id": 137,
-          "status": "confirmed",
-          "topic": "Alem da Toga — dossiê Gilmar Mendes 90+ episódios (atualizado abr/2026)",
-          "artifact": "alem-da-toga.html"
-        },
-        {
-          "id": 138,
-          "status": "confirmed",
-          "topic": "INQ 4781 — análise completa do inquérito reflexivo",
-          "artifact": "inq4781.html"
-        },
-        {
-          "id": 139,
-          "status": "confirmed",
-          "topic": "Operação Hydra 2026 — CPI INSS + P10 ativo",
-          "artifact": "operacao-hydra-2026.html"
-        },
-        {
-          "id": 140,
-          "status": "confirmed",
-          "topic": "Operação Armadilha ICE — P08 fintech + crime organizado transnacional",
-          "artifact": "operacao-armadilha-ice.html"
-        },
-        {
-          "id": 141,
-          "status": "confirmed",
-          "topic": "Insolvência Brasil — P11: macrodados de colapso fiscal estrutural",
-          "artifact": "insolvencia-brasil.html"
-        },
-        {
-          "id": 142,
-          "status": "confirmed",
-          "topic": "Prisão Econômica — endividamento como mecanismo de controle (P11)",
-          "artifact": "prisao-economica.html"
-        },
-        {
-          "id": 143,
-          "status": "confirmed",
-          "topic": "Duplo Padrão Judicial — tabela comparativa assimetria de tratamento",
-          "artifact": "duplo-padrao-judicial.html"
-        },
-        {
-          "id": 144,
-          "status": "confirmed",
-          "topic": "Narrativa vs Evidência — metodologia anti-viés confirmada",
-          "artifact": "narrativa-vs-evidencia.html"
-        },
-        {
-          "id": 145,
-          "status": "confirmed",
-          "topic": "Banco Master — dossiê completo consolidado",
-          "artifact": "banco-master.html"
-        },
-        {
-          "id": 146,
-          "status": "confirmed",
-          "topic": "Mare Liberum — liberdade de imprensa e 404 como arma",
-          "artifact": "mare-liberum.html"
-        },
-        {
-          "id": 147,
-          "status": "confirmed",
-          "topic": "Emaranhamento de Operações — nexo Lava Jato/Hydra/Master/Carbono",
-          "artifact": "emaranhamento-operacoes.html"
-        },
-        {
-          "id": 148,
-          "status": "confirmed",
-          "topic": "P07 — Fintech/Cultural como veículo: lavagem-as-a-service ampliado",
-          "artifact": "padroes-sistemicos-dashboard.html"
-        },
-        {
-          "id": 149,
-          "status": "confirmed",
-          "topic": "P04 — Weaponização midiática: fake news e narrativa como arma",
-          "artifact": "padroes-sistemicos-dashboard.html"
-        },
-        {
-          "id": 150,
-          "status": "confirmed",
-          "topic": "P05 — Fundos públicos como amplificadores de risco",
-          "artifact": "padroes-sistemicos-dashboard.html"
-        },
-        {
-          "id": 151,
-          "status": "confirmed",
-          "topic": "P08 — Infraestrutura cultural/cripto como canal de lavagem",
-          "artifact": "padroes-sistemicos-dashboard.html"
-        },
-        {
-          "id": 152,
-          "status": "confirmed",
-          "topic": "Banco Master — CRI/CRA como instrumento P05",
-          "artifact": "banco-master-compliance-zero.html"
-        },
-        {
-          "id": 153,
-          "status": "confirmed",
-          "topic": "METHODOLOGY v1 — primeira versão publicada",
-          "artifact": "METHODOLOGY.md"
-        },
-        {
-          "id": 154,
-          "status": "confirmed",
-          "topic": "METHODOLOGY v2.2 — expansão com P04b e testes de viés AI",
-          "artifact": "METHODOLOGY-v2_2.md"
-        },
-        {
-          "id": 155,
-          "status": "confirmed",
-          "topic": "Observatório Civil BR — arquitetura do site de inteligência cívica",
-          "artifact": "observatorio-civil-br.vercel.app"
-        },
-        {
-          "id": 156,
-          "status": "confirmed",
-          "topic": "JustiçaWatch Brasil — schema JSON + data file definidos",
-          "artifact": "justicawatch-brasil.html"
-        },
-        {
-          "id": 157,
-          "status": "confirmed",
-          "topic": "Lawfare Design System — typography/color/grid formalizados",
-          "artifact": "lawfare-design-system.json"
-        },
-        {
-          "id": 158,
-          "status": "confirmed",
-          "topic": "P01 — Anulação processual retrospectiva: 15 casos documentados",
-          "artifact": "padroes-sistemicos-dashboard.html"
-        },
-        {
-          "id": 159,
-          "status": "confirmed",
-          "topic": "P02 — Investigador-alvo: mecanismo de reversão documentado",
-          "artifact": "padroes-sistemicos-dashboard.html"
-        },
-        {
-          "id": 160,
-          "status": "confirmed",
-          "topic": "Operação Castelo de Areia — dossiê completo",
-          "artifact": "operacao_castelo_de_areia.html"
-        },
-        {
-          "id": 161,
-          "status": "confirmed",
-          "topic": "Operação Poço de Lobato — dossiê completo",
-          "artifact": "operacao_poco_de_lobato.html"
-        },
-        {
-          "id": 162,
-          "status": "confirmed",
-          "topic": "Satiagraha — dossiê completo com análise P01/P03",
-          "artifact": "satiagraha.html"
-        },
-        {
-          "id": 163,
-          "status": "confirmed",
-          "topic": "404 como arma — remoção sistemática de conteúdo investigativo",
-          "artifact": "mare-liberum.html"
-        },
-        {
-          "id": 164,
-          "status": "confirmed",
-          "topic": "IPFS/archive.org — protocolo de espelhamento fora-jurisdição (pendente implementação)",
-          "artifact": null
-        },
-        {
-          "id": 165,
-          "status": "confirmed",
-          "topic": "Shadowban @araguaci — protocolo de recuperação (em andamento)",
-          "artifact": null
-        },
-        {
-          "id": 166,
-          "status": "confirmed",
-          "topic": "Benedito Gonçalves — 'Missão dada, missão cumprida → CNJ → Missão paga' (P03/P08)",
-          "artifact": null,
-          "patterns": [
-            "P03",
-            "P08"
-          ]
-        },
-        {
-          "id": 167,
-          "status": "confirmed",
-          "topic": "STF — geometria 535×1: Congresso override vs. suspensão monocrática",
-          "artifact": null,
-          "patterns": [
-            "P03"
-          ]
-        },
-        {
-          "id": 168,
-          "status": "confirmed",
-          "topic": "Moraes — suspensão monocrática de lei válida para réu específico (P03/P02)",
-          "artifact": null,
-          "patterns": [
-            "P03",
-            "P02"
-          ]
-        },
-        {
-          "id": 169,
-          "status": "confirmed",
-          "topic": "Operação Hydra 2026 — CPI INSS + P10 ativo (entrada complementar)",
-          "artifact": "operacao-hydra-2026.html",
-          "patterns": [
-            "P10",
-            "P05"
-          ]
-        },
-        {
-          "id": 170,
-          "status": "confirmed",
-          "topic": "Toffoli — suspensão COAF/dados sigilosos: origem do padrão de sigilo processual",
-          "artifact": null,
-          "patterns": [
-            "P03",
-            "P06"
-          ]
-        },
-        {
-          "id": 171,
-          "status": "confirmed",
-          "topic": "Alexandre de Moraes — inquérito sobre inquérito: P03 documentado em ciclo fechado",
-          "artifact": null,
-          "patterns": [
-            "P03"
-          ]
-        },
-        {
-          "id": 172,
-          "status": "confirmed",
-          "topic": "Pandemia — CPI Pandemia: captura regulatória P03 em contexto sanitário",
-          "artifact": "pandemia-capturada.html",
-          "patterns": [
-            "P03",
-            "P05"
-          ]
-        },
-        {
-          "id": 173,
-          "status": "confirmed",
-          "topic": "Pandemia — Consórcio Nordeste: P05 como canal de extração",
-          "artifact": "pandemia-capturada.html",
-          "patterns": [
-            "P05"
-          ]
-        },
-        {
-          "id": 174,
-          "status": "confirmed",
-          "topic": "Pandemia — respiradores superfaturados: P08 em contexto sanitário",
-          "artifact": "pandemia-capturada.html",
-          "patterns": [
-            "P08"
-          ]
-        },
-        {
-          "id": 175,
-          "status": "confirmed",
-          "topic": "Pandemia — P03 emergencial: suspensão de controle no estado de exceção",
-          "artifact": "pandemia-capturada.html",
-          "patterns": [
-            "P03"
-          ]
-        },
-        {
-          "id": 176,
-          "status": "confirmed",
-          "topic": "Assimetria Punitiva — tabela comparativa entre réus com e sem conexão institucional",
-          "artifact": "assimetria-punitiva.html",
-          "patterns": [
-            "P03"
-          ]
-        },
-        {
-          "id": 177,
-          "status": "confirmed",
-          "topic": "Pandemia — P01: anulação retroativa de autuações por vício processual",
-          "artifact": "pandemia-capturada.html",
-          "patterns": [
-            "P01"
-          ]
-        },
-        {
-          "id": 178,
-          "status": "confirmed",
-          "topic": "Pandemia — P11: extração macroeconômica em contexto de exceção sanitária",
-          "artifact": "pandemia-capturada.html",
-          "patterns": [
-            "P11"
-          ]
-        },
-        {
-          "id": 179,
-          "status": "confirmed",
-          "topic": "Pandemia — P04: weaponização narrativa anti-ciência como instrumento político",
-          "artifact": "pandemia-capturada.html",
-          "patterns": [
-            "P04"
-          ]
-        },
-        {
-          "id": 180,
-          "status": "confirmed",
-          "topic": "TSE — seletividade em inelegibilidade e cassação (T-180)",
-          "artifact": "tse-seletividade-inelegibilidade-cassacao",
-          "patterns": [
-            "P03",
-            "P02"
-          ],
-          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-tse-seletividade-inelegibilidade-cassacao)."
-        },
-        {
-          "id": 181,
-          "status": "confirmed",
-          "topic": "Moraes — acumulação 535×1 documentada em caso específico (P03)",
-          "artifact": null,
-          "patterns": [
-            "P03"
-          ],
-          "date": "2026-05-09"
-        },
-        {
-          "id": 182,
-          "status": "confirmed",
-          "topic": "Dosimetria — acumulação de funções: juiz original + condenação + execução + relator ADIs = mesmo ator",
-          "artifact": null,
-          "patterns": [
-            "P03"
-          ]
-        },
-        {
-          "id": 183,
-          "status": "confirmed",
-          "topic": "Dosimetria — geometria 535×1 como formulação analítica documentada",
-          "artifact": null,
-          "patterns": [
-            "P03"
-          ]
-        },
-        {
-          "id": 184,
-          "status": "confirmed",
-          "topic": "P04b (candidato) — both-sidesism funcional: falsa-equivalência mainstream como mecanismo de proteção",
-          "artifact": null,
-          "patterns": [
-            "P04"
-          ],
-          "notes": "Decisão pendente: formalizar subcategoria em METHODOLOGY-v2.2.md"
-        },
-        {
-          "id": 185,
-          "status": "confirmed",
-          "topic": "Dosimetria — Lei 15.402/2026 promulgada por Alcolumbre após derrubada do veto Lula (318×144 / 49×24)",
-          "artifact": null,
-          "patterns": [
-            "P03"
-          ],
-          "date": "2026-05-08",
-          "notes": "Renumerado de 173"
-        },
-        {
-          "id": 186,
-          "status": "confirmed",
-          "topic": "Dosimetria — ADIs 7966/7967 a AM por prevenção: vítima + acusador + relator ADI = mesmo ator",
-          "artifact": null,
-          "patterns": [
-            "P03"
-          ],
-          "date": "2026-05-08",
-          "notes": "Renumerado de 174"
-        },
-        {
-          "id": 187,
-          "status": "confirmed",
-          "topic": "Dosimetria — Sequestro de Pauta: 1.402 condenados em limbo por relator impedido sem prazo regimental",
-          "artifact": null,
-          "patterns": [
-            "P01",
-            "P03",
-            "P07"
-          ],
-          "date": "2026-05-08",
-          "notes": "Renumerado de 175"
-        },
-        {
-          "id": 188,
-          "status": "confirmed",
-          "topic": "Dosimetria — Bolsonaro protocola revisão criminal: erro judiciário, delação Cid não voluntária",
-          "artifact": null,
-          "patterns": [],
-          "date": "2026-05-08",
-          "notes": "Renumerado de 176"
-        },
-        {
-          "id": 189,
-          "status": "confirmed",
-          "topic": "Reforma Tributária — captura regulatória split payment (T-189)",
-          "artifact": "reforma-tributaria-captura-regulatoria",
-          "notes": "Estudo Jekyll publicado 2026-05-26"
-        },
-        {
-          "id": 190,
-          "status": "confirmed",
-          "topic": "Direita Permitida — gatekeeping oposicionista (T-190)",
-          "artifact": "direita-permitida-dossie",
-          "notes": "Estudo Jekyll 2026-05-22. Renumerado de T-189 — conflito Reforma Tributária."
-        },
-        {
-          "id": 191,
-          "status": "confirmed",
-          "topic": "Custeio administrativo federal — P11 (T-191)",
-          "artifact": "custeio-administrativo-federal-p11",
-          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-27-custeio-administrativo-federal-p11)."
-        },
-        {
-          "id": 192,
-          "status": "confirmed",
-          "topic": "Vorcaro triângulo carbono–mineração–banco (T-192)",
-          "artifact": "vorcaro-triangulo-carbono-mineracao-banco",
-          "patterns": [
-            "P08",
-            "P11",
-            "P03",
-            "P04",
-            "P09"
-          ],
-          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-vorcaro-triangulo-carbono-mineracao-banco).",
-          "source_files": [
-            "t192-vorcaro-triangulo-carbono-mineracao-banco.html",
-            "T-192-vorcaro-triangulo-carbono-mineracao-banco.json"
-          ]
-        },
-        {
-          "id": 193,
-          "status": "confirmed",
-          "topic": "Viagens/gastos sigilo — complemento T-191 (T-193)",
-          "artifact": "viagens-gastos-sigilo-complemento-p11",
-          "patterns": [
-            "P03",
-            "P08",
-            "P11"
-          ],
-          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-viagens-gastos-sigilo-complemento-p11)."
-        },
-        {
-          "id": 194,
-          "status": "confirmed",
-          "topic": "Máquina de Gastos P11 — índice cluster (T-194)",
-          "artifact": "maquina-gastos-p11-indice-cluster",
-          "patterns": [
-            "P08",
-            "P10"
-          ],
-          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-maquina-gastos-p11-indice-cluster)."
-        },
-        {
-          "id": 195,
-          "status": "confirmed",
-          "topic": "CPI Crime Organizado × PCC eleitoral (T-195)",
-          "artifact": "cpi-crime-organizado-pcc-infiltracao-eleitoral",
-          "patterns": [
-            "P11"
-          ],
-          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-cpi-crime-organizado-pcc-infiltracao-eleitoral)."
-        },
-        {
-          "id": 196,
-          "status": "confirmed",
-          "topic": "Radar de Lacunas — Top 30 sem dossiê (T-196)",
-          "artifact": "top30-alertas-criticos-operacoes-sem-dossie",
-          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-top30-alertas-criticos-operacoes-sem-dossie)."
-        },
-        {
-          "id": 197,
-          "status": "confirmed",
-          "topic": "Operação Rejeito / Serra do Curral / 3 manuscritos (T-197)",
-          "artifact": "operacao-rejeito-serra-curral-manuscritos",
-          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-operacao-rejeito-serra-curral-manuscritos)."
-        },
-        {
-          "id": 198,
-          "status": "confirmed",
-          "topic": "COAF × Moraes — acumulação de funções / dosimetria (T-198)",
-          "artifact": "coaf-moraes-acumulacao-funcoes-dosimetria",
-          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-coaf-moraes-acumulacao-funcoes-dosimetria)."
-        },
-        {
-          "id": 199,
-          "status": "confirmed",
-          "topic": "Fraude Lojas Americanas — risco sacado (T-199)",
-          "artifact": "fraude-lojas-americanas-risco-sacado",
-          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-fraude-lojas-americanas-risco-sacado)."
-        },
-        {
-          "id": 200,
-          "status": "confirmed",
-          "topic": "Estatais federais rombo P11 — complemento (T-200)",
-          "artifact": "estatais-rombo-p11-complemento",
-          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-estatais-rombo-p11-complemento)."
-        },
-        {
-          "id": 201,
-          "status": "confirmed",
-          "topic": "PCC transnacional — OFAC/EUA/eixo luso (T-201)",
-          "artifact": "pcc-transnacional-ofac-eua-luso",
-          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-pcc-transnacional-ofac-eua-luso)."
-        },
-        {
-          "id": 202,
-          "status": "confirmed",
-          "topic": "Delegada × PCC — infiltração institucional SP (T-202)",
-          "artifact": "delegada-pcc-infiltracao-institucional-sp",
-          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-29-delegada-pcc-infiltracao-institucional-sp)."
-        },
-        {
-          "id": 203,
-          "status": "confirmed",
-          "topic": "Operação Zelotes — captura CARF (T-203)",
-          "artifact": "operacao-zelotes-carf-captura-fiscal",
-          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-29-operacao-zelotes-carf-captura-fiscal)."
-        },
-        {
-          "id": 204,
-          "status": "confirmed",
-          "topic": "Gastos Paris — cluster extravância Janja (T-204)",
-          "artifact": "gastos-paris-cluster-extravagancia-janja",
-          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-29-gastos-paris-cluster-extravagancia-janja)."
-        },
-        {
-          "id": 205,
-          "status": "confirmed",
-          "topic": "Duplo Padrão Judicial — índice corpus (T-205)",
-          "artifact": "duplo-padrao-judicial-corpus-bridge",
-          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-29-duplo-padrao-judicial-corpus-bridge)."
-        },
-        {
-          "id": 206,
-          "status": "confirmed",
-          "topic": "SPLC Modelo Brasil — índice corpus (T-206)",
-          "artifact": "splc-modelo-brasil-corpus-bridge",
-          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-29-splc-modelo-brasil-corpus-bridge)."
-        },
-        {
-          "id": 207,
-          "status": "confirmed",
-          "topic": "Vaza Toga INQ 4781 — índice corpus (T-207)",
-          "artifact": "vaza-toga-corpus-bridge",
-          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-29-vaza-toga-corpus-bridge)."
-        },
-        {
-          "id": 208,
-          "status": "reserved",
-          "topic": "Narrativa vs Evidência — índice corpus (T-208)",
-          "artifact": "narrativa-vs-evidencia.html",
-          "notes": "Artefato HTML — candidato a estudo Jekyll"
-        },
-        {
-          "id": 209,
-          "status": "reserved",
-          "topic": "JustiçaWatch Brasil — índice corpus (T-209)",
-          "artifact": "justicawatch-brasil.html",
-          "notes": "Artefato HTML — candidato a estudo Jekyll"
-        }
+        {"id": 100, "status": "confirmed", "topic": "Padrões sistêmicos — definição P01–P08 inicial", "artifact": "padroes-sistemicos-dashboard.html"},
+        {"id": 101, "status": "confirmed", "topic": "INQ 4.781 — abertura sem provocação da PGR", "artifact": "inq4781.html"},
+        {"id": 102, "status": "confirmed", "topic": "INQ 4.781 — acumulação de funções: vítima + investigador + julgador", "artifact": "inq4781.html"},
+        {"id": 103, "status": "confirmed", "topic": "INQ 4.781 — ausência de revisão independente (P03 chokepoint)", "artifact": "inq4781.html"},
+        {"id": 104, "status": "confirmed", "topic": "Lava Jato — anulação retrospectiva por suspeição (P01)", "artifact": "operacao_lava_jato.html"},
+        {"id": 105, "status": "confirmed", "topic": "Lava Jato — inversão: alvo vira investigador do investigador (P02)", "artifact": "operacao_lava_jato.html"},
+        {"id": 106, "status": "confirmed", "topic": "Lava Jato — captura do chokepoint STF (P03)", "artifact": "operacao_lava_jato.html"},
+        {"id": 107, "status": "confirmed", "topic": "Satiagraha — captura e reversão STJ/STF (P01/P03)", "artifact": "satiagraha.html"},
+        {"id": 108, "status": "confirmed", "topic": "Vaza Toga — mecanismo espelho: weaponized legalism ativo", "artifact": "vaza-toga.html"},
+        {"id": 109, "status": "confirmed", "topic": "Gilmar Mendes — início documentação episódios (alem-da-toga)", "artifact": "alem-da-toga.html"},
+        {"id": 110, "status": "confirmed", "topic": "P03 — Padrão chokepoint: definição e primeiros casos", "artifact": "padroes-sistemicos-dashboard.html"},
+        {"id": 111, "status": "confirmed", "topic": "P06 — Prescrição estratégica: casos documentados 1993–2010", "artifact": "padroes-sistemicos-dashboard.html"},
+        {"id": 112, "status": "confirmed", "topic": "Castelo de Areia — anulação por ilicitude de provas (P01)", "artifact": "operacao_castelo_de_areia.html"},
+        {"id": 113, "status": "confirmed", "topic": "Poço de Lobato — reversão e extinção (P01/P06)", "artifact": "operacao_poco_de_lobato.html"},
+        {"id": 114, "status": "confirmed", "topic": "Banco Master — ascensão atípica: compliance zero documentado", "artifact": "banco-master-compliance-zero.html"},
+        {"id": 115, "status": "confirmed", "topic": "Banco Master — donos e estrutura societária opaca", "artifact": "banco-master-os-donos.html"},
+        {"id": 116, "status": "confirmed", "topic": "Faixa Tropical — P08 fintech como veículo de lavagem", "artifact": "faixa-tropical.html"},
+        {"id": 117, "status": "confirmed", "topic": "PCC/CV — inteligência operacional e expansão transnacional", "artifact": "PCC-CV-Intel-Dashboard-2026.html"},
+        {"id": 118, "status": "confirmed", "topic": "Cocaína Vermelha — fusão narco-política documentada", "artifact": "cocaina-vermelha.html"},
+        {"id": 119, "status": "confirmed", "topic": "Carbono Oculto — greenwashing como P08 (lavagem via ESG)", "artifact": "carbono_oculto.html"},
+        {"id": 120, "status": "confirmed", "topic": "Corrida dos Ratos — mapa mental: estrutura de fuga de capitais", "artifact": "corrida-dos-ratos-mindmap.html"},
+        {"id": 121, "status": "confirmed", "topic": "Oliver Ortiz — timeline: P08 + P10 aplicado a ator individual", "artifact": "oliver-ortiz-timeline.html"},
+        {"id": 122, "status": "confirmed", "topic": "República Capturada — tese central: sistema de extração estrutural", "artifact": "republica-capturada.html"},
+        {"id": 123, "status": "confirmed", "topic": "Zero x Zero — tabela comparativa assimetria punitiva", "artifact": "zero-x-zero.html"},
+        {"id": 124, "status": "confirmed", "topic": "Paralelos — análise comparada: Brasil vs padrões internacionais", "artifact": "paralelos.html"},
+        {"id": 125, "status": "confirmed", "topic": "Thread Operações — nexo entre operações 1993–2026", "artifact": "thread-operacoes-brasil.html"},
+        {"id": 126, "status": "confirmed", "topic": "Paradoxo Constitucional — STF entre guardião e vetor de captura", "artifact": "paradoxo-constitucional.html"},
+        {"id": 127, "status": "confirmed", "topic": "Obediência e Caos — dinâmica sistêmica de conformidade institucional", "artifact": "obediencia-e-caos.html"},
+        {"id": 128, "status": "confirmed", "topic": "Brasil Sangra — extração macroeconômica P11 documentada", "artifact": "brasil-sangra.html"},
+        {"id": 129, "status": "confirmed", "topic": "SPLC Modelo Brasil — infraestrutura narrativa e weaponização", "artifact": "splc-modelo-brasil.html"},
+        {"id": 130, "status": "confirmed", "topic": "Greenwashing — Operação: crimes ambientais + P08", "artifact": "operacao-greenwashing.html"},
+        {"id": 131, "status": "confirmed", "topic": "Lava Jato Mapa Mental — estrutura e atores", "artifact": "lava-jato-mapa-mental.html"},
+        {"id": 132, "status": "confirmed", "topic": "Lava Jato Mapa Mental Analítico — padrões P01–P03 projetados", "artifact": "lava-jato-mapa-mental-analitico.html"},
+        {"id": 133, "status": "confirmed", "topic": "Padrões Sistêmicos Dashboard — P01–P11 consolidado", "artifact": "padroes-sistemicos-dashboard.html"},
+        {"id": 134, "status": "confirmed", "topic": "P09 — Parlamentarismo de fato: neutralização legislativa documentada", "artifact": "padroes-sistemicos-dashboard.html"},
+        {"id": 135, "status": "confirmed", "topic": "P10 — Infraestrutura de serviço compartilhada: definição e casos", "artifact": "padroes-sistemicos-dashboard.html"},
+        {"id": 136, "status": "confirmed", "topic": "P11 — Loop macroeconômico: pobreza como input estrutural", "artifact": "padroes-sistemicos-dashboard.html"},
+        {"id": 137, "status": "confirmed", "topic": "Alem da Toga — dossiê Gilmar Mendes 90+ episódios (atualizado abr/2026)", "artifact": "alem-da-toga.html"},
+        {"id": 138, "status": "confirmed", "topic": "INQ 4781 — análise completa do inquérito reflexivo", "artifact": "inq4781.html"},
+        {"id": 139, "status": "confirmed", "topic": "Operação Hydra 2026 — CPI INSS + P10 ativo", "artifact": "operacao-hydra-2026.html"},
+        {"id": 140, "status": "confirmed", "topic": "Operação Armadilha ICE — P08 fintech + crime organizado transnacional", "artifact": "operacao-armadilha-ice.html"},
+        {"id": 141, "status": "confirmed", "topic": "Insolvência Brasil — P11: macrodados de colapso fiscal estrutural", "artifact": "insolvencia-brasil.html"},
+        {"id": 142, "status": "confirmed", "topic": "Prisão Econômica — endividamento como mecanismo de controle (P11)", "artifact": "prisao-economica.html"},
+        {"id": 143, "status": "confirmed", "topic": "Duplo Padrão Judicial — tabela comparativa assimetria de tratamento", "artifact": "duplo-padrao-judicial.html"},
+        {"id": 144, "status": "confirmed", "topic": "Narrativa vs Evidência — metodologia anti-viés confirmada", "artifact": "narrativa-vs-evidencia.html"},
+        {"id": 145, "status": "confirmed", "topic": "Banco Master — dossiê completo consolidado", "artifact": "banco-master.html"},
+        {"id": 146, "status": "confirmed", "topic": "Mare Liberum — liberdade de imprensa e 404 como arma", "artifact": "mare-liberum.html"},
+        {"id": 147, "status": "confirmed", "topic": "Emaranhamento de Operações — nexo Lava Jato/Hydra/Master/Carbono", "artifact": "emaranhamento-operacoes.html"},
+        {"id": 148, "status": "confirmed", "topic": "P07 — Fintech/Cultural como veículo: lavagem-as-a-service ampliado", "artifact": "padroes-sistemicos-dashboard.html"},
+        {"id": 149, "status": "confirmed", "topic": "P04 — Weaponização midiática: fake news e narrativa como arma", "artifact": "padroes-sistemicos-dashboard.html"},
+        {"id": 150, "status": "confirmed", "topic": "P05 — Fundos públicos como amplificadores de risco", "artifact": "padroes-sistemicos-dashboard.html"},
+        {"id": 151, "status": "confirmed", "topic": "P08 — Infraestrutura cultural/cripto como canal de lavagem", "artifact": "padroes-sistemicos-dashboard.html"},
+        {"id": 152, "status": "confirmed", "topic": "Banco Master — CRI/CRA como instrumento P05", "artifact": "banco-master-compliance-zero.html"},
+        {"id": 153, "status": "confirmed", "topic": "METHODOLOGY v1 — primeira versão publicada", "artifact": "METHODOLOGY.md"},
+        {"id": 154, "status": "confirmed", "topic": "METHODOLOGY v2.2 — expansão com P04b e testes de viés AI", "artifact": "METHODOLOGY-v2_2.md"},
+        {"id": 155, "status": "confirmed", "topic": "Observatório Civil BR — arquitetura do site de inteligência cívica", "artifact": "observatorio-civil-br.vercel.app"},
+        {"id": 156, "status": "confirmed", "topic": "JustiçaWatch Brasil — schema JSON + data file definidos", "artifact": "justicawatch-brasil.html"},
+        {"id": 157, "status": "confirmed", "topic": "Lawfare Design System — typography/color/grid formalizados", "artifact": "lawfare-design-system.json"},
+        {"id": 158, "status": "confirmed", "topic": "P01 — Anulação processual retrospectiva: 15 casos documentados", "artifact": "padroes-sistemicos-dashboard.html"},
+        {"id": 159, "status": "confirmed", "topic": "P02 — Investigador-alvo: mecanismo de reversão documentado", "artifact": "padroes-sistemicos-dashboard.html"},
+        {"id": 160, "status": "confirmed", "topic": "Operação Castelo de Areia — dossiê completo", "artifact": "operacao_castelo_de_areia.html"},
+        {"id": 161, "status": "confirmed", "topic": "Operação Poço de Lobato — dossiê completo", "artifact": "operacao_poco_de_lobato.html"},
+        {"id": 162, "status": "confirmed", "topic": "Satiagraha — dossiê completo com análise P01/P03", "artifact": "satiagraha.html"},
+        {"id": 163, "status": "confirmed", "topic": "404 como arma — remoção sistemática de conteúdo investigativo", "artifact": "mare-liberum.html"},
+        {"id": 164, "status": "confirmed", "topic": "IPFS/archive.org — protocolo de espelhamento fora-jurisdição (pendente implementação)", "artifact": null},
+        {"id": 165, "status": "confirmed", "topic": "Shadowban @araguaci — protocolo de recuperação (em andamento)", "artifact": null},
+        {"id": 166, "status": "confirmed", "topic": "Benedito Gonçalves — 'Missão dada, missão cumprida → CNJ → Missão paga' (P03/P08)", "artifact": null, "patterns": ["P03", "P08"]},
+        {"id": 167, "status": "confirmed", "topic": "STF — geometria 535×1: Congresso override vs. suspensão monocrática", "artifact": null, "patterns": ["P03"]},
+        {"id": 168, "status": "confirmed", "topic": "Moraes — suspensão monocrática de lei válida para réu específico (P03/P02)", "artifact": null, "patterns": ["P03", "P02"]},
+        {"id": 169, "status": "confirmed", "topic": "Operação Hydra 2026 — CPI INSS + P10 ativo (entrada complementar)", "artifact": "operacao-hydra-2026.html", "patterns": ["P10", "P05"]},
+        {"id": 170, "status": "confirmed", "topic": "Toffoli — suspensão COAF/dados sigilosos: origem do padrão de sigilo processual", "artifact": null, "patterns": ["P03", "P06"]},
+        {"id": 171, "status": "confirmed", "topic": "Alexandre de Moraes — inquérito sobre inquérito: P03 documentado em ciclo fechado", "artifact": null, "patterns": ["P03"]},
+        {"id": 172, "status": "confirmed", "topic": "Pandemia — CPI Pandemia: captura regulatória P03 em contexto sanitário", "artifact": "pandemia-capturada.html", "patterns": ["P03", "P05"]},
+        {"id": 173, "status": "confirmed", "topic": "Pandemia — Consórcio Nordeste: P05 como canal de extração", "artifact": "pandemia-capturada.html", "patterns": ["P05"]},
+        {"id": 174, "status": "confirmed", "topic": "Pandemia — respiradores superfaturados: P08 em contexto sanitário", "artifact": "pandemia-capturada.html", "patterns": ["P08"]},
+        {"id": 175, "status": "confirmed", "topic": "Pandemia — P03 emergencial: suspensão de controle no estado de exceção", "artifact": "pandemia-capturada.html", "patterns": ["P03"]},
+        {"id": 176, "status": "confirmed", "topic": "Assimetria Punitiva — tabela comparativa entre réus com e sem conexão institucional", "artifact": "assimetria-punitiva.html", "patterns": ["P03"]},
+        {"id": 177, "status": "confirmed", "topic": "Pandemia — P01: anulação retroativa de autuações por vício processual", "artifact": "pandemia-capturada.html", "patterns": ["P01"]},
+        {"id": 178, "status": "confirmed", "topic": "Pandemia — P11: extração macroeconômica em contexto de exceção sanitária", "artifact": "pandemia-capturada.html", "patterns": ["P11"]},
+        {"id": 179, "status": "confirmed", "topic": "Pandemia — P04: weaponização narrativa anti-ciência como instrumento político", "artifact": "pandemia-capturada.html", "patterns": ["P04"]},
+        {"id": 180, "status": "confirmed", "topic": "TSE — seletividade em inelegibilidade e cassação (T-180)", "artifact": "tse-seletividade-inelegibilidade-cassacao", "patterns": ["P03", "P02"], "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-tse-seletividade-inelegibilidade-cassacao)."},
+        {"id": 181, "status": "confirmed", "topic": "Moraes — acumulação 535×1 documentada em caso específico (P03)", "artifact": null, "patterns": ["P03"], "date": "2026-05-09"},
+        {"id": 182, "status": "confirmed", "topic": "Dosimetria — acumulação de funções: juiz original + condenação + execução + relator ADIs = mesmo ator", "artifact": null, "patterns": ["P03"]},
+        {"id": 183, "status": "confirmed", "topic": "Dosimetria — geometria 535×1 como formulação analítica documentada", "artifact": null, "patterns": ["P03"]},
+        {"id": 184, "status": "confirmed", "topic": "P04b (candidato) — both-sidesism funcional: falsa-equivalência mainstream como mecanismo de proteção", "artifact": null, "patterns": ["P04"], "notes": "Decisão pendente: formalizar subcategoria em METHODOLOGY-v2.2.md"},
+        {"id": 185, "status": "confirmed", "topic": "Dosimetria — Lei 15.402/2026 promulgada por Alcolumbre após derrubada do veto Lula (318×144 / 49×24)", "artifact": null, "patterns": ["P03"], "date": "2026-05-08", "notes": "Renumerado de 173"},
+        {"id": 186, "status": "confirmed", "topic": "Dosimetria — ADIs 7966/7967 a AM por prevenção: vítima + acusador + relator ADI = mesmo ator", "artifact": null, "patterns": ["P03"], "date": "2026-05-08", "notes": "Renumerado de 174"},
+        {"id": 187, "status": "confirmed", "topic": "Dosimetria — Sequestro de Pauta: 1.402 condenados em limbo por relator impedido sem prazo regimental", "artifact": null, "patterns": ["P01", "P03", "P07"], "date": "2026-05-08", "notes": "Renumerado de 175"},
+        {"id": 188, "status": "confirmed", "topic": "Dosimetria — Bolsonaro protocola revisão criminal: erro judiciário, delação Cid não voluntária", "artifact": null, "patterns": [], "date": "2026-05-08", "notes": "Renumerado de 176"},
+        {"id": 189, "status": "confirmed", "topic": "Reforma Tributária — captura regulatória split payment (T-189)", "artifact": "reforma-tributaria-captura-regulatoria", "notes": "Estudo Jekyll publicado 2026-05-26"},
+        {"id": 190, "status": "confirmed", "topic": "Direita Permitida — gatekeeping oposicionista (T-190)", "artifact": "direita-permitida-dossie", "notes": "Estudo Jekyll 2026-05-22. Renumerado de T-189 — conflito Reforma Tributária."},
+        {"id": 191, "status": "confirmed", "topic": "Custeio administrativo federal — P11 (T-191)", "artifact": "custeio-administrativo-federal-p11", "notes": "Estudo Jekyll _posts/estudos/ (2026-05-27-custeio-administrativo-federal-p11)."},
+        {"id": 192, "status": "confirmed", "topic": "Vorcaro triângulo carbono–mineração–banco (T-192)", "artifact": "vorcaro-triangulo-carbono-mineracao-banco", "patterns": ["P08", "P11", "P03", "P04", "P09"], "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-vorcaro-triangulo-carbono-mineracao-banco).", "source_files": ["t192-vorcaro-triangulo-carbono-mineracao-banco.html", "T-192-vorcaro-triangulo-carbono-mineracao-banco.json"]},
+        {"id": 193, "status": "confirmed", "topic": "Viagens/gastos sigilo — complemento T-191 (T-193)", "artifact": "viagens-gastos-sigilo-complemento-p11", "patterns": ["P03", "P08", "P11"], "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-viagens-gastos-sigilo-complemento-p11)."},
+        {"id": 194, "status": "confirmed", "topic": "Máquina de Gastos P11 — índice cluster (T-194)", "artifact": "maquina-gastos-p11-indice-cluster", "patterns": ["P08", "P10"], "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-maquina-gastos-p11-indice-cluster)."},
+        {"id": 195, "status": "confirmed", "topic": "CPI Crime Organizado × PCC eleitoral (T-195)", "artifact": "cpi-crime-organizado-pcc-infiltracao-eleitoral", "patterns": ["P11"], "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-cpi-crime-organizado-pcc-infiltracao-eleitoral)."},
+        {"id": 196, "status": "confirmed", "topic": "Radar de Lacunas — Top 30 sem dossiê (T-196)", "artifact": "top30-alertas-criticos-operacoes-sem-dossie", "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-top30-alertas-criticos-operacoes-sem-dossie)."},
+        {"id": 197, "status": "confirmed", "topic": "Operação Rejeito / Serra do Curral / 3 manuscritos (T-197)", "artifact": "operacao-rejeito-serra-curral-manuscritos", "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-operacao-rejeito-serra-curral-manuscritos)."},
+        {"id": 198, "status": "confirmed", "topic": "COAF × Moraes — acumulação de funções / dosimetria (T-198)", "artifact": "coaf-moraes-acumulacao-funcoes-dosimetria", "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-coaf-moraes-acumulacao-funcoes-dosimetria)."},
+        {"id": 199, "status": "confirmed", "topic": "Fraude Lojas Americanas — risco sacado (T-199)", "artifact": "fraude-lojas-americanas-risco-sacado", "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-fraude-lojas-americanas-risco-sacado). JSON renomeado de T-197 (conflito resolvido 2026-05-28)."},
+        {"id": 200, "status": "confirmed", "topic": "Estatais federais rombo P11 — complemento (T-200)", "artifact": "estatais-rombo-p11-complemento", "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-estatais-rombo-p11-complemento)."},
+        {"id": 201, "status": "confirmed", "topic": "PCC transnacional — OFAC/EUA/eixo luso (T-201)", "artifact": "pcc-transnacional-ofac-eua-luso", "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-pcc-transnacional-ofac-eua-luso)."},
+        {"id": 202, "status": "confirmed", "topic": "Delegada × PCC — infiltração institucional SP (T-202)", "artifact": "delegada-pcc-infiltracao-institucional-sp", "notes": "Estudo Jekyll _posts/estudos/ (2026-05-29-delegada-pcc-infiltracao-institucional-sp)."},
+        {"id": 203, "status": "confirmed", "topic": "Operação Zelotes — captura CARF (T-203)", "artifact": "operacao-zelotes-carf-captura-fiscal", "notes": "Estudo Jekyll _posts/estudos/ (2026-05-29-operacao-zelotes-carf-captura-fiscal)."},
+        {"id": 204, "status": "confirmed", "topic": "Gastos Paris — cluster extravância Janja (T-204)", "artifact": "gastos-paris-cluster-extravagancia-janja", "notes": "Estudo Jekyll _posts/estudos/ (2026-05-29-gastos-paris-cluster-extravagancia-janja)."},
+        {"id": 205, "status": "confirmed", "topic": "Duplo Padrão Judicial — índice corpus (T-205)", "artifact": "duplo-padrao-judicial-corpus-bridge", "notes": "Estudo Jekyll _posts/estudos/ (2026-05-29-duplo-padrao-judicial-corpus-bridge)."},
+        {"id": 206, "status": "confirmed", "topic": "SPLC Modelo Brasil — índice corpus (T-206)", "artifact": "splc-modelo-brasil-corpus-bridge", "notes": "Estudo Jekyll _posts/estudos/ (2026-05-29-splc-modelo-brasil-corpus-bridge)."},
+        {"id": 207, "status": "confirmed", "topic": "Vaza Toga INQ 4781 — índice corpus (T-207)", "artifact": "vaza-toga-corpus-bridge", "notes": "Estudo Jekyll _posts/estudos/ (2026-05-29-vaza-toga-corpus-bridge)."},
+        {"id": 208, "status": "reserved", "topic": "Narrativa vs Evidência — índice corpus (T-208)", "artifact": "narrativa-vs-evidencia.html", "notes": "Artefato HTML — candidato a estudo Jekyll"},
+        {"id": 209, "status": "reserved", "topic": "JustiçaWatch Brasil — índice corpus (T-209)", "artifact": "justicawatch-brasil.html", "notes": "Artefato HTML — candidato a estudo Jekyll"}
       ],
       "last_id": 209,
       "next_available": 210,
@@ -972,439 +221,32 @@
       "pending_notes": {}
     }
   },
-  "artifacts_index": {
-    "description": "Mapa de artefatos HTML produzidos → IDs temáticos relacionados",
-    "entries": [
-      {
-        "slug": "padroes-sistemicos-dashboard",
-        "file": "padroes-sistemicos-dashboard.html",
-        "thematic_ids": [
-          100,
-          110,
-          111,
-          133,
-          134,
-          135,
-          136,
-          148,
-          149,
-          150,
-          151,
-          158,
-          159
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "alem-da-toga",
-        "file": "alem-da-toga.html",
-        "thematic_ids": [
-          109,
-          137
-        ],
-        "deployed": true,
-        "last_updated": "2026-04"
-      },
-      {
-        "slug": "inq4781",
-        "file": "inq4781.html",
-        "thematic_ids": [
-          101,
-          102,
-          103,
-          138
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "operacao-lava-jato",
-        "file": "operacao_lava_jato.html",
-        "thematic_ids": [
-          104,
-          105,
-          106,
-          131,
-          132
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "satiagraha",
-        "file": "satiagraha.html",
-        "thematic_ids": [
-          107,
-          162
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "banco-master-compliance-zero",
-        "file": "banco-master-compliance-zero.html",
-        "thematic_ids": [
-          114,
-          152
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "banco-master-os-donos",
-        "file": "banco-master-os-donos.html",
-        "thematic_ids": [
-          115
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "banco-master",
-        "file": "banco-master.html",
-        "thematic_ids": [
-          145
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "faixa-tropical",
-        "file": "faixa-tropical.html",
-        "thematic_ids": [
-          116
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "PCC-CV-Intel-Dashboard-2026",
-        "file": "PCC-CV-Intel-Dashboard-2026.html",
-        "thematic_ids": [
-          117
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "cocaina-vermelha",
-        "file": "cocaina-vermelha.html",
-        "thematic_ids": [
-          118
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "carbono-oculto",
-        "file": "carbono_oculto.html",
-        "thematic_ids": [
-          119
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "corrida-dos-ratos-mindmap",
-        "file": "corrida-dos-ratos-mindmap.html",
-        "thematic_ids": [
-          120
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "oliver-ortiz-timeline",
-        "file": "oliver-ortiz-timeline.html",
-        "thematic_ids": [
-          121
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "republica-capturada",
-        "file": "republica-capturada.html",
-        "thematic_ids": [
-          122
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "zero-x-zero",
-        "file": "zero-x-zero.html",
-        "thematic_ids": [
-          123
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "paralelos",
-        "file": "paralelos.html",
-        "thematic_ids": [
-          124
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "thread-operacoes-brasil",
-        "file": "thread-operacoes-brasil.html",
-        "thematic_ids": [
-          125
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "paradoxo-constitucional",
-        "file": "paradoxo-constitucional.html",
-        "thematic_ids": [
-          126
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "obediencia-e-caos",
-        "file": "obediencia-e-caos.html",
-        "thematic_ids": [
-          127
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "brasil-sangra",
-        "file": "brasil-sangra.html",
-        "thematic_ids": [
-          128
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "splc-modelo-brasil",
-        "file": "splc-modelo-brasil.html",
-        "thematic_ids": [
-          197
-        ],
-        "deployed": true,
-        "notes": "ID 197 reservado — formalizar"
-      },
-      {
-        "slug": "operacao-greenwashing",
-        "file": "operacao-greenwashing.html",
-        "thematic_ids": [
-          130
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "lava-jato-mapa-mental",
-        "file": "lava-jato-mapa-mental.html",
-        "thematic_ids": [
-          131
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "lava-jato-mapa-mental-analitico",
-        "file": "lava-jato-mapa-mental-analitico.html",
-        "thematic_ids": [
-          132
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "operacao-hydra-2026",
-        "file": "operacao-hydra-2026.html",
-        "thematic_ids": [
-          139,
-          169
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "operacao-armadilha-ice",
-        "file": "operacao-armadilha-ice.html",
-        "thematic_ids": [
-          140
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "insolvencia-brasil",
-        "file": "insolvencia-brasil.html",
-        "thematic_ids": [
-          141
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "prisao-economica",
-        "file": "prisao-economica.html",
-        "thematic_ids": [
-          142
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "duplo-padrao-judicial",
-        "file": "duplo-padrao-judicial.html",
-        "thematic_ids": [
-          198
-        ],
-        "deployed": true,
-        "notes": "ID 198 reservado — formalizar"
-      },
-      {
-        "slug": "narrativa-vs-evidencia",
-        "file": "narrativa-vs-evidencia.html",
-        "thematic_ids": [
-          199
-        ],
-        "deployed": true,
-        "notes": "ID 199 reservado — formalizar"
-      },
-      {
-        "slug": "mare-liberum",
-        "file": "mare-liberum.html",
-        "thematic_ids": [
-          146,
-          163
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "emaranhamento-operacoes",
-        "file": "emaranhamento-operacoes.html",
-        "thematic_ids": [
-          147
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "pandemia-capturada",
-        "file": "pandemia-capturada.html",
-        "thematic_ids": [
-          172,
-          173,
-          174,
-          175,
-          177,
-          178,
-          179
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "assimetria-punitiva",
-        "file": "assimetria-punitiva.html",
-        "thematic_ids": [
-          176
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "operacao-castelo-de-areia",
-        "file": "operacao_castelo_de_areia.html",
-        "thematic_ids": [
-          112,
-          160
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "operacao-poco-de-lobato",
-        "file": "operacao_poco_de_lobato.html",
-        "thematic_ids": [
-          113,
-          161
-        ],
-        "deployed": true
-      },
-      {
-        "slug": "vaza-toga",
-        "file": "vaza-toga.html",
-        "thematic_ids": [
-          200
-        ],
-        "deployed": true,
-        "notes": "ID 200 reservado — formalizar"
-      },
-      {
-        "slug": "justicawatch-brasil",
-        "file": "justicawatch-brasil.html",
-        "thematic_ids": [
-          201
-        ],
-        "deployed": true,
-        "notes": "ID 201 reservado — formalizar"
-      },
-      {
-        "slug": "t192-vorcaro-triangulo",
-        "file": "t192-vorcaro-triangulo-carbono-mineracao-banco.html",
-        "thematic_ids": [
-          192
-        ],
-        "deployed": false,
-        "notes": "Produzido 2026-05-28 — pendente commit _posts/estudos/ e gosurf.site"
-      }
-    ]
-  },
   "sync_status": {
     "main_track_last_sync": "2026-05-28",
     "thematic_track_last_sync": "2026-05-28",
     "ids_confirmed_total": {
-      "main_track": "1571",
-      "thematic_track": 209
+      "main_track": "1576",
+      "thematic_track": "207 confirmed + 208/209 reserved = last_id 209"
     },
-    "ids_pending_production": [
-      180
-    ],
-    "artifacts_without_thematic_id": [
-      "narrativa-vs-evidencia.html",
-      "justicawatch-brasil.html"
-    ],
-    "artifacts_id_reserved_pending_formalization": [
-      197,
-      198,
-      199,
-      200,
-      201
-    ],
+    "ids_pending_production": [],
+    "artifacts_without_thematic_id": [],
+    "artifacts_id_reserved_pending_formalization": [208, 209],
     "open_items": [
       "Formalizar P04b como subcategoria em METHODOLOGY-v2.2.md",
-      "Merge lawfare.json: batches 1527-1551 + 1552-1571 (merge_todo_pending.py + validate-ids.ps1)",
-      "Commit batch Flávio/Trump 1572-1576 em _data/todo/ + merge após 1527-1571",
-      "Publicar T-192 (Vorcaro): _posts/estudos/2026-05-28-t192-vorcaro-triangulo-carbono-mineracao-banco.md + gosurf.site",
+      "Publicar T-192 (Vorcaro): _posts/estudos/2026-05-28-t192-vorcaro-triangulo.md + gosurf.site",
       "Copiar 9 posts P11 cluster para _posts/governo/ e _posts/escandalos/ (jekyll-posts-p11-cluster.tar.gz)",
-      "Formalizar IDs 197-201 para 5 artefatos deployed (splc, duplo-padrao, narrativa-vs-evidencia, vaza-toga, justicawatch)",
+      "Formalizar IDs 208-209 (narrativa-vs-evidencia, justicawatch)",
       "Implementar espelhamento IPFS/archive.org (pendente recorrente)",
       "Integrar JustiçaWatch em /data/justicawatch/ no repositório",
-      "Recuperação shadowban @araguaci",
-      "lawfare.json last_id=1571; próximo ID livre=1572",
-      "Fila editorial 2026-05-28: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
-      "T-197 Operação Rejeito publicado (2026-05-28)",
-      "T-198 COAF × Moraes publicado (2026-05-28)",
-      "T-199 Lojas Americanas publicado (2026-05-28)",
-      "T-200 Estatais rombo P11 publicado (2026-05-28)",
-      "T-201 PCC transnacional publicado (2026-05-28)",
-      "T-202 Delegada × PCC publicado (2026-05-28)",
-      "T-203 Zelotes CARF publicado (2026-05-28)",
-      "T-204 Gastos Paris publicado (2026-05-28)",
-      "T-205 Duplo padrão corpus publicado (2026-05-28)",
-      "T-206 SPLC corpus publicado (2026-05-28)",
-      "T-207 Vaza Toga corpus publicado (2026-05-28)",
-      "T-196 Radar Top 30 publicado em estudos/ (2026-05-28)"
+      "Recuperação shadowban @araguaci"
     ]
   },
   "id_conflict_resolutions": {
     "generated": "2026-05-28",
-    "biomm": {
-      "old_range": "1481-1500",
-      "new_range": "1527-1546",
-      "reason": "1481-1500 = PCC/Ndrangheta canônico"
-    },
-    "zema": {
-      "old_ids": "185-188",
-      "new_ids": "1547-1550",
-      "reason": "thematic 185-188 = Dosimetria"
-    },
-    "homeschooling": {
-      "old_id": 1425,
-      "new_id": 1551,
-      "reason": "1425 = Mare Liberum Galeão"
-    },
-    "direita_permitida": {
-      "old_id": "T-189",
-      "new_id": "T-190",
-      "reason": "T-189 reservado à Reforma Tributária"
-    },
+    "biomm": {"old_range": "1481-1500", "new_range": "1527-1546", "reason": "1481-1500 = PCC/Ndrangheta canônico"},
+    "zema": {"old_ids": "185-188", "new_ids": "1547-1550", "reason": "thematic 185-188 = Dosimetria"},
+    "homeschooling": {"old_id": 1425, "new_id": 1551, "reason": "1425 = Mare Liberum Galeão"},
+    "direita_permitida": {"old_id": "T-189", "new_id": "T-190", "reason": "T-189 reservado à Reforma Tributária"},
     "t192_decisao": {
       "old_pending_notes_192": "Operação Rejeito / Serra do Curral / manuscritos",
       "new_t192": "Vorcaro triângulo carbono–mineração–banco",
@@ -1417,10 +259,18 @@
       "T-196": "Radar Top 30 — renumerado do antigo T-191",
       "date": "2026-05-28"
     },
-    "pcc_namespace": {
-      "range": "1481-1500",
-      "status": "canonical_pcc_ndrangheta",
-      "do_not_overwrite": true
+    "pcc_namespace": {"range": "1481-1500", "status": "canonical_pcc_ndrangheta", "do_not_overwrite": true},
+    "americanas_id": {
+      "sessao_decidiu": "T-197 = Americanas",
+      "repo_ja_tinha": "T-197 = Rejeito/Serra Curral/manuscritos",
+      "resolucao": "Americanas = T-199 (confirmado). JSON renomeado T-197→T-199 em _data/todo/ em 2026-05-28.",
+      "date": "2026-05-28"
+    },
+    "splc_id": {
+      "sessao_decidiu": "T-202 = SPLC Modelo Brasil",
+      "repo_ja_tinha": "T-202 = Delegada × PCC; T-206 = SPLC Modelo Brasil",
+      "resolucao": "SPLC = T-206 (canônico no repo). Entrada da sessão descartada em favor do repo.",
+      "date": "2026-05-28"
     }
   },
   "session_log": [
@@ -1432,28 +282,34 @@
         "lawfare-batch-flavio-trump-1572-1576.json (5 entradas — IDs 1572-1576)",
         "t191-custeio-administrativo-federal-p11.html + T-191.json",
         "t192-vorcaro-triangulo-carbono-mineracao-banco.html + T-192.json",
-        "sync-patch-rejeito-2026-05-27.json (descartado — substituído por este arquivo)",
-        "jekyll-posts-p11-cluster.tar.gz (9 posts: timeline-167,170,172,174,175,176,177,178 + orçamento-secreto)",
-        "dashboard visual Operação Rejeito (inline)"
+        "jekyll-posts-p11-cluster.tar.gz (9 posts: timeline-167,170,172,174,175,176,177,178 + orçamento-secreto)"
       ],
       "decisions": [
         "T-192 = Vorcaro triângulo (não Rejeito/Serra Curral)",
         "T-193 = Rejeito/Serra do Curral dossiê consolidado",
         "IDs 197-201 reservados para 5 artefatos deployed sem thematic_id",
         "Batch 1425-1444 descartado (conflito com corpus canônico) — substituído por 1552-1571"
-      ],
-      "validation_result": {
-        "run": "2026-05-28 11:47",
-        "errors_fixed": [
-          "main.last_id corrigido: 1526 → 1571 (merge já confirmado em lawfare.json)",
-          "main.next_available corrigido: vazio → 1572",
-          "thematic.last_id corrigido: 196 → 201 (IDs 197-201 reserved presentes no arquivo)",
-          "thematic.next_available corrigido: 197 → 202"
+      ]
+    },
+    {
+      "date": "2026-05-28",
+      "session": "sync lawfare-timeline desenvolvimento — reconciliação repo vs sessão",
+      "reconciliation": {
+        "repo_thematic_last_id": 209,
+        "session_thematic_last_id_before": 202,
+        "delta_ids_in_repo_not_in_session": [203, 204, 205, 206, 207, 208, 209],
+        "conflict_resolutions": [
+          "T-197: sessão=Americanas → repo=Rejeito/Serra Curral. Americanas = T-199.",
+          "T-202: sessão=SPLC → repo=Delegada×PCC. SPLC = T-206."
         ],
-        "errors_pending_external": [
-          "lawfare-unified-corpus.json: entradas 1518, 1519, 1520 sem fontes_verificadas (corrigir separadamente)"
-        ]
-      }
+        "result": "Repo é canônico. Sync unificado com last_id=209, next_available=210."
+      },
+      "action_items_completed": [
+        "Merge batch 1572-1576 em lawfare.json (total: 1514 entradas, last_id: 1576)",
+        "Batches rejeito+flavio movidos para _data/processados/",
+        "T-197-americanas*.json renomeado para T-199-americanas*.json",
+        "claude.ai-corpus-ids-sync.json atualizado para schema 1.1.0 com last_id thematic=209"
+      ]
     }
   ]
 }
