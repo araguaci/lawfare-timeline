@@ -1,6 +1,6 @@
 ---
 title: "Viagens federais sob sigilo: R$ 405 milhões em 2024 — STF e Senado mantêm destinos ocultos"
-description: "As viagens sob sigilo de servidores do governo federal somaram R$ 405 milhões em 2024 (R$ 382 milhões em 2023, R$ 268 milhões em 2022). A maior parte: PF (R$ 235 milhões, sendo R$ 189 mi em diárias) e PRF (R$ 124 milhões, R$ 95 mi em diárias). O STF mantém em sigilo despesas de viagens de todos os ministros — destinos, motivos e valores. Em 2024, apenas as diárias do presidente Roberto Barroso e comitiva foram parcialmente visíveis: R$ 520 mil. O Senado protegeu as viagens do presidente Rodrigo Pacheco (jan/2021-jan/2025): R$ 3,2 milhões sigilosos em 2023, R$ 2,3 milhões em 2024. O portal de 'transparência' do Senado registra custo de diárias e passagens sem destino, motivo ou lista de quem viajou."
+description: "As viagens sob sigilo de servidores do governo federal somaram R$ 405 milhões em 2024 (R$ 382 milhões em 2023, R$ 268 milhões em 2022). A maior parte: PF (R$ 235 milhões, sendo R$ 189 mi em diárias) e PRF (R$ 124 milhões, R$ 95 mi em diárias). "
 date: 2024-01-01T12:00:00.000Z
 image:
   path: "/assets/solid/user-secret.svg"

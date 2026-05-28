@@ -1,4 +1,6 @@
 ---
+id_corpus: "1527-1546"
+thematic_track: false
 title: "Dossiê Biomm · Insider, Conflito e Poder · Mai/2026"
 description: Como o presidente do IBGE se tornou conselheiro remunerado da maior farmacêutica dependente do Estado — e o que as 1.780 operações de venda de ações...
 date: 2026-05-21T12:00:00-03:00

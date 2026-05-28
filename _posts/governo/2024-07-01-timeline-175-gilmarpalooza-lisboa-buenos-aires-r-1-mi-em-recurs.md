@@ -1,6 +1,6 @@
 ---
 title: "'Gilmarpalooza' (Lisboa + Buenos Aires): R$ 1 mi+ em recursos do Legislativo — 36 parlamentares, sem prestação de contas"
-description: "O Fórum Jurídico de Lisboa, organizado pelo IDP (instituto fundado pelo ministro do STF Gilmar Mendes), realizado em Lisboa em julho de 2024 e julho de 2025 e em Buenos Aires em 2025, mobilizou recursos públicos do Legislativo superior a R$ 1 milhão. Na edição de 2025 (Lisboa, 2-4 jul): 30 deputados e 6 senadores receberam recursos públicos — R$ 727 mil pela Câmara e R$ 110 mil em diárias pelo Senado, com R$ 77,5 mil em passagens de dois senadores. Vários parlamentares viajaram em classe executiva com bilhetes acima de R$ 30 mil. Senador Irajá (PSD-TO): R$ 51.146 individuais. Dep. Luciano Vieira (Republicanos-RJ): R$ 44.125. 28 dos 36 parlamentares eram do Centrão. Nenhum relatório institucional justifica as despesas. O evento contou com presença dos ministros Barroso, Moraes, Dino e André Mendonça."
+description: "O Fórum Jurídico de Lisboa, organizado pelo IDP (instituto fundado pelo ministro do STF Gilmar Mendes), realizado em Lisboa em julho de 2024 e julho de 2025 e em Buenos Aires em 2025, mobilizou recursos públicos do Legislativo superior a R$ 1 milhão."
 date: 2024-07-01T12:00:00.000Z
 image:
   path: "/assets/solid/scale-balanced.svg"

@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T-192 · Família Vorcaro — Triângulo Carbono–Mineração–Banco</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:       #09100d;
+  --bg2:      #0f1a14;
+  --bg3:      #162019;
+  --bg4:      #1c2820;
+  --border:   rgba(255,255,255,0.06);
+  --border2:  rgba(255,255,255,0.12);
+  --ink:      #e8f0ea;
+  --ink2:     #8aaa90;
+  --ink3:     #445e4a;
+  --green:    #2ecc71;
+  --green-d:  #1a7a44;
+  --green-bg: rgba(46,204,113,0.08);
+  --teal:     #1abc9c;
+  --amber:    #e6a817;
+  --amber-bg: rgba(230,168,23,0.08);
+  --red:      #e74c3c;
+  --red-bg:   rgba(231,76,60,0.08);
+  --purple:   #9b59b6;
+  --purple-bg:rgba(155,89,182,0.08);
+  --serif:    'Source Serif 4', Georgia, serif;
+  --display:  'Syne', sans-serif;
+  --mono:     'IBM Plex Mono', monospace;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.page { max-width: 900px; margin: 0 auto; padding: 0 24px 100px; }
+
+/* NAV */
+.topnav {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: rgba(9,16,13,.96);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+  padding: 0;
+  overflow-x: auto;
+}
+.tnav {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .06em;
+  padding: 10px 14px;
+  border: none;
+  background: none;
+  color: var(--ink3);
+  cursor: pointer;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  text-decoration: none;
+  display: block;
+}
+.tnav:hover { color: var(--ink2); }
+
+/* HEADER */
+.header {
+  padding: 56px 0 40px;
+  border-bottom: 1px solid var(--border2);
+  margin-bottom: 56px;
+  position: relative;
+  overflow: hidden;
+}
+.header::before {
+  content: 'T-192';
+  position: absolute;
+  right: -12px;
+  top: 28px;
+  font-family: var(--display);
+  font-size: 120px;
+  font-weight: 800;
+  color: rgba(46,204,113,0.04);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--green);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.eyebrow::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+h1 {
+  font-family: var(--display);
+  font-size: clamp(26px, 4.5vw, 44px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+h1 .hl { color: var(--green); }
+.header-lead {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 17px;
+  color: var(--ink2);
+  line-height: 1.65;
+  max-width: 640px;
+  margin-bottom: 24px;
+}
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .06em;
+  padding: 3px 9px;
+  border-radius: 2px;
+  border: 1px solid;
+}
+.tag-g  { background: var(--green-bg); color: var(--green);  border-color: rgba(46,204,113,.25); }
+.tag-a  { background: var(--amber-bg); color: var(--amber);  border-color: rgba(230,168,23,.25); }
+.tag-r  { background: var(--red-bg);   color: var(--red);    border-color: rgba(231,76,60,.25); }
+.tag-p  { background: var(--purple-bg);color: var(--purple); border-color: rgba(155,89,182,.25); }
+.tag-x  { background: transparent; color: var(--ink3); border-color: var(--border); }
+
+/* SECTIONS */
+.sec { margin-bottom: 60px; scroll-margin-top: 40px; }
+.sh {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink3);
+  margin-bottom: 6px;
+}
+h2 {
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+p { color: var(--ink2); line-height: 1.8; margin-bottom: 14px; font-family: var(--serif); }
+p:last-child { margin-bottom: 0; }
+strong { color: var(--ink); font-weight: 400; }
+em { color: var(--green); font-style: italic; }
+
+/* TRIANGULO SVG */
+.tri-wrap { margin: 24px 0 32px; display: flex; justify-content: center; }
+
+/* STAT STRIP */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 24px 0;
+}
+.stat {
+  background: var(--bg2);
+  padding: 18px 16px;
+}
+.stat:hover { background: var(--bg3); }
+.sv {
+  font-family: var(--display);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+.sl {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--ink3);
+  line-height: 1.4;
+}
+.sv.g { color: var(--green); }
+.sv.a { color: var(--amber); }
+.sv.r { color: var(--red); }
+.sv.p { color: var(--purple); }
+
+/* HIGHLIGHT */
+.hl-box {
+  border-left: 2px solid var(--green);
+  background: var(--green-bg);
+  padding: 14px 18px;
+  border-radius: 0 3px 3px 0;
+  margin: 18px 0;
+}
+.hl-box.a { border-left-color: var(--amber); background: var(--amber-bg); }
+.hl-box.r { border-left-color: var(--red);   background: var(--red-bg); }
+.hl-box.p { border-left-color: var(--purple); background: var(--purple-bg); }
+.hl-box p { font-size: 14px; margin: 0; }
+.hl-box strong { color: var(--green); }
+.hl-box.a strong { color: var(--amber); }
+.hl-box.r strong { color: var(--red); }
+.hl-box.p strong { color: var(--purple); }
+
+/* CHAIN */
+.chain {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 12px 16px;
+  margin: 16px 0;
+}
+.cn {
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 2px;
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  color: var(--ink);
+  white-space: nowrap;
+}
+.cn.g { border-color: rgba(46,204,113,.3); color: var(--green); }
+.cn.r { border-color: rgba(231,76,60,.3); color: var(--red); }
+.cn.a { border-color: rgba(230,168,23,.3); color: var(--amber); }
+.cn.p { border-color: rgba(155,89,182,.3); color: var(--purple); }
+.arr { color: var(--ink3); font-size: 13px; padding: 0 2px; }
+
+/* ACTOR TABLE */
+.atable { width: 100%; border-collapse: collapse; font-size: 13px; margin: 20px 0; }
+.atable thead th {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--ink3);
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border2);
+  background: var(--bg2);
+}
+.atable tbody td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--ink2);
+  vertical-align: top;
+  line-height: 1.5;
+}
+.atable tbody td.name { color: var(--ink); font-family: var(--mono); font-size: 12px; font-weight: 500; }
+.atable tbody tr:hover td { background: var(--bg3); }
+.atable tbody td.status { white-space: nowrap; }
+
+/* TIMELINE */
+.tl { padding-left: 24px; position: relative; margin: 20px 0; }
+.tl::before { content: ''; position: absolute; left: 6px; top: 6px; bottom: 6px; width: 1px; background: var(--border2); }
+.tli { position: relative; margin-bottom: 20px; }
+.tld { position: absolute; left: -21px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--green); border: 2px solid var(--bg); }
+.tld.a { background: var(--amber); }
+.tld.r { background: var(--red); }
+.tld.p { background: var(--purple); }
+.tld.x { background: var(--ink3); }
+.tldate { font-family: var(--mono); font-size: 11px; color: var(--green); margin-bottom: 2px; }
+.tli .tldate.a { color: var(--amber); }
+.tli .tldate.r { color: var(--red); }
+.tli .tldate.x { color: var(--ink3); }
+.tltitle { font-family: var(--display); font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: 3px; }
+.tlbody  { font-size: 12px; color: var(--ink2); line-height: 1.55; font-family: var(--serif); }
+
+/* CONN LIST */
+.connlist { display: flex; flex-direction: column; gap: 8px; margin: 16px 0; }
+.connitem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  font-size: 13px;
+  font-family: var(--serif);
+}
+.connid {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--green);
+  min-width: 52px;
+  padding-top: 1px;
+  flex-shrink: 0;
+}
+.conndesc { color: var(--ink2); line-height: 1.55; }
+
+/* JSON BLOCK */
+.jblock { background: var(--bg2); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin: 20px 0; }
+.jhead { background: var(--bg3); border-bottom: 1px solid var(--border); padding: 7px 14px; font-family: var(--mono); font-size: 10px; color: var(--ink3); letter-spacing: .05em; }
+.jbody { padding: 14px; font-family: var(--mono); font-size: 12px; line-height: 1.75; color: var(--ink2); overflow-x: auto; white-space: pre; }
+.jk { color: #7ec8e3; }
+.js { color: #c3e88d; }
+.jn { color: var(--amber); }
+
+/* PATTERN GRID */
+.pgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; margin: 20px 0; }
+.pcard { background: var(--bg2); border: 1px solid var(--border); border-radius: 4px; padding: 14px; position: relative; overflow: hidden; }
+.pcard::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; }
+.pcard.g::after { background: var(--green); }
+.pcard.a::after { background: var(--amber); }
+.pcard.r::after { background: var(--red); }
+.pcard.p::after { background: var(--purple); }
+.pcard.ga::after { background: linear-gradient(90deg, var(--green), var(--amber)); }
+.pid { font-family: var(--mono); font-size: 11px; font-weight: 500; color: var(--green); margin-bottom: 5px; }
+.pcard.a .pid { color: var(--amber); }
+.pcard.r .pid { color: var(--red); }
+.pcard.p .pid { color: var(--purple); }
+.pcard.ga .pid { color: var(--teal); }
+.pname { font-family: var(--display); font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: 6px; }
+.pdesc { font-size: 12px; color: var(--ink2); line-height: 1.5; font-family: var(--serif); }
+
+/* FOOTER */
+.footer { border-top: 1px solid var(--border); padding-top: 28px; margin-top: 60px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.fl { font-size: 12px; color: var(--ink3); line-height: 1.6; font-family: var(--mono); }
+.fr { font-family: var(--mono); font-size: 11px; color: var(--ink3); text-align: right; }
+
+@media (max-width: 600px) { .stats { grid-template-columns: 1fr 1fr; } .pgrid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a class="tnav" href="#sec-tese">tese</a>
+  <a class="tnav" href="#sec-triangulo">triângulo</a>
+  <a class="tnav" href="#sec-carbono">carbono</a>
+  <a class="tnav" href="#sec-mineral">mineral</a>
+  <a class="tnav" href="#sec-banco">banco</a>
+  <a class="tnav" href="#sec-padroes">padrões</a>
+  <a class="tnav" href="#sec-timeline">timeline</a>
+  <a class="tnav" href="#sec-conexoes">corpus</a>
+  <a class="tnav" href="#sec-entrada">T-192</a>
+</nav>
+
+<div class="page">
+<header class="header">
+  <div class="eyebrow">lawfare-timeline · T-192 · P08+P11 · 2026-05-27</div>
+  <h1>Família Vorcaro<br><span class="hl">Triângulo Carbono–Mineração–Banco</span></h1>
+  <p class="header-lead">
+    Um único núcleo familiar articula simultaneamente três frentes de extração documentadas: créditos de carbono fictícios lastreados em terras públicas da União (R$ 45,5 bi em UECs), participação na cadeia mineral ilegal investigada pela Operação Rejeito (Tamisa/Serra do Curral), e banco liquidado com R$ 12,2 bi em carteiras fictícias (Banco Master). Dossiê de fechamento do triângulo.
+  </p>
+  <div class="tags">
+    <span class="tag tag-g">P08 — fachada ESG</span>
+    <span class="tag tag-a">P11 — extração estrutural</span>
+    <span class="tag tag-r">P03 — proteção STF/Toffoli</span>
+    <span class="tag tag-p">P08 — blendagem mineral</span>
+    <span class="tag tag-x">Score 115.0 — crítico</span>
+    <span class="tag tag-x">T-192 · thematic track</span>
+    <span class="tag tag-x">CC0 1.0</span>
+  </div>
+</header>
+
+<!-- KPIs -->
+<div class="stats">
+  <div class="stat"><div class="sv r">R$ 45,5 bi</div><div class="sl">UECs fictícias — Alliance/Apuí</div></div>
+  <div class="stat"><div class="sv a">80%</div><div class="sl">créditos amazônicos controlados pela família</div></div>
+  <div class="stat"><div class="sv r">R$ 12,2 bi</div><div class="sl">carteiras fictícias — Banco Master (liquidado)</div></div>
+  <div class="stat"><div class="sv g">Tamisa</div><div class="sl">sócio majoritário Serra do Curral (Victoria Falls)</div></div>
+  <div class="stat"><div class="sv a">3D Minerals</div><div class="sl">empréstimo Master para leilão ANM</div></div>
+  <div class="stat"><div class="sv r">2× preso</div><div class="sl">Daniel Vorcaro — nov/2025 e jan/2026</div></div>
+</div>
+
+<!-- TESE CENTRAL -->
+<section class="sec" id="sec-tese">
+  <div class="sh">01 · análise estrutural</div>
+  <h2>Tese central</h2>
+  <p>
+    A família Vorcaro — Daniel (Banco Master), Henrique (pai) e Natália (irmã) — não opera em frentes independentes. As três atividades documentadas — carbono, mineração e banco — são faces de uma <strong>arquitetura única de extração de patrimônio público</strong>, onde cada frente serve às outras duas: o banco financia a mineração e o carbono, o carbono legitima o banco como "ESG-friendly", a mineração gera os ativos físicos que a estrutura financeira valoriza.
+  </p>
+  <div class="hl-box">
+    <p><strong>O que este dossiê fecha:</strong> o corpus já documenta cada frente separadamente — Carbono Oculto (T-119), Compliance Zero (IDs 1527–1546), Rejeito (IDs 1552–1571). Este dossiê T-192 documenta pela primeira vez o triângulo como arquitetura única, com os três vértices sendo operados simultaneamente pelo mesmo núcleo familiar.</p>
+  </div>
+  <p>
+    A Folha de S.Paulo revelou em janeiro de 2026 que a família Vorcaro controla, via <strong>Alliance Participações</strong>, <em>80% dos créditos de carbono fictícios do Amazonas</em> — R$ 45,5 bilhões em UECs (Unidades de Estoque de Carbono) sem lastro em terras que efetivamente pertencem ao grupo. A mesma família, via <strong>Victoria Falls Fundo de Investimento</strong>, era sócia majoritária da <strong>Tamisa</strong> — empresa investigada pela Operação Rejeito por extração ilegal na Serra do Curral sem consulta prévia a comunidade quilombola. E o <strong>Banco Master</strong>, de Daniel Vorcaro, financiou a <strong>3D Minerals</strong> no maior leilão de minerais críticos já realizado pela ANM — cujo diretor responsável pelo processo, Caio Seabra, recebia votos pré-redigidos por WhatsApp (ID 1558).
+  </p>
+</section>
+
+<!-- TRIÂNGULO -->
+<section class="sec" id="sec-triangulo">
+  <div class="sh">02 · arquitetura</div>
+  <h2>O triângulo</h2>
+  <p>Três vértices, um núcleo. Cada frente usa os outros dois como infraestrutura ou legitimação:</p>
+
+  <div class="tri-wrap">
+    <svg viewBox="0 0 560 340" width="100%" style="max-width:560px" role="img" aria-label="Triângulo Vorcaro: três vértices conectados — carbono (Alliance), banco (Master) e mineração (Tamisa/3D)">
+      <title>Triângulo Vorcaro — carbono, banco, mineração</title>
+      <!-- fundo -->
+      <rect width="560" height="340" fill="none"/>
+      <!-- linhas do triângulo -->
+      <line x1="280" y1="30" x2="60" y2="290" stroke="rgba(46,204,113,0.2)" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <line x1="280" y1="30" x2="500" y2="290" stroke="rgba(46,204,113,0.2)" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <line x1="60"  y1="290" x2="500" y2="290" stroke="rgba(46,204,113,0.2)" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <!-- nó central -->
+      <ellipse cx="280" cy="175" rx="72" ry="36" fill="rgba(46,204,113,0.06)" stroke="rgba(46,204,113,0.25)" stroke-width="1"/>
+      <text x="280" y="168" text-anchor="middle" font-family="'Syne',sans-serif" font-size="11" font-weight="700" fill="#2ecc71">FAMÍLIA</text>
+      <text x="280" y="184" text-anchor="middle" font-family="'Syne',sans-serif" font-size="11" font-weight="700" fill="#2ecc71">VORCARO</text>
+      <!-- VÉRTICE 1: CARBONO -->
+      <rect x="178" y="8" width="204" height="52" rx="3" fill="rgba(46,204,113,0.08)" stroke="rgba(46,204,113,0.3)" stroke-width="1"/>
+      <text x="280" y="28" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="10" fill="#2ecc71" letter-spacing="1">CARBONO</text>
+      <text x="280" y="42" text-anchor="middle" font-family="'Syne',sans-serif" font-size="11" font-weight="700" fill="#e8f0ea">Alliance Participações</text>
+      <text x="280" y="54" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#8aaa90">Henrique + Natália · R$ 45,5bi UECs</text>
+      <!-- VÉRTICE 2: MINERAÇÃO -->
+      <rect x="0" y="270" width="200" height="58" rx="3" fill="rgba(230,168,23,0.08)" stroke="rgba(230,168,23,0.3)" stroke-width="1"/>
+      <text x="100" y="289" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="10" fill="#e6a817" letter-spacing="1">MINERAÇÃO</text>
+      <text x="100" y="303" text-anchor="middle" font-family="'Syne',sans-serif" font-size="11" font-weight="700" fill="#e8f0ea">Tamisa · 3D Minerals</text>
+      <text x="100" y="317" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#8aaa90">Serra Curral · ANM · Victoria Falls</text>
+      <!-- VÉRTICE 3: BANCO -->
+      <rect x="360" y="270" width="200" height="58" rx="3" fill="rgba(231,76,60,0.08)" stroke="rgba(231,76,60,0.3)" stroke-width="1"/>
+      <text x="460" y="289" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="10" fill="#e74c3c" letter-spacing="1">BANCO</text>
+      <text x="460" y="303" text-anchor="middle" font-family="'Syne',sans-serif" font-size="11" font-weight="700" fill="#e8f0ea">Master (liquidado)</text>
+      <text x="460" y="317" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#8aaa90">R$ 12,2bi fictícios · BRB · REAG</text>
+      <!-- fluxos -->
+      <path d="M240,60 Q160,100 130,265" stroke="rgba(46,204,113,0.35)" stroke-width="1" fill="none" marker-end="url(#ag)"/>
+      <path d="M320,60 Q400,100 430,265" stroke="rgba(231,76,60,0.35)" stroke-width="1" fill="none" marker-end="url(#ar)"/>
+      <path d="M200,295 L360,295" stroke="rgba(230,168,23,0.35)" stroke-width="1" fill="none" marker-end="url(#aa)"/>
+      <!-- labels de fluxo -->
+      <text x="158" y="165" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="9" fill="rgba(46,204,113,0.7)" transform="rotate(-55,158,165)">UECs como ativo</text>
+      <text x="403" y="165" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="9" fill="rgba(231,76,60,0.7)" transform="rotate(55,403,165)">financiamento mineral</text>
+      <text x="280" y="312" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="9" fill="rgba(230,168,23,0.7)">mineral → banco → carbono</text>
+      <!-- marcadores -->
+      <defs>
+        <marker id="ag" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="rgba(46,204,113,0.5)"/></marker>
+        <marker id="ar" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="rgba(231,76,60,0.5)"/></marker>
+        <marker id="aa" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="rgba(230,168,23,0.5)"/></marker>
+      </defs>
+    </svg>
+  </div>
+
+  <div class="chain">
+    <span class="cn g">Alliance/carbono (Henrique+Natália)</span>
+    <span class="arr">→</span>
+    <span class="cn">UECs fictícias como ativo financeiro</span>
+    <span class="arr">→</span>
+    <span class="cn r">Master (Daniel) valoriza o ativo</span>
+    <span class="arr">→</span>
+    <span class="cn a">Tamisa/3D Minerals recebem crédito</span>
+    <span class="arr">→</span>
+    <span class="cn r">Extração mineral + lavagem via carbono</span>
+  </div>
+</section>
+
+<!-- VÉRTICE 1: CARBONO -->
+<section class="sec" id="sec-carbono">
+  <div class="sh">03 · vértice 1</div>
+  <h2>Carbono fictício — Alliance Participações</h2>
+  <p>
+    A Folha de S.Paulo revelou em 20/jan/2026 que <strong>Henrique Moura Vorcaro</strong> (pai de Daniel) e <strong>Natália Vorcaro</strong> (irmã) controlam a <strong>Alliance Participações</strong> — empresa que detém projetos de crédito de carbono no município de <strong>Apuí (AM)</strong>, lastreados em terras públicas da União. O volume documentado é de <em>R$ 45,5 bilhões em UECs</em> — representando <em>80% dos créditos de carbono fictícios do Amazonas</em>.
+  </p>
+  <p>
+    O mecanismo é o mesmo documentado na Operação Greenwashing (Ricardo Stoppe Júnior / Grupo Ituxi): títulos de terras que não pertencem ao grupo são usados como lastro para projetos REDD+ certificados pela <strong>Verra</strong>. A certificadora não verificava a cadeia dominial — apenas a existência física da floresta. Uma floresta pública pode ser "conservada" em papel enquanto as terras são griladas e a extração ocorre.
+  </p>
+
+  <div class="hl-box a">
+    <p><strong>Distinção relevante:</strong> a Greenwashing (Stoppe) usou terras da União em Lábrea para emitir R$ 180 mi em créditos vendidos a Boeing, Gol, Nestlé. A Alliance (Vorcaro) opera em Apuí com R$ 45,5 bi em UECs — escala 250× maior. O mecanismo é idêntico; a grandeza é outra ordem de magnitude.</p>
+  </div>
+
+  <table class="atable">
+    <thead>
+      <tr><th>Entidade</th><th>Papel</th><th>Valor documentado</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="name">Alliance Participações</td>
+        <td>Detentora dos projetos de carbono em Apuí/AM</td>
+        <td>R$ 45,5 bi em UECs</td>
+        <td class="status"><span class="tag tag-r">investigada</span></td>
+      </tr>
+      <tr>
+        <td class="name">Henrique M. Vorcaro</td>
+        <td>Pai de Daniel — controlador Alliance</td>
+        <td>—</td>
+        <td class="status"><span class="tag tag-r">preso mai/2026</span></td>
+      </tr>
+      <tr>
+        <td class="name">Natália Vorcaro</td>
+        <td>Irmã de Daniel — controladora Alliance</td>
+        <td>—</td>
+        <td class="status"><span class="tag tag-a">investigada</span></td>
+      </tr>
+      <tr>
+        <td class="name">Verra (certificadora)</td>
+        <td>Validou projetos sem verificar cadeia dominial</td>
+        <td>168,8 mi UECs (Greenwashing); escala similar Apuí</td>
+        <td class="status"><span class="tag tag-a">falha estrutural</span></td>
+      </tr>
+      <tr>
+        <td class="name">Global Carbon</td>
+        <td>Veículo de valorização — fundada com R$ 100 de capital</td>
+        <td>avaliação bilionária via UECs</td>
+        <td class="status"><span class="tag tag-r">investigada</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="hl-box r">
+    <p><strong>Conexão PCC:</strong> o corpus Carbono Oculto (T-119) documenta que os fundos REAG que investiam no setor de carbono incluem 6 fundos com participação do PCC — Astralo 95, Hans 95, Olaf 95, Maia 95, Reag Growth 95, Anna — com R$ 102,4 bi investigados. A infraestrutura de carbono da família Vorcaro opera no mesmo ecossistema financeiro, via REAG DTVM (liquidada pelo BC) como hub central.</p>
+  </div>
+</section>
+
+<!-- VÉRTICE 2: MINERAL -->
+<section class="sec" id="sec-mineral">
+  <div class="sh">04 · vértice 2</div>
+  <h2>Mineração — Tamisa, Serra do Curral e 3D Minerals</h2>
+  <p>
+    A conexão do grupo Vorcaro com a cadeia mineral investigada pela Operação Rejeito ocorre em dois pontos documentados independentemente:
+  </p>
+
+  <p>
+    <strong>1. Tamisa / Serra do Curral.</strong> O sócio majoritário da <strong>Tamisa</strong> — empresa que recebeu Termo de Compromisso do governo Zema em maio de 2022 para avançar sobre a Serra do Curral sem consulta a comunidade quilombola — era o <strong>Victoria Falls Fundo de Investimento</strong>, controlado pelo Banco Master de Daniel Vorcaro. Outro acionista relevante era a <strong>WJ Consultoria</strong>, administrada por Fabiano Zettel, cunhado de Vorcaro. A Justiça Federal suspendeu as licenças da Tamisa em dezembro de 2022, manteve a decisão em outubro de 2023 e em março de 2026 suspendeu 57 processos minerários na Serra do Curral (ID 1568).
+  </p>
+  <p>
+    <strong>2. 3D Minerals / leilão ANM.</strong> A 3D Minerals — criada 46 dias antes de entrar no maior leilão de minerais críticos da ANM, com capital social de R$ 5 mil — venceu 116 áreas minerais em 7 estados, assumindo compromisso de R$ 54,8 mi. O Banco Master de Daniel Vorcaro concedeu empréstimo à empresa para viabilizar o pagamento, com penhor de 50% das ações como garantia. O diretor da ANM responsável pelo processo, <strong>Caio Seabra</strong>, recebia votos pré-redigidos por WhatsApp horas antes das sessões (ID 1558) — preso na Rejeito.
+  </p>
+
+  <div class="hl-box">
+    <p><strong>A geometria é precisa:</strong> Vorcaro financia extratora sem histórico (3D Minerals) que vence leilão cujo relator está capturado (Seabra), e controla via fundo a mineradora da Serra do Curral (Tamisa) onde o licenciamento foi forçado por TAC do governo Zema — cujo diretório partidário recebeu R$ 1 mi do pai de Vorcaro no ano da reeleição. Três pontos de acesso ao mesmo ativo mineral.</p>
+  </div>
+
+  <table class="atable">
+    <thead>
+      <tr><th>Entidade</th><th>Conexão Vorcaro</th><th>Operação</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="name">Tamisa</td>
+        <td>Sócio majoritário via Victoria Falls (Master)</td>
+        <td>Operação Rejeito / Parcours</td>
+        <td class="status"><span class="tag tag-r">investigada</span></td>
+      </tr>
+      <tr>
+        <td class="name">WJ Consultoria</td>
+        <td>Acionista Tamisa — Fabiano Zettel (cunhado)</td>
+        <td>Rejeito</td>
+        <td class="status"><span class="tag tag-a">conexão familiar</span></td>
+      </tr>
+      <tr>
+        <td class="name">3D Minerals</td>
+        <td>Empréstimo Master + penhor 50% ações</td>
+        <td>ANM — leilão minerais críticos 2024</td>
+        <td class="status"><span class="tag tag-a">investigada</span></td>
+      </tr>
+      <tr>
+        <td class="name">Caio Seabra (ANM)</td>
+        <td>Relator do processo 3D Minerals / Aiga Mineração</td>
+        <td>Operação Rejeito</td>
+        <td class="status"><span class="tag tag-r">preso → solto</span></td>
+      </tr>
+      <tr>
+        <td class="name">Partido Novo / Zema</td>
+        <td>R$ 1 mi doação — Henrique Vorcaro (2022)</td>
+        <td>contexto TAC Tamisa</td>
+        <td class="status"><span class="tag tag-a">documentado</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- VÉRTICE 3: BANCO -->
+<section class="sec" id="sec-banco">
+  <div class="sh">05 · vértice 3</div>
+  <h2>Banco Master — liquidado, protegido, desdobrado</h2>
+  <p>
+    O Banco Master foi liquidado em novembro de 2025. Daniel Vorcaro foi preso duas vezes — em novembro de 2025 tentando deixar o país, e em janeiro de 2026. O caso migrou para o STF sob relatoria de <strong>Dias Toffoli</strong>, que determinou acareação atípica e manteve sigilo que impediu BC e TCU de acessar documentação (o mesmo Toffoli que revogou as preventivas da Operação Rejeito, ID 1563).
+  </p>
+  <p>
+    O Master não era apenas banco. Era a <strong>infraestrutura financeira do triângulo</strong>: emprestava para empresas que depositavam nos fundos REAG em circulação no mesmo dia; vendeu R$ 12,2 bi em carteiras de crédito consignado fictícias ao BRB (Banco de Brasília); financiou a 3D Minerals no leilão da ANM; e era o veículo pelo qual a família Vorcaro detinha participação efetiva na Tamisa (Serra do Curral) via Victoria Falls.
+  </p>
+
+  <div class="hl-box r">
+    <p><strong>Conexão Viviane Barci:</strong> após as investigações da Rejeito e Compliance Zero, o escritório de advocacia de <strong>Viviane Barci de Moraes</strong> — esposa do ministro Alexandre de Moraes — foi contratado pelo Banco Master por R$ 129 milhões. O mesmo escritório assumiu por substabelecimento a defesa de <strong>Lucas Kallas</strong> no STF (ID 1566) — sócio de Daniel Vorcaro na Biomm e investigado nas operações Rejeito e Parcours. O triângulo tem proteção jurídica no mesmo tribunal que detém o sigilo do Compliance Zero.</p>
+  </div>
+
+  <table class="atable">
+    <thead>
+      <tr><th>Mecanismo</th><th>Valor</th><th>Contraparte</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Carteiras consignado fictícias</td>
+        <td>R$ 12,2 bi</td>
+        <td>BRB (Banco de Brasília)</td>
+      </tr>
+      <tr>
+        <td>Empréstimos circulares fundos REAG</td>
+        <td>investigado</td>
+        <td>REAG DTVM (liquidada BC)</td>
+      </tr>
+      <tr>
+        <td>Empréstimo 3D Minerals (leilão ANM)</td>
+        <td>~R$ 54,8 mi (penhor 50% ações)</td>
+        <td>3D Minerals / ANM</td>
+      </tr>
+      <tr>
+        <td>Victoria Falls FI → Tamisa</td>
+        <td>sócio majoritário</td>
+        <td>Serra do Curral / Rejeito</td>
+      </tr>
+      <tr>
+        <td>Contrato advocacia Viviane Barci</td>
+        <td>R$ 129 mi</td>
+        <td>defesa Kallas + proteção STF</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- PADRÕES -->
+<section class="sec" id="sec-padroes">
+  <div class="sh">06 · framework analítico</div>
+  <h2>Padrões P01–P11 ativados</h2>
+
+  <div class="pgrid">
+    <div class="pcard g">
+      <div class="pid">P08 · Fachada ESG</div>
+      <div class="pname">Ativo fictício com aparência legítima</div>
+      <div class="pdesc">UECs da Alliance lastreadas em terras da União mas com aparência de projeto certificado (Verra). Crédito de carbono como versão ESG do contrato superfaturado: ativo com valor inflado, validação institucional frágil. Paralelo exato com Greenwashing/Stoppe.</div>
+    </div>
+    <div class="pcard a">
+      <div class="pid">P08 · Blendagem mineral</div>
+      <div class="pname">Minério ilegal misturado ao legal</div>
+      <div class="pdesc">3º manuscrito (ID 1571): minério extraído ilegalmente blendado com material legalizado da Cedro/Extrativa — análise química não distingue. Tamisa e 3D Minerals são pontos de acesso do grupo Vorcaro ao mesmo mecanismo de blendagem documentado na Rejeito.</div>
+    </div>
+    <div class="pcard r">
+      <div class="pid">P03 · Chokepoint STF</div>
+      <div class="pname">Toffoli como relator duplo</div>
+      <div class="pdesc">Toffoli é relator simultâneo do Compliance Zero (sigilo Master) e da Operação Rejeito (revogou 22 preventivas). Os dois casos convergem no mesmo ministro, que em ambos usou sigilo processual como instrumento de paralisação.</div>
+    </div>
+    <div class="pcard ga">
+      <div class="pid">P08 + P11 · Extração estrutural</div>
+      <div class="pname">Escala que transcende o episódico</div>
+      <div class="pdesc">R$ 45,5 bi em UECs + R$ 12,2 bi em carteiras fictícias + Serra do Curral + leilão ANM. A escala combinada do triângulo configura P11: não são desvios isolados, é um sistema de extração de patrimônio público (floresta amazônica, área tombada, minerais críticos da União) operado por um único núcleo familiar.</div>
+    </div>
+    <div class="pcard p">
+      <div class="pid">P09 · Nexo político-regulatório</div>
+      <div class="pname">Financiamento eleitoral como acesso</div>
+      <div class="pdesc">Henrique Vorcaro: R$ 1 mi ao Partido Novo de Zema (2022) → TAC Tamisa na Serra do Curral. Flávio Bolsonaro associado ao grupo (filtração eleitoral 2026, ID 1574). Financiamento eleitoral como instrumento de abertura de licenças e contratos.</div>
+    </div>
+    <div class="pcard r">
+      <div class="pid">P04 · Testa-de-ferro</div>
+      <div class="pname">Controle por interpostas pessoas</div>
+      <div class="pdesc">Alliance: Henrique + Natália como controladores formais enquanto Daniel (preso) é o ponto de convergência real. WJ Consultoria (Zettel/cunhado) na Tamisa. Victoria Falls como fundo-veículo que isola Vorcaro da participação direta na mineradora.</div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="sec" id="sec-timeline">
+  <div class="sh">07 · cronologia</div>
+  <h2>Timeline do triângulo — 2022–2026</h2>
+
+  <div class="tl">
+    <div class="tli">
+      <div class="tld x"></div>
+      <div class="tldate x">2022</div>
+      <div class="tltitle">Tamisa recebe TAC do governo Zema — Serra do Curral sem consulta quilombola</div>
+      <div class="tlbody">Sócio majoritário Tamisa: Victoria Falls FI (Banco Master). WJ Consultoria (cunhado Zettel): acionista. Henrique Vorcaro doa R$ 1 mi ao Partido Novo de Zema no mesmo ano.</div>
+    </div>
+    <div class="tli">
+      <div class="tld x"></div>
+      <div class="tldate x">Dez. 2022</div>
+      <div class="tltitle">Justiça Federal suspende licenças da Tamisa na Serra do Curral</div>
+      <div class="tlbody">Decisão mantida em out/2023. Em mar/2026, JF suspende 57 processos e multa ANM em R$ 4 mi (ID 1568).</div>
+    </div>
+    <div class="tli">
+      <div class="tld a"></div>
+      <div class="tldate a">Nov. 2024</div>
+      <div class="tltitle">3D Minerals vence leilão ANM com financiamento Banco Master</div>
+      <div class="tlbody">3D Minerals: criada 46 dias antes, capital R$ 5 mil. Vence 116 áreas minerais, assume R$ 54,8 mi. Master empresta; penhor de 50% das ações. Caio Seabra (ANM) recebia votos por WhatsApp (ID 1558).</div>
+    </div>
+    <div class="tli">
+      <div class="tld r"></div>
+      <div class="tldate r">Nov. 2025</div>
+      <div class="tltitle">Compliance Zero fase 1 — Master liquidado, Daniel Vorcaro preso tentando deixar o país</div>
+      <div class="tlbody">R$ 12,2 bi em carteiras fictícias vendidas ao BRB. REAG liquidada pelo BC. Caso vai ao STF sob Toffoli.</div>
+    </div>
+    <div class="tli">
+      <div class="tld"></div>
+      <div class="tldate">Jan. 2026</div>
+      <div class="tltitle">Folha revela: Alliance Participações — 80% dos créditos fictícios do AM, R$ 45,5 bi</div>
+      <div class="tlbody">Henrique + Natália Vorcaro como controladores. Apuí (AM): terras públicas da União usadas como lastro. Conexão com Greenwashing/Stoppe documentada.</div>
+    </div>
+    <div class="tli">
+      <div class="tld r"></div>
+      <div class="tldate r">Jan. 2026</div>
+      <div class="tltitle">Compliance Zero fase 2 — Vorcaro preso pela 2ª vez / Toffoli determina sigilo e acareação atípica</div>
+      <div class="tlbody">Toffoli assume STF. BCB e TCU em conflito sobre inspeção. Sigilo impede acesso externo.</div>
+    </div>
+    <div class="tli">
+      <div class="tld"></div>
+      <div class="tldate">Jan. 2026</div>
+      <div class="tltitle">Viviane Barci (esposa Moraes) assume defesa de Kallas no STF — escritório contratado pelo Master por R$ 129 mi</div>
+      <div class="tlbody">Kallas: sócio de Vorcaro na Biomm, investigado na Rejeito e Parcours. O mesmo escritório defende o sócio e recebe honorários do banco — ID 1566.</div>
+    </div>
+    <div class="tli">
+      <div class="tld a"></div>
+      <div class="tldate a">Abr. 2026</div>
+      <div class="tltitle">Kallas vende participação na Biomm e Latache — desvinculação formal de Vorcaro</div>
+      <div class="tlbody">Alaska Asset Management assume 26,15% da Biomm. Desinvestimento após Compliance Zero e Rejeito (ID 1570).</div>
+    </div>
+    <div class="tli">
+      <div class="tld r"></div>
+      <div class="tldate r">Mai. 2026</div>
+      <div class="tltitle">Compliance Zero — Henrique Moura Vorcaro preso</div>
+      <div class="tlbody">Pai de Daniel preso pela PF. Mesmo momento em que Kallas finaliza desinvestimento. Dossiê T-192 registrado.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONEXÕES DO CORPUS -->
+<section class="sec" id="sec-conexoes">
+  <div class="sh">08 · emaranhamento</div>
+  <h2>Conexões com o corpus</h2>
+
+  <div class="connlist">
+    <div class="connitem">
+      <span class="connid">T-119</span>
+      <span class="conndesc">Carbono Oculto — greenwashing como P08. T-192 aprofunda o elo familiar Vorcaro (Alliance/Apuí) que T-119 documenta em linha com o esquema REAG/PCC. Não duplica: T-119 cobre mecanismo; T-192 cobre arquitetura familiar e escala R$ 45,5 bi.</span>
+    </div>
+    <div class="connitem">
+      <span class="connid">T-114/115</span>
+      <span class="conndesc">Banco Master — ascensão atípica e estrutura societária opaca. T-192 fecha o triângulo que T-114/115 abre: o banco não é só um banco, é a infraestrutura financeira que conecta carbono e mineração.</span>
+    </div>
+    <div class="connitem">
+      <span class="connid">IDs 1527–1546</span>
+      <span class="conndesc">Batch Biomm: Vorcaro como sócio de Kallas. T-192 complementa com a dimensão familiar (Henrique+Natália/Alliance) e mineral (Tamisa/3D Minerals) que o batch Biomm não cobre.</span>
+    </div>
+    <div class="connitem">
+      <span class="connid">IDs 1552–1571</span>
+      <span class="conndesc">Batch Operação Rejeito: Tamisa (ID 1555) e 3D Minerals/Caio Seabra (ID 1558) são os pontos de contato com o triângulo Vorcaro. T-192 posiciona esses IDs como instâncias do vértice "mineração" do triângulo familiar.</span>
+    </div>
+    <div class="connitem">
+      <span class="connid">ID 1566</span>
+      <span class="conndesc">Viviane Barci / Kallas / STF: o escritório de advocacia da esposa de Moraes recebe R$ 129 mi do Master e defende Kallas. Proteção jurídica do triângulo no mesmo tribunal que detém o sigilo Compliance Zero.</span>
+    </div>
+    <div class="connitem">
+      <span class="connid">ID 1568</span>
+      <span class="conndesc">JF suspende 57 processos Serra do Curral + multa ANM: inclui os processos da Tamisa, cujo sócio majoritário é o fundo do Banco Master. O vértice "mineração" do triângulo foi judicialmente bloqueado em mar/2026.</span>
+    </div>
+    <div class="connitem">
+      <span class="connid">ID 1571</span>
+      <span class="conndesc">3º manuscrito: Vale/Gerdau/Trafigura como compradoras finais. A blendagem que torna o minério ilegal indistinguível é o mesmo mecanismo que UECs fictícias usam no carbono: lavagem por mistura com ativo legítimo.</span>
+    </div>
+    <div class="connitem">
+      <span class="connid">T-191</span>
+      <span class="conndesc">Custeio administrativo P11: T-192 é a face privada do mesmo padrão — onde T-191 documenta extração via orçamento público, T-192 documenta extração via patrimônio natural (floresta, minerais) mediado por banco.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ENTRADA CANÔNICA -->
+<section class="sec" id="sec-entrada">
+  <div class="sh">09 · registro canônico</div>
+  <h2>Entrada T-192 — formato corpus</h2>
+
+  <div class="jblock">
+    <div class="jhead">_data/thematic/T-192-vorcaro-triangulo-carbono-mineracao-banco.json</div>
+    <div class="jbody"><span class="jk">"id"</span>: <span class="jn">192</span>,
+<span class="jk">"slug"</span>: <span class="js">"vorcaro-triangulo-carbono-mineracao-banco"</span>,
+<span class="jk">"tipo"</span>: <span class="js">"analise_estrutural"</span>,
+<span class="jk">"data_evento"</span>: <span class="js">"2026-01-20"</span>,
+<span class="jk">"data_registro"</span>: <span class="js">"2026-05-27"</span>,
+<span class="jk">"titulo"</span>: <span class="js">"Família Vorcaro — triângulo carbono–mineração–banco"</span>,
+<span class="jk">"operacao_referencia"</span>: <span class="js">"Carbono Oculto / Compliance Zero / Operação Rejeito"</span>,
+<span class="jk">"padroes_ativados"</span>: [<span class="js">"P08"</span>, <span class="js">"P11"</span>, <span class="js">"P03"</span>, <span class="js">"P04"</span>, <span class="js">"P09"</span>],
+
+<span class="jk">"evidencia_primaria"</span>: {
+  <span class="jk">"tipo"</span>: <span class="js">"documento"</span>,
+  <span class="jk">"descricao"</span>: <span class="js">"Folha de S.Paulo (20/jan/2026) revela que Henrique e Natália Vorcaro controlam Alliance Participações com R$ 45,5 bi em UECs sem lastro em terras da União em Apuí/AM — 80% dos créditos fictícios do Amazonas. Mesmo mecanismo da Greenwashing/Stoppe: Verra não verifica cadeia dominial. Banco Master (Daniel Vorcaro, liquidado nov/2025) era sócio majoritário da Tamisa (Serra do Curral, Rejeito) via Victoria Falls FI, e financiou a 3D Minerals no maior leilão de minerais críticos da ANM (2024)."</span>,
+  <span class="jk">"classificacao"</span>: <span class="js">"primária"</span>,
+  <span class="jk">"fonte"</span>: <span class="js">"Folha de S.Paulo (jan/2026); ClimaInfo (jan/2026); PF Operação Rejeito; carbono_oculto.html (corpus)"</span>,
+  <span class="jk">"url_referencia"</span>: <span class="js">"/posts/escandalos/2026-01-20-timeline-132-folha-revela-familia-vorcaro-controla-80-de-creditos-de-carbono-ficticio/"</span>
+},
+
+<span class="jk">"cadeia_logica"</span>: <span class="js">"Alliance/Apuí (Henrique+Natália) → UECs fictícias como ativo ESG → Master (Daniel) valoriza e financia → Tamisa recebe licença via TAC Zema (Henrique doa R$ 1 mi ao Partido Novo) → 3D Minerals vence leilão ANM com crédito Master → Caio Seabra (ANM capturado) valida → Toffoli protege Compliance Zero no STF → Viviane Barci defende Kallas (sócio de Vorcaro) no mesmo tribunal"</span>,
+
+<span class="jk">"observacao_analitica"</span>: <span class="js">"O triângulo carbono–mineração–banco não é coincidência de negócios: é arquitetura de extração de patrimônio público natural (floresta amazônica + minerais da União) mediada por banco que opera como infraestrutura financeira do conjunto. A analogia estrutural com a blendagem mineral (minério ilegal misturado ao legal, ID 1571) é exata no carbono: UECs fictícias misturadas a projetos legítimos via Verra tornam o produto indistinguível para o comprador final. Em ambos os casos, o mecanismo de lavagem é a mistura com ativo legítimo — não a falsificação isolada."</span>,
+
+<span class="jk">"atores"</span>: [
+  { <span class="jk">"nome"</span>: <span class="js">"Daniel Vorcaro"</span>, <span class="jk">"funcao_estrutural"</span>: <span class="js">"nó central — banco como infraestrutura do triângulo"</span>, <span class="jk">"cargo_na_epoca"</span>: <span class="js">"Controlador Banco Master (liquidado)"</span> },
+  { <span class="jk">"nome"</span>: <span class="js">"Henrique Moura Vorcaro"</span>, <span class="jk">"funcao_estrutural"</span>: <span class="js">"controlador Alliance/carbono + financiador eleitoral (Zema)"</span>, <span class="jk">"cargo_na_epoca"</span>: <span class="js">"pai de Daniel — Alliance Participações"</span> },
+  { <span class="jk">"nome"</span>: <span class="js">"Natália Vorcaro"</span>, <span class="jk">"funcao_estrutural"</span>: <span class="js">"controladora Alliance — vértice carbono"</span>, <span class="jk">"cargo_na_epoca"</span>: <span class="js">"irmã de Daniel — Alliance Participações"</span> },
+  { <span class="jk">"nome"</span>: <span class="js">"Fabiano Zettel"</span>, <span class="jk">"funcao_estrutural"</span>: <span class="js">"testa-de-ferro — WJ Consultoria / Tamisa"</span>, <span class="jk">"cargo_na_epoca"</span>: <span class="js">"cunhado de Daniel — WJ Consultoria"</span> },
+  { <span class="jk">"nome"</span>: <span class="js">"Lucas Kallas"</span>, <span class="jk">"funcao_estrutural"</span>: <span class="js">"sócio Biomm — ponto de contato Rejeito/Parcours"</span>, <span class="jk">"cargo_na_epoca"</span>: <span class="js">"empresário Cedro/Empabra — investigado"</span> }
+],
+
+<span class="jk">"conexoes_corpus"</span>: [
+  { <span class="jk">"id_ref"</span>: <span class="jn">119</span>, <span class="jk">"descricao"</span>: <span class="js">"Carbono Oculto: T-192 documenta vértice familiar (Alliance/Apuí) que T-119 abre"</span> },
+  { <span class="jk">"id_ref"</span>: <span class="jn">114</span>, <span class="jk">"descricao"</span>: <span class="js">"Banco Master: T-192 fecha o triângulo que T-114 documenta como banco isolado"</span> },
+  { <span class="jk">"id_ref"</span>: <span class="jn">1558</span>, <span class="jk">"descricao"</span>: <span class="js">"Caio Seabra / ANM: vértice mineral do triângulo — captura do leilão 3D Minerals"</span> },
+  { <span class="jk">"id_ref"</span>: <span class="jn">1566</span>, <span class="jk">"descricao"</span>: <span class="js">"Viviane Barci: proteção jurídica do triângulo no STF — mesmo tribunal com sigilo Master"</span> },
+  { <span class="jk">"id_ref"</span>: <span class="jn">1568</span>, <span class="jk">"descricao"</span>: <span class="js">"JF suspende Serra do Curral: inclui processos Tamisa — vértice mineral bloqueado"</span> },
+  { <span class="jk">"id_ref"</span>: <span class="jn">1571</span>, <span class="jk">"descricao"</span>: <span class="js">"3º manuscrito: blendagem mineral = mecanismo análogo à lavagem por UECs fictícias"</span> },
+  { <span class="jk">"id_ref"</span>: <span class="jn">191</span>, <span class="jk">"descricao"</span>: <span class="js">"T-191 P11 orçamentário: T-192 é face privada — extração via patrimônio natural vs. via orçamento"</span> }
+],
+
+<span class="jk">"status"</span>: <span class="js">"confirmado"</span>,
+<span class="jk">"visibilidade"</span>: <span class="js">"público"</span>,
+<span class="jk">"licenca"</span>: <span class="js">"CC0 1.0"</span></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="fl">lawfare-timeline · gosurf.site · @araguaci · CC0 1.0</div>
+  <div class="fr">T-192 · P08+P11+P03+P04+P09<br>gerado 2026-05-27 · próximo: T-193</div>
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "1.0.0",
-    "generated": "2026-05-12",
+    "generated": "2026-05-28",
     "purpose": "Mapa de sincronização de IDs — lawfare-timeline corpus",
     "source_project": "gosurf.site / lawfare-timeline.vercel.app",
     "maintainer": "@araguaci · AI Nativo Brasil · Artes do Sul Desenvolvimento Web",
@@ -54,10 +54,10 @@
         {
           "range": [
             1449,
-            1511
+            1510
           ],
           "status": "batch_file_only",
-          "notes": "NAO em lawfare.json — existem APENAS em _data/ batch files separados. Gap potencial 1449–1480 se houver merge futuro. Batch PCC/crime organizado transnacional: ʼNdrangheta (1484-1485), Carbono Oculto/Tank (1486-1487), OFAC (1488), PCC Portugal/Europa (1489-1496), Narco Fluxo/Choquei (1497-1498), Carbono Oculto PGE-SP/Genial (1499-1500), Hezbollah/FARC/Yakuza (1501-1503), Antimáfia Itália (1504), CPI CO (1505). ID 1511: erro judiciário/STJ (dentista 210 dias)."
+          "notes": "NAO em lawfare.json — existem APENAS em _data/ batch files separados. Gap potencial 1449–1480 se houver merge futuro. Batch PCC/crime organizado transnacional: ʼNdrangheta (1484-1485), Carbono Oculto/Tank (1486-1487), OFAC (1488), PCC Portugal/Europa (1489-1496), Narco Fluxo/Choquei (1497-1498), Carbono Oculto PGE-SP/Genial (1499-1500), Hezbollah/FARC/Yakuza (1501-1503), Antimáfia Itália (1504), CPI CO (1505). ID 1511: erro judiciário/STJ (dentista 210 dias). ID 1511+ em lawfare.json (Biazucci/crise merge 2026-05-26)."
         },
         {
           "range": [
@@ -66,6 +66,22 @@
           ],
           "status": "confirmed",
           "notes": "Merge todo batches 2026-05-26. Biazucci 1511-1513; crise 1514-1524; Ramagem 1525-1526."
+        },
+        {
+          "range": [
+            1527,
+            1551
+          ],
+          "status": "jekyll_published",
+          "notes": "Posts/estudos Jekyll (Biomm 1527-1546, Zema 1547-1550, Homeschooling 1551). lawfare.json termina em 1526 — merge batch pendente."
+        },
+        {
+          "range": [
+            1552,
+            1571
+          ],
+          "status": "jekyll_published",
+          "notes": "Operação Rejeito — ~20 posts em _posts/ (source_data lawfare-batch-rejeito-1552-1571.json). IDs reservados; lawfare.json merge pendente (next_available=1527)."
         }
       ],
       "last_id": 1526,
@@ -650,24 +666,51 @@
           "patterns": [],
           "date": "2026-05-08",
           "notes": "Renumerado de 176: conflito com Pandemia/assimetria punitiva"
+        },
+        {
+          "id": 189,
+          "status": "confirmed",
+          "topic": "Reforma Tributaria — captura regulatoria split payment (T-189)",
+          "artifact": "reforma-tributaria-captura-regulatoria",
+          "notes": "Confirmado estudo Jekyll 2026-05-26"
+        },
+        {
+          "id": 190,
+          "status": "confirmed",
+          "topic": "Direita Permitida — gatekeeping oposicionista (T-190)",
+          "artifact": "direita-permitida-dossie",
+          "notes": "Estudo Jekyll 2026-05-22. Renumerado de T-189 conflito Reforma."
+        },
+        {
+          "id": 191,
+          "status": "confirmed",
+          "topic": "Custeio administrativo federal — P11 (T-191)",
+          "artifact": "custeio-administrativo-federal-p11",
+          "notes": "Estudo Jekyll 2026-05-27/28."
+        },
+        {
+          "id": 196,
+          "status": "confirmed",
+          "topic": "Radar de Lacunas — Top 30 sem dossiê (T-196)",
+          "artifact": "top30-alertas-criticos-operacoes-sem-dossie",
+          "notes": "Artigo Jekyll/artigos; ex-T-191 radar."
         }
       ],
-      "last_id": 188,
-      "next_available": 189,
+      "last_id": 196,
+      "next_available": 197,
       "pending": [
         180,
-        189,
-        190,
-        191,
         192,
         193,
         194,
-        195,
-        196
+        195
       ],
       "pending_notes": {
         "180": "TSE seletividade — entrada pronta para produção",
-        "189-196": "Operação Travessia Goiás — série deslocada de 185-192 para 189-196 (185-188 reservados Dosimetria)"
+        "192": "Operação Rejeito / Serra do Curral / manuscritos (cluster 1552–1571)",
+        "193": "Gastos públicos sob sigilo — parcialmente coberto por T-191",
+        "194": "Vorcaro carbono fictício × Compliance Zero × Rejeito",
+        "195": "CPI Crime Organizado × infiltração eleitoral PCC"
       }
     }
   },
@@ -982,22 +1025,18 @@
     ]
   },
   "sync_status": {
-    "main_track_last_sync": "2026-05-26",
-    "thematic_track_last_sync": "2026-05-12",
+    "main_track_last_sync": "2026-05-28",
+    "thematic_track_last_sync": "2026-05-28",
     "ids_confirmed_total": {
-      "main_track": "1526 (lawfare.json + unified-corpus)",
-      "thematic_track": 188
+      "main_track": "1526 (lawfare.json); jekyll batches 1527-1571 merge pendente",
+      "thematic_track": 196
     },
     "ids_pending_production": [
       180,
-      185,
-      186,
-      187,
-      188,
-      189,
-      190,
-      191,
-      192
+      192,
+      193,
+      194,
+      195
     ],
     "artifacts_without_thematic_id": [
       "splc-modelo-brasil.html",
@@ -1013,8 +1052,46 @@
       "Implementar espelhamento IPFS/archive.org",
       "Integrar JustiçaWatch em /data/justicawatch/ no repositório",
       "Recuperação shadowban @araguaci",
-      "MERGE PCC batch: IDs 1449–1511 existem apenas em _data/ batch files. Merge em lawfare.json requer preenchimento sequencial 1449–1480 antes de incluir série 1481–1511 — ou aceitar namespace separado definitivamente.",
-      "MERGE PCC batch 1449-1510 ainda pendente"
+      "Biomm batch publicado como 1527-1546 (1481-1500 = PCC confirmado)",
+      "Zema/mineracao publicado como 1547-1550 (185-188 thematic = Dosimetria)",
+      "Homeschooling Jales publicado como 1551",
+      "lawfare.json last_id=1526; próximo ID livre=1527",
+      "Merge lawfare.json: batches Jekyll 1527-1551 e Rejeito 1552-1571",
+      "Estudos T-189, T-190, T-191, T-196 publicados em _posts/estudos/",
+      "Fila editorial T-192 a T-195 (ver artigos/2026-05-27-top30-alertas-criticos-operacoes-sem-dossie.md)"
     ]
+  },
+  "id_conflict_resolutions": {
+    "generated": "2026-05-27",
+    "biomm": {
+      "old_range": "1481-1500",
+      "new_range": "1527-1546",
+      "reason": "1481-1500 PCC/Ndrangheta publicados"
+    },
+    "zema": {
+      "old_ids": "185-188",
+      "new_ids": "1547-1550",
+      "reason": "thematic 185-188 Dosimetria"
+    },
+    "homeschooling": {
+      "old_id": 1425,
+      "new_id": 1551,
+      "reason": "1425 Mare Liberum Galeao"
+    },
+    "direita_permitida": {
+      "old_id": "T-189",
+      "new_id": "T-190",
+      "reason": "T-189 Reforma Tributaria"
+    },
+    "pcc_namespace": {
+      "range": "1481-1500",
+      "status": "canonical_pcc_ndrangheta",
+      "do_not_overwrite": true
+    },
+    "custeio_vs_top30": {
+      "T-191": "Custeio P11 — estudo canônico",
+      "T-196": "Radar Top 30 — renumerado do antigo T-191",
+      "date": "2026-05-28"
+    }
   }
 }

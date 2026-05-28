@@ -1,0 +1,999 @@
+[
+  {
+    "id": 1552,
+    "slug": "poeira-vermelha-terraplanagem-nova-lima",
+    "tipo": "instancia_padrao",
+    "data_evento": "2019-07-18",
+    "data_registro": "2026-05-27",
+    "titulo": "Operação Poeira Vermelha — extração de minério sob cobertura de terraplanagem em Nova Lima",
+    "operacao_referencia": "Operação Poeira Vermelha",
+    "padroes_ativados": ["P08"],
+
+    "evidencia_primaria": {
+      "tipo": "documento",
+      "descricao": "PF identifica empresas que simulavam obras de terraplanagem em terrenos urbanos de Nova Lima enquanto extraíam ilegalmente minério de ferro para revenda a siderúrgicas. Mesmo estratagema replicado em mai/2021 e confirmado no 3º manuscrito apreendido em 2025.",
+      "classificacao": "primária",
+      "fonte": "Polícia Federal — Operação Poeira Vermelha",
+      "url_referencia": ""
+    },
+
+    "cadeia_logica": "Fleurs Global / Gute Sicht → simulam terraplanagem legal em Nova Lima → extraem minério sem autorização → vendem a siderúrgicas → lucro sem CFEM nem licença",
+
+    "observacao_analitica": "Operação precursora que documenta o mecanismo base do esquema posteriormente mapeado no 3º manuscrito (2021) e confirmado pela Rejeito (2025). Padrão P08: atividade ilícita encoberta por fachada de operação legal. Confirma que o estratagema estava ativo pelo menos desde 2019.",
+
+    "atores": [
+      {
+        "nome": "Fleurs Global",
+        "funcao_estrutural": "extratora com fachada de terraplanagem",
+        "cargo_na_epoca": "empresa privada"
+      },
+      {
+        "nome": "Gute Sicht",
+        "funcao_estrutural": "extratora com fachada de terraplanagem",
+        "cargo_na_epoca": "empresa privada"
+      }
+    ],
+
+    "conexoes_corpus": [
+      { "id_ref": 1553, "descricao": "manuscritos de 2021 descrevem o mesmo mecanismo de terraplanagem como etapa 1 da cadeia" },
+      { "id_ref": 1555, "descricao": "Operação Rejeito (2025) prende operadores do mesmo esquema" },
+      { "id_ref": 1571, "descricao": "3º manuscrito: mesmo mecanismo documentado no title 'Terraplanagem RMBH → Nova Lima'" }
+    ],
+
+    "status": "confirmado",
+    "visibilidade": "público",
+    "licenca": "CC0 1.0"
+  },
+
+  {
+    "id": 1553,
+    "slug": "manuscritos-serra-curral-teixeira-retencao",
+    "tipo": "instancia_padrao",
+    "data_evento": "2021-02-26",
+    "data_registro": "2026-05-27",
+    "titulo": "Manuscritos da Serra do Curral retidos por delegado da PF — sem instauração de investigação",
+    "operacao_referencia": "Operação Rejeito (antecedente)",
+    "padroes_ativados": ["P03", "P05"],
+
+    "evidencia_primaria": {
+      "tipo": "documento",
+      "descricao": "Em 26/fev/2021 às 21h31, Daniela Wandeck envia via WhatsApp três organogramas manuscritos ao marido, delegado Rodrigo de Melo Teixeira. Documentos mapeavam esquema de R$ 18 bi em MG: captura de ANM, Semad, FEAM, blindagem judicial e cadeia comercial até compradoras finais. Teixeira não instaurou investigação. Registrado em relatório SINTE SR/MG de 01/out/2025.",
+      "classificacao": "primária",
+      "fonte": "Relatório SINTE SR/MG — 01/out/2025; A Investigação (mai/2026)",
+      "url_referencia": "https://www.ainvestigacao.com/p/o-terceiro-manuscrito-omitido"
+    },
+
+    "cadeia_logica": "Daniela Wandeck → envia manuscritos mapeando esquema → Rodrigo Teixeira (delegado PF, simultâneo à construção da Gmais) → retém documentos, não instaura inquérito → esquema opera por mais 4 anos sem investigação federal",
+
+    "observacao_analitica": "Instância direta de P03 (captura do chokepoint): o ponto de controle institucional (PF/delegado) que deveria travar o esquema é o mesmo agente beneficiário. Confirma P05 (omissão funcional deliberada): não é incapacidade, é decisão ativa de não agir. Teixeira já operava Gmais Ambiental no setor mineral à época.",
+
+    "atores": [
+      {
+        "nome": "Rodrigo de Melo Teixeira",
+        "funcao_estrutural": "chokepoint capturado — receptor de denúncia que deveria investigar",
+        "cargo_na_epoca": "Delegado PF cedido à Prefeitura de BH; sócio oculto Gmais Ambiental"
+      },
+      {
+        "nome": "Daniela Wandeck",
+        "funcao_estrutural": "transmissora dos documentos",
+        "cargo_na_epoca": "esposa de Teixeira; sócia formal da Gmais Ambiental"
+      }
+    ],
+
+    "conexoes_corpus": [
+      { "id_ref": 1552, "descricao": "manuscritos descrevem o mesmo mecanismo de terraplanagem documentado na Poeira Vermelha (2019)" },
+      { "id_ref": 1556, "descricao": "extração do celular de Teixeira em 2025 recupera os manuscritos retidos em 2021" },
+      { "id_ref": 1571, "descricao": "3º manuscrito retido continha a cadeia até Vale/Gerdau/Trafigura" }
+    ],
+
+    "status": "confirmado",
+    "visibilidade": "público",
+    "licenca": "CC0 1.0"
+  },
+
+  {
+    "id": 1554,
+    "slug": "parcours-serra-curral-prad-fachada",
+    "tipo": "instancia_padrao",
+    "data_evento": "2025-03-28",
+    "data_registro": "2026-05-27",
+    "titulo": "Operação Parcours — PRAD usado como cobertura jurídica para extração na Serra do Curral",
+    "operacao_referencia": "Operação Parcours",
+    "padroes_ativados": ["P08", "P01"],
+
+    "evidencia_primaria": {
+      "tipo": "documento",
+      "descricao": "PF deflagra Operação Parcours investigando uso do Plano de Recuperação de Área Degradada (PRAD, aprovado MPMG em 2008) como cobertura jurídica para extração contínua pela Empabra na Serra do Curral. CGU confirma em auditoria que extração extrapolou os limites do título minerário. Leandro César Ferreira de Carvalho (gerente regional ANM-MG, que enviava minutas ao grupo para aprovação prévia) é exonerado 4 dias depois.",
+      "classificacao": "primária",
+      "fonte": "PF; CGU; A Investigação (mai/2026)",
+      "url_referencia": "https://www.ainvestigacao.com/p/o-terceiro-manuscrito-omitido"
+    },
+
+    "cadeia_logica": "Empabra / Lucas Kallas → usa PRAD de 2008 como escudo legal → extrai minério além do título por 17 anos → CGU confirma extrapolação → Leandro Carvalho (ANM) valida minutas previamente → exonerado 4 dias após a operação",
+
+    "observacao_analitica": "P08 clássico: instrumento de remediação ambiental (PRAD) convertido em fachada de extração contínua. P01: aparência de conformidade jurídica construída sobre documento legítimo adulterado em uso. Confirma que a Serra do Curral foi explorada sob cobertura formal durante toda a vigência do PRAD, inclusive após aprovação do plano pelo MPMG.",
+
+    "atores": [
+      {
+        "nome": "Lucas Kallas",
+        "funcao_estrutural": "controlador da operação via Green Metals / Empabra",
+        "cargo_na_epoca": "empresário; membro do Conselhão de Lula (indicação Silveira)"
+      },
+      {
+        "nome": "Empabra",
+        "funcao_estrutural": "veículo de extração com escudo PRAD",
+        "cargo_na_epoca": "empresa privada"
+      },
+      {
+        "nome": "Leandro César Ferreira de Carvalho",
+        "funcao_estrutural": "validador capturado — enviava minutas para aprovação prévia",
+        "cargo_na_epoca": "Gerente Regional ANM em Minas Gerais"
+      }
+    ],
+
+    "conexoes_corpus": [
+      { "id_ref": 1557, "descricao": "documenta o dano físico resultante na Serra do Curral" },
+      { "id_ref": 1558, "descricao": "Caio Seabra na ANM federal: captura do mesmo órgão em nível nacional" },
+      { "id_ref": 1568, "descricao": "Justiça Federal suspende 57 processos minerários na Serra em mar/2026" }
+    ],
+
+    "status": "confirmado",
+    "visibilidade": "público",
+    "licenca": "CC0 1.0"
+  },
+
+  {
+    "id": 1555,
+    "slug": "operacao-rejeito-22-prisoes-set-2025",
+    "tipo": "instancia_padrao",
+    "data_evento": "2025-09-17",
+    "data_registro": "2026-05-27",
+    "titulo": "Operação Rejeito — 22 prisões preventivas por corrupção no licenciamento mineral em MG",
+    "operacao_referencia": "Operação Rejeito",
+    "padroes_ativados": ["P03", "P08", "P11"],
+
+    "evidencia_primaria": {
+      "tipo": "documento",
+      "descricao": "PF com apoio CGU cumpre 22 mandados de prisão preventiva, 79 de busca e apreensão, bloqueia R$ 1,5 bi. Presos: Rodrigo Teixeira (3º posto PF/governo Lula), João Alberto Paixão Lages (ex-dep. MDB), Caio Seabra (dir. ANM), Rodrigo Franco (pres. FEAM), Gilberto Horta de Carvalho e outros. Esquema movimentou R$ 4,3 bi por uma só empresa; potencial ilícito total estimado em R$ 18 bi.",
+      "classificacao": "primária",
+      "fonte": "PF; CGU",
+      "url_referencia": ""
+    },
+
+    "cadeia_logica": "João Alberto Paixão Lages (eixo político) + Rodrigo Teixeira (PF) + Caio Seabra (ANM) + Rodrigo Franco (FEAM) → captura simultânea dos 4 pontos de controle do licenciamento → extração ilegal por anos → R$ 18 bi de potencial ilícito",
+
+    "observacao_analitica": "Operação documenta captura vertical integrada: todos os pontos de controle do ciclo mineral (PF, ANM, FEAM, Semad, TJMG) capturados simultaneamente. P11 (extração macroeconômica estrutural): escala de R$ 18 bi transcende corrupção episódica e configura sistema de extração. P03: chokepoints institucionais convertidos em ativos do grupo.",
+
+    "atores": [
+      {
+        "nome": "Rodrigo de Melo Teixeira",
+        "funcao_estrutural": "proteção institucional via PF — chokepoint capturado",
+        "cargo_na_epoca": "Diretor de Polícia Administrativa PF (3º posto)"
+      },
+      {
+        "nome": "João Alberto Paixão Lages",
+        "funcao_estrutural": "eixo político central — conecta todas as camadas",
+        "cargo_na_epoca": "Ex-deputado federal MDB"
+      },
+      {
+        "nome": "Caio Seabra",
+        "funcao_estrutural": "validador capturado na ANM",
+        "cargo_na_epoca": "Diretor ANM"
+      },
+      {
+        "nome": "Rodrigo Gonçalves Franco",
+        "funcao_estrutural": "validador capturado na FEAM",
+        "cargo_na_epoca": "Presidente FEAM"
+      },
+      {
+        "nome": "Gilberto Horta de Carvalho",
+        "funcao_estrutural": "articulador interinstitucional",
+        "cargo_na_epoca": "Sócio GH Sustentabilidade Ambiental; sócio Gmais"
+      }
+    ],
+
+    "conexoes_corpus": [
+      { "id_ref": 114, "descricao": "Banco Master: Vorcaro como sócio financeiro da cadeia (Tamisa, 3D Minerals)" },
+      { "id_ref": 122, "descricao": "República Capturada: este caso documenta captura vertical em escala estadual" },
+      { "id_ref": 1547, "descricao": "batch Zema/mineração: contexto do governo estadual que assinou os TACs" }
+    ],
+
+    "status": "confirmado",
+    "visibilidade": "público",
+    "licenca": "CC0 1.0"
+  },
+
+  {
+    "id": 1556,
+    "slug": "teixeira-celular-gmais-557-mensagens",
+    "tipo": "instancia_padrao",
+    "data_evento": "2025-09-17",
+    "data_registro": "2026-05-27",
+    "titulo": "Extração forense do celular de Teixeira — Gmais Ambiental operada de facto por delegado da PF",
+    "operacao_referencia": "Operação Rejeito",
+    "padroes_ativados": ["P03", "P08"],
+
+    "evidencia_primaria": {
+      "tipo": "documento",
+      "descricao": "Extração forense revela: 557 mensagens de Teixeira no grupo WhatsApp da Gmais (37% do total) vs. 30 de Daniela Wandeck sócia formal (3%); e-mail Yahoo com procurações e documentos da Topázio Imperial; decisão judicial registra recebimento de R$ 27 mi da Brava Mineração 'sem nunca terem investido qualquer quantia'. Nota apreendida no celular de Horta: 'NÃO FALE DE RODRIGO DA PF'.",
+      "classificacao": "primária",
+      "fonte": "Decisão Justiça Federal MG; PF",
+      "url_referencia": ""
+    },
+
+    "cadeia_logica": "Teixeira (PF/3º posto) → opera Gmais via esposa como testa de ferro → oferece acesso institucional e conexões regulatórias → recebe R$ 27 mi da Brava Mineração sem aporte → grupo isola menção ao nome dele nas comunicações internas",
+
+    "observacao_analitica": "Prova digital consolida P03 com evidência quantitativa: 37% das mensagens operacionais da empresa de fachada vêm do delegado da PF, não da sócia formal. A instrução 'NÃO FALE DE RODRIGO DA PF' documenta consciência do grupo sobre o valor do ativo institucional e a necessidade de ocultá-lo.",
+
+    "atores": [
+      {
+        "nome": "Rodrigo de Melo Teixeira",
+        "funcao_estrutural": "operador real de empresa registrada em nome de terceiro",
+        "cargo_na_epoca": "Diretor de Polícia Administrativa PF"
+      },
+      {
+        "nome": "Daniela Wandeck",
+        "funcao_estrutural": "testa de ferro — sócia formal sem participação operacional",
+        "cargo_na_epoca": "sócia formal Gmais Ambiental"
+      },
+      {
+        "nome": "Gilberto Horta de Carvalho",
+        "funcao_estrutural": "articulador que registrou o alerta de compartimentação",
+        "cargo_na_epoca": "Sócio Gmais / GH Sustentabilidade"
+      }
+    ],
+
+    "conexoes_corpus": [
+      { "id_ref": 1553, "descricao": "manuscritos retidos em 2021 encontrados no mesmo celular" },
+      { "id_ref": 1555, "descricao": "preso na Rejeito como peça central do esquema" },
+      { "id_ref": 115, "descricao": "padrão de sócio oculto / testa de ferro documentado também na estrutura do Banco Master" }
+    ],
+
+    "status": "confirmado",
+    "visibilidade": "público",
+    "licenca": "CC0 1.0"
+  },
+
+  {
+    "id": 1557,
+    "slug": "serra-curral-dano-ambiental-cavas-corrego",
+    "tipo": "instancia_padrao",
+    "data_evento": "2025-09-17",
+    "data_registro": "2026-05-27",
+    "titulo": "Serra do Curral — cavas em área tombada, córrego destruído, R$ 830 mi em minério extraído",
+    "operacao_referencia": "Operação Rejeito / Parcours",
+    "padroes_ativados": ["P08", "P11"],
+
+    "evidencia_primaria": {
+      "tipo": "documento",
+      "descricao": "PF documenta: cavas Sump 3 e Sump 4 abertas entre 2014–2019 em área tombada pelo IPHAN desde 1960; Córrego Taquaril destruído e seco desde 2017; CGU confirma extração além dos limites do título minerário. Dano financeiro calculado: R$ 830 mi. CFEM não recolhida 2012–2019: R$ 11,4 mi. Barragem Água Fria (Ouro Preto, vinculada ao grupo) entre as 7 de maior risco de rompimento do Brasil.",
+      "classificacao": "primária",
+      "fonte": "PF; CGU; MPF",
+      "url_referencia": ""
+    },
+
+    "cadeia_logica": "Empabra / Kallas → extrai na Serra do Curral usando PRAD como escudo por 17 anos → Córrego Taquaril destruído 2017 → cavas em área tombada federal → R$ 830 mi extraídos sem CFEM → barragem em risco de ruptura",
+
+    "observacao_analitica": "Escala do dano confirma P11: não é episódio isolado, é extração sistemática de patrimônio público durante 17 anos sob cobertura de instrumento jurídico legítimo. O dano à área tombada configura crime contra patrimônio cultural da União, não apenas infração ambiental. Barragem em risco replica o padrão de Mariana e Brumadinho.",
+
+    "atores": [
+      {
+        "nome": "Empabra",
+        "funcao_estrutural": "extratora com escudo PRAD",
+        "cargo_na_epoca": "empresa privada"
+      },
+      {
+        "nome": "Lucas Kallas",
+        "funcao_estrutural": "controlador do grupo via Green Metals",
+        "cargo_na_epoca": "empresário"
+      }
+    ],
+
+    "conexoes_corpus": [
+      { "id_ref": 1554, "descricao": "Parcours investigou o mecanismo PRAD que produziu este dano" },
+      { "id_ref": 1568, "descricao": "Justiça Federal suspende 57 processos e multa ANM em mar/2026 em resposta a este dano" },
+      { "id_ref": 128, "descricao": "Brasil Sangra: extração macroeconômica de patrimônio público — este caso é instância mineral" }
+    ],
+
+    "status": "confirmado",
+    "visibilidade": "público",
+    "licenca": "CC0 1.0"
+  },
+
+  {
+    "id": 1558,
+    "slug": "caio-seabra-voto-whatsapp-propina-anm",
+    "tipo": "instancia_padrao",
+    "data_evento": "2024-11-22",
+    "data_registro": "2026-05-27",
+    "titulo": "Diretor da ANM recebe voto por WhatsApp 1h antes da sessão — propina de R$ 2,7 mi documentada",
+    "operacao_referencia": "Operação Rejeito",
+    "padroes_ativados": ["P03", "P08"],
+
+    "evidencia_primaria": {
+      "tipo": "audio",
+      "descricao": "Em 22/nov/2024, 1h antes de sessão da ANM, Allan Cavalcante envia por WhatsApp a Caio Seabra o trecho exato do voto a ser proferido. Seabra segue a orientação. Intervenção beneficia Aiga Mineração em disputa com a Vale por rejeitos minerais avaliados em ~R$ 200 mi. PF aponta pagamento de R$ 2,7 mi em propina. Seabra é também relator que permitiu 3D Minerals reduzir lance de R$ 37 mi para R$ 3,7 mi por 'erro de digitação', contrariando parecer técnico interno.",
+      "classificacao": "primária",
+      "fonte": "PF — interceptação telemática",
+      "url_referencia": ""
+    },
+
+    "cadeia_logica": "Allan Cavalcante → envia voto pré-redigido a Caio Seabra (ANM) → Seabra profere voto conforme instrução → Aiga Mineração vence disputa de R$ 200 mi com Vale → propina R$ 2,7 mi documentada",
+
+    "observacao_analitica": "Captura da ANM em nível federal demonstrada com evidência telemática direta: o voto do diretor foi redigido externamente pelo beneficiário antes da sessão. Caso 3D Minerals (46 dias de existência, R$ 5 mil de capital) vencendo leilão nacional por R$ 54,8 mi com financiamento Banco Master demonstra que a captura regulatória não era episódica.",
+
+    "atores": [
+      {
+        "nome": "Caio Seabra",
+        "funcao_estrutural": "validador capturado — profere voto ditado pelo beneficiário",
+        "cargo_na_epoca": "Diretor ANM (indicação min. Alexandre Silveira)"
+      },
+      {
+        "nome": "Allan Cavalcante",
+        "funcao_estrutural": "operador que dita o voto",
+        "cargo_na_epoca": "empresário do grupo"
+      },
+      {
+        "nome": "Daniel Vorcaro",
+        "funcao_estrutural": "financiador da 3D Minerals via Banco Master",
+        "cargo_na_epoca": "controlador Banco Master"
+      }
+    ],
+
+    "conexoes_corpus": [
+      { "id_ref": 114, "descricao": "Banco Master financia 3D Minerals para leilão ANM cuja decisão foi ditada pelo mesmo grupo" },
+      { "id_ref": 1555, "descricao": "Caio Seabra preso na Rejeito como parte do núcleo central" },
+      { "id_ref": 1560, "descricao": "Silveira indicou Seabra para ANM; nega conhecimento de irregularidades" }
+    ],
+
+    "status": "confirmado",
+    "visibilidade": "público",
+    "licenca": "CC0 1.0"
+  },
+
+  {
+    "id": 1559,
+    "slug": "feam-tac-maquina-fleurs-global",
+    "tipo": "instancia_padrao",
+    "data_evento": "2025-09-17",
+    "data_registro": "2026-05-27",
+    "titulo": "FEAM capturada — presidente preso, TACs firmados com empresa autuada 17 vezes",
+    "operacao_referencia": "Operação Rejeito",
+    "padroes_ativados": ["P03", "P08"],
+
+    "evidencia_primaria": {
+      "tipo": "documento",
+      "descricao": "Presidente da FEAM Rodrigo Franco preso na Rejeito. PF aponta cobrança de R$ 50 mil repassados ao diretor Arthur Delfim como compensação por licença à Fleurs Global. Fleurs recebeu 2 TACs do governo Zema (nov/2020 e fev/2022) mesmo com 17 autuações por desmatamento e intervenção em APP. Segundo TAC assinado um dia após equipe técnica da Supram concluir pelo indeferimento. Servidores depuseram ao MPMG descrevendo 'possível pressão' para retirada do caso da pauta do Copam.",
+      "classificacao": "primária",
+      "fonte": "PF; Agência Pública; O Fator; MPMG",
+      "url_referencia": ""
+    },
+
+    "cadeia_logica": "Fleurs Global (17 autuações, sem licença desde 2018) → compra TAC via propina R$ 50 mil (Franco → Delfim) → Semad assina TAC 1 dia após indeferimento técnico → caso retirado da pauta do Copam sem justificativa → Fleurs opera sob cobertura de acordo com Estado",
+
+    "observacao_analitica": "TAC como instrumento de regularização permanente de empresa permanentemente irregular: a Fleurs operou sem licença desde 2018 e acumulou 17 autuações — e a cada tentativa de encerramento formal, um novo TAC era firmado. O segundo TAC contado um dia após o indeferimento técnico demonstra que a decisão já havia sido tomada antes do processo administrativo.",
+
+    "atores": [
+      {
+        "nome": "Rodrigo Gonçalves Franco",
+        "funcao_estrutural": "validador capturado — vendeu ato administrativo",
+        "cargo_na_epoca": "Presidente FEAM"
+      },
+      {
+        "nome": "Arthur Ferreira Rezende Delfim",
+        "funcao_estrutural": "receptor da propina / assinante de TAC",
+        "cargo_na_epoca": "Diretor de Apoio à Regularização Ambiental FEAM"
+      },
+      {
+        "nome": "Marília Carvalho de Melo",
+        "funcao_estrutural": "titular do órgão supervisor durante as assinaturas",
+        "cargo_na_epoca": "Secretária de Estado de Meio Ambiente e DS (Semad/MG)"
+      },
+      {
+        "nome": "Fleurs Global",
+        "funcao_estrutural": "compradora de ato administrativo",
+        "cargo_na_epoca": "empresa privada — núcleo financeiro do esquema"
+      }
+    ],
+
+    "conexoes_corpus": [
+      { "id_ref": 1547, "descricao": "batch Zema/mineração: contexto dos 358 TACs do governo Zema (2019–2022)" },
+      { "id_ref": 1564, "descricao": "Marília Melo nomeada para Copasa após saída da Semad" },
+      { "id_ref": 1555, "descricao": "Franco preso na Rejeito — captura FEAM como camada 1 do esquema" }
+    ],
+
+    "status": "confirmado",
+    "visibilidade": "público",
+    "licenca": "CC0 1.0"
+  },
+
+  {
+    "id": 1560,
+    "slug": "silveira-evento-cedro-cinco-dias-rejeito",
+    "tipo": "instancia_padrao",
+    "data_evento": "2025-09-22",
+    "data_registro": "2026-05-27",
+    "titulo": "Ministro de Minas e Energia participa de evento patrocinado pela Cedro Mineração 5 dias após prisões",
+    "operacao_referencia": "Operação Rejeito",
+    "padroes_ativados": ["P03", "P09"],
+
+    "evidencia_primaria": {
+      "tipo": "declaração",
+      "descricao": "Alexandre Silveira declara ter sido 'surpreendido' pelas prisões da Rejeito. Cinco dias depois, participa de evento patrocinado pela Cedro Mineração (empresa de Lucas Kallas, preso na operação) e anuncia criação do Conselho Nacional de Política Mineral. João Alberto Paixão Lages (preso na mesma operação) doou R$ 100 mil à campanha de Silveira em 2022; filha de Lages doou outros R$ 100 mil. Silveira havia indicado: Teixeira (CPRM), Caio Seabra (ANM) e Kallas (Conselhão de Lula).",
+      "classificacao": "primária",
+      "fonte": "Imprensa; MME (nota oficial); A Investigação (mai/2026)",
+      "url_referencia": "https://www.ainvestigacao.com/p/o-terceiro-manuscrito-omitido"
+    },
+
+    "cadeia_logica": "Silveira (MME) → indica Teixeira (CPRM), Seabra (ANM), Kallas (Conselhão) → os três são presos/investigados na Rejeito → 5 dias após prisões, participa de evento do grupo investigado → afirma desconhecimento",
+
+    "observacao_analitica": "P09 (nexo político-regulatório): ministro responsável por supervisionar a ANM indicou três dos principais investigados para cargos estratégicos. O padrão de financiamento eleitoral (R$ 200 mil via Lages e filha) precedeu as indicações. A participação no evento 5 dias após as prisões, sem distanciamento público, é indicador de vínculo estrutural, não episódico.",
+
+    "atores": [
+      {
+        "nome": "Alexandre Silveira",
+        "funcao_estrutural": "articulador político das indicações para os órgãos capturados",
+        "cargo_na_epoca": "Ministro de Minas e Energia"
+      },
+      {
+        "nome": "João Alberto Paixão Lages",
+        "funcao_estrutural": "financiador eleitoral do ministro; eixo central do esquema",
+        "cargo_na_epoca": "Ex-deputado federal MDB"
+      },
+      {
+        "nome": "Lucas Kallas",
+        "funcao_estrutural": "patrocinador do evento frequentado pelo ministro após as prisões",
+        "cargo_na_epoca": "empresário Cedro Mineração; membro Conselhão de Lula"
+      }
+    ],
+
+    "conexoes_corpus": [
+      { "id_ref": 1555, "descricao": "os três indicados por Silveira foram presos ou investigados na Rejeito" },
+      { "id_ref": 1558, "descricao": "Caio Seabra (indicação Silveira) — voto ditado por WhatsApp" },
+      { "id_ref": 1561, "descricao": "remessa ao STF; Silveira não foi alvo da operação" }
+    ],
+
+    "status": "confirmado",
+    "visibilidade": "público",
+    "licenca": "CC0 1.0"
+  },
+
+  {
+    "id": 1561,
+    "slug": "rejeito-remessa-stf-pacheco-viana",
+    "tipo": "instancia_padrao",
+    "data_evento": "2025-10-01",
+    "data_registro": "2026-05-27",
+    "titulo": "Operação Rejeito remetida ao STF — citação a senadores aciona foro privilegiado",
+    "operacao_referencia": "Operação Rejeito",
+    "padroes_ativados": ["P03", "P06"],
+
+    "evidencia_primaria": {
+      "tipo": "decisão",
+      "descricao": "Citação aos senadores Rodrigo Pacheco (PSD-MG) e Carlos Viana (Podemos-MG) nos manuscritos obriga remessa ao STF por foro privilegiado. Caso distribuído a Dias Toffoli por conexão com investigações anteriores da mineradora Gute Sicht. Pacheco declara não poder 'comentar sobre papel manuscrito de autoria incerta'. Manuscrito o posicionava como canal de blindagem em 2ª instância/TRF, conectado a João Alberto.",
+      "classificacao": "primária",
+      "fonte": "STF",
+      "url_referencia": ""
+    },
+
+    "cadeia_logica": "Manuscritos citam Pacheco e Viana → foro privilegiado obriga remessa ao STF → caso distribuído a Toffoli (conexão Gute Sicht) → investigação sai da PF/1ª instância para o Supremo",
+
+    "observacao_analitica": "P06 (deslocamento de foro como mecanismo de proteção): a remessa ao STF por citação de dois senadores — independentemente de haver evidência contra eles — deslocou toda a investigação do ambiente operacional da PF para o tribunal de cúpula. Toffoli já havia atuado em investigações conexas (Gute Sicht), o que levanta questão sobre independência do relator.",
+
+    "atores": [
+      {
+        "nome": "Rodrigo Pacheco",
+        "funcao_estrutural": "citado como canal de blindagem judicial no 2º manuscrito",
+        "cargo_na_epoca": "Senador PSD-MG; ex-presidente do Senado"
+      },
+      {
+        "nome": "Dias Toffoli",
+        "funcao_estrutural": "relator designado por conexão com investigações anteriores",
+        "cargo_na_epoca": "Ministro STF"
+      }
+    ],
+
+    "conexoes_corpus": [
+      { "id_ref": 1562, "descricao": "Toffoli impõe sigilo absoluto após assumir a relatoria" },
+      { "id_ref": 1563, "descricao": "Toffoli revoga preventivas contra parecer PGR" },
+      { "id_ref": 1569, "descricao": "Toffoli devolve caso à 1ª instância sem nenhuma condenação" }
+    ],
+
+    "status": "confirmado",
+    "visibilidade": "público",
+    "licenca": "CC0 1.0"
+  },
+
+  {
+    "id": 1562,
+    "slug": "toffoli-sigilo-absoluto-rejeito",
+    "tipo": "instancia_padrao",
+    "data_evento": "2025-11-15",
+    "data_registro": "2026-05-27",
+    "titulo": "STF impõe sigilo absoluto — PF e advogados dos presos sem acesso aos autos",
+    "operacao_referencia": "Operação Rejeito",
+    "padroes_ativados": ["P03", "P06"],
+
+    "evidencia_primaria": {
+      "tipo": "decisão",
+      "descricao": "Ministro Dias Toffoli amplia sigilo das operações Rejeito, Intrafortis, Contrassabotagem, Parcours e Poeira Vermelha ao ponto em que nem a própria PF nem os advogados dos investigados presos podiam consultar os autos. Em dez/2025, investigadores foram obrigados a pedir formalmente ao STF o número do processo.",
+      "classificacao": "primária",
+      "fonte": "Imprensa; A Investigação (mai/2026)",
+      "url_referencia": "https://www.ainvestigacao.com/p/o-terceiro-manuscrito-omitido"
+    },
+
+    "cadeia_logica": "Toffoli (relator STF) → decreta sigilo que impede PF de acessar própria investigação → investigadores não sabem o número do processo → presos sem acesso à defesa dos autos → investigação paralisada no órgão mais alto",
+
+    "observacao_analitica": "Extensão do sigilo além do razoável — impedir a PF de acessar sua própria investigação — configura paralisação efetiva da apuração sob forma processual legítima. O princípio do contraditório foi violado para presos que não podiam conhecer os fundamentos de suas prisões. Padrão P03/P06: chokepoint STF convertido em proteção do grupo investigado.",
+
+    "atores": [
+      {
+        "nome": "Dias Toffoli",
+        "funcao_estrutural": "bloqueador institucional via sigilo processual",
+        "cargo_na_epoca": "Ministro STF — relator da Rejeito"
+      }
+    ],
+
+    "conexoes_corpus": [
+      { "id_ref": 1561, "descricao": "remessa ao STF que gerou a relatoria de Toffoli" },
+      { "id_ref": 1563, "descricao": "mesmo relator revoga preventivas dos líderes em dez/2025" },
+      { "id_ref": 103, "descricao": "P03 chokepoint: INQ 4781 — ausência de revisão independente, padrão análogo" }
+    ],
+
+    "status": "confirmado",
+    "visibilidade": "público",
+    "licenca": "CC0 1.0"
+  },
+
+  {
+    "id": 1563,
+    "slug": "toffoli-revoga-preventivas-lideres-rejeito",
+    "tipo": "instancia_padrao",
+    "data_evento": "2025-12-19",
+    "data_registro": "2026-05-27",
+    "titulo": "Toffoli revoga prisões dos 4 líderes da Rejeito contrariando parecer expresso da PGR",
+    "operacao_referencia": "Operação Rejeito",
+    "padroes_ativados": ["P03", "P06"],
+
+    "evidencia_primaria": {
+      "tipo": "decisão",
+      "descricao": "Ministro Dias Toffoli revoga prisões preventivas de Alan Cavalcante, Helder Freitas, João Alberto Paixão Lages e Rodrigo de Melo Teixeira. Decisão contraria expressamente parecer do PGR Paulo Gonet, que havia defendido manutenção das preventivas. Teixeira liberado com tornozeleira eletrônica, recolhimento noturno, retenção de passaporte e afastamento da PF.",
+      "classificacao": "primária",
+      "fonte": "STF; PGR",
+      "url_referencia": ""
+    },
+
+    "cadeia_logica": "Toffoli (relator) → revoga 4 preventivas → contra parecer expresso PGR Gonet → líderes do grupo em liberdade → TRF-6 usa mesma lógica para soltar restantes (jan/2026) → 22 preventivas a zero em 4 meses",
+
+    "observacao_analitica": "A sequência — sigilo absoluto (nov/2025) → revogação das preventivas dos líderes (dez/2025) → soltura em massa TRF-6 (jan/2026) — configura desmontagem sistemática da operação no plano processual. O contrariedade ao parecer expresso da PGR torna a decisão de Toffoli o ponto de inflexão documentável mais nítido.",
+
+    "atores": [
+      {
+        "nome": "Dias Toffoli",
+        "funcao_estrutural": "decisor que reverte preventivas contra posição do MP",
+        "cargo_na_epoca": "Ministro STF — relator da Rejeito"
+      },
+      {
+        "nome": "Paulo Gonet",
+        "funcao_estrutural": "titular da acusação pública — posição não acatada",
+        "cargo_na_epoca": "Procurador-Geral da República"
+      },
+      {
+        "nome": "Rodrigo de Melo Teixeira",
+        "funcao_estrutural": "líder do grupo beneficiado pela decisão",
+        "cargo_na_epoca": "Delegado PF — afastado"
+      }
+    ],
+
+    "conexoes_corpus": [
+      { "id_ref": 1562, "descricao": "mesmo relator que impôs sigilo absoluto revoga as preventivas" },
+      { "id_ref": 1565, "descricao": "TRF-6 usa a lógica de Toffoli para soltar todos os demais em jan/2026" },
+      { "id_ref": 123, "descricao": "Zero × Zero: assimetria punitiva — padrão de soltura que não se replica para réus sem conexões" }
+    ],
+
+    "status": "confirmado",
+    "visibilidade": "público",
+    "licenca": "CC0 1.0"
+  },
+
+  {
+    "id": 1564,
+    "slug": "marilia-melo-semad-copasa",
+    "tipo": "instancia_padrao",
+    "data_evento": "2025-12-23",
+    "data_registro": "2026-05-27",
+    "titulo": "Secretária de Meio Ambiente de MG deixa pasta e é nomeada diretora-presidente da Copasa no mesmo dia",
+    "operacao_referencia": "Operação Rejeito",
+    "padroes_ativados": ["P03", "P09"],
+
+    "evidencia_primaria": {
+      "tipo": "declaração",
+      "descricao": "Em 23/dez/2025, três meses após a Rejeito, Marília Carvalho de Melo deixa a Semad. No mesmo dia, governador Romeu Zema sanciona lei autorizando privatização da Copasa e a nomeia diretora-presidente da estatal. Manuscrito 1 a posicionava como responsável por 'dar um jeito de licenciar' a MGB. Filha de sócios da Crono Engenharia (prestadora de Vale e CSN).",
+      "classificacao": "primária",
+      "fonte": "Governo de Minas; Diário Oficial MG; A Investigação (mai/2026)",
+      "url_referencia": "https://www.ainvestigacao.com/p/o-terceiro-manuscrito-omitido"
+    },
+
+    "cadeia_logica": "Rejeito expõe Marília Melo (Semad) → saída da secretaria 3 meses depois → nomeação para Copasa no mesmo dia da sanção da lei de privatização → transição do controle ambiental para controle do saneamento",
+
+    "observacao_analitica": "A simultaneidade entre saída da Semad e nomeação para a Copasa — no mesmo ato do governador que sanciona a privatização — segue o padrão P09 de reposicionamento funcional: a servidora não perde espaço institucional, muda de posição. A Crono Engenharia (família de Marília, prestadora de Vale e CSN) introduz conflito de interesses estrutural na gestão de saneamento estadual.",
+
+    "atores": [
+      {
+        "nome": "Marília Carvalho de Melo",
+        "funcao_estrutural": "validadora de licenças reposicionada para saneamento estadual",
+        "cargo_na_epoca": "Secretária Semad → Diretora-Presidente Copasa"
+      },
+      {
+        "nome": "Romeu Zema",
+        "funcao_estrutural": "executor do reposicionamento funcional",
+        "cargo_na_epoca": "Governador de Minas Gerais"
+      }
+    ],
+
+    "conexoes_corpus": [
+      { "id_ref": 1559, "descricao": "TACs assinados durante sua gestão na Semad — incluindo o da Fleurs Global" },
+      { "id_ref": 1547, "descricao": "batch Zema/mineração: 358 TACs firmados no governo Zema" },
+      { "id_ref": 1555, "descricao": "nomeada no mesmo contexto da Rejeito que prendeu seus subordinados" }
+    ],
+
+    "status": "confirmado",
+    "visibilidade": "público",
+    "licenca": "CC0 1.0"
+  },
+
+  {
+    "id": 1565,
+    "slug": "trf6-soltura-massa-22-preventivas-zero",
+    "tipo": "instancia_padrao",
+    "data_evento": "2026-01-14",
+    "data_registro": "2026-05-27",
+    "titulo": "TRF-6 solta restantes da Rejeito — 22 prisões preventivas chegam a zero em 118 dias",
+    "operacao_referencia": "Operação Rejeito",
+    "padroes_ativados": ["P03", "P06"],
+
+    "evidencia_primaria": {
+      "tipo": "decisão",
+      "descricao": "TRF-6 determina soltura de todos os investigados da Rejeito ainda presos, seguindo lógica fixada por Toffoli: manter parte do grupo presa enquanto líderes respondem em liberdade seria desproporcional. Último a sair: Gilberto Horta de Carvalho, em 22/jan/2026, após 129 dias. Das 22 preventivas decretadas em 17/set/2025, nenhuma em vigor em 22/jan/2026.",
+      "classificacao": "primária",
+      "fonte": "TRF-6; imprensa",
+      "url_referencia": ""
+    },
+
+    "cadeia_logica": "Toffoli solta líderes (dez/2025) → TRF-6 usa proporcionalidade como argumento → solta todos os demais → 22 preventivas a zero em menos de 4 meses → investigação sem nenhum preso",
+
+    "observacao_analitica": "A sequência Toffoli → TRF-6 demonstra efeito cascata: a revogação das preventivas dos líderes pelo STF criou o argumento jurídico (proporcionalidade) que obrigou o TRF a soltar todos os demais. A decisão de um ministro sobre 4 réus produziu a liberação de 22. Documenta como uma decisão no topo da hierarquia pode esvaziar operação policial completa via lógica processual.",
+
+    "atores": [
+      {
+        "nome": "Gilberto Horta de Carvalho",
+        "funcao_estrutural": "último preso — liberado após 129 dias",
+        "cargo_na_epoca": "Sócio Gmais / articulador interinstitucional"
+      },
+      {
+        "nome": "Dias Toffoli",
+        "funcao_estrutural": "decisor que criou o precedente de proporcionalidade",
+        "cargo_na_epoca": "Ministro STF"
+      }
+    ],
+
+    "conexoes_corpus": [
+      { "id_ref": 1563, "descricao": "decisão de Toffoli que criou o argumento de proporcionalidade usado pelo TRF-6" },
+      { "id_ref": 1569, "descricao": "caso retorna à 1ª instância em abr/2026 sem nenhuma condenação" },
+      { "id_ref": 123, "descricao": "Zero × Zero: assimetria punitiva sistematicamente documentada" }
+    ],
+
+    "status": "confirmado",
+    "visibilidade": "público",
+    "licenca": "CC0 1.0"
+  },
+
+  {
+    "id": 1566,
+    "slug": "viviane-barci-defesa-kallas-stf",
+    "tipo": "instancia_padrao",
+    "data_evento": "2026-01-20",
+    "data_registro": "2026-05-27",
+    "titulo": "Esposa de ministro do STF assume defesa de investigado da Rejeito no mesmo tribunal",
+    "operacao_referencia": "Operação Rejeito / Parcours",
+    "padroes_ativados": ["P03", "P09"],
+
+    "evidencia_primaria": {
+      "tipo": "documento",
+      "descricao": "Viviane Barci de Moraes — esposa do ministro Alexandre de Moraes — assume por substabelecimento a defesa de Lucas Kallas no STF. Petição assinada também pelos filhos do casal. O mesmo escritório havia sido contratado pelo Banco Master (Daniel Vorcaro, sócio de Kallas) por R$ 129 milhões meses antes.",
+      "classificacao": "primária",
+      "fonte": "STF — petição protocolada; A Investigação (mai/2026)",
+      "url_referencia": "https://www.ainvestigacao.com/p/o-terceiro-manuscrito-omitido"
+    },
+
+    "cadeia_logica": "Kallas investigado na Rejeito/Parcours → caso tramita no STF → esposa de ministro do STF assume defesa de Kallas → mesmo escritório já recebia R$ 129 mi do Banco Master (sócio financeiro de Kallas)",
+
+    "observacao_analitica": "A sobreposição de interesses é tripla: (1) caso tramita no tribunal onde o marido é ministro; (2) o escritório defende Kallas cujo sócio financeiro (Vorcaro) já é cliente do mesmo escritório por R$ 129 mi; (3) petição assinada por toda a família imediata do ministro. Não configura impedimento formal de Moraes — mas documenta a densidade do nexo entre o grupo investigado e o ambiente institucional do STF.",
+
+    "atores": [
+      {
+        "nome": "Viviane Barci de Moraes",
+        "funcao_estrutural": "defensora no tribunal onde o marido é ministro",
+        "cargo_na_epoca": "Advogada"
+      },
+      {
+        "nome": "Alexandre de Moraes",
+        "funcao_estrutural": "ministro do tribunal onde a causa tramita",
+        "cargo_na_epoca": "Ministro STF"
+      },
+      {
+        "nome": "Lucas Kallas",
+        "funcao_estrutural": "investigado defendido pela família do ministro",
+        "cargo_na_epoca": "Empresário Cedro / Empabra / MGB"
+      },
+      {
+        "nome": "Daniel Vorcaro",
+        "funcao_estrutural": "cliente do mesmo escritório — sócio financeiro do réu",
+        "cargo_na_epoca": "Controlador Banco Master"
+      }
+    ],
+
+    "conexoes_corpus": [
+      { "id_ref": 114, "descricao": "Banco Master: Vorcaro como sócio financeiro de Kallas e cliente do mesmo escritório" },
+      { "id_ref": 1527, "descricao": "batch Biomm: detalha a sociedade Kallas-Vorcaro" },
+      { "id_ref": 126, "descricao": "Paradoxo Constitucional: STF como guardião e vetor de captura simultaneamente" }
+    ],
+
+    "status": "confirmado",
+    "visibilidade": "público",
+    "licenca": "CC0 1.0"
+  },
+
+  {
+    "id": 1567,
+    "slug": "pad-teixeira-corregedoria-pf-fev2026",
+    "tipo": "instancia_padrao",
+    "data_evento": "2026-02-01",
+    "data_registro": "2026-05-27",
+    "titulo": "Corregedoria PF instaura PAD contra Teixeira; MPF pede bloqueio de R$ 4,2 mi",
+    "operacao_referencia": "Operação Rejeito",
+    "padroes_ativados": ["P03"],
+
+    "evidencia_primaria": {
+      "tipo": "documento",
+      "descricao": "Corregedoria da PF instaura Processo Administrativo Disciplinar contra Rodrigo de Melo Teixeira. MPF pede bloqueio de bens no valor de R$ 4,2 milhões. Teixeira permanece com tornozeleira eletrônica, recolhimento noturno, afastamento compulsório e vedação de contato com servidores da PF e CPRM.",
+      "classificacao": "primária",
+      "fonte": "Corregedoria PF; MPF",
+      "url_referencia": ""
+    },
+
+    "cadeia_logica": "Teixeira preso set/2025 → solto dez/2025 (Toffoli) → Corregedoria PF instaura PAD fev/2026 → MPF pede bloqueio R$ 4,2 mi → cautelares mantidas",
+
+    "observacao_analitica": "PAD instaurado 5 meses após a prisão e 2 meses após a soltura — ritmo lento da ação disciplinar interna em relação à gravidade documentada. O valor do bloqueio pedido (R$ 4,2 mi) é residual frente aos R$ 27 mi documentados como recebidos pela Brava Mineração. O afastamento compulsório da PF é a única medida institucional efetiva em vigor.",
+
+    "atores": [
+      {
+        "nome": "Rodrigo de Melo Teixeira",
+        "funcao_estrutural": "alvo do PAD — delegado afastado",
+        "cargo_na_epoca": "Delegado PF — afastado compulsoriamente"
+      }
+    ],
+
+    "conexoes_corpus": [
+      { "id_ref": 1556, "descricao": "evidências digitais que fundamentam o PAD" },
+      { "id_ref": 1563, "descricao": "liberado por Toffoli antes da instauração do PAD" },
+      { "id_ref": 1565, "descricao": "soltura em massa que antecedeu as medidas disciplinares" }
+    ],
+
+    "status": "confirmado",
+    "visibilidade": "público",
+    "licenca": "CC0 1.0"
+  },
+
+  {
+    "id": 1568,
+    "slug": "jf-57-processos-anm-multada-serra-curral",
+    "tipo": "instancia_padrao",
+    "data_evento": "2026-03-01",
+    "data_registro": "2026-05-27",
+    "titulo": "Justiça Federal suspende 57 processos minerários na Serra do Curral e multa ANM em R$ 4 mi",
+    "operacao_referencia": "Operação Parcours",
+    "padroes_ativados": ["P03", "P11"],
+
+    "evidencia_primaria": {
+      "tipo": "decisão",
+      "descricao": "Justiça Federal suspende todos os 57 processos minerários na Serra do Curral, restaura proteção integral da área e multa a ANM em R$ 4 milhões por descumprimento deliberado de ordem judicial que proibia novos direitos minerários desde fins de 2018. ANM havia autorizado ao menos 4 novos empreendimentos ciente da proibição. Portaria do IPHAN que reduziu área protegida de 42 para 9 hectares declarada ilegal.",
+      "classificacao": "primária",
+      "fonte": "Justiça Federal MG; MPF",
+      "url_referencia": ""
+    },
+
+    "cadeia_logica": "Justiça proíbe novos direitos minerários na Serra (fins 2018) → ANM autoriza 4 novos empreendimentos ciente da proibição → IPHAN reduz área protegida de 42 para 9 ha sem fundamento legal → JF suspende 57 processos + restaura proteção + multa ANM R$ 4 mi",
+
+    "observacao_analitica": "A multa à ANM por descumprimento 'deliberado' de ordem judicial documenta captura do órgão regulador além do plano individual: a instituição, não só seus diretores, operou contra decisão judicial durante anos. A redução ilegal da área tombada pelo IPHAN de 42 para 9 hectares demonstra que a captura se estendeu também ao órgão de patrimônio cultural.",
+
+    "atores": [
+      {
+        "nome": "ANM",
+        "funcao_estrutural": "órgão regulador que descumpriu ordem judicial de forma deliberada",
+        "cargo_na_epoca": "Agência Nacional de Mineração"
+      },
+      {
+        "nome": "IPHAN",
+        "funcao_estrutural": "órgão de patrimônio que reduziu ilegalmente área tombada",
+        "cargo_na_epoca": "Instituto do Patrimônio Histórico e Artístico Nacional"
+      }
+    ],
+
+    "conexoes_corpus": [
+      { "id_ref": 1557, "descricao": "documenta o dano físico que motivou a decisão judicial" },
+      { "id_ref": 1554, "descricao": "Parcours investigou o mecanismo que produziu a violação" },
+      { "id_ref": 1555, "descricao": "Rejeito documentou a captura da ANM em nível operacional" }
+    ],
+
+    "status": "confirmado",
+    "visibilidade": "público",
+    "licenca": "CC0 1.0"
+  },
+
+  {
+    "id": 1569,
+    "slug": "toffoli-retorno-1a-instancia-rejeito",
+    "tipo": "instancia_padrao",
+    "data_evento": "2026-04-15",
+    "data_registro": "2026-05-27",
+    "titulo": "Toffoli devolve operações Rejeito/Parcours à 1ª instância — sem nenhuma condenação proferida no STF",
+    "operacao_referencia": "Operação Rejeito",
+    "padroes_ativados": ["P06"],
+
+    "evidencia_primaria": {
+      "tipo": "decisão",
+      "descricao": "Toffoli determina retorno das operações Rejeito, Intrafortis, Contrassabotagem, Parcours e Poeira Vermelha à 3ª Vara Federal Criminal de Belo Horizonte. Motivo: PF e PGR concluem não haver 'qualquer elemento mínimo' vinculando o dep. Luiz Fernando Faria (União-MG) ao esquema — único fundamento que havia levado o conjunto ao STF. Nenhuma condenação proferida durante os 6+ meses no Supremo.",
+      "classificacao": "primária",
+      "fonte": "STF; PGR",
+      "url_referencia": ""
+    },
+
+    "cadeia_logica": "Remessa ao STF (out/2025) por foro de dois senadores → sigilo absoluto (nov/2025) → soltura de todos (dez/2025–jan/2026) → PGR conclui que dep. Faria não tem vínculo → fundamento do foro desaparece → caso volta à 1ª instância sem nenhuma condenação",
+
+    "observacao_analitica": "O percurso no STF durou 6 meses e produziu: sigilo que impediu a PF de trabalhar, soltura de 22 presos, e retorno ao ponto de partida sem nenhum ato decisório de mérito. P06 (deslocamento de foro como proteção): o mecanismo funcionou completamente — a investigação foi paralisada no período crítico pós-prisões sem gerar nenhum resultado condenatório.",
+
+    "atores": [
+      {
+        "nome": "Dias Toffoli",
+        "funcao_estrutural": "relator que devolveu o caso após esvaziá-lo processualmente",
+        "cargo_na_epoca": "Ministro STF"
+      },
+      {
+        "nome": "Paulo Gonet",
+        "funcao_estrutural": "PGR que concluiu pela ausência de vínculo com o dep. Faria",
+        "cargo_na_epoca": "Procurador-Geral da República"
+      }
+    ],
+
+    "conexoes_corpus": [
+      { "id_ref": 1561, "descricao": "remessa ao STF — início do percurso de 6 meses" },
+      { "id_ref": 1562, "descricao": "sigilo absoluto — primeira medida de Toffoli" },
+      { "id_ref": 1563, "descricao": "soltura dos líderes — segunda medida de Toffoli" },
+      { "id_ref": 1565, "descricao": "soltura em massa TRF-6 — consequência da decisão de Toffoli" }
+    ],
+
+    "status": "confirmado",
+    "visibilidade": "público",
+    "licenca": "CC0 1.0"
+  },
+
+  {
+    "id": 1570,
+    "slug": "kallas-vorcaro-desinvestimento-biomm-latache",
+    "tipo": "instancia_padrao",
+    "data_evento": "2026-04-28",
+    "data_registro": "2026-05-27",
+    "titulo": "Cedro Participações vende Biomm e Latache Capital — Kallas se desvincula formalmente de Vorcaro",
+    "operacao_referencia": "Operação Compliance Zero",
+    "padroes_ativados": ["P08"],
+
+    "evidencia_primaria": {
+      "tipo": "documento",
+      "descricao": "Cedro Participações (Lucas Kallas) anuncia venda de participação na Biomm e de fatia de 33,33% na gestora Latache Capital. Alaska Asset Management (Luiz Alves Paes de Barros) assume 26,15% da Biomm como maior acionista individual. Venda ocorre após investigações Rejeito/Parcours e prisão de Henrique Moura Vorcaro (pai de Daniel) na Operação Compliance Zero (mai/2026).",
+      "classificacao": "primária",
+      "fonte": "Fatos relevantes CVM; A Investigação (mai/2026)",
+      "url_referencia": "https://www.ainvestigacao.com/p/o-terceiro-manuscrito-omitido"
+    },
+
+    "cadeia_logica": "Rejeito/Parcours investigam Kallas → Compliance Zero prende pai de Vorcaro → Cedro (Kallas) vende participações em empresas compartilhadas com Vorcaro → desvinculação formal antes de possível constrição judicial",
+
+    "observacao_analitica": "Desinvestimento imediatamente após a prisão do pai de Vorcaro na Compliance Zero — padrão P08 de proteção patrimonial antecipada. A venda formal não elimina os vínculos documentados nos batches 1527–1546 (Biomm) e nas investigações das operações. Alaska Asset assume posição que até então era do grupo Vorcaro/BDB.",
+
+    "atores": [
+      {
+        "nome": "Lucas Kallas",
+        "funcao_estrutural": "desinvestidor em contexto de pressão investigativa",
+        "cargo_na_epoca": "Controlador Cedro Participações"
+      },
+      {
+        "nome": "Daniel Vorcaro",
+        "funcao_estrutural": "sócio do qual Kallas se desvincula formalmente",
+        "cargo_na_epoca": "Controlador Banco Master"
+      },
+      {
+        "nome": "Luiz Alves Paes de Barros",
+        "funcao_estrutural": "adquirente da fatia Kallas/Vorcaro na Biomm",
+        "cargo_na_epoca": "Gestor Alaska Asset Management"
+      }
+    ],
+
+    "conexoes_corpus": [
+      { "id_ref": 1527, "descricao": "batch Biomm 1527–1546: detalha a sociedade Kallas-Vorcaro que este evento encerra formalmente" },
+      { "id_ref": 1566, "descricao": "Viviane Barci defende Kallas no STF enquanto o escritório recebe R$ 129 mi do Banco Master" },
+      { "id_ref": 114, "descricao": "Banco Master: histórico da sociedade Vorcaro documentado no corpus temático" }
+    ],
+
+    "status": "confirmado",
+    "visibilidade": "público",
+    "licenca": "CC0 1.0"
+  },
+
+  {
+    "id": 1571,
+    "slug": "terceiro-manuscrito-vale-gerdau-trafigura",
+    "tipo": "instancia_padrao",
+    "data_evento": "2026-05-27",
+    "data_registro": "2026-05-27",
+    "titulo": "Terceiro manuscrito revelado — cadeia do minério ilegal até Vale, Gerdau e Trafigura",
+    "operacao_referencia": "Operação Rejeito",
+    "padroes_ativados": ["P08", "P11"],
+
+    "evidencia_primaria": {
+      "tipo": "documento",
+      "descricao": "A Investigação publica o 3º manuscrito apreendido no celular de Teixeira em set/2025 — único dos três não publicado por nenhum veículo durante cobertura da Rejeito (set–dez/2025). Título: 'Esquema Zé Nilton Cury (Terraplanagem RMBH → Nova Lima)'. Detalha: terraplanagem em condomínios de luxo → desvio para Fleurs Global e plantas de beneficiamento → blendagem com Cedro/Extrativa → venda via GSM/Grupo Avante (operador: Gabriel Thadeu Baya Andrade) → Vale, Gerdau, Trafigura como compradoras finais. Contingência registrada: 'Com a queda da Fleurs, Cedro e Extrativa, a estratégia é operar através da MGB.'",
+      "classificacao": "primária",
+      "fonte": "A Investigação (mai/2026); manuscritos SINTE SR/MG PF",
+      "url_referencia": "https://www.ainvestigacao.com/p/o-terceiro-manuscrito-omitido"
+    },
+
+    "cadeia_logica": "Terraplanagem legal em condomínios Nova Lima → minério desviado (não descartado) → Fleurs Global + plantas de beneficiamento → blendagem com Cedro/Extrativa (legalizado) → GSM/Grupo Avante (Baya Andrade) → Vale / Gerdau / Trafigura",
+
+    "observacao_analitica": "O mecanismo da blendagem é a chave do esquema: análises químicas não distinguem a fonte, documentação fiscal aponta apenas fontes legais, produto chega limpo ao comprador. Não há evidência de ciência das compradoras. A omissão midiática do 3º manuscrito — publicados os outros dois — é ela própria um dado: nomear três das maiores empresas do setor como destinatárias finais impôs autocensura na cadeia jornalística. P11: escala do esquema (R$ 18 bi de potencial, 42 empresas de lavagem) confirma sistema de extração estrutural, não episódio isolado.",
+
+    "atores": [
+      {
+        "nome": "Gabriel Thadeu Baya Andrade",
+        "funcao_estrutural": "operador comercial final — GSM/Grupo Avante",
+        "cargo_na_epoca": "Controlador Ônix Céu Aberto; diretor HG Mineração"
+      },
+      {
+        "nome": "Zé Nilton Cury",
+        "funcao_estrutural": "arquiteto societário do esquema — centro do 3º manuscrito",
+        "cargo_na_epoca": "Advogado; 'arquiteto do estratagema de criar pessoas jurídicas de fachada' (PF)"
+      },
+      {
+        "nome": "Fleurs Global",
+        "funcao_estrutural": "núcleo financeiro e ponto de recepção do minério desviado",
+        "cargo_na_epoca": "empresa privada"
+      },
+      {
+        "nome": "Vale S.A.",
+        "funcao_estrutural": "compradora final — sem evidência de ciência da origem ilegal",
+        "cargo_na_epoca": "mineradora"
+      },
+      {
+        "nome": "Gerdau",
+        "funcao_estrutural": "compradora final — sem evidência de ciência da origem ilegal",
+        "cargo_na_epoca": "siderúrgica"
+      },
+      {
+        "nome": "Trafigura",
+        "funcao_estrutural": "compradora final — sem evidência de ciência da origem ilegal",
+        "cargo_na_epoca": "trading de commodities"
+      }
+    ],
+
+    "conexoes_corpus": [
+      { "id_ref": 1552, "descricao": "Poeira Vermelha (2019): mesmo mecanismo de terraplanagem documentado 6 anos antes" },
+      { "id_ref": 1553, "descricao": "manuscrito retido por Teixeira em 2021 — o mesmo documento aqui revelado" },
+      { "id_ref": 1555, "descricao": "Rejeito prendeu os operadores da cadeia descrita neste manuscrito" },
+      { "id_ref": 119, "descricao": "Carbono Oculto: P08 via greenwashing — padrão análogo de lavagem por documento legítimo" },
+      { "id_ref": 128, "descricao": "Brasil Sangra: P11 extração estrutural — este caso é sua instância mineral mais documentada" }
+    ],
+
+    "status": "confirmado",
+    "visibilidade": "público",
+    "licenca": "CC0 1.0"
+  }
+]

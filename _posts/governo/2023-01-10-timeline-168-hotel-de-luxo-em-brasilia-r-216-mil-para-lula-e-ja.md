@@ -1,6 +1,6 @@
 ---
 title: "Hotel de luxo em Brasília: R$ 216 mil para Lula e Janja enquanto Alvorada 'estava em reforma'"
-description: "Em janeiro de 2023, o casal presidencial hospedou-se em hotel de luxo em Brasília por mais de um mês, gerando despesa de R$ 216 mil aos cofres públicos, enquanto o Palácio da Alvorada passava por obras. A justificativa de reformas necessárias foi acompanhada por declarações de Janja sobre danos causados pelo governo anterior — tese usada para fundamentar os R$ 26,8 milhões em mobília do mesmo ano. Checagens (Aos Fatos, Estadão Verifica) confirmaram o custo da hospedagem, mas contestaram a atribuição integral à primeira-dama."
+description: "Em janeiro de 2023, o casal presidencial hospedou-se em hotel de luxo em Brasília por mais de um mês, gerando despesa de R$ 216 mil aos cofres públicos, enquanto o Palácio da Alvorada passava por obras. "
 date: 2023-01-10T12:00:00.000Z
 image:
   path: "/assets/solid/hotel.svg"

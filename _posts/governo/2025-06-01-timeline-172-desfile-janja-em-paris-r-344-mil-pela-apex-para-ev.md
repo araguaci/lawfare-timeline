@@ -1,6 +1,6 @@
 ---
 title: "Desfile Janja em Paris: R$ 344 mil pela Apex para evento com Brigitte Macron — Café de l'Homme, Torre Eiffel"
-description: "A Agência Brasileira de Promoção de Exportações e Investimentos (Apex-Brasil), vinculada ao Ministério de Desenvolvimento chefiado por Geraldo Alckmin, gastou R$ 344.462,40 no evento 'Brasil, Criativo por Natureza', organizado pela primeira-dama Janja da Silva em junho de 2025, em Paris. O evento reuniu estilistas brasileiras e a primeira-dama francesa, Brigitte Macron, com desfile realizado no Café de l'Homme — restaurante com vista para a Torre Eiffel. O valor faz parte de despesa maior de R$ 2,1 milhões referente a toda a missão brasileira na França. Dado obtido via requerimento do deputado Gustavo Gayer (PL-GO). Até setembro de 2025, Janja acumulou R$ 237 mil em passagens aéreas identificadas oficialmente — mais de 140 viagens, maioria comprada com menos de 15 dias da partida."
+description: "A Agência Brasileira de Promoção de Exportações e Investimentos (Apex-Brasil), vinculada ao Ministério de Desenvolvimento chefiado por Geraldo Alckmin, gastou R$ 344.462,40 no evento 'Brasil, Criativo por Natureza', organizado pela primeira-dama Janja da Silva em junho de 2025, em Paris. "
 date: 2025-06-01T12:00:00.000Z
 image:
   path: "/assets/solid/person-dress.svg"

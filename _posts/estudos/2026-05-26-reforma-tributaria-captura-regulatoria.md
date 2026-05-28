@@ -1,4 +1,6 @@
 ---
+id_corpus: "T-189"
+thematic_track: true
 title: "T-189 · Reforma Tributária como Captura Regulatória"
 description: Split payment, dependência tecnológica compulsória e concentração econômica na transição EC 132/2023 — P11, P05 e conflito de interesse estrutural documentado.
 date: 2026-05-26T12:00:00-03:00

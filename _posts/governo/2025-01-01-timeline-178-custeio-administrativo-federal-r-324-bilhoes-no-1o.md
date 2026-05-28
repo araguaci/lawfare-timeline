@@ -1,6 +1,6 @@
 ---
 title: "Custeio administrativo federal: R$ 32,4 bilhões no 1º semestre 2025 — maior valor desde 2016, alta real de 15,6%"
-description: "As despesas administrativas da máquina pública federal atingiram R$ 32,4 bilhões no primeiro semestre de 2025 — alta real (deflacionada) de 15,6% sobre o mesmo período de 2024 (R$ 28,1 bilhões) e o maior valor para o período desde o 1º semestre de 2016 (R$ 33,3 bilhões). O custo anual de 2025 está projetado para superar R$ 65 bilhões (2024: R$ 62,5 bilhões — já o maior em 5 anos). Os custos com contratação temporária, terceirizados e limpeza totalizaram R$ 15,9 bilhões apenas no semestre. Segundo o IFI (Senado), o custeio compromete a capacidade de investimento: 'margem para investimentos medíocre em um país continental'. O arcabouço fiscal limita crescimento do custeio a 2,5% a.a. acima da inflação — a alta real de 15,6% viola o espírito da regra, embora nem todo custeio esteja formalmente sujeito ao limite."
+description: "As despesas administrativas da máquina pública federal atingiram R$ 32,4 bilhões no primeiro semestre de 2025 — alta real (deflacionada) de 15,6% sobre o mesmo período de 2024 (R$ 28,1 bilhões) e o maior valor para o período desde o 1º semestre de 2016 (R$ 33,3 bilhões). O custo anual de 2025 está projetado para superar R$ 65 bilhões (2024: R$ 62,5 bilhões — já o maior em 5 anos). "
 date: 2025-01-01T12:00:00.000Z
 image:
   path: "/assets/solid/chart-line.svg"

@@ -1,6 +1,6 @@
 ---
 title: "Cartão corporativo da Presidência: 99% dos R$ 55,5 milhões sob sigilo — TCU aponta descumprimento sistemático"
-description: "Auditoria do TCU aprovada em 16/07/2025 revela que de R$ 55,5 milhões gastos pela Presidência da República com o Cartão de Pagamento do Governo Federal (CPGF) entre janeiro de 2023 e abril de 2025, R$ 55,2 milhões foram classificados como sigilosos — 99,55% do total, o maior percentual já registrado. Distribuição anual: R$ 23,5 milhões sigilosos em 2023 (99,6%); R$ 15 milhões em 2024 (99,28%); R$ 5,5 milhões em 2025. O mesmo padrão se repete na Vice-Presidência: R$ 393,9 mil gastos, 92% sigilosos. TCU identificou que gastos não sigilosos também carecem de detalhamento e que há divergências entre o site da Casa Civil e o Portal da Transparência para os mesmos lançamentos. Governo determinou sigilo de 100 anos — idêntico ao praticado por Bolsonaro, criticado por Lula em campanha. TCU concedeu 30 dias para plano de ação."
+description: "Auditoria do TCU aprovada em 16/07/2025 revela que de R$ 55,5 milhões gastos pela Presidência da República com o Cartão de Pagamento do Governo Federal (CPGF) entre janeiro de 2023 e abril de 2025, R$ 55,2 milhões foram classificados como sigilosos — 99,55% do total, o maior percentual já registrado. "
 date: 2023-01-01T12:00:00.000Z
 image:
   path: "/assets/solid/credit-card.svg"

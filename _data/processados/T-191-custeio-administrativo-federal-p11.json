@@ -1,0 +1,79 @@
+{
+  "id": 191,
+  "slug": "custeio-administrativo-federal-p11",
+  "tipo": "analise_estrutural",
+  "data_evento": "2025-01-01",
+  "data_registro": "2026-05-27",
+  "titulo": "Custeio administrativo federal — R$ 32,4 bi no 1º semestre 2025",
+  "operacao_referencia": "Análise orçamentária estrutural 2023–2026",
+  "padroes_ativados": ["P11", "P03", "P09"],
+
+  "evidencia_primaria": {
+    "tipo": "documento",
+    "descricao": "Custeio administrativo federal atinge R$ 32,4 bi no 1º semestre 2025. Componentes documentados individualmente: viagens sigilosas R$ 405 mi (99% opacos, STF e Senado mantidos); cartão corporativo Presidência R$ 55,5 mi (99% opacos); frota TST 30 × Lexus ES 300H R$ 10,39 mi + sala VIP; diárias Câmara disparam +78% em 2025; rombo estatais federais R$ 4,16 bi (1º tri 2026, pior resultado registrado). Orçamento secreto: STF suspende R$ 4,2 bi em emendas parlamentares (jan/2025).",
+    "classificacao": "primária",
+    "fonte": "Portal Transparência; TCU; CGU; imprensa nacional",
+    "url_referencia": "/posts/governo/2025-01-01-timeline-178-custeio-administrativo-federal-r-324-bilhoes-no-1o/"
+  },
+
+  "cadeia_logica": "Dotação orçamentária aprovada → gestores sem incentivo de corte → expansão acima da inflação por exercícios consecutivos → sigilo protege execução (viagens, cartão corporativo) → TCU/CGU identificam sem poder de corte unilateral → Congresso não vota redução (beneficiário do padrão via diárias e emendas) → déficit estrutural permanente",
+
+  "observacao_analitica": "P11 em sua forma mais direta: extração formal, legalmente autorizada, sem ato ilícito identificável isoladamente. A aceitabilidade formal é o mecanismo de proteção — nenhum ator pode ser responsabilizado pelo conjunto enquanto cada ato individual é legal. O sigilo de viagens e do cartão corporativo (ambos com 99% de opacidade) demonstra que o Estado usa classificação de sigilo para blindar gastos de escrutínio público — a mesma arquitetura de opacidade que se manifesta em contextos de segurança (Escudo das Américas, ID 1576). Padrão estável entre governos: não é fenômeno de um partido, é arquitetura institucional.",
+
+  "atores": [
+    {
+      "nome": "Governo Federal — Executivo",
+      "funcao_estrutural": "executor e beneficiário primário do padrão",
+      "cargo_na_epoca": "Presidência da República — governo Lula (2023–)"
+    },
+    {
+      "nome": "Congresso Nacional",
+      "funcao_estrutural": "aprovador do orçamento e beneficiário via diárias/emendas — sem incentivo estrutural de corte",
+      "cargo_na_epoca": "Câmara dos Deputados + Senado Federal"
+    },
+    {
+      "nome": "STF / TST",
+      "funcao_estrutural": "beneficiário do padrão + bloqueador de escrutínio via manutenção do sigilo de viagens",
+      "cargo_na_epoca": "Supremo Tribunal Federal / Tribunal Superior do Trabalho"
+    },
+    {
+      "nome": "TCU / CGU",
+      "funcao_estrutural": "identificadores sem poder de corte — accountability sem consequência",
+      "cargo_na_epoca": "Tribunal de Contas da União / Controladoria-Geral da União"
+    }
+  ],
+
+  "conexoes_corpus": [
+    { "id_ref": 122, "descricao": "República Capturada: T-191 é a instância orçamentária mais direta e documentada da tese central de sistema de extração estrutural" },
+    { "id_ref": 128, "descricao": "Brasil Sangra P11: T-191 complementa com dados do ciclo 2023–2025 não cobertos no dossiê anterior" },
+    { "id_ref": 123, "descricao": "Zero × Zero: a assimetria punitiva que deixa crimes sem punição protege igualmente o custeio excessivo de mecanismo de corte" },
+    { "id_ref": 109, "descricao": "Gilmar Mendes: Gilmarpalooza (R$ 1 mi+ Lisboa + Buenos Aires) é instância judicial de P11 — P11 × P09 no mesmo ator" },
+    { "id_ref": 182, "descricao": "Acumulação funções Moraes 8J: P03 e P11 coexistem — ministro bloqueia lei redutora de penas e mantém sigilo de viagens do STF" },
+    { "id_ref": 1576, "descricao": "Escudo das Américas: a opacidade orçamentária e a opacidade de segurança têm a mesma arquitetura institucional — sigilo como política de Estado" }
+  ],
+
+  "instancias_relacionadas": [
+    { "post": "timeline-178-custeio-administrativo", "valor": "R$ 32,4 bi", "ano": 2025, "score": 197.0 },
+    { "post": "timeline-177-viagens-sigilo",          "valor": "R$ 405 mi",  "ano": 2024, "score": 71.9 },
+    { "post": "novo-orcamento-secreto-emendas",        "valor": "R$ 4,2 bi",  "ano": 2025, "score": 67.4 },
+    { "post": "timeline-174-tst-lexus",                "valor": "R$ 10,39 mi","ano": 2025, "score": 56.6 },
+    { "post": "estatais-rombo-r416bi",                 "valor": "R$ 4,16 bi", "ano": 2026, "score": 47.3 },
+    { "post": "timeline-167-cartao-corporativo",       "valor": "R$ 55,5 mi", "ano": 2023, "score": 31.6 },
+    { "post": "timeline-175-gilmarpalooza",            "valor": "R$ 1 mi+",   "ano": 2024, "score": 54.5 },
+    { "post": "timeline-176-camara-diarias",           "valor": "+78%",       "ano": 2025, "score": 28.6 },
+    { "post": "timeline-170-olimpiadas-paris",         "valor": "R$ 235 mil", "ano": 2024, "score": 29.1 },
+    { "post": "timeline-172-desfile-janja-paris",      "valor": "R$ 344 mil", "ano": 2025, "score": 28.3 }
+  ],
+
+  "recomendacao_proxima_producao": {
+    "id": "T-194",
+    "titulo": "Máquina de Gastos — P11 orçamentário 2023–2026",
+    "descricao": "Dossiê consolidado cobrindo os 6 posts críticos sem estudo: custeio R$ 32,4 bi, viagens R$ 405 mi, orçamento secreto R$ 4,2 bi, TST Lexus, estatais R$ 4,16 bi, cartão corporativo R$ 55,5 mi. Score combinado: 374,8 — maior retorno por unidade de produção do ranking.",
+    "posts_cobertos": 6,
+    "score_combinado": 374.8
+  },
+
+  "status": "confirmado",
+  "visibilidade": "público",
+  "licenca": "CC0 1.0"
+}

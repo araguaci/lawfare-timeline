@@ -1,4 +1,6 @@
 ---
+id_corpus: "T-190"
+thematic_track: true
 title: "Direita Permitida — O Gatekeeping do Campo Oposicionista"
 description: "Do enunciado Deltan (2019) à fragmentação pré-2026: como a centro-direita liberal extrai capital político bolsonarista sem herdar seus custos institucionais."
 date: 2026-05-22T12:00:00-03:00

@@ -1,6 +1,6 @@
 ---
 title: "Palácios presidenciais: R$ 26,8 milhões em reformas e mobília — maior gasto histórico"
-description: "Governo federal gasta R$ 26,8 milhões com reformas e compra de móveis para o Palácio do Planalto, Palácio da Alvorada, Granja do Torto e Palácio do Jaburu em 2023 — o maior valor registrado para esse tipo de despesa. Itens destacados: tapete de R$ 114 mil (argumento de 'brasilidade'), sofá de R$ 65 mil escolhido pela primeira-dama Rosângela da Silva (Janja) para o Alvorada, piso da Granja do Torto por R$ 156 mil, roupas de cama e banho por R$ 130 mil (R$ 41 mil sem licitação). Presidência justifica como 'patrimônio da União' e nega classificação de luxo, invocando exceção prevista no Decreto 10.818/2021."
+description: "Governo federal gasta R$ 26,8 milhões com reformas e compra de móveis para o Palácio do Planalto, Palácio da Alvorada, Granja do Torto e Palácio do Jaburu em 2023 — o maior valor registrado para esse tipo de despesa. "
 date: 2023-01-01T12:00:00.000Z
 image:
   path: "/assets/solid/couch.svg"

@@ -1,6 +1,6 @@
 ---
 title: "Olimpíadas de Paris: R$ 235 mil em viagem de 4 dias — comitiva de 220 pessoas, FAB, hotel Taj Palace"
-description: "Viagem da comitiva presidencial às Olimpíadas de Paris (julho 2024) gerou despesa superior a R$ 4,5 milhões para comitiva de 220 pessoas, com uso de aeronave da FAB. Os gastos diretamente ligados à equipe da primeira-dama para a viagem somaram R$ 235 mil em 4 dias. Adicionalmente, o governo pagou R$ 1,7 milhão ao hotel Taj Palace (Indian Hotels Company) em 2023, quando Lula e Janja viajaram à Índia para o G20. TCU arquivou em setembro de 2024 representação que pedia investigação dos gastos da comitiva em Paris. Secom não divulgou valores detalhados de voos e hospedagem de Janja."
+description: "Viagem da comitiva presidencial às Olimpíadas de Paris (julho 2024) gerou despesa superior a R$ 4,5 milhões para comitiva de 220 pessoas, com uso de aeronave da FAB. "
 date: 2024-07-26T12:00:00.000Z
 image:
   path: "/assets/solid/medal.svg"

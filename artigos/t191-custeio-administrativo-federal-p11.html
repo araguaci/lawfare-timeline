@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T-191 · Custeio Administrativo Federal — Padrão P11</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:       #0d0c0b;
+  --bg2:      #141310;
+  --bg3:      #1c1a17;
+  --border:   rgba(255,255,255,0.07);
+  --border2:  rgba(255,255,255,0.13);
+  --ink:      #f0ebe2;
+  --ink2:     #a09880;
+  --ink3:     #5a5448;
+  --amber:    #d4860a;
+  --amber-l:  #f5a623;
+  --amber-bg: rgba(212,134,10,0.10);
+  --red:      #c0392b;
+  --red-l:    #e74c3c;
+  --red-bg:   rgba(192,57,43,0.10);
+  --green:    #27ae60;
+  --green-bg: rgba(39,174,96,0.08);
+  --serif:    'Playfair Display', Georgia, serif;
+  --sans:     'IBM Plex Sans', system-ui, sans-serif;
+  --mono:     'IBM Plex Mono', 'Courier New', monospace;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── LAYOUT ── */
+.page { max-width: 860px; margin: 0 auto; padding: 0 24px 80px; }
+
+/* ── HEADER ── */
+.header {
+  border-bottom: 1px solid var(--border2);
+  padding: 48px 0 32px;
+  margin-bottom: 48px;
+  position: relative;
+}
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--amber) 0%, var(--red) 60%, transparent 100%);
+}
+.header-eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.header-eyebrow::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+.header h1 {
+  font-family: var(--serif);
+  font-size: clamp(28px, 5vw, 46px);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+  color: var(--ink);
+  margin-bottom: 20px;
+}
+.header h1 em {
+  font-style: normal;
+  color: var(--amber-l);
+}
+.header-sub {
+  font-size: 14px;
+  color: var(--ink2);
+  line-height: 1.6;
+  max-width: 620px;
+  margin-bottom: 24px;
+}
+.header-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.badge {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 3px;
+  border: 1px solid;
+}
+.badge-amber { background: var(--amber-bg); color: var(--amber-l); border-color: rgba(212,134,10,.3); }
+.badge-red   { background: var(--red-bg);   color: var(--red-l);   border-color: rgba(192,57,43,.3); }
+.badge-gray  { background: transparent; color: var(--ink3); border-color: var(--border); }
+
+/* ── STAT GRID ── */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 48px;
+}
+.stat-cell {
+  background: var(--bg2);
+  padding: 20px 20px 18px;
+  transition: background .15s;
+}
+.stat-cell:hover { background: var(--bg3); }
+.stat-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--ink3);
+  margin-bottom: 8px;
+}
+.stat-val {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--ink);
+}
+.stat-val.red  { color: var(--red-l); }
+.stat-val.amber { color: var(--amber-l); }
+.stat-note {
+  font-size: 11px;
+  color: var(--ink3);
+  margin-top: 5px;
+  line-height: 1.4;
+}
+
+/* ── SECTION ── */
+.section { margin-bottom: 52px; }
+.section-hdr {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.section-hdr h2 {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.section-hdr .section-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink3);
+}
+
+/* ── PROSE ── */
+p { color: var(--ink2); line-height: 1.75; margin-bottom: 14px; }
+p:last-child { margin-bottom: 0; }
+strong { color: var(--ink); font-weight: 500; }
+
+/* ── HIGHLIGHT BOX ── */
+.hl-box {
+  border-left: 3px solid var(--amber);
+  background: var(--amber-bg);
+  border-radius: 0 4px 4px 0;
+  padding: 16px 18px;
+  margin: 20px 0;
+}
+.hl-box.red { border-left-color: var(--red); background: var(--red-bg); }
+.hl-box p { color: var(--ink2); margin-bottom: 0; font-size: 14px; }
+.hl-box strong { color: var(--amber-l); }
+.hl-box.red strong { color: var(--red-l); }
+
+/* ── DATA TABLE ── */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin: 20px 0;
+}
+.data-table thead th {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--ink3);
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border2);
+  background: var(--bg2);
+}
+.data-table thead th.num { text-align: right; }
+.data-table tbody td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--ink2);
+  vertical-align: top;
+}
+.data-table tbody td.num {
+  text-align: right;
+  font-family: var(--mono);
+  font-weight: 500;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.data-table tbody tr:hover td { background: var(--bg3); }
+.data-table tbody td.label { color: var(--ink); font-weight: 500; }
+.bar-cell { width: 140px; }
+.bar-wrap { background: rgba(255,255,255,.05); border-radius: 2px; height: 6px; margin-top: 4px; }
+.bar-fill { height: 6px; border-radius: 2px; background: var(--amber); }
+.bar-fill.red { background: var(--red-l); }
+
+/* ── PATTERN BOX ── */
+.pattern-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+  margin: 20px 0;
+}
+.pattern-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+}
+.pattern-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+}
+.pattern-card.amber::before { background: var(--amber); }
+.pattern-card.red::before   { background: var(--red); }
+.pattern-card.mixed::before { background: linear-gradient(90deg, var(--amber), var(--red)); }
+.pattern-id {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--amber-l);
+  margin-bottom: 6px;
+}
+.pattern-card.red .pattern-id { color: var(--red-l); }
+.pattern-card.mixed .pattern-id { color: var(--amber-l); }
+.pattern-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.pattern-desc { font-size: 12px; color: var(--ink2); line-height: 1.5; }
+
+/* ── TIMELINE ── */
+.timeline { position: relative; padding-left: 28px; margin: 20px 0; }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 6px; top: 6px; bottom: 6px;
+  width: 1px;
+  background: var(--border2);
+}
+.tl-item { position: relative; margin-bottom: 22px; }
+.tl-dot {
+  position: absolute;
+  left: -25px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--amber);
+  border: 2px solid var(--bg);
+}
+.tl-dot.red  { background: var(--red-l); }
+.tl-dot.gray { background: var(--ink3); }
+.tl-date {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--amber-l);
+  margin-bottom: 3px;
+}
+.tl-item .tl-date.red { color: var(--red-l); }
+.tl-title { font-size: 13px; font-weight: 500; color: var(--ink); margin-bottom: 3px; }
+.tl-body  { font-size: 12px; color: var(--ink2); line-height: 1.5; }
+
+/* ── CADEIA LÓGICA ── */
+.chain {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 16px 0;
+  padding: 14px 16px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+.chain-node {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 3px;
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  color: var(--ink);
+  white-space: nowrap;
+}
+.chain-node.src  { border-color: rgba(212,134,10,.4); color: var(--amber-l); }
+.chain-node.dst  { border-color: rgba(192,57,43,.4);  color: var(--red-l); }
+.chain-arrow { color: var(--ink3); font-size: 13px; }
+
+/* ── CORPUS CONNECTIONS ── */
+.conn-list { display: flex; flex-direction: column; gap: 8px; margin: 16px 0; }
+.conn-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 13px;
+}
+.conn-id {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--amber-l);
+  min-width: 52px;
+  padding-top: 1px;
+  flex-shrink: 0;
+}
+.conn-desc { color: var(--ink2); line-height: 1.5; }
+
+/* ── ENTRADAS JSON ── */
+.json-block {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+.json-header {
+  background: var(--bg3);
+  border-bottom: 1px solid var(--border);
+  padding: 8px 14px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink3);
+  letter-spacing: .05em;
+}
+.json-body {
+  padding: 14px;
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--ink2);
+  overflow-x: auto;
+  white-space: pre;
+}
+.json-key   { color: #7ec8e3; }
+.json-str   { color: #c3e88d; }
+.json-num   { color: var(--amber-l); }
+.json-bool  { color: var(--red-l); }
+
+/* ── FOOTER ── */
+.footer {
+  border-top: 1px solid var(--border);
+  padding-top: 28px;
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.footer-left { font-size: 12px; color: var(--ink3); line-height: 1.6; }
+.footer-left strong { color: var(--ink2); }
+.footer-right { font-family: var(--mono); font-size: 11px; color: var(--ink3); text-align: right; }
+
+/* ── CHART ── */
+.chart-wrap { position: relative; height: 220px; margin: 16px 0 24px; }
+
+@media (max-width: 600px) {
+  .stat-grid { grid-template-columns: 1fr 1fr; }
+  .pattern-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-eyebrow">
+    lawfare-timeline · T-191 · P11 · 2026-05-27
+  </div>
+  <h1>Custeio Administrativo Federal<br><em>R$ 32,4 bilhões</em> no 1º semestre 2025</h1>
+  <p class="header-sub">
+    Dossiê de análise estrutural. O custeio com pessoal, benefícios, viagens, diárias e gastos de manutenção do aparato federal cresceu consistentemente acima da inflação e do PIB, sem mecanismo efetivo de contenção. Padrão P11: extração macroeconômica estrutural via orçamento público.
+  </p>
+  <div class="header-meta">
+    <span class="badge badge-amber">P11 — Extração estrutural</span>
+    <span class="badge badge-red">Score 197.0 — crítico</span>
+    <span class="badge badge-gray">T-191 · thematic track</span>
+    <span class="badge badge-gray">CC0 1.0</span>
+  </div>
+</header>
+
+<!-- STAT GRID -->
+<div class="stat-grid">
+  <div class="stat-cell">
+    <div class="stat-label">Custeio 1º sem. 2025</div>
+    <div class="stat-val amber">R$ 32,4 bi</div>
+    <div class="stat-note">pessoal + benefícios + manutenção</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-label">Viagens federais 2024</div>
+    <div class="stat-val red">R$ 405 mi</div>
+    <div class="stat-note">99% sob sigilo — STF e Senado mantidos</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-label">Cartão corporativo</div>
+    <div class="stat-val red">R$ 55,5 mi</div>
+    <div class="stat-note">99% sem identificação pública</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-label">Diárias Câmara 2025</div>
+    <div class="stat-val amber">+78%</div>
+    <div class="stat-note">em relação ao exercício anterior</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-label">TST — frota executiva</div>
+    <div class="stat-val red">R$ 10,39 mi</div>
+    <div class="stat-note">30 × Lexus ES 300H + sala VIP</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-label">Rombo estatais 2026</div>
+    <div class="stat-val red">R$ 4,16 bi</div>
+    <div class="stat-note">pior 1º trimestre registrado</div>
+  </div>
+</div>
+
+<!-- SEÇÃO 1 — DEFINIÇÃO DO PADRÃO -->
+<section class="section">
+  <div class="section-hdr">
+    <span class="section-num">01</span>
+    <h2>Definição do padrão P11 neste contexto</h2>
+  </div>
+  <p>
+    O Padrão P11 — <strong>Extração Macroeconômica Estrutural</strong> — descreve a captura progressiva e sistemática de recursos públicos por meio de mecanismos formalmente legais: folha de pessoal, benefícios, diárias, viagens, contratos de manutenção e gastos de custeio. A diferença entre P11 e corrupção episódica (P08) é a escala e a permanência: não se trata de desvios individuais, mas de uma arquitetura orçamentária que produz transferência de riqueza pública para o aparato administrativo de forma contínua, independentemente do governo de plantão.
+  </p>
+  <div class="hl-box">
+    <p><strong>Definição operacional:</strong> P11 está ativo quando o custeio do Estado cresce acima da inflação por três ou mais exercícios consecutivos, sem redução correspondente de déficit ou melhora documentada de entrega de serviços — e quando mecanismos formais de accountability (TCU, CGU, imprensa) identificam o problema sem produzir correção.</p>
+  </div>
+  <p>
+    O custeio de R$ 32,4 bilhões no primeiro semestre de 2025 — apenas com despesas administrativas, excluindo investimentos e transferências obrigatórias — representa um patamar que, projetado para o ano, ultrapassa o orçamento de vários ministérios inteiros. A grandeza do número não é acidente: é o resultado de décadas de expansão sem mecanismo de corte.
+  </p>
+
+  <div class="pattern-grid">
+    <div class="pattern-card amber">
+      <div class="pattern-id">P11-A · Expansão de Pessoal</div>
+      <div class="pattern-name">Folha como patrimônio político</div>
+      <div class="pattern-desc">Cargos comissionados, gratificações e benefícios acessórios crescem independentemente de desempenho. Cada governo herda e expande a estrutura anterior.</div>
+    </div>
+    <div class="pattern-card red">
+      <div class="pattern-id">P11-B · Opacidade Orçamentária</div>
+      <div class="pattern-name">Sigilo como proteção do gasto</div>
+      <div class="pattern-desc">Viagens (R$ 405 mi — 99% sob sigilo) e cartão corporativo (R$ 55,5 mi — 99% opacos) demonstram que o Estado usa classificação de sigilo para proteger gastos de controle social.</div>
+    </div>
+    <div class="pattern-card mixed">
+      <div class="pattern-id">P11-C · Captura Institucional</div>
+      <div class="pattern-name">Aparelho judiciário / legislativo como vetor</div>
+      <div class="pattern-desc">TST (R$ 10,39 mi em Lexus + sala VIP), STF e Senado mantidos no sigilo de viagens, Câmara com +78% em diárias. O Judiciário e o Legislativo amplificam o padrão sem sujeição às mesmas regras de austeridade que impõem ao Executivo.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 2 — ANATOMIA DO CUSTEIO -->
+<section class="section">
+  <div class="section-hdr">
+    <span class="section-num">02</span>
+    <h2>Anatomia do custeio — componentes documentados</h2>
+  </div>
+  <p>
+    Os R$ 32,4 bilhões do primeiro semestre de 2025 são o agregado de componentes heterogêneos, cada um com sua lógica própria de crescimento e sua própria resistência a cortes.
+  </p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Componente</th>
+        <th>Valor / período</th>
+        <th>Opacidade</th>
+        <th class="bar-cell">Peso relativo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="label">Custeio geral federal</td>
+        <td class="num">R$ 32,4 bi</td>
+        <td>parcial</td>
+        <td class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:100%"></div></div></td>
+      </tr>
+      <tr>
+        <td class="label">Viagens com sigilo</td>
+        <td class="num">R$ 405 mi / 2024</td>
+        <td>99% sigiloso</td>
+        <td class="bar-cell"><div class="bar-wrap"><div class="bar-fill red" style="width:78%"></div></div></td>
+      </tr>
+      <tr>
+        <td class="label">Cartão corporativo Presidência</td>
+        <td class="num">R$ 55,5 mi</td>
+        <td>99% sigiloso</td>
+        <td class="bar-cell"><div class="bar-wrap"><div class="bar-fill red" style="width:55%"></div></div></td>
+      </tr>
+      <tr>
+        <td class="label">Frota TST (30 Lexus ES 300H)</td>
+        <td class="num">R$ 10,39 mi</td>
+        <td>público</td>
+        <td class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:28%"></div></div></td>
+      </tr>
+      <tr>
+        <td class="label">Diárias Câmara dos Deputados</td>
+        <td class="num">+78% em 2025</td>
+        <td>parcial</td>
+        <td class="bar-cell"><div class="bar-wrap"><div class="bar-fill red" style="width:42%"></div></div></td>
+      </tr>
+      <tr>
+        <td class="label">Rombo estatais federais (1º tri 2026)</td>
+        <td class="num">R$ 4,16 bi</td>
+        <td>parcial</td>
+        <td class="bar-cell"><div class="bar-wrap"><div class="bar-fill red" style="width:65%"></div></div></td>
+      </tr>
+      <tr>
+        <td class="label">Desfile Janja / Apex (Paris)</td>
+        <td class="num">R$ 344 mi</td>
+        <td>público</td>
+        <td class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:37%"></div></div></td>
+      </tr>
+      <tr>
+        <td class="label">Olimpíadas de Paris — comitiva gov.</td>
+        <td class="num">R$ 235 mil / 4 dias</td>
+        <td>público</td>
+        <td class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:8%"></div></div></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="hl-box red">
+    <p><strong>Nota metodológica:</strong> os itens acima não somam os R$ 32,4 bi — são sub-itens documentados individualmente que integram ou exemplificam a categoria de custeio. A comparação de grandezas evidencia a assimetria: episódios individuais (Lexus, Olimpíadas) capturam atenção midiática desproporcional ao valor, enquanto o estoque maior (viagens sigilosas, cartão corporativo) permanece opaco.</p>
+  </div>
+</section>
+
+<!-- SEÇÃO 3 — CADEIA LÓGICA -->
+<section class="section">
+  <div class="section-hdr">
+    <span class="section-num">03</span>
+    <h2>Cadeia lógica — mecanismo P11</h2>
+  </div>
+  <p>
+    O padrão P11 no custeio federal não requer conluio nem corrupção episódica. Funciona por meio de incentivos estruturais e ausência de mecanismo de corte: cada ator racional dentro do sistema tem mais razões para expandir do que para conter.
+  </p>
+
+  <div class="chain">
+    <span class="chain-node src">Orçamento federal</span>
+    <span class="chain-arrow">→</span>
+    <span class="chain-node">Dotação de custeio</span>
+    <span class="chain-arrow">→</span>
+    <span class="chain-node">Gestores sem incentivo de corte</span>
+    <span class="chain-arrow">→</span>
+    <span class="chain-node">Expansão anual acima da inflação</span>
+    <span class="chain-arrow">→</span>
+    <span class="chain-node">Sigilo protege execução</span>
+    <span class="chain-arrow">→</span>
+    <span class="chain-node dst">Déficit estrutural permanente</span>
+  </div>
+
+  <div class="chain">
+    <span class="chain-node src">TCU / CGU identifica</span>
+    <span class="chain-arrow">→</span>
+    <span class="chain-node">Relatório publicado</span>
+    <span class="chain-arrow">→</span>
+    <span class="chain-node">Sem poder de corte unilateral</span>
+    <span class="chain-arrow">→</span>
+    <span class="chain-node">Congresso não vota redução</span>
+    <span class="chain-arrow">→</span>
+    <span class="chain-node dst">Accountability sem consequência</span>
+  </div>
+
+  <p>
+    A segunda cadeia é o mecanismo que torna P11 estável: os órgãos de controle <strong>identificam o problema sem poder corrigi-lo</strong>. O TCU pode apontar os R$ 32,4 bilhões, a imprensa pode reportar os 30 Lexus do TST, mas nenhum desses atores tem poder unilateral de corte orçamentário. O Congresso, que teria esse poder, é simultaneamente o maior beneficiário do padrão via diárias, passagens, emendas e estrutura de gabinete.
+  </p>
+
+  <div class="hl-box">
+    <p><strong>Assimetria estrutural:</strong> o Estado usa o argumento de soberania e sigilo institucional para proteger despesas de escrutínio público — o mesmo argumento que o governo Lula usa para se opor ao Escudo das Américas (ID 1576) é mobilizado internamente para bloquear transparência de gastos. A opacidade orçamentária e a opacidade de segurança têm a mesma arquitetura.</p>
+  </div>
+</section>
+
+<!-- SEÇÃO 4 — SÉRIE HISTÓRICA -->
+<section class="section">
+  <div class="section-hdr">
+    <span class="section-num">04</span>
+    <h2>Série histórica — episódios documentados no corpus</h2>
+  </div>
+  <p>
+    O padrão não é novo. O corpus do lawfare-timeline registra instâncias de P11 ao longo de diferentes governos, o que confirma o caráter estrutural — não partidário — do fenômeno.
+  </p>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">2023</div>
+      <div class="tl-title">Cartão corporativo da Presidência — R$ 55,5 mi, 99% sob sigilo</div>
+      <div class="tl-body">Governo Lula mantém opacidade total sobre gastos do cartão corporativo. Padrão herdado e mantido de governos anteriores. ID — (score 31.6 no ranking).</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">Jul. 2024</div>
+      <div class="tl-title">Olimpíadas de Paris — R$ 235 mil em viagem de 4 dias (comitiva governamental)</div>
+      <div class="tl-body">Despesa per capita de representação fora de qualquer parâmetro de austeridade. ID — (timeline-170).</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">Jul. 2024</div>
+      <div class="tl-title">Gilmarpalooza — R$ 1 mi+ em viagens Lisboa + Buenos Aires (recursos do Legislativo)</div>
+      <div class="tl-body">Conecta P11 com P09: gastos do Judiciário/Legislativo usam fundos públicos para agendas de alto custo sem prestação de contas detalhada. ID — (timeline-175); conecta com T-109.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot red"></div>
+      <div class="tl-date">2024</div>
+      <div class="tl-title">Viagens federais sob sigilo — R$ 405 mi, STF e Senado mantidos</div>
+      <div class="tl-body">Portais de transparência revelam o total mas não os beneficiários individuais. STF e Senado obtêm manutenção do sigilo via recursos próprios. ID — (timeline-177).</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot red"></div>
+      <div class="tl-date">Ago. 2025</div>
+      <div class="tl-title">TST adquire 30 Lexus ES 300H + sala VIP em aeroporto — R$ 10,39 mi</div>
+      <div class="tl-body">Licitação formal, processo regular — P11 não precisa de irregularidade. O problema é a prioridade alocativa: tribunal adquire frota de luxo enquanto demanda pública por serviços básicos cresce. ID — (timeline-174).</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot red"></div>
+      <div class="tl-date">1º sem. 2025</div>
+      <div class="tl-title">Custeio administrativo federal — R$ 32,4 bi</div>
+      <div class="tl-body">Pico documentado. Score 197.0 — maior lacuna sem dossiê no ranking de criticidade. Este dossiê registra o evento como ID T-191.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">2025</div>
+      <div class="tl-title">Câmara — diárias disparam 78% em relação ao exercício anterior</div>
+      <div class="tl-body">Crescimento nominal sem justificativa de escopo ou inflação correspondente. ID — (timeline-176).</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot red"></div>
+      <div class="tl-date">1º tri. 2026</div>
+      <div class="tl-title">Estatais federais — rombo recorde de R$ 4,16 bi</div>
+      <div class="tl-body">Pior resultado trimestral registrado. P11 nas estatais: custeio de pessoal e estrutura operacional cresceram além da capacidade de geração de receita. ID — (escandalos).</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot gray"></div>
+      <div class="tl-date">Jan. 2025</div>
+      <div class="tl-title">Novo orçamento secreto — STF suspende repasses de R$ 4,2 bi em emendas parlamentares</div>
+      <div class="tl-body">P11 + P03: Supremo atua como árbitro de mecanismo de distribuição orçamentária que beneficia os mesmos atores que legislam sobre o orçamento. ID — (score 67.4).</div>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 5 — ANÁLISE COMPARADA -->
+<section class="section">
+  <div class="section-hdr">
+    <span class="section-num">05</span>
+    <h2>Análise comparada — P11 vs padrões conexos do corpus</h2>
+  </div>
+  <p>
+    O Padrão P11 neste dossiê não opera em isolamento. Suas instâncias conectam-se a outros padrões já documentados no corpus temático, ampliando o mapa de extração estrutural.
+  </p>
+
+  <div class="pattern-grid">
+    <div class="pattern-card amber">
+      <div class="pattern-id">P11 × P08</div>
+      <div class="pattern-name">Extração formal vs. fachada</div>
+      <div class="pattern-desc">P08 usa atividade legítima como cobertura para ilícita (mineração como terraplanagem, Rejeito IDs 1552–1571). P11 é mais simples: a atividade é a própria extração, sem necessidade de cobertura. Ambos produzem transferência de recursos públicos sem accountability efetivo.</div>
+    </div>
+    <div class="pattern-card red">
+      <div class="pattern-id">P11 × P03</div>
+      <div class="pattern-name">Chokepoint + gasto opaco</div>
+      <div class="pattern-desc">O sigilo de viagens mantido por STF e Senado usa a mesma lógica de P03 (captura do ponto de controle): o órgão que deveria supervisionar usa poder institucional para blindar seus próprios gastos do escrutínio externo.</div>
+    </div>
+    <div class="pattern-card mixed">
+      <div class="pattern-id">P11 × P09</div>
+      <div class="pattern-name">Nexo político-orçamentário</div>
+      <div class="pattern-desc">Emendas parlamentares (orçamento secreto, R$ 4,2 bi suspensos pelo STF) documentam como P09 e P11 se fundem: o instrumento de captura política (emenda) é também o veículo de extração orçamentária estrutural.</div>
+    </div>
+  </div>
+
+  <p style="margin-top:16px">
+    O elemento que distingue P11 das demais instâncias de extração no corpus é sua <strong>aceitabilidade formal</strong>: os R$ 32,4 bilhões de custeio no primeiro semestre de 2025 foram orçados, aprovados pelo Congresso, executados por gestores com poder legal, auditados pelo TCU e registrados nos sistemas de transparência. Nenhum ato ilegal identificável. O problema está no conjunto, não em qualquer ato individual.
+  </p>
+</section>
+
+<!-- SEÇÃO 6 — CONEXÕES DO CORPUS -->
+<section class="section">
+  <div class="section-hdr">
+    <span class="section-num">06</span>
+    <h2>Conexões com o corpus existente</h2>
+  </div>
+
+  <div class="conn-list">
+    <div class="conn-item">
+      <span class="conn-id">T-122</span>
+      <span class="conn-desc">República Capturada — tese central de sistema de extração estrutural. T-191 é a instância orçamentária mais direta e documentada da tese.</span>
+    </div>
+    <div class="conn-item">
+      <span class="conn-id">T-128</span>
+      <span class="conn-desc">Brasil Sangra — extração macroeconômica P11 documentada. T-191 complementa com dados do ciclo 2023–2025 não cobertos em Brasil Sangra.</span>
+    </div>
+    <div class="conn-item">
+      <span class="conn-id">T-123</span>
+      <span class="conn-desc">Zero × Zero — assimetria punitiva. A mesma assimetria que deixa crimes de colarinho branco sem punição protege o custeio excessivo de qualquer mecanismo de corte.</span>
+    </div>
+    <div class="conn-item">
+      <span class="conn-id">T-109</span>
+      <span class="conn-desc">Gilmar Mendes — Gilmarpalooza (Lisboa + Buenos Aires, R$ 1 mi+) é instância de P11 no Judiciário. Conecta extravagância judicial com o padrão estrutural.</span>
+    </div>
+    <div class="conn-item">
+      <span class="conn-id">ID 182</span>
+      <span class="conn-desc">Acumulação de funções Moraes / 8J — o ministro que bloqueia lei redutora de penas é o mesmo cuja corte mantém sigilo de viagens. P03 e P11 coexistem no mesmo ator.</span>
+    </div>
+    <div class="conn-item">
+      <span class="conn-id">IDs 1547–1550</span>
+      <span class="conn-desc">Zema/mineração MG — 358 TACs no governo Zema exemplificam P11 estadual: instrumento de controle ambiental convertido em veículo de custeio político do licenciamento.</span>
+    </div>
+    <div class="conn-item">
+      <span class="conn-id">ID 1576</span>
+      <span class="conn-desc">Escudo das Américas — a mesma arquitetura de sigilo que protege R$ 405 mi de viagens federais é invocada pelo governo Lula como argumento de soberania contra o Escudo. Opacidade como política de Estado.</span>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 7 — ENTRADA DE CORPUS -->
+<section class="section">
+  <div class="section-hdr">
+    <span class="section-num">07</span>
+    <h2>Entrada canônica — ID T-191</h2>
+  </div>
+  <p>Registro no formato <code style="font-family:var(--mono);font-size:12px;color:var(--amber-l)">TEMPLATE-registro-rapido.json</code> para integração ao corpus temático.</p>
+
+  <div class="json-block">
+    <div class="json-header">_data/thematic/T-191-custeio-administrativo-federal-p11.json</div>
+    <div class="json-body"><span class="json-key">"id"</span>: <span class="json-num">191</span>,
+<span class="json-key">"slug"</span>: <span class="json-str">"custeio-administrativo-federal-p11"</span>,
+<span class="json-key">"tipo"</span>: <span class="json-str">"analise_estrutural"</span>,
+<span class="json-key">"data_evento"</span>: <span class="json-str">"2025-01-01"</span>,
+<span class="json-key">"data_registro"</span>: <span class="json-str">"2026-05-27"</span>,
+<span class="json-key">"titulo"</span>: <span class="json-str">"Custeio administrativo federal — R$ 32,4 bi no 1º semestre 2025"</span>,
+<span class="json-key">"operacao_referencia"</span>: <span class="json-str">"Análise orçamentária estrutural 2023–2026"</span>,
+<span class="json-key">"padroes_ativados"</span>: [<span class="json-str">"P11"</span>, <span class="json-str">"P03"</span>, <span class="json-str">"P09"</span>],
+
+<span class="json-key">"evidencia_primaria"</span>: {
+  <span class="json-key">"tipo"</span>: <span class="json-str">"documento"</span>,
+  <span class="json-key">"descricao"</span>: <span class="json-str">"Custeio administrativo federal atinge R$ 32,4 bi no 1º semestre 2025. Componentes documentados: viagens sigilosas R$ 405 mi (99% opacos), cartão corporativo R$ 55,5 mi (99% opacos), frota TST 30 × Lexus ES 300H R$ 10,39 mi, diárias Câmara +78%, rombo estatais R$ 4,16 bi (1º tri 2026). Orçamento secreto: STF suspende R$ 4,2 bi em emendas parlamentares."</span>,
+  <span class="json-key">"classificacao"</span>: <span class="json-str">"primária"</span>,
+  <span class="json-key">"fonte"</span>: <span class="json-str">"Portal Transparência; TCU; imprensa"</span>,
+  <span class="json-key">"url_referencia"</span>: <span class="json-str">"/posts/2025-01-01-timeline-178-custeio-administrativo-federal-r-324-bilhoes-no-1o/"</span>
+},
+
+<span class="json-key">"cadeia_logica"</span>: <span class="json-str">"Dotação orçamentária aprovada → gestores sem incentivo de corte → expansão acima da inflação → sigilo protege execução → TCU identifica sem poder de corte → Congresso não vota redução (beneficiário do padrão) → déficit estrutural permanente"</span>,
+
+<span class="json-key">"observacao_analitica"</span>: <span class="json-str">"P11 em sua forma mais direta: extração formal, legalmente autorizada, sem ato ilícito identificável. A aceitabilidade formal é o mecanismo de proteção — nenhum ator pode ser responsabilizado pelo conjunto enquanto cada ato individual é legal. Órgãos de controle identificam sem poder corrigir. Padrão estável entre governos: não é fenômeno de um partido, é arquitetura institucional."</span>,
+
+<span class="json-key">"atores"</span>: [
+  { <span class="json-key">"nome"</span>: <span class="json-str">"Governo Federal (Executivo)"</span>, <span class="json-key">"funcao_estrutural"</span>: <span class="json-str">"executor e beneficiário primário"</span>, <span class="json-key">"cargo_na_epoca"</span>: <span class="json-str">"Presidência da República"</span> },
+  { <span class="json-key">"nome"</span>: <span class="json-str">"Congresso Nacional"</span>, <span class="json-key">"funcao_estrutural"</span>: <span class="json-str">"aprovador e beneficiário via diárias/emendas — sem incentivo de corte"</span>, <span class="json-key">"cargo_na_epoca"</span>: <span class="json-str">"Câmara + Senado"</span> },
+  { <span class="json-key">"nome"</span>: <span class="json-str">"STF / TST"</span>, <span class="json-key">"funcao_estrutural"</span>: <span class="json-str">"beneficiário do padrão + bloqueador de escrutínio (sigilo de viagens)"</span>, <span class="json-key">"cargo_na_epoca"</span>: <span class="json-str">"Poder Judiciário"</span> }
+],
+
+<span class="json-key">"conexoes_corpus"</span>: [
+  { <span class="json-key">"id_ref"</span>: <span class="json-num">122</span>, <span class="json-key">"descricao"</span>: <span class="json-str">"República Capturada: T-191 é instância orçamentária da tese central"</span> },
+  { <span class="json-key">"id_ref"</span>: <span class="json-num">128</span>, <span class="json-key">"descricao"</span>: <span class="json-str">"Brasil Sangra: complementa com ciclo 2023–2025"</span> },
+  { <span class="json-key">"id_ref"</span>: <span class="json-num">123</span>, <span class="json-key">"descricao"</span>: <span class="json-str">"Zero × Zero: assimetria punitiva protege custeio excessivo de mecanismo de corte"</span> },
+  { <span class="json-key">"id_ref"</span>: <span class="json-num">109</span>, <span class="json-key">"descricao"</span>: <span class="json-str">"Gilmar Mendes: Gilmarpalooza como instância judicial de P11"</span> },
+  { <span class="json-key">"id_ref"</span>: <span class="json-num">182</span>, <span class="json-key">"descricao"</span>: <span class="json-str">"Moraes 8J: P03 e P11 coexistem no mesmo ator institucional"</span> }
+],
+
+<span class="json-key">"status"</span>: <span class="json-str">"confirmado"</span>,
+<span class="json-key">"visibilidade"</span>: <span class="json-str">"público"</span>,
+<span class="json-key">"licenca"</span>: <span class="json-str">"CC0 1.0"</span></div>
+  </div>
+</section>
+
+<!-- SEÇÃO 8 — RECOMENDAÇÕES -->
+<section class="section">
+  <div class="section-hdr">
+    <span class="section-num">08</span>
+    <h2>Recomendações de produção — próximos passos</h2>
+  </div>
+
+  <div class="hl-box">
+    <p><strong>Dossiê consolidado recomendado — T-194 "Máquina de Gastos":</strong> os seis posts sem estudo do cluster P11 orçamentário (custeio R$ 32,4 bi, viagens R$ 405 mi, orçamento secreto R$ 4,2 bi, TST Lexus, estatais R$ 4,16 bi, cartão corporativo R$ 55,5 mi) têm score combinado de 374,8 — o mais alto de qualquer cluster do ranking. Um único T-194 consolidaria todos os seis como instâncias do mesmo padrão P11, eliminando seis lacunas críticas com uma produção.</p>
+  </div>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">Imediato</div>
+      <div class="tl-title">Commit T-191 ao corpus temático</div>
+      <div class="tl-body">Integrar entrada JSON acima ao _data/thematic/. Atualizar sync: thematic last_id 191 → 192 (próximo disponível).</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">Próxima produção</div>
+      <div class="tl-title">T-192 — Vorcaro / carbono fictício / mineração (score 115)</div>
+      <div class="tl-body">Fecha o triângulo Vorcaro–carbono–mineração. Conecta batch Biomm (1527–1546) com T-119 (Carbono Oculto) e ID 3º manuscrito (1571).</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">Médio prazo</div>
+      <div class="tl-title">T-193 — PCC transnacional + EUA (score combinado 154)</div>
+      <div class="tl-body">Consolida batches batch_file_only 1481–1503 com IDs 1573 (Flávio/Trump) e 1576 (Escudo das Américas). Resolve merge pendente.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-date">Médio prazo</div>
+      <div class="tl-title">T-194 — Máquina de Gastos (score combinado 374,8)</div>
+      <div class="tl-body">Dossiê P11 orçamentário consolidando os 6 posts sem estudo. Maior retorno por unidade de produção do ranking.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot red"></div>
+      <div class="tl-date">Aberto</div>
+      <div class="tl-title">ID 180 — TSE seletividade (ainda pendente)</div>
+      <div class="tl-body">Registrado como open_item no sync desde sessões anteriores. Desbloqueio necessário para completar a faixa thematic 180–190.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-left">
+    <strong>lawfare-timeline</strong> · gosurf.site / lawfare-timeline.vercel.app<br>
+    Mantido por @araguaci · AI Nativo Brasil · Artes do Sul<br>
+    Licença <strong>CC0 1.0 Universal</strong> — Domínio Público Total
+  </div>
+  <div class="footer-right">
+    T-191 · P11<br>
+    gerado 2026-05-27<br>
+    próximo thematic: T-192
+  </div>
+</footer>
+
+</div>
+</body>
+</html>
