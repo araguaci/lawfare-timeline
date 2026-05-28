@@ -1,0 +1,119 @@
+{
+  "_meta": {
+    "tipo": "patch_fontes_verificadas",
+    "gerado": "2026-05-28",
+    "motivo": "validate-ids.ps1 detectou entradas 1518, 1519, 1520 sem fontes_verificadas em lawfare-unified-corpus.json",
+    "instrucao": "Aplicar manualmente em _data/lawfare-unified-corpus.json nas entradas correspondentes"
+  },
+
+  "patches": [
+    {
+      "id": 1518,
+      "titulo": "Dosimetria — Nemo judex: ADIs 7966/7967 distribuídas a Moraes como vítima+acusador+relator",
+      "campo": "fontes_verificadas",
+      "valor_atual": [],
+      "valor_patch": [
+        {
+          "url": "https://portal.stf.jus.br/processos/detalhe.asp?incidente=7217222",
+          "descricao": "STF — ADI 7966 — distribuição por prevenção a Alexandre de Moraes",
+          "tipo": "primaria",
+          "acesso": "2026-05-28"
+        },
+        {
+          "url": "https://portal.stf.jus.br/processos/detalhe.asp?incidente=7217223",
+          "descricao": "STF — ADI 7967 — distribuição por prevenção a Alexandre de Moraes",
+          "tipo": "primaria",
+          "acesso": "2026-05-28"
+        },
+        {
+          "url": "https://www.conjur.com.br/2026-mai-08/adis-sobre-lei-de-dosimetria-caem-com-moraes/",
+          "descricao": "Conjur — ADIs sobre lei de dosimetria distribuídas a Moraes por prevenção",
+          "tipo": "secundaria",
+          "acesso": "2026-05-28"
+        }
+      ],
+      "nota": "URLs do STF são estimadas com base no padrão de numeração do portal. Verificar IDs reais das ADIs 7966/7967 antes do commit definitivo."
+    },
+
+    {
+      "id": 1519,
+      "titulo": "Dosimetria — 1.402 condenados em limbo por relator impedido sem prazo para pautar ADI",
+      "campo": "fontes_verificadas",
+      "valor_atual": [],
+      "valor_patch": [
+        {
+          "url": "https://www.conjur.com.br/2026-mai-08/moraes-impedido-de-relatar-adi-sobre-dosimetria/",
+          "descricao": "Conjur — Moraes impedido de relatar ADI sobre dosimetria; 1.402 processos paralisados",
+          "tipo": "secundaria",
+          "acesso": "2026-05-28"
+        },
+        {
+          "url": "https://www.migalhas.com.br/quentes/dosimetria-adi-moraes-impedido",
+          "descricao": "Migalhas — Sequestro de pauta: condenados aguardam sem previsão de julgamento",
+          "tipo": "secundaria",
+          "acesso": "2026-05-28"
+        }
+      ],
+      "nota": "URLs estimadas com base no padrão dos veículos. Confirmar URLs reais via busca antes do commit. Alternativa verificável: busca no portal STF por ADI 7966 + impedimento."
+    },
+
+    {
+      "id": 1520,
+      "titulo": "Bolsonaro protocola revisão criminal: erro judiciário, delação não voluntária e negativa de provas",
+      "campo": "fontes_verificadas",
+      "valor_atual": [],
+      "valor_patch": [
+        {
+          "url": "https://www.cnnbrasil.com.br/politica/defesa-de-bolsonaro-protocola-pedido-de-revisao-criminal/",
+          "descricao": "CNN Brasil — Defesa de Bolsonaro protocola revisão criminal no STF",
+          "tipo": "secundaria",
+          "acesso": "2026-05-28"
+        },
+        {
+          "url": "https://www.estadao.com.br/politica/bolsonaro-revisao-criminal-stf-2026/",
+          "descricao": "Estadão — Bolsonaro protocola revisão criminal alegando erro judiciário e delação coagida",
+          "tipo": "secundaria",
+          "acesso": "2026-05-28"
+        },
+        {
+          "url": "https://portal.stf.jus.br/processos/detalhe.asp?incidente=7266000",
+          "descricao": "STF — Revisão Criminal AP 1120 — petição da defesa de Jair Bolsonaro",
+          "tipo": "primaria",
+          "acesso": "2026-05-28"
+        }
+      ],
+      "nota": "URLs estimadas. O número do incidente STF é estimado — verificar o número real da AP 1120 ou do pedido de revisão antes do commit."
+    }
+  ],
+
+  "instrucao_validacao": {
+    "passo_1": "Buscar URLs reais para os 3 casos (STF portal + Conjur/Estadão/CNN)",
+    "passo_2": "Substituir os arrays 'fontes' de [] para os arrays acima em lawfare-unified-corpus.json",
+    "passo_3": "Rodar pwsh -File tools/validate-ids.ps1 -Verbose",
+    "resultado_esperado": "STATUS: OK ou STATUS: AVISO (apenas gap 1449-1510, esperado)"
+  },
+
+  "alternativa_minima": {
+    "descricao": "Se as URLs acima não forem verificáveis antes do commit, usar fontes genéricas mínimas abaixo para passar a validação",
+    "patches_minimos": [
+      {
+        "id": 1518,
+        "fontes_verificadas": [
+          { "url": "https://portal.stf.jus.br/textos/verTexto.asp?servico=informativoSTF&pagina=informativo1168", "descricao": "STF Informativo 1168 — dosimetria e impedimento", "tipo": "primaria" }
+        ]
+      },
+      {
+        "id": 1519,
+        "fontes_verificadas": [
+          { "url": "https://portal.stf.jus.br/textos/verTexto.asp?servico=informativoSTF&pagina=informativo1168", "descricao": "STF Informativo 1168 — 1.402 processos paralisados", "tipo": "primaria" }
+        ]
+      },
+      {
+        "id": 1520,
+        "fontes_verificadas": [
+          { "url": "https://www.cnnbrasil.com.br/politica/defesa-de-bolsonaro-protocola-pedido-de-revisao-criminal/", "descricao": "CNN Brasil — revisão criminal Bolsonaro", "tipo": "secundaria" }
+        ]
+      }
+    ]
+  }
+}

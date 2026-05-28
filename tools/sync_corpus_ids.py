@@ -94,6 +94,9 @@ def main() -> None:
     entries.sort(key=lambda e: e["id"])
     by_id = {e["id"]: e for e in entries}
 
+    if "last_produced" in thematic:
+        del thematic["last_produced"]
+
     t_meta = {
         180: (
             "TSE — seletividade em inelegibilidade e cassação (T-180)",
@@ -161,6 +164,30 @@ def main() -> None:
         if tid in by_id:
             by_id[tid].update(payload)
         elif tid in t_posts:
+            entries.append({"id": tid, **payload})
+    # Reservas para artefatos HTML ainda sem estudo Jekyll (T-208/T-209)
+    reserved_artifacts = {
+        208: (
+            "Narrativa vs Evidência — índice corpus (T-208)",
+            "narrativa-vs-evidencia.html",
+        ),
+        209: (
+            "JustiçaWatch Brasil — índice corpus (T-209)",
+            "justicawatch-brasil.html",
+        ),
+    }
+    for tid, (topic, artifact) in reserved_artifacts.items():
+        if tid in t_posts:
+            continue
+        payload = {
+            "status": "reserved",
+            "topic": topic,
+            "artifact": artifact,
+            "notes": "Artefato HTML — candidato a estudo Jekyll",
+        }
+        if tid in by_id:
+            by_id[tid].update(payload)
+        else:
             entries.append({"id": tid, **payload})
     entries.sort(key=lambda e: e["id"])
     thematic["entries"] = entries

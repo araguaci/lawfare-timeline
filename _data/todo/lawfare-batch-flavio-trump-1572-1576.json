@@ -1,0 +1,250 @@
+[
+  {
+    "id": 1572,
+    "slug": "flavio-bolsonaro-trump-casa-branca-mai2026",
+    "tipo": "instancia_padrao",
+    "data_evento": "2026-05-27",
+    "data_registro": "2026-05-27",
+    "titulo": "Flávio Bolsonaro recebido por Trump na Casa Branca — promete adesão ao Escudo das Américas",
+    "operacao_referencia": "Geopolítica eleitoral Brasil–EUA 2026",
+    "padroes_ativados": ["P09", "P10"],
+
+    "evidencia_primaria": {
+      "tipo": "declaração",
+      "descricao": "Senador Flávio Bolsonaro se reúne com o presidente Donald Trump na Casa Branca por mais de 1h30. Em coletiva, afirma que Brasil integrará o 'Escudo das Américas' se vencer as eleições de outubro. Trump é o primeiro presidente dos EUA a receber na Casa Branca um pré-candidato presidencial brasileiro em ano eleitoral, segundo Flávio. Foto publicada na conta oficial @FlavioBolsonaro no X. Ocorre 20 dias após Lula se reunir com Trump em 07/mai/2026.",
+      "classificacao": "primária",
+      "fonte": "Infobae; EFE; @FlavioBolsonaro (X)",
+      "url_referencia": "https://www.infobae.com/america/america-latina/2026/05/27/flavio-bolsonaro-le-prometio-a-donald-trump-adherirse-a-la-alianza-escudo-de-las-americas-si-gana-las-elecciones-en-brasil/"
+    },
+
+    "cadeia_logica": "Flávio Bolsonaro (pré-candidato) → encontro na Casa Branca com Trump → promessa de adesão ao Escudo das Américas → sinalização a eleitorado conservador brasileiro + base trumpista → 20 dias após encontro Lula–Trump (07/mai/2026)",
+
+    "observacao_analitica": "Primeiro caso documentado de pré-candidato presidencial brasileiro recebido por presidente dos EUA em ano eleitoral — ruptura de protocolo diplomático com efeito de endosso implícito. O timing (20 dias após Lula–Trump) transforma o encontro em resposta eleitoral direta. A promessa sobre o Escudo das Américas vincula política externa a resultado eleitoral interno, posicionando Trump como árbitro implícito da disputa.",
+
+    "atores": [
+      {
+        "nome": "Flávio Bolsonaro",
+        "funcao_estrutural": "pré-candidato que busca endosso externo para campanha interna",
+        "cargo_na_epoca": "Senador — pré-candidato à presidência"
+      },
+      {
+        "nome": "Donald Trump",
+        "funcao_estrutural": "endossante implícito via protocolo da Casa Branca",
+        "cargo_na_epoca": "Presidente dos EUA"
+      }
+    ],
+
+    "conexoes_corpus": [
+      { "id_ref": 1573, "descricao": "Flávio pediu a Trump designação do PCC e CV como organizações terroristas — conexão direta ao corpus PCC" },
+      { "id_ref": 1574, "descricao": "Daniel Vorcaro como peso eleitoral que motivou a viagem a Washington" },
+      { "id_ref": 1575, "descricao": "minerais críticos como ativo de negociação com os EUA" }
+    ],
+
+    "status": "confirmado",
+    "visibilidade": "público",
+    "licenca": "CC0 1.0"
+  },
+
+  {
+    "id": 1573,
+    "slug": "flavio-bolsonaro-pcc-cv-designacao-terrorista-trump",
+    "tipo": "instancia_padrao",
+    "data_evento": "2026-05-27",
+    "data_registro": "2026-05-27",
+    "titulo": "Flávio Bolsonaro solicita a Trump designação do PCC e Comando Vermelho como organizações terroristas",
+    "operacao_referencia": "Geopolítica / Crime organizado transnacional",
+    "padroes_ativados": ["P09", "P10"],
+
+    "evidencia_primaria": {
+      "tipo": "declaração",
+      "descricao": "Durante reunião na Casa Branca, Flávio Bolsonaro solicita a Trump que designe 'o quanto antes' o PCC e o Comando Vermelho como organizações terroristas. Iniciativa tem oposição do governo Lula, que a considera violação da soberania nacional. Flávio descartou que a designação terrorista habilitaria ataque militar americano em solo brasileiro: 'isso está fora da mesa'.",
+      "classificacao": "primária",
+      "fonte": "Infobae; EFE; coletiva de imprensa Washington",
+      "url_referencia": "https://www.infobae.com/america/america-latina/2026/05/27/flavio-bolsonaro-le-prometio-a-donald-trump-adherirse-a-la-alianza-escudo-de-las-americas-si-gana-las-elecciones-en-brasil/"
+    },
+
+    "cadeia_logica": "Flávio Bolsonaro → solicita a Trump designação terrorista de PCC/CV → governo Lula opõe soberania nacional → disputa sobre jurisdição extraterritorial americana sobre crime organizado brasileiro → Escudo das Américas como moldura institucional",
+
+    "observacao_analitica": "A designação terrorista pelo OFAC/EUA produziria efeitos extraterritoriais automáticos: congelamento de ativos em dólares, impossibilidade de operações no sistema financeiro americano e exposição de qualquer entidade que interaja com os grupos. O corpus já documenta (IDs 1481–1503) a expansão transnacional do PCC/CV na Europa e Portugal — a designação americana seria o instrumento de maior impacto prático já acionado contra essas redes. O governo Lula opõe soberania, mas o argumento é frágil: PCC e CV já operam em mais de 30 países.",
+
+    "atores": [
+      {
+        "nome": "Flávio Bolsonaro",
+        "funcao_estrutural": "solicitante da designação terrorista a potência estrangeira",
+        "cargo_na_epoca": "Senador — pré-candidato"
+      },
+      {
+        "nome": "Donald Trump",
+        "funcao_estrutural": "receptor do pedido de designação — com poder de ação via OFAC/DoJ",
+        "cargo_na_epoca": "Presidente dos EUA"
+      }
+    ],
+
+    "conexoes_corpus": [
+      { "id_ref": 117, "descricao": "PCC/CV: inteligência operacional e expansão transnacional — já documentada no corpus" },
+      { "id_ref": 1488, "descricao": "OFAC: instrumento de designação terrorista cujo uso foi aqui solicitado por Flávio" },
+      { "id_ref": 1489, "descricao": "PCC em Portugal/Europa: expansão que torna a designação americana operacionalmente relevante" },
+      { "id_ref": 1572, "descricao": "contexto do encontro Flávio–Trump na Casa Branca" }
+    ],
+
+    "status": "confirmado",
+    "visibilidade": "público",
+    "licenca": "CC0 1.0"
+  },
+
+  {
+    "id": 1574,
+    "slug": "flavio-bolsonaro-vorcaro-peso-eleitoral",
+    "tipo": "instancia_padrao",
+    "data_evento": "2026-05-27",
+    "data_registro": "2026-05-27",
+    "titulo": "Viagem a Washington ocorre após filtração que vincula Flávio Bolsonaro a Daniel Vorcaro",
+    "operacao_referencia": "Operação Compliance Zero / eleições 2026",
+    "padroes_ativados": ["P09", "P08"],
+
+    "evidencia_primaria": {
+      "tipo": "declaração",
+      "descricao": "Reportagem do Infobae registra que a viagem de Flávio Bolsonaro a Washington ocorreu após filtração que o vincula ao banqueiro Daniel Vorcaro — preso sob suspeita de envolvimento no maior fraude financeiro da história do país. O vínculo teria enfraquecido sua posição nas pesquisas frente a Lula, que busca reeleição.",
+      "classificacao": "secundária",
+      "fonte": "Infobae (mai/2026)",
+      "url_referencia": "https://www.infobae.com/america/america-latina/2026/05/27/flavio-bolsonaro-le-prometio-a-donald-trump-adherirse-a-la-alianza-escudo-de-las-americas-si-gana-las-elecciones-en-brasil/"
+    },
+
+    "cadeia_logica": "Filtração vincula Flávio a Vorcaro (preso Compliance Zero) → queda nas pesquisas → viagem à Casa Branca → foto com Trump + promessas de política externa → narrativa de liderança internacional substitui narrativa do escândalo",
+
+    "observacao_analitica": "A sequência temporal é analiticamente relevante: a viagem funciona como operação de substituição de narrativa. O encontro com Trump em Washington produz imagem de estadista que ofusca a filtração do vínculo com Vorcaro. Vorcaro aparece simultaneamente no corpus como: sócio de Lucas Kallas (Rejeito), controlador da Tamisa (Serra do Curral), financiador da 3D Minerals (ANM) e agora como peso eleitoral contra Flávio.",
+
+    "atores": [
+      {
+        "nome": "Flávio Bolsonaro",
+        "funcao_estrutural": "candidato em manobra de substituição de narrativa",
+        "cargo_na_epoca": "Senador — pré-candidato"
+      },
+      {
+        "nome": "Daniel Vorcaro",
+        "funcao_estrutural": "nexo que produziu dano eleitoral ao pré-candidato",
+        "cargo_na_epoca": "Controlador Banco Master — preso (Compliance Zero)"
+      }
+    ],
+
+    "conexoes_corpus": [
+      { "id_ref": 114, "descricao": "Banco Master: ascensão atípica de Vorcaro documentada no corpus temático" },
+      { "id_ref": 1527, "descricao": "batch Biomm 1527–1546: Vorcaro como sócio de Kallas" },
+      { "id_ref": 1570, "descricao": "Kallas se desvincula de Vorcaro após Compliance Zero" },
+      { "id_ref": 1572, "descricao": "contexto da viagem a Washington" }
+    ],
+
+    "status": "confirmado",
+    "visibilidade": "público",
+    "licenca": "CC0 1.0"
+  },
+
+  {
+    "id": 1575,
+    "slug": "minerais-criticos-brasil-eua-alternativa-china",
+    "tipo": "instancia_padrao",
+    "data_evento": "2026-05-27",
+    "data_registro": "2026-05-27",
+    "titulo": "Flávio Bolsonaro posiciona minerais críticos brasileiros como alternativa ao monopólio chinês em negociação com Trump",
+    "operacao_referencia": "Geopolítica mineral Brasil–EUA",
+    "padroes_ativados": ["P09", "P11"],
+
+    "evidencia_primaria": {
+      "tipo": "declaração",
+      "descricao": "Flávio Bolsonaro afirma a Trump que o Brasil, por suas grandes reservas de minerais críticos de interesse de Washington, deve ser uma 'alternativa' ao monopólio chinês no setor. A declaração é feita no mesmo encontro em que promete adesão ao Escudo das Américas e solicita designação terrorista do PCC/CV.",
+      "classificacao": "primária",
+      "fonte": "Infobae; EFE",
+      "url_referencia": "https://www.infobae.com/america/america-latina/2026/05/27/flavio-bolsonaro-le-prometio-a-donald-trump-adherirse-a-la-alianza-escudo-de-las-americas-si-gana-las-elecciones-en-brasil/"
+    },
+
+    "cadeia_logica": "Flávio Bolsonaro → oferta de acesso a minerais críticos brasileiros aos EUA como alternativa à China → em contexto de disputa geopolítica EUA–China por cadeias de fornecimento de minerais estratégicos → posiciona o Brasil (sob governo Bolsonaro) como parceiro mineral preferencial de Washington",
+
+    "observacao_analitica": "A oferta de minerais críticos como ativo de negociação geopolítica fecha o círculo entre os três temas do encontro: Escudo das Américas (segurança), designação PCC/CV (crime organizado) e minerais críticos (economia). O timing é relevante: o corpus documenta o maior leilão de minerais críticos da ANM em 2024 (3D Minerals/Vorcaro) — agora o mesmo recurso é apresentado a Trump como ativo estratégico. A Serra do Curral, cujos 57 processos foram suspensos em mar/2026 (ID 1568), é parte do mesmo ecossistema mineral que Flávio promete entregar à cadeia americana.",
+
+    "atores": [
+      {
+        "nome": "Flávio Bolsonaro",
+        "funcao_estrutural": "ofertante de acesso a minerais críticos a potência estrangeira",
+        "cargo_na_epoca": "Senador — pré-candidato"
+      },
+      {
+        "nome": "Donald Trump",
+        "funcao_estrutural": "receptor da oferta de acesso mineral",
+        "cargo_na_epoca": "Presidente dos EUA"
+      }
+    ],
+
+    "conexoes_corpus": [
+      { "id_ref": 1558, "descricao": "leilão ANM de minerais críticos — 3D Minerals/Vorcaro — o mesmo ativo mineral ofertado a Trump" },
+      { "id_ref": 1568, "descricao": "Serra do Curral: 57 processos suspensos — parte do ecossistema mineral em disputa" },
+      { "id_ref": 1555, "descricao": "Rejeito documentou captura do licenciamento mineral — contexto do setor que Flávio promete 'abrir' aos EUA" },
+      { "id_ref": 128, "descricao": "Brasil Sangra P11: extração de patrimônio mineral como padrão estrutural" }
+    ],
+
+    "status": "confirmado",
+    "visibilidade": "público",
+    "licenca": "CC0 1.0"
+  },
+
+  {
+    "id": 1576,
+    "slug": "escudo-americas-brasil-soberania-lula-oposicao",
+    "tipo": "instancia_padrao",
+    "data_evento": "2026-05-27",
+    "data_registro": "2026-05-27",
+    "titulo": "Escudo das Américas — governo Lula opõe soberania nacional à aliança regional promovida por Washington",
+    "operacao_referencia": "Geopolítica eleitoral Brasil–EUA 2026",
+    "padroes_ativados": ["P09", "P10"],
+
+    "evidencia_primaria": {
+      "tipo": "declaração",
+      "descricao": "O governo Lula da Silva opõe-se ao Escudo das Américas — aliança regional contra o narcotráfico promovida pelos EUA, da qual já participam Argentina (Milei) e El Salvador (Bukele) — considerando-a violação da soberania nacional. Flávio Bolsonaro promete adesão brasileira se eleito. Lula se reunira com Trump na Casa Branca em 07/mai/2026, 20 dias antes do encontro de Flávio.",
+      "classificacao": "primária",
+      "fonte": "Infobae; EFE",
+      "url_referencia": "https://www.infobae.com/america/america-latina/2026/05/27/flavio-bolsonaro-le-prometio-a-donald-trump-adherirse-a-la-alianza-escudo-de-las-americas-si-gana-las-elecciones-en-brasil/"
+    },
+
+    "cadeia_logica": "Trump promove Escudo das Américas → Argentina (Milei) + El Salvador (Bukele) aderem → Lula recusa por soberania (07/mai/2026) → Flávio vai a Washington e promete adesão se eleito → eleições de outubro como referendo implícito sobre a aliança",
+
+    "observacao_analitica": "O Escudo das Américas transforma as eleições brasileiras de outubro em variável geopolítica para Washington: a adesão ou não do Brasil determina o alcance prático da aliança, dado o tamanho territorial e policial brasileiro frente ao PCC/CV. A oposição de Lula por soberania e a promessa de Flávio por adesão criam uma clivagem de política externa inédita na eleição brasileira — assunto que historicamente não mobiliza eleitorado, mas que agora tem Trump como catalisador.",
+
+    "atores": [
+      {
+        "nome": "Luiz Inácio Lula da Silva",
+        "funcao_estrutural": "oponente da adesão ao Escudo — argumento de soberania",
+        "cargo_na_epoca": "Presidente do Brasil"
+      },
+      {
+        "nome": "Flávio Bolsonaro",
+        "funcao_estrutural": "proponente da adesão — condiciona política externa a resultado eleitoral",
+        "cargo_na_epoca": "Senador — pré-candidato"
+      },
+      {
+        "nome": "Donald Trump",
+        "funcao_estrutural": "arquiteto da aliança que divide os candidatos brasileiros",
+        "cargo_na_epoca": "Presidente dos EUA"
+      },
+      {
+        "nome": "Javier Milei",
+        "funcao_estrutural": "membro do Escudo — referência regional para Flávio",
+        "cargo_na_epoca": "Presidente da Argentina"
+      },
+      {
+        "nome": "Nayib Bukele",
+        "funcao_estrutural": "membro do Escudo — modelo de aliança de segurança com EUA",
+        "cargo_na_epoca": "Presidente de El Salvador"
+      }
+    ],
+
+    "conexoes_corpus": [
+      { "id_ref": 1573, "descricao": "pedido de designação terrorista PCC/CV — fundamento operacional do Escudo" },
+      { "id_ref": 117, "descricao": "PCC/CV: expansão transnacional que justifica a aliança hemisférica" },
+      { "id_ref": 1572, "descricao": "encontro Flávio–Trump que gerou a promessa de adesão" },
+      { "id_ref": 118, "descricao": "Cocaína Vermelha: fusão narco-política documentada — contexto do que o Escudo pretende combater" }
+    ],
+
+    "status": "confirmado",
+    "visibilidade": "público",
+    "licenca": "CC0 1.0"
+  }
+]

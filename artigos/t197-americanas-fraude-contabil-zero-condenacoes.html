@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T-197 · Americanas — R$ 25,3 bi · Zero Condenações</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:     #0a0a08;
+  --bg2:    #111110;
+  --bg3:    #191917;
+  --bg4:    #202020;
+  --bdr:    rgba(255,255,255,0.06);
+  --bdr2:   rgba(255,255,255,0.12);
+  --ink:    #f2ede4;
+  --ink2:   #968e7a;
+  --ink3:   #4a453c;
+  --gold:   #c9a84c;
+  --gold-l: #e8c86a;
+  --gold-bg:rgba(201,168,76,0.08);
+  --red:    #c23b3b;
+  --red-l:  #e05252;
+  --red-bg: rgba(194,59,59,0.09);
+  --amber:  #c97d1a;
+  --amber-l:#e09030;
+  --amber-bg:rgba(201,125,26,0.09);
+  --serif:  'DM Serif Display', Georgia, serif;
+  --sans:   'IBM Plex Sans', system-ui, sans-serif;
+  --mono:   'IBM Plex Mono', monospace;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.page{max-width:880px;margin:0 auto;padding:0 24px 100px}
+
+/* HEADER */
+.header{padding:56px 0 40px;border-bottom:1px solid var(--bdr2);margin-bottom:52px;position:relative;overflow:hidden}
+.header::after{content:'R$25bi';position:absolute;right:-20px;top:20px;font-family:var(--serif);font-size:110px;font-weight:700;color:rgba(201,168,76,0.04);line-height:1;pointer-events:none;user-select:none}
+.eyebrow{font-family:var(--mono);font-size:11px;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.eyebrow::after{content:'';flex:1;height:1px;background:var(--bdr)}
+h1{font-family:var(--serif);font-size:clamp(28px,5vw,48px);line-height:1.08;letter-spacing:-.01em;color:var(--ink);margin-bottom:14px}
+h1 span{color:var(--red-l)}
+.lead{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--ink2);line-height:1.6;max-width:640px;margin-bottom:22px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.06em;padding:3px 9px;border-radius:2px;border:1px solid}
+.tg{background:var(--gold-bg);color:var(--gold-l);border-color:rgba(201,168,76,.25)}
+.tr{background:var(--red-bg);color:var(--red-l);border-color:rgba(194,59,59,.25)}
+.ta{background:var(--amber-bg);color:var(--amber-l);border-color:rgba(201,125,26,.25)}
+.tx{background:transparent;color:var(--ink3);border-color:var(--bdr)}
+
+/* NÚMEROS */
+.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--bdr);border:1px solid var(--bdr);border-radius:4px;overflow:hidden;margin-bottom:48px}
+.nc{background:var(--bg2);padding:18px 16px;transition:background .15s}
+.nc:hover{background:var(--bg3)}
+.nv{font-family:var(--serif);font-size:28px;line-height:1;margin-bottom:5px}
+.nv.r{color:var(--red-l)}.nv.g{color:var(--gold-l)}.nv.a{color:var(--amber-l)}
+.nl{font-family:var(--mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink3);line-height:1.4}
+
+/* SECTION */
+.sec{margin-bottom:56px;scroll-margin-top:40px}
+.sh{font-family:var(--mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink3);margin-bottom:6px}
+h2{font-family:var(--serif);font-size:22px;color:var(--ink);margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid var(--bdr)}
+p{color:var(--ink2);line-height:1.8;margin-bottom:14px;font-family:var(--sans)}
+p:last-child{margin-bottom:0}
+strong{color:var(--ink);font-weight:400}
+
+/* HIGHLIGHT */
+.hl{border-left:2px solid var(--gold);background:var(--gold-bg);padding:14px 18px;border-radius:0 3px 3px 0;margin:18px 0}
+.hl.r{border-left-color:var(--red);background:var(--red-bg)}
+.hl.a{border-left-color:var(--amber);background:var(--amber-bg)}
+.hl p{font-size:14px;margin:0}
+.hl strong{color:var(--gold-l)}.hl.r strong{color:var(--red-l)}.hl.a strong{color:var(--amber-l)}
+
+/* TIMELINE */
+.tl{padding-left:24px;position:relative;margin:20px 0}
+.tl::before{content:'';position:absolute;left:6px;top:6px;bottom:6px;width:1px;background:var(--bdr2)}
+.tli{position:relative;margin-bottom:22px}
+.tld{position:absolute;left:-21px;top:5px;width:10px;height:10px;border-radius:50%;background:var(--gold);border:2px solid var(--bg)}
+.tld.r{background:var(--red-l)}.tld.a{background:var(--amber-l)}.tld.x{background:var(--ink3)}
+.tldate{font-family:var(--mono);font-size:11px;color:var(--gold);margin-bottom:2px}
+.tli .tldate.r{color:var(--red-l)}.tli .tldate.x{color:var(--ink3)}.tli .tldate.a{color:var(--amber-l)}
+.tltitle{font-family:var(--sans);font-size:13px;font-weight:500;color:var(--ink);margin-bottom:3px}
+.tlbody{font-size:12px;color:var(--ink2);line-height:1.55}
+
+/* ATORES */
+.atable{width:100%;border-collapse:collapse;font-size:13px;margin:18px 0}
+.atable thead th{font-family:var(--mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink3);text-align:left;padding:8px 12px;border-bottom:1px solid var(--bdr2);background:var(--bg2)}
+.atable tbody td{padding:10px 12px;border-bottom:1px solid var(--bdr);color:var(--ink2);vertical-align:top;line-height:1.5}
+.atable tbody td.name{color:var(--ink);font-weight:500}
+.atable tbody tr:hover td{background:var(--bg3)}
+.atable td.status{white-space:nowrap}
+.pill{display:inline-flex;font-family:var(--mono);font-size:10px;font-weight:500;padding:2px 7px;border-radius:2px;border:.5px solid}
+.pr{background:var(--red-bg);color:var(--red-l);border-color:rgba(194,59,59,.3)}
+.pa{background:var(--amber-bg);color:var(--amber-l);border-color:rgba(201,125,26,.3)}
+.pg{background:var(--gold-bg);color:var(--gold-l);border-color:rgba(201,168,76,.3)}
+.px{background:transparent;color:var(--ink3);border-color:var(--bdr)}
+
+/* CADEIA */
+.chain{display:flex;align-items:center;flex-wrap:wrap;gap:5px;background:var(--bg2);border:1px solid var(--bdr);border-radius:4px;padding:12px 16px;margin:16px 0}
+.cn{font-family:var(--mono);font-size:11px;padding:4px 10px;border-radius:2px;background:var(--bg3);border:1px solid var(--bdr2);color:var(--ink);white-space:nowrap}
+.cn.g{border-color:rgba(201,168,76,.3);color:var(--gold-l)}
+.cn.r{border-color:rgba(194,59,59,.3);color:var(--red-l)}
+.cn.x{border-color:transparent;color:var(--ink3)}
+.arr{color:var(--ink3);font-size:13px;padding:0 2px}
+
+/* PADRÕES */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin:20px 0}
+.pcard{background:var(--bg2);border:1px solid var(--bdr);border-radius:4px;padding:14px;position:relative;overflow:hidden}
+.pcard::after{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.pcard.g::after{background:var(--gold)}.pcard.r::after{background:var(--red)}.pcard.a::after{background:var(--amber)}
+.pid{font-family:var(--mono);font-size:11px;font-weight:500;color:var(--gold-l);margin-bottom:5px}
+.pcard.r .pid{color:var(--red-l)}.pcard.a .pid{color:var(--amber-l)}
+.pname{font-family:var(--sans);font-size:13px;font-weight:500;color:var(--ink);margin-bottom:6px}
+.pdesc{font-size:12px;color:var(--ink2);line-height:1.5}
+
+/* CONEXÕES */
+.conns{display:flex;flex-direction:column;gap:8px;margin:16px 0}
+.conn{display:flex;align-items:flex-start;gap:12px;padding:10px 14px;background:var(--bg2);border:1px solid var(--bdr);border-radius:3px}
+.cid{font-family:var(--mono);font-size:11px;font-weight:500;color:var(--gold-l);min-width:52px;flex-shrink:0;padding-top:1px}
+.cdesc{font-size:13px;color:var(--ink2);line-height:1.5}
+
+/* FOOTER */
+.footer{border-top:1px solid var(--bdr);padding-top:28px;margin-top:60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.fl{font-size:12px;color:var(--ink3);line-height:1.6;font-family:var(--mono)}
+.fr{font-family:var(--mono);font-size:11px;color:var(--ink3);text-align:right}
+
+@media(max-width:600px){.nums{grid-template-columns:1fr 1fr}.pgrid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="header">
+  <div class="eyebrow">lawfare-timeline · T-197 · P08+P06+P03 · 2026-05-28</div>
+  <h1>Americanas<br><span>R$ 25,3 bilhões</span> de fraude<br>Zero condenações</h1>
+  <p class="lead">O maior escândalo corporativo da história do Brasil. Sete anos de fraude sistemática. Três anos de investigação. Nenhuma condenação. Os acionistas controladores intocados.</p>
+  <div class="tags">
+    <span class="tag tg">P08 — fraude contábil estrutural</span>
+    <span class="tag tr">P06 — delonga processual</span>
+    <span class="tag tr">P03 — HC instantâneo TRF-2</span>
+    <span class="tag ta">Score 55.0 — crítico</span>
+    <span class="tag tx">T-197 · thematic track</span>
+    <span class="tag tx">CC0 1.0</span>
+  </div>
+</header>
+
+<div class="nums">
+  <div class="nc"><div class="nv r">R$ 25,3 bi</div><div class="nl">fraude contábil documentada<br>MPF abr/2025</div></div>
+  <div class="nc"><div class="nv r">R$ 43 bi</div><div class="nl">dívida total declarada<br>recuperação judicial</div></div>
+  <div class="nc"><div class="nv a">R$ 70 bi</div><div class="nl">destruição de valor<br>mercado acionários</div></div>
+  <div class="nc"><div class="nv g">7 anos</div><div class="nl">duração da fraude<br>2016 a 2022</div></div>
+  <div class="nc"><div class="nv r">0</div><div class="nl">condenações criminais<br>mai/2026</div></div>
+  <div class="nc"><div class="nv r">0</div><div class="nl">acionistas controladores<br>denunciados pelo MPF</div></div>
+</div>
+
+<!-- SEÇÃO 1 -->
+<section class="sec" id="mecanismo">
+  <div class="sh">01 · como funcionou</div>
+  <h2>O mecanismo da fraude</h2>
+  <p>
+    Entre fevereiro de 2016 e dezembro de 2022, a antiga diretoria das Americanas operou um esquema sistemático de manipulação contábil. O instrumento central foi a <strong>Verba de Propaganda Cooperada (VPC)</strong> — contratos fictícios que permitiam registrar como receita operações que eram, na prática, dívidas financeiras com fornecedores.
+  </p>
+  <p>
+    O segundo instrumento foi o <strong>risco sacado não declarado</strong>: operações de crédito para pagamento de fornecedores eram lançadas como se fossem contas a pagar comuns, ocultando bilhões em dívidas financeiras dos balanços. O resultado: a empresa apresentava ao mercado uma saúde financeira que não existia — ações sobrevalorizadas, bônus pagos com base em resultados fictícios, bancos e investidores enganados.
+  </p>
+
+  <div class="hl r">
+    <p><strong>Escala da fraude:</strong> de R$ 20 bi anunciados em 11/jan/2023, o rombo foi crescendo à medida que as auditorias avançavam — R$ 25,3 bi em fraudes confirmadas + R$ 3,6 bi em juros não declarados + passivos adicionais que levaram a dívida total para R$ 43 bi. A dívida com credores superava R$ 42 bilhões, consideradas as inconsistências contábeis.</p>
+  </div>
+
+  <div class="chain">
+    <span class="cn g">VPC fictícia criada</span><span class="arr">→</span>
+    <span class="cn">Dívida financeira registrada como receita</span><span class="arr">→</span>
+    <span class="cn">Balanço apresenta lucro fictício</span><span class="arr">→</span>
+    <span class="cn g">Ações sobrevalorizadas</span><span class="arr">→</span>
+    <span class="cn">Bônus pagos com base no resultado falso</span><span class="arr">→</span>
+    <span class="cn r">Colapso quando nova diretoria revela em jan/2023</span>
+  </div>
+
+  <p>
+    A investigação da PF indica que as fraudes ocorreram entre fevereiro de 2016 e dezembro de 2022, período em que Gutierrez comandou a empresa. O esquema permitia que as ações fossem sobrevalorizadas no mercado, prejudicando credores e acionistas. Entre as provas apresentadas pelo MPF estão e-mails, mensagens de WhatsApp e documentos que evidenciam a discrepância entre a contabilidade real e a manipulada. Conversas entre os envolvidos mostram tentativas de esconder as fraudes de auditorias.
+  </p>
+</section>
+
+<!-- SEÇÃO 2 — ATORES -->
+<section class="sec" id="atores">
+  <div class="sh">02 · quem é quem</div>
+  <h2>Atores — denunciados e intocados</h2>
+
+  <table class="atable">
+    <thead>
+      <tr><th>Nome</th><th>Função no esquema</th><th>Status mai/2026</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="name">Miguel Gutierrez</td>
+        <td>Ex-CEO — "planejou, ordenou e executou" a fraude (MPF). Saiu do país antes das prisões.</td>
+        <td class="status"><span class="pill pr">denunciado MPF</span> <span class="pill px">em liberdade — Espanha</span></td>
+      </tr>
+      <tr>
+        <td class="name">Anna Christina Saicali</td>
+        <td>Ex-CEO da B2W (digital). Presa preventiva jun/2024 — estava no exterior.</td>
+        <td class="status"><span class="pill pr">denunciada MPF</span></td>
+      </tr>
+      <tr>
+        <td class="name">Timótheo Barros</td>
+        <td>Ex-vice-presidente financeiro. Um dos principais operadores do risco sacado.</td>
+        <td class="status"><span class="pill pr">denunciado MPF</span></td>
+      </tr>
+      <tr>
+        <td class="name">Márcio Cruz</td>
+        <td>Ex-vice-presidente. Denunciado junto ao grupo central.</td>
+        <td class="status"><span class="pill pr">denunciado MPF</span></td>
+      </tr>
+      <tr>
+        <td class="name">+ 9 ex-diretores</td>
+        <td>Padilha, Guerra, Corrêa, Nascimento, Picavet, Fabiano, Saraiva, Lessa, Sotero.</td>
+        <td class="status"><span class="pill pr">denunciados MPF</span></td>
+      </tr>
+      <tr style="background:var(--red-bg)">
+        <td class="name" style="color:var(--red-l)">Jorge Paulo Lemann</td>
+        <td>Acionista controlador (3G Capital, 31% das ações). Beneficiado pelo esquema que distribuiu parte dos lucros fraudados a acionistas — não foi alvo da denúncia do MPF.</td>
+        <td class="status"><span class="pill px">NÃO denunciado</span></td>
+      </tr>
+      <tr style="background:var(--red-bg)">
+        <td class="name" style="color:var(--red-l)">Marcel Telles</td>
+        <td>Acionista controlador (3G Capital). Mesmo status de Lemann.</td>
+        <td class="status"><span class="pill px">NÃO denunciado</span></td>
+      </tr>
+      <tr style="background:var(--red-bg)">
+        <td class="name" style="color:var(--red-l)">Carlos Alberto Sicupira</td>
+        <td>Acionista controlador (3G Capital). Mesmo status de Lemann.</td>
+        <td class="status"><span class="pill px">NÃO denunciado</span></td>
+      </tr>
+      <tr>
+        <td class="name">Sérgio Rial</td>
+        <td>CEO por 9 dias. Denunciou as inconsistências e renunciou em 11/jan/2023. CVM investigou bônus recebidos.</td>
+        <td class="status"><span class="pill px">testemunha / investigado CVM</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="hl r">
+    <p><strong>A lacuna central do processo:</strong> os controladores da companhia — Beto Sicupira, Jorge Paulo Lemann e Marcel Telles — não são alvo da denúncia do MPF. Eles detêm 31% das ações. O MPF escolheu responsabilizar apenas os gestores executivos, deixando os acionistas de referência — que se beneficiaram de anos de dividendos e valorização baseada em resultados fictícios — fora do alcance penal.</p>
+  </div>
+</section>
+
+<!-- SEÇÃO 3 — TIMELINE -->
+<section class="sec" id="timeline">
+  <div class="sh">03 · cronologia</div>
+  <h2>Da fraude ao limbo — 2016–2026</h2>
+  <div class="tl">
+    <div class="tli">
+      <div class="tld x"></div>
+      <div class="tldate x">2016–2022</div>
+      <div class="tltitle">7 anos de fraude operada sistematicamente</div>
+      <div class="tlbody">VPCs fictícias e risco sacado não declarado. Auditorias da KPMG e PwC aprovam balanços. Ações sobem, bônus são pagos com base em lucros fictícios. A fraude atravessa ao menos três ciclos de auditoria externa sem detecção formal.</div>
+    </div>
+    <div class="tli">
+      <div class="tld a"></div>
+      <div class="tldate a">11/jan/2023</div>
+      <div class="tltitle">Sérgio Rial anuncia "inconsistências" de R$ 20 bi — e renuncia em 9 dias</div>
+      <div class="tlbody">Novo CEO, há 9 dias no cargo, comunica ao mercado via fato relevante. Ações despencam 77% no dia seguinte. Do dia 10 de janeiro de 2023 até janeiro de 2025, as ações amargaram queda de 99,5%.</div>
+    </div>
+    <div class="tli">
+      <div class="tld a"></div>
+      <div class="tldate a">19/jan/2023</div>
+      <div class="tltitle">Recuperação judicial — R$ 43 bilhões em 16.300 credores</div>
+      <div class="tlbody">Maior pedido de recuperação judicial da história do Brasil. Bancos, fornecedores e fundos de investimento entre os credores. CPI da Câmara instalada em março.</div>
+    </div>
+    <div class="tli">
+      <div class="tld x"></div>
+      <div class="tldate x">Jun/2023 — set/2023</div>
+      <div class="tltitle">CPI encerrada sem incriminar ninguém</div>
+      <div class="tlbody">A CPI acabou ainda em 2023 sem incriminar ninguém. Relatório final publicado em setembro — dívida documentada: R$ 42 bi. Resultado prático: nenhum indiciamento parlamentar.</div>
+    </div>
+    <div class="tli">
+      <div class="tld r"></div>
+      <div class="tldate r">27/jun/2024</div>
+      <div class="tltitle">Operação Disclosure — PF prende preventivamente; ex-CEO já está no exterior</div>
+      <div class="tlbody">Operação com 2 mandados de prisão preventiva e 15 mandados de busca e apreensão, incluindo contra o ex-CEO Miguel Gutierrez. Gutierrez não é localizado — nome incluído na lista da Interpol. Anna Saicali também não é encontrada.</div>
+    </div>
+    <div class="tli">
+      <div class="tld r"></div>
+      <div class="tldate r">Ago/2024</div>
+      <div class="tltitle">TRF-2 concede HC ao ex-CEO — retirado da lista da Interpol</div>
+      <div class="tlbody">O TRF da 2ª região concedeu habeas corpus ao ex-CEO. Ofício enviado à Interpol solicitando remoção de Gutierrez da difusão vermelha. Ex-CEO responde em liberdade desde então, em Madri.</div>
+    </div>
+    <div class="tli">
+      <div class="tld a"></div>
+      <div class="tldate a">Jan/2026</div>
+      <div class="tltitle">CVM acusa Gutierrez e mais 29 executivos</div>
+      <div class="tlbody">Em caso de condenação, as penas previstas vão do pagamento de multa à proibição de atuar no mercado de capitais. Processo em fase de citação — possibilidade de acordo mediante pagamento de multa antes do julgamento.</div>
+    </div>
+    <div class="tli">
+      <div class="tld r"></div>
+      <div class="tldate r">31/mar/2025</div>
+      <div class="tltitle">MPF denuncia 13 ex-executivos — acionistas controladores excluídos</div>
+      <div class="tlbody">O MPF denunciou 13 antigos executivos e funcionários por fraude estimada em R$ 25,3 bilhões. Segundo a denúncia, sob sigilo, Gutierrez foi quem "planejou, ordenou e executou" a fraude. O ex-presidente executivo da Americanas mora em Madri, na Espanha.</div>
+    </div>
+    <div class="tli">
+      <div class="tld x"></div>
+      <div class="tldate x">Mai/2026</div>
+      <div class="tltitle">Status: processo em andamento, zero condenações</div>
+      <div class="tlbody">Denúncia do MPF aceita pela 10ª Vara Federal Criminal do RJ em análise. Ação penal em fase inicial. Ex-CEO em Madri. Acionistas controladores intocados. Nenhuma condenação criminal transitada em julgado.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 4 — PADRÕES -->
+<section class="sec" id="padroes">
+  <div class="sh">04 · framework analítico</div>
+  <h2>Padrões P01–P11 ativados</h2>
+  <div class="pgrid">
+    <div class="pcard g">
+      <div class="pid">P08 · Fraude contábil estrutural</div>
+      <div class="pname">Fachada de conformidade durante 7 anos</div>
+      <div class="pdesc">VPCs fictícias + risco sacado não declarado funcionaram como mecanismo P08 clássico: atividade ilegal (manipulação de balanço) encoberta por atividade legal (contratos com fornecedores). Auditores externos aprovaram por 7 anos. Análogo à blendagem mineral da Operação Rejeito — lavagem por mistura com ativo legítimo.</div>
+    </div>
+    <div class="pcard r">
+      <div class="pid">P06 · Delonga processual</div>
+      <div class="pname">3 anos sem condenação — ex-CEO em Madri</div>
+      <div class="pdesc">Jan/2023: fraude revelada. Jun/2024: Operação Disclosure. Ago/2024: TRF-2 concede HC, ex-CEO sai da lista da Interpol. Mar/2025: MPF denuncia. Mai/2026: processo em fase inicial. A cada etapa, o passivo temporal cresce e a probabilidade de prescrição aumenta. Ex-CEO confortavelmente em Madri.</div>
+    </div>
+    <div class="pcard r">
+      <div class="pid">P03 · HC como chokepoint de proteção</div>
+      <div class="pname">TRF-2 reverte prisão preventiva em semanas</div>
+      <div class="pdesc">PF emite mandados preventivos em jun/2024 após 18 meses de investigação. TRF-2 concede HC em ago/2024 — 2 meses depois. Ex-CEO removido da lista da Interpol. Mesma geometria de P03: o órgão de segunda instância reverte a medida mais eficaz de pressão processual antes de qualquer julgamento de mérito.</div>
+    </div>
+    <div class="pcard a">
+      <div class="pid">P09 · Seletividade na responsabilização</div>
+      <div class="pname">Executivos denunciados — controladores intocados</div>
+      <div class="pdesc">A opção do MPF de responsabilizar apenas os 13 gestores executivos, excluindo os acionistas controladores que se beneficiaram de 7 anos de dividendos e valorização fictícia, reproduz o padrão de seletividade documentado em outros casos do corpus: quem ocupa posições formais responde; quem detém o poder econômico real, não.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 5 — O ELEFANTE NA SALA -->
+<section class="sec" id="controladores">
+  <div class="sh">05 · a questão estrutural</div>
+  <h2>Os controladores e a questão que o processo não responde</h2>
+  <p>
+    Jorge Paulo Lemann, Marcel Telles e Carlos Alberto Sicupira — fundadores da 3G Capital e acionistas de referência com 31% das ações — receberam dividendos e desfrutaram de valorização patrimonial durante os 7 anos em que a empresa apresentava resultados fictícios. Beneficiados pelo esquema que distribuiu parte dos lucros fraudados a acionistas, os controladores da companhia não são alvo da denúncia do MPF.
+  </p>
+  <p>
+    A pergunta que o processo criminal não endereça: <strong>em que ponto o benefício econômico de acionistas controladores de uma empresa que fraudava seus balanços há 7 anos implica responsabilidade?</strong> No direito brasileiro, a resposta do MPF foi: não implica — pelo menos não criminalmente. A responsabilidade civil via arbitragem continua em aberto: um grupo de investidores requereu arbitragem coletiva contra a Americanas e a 3G Capital na B3, demandando compensação provisória de R$ 500 milhões.
+  </p>
+
+  <div class="hl">
+    <p><strong>Comparação estrutural com o corpus:</strong> na Operação Rejeito, Vorcaro (T-192) não aparecia formalmente na Tamisa — o vínculo era via fundo de investimento. Na Americanas, Lemann, Telles e Sicupira não dirigiam operacionalmente a empresa — o vínculo era via controle acionário e escolha dos gestores. Em ambos os casos, a estrutura jurídica formal foi suficiente para isolar o controlador da responsabilização direta. Isso não é falha de execução — é arquitetura.</p>
+  </div>
+</section>
+
+<!-- SEÇÃO 6 — AUDITORES -->
+<section class="sec" id="auditores">
+  <div class="sh">06 · omissão sistêmica</div>
+  <h2>Auditores, bancos e o silêncio de sete anos</h2>
+  <p>
+    A KPMG e a PwC auditaram os balanços das Americanas durante parte do período de fraude sem identificar as inconsistências publicamente. A CVM abriu processos administrativos sobre as auditorias. Os bancos credores — BTG, Bradesco, Itaú, Santander, entre outros — financiaram a empresa e detinham exposição de dezenas de bilhões sem questionar os balanços formalmente.
+  </p>
+  <p>
+    O Santander declarou que as inconsistências eram de responsabilidade exclusiva da Americanas. O BTG usou a expressão mais direta: <strong>"É o fraudador pedindo proteção à Justiça contra sua própria fraude"</strong>. Mas nenhum banco foi responsabilizado por não ter identificado o risco sacado não declarado, que estava nas suas próprias carteiras de crédito — eles emprestaram o dinheiro e deveriam ter verificado o registro contábil.
+  </p>
+
+  <div class="hl a">
+    <p><strong>Lacuna investigativa:</strong> como sete anos de fraude atravessaram múltiplos ciclos de auditoria por duas das maiores firmas do mundo (KPMG e PwC) sem detecção formal? A resposta ainda não foi dada em nenhum processo público. As firmas de auditoria não foram alvo da Operação Disclosure nem da denúncia do MPF.</p>
+  </div>
+</section>
+
+<!-- SEÇÃO 7 — CONEXÕES CORPUS -->
+<section class="sec" id="corpus">
+  <div class="sh">07 · emaranhamento</div>
+  <h2>Conexões com o corpus</h2>
+  <div class="conns">
+    <div class="conn">
+      <span class="cid">T-123</span>
+      <span class="cdesc">Zero × Zero — assimetria punitiva: mesmo padrão de condenação nula 3 anos após evento. Americanas é a instância corporativa mais documentada do padrão.</span>
+    </div>
+    <div class="conn">
+      <span class="cid">T-192</span>
+      <span class="cdesc">Vorcaro triângulo: mecanismo análogo de isolamento do controlador via estrutura jurídica. Vorcaro usou fundo; 3G Capital usou controle acionário. Mesmo efeito: controlador não alcançado pela responsabilização formal.</span>
+    </div>
+    <div class="conn">
+      <span class="cid">T-128</span>
+      <span class="cdesc">Brasil Sangra — P11 macroeconômico: R$ 70 bi destruídos em valor de mercado + R$ 43 bi em dívidas = um dos maiores eventos de destruição de patrimônio privado da história recente do país.</span>
+    </div>
+    <div class="conn">
+      <span class="cid">T-114/115</span>
+      <span class="cdesc">Banco Master — fraude contábil como padrão recorrente no sistema financeiro brasileiro. Americanas = fraude corporativa; Master = fraude bancária. Escala e mecanismo distintos, P08 idêntico.</span>
+    </div>
+    <div class="conn">
+      <span class="cid">ID 1563</span>
+      <span class="cdesc">Toffoli revoga preventivas Rejeito: mesma geometria do TRF-2 no caso Americanas (ago/2024). Prisão preventiva → recurso → revogação antes do mérito. Padrão P03 em contextos distintos.</span>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 8 — ENTRADA CORPUS -->
+<section class="sec" id="entrada">
+  <div class="sh">08 · registro canônico</div>
+  <h2>Entrada T-197 — formato corpus</h2>
+  <div style="background:var(--bg2);border:1px solid var(--bdr);border-radius:4px;overflow:hidden;margin:16px 0">
+    <div style="background:var(--bg3);border-bottom:1px solid var(--bdr);padding:7px 14px;font-family:var(--mono);font-size:10px;color:var(--ink3)">_data/thematic/T-197-americanas-fraude-contabil-zero-condenacoes.json</div>
+    <pre style="padding:14px;font-family:var(--mono);font-size:12px;line-height:1.75;color:var(--ink2);overflow-x:auto;white-space:pre-wrap"><span style="color:#7ec8e3">"id"</span>: <span style="color:var(--amber-l)">197</span>,
+<span style="color:#7ec8e3">"slug"</span>: <span style="color:#c3e88d">"americanas-fraude-contabil-zero-condenacoes"</span>,
+<span style="color:#7ec8e3">"tipo"</span>: <span style="color:#c3e88d">"analise_estrutural"</span>,
+<span style="color:#7ec8e3">"data_evento"</span>: <span style="color:#c3e88d">"2023-01-11"</span>,
+<span style="color:#7ec8e3">"data_registro"</span>: <span style="color:#c3e88d">"2026-05-28"</span>,
+<span style="color:#7ec8e3">"titulo"</span>: <span style="color:#c3e88d">"Americanas — R$ 25,3 bi de fraude contábil, zero condenações"</span>,
+<span style="color:#7ec8e3">"operacao_referencia"</span>: <span style="color:#c3e88d">"Operação Disclosure / MPF denúncia abr/2025"</span>,
+<span style="color:#7ec8e3">"padroes_ativados"</span>: [<span style="color:#c3e88d">"P08"</span>, <span style="color:#c3e88d">"P06"</span>, <span style="color:#c3e88d">"P03"</span>, <span style="color:#c3e88d">"P09"</span>],
+<span style="color:#7ec8e3">"cadeia_logica"</span>: <span style="color:#c3e88d">"VPCs fictícias (2016-2022) → balanços manipulados → auditores não detectam → ações sobrevalorizadas → bônus pagos com resultado fictício → nova diretoria revela (jan/2023) → R$ 70 bi destruídos → CPI encerra sem incriminar (set/2023) → Operação Disclosure (jun/2024) → ex-CEO já no exterior → TRF-2 concede HC (ago/2024) → MPF denuncia 13, exclui controladores (mar/2025) → zero condenações (mai/2026)"</span>,
+<span style="color:#7ec8e3">"observacao_analitica"</span>: <span style="color:#c3e88d">"Maior fraude corporativa da história do Brasil: P08 via arquitetura contábil formal + P06 via delonga que coloca ex-CEO em Madri sem prisão + P03 via TRF-2 que reverte preventiva em 2 meses + P09 via seletividade que exclui controladores (31% das ações, 7 anos de dividendos fictícios) da denúncia. O caso documenta como acionistas de referência podem se beneficiar de fraudes sem alcance penal quando a estrutura de controle é indireta o suficiente."</span>,
+<span style="color:#7ec8e3">"status"</span>: <span style="color:#c3e88d">"confirmado"</span>,
+<span style="color:#7ec8e3">"visibilidade"</span>: <span style="color:#c3e88d">"público"</span>,
+<span style="color:#7ec8e3">"licenca"</span>: <span style="color:#c3e88d">"CC0 1.0"</span></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="fl">lawfare-timeline · gosurf.site · @araguaci · CC0 1.0</div>
+  <div class="fr">T-197 · P08+P06+P03+P09<br>gerado 2026-05-28 · próximo: T-198</div>
+</footer>
+
+</div>
+</body>
+</html>

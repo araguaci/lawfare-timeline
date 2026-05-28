@@ -90,7 +90,7 @@ A omissão do 3º manuscrito durante set–dez/2025 é dado analítico: nomear a
 
 | Dossiê | Conexão |
 | --- | --- |
-| [T-192 Vorcaro](/posts/2026-05-28-vorcaro-triangulo-carbono-mineracao-banco/) | Caio Seabra/ANM · Viviane Barci/Master · blendagem = UECs fictícias |
+| [T-192 Vorcaro](/posts/vorcaro-triangulo-carbono-mineracao-banco/) | Caio Seabra/ANM · Viviane Barci/Master · blendagem = UECs fictícias |
 | [Compliance Zero](/posts/banco-master-compliance-zero/) | Daniel Vorcaro sócio Kallas · Master R$ 129 mi escritório Barci |
 | [Carbono Oculto](/posts/carbono-oculto/) | P08 greenwashing · lavagem por documento legítimo |
 | [Biomm Insider](/posts/biomm-insider-operacao-completa/) | Kallas/Vorcaro · desinvestimento pós-Rejeito (1570) |

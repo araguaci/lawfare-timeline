@@ -1,9 +1,7 @@
 {
   "_meta": {
-    "schema_version": "1.1.0",
+    "schema_version": "1.0.0",
     "generated": "2026-05-28",
-    "updated": "2026-05-28T23:59:00-03:00",
-    "session": "claude.ai — sessão editorial 2026-05-28 (Operação Rejeito, T-191, T-192, Flávio/Trump, posts P11)",
     "purpose": "Mapa de sincronização de IDs — lawfare-timeline corpus",
     "source_project": "gosurf.site / lawfare-timeline.vercel.app",
     "maintainer": "@araguaci · AI Nativo Brasil · Artes do Sul Desenvolvimento Web",
@@ -11,20 +9,17 @@
     "tracks": {
       "main": {
         "description": "Track principal — eventos institucionais, decisões judiciais, episódios políticos",
-        "id_range": "1–1571 (confirmed); 1572–1576 pending merge",
+        "id_range": "1–1483+",
         "id_format": "integer",
-        "last_confirmed": 1571,
-        "last_jekyll_published": 1571,
-        "last_session_produced": 1576,
-        "notes": "lawfare.json confirmado até 1526. Jekyll publica 1527–1571. Batch 1572–1576 produzido nesta sessão — pendente merge."
+        "last_confirmed": 1483,
+        "notes": "IDs sequenciais. Série contínua desde 1990. Batches recentes na faixa 1400s."
       },
       "thematic": {
         "description": "Sub-corpus temático — análise estrutural de operações e padrões",
-        "id_range": "100–201",
+        "id_range": "100–184+",
         "id_format": "integer",
-        "last_confirmed": 201,
-        "last_session_produced": 192,
-        "notes": "T-192 produzido nesta sessão. IDs 193–197 reservados para fila editorial."
+        "last_confirmed": 184,
+        "notes": "IDs 100–200. Foco em arquitetura STF/Moraes, padrões P01–P11, análise editorial."
       }
     }
   },
@@ -38,7 +33,7 @@
             999
           ],
           "status": "confirmed",
-          "notes": "Corpus histórico — operações, decisões, episódios 1990–2020."
+          "notes": "Corpus histórico — operações, decisões, episódios 1990–2020. Ver repositório Jekyll."
         },
         {
           "range": [
@@ -46,7 +41,7 @@
             1399
           ],
           "status": "confirmed",
-          "notes": "Expansão 2020–2024. Lava Jato reversal, INQ 4781 origem, TSE/censura digital."
+          "notes": "Expansão 2020–2024. Inclui Operação Lava Jato reversal, INQ 4781 origem, TSE/censura digital."
         },
         {
           "range": [
@@ -54,7 +49,7 @@
             1448
           ],
           "status": "confirmed",
-          "notes": "Batch confirmado em lawfare.json. Último ID verificado: 1448. Banco Master, CPI INSS, Op. Hydra 2026, penduricalhos 2025-2026."
+          "notes": "Batch mais recente confirmado em lawfare.json (fonte de verdade). Último ID verificado: 1448. Inclui episódios Banco Master, CPI INSS, Operação Hydra 2026, penduricalhos 2025-2026."
         },
         {
           "range": [
@@ -62,9 +57,7 @@
             1510
           ],
           "status": "batch_file_only",
-          "notes": "NÃO em lawfare.json — apenas em _data/ batch files. PCC/Ndrangheta (1484-1485), Carbono Oculto/Tank (1486-1487), OFAC (1488), PCC Portugal/Europa (1489-1496), Narco Fluxo (1497-1498), Carbono Oculto PGE-SP/Genial (1499-1500), Hezbollah/FARC/Yakuza (1501-1503), Antimáfia (1504), CPI CO (1505). Gap 1449-1480 potencial se houver merge linear futuro.",
-          "do_not_overwrite": true,
-          "pcc_namespace": "canonical_pcc_ndrangheta — range 1481-1500 protegido"
+          "notes": "NAO em lawfare.json — existem APENAS em _data/ batch files separados. Gap potencial 1449–1480 se houver merge futuro. Batch PCC/crime organizado transnacional: ʼNdrangheta (1484-1485), Carbono Oculto/Tank (1486-1487), OFAC (1488), PCC Portugal/Europa (1489-1496), Narco Fluxo/Choquei (1497-1498), Carbono Oculto PGE-SP/Genial (1499-1500), Hezbollah/FARC/Yakuza (1501-1503), Antimáfia Itália (1504), CPI CO (1505). ID 1511: erro judiciário/STJ (dentista 210 dias). ID 1511+ em lawfare.json (Biazucci/crise merge 2026-05-26)."
         },
         {
           "range": [
@@ -72,7 +65,7 @@
             1526
           ],
           "status": "confirmed",
-          "notes": "Merge 2026-05-26. Biazucci 1511-1513; crise diplomática Brasil-EUA 1514-1524; Ramagem/ICE 1525-1526."
+          "notes": "Merge todo batches 2026-05-26. Biazucci 1511-1513; crise 1514-1524; Ramagem 1525-1526."
         },
         {
           "range": [
@@ -80,13 +73,7 @@
             1551
           ],
           "status": "confirmed",
-          "merge_pending": false,
-          "notes": "Merge lawfare.json 2026-05-28: Biomm 1527-1546, Zema 1547-1550, Homeschooling 1551.",
-          "source_files": [
-            "_data/processados/lawfare-batch-biomm-1527-1546.json",
-            "_data/processados/lawfare-batch-zema-1547-1550.json",
-            "_data/processados/lawfare-batch-homeschooling-1551.json"
-          ]
+          "notes": "Merge lawfare.json 2026-05-28: Biomm 1527-1546, Zema 1547-1550, Homeschooling 1551."
         },
         {
           "range": [
@@ -94,82 +81,10 @@
             1571
           ],
           "status": "confirmed",
-          "merge_pending": false,
-          "notes": "Merge lawfare.json 2026-05-28: Operação Rejeito 1552-1571.",
-          "source_files": [
-            "_data/todo/lawfare-batch-rejeito-1552-1571.json"
-          ]
-        },
-        {
-          "range": [
-            1572,
-            1576
-          ],
-          "status": "produced",
-          "merge_pending": true,
-          "notes": "Flávio Bolsonaro / Trump / Escudo das Américas — produzido 2026-05-28. Pendente: commit _data/todo/, merge após 1527-1571.",
-          "source_files": [
-            "_data/todo/lawfare-batch-flavio-trump-1572-1576.json"
-          ],
-          "entries_summary": [
-            {
-              "id": 1572,
-              "data": "2026-05-27",
-              "titulo": "Flávio Bolsonaro recebido por Trump na Casa Branca — promessa Escudo das Américas"
-            },
-            {
-              "id": 1573,
-              "data": "2026-05-27",
-              "titulo": "Flávio solicita a Trump designação do PCC e CV como organizações terroristas"
-            },
-            {
-              "id": 1574,
-              "data": "2026-05-27",
-              "titulo": "Viagem a Washington após filtração que vincula Flávio a Daniel Vorcaro"
-            },
-            {
-              "id": 1575,
-              "data": "2026-05-27",
-              "titulo": "Minerais críticos brasileiros como alternativa ao monopólio chinês — oferta a Trump"
-            },
-            {
-              "id": 1576,
-              "data": "2026-05-27",
-              "titulo": "Escudo das Américas — governo Lula opõe soberania; Flávio promete adesão se eleito"
-            }
-          ]
+          "notes": "Merge lawfare.json 2026-05-28: Operação Rejeito 1552-1571."
         }
       ],
       "last_id": 1571,
-      "last_jekyll_published": 1571,
-      "last_produced": 1576,
-      "next_available_after_merge": 1577,
-      "merge_queue": [
-        {
-          "range": [
-            1527,
-            1551
-          ],
-          "priority": 1,
-          "status": "jekyll_published — merge em lawfare.json"
-        },
-        {
-          "range": [
-            1552,
-            1571
-          ],
-          "priority": 1,
-          "status": "jekyll_published — merge em lawfare.json"
-        },
-        {
-          "range": [
-            1572,
-            1576
-          ],
-          "priority": 2,
-          "status": "produced — commit _data/todo/ + merge"
-        }
-      ],
       "next_available": 1572
     },
     "thematic": {
@@ -574,7 +489,7 @@
         {
           "id": 166,
           "status": "confirmed",
-          "topic": "Benedito Gonçalves — 'Missão dada, missão cumprida → CNJ → Missão paga' (P03/P08)",
+          "topic": "Benedito Gonçalves — 'Missão dada, missão cumprida → CNJ → Missão paga' (microfone aberto, P3/P8)",
           "artifact": null,
           "patterns": [
             "P03",
@@ -593,130 +508,87 @@
         {
           "id": 168,
           "status": "confirmed",
-          "topic": "Moraes — suspensão monocrática de lei válida para réu específico (P03/P02)",
-          "artifact": null,
-          "patterns": [
-            "P03",
-            "P02"
-          ]
+          "topic": "Dosimetria — arquitetura legislativa Lei 15.402/2026 (antes da promulgação)",
+          "artifact": null
         },
         {
           "id": 169,
           "status": "confirmed",
-          "topic": "Operação Hydra 2026 — CPI INSS + P10 ativo (entrada complementar)",
-          "artifact": "operacao-hydra-2026.html",
-          "patterns": [
-            "P10",
-            "P05"
-          ]
+          "topic": "CPI INSS — padrão P10: infraestrutura de serviço ativada",
+          "artifact": "operacao-hydra-2026.html"
         },
         {
           "id": 170,
           "status": "confirmed",
-          "topic": "Toffoli — suspensão COAF/dados sigilosos: origem do padrão de sigilo processual",
+          "topic": "Operação Travessia Goiás — rede migração ilegal R$240M (mai/2026)",
           "artifact": null,
-          "patterns": [
-            "P03",
-            "P06"
-          ]
+          "notes": "6–9 entradas adicionais pendentes nesta série"
         },
         {
           "id": 171,
           "status": "confirmed",
-          "topic": "Alexandre de Moraes — inquérito sobre inquérito: P03 documentado em ciclo fechado",
-          "artifact": null,
-          "patterns": [
-            "P03"
-          ]
+          "topic": "Exploração humana — dossiê Operação Travessia (padrões P08/P10)",
+          "artifact": null
         },
         {
           "id": 172,
           "status": "confirmed",
-          "topic": "Pandemia — CPI Pandemia: captura regulatória P03 em contexto sanitário",
-          "artifact": "pandemia-capturada.html",
-          "patterns": [
-            "P03",
-            "P05"
-          ]
+          "topic": "Pandemia — desvio de recursos COVID-19: introdução do sub-corpus",
+          "artifact": "pandemia-capturada.html"
         },
         {
           "id": 173,
           "status": "confirmed",
-          "topic": "Pandemia — Consórcio Nordeste: P05 como canal de extração",
-          "artifact": "pandemia-capturada.html",
-          "patterns": [
-            "P05"
-          ]
+          "topic": "Pandemia — contratos superfaturados de respiradores e EPIs (2020)",
+          "artifact": "pandemia-capturada.html"
         },
         {
           "id": 174,
           "status": "confirmed",
-          "topic": "Pandemia — respiradores superfaturados: P08 em contexto sanitário",
-          "artifact": "pandemia-capturada.html",
-          "patterns": [
-            "P08"
-          ]
+          "topic": "Pandemia — Consórcio Nordeste: irregularidades documentadas",
+          "artifact": "pandemia-capturada.html"
         },
         {
           "id": 175,
           "status": "confirmed",
-          "topic": "Pandemia — P03 emergencial: suspensão de controle no estado de exceção",
-          "artifact": "pandemia-capturada.html",
-          "patterns": [
-            "P03"
-          ]
+          "topic": "Pandemia — mecanismo P03: decisões emergenciais bloqueiam investigações",
+          "artifact": "pandemia-capturada.html"
         },
         {
           "id": 176,
           "status": "confirmed",
-          "topic": "Assimetria Punitiva — tabela comparativa entre réus com e sem conexão institucional",
-          "artifact": "assimetria-punitiva.html",
-          "patterns": [
-            "P03"
-          ]
+          "topic": "Pandemia — assimetria punitiva: pequenos réus vs. grandes operadores",
+          "artifact": "assimetria-punitiva.html"
         },
         {
           "id": 177,
           "status": "confirmed",
-          "topic": "Pandemia — P01: anulação retroativa de autuações por vício processual",
-          "artifact": "pandemia-capturada.html",
-          "patterns": [
-            "P01"
-          ]
+          "topic": "Pandemia — P05: fundos emergenciais como amplificadores de risco",
+          "artifact": "pandemia-capturada.html"
         },
         {
           "id": 178,
           "status": "confirmed",
-          "topic": "Pandemia — P11: extração macroeconômica em contexto de exceção sanitária",
-          "artifact": "pandemia-capturada.html",
-          "patterns": [
-            "P11"
-          ]
+          "topic": "Pandemia — P10: infraestrutura de serviço reativada em modo emergência",
+          "artifact": "pandemia-capturada.html"
         },
         {
           "id": 179,
           "status": "confirmed",
-          "topic": "Pandemia — P04: weaponização narrativa anti-ciência como instrumento político",
-          "artifact": "pandemia-capturada.html",
-          "patterns": [
-            "P04"
-          ]
+          "topic": "Pandemia — prescrição estratégica: timing de investigações vs. prescrição (P06)",
+          "artifact": "pandemia-capturada.html"
         },
         {
           "id": 180,
           "status": "confirmed",
           "topic": "TSE — seletividade em inelegibilidade e cassação (T-180)",
           "artifact": "tse-seletividade-inelegibilidade-cassacao",
-          "patterns": [
-            "P03",
-            "P02"
-          ],
           "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-tse-seletividade-inelegibilidade-cassacao)."
         },
         {
           "id": 181,
           "status": "confirmed",
-          "topic": "Moraes — acumulação 535×1 documentada em caso específico (P03)",
+          "topic": "Lei 15.402/2026 (Dosimetria) — suspensão monocrática por AM em < 24h da promulgação (ADIs 7966/7967)",
           "artifact": null,
           "patterns": [
             "P03"
@@ -735,7 +607,7 @@
         {
           "id": 183,
           "status": "confirmed",
-          "topic": "Dosimetria — geometria 535×1 como formulação analítica documentada",
+          "topic": "Dosimetria — geometria 535×1 como formulação analítica documentada (Congresso vs. monocracia STF)",
           "artifact": null,
           "patterns": [
             "P03"
@@ -744,39 +616,39 @@
         {
           "id": 184,
           "status": "confirmed",
-          "topic": "P04b (candidato) — both-sidesism funcional: falsa-equivalência mainstream como mecanismo de proteção",
+          "topic": "P04b (candidato) — both-sidesism funcional: falsa-equivalência mainstream como mecanismo de proteção documentável",
           "artifact": null,
           "patterns": [
             "P04"
           ],
-          "notes": "Decisão pendente: formalizar subcategoria em METHODOLOGY-v2.2.md"
+          "notes": "Decisão pendente: subcategoria P04b em METHODOLOGY-v2.2.md"
         },
         {
           "id": 185,
           "status": "confirmed",
-          "topic": "Dosimetria — Lei 15.402/2026 promulgada por Alcolumbre após derrubada do veto Lula (318×144 / 49×24)",
+          "topic": "Dosimetria — Lei 15.402/2026 promulgada por Alcolumbre após derrubada do veto Lula (Câmara 318×144 / Senado 49×24)",
           "artifact": null,
           "patterns": [
             "P03"
           ],
           "date": "2026-05-08",
-          "notes": "Renumerado de 173"
+          "notes": "Renumerado de 173: conflito com Pandemia/respiradores (ID 173 reservado)"
         },
         {
           "id": 186,
           "status": "confirmed",
-          "topic": "Dosimetria — ADIs 7966/7967 a AM por prevenção: vítima + acusador + relator ADI = mesmo ator",
+          "topic": "Dosimetria — ADIs 7966/7967 a AM por prevenção: vítima + acusador + relator ADI = mesmo ator (nemo judex in causa propria completo)",
           "artifact": null,
           "patterns": [
             "P03"
           ],
           "date": "2026-05-08",
-          "notes": "Renumerado de 174"
+          "notes": "Renumerado de 174: conflito com Pandemia/Consórcio Nordeste"
         },
         {
           "id": 187,
           "status": "confirmed",
-          "topic": "Dosimetria — Sequestro de Pauta: 1.402 condenados em limbo por relator impedido sem prazo regimental",
+          "topic": "Dosimetria — Sequestro de Pauta: 1.402 condenados em limbo por relator impedido sem prazo regimental para pautar ADI",
           "artifact": null,
           "patterns": [
             "P01",
@@ -784,30 +656,30 @@
             "P07"
           ],
           "date": "2026-05-08",
-          "notes": "Renumerado de 175"
+          "notes": "Renumerado de 175: conflito com Pandemia/P03 emergencial"
         },
         {
           "id": 188,
           "status": "confirmed",
-          "topic": "Dosimetria — Bolsonaro protocola revisão criminal: erro judiciário, delação Cid não voluntária",
+          "topic": "Dosimetria — Bolsonaro protocola revisão criminal: erro judiciário, delação Cid não voluntária, falta de acesso a provas",
           "artifact": null,
           "patterns": [],
           "date": "2026-05-08",
-          "notes": "Renumerado de 176"
+          "notes": "Renumerado de 176: conflito com Pandemia/assimetria punitiva"
         },
         {
           "id": 189,
           "status": "confirmed",
-          "topic": "Reforma Tributária — captura regulatória split payment (T-189)",
+          "topic": "Reforma Tributaria — captura regulatoria split payment (T-189)",
           "artifact": "reforma-tributaria-captura-regulatoria",
-          "notes": "Estudo Jekyll publicado 2026-05-26"
+          "notes": "Confirmado estudo Jekyll 2026-05-26"
         },
         {
           "id": 190,
           "status": "confirmed",
           "topic": "Direita Permitida — gatekeeping oposicionista (T-190)",
           "artifact": "direita-permitida-dossie",
-          "notes": "Estudo Jekyll 2026-05-22. Renumerado de T-189 — conflito Reforma Tributária."
+          "notes": "Estudo Jekyll 2026-05-22. Renumerado de T-189 conflito Reforma."
         },
         {
           "id": 191,
@@ -821,29 +693,13 @@
           "status": "confirmed",
           "topic": "Vorcaro triângulo carbono–mineração–banco (T-192)",
           "artifact": "vorcaro-triangulo-carbono-mineracao-banco",
-          "patterns": [
-            "P08",
-            "P11",
-            "P03",
-            "P04",
-            "P09"
-          ],
-          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-vorcaro-triangulo-carbono-mineracao-banco).",
-          "source_files": [
-            "t192-vorcaro-triangulo-carbono-mineracao-banco.html",
-            "T-192-vorcaro-triangulo-carbono-mineracao-banco.json"
-          ]
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-vorcaro-triangulo-carbono-mineracao-banco)."
         },
         {
           "id": 193,
           "status": "confirmed",
           "topic": "Viagens/gastos sigilo — complemento T-191 (T-193)",
           "artifact": "viagens-gastos-sigilo-complemento-p11",
-          "patterns": [
-            "P03",
-            "P08",
-            "P11"
-          ],
           "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-viagens-gastos-sigilo-complemento-p11)."
         },
         {
@@ -851,10 +707,6 @@
           "status": "confirmed",
           "topic": "Máquina de Gastos P11 — índice cluster (T-194)",
           "artifact": "maquina-gastos-p11-indice-cluster",
-          "patterns": [
-            "P08",
-            "P10"
-          ],
           "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-maquina-gastos-p11-indice-cluster)."
         },
         {
@@ -862,9 +714,6 @@
           "status": "confirmed",
           "topic": "CPI Crime Organizado × PCC eleitoral (T-195)",
           "artifact": "cpi-crime-organizado-pcc-infiltracao-eleitoral",
-          "patterns": [
-            "P11"
-          ],
           "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-cpi-crime-organizado-pcc-infiltracao-eleitoral)."
         },
         {
@@ -950,24 +799,10 @@
           "topic": "Vaza Toga INQ 4781 — índice corpus (T-207)",
           "artifact": "vaza-toga-corpus-bridge",
           "notes": "Estudo Jekyll _posts/estudos/ (2026-05-29-vaza-toga-corpus-bridge)."
-        },
-        {
-          "id": 208,
-          "status": "reserved",
-          "topic": "Narrativa vs Evidência — índice corpus (T-208)",
-          "artifact": "narrativa-vs-evidencia.html",
-          "notes": "Artefato HTML — candidato a estudo Jekyll"
-        },
-        {
-          "id": 209,
-          "status": "reserved",
-          "topic": "JustiçaWatch Brasil — índice corpus (T-209)",
-          "artifact": "justicawatch-brasil.html",
-          "notes": "Artefato HTML — candidato a estudo Jekyll"
         }
       ],
-      "last_id": 209,
-      "next_available": 210,
+      "last_id": 207,
+      "next_available": 208,
       "pending": [],
       "pending_notes": {}
     }
@@ -1167,15 +1002,6 @@
         "deployed": true
       },
       {
-        "slug": "splc-modelo-brasil",
-        "file": "splc-modelo-brasil.html",
-        "thematic_ids": [
-          197
-        ],
-        "deployed": true,
-        "notes": "ID 197 reservado — formalizar"
-      },
-      {
         "slug": "operacao-greenwashing",
         "file": "operacao-greenwashing.html",
         "thematic_ids": [
@@ -1233,24 +1059,6 @@
         "deployed": true
       },
       {
-        "slug": "duplo-padrao-judicial",
-        "file": "duplo-padrao-judicial.html",
-        "thematic_ids": [
-          198
-        ],
-        "deployed": true,
-        "notes": "ID 198 reservado — formalizar"
-      },
-      {
-        "slug": "narrativa-vs-evidencia",
-        "file": "narrativa-vs-evidencia.html",
-        "thematic_ids": [
-          199
-        ],
-        "deployed": true,
-        "notes": "ID 199 reservado — formalizar"
-      },
-      {
         "slug": "mare-liberum",
         "file": "mare-liberum.html",
         "thematic_ids": [
@@ -1306,33 +1114,6 @@
           161
         ],
         "deployed": true
-      },
-      {
-        "slug": "vaza-toga",
-        "file": "vaza-toga.html",
-        "thematic_ids": [
-          200
-        ],
-        "deployed": true,
-        "notes": "ID 200 reservado — formalizar"
-      },
-      {
-        "slug": "justicawatch-brasil",
-        "file": "justicawatch-brasil.html",
-        "thematic_ids": [
-          201
-        ],
-        "deployed": true,
-        "notes": "ID 201 reservado — formalizar"
-      },
-      {
-        "slug": "t192-vorcaro-triangulo",
-        "file": "t192-vorcaro-triangulo-carbono-mineracao-banco.html",
-        "thematic_ids": [
-          192
-        ],
-        "deployed": false,
-        "notes": "Produzido 2026-05-28 — pendente commit _posts/estudos/ e gosurf.site"
       }
     ]
   },
@@ -1341,7 +1122,7 @@
     "thematic_track_last_sync": "2026-05-28",
     "ids_confirmed_total": {
       "main_track": "1571",
-      "thematic_track": 209
+      "thematic_track": 207
     },
     "ids_pending_production": [
       180
@@ -1350,110 +1131,70 @@
       "narrativa-vs-evidencia.html",
       "justicawatch-brasil.html"
     ],
-    "artifacts_id_reserved_pending_formalization": [
-      197,
-      198,
-      199,
-      200,
-      201
-    ],
     "open_items": [
       "Formalizar P04b como subcategoria em METHODOLOGY-v2.2.md",
-      "Merge lawfare.json: batches 1527-1551 + 1552-1571 (merge_todo_pending.py + validate-ids.ps1)",
-      "Commit batch Flávio/Trump 1572-1576 em _data/todo/ + merge após 1527-1571",
-      "Publicar T-192 (Vorcaro): _posts/estudos/2026-05-28-t192-vorcaro-triangulo-carbono-mineracao-banco.md + gosurf.site",
-      "Copiar 9 posts P11 cluster para _posts/governo/ e _posts/escandalos/ (jekyll-posts-p11-cluster.tar.gz)",
-      "Formalizar IDs 197-201 para 5 artefatos deployed (splc, duplo-padrao, narrativa-vs-evidencia, vaza-toga, justicawatch)",
-      "Implementar espelhamento IPFS/archive.org (pendente recorrente)",
+      "Série Operação Travessia: IDs 189–196 (deslocada; 185-188 = Dosimetria)",
+      "Implementar espelhamento IPFS/archive.org",
       "Integrar JustiçaWatch em /data/justicawatch/ no repositório",
       "Recuperação shadowban @araguaci",
+      "Biomm batch publicado como 1527-1546 (1481-1500 = PCC confirmado)",
+      "Zema/mineracao publicado como 1547-1550 (185-188 thematic = Dosimetria)",
+      "Homeschooling Jales publicado como 1551",
+      "lawfare.json last_id=1526; próximo ID livre=1527",
+      "Estudos T-189, T-190, T-191, T-196 publicados em _posts/estudos/",
+      "Fila editorial 2026-05-28: merge main até 1571; T-192–T-195 publicados",
+      "Pendente: batch 1572+ Flávio/Trump após validação",
       "lawfare.json last_id=1571; próximo ID livre=1572",
-      "Fila editorial 2026-05-28: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "Fila editorial 2026-05-28: merge 1527-1571; T-192–T-195 em _posts/estudos/",
+      "Fila editorial 2026-05-28: merge 1527-1571; T-192–T-197 em _posts/estudos/",
       "T-197 Operação Rejeito publicado (2026-05-28)",
+      "Fila editorial 2026-05-28: merge 1527-1571; T-192–T-198 em _posts/estudos/",
       "T-198 COAF × Moraes publicado (2026-05-28)",
+      "Fila editorial 2026-05-28: merge 1527-1571; T-192–T-200 em _posts/estudos/",
       "T-199 Lojas Americanas publicado (2026-05-28)",
       "T-200 Estatais rombo P11 publicado (2026-05-28)",
+      "Fila editorial 2026-05-28: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
       "T-201 PCC transnacional publicado (2026-05-28)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-05-28)",
       "T-202 Delegada × PCC publicado (2026-05-28)",
       "T-203 Zelotes CARF publicado (2026-05-28)",
       "T-204 Gastos Paris publicado (2026-05-28)",
       "T-205 Duplo padrão corpus publicado (2026-05-28)",
       "T-206 SPLC corpus publicado (2026-05-28)",
-      "T-207 Vaza Toga corpus publicado (2026-05-28)",
-      "T-196 Radar Top 30 publicado em estudos/ (2026-05-28)"
+      "T-207 Vaza Toga corpus publicado (2026-05-28)"
     ]
   },
   "id_conflict_resolutions": {
-    "generated": "2026-05-28",
+    "generated": "2026-05-27",
     "biomm": {
       "old_range": "1481-1500",
       "new_range": "1527-1546",
-      "reason": "1481-1500 = PCC/Ndrangheta canônico"
+      "reason": "1481-1500 PCC/Ndrangheta publicados"
     },
     "zema": {
       "old_ids": "185-188",
       "new_ids": "1547-1550",
-      "reason": "thematic 185-188 = Dosimetria"
+      "reason": "thematic 185-188 Dosimetria"
     },
     "homeschooling": {
       "old_id": 1425,
       "new_id": 1551,
-      "reason": "1425 = Mare Liberum Galeão"
+      "reason": "1425 Mare Liberum Galeao"
     },
     "direita_permitida": {
       "old_id": "T-189",
       "new_id": "T-190",
-      "reason": "T-189 reservado à Reforma Tributária"
-    },
-    "t192_decisao": {
-      "old_pending_notes_192": "Operação Rejeito / Serra do Curral / manuscritos",
-      "new_t192": "Vorcaro triângulo carbono–mineração–banco",
-      "new_t193": "Operação Rejeito / Serra do Curral dossiê consolidado",
-      "reason": "T-192 produzido nesta sessão como Vorcaro. Rejeito/Serra do Curral coberto pelos batches 1552-1571 — dossiê consolidado vai para T-193.",
-      "date": "2026-05-28"
-    },
-    "custeio_vs_top30": {
-      "T-191": "Custeio P11 — estudo canônico",
-      "T-196": "Radar Top 30 — renumerado do antigo T-191",
-      "date": "2026-05-28"
+      "reason": "T-189 Reforma Tributaria"
     },
     "pcc_namespace": {
       "range": "1481-1500",
       "status": "canonical_pcc_ndrangheta",
       "do_not_overwrite": true
+    },
+    "custeio_vs_top30": {
+      "T-191": "Custeio P11 — estudo canônico",
+      "T-196": "Radar Top 30 — renumerado do antigo T-191",
+      "date": "2026-05-28"
     }
-  },
-  "session_log": [
-    {
-      "date": "2026-05-28",
-      "session": "claude.ai — sessão editorial Operação Rejeito + dossiês temáticos",
-      "produced": [
-        "lawfare-batch-rejeito-1552-1571.json (20 entradas — IDs 1552-1571)",
-        "lawfare-batch-flavio-trump-1572-1576.json (5 entradas — IDs 1572-1576)",
-        "t191-custeio-administrativo-federal-p11.html + T-191.json",
-        "t192-vorcaro-triangulo-carbono-mineracao-banco.html + T-192.json",
-        "sync-patch-rejeito-2026-05-27.json (descartado — substituído por este arquivo)",
-        "jekyll-posts-p11-cluster.tar.gz (9 posts: timeline-167,170,172,174,175,176,177,178 + orçamento-secreto)",
-        "dashboard visual Operação Rejeito (inline)"
-      ],
-      "decisions": [
-        "T-192 = Vorcaro triângulo (não Rejeito/Serra Curral)",
-        "T-193 = Rejeito/Serra do Curral dossiê consolidado",
-        "IDs 197-201 reservados para 5 artefatos deployed sem thematic_id",
-        "Batch 1425-1444 descartado (conflito com corpus canônico) — substituído por 1552-1571"
-      ],
-      "validation_result": {
-        "run": "2026-05-28 11:47",
-        "errors_fixed": [
-          "main.last_id corrigido: 1526 → 1571 (merge já confirmado em lawfare.json)",
-          "main.next_available corrigido: vazio → 1572",
-          "thematic.last_id corrigido: 196 → 201 (IDs 197-201 reserved presentes no arquivo)",
-          "thematic.next_available corrigido: 197 → 202"
-        ],
-        "errors_pending_external": [
-          "lawfare-unified-corpus.json: entradas 1518, 1519, 1520 sem fontes_verificadas (corrigir separadamente)"
-        ]
-      }
-    }
-  ]
+  }
 }
