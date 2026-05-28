@@ -86,9 +86,121 @@ Radar vivo: [T-196](/posts/2026-05-28-top30-alertas-criticos-operacoes-sem-dossi
 
 ---
 
+## Relatório Cursor.ai — Recomendações de Continuidade (2026-05-28)
+
+> Estado pós-sync com sessão claude.ai. Executar nesta ordem.
+
+### Estado atual confirmado
+
+```
+lawfare.json      last_id = 1576  (total = 1514 entradas)
+thematic          last_id = 209   (207 confirmed · 208/209 reserved)
+_data/todo/       T-191.json · T-192.json · T-199-americanas.json
+_posts/estudos/   T-180 … T-207 publicados (15 estudos em disco)
+```
+
+### Ação 1 — Publicar T-192 Vorcaro `[alta prioridade]`
+
+Criar `_posts/estudos/2026-05-28-vorcaro-triangulo-carbono-mineracao-banco.md` com frontmatter:
+
+```yaml
+---
+layout: post
+title: "T-192 · Família Vorcaro — Triângulo Carbono–Mineração–Banco"
+date: 2026-05-28 00:00:00 -0300
+description: >
+  Um único núcleo familiar articula carbono fictício (R$ 45,5 bi em UECs),
+  mineração ilegal (Tamisa/Serra do Curral, 3D Minerals/ANM) e banco liquidado
+  (Master, R$ 12,2 bi). Fechamento do triângulo — P08+P11+P03+P04+P09.
+categories: [estudos]
+tags: [p08, p11, p03, vorcaro, banco-master, carbono-oculto, operacao-rejeito,
+       compliance-zero, serra-do-curral, tamisa, 3d-minerals, greenwashing]
+author: araguaci
+id_corpus: 192
+padroes_ativados: ["P08", "P11", "P03", "P04", "P09"]
+corpus_refs:
+  - { id: 119, descricao: "Carbono Oculto — mecanismo greenwashing base" }
+  - { id: 114, descricao: "Banco Master — T-192 fecha o triângulo que T-114 abre" }
+  - { id: 1558, descricao: "Caio Seabra/ANM — captura do leilão 3D Minerals" }
+  - { id: 1566, descricao: "Viviane Barci — proteção jurídica no STF" }
+  - { id: 1571, descricao: "3º manuscrito — blendagem mineral análoga à lavagem via UECs" }
+  - { id: 191, descricao: "T-191 P11 orçamentário — T-192 é a face privada do mesmo padrão" }
+status_investigativo: confirmado
+licenca: "CC0 1.0"
+---
+```
+
+Conteúdo: adaptar `t192-vorcaro-triangulo-carbono-mineracao-banco.html` (em `_data/todo/`) para markdown ou linkar como artefato gosurf.site.
+
+### Ação 2 — Extrair posts P11 cluster `[alta prioridade]`
+
+Localizar `jekyll-posts-p11-cluster.tar.gz` (produzido na sessão claude.ai) e extrair:
+
+```bash
+tar -xzf jekyll-posts-p11-cluster.tar.gz -C _posts/ --strip-components=1
+```
+
+**9 posts incluídos:**
+
+| Destino | Arquivo |
+| --- | --- |
+| `_posts/governo/` | timeline-167 · 170 · 172 · 174 · 175 · 176 · 177 · 178 |
+| `_posts/escandalos/` | novo-orcamento-secreto-stf-suspende-repasses |
+
+⚠️ Checar antes de sobrescrever: `timeline-172` (desfile Janja) pode já existir em disco.
+
+### Ação 3 — Formalizar T-208 e T-209
+
+Criar estudos Jekyll para os 2 artefatos HTML `reserved`:
+
+| ID | Artefato | Slug alvo |
+| --- | --- | --- |
+| T-208 | `narrativa-vs-evidencia.html` | `2026-05-28-narrativa-vs-evidencia-corpus-bridge` |
+| T-209 | `justicawatch-brasil.html` | `2026-05-28-justicawatch-brasil-corpus-bridge` |
+
+Padrão de frontmatter: seguir T-205/T-206/T-207 como modelo (`_posts/estudos/2026-05-29-*-corpus-bridge.md`).
+
+### Ação 4 — Formalizar P04b em METHODOLOGY-v2.2.md
+
+Adicionar subcategoria em `METHODOLOGY-v2_2.md`:
+
+```markdown
+#### P04b — Both-sidesism funcional
+Falsa-equivalência operada por veículos mainstream como mecanismo de proteção
+a atores sob investigação. Distinto de P04 (weaponização direta): P04b neutraliza
+cobertura crítica sem produzir conteúdo ofensivo — apenas dilui o sinal.
+Casos: [T-184, ...].
+```
+
+### Ação 5 — Mover T-191 e T-192 JSON de `_data/todo/` para `_data/processados/`
+
+```bash
+mv _data/todo/T-191-custeio-administrativo-federal-p11.json _data/processados/
+mv _data/todo/T-192-vorcaro-triangulo-carbono-mineracao-banco.json _data/processados/
+# manter T-199-americanas.json em todo/ até publicação do estudo
+```
+
+### Validação pós-commit
+
+```bash
+python tools/sync_corpus_ids.py
+pwsh -File tools/validate-ids.ps1 -Verbose
+# Resultado esperado: STATUS: OK (zero erros)
+# STATUS: AVISO apenas para faixa 1449-1510 batch_file_only — esperado
+```
+
+### Namespace protegido — NÃO tocar
+
+```
+_data/ faixa 1449–1510  →  PCC/Ndrangheta canônico (1481-1500)
+                            merge linear somente com validação explícita
+```
+
+---
+
 ## Referências
 
-- Sync: `_data/sync_status_latest.html`
+- Sync: `_data/claude.ai-corpus-ids-sync.json` (schema 1.1.0 · 2026-05-28)
 - Design system: `_data/lawfare-design-system-reference.html`
 - Portal: https://lawfare-timeline.vercel.app/
 
