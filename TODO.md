@@ -1,6 +1,6 @@
 # Próximos passos · lawfare-timeline
 
-**Atualizado:** 2026-05-29 (T-205–T-207 publicados)
+**Atualizado:** 2026-05-28 (sync sessão claude.ai — merge 1572-1576 + corpus map v1.1.0)
 
 ---
 
@@ -8,9 +8,9 @@
 
 | Track | Last ID | Próximo | Status |
 | --- | ---: | ---: | --- |
-| Main (timeline) | 1571 | 1572 | Merge 1527–1571 concluído |
-| Thematic (estudos T) | 207 | 208 | 89 estudos em disco |
-| Fila editorial Q2 | — | — | Rodada T-205–207 concluída |
+| Main (timeline) | 1576 | 1577 | Merge 1572–1576 concluído (Flávio/Trump) |
+| Thematic (estudos T) | 209 | 210 | T-207 confirmado · T-208/T-209 reserved |
+| Fila editorial Q2 | — | — | Rodada T-208+ pendente |
 
 ---
 
@@ -60,9 +60,8 @@
 
 | # | Candidato | Escopo |
 | ---: | --- | --- |
-| 1 | **T-208** | Narrativa vs Evidência (artefato HTML) |
-| 2 | **T-209** | JustiçaWatch Brasil (schema + repo) |
-| 3 | **1572+** | Batch Flávio/Trump/Escudo (main track) |
+| 1 | **T-208** | Narrativa vs Evidência → estudo Jekyll (artefato HTML existe) |
+| 2 | **T-209** | JustiçaWatch Brasil → estudo Jekyll + integrar em `/data/justicawatch/` |
 
 Radar vivo: [T-196](/posts/2026-05-28-top30-alertas-criticos-operacoes-sem-dossie/) · [relatorio-top30-sem-estudo.md](/docs/relatorio-top30-sem-estudo.md)
 
@@ -70,13 +69,20 @@ Radar vivo: [T-196](/posts/2026-05-28-top30-alertas-criticos-operacoes-sem-dossi
 
 ---
 
-## Prioridade 2 — Infraestrutura (arquivado T-205–207)
+## Prioridade 2 — Publicações pendentes
 
-- [ ] Batch main track **1572+** (Flávio/Trump/Escudo)
-- [ ] Faixa **1449–1510** em `_data/` (`batch_file_only`)
-- [ ] 2 artefatos HTML sem ID → T-208/T-209 (narrativa-vs-evidencia, justicawatch)
-- [ ] Formalizar **P04b** em METHODOLOGY-v2.2
-- [ ] IPFS/archive.org · JustiçaWatch
+- [ ] Publicar **T-192** Vorcaro: `_posts/estudos/2026-05-28-vorcaro-triangulo-carbono-mineracao-banco.md` + gosurf.site
+- [ ] Extrair **9 posts P11 cluster** de `jekyll-posts-p11-cluster.tar.gz` → `_posts/governo/` e `_posts/escandalos/`
+- [ ] Formalizar **P04b** como subcategoria em `METHODOLOGY-v2.2.md`
+
+---
+
+## Prioridade 3 — Infraestrutura
+
+- [ ] Faixa **1449–1510** em `_data/` (`batch_file_only`) — merge linear futuro
+- [ ] IPFS/archive.org — espelhamento fora-jurisdição (pendente recorrente)
+- [ ] Integrar JustiçaWatch em `/data/justicawatch/` no repositório
+- [ ] Recuperação shadowban **@araguaci**
 
 ---
 
