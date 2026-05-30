@@ -17,7 +17,7 @@ pin: false
 
 # T-204 · Gastos Paris — cluster extravância Janja
 
-Complemento a [T-193 viagens sigilo](/posts/2026-05-28-viagens-gastos-sigilo-complemento-p11/) e [T-194 índice P11](/posts/2026-05-28-maquina-gastos-p11-indice-cluster/) — três entradas timeline (170–172) documentam **gastos públicos via canais indiretos** (Apex, estatais, FAB) com opacidade de prestação de contas.
+Complemento a [T-193 viagens sigilo](/posts/viagens-gastos-sigilo-complemento-p11/) e [T-194 índice P11](/posts/maquina-gastos-p11-indice-cluster/) — três entradas timeline (170–172) documentam **gastos públicos via canais indiretos** (Apex, estatais, FAB) com opacidade de prestação de contas.
 
 > Padrão estrutural: custo **não contabilizado na Presidência** — distribuído em agências e estatais (P05).
 
@@ -55,8 +55,8 @@ Até set/2025: **R$ 237 mil** em passagens identificadas · **140+ viagens** · 
 | Estudo | Eixo |
 | --- | --- |
 | [T-191 Custeio](/posts/custeio-administrativo-federal-p11/) | Orçamento direto R$ 32,4 bi |
-| [T-193 Sigilo](/posts/2026-05-28-viagens-gastos-sigilo-complemento-p11/) | Viagens/cartão opacos |
-| [T-194 Índice](/posts/2026-05-28-maquina-gastos-p11-indice-cluster/) | Mapa orçamentário |
+| [T-193 Sigilo](/posts/viagens-gastos-sigilo-complemento-p11/) | Viagens/cartão opacos |
+| [T-194 Índice](/posts/maquina-gastos-p11-indice-cluster/) | Mapa orçamentário |
 | **T-204** | Extravagância Paris/G20 via terceiros |
 
 ## Fontes

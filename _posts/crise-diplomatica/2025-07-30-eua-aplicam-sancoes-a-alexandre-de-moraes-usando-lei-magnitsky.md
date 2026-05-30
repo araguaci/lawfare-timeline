@@ -6,6 +6,7 @@ image:
   path: "/assets/solid/shield.svg"
 tags: ['crise-diplomatica', 'stf', 'alexandre-de-moraes', 'lei-magnitsky', 'sancoes']
 categories: crise-diplomatica
+permalink: /posts/2025-07-30-eua-aplicam-sancoes-a-alexandre-de-moraes-usando-lei-magnitsky/
 ---
 
 - &nbsp;

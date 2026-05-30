@@ -1,0 +1,136 @@
+{
+  "_meta": {
+    "schema_version": "1.0.0",
+    "id_corpus": "T-209",
+    "registry_id": 156,
+    "slug": "justicawatch-brasil",
+    "canonical_url": "https://gosurf.site/jusmonitor",
+    "artifact_html": "justicawatch-brasil.html",
+    "artifact_content": "jusmonitor.html",
+    "source": "gosurf.site/pages.json · artigos/jusmonitor.html",
+    "generated": "2026-05-28",
+    "licenca": "CC0 1.0",
+    "periodo": "2005–2025"
+  },
+  "titulo": "JustiçaWatch Brasil — Conheça as decisões. Exija prestação de contas.",
+  "descricao": "Banco de dados de decisões judiciais brasileiras que resultaram em soltura, progressão de regime ou arquivamento de processos contra réus condenados ou investigados por crimes violentos.",
+  "estatisticas": {
+    "hc_traficantes_stj_2024": 9166,
+    "hc_trafico_stf_2024": 577,
+    "taxa_reincidencia_br": "42%",
+    "populacao_carceraria": 834000,
+    "foragidos_hc_marco_aurelio_2020": 21
+  },
+  "casos": [
+    {
+      "ano": 2006,
+      "tribunal": "STF",
+      "nome": "Progressão de regime — Crimes hediondos",
+      "tipo": "HC coletivo",
+      "tags": ["homicidio", "estupro", "latrocinio"],
+      "ref": "HC 82.959-7/SP — Rel. Min. Marco Aurélio"
+    },
+    {
+      "ano": 2009,
+      "tribunal": "STF",
+      "nome": "Trânsito em julgado para início de pena",
+      "tipo": "Mudança jurisprudencial",
+      "tags": ["corrupcao"],
+      "ref": "HC 84.078/MG — Rel. Min. Eros Grau"
+    },
+    {
+      "ano": 2019,
+      "tribunal": "STF",
+      "nome": "Retorno ao trânsito em julgado — Reversão Lava Jato",
+      "tipo": "ADC plenário",
+      "tags": ["corrupcao"],
+      "ref": "ADC 43 — Rel. Min. Marco Aurélio"
+    },
+    {
+      "ano": 2020,
+      "tribunal": "STF",
+      "nome": "André do Rap — Líder do PCC solto e foragido",
+      "tipo": "HC monocrático",
+      "tags": ["trafico", "pcc", "foragido"],
+      "ref": "HC 191.836 — Min. Marco Aurélio"
+    },
+    {
+      "ano": 2020,
+      "tribunal": "STF",
+      "nome": "21 criminosos foragidos — liminares Marco Aurélio",
+      "tipo": "HCs monocráticos",
+      "tags": ["trafico", "homicidio", "milicia", "foragido"],
+      "ref": "Investigação Estadão, out/2020"
+    },
+    {
+      "ano": 2020,
+      "tribunal": "STJ",
+      "nome": "HC Coletivo COVID-19 — Soltura nacional por fiança",
+      "tipo": "HC coletivo nacional",
+      "tags": ["trafico", "homicidio"],
+      "ref": "3ª Seção STJ, out/2020"
+    },
+    {
+      "ano": 2021,
+      "tribunal": "TJ-GO",
+      "nome": "Lázaro Barbosa — Progressão ignorando laudo de periculosidade",
+      "tipo": "Progressão de regime",
+      "tags": ["homicidio", "estupro"],
+      "ref": "Relatório SESP-GO/2021"
+    },
+    {
+      "ano": 2022,
+      "tribunal": "STJ",
+      "nome": "Anulação por busca pessoal — 122 porções de droga devolvidas",
+      "tipo": "Nulidade processual",
+      "tags": ["trafico"],
+      "ref": "Recursos Repetitivos STJ, tema 1.119"
+    },
+    {
+      "ano": 2023,
+      "tribunal": "STF",
+      "nome": "Anulação de apreensão de 695 kg de cocaína",
+      "tipo": "Nulidade de prova",
+      "tags": ["trafico"],
+      "ref": "Dossiê Ascensão do Narcoestado, Sen. Jorge Seif"
+    },
+    {
+      "ano": 2024,
+      "tribunal": "STJ",
+      "nome": "9.166 habeas corpus concedidos a traficantes — em 1 ano",
+      "tipo": "Levantamento anual",
+      "tags": ["trafico", "pcc"],
+      "ref": "Dossiê Sen. Jorge Seif, 2025"
+    },
+    {
+      "ano": 2025,
+      "tribunal": "STJ",
+      "nome": "Estupro de vulnerável — afastado por erro de proibição",
+      "tipo": "Distinguishing jurisprudencial",
+      "tags": ["estupro"],
+      "ref": "STJ 5ª Turma, out/2025"
+    }
+  ],
+  "alertas_sistemicos": [
+    {
+      "nivel": "alto",
+      "titulo": "Intervalo de Fuga — Liminares Monocráticas",
+      "descricao": "Janela entre liminar monocrática e análise colegiada explorada por ao menos 21 réus em 2020."
+    },
+    {
+      "nivel": "alto",
+      "titulo": "Tráfico Privilegiado Desfigurado",
+      "descricao": "Benefício para réus primários aplicado em apreensões de 200–700 kg de drogas."
+    },
+    {
+      "nivel": "alto",
+      "titulo": "Ausência de Banco Nacional de Solturas",
+      "descricao": "BNMP 3.0 não correlaciona solturas com reincidência."
+    }
+  ],
+  "integracao_corpus": [
+    { "id_ref": 123, "descricao": "Zero × Zero — assimetria punitiva documentada" },
+    { "id_ref": 143, "descricao": "Duplo padrão judicial — T-205" },
+    { "id_ref": 206, "descricao": "SPLC modelo Brasil — T-206" }
+  ]
+}

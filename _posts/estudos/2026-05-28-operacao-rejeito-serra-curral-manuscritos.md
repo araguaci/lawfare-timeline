@@ -44,7 +44,7 @@ Entre **2019 e 2026**, a PF documentou um sistema de extração mineral ilegal e
 | 1568 | 2026-03 | JF suspende 57 processos minerários, multa ANM | [timeline](/posts/2026-03-01-jf-57-processos-anm-multada-serra-curral/) |
 | 1569 | 2026-04 | Toffoli devolve à 1ª instância — zero condenações | [timeline](/posts/2026-04-15-toffoli-retorno-1a-instancia-rejeito/) |
 | 1570 | 2026-04 | Kallas vende Biomm/Latache — desvinculação Vorcaro | [timeline](/posts/2026-04-28-kallas-vorcaro-desinvestimento-biomm-latache/) |
-| 1571 | 2026-05 | 3º manuscrito — cadeia até Vale/Gerdau/Trafigura | [timeline](/posts/2026-05-27-terceiro-manuscrito-vale-gerdau-trafigura/) |
+| 1571 | 2026-05 | 3º manuscrito — cadeia até Vale/Gerdau/Trafigura | [timeline](/posts/terceiro-manuscrito-vale-gerdau-trafigura/) |
 
 ## Arquitetura de captura (P03)
 
@@ -63,7 +63,7 @@ Teixeira operava a Gmais Ambiental de facto (**557 mensagens** vs. 30 da sócia 
 1. **Terraplanagem legal** em condomínios Nova Lima ([Poeira Vermelha](/posts/2019-07-18-poeira-vermelha-terraplanagem-nova-lima/), 2019) → minério desviado, não descartado
 2. **PRAD como fachada** ([Parcours](/posts/2025-03-28-parcours-serra-curral-prad-fachada/)) → extração além do título minerário (CGU confirma)
 3. **Blendagem** Cedro/Extrativa → documentação fiscal aponta só fontes legais
-4. **GSM/Grupo Avante** (Gabriel Baya Andrade) → Vale, Gerdau, Trafigura como destinatárias finais ([3º manuscrito](/posts/2026-05-27-terceiro-manuscrito-vale-gerdau-trafigura/))
+4. **GSM/Grupo Avante** (Gabriel Baya Andrade) → Vale, Gerdau, Trafigura como destinatárias finais ([3º manuscrito](/posts/terceiro-manuscrito-vale-gerdau-trafigura/))
 
 Dano documentado na Serra do Curral: **R$ 830 mi** em minério extraído; CFEM não recolhida 2012–2019: R$ 11,4 mi; Córrego Taquaril seco desde 2017; barragem Água Fria entre as 7 de maior risco do país.
 

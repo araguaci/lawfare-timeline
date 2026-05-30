@@ -32,13 +32,13 @@ Este dossiê não reconta cada processo eleitoral — **mapeia o padrão transve
 | Representações e cassação | Mandatos extintos ou cercados antes do ciclo seguinte |
 | Combate a “desinformação” | Remoção de conteúdo e vigilância assimétrica (TSE × STF, 2019–2022) |
 
-O [T-190 Direita Permitida](/posts/2026-05-22-direita-permitida-dossie/) documenta a **fase 1** do mesmo mecanismo: Aliança pelo Brasil barrada (**ADI 5311, 10×1**), 183 mil assinaturas descartadas, oposição forçada a filiar-se em partido do centrão. T-180 é o **quadro institucional**; T-190 é a **trajetória oposicionista** que esse quadro moldou.
+O [T-190 Direita Permitida](/posts/direita-permitida-dossie/) documenta a **fase 1** do mesmo mecanismo: Aliança pelo Brasil barrada (**ADI 5311, 10×1**), 183 mil assinaturas descartadas, oposição forçada a filiar-se em partido do centrão. T-180 é o **quadro institucional**; T-190 é a **trajetória oposicionista** que esse quadro moldou.
 
 ## Eixo 1 — Inelegibilidade antes do crime
 
 Em **2023**, o TSE declarou Jair Bolsonaro **inelegível até 2030** com base em abuso de poder eleitoral (reunião com embaixadores / questionamento à urna) — **antes** da sentença criminal definitiva na trama golpista.
 
-O [dossiê Violência política e perseguição jurídica](/posts/2026-05-08-violencia-politica-perseguicao-juridica/) registra o formulário completo:
+O [dossiê Violência política e perseguição jurídica](/posts/violencia-politica-perseguicao-juridica/) registra o formulário completo:
 
 **inquérito → buscas → pressão sobre aliados → inelegibilidade ou cerco eleitoral → condenação**
 
@@ -58,13 +58,13 @@ Na sessão da 2ª Turma do STF (mar/2026), [Dias Toffoli](/posts/dias-tofoli-ame
 
 ## Eixo 4 — Dupla função e produção de prova
 
-De **2019 a 2023**, Moraes acumulou **STF** e **presidência do TSE**. O [Paradoxo constitucional](/posts/2026-05-08-paradoxo-constitucional/) e o dossiê *Vaza Toga* descrevem intelligence informal (WhatsApp, GestBio) alimentando decisões — o mesmo operador investiga, arbitra eleição e julga no penal.
+De **2019 a 2023**, Moraes acumulou **STF** e **presidência do TSE**. O [Paradoxo constitucional](/posts/paradoxo-constitucional/) e o dossiê *Vaza Toga* descrevem intelligence informal (WhatsApp, GestBio) alimentando decisões — o mesmo operador investiga, arbitra eleição e julga no penal.
 
-O [estudo HC seletivo](/posts/2026-05-13-hc-seletivo-habeas-corpus-como-privilegio-processual/) mostra o **mesmo P03** no criminal: velocidade e resultado dependem de classe política e relator. T-180 estende a análise ao **ramo eleitoral**: quem entra, quem sai, quem disputa.
+O [estudo HC seletivo](/posts/hc-seletivo-habeas-corpus-como-privilegio-processual/) mostra o **mesmo P03** no criminal: velocidade e resultado dependem de classe política e relator. T-180 estende a análise ao **ramo eleitoral**: quem entra, quem sai, quem disputa.
 
 ## Eixo 5 — Ritual e legitimidade (2026)
 
-A [Corte medieval](/posts/2026-05-12-corte-medieval/) documenta a posse de **Kassio Nunes Marques** na presidência do TSE (mai/2026): gala a R$ 800/convite, ~R$ 640 mil arrecadados, enquanto posses anteriores de Moraes e Cármen Lucia foram **sem festa paga**. Contexto registrado: Nunes Marques indicado por Bolsonaro; presidirá as eleições de **out/2026**; inelegibilidade do ex-presidente **ainda em revisão**.
+A [Corte medieval](/posts/corte-medieval/) documenta a posse de **Kassio Nunes Marques** na presidência do TSE (mai/2026): gala a R$ 800/convite, ~R$ 640 mil arrecadados, enquanto posses anteriores de Moraes e Cármen Lucia foram **sem festa paga**. Contexto registrado: Nunes Marques indicado por Bolsonaro; presidirá as eleições de **out/2026**; inelegibilidade do ex-presidente **ainda em revisão**.
 
 Pompa não é prova de parcialidade — é **linguagem institucional** que reforça quem controla o chokepoint na janela eleitoral crítica.
 
@@ -82,10 +82,10 @@ Pompa não é prova de parcialidade — é **linguagem institucional** que refor
 
 ## Conexões no acervo
 
-- [T-190 Direita Permitida](/posts/2026-05-22-direita-permitida-dossie/) — gatekeeping e ADI 5311
-- [T-195 CPI × PCC eleitoral](/posts/2026-05-28-cpi-crime-organizado-pcc-infiltracao-eleitoral/) — infiltração eleitoral × crime organizado
-- [Anatomia da liminar monocrática](/posts/2026-05-13-anatomia-liminar-monocratica-stf-poder-individual-sem-controle/) — P03 no STF
-- [Dosimetria da impunidade](/posts/2026-05-13-dosimetria-da-impunidade-lei-15402-ep72-tratamento-diferenciado/) — tratamento diferenciado pós-condenação
+- [T-190 Direita Permitida](/posts/direita-permitida-dossie/) — gatekeeping e ADI 5311
+- [T-195 CPI × PCC eleitoral](/posts/cpi-crime-organizado-pcc-infiltracao-eleitoral/) — infiltração eleitoral × crime organizado
+- [Anatomia da liminar monocrática](/posts/anatomia-liminar-monocratica-stf-poder-individual-sem-controle/) — P03 no STF
+- [Dosimetria da impunidade](/posts/dosimetria-da-impunidade-lei-15402-ep72-tratamento-diferenciado/) — tratamento diferenciado pós-condenação
 
 ## Padrões ativos
 

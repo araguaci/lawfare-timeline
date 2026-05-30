@@ -56,8 +56,8 @@ Critério idoneidade flexibilizado (Dino/STF) → ingresso sem barreira efetiva
 
 | Dossiê | Link |
 | --- | --- |
-| [T-195 CPI × PCC eleitoral](/posts/2026-05-28-cpi-crime-organizado-pcc-infiltracao-eleitoral/) | Infiltração institucional BR |
-| [T-201 PCC transnacional](/posts/2026-05-28-pcc-transnacional-ofac-eua-luso/) | Eixo PCC global |
+| [T-195 CPI × PCC eleitoral](/posts/cpi-crime-organizado-pcc-infiltracao-eleitoral/) | Infiltração institucional BR |
+| [T-201 PCC transnacional](/posts/pcc-transnacional-ofac-eua-luso/) | Eixo PCC global |
 | [PCC Fluxo Completo](/posts/pcc-fluxo-completo-2026/) | Arquitetura 1481–1510 |
 | [Flávio Dino reintegra SC](/posts/2025-11-12-flavio-dino-reintegra-candidata-delegada-casada-com-traficante-condenado/) | Precedente STF |
 

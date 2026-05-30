@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/skull.svg"
 tags: ["biomm", "ibge", "pochmann", "banco-master", "vorcaro", "insider-trading", "conflito-de-interesses", "sus", "cvm", "mptcu", "sintese", "captura-institucional"]
 categories: escandalos
-permalink: /posts/2026-05-19-sintese-operacao-biomm-7-anomalias-documentadas-no-circuito-ibgesusmastercvm/
+permalink: /posts/sintese-operacao-biomm-7-anomalias-documentadas-no-circuito-ibgesusmastercvm/
 id_corpus: "1540"
 corpus_unificado: true
 ---

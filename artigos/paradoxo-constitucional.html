@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paradoxo Constitucional — Brasil 2019–2026</title>
+<meta name="description" content="Dois vetores de ruptura simultâneos: golpe clássico (2019–2023) e estado de exceção por via legal (INQ 4.781). Síntese lawfare-timeline com evidências, Vaza Toga e padrões sistêmicos.">
+<meta name="theme-color" content="#c0392b">
+<meta name="application-name" content="Paradoxo Constitucional">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Paradoxo CF">
+<link rel="canonical" href="https://gosurf.site/paradoxo-constitucional">
+<link rel="manifest" href="/manifest-paradoxo-constitucional.webmanifest">
+<link rel="apple-touch-icon" href="/icon-192.png">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://gosurf.site/paradoxo-constitucional">
+<meta property="og:title" content="O Paradoxo Constitucional — Brasil 2019–2026">
+<meta property="og:description" content="Espada versus toga: dois projetos autoritários que se alimentam — INQ 4.781, Punhal Verde e Amarelo, Vaza Toga e autocratização por via legal.">
+<meta property="og:image" content="https://gosurf.site/assets/img/paradoxo_constitucional_hero_xarticle.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="Paradoxo Constitucional — dois vetores Brasil 2019–2026">
+<meta property="og:locale" content="pt_BR">
+<meta property="article:published_time" content="2026-05-08">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="O Paradoxo Constitucional — Brasil 2019–2026">
+<meta name="twitter:description" content="Espada versus toga: dois projetos autoritários que se alimentam — síntese evidencial com INQ 4.781 e Vaza Toga.">
+<meta name="twitter:image" content="https://gosurf.site/assets/img/paradoxo_constitucional_hero_xarticle.png">
+<meta name="twitter:image:alt" content="Hero Paradoxo Constitucional — balança, vetores militar e judicial 2019–2026">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #080a0e;
+    --surface: #0d1018;
+    --surface2: #131720;
+    --border: rgba(255,255,255,0.07);
+    --border2: rgba(255,255,255,0.12);
+    --text: #c8cdd8;
+    --text-bright: #eef0f5;
+    --text-dim: #5a6070;
+    --red: #c0392b;
+    --red2: #e74c3c;
+    --amber: #d4a017;
+    --amber2: #f0b429;
+    --blue: #2471a3;
+    --blue2: #3498db;
+    --green: #1a7a4a;
+    --green2: #27ae60;
+    --purple: #6c3483;
+    --purple2: #9b59b6;
+    --mono: 'IBM Plex Mono', monospace;
+    --display: 'Syne', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--mono);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ═══ GRID NOISE BACKGROUND ═══ */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ═══ HEADER ═══ */
+  .header {
+    position: relative;
+    z-index: 10;
+    border-bottom: 1px solid var(--border);
+    padding: 48px 60px 36px;
+    background: linear-gradient(180deg, rgba(192,57,43,0.06) 0%, transparent 100%);
+  }
+
+  .header-eyebrow {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .header-eyebrow::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--red), transparent);
+    max-width: 400px;
+  }
+
+  .header-title {
+    font-family: var(--display);
+    font-size: clamp(32px, 5vw, 64px);
+    font-weight: 800;
+    color: var(--text-bright);
+    line-height: 1.05;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+
+  .header-title span {
+    color: var(--red);
+  }
+
+  .header-subtitle {
+    font-size: 13px;
+    color: var(--text-dim);
+    max-width: 680px;
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+  }
+
+  .header-meta {
+    margin-top: 28px;
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .meta-pill {
+    font-size: 10px;
+    letter-spacing: 2px;
+    padding: 5px 12px;
+    border: 1px solid var(--border2);
+    border-radius: 2px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+  }
+
+  .meta-pill.alert { border-color: rgba(192,57,43,0.4); color: var(--red); }
+  .meta-pill.warn { border-color: rgba(212,160,23,0.4); color: var(--amber); }
+
+  /* ═══ NAVIGATION ═══ */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(8,10,14,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    padding: 0 60px;
+  }
+
+  .nav-btn {
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: var(--text-dim);
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 16px 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+
+  .nav-btn:hover { color: var(--text); }
+  .nav-btn.active { color: var(--red); border-bottom-color: var(--red); }
+
+  /* ═══ CONTENT ═══ */
+  .tab { display: block; scroll-margin-top: 100px; padding-top: 20px; }
+
+  /* ── GO TOP ── */
+  .gotop {
+    position: fixed; bottom: 24px; right: 24px; width: 40px; height: 40px;
+    background: var(--surface2); border: 1px solid var(--border); color: var(--red);
+    border-radius: 4px; display: flex; align-items: center; justify-content: center;
+    cursor: pointer; z-index: 1000; opacity: 0; pointer-events: none;
+    transition: opacity 0.3s, background 0.2s, border-color 0.2s;
+    font-family: var(--mono); font-weight: bold; font-size: 1.2rem;
+  }
+  .gotop.show { opacity: 1; pointer-events: auto; }
+  .gotop:hover { background: var(--surface); border-color: var(--red); color: #fff; }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 48px 60px;
+  }
+
+  /* ═══ SECTION HEADERS ═══ */
+  .sec-title {
+    font-family: var(--display);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .sec-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* ═══ PARADOX BANNER ═══ */
+  .paradox-banner {
+    background: var(--surface);
+    border: 1px solid var(--border2);
+    border-left: 4px solid var(--red);
+    padding: 28px 32px;
+    margin-bottom: 48px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .paradox-banner::before {
+    content: '⚖';
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 80px;
+    opacity: 0.04;
+  }
+
+  .paradox-banner p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text-bright);
+    max-width: 900px;
+  }
+
+  .paradox-banner em {
+    color: var(--amber);
+    font-style: normal;
+  }
+
+  /* ═══ THREE-COLUMN GRID ═══ */
+  .triple-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+
+  @media (max-width: 1000px) { .triple-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px)  { .triple-grid { grid-template-columns: 1fr; } }
+
+  /* ═══ TWO-COLUMN GRID ═══ */
+  .dual-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+
+  @media (max-width: 900px) { .dual-grid { grid-template-columns: 1fr; } }
+
+  /* ═══ CARDS ═══ */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 24px;
+    position: relative;
+    transition: border-color 0.2s;
+  }
+
+  .card:hover { border-color: var(--border2); }
+
+  .card-label {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .card-label::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+
+  .card-label.red { color: var(--red); }
+  .card-label.amber { color: var(--amber); }
+  .card-label.blue { color: var(--blue2); }
+  .card-label.green { color: var(--green2); }
+  .card-label.purple { color: var(--purple2); }
+
+  .card h3 {
+    font-family: var(--display);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-bright);
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+
+  .card p {
+    font-size: 12px;
+    line-height: 1.8;
+    color: var(--text);
+  }
+
+  /* ═══ TIMELINE ═══ */
+  .timeline { position: relative; padding-left: 32px; }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background: linear-gradient(180deg, var(--red), var(--amber), var(--blue2), transparent);
+  }
+
+  .tl-item {
+    position: relative;
+    margin-bottom: 32px;
+    cursor: pointer;
+  }
+
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    left: -28px;
+    top: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--dot-color, var(--text-dim));
+    border: 1px solid var(--bg);
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.5);
+    z-index: 2;
+  }
+
+  .tl-date {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .tl-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-bright);
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+
+  .tl-body {
+    font-size: 12px;
+    line-height: 1.8;
+    color: var(--text);
+    display: none;
+    margin-top: 10px;
+    padding: 14px 16px;
+    background: var(--surface2);
+    border-left: 2px solid var(--dot-color, var(--border));
+  }
+
+  .tl-item.open .tl-body { display: block; }
+
+  .tl-badge {
+    display: inline-block;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 2px;
+    margin-top: 4px;
+  }
+
+  .badge-critical { background: rgba(192,57,43,0.15); color: var(--red); }
+  .badge-high { background: rgba(212,160,23,0.15); color: var(--amber); }
+  .badge-medium { background: rgba(36,113,163,0.15); color: var(--blue2); }
+  .badge-info { background: rgba(39,174,96,0.15); color: var(--green2); }
+  .badge-structural { background: rgba(108,52,131,0.15); color: var(--purple2); }
+
+  /* ═══ TENSION MAP ═══ */
+  .tension-map {
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr;
+    gap: 0;
+    margin-bottom: 48px;
+    align-items: center;
+  }
+
+  .tension-side {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 28px;
+  }
+
+  .tension-side.left { border-right: none; }
+  .tension-side.right { border-left: none; }
+
+  .tension-vs {
+    background: var(--surface2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-family: var(--display);
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--red);
+    letter-spacing: 2px;
+    writing-mode: vertical-lr;
+  }
+
+  .tension-label {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .tension-side.left .tension-label { color: var(--red); }
+  .tension-side.right .tension-label { color: var(--blue2); }
+
+  .tension-side h3 {
+    font-family: var(--display);
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .tension-side.left h3 { color: var(--red); }
+  .tension-side.right h3 { color: var(--blue2); }
+
+  .tension-list {
+    list-style: none;
+    font-size: 12px;
+    line-height: 1.9;
+    color: var(--text);
+  }
+
+  .tension-list li::before {
+    content: '→ ';
+    color: var(--text-dim);
+  }
+
+  /* ═══ PATTERN GRID ═══ */
+  .pattern-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  @media (max-width: 1100px) { .pattern-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 680px)  { .pattern-grid { grid-template-columns: 1fr; } }
+
+  .pattern-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .pattern-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--accent, var(--border));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+
+  .pattern-card:hover { border-color: var(--border2); }
+  .pattern-card:hover::after { transform: scaleX(1); }
+
+  .pattern-num {
+    font-size: 32px;
+    font-weight: 800;
+    font-family: var(--display);
+    opacity: 0.08;
+    position: absolute;
+    right: 16px;
+    top: 12px;
+    line-height: 1;
+  }
+
+  .pattern-id {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--text-dim);
+    margin-bottom: 6px;
+  }
+
+  .pattern-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-bright);
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+
+  .pattern-desc {
+    font-size: 11px;
+    line-height: 1.7;
+    color: var(--text-dim);
+  }
+
+  .pattern-ops {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .pattern-op-tag {
+    font-size: 9px;
+    padding: 2px 6px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    letter-spacing: 0.5px;
+  }
+
+  /* ═══ VERDICT BOX ═══ */
+  .verdict {
+    background: linear-gradient(135deg, rgba(192,57,43,0.08) 0%, rgba(212,160,23,0.05) 100%);
+    border: 1px solid rgba(192,57,43,0.3);
+    padding: 32px;
+    margin: 48px 0;
+    position: relative;
+  }
+
+  .verdict::before {
+    content: 'SÍNTESE ANALÍTICA';
+    position: absolute;
+    top: -1px;
+    left: 24px;
+    font-size: 9px;
+    letter-spacing: 3px;
+    background: var(--bg);
+    padding: 0 8px;
+    color: var(--red);
+    transform: translateY(-50%);
+  }
+
+  .verdict p {
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--text-bright);
+    margin-bottom: 12px;
+  }
+
+  .verdict p:last-child { margin-bottom: 0; }
+
+  .verdict strong { color: var(--amber); }
+
+  /* ═══ EVIDENCE TABLE ═══ */
+  .evidence-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    margin-bottom: 32px;
+  }
+
+  .evidence-table th {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    background: var(--surface2);
+  }
+
+  .evidence-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    vertical-align: top;
+    line-height: 1.6;
+  }
+
+  .evidence-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+  .ev-status {
+    display: inline-block;
+    font-size: 9px;
+    letter-spacing: 1px;
+    padding: 3px 8px;
+    border-radius: 2px;
+    text-transform: uppercase;
+  }
+
+  .ev-confirmed { background: rgba(39,174,96,0.12); color: var(--green2); }
+  .ev-contested { background: rgba(212,160,23,0.12); color: var(--amber); }
+  .ev-alleged { background: rgba(36,113,163,0.12); color: var(--blue2); }
+  .ev-denied { background: rgba(192,57,43,0.12); color: var(--red); }
+
+  /* ═══ RELATED LINKS ═══ */
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 32px;
+  }
+
+  @media (max-width: 1000px) { .related-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px)  { .related-grid { grid-template-columns: 1fr; } }
+
+  .related-link {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  .related-link:hover {
+    border-color: var(--border2);
+    background: var(--surface2);
+  }
+
+  .related-link-cat {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .related-link-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-bright);
+    line-height: 1.4;
+    margin-bottom: 4px;
+  }
+
+  .related-link-desc {
+    font-size: 11px;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+
+  /* ═══ MATRIX TABLE ═══ */
+  .matrix {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+    margin-bottom: 32px;
+    overflow-x: auto;
+    display: block;
+  }
+
+  .matrix th {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    background: var(--surface2);
+    white-space: nowrap;
+  }
+
+  .matrix td {
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    color: var(--text);
+    line-height: 1.5;
+    vertical-align: middle;
+  }
+
+  .matrix tr:hover td { background: rgba(255,255,255,0.015); }
+
+  .matrix .row-label {
+    font-weight: 600;
+    color: var(--text-bright);
+    font-size: 11px;
+  }
+
+  /* ═══ PULSE INDICATOR ═══ */
+  .pulse {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--red);
+    margin-right: 6px;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(192,57,43,0.4); }
+    50% { opacity: 0.7; box-shadow: 0 0 0 6px rgba(192,57,43,0); }
+  }
+
+  /* ═══ FOOTNOTE / SOURCES ═══ */
+  .sources-section {
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+  }
+
+  .source-item {
+    font-size: 11px;
+    color: var(--text-dim);
+    line-height: 1.7;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 12px;
+  }
+
+  .source-item .src-num {
+    color: var(--text-dim);
+    min-width: 20px;
+    font-size: 10px;
+    opacity: 0.5;
+  }
+
+  /* ═══ QUOTE ═══ */
+  .blockquote {
+    border-left: 3px solid var(--amber);
+    padding: 16px 20px;
+    margin: 24px 0;
+    background: rgba(212,160,23,0.04);
+  }
+
+  .blockquote p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--text);
+    font-style: italic;
+  }
+
+  .blockquote cite {
+    display: block;
+    margin-top: 8px;
+    font-size: 10px;
+    color: var(--text-dim);
+    font-style: normal;
+    letter-spacing: 1px;
+  }
+
+  /* ═══ FOOTER ═══ */
+  .footer {
+    border-top: 1px solid var(--border);
+    padding: 24px 60px;
+    font-size: 10px;
+    color: var(--text-dim);
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ═══ SCROLL ANIMATIONS ═══ */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 768px) {
+    .header, .content, .footer { padding: 24px 20px; }
+    .nav { padding: 0 20px; }
+    .tension-map { grid-template-columns: 1fr; }
+    .tension-vs { writing-mode: horizontal-tb; padding: 8px; height: auto; border: 1px solid var(--border); }
+    .tension-side.left, .tension-side.right { border: 1px solid var(--border); }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-eyebrow">
+    <span class="pulse"></span>
+    lawfare-timeline · Análise Síntese · Maio 2026
+  </div>
+  <h1 class="header-title">
+    O <span>Paradoxo</span><br>Constitucional
+  </h1>
+  <p class="header-subtitle">
+    Dois vetores de ruptura simultâneos. Um tentou o golpe clássico e falhou — mas legitimou o adversário.
+    O outro construiu um estado de exceção por via legal e prosperou. O resultado é uma república presa entre
+    dois projetos autoritários que se alimentam mutuamente, ao arrepio da CF/88 desde março de 2019.
+  </p>
+  <div class="header-meta">
+    <span class="meta-pill alert">INQ 4.781 · Ativo desde 2019</span>
+    <span class="meta-pill warn">Vaza Toga · Ago/2024</span>
+    <span class="meta-pill">Punhal Verde e Amarelo · Nov/2024</span>
+    <span class="meta-pill">Generais Condenados · 2025</span>
+    <span class="meta-pill alert">Lei da Dosimetria · ADI · 08/05/2026</span>
+    <span class="meta-pill">Síntese Analítica · CC0 Public Domain</span>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav class="nav" id="main-nav">
+  <button class="nav-btn active" data-target="tab-paradoxo">PARADOXO</button>
+  <button class="nav-btn" data-target="tab-inq">INQ 4.781</button>
+  <button class="nav-btn" data-target="tab-militares">MILITARES</button>
+  <button class="nav-btn" data-target="tab-vazatoga">VAZA TOGA</button>
+  <button class="nav-btn" data-target="tab-padroes">PADRÕES</button>
+  <button class="nav-btn" data-target="tab-sintese">SÍNTESE & DADOS</button>
+</nav>
+
+<!-- ════════════════════ TAB: PARADOXO ════════════════════ -->
+<div id="tab-paradoxo" class="tab active">
+<div class="content">
+
+  <div class="sec-title">O Argumento Central</div>
+
+  <div class="paradox-banner fade-in">
+    <p>
+      O Brasil de 2019–2026 não sofreu <em>um</em> golpe — sofreu <em>dois</em> processos simultâneos de erosão constitucional
+      que se retroalimentam. O primeiro, conduzido por generais e o núcleo bolsonarista, tentou a ruptura clássica
+      e falhou em dezembro de 2022. O segundo, conduzido pelo STF a partir do INQ 4.781, constrói um estado de
+      exceção por via legal desde março de 2019 — e prosperou. A tragédia estrutural é que a tentativa real de
+      golpe forneceu <em>justificativa retroativa</em> para os excessos do segundo processo. Os dois se alimentam
+      mutuamente e, juntos, produzem o que a literatura comparada chama de <em>autocratização por via legal</em>.
+    </p>
+  </div>
+
+  <!-- TENSION MAP -->
+  <div class="sec-title">Dois Vetores Simultâneos</div>
+  <div class="tension-map fade-in">
+    <div class="tension-side left">
+      <div class="tension-label">Vetor I — Golpe Clássico (Tentado)</div>
+      <h3>A Ruptura<br>pelo Punhal</h3>
+      <ul class="tension-list">
+        <li>Plano "Punhal Verde e Amarelo" — autoria admitida pelo Gen. Mário Fernandes</li>
+        <li>Monitoramento de Moraes desde nov/2022 — documentado pela PF</li>
+        <li>Plano de assassinato de Lula, Alckmin e Moraes com codinomes operacionais</li>
+        <li>Reuniões no Alvorada para ruptura constitucional pós-outubro/2022</li>
+        <li>Recusa de Mourão em assinar a ordem salvou o calendário eleitoral</li>
+        <li>8 de janeiro de 2023 como operação de pressão residual</li>
+        <li>Generais condenados: Braga Netto, Heleno, Paulo Sérgio Nogueira</li>
+      </ul>
+    </div>
+    <div class="tension-vs">VS</div>
+    <div class="tension-side right">
+      <div class="tension-label">Vetor II — Estado de Exceção por Via Legal (Em Curso)</div>
+      <h3>A Ruptura<br>pela Toga</h3>
+      <ul class="tension-list">
+        <li>INQ 4.781 aberto de ofício — sem provocação da PGR (violação art. 129-I CF)</li>
+        <li>Moraes acumula investigador, acusador e julgador no mesmo processo</li>
+        <li>Força-tarefa secreta no TSE produz provas sem rito processual regular</li>
+        <li>Bloqueios de redes sociais sem processo regular (art. 5º, IX CF)</li>
+        <li>Prazo de 6+ anos — viola razoável duração (art. 5º, LXXVIII CF)</li>
+        <li>Presos do 8J mantidos além do pedido da própria PGR por busca em redes</li>
+        <li>Efeito chilling documentado sobre liberdade de expressão nacional</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- EFEITO ESPELHO -->
+  <div class="sec-title">O Efeito Espelho — Como Um Alimenta o Outro</div>
+  <div class="triple-grid fade-in">
+    <div class="card">
+      <div class="card-label red">Mecanismo 1</div>
+      <h3>O Golpe Legitima a Censura</h3>
+      <p>A tentativa real de ruptura constitucional de 2022–2023 transformou o INQ 4.781 — juridicamente viciado desde 2019 — em instrumento politicamente defensável. Qualquer crítica ao inquérito passou a ser equiparada a cumplicidade com o projeto golpista. Os generais forneceram a cobertura institucional que o STF precisava para operar ao arrepio do sistema acusatório.</p>
+    </div>
+    <div class="card">
+      <div class="card-label blue">Mecanismo 2</div>
+      <h3>A Censura Alimenta a Ruptura</h3>
+      <p>O ambiente criado pelo INQ 4.781 — prisões sem acusação formal, bloqueios digitais, ausência de prazo — radicalizou o campo bolsonarista e forneceu narrativa de perseguição que mobilizou os 8 de janeiro. O estado de exceção judicial criou o caldo de cultura que tornou a tentativa de golpe mais palatável a amplos setores da população.</p>
+    </div>
+    <div class="card">
+      <div class="card-label amber">Mecanismo 3</div>
+      <h3>A Omissão Militar Institucional</h3>
+      <p>O alto comando das FFAA operou em zona cinzenta deliberada durante 2019–2022: não rompeu com Bolsonaro enquanto ele usava as FA como ameaça implícita ao STF, participou de reuniões sem registrar objeção formal, silenciou diante da radicalização. A exceção — Gen. Santos Cruz — virou persona non grata por exatamente não cumprir esse papel de legitimação silenciosa.</p>
+    </div>
+    <div class="card">
+      <div class="card-label purple">Mecanismo 4</div>
+      <h3>O Paradoxo da Prova Contaminada</h3>
+      <p>A Vaza Toga revelou que as investigações do 8J foram conduzidas com estrutura paralela e informal, sem rito processual. Isso significa que mesmo crimes reais podem estar sendo apurados por processos nulos — repetindo o padrão da Lava Jato/Lula. Dois crimes reais se neutralizam mutuamente, e quem paga é a república.</p>
+    </div>
+  </div>
+
+  <div class="verdict fade-in">
+    <p><strong>Formulação analítica central:</strong> O Brasil não tem um guardião da Constituição — tem um órgão capturado que usa a forma constitucional para subverter o conteúdo constitucional. O STF, ao abrir um inquérito inconstitucional em 2019, produziu um instrumento que se tornaria tão antidemocrático quanto aquilo que pretendia combater.</p>
+    <p>A diferença é consequencial: o golpe clássico foi derrotado pela democracia formal. O golpe por via legal não foi derrotado — porque usa as formas da democracia como escudo. Esse é o padrão que a literatura comparada (Levitsky & Ziblatt, Ginsburg & Huq) identifica como a forma mais duradoura e difícil de reverter de erosão democrática.</p>
+  </div>
+
+</div>
+</div>
+
+<!-- ════════════════════ TAB: INQ 4.781 ════════════════════ -->
+<div id="tab-inq" class="tab">
+<div class="content">
+
+  <div class="sec-title">INQ 4.781 — Anatomia dos Vícios Constitucionais</div>
+
+  <div class="paradox-banner fade-in">
+    <p>Aberto em março de 2019 pelo então presidente do STF Dias Toffoli, o inquérito das "fake news" é <em>o instrumento jurídico mais controverso da Nova República</em>. Seus vícios não são marginais — são estruturais. E a referenda plenária de 10×1 em 2020 não os sanou: apenas demonstrou que o próprio tribunal em conflito de interesse votou pela manutenção do poder que exerce sobre si mesmo.</p>
+  </div>
+
+  <div class="sec-title">Os 5 Vícios Constitucionais Documentados</div>
+
+  <div class="pattern-grid fade-in">
+    <div class="pattern-card" style="--accent: var(--red);">
+      <div class="pattern-num">01</div>
+      <div class="pattern-id">CF Art. 129, I · CPP Art. 3-A</div>
+      <div class="pattern-name">Violação do Sistema Acusatório</div>
+      <div class="pattern-desc">O MP tem exclusividade da ação penal pública. Um inquérito aberto de ofício pelo STF sem provocação da PGR inverte esse arranjo. O Pacote Anticrime (Lei 13.964/2019) positivou o sistema acusatório vedando ao magistrado iniciar ou dirigir investigação. Moraes fez as três coisas.</div>
+    </div>
+    <div class="pattern-card" style="--accent: var(--red);">
+      <div class="pattern-num">02</div>
+      <div class="pattern-id">Princípio: Nemo Judex in Causa Propria</div>
+      <div class="pattern-name">Juiz, Vítima e Julgador Simultâneos</div>
+      <div class="pattern-desc">O STF é ao mesmo tempo vítima alegada, investigador e tribunal julgador. A referenda de 10×1 amplia o vício — os próprios interessados votaram pela manutenção do instrumento que os protege. A imparcialidade estrutural é impossível nesta configuração.</div>
+    </div>
+    <div class="pattern-card" style="--accent: var(--amber);">
+      <div class="pattern-num">03</div>
+      <div class="pattern-id">CF Art. 5º, LXXVIII · CPP Art. 10</div>
+      <div class="pattern-name">Prazo Irrazoável — Estado de Exceção Permanente</div>
+      <div class="pattern-desc">O CPP prevê 10 ou 30 dias para conclusão do inquérito. Com 6+ anos sem conclusão formal, o INQ funciona como estado de exceção permanente — investigados em incerteza jurídica indefinida, sem acusação formal, sem julgamento, sem encerramento.</div>
+    </div>
+    <div class="pattern-card" style="--accent: var(--amber);">
+      <div class="pattern-num">04</div>
+      <div class="pattern-id">CF Art. 5º, IV e IX</div>
+      <div class="pattern-name">Efeito Chilling — Censura por Indefinição</div>
+      <div class="pattern-desc">A linha entre "fake news criminalizável" e "crítica política hiperbólica protegida" nunca foi definida pelo inquérito. A indefinição é a função. O efeito chilling (autocensura) sobre toda a esfera pública digital é documentado — a ameaça difusa é mais eficiente que a censura explícita.</div>
+    </div>
+    <div class="pattern-card" style="--accent: var(--blue2);">
+      <div class="pattern-num">05</div>
+      <div class="pattern-id">CPP Art. 312 §2º — Proporcionalidade</div>
+      <div class="pattern-name">Medidas Desproporcionais sem Evidência</div>
+      <div class="pattern-desc">Bloqueios de redes sociais, apreensão de passaportes e prisões decretadas contra críticos sem evidência de crime formal além da crítica ao tribunal falham no teste de proporcionalidade, necessidade e adequação — os mesmos critérios que o STF aplica em outros contextos.</div>
+    </div>
+    <div class="pattern-card" style="--accent: var(--purple2);">
+      <div class="pattern-num">06</div>
+      <div class="pattern-id">RISTF Art. 43 — Fundamento Questionável</div>
+      <div class="pattern-name">Regimento Interno como Constituição</div>
+      <div class="pattern-desc">O Art. 43 do RISTF — norma infraconstitucional de organização interna — foi invocado para criar competência investigatória própria sobrepondo-se ao sistema acusatório constitucional. Tribunais não podem ampliar sua própria competência via regimento.</div>
+    </div>
+
+    <div class="pattern-card" style="--accent: var(--red); border-top: 2px solid var(--red);">
+      <div class="pattern-num">07</div>
+      <div class="pattern-id">Lei 15.402/2026 · ADIs · 08/05/2026</div>
+      <div class="pattern-name">Sequestro de Pauta — Vítima, Acusador e Juiz da ADI</div>
+      <div class="pattern-desc">Lei da Dosimetria promulgada em 8/5/2026. No mesmo dia, ABI e PSOL-Rede protocolam ADIs. Por sorteio + prevenção, AM torna-se relator — o mesmo ministro que presidiu as condenações, é vítima declarada dos atos e figura nos abusos que a lei busca corrigir. Sem prazo regimental para decisão: controla o calendário de revisões de 1.402 condenados. Comparativo: com anistia, soltos aguardariam a ADI em liberdade; com dosimetria, os presos aguardam que o relator impedido pautue a lei que o impede de mantê-los presos.</div>
+      <div class="pattern-ops">
+        <span class="pattern-op-tag">P1 · P2 · P3 · P7</span>
+        <span class="pattern-op-tag">1.402 condenados</span>
+        <span class="pattern-op-tag" style="color:var(--red); border-color:rgba(192,57,43,0.3)">ATIVO 08/05/2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-title">Linha do Tempo do Inquérito</div>
+  <div class="timeline fade-in" id="inq-timeline">
+
+    <div class="tl-item" style="--dot-color: var(--red);" onclick="this.classList.toggle('open')">
+      <div class="tl-date">Março 2019</div>
+      <div class="tl-title">Instauração de Ofício — Toffoli abre o inquérito</div>
+      <span class="tl-badge badge-critical">Vício Original</span>
+      <div class="tl-body">Dias Toffoli, então presidente do STF, abre o INQ 4.781 sem provocação do Ministério Público. Fundamento invocado: Art. 43 do RISTF. Vício imediato: o sistema acusatório da CF/88 reserva a iniciativa da ação penal ao MP. Marco Aurélio Mello é o único a votar contra desde o início. O inquérito nasce com vício de origem que nenhuma referenda plenária posterior pode sanar por completo.</div>
+    </div>
+
+    <div class="tl-item" style="--dot-color: var(--red);" onclick="this.classList.toggle('open')">
+      <div class="tl-date">2019–2020</div>
+      <div class="tl-title">Expansão do Escopo — De "fake news" a qualquer crítica</div>
+      <span class="tl-badge badge-critical">Deriva de Poder</span>
+      <div class="tl-body">O inquérito, originalmente restrito a "fake news sobre o STF", expande-se rapidamente para incluir qualquer crítica ao tribunal. Blogueiros, jornalistas e políticos que criticam o STF passam a ser monitorados. A Polícia Federal executa mandados. O escopo indefinido é a ferramenta — sem fronteiras claras, qualquer um pode ser incluído.</div>
+    </div>
+
+    <div class="tl-item" style="--dot-color: var(--amber);" onclick="this.classList.toggle('open')">
+      <div class="tl-date">Junho 2020</div>
+      <div class="tl-title">Referenda Plenária 10×1 — Silenciando a Dissidência</div>
+      <span class="tl-badge badge-high">Autovalidação</span>
+      <div class="tl-body">Por 10 votos a 1 (Marco Aurélio dissidente), o plenário do STF valida a manutenção do INQ 4.781. O tribunal vítima-investigador-julgador vota para manter seu próprio poder. Marco Aurélio vota pela inconstitucionalidade. O paradoxo é perfeito: o órgão que deveria guardar a Constituição vota para manter um instrumento que a viola.</div>
+    </div>
+
+    <div class="tl-item" style="--dot-color: var(--amber);" onclick="this.classList.toggle('open')">
+      <div class="tl-date">Junho 2021</div>
+      <div class="tl-title">Aposentadoria de Marco Aurélio — Eliminação da Voz Dissidente</div>
+      <span class="tl-badge badge-high">Consolidação</span>
+      <div class="tl-body">Marco Aurélio Mello aposenta-se compulsoriamente ao completar 75 anos. Seu substituto, André Mendonça (indicado por Bolsonaro), assume a vaga. A voz interna mais consistente contra o inquérito deixa o tribunal. O STF perde sua principal voz de autocrítica institucional sobre o INQ.</div>
+    </div>
+
+    <div class="tl-item" style="--dot-color: var(--red);" onclick="this.classList.toggle('open')">
+      <div class="tl-date">Janeiro 2023</div>
+      <div class="tl-title">8 de Janeiro — O Inquérito Ganha Sua Justificativa Retroativa</div>
+      <span class="tl-badge badge-critical">Ponto de Inflexão</span>
+      <div class="tl-body">Os ataques ao Planalto, Congresso e STF forneceram ao inquérito a legitimação política que faltava. A tentativa real de ruptura tornou politicamente custoso criticar o INQ. Mais de 1.000 pessoas detidas, muitas mantidas além do pedido da própria PGR — conforme revelado depois pela Vaza Toga. O inquérito deixou de ser polêmico para ser "necessário".</div>
+    </div>
+
+    <div class="tl-item" style="--dot-color: var(--amber);" onclick="this.classList.toggle('open')">
+      <div class="tl-date">Agosto–Setembro 2023</div>
+      <div class="tl-title">Bloqueio do X — Censura Massiva Inédita em Democracias</div>
+      <span class="tl-badge badge-high">Marco Internacional</span>
+      <div class="tl-body">Alexandre de Moraes determina o bloqueio completo da plataforma X no Brasil. A medida — inédita em democracias ocidentais de grande porte — fica em vigor por semanas e é amplamente criticada internacionalmente. O episódio revelou a escala do poder censório concentrado num único ministro relator.</div>
+    </div>
+
+    <div class="tl-item" style="--dot-color: var(--blue2);" onclick="this.classList.toggle('open')">
+      <div class="tl-date">Agosto 2024</div>
+      <div class="tl-title">Vaza Toga — O Sistema Paralelo de Produção de Provas</div>
+      <span class="tl-badge badge-medium">Revelação Estrutural</span>
+      <div class="tl-body">Glenn Greenwald publica na Folha diálogos de 6GB de assessores de Moraes no TSE. As mensagens revelam que a AEED (Assessoria Especial de Enfrentamento à Desinformação) do TSE foi instrumentalizada para produzir dossiês sobre críticos sem rito processual regular, alimentando diretamente decisões do INQ 4.781. O sistema paralelo de provas contamina retroativamente toda a cadeia processual.</div>
+    </div>
+
+    <div class="tl-item" style="--dot-color: var(--text-dim);" onclick="this.classList.toggle('open')">
+      <div class="tl-date">2024–2026</div>
+      <div class="tl-title">Inquérito Ativo — Sem Prazo de Encerramento</div>
+      <span class="tl-badge badge-info">Em Curso</span>
+      <div class="tl-body">O INQ 4.781 permanece ativo, sem previsão de encerramento, com investigações derivadas para o processo do golpe. O inquérito das fake news funciona como raiz de um ecossistema de processos interligados que mantém dezenas de pessoas sob investigação permanente sem julgamento definitivo. 6 anos e contando.</div>
+    </div>
+
+  </div>
+
+</div>
+</div>
+
+<!-- ════════════════════ TAB: MILITARES ════════════════════ -->
+<div id="tab-militares" class="tab">
+<div class="content">
+
+  <div class="sec-title">O Papel Militar — Duas Contribuições, Uma Tragédia</div>
+
+  <div class="paradox-banner fade-in">
+    <p>Os generais contribuíram para o estado atual de duas formas distintas e igualmente consequenciais:
+    os golpistas forneceram a justificativa retroativa para os excessos do STF;
+    os "institucionalistas" forneceram a cobertura de silêncio que permitiu a ambos os projetos avançarem.
+    O resultado é que a república foi destituída por dois lados — um com a espada, outro com a toga.</p>
+  </div>
+
+  <div class="triple-grid fade-in">
+    <div class="card">
+      <div class="card-label red">Contribuição Tipo 1</div>
+      <h3>Os Golpistas — A Ruptura Tentada</h3>
+      <p style="margin-bottom:14px;">Generais e oficiais do alto escalão participaram ativamente de planejamento documentado:</p>
+      <ul class="tension-list" style="font-size:12px; line-height:1.9;">
+        <li><strong style="color:var(--text-bright)">Gen. Mário Fernandes</strong> — admitiu autoria do "Punhal Verde e Amarelo"; documento impresso 3x no Planalto</li>
+        <li><strong style="color:var(--text-bright)">Gen. Walter Braga Netto</strong> — apontado como orquestrador central; reunião em sua residência em nov/2022</li>
+        <li><strong style="color:var(--text-bright)">Gen. Augusto Heleno</strong> — indiciado; participação em articulações pós-eleição</li>
+        <li><strong style="color:var(--text-bright)">Gen. Paulo Sérgio Nogueira</strong> — ex-ministro da Defesa; indiciado no processo do golpe</li>
+        <li><strong style="color:var(--text-bright)">"Kids Pretos"</strong> — forças especiais que monitoraram Moraes via grupo "Copa 2022" no Signal</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-label amber">Contribuição Tipo 2</div>
+      <h3>Os "Institucionalistas" — A Omissão Estratégica</h3>
+      <p style="margin-bottom:14px;">O alto comando "institucionalista" operou em zona cinzenta deliberada 2019–2022:</p>
+      <ul class="tension-list" style="font-size:12px; line-height:1.9;">
+        <li>Não rompeu publicamente com Bolsonaro enquanto FA eram usadas como ameaça implícita ao STF</li>
+        <li>Participou de reuniões onde ruptura era discutida sem registro formal de objeção (documentado nas delações)</li>
+        <li>Silenciou após Roberto Jefferson atirar granadas contra agentes da PF</li>
+        <li>Usou ambiguidade calculada como posição política — nem legitimando nem impedindo</li>
+        <li><strong style="color:var(--text-bright)">Gen. Santos Cruz</strong> — exceção que confirma: virou persona non grata por se recusar ao papel de legitimação silenciosa</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-label purple">Resultado Combinado</div>
+      <h3>A Armadilha Estrutural</h3>
+      <p style="margin-bottom:14px;">A contribuição dupla produziu uma armadilha institucional sem saída limpa:</p>
+      <ul class="tension-list" style="font-size:12px; line-height:1.9;">
+        <li>Os golpistas forneceram a prova de que a ameaça era real — legitimando retroativamente o estado de exceção judicial</li>
+        <li>Os institucionalistas forneceram o silêncio que permitiu a ambos os projetos avançarem sem linha vermelha clara</li>
+        <li>Qualquer questionamento do INQ 4.781 passa a ser lido como cumplicidade com os generais condenados</li>
+        <li>Os militares que tentaram o golpe e falharam tornaram impossível criticar o golpe que está funcionando</li>
+        <li><strong style="color:var(--text-bright)">Paradoxo final:</strong> a república foi destituída por dois lados — um com a espada, outro com a toga</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sec-title">O Plano "Punhal Verde e Amarelo" — O Que Sabemos</div>
+
+  <table class="evidence-table fade-in">
+    <thead>
+      <tr>
+        <th>Fato</th>
+        <th>Fonte</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>General Mário Fernandes admitiu ser autor do documento</td>
+        <td>Interrogatório STF, 24/07/2025</td>
+        <td><span class="ev-status ev-confirmed">Confirmado</span></td>
+      </tr>
+      <tr>
+        <td>Documento impresso 3 vezes no Palácio do Planalto em 9/11/2022</td>
+        <td>Investigação PF / Operação Contragolpe</td>
+        <td><span class="ev-status ev-confirmed">Confirmado</span></td>
+      </tr>
+      <tr>
+        <td>Fernandes foi ao Alvorada ~40min após imprimir o documento</td>
+        <td>PF — logs de acesso</td>
+        <td><span class="ev-status ev-confirmed">Confirmado</span></td>
+      </tr>
+      <tr>
+        <td>Documento continha dados de monitoramento, armamentos, logística</td>
+        <td>Documento apreendido — 3 páginas</td>
+        <td><span class="ev-status ev-confirmed">Confirmado</span></td>
+      </tr>
+      <tr>
+        <td>Documento foi reimresso um mês depois</td>
+        <td>Metadados de impressão — PF</td>
+        <td><span class="ev-status ev-confirmed">Confirmado</span></td>
+      </tr>
+      <tr>
+        <td>Fernandes afirma que era "pensamento digitalizado" sem intenção executória</td>
+        <td>Defesa / interrogatório</td>
+        <td><span class="ev-status ev-denied">Negado pelo autor</span></td>
+      </tr>
+      <tr>
+        <td>Documento foi compartilhado com Bolsonaro</td>
+        <td>PGR sustenta com base em circunstâncias</td>
+        <td><span class="ev-status ev-contested">Contestado</span></td>
+      </tr>
+      <tr>
+        <td>Documento foi compartilhado com outros acusados e serviu como instrumento de coordenação</td>
+        <td>PGR — denúncia formal</td>
+        <td><span class="ev-status ev-contested">Contestado pela defesa</span></td>
+      </tr>
+      <tr>
+        <td>Mourão recusou assinar autorização — golpe abortado</td>
+        <td>Delações / relatório PF</td>
+        <td><span class="ev-status ev-confirmed">Confirmado</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="sec-title">A Fissura Interna nas FFAA</div>
+
+  <div class="blockquote fade-in">
+    <p>A fissura entre "kids pretos" (radicais) e a "velha guarda institucionalista" não é nova — ela mapeou a divisão entre quem estava disposto a cruzar o Rubicão constitucional e quem preferia manter a ambiguidade calculada. Santos Cruz foi a única figura que tornou a divisão explícita e pagou o preço.</p>
+    <cite>— Síntese analítica baseada no corpus lawfare-timeline</cite>
+  </div>
+
+  <div class="verdict fade-in">
+    <p><strong>Conclusão sobre os militares:</strong> As FFAA contribuíram para o estado atual de duas formas complementares. Os golpistas forneceram a prova de que a ameaça era real — legitimando retroativamente o estado de exceção judicial. Os "institucionalistas" forneceram o silêncio que permitiu a ambos os projetos avançarem sem que a linha vermelha fosse claramente demarcada.</p>
+    <p>O paradoxo final: <strong>os militares que tentaram o golpe e falharam tornaram impossível criticar o golpe que está funcionando</strong>. Qualquer questionamento do INQ 4.781 passa a ser lido, no campo político, como cumplicidade com os generais condenados. Este é o produto mais duradouro e consequencial da tentativa frustrada de ruptura.</p>
+  </div>
+
+</div>
+</div>
+
+<!-- ════════════════════ TAB: VAZA TOGA ════════════════════ -->
+<div id="tab-vazatoga" class="tab">
+<div class="content">
+
+  <div class="sec-title">Vaza Toga — O Sistema Paralelo de Provas</div>
+
+  <div class="paradox-banner fade-in">
+    <p>Em agosto de 2024, Glenn Greenwald publicou na Folha de S. Paulo mensagens de 6GB de assessores de Moraes no TSE. As revelações não apenas expuseram práticas irregulares — expuseram a <em>arquitetura</em> de um sistema de produção de provas fora dos ritos processuais, que alimentou diretamente o INQ 4.781 e as investigações do 8J. Diferente do Vaza Jato — que expôs conluio entre órgãos diferentes — a Vaza Toga expôs o relator coordenando sua própria produção de provas contra seus próprios alvos.</p>
+  </div>
+
+  <div class="sec-title">O Que Foi Revelado</div>
+
+  <div class="pattern-grid fade-in">
+    <div class="pattern-card" style="--accent: var(--red);">
+      <div class="pattern-id">Revelação Central</div>
+      <div class="pattern-name">AEED como Órgão de Persecução Informal</div>
+      <div class="pattern-desc">A Assessoria Especial de Enfrentamento à Desinformação do TSE — criada para monitorar desinformação eleitoral — foi instrumentalizada para produzir dossiês sobre críticos políticos específicos, infiltrar grupos privados de WhatsApp e Telegram, e alimentar diretamente decisões do INQ 4.781, tudo sem autorização judicial formal.</div>
+    </div>
+    <div class="pattern-card" style="--accent: var(--red);">
+      <div class="pattern-id">Presos do 8J</div>
+      <div class="pattern-name">Manutenção de Prisões Contra Pedido da PGR</div>
+      <div class="pattern-desc">Mensagem de Cristina Kusahara (chefe de gabinete): "A PGR pediu a LP deles, mas o ministro não quer soltar sem antes a gente ver nas redes se tem alguma coisa." Prisões mantidas além do pedido do próprio órgão acusador, com objetivo de justificar retroativamente a detenção.</div>
+    </div>
+    <div class="pattern-card" style="--accent: var(--amber);">
+      <div class="pattern-id">GestBio — Biometria TSE</div>
+      <div class="pattern-name">Banco de Dados Eleitoral como Ferramenta de Vigilância</div>
+      <div class="pattern-desc">Acusação de uso do GestBio — banco de dados biométrico do TSE — para identificar participantes do 8J com base em imagens e cruzar com redes sociais. Uso de infraestrutura eleitoral para investigação criminal sem autorização judicial específica.</div>
+    </div>
+    <div class="pattern-card" style="--accent: var(--amber);">
+      <div class="pattern-id">Seleção de Alvos</div>
+      <div class="pattern-name">Moraes Escolhia Alvos — Relatórios Ajustados</div>
+      <div class="pattern-desc">Diálogos apontam que Moraes escolhia alvos de investigação e pedia ajustes em relatórios da AEED antes de utilizá-los como fundamento de decisões judiciais. O fluxo invertido — decisão antes da prova — é a definição processual de abuso de poder.</div>
+    </div>
+    <div class="pattern-card" style="--accent: var(--blue2);">
+      <div class="pattern-id">Uso de Dados da Polícia Civil SP</div>
+      <div class="pattern-name">Acesso Informal a Bancos de Dados Externos</div>
+      <div class="pattern-desc">Órgão do TSE acessou dados da Polícia Civil de São Paulo após pedido informal de segurança de Moraes — sem ordem judicial formal documentada. Acesso a informações sigilosas de investigados por canais não-processuais.</div>
+    </div>
+    <div class="pattern-card" style="--accent: var(--blue2);">
+      <div class="pattern-id">Colaboração Informal com "Bruxa"</div>
+      <div class="pattern-name">Militância Acadêmica como Inteligência Informal</div>
+      <div class="pattern-desc">Figura identificada nas mensagens como "Bruxa" — jornalista e colaboradora informal do TSE, doutoranda da UnB — enviava dossiês sobre críticos e pressionava assessores para remoção de contas. Terceirização informal da vigilância política para atores privados.</div>
+    </div>
+  </div>
+
+  <div class="sec-title">Comparativo — Vaza Jato vs Vaza Toga</div>
+
+  <table class="evidence-table fade-in">
+    <thead>
+      <tr>
+        <th>Dimensão</th>
+        <th>Vaza Jato (2019)</th>
+        <th>Vaza Toga (2024)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="row-label">Quem foi exposto</td>
+        <td>Juiz Sérgio Moro + Procurador Dallagnol</td>
+        <td>Ministro Moraes + assessores STF/TSE</td>
+      </tr>
+      <tr>
+        <td class="row-label">Natureza do vício</td>
+        <td>Conluio entre acusação e jurisdição (órgãos distintos)</td>
+        <td>Relator coordenando produção das próprias provas (mesmo órgão)</td>
+      </tr>
+      <tr>
+        <td class="row-label">Consequência jurídica</td>
+        <td>STF declarou Moro suspeito; anulou condenações de Lula</td>
+        <td>Arguida nulidade das investigações; PGR denunciou vazador</td>
+      </tr>
+      <tr>
+        <td class="row-label">Resposta institucional</td>
+        <td>STF acolheu parcialmente; reformou jurisprudência</td>
+        <td>STF investigou o vazador; Barroso negou impedimento de Moraes</td>
+      </tr>
+      <tr>
+        <td class="row-label">Gravidade técnica</td>
+        <td>Alta — violação do sistema acusatório</td>
+        <td>Mais alta — o próprio relator produzindo provas para si mesmo</td>
+      </tr>
+      <tr>
+        <td class="row-label">Impacto político</td>
+        <td>Anulação das condenações mais simbólicas da Lava Jato</td>
+        <td>Potencial nulidade de todo o INQ 4.781 e processos derivados</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="verdict fade-in">
+    <p><strong>O paradoxo da Vaza Toga:</strong> A exposição do sistema paralelo de provas coloca o Brasil numa armadilha jurídica perfeita. Se o processo foi contaminado por provas produzidas fora do rito — e o julgamento do 8J e do golpe forem anulados — os generais golpistas ficam impunes. Se o processo for mantido apesar dos vícios — o padrão estabelecido é que no Brasil, crimes reais podem ser julgados por processos nulos.</p>
+    <p>Dos dois lados, <strong>a república perde</strong>. Esta é a marca registrada da autocratização por via legal: ela cria situações onde qualquer saída produz mais erosão institucional.</p>
+  </div>
+
+</div>
+</div>
+
+<!-- ════════════════════ TAB: PADRÕES ════════════════════ -->
+<div id="tab-padroes" class="tab">
+<div class="content">
+
+  <div class="sec-title">Padrões Sistêmicos — Como Este Caso Se Encaixa no Corpus</div>
+
+  <div class="paradox-banner fade-in">
+    <p>O INQ 4.781, a tentativa de golpe e a Vaza Toga não são anomalias — são instâncias de padrões estruturais documentados em todo o corpus do lawfare-timeline, de Satiagraha (2008) a Mare Liberum (2026). A repetição dos mecanismos confirma que estamos diante de <em>arquitetura sistêmica</em>, não de falhas individuais.</p>
+  </div>
+
+  <div class="pattern-grid fade-in">
+
+    <div class="pattern-card" style="--accent: var(--red);">
+      <div class="pattern-num">P1</div>
+      <div class="pattern-id">Padrão P01 — Presente</div>
+      <div class="pattern-name">Captura do Guardião</div>
+      <div class="pattern-desc">O órgão criado para guardar a Constituição torna-se o principal vetor de sua violação. No INQ 4.781, o STF — guardião constitucional — é ao mesmo tempo vítima, investigador e julgador. A captura do guardião é o padrão mais grave: inviabiliza qualquer recurso institucional interno.</div>
+      <div class="pattern-ops">
+        <span class="pattern-op-tag">INQ 4.781</span>
+        <span class="pattern-op-tag">Satiagraha</span>
+        <span class="pattern-op-tag">Vaza Toga</span>
+      </div>
+    </div>
+
+    <div class="pattern-card" style="--accent: var(--red);">
+      <div class="pattern-num">P3</div>
+      <div class="pattern-id">Padrão P03 — Terminal Chokepoint</div>
+      <div class="pattern-name">STF como Blindagem Terminal</div>
+      <div class="pattern-desc">O STF funciona como ponto de interrupção terminal de investigações inconvenientes (Satiagraha/Dantas, Lava Jato/Lula) e como blindagem para investigações que beneficiam aliados. No caso do INQ 4.781, o mesmo tribunal é o investigador — o chokepoint e a investigação coincidem no mesmo órgão.</div>
+      <div class="pattern-ops">
+        <span class="pattern-op-tag">Satiagraha</span>
+        <span class="pattern-op-tag">Lava Jato</span>
+        <span class="pattern-op-tag">INQ 4.781</span>
+        <span class="pattern-op-tag">Banco Master</span>
+      </div>
+    </div>
+
+    <div class="pattern-card" style="--accent: var(--amber);">
+      <div class="pattern-num">P4</div>
+      <div class="pattern-id">Padrão P04 — Seletividade Estrutural</div>
+      <div class="pattern-name">Dois Pesos, Duas Medidas</div>
+      <div class="pattern-desc">O mesmo tribunal que usou o INQ 4.781 com máxima severidade contra críticos arquivou ou travou investigações contra aliados. A seletividade não é erro — é a função. O duplo padrão judicial documentado no corpus atravessa todas as operações desde 2008.</div>
+      <div class="pattern-ops">
+        <span class="pattern-op-tag">INQ 4.781</span>
+        <span class="pattern-op-tag">Castelo de Areia</span>
+        <span class="pattern-op-tag">Banco Master</span>
+        <span class="pattern-op-tag">Carbono Oculto</span>
+      </div>
+    </div>
+
+    <div class="pattern-card" style="--accent: var(--amber);">
+      <div class="pattern-num">P5</div>
+      <div class="pattern-id">Padrão P05 — Prova Contaminada</div>
+      <div class="pattern-name">O Processo Nulo que Julga Crime Real</div>
+      <div class="pattern-desc">A Vaza Toga é a mais dramática instância do padrão: investigações contaminadas por produção irregular de provas contra réus cuja culpa pode ser real. O padrão já havia se manifestado na Lava Jato/Lula (Moro suspeito + crime real). Cada repetição estabelece jurisprudência favorável à impunidade por vício processual.</div>
+      <div class="pattern-ops">
+        <span class="pattern-op-tag">Vaza Jato</span>
+        <span class="pattern-op-tag">Vaza Toga</span>
+        <span class="pattern-op-tag">Satiagraha</span>
+      </div>
+    </div>
+
+    <div class="pattern-card" style="--accent: var(--blue2);">
+      <div class="pattern-num">P6</div>
+      <div class="pattern-id">Padrão P06 — Exaustão Cognitiva</div>
+      <div class="pattern-name">Volume como Estratégia de Impunidade</div>
+      <div class="pattern-desc">O fluxo contínuo de escândalos simultâneos — INQ 4.781, Vaza Toga, Punhal, 8J, Banco Master, INSS, Mare Liberum — é documentadamente uma estratégia de supressão da mobilização cívica. A sobrecarga cognitiva impede o processamento de cada escândalo e fragmenta a resposta social. O projeto lawfare-timeline é a resposta explícita a este padrão.</div>
+      <div class="pattern-ops">
+        <span class="pattern-op-tag">Todos os Casos</span>
+      </div>
+    </div>
+
+    <div class="pattern-card" style="--accent: var(--blue2);">
+      <div class="pattern-num">P7</div>
+      <div class="pattern-id">Padrão P07 — Função Persiste, Ocupante Muda</div>
+      <div class="pattern-name">Arquitetura Estrutural vs. Atores</div>
+      <div class="pattern-desc">O juiz captado por um lado (Moro para Bolsonaro) é substituído pelo juiz captado pelo outro lado (Moraes para o campo atual). O problema não é o nome — é o modelo institucional que permite essa captura. Enquanto o design permanece, o sistema produz o mesmo resultado com atores diferentes.</div>
+      <div class="pattern-ops">
+        <span class="pattern-op-tag">Moro → Moraes</span>
+        <span class="pattern-op-tag">Todas as Operações</span>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+</div>
+
+<!-- ════════════════════ TAB: MATRIX ════════════════════ -->
+<div id="tab-matrix" class="tab">
+<div class="content">
+
+  <div class="sec-title">Matriz Analítica — Vetores × Dimensões</div>
+
+  <table class="matrix fade-in">
+    <thead>
+      <tr>
+        <th>Dimensão</th>
+        <th>Golpe Clássico (Generais)</th>
+        <th>Golpe por Via Legal (INQ 4.781)</th>
+        <th>Efeito Combinado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="row-label">Constitucionalidade formal</td>
+        <td>Ruptura explícita — violação direta</td>
+        <td>Gravemente comprometida — vícios documentados</td>
+        <td>CF/88 violada pelos dois vetores</td>
+      </tr>
+      <tr>
+        <td class="row-label">Status atual</td>
+        <td>Derrotado — generais presos/condenados</td>
+        <td>Em curso — estruturalmente estável</td>
+        <td>Um falhou, o outro prosperou</td>
+      </tr>
+      <tr>
+        <td class="row-label">Legitimidade política</td>
+        <td>Perdida — tentativa documentada de ruptura</td>
+        <td>Formalmente preservada pela toga</td>
+        <td>Assimetria que favorece o Vetor II</td>
+      </tr>
+      <tr>
+        <td class="row-label">Reversibilidade</td>
+        <td>Alta — ruptura clássica tem solução jurídica</td>
+        <td>Baixa — erosão incremental sem ruptura formal</td>
+        <td>O mais perigoso é o mais difícil de reverter</td>
+      </tr>
+      <tr>
+        <td class="row-label">Impacto no devido processo</td>
+        <td>Indireto — via pressão política</td>
+        <td>Direto — investigador = julgador = vítima</td>
+        <td>Presos sem acusação formal; provas contaminadas</td>
+      </tr>
+      <tr>
+        <td class="row-label">Resposta internacional</td>
+        <td>Condenação generalizada (8J)</td>
+        <td>Dividida — democracias ocidentais ambíguas</td>
+        <td>Sem pressão efetiva sobre o Vetor II</td>
+      </tr>
+      <tr>
+        <td class="row-label">Papel da Vaza Toga</td>
+        <td>N/A — tentativa anterior às revelações</td>
+        <td>Expôs arquitetura do sistema paralelo de provas</td>
+        <td>Potencial nulidade de todo o processo do 8J</td>
+      </tr>
+      <tr>
+        <td class="row-label">Categorização comparada</td>
+        <td>Tentativa de golpe clássico (Levitsky)</td>
+        <td>Autocratização por via legal (Ginsburg & Huq)</td>
+        <td>Democracia iliberalizada por ambos os lados</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="sec-title">Status Probatório — O Que Está Estabelecido</div>
+
+  <table class="evidence-table fade-in">
+    <thead>
+      <tr>
+        <th>Afirmação</th>
+        <th>Evidência</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>INQ 4.781 viola sistema acusatório (art. 129-I CF)</td>
+        <td>Análise jurídica consolidada; único voto dissidente original</td>
+        <td><span class="ev-status ev-confirmed">Juridicamente estabelecido</span></td>
+      </tr>
+      <tr>
+        <td>Moraes acumulou investigador + acusador + julgador</td>
+        <td>Registro processual público</td>
+        <td><span class="ev-status ev-confirmed">Documentado</span></td>
+      </tr>
+      <tr>
+        <td>AEED produziu relatórios sem rito formal para INQ 4.781</td>
+        <td>Mensagens Vaza Toga — Folha/Greenwald ago/2024</td>
+        <td><span class="ev-status ev-confirmed">Documentado</span></td>
+      </tr>
+      <tr>
+        <td>Presos do 8J mantidos além do pedido da PGR para vasculhar redes</td>
+        <td>Mensagem de Kusahara — Vaza Toga</td>
+        <td><span class="ev-status ev-confirmed">Documentado</span></td>
+      </tr>
+      <tr>
+        <td>Plano Punhal Verde e Amarelo existiu e foi elaborado por Fernandes</td>
+        <td>Confissão em interrogatório STF 24/07/2025</td>
+        <td><span class="ev-status ev-confirmed">Admitido pelo autor</span></td>
+      </tr>
+      <tr>
+        <td>Plano Punhal foi compartilhado com Bolsonaro</td>
+        <td>PGR sustenta com base em circunstâncias</td>
+        <td><span class="ev-status ev-contested">Contestado — dúvida razoável</span></td>
+      </tr>
+      <tr>
+        <td>Moraes orientava seleção de alvos antes da produção de provas</td>
+        <td>Mensagens Vaza Toga</td>
+        <td><span class="ev-status ev-confirmed">Documentado</span></td>
+      </tr>
+      <tr>
+        <td>Moraes usou GestBio/TSE para identificar manifestantes</td>
+        <td>Acusação Civilization Works / Vaza Toga</td>
+        <td><span class="ev-status ev-alleged">Alegado — não negado formalmente</span></td>
+      </tr>
+      <tr>
+        <td>Brasil opera ao arrepio da CF desde março de 2019</td>
+        <td>Acumulação dos vícios acima</td>
+        <td><span class="ev-status ev-confirmed">Tecnicamente defensável</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+</div>
+
+<!-- ════════════════════ TAB: CONEXÕES ════════════════════ -->
+<div id="tab-conexoes" class="tab">
+<div class="content">
+
+  <div class="sec-title">Conexões com o Corpus — Documentos Relacionados</div>
+
+  <p style="font-size:12px; color:var(--text-dim); margin-bottom:32px; line-height:1.7;">
+    Este artefato é a síntese de uma rede de documentos produzidos ao longo de todo o projeto lawfare-timeline.
+    Cada ligação abaixo representa um fio do mesmo tecido analítico.
+  </p>
+
+  <div class="sec-title" style="margin-top:0">Documentos Diretamente Relacionados</div>
+  <div class="related-grid fade-in">
+
+    <div class="related-link" onclick="window.open('https://gosurf.site/inq4781','_blank')">
+      <div class="related-link-cat">INQ 4.781</div>
+      <div class="related-link-title">INQ 4.781 — Inquérito das Fake News</div>
+      <div class="related-link-desc">Mapa mental completo com atores, linha do tempo, vícios e rede de conexões do inquérito.</div>
+    </div>
+
+    <div class="related-link" onclick="window.open('https://gosurf.site/vaza-toga','_blank')">
+      <div class="related-link-cat">Vaza Toga</div>
+      <div class="related-link-title">VAZA TOGA — Dossiê Completo</div>
+      <div class="related-link-desc">Sistema paralelo de produção de provas: o gabinete do STF instrumentalizou o TSE para justificar decisões fora dos ritos processuais.</div>
+    </div>
+
+    <div class="related-link" onclick="window.open('https://gosurf.site/golpe-brasil-analise-evidencial','_blank')">
+      <div class="related-link-cat">Análise Evidencial</div>
+      <div class="related-link-title">Quem Deu o Golpe no Brasil?</div>
+      <div class="related-link-desc">Síntese baseada em documentos primários: dois vetores de ruptura simultâneos, instrumentos diferentes, assimetria de consequências.</div>
+    </div>
+
+    <div class="related-link" onclick="window.open('https://gosurf.site/duplo-padrao-judicial','_blank')">
+      <div class="related-link-cat">Seletividade Estrutural</div>
+      <div class="related-link-title">Duplo Padrão Judicial — Dossiê 2026</div>
+      <div class="related-link-desc">Documentação sistemática da seletividade estrutural do STF: dois pesos, duas medidas ao longo de 20 anos de decisões.</div>
+    </div>
+
+    <div class="related-link" onclick="window.open('https://gosurf.site/alem-da-toga','_blank')">
+      <div class="related-link-cat">Dossiê</div>
+      <div class="related-link-title">Além da Toga — Gilmar Mendes</div>
+      <div class="related-link-desc">90+ episódios documentando a conduta político-institucional do ministro mais antigo do STF.</div>
+    </div>
+
+    <div class="related-link" onclick="window.open('https://gosurf.site/controle-total-2026','_blank')">
+      <div class="related-link-cat">Vigilância</div>
+      <div class="related-link-title">Controle Total — Arquitetura do Poder 2025–2026</div>
+      <div class="related-link-desc">Monitoramento STF de formadores de opinião 24/7. O sistema de vigilância além do que é publicamente documentado.</div>
+    </div>
+
+    <div class="related-link" onclick="window.open('https://gosurf.site/operacao-silencio-digital','_blank')">
+      <div class="related-link-cat">Censura</div>
+      <div class="related-link-title">Operação Silêncio Digital</div>
+      <div class="related-link-desc">Regime de censura judicial 2020–2026: ordens sigilosas, bloqueios, e o @AlexandreFiles como evidência documentada.</div>
+    </div>
+
+    <div class="related-link" onclick="window.open('https://gosurf.site/brasil-estado-totalitario','_blank')">
+      <div class="related-link-cat">Análise Comparada</div>
+      <div class="related-link-title">Weaponized Legalism — Anatomia de um Estado Capturado</div>
+      <div class="related-link-desc">Como o Brasil se tornou um estado autoritário sem golpe: weaponized legalism, captura judicial, perseguição seletiva.</div>
+    </div>
+
+    <div class="related-link" onclick="window.open('https://gosurf.site/padroes-sistemicos-dashboard','_blank')">
+      <div class="related-link-cat">Framework</div>
+      <div class="related-link-title">Padrões Sistêmicos × Operações</div>
+      <div class="related-link-desc">Análise transversal de 10 padrões identificados em 25 anos de operações brasileiras — P1 a P10.</div>
+    </div>
+
+    <div class="related-link" onclick="window.open('https://gosurf.site/mapa-erosao-institucional-1990-2026','_blank')">
+      <div class="related-link-cat">Linha do Tempo</div>
+      <div class="related-link-title">Mapa de Erosão Institucional 1990–2026</div>
+      <div class="related-link-desc">A erosão constitucional no contexto histórico de 36 anos de Nova República — antes e depois do INQ 4.781.</div>
+    </div>
+
+    <div class="related-link" onclick="window.open('https://gosurf.site/satiagraha','_blank')">
+      <div class="related-link-cat">Precedente</div>
+      <div class="related-link-title">Operação Satiagraha — 2008</div>
+      <div class="related-link-desc">O precedente de 2008: Gilmar Mendes soltou Dantas em 48h. O padrão P3 (terminal chokepoint) na sua primeira manifestação documentada.</div>
+    </div>
+
+    <div class="related-link" onclick="window.open('https://gosurf.site/janela-2026','_blank')">
+      <div class="related-link-cat">Prospecção</div>
+      <div class="related-link-title">Janela 2026 — Cenário Estratégico</div>
+      <div class="related-link-desc">A janela eleitoral de outubro de 2026 como ponto de inflexão potencial para o ciclo que este artefato documenta.</div>
+    </div>
+
+  </div>
+
+  <div class="sources-section fade-in">
+    <div class="sec-title">Fontes Primárias</div>
+    <div class="source-item"><span class="src-num">01</span> Interrogatório de Mário Fernandes, STF 1ª Turma, 24/07/2025 — admissão de autoria do Punhal Verde e Amarelo</div>
+    <div class="source-item"><span class="src-num">02</span> Greenwald, G. / Serapião, F. — Folha de S.Paulo, agosto 2024 — mensagens Vaza Toga (6GB)</div>
+    <div class="source-item"><span class="src-num">03</span> Ágape, D. / Vieira, E. — Civilization Works / Shellenberger, M. — Vaza Toga 8J, agosto 2025</div>
+    <div class="source-item"><span class="src-num">04</span> Polícia Federal — Relatório Operação Contragolpe, novembro 2024 — apreensão do documento Punhal</div>
+    <div class="source-item"><span class="src-num">05</span> PGR Paulo Gonet — Denúncia formal contra Tagliaferro por violação de sigilo funcional, agosto 2025</div>
+    <div class="source-item"><span class="src-num">06</span> STF — Decisão referendando INQ 4.781 — 10×1, junho 2020 — Marco Aurélio Mello dissidente</div>
+    <div class="source-item"><span class="src-num">07</span> Poder360 — Alegações finais defesa Fernandes, dezembro 2025</div>
+    <div class="source-item"><span class="src-num">08</span> Senado Federal — Depoimento Tagliaferro à Comissão de Segurança Pública, setembro 2025</div>
+    <div class="source-item"><span class="src-num">09</span> Levitsky & Ziblatt — "Como as Democracias Morrem" (2018) — framework de autocratização gradual</div>
+    <div class="source-item"><span class="src-num">10</span> Ginsburg & Huq — "How to Save a Constitutional Democracy" (2018) — weaponized legalism</div>
+    <div class="source-item"><span class="src-num">11</span> Lei 15.402/2026 (Lei da Dosimetria) — DOU 08/05/2026 — promulgada por Alcolumbre após derrubada do veto Lula</div>
+    <div class="source-item"><span class="src-num">12</span> STF — ADIs ABI e PSOL-Rede, 08/05/2026 — distribuídas a AM por sorteio + prevenção no mesmo dia da promulgação</div>
+    <div class="source-item">
+      <span class="src-num">⚠</span>
+      <span style="color: var(--amber);">Este documento é de caráter analítico-jornalístico. Presunção de inocência aplicável onde indicado. Conteúdo publicado CC0 1.0 Universal — domínio público.</span>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ══ RELATED ARTIFACTS (CROSS-ECOSYSTEM) ══ -->
+<div style="padding: 4rem 60px; background: linear-gradient(180deg, var(--surface2) 0%, var(--bg) 100%); border-top: 1px solid var(--border); max-width: 1400px; margin: 0 auto;">
+  <div style="font-family: var(--mono); font-size: 11px; letter-spacing: .12em; color: var(--text-dim); text-transform: uppercase; margin-bottom: 2rem; display: flex; align-items: center; gap: 12px;">
+    Artefatos Relacionados <span style="flex:1; height:1px; background: var(--border);"></span>
+  </div>
+  <div class="related-grid" style="margin-top:0;">
+    <a href="/emaranhamento-operacoes.html" class="related-link">
+      <div class="related-link-cat" style="color:var(--red);">Ecosistema</div>
+      <div class="related-link-title">Emaranhamento de Operações 2026</div>
+      <div class="related-link-desc">O panorama do fluxo de capitais.</div>
+    </a>
+    <a href="/banco-master-compliance-zero.html" class="related-link">
+      <div class="related-link-cat" style="color:var(--red);">Crimes Financeiros</div>
+      <div class="related-link-title">Banco Master: Compliance Zero</div>
+      <div class="related-link-desc">Estruturas bancárias de captura.</div>
+    </a>
+    <a href="/trilogia-narco.html" class="related-link">
+      <div class="related-link-cat" style="color:var(--red);">Operação</div>
+      <div class="related-link-title">Trilogia Narco: Do Porto à Rede Social</div>
+      <div class="related-link-desc">Lavagem de capital transnacional.</div>
+    </a>
+    <a href="/naskar-gestao-ativos.html" class="related-link">
+      <div class="related-link-cat" style="color:var(--red);">Crimes Financeiros</div>
+      <div class="related-link-title">Naskar Gestão de Ativos</div>
+      <div class="related-link-desc">Operadores financeiros offshore.</div>
+    </a>
+  </div>
+</div>
+
+<div id="gotop" class="gotop" title="Voltar ao topo">↑</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <span>PARADOXO CONSTITUCIONAL · BRASIL 2019–2026 · lawfare-timeline.vercel.app</span>
+  <span>7 Vícios Documentados · Atualizado 08/05/2026 · CC0 1.0 Universal · Domínio Público</span>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelectorAll('.nav-btn');
+  
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const targetId = tab.getAttribute('data-target');
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        const offset = 70; // offset for sticky nav
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = targetEl.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+      }
+    });
+  });
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '-100px 0px -50% 0px',
+    threshold: 0
+  };
+
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        tabs.forEach(t => t.classList.remove('active'));
+        const activeTab = document.querySelector(`.nav-btn[data-target="${entry.target.id}"]`);
+        if (activeTab) {
+          activeTab.classList.add('active');
+          activeTab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.tab').forEach(sec => navObserver.observe(sec));
+
+  // ═══ INTERSECTION OBSERVER FOR FADE-INS ═══
+  const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 60);
+      }
+    });
+  }, { threshold: 0.05 });
+  
+  document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+
+  // Trigger fades that are visible immediately
+  setTimeout(() => {
+    document.querySelectorAll('.fade-in').forEach((el, i) => {
+      const rect = el.getBoundingClientRect();
+      if(rect.top < window.innerHeight) {
+        setTimeout(() => el.classList.add('visible'), i * 80);
+      }
+    });
+  }, 100);
+
+  const gotop = document.getElementById('gotop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      gotop.classList.add('show');
+    } else {
+      gotop.classList.remove('show');
+    }
+  });
+  gotop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').catch(function () {});
+}
+</script>
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

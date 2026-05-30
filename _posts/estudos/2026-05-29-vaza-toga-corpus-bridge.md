@@ -47,7 +47,7 @@ Ex-assessor Tagliaferro expôs canal informal de coordenação entre **TSE e STF
 ### INQ 4781
 
 - Relator: Alexandre de Moraes (investigador e investigado)
-- Base teórica: relatórios **NetLab** (financiamento OSF/Oak/Ford — ver [T-206 SPLC](/posts/2026-05-29-splc-modelo-brasil-corpus-bridge/))
+- Base teórica: relatórios **NetLab** (financiamento OSF/Oak/Ford — ver [T-206 SPLC](/posts/splc-modelo-brasil-corpus-bridge/))
 - Efeito: intimidação de plataformas · criminalização de jornalismo investigativo
 
 ### Perseguição transnacional
@@ -66,8 +66,8 @@ Senado enviou relatório a **EUA e organismos internacionais** — eixo [crise d
 
 | Dossiê | Eixo |
 | --- | --- |
-| [T-206 SPLC/NetLab](/posts/2026-05-29-splc-modelo-brasil-corpus-bridge/) | Financiamento acadêmico → STF |
-| [T-198 COAF × Moraes](/posts/2026-05-28-coaf-moraes-acumulacao-funcoes-dosimetria/) | Acumulação funções |
+| [T-206 SPLC/NetLab](/posts/splc-modelo-brasil-corpus-bridge/) | Financiamento acadêmico → STF |
+| [T-198 COAF × Moraes](/posts/coaf-moraes-acumulacao-funcoes-dosimetria/) | Acumulação funções |
 | [Paradoxo constitucional](/posts/paradoxo-constitucional/) | STF guardião vs. vetor |
 | [INQ 4781 estudo](/posts/inq4781/) | Entrada temática histórica |
 

@@ -8,6 +8,7 @@ image:
 article_id: 20180301_Descarte
 description: 2018-03-01-São Paulo, SP-lavagem de dinheiro-fraude fiscal
 tags: ['lavagem-de-dinheiro', 'lavagem-de-dinheiro', 'fraude-fiscal']
+permalink: /posts/2018-03-01-operacao-descarte/
 ---
 
 # Operação Descarte - Lavagem de dinheiro via empresas de reciclagem. - Lavagem De Dinheiro

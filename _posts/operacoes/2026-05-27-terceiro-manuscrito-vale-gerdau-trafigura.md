@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/bullseye.svg"
 tags: ["operacoes", "P08", "P11", "terceiro-manuscrito-vale-gerdau-trafigura", "operacao-rejeito"]
 categories: operacoes
-permalink: /posts/2026-05-27-terceiro-manuscrito-vale-gerdau-trafigura/
+permalink: /posts/terceiro-manuscrito-vale-gerdau-trafigura/
 id_corpus: "1571"
 corpus_unificado: true
 source_data: "lawfare-batch-rejeito-1552-1571.json"

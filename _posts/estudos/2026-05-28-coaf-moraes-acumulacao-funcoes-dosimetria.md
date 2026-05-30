@@ -77,7 +77,7 @@ COAF restrito (protege STF da CPI) → defesas PCC anulam provas
 | [Duplo Padrão Judicial](/posts/duplo-padrao-judicial/) | Autoferida COAF · seletividade 18 anos |
 | [Dosimetria da Impunidade](/posts/dosimetria-da-impunidade-lei-15402-ep72-tratamento-diferenciado/) | Lei 15.402/2026 · tratamento diferenciado |
 | [Carbono Oculto](/posts/carbono-oculto/) | Investigação anulada no PI por decisão COAF |
-| [CPI CO × PCC (T-195)](/posts/2026-05-28-cpi-crime-organizado-pcc-infiltracao-eleitoral/) | CPI ameaçada pela restrição COAF |
+| [CPI CO × PCC (T-195)](/posts/cpi-crime-organizado-pcc-infiltracao-eleitoral/) | CPI ameaçada pela restrição COAF |
 | [HC Seletivo](/posts/hc-seletivo-habeas-corpus-como-privilegio-processual/) | P06 — habeas como privilégio assimétrico |
 
 ## Padrões sistêmicos

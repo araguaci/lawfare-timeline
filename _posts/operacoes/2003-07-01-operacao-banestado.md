@@ -8,6 +8,7 @@ image:
 article_id: 20030701_Banestado
 description: 2003-07-01-Foz do Iguaçu, PR-evasão de divisas-lavagem de dinheiro
 tags: ['lavagem-de-dinheiro', 'evasao-de-divisas', 'lavagem-de-dinheiro']
+permalink: /posts/2003-07-01-operacao-banestado/
 ---
 
 # Operação Banestado - Investigação de evasão de divisas via contas CC5 no Banestado. - Lavagem De Dinheiro

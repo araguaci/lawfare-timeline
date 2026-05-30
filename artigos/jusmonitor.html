@@ -1,0 +1,1985 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Base pública de decisões judiciais brasileiras (soltura, progressão de regime, arquivamento) em casos violentos — dados verificáveis em portais oficiais.">
+<link rel="canonical" href="https://gosurf.site/jusmonitor">
+<title>JustiçaWatch Brasil — Conheça as decisões. Exija prestação de contas.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0a0b;
+  --bg-mid: #0e0e12;
+  --surface: #111114;
+  --surface-2: #18181d;
+  --border: rgba(255,255,255,0.07);
+  --border-strong: rgba(255,255,255,0.12);
+  --fg: #e8e8ea;
+  --fg-2: #9999a8;
+  --fg-3: #5c5c6e;
+  --accent: #e8372a;
+  --accent-dim: rgba(232,55,42,0.15);
+  --accent-2: #f97316;
+  --accent-3: #eab308;
+  --accent-calm: #2dd4bf;
+  --accent-calm-dim: rgba(45,212,191,0.12);
+  --green: #22c55e;
+  --green-dim: rgba(34,197,94,0.1);
+  --mono: 'IBM Plex Mono', monospace;
+  --sans: 'Syne', sans-serif;
+  --serif: 'Lora', serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background:
+    radial-gradient(1200px 600px at 12% -8%, rgba(232,55,42,0.07), transparent 55%),
+    radial-gradient(900px 500px at 88% 0%, rgba(45,212,191,0.06), transparent 50%),
+    linear-gradient(180deg, var(--bg-mid) 0%, var(--bg) 32%);
+  color: var(--fg);
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.icon {
+  width: 1.1em;
+  height: 1.1em;
+  display: inline-block;
+  vertical-align: -0.15em;
+  flex-shrink: 0;
+  opacity: 0.92;
+}
+.icon-stroke {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* NAV */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10,10,11,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: -0.01em;
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.nav-brand .dot {
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-calm));
+  border-radius: 50%;
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.85); }
+}
+
+.nav-links {
+  display: flex;
+  gap: 4px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--fg-2);
+  text-decoration: none;
+  font-size: 12px;
+  font-family: var(--mono);
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: all 0.15s;
+}
+.nav-links a:hover { color: var(--fg); background: var(--surface-2); }
+
+.nav-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--accent);
+  border: 1px solid rgba(232,55,42,0.3);
+  border-radius: 4px;
+  padding: 4px 10px;
+}
+
+/* HERO */
+.hero {
+  border-bottom: 1px solid var(--border);
+  padding: 64px 24px 48px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.hero-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.hero-label::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.hero h1 {
+  font-family: var(--sans);
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+
+.hero h1 em {
+  font-style: italic;
+  font-family: var(--serif);
+  color: var(--accent);
+}
+
+.hero-sub {
+  font-family: var(--serif);
+  font-size: 17px;
+  color: var(--fg-2);
+  max-width: 640px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 700px;
+}
+
+.stat-cell {
+  background: var(--surface);
+  padding: 16px 20px;
+}
+
+.stat-num {
+  font-family: var(--mono);
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--fg);
+  letter-spacing: -0.02em;
+  display: block;
+}
+
+.stat-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--fg-3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 2px;
+  display: block;
+}
+
+/* AVISO */
+.notice-bar {
+  background: rgba(234,179,8,0.08);
+  border: 1px solid rgba(234,179,8,0.2);
+  border-radius: 4px;
+  padding: 12px 16px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--accent-3);
+  max-width: 960px;
+  margin: 24px auto;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+/* DOC — índice + seções sempre visíveis */
+.tabs-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.tabs-nav {
+  position: sticky;
+  top: 52px;
+  z-index: 90;
+  background: rgba(10,10,11,0.88);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 28px;
+  padding: 8px 0 12px;
+}
+
+.tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--fg-2);
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.tab-btn:hover {
+  color: var(--fg);
+  border-color: var(--border-strong);
+  background: var(--surface-2);
+}
+.tab-btn:focus-visible {
+  outline: 2px solid var(--accent-calm);
+  outline-offset: 2px;
+}
+
+.tab-panel {
+  display: block;
+  scroll-margin-top: 96px;
+  padding-bottom: 8px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+}
+.tab-panel:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* SECTION TITLE */
+.section-title {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--fg-3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* TIMELINE CASES */
+.cases-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+/* CASE DETAIL — sempre visível (cópia total / ferramentas de leitura) */
+.case-detail {
+  display: block;
+  background: rgba(255,255,255,0.03);
+  border-top: 1px dashed var(--border-strong);
+  padding: 14px 20px 16px 92px;
+  font-family: var(--serif);
+  font-size: 13px;
+  color: var(--fg-2);
+  line-height: 1.65;
+  grid-column: 1 / -1;
+}
+
+.case-row {
+  background: var(--surface);
+  display: grid;
+  grid-template-columns: 72px 1fr auto;
+  gap: 0;
+  transition: background 0.1s;
+}
+.case-row:hover { background: var(--surface-2); }
+
+.case-year {
+  border-right: 1px solid var(--border);
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.case-year-num {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.case-year-tri {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--fg-3);
+  text-transform: uppercase;
+}
+
+.case-body {
+  padding: 16px 20px;
+  border-right: 1px solid var(--border);
+}
+
+.case-name {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--fg);
+  margin-bottom: 3px;
+}
+
+.case-desc {
+  font-family: var(--serif);
+  font-size: 13px;
+  color: var(--fg-2);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.case-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 3px;
+  border: 1px solid;
+}
+
+.tag-trafico { color: #f97316; border-color: rgba(249,115,22,0.3); background: rgba(249,115,22,0.08); }
+.tag-homicidio { color: #e8372a; border-color: rgba(232,55,42,0.3); background: rgba(232,55,42,0.08); }
+.tag-corrupcao { color: #a78bfa; border-color: rgba(167,139,250,0.3); background: rgba(167,139,250,0.08); }
+.tag-estupro { color: #ec4899; border-color: rgba(236,72,153,0.3); background: rgba(236,72,153,0.08); }
+.tag-latrocinio { color: #fb923c; border-color: rgba(251,146,60,0.3); background: rgba(251,146,60,0.08); }
+.tag-milicia { color: #94a3b8; border-color: rgba(148,163,184,0.3); background: rgba(148,163,184,0.08); }
+.tag-pcc { color: #ef4444; border-color: rgba(239,68,68,0.3); background: rgba(239,68,68,0.08); }
+.tag-foragido { color: #fbbf24; border-color: rgba(251,191,36,0.4); background: rgba(251,191,36,0.1); animation: blink 1.5s infinite; }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.case-meta {
+  padding: 16px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
+  min-width: 120px;
+}
+
+.case-tribunal {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--fg);
+  background: var(--surface-2);
+  padding: 3px 8px;
+  border-radius: 3px;
+  border: 1px solid var(--border-strong);
+}
+
+.case-tipo {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--fg-3);
+}
+
+.case-link a {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--fg-3);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--border-strong);
+  transition: color 0.1s;
+}
+.case-link a:hover { color: var(--fg-2); }
+
+/* RISK ALERTS */
+.alerts-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.alert-card {
+  border-radius: 6px;
+  padding: 20px;
+  border: 1px solid;
+  flex: 0 1 calc(33.333% - 8px);
+  min-width: 260px;
+}
+
+.alert-card.alto {
+  background: rgba(232,55,42,0.06);
+  border-color: rgba(232,55,42,0.2);
+}
+.alert-card.medio {
+  background: rgba(249,115,22,0.06);
+  border-color: rgba(249,115,22,0.2);
+}
+.alert-card.baixo {
+  background: rgba(234,179,8,0.05);
+  border-color: rgba(234,179,8,0.15);
+}
+
+.alert-level {
+  font-family: var(--mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.alto .alert-level { color: var(--accent); }
+.medio .alert-level { color: var(--accent-2); }
+.baixo .alert-level { color: var(--accent-3); }
+
+.alert-title {
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--fg);
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.alert-text {
+  font-family: var(--serif);
+  font-size: 13px;
+  color: var(--fg-2);
+  line-height: 1.6;
+}
+
+/* DATA TABLE */
+.data-table-wrap {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th {
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--fg-3);
+  padding: 10px 16px;
+  text-align: left;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.data-table td {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--fg-2);
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.data-table tr:last-child td { border-bottom: none; }
+.data-table tr:hover td { background: var(--surface-2); }
+
+.data-table td:first-child { color: var(--fg); font-weight: 500; }
+
+.num-up { color: var(--accent); }
+.num-note { color: var(--accent-3); }
+
+/* FONTES */
+.sources-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.source-item {
+  background: var(--surface);
+  padding: 14px 20px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.source-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--fg-3);
+  width: 24px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.source-body { flex: 1; }
+
+.source-name {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--fg);
+  margin-bottom: 2px;
+}
+
+.source-desc {
+  font-family: var(--serif);
+  font-size: 12px;
+  color: var(--fg-2);
+  margin-bottom: 4px;
+}
+
+.source-link a {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--fg-3);
+  text-decoration: none;
+  word-break: break-all;
+  border-bottom: 1px dotted var(--border-strong);
+}
+.source-link a:hover { color: var(--fg-2); }
+
+.source-badge {
+  font-family: var(--mono);
+  font-size: 9px;
+  padding: 2px 7px;
+  border-radius: 3px;
+  border: 1px solid var(--border-strong);
+  color: var(--fg-3);
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* METHODOLOGY */
+.method-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.method-card {
+  background: var(--surface);
+  padding: 20px;
+}
+
+.method-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--fg-3);
+  margin-bottom: 8px;
+}
+
+.method-title {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--fg);
+  margin-bottom: 8px;
+}
+
+.method-text {
+  font-family: var(--serif);
+  font-size: 13px;
+  color: var(--fg-2);
+  line-height: 1.6;
+}
+
+/* LEGEND */
+.legend-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.legend-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legend-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--fg-2);
+}
+
+/* FILTER BAR */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.filter-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--fg-3);
+}
+
+.filter-btn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--fg-2);
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+  border-color: var(--accent);
+  color: var(--fg);
+  background: var(--accent-dim);
+}
+
+/* ECOSISTEMA — fontes correlatas (públicas) */
+.ecosystem-strip {
+  max-width: 960px;
+  margin: 0 auto 40px;
+  padding: 0 24px;
+}
+.ecosystem-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--fg-3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 14px;
+}
+.ecosystem-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+@media (max-width: 640px) {
+  .ecosystem-grid { grid-template-columns: 1fr; }
+}
+.eco-card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 18px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, background 0.15s;
+}
+.eco-card:hover {
+  border-color: rgba(45,212,191,0.35);
+  background: var(--accent-calm-dim);
+}
+.eco-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--accent-calm);
+}
+.eco-card h3 {
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+.eco-card p {
+  font-family: var(--serif);
+  font-size: 13px;
+  color: var(--fg-2);
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
+.eco-card .eco-url {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--accent-calm);
+  word-break: break-all;
+}
+.eco-disclaimer {
+  margin-top: 12px;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--fg-3);
+  line-height: 1.5;
+}
+
+/* ARTEFATOS RELACIONADOS */
+.related-corpus {
+  max-width: 960px;
+  margin: 0 auto 48px;
+  padding: 0 24px;
+}
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+@media (max-width: 900px) {
+  .related-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .related-grid { grid-template-columns: 1fr; }
+}
+.related-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px 16px;
+  min-height: 112px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--fg);
+  transition: transform 0.12s, border-color 0.15s, box-shadow 0.15s;
+}
+.related-card:hover {
+  border-color: rgba(232,55,42,0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+.related-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.related-card-icon {
+  color: var(--accent-2);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.related-card-title {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+.related-card-desc {
+  font-family: var(--serif);
+  font-size: 12px;
+  color: var(--fg-2);
+  line-height: 1.5;
+  flex: 1;
+}
+.related-card-meta {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--fg-3);
+  margin-top: auto;
+}
+
+/* VOLTAR AO TOPO */
+.btn-gotop {
+  position: fixed;
+  right: 20px;
+  bottom: 22px;
+  z-index: 999;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid var(--border-strong);
+  background: rgba(17,17,20,0.92);
+  backdrop-filter: blur(10px);
+  color: var(--fg);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.45);
+  transition: transform 0.15s, border-color 0.15s, color 0.15s;
+}
+.btn-gotop:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-calm);
+  color: var(--accent-calm);
+}
+.btn-gotop:focus-visible {
+  outline: 2px solid var(--accent-calm);
+  outline-offset: 2px;
+}
+.btn-gotop[hidden] { display: none; }
+
+/* FOOTER */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 32px 24px;
+  max-width: 960px;
+  margin: 48px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-brand {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--fg-3);
+}
+
+.footer-cc {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--fg-3);
+}
+
+.footer-disclaimer {
+  font-family: var(--serif);
+  font-size: 12px;
+  color: var(--fg-3);
+  line-height: 1.6;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+/* EXPAND DETAIL — legado: detalhe já expandido por padrão */
+
+.detail-ref {
+  margin-top: 8px;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--fg-3);
+}
+
+.detail-ref a {
+  color: var(--fg-3);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--border-strong);
+}
+.detail-ref a:hover { color: var(--fg-2); }
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+  .case-row { grid-template-columns: 56px 1fr; }
+  .case-meta { display: none; }
+  .hero h1 { font-size: 28px; }
+  .case-detail { padding-left: 20px; }
+  nav { padding: 0 16px; }
+  .nav-badge { display: none; }
+  .hero-stats { grid-template-columns: repeat(3, 1fr); }
+  .method-grid { grid-template-columns: 1fr; }
+  .legend-grid { grid-template-columns: repeat(2, 1fr); }
+  .alert-card { flex: 0 1 100%; min-width: unset; }
+}
+@media (max-width: 900px) and (min-width: 641px) {
+  .method-grid { grid-template-columns: repeat(2, 1fr); }
+  .legend-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-stats { grid-template-columns: repeat(3, 1fr); }
+}
+</style>
+</head>
+<body>
+<a href="#conteudo-principal" class="visually-hidden">Pular para o conteúdo principal</a>
+
+<nav>
+  <a href="../index.html" class="nav-brand">
+    <span class="dot"></span>
+    <svg class="icon icon-stroke" style="width:18px;height:18px;color:var(--accent-calm)" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3L4 9v12h5v-7h6v7h5V9l-8-6z"/><path d="M9 21V12h6v9"/></svg>
+    JustiçaWatch Brasil
+  </a>
+  <ul class="nav-links">
+    <li><a href="operacao-hydra-fintech-laundry.html">Op. Hydra</a></li>
+    <li><a href="banco-master-compliance-zero.html">Banco Master</a></li>
+    <li><a href="operacao-sem-desconto.html">Sem Desconto</a></li>
+    <li><a href="dossie-juridico-nulidades-8jan.html">Nulidades 8jan</a></li>
+    <li><a href="carbono_oculto.html">Carbono Oculto</a></li>
+  </ul>
+  <div class="nav-badge" title="Fontes primárias verificáveis">
+    <svg class="icon icon-stroke" style="width:14px;height:14px" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    DADOS PÚBLICOS
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-label">
+    <svg class="icon icon-stroke" style="width:16px;height:16px;color:var(--accent)" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v6l4 2"/></svg>
+    Base de dados pública · 2005–2025
+  </div>
+  <h1>Conheça as decisões.<br><em>Exija prestação de contas.</em></h1>
+  <p class="hero-sub">
+    Banco de dados de decisões judiciais brasileiras que resultaram em soltura, progressão de regime ou arquivamento de processos contra réus condenados ou investigados por crimes violentos. Todos os dados são públicos e verificáveis em portais oficiais.
+  </p>
+  <div class="hero-stats">
+    <div class="stat-cell">
+      <span class="stat-num">9.166</span>
+      <span class="stat-label">HC traficantes STJ (2024)</span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-num">577</span>
+      <span class="stat-label">HC tráfico STF (2024)</span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-num">42%</span>
+      <span class="stat-label">taxa reincidência BR</span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-num">834k</span>
+      <span class="stat-label">população carcerária</span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-num">21+</span>
+      <span class="stat-label">foragidos via HC Marco Aurélio (2020)</span>
+    </div>
+  </div>
+</section>
+
+<div class="notice-bar" style="padding: 12px 24px; max-width: 960px; margin: 16px auto;">
+  <svg class="icon icon-stroke" style="width:18px;height:18px;color:var(--accent-3);flex-shrink:0" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg>
+  <span>
+    <strong>AVISO DE DADOS:</strong> Esta base apresenta apenas registros verificáveis em fontes primárias públicas (STF, STJ, CNJ, BNMP, portais de tribunais). A apresentação de casos <em>não implica culpa ou erro</em> do magistrado — registra o impacto público de decisões judiciais. Alguns casos resultaram em soltura de inocentes, o que está devidamente anotado. Erros ou correções: abra issue no repositório público.
+  </span>
+</div>
+
+<div class="tabs-wrapper" style="padding-top: 24px;" id="conteudo-principal">
+
+  <p class="doc-hint" style="font-family:var(--serif);font-size:13px;color:var(--fg-2);margin-bottom:16px;line-height:1.6;max-width:720px;">
+    <strong style="color:var(--fg)">Leitura linear:</strong> todas as seções abaixo estão expandidas no mesmo documento (incluindo detalhes de cada caso), para cópia com Ctrl+C, impressão e ingestão por ferramentas de IA — sem alternar abas.
+  </p>
+
+  <div class="tabs-nav" role="navigation" aria-label="Índice da página">
+    <a class="tab-btn" href="#section-casos">
+      <svg class="icon icon-stroke" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h13"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M3 6h.01"/><path d="M3 12h.01"/><path d="M3 18h.01"/></svg>
+      Casos
+    </a>
+    <a class="tab-btn" href="#section-alertas">
+      <svg class="icon icon-stroke" viewBox="0 0 24 24" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+      Alertas
+    </a>
+    <a class="tab-btn" href="#section-dados">
+      <svg class="icon icon-stroke" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+      Dados
+    </a>
+    <a class="tab-btn" href="#section-legenda">
+      <svg class="icon icon-stroke" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      Legenda
+    </a>
+    <a class="tab-btn" href="#section-fontes">
+      <svg class="icon icon-stroke" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+      Fontes
+    </a>
+    <a class="tab-btn" href="#section-metodologia">
+      <svg class="icon icon-stroke" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+      Metodologia
+    </a>
+  </div>
+
+  <!-- SEÇÃO: CASOS -->
+  <section class="tab-panel" id="section-casos" aria-labelledby="heading-casos">
+
+    <h2 class="section-title" id="heading-casos">Linha do tempo — Decisões de alto impacto (2005–2025)</h2>
+
+    <div class="filter-bar">
+      <span class="filter-label">Filtrar:</span>
+      <button class="filter-btn active" onclick="filterCases('all', this)">Todos</button>
+      <button class="filter-btn" onclick="filterCases('trafico', this)">Tráfico</button>
+      <button class="filter-btn" onclick="filterCases('homicidio', this)">Homicídio</button>
+      <button class="filter-btn" onclick="filterCases('corrupcao', this)">Corrupção</button>
+      <button class="filter-btn" onclick="filterCases('estupro', this)">Crimes Sexuais</button>
+      <button class="filter-btn" onclick="filterCases('latrocinio', this)">Latrocínio</button>
+      <button class="filter-btn" onclick="filterCases('foragido', this)">⚠ Foragidos</button>
+    </div>
+
+    <div class="cases-grid" id="cases-grid">
+
+      <!-- 2006 -->
+      <div class="case-row" data-tags="homicidio estupro latrocinio">
+        <div class="case-year">
+          <span class="case-year-num">2006</span>
+          <span class="case-year-tri">STF</span>
+        </div>
+        <div class="case-body">
+          <div class="case-name">Progressão de regime — Crimes hediondos</div>
+          <div class="case-desc">HC 82.959-7: STF declara inconstitucional obrigatoriedade de regime fechado integral para crimes hediondos (estupro, latrocínio, tortura, terrorismo). Julgado a pedido de condenado por atentado violento ao pudor contra três crianças.</div>
+          <div class="case-tags">
+            <span class="tag tag-estupro">estupro</span>
+            <span class="tag tag-homicidio">crimes hediondos</span>
+            <span class="tag tag-latrocinio">latrocínio</span>
+          </div>
+        </div>
+        <div class="case-meta">
+          <span class="case-tribunal">STF</span>
+          <span class="case-tipo">HC coletivo</span>
+          <span class="case-link"><a href="https://portal.stf.jus.br/processos/detalhe.asp?incidente=2057741" target="_blank" rel="noopener">→ STF Portal</a></span>
+        </div>
+        <div class="case-detail">
+          Decisão por 6 votos a 5. O STF entendeu que a obrigatoriedade do regime fechado conflitava com o princípio da individualização da pena (Art. 5º, XLVI, CF). A partir dessa decisão, autores de estupro, latrocínio e outros crimes hediondos passaram a ter acesso à progressão de regime. Impacto sistêmico: dezenas de milhares de condenados beneficiados nos anos subsequentes.
+          <div class="detail-ref">Ref: HC 82.959-7/SP — Rel. Min. Marco Aurélio | <a href="https://www.jusbrasil.com.br/artigos/a-jurisprudencia-do-stf-e-do-stj-sobre-progressao-de-regime-em-crimes-hediondos/121942017" target="_blank" rel="noopener">Análise Jusbrasil</a></div>
+        </div>
+      </div>
+
+      <!-- 2009 -->
+      <div class="case-row" data-tags="corrupcao">
+        <div class="case-year">
+          <span class="case-year-num">2009</span>
+          <span class="case-year-tri">STF</span>
+        </div>
+        <div class="case-body">
+          <div class="case-name">Mudança — Trânsito em julgado para início de pena</div>
+          <div class="case-desc">Ao julgar HC de fazendeiro, STF reverte entendimento de 1988 e decide que réu só pode ser preso após exaurimento de todos os recursos. Virou ferramenta de protelatório para corruptos e réus de colarinho branco.</div>
+          <div class="case-tags">
+            <span class="tag tag-corrupcao">corrupção</span>
+            <span class="tag tag-corrupcao">impunidade sistêmica</span>
+          </div>
+        </div>
+        <div class="case-meta">
+          <span class="case-tribunal">STF</span>
+          <span class="case-tipo">Mudança jurisprudencial</span>
+        </div>
+        <div class="case-detail">
+          A decisão favoreceu especialmente réus com condições de contratar advogados para recorrer indefinidamente. Na prática, tornou quase impossível a prisão imediata de condenados de alta renda. Revertida em 2016 e novamente em 2019.
+          <div class="detail-ref">Ref: HC 84.078/MG — Rel. Min. Eros Grau</div>
+        </div>
+      </div>
+
+      <!-- 2019 -->
+      <div class="case-row" data-tags="corrupcao">
+        <div class="case-year">
+          <span class="case-year-num">2019</span>
+          <span class="case-year-tri">STF</span>
+        </div>
+        <div class="case-body">
+          <div class="case-name">Retorno ao trânsito em julgado — Reversão Lava Jato</div>
+          <div class="case-desc">ADCs 43, 44 e 54: STF reverte novamente o entendimento, proibindo prisão após segunda instância. Impacto imediato: soltura de condenados pela Operação Lava Jato, incluindo Lula e outros políticos e empresários.</div>
+          <div class="case-tags">
+            <span class="tag tag-corrupcao">corrupção</span>
+            <span class="tag tag-corrupcao">Lava Jato</span>
+          </div>
+        </div>
+        <div class="case-meta">
+          <span class="case-tribunal">STF</span>
+          <span class="case-tipo">ADC plenário</span>
+          <span class="case-link"><a href="https://portal.stf.jus.br/processos/detalhe.asp?incidente=5765901" target="_blank" rel="noopener">→ STF Portal</a></span>
+        </div>
+        <div class="case-detail">
+          CNJ estimou que até 4.895 presos poderiam ser soltos com a decisão — não os 169 mil que circularam nas redes. A decisão beneficiou diretamente Lula da Silva, então preso em Curitiba desde 2018. Debates sobre motivação política da decisão permanecem sem conclusão institucional.
+          <div class="detail-ref">Ref: ADC 43 — Rel. Min. Marco Aurélio | <a href="https://www.aosfatos.org/noticias/nao-e-verdade-que-decisao-do-stf-sobre-segunda-instancia-pode-beneficiar-1697-mil-presos/" target="_blank" rel="noopener">Fact-check Aos Fatos</a></div>
+        </div>
+      </div>
+
+      <!-- 2020 André do Rap -->
+      <div class="case-row" data-tags="trafico pcc foragido">
+        <div class="case-year">
+          <span class="case-year-num">2020</span>
+          <span class="case-year-tri">STF</span>
+        </div>
+        <div class="case-body">
+          <div class="case-name">André do Rap — Líder do PCC solto e foragido</div>
+          <div class="case-desc">André Oliveira Macedo, condenado a 25 anos por tráfico internacional, liderança do PCC. Solto por decisão monocrática do Min. Marco Aurélio com base em prazo de prisão preventiva. Decisão revertida, mas criminoso já havia fugido.</div>
+          <div class="case-tags">
+            <span class="tag tag-trafico">tráfico internacional</span>
+            <span class="tag tag-pcc">PCC</span>
+            <span class="tag tag-foragido">⚠ FORAGIDO</span>
+          </div>
+        </div>
+        <div class="case-meta">
+          <span class="case-tribunal">STF</span>
+          <span class="case-tipo">HC monocrático</span>
+          <span class="case-link"><a href="https://www2.senado.leg.br/bdsf/bitstream/handle/id/589212/noticia.html" target="_blank" rel="noopener">→ Senado</a></span>
+        </div>
+        <div class="case-detail">
+          Decisão concedida em outubro de 2020. Revogada por Luiz Fux em seguida e referendada pelo plenário. Porém André do Rap já havia sido solto e fugido. Passados 5 anos, continua foragido e é procurado pela Interpol. O caso expôs o "intervalo de fuga" entre liminares monocráticas e análise colegiada.
+          <div class="detail-ref">Ref: HC 191.836 — Min. Marco Aurélio | <a href="https://www.gazetadopovo.com.br/vida-e-cidadania/decisoes-judiciais-recentes-devolvem-criminosos-as-ruas-e-comprometem-seguranca-publica/" target="_blank" rel="noopener">→ Gazeta do Povo</a></div>
+        </div>
+      </div>
+
+      <!-- 2020 — 21 foragidos Marco Aurélio -->
+      <div class="case-row" data-tags="trafico homicidio milicia foragido">
+        <div class="case-year">
+          <span class="case-year-num">2020</span>
+          <span class="case-year-tri">STF</span>
+        </div>
+        <div class="case-body">
+          <div class="case-name">21 criminosos foragidos — liminares Marco Aurélio</div>
+          <div class="case-desc">Levantamento do Estadão: ao menos 21 réus obtiveram liminares de HC com Min. Marco Aurélio, fugiram antes de o colegiado reverter a decisão. Crimes: tráfico internacional, estelionato, homicídio qualificado, extorsão e formação de milícia.</div>
+          <div class="case-tags">
+            <span class="tag tag-trafico">tráfico</span>
+            <span class="tag tag-homicidio">homicídio</span>
+            <span class="tag tag-milicia">milícia</span>
+            <span class="tag tag-foragido">⚠ FORAGIDOS</span>
+          </div>
+        </div>
+        <div class="case-meta">
+          <span class="case-tribunal">STF</span>
+          <span class="case-tipo">HCs monocráticos</span>
+          <span class="case-link"><a href="https://www2.senado.leg.br/bdsf/bitstream/handle/id/589212/noticia.html" target="_blank" rel="noopener">→ Estadão/Senado</a></span>
+        </div>
+        <div class="case-detail">
+          Análise de 225 liminares do ministro concedidas em 2020 revelou padrão sistemático: em 15 casos similares ao de André do Rap, o colegiado reverteu a decisão, mas os réus já haviam fugido. A defesa de um deles alegou que, "em tese, a apresentação do traficante é uma opção".
+          <div class="detail-ref">Ref: Investigação Estadão, out/2020 | <a href="https://www2.senado.leg.br/bdsf/bitstream/handle/id/589212/noticia.html" target="_blank" rel="noopener">→ Senado/BDSF</a></div>
+        </div>
+      </div>
+
+      <!-- 2020 — HC coletivo COVID -->
+      <div class="case-row" data-tags="trafico homicidio">
+        <div class="case-year">
+          <span class="case-year-num">2020</span>
+          <span class="case-year-tri">STJ</span>
+        </div>
+        <div class="case-body">
+          <div class="case-name">HC Coletivo COVID-19 — Soltura nacional por fiança</div>
+          <div class="case-desc">STJ concede HC coletivo para soltar todos os presos com liberdade provisória condicionada a fiança não paga, em razão da pandemia. Efeito nacional imediato, incluindo réus por crimes violentos pendentes de condenação definitiva.</div>
+          <div class="case-tags">
+            <span class="tag tag-trafico">tráfico</span>
+            <span class="tag tag-homicidio">crimes violentos</span>
+          </div>
+        </div>
+        <div class="case-meta">
+          <span class="case-tribunal">STJ</span>
+          <span class="case-tipo">HC coletivo nacional</span>
+          <span class="case-link"><a href="https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/14102020-STJ-confirma-decisao-que-mandou-soltar-todos-os-presos-do-pais-que-tiveram-liberdade-condicionada-a-fianca.aspx" target="_blank" rel="noopener">→ STJ oficial</a></span>
+        </div>
+        <div class="case-detail">
+          Baseado na Recomendação 62/2020 do CNJ. Decisão de Min. Sebastião Reis Júnior estendida para todo o país após pedido da DPU. Impacto real de liberações não foi sistematicamente monitorado. Critica: ausência de mecanismo de acompanhamento pós-soltura.
+          <div class="detail-ref">Ref: HC coletivo — 3ª Seção STJ, out/2020 | <a href="https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/14102020-STJ-confirma-decisao-que-mandou-soltar-todos-os-presos-do-pais-que-tiveram-liberdade-condicionada-a-fianca.aspx" target="_blank" rel="noopener">→ STJ Portal</a></div>
+        </div>
+      </div>
+
+      <!-- 2021 — Lázaro Barbosa -->
+      <div class="case-row" data-tags="homicidio estupro">
+        <div class="case-year">
+          <span class="case-year-num">2021</span>
+          <span class="case-year-tri">TJ-GO</span>
+        </div>
+        <div class="case-body">
+          <div class="case-name">Lázaro Barbosa — Progressão ignorando laudo de periculosidade</div>
+          <div class="case-desc">Lázaro Barbosa, com histórico de homicídios, crimes sexuais, fuga e recaptura, e laudo psiquiátrico indicando periculosidade, recebeu progressão para regime semiaberto por "bom comportamento". Evadiu-se e cometeu série de novos crimes.</div>
+          <div class="case-tags">
+            <span class="tag tag-homicidio">homicídio múltiplo</span>
+            <span class="tag tag-estupro">estupro</span>
+          </div>
+        </div>
+        <div class="case-meta">
+          <span class="case-tribunal">TJ-GO</span>
+          <span class="case-tipo">Progressão de regime</span>
+          <span class="case-link"><a href="https://www.gazetadopovo.com.br/vida-e-cidadania/beneficios-excessivos-da-justica-a-criminosos-estimulam-crimes-cada-vez-mais-barbaros/" target="_blank" rel="noopener">→ Gazeta do Povo</a></span>
+        </div>
+        <div class="case-detail">
+          Após a progressão, Lázaro dizimou família inteira no DF/GO, estuprou mulher, sequestrou outra e matou moradores rurais. Força-tarefa com mais de 200 agentes o procurou por 20 dias até ser morto. Junta médica psiquiátrica havia emitido parecer contrário à progressão, que foi ignorado.
+          <div class="detail-ref">Ref: Relatório SESP-GO/2021 | <a href="https://www.gazetadopovo.com.br/vida-e-cidadania/beneficios-excessivos-da-justica-a-criminosos-estimulam-crimes-cada-vez-mais-barbaros/" target="_blank" rel="noopener">→ Gazeta do Povo (análise)</a></div>
+        </div>
+      </div>
+
+      <!-- 2022 — STJ busca pessoal -->
+      <div class="case-row" data-tags="trafico">
+        <div class="case-year">
+          <span class="case-year-num">2022</span>
+          <span class="case-year-tri">STJ</span>
+        </div>
+        <div class="case-body">
+          <div class="case-name">Anulação por busca pessoal — 122 porções de droga devolvidas</div>
+          <div class="case-desc">STJ anula condenação de homem preso com 72 porções de cocaína + 50 de maconha + balança digital, sob argumento que abordagem policial foi irregular por "atitude suspeita". Réu colocado em liberdade e drogas inutilizadas.</div>
+          <div class="case-tags">
+            <span class="tag tag-trafico">tráfico</span>
+          </div>
+        </div>
+        <div class="case-meta">
+          <span class="case-tribunal">STJ</span>
+          <span class="case-tipo">Nulidade processual</span>
+          <span class="case-link"><a href="https://www.gazetadopovo.com.br/vida-e-cidadania/decisoes-judiciais-recentes-devolvem-criminosos-as-ruas-e-comprometem-seguranca-publica/" target="_blank" rel="noopener">→ Gazeta do Povo</a></span>
+        </div>
+        <div class="case-detail">
+          Decisão de maio/2022 criou precedente proibindo busca pessoal baseada apenas em "atitude suspeita" ou denúncia anônima sem diligências prévias. Embora tecnicamente fundamentada em vedação ao racismo estrutural, o caso específico resultou em soltura de traficante com drogas em quantidade comercial.
+          <div class="detail-ref">Ref: Recursos Repetitivos STJ, tema 1.119 | <a href="https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias.aspx" target="_blank" rel="noopener">→ STJ Comunicação</a></div>
+        </div>
+      </div>
+
+      <!-- 2023 — Anulação 695kg cocaína -->
+      <div class="case-row" data-tags="trafico">
+        <div class="case-year">
+          <span class="case-year-num">2023</span>
+          <span class="case-year-tri">STF</span>
+        </div>
+        <div class="case-body">
+          <div class="case-name">Anulação de apreensão de 695 kg de cocaína</div>
+          <div class="case-desc">STF anula apreensão de quase 700 quilos de cocaína por vício processual. Droga inutilizada, réus beneficiados. Caso citado pelo Senado como símbolo do garantismo que enfraquece combate ao narcotráfico.</div>
+          <div class="case-tags">
+            <span class="tag tag-trafico">tráfico internacional</span>
+          </div>
+        </div>
+        <div class="case-meta">
+          <span class="case-tribunal">STF</span>
+          <span class="case-tipo">Nulidade de prova</span>
+          <span class="case-link"><a href="https://www.gazetadopovo.com.br/republica/dossie-de-senador-diz-que-stj-concedeu-9-mil-habeas-corpus-a-traficantes-em-2024/" target="_blank" rel="noopener">→ Gazeta do Povo</a></span>
+        </div>
+        <div class="case-detail">
+          Um dos casos mais citados no dossiê do senador Jorge Seif. A decisão foi fundamentada em vício no procedimento de busca e apreensão. Para críticos, demonstra como nulidades técnicas — e não a análise do mérito — têm anulado grandes apreensões.
+          <div class="detail-ref">Ref: Dossiê "Ascensão do Narcoestado", Sen. Jorge Seif, 2025</div>
+        </div>
+      </div>
+
+      <!-- 2024 — HC tráfico STJ -->
+      <div class="case-row" data-tags="trafico">
+        <div class="case-year">
+          <span class="case-year-num">2024</span>
+          <span class="case-year-tri">STJ</span>
+        </div>
+        <div class="case-body">
+          <div class="case-name">9.166 habeas corpus concedidos a traficantes — em 1 ano</div>
+          <div class="case-desc">Levantamento oficial: STJ concedeu 9.166 HC a condenados ou investigados por tráfico apenas em 2024 — metade de todas as decisões favoráveis do tribunal nesse tipo de ação no ano. Inclui casos com apreensões de 200, 300 e 700 kg usando "tráfico privilegiado".</div>
+          <div class="case-tags">
+            <span class="tag tag-trafico">tráfico</span>
+            <span class="tag tag-pcc">facções</span>
+          </div>
+        </div>
+        <div class="case-meta">
+          <span class="case-tribunal">STJ</span>
+          <span class="case-tipo">Levantamento anual</span>
+          <span class="case-link"><a href="https://www.gazetadopovo.com.br/republica/dossie-de-senador-diz-que-stj-concedeu-9-mil-habeas-corpus-a-traficantes-em-2024/" target="_blank" rel="noopener">→ Gazeta do Povo</a></span>
+        </div>
+        <div class="case-detail">
+          Dados compilados pelo Sen. Jorge Seif (PL-SC) após 8 meses de pesquisa e mais de 400 horas de trabalho sobre 5 anos de decisões judiciais. No mesmo período, STF concedeu 577 HC por tráfico — sendo o crime mais recorrente entre os beneficiados. A aplicação do "tráfico privilegiado" — originalmente para réus primários sem envolvimento com facções — foi estendida a casos com centenas de quilos de droga.
+          <div class="detail-ref">Ref: Dossiê "Ascensão do Narcoestado do Brasil" | <a href="https://radio93fm.com.br/amp/dossie-aponta-que-stj-concedeu-9-mil-habeas-corpus-a-traficantes-em-2024/" target="_blank" rel="noopener">→ Portal 93 FM</a></div>
+        </div>
+      </div>
+
+      <!-- 2025 — STJ estupro erro de proibição -->
+      <div class="case-row" data-tags="estupro">
+        <div class="case-year">
+          <span class="case-year-num">2025</span>
+          <span class="case-year-tri">STJ</span>
+        </div>
+        <div class="case-body">
+          <div class="case-name">Estupro de vulnerável — afastado por "erro de proibição"</div>
+          <div class="case-desc">5ª Turma do STJ afasta condenação por estupro de vulnerável (Art. 217-A CP) de homem de 19 anos que manteve relação com menina de 13. Súmula 593 — vulnerabilidade absoluta de menores de 14 — foi contornada com argumento de "erro de proibição".</div>
+          <div class="case-tags">
+            <span class="tag tag-estupro">estupro vulnerável</span>
+          </div>
+        </div>
+        <div class="case-meta">
+          <span class="case-tribunal">STJ</span>
+          <span class="case-tipo">Distinguishing jurisprudencial</span>
+          <span class="case-link"><a href="https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/14122025-Crime-da-113-Sul--racismo-reverso-e-atenuante-da-confissao-tiveram-grande-repercussao-no-direito-penal.aspx" target="_blank" rel="noopener">→ STJ oficial</a></span>
+        </div>
+        <div class="case-detail">
+          A decisão foi classificada como "distinguishing" — mecanismo que permite afastar a aplicação de súmula em casos excepcionais. Críticos alertam que cria precedente para abrandamento de proteção absoluta a menores de 14 anos. Caso resultou no nascimento de um filho da relação.
+          <div class="detail-ref">Ref: STJ, 5ª Turma, out/2025 | <a href="https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/14122025-Crime-da-113-Sul--racismo-reverso-e-atenuante-da-confissao-tiveram-grande-repercussao-no-direito-penal.aspx" target="_blank" rel="noopener">→ STJ Noticias 2025</a></div>
+        </div>
+      </div>
+
+    </div><!-- /cases-grid -->
+
+    <div class="notice-bar" style="margin: 0 0 32px 0;">
+      <svg class="icon icon-stroke" style="width:16px;height:16px;color:var(--accent-calm);flex-shrink:0" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+      <span>Detalhes expandidos em cada caso abaixo (referências e links). Lista não exaustiva — apenas registros com documentação pública verificável.</span>
+    </div>
+
+  </section>
+
+  <!-- SEÇÃO: ALERTAS -->
+  <section class="tab-panel" id="section-alertas" aria-labelledby="heading-alertas">
+
+    <h2 class="section-title" id="heading-alertas">Alertas de risco sistêmico identificados</h2>
+
+    <div class="alerts-grid">
+
+      <div class="alert-card alto">
+        <div class="alert-level">🔴 Risco Alto</div>
+        <div class="alert-title">Intervalo de Fuga — Liminares Monocráticas</div>
+        <div class="alert-text">O espaço temporal entre a concessão de uma liminar monocrática e a análise colegiada cria uma janela sistemática para fuga. Ao menos 21 réus explorou esse intervalo em 2020. Sem mecanismo de monitoramento, o padrão se repete.</div>
+      </div>
+
+      <div class="alert-card alto">
+        <div class="alert-level">🔴 Risco Alto</div>
+        <div class="alert-title">Tráfico Privilegiado Desfigurado</div>
+        <div class="alert-text">Instituto criado para réus primários sem envolvimento com facções está sendo aplicado em apreensões de 200–700 kg de drogas. A distorção de um benefício legítimo serve como instrumento de soltura para grandes traficantes.</div>
+      </div>
+
+      <div class="alert-card alto">
+        <div class="alert-level">🔴 Risco Alto</div>
+        <div class="alert-title">Ausência de Banco Nacional de Solturas</div>
+        <div class="alert-text">Não existe banco de dados integrado rastreando soltura, reincidência e impacto de decisões judiciais. O BNMP 3.0 (CNJ) cobre mandados, mas não correlaciona com dados de reincidência. Proposta de criação do Banco Nacional de Solturas ainda não aprovada no Congresso.</div>
+      </div>
+
+      <div class="alert-card medio">
+        <div class="alert-level">🟠 Risco Médio</div>
+        <div class="alert-title">Nulidades Processuais como Instrumento Sistemático</div>
+        <div class="alert-text">Vícios procedimentais (busca pessoal sem "fundadas razões", prazo de revisão de preventiva) estão sendo usados para anular condenações e apreensões com base no mérito da prova — mesmo quando a materialidade é incontestável.</div>
+      </div>
+
+      <div class="alert-card medio">
+        <div class="alert-level">🟠 Risco Médio</div>
+        <div class="alert-title">Laudos de Periculosidade Ignorados</div>
+        <div class="alert-text">Caso Lázaro Barbosa demonstra que laudos psiquiátricos indicando periculosidade podem ser desconsiderados em progressões de regime. Não há protocolo obrigatório de revisão multidisciplinar antes de progressão para crimes violentos com histórico de reincidência.</div>
+      </div>
+
+      <div class="alert-card medio">
+        <div class="alert-level">🟠 Risco Médio</div>
+        <div class="alert-title">Pendência: ADPF 635 — Restrições a Operações Policiais</div>
+        <div class="alert-text">Decisão do STF limita operações policiais em mais de 1.700 comunidades no RJ. Impacto na capacidade de repressão ao tráfico e libertação de territórios dominados permanece monitorado por pesquisadores de segurança pública.</div>
+      </div>
+
+      <div class="alert-card baixo">
+        <div class="alert-level">🟡 Atenção</div>
+        <div class="alert-title">Súmula 593 sob Pressão — Estupro de Vulnerável</div>
+        <div class="alert-text">Aplicação do "distinguishing" para afastar proteção absoluta de menores de 14 anos cria risco de erosão jurisprudencial. Caso isolado em 2025 pode se tornar precedente replicável em instâncias inferiores.</div>
+      </div>
+
+      <div class="alert-card baixo">
+        <div class="alert-level">🟡 Atenção</div>
+        <div class="alert-title">Conflito de Interesses — Ministros e Advocacia Criminal</div>
+        <div class="alert-text">Ausência de vedação expressa a vínculos entre ministros de tribunais superiores e escritórios de advocacia especializados em defesa criminal de alto perfil. Proposta legislativa ainda sem votação.</div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SEÇÃO: DADOS -->
+  <section class="tab-panel" id="section-dados" aria-labelledby="heading-dados">
+
+    <h2 class="section-title" id="heading-dados">Dados agregados — fontes oficiais</h2>
+
+    <div class="data-table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Indicador</th>
+            <th>Valor</th>
+            <th>Ano</th>
+            <th>Fonte</th>
+            <th>Observação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HC concedidos a traficantes — STJ</td>
+            <td class="num-up">9.166</td>
+            <td>2024</td>
+            <td>Dossiê Sen. Seif / STJ</td>
+            <td class="num-note">50% de todos os HCs do tribunal</td>
+          </tr>
+          <tr>
+            <td>HC concedidos a traficantes — STF</td>
+            <td class="num-up">577</td>
+            <td>2024</td>
+            <td>Dossiê Sen. Seif / STF</td>
+            <td class="num-note">Crime mais frequente nos HCs</td>
+          </tr>
+          <tr>
+            <td>População carcerária total</td>
+            <td>~834.400</td>
+            <td>2024</td>
+            <td>BNMP / CNJ</td>
+            <td>3ª maior do mundo</td>
+          </tr>
+          <tr>
+            <td>Taxa de reincidência — Brasil</td>
+            <td class="num-up">~42%</td>
+            <td>2023</td>
+            <td>IPEA / DEPEN</td>
+            <td class="num-note">Dentro de 5 anos da soltura</td>
+          </tr>
+          <tr>
+            <td>Foragidos com mandado ativo (BNMP)</td>
+            <td class="num-up">N/D</td>
+            <td>2024</td>
+            <td>BNMP 3.0 — CNJ</td>
+            <td class="num-note">Dado não desagregado publicamente</td>
+          </tr>
+          <tr>
+            <td>Presos: crimes de tráfico e drogas</td>
+            <td>~30%</td>
+            <td>2023</td>
+            <td>INFOPEN / DEPEN</td>
+            <td>Maior categoria da população carcerária</td>
+          </tr>
+          <tr>
+            <td>Presos sem condenação definitiva</td>
+            <td class="num-up">~40%</td>
+            <td>2023</td>
+            <td>CNJ / INFOPEN</td>
+            <td class="num-note">Presos provisórios</td>
+          </tr>
+          <tr>
+            <td>Crimes hediondos — progressão disponível desde</td>
+            <td>2006</td>
+            <td>—</td>
+            <td>HC 82.959-7 STF</td>
+            <td>Inclui estupro, latrocínio, tortura</td>
+          </tr>
+          <tr>
+            <td>Comunidades com restrição policial ADPF 635</td>
+            <td class="num-up">1.700+</td>
+            <td>2024</td>
+            <td>STF / Gov RJ</td>
+            <td class="num-note">Apenas Rio de Janeiro</td>
+          </tr>
+          <tr>
+            <td>HCs concedidos STJ (total, todas categorias)</td>
+            <td>~18.332</td>
+            <td>2024</td>
+            <td>Cálculo: tráfico = 50%</td>
+            <td class="num-note">Estimativa a partir do dado de tráfico</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-title" style="margin-top: 32px;">Portais de acesso público</div>
+
+    <div class="method-grid">
+      <div class="method-card">
+        <div class="method-num">Portal 01</div>
+        <div class="method-title">BNMP 3.0 — CNJ</div>
+        <div class="method-text">Banco Nacional de Monitoramento de Prisões. Consulta de mandados de prisão e alvarás de soltura em tempo real. Resolução CNJ n.577/2024.</div>
+        <div style="margin-top: 8px; font-family: var(--mono); font-size: 10px;"><a href="https://bnmp.cnj.jus.br" target="_blank" rel="noopener" style="color: var(--fg-3); text-decoration: none; border-bottom: 1px dotted var(--border-strong);">bnmp.cnj.jus.br →</a></div>
+      </div>
+      <div class="method-card">
+        <div class="method-num">Portal 02</div>
+        <div class="method-title">Portal STF</div>
+        <div class="method-text">Consulta de processos, decisões e acórdãos do Supremo Tribunal Federal. Inclui votos, pautas e transmissões de sessões.</div>
+        <div style="margin-top: 8px; font-family: var(--mono); font-size: 10px;"><a href="https://portal.stf.jus.br" target="_blank" rel="noopener" style="color: var(--fg-3); text-decoration: none; border-bottom: 1px dotted var(--border-strong);">portal.stf.jus.br →</a></div>
+      </div>
+      <div class="method-card">
+        <div class="method-num">Portal 03</div>
+        <div class="method-title">Portal STJ</div>
+        <div class="method-text">Jurisprudência, HCs e acórdãos do Superior Tribunal de Justiça. Consulta por número de processo, ministro relator e tipo de crime.</div>
+        <div style="margin-top: 8px; font-family: var(--mono); font-size: 10px;"><a href="https://www.stj.jus.br" target="_blank" rel="noopener" style="color: var(--fg-3); text-decoration: none; border-bottom: 1px dotted var(--border-strong);">stj.jus.br →</a></div>
+      </div>
+      <div class="method-card">
+        <div class="method-num">Portal 04</div>
+        <div class="method-title">INFOPEN / DEPEN</div>
+        <div class="method-text">Dados do sistema penitenciário nacional: população carcerária, crimes, perfil demográfico e reincidência. Atualização semestral.</div>
+        <div style="margin-top: 8px; font-family: var(--mono); font-size: 10px;"><a href="https://www.gov.br/senappen/pt-br/servicos/sisdepen" target="_blank" rel="noopener" style="color: var(--fg-3); text-decoration: none; border-bottom: 1px dotted var(--border-strong);">gov.br/senappen →</a></div>
+      </div>
+      <div class="method-card">
+        <div class="method-num">Portal 05</div>
+        <div class="method-title">CNJ — Painéis de Justiça</div>
+        <div class="method-text">Estatísticas do Poder Judiciário: processos, movimentações, tempo de tramitação e produtividade por tribunal.</div>
+        <div style="margin-top: 8px; font-family: var(--mono); font-size: 10px;"><a href="https://paineis.cnj.jus.br" target="_blank" rel="noopener" style="color: var(--fg-3); text-decoration: none; border-bottom: 1px dotted var(--border-strong);">paineis.cnj.jus.br →</a></div>
+      </div>
+      <div class="method-card">
+        <div class="method-num">Portal 06</div>
+        <div class="method-title">Jusbrasil — Jurisprudência</div>
+        <div class="method-text">Agregador público de jurisprudência de todos os tribunais brasileiros. Busca por número de HC, crime, réu ou relator.</div>
+        <div style="margin-top: 8px; font-family: var(--mono); font-size: 10px;"><a href="https://www.jusbrasil.com.br/jurisprudencia" target="_blank" rel="noopener" style="color: var(--fg-3); text-decoration: none; border-bottom: 1px dotted var(--border-strong);">jusbrasil.com.br →</a></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- SEÇÃO: LEGENDA -->
+  <section class="tab-panel" id="section-legenda" aria-labelledby="heading-legenda">
+
+    <h2 class="section-title" id="heading-legenda">Legenda — Categorias de crimes e alertas</h2>
+
+    <div class="legend-grid">
+      <div class="legend-item">
+        <div class="legend-dot" style="background: #f97316;"></div>
+        <span class="legend-label">Tráfico de drogas</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background: #e8372a;"></div>
+        <span class="legend-label">Homicídio / Crime hediondo</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background: #a78bfa;"></div>
+        <span class="legend-label">Corrupção / Improbidade</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background: #ec4899;"></div>
+        <span class="legend-label">Estupro / Crime sexual</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background: #fb923c;"></div>
+        <span class="legend-label">Latrocínio / Roubo seguido de morte</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background: #94a3b8;"></div>
+        <span class="legend-label">Milícia / Crime organizado</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background: #ef4444;"></div>
+        <span class="legend-label">PCC / CV / Facção criminosa</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background: #fbbf24; animation: blink 1.5s infinite;"></div>
+        <span class="legend-label">⚠ Foragido — mandado ativo</span>
+      </div>
+    </div>
+
+    <h2 class="section-title" style="margin-top: 32px;" id="heading-tipos-decisao">Tipos de decisão monitorados</h2>
+
+    <div class="method-grid">
+      <div class="method-card">
+        <div class="method-num">TIPO 01</div>
+        <div class="method-title">Habeas Corpus (HC)</div>
+        <div class="method-text">Ação constitucional para garantir liberdade de locomoção. Pode ser monocrático (decisão individual de ministro) ou colegiado (turma ou plenário). O intervalo entre os dois tipos é a principal janela de fuga identificada.</div>
+      </div>
+      <div class="method-card">
+        <div class="method-num">TIPO 02</div>
+        <div class="method-title">Progressão de Regime</div>
+        <div class="method-text">Avanço do regime fechado para semiaberto e aberto. Possível para crimes hediondos desde 2006. Pode desconsiderar laudos de periculosidade se o critério formal (bom comportamento) for atendido.</div>
+      </div>
+      <div class="method-card">
+        <div class="method-num">TIPO 03</div>
+        <div class="method-title">Nulidade Processual</div>
+        <div class="method-text">Anulação de prova ou processo por vício de forma. Inclui: busca pessoal irregular, invasão domiciliar sem mandado, prazo de revisão de preventiva. Pode anular condenações mesmo com prova material robusta.</div>
+      </div>
+      <div class="method-card">
+        <div class="method-num">TIPO 04</div>
+        <div class="method-title">Mudança Jurisprudencial</div>
+        <div class="method-text">Alteração do entendimento do tribunal sobre regra legal. Exemplo: quatro mudanças de posição do STF sobre prisão após segunda instância em 15 anos. Cada virada impacta centenas ou milhares de casos em curso.</div>
+      </div>
+      <div class="method-card">
+        <div class="method-num">TIPO 05</div>
+        <div class="method-title">Tráfico Privilegiado</div>
+        <div class="method-text">Art. 33, §4º da Lei de Drogas: redução de 1/6 a 2/3 da pena para réus primários, de bons antecedentes e sem envolvimento com organizações criminosas. Distorcido quando aplicado a grandes quantidades de droga ou líderes de facções.</div>
+      </div>
+      <div class="method-card">
+        <div class="method-num">TIPO 06</div>
+        <div class="method-title">Liberdade Provisória / Fiança</div>
+        <div class="method-text">Permissão para aguardar julgamento em liberdade. Pode incluir medidas cautelares alternativas (tornozeleira, comparecimento periódico). Audiência de custódia, criada para verificar abusos, pode resultar em soltura imediata em flagrante.</div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- SEÇÃO: FONTES -->
+  <section class="tab-panel" id="section-fontes" aria-labelledby="heading-fontes">
+
+    <h2 class="section-title" id="heading-fontes">Fontes primárias e secundárias verificáveis</h2>
+
+    <ul class="sources-list">
+      <li class="source-item">
+        <span class="source-num">01</span>
+        <div class="source-body">
+          <div class="source-name">CNJ — Banco Nacional de Monitoramento de Prisões (BNMP 3.0)</div>
+          <div class="source-desc">Sistema oficial de mandados de prisão e alvarás de soltura do Poder Judiciário brasileiro. Resolução CNJ n.577/2024.</div>
+          <div class="source-link"><a href="https://bnmp.cnj.jus.br" target="_blank" rel="noopener">https://bnmp.cnj.jus.br</a></div>
+        </div>
+        <span class="source-badge">OFICIAL</span>
+      </li>
+      <li class="source-item">
+        <span class="source-num">02</span>
+        <div class="source-body">
+          <div class="source-name">STF — Portal de Processos</div>
+          <div class="source-desc">Consulta pública de todos os processos, habeas corpus, decisões e acórdãos do Supremo Tribunal Federal.</div>
+          <div class="source-link"><a href="https://portal.stf.jus.br" target="_blank" rel="noopener">https://portal.stf.jus.br</a></div>
+        </div>
+        <span class="source-badge">OFICIAL</span>
+      </li>
+      <li class="source-item">
+        <span class="source-num">03</span>
+        <div class="source-body">
+          <div class="source-name">STJ — Jurisprudência e Comunicados</div>
+          <div class="source-desc">Portal oficial do Superior Tribunal de Justiça com decisões, notícias e relatórios anuais de julgamentos de maior repercussão.</div>
+          <div class="source-link"><a href="https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias.aspx" target="_blank" rel="noopener">https://www.stj.jus.br/Comunicacao/Noticias</a></div>
+        </div>
+        <span class="source-badge">OFICIAL</span>
+      </li>
+      <li class="source-item">
+        <span class="source-num">04</span>
+        <div class="source-body">
+          <div class="source-name">SENAPPEN / DEPEN — INFOPEN</div>
+          <div class="source-desc">Sistema Nacional de Informações Penitenciárias. Dados de população carcerária, reincidência, perfil dos presos e estabelecimentos penais.</div>
+          <div class="source-link"><a href="https://www.gov.br/senappen/pt-br/servicos/sisdepen" target="_blank" rel="noopener">https://www.gov.br/senappen/pt-br/servicos/sisdepen</a></div>
+        </div>
+        <span class="source-badge">OFICIAL</span>
+      </li>
+      <li class="source-item">
+        <span class="source-num">05</span>
+        <div class="source-body">
+          <div class="source-name">CNJ — Painéis Estatísticos do Judiciário</div>
+          <div class="source-desc">Painel interativo com dados de processos, produtividade e movimentação por tribunal, comarca e instância.</div>
+          <div class="source-link"><a href="https://paineis.cnj.jus.br" target="_blank" rel="noopener">https://paineis.cnj.jus.br</a></div>
+        </div>
+        <span class="source-badge">OFICIAL</span>
+      </li>
+      <li class="source-item">
+        <span class="source-num">06</span>
+        <div class="source-body">
+          <div class="source-name">Dossiê "A Ascensão do Narcoestado do Brasil" — Sen. Jorge Seif</div>
+          <div class="source-desc">Compilação de 5 anos de decisões judiciais sobre narcotráfico. 8 meses de pesquisa, 400h de trabalho. Dados de HC concedidos em 2024 por tipo de crime.</div>
+          <div class="source-link"><a href="https://www.gazetadopovo.com.br/republica/dossie-de-senador-diz-que-stj-concedeu-9-mil-habeas-corpus-a-traficantes-em-2024/" target="_blank" rel="noopener">Cobertura Gazeta do Povo (out/2025)</a></div>
+        </div>
+        <span class="source-badge">PARLAMENTAR</span>
+      </li>
+      <li class="source-item">
+        <span class="source-num">07</span>
+        <div class="source-body">
+          <div class="source-name">IPEA — Atlas da Violência</div>
+          <div class="source-desc">Instituto de Pesquisa Econômica Aplicada. Dados de homicídios, violência e perfil da criminalidade no Brasil. Publicação anual.</div>
+          <div class="source-link"><a href="https://www.ipea.gov.br/atlasviolencia" target="_blank" rel="noopener">https://www.ipea.gov.br/atlasviolencia</a></div>
+        </div>
+        <span class="source-badge">PESQUISA</span>
+      </li>
+      <li class="source-item">
+        <span class="source-num">08</span>
+        <div class="source-body">
+          <div class="source-name">Aos Fatos — Verificação de dados judiciais</div>
+          <div class="source-desc">Agência de fact-checking. Verificação do impacto real de decisões do STF/STJ, incluindo checagem do número real de presos afetados pelas ADCs 43/44/54.</div>
+          <div class="source-link"><a href="https://www.aosfatos.org" target="_blank" rel="noopener">https://www.aosfatos.org</a></div>
+        </div>
+        <span class="source-badge">JORNALISMO</span>
+      </li>
+      <li class="source-item">
+        <span class="source-num">09</span>
+        <div class="source-body">
+          <div class="source-name">Gazeta do Povo — Cobertura investigativa judicial</div>
+          <div class="source-desc">Série de reportagens sobre garantismo penal, impacto de decisões judiciais na segurança pública e análise de casos emblemáticos.</div>
+          <div class="source-link"><a href="https://www.gazetadopovo.com.br/vida-e-cidadania/decisoes-judiciais-recentes-devolvem-criminosos-as-ruas-e-comprometem-seguranca-publica/" target="_blank" rel="noopener">Série segurança pública (2023)</a></div>
+        </div>
+        <span class="source-badge">JORNALISMO</span>
+      </li>
+      <li class="source-item">
+        <span class="source-num">10</span>
+        <div class="source-body">
+          <div class="source-name">Jusbrasil — Jurisprudência consolidada</div>
+          <div class="source-desc">Agregador público de inteiros teores e ementas de acórdãos de todos os tribunais brasileiros. Busca por HC, réu, crime ou relator.</div>
+          <div class="source-link"><a href="https://www.jusbrasil.com.br/jurisprudencia" target="_blank" rel="noopener">https://www.jusbrasil.com.br/jurisprudencia</a></div>
+        </div>
+        <span class="source-badge">AGREGADOR</span>
+      </li>
+      <li class="source-item">
+        <span class="source-num">11</span>
+        <div class="source-body">
+          <div class="source-name">Lawfare Timeline (independente)</div>
+          <div class="source-desc">Site em <strong>lawfare-timeline.vercel.app</strong> com linha do tempo e artigos sobre lawfare e instituições. Conteúdo de terceiros; usar como contexto e cruzar com fontes primárias dos tribunais.</div>
+          <div class="source-link"><a href="https://lawfare-timeline.vercel.app/" target="_blank" rel="noopener noreferrer">https://lawfare-timeline.vercel.app/</a></div>
+        </div>
+        <span class="source-badge">CORRELATO</span>
+      </li>
+      <li class="source-item">
+        <span class="source-num">12</span>
+        <div class="source-body">
+          <div class="source-name">Observatório Civil BR (independente)</div>
+          <div class="source-desc">Painel em <strong>observatorio-civil-br.vercel.app</strong> com indicadores e textos atribuídos a dados públicos (violência, transparência, crime organizado etc.). Não é órgão estatal; verificar cada afirmação nas fontes originais citadas.</div>
+          <div class="source-link"><a href="https://observatorio-civil-br.vercel.app/" target="_blank" rel="noopener noreferrer">https://observatorio-civil-br.vercel.app/</a></div>
+        </div>
+        <span class="source-badge">CORRELATO</span>
+      </li>
+    </ul>
+
+  </section>
+
+  <!-- SEÇÃO: METODOLOGIA -->
+  <section class="tab-panel" id="section-metodologia" aria-labelledby="heading-metodologia">
+
+    <h2 class="section-title" id="heading-metodologia">Como esta base de dados é construída</h2>
+
+    <div class="method-grid">
+      <div class="method-card">
+        <div class="method-num">01 — Critérios de inclusão</div>
+        <div class="method-title">O que entra nesta base</div>
+        <div class="method-text">Casos com: (a) decisão judicial identificável por número de processo público; (b) réu condenado ou investigado por crime violento ou hediondo; (c) resultado que implica soltura, progressão de regime, anulação de prova ou arquivamento; (d) repercussão documentada em fonte primária pública.</div>
+      </div>
+      <div class="method-card">
+        <div class="method-num">02 — Fontes aceitas</div>
+        <div class="method-title">Hierarquia de fontes</div>
+        <div class="method-text">Prioridade: (1) Portal oficial do tribunal (STF, STJ, TJ, TRF); (2) BNMP/CNJ; (3) INFOPEN/SENAPPEN; (4) Jornalismo verificável com número de processo ou processo público rastreável. Fontes sem número de processo são indicadas como "referência secundária".</div>
+      </div>
+      <div class="method-card">
+        <div class="method-num">03 — O que esta base NÃO implica</div>
+        <div class="method-title">Limites e disclaimer</div>
+        <div class="method-text">A presença de um caso nesta base NÃO implica: (a) erro ou má-fé do magistrado; (b) que a decisão foi errada em termos jurídicos; (c) que o réu era culpado. Alguns casos representam correção de erros judiciários. Todos são anotados com contexto.</div>
+      </div>
+      <div class="method-card">
+        <div class="method-num">04 — Atualização</div>
+        <div class="method-title">Ciclo e responsabilidade</div>
+        <div class="method-text">Base atualizada manualmente com verificação de fontes primárias. Erros podem ser reportados via repositório público. Dados de séries históricas (INFOPEN, CNJ) dependem de publicação oficial e podem ter defasagem de 6 a 12 meses.</div>
+      </div>
+      <div class="method-card">
+        <div class="method-num">05 — Licença</div>
+        <div class="method-title">Domínio Público — CC0 1.0</div>
+        <div class="method-text">Todo o conteúdo desta base é publicado sob CC0 1.0 Universal (sem direitos reservados). Cópia, redistribuição, modificação e uso comercial são livres e não requerem atribuição. Dados públicos pertencem ao público.</div>
+      </div>
+      <div class="method-card">
+        <div class="method-num">06 — Base legal</div>
+        <div class="method-title">Transparência pública</div>
+        <div class="method-text">Dados exibidos são públicos por força da Lei de Acesso à Informação (Lei 12.527/2011), da Lei de Execução Penal, do princípio de publicidade dos atos judiciais (Art. 93, IX, CF/88) e da Lei n.11.343/2006 (dados de tráfico). Nenhuma informação privada ou sigilosa é exibida.</div>
+      </div>
+    </div>
+
+    <div class="notice-bar" style="margin: 0 0 32px 0; border-color: rgba(34,197,94,0.2); background: rgba(34,197,94,0.05); color: #86efac;">
+      <svg class="icon icon-stroke" style="width:16px;height:16px;flex-shrink:0" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+      <span>
+        <strong>Garantia de neutralidade:</strong> Esta base cobre todos os tribunais, todos os perfis de réu e todos os espectros políticos. O objetivo é transparência sobre o impacto de decisões judiciais — não julgamento político de magistrados ou partidos.
+      </span>
+    </div>
+
+  </section>
+
+</div><!-- /tabs-wrapper -->
+
+<section class="ecosystem-strip" aria-label="Projetos correlatos com dados públicos">
+  <div class="ecosystem-head">
+    <svg class="icon icon-stroke" style="width:16px;height:16px;color:var(--accent-calm)" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 000 20 14.5 14.5 0 000-20"/><path d="M2 12h20"/></svg>
+    Ecossistema público (correlatos)
+  </div>
+  <div class="ecosystem-grid">
+    <a class="eco-card" href="https://lawfare-timeline.vercel.app/" target="_blank" rel="noopener noreferrer">
+      <div class="eco-card-icon" aria-hidden="true">
+        <svg class="icon icon-stroke" width="22" height="22" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+      </div>
+      <div>
+        <h3>Lawfare Timeline</h3>
+        <p>Linha do tempo e estudos sobre lawfare, instituições e operações — organização independente do conteúdo exibido em <strong>lawfare-timeline.vercel.app</strong>. Use como vitrine complementar de contexto; cruze sempre com fontes primárias dos tribunais.</p>
+        <span class="eco-url">https://lawfare-timeline.vercel.app/</span>
+      </div>
+    </a>
+    <a class="eco-card" href="https://observatorio-civil-br.vercel.app/" target="_blank" rel="noopener noreferrer">
+      <div class="eco-card-icon" aria-hidden="true">
+        <svg class="icon icon-stroke" width="22" height="22" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+      </div>
+      <div>
+        <h3>Observatório Civil BR</h3>
+        <p>Painel civil com indicadores e diagnóstico reunidos a partir de <strong>referências públicas</strong> (violência, transparência, crime organizado etc.) em <strong>observatorio-civil-br.vercel.app</strong>. Não substitui portais oficiais; serve de quadro analítico paralelo.</p>
+        <span class="eco-url">https://observatorio-civil-br.vercel.app/</span>
+      </div>
+    </a>
+  </div>
+  <p class="eco-disclaimer">Transparência: JustiçaWatch não controla esses sites. Integração aqui é meramente informativa; a titularidade e a metodologia de cada projeto são dos respectivos autores. Sempre verifique decisões em STF, STJ, CNJ e na imprensa com processo identificável.</p>
+</section>
+
+<section class="related-corpus" aria-label="Artefatos relacionados">
+  <h2 class="section-title" style="margin-bottom:18px;">
+    <svg class="icon icon-stroke" style="width:15px;height:15px;vertical-align:-2px;color:var(--accent-2)" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+    Artefatos relacionados no corpus
+  </h2>
+  <div class="related-grid">
+    <a class="related-card" href="padroes-sistemicos-dashboard.html">
+      <div class="related-card-top">
+        <svg class="icon icon-stroke related-card-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+        <span class="related-card-title">Padrões sistêmicos P1–P10</span>
+      </div>
+      <p class="related-card-desc">Dashboard mestre da matriz de indulgência e nexos entre operações anticorrupção.</p>
+      <span class="related-card-meta">padroes-sistemicos-dashboard</span>
+    </a>
+    <a class="related-card" href="duplo-padrao-judicial.html">
+      <div class="related-card-top">
+        <svg class="icon icon-stroke related-card-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M12 22v-8"/><path d="m3 3 7 7"/><path d="m21 3-7 7"/></svg>
+        <span class="related-card-title">Duplo padrão judicial</span>
+      </div>
+      <p class="related-card-desc">Assimetria documentada na aplicação da justiça e do decoro parlamentar.</p>
+      <span class="related-card-meta">duplo-padrao-judicial</span>
+    </a>
+    <a class="related-card" href="pcc-cv-ameaca-nacional-dashboard.html">
+      <div class="related-card-top">
+        <svg class="icon icon-stroke related-card-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span class="related-card-title">PCC-CV · Intel dashboard</span>
+      </div>
+      <p class="related-card-desc">crime organizado, governança criminal e dados com âncoras acadêmicas públicas.</p>
+      <span class="related-card-meta">pcc-cv-ameaca-nacional-dashboard</span>
+    </a>
+    <a class="related-card" href="operacao-sem-desconto.html">
+      <div class="related-card-top">
+        <svg class="icon icon-stroke related-card-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"/><path d="M14 2v6h6"/></svg>
+        <span class="related-card-title">Operação Sem Desconto</span>
+      </div>
+      <p class="related-card-desc">Timeline lawfare e entradas corpus com mirroring e resiliência documental.</p>
+      <span class="related-card-meta">operacao-sem-desconto</span>
+    </a>
+    <a class="related-card" href="assimetria-punitiva.html">
+      <div class="related-card-top">
+        <svg class="icon icon-stroke related-card-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 00-6 6v7a2 2 0 002 2h2"/><path d="M16 21v-2a4 4 0 00-4-4H8"/><circle cx="12" cy="9" r="2"/></svg>
+        <span class="related-card-title">Assimetria punitiva pandêmica</span>
+      </div>
+      <p class="related-card-desc">P3 invertido — seletividade entre corrupção e desvios de políticas públicas.</p>
+      <span class="related-card-meta">assimetria-punitiva</span>
+    </a>
+    <a class="related-card" href="exploracao_vulnerabilidade_brasil.html">
+      <div class="related-card-top">
+        <svg class="icon icon-stroke related-card-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 2.83 2.83"/><path d="m16.24 16.24 2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="m4.93 19.07 2.83-2.83"/><path d="m16.24 7.76 2.83-2.83"/></svg>
+        <span class="related-card-title">Exploração &amp; tráfico de pessoas</span>
+      </div>
+      <p class="related-card-desc">Mapa integrado de vulnerabilidade, rotas e resposta estatal — dados públicos.</p>
+      <span class="related-card-meta">exploracao-vulnerabilidade-brasil</span>
+    </a>
+  </div>
+</section>
+
+<button type="button" class="btn-gotop" id="btn-gotop" hidden aria-label="Voltar ao topo da página">
+  <svg class="icon icon-stroke" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+
+<footer>
+  <div class="footer-row">
+    <span class="footer-brand">JustiçaWatch Brasil · Base de Dados Pública · 2005–2025</span>
+    <span class="footer-cc">CC0 1.0 — Domínio Público — Sem Direitos Reservados</span>
+  </div>
+  <div class="footer-row">
+    <span class="footer-brand" style="font-size: 10px; color: var(--fg-3);">
+      Inspirado em CourtWatch.us (Orange County, FL) · Construído sobre registros públicos brasileiros
+    </span>
+    <span class="footer-brand" style="font-size: 10px; color: var(--fg-3);">
+      Fontes: STF · STJ · CNJ · BNMP · SENAPPEN · IPEA · Lei 12.527/2011
+    </span>
+  </div>
+  <div class="footer-row">
+    <span class="footer-brand" style="font-size: 10px; color: var(--fg-3);">
+      Correlatos (público): <a href="https://lawfare-timeline.vercel.app/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-calm); text-decoration: none; border-bottom: 1px dotted rgba(45,212,191,0.4);">Lawfare Timeline</a>
+      · <a href="https://observatorio-civil-br.vercel.app/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-calm); text-decoration: none; border-bottom: 1px dotted rgba(45,212,191,0.4);">Observatório Civil BR</a>
+    </span>
+  </div>
+  <div class="footer-disclaimer">
+    <strong>Aviso legal:</strong> Esta base de dados apresenta informações factuais de registros públicos e não constitui aconselhamento jurídico, imputação de culpa a qualquer magistrado ou pessoa, nem julgamento editorial sobre decisões judiciais. Todos os dados são verificáveis nas fontes primárias indicadas. A presença de um caso nesta base não implica qualquer avaliação sobre a legalidade ou mérito da decisão — apenas documenta seu impacto público registrado. Erros e correções: repositório público.
+  </div>
+</footer>
+
+<script>
+function filterCases(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  const rows = document.querySelectorAll('.case-row');
+  rows.forEach(row => {
+    if (cat === 'all') {
+      row.style.display = '';
+    } else {
+      const tags = row.getAttribute('data-tags') || '';
+      row.style.display = tags.includes(cat) ? '' : 'none';
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const gotop = document.getElementById('btn-gotop');
+  const toggleGotop = () => {
+    if (!gotop) return;
+    gotop.hidden = window.scrollY < 400;
+  };
+  toggleGotop();
+  window.addEventListener('scroll', toggleGotop, { passive: true });
+  gotop?.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  const nums = document.querySelectorAll('.stat-num');
+  nums.forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(8px)';
+    el.style.transition = 'opacity 0.4s, transform 0.4s';
+  });
+  setTimeout(() => {
+    nums.forEach((el, i) => {
+      setTimeout(() => {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      }, i * 80);
+    });
+  }, 200);
+});
+</script>
+
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

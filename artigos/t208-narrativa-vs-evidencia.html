@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T-208 · O Espelho Partido — Narrativa Pública vs. Evidência Forense</title>
+<meta name="description" content="A tese da captura do Estado chegou ao mainstream. O suporte probatório já existia há anos. Este dossiê mapeia o gap entre narrativa e documentação forense.">
+<meta property="og:title" content="T-208 · O Espelho Partido">
+<meta property="og:description" content="Schüler, Jeffs e o que o lawfare-timeline já documentava antes deles.">
+<meta property="og:locale" content="pt_BR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Syne:wght@400;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:     #08080a;
+  --bg2:    #0f0f13;
+  --bg3:    #161619;
+  --bg4:    #1e1e24;
+  --border: #252530;
+  --border2:#363644;
+  --text:   #ebe9e2;
+  --text2:  #98968e;
+  --text3:  #555460;
+  --text4:  #35343c;
+  --red:    #e03e3e;
+  --red2:   #ff7070;
+  --amber:  #d4890e;
+  --amber2: #f0ad3c;
+  --green:  #1fb86a;
+  --green2: #44d486;
+  --blue:   #3a78f0;
+  --blue2:  #7aabff;
+  --purple: #8858d8;
+  --purple2:#b090ff;
+  --cyan:   #18b8cc;
+  --dim:    rgba(255,255,255,0.04);
+  --accent: var(--amber);
+  --accent2: var(--amber2);
+  --font-display: 'Syne', sans-serif;
+  --font-serif:   'DM Serif Display', serif;
+  --font-mono:    'IBM Plex Mono', monospace;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.65;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+body::after {
+  content: '';
+  position: fixed; inset: 0;
+  background: repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.025) 2px,rgba(0,0,0,.025) 4px);
+  pointer-events: none; z-index: 9998;
+}
+
+/* ─── STICKY NAV (scroll-spy) ─── */
+.snav {
+  position: sticky; top: 0; z-index: 200;
+  background: rgba(8,8,10,.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  height: 48px;
+  display: flex; align-items: center;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.snav::-webkit-scrollbar { display: none; }
+.snav-inner {
+  max-width: 1160px; margin: 0 auto;
+  padding: 0 24px;
+  display: flex; align-items: center; gap: 0;
+  white-space: nowrap;
+}
+.snav-brand {
+  font-family: var(--font-display);
+  font-size: 12px; font-weight: 700;
+  color: var(--text2);
+  padding: 0 16px 0 0;
+  border-right: 1px solid var(--border);
+  margin-right: 8px;
+  letter-spacing: -0.01em;
+}
+.snav a {
+  font-size: 11px; color: var(--text3);
+  text-decoration: none;
+  padding: 0 14px; height: 48px;
+  display: flex; align-items: center;
+  border-bottom: 2px solid transparent;
+  transition: color .15s, border-color .15s;
+  letter-spacing: .04em;
+}
+.snav a:hover { color: var(--text); }
+.snav a.active { color: var(--amber2); border-bottom-color: var(--amber2); }
+
+/* ─── LAYOUT ─── */
+.wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px 100px; }
+
+/* ─── HERO ─── */
+.hero {
+  padding: 52px 0 40px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 48px;
+  position: relative;
+}
+.hero-eyebrow {
+  font-size: 10px; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--amber);
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 16px;
+}
+.pulse {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(212,137,14,.1);
+  border: 1px solid rgba(212,137,14,.3);
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-size: 10px; letter-spacing: .12em;
+  color: var(--amber2);
+}
+.pulse-dot {
+  width: 6px; height: 6px;
+  background: var(--amber);
+  border-radius: 50%;
+  animation: blink 2s infinite;
+}
+@keyframes blink { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.3;transform:scale(.7)} }
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 5.5vw, 60px);
+  line-height: 1.05;
+  letter-spacing: -.01em;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+.hero-title em { font-style: italic; color: var(--amber2); }
+.hero-subtitle {
+  font-family: var(--font-display);
+  font-size: clamp(13px, 1.8vw, 15px);
+  color: var(--text2); max-width: 660px;
+  margin-top: 14px; line-height: 1.6; font-weight: 400;
+}
+.hero-meta {
+  position: absolute; right: 0; top: 52px;
+  text-align: right; font-size: 10px;
+  color: var(--text3); line-height: 2;
+}
+.cc0 {
+  display: inline-block;
+  border: 1px solid var(--border2);
+  padding: 2px 8px; border-radius: 3px;
+  font-size: 9px; color: var(--text3);
+  letter-spacing: .08em; margin-top: 4px;
+}
+
+/* ─── SECTION LABELS ─── */
+.sec-label {
+  font-size: 10px; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--text3);
+  margin-bottom: 18px;
+  display: flex; align-items: center; gap: 10px;
+}
+.sec-label::before {
+  content: ''; width: 24px; height: 1px;
+  background: var(--border2);
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(18px, 2.5vw, 26px);
+  font-weight: 700; letter-spacing: -.02em;
+  color: var(--text); margin-bottom: 6px;
+}
+.section-sub {
+  font-size: 12px; color: var(--text2);
+  margin-bottom: 28px; max-width: 600px; line-height: 1.6;
+}
+section { margin-bottom: 60px; }
+hr.divider { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+/* ─── THESIS BLOCK ─── */
+.thesis-block {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--amber);
+  border-radius: 6px;
+  padding: 28px 32px;
+  margin-bottom: 52px;
+  position: relative;
+}
+.thesis-block::before {
+  content: '❝';
+  font-family: var(--font-serif);
+  font-size: 48px; color: var(--amber);
+  opacity: .2; position: absolute;
+  top: 12px; left: 16px; line-height: 1;
+}
+.thesis-text {
+  font-family: var(--font-display);
+  font-size: 14px; line-height: 1.75;
+  color: var(--text); padding-left: 32px; font-weight: 400;
+}
+.thesis-text strong { color: var(--amber2); font-weight: 600; }
+.thesis-source {
+  font-size: 10px; color: var(--text3);
+  padding-left: 32px; margin-top: 10px; letter-spacing: .06em;
+}
+
+/* ─── NUMS (3 colunas) ─── */
+.nums {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 12px;
+  margin-bottom: 40px;
+}
+.num-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex; flex-direction: column; gap: 10px;
+  transition: border-color .15s;
+}
+.num-card:hover { border-color: var(--border2); }
+.num-icon {
+  width: 36px; height: 36px; border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+}
+.num-icon.amber { background: rgba(212,137,14,.1); }
+.num-icon.red   { background: rgba(224,62,62,.1); }
+.num-icon.blue  { background: rgba(58,120,240,.1); }
+.num-icon.green { background: rgba(31,184,106,.1); }
+.num-icon.purple{ background: rgba(136,88,216,.1); }
+.num-icon.cyan  { background: rgba(24,184,204,.1); }
+.num-val {
+  font-family: var(--font-mono);
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 600; line-height: 1;
+  color: var(--text);
+}
+.num-val span { font-size: .55em; color: var(--text3); margin-left: 4px; }
+.num-label { font-size: 11px; color: var(--text2); font-weight: 500; }
+.num-sub { font-size: 10px; color: var(--text3); line-height: 1.5; }
+
+/* ─── PGRID (2 colunas) ─── */
+.pgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  gap: 14px;
+  margin-bottom: 40px;
+}
+.pcard {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px 22px;
+  position: relative;
+  overflow: hidden;
+}
+.pcard::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 3px;
+}
+.pcard.amber::before { background: linear-gradient(90deg, var(--amber), transparent); }
+.pcard.red::before   { background: linear-gradient(90deg, var(--red), transparent); }
+.pcard.blue::before  { background: linear-gradient(90deg, var(--blue), transparent); }
+.pcard.green::before { background: linear-gradient(90deg, var(--green), transparent); }
+.pcard.purple::before{ background: linear-gradient(90deg, var(--purple), transparent); }
+.pcard-head {
+  display: flex; align-items: flex-start; gap: 12px;
+  margin-bottom: 12px;
+}
+.pcard-icon { font-size: 20px; margin-top: 2px; }
+.pcard-code {
+  font-size: 9px; letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--text3); margin-bottom: 4px;
+}
+.pcard-title {
+  font-family: var(--font-display);
+  font-size: 14px; font-weight: 700;
+  color: var(--text); letter-spacing: -.01em;
+}
+.pcard-body {
+  font-size: 12px; color: var(--text2);
+  line-height: 1.65;
+}
+.pcard-body strong { color: var(--text); font-weight: 500; }
+.pcard-ops {
+  display: flex; flex-wrap: wrap; gap: 5px;
+  margin-top: 10px;
+}
+.op-tag {
+  font-size: 9px; letter-spacing: .08em;
+  padding: 2px 7px; border-radius: 3px;
+  border: 1px solid;
+}
+.op-ca  { color: #e8a020; border-color: rgba(232,160,32,.25); background: rgba(232,160,32,.06); }
+.op-sat { color: #9060e8; border-color: rgba(144,96,232,.25); background: rgba(144,96,232,.06); }
+.op-lj  { color: #4080ff; border-color: rgba(64,128,255,.25); background: rgba(64,128,255,.06); }
+.op-cz  { color: #e03e3e; border-color: rgba(224,62,62,.25);  background: rgba(224,62,62,.06); }
+.op-co  { color: #18b8cc; border-color: rgba(24,184,204,.25); background: rgba(24,184,204,.06); }
+.op-pb  { color: #44d486; border-color: rgba(68,212,134,.25); background: rgba(68,212,134,.06); }
+
+/* ─── AUTHOR CARDS ─── */
+.authors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));
+  gap: 14px; margin-bottom: 48px;
+}
+.author-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px; overflow: hidden;
+}
+.author-header {
+  padding: 18px 22px 14px;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: flex-start; gap: 12px;
+}
+.author-av {
+  width: 40px; height: 40px; border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 14px; font-weight: 700; flex-shrink: 0;
+}
+.av-schuler { background: rgba(212,137,14,.12); color: var(--amber2); }
+.av-jeffs   { background: rgba(58,120,240,.12); color: var(--blue2); }
+.author-name {
+  font-family: var(--font-display);
+  font-size: 15px; font-weight: 700; color: var(--text);
+}
+.author-venue { font-size: 10px; color: var(--text3); margin-top: 3px; }
+.author-tag {
+  display: inline-block;
+  font-size: 9px; letter-spacing: .1em;
+  padding: 2px 7px; border-radius: 3px;
+  margin-top: 5px;
+}
+.tag-imprensa { background: rgba(212,137,14,.1); color: var(--amber2); border: 1px solid rgba(212,137,14,.25); }
+.tag-viral    { background: rgba(58,120,240,.1); color: var(--blue2);  border: 1px solid rgba(58,120,240,.25); }
+.author-body { padding: 18px 22px; }
+.author-quote {
+  font-family: var(--font-serif);
+  font-size: 13px; color: var(--text2);
+  font-style: italic; line-height: 1.65;
+  padding: 12px 16px;
+  background: var(--bg3);
+  border-left: 2px solid var(--border2);
+  border-radius: 0 5px 5px 0;
+  margin-bottom: 14px;
+}
+.hits-label, .lacunas-label {
+  font-size: 9px; letter-spacing: .14em;
+  text-transform: uppercase; margin-bottom: 8px;
+}
+.hits-label { color: var(--green2); }
+.lacunas-label { color: var(--red2); }
+.hit-item {
+  font-size: 11px; color: var(--text2);
+  padding: 5px 0 5px 14px;
+  border-left: 2px solid rgba(31,184,106,.3);
+  margin-bottom: 5px; line-height: 1.5;
+}
+.lacuna-item {
+  font-size: 11px; color: var(--text2);
+  padding: 5px 0 5px 14px;
+  border-left: 2px solid rgba(224,62,62,.3);
+  margin-bottom: 5px; line-height: 1.5;
+}
+.lacuna-item strong { color: var(--text); }
+.verdict {
+  margin-top: 14px; padding: 12px 14px;
+  border-radius: 5px; border: 1px solid;
+}
+.v-amber { border-color: rgba(212,137,14,.25); background: rgba(212,137,14,.05); }
+.v-blue  { border-color: rgba(58,120,240,.25);  background: rgba(58,120,240,.05); }
+.verdict-title {
+  font-size: 9px; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--text3);
+  margin-bottom: 5px;
+}
+.verdict-body { font-size: 11px; color: var(--text2); line-height: 1.6; }
+
+/* ─── MATRIX ─── */
+.matrix-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+.matrix-table {
+  width: 100%; border-collapse: collapse;
+  font-size: 11px;
+}
+.matrix-table th {
+  padding: 10px 14px;
+  background: var(--bg3);
+  color: var(--text3);
+  font-size: 9px; letter-spacing: .12em;
+  text-transform: uppercase;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.matrix-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top; color: var(--text2);
+}
+.matrix-table tr:last-child td { border-bottom: none; }
+.matrix-table tr:hover td { background: var(--dim); }
+.cell-id { color: var(--text3); font-size: 10px; white-space: nowrap; }
+.cell-gap { color: var(--red2); }
+.cell-ok  { color: var(--green2); }
+
+/* ─── CORPUS BRIDGE ─── */
+.conns { display: flex; flex-direction: column; gap: 8px; margin-bottom: 40px; }
+.conn {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 12px 16px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  transition: border-color .15s;
+}
+.conn:hover { border-color: var(--border2); }
+.conn-icon { font-size: 16px; margin-top: 1px; flex-shrink: 0; }
+.conn-id {
+  font-size: 10px; letter-spacing: .1em;
+  color: var(--text3); margin-bottom: 3px;
+}
+.conn-title { font-size: 12px; color: var(--text); font-weight: 500; }
+.conn-desc  { font-size: 11px; color: var(--text3); margin-top: 2px; line-height: 1.5; }
+.conn-link  { font-size: 10px; color: var(--amber2); text-decoration: none; margin-top: 4px; display: block; }
+.conn-link:hover { color: var(--text); }
+
+/* ─── RELATED POSTS (3x2) ─── */
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 12px;
+  margin-bottom: 48px;
+}
+.rel-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 18px;
+  text-decoration: none; color: inherit;
+  display: flex; flex-direction: column; gap: 6px;
+  min-height: 100px;
+  transition: border-color .15s, transform .12s;
+}
+.rel-card:hover {
+  border-color: var(--amber);
+  transform: translateY(-2px);
+}
+.rel-card-top { display: flex; gap: 10px; align-items: flex-start; }
+.rel-card-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+.rel-card-id   { font-size: 9px; letter-spacing: .1em; color: var(--text3); margin-bottom: 2px; }
+.rel-card-title { font-size: 13px; color: var(--text); font-weight: 600; font-family: var(--font-display); letter-spacing: -.01em; line-height: 1.25; }
+.rel-card-desc  { font-size: 11px; color: var(--text2); line-height: 1.5; flex: 1; }
+.rel-card-meta  { font-size: 10px; color: var(--text4); margin-top: auto; }
+
+/* ─── GO-TO-TOP ─── */
+#gotop {
+  position: fixed; right: 20px; bottom: 22px; z-index: 999;
+  width: 42px; height: 42px; border-radius: 8px;
+  border: 1px solid var(--border2);
+  background: rgba(15,15,19,.92);
+  backdrop-filter: blur(10px);
+  color: var(--text3);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,.45);
+  transition: transform .15s, border-color .15s, color .15s;
+  opacity: 0; pointer-events: none; transition: opacity .2s;
+}
+#gotop.visible { opacity: 1; pointer-events: auto; }
+#gotop:hover { transform: translateY(-2px); border-color: var(--amber); color: var(--amber2); }
+
+/* ─── FOOTER ─── */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 0 40px;
+  font-size: 10px; color: var(--text3);
+  display: flex; justify-content: space-between;
+  align-items: flex-start; flex-wrap: wrap; gap: 14px;
+}
+.footer a { color: var(--text3); text-decoration: none; border-bottom: 1px solid var(--border2); }
+.footer a:hover { color: var(--cyan); border-bottom-color: var(--cyan); }
+
+@media (max-width: 768px) {
+  .hero-meta { display: none; }
+  .nums { grid-template-columns: 1fr 1fr; }
+  .snav-brand { display: none; }
+}
+@media (max-width: 480px) {
+  .nums { grid-template-columns: 1fr; }
+  .authors-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ STICKY NAV ═══ -->
+<nav class="snav" aria-label="Navegação interna">
+  <div class="snav-inner">
+    <span class="snav-brand">T-208</span>
+    <a href="#tese" class="active">Tese</a>
+    <a href="#autores">Autores</a>
+    <a href="#padroes">Padrões</a>
+    <a href="#matriz">Matriz</a>
+    <a href="#corpus">Corpus</a>
+    <a href="#relacionados">Relacionados</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <!-- ═══ HERO ═══ -->
+  <div class="hero">
+    <div class="hero-meta">
+      26 de abril de 2026<br>
+      lawfare-timeline<br>
+      IDs 146–149<br>
+      <span class="cc0">CC0 1.0 · DOMÍNIO PÚBLICO</span>
+    </div>
+    <div class="hero-eyebrow">
+      <span class="pulse"><span class="pulse-dot"></span>DOSSIÊ ATIVO</span>
+      Análise Editorial · Confronto Probatório
+    </div>
+    <h1 class="hero-title">O Espelho <em>Partido</em></h1>
+    <p class="hero-subtitle">
+      A tese da captura do Estado chegou ao mainstream em 26 de abril de 2026 — coluna de grande imprensa, post viral.
+      O suporte probatório já existia há anos no lawfare-timeline.
+      Este dossiê mapeia o gap entre o que foi dito e o que foi documentado.
+    </p>
+  </div>
+
+  <!-- ═══ STATS ═══ -->
+  <div class="nums">
+    <div class="num-card">
+      <div class="num-icon amber">📊</div>
+      <div class="num-val">6</div>
+      <div class="num-label">Padrões sistêmicos documentados</div>
+      <div class="num-sub">Identificados em 4–6 operações cada</div>
+    </div>
+    <div class="num-card">
+      <div class="num-icon red">⚡</div>
+      <div class="num-val">4<span>/ 6</span></div>
+      <div class="num-label">Operações com P01 ativo</div>
+      <div class="num-sub">Anulação processual como instrumento de proteção</div>
+    </div>
+    <div class="num-card">
+      <div class="num-icon blue">📝</div>
+      <div class="num-val">2</div>
+      <div class="num-label">Textos analisados</div>
+      <div class="num-sub">Schüler (imprensa) + @Jeffssss_ (viral)</div>
+    </div>
+    <div class="num-card">
+      <div class="num-icon green">✅</div>
+      <div class="num-val">R$140bi</div>
+      <div class="num-label">Fluxo ilícito documentado</div>
+      <div class="num-sub">Com datas, atores nomeados e cadeia lógica</div>
+    </div>
+    <div class="num-card">
+      <div class="num-icon purple">🗓</div>
+      <div class="num-val">17<span>anos</span></div>
+      <div class="num-label">Padrão P02 documentado</div>
+      <div class="num-sub">Satiagraha (2008) → Compliance Zero (2025)</div>
+    </div>
+    <div class="num-card">
+      <div class="num-icon cyan">🔗</div>
+      <div class="num-val">4</div>
+      <div class="num-label">Corpus bridge — entradas corpus</div>
+      <div class="num-sub">IDs 146–149 · falha institucional · 2º nível</div>
+    </div>
+  </div>
+
+  <!-- ═══ TESE ═══ -->
+  <section id="tese">
+    <div class="thesis-block">
+      <div class="thesis-text">
+        <strong>A narrativa pública de captura, sem especificidade de atores, mecanismos e datas, funciona como válvula de alívio:</strong>
+        oferece ao público a sensação de compreensão do problema sem produzir pressão sobre os responsáveis identificáveis.
+        O projeto existe para preencher este gap — transformar diagnóstico abstrato em documentação forense
+        com datas verificadas, atores nomeados e cadeia lógica explícita.
+      </div>
+      <div class="thesis-source">— Entrada ID 149, lawfare-timeline · falha_institucional · análise de segundo nível</div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ AUTORES ═══ -->
+  <section id="autores">
+    <div class="sec-label">Fontes Analisadas</div>
+    <h2 class="section-title">Os dois textos — o que acertam e onde param</h2>
+    <p class="section-sub">Análise de convergências com a documentação do projeto e das lacunas que o projeto já havia preenchido antes da publicação.</p>
+
+    <div class="authors-grid">
+
+      <div class="author-card">
+        <div class="author-header">
+          <div class="author-av av-schuler">FS</div>
+          <div>
+            <div class="author-name">Fernando Schüler</div>
+            <div class="author-venue">O Estado de S. Paulo · A12 · Dom 26/04/2026</div>
+            <span class="author-tag tag-imprensa">Grande Imprensa</span>
+          </div>
+        </div>
+        <div class="author-body">
+          <div class="author-quote">
+            "A oposição real é entre racionalidade e captura. Imaginar o contrário pode render aplausos, mundo afora, mas não passa de um truque."
+          </div>
+          <div class="hits-label">Acertos documentáveis</div>
+          <div class="hit-item">Judiciário a 1,4% do PIB ante 0,3% na média internacional — STF como terminal chokepoint</div>
+          <div class="hit-item">Fundo eleitoral R$ 5bi/biênio — Padrão 05 (cofres públicos como vetor)</div>
+          <div class="hit-item">Captura independe de sigla — confirmado em 4 operações sob 3 governos distintos</div>
+          <div class="hit-item">Dívida +11 pontos do PIB — contexto que torna os R$ 140bi ainda mais relevantes</div>
+          <div class="lacunas-label" style="margin-top:12px">Lacunas — onde o projeto já tinha a resposta</div>
+          <div class="lacuna-item"><strong>"Múltiplas elites"</strong> — generalização calculada. O projeto nomeia: Gilmar Mendes, Asfor Rocha, Toffoli — com datas e decisões.</div>
+          <div class="lacuna-item"><strong>Não identifica o mecanismo judicial de proteção</strong> — HC em 48h (Satiagraha), liminar no recesso (Castelo de Areia), sigilo com conflito de interesse (Compliance Zero).</div>
+          <div class="lacuna-item"><strong>Não conecta estrutura offshore</strong> — 15+ LLCs Delaware, exportadora Houston R$ 12,5bi, corredor Amapá.</div>
+          <div class="verdict v-amber">
+            <div class="verdict-title">Avaliação</div>
+            <div class="verdict-body">Diagnóstico estrutural correto. Opera no nível do fenômeno, não da arquitetura. O projeto possui os andares que Schüler não sobe: mecanismos, atores, datas, offshore.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="author-card">
+        <div class="author-header">
+          <div class="author-av av-jeffs">@J</div>
+          <div>
+            <div class="author-name">@Jeffssss_</div>
+            <div class="author-venue">X (Twitter) · Post público · abr/2026 · viral</div>
+            <span class="author-tag tag-viral">Viral · Redes Sociais</span>
+          </div>
+        </div>
+        <div class="author-body">
+          <div class="author-quote">
+            "A captura do Estado brasileiro virou o maior programa de transferência de renda do País — só que ao contrário."
+          </div>
+          <div class="hits-label">Convergências com documentação do projeto</div>
+          <div class="hit-item">Recusa da dicotomia esquerda/direita — captura transversal a FHC, Lula I/II, Dilma, Temer, Bolsonaro</div>
+          <div class="hit-item">Estado como sistema de transferência inversa — hipótese central de brasil-sangra.html e zero-x-zero.html</div>
+          <div class="hit-item">Judiciário como casta organizada — convergência com Padrão P03</div>
+          <div class="lacunas-label" style="margin-top:12px">Lacunas críticas — ausência de substrato probatório</div>
+          <div class="lacuna-item"><strong>Zero referências verificáveis</strong> — linguagem moral e metafórica. Sem dado, data ou ator nomeado.</div>
+          <div class="lacuna-item"><strong>Risco de apropriação retórica</strong> — texto sem dados pode ser instrumentalizado pelos próprios agentes da captura para sinalizar "indignação" sem comprometimento com evidências.</div>
+          <div class="lacuna-item"><strong>Sem agenda de ruptura</strong> — conclui com aforismo moral sem mecanismo de mudança.</div>
+          <div class="verdict v-blue">
+            <div class="verdict-title">Avaliação</div>
+            <div class="verdict-body">Documento de percepção coletiva de alta eficácia viral. Risco estrutural: sem dados, o diagnóstico correto pode servir como capital simbólico sem ônus probatório — exatamente o que o sistema de captura absorve sem dano.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ PADRÕES ═══ -->
+  <section id="padroes">
+    <div class="sec-label">Documentação Forense</div>
+    <h2 class="section-title">6 Padrões Sistêmicos — evidência que a narrativa não alcança</h2>
+    <p class="section-sub">Cada padrão foi identificado nas operações documentadas. Nenhum aparece nomeado com precisão nos textos públicos analisados.</p>
+
+    <div class="pgrid">
+      <div class="pcard red">
+        <div class="pcard-head">
+          <div class="pcard-icon">⚖️</div>
+          <div>
+            <div class="pcard-code">P01 · PROC</div>
+            <div class="pcard-title">Anulação por vício processual</div>
+          </div>
+        </div>
+        <div class="pcard-body">
+          A estratégia defensiva padrão não ataca os fatos — ataca o processo. Em 4 das 6 operações, a anulação chegou antes da condenação. Lava Jato: 13 anos de provas impedidas. Castelo de Areia: liminar no recesso de jan/2010. Satiagraha: o investigador tornou-se o investigado.
+        </div>
+        <div class="pcard-ops">
+          <span class="op-tag op-ca">Castelo de Areia</span>
+          <span class="op-tag op-sat">Satiagraha</span>
+          <span class="op-tag op-lj">Lava Jato</span>
+          <span class="op-tag op-cz">Compliance Zero</span>
+        </div>
+      </div>
+
+      <div class="pcard amber">
+        <div class="pcard-head">
+          <div class="pcard-icon">🔄</div>
+          <div>
+            <div class="pcard-code">P02 · INVER</div>
+            <div class="pcard-title">O investigador vira investigado</div>
+          </div>
+        </div>
+        <div class="pcard-body">
+          Em 4 das 6 operações, os responsáveis pela investigação foram processados ou destruídos institucionalmente. Protógenes: preso, expulso da PF, exilado na Suíça. Moro: declarado parcial. Dallagnol: mandato cassado. Andrei Rodrigues: relatório chamado de "lixo jurídico".
+        </div>
+        <div class="pcard-ops">
+          <span class="op-tag op-sat">Satiagraha</span>
+          <span class="op-tag op-lj">Lava Jato</span>
+          <span class="op-tag op-cz">Compliance Zero</span>
+        </div>
+      </div>
+
+      <div class="pcard red">
+        <div class="pcard-head">
+          <div class="pcard-icon">🏛️</div>
+          <div>
+            <div class="pcard-code">P03 · STF</div>
+            <div class="pcard-title">Captura judicial de emergência</div>
+          </div>
+        </div>
+        <div class="pcard-body">
+          <strong>Único padrão presente nas 4 operações anticorrupção.</strong> Em cada operação, membro de tribunal superior concedeu liminar ou HC em circunstâncias atípicas: Gilmar Mendes — 2 HCs a Dantas em 48h (2008). Asfor Rocha — liminar no recesso de jan (2010). Toffoli — sigilo com conflito de interesse (2025-26).
+        </div>
+        <div class="pcard-ops">
+          <span class="op-tag op-ca">Castelo de Areia</span>
+          <span class="op-tag op-sat">Satiagraha</span>
+          <span class="op-tag op-lj">Lava Jato</span>
+          <span class="op-tag op-cz">Compliance Zero</span>
+        </div>
+      </div>
+
+      <div class="pcard purple">
+        <div class="pcard-head">
+          <div class="pcard-icon">📡</div>
+          <div>
+            <div class="pcard-code">P04 · MÍDIA</div>
+            <div class="pcard-title">Weaponização da mídia</div>
+          </div>
+        </div>
+        <div class="pcard-body">
+          A mídia amplifica, legitima ou neutraliza investigações conforme o interesse instrumentalizado. Carbono Oculto: normativas de transparência revogadas após "fake news" — brecha que permaneceu aberta durante o esquema. Compliance Zero: espionagem ilegal de jornalistas por ex-policial federal.
+        </div>
+        <div class="pcard-ops">
+          <span class="op-tag op-ca">Castelo de Areia</span>
+          <span class="op-tag op-sat">Satiagraha</span>
+          <span class="op-tag op-lj">Lava Jato</span>
+          <span class="op-tag op-cz">Compliance Zero</span>
+          <span class="op-tag op-co">Carbono Oculto</span>
+        </div>
+      </div>
+
+      <div class="pcard green">
+        <div class="pcard-head">
+          <div class="pcard-icon">🏦</div>
+          <div>
+            <div class="pcard-code">P05 · COFRE</div>
+            <div class="pcard-title">Cofres públicos como vetor</div>
+          </div>
+        </div>
+        <div class="pcard-body">
+          Presente em todas as 6 operações. O Estado não é apenas capturado — é usado como veículo ativo de extração. Carbono Oculto: 530.000 ha de terras públicas griladas para UECs fictícias. Compliance Zero: FGC como socializador de perdas (R$ 56bi). Poço de Lobato: R$ 26bi em dívida tributária ativa.
+        </div>
+        <div class="pcard-ops">
+          <span class="op-tag op-ca">Castelo de Areia</span>
+          <span class="op-tag op-sat">Satiagraha</span>
+          <span class="op-tag op-lj">Lava Jato</span>
+          <span class="op-tag op-cz">Compliance Zero</span>
+          <span class="op-tag op-co">Carbono Oculto</span>
+          <span class="op-tag op-pb">Poço de Lobato</span>
+        </div>
+      </div>
+
+      <div class="pcard blue">
+        <div class="pcard-head">
+          <div class="pcard-icon">🌐</div>
+          <div>
+            <div class="pcard-code">P06 · OFFSHORE</div>
+            <div class="pcard-title">Infraestrutura jurídico-financeira comum</div>
+          </div>
+        </div>
+        <div class="pcard-body">
+          Hipótese central: estrutura de fundo fechado unipessoal como assinatura financeira recorrente em operações aparentemente desconexas. Satiagraha, Lava Jato, Compliance Zero e Carbono Oculto compartilham elementos estruturais: LLCs Delaware, criptoativos, fintechs não reguladas.
+        </div>
+        <div class="pcard-ops">
+          <span class="op-tag op-sat">Satiagraha</span>
+          <span class="op-tag op-lj">Lava Jato</span>
+          <span class="op-tag op-cz">Compliance Zero</span>
+          <span class="op-tag op-co">Carbono Oculto</span>
+          <span class="op-tag op-pb">Poço de Lobato</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ MATRIZ ═══ -->
+  <section id="matriz">
+    <div class="sec-label">Análise Comparativa</div>
+    <h2 class="section-title">Matriz de cruzamento — narrativa pública × documentação forense</h2>
+    <p class="section-sub">O que cada texto afirma, o que o projeto já havia documentado e qual é o gap residual.</p>
+
+    <div class="matrix-wrap">
+      <table class="matrix-table">
+        <thead>
+          <tr>
+            <th>Tópico</th>
+            <th>Schüler diz</th>
+            <th>@Jeffssss_ diz</th>
+            <th>Projeto documenta</th>
+            <th>Gap residual</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Atores</strong></td>
+            <td class="cell-gap">"Múltiplas elites" (vago)</td>
+            <td class="cell-gap">"Bilionário do discurso" (metáfora)</td>
+            <td class="cell-ok">Nomeados: Gilmar, Asfor Rocha, Toffoli, Vorcaro — com datas</td>
+            <td>Nenhum — projeto já preencheu</td>
+          </tr>
+          <tr>
+            <td><strong>Mecanismo judicial</strong></td>
+            <td class="cell-gap">Custo irracional (1,4% PIB)</td>
+            <td class="cell-gap">"Judiciário caríssimo" (genérico)</td>
+            <td class="cell-ok">HC em 48h, liminar no recesso, sigilo com conflito de interesse</td>
+            <td>Ausente nos textos públicos</td>
+          </tr>
+          <tr>
+            <td><strong>Estrutura offshore</strong></td>
+            <td class="cell-gap">Não mencionada</td>
+            <td class="cell-gap">Não mencionada</td>
+            <td class="cell-ok">15+ LLCs Delaware, exportadora Houston R$ 12,5bi, corredor Amapá</td>
+            <td>Ausente nos textos públicos</td>
+          </tr>
+          <tr>
+            <td><strong>Transversalidade política</strong></td>
+            <td class="cell-ok">Captura independe de sigla ✓</td>
+            <td class="cell-ok">Recusa dicotomia esq/dir ✓</td>
+            <td class="cell-ok">4 operações sob 3 governos distintos (FHC → Lula → Dilma → Bolsonaro)</td>
+            <td>Convergência total</td>
+          </tr>
+          <tr>
+            <td><strong>Vetor fiscal</strong></td>
+            <td class="cell-ok">Dívida +11 pts PIB ✓</td>
+            <td class="cell-gap">"Tributos, inflação, juros" (genérico)</td>
+            <td class="cell-ok">R$ 26bi dívida tributária, R$ 350mi/mês evasão, R$ 45,5bi UECs fictícias</td>
+            <td>Schüler parcial; Jeffs sem dados</td>
+          </tr>
+          <tr>
+            <td><strong>Mecanismo de ruptura</strong></td>
+            <td class="cell-gap">"Oxalá estes temas estejam em pauta"</td>
+            <td class="cell-gap">Aforismo moral, sem proposta</td>
+            <td class="cell-ok">3 vetores: conflito interno de elite, DOJ com interesse próprio, colapso fiscal</td>
+            <td>Ausente nos textos públicos</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ CORPUS BRIDGE ═══ -->
+  <section id="corpus">
+    <div class="sec-label">Corpus Bridge</div>
+    <h2 class="section-title">Entradas do corpus — IDs 146–149</h2>
+    <p class="section-sub">Este dossiê atua como bridge entre os textos públicos analisados e a documentação forense existente no lawfare-timeline.</p>
+
+    <div class="conns">
+      <div class="conn">
+        <div class="conn-icon">📌</div>
+        <div>
+          <div class="conn-id">ID-146 · corpus-bridge</div>
+          <div class="conn-title">Schüler × Projeto — Mapeamento de convergências</div>
+          <div class="conn-desc">Análise estruturada dos pontos de convergência e divergência entre o artigo de Schüler e os achados documentados do projeto. Data: 26/04/2026.</div>
+          <a href="https://gosurf.site/paralelos" class="conn-link" target="_blank" rel="noopener">→ paralelos.html (IDs 12–15)</a>
+        </div>
+      </div>
+      <div class="conn">
+        <div class="conn-icon">📌</div>
+        <div>
+          <div class="conn-id">ID-147 · corpus-bridge</div>
+          <div class="conn-title">@Jeffssss_ × Projeto — Análise de percepção viral</div>
+          <div class="conn-desc">Cruzamento do post viral com a documentação do projeto. Identificação do risco de apropriação retórica sem substrato probatório.</div>
+          <a href="../republica-capturada.html" class="conn-link">→ republica-capturada.html</a>
+        </div>
+      </div>
+      <div class="conn">
+        <div class="conn-icon">📌</div>
+        <div>
+          <div class="conn-id">ID-148 · padrões-sistêmicos</div>
+          <div class="conn-title">Os 6 Padrões — documentação forense completa</div>
+          <div class="conn-desc">Entrada de segundo nível mapeando os 6 padrões sistêmicos com evidências verificáveis por operação. Inclui presença por operação e narrativa-gap.</div>
+          <a href="https://gosurf.site/thread-operacoes-brasil" class="conn-link" target="_blank" rel="noopener">→ thread-operacoes-brasil.html (posts 12–15/28)</a>
+        </div>
+      </div>
+      <div class="conn">
+        <div class="conn-icon">📌</div>
+        <div>
+          <div class="conn-id">ID-149 · falha_institucional · 2º nível</div>
+          <div class="conn-title">A válvula de alívio — falha institucional de segundo nível</div>
+          <div class="conn-desc">Tese central: narrativa diagnóstica como substituta funcional da documentação forense. O sistema absorve a crítica sem dano estrutural porque a crítica não aponta os responsáveis identificáveis.</div>
+          <a href="https://gosurf.site/zero-x-zero" class="conn-link" target="_blank" rel="noopener">→ zero-x-zero.html (capítulo 04 — vetores de ruptura)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ RELACIONADOS (3x2) ═══ -->
+  <section id="relacionados">
+    <div class="sec-label">Posts Relacionados</div>
+    <h2 class="section-title">Corpus — artefatos vinculados</h2>
+    <p class="section-sub">Dossiês e análises do lawfare-timeline com conexão direta aos padrões documentados neste estudo.</p>
+
+    <div class="related-grid">
+      <a href="https://gosurf.site/paralelos" class="rel-card" target="_blank" rel="noopener">
+        <div class="rel-card-top">
+          <div class="rel-card-icon">🔗</div>
+          <div>
+            <div class="rel-card-id">paralelos.html</div>
+            <div class="rel-card-title">Paralelos entre Operações</div>
+          </div>
+        </div>
+        <div class="rel-card-desc">Os 6 padrões sistêmicos documentados com precisão cirúrgica — IDs 12–15. P01 a P06 com presença por operação.</div>
+        <div class="rel-card-meta">lawfare-timeline · análise estrutural</div>
+      </a>
+
+      <a href="../republica-capturada.html" class="rel-card">
+        <div class="rel-card-top">
+          <div class="rel-card-icon">🏛️</div>
+          <div>
+            <div class="rel-card-id">republica-capturada.html</div>
+            <div class="rel-card-title">República Capturada</div>
+          </div>
+        </div>
+        <div class="rel-card-desc">R$ 140bi de fluxo ilícito documentado. 6 operações, atores nomeados, cadeia lógica explícita. Suporte probatório completo.</div>
+        <div class="rel-card-meta">lawfare-timeline · dossiê central</div>
+      </a>
+
+      <a href="t192-vorcaro-triangulo-carbono-mineracao-banco.html" class="rel-card">
+        <div class="rel-card-top">
+          <div class="rel-card-icon">🔺</div>
+          <div>
+            <div class="rel-card-id">T-192</div>
+            <div class="rel-card-title">Vorcaro — Triângulo Carbono/Mineração/Banco</div>
+          </div>
+        </div>
+        <div class="rel-card-desc">Nó central do Padrão P03 e P06. R$ 56bi no FGC, UECs fictícias, espionagem ilegal — Compliance Zero como evidência do P02.</div>
+        <div class="rel-card-meta">T-192 · dossiê · DS v1.1</div>
+      </a>
+
+      <a href="https://gosurf.site/satiagraha" class="rel-card" target="_blank" rel="noopener">
+        <div class="rel-card-top">
+          <div class="rel-card-icon">⚖️</div>
+          <div>
+            <div class="rel-card-id">satiagraha.html</div>
+            <div class="rel-card-title">Operação Satiagraha (2008)</div>
+          </div>
+        </div>
+        <div class="rel-card-desc">Padrão fundador: Gilmar Mendes + 2 HCs em 48h. Protógenes processado. P01, P02 e P03 em ação simultânea — documentação completa.</div>
+        <div class="rel-card-meta">lawfare-timeline · operação</div>
+      </a>
+
+      <a href="../banco-master-compliance-zero.html" class="rel-card">
+        <div class="rel-card-top">
+          <div class="rel-card-icon">🏦</div>
+          <div>
+            <div class="rel-card-id">compliance-zero.html</div>
+            <div class="rel-card-title">Banco Master — Compliance Zero</div>
+          </div>
+        </div>
+        <div class="rel-card-desc">Toffoli como relator com conflito de interesse. Espionagem ilegal. FGC como vetor de socialização do rombo de R$ 56bi. P01, P02, P03, P05.</div>
+        <div class="rel-card-meta">lawfare-timeline · operação · ativa</div>
+      </a>
+
+      <a href="https://gosurf.site/zero-x-zero" class="rel-card" target="_blank" rel="noopener">
+        <div class="rel-card-top">
+          <div class="rel-card-icon">🔑</div>
+          <div>
+            <div class="rel-card-id">zero-x-zero.html</div>
+            <div class="rel-card-title">Zero × Zero — Vetores de Ruptura</div>
+          </div>
+        </div>
+        <div class="rel-card-desc">Os três vetores históricos de ruptura: conflito interno de elite, DOJ com interesse próprio, colapso fiscal. Comparativo Mani Pulite / CPIB / Rose Revolution.</div>
+        <div class="rel-card-meta">lawfare-timeline · análise prospectiva</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <div class="footer">
+    <div>
+      <strong>T-208</strong> · O Espelho Partido<br>
+      lawfare-timeline · corpus bridge · IDs 146–149<br>
+      <a href="https://gosurf.site">gosurf.site</a> · <a href="../index.html">timeline</a>
+    </div>
+    <div style="text-align:right">
+      26 de abril de 2026<br>
+      Análise Editorial · Confronto Probatório<br>
+      <span class="cc0">CC0 1.0 · Domínio Público</span>
+    </div>
+  </div>
+
+</div><!-- /wrap -->
+
+<!-- GO TO TOP -->
+<button id="gotop" aria-label="Voltar ao topo" title="Voltar ao topo">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script>
+// scroll-spy
+const navLinks = document.querySelectorAll('.snav a[href^="#"]');
+const sections = [...navLinks].map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navLinks.forEach(a => a.classList.remove('active'));
+      const active = document.querySelector(`.snav a[href="#${e.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-48px 0px -60% 0px', threshold: 0 });
+sections.forEach(s => observer.observe(s));
+
+// go-to-top
+const gotop = document.getElementById('gotop');
+window.addEventListener('scroll', () => {
+  gotop.classList.toggle('visible', window.scrollY > 320);
+}, { passive: true });
+gotop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+</script>
+</body>
+</html>

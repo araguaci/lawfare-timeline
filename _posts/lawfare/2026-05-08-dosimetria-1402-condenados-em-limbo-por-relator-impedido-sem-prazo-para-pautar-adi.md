@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/weight-scale.svg"
 tags: ["lawfare", "stf", "alexandre-de-moraes", "justica"]
 categories: lawfare
-permalink: /posts/2026-05-08-dosimetria-1402-condenados-em-limbo-por-relator-impedido-sem-prazo-para-pautar-adi/
+permalink: /posts/dosimetria-1402-condenados-em-limbo-por-relator-impedido-sem-prazo-para-pautar-adi/
 id_corpus: "1519"
 corpus_unificado: true
 ---

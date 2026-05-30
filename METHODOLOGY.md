@@ -1,10 +1,12 @@
 # METHODOLOGY.md
 ## Lawfare Timeline — Framework Analítico
 
-**Versão:** 2.0  
-**Última atualização:** Abril 2026  
+**Versão:** 2.2  
+**Última atualização:** Maio 2026  
 **Repositório:** lawfare-timeline.vercel.app  
-**Próximo ID disponível:** 1439
+**Próximo ID disponível (main track):** 1577  
+**Próximo ID disponível (temático T):** T-210  
+**IDs protegidos:** 1449–1511 (PCC/Ndrangheta — merge somente com validação explícita)
 
 ---
 
@@ -218,6 +220,29 @@ Uso instrumentalizado do sistema jurídico como arma de guerra política ou econ
 
 ---
 
+## 7b. Padrões Sistêmicos — P01 a P11 (referência canônica)
+
+Padrões são documentados com casos, fontes e lacunas. Não são hipóteses — são funções recorrentes verificáveis.
+
+| Código | Nome | Descrição operacional |
+|---|---|---|
+| P01 | Anulação via Defeito Processual | Prova real invalidada por vício técnico introduzido ou explorado — resultado: impunidade processual |
+| P02 | Inversão / Retaliação | Investigadores tornam-se alvos; delatores eliminados; fiscal fiscalizado |
+| P03 | Captura Judicial Emergencial | STF como chokepoint terminal — bloqueia investigações inconvenientes; decisão monocrática em velocidade preventiva |
+| P04 | Weaponização da Mídia e Narrativa | Controle de narrativa para neutralizar investigação ou proteger esquema |
+| **P04b** | **Both-sidesism Funcional** | Falsa-equivalência operada por veículos ou modelos de IA como mecanismo de proteção a atores sob investigação. Distinto de P04 (weaponização direta): P04b neutraliza cobertura crítica sem produzir conteúdo ofensivo — apenas dilui o sinal tratando mecanismo estrutural documentado como "perspectiva de um lado". Diagnóstico: o modelo/veículo compreende o conteúdo e o descarta por metadado de fonte, tom ou campo político aparente. |
+| P05 | Uso de Recursos Públicos como Vetor | Fundos públicos capturados como canal de extração — FGC, INSS, consignado |
+| P06 | Estratégia do Silêncio e Prescrição | Prazo indefinido como punição do investigado ou proteção do protegido |
+| P07 | Captura Transgeracional | Recrutamento via cultura, escolas, igrejas — reprodução do sistema por cooptação antecipada |
+| P08 | Infiltração em Fintechs e Criptoativos | Brechas regulatórias de IPs brasileiras como canal de lavagem — nexo PCC/CV documentado |
+| P09 | Captura Cultural e Legitimidade Simbólica | Produção deliberada de legitimidade cultural como escudo contra escrutínio |
+| P10 | Infraestrutura de Serviço Compartilhada | Mesma arquitetura jurídico-financeira serve cleptocracia política e narcocleptocracia |
+| P11 | Loop de Extração Perpétua | Selic + desindustrialização + transferências + captura do fluxo = ciclo auto-reprodutivo |
+
+**Regra de aplicação:** um evento pode ativar múltiplos padrões. Registrar todos os padrões aplicáveis no campo `padroes_sistemicos` do schema JSON estendido.
+
+---
+
 ## 8. Histórico de versões do schema
 
 | Versão | Data | Mudança principal |
@@ -225,12 +250,13 @@ Uso instrumentalizado do sistema jurídico como arma de guerra política ou econ
 | 1.0 | 2025-Q1 | Schema inicial: id, titulo, data, categoria, tags, descricao, fontes |
 | 1.5 | 2025-Q3 | Adição de pessoas_envolvidas, instituicoes_envolvidas, relevancia, prioridade |
 | 2.0 | 2026-Q1 | Adição do objeto `meta` com vetor_correcao_disponivel, tipo, entradas_relacionadas; criação das categorias registro-analitico e perseguicao-institucional |
+| 2.2 | 2026-05 | Formalização P04b (Both-sidesism Funcional); padrões P01–P11 canônicos adicionados ao METHODOLOGY.md; próximo ID atualizado para 1577; corpus-bridge T-205/T-209 documentados |
 
 ---
 
 ## 9. Convenções de nomenclatura
 
-**IDs:** Sequencial a partir de 1. ID 1 = primeiro evento registrado (1990). ID atual: 1438. Próximo disponível: 1439. IDs nunca são reutilizados — entradas corrigidas recebem nota no campo `meta.observacao` com referência ao ID original.
+**IDs:** Sequencial a partir de 1. ID 1 = primeiro evento registrado (1990). ID atual main track: **1576**. Próximo disponível main track: **1577**. Faixa **1449–1511 protegida** — batch PCC/Ndrangheta pendente de merge explícito. IDs nunca são reutilizados — entradas corrigidas recebem nota no campo `meta.observacao` com referência ao ID original.
 
 **Tags:** Kebab-case, minúsculas, sem acentos. Máximo 15 por entrada. Devem incluir: nome(s) do(s) ator(es) principal(is), nome da operação ou caso quando aplicável, categoria do mecanismo operacional, nome da instituição afetada.
 

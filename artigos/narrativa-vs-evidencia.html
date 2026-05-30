@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Espelho Partido — Narrativa Pública vs. Documentação Forense</title>
+<meta name="description" content="A tese da captura do Estado chegou ao mainstream. O suporte probatório já existia. Este documento mapeia o gap.">
+<meta property="og:title" content="O Espelho Partido — Narrativa Pública vs. Evidência Forense">
+<meta property="og:description" content="Schüler, Jeffs e o que o lawfare-timeline já documentava antes deles.">
+<meta property="og:locale" content="pt_BR">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Syne:wght@400;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap');
+
+:root {
+  --bg:     #08080a;
+  --bg2:    #0f0f13;
+  --bg3:    #161619;
+  --bg4:    #1e1e24;
+  --border: #252530;
+  --border2:#363644;
+  --text:   #ebe9e2;
+  --text2:  #98968e;
+  --text3:  #555460;
+  --text4:  #35343c;
+  --red:    #e03e3e;
+  --red2:   #ff7070;
+  --amber:  #d4890e;
+  --amber2: #f0ad3c;
+  --green:  #1fb86a;
+  --green2: #44d486;
+  --blue:   #3a78f0;
+  --blue2:  #7aabff;
+  --purple: #8858d8;
+  --purple2:#b090ff;
+  --cyan:   #18b8cc;
+  --dim:    rgba(255,255,255,0.04);
+  --font-display: 'Syne', sans-serif;
+  --font-serif:   'DM Serif Display', serif;
+  --font-mono:    'IBM Plex Mono', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.65;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* scanline */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.025) 2px,rgba(0,0,0,0.025) 4px);
+  pointer-events: none;
+  z-index: 9998;
+}
+
+/* noise overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9997;
+  opacity: 0.6;
+}
+
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 28px 100px; }
+
+/* ─── HERO ─── */
+.hero {
+  padding: 60px 0 48px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.hero-eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.hero-eyebrow::before {
+  content: '';
+  width: 7px; height: 7px;
+  background: var(--red);
+  border-radius: 50%;
+  animation: blink 2s infinite;
+}
+@keyframes blink { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.3;transform:scale(.7)} }
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 6vw, 68px);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--amber2);
+}
+
+.hero-subtitle {
+  font-family: var(--font-display);
+  font-size: clamp(13px, 2vw, 16px);
+  color: var(--text2);
+  max-width: 680px;
+  margin-top: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.hero-meta {
+  position: absolute;
+  right: 0; top: 60px;
+  text-align: right;
+  font-size: 10px;
+  color: var(--text3);
+  line-height: 2;
+}
+.cc0-badge {
+  display: inline-block;
+  border: 1px solid var(--border2);
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 9px;
+  color: var(--text3);
+  letter-spacing: 0.08em;
+  margin-top: 4px;
+}
+
+/* ─── TESE CENTRAL ─── */
+.thesis-block {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--amber);
+  border-radius: 6px;
+  padding: 28px 32px;
+  margin-bottom: 56px;
+  position: relative;
+}
+.thesis-block::before {
+  content: '❝';
+  font-family: var(--font-serif);
+  font-size: 48px;
+  color: var(--amber);
+  opacity: 0.2;
+  position: absolute;
+  top: 12px; left: 16px;
+  line-height: 1;
+}
+.thesis-text {
+  font-family: var(--font-display);
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text);
+  padding-left: 32px;
+  font-weight: 400;
+}
+.thesis-text strong { color: var(--amber2); font-weight: 600; }
+.thesis-source {
+  font-size: 10px;
+  color: var(--text3);
+  padding-left: 32px;
+  margin-top: 12px;
+  letter-spacing: 0.06em;
+}
+
+/* ─── SECTION TITLE ─── */
+.sec-label {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text3);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sec-label::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--border2);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.section-sub {
+  font-size: 12px;
+  color: var(--text2);
+  margin-bottom: 32px;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* ─── AUTORES ─── */
+.authors-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 56px;
+}
+
+.author-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.author-header {
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.author-avatar {
+  width: 44px; height: 44px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.av-schuler { background: rgba(212,137,14,.12); color: var(--amber2); }
+.av-jeffs   { background: rgba(58,120,240,.12); color: var(--blue2); }
+
+.author-name {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+.author-venue {
+  font-size: 11px;
+  color: var(--text3);
+  margin-top: 3px;
+}
+.author-channel-tag {
+  display: inline-block;
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 3px;
+  margin-top: 6px;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+}
+.tag-imprensa { background: rgba(212,137,14,.15); color: var(--amber2); }
+.tag-viral    { background: rgba(58,120,240,.15); color: var(--blue2); }
+
+.author-body { padding: 20px 24px; }
+
+.author-quote {
+  font-family: var(--font-serif);
+  font-size: 14px;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.7;
+  padding: 14px 16px;
+  background: var(--bg3);
+  border-left: 2px solid var(--border2);
+  border-radius: 0 4px 4px 0;
+  margin-bottom: 16px;
+}
+
+/* o que acertam */
+.hits-block { margin-bottom: 16px; }
+.hits-label {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--green2);
+  margin-bottom: 8px;
+}
+.hit-item {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin-bottom: 6px;
+  font-size: 12px;
+  color: var(--text2);
+  line-height: 1.6;
+}
+.hit-item::before {
+  content: '✓';
+  color: var(--green);
+  font-size: 11px;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+/* lacunas */
+.lacunas-block { margin-bottom: 16px; }
+.lacunas-label {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--red2);
+  margin-bottom: 8px;
+}
+.lacuna-item {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  padding: 10px 12px;
+  background: var(--bg3);
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+.lacuna-icon {
+  font-size: 11px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: var(--red2);
+}
+.lacuna-text { font-size: 12px; color: var(--text2); line-height: 1.6; }
+.lacuna-text strong { color: var(--text); font-weight: 500; }
+
+/* seta para o projeto */
+.project-ref {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 14px;
+  background: rgba(32,200,216,.05);
+  border: 1px solid rgba(32,200,216,.15);
+  border-radius: 4px;
+  margin-top: 6px;
+  margin-left: 20px;
+  font-size: 11px;
+  color: var(--cyan);
+  line-height: 1.55;
+}
+.project-ref::before {
+  content: '→';
+  flex-shrink: 0;
+  font-size: 12px;
+  margin-top: 1px;
+}
+.project-ref a {
+  color: var(--cyan);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(32,200,216,.3);
+}
+.project-ref a:hover { border-bottom-color: var(--cyan); }
+
+/* veredicto card */
+.verdict {
+  padding: 12px 16px;
+  border-radius: 5px;
+  margin-top: 16px;
+  border: 1px solid;
+}
+.v-amber { background: rgba(212,137,14,.06); border-color: rgba(212,137,14,.25); }
+.v-blue  { background: rgba(58,120,240,.06); border-color: rgba(58,120,240,.25); }
+.verdict-title {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.v-amber .verdict-title { color: var(--amber2); }
+.v-blue  .verdict-title { color: var(--blue2); }
+.verdict-body {
+  font-size: 12px;
+  color: var(--text2);
+  line-height: 1.6;
+}
+
+/* ─── PADRÕES SISTÊMICOS ─── */
+.patterns-section { margin-bottom: 60px; }
+
+.pattern-row {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg2);
+  margin-bottom: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color .2s;
+}
+.pattern-row:hover { border-color: var(--border2); }
+.pattern-row.open { border-color: var(--border2); }
+
+.pattern-header {
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  user-select: none;
+}
+.pattern-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text3);
+  width: 36px;
+  flex-shrink: 0;
+  font-weight: 500;
+}
+.pattern-code {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text3);
+  width: 52px;
+  flex-shrink: 0;
+}
+.pattern-name {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  flex: 1;
+  letter-spacing: -0.01em;
+}
+.pattern-presence {
+  display: flex;
+  gap: 4px;
+  margin-right: 12px;
+}
+.op-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--bg4);
+  border: 1px solid var(--border2);
+}
+.op-dot.active-ca  { background: #e8a020; border-color: #e8a020; }
+.op-dot.active-sat { background: #9060e8; border-color: #9060e8; }
+.op-dot.active-lj  { background: #4080ff; border-color: #4080ff; }
+.op-dot.active-cz  { background: #e03e3e; border-color: #e03e3e; }
+.op-dot.active-co  { background: #20c8d8; border-color: #20c8d8; }
+.op-dot.active-pb  { background: #1fb86a; border-color: #1fb86a; }
+
+.pattern-chevron {
+  color: var(--text3);
+  font-size: 11px;
+  transition: transform .2s;
+  flex-shrink: 0;
+}
+.pattern-row.open .pattern-chevron { transform: rotate(180deg); }
+
+.pattern-body {
+  display: none;
+  padding: 0 20px 20px 20px;
+  border-top: 1px solid var(--border);
+}
+.pattern-row.open .pattern-body { display: block; }
+
+.pattern-desc {
+  font-size: 12px;
+  color: var(--text2);
+  line-height: 1.75;
+  margin: 16px 0 14px;
+  padding-left: 50px;
+}
+
+.evidence-chain {
+  margin-left: 50px;
+}
+.evidence-title {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text3);
+  margin-bottom: 10px;
+}
+.evidence-item {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 0 12px;
+  margin-bottom: 8px;
+  padding: 10px 12px;
+  background: var(--bg3);
+  border-radius: 4px;
+  border-left: 2px solid transparent;
+}
+.ei-ca  { border-left-color: #e8a020; }
+.ei-sat { border-left-color: #9060e8; }
+.ei-lj  { border-left-color: #4080ff; }
+.ei-cz  { border-left-color: #e03e3e; }
+.ei-co  { border-left-color: #20c8d8; }
+.ei-pb  { border-left-color: #1fb86a; }
+
+.ei-op {
+  font-size: 10px;
+  color: var(--text3);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  padding-top: 1px;
+}
+.ei-fact { font-size: 12px; color: var(--text2); line-height: 1.55; }
+.ei-fact strong { color: var(--text); font-weight: 500; }
+
+/* narrativa box */
+.narrativa-ref {
+  margin-left: 50px;
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: rgba(212,137,14,.05);
+  border: 1px solid rgba(212,137,14,.2);
+  border-radius: 4px;
+}
+.narrativa-label {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 5px;
+}
+.narrativa-text {
+  font-size: 12px;
+  color: var(--text2);
+  line-height: 1.6;
+  font-style: italic;
+}
+.narrativa-text span { color: var(--amber2); font-style: normal; font-weight: 500; }
+
+/* artefato links */
+.artifact-links {
+  margin-left: 50px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.art-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  padding: 4px 10px;
+  border: 1px solid var(--border2);
+  border-radius: 3px;
+  color: var(--text2);
+  text-decoration: none;
+  background: var(--bg3);
+  letter-spacing: 0.04em;
+  transition: border-color .2s, color .2s;
+}
+.art-link:hover { border-color: var(--cyan); color: var(--cyan); }
+.art-link::before { content: '↗'; font-size: 9px; }
+
+/* ─── OPERAÇÕES LEGEND ─── */
+.ops-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 14px 16px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+.op-leg {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  color: var(--text2);
+}
+.op-leg-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+}
+
+/* ─── MATRIZ DE CRUZAMENTO ─── */
+.matrix-section { margin-bottom: 60px; }
+
+.matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+.matrix-table th {
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text3);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg2);
+  font-weight: 500;
+}
+.matrix-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text2);
+  vertical-align: top;
+  line-height: 1.6;
+}
+.matrix-table tr:hover td { background: var(--dim); }
+.matrix-table td:first-child {
+  color: var(--text);
+  font-weight: 500;
+  width: 22%;
+  font-size: 12px;
+}
+.cell-schuler { color: var(--amber2) !important; }
+.cell-jeffs   { color: var(--blue2) !important; }
+.cell-projeto { color: var(--green2) !important; }
+.cell-gap     { color: var(--red2) !important; }
+
+.status-pill {
+  display: inline-block;
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 3px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.pill-ok   { background: rgba(31,184,106,.12); color: var(--green2); }
+.pill-par  { background: rgba(212,137,14,.12); color: var(--amber2); }
+.pill-gap  { background: rgba(224,62,62,.12);  color: var(--red2);  }
+.pill-excl { background: rgba(32,200,216,.12); color: var(--cyan);  }
+
+/* ─── FALHA INSTITUCIONAL ─── */
+.fail-section { margin-bottom: 60px; }
+
+.fail-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--red);
+  border-radius: 8px;
+  padding: 28px 32px;
+  margin-bottom: 16px;
+}
+.fail-number {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--red);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.fail-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+.fail-body {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.75;
+  max-width: 780px;
+}
+.fail-body strong { color: var(--text); font-weight: 500; }
+.fail-body em { color: var(--amber2); font-style: normal; font-weight: 500; }
+
+.mechanism-box {
+  margin-top: 16px;
+  padding: 14px 16px;
+  background: var(--bg3);
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--text2);
+  line-height: 1.7;
+}
+.mechanism-box .mbox-label {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--red2);
+  margin-bottom: 8px;
+}
+
+.answer-box {
+  margin-top: 14px;
+  padding: 14px 16px;
+  background: rgba(31,184,106,.04);
+  border: 1px solid rgba(31,184,106,.2);
+  border-radius: 5px;
+  font-size: 12px;
+  color: var(--text2);
+  line-height: 1.7;
+}
+.answer-box .abox-label {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--green2);
+  margin-bottom: 8px;
+}
+.answer-box strong { color: var(--text); font-weight: 500; }
+
+/* ─── CONCLUSÃO ─── */
+.conclusion-section {
+  margin-bottom: 60px;
+}
+.pull-quote {
+  font-family: var(--font-serif);
+  font-size: clamp(18px, 3vw, 26px);
+  line-height: 1.5;
+  color: var(--text);
+  padding: 32px 0;
+  border-top: 1px solid var(--border2);
+  border-bottom: 1px solid var(--border2);
+  margin: 32px 0;
+  max-width: 820px;
+}
+.pull-quote em { color: var(--amber2); font-style: italic; }
+
+.conclusion-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 24px;
+}
+.conc-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 18px 20px;
+}
+.conc-num {
+  font-size: 28px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--amber2);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.conc-label {
+  font-size: 11px;
+  color: var(--text);
+  font-weight: 500;
+  margin-bottom: 6px;
+  font-family: var(--font-display);
+}
+.conc-desc {
+  font-size: 11px;
+  color: var(--text3);
+  line-height: 1.6;
+}
+
+/* ─── FOOTER ─── */
+.footer {
+  border-top: 1px solid var(--border);
+  padding-top: 28px;
+  padding-bottom: 40px;
+  font-size: 10px;
+  color: var(--text3);
+  line-height: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.footer a { color: var(--text3); text-decoration: none; border-bottom: 1px solid var(--border2); }
+.footer a:hover { color: var(--cyan); border-bottom-color: var(--cyan); }
+
+/* ─── NAV INTERNA ─── */
+.internal-nav {
+  position: sticky;
+  top: 0;
+  background: rgba(8,8,10,.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+  padding: 0;
+}
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  overflow-x: auto;
+}
+.nav-item {
+  font-size: 11px;
+  color: var(--text3);
+  padding: 12px 16px;
+  cursor: pointer;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+  transition: color .15s, border-color .15s;
+  letter-spacing: 0.04em;
+}
+.nav-item:hover { color: var(--text); }
+.nav-item.active { color: var(--amber2); border-bottom-color: var(--amber2); }
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text2);
+  padding: 12px 16px 12px 0;
+  border-right: 1px solid var(--border);
+  margin-right: 8px;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+}
+
+/* DIVIDER */
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 48px 0;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+  .wrap { padding: 0 16px 80px; }
+  .authors-grid { grid-template-columns: 1fr; }
+  .hero-meta { display: none; }
+  .conclusion-grid { grid-template-columns: 1fr; }
+  .matrix-table { display: block; overflow-x: auto; }
+  .evidence-item { grid-template-columns: 1fr; }
+  .pattern-desc, .evidence-chain, .narrativa-ref, .artifact-links { margin-left: 0; }
+}
+</style>
+</head>
+<body>
+
+<nav class="internal-nav">
+  <div class="nav-inner">
+    <span class="nav-logo">O Espelho Partido</span>
+    <a class="nav-item active" href="#autores">Autores</a>
+    <a class="nav-item" href="#padroes">Padrões Documentados</a>
+    <a class="nav-item" href="#matriz">Matriz de Cruzamento</a>
+    <a class="nav-item" href="#falha">Falha Sistêmica</a>
+    <a class="nav-item" href="#conclusao">Conclusão</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <!-- ═══ HERO ═══ -->
+  <div class="hero">
+    <div class="hero-meta">
+      26 de abril de 2026<br>
+      IDs 146–149 · lawfare-timeline<br>
+      <span class="cc0-badge">CC0 1.0 · DOMÍNIO PÚBLICO</span>
+    </div>
+    <div class="hero-eyebrow">Análise Editorial · Confronto Probatório</div>
+    <h1 class="hero-title">O Espelho <em>Partido</em></h1>
+    <p class="hero-subtitle">
+      A tese da captura do Estado chegou ao mainstream em 26 de abril de 2026 — coluna de grande imprensa, post viral. O suporte probatório já existia há anos no lawfare-timeline. Este documento mapeia o gap entre o que foi dito e o que foi documentado.
+    </p>
+  </div>
+
+  <!-- ═══ TESE ═══ -->
+  <div class="thesis-block">
+    <div class="thesis-text">
+      <strong>A narrativa pública de captura, sem especificidade de atores, mecanismos e datas, funciona como válvula de alívio:</strong> oferece ao público a sensação de compreensão do problema sem produzir pressão sobre os responsáveis identificáveis. O projeto existe para preencher este gap — transformar diagnóstico abstrato em documentação forense com datas verificadas, atores nomeados e cadeia lógica explícita.
+    </div>
+    <div class="thesis-source">— Entrada ID 149, lawfare-timeline · falha_institucional · análise de segundo nível</div>
+  </div>
+
+  <!-- ═══ AUTORES ═══ -->
+  <section id="autores">
+    <div class="sec-label">Fontes Analisadas</div>
+    <h2 class="section-title">Os dois textos — o que acertam e onde param</h2>
+    <p class="section-sub">Análise das convergências com a documentação do projeto e das lacunas que o projeto já havia preenchido antes da publicação.</p>
+
+    <div class="authors-grid">
+
+      <!-- SCHÜLER -->
+      <div class="author-card">
+        <div class="author-header">
+          <div class="author-avatar av-schuler">FS</div>
+          <div>
+            <div class="author-name">Fernando Schüler</div>
+            <div class="author-venue">O Estado de S. Paulo · A12 · Política · Dom 26/04/2026</div>
+            <span class="author-channel-tag tag-imprensa">Grande Imprensa</span>
+          </div>
+        </div>
+        <div class="author-body">
+          <div class="author-quote">
+            "A oposição real é entre racionalidade e captura. Imaginar o contrário pode render aplausos, mundo afora, mas não passa de um truque."
+          </div>
+
+          <div class="hits-block">
+            <div class="hits-label">Acertos documentáveis</div>
+            <div class="hit-item">Judiciário a 1,4% do PIB ante 0,3% na média internacional — dado verificável, consistente com o STF como terminal chokepoint documentado no projeto</div>
+            <div class="hit-item">Fundo eleitoral de R$ 5bi a cada dois anos — identificado no projeto como vetor do Padrão 05 (cofres públicos como esquema)</div>
+            <div class="hit-item">Captura independe de sigla — confirmado empiricamente nas 4 operações documentadas sob 3 governos distintos</div>
+            <div class="hit-item">Dívida crescendo ~11 pontos do PIB — contexto fiscal que torna os R$ 140bi de fluxo ilícito documentado ainda mais relevante</div>
+          </div>
+
+          <div class="lacunas-block">
+            <div class="lacunas-label">Lacunas — onde o projeto já tinha a resposta</div>
+
+            <div class="lacuna-item">
+              <span class="lacuna-icon">○</span>
+              <div class="lacuna-text">
+                <strong>"Múltiplas elites, de dentro e de fora do setor público"</strong> — generalização calculada. Sem nomes, datas ou mecanismos específicos. O projeto nomeia: Gilmar Mendes, Asfor Rocha, Toffoli, Vorcaro — com datas e decisões documentadas.
+              </div>
+            </div>
+            <div class="project-ref">
+              Padrão 03 documentado com precisão cirúrgica em <a href="paralelos.html">paralelos.html</a> (IDs 12–15) e <a href="thread-operacoes-brasil.html">thread-operacoes-brasil.html</a> (posts 12–15/28)
+            </div>
+
+            <div class="lacuna-item">
+              <span class="lacuna-icon">○</span>
+              <div class="lacuna-text">
+                <strong>Não identifica o mecanismo judicial de proteção</strong> — o habeas corpus concedido em 48h (Satiagraha), a liminar no recesso judicial (Castelo de Areia), o sigilo com conflito de interesse (Compliance Zero). Três operações, três momentos críticos, três decisores nomeados.
+              </div>
+            </div>
+            <div class="project-ref">
+              Documentado em <a href="satiagraha.html">satiagraha.html</a>, <a href="operacao_castelo_de_areia.html">operacao_castelo_de_areia.html</a>, <a href="banco-master-compliance-zero.html">banco-master-compliance-zero.html</a>
+            </div>
+
+            <div class="lacuna-item">
+              <span class="lacuna-icon">○</span>
+              <div class="lacuna-text">
+                <strong>Não conecta a estrutura financeira offshore</strong> — 15+ LLCs Delaware, exportadora em Houston com R$ 12,5bi, corredor Amapá para diesel russo, fundo fechado como assinatura financeira recorrente em operações aparentemente desconexas.
+              </div>
+            </div>
+            <div class="project-ref">
+              Mapeado em <a href="republica-capturada.html">republica-capturada.html</a> e <a href="operacao_poco_de_lobato.html">operacao_poco_de_lobato.html</a>
+            </div>
+
+            <div class="lacuna-item">
+              <span class="lacuna-icon">○</span>
+              <div class="lacuna-text">
+                <strong>Não formula mecanismo de ruptura</strong> — o texto conclui com "oxalá estes temas estejam em pauta", sem propor os três vetores identificados no projeto: conflito interno de elite, DOJ com interesse próprio, colapso fiscal.
+              </div>
+            </div>
+            <div class="project-ref">
+              Vetores de ruptura mapeados em <a href="zero-x-zero.html">zero-x-zero.html</a> — capítulo 04
+            </div>
+          </div>
+
+          <div class="verdict v-amber">
+            <div class="verdict-title">Avaliação consolidada</div>
+            <div class="verdict-body">Diagnóstico estrutural correto com lastro empírico — o trabalho jornalístico mais sólido disponível no debate público até a data. Mas opera no nível do fenômeno, não da arquitetura. O projeto possui os andares que Schüler não sobe: mecanismos, atores, datas, offshore, ponto de inflexão operação a operação.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- JEFFS -->
+      <div class="author-card">
+        <div class="author-header">
+          <div class="author-avatar av-jeffs">@J</div>
+          <div>
+            <div class="author-name">@Jeffssss_</div>
+            <div class="author-venue">X (Twitter) · Post público · Circulação: abr/2026</div>
+            <span class="author-channel-tag tag-viral">Viral · Redes Sociais</span>
+          </div>
+        </div>
+        <div class="author-body">
+          <div class="author-quote">
+            "A captura do Estado brasileiro virou o maior programa de transferência de renda do País — só que ao contrário. [...] A falsa disputa não é esquerda contra direita. É racionalidade contra captura."
+          </div>
+
+          <div class="hits-block">
+            <div class="hits-label">Convergências com a documentação do projeto</div>
+            <div class="hit-item">Recusa da dicotomia esquerda/direita — coincide com o achado central do projeto: captura transversal a governos de FHC, Lula I/II, Dilma, Temer, Bolsonaro</div>
+            <div class="hit-item">Estado como sistema de transferência inversa — hipótese central de <a href="brasil-sangra.html" style="color:var(--green2)">brasil-sangra.html</a> e zero-x-zero.html</div>
+            <div class="hit-item">Trabalhador como pagador final via tributos, inflação e juros — suportado pelos dados fiscais do projeto</div>
+            <div class="hit-item">Judiciário como casta organizada — convergência com Padrão 03 documentado em 4 operações</div>
+          </div>
+
+          <div class="lacunas-block">
+            <div class="lacunas-label">Lacunas críticas — ausência de substrato probatório</div>
+
+            <div class="lacuna-item">
+              <span class="lacuna-icon">✗</span>
+              <div class="lacuna-text">
+                <strong>Zero referências verificáveis</strong> — o texto opera exclusivamente em linguagem moral e metafórica. Nenhum dado, nenhuma data, nenhum ator nomeado além do "bilionário do discurso" — figura retórica sem identidade.
+              </div>
+            </div>
+            <div class="project-ref">
+              O projeto possui R$ 140bi documentados, 6 padrões com datas, atores nomeados por operação — ver <a href="republica-capturada.html">republica-capturada.html</a>
+            </div>
+
+            <div class="lacuna-item">
+              <span class="lacuna-icon">✗</span>
+              <div class="lacuna-text">
+                <strong>"Supersalários, fundões eleitorais, estatais deficitárias"</strong> — catálogo correto, mas genérico. O projeto documenta os mecanismos específicos: estrutura de fundo fechado unipessoal como assinatura financeira recorrente em Satiagraha, Lava Jato, Compliance Zero e Carbono Oculto.
+              </div>
+            </div>
+            <div class="project-ref">
+              Assinatura financeira recorrente documentada em <a href="paralelos.html">paralelos.html</a> — aba KPIs, hipótese de infraestrutura jurídico-financeira comum
+            </div>
+
+            <div class="lacuna-item">
+              <span class="lacuna-icon">✗</span>
+              <div class="lacuna-text">
+                <strong>Sem agenda de ruptura</strong> — o post conclui com um aforismo moral sem propor mecanismo de mudança. O projeto identifica três forças históricas de ruptura e avalia cada uma no contexto brasileiro de 2026.
+              </div>
+            </div>
+            <div class="project-ref">
+              Análise de ruptura em <a href="zero-x-zero.html">zero-x-zero.html</a> com comparativo Mani Pulite / CPIB Singapore / Rose Revolution Georgia
+            </div>
+
+            <div class="lacuna-item">
+              <span class="lacuna-icon">✗</span>
+              <div class="lacuna-text">
+                <strong>Risco de apropriação retórica</strong> — texto sem dados pode ser instrumentalizado por qualquer espectro político, inclusive pelos próprios agentes da captura, para sinalizar "indignação" sem comprometimento com as evidências concretas.
+              </div>
+            </div>
+            <div class="project-ref">
+              Este risco é o objeto específico da entrada ID 149 — <em>falha institucional de segundo nível</em> — neste arquivo
+            </div>
+          </div>
+
+          <div class="verdict v-blue">
+            <div class="verdict-title">Avaliação consolidada</div>
+            <div class="verdict-body">Documento de percepção coletiva de alta eficácia viral. Valor como termômetro: a tese chegou ao público leigo. Risco como instrumento: sem dados, o diagnóstico correto pode servir como capital simbólico sem ônus probatório — e é exatamente isso que o sistema de captura pode absorver sem dano estrutural.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ PADRÕES SISTÊMICOS ═══ -->
+  <section id="padroes">
+    <div class="sec-label">Documentação Forense</div>
+    <h2 class="section-title">Os 6 Padrões Sistêmicos — evidência que a narrativa não alcança</h2>
+    <p class="section-sub">Cada padrão foi identificado nas operações documentadas. Nenhum aparece nomeado com precisão nos textos públicos analisados.</p>
+
+    <div class="ops-legend">
+      <div class="op-leg"><div class="op-leg-dot" style="background:#e8a020"></div>Castelo de Areia</div>
+      <div class="op-leg"><div class="op-leg-dot" style="background:#9060e8"></div>Satiagraha</div>
+      <div class="op-leg"><div class="op-leg-dot" style="background:#4080ff"></div>Lava Jato</div>
+      <div class="op-leg"><div class="op-leg-dot" style="background:#e03e3e"></div>Compliance Zero</div>
+      <div class="op-leg"><div class="op-leg-dot" style="background:#20c8d8"></div>Carbono Oculto</div>
+      <div class="op-leg"><div class="op-leg-dot" style="background:#1fb86a"></div>Poço de Lobato</div>
+    </div>
+
+    <div class="patterns-section">
+
+      <!-- P01 -->
+      <div class="pattern-row open" onclick="togglePattern(this)">
+        <div class="pattern-header">
+          <span class="pattern-num">P01</span>
+          <span class="pattern-code">PROC</span>
+          <span class="pattern-name">Anulação por vício processual</span>
+          <div class="pattern-presence">
+            <div class="op-dot active-ca" title="Castelo de Areia"></div>
+            <div class="op-dot active-sat" title="Satiagraha"></div>
+            <div class="op-dot active-lj" title="Lava Jato"></div>
+            <div class="op-dot active-cz" title="Compliance Zero"></div>
+            <div class="op-dot" title="Carbono Oculto"></div>
+            <div class="op-dot" title="Poço de Lobato"></div>
+          </div>
+          <span class="pattern-chevron">▼</span>
+        </div>
+        <div class="pattern-body">
+          <p class="pattern-desc">A estratégia defensiva padrão no Brasil não ataca os fatos — ataca o processo. Todo processo tem alguma falha formal. A abertura existe. A corrida é: quem chega primeiro, a condenação ou a anulação? Em 4 das 6 operações documentadas, a anulação chegou primeiro — ou está em curso com esse objetivo explícito.</p>
+          <div class="evidence-chain">
+            <div class="evidence-title">Evidências documentadas por operação</div>
+            <div class="evidence-item ei-lj">
+              <div class="ei-op">Lava Jato</div>
+              <div class="ei-fact">STF declarou Sérgio Moro parcial em 2021. <strong>Provas coletadas em 13 anos impedidas de uso futuro.</strong> Tríplex e sítio de Atibaia prescreveram durante redistribuição Curitiba → Brasília. Não houve absolvição — o prazo simplesmente correu.</div>
+            </div>
+            <div class="evidence-item ei-ca">
+              <div class="ei-op">Castelo de Areia</div>
+              <div class="ei-fact">Liminar suspendeu toda a operação durante recesso judicial de jan/2010, quando demais ministros estavam de férias. <strong>Palocci alegou em delação que Asfor Rocha recebeu R$ 5mi pela decisão.</strong> Testemunha da acusação morreu em 2014.</div>
+            </div>
+            <div class="evidence-item ei-sat">
+              <div class="ei-op">Satiagraha</div>
+              <div class="ei-fact">Delegado Protógenes processado pelo próprio STF. <strong>Condenado a 2,5 anos, expulso da PF.</strong> O polo da persecução se inverteu — o investigador tornou-se o investigado.</div>
+            </div>
+            <div class="evidence-item ei-cz">
+              <div class="ei-op">Compliance Zero</div>
+              <div class="ei-fact">Toffoli como relator decretou sigilo máximo. Acareação determinada antes de depoimentos individuais — <strong>procedimento atípico criticado por juristas.</strong> Relatório da PF sugerindo afastamento chamado de "lixo jurídico" pelo STF.</div>
+            </div>
+          </div>
+          <div class="narrativa-ref">
+            <div class="narrativa-label">O que Schüler/Jeffs dizem</div>
+            <div class="narrativa-text">Schüler menciona "vinculações constitucionais" e o Judiciário como custo irracional. Jeffs cita "Judiciário caríssimo". <span>Nenhum dos dois nomeia o mecanismo específico de anulação processual retroativa como instrumento sistêmico de proteção.</span></div>
+          </div>
+          <div class="artifact-links">
+            <a href="paralelos.html" class="art-link">paralelos.html</a>
+            <a href="operacao_lava_jato.html" class="art-link">operacao_lava_jato.html</a>
+            <a href="thread-operacoes-brasil.html" class="art-link">thread-operacoes-brasil.html</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- P02 -->
+      <div class="pattern-row" onclick="togglePattern(this)">
+        <div class="pattern-header">
+          <span class="pattern-num">P02</span>
+          <span class="pattern-code">INVER</span>
+          <span class="pattern-name">O investigador vira investigado</span>
+          <div class="pattern-presence">
+            <div class="op-dot active-ca" title="Castelo de Areia"></div>
+            <div class="op-dot active-sat" title="Satiagraha"></div>
+            <div class="op-dot active-lj" title="Lava Jato"></div>
+            <div class="op-dot active-cz" title="Compliance Zero"></div>
+            <div class="op-dot" title="Carbono Oculto"></div>
+            <div class="op-dot" title="Poço de Lobato"></div>
+          </div>
+          <span class="pattern-chevron">▼</span>
+        </div>
+        <div class="pattern-body">
+          <p class="pattern-desc">Em 4 das 6 operações, os principais responsáveis pela investigação foram processados, condenados ou destruídos institucionalmente. O efeito é devastador para futuras investigações: nenhum delegado, juiz ou procurador observa o destino de Protógenes, Moro e Dallagnol sem calcular o risco pessoal de investigar poder. A intimidação não precisa ser explícita — os casos já são o recado.</p>
+          <div class="evidence-chain">
+            <div class="evidence-title">Evidências documentadas</div>
+            <div class="evidence-item ei-sat">
+              <div class="ei-op">Satiagraha</div>
+              <div class="ei-fact"><strong>Protógenes Queiroz:</strong> delegado federal preso, condenado pelo STF a 2,5 anos, expulso da PF. Asilado político na Suíça desde 2016. Dantas ajuizou queixa-crime em 2019.</div>
+            </div>
+            <div class="evidence-item ei-lj">
+              <div class="ei-op">Lava Jato</div>
+              <div class="ei-fact"><strong>Sérgio Moro:</strong> declarado parcial pelo STF em 2021. Provas impedidas de uso futuro. <strong>Deltan Dallagnol:</strong> mandato de deputado cassado pela Justiça Eleitoral em 2023.</div>
+            </div>
+            <div class="evidence-item ei-cz">
+              <div class="ei-op">Compliance Zero</div>
+              <div class="ei-fact"><strong>Delegado Andrei Rodrigues:</strong> relatório sugerindo afastamento de Toffoli chamado de "lixo jurídico" pelo STF. O investigador passou a ser o problema — padrão documentado 17 anos após Satiagraha.</div>
+            </div>
+          </div>
+          <div class="narrativa-ref">
+            <div class="narrativa-label">Ausência nos textos públicos</div>
+            <div class="narrativa-text">Schüler não menciona o padrão de inversão do polo investigativo. Jeffs fala em "castas organizadas" sem identificar o mecanismo específico de neutralização dos investigadores. <span>O projeto documenta três casos em 17 anos com precisão de datas e decisores.</span></div>
+          </div>
+          <div class="artifact-links">
+            <a href="satiagraha.html" class="art-link">satiagraha.html</a>
+            <a href="operacao_lava_jato.html" class="art-link">operacao_lava_jato.html</a>
+            <a href="banco-master-compliance-zero.html" class="art-link">banco-master-compliance-zero.html</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- P03 -->
+      <div class="pattern-row" onclick="togglePattern(this)">
+        <div class="pattern-header">
+          <span class="pattern-num">P03</span>
+          <span class="pattern-code">STF</span>
+          <span class="pattern-name">Captura judicial de emergência</span>
+          <div class="pattern-presence">
+            <div class="op-dot active-ca" title="Castelo de Areia"></div>
+            <div class="op-dot active-sat" title="Satiagraha"></div>
+            <div class="op-dot active-lj" title="Lava Jato"></div>
+            <div class="op-dot active-cz" title="Compliance Zero"></div>
+            <div class="op-dot" title="Carbono Oculto"></div>
+            <div class="op-dot" title="Poço de Lobato"></div>
+          </div>
+          <span class="pattern-chevron">▼</span>
+        </div>
+        <div class="pattern-body">
+          <p class="pattern-desc"><strong>O único padrão presente nas 4 operações anticorrupção documentadas.</strong> Em cada operação, um ou mais membros de tribunal superior concederam liminares ou habeas corpus em circunstâncias atípicas, suspendendo prisões ou investigações no exato momento crítico. Não é coincidência — é reprodução de mecanismo.</p>
+          <div class="evidence-chain">
+            <div class="evidence-title">Evidências documentadas — cronologia</div>
+            <div class="evidence-item ei-sat">
+              <div class="ei-op">Satiagraha · 2008</div>
+              <div class="ei-fact"><strong>Gilmar Mendes</strong> concedeu 2 habeas corpus a Daniel Dantas em menos de 48 horas. Dantas entrou preso na segunda, saiu na quarta. STF pleno referendou por 9 a 1. Frase documentada: <em>"A Madre Teresa de Calcutá raramente pede habeas corpus."</em></div>
+            </div>
+            <div class="evidence-item ei-ca">
+              <div class="ei-op">Castelo de Areia · 2010</div>
+              <div class="ei-fact"><strong>Asfor Rocha</strong> concedeu liminar suspendendo toda a operação durante recesso judicial de janeiro — quando os outros ministros estavam de férias. Anos depois: Palocci alegou em delação que Asfor Rocha recebeu R$ 5mi pela decisão.</div>
+            </div>
+            <div class="evidence-item ei-lj">
+              <div class="ei-op">Lava Jato · 2021</div>
+              <div class="ei-fact"><strong>STF</strong> declarou Moro parcial, anulando retroativamente 13 anos de investigação. Decisão do Plenário com efeito erga omnes sobre todas as condenações produzidas pela operação.</div>
+            </div>
+            <div class="evidence-item ei-cz">
+              <div class="ei-op">Compliance Zero · 2025–26</div>
+              <div class="ei-fact"><strong>Toffoli</strong> como relator: sigilo máximo, acareação atípica antes dos depoimentos, relatório da PF sugerindo afastamento por conflito de interesse (resort da família). Removido da relatoria após pressão pública — caso redistribuído para André Mendonça.</div>
+            </div>
+          </div>
+          <div class="narrativa-ref">
+            <div class="narrativa-label">O que Schüler diz vs. o que o projeto documenta</div>
+            <div class="narrativa-text">Schüler: <em>"Temos um Judiciário que custa perto de 1,4% do PIB [...] não se trata de um problema ideológico, mas de falta de racionalidade na estrutura pública."</em> O projeto vai além: <span>nomeia os ministros, as datas, os beneficiários imediatos das decisões. Não é falta de racionalidade — é racionalidade a serviço de outro interesse.</span></div>
+          </div>
+          <div class="artifact-links">
+            <a href="paralelos.html" class="art-link">paralelos.html</a>
+            <a href="satiagraha.html" class="art-link">satiagraha.html</a>
+            <a href="alem-da-toga.html" class="art-link">alem-da-toga.html</a>
+            <a href="inq4781.html" class="art-link">inq4781.html</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- P04 -->
+      <div class="pattern-row" onclick="togglePattern(this)">
+        <div class="pattern-header">
+          <span class="pattern-num">P04</span>
+          <span class="pattern-code">MÍDIA</span>
+          <span class="pattern-name">Weaponização da mídia</span>
+          <div class="pattern-presence">
+            <div class="op-dot active-ca" title="Castelo de Areia"></div>
+            <div class="op-dot active-sat" title="Satiagraha"></div>
+            <div class="op-dot active-lj" title="Lava Jato"></div>
+            <div class="op-dot active-cz" title="Compliance Zero"></div>
+            <div class="op-dot active-co" title="Carbono Oculto"></div>
+            <div class="op-dot" title="Poço de Lobato"></div>
+          </div>
+          <span class="pattern-chevron">▼</span>
+        </div>
+        <div class="pattern-body">
+          <p class="pattern-desc">Em todas as operações documentadas há evidências de uso estratégico da imprensa — em ambas as direções. A mídia amplifica, legitima ou neutraliza investigações dependendo de qual interesse for instrumentalizado. O caso mais recente e documentável: fake news que levaram à revogação das normativas de transparência de fintechs em jan/2025 — brecha que permaneceu aberta exatamente durante o período operacional do esquema Carbono Oculto.</p>
+          <div class="evidence-chain">
+            <div class="evidence-title">Evidências documentadas</div>
+            <div class="evidence-item ei-co">
+              <div class="ei-op">Carbono Oculto · 2025</div>
+              <div class="ei-fact">Normativas de transparência de fintechs revogadas em jan/2025 após <strong>"onda de fake news"</strong>. Brecha permaneceu aberta durante o período operacional do esquema. Fechada pela IN 2.278/2025 apenas após a operação. Quem produziu as fake news? Pergunta sem resposta pública — registrada como lacuna Q05 no republica-capturada.html.</div>
+            </div>
+            <div class="evidence-item ei-cz">
+              <div class="ei-op">Compliance Zero · 2025</div>
+              <div class="ei-fact">Vorcaro utilizou ex-policial federal para <strong>espionagem ilegal</strong> de adversários, jornalistas e autoridades. Marilson Roseno da Silva preso na 3ª fase da Compliance Zero. Influenciadores coordenados para atacar/defender investigadores — documentado na comparação Satiagraha/Master.</div>
+            </div>
+            <div class="evidence-item ei-lj">
+              <div class="ei-op">Lava Jato · 2019</div>
+              <div class="ei-fact">Conversas Moro-Dallagnol publicadas pelo The Intercept Brasil revelaram coordenação processo-investigação, fornecendo ao STF fundamento para anulação. A publicação em si foi o instrumento processual da anulação — independente da veracidade das gravações.</div>
+            </div>
+          </div>
+          <div class="narrativa-ref">
+            <div class="narrativa-label">Ironia estrutural</div>
+            <div class="narrativa-text">O próprio post viral de @Jeffssss_ é um exemplo de Padrão 04 involuntário: <span>narrativa correta sobre o problema, sem dados que identifiquem os responsáveis, com alta capacidade de viralização — o que permite que o diagnóstico circule como capital simbólico sem pressão sobre os atores concretos.</span> A captura absorve a crítica sem dano.</div>
+          </div>
+          <div class="artifact-links">
+            <a href="republica-capturada.html" class="art-link">republica-capturada.html</a>
+            <a href="carbono_oculto.html" class="art-link">carbono_oculto.html</a>
+            <a href="faixa-tropical.html" class="art-link">faixa-tropical.html</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- P05 -->
+      <div class="pattern-row" onclick="togglePattern(this)">
+        <div class="pattern-header">
+          <span class="pattern-num">P05</span>
+          <span class="pattern-code">COFRE</span>
+          <span class="pattern-name">Cofres públicos como vetor do esquema</span>
+          <div class="pattern-presence">
+            <div class="op-dot active-ca" title="Castelo de Areia"></div>
+            <div class="op-dot active-sat" title="Satiagraha"></div>
+            <div class="op-dot active-lj" title="Lava Jato"></div>
+            <div class="op-dot active-cz" title="Compliance Zero"></div>
+            <div class="op-dot active-co" title="Carbono Oculto"></div>
+            <div class="op-dot active-pb" title="Poço de Lobato"></div>
+          </div>
+          <span class="pattern-chevron">▼</span>
+        </div>
+        <div class="pattern-body">
+          <p class="pattern-desc">Presente em todas as 6 operações documentadas. O Estado não é apenas capturado — é usado como veículo ativo de extração. Recursos públicos, terras da União, garantias do FGC, BNDES, fundos de pensão: cada esquema usa um instrumento público diferente, mas o padrão é o mesmo. É o ponto de maior convergência entre o projeto e os textos de Schüler e Jeffs — e também onde a especificidade do projeto mais excede a narrativa pública.</p>
+          <div class="evidence-chain">
+            <div class="evidence-title">Vetores documentados por operação</div>
+            <div class="evidence-item ei-co">
+              <div class="ei-op">Carbono Oculto</div>
+              <div class="ei-fact"><strong>530.000 hectares de terras públicas da União</strong> grilados para emissão de 168,8 milhões de UECs fictícias. R$ 45,5bi em ativos financeiros sem lastro real. PCC infiltrado em gestoras CVM-reguladas na Faria Lima com R$ 30bi de patrimônio.</div>
+            </div>
+            <div class="evidence-item ei-cz">
+              <div class="ei-op">Compliance Zero</div>
+              <div class="ei-fact"><strong>FGC como vetor de socialização do rombo:</strong> R$ 56bi expostos ao Fundo Garantidor de Créditos — custo repassado a todos os bancos associados e, indiretamente, a todos os depositantes do sistema financeiro brasileiro.</div>
+            </div>
+            <div class="evidence-item ei-pb">
+              <div class="ei-op">Poço de Lobato</div>
+              <div class="ei-fact">R$ 26bi em dívida tributária ativa. R$ 350mi/mês em evasão fiscal drenando recursos de saúde e educação em SP e RJ. <strong>Maior devedor tributário individual isolado do país</strong> — com 15+ LLCs Delaware e exportadora em Houston.</div>
+            </div>
+            <div class="evidence-item ei-lj">
+              <div class="ei-op">Lava Jato</div>
+              <div class="ei-fact">Contratos da Petrobras, Eletrobras, ministérios e empreiteiras como vetor. <strong>Estimativa de R$ 40bi+ em propinas pagas com recursos públicos</strong> ao longo de 10+ anos de esquema operacional.</div>
+            </div>
+          </div>
+          <div class="narrativa-ref">
+            <div class="narrativa-label">Convergência com Schüler</div>
+            <div class="narrativa-text">Schüler menciona "estatais deficitárias, renúncias fiscais, incentivos" — o projeto documenta os mecanismos específicos: <span>UECs fictícias sobre terras da União, FGC como veículo de socialização de perdas, dívida tributária de R$ 26bi como financiamento implícito do crime organizado.</span></div>
+          </div>
+          <div class="artifact-links">
+            <a href="carbono_oculto.html" class="art-link">carbono_oculto.html</a>
+            <a href="banco-master-compliance-zero.html" class="art-link">banco-master-compliance-zero.html</a>
+            <a href="operacao_poco_de_lobato.html" class="art-link">operacao_poco_de_lobato.html</a>
+            <a href="operacao_lava_jato.html" class="art-link">operacao_lava_jato.html</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- P06 -->
+      <div class="pattern-row" onclick="togglePattern(this)">
+        <div class="pattern-header">
+          <span class="pattern-num">P06</span>
+          <span class="pattern-code">TEMPO</span>
+          <span class="pattern-name">Prescrição como âncora estratégica</span>
+          <div class="pattern-presence">
+            <div class="op-dot active-ca" title="Castelo de Areia"></div>
+            <div class="op-dot" title="Satiagraha"></div>
+            <div class="op-dot active-lj" title="Lava Jato"></div>
+            <div class="op-dot active-cz" title="Compliance Zero"></div>
+            <div class="op-dot" title="Carbono Oculto"></div>
+            <div class="op-dot" title="Poço de Lobato"></div>
+          </div>
+          <span class="pattern-chevron">▼</span>
+        </div>
+        <div class="pattern-body">
+          <p class="pattern-desc">O instrumento mais silencioso e mais letal. Uma investigação não precisa ser destruída — só precisa ser suficientemente atrasada. O sistema processual brasileiro oferece múltiplos pontos de ataque formal, cada recurso consome tempo irreversível, e o relógio da prescrição corre sem pausa. Os advogados criminais especializados em grandes casos conhecem este ciclo de cor: <em>anular → redistribuir → aguardar → prescrever.</em></p>
+          <div class="evidence-chain">
+            <div class="evidence-title">Evidências documentadas</div>
+            <div class="evidence-item ei-lj">
+              <div class="ei-op">Lava Jato</div>
+              <div class="ei-fact">Casos do tríplex e sítio de Atibaia prescreveram enquanto aguardavam redistribuição entre Curitiba e Brasília. <strong>Não houve absolvição. O prazo simplesmente correu.</strong> Lula completou 70 anos em 2015 — prazo prescricional reduzido à metade enquanto processos ainda tramitavam.</div>
+            </div>
+            <div class="evidence-item ei-ca">
+              <div class="ei-op">Castelo de Areia</div>
+              <div class="ei-fact">Liminar de jan/2010 + redistribuição + recesso = casos reiniciados no DF já prescritos. O STF declarou o juiz parcial. As provas não desapareceram. <strong>O prazo, sim.</strong></div>
+            </div>
+            <div class="evidence-item ei-cz">
+              <div class="ei-op">Compliance Zero · risco ativo</div>
+              <div class="ei-fact">Extradição do Grupo Refit legalmente frágil: ausência de indictment formal nos EUA impede MLAT efetivo. Cada mês sem indiciamento formal é prazo prescricional que corre. <strong>O padrão de 2008 e 2010 está disponível para reativação em 2026.</strong></div>
+            </div>
+          </div>
+          <div class="narrativa-ref">
+            <div class="narrativa-label">Ausência total nos textos públicos</div>
+            <div class="narrativa-text">Nem Schüler nem Jeffs mencionam o instrumento da prescrição como mecanismo de proteção sistêmica. É o padrão mais invisível — e o mais letal — da arquitetura de impunidade documentada. <span>A narrativa pública foca no espetáculo das prisões; o projeto documenta o que acontece depois.</span></div>
+          </div>
+          <div class="artifact-links">
+            <a href="operacao_lava_jato.html" class="art-link">operacao_lava_jato.html</a>
+            <a href="thread-operacoes-brasil.html" class="art-link">thread-operacoes-brasil.html</a>
+            <a href="zero-x-zero.html" class="art-link">zero-x-zero.html</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ MATRIZ DE CRUZAMENTO ═══ -->
+  <section id="matriz">
+    <div class="sec-label">Confronto Analítico</div>
+    <h2 class="section-title">Matriz de cruzamento — narrativa pública vs. documentação forense</h2>
+    <p class="section-sub">O que cada fonte afirma, o que o projeto documenta e onde está o gap.</p>
+
+    <table class="matrix-table">
+      <thead>
+        <tr>
+          <th>Dimensão</th>
+          <th>Schüler (Estadão)</th>
+          <th>@Jeffssss_ (X)</th>
+          <th>Projeto (lawfare-timeline)</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Captura independe de sigla</td>
+          <td class="cell-schuler">Afirma explicitamente: "não é problema ideológico"</td>
+          <td class="cell-jeffs">Afirma: "falsa disputa não é esquerda/direita"</td>
+          <td class="cell-projeto">Documenta: Padrão P03 em 4 operações sob 3 governos distintos, com datas e decisores</td>
+          <td><span class="status-pill pill-ok">Confirmado</span></td>
+        </tr>
+        <tr>
+          <td>Custo do Judiciário</td>
+          <td class="cell-schuler">Dado: 1,4% do PIB ante 0,3% na média internacional</td>
+          <td class="cell-jeffs">Menciona "Judiciário caríssimo" sem dados</td>
+          <td class="cell-projeto">Documenta o mecanismo específico: habeas corpus, liminares de recesso, sigilo monocrático — o custo não é só financeiro</td>
+          <td><span class="status-pill pill-ok">Confirmado</span><br><span class="status-pill pill-excl">Excedido</span></td>
+        </tr>
+        <tr>
+          <td>Quem captura</td>
+          <td class="cell-schuler">"Múltiplas elites, de dentro e de fora do setor público" — sem nomes</td>
+          <td class="cell-jeffs">"Bilionário do discurso", "castas organizadas" — figuras retóricas</td>
+          <td class="cell-projeto">Gilmar Mendes, Asfor Rocha, Toffoli, Vorcaro, Dantas — nomeados com datas, decisões e conexões documentadas</td>
+          <td><span class="status-pill pill-gap">Lacuna crítica</span><br><span class="status-pill pill-excl">Projeto excede</span></td>
+        </tr>
+        <tr>
+          <td>Mecanismo judicial</td>
+          <td class="cell-schuler">Não aborda</td>
+          <td class="cell-jeffs">Não aborda</td>
+          <td class="cell-projeto">P03 documentado em 4 operações: HC em 48h, liminar no recesso, sigilo + conflito de interesse, anulação retroativa de 13 anos</td>
+          <td><span class="status-pill pill-gap">Ausente na narrativa</span><br><span class="status-pill pill-excl">Exclusivo do projeto</span></td>
+        </tr>
+        <tr>
+          <td>Estrutura offshore</td>
+          <td class="cell-schuler">Não aborda</td>
+          <td class="cell-jeffs">Não aborda</td>
+          <td class="cell-projeto">15+ LLCs Delaware, exportadora Houston R$ 12,5bi, corredor Amapá, fundo fechado unipessoal como assinatura recorrente</td>
+          <td><span class="status-pill pill-gap">Ausente na narrativa</span><br><span class="status-pill pill-excl">Exclusivo do projeto</span></td>
+        </tr>
+        <tr>
+          <td>Ponto de inflexão</td>
+          <td class="cell-schuler">Não aborda</td>
+          <td class="cell-jeffs">Não aborda</td>
+          <td class="cell-projeto">Mapeado em cada operação: momento em que investigação para de subir e começa a circular sobre operadores de nível médio</td>
+          <td><span class="status-pill pill-gap">Ausente na narrativa</span><br><span class="status-pill pill-excl">Exclusivo do projeto</span></td>
+        </tr>
+        <tr>
+          <td>Beneficiários finais</td>
+          <td class="cell-schuler">Não nomeia</td>
+          <td class="cell-jeffs">Não nomeia</td>
+          <td class="cell-projeto">Lacuna explícita documentada (Q06, Q08 republica-capturada.html) — o projeto nomeia a pergunta que ninguém responde</td>
+          <td><span class="status-pill pill-par">Parcial</span><br><span class="status-pill pill-excl">Projeto mapeia a lacuna</span></td>
+        </tr>
+        <tr>
+          <td>Mecanismo de ruptura</td>
+          <td class="cell-schuler">"Oxalá em pauta no debate eleitoral" — sem proposta</td>
+          <td class="cell-jeffs">Aforismo moral — sem proposta</td>
+          <td class="cell-projeto">3 vetores históricos identificados: conflito interno de elite, DOJ com interesse próprio, colapso fiscal — com análise de viabilidade no contexto 2026</td>
+          <td><span class="status-pill pill-gap">Ausente na narrativa</span><br><span class="status-pill pill-excl">Exclusivo do projeto</span></td>
+        </tr>
+        <tr>
+          <td>Prescrição como instrumento</td>
+          <td class="cell-schuler">Não menciona</td>
+          <td class="cell-jeffs">Não menciona</td>
+          <td class="cell-projeto">P06 documentado: tríplex/sítio prescreveram durante redistribuição; Castelo de Areia prescreveu após liminar de recesso; risco ativo em Compliance Zero</td>
+          <td><span class="status-pill pill-gap">Ausente na narrativa</span><br><span class="status-pill pill-excl">Exclusivo do projeto</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ FALHA INSTITUCIONAL ═══ -->
+  <section id="falha">
+    <div class="sec-label">ID 149 · falha_institucional</div>
+    <h2 class="section-title">A falha de segundo nível</h2>
+    <p class="section-sub">Não é apenas que o sistema opera capturado. É que o diagnóstico público da captura, sem dados, serve ao sistema.</p>
+
+    <div class="fail-card">
+      <div class="fail-number">FALHA-INST-001 · Gap Narrativo-Probatório</div>
+      <div class="fail-title">O diagnóstico correto como válvula de alívio</div>
+      <div class="fail-body">
+        A tese da captura do Estado, <strong>corretamente formulada</strong> por Schüler e Jeffs, circula sem o suporte empírico que a tornaria juridicamente acionável ou politicamente transformadora. O resultado é que o diagnóstico fica disponível para <em>apropriação retórica por qualquer campo político</em> — sem que nenhum campo precise responder pelas evidências concretas que o projeto documenta.
+      </div>
+      <div class="mechanism-box">
+        <div class="mbox-label">Mecanismo de falha</div>
+        A narrativa de captura, sem especificação de atores, mecanismos e datas, funciona como válvula de alívio: oferece ao público a sensação de compreensão do problema sem produzir pressão sobre os responsáveis identificáveis. É o equivalente discursivo do Padrão 04 (weaponização da mídia) — mas operado <strong>involuntariamente pelos próprios críticos do sistema</strong>. A captura absorve a crítica sem dano estrutural.
+      </div>
+      <div class="answer-box">
+        <div class="abox-label">Resposta do projeto</div>
+        O lawfare-timeline existe precisamente para preencher este gap. A diferença entre <strong>"o Estado é capturado"</strong> e <strong>"em 12 de outubro de 2008, o presidente do STF concedeu dois habeas corpus em 48 horas ao mesmo investigado por corrupção — e o Plenário referendou por 9 a 1"</strong> é a diferença entre retórica e responsabilização. Entre moral e prova. Entre diagnóstico e documentação forense.
+      </div>
+    </div>
+
+    <div class="fail-card">
+      <div class="fail-number">FALHA-INST-002 · Naturalização do Fenômeno</div>
+      <div class="fail-title">Quanto mais a tese circula sem nomes, mais se torna paisagem</div>
+      <div class="fail-body">
+        Quanto mais o diagnóstico de captura circula sem especificidade — sem Gilmar Mendes em 2008, sem Asfor Rocha em 2010, sem Toffoli em 2025-26 — mais ele se torna parte da <em>paisagem política aceitável</em>. O cidadão aprende que "o sistema é capturado" da mesma forma que aprende que "o trânsito está ruim": como fato da natureza, não como resultado de escolhas de atores identificáveis que poderiam ser responsabilizados.
+      </div>
+      <div class="mechanism-box">
+        <div class="mbox-label">Implicação para o debate eleitoral 2026</div>
+        Se a pauta da captura do Estado chegar ao debate eleitoral de 2026 — como Schüler espera — sem a especificidade probatória que o projeto documenta, ela será um instrumento de campanha genérico: <strong>todos os candidatos poderão invocar "combate à captura" sem comprometimento com os casos concretos documentados.</strong> O projeto pode transformar isso: os artefatos existem, são públicos, são CC0, e nomiam o problema com precisão cirúrgica.
+      </div>
+      <div class="answer-box">
+        <div class="abox-label">Ação recomendada</div>
+        Conectar os diagnósticos públicos de alta circulação ao corpo de evidências do projeto — sem identificar o projeto como "resposta" aos textos, mas como <strong>documentação autônoma do mesmo fenômeno com nível de precisão que o debate público ainda não alcançou.</strong> O Espelho Partido é este documento.
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ CONCLUSÃO ═══ -->
+  <section id="conclusao">
+    <div class="sec-label">Síntese</div>
+
+    <div class="pull-quote">
+      "Um sistema só pode ser rompido por quem consegue <em>nomeá-lo com exatidão</em>. Schüler e Jeffs nomearam o fenômeno. O projeto nomeia os mecanismos, os atores e as datas. São duas metades do mesmo espelho."
+    </div>
+
+    <div class="conclusion-grid">
+      <div class="conc-card">
+        <div class="conc-num">4</div>
+        <div class="conc-label">Operações anticorrupção</div>
+        <div class="conc-desc">Documentadas com 6 padrões sistêmicos recorrentes — nenhum mencionado com precisão nos textos analisados</div>
+      </div>
+      <div class="conc-card">
+        <div class="conc-num">6</div>
+        <div class="conc-label">Padrões identificados</div>
+        <div class="conc-desc">P01 a P06 — anulação, inversão, captura judicial, weaponização, cofres públicos, prescrição. Todos ausentes da narrativa mainstream</div>
+      </div>
+      <div class="conc-card">
+        <div class="conc-num">0</div>
+        <div class="conc-label">Beneficiários finais nomeados</div>
+        <div class="conc-desc">Schüler, Jeffs e o projeto compartilham a mesma lacuna — mas o projeto nomeia a pergunta que ninguém responde</div>
+      </div>
+    </div>
+
+    <div style="margin-top: 28px; padding: 20px 24px; background: var(--bg2); border: 1px solid var(--border); border-radius: 6px; font-size: 12px; color: var(--text2); line-height: 1.75;">
+      <strong style="color: var(--text); font-family: var(--font-display); font-size: 13px;">O que este documento registra:</strong><br>
+      Em 26 de abril de 2026, pela primeira vez no ciclo investigativo documentado, a tese central do projeto — Brasil como sistema de extração capturado por elites organizadas transversais ao espectro ideológico — apareceu simultaneamente em uma coluna de referência da grande imprensa (Schüler/Estadão) e em um post viral de alta ressonância emocional (@Jeffssss_/X). Ambos acertam o diagnóstico. Nenhum dos dois chegou ao mecanismo. O projeto está documentalmente à frente do debate público. O gap entre documentação disponível e narrativa circulante é o espaço de maior impacto potencial do lawfare-timeline.
+    </div>
+  </section>
+
+</div><!-- /wrap -->
+
+<!-- FOOTER -->
+<div class="wrap">
+  <div class="footer">
+    <div>
+      <strong style="color: var(--text2);">O Espelho Partido</strong> · Documento investigativo autônomo<br>
+      Parte do projeto <a href="https://lawfare-timeline.vercel.app">lawfare-timeline.vercel.app</a><br>
+      IDs 146–149 · Categoria: análise_editorial · falha_institucional
+    </div>
+    <div>
+      Fontes: <a href="paralelos.html">paralelos.html</a> · <a href="republica-capturada.html">republica-capturada.html</a> · <a href="zero-x-zero.html">zero-x-zero.html</a><br>
+      O Estado de S. Paulo, 26/04/2026 · Fernando Schüler · @Jeffssss_ / X<br>
+      <span class="cc0-badge">CC0 1.0 UNIVERSAL · DOMÍNIO PÚBLICO · NENHUM DIREITO RESERVADO</span>
+    </div>
+  </div>
+</div>
+
+<script>
+function togglePattern(el) {
+  el.classList.toggle('open');
+}
+
+// nav ativa por scroll
+const sections = document.querySelectorAll('section[id]');
+const navItems = document.querySelectorAll('.nav-item[href^="#"]');
+
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navItems.forEach(n => n.classList.remove('active'));
+      const active = document.querySelector(`.nav-item[href="#${e.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { threshold: 0.3 });
+
+sections.forEach(s => obs.observe(s));
+
+// fade-in suave
+const items = document.querySelectorAll('.author-card, .pattern-row, .fail-card, .conc-card');
+const fadeObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.08 });
+
+items.forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(12px)';
+  el.style.transition = 'opacity .4s ease, transform .4s ease';
+  fadeObs.observe(el);
+});
+</script>
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

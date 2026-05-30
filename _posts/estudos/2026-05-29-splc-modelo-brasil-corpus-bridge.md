@@ -55,7 +55,7 @@ OSF (R$ 2,8 mi) + Oak (R$ 1,2 mi) + Ford (R$ 869k) → NetLab USP
 
 | Dossiê | Eixo |
 | --- | --- |
-| [T-207 Vaza Toga](/posts/2026-05-29-vaza-toga-corpus-bridge/) | INQ 4781 · gabinete paralelo |
+| [T-207 Vaza Toga](/posts/vaza-toga-corpus-bridge/) | INQ 4781 · gabinete paralelo |
 | [Operação Silêncio Digital](https://gosurf.site/operacao-silencio-digital) | Regime censura 2020–26 |
 | [Golpe Brasil evidencial](/posts/golpe-brasil-analise-evidencial/) | Vetores ruptura |
 | [Padrões sistêmicos](/posts/padroes-sistemicos/) | Dashboard P01–P11 |
@@ -64,7 +64,7 @@ OSF (R$ 2,8 mi) + Oak (R$ 1,2 mi) + Ford (R$ 869k) → NetLab USP
 
 - Profundidade elos FBI/SPLC pré-2026 vs. corte política 2026
 - Prestação de contas OSCIPs BR vs. IRS 990 EUA
-- Integração JustiçaWatch (T-209 pendente)
+- Integração JustiçaWatch ([T-209](/posts/justicawatch-brasil-corpus-bridge/))
 
 ## Fontes
 

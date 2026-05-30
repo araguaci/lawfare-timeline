@@ -1,0 +1,430 @@
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-sans); }
+  .db { padding: 1.5rem 0; }
+  .header { border-bottom: 0.5px solid var(--color-border-tertiary); padding-bottom: 1.25rem; margin-bottom: 1.5rem; }
+  .header h1 { font-size: 20px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px; }
+  .header p { font-size: 13px; color: var(--color-text-secondary); }
+  .badge-urgent { display: inline-flex; align-items: center; gap: 6px; background: #FCEBEB; color: #A32D2D; font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 4px; margin-bottom: 10px; }
+  .section-title { font-size: 13px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.06em; margin: 1.75rem 0 0.875rem; border-bottom: 0.5px solid var(--color-border-tertiary); padding-bottom: 6px; }
+  .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-bottom: 1rem; }
+  .metric { background: var(--color-background-secondary); border-radius: 8px; padding: 14px 16px; }
+  .metric .label { font-size: 11px; color: var(--color-text-secondary); margin-bottom: 6px; line-height: 1.4; }
+  .metric .value { font-size: 22px; font-weight: 500; color: var(--color-text-primary); line-height: 1; }
+  .metric .sub { font-size: 11px; color: var(--color-text-secondary); margin-top: 4px; }
+  .metric.danger .value { color: #A32D2D; }
+  .metric.warning .value { color: #854F0B; }
+  .metric.info .value { color: #185FA5; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; }
+  .card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: 12px; padding: 1.125rem 1.25rem; }
+  .card h3 { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+  .card-icon { width: 20px; height: 20px; border-radius: 4px; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; flex-shrink: 0; }
+  .icon-red { background: #FCEBEB; color: #A32D2D; }
+  .icon-amber { background: #FAEEDA; color: #854F0B; }
+  .icon-blue { background: #E6F1FB; color: #185FA5; }
+  .icon-purple { background: #EEEDFE; color: #534AB7; }
+  .icon-teal { background: #E1F5EE; color: #0F6E56; }
+  .item { display: flex; gap: 10px; padding: 7px 0; border-bottom: 0.5px solid var(--color-border-tertiary); align-items: flex-start; }
+  .item:last-child { border-bottom: none; padding-bottom: 0; }
+  .item-dot { width: 6px; height: 6px; border-radius: 50%; margin-top: 6px; flex-shrink: 0; }
+  .dot-red { background: #E24B4A; }
+  .dot-amber { background: #BA7517; }
+  .dot-blue { background: #185FA5; }
+  .dot-purple { background: #534AB7; }
+  .item-text { font-size: 13px; color: var(--color-text-primary); line-height: 1.5; }
+  .item-source { font-size: 11px; color: var(--color-text-secondary); margin-top: 2px; }
+  .item-source a { color: var(--color-text-info); text-decoration: none; }
+  .item-source a:hover { text-decoration: underline; }
+  .refute-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .refute-card { border-radius: 8px; padding: 12px 14px; }
+  .refute-pf { background: #FCEBEB; border: 0.5px solid #F7C1C1; }
+  .refute-real { background: #EAF3DE; border: 0.5px solid #C0DD97; }
+  .refute-label { font-size: 10px; font-weight: 500; letter-spacing: 0.05em; margin-bottom: 6px; }
+  .refute-pf .refute-label { color: #793F1F; }
+  .refute-real .refute-label { color: #27500A; }
+  .refute-text { font-size: 12px; line-height: 1.5; }
+  .refute-pf .refute-text { color: #A32D2D; }
+  .refute-real .refute-text { color: #3B6D11; }
+  .chain { display: flex; flex-direction: column; gap: 0; }
+  .chain-item { display: flex; align-items: flex-start; gap: 12px; padding: 8px 0; position: relative; }
+  .chain-left { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; width: 28px; }
+  .chain-num { width: 22px; height: 22px; border-radius: 50%; background: #E24B4A; color: #fff; font-size: 11px; font-weight: 500; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .chain-line { width: 1px; background: var(--color-border-tertiary); flex: 1; min-height: 16px; margin-top: 2px; }
+  .chain-item:last-child .chain-line { display: none; }
+  .chain-content { padding-bottom: 8px; }
+  .chain-title { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 2px; }
+  .chain-desc { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
+  .timeline { position: relative; padding-left: 20px; }
+  .timeline::before { content: ''; position: absolute; left: 5px; top: 4px; bottom: 4px; width: 1px; background: var(--color-border-tertiary); }
+  .tl-item { position: relative; padding: 0 0 14px 16px; }
+  .tl-item::before { content: ''; position: absolute; left: -3px; top: 5px; width: 8px; height: 8px; border-radius: 50%; background: #E24B4A; border: 2px solid var(--color-background-primary); }
+  .tl-year { font-size: 11px; font-weight: 500; color: #A32D2D; }
+  .tl-text { font-size: 12px; color: var(--color-text-primary); margin-top: 1px; line-height: 1.5; }
+  .tl-src { font-size: 11px; color: var(--color-text-secondary); }
+  .tl-src a { color: var(--color-text-info); text-decoration: none; }
+  .footer { margin-top: 2rem; padding-top: 1rem; border-top: 0.5px solid var(--color-border-tertiary); }
+  .footer p { font-size: 11px; color: var(--color-text-secondary); line-height: 1.6; }
+  .sources-list { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .src-pill { font-size: 11px; background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: 4px; padding: 2px 8px; color: var(--color-text-secondary); text-decoration: none; }
+  .src-pill:hover { color: var(--color-text-info); }
+  .alert-bar { background: #FCEBEB; border: 0.5px solid #F7C1C1; border-radius: 8px; padding: 10px 14px; margin-bottom: 1rem; }
+  .alert-bar p { font-size: 12px; color: #791F1F; line-height: 1.6; }
+  .alert-bar strong { color: #501313; }
+  .full-width { grid-column: 1 / -1; }
+  .tag { display: inline-block; font-size: 10px; font-weight: 500; padding: 2px 7px; border-radius: 3px; margin-right: 4px; margin-top: 4px; }
+  .tag-red { background: #FCEBEB; color: #791F1F; }
+  .tag-amber { background: #FAEEDA; color: #633806; }
+  .tag-blue { background: #E6F1FB; color: #0C447C; }
+  .tag-purple { background: #EEEDFE; color: #3C3489; }
+</style>
+
+<div class="db">
+  <div class="header">
+    <div class="badge-urgent">ALERTA DE SEGURANÇA NACIONAL</div>
+    <h1>PCC e CV — Ameaça à Soberania Nacional e Global</h1>
+    <p>Dashboard analítico com desmontagem dos argumentos da PF e evidências de urgência de combate sistêmico. Atualizado com dados 2024–2026.</p>
+  </div>
+
+  <div class="section-title">Escala da ameaça — números verificados</div>
+  <div class="metrics">
+    <div class="metric danger">
+      <div class="label">Brasileiros sob soberania paralela</div>
+      <div class="value">61M</div>
+      <div class="sub">Cambridge Univ. / Latinobarómetro 2025</div>
+    </div>
+    <div class="metric danger">
+      <div class="label">Facções ativas no Brasil</div>
+      <div class="value">90+</div>
+      <div class="sub">SENAPPEN / CPI Crime Organizado 2025</div>
+    </div>
+    <div class="metric warning">
+      <div class="label">Mortes violentas intencionais (2024)</div>
+      <div class="value">44.127</div>
+      <div class="sub">Fórum Brasileiro de Segurança Pública 2025</div>
+    </div>
+    <div class="metric warning">
+      <div class="label">Gasto em segurança pública (2024)</div>
+      <div class="value">R$153bi</div>
+      <div class="sub">Anuário FBSP 19ª ed. — sem resultado proporcional</div>
+    </div>
+    <div class="metric info">
+      <div class="label">Receita estimada anual do PCC</div>
+      <div class="value">US$1bi</div>
+      <div class="sub">MP-SP / Promotor Lincoln Gakiya 2024</div>
+    </div>
+    <div class="metric info">
+      <div class="label">Brasil responde por homicídios mundiais</div>
+      <div class="value">10%</div>
+      <div class="sub">FBSP — 3% da população mundial</div>
+    </div>
+    <div class="metric danger">
+      <div class="label">Cocaína PCC exportada (Santos → Europa)</div>
+      <div class="value">+1T</div>
+      <div class="sub">PF — só em 2024, sete eventos documentados</div>
+    </div>
+    <div class="metric warning">
+      <div class="label">Integrantes PCC estimados</div>
+      <div class="value">40mil</div>
+      <div class="sub">SENAPPEN 2025 — presentes em 25 estados</div>
+    </div>
+  </div>
+
+  <div class="alert-bar">
+    <p><strong>Dado crítico:</strong> O Brasil lidera o ranking de países com maior percentual de população sob "governança criminal" na América Latina — à frente de México, El Salvador e Colômbia. Estudo da Universidade de Cambridge (Perspectives on Politics, ago. 2025): entre 25% e 30% da população nacional vivem sob regras de facções, não do Estado.</p>
+  </div>
+
+  <div class="section-title">Desmontagem dos argumentos da Polícia Federal</div>
+  <div class="cards">
+    <div class="card full-width">
+      <h3><span class="card-icon icon-red">!</span>Argumento PF vs. Realidade verificada</h3>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+
+        <div class="refute-grid">
+          <div class="refute-card refute-pf">
+            <div class="refute-label">PF ALEGA</div>
+            <div class="refute-text">"Violência direcionada contra adversários específicos — policiais e grupos rivais. Não há terror indiscriminado."</div>
+          </div>
+          <div class="refute-card refute-real">
+            <div class="refute-label">REALIDADE VERIFICADA</div>
+            <div class="refute-text">61 milhões de cidadãos comuns sob toque de recolher, cobrança de taxas, proibição de acionar a polícia — sem ser "adversários". Terror coercitivo sobre civis é a definição operacional de terror indiscriminado. <a href="https://www.gazetadopovo.com.br/brasil/brasileiros-vivem-sob-dominio-do-crime-faccoes-criminosas/" style="color: #3B6D11;">Cambridge/Latinobarómetro</a></div>
+          </div>
+        </div>
+
+        <div class="refute-grid">
+          <div class="refute-card refute-pf">
+            <div class="refute-label">PF ALEGA</div>
+            <div class="refute-text">"Motivação primordial é o lucro. Sem agenda política ou ideológica — portanto não configura terrorismo."</div>
+          </div>
+          <div class="refute-card refute-real">
+            <div class="refute-label">REALIDADE VERIFICADA</div>
+            <div class="refute-text">Infiltração eleitoral documentada em múltiplos estados, financiamento de campanhas, veto a candidatos, "Sintonia dos Gravatas" infiltrando o Judiciário, interferência direta nos 3 poderes. Motivação econômica não exclui efeito político estrutural. <a href="https://www.metropoles.com/colunas/mirelle-pinheiro/do-pcc-ao-cv-como-faccoes-elegem-politicos-e-contaminam-o-governo" style="color: #3B6D11;">Metrópoles 2025</a></div>
+          </div>
+        </div>
+
+        <div class="refute-grid">
+          <div class="refute-card refute-pf">
+            <div class="refute-label">PF ALEGA</div>
+            <div class="refute-text">"Aplicar a Lei Antiterrorismo fora das hipóteses legais viola o princípio da legalidade penal, podendo anular provas."</div>
+          </div>
+          <div class="refute-card refute-real">
+            <div class="refute-label">REALIDADE VERIFICADA</div>
+            <div class="refute-text">A Câmara dos Deputados aprovou em comissões o PL 2428/25 e o PL 4260/25, classificando PCC e CV como terroristas. A Comissão de Relações Exteriores já aprovou o texto. A "legalidade" invocada pela PF é o obstáculo que o Congresso está removendo agora. <a href="https://www.camara.leg.br/noticias/1262111-comissao-aprova-projeto-que-classifica-pcc-e-cv-como-grupos-terroristas-junto-a-11-carteis-latinos" style="color: #3B6D11;">Câmara dos Deputados 2026</a></div>
+          </div>
+        </div>
+
+        <div class="refute-grid">
+          <div class="refute-card refute-pf">
+            <div class="refute-label">PF ALEGA</div>
+            <div class="refute-text">"Sem vínculo com potência estrangeira. Organizações criminosas com fins econômicos internos."</div>
+          </div>
+          <div class="refute-card refute-real">
+            <div class="refute-label">REALIDADE VERIFICADA</div>
+            <div class="refute-text">PCC tem aliança formal com cartel boliviano (Bolívia como Estado capturado), Cartel do Golfo e Oficina de Envigado (Colômbia), FARC dissidentes, Sinaloa. Promotor Christino: "PCC e bolivianos estão tão imbricados que não se sabe onde começa um e termina outro." Operação Costeau (março 2026): rota Santos→Europa com cooperação da Eurojust. <a href="https://www.conjur.com.br/2024-nov-13/pcc-nao-tem-condicoes-de-atacar-estado-brasileiro-diz-procurador/" style="color: #3B6D11;">ConJur 2024</a></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">Cadeia de captura sistêmica do Estado</div>
+  <div class="cards">
+    <div class="card">
+      <h3><span class="card-icon icon-red">⚠</span>Arquitetura de imunidade — 5 camadas</h3>
+      <div class="chain">
+        <div class="chain-item">
+          <div class="chain-left">
+            <div class="chain-num">1</div>
+            <div class="chain-line"></div>
+          </div>
+          <div class="chain-content">
+            <div class="chain-title">Poder local capturado</div>
+            <div class="chain-desc">Vereadores e prefeitos financiados por facções. 4 vereadores presos (SP 2024). Vice-prefeito de Cubatão condenado. Ligações em "todos os partidos, da esquerda à direita".</div>
+            <div style="margin-top: 4px;"><span class="tag tag-red">documentado</span><span class="tag tag-amber">MP-SP / PF</span></div>
+          </div>
+        </div>
+        <div class="chain-item">
+          <div class="chain-left">
+            <div class="chain-num">2</div>
+            <div class="chain-line"></div>
+          </div>
+          <div class="chain-content">
+            <div class="chain-title">Forças de segurança infiltradas</div>
+            <div class="chain-desc">Policiais vazando operações, abastecendo munição, prestando logística. "Sintonia dos Gravatas" com 40+ advogados intermediando desde 2016. CNJ investigando infiltração via concurso público.</div>
+            <div style="margin-top: 4px;"><span class="tag tag-red">documentado</span><span class="tag tag-amber">CNJ / GAECO</span></div>
+          </div>
+        </div>
+        <div class="chain-item">
+          <div class="chain-left">
+            <div class="chain-num">3</div>
+            <div class="chain-line"></div>
+          </div>
+          <div class="chain-content">
+            <div class="chain-title">Judiciário bloqueando investigações</div>
+            <div class="chain-desc">ADPF 635 suspendeu operações policiais no RJ durante pandemia. Habeas corpus sistemáticos desobrigando investigados. CPI do Crime Organizado paralisada por decisões monocráticas. Dep. TH Jóias (CV) não ouvido por falta de despacho.</div>
+            <div style="margin-top: 4px;"><span class="tag tag-red">verificado</span><span class="tag tag-blue">STF / CPI</span></div>
+          </div>
+        </div>
+        <div class="chain-item">
+          <div class="chain-left">
+            <div class="chain-num">4</div>
+            <div class="chain-line"></div>
+          </div>
+          <div class="chain-content">
+            <div class="chain-title">Legislativo conivente</div>
+            <div class="chain-desc">PL de terrorismo tramitou por anos sem aprovação. CPI do Crime Organizado "paralisada" conforme próprio relatório final. Parlamentares com empresas ligadas a facções identificados por investigações do MP.</div>
+            <div style="margin-top: 4px;"><span class="tag tag-amber">em curso</span><span class="tag tag-blue">Senado / Câmara</span></div>
+          </div>
+        </div>
+        <div class="chain-item">
+          <div class="chain-left">
+            <div class="chain-num">5</div>
+            <div class="chain-line"></div>
+          </div>
+          <div class="chain-content">
+            <div class="chain-title">Forças Armadas paralisadas</div>
+            <div class="chain-desc">GLO exige decreto presidencial — nunca acionado para crime organizado sistêmico. Precedente pós-8/jan: militares que agirem sem decreto respondem no STF. Efeito paralisante documentado nos quartéis.</div>
+            <div style="margin-top: 4px;"><span class="tag tag-red">crítico</span><span class="tag tag-purple">Art. 142 CF/88</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><span class="card-icon icon-amber">⬡</span>Rota transnacional verificada — Porto de Santos</h3>
+      <div class="item">
+        <div class="item-dot dot-red"></div>
+        <div>
+          <div class="item-text">Operação Costeau (mar/2026) — MPF + PF + Eurojust. Cocaína encontrada por mergulhadores franceses no "sea chest" de navio que passou por Santos. Investigação ativa com cooperação internacional.</div>
+          <div class="item-source"><a href="https://www.mpf.mp.br/o-mpf/unidades/procuradoria-geral-da-republica-pgr/noticias/operacao-costeau-mpf-e-policia-federal-cumprem-prisoes-em-investigacao-de-trafico-internacional-de-drogas" target="_blank">MPF — mar/2026</a></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-dot dot-red"></div>
+        <div>
+          <div class="item-text">Santos é a principal rota de saída da cocaína boliviana e colombiana comprada pelo PCC para o mercado europeu — maior porto do Hemisfério Sul.</div>
+          <div class="item-source"><a href="https://revistaoeste.com/brasil/apreensoes-de-cocaina-despencam-no-porto-de-santos-em-2023-e-2024/" target="_blank">Revista Oeste / Estadão 2024</a></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-dot dot-amber"></div>
+        <div>
+          <div class="item-text">Apreensões despencaram 56% entre 2022 (16T) e 2023 (7,1T) — não pela redução do tráfico, mas pela diversificação das rotas para portos do Nordeste e Sul, detectada pela Receita Federal.</div>
+          <div class="item-source"><a href="https://revistaoeste.com/brasil/apreensoes-de-cocaina-despencam-no-porto-de-santos-em-2023-e-2024/" target="_blank">Revista Oeste 2024</a></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-dot dot-red"></div>
+        <div>
+          <div class="item-text">Sebastián Marset ("El Jugador") — procurado pela DEA e Interpol, 16T de cocaína enviadas para a Europa — aliança com PCC consolidada na prisão Libertad (Uruguai). Rota: Bolívia→Brasil→Paraguai→Europa.</div>
+          <div class="item-source"><a href="https://brasilforadacaverna.com.br/noticias/pcc-se-une-a-cartel-internacional-na-bolivia/" target="_blank">Brasil Fora da Caverna 2025</a></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-dot dot-amber"></div>
+        <div>
+          <div class="item-text">Promotor Christino: "A Bolívia fez acordo com o PCC. PCC e bolivianos estão tão imbricados que não se sabe onde começa um e termina outro." Bolívia: produção supera Colômbia com modificação genética da planta.</div>
+          <div class="item-source"><a href="https://www.conjur.com.br/2024-nov-13/pcc-nao-tem-condicoes-de-atacar-estado-brasileiro-diz-procurador/" target="_blank">ConJur — Promotor Christino 2024</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">Linha do tempo — escalada da ameaça ignorada</div>
+  <div class="cards">
+    <div class="card full-width">
+      <h3><span class="card-icon icon-purple">▲</span>Alertas documentados e respostas do Estado</h3>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0 2rem;">
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-year">1993</div>
+            <div class="tl-text">Fundação do PCC na Casa de Custódia de Taubaté. Estado ignora sinalização inicial de organização criminosa estruturada dentro do sistema prisional.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2001</div>
+            <div class="tl-text">Fernandinho Beira-Mar revela que FARC recebiam US$10M/mês por carregamentos — primeiro alerta público de vínculo transnacional brasileiro com potência estrangeira.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2006</div>
+            <div class="tl-text">Ataques do PCC paralisam São Paulo — 299 ataques em 4 dias, 41 policiais mortos, ônibus incendiados. Estado negocia em vez de criminalizar como terrorismo.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2016</div>
+            <div class="tl-text">"Sintonia dos Gravatas" estruturada — núcleo jurídico do PCC com 40 advogados. Infiltração sistemática no Judiciário e MP iniciada como projeto formal.</div>
+            <div class="tl-src"><a href="https://www.gazetadopovo.com.br/ideias/pcc-forma-advogados-e-tenta-se-infiltrar-no-judiciario-e-no-ministerio-publico/" target="_blank">Gazeta do Povo 2023</a></div>
+          </div>
+        </div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-year">2017</div>
+            <div class="tl-text">Massacres em Manaus e Boa Vista — guerra PCC vs. CV/FDN por rota amazônica. Norte e Nordeste entram em colapso de segurança. Atlas da Violência documenta explosão de homicídios.</div>
+            <div class="tl-src"><a href="https://atlasviolencia.org.br" target="_blank">IPEA/FBSP Atlas da Violência</a></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2020</div>
+            <div class="tl-text">STF (ADPF 635) suspende operações policiais nas favelas cariocas durante pandemia. PCC e CV assumem controle total de territórios, distribuindo alimentos e impondo toque de recolher — funções soberanas.</div>
+            <div class="tl-src"><a href="https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=448994" target="_blank">STF — ADPF 635</a></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2024</div>
+            <div class="tl-text">Cambridge: 61M de brasileiros sob "governança criminal". EUA designam PCC e CV como organizações de preocupação de segurança nacional. PF recusa enquadramento como terrorismo.</div>
+            <div class="tl-src"><a href="https://www.metropoles.com/colunas/mirelle-pinheiro/pf-rebate-tese-dos-eua-e-descarta-pcc-e-cv-como-terrorismo-no-pais" target="_blank">Metrópoles abr/2026</a></div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2026</div>
+            <div class="tl-text">Operação Costeau (mar): cocaína do Porto de Santos apreendida na França com dispositivos de rastreamento. Câmara aprova em comissão PL classificando PCC e CV como terroristas — vai ao plenário.</div>
+            <div class="tl-src"><a href="https://www.camara.leg.br/noticias/1262111-comissao-aprova-projeto-que-classifica-pcc-e-cv-como-grupos-terroristas-junto-a-11-carteis-latinos" target="_blank">Câmara dos Deputados 2026</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">Ameaça à saúde pública mundial — dimensão ignorada</div>
+  <div class="cards">
+    <div class="card">
+      <h3><span class="card-icon icon-teal">+</span>Brasil como vetor de saúde pública global</h3>
+      <div class="item">
+        <div class="item-dot dot-red"></div>
+        <div>
+          <div class="item-text">Brasil é o 2º maior consumidor de cocaína do mundo (ONU/UNODC 2024) e principal rota de distribuição para Europa e África. O território nacional funciona como hub de uma epidemia transnacional de drogas.</div>
+          <div class="item-source"><a href="https://laibl.com.br/a-internacionalizacao-do-pcc/" target="_blank">UNODC / Internacionalização do PCC 2025</a></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-dot dot-red"></div>
+        <div>
+          <div class="item-text">PCC exporta ~4 toneladas/mês de pasta base de cocaína pelo Porto de Santos para a Europa — segundo o GAECO-SP. Abastece mercados europeus com substância que causa dependência, overdoses e mortes em escala continental.</div>
+          <div class="item-source"><a href="https://www.gazetadopovo.com.br/republica/crime-organizado-23-milhoes-de-pessoas-estao-em-areas-dominadas-por-72-faccoes-e-milicias/" target="_blank">Gazeta do Povo / GAECO-SP</a></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-dot dot-amber"></div>
+        <div>
+          <div class="item-text">Mortes ocultas: IPEA estima 6 mil mortes anuais não registradas nas estatísticas oficiais — "tribunais do crime" executam sem boletim de ocorrência. Subnotificação distorce gravidade real da crise.</div>
+          <div class="item-source"><a href="https://www.ipea.gov.br/atlasviolencia" target="_blank">IPEA Atlas da Violência 2025</a></div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-dot dot-amber"></div>
+        <div>
+          <div class="item-text">44.127 mortes violentas em 2024 — menor taxa desde 2012, mas redução parcialmente explicada pela "trégua" entre PCC e CV para racionalizar rotas. Não é vitória do Estado, é reorganização do crime.</div>
+          <div class="item-source"><a href="https://forumseguranca.org.br/publicacoes/anuario-brasileiro-de-seguranca-publica/" target="_blank">FBSP Anuário 2025</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><span class="card-icon icon-blue">⚑</span>O que a lei exige e o que o Estado omite</h3>
+      <div class="item">
+        <div class="item-dot dot-red"></div>
+        <div>
+          <div class="item-text">CF/88 Art. 142: Forças Armadas destinam-se à defesa da Pátria e garantia da lei e da ordem. Dever constitucional vinculante — não faculdade. Com 60M sob soberania paralela, o Art. 142 está sendo descumprido sistematicamente.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-dot dot-red"></div>
+        <div>
+          <div class="item-text">CPM Art. 326 — Omissão de lealdade: militar que tem conhecimento de conspiração contra a segurança nacional e não denuncia responde criminalmente. Generais com acesso a inteligência sobre 90+ facções e omissão permanente.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-dot dot-amber"></div>
+        <div>
+          <div class="item-text">CP Art. 319 — Prevaricação: servidores que deixam de praticar ato de ofício ou o retardam, para satisfazer interesse pessoal. Aplicável a autoridades que ignoram alertas de inteligência documentados.</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-dot dot-blue"></div>
+        <div>
+          <div class="item-text">PL 2428/25 e PL 3830/2024 — em tramitação. Aprovados em comissões da Câmara e Senado. Classificariam PCC e CV como terroristas, elevando penas de 3–8 anos para 12–30 anos e permitindo aplicação da Lei 13.260/2016.</div>
+          <div class="item-source"><a href="https://www.camara.leg.br/noticias/1197570-comissao-aprova-equiparacao-de-crimes-de-faccoes-e-milicias-ao-terrorismo" target="_blank">Câmara dos Deputados 2025</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">Fontes primárias e referências</div>
+  <div class="sources-list">
+    <a class="src-pill" href="https://www.ipea.gov.br/atlasviolencia/publicacoes" target="_blank">IPEA Atlas da Violência 2025</a>
+    <a class="src-pill" href="https://forumseguranca.org.br/publicacoes/anuario-brasileiro-de-seguranca-publica/" target="_blank">FBSP Anuário 2025</a>
+    <a class="src-pill" href="https://www.gazetadopovo.com.br/brasil/brasileiros-vivem-sob-dominio-do-crime-faccoes-criminosas/" target="_blank">Cambridge/Latinobarómetro 2025</a>
+    <a class="src-pill" href="https://www.mpf.mp.br/o-mpf/unidades/procuradoria-geral-da-republica-pgr/noticias/operacao-costeau-mpf-e-policia-federal-cumprem-prisoes-em-investigacao-de-trafico-internacional-de-drogas" target="_blank">MPF Operação Costeau 2026</a>
+    <a class="src-pill" href="https://www.camara.leg.br/noticias/1262111-comissao-aprova-projeto-que-classifica-pcc-e-cv-como-grupos-terroristas-junto-a-11-carteis-latinos" target="_blank">Câmara — PL Terrorismo 2026</a>
+    <a class="src-pill" href="https://www.gazetadopovo.com.br/ideias/pcc-forma-advogados-e-tenta-se-infiltrar-no-judiciario-e-no-ministerio-publico/" target="_blank">PCC infiltração Judiciário — Gazeta</a>
+    <a class="src-pill" href="https://www.conjur.com.br/2024-nov-13/pcc-nao-tem-condicoes-de-atacar-estado-brasileiro-diz-procurador/" target="_blank">Promotor Christino — ConJur 2024</a>
+    <a class="src-pill" href="https://www.metropoles.com/colunas/mirelle-pinheiro/pf-rebate-tese-dos-eua-e-descarta-pcc-e-cv-como-terrorismo-no-pais" target="_blank">PF vs. EUA — Metrópoles abr/2026</a>
+    <a class="src-pill" href="https://revistaoeste.com/brasil/apreensoes-de-cocaina-despencam-no-porto-de-santos-em-2023-e-2024/" target="_blank">Porto de Santos — Revista Oeste</a>
+    <a class="src-pill" href="https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=448994" target="_blank">STF ADPF 635 — pandemia</a>
+    <a class="src-pill" href="https://www.gazetadopovo.com.br/republica/como-decisoes-stf-desmontaram-cpi-crime-organizado/" target="_blank">STF desmontou CPI — Gazeta 2026</a>
+    <a class="src-pill" href="https://laibl.com.br/a-internacionalizacao-do-pcc/" target="_blank">Internacionalização do PCC — LAIBL</a>
+    <a class="src-pill" href="https://insightcrime.org/news/bolivia-family-clan-cocaine/" target="_blank">PCC + Bolívia — InSight Crime</a>
+    <a class="src-pill" href="https://www.fatospoliciais.com.br/brasil-refem-do-crime-90-faccoes-dominam-o-pais-e-28-milhoes-vivem-sob-influencia-direta-diz-cpi/" target="_blank">CPI — 90 facções, 28M sob influência</a>
+    <a class="src-pill" href="https://www.cnnbrasil.com.br/nacional/justica-condena-quatro-a-ate-13-anos-de-prisao-por-plano-para-executar-promotor-algoz-do-pcc/" target="_blank">Plano execução promotor — CNN Brasil</a>
+  </div>
+
+  <div class="footer">
+    <p>Todas as afirmações neste dashboard são baseadas em fontes primárias verificáveis: decisões judiciais publicadas, relatórios oficiais do FBSP, IPEA, SENAPPEN, MPF, PF, estudos acadêmicos peer-reviewed (Cambridge University Press) e legislação em tramitação na Câmara e Senado Federal. Nenhum dado foi extrapolado ou inferido sem base documental. Data de referência: abril de 2026.</p>
+  </div>
+</div>

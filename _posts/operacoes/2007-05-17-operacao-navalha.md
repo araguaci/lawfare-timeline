@@ -8,6 +8,7 @@ image:
 article_id: 20070517_Navalha
 description: 2007-05-17-Brasília, DF-fraude em obras-corrupção
 tags: ['corrupcao', 'fraude-em-obras', 'corrupcao']
+permalink: /posts/2007-05-17-operacao-navalha/
 ---
 
 # Operação Navalha - Fraudes em licitações de obras públicas. - Corrupção

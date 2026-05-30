@@ -36,32 +36,32 @@ Rodadas editoriais **T-191–T-207** (mai/2026) mantêm **0 alertas críticos** 
 
 | ID | Dossiê | Registry |
 | --- | --- | --- |
-| T-205 | [Duplo padrão judicial](/posts/2026-05-29-duplo-padrao-judicial-corpus-bridge/) | T-143 |
-| T-206 | [SPLC modelo Brasil](/posts/2026-05-29-splc-modelo-brasil-corpus-bridge/) | T-129 |
-| T-207 | [Vaza Toga INQ 4781](/posts/2026-05-29-vaza-toga-corpus-bridge/) | T-108 |
+| T-205 | [Duplo padrão judicial](/posts/duplo-padrao-judicial-corpus-bridge/) | T-143 |
+| T-206 | [SPLC modelo Brasil](/posts/splc-modelo-brasil-corpus-bridge/) | T-129 |
+| T-207 | [Vaza Toga INQ 4781](/posts/vaza-toga-corpus-bridge/) | T-108 |
 
 ## Rodada T-202–T-204 ✅ (29/05/2026)
 
 | ID | Dossiê | Cluster |
 | --- | --- | --- |
-| T-202 | [Delegada × PCC SP](/posts/2026-05-29-delegada-pcc-infiltracao-institucional-sp/) | Infiltração institucional |
-| T-203 | [Zelotes CARF](/posts/2026-05-29-operacao-zelotes-carf-captura-fiscal/) | Captura fiscal |
-| T-204 | [Gastos Paris](/posts/2026-05-29-gastos-paris-cluster-extravagancia-janja/) | Extravagância P11 |
+| T-202 | [Delegada × PCC SP](/posts/delegada-pcc-infiltracao-institucional-sp/) | Infiltração institucional |
+| T-203 | [Zelotes CARF](/posts/operacao-zelotes-carf-captura-fiscal/) | Captura fiscal |
+| T-204 | [Gastos Paris](/posts/gastos-paris-cluster-extravagancia-janja/) | Extravagância P11 |
 
 ## Rodada T-191–T-201 ✅ (28/05/2026)
 
 | ID | Dossiê | Cluster |
 | --- | --- | --- |
 | T-191 | [Custeio P11](/posts/custeio-administrativo-federal-p11/) | Orçamento federal |
-| T-192 | [Vorcaro triângulo](/posts/2026-05-28-vorcaro-triangulo-carbono-mineracao-banco/) | Carbono/mineração |
-| T-193 | [Viagens sigilo](/posts/2026-05-28-viagens-gastos-sigilo-complemento-p11/) | P11 opacidade |
-| T-194 | [Índice P11](/posts/2026-05-28-maquina-gastos-p11-indice-cluster/) | Cluster gastos |
-| T-195 | [CPI × PCC eleitoral](/posts/2026-05-28-cpi-crime-organizado-pcc-infiltracao-eleitoral/) | Infiltração |
-| T-197 | [Operação Rejeito](/posts/2026-05-28-operacao-rejeito-serra-curral-manuscritos/) | 1552–1571 |
-| T-198 | [COAF × Moraes](/posts/2026-05-28-coaf-moraes-acumulacao-funcoes-dosimetria/) | Dosimetria |
-| T-199 | [Lojas Americanas](/posts/2026-05-28-fraude-lojas-americanas-risco-sacado/) | Fraude contábil |
-| T-200 | [Estatais P11](/posts/2026-05-28-estatais-rombo-p11-complemento/) | Rombo estatais |
-| T-201 | [PCC transnacional](/posts/2026-05-28-pcc-transnacional-ofac-eua-luso/) | OFAC/EUA/PT |
+| T-192 | [Vorcaro triângulo](/posts/vorcaro-triangulo-carbono-mineracao-banco/) | Carbono/mineração |
+| T-193 | [Viagens sigilo](/posts/viagens-gastos-sigilo-complemento-p11/) | P11 opacidade |
+| T-194 | [Índice P11](/posts/maquina-gastos-p11-indice-cluster/) | Cluster gastos |
+| T-195 | [CPI × PCC eleitoral](/posts/cpi-crime-organizado-pcc-infiltracao-eleitoral/) | Infiltração |
+| T-197 | [Operação Rejeito](/posts/operacao-rejeito-serra-curral-manuscritos/) | 1552–1571 |
+| T-198 | [COAF × Moraes](/posts/coaf-moraes-acumulacao-funcoes-dosimetria/) | Dosimetria |
+| T-199 | [Lojas Americanas](/posts/fraude-lojas-americanas-risco-sacado/) | Fraude contábil |
+| T-200 | [Estatais P11](/posts/estatais-rombo-p11-complemento/) | Rombo estatais |
+| T-201 | [PCC transnacional](/posts/pcc-transnacional-ofac-eua-luso/) | OFAC/EUA/PT |
 
 ## Top 10 lacunas atuais (🟠 alto / 🟡 médio)
 

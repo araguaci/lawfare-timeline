@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PCC & CV — Relatório de Inteligência 2026</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg: #0a0c0f;
+  --bg2: #111318;
+  --bg3: #181c22;
+  --bg4: #1e2430;
+  --border: rgba(255,255,255,0.07);
+  --border2: rgba(255,255,255,0.12);
+  --text: #e8eaf0;
+  --text2: #8a8f9e;
+  --text3: #545868;
+  --red: #e24b4a;
+  --blue: #378add;
+  --amber: #ef9f27;
+  --green: #1d9e75;
+  --purple: #7f77dd;
+  --coral: #d85a30;
+  --teal: #5dcaa5;
+  --gray: #888780;
+  --mono: 'IBM Plex Mono', monospace;
+  --sans: 'IBM Plex Sans', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 13px; line-height: 1.6; }
+::selection { background: rgba(226,75,74,.3); }
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--bg2); }
+::-webkit-scrollbar-thumb { background: var(--bg4); border-radius: 2px; }
+
+/* ── PRINT ── */
+@media print {
+  body { background: #fff; color: #111; }
+  .no-print, .tab-nav, .export-bar { display: none !important; }
+  .tab-panel { display: block !important; page-break-inside: avoid; }
+  .tab-panel + .tab-panel { page-break-before: always; }
+  :root { --bg: #fff; --bg2: #f5f5f5; --bg3: #ebebeb; --bg4: #e0e0e0; --border: rgba(0,0,0,0.1); --border2: rgba(0,0,0,0.2); --text: #111; --text2: #444; --text3: #888; }
+}
+
+/* ── HEADER ── */
+.hdr {
+  border-bottom: 1px solid var(--border2);
+  padding: 24px 32px 20px;
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
+  background: var(--bg2);
+  position: sticky; top: 0; z-index: 100;
+}
+.hdr-left { flex: 1; }
+.hdr-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--mono); font-size: 9px; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--red); border: 1px solid rgba(226,75,74,.3); padding: 3px 10px;
+  border-radius: 2px; margin-bottom: 8px;
+}
+.hdr-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--red); animation: pulse 2s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+.hdr-title { font-size: 22px; font-weight: 600; letter-spacing: -.3px; line-height: 1.2; }
+.hdr-title span { color: var(--red); }
+.hdr-meta { font-size: 11px; color: var(--text3); margin-top: 5px; font-family: var(--mono); }
+.hdr-meta b { color: var(--text2); font-weight: 400; }
+.export-bar { display: flex; gap: 8px; align-items: center; flex-shrink: 0; }
+.btn-exp {
+  display: flex; align-items: center; gap: 6px; padding: 7px 14px;
+  background: var(--bg4); border: 1px solid var(--border2); border-radius: 4px;
+  color: var(--text2); font-size: 11px; font-family: var(--mono); cursor: pointer;
+  transition: all .15s; letter-spacing: .05em; text-decoration: none;
+}
+.btn-exp:hover { background: var(--bg3); color: var(--text); border-color: rgba(255,255,255,.2); }
+.btn-exp svg { width: 13px; height: 13px; }
+
+/* ── LAYOUT ── */
+.main { max-width: 1280px; margin: 0 auto; padding: 0 32px 48px; }
+
+/* ── KPIs ── */
+.kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border-bottom: 1px solid var(--border); }
+.kpi { background: var(--bg2); padding: 18px 20px; }
+.kpi-label { font-size: 10px; color: var(--text3); font-family: var(--mono); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 6px; }
+.kpi-value { font-size: 26px; font-weight: 600; line-height: 1; letter-spacing: -.5px; }
+.kpi-sub { font-size: 10px; color: var(--text3); margin-top: 4px; line-height: 1.4; }
+.kpi-r .kpi-value { color: var(--red); }
+.kpi-a .kpi-value { color: var(--amber); }
+.kpi-b .kpi-value { color: var(--blue); }
+.kpi-g .kpi-value { color: var(--green); }
+
+/* ── TABS ── */
+.tab-nav { display: flex; gap: 0; border-bottom: 1px solid var(--border); margin: 24px -32px 0; padding: 0 32px; overflow-x: auto; }
+.tab-btn {
+  padding: 10px 16px; font-size: 11px; font-family: var(--mono); letter-spacing: .06em;
+  color: var(--text3); background: none; border: none; border-bottom: 2px solid transparent;
+  cursor: pointer; white-space: nowrap; transition: all .15s; text-transform: uppercase;
+}
+.tab-btn:hover { color: var(--text2); }
+.tab-btn.active { color: var(--text); border-bottom-color: var(--red); }
+.tab-panel { display: none; padding-top: 28px; }
+.tab-panel.active { display: block; }
+.sec-title { font-size: 11px; font-family: var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--text3); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+.sec-title::before { content: ''; display: block; width: 16px; height: 1px; background: var(--text3); }
+
+/* ── CARDS ── */
+.card { background: var(--bg2); border: 1px solid var(--border); border-radius: 4px; padding: 16px 18px; }
+.card-title { font-size: 11px; font-family: var(--mono); color: var(--text2); letter-spacing: .07em; text-transform: uppercase; margin-bottom: 12px; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+
+/* ── NETWORK ── */
+.net-wrap { background: var(--bg2); border: 1px solid var(--border); border-radius: 4px; padding: 0; overflow: hidden; }
+.net-toolbar { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+.net-toolbar span { font-size: 10px; font-family: var(--mono); color: var(--text3); margin-right: 4px; letter-spacing: .07em; }
+.fb { padding: 4px 10px; border-radius: 2px; border: 1px solid var(--border2); background: transparent; font-size: 10px; font-family: var(--mono); cursor: pointer; color: var(--text3); transition: all .15s; letter-spacing: .05em; }
+.fb.on { background: var(--red); color: #fff; border-color: transparent; }
+.fb:hover:not(.on) { border-color: rgba(255,255,255,.2); color: var(--text2); }
+.net-legend { display: flex; flex-wrap: wrap; gap: 10px; padding: 10px 16px; border-bottom: 1px solid var(--border); }
+.nl { display: flex; align-items: center; gap: 5px; font-size: 10px; color: var(--text3); font-family: var(--mono); }
+.nl-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.net-svg-wrap { height: 520px; }
+.net-detail { padding: 14px 16px; border-top: 1px solid var(--border); min-height: 64px; font-size: 12px; color: var(--text2); line-height: 1.7; }
+.net-detail-title { font-size: 12px; font-weight: 500; color: var(--text); margin-bottom: 5px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.nd-badge { font-size: 9px; padding: 1px 6px; background: var(--bg4); border: 1px solid var(--border2); border-radius: 2px; color: var(--text3); font-weight: 400; font-family: var(--mono); }
+
+/* ── TIMELINE ── */
+.tl { padding-left: 20px; position: relative; }
+.tl::before { content: ''; position: absolute; left: 5px; top: 0; bottom: 0; width: 1px; background: var(--border2); }
+.tl-item { position: relative; margin-bottom: 20px; }
+.tl-dot { position: absolute; left: -20px; top: 5px; width: 9px; height: 9px; border-radius: 50%; border: 1px solid var(--bg2); }
+.tl-date { font-size: 10px; font-family: var(--mono); color: var(--text3); margin-bottom: 2px; letter-spacing: .05em; }
+.tl-title { font-size: 12px; font-weight: 500; color: var(--text); margin-bottom: 3px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.tl-desc { font-size: 11px; color: var(--text2); line-height: 1.65; }
+.bd { font-size: 9px; padding: 1px 6px; border-radius: 2px; font-weight: 400; font-family: var(--mono); }
+.bd-r { background: rgba(226,75,74,.15); color: var(--red); border: 1px solid rgba(226,75,74,.25); }
+.bd-b { background: rgba(55,138,221,.15); color: var(--blue); border: 1px solid rgba(55,138,221,.25); }
+.bd-a { background: rgba(239,159,39,.15); color: var(--amber); border: 1px solid rgba(239,159,39,.25); }
+.bd-g { background: rgba(29,158,117,.15); color: var(--green); border: 1px solid rgba(29,158,117,.25); }
+
+/* ── CHARTS ── */
+.chart-wrap { position: relative; width: 100%; }
+.chart-legend { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 10px; }
+.cl-item { display: flex; align-items: center; gap: 5px; font-size: 10px; color: var(--text3); font-family: var(--mono); }
+.cl-sq { width: 8px; height: 8px; border-radius: 1px; flex-shrink: 0; }
+
+/* ── RISK MATRIX ── */
+.rm-grid { display: grid; grid-template-columns: 28px repeat(5,1fr); gap: 3px; }
+.rm-lbl { display: flex; align-items: center; justify-content: center; font-size: 9px; font-family: var(--mono); color: var(--text3); }
+.rm-hdr { display: flex; align-items: center; justify-content: center; font-size: 9px; font-family: var(--mono); color: var(--text3); height: 24px; }
+.rc { min-height: 54px; border-radius: 3px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 4px; text-align: center; }
+.rc-low { background: rgba(29,158,117,.12); border: 1px solid rgba(29,158,117,.2); }
+.rc-med { background: rgba(239,159,39,.12); border: 1px solid rgba(239,159,39,.2); }
+.rc-high { background: rgba(226,75,74,.12); border: 1px solid rgba(226,75,74,.2); }
+.rc-crit { background: rgba(226,75,74,.22); border: 1px solid rgba(226,75,74,.4); }
+.rt { font-size: 10px; font-family: var(--mono); cursor: pointer; font-weight: 500; line-height: 1.3; }
+.rc-low .rt { color: var(--green); }
+.rc-med .rt { color: var(--amber); }
+.rc-high .rt, .rc-crit .rt { color: var(--red); }
+
+/* ── FAIL CARDS ── */
+.fail-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+.fail-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 4px; padding: 14px 16px; }
+.fail-title { font-size: 11px; font-family: var(--mono); color: var(--text2); margin-bottom: 8px; letter-spacing: .05em; }
+.fail-list { list-style: none; font-size: 11px; color: var(--text3); line-height: 1.8; }
+.fail-list li { padding-left: 12px; position: relative; }
+.fail-list li::before { content: '›'; position: absolute; left: 0; color: var(--text3); }
+
+/* ── JUDICIAL ── */
+.jud-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+.jud-card { padding: 12px 14px; background: var(--bg3); border-radius: 4px; border-left: 2px solid var(--blue); }
+.jud-card.warn { border-left-color: var(--red); }
+.jud-title { font-size: 11px; font-weight: 500; margin-bottom: 4px; }
+.jud-desc { font-size: 11px; color: var(--text3); line-height: 1.6; }
+.impl-list { list-style: none; }
+.impl-item { display: flex; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--border); }
+.impl-item:last-child { border: none; }
+.impl-n { font-size: 10px; font-family: var(--mono); color: var(--text3); min-width: 24px; padding-top: 1px; }
+.impl-t { font-size: 12px; color: var(--text2); line-height: 1.65; }
+
+/* ── REFS ── */
+.ref-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+.ref-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 4px; padding: 12px 14px; }
+.ref-cat { font-size: 9px; font-family: var(--mono); color: var(--text3); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 8px; }
+.ref-item { margin-bottom: 8px; }
+.ref-title { font-size: 11px; color: var(--text); font-weight: 500; margin-bottom: 2px; }
+.ref-meta { font-size: 10px; color: var(--text3); }
+.ref-link { color: var(--blue); text-decoration: none; font-size: 10px; font-family: var(--mono); letter-spacing: .03em; }
+.ref-link:hover { color: var(--teal); text-decoration: underline; }
+
+/* ── NOTE ── */
+.note { background: var(--bg3); border: 1px solid var(--border); border-left: 2px solid var(--amber); border-radius: 4px; padding: 12px 14px; font-size: 11px; color: var(--text3); line-height: 1.7; margin-top: 20px; }
+.note strong { color: var(--amber); font-weight: 500; }
+
+/* ── TAGS ── */
+.conf-c { color: var(--green); font-family: var(--mono); font-size: 10px; }
+.conf-a { color: var(--amber); font-family: var(--mono); font-size: 10px; }
+.conf-i { color: var(--text3); font-family: var(--mono); font-size: 10px; }
+
+/* ── FOOTER ── */
+.footer { border-top: 1px solid var(--border); padding: 20px 32px; margin-top: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.footer-l { font-size: 10px; font-family: var(--mono); color: var(--text3); }
+.src-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.src-tag { font-size: 9px; padding: 2px 7px; background: var(--bg4); border: 1px solid var(--border); border-radius: 2px; color: var(--text3); font-family: var(--mono); }
+
+/* === RELATED ARTIFACTS === */
+.related-wrap {
+  padding: 64px 32px;
+  background: linear-gradient(to bottom, var(--bg), var(--bg2));
+  border-top: 1px solid var(--border2);
+}
+.related-title {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--text3);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  display: flex; align-items: center; gap: 12px;
+}
+.related-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.related-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  padding: 20px;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 4px;
+}
+.related-card:hover {
+  border-color: var(--red);
+  background: var(--bg3);
+  transform: translateY(-2px);
+}
+.related-card-cat {
+  font-size: 9px;
+  color: var(--red);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-family: var(--mono);
+}
+.related-card-title {
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.4;
+}
+.related-card-arrow {
+  margin-top: 12px;
+  font-size: 10px;
+  color: var(--text3);
+  text-align: right;
+  font-family: var(--mono);
+}
+@media (max-width: 600px) {
+  .related-wrap { padding: 40px 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="hdr">
+  <div class="hdr-left">
+    <div class="hdr-badge">Relatório de Inteligência</div>
+    <h1 class="hdr-title"><span>PCC</span> &amp; <span>CV</span> — Mapeamento Global de Ameaças</h1>
+    <p class="hdr-meta">Atualizado em <b>Março 2026</b> · Fontes: <b>FBSP · Ipea · PF · GAECO-SP · Dipol-SP · Instituto Igarapé · GI-TOC · Europol</b></p>
+  </div>
+  <div class="export-bar no-print">
+    <button class="btn-exp" onclick="window.print()">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="1" width="10" height="9" rx="1"/><path d="M3 7H1v6h14V7h-2"/><path d="M5 13h6M5 11h6"/></svg>
+      Exportar PDF
+    </button>
+    <button class="btn-exp" onclick="dlHTML()">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 1v9M5 7l3 3 3-3"/><path d="M2 11v2a1 1 0 001 1h10a1 1 0 001-1v-2"/></svg>
+      Salvar HTML
+    </button>
+  </div>
+</header>
+
+<!-- KPIs -->
+<div class="kpi-grid">
+  <div class="kpi kpi-r"><div class="kpi-label">Homicídios / ano</div><div class="kpi-value">39.492</div><div class="kpi-sub">130 mortes/dia · FBSP 2024</div></div>
+  <div class="kpi kpi-a"><div class="kpi-label">Custo crime / PIB</div><div class="kpi-value">11%</div><div class="kpi-sub">≈ R$ 1,4 tri/ano · Igarapé 2024</div></div>
+  <div class="kpi kpi-b"><div class="kpi-label">Gasto segurança pública</div><div class="kpi-value">R$ 153 bi</div><div class="kpi-sub">2024 · Anuário FBSP 2025</div></div>
+  <div class="kpi kpi-r"><div class="kpi-label">Sob domínio do crime</div><div class="kpi-value">61 milhões</div><div class="kpi-sub">¼ da pop. · Universidades EUA 2024</div></div>
+  <div class="kpi kpi-a"><div class="kpi-label">Membros PCC estimados</div><div class="kpi-value">40.000+</div><div class="kpi-sub">28 países · 4 continentes · MP-SP</div></div>
+  <div class="kpi kpi-b"><div class="kpi-label">Faturamento PCC (2 setores)</div><div class="kpi-value">R$ 100 bi+</div><div class="kpi-sub">Drogas + combustíveis · PF/MP 2025</div></div>
+  <div class="kpi kpi-r"><div class="kpi-label">Pico homicídios (guerra)</div><div class="kpi-value">65.000</div><div class="kpi-sub">2017 · correlação PCC × CV · Ipea</div></div>
+  <div class="kpi kpi-g"><div class="kpi-label">Redução com trégua</div><div class="kpi-value">−20%</div><div class="kpi-sub">em 10 anos · Atlas da Violência 2024</div></div>
+</div>
+
+<!-- TABS -->
+<div class="main">
+<nav class="tab-nav no-print">
+  <button class="tab-btn active" onclick="showTab('rede',this)">Rede de Conexões</button>
+  <button class="tab-btn" onclick="showTab('cronologia',this)">Cronologia</button>
+  <button class="tab-btn" onclick="showTab('financeiro',this)">Finanças</button>
+  <button class="tab-btn" onclick="showTab('violencia',this)">Violência</button>
+  <button class="tab-btn" onclick="showTab('riscos',this)">Matriz de Riscos</button>
+  <button class="tab-btn" onclick="showTab('estado',this)">Falhas do Estado</button>
+  <button class="tab-btn" onclick="showTab('judicial',this)">Implicações Judiciais</button>
+  <button class="tab-btn" onclick="showTab('refs',this)">Referências</button>
+</nav>
+
+<!-- ═══ TAB: REDE ═══ -->
+<section id="tab-rede" class="tab-panel active">
+  <p class="sec-title">Mapa de conexões — PCC, CV e atores internacionais</p>
+  <div class="net-wrap">
+    <div class="net-toolbar no-print">
+      <span>Filtrar:</span>
+      <button class="fb on" onclick="fc('all',this)">Todos</button>
+      <button class="fb" onclick="fc('terror',this)">Terrorismo</button>
+      <button class="fb" onclick="fc('mafia',this)">Máfias</button>
+      <button class="fb" onclick="fc('guerrilha',this)">Guerrilha</button>
+      <button class="fb" onclick="fc('cartel',this)">Cartéis</button>
+      <button class="fb" onclick="fc('inter',this)">Intermediários</button>
+      <button class="fb" onclick="fc('estado',this)">Institucional</button>
+    </div>
+    <div class="net-legend">
+      <div class="nl"><div class="nl-dot" style="background:var(--red)"></div>PCC</div>
+      <div class="nl"><div class="nl-dot" style="background:var(--blue)"></div>CV</div>
+      <div class="nl"><div class="nl-dot" style="background:var(--amber)"></div>Terrorismo</div>
+      <div class="nl"><div class="nl-dot" style="background:var(--purple)"></div>Máfia</div>
+      <div class="nl"><div class="nl-dot" style="background:#639922"></div>Guerrilha</div>
+      <div class="nl"><div class="nl-dot" style="background:var(--coral)"></div>Cartel</div>
+      <div class="nl"><div class="nl-dot" style="background:var(--green)"></div>Org. regional</div>
+      <div class="nl"><div class="nl-dot" style="background:var(--gray)"></div>Intermediário</div>
+      <div class="nl"><div class="nl-dot" style="background:var(--teal)"></div>Institucional</div>
+      <div class="nl" style="gap:6px">
+        <svg width="28" height="8"><line x1="1" y1="4" x2="27" y2="4" stroke="#8a8f9e" stroke-width="2" stroke-linecap="round"/></svg>
+        <span>Confirmado</span>
+      </div>
+      <div class="nl" style="gap:6px">
+        <svg width="28" height="8"><line x1="1" y1="4" x2="27" y2="4" stroke="#8a8f9e" stroke-width="1.5" stroke-dasharray="4 3"/></svg>
+        <span>Alegado</span>
+      </div>
+      <div class="nl" style="gap:6px">
+        <svg width="28" height="8"><line x1="1" y1="4" x2="27" y2="4" stroke="#545868" stroke-width="1" stroke-dasharray="2 3"/></svg>
+        <span>Indireto</span>
+      </div>
+    </div>
+    <div class="net-svg-wrap">
+      <svg width="100%" height="100%" viewBox="0 0 940 520" id="nsvg" style="display:block">
+      <defs>
+        <marker id="aGr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M1.5 1.5L8.5 5L1.5 8.5" fill="none" stroke="#545868" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+        <marker id="aOr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M1.5 1.5L8.5 5L1.5 8.5" fill="none" stroke="#ef9f27" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+        <marker id="aPu" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M1.5 1.5L8.5 5L1.5 8.5" fill="none" stroke="#7f77dd" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+        <marker id="aGn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M1.5 1.5L8.5 5L1.5 8.5" fill="none" stroke="#639922" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+        <marker id="aTe" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M1.5 1.5L8.5 5L1.5 8.5" fill="none" stroke="#1d9e75" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+        <marker id="aCo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M1.5 1.5L8.5 5L1.5 8.5" fill="none" stroke="#d85a30" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+        <marker id="aIn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M1.5 1.5L8.5 5L1.5 8.5" fill="none" stroke="#545868" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+        <marker id="aAq" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M1.5 1.5L8.5 5L1.5 8.5" fill="none" stroke="#5dcaa5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+      </defs>
+      <!-- zone labels -->
+      <text x="14" y="18" font-size="9" fill="#545868" font-family="'IBM Plex Mono',monospace" letter-spacing=".08em">TERRORISMO / ARMAS</text>
+      <text x="770" y="18" font-size="9" fill="#545868" font-family="'IBM Plex Mono',monospace" letter-spacing=".08em">MÁFIAS EUROPEIAS</text>
+      <text x="790" y="514" font-size="9" fill="#545868" font-family="'IBM Plex Mono',monospace" letter-spacing=".08em">AMÉRICA LATINA</text>
+      <text x="14" y="514" font-size="9" fill="#545868" font-family="'IBM Plex Mono',monospace" letter-spacing=".08em">INTERMEDIÁRIOS</text>
+      <!-- EDGES -->
+      <!-- PCC ↔ CV -->
+      <path d="M358,258 L548,258" fill="none" stroke="#545868" stroke-width="2.5" stroke-opacity=".4" marker-end="url(#aGr)"/>
+      <path d="M548,272 L358,272" fill="none" stroke="#545868" stroke-width="2.5" stroke-opacity=".4" marker-end="url(#aGr)"/>
+      <!-- Irã → Hezbollah -->
+      <path d="M162,104 L302,104" fill="none" stroke="#d85a30" stroke-width="1.8" marker-end="url(#aCo)"/>
+      <!-- PCC → Hezbollah -->
+      <path d="M314,238 Q278,150 318,126" fill="none" stroke="#ef9f27" stroke-width="2" marker-end="url(#aOr)"/>
+      <!-- CV → Hezbollah (arc) -->
+      <path d="M556,240 Q540,95 358,112" fill="none" stroke="#ef9f27" stroke-width="1.8" stroke-dasharray="6 3" marker-end="url(#aOr)"/>
+      <!-- Hezbollah → Boko Haram (indireta) -->
+      <path d="M320,122 Q80,280 100,460" fill="none" stroke="#545868" stroke-width="1" stroke-dasharray="3 4" marker-end="url(#aIn)"/>
+      <!-- PCC → 'Ndrangheta -->
+      <path d="M350,242 Q520,44 758,90" fill="none" stroke="#7f77dd" stroke-width="2" marker-end="url(#aPu)"/>
+      <!-- PCC → M. Albanesa -->
+      <path d="M354,252 Q600,112 840,188" fill="none" stroke="#7f77dd" stroke-width="1.8" marker-end="url(#aPu)"/>
+      <!-- PCC → ELN/FARC -->
+      <path d="M348,280 Q590,370 770,372" fill="none" stroke="#639922" stroke-width="2" marker-end="url(#aGn)"/>
+      <!-- CV → ELN/FARC -->
+      <path d="M620,278 L774,368" fill="none" stroke="#639922" stroke-width="1.8" marker-end="url(#aGn)"/>
+      <!-- PCC → Tren de Aragua -->
+      <path d="M344,288 Q540,460 742,472" fill="none" stroke="#1d9e75" stroke-width="1.5" marker-end="url(#aTe)"/>
+      <!-- PCC → Sinaloa (alegado) -->
+      <path d="M330,298 Q430,498 576,500" fill="none" stroke="#d85a30" stroke-width="1.5" stroke-dasharray="6 3" marker-end="url(#aCo)"/>
+      <!-- PCC → Redes África -->
+      <path d="M310,296 Q330,478 428,496" fill="none" stroke="#1d9e75" stroke-width="1.5" marker-end="url(#aTe)"/>
+      <!-- PCC → Marset -->
+      <path d="M296,296 Q264,448 220,480" fill="none" stroke="#888780" stroke-width="1.5" marker-end="url(#aGr)"/>
+      <!-- PCC → Dirísio -->
+      <path d="M274,248 Q196,220 162,214" fill="none" stroke="#888780" stroke-width="2" marker-end="url(#aGr)"/>
+      <!-- CV → Dirísio -->
+      <path d="M562,242 Q360,98 168,204" fill="none" stroke="#888780" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#aGr)"/>
+      <!-- PCC + CV → Estado -->
+      <path d="M326,296 Q370,398 430,416" fill="none" stroke="#5dcaa5" stroke-width="1.5" marker-end="url(#aAq)"/>
+      <path d="M584,296 Q546,398 488,416" fill="none" stroke="#5dcaa5" stroke-width="1.5" marker-end="url(#aAq)"/>
+      <!-- NODES -->
+      <!-- PCC -->
+      <g class="ng" onclick="sd('pcc')" data-cat="facca" style="cursor:pointer">
+        <circle cx="316" cy="262" r="48" fill="#e24b4a" fill-opacity=".9" stroke="#e24b4a" stroke-width="1" stroke-opacity=".3"/>
+        <text x="316" y="255" text-anchor="middle" dominant-baseline="central" font-size="20" font-weight="600" fill="white" font-family="'IBM Plex Mono',monospace">PCC</text>
+        <text x="316" y="277" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.65)" font-family="'IBM Plex Sans',sans-serif">40k mbr · 28 países</text>
+      </g>
+      <!-- CV -->
+      <g class="ng" onclick="sd('cv')" data-cat="facca" style="cursor:pointer">
+        <circle cx="590" cy="262" r="48" fill="#378add" fill-opacity=".9" stroke="#378add" stroke-width="1" stroke-opacity=".3"/>
+        <text x="590" y="255" text-anchor="middle" dominant-baseline="central" font-size="20" font-weight="600" fill="white" font-family="'IBM Plex Mono',monospace">CV</text>
+        <text x="590" y="277" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.65)" font-family="'IBM Plex Sans',sans-serif">30k+ mbr · 21 estados</text>
+      </g>
+      <!-- Hezbollah -->
+      <g class="ng" onclick="sd('hzb')" data-cat="terror" style="cursor:pointer">
+        <circle cx="338" cy="106" r="34" fill="#ef9f27" fill-opacity=".9"/>
+        <text x="338" y="100" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="500" fill="white" font-family="'IBM Plex Sans',sans-serif">Hezbollah</text>
+        <text x="338" y="116" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.7)" font-family="'IBM Plex Mono',monospace">Líbano/Irã [C]</text>
+      </g>
+      <!-- Irã -->
+      <g class="ng" onclick="sd('ira')" data-cat="terror" style="cursor:pointer">
+        <circle cx="128" cy="104" r="28" fill="#d85a30" fill-opacity=".9"/>
+        <text x="128" y="98" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="white" font-family="'IBM Plex Sans',sans-serif">Irã</text>
+        <text x="128" y="112" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.7)" font-family="'IBM Plex Mono',monospace">Armas [C]</text>
+      </g>
+      <!-- Boko Haram (indireta) -->
+      <g class="ng" onclick="sd('bko')" data-cat="terror" style="cursor:pointer">
+        <circle cx="100" cy="474" r="28" fill="#ef9f27" fill-opacity=".45" stroke="#ef9f27" stroke-width="1.5" stroke-dasharray="4 2"/>
+        <text x="100" y="468" text-anchor="middle" dominant-baseline="central" font-size="9.5" font-weight="500" fill="rgba(255,255,255,.85)" font-family="'IBM Plex Sans',sans-serif">Boko Haram</text>
+        <text x="100" y="482" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.55)" font-family="'IBM Plex Mono',monospace">Indireta [I]</text>
+      </g>
+      <!-- 'Ndrangheta -->
+      <g class="ng" onclick="sd('ndr')" data-cat="mafia" style="cursor:pointer">
+        <circle cx="790" cy="88" r="34" fill="#7f77dd" fill-opacity=".9"/>
+        <text x="790" y="82" text-anchor="middle" dominant-baseline="central" font-size="10.5" font-weight="500" fill="white" font-family="'IBM Plex Sans',sans-serif">'Ndrangheta</text>
+        <text x="790" y="98" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.7)" font-family="'IBM Plex Mono',monospace">Itália [C]</text>
+      </g>
+      <!-- M. Albanesa -->
+      <g class="ng" onclick="sd('alb')" data-cat="mafia" style="cursor:pointer">
+        <circle cx="866" cy="198" r="28" fill="#7f77dd" fill-opacity=".9"/>
+        <text x="866" y="192" text-anchor="middle" dominant-baseline="central" font-size="10" font-weight="500" fill="white" font-family="'IBM Plex Sans',sans-serif">M. Albanesa</text>
+        <text x="866" y="206" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.7)" font-family="'IBM Plex Mono',monospace">Bálcãs [C]</text>
+      </g>
+      <!-- ELN/FARC -->
+      <g class="ng" onclick="sd('eln')" data-cat="guerrilha" style="cursor:pointer">
+        <circle cx="800" cy="380" r="32" fill="#639922" fill-opacity=".9"/>
+        <text x="800" y="374" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="500" fill="white" font-family="'IBM Plex Sans',sans-serif">ELN / FARC</text>
+        <text x="800" y="390" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.7)" font-family="'IBM Plex Mono',monospace">Colômbia [C]</text>
+      </g>
+      <!-- Tren de Aragua -->
+      <g class="ng" onclick="sd('tre')" data-cat="cartel" style="cursor:pointer">
+        <circle cx="764" cy="480" r="27" fill="#1d9e75" fill-opacity=".9"/>
+        <text x="764" y="474" text-anchor="middle" dominant-baseline="central" font-size="9.5" font-weight="500" fill="white" font-family="'IBM Plex Sans',sans-serif">Tren de Aragua</text>
+        <text x="764" y="488" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.7)" font-family="'IBM Plex Mono',monospace">Venezuela [C]</text>
+      </g>
+      <!-- Sinaloa -->
+      <g class="ng" onclick="sd('sin')" data-cat="cartel" style="cursor:pointer">
+        <circle cx="596" cy="502" r="27" fill="#d85a30" fill-opacity=".9"/>
+        <text x="596" y="496" text-anchor="middle" dominant-baseline="central" font-size="10" font-weight="500" fill="white" font-family="'IBM Plex Sans',sans-serif">C. Sinaloa</text>
+        <text x="596" y="510" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.7)" font-family="'IBM Plex Mono',monospace">México [A]</text>
+      </g>
+      <!-- Redes África -->
+      <g class="ng" onclick="sd('afr')" data-cat="cartel" style="cursor:pointer">
+        <circle cx="444" cy="500" r="27" fill="#1d9e75" fill-opacity=".9"/>
+        <text x="444" y="494" text-anchor="middle" dominant-baseline="central" font-size="9.5" font-weight="500" fill="white" font-family="'IBM Plex Sans',sans-serif">Redes África</text>
+        <text x="444" y="508" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.7)" font-family="'IBM Plex Mono',monospace">NG/GN/AO [C]</text>
+      </g>
+      <!-- Marset -->
+      <g class="ng" onclick="sd('mrs')" data-cat="inter" style="cursor:pointer">
+        <circle cx="214" cy="486" r="27" fill="#888780" fill-opacity=".9"/>
+        <text x="214" y="480" text-anchor="middle" dominant-baseline="central" font-size="10.5" font-weight="500" fill="white" font-family="'IBM Plex Sans',sans-serif">Marset</text>
+        <text x="214" y="494" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.7)" font-family="'IBM Plex Mono',monospace">Uruguai [C]</text>
+      </g>
+      <!-- Dirísio/IAS -->
+      <g class="ng" onclick="sd('dir')" data-cat="inter" style="cursor:pointer">
+        <circle cx="128" cy="212" r="32" fill="#888780" fill-opacity=".9"/>
+        <text x="128" y="206" text-anchor="middle" dominant-baseline="central" font-size="10" font-weight="500" fill="white" font-family="'IBM Plex Sans',sans-serif">Dirísio / IAS</text>
+        <text x="128" y="220" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.7)" font-family="'IBM Plex Mono',monospace">ARG/PY · armas</text>
+      </g>
+      <!-- Estado BR -->
+      <g class="ng" onclick="sd('est')" data-cat="estado" style="cursor:pointer">
+        <circle cx="458" cy="426" r="32" fill="#5dcaa5" fill-opacity=".85"/>
+        <text x="458" y="420" text-anchor="middle" dominant-baseline="central" font-size="10" font-weight="500" fill="white" font-family="'IBM Plex Sans',sans-serif">Estado BR</text>
+        <text x="458" y="434" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.7)" font-family="'IBM Plex Mono',monospace">Infiltrado [C]</text>
+      </g>
+      </svg>
+    </div>
+    <div class="net-detail" id="det"><span style="color:var(--text3);font-family:'IBM Plex Mono',monospace;font-size:11px">Clique em qualquer nó para ver perfil completo, evidências e fontes.</span></div>
+  </div>
+</section>
+
+<!-- ═══ TAB: CRONOLOGIA ═══ -->
+<section id="tab-cronologia" class="tab-panel">
+  <p class="sec-title">Eventos críticos documentados — 2003 a 2026</p>
+  <div class="tl">
+    <div class="tl-item"><div class="tl-dot" style="background:var(--red)"></div><div class="tl-date">Março 2003</div><div class="tl-title">Assassinato do juiz Antônio José Machado Dias <span class="bd bd-r">Violência ao Estado</span></div><div class="tl-desc">Juiz da Vara de Execuções de Presidente Prudente (SP) executado pelo PCC. Primeiro ataque documentado contra o Judiciário brasileiro. PCC sob liderança de Marcola desde 2002.</div></div>
+    <div class="tl-item"><div class="tl-dot" style="background:var(--red)"></div><div class="tl-date">Maio 2006</div><div class="tl-title">Crimes de Maio — ataques coordenados em São Paulo <span class="bd bd-r">~564 mortes</span></div><div class="tl-desc">PCC orquestrou ataques simultâneos em SP e 5 estados. Maior demonstração de força do crime organizado na história brasileira. Paralisou a cidade de São Paulo por dias.</div></div>
+    <div class="tl-item"><div class="tl-dot" style="background:var(--amber)"></div><div class="tl-date">Circa 2006</div><div class="tl-title">Início da parceria PCC–Hezbollah <span class="bd bd-a">[Confirmado] PF</span></div><div class="tl-desc">PF documenta primeiros contatos na Tríplice Fronteira. Hezbollah fornece armas leves via Irã → Paraguai → PCC. Em troca: proteção a presos libaneses no sistema prisional e acesso às rotas de cocaína.</div></div>
+    <div class="tl-item"><div class="tl-dot" style="background:var(--gray)"></div><div class="tl-date">2016</div><div class="tl-title">Racha PCC × CV — assassinato de Jorge Rafaat <span class="bd bd-a">Geopolítica</span></div><div class="tl-desc">PCC elimina Rafaat ("Rei da Fronteira") em Pedro Juan Caballero (PY) e assume a Rota Caipira. CV perde sua principal rota de abastecimento. Início da guerra que levará ao recorde de 65 mil homicídios em 2017.</div></div>
+    <div class="tl-item"><div class="tl-dot" style="background:var(--red)"></div><div class="tl-date">1 janeiro 2017</div><div class="tl-title">Massacre do Compaj — Manaus (AM) <span class="bd bd-r">56 mortos</span></div><div class="tl-desc">PCC vs FDN/CV. O massacre prisional mais violento da história brasileira. Cinco dias depois: Massacre de Monte Cristo (Roraima, 33 mortos). Resultado: 2017 registra 65 mil homicídios — recorde nacional.</div></div>
+    <div class="tl-item"><div class="tl-dot" style="background:var(--red)"></div><div class="tl-date">Julho 2019</div><div class="tl-title">Massacre de Altamira — Pará (PA) <span class="bd bd-r">67 mortos</span></div><div class="tl-desc">PCC (via Comando Classe A) contra o CV. Decapitações documentadas. Um dos episódios mais bárbaros registrados em presídios brasileiros.</div></div>
+    <div class="tl-item"><div class="tl-dot" style="background:var(--blue)"></div><div class="tl-date">2020</div><div class="tl-title">Operação Sem Fronteiras — Hezbollah/Tríplice Fronteira <span class="bd bd-b">Internacional</span></div><div class="tl-desc">Ação conjunta Brasil, Argentina, Chile, EUA e Romênia. 3 libaneses do Hezbollah presos e extraditados para os EUA, cada um com 31+ acusações relacionadas a terrorismo.</div></div>
+    <div class="tl-item"><div class="tl-dot" style="background:var(--blue)"></div><div class="tl-date">Março 2023</div><div class="tl-title">Operação Sequaz — plano de assassinar autoridades <span class="bd bd-b">PF</span></div><div class="tl-desc">PCC planejava matar Alckimin, Moro, Rosângela Moro, Coronel Telhada e promotor Gakiya. 11 alvos, 7 presos preventivos em MS, RO, SP e PR.</div></div>
+    <div class="tl-item"><div class="tl-dot" style="background:var(--red)"></div><div class="tl-date">Novembro 2023</div><div class="tl-title">Execução de Vinícius Gritzbach no Aeroporto de Guarulhos <span class="bd bd-r">Delator</span></div><div class="tl-desc">Delator do PCC executado à luz do dia no aeroporto de SP. Havia exposto nomes de traficantes, lideranças e policiais corrompidos. Demonstra o alcance da facção em espaços públicos de alta segurança.</div></div>
+    <div class="tl-item"><div class="tl-dot" style="background:var(--blue)"></div><div class="tl-date">Dezembro 2023</div><div class="tl-title">Operação Dakovo — 43 mil armas Europa → Brasil <span class="bd bd-b">PF Internacional</span></div><div class="tl-desc">R$ 1,2 bilhão. Rede: Croácia/Turquia/Rep. Tcheca/Eslovênia → empresa IAS/Assunção (PY) → PCC+CV. 19 presos. 4 militares paraguaios condenados pela Justiça Federal.</div></div>
+    <div class="tl-item"><div class="tl-dot" style="background:var(--blue)"></div><div class="tl-date">Agosto 2025</div><div class="tl-title">Operação Carbono Oculto — PCC + combustíveis + lavagem <span class="bd bd-b">Receita + GAECO</span></div><div class="tl-desc">R$ 80 bilhões mapeados no setor de combustíveis. Banco paralelo: R$ 46 bi não rastreáveis (2020–2024). 22 empresas de fachada e fintechs como instrumentos de lavagem.</div></div>
+    <div class="tl-item"><div class="tl-dot" style="background:var(--red)"></div><div class="tl-date">Outubro 2025</div><div class="tl-title">Megaoperação Complexo do Alemão e Penha — Rio de Janeiro <span class="bd bd-r">122 mortos</span></div><div class="tl-desc">PM-RJ vs CV. A operação mais letal da história do Rio de Janeiro. 123 presos, 122 armas apreendidas (96 fuzis), 12 explosivos, uso de drones pelos traficantes registrado.</div></div>
+    <div class="tl-item"><div class="tl-dot" style="background:var(--amber)"></div><div class="tl-date">Outubro 2025</div><div class="tl-title">Argentina declara PCC e CV como narcoterroristas <span class="bd bd-a">Geopolítica</span></div><div class="tl-desc">Governo Milei inclui ambas as facções no Repet. Primeiro país da América do Sul a fazê-lo. Paraguai seguiu semanas depois. Brasil resiste à mesma classificação.</div></div>
+    <div class="tl-item"><div class="tl-dot" style="background:var(--amber)"></div><div class="tl-date">Março 2026</div><div class="tl-title">EUA concluem processo técnico para designação FTO <span class="bd bd-a">Crise geopolítica</span></div><div class="tl-desc">Aguarda chancela política de Trump. Impactos iminentes: sanções financeiras, bloqueio de ativos internacionais, risco de operações militares extraterritoriais. Chanceler Mauro Vieira negociou diretamente com Marco Rubio.</div></div>
+  </div>
+</section>
+
+<!-- ═══ TAB: FINANCEIRO ═══ -->
+<section id="tab-financeiro" class="tab-panel">
+  <p class="sec-title">Mapa econômico do crime organizado</p>
+  <div class="grid-2" style="margin-bottom:16px">
+    <div class="card">
+      <div class="card-title">Fontes de receita — crime organizado (R$ bi/ano)</div>
+      <div class="chart-legend" id="rev-leg"></div>
+      <div class="chart-wrap" style="height:260px"><canvas id="c-rev"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Gastos públicos com segurança 2024 (R$ bi)</div>
+      <div class="chart-legend">
+        <div class="cl-item"><div class="cl-sq" style="background:var(--blue)"></div>Estados R$118,5bi</div>
+        <div class="cl-item"><div class="cl-sq" style="background:var(--purple)"></div>União R$21bi</div>
+        <div class="cl-item"><div class="cl-sq" style="background:var(--green)"></div>Municípios R$13,5bi</div>
+      </div>
+      <div class="chart-wrap" style="height:260px"><canvas id="c-spend"></canvas></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title">Custo total do crime — decomposição por categoria (R$ bi/ano) — Instituto Igarapé 2024</div>
+    <div class="chart-wrap" style="height:160px"><canvas id="c-cost"></canvas></div>
+  </div>
+  <div class="note"><strong>Paradoxo do gasto:</strong> O Brasil gastou <strong>R$ 153 bilhões</strong> em segurança pública em 2024 — <strong>1,3% do PIB</strong>, acima da média mundial de 1,0%. O custo total do crime (11% do PIB) é 8,5× maior que o gasto de combate. No Rio de Janeiro, segurança consumiu 15% do orçamento estadual, mais que saúde (10%) e educação (9%). Fonte: Anuário FBSP 2025, Instituto Igarapé 2024.</div>
+</section>
+
+<!-- ═══ TAB: VIOLÊNCIA ═══ -->
+<section id="tab-violencia" class="tab-panel">
+  <p class="sec-title">Série histórica de homicídios — correlação com dinâmica das facções</p>
+  <div class="card" style="margin-bottom:16px">
+    <div class="card-title">Homicídios no Brasil 2014–2023 — o racha PCC × CV explica o pico de 2017</div>
+    <div class="chart-wrap" style="height:280px"><canvas id="c-hom"></canvas></div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px">
+    <div class="kpi kpi-r"><div class="kpi-label">Jovens assassinados/dia</div><div class="kpi-value">62</div><div class="kpi-sub">15–29 anos · 2022 · Atlas da Violência</div></div>
+    <div class="kpi kpi-r"><div class="kpi-label">Jovens mortos 2012–2022</div><div class="kpi-value">321.400</div><div class="kpi-sub">15,2 mi anos potenciais perdidos</div></div>
+    <div class="kpi kpi-a"><div class="kpi-label">Feminicídios 2023</div><div class="kpi-value">1.467</div><div class="kpi-sub">Recorde desde tipificação (2015)</div></div>
+    <div class="kpi kpi-a"><div class="kpi-label">Estelionatos/ano 2024</div><div class="kpi-value">2,2 mi</div><div class="kpi-sub">+550% desde 2018 · FBSP</div></div>
+  </div>
+  <div class="card">
+    <div class="card-title">Perfil das vítimas de homicídio (% do total) — Atlas da Violência 2024</div>
+    <div class="chart-wrap" style="height:160px"><canvas id="c-prof"></canvas></div>
+  </div>
+</section>
+
+<!-- ═══ TAB: RISCOS ═══ -->
+<section id="tab-riscos" class="tab-panel">
+  <p class="sec-title">Matriz de riscos — probabilidade × impacto (1–5)</p>
+  <div id="rm-cont"></div>
+  <div style="margin-top:20px">
+    <p class="sec-title" style="margin-bottom:12px">Detalhamento das ameaças mapeadas</p>
+    <div id="th-list" style="display:grid;grid-template-columns:1fr 1fr;gap:8px"></div>
+  </div>
+  <div class="grid-2" style="margin-top:16px">
+    <div class="card">
+      <div class="card-title" style="color:var(--red)">Alertas de escalada iminente</div>
+      <ul class="fail-list">
+        <li>Rebeliões prisionais simultâneas em mais de um estado</li>
+        <li>"Salves" convocando membros para conflito armado</li>
+        <li>Assassinatos de lideranças rivais em cidades de fronteira</li>
+        <li>Pico de apreensões de fuzis e calibres pesados</li>
+        <li>Transferências não programadas de líderes do sistema federal</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title" style="color:var(--amber)">Alertas de aliança/expansão</div>
+      <ul class="fail-list">
+        <li>"Salves" de trégua ou aliança circulando em presídios</li>
+        <li>Queda súbita de homicídios em estados do Nordeste</li>
+        <li>Registro em massa de novas empresas por pessoas ligadas a facções</li>
+        <li>Movimentação de líderes para cidades-chave do Nordeste/Norte</li>
+        <li>Captação acelerada de jovens em municípios do interior</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TAB: ESTADO ═══ -->
+<section id="tab-estado" class="tab-panel">
+  <p class="sec-title">Falhas do Estado e infiltração institucional documentada</p>
+  <div class="fail-grid">
+    <div class="fail-card"><div class="fail-title">Judiciário e MP</div><ul class="fail-list"><li>PCC financia concurseiros de Direito — estratégia longo prazo · CNJ</li><li>Sintonia dos Gravatas: 40+ advogados cativos (2016)</li><li>Servidor Rodrigo Corrêa: vazava remoções de presos em troca de propina</li><li>Juízes e promotores ameaçados — Gakiya sob escolta há 10+ anos</li><li>Veto parcial de Lula à proteção formal de magistrados (2023)</li></ul></div>
+    <div class="fail-card"><div class="fail-title">Sistema Prisional</div><ul class="fail-list"><li>PCC controla 90% dos presídios paulistas</li><li>Marcola preso desde 1999 e lidera o PCC há 25+ anos de dentro</li><li>Comunicação via advogados e familiares não bloqueada efetivamente</li><li>RDD federal como única contenção com alguma eficácia</li><li>Organograma: 14 sintonias e 89 líderes mapeados (Dipol-SP, fev/2026)</li></ul></div>
+    <div class="fail-card"><div class="fail-title">Fronteiras e Forças Armadas</div><ul class="fail-list"><li>Tríplice Fronteira: hub histórico PCC–Hezbollah desde 2006</li><li>4 militares paraguaios do Dimabel condenados (Dakovo, 2023)</li><li>Acordo comercial BR–PY reduz inspeções alfandegárias</li><li>82 cidades de fronteira com facções ativas (FBSP 2025)</li><li>Porto de Santos: principal rota de exportação de cocaína</li></ul></div>
+    <div class="fail-card"><div class="fail-title">Inteligência e Investigação</div><ul class="fail-list"><li>Sem GAECO Nacional — investigações fragmentadas por estado</li><li>COAF sub-dimensionado para o volume do problema</li><li>Compartilhamento de intel entre PF, PC e PM é deficiente</li><li>PCC usa IA para monitorar autoridades (detectado pela PF em 2025)</li><li>Taxa de elucidação de homicídios: apenas 5–8% (IPEA)</li></ul></div>
+    <div class="fail-card"><div class="fail-title">Legislação</div><ul class="fail-list"><li>Sem lei antimáfia (bloqueio preventivo de ativos)</li><li>Lei Antiterrorismo (13.260/2016): exige motivação ideológica</li><li>Lei 12.850/2013: sem inversão do ônus patrimonial</li><li>Proposta "terrorismo criminal" parada no Congresso</li><li>Ausência de instrumento tipo RICO Act dos EUA</li></ul></div>
+    <div class="fail-card"><div class="fail-title">Sistema Financeiro</div><ul class="fail-list"><li>R$ 46 bi não rastreáveis PCC (2020–2024) · Carbono Oculto</li><li>Fintechs 2GO Bank + InvBank: R$ 6 bi lavados · Operação Hydra</li><li>PCC infiltrado em 13 setores da economia formal (GAECO-SP)</li><li>Compliance bancário insuficiente para a escala do crime</li><li>Criptoativos crescendo como canal de lavagem</li></ul></div>
+  </div>
+</section>
+
+<!-- ═══ TAB: JUDICIAL ═══ -->
+<section id="tab-judicial" class="tab-panel">
+  <p class="sec-title">Arcabouço legal e implicações jurídicas críticas</p>
+  <div class="jud-grid">
+    <div class="jud-card"><div class="jud-title">Lei 12.850/2013 — Organizações Criminosas</div><div class="jud-desc">Tipifica o crime organizado. Prevê colaboração premiada, infiltração policial e captação ambiental. Principal instrumento vigente. Limitação: sem bloqueio preventivo de ativos e sem inversão do ônus patrimonial.</div></div>
+    <div class="jud-card"><div class="jud-title">Lei 13.260/2016 — Antiterrorismo</div><div class="jud-desc">Exige motivação ideológica, xenofobia ou discriminação religiosa. Não se aplica ao PCC e CV (motivação econômica). Posição oficial do MJSP e maioria dos juristas especializados.</div></div>
+    <div class="jud-card warn"><div class="jud-title">Lacuna: Lei Antimáfia</div><div class="jud-desc">Sem equivalente da lei italiana Rognoni-La Torre (1982). Impossível presumir ilicitude patrimonial e bloquear ativos preventivamente. Juristas propõem adaptação urgente para o contexto brasileiro.</div></div>
+    <div class="jud-card warn"><div class="jud-title">Lacuna: "Terrorismo Criminal"</div><div class="jud-desc">Proposta em debate: tipificar ataques a serviços essenciais sem equiparar ao terrorismo ideológico. Status: tramitação no Congresso, sem previsão de aprovação em 2026.</div></div>
+  </div>
+  <p class="sec-title">Implicações judiciais críticas — ordem de risco</p>
+  <ul class="impl-list">
+    <li class="impl-item"><div class="impl-n">01</div><div class="impl-t"><strong>Classificação FTO pelos EUA (mar/2026):</strong> qualquer banco ou empresa brasileiro que interaja com entidades ligadas ao PCC/CV pode ser responsabilizado civil e criminalmente nos EUA. Promotor Gakiya: "abre flanco para operações militares secretas da CIA ou forças especiais no Brasil." Fonte: Agência Brasil, mar/2026.</div></li>
+    <li class="impl-item"><div class="impl-n">02</div><div class="impl-t"><strong>Argentina e Paraguai já classificaram PCC e CV como narcoterroristas/terroristas:</strong> cria obrigações de extradição acelerada e bloqueio de ativos nessas jurisdições. O Brasil não reconhece, gerando vácuo legal regional que favorece as facções.</div></li>
+    <li class="impl-item"><div class="impl-n">03</div><div class="impl-t"><strong>Infiltração no Judiciário via concurso público:</strong> estratégia de financiamento de faculdades de Direito documentada pelo CNJ. Risco de médio prazo para a integridade institucional. Analistas e servidores de tribunais já comprometidos.</div></li>
+    <li class="impl-item"><div class="impl-n">04</div><div class="impl-t"><strong>Colaboração premiada vulnerabilizada:</strong> caso Gritzbach (assassinado em Guarulhos, 2023) demonstra que o Estado não protege delatores de alto valor. Fragiliza o principal instrumento investigativo da Lei 12.850/2013.</div></li>
+    <li class="impl-item"><div class="impl-n">05</div><div class="impl-t"><strong>Extradições como modelo de sucesso:</strong> Fuminho (líder PCC preso em Moçambique, 2020) e 3 membros do Hezbollah (Op. Sem Fronteiras, 2020) extraditados para os EUA. Cooperação internacional funciona — precisa ser sistematizada.</div></li>
+    <li class="impl-item"><div class="impl-n">06</div><div class="impl-t"><strong>Jurisdição extraterritorial dos EUA (Operação Hydra):</strong> R$ 6 bi lavados em 15 países. A lei americana permite responsabilizar bancos brasileiros por negligência em compliance mesmo em operações fora dos EUA — risco sistêmico para o setor financeiro.</div></li>
+    <li class="impl-item"><div class="impl-n">07</div><div class="impl-t"><strong>Militares paraguaios condenados pela Justiça Federal:</strong> 4 militares do Dimabel condenados por corrupção no fornecimento de armas ao PCC/CV. Precedente importante para responsabilização transnacional de agentes estatais corrompidos.</div></li>
+    <li class="impl-item"><div class="impl-n">08</div><div class="impl-t"><strong>Soberania vs. cooperação:</strong> resistência brasileira à classificação FTO é juridicamente sustentável. O risco real é o uso como justificativa para intervenções extraterritoriais — especialmente sob a doutrina Trump pós-Venezuela (jan/2026). Fonte: Militares brasileiros, Estadão, mar/2026.</div></li>
+    <li class="impl-item"><div class="impl-n">09</div><div class="impl-t"><strong>Recomendações consolidadas:</strong> GAECO Nacional, lei antimáfia com inversão do ônus patrimonial, sistema único de informações de segurança (equivalente ao DataSUS), protocolo de proteção a magistrados como atividade de risco permanente, Compliance Antimáfia obrigatório para bancos.</div></li>
+  </ul>
+</section>
+
+<!-- ═══ TAB: REFS ═══ -->
+<section id="tab-refs" class="tab-panel">
+  <p class="sec-title">Referências e fontes verificadas</p>
+  <div class="ref-grid">
+    <div class="ref-card">
+      <div class="ref-cat">Relatórios oficiais</div>
+      <div class="ref-item"><div class="ref-title">Anuário Brasileiro de Segurança Pública 2025</div><div class="ref-meta">Fórum Brasileiro de Segurança Pública · Dados até 2024</div><a class="ref-link" href="https://forumseguranca.org.br/publicacoes_posts/anuario-brasileiro-de-seguranca-publica-2025/" target="_blank">forumseguranca.org.br →</a></div>
+      <div class="ref-item"><div class="ref-title">Atlas da Violência 2024</div><div class="ref-meta">Ipea + Fórum Brasileiro de Segurança Pública</div><a class="ref-link" href="https://www.ipea.gov.br/atlasviolencia/" target="_blank">ipea.gov.br/atlasviolencia →</a></div>
+      <div class="ref-item"><div class="ref-title">Mapa das Organizações Criminosas 2024</div><div class="ref-meta">Ministério da Justiça e Segurança Pública</div><a class="ref-link" href="https://www.gov.br/mj/pt-br" target="_blank">gov.br/mj →</a></div>
+      <div class="ref-item"><div class="ref-title">Relatório Europol SOCTA 2021</div><div class="ref-meta">Europol — conexão 'Ndrangheta/PCC na Europa</div><a class="ref-link" href="https://www.europol.europa.eu/cms/sites/default/files/documents/socta_2021_1.pdf" target="_blank">europol.europa.eu →</a></div>
+    </div>
+    <div class="ref-card">
+      <div class="ref-cat">Investigações e estudos</div>
+      <div class="ref-item"><div class="ref-title">Custo do crime no Brasil — 11% do PIB</div><div class="ref-meta">Instituto Igarapé · Robert Muggah · Fev/2026</div><a class="ref-link" href="https://www.gazetadopovo.com.br/brasil/custo-crime-organizado-economia-brasil/" target="_blank">gazetadopovo.com.br →</a></div>
+      <div class="ref-item"><div class="ref-title">Crime and Conflict in the Amazon 2023</div><div class="ref-meta">Global Initiative Against Transnational Organized Crime (GI-TOC)</div><a class="ref-link" href="https://globalinitiative.net/analysis/crime-amazon/" target="_blank">globalinitiative.net →</a></div>
+      <div class="ref-item"><div class="ref-title">Segurança Pública e Crime Organizado no Brasil</div><div class="ref-meta">Esfera Brasil + FBSP · 2024</div><a class="ref-link" href="https://www.poder360.com.br/seguranca-publica/comercio-de-cocaina-pode-render-ate-r-335-bilhoes-a-faccoes-diz-estudo/" target="_blank">poder360.com.br →</a></div>
+      <div class="ref-item"><div class="ref-title">InSight Crime — Perfil PCC e CV</div><div class="ref-meta">InSight Crime · Atualização contínua</div><a class="ref-link" href="https://insightcrime.org/brazil-organized-crime-news/primeiro-comando-da-capital-pcc-profile/" target="_blank">insightcrime.org →</a></div>
+    </div>
+    <div class="ref-card">
+      <div class="ref-cat">Operações policiais</div>
+      <div class="ref-item"><div class="ref-title">Operação Dakovo — Tráfico Internacional de Armas</div><div class="ref-meta">PF/Bahia · Dez/2023 · 43 mil armas / R$1,2bi</div><a class="ref-link" href="https://www.gazetadopovo.com.br/brasil/o-argentino-maior-fornecedor-trafico-de-armas-pcc-comando-vermelho/" target="_blank">gazetadopovo.com.br →</a></div>
+      <div class="ref-item"><div class="ref-title">Operação Carbono Oculto — PCC e Combustíveis</div><div class="ref-meta">Receita Federal + GAECO-SP · Ago/2025</div><a class="ref-link" href="https://www.cnnbrasil.com.br/nacional/sudeste/sp/de-pelucia-a-motel-veja-onde-pcc-se-infiltrou-para-lavar-dinheiro-do-crime/" target="_blank">cnnbrasil.com.br →</a></div>
+      <div class="ref-item"><div class="ref-title">Operação Hydra — Lavagem via Fintechs</div><div class="ref-meta">PGR + PF · 2024 · R$6bi / 15 países</div><a class="ref-link" href="https://greenbusinesspost.com/acorda-faria-lima-como-o-crime-fatura-r-350-bilhoes-na-economia-legal-enquanto-voce-paga-a-conta/" target="_blank">greenbusinesspost.com →</a></div>
+      <div class="ref-item"><div class="ref-title">Organograma do PCC — Dipol-SP 2026</div><div class="ref-meta">Polícia Civil SP · Fev/2026 · 89 líderes / 14 sintonias</div><a class="ref-link" href="https://www.gazetadopovo.com.br/brasil/organograma-pcc-lideres-sintonias-do-crime/" target="_blank">gazetadopovo.com.br →</a></div>
+    </div>
+    <div class="ref-card">
+      <div class="ref-cat">PCC e Hezbollah</div>
+      <div class="ref-item"><div class="ref-title">PCC–Hezbollah: 23 anos de conexão documentada</div><div class="ref-meta">Gazeta do Povo · Nov/2023</div><a class="ref-link" href="https://www.gazetadopovo.com.br/parana/pcc-hezbollah-conexao-investigada-ha-23-anos-tem-treinamento-armado-e-financimento-de-terrorismo/" target="_blank">gazetadopovo.com.br →</a></div>
+      <div class="ref-item"><div class="ref-title">Como o Hezbollah pratica crimes com o PCC na fronteira</div><div class="ref-meta">Gazeta do Povo · Out/2024</div><a class="ref-link" href="https://www.gazetadopovo.com.br/republica/como-o-grupo-terrorista-hezbollah-pratica-crimes-junto-com-o-pcc-na-fronteira-do-brasil/" target="_blank">gazetadopovo.com.br →</a></div>
+      <div class="ref-item"><div class="ref-title">Boko Haram e Al-Qaeda são ameaças ao Brasil</div><div class="ref-meta">DefesaNet · Embaixador francês Michel Miraillet</div><a class="ref-link" href="https://www.defesanet.com.br/armas/noticia/28600/embaixador-michel-miraillet-boko-haram-e-al-qaeda-sao-ameacas-ao-brasil/" target="_blank">defesanet.com.br →</a></div>
+    </div>
+    <div class="ref-card">
+      <div class="ref-cat">Soberania e classificação FTO</div>
+      <div class="ref-item"><div class="ref-title">Classificação FTO pelos EUA — impactos e soberania</div><div class="ref-meta">Agência Brasil · Mar/2026 · Promotor Lincoln Gakiya</div><a class="ref-link" href="https://agenciabrasil.ebc.com.br/justica/noticia/2026-03/classificacao-de-faccoes-como-terroristas-pelos-eua-ameaca-soberania" target="_blank">agenciabrasil.ebc.com.br →</a></div>
+      <div class="ref-item"><div class="ref-title">Militares temem violação da soberania brasileira</div><div class="ref-meta">Revista Sociedade Militar · Mar/2026</div><a class="ref-link" href="https://www.sociedademilitar.com.br/2026/03/militares-temem-violacao-soberania-brasileira-eua-pcc-cv-terroristas-wvt.html" target="_blank">sociedademilitar.com.br →</a></div>
+      <div class="ref-item"><div class="ref-title">PCC e CV: do tráfico à máfia global</div><div class="ref-meta">Gazeta do Povo · Mar/2026</div><a class="ref-link" href="https://www.gazetadopovo.com.br/brasil/comando-vermelho-cv-mira-expansao-dominio-territorios-pcc-internacionalizacao-trafico/" target="_blank">gazetadopovo.com.br →</a></div>
+    </div>
+    <div class="ref-card">
+      <div class="ref-cat">Dados econômicos e financeiros</div>
+      <div class="ref-item"><div class="ref-title">Crime organizado fatura R$146bi em um ano — FBSP</div><div class="ref-meta">CNN Brasil · Dez/2024</div><a class="ref-link" href="https://www.cnnbrasil.com.br/nacional/crime-organizado-brasileiro-fatura-r-146-bi-em-um-ano-no-brasil-diz-forum-de-seguranca/" target="_blank">cnnbrasil.com.br →</a></div>
+      <div class="ref-item"><div class="ref-title">Faturamento PCC ultrapassa R$100bi em dois setores</div><div class="ref-meta">Brasil Urgente / Band · Nov/2025</div><a class="ref-link" href="https://www.band.com.br/noticias/brasil-urgente/ultimas/faturamento-do-pcc-ultrapassa-r-100-bilhoes-em-dois-setores-aponta-mp-202511162349" target="_blank">band.com.br →</a></div>
+      <div class="ref-item"><div class="ref-title">Gastos com segurança chegam a R$153bi — FBSP 2025</div><div class="ref-meta">Ponte.org · Ago/2025</div><a class="ref-link" href="https://ponte.org/gastos-com-seguranca-publica-ja-chegam-a-r-153-bilhoes-no-pais-com-pouca-transparencia/" target="_blank">ponte.org →</a></div>
+      <div class="ref-item"><div class="ref-title">Tráfico de drogas representa menos de 15% do faturamento</div><div class="ref-meta">Band · Abr/2025</div><a class="ref-link" href="https://www.band.com.br/noticias/jornal-da-band/ultimas/trafico-de-drogas-representa-menos-de-15-do-faturamento-de-faccoes-criminosas-no-brasil-202504111952" target="_blank">band.com.br →</a></div>
+    </div>
+  </div>
+  <div class="note" style="margin-top:20px"><strong>Nota metodológica:</strong> Todos os dados marcados [C] são confirmados por órgãos oficiais. Dados [E] são estimativas de institutos reconhecidos (Ipea, FBSP, Instituto Igarapé). Dados [A] são alegações com base em investigações em andamento. [I] indica conexão indireta estrutural. Onde há conflito de fontes, ambas foram apresentadas. O maior gap de dados é o faturamento e estrutura atual do CV — dados mais recentes são de 2020 ou anteriores.</div>
+</section>
+
+</div><!-- .main -->
+
+<footer class="footer">
+  <div class="footer-l">PCC &amp; CV — Relatório de Inteligência · Março 2026 · Uso para fins de pesquisa e segurança pública</div>
+  <div class="src-tags">
+    <span class="src-tag">FBSP 2025</span><span class="src-tag">Atlas da Violência 2024</span><span class="src-tag">GAECO-SP</span><span class="src-tag">Dipol-SP fev/2026</span><span class="src-tag">Igarapé 2024</span><span class="src-tag">GI-TOC 2023</span><span class="src-tag">Europol 2021</span><span class="src-tag">PF · Dakovo · Carbono Oculto · Hydra</span><span class="src-tag">MP-SP / Gakiya</span>
+  </div>
+</footer>
+
+<div class="related-wrap">
+  <div class="related-title">Artefatos Relacionados</div>
+  <div class="related-grid">
+    <a href="/rede" class="related-card">
+      <div class="related-card-cat">Investigação</div>
+      <div class="related-card-title">Rede Recorrente: Atores por Função 1999–2026</div>
+      <div class="related-card-arrow">ACESSAR ARTEFATO ➔</div>
+    </a>
+    <a href="/lava-jato" class="related-card">
+      <div class="related-card-cat">Operações</div>
+      <div class="related-card-title">Operação Lava Jato: Mapa Mental Analítico</div>
+      <div class="related-card-arrow">ACESSAR ARTEFATO ➔</div>
+    </a>
+    <a href="/master" class="related-card">
+      <div class="related-card-cat">Crimes Financeiros</div>
+      <div class="related-card-title">Banco Master: Pirâmide de CDBs e Captura do STF</div>
+      <div class="related-card-arrow">ACESSAR ARTEFATO ➔</div>
+    </a>
+    <a href="/republica-capturada" class="related-card">
+      <div class="related-card-cat">Estrutura</div>
+      <div class="related-card-title">República Capturada: O Brasil do Lawfare</div>
+      <div class="related-card-arrow">ACESSAR ARTEFATO ➔</div>
+    </a>
+  </div>
+</div>
+
+<script>
+// ── TABS ──
+function showTab(id,btn){
+  document.querySelectorAll('.tab-panel').forEach(p=>{p.classList.remove('active');p.style.display='none';});
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  const el=document.getElementById('tab-'+id);
+  el.classList.add('active');
+  el.style.display='block';
+  btn.classList.add('active');
+  const lazy={'financeiro':initFin,'violencia':initVio};
+  if(lazy[id]&&!window['_'+id]){window['_'+id]=true;setTimeout(lazy[id],80);}
+}
+document.querySelectorAll('.tab-panel').forEach((p,i)=>{if(i>0)p.style.display='none';});
+
+// ── NETWORK ──
+const ND={
+  pcc:{n:'PCC — Primeiro Comando da Capital',b:'Facção brasileira · fundado 1993 · Taubaté (SP)',t:'Fundado em 31/ago/1993 por 8 presos. Membros: 30–40k (MP-SP aponta até 112k). Presente em 24 estados + DF e 28 países / 4 continentes. Faturamento: +R$100bi/ano (drogas + combustíveis). Estrutura: 14 sintonias e 89 líderes mapeados (Dipol-SP, fev/2026). Líder: Marcola, preso desde 1999. Sintonias-chave: Gravatas (jurídico), Padaria (armas), Progresso (finanças), Raio-X (inteligência). <strong>Fontes:</strong> PF, GAECO-SP, Dipol-SP, MP-SP.'},
+  cv:{n:'CV — Comando Vermelho',b:'Facção brasileira · fundado 1979 · Ilha Grande (RJ)',t:'Fundado em 1979. Origem: Falange Vermelha — fusão de presos políticos e comuns durante a ditadura. 30k+ membros (dado 2020). Controla 51,9% dos territórios do RJ. Presente em 19–21 estados. Dobrou presença amazônica (128→286 municípios, 2023–2025). Modelo territorial: controle físico de comunidades, exploração de serviços paralelos. Tentativa de "comando nacional do crime" em 2025. <strong>Fontes:</strong> FBSP, PF, CNJ.'},
+  hzb:{n:'Hezbollah',b:'Terrorismo · Líbano/Irã · [CONFIRMADO] · PF desde 2000',t:'Parceria com PCC desde ~2006 na Tríplice Fronteira. Troca: armas do Irã → PCC; proteção a presos libaneses + rotas de cocaína → Hezbollah. Treinamento paramilitar documentado. Op. Sem Fronteiras (2020): 3 libaneses extraditados para EUA. Fernandinho Beira-Mar conectou Hezbollah ao CV. <strong>Fontes:</strong> PF, MPF, Gazeta do Povo 2023.'},
+  ira:{n:'Irã',b:'Estado financiador · [CONFIRMADO] · PF/MPF',t:'Financia e arma o Hezbollah, cujo armamento chega ao PCC via Tríplice Fronteira. Rota: Irã → Hezbollah (Líbano) → contrabandistas → Paraguai → PCC (Brasil). Padrão iraniano de usar Hezbollah como proxy em redes criminosas internacionais. <strong>Fontes:</strong> PF, MPF, FDD, Congresso dos EUA.'},
+  bko:{n:'Boko Haram',b:'Terrorismo · Nigéria · [INDIRETO] · sem acordo direto documentado',t:'CONEXÃO INDIRETA: cocaína exportada pelo PCC/CV passa por rotas da África Ocidental (Nigéria, Guiné, Côte d\'Ivoire) — região de atuação do Boko Haram. O dinheiro do tráfico financia grupos extremistas que controlam rotas do Sahel. Embaixador francês Miraillet (2018): "A cocaína alimenta as finanças de grupos como o Boko Haram e a Al-Qaeda." Não há acordo direto documentado. <strong>Fontes:</strong> DefesaNet, FDD.'},
+  ndr:{n:"'Ndrangheta — Máfia Calabresa",b:'Máfia italiana · [CONFIRMADO] · Europol/PF',t:"Aliança estrutural com o PCC a partir de meados dos anos 2010. 'Ndrangheta é o maior importador de cocaína da Europa. A parceria dá ao PCC acesso a mercados europeus, africanos e asiáticos. Preso do PCC capturado em Maputo (2020) ligado à 'Ndrangheta. Cocaína PCC+'Ndrangheta transita por Senegal, Níger, Gana e Côte d'Ivoire. <strong>Fontes:</strong> Europol SOCTA 2021, PF, GI-TOC 2023."},
+  alb:{n:'Máfia Albanesa e dos Bálcãs',b:'Máfia · [CONFIRMADO] · Europol',t:'PCC usa Máfia Albanesa e redes dos Bálcãs para distribuição de cocaína na Europa Ocidental e Central. Redes holandesas servem de hub logístico. Parte dos acordos envolve acesso a rotas de armas do leste europeu (Croácia, Eslovênia, Rep. Tcheca). <strong>Fontes:</strong> Europol, FBSP 2025, GI-TOC.'},
+  eln:{n:'ELN / Dissidências das FARC',b:'Guerrilha colombiana · [CONFIRMADO] · GI-TOC/IISS 2024',t:'PCC e CV compram cocaína e maconha e transportam pela Amazônia. Guerrilhas controlam produção e processamento na Colômbia, Peru e Bolívia; PCC e CV fazem o escoamento para Europa e Ásia via portos brasileiros. Rota Solimões: CV. Rota Caipira: PCC. <strong>Fontes:</strong> GI-TOC 2023, IISS 2024, FBSP.'},
+  tre:{n:'Tren de Aragua',b:'Venezuela · [CONFIRMADO] · FBSP 2024',t:'Facção venezuelana ligada ao regime Maduro (classificada como terrorista pelos EUA em 2025). Opera com o PCC em Roraima — drogas e armas. Aproveitou a diáspora venezuelana para recrutar e expandir por toda a América do Sul. <strong>Fontes:</strong> FBSP 2024, Departamento de Estado dos EUA.'},
+  sin:{n:'Cartel de Sinaloa',b:'México · [CONFIRMADO/ALEGADO] · Relatórios AmLat',t:'Maior cartel do mundo segundo os EUA (classificado como terrorista pelo governo Trump em 2025). Documentado como parceiro transnacional do PCC para distribuição de cocaína nos mercados norte-americano e europeu. Relação menos documentada que com a \'Ndrangheta ou ELN. <strong>Fonte:</strong> Relatório sobre Organizações Criminosas da América Latina e Caribe, 2024.'},
+  afr:{n:'Redes Criminosas África Ocidental',b:'Nigéria/Guiné/Angola · [CONFIRMADO] · GI-TOC',t:'PCC tem conexões documentadas com grupos criminosos na Nigéria, Guiné e Angola. Hub de trânsito para a Europa e mercado consumidor emergente. Cocaína PCC+\'Ndrangheta transita por Senegal, Níger, Gana e Côte d\'Ivoire. Preso PCC em Maputo (2020) comprova expansão para África Austral. <strong>Fonte:</strong> GI-TOC 2023, PF, IISS 2024.'},
+  mrs:{n:'Sebastián Marset',b:'Megatraficante uruguaio · [CONFIRMADO] · 2024',t:'EUA oferecem USD 2 milhões de recompensa. Em vídeo (nov/2024), aparece jurando lealdade ao PCC. Representa o modelo "franquia" do PCC no Cone Sul: coopta líderes regionais com capacidade logística própria. <strong>Fonte:</strong> PF, mídia especializada internacional.'},
+  dir:{n:'Diego Dirísio / IAS (International Auto Supply)',b:'Argentino/Paraguai · Op. Dakovo [CONFIRMADO] · PF dez/2023',t:'Argentino foragido, maior contrabandista de armas da América do Sul. Empresa IAS em Assunção (PY): importava armas da Europa com numeração raspada para PCC e CV. Em 3 anos: ~43 mil armas / R$1,2bi. 4 militares paraguaios do Dimabel condenados pela Justiça Federal. Lavagem via empresas de fachada nos EUA. <strong>Fonte:</strong> PF, Gazeta do Povo, 2023.'},
+  est:{n:'Estado Brasileiro — infiltração documentada',b:'Institucional · [CONFIRMADO] · CNJ/GAECO-SP/PF',t:'Infiltrado: Judiciário (concurseiros de Direito financiados pelo PCC · CNJ); Sintonia dos Gravatas (40+ advogados cativos); servidor Rodrigo Corrêa (propina); transportes (Transwolff/UPBus, 700k passageiros/dia em SP); combustíveis (R$80bi); fintechs (R$6bi · Hydra). CV: vereador Salvino Oliveira + 6 PMs (Operação Red Legacy, 2025). Taxa de elucidação de homicídios: 5–8% (IPEA). <strong>Fonte:</strong> CNJ, GAECO-SP, PF, Anuário FBSP 2025.'}
+};
+
+function sd(id){
+  const d=ND[id];if(!d)return;
+  document.getElementById('det').innerHTML=
+    '<div class="net-detail-title">'+d.n+'<span class="nd-badge">'+d.b+'</span></div><div>'+d.t+'</div>';
+}
+
+function fc(cat,btn){
+  document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('.ng').forEach(g=>{
+    const c=g.getAttribute('data-cat');
+    const show=(cat==='all'||c===cat||c==='facca');
+    g.style.opacity=show?'1':'0.08';
+    g.style.pointerEvents=show?'auto':'none';
+  });
+}
+
+// ── RISK MATRIX ──
+(function buildRisk(){
+  const th=[
+    {id:'T1',lb:'Crimes digitais',p:5,i:4,ds:'R$186bi/ano · +550% desde 2018'},
+    {id:'T2',lb:'Infiltração Estado',p:4,i:5,ds:'Judiciário, MP, polícia — estratégia LP'},
+    {id:'T3',lb:'Expansão CV',p:4,i:4,ds:'Tentativa "comando nacional" · 2025'},
+    {id:'T4',lb:'Sanções EUA (FTO)',p:5,i:5,ds:'Processo concluído · mar/2026'},
+    {id:'T5',lb:'Intervenção militar EUA',p:2,i:5,ds:'Precedente Venezuela/Colômbia'},
+    {id:'T6',lb:'Captura infraestrutura',p:3,i:5,ds:'Portos, combustíveis, transporte'},
+    {id:'T7',lb:'Internacionalização PCC',p:5,i:4,ds:'28 países · Ndrangheta · Ásia'},
+    {id:'T8',lb:'Recrutamento juvenil',p:5,i:5,ds:'62 jovens assassinados/dia'},
+    {id:'T9',lb:'Nexo terrorismo',p:3,i:4,ds:'Hezbollah [C] · Boko Haram [I]'},
+    {id:'T10',lb:'Soberania nacional',p:4,i:4,ds:'11% PIB · sanções internacionais'},
+  ];
+  const cls=s=>s>=16?'rc rc-crit':s>=10?'rc rc-high':s>=5?'rc rc-med':'rc rc-low';
+  const cells={};
+  th.forEach(t=>{const k=t.p+'-'+t.i;if(!cells[k])cells[k]=[];cells[k].push(t.id);});
+  let h='<div style="font-size:10px;color:var(--text3);margin-bottom:6px;font-family:var(--mono)">Probabilidade (eixo Y) × Impacto (eixo X)</div>';
+  h+='<div style="display:grid;grid-template-columns:32px repeat(5,1fr);gap:3px;">';
+  h+='<div></div>';
+  for(let i=1;i<=5;i++)h+=`<div class="rm-hdr">Impacto ${i}</div>`;
+  for(let p=5;p>=1;p--){
+    h+=`<div class="rm-lbl" style="font-size:9px">P:${p}</div>`;
+    for(let i=1;i<=5;i++){
+      const s=p*i,k=p+'-'+i,ct=cells[k]||[];
+      h+=`<div class="${cls(s)}">`;
+      ct.forEach(id=>h+=`<span class="rt">${id}</span>`);
+      h+='</div>';
+    }
+  }
+  h+='</div>';
+  h+='<div style="display:flex;gap:16px;margin-top:8px;font-size:10px;color:var(--text3);font-family:var(--mono)">';
+  [{l:'Baixo (1–4)',c:'var(--green)'},{l:'Médio (5–9)',c:'var(--amber)'},{l:'Alto (10–15)',c:'rgba(226,75,74,.7)'},{l:'Crítico (16–25)',c:'var(--red)'}].forEach(({l,c})=>h+=`<span style="display:flex;align-items:center;gap:5px"><span style="width:9px;height:9px;border-radius:1px;background:${c};display:inline-block"></span>${l}</span>`);
+  h+='</div>';
+  document.getElementById('rm-cont').innerHTML=h;
+  let lh='';
+  th.forEach(t=>{
+    const s=t.p*t.i,rl=s>=16?'Crítico':s>=10?'Alto':s>=5?'Médio':'Baixo';
+    const dc=s>=16?'var(--red)':s>=10?'var(--amber)':'var(--green)';
+    lh+=`<div style="display:flex;gap:8px;align-items:flex-start;padding:8px;background:var(--bg2);border:1px solid var(--border);border-radius:3px">
+      <span style="font-size:9px;font-family:var(--mono);color:var(--text3);min-width:24px;padding-top:2px">${t.id}</span>
+      <div>
+        <div style="font-size:11px;font-weight:500;color:var(--text)">${t.lb}</div>
+        <div style="font-size:10px;color:var(--text3);margin-top:2px">${t.ds}</div>
+        <div style="font-size:10px;font-family:var(--mono);margin-top:3px;color:${dc}">P:${t.p} × I:${t.i} = ${s} · ${rl}</div>
+      </div></div>`;
+  });
+  document.getElementById('th-list').innerHTML=lh;
+})();
+
+// ── CHARTS ──
+const CC=['#E24B4A','#7F77DD','#378ADD','#1D9E75','#639922','#EF9F27','#888780'];
+
+function initFin(){
+  const rL=['Combustíveis ilegais','Crimes digitais','Roubo/furto celular','Golpes Pix/boleto','Cocaína (exportação)','Ouro ilegal','Cigarros'];
+  const rD=[80,48,22.7,22.7,20,18.2,10.3];
+  new Chart(document.getElementById('c-rev'),{type:'doughnut',data:{labels:rL,datasets:[{data:rD,backgroundColor:CC,borderWidth:0,hoverBorderWidth:2,hoverBorderColor:'rgba(255,255,255,.3)'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},cutout:'55%'}});
+  const lg=document.getElementById('rev-leg');
+  rL.forEach((l,i)=>{lg.innerHTML+=`<div class="cl-item"><div class="cl-sq" style="background:${CC[i]}"></div>${l} <span style="color:var(--text3)">R$${rD[i]}bi</span></div>`;});
+  new Chart(document.getElementById('c-spend'),{type:'bar',data:{labels:['Estados','União','Municípios'],datasets:[{data:[118.5,21,13.5],backgroundColor:['#378ADD','#7F77DD','#1D9E75'],borderWidth:0,borderRadius:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{ticks:{color:'#545868',font:{size:10},callback:v=>'R$'+v+'bi'},grid:{color:'rgba(255,255,255,.05)'}},x:{ticks:{color:'#8a8f9e',font:{size:11}},grid:{display:false}}}}});
+  new Chart(document.getElementById('c-cost'),{type:'bar',data:{labels:['Mercados ilícitos (tráfico)','Crimes e violências','Economia subterrânea/sonegação','Perdas ambientais ligadas ao crime'],datasets:[{data:[468,373,300,200],backgroundColor:'#E24B4A',borderWidth:0,borderRadius:2}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{ticks:{color:'#545868',font:{size:10},callback:v=>'R$'+v+'bi'},grid:{color:'rgba(255,255,255,.05)'}},y:{ticks:{color:'#8a8f9e',font:{size:10}},grid:{display:false}}}}});
+}
+
+function initVio(){
+  const ys=['2014','2015','2016','2017','2018','2019','2020','2021','2022','2023'];
+  const hd=[49000,52000,61000,65000,57956,45503,43892,41069,47508,39492];
+  const pc=ys.map((_,i)=>i===3?'#E24B4A':'rgba(226,75,74,.5)');
+  new Chart(document.getElementById('c-hom'),{type:'line',data:{labels:ys,datasets:[{label:'Homicídios',data:hd,borderColor:'#E24B4A',backgroundColor:'rgba(226,75,74,.06)',borderWidth:2,fill:true,tension:0.35,pointBackgroundColor:pc,pointRadius:ys.map((_,i)=>i===3?7:4),pointHoverRadius:7}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>ctx.parsed.y.toLocaleString('pt-BR')+' homicídios'}}},scales:{y:{ticks:{color:'#545868',font:{size:10},callback:v=>v.toLocaleString('pt-BR')},grid:{color:'rgba(255,255,255,.05)'}},x:{ticks:{color:'#8a8f9e',font:{size:11}},grid:{display:false}}}}});
+  new Chart(document.getElementById('c-prof'),{type:'bar',data:{labels:['Negros (71%)','Homens (94%)','Jovens 15–29 (49%)','Norte/Nordeste (~65%)'],datasets:[{data:[71,94,49,65],backgroundColor:['#EF9F27','#E24B4A','#7F77DD','#1D9E75'],borderWidth:0,borderRadius:2}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{max:100,ticks:{color:'#545868',font:{size:10},callback:v=>v+'%'},grid:{color:'rgba(255,255,255,.05)'}},y:{ticks:{color:'#8a8f9e',font:{size:10}},grid:{display:false}}}}});
+}
+
+function dlHTML(){
+  const blob=new Blob([document.documentElement.outerHTML],{type:'text/html'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='PCC-CV-Intel-Dashboard-2026.html';
+  a.click();
+}
+</script>
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

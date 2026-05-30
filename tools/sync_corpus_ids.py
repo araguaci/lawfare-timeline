@@ -152,6 +152,14 @@ def main() -> None:
             "Vaza Toga INQ 4781 — índice corpus (T-207)",
             "vaza-toga-corpus-bridge",
         ),
+        208: (
+            "Narrativa vs Evidência — índice corpus (T-208)",
+            "narrativa-vs-evidencia-corpus-bridge",
+        ),
+        209: (
+            "JustiçaWatch Brasil — índice corpus (T-209)",
+            "justicawatch-brasil-corpus-bridge",
+        ),
     }
     for tid, (topic, artifact) in t_meta.items():
         note = f"Estudo Jekyll _posts/estudos/ ({t_posts.get(tid, '—')})."
@@ -252,6 +260,8 @@ def main() -> None:
         (205, "Duplo padrão corpus"),
         (206, "SPLC corpus"),
         (207, "Vaza Toga corpus"),
+        (208, "Narrativa vs Evidência"),
+        (209, "JustiçaWatch Brasil"),
     ):
         if tid in t_posts:
             note = f"T-{tid} {label} publicado ({date.today().isoformat()})"
@@ -273,6 +283,13 @@ def main() -> None:
             item
             for item in sync.get("open_items", [])
             if "T-180" not in item and "Produzir ID 180" not in item
+        ]
+    if 208 in t_posts and 209 in t_posts:
+        sync["open_items"] = [
+            item
+            for item in sync.get("open_items", [])
+            if "Formalizar IDs 208-209" not in item
+            and "Integrar JustiçaWatch" not in item
         ]
     elif 180 in pending:
         t180 = "Pendente: T-180 TSE seletividade"

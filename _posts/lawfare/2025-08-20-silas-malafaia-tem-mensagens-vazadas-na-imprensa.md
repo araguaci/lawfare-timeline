@@ -6,6 +6,7 @@ image:
   path: "/assets/solid/rss.svg"
 tags: ['lawfare', justica, 'silas-malafaia', soberania, 'perseguicao-politica', 'direitos-fundamentais', 'abuso-de-autoridade', 'devido-processo-legal']
 categories: [lawfare]
+permalink: /posts/2025-08-20-silas-malafaia-tem-mensagens-vazadas-na-imprensa/
 ---
 
 ### 📱 Quem apreendeu os celulares de Silas Malafaia?

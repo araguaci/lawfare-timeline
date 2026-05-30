@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/weight-scale.svg"
 tags: ["lawfare", "stf", "alexandre-de-moraes", "justica", "soberania"]
 categories: lawfare
-permalink: /posts/2026-05-08-dosimetria-nemo-judex-adis-79667967-distribuidas-a-moraes-como-vitimaacusadorrelator/
+permalink: /posts/dosimetria-nemo-judex-adis-79667967-distribuidas-a-moraes-como-vitimaacusadorrelator/
 id_corpus: "1518"
 corpus_unificado: true
 ---

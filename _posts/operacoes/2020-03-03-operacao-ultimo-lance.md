@@ -8,6 +8,7 @@ image:
 article_id: 20200303_UltimoLance
 description: 2020-03-03-São Paulo, SP-fraude empresarial-lavagem
 tags: ['fraude', 'fraude-empresarial', 'lavagem']
+permalink: /posts/2020-03-03-operacao-ultimo-lance/
 ---
 
 # Operação Último Lance - Esquema de criação de falsas empresas. - Fraude

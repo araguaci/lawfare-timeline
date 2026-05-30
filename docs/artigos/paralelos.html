@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paralelos — Painel das 4 Operações Anticorrupção</title>
+<meta name="description" content="Painel comparativo: Castelo de Areia, Satiagraha, Lava Jato e Compliance Zero. R$100B+ investigado, 75% anuladas — padrões sistêmicos identificados.">
+<link rel="canonical" href="https://gosurf.site/paralelos">
+<!-- Open Graph / Sharecard -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gosurf.site/paralelos">
+<meta property="og:title" content="Paralelos — Painel das 4 Operações Anticorrupção">
+<meta property="og:description" content="Castelo de Areia · Satiagraha · Lava Jato · Compliance Zero. R$100B+ investigado, 75% anuladas. Padrões sistêmicos nas operações anticorrupção.">
+<meta property="og:image" content="https://gosurf.site/og-paralelos.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Paralelos — Painel comparativo das 4 operações anticorrupção">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="gosurf.site">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Paralelos — Painel das 4 Operações Anticorrupção">
+<meta name="twitter:description" content="Castelo de Areia · Satiagraha · Lava Jato · Compliance Zero. R$100B+ investigado, 75% anuladas.">
+<meta name="twitter:image" content="https://gosurf.site/og-paralelos.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Core theme — dark investigativo */
+    --color-background-primary: #0a0b0e;
+    --color-background-secondary: #111318;
+    --color-border-tertiary: #1e2330;
+    --color-border-secondary: #2a3142;
+    --color-text-primary: #e8e4d8;
+    --color-text-secondary: #a8a6a0;
+    --color-text-tertiary: #6b6d75;
+    --font-mono: 'IBM Plex Mono', 'JetBrains Mono', monospace;
+
+    /* Accent palette (mantido do original) */
+    --red: #E24B4A; --red-dim: rgba(226,75,74,0.15);
+    --amber: #EF9F27; --amber-dim: rgba(239,159,39,0.12);
+    --blue: #378ADD; --blue-dim: rgba(55,138,221,0.12);
+    --green: #639922; --green-dim: rgba(99,153,34,0.12);
+    --purple: #7F77DD; --purple-dim: rgba(127,119,221,0.12);
+    --teal: #1D9E75; --teal-dim: rgba(29,158,117,0.12);
+    --coral: #D85A30; --coral-dim: rgba(216,90,48,0.12);
+    --mono: var(--font-mono);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--color-background-primary);
+    color: var(--color-text-primary);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    min-height: 100vh;
+  }
+
+  /* Noise overlay */
+  body::before {
+    content: '';
+    position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .page {
+    position: relative; z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .page { padding: 1.5rem 2rem; }
+  }
+
+  /* Hero */
+  .hero {
+    padding: 2rem 0 2.5rem;
+    border-bottom: 1px solid var(--color-border-tertiary);
+  }
+
+  .hero-tag {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-text-tertiary);
+    margin-bottom: 0.5rem;
+  }
+
+  .hero h1 {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: clamp(30px, 5.5vw, 44px);
+    font-weight: 400;
+    color: var(--color-text-primary);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-sub {
+    font-size: 16px;
+    color: var(--color-text-secondary);
+    max-width: 540px;
+  }
+
+  /* Dashboard */
+  .dash { padding: 0; font-size: 15px; }
+
+  .section-title {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-tertiary);
+    margin: 0 0 12px;
+    padding-top: 20px;
+    border-top: 0.5px solid var(--color-border-tertiary);
+  }
+
+  .section-title:first-of-type { border-top: none; padding-top: 0; }
+
+  /* Grids — mobile-first */
+  .grid-4 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  @media (min-width: 500px) {
+    .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  @media (min-width: 900px) {
+    .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  @media (min-width: 500px) {
+    .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  @media (min-width: 768px) {
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  @media (min-width: 640px) {
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  .kpi {
+    background: var(--color-background-secondary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: 8px;
+    padding: 12px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .kpi:hover {
+    border-color: var(--color-border-secondary);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+
+  .kpi-label { font-size: 13px; color: var(--color-text-tertiary); margin-bottom: 4px; }
+
+  .kpi-value { font-size: 22px; font-weight: 500; font-family: var(--mono); line-height: 1.1; }
+
+  .kpi-sub { font-size: 13px; color: var(--color-text-tertiary); margin-top: 3px; }
+
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-family: var(--mono);
+  }
+
+  .b-red { background: var(--red-dim); color: var(--red); }
+  .b-amber { background: var(--amber-dim); color: var(--amber); }
+  .b-blue { background: var(--blue-dim); color: var(--blue); }
+  .b-green { background: var(--green-dim); color: var(--green); }
+  .b-purple { background: var(--purple-dim); color: var(--purple); }
+  .b-teal { background: var(--teal-dim); color: var(--teal); }
+  .b-coral { background: var(--coral-dim); color: var(--coral); }
+  .b-gray { background: var(--color-background-secondary); color: var(--color-text-secondary); border: 0.5px solid var(--color-border-tertiary); }
+
+  .op-card {
+    background: var(--color-background-primary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: 10px;
+    padding: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .op-card:hover {
+    border-color: var(--color-border-secondary);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  }
+
+  .op-name { font-size: 15px; font-weight: 500; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+  .op-row { display: flex; justify-content: space-between; align-items: baseline; font-size: 14px; padding: 3px 0; border-bottom: 0.5px solid var(--color-border-tertiary); gap: 8px; }
+  .op-row:last-child { border-bottom: none; }
+
+  .op-row-label { color: var(--color-text-secondary); flex-shrink: 0; }
+
+  .op-row-val { font-family: var(--mono); font-size: 14px; text-align: right; }
+
+  .bar-wrap { margin: 6px 0 2px; }
+
+  .bar-track { height: 5px; background: var(--color-border-tertiary); border-radius: 3px; overflow: hidden; }
+
+  .bar-fill { height: 100%; border-radius: 3px; transition: width 0.6s ease; }
+
+  .bar-label { display: flex; justify-content: space-between; font-size: 12px; color: var(--color-text-tertiary); margin-top: 3px; }
+
+  .pattern-card {
+    background: var(--color-background-secondary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: 8px;
+    padding: 12px;
+    transition: border-color 0.2s;
+  }
+
+  .pattern-card:hover { border-color: var(--color-border-secondary); }
+
+  .pattern-title { font-size: 14px; font-weight: 500; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+
+  .pattern-body { font-size: 14px; color: var(--color-text-secondary); line-height: 1.65; }
+
+  .actor-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+    font-size: 14px;
+    flex-wrap: wrap;
+  }
+
+  .actor-row:last-child { border-bottom: none; }
+
+  .actor-name { font-weight: 500; min-width: 120px; font-size: 14px; }
+
+  .actor-ops { display: flex; gap: 4px; flex-wrap: wrap; }
+
+  .death-card { border-left: 3px solid var(--color-border-tertiary); padding: 8px 0 8px 12px; margin-bottom: 8px; }
+
+  .death-name { font-size: 15px; font-weight: 500; }
+
+  .death-date { font-size: 13px; font-family: var(--mono); color: var(--color-text-tertiary); }
+
+  .death-context { font-size: 14px; color: var(--color-text-secondary); margin-top: 3px; line-height: 1.6; }
+
+  .death-verdict { display: inline-block; margin-top: 4px; }
+
+  .stat-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--color-border-tertiary);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+
+  @media (min-width: 500px) {
+    .stat-row { grid-template-columns: 1fr 1fr 1fr 1fr; }
+  }
+
+  .stat-cell { background: var(--color-background-primary); padding: 10px 12px; }
+
+  .stat-cell-label { font-size: 12px; color: var(--color-text-tertiary); margin-bottom: 2px; }
+
+  .stat-cell-val { font-size: 15px; font-weight: 500; font-family: var(--mono); }
+
+  .timeline-item { display: flex; gap: 12px; padding: 8px 0; border-bottom: 0.5px solid var(--color-border-tertiary); font-size: 14px; }
+  .timeline-item:last-child { border-bottom: none; }
+
+  .timeline-year { font-family: var(--mono); font-size: 13px; color: var(--color-text-tertiary); min-width: 36px; flex-shrink: 0; }
+
+  .timeline-text { color: var(--color-text-secondary); line-height: 1.6; }
+  .timeline-text strong { color: var(--color-text-primary); font-weight: 500; }
+
+  .highlight-box {
+    background: var(--color-background-secondary);
+    border-left: 3px solid var(--red);
+    border-radius: 0 6px 6px 0;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+  }
+
+  .highlight-box strong { color: var(--color-text-primary); }
+
+  .progress-row { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; font-size: 14px; flex-wrap: wrap; }
+
+  .progress-op { min-width: 100px; color: var(--color-text-secondary); }
+
+  @media (min-width: 500px) {
+    .progress-op { min-width: 120px; }
+  }
+
+  .progress-bar-wrap { flex: 1; min-width: 60px; }
+
+  .progress-pct { font-family: var(--mono); font-size: 13px; min-width: 36px; text-align: right; }
+
+  .tab-btn {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 0.5px solid var(--color-border-tertiary);
+    background: var(--color-background-secondary);
+    color: var(--color-text-secondary);
+    margin-right: 4px;
+    margin-bottom: 6px;
+    user-select: none;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+  }
+
+  .tab-btn:hover { color: var(--color-text-primary); border-color: var(--color-border-secondary); }
+
+  .tab-btn.active { background: var(--color-background-primary); color: var(--color-text-primary); border-color: var(--color-border-secondary); }
+
+  .tab-content { display: none; }
+  .tab-content.active { display: block; animation: fadeIn 0.25s ease; }
+
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+  /* Footer / Share */
+  .share-wrap { margin-top: 2.5rem; padding-top: 1.5rem; }
+</style>
+</head>
+<body>
+<main class="page">
+  <div class="hero">
+    <p class="hero-tag">Painel comparativo</p>
+    <h1>Paralelos</h1>
+    <p class="hero-sub">Castelo de Areia · Satiagraha · Lava Jato · Compliance Zero — 4 operações anticorrupção, padrões sistêmicos.</p>
+  </div>
+
+  <div class="dash">
+
+<p class="section-title">Resumo executivo</p>
+
+<div class="grid-4">
+  <div class="kpi">
+    <div class="kpi-label">Rombo investigado</div>
+    <div class="kpi-value" style="color:var(--red)">R$100B+</div>
+    <div class="kpi-sub">Lava Jato + Master acumulados</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">Operações anuladas</div>
+    <div class="kpi-value" style="color:var(--amber)">3 / 4</div>
+    <div class="kpi-sub">Castelo de Areia, Satiagraha, LJ parcial</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">Investigadores punidos</div>
+    <div class="kpi-value" style="color:var(--coral)">2+</div>
+    <div class="kpi-sub">Protógenes expulso · Moro declarado parcial</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">Mortes em contexto</div>
+    <div class="kpi-value" style="color:var(--purple)">1</div>
+    <div class="kpi-sub">Teori Zavascki — relator LJ no STF</div>
+  </div>
+</div>
+
+<p class="section-title">Ficha de cada operação</p>
+<div class="grid-2">
+  <div class="op-card">
+    <div class="op-name"><span class="badge b-amber">2009</span> Castelo de Areia</div>
+    <div class="op-row"><span class="op-row-label">Alvo principal</span><span class="op-row-val">Camargo Corrêa</span></div>
+    <div class="op-row"><span class="op-row-label">Crime investigado</span><span class="op-row-val">Corrupção, lavagem, propina</span></div>
+    <div class="op-row"><span class="op-row-label">Fase fatal</span><span class="op-row-val">Anulada STJ (2011)</span></div>
+    <div class="op-row"><span class="op-row-label">Fundamento anulação</span><span class="op-row-val">Denúncia anônima</span></div>
+    <div class="op-row"><span class="op-row-label">Suspeita extra</span><span class="op-row-val">Propina R$5M p/ Asfor Rocha</span></div>
+    <div class="op-row"><span class="op-row-label">Juiz responsável</span><span class="op-row-val">Fausto de Sanctis</span></div>
+    <div class="op-row"><span class="op-row-label">KPI condenação</span><span class="badge b-red">0 condenações mantidas</span></div>
+    <div class="bar-wrap">
+      <div class="bar-label"><span>Impacto penal efetivo</span><span>0%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:2%;background:var(--red)"></div></div>
+    </div>
+  </div>
+  <div class="op-card">
+    <div class="op-name"><span class="badge b-blue">2008</span> Satiagraha</div>
+    <div class="op-row"><span class="op-row-label">Alvo principal</span><span class="op-row-val">Daniel Dantas — Opportunity</span></div>
+    <div class="op-row"><span class="op-row-label">Crime investigado</span><span class="op-row-val">Lavagem, corrupção, quadrilha</span></div>
+    <div class="op-row"><span class="op-row-label">Fase fatal</span><span class="op-row-val">Anulada STJ (2011)</span></div>
+    <div class="op-row"><span class="op-row-label">Fundamento anulação</span><span class="op-row-val">Participação ilegal da ABIN</span></div>
+    <div class="op-row"><span class="op-row-label">Suspeita extra</span><span class="op-row-val">2 HC em 48h por Gilmar Mendes</span></div>
+    <div class="op-row"><span class="op-row-label">Investigador punido</span><span class="op-row-val">Protógenes — expulso da PF</span></div>
+    <div class="op-row"><span class="op-row-label">KPI condenação</span><span class="badge b-red">0 condenações mantidas</span></div>
+    <div class="bar-wrap">
+      <div class="bar-label"><span>Impacto penal efetivo</span><span>0%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:2%;background:var(--red)"></div></div>
+    </div>
+  </div>
+  <div class="op-card">
+    <div class="op-name"><span class="badge b-coral">2014–21</span> Lava Jato</div>
+    <div class="op-row"><span class="op-row-label">Alvo principal</span><span class="op-row-val">Petrobras, empreiteiras, PT/PMDB</span></div>
+    <div class="op-row"><span class="op-row-label">Rombo estimado</span><span class="op-row-val">R$6–29 bi (Petrobras)</span></div>
+    <div class="op-row"><span class="op-row-label">Condenações iniciais</span><span class="op-row-val">278 em 1ª instância</span></div>
+    <div class="op-row"><span class="op-row-label">Fase fatal</span><span class="op-row-val">Vaza Jato 2019 → STF 2021</span></div>
+    <div class="op-row"><span class="op-row-label">Fundamento parcial</span><span class="op-row-val">Incompetência territorial + parcialidade</span></div>
+    <div class="op-row"><span class="op-row-label">Investigador punido</span><span class="op-row-val">Moro declarado parcial; Dallagnol cassado</span></div>
+    <div class="op-row"><span class="op-row-label">KPI condenação</span><span class="badge b-amber">Parcial — maioria prescrita</span></div>
+    <div class="bar-wrap">
+      <div class="bar-label"><span>Impacto penal efetivo residual</span><span>~30%</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:30%;background:var(--amber)"></div></div>
+    </div>
+  </div>
+  <div class="op-card">
+    <div class="op-name"><span class="badge b-purple">2025–</span> Compliance Zero (Master)</div>
+    <div class="op-row"><span class="op-row-label">Alvo principal</span><span class="op-row-val">Daniel Vorcaro — Banco Master</span></div>
+    <div class="op-row"><span class="op-row-label">Rombo estimado</span><span class="op-row-val">R$56 bi no FGC</span></div>
+    <div class="op-row"><span class="op-row-label">Presos</span><span class="op-row-val">Vorcaro — 2 prisões em 4 meses</span></div>
+    <div class="op-row"><span class="op-row-label">Status</span><span class="op-row-val">Em andamento (inquérito prorrogado 60d)</span></div>
+    <div class="op-row"><span class="op-row-label">Complicação interna</span><span class="op-row-val">Toffoli / Moraes — conexões com Vorcaro</span></div>
+    <div class="op-row"><span class="op-row-label">Relatoria</span><span class="op-row-val">Redistribuída: Toffoli → André Mendonça</span></div>
+    <div class="op-row"><span class="op-row-label">KPI condenação</span><span class="badge b-teal">Em curso — sem anulação ainda</span></div>
+    <div class="bar-wrap">
+      <div class="bar-label"><span>Impacto penal efetivo</span><span>Indefinido</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:18%;background:var(--teal)"></div></div>
+    </div>
+  </div>
+</div>
+
+<p class="section-title">Padrões sistêmicos identificados</p>
+<div id="tab-controls" style="margin-bottom:12px">
+  <span class="tab-btn active" onclick="setTab('padroes')">Padrões</span>
+  <span class="tab-btn" onclick="setTab('atores')">Atores recorrentes</span>
+  <span class="tab-btn" onclick="setTab('mortes')">Mortes e riscos</span>
+  <span class="tab-btn" onclick="setTab('kpis')">KPIs de impunidade</span>
+</div>
+
+<div id="tab-padroes" class="tab-content active">
+  <div class="grid-2">
+    <div class="pattern-card">
+      <div class="pattern-title"><span class="badge b-red">P01</span> Anulação por vício processual</div>
+      <div class="pattern-body">Em todas as operações que chegaram ao julgamento, o desfecho jurídico foi a anulação baseada em irregularidades na coleta de provas ou competência territorial — nunca no mérito da inocência dos investigados. <strong>Castelo de Areia:</strong> denúncia anônima. <strong>Satiagraha:</strong> ABIN ilegal. <strong>Lava Jato:</strong> juízo incompetente + parcialidade. O padrão sugere que a estratégia defensiva padrão é atacar o processo, não os fatos.</div>
+    </div>
+    <div class="pattern-card">
+      <div class="pattern-title"><span class="badge b-amber">P02</span> Investigador torna-se investigado</div>
+      <div class="pattern-body">Em três das quatro operações, os principais responsáveis pela investigação foram processados: <strong>Protógenes Queiroz</strong> foi condenado pelo STF e expulso da PF. <strong>Sérgio Moro</strong> foi declarado parcial pelo STF. <strong>Deltan Dallagnol</strong> teve o mandato cassado. No Master, a pressão recai sobre o delegado que fez o relatório sobre Toffoli. O padrão inverte o polo da persecução penal.</div>
+    </div>
+    <div class="pattern-card">
+      <div class="pattern-title"><span class="badge b-blue">P03</span> Captura judicial de emergência</div>
+      <div class="pattern-body">Em cada operação, um ou mais membros do Judiciário superior concederam habeas corpus ou liminares em circunstâncias atípicas, suspendendo prisões ou investigações: <strong>Gilmar Mendes</strong> (2 HC em 48h para Dantas), <strong>Asfor Rocha</strong> (liminar no recesso judicial para Camargo Corrêa), <strong>Fachin + 2ª Turma STF</strong> (anulação das condenações de Lula). No Master: <strong>Dias Toffoli</strong> atribuiu sigilo máximo ao pedido de Vorcaro e foi depois removido da relatoria.</div>
+    </div>
+    <div class="pattern-card">
+      <div class="pattern-title"><span class="badge b-purple">P04</span> Contaminação midiática operada</div>
+      <div class="pattern-body">Nas quatro operações há evidências de uso estratégico da mídia — em ambas as direções. Na Satiagraha, a Globo gravou exclusivamente a prisão de Pitta. Na Lava Jato, a condução coercitiva de Lula foi vazada para a imprensa antes de ocorrer. No Master, Vorcaro acessou ilegalmente sistemas da PF e usou site para "esquentar" informação sigilosa e apresentar petição ao juiz.</div>
+    </div>
+    <div class="pattern-card">
+      <div class="pattern-title"><span class="badge b-teal">P05</span> FGC / cofres públicos como vetor</div>
+      <div class="pattern-body">A alavancagem dos esquemas usou sistematicamente garantias públicas como vetor de amplificação de risco: na Lava Jato, contratos com a Petrobras; na Castelo de Areia, licitações públicas; na Satiagraha, concessões de telecom; no Master, o próprio FGC — o fundo de proteção ao depositante — foi explorado como garantia implícita para captar R$50bi a taxas insustentáveis.</div>
+    </div>
+    <div class="pattern-card">
+      <div class="pattern-title"><span class="badge b-coral">P06</span> Prescrição como âncora</div>
+      <div class="pattern-body">O mecanismo de extinção mais frequente não é a absolvição no mérito — é a <strong>prescrição</strong> resultante de loops processuais. Na Lava Jato, os casos de Lula prescreveram entre anulação, redistribuição e reinício. Na Castelo de Areia, a demora entre 2009 e 2011 consumiu prazo prescricional. A estratégia de protelar recursos superiores enquanto o tempo corre é documentada em múltiplas defesas dos mesmos escritórios de advocacia criminal.</div>
+    </div>
+  </div>
+</div>
+
+<div id="tab-atores" class="tab-content">
+  <div class="highlight-box">Atores que aparecem em múltiplas operações — presença cruzada é um indicador estatístico relevante de rede sistêmica, não coincidência isolada.</div>
+  <div style="background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:10px;padding:14px;">
+    <div class="actor-row">
+      <div class="actor-name">Fausto de Sanctis</div>
+      <div class="actor-ops"><span class="badge b-amber">Castelo de Areia</span><span class="badge b-blue">Satiagraha</span></div>
+      <div style="font-size:12px;color:var(--color-text-secondary);margin-left:8px">Mesmo juiz em ambas; teve condutas questionadas nos dois casos pelo STF/STJ</div>
+    </div>
+    <div class="actor-row">
+      <div class="actor-name">Gilmar Mendes (STF)</div>
+      <div class="actor-ops"><span class="badge b-blue">Satiagraha</span><span class="badge b-coral">Lava Jato</span><span class="badge b-purple">Master</span></div>
+      <div style="font-size:12px;color:var(--color-text-secondary);margin-left:8px">2 HC p/ Dantas em 48h; declarou Moro parcial; reunião sobre Master no Planalto</div>
+    </div>
+    <div class="actor-row">
+      <div class="actor-name">Dias Toffoli (STF)</div>
+      <div class="actor-ops"><span class="badge b-coral">Lava Jato</span><span class="badge b-purple">Master</span></div>
+      <div style="font-size:12px;color:var(--color-text-secondary);margin-left:8px">Anulou acordo Odebrecht; recebeu sigilo máximo de Vorcaro; cunhado de Vorcaro investiu em resort da família Toffoli</div>
+    </div>
+    <div class="actor-row">
+      <div class="actor-name">Alexandre de Moraes (STF)</div>
+      <div class="actor-ops"><span class="badge b-coral">Lava Jato</span><span class="badge b-purple">Master</span></div>
+      <div style="font-size:12px;color:var(--color-text-secondary);margin-left:8px">Herdou vaga de Teori Zavascki; mulher tinha contrato R$131M com Master (não investigado)</div>
+    </div>
+    <div class="actor-row">
+      <div class="actor-name">Antonio Palocci</div>
+      <div class="actor-ops"><span class="badge b-amber">Castelo de Areia</span><span class="badge b-coral">Lava Jato</span></div>
+      <div style="font-size:12px;color:var(--color-text-secondary);margin-left:8px">Delatou propina R$5M p/ Asfor Rocha na Castelo; foi preso e delatou na Lava Jato (35ª fase)</div>
+    </div>
+    <div class="actor-row">
+      <div class="actor-name">Camargo Corrêa / empreiteiras</div>
+      <div class="actor-ops"><span class="badge b-amber">Castelo de Areia</span><span class="badge b-coral">Lava Jato</span></div>
+      <div style="font-size:12px;color:var(--color-text-secondary);margin-left:8px">Investigada em ambas; esquema de propinas e licitações fraudadas recorrente</div>
+    </div>
+    <div class="actor-row">
+      <div class="actor-name">Odebrecht</div>
+      <div class="actor-ops"><span class="badge b-coral">Lava Jato</span><span class="badge b-purple">Master</span></div>
+      <div style="font-size:12px;color:var(--color-text-secondary);margin-left:8px">Maior acordo leniência da história; Toffoli anulou todas as provas do acordo em 2024</div>
+    </div>
+    <div class="actor-row">
+      <div class="actor-name">Ciro Nogueira (PP-PI)</div>
+      <div class="actor-ops"><span class="badge b-coral">Lava Jato</span><span class="badge b-purple">Master</span></div>
+      <div style="font-size:12px;color:var(--color-text-secondary);margin-left:8px">Investigado na LJ (Operação Patmos); "grande amigo de vida" de Vorcaro; apresentou PEC que quadruplicava o FGC</div>
+    </div>
+    <div class="actor-row">
+      <div class="actor-name">Paulo Lacerda (ABIN/PF)</div>
+      <div class="actor-ops"><span class="badge b-blue">Satiagraha</span></div>
+      <div style="font-size:12px;color:var(--color-text-secondary);margin-left:8px">Ex-diretor PF, dirigia ABIN; 80 agentes cedidos; afastado após escândalo</div>
+    </div>
+    <div class="actor-row">
+      <div class="actor-name">Nelson Tanure</div>
+      <div class="actor-ops"><span class="badge b-purple">Master</span></div>
+      <div style="font-size:12px;color:var(--color-text-secondary);margin-left:8px">Apontado como possível dono oculto do Master; PF alertou BC em 2024; nunca formalizado</div>
+    </div>
+  </div>
+</div>
+
+<div id="tab-mortes" class="tab-content">
+  <div class="highlight-box"><strong>Nota metodológica:</strong> morte de figuras centrais em investigações de alta complexidade é um evento estatisticamente raro em democracias estáveis. A frequência observada neste conjunto — mesmo que os óbitos tenham explicações naturais — exige registro e contextualização analítica. Não é uma afirmação de causalidade, mas um indicador de risco do ecossistema.</div>
+
+  <div class="death-card" style="border-color:var(--red)">
+    <div class="death-name">Ministro Teori Zavascki — STF</div>
+    <div class="death-date">19 jan 2017 · Paraty, RJ</div>
+    <div class="death-context">Relator da Lava Jato no STF. Faleceu em queda de avião <strong>um dia antes de homologar as delações da Odebrecht</strong> — 78 executivos, 900 depoimentos, impacto em dezenas de políticos com foro privilegiado. A aeronave caiu no mar durante tentativa de pouso com baixa visibilidade. Investigações da PF, FAB/Cenipa e MPF descartaram sabotagem e concluíram por erro do piloto. Caso arquivado em 2019.</div>
+    <span class="death-verdict badge b-gray">Arquivado — erro do piloto</span>
+    <div style="font-size:11px;color:var(--color-text-tertiary);margin-top:6px">Consequência direta: vaga no STF ocupada por Alexandre de Moraes (indicado por Temer); relatoria Lava Jato redistribuída para Fachin, depois parcialmente para Moraes.</div>
+  </div>
+
+  <div class="death-card" style="border-color:var(--amber)">
+    <div class="death-name">Marcio Thomaz Bastos — advogado e ex-ministro da Justiça</div>
+    <div class="death-date">2014 · câncer</div>
+    <div class="death-context">Ex-ministro da Justiça de Lula. Citado por Palocci como a única fonte da acusação de propina de R$5M ao ministro Asfor Rocha na Castelo de Areia. Morreu antes de poder confirmar ou desmentir o depoimento. A morte é relevante porque <strong>tornou a acusação inversível</strong> — sem a testemunha, a acusação de Palocci ficou sem corroboração possível.</div>
+    <span class="death-verdict badge b-gray">Natural — câncer</span>
+    <div style="font-size:11px;color:var(--color-text-tertiary);margin-top:6px">Impacto: TRF-1 suspendeu inquérito contra Asfor Rocha por falta de provas materiais.</div>
+  </div>
+
+  <div class="death-card" style="border-color:var(--blue)">
+    <div class="death-name">Celso Pitta — ex-prefeito de SP</div>
+    <div class="death-date">2009 · causas naturais</div>
+    <div class="death-context">Preso na Satiagraha junto com Dantas e Naji Nahas. Morreu antes da anulação da operação pelo STJ. Seus processos decorrentes da Satiagraha foram extintos com ele.</div>
+    <span class="death-verdict badge b-gray">Natural</span>
+  </div>
+
+  <div style="background:var(--color-background-secondary);border-radius:8px;padding:12px;margin-top:12px;">
+    <div style="font-size:12px;font-weight:500;margin-bottom:8px">Indicadores de risco associados ao ecossistema (não mortes, mas padrões de pressão)</div>
+    <div class="timeline-item">
+      <div class="timeline-year">2008</div>
+      <div class="timeline-text"><strong>Protógenes gravou reunião</strong> com cúpula da PF por suspeitar de boicote. Prática incomum revelou pressões internas documentadas.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">2016–19</div>
+      <div class="timeline-text"><strong>Influenciadores e mídia</strong> coordenados para atacar/defender investigadores — documentado em ambos os casos (Satiagraha e Master).</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">2025</div>
+      <div class="timeline-text"><strong>Vorcaro usou ex-policial federal</strong> para espionagem ilegal de adversários, jornalistas e autoridades. Marilson Roseno da Silva preso na 3ª fase da Compliance Zero.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">2025</div>
+      <div class="timeline-text"><strong>Protógenes</strong> (delegado da Satiagraha) obteve asilo político na Suíça em 2016, evitando prisão decretada por Dantas após queixa-crime de 2019.</div>
+    </div>
+  </div>
+</div>
+
+<div id="tab-kpis" class="tab-content">
+  <p style="font-size:12px;color:var(--color-text-secondary);margin-bottom:12px;line-height:1.6">Métricas comparativas calculadas a partir de dados públicos. Permitem identificar padrões e benchmarks de efetividade entre operações.</p>
+
+  <div class="grid-4" style="margin-bottom:16px">
+    <div class="kpi">
+      <div class="kpi-label">Taxa de anulação</div>
+      <div class="kpi-value" style="color:var(--red)">75%</div>
+      <div class="kpi-sub">3 de 4 operações extintas</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Tempo médio até anulação</div>
+      <div class="kpi-value" style="color:var(--amber)">2,4 anos</div>
+      <div class="kpi-sub">Castelo:2a · Satiagraha:3a · LJ:7a</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Condenações mantidas / total</div>
+      <div class="kpi-value" style="color:var(--amber)">~30%</div>
+      <div class="kpi-sub">Somente Lava Jato (não-Lula)</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">R$ recuperado / R$ investigado</div>
+      <div class="kpi-value" style="color:var(--teal)">~4%</div>
+      <div class="kpi-sub">R$4bi recuperados / ~R$100bi total</div>
+    </div>
+  </div>
+
+  <div style="background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:10px;padding:14px;margin-bottom:12px">
+    <div style="font-size:12px;font-weight:500;margin-bottom:12px">Taxa de efetividade penal por operação</div>
+    <div class="progress-row">
+      <div class="progress-op">Castelo de Areia</div>
+      <div class="progress-bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:1%;background:var(--red)"></div></div></div>
+      <div class="progress-pct" style="color:var(--red)">0%</div>
+    </div>
+    <div class="progress-row">
+      <div class="progress-op">Satiagraha</div>
+      <div class="progress-bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:1%;background:var(--red)"></div></div></div>
+      <div class="progress-pct" style="color:var(--red)">0%</div>
+    </div>
+    <div class="progress-row">
+      <div class="progress-op">Lava Jato</div>
+      <div class="progress-bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:30%;background:var(--amber)"></div></div></div>
+      <div class="progress-pct" style="color:var(--amber)">~30%</div>
+    </div>
+    <div class="progress-row">
+      <div class="progress-op">Compliance Zero</div>
+      <div class="progress-bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:15%;background:var(--teal)"></div></div></div>
+      <div class="progress-pct" style="color:var(--teal)">em curso</div>
+    </div>
+  </div>
+
+  <div style="background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:10px;padding:14px;margin-bottom:12px">
+    <div style="font-size:12px;font-weight:500;margin-bottom:10px">Score de captura institucional (índice composto)</div>
+    <div style="font-size:11px;color:var(--color-text-tertiary);margin-bottom:10px">Baseado em: presença de magistrado superior suspeito · anulação atípica · investigador punido · ator político envolvido · prescrição induzida</div>
+    <div class="progress-row">
+      <div class="progress-op">Castelo de Areia</div>
+      <div class="progress-bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:72%;background:var(--red)"></div></div></div>
+      <div class="progress-pct" style="color:var(--red)">7.2/10</div>
+    </div>
+    <div class="progress-row">
+      <div class="progress-op">Satiagraha</div>
+      <div class="progress-bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:85%;background:var(--red)"></div></div></div>
+      <div class="progress-pct" style="color:var(--red)">8.5/10</div>
+    </div>
+    <div class="progress-row">
+      <div class="progress-op">Lava Jato</div>
+      <div class="progress-bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:68%;background:var(--amber)"></div></div></div>
+      <div class="progress-pct" style="color:var(--amber)">6.8/10</div>
+    </div>
+    <div class="progress-row">
+      <div class="progress-op">Compliance Zero</div>
+      <div class="progress-bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:75%;background:var(--purple)"></div></div></div>
+      <div class="progress-pct" style="color:var(--purple)">7.5/10 *</div>
+    </div>
+    <div style="font-size:10px;color:var(--color-text-tertiary);margin-top:8px">* Score provisório — investigação em andamento</div>
+  </div>
+
+  <div class="grid-3">
+    <div class="kpi">
+      <div class="kpi-label">Tempo médio prisão → soltura</div>
+      <div class="kpi-value" style="color:var(--blue)">11–18 dias</div>
+      <div class="kpi-sub">Dantas: 2 dias · Vorcaro: 11 dias</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Atores em 2+ operações</div>
+      <div class="kpi-value" style="color:var(--purple)">6+</div>
+      <div class="kpi-sub">Juízes, políticos, advogados, empreiteiras</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Escritórios de defesa comuns</div>
+      <div class="kpi-value" style="color:var(--coral)">3–4</div>
+      <div class="kpi-sub">Toron, Vilardi, Mendonça — múltiplas operações</div>
+    </div>
+  </div>
+
+  <div class="highlight-box" style="border-color:var(--amber)">
+    <strong>Padrão estatístico notável:</strong> A probabilidade de que 3 operações independentes — envolvendo diferentes investigadores, juízes, empresas e partidos, em anos distintos — resultem no mesmo desfecho (anulação por vício processual, investigador punido, alvo solto) sem qualquer estrutura sistêmica comum é estatisticamente irrisória. O padrão é consistente com uma rede de proteção informal que opera nos interstícios do sistema legal brasileiro, adaptando-se a cada nova operação.
+  </div>
+</div>
+
+</div>
+
+  <div class="share-wrap">
+    <script src="https://gosurf.site/share-bar.js"></script>
+  </div>
+</main>
+
+<script>
+function setTab(id) {
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  document.querySelectorAll('.tab-btn').forEach(el => {
+    if (el.getAttribute('onclick') && el.getAttribute('onclick').includes("'" + id + "'")) el.classList.add('active');
+  });
+}
+</script>
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

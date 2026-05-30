@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OPERAÇÃO ETHOS — Célula R do PCC × Sistema Recursal TJSP</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;700&family=Syne:wght@700;800&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:     #080b0e;
+  --bg2:    #0d1117;
+  --bg3:    #111820;
+  --bg4:    #161e28;
+  --border: #1a2330;
+  --border2:#222f40;
+  --text:   #bfcfdf;
+  --dim:    #607080;
+  --faint:  #2e3e50;
+  --accent: #e05a2b;
+  --gold:   #d4a030;
+  --blue:   #3a8fd0;
+  --green:  #4ab870;
+  --red:    #e03838;
+  --yellow: #e0c030;
+  --mono: 'IBM Plex Mono', monospace;
+  --display: 'Syne', sans-serif;
+  --body: 'Crimson Pro', Georgia, serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 16.5px;
+  line-height: 1.65;
+  min-height: 100vh;
+}
+
+/* scanlines */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,0,0,0.04) 3px, rgba(0,0,0,0.04) 4px);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ─── MASTHEAD ─── */
+.masthead {
+  position: sticky; top: 0; z-index: 200;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 32px;
+  display: flex; align-items: center; gap: 14px;
+  flex-wrap: wrap;
+}
+.m-tag {
+  font-family: var(--mono); font-size: 9px; letter-spacing: .18em;
+  text-transform: uppercase; padding: 3px 9px;
+  border: 1px solid; animation: blink 2.5s ease-in-out infinite;
+}
+.m-tag.red   { color: var(--red);   border-color: rgba(224,56,56,.4);  background: rgba(224,56,56,.07); }
+.m-tag.gold  { color: var(--gold);  border-color: rgba(212,160,48,.4); background: rgba(212,160,48,.07); }
+.m-tag.blue  { color: var(--blue);  border-color: rgba(58,143,208,.35);background: rgba(58,143,208,.07); }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.45} }
+.m-path { font-family: var(--mono); font-size: 10px; color: var(--dim); }
+.m-date { margin-left:auto; font-family: var(--mono); font-size: 9px; color: var(--faint); }
+
+/* ─── HERO ─── */
+.hero { max-width: 1100px; margin: 0 auto; padding: 64px 32px 44px; border-bottom: 1px solid var(--border); }
+.kicker { font-family: var(--mono); font-size: 9px; letter-spacing: .2em; color: var(--accent); text-transform: uppercase; margin-bottom: 18px; }
+.hero h1 { font-family: var(--display); font-size: clamp(30px,4.5vw,58px); font-weight: 800; line-height: 1.04; letter-spacing: -.02em; color: #ddeeff; margin-bottom: 20px; }
+.hero h1 em { color: var(--accent); font-style: normal; }
+.hero-sub { font-size: 17px; color: var(--dim); max-width: 700px; line-height: 1.55; }
+.badges { margin-top: 28px; display: flex; gap: 10px; flex-wrap: wrap; }
+.badge { font-family: var(--mono); font-size: 9px; letter-spacing: .12em; padding: 4px 10px; text-transform: uppercase; border: 1px solid; }
+.badge-r  { color: var(--red);   border-color: rgba(224,56,56,.35);  background: rgba(224,56,56,.08); }
+.badge-g  { color: var(--green); border-color: rgba(74,184,112,.3);  background: rgba(74,184,112,.07); }
+.badge-b  { color: var(--blue);  border-color: rgba(58,143,208,.3);  background: rgba(58,143,208,.07); }
+.badge-y  { color: var(--yellow);border-color: rgba(224,192,48,.3);  background: rgba(224,192,48,.07); }
+
+/* ─── MAIN ─── */
+.main { max-width: 1100px; margin: 0 auto; padding: 0 32px 80px; }
+
+/* ─── SECTION ─── */
+.section { margin-top: 56px; }
+.sec-hd {
+  display: flex; align-items: center; gap: 14px;
+  padding-bottom: 12px; margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+.sec-num { font-family: var(--mono); font-size: 10px; color: var(--accent); letter-spacing: .1em; min-width: 44px; }
+.sec-title { font-family: var(--display); font-size: 18px; font-weight: 700; color: #d0e4f8; letter-spacing: .01em; }
+.sec-tag { margin-left: auto; font-family: var(--mono); font-size: 9px; padding: 3px 8px; letter-spacing: .12em; text-transform: uppercase; border: 1px solid; }
+
+/* ─── BOXES ─── */
+.box { background: var(--bg2); border: 1px solid var(--border); padding: 20px 24px; }
+.box-warn { border-color: rgba(212,160,48,.3); background: rgba(212,160,48,.05); }
+.box-crit { border-color: rgba(224,56,56,.3);  background: rgba(224,56,56,.05); }
+.box-info { border-color: rgba(58,143,208,.3);  background: rgba(58,143,208,.05); }
+.box-ok   { border-color: rgba(74,184,112,.3);  background: rgba(74,184,112,.05); }
+
+.box-label {
+  font-family: var(--mono); font-size: 9px; letter-spacing: .18em;
+  text-transform: uppercase; margin-bottom: 12px;
+}
+.lbl-warn { color: var(--gold); }
+.lbl-crit { color: var(--red); }
+.lbl-info { color: var(--blue); }
+.lbl-ok   { color: var(--green); }
+
+/* ─── TIMELINE ─── */
+.timeline { position: relative; padding-left: 24px; }
+.timeline::before { content:''; position:absolute; left:0; top:0; bottom:0; width:1px; background:linear-gradient(to bottom, var(--accent), transparent); }
+.tl-item { position: relative; margin-bottom: 28px; }
+.tl-item::before { content:''; position:absolute; left:-28px; top:6px; width:8px; height:8px; border-radius:50%; border:1px solid; }
+.tl-red::before   { background:rgba(224,56,56,.4);  border-color:var(--red); }
+.tl-gold::before  { background:rgba(212,160,48,.4); border-color:var(--gold); }
+.tl-blue::before  { background:rgba(58,143,208,.4); border-color:var(--blue); }
+.tl-green::before { background:rgba(74,184,112,.4); border-color:var(--green); }
+
+.tl-date { font-family: var(--mono); font-size: 9px; letter-spacing:.12em; color:var(--dim); margin-bottom:5px; }
+.tl-title { font-family: var(--display); font-size: 15px; font-weight:700; color:#d0e0f0; margin-bottom:7px; }
+.tl-body { font-size: 14.5px; color: var(--text); line-height: 1.6; }
+.tl-source { font-family:var(--mono); font-size:9px; color:var(--faint); margin-top:7px; letter-spacing:.07em; }
+
+/* ─── ACTORS TABLE ─── */
+.atbl { width:100%; border-collapse:collapse; }
+.atbl th { font-family:var(--mono); font-size:9px; letter-spacing:.13em; text-transform:uppercase; color:var(--dim); padding:8px 14px; text-align:left; border-bottom:1px solid var(--border); background:var(--bg3); }
+.atbl td { padding:10px 14px; border-bottom:1px solid var(--border); font-size:14px; vertical-align:top; line-height:1.5; }
+.atbl tr:hover td { background:rgba(255,255,255,.015); }
+.c-name { font-weight:600; color:#c8ddef; }
+.c-role { font-family:var(--mono); font-size:10px; padding:2px 7px; letter-spacing:.08em; border:1px solid; text-transform:uppercase; white-space:nowrap; }
+.r-lider   { color:var(--red);   border-color:rgba(224,56,56,.35); }
+.r-juridico{ color:var(--gold);  border-color:rgba(212,160,48,.35);}
+.r-advogado{ color:var(--yellow);border-color:rgba(224,192,48,.3); }
+.r-state   { color:var(--blue);  border-color:rgba(58,143,208,.3); }
+.c-pena { font-family:var(--mono); font-size:11px; color:var(--red); }
+.c-pena-r { font-family:var(--mono); font-size:11px; color:var(--green); }
+
+/* ─── NEXO FLOWCHART (pure CSS) ─── */
+.flow { display:flex; flex-direction:column; gap:0; }
+.flow-row { display:flex; align-items:stretch; gap:0; }
+.flow-node {
+  background:var(--bg3); border:1px solid var(--border2);
+  padding:12px 16px; font-size:13px; line-height:1.5;
+  flex:1; position:relative;
+}
+.flow-node.level-1 { border-left:3px solid var(--red); }
+.flow-node.level-2 { border-left:3px solid var(--gold); }
+.flow-node.level-3 { border-left:3px solid var(--blue); }
+.flow-node.level-4 { border-left:3px solid var(--green); }
+.flow-node.crit    { background:rgba(224,56,56,.06); border-color:rgba(224,56,56,.25); }
+.fn-label { font-family:var(--mono); font-size:8px; letter-spacing:.15em; text-transform:uppercase; color:var(--dim); margin-bottom:5px; }
+.fn-title { font-family:var(--display); font-size:13px; font-weight:700; color:#d0e0f0; margin-bottom:5px; }
+.fn-body  { font-size:13px; color:var(--dim); }
+.flow-arrow { display:flex; align-items:center; justify-content:center; padding:4px 0; }
+.flow-arrow::after { content:'▼'; font-size:14px; color:var(--faint); }
+
+/* ─── STF BOX ─── */
+.stf-box {
+  background: var(--bg2);
+  border: 1px solid rgba(212,160,48,.3);
+  border-top: 3px solid var(--gold);
+  padding: 24px 28px;
+}
+.stf-number { font-family:var(--mono); font-size:28px; font-weight:700; color:var(--gold); letter-spacing:-.02em; margin-bottom:8px; }
+.stf-title  { font-family:var(--display); font-size:18px; font-weight:700; color:#d0e0f0; margin-bottom:12px; }
+.stf-grid   { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:16px; }
+.stf-item label { font-family:var(--mono); font-size:9px; letter-spacing:.12em; text-transform:uppercase; color:var(--dim); display:block; margin-bottom:4px; }
+.stf-item .val { font-size:14.5px; color:var(--text); }
+.stf-item .val-crit { font-size:14.5px; color:var(--red); font-weight:600; }
+.stf-item .val-gold { font-size:14.5px; color:var(--gold); }
+
+/* ─── GAP TABLE ─── */
+.gap-tbl { width:100%; border-collapse:collapse; }
+.gap-tbl th { font-family:var(--mono); font-size:9px; letter-spacing:.13em; text-transform:uppercase; color:var(--dim); padding:8px 12px; text-align:left; border-bottom:1px solid var(--border); background:var(--bg3); }
+.gap-tbl td { padding:10px 12px; border-bottom:1px solid var(--border); font-size:13.5px; vertical-align:top; line-height:1.5; }
+.gap-tbl tr:hover td { background: rgba(255,255,255,.012); }
+.sev-x { font-family:var(--mono); font-size:9px; padding:2px 8px; letter-spacing:.1em; text-transform:uppercase; border:1px solid; white-space:nowrap; }
+.sev-crit   { color:var(--red);   border-color:rgba(224,56,56,.4); }
+.sev-alta   { color:var(--yellow);border-color:rgba(224,192,48,.35);}
+.sev-media  { color:var(--blue);  border-color:rgba(58,143,208,.35);}
+.sev-baixa  { color:var(--green); border-color:rgba(74,184,112,.3); }
+
+/* ─── PULL QUOTE ─── */
+.pq { border-left:3px solid var(--gold); padding:14px 20px; background:rgba(212,160,48,.04); margin:20px 0; }
+.pq p { font-size:16.5px; font-style:italic; color:#d8c880; line-height:1.6; }
+.pq cite { display:block; font-family:var(--mono); font-size:9px; color:var(--faint); font-style:normal; margin-top:7px; letter-spacing:.1em; }
+
+/* ─── VERDICT ─── */
+.verdict {
+  margin-top: 32px;
+  background: linear-gradient(135deg, rgba(224,90,43,.09), rgba(224,56,56,.06));
+  border: 1px solid rgba(224,90,43,.3);
+  padding: 24px 28px;
+}
+.v-label { font-family:var(--mono); font-size:9px; letter-spacing:.2em; color:var(--accent); text-transform:uppercase; margin-bottom:12px; }
+.v-title { font-family:var(--display); font-size:19px; font-weight:700; color:#e8f0f8; line-height:1.3; margin-bottom:12px; }
+.v-body  { font-size:15px; color:var(--dim); line-height:1.65; }
+.v-body p { margin-bottom:10px; }
+.v-body p:last-child { margin-bottom:0; }
+
+/* ─── FOOTER ─── */
+.footer { max-width:1100px; margin:0 auto; padding:28px 32px; border-top:1px solid var(--border); display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+.ft-l,.ft-r { font-family:var(--mono); font-size:9px; color:var(--faint); line-height:1.8; }
+.ft-r { text-align:right; }
+
+/* ─── MISC ─── */
+a.src { font-family:var(--mono); font-size:10px; color:var(--blue); text-decoration:none; border-bottom:1px solid rgba(58,143,208,.3); }
+a.src:hover { color:#70b8f0; }
+hr.div { border:none; border-top:1px solid var(--border); margin:24px 0; }
+p { margin-bottom:12px; } p:last-child { margin-bottom:0; }
+strong { color:#c8ddef; }
+code { font-family:var(--mono); font-size:11px; color:var(--dim); background:rgba(255,255,255,.04); padding:1px 5px; }
+
+.warn-strip {
+  background: rgba(224,56,56,.07); border-top:1px solid rgba(224,56,56,.15); border-bottom:1px solid rgba(224,56,56,.15);
+  padding:9px 32px; font-family:var(--mono); font-size:9px; color:#e08080; letter-spacing:.1em; text-align:center;
+}
+
+/* two-col */
+.two-col { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+@media(max-width:700px){ .two-col{grid-template-columns:1fr;} .stf-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <span class="m-tag red">⚑ investigação ativa</span>
+  <span class="m-tag gold">Operação Ethos · PCC · Célula R</span>
+  <span class="m-tag blue">STF HC 151793</span>
+  <span class="m-path">lawfare-timeline / operacao-ethos-celula-r.html</span>
+  <span class="m-date">29 MAI 2026 — CC0 1.0</span>
+</header>
+
+<div class="warn-strip">FATOS DOCUMENTADOS (fontes primárias) · INFERÊNCIAS ESTRUTURAIS EXPLICITADAS · HIPÓTESES MOTIVACIONAIS EXCLUÍDAS · LACUNAS IDENTIFICADAS</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="kicker">Dossiê Conexo #INV-2026-0529b · Braço Jurídico do PCC × Recursal TJSP × STF</div>
+  <h1>Operação <em>Ethos</em> —<br>A Célula R do PCC<br>e o Fluxo Recursal</h1>
+  <p class="hero-sub">
+    A Operação Ethos (nov/2016) desmantelou o núcleo jurídico do PCC — 33 advogados presos, 49 denunciados, Marcola condenado a 30 anos. As apelações e HCs subsequentes percorreram o TJSP entre 2017 e 2022+. Este dossiê mapeia o fluxo recursal, os condenados, o HC 151793 STF e as câmaras criminais onde as causas foram distribuídas.
+  </p>
+  <div class="badges">
+    <span class="badge badge-r">P01 · Captura Institucional</span>
+    <span class="badge badge-y">Célula R · Sintonia dos Gravatas</span>
+    <span class="badge badge-b">STF HC 151793 · Gilmar Mendes</span>
+    <span class="badge badge-g">Presidente Venceslau · 1ª Vara</span>
+  </div>
+</section>
+
+<main class="main">
+
+<!-- ─── SEÇÃO 1: OPERAÇÃO ETHOS ─── -->
+<section class="section">
+  <div class="sec-hd">
+    <span class="sec-num">01 //</span>
+    <h2 class="sec-title">OPERAÇÃO ETHOS — ESTRUTURA E FATOS FUNDAMENTAIS</h2>
+    <span class="sec-tag badge-r">NOV/2016</span>
+  </div>
+
+  <div class="two-col">
+    <div class="box">
+      <div class="box-label lbl-crit">⚑ Deflagração</div>
+      <p>22 de novembro de 2016 — Polícia Civil de SP deflagrou a Operação Ethos, investigação sobre o núcleo jurídico do PCC chamado <strong>"sintonia dos gravatas"</strong>, em processo de reestruturação para <strong>"célula R"</strong>.</p>
+      <p><strong>Resultado imediato:</strong> 33 advogados presos em flagrante ou preventivamente. 49 pessoas denunciadas no total.</p>
+      <p><strong>Juízo de origem:</strong> 1ª Vara Criminal de Presidente Venceslau/SP · Juiz Gabriel Medeiros.</p>
+      <div style="font-family:var(--mono); font-size:9px; color:var(--faint); margin-top:10px;">
+        Fonte: Exame/Estadão (03/12/2016) · Ponte Jornalismo · CNN Brasil
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-label lbl-warn">⚑ Escopo Econômico</div>
+      <p>O PCC destinava cerca de <strong>R$ 6 milhões anuais</strong> para pagamento de advogados. A célula R foi estruturada como empresa:</p>
+      <ul style="list-style:none; font-size:14.5px; line-height:2; color:var(--text);">
+        <li>→ Presidente (Valdeci Francisco Costa)</li>
+        <li>→ Diretoria Administrativa</li>
+        <li>→ Diretoria de Relações Institucionais</li>
+        <li>→ Advogados-satélite em presídios</li>
+      </ul>
+      <p style="font-size:13px; color:var(--dim); margin-top:10px;">Funções: representação jurídica, comunicação com lideranças presas, custeio de serviços médicos para a cúpula, lavagem de recursos de narcotráfico.</p>
+      <div style="font-family:var(--mono); font-size:9px; color:var(--faint); margin-top:8px;">
+        Fonte: Exame · Relatório final da investigação policial (Estadão)
+      </div>
+    </div>
+  </div>
+
+  <div class="pq" style="margin-top:20px;">
+    <p>"As funções do grupo deixaram de ser exclusivamente jurídicas e passaram a funcionar como elo de comunicação das atividades criminosas entre os líderes presos e os que estão em liberdade."</p>
+    <cite>— Ministério Público Estadual de SP, denúncia Operação Ethos (690 páginas) · 2016/2017</cite>
+  </div>
+</section>
+
+<!-- ─── SEÇÃO 2: FLUXO DE CONDENAÇÕES ─── -->
+<section class="section">
+  <div class="sec-hd">
+    <span class="sec-num">02 //</span>
+    <h2 class="sec-title">CONDENADOS — LIDERANÇAS E CÉLULA R</h2>
+    <span class="sec-tag badge-y">PRIMEIRA INSTÂNCIA VERIFICADA</span>
+  </div>
+
+  <table class="atbl">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Alcunha / Papel</th>
+        <th>Função na Célula R</th>
+        <th>Pena (1ª inst.)</th>
+        <th>Juízo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="c-name">Marco Willians Herbas Camacho</td>
+        <td><span class="c-role r-lider">Marcola · nº 1.013</span></td>
+        <td>Líder máximo PCC — beneficiário direto da célula R</td>
+        <td class="c-pena">30 anos</td>
+        <td style="font-family:var(--mono); font-size:11px;">1ª Vara P. Venceslau · feb/2018</td>
+      </tr>
+      <tr>
+        <td class="c-name">Cleber Marcelino Dias dos Santos</td>
+        <td><span class="c-role r-lider">Clebinho</span></td>
+        <td>Liderança PCC</td>
+        <td class="c-pena">30 anos</td>
+        <td style="font-family:var(--mono); font-size:11px;">1ª Vara P. Venceslau · feb/2018</td>
+      </tr>
+      <tr>
+        <td class="c-name">Daniel Vinícius Canônico</td>
+        <td><span class="c-role r-lider">Cego</span></td>
+        <td>Liderança PCC</td>
+        <td class="c-pena">30 anos</td>
+        <td style="font-family:var(--mono); font-size:11px;">1ª Vara P. Venceslau · feb/2018</td>
+      </tr>
+      <tr>
+        <td class="c-name">Valdeci Francisco Costa</td>
+        <td><span class="c-role r-juridico">Diretor-Pres. Célula R</span></td>
+        <td>"Reestruturação" da sintonia dos gravatas; modelo empresarial</td>
+        <td class="c-pena">—</td>
+        <td style="font-family:var(--mono); font-size:11px;">Preso jun/2016 (antes da Ethos)</td>
+      </tr>
+      <tr>
+        <td class="c-name">Vanila Gonçales</td>
+        <td><span class="c-role r-juridico">Líder jurídica</span></td>
+        <td>Recrutou membro do Condepe; captou advogados para a facção</td>
+        <td class="c-pena">17 anos 2 meses</td>
+        <td style="font-family:var(--mono); font-size:11px;">1ª Vara P. Venceslau · nov/2017<br><span style="color:var(--green);">→ HC: prisão domiciliar mar/2018</span></td>
+      </tr>
+      <tr>
+        <td class="c-name">Davi Gonçales</td>
+        <td><span class="c-role r-juridico">Irmão de Vanila · advogado</span></td>
+        <td>Integrante da célula R</td>
+        <td class="c-pena">15 anos 5 meses</td>
+        <td style="font-family:var(--mono); font-size:11px;">1ª Vara P. Venceslau</td>
+      </tr>
+      <tr>
+        <td class="c-name">Luiz Carlos dos Santos</td>
+        <td><span class="c-role r-state">Ex-VP Condepe · captado</span></td>
+        <td>Recebia R$5k/mês do PCC para plantar denúncias de violação de DH e desestabilizar SPF</td>
+        <td class="c-pena">16 anos 2 meses</td>
+        <td style="font-family:var(--mono); font-size:11px;">1ª Vara P. Venceslau</td>
+      </tr>
+      <tr>
+        <td class="c-name">Juliana Claudina dos Santos Cottini</td>
+        <td><span class="c-role r-advogado">Advogada · Célula R</span></td>
+        <td>Integrante da estrutura jurídica</td>
+        <td class="c-pena">10 anos 6 meses</td>
+        <td style="font-family:var(--mono); font-size:11px;">1ª Vara P. Venceslau · 2021</td>
+      </tr>
+      <tr>
+        <td class="c-name">Priscila Ambiel Julian</td>
+        <td><span class="c-role r-advogado">Advogada · Célula R</span></td>
+        <td>Integrante da célula jurídica do PCC</td>
+        <td class="c-pena">8 anos 9 meses</td>
+        <td style="font-family:var(--mono); font-size:11px;">1ª Vara P. Venceslau → STF HC 151793</td>
+      </tr>
+      <tr>
+        <td class="c-name">Jéssica Paixão Ferreira</td>
+        <td><span class="c-role r-advogado">Advogada · Célula R</span></td>
+        <td>Integrante da estrutura jurídica</td>
+        <td class="c-pena">8 anos 9 meses</td>
+        <td style="font-family:var(--mono); font-size:11px;">1ª Vara P. Venceslau · 2021</td>
+      </tr>
+      <tr>
+        <td class="c-name">Gisele Aparecida Baldiotti</td>
+        <td><span class="c-role r-advogado">Advogada · Célula R</span></td>
+        <td>Integrante da estrutura jurídica</td>
+        <td class="c-pena">8 anos 9 meses</td>
+        <td style="font-family:var(--mono); font-size:11px;">1ª Vara P. Venceslau · 2021</td>
+      </tr>
+      <tr>
+        <td class="c-name">Ariane dos Santos (Factur)</td>
+        <td><span class="c-role r-advogado">Advogada · Célula R</span></td>
+        <td>Integrante da estrutura jurídica</td>
+        <td class="c-pena">8 anos 9 meses</td>
+        <td style="font-family:var(--mono); font-size:11px;">1ª Vara P. Venceslau · 2021</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="font-family:var(--mono); font-size:10px; color:var(--faint); margin-top:10px;">
+    Nota: 49 pessoas no total denunciadas. Processos desmembrados por excesso de réus. Condenações em ondas (2017, 2018, 2021). Fontes: Ponte Jornalismo (11/03/2021) · Agora RN (21/02/2018) · O Imparcial (07/03/2018)
+  </p>
+</section>
+
+<!-- ─── SEÇÃO 3: STF HC 151793 ─── -->
+<section class="section">
+  <div class="sec-hd">
+    <span class="sec-num">03 //</span>
+    <h2 class="sec-title">STF HC 151.793 — GILMAR MENDES — PRISCILA AMBIEL JULIAN</h2>
+    <span class="sec-tag badge-b">FONTE PRIMÁRIA STF</span>
+  </div>
+
+  <div class="stf-box">
+    <div class="stf-number">HC 151.793</div>
+    <div class="stf-title">Habeas Corpus — Priscila Ambiel Julian × organização criminosa armada (PCC)</div>
+
+    <div class="stf-grid">
+      <div class="stf-item">
+        <label>Relator</label>
+        <div class="val">Min. Gilmar Mendes (STF)</div>
+      </div>
+      <div class="stf-item">
+        <label>Resultado</label>
+        <div class="val-crit">HC DENEGADO — Prisão preventiva mantida</div>
+      </div>
+      <div class="stf-item">
+        <label>Origem</label>
+        <div class="val">1ª Vara Criminal de Presidente Venceslau/SP → TJSP → STF</div>
+      </div>
+      <div class="stf-item">
+        <label>Pedido</label>
+        <div class="val">Revogação da prisão preventiva decretada na Operação Ethos</div>
+      </div>
+      <div class="stf-item">
+        <label>Fluxo TJSP</label>
+        <div class="val-gold">TJSP negou soltura MAS trancou ação penal quanto a corrupção ativa → defesa subiu ao STF</div>
+      </div>
+      <div class="stf-item">
+        <label>Fundamento STF</label>
+        <div class="val">Prisão fundamentada em dados concretos. Advogada integrava <strong>célula R (núcleo jurídico)</strong> do PCC — sistema articulado de advogados internos e externos atuando a favor da facção</div>
+      </div>
+    </div>
+
+    <hr class="div" style="margin:16px 0;">
+
+    <div class="box box-warn" style="padding:16px 18px; margin-top:0;">
+      <div class="box-label lbl-warn">⚑ Nota Crítica — TJSP × STF</div>
+      <p style="font-size:14.5px;">O TJSP <strong>trancou parcialmente a ação penal</strong> (corrupção ativa) mas manteve a prisão preventiva. Essa decisão intermediária do TJSP é o elemento mais relevante para a investigação do Passo 8 (L2): <strong>qual câmara criminal do TJSP julgou esse HC?</strong> Se foi a 4ª Câmara onde Ivana David atua — ou se ela foi relatora — isso constitui nexo direto documentado. Se foi câmara diversa, o nexo direto não existe para esse processo.</p>
+      <p style="font-size:13px; color:var(--dim); margin-top:8px; font-family:var(--mono);">LACUNA CRÍTICA: O número do processo no TJSP não consta nas fontes disponíveis. Verificar via portal.stf.jus.br · processo HC 151793 · campo "origem".</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SEÇÃO 4: FLUXO RECURSAL ─── -->
+<section class="section">
+  <div class="sec-hd">
+    <span class="sec-num">04 //</span>
+    <h2 class="sec-title">FLUXO RECURSAL — ETHOS → TJSP → STJ → STF</h2>
+  </div>
+
+  <div class="flow">
+    <div class="flow-row">
+      <div class="flow-node level-1 crit">
+        <div class="fn-label">Ponto de Origem</div>
+        <div class="fn-title">1ª Vara Criminal · Presidente Venceslau/SP</div>
+        <div class="fn-body">Juiz Gabriel Medeiros · 2016–2021 · múltiplas sentenças condenatórias · processos desmembrados por volume de réus</div>
+      </div>
+    </div>
+    <div class="flow-arrow"></div>
+    <div class="flow-row">
+      <div class="flow-node level-2">
+        <div class="fn-label">1º Recurso · Competência Estadual</div>
+        <div class="fn-title">TJSP — Câmaras de Direito Criminal</div>
+        <div class="fn-body">Apelações contra sentenças + HCs contra prisões preventivas. Processos originários de Presidente Venceslau distribuídos às câmaras criminais do TJSP por sorteio. <strong>A câmara exata para cada réu requer pesquisa no ESAJ.</strong> Vanila Gonçales: <code>11ª Câmara</code> (HC — Des. Xavier de Souza, mar/2018). Priscila Ambiel: câmara não identificada nas fontes disponíveis.</div>
+      </div>
+    </div>
+    <div class="flow-arrow"></div>
+    <div class="flow-row">
+      <div class="flow-node level-3">
+        <div class="fn-label">2º Recurso · Competência Federal</div>
+        <div class="fn-title">STJ — 5ª ou 6ª Turma Criminal</div>
+        <div class="fn-body">Recursos especiais e HCs contra decisões do TJSP. Precedente identificado: STJ restabeleceu condenação de integrante do PCC (RHC 78.032/SP) que havia sido solta por TJSP em caso análogo de busca pessoal + cocaína. Casos Ethos específicos no STJ não identificados nas fontes disponíveis — requer pesquisa.</div>
+      </div>
+    </div>
+    <div class="flow-arrow"></div>
+    <div class="flow-row">
+      <div class="flow-node level-4">
+        <div class="fn-label">3º Recurso · Supremo</div>
+        <div class="fn-title">STF — HC 151.793 (Gilmar Mendes)</div>
+        <div class="fn-body">Priscila Ambiel Julian → HC negado. Prisão mantida. Único processo Ethos localizado no STF nas fontes disponíveis. Outros condenados podem ter impetrado HCs adicionais no STF não identificados nesta pesquisa.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="box box-warn" style="margin-top:20px;">
+    <div class="box-label lbl-warn">⚑ Ponto-Chave — HC Vanila Gonçales no TJSP</div>
+    <p>Vanila Gonçales (17 anos — maior pena) recebeu <strong>liminar de prisão domiciliar</strong> concedida pela <strong>11ª Câmara Criminal do TJSP</strong>, assinada pelo Des. Xavier de Souza (mar/2018), com fundamento em maternidade (filha de 7 anos em tratamento psicológico). A advogada havia sido condenada em novembro/2017 e a liminar veio 4 meses depois. <strong>Ivana David atua na 4ª Câmara e 7ª Câmara — não na 11ª.</strong> Nexo direto com este HC específico não se sustenta.</p>
+    <p style="font-size:13px; color:var(--dim); margin-top:8px;">Fonte: O Imparcial, 07/03/2018 — <a class="src" href="https://www.imparcial.com.br/noticias/advogada-presa-na-ethos-vai-cumprir-pena-em-casa,18729" target="_blank">imparcial.com.br</a></p>
+  </div>
+</section>
+
+<!-- ─── SEÇÃO 5: NEXO INVESTIGATIVO ─── -->
+<section class="section">
+  <div class="sec-hd">
+    <span class="sec-num">05 //</span>
+    <h2 class="sec-title">NEXO COM DES. IVANA DAVID — ANÁLISE FORENSE</h2>
+    <span class="sec-tag badge-y">LACUNAS RESIDUAIS</span>
+  </div>
+
+  <table class="gap-tbl">
+    <thead>
+      <tr>
+        <th>Ponto</th>
+        <th>Fato Verificado</th>
+        <th>Nexo c/ Ivana David</th>
+        <th>Status</th>
+        <th>Sev.</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="font-family:var(--mono); font-size:10px; white-space:nowrap;">N1</td>
+        <td>11ª Câmara TJSP concedeu HC a Vanila Gonçales (Des. Xavier de Souza)</td>
+        <td>Ivana David atua em 4ª e 7ª Câmaras — <strong>não na 11ª</strong></td>
+        <td style="color:var(--green); font-family:var(--mono); font-size:10px;">NEXO DIRETO: NÃO</td>
+        <td><span class="sev-x sev-baixa">RESOLVIDA</span></td>
+      </tr>
+      <tr>
+        <td style="font-family:var(--mono); font-size:10px; white-space:nowrap;">N2</td>
+        <td>STF HC 151793: TJSP negou HC de Priscila Ambiel mas trancou corrupção ativa</td>
+        <td>Câmara do TJSP que julgou esse HC <strong>não identificada</strong> nas fontes disponíveis</td>
+        <td style="color:var(--yellow); font-family:var(--mono); font-size:10px;">PENDENTE</td>
+        <td><span class="sev-x sev-crit">CRÍTICA</span></td>
+      </tr>
+      <tr>
+        <td style="font-family:var(--mono); font-size:10px; white-space:nowrap;">N3</td>
+        <td>Apelações criminais das condenações Ethos (2017–2021) distribuídas ao TJSP</td>
+        <td>Distribuição aleatória por sorteio. Câmaras que receberam <strong>não identificadas</strong> por este levantamento</td>
+        <td style="color:var(--yellow); font-family:var(--mono); font-size:10px;">PENDENTE</td>
+        <td><span class="sev-x sev-crit">CRÍTICA</span></td>
+      </tr>
+      <tr>
+        <td style="font-family:var(--mono); font-size:10px; white-space:nowrap;">N4</td>
+        <td>49 denunciados total; processos desmembrados; múltiplas câmaras potencialmente envolvidas</td>
+        <td>Probabilidade estatística de ao menos 1 processo ter passado pela 4ª Câmara — mas <strong>requer confirmação</strong></td>
+        <td style="color:var(--yellow); font-family:var(--mono); font-size:10px;">INFERÊNCIA</td>
+        <td><span class="sev-x sev-alta">ALTA</span></td>
+      </tr>
+      <tr>
+        <td style="font-family:var(--mono); font-size:10px; white-space:nowrap;">N5</td>
+        <td>Operação Ethos originou outros processos derivados (lavagem, tráfico)</td>
+        <td>Causas derivadas podem ter sido distribuídas à 4ª Câmara em datas diversas</td>
+        <td style="color:var(--yellow); font-family:var(--mono); font-size:10px;">PENDENTE</td>
+        <td><span class="sev-x sev-alta">ALTA</span></td>
+      </tr>
+      <tr>
+        <td style="font-family:var(--mono); font-size:10px; white-space:nowrap;">N6</td>
+        <td>Ivana David atuou como corregedora de presídios 1999–2008 — conheceu PCC in loco</td>
+        <td>Institucional apenas — sem nexo processual direto com Ethos</td>
+        <td style="color:var(--green); font-family:var(--mono); font-size:10px;">HISTÓRICO</td>
+        <td><span class="sev-x sev-baixa">CONTEXTUAL</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ─── SEÇÃO 6: PASSO 8 — COMO INVESTIGAR ─── -->
+<section class="section">
+  <div class="sec-hd">
+    <span class="sec-num">06 //</span>
+    <h2 class="sec-title">PASSO 8 (L2) — COMO RESOLVER AS LACUNAS CRÍTICAS</h2>
+  </div>
+
+  <div class="box">
+    <div class="box-label lbl-info">⊕ Protocolo de Pesquisa ESAJ — Operação Ethos × TJSP</div>
+    <div class="timeline" style="margin-top:4px;">
+
+      <div class="tl-item tl-red">
+        <div class="tl-date">PASSO 8.2.1 — PRIORITÁRIO</div>
+        <div class="tl-title">Identificar número do HC de Priscila Ambiel no TJSP</div>
+        <div class="tl-body">No portal do STF (<a class="src" href="https://portal.stf.jus.br/processos/detalhe.asp?incidente=5471786" target="_blank">portal.stf.jus.br · incidente 5471786</a>), o campo "processo de origem" deve revelar o número do HC no TJSP. Com esse número, buscar no ESAJ para identificar a câmara e o relator.</div>
+        <div class="tl-source">Endereço STF: portal.stf.jus.br · HC 151793 · aba "origem"</div>
+      </div>
+
+      <div class="tl-item tl-gold">
+        <div class="tl-date">PASSO 8.2.2</div>
+        <div class="tl-title">Busca ESAJ — APR Operação Ethos</div>
+        <div class="tl-body">No ESAJ (esaj.tjsp.jus.br/cjsg), buscar por ementa contendo "Ethos" ou "sintonia dos gravatas" ou "célula R" nos campos de pesquisa livre. Cruzar câmara resultante com câmaras onde Ivana David atuou como relatora ou integrou colegiado.</div>
+        <div class="tl-source">esaj.tjsp.jus.br/cjsg/consultaCompleta.do</div>
+      </div>
+
+      <div class="tl-item tl-blue">
+        <div class="tl-date">PASSO 8.2.3</div>
+        <div class="tl-title">Busca por réu — nomes individuais</div>
+        <div class="tl-body">Pesquisar individualmente no ESAJ: "Vanila Gonçales", "Davi Gonçales", "Priscila Ambiel Julian", "Juliana Cottini" nas apelações criminais. A parte envolvida aparece na ementa do acórdão de segunda instância, que identifica câmara e relator.</div>
+        <div class="tl-source">ESAJ · Consulta de Julgados de 2º Grau</div>
+      </div>
+
+      <div class="tl-item tl-green">
+        <div class="tl-date">PASSO 8.2.4</div>
+        <div class="tl-title">Verificar causas derivadas — Marcola e lideranças</div>
+        <div class="tl-body">As condenações de Marcola (234+ anos acumulados) geraram múltiplos recursos no TJSP ao longo dos anos. Pesquisar "Marco Willians Herbas Camacho" no ESAJ para mapear câmaras que processaram esses recursos e identificar se algum passou pela 4ª Câmara.</div>
+        <div class="tl-source">ESAJ · Cadicrim · Jusbrasil (limitado)</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── SEÇÃO 7: ESTRUTURA DO CONDEPE ─── -->
+<section class="section">
+  <div class="sec-hd">
+    <span class="sec-num">07 //</span>
+    <h2 class="sec-title">ELEMENTO SINGULAR — CONDEPE: ESTADO CAPTURADO PARA PROTEGER PCC</h2>
+    <span class="sec-tag badge-r">P01 · CAPTURA INSTITUCIONAL</span>
+  </div>
+
+  <div class="box box-crit">
+    <div class="box-label lbl-crit">⚑ Padrão P01 — Captura de Órgão de Direitos Humanos</div>
+    <p>Luiz Carlos dos Santos, ex-vice-presidente do <strong>Conselho Estadual de Defesa dos Direitos da Pessoa Humana (Condepe)</strong>, foi condenado a 16 anos por receber <strong>mesada de R$ 5.000/mês do PCC</strong> para:</p>
+    <ul style="list-style:none; line-height:2; font-size:15px; margin-top:10px;">
+      <li>→ Plantar denúncias falsas de violação de direitos humanos</li>
+      <li>→ Desestabilizar o Sistema Penitenciário Federal (SPF)</li>
+      <li>→ Criar pressão institucional para transferência de lideranças a presídios estaduais</li>
+    </ul>
+    <p style="margin-top:12px; color:var(--dim); font-size:14px;">Este mecanismo confirma a declaração de Ivana David de mai/2025 ("a aliança PCC-CV era gestão entre advogados tentando atacar o SPF") — mas evidencia que o PCC foi além: capturou o próprio órgão de DH do Estado para fabricar a pressão institucional necessária.</p>
+    <p style="font-family:var(--mono); font-size:9px; color:var(--faint); margin-top:10px;">Fonte: Agora RN (21/02/2018) · Ponte Jornalismo</p>
+  </div>
+</section>
+
+<!-- ─── SEÇÃO 8: SÍNTESE ─── -->
+<section class="section">
+  <div class="sec-hd">
+    <span class="sec-num">08 //</span>
+    <h2 class="sec-title">SÍNTESE FORENSE — O QUE O HC 151793 REVELA</h2>
+  </div>
+
+  <div class="verdict">
+    <div class="v-label">⊕ Conclusão Estrutural — Epistemicamente Calibrada</div>
+    <div class="v-title">Nexo direto Ivana David × Ethos: não confirmado. Nexo estrutural: robusto.</div>
+    <div class="v-body">
+      <p><strong>O que foi estabelecido:</strong> A Operação Ethos gerou fluxo recursal massivo no TJSP (2017–2022+). O HC de Vanila Gonçales (maior pena) passou pela 11ª Câmara — câmara onde Ivana David não atua. O HC de Priscila Ambiel no TJSP teve câmara não identificada por esta pesquisa. A pesquisa sistemática no ESAJ é a única forma de resolver esta lacuna.</p>
+      <p><strong>O que é estruturalmente relevante:</strong> Independentemente do nexo processual com Ethos, Ivana David (4ª e 7ª Câmaras, 35 anos de magistratura, ex-corregedora) é a desembargadora mais visível do TJSP em temas de segurança pública. Suas declarações públicas de 29/05/2026 contra a designação terrorista americana operam como proteção das rotas financeiras do PCC/CV — o mesmo PCC cujo núcleo jurídico ela conheceu como corregedora de presídios entre 1999 e 2008.</p>
+      <p><strong>A tensão analítica central:</strong> Uma magistrada que conheceu o PCC nascendo, que sabe que a célula R pagava R$ 6 milhões/ano a advogados para infiltrar o sistema jurídico, que alerta sobre a simbiose Estado-crime — essa mesma magistrada argumenta que a designação terrorista americana é o problema, não a solução. O argumento pode ser tecnicamente correto sobre soberania processual e ao mesmo tempo ser estruturalmente disfuncional para o combate às facções.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="ft-l">
+    lawfare-timeline.vercel.app · dossiê INV-2026-0529b<br>
+    CC0 1.0 Universal — Domínio Público · Sem restrições de uso<br>
+    Conectado: ivana-david-dossie.html · PCC-CV-Intel-Dashboard-2026.html
+  </div>
+  <div class="ft-r">
+    Fontes primárias: Exame/Estadão · Ponte Jornalismo · O Imparcial<br>
+    Agora RN · CNN Brasil · STF portal.stf.jus.br<br>
+    Lacuna crítica residual: número HC TJSP (Priscila Ambiel) + APRs no ESAJ
+  </div>
+</footer>
+
+</body>
+</html>

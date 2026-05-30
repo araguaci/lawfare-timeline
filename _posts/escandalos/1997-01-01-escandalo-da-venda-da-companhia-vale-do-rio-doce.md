@@ -5,6 +5,7 @@ categories: escandalos
 description: Privatização subvalorizada.
 tags: ['governo-fhc', '1997']
 date: 1997-01-01
+permalink: /posts/1997-01-01-escandalo-da-venda-da-companhia-vale-do-rio-doce/
 ---
 
 Privatização subvalorizada.

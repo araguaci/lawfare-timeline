@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lawfare Timeline — Design System Reference</title>
+<title>Lawfare Timeline — Design System Reference v1.1</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -151,6 +151,92 @@ body { background: var(--bg); color: var(--fg); font-family: var(--font-mono); f
 .mobile-warn { background: var(--amber2); border: 1px solid rgba(232,160,32,0.25); border-radius: 6px; padding: 12px 16px; font-size: 12px; color: var(--fg2); margin-bottom: 16px; }
 .mobile-warn strong { color: var(--amber); }
 
+/* STICKY NAV SCROLL-SPY */
+.sticky-nav { position: sticky; top: 0; z-index: 100; background: rgba(8,12,16,.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+.sticky-nav-inner { display: flex; align-items: center; padding: 0 20px; overflow-x: auto; scrollbar-width: none; max-width: 1200px; margin: 0 auto; }
+.sticky-nav-inner::-webkit-scrollbar { display: none; }
+@media(min-width:768px){ .sticky-nav-inner { padding: 0 40px; } }
+.nav-brand { font-size: 10px; font-weight: 600; letter-spacing: .1em; color: var(--red); text-transform: uppercase; white-space: nowrap; padding: 14px 16px 14px 0; border-right: 1px solid var(--border2); margin-right: 4px; flex-shrink: 0; }
+.snav-tab { padding: 14px 14px; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--fg3); text-decoration: none; border: none; background: none; border-bottom: 2px solid transparent; white-space: nowrap; transition: all .15s; font-family: var(--font-mono); cursor: pointer; display: flex; align-items: center; gap: 5px; }
+.snav-tab:hover { color: var(--fg2); }
+.snav-tab.active { color: var(--fg); border-bottom-color: var(--red); }
+.snav-tab svg { width: 12px; height: 12px; opacity: .7; flex-shrink: 0; }
+
+/* PULSE BADGE */
+.badge-pulse { display: inline-flex; align-items: center; gap: 6px; }
+.pulse-dot { width: 7px; height: 7px; border-radius: 50%; animation: pulse-anim 2s infinite; flex-shrink: 0; }
+.pulse-dot.red   { background: var(--red); }
+.pulse-dot.amber { background: var(--amber); }
+.pulse-dot.green { background: var(--green); }
+@keyframes pulse-anim { 0%,100%{ opacity:1; transform:scale(1); } 50%{ opacity:.4; transform:scale(.8); } }
+.b-muted { background: transparent; color: var(--fg3); border: 1px solid var(--border2); }
+
+/* STAT CARD WITH ICON */
+.stat-icon-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border2); border: 1px solid var(--border2); border-radius: 6px; overflow: hidden; }
+@media(max-width:600px){ .stat-icon-grid { grid-template-columns: 1fr 1fr; } }
+.sic { background: var(--bg1); padding: 18px 16px; transition: background .15s; display: flex; flex-direction: column; gap: 8px; }
+.sic:hover { background: var(--bg2); }
+.sic-icon { width: 32px; height: 32px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.sic-icon svg { width: 16px; height: 16px; }
+.sic-num { font-family: var(--font-display); font-size: clamp(18px,3vw,26px); font-weight: 700; letter-spacing: -.02em; line-height: 1; }
+.sic-lbl { font-size: 10px; letter-spacing: .07em; text-transform: uppercase; color: var(--fg3); line-height: 1.45; }
+
+/* PATTERN CARD — TOP ACCENT (v1.1) */
+.pcard-v2 { background: var(--bg1); border: 1px solid var(--border); border-radius: 6px; padding: 18px; position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 10px; transition: background .15s, border-color .15s; }
+.pcard-v2::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; }
+.pcard-v2:hover { background: var(--bg2); border-color: var(--border2); }
+.pcard-v2.red::before  { background: var(--red); }
+.pcard-v2.amber::before{ background: var(--amber); }
+.pcard-v2.blue::before { background: var(--blue); }
+.pcard-v2.green::before{ background: var(--green); }
+.pcard-v2-head { display: flex; align-items: flex-start; gap: 12px; }
+.pcard-v2-icon { width: 36px; height: 36px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 16px; }
+.pcard-v2.red .pcard-v2-icon   { background: var(--red2); }
+.pcard-v2.amber .pcard-v2-icon { background: var(--amber2); }
+.pcard-v2.blue .pcard-v2-icon  { background: var(--blue2); }
+.pcard-v2.green .pcard-v2-icon { background: var(--green2); }
+.pcard-v2-id   { font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 2px; }
+.pcard-v2.red .pcard-v2-id   { color: var(--red); }
+.pcard-v2.amber .pcard-v2-id { color: var(--amber); }
+.pcard-v2.blue .pcard-v2-id  { color: var(--blue); }
+.pcard-v2.green .pcard-v2-id { color: var(--green); }
+.pcard-v2-name { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--fg); line-height: 1.2; }
+.pcard-v2-desc { font-size: 12px; color: var(--fg2); line-height: 1.65; }
+
+/* CONNECTION ITEM */
+.conn-list { display: flex; flex-direction: column; gap: 8px; }
+.conn-item { display: flex; align-items: flex-start; gap: 12px; padding: 12px 16px; background: var(--bg1); border: 1px solid var(--border); border-radius: 6px; transition: background .15s; }
+.conn-item:hover { background: var(--bg2); }
+.conn-item-icon { width: 28px; height: 28px; border-radius: 4px; background: var(--blue2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; color: var(--blue); font-size: 12px; }
+.conn-item-id   { font-size: 11px; font-weight: 600; color: var(--amber); min-width: 56px; flex-shrink: 0; padding-top: 2px; }
+.conn-item-desc { font-size: 12px; color: var(--fg2); line-height: 1.6; }
+
+/* RELATED POSTS CARD */
+.rel-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+@media(max-width:700px){ .rel-grid { grid-template-columns: 1fr; } }
+@media(min-width:480px) and (max-width:700px){ .rel-grid { grid-template-columns: repeat(2,1fr); } }
+.rel-card { background: var(--bg1); border: 1px solid var(--border); border-radius: 6px; padding: 16px; display: flex; flex-direction: column; gap: 10px; text-decoration: none; color: inherit; transition: background .15s, border-color .15s; }
+.rel-card:hover { background: var(--bg2); border-color: var(--border2); }
+.rel-card-head { display: flex; align-items: flex-start; gap: 10px; }
+.rel-card-icon { width: 34px; height: 34px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 15px; }
+.rel-card-id   { font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--amber); margin-bottom: 2px; }
+.rel-card-title{ font-family: var(--font-display); font-size: 13px; font-weight: 700; color: var(--fg); line-height: 1.25; }
+.rel-card-body { font-size: 11px; color: var(--fg2); line-height: 1.6; }
+.rel-card-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: auto; }
+.rel-tag { font-size: 9px; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; padding: 2px 6px; border-radius: 2px; }
+
+/* CODE BLOCK WITH HEADER */
+.code-titled { background: var(--bg2); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+.code-titled-head { background: var(--bg3); border-bottom: 1px solid var(--border); padding: 7px 14px; font-size: 10px; color: var(--fg3); display: flex; align-items: center; gap: 8px; }
+.code-titled-head::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--amber2); display: inline-block; }
+.code-titled-body { padding: 16px; font-size: 11px; line-height: 1.75; color: var(--fg2); overflow-x: auto; white-space: pre-wrap; }
+
+/* GO-TO-TOP */
+.gotop-demo { position: relative; width: 42px; height: 42px; border-radius: 6px; background: var(--bg2); border: 1px solid var(--border2); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background .15s, border-color .15s; }
+.gotop-demo:hover { background: var(--bg3); border-color: var(--red); }
+.gotop-demo svg { width: 16px; height: 16px; color: var(--fg2); }
+.gotop-demo:hover svg { color: var(--red); }
+
 /* FOOTER */
 .footer { margin-top: 48px; padding: 20px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
 @media(min-width:768px){ .footer { padding: 20px 40px; } }
@@ -181,10 +267,10 @@ body { background: var(--bg); color: var(--fg); font-family: var(--font-mono); f
 
 <!-- HEADER -->
 <div class="header">
-  <div class="header-badge">Design System · v1.0.0</div>
+  <div class="header-badge">Design System · v1.1.0</div>
   <div class="header-title">Lawfare <span>Timeline</span></div>
   <div class="header-sub">Design System Reference — Mobile-first · Dark Theme · Investigative Artifacts</div>
-  <div class="header-version">CC0 1.0 · lawfare-timeline.vercel.app · IBM Plex Mono + Syne</div>
+  <div class="header-version">CC0 1.0 · lawfare-timeline.vercel.app · IBM Plex Mono + Syne · atualizado 2026-05-28</div>
 </div>
 
 <!-- NAV -->
@@ -194,6 +280,7 @@ body { background: var(--bg); color: var(--fg); font-family: var(--font-mono); f
   <button class="nav-tab"         onclick="showTab('components')">Componentes</button>
   <button class="nav-tab"         onclick="showTab('grids')">Grids</button>
   <button class="nav-tab"         onclick="showTab('patterns')">Padrões P1–P8</button>
+  <button class="nav-tab"         onclick="showTab('v11')" style="color:var(--amber)">▸ v1.1 · Novos</button>
   <button class="nav-tab"         onclick="showTab('sync')">Corpus sync</button>
   <button class="nav-tab"         onclick="showTab('rules')">Regras AI</button>
 </div>
@@ -622,6 +709,350 @@ body { background: var(--bg); color: var(--fg); font-family: var(--font-mono); f
       </div>
     </div>
   </div>
+</div>
+
+<!-- ═══ V1.1 · NOVOS COMPONENTES ═══ -->
+<div id="tab-v11" class="tab-panel">
+
+  <div class="alert al-blue mb-24">
+    <div class="al-icon">✦</div>
+    <div>
+      <div class="al-title">Adições v1.1.0 — originadas do artefato T-199 Americanas (2026-05-28)</div>
+      <div class="al-desc">Sticky nav com scroll-spy · Stat cards com ícone SVG · Go-to-top · Pattern card top-accent · Badge pulse · Connection items · Related posts grid (3×2) · Code block com header</div>
+    </div>
+  </div>
+
+  <!-- 1. STICKY NAV COM SCROLL-SPY -->
+  <div class="section-title">1 · Sticky Nav com Scroll-Spy</div>
+  <div class="section-note">Substituição da nav de abas por nav fixa que acompanha o scroll e destaca a seção visível via <code style="color:var(--green)">IntersectionObserver</code>. Usar em artefatos de página única com múltiplas seções (não em dashboards multi-tab).</div>
+
+  <div style="background:var(--bg2);border:1px solid var(--border);border-radius:6px;overflow:hidden;margin-bottom:16px">
+    <div style="background:rgba(8,12,16,.95);border-bottom:1px solid var(--border)">
+      <div style="display:flex;align-items:center;padding:0 20px;overflow-x:auto;scrollbar-width:none">
+        <span class="nav-brand">T-199 Demo</span>
+        <a href="#" class="snav-tab active">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>Mecanismo
+        </a>
+        <a href="#" class="snav-tab">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Atores
+        </a>
+        <a href="#" class="snav-tab">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Padrões
+        </a>
+        <a href="#" class="snav-tab">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Relacionados
+        </a>
+      </div>
+    </div>
+    <div style="padding:12px 20px;font-size:11px;color:var(--fg3)">↑ nav com brand label vermelho · abas com ícone SVG 12px · tab ativo = border-bottom 2px var(--red)</div>
+  </div>
+
+  <div class="code-titled mb-24">
+    <div class="code-titled-head">JS — IntersectionObserver scroll-spy</div>
+    <div class="code-titled-body">var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if (e.isIntersecting){
+      var id = e.target.id;
+      tabs.forEach(function(t){
+        t.classList.toggle('active', t.getAttribute('data-section') === id);
+      });
+    }
+  });
+}, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
+
+document.querySelectorAll('.sec').forEach(function(s){ io.observe(s); });</div>
+  </div>
+
+  <!-- 2. PULSE BADGE -->
+  <div class="section-title">2 · Badge Pulse — Status "Ativo"</div>
+  <div class="section-note">Dot animado para indicar artefato/investigação em andamento. Usar <strong>somente</strong> quando o status é genuinamente ativo — não decorativo.</div>
+
+  <div class="badges-row mb-16">
+    <span class="badge b-red badge-pulse"><span class="pulse-dot red"></span>dossiê ativo</span>
+    <span class="badge b-amber badge-pulse"><span class="pulse-dot amber"></span>investigação em curso</span>
+    <span class="badge b-green badge-pulse"><span class="pulse-dot green"></span>monitoramento</span>
+    <span class="badge b-red">T-199 · thematic track</span>
+    <span class="badge b-amber">P08 · P06 · P03 · P09</span>
+    <span class="badge b-muted">CC0 1.0</span>
+  </div>
+
+  <div class="code-titled mb-24">
+    <div class="code-titled-head">HTML — badge com pulse dot</div>
+    <div class="code-titled-body">&lt;span class="badge b-red badge-pulse"&gt;
+  &lt;span class="pulse-dot red"&gt;&lt;/span&gt;
+  dossiê ativo
+&lt;/span&gt;
+
+/* CSS */
+.pulse-dot { width:7px; height:7px; border-radius:50%; animation: pulse-anim 2s infinite; }
+@keyframes pulse-anim { 0%,100%{ opacity:1; transform:scale(1); } 50%{ opacity:.4; transform:scale(.8); } }</div>
+  </div>
+
+  <!-- 3. STAT CARD COM ÍCONE -->
+  <div class="section-title">3 · Stat Cards com Ícone SVG — Grade 3 Colunas</div>
+  <div class="section-note">Evolução do <code>stat-item</code>. Cada card combina ícone SVG semântico (32×32px, background tintado) + número em Syne + label. Grade de 3 colunas fixas com divisória de 1px gap. Usar quando os dados têm natureza visual distinta.</div>
+
+  <div class="stat-icon-grid mb-16">
+    <div class="sic">
+      <div class="sic-icon" style="background:var(--red2)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+      </div>
+      <div class="sic-num" style="color:var(--red)">R$ 25,3 bi</div>
+      <div class="sic-lbl">fraude documentada<br>MPF abr/2025</div>
+    </div>
+    <div class="sic">
+      <div class="sic-icon" style="background:var(--amber2)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      </div>
+      <div class="sic-num" style="color:var(--amber)">R$ 70 bi</div>
+      <div class="sic-lbl">destruição de valor<br>mercado acionário</div>
+    </div>
+    <div class="sic">
+      <div class="sic-icon" style="background:var(--red2)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+      </div>
+      <div class="sic-num" style="color:var(--red)">0</div>
+      <div class="sic-lbl">condenações criminais<br>mai/2026</div>
+    </div>
+  </div>
+
+  <div class="code-titled mb-24">
+    <div class="code-titled-head">CSS — grade 3 colunas com ícone</div>
+    <div class="code-titled-body">.stat-icon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 fixas em desktop */
+  gap: 1px;                               /* divisória fina */
+  background: var(--border2);            /* cria o separador */
+  border: 1px solid var(--border2);
+  border-radius: 6px;
+  overflow: hidden;
+}
+@media(max-width:600px){ .stat-icon-grid { grid-template-columns: 1fr 1fr; } }
+
+.sic-icon { width:32px; height:32px; border-radius:6px;
+            display:flex; align-items:center; justify-content:center; }
+.sic-icon svg { width:16px; height:16px; }</div>
+  </div>
+
+  <!-- 4. PATTERN CARD TOP-ACCENT -->
+  <div class="section-title">4 · Pattern Card Top-Accent + Ícone (v1.1)</div>
+  <div class="section-note">Variante dos pattern cards com <strong>faixa de 2px no topo</strong> (em vez de left-border) e ícone 36×36px. Usar em grids de 2 colunas para padrões analíticos. Hover sutil via background shift.</div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:14px;margin-bottom:16px">
+    <div class="pcard-v2 red">
+      <div class="pcard-v2-head">
+        <div class="pcard-v2-icon">⚖️</div>
+        <div>
+          <div class="pcard-v2-id">P06 · Delonga Processual</div>
+          <div class="pcard-v2-name">3 anos sem condenação</div>
+        </div>
+      </div>
+      <div class="pcard-v2-desc">Jan/2023 → denúncia mar/2025 → fase inicial mai/2026. A cada etapa o relógio da prescrição avança e a probabilidade de accountability decresce.</div>
+      <div><span class="badge b-red">crítico</span></div>
+    </div>
+    <div class="pcard-v2 amber">
+      <div class="pcard-v2-head">
+        <div class="pcard-v2-icon">🛡️</div>
+        <div>
+          <div class="pcard-v2-id">P03 · HC como Chokepoint</div>
+          <div class="pcard-v2-name">TRF-2 reverte preventiva em 2 meses</div>
+        </div>
+      </div>
+      <div class="pcard-v2-desc">Prisão preventiva Jun/2024. TRF-2 concede HC Ago/2024. Ex-CEO removido da Interpol. Mesma geometria em dezenas de casos do corpus.</div>
+      <div><span class="badge b-amber">alto</span></div>
+    </div>
+  </div>
+
+  <div class="code-titled mb-24">
+    <div class="code-titled-head">CSS — pcard top-accent com ícone</div>
+    <div class="code-titled-body">.pcard-v2 { background:var(--bg1); border:1px solid var(--border); border-radius:6px;
+             padding:18px; position:relative; overflow:hidden; display:flex; flex-direction:column; gap:10px; }
+.pcard-v2::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; }
+.pcard-v2.red::before   { background: var(--red); }
+.pcard-v2.amber::before { background: var(--amber); }
+/* Icon box */
+.pcard-v2-icon { width:36px; height:36px; border-radius:6px; font-size:16px;
+                 display:flex; align-items:center; justify-content:center; }
+.pcard-v2.red .pcard-v2-icon { background: var(--red2); }</div>
+  </div>
+
+  <!-- 5. CONNECTION ITEMS -->
+  <div class="section-title">5 · Connection Items — Emaranhamento de Corpus</div>
+  <div class="section-note">Lista vertical de conexões entre entradas do corpus. Cada item: ícone de link (28px) + ID em âmbar + descrição. Hover shift de background.</div>
+
+  <div class="conn-list mb-16">
+    <div class="conn-item">
+      <div class="conn-item-icon">🔗</div>
+      <span class="conn-item-id">T-192</span>
+      <span class="conn-item-desc">Vorcaro triângulo: mecanismo análogo de isolamento do controlador via estrutura jurídica. Mesmo efeito, diferente arquitetura.</span>
+    </div>
+    <div class="conn-item">
+      <div class="conn-item-icon">📊</div>
+      <span class="conn-item-id">T-123</span>
+      <span class="conn-item-desc">Zero × Zero — assimetria punitiva: padrão de condenação nula 3 anos após evento. Americanas = instância corporativa mais documentada.</span>
+    </div>
+    <div class="conn-item">
+      <div class="conn-item-icon">⚡</div>
+      <span class="conn-item-id">ID 1563</span>
+      <span class="conn-item-desc">Toffoli revoga preventivas Rejeito: mesma geometria TRF-2/Americanas. P03 em contextos distintos, mesmo resultado.</span>
+    </div>
+  </div>
+
+  <!-- 6. RELATED POSTS GRID -->
+  <div class="section-title">6 · Related Posts Grid — 3 × 2</div>
+  <div class="section-note">Grade de 6 posts relacionados em 3 colunas × 2 linhas. Cada card: ícone emoji + ID do corpus + título + descrição curta + tags coloridas. Link nativo com hover state. Colapsa para 2 cols em tablet, 1 em mobile.</div>
+
+  <div class="rel-grid mb-16">
+    <a href="#" class="rel-card">
+      <div class="rel-card-head">
+        <div class="rel-card-icon" style="background:var(--amber2)">🏭</div>
+        <div>
+          <div class="rel-card-id">T-192 · P08+P11+P03</div>
+          <div class="rel-card-title">Vorcaro — Triângulo Carbono–Mineração–Banco</div>
+        </div>
+      </div>
+      <div class="rel-card-body">R$ 45,5 bi em UECs fictícias. Isolamento do controlador via fundo — mesma geometria dos 3G.</div>
+      <div class="rel-card-tags">
+        <span class="rel-tag" style="background:var(--amber2);color:var(--amber)">P08</span>
+        <span class="rel-tag" style="background:var(--amber2);color:var(--amber)">controlador isolado</span>
+      </div>
+    </a>
+    <a href="#" class="rel-card">
+      <div class="rel-card-head">
+        <div class="rel-card-icon" style="background:var(--red2)">🏦</div>
+        <div>
+          <div class="rel-card-id">T-114 · P08+P03+P09</div>
+          <div class="rel-card-title">Banco Master — Compliance Zero</div>
+        </div>
+      </div>
+      <div class="rel-card-body">R$ 12,2 bi em carteiras fictícias. Toffoli como relator. P08 bancário vs. corporativo.</div>
+      <div class="rel-card-tags">
+        <span class="rel-tag" style="background:var(--red2);color:var(--red)">crítico</span>
+      </div>
+    </a>
+    <a href="#" class="rel-card">
+      <div class="rel-card-head">
+        <div class="rel-card-icon" style="background:var(--blue2)">⚖️</div>
+        <div>
+          <div class="rel-card-id">T-123 · Zero × Zero</div>
+          <div class="rel-card-title">Assimetria Punitiva</div>
+        </div>
+      </div>
+      <div class="rel-card-body">8/Jan: 1.500 processados. Lava Jato / Americanas: zero condenações definitivas.</div>
+      <div class="rel-card-tags">
+        <span class="rel-tag" style="background:var(--blue2);color:var(--blue)">P03</span>
+        <span class="rel-tag" style="background:var(--blue2);color:var(--blue)">P06</span>
+      </div>
+    </a>
+    <a href="#" class="rel-card">
+      <div class="rel-card-head">
+        <div class="rel-card-icon" style="background:var(--amber2)">📊</div>
+        <div>
+          <div class="rel-card-id">T-191 · P11</div>
+          <div class="rel-card-title">Custeio Federal — R$ 32,4 bi</div>
+        </div>
+      </div>
+      <div class="rel-card-body">P11 público vs. privado. Extração estrutural via orçamento — legal, auditada, repetida.</div>
+      <div class="rel-card-tags">
+        <span class="rel-tag" style="background:var(--amber2);color:var(--amber)">P11</span>
+      </div>
+    </a>
+    <a href="#" class="rel-card">
+      <div class="rel-card-head">
+        <div class="rel-card-icon" style="background:var(--purple2)">🕸️</div>
+        <div>
+          <div class="rel-card-id">T-147 · sistêmico</div>
+          <div class="rel-card-title">Matriz de Emaranhamento</div>
+        </div>
+      </div>
+      <div class="rel-card-body">Nexo entre Panamericano, Americanas, Carbono Oculto e Compliance Zero. P08 recorrente.</div>
+      <div class="rel-card-tags">
+        <span class="rel-tag" style="background:var(--purple2);color:var(--purple)">P08</span>
+      </div>
+    </a>
+    <a href="#" class="rel-card">
+      <div class="rel-card-head">
+        <div class="rel-card-icon" style="background:var(--red2)">🏛️</div>
+        <div>
+          <div class="rel-card-id">T-122 · forense</div>
+          <div class="rel-card-title">República Capturada</div>
+        </div>
+      </div>
+      <div class="rel-card-body">R$ 140 bi documentados. 6 operações-núcleo. Americanas como instância corporativa.</div>
+      <div class="rel-card-tags">
+        <span class="rel-tag" style="background:var(--red2);color:var(--red)">R$ 140 bi</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- 7. CODE BLOCK COM HEADER -->
+  <div class="section-title">7 · Code Block com Header</div>
+  <div class="section-note">Bloco de código com barra de título indicando o caminho do arquivo. O dot âmbar antes do nome indica arquivo de dados. Usar para exibir JSON do corpus, fragmentos de código ou configurações.</div>
+
+  <div class="code-titled mb-16">
+    <div class="code-titled-head">_data/processados/T-199-americanas.json</div>
+    <div class="code-titled-body"><span style="color:#7ec8e3">"id"</span>: <span style="color:var(--amber)">199</span>,
+<span style="color:#7ec8e3">"padroes_ativados"</span>: [<span style="color:#c3e88d">"P08"</span>, <span style="color:#c3e88d">"P06"</span>, <span style="color:#c3e88d">"P03"</span>, <span style="color:#c3e88d">"P09"</span>],
+<span style="color:#7ec8e3">"status"</span>: <span style="color:#c3e88d">"confirmado"</span></div>
+  </div>
+
+  <!-- 8. GO-TO-TOP -->
+  <div class="section-title">8 · Go-to-Top — Botão Fixo</div>
+  <div class="section-note">Botão fixo no canto inferior direito. Aparece após 300–320px de scroll via JS. Hover altera border para vermelho. Posição: <code>position:fixed; bottom:28px; right:24px</code>. Nunca bloquear conteúdo em mobile.</div>
+
+  <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px">
+    <div class="gotop-demo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </div>
+    <div style="font-size:12px;color:var(--fg2)">Estado padrão — border var(--border2), ícone fg2</div>
+  </div>
+
+  <div class="code-titled mb-24">
+    <div class="code-titled-head">CSS + JS — go-to-top</div>
+    <div class="code-titled-body">#gotop {
+  position: fixed; bottom: 28px; right: 24px; z-index: 200;
+  width: 42px; height: 42px; border-radius: 6px;
+  background: var(--bg2); border: 1px solid var(--border2);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transform: translateY(10px);
+  transition: opacity .2s, transform .2s, background .15s;
+  pointer-events: none;
+}
+#gotop.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+#gotop:hover { background: var(--bg3); border-color: var(--red); }
+
+// JS
+window.addEventListener('scroll', function(){
+  if (window.scrollY > 320) gotop.classList.add('show');
+  else gotop.classList.remove('show');
+}, { passive: true });</div>
+  </div>
+
+  <!-- RESUMO DE QUANDO USAR -->
+  <div class="section-title">Guia de Decisão — v1.0 vs v1.1</div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Usar v1.0 (tabs)</div>
+      <div class="card-body" style="line-height:2">
+        · Dashboards com muitas seções (6+)<br>
+        · Conteúdo que não flui sequencialmente<br>
+        · Artefatos com abas de tipo distinto<br>
+        · Comparações entre conjuntos de dados<br>
+        · Referências consultadas, não lidas do início ao fim
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Usar v1.1 (scroll + sticky nav)</div>
+      <div class="card-body" style="line-height:2">
+        · Dossiês investigativos narrativos (T-XXX)<br>
+        · Conteúdo lido sequencialmente do início ao fim<br>
+        · Artefatos publicados externamente (X Articles, gosurf.site)<br>
+        · Páginas com timeline + análise + corpus como fluxo único<br>
+        · Mobile-first com experiência de leitura contínua
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <!-- ═══ CORPUS SYNC ═══ -->

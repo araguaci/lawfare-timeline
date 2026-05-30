@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/weight-scale.svg"
 tags: ["lawfare", "stf", "justica", "sancoes", "crise-diplomatica"]
 categories: lawfare
-permalink: /posts/2026-05-08-bolsonaro-protocola-revisao-criminal-erro-judiciario-delacao-nao-voluntaria-e-negativa-de-/
+permalink: /posts/bolsonaro-protocola-revisao-criminal-erro-judiciario-delacao-nao-voluntaria-e-negativa-de-/
 id_corpus: "1520"
 corpus_unificado: true
 ---

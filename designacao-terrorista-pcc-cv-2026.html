@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Designação Terrorista PCC/CV — Dossiê Geopolítico 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#080c10; --bg1:#0d1218; --bg2:#121820; --bg3:#1a2230;
+  --border:rgba(255,255,255,0.06); --border2:rgba(255,255,255,0.12);
+  --fg:#e8ecf0; --fg2:#8a9ab0; --fg3:#4a5a6a;
+  --red:#e84040; --red2:rgba(232,64,64,0.15);
+  --amber:#e8a020; --amber2:rgba(232,160,32,0.15);
+  --blue:#3090e8; --blue2:rgba(48,144,232,0.12);
+  --green:#28c880; --green2:rgba(40,200,128,0.12);
+  --purple:#a060e8; --purple2:rgba(160,96,232,0.12);
+  --cyan:#20d0e8;
+  --font-mono:'IBM Plex Mono',monospace;
+  --font-display:'Syne',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-mono);font-size:13px;line-height:1.6;min-height:100vh}
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-track{background:var(--bg1)}
+::-webkit-scrollbar-thumb{background:var(--bg3);border-radius:2px}
+
+/* HEADER */
+.header{background:var(--bg1);border-bottom:1px solid var(--border2);padding:24px 20px;position:relative;overflow:hidden}
+@media(min-width:768px){.header{padding:32px 40px 28px}}
+.header::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--purple),var(--red),var(--amber),var(--red),var(--purple));
+  background-size:300% 100%;animation:scanline 4s linear infinite}
+@keyframes scanline{to{background-position:300% 0}}
+
+.meta-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:20px}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:3px 8px;border-radius:3px;
+  font-size:10px;font-weight:600;letter-spacing:.10em;text-transform:uppercase;font-family:var(--font-mono)}
+.b-red{background:var(--red2);color:var(--red);border:1px solid rgba(232,64,64,.3)}
+.b-amber{background:var(--amber2);color:var(--amber);border:1px solid rgba(232,160,32,.3)}
+.b-blue{background:var(--blue2);color:var(--blue);border:1px solid rgba(48,144,232,.3)}
+.b-purple{background:var(--purple2);color:var(--purple);border:1px solid rgba(160,96,232,.3)}
+.b-green{background:var(--green2);color:var(--green);border:1px solid rgba(40,200,128,.3)}
+.b-muted{background:transparent;color:var(--fg3);border:1px solid var(--border2)}
+.badge-pulse{display:inline-flex;align-items:center;gap:6px}
+.pulse-dot{width:7px;height:7px;border-radius:50%;animation:pulse-anim 2s infinite}
+.pulse-dot.red{background:var(--red)}
+@keyframes pulse-anim{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
+
+.hero-title{font-family:var(--font-display);font-size:clamp(24px,4vw,44px);font-weight:800;
+  letter-spacing:-.02em;line-height:1.1;margin-bottom:10px}
+.hero-title .accent-red{color:var(--red)}
+.hero-title .accent-purple{color:var(--purple)}
+.hero-subtitle{font-size:13px;color:var(--fg2);line-height:1.7;max-width:720px;margin-bottom:24px}
+
+/* STATS GRID */
+.stat-icon-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+  background:var(--border2);border:1px solid var(--border2);border-radius:6px;overflow:hidden;
+  max-width:700px}
+@media(max-width:600px){.stat-icon-grid{grid-template-columns:repeat(2,1fr)}}
+.sic{background:var(--bg1);padding:16px;display:flex;flex-direction:column;gap:8px;transition:background .15s}
+.sic:hover{background:var(--bg2)}
+.sic-icon{width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center}
+.sic-icon svg{width:16px;height:16px}
+.sic-num{font-family:var(--font-display);font-size:clamp(18px,3vw,24px);font-weight:700;
+  letter-spacing:-.02em;line-height:1}
+.sic-lbl{font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--fg3);line-height:1.45}
+
+/* STICKY NAV */
+.sticky-nav{position:sticky;top:0;z-index:100;background:rgba(8,12,16,.95);
+  backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.snav-inner{display:flex;align-items:center;overflow-x:auto;scrollbar-width:none;padding:0 20px}
+.snav-inner::-webkit-scrollbar{display:none}
+@media(min-width:768px){.snav-inner{padding:0 40px}}
+.nav-brand{font-size:10px;font-weight:600;letter-spacing:.1em;color:var(--purple);
+  text-transform:uppercase;white-space:nowrap;padding:14px 14px 14px 0;
+  border-right:1px solid var(--border2);margin-right:4px;flex-shrink:0}
+.snav-tab{padding:14px 12px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--fg3);border:none;background:none;border-bottom:2px solid transparent;
+  white-space:nowrap;transition:all .15s;display:flex;align-items:center;gap:5px;
+  cursor:pointer;font-family:var(--font-mono)}
+.snav-tab:hover{color:var(--fg2)}
+.snav-tab.active{color:var(--fg);border-bottom-color:var(--purple)}
+.snav-tab svg{width:12px;height:12px;flex-shrink:0}
+
+/* MAIN */
+.main{max-width:1400px;margin:0 auto;padding:0 20px 80px}
+@media(min-width:768px){.main{padding:0 40px 80px}}
+
+.sec{padding-top:40px}
+.section-title{font-family:var(--font-mono);font-size:11px;font-weight:700;
+  letter-spacing:.15em;text-transform:uppercase;color:var(--fg3);
+  margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+
+/* CARDS */
+.card{background:var(--bg1);border:1px solid var(--border);border-radius:6px;padding:20px}
+.card-compact{background:var(--bg1);border:1px solid var(--border);border-radius:6px;padding:14px 16px}
+.card-accent-left{background:var(--bg2);border-left:3px solid var(--purple);border-radius:0 6px 6px 0;padding:16px 20px}
+.card-accent-left.red{border-left-color:var(--red)}
+.card-accent-left.amber{border-left-color:var(--amber)}
+.card-accent-left.blue{border-left-color:var(--blue)}
+
+.alert-red{background:var(--red2);border:1px solid rgba(232,64,64,.25);border-radius:6px;padding:16px 20px;display:flex;gap:12px}
+.alert-amber{background:var(--amber2);border:1px solid rgba(232,160,32,.25);border-radius:6px;padding:16px 20px;display:flex;gap:12px}
+.alert-purple{background:var(--purple2);border:1px solid rgba(160,96,232,.25);border-radius:6px;padding:16px 20px;display:flex;gap:12px}
+.alert-blue{background:var(--blue2);border:1px solid rgba(48,144,232,.25);border-radius:6px;padding:16px 20px;display:flex;gap:12px}
+.alert-icon{font-size:18px;flex-shrink:0;line-height:1.4}
+.alert-title{font-size:12px;font-weight:600;margin-bottom:4px}
+.alert-body{font-size:12px;color:var(--fg2);line-height:1.7}
+
+/* GRIDS */
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px}
+.grid-4{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px}
+
+/* CARD TITLE */
+.card-title{font-family:var(--font-display);font-size:14px;font-weight:700;
+  letter-spacing:.02em;margin-bottom:8px}
+.card-body{font-size:12px;color:var(--fg2);line-height:1.7}
+.card-label{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--fg3);margin-bottom:6px}
+
+/* TIMELINE */
+.timeline{position:relative;padding-left:24px}
+.timeline::before{content:'';position:absolute;left:7px;top:0;bottom:0;width:1px;background:var(--border2)}
+.tl-item{position:relative;margin-bottom:20px}
+.tl-dot{position:absolute;left:-20px;top:5px;width:10px;height:10px;border-radius:50%;border:2px solid var(--bg)}
+.tl-dot.red{background:var(--red)}
+.tl-dot.amber{background:var(--amber)}
+.tl-dot.blue{background:var(--blue)}
+.tl-dot.purple{background:var(--purple)}
+.tl-dot.green{background:var(--green)}
+.tl-date{font-size:10px;color:var(--fg3);letter-spacing:.06em;margin-bottom:4px}
+.tl-title{font-size:13px;font-weight:600;margin-bottom:4px}
+.tl-desc{font-size:12px;color:var(--fg2);line-height:1.6}
+
+/* TABLE */
+.table-wrap{overflow-x:auto}
+.data-table{width:100%;border-collapse:collapse}
+.data-table th{font-size:10px;letter-spacing:.10em;text-transform:uppercase;color:var(--fg3);
+  text-align:left;padding:8px 12px;border-bottom:1px solid var(--border2);white-space:nowrap}
+.data-table td{padding:10px 12px;font-size:12px;border-bottom:1px solid var(--border);vertical-align:top}
+.data-table tr:hover td{background:var(--bg2)}
+
+/* PATTERN CARDS v2 */
+.pcard-v2{background:var(--bg1);border:1px solid var(--border);border-radius:6px;padding:18px;
+  position:relative;overflow:hidden;display:flex;flex-direction:column;gap:10px}
+.pcard-v2::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.pcard-v2.red::before{background:var(--red)}
+.pcard-v2.amber::before{background:var(--amber)}
+.pcard-v2.purple::before{background:var(--purple)}
+.pcard-v2.blue::before{background:var(--blue)}
+.pcard-v2-head{display:flex;align-items:flex-start;gap:12px}
+.pcard-v2-icon{width:36px;height:36px;border-radius:6px;display:flex;align-items:center;
+  justify-content:center;flex-shrink:0;font-size:16px}
+.pcard-v2.red .pcard-v2-icon{background:var(--red2)}
+.pcard-v2.amber .pcard-v2-icon{background:var(--amber2)}
+.pcard-v2.purple .pcard-v2-icon{background:var(--purple2)}
+.pcard-v2.blue .pcard-v2-icon{background:var(--blue2)}
+.pcard-v2-pid{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg3);margin-bottom:4px}
+.pcard-v2-name{font-family:var(--font-display);font-size:13px;font-weight:700}
+.pcard-v2-desc{font-size:12px;color:var(--fg2);line-height:1.65}
+
+/* CONNECTION ITEMS */
+.conn-list{display:flex;flex-direction:column;gap:8px}
+.conn-item{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;
+  background:var(--bg1);border:1px solid var(--border);border-radius:6px;transition:background .15s}
+.conn-item:hover{background:var(--bg2)}
+.conn-item-icon{width:28px;height:28px;border-radius:4px;background:var(--blue2);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:13px}
+.conn-item-id{font-size:11px;font-weight:600;color:var(--amber);min-width:60px;flex-shrink:0;padding-top:2px}
+.conn-item-desc{font-size:12px;color:var(--fg2);line-height:1.6}
+
+/* QUOTE BLOCK */
+.quote-block{background:var(--bg3);border-left:3px solid var(--amber);border-radius:0 6px 6px 0;
+  padding:16px 20px;margin:16px 0}
+.quote-text{font-size:13px;color:var(--fg);line-height:1.7;font-style:italic;margin-bottom:8px}
+.quote-source{font-size:10px;color:var(--fg3);letter-spacing:.06em;text-transform:uppercase}
+
+/* CODE BLOCK */
+.code-titled{background:var(--bg2);border:1px solid var(--border);border-radius:6px;overflow:hidden}
+.code-titled-head{background:var(--bg3);border-bottom:1px solid var(--border);padding:7px 14px;
+  font-size:10px;color:var(--fg3);display:flex;align-items:center;gap:8px}
+.code-titled-head::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--amber);display:inline-block}
+.code-titled-body{padding:16px;font-size:11px;line-height:1.75;color:var(--fg2);overflow-x:auto;white-space:pre-wrap}
+
+/* GAP */
+.gap-12{margin-bottom:12px}
+.gap-16{margin-bottom:16px}
+.gap-24{margin-bottom:24px}
+.gap-32{margin-bottom:32px}
+
+/* LABEL ROW */
+.label-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+
+/* DIVIDER */
+.divider{height:1px;background:var(--border);margin:24px 0}
+
+/* LACUNA CARD */
+.lacuna-card{background:var(--bg2);border:1px solid rgba(232,160,32,.2);border-radius:6px;padding:16px 20px}
+.lacuna-num{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);margin-bottom:6px}
+.lacuna-text{font-size:12px;color:var(--fg2);line-height:1.65}
+
+/* RELATED POSTS */
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:700px){.rel-grid{grid-template-columns:1fr}}
+@media(min-width:480px) and (max-width:700px){.rel-grid{grid-template-columns:repeat(2,1fr)}}
+.rel-card{background:var(--bg1);border:1px solid var(--border);border-radius:6px;padding:16px;
+  display:flex;flex-direction:column;gap:10px;text-decoration:none;color:inherit;
+  transition:background .15s,border-color .15s}
+.rel-card:hover{background:var(--bg2);border-color:var(--border2)}
+.rel-card-head{display:flex;align-items:center;gap:10px}
+.rel-card-icon{width:34px;height:34px;border-radius:6px;display:flex;align-items:center;
+  justify-content:center;font-size:15px;flex-shrink:0}
+.rel-card-id{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--amber)}
+.rel-card-title{font-family:var(--font-display);font-size:13px;font-weight:700}
+.rel-card-body{font-size:11px;color:var(--fg2);line-height:1.6}
+.rel-tag{font-size:9px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  padding:2px 6px;border-radius:2px}
+
+/* GO TOP */
+#gotop{position:fixed;bottom:28px;right:24px;z-index:200;width:42px;height:42px;border-radius:6px;
+  background:var(--bg2);border:1px solid var(--border2);display:flex;align-items:center;
+  justify-content:center;opacity:0;transform:translateY(10px);
+  transition:opacity .2s,transform .2s,background .15s;pointer-events:none;cursor:pointer}
+#gotop.show{opacity:1;transform:translateY(0);pointer-events:auto}
+#gotop:hover{background:var(--bg3);border-color:var(--purple)}
+
+/* FOOTER */
+.footer{margin-top:48px;padding:20px;border-top:1px solid var(--border);
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+@media(min-width:768px){.footer{padding:20px 40px}}
+.footer-text{font-size:11px;color:var(--fg3)}
+
+/* PRINT */
+@media print{
+  body{background:#fff;color:#111}
+  .sticky-nav{display:none!important}
+  #gotop{display:none!important}
+  :root{--bg:#fff;--bg1:#f8f8f8;--bg2:#f0f0f0;--bg3:#e8e8e8;
+    --border:rgba(0,0,0,.12);--border2:rgba(0,0,0,.20);--fg:#111;--fg2:#444;--fg3:#888}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="meta-row">
+    <span class="badge b-purple badge-pulse"><span class="pulse-dot red"></span>ATIVO — 28 MAI 2026</span>
+    <span class="badge b-red">FTO + SDGT</span>
+    <span class="badge b-amber">GEOPOLÍTICA</span>
+    <span class="badge b-blue">INCIDENTE DIPLOMÁTICO</span>
+    <span class="badge b-muted">ID 1512 — CORPUS</span>
+    <span class="badge b-muted">CC0 1.0</span>
+  </div>
+  <h1 class="hero-title">
+    <span class="accent-purple">PCC</span> &amp; <span class="accent-red">CV</span><br>
+    Designação Terrorista
+  </h1>
+  <p class="hero-subtitle">
+    Departamento de Estado dos EUA designa Primeiro Comando da Capital e Comando Vermelho como
+    Organizações Terroristas Estrangeiras (FTO) e Terroristas Globais Especialmente Designados (SDGT).
+    Vigência: 05/06/2026. Governo Lula havia rejeitado pedido formal em março/2026.
+    A imprensa brasileira enquadra como "questão de soberania".
+  </p>
+  <div class="stat-icon-grid">
+    <div class="sic">
+      <div class="sic-icon" style="background:var(--red2)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2" stroke-linecap="round">
+          <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+        </svg>
+      </div>
+      <div class="sic-num" style="color:var(--red)">2</div>
+      <div class="sic-lbl">organizações<br>designadas</div>
+    </div>
+    <div class="sic">
+      <div class="sic-icon" style="background:var(--amber2)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2" stroke-linecap="round">
+          <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+        </svg>
+      </div>
+      <div class="sic-num" style="color:var(--amber)">12</div>
+      <div class="sic-lbl">estados EUA<br>com células</div>
+    </div>
+    <div class="sic">
+      <div class="sic-icon" style="background:var(--purple2)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+      </div>
+      <div class="sic-num" style="color:var(--purple)">05/06</div>
+      <div class="sic-lbl">vigência<br>FTO 2026</div>
+    </div>
+    <div class="sic">
+      <div class="sic-icon" style="background:var(--red2)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2" stroke-linecap="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+      </div>
+      <div class="sic-num" style="color:var(--red)">113</div>
+      <div class="sic-lbl">vistos negados<br>crime org. 2024</div>
+    </div>
+    <div class="sic">
+      <div class="sic-icon" style="background:var(--amber2)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2" stroke-linecap="round">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+        </svg>
+      </div>
+      <div class="sic-num" style="color:var(--amber)">3</div>
+      <div class="sic-lbl">meses de<br>negociação frustrada</div>
+    </div>
+    <div class="sic">
+      <div class="sic-icon" style="background:var(--blue2)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+        </svg>
+      </div>
+      <div class="sic-num" style="color:var(--blue)">P08<br><span style="font-size:13px">P10</span></div>
+      <div class="sic-lbl">padrões<br>sistêmicos ativos</div>
+    </div>
+  </div>
+</div>
+
+<!-- STICKY NAV -->
+<nav class="sticky-nav" id="nav">
+  <div class="snav-inner">
+    <div class="nav-brand">TERRORISMO-EUA</div>
+    <button class="snav-tab active" onclick="scrollTo('fato')" data-section="fato">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      Fato
+    </button>
+    <button class="snav-tab" onclick="scrollTo('cronologia')" data-section="cronologia">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="2" x2="12" y2="22"/><polyline points="19 15 12 22 5 15"/></svg>
+      Cronologia
+    </button>
+    <button class="snav-tab" onclick="scrollTo('atores')" data-section="atores">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>
+      Atores
+    </button>
+    <button class="snav-tab" onclick="scrollTo('mecanismo')" data-section="mecanismo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M4.93 4.93l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M19.07 19.07l-1.41-1.41M12 2v2M12 20v2"/></svg>
+      Mecanismo
+    </button>
+    <button class="snav-tab" onclick="scrollTo('padroes')" data-section="padroes">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      Padrões
+    </button>
+    <button class="snav-tab" onclick="scrollTo('lacunas')" data-section="lacunas">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      Lacunas
+    </button>
+    <button class="snav-tab" onclick="scrollTo('corpus')" data-section="corpus">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      Corpus
+    </button>
+  </div>
+</nav>
+
+<div class="main">
+
+<!-- ── SEÇÃO: FATO ── -->
+<section class="sec" id="fato">
+  <div class="section-title">01 — O Fato Documentado</div>
+
+  <div class="alert-purple gap-24">
+    <div class="alert-icon">⚡</div>
+    <div>
+      <div class="alert-title" style="color:var(--purple)">Ato Oficial — U.S. Department of State · 28/05/2026</div>
+      <div class="alert-body">
+        Secretário de Estado Marco Rubio designou formalmente PCC e CV como <strong>Specially Designated Global Terrorists (SDGTs)</strong> com efeito imediato, e iniciou designação como <strong>Foreign Terrorist Organizations (FTOs)</strong> com vigência a partir de 05/06/2026, via publicação no Federal Register. Fundamento legal: Seção 219 do Immigration and Nationality Act + Executive Order 13224.
+      </div>
+    </div>
+  </div>
+
+  <div class="quote-block">
+    <div class="quote-text">"Primeiro Comando da Capital and Comando Vermelho are two of the most violent criminal organizations in Brazil. Their reach extends throughout our region and into our country. Today, I designated these organizations as Foreign Terrorist Organizations and Specially Designated Global Terrorists."</div>
+    <div class="quote-source">Marco Rubio — Secretário de Estado dos EUA · 28/05/2026</div>
+  </div>
+
+  <div class="gap-24"></div>
+
+  <div class="section-title">Efeitos Jurídicos Imediatos</div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-label">SDGT — Efeito imediato</div>
+      <div class="card-title">Congelamento de Ativos</div>
+      <div class="card-body">Todos os ativos em jurisdição americana vinculados a PCC/CV ficam bloqueados. Qualquer entidade americana que mantenha relação financeira com os grupos incorre em sanção federal.</div>
+    </div>
+    <div class="card">
+      <div class="card-label">FTO — Vigência 05/06/2026</div>
+      <div class="card-title">Criminalização de Suporte Material</div>
+      <div class="card-body">Fornecer qualquer recurso, serviço ou suporte a FTO é crime federal nos EUA. Inclui lavagem via sistema financeiro americano, transferências via bancos correspondentes e rede de fintechs.</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Impacto migratório</div>
+      <div class="card-title">Restrição de Vistos</div>
+      <div class="card-body">Membros e colaboradores identificados ficam inadmissíveis. Em 2024, 113 brasileiros já tiveram vistos negados por conexão com crime organizado — número tende a crescer com a designação formal.</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Efeito cascata</div>
+      <div class="card-title">Sanções Secundárias</div>
+      <div class="card-body">Bancos e instituições financeiras de terceiros países que processem transações vinculadas a PCC/CV ficam expostos a sanções secundárias do OFAC — incluindo bancos brasileiros com operações nos EUA.</div>
+    </div>
+  </div>
+
+  <div class="gap-24"></div>
+
+  <div class="alert-amber">
+    <div class="alert-icon">⚠️</div>
+    <div>
+      <div class="alert-title" style="color:var(--amber)">P04b em Operação — Enquadramento da Imprensa Brasileira</div>
+      <div class="alert-body">
+        A cobertura dominante da imprensa brasileira enquadra a designação como "questão de soberania" e "risco financeiro para o Brasil" — deslocando o debate do fato documentado (organizações com células em 12 estados americanos, 113 vistos negados, tráfico de armas via rede transnacional) para a narrativa de ingerência estrangeira. O padrão P04b documenta esse enquadramento como <strong>função ativa de proteção do mecanismo</strong>, não como posição editorial neutra.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SEÇÃO: CRONOLOGIA ── -->
+<section class="sec" id="cronologia">
+  <div class="section-title">02 — Cronologia da Sequência Diplomática</div>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot amber"></div>
+      <div class="tl-date">NOV 2025</div>
+      <div class="tl-title">Sinalização Pública — Bloomberg</div>
+      <div class="tl-desc">Promotor Lincoln Gakiya (GAECO/SP) declara publicamente que EUA devem designar PCC e possivelmente CV como terroristas. Sinalização de que a pressão já estava em curso nos bastidores.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot amber"></div>
+      <div class="tl-date">MAR 2026 — Reunião em Brasília</div>
+      <div class="tl-title">Pedido Formal dos EUA — Rejeitado</div>
+      <div class="tl-desc">David Gamble (chefe de estratégia de sanções do State Dept.) se reúne com 8 autoridades brasileiras em Brasília. Pedido formal de designação apresentado. Secretário Nacional Mario Sarrubo rejeita: <em>"não temos organizações terroristas aqui, temos organizações criminosas que se infiltraram na sociedade"</em>. FBI reporta células em 12 estados americanos.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot red"></div>
+      <div class="tl-date">MAR 2026 — Tentativa de adiamento</div>
+      <div class="tl-title">Chanceler Vieira Telefona para Rubio</div>
+      <div class="tl-desc">Ministro Mauro Vieira telefona diretamente a Marco Rubio pedindo que a decisão seja adiada ao menos até o encontro presencial Lula–Trump em Washington. Pedido recusado implicitamente.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot amber"></div>
+      <div class="tl-date">MAR 2026 — Sinal geopolítico</div>
+      <div class="tl-title">Flávio Bolsonaro na Casa Branca</div>
+      <div class="tl-desc">Senador Flávio Bolsonaro visita Trump e declara ter pedido "enfaticamente" a designação do PCC e CV. Declara: <em>"Enquanto Lula veio à Casa Branca para fazer lobby em nome de traficantes, eu vim para fazer exatamente o oposto."</em> Designação segue visita em menos de 60 dias.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot red"></div>
+      <div class="tl-date">28 MAI 2026 — HOJE</div>
+      <div class="tl-title">Designação Formal — Rubio</div>
+      <div class="tl-desc">Secretário de Estado Rubio designa formalmente PCC e CV como SDGT (efeito imediato) e inicia processo FTO (vigência 05/06/2026). Publicação confirmada no site oficial do Departamento de Estado. Governo brasileiro não foi consultado na etapa final.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot purple"></div>
+      <div class="tl-date">05 JUN 2026 — PENDENTE</div>
+      <div class="tl-title">Publicação no Federal Register — FTO entra em vigor</div>
+      <div class="tl-desc">Data de vigência da designação FTO. A partir daí, suporte material a PCC/CV é crime federal nos EUA com consequências sobre sistema financeiro internacional.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SEÇÃO: ATORES ── -->
+<section class="sec" id="atores">
+  <div class="section-title">03 — Atores Documentados</div>
+
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Ator</th>
+          <th>Função no Evento</th>
+          <th>Instituição</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Marco Rubio</strong></td>
+          <td>Ato designatório — autor da decisão formal</td>
+          <td>U.S. Department of State</td>
+          <td><span class="badge b-red">DECISOR</span></td>
+        </tr>
+        <tr>
+          <td><strong>Luiz Inácio Lula da Silva</strong></td>
+          <td>Presidente — governo que rejeitou pedido prévio e opôs-se à designação</td>
+          <td>Presidência da República</td>
+          <td><span class="badge b-amber">OPÔS-SE</span></td>
+        </tr>
+        <tr>
+          <td><strong>Mauro Vieira</strong></td>
+          <td>Chanceler — telefonou a Rubio para tentar adiar</td>
+          <td>MRE</td>
+          <td><span class="badge b-blue">NEGOCIAÇÃO FRUSTRADA</span></td>
+        </tr>
+        <tr>
+          <td><strong>Mario Sarrubo</strong></td>
+          <td>Porta-voz da rejeição formal: "não temos terroristas"</td>
+          <td>MJSP — Secretaria Nacional de Segurança Pública</td>
+          <td><span class="badge b-amber">REJEITOU</span></td>
+        </tr>
+        <tr>
+          <td><strong>David Gamble</strong></td>
+          <td>Chefe de estratégia de sanções — conduziu reunião em Brasília</td>
+          <td>U.S. Department of State</td>
+          <td><span class="badge b-red">EXECUTOU PEDIDO</span></td>
+        </tr>
+        <tr>
+          <td><strong>Flávio Bolsonaro</strong></td>
+          <td>Solicitou designação diretamente a Trump na Casa Branca</td>
+          <td>Senado Federal</td>
+          <td><span class="badge b-purple">CATALISADOR POLÍTICO</span></td>
+        </tr>
+        <tr>
+          <td><strong>Lincoln Gakiya</strong></td>
+          <td>Promotor GAECO/SP — sinalizou publicamente a designação iminente em nov/2025</td>
+          <td>MPSP / GAECO</td>
+          <td><span class="badge b-green">FONTE TÉCNICA</span></td>
+        </tr>
+        <tr>
+          <td><strong>PCC / CV</strong></td>
+          <td>Organizações designadas — células documentadas em 12 estados americanos</td>
+          <td>Crime organizado transnacional</td>
+          <td><span class="badge b-red">DESIGNADOS FTO + SDGT</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ── SEÇÃO: MECANISMO ── -->
+<section class="sec" id="mecanismo">
+  <div class="section-title">04 — Mecanismo Estrutural</div>
+
+  <div class="alert-red gap-16">
+    <div class="alert-icon">🔍</div>
+    <div>
+      <div class="alert-title" style="color:var(--red)">A Pergunta que a Imprensa Não Faz</div>
+      <div class="alert-body">
+        A Lei 13.260/2016 (Lei Antiterrorismo brasileira) exclui explicitamente o tráfico com fins lucrativos de sua definição de terrorismo. Quem redigiu essa exclusão, em que contexto, e quais atores se beneficiaram dessa arquitetura nos 10 anos seguintes — é a lacuna estrutural mais importante do evento.
+      </div>
+    </div>
+  </div>
+
+  <div class="gap-24"></div>
+  <div class="section-title">O Loop de Proteção</div>
+
+  <div class="grid-2 gap-24">
+    <div class="card-accent-left red">
+      <div class="card-label">Camada 1 — Legislativa</div>
+      <div class="card-title">Lei Antiterrorismo com Exclusão Estrutural</div>
+      <div class="card-body">A Lei 13.260/2016 define terrorismo como atos de "terror social ou generalizado" excluindo explicitamente o crime com fins lucrativos. PCC e CV — que operam como empresas criminosas com objetivos financeiros — ficam fora do alcance da lei antiterror brasileira por design.</div>
+    </div>
+    <div class="card-accent-left amber">
+      <div class="card-label">Camada 2 — Executiva</div>
+      <div class="card-title">Rejeição do Pedido Americano</div>
+      <div class="card-body">Governo Lula rejeita pedido formal do State Dept. em março/2026, tentando adiar via diplomacia. A rejeição produz o efeito prático de proteger a operação financeira dos grupos dentro do território brasileiro — mesmo com células documentadas operando em solo americano.</div>
+    </div>
+    <div class="card-accent-left">
+      <div class="card-label">Camada 3 — Narrativa (P04b)</div>
+      <div class="card-title">Enquadramento "Soberania"</div>
+      <div class="card-body">Imprensa capturada enquadra a designação americana como "ataque à soberania" e "risco financeiro". O enquadramento desloca o debate dos fatos documentados (células em 12 estados, 113 vistos negados, tráfico de armas) para a narrativa de ingerência — tornando a proteção apresentável como patriotismo.</div>
+    </div>
+    <div class="card-accent-left blue">
+      <div class="card-label">Camada 4 — Judicial</div>
+      <div class="card-title">STF como Chokepoint Potencial</div>
+      <div class="card-body">Questão aberta: o governo brasileiro vai acionar o STF para bloquear cooperação com sanções americanas? Se sim, a geometria 535×1 pode ser ativada para tornar a não-cooperação irreversível via decisão monocrática com prazo indeterminado — replicando o padrão da Lei da Dosimetria.</div>
+    </div>
+  </div>
+
+  <div class="gap-24"></div>
+
+  <div class="section-title">Conflito de Definições — Brasil × EUA</div>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr><th>Critério</th><th>Lei Brasileira (13.260/2016)</th><th>Lei Americana (INA Sec. 219)</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Definição base</strong></td>
+          <td>Atos de terror social ou generalizado por razões políticas, religiosas ou de preconceito</td>
+          <td>Atividade terrorista — inclui operações violentas com impacto transnacional</td>
+        </tr>
+        <tr>
+          <td><strong>Exclusão explícita</strong></td>
+          <td style="color:var(--red)">Exclui tráfico e crime com fins lucrativos</td>
+          <td>Não exclui crimes com fins lucrativos se há dimensão terrorista/transnacional</td>
+        </tr>
+        <tr>
+          <td><strong>PCC/CV se enquadram?</strong></td>
+          <td style="color:var(--amber)">Não — por design da lei</td>
+          <td style="color:var(--red)">Sim — designação formal confirmada</td>
+        </tr>
+        <tr>
+          <td><strong>Efeito prático</strong></td>
+          <td>PCC/CV tratados como crime comum — sem instrumentos antiterror</td>
+          <td>Congelamento de ativos, criminalização de suporte, inadmissibilidade</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ── SEÇÃO: PADRÕES ── -->
+<section class="sec" id="padroes">
+  <div class="section-title">05 — Padrões Sistêmicos Ativados</div>
+
+  <div class="grid-2">
+    <div class="pcard-v2 amber">
+      <div class="pcard-v2-head">
+        <div class="pcard-v2-icon">📡</div>
+        <div>
+          <div class="pcard-v2-pid">P04b</div>
+          <div class="pcard-v2-name">Both-sidesism Funcional</div>
+        </div>
+      </div>
+      <div class="pcard-v2-desc">Enquadramento dominante trata mecanismo estrutural documentado (proteção legislativa de organizações criminosas transnacionais) como equivalente a percepção política sobre soberania. Função ativa de proteção do sistema — não posição editorial neutra.</div>
+      <div class="label-row">
+        <span class="badge b-amber">IMPRENSA CAPTURADA</span>
+        <span class="badge b-amber">ATIVO HOJE</span>
+      </div>
+    </div>
+    <div class="pcard-v2 purple">
+      <div class="pcard-v2-head">
+        <div class="pcard-v2-icon">🌐</div>
+        <div>
+          <div class="pcard-v2-pid">P10</div>
+          <div class="pcard-v2-name">Infraestrutura de Serviço Compartilhada</div>
+        </div>
+      </div>
+      <div class="pcard-v2-desc">A mesma arquitetura jurídico-financeira (fintechs, criptoativos, lavagem via sistema de pagamentos) serve tanto à cleptocracia política quanto ao narco. A designação americana expõe a camada financeira transnacional — que é onde a sobreposição com o corpus se torna mais documentável.</div>
+      <div class="label-row">
+        <span class="badge b-purple">TRANSNACIONAL</span>
+        <span class="badge b-purple">FINANCEIRO</span>
+      </div>
+    </div>
+    <div class="pcard-v2 blue">
+      <div class="pcard-v2-head">
+        <div class="pcard-v2-icon">💻</div>
+        <div>
+          <div class="pcard-v2-pid">P08</div>
+          <div class="pcard-v2-name">Infiltração em Fintechs e Criptoativos</div>
+        </div>
+      </div>
+      <div class="pcard-v2-desc">Sanções SDGT/FTO expõem o canal financeiro mais vulnerável: fintechs brasileiras com operações em dólares e bancos correspondentes americanos que processaram transações de entidades ligadas a PCC/CV. A designação cria o instrumento para rastrear esse fluxo.</div>
+      <div class="label-row">
+        <span class="badge b-blue">OFAC</span>
+        <span class="badge b-blue">FINTECHS</span>
+      </div>
+    </div>
+    <div class="pcard-v2 red">
+      <div class="pcard-v2-head">
+        <div class="pcard-v2-icon">🏛️</div>
+        <div>
+          <div class="pcard-v2-pid">P03</div>
+          <div class="pcard-v2-name">Captura Judicial Emergencial</div>
+        </div>
+      </div>
+      <div class="pcard-v2-desc">Risco documentado: o STF pode ser acionado para bloquear cooperação com sanções americanas — tornando a não-cooperação irreversível via decisão monocrática. O padrão da Lei da Dosimetria (suspensão em 14h26) indica velocidade possível de resposta.</div>
+      <div class="label-row">
+        <span class="badge b-red">RISCO CRÍTICO</span>
+        <span class="badge b-red">STF POTENCIAL</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SEÇÃO: LACUNAS ── -->
+<section class="sec" id="lacunas">
+  <div class="section-title">06 — Lacunas Investigativas</div>
+  <p class="card-body gap-16">Perguntas sem resposta identificadas — dados de primeira classe. O que não se sabe é tão importante quanto o que se sabe.</p>
+
+  <div class="grid-2">
+    <div class="lacuna-card">
+      <div class="lacuna-num">Lacuna 01 — Lei Antiterrorismo</div>
+      <div class="lacuna-text">Quem redigiu a exclusão do tráfico lucrativo da Lei 13.260/2016? Quais parlamentares foram os principais defensores da exclusão no processo legislativo? Quais financiadores de campanha desses parlamentares têm conexões documentadas com PCC/CV ou com sua infraestrutura financeira?</div>
+    </div>
+    <div class="lacuna-card">
+      <div class="lacuna-num">Lacuna 02 — Ativos Expostos</div>
+      <div class="lacuna-text">Quais ativos específicos do PCC/CV estão em jurisdição americana e serão efetivamente congelados pelo OFAC? Existe sobreposição entre financiadores identificados pelo OFAC e atores documentados no corpus do lawfare-timeline (P10)?</div>
+    </div>
+    <div class="lacuna-card">
+      <div class="lacuna-num">Lacuna 03 — Sistema Bancário</div>
+      <div class="lacuna-text">Quais bancos brasileiros com operações em dólares têm exposição a transações de entidades vinculadas a PCC/CV? O Banco Master (P05/P11 documentado) tem exposição a essa rede via suas operações de crédito consignado e captação de recursos?</div>
+    </div>
+    <div class="lacuna-card">
+      <div class="lacuna-num">Lacuna 04 — Resposta Judicial</div>
+      <div class="lacuna-text">O governo vai acionar o STF para bloquear cooperação com sanções? Se sim, qual ministro seria o relator e via qual mecanismo processual? A geometria 535×1 pode ser aplicada aqui para tornar a não-cooperação estruturalmente irreversível?</div>
+    </div>
+    <div class="lacuna-card">
+      <div class="lacuna-num">Lacuna 05 — Beneficiário Final</div>
+      <div class="lacuna-text">Como em todas as operações do corpus: nenhuma investigação brasileira identificou o beneficiário final da estrutura financeira de PCC/CV. A designação americana cria instrumentos (OFAC, subpoenas) para rastrear esse fluxo. Será que o rastreamento chegará ao ponto de inflexão onde investigações brasileiras pararam?</div>
+    </div>
+    <div class="lacuna-card">
+      <div class="lacuna-num">Lacuna 06 — Eleições 2026</div>
+      <div class="lacuna-text">Como a designação será instrumentalizada na campanha eleitoral? A hipótese Rio Times: candidatos de direita a abraçarão como validação; o governo Lula enfrenta o dilema "fraco no crime vs. subserviente a Washington". Qual das duas narrativas terá mais impacto eleitoral segundo dados de segurança pública como prioridade do eleitor?</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SEÇÃO: CORPUS ── -->
+<section class="sec" id="corpus">
+  <div class="section-title">07 — Entrada no Corpus &amp; Conexões</div>
+
+  <div class="code-titled gap-24">
+    <div class="code-titled-head">_data/lawfare-1512.json — entrada do corpus</div>
+    <div class="code-titled-body">{
+  "id": "1512",
+  "date": "2026-05-28",
+  "date_precision": "day",
+  "title": "State Dept. designa PCC e CV como FTO e SDGT",
+  "category": "incidente_diplomatico",
+  "patterns": ["P04b", "P08", "P10", "P03"],
+  "evidence_status": "ev-confirmed",
+  "status": "confirmado",
+  "lacuna_investigativa": [
+    "Quem redigiu exclusão do tráfico na Lei 13.260/2016?",
+    "Quais ativos PCC/CV em jurisdição americana serão congelados?",
+    "O STF será acionado para bloquear cooperação com OFAC?"
+  ],
+  "ponto_de_inflexao": "Governo rejeitou pedido formal — designação foi feita unilateralmente",
+  "analise": "P04b operando: enquadramento 'soberania' protege mecanismo estrutural documentado (P10). Lei 13.260/2016 com exclusão de tráfico lucrativo é dispositivo que operacionaliza proteção em linguagem jurídica."
+}</div>
+  </div>
+
+  <div class="section-title">Conexões com o Corpus</div>
+  <div class="conn-list gap-24">
+    <div class="conn-item">
+      <div class="conn-item-icon">🏛️</div>
+      <div class="conn-item-id">ID 1481–1496</div>
+      <div class="conn-item-desc">Bloco PCC/ʼNdrangheta — crime organizado transnacional. Infraestrutura de serviço compartilhada (P10) documentada. Conexão direta com o objeto desta designação.</div>
+    </div>
+    <div class="conn-item">
+      <div class="conn-item-icon">🔗</div>
+      <div class="conn-item-id">ID 1497–1505</div>
+      <div class="conn-item-desc">PCC novas entradas — Narco Fluxo, Carbono Oculto/Genial, Hezbollah, FARC. Rede transnacional cuja dimensão financeira fica exposta pelas sanções OFAC.</div>
+    </div>
+    <div class="conn-item">
+      <div class="conn-item-icon">⚖️</div>
+      <div class="conn-item-id">ID 181</div>
+      <div class="conn-item-desc">Suspensão monocrática da Lei da Dosimetria (09/05/2026). Padrão P03 em velocidade máxima — modelo de como STF pode bloquear cooperação com sanções americanas se acionado.</div>
+    </div>
+    <div class="conn-item">
+      <div class="conn-item-icon">🏦</div>
+      <div class="conn-item-id">Compliance Zero</div>
+      <div class="conn-item-desc">Banco Master / FGC — P05/P11. Infraestrutura financeira com potencial exposição à rede de lavagem transnacional que as sanções OFAC agora tornam rastreável.</div>
+    </div>
+  </div>
+
+  <div class="gap-32"></div>
+  <div class="section-title">Dossiês Relacionados</div>
+  <div class="rel-grid">
+    <a class="rel-card" href="PCC-CV-Intel-Dashboard-2026.html">
+      <div class="rel-card-head">
+        <div class="rel-card-icon" style="background:var(--red2)">🔴</div>
+        <div>
+          <div class="rel-card-id">DASHBOARD</div>
+          <div class="rel-card-title">PCC-CV Intel 2026</div>
+        </div>
+      </div>
+      <div class="rel-card-body">Dashboard de inteligência sobre PCC e CV — mapeamento de rede, financeiro e geopolítica.</div>
+      <div class="label-row"><span class="rel-tag" style="background:var(--red2);color:var(--red)">P08</span><span class="rel-tag" style="background:var(--purple2);color:var(--purple)">P10</span></div>
+    </a>
+    <a class="rel-card" href="narco-fluxo.html">
+      <div class="rel-card-head">
+        <div class="rel-card-icon" style="background:var(--amber2)">💰</div>
+        <div>
+          <div class="rel-card-id">DOSSIÊ</div>
+          <div class="rel-card-title">Narco Fluxo</div>
+        </div>
+      </div>
+      <div class="rel-card-body">Fluxo financeiro do narcotráfico e sua sobreposição com sistema financeiro regulado.</div>
+      <div class="label-row"><span class="rel-tag" style="background:var(--amber2);color:var(--amber)">P07</span><span class="rel-tag" style="background:var(--blue2);color:var(--blue)">P08</span></div>
+    </a>
+    <a class="rel-card" href="republica-capturada.html">
+      <div class="rel-card-head">
+        <div class="rel-card-icon" style="background:var(--purple2)">🏛️</div>
+        <div>
+          <div class="rel-card-id">ANÁLISE</div>
+          <div class="rel-card-title">República Capturada</div>
+        </div>
+      </div>
+      <div class="rel-card-body">Mapeamento da captura institucional — como P10 conecta cleptocracia política e narcocleptocracia.</div>
+      <div class="label-row"><span class="rel-tag" style="background:var(--purple2);color:var(--purple)">P10</span><span class="rel-tag" style="background:var(--red2);color:var(--red)">P11</span></div>
+    </a>
+    <a class="rel-card" href="banco-master-compliance-zero.html">
+      <div class="rel-card-head">
+        <div class="rel-card-icon" style="background:var(--amber2)">🏦</div>
+        <div>
+          <div class="rel-card-id">DOSSIÊ</div>
+          <div class="rel-card-title">Compliance Zero</div>
+        </div>
+      </div>
+      <div class="rel-card-body">Banco Master / FGC — transferência de risco privado para garantia pública. Potencial exposição OFAC.</div>
+      <div class="label-row"><span class="rel-tag" style="background:var(--amber2);color:var(--amber)">P05</span><span class="rel-tag" style="background:var(--red2);color:var(--red)">P11</span></div>
+    </a>
+    <a class="rel-card" href="paralelos.html">
+      <div class="rel-card-head">
+        <div class="rel-card-icon" style="background:var(--blue2)">🌎</div>
+        <div>
+          <div class="rel-card-id">GEOPOLÍTICA</div>
+          <div class="rel-card-title">Paralelos</div>
+        </div>
+      </div>
+      <div class="rel-card-body">Dinâmicas geopolíticas Brasil-EUA-Venezuela. Contexto da escalada diplomática em curso.</div>
+      <div class="label-row"><span class="rel-tag" style="background:var(--blue2);color:var(--blue)">DIPLOMACIA</span></div>
+    </a>
+    <a class="rel-card" href="paradoxo-constitucional.html">
+      <div class="rel-card-head">
+        <div class="rel-card-icon" style="background:var(--purple2)">⚖️</div>
+        <div>
+          <div class="rel-card-id">JUDICIAL</div>
+          <div class="rel-card-title">Paradoxo Constitucional</div>
+        </div>
+      </div>
+      <div class="rel-card-body">Dois vetores autoritários que se co-legitimam. Contexto para entender resposta judicial potencial.</div>
+      <div class="label-row"><span class="rel-tag" style="background:var(--purple2);color:var(--purple)">P03</span><span class="rel-tag" style="background:var(--amber2);color:var(--amber)">P04b</span></div>
+    </a>
+  </div>
+</section>
+
+</div><!-- /main -->
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-text">Designação Terrorista PCC/CV — Dossiê ID 1512 · lawfare-timeline · 28/05/2026</div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap">
+    <span class="badge b-muted">CC0 1.0 Universal — Domínio Público</span>
+    <span class="badge b-muted">Fontes: U.S. State Dept · Reuters · Bloomberg · Rio Times</span>
+  </div>
+</footer>
+
+<!-- GO TOP -->
+<button id="gotop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Voltar ao topo">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script>
+// Scroll nav
+var gotop = document.getElementById('gotop');
+var tabs = document.querySelectorAll('.snav-tab');
+window.addEventListener('scroll', function(){
+  if(window.scrollY > 320) gotop.classList.add('show');
+  else gotop.classList.remove('show');
+}, {passive:true});
+
+// Smooth scroll to section
+function scrollTo(id){
+  var el = document.getElementById(id);
+  if(el){ var y = el.getBoundingClientRect().top + window.scrollY - 80; window.scrollTo({top:y,behavior:'smooth'}); }
+}
+
+// IntersectionObserver scroll-spy
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(en){
+    if(en.isIntersecting){
+      var id = en.target.id;
+      tabs.forEach(function(t){
+        t.classList.toggle('active', t.getAttribute('data-section') === id);
+      });
+    }
+  });
+}, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
+document.querySelectorAll('.sec').forEach(function(s){ io.observe(s); });
+</script>
+</body>
+</html>

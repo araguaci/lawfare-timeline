@@ -3,12 +3,13 @@
   "$id": "https://lawfare-timeline.vercel.app/design-system/v1.0",
   "meta": {
     "name": "Lawfare Timeline — Design System",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Design system completo para artefatos investigativos do projeto lawfare-timeline. Mobile-first, dark theme, simetria de cards, legibilidade máxima. Para uso por AIs na criação de artefatos HTML standalone.",
     "license": "CC0 1.0 Universal",
     "author": "Artes do Sul Desenvolvimento Web / AI Nativo Brasil",
     "project_url": "https://lawfare-timeline.vercel.app",
-    "last_updated": "2026-04-11",
+    "last_updated": "2026-05-28",
+    "changelog_v1_1": "Sticky nav scroll-spy (IntersectionObserver) · Stat cards com ícone SVG 32px · Go-to-top fixo · Pattern card top-accent (2px topo + ícone) · Badge pulse animado · Connection items · Related posts grid 3×2 · Code block com header · Guia tabs vs scroll-spy",
     "usage_note": "Todos os artefatos gerados com este design system são standalone HTML com CSS inline. Nenhuma dependência externa além das Google Fonts especificadas. Sempre incluir print support e CC0 footer."
   },
 
@@ -404,6 +405,66 @@
       "responsive_wrap": ".mindmap-svg-wrap { padding: 20px; overflow-x: auto; } svg.mindmap { width: 100%; max-width: 1200px; height: auto; display: block; margin: 0 auto; }"
     },
 
+    "sticky_nav_scrollspy": {
+      "description": "Nav fixa com destaque de seção por IntersectionObserver. Usar em dossiês narrativos de página única (não em dashboards multi-tab).",
+      "when_to_use": "Artefatos lidos sequencialmente: T-studies, dossiês, timelines. NÃO usar em dashboards com abas de tipo distinto.",
+      "css_snippet": ".sticky-nav { position:sticky; top:0; z-index:100; background:rgba(8,12,16,.95); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); } .nav-brand { font-size:10px; font-weight:600; letter-spacing:.1em; color:var(--red); text-transform:uppercase; white-space:nowrap; padding:14px 16px 14px 0; border-right:1px solid var(--border2); } .snav-tab { padding:14px 14px; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--fg3); border:none; background:none; border-bottom:2px solid transparent; white-space:nowrap; transition:all .15s; display:flex; align-items:center; gap:5px; } .snav-tab.active { color:var(--fg); border-bottom-color:var(--red); } .snav-tab svg { width:12px; height:12px; }",
+      "js_snippet": "var io = new IntersectionObserver(function(e){ e.forEach(function(en){ if(en.isIntersecting){ var id=en.target.id; tabs.forEach(function(t){ t.classList.toggle('active', t.getAttribute('data-section')===id); }); } }); }, { rootMargin:'-30% 0px -60% 0px', threshold:0 }); document.querySelectorAll('.sec').forEach(function(s){ io.observe(s); });",
+      "structure": ["nav-brand (ID da operação em vermelho)", "snav-tab × N (ícone SVG 12px + label)", "data-section attr mapeia para id da .sec"],
+      "tab_vs_scroll_guide": "tabs = 6+ seções sem sequência | scroll-spy = 4-8 seções narrativas sequenciais"
+    },
+
+    "badge_pulse": {
+      "description": "Badge com dot animado para status genuinamente ativo/em andamento.",
+      "rule": "Usar SOMENTE quando o status é ativamente em curso. Nunca decorativo.",
+      "css_snippet": ".badge-pulse { display:inline-flex; align-items:center; gap:6px; } .pulse-dot { width:7px; height:7px; border-radius:50%; animation:pulse-anim 2s infinite; } .pulse-dot.red { background:var(--red); } .pulse-dot.amber { background:var(--amber); } .pulse-dot.green { background:var(--green); } @keyframes pulse-anim { 0%,100%{ opacity:1; transform:scale(1); } 50%{ opacity:.4; transform:scale(.8); } }",
+      "html_example": "<span class=\"badge b-red badge-pulse\"><span class=\"pulse-dot red\"></span>dossiê ativo</span>",
+      "badge_muted": "background:transparent; color:var(--fg3); border:1px solid var(--border2) — para badges neutros como 'CC0 1.0'"
+    },
+
+    "stat_card_with_icon": {
+      "description": "Stat card com ícone SVG semântico 32×32px + número + label. Grade de 3 colunas fixas com divisória 1px.",
+      "grid_css": ".stat-icon-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border2); border:1px solid var(--border2); border-radius:6px; overflow:hidden; } @media(max-width:600px){ .stat-icon-grid { grid-template-columns:1fr 1fr; } }",
+      "card_css": ".sic { background:var(--bg1); padding:18px 16px; display:flex; flex-direction:column; gap:8px; transition:background .15s; } .sic:hover { background:var(--bg2); } .sic-icon { width:32px; height:32px; border-radius:6px; display:flex; align-items:center; justify-content:center; } .sic-icon svg { width:16px; height:16px; } .sic-num { font-family:var(--font-display); font-size:clamp(18px,3vw,26px); font-weight:700; letter-spacing:-.02em; line-height:1; } .sic-lbl { font-size:10px; letter-spacing:.07em; text-transform:uppercase; color:var(--fg3); line-height:1.45; }",
+      "icon_rule": "Ícone deve ser semanticamente relacionado ao dado. Background do ícone = versão tintada da cor semântica (var(--red2), var(--amber2) etc.)",
+      "vs_v1": "Diferença do stat-item v1.0: inclui ícone SVG, usa gap:1px como divisória visual, grid-template-columns:repeat(3,1fr) fixo"
+    },
+
+    "pattern_card_top_accent": {
+      "description": "Variante dos pattern cards com faixa de 2px no topo (::before) e ícone 36×36px. Usar em grids de 2 colunas.",
+      "css_snippet": ".pcard-v2 { background:var(--bg1); border:1px solid var(--border); border-radius:6px; padding:18px; position:relative; overflow:hidden; display:flex; flex-direction:column; gap:10px; } .pcard-v2::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; } .pcard-v2.red::before { background:var(--red); } .pcard-v2.amber::before { background:var(--amber); } .pcard-v2-icon { width:36px; height:36px; border-radius:6px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:16px; } .pcard-v2.red .pcard-v2-icon { background:var(--red2); }",
+      "structure": ["::before top accent 2px", "pcard-v2-head (icon 36px + pid label + pname title)", "pcard-v2-desc body text", "badge de severidade"],
+      "vs_v1": "v1 usava border-left 3px (lateral). v1.1 usa ::before top 2px (topo) com ícone — mais coerente com card layout horizontal de 2 cols"
+    },
+
+    "connection_item": {
+      "description": "Item de conexão entre entradas do corpus. Lista vertical com ícone 28px + ID âmbar + descrição.",
+      "css_snippet": ".conn-list { display:flex; flex-direction:column; gap:8px; } .conn-item { display:flex; align-items:flex-start; gap:12px; padding:12px 16px; background:var(--bg1); border:1px solid var(--border); border-radius:6px; transition:background .15s; } .conn-item:hover { background:var(--bg2); } .conn-item-icon { width:28px; height:28px; border-radius:4px; background:var(--blue2); display:flex; align-items:center; justify-content:center; flex-shrink:0; } .conn-item-id { font-size:11px; font-weight:600; color:var(--amber); min-width:56px; flex-shrink:0; padding-top:2px; } .conn-item-desc { font-size:12px; color:var(--fg2); line-height:1.6; }",
+      "use": "Seção de 'emaranhamento' ou 'conexões com o corpus' — lista de IDs relacionados com descrição da relação"
+    },
+
+    "related_posts_grid": {
+      "description": "Grade de 6 posts relacionados — 3 colunas × 2 linhas em desktop.",
+      "grid_css": ".rel-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; } @media(max-width:700px){ .rel-grid { grid-template-columns:1fr; } } @media(min-width:480px) and (max-width:700px){ .rel-grid { grid-template-columns:repeat(2,1fr); } }",
+      "card_css": ".rel-card { background:var(--bg1); border:1px solid var(--border); border-radius:6px; padding:16px; display:flex; flex-direction:column; gap:10px; text-decoration:none; color:inherit; transition:background .15s, border-color .15s; } .rel-card:hover { background:var(--bg2); border-color:var(--border2); } .rel-card-icon { width:34px; height:34px; border-radius:6px; font-size:15px; } .rel-card-id { font-size:10px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--amber); } .rel-card-title { font-family:var(--font-display); font-size:13px; font-weight:700; } .rel-card-body { font-size:11px; color:var(--fg2); line-height:1.6; }",
+      "structure": ["rel-card-head (icon emoji 34px + meta col)", "rel-card-id + rel-card-title", "rel-card-body (2-3 linhas max)", "rel-card-tags (rel-tag 9px)"],
+      "rule": "Exatamente 6 posts para preencher 3×2. Ícones emoji semânticos (🏦 banco, ⚖️ judicial, 📊 dados). Tags coloridas com background tintado da cor semântica."
+    },
+
+    "code_block_titled": {
+      "description": "Bloco de código com barra de título mostrando o caminho do arquivo. Dot âmbar antes do nome.",
+      "css_snippet": ".code-titled { background:var(--bg2); border:1px solid var(--border); border-radius:6px; overflow:hidden; } .code-titled-head { background:var(--bg3); border-bottom:1px solid var(--border); padding:7px 14px; font-size:10px; color:var(--fg3); display:flex; align-items:center; gap:8px; } .code-titled-head::before { content:''; width:6px; height:6px; border-radius:50%; background:var(--amber2); display:inline-block; } .code-titled-body { padding:16px; font-size:11px; line-height:1.75; color:var(--fg2); overflow-x:auto; white-space:pre-wrap; }",
+      "use": "Exibir JSON do corpus, fragmentos de configuração, snippets de código associados a um arquivo específico"
+    },
+
+    "gotop_button": {
+      "description": "Botão fixo no canto inferior direito para retornar ao topo. Aparece após threshold de scroll.",
+      "css_snippet": "#gotop { position:fixed; bottom:28px; right:24px; z-index:200; width:42px; height:42px; border-radius:6px; background:var(--bg2); border:1px solid var(--border2); display:flex; align-items:center; justify-content:center; opacity:0; transform:translateY(10px); transition:opacity .2s, transform .2s, background .15s; pointer-events:none; } #gotop.show { opacity:1; transform:translateY(0); pointer-events:auto; } #gotop:hover { background:var(--bg3); border-color:var(--red); }",
+      "js_snippet": "window.addEventListener('scroll', function(){ if(window.scrollY>320) gotop.classList.add('show'); else gotop.classList.remove('show'); }, {passive:true});",
+      "icon": "SVG chevron-up 16×16px, stroke currentColor, stroke-width 2.5",
+      "rule": "Nunca bloquear conteúdo em mobile. Usar somente em artefatos de página única com conteúdo longo (>3 telas)."
+    },
+
     "footer": {
       "description": "Footer obrigatório CC0 em todos os artefatos",
       "css_snippet": ".footer { margin-top: 48px; padding: 20px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; } @media (min-width: 768px) { .footer { padding: 20px 40px; } } .footer-text { font-size: 11px; color: var(--fg3); }",
@@ -654,21 +715,29 @@
   },
 
   "ai_instructions": {
-    "description": "Instruções diretas para AIs que usarem este design system",
+    "description": "Instruções diretas para AIs que usarem este design system v1.1",
     "when_creating_artifact": [
       "1. Identificar o tipo de artefato (dossie_operacao, dashboard_intel, etc.)",
       "2. Copiar o css_root_template para o <style> e nunca modificar as variáveis base",
       "3. Usar combined_import das Google Fonts",
-      "4. Aplicar grid_system com auto-fit + minmax — nunca colunas fixas",
-      "5. Começar todos os estilos pelo mobile, adicionar @media para desktop",
-      "6. Usar badges com a cor correta do severity_map para cada status",
-      "7. Incluir footer com CC0 e fontes",
-      "8. Incluir @media print",
-      "9. Verificar se todos os cards num grid têm padding e estrutura simétrica",
-      "10. Testar mentalmente: 'como isso parece em tela de 375px?'"
+      "4. Decidir: tabs (dashboard multi-seção) ou sticky nav scroll-spy (dossiê narrativo)?",
+      "5. Aplicar grid_system com auto-fit + minmax — nunca colunas fixas (exceto stat-icon-grid 3 cols)",
+      "6. Começar todos os estilos pelo mobile, adicionar @media para desktop",
+      "7. Usar badges com a cor correta do severity_map — badge-pulse para status genuinamente ativos",
+      "8. Se artefato tem stats: usar stat_card_with_icon (v1.1) com ícones SVG semânticos",
+      "9. Se artefato tem seção de corpus/conexões: usar connection_item list",
+      "10. Se artefato tem conteúdo longo: incluir gotop_button fixo bottom-right",
+      "11. Se artefato é dossiê narrativo: incluir related_posts_grid 3×2 ao final",
+      "12. Incluir footer com CC0 e fontes",
+      "13. Incluir @media print",
+      "14. Verificar se todos os cards num grid têm padding e estrutura simétrica",
+      "15. Testar mentalmente: 'como isso parece em tela de 375px?'"
     ],
+    "nav_decision_tree": "Dossiê narrativo sequencial (T-study, timeline)? → sticky nav scroll-spy (v1.1). Dashboard com 6+ seções de tipo distinto? → tab nav (v1.0).",
+    "stat_decision_tree": "Dados com natureza visual distinta (financeiro, tempo, contagem)? → stat_card_with_icon com ícone SVG. Dados homogêneos? → stat-item simples.",
+    "pcard_decision_tree": "Padrão em grid de 2 colunas? → pcard-v2 top-accent (v1.1). Lista vertical de padrões? → pattern-card left-border (v1.0).",
     "color_decision_tree": "1. É um status de investigação? → usar severity_map. 2. É uma conexão em SVG? → confirmed=solid, suspected=dashed, weak=dotted. 3. É decorativo? → NÃO usar cor, usar fg3.",
-    "grid_decision_tree": "1. 1 item? → 1col. 2. 2-3 itens comparáveis? → grid_2col. 3. 4-6 itens? → grid_3col. 4. Métricas numéricas? → grid_4col. 5. Sempre usar auto-fit.",
+    "grid_decision_tree": "1. 1 item? → 1col. 2. 2-3 itens comparáveis? → grid_2col. 3. 4-6 itens? → grid_3col. 4. Métricas numéricas com ícone? → stat-icon-grid repeat(3,1fr). 5. Sempre usar auto-fit (exceto stat-icon-grid).",
     "tone": "Jornalismo investigativo. Técnico sem ser inacessível. Dados sempre com fonte. Análise separada de fato.",
     "language": "Português brasileiro. Termos técnicos jurídicos e financeiros mantidos. Siglas explicadas na primeira ocorrência."
   }

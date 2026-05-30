@@ -52,7 +52,7 @@ Deflagração: [27/mar/2015](/posts/2015-03-27-operacao-zelotes/) · Brasília �
 | Referência | Paralelo |
 | --- | --- |
 | [Captura regulatória BACEN/CVM](/posts/captura-regulatoria-bacen-cvm-inss-como-nos-do-sistema/) | Nós regulatórios capturados |
-| [T-192 Vorcaro/ANM](/posts/2026-05-28-vorcaro-triangulo-carbono-mineracao-banco/) | Captura ANM (chokepoint mineral) |
+| [T-192 Vorcaro/ANM](/posts/vorcaro-triangulo-carbono-mineracao-banco/) | Captura ANM (chokepoint mineral) |
 | [Escândalos financeiros](/posts/2025-08-11-escandalos-no-sistema-financeiro/) | Contexto 1995–2025 |
 
 ## Entradas timeline

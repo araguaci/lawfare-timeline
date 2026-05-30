@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/skull.svg"
 tags: ["biomm", "compliance-zero", "carbono-oculto", "cvm", "fundo-cartago", "trustee-dtvm", "banco-master", "pochmann", "ibge", "sintese", "investigacao", "captura-institucional"]
 categories: escandalos
-permalink: /posts/2026-05-19-sintese-tres-vetores-de-conexao-operacional-biomminvestigacoes-ativas-compliance-zero-carb/
+permalink: /posts/sintese-tres-vetores-de-conexao-operacional-biomminvestigacoes-ativas-compliance-zero-carb/
 id_corpus: "1546"
 corpus_unificado: true
 ---

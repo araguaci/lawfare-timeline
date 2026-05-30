@@ -17,7 +17,7 @@ pin: false
 
 # T-201 · PCC transnacional — OFAC, EUA e eixo luso
 
-Três entradas timeline (1488, 1496, 1490) formavam o **cluster PCC transnacional residual** no radar Top 30 — parcialmente cobertas por [PCC Fluxo Completo](/posts/pcc-fluxo-completo-2026/) e [T-195 CPI eleitoral](/posts/2026-05-28-cpi-crime-organizado-pcc-infiltracao-eleitoral/), mas sem dossiê 1:1. Este estudo fecha a lacuna.
+Três entradas timeline (1488, 1496, 1490) formavam o **cluster PCC transnacional residual** no radar Top 30 — parcialmente cobertas por [PCC Fluxo Completo](/posts/pcc-fluxo-completo-2026/) e [T-195 CPI eleitoral](/posts/cpi-crime-organizado-pcc-infiltracao-eleitoral/), mas sem dossiê 1:1. Este estudo fecha a lacuna.
 
 > O PCC deixou de ser exportador de cocaína para operar **divisão americana** com fentanil e armas — primeira vez processado nos EUA por operações domésticas no território americano.
 
@@ -66,7 +66,7 @@ Divisão EUA: fentanil + armas (MA) ← OFAC Carmo (lavagem R$ 1,2 bi)
 | Dossiê | Escopo |
 | --- | --- |
 | [PCC Fluxo Completo](/posts/pcc-fluxo-completo-2026/) | Arquitetura 1481–1510 · R$ 9,4 bi+ |
-| [T-195 CPI × eleitoral](/posts/2026-05-28-cpi-crime-organizado-pcc-infiltracao-eleitoral/) | Infiltração institucional BR |
+| [T-195 CPI × eleitoral](/posts/cpi-crime-organizado-pcc-infiltracao-eleitoral/) | Infiltração institucional BR |
 | [Carbono Oculto](/posts/carbono-oculto/) | FIDC Faria Lima · lavagem |
 | [Itália 416-bis](/posts/italia-enquadra-pcc-legislacao-antimafia-primeira-vez-organizacao-brasileira/) | ’Ndrangheta · marco jurídico |
 | [Crise Diplomática](/posts/crise-diplomatica-brasil-eua-2025-2026/) | Contexto BR–EUA |

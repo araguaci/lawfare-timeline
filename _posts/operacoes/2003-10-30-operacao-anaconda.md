@@ -8,6 +8,7 @@ image:
 article_id: 20031030_Anaconda
 description: 2003-10-30-São Paulo, SP-corrupção judicial-venda de sentenças
 tags: ['corrupcao', 'corrupcao-judicial', 'venda-de-sentencas']
+permalink: /posts/2003-10-30-operacao-anaconda/
 ---
 
 # Operação Anaconda - Desmantelamento de rede de venda de sentenças judiciais. - Corrupção

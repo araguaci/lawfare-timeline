@@ -23,7 +23,7 @@ Entrada canônica do **registry T-143** no track temático Jekyll. Consolida tr�
 | --- | --- |
 | Artefato HTML | [gosurf.site/duplo-padrao-judicial](https://gosurf.site/duplo-padrao-judicial) |
 | Estudo longo | [Duplo Padrão Judicial — abril/2026](/posts/duplo-padrao-judicial/) |
-| Timeline recente | [1483 ocupações plenário](/posts/2026-05-05-timeline-1483-duplo-padrao-ocupacoes-do-plenario/) |
+| Timeline recente | [1483 ocupações plenário](/posts/timeline-1483-duplo-padrao-ocupacoes-do-plenario/) |
 
 > Padrão estrutural: critério de punição segue **posição política**, não gravidade objetiva (P02/P06).
 
@@ -53,10 +53,10 @@ Art. 55 CF e Código de Ética não distinguem motivação — a seletividade é
 
 | Dossiê | Eixo |
 | --- | --- |
-| [T-198 COAF × Moraes](/posts/2026-05-28-coaf-moraes-acumulacao-funcoes-dosimetria/) | COAF como alavanca seletiva |
-| [T-180 TSE seletividade](/posts/2026-05-28-tse-seletividade-inelegibilidade-cassacao/) | Inelegibilidade assimétrica |
+| [T-198 COAF × Moraes](/posts/coaf-moraes-acumulacao-funcoes-dosimetria/) | COAF como alavanca seletiva |
+| [T-180 TSE seletividade](/posts/tse-seletividade-inelegibilidade-cassacao/) | Inelegibilidade assimétrica |
 | [Assimetria punitiva](/posts/assimetria-punitiva/) | Framework P02 |
-| [Anatomia liminar monocrática](/posts/2026-05-13-anatomia-liminar-monocratica-stf-poder-individual-sem-controle/) | P03 chokepoint |
+| [Anatomia liminar monocrática](/posts/anatomia-liminar-monocratica-stf-poder-individual-sem-controle/) | P03 chokepoint |
 
 ## Padrões
 

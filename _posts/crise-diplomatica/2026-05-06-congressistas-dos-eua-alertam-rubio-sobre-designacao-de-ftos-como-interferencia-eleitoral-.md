@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/globe.svg"
 tags: ["crise-diplomatica", "soberania", "sancoes", "relacoes-internacionais", "diplomacia", "lawfare"]
 categories: crise-diplomatica
-permalink: /posts/2026-05-06-congressistas-dos-eua-alertam-rubio-sobre-designacao-de-ftos-como-interferencia-eleitoral-/
+permalink: /posts/congressistas-dos-eua-alertam-rubio-sobre-designacao-de-ftos-como-interferencia-eleitoral-/
 id_corpus: "1517"
 corpus_unificado: true
 ---
