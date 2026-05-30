@@ -40,7 +40,7 @@ Investigação aponta **lavagem via padaria** (laranja).
 
 ## Precedente judicial (STF)
 
-Meses antes, [Flávio Dino reintegrou delegada SC](/posts/2025-11-12-flavio-dino-reintegra-candidata-delegada-casada-com-traficante-condenado/) eliminada por casamento com condenado por tráfico — contra TJSC e delegado-geral. Dino: afastamento seria *"dano grave e de difícil reparação"*. Delegado-geral: *"Como se combate o crime dessa forma?"*
+Meses antes, [Flávio Dino reintegrou delegada SC](/posts/flavio-dino-reintegra-candidata-delegada-casada-com-traficante-condenado/) eliminada por casamento com condenado por tráfico — contra TJSC e delegado-geral. Dino: afastamento seria *"dano grave e de difícil reparação"*. Delegado-geral: *"Como se combate o crime dessa forma?"*
 
 O caso Layla materializa o risco que a eliminação SC tentava prevenir — **P03 invertido**: chokepoint judicial flexibiliza critério; facção ocupa vácuo operacional.
 
@@ -59,7 +59,7 @@ Critério idoneidade flexibilizado (Dino/STF) → ingresso sem barreira efetiva
 | [T-195 CPI × PCC eleitoral](/posts/cpi-crime-organizado-pcc-infiltracao-eleitoral/) | Infiltração institucional BR |
 | [T-201 PCC transnacional](/posts/pcc-transnacional-ofac-eua-luso/) | Eixo PCC global |
 | [PCC Fluxo Completo](/posts/pcc-fluxo-completo-2026/) | Arquitetura 1481–1510 |
-| [Flávio Dino reintegra SC](/posts/2025-11-12-flavio-dino-reintegra-candidata-delegada-casada-com-traficante-condenado/) | Precedente STF |
+| [Flávio Dino reintegra SC](/posts/flavio-dino-reintegra-candidata-delegada-casada-com-traficante-condenado/) | Precedente STF |
 
 ## Padrões
 

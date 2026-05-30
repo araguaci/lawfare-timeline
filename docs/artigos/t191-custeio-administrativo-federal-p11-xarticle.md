@@ -119,9 +119,9 @@ Enquanto cada ato individual permanece legal, ninguém responde pelo conjunto. E
 
 ### No dossiê web
 
-- [Custeio administrativo R$ 32,4 bi — timeline](/posts/2025-01-01-timeline-178-custeio-administrativo-federal-r-324-bilhoes-no-1o/)
-- [Viagens federais sob sigilo — R$ 405 mi](/posts/2024-01-01-timeline-177-viagens-federais-sob-sigilo-r-405-milhoes-em-2024/)
-- [TST — 30 Lexus R$ 10,39 mi](/posts/2025-08-08-timeline-174-tst-30-lexus-es-300h-a-r-3465-mil-cada-r-1039-mi-s/)
+- [Custeio administrativo R$ 32,4 bi — timeline](/posts/timeline-178-custeio-administrativo-federal-r-324-bilhoes-no-1o/)
+- [Viagens federais sob sigilo — R$ 405 mi](/posts/timeline-177-viagens-federais-sob-sigilo-r-405-milhoes-em-2024/)
+- [TST — 30 Lexus R$ 10,39 mi](/posts/timeline-174-tst-30-lexus-es-300h-a-r-3465-mil-cada-r-1039-mi-s/)
 - [P11 — loop de extração perpétua](/posts/p11-expandido-loop-extracao-perpetua-economia-politica-brasil/)
 - [República Capturada (T-122)](/posts/republica-capturada/)
 - [Dossiê HTML completo T-191](/artigos/t191-custeio-administrativo-federal-p11.html)
