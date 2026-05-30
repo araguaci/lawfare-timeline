@@ -1,14 +1,547 @@
 ---
-layout: page
-title: "404: Page not found"
+layout: false
 permalink: /404.html
-
 redirect_from:
   - /norobots/
   - /assets/
   - /posts/
 ---
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página não encontrada · lawfare-timeline</title>
+<meta name="description" content="O documento que você buscou não existe neste endereço — mas o corpus está aqui. 1.500+ entradas documentadas, padrões sistêmicos P01–P11, fontes primárias verificáveis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0f0f0d;--ink2:#383835;--ink3:#6b6b66;--ink4:#9a9a94;
+  --paper:#f7f4ee;--paper2:#f0ece3;--paper3:#e8e3d8;
+  --red:#8b1c1c;--red2:#b52626;--red3:rgba(139,28,28,.08);
+  --amber:#7a5c0a;--amber2:#a07a12;--amber3:rgba(122,92,10,.08);
+  --teal:#0d4a38;--teal2:#1a6b52;--teal3:rgba(13,74,56,.08);
+  --blue:#0f2d4a;--blue2:#1a4a72;--blue3:rgba(15,45,74,.08);
+  --violet:#2a1a4a;--violet2:#4a2a82;
+  --serif:'Crimson Pro',serif;
+  --display:'Syne',sans-serif;
+  --mono:'JetBrains Mono',monospace;
+  --border:1px solid rgba(15,15,13,.1);
+  --border2:1px solid rgba(15,15,13,.06);
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--serif);
+  font-size:18px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
 
-{% include lang.html %}
+/* TOPBAR */
+.topbar{
+  border-bottom:var(--border);
+  padding:12px 40px;
+  display:flex;align-items:center;justify-content:space-between;
+  font-family:var(--mono);font-size:11px;
+  color:var(--ink3);letter-spacing:.5px;
+  background:var(--paper);
+  position:sticky;top:0;z-index:100;
+}
+.topbar a{color:var(--teal2);text-decoration:none}
+.topbar a:hover{color:var(--teal)}
+.topbar .logo{font-weight:500;color:var(--ink)}
+@media(max-width:600px){.topbar{padding:10px 20px;font-size:10px}}
 
-<p class="lead">{{ site.data.locales[lang].not_found.statment }}</p>
+/* HERO */
+.hero{
+  padding:56px 40px 44px;
+  border-bottom:2px solid var(--ink);
+  position:relative;overflow:hidden;
+}
+.hero::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:2px;
+  background:repeating-linear-gradient(90deg,
+    var(--red) 0,var(--red) 32px,
+    var(--amber) 32px,var(--amber) 64px,
+    var(--teal) 64px,var(--teal) 96px,
+    transparent 96px,transparent 104px
+  );
+}
+.hero-eyebrow{
+  font-family:var(--mono);font-size:11px;letter-spacing:3px;
+  color:var(--red2);text-transform:uppercase;margin-bottom:20px;
+  display:flex;align-items:center;gap:12px;
+}
+.hero-eyebrow span{color:var(--ink4)}
+.hero h1{
+  font-family:var(--display);
+  font-size:clamp(28px,4.5vw,58px);
+  font-weight:800;line-height:1.08;
+  letter-spacing:-1px;margin-bottom:16px;
+}
+.hero h1 .code{
+  font-family:var(--mono);font-size:.55em;
+  font-weight:500;color:var(--red2);
+  vertical-align:middle;
+  border:1px solid var(--red2);padding:2px 8px;margin-right:12px;
+  letter-spacing:0;
+}
+.hero h1 .sub{color:var(--ink3);font-weight:400}
+.hero-desc{
+  font-size:clamp(15px,1.8vw,19px);color:var(--ink2);
+  max-width:680px;margin-bottom:28px;line-height:1.6;font-weight:300;
+}
+.hero-desc strong{font-weight:600;color:var(--ink)}
+.hero-cta{
+  display:flex;gap:12px;flex-wrap:wrap;
+}
+.btn{
+  font-family:var(--mono);font-size:11px;letter-spacing:1px;
+  padding:10px 20px;text-decoration:none;
+  display:inline-flex;align-items:center;gap:6px;
+  transition:background .15s,color .15s;
+}
+.btn-primary{background:var(--ink);color:var(--paper)}
+.btn-primary:hover{background:var(--teal)}
+.btn-ghost{border:1px solid rgba(15,15,13,.2);color:var(--ink2)}
+.btn-ghost:hover{border-color:var(--teal2);color:var(--teal2)}
+@media(max-width:600px){.hero{padding:36px 20px 32px}}
+
+/* CONTAINER */
+.wrap{max-width:1040px;margin:0 auto;padding:0 40px}
+@media(max-width:600px){.wrap{padding:0 20px}}
+
+/* SECTION LABEL */
+.sec-label{
+  font-family:var(--mono);font-size:10px;letter-spacing:3px;
+  color:var(--ink4);text-transform:uppercase;
+  padding:28px 40px 0;
+}
+@media(max-width:600px){.sec-label{padding:24px 20px 0}}
+
+/* WHAT IS THIS */
+.what-section{padding:24px 40px 44px;border-bottom:var(--border)}
+@media(max-width:600px){.what-section{padding:20px 20px 36px}}
+.what-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:20px}
+@media(max-width:680px){.what-grid{grid-template-columns:1fr}}
+.what-col h3{
+  font-family:var(--display);font-size:18px;font-weight:700;
+  margin-bottom:10px;
+}
+.what-col p{font-size:15px;color:var(--ink2);line-height:1.6}
+.what-col.is::before{
+  content:'O QUE É';
+  display:block;font-family:var(--mono);font-size:10px;letter-spacing:2px;
+  color:var(--teal2);margin-bottom:8px;
+}
+.what-col.not::before{
+  content:'O QUE NÃO É';
+  display:block;font-family:var(--mono);font-size:10px;letter-spacing:2px;
+  color:var(--red2);margin-bottom:8px;
+}
+.what-list{list-style:none;margin-top:10px}
+.what-list li{
+  font-size:14px;color:var(--ink2);padding:7px 0;
+  border-bottom:var(--border2);line-height:1.5;
+  display:flex;gap:8px;align-items:baseline;
+}
+.what-list li:last-child{border-bottom:none}
+.what-list li .mark{
+  font-family:var(--mono);font-size:12px;flex-shrink:0;
+  margin-top:1px;
+}
+.what-list.is .mark{color:var(--teal2)}
+.what-list.not .mark{color:var(--red2)}
+
+/* PERSONAS */
+.personas-section{padding:24px 40px 48px;border-bottom:var(--border)}
+@media(max-width:600px){.personas-section{padding:20px 20px 40px}}
+.personas-section h2{
+  font-family:var(--display);font-size:clamp(20px,2.5vw,30px);
+  font-weight:700;margin-bottom:8px;
+}
+.personas-section .intro{
+  font-size:16px;color:var(--ink3);margin-bottom:28px;max-width:640px;
+}
+.personas-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px}
+.persona-card{
+  border:var(--border);padding:22px 20px;
+  position:relative;overflow:hidden;
+  text-decoration:none;color:inherit;display:block;
+  transition:transform .15s,box-shadow .15s;
+}
+.persona-card:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(15,15,13,.09)}
+.persona-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+}
+.pc-red::before{background:var(--red2)}
+.pc-amber::before{background:var(--amber2)}
+.pc-teal::before{background:var(--teal2)}
+.pc-blue::before{background:var(--blue2)}
+.pc-violet::before{background:var(--violet2)}
+.pc-gray::before{background:var(--ink3)}
+.persona-role{
+  font-family:var(--mono);font-size:10px;letter-spacing:2px;
+  text-transform:uppercase;margin-bottom:6px;display:block;
+}
+.pc-red .persona-role{color:var(--red2)}
+.pc-amber .persona-role{color:var(--amber2)}
+.pc-teal .persona-role{color:var(--teal2)}
+.pc-blue .persona-role{color:var(--blue2)}
+.pc-violet .persona-role{color:var(--violet2)}
+.pc-gray .persona-role{color:var(--ink3)}
+.persona-card h3{
+  font-family:var(--display);font-size:17px;font-weight:700;
+  margin-bottom:8px;line-height:1.2;
+}
+.persona-card .persona-desc{
+  font-size:14px;color:var(--ink2);line-height:1.5;margin-bottom:14px;
+}
+.persona-start{
+  font-family:var(--mono);font-size:11px;letter-spacing:.5px;
+  display:block;padding-top:10px;border-top:var(--border2);
+}
+.pc-red .persona-start{color:var(--red2)}
+.pc-amber .persona-start{color:var(--amber2)}
+.pc-teal .persona-start{color:var(--teal2)}
+.pc-blue .persona-start{color:var(--blue2)}
+.pc-violet .persona-start{color:var(--violet2)}
+.pc-gray .persona-start{color:var(--ink3)}
+.persona-links{display:flex;flex-direction:column;gap:4px;margin-top:8px}
+.persona-link{
+  font-size:13px;color:var(--ink3);padding:3px 0;
+  border-top:var(--border2);text-decoration:none;
+  display:flex;justify-content:space-between;align-items:center;
+  transition:color .1s;
+}
+.persona-link:hover{color:var(--ink)}
+.persona-link .arr{opacity:.4;font-size:10px}
+
+/* ARTICLES */
+.articles-section{padding:24px 40px 48px;border-bottom:var(--border)}
+@media(max-width:600px){.articles-section{padding:20px 20px 40px}}
+.articles-section h2{
+  font-family:var(--display);font-size:clamp(20px,2.5vw,30px);
+  font-weight:700;margin-bottom:28px;
+}
+.articles-clusters{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.cluster{border:var(--border);padding:18px 16px;position:relative}
+.cluster::before{content:'';width:3px;position:absolute;top:0;left:0;bottom:0}
+.cl-red::before{background:var(--red2)}
+.cl-amber::before{background:var(--amber2)}
+.cl-teal::before{background:var(--teal2)}
+.cl-blue::before{background:var(--blue2)}
+.cl-violet::before{background:var(--violet2)}
+.cluster-tag{
+  font-family:var(--mono);font-size:10px;letter-spacing:1px;
+  text-transform:uppercase;margin-bottom:8px;display:block;
+}
+.cl-red .cluster-tag{color:var(--red2)}
+.cl-amber .cluster-tag{color:var(--amber2)}
+.cl-teal .cluster-tag{color:var(--teal2)}
+.cl-blue .cluster-tag{color:var(--blue2)}
+.cl-violet .cluster-tag{color:var(--violet2)}
+.cluster h4{font-family:var(--display);font-size:14px;font-weight:700;margin-bottom:10px}
+.cluster ul{list-style:none}
+.cluster ul li{
+  font-size:13px;color:var(--ink2);
+  padding:4px 0;border-bottom:var(--border2);
+}
+.cluster ul li:last-child{border-bottom:none}
+.cluster ul li a{
+  color:inherit;text-decoration:none;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.cluster ul li a:hover{color:var(--teal2)}
+.cluster ul li a .badge{
+  font-family:var(--mono);font-size:9px;
+  padding:1px 4px;background:var(--paper2);
+  color:var(--ink4);flex-shrink:0;margin-left:6px;
+}
+
+/* METHODOLOGY BOX */
+.method-box{
+  background:var(--paper2);border-left:3px solid var(--amber2);
+  padding:20px 24px;margin:24px 40px;
+  font-size:15px;color:var(--ink2);line-height:1.6;
+}
+.method-box strong{color:var(--ink)}
+.method-box code{
+  font-family:var(--mono);font-size:12px;
+  background:var(--paper3);padding:1px 5px;
+}
+@media(max-width:600px){.method-box{margin:20px 20px}}
+
+/* FOOTER */
+.foot{
+  padding:32px 40px;
+  border-top:2px solid var(--ink);
+  display:flex;flex-wrap:wrap;gap:16px;
+  align-items:center;justify-content:space-between;
+}
+@media(max-width:600px){.foot{padding:28px 20px}}
+.foot-left .proj{font-family:var(--display);font-size:16px;font-weight:700}
+.foot-left .tag{
+  font-family:var(--mono);font-size:10px;letter-spacing:2px;
+  color:var(--ink3);text-transform:uppercase;margin-top:2px;
+}
+.foot-links{display:flex;gap:18px;flex-wrap:wrap}
+.foot-links a{
+  font-family:var(--mono);font-size:11px;color:var(--teal2);
+  text-decoration:none;letter-spacing:.5px;
+}
+.foot-links a:hover{color:var(--teal)}
+
+/* REVEAL */
+.r{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
+.rv{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.r,.rv{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<nav class="topbar">
+  <a class="logo" href="/">lawfare-timeline</a>
+  <a href="/">← voltar ao corpus principal</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-eyebrow">
+      <span class="code">404</span>
+      <span>documento não encontrado</span>
+    </div>
+    <h1>O endereço não existe<br><span class="sub">— mas o corpus está aqui.</span></h1>
+    <p class="hero-desc">
+      O link que você acessou não corresponde a nenhuma página publicada. Isso pode significar que o endereço mudou, o documento foi movido ou o link está incorreto. <strong>O conteúdo que você provavelmente busca existe</strong> — use os atalhos abaixo para encontrá-lo.
+    </p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="/">Corpus principal</a>
+      <a class="btn btn-ghost" href="/posts/2026-05-05-padroes-sistemicos/">Padrões P01–P11</a>
+      <a class="btn btn-ghost" href="/timeline/">Timeline completa</a>
+    </div>
+  </div>
+</header>
+
+<!-- WHAT IS THIS -->
+<div class="sec-label wrap">sobre este projeto</div>
+<section class="what-section">
+  <div class="wrap">
+    <div class="what-grid r">
+      <div class="what-col is">
+        <h3>Ciência política aplicada com método forense</h3>
+        <p>Documentação sistemática de erosão institucional brasileira (1990–2026). Cada entrada deriva de fonte primária verificável: decisão judicial publicada no DJe, registro oficial, documento administrativo, dado estatístico auditável.</p>
+        <ul class="what-list is">
+          <li><span class="mark">✓</span><span>1.500+ eventos âncora com data, fonte e nível de evidência classificado</span></li>
+          <li><span class="mark">✓</span><span>Onze padrões sistêmicos (P01–P11) identificados em 25 anos de operações</span></li>
+          <li><span class="mark">✓</span><span>Schema JSON versionado com campos <code>ev-confirmed / ev-inference</code></span></li>
+          <li><span class="mark">✓</span><span>Separação rigorosa entre fato documentado e conclusão analítica</span></li>
+          <li><span class="mark">✓</span><span>Vetor de correção (<code>vetor_correcao_disponivel</code>) registrado por evento</span></li>
+        </ul>
+      </div>
+      <div class="what-col not">
+        <h3>Não é opinião, panfleto ou niilismo</h3>
+        <p>As categorias usadas — lawfare, captura institucional, autocratização judicial — são termos técnicos da literatura de ciência política com definições precisas e bibliografia extensa, não vocabulário partidário.</p>
+        <ul class="what-list not">
+          <li><span class="mark">✗</span><span>Não é panfleto político — documentar padrão pressupõe que a instituição tinha função legítima</span></li>
+          <li><span class="mark">✗</span><span>Não pressupõe equivalência entre todos os atores — intensidades e momentos são distintos</span></li>
+          <li><span class="mark">✗</span><span>Não infere intenção sem cadeia de comando documentada</span></li>
+          <li><span class="mark">✗</span><span>Não é niilismo — vetor_correcao_disponivel: false nomeia o bloqueio, não declara colapso</span></li>
+          <li><span class="mark">✗</span><span>Não equipara evidência a percepção — <code>ev-confirmed</code> é dado, não perspectiva</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD BOX -->
+<div class="method-box r">
+  <strong>Como o corpus funciona:</strong> um evento só entra se satisfaz três critérios simultâneos — <strong>verificabilidade</strong> (registro público confirmável), <strong>relevância sistêmica</strong> (revela ou reforça padrão) e <strong>databilidade</strong> (data específica ou intervalo delimitado). A metodologia completa está em <a href="/METHODOLOGY.md" style="color:var(--teal2)">METHODOLOGY.md</a>.
+</div>
+
+<!-- PERSONAS -->
+<div class="sec-label wrap">como ler este corpus</div>
+<section class="personas-section">
+  <div class="wrap">
+    <h2 class="r">Seis portas de entrada — escolha a sua</h2>
+    <p class="intro r">Cada perfil de leitor tem uma pergunta diferente. O corpus responde às mesmas — por caminhos diferentes.</p>
+    <div class="personas-grid r">
+
+      <!-- LEIGO -->
+      <div class="persona-card pc-teal">
+        <span class="persona-role">Cidadão / Leigo</span>
+        <h3>Sente que algo está errado mas falta o mapa</h3>
+        <p class="persona-desc">Quer entender sem jargão jurídico por que os mesmos casos morrem nos mesmos lugares. Começa pela pergunta simples: por que as mesmas coisas continuam acontecendo?</p>
+        <span class="persona-start">Ponto de entrada recomendado →</span>
+        <div class="persona-links">
+          <a class="persona-link" href="/posts/2026-05-05-padroes-sistemicos/">Onze padrões, vinte e cinco anos — o catálogo<span class="arr">↗</span></a>
+          <a class="persona-link" href="/posts/designacao-terrorista-pcc-cv/">Designação terrorista PCC/CV — o que aconteceu<span class="arr">↗</span></a>
+          <a class="persona-link" href="/timeline/">Timeline completa (1990–2026)<span class="arr">↗</span></a>
+        </div>
+      </div>
+
+      <!-- ANALISTA -->
+      <div class="persona-card pc-blue">
+        <span class="persona-role">Analista Político</span>
+        <h3>Quer o framework antes dos casos específicos</h3>
+        <p class="persona-desc">Precisa dos padrões sistêmicos e modelos comparativos. A matriz P×Operações mostra quais padrões se confirmam em quais operações — com estado de evidência por célula.</p>
+        <span class="persona-start">Ponto de entrada recomendado →</span>
+        <div class="persona-links">
+          <a class="persona-link" href="/METHODOLOGY.md">METHODOLOGY.md — framework analítico completo<span class="arr">↗</span></a>
+          <a class="persona-link" href="/posts/2026-05-05-padroes-sistemicos/">Padrões P01–P11 com instâncias datadas<span class="arr">↗</span></a>
+          <a class="persona-link" href="/posts/narrativa-vs-evidencia-corpus-bridge/">T-208 Narrativa vs. Evidência (anti-P04b)<span class="arr">↗</span></a>
+        </div>
+      </div>
+
+      <!-- INVESTIGADOR -->
+      <div class="persona-card pc-amber">
+        <span class="persona-role">Jornalista / Investigador</span>
+        <h3>Precisa de referências cruzadas e fontes citáveis</h3>
+        <p class="persona-desc">Cada entrada tem fonte primária verificável com URL direta. O schema JSON exportável permite cruzamento automatizado com outros bancos de dados. Lacunas investigativas são documentadas explicitamente.</p>
+        <span class="persona-start">Ponto de entrada recomendado →</span>
+        <div class="persona-links">
+          <a class="persona-link" href="/posts/delegada-pcc-infiltracao-institucional-sp/">Delegada PCC — infiltração institucional SP<span class="arr">↗</span></a>
+          <a class="persona-link" href="/posts/cpi-crime-organizado-pcc-infiltracao-eleitoral/">CPI: PCC e infiltração eleitoral<span class="arr">↗</span></a>
+          <a class="persona-link" href="/posts/ofac-sanciona-diego-carmo-lavagem-r12bi-pcc/">OFAC sanciona lavagem R$12bi — PCC<span class="arr">↗</span></a>
+        </div>
+      </div>
+
+      <!-- AUTORIDADE POLICIAL -->
+      <div class="persona-card pc-red">
+        <span class="persona-role">Autoridade Policial / PGR / MPF</span>
+        <h3>Quer base documental para análise operacional</h3>
+        <p class="persona-desc">O corpus mapeia nexos entre crime organizado transnacional, sistema financeiro e captura institucional. Cada nó do grafo tem fonte primária. O campo <code>vetor_correcao_disponivel</code> identifica onde os mecanismos de controle foram bloqueados.</p>
+        <span class="persona-start">Ponto de entrada recomendado →</span>
+        <div class="persona-links">
+          <a class="persona-link" href="/posts/pcc-transnacional-ofac-eua-luso/">PCC transnacional — OFAC, EUA, nexo lusófono<span class="arr">↗</span></a>
+          <a class="persona-link" href="/posts/eua-indicia-18-brasileiros-pcc-trafico-armas-fentanil-massachusetts/">18 brasileiros indiciados — DOJ tráfico/armas<span class="arr">↗</span></a>
+          <a class="persona-link" href="/posts/as-53-faccoes-criminosas-do-brasil/">As 53 facções criminosas do Brasil<span class="arr">↗</span></a>
+        </div>
+      </div>
+
+      <!-- ADVOGADO -->
+      <div class="persona-card pc-violet">
+        <span class="persona-role">Advogado / Defensor</span>
+        <h3>Precisa de precedentes, padrões e cronologia</h3>
+        <p class="persona-desc">O padrão P01 (anulação via defeito processual) e P03 (captura judicial emergencial) documentam mecanismos com base em decisões publicadas. A cronologia de cada caso inclui número de processo e publicação no DJe quando disponível.</p>
+        <span class="persona-start">Ponto de entrada recomendado →</span>
+        <div class="persona-links">
+          <a class="persona-link" href="/posts/coaf-moraes-acumulacao-funcoes-dosimetria/">COAF/Moraes — acumulação e dosimetria<span class="arr">↗</span></a>
+          <a class="persona-link" href="/posts/fraude-lojas-americanas-risco-sacado/">Fraude Lojas Americanas — risco sacado<span class="arr">↗</span></a>
+          <a class="persona-link" href="/posts/2026-05-05-padroes-sistemicos/#p1--anulação-via-defeito-processual">P01 Anulação via defeito processual<span class="arr">↗</span></a>
+        </div>
+      </div>
+
+      <!-- JUIZ / DECISOR -->
+      <div class="persona-card pc-gray">
+        <span class="persona-role">Juiz / Decisor Institucional</span>
+        <h3>Quer distinguir episódio isolado de padrão documentado</h3>
+        <p class="persona-desc">O corpus não julga intenção. Documenta resultados. A distinção entre evento isolado e padrão sistêmico é operacionalizada pelo critério: três ou mais eventos âncora independentes com mesmo mecanismo e mesma direção de resultado.</p>
+        <span class="persona-start">Ponto de entrada recomendado →</span>
+        <div class="persona-links">
+          <a class="persona-link" href="/METHODOLOGY.md#2-definições-fundamentais">Definições — evento âncora e padrão sistêmico<span class="arr">↗</span></a>
+          <a class="persona-link" href="/posts/2026-05-05-padroes-sistemicos/#p3--captura-judicial-emergencial">P03 Captura judicial emergencial<span class="arr">↗</span></a>
+          <a class="persona-link" href="/posts/estatais-rombo-p11-complemento/">Estatais e rombo — P11 complemento<span class="arr">↗</span></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLES -->
+<div class="sec-label wrap">artigos e documentos principais</div>
+<section class="articles-section">
+  <div class="wrap">
+    <h2 class="r">Clusters temáticos — acesso direto</h2>
+    <div class="articles-clusters r">
+
+      <div class="cluster cl-red">
+        <span class="cluster-tag">Crime Organizado · Diplomacia</span>
+        <h4>PCC / CV / Designação Terrorista</h4>
+        <ul>
+          <li><a href="/posts/2026-05-28-departamento-de-estado-designa-pcc-e-cv-como-sdgt-com-efeito-imediato/">Designação SDGT — State Dept. (28/05/2026)<span class="badge">ID 1518</span></a></li>
+          <li><a href="/posts/2026-05-28-imprensa-brasileira-enquadra-designacao-terrorista-pcc-cv-como-questao-de-soberania-p04b/">Imprensa brasileira — enquadramento P04b<span class="badge">ID 1520</span></a></li>
+          <li><a href="/posts/2026-05-01-flavio-bolsonaro-visita-trump-na-casa-branca-e-pede-designacao-de-pcc-e-cv/">Flávio Bolsonaro — visita Trump/designação<span class="badge">ID 1516</span></a></li>
+          <li><a href="/posts/2026-03-11-brasil-rejeita-pedido-formal-dos-eua-para-designar-pcc-e-cv-como-terroristas/">Brasil rejeita pedido formal dos EUA<span class="badge">ID 1513</span></a></li>
+          <li><a href="/posts/eua-indicia-18-brasileiros-pcc-trafico-armas-fentanil-massachusetts/">18 brasileiros indiciados — DOJ/Massachusetts</a></li>
+        </ul>
+      </div>
+
+      <div class="cluster cl-amber">
+        <span class="cluster-tag">Padrões Sistêmicos</span>
+        <h4>Framework Analítico P01–P11</h4>
+        <ul>
+          <li><a href="/posts/2026-05-05-padroes-sistemicos/">Onze padrões, vinte e cinco anos<span class="badge">pin</span></a></li>
+          <li><a href="/posts/narrativa-vs-evidencia-corpus-bridge/">T-208 Narrativa vs. Evidência</a></li>
+          <li><a href="/posts/splc-modelo-brasil-corpus-bridge/">T-206 SPLC Modelo Brasil</a></li>
+          <li><a href="/posts/duplo-padrao-judicial-corpus-bridge/">T-205 Duplo padrão judicial</a></li>
+          <li><a href="/METHODOLOGY.md">METHODOLOGY.md — referência canônica</a></li>
+        </ul>
+      </div>
+
+      <div class="cluster cl-teal">
+        <span class="cluster-tag">Crise Diplomática 2026</span>
+        <h4>Relação Brasil–EUA</h4>
+        <ul>
+          <li><a href="/posts/2026-03-07-trump-lanca-escudo-das-americas-com-retorica-antidrogas-e-contencao-da-presenca-chinesa/">Escudo das Américas — Trump (07/03/2026)</a></li>
+          <li><a href="/posts/2026-03-11-chanceler-mauro-vieira-telefona-a-rubio-pedindo-adiamento-da-designacao-terrorista/">Mauro Vieira telefona a Rubio</a></li>
+          <li><a href="/posts/cimeira-luso-brasileira-acordos-investigacao-pcc/">Cimeira luso-brasileira — PCC investigação</a></li>
+          <li><a href="/posts/pcc-transnacional-ofac-eua-luso/">PCC transnacional — OFAC, nexo lusófono</a></li>
+        </ul>
+      </div>
+
+      <div class="cluster cl-blue">
+        <span class="cluster-tag">Lawfare / Institucional</span>
+        <h4>Captura e Erosão Institucional</h4>
+        <ul>
+          <li><a href="/posts/coaf-moraes-acumulacao-funcoes-dosimetria/">COAF/Moraes — acumulação de funções</a></li>
+          <li><a href="/posts/operacao-rejeito-serra-curral-manuscritos/">Op. Rejeito — Serra Curral manuscritos</a></li>
+          <li><a href="/posts/estatais-rombo-p11-complemento/">Estatais — rombo P11 complemento</a></li>
+          <li><a href="/posts/fraude-lojas-americanas-risco-sacado/">Fraude Lojas Americanas — risco sacado</a></li>
+        </ul>
+      </div>
+
+      <div class="cluster cl-violet">
+        <span class="cluster-tag">Estudos / Dossiês</span>
+        <h4>Análises de Longo Prazo</h4>
+        <ul>
+          <li><a href="/posts/2026-05-28-designacao-terrorista-pcc-cv/">Designação terrorista PCC/CV — estudo<span class="badge">estudo</span></a></li>
+          <li><a href="/posts/as-53-faccoes-criminosas-do-brasil/">As 53 facções criminosas do Brasil</a></li>
+          <li><a href="/posts/cpi-crime-organizado-pcc-infiltracao-eleitoral/">CPI: PCC e infiltração eleitoral</a></li>
+          <li><a href="/posts/cpi-crime-organizado-mapeamento-pcc-cv-infiltracao-municipal/">CPI: mapeamento PCC/CV municipal</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="foot-left">
+    <div class="proj">lawfare-timeline · lawfare-timeline.vercel.app</div>
+    <div class="tag">documentação forense · fontes primárias · padrão verificável · CC0 1.0</div>
+  </div>
+  <div class="foot-links">
+    <a href="/">corpus principal →</a>
+    <a href="/timeline/">timeline →</a>
+    <a href="/METHODOLOGY.md">methodology →</a>
+    <a href="/posts/2026-05-05-padroes-sistemicos/">padrões →</a>
+  </div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('rv') });
+},{threshold:0.06});
+document.querySelectorAll('.r').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
