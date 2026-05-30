@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/skull.svg"
 tags: ["pochmann", "biomm", "fundo-cartago", "brb", "saida-coordenada", "banco-master", "alaska", "cvm", "conflito-de-interesses", "ibge"]
 categories: escandalos
-permalink: /posts/2026-04-01-pochmann-deixa-o-conselho-da-biomm-saida-coincide-exatamente-com-transferencia-do-fundo-ca/
+permalink: /posts/pochmann-deixa-o-conselho-da-biomm-saida-coincide-exatamente-com-transferencia-do-fundo-ca/
 id_corpus: "1539"
 corpus_unificado: true
 ---

@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/globe.svg"
 tags: ["crise-diplomatica", "sancoes", "soberania", "relacoes-internacionais", "diplomacia", "investigacao-criminal", "lawfare"]
 categories: crise-diplomatica
-permalink: /posts/2026-04-16-ramagem-detido-pelo-ice-nos-eua-crise-diplomatica-chega-ao-pico/
+permalink: /posts/ramagem-detido-pelo-ice-nos-eua-crise-diplomatica-chega-ao-pico/
 id_corpus: "1525"
 corpus_unificado: true
 ---

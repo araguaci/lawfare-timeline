@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/shield.svg"
 tags: ['crise-diplomatica', 'pcc', 'soberania', 'crime-organizado', 'faccoes-criminosas', 'lawfare']
 categories: crise-diplomatica
-permalink: /posts/2026-03-11-brasil-rejeita-pedido-formal-dos-eua-para-designar-pcc-e-cv-como-terroristas/
+permalink: /posts/brasil-rejeita-pedido-formal-dos-eua-para-designar-pcc-e-cv-como-terroristas/
 ---
 
 - &nbsp;

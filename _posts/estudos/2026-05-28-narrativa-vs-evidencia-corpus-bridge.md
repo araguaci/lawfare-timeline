@@ -17,14 +17,14 @@ pin: false
 
 # T-208 · O Espelho Partido — narrativa vs evidência
 
-Entrada canônica do **registry T-144** no track temático Jekyll. Consolida o artefato interativo de abril/2026 com a [timeline 148](/posts/2026-04-26-timeline-148-cruzamento-narrativa-publica-vs-documentacao-forense/) e a metodologia anti-viés do corpus.
+Entrada canônica do **registry T-144** no track temático Jekyll. Consolida o artefato interativo de abril/2026 com a [timeline 148](/posts/timeline-148-cruzamento-narrativa-publica-vs-documentacao-forense/) e a metodologia anti-viés do corpus.
 
 | Camada | Recurso |
 | --- | --- |
 | **Dossiê canônico (DS v1.1)** | [/artigos/t208-narrativa-vs-evidencia.html](/artigos/t208-narrativa-vs-evidencia.html) |
 | Artefato HTML (gosurf.site) | [gosurf.site/narrativa-vs-evidencia](https://gosurf.site/narrativa-vs-evidencia) |
 | Espelho local | [/artigos/narrativa-vs-evidencia.html](/artigos/narrativa-vs-evidencia.html) |
-| Timeline | [ID 148 — cruzamento Schüler/Jeffs](/posts/2026-04-26-timeline-148-cruzamento-narrativa-publica-vs-documentacao-forense/) |
+| Timeline | [ID 148 — cruzamento Schüler/Jeffs](/posts/timeline-148-cruzamento-narrativa-publica-vs-documentacao-forense/) |
 | Registry | T-144 · IDs 146–149 · 26/abr/2026 |
 
 > A tese da captura chegou ao mainstream em 26/abr/2026. O suporte probatório já existia no lawfare-timeline. Este dossiê mapeia o gap.

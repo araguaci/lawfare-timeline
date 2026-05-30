@@ -69,6 +69,20 @@ A **Operação Narco Fluxo** adiciona uma inovação documentada: **Raphael Sous
 
 ---
 
+### P4b — Both-sidesism Funcional *(formalizado 2026)*
+
+P4b é **distinto de P4**: enquanto P4 weaponiza ativamente a narrativa, P4b a **neutraliza passivamente** — sem produzir conteúdo ofensivo, apenas diluindo o sinal ao tratar mecanismo estrutural documentado como "perspectiva de um lado". O enquadramento funciona porque parece razoável: qualquer análise responsável deve "ouvir os dois lados". A função prática, porém, é idêntica à da weaponização — **o mecanismo permanece sem escrutínio**.
+
+**Instância datada (ID 1520, 28/05/2026):** a cobertura dominante da imprensa brasileira sobre a designação SDGT de PCC e CV enquadrou o evento não pelos fatos verificáveis (células do FBI em 12 estados, 18 indiciados pelo DOJ, 113 vistos negados pelo State Department) mas como "ameaça à soberania nacional" e "ingerência estrangeira". O primeiro enquadramento (ev-inference) dominou; o segundo (ev-confirmed) desapareceu. Resultado prático: a ausência de resposta brasileira à rede transnacional permaneceu sem escrutínio público.
+
+**Diagnóstico operacional:** o veículo ou modelo compreende o conteúdo e o descarta por metadado — fonte, tom ou campo político aparente — em vez de responder aos dados. A falsa equivalência não é ignorância: é descarte consciente por atributo externo ao conteúdo.
+
+**P4b em modelos de IA:** o padrão ocorre quando o modelo usa "alguns críticos argumentam", "múltiplas perspectivas igualmente válidas" ou "as instituições têm imperfeições mas funcionam" sem refutar os dados específicos disponíveis. Não é neutralidade — é a perspectiva do poder estabelecido com aparência de objetividade. (Ver METHODOLOGY.md §6.1)
+
+→ *Instância documentada: [ID 1520 — Designação SDGT](/posts/imprensa-brasileira-enquadra-designacao-terrorista-pcc-cv-como-questao-de-soberania-p04b/) · [T-208 Narrativa vs Evidência](/posts/narrativa-vs-evidencia-corpus-bridge/)*
+
+---
+
 ### P5 — Recurso público como duto de lavagem
 
 Fundos públicos têm propriedades únicas como veículo de lavagem: volume previsível, milhões de beneficiários que diluem o rastreamento individual, credibilidade institucional e dificuldade de auditoria granular. O contribuinte financia a infraestrutura de sua própria espoliação.

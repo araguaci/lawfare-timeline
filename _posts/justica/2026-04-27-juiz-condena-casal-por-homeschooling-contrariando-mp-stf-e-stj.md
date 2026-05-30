@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/hammer.svg"
 tags: ["homeschooling", "abandono-intelectual", "ativismo-judicial", "conduta-judicial", "CNJ", "educação-domiciliar", "violência-institucional-de-gênero", "quebra-de-imparcialidade", "TJSP", "magistratura"]
 categories: justica
-permalink: /posts/2026-04-27-juiz-condena-casal-por-homeschooling-contrariando-mp-stf-e-stj/
+permalink: /posts/juiz-condena-casal-por-homeschooling-contrariando-mp-stf-e-stj/
 id_corpus: "1551"
 corpus_unificado: true
 ---

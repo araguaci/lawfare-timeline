@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/skull.svg"
 tags: ["escandalos", "P08", "kallas-vorcaro-desinvestimento-biomm-latache", "operacao-compliance-zero"]
 categories: escandalos
-permalink: /posts/2026-04-28-kallas-vorcaro-desinvestimento-biomm-latache/
+permalink: /posts/kallas-vorcaro-desinvestimento-biomm-latache/
 id_corpus: "1570"
 corpus_unificado: true
 source_data: "lawfare-batch-rejeito-1552-1571.json"

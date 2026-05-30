@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 tags: ["stf", "P06", "toffoli-retorno-1a-instancia-rejeito", "operacao-rejeito"]
 categories: stf
-permalink: /posts/2026-04-15-toffoli-retorno-1a-instancia-rejeito/
+permalink: /posts/toffoli-retorno-1a-instancia-rejeito/
 id_corpus: "1569"
 corpus_unificado: true
 source_data: "lawfare-batch-rejeito-1552-1571.json"

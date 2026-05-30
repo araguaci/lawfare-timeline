@@ -68,9 +68,9 @@ Rodadas editoriais **T-191–T-207** (mai/2026) mantêm **0 alertas críticos** 
 | # | Score | Episódio |
 | ---: | ---: | --- |
 | 1 | 27 | [Escândalo venda Vale](/posts/1997-01-01-escandalo-da-venda-da-companhia-vale-do-rio-doce/) |
-| 2 | 25 | [Moraes inquérito Flávio Bolsonaro](/posts/2026-04-13-moraes-abre-inquerito-contra-pre-candidato-a-presidencia-flavio-bolsonaro-por-postagem-criticando-lula-apos-prisao-de-maduro/) |
+| 2 | 25 | [Moraes inquérito Flávio Bolsonaro](/posts/moraes-abre-inquerito-contra-pre-candidato-a-presidencia-flavio-bolsonaro-por-postagem-criticando-lula-apos-prisao-de-maduro/) |
 | 3 | 23 | [Silas Malafaia mensagens vazadas](/posts/2025-08-20-silas-malafaia-tem-mensagens-vazadas-na-imprensa/) |
-| 4 | 19 | [Jeffssss manifesto viral](/posts/2026-04-26-timeline-147-jeffssss-x-manifesto-viral-captura-do-estado/) |
+| 4 | 19 | [Jeffssss manifesto viral](/posts/timeline-147-jeffssss-x-manifesto-viral-captura-do-estado/) |
 | 5 | 19 | [Magnitsky × Moraes](/posts/2025-07-30-eua-aplicam-sancoes-a-alexandre-de-moraes-usando-lei-magnitsky/) |
 | 6 | 16 | [Operação Descarte](/posts/2018-03-01-operacao-descarte/) |
 | 7 | 16 | [Operação Último Lance](/posts/2020-03-03-operacao-ultimo-lance/) |

@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/globe.svg"
 tags: ["crise-diplomatica", "soberania", "relacoes-internacionais", "indecoro", "diplomacia", "trump"]
 categories: crise-diplomatica
-permalink: /posts/2026-03-30-flavio-bolsonaro-na-cpac-pede-pressao-diplomatica-dos-eua-sobre-eleicoes-brasileiras-de-20/
+permalink: /posts/flavio-bolsonaro-na-cpac-pede-pressao-diplomatica-dos-eua-sobre-eleicoes-brasileiras-de-20/
 id_corpus: "1516"
 corpus_unificado: true
 ---

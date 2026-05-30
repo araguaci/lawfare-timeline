@@ -28,7 +28,7 @@ O Banco Central divulgou em **31/mar/2026** déficit recorde de **R$ 4,16 bilhõ
 | Período | 1º bimestre/2026 |
 | Déficit | R$ 4,16 bi |
 | Série | Pior desde 2002 (BC) |
-| Post timeline | [ID 1435](/posts/2026-03-31-estatais-federais-registram-rombo-recorde-de-r-4/) |
+| Post timeline | [ID 1435](/posts/estatais-federais-registram-rombo-recorde-de-r-4/) |
 
 ## Estatais citadas
 
@@ -56,7 +56,7 @@ Custeio federal ↑ (T-191) + emendas opacas (T-194) → estatais deficitárias
 
 ## Fontes
 
-- [Estatais rombo recorde](/posts/2026-03-31-estatais-federais-registram-rombo-recorde-de-r-4/)
+- [Estatais rombo recorde](/posts/estatais-federais-registram-rombo-recorde-de-r-4/)
 - Banco Central — demonstrações setor público não financeiro
 
 *Dossiê T-200 · complemento T-191/T-194 · CC0 · lawfare-timeline*

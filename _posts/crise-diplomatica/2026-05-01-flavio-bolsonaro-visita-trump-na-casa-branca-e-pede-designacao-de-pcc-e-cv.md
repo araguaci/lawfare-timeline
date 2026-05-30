@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/globe.svg"
 tags: ['crise-diplomatica', 'bolsonaro', 'pcc', 'trump', 'faccoes-criminosas', 'lawfare']
 categories: crise-diplomatica
-permalink: /posts/2026-05-01-flavio-bolsonaro-visita-trump-na-casa-branca-e-pede-designacao-de-pcc-e-cv/
+permalink: /posts/flavio-bolsonaro-visita-trump-na-casa-branca-e-pede-designacao-de-pcc-e-cv/
 ---
 
 - &nbsp;

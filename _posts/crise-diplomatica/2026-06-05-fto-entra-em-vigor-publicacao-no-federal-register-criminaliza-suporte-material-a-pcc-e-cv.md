@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/shield.svg"
 tags: ['crise-diplomatica', 'pcc', 'crime-organizado', 'sancoes', 'faccoes-criminosas', 'bancos', 'lavagem-de-dinheiro']
 categories: crise-diplomatica
-permalink: /posts/2026-06-05-fto-entra-em-vigor-publicacao-no-federal-register-criminaliza-suporte-material-a-pcc-e-cv/
+permalink: /posts/fto-entra-em-vigor-publicacao-no-federal-register-criminaliza-suporte-material-a-pcc-e-cv/
 ---
 
 - &nbsp;

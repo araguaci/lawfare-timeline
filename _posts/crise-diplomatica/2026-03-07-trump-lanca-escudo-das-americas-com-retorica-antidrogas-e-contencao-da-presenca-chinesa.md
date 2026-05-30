@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/globe.svg"
 tags: ['crise-diplomatica', 'trump', 'pcc', 'crime-organizado', 'soberania', 'faccoes-criminosas']
 categories: crise-diplomatica
-permalink: /posts/2026-03-07-trump-lanca-escudo-das-americas-com-retorica-antidrogas-e-contencao-da-presenca-chinesa/
+permalink: /posts/trump-lanca-escudo-das-americas-com-retorica-antidrogas-e-contencao-da-presenca-chinesa/
 ---
 
 - &nbsp;

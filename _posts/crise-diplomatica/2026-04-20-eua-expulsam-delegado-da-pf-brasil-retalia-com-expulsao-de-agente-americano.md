@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/globe.svg"
 tags: ["crise-diplomatica", "diplomacia", "soberania", "relacoes-internacionais", "sancoes"]
 categories: crise-diplomatica
-permalink: /posts/2026-04-20-eua-expulsam-delegado-da-pf-brasil-retalia-com-expulsao-de-agente-americano/
+permalink: /posts/eua-expulsam-delegado-da-pf-brasil-retalia-com-expulsao-de-agente-americano/
 id_corpus: "1526"
 corpus_unificado: true
 ---

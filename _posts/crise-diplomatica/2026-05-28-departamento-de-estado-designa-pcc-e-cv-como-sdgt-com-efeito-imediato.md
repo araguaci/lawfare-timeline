@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/shield.svg"
 tags: ['crise-diplomatica', 'pcc', 'soberania', 'crime-organizado', 'faccoes-criminosas', 'lawfare', 'sancoes']
 categories: crise-diplomatica
-permalink: /posts/2026-05-28-departamento-de-estado-designa-pcc-e-cv-como-sdgt-com-efeito-imediato/
+permalink: /posts/departamento-de-estado-designa-pcc-e-cv-como-sdgt-com-efeito-imediato/
 ---
 
 - &nbsp;

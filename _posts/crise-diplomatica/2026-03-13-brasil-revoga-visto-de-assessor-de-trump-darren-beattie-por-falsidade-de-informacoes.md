@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/globe.svg"
 tags: ["crise-diplomatica", "diplomacia", "soberania", "relacoes-internacionais", "trump", "alexandre-de-moraes", "stf"]
 categories: crise-diplomatica
-permalink: /posts/2026-03-13-brasil-revoga-visto-de-assessor-de-trump-darren-beattie-por-falsidade-de-informacoes/
+permalink: /posts/brasil-revoga-visto-de-assessor-de-trump-darren-beattie-por-falsidade-de-informacoes/
 id_corpus: "1515"
 corpus_unificado: true
 ---

@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/globe.svg"
 tags: ["crise-diplomatica", "lawfare", "soberania", "sancoes", "relacoes-internacionais", "investigacao-criminal"]
 categories: crise-diplomatica
-permalink: /posts/2026-04-18-ramagem-liberado-pelo-ice-apos-48h-pedido-de-asilo-barra-deportacao-ao-brasil/
+permalink: /posts/ramagem-liberado-pelo-ice-apos-48h-pedido-de-asilo-barra-deportacao-ao-brasil/
 id_corpus: "1514"
 corpus_unificado: true
 ---

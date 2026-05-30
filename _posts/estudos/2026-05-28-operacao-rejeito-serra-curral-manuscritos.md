@@ -41,9 +41,9 @@ Entre **2019 e 2026**, a PF documentou um sistema de extração mineral ilegal e
 | 1565 | 2026-01 | TRF-6 — 22→0 preventivas em 118 dias | [timeline](/posts/2026-01-14-trf6-soltura-massa-22-preventivas-zero/) |
 | 1566 | 2026-01 | Viviane Barci defende Kallas no STF | [timeline](/posts/2026-01-20-viviane-barci-defesa-kallas-stf/) |
 | 1567 | 2026-02 | PAD Teixeira — MPF pede bloqueio R$ 4,2 mi | [timeline](/posts/2026-02-01-pad-teixeira-corregedoria-pf-fev2026/) |
-| 1568 | 2026-03 | JF suspende 57 processos minerários, multa ANM | [timeline](/posts/2026-03-01-jf-57-processos-anm-multada-serra-curral/) |
-| 1569 | 2026-04 | Toffoli devolve à 1ª instância — zero condenações | [timeline](/posts/2026-04-15-toffoli-retorno-1a-instancia-rejeito/) |
-| 1570 | 2026-04 | Kallas vende Biomm/Latache — desvinculação Vorcaro | [timeline](/posts/2026-04-28-kallas-vorcaro-desinvestimento-biomm-latache/) |
+| 1568 | 2026-03 | JF suspende 57 processos minerários, multa ANM | [timeline](/posts/jf-57-processos-anm-multada-serra-curral/) |
+| 1569 | 2026-04 | Toffoli devolve à 1ª instância — zero condenações | [timeline](/posts/toffoli-retorno-1a-instancia-rejeito/) |
+| 1570 | 2026-04 | Kallas vende Biomm/Latache — desvinculação Vorcaro | [timeline](/posts/kallas-vorcaro-desinvestimento-biomm-latache/) |
 | 1571 | 2026-05 | 3º manuscrito — cadeia até Vale/Gerdau/Trafigura | [timeline](/posts/terceiro-manuscrito-vale-gerdau-trafigura/) |
 
 ## Arquitetura de captura (P03)

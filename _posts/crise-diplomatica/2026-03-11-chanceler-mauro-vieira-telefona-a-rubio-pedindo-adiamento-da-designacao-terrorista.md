@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/globe.svg"
 tags: ['crise-diplomatica', 'pcc', 'soberania', 'lawfare']
 categories: crise-diplomatica
-permalink: /posts/2026-03-11-chanceler-mauro-vieira-telefona-a-rubio-pedindo-adiamento-da-designacao-terrorista/
+permalink: /posts/chanceler-mauro-vieira-telefona-a-rubio-pedindo-adiamento-da-designacao-terrorista/
 ---
 
 - &nbsp;

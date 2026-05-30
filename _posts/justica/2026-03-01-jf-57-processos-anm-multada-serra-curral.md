@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/hammer.svg"
 tags: ["justica", "P03", "P11", "jf-57-processos-anm-multada-serra-curral", "operacao-parcours"]
 categories: justica
-permalink: /posts/2026-03-01-jf-57-processos-anm-multada-serra-curral/
+permalink: /posts/jf-57-processos-anm-multada-serra-curral/
 id_corpus: "1568"
 corpus_unificado: true
 source_data: "lawfare-batch-rejeito-1552-1571.json"

@@ -6,7 +6,7 @@ image:
   path: "/assets/solid/gavel.svg"
 tags: ['lawfare', 'stf', 'alexandre-de-moraes', 'censura', 'liberdade de expressão', 'eleicoes', 'bolsonaro', 'perseguicao-politica']
 categories: lawfare
-permalink: /posts/2026-04-13-moraes-abre-inquerito-contra-pre-candidato-a-presidencia-flavio-bolsonaro-por-postagem-criticando-lula-apos-prisao-de-maduro/
+permalink: /posts/moraes-abre-inquerito-contra-pre-candidato-a-presidencia-flavio-bolsonaro-por-postagem-criticando-lula-apos-prisao-de-maduro/
 ---
 
 - &nbsp;
