@@ -1,0 +1,41 @@
+{
+  "batch_info": {
+    "nome": "T-210 — Compliance Zero: voto dissidente de Gilmar Mendes (família Vorcaro)",
+    "track": "thematic",
+    "id": 210,
+    "gerado_em": "2026-06-20",
+    "nota_correcao": "Usuário referenciou data 2026-08-15; evento real ocorrido em 2026-06-16. Usuário também descreveu como 'anulação' efetiva — placar real foi 3x1, prisões MANTIDAS. Gilmar foi voto vencido, não majoritário."
+  },
+  "assuntos": [
+    {
+      "id": 210,
+      "date": "2026-06-16",
+      "date_precision": "day",
+      "title": "2ª Turma do STF mantém prisão de pai e primo de Daniel Vorcaro por 3×1; Gilmar Mendes diverge citando Lava Jato",
+      "summary": "Na sessão presencial da 2ª Turma do STF, André Mendonça (relator) votou pela manutenção da prisão preventiva de Henrique Moura Vorcaro (pai de Daniel Vorcaro) e de Felipe Cançado Vorcaro (primo), presos desde maio/2026 na 6ª fase da Operação Compliance Zero (fraudes bilionárias no Banco Master). Nunes Marques e Luiz Fux acompanharam Mendonça. Gilmar Mendes, em voto isolado, divergiu e defendeu a substituição por prisão domiciliar (Henrique) e soltura com cautelares (Felipe). Dias Toffoli não votou, declarando-se suspeito. Placar final: 3×1 pela manutenção das prisões.",
+      "category": "decisao_judicial",
+      "actors": [
+        {"name": "Gilmar Mendes", "role": "Voto dissidente, decano do STF", "institution": "STF — 2ª Turma"},
+        {"name": "André Mendonça", "role": "Relator, voto pela manutenção", "institution": "STF — 2ª Turma"},
+        {"name": "Henrique Moura Vorcaro", "role": "Investigado — pai de Daniel Vorcaro", "institution": "N/A"},
+        {"name": "Felipe Cançado Vorcaro", "role": "Investigado — primo de Daniel Vorcaro", "institution": "N/A"}
+      ],
+      "institutions": ["STF", "Polícia Federal", "Banco Master"],
+      "legal_basis": ["CPP arts. 312/319 — prisão preventiva e medidas cautelares alternativas"],
+      "patterns": ["P01", "P04b"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "Gilmar Mendes cita Lava Jato ao votar afrouxamento de prisão a pai de Vorcaro", "url": "https://ndmais.com.br/justica/gilmar-mendes-cita-lava-jato-ao-votar-por-prisao-domiciliar-de-familiares-de-vorcaro/", "outlet": "ND Mais", "date": "2026-06-16"},
+        {"title": "Gilmar vota contra, mas STF mantém prisões de pai e primo de Daniel Vorcaro", "url": "https://www.otempo.com.br/politica/judiciario/2026/6/16/gilmar-vota-contra-mas-stf-mantem-prisoes-de-pai-e-primo-de-daniel-vorcaro", "outlet": "O Tempo", "date": "2026-06-16"},
+        {"title": "Discussão entre Gilmar Mendes e André Mendonça marca julgamento sobre prisão de Henrique Vorcaro no STF", "url": "https://rede98.com.br/noticias/politica/discussao-entre-gilmar-mendes-e-andre-mendonca-marca-julgamento-sobre-prisao-de-henrique-vorcaro-no-stf/", "outlet": "Rede 98", "date": "2026-06-17"},
+        {"title": "André Mendonça faz o necessário contraponto a Gilmar Mendes", "url": "https://www.gazetadopovo.com.br/opiniao/editoriais/andre-mendonca-gilmar-mendes-stf/", "outlet": "Gazeta do Povo (opinião)", "date": "2026-06-18"}
+      ],
+      "result": "Prisões mantidas, 3x1. Tentativa de relaxamento via comparação retórica com Lava Jato NÃO prevaleceu.",
+      "connections": ["alem-da-toga.html", "T-192 (Vorcaro triângulo carbono-mineração-banco)", "banco-master-os-donos.html"],
+      "status": "confirmado",
+      "lacuna_investigativa": "Não há registro público, nas fontes consultadas, de manifestação anterior de Gilmar Mendes especificamente sobre o caso Compliance Zero antes deste julgamento — útil verificar se há padrão de atuação dele em casos anteriores ligados a Daniel Vorcaro/Banco Master, dado que ele já atuou em pedidos do banqueiro noutras frentes (verificar Compliance Zero dossiê existente).",
+      "ponto_de_inflexao": "Não houve inflexão — o sistema de controle colegiado funcionou como desenhado: voto isolado não prevaleceu. Registrar como caso de FALHA da tentativa de P01, relevante por contraste com os casos em que P01 teve sucesso (Castelo de Areia, Lava Jato/suspeição Moro).",
+      "analise": "P01 tentado, não consumado — relevante precisamente por isso: mostra que o mecanismo de anulação processual documentado em outros casos do corpus não é automático, depende da composição do colegiado no momento do julgamento. P04b candidato na própria argumentação de Gilmar: a equiparação 'Compliance Zero = Lava Jato' foi tratada por ele como fato estabelecido, mas Mendonça contestou com dado verificável (apenas 7 soltos em ~200 acordos da Lava Jato, nenhum como contrapartida de delação) — ou seja, a analogia retórica não resiste a checagem factual, mas foi usada como se fosse equivalência estrutural válida. Mendonça também tornou pública sua decisão deliberadamente citando necessidade de escrutínio social — postura que contrasta com o padrão de sigilo documentado em outros casos do corpus (T-191, T-193)."
+    }
+  ]
+}

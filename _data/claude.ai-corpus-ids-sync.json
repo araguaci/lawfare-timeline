@@ -11,18 +11,18 @@
     "tracks": {
       "main": {
         "description": "Track principal — eventos institucionais, decisões judiciais, episódios políticos",
-        "id_range": "1–1594 (confirmed)",
+        "id_range": "1–1600 (confirmed)",
         "id_format": "integer",
-        "last_confirmed": 1594,
-        "last_jekyll_published": 1594,
-        "last_session_produced": 1594,
+        "last_confirmed": 1600,
+        "last_jekyll_published": 1600,
+        "last_session_produced": 1600,
         "notes": "lawfare.json confirmado até 1576. Jekyll publica 1527–1571. Batch 1572–1576 merged 2026-05-28."
       },
       "thematic": {
         "description": "Sub-corpus temático — análise estrutural de operações e padrões",
-        "id_range": "100–209",
+        "id_range": "100–215",
         "id_format": "integer",
-        "last_confirmed": 209,
+        "last_confirmed": 215,
         "last_session_produced": 192,
         "notes": "T-197 a T-207 confirmados 2026-05-28. T-208/T-209 reserved. Americanas = T-199 (não T-197 como decidido na sessão — repo já tinha T-197=Rejeito). SPLC = T-206 (não T-202 como decidido na sessão — repo já tinha T-202=Delegada×PCC)."
       }
@@ -143,15 +143,23 @@
           ],
           "status": "confirmed",
           "notes": "Merge todo batches 2026-06-20: retroativo 1577-1583; fto 1584-1589; bloqueio-internet 1590-1594."
+        },
+        {
+          "range": [
+            1595,
+            1600
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo batches 2026-06-20: Acrônimo & Transcooper renumeração 1595-1600."
         }
       ],
-      "last_id": 1594,
-      "last_jekyll_published": 1594,
+      "last_id": 1600,
+      "last_jekyll_published": 1600,
       "last_produced": 1576,
-      "next_available": 1595,
+      "next_available": 1601,
       "merge_queue": [],
-      "last_confirmed": 1594,
-      "last_session_produced": 1594
+      "last_confirmed": 1600,
+      "last_session_produced": 1600
     },
     "thematic": {
       "description": "Sub-corpus temático — análise estrutural e padrões sistêmicos",
@@ -945,10 +953,52 @@
           "topic": "JustiçaWatch Brasil — índice corpus (T-209)",
           "artifact": "justicawatch-brasil-corpus-bridge",
           "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-justicawatch-brasil-corpus-bridge)."
+        },
+        {
+          "id": 210,
+          "status": "confirmed",
+          "topic": "Operação Parasitas (PC-GO) identifica fraude em ma... (T-210)",
+          "artifact": "2023-01-01-operacao-parasitas-pc-go-identifica-fraude-em-materiais-hospitalares-no-hmap.md",
+          "notes": "Estudo Jekyll _posts/estudos/ (2023-01-01-operacao-parasitas-pc-go-identifica-fraude-em-materiais-hospitalares-no-hmap)."
+        },
+        {
+          "id": 211,
+          "status": "confirmed",
+          "topic": "MPF e PF deflagram 2ª fase da Operação Sepse contr... (T-211)",
+          "artifact": "2026-04-23-mpf-e-pf-deflagram-2-fase-da-operacao-sepse-contra-rede-de-lavagem-ligada-ao-hmap.md",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-04-23-mpf-e-pf-deflagram-2-fase-da-operacao-sepse-contra-rede-de-lavagem-ligada-ao-hmap)."
+        },
+        {
+          "id": 212,
+          "status": "confirmed",
+          "topic": "Esquema na Operação Sepse: contratos superfaturado... (T-212)",
+          "artifact": "2026-04-23-esquema-na-operacao-sepse-contratos-superfaturados-de-uti-com-repasse-de-10-a-cupula-da-os.md",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-04-23-esquema-na-operacao-sepse-contratos-superfaturados-de-uti-com-repasse-de-10-a-cupula-da-os)."
+        },
+        {
+          "id": 213,
+          "status": "confirmed",
+          "topic": "CGU confirma histórico de irregularidades da mesma... (T-213)",
+          "artifact": "2026-04-25-cgu-confirma-historico-de-irregularidades-da-mesma-os-em-outros-estados-fixacao-de-compete.md",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-04-25-cgu-confirma-historico-de-irregularidades-da-mesma-os-em-outros-estados-fixacao-de-compete)."
+        },
+        {
+          "id": 214,
+          "status": "confirmed",
+          "topic": "Status atual da Operação Sepse — sem denúncia form... (T-214)",
+          "artifact": "2026-06-20-status-atual-da-operacao-sepse-sem-denuncia-formal-ou-desfecho-judicial-ate-a-data-de-regi.md",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-06-20-status-atual-da-operacao-sepse-sem-denuncia-formal-ou-desfecho-judicial-ate-a-data-de-regi)."
+        },
+        {
+          "id": 215,
+          "status": "confirmed",
+          "topic": "2ª Turma do STF mantém prisão de pai e primo de Da... (T-215)",
+          "artifact": "2026-06-16-2-turma-do-stf-mantem-prisao-de-pai-e-primo-de-daniel-vorcaro-por-31-gilmar-mendes-diverge.md",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-06-16-2-turma-do-stf-mantem-prisao-de-pai-e-primo-de-daniel-vorcaro-por-31-gilmar-mendes-diverge)."
         }
       ],
-      "last_id": 209,
-      "next_available": 210,
+      "last_id": 215,
+      "next_available": 216,
       "pending": [],
       "pending_notes": {}
     }
@@ -957,8 +1007,8 @@
     "main_track_last_sync": "2026-06-20",
     "thematic_track_last_sync": "2026-06-20",
     "ids_confirmed_total": {
-      "main_track": "1594",
-      "thematic_track": 209
+      "main_track": "1600",
+      "thematic_track": 215
     },
     "ids_pending_production": [
       180
@@ -1020,7 +1070,8 @@
       "T-207 Vaza Toga corpus publicado (2026-06-20)",
       "T-208 Narrativa vs Evidência publicado (2026-06-20)",
       "T-209 JustiçaWatch Brasil publicado (2026-06-20)",
-      "T-196 Radar Top 30 publicado em estudos/ (2026-06-20)"
+      "T-196 Radar Top 30 publicado em estudos/ (2026-06-20)",
+      "lawfare.json last_id=1600; próximo ID livre=1601"
     ]
   },
   "id_conflict_resolutions": {

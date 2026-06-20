@@ -52,7 +52,7 @@ Ex-assessor Tagliaferro expôs canal informal de coordenação entre **TSE e STF
 
 ### Perseguição transnacional
 
-Senado enviou relatório a **EUA e organismos internacionais** — eixo [crise diplomática Magnitsky](/posts/2025-07-18-eua-revogam-vistos-de-alexandre-de-moraes-familiares-e-aliados/).
+Senado enviou relatório a **EUA e organismos internacionais** — eixo [crise diplomática Magnitsky](/posts/eua-revogam-vistos-de-alexandre-de-moraes-familiares-e-aliados/).
 
 ## Padrões
 
