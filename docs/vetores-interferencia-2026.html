@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vetores de Interferência Externa — Mapa de Intervenção 2026</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Syne:wght@400;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap');
+
+:root {
+  --bg: #070709;
+  --bg2: #0e0e12;
+  --bg3: #151519;
+  --bg4: #1c1c22;
+  --border: #252530;
+  --border2: #353540;
+  --text: #ddd8cc;
+  --text2: #8a8880;
+  --text3: #4a4848;
+  --red: #e83535;
+  --red2: #ff6060;
+  --red3: #3a1010;
+  --amber: #e8a010;
+  --amber2: #ffc030;
+  --amber3: #3a2a00;
+  --green: #22c870;
+  --green2: #0a2a18;
+  --blue: #3878ff;
+  --blue2: #80b0ff;
+  --blue3: #0a1a3a;
+  --purple: #8855e8;
+  --purple2: #c090ff;
+  --purple3: #1a0a38;
+  --cyan: #18c8d8;
+  --orange: #e86020;
+  --font-display: 'Syne', sans-serif;
+  --font-serif: 'DM Serif Display', serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.65;
+  min-height: 100vh;
+}
+
+/* GRAIN */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.4;
+}
+
+.container { max-width: 1360px; margin: 0 auto; padding: 0 28px 100px; }
+
+/* ── HEADER ── */
+.masthead {
+  border-bottom: 1px solid var(--border);
+  padding: 40px 0 28px;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+.masthead::before {
+  content: 'CLASSIFIED';
+  position: absolute;
+  right: -40px;
+  top: 20px;
+  font-family: var(--font-display);
+  font-size: 120px;
+  font-weight: 800;
+  color: rgba(232,53,53,0.04);
+  letter-spacing: -4px;
+  pointer-events: none;
+  user-select: none;
+}
+.masthead-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.tag {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 2px;
+}
+.tag-red { background: var(--red3); color: var(--red2); border: 1px solid rgba(232,53,53,0.3); }
+.tag-amber { background: var(--amber3); color: var(--amber2); border: 1px solid rgba(232,160,16,0.3); }
+.tag-blue { background: var(--blue3); color: var(--blue2); border: 1px solid rgba(56,120,255,0.3); }
+.tag-purple { background: var(--purple3); color: var(--purple2); border: 1px solid rgba(136,85,232,0.3); }
+.tag-green { background: var(--green2); color: var(--green); border: 1px solid rgba(34,200,112,0.3); }
+.tag-grey { background: var(--bg3); color: var(--text2); border: 1px solid var(--border); }
+
+.masthead h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+.masthead h1 em {
+  color: var(--red2);
+  font-style: italic;
+}
+.masthead-sub {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text2);
+  max-width: 720px;
+  line-height: 1.7;
+  border-left: 2px solid var(--red);
+  padding-left: 14px;
+  margin-top: 16px;
+}
+.masthead-stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+.stat { display: flex; flex-direction: column; gap: 2px; }
+.stat-val { font-family: var(--font-display); font-size: 26px; font-weight: 800; color: var(--amber2); }
+.stat-lbl { font-size: 10px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.08em; }
+
+/* ── AVISO METODOLÓGICO ── */
+.method-alert {
+  background: linear-gradient(135deg, var(--bg3) 0%, var(--bg2) 100%);
+  border: 1px solid var(--border2);
+  border-left: 3px solid var(--amber);
+  padding: 18px 22px;
+  margin-bottom: 40px;
+  border-radius: 2px;
+}
+.method-alert strong { color: var(--amber2); }
+.method-alert p { color: var(--text2); font-size: 12px; line-height: 1.7; margin-top: 6px; }
+
+/* ── ÍNDICE / TOC ── */
+.toc {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  padding: 22px 26px;
+  margin-bottom: 48px;
+  border-radius: 2px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 8px 32px;
+}
+.toc-title {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text3);
+  grid-column: 1 / -1;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 8px;
+}
+.toc a {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  color: var(--text2);
+  text-decoration: none;
+  font-size: 12px;
+  padding: 4px 0;
+  transition: color 0.15s;
+}
+.toc a:hover { color: var(--text); }
+.toc-num {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text3);
+  min-width: 24px;
+}
+
+/* ── SEÇÃO ── */
+.section {
+  margin-bottom: 56px;
+  scroll-margin-top: 24px;
+}
+.section-hdr {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+.section-num {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text3);
+  letter-spacing: 0.1em;
+}
+.section-hdr h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(18px, 2.5vw, 28px);
+  font-weight: 400;
+  color: var(--text);
+}
+
+/* ── VETOR CARDS ── */
+.vetor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.vetor-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.vetor-card:hover { border-color: var(--border2); }
+.vetor-card-hdr {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+}
+.vetor-card-hdr.red { background: linear-gradient(90deg, var(--red3) 0%, transparent 100%); border-left: 3px solid var(--red); }
+.vetor-card-hdr.amber { background: linear-gradient(90deg, var(--amber3) 0%, transparent 100%); border-left: 3px solid var(--amber); }
+.vetor-card-hdr.blue { background: linear-gradient(90deg, var(--blue3) 0%, transparent 100%); border-left: 3px solid var(--blue); }
+.vetor-card-hdr.purple { background: linear-gradient(90deg, var(--purple3) 0%, transparent 100%); border-left: 3px solid var(--purple); }
+.vetor-card-hdr.green { background: linear-gradient(90deg, var(--green2) 0%, transparent 100%); border-left: 3px solid var(--green); }
+.vetor-icon { font-size: 20px; line-height: 1; }
+.vetor-title { font-family: var(--font-display); font-size: 13px; font-weight: 700; color: var(--text); }
+.vetor-subtitle { font-size: 10px; color: var(--text2); margin-top: 1px; }
+.vetor-card-body { padding: 16px 18px; display: flex; flex-direction: column; gap: 10px; }
+.vetor-row { display: flex; gap: 8px; align-items: flex-start; }
+.vetor-label { font-size: 10px; font-weight: 600; color: var(--text3); text-transform: uppercase; letter-spacing: 0.08em; min-width: 80px; padding-top: 1px; }
+.vetor-val { font-size: 12px; color: var(--text); line-height: 1.55; }
+.vetor-val strong { color: var(--amber2); }
+.vetor-val a { color: var(--blue2); text-decoration: none; }
+.ev-pill {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 2px 7px;
+  border-radius: 2px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.ev-confirmed { background: rgba(34,200,112,0.15); color: var(--green); border: 1px solid rgba(34,200,112,0.25); }
+.ev-alleged { background: rgba(232,160,16,0.12); color: var(--amber); border: 1px solid rgba(232,160,16,0.25); }
+.ev-inference { background: rgba(136,85,232,0.12); color: var(--purple2); border: 1px solid rgba(136,85,232,0.25); }
+.ev-contested { background: rgba(56,120,255,0.12); color: var(--blue2); border: 1px solid rgba(56,120,255,0.25); }
+
+/* ── TABELA ── */
+.tbl-wrap { overflow-x: auto; margin-bottom: 24px; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+thead tr { border-bottom: 1px solid var(--border2); }
+thead th { font-family: var(--font-display); font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text3); padding: 10px 14px; text-align: left; }
+tbody tr { border-bottom: 1px solid var(--border); transition: background 0.1s; }
+tbody tr:hover { background: var(--bg3); }
+tbody td { padding: 11px 14px; color: var(--text2); vertical-align: top; line-height: 1.55; }
+tbody td strong { color: var(--text); }
+tbody td:first-child { color: var(--amber2); font-family: var(--font-display); font-size: 11px; font-weight: 700; min-width: 120px; }
+
+/* ── INTERVENÇÃO BOX ── */
+.int-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 14px;
+  margin-bottom: 24px;
+}
+.int-card {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  padding: 18px 20px;
+  position: relative;
+}
+.int-card::before {
+  content: attr(data-priority);
+  position: absolute;
+  top: 16px; right: 16px;
+  font-family: var(--font-display);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text3);
+}
+.int-card.p1 { border-top: 2px solid var(--red); }
+.int-card.p2 { border-top: 2px solid var(--amber); }
+.int-card.p3 { border-top: 2px solid var(--blue); }
+.int-num {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text3);
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+.int-title {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  color: var(--text);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.int-body { font-size: 12px; color: var(--text2); line-height: 1.65; }
+.int-body strong { color: var(--text); }
+.int-actions { margin-top: 14px; display: flex; flex-direction: column; gap: 6px; }
+.int-action {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 11px;
+  color: var(--text2);
+  padding: 8px 12px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  line-height: 1.5;
+}
+.int-action-icon { font-size: 12px; min-width: 16px; margin-top: 1px; }
+.int-action strong { color: var(--green); }
+
+/* ── CRONOGRAMA ── */
+.cronograma {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  margin-bottom: 24px;
+  padding-left: 32px;
+}
+.cronograma::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 10px;
+  bottom: 10px;
+  width: 1px;
+  background: var(--border2);
+}
+.cron-item {
+  position: relative;
+  padding: 0 0 24px 20px;
+}
+.cron-item::before {
+  content: '';
+  position: absolute;
+  left: -25px;
+  top: 5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border2);
+  border: 1px solid var(--border2);
+}
+.cron-item.red::before { background: var(--red); border-color: var(--red); box-shadow: 0 0 8px rgba(232,53,53,0.4); }
+.cron-item.amber::before { background: var(--amber); border-color: var(--amber); box-shadow: 0 0 8px rgba(232,160,16,0.4); }
+.cron-item.green::before { background: var(--green); border-color: var(--green); box-shadow: 0 0 8px rgba(34,200,112,0.4); }
+.cron-date { font-family: var(--font-display); font-size: 10px; font-weight: 700; color: var(--text3); letter-spacing: 0.1em; margin-bottom: 4px; }
+.cron-title { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+.cron-desc { font-size: 12px; color: var(--text2); line-height: 1.6; }
+
+/* ── QUOTE ── */
+.quote-block {
+  border-left: 3px solid var(--red);
+  padding: 16px 20px;
+  background: var(--bg2);
+  margin: 24px 0;
+  border-radius: 0 2px 2px 0;
+}
+.quote-block p {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.65;
+}
+.quote-block cite {
+  display: block;
+  margin-top: 10px;
+  font-size: 11px;
+  color: var(--text3);
+  font-style: normal;
+}
+
+/* ── PATTERN LINK ── */
+.pattern-refs { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.pref {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 2px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--text2);
+}
+
+/* ── ALERTA FINAL ── */
+.final-alert {
+  background: linear-gradient(135deg, rgba(232,53,53,0.08) 0%, var(--bg2) 100%);
+  border: 1px solid rgba(232,53,53,0.25);
+  border-radius: 2px;
+  padding: 28px 32px;
+  margin-top: 48px;
+}
+.final-alert h3 {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  color: var(--red2);
+  margin-bottom: 14px;
+}
+.final-alert p { font-size: 13px; color: var(--text2); line-height: 1.7; margin-bottom: 10px; }
+
+/* ── FOOTER ── */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 0;
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.footer-copy { font-size: 11px; color: var(--text3); line-height: 1.7; }
+.footer-links { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+.footer-links a { font-size: 11px; color: var(--blue2); text-decoration: none; }
+
+/* ── COLLAPSIBLE ── */
+details { border: 1px solid var(--border); border-radius: 2px; margin-bottom: 10px; }
+summary {
+  padding: 12px 16px;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text2);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  user-select: none;
+  background: var(--bg2);
+}
+summary:hover { color: var(--text); }
+summary::after { content: '▸'; margin-left: auto; font-size: 10px; }
+details[open] summary::after { content: '▾'; }
+details[open] { background: var(--bg2); }
+.details-body { padding: 14px 18px; font-size: 12px; color: var(--text2); line-height: 1.7; }
+
+/* ── RESPOSTA METODOLÓGICA ── */
+.diagnostico {
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  border-radius: 2px;
+  padding: 22px 26px;
+  margin-bottom: 24px;
+}
+.diagnostico h3 { font-family: var(--font-display); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text3); margin-bottom: 14px; }
+.diag-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 640px) { .diag-grid { grid-template-columns: 1fr; } }
+.diag-col-red { border-left: 2px solid var(--red); padding-left: 14px; }
+.diag-col-green { border-left: 2px solid var(--green); padding-left: 14px; }
+.diag-col-label { font-size: 10px; font-weight: 700; color: var(--text3); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+.diag-col-body { font-size: 12px; color: var(--text2); line-height: 1.65; }
+.diag-col-body li { margin-bottom: 5px; padding-left: 12px; position: relative; }
+.diag-col-body li::before { content: '→'; position: absolute; left: 0; color: var(--text3); }
+
+@media (max-width: 768px) {
+  .vetor-grid { grid-template-columns: 1fr; }
+  .int-grid { grid-template-columns: 1fr; }
+  .masthead-stats { gap: 20px; }
+  .toc { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="masthead-meta">
+    <span class="tag tag-red">Dossiê Analítico</span>
+    <span class="tag tag-amber">Eleições 2026</span>
+    <span class="tag tag-blue">Interferência Estrutural</span>
+    <span class="tag tag-grey">CC0 1.0 · Domínio Público</span>
+  </div>
+  <h1>Vetores de <em>Interferência Externa</em><br>— Mapa de Intervenção Soberana 2026</h1>
+  <div class="masthead-sub">
+    Mapeamento forense dos mecanismos verificáveis de interferência em processos políticos, judiciais e eleitorais brasileiros — com distinção explícita entre fatos documentados, inferências estruturais e especulação não verificável. Janela temporal: outubro/2026.
+  </div>
+  <div class="masthead-stats">
+    <div class="stat"><span class="stat-val">4</span><span class="stat-lbl">Vetores primários</span></div>
+    <div class="stat"><span class="stat-val">11</span><span class="stat-lbl">Pontos de intervenção</span></div>
+    <div class="stat"><span class="stat-val">3</span><span class="stat-lbl">Camadas documentais</span></div>
+    <div class="stat"><span class="stat-val">OUT/26</span><span class="stat-lbl">Janela crítica</span></div>
+  </div>
+</div>
+
+<!-- ALERTA METODOLÓGICO -->
+<div class="method-alert">
+  <strong>⚠ Princípio metodológico (METHODOLOGY.md v2.2)</strong>
+  <p>Este dossiê distingue rigorosamente três níveis: <strong style="color:var(--green)">ev-confirmed</strong> (fonte primária verificável), <strong style="color:var(--amber)">ev-inference</strong> (conclusão estrutural derivada de padrão documentado) e <strong style="color:var(--purple2)">ev-alleged</strong> (alegação sem corroboração independente). Misturar esses níveis — a principal falha do discurso conspiracionista — invalida fatos verificáveis ao contaminá-los com especulação. <em>Formulações factuais são mais devastadoras que formulações polêmicas.</em></p>
+</div>
+
+<!-- DIAGNÓSTICO: o que funciona vs. o que se auto-sabota -->
+<div class="diagnostico">
+  <h3>Diagnóstico Analítico Preliminar — O que é utilizável vs. o que é armadilha</h3>
+  <div class="diag-grid">
+    <div class="diag-col-red">
+      <div class="diag-col-label">❌ Auto-sabotante (mistura de categorias)</div>
+      <ul class="diag-col-body">
+        <li>Listas de 80+ atores sem distinção de mecanismo, evidência ou relevância</li>
+        <li>CIA + PCC + Yakuza + "linhagens sanguíneas de Nimrod" no mesmo parágrafo</li>
+        <li>Orgs. filantrópicas auditáveis equiparadas a agências de espionagem</li>
+        <li>Inimigos que se matam há 70 anos tratados como aliança coordenada</li>
+        <li>Escatologia (sociedades satânicas) contamina fatos verificáveis</li>
+      </ul>
+    </div>
+    <div class="diag-col-green">
+      <div class="diag-col-label">✓ Verificável, atacável, palatável ao eleitor</div>
+      <ul class="diag-col-body">
+        <li>Financiamento externo não auditado de ONGs com acesso privilegiado ao judiciário</li>
+        <li>Infraestrutura chinesa em setores estratégicos (portos, 5G, minerais críticos)</li>
+        <li>Nexo crime organizado → economia formal → blindagem institucional</li>
+        <li>Uso do TSE como instrumento de assimetria punitiva eleitoral (P03)</li>
+        <li>Singham/Thoughtworks: rastreado pelo NYT com documentação específica</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- TOC -->
+<nav class="toc">
+  <div class="toc-title">Índice — 4 Vetores + 11 Pontos de Intervenção</div>
+  <a href="#v1"><span class="toc-num">V1</span> Financiamento externo de narrativa e litígio</a>
+  <a href="#v2"><span class="toc-num">V2</span> Infraestrutura estratégica chinesa</a>
+  <a href="#v3"><span class="toc-num">V3</span> Nexo crime organizado — Estado</a>
+  <a href="#v4"><span class="toc-num">V4</span> Captura do processo eleitoral 2026</a>
+  <a href="#intervencoes"><span class="toc-num">INT</span> 11 Pontos de intervenção legislativa / judicial</a>
+  <a href="#cronograma"><span class="toc-num">CRN</span> Cronograma crítico até outubro/2026</a>
+  <a href="#nao-documentados"><span class="toc-num">LIM</span> O que NÃO é documentado (limites analíticos)</a>
+</nav>
+
+<!-- ═══════════════════════════════════════════════
+     VETOR 1 — FINANCIAMENTO DE NARRATIVA
+═══════════════════════════════════════════════ -->
+<section class="section" id="v1">
+  <div class="section-hdr">
+    <span class="section-num">V1</span>
+    <h2>Financiamento Externo de Narrativa e Litígio Estratégico</h2>
+  </div>
+
+  <p style="color:var(--text2); font-size:13px; line-height:1.7; margin-bottom:20px;">
+    O mecanismo documentável não é "controle" ou "conspiração" — é <strong style="color:var(--text)">alinhamento de incentivos financeiros com produção de narrativa e litígio judicial</strong>. Fundações financiam ONGs; ONGs produzem relatórios, rankings e pareceres jurídicos; pareceres são usados como fundamento de decisões judiciais e pressão diplomática. A cadeia é rastreável via formulários 990-PF públicos nos EUA e relatórios anuais das próprias organizações.
+  </p>
+
+  <div class="vetor-grid">
+    <div class="vetor-card">
+      <div class="vetor-card-hdr red">
+        <span class="vetor-icon">💰</span>
+        <div>
+          <div class="vetor-title">Open Society Foundations</div>
+          <div class="vetor-subtitle">George Soros · EUA/Hungria</div>
+        </div>
+      </div>
+      <div class="vetor-card-body">
+        <div class="vetor-row">
+          <span class="vetor-label">Mecanismo</span>
+          <span class="vetor-val">Financiamento de ONGs de litígio estratégico e advocacy judicial no Brasil. <span class="ev-pill ev-confirmed">ev-confirmed</span></span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">Receptoras BR</span>
+          <span class="vetor-val">Conectas Direitos Humanos, ARTIGO 19, Instituto Igarapé. Constam nos 990-PF da OSF disponíveis no IRS.</span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">Impacto</span>
+          <span class="vetor-val">Pareceres produzidos por entidades financiadas citados em decisões do STF e em relatórios da OEA/CIDH usados como base de pressão institucional.</span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">Lacuna</span>
+          <span class="vetor-val"><strong>Não documentado:</strong> influência direta em decisões específicas. Inferência estrutural, não fato confirmado. <span class="ev-pill ev-inference">ev-inference</span></span>
+        </div>
+        <div class="pattern-refs"><span class="pref">P03</span><span class="pref">P05</span></div>
+      </div>
+    </div>
+
+    <div class="vetor-card">
+      <div class="vetor-card-hdr amber">
+        <span class="vetor-icon">🏛️</span>
+        <div>
+          <div class="vetor-title">NED / CEPPS / IRI / NDI</div>
+          <div class="vetor-subtitle">National Endowment for Democracy — financiamento congressual EUA</div>
+        </div>
+      </div>
+      <div class="vetor-card-body">
+        <div class="vetor-row">
+          <span class="vetor-label">Mecanismo</span>
+          <span class="vetor-val">A NED recebe verba congressual americana (~$300M/ano) e repassa a organizações políticas em países considerados estratégicos. <span class="ev-pill ev-confirmed">ev-confirmed</span></span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">Brasil</span>
+          <span class="vetor-val">Grants para formação de lideranças políticas, monitoramento eleitoral e "fortalecimento de instituições democráticas" — definição operacional decidida em Washington.</span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">Distinção</span>
+          <span class="vetor-val"><strong>Isso é política externa americana declarada,</strong> não operação clandestina. O debate legítimo é sobre soberania, não conspiração.</span>
+        </div>
+        <div class="pattern-refs"><span class="pref">P05</span><span class="pref">P09</span></div>
+      </div>
+    </div>
+
+    <div class="vetor-card">
+      <div class="vetor-card-hdr blue">
+        <span class="vetor-icon">📡</span>
+        <div>
+          <div class="vetor-title">Singham / Thoughtworks Network</div>
+          <div class="vetor-subtitle">Neville Roy Singham · NYC/Xangai</div>
+        </div>
+      </div>
+      <div class="vetor-card-body">
+        <div class="vetor-row">
+          <span class="vetor-label">Rastreamento</span>
+          <span class="vetor-val">New York Times, agosto 2023: financiamento rastreado de Manhattan a Xangai para People's Forum, Tricontinental, BreakThrough News. <span class="ev-pill ev-confirmed">ev-confirmed</span></span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">Mecanismo</span>
+          <span class="vetor-val">Organizações produzem conteúdo alinhado à narrativa do PCC (Partido Comunista Chinês) com embalagem "progressista" ocidental — não há curadoria editorial declarada.</span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">Brasil</span>
+          <span class="vetor-val">Tricontinental tem escritório no Brasil (São Paulo). Produção de material sobre "imperialismo americano" e defesa de governos aliados de Pequim na América Latina. <span class="ev-pill ev-confirmed">ev-confirmed</span></span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">Lacuna</span>
+          <span class="vetor-val">Financiamento direto de campanhas políticas brasileiras: <strong>não documentado</strong>. <span class="ev-pill ev-alleged">ev-alleged</span></span>
+        </div>
+        <div class="pattern-refs"><span class="pref">P09</span></div>
+      </div>
+    </div>
+
+    <div class="vetor-card">
+      <div class="vetor-card-hdr purple">
+        <span class="vetor-icon">🌐</span>
+        <div>
+          <div class="vetor-title">Repórteres sem Fronteiras / RSF</div>
+          <div class="vetor-subtitle">+ HRW · Amnesty · Transparency International</div>
+        </div>
+      </div>
+      <div class="vetor-card-body">
+        <div class="vetor-row">
+          <span class="vetor-label">Mecanismo</span>
+          <span class="vetor-val">Rankings e relatórios com poder de "excomungar" países têm financiamento misto — incluindo fundações com agendas políticas identificáveis. <span class="ev-pill ev-confirmed">ev-confirmed</span></span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">RSF/Brasil</span>
+          <span class="vetor-val">Relatórios sobre "liberdade de imprensa" usados como instrumento de pressão diplomática contra candidatos específicos — assimetria de aplicação documentável por comparação de casos.</span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">Questão legítima</span>
+          <span class="vetor-val">Por que a mesma HRW que documenta Venezuela produz relatórios sobre Brasil com metodologia e urgência diferentes? Assimetria verificável, motivação: <span class="ev-pill ev-inference">ev-inference</span></span>
+        </div>
+        <div class="pattern-refs"><span class="pref">P04b</span><span class="pref">P05</span></div>
+      </div>
+    </div>
+  </div>
+
+  <details>
+    <summary>🔍 Fundações "filantrópicas" com pauta política identificável — lista evidencial</summary>
+    <div class="details-body">
+      <strong style="color:var(--amber2)">Verificáveis via 990-PF / relatórios anuais públicos:</strong><br><br>
+      <strong style="color:var(--text)">Ford Foundation</strong> — financiamento histórico de movimentos de "advocacy" em democracias emergentes, incluindo litígio estratégico no Brasil via parceiros identificados nos relatórios anuais. Pauta alinhada com posições do Partido Democrata americano.<br><br>
+      <strong style="color:var(--text)">Omidyar Network</strong> (Pierre Omidyar, fundador do eBay) — financiamento de mídia "independente" e organizações de "verificação de fatos" em múltiplos países. No Brasil: parceria com organizações de fact-checking que receberam status privilegiado no contexto da "moderação de conteúdo" das plataformas.<br><br>
+      <strong style="color:var(--text)">Open Philanthropy / Dustin Moskovitz</strong> — herdeiro do Facebook repackaging como "altruísmo eficaz". Financiamento de IA safety e advocacy regulatório com implicações para controle de plataformas.<br><br>
+      <strong style="color:var(--text)">Wellcome Trust / CIFF</strong> — financiamento de agenda climática e de saúde com impacto em política pública brasileira (desmatamento, agronegócio).<br><br>
+      <strong style="color:var(--text)">Pew Charitable Trusts</strong> — financiamento de pesquisa de opinião e monitoramento eleitoral com metodologia que determina "saúde democrática" de países.<br><br>
+      <em style="color:var(--text3)">Nota analítica: o problema não é a existência dessas organizações ou de seu financiamento — é a ausência de reciprocidade e auditoria quando atuam em países soberanos. O equivalente americano de uma organização brasileira financiando grupos de litígio nos EUA seria imediatamente bloqueado como agente estrangeiro (FARA).</em>
+    </div>
+  </details>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     VETOR 2 — INFRAESTRUTURA CHINESA
+═══════════════════════════════════════════════ -->
+<section class="section" id="v2">
+  <div class="section-hdr">
+    <span class="section-num">V2</span>
+    <h2>Infraestrutura Estratégica Chinesa — Dependência Soberana</h2>
+  </div>
+
+  <p style="color:var(--text2); font-size:13px; line-height:1.7; margin-bottom:20px;">
+    O vetor chinês é o único desta lista onde a interferência é <strong style="color:var(--text)">estrutural por design</strong> — não requer coordenação, apenas funcionamento normal de acordos firmados. Dependência de infraestrutura crítica produz vulnerabilidade soberana independentemente de intenção declarada.
+  </p>
+
+  <div class="vetor-grid">
+    <div class="vetor-card">
+      <div class="vetor-card-hdr red">
+        <span class="vetor-icon">🏗️</span>
+        <div>
+          <div class="vetor-title">Belt and Road / Portos e Ferrovias</div>
+          <div class="vetor-subtitle">Nova Rota da Seda — América Latina</div>
+        </div>
+      </div>
+      <div class="vetor-card-body">
+        <div class="vetor-row">
+          <span class="vetor-label">Modelo</span>
+          <span class="vetor-val">Dívida impagável → concessão de infraestrutura. Sri Lanka/Hambantota: entregou porto por 99 anos em 2017. <span class="ev-pill ev-confirmed">ev-confirmed</span></span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">Brasil</span>
+          <span class="vetor-val">Empresas chinesas (COSCO, CMPort) operam terminais em Santos, Paranaguá e estão em processo de expansão. Participação no leilão de Porto Itaqui (MA) em 2025. <span class="ev-pill ev-confirmed">ev-confirmed</span></span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">Risco soberano</span>
+          <span class="vetor-val">Porto sob operação chinesa = acesso a dados de fluxo de exportações estratégicas (nióbio, lítio, soja) em tempo real. Não requer espionagem — é consequência operacional normal. <span class="ev-pill ev-inference">ev-inference</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="vetor-card">
+      <div class="vetor-card-hdr amber">
+        <span class="vetor-icon">📶</span>
+        <div>
+          <div class="vetor-title">Huawei 5G — Infraestrutura de Telecomunicações</div>
+          <div class="vetor-subtitle">Backbone digital nacional</div>
+        </div>
+      </div>
+      <div class="vetor-card-body">
+        <div class="vetor-row">
+          <span class="vetor-label">Status BR</span>
+          <span class="vetor-val">Anatel não excluiu Huawei do 5G brasileiro. Equipamentos Huawei em uso nas principais operadoras. <span class="ev-pill ev-confirmed">ev-confirmed</span></span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">Contexto</span>
+          <span class="vetor-val">EUA, UE, UK, Austrália e Japão excluíram Huawei de infraestrutura crítica após avaliação de risco de backdoor. Brasil permanece outlier entre democracias da OCDE. <span class="ev-pill ev-confirmed">ev-confirmed</span></span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">Backdoor</span>
+          <span class="vetor-val">Existência de backdoors: <strong>alegado pelos EUA, não confirmado publicamente com evidência primária aberta</strong>. Risco estrutural real; prova definitiva: <span class="ev-pill ev-contested">ev-contested</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="vetor-card">
+      <div class="vetor-card-hdr blue">
+        <span class="vetor-icon">⛏️</span>
+        <div>
+          <div class="vetor-title">Minerais Estratégicos — Dependência Exportadora</div>
+          <div class="vetor-subtitle">Nióbio · Lítio · Terras Raras</div>
+        </div>
+      </div>
+      <div class="vetor-card-body">
+        <div class="vetor-row">
+          <span class="vetor-label">Nióbio</span>
+          <span class="vetor-val">Brasil tem <strong>94% das reservas mundiais</strong>. Exporta como commodity bruta; receita local capturada ~18% do valor final. China é principal compradora. <span class="ev-pill ev-confirmed">ev-confirmed</span></span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">Lítio</span>
+          <span class="vetor-val">Triângulo Arg/Bol/Chi tem 60% das reservas globais. Brasil tem reservas significativas em MG. China comprou 34% das exportações minerais da América Latina em 2023. <span class="ev-pill ev-confirmed">ev-confirmed</span></span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">Política</span>
+          <span class="vetor-val">Nenhum governo brasileiro — de qualquer espectro — implementou política de verticalização industrial do nióbio. Loop de dependência estrutural sem responsável identificável único. <span class="ev-pill ev-inference">ev-inference</span></span>
+        </div>
+        <div class="pattern-refs"><span class="pref">P11</span></div>
+      </div>
+    </div>
+
+    <div class="vetor-card">
+      <div class="vetor-card-hdr purple">
+        <span class="vetor-icon">🏦</span>
+        <div>
+          <div class="vetor-title">NDB / AIIB — Novo Banco de Desenvolvimento</div>
+          <div class="vetor-subtitle">Dilma Rousseff (presidente desde 2023)</div>
+        </div>
+      </div>
+      <div class="vetor-card-body">
+        <div class="vetor-row">
+          <span class="vetor-label">Status</span>
+          <span class="vetor-val">Dilma Rousseff preside o NDB (Novo Banco de Desenvolvimento dos BRICS) em Xangai desde 2023. Cargo nomeado pelo governo Lula. <span class="ev-pill ev-confirmed">ev-confirmed</span></span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">Relevância</span>
+          <span class="vetor-val">NDB é veículo de financiamento de infraestrutura que compete com BID e Banco Mundial — com condicionalidades diferentes (sem exigência de transparência ou padrões de governança ocidentais).</span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">Conflito</span>
+          <span class="vetor-val">Presidente de banco com capacidade de financiar infraestrutura brasileira é figura com processo judicial ativo no Brasil e interesse eleitoral no resultado de 2026. <span class="ev-pill ev-inference">ev-inference</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     VETOR 3 — NEXO CRIME — ESTADO
+═══════════════════════════════════════════════ -->
+<section class="section" id="v3">
+  <div class="section-hdr">
+    <span class="section-num">V3</span>
+    <h2>Nexo Crime Organizado — Economia Formal — Blindagem Institucional</h2>
+  </div>
+
+  <p style="color:var(--text2); font-size:13px; line-height:1.7; margin-bottom:20px;">
+    Este é o vetor <strong style="color:var(--text)">mais documentado do corpus</strong> e o único com evidências primárias em volume suficiente para suportar afirmações sem qualificação. A cadeia PCC → economia formal → blindagem institucional está mapeada em múltiplas operações policiais com relatórios da PF disponíveis publicamente.
+  </p>
+
+  <div class="vetor-grid">
+    <div class="vetor-card">
+      <div class="vetor-card-hdr red">
+        <span class="vetor-icon">💊</span>
+        <div>
+          <div class="vetor-title">PCC — Transnacionalização</div>
+          <div class="vetor-subtitle">Primeiro Comando da Capital · 30+ países · R$60bi+ receita/ano</div>
+        </div>
+      </div>
+      <div class="vetor-card-body">
+        <div class="vetor-row">
+          <span class="vetor-label">Status</span>
+          <span class="vetor-val">EUA (Trump adm.) designou PCC como Specially Designated Narcotics Trafficker em 2025. Argentina e Paraguai classificaram como organização terrorista. <span class="ev-pill ev-confirmed">ev-confirmed</span></span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">Rota europeia</span>
+          <span class="vetor-val">Aliança PCC × 'Ndrangheta (Calábria) para distribuição de cocaína na Europa documentada pela Europol. 'Ndrangheta move mais cocaína na Europa do que qualquer cartel mexicano. <span class="ev-pill ev-confirmed">ev-confirmed</span></span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">Política externa</span>
+          <span class="vetor-val">PCC opera na Bolívia, Paraguai e rota europeia sem reconhecimento formal pelo Itamaraty como ameaça à política externa brasileira. Lacuna documentada. <span class="ev-pill ev-confirmed">ev-confirmed</span></span>
+        </div>
+        <div class="pattern-refs"><span class="pref">P08</span><span class="pref">P09</span></div>
+      </div>
+    </div>
+
+    <div class="vetor-card">
+      <div class="vetor-card-hdr amber">
+        <span class="vetor-icon">🏦</span>
+        <div>
+          <div class="vetor-title">Narco Fluxo → Economia Formal → FGC</div>
+          <div class="vetor-subtitle">Operação Narco Fluxo (abr/2026) · R$1,6bi</div>
+        </div>
+      </div>
+      <div class="vetor-card-body">
+        <div class="vetor-row">
+          <span class="vetor-label">Mecanismo</span>
+          <span class="vetor-val">R$1,6bi lavados via estúdios, gravadoras e shows. Influenciadores como nós financeiros, não apenas amplificadores. <span class="ev-pill ev-confirmed">ev-confirmed</span></span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">Banco Master</span>
+          <span class="vetor-val">R$50bi em passivos, R$4mi em caixa. FGC como backstop implícito de R$~87bi. Ex-relator no STF com vínculos documentados com acionistas (PF). <span class="ev-pill ev-confirmed">ev-confirmed</span></span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">Loop</span>
+          <span class="vetor-val">Lucro ilícito → banco frágil → proteção institucional → impunidade → mais lucro ilícito. <strong>P11 como nexo estrutural</strong>. <span class="ev-pill ev-inference">ev-inference</span></span>
+        </div>
+        <div class="pattern-refs"><span class="pref">P08</span><span class="pref">P10</span><span class="pref">P11</span></div>
+      </div>
+    </div>
+
+    <div class="vetor-card">
+      <div class="vetor-card-hdr blue">
+        <span class="vetor-icon">🌐</span>
+        <div>
+          <div class="vetor-title">Tren de Aragua / Venezuela</div>
+          <div class="vetor-subtitle">Expansão em Roraima + rota sul</div>
+        </div>
+      </div>
+      <div class="vetor-card-body">
+        <div class="vetor-row">
+          <span class="vetor-label">Status</span>
+          <span class="vetor-val">EUA designou Tren de Aragua como organização terrorista estrangeira (FTO) em 2025. Governo venezuelano: vínculos estruturais com a facção documentados por relatórios da ONU. <span class="ev-pill ev-confirmed">ev-confirmed</span></span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">Brasil</span>
+          <span class="vetor-val">Presença documentada em Roraima e expansão para outros estados. Competição territorial com PCC e CV no norte do país. <span class="ev-pill ev-confirmed">ev-confirmed</span></span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">Geopolítica</span>
+          <span class="vetor-val">Venezuela pós-Maduro como ponto de tensão entre China (acesso ao petróleo) e EUA (doutrina Monroe ressuscitada). Crime organizado como instrumento de projeção de poder. <span class="ev-pill ev-inference">ev-inference</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="vetor-card">
+      <div class="vetor-card-hdr green">
+        <span class="vetor-icon">🌿</span>
+        <div>
+          <div class="vetor-title">Greenwashing / Créditos de Carbono</div>
+          <div class="vetor-subtitle">Operação Greenwashing · MPF · Delaware</div>
+        </div>
+      </div>
+      <div class="vetor-card-body">
+        <div class="vetor-row">
+          <span class="vetor-label">Mecanismo</span>
+          <span class="vetor-val">Recurso amazônico (crédito de carbono) sai via Delaware e retorna como "investimento estrangeiro". A elite local administra a estrutura em troca de impunidade. <span class="ev-pill ev-confirmed">ev-confirmed</span></span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">Beneficiários</span>
+          <span class="vetor-val">200 LLCs de Delaware identificadas no relatório da PF. Beneficiários finais: não revelados. DOJ tem acesso; ausência de resposta americana é decisão política. <span class="ev-pill ev-confirmed">ev-confirmed</span></span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">Liturgia climática</span>
+          <span class="vetor-val">IPCC/COPs como "mercado de indulgências" de carbono: metáfora analítica com base em estrutura documentada de créditos que financiam operadores domésticos. <span class="ev-pill ev-inference">ev-inference</span></span>
+        </div>
+        <div class="pattern-refs"><span class="pref">P08</span><span class="pref">P11</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     VETOR 4 — CAPTURA ELEITORAL 2026
+═══════════════════════════════════════════════ -->
+<section class="section" id="v4">
+  <div class="section-hdr">
+    <span class="section-num">V4</span>
+    <h2>Captura do Processo Eleitoral 2026 — TSE como Chokepoint</h2>
+  </div>
+
+  <p style="color:var(--text2); font-size:13px; line-height:1.7; margin-bottom:20px;">
+    O vetor eleitoral é o mais diretamente relevante para outubro/2026. O risco documentado não é fraude nas urnas — é <strong style="color:var(--text)">aplicação assimétrica do poder regulatório do TSE</strong> (inabilitação de candidatos, controle de narrativa via "desinformação", weaponização de instrumentos legítimos).
+  </p>
+
+  <div class="vetor-grid">
+    <div class="vetor-card">
+      <div class="vetor-card-hdr red">
+        <span class="vetor-icon">⚖️</span>
+        <div>
+          <div class="vetor-title">Assimetria Punitiva TSE/STF</div>
+          <div class="vetor-subtitle">P03 aplicado ao processo eleitoral</div>
+        </div>
+      </div>
+      <div class="vetor-card-body">
+        <div class="vetor-row">
+          <span class="vetor-label">Documentado</span>
+          <span class="vetor-val">Velocidade diferencial de processos eleitorais contra candidatos de espectros opostos, medida por tempo de tramitação e resultado, está documentada em análises comparativas de juristas. <span class="ev-pill ev-confirmed">ev-confirmed</span></span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">Mecanismo</span>
+          <span class="vetor-val">Mesmo ministro que investiga pode ser o mesmo que julga em fase eleitoral — ausência de segregação de funções estrutural no TSE/STF. <span class="ev-pill ev-confirmed">ev-confirmed</span></span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">2026</span>
+          <span class="vetor-val">Petição 15.648 (Flávio Bolsonaro), processos contra Eduardo Bolsonaro, candidaturas do campo direita: todos tramitam em instâncias onde o mesmo padrão de assimetria foi documentado. <span class="ev-pill ev-contested">ev-contested</span></span>
+        </div>
+        <div class="pattern-refs"><span class="pref">P03</span><span class="pref">P05</span></div>
+      </div>
+    </div>
+
+    <div class="vetor-card">
+      <div class="vetor-card-hdr amber">
+        <span class="vetor-icon">🗣️</span>
+        <div>
+          <div class="vetor-title">Arquitetura de Censura Digital</div>
+          <div class="vetor-subtitle">Operação Silêncio Digital · PL 2630</div>
+        </div>
+      </div>
+      <div class="vetor-card-body">
+        <div class="vetor-row">
+          <span class="vetor-label">Mecanismo</span>
+          <span class="vetor-val">Infraestrutura de remoção de conteúdo construída entre 2022–2025 via decisões monocráticas do STF + TSE, sem base legal específica aprovada pelo Congresso. <span class="ev-pill ev-confirmed">ev-confirmed</span></span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">Aplicação</span>
+          <span class="vetor-val">Operação Silêncio Digital: contas de jornalistas e políticos bloqueadas por decisão monocrática sem contraditório prévio. <span class="ev-pill ev-confirmed">ev-confirmed</span></span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">2026</span>
+          <span class="vetor-val">Infraestrutura já existente pode ser ativada em contexto eleitoral com base nos mesmos instrumentos já utilizados. Risco estrutural documentável. <span class="ev-pill ev-inference">ev-inference</span></span>
+        </div>
+        <div class="pattern-refs"><span class="pref">P03</span><span class="pref">P06</span></div>
+      </div>
+    </div>
+
+    <div class="vetor-card">
+      <div class="vetor-card-hdr blue">
+        <span class="vetor-icon">🇺🇸</span>
+        <div>
+          <div class="vetor-title">Crise Diplomática Brasil–EUA</div>
+          <div class="vetor-subtitle">Eduardo Bolsonaro · FTO · MLAT</div>
+        </div>
+      </div>
+      <div class="vetor-card-body">
+        <div class="vetor-row">
+          <span class="vetor-label">Eduardo B.</span>
+          <span class="vetor-val">Atuação em Washington: lobby junto ao Congresso americano contra o governo Lula e para designação de facções brasileiras como FTO. Atividade documentada. <span class="ev-pill ev-confirmed">ev-confirmed</span></span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">MLAT</span>
+          <span class="vetor-val">Acordo de cooperação jurídica EUA–Brasil: funciona quando há interesse americano (FCPA/Odebrecht). Instrumento seletivo por design. <span class="ev-pill ev-confirmed">ev-confirmed</span></span>
+        </div>
+        <div class="vetor-row">
+          <span class="vetor-label">Risco</span>
+          <span class="vetor-val">Escalada diplomática antes de outubro/2026 pode ser usada como argumento eleitoral por qualquer dos lados — vetor de amplificação narrativa, não intervenção estrutural. <span class="ev-pill ev-inference">ev-inference</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     11 PONTOS DE INTERVENÇÃO
+═══════════════════════════════════════════════ -->
+<section class="section" id="intervencoes">
+  <div class="section-hdr">
+    <span class="section-num">INT</span>
+    <h2>11 Pontos de Intervenção — Antes de Outubro/2026</h2>
+  </div>
+
+  <p style="color:var(--text2); font-size:13px; line-height:1.7; margin-bottom:24px;">
+    Cada intervenção abaixo tem: <strong style="color:var(--text)">base legal existente ou projeto em tramitação</strong>, impacto verificável, e palatabilidade eleitoral além do nicho. Ordenados por viabilidade × impacto.
+  </p>
+
+  <div class="int-grid">
+
+    <div class="int-card p1" data-priority="PRIORIDADE 1">
+      <div class="int-num">INT-01</div>
+      <div class="int-title">Lei FARA brasileira — Registro de Agentes Estrangeiros</div>
+      <div class="int-body">ONGs que recebem financiamento externo e atuam em litígio judicial ou advocacy político devem ser obrigadas a registrar-se como agentes estrangeiros, à imagem do <strong>Foreign Agents Registration Act</strong> americano. Não proíbe — exige transparência.</div>
+      <div class="int-actions">
+        <div class="int-action"><span class="int-action-icon">📋</span><div><strong>Base:</strong> PL 1595/2023 (Registro de Agentes Estrangeiros) — arquivado. Reativação possível. Modelo: FARA de 1938 (EUA) e legislação análoga da UE.</div></div>
+        <div class="int-action"><span class="int-action-icon">🎯</span><div><strong>Impacto:</strong> Expõe financiadores de Conectas, ARTIGO 19 e similares; desincentiva litígio estratégico financiado externamente sem proibir atividade legítima.</div></div>
+        <div class="int-action"><span class="int-action-icon">📊</span><div><strong>Palatabilidade:</strong> Defensável com argumento de soberania e reciprocidade — o que os EUA exigem de nós, nós exigimos de quem atua aqui.</div></div>
+      </div>
+    </div>
+
+    <div class="int-card p1" data-priority="PRIORIDADE 1">
+      <div class="int-num">INT-02</div>
+      <div class="int-title">Exclusão de Huawei de Infraestrutura Crítica Nacional</div>
+      <div class="int-body">Convergência com padrão NATO/OCDE. Não requer prova de backdoor — basta invocar princípio de precaução soberana adotado pelos aliados. <strong>Argumento de segurança nacional, não xenofobia.</strong></div>
+      <div class="int-actions">
+        <div class="int-action"><span class="int-action-icon">📋</span><div><strong>Base:</strong> Lei de Segurança Nacional · Política Nacional de Defesa · precedente: PL britânico Telecomunications (Security) Act 2021.</div></div>
+        <div class="int-action"><span class="int-action-icon">🎯</span><div><strong>Impacto:</strong> Remove risco de backdoor em backbone 5G; abre mercado para fornecedores alternativos (Ericsson, Nokia, Samsung); melhora posição negociadora com EUA.</div></div>
+        <div class="int-action"><span class="int-action-icon">📊</span><div><strong>Palatabilidade:</strong> Muito alta — todos os aliados ocidentais já fizeram. Único custo: resistência de operadoras com equipamentos já instalados.</div></div>
+      </div>
+    </div>
+
+    <div class="int-card p1" data-priority="PRIORIDADE 1">
+      <div class="int-num">INT-03</div>
+      <div class="int-title">PEC da Segregação de Funções — STF/TSE</div>
+      <div class="int-body">Proibir que o mesmo ministro do STF que conduza inquérito ou investigação possa ser relator do mesmo caso no julgamento — <strong>nemo judex in causa propria</strong> como norma constitucional explícita.</div>
+      <div class="int-actions">
+        <div class="int-action"><span class="int-action-icon">📋</span><div><strong>Base:</strong> Argumento do paradoxo constitucional já documentado no corpus. INQ 4.781 como caso modelo. Princípio consagrado no direito comparado.</div></div>
+        <div class="int-action"><span class="int-action-icon">🎯</span><div><strong>Impacto:</strong> Remove mecanismo central de captura do chokepoint judicial. Beneficia qualquer campo político no longo prazo — argumento genuinamente transpartidário.</div></div>
+        <div class="int-action"><span class="int-action-icon">📊</span><div><strong>Palatabilidade:</strong> Alta — defensável como garantia do devido processo legal. Resistência: STF via interpretação constitucional.</div></div>
+      </div>
+    </div>
+
+    <div class="int-card p2" data-priority="PRIORIDADE 2">
+      <div class="int-num">INT-04</div>
+      <div class="int-title">Regulamentação de Créditos de Carbono — Rastreabilidade Total</div>
+      <div class="int-body">Exigir beneficiário final identificado em toda transação de crédito de carbono amazônico, incluindo LLCs em jurisdições offshore. Fecha o mecanismo documentado na Operação Greenwashing.</div>
+      <div class="int-actions">
+        <div class="int-action"><span class="int-action-icon">📋</span><div><strong>Base:</strong> PL do Mercado de Carbono (PL 182/2024 aprovado pelo Senado). Emendas de rastreabilidade podem ser inseridas antes da regulamentação.</div></div>
+        <div class="int-action"><span class="int-action-icon">🎯</span><div><strong>Impacto:</strong> Expõe beneficiários de Delaware; aumenta receita estatal capturada; remove argumento de "preservação ambiental" de esquema documentado de lavagem.</div></div>
+      </div>
+    </div>
+
+    <div class="int-card p2" data-priority="PRIORIDADE 2">
+      <div class="int-num">INT-05</div>
+      <div class="int-title">Verticalização Industrial do Nióbio — Política de Estado</div>
+      <div class="int-body">94% das reservas mundiais; captura de apenas ~18% do valor. Proibição ou tributação progressiva de exportação de nióbio bruto — exigência de processamento mínimo em território nacional.</div>
+      <div class="int-actions">
+        <div class="int-action"><span class="int-action-icon">📋</span><div><strong>Base:</strong> Precedente: Indonésia (níquel, 2020) — proibiu exportação de minério bruto e atraiu US$15bi em investimentos de processamento em 3 anos.</div></div>
+        <div class="int-action"><span class="int-action-icon">📊</span><div><strong>Palatabilidade:</strong> Alta — soberania de recursos naturais é posição consensual. Resistência: CBMM (família Moreira Salles, ~75% do mercado mundial de nióbio).</div></div>
+      </div>
+    </div>
+
+    <div class="int-card p2" data-priority="PRIORIDADE 2">
+      <div class="int-num">INT-06</div>
+      <div class="int-title">CPI do Financiamento Externo de ONGs</div>
+      <div class="int-body">Investigação parlamentar formal do fluxo financeiro entre fundações estrangeiras e ONGs brasileiras com acesso privilegiado ao Judiciário, ao processo eleitoral e à formulação de políticas públicas.</div>
+      <div class="int-actions">
+        <div class="int-action"><span class="int-action-icon">📋</span><div><strong>Base:</strong> Poder investigativo do Congresso. Fonte primária: 990-PF públicos do IRS americano + relatórios anuais das fundações.</div></div>
+        <div class="int-action"><span class="int-action-icon">🎯</span><div><strong>Impacto:</strong> Produz registro público de cadeia financeira; constrange intermediários sem necessidade de provar crime; gera material eleitoral documentado.</div></div>
+      </div>
+    </div>
+
+    <div class="int-card p2" data-priority="PRIORIDADE 2">
+      <div class="int-num">INT-07</div>
+      <div class="int-title">Designação Formal do PCC como Organização Terrorista</div>
+      <div class="int-body">Convergência com Argentina, Paraguai, EUA e UE. Habilita sanções financeiras via FATF/GAFI, cooperação de inteligência ampliada, e remove o paradoxo político de o Brasil ser o único país do eixo anti-PCC sem a designação.</div>
+      <div class="int-actions">
+        <div class="int-action"><span class="int-action-icon">📋</span><div><strong>Base:</strong> PL 2630 (Lei Antiterrorismo) — requer apenas decreto do Executivo com base na Lei 13.260/2016.</div></div>
+        <div class="int-action"><span class="int-action-icon">📊</span><div><strong>Palatabilidade:</strong> Muito alta — aprovação popular superior a 80% segundo pesquisas de segurança pública. Resistência: setores do PT e PSOL (argumento de criminalização da pobreza).</div></div>
+      </div>
+    </div>
+
+    <div class="int-card p3" data-priority="PRIORIDADE 3">
+      <div class="int-num">INT-08</div>
+      <div class="int-title">Auditoria Independente da Dosimetria Judicial — Lei 14.689/2023</div>
+      <div class="int-body">A suspensão monocrática da Lei da Dosimetria por decisão de ministro que é simultaneamente réu e julgador (535×1) é o caso documentado mais claro de captura de chokepoint. Auditoria parlamentar do impacto concreto.</div>
+      <div class="int-actions">
+        <div class="int-action"><span class="int-action-icon">📋</span><div><strong>Base:</strong> Corpus ID-181: suspensão de maio/2026. Poder de auditoria do Congresso sobre impacto de decisões judiciais em políticas públicas.</div></div>
+        <div class="int-action"><span class="int-action-icon">🎯</span><div><strong>Impacto:</strong> Cria registro formal da "geometria 535×1" — argumento eleitoral devastador se formulado factualmente.</div></div>
+      </div>
+    </div>
+
+    <div class="int-card p3" data-priority="PRIORIDADE 3">
+      <div class="int-num">INT-09</div>
+      <div class="int-title">Regulação de Portos Estratégicos — Restrição a Operadores de Países Não-Aliados</div>
+      <div class="int-body">Proibir concessão de operação de portos estratégicos (Santos, Paranaguá, Itaqui, Manaus) a empresas controladas por governos de países sem tratado de segurança com o Brasil. Modelo: CFIUS americano.</div>
+      <div class="int-actions">
+        <div class="int-action"><span class="int-action-icon">📋</span><div><strong>Base:</strong> Precedente: EUA (CFIUS), Austrália (Critical Infrastructure Act 2021), UK (National Security and Investment Act 2021).</div></div>
+        <div class="int-action"><span class="int-action-icon">📊</span><div><strong>Palatabilidade:</strong> Média — requer framing de soberania, não anti-China. Afeta contratos já assinados; resistência comercial significativa.</div></div>
+      </div>
+    </div>
+
+    <div class="int-card p3" data-priority="PRIORIDADE 3">
+      <div class="int-num">INT-10</div>
+      <div class="int-title">Marco Legal de Transparência para Fact-Checkers com Poder de Plataforma</div>
+      <div class="int-body">Organizações de "verificação de fatos" que têm parceria com plataformas para remoção ou redução de alcance de conteúdo devem declarar publicamente seu financiamento, metodologia e taxa de revisão de decisões.</div>
+      <div class="int-actions">
+        <div class="int-action"><span class="int-action-icon">📋</span><div><strong>Base:</strong> Regulação análoga em discussão na UE (Digital Services Act) e UK (Online Safety Act). Princípio de accountability de quem exerce poder de censura privada.</div></div>
+        <div class="int-action"><span class="int-action-icon">🎯</span><div><strong>Impacto:</strong> Expõe financiamento Omidyar/Open Society de fact-checkers brasileiros; cria mecanismo de contestação de remoções.</div></div>
+      </div>
+    </div>
+
+    <div class="int-card p3" data-priority="PRIORIDADE 3">
+      <div class="int-num">INT-11</div>
+      <div class="int-title">Fundo Soberano de Minerais Críticos — Modelo Norueguês</div>
+      <div class="int-body">Capturar parcela do valor de nióbio, lítio e terras raras em fundo soberano gerido com governança independente — modelo GPF da Noruega. Remove minerais estratégicos do loop de extração P11 e cria colchão soberano.</div>
+      <div class="int-actions">
+        <div class="int-action"><span class="int-action-icon">📋</span><div><strong>Base:</strong> PL do Fundo Soberano (2023, em tramitação). Precedente Norueguês: US$1,7 trilhão gerido com governança exemplar desde 1996.</div></div>
+        <div class="int-action"><span class="int-action-icon">📊</span><div><strong>Palatabilidade:</strong> Alta — argumento de legado intergeracional, independente de ciclo eleitoral. Resistência: mineradoras e câmbio de curto prazo.</div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     CRONOGRAMA
+═══════════════════════════════════════════════ -->
+<section class="section" id="cronograma">
+  <div class="section-hdr">
+    <span class="section-num">CRN</span>
+    <h2>Cronograma Crítico — Janela até Outubro/2026</h2>
+  </div>
+
+  <div class="cronograma">
+    <div class="cron-item red">
+      <div class="cron-date">JUN / 2026</div>
+      <div class="cron-title">Prazo: Registro de candidaturas no TSE</div>
+      <div class="cron-desc">Momento de maior risco de weaponização do TSE. Processos de inelegibilidade tramitam com maior velocidade nesta janela. INT-03 (segregação de funções) já seria tarde para mudança estrutural — mas auditoria parlamentar (INT-08) ainda é possível.</div>
+    </div>
+    <div class="cron-item amber">
+      <div class="cron-date">JUL / 2026</div>
+      <div class="cron-title">Votação do PL do Mercado de Carbono — regulamentação</div>
+      <div class="cron-desc">Última janela para inserção de emendas de rastreabilidade (INT-04) antes que o mercado de carbono seja regulamentado sem exigência de beneficiário final. Após publicação do decreto regulamentador, mudança requer nova lei.</div>
+    </div>
+    <div class="cron-item amber">
+      <div class="cron-date">AGO / 2026</div>
+      <div class="cron-title">Período eleitoral formal — restrições de comunicação</div>
+      <div class="cron-desc">Infraestrutura de censura digital (INT-10) mais ativa neste período. Redes sociais sob pressão de cumprir determinações do TSE. Shadowban e redução algorítmica de alcance: documentáveis via shadowban.yuzurisa.com e ferramentas similares.</div>
+    </div>
+    <div class="cron-item red">
+      <div class="cron-date">OUT / 2026</div>
+      <div class="cron-title">Eleições — janela de inflexão</div>
+      <div class="cron-desc">Janela primária do projeto. Resultado determina se os vetores documentados (V1–V4) encontram resistência institucional ou consolidação. Sem mudança de chokepoint judicial (INT-03), qualquer governo eleito opera no mesmo sistema capturado.</div>
+    </div>
+    <div class="cron-item green">
+      <div class="cron-date">NOV / 2026</div>
+      <div class="cron-title">Janela pós-eleitoral — reforma institucional</div>
+      <div class="cron-desc">Se vitória do campo reformista: janela de 90 dias para encaminhamento de INT-01, INT-02, INT-07 antes que coalizão parlamentar se fragmente. Reformas estruturais (INT-03, INT-05) requerem maioria qualificada — janela mais longa, resistência maior.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     O QUE NÃO ESTÁ DOCUMENTADO
+═══════════════════════════════════════════════ -->
+<section class="section" id="nao-documentados">
+  <div class="section-hdr">
+    <span class="section-num">LIM</span>
+    <h2>Limites Analíticos — O que Não Está Documentado</h2>
+  </div>
+
+  <p style="color:var(--text2); font-size:13px; line-height:1.7; margin-bottom:20px;">
+    A credibilidade do corpus depende desta seção ser tão rigorosa quanto as anteriores. As afirmações abaixo estão no discurso público mas <strong style="color:var(--red2)">não têm suporte evidencial verificável</strong> no padrão ev-confirmed do corpus.
+  </p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Afirmação</th>
+          <th>Status real</th>
+          <th>Por que importa não afirmar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Coordenação entre CIA, FSB e PCC</td>
+          <td><span class="ev-pill ev-alleged">ev-alleged</span> — inimigos documentados entre si; coordenação não documentada</td>
+          <td>Mistura agências rivais como aliadas. Invalida as afirmações verificáveis ao lado.</td>
+        </tr>
+        <tr>
+          <td>Sociedades satânicas / linhagens de Nimrod</td>
+          <td><span class="ev-pill ev-alleged">ev-alleged</span> — categoria escatológica, não analítica</td>
+          <td>Contamina retroativamente todos os fatos verificáveis no mesmo discurso. Doação ao adversário.</td>
+        </tr>
+        <tr>
+          <td>Open Society "controla" decisões do STF</td>
+          <td><span class="ev-pill ev-inference">ev-inference</span> fraca — financiamento documentado; influência direta em decisões específicas: não</td>
+          <td>Afirmação verificável: "financiamento externo de ONGs que produzem pareceres usados pelo STF". Muito mais sólida.</td>
+        </tr>
+        <tr>
+          <td>WEF / Comissão Trilateral como governo paralelo</td>
+          <td><span class="ev-pill ev-alleged">ev-alleged</span> — fóruns de alinhamento documentados; poder de comando: não demonstrado</td>
+          <td>Desvio de foco. O problema documentável é a assimetria regulatória entre países que seguem a agenda WEF e os que não seguem.</td>
+        </tr>
+        <tr>
+          <td>Backdoor ativo da Huawei em infraestrutura brasileira</td>
+          <td><span class="ev-pill ev-contested">ev-contested</span> — risco estrutural real; prova de ativação: não pública</td>
+          <td>Afirmação correta: "todos os aliados ocidentais excluíram Huawei com base em risco estrutural; Brasil é outlier".</td>
+        </tr>
+        <tr>
+          <td>Yakuza / Cosa Nostra com operações no Brasil</td>
+          <td><span class="ev-pill ev-alleged">ev-alleged</span> para Yakuza; Cosa Nostra via 'Ndrangheta tem conexão PCC documentada</td>
+          <td>Listar 10 organizações criminosas sem distinção de relevância dilui o foco. PCC + 'Ndrangheta + CV + Tren de Aragua: relevância documentada para Brasil.</td>
+        </tr>
+        <tr>
+          <td>Foro de São Paulo como coordenador de governos</td>
+          <td><span class="ev-pill ev-inference">ev-inference</span> — fórum de alinhamento ideológico documentado; coordenação operacional: não demonstrada</td>
+          <td>Papel real é soft power ideológico, não governo paralelo. Afirmação verificável e suficientemente grave.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="quote-block">
+    <p>"O atirador que atira em tudo não acerta nada. O candidato que enfrenta 80 inimigos simultâneos não vence eleição — fornece munição para ser descartado como lunático. Três mecanismos concretos com evidência primária valem mais que uma lista de setenta nomes sem gradação evidencial."</p>
+    <cite>— Princípio analítico do corpus (METHODOLOGY.md v2.2 §2.4)</cite>
+  </div>
+</section>
+
+<!-- ALERTA FINAL -->
+<div class="final-alert">
+  <h3>A pergunta que realmente importa antes de outubro/2026</h3>
+  <p>Não é "contra quem lutar". É: <strong style="color:var(--text)">qual o mínimo de intervenções institucionais, realizáveis com a maioria parlamentar disponível, que tornam o processo eleitoral suficientemente resistente à weaponização dos instrumentos existentes?</strong></p>
+  <p>A resposta é INT-01 + INT-03 + INT-07. As demais são importantes; essas três são condição de possibilidade das outras. INT-03 (segregação de funções) é a mais estrutural e a mais difícil. INT-07 (designação do PCC) é a mais palatável e a mais urgente para o alinhamento diplomático com EUA e parceiros regionais. INT-01 (FARA brasileiro) é o instrumento mais eficaz para expor o financiamento de V1 sem perseguição de atores individuais.</p>
+  <p style="color:var(--text3); font-size:11px; margin-top:14px;">Dossiê produzido em 31/05/2026 · lawfare-timeline.vercel.app · CC0 1.0 Universal — Domínio Público Total · Corpus: @araguaci / AI Nativo Brasil</p>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-copy">
+    Vetores de Interferência Externa — Mapa de Intervenção Soberana 2026 · v1.0<br>
+    CC0 1.0 Universal — Domínio Público · lawfare-timeline.vercel.app<br>
+    Metodologia: METHODOLOGY.md v2.2 · Padrões P01–P11
+  </div>
+  <div class="footer-links">
+    <a href="padroes-sistemicos-dashboard.html">Padrões P01–P11</a>
+    <a href="republica-capturada.html">República Capturada</a>
+    <a href="paradoxo-constitucional.html">Paradoxo Constitucional</a>
+    <a href="inq4781.html">INQ 4.781</a>
+    <a href="https://lawfare-timeline.vercel.app">lawfare-timeline.vercel.app</a>
+  </div>
+</div>
+
+</div><!-- /container -->
+</body>
+</html>

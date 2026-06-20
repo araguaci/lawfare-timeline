@@ -1,0 +1,49 @@
+{
+  "batch_id": "lawfare-1516-erosao-consenso-moraes",
+  "gerado_em": "2026-05-31",
+  "track": "main",
+  "proximo_id_apos_batch": 1517,
+  "nota_metodologica": "Entrada derivada de reportagem da Gazeta do Povo (2026), documentando revisões públicas de posição por 9 figuras/entidades. Classificação evidencial: ev-confirmed para as declarações citadas com aspas e atribuição nominal; ev-confirmed para o padrão estrutural de co-legitimação que as declarações retroativamente expõem. Separação rigorosa entre 'o que cada ator disse' (factual) e 'o que as mudanças revelam sobre a função estrutural do apoio original' (ev-inference).",
+  "assuntos": [
+    {
+      "id": 1516,
+      "date": "2026-05-01",
+      "date_precision": "month",
+      "title": "Erosão do consenso de apoio a Moraes: OAB, MBL, senadores e governadores revisam posições públicas (2019–2026)",
+      "summary": "Reportagem da Gazeta do Povo documenta 9 figuras e entidades que apoiaram ou toleraram publicamente a atuação de Alexandre de Moraes entre 2019 e 2024 e posteriormente reverteram suas posições de forma explícita ou implícita. Casos documentados com declarações antes/depois: (1) OAB Federal — apoiou abertura do INQ das Fake News em mar/2019; 27 presidentes estaduais assinam ofício crítico em fev/2026 citando 'investigação perpétua' e 'tom intimidatório'. (2) Hamilton Mourão — declarou 'democracia pujante' em dez/2022; admitiu publicamente ter 'se enganado' em ago/2024 no plenário do Senado, citando 'relações espúrias' do gabinete de Moraes com o TSE. (3) Ciro Gomes — chamou de 'exótico' o procedimento em 2020 mas defendeu 'palavra derradeira da Suprema Corte' em ago/2022; em ago/2024, usou metáfora do árbitro que 'bate lateral, faz gol, valida e faz a perícia do VAR'. (4) Oriovisto Guimarães — pediu ao Senado que 'emprestasse os ombros' ao STF em ago/2021; assinou pedido de impeachment de Moraes em ago/2025. (5) Jorge Kajuru — pediu impeachment em 2021, elogiou Moraes em fev/2022, assinou segundo pedido em ago/2025. (6) Arthur Lira — defendeu 'independência entre poderes' após prisão de Daniel Silveira em fev/2021; reteve CPI do Abuso de Autoridade enquanto STF arquivou denúncias contra ele; criticou 'magistrados não eleitos' em jul/2025. (7) Renan Santos/MBL — defendeu inquérito das 'milícias digitais' e medidas contra bolsonaristas; declarou que Moraes 'executa vingança' em nov/2025. (8) Eduardo Leite — repudiou sanções Magnitsky contra Moraes em jul/2025; pediu impeachment em nov/2025 após indícios de 'relação espúria' com caso Master. (9) Felipe Neto — defendeu bloqueios de contas pelo STF em abr/2024; anunciou afastamento do debate público em fev/2025 sem revisão explícita.",
+      "category": "mecanismo_sistemico",
+      "actors": [
+        { "name": "OAB Federal / 27 presidentes estaduais", "role": "Entidade jurídica — apoio inicial ao INQ 4.781; ofício crítico em 2026", "institution": "OAB" },
+        { "name": "Hamilton Mourão", "role": "Senador / ex-vice-presidente — revisão pública explícita", "institution": "Senado Federal" },
+        { "name": "Ciro Gomes", "role": "Político / ex-candidato presidencial — ambiguidade progressiva", "institution": "PDT" },
+        { "name": "Oriovisto Guimarães", "role": "Senador — apoio 2021, impeachment 2025", "institution": "Senado Federal" },
+        { "name": "Jorge Kajuru", "role": "Senador — oscilação documentada em três momentos", "institution": "Senado Federal" },
+        { "name": "Arthur Lira", "role": "Ex-presidente da Câmara — proteção cruzada documentada, crítica tardia", "institution": "Câmara dos Deputados" },
+        { "name": "Renan Santos", "role": "Líder do MBL — revisão dentro da direita não bolsonarista", "institution": "MBL / Partido Missão" },
+        { "name": "Eduardo Leite", "role": "Governador RS — intervalo mais curto: jul/2025 (defesa) → nov/2025 (impeachment)", "institution": "Governo RS / PSDB" },
+        { "name": "Felipe Neto", "role": "Influenciador digital — silêncio como resposta, sem revisão explícita", "institution": "Independente" }
+      ],
+      "institutions": ["STF", "OAB", "Senado Federal", "Câmara dos Deputados", "MBL"],
+      "legal_basis": [],
+      "patterns": ["P04b", "P04", "P09"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {
+          "title": "Quem apoiou os abusos de Moraes e depois mudou de opinião",
+          "url": "https://www.gazetadopovo.com.br/ideias/lista-quem-apoiou-abusos-moraes-depois-mudou-opiniao/",
+          "outlet": "Gazeta do Povo",
+          "date": "2026-05-01"
+        }
+      ],
+      "result": "Erosão documentada do consenso de apoio que sustentou a expansão do INQ 4.781 e das medidas derivadas entre 2019 e 2024. O fenômeno não reverteu nenhuma decisão judicial nem restaurou direitos de investigados. Sua relevância estrutural é como indicador do colapso do P09 (legitimidade simbólica) que protegia o sistema.",
+      "connections": [
+        "id_1513 — Arquivamento Fux/JHSF: instância de P07 que o consenso de apoio permitiu passar sem escrutínio",
+        "id_1516 — conexão temática com INQ 4.781 (inq4781.html do corpus)"
+      ],
+      "status": "confirmado",
+      "lacuna_investigativa": "A reportagem não documenta o que motivou cada virada em termos causais verificáveis — se foi a Vaza Toga (ago/2024), o caso Master, a operação contra Luís Pablo, ou as sanções Magnitsky. A cronologia sugere que a Vaza Toga foi o ponto de inflexão mais frequente, mas isso não foi confirmado por todos os atores.",
+      "ponto_de_inflexao": "Agosto 2024: revelações da Vaza Toga. É o momento a partir do qual as revisões de posição se tornam públicas e numericamente significativas. Antes: silêncio ou apoio. Depois: críticas explícitas crescentes.",
+      "analise": "[ev-inference] Este evento documenta empiricamente o mecanismo P04b em sua fase de colapso. O padrão P04b funciona enquanto o custo de questionar o sistema é maior que o custo de apoiá-lo — a ameaça de ser associado ao 'campo inimigo' é o mecanismo de enforcement. Quando os alvos deixam de ser exclusivamente do campo adversário (caso Luís Pablo, operação contra jornalista maranhense; caso Master, envolvendo atores de múltiplos espectros), o cálculo de custo muda. O silêncio de Felipe Neto é analiticamente tão significativo quanto as declarações explícitas — representa a versão privada do mesmo colapso. A proteção cruzada documentada no caso Lira é a instância mais clara do P04b como mecanismo de troca: o STF arquiva investigações contra o presidente da Câmara; o presidente da Câmara retém a CPI do Abuso de Autoridade. Quando essa troca se esgota (Lira deixa a presidência), a crítica emerge. O corpus registra: o P04b não é ideológico — é estrutural. Atores de campos opostos executaram a mesma função de cobertura pelo mesmo mecanismo de interesse recíproco."
+    }
+  ]
+}

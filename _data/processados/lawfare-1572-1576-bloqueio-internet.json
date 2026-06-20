@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1572,
+    "titulo": "Estudo técnico documenta ~46.000 sites bloqueados na internet brasileira, maioria sob sigilo",
+    "data_evento": "2025-06-01",
+    "data_iso": "2025-06-01T00:00:00.000Z",
+    "categoria": "censura-digital",
+    "tags": ["bloqueio-internet", "censura-digital", "anatel", "operadoras", "transparencia", "infraestrutura"],
+    "descricao": "Estudo técnico apresentado por Thiago Ayú, professor Pedro Marcos e Vinícius Anselmo (IETF/academia brasileira) documenta panorama das ordens de bloqueio na internet brasileira. 304 ordens analisadas entre dez/2022 e jun/2025. Estimativa de ~46.000 sites bloqueados simultaneamente, com crescimento acelerado a partir de 2024 (25–30 novas ordens/mês). Maioria das ordens emitidas sob sigilo — o próprio usuário não consegue distinguir bloqueio de falha técnica.",
+    "resumo": "Pesquisa acadêmica independente com dataset real de ordens judiciais e administrativas de bloqueio. Primeiro estudo sistemático a quantificar escala, efeitos colaterais e aderência das operadoras ao regime de bloqueio da internet brasileira.",
+    "relevancia": "alta",
+    "impacto_democratico": "alto",
+    "tipo": "estudo-tecnico",
+    "evidencia": "ev-confirmed",
+    "fontes": [
+      "https://www.youtube.com/watch?v=zZMOUr-T4Hg"
+    ],
+    "pessoas_envolvidas": ["Thiago Ayú", "Pedro Marcos", "Vinícius Anselmo"],
+    "instituicoes_envolvidas": ["Anatel", "Poder Judiciário", "Ministério da Fazenda", "Ancine"],
+    "pais": "Brasil",
+    "valor_envolvido": "N/A",
+    "padroes": ["P12", "P12-B", "P04b"],
+    "prioridade": 1,
+    "analise": "O estudo representa a primeira quantificação sistemática do regime de bloqueio da internet brasileira. A natureza sigilosa das ordens — confirmada pelos próprios pesquisadores — é o mecanismo central que torna o sistema indistinguível de falha técnica para o usuário comum. Estruturalmente, isso é análogo ao Padrão P12-B (Paywall Eleitoral): a opacidade operacional garante que o controle de acesso à informação seja irrastreável. A escala (46.000 sites, crescimento acelerado em 2024) é inconsistente com o argumento de uso excepcional e proporcional."
+  },
+  {
+    "id": 1573,
+    "titulo": "18.000 domínios bloqueados têm potencial de derrubar 250 milhões de domínios colateralmente",
+    "data_evento": "2025-06-01",
+    "data_iso": "2025-06-01T00:00:00.000Z",
+    "categoria": "censura-digital",
+    "tags": ["bloqueio-internet", "efeito-colateral", "infraestrutura", "CDN", "dano-colateral"],
+    "descricao": "Dados do estudo Ayú/Pedro Marcos: 18.245 domínios ativos em ordens de bloqueio têm potencial colateral de derrubar 250 milhões de outros domínios se implementados via filtragem de IP. Três ordens específicas com potencial colateral de 45 milhões, 51 milhões e 100 milhões de domínios. Pelo menos 123.000 domínios .br potencialmente afetados colateralmente. Causa: múltiplos domínios compartilham mesmo endereço IP em CDNs.",
+    "resumo": "Magnitude documentada do efeito colateral das ordens de bloqueio. A proporção 18.000 → 250.000.000 revela que o regime atual de bloqueio é estruturalmente incapaz de ser cirúrgico sem causar danos massivos à infraestrutura geral da internet brasileira.",
+    "relevancia": "alta",
+    "impacto_democratico": "alto",
+    "tipo": "dado-tecnico",
+    "evidencia": "ev-confirmed",
+    "fontes": [
+      "https://www.youtube.com/watch?v=zZMOUr-T4Hg"
+    ],
+    "pessoas_envolvidas": ["Thiago Ayú", "Pedro Marcos"],
+    "instituicoes_envolvidas": ["Anatel"],
+    "pais": "Brasil",
+    "valor_envolvido": "N/A",
+    "padroes": ["P12", "P04b"],
+    "prioridade": 1,
+    "analise": "O dado estrutural mais relevante do estudo. A proporção 1:13.888 (domínio-alvo para domínio colateral potencial) demonstra que qualquer ordem de bloqueio ampla é, por natureza técnica, uma arma de supressão massiva. GitHub Pages ficou bloqueado por 30+ dias como efeito colateral — e a comunidade técnica qualificada demorou semanas para identificar a causa, precisamente porque as ordens são sigilosas. Isso documenta o mecanismo pelo qual bloqueio político é indistinguível de falha técnica."
+  },
+  {
+    "id": 1574,
+    "titulo": "Aderência das operadoras às ordens de bloqueio varia entre 3% e 90% — apenas 15% cumpridas integralmente",
+    "data_evento": "2025-06-01",
+    "data_iso": "2025-06-01T00:00:00.000Z",
+    "categoria": "censura-digital",
+    "tags": ["bloqueio-internet", "operadoras", "aderencia", "cumprimento-judicial", "discricao-comercial"],
+    "descricao": "Estudo analisa 6 provedores (regional RS, 2 nacionais, móvel, acadêmico, satélite). Aderência às ordens de bloqueio varia entre 3% e 90% por provedor. Apenas ~15% das ordens são cumpridas integralmente. Hipótese dos pesquisadores: operadoras exercem discrição comercial, evitando bloquear serviços populares para não receber reclamações de clientes. Um provedor realiza 13.300 bloqueios por filtragem de IP (mais severo); outro, apenas 2.400. Os demais usam bloqueio de DNS — facilmente contornável.",
+    "resumo": "Documentação do poder discricionário das operadoras sobre implementação de ordens judiciais e administrativas de bloqueio. O que é bloqueado depende parcialmente de decisão comercial privada, não apenas do mandado judicial.",
+    "relevancia": "alta",
+    "impacto_democratico": "alto",
+    "tipo": "dado-tecnico",
+    "evidencia": "ev-confirmed",
+    "fontes": [
+      "https://www.youtube.com/watch?v=zZMOUr-T4Hg"
+    ],
+    "pessoas_envolvidas": ["Thiago Ayú", "Pedro Marcos"],
+    "instituicoes_envolvidas": ["Anatel", "operadoras de telecomunicações"],
+    "pais": "Brasil",
+    "valor_envolvido": "N/A",
+    "padroes": ["P10", "P12-B"],
+    "prioridade": 2,
+    "analise": "A variação 3%–90% de aderência é estruturalmente equivalente à aplicação seletiva de lei. O dado de que ~85% das ordens são cumpridas apenas parcialmente — com operadoras escolhendo quais domínios dentro de uma ordem implementar — configura um sistema híbrido onde poder judicial, poder executivo e interesse comercial privado se sobrepõem sem supervisão pública documentada."
+  },
+  {
+    "id": 1575,
+    "titulo": "Anatel confirma: não avalia nem monitora domínios bloqueados por convênio com Ministério da Fazenda",
+    "data_evento": "2025-06-01",
+    "data_iso": "2025-06-01T00:00:00.000Z",
+    "categoria": "censura-digital",
+    "tags": ["anatel", "ministerio-fazenda", "bloqueio-internet", "controle", "accountability", "apostas"],
+    "descricao": "Representante da Anatel (Superintendente de Fiscalização substituto) confirma publicamente durante apresentação do estudo: o convênio com o Ministério da Fazenda — que gera o maior volume de domínios bloqueados (sites de apostas) — opera sem avaliação pela Anatel dos domínios determinados para bloqueio e sem monitoramento de efetividade pela agência. Monitoramento fica a cargo do próprio Ministério da Fazenda.",
+    "resumo": "Confirmação institucional de ausência de revisão independente no maior vetor de bloqueios da internet brasileira. O poder executivo (Ministério da Fazenda) determina bloqueios em massa sem escrutínio técnico independente da agência reguladora.",
+    "relevancia": "alta",
+    "impacto_democratico": "alto",
+    "tipo": "declaracao-publica",
+    "evidencia": "ev-confirmed",
+    "fontes": [
+      "https://www.youtube.com/watch?v=zZMOUr-T4Hg"
+    ],
+    "pessoas_envolvidas": ["Superintendente de Fiscalização substituto - Anatel"],
+    "instituicoes_envolvidas": ["Anatel", "Ministério da Fazenda"],
+    "pais": "Brasil",
+    "valor_envolvido": "N/A",
+    "padroes": ["P04b", "P12"],
+    "prioridade": 1,
+    "analise": "Declaração pública de ausência de accountability horizontal no sistema de bloqueio. O maior vetor quantitativo de bloqueios opera sem revisão independente — o órgão que emite a ordem (Fazenda) é o mesmo que monitora sua efetividade. Circuito fechado de poder sem supervisão técnica externa documentada."
+  },
+  {
+    "id": 1576,
+    "titulo": "Relato técnico de bloqueio seletivo por horário e conteúdo nas operadoras brasileiras — ano eleitoral 2026",
+    "data_evento": "2026-06-15",
+    "data_iso": "2026-06-15T00:00:00.000Z",
+    "categoria": "interferencia-eleitoral",
+    "tags": ["bloqueio-internet", "censura-digital", "interferencia-eleitoral-2026", "operadoras", "cloudflare", "P12-B"],
+    "descricao": "Relato documentado de falhas de conectividade com padrão seletivo: ocorrem em horários específicos, atingem determinados conteúdos, com problema localizado dentro da infraestrutura das operadoras — não na plataforma, não na Cloudflare, não no data center. Cloudflare confirma tecnicamente que em determinados horários usuários de grandes operadoras brasileiras deixam de conseguir acessar determinados destinos. O relato se enquadra no contexto da infraestrutura de bloqueio seletivo documentada pelo estudo Ayú/Pedro Marcos (IDs 1572–1575) e do precedente Anatel/Cloudflare no bloqueio do X em 2024.",
+    "resumo": "Padrão de bloqueio seletivo temporal e por conteúdo relatado em ano eleitoral. Consistente com capacidade técnica já documentada e com precedente estabelecido em 2024. Requer documentação sistemática com logs técnicos comparativos para atingir nível ev-confirmed.",
+    "relevancia": "alta",
+    "impacto_democratico": "critico",
+    "tipo": "relato-tecnico",
+    "evidencia": "ev-inference",
+    "fontes": [
+      "https://x.com/AnaPaulaRochaTe/status/2066456622352699685"
+    ],
+    "pessoas_envolvidas": ["Ana Paula Rocha"],
+    "instituicoes_envolvidas": ["Cloudflare", "operadoras brasileiras", "Anatel"],
+    "pais": "Brasil",
+    "valor_envolvido": "N/A",
+    "padroes": ["P12-B", "P04b"],
+    "prioridade": 1,
+    "analise": "O relato descreve um padrão mais sofisticado que o bloqueio total do X em 2024 — degradação seletiva e temporal em vez de bloqueio permanente visível. Essa evolução é estruturalmente esperada: bloqueios totais geram reação pública; bloqueios seletivos e temporários operam abaixo do limiar de visibilidade. A opacidade das ordens (documentada no estudo, IDs 1572–1574) garante que o mecanismo permaneça indistinguível de falha técnica para o usuário médio e para a imprensa. Em contexto eleitoral (outubro 2026), a capacidade técnica instalada + opacidade operacional + ausência de accountability = vetor de interferência documentável. NOTA: este ID permanece ev-inference até que logs técnicos comparativos sejam produzidos e verificados.",
+    "documentacao_necessaria": [
+      "traceroutes mostrando onde o pacote morre dentro do AS da operadora",
+      "logs temporais correlacionando horário e conteúdo afetado",
+      "resposta formal da Anatel ou das operadoras",
+      "confirmação técnica da Cloudflare de que o problema não está na camada deles"
+    ]
+  }
+]

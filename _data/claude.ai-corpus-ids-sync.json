@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "1.1.0",
-    "generated": "2026-05-29",
+    "generated": "2026-06-20",
     "updated": "2026-05-28T23:59:00-03:00",
     "session": "claude.ai — sessão editorial 2026-05-28 (Operação Rejeito, T-191, T-192, Flávio/Trump, posts P11)",
     "purpose": "Mapa de sincronização de IDs — lawfare-timeline corpus",
@@ -11,11 +11,11 @@
     "tracks": {
       "main": {
         "description": "Track principal — eventos institucionais, decisões judiciais, episódios políticos",
-        "id_range": "1–1576 (confirmed)",
+        "id_range": "1–1594 (confirmed)",
         "id_format": "integer",
-        "last_confirmed": 1576,
-        "last_jekyll_published": 1571,
-        "last_session_produced": 1576,
+        "last_confirmed": 1594,
+        "last_jekyll_published": 1594,
+        "last_session_produced": 1594,
         "notes": "lawfare.json confirmado até 1576. Jekyll publica 1527–1571. Batch 1572–1576 merged 2026-05-28."
       },
       "thematic": {
@@ -79,7 +79,7 @@
           ],
           "status": "confirmed",
           "merge_pending": false,
-          "notes": "Merge lawfare.json 2026-05-29: Biomm 1527-1546, Zema 1547-1550, Homeschooling 1551.",
+          "notes": "Merge lawfare.json 2026-06-20: Biomm 1527-1546, Zema 1547-1550, Homeschooling 1551.",
           "source_files": [
             "_data/processados/lawfare-1527-1546-biomm-renumerado.json",
             "_data/processados/zema-1547-1550-renumerado.json"
@@ -92,7 +92,7 @@
           ],
           "status": "confirmed",
           "merge_pending": false,
-          "notes": "Merge lawfare.json 2026-05-29: Operação Rejeito 1552-1571.",
+          "notes": "Merge lawfare.json 2026-06-20: Operação Rejeito 1552-1571.",
           "source_files": [
             "_data/processados/lawfare-batch-rejeito-1552-1571.json"
           ]
@@ -135,13 +135,23 @@
               "titulo": "Escudo das Américas — governo Lula opõe soberania; Flávio promete adesão se eleito"
             }
           ]
+        },
+        {
+          "range": [
+            1577,
+            1594
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo batches 2026-06-20: retroativo 1577-1583; fto 1584-1589; bloqueio-internet 1590-1594."
         }
       ],
-      "last_id": 1576,
-      "last_jekyll_published": 1571,
+      "last_id": 1594,
+      "last_jekyll_published": 1594,
       "last_produced": 1576,
-      "next_available": 1577,
-      "merge_queue": []
+      "next_available": 1595,
+      "merge_queue": [],
+      "last_confirmed": 1594,
+      "last_session_produced": 1594
     },
     "thematic": {
       "description": "Sub-corpus temático — análise estrutural e padrões sistêmicos",
@@ -944,10 +954,10 @@
     }
   },
   "sync_status": {
-    "main_track_last_sync": "2026-05-29",
-    "thematic_track_last_sync": "2026-05-29",
+    "main_track_last_sync": "2026-06-20",
+    "thematic_track_last_sync": "2026-06-20",
     "ids_confirmed_total": {
-      "main_track": "1576",
+      "main_track": "1594",
       "thematic_track": 209
     },
     "ids_pending_production": [
@@ -994,7 +1004,23 @@
       "T-207 Vaza Toga corpus publicado (2026-05-29)",
       "T-208 Narrativa vs Evidência publicado (2026-05-29)",
       "T-209 JustiçaWatch Brasil publicado (2026-05-29)",
-      "T-196 Radar Top 30 publicado em estudos/ (2026-05-29)"
+      "T-196 Radar Top 30 publicado em estudos/ (2026-05-29)",
+      "lawfare.json last_id=1594; próximo ID livre=1595",
+      "Fila editorial 2026-06-20: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-06-20)",
+      "T-198 COAF × Moraes publicado (2026-06-20)",
+      "T-199 Lojas Americanas publicado (2026-06-20)",
+      "T-200 Estatais rombo P11 publicado (2026-06-20)",
+      "T-201 PCC transnacional publicado (2026-06-20)",
+      "T-202 Delegada × PCC publicado (2026-06-20)",
+      "T-203 Zelotes CARF publicado (2026-06-20)",
+      "T-204 Gastos Paris publicado (2026-06-20)",
+      "T-205 Duplo padrão corpus publicado (2026-06-20)",
+      "T-206 SPLC corpus publicado (2026-06-20)",
+      "T-207 Vaza Toga corpus publicado (2026-06-20)",
+      "T-208 Narrativa vs Evidência publicado (2026-06-20)",
+      "T-209 JustiçaWatch Brasil publicado (2026-06-20)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-06-20)"
     ]
   },
   "id_conflict_resolutions": {
@@ -1029,7 +1055,7 @@
     "custeio_vs_top30": {
       "T-191": "Custeio P11 — estudo canônico",
       "T-196": "Radar Top 30 — renumerado do antigo T-191",
-      "date": "2026-05-29"
+      "date": "2026-06-20"
     },
     "pcc_namespace": {
       "range": "1481-1500",

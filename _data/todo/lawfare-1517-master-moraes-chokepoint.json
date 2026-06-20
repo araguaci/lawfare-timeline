@@ -1,0 +1,89 @@
+{
+  "batch_id": "lawfare-1517-master-moraes-chokepoint-2024",
+  "gerado_em": "2026-06-01",
+  "track": "main",
+  "proximo_id_apos_batch": 1518,
+  "nota_metodologica": "Entrada derivada de verificação cruzada: Poder360, CNN Brasil, Revista Oeste, banco-master-compliance-zero.html do corpus, dossie_operacao_2026.html. Fontes primárias: BC confirmou reuniões publicamente; contrato Viviane Barci documentado por múltiplos veículos com confirmação de Vorcaro em depoimento. Separação rigorosa ev-confirmed / ev-inference conforme METHODOLOGY.md v2.2.",
+  "assuntos": [
+    {
+      "id": 1517,
+      "date": "2024-01-01",
+      "date_precision": "month",
+      "title": "Contrato R$ 129M Viviane Barci/Master + reuniões Moraes-Galípolo + Toffoli avoca e recua — chokepoint em cadeia no caso Master (2024–2026)",
+      "summary": "Jan/2024: escritório Barci de Moraes Sociedade de Advogados assina contrato de R$ 129M com o Banco Master — 36 parcelas mensais de R$ 3,6M até 2027. Contrato previa atuação no 'Judiciário, Legislativo, Executivo, MP e PF'. Nenhuma atuação processual documentada foi identificada. Em depoimento, Vorcaro declarou que os pagamentos 'não podiam deixar de ser feitos em hipótese alguma'. Ago-set/2025: reuniões entre Moraes e Galípolo (presidente do BC) confirmadas pelo próprio BC, que alegou pauta 'Lei Magnitsky'. Múltiplas fontes relatam que o Master foi discutido. Moraes nega. BC nega ter registrado o conteúdo das reuniões — mesmo sob sigilo — invocando política interna de não documentar encontros com 'altas autoridades da República'. O mesmo BC que exige transparência plena das instituições que regula. Dez/2025: Toffoli avoca o caso Master para o STF, decreta custódia de todo o material apreendido pela PF no STF e tenta marcar acareação incluindo diretor de fiscalização do BC. PF, Febraban e BC protestam. Toffoli recua. Fev/2026: PF descobre mensagens e vínculos financeiros entre Vorcaro e Toffoli — pagamentos decorrentes da venda do resort Tayayá, do qual Toffoli era sócio. Fundo de Fabiano Zettel (cunhado de Vorcaro) havia investido R$ 35M no resort entre 2021–2025. Toffoli passava 168 dias por ano no Tayayá com seguranças pagos com dinheiro público (R$ 548,9 mil). STF reúne todos os ministros em sessão fechada. Toffoli deixa a relatoria. Ministro André Mendonça assume.",
+      "category": "chokepoint_judicial",
+      "actors": [
+        {
+          "name": "Viviane Barci de Moraes",
+          "role": "Titular do escritório — contrato R$ 129M com o Master durante período de análise regulatória",
+          "institution": "Barci de Moraes Sociedade de Advogados",
+          "funcao_estrutural": "Beneficiária direta do contrato; esposa do ministro relator de processos que poderiam afetar o Master"
+        },
+        {
+          "name": "Alexandre de Moraes",
+          "role": "Ministro do STF — reuniões com presidente do BC durante crise do Master com contrato da esposa ativo",
+          "institution": "STF",
+          "funcao_estrutural": "Chokepoint terminal — não declarou impedimento; reuniões com regulador cujas decisões afetavam diretamente o banco que pagava sua esposa"
+        },
+        {
+          "name": "Gabriel Galípolo",
+          "role": "Presidente do BC — participou de reunião sigilosa com Vorcaro em 4/dez/2024 antes de assumir o cargo; confirmou reuniões com Moraes",
+          "institution": "Banco Central do Brasil",
+          "funcao_estrutural": "Regulador com conflito não declarado; tomou decisões sobre o Master (veto ao BRB, liquidação) sem declarar impedimento"
+        },
+        {
+          "name": "Dias Toffoli",
+          "role": "Ministro STF — avocou o caso, decretou custódia de provas, recuou após PF documentar vínculos financeiros com Vorcaro via resort Tayayá",
+          "institution": "STF",
+          "funcao_estrutural": "Segundo chokepoint: tentativa de paralisia processual via avocação; saiu da relatoria após exposição do vínculo"
+        },
+        {
+          "name": "Daniel Vorcaro",
+          "role": "Proprietário do Banco Master — preso em nov/2025 tentando embarcar para Dubai; confirmou em depoimento que pagamentos ao escritório de Viviane 'não podiam deixar de ser feitos'",
+          "institution": "Banco Master",
+          "funcao_estrutural": "Pagador dos contratos; seu depoimento é a fonte primária sobre a natureza compulsória dos pagamentos"
+        },
+        {
+          "name": "Fabiano Zettel",
+          "role": "Cunhado de Vorcaro — fundo investiu R$ 35M no resort Tayayá onde Toffoli passava 168 dias/ano",
+          "institution": "Reag Investimentos",
+          "funcao_estrutural": "Elo financeiro Vorcaro-Toffoli documentado pela PF"
+        }
+      ],
+      "institutions": ["STF", "Banco Central do Brasil", "Barci de Moraes Sociedade de Advogados", "Banco Master", "PF", "Reag Investimentos"],
+      "legal_basis": ["Lei 9.784/1999 art. 18 (impedimento de autoridade)", "CF art. 5 LIV/LV (due process)", "Lei Complementar 179/2021 (autonomia BC)"],
+      "patterns": ["P03", "P05", "P07", "P02"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {
+          "title": "BC confirma reuniões entre Galípolo e Moraes (sem citar o Master)",
+          "url": "https://www.poder360.com.br/poder-economia/sem-citar-master-bc-confirma-reunioes-entre-galipolo-e-moraes/",
+          "outlet": "Poder360",
+          "date": "2025-09-01"
+        },
+        {
+          "title": "BC nega transparência em encontros entre Galípolo e Moraes sobre o Master",
+          "url": "https://revistaoeste.com/politica/banco-central-nega-transparencia-em-encontros-entre-galipolo-e-moraes-sobre-master/",
+          "outlet": "Revista Oeste",
+          "date": "2025-12-01"
+        },
+        {
+          "title": "Caso Master: relembre a liquidação do banco que envolve BC, STF e TCU",
+          "url": "https://www.cnnbrasil.com.br/economia/macroeconomia/caso-master-relembre-a-liquidacao-do-banco-que-envolve-bc-stf-e-tcu/",
+          "outlet": "CNN Brasil",
+          "date": "2026-01-01"
+        }
+      ],
+      "result": "Liquidação extrajudicial do Master decretada em nov/2025. Rombo de R$ 41–57,4B ao FGC — maior da história do Brasil. Contrato de Viviane Barci permanece sem investigação formal. Reuniões Moraes-Galípolo sem conteúdo documentado. Toffoli saiu da relatoria. André Mendonça assumiu. Vorcaro preso novamente em mar/2026.",
+      "connections": [
+        "id_1513 — Arquivamento Fux JHSF: instância anterior de chokepoint STF protegendo Moraes",
+        "id_1516 — Erosão do consenso: caso Master como segundo vetor das revisões de posição",
+        "banco-master-compliance-zero.html — dossiê completo no corpus"
+      ],
+      "status": "confirmado",
+      "lacuna_investigativa": "Nenhuma investigação formal foi aberta sobre o contrato Viviane Barci/Master. O BC nega ter registros do conteúdo das reuniões Moraes-Galípolo — mesmo sob sigilo — tornando a verificação impossível sem quebra de sigilo judicial. A natureza 'compulsória' dos pagamentos declarada por Vorcaro ('não podiam deixar de ser feitos em hipótese alguma') nunca foi objeto de interrogatório formal no contexto dos pagamentos ao escritório Barci.",
+      "ponto_de_inflexao": "Fev/2026: PF documenta vínculo financeiro Vorcaro-Toffoli via resort Tayayá. É o momento em que o segundo chokepoint (Toffoli) colapsa sob o peso do conflito de interesses. O primeiro chokepoint (Moraes) permanece intacto — sem declaração de impedimento, sem investigação do contrato de Viviane.",
+      "analise": "[ev-inference] Esta entrada documenta o P03 (chokepoint terminal) em sua versão mais recente e mais densa: dois ministros do STF com vínculos financeiros documentados com o principal investigado da maior fraude bancária da história do Brasil. Toffoli saiu após exposição pela PF. Moraes permanece — e o contrato de Viviane Barci não foi objeto de qualquer procedimento formal. A geometria é: banco paga R$ 129M ao escritório da esposa do ministro → ministro contata o regulador do banco → regulador toma decisões sobre o banco → sem impedimento declarado por nenhuma das partes. O padrão P02 (inversão) aparece aqui numa variante: não é o investigador que vira alvo, mas o investigado que compra acesso ao sistema. [ev-confirmed] O vínculo Toffoli-Vorcaro via Tayayá foi documentado pela PF e resultou na saída da relatoria — esse é o dado estrutural mais sólido da entrada."
+    }
+  ]
+}

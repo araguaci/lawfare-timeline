@@ -1,0 +1,171 @@
+{
+  "batch_id": "lawfare-1512-1515-acronimo-moraes-pcc-transcooper",
+  "gerado_em": "2026-05-31",
+  "track": "main",
+  "proximo_id_apos_batch": 1516,
+  "nota_metodologica": "Entradas derivadas de verificação cruzada: Folha de S.Paulo (2016), Agência Brasil, Metrópoles, Fiquemsabendo, Band, Gazeta do Povo, Rede Brasil Atual. Fontes primárias identificadas para cada entrada. Separação rigorosa ev-confirmed / ev-inference conforme METHODOLOGY.md v2.2.",
+  "assuntos": [
+    {
+      "id": 1512,
+      "date": "2015-05-29",
+      "date_precision": "day",
+      "title": "Operação Acrônimo — Deflagração: PF/MPF investigam financiamento ilegal da campanha Pimentel (PT/MG) via JHSF",
+      "summary": "A Polícia Federal e o Ministério Público Federal deflagram a Operação Acrônimo em 29 de maio de 2015, cobrindo Goiás, Minas Gerais, Rio Grande do Sul e Distrito Federal. Objeto central: esquema de caixa dois na campanha eleitoral de Fernando Pimentel (PT) ao governo de Minas Gerais em 2014. Mecanismo investigado: intermediação de empréstimo do BNDES para a construtora JHSF Participações; em contrapartida, a JHSF teria pago caixa dois simulando contrato com o instituto de pesquisas Vox Populi (R$ 750 mil). Operador identificado: empresário Benedito de Oliveira Neto ('Bené'), que assinou acordo de delação premiada. Operação atinge ao todo 6 fases documentadas entre 2015 e 2016.",
+      "category": "operacao_policial",
+      "actors": [
+        { "name": "Fernando Pimentel", "role": "Alvo principal — governador eleito MG / ex-ministro MDIC", "institution": "PT / Governo MG" },
+        { "name": "Benedito de Oliveira Neto", "role": "Operador do esquema — delator", "institution": "Gráfica Brasil" },
+        { "name": "José Auriemo Neto", "role": "Proprietário da JHSF — confirmou planilha em depoimento à PF", "institution": "JHSF Participações" }
+      ],
+      "institutions": ["Polícia Federal", "Ministério Público Federal", "JHSF Participações", "Instituto Vox Populi", "BNDES"],
+      "legal_basis": ["Lei 9.613/1998 (Lavagem de Dinheiro)", "Lei 9.504/1997 art. 350 (Financiamento eleitoral irregular)"],
+      "patterns": ["P05", "P07"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {
+          "title": "Em nova fase da Operação Acrônimo, PF investiga Vox Populi e construtora JHSF",
+          "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2016-08/em-nova-fase-da-operacao-acronimo-pf-investiga-vox-populi-e-construtora",
+          "outlet": "Agência Brasil",
+          "date": "2016-08-16"
+        },
+        {
+          "title": "Acrônimo: STJ recebe denúncia do MPF contra Fernando Pimentel por favorecimento da Odebrecht",
+          "url": "https://www.mpf.mp.br/pgr/noticias-pgr/acronimo-stj-recebe-denuncia-do-mpf-contra-fernando-pimentel-por-favorecimento-da-odebrecht",
+          "outlet": "PGR / MPF",
+          "date": "2017-12-06"
+        }
+      ],
+      "result": "Fernando Pimentel foi condenado por tráfico de influência e lavagem de dinheiro a 10 anos e 6 meses. A 6ª fase da operação (ago/2016) gerou colateralmente a descoberta da planilha JHSF com o nome de Alexandre de Moraes — evento registrado separadamente em ID 1513.",
+      "connections": ["id_1513 — planilha JHSF/Moraes descoberta na 6ª fase da Acrônimo"],
+      "status": "confirmado",
+      "lacuna_investigativa": "O montante total do esquema JHSF–Pimentel não foi integralmente apurado. A conexão entre a Acrônimo e a Lava Jato (via Odebrecht/Pimentel) foi documentada pelo MPF mas não julgada em conjunto.",
+      "analise": "[ev-inference] A Operação Acrônimo ilustra o padrão P05: recursos públicos (BNDES) instrumentalizados como vetor de financiamento político informal. O mecanismo é estruturalmente idêntico ao documentado na Lava Jato: empresa privada obtém vantagem regulatória / crédito público em troca de caixa dois eleitoral."
+    },
+    {
+      "id": 1513,
+      "date": "2016-08-16",
+      "date_precision": "day",
+      "title": "PF encontra planilha JHSF com nome de Alexandre de Moraes: R$ 4 milhões ao escritório (2010–2014) — Fux arquiva em 8 dias sem inquérito",
+      "summary": "Durante a 6ª fase da Operação Acrônimo, no cumprimento de mandado de busca e apreensão nos escritórios da JHSF em São Paulo, a PF encontra sobre a mesa de um executivo uma planilha impressa com o nome 'Alexandre Moraes', valores e as siglas PT e PSDB. Os valores estão associados à palavra 'Parkbem' — antigo nome de empresa de estacionamentos do grupo JHSF. Em depoimento de 31/08/2016, o proprietário da JHSF, José Auriemo Neto, confirma por meio de sua defesa que a referência é ao então ministro da Justiça Alexandre de Moraes. Novas planilhas revelam total de R$ 4 milhões pagos ao escritório entre 2010 e 2014. A coordenação da Acrônimo pede ao ministro Herman Benjamin (STJ) que informe o STF sobre a necessidade de abertura de inquérito. Em 22/09/2016 — 8 dias após entrada da documentação no STF — o ministro Luiz Fux arquiva monocraticamente, sem inquérito, sem quebra de sigilos bancário/fiscal, sem consultar a PGR. Aplica dispositivo regimental que permite arquivamento quando 'o fato narrado evidentemente não constitui crime'. Sigilo decretado sobre o processo. Moraes alega cláusula de confidencialidade e impossibilidade de detalhar os serviços prestados.",
+      "category": "chokepoint_judicial",
+      "actors": [
+        { "name": "Alexandre de Moraes", "role": "Receptor dos pagamentos — então ministro da Justiça / indicado ao STF", "institution": "Ministério da Justiça / STF" },
+        { "name": "Luiz Fux", "role": "Relator no STF — arquivou monocraticamente sem inquérito", "institution": "STF" },
+        { "name": "José Auriemo Neto", "role": "Proprietário da JHSF — confirmou planilha em depoimento à PF", "institution": "JHSF Participações" },
+        { "name": "Herman Benjamin", "role": "Ministro STJ — recebeu pedido da coordenação da Acrônimo e encaminhou ao STF", "institution": "STJ" }
+      ],
+      "institutions": ["STF", "STJ", "Polícia Federal", "JHSF Participações"],
+      "legal_basis": ["RISTF art. (dispositivo de arquivamento monocrático) — norma infraconstitucional invocada por Fux"],
+      "patterns": ["P07", "P03", "P02"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {
+          "title": "Alexandre de Moraes recebeu R$ 4 mi de empresa investigada na Operação Acrônimo",
+          "url": "https://www.diariodocentrodomundo.com.br/essencial/alexandre-de-moraes-recebeu-r-4-mi-de-empresa-investigada-na-operacao-acronimo/",
+          "outlet": "Diário do Centro do Mundo",
+          "date": "2016-10-08"
+        },
+        {
+          "title": "As 'coincidências' nos pagamentos de R$ 4 milhões ao advogado Alexandre de Moraes",
+          "url": "https://www.sindsefaz.org.br/noticias/as-coincidencias-nos-pagamentos-de-r-4-milhoes-ao-advogado-alexandre-de-moraes/",
+          "outlet": "Sindsefaz (reprodução Folha de S.Paulo)",
+          "date": "2016-10-08"
+        },
+        {
+          "title": "Repasse de R$ 4 milhões a Moraes é abafado na sabatina, com ajuda de Fux",
+          "url": "https://www.redebrasilatual.com.br/politica/repasse-de-r-4-milhoes-a-alexandre-de-moraes-e-abafado-na-sabatina-com-ajuda-de-fux/",
+          "outlet": "Rede Brasil Atual",
+          "date": "2017-02-22"
+        },
+        {
+          "title": "Indicado ao STF recebeu dinheiro de empresa investigada na Operação Acrônimo",
+          "url": "https://www.gazetadopovo.com.br/vida-publica/indicado-ao-stf-recebeu-dinheiro-de-empresa-investigada-na-operacao-acronimo-e010b543dmods35ieiiji1veu/",
+          "outlet": "Gazeta do Povo",
+          "date": "2017-02-21"
+        }
+      ],
+      "result": "Processo arquivado por Fux em 22/09/2016 com sigilo. Tema não foi levado à sabatina do Senado. Michel Temer indicou Moraes ao STF em janeiro de 2017 para preencher a vaga de Teori Zavascki. A documentação permanece sob sigilo imposto monocraticamente.",
+      "connections": [
+        "id_1512 — Operação Acrônimo: contexto da descoberta",
+        "id_1514 — Transcooper: segundo vetor de investigação arquivada envolvendo Moraes"
+      ],
+      "status": "confirmado",
+      "lacuna_investigativa": "Natureza exata dos serviços advocatícios prestados à JHSF nunca foi esclarecida publicamente ('cláusula de confidencialidade'). Sigilo de Fux impede acesso ao teor dos documentos. A coincidência temporal entre as aprovações de empreendimentos JHSF na cidade de SP (shopping Tucuruvi — obras iniciadas antes de Moraes deixar a Secretaria em 2010) e os pagamentos (2010–2014) não foi objeto de investigação formal.",
+      "ponto_de_inflexao": "22/09/2016: Fux arquiva 8 dias após entrada no STF, monocraticamente, sem PGR, sem inquérito. Decisão destoa explicitamente do padrão adotado na Lava Jato para casos análogos — destaque feito pela própria imprensa da época.",
+      "analise": "[ev-inference] Instância clássica do padrão P07 (arquivamento seletivo via chokepoint) combinado com P03 (STF como terminal de neutralização). A geometria é: PF identifica → MPF pede abertura de inquérito → STF recebe → ministro relator arquiva em 8 dias sem consultar PGR → sigilo impede qualquer verificação posterior. O fato de que o mesmo Fux seria colega de Moraes no STF meses depois não constitui prova de conluio, mas configura conflito estrutural de interesses não endereçado institucionalmente."
+    },
+    {
+      "id": 1514,
+      "date": "2014-03-01",
+      "date_precision": "month",
+      "title": "Reunião PCC na sede da Transcooper (zona leste-SP): deputado Luiz Moura flagrado com 13 suspeitos da facção",
+      "summary": "Em março de 2014, a Polícia Civil de São Paulo flagra, em operação de monitoramento para apurar ataques a ônibus na cidade, uma reunião na sede da Transcooper — cooperativa de transporte da zona leste — entre o deputado estadual Luiz Moura (PT), irmão do vereador Senival Moura, e ao menos 13 pessoas suspeitas de integrar o PCC. Dos 13 presentes, 11 não tinham ônibus nem vínculo formal com a cooperativa, segundo investigadores. O parlamentar alega ter participado para tratar de assuntos da categoria. A Transcooper, à época, tinha Alexandre de Moraes como advogado em 123 processos — período em que ele já havia deixado a presidência da SPTrans (cargo exercido entre 2007 e 2010, durante o qual a cooperativa era objeto de fiscalização da própria SPTrans).",
+      "category": "operacao_policial",
+      "actors": [
+        { "name": "Luiz Moura", "role": "Deputado estadual PT-SP — flagrado na reunião", "institution": "PT / ALESP" },
+        { "name": "Alexandre de Moraes", "role": "Advogado da Transcooper (123 processos) — ex-presidente da SPTrans, fiscalizador anterior da cooperativa", "institution": "Escritório de Advocacia / ex-SPTrans" }
+      ],
+      "institutions": ["Polícia Civil SP", "GAECO", "Transcooper", "SPTrans"],
+      "legal_basis": [],
+      "patterns": ["P05", "P01", "P02"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {
+          "title": "Ônibus do PCC: Entenda o esquema da facção com o transporte público de SP",
+          "url": "https://www.band.com.br/noticias/onibus-do-pcc-entenda-o-esquema-da-faccao-com-o-transporte-publico-de-sp-16517221",
+          "outlet": "Band",
+          "date": "2022-06-15"
+        },
+        {
+          "title": "EXCLUSIVO: TJ condena cooperativa que teve Alexandre de Moraes como advogado por se apropriar de dinheiro de perueiro quando ele era secretário",
+          "url": "https://fiquemsabendo.com.br/gastos-publicos/exclusivo-tj-condena-cooperativa-que-teve-alexandre-de-moraes-como-advogado-por-se-apropriar-de-dinheiro-de-perueiro-quando-ele-era-secretario",
+          "outlet": "Fiquem Sabendo",
+          "date": "2017-01-01"
+        }
+      ],
+      "result": "Luiz Moura foi expulso do PT posteriormente. A investigação sobre a Transcooper foi arquivada. Nenhum dirigente da cooperativa foi condenado por ligação com o PCC. A Transcooper mudou de nome para 'Pêssego' e continua operando.",
+      "connections": [
+        "id_1512 — Operação Acrônimo: contexto investigativo paralelo envolvendo Moraes",
+        "id_1513 — Planilha JHSF: segundo vetor de investigação arquivada",
+        "id_1515 — TJ condena Transcooper por subfaturamento tarifário SPTrans"
+      ],
+      "status": "confirmado",
+      "lacuna_investigativa": "A investigação sobre a Transcooper foi arquivada sem identificação formal dos controladores PCC da cooperativa. O papel de Alexandre de Moraes como advogado da cooperativa investigada, tendo sido seu fiscalizador como presidente da SPTrans, não foi objeto de investigação por conflito de interesse.",
+      "ponto_de_inflexao": "2015: Moraes retorna ao governo Alckmin como secretário de Segurança Pública. Investigação sobre a Transcooper é arquivada. Nenhum dirigente condenado por ligação com o tráfico.",
+      "analise": "[ev-inference] O padrão P02 (porta giratória fiscalizador→advogado) é documentável aqui: Moraes presidia a SPTrans (fiscalizador das cooperativas) entre 2007 e 2010; ao deixar o cargo, passa a advogar para a Transcooper em 123 processos. A reunião de 2014 documenta a presença do PCC na estrutura da cooperativa de que ele era advogado — conflito estrutural de interesses não tratado institucionalmente. A subsequente indicação ao STF (2017) e o arquivamento das investigações correlatas compõem o padrão P07 documentado em ID 1513."
+    },
+    {
+      "id": 1515,
+      "date": "2015-08-26",
+      "date_precision": "day",
+      "title": "TJ-SP condena Transcooper por subfaturamento de tarifas SPTrans (2005–2009) — cooperativa retinha repasses de perueiros durante presidência de Moraes",
+      "summary": "O juiz Adevanir Carlos Moreira da Silveira, da 4ª Vara Cível do Foro Regional de Santana (TJ-SP), condena a Transcooper por subfaturamento sistemático de tarifas. A cooperativa recebia valores da SPTrans entre 2005 e 2009 e deixava de repassar integralmente aos perueiros cooperados. A sentença (26/08/2015) determina pagamento de R$ 67.160,92. Dois acórdãos confirmam a decisão: apelação e embargos declaratórios julgados entre maio e julho de 2017. Na sentença, o juiz afirma que 'o valor da tarifa foi subfaturado pela ré ao longo do tempo de modo a reduzir a remuneração devida ao autor cooperado'. O período de 2007 a 2009 coincide com a presidência de Alexandre de Moraes na SPTrans — autoridade que supervisionava os contratos com a cooperativa. Moraes passou a advogar para a Transcooper após deixar o cargo.",
+      "category": "chokepoint_judicial",
+      "actors": [
+        { "name": "Transcooper", "role": "Cooperativa condenada — retinha tarifas dos perueiros", "institution": "Transcooper (zona leste SP)" },
+        { "name": "Alexandre de Moraes", "role": "Presidente da SPTrans (2007–2009) — autoridade supervisora dos contratos com a Transcooper; advogado da cooperativa após deixar o cargo", "institution": "SPTrans / Escritório de Advocacia" },
+        { "name": "Adevanir Carlos Moreira da Silveira", "role": "Juiz — prolator da sentença condenatória", "institution": "TJ-SP / 4ª Vara Cível Foro Regional Santana" }
+      ],
+      "institutions": ["TJ-SP", "SPTrans", "Transcooper"],
+      "legal_basis": ["Código Civil (contratos de prestação de serviços, repasse de remuneração devida)"],
+      "patterns": ["P02", "P05", "P01"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {
+          "title": "EXCLUSIVO: TJ condena cooperativa que teve Alexandre de Moraes como advogado por se apropriar de dinheiro de perueiro quando ele era secretário",
+          "url": "https://fiquemsabendo.com.br/gastos-publicos/exclusivo-tj-condena-cooperativa-que-teve-alexandre-de-moraes-como-advogado-por-se-apropriar-de-dinheiro-de-perueiro-quando-ele-era-secretario",
+          "outlet": "Fiquem Sabendo",
+          "date": "2017-01-01"
+        }
+      ],
+      "result": "Condenação transitada em julgado após dois acórdãos (2017). A Transcooper pagou o valor determinado. Nenhuma investigação criminal foi aberta em conexão com o subfaturamento. A cooperativa renomeou-se 'Pêssego' e continua operando.",
+      "connections": [
+        "id_1514 — Reunião PCC na Transcooper: contexto investigativo da cooperativa",
+        "id_1513 — Planilha JHSF: arquivamento paralelo de investigação envolvendo Moraes"
+      ],
+      "status": "confirmado",
+      "lacuna_investigativa": "Não foi investigado se o subfaturamento das tarifas SPTrans no período 2007–2009 — quando Moraes presidia a SPTrans e fiscalizava a cooperativa — foi objeto de alguma fiscalização interna. A ação foi ajuizada apenas em 2012 por um perueiro individual, não pelo poder público.",
+      "analise": "[ev-inference] Este evento documenta o padrão P02 em sua dimensão cível: enquanto Moraes presidia a SPTrans (2007–2009) e fiscalizava os contratos com a Transcooper, a cooperativa subfaturava sistematicamente as tarifas devidas aos cooperados. A subsequente atuação de Moraes como advogado da mesma cooperativa — em 123 processos — constitui porta giratória institucional. A ausência de investigação pelo poder público (a ação foi movida por um perueiro individual) e o posterior arquivamento das investigações do GAECO sobre ligações com o PCC (ID 1514) completam o padrão P07 de proteção por inação institucional."
+    }
+  ]
+}
