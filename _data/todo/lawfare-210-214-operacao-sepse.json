@@ -1,0 +1,132 @@
+{
+  "batch_info": {
+    "nome": "Operação Sepse — desvio em UTI/hospital municipal, Aparecida de Goiânia (GO)",
+    "track": "thematic",
+    "faixa_ids": "210-214",
+    "gerado_em": "2026-06-20",
+    "nota": "Substitui referência obsoleta a 'Operação Travessia' (189-196) no instrucao-claude-ai-ids.md. Confirmado pelo usuário em sessão que o nome correto é Operação Sepse. Sync real verificado via walkthrough.md: thematic next_available=210."
+  },
+  "assuntos": [
+    {
+      "id": 210,
+      "date": "2023-01-01",
+      "date_precision": "year",
+      "title": "Operação Parasitas (PC-GO) identifica fraude em materiais hospitalares no HMAP",
+      "summary": "Polícia Civil do Estado de Goiás identifica, entre 2020 e início de 2023, fraudes no fornecimento de materiais hospitalares ao Hospital Municipal de Aparecida de Goiânia (HMAP), gerido por organização social (OS) com recursos do SUS. A apreensão de cheques milionários em poder de operadores financeiros revela um braço do esquema voltado à contratação fraudulenta de serviços médicos e gestão de leitos de UTI.",
+      "category": "operacao_policial",
+      "actors": [
+        {"name": "Organização Social gestora do HMAP", "role": "Operadora do hospital via contrato com o município", "institution": "Hospital Municipal de Aparecida de Goiânia"}
+      ],
+      "institutions": ["Polícia Civil de Goiás", "Hospital Municipal de Aparecida de Goiânia", "Prefeitura de Aparecida de Goiânia"],
+      "legal_basis": ["Lei 8.666/93 — licitações e contratos administrativos (regime então vigente para OS)"],
+      "patterns": ["P05"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "Análise da CGU contribui para operação do MPF e da PF contra corrupção e lavagem de dinheiro em Goiás", "url": "https://www.gov.br/cgu/pt-br/assuntos/noticias/2026/04/analise-da-cgu-contribui-para-operacao-do-mpf-e-da-pf-contra-corrupcao-e-lavagem-de-dinheiro-em-goias", "outlet": "Controladoria-Geral da União", "date": "2026-04-25"}
+      ],
+      "result": "Origem da cadeia investigativa que resultaria na Operação Sepse (MPF/PF/CGU) três anos depois.",
+      "connections": ["id_211", "id_212"],
+      "status": "documentado",
+      "lacuna_investigativa": "Não há, nas fontes públicas disponíveis, detalhamento de quais autoridades municipais aprovaram ou fiscalizaram o contrato de gestão da OS no período investigado.",
+      "ponto_de_inflexao": "",
+      "analise": "P05 — recursos do SUS funcionando como vetor de extração via terceirização para OS, padrão recorrente em outras unidades federativas conforme histórico da mesma organização social citado pela CGU."
+    },
+    {
+      "id": 211,
+      "date": "2026-04-23",
+      "date_precision": "day",
+      "title": "MPF e PF deflagram 2ª fase da Operação Sepse contra rede de lavagem ligada ao HMAP",
+      "summary": "MPF (Gaeco) e Polícia Federal cumprem 15 mandados de busca, apreensão e medidas assecuratórias em Goiânia e Anápolis contra núcleo diretivo da organização social, sócios de empresas beneficiadas e operadores financeiros. Investigados por peculato, corrupção ativa e passiva, organização criminosa e lavagem de capitais.",
+      "category": "operacao_policial",
+      "actors": [
+        {"name": "Gaeco/MPF Goiás", "role": "Coordenação da investigação", "institution": "Ministério Público Federal"},
+        {"name": "Polícia Federal", "role": "Execução de mandados", "institution": "Polícia Federal"}
+      ],
+      "institutions": ["Ministério Público Federal", "Polícia Federal", "Controladoria-Geral da União"],
+      "legal_basis": ["CP art. 312 — peculato", "CP arts. 317/333 — corrupção passiva/ativa", "Lei 12.850/2013 — organização criminosa", "Lei 9.613/1998 — lavagem de capitais"],
+      "patterns": ["P05", "P10"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "Operação Sepse: MPF e PF deflagram segunda fase para desarticular rede de lavagem de dinheiro desviado da saúde em GO", "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-go/noticias/operacao-sepse-mpf-e-pf-deflagram-segunda-fase-para-desarticular-rede-de-lavagem-de-dinheiro-oriundo-de-desvios-na-saude-em-goias", "outlet": "Ministério Público Federal", "date": "2026-04-23"},
+        {"title": "Análise da CGU contribui para operação do MPF e da PF contra corrupção e lavagem de dinheiro em Goiás", "url": "https://www.gov.br/cgu/pt-br/assuntos/noticias/2026/04/analise-da-cgu-contribui-para-operacao-do-mpf-e-da-pf-contra-corrupcao-e-lavagem-de-dinheiro-em-goias", "outlet": "Controladoria-Geral da União", "date": "2026-04-25"}
+      ],
+      "result": "15 mandados cumpridos (14 em Goiânia, 1 em Anápolis); bloqueio de bens e valores determinado pela Justiça Federal.",
+      "connections": ["id_210", "id_212", "id_213"],
+      "status": "em_andamento",
+      "lacuna_investigativa": "Fontes públicas não identificam, até o momento, se autoridades do Executivo municipal de Aparecida de Goiânia (além da OS e seus operadores) estão entre os investigados.",
+      "ponto_de_inflexao": "",
+      "analise": "Competência federal fixada por repasse de verbas do Ministério da Saúde — mecanismo institucional correto que evita o risco de captura local documentado em outros casos do corpus (P03 invertido positivamente: aqui a federalização protegeu a investigação em vez de bloqueá-la)."
+    },
+    {
+      "id": 212,
+      "date": "2026-04-23",
+      "date_precision": "day",
+      "title": "Esquema na Operação Sepse: contratos superfaturados de UTI com repasse de ~10% à cúpula da OS",
+      "summary": "Segundo apurado pelo MPF/PF/CGU, controladores da organização social gestora do HMAP direcionavam contratos superfaturados e fraudulentos de gestão de leitos de UTI para empresas específicas. Em contrapartida, sócios dessas empresas repassavam cerca de 10% dos valores recebidos à cúpula da OS.",
+      "category": "mecanismo_sistemico",
+      "actors": [
+        {"name": "Cúpula da organização social", "role": "Beneficiário do esquema de repasse", "institution": "OS gestora do HMAP"},
+        {"name": "Empresas de gestão de leitos de UTI contratadas", "role": "Operadoras do repasse de ~10%", "institution": "N/A — pessoas jurídicas privadas"}
+      ],
+      "institutions": ["Hospital Municipal de Aparecida de Goiânia", "SUS"],
+      "legal_basis": ["CP art. 312 — peculato", "Lei 9.613/1998 — lavagem de capitais"],
+      "patterns": ["P05", "P08"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "Análise da CGU contribui para operação do MPF e da PF contra corrupção e lavagem de dinheiro em Goiás", "url": "https://www.gov.br/cgu/pt-br/assuntos/noticias/2026/04/analise-da-cgu-contribui-para-operacao-do-mpf-e-da-pf-contra-corrupcao-e-lavagem-de-dinheiro-em-goias", "outlet": "Controladoria-Geral da União", "date": "2026-04-25"}
+      ],
+      "result": "Mecanismo de superfaturamento + kickback de 10% documentado e usado como base para os mandados da 2ª fase.",
+      "connections": ["id_211"],
+      "status": "em_andamento",
+      "lacuna_investigativa": "Valor total estimado do desvio ainda não divulgado publicamente pelas fontes oficiais consultadas.",
+      "ponto_de_inflexao": "",
+      "analise": "Estrutura clássica de superfaturamento com kickback percentual fixo — mecanismo recorrente em contratos de saúde terceirizados no Brasil, sugerindo replicabilidade do modelo em outras OS, conforme o próprio histórico de irregularidades da organização em outros estados citado pela CGU."
+    },
+    {
+      "id": 213,
+      "date": "2026-04-25",
+      "date_precision": "day",
+      "title": "CGU confirma histórico de irregularidades da mesma OS em outros estados — fixação de competência federal",
+      "summary": "A CGU forneceu cruzamentos de dados que atestaram histórico de irregularidades da mesma organização social em outras unidades federativas, contribuindo para fixar a competência da Justiça Federal no caso, já que os recursos desviados foram repassados pelo Ministério da Saúde.",
+      "category": "mecanismo_sistemico",
+      "actors": [
+        {"name": "Controladoria-Geral da União", "role": "Apoio técnico/cruzamento de dados", "institution": "CGU"}
+      ],
+      "institutions": ["Controladoria-Geral da União", "Ministério da Saúde", "Justiça Federal"],
+      "legal_basis": ["CF art. 109 — competência da Justiça Federal por interesse da União"],
+      "patterns": ["P10"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "Análise da CGU contribui para operação do MPF e da PF contra corrupção e lavagem de dinheiro em Goiás", "url": "https://www.gov.br/cgu/pt-br/assuntos/noticias/2026/04/analise-da-cgu-contribui-para-operacao-do-mpf-e-da-pf-contra-corrupcao-e-lavagem-de-dinheiro-em-goias", "outlet": "Controladoria-Geral da União", "date": "2026-04-25"}
+      ],
+      "result": "Competência federal fixada; CGU formalmente integrada à investigação conjunta.",
+      "connections": ["id_211", "id_214"],
+      "status": "confirmado",
+      "lacuna_investigativa": "Não identificados publicamente os outros estados onde a mesma OS teria histórico de irregularidades — dado relevante para mapear P10 (infraestrutura de serviço compartilhada entre operações).",
+      "ponto_de_inflexao": "",
+      "analise": "Padrão P10 candidato: mesma organização social aparece como vetor de extração em múltiplas unidades federativas, sugerindo infraestrutura replicável de captura de contratos de saúde pública — requer mapeamento adicional antes de confirmação como P10 pleno."
+    },
+    {
+      "id": 214,
+      "date": "2026-06-20",
+      "date_precision": "day",
+      "title": "Status atual da Operação Sepse — sem denúncia formal ou desfecho judicial até a data de registro",
+      "summary": "Até a data de fechamento desta entrada, não há registro público de denúncia formal do MPF, julgamento ou desfecho da Operação Sepse. Os 15 mandados cumpridos em abril/2026 geraram bloqueio de bens, mas o caso permanece em fase de apuração.",
+      "category": "lacuna_investigativa",
+      "actors": [],
+      "institutions": ["Ministério Público Federal", "Justiça Federal"],
+      "legal_basis": [],
+      "patterns": ["P06"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "Operação Sepse: MPF e PF deflagram segunda fase para desarticular rede de lavagem de dinheiro desviado da saúde em GO", "url": "https://www.mpf.mp.br/o-mpf/unidades/pr-go/noticias/operacao-sepse-mpf-e-pf-deflagram-segunda-fase-para-desarticular-rede-de-lavagem-de-dinheiro-oriundo-de-desvios-na-saude-em-goias", "outlet": "Ministério Público Federal", "date": "2026-04-23"}
+      ],
+      "result": "Status: em apuração, sem desfecho.",
+      "connections": ["id_211", "id_212", "id_213"],
+      "status": "em_andamento",
+      "lacuna_investigativa": "Acompanhamento necessário: verificar trimestralmente no site do MPF-GO e no e-SAJ/PJe da Justiça Federal em Goiás se houve denúncia formal, arquivamento, ou acordo de leniência.",
+      "ponto_de_inflexao": "Sem prazo decorrido suficiente (menos de 90 dias da operação) para classificar como ponto de inflexão — campo monitorado para próxima atualização.",
+      "analise": "Caso recente; padrão P06 (estratégia do silêncio/prescrição) ainda não aplicável com confiança — registrar como watch item, não como conclusão."
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 ---
 title: "Mestre: Padrões × Operações Anticorrupção — Dossiê 2026"
-description: Análise transversal de 10 padrões identificados em 25 anos de operações brasileiras — incluindo os padrões emergentes de captura cultural (P9) e infraestrutura de serviço compartilhada (P10).
+description: Análise transversal de 12 padrões identificados em 25 anos de operações brasileiras — incluindo os padrões emergentes de captura cultural (P9) e infraestrutura de serviço compartilhada (P10).
 date: 2026-04-17T12:00:00-03:00
 image:
   path: "/assets/img/estudos/padroes_sistemicos_dashboard_hero_xarticle.webp"
@@ -13,7 +13,7 @@ pin: false
 - &nbsp;
 {:toc .large-only}
 
-Este texto resume o **dashboard mestre** que cruza **11 padrões (P1–P11)** com **17 operações** e linhas de evidência **2000–2026**. Os números de capa do dossiê HTML: **11** padrões mapeados, **17** operações cobertas, volume total estimado **R$ 156 bi+**, **5** nós do **grafo dual**, **P9–P11** como emergências **2026**, taxa de **anulação ~75%**. Referência documental no arquivo: **DOCS 153–175**, verificação **abr/2026**.
+Este texto resume o **dashboard mestre** que cruza **12 padrões (P1–P11)** com **17 operações** e linhas de evidência **2000–2026**. Os números de capa do dossiê HTML: **11** padrões mapeados, **17** operações cobertas, volume total estimado **R$ 156 bi+**, **5** nós do **grafo dual**, **P9–P11** como emergências **2026**, taxa de **anulação ~75%**. Referência documental no arquivo: **DOCS 153–175**, verificação **abr/2026**.
 
 A tese do próprio painel é dura: a falha **não** é um “bug” ocasional do sistema; é **desenho recorrente** que se repete sob nomes novos de operação.
 
@@ -22,10 +22,11 @@ A tese do próprio painel é dura: a falha **não** é um “bug” ocasional do
 ## Nota metodológica (do HTML)
 
 **P1–P8:** identificados em análise transversal **2000–2025**. **P9** (captura cultural) e **P10** (infraestrutura compartilhada) emergem da **Operação Narco Fluxo** (**abr/2026**). **P11** (loop de extração perpétua) emerge do cruzamento do dossiê **Prisão Econômica** com **Sem Desconto** e dados macro **2010–2025**. Fontes citadas no rodapé do painel: **PF, COAF, Receita, CVM, CNJ, STF**, cruzamento com **ICL Notícias, GAECO-SP, FBSP 2025**.
+* [P12 — Paywall Existencial / Captura Cognitiva de Mercado *(novo 2026)*](#p12--paywall-existencial--captura-cognitiva-de-mercado-novo-2026)
 
 [Dossiê interativo completo](https://gosurf.site/padroes-sistemicos-dashboard) · [lawfare-timeline.vercel.app](https://lawfare-timeline.vercel.app)
 
-## Catálogo P1–P11 (síntese operacional)
+## Catálogo P1–P12 (síntese operacional)
 
 ### P1 · Anulação via defeito processual
 
@@ -71,11 +72,27 @@ Legitimidade **simbólica** como escudo; narcoestética; **triângulo** narrativ
 
 Macroeconomia que **gera** dependência e **captura** o fluxo de transferência (Selic alta, CadÚnico, consignado, rentismo). **Ops:** Sem Desconto, Compliance Zero (consignado), dossiê Prisão Econômica; **distinção:** P10 é **prestador de serviço**; P11 é **substrato** que torna P10 **lucrativo**.
 
+### P12 — Paywall Existencial / Captura Cognitiva de Mercado *(novo 2026)*
+
+P1 a P11 documentam como o sistema captura o **fluxo de recursos**. P12 documenta como o mesmo sistema captura o **fluxo de informação necessária para perceber a captura** — o insumo cognitivo que permitiria ao cidadão médio reconhecer P1–P11 em tempo real.
+
+O mecanismo opera em duas camadas. Na camada de mercado, o acesso a jornalismo investigativo, dados judiciais estruturados e análise técnica de qualidade está crescentemente atrás de paywalls — não por má-fé editorial, mas porque o modelo de negócio do jornalismo de qualidade colapsou e o paywall é a única âncora de receita restante. O efeito estrutural, independente da intenção, é que a capacidade de monitorar P1–P11 em tempo real se torna um bem de consumo de elite, exatamente como o acesso a advocacia especializada o é desde sempre. O cidadão sem renda para assinaturas múltiplas fica dependente de resumos gratuitos, redes sociais e — cada vez mais — de modelos de IA, o que reintroduz o risco de P4b (both-sidesism funcional) numa nova camada: se o modelo trata o mecanismo documentado como "uma entre várias interpretações", a captura cognitiva se completa sem que nenhum ator precise agir de má-fé.
+
+**P12-B — Paywall Eleitoral** é a instância mais grave e mais bem documentada no corpus até o momento: o estudo técnico de bloqueio de internet no Brasil (IDs 1590–1594, sincronizados em jun/2026) identificou ~46.000 sites bloqueados sob convênio Anatel/Ministério da Fazenda, dos quais 18.000 domínios têm potencial de derrubar colateralmente 250 milhões de domínios por overblocking técnico. A aderência das operadoras às ordens varia entre 3% e 90% — apenas 15% das ordens são cumpridas de forma consistente — e a própria Anatel confirmou que **não avalia nem monitora** quais domínios estão bloqueados. Em ano eleitoral (2026), o mesmo aparato de bloqueio apresenta variação seletiva por horário e tipo de conteúdo (ID 1594) — um padrão que, se confirmado como direcionado, classificaria como P12-B pleno: paywall de acesso à informação eleitoral operado por infraestrutura técnica opaca, sem supervisão e sem possibilidade de auditoria externa em tempo real.
+
+**Distinção de P03 e P06:** P03 é captura do ponto de decisão judicial; P06 é exaustão por volume. P12 é diferente dos dois — não bloqueia a decisão nem satura a atenção, **encarece o acesso ao dado bruto** necessário para que qualquer decisão ou atenção seja informada. Os três padrões podem coexistir no mesmo evento sem se sobreporem funcionalmente.
+
+**Lacuna explícita:** diferente de P9, P10 e P11 (que têm 3+ instâncias documentadas antes da formalização), P12 tem hoje uma única cadeia robusta de evidência (IDs 1590–1594) sustentando P12-B. P12 "puro" — a tese de mercado sobre paywalls jornalísticos como captura cognitiva geral, sem o componente eleitoral — permanece como hipótese estrutural ainda não testada contra dados de assinaturas, tráfego ou cobertura comparada pré/pós-paywall em veículos brasileiros. Registrar como padrão formal agora, com uma instância confirmada (P12-B) e uma tese aberta (P12 geral), é mais honesto metodologicamente do que aguardar acúmulo de casos antes de nomear o mecanismo — mas o rigor do corpus exige declarar isso, não escondê-lo.
+
+→ *Aprofunde: [Relato técnico de bloqueio seletivo — ano eleitoral 2026](https://lawfare-timeline.vercel.app/posts/2026-06-15-relato-tecnico-de-bloqueio-seletivo-por-horario-e-conteudo-nas-operadoras-brasileiras-ano-/) · IDs 1590–1594 (lawfare.json)*
+
+---
+
 ## Matriz P × operações: o que o painel destaca
 
 - **Narco Fluxo** (**abr/2026**, **R$ 1,6 bi**, **9 estados**): primeira operação a cravar **P7** e **P9** em conjunto elevado; também **P10** como inovação; **P4** e **P8** confirmados; riscos em **P1–P3**.
 - **Sem Desconto** e dossiê **Prisão Econômica:** aparecem como âncoras do **P11** (**★** na matriz).
-- **PCC — infiltração Estado:** único ator com marcação **plena** nos **11** padrões no quadro do dashboard.
+- **PCC — infiltração Estado:** único ator com marcação **plena** nos **12** padrões no quadro do dashboard.
 - **Compliance Zero** concentra **P3, P5, P7, P8, P10, P11** com confirmações fortes (sigilo STF, Master).
 - Legenda da matriz no HTML: **✓** fonte primária; **◑** evidência indireta ou risco; **—** não documentado; **★** padrão primário ou inovação.
 
@@ -142,4 +159,4 @@ O bloco seguinte reúne frentes marcadas como **ativas**, com ênfase em lavagem
 
 ## **Tweet sugerido**
 
-> *Dashboard mestre: 11 padrões × 17 operações, R$156bi+, anulação ~75%. P9–P11 nascem em 2026 (cultura compartilhada + loop macro). PCC marca todos os P; Narco Fluxo fecha P7+P9+P10. Design, não bug. Artigo: [link após publicar]*
+> *Dashboard mestre: 12 padrões × 17 operações, R$156bi+, anulação ~75%. P9–P11 nascem em 2026 (cultura compartilhada + loop macro). PCC marca todos os P; Narco Fluxo fecha P7+P9+P10. Design, não bug. Artigo: [link após publicar]*
