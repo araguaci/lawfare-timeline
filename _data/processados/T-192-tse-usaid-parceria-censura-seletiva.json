@@ -1,0 +1,45 @@
+{
+  "id": 192,
+  "slug": "tse-usaid-parceria-censura-seletiva",
+  "tipo": "analise_estrutural",
+  "data_evento": "2021-09-20",
+  "data_registro": "2026-06-29",
+  "titulo": "TSE-USAID — Parceria de combate à desinformação e alegações de interferência/censura seletiva (2021–2025)",
+  "operacao_referencia": "Cluster TSE/USAID — categoria oficial do corpus (lawfare-timeline.vercel.app/tse/)",
+  "padroes_ativados": ["P04", "P04b", "P09"],
+  "evidencia_primaria": {
+    "tipo": "compilação de posts publicados",
+    "descricao": "Acordo TSE-USAID (2021) para combate à desinformação eleitoral. Repasses documentados: R$ 267 mi via ONGs (Instituto Vero entre outras) para 'agendas específicas'. Série de 20+ posts no corpus, 2021–2025, cobrindo: eventos colaborativos TSE-USAID, financiamento Open Society (US$ 250 mil) e Embaixada EUA (R$ 170 mil) ao Instituto Vero, mobilização de influenciadores/ONGs em ciclo eleitoral 2022, reuniões STF + Redes Cordiais + Instituto Vero (2024), denúncias de Eduardo Bolsonaro e declarações de Mike Benz sobre influência da USAID nas eleições brasileiras (2025), e negativa institucional do TSE quanto à colaboração com 'Bruxa da Vaza Toga' (Letícia Sallorenzo) apesar de relatos internos de pressão documentados em paralelo no dossiê Vaza Toga.",
+    "classificacao": "primária (posts individuais com fontes próprias) + secundária (compilação)",
+    "fonte": "lawfare-timeline.vercel.app/tse/ — 20+ posts indexados com data",
+    "url_referencia": "https://lawfare-timeline.vercel.app/tse/"
+  },
+  "sub_eventos_consolidados": [
+    {"item": "Eventos colaborativos TSE-USAID sobre desinformação eleitoral", "data": "2021-09-20"},
+    {"item": "Recebimento de US$250 mil da Open Society para Instituto Vero", "data": "2021-01-01"},
+    {"item": "Mobilização de influenciadores/ONGs contra desinformação (ciclo eleitoral)", "data": "2022-09 a 2022-10"},
+    {"item": "Campanha via Instituto Vero / apoio a Lula nas eleições 2022", "data": "2022-10-02"},
+    {"item": "Recebimento de R$170 mil da Embaixada dos EUA para Instituto Vero", "data": "2023-01-01"},
+    {"item": "Prisões em massa após protestos de 8 de janeiro (uso de infraestrutura TSE/biometria)", "data": "2023-01-08"},
+    {"item": "Uso de banco de dados biométricos e redes sociais para classificar detentos", "data": "2023-01-20"},
+    {"item": "Reunião STF, Redes Cordiais e Instituto Vero", "data": "2024-08-22"},
+    {"item": "Relatório sobre papel do governo EUA no complexo de censura no Brasil", "data": "2024-09-30"},
+    {"item": "Denúncia de Eduardo Bolsonaro contra ONGs e USAID por interferência eleitoral", "data": "2025-02-06"},
+    {"item": "Declarações de Mike Benz sobre influência da USAID nas eleições brasileiras", "data": "2025-02-05"},
+    {"item": "Denúncia sobre atuação da USAID contra Bolsonaro via Instituto Vero", "data": "2025-02-11"}
+  ],
+  "cadeia_logica": "Acordo institucional TSE-USAID (combate à desinformação) → repasse de recursos via ONGs intermediárias → ONGs com alinhamento ideológico identificável (Instituto Vero) → execução de campanhas de checagem/mobilização concentradas contra um espectro político → uso de infraestrutura eleitoral (biometria TSE) em contexto de repressão pós-8J → negativa institucional formal coexistindo com relatos internos de colaboração informal",
+  "evidence_status": "ev-contested",
+  "patterns_cruzados": [
+    {"id": "P04", "descricao": "Combate à desinformação como vetor formal; execução com viés direcional documentado"},
+    {"id": "P04b", "descricao": "Risco real de funcionamento bidirecional: parceria pode ser instrumentalizada tanto como mecanismo legítimo de combate a fraude informacional quanto como ferramenta de captura cultural seletiva — corpus deve evitar colapsar isso em narrativa única"},
+    {"id": "P09", "descricao": "ONGs financiadas externamente como vetor de legitimação cultural/simbólica de uma agenda política específica"}
+  ],
+  "lacuna_investigativa": "Não há, nas fontes compiladas, comparação sistemática de quantas ações de checagem/remoção de conteúdo a parceria gerou contra cada espectro político — sem isso, a alegação de 'censura seletiva' permanece ev-alleged nos posts individuais, mesmo com os repasses financeiros sendo ev-confirmed. O TSE nega vínculo oficial com colaboradores informais (caso Sallorenzo) — não há documento que resolva essa negativa institucional vs. relatos internos.",
+  "ponto_de_inflexao": "Parceria formal terminou/foi descontinuada (~2025) sem auditoria pública dos resultados qualitativos (apenas valores de repasse, não efeito mensurado sobre conteúdo removido por viés político).",
+  "analise": "O cluster documenta uma estrutura de financiamento real e rastreável (R$267mi + US$250mil + R$170mil) com destinatário comum (Instituto Vero) operando sob mandato de combate à desinformação eleitoral. A tensão central não é se o dinheiro existiu — isso é ev-confirmed — mas se a execução foi neutra ou direcionada. A coexistência de negativa institucional formal do TSE com relatos internos de pressão (caso 'Bruxa da Vaza Toga') é o padrão P04b em estado puro: a moldura institucional ('combate à desinformação') e a execução percebida (pressão seletiva sobre um lado do espectro) podem ambas ser verdadeiras sem contradição lógica, e o corpus deve documentar essa tensão sem resolvê-la por inferência motivacional não verificada.",
+  "connections": ["paradoxo-constitucional", "alem-da-toga", "T-191"],
+  "status": "documentado",
+  "visibilidade": "público",
+  "licenca": "CC0 1.0"
+}
