@@ -204,6 +204,10 @@ def main() -> None:
             "Convergência PCC-OFAC × rede Arpar × INSS (T-220)",
             "pcc-ofac-arpar-farra-inss-convergencia",
         ),
+        221: (
+            "Nemo judex formalizado — preliminar DPU AP 2782 (T-221)",
+            "nemo-judex-formalizado-dpu",
+        ),
     }
     for tid, (topic, artifact) in t_meta.items():
         note = f"Estudo Jekyll _posts/estudos/ ({t_posts.get(tid, '—')})."
@@ -287,6 +291,7 @@ def main() -> None:
         (218, "Ouro ilegal P08"),
         (219, "Farra INSS"),
         (220, "PCC-OFAC Arpar"),
+        (221, "Nemo judex DPU"),
     ):
         if tid in t_posts:
             note = f"T-{tid} {label} publicado ({date.today().isoformat()})"

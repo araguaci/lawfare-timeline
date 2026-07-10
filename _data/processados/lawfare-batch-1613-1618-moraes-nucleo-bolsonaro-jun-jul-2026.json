@@ -1,0 +1,164 @@
+[
+  {
+    "id": 1613,
+    "date": "2026-06-15",
+    "date_precision": "day",
+    "title": "Moraes nega adiamento do julgamento de Eduardo Bolsonaro; DPU arguira quórum incompleto e violação de colegialidade",
+    "summary": "Alexandre de Moraes, relator da AP 2782, negou pedido da Defensoria Pública da União (defensora dativa de Eduardo Bolsonaro, réu por coação no curso do processo) para adiar o julgamento marcado para 16/06/2026. A DPU alegou que a Primeira Turma opera com 4 dos 5 ministros desde a transferência de Luiz Fux para a Segunda Turma e a vacância deixada pela aposentadoria de Barroso, e pediu convocação de ministro da Segunda Turma para compor quórum. Moraes rejeitou: 'Não há qualquer violação aos princípios do juiz natural e da colegialidade'. O julgamento foi mantido para o dia seguinte.",
+    "category": "chokepoint_judicial",
+    "actors": [
+      {"name": "Alexandre de Moraes", "role": "Relator da AP 2782 — decisão monocrática negando adiamento", "institution": "STF"},
+      {"name": "Defensoria Pública da União", "role": "Defesa dativa do réu — arguiu quórum incompleto", "institution": "DPU"},
+      {"name": "Eduardo Bolsonaro", "role": "Réu — ex-deputado federal, nos EUA, mandato perdido por faltas", "institution": "ex-Câmara dos Deputados"}
+    ],
+    "institutions": ["STF", "DPU"],
+    "legal_basis": ["RISTF — composição e quórum das Turmas", "CPP — princípio do juiz natural (arguido pela defesa)"],
+    "patterns": ["P03"],
+    "evidence_status": "ev-confirmed",
+    "sources": [
+      {"title": "Tarifaço: Moraes nega adiar julgamento de Eduardo Bolsonaro no STF", "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-06/tarifaco-moraes-nega-adiar-julgamento-de-eduardo-bolsonaro-no-stf", "outlet": "Agência Brasil", "date": "2026-06-15"}
+    ],
+    "result": "Julgamento mantido para 16/06/2026 com quórum de 4 ministros. Preliminares da DPU rejeitadas monocraticamente pelo próprio relator questionado.",
+    "connections": ["1614 — condenação no dia seguinte", "T-186 — ADIs por prevenção: mesmo padrão de autoavaliação de impedimento"],
+    "status": "confirmado",
+    "lacuna_investigativa": "A questão do quórum de 4/5 na Primeira Turma afeta quantos outros julgamentos penais em curso? Não localizada estatística de APs julgadas pelo colegiado incompleto desde a saída de Fux.",
+    "ponto_de_inflexao": null,
+    "analise": "ev-inference: A arguição de colegialidade incompleta é decidida monocraticamente pelo relator cuja atuação a preliminar questiona indiretamente. Estruturalmente, a mesma configuração das ADIs 7966/7967 (T-186): o ator avaliando a regularidade da própria posição processual. Nota de simetria: o argumento do quórum é juridicamente frágil (o RISTF permite julgamento com maioria da Turma), e a rejeição no mérito era esperável — o dado documentável não é o resultado, mas quem o decide."
+  },
+  {
+    "id": 1614,
+    "date": "2026-06-16",
+    "date_precision": "day",
+    "title": "Primeira Turma condena Eduardo Bolsonaro a 4 anos e 2 meses por coação no curso do processo (AP 2782); relator rejeita impedimento arguido pela DPU por ser alvo das sanções que fundamentam a acusação",
+    "summary": "Por unanimidade (4×0: Moraes, Zanin, Cármen Lúcia, Dino), a Primeira Turma do STF condenou o ex-deputado Eduardo Bolsonaro a 4 anos e 2 meses de reclusão, regime inicial semiaberto, por coação no curso do processo (art. 344 CP). A acusação: articulação junto ao governo dos EUA para obter tarifaço contra exportações brasileiras, revogação de vistos de ministros e aplicação da Lei Magnitsky, com o objetivo de pressionar o STF na AP 2668 (trama golpista, na qual seu pai foi condenado). A DPU arguiu impedimento do relator: 'aqui o julgador é, ao mesmo tempo, a principal vítima das condutas que é chamado a julgar' — Moraes foi pessoalmente alvo da sanção Magnitsky e do cancelamento de vistos que integram a materialidade da acusação. O relator afastou a preliminar sustentando que a vítima do crime de coação é a administração da Justiça, não os julgadores. Fatos não contestados pela defesa: a veracidade dos vídeos e postagens do réu (registrado no voto de Zanin). Réu revel nos EUA, citado por edital, defendido pela DPU. Efeito imediato: inelegibilidade (Lei da Ficha Limpa) do irmão do pré-candidato presidencial Flávio Bolsonaro, a ~6 meses da eleição.",
+    "category": "chokepoint_judicial",
+    "actors": [
+      {"name": "Alexandre de Moraes", "role": "Relator e voto condutor — simultaneamente alvo nomeado das sanções Magnitsky/vistos que constituem a materialidade do crime julgado", "institution": "STF"},
+      {"name": "Eduardo Bolsonaro", "role": "Réu condenado — ex-deputado, revel nos EUA", "institution": "ex-Câmara dos Deputados"},
+      {"name": "Cristiano Zanin", "role": "Voto acompanhando o relator", "institution": "STF"},
+      {"name": "Cármen Lúcia", "role": "Voto acompanhando o relator", "institution": "STF"},
+      {"name": "Flávio Dino", "role": "Presidente da Turma — voto acompanhando o relator", "institution": "STF"},
+      {"name": "Defensoria Pública da União", "role": "Defesa dativa — arguiu formalmente nemo judex in causa propria", "institution": "DPU"}
+    ],
+    "institutions": ["STF", "PGR", "DPU"],
+    "legal_basis": ["CP Art. 344 — coação no curso do processo (pena base 1-4 anos, elevada por agravantes a 4a2m)", "CPP Art. 252 — impedimento do juiz (arguido e rejeitado)", "LC 64/1990 (Ficha Limpa) — inelegibilidade decorrente"],
+    "patterns": ["P02", "P03", "P12-B"],
+    "evidence_status": "ev-confirmed",
+    "sources": [
+      {"title": "STF condena Eduardo Bolsonaro a 4 anos e 2 meses de reclusão (nota oficial)", "url": "https://noticias.stf.jus.br/postsnoticias/stf-condena-eduardo-bolsonaro-a-4-anos-e-2-meses-de-reclusao-por-tentar-interferir-no-processo-sobre-tentativa-de-golpe/", "outlet": "STF", "date": "2026-06-16"},
+      {"title": "Por unanimidade, STF condena Eduardo Bolsonaro no caso do tarifaço", "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-06/por-unanimidade-stf-condena-eduardo-bolsonaro-no-caso-do-tarifaco", "outlet": "Agência Brasil", "date": "2026-06-16"},
+      {"title": "STF decide se Eduardo Bolsonaro será condenado no processo do tarifaço (registro da preliminar DPU)", "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-06/stf-decide-se-eduardo-bolsonaro-sera-condenado-no-processo-do-tarifaco", "outlet": "Agência Brasil", "date": "2026-06-15"}
+    ],
+    "result": "Condenação a 4a2m semiaberto, unânime. Eduardo Bolsonaro inelegível. Preliminar de impedimento formalizada em registro processual permanente por órgão público de defesa e rejeitada pelo próprio arguido.",
+    "connections": ["1613 — negativa de adiamento na véspera", "T-102 — acumulação vítima+investigador+julgador (INQ 4781)", "T-186 — ADIs por prevenção", "1572-1576 — batch Flávio/Trump: contexto da articulação nos EUA", "T-221 — análise estrutural da preliminar DPU"],
+    "status": "confirmado",
+    "lacuna_investigativa": "Recurso da DPU (embargos/RE) sobre a preliminar de impedimento: protocolado? A tese nemo judex tem via recursal viável dentro do próprio STF, onde o revisor pertence ao mesmo colegiado? Mapear o circuito recursal é essencial para documentar se existe instância de correção ou se o circuito é fechado.",
+    "ponto_de_inflexao": "A preliminar de impedimento — o único mecanismo processual capaz de deslocar o caso do relator — é decidida pelo próprio relator e rejeitada com tese que redefine a vítima (da pessoa sancionada para 'a administração da Justiça'). O ponto onde o controle poderia operar é ocupado pelo controlado.",
+    "analise": "ev-inference: Instância mais explícita até aqui da geometria documentada no INQ 4781 e na Dosimetria, com dois agravantes estruturais: (1) a materialidade do crime inclui sanções cujo alvo nomeado é o próprio relator — a sobreposição vítima/julgador não é interpretativa, é literal e consta dos autos; (2) quem argui o impedimento é a DPU, órgão de Estado, não defesa militante — o argumento nemo judex in causa propria sai do campo da crítica externa e entra no registro processual oficial. Nota de simetria obrigatória: a condenação foi unânime, incluindo ministros sem histórico de alinhamento ao relator; a veracidade das condutas (vídeos, postagens) não foi contestada pela própria defesa; e a conduta de Eduardo — buscar sanções estrangeiras contra julgadores para alterar resultado de processo — é ela mesma documentável como tentativa de coação por via externa. O corpus documenta a violação do juiz natural sem por isso validar a conduta julgada: os dois vetores coexistem e se co-legitimam, exatamente conforme a tese central. Timing eleitoral (P12-B): inelegibilidade do irmão do pré-candidato consolidada a 6 meses do pleito."
+  },
+  {
+    "id": 1615,
+    "date": "2026-06-16",
+    "date_precision": "day",
+    "title": "Moraes nega todas as diligências requeridas pela defesa de Flávio Bolsonaro no inquérito de calúnia contra Lula",
+    "summary": "No inquérito instaurado em abril/2026 para apurar calúnia (art. 138 CP) do senador Flávio Bolsonaro contra o presidente Lula — postagem de 03/01/2026 afirmando que Lula 'será delatado' e associando-o a tráfico internacional de drogas e armas, lavagem de dinheiro e apoio a terrorismo, no contexto da captura de Nicolás Maduro por forças dos EUA — Alexandre de Moraes negou todos os pedidos de diligência da defesa, incluindo oitivas de María Corina Machado, autoridades americanas, ex-executivos da Odebrecht, Sergio Moro e Deltan Dallagnol, e o depoimento do próprio Lula. O inquérito teve origem em representação da Polícia Federal com requisição do Ministério da Justiça (Lewandowski), acolhida pela PGR.",
+    "category": "perseguicao_processual",
+    "actors": [
+      {"name": "Alexandre de Moraes", "role": "Relator — negativa monocrática das diligências defensivas", "institution": "STF"},
+      {"name": "Flávio Bolsonaro", "role": "Investigado — senador e pré-candidato à Presidência", "institution": "Senado Federal"},
+      {"name": "Ricardo Lewandowski", "role": "Ministro da Justiça — requisitou a apuração que originou o inquérito", "institution": "Ministério da Justiça"}
+    ],
+    "institutions": ["STF", "PF", "PGR", "Ministério da Justiça"],
+    "legal_basis": ["CP Art. 138 — calúnia", "CPP Art. 14 — diligências requeridas pela defesa (indeferíveis pela autoridade)"],
+    "patterns": ["P03", "P06"],
+    "evidence_status": "ev-confirmed",
+    "sources": [
+      {"title": "Moraes manda PF interrogar Flávio Bolsonaro por suposta calúnia a Lula (histórico do inquérito e diligências negadas)", "url": "https://www.gazetadopovo.com.br/republica/moraes-manda-pf-interrogar-flavio-bolsonaro-suposta-calunia-lula/", "outlet": "Gazeta do Povo", "date": "2026-07-07"},
+      {"title": "Moraes barra pedido de diligências de Flávio Bolsonaro em inquérito por calúnia", "url": "https://www.ocafezinho.com/2026/06/16/moraes-barra-tentativa-de-flavio-bolsonaro-de-interferir-em-inquerito-por-calunia-contra-lula", "outlet": "O Cafezinho", "date": "2026-06-16"}
+    ],
+    "result": "Investigação prossegue exclusivamente com as diligências da acusação. Defesa registra publicamente que não houve oitivas ou perícias requeridas por ela.",
+    "connections": ["1616 — relatório final da PF", "1618 — determinação de interrogatório", "T-217 — seletividade punitiva TSE/casos isolados"],
+    "status": "confirmado",
+    "lacuna_investigativa": "Comparativo de tratamento: inquéritos por calúnia contra chefe do Executivo movidos contra parlamentares governistas em gestões anteriores — existem? Qual o rito e a velocidade? Sem essa base comparativa, a seletividade é hipótese, não dado.",
+    "ponto_de_inflexao": null,
+    "analise": "ev-inference: Isoladamente, o indeferimento de diligências defensivas é prerrogativa legal ordinária (CPP art. 14) e a postagem de Flávio imputou crimes específicos sem prova — o tipo penal é plausível. O dado estrutural não é este ato, mas sua posição na cadeia: requisição do Ministro da Justiça (ex-relator de decisões favoráveis ao investigante em outros contextos — ver entrada 1612, ADI 7331) → PF → PGR → relatoria do mesmo ministro que concentra os demais inquéritos do núcleo familiar → negativa integral de instrução defensiva → interrogatório de pré-candidato presidencial em ano eleitoral. Cada elo é legal; a densidade da cadeia sobre um único núcleo político em janela eleitoral é o que o padrão P12-B monitora."
+  },
+  {
+    "id": 1616,
+    "date": "2026-06-29",
+    "date_precision": "day",
+    "title": "PF conclui relatório apontando indícios de calúnia por Flávio Bolsonaro; Moraes dá 15 dias à PGR",
+    "summary": "A Polícia Federal encaminhou ao STF o relatório final do inquérito sobre a postagem de Flávio Bolsonaro de 03/01/2026, apontando indícios do crime de calúnia contra Lula: 'O Senador, através de sua postagem, imputou falsamente ao Presidente o cometimento dos crimes de tráfico internacional de drogas, tráfico internacional de arma e lavagem de dinheiro'. A PF registrou não haver dúvida de autoria, confirmada pela própria defesa. Moraes determinou manifestação da PGR em 15 dias (denúncia, novas diligências ou arquivamento). A defesa do senador criticou publicamente a ausência de oitivas e perícias na investigação.",
+    "category": "perseguicao_processual",
+    "actors": [
+      {"name": "Alexandre de Moraes", "role": "Relator — despacho de vista à PGR", "institution": "STF"},
+      {"name": "Flávio Bolsonaro", "role": "Investigado com indícios apontados pela PF", "institution": "Senado Federal"}
+    ],
+    "institutions": ["STF", "PF", "PGR"],
+    "legal_basis": ["CP Art. 138 — calúnia", "CPP — relatório final e vista ao MP"],
+    "patterns": ["P03"],
+    "evidence_status": "ev-confirmed",
+    "sources": [
+      {"title": "Moraes dá 15 dias para PGR decidir sobre investigação envolvendo Flávio Bolsonaro", "url": "https://bahiaeconomica.com.br/wp/2026/06/29/moraes-da-15-dias-para-pgr-decidir-sobre-investigacao-envolvendo-flavio-bolsonaro/", "outlet": "Bahia Econômica", "date": "2026-06-29"},
+      {"title": "Moraes manda PF interrogar Flávio Bolsonaro por suposta calúnia a Lula", "url": "https://www.gazetadopovo.com.br/republica/moraes-manda-pf-interrogar-flavio-bolsonaro-suposta-calunia-lula/", "outlet": "Gazeta do Povo", "date": "2026-07-07"}
+    ],
+    "result": "Inquérito na fase de manifestação ministerial. Eventual denúncia colocaria o pré-candidato líder da oposição como réu no STF durante a campanha.",
+    "connections": ["1615", "1618"],
+    "status": "em_andamento",
+    "lacuna_investigativa": "Prazo de 15 dias vence ~14/07/2026 — monitorar manifestação da PGR. Denúncia antes do registro de candidaturas (ago/2026) teria efeito P12-B direto.",
+    "ponto_de_inflexao": null,
+    "analise": "ev-inference: Encadeamento com 1615 e 1618 — três atos processuais sobre o mesmo investigado em 22 dias, todos na janela pré-registro de candidatura. O mérito da imputação (postagem com acusação de crimes sem prova) é juridicamente sólido; o timing e a concentração de relatoria são os dados estruturais."
+  },
+  {
+    "id": 1617,
+    "date": "2026-07-03",
+    "date_precision": "day",
+    "title": "Moraes prorroga domiciliar de Bolsonaro por prazo indeterminado e ordena apreensão de 10 armas, reconhecendo simultaneamente que não houve falta grave",
+    "summary": "Ao fim dos 90 dias da prisão domiciliar humanitária temporária (concedida em março/2026 por broncopneumonia, após condenação a 27 anos e 3 meses na AP 2668), Alexandre de Moraes prorrogou a domiciliar de Jair Bolsonaro sem fixar novo prazo, mantendo tornozeleira, vedação de visitas sem autorização, proibição de celular, redes sociais (inclusive por terceiros) e gravação de vídeos, com segurança da PM-DF 'para evitar fuga'. Na mesma decisão: suspendeu o porte de arma do ex-presidente e determinou apreensão pela PF, em 48h, de 10 pistolas e espingardas registradas em seu nome — motivada pela repercussão da apreensão de uma arma com segurança particular de Bolsonaro, episódio no qual a Polícia Civil do DF não indiciou o ex-presidente por entender que a arma era legal e não houve crime. O próprio Moraes reconheceu na decisão que Bolsonaro não cometeu falta grave no episódio.",
+    "category": "chokepoint_judicial",
+    "actors": [
+      {"name": "Alexandre de Moraes", "role": "Relator da execução — decisão monocrática", "institution": "STF"},
+      {"name": "Jair Bolsonaro", "role": "Condenado em execução domiciliar", "institution": "ex-Presidência da República"}
+    ],
+    "institutions": ["STF", "PF", "PM-DF", "Polícia Civil-DF"],
+    "legal_basis": ["LEP — regime de cumprimento e faltas graves", "Estatuto do Desarmamento — registro e porte (armas legalizadas segundo a PC-DF)"],
+    "patterns": ["P03"],
+    "evidence_status": "ev-confirmed",
+    "sources": [
+      {"title": "Alexandre de Moraes decide manter Bolsonaro em prisão domiciliar", "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-07/alexandre-de-moraes-decide-manter-bolsonaro-em-prisao-domiciliar", "outlet": "Agência Brasil", "date": "2026-07-03"},
+      {"title": "Moraes decide manter Bolsonaro em prisão domiciliar temporária (sem prazo)", "url": "https://www.afonteenoticia.com.br/2026/07/moraes-decide-manter-bolsonaro-em.html", "outlet": "A Fonte e Notícia", "date": "2026-07-03"}
+    ],
+    "result": "Domiciliar sem termo final definido. 10 armas legalizadas apreendidas apesar do reconhecimento expresso de ausência de falta grave e do não-indiciamento pela polícia competente.",
+    "connections": ["185-188 (thematic) — cluster Dosimetria/execução", "T-198 — COAF × Moraes acumulação de funções"],
+    "status": "confirmado",
+    "lacuna_investigativa": "Base legal específica invocada para apreensão de armas legalizadas sem falta grave reconhecida e sem indiciamento — a decisão fundamenta em risco abstrato ou em dispositivo concreto? Íntegra da decisão não localizada nesta rodada; verificar nos autos da AP 2668/execução.",
+    "ponto_de_inflexao": null,
+    "analise": "ev-inference: A assimetria interna da decisão é o dado: o mesmo texto que reconhece ausência de falta grave e registra o não-indiciamento pela autoridade policial competente determina medida restritiva nova (apreensão de patrimônio legalizado) motivada por 'repercussão'. P03-A em operação — execução penal como vetor normativo, com medidas construídas caso a caso pelo mesmo relator originário, sem revisão externa. Simetria: a manutenção da domiciliar é objetivamente favorável ao condenado (alternativa era retorno ao regime fechado), e o histórico inclui tentativa de violação de tornozeleira em nov/2025 — o risco de fuga invocado tem lastro fático documentado."
+  },
+  {
+    "id": 1618,
+    "date": "2026-07-07",
+    "date_precision": "day",
+    "title": "Moraes determina interrogatório de Flávio Bolsonaro pela PF em 10 dias — pré-candidato presidencial sob oitiva policial a 5 meses da eleição",
+    "summary": "Acolhendo manifestação da PGR após o relatório final da PF, Alexandre de Moraes determinou que a Polícia Federal ouça o senador Flávio Bolsonaro em até 10 dias no inquérito de calúnia, observando as regras do CPP para oitiva de parlamentares. Flávio, pré-candidato à Presidência pelo PL, cancelou agenda de pré-campanha em Pernambuco no mesmo período, prolongando viagem aos EUA.",
+    "category": "perseguicao_processual",
+    "actors": [
+      {"name": "Alexandre de Moraes", "role": "Relator — determinação de oitiva", "institution": "STF"},
+      {"name": "Flávio Bolsonaro", "role": "Investigado — pré-candidato à Presidência", "institution": "Senado Federal"}
+    ],
+    "institutions": ["STF", "PF", "PGR"],
+    "legal_basis": ["CPP — oitiva de parlamentares (prerrogativas de dia/hora/local)"],
+    "patterns": ["P03", "P12-B"],
+    "evidence_status": "ev-confirmed",
+    "sources": [
+      {"title": "Moraes manda PF ouvir Flávio Bolsonaro em inquérito sobre postagem contra Lula", "url": "https://www.otempo.com.br/politica/judiciario/2026/7/7/moraes-manda-pf-ouvir-flavio-bolsonaro-em-inquerito-sobre-postagem-contra-lula", "outlet": "O Tempo", "date": "2026-07-07"},
+      {"title": "Moraes manda PF interrogar Flávio Bolsonaro por suposta calúnia a Lula", "url": "https://www.gazetadopovo.com.br/republica/moraes-manda-pf-interrogar-flavio-bolsonaro-suposta-calunia-lula/", "outlet": "Gazeta do Povo", "date": "2026-07-07"}
+    ],
+    "result": "Oitiva determinada com prazo. Pré-candidato da oposição em interrogatório policial durante a pré-campanha; agenda eleitoral afetada (cancelamento Pernambuco documentado).",
+    "connections": ["1615", "1616", "1614 — inelegibilidade do irmão consolidada 3 semanas antes"],
+    "status": "em_andamento",
+    "lacuna_investigativa": "Sequência pós-oitiva: denúncia da PGR antes do registro de candidatura? Monitorar até ago/2026. Registrar também o quadro completo: Flávio responde simultaneamente a este inquérito e à possível inclusão no inquérito Eduardo/Vorcaro (decisão de 26/05 — conferir duplicata com batch teia-master 1601-1605 antes de registrar).",
+    "ponto_de_inflexao": null,
+    "analise": "ev-inference: Fechamento da tríade 1615-1616-1618: instrução exclusivamente acusatória → indícios → interrogatório, em 22 dias, sobre o principal pré-candidato de oposição, na relatoria que concentra todos os inquéritos do núcleo familiar. P12-B: o processo em si — independente do mérito, que é juridicamente defensável — opera como custo eleitoral imposto por via judicial na janela crítica. O corpus registra a função estrutural, não a intenção."
+  }
+]

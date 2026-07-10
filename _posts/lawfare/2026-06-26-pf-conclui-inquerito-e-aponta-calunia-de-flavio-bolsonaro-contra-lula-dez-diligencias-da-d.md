@@ -4,8 +4,8 @@ description: "O delegado da Polícia Federal Antônio Carlos Knoll concluiu, em 
 date: 2026-06-26T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P02", "P03"]
-categories: stf
+tags: ["stf", "P02", "P03", "lawfare"]
+categories: lawfare
 permalink: /posts/2026-06-26-pf-conclui-inquerito-e-aponta-calunia-de-flavio-bolsonaro-contra-lula-dez-diligencias-da-d/
 id_corpus: "1608"
 corpus_unificado: true

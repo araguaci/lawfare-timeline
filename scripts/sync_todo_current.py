@@ -56,6 +56,8 @@ def format_iso(d: str) -> str:
 
 
 def thematic_id_from_file(path: Path, data: dict) -> int | None:
+    if not isinstance(data, dict):
+        return None
     m = re.search(r"T-(\d+)", path.stem, re.I)
     if m:
         return int(m.group(1))

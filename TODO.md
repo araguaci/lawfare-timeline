@@ -1,17 +1,17 @@
 # Próximos passos · lawfare-timeline
 
-**Atualizado:** 2026-07-09 (T-219/T-220 + batch 1609-1611 + sync 1611/220)
+**Atualizado:** 2026-07-09 (batch 1613–1618 + T-221 nemo judex DPU)
 
 ---
 
 ## Snapshot
 
 
-| Track                | Last ID | Próximo | Status                                   |
-| -------------------- | ------- | ------- | ---------------------------------------- |
-| Main (timeline)      | 1611    | 1612    | Batch OFAC Shimada/Arpar merge concluído |
-| Thematic (estudos T) | 220     | 221     | T-219 INSS + T-220 convergência PCC/Arpar |
-| Fila editorial Q3    | —       | —       | `_data/todo/` vazio (só notas locais)    |
+| Track                | Last ID | Próximo | Status                                        |
+| -------------------- | ------- | ------- | --------------------------------------------- |
+| Main (timeline)      | 1618    | 1619    | Núcleo Bolsonaro jun–jul/2026 merge concluído |
+| Thematic (estudos T) | 221     | 222     | T-221 nemo judex DPU / AP 2782                |
+| Fila editorial       | —       | —       | `_data/todo/` vazio (só notas locais)         |
 | Posts 404 resolvidos | 12      | —       | ✅ permalink + 1 post criado (ID 160)     |
 
 
@@ -130,6 +130,22 @@
 
 
 JSON arquivados → `_data/processados/` · `_data/todo/` vazio (exceto `todo.md` notas)
+
+---
+
+## Rodada 1613–1618 + T-221 ✅ (09/07/2026)
+
+
+| ID / faixa | Conteúdo | Status |
+| ---------- | -------- | ------ |
+| 1613 | Moraes nega adiamento julgamento Eduardo (quórum DPU) | ✅ |
+| 1614 | Condenação Eduardo Bolsonaro 4a2m (tarifaço) | ✅ |
+| 1615 | Moraes nega diligências Flávio (calúnia) | ✅ |
+| 1616 | PF conclui indícios calúnia Flávio | ✅ |
+| 1617 | Prorrogação domiciliar Bolsonaro + apreensão aparelhos | ✅ |
+| 1618 | Interrogatório Flávio pela PF (10 dias) | ✅ |
+| T-221 | Nemo judex formalizado — preliminar DPU AP 2782 | ✅ |
+
 
 ---
 

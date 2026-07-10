@@ -27,7 +27,7 @@ Episódios cobertos por estudos **T-191–T-207** (mai/2026):
 | [T-206](/posts/2026-05-29-splc-modelo-brasil-corpus-bridge/) | SPLC modelo Brasil · T-129 |
 | [T-207](/posts/2026-05-29-vaza-toga-corpus-bridge/) | Vaza Toga INQ 4781 · T-108 |
 
-**246** posts timeline excluídos por cobertura (top scores entre excluídos):
+**247** posts timeline excluídos por cobertura (top scores entre excluídos):
 
 - mare liberum · score 205.0 — [17.000 Declarações de Importação irregulares — Jul/2021 a Ma](/posts/2026-04-28-timeline-153-17000-declaracoes-importacao-irregulares-r86-bilhoes/)
 - carbono oculto · score 198.0 — [Operação Poço de Lobato — maior devedor ICMS do país: R$ 26 ](/posts/2025-11-27-timeline-131-operacao-poco-de-lobato-maior-devedor-icms-do-pais-r-26-bilhoes-e-15-off/)
@@ -44,42 +44,43 @@ Episódios cobertos por estudos **T-191–T-207** (mai/2026):
 
 ## Alertas críticos (score ≥ 40)
 
+- **🔴 ID 1612 · score 62.9** — [STF suspende monocraticamente restrições da Lei das Estatais a indicaç](/posts/2023-03-16-stf-suspende-monocraticamente-restricoes-da-lei-das-estatais-a-indicacoes-politico-partida/)
 - **🔴 ID 1606 · score 41.0** — [Operação Infiltrados — MPSP/GAECO prende chefe da DISE Campinas e ex-e](/posts/2026-06-09-operacao-infiltrados-mpspgaeco-prende-chefe-da-dise-campinas-e-ex-estagiario-do-mp-por-sus/)
 
 ## Ranking completo
 
 | # | Score | ID | Categoria | Título | Post |
 | ---: | ---: | --- | --- | --- | --- |
-| 1 | 🔴 41.0 | 1606 | operacoes | Operação Infiltrados — MPSP/GAECO prende chefe da DISE Campinas e | [link](/posts/2026-06-09-operacao-infiltrados-mpspgaeco-prende-chefe-da-dise-campinas-e-ex-estagiario-do-mp-por-sus/) |
-| 2 | 🟠 37.0 | — | crise-diplomatica | Departamento de Estado designa PCC e CV como SDGT com efeito imed | [link](/posts/departamento-de-estado-designa-pcc-e-cv-como-sdgt-com-efeito-imediato/) |
-| 3 | 🟠 29.1 | 1607 | operacoes | Comando Vermelho assume controle de garimpo ilegal na Terra Indíg | [link](/posts/2026-06-28-comando-vermelho-assume-controle-de-garimpo-ilegal-na-terra-indigena-sarare-mt-e-usa-ouro-/) |
-| 4 | 🟠 29.0 | — | lawfare | Moraes abre inquérito contra pré-candidato à Presidência Flávio B | [link](/posts/moraes-abre-inquerito-contra-pre-candidato-a-presidencia-flavio-bolsonaro-por-postagem-criticando-lula-apos-prisao-de-maduro/) |
-| 5 | 🟠 29.0 | — | crise-diplomatica | FTO entra em vigor — publicação no Federal Register criminaliza s | [link](/posts/fto-entra-em-vigor-publicacao-no-federal-register-criminaliza-suporte-material-a-pcc-e-cv/) |
-| 6 | 🟠 25.0 | 1609 | operacoes | OFAC sanciona dois brasileiros e quatro empresas por alegado vínc | [link](/posts/2026-07-01-ofac-sanciona-dois-brasileiros-e-quatro-empresas-por-alegado-vinculo-financeiro-com-o-pcc/) |
-| 7 | 🟠 25.0 | — | stf | Moraes abre inquérito contra pré-candidato à Presidência Flávio B | [link](/posts/2026-04-13-moraes-abre-inquerito-contra-pre-candidato-a-presidencia-flavio-bolsonaro-por-postagem-criticando-lula-apos-prisao-de-maduro/) |
-| 8 | 🟠 25.0 | 1608 | stf | PF conclui inquérito e aponta calúnia de Flávio Bolsonaro contra  | [link](/posts/2026-06-26-pf-conclui-inquerito-e-aponta-calunia-de-flavio-bolsonaro-contra-lula-dez-diligencias-da-d/) |
-| 9 | 🟡 24.0 | 1610 | operacoes | Diretor-geral da PF diverge publicamente da avaliação do Tesouro  | [link](/posts/2026-07-01-diretor-geral-da-pf-diverge-publicamente-da-avaliacao-do-tesouro-dos-eua-sobre-vinculo-de-/) |
-| 10 | 🟡 20.0 | — | lawfare | Análise do Voto do Ministro Luiz Fux na AP 2668 | [link](/posts/2025-09-10-analise-do-voto-do-ministro-luiz-fux-na-ap-2668/) |
-| 11 | 🟡 19.0 | — | lawfare | Mulher de Silveira diz que Moraes bloqueou sua conta bancária. De | [link](/posts/2022-06-04-mulher-de-silveira-diz-que-moraes-bloqueou-sua-conta-bancaria/) |
-| 12 | 🟡 19.0 | — | lawfare | Busca e apreensão | [link](/posts/2024-08-14-busca-e-apreensao/) |
-| 13 | 🟡 19.0 | — | lawfare | Deputados da oposição ocupam Mesa Diretora da Câmara por 30 horas | [link](/posts/2025-08-06-timeline-1481-deputados-da-oposicao-ocupam-mesa-diretora/) |
-| 14 | 🟡 19.0 | — | lawfare | @Jeffssss_ (X): manifesto viral sobre captura do Estado — ressonâ | [link](/posts/2026-04-26-timeline-147-jeffssss-x-manifesto-viral-captura-do-estado/) |
-| 15 | 🟡 18.0 | — | operacoes | Silas Malafaia foi alvo de uma operação de busca e apreensão da P | [link](/posts/2025-08-20-silas-malafaia-foi-alvo-de-uma-operacao-de-busca-e-apreensao-da-policia-federal/) |
-| 16 | 🟡 18.0 | — | bancos | Falência do Banco Nacional | [link](/posts/1995-11-18-falencia-do-banco-nacional/) |
-| 17 | 🟡 18.0 | — | bancos | Banco Panamericano (Grupo Silvio Santos) | [link](/posts/2010-11-08-banco-panamericano-grupo-silvio-santos/) |
-| 18 | 🟡 18.0 | 1599 | stf | Erosão do consenso de apoio a Moraes: OAB, MBL, senadores e gover | [link](/posts/2026-05-01-erosao-do-consenso-de-apoio-a-moraes-oab-mbl-senadores-e-governadores-revisam-posicoes-pub/) |
-| 19 | 🟡 17.0 | — | stf | 4 ministros do STF vão a NY em evento com Merval Pereira Lide rea | [link](/posts/2022-07-07-4-ministros-do-stf-vao-a-ny-em-evento-com-merval-pereira-lide-realizara-o-brazil-conference-em-novembro-nos-eua-fux/) |
-| 20 | 🟡 17.0 | — | lawfare | Em 18 de maio de 2022, Toffoli rejeita pedido de Bolsonaro ao STF | [link](/posts/2022-05-18-em-18-de-maio-de-2022/) |
-| 21 | 🟡 16.0 | — | operacoes | Operação Saqueador | [link](/posts/2016-06-02-operacao-saqueador/) |
-| 22 | 🟡 15.0 | — | operacoes | Operação Rodin | [link](/posts/2007-11-06-operacao-rodin/) |
-| 23 | 🟡 15.0 | — | operacoes | Operação Acrônimo | [link](/posts/2015-05-19-operacao-acronimo/) |
-| 24 | 🟡 15.0 | — | operacoes | Operação Greenfield | [link](/posts/2015-09-10-operacao-greenfield/) |
-| 25 | 🟡 15.0 | — | operacoes | Operação Akuanduba | [link](/posts/2021-05-19-operacao-akuanduba/) |
-| 26 | 🟡 15.0 | — | governo | Hotel de luxo em Brasília: R$ 216 mil para Lula e Janja enquanto  | [link](/posts/2023-01-10-timeline-168-hotel-de-luxo-em-brasilia-r-216-mil-para-lula-e-ja/) |
-| 27 | 🟡 15.0 | — | stf | Gilmar Mendes usa processo arquivado de CPI diversa para anular q | [link](/posts/2026-02-27-gilmar-mendes-usa-processo-arquivado-de-cpi-diversa-para-anular-quebra-de-sigilo-da-empresa-de-tofoli-aprovada-por-unanimidade-pela-cpi-do-crime-organizado/) |
-| 28 | 🟡 15.0 | — | lawfare | Preso por ordem do STF em 2021, jornalista ainda não sabe por qua | [link](/posts/2022-05-14-preso-por-ordem-do-stf-em-2021/) |
-| 29 | 🟡 15.0 | — | lawfare | Revogação da prisão preventiva com medidas cautelares | [link](/posts/2024-08-09-revogacao-da-prisao-preventiva-com-medidas-cautelares/) |
-| 30 | 🟡 15.0 | — | lawfare | Depoimento no STF e negação de envolvimento | [link](/posts/2025-07-24-depoimento-no-stf-e-negacao-de-envolvimento/) |
+| 1 | 🔴 62.9 | 1612 | stf | STF suspende monocraticamente restrições da Lei das Estatais a in | [link](/posts/2023-03-16-stf-suspende-monocraticamente-restricoes-da-lei-das-estatais-a-indicacoes-politico-partida/) |
+| 2 | 🔴 41.0 | 1606 | operacoes | Operação Infiltrados — MPSP/GAECO prende chefe da DISE Campinas e | [link](/posts/2026-06-09-operacao-infiltrados-mpspgaeco-prende-chefe-da-dise-campinas-e-ex-estagiario-do-mp-por-sus/) |
+| 3 | 🟠 37.0 | — | crise-diplomatica | Departamento de Estado designa PCC e CV como SDGT com efeito imed | [link](/posts/departamento-de-estado-designa-pcc-e-cv-como-sdgt-com-efeito-imediato/) |
+| 4 | 🟠 30.0 | 1615 | stf | Moraes nega todas as diligências requeridas pela defesa de Flávio | [link](/posts/2026-06-16-moraes-nega-todas-as-diligencias-requeridas-pela-defesa-de-flavio-bolsonaro-no-inquerito-d/) |
+| 5 | 🟠 29.1 | 1607 | operacoes | Comando Vermelho assume controle de garimpo ilegal na Terra Indíg | [link](/posts/2026-06-28-comando-vermelho-assume-controle-de-garimpo-ilegal-na-terra-indigena-sarare-mt-e-usa-ouro-/) |
+| 6 | 🟠 29.0 | — | lawfare | Moraes abre inquérito contra pré-candidato à Presidência Flávio B | [link](/posts/moraes-abre-inquerito-contra-pre-candidato-a-presidencia-flavio-bolsonaro-por-postagem-criticando-lula-apos-prisao-de-maduro/) |
+| 7 | 🟠 29.0 | — | crise-diplomatica | FTO entra em vigor — publicação no Federal Register criminaliza s | [link](/posts/fto-entra-em-vigor-publicacao-no-federal-register-criminaliza-suporte-material-a-pcc-e-cv/) |
+| 8 | 🟠 27.0 | 1613 | stf | Moraes nega adiamento do julgamento de Eduardo Bolsonaro; DPU arg | [link](/posts/2026-06-15-moraes-nega-adiamento-do-julgamento-de-eduardo-bolsonaro-dpu-arguira-quorum-incompleto-e-v/) |
+| 9 | 🟠 25.0 | 1609 | operacoes | OFAC sanciona dois brasileiros e quatro empresas por alegado vínc | [link](/posts/2026-07-01-ofac-sanciona-dois-brasileiros-e-quatro-empresas-por-alegado-vinculo-financeiro-com-o-pcc/) |
+| 10 | 🟠 25.0 | — | stf | Moraes abre inquérito contra pré-candidato à Presidência Flávio B | [link](/posts/2026-04-13-moraes-abre-inquerito-contra-pre-candidato-a-presidencia-flavio-bolsonaro-por-postagem-criticando-lula-apos-prisao-de-maduro/) |
+| 11 | 🟠 25.0 | 1608 | stf | PF conclui inquérito e aponta calúnia de Flávio Bolsonaro contra  | [link](/posts/2026-06-26-pf-conclui-inquerito-e-aponta-calunia-de-flavio-bolsonaro-contra-lula-dez-diligencias-da-d/) |
+| 12 | 🟠 25.0 | 1616 | stf | PF conclui relatório apontando indícios de calúnia por Flávio Bol | [link](/posts/2026-06-29-pf-conclui-relatorio-apontando-indicios-de-calunia-por-flavio-bolsonaro-moraes-da-15-dias-/) |
+| 13 | 🟡 24.0 | 1610 | operacoes | Diretor-geral da PF diverge publicamente da avaliação do Tesouro  | [link](/posts/2026-07-01-diretor-geral-da-pf-diverge-publicamente-da-avaliacao-do-tesouro-dos-eua-sobre-vinculo-de-/) |
+| 14 | 🟡 24.0 | 1617 | stf | Moraes prorroga domiciliar de Bolsonaro por prazo indeterminado e | [link](/posts/2026-07-03-moraes-prorroga-domiciliar-de-bolsonaro-por-prazo-indeterminado-e-ordena-apreensao-de-10-a/) |
+| 15 | 🟡 20.0 | 1614 | escandalos | Primeira Turma condena Eduardo Bolsonaro a 4 anos e 2 meses por c | [link](/posts/2026-06-16-primeira-turma-condena-eduardo-bolsonaro-a-4-anos-e-2-meses-por-coacao-no-curso-do-process/) |
+| 16 | 🟡 20.0 | — | lawfare | Análise do Voto do Ministro Luiz Fux na AP 2668 | [link](/posts/2025-09-10-analise-do-voto-do-ministro-luiz-fux-na-ap-2668/) |
+| 17 | 🟡 19.0 | — | lawfare | Mulher de Silveira diz que Moraes bloqueou sua conta bancária. De | [link](/posts/2022-06-04-mulher-de-silveira-diz-que-moraes-bloqueou-sua-conta-bancaria/) |
+| 18 | 🟡 19.0 | — | lawfare | Busca e apreensão | [link](/posts/2024-08-14-busca-e-apreensao/) |
+| 19 | 🟡 19.0 | — | lawfare | Deputados da oposição ocupam Mesa Diretora da Câmara por 30 horas | [link](/posts/2025-08-06-timeline-1481-deputados-da-oposicao-ocupam-mesa-diretora/) |
+| 20 | 🟡 19.0 | — | lawfare | @Jeffssss_ (X): manifesto viral sobre captura do Estado — ressonâ | [link](/posts/2026-04-26-timeline-147-jeffssss-x-manifesto-viral-captura-do-estado/) |
+| 21 | 🟡 18.0 | — | operacoes | Silas Malafaia foi alvo de uma operação de busca e apreensão da P | [link](/posts/2025-08-20-silas-malafaia-foi-alvo-de-uma-operacao-de-busca-e-apreensao-da-policia-federal/) |
+| 22 | 🟡 18.0 | — | bancos | Falência do Banco Nacional | [link](/posts/1995-11-18-falencia-do-banco-nacional/) |
+| 23 | 🟡 18.0 | — | bancos | Banco Panamericano (Grupo Silvio Santos) | [link](/posts/2010-11-08-banco-panamericano-grupo-silvio-santos/) |
+| 24 | 🟡 18.0 | 1599 | stf | Erosão do consenso de apoio a Moraes: OAB, MBL, senadores e gover | [link](/posts/2026-05-01-erosao-do-consenso-de-apoio-a-moraes-oab-mbl-senadores-e-governadores-revisam-posicoes-pub/) |
+| 25 | 🟡 17.0 | — | stf | 4 ministros do STF vão a NY em evento com Merval Pereira Lide rea | [link](/posts/2022-07-07-4-ministros-do-stf-vao-a-ny-em-evento-com-merval-pereira-lide-realizara-o-brazil-conference-em-novembro-nos-eua-fux/) |
+| 26 | 🟡 17.0 | — | lawfare | Em 18 de maio de 2022, Toffoli rejeita pedido de Bolsonaro ao STF | [link](/posts/2022-05-18-em-18-de-maio-de-2022/) |
+| 27 | 🟡 16.0 | — | operacoes | Operação Saqueador | [link](/posts/2016-06-02-operacao-saqueador/) |
+| 28 | 🟡 15.0 | — | operacoes | Operação Rodin | [link](/posts/2007-11-06-operacao-rodin/) |
+| 29 | 🟡 15.0 | — | operacoes | Operação Acrônimo | [link](/posts/2015-05-19-operacao-acronimo/) |
+| 30 | 🟡 15.0 | — | operacoes | Operação Greenfield | [link](/posts/2015-09-10-operacao-greenfield/) |
 
 ## Legenda
 
@@ -91,7 +92,7 @@ Episódios cobertos por estudos **T-191–T-207** (mai/2026):
 
 ## Estudos existentes (referência de cobertura)
 
-Total em `estudos/`: **103** artigos analisados como base de exclusão.
+Total em `estudos/`: **104** artigos analisados como base de exclusão.
 
 Radar consolidado: [T-196 Top 30 lacunas](/posts/2026-05-28-top30-alertas-criticos-operacoes-sem-dossie/).
 
