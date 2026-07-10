@@ -207,13 +207,13 @@ T-180 (TSE seletividade), T-196 (radar top 30 sem dossiê), T-198 (COAF × Morae
 
 Caso Biazucci (CIDH), crise diplomática 2025–2026 (estudo), T-1512 (designação terrorista).
 
-- [Caso Biazucci — Erro Judiciário, Indenização Negada e Petição à CIDH](https://lawfare-timeline.vercel.app/posts/2026-05-26-biazucci-erro-judiciario-cidh/) — *2026-05-26*
+- [Caso Biazucci — Erro Judiciário, Indenização Negada e Petição à CIDH](https://lawfare-timeline.vercel.app/posts/biazucci-erro-judiciario-cidh/) — *2026-05-26*
   Dentista preso 210 dias por reconhecimento viciado; DNA excludente pago pela defesa; STJ nega indenização e cobra R$ 478,9 mil do inocente; recurso à CIDH protocolado. IDs 1511–151
 
-- [Crise Diplomática Brasil–EUA (2025–2026)](https://lawfare-timeline.vercel.app/posts/2026-05-26-crise-diplomatica-brasil-eua-2025-2026/) — *2026-05-26*
+- [Crise Diplomática Brasil–EUA (2025–2026)](https://lawfare-timeline.vercel.app/posts/crise-diplomatica-brasil-eua-2025-2026/) — *2026-05-26*
   Sanções Magnitsky, processo Rumble/TMTG, ICE/Ramagem, expulsão de delegados, vistos revogados, FTOs e dosimetria — escalada bilateral documentada. IDs 1514–1524.
 
-- [**T-1512** · Designação Terrorista PCC/CV — Dossiê Geopolítico 2026](https://lawfare-timeline.vercel.app/posts/2026-05-28-designacao-terrorista-pcc-cv/) — *2026-05-28*
+- [**T-1512** · Designação Terrorista PCC/CV — Dossiê Geopolítico 2026](https://lawfare-timeline.vercel.app/posts/designacao-terrorista-pcc-cv/) — *2026-05-28*
   State Dept. designa PCC e CV como FTO + SDGT em 28/05/2026. IDs 1512–1520 — sequência diplomática desde nov/2025, mecanismo estrutural da Lei 13.260/2016 e padrões P03, P04b, P08,
 
 ## Padrões que atravessam o período

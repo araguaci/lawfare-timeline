@@ -89,7 +89,7 @@ Secretário de Estado **Marco Rubio** designou PCC e CV como:
 | [Carbono Oculto](/artigos/carbono_oculto.html) | PCC em gestoras CVM-reguladas — R$ 30bi |
 | [T-209 JustiçaWatch](/artigos/t209-justicawatch-brasil.html) | André do Rap, HC coletivos — padrão P03 |
 | [Compliance Zero](/artigos/banco-master-compliance-zero.html) | FGC / Banco Master — exposição OFAC potencial |
-| [Crise diplomática 2026](/posts/crise-diplomatica/) | Ramagem ICE, expulsão delegados — contexto |
+| [Crise diplomática 2026](/artigos/crise-diplomatica-brasil-eua-2025-2026.html) | Ramagem ICE, expulsão delegados — contexto |
 
 ## Fontes Primárias
 
