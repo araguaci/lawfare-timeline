@@ -1,17 +1,17 @@
 # Próximos passos · lawfare-timeline
 
-**Atualizado:** 2026-05-29 (permalink fixes + post Flávio Bolsonaro + corpus-bridge T-205/207)
+**Atualizado:** 2026-07-09 (batch 1613–1618 + T-221 nemo judex DPU)
 
 ---
 
 ## Snapshot
 
 
-| Track                | Last ID | Próximo | Status                                   |
-| -------------------- | ------- | ------- | ---------------------------------------- |
-| Main (timeline)      | 1576    | 1577    | Merge 1572–1576 concluído (Flávio/Trump) |
-| Thematic (estudos T) | 209     | 210     | T-207 confirmado · T-208/T-209 reserved  |
-| Fila editorial Q2    | —       | —       | Rodada T-208+ pendente                   |
+| Track                | Last ID | Próximo | Status                                        |
+| -------------------- | ------- | ------- | --------------------------------------------- |
+| Main (timeline)      | 1619    | 1620    | Moraes/PGR inclusão Bolsonaro inq. Eduardo |
+| Thematic (estudos T) | 221     | 222     | T-221 nemo judex DPU / AP 2782                |
+| Fila editorial       | —       | —       | `_data/todo/` vazio (só notas locais)         |
 | Posts 404 resolvidos | 12      | —       | ✅ permalink + 1 post criado (ID 160)     |
 
 
@@ -95,6 +95,56 @@
 | ----- | ---------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | T-208 | [Narrativa vs Evidência](/posts/narrativa-vs-evidencia-corpus-bridge/) | `_posts/estudos/2026-05-28-narrativa-vs-evidencia-corpus-bridge.md` |
 | T-209 | [JustiçaWatch Brasil](/posts/justicawatch-brasil-corpus-bridge/)       | `_posts/estudos/2026-05-28-justicawatch-brasil-corpus-bridge.md`    |
+
+
+---
+
+## Rodada T-210–T-218 ✅ (jun/2026)
+
+
+| ID    | Dossiê                         | Tema principal                          |
+| ----- | ------------------------------ | --------------------------------------- |
+| T-210 | Operação Parasitas / Sepse     | Cluster HMAP GO                         |
+| T-211 | Sepse 2ª fase                  | PF/MPF rede lavagem                     |
+| T-212 | Sepse UTI superfaturada        | Repasse 10% OS                          |
+| T-213 | CGU irregularidades OS         | Fixação competência                     |
+| T-214 | Status Sepse                   | Sem denúncia formal                     |
+| T-215 | Vorcaro STF 2ª Turma           | Prisão familiares                       |
+| T-216 | TSE × USAID                    | Parceria / censura seletiva             |
+| T-217 | Seletividade punitiva          | Lacuna metodológica TSE/Câmara          |
+| T-218 | Ouro ilegal P08                | Amazônia PCC/CV/Venezuela               |
+
+
+---
+
+## Rodada T-219–T-220 + batch 1609–1611 ✅ (09/07/2026)
+
+
+| ID / faixa | Dossiê / evento                                                              | Status |
+| ---------- | ---------------------------------------------------------------------------- | ------ |
+| T-219      | Farra do INSS — rede Conafer/Careca/CPMI                                     | ✅      |
+| T-220      | Convergência PCC-OFAC × rede Arpar × INSS                                    | ✅      |
+| 1609       | OFAC sanciona Shimada/Victory Trading (PCC)                                  | ✅      |
+| 1610       | PF diverge publicamente da avaliação OFAC                                    | ✅      |
+| 1611       | Victory × Wave Intermediações (rede Arpar) — ev-alleged, fonte única         | ✅      |
+
+
+JSON arquivados → `_data/processados/` · `_data/todo/` vazio (exceto `todo.md` notas)
+
+---
+
+## Rodada 1613–1618 + T-221 ✅ (09/07/2026)
+
+
+| ID / faixa | Conteúdo | Status |
+| ---------- | -------- | ------ |
+| 1613 | Moraes nega adiamento julgamento Eduardo (quórum DPU) | ✅ |
+| 1614 | Condenação Eduardo Bolsonaro 4a2m (tarifaço) | ✅ |
+| 1615 | Moraes nega diligências Flávio (calúnia) | ✅ |
+| 1616 | PF conclui indícios calúnia Flávio | ✅ |
+| 1617 | Prorrogação domiciliar Bolsonaro + apreensão aparelhos | ✅ |
+| 1618 | Interrogatório Flávio pela PF (10 dias) | ✅ |
+| T-221 | Nemo judex formalizado — preliminar DPU AP 2782 | ✅ |
 
 
 ---

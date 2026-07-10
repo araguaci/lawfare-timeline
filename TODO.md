@@ -9,7 +9,7 @@
 
 | Track                | Last ID | Próximo | Status                                        |
 | -------------------- | ------- | ------- | --------------------------------------------- |
-| Main (timeline)      | 1618    | 1619    | Núcleo Bolsonaro jun–jul/2026 merge concluído |
+| Main (timeline)      | 1619    | 1620    | Moraes/PGR inclusão Bolsonaro inq. Eduardo |
 | Thematic (estudos T) | 221     | 222     | T-221 nemo judex DPU / AP 2782                |
 | Fila editorial       | —       | —       | `_data/todo/` vazio (só notas locais)         |
 | Posts 404 resolvidos | 12      | —       | ✅ permalink + 1 post criado (ID 160)     |

@@ -2,6 +2,5 @@
 
 **Último processamento:** 2026-07-09
 
-- **1613–1618** — núcleo Moraes/Bolsonaro jun–jul/2026 (Eduardo tarifaço, Flávio calúnia, domiciliar, interrogatório)
-- **T-221** — nemo judex formalizado (preliminar DPU AP 2782)
-- Fila vazia; próximo main: **1619**, próximo thematic: **T-222**
+- **1619** — Moraes/PGR inclusão Jair+Flávio inquérito Eduardo (lawfare, 26/05)
+- Fila vazia; próximo main: **1620**, próximo thematic: **T-222**
