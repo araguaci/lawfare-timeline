@@ -192,7 +192,11 @@ def normalize_main_entry(entry: dict, source: str) -> dict | None:
         "_lacunas": lacunas_list,
         "_open_questions": entry.get("open_questions") or [],
         "_cadeia": entry.get("cadeia_logica") or "",
+        "_ponto_inflexao": entry.get("ponto_de_inflexao") or "",
+        "_connections": entry.get("connections") or [],
+        "_evidence_status": entry.get("evidence_status") or "",
         "_nota_correcao": entry.get("nota_correcao_midiatica"),
+        "padroes": entry.get("patterns") or entry.get("padroes") or [],
         "_source": source,
     }
 
@@ -226,8 +230,10 @@ def render_timeline_post(u: dict) -> str:
         "| --- | --- |",
         f"| `id_corpus` | **{u.get('id_corpus', '')}** |",
         f"| Categoria analitica | {u.get('categoria', '-') } |",
-        "",
     ]
+    if u.get("_evidence_status"):
+        parts.append(f"| Evidencia | {u['_evidence_status']} |")
+    parts.append("")
     if u.get("conflito_nota"):
         parts.extend([f"> **Nota de conflito ID:** {u['conflito_nota']}", ""])
     if u.get("_cadeia"):
@@ -238,6 +244,8 @@ def render_timeline_post(u: dict) -> str:
         parts.extend(["### Instituicoes", ""] + [f"- {i}" for i in u["instituicoes"]] + [""])
     if u.get("_result"):
         parts.extend(["## Resultado documentado", "", u["_result"], ""])
+    if u.get("_ponto_inflexao"):
+        parts.extend(["## Ponto de inflexao", "", u["_ponto_inflexao"], ""])
     if u.get("_analise") and u["_analise"] != resumo:
         parts.extend(["## Analise", "", u["_analise"], ""])
     if u.get("_legal"):
@@ -252,6 +260,9 @@ def render_timeline_post(u: dict) -> str:
             f"**Correcao:** {nc.get('correcao', '')}",
             "",
         ])
+    conns = u.get("_connections") or []
+    if conns:
+        parts.extend(["## Conexoes", ""] + [f"- {c}" for c in conns] + [""])
     lacunas = u.get("_lacunas") or []
     if lacunas:
         parts.extend(["## Lacunas investigativas", ""] + [f"- {x}" for x in lacunas] + [""])
@@ -574,6 +585,7 @@ def archive_files(fnames: list[str], dry_run: bool) -> None:
             print(f"  [dry-run] archive {fname}")
             continue
         if dst.is_file():
+            shutil.copy2(str(src), str(dst))
             src.unlink()
         else:
             shutil.move(str(src), str(dst))
