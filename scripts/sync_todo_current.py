@@ -288,15 +288,27 @@ source_data: "{u.get('_source', '')}"
     return fm + "\n".join(parts)
 
 
+def study_title(data: dict) -> str:
+    return data.get("titulo") or data.get("title") or ""
+
+
+def study_date(data: dict) -> str:
+    return (data.get("data_registro") or data.get("data_evento") or data.get("date") or "2026-01-01")[:10]
+
+
 def render_estudos_post(data: dict, tid: int) -> tuple[str, str]:
-    slug = data.get("slug") or slugify(data.get("titulo", ""))
+    short_title = study_title(data)
+    slug = data.get("slug") or slugify(short_title)
     slug = re.sub(r"^revisar-t\d+-", "", slug, flags=re.I)
-    jdate = (data.get("data_registro") or data.get("data_evento") or "")[:10]
+    jdate = study_date(data)
     fname = f"{jdate}-{slug}.md"
-    short_title = data.get("titulo", "")
     title = f"T-{tid} · {short_title.split('—')[0].strip()}" if "—" in short_title else f"T-{tid} · {short_title[:70]}"
     ev = data.get("evidencia_primaria") or {}
-    resumo = ev.get("descricao") or data.get("analise", "")[:400]
+    resumo = (
+        ev.get("descricao")
+        or data.get("summary")
+        or (data.get("analise") or "")[:400]
+    )
     desc = yaml_escape((resumo[:157] + "...") if len(resumo) > 157 else resumo)
     padroes = data.get("padroes_ativados") or data.get("patterns") or []
     tags = ["estudo", "lawfare"] + [str(p).lower() for p in padroes]
@@ -340,14 +352,19 @@ def render_estudos_post(data: dict, tid: int) -> tuple[str, str]:
     conns = data.get("connections") or []
     if conns:
         parts.extend(["## Conexoes", ""] + [f"- {c}" for c in conns] + [""])
+    fonte_lines: list[str] = []
     url = ev.get("url_referencia", "")
     if url:
-        parts.extend(["## Fontes", ""])
         for u in str(url).split(";"):
             u = u.strip()
             if u:
-                parts.append(f"- [{ev.get('fonte', 'Fonte')}]({u})")
-        parts.append("")
+                fonte_lines.append(f"- [{ev.get('fonte', 'Fonte')}]({u})")
+    for s in data.get("sources") or data.get("fontes") or []:
+        if isinstance(s, dict) and s.get("url"):
+            tit = s.get("title") or s.get("titulo") or s.get("outlet") or "Fonte"
+            fonte_lines.append(f"- [{tit}]({s['url']})")
+    if fonte_lines:
+        parts.extend(["## Fontes", ""] + fonte_lines + [""])
     parts.append(f"*Dossie T-{tid} · CC0 · lawfare-timeline*")
 
     fm = f"""---
@@ -427,7 +444,12 @@ def process_all(dry_run: bool) -> tuple[list[dict], list[tuple[int, str, str]], 
             archived.append(fpath.name)
             continue
 
-        items = data if isinstance(data, list) else [data]
+        if isinstance(data, dict) and isinstance(data.get("entries"), list):
+            items = data["entries"]
+        elif isinstance(data, list):
+            items = data
+        else:
+            items = [data]
         for item in items:
             u = normalize_main_entry(item, fpath.name)
             if not u:

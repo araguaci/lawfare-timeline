@@ -160,6 +160,50 @@ def main() -> None:
             "JustiçaWatch Brasil — índice corpus (T-209)",
             "justicawatch-brasil-corpus-bridge",
         ),
+        210: (
+            "Operação Parasitas / cluster Sepse HMAP (T-210)",
+            "operacao-parasitas-pc-go-identifica-fraude-em-materiais-hospitalares-no-hmap",
+        ),
+        211: (
+            "2ª fase Operação Sepse — PF/MPF rede lavagem HMAP (T-211)",
+            "mpf-e-pf-deflagram-2-fase-da-operacao-sepse-contra-rede-de-lavagem-ligada-ao-hmap",
+        ),
+        212: (
+            "Esquema Sepse — UTI superfaturada e repasse OS (T-212)",
+            "esquema-na-operacao-sepse-contratos-superfaturados-de-uti-com-repasse-de-10-a-cupula-da-os",
+        ),
+        213: (
+            "CGU irregularidades OS Sepse em outros estados (T-213)",
+            "cgu-confirma-historico-de-irregularidades-da-mesma-os-em-outros-estados-fixacao-de-compete",
+        ),
+        214: (
+            "Status Operação Sepse sem denúncia formal (T-214)",
+            "status-atual-da-operacao-sepse-sem-denuncia-formal-ou-desfecho-judicial-ate-a-data-de-regi",
+        ),
+        215: (
+            "Vorcaro STF — 2ª Turma mantém prisão familiares (T-215)",
+            "2-turma-do-stf-mantem-prisao-de-pai-e-primo-de-daniel-vorcaro-por-31-gilmar-mendes-diverge",
+        ),
+        216: (
+            "TSE × USAID — parceria e censura seletiva (T-216)",
+            "tse-usaid-parceria-censura-seletiva",
+        ),
+        217: (
+            "Seletividade punitiva TSE/Câmara — lacuna metodológica (T-217)",
+            "seletividade-punitiva-tse-casos-isolados",
+        ),
+        218: (
+            "Ouro ilegal — vetor P08 Amazônia PCC/CV/Venezuela (T-218)",
+            "ouro-ilegal-vetor-p08-amazonia-pcc-cv-venezuela",
+        ),
+        219: (
+            "Farra do INSS — rede completa Conafer/Careca/CPMI (T-219)",
+            "farra-inss-rede-completa",
+        ),
+        220: (
+            "Convergência PCC-OFAC × rede Arpar × INSS (T-220)",
+            "pcc-ofac-arpar-farra-inss-convergencia",
+        ),
     }
     for tid, (topic, artifact) in t_meta.items():
         note = f"Estudo Jekyll _posts/estudos/ ({t_posts.get(tid, '—')})."
@@ -173,45 +217,15 @@ def main() -> None:
             by_id[tid].update(payload)
         elif tid in t_posts:
             entries.append({"id": tid, **payload})
-    # Reservas para artefatos HTML ainda sem estudo Jekyll (T-208/T-209)
-    reserved_artifacts = {
-        208: (
-            "Narrativa vs Evidência — índice corpus (T-208)",
-            "narrativa-vs-evidencia.html",
-        ),
-        209: (
-            "JustiçaWatch Brasil — índice corpus (T-209)",
-            "justicawatch-brasil.html",
-        ),
-    }
-    for tid, (topic, artifact) in reserved_artifacts.items():
-        if tid in t_posts:
-            continue
-        payload = {
-            "status": "reserved",
-            "topic": topic,
-            "artifact": artifact,
-            "notes": "Artefato HTML — candidato a estudo Jekyll",
-        }
-        if tid in by_id:
-            by_id[tid].update(payload)
-        else:
-            entries.append({"id": tid, **payload})
     entries.sort(key=lambda e: e["id"])
     thematic["entries"] = entries
 
     thematic_last = max((e["id"] for e in entries), default=196)
     thematic["last_id"] = thematic_last
     thematic["next_available"] = thematic_last + 1
-    pending = [180]
-    if 180 not in t_posts:
-        thematic["pending"] = pending
-        thematic["pending_notes"] = {
-            "180": "TSE seletividade — entrada pronta para produção (sem estudo Jekyll)",
-        }
-    else:
-        thematic["pending"] = []
-        thematic["pending_notes"] = {}
+    pending = []
+    thematic["pending"] = pending
+    thematic["pending_notes"] = {}
 
     merge_done = last_main >= 1571
     sync = data["sync_status"]
@@ -262,6 +276,17 @@ def main() -> None:
         (207, "Vaza Toga corpus"),
         (208, "Narrativa vs Evidência"),
         (209, "JustiçaWatch Brasil"),
+        (210, "Cluster Sepse Parasitas"),
+        (211, "Sepse 2ª fase"),
+        (212, "Sepse UTI"),
+        (213, "CGU Sepse"),
+        (214, "Status Sepse"),
+        (215, "Vorcaro STF"),
+        (216, "TSE USAID"),
+        (217, "Seletividade TSE"),
+        (218, "Ouro ilegal P08"),
+        (219, "Farra INSS"),
+        (220, "PCC-OFAC Arpar"),
     ):
         if tid in t_posts:
             note = f"T-{tid} {label} publicado ({date.today().isoformat()})"
@@ -295,6 +320,30 @@ def main() -> None:
         t180 = "Pendente: T-180 TSE seletividade"
         if t180 not in sync["open_items"]:
             sync["open_items"].append(t180)
+
+    sync["open_items"] = list(dict.fromkeys(sync.get("open_items", [])))
+    stale_open = (
+        "Fila editorial T-192 a T-195",
+        "T-208/T-209 reserved",
+        "ids_pending_production",
+        "last_id=1576",
+        "Próximo: Rombo estatais P11",
+        "PCC transnacional residual",
+        "Formalizar IDs 208-209",
+        "Integrar JustiçaWatch",
+        "Pendente: T-180",
+        "Produzir ID 180",
+        "T-219 (pendente)",
+        "T-220 (pendente)",
+    )
+    sync["open_items"] = [
+        item
+        for item in sync.get("open_items", [])
+        if not any(s in item for s in stale_open)
+    ]
+    next_note = f"Próximo thematic: T-{thematic_last + 1}; main next={next_main}"
+    if next_note not in sync["open_items"]:
+        sync["open_items"].append(next_note)
 
     artifact_t_map = {
         "duplo-padrao-judicial.html": 205,

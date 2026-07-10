@@ -1,4 +1,4 @@
-# validate-ids.ps1 — Validação de gaps e consistência de IDs no corpus lawfare-timeline
+# validate-ids.ps1 - Validação de gaps e consistência de IDs no corpus lawfare-timeline
 # Uso: pwsh -File tools/validate-ids.ps1 [[-Verbose]]
 
 param([switch]$Verbose)
@@ -17,28 +17,28 @@ function Pass($msg)  { Write-Host "  [OK]   $msg" -ForegroundColor Green;  $scri
 function Warn($msg)  { Write-Host "  [AVISO] $msg" -ForegroundColor Yellow; $script:warn++ }
 function Fail($msg)  { Write-Host "  [ERRO]  $msg" -ForegroundColor Red;    $script:err++ }
 
-Write-Host "`n=== LAWFARE-TIMELINE — VALIDAÇÃO DE IDS ===" -ForegroundColor Cyan
+Write-Host "`n=== LAWFARE-TIMELINE - VALIDAÇÃO DE IDS ===" -ForegroundColor Cyan
 Write-Host "Data: $(Get-Date -Format 'yyyy-MM-dd HH:mm')`n"
 
 # -----------------------------------------------------------------------
-# 1. LAWFARE.JSON — fonte de verdade do main track
+# 1. LAWFARE.JSON - fonte de verdade do main track
 # -----------------------------------------------------------------------
-Write-Host "[ 1 ] lawfare.json — main track (fonte de verdade)" -ForegroundColor Cyan
+Write-Host "[ 1 ] lawfare.json - main track (fonte de verdade)" -ForegroundColor Cyan
 try {
     $main = (Get-Content $mainFile -Raw | ConvertFrom-Json).assuntos
     $ids  = $main | ForEach-Object { [int]$_.id } | Sort-Object
     $last = $ids | Select-Object -Last 1
     $next = $last + 1
 
-    Pass "Carregado — $($ids.Count) entradas, ID 1 a $last"
+    Pass "Carregado - $($ids.Count) entradas, ID 1 a $last"
 
     # Gaps
     $gaps = @()
     for ($i = 1; $i -lt $ids.Count; $i++) {
         $d = $ids[$i] - $ids[$i-1]
-        if ($d -gt 1) { $gaps += "$($ids[$i-1]+1)–$($ids[$i]-1) ($($d-1) slot(s))" }
+        if ($d -gt 1) { $gaps += "$($ids[$i-1]+1)-$($ids[$i]-1) ($($d-1) slot(s))" }
     }
-    if ($gaps.Count -eq 0) { Pass "Sem gaps — sequência contínua" }
+    if ($gaps.Count -eq 0) { Pass "Sem gaps - sequência contínua" }
     else { Warn "Gaps detectados: $($gaps -join ' | ')" }
 
     # Duplicatas
@@ -47,15 +47,19 @@ try {
     else         { Pass "Sem IDs duplicados" }
 
     if ($Verbose) {
-        Write-Host "    Últimas 5 entradas:"
-        $main | Select-Object -Last 5 | ForEach-Object { "      $($_.id) | $($_.data_evento) | $($_.titulo.Substring(0,[Math]::Min(60,$_.titulo.Length)))" }
+        Write-Host "    Ultimas 5 entradas:"
+        $main | Select-Object -Last 5 | ForEach-Object {
+            $t = $_.titulo
+            if ($t.Length -gt 60) { $t = $t.Substring(0, 60) }
+            Write-Host ("      {0} - {1} - {2}" -f $_.id, $_.data_evento, $t)
+        }
     }
 } catch { Fail "Erro ao ler lawfare.json: $_" }
 
 # -----------------------------------------------------------------------
-# 2. SYNC FILE — consistência com fonte de verdade
+# 2. SYNC FILE - consistência com fonte de verdade
 # -----------------------------------------------------------------------
-Write-Host "`n[ 2 ] claude.ai-corpus-ids-sync.json — consistência" -ForegroundColor Cyan
+Write-Host "`n[ 2 ] claude.ai-corpus-ids-sync.json - consistência" -ForegroundColor Cyan
 try {
     $sync         = Get-Content $syncFile -Raw | ConvertFrom-Json
     $syncLastId   = $sync.tracks.main.last_id
@@ -64,10 +68,10 @@ try {
     $realNext     = $next
 
     if ($syncLastId -eq $realLastId) { Pass "main.last_id correto: $syncLastId" }
-    else { Fail "main.last_id diverge — sync=$syncLastId / real=$realLastId" }
+    else { Fail "main.last_id diverge - sync=$syncLastId / real=$realLastId" }
 
     if ($syncNextAvail -eq $realNext) { Pass "main.next_available correto: $syncNextAvail" }
-    else { Fail "main.next_available diverge — sync=$syncNextAvail / real=$realNext" }
+    else { Fail "main.next_available diverge - sync=$syncNextAvail / real=$realNext" }
 
     # Verificar batch_file_only entries não colisão com main
     $batchOnly = $sync.tracks.main.confirmed_batches | Where-Object { $_.status -eq "batch_file_only" }
@@ -78,16 +82,16 @@ try {
         else { Pass "batch_file_only [$bMin-$bMax] sem colisão em lawfare.json" }
     }
 
-    # Thematic track — sem gaps
+    # Thematic track - sem gaps
     $tIds   = $sync.tracks.thematic.entries | ForEach-Object { $_.id } | Sort-Object
     $tLast  = $sync.tracks.thematic.last_id
     $tNext  = $sync.tracks.thematic.next_available
     $tGaps  = @()
     for ($i = 1; $i -lt $tIds.Count; $i++) {
         $d = $tIds[$i] - $tIds[$i-1]
-        if ($d -gt 1) { $tGaps += "$($tIds[$i-1]+1)–$($tIds[$i]-1)" }
+        if ($d -gt 1) { $tGaps += "$($tIds[$i-1]+1)-$($tIds[$i]-1)" }
     }
-    if ($tGaps.Count -eq 0) { Pass "Thematic track sem gaps internos ($($tIds.Count) entradas, $($tIds[0])–$($tIds[-1]))" }
+    if ($tGaps.Count -eq 0) { Pass "Thematic track sem gaps internos ($($tIds.Count) entradas, $($tIds[0])-$($tIds[-1]))" }
     else { Warn "Thematic track gaps: $($tGaps -join ' | ')" }
 
     if ($tLast -eq ($tIds | Select-Object -Last 1)) { Pass "thematic.last_id correto: $tLast" }
@@ -106,36 +110,36 @@ try {
 } catch { Fail "Erro ao ler sync file: $_" }
 
 # -----------------------------------------------------------------------
-# 3. UNIFIED CORPUS — integridade interna
+# 3. UNIFIED CORPUS - integridade interna
 # -----------------------------------------------------------------------
-Write-Host "`n[ 3 ] lawfare-unified-corpus.json — integridade" -ForegroundColor Cyan
+Write-Host "`n[ 3 ] lawfare-unified-corpus.json - integridade" -ForegroundColor Cyan
 try {
     $corpus   = (Get-Content $corpFile -Raw | ConvertFrom-Json).entradas
     $cIds     = $corpus | ForEach-Object { $_.id_corpus }
     $cIdsSorted = $cIds | Sort-Object
 
-    Pass "Carregado — $($corpus.Count) entradas"
+    Pass "Carregado - $($corpus.Count) entradas"
 
     # IDs duplicados no corpus
     $dupes = $cIds | Group-Object | Where-Object Count -gt 1
     if ($dupes) { Fail "id_corpus duplicados: $($dupes.Name -join ', ')" }
     else         { Pass "Sem id_corpus duplicados" }
 
-    # IDs temáticos (100-999) são namespace separado do main track — sem verificação de colisão
+    # IDs temáticos (100-999) são namespace separado do main track - sem verificação de colisão
     # Colisão numérica com lawfare.json é esperada e intencional (track distinto)
     $tCorpus = $cIds | Where-Object { [int]$_ -ge 100 -and [int]$_ -lt 1000 }
     $tOutOfRange = $tCorpus | Where-Object { [int]$_ -lt 100 -or [int]$_ -ge 1000 }
     if ($tOutOfRange) { Warn "IDs temáticos fora do range 100-999: $($tOutOfRange -join ',')" }
     elseif ($tCorpus.Count -gt 0) { Pass "Track temático: $($tCorpus.Count) entradas no range 100-999 ($($tCorpus -join ','))" }
 
-    # IDs numéricos >1000: main track — alguns só existem em JSON batch até merge em lawfare.json
+    # IDs numéricos >1000: main track - alguns só existem em JSON batch até merge em lawfare.json
     $mCorpus = $cIds | Where-Object { [int]$_ -gt 1000 } | ForEach-Object { [int]$_ } | Sort-Object
     $inMain  = $mCorpus | Where-Object { $_ -le $realLastId }
     $inBatch = $mCorpus | Where-Object { $_ -gt $realLastId }
     if ($inMain.Count -gt 0)  { Pass "IDs main presentes em lawfare.json: $($inMain -join ',')" }
 
     if ($inBatch.Count -gt 0) {
-        # Esperado quando sync marca confirmed_batches.status=batch_file_only (ex.: 1449–1511)
+        # Esperado quando sync marca confirmed_batches.status=batch_file_only (ex.: 1449-1511)
         $syncRef          = Get-Content $syncFile -Raw | ConvertFrom-Json
         $batchOnlyRanges  = @($syncRef.tracks.main.confirmed_batches | Where-Object { $_.status -eq "batch_file_only" })
         $outsideDeclared = New-Object System.Collections.Generic.List[int]
@@ -152,7 +156,7 @@ try {
         } elseif ($outsideDeclared.Count -gt 0) {
             Warn "IDs main > $($realLastId) fora dos ranges batch_file_only no sync: $($outsideDeclared -join ',')"
         } else {
-            Pass "IDs main apenas em batch _data/*.json (OK — dentro de batch_file_only sync): $($inBatch -join ',')"
+            Pass "IDs main apenas em batch _data/*.json (OK, dentro de batch_file_only sync): $($inBatch -join ',')"
         }
     }
 
@@ -166,8 +170,11 @@ try {
     $conexoesRotas = $corpus | ForEach-Object {
         $entry = $_
         $entry.conexoes | ForEach-Object {
-            if ($_ -notin $allCorpusIds -and $_ -notlike "id_1*" -and [int]($_ -replace 'id_','') -lt 200) {
-                "$($entry.id_corpus)→$_"
+            if ($_ -match '^id_(\d+)$') {
+                $num = [int]$Matches[1]
+                if ($_ -notin $allCorpusIds -and $num -lt 200) {
+                    "$($entry.id_corpus)->$_"
+                }
             }
         }
     }

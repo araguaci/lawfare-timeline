@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "1.1.0",
-    "generated": "2026-06-20",
+    "generated": "2026-07-09",
     "updated": "2026-05-28T23:59:00-03:00",
     "session": "claude.ai — sessão editorial 2026-05-28 (Operação Rejeito, T-191, T-192, Flávio/Trump, posts P11)",
     "purpose": "Mapa de sincronização de IDs — lawfare-timeline corpus",
@@ -79,7 +79,7 @@
           ],
           "status": "confirmed",
           "merge_pending": false,
-          "notes": "Merge lawfare.json 2026-06-20: Biomm 1527-1546, Zema 1547-1550, Homeschooling 1551.",
+          "notes": "Merge lawfare.json 2026-07-09: Biomm 1527-1546, Zema 1547-1550, Homeschooling 1551.",
           "source_files": [
             "_data/processados/lawfare-1527-1546-biomm-renumerado.json",
             "_data/processados/zema-1547-1550-renumerado.json"
@@ -92,7 +92,7 @@
           ],
           "status": "confirmed",
           "merge_pending": false,
-          "notes": "Merge lawfare.json 2026-06-20: Operação Rejeito 1552-1571.",
+          "notes": "Merge lawfare.json 2026-07-09: Operação Rejeito 1552-1571.",
           "source_files": [
             "_data/processados/lawfare-batch-rejeito-1552-1571.json"
           ]
@@ -167,14 +167,22 @@
           ],
           "status": "confirmed",
           "notes": "Merge todo 2026-06-29: main IDs 1606-1608."
+        },
+        {
+          "range": [
+            1609,
+            1611
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-07-09: main IDs 1609-1611."
         }
       ],
-      "last_id": 1608,
-      "last_jekyll_published": 1608,
+      "last_id": 1611,
+      "last_jekyll_published": 1611,
       "last_produced": 1576,
-      "next_available": 1609,
+      "next_available": 1612,
       "merge_queue": [],
-      "last_confirmed": 1608,
+      "last_confirmed": 1611,
       "last_session_produced": 1600
     },
     "thematic": {
@@ -973,83 +981,95 @@
         {
           "id": 210,
           "status": "confirmed",
-          "topic": "Operação Parasitas (PC-GO) identifica fraude em ma... (T-210)",
-          "artifact": "2023-01-01-operacao-parasitas-pc-go-identifica-fraude-em-materiais-hospitalares-no-hmap.md",
+          "topic": "Operação Parasitas / cluster Sepse HMAP (T-210)",
+          "artifact": "operacao-parasitas-pc-go-identifica-fraude-em-materiais-hospitalares-no-hmap",
           "notes": "Estudo Jekyll _posts/estudos/ (2023-01-01-operacao-parasitas-pc-go-identifica-fraude-em-materiais-hospitalares-no-hmap)."
         },
         {
           "id": 211,
           "status": "confirmed",
-          "topic": "MPF e PF deflagram 2ª fase da Operação Sepse contr... (T-211)",
-          "artifact": "2026-04-23-mpf-e-pf-deflagram-2-fase-da-operacao-sepse-contra-rede-de-lavagem-ligada-ao-hmap.md",
+          "topic": "2ª fase Operação Sepse — PF/MPF rede lavagem HMAP (T-211)",
+          "artifact": "mpf-e-pf-deflagram-2-fase-da-operacao-sepse-contra-rede-de-lavagem-ligada-ao-hmap",
           "notes": "Estudo Jekyll _posts/estudos/ (2026-04-23-mpf-e-pf-deflagram-2-fase-da-operacao-sepse-contra-rede-de-lavagem-ligada-ao-hmap)."
         },
         {
           "id": 212,
           "status": "confirmed",
-          "topic": "Esquema na Operação Sepse: contratos superfaturado... (T-212)",
-          "artifact": "2026-04-23-esquema-na-operacao-sepse-contratos-superfaturados-de-uti-com-repasse-de-10-a-cupula-da-os.md",
+          "topic": "Esquema Sepse — UTI superfaturada e repasse OS (T-212)",
+          "artifact": "esquema-na-operacao-sepse-contratos-superfaturados-de-uti-com-repasse-de-10-a-cupula-da-os",
           "notes": "Estudo Jekyll _posts/estudos/ (2026-04-23-esquema-na-operacao-sepse-contratos-superfaturados-de-uti-com-repasse-de-10-a-cupula-da-os)."
         },
         {
           "id": 213,
           "status": "confirmed",
-          "topic": "CGU confirma histórico de irregularidades da mesma... (T-213)",
-          "artifact": "2026-04-25-cgu-confirma-historico-de-irregularidades-da-mesma-os-em-outros-estados-fixacao-de-compete.md",
+          "topic": "CGU irregularidades OS Sepse em outros estados (T-213)",
+          "artifact": "cgu-confirma-historico-de-irregularidades-da-mesma-os-em-outros-estados-fixacao-de-compete",
           "notes": "Estudo Jekyll _posts/estudos/ (2026-04-25-cgu-confirma-historico-de-irregularidades-da-mesma-os-em-outros-estados-fixacao-de-compete)."
         },
         {
           "id": 214,
           "status": "confirmed",
-          "topic": "Status atual da Operação Sepse — sem denúncia form... (T-214)",
-          "artifact": "2026-06-20-status-atual-da-operacao-sepse-sem-denuncia-formal-ou-desfecho-judicial-ate-a-data-de-regi.md",
+          "topic": "Status Operação Sepse sem denúncia formal (T-214)",
+          "artifact": "status-atual-da-operacao-sepse-sem-denuncia-formal-ou-desfecho-judicial-ate-a-data-de-regi",
           "notes": "Estudo Jekyll _posts/estudos/ (2026-06-20-status-atual-da-operacao-sepse-sem-denuncia-formal-ou-desfecho-judicial-ate-a-data-de-regi)."
         },
         {
           "id": 215,
           "status": "confirmed",
-          "topic": "2ª Turma do STF mantém prisão de pai e primo de Da... (T-215)",
-          "artifact": "2026-06-16-2-turma-do-stf-mantem-prisao-de-pai-e-primo-de-daniel-vorcaro-por-31-gilmar-mendes-diverge.md",
+          "topic": "Vorcaro STF — 2ª Turma mantém prisão familiares (T-215)",
+          "artifact": "2-turma-do-stf-mantem-prisao-de-pai-e-primo-de-daniel-vorcaro-por-31-gilmar-mendes-diverge",
           "notes": "Estudo Jekyll _posts/estudos/ (2026-06-16-2-turma-do-stf-mantem-prisao-de-pai-e-primo-de-daniel-vorcaro-por-31-gilmar-mendes-diverge)."
         },
         {
           "id": 216,
           "status": "confirmed",
-          "topic": "T-216 (T-216-tse-usaid-parceria-censura-seletiva.json)",
-          "artifact": "2026-06-29-tse-usaid-parceria-censura-seletiva.md",
-          "notes": "Estudo Jekyll _posts/estudos/2026-06-29-tse-usaid-parceria-censura-seletiva.md"
+          "topic": "TSE × USAID — parceria e censura seletiva (T-216)",
+          "artifact": "tse-usaid-parceria-censura-seletiva",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-06-29-tse-usaid-parceria-censura-seletiva)."
         },
         {
           "id": 217,
           "status": "confirmed",
-          "topic": "T-217 (T-195-seletividade-punitiva-tse-lacuna.json)",
-          "artifact": "2026-06-29-seletividade-punitiva-tse-casos-isolados.md",
-          "notes": "Estudo Jekyll _posts/estudos/2026-06-29-seletividade-punitiva-tse-casos-isolados.md"
+          "topic": "Seletividade punitiva TSE/Câmara — lacuna metodológica (T-217)",
+          "artifact": "seletividade-punitiva-tse-casos-isolados",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-06-29-seletividade-punitiva-tse-casos-isolados)."
         },
         {
           "id": 218,
           "status": "confirmed",
-          "topic": "T-218 (T-218-ouro-ilegal-vetor-p08-amazonia-pcc-cv-venezuela.json)",
-          "artifact": "2026-06-29-ouro-ilegal-vetor-p08-amazonia-pcc-cv-venezuela.md",
-          "notes": "Estudo Jekyll _posts/estudos/2026-06-29-ouro-ilegal-vetor-p08-amazonia-pcc-cv-venezuela.md"
+          "topic": "Ouro ilegal — vetor P08 Amazônia PCC/CV/Venezuela (T-218)",
+          "artifact": "ouro-ilegal-vetor-p08-amazonia-pcc-cv-venezuela",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-06-29-ouro-ilegal-vetor-p08-amazonia-pcc-cv-venezuela)."
+        },
+        {
+          "id": 219,
+          "status": "confirmed",
+          "topic": "Farra do INSS — rede completa Conafer/Careca/CPMI (T-219)",
+          "artifact": "farra-inss-rede-completa",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-03-28-farra-do-inss-rede-completa-conafer-careca-do-inss-nucleo-politico-e-o-nucleo-internaciona)."
+        },
+        {
+          "id": 220,
+          "status": "confirmed",
+          "topic": "Convergência PCC-OFAC × rede Arpar × INSS (T-220)",
+          "artifact": "pcc-ofac-arpar-farra-inss-convergencia",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-07-01-convergencia-estrutural-vetor-pcc-ofac-rede-arpar-farra-do-inss-via-infraestrutura-finance)."
         }
       ],
-      "last_id": 218,
-      "next_available": 219,
+      "last_id": 220,
+      "next_available": 221,
       "pending": [],
       "pending_notes": {}
     }
   },
   "sync_status": {
-    "main_track_last_sync": "2026-06-29",
-    "thematic_track_last_sync": "2026-06-29",
+    "main_track_last_sync": "2026-07-09",
+    "thematic_track_last_sync": "2026-07-09",
     "ids_confirmed_total": {
-      "main_track": "1608 (Jekyll + lawfare.json)",
-      "thematic_track": 218
+      "main_track": "1611",
+      "thematic_track": 220
     },
-    "ids_pending_production": [
-      180
-    ],
+    "ids_pending_production": [],
     "artifacts_without_thematic_id": [],
     "artifacts_id_reserved_pending_formalization": [
       208,
@@ -1061,7 +1081,6 @@
       "Copiar 9 posts P11 cluster para _posts/governo/ e _posts/escandalos/ (jekyll-posts-p11-cluster.tar.gz)",
       "Implementar espelhamento IPFS/archive.org (pendente recorrente)",
       "Recuperação shadowban @araguaci",
-      "lawfare.json last_id=1576; próximo ID livre=1577",
       "Fila editorial 2026-05-28: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
       "T-197 Operação Rejeito publicado (2026-05-28)",
       "T-198 COAF × Moraes publicado (2026-05-28)",
@@ -1108,7 +1127,36 @@
       "T-208 Narrativa vs Evidência publicado (2026-06-20)",
       "T-209 JustiçaWatch Brasil publicado (2026-06-20)",
       "T-196 Radar Top 30 publicado em estudos/ (2026-06-20)",
-      "lawfare.json last_id=1600; próximo ID livre=1601"
+      "lawfare.json last_id=1600; próximo ID livre=1601",
+      "lawfare.json last_id=1608; próximo ID livre=1609",
+      "Fila editorial 2026-07-09: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-07-09)",
+      "T-198 COAF × Moraes publicado (2026-07-09)",
+      "T-199 Lojas Americanas publicado (2026-07-09)",
+      "T-200 Estatais rombo P11 publicado (2026-07-09)",
+      "T-201 PCC transnacional publicado (2026-07-09)",
+      "T-202 Delegada × PCC publicado (2026-07-09)",
+      "T-203 Zelotes CARF publicado (2026-07-09)",
+      "T-204 Gastos Paris publicado (2026-07-09)",
+      "T-205 Duplo padrão corpus publicado (2026-07-09)",
+      "T-206 SPLC corpus publicado (2026-07-09)",
+      "T-207 Vaza Toga corpus publicado (2026-07-09)",
+      "T-208 Narrativa vs Evidência publicado (2026-07-09)",
+      "T-209 JustiçaWatch Brasil publicado (2026-07-09)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-07-09)",
+      "lawfare.json last_id=1611; próximo ID livre=1612",
+      "T-210 Cluster Sepse Parasitas publicado (2026-07-09)",
+      "T-211 Sepse 2ª fase publicado (2026-07-09)",
+      "T-212 Sepse UTI publicado (2026-07-09)",
+      "T-213 CGU Sepse publicado (2026-07-09)",
+      "T-214 Status Sepse publicado (2026-07-09)",
+      "T-215 Vorcaro STF publicado (2026-07-09)",
+      "T-216 TSE USAID publicado (2026-07-09)",
+      "T-217 Seletividade TSE publicado (2026-07-09)",
+      "T-218 Ouro ilegal P08 publicado (2026-07-09)",
+      "T-219 Farra INSS publicado (2026-07-09)",
+      "T-220 PCC-OFAC Arpar publicado (2026-07-09)",
+      "Próximo thematic: T-221; main next=1612"
     ]
   },
   "id_conflict_resolutions": {
@@ -1143,7 +1191,7 @@
     "custeio_vs_top30": {
       "T-191": "Custeio P11 — estudo canônico",
       "T-196": "Radar Top 30 — renumerado do antigo T-191",
-      "date": "2026-06-20"
+      "date": "2026-07-09"
     },
     "pcc_namespace": {
       "range": "1481-1500",

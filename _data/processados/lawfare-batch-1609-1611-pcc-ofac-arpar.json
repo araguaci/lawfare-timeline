@@ -1,0 +1,90 @@
+{
+  "batch_meta": {
+    "generated": "2026-07-02",
+    "range": [1609, 1611],
+    "session": "claude.ai — sanção OFAC Shimada/Stella/Victory + elo rede Arpar",
+    "destination": "_data/todo/ (processar via merge_todo_pending.py)",
+    "sources_verified": true,
+    "min_2_fontes_check": "1609-1610: OK (3+ fontes). 1611: FALHOU — fonte única (Revista Oeste). Marcado ev-alleged por regra de ouro. NÃO promover a ev-confirmed sem segunda fonte."
+  },
+  "entries": [
+    {
+      "id": 1609,
+      "date": "2026-07-01",
+      "date_precision": "day",
+      "title": "OFAC sanciona dois brasileiros e quatro empresas por alegado vínculo financeiro com o PCC",
+      "summary": "Departamento do Tesouro dos EUA (OFAC) sancionou Victor Henrique de Oliveira Shimada, Stella Stefanie Nunes Henrique de Oliveira e as empresas Victory Trading Intermediação de Negócios Cobranças e Tecnologia Ltda., Pixwave Soluções de Pagamentos Ltda., Wave Construções Inteligentes Ltda. e Avenidas Flutuantes Unipessoal Lda. (Portugal), por suposta integração a rede de lavagem ligada ao Primeiro Comando da Capital (PCC), classificado FTO/SDGT pelos EUA desde 05-06/06/2026. Segundo o Tesouro, Shimada seria elo entre operadores do PCC na Flórida e o Brasil, tendo movimentado mais de US$ 30 milhões via criptoativos; Stella teria prestado serviços logísticos de coleta de valores. Investigação conduzida pela Homeland Security Task Force, FBI Miami e DOJ.",
+      "category": "ato_legislativo",
+      "actors": [
+        {"name": "Victor Henrique de Oliveira Shimada", "role": "sancionado — apontado como 'elo fundamental' com PCC/Flórida", "institution": "Victory Trading"},
+        {"name": "Stella Stefanie Nunes Henrique de Oliveira", "role": "sancionada — parente e secretária de Shimada", "institution": "Victory Trading"}
+      ],
+      "institutions": ["OFAC — Departamento do Tesouro dos EUA", "Homeland Security Task Force", "FBI — Miami Field Office", "DOJ — Money Laundering, Narcotics and Confiscation Section"],
+      "legal_basis": ["Executive Order 13224", "INA §219 — designação FTO do PCC (05/06/2026)"],
+      "patterns": ["P08"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "Sancionada pelos EUA por elo com PCC é citada em escândalo no Corinthians", "url": "https://www.metropoles.com/sao-paulo/sancionada-eua-pcc-corinthians", "outlet": "Metrópoles", "date": "2026-07-01"},
+        {"title": "EUA sancionam brasileiros e empresas alegando vínculo com PCC", "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-07/eua-sancionam-brasileiros-e-empresas-alegando-vinculo-com-pcc", "outlet": "Agência Brasil", "date": "2026-07-01"},
+        {"title": "Após enquadrar PCC como facção terrorista, EUA aplicam primeiras sanções", "url": "https://www.brasildefato.com.br/2026/07/01/apos-enquadrar-pcc-como-faccao-terrorista-eua-aplicam-primeiras-sancoes-a-empresas-e-pessoas-ligadas-a-faccao/", "outlet": "Brasil de Fato", "date": "2026-07-01"},
+        {"title": "Entenda ligação entre brasileiros sancionados pelos EUA, PCC e Corinthians", "url": "https://www.cnnbrasil.com.br/nacional/sudeste/sp/entenda-ligacao-entre-brasileiros-sancionados-pelos-eua-pcc-e-corinthians/", "outlet": "CNN Brasil", "date": "2026-07-01"}
+      ],
+      "result": "Bens bloqueados sob jurisdição EUA; sanções secundárias previstas para instituições financeiras estrangeiras que mantiverem transações com os alvos; defesa de Shimada nega envolvimento com organização criminosa; Ministério da Justiça brasileiro manifesta preocupação com efeitos sobre terceiros.",
+      "connections": ["id_1601-1605 — Teia Master/Banco Master", "id_1481-1505 — batch PCC/Ndrangheta", "T-201 — PCC transnacional OFAC/EUA/eixo luso", "T-218 — ouro ilegal vetor P08", "id_1610", "id_1611"],
+      "status": "confirmado",
+      "lacuna_investigativa": "Beneficiários finais da rede além de Shimada/Stella não identificados publicamente pelo Tesouro; extensão da rede além das 4 empresas sancionadas não mapeada.",
+      "ponto_de_inflexao": null,
+      "analise": "Primeira aplicação de sanção OFAC pós-designação FTO do PCC. Shimada já era réu em processo de lavagem ligado ao caso Corinthians/Vai de Bet — a Secretária Nacional de Justiça confirmou publicamente que a base da sanção americana veio de informações produzidas por autoridades brasileiras, o que indica seleção de alvo a partir de investigação nacional preexistente, não inteligência autônoma nova dos EUA."
+    },
+    {
+      "id": 1610,
+      "date": "2026-07-01",
+      "date_precision": "day",
+      "title": "Diretor-geral da PF diverge publicamente da avaliação do Tesouro dos EUA sobre vínculo de Shimada e Stella com o PCC",
+      "summary": "O diretor-geral da Polícia Federal, Andrei Rodrigues, declarou que Victor Henrique de Oliveira Shimada e Stella Stefanie Nunes Henrique de Oliveira não possuem ligação com o PCC — divergência explícita com a avaliação do Departamento do Tesouro dos EUA, que sancionou ambos no mesmo dia pelo motivo oposto. A Secretária Nacional de Justiça, Maria Rosa Guimarães Loula, declarou que as sanções americanas se basearam em informações produzidas por autoridades brasileiras e defendeu maior intercâmbio bilateral de dados, afirmando que o Brasil não defende investigados por crimes mas teme efeitos indiretos da medida unilateral.",
+      "category": "chokepoint_judicial",
+      "actors": [
+        {"name": "Andrei Rodrigues", "role": "diretor-geral", "institution": "Polícia Federal"},
+        {"name": "Maria Rosa Guimarães Loula", "role": "secretária nacional de Justiça", "institution": "Ministério da Justiça"}
+      ],
+      "institutions": ["Polícia Federal", "Ministério da Justiça", "OFAC"],
+      "legal_basis": [],
+      "patterns": ["P04b"],
+      "evidence_status": "ev-contested",
+      "sources": [
+        {"title": "Governo teme efeito de sanções dos EUA a brasileiros acusados de ligação com o PCC", "url": "https://www.diariodocentrodomundo.com.br/governo-teme-efeito-de-sancoes-dos-eua-a-brasileiros-acusados-de-ligacao-com-o-pcc", "outlet": "Diário do Centro do Mundo", "date": "2026-07-01"}
+      ],
+      "result": "Divergência institucional pública entre PF brasileira e Tesouro americano sobre o mesmo fato, sem resolução; nenhum dos dois órgãos publicou dossiê técnico comparável para sustentar a posição divergente.",
+      "connections": ["id_1609"],
+      "status": "confirmado",
+      "lacuna_investigativa": "PF não publicou fundamentação técnica para a divergência; não há registro público de qual base probatória sustenta a avaliação de 'sem ligação', em contraste com o comunicado OFAC, que cita fluxo de US$ 30 milhões documentado.",
+      "ponto_de_inflexao": "Declaração pública de negação de vínculo pela PF ocorre no mesmo dia da sanção, sem prazo demonstrado para análise dos documentos que a fundamentaram — limitação equivalente à alegada pela própria defesa de Shimada.",
+      "analise": "Divergência institucional é dado estrutural, não prova de má-fé de qualquer parte — atribuir intenção (dissimulação consciente vs. avaliação técnica genuína/OIS) é analiticamente indeterminado nesta fase e não deve ser registrado como fato. O padrão a documentar é: autoridade nacional nega publicamente, no mesmo dia, o que autoridade estrangeira classifica como confirmado, sem fundamentação técnica pareada — condição estrutural favorável a blindagem por omissão probatória, candidata a P03 caso o padrão se repita em casos futuros."
+    },
+    {
+      "id": 1611,
+      "date": "2026-07-01",
+      "date_precision": "day",
+      "title": "Victory Trading (sancionada pela OFAC) recebeu R$ 514,5 milhões da Wave Intermediações, CNPJ apontado como parte da rede Arpar",
+      "summary": "Segundo apuração jornalística publicada em 01/07/2026, a Victory Trading recebeu R$ 514,5 milhões da empresa Wave Intermediações em intervalo de aproximadamente um ano. A Wave Intermediações é citada como um dos operadores financeiros da chamada rede Arpar, identificada no relatório do relator da CPMI do INSS (dep. Alfredo Gaspar) como estrutura de lavagem usada simultaneamente pelo esquema do 'Careca do INSS' (Antônio Carlos Camilo Antunes) e por organizações criminosas incluindo o PCC — junto de outros operadores citados no mesmo relatório (BK Bank, 2GO Bank).",
+      "category": "mecanismo_sistemico",
+      "actors": [
+        {"name": "Victor Henrique de Oliveira Shimada", "role": "destinatário dos recursos via Victory Trading", "institution": "Victory Trading"},
+        {"name": "Antônio Carlos Camilo Antunes ('Careca do INSS')", "role": "operador central da rede identificada pela CPMI", "institution": "rede Arpar"}
+      ],
+      "institutions": ["CPMI do INSS", "rede Arpar"],
+      "legal_basis": [],
+      "patterns": ["P08", "P10"],
+      "evidence_status": "ev-alleged",
+      "sources": [
+        {"title": "Empresa sancionada pelos EUA recebeu R$ 514 mi de rede ligada ao Careca do INSS", "url": "https://revistaoeste.com/politica/empresa-sancionada-pelos-eua-recebeu-r-514-mi-de-rede-ligada-ao-careca-do-inss/", "outlet": "Revista Oeste", "date": "2026-07-01"}
+      ],
+      "result": "Nenhum resultado institucional registrado. Fonte única até o momento — requer segunda fonte independente antes de reclassificação para ev-confirmed, por regra de 2 fontes para eventos com menos de 90 dias.",
+      "connections": ["id_1609", "T-219 — Farra do INSS (pendente)", "T-220"],
+      "status": "em_andamento",
+      "lacuna_investigativa": "Intervalo exato dos R$514,5mi não confirmado na fonte primária localizada (menciona apenas 'um ano'); a formulação 'set/2023–set/2024', em circulação em redes sociais, NÃO tem fonte confirmada e não deve ser tratada como dado do corpus até verificação. Segunda fonte para o valor e para o vínculo Wave→Arpar ainda não localizada. Beneficiário final dos recursos não identificado. Relatório-base da CPMI do INSS não foi aprovado pelo colegiado — status de relatório de relator, não de decisão oficial da comissão.",
+      "ponto_de_inflexao": "CPMI encerrada sem relatório final aprovado; não há confirmação pública de que a Victory Trading estivesse entre as ~40 empresas da rede Arpar cujo sigilo bancário foi efetivamente quebrado por decisão judicial.",
+      "analise": "Se corroborado por segunda fonte, este item conecta pela primeira vez, de forma documentada, o vetor OFAC/PCC (id_1609) ao vetor Farra do INSS (T-219, pendente) via infraestrutura financeira compartilhada — mesma lógica já registrada pela CPMI para BK Bank (Carbono Oculto, T-119) e 2GO Bank (Hezbollah). O status não aprovado do relatório da CPMI não anula o peso probatório dos achados de quebra de sigilo em si (dados bancários reais, com base judicial), mas deve constar em toda citação — é o mesmo problema estrutural que motiva a formalização de P06-B (comissões parlamentares terminadas sem relatório aprovado como padrão recorrente, não acidente)."
+    }
+  ]
+}
