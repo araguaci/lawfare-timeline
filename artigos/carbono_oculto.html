@@ -49,13 +49,49 @@
     top:0;
     z-index:100;
   }
-  .nb{padding:6px 13px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--text2);font-family:var(--font);font-size:12px;font-weight:500;cursor:pointer;transition:all .2s;white-space:nowrap}
+  .nb{padding:6px 13px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--text2);font-family:var(--font);font-size:12px;font-weight:500;cursor:pointer;transition:all .2s;white-space:nowrap;text-decoration:none;display:inline-block}
   .nb:hover{border-color:var(--cy-dim);color:var(--cy2)}
   .nb.act{background:rgba(45,212,191,0.12);border-color:var(--cy);color:var(--cy);font-weight:700}
 
   main{padding:0 20px 36px;max-width:1200px;margin:0 auto}
-  .sec{display:none;padding-top:4px}
-  .sec.act{display:block}
+  .sec{padding-top:80px; margin-top:-60px; margin-bottom:40px}
+  
+  #gotop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 44px;
+    height: 44px;
+    background: var(--bg2);
+    border: 1px solid var(--cy-dim);
+    border-radius: 50%;
+    color: var(--cy2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    z-index: 1000;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  }
+  #gotop.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  #gotop:hover {
+    background: rgba(45,212,191,0.1);
+    transform: translateY(-3px);
+  }
+  #gotop svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+  
+  html { scroll-behavior: smooth; }
 
   /* KPI: grade fixa 3×2 (6 cards) */
   .kgrid{
@@ -129,10 +165,10 @@
   .hid{font-size:12px;color:var(--text2);line-height:1.55}
 
   .agrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
-  .acard{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px 14px}
+  .acard{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px 14px;display:flex;flex-direction:column}
   .aname{font-size:13px;font-weight:700;margin-bottom:3px}
   .arole{font-size:11px;color:var(--text2);font-family:var(--mono);margin-bottom:6px}
-  .aflags{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+  .aflags{display:flex;flex-wrap:wrap;gap:4px;margin-top:auto;padding-top:6px}
 
   .alitem{display:flex;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:8px;background:var(--bg3)}
   .alic{font-size:16px;flex-shrink:0;margin-top:1px}
@@ -180,20 +216,20 @@
   </div>
 </header>
 
-<nav>
-  <button type="button" class="nb act" onclick="show('visao', this)">Visão Geral</button>
-  <button type="button" class="nb" onclick="show('camadas', this)">7 Camadas</button>
-  <button type="button" class="nb" onclick="show('atores', this)">Atores</button>
-  <button type="button" class="nb" onclick="show('conexoes', this)">Conexões</button>
-  <button type="button" class="nb" onclick="show('timeline', this)">Linha do Tempo</button>
-  <button type="button" class="nb" onclick="show('analise', this)">Lacunas</button>
-  <button type="button" class="nb" onclick="show('refs', this)">Referências</button>
+<nav id="navbar">
+  <a href="#sec-visao" class="nb act">Visão Geral</a>
+  <a href="#sec-camadas" class="nb">7 Camadas</a>
+  <a href="#sec-atores" class="nb">Atores</a>
+  <a href="#sec-conexoes" class="nb">Conexões</a>
+  <a href="#sec-timeline" class="nb">Linha do Tempo</a>
+  <a href="#sec-analise" class="nb">Lacunas</a>
+  <a href="#sec-refs" class="nb">Referências</a>
 </nav>
 
 <main>
 
 <!-- ══ VISÃO GERAL ══ -->
-<div id="sec-visao" class="sec act">
+<div id="sec-visao" class="sec">
   <div class="kgrid">
     <div class="kcard kcy"><div class="klabel">Movimentação ilícita (estim.)</div><div class="kval">R$ 140bi</div><div class="ksub">3 operações combinadas</div></div>
     <div class="kcard kgo"><div class="klabel">Créditos tributários Receita</div><div class="kval">R$ 8,67bi</div><div class="ksub">Sonegação constituída</div></div>
@@ -441,14 +477,52 @@
 
 </main>
 
+<a href="#" id="gotop" aria-label="Voltar ao topo">
+  <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h6v8h4v-8h6z"/></svg>
+</a>
+
 <script>
-function show(id, el){
-  document.querySelectorAll('.sec').forEach(function(s){ s.classList.remove('act'); });
-  document.querySelectorAll('.nb').forEach(function(b){ b.classList.remove('act'); });
-  var sec = document.getElementById('sec-' + id);
-  if (sec) sec.classList.add('act');
-  if (el) el.classList.add('act');
-}
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('.sec');
+  const navLinks = document.querySelectorAll('.nb');
+  const gotop = document.getElementById('gotop');
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '-20% 0px -70% 0px',
+    threshold: 0
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navLinks.forEach(link => {
+          link.classList.remove('act');
+          if (link.getAttribute('href') === '#' + id) {
+            link.classList.add('act');
+            link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+          }
+        });
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach(sec => observer.observe(sec));
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      gotop.classList.add('show');
+    } else {
+      gotop.classList.remove('show');
+    }
+  });
+
+  gotop.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
 setTimeout(function(){
   var f = document.getElementById('gfill');
   if (f) f.style.width = '97%';
