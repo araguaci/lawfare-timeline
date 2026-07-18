@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "1.1.0",
-    "generated": "2026-07-09",
+    "generated": "2026-07-18",
     "updated": "2026-05-28T23:59:00-03:00",
     "session": "claude.ai — sessão editorial 2026-05-28 (Operação Rejeito, T-191, T-192, Flávio/Trump, posts P11)",
     "purpose": "Mapa de sincronização de IDs — lawfare-timeline corpus",
@@ -79,7 +79,7 @@
           ],
           "status": "confirmed",
           "merge_pending": false,
-          "notes": "Merge lawfare.json 2026-07-09: Biomm 1527-1546, Zema 1547-1550, Homeschooling 1551.",
+          "notes": "Merge lawfare.json 2026-07-18: Biomm 1527-1546, Zema 1547-1550, Homeschooling 1551.",
           "source_files": [
             "_data/processados/lawfare-1527-1546-biomm-renumerado.json",
             "_data/processados/zema-1547-1550-renumerado.json"
@@ -92,7 +92,7 @@
           ],
           "status": "confirmed",
           "merge_pending": false,
-          "notes": "Merge lawfare.json 2026-07-09: Operação Rejeito 1552-1571.",
+          "notes": "Merge lawfare.json 2026-07-18: Operação Rejeito 1552-1571.",
           "source_files": [
             "_data/processados/lawfare-batch-rejeito-1552-1571.json"
           ]
@@ -207,14 +207,30 @@
           ],
           "status": "confirmed",
           "notes": "Merge todo 2026-07-09: main IDs 1619-1619."
+        },
+        {
+          "range": [
+            1577,
+            1620
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-07-18: main IDs 1577-1620."
+        },
+        {
+          "range": [
+            1577,
+            1578
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-07-18: main IDs 1577-1578."
         }
       ],
-      "last_id": 1619,
-      "last_jekyll_published": 1619,
+      "last_id": 1620,
+      "last_jekyll_published": 1578,
       "last_produced": 1576,
-      "next_available": 1620,
+      "next_available": 1621,
       "merge_queue": [],
-      "last_confirmed": 1619,
+      "last_confirmed": 1578,
       "last_session_produced": 1600
     },
     "thematic": {
@@ -1093,20 +1109,34 @@
           "topic": "Nemo judex formalizado — preliminar DPU AP 2782 (T-221)",
           "artifact": "nemo-judex-formalizado-dpu",
           "notes": "Estudo Jekyll _posts/estudos/ (2026-06-16-nemo-judex-in-causa-propria-formalizado-por-orgao-de-estado-a-preliminar-da-dpu-na-ap-2782)."
+        },
+        {
+          "id": 222,
+          "status": "confirmed",
+          "topic": "T-222 (lawfare-batch-1620-t222-t223-lacunas.json)",
+          "artifact": "2026-07-16-p10-promovido-a-padrao-autonomo-infraestrutura-de-servico-compartilhada-com-dois-nos-verif.md",
+          "notes": "Estudo Jekyll _posts/estudos/2026-07-16-p10-promovido-a-padrao-autonomo-infraestrutura-de-servico-compartilhada-com-dois-nos-verif.md"
+        },
+        {
+          "id": 223,
+          "status": "confirmed",
+          "topic": "T-223 (lawfare-batch-1620-t222-t223-lacunas.json)",
+          "artifact": "2026-07-16-p12-b-instanciado-como-assimetria-de-capacidade-analitica-camada-oficial-aberta-tse-camada.md",
+          "notes": "Estudo Jekyll _posts/estudos/2026-07-16-p12-b-instanciado-como-assimetria-de-capacidade-analitica-camada-oficial-aberta-tse-camada.md"
         }
       ],
-      "last_id": 221,
-      "next_available": 222,
+      "last_id": 223,
+      "next_available": 224,
       "pending": [],
       "pending_notes": {}
     }
   },
   "sync_status": {
-    "main_track_last_sync": "2026-07-09",
-    "thematic_track_last_sync": "2026-07-09",
+    "main_track_last_sync": "2026-07-18",
+    "thematic_track_last_sync": "2026-07-18",
     "ids_confirmed_total": {
-      "main_track": "1619",
-      "thematic_track": 221
+      "main_track": "1620",
+      "thematic_track": 223
     },
     "ids_pending_production": [],
     "artifacts_without_thematic_id": [],
@@ -1202,7 +1232,36 @@
       "T-221 Nemo judex DPU publicado (2026-07-09)",
       "Próximo thematic: T-222; main next=1619",
       "lawfare.json last_id=1619; próximo ID livre=1620",
-      "Próximo thematic: T-222; main next=1620"
+      "Próximo thematic: T-222; main next=1620",
+      "Fila editorial 2026-07-18: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-07-18)",
+      "T-198 COAF × Moraes publicado (2026-07-18)",
+      "T-199 Lojas Americanas publicado (2026-07-18)",
+      "T-200 Estatais rombo P11 publicado (2026-07-18)",
+      "T-201 PCC transnacional publicado (2026-07-18)",
+      "T-202 Delegada × PCC publicado (2026-07-18)",
+      "T-203 Zelotes CARF publicado (2026-07-18)",
+      "T-204 Gastos Paris publicado (2026-07-18)",
+      "T-205 Duplo padrão corpus publicado (2026-07-18)",
+      "T-206 SPLC corpus publicado (2026-07-18)",
+      "T-207 Vaza Toga corpus publicado (2026-07-18)",
+      "T-208 Narrativa vs Evidência publicado (2026-07-18)",
+      "T-209 JustiçaWatch Brasil publicado (2026-07-18)",
+      "T-210 Cluster Sepse Parasitas publicado (2026-07-18)",
+      "T-211 Sepse 2ª fase publicado (2026-07-18)",
+      "T-212 Sepse UTI publicado (2026-07-18)",
+      "T-213 CGU Sepse publicado (2026-07-18)",
+      "T-214 Status Sepse publicado (2026-07-18)",
+      "T-215 Vorcaro STF publicado (2026-07-18)",
+      "T-216 TSE USAID publicado (2026-07-18)",
+      "T-217 Seletividade TSE publicado (2026-07-18)",
+      "T-218 Ouro ilegal P08 publicado (2026-07-18)",
+      "T-219 Farra INSS publicado (2026-07-18)",
+      "T-220 PCC-OFAC Arpar publicado (2026-07-18)",
+      "T-221 Nemo judex DPU publicado (2026-07-18)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-07-18)",
+      "lawfare.json last_id=1620; próximo ID livre=1621",
+      "Próximo thematic: T-224; main next=1621"
     ]
   },
   "id_conflict_resolutions": {
@@ -1237,7 +1296,7 @@
     "custeio_vs_top30": {
       "T-191": "Custeio P11 — estudo canônico",
       "T-196": "Radar Top 30 — renumerado do antigo T-191",
-      "date": "2026-07-09"
+      "date": "2026-07-18"
     },
     "pcc_namespace": {
       "range": "1481-1500",

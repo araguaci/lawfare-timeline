@@ -1,6 +1,6 @@
 # Próximos passos · lawfare-timeline
 
-**Atualizado:** 2026-07-09 (batch 1613–1618 + T-221 nemo judex DPU)
+**Atualizado:** 2026-07-18 (batch 1620 + T-222/T-223 + posts 1577–1578)
 
 ---
 
@@ -9,9 +9,9 @@
 
 | Track                | Last ID | Próximo | Status                                        |
 | -------------------- | ------- | ------- | --------------------------------------------- |
-| Main (timeline)      | 1619    | 1620    | Moraes/PGR inclusão Bolsonaro inq. Eduardo |
-| Thematic (estudos T) | 221     | 222     | T-221 nemo judex DPU / AP 2782                |
-| Fila editorial       | —       | —       | `_data/todo/` vazio (só notas locais)         |
+| Main (timeline)      | 1620    | 1621    | Auditorias Master/Reag sem ressalvas (P10)   |
+| Thematic (estudos T) | 223     | 224     | T-223 P12-B assimetria analítica eleitoral    |
+| Fila editorial       | —       | —       | `_data/todo/` — consulado HK pendente sync    |
 | Posts 404 resolvidos | 12      | —       | ✅ permalink + 1 post criado (ID 160)     |
 
 
@@ -130,6 +130,22 @@
 
 
 JSON arquivados → `_data/processados/` · `_data/todo/` vazio (exceto `todo.md` notas)
+
+---
+
+## Rodada 1620 + T-222/T-223 + posts 1577–1578 ✅ (18/07/2026)
+
+
+| ID / faixa | Conteúdo | Status |
+| ---------- | -------- | ------ |
+| 1620 | Auditorias KPMG/PwC/EY/Crowe — pareceres sem ressalvas Master/Reag | ✅ |
+| T-222 | P10 promovido a padrão autônomo (infraestrutura de serviço) | ✅ |
+| T-223 | P12-B instanciado — assimetria de capacidade analítica eleitoral | ✅ |
+| 1577 | Moraes proíbe Cremesp requisitar prontuários aborto legal (ADPF 1141) | ✅ post Jekyll |
+| 1578 | STF suspende resolução CFM aborto após 22 semanas (ADPF 1141) | ✅ post Jekyll |
+
+
+JSON arquivados → `_data/processados/` · `_data/todo/` pendente: consulado HK (`__PENDENTE_SYNC__`)
 
 ---
 

@@ -68,6 +68,39 @@ def thematic_id_from_file(path: Path, data: dict) -> int | None:
     return None
 
 
+def thematic_id_from_entry(entry: dict) -> int | None:
+    eid = entry.get("id")
+    if eid is None:
+        return None
+    if isinstance(eid, str):
+        m = re.match(r"^T-(\d+)$", eid.strip(), re.I)
+        if m:
+            return int(m.group(1))
+    tipo = (
+        entry.get("tipo")
+        or entry.get("category")
+        or entry.get("categoria")
+        or ""
+    ).lower()
+    if tipo in ("analise_estrutural", "lacuna_investigativa", "analise_editorial"):
+        if isinstance(eid, int) and eid >= 100:
+            return eid
+    return None
+
+
+def parse_main_id(eid) -> int | None:
+    if isinstance(eid, int):
+        return eid
+    if isinstance(eid, str):
+        if re.match(r"^T-\d+$", eid.strip(), re.I):
+            return None
+        try:
+            return int(eid)
+        except ValueError:
+            return None
+    return None
+
+
 def resolve_category(entry: dict) -> str:
     cat = (entry.get("category") or entry.get("categoria") or entry.get("tipo") or "").lower()
     title = (entry.get("title") or entry.get("titulo") or "").lower()
@@ -78,6 +111,9 @@ def resolve_category(entry: dict) -> str:
         "operacao": "operacoes",
         "operacoes": "operacoes",
         "perseguicao_processual": "stf",
+        "perseguicao-institucional": "stf",
+        "mecanismo_sistemico": "bancos",
+        "incidente_diplomatico": "crise-diplomatica",
         "judicial": "justica",
         "crise-diplomatica": "crise-diplomatica",
         "censura-digital": "lawfare",
@@ -133,12 +169,19 @@ def parse_fontes(entry: dict) -> list[dict]:
                 "titulo": s.get("title") or s.get("titulo") or s.get("name") or s.get("outlet") or "Fonte",
                 "url": s.get("url") or "",
             })
+        elif isinstance(s, str) and s.startswith("http"):
+            fontes.append({"titulo": "Fonte", "url": s})
     return fontes
 
 
 def normalize_main_entry(entry: dict, source: str) -> dict | None:
     eid = entry.get("id")
     if eid is None:
+        return None
+    main_id = parse_main_id(eid)
+    if main_id is None:
+        if isinstance(eid, str) and eid.startswith("__"):
+            print(f"  SKIP {source}: ID pendente ({eid})")
         return None
 
     title = entry.get("title") or entry.get("titulo", "")
@@ -175,7 +218,7 @@ def normalize_main_entry(entry: dict, source: str) -> dict | None:
         lacunas_list = list(lacunas)
 
     return {
-        "id_corpus": str(int(eid)),
+        "id_corpus": str(main_id),
         "jekyll_filename": fname_md,
         "jekyll_date": jdate,
         "jekyll_categories": [cat],
@@ -185,8 +228,17 @@ def normalize_main_entry(entry: dict, source: str) -> dict | None:
         "resumo": resumo,
         "categoria": entry.get("category") or entry.get("categoria") or entry.get("tipo") or cat,
         "pais": entry.get("pais", "Brasil"),
-        "atores": parse_actors(entry.get("actors") or entry.get("atores")),
-        "instituicoes": entry.get("institutions") or entry.get("instituicoes") or [],
+        "atores": parse_actors(
+            entry.get("actors")
+            or entry.get("atores")
+            or [{"name": n} for n in (entry.get("pessoas_envolvidas") or [])]
+        ),
+        "instituicoes": (
+            entry.get("institutions")
+            or entry.get("instituicoes")
+            or entry.get("instituicoes_envolvidas")
+            or []
+        ),
         "fontes_verificadas": parse_fontes(entry),
         "_analise": entry.get("analise") or entry.get("observacao_analitica") or "",
         "_result": entry.get("result") or "",
@@ -463,7 +515,22 @@ def process_all(dry_run: bool) -> tuple[list[dict], list[tuple[int, str, str]], 
             items = data
         else:
             items = [data]
+        batch_had_output = False
         for item in items:
+            tid = thematic_id_from_entry(item)
+            if tid is not None:
+                item["_source_file"] = fpath.name
+                content, md_fname = render_estudos_post(item, tid)
+                target = POSTS / "estudos" / md_fname
+                if dry_run:
+                    print(f"  [dry-run] T-{tid}: {target.relative_to(ROOT)}")
+                else:
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    target.write_text(content, encoding="utf-8")
+                    print(f"  OK {target.relative_to(ROOT)}")
+                thematic.append((tid, fpath.name, md_fname))
+                batch_had_output = True
+                continue
             u = normalize_main_entry(item, fpath.name)
             if not u:
                 continue
@@ -475,7 +542,9 @@ def process_all(dry_run: bool) -> tuple[list[dict], list[tuple[int, str, str]], 
                 target.parent.mkdir(parents=True, exist_ok=True)
                 target.write_text(render_timeline_post(u), encoding="utf-8")
                 print(f"  OK {target.relative_to(ROOT)}")
-        archived.append(fpath.name)
+            batch_had_output = True
+        if batch_had_output or not isinstance(data, dict) or not data.get("_staging_note"):
+            archived.append(fpath.name)
 
     return main_entries, thematic, archived
 

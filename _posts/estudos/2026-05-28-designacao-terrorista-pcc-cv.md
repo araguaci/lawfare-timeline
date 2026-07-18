@@ -5,7 +5,7 @@ title: "T-1512 · Designação Terrorista PCC/CV — Dossiê Geopolítico 2026"
 description: "State Dept. designa PCC e CV como FTO + SDGT em 28/05/2026. IDs 1512–1520 — sequência diplomática desde nov/2025, mecanismo estrutural da Lei 13.260/2016 e padrões P03, P04b, P08, P10."
 date: 2026-05-28T22:00:00-03:00
 image:
-  path: "/assets/solid/globe.svg"
+  path: "/assets/img/designacao-terrorista-pcc-cv-2026.jpg"
 tags: ["estudo", "pcc", "cv", "terrorismo", "geopolitica", "p04b", "p08", "p10", "p03", "diplomacia", "eua", "state-dept", "ofac", "fto", "sdgt"]
 categories: estudos
 mermaid: false

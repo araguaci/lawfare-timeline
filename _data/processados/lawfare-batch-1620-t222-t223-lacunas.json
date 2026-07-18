@@ -1,0 +1,99 @@
+{
+  "_meta": {
+    "batch": "resolucao-lacunas-arquitetura-p01-p12",
+    "generated": "2026-07-16",
+    "session": "claude.ai — sessão dossiê arquitetura sistêmica P01-P12 + resolução de lacunas",
+    "sync_reference": "claude.ai-corpus-ids-sync.json — main next=1620, thematic next=T-222 (verificado em arquivo enviado nesta sessão)",
+    "destination": "_data/todo/ — processar via merge_todo_pending.py",
+    "license": "CC0 1.0 Universal",
+    "notes": "IDs 1620 (main), T-222 e T-223 (thematic). Buscas negativas P02/P09 e medição P04b NÃO geram entrada — registradas apenas no artefato arquitetura-sistemica-p01-p12.html até cumprirem critério (P04b: arquivamento da lista de manchetes)."
+  },
+  "entries": [
+    {
+      "id": "1620",
+      "date": "2026-01-25",
+      "date_precision": "day",
+      "title": "Reportagem documenta pareceres sem ressalvas de quatro auditorias globais sobre balanços fraudulentos do ecossistema Master/Reag",
+      "summary": "Poder360 publica levantamento mostrando que KPMG, PwC, EY e Crowe emitiram pareceres sem ressalvas sobre balanços do Banco Master e da Reag Gestora contendo dezenas de bilhões em ativos posteriormente revelados fictícios. Sequência de auditorias do Master: UHY (2019–2021), KPMG (2022–2024), PwC (2025 — liquidação decretada antes da emissão do parecer). No balanço de dez/2024, a KPMG listou R$ 19,5 bi em cotas de fundos como 'Principal Assunto de Auditoria' (categoria de maior risco), alertou que os ativos 'não são negociados ativamente' e que a precificação estava 'sujeita a um nível mais elevado de incerteza' — e concluiu que as demonstrações 'apresentam adequadamente, em todos os aspectos relevantes, a posição patrimonial e financeira'. EY e Crowe chancelaram ativos da Reag, incluindo créditos de carbono lastreados em terras públicas da União. Todos os balanços 2019–2025 do Master saíram sem ressalvas.",
+      "category": "mecanismo_sistemico",
+      "actors": [
+        { "name": "KPMG", "role": "Auditoria externa do Banco Master 2022–2024 — pareceres sem ressalvas", "institution": "KPMG Auditores Independentes" },
+        { "name": "PwC", "role": "Auditoria contratada em 2025 — parecer não emitido antes da liquidação", "institution": "PricewaterhouseCoopers" },
+        { "name": "EY", "role": "Chancela de ativos do ecossistema Reag", "institution": "Ernst & Young" },
+        { "name": "Crowe", "role": "Chancela de ativos do ecossistema Reag", "institution": "Crowe" },
+        { "name": "UHY", "role": "Auditoria do então Banco Máxima/Master 2019–2021 — apontou problemas de documentação depois ausentes dos relatórios subsequentes", "institution": "UHY Auditores" }
+      ],
+      "institutions": ["Banco Master", "Reag Investimentos/CBSF", "CVM", "Banco Central", "CFC"],
+      "legal_basis": ["NBC TA 200 — ceticismo profissional e evidência de auditoria", "Lei 6.385/1976 — competência sancionadora da CVM sobre auditores de entidades reguladas"],
+      "patterns": ["P10", "P08", "P05"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        { "title": "4 auditorias deram OK para os balanços do Master e da Reag", "url": "https://www.poder360.com.br/poder-economia/4-auditorias-deram-ok-para-os-balancos-do-master-e-da-reag/", "outlet": "Poder360", "date": "2026-01-25" },
+        { "title": "Auditorias aprovaram balanços inflados de Master e Reag, diz site", "url": "https://www.conjur.com.br/2026-jan-25/auditorias-aprovaram-balancos-fraudulentos-de-master-e-reag-diz-site/", "outlet": "ConJur", "date": "2026-01-25" },
+        { "title": "Os auditores que não viram — análise dos relatórios 2019–2025", "url": "https://obastidor.com.br/economia/os-auditores-que-nao-viram/", "outlet": "O Bastidor", "date": "2026-04-14" },
+        { "title": "Caso Master: lacuna de auditorias alerta para responsabilização", "url": "https://www.poder360.com.br/poder-economia/caso-master-expoe-lacunas-de-auditorias-e-alerta-para-responsabilizacao/", "outlet": "Poder360", "date": "2026-01-27" }
+      ],
+      "result": "Debate público sobre responsabilização de auditores aberto (esferas CVM, BC e civil); nenhuma sanção formal contra as firmas documentada até 16/07/2026. Fato consolida o segundo nó de P10 (infraestrutura de serviço compartilhada) com corroboração múltipla.",
+      "connections": ["id_1601", "id_1574", "T-192", "T-215"],
+      "status": "confirmado",
+      "lacuna_investigativa": "1) A CVM ou o BC abriram processo administrativo sancionador contra alguma das quatro firmas? Sem registro público localizado até 16/07/2026. 2) Os papéis de trabalho da KPMG 2022–2023 explicam por que os problemas de documentação apontados pela UHY desapareceram dos relatórios públicos? 3) As mesmas firmas auditam entidades de outros clusters do corpus (fundos ligados a Carbono Oculto, entidades do consignado INSS)?",
+      "ponto_de_inflexao": "Não aplicável ao evento em si; relevante como insumo do ponto de inflexão do cluster Master — a chancela contábil contínua 2019–2025 é o mecanismo que adiou a detecção que o BC realizou com 30 telefonemas.",
+      "analise": "ev-inference: A função estrutural documentada não exige dolo das auditorias — basta a falha de ceticismo profissional operando em escala para que a camada de serviço funcione como infraestrutura de sustentação do esquema (P10). A distinção técnica central, apontada no debate público: 'incerteza de precificação' pressupõe ativo existente; parte dos ativos não existia. Verificar a fórmula sem verificar a existência do insumo inverte o dever de auditoria. O caso promove P10 a padrão autônomo: dois nós de serviço distintos (estruturação Reag; auditoria quádrupla) servindo o mesmo ecossistema com chancela formal que viabilizou captação continuada."
+    },
+    {
+      "id": "T-222",
+      "date": "2026-07-16",
+      "date_precision": "day",
+      "title": "P10 promovido a padrão autônomo — infraestrutura de serviço compartilhada com dois nós verificados no ecossistema Master/Reag",
+      "summary": "Estudo estrutural consolidando a promoção de P10 (Infraestrutura de Serviço Compartilhada) de padrão subordinado a P05/P08 para padrão autônomo da taxonomia, com base em dois nós de serviço verificados com corroboração múltipla: (1) estruturação de fundos — Reag/CBSF, liquidada pelo BC em 15/01/2026 por operações estruturadas fraudulentas bilaterais com o Banco Master entre jul/2023 e jul/2024 (relatório BC ao TCU); (2) camada de auditoria — KPMG, PwC, EY e Crowe emitiram pareceres sem ressalvas sobre balanços do ecossistema contendo ativos fictícios, sequência UHY→KPMG→PwC documentada em análise dos relatórios 2019–2025.",
+      "category": "analise_editorial",
+      "actors": [
+        { "name": "Reag Investimentos/CBSF", "role": "Nó de estruturação de fundos compartilhado", "institution": "Reag/CBSF DTVM" },
+        { "name": "KPMG / PwC / EY / Crowe", "role": "Nó de chancela contábil compartilhada", "institution": "Firmas de auditoria" }
+      ],
+      "institutions": ["Banco Central", "TCU", "CVM"],
+      "legal_basis": ["Lei 6.024/1974 — liquidação extrajudicial", "NBC TA 200 — ceticismo profissional"],
+      "patterns": ["P10"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        { "title": "Banco Central decreta liquidação da Reag Investimentos", "url": "https://www.jota.info/tributos-e-empresas/mercado/banco-central-decreta-liquidacao-da-reag-investimentos-envolvida-no-caso-master", "outlet": "JOTA", "date": "2026-01-15" },
+        { "title": "4 auditorias deram OK para os balanços do Master e da Reag", "url": "https://www.poder360.com.br/poder-economia/4-auditorias-deram-ok-para-os-balancos-do-master-e-da-reag/", "outlet": "Poder360", "date": "2026-01-25" }
+      ],
+      "result": "P10 atinge o critério metodológico de dois casos com ancoragem própria — status autônomo formalizado no dossiê arquitetura-sistemica-p01-p12.html. Recomendação: refletir em METHODOLOGY-v2.2.md.",
+      "connections": ["id_1620", "id_1601"],
+      "status": "analise_editorial",
+      "lacuna_investigativa": "Nó formal de serviço com clusters não-financeiros pendente: não há contrato/registro CVM-OAB provando que a mesma banca ou consultoria atenda simultaneamente o ecossistema Master e o núcleo associativo do cluster INSS/Sem Desconto. O contrato Barci de Moraes × Master (R$ 129 mi, já documentado no corpus) permanece classificado como indício de captura (P03/P08), não prova de P10 inter-cluster.",
+      "ponto_de_inflexao": "",
+      "analise": "ev-inference: O que distingue P10 de mera coincidência de fornecedores é a função de sustentação: a chancela formal (parecer de auditoria, estruturação regulada pela CVM) converte ativo suspeito em ativo captável. A infraestrutura de serviço não é cúmplice necessária — é condição de possibilidade. Dolo individual das firmas permanece não estabelecido e não é requisito do padrão; a análise é estrutural, não biográfica."
+    },
+    {
+      "id": "T-223",
+      "date": "2026-07-16",
+      "date_precision": "day",
+      "title": "P12-B instanciado como assimetria de capacidade analítica — camada oficial aberta (TSE), camada privada de inteligência eleitoral por assinatura",
+      "summary": "Estudo estrutural resolvendo a hipótese P12-B (Paywall Eleitoral) em duas camadas. Camada oficial: falseada — Portal de Dados Abertos do TSE e DivulgaCandContas mantêm candidaturas, prestação de contas, doações e microdados históricos públicos, gratuitos e sem cadastro (Resolução TSE 23.751/2026). Camada privada: verificada em duas instâncias — PollingData (agregador com previsões gratuitas e microdados/APIs/relatórios condicionados a assinatura, produtos PDVoto/PDGov; 478 pesquisas de 121 institutos processadas no ciclo 2026, conforme termos de uso da própria plataforma) e Politique (plataforma de consulta comparativa de dados eleitorais por assinatura). Insumo de ambas: dado público do TSE.",
+      "category": "analise_editorial",
+      "actors": [
+        { "name": "TSE", "role": "Mantenedor da camada aberta de dados eleitorais", "institution": "Tribunal Superior Eleitoral" },
+        { "name": "PollingData", "role": "Instância ilustrativa da camada analítica privada por assinatura — sem imputação de irregularidade", "institution": "PollingData" },
+        { "name": "Politique", "role": "Segunda instância ilustrativa — sem imputação de irregularidade", "institution": "Politique" }
+      ],
+      "institutions": ["TSE"],
+      "legal_basis": ["Resolução TSE 23.751/2026 — divulgação de resultados", "Resolução TSE 23.600/2019 — registro de pesquisas (PesqEle)"],
+      "patterns": ["P12"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        { "title": "Informações técnicas sobre a divulgação de resultados 2026", "url": "https://www.tse.jus.br/eleicoes/informacoes-tecnicas-sobre-a-divulgacao-de-resultados", "outlet": "TSE", "date": "2026-02-26" },
+        { "title": "Portal de Dados Abertos do TSE amplia acesso a informações eleitorais", "url": "https://www.tse.jus.br/comunicacao/noticias/2026/Marco/portal-de-dados-abertos-do-tse-amplia-acesso-a-informacoes-eleitorais-e-fortalece-transparencia", "outlet": "TSE", "date": "2026-03-16" },
+        { "title": "PollingData — Termos de Uso (conteúdos e funcionalidades gratuitas e pagas)", "url": "https://flex.pollingdata.com.br/termos-de-uso", "outlet": "PollingData", "date": "2026-07-16" },
+        { "title": "Politique — Assinatura da plataforma", "url": "https://politique.com.br/assinar-plataforma", "outlet": "Politique", "date": "2026-07-16" }
+      ],
+      "result": "P12-B sai de 'proposto' para 'instanciado como assimetria de capacidade analítica', com fronteira fato/inferência fixada: o modelo de negócio é ev-confirmed; a leitura como padrão de captura cognitiva é ev-inference.",
+      "connections": ["T-216", "T-217"],
+      "status": "analise_editorial",
+      "lacuna_investigativa": "1) Preços e condições de licenciamento B2B não são públicos — sem eles não se mede a severidade da assimetria (marginal vs. excludente). 2) Partidos nanicos e candidaturas de baixo orçamento efetivamente não acessam essas ferramentas, ou existem alternativas gratuitas de qualidade equivalente (universidades, jornalismo de dados aberto)? 3) Existe camada equivalente para verificação de fatos paga no ciclo 2026?",
+      "ponto_de_inflexao": "",
+      "analise": "ev-inference: A formulação correta do padrão exige a delimitação: vender análise sobre dado público é atividade de mercado legítima e nenhuma das plataformas citadas é acusada de irregularidade — sua função nesta entrada é ilustrativa do mecanismo, não acusatória. O que P12-B documenta é que transparência formal (dado aberto) coexiste com opacidade funcional (custo de processamento analítico): atores com orçamento compram inteligência preditiva pronta; cidadãos e candidaturas pequenas recebem o mesmo insumo como planilhas brutas dispersas. A assimetria é de capacidade, não de acesso — refinamento que torna o padrão defensável e o distingue de teoria conspiratória sobre 'dados escondidos'."
+    }
+  ]
+}
