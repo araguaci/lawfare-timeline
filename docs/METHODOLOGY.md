@@ -233,6 +233,7 @@ Padrões são documentados com casos, fontes e lacunas. Não são hipóteses —
 | **P04b** | **Both-sidesism Funcional** | Falsa-equivalência operada por veículos ou modelos de IA como mecanismo de proteção a atores sob investigação. Distinto de P04 (weaponização direta): P04b neutraliza cobertura crítica sem produzir conteúdo ofensivo — apenas dilui o sinal tratando mecanismo estrutural documentado como "perspectiva de um lado". Diagnóstico: o modelo/veículo compreende o conteúdo e o descarta por metadado de fonte, tom ou campo político aparente. |
 | P05 | Uso de Recursos Públicos como Vetor | Fundos públicos capturados como canal de extração — FGC, INSS, consignado |
 | P06 | Estratégia do Silêncio e Prescrição | Prazo indefinido como punição do investigado ou proteção do protegido |
+| **P06-B** | **Prescrição Parlamentar / Encerramento sem Relatório** | CPI/CPMI esgota prazo regimental sem aprovar relatório final, dissipando formalmente o resultado da apuração — mesmo com conteúdo extenso e grave — sem configurar absolvição ou arquivamento formal. Distinto de P06 "puro" (prescrição judicial por decurso de prazo processual): mecanismo de maioria simples do colegiado. Ver CPMI Banestado (2004), CPMI INSS e CPI Crime Organizado (2026). |
 | P07 | Captura Transgeracional | Recrutamento via cultura, escolas, igrejas — reprodução do sistema por cooptação antecipada |
 | P08 | Infiltração em Fintechs e Criptoativos | Brechas regulatórias de IPs brasileiras como canal de lavagem — nexo PCC/CV documentado |
 | P09 | Captura Cultural e Legitimidade Simbólica | Produção deliberada de legitimidade cultural como escudo contra escrutínio |
@@ -241,6 +242,10 @@ Padrões são documentados com casos, fontes e lacunas. Não são hipóteses —
 | **P12** | **Assimetria de Capacidade Analítica** | Transparência formal (dado público aberto) coexiste com opacidade funcional (custo de processamento analítico). Subvariante **P12-B (Paywall Eleitoral)**: plataformas privadas vendem inteligência preditiva sobre microdados do TSE; assimetria é de capacidade, não de acesso ao insumo bruto. Ver T-223. |
 
 **Regra de aplicação:** um evento pode ativar múltiplos padrões. Registrar todos os padrões aplicáveis no campo `padroes_sistemicos` do schema JSON estendido.
+
+**Nota taxonômica (jul/2026) — P06-B:** formalizado como subpadrão de P06. Distinção: P06 "puro" é prescrição por decurso de prazo processual judicial; P06-B é dissipação por voto de maioria simples do colegiado parlamentar — mecanismo procedimental, não temporal. Três instâncias-âncora antes da formalização: (1) CPMI do Banestado (dez/2004); (2) CPMI do INSS (28/03/2026) — relatório de 4.340 páginas, 216+ indiciados, rejeitado 19×12; (3) CPI do Crime Organizado (14/04/2026) — relatório rejeitado 6×4. Levantamento do *Congresso em Foco*: 8 comissões terminaram sem relatório desde 2004.
+
+**Nota taxonômica (abr/2026, reconfirmada jul/2026) — P10 vs P11:** P10 = infraestrutura de serviço (quem presta lavagem jurídico-financeira); P11 = substrato macroeconômico (o que torna essa prestação lucrativa). Distintos e complementares — questão ~~P10 autônomo ou substrato?~~ **RESOLVIDA**.
 
 ---
 
@@ -253,6 +258,7 @@ Padrões são documentados com casos, fontes e lacunas. Não são hipóteses —
 | 2.0 | 2026-Q1 | Adição do objeto `meta` com vetor_correcao_disponivel, tipo, entradas_relacionadas; criação das categorias registro-analitico e perseguicao-institucional |
 | 2.2 | 2026-05 | Formalização P04b (Both-sidesism Funcional); padrões P01–P11 canônicos adicionados ao METHODOLOGY.md; próximo ID atualizado para 1577; corpus-bridge T-205/T-209 documentados |
 | 2.3 | 2026-07 | P10 promovido a padrão autônomo (T-222); P12/P12-B instanciados (T-223); main track 1620; posts Jekyll 1577–1578 publicados |
+| 2.4 | 2026-07 | P06-B formalizado (CPMI Banestado, CPMI INSS, CPI Crime Organizado); P10/P11 distinção fechada; P13 arquivado; dashboard v3.3 |
 
 ---
 

@@ -1,6 +1,6 @@
 # Próximos passos · lawfare-timeline
 
-**Atualizado:** 2026-07-18 (batch 1620 + T-222/T-223 + posts 1577–1578)
+**Atualizado:** 2026-07-18 (CPI Crime Organizado → ID 1625 + dashboard P06-B/P10)
 
 ---
 
@@ -9,7 +9,7 @@
 
 | Track                | Last ID | Próximo | Status                                        |
 | -------------------- | ------- | ------- | --------------------------------------------- |
-| Main (timeline)      | 1624    | 1625    | Gap 0707–0718 + Consulado HK (1623)         |
+| Main (timeline)      | 1625    | 1626    | CPI Crime Organizado P06-B (1625) publicado   |
 | Thematic (estudos T) | 223     | 224     | T-223 P12-B assimetria analítica eleitoral    |
 | Fila editorial       | —       | —       | `_data/todo/` — consulado HK pendente sync    |
 | Posts 404 resolvidos | 12      | —       | ✅ permalink + 1 post criado (ID 160)     |
@@ -130,6 +130,18 @@
 
 
 JSON arquivados → `_data/processados/` · `_data/todo/` vazio (exceto `todo.md` notas)
+
+---
+
+## Bucha + Consulado HK ✅ (18/07/2026)
+
+| Item | Resultado |
+|------|-----------|
+| **Bucha** | Lacuna fechada — sem dia 11/08 verificável → `_data/processados/lacuna-bucha-fundacao-1831.json` |
+| **1623** | Consulado HK — P02, ev-contested, fontes Metrópoles (Corregedor/CPADIS) |
+| **P13** | Arquivado — N=1; caso usa P02 existente |
+
+Faixa **1621–1625** (batch gap + merge): 1621 Moraes/Milei · 1622 Hawala · 1623 Consulado · 1624 revisão criminal Bolsonaro · 1625 CPI Crime Organizado (P06-B, ex-colisão 1624)
 
 ---
 
