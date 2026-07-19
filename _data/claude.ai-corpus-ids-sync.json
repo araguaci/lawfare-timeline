@@ -223,14 +223,22 @@
           ],
           "status": "confirmed",
           "notes": "Merge todo 2026-07-18: main IDs 1577-1578."
+        },
+        {
+          "range": [
+            1621,
+            1623
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-07-18: main IDs 1621-1623."
         }
       ],
-      "last_id": 1620,
-      "last_jekyll_published": 1578,
+      "last_id": 1624,
+      "last_jekyll_published": 1623,
       "last_produced": 1576,
-      "next_available": 1621,
+      "next_available": 1625,
       "merge_queue": [],
-      "last_confirmed": 1578,
+      "last_confirmed": 1623,
       "last_session_produced": 1600
     },
     "thematic": {
@@ -1135,7 +1143,7 @@
     "main_track_last_sync": "2026-07-18",
     "thematic_track_last_sync": "2026-07-18",
     "ids_confirmed_total": {
-      "main_track": "1620",
+      "main_track": "1624",
       "thematic_track": 223
     },
     "ids_pending_production": [],
@@ -1261,7 +1269,17 @@
       "T-221 Nemo judex DPU publicado (2026-07-18)",
       "T-196 Radar Top 30 publicado em estudos/ (2026-07-18)",
       "lawfare.json last_id=1620; próximo ID livre=1621",
-      "Próximo thematic: T-224; main next=1621"
+      "Próximo thematic: T-224; main next=1621",
+      "lawfare.json last_id=1621; próximo ID livre=1622",
+      "Próximo thematic: T-224; main next=1622",
+      "lawfare.json last_id=1623; próximo ID livre=1624",
+      "Próximo thematic: T-224; main next=1624",
+      "lawfare.json last_id=1624; próximo ID livre=1625",
+      "Próximo thematic: T-224; main next=1625"
+    ],
+    "notes": [
+      "Correção 2026-07-18: ID 1520→P04b imprensa; revisão criminal Bolsonaro→1621; duplicata lawfare/ removida.",
+      "lawfare.json last_id=1621; próximo ID livre=1622"
     ]
   },
   "id_conflict_resolutions": {
@@ -1314,6 +1332,14 @@
       "repo_ja_tinha": "T-202 = Delegada × PCC; T-206 = SPLC Modelo Brasil",
       "resolucao": "SPLC = T-206 (canônico no repo). Entrada da sessão descartada em favor do repo.",
       "date": "2026-05-28"
+    },
+    "1520_176_revisao_criminal_2026-07-18": {
+      "issue": "Duplicata revisão criminal Bolsonaro (08/05/2026) com id_corpus 176 e 1520",
+      "resolution": {
+        "1520": "Restaurado ao post P04b imprensa (batch 1513-1520 canônico)",
+        "1621": "Revisão criminal — post canônico _posts/stf/2026-05-08-bolsonaro-revisao-criminal-...",
+        "removed": "_posts/lawfare/2026-05-08-bolsonaro-protocola-revisao-criminal-... (duplicata)"
+      }
     }
   },
   "session_log": [

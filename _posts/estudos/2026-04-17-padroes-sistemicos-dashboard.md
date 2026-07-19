@@ -1,7 +1,7 @@
 ---
 title: "Mestre: Padrões × Operações Anticorrupção — Dossiê 2026"
-description: Análise transversal de 12 padrões identificados em 25 anos de operações brasileiras — incluindo os padrões emergentes de captura cultural (P9) e infraestrutura de serviço compartilhada (P10).
-date: 2026-04-17T12:00:00-03:00
+description: Análise transversal de 12 padrões confirmados em 25 anos de operações brasileiras — incluindo P06-B (prescrição parlamentar), P10 autônomo e P12/P12-B.
+date: 2026-07-18T22:22:22-22:22
 image:
   path: "/assets/img/estudos/padroes_sistemicos_dashboard_hero_xarticle.webp"
 tags: ["dashboard", "operacao", "corrupcao", "pcc", "diagnostico", "trafico", "brasil"]
@@ -13,7 +13,7 @@ pin: false
 - &nbsp;
 {:toc .large-only}
 
-Este texto resume o **dashboard mestre** que cruza **12 padrões (P1–P11)** com **17 operações** e linhas de evidência **2000–2026**. Os números de capa do dossiê HTML: **11** padrões mapeados, **17** operações cobertas, volume total estimado **R$ 156 bi+**, **5** nós do **grafo dual**, **P9–P11** como emergências **2026**, taxa de **anulação ~75%**. Referência documental no arquivo: **DOCS 153–175**, verificação **abr/2026**.
+Este texto resume o **dashboard mestre** que cruza **12 padrões (P1–P12)** com **17 operações** e linhas de evidência **2000–2026**. Os números de capa do dossiê HTML (v3.3): **12** padrões confirmados, **17** operações cobertas, volume total estimado **R$ 156 bi+**, **5** nós do **grafo dual**, **P9–P12** como emergências **2026**, subpadrão **P06-B** formalizado **jul/2026**, taxa de **anulação ~75%**. Referência documental no arquivo: **DOCS 153–1594**, verificação **jul/2026**.
 
 A tese do próprio painel é dura: a falha **não** é um “bug” ocasional do sistema; é **desenho recorrente** que se repete sob nomes novos de operação.
 
@@ -21,7 +21,7 @@ A tese do próprio painel é dura: a falha **não** é um “bug” ocasional do
 
 ## Nota metodológica (do HTML)
 
-**P1–P8:** identificados em análise transversal **2000–2025**. **P9** (captura cultural) e **P10** (infraestrutura compartilhada) emergem da **Operação Narco Fluxo** (**abr/2026**). **P11** (loop de extração perpétua) emerge do cruzamento do dossiê **Prisão Econômica** com **Sem Desconto** e dados macro **2010–2025**. Fontes citadas no rodapé do painel: **PF, COAF, Receita, CVM, CNJ, STF**, cruzamento com **ICL Notícias, GAECO-SP, FBSP 2025**.
+**P1–P8:** identificados em análise transversal **2000–2025**. **P9** (captura cultural) e **P10** (infraestrutura compartilhada) emergem da **Operação Narco Fluxo** (**abr/2026**); **P10** promovido a padrão autônomo (**T-222**, ID **1620**, **jul/2026**). **P11** (loop de extração perpétua) emerge do cruzamento do dossiê **Prisão Econômica** com **Sem Desconto** e dados macro **2010–2025**. **P06-B** (prescrição parlamentar) formalizado **jul/2026**. Proposta **P13** arquivada (Consulado HK → **P02**). Fontes citadas no rodapé do painel: **PF, COAF, Receita, CVM, CNJ, STF**, cruzamento com **ICL Notícias, GAECO-SP, Congresso em Foco, FBSP 2025**.
 * [P12 — Paywall Existencial / Captura Cognitiva de Mercado *(novo 2026)*](#p12--paywall-existencial--captura-cognitiva-de-mercado-novo-2026)
 
 [Dossiê interativo completo](https://gosurf.site/padroes-sistemicos-dashboard) · [lawfare-timeline.vercel.app](https://lawfare-timeline.vercel.app)
@@ -50,7 +50,17 @@ INSS, FGC, carbono, cultura: dinheiro público **mistura-se** ao esquema. **Ops:
 
 ### P6 · Silêncio e prescrição
 
-Atraso **estrutural** consome prazo. **Ops:** Castelo, Satiagraha, Lava Jato; **interseção** com P3 compra meses.
+Atraso **estrutural** consome prazo judicial. **Ops:** Castelo, Satiagraha, Lava Jato; **interseção** com P3 compra meses.
+
+**P06-B — Prescrição Parlamentar / Encerramento sem Relatório** *(subpadrão formalizado jul/2026):* CPI/CPMI esgota prazo regimental **sem aprovar relatório final**, dissipando formalmente o resultado da apuração — mesmo com conteúdo extenso e grave — **sem** configurar absolvição ou arquivamento formal. Mecanismo: maioria simples do colegiado, não decurso de prazo processual.
+
+| Caso | Data | Mecanismo |
+|------|------|-----------|
+| CPMI do Banestado | dez/2004 | Disputa relator×presidente; texto nunca votado |
+| CPMI do INSS | 28/03/2026 | Relatório Gaspar (4.340 p., 216+ indiciados) rejeitado 19×12 |
+| CPI do Crime Organizado | 14/04/2026 | Relatório rejeitado 6×4; sem texto final |
+
+8 ocorrências documentadas desde 2004 (*Congresso em Foco*); duas instâncias de **2026** convergem no cluster **Banco Master/Vorcaro**.
 
 ### P7 · Captura transgeracional
 
@@ -64,9 +74,11 @@ IPs, contas-bolsão, revogação da **e-Financeira** em **jan/2025** no contexto
 
 Legitimidade **simbólica** como escudo; narcoestética; **triângulo** narrativa + território + financiamento. **Ops:** Narco Fluxo, PCC, CV, INQ (versão política).
 
-### P10 · Infraestrutura de serviço compartilhada (novo 2026)
+### P10 · Infraestrutura de serviço compartilhada *(confirmado — autônomo)*
 
-**Mesma** arquitetura jurídico-financeira para **cleptocracia política** e **narcocleptocracia cultural**. **Hipótese:** operador de **charneira** entre universos. **Cadeia citada:** Ortiz → Aquilla/Sefer → **Benjamim Botelho** → Master → REAG → PCC. **Cinco nós:** fundos em camadas; advogado-estruturador; fintech sem rastreamento; influenciador/narrativa; offshore final.
+**Padrão autônomo** (consolidado **abr/2026**, corroborado **jul/2026**): mesma arquitetura jurídico-financeira para **cleptocracia política** e **narcocleptocracia cultural**. **Distinção fechada:** P10 = quem **presta** o serviço de lavagem (ex.: Oliver Ortiz → Master, PCC → REAG, Hydra); P11 = **substrato** macroeconômico que torna esse serviço lucrativo — **distintos e complementares**.
+
+**Cadeia citada:** Ortiz → Aquilla/Sefer → **Benjamim Botelho** → Master → REAG → PCC. **Dois nós verificados (jul/2026):** estruturação Reag/CBSF + camada de auditoria (KPMG, PwC, EY, Crowe). **Cinco nós:** fundos em camadas; advogado-estruturador; fintech sem rastreamento; influenciador/narrativa; offshore final. Ver T-222 e ID **1620**.
 
 ### P11 · Loop de extração perpétua (novo 2026)
 
@@ -155,8 +167,8 @@ O bloco seguinte reúne frentes marcadas como **ativas**, com ênfase em lavagem
 
 ## Rodapé analítico
 
-**Matriz de Indulgência Sistêmica v3.1 · Mestre de Padrões 2026** · CC0 1.0
+**Matriz de Indulgência Sistêmica v3.3 · Mestre de Padrões 2026** · CC0 1.0
 
 ## **Tweet sugerido**
 
-> *Dashboard mestre: 12 padrões × 17 operações, R$156bi+, anulação ~75%. P9–P11 nascem em 2026 (cultura compartilhada + loop macro). PCC marca todos os P; Narco Fluxo fecha P7+P9+P10. Design, não bug. Artigo: [link após publicar]*
+> *Dashboard mestre v3.3: 12 padrões × 17 ops, R$156bi+, anulação ~75%. P06-B formalizado (CPMI INSS + CPI Crime Organizado 2026). P10 autônomo fechado vs P11. PCC marca todos os P; Narco Fluxo fecha P7+P9+P10. Design, não bug.*

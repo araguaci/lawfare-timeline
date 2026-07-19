@@ -60,7 +60,7 @@ Os códigos **P01** a **P12** seguem o glossário do corpus unificado. Síntese 
 
 - [Lei 15.402/2026 (Lei da Dosimetria) — Promulgada por Alcolumbre após derrubada do veto Lula](/posts/lei-15402-2026-lei-dosimetria-promulgada-alcolumbre/) (`id_corpus` 173)
 - [ADIs ABI e PSOL-Rede contra Lei da Dosimetria — Sorteadas a Alexandre de Moraes por prevenção](/posts/adis-abi-psol-lei-dosimetria-sorteadas-moraes-prevencao/) (`id_corpus` 174)
-- [Bolsonaro protocola Revisão Criminal no STF — Alega 'erro judiciário' e cerceamento de defesa](/posts/bolsonaro-revisao-criminal-stf-dosimetria-erro-judiciario/) (`id_corpus` 176)
+- [Bolsonaro protocola Revisão Criminal no STF — Alega 'erro judiciário' e cerceamento de defesa](/posts/bolsonaro-revisao-criminal-stf-dosimetria-erro-judiciario/) (`id_corpus` 1624)
 
 ## 📎 Artigos de apoio (Gosurf)
 

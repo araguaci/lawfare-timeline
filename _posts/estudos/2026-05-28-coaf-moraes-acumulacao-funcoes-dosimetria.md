@@ -7,7 +7,7 @@ date: 2026-05-28T18:00:00-03:00
 image:
   path: "/assets/solid/gavel.svg"
 tags: ["estudo", "coaf", "moraes", "stf", "dosimetria", "p03", "p06", "p07", "lawfare"]
-categories: estudos
+categories: lawfare
 mermaid: false
 pin: false
 ---

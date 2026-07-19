@@ -7,7 +7,7 @@ date: 2026-07-01T12:00:00-03:00
 image:
   path: "/assets/solid/book-open.svg"
 tags: ["estudo", "lawfare", "p08", "p10", "p04b"]
-categories: estudos
+categories: lawfare
 mermaid: false
 pin: false
 permalink: /posts/2026-07-01-convergencia-estrutural-vetor-pcc-ofac-rede-arpar-farra-do-inss-via-infraestrutura-finance/

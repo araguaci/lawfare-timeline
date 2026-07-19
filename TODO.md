@@ -9,7 +9,7 @@
 
 | Track                | Last ID | Próximo | Status                                        |
 | -------------------- | ------- | ------- | --------------------------------------------- |
-| Main (timeline)      | 1620    | 1621    | Auditorias Master/Reag sem ressalvas (P10)   |
+| Main (timeline)      | 1624    | 1625    | Gap 0707–0718 + Consulado HK (1623)         |
 | Thematic (estudos T) | 223     | 224     | T-223 P12-B assimetria analítica eleitoral    |
 | Fila editorial       | —       | —       | `_data/todo/` — consulado HK pendente sync    |
 | Posts 404 resolvidos | 12      | —       | ✅ permalink + 1 post criado (ID 160)     |
@@ -130,6 +130,29 @@
 
 
 JSON arquivados → `_data/processados/` · `_data/todo/` vazio (exceto `todo.md` notas)
+
+---
+
+## Bucha + Consulado HK ✅ (18/07/2026)
+
+| Item | Resultado |
+|------|-----------|
+| **Bucha** | Lacuna fechada — sem dia 11/08 verificável → `_data/processados/lacuna-bucha-fundacao-1831.json` |
+| **1623** | Consulado HK — P02, ev-contested, fontes Metrópoles (Corregedor/CPADIS) |
+| **P13** | Arquivado — N=1; caso usa P02 existente |
+
+Faixa **1621–1624** (batch gap + merge): 1621 Moraes/Milei · 1622 Hawala · 1623 Consulado · 1624 revisão criminal Bolsonaro
+
+---
+
+## Correção IDs 1520/176 ✅ (18/07/2026)
+
+| Ação | Detalhe |
+|------|---------|
+| **1520** | Restaurado ao post P04b imprensa (`2026-05-28-imprensa-brasileira-...`) |
+| **1621** | Revisão criminal Bolsonaro — post canônico `_posts/stf/2026-05-08-bolsonaro-revisao-criminal-...` |
+| Removido | Duplicata `_posts/lawfare/2026-05-08-bolsonaro-protocola-revisao-criminal-...` |
+| Script | `tools/fix_id_1520_176.py` |
 
 ---
 

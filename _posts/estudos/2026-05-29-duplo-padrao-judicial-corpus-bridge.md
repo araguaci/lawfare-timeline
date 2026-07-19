@@ -7,7 +7,7 @@ date: 2026-05-29T12:00:00-03:00
 image:
   path: "/assets/img/estudos/og-duplo-padrao-judicial.webp"
 tags: ["estudo", "duplo-padrao", "assimetria", "p02", "p06", "lawfare"]
-categories: estudos
+categories: lawfare
 mermaid: false
 pin: false
 ---

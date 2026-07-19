@@ -7,7 +7,7 @@ date: 2026-05-28T16:00:00-03:00
 image:
   path: "/assets/solid/bullseye.svg"
 tags: ["estudo", "operacao-rejeito", "serra-do-curral", "mineracao", "manuscritos", "p03", "p08", "p11"]
-categories: estudos
+categories: lawfare
 mermaid: false
 pin: false
 ---

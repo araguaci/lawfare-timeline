@@ -7,9 +7,9 @@ date: 2026-05-28T22:00:00-03:00
 image:
   path: "/assets/img/top30_alertas_criticos_operacoes_sem_dossie_hero_xarticle.webp"
 tags: ["estudo", "diagnostico", "operacoes", "escandalos", "alertas", "lawfare"]
-categories: estudos
+categories: lawfare
 mermaid: false
-pin: true
+pin: false
 ---
 
 - &nbsp;

@@ -2,13 +2,13 @@
   "meta": {
     "descricao": "Timeline de eventos relacionados a Jair Bolsonaro, família e governo (2019–2026)",
     "methodology_ref": "METHODOLOGY.md v2.3",
-    "exportado_em": "2026-07-18T22:50:46Z",
+    "exportado_em": "2026-07-18T23:08:32Z",
     "gerado_por": "tools/export_bolsonaro_timeline.py",
     "filtro": "bolsonaro (titulo, descricao, tags, pessoas, filename)",
-    "total_entradas": 153,
+    "total_entradas": 152,
     "periodo": "2019-05-10 a 2026-07-07",
     "distribuicao_atores": {
-      "bolsonaro-familia": 104,
+      "bolsonaro-familia": 103,
       "governo-bolsonaro": 5,
       "flavio-bolsonaro": 16,
       "eduardo-bolsonaro": 12,
@@ -4540,18 +4540,20 @@
       "origem": "jekyll_post"
     },
     {
-      "id_corpus": 1520,
+      "id_corpus": 1621,
       "data_evento": "2026-05-08",
-      "data_iso": "2026-05-08T12:00:00Z",
-      "titulo": "Bolsonaro protocola revisão criminal: erro judiciário, delação não voluntária e negativa de provas",
-      "descricao": "Defesa de Bolsonaro protocola revisão criminal alegando erro judiciário, que delação de Cid não foi voluntária e que houve negativa de acesso a provas pela defesa.",
-      "categoria": "lawfare",
+      "data_iso": "2026-05-08T12:00:00.000Z",
+      "titulo": "Bolsonaro protocola Revisão Criminal no STF — Alega 'erro judiciário' e cerceamento de defesa",
+      "descricao": "Defesa de Bolsonaro protocola revisão criminal após Lei 15.402/2026, alegando erro judiciário, competência do plenário, delação não voluntária e cerceamento de defesa.",
+      "categoria": "stf",
       "tags": [
-        "lawfare",
+        "bolsonaro",
+        "revisao-criminal",
+        "lei-dosimetria",
         "stf",
-        "justica",
-        "sancoes",
-        "crise-diplomatica"
+        "mauro-cid",
+        "erro-judiciario",
+        "8-janeiro"
       ],
       "ator_principal": "bolsonaro-familia",
       "pessoas_envolvidas": [
@@ -4559,30 +4561,15 @@
         "Mauro Cid"
       ],
       "instituicoes_envolvidas": [
-        "STF"
+        "STF — 2ª Turma"
       ],
-      "fontes": [],
-      "fonte_arquivo": "_posts/lawfare/2026-05-08-bolsonaro-protocola-revisao-criminal-erro-judiciario-delacao-nao-voluntaria-e-negativa-de-.md",
-      "slug": "bolsonaro-protocola-revisao-criminal-erro-judiciario-delacao-nao-voluntaria-e-negativa-de-",
-      "permalink": "/posts/bolsonaro-protocola-revisao-criminal-erro-judiciario-delacao-nao-voluntaria-e-negativa-de-/",
-      "origem": "lawfare.json"
-    },
-    {
-      "id_corpus": "176",
-      "data_evento": "2026-05-08",
-      "data_iso": "2026-05-08T12:00:00.000Z",
-      "titulo": "Bolsonaro protocola Revisão Criminal no STF — Alega 'erro judiciário' e cerceamento de defesa",
-      "descricao": "Minutos após a promulgação da Lei 15.402/2026, a defesa de Bolsonaro protocolou pedido de revisão criminal no STF, alegando: 'erro judiciário em sua acepção …",
-      "categoria": "stf",
-      "tags": [],
-      "ator_principal": "bolsonaro-familia",
-      "pessoas_envolvidas": [],
-      "instituicoes_envolvidas": [],
-      "fontes": [],
+      "fontes": [
+        "https://www.hojeemdia.com.br/politica/bolsonaro-entra-com-revis-o-criminal-no-stf-para-anular-condenac-o-apos-dosimetria-ser-promulgada-1.1116332"
+      ],
       "fonte_arquivo": "_posts/stf/2026-05-08-bolsonaro-revisao-criminal-stf-dosimetria-erro-judiciario.md",
       "slug": "bolsonaro-revisao-criminal-stf-dosimetria-erro-judiciario",
       "permalink": "/posts/bolsonaro-revisao-criminal-stf-dosimetria-erro-judiciario/",
-      "origem": "jekyll_post"
+      "origem": "lawfare.json"
     },
     {
       "id_corpus": null,

@@ -7,7 +7,7 @@ date: 2026-05-28T20:00:00-03:00
 image:
   path: "/assets/solid/money-bill-wave.svg"
 tags: ["estudo", "estatais", "p11", "rombo", "governo", "orçamento"]
-categories: estudos
+categories: lawfare
 mermaid: false
 pin: false
 ---

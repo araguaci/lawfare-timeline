@@ -7,6 +7,8 @@ image:
 tags: ['lawfare', 'pcc', 'crime-organizado', 'censura', 'soberania', 'stf']
 categories: lawfare
 permalink: /posts/imprensa-brasileira-enquadra-designacao-terrorista-pcc-cv-como-questao-de-soberania-p04b/
+id_corpus: "1520"
+corpus_unificado: true
 ---
 
 - &nbsp;

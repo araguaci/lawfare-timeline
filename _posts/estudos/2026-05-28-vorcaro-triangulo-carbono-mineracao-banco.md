@@ -7,7 +7,7 @@ date: 2026-05-28T12:00:00-03:00
 image:
   path: "/assets/solid/landmark.svg"
 tags: ["estudo", "vorcaro", "carbono", "mineracao", "banco-master", "p08", "p11", "p03", "p04", "p09"]
-categories: estudos
+categories: lawfare
 mermaid: false
 pin: false
 ---

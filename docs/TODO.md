@@ -9,7 +9,7 @@
 
 | Track                | Last ID | Próximo | Status                                        |
 | -------------------- | ------- | ------- | --------------------------------------------- |
-| Main (timeline)      | 1620    | 1621    | Auditorias Master/Reag sem ressalvas (P10)   |
+| Main (timeline)      | 1624    | 1625    | Gap 0707–0718 + Consulado HK (1623)         |
 | Thematic (estudos T) | 223     | 224     | T-223 P12-B assimetria analítica eleitoral    |
 | Fila editorial       | —       | —       | `_data/todo/` — consulado HK pendente sync    |
 | Posts 404 resolvidos | 12      | —       | ✅ permalink + 1 post criado (ID 160)     |
@@ -130,6 +130,17 @@
 
 
 JSON arquivados → `_data/processados/` · `_data/todo/` vazio (exceto `todo.md` notas)
+
+---
+
+## Correção IDs 1520/176 ✅ (18/07/2026)
+
+| Ação | Detalhe |
+|------|---------|
+| **1520** | Restaurado ao post P04b imprensa (`2026-05-28-imprensa-brasileira-...`) |
+| **1621** | Revisão criminal Bolsonaro — post canônico `_posts/stf/2026-05-08-bolsonaro-revisao-criminal-...` |
+| Removido | Duplicata `_posts/lawfare/2026-05-08-bolsonaro-protocola-revisao-criminal-...` |
+| Script | `tools/fix_id_1520_176.py` |
 
 ---
 

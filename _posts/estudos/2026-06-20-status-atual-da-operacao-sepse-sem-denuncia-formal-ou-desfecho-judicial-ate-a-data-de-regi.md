@@ -5,7 +5,7 @@ date: 2026-06-20T12:00:00.000Z
 image:
   path: "/assets/solid/book-open.svg"
 tags: ["estudo", "operacao-sepse", "P06"]
-categories: estudos
+categories: lawfare
 permalink: /posts/2026-06-20-status-atual-da-operacao-sepse-sem-denuncia-formal-ou-desfecho-judicial-ate-a-data-de-regi/
 id_corpus: "T-214"
 thematic_track: true

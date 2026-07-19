@@ -7,7 +7,7 @@ date: 2026-06-29T12:00:00-03:00
 image:
   path: "/assets/solid/book-open.svg"
 tags: ["estudo", "p04", "p04b", "p09", "tse", "usaid", "censura-seletiva"]
-categories: estudos
+categories: tse
 mermaid: false
 pin: false
 permalink: /posts/2026-06-29-tse-usaid-parceria-censura-seletiva/

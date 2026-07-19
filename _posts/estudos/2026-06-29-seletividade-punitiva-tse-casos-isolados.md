@@ -6,8 +6,8 @@ description: "Dois casos documentados no corpus tocam o tema sem constituir estu
 date: 2026-06-29T12:00:00-03:00
 image:
   path: "/assets/solid/book-open.svg"
-tags: ["estudo", "p04", "seletividade-punitiva-tse-casos-isolados"]
-categories: estudos
+tags: ["estudo", "p04", "seletividade-punitiva-tse-casos-isolados"lawfare, "lawfare"]
+categories: lawfare
 mermaid: false
 pin: false
 permalink: /posts/2026-06-29-seletividade-punitiva-tse-casos-isolados/

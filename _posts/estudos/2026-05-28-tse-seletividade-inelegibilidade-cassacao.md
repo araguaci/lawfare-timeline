@@ -7,7 +7,7 @@ date: 2026-05-28T14:00:00-03:00
 image:
   path: "/assets/solid/landmark-dome.svg"
 tags: ["estudo", "tse", "inelegibilidade", "cassacao", "p03", "lawfare", "eleitoral"]
-categories: estudos
+categories: lawfare
 mermaid: false
 pin: false
 ---

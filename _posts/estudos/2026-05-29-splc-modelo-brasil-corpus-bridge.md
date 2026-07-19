@@ -7,7 +7,7 @@ date: 2026-05-29T12:00:00-03:00
 image:
   path: "/assets/img/estudos/splc-modelo-brasil.webp"
 tags: ["estudo", "splc", "weaponization", "p04", "netlab", "lawfare"]
-categories: estudos
+categories: lawfare
 mermaid: false
 pin: false
 ---

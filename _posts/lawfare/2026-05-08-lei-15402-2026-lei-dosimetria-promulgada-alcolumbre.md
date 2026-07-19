@@ -56,7 +56,7 @@ Os códigos **P01** a **P12** seguem o glossário do corpus unificado. Síntese 
 
 - [ADIs ABI e PSOL-Rede contra Lei da Dosimetria — Sorteadas a Alexandre de Moraes por prevenção](/posts/adis-abi-psol-lei-dosimetria-sorteadas-moraes-prevencao/) (`id_corpus` 174)
 - [Sequestro de Pauta — Mecanismo de Postergação das Revisões Criminais de 1.402 Condenados](/posts/sequestro-pauta-dosimetria-1402-condenados-limbo-processual/) (`id_corpus` 175)
-- [Bolsonaro protocola Revisão Criminal no STF — Alega 'erro judiciário' e cerceamento de defesa](/posts/bolsonaro-revisao-criminal-stf-dosimetria-erro-judiciario/) (`id_corpus` 176)
+- [Bolsonaro protocola Revisão Criminal no STF — Alega 'erro judiciário' e cerceamento de defesa](/posts/bolsonaro-revisao-criminal-stf-dosimetria-erro-judiciario/) (`id_corpus` 1624)
 
 ## 📎 Artigos de apoio (Gosurf)
 

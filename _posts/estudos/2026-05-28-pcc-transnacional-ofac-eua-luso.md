@@ -7,7 +7,7 @@ date: 2026-05-28T22:00:00-03:00
 image:
   path: "/assets/solid/globe.svg"
 tags: ["estudo", "pcc", "ofac", "crime-transnacional", "portugal", "p10", "lavagem"]
-categories: estudos
+categories: lawfare
 mermaid: false
 pin: false
 ---

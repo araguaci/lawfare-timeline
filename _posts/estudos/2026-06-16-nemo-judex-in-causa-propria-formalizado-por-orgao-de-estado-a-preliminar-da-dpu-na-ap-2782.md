@@ -7,7 +7,7 @@ date: 2026-06-16T12:00:00-03:00
 image:
   path: "/assets/solid/book-open.svg"
 tags: ["estudo", "lawfare", "p02", "p03"]
-categories: estudos
+categories: lawfare
 mermaid: false
 pin: false
 permalink: /posts/2026-06-16-nemo-judex-in-causa-propria-formalizado-por-orgao-de-estado-a-preliminar-da-dpu-na-ap-2782/

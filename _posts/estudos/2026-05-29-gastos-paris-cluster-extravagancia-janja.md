@@ -7,7 +7,7 @@ date: 2026-05-29T10:00:00-03:00
 image:
   path: "/assets/solid/person-dress.svg"
 tags: ["estudo", "paris", "janja", "extravagancia", "p05", "p11", "governo"]
-categories: estudos
+categories: lawfare
 mermaid: false
 pin: false
 ---

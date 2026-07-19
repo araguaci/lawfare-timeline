@@ -7,7 +7,7 @@ date: 2026-05-28T12:00:00-03:00
 image:
   path: "/assets/solid/bullseye.svg"
 tags: ["estudo", "pcc", "cpi", "eleitoral", "fintech", "p10"]
-categories: estudos
+categories: lawfare
 mermaid: false
 ---
 

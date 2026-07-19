@@ -128,6 +128,8 @@ Scripts de operação diária e validação — preferir esta pasta para manuten
 
 Pipeline de geração e merge — uso pontual ou batch. Cópias espelhadas em `docs/scripts/` são artefato de build; editar sempre em **`scripts/`**.
 
+**Documentação completa com exemplos:** [`scripts/README.md`](./scripts/README.md)
+
 | Script | Uso |
 |---|---|
 | **`sync_todo_current.py`** | Publica `_data/todo/*.json` → `_posts/` + atualiza corpus |

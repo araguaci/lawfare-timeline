@@ -7,7 +7,7 @@ image:
 tags: ["bolsonaro", "revisao-criminal", "lei-dosimetria", "stf", "mauro-cid", "erro-judiciario", "8-janeiro"]
 categories: stf
 permalink: /posts/bolsonaro-revisao-criminal-stf-dosimetria-erro-judiciario/
-id_corpus: "176"
+id_corpus: "1624"
 corpus_unificado: true
 ---
 
@@ -28,7 +28,7 @@ Minutos após a promulgação da Lei 15.402/2026, a defesa de Bolsonaro protocol
 
 | Campo | Valor |
 | --- | --- |
-| `id_corpus` | **176** |
+| `id_corpus` | **1624** |
 | Categoria analítica | lawfare |
 | País / âmbito | Brasil |
 | Dimensão global | não |

@@ -7,7 +7,7 @@ date: 2026-05-28T12:00:00-03:00
 image:
   path: "/assets/solid/chart-line.svg"
 tags: ["estudo", "p11", "indice", "governo", "orçamento"]
-categories: estudos
+categories: lawfare
 mermaid: false
 ---
 

@@ -7,7 +7,7 @@ date: 2026-05-29T10:00:00-03:00
 image:
   path: "/assets/solid/exclamation-triangle.svg"
 tags: ["estudo", "pcc", "delegada", "infiltracao", "p10", "p03", "seguranca-publica"]
-categories: estudos
+categories: lawfare
 mermaid: false
 pin: false
 ---

@@ -7,7 +7,7 @@ date: 2026-05-29T12:00:00-03:00
 image:
   path: "/assets/solid/gavel.svg"
 tags: ["estudo", "vaza-toga", "inq4781", "moraes", "p03", "p04", "lawfare"]
-categories: estudos
+categories: lawfare
 mermaid: false
 pin: false
 ---

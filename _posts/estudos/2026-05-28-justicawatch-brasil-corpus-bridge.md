@@ -7,7 +7,7 @@ date: 2026-05-28T12:00:00-03:00
 image:
   path: "/assets/solid/gavel.svg"
 tags: ["estudo", "justicawatch", "jusmonitor", "impunidade", "p02", "p06", "justica"]
-categories: estudos
+categories: lawfare
 mermaid: false
 pin: false
 ---

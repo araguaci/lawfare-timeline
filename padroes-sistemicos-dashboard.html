@@ -3,24 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mestre: Padrões × Operações Anticorrupção — Dossiê 2026</title>
-<meta name="description" content="Matriz PxOPS: mapeamento transversal P1–P11 — privilégio, proteção e impunidade na arquitetura da exceção. Operações anticorrupção brasileiras, 2019–2026. Dashboard verificável.">
+<title>Mestre: Padrões × Operações Anticorrupção — Dossiê 2026 (v3.3)</title>
+<meta name="description" content="Matriz PxOPS: mapeamento transversal P1–P12 (+P06-B formalizado) — privilégio, proteção e impunidade na arquitetura da exceção. Operações anticorrupção brasileiras, 2019–2026. Dashboard verificável.">
 <link rel="canonical" href="https://gosurf.site/padroes-sistemicos-dashboard">
 <!-- Open Graph / Sharecard -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://gosurf.site/padroes-sistemicos-dashboard">
-<meta property="og:title" content="Matriz PxOPS — Padrões Sistêmicos P1–P11 · 2026">
-<meta property="og:description" content="P1–P11 · indulgência sistêmica: padrões de privilégio e blindagem institucional cruzados com operações (OPS). Índice, heatmap e domínios jurídico, institucional, econômico, midiático e social.">
+<meta property="og:title" content="Matriz PxOPS — Padrões Sistêmicos P1–P12 · 2026">
+<meta property="og:description" content="P1–P12 · indulgência sistêmica: padrões de privilégio e blindagem institucional cruzados com operações (OPS). Índice, heatmap e domínios jurídico, institucional, econômico, midiático, social e cognitivo.">
 <meta property="og:image" content="https://gosurf.site/og-padroes-sistemicos-dashboard.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Matriz PxOPS — P1–P11 · indulgência sistêmica · dashboard 2026">
+<meta property="og:image:alt" content="Matriz PxOPS — P1–P12 · indulgência sistêmica · dashboard 2026">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="gosurf.site">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Matriz PxOPS — Padrões Sistêmicos P1–P11 · 2026">
-<meta name="twitter:description" content="P1–P11 · indulgência sistêmica: padrões de privilégio e blindagem cruzados com operações. Dashboard 2026.">
+<meta name="twitter:title" content="Matriz PxOPS — Padrões Sistêmicos P1–P12 · 2026">
+<meta name="twitter:description" content="P1–P12 · indulgência sistêmica: padrões de privilégio e blindagem cruzados com operações. P06-B e P10 consolidados. Dashboard 2026.">
 <meta name="twitter:image" content="https://gosurf.site/og-padroes-sistemicos-dashboard.png">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -74,6 +74,17 @@ body { background: var(--bg); color: var(--fg); font-family: var(--font-mono); f
 .badge-cyan { background: var(--cyan2); color: var(--cyan); border: 1px solid rgba(32,208,232,0.3); }
 .badge-pink { background: var(--pink2); color: var(--pink); border: 1px solid rgba(232,64,144,0.3); }
 .badge-gray { background: rgba(255,255,255,0.05); color: var(--fg3); border: 1px solid var(--border); }
+.badge-novo { background: rgba(160,96,232,0.18); color: var(--purple); border: 1px solid rgba(160,96,232,0.4); }
+.badge-mod { background: rgba(48,144,232,0.18); color: var(--blue); border: 1px solid rgba(48,144,232,0.4); }
+.badge-obs { background: rgba(232,160,32,0.10); color: var(--amber); border: 1px dashed rgba(232,160,32,0.4); }
+.p-card.candidate { opacity: 0.88; border-style: dashed; }
+.p-card.candidate:hover { opacity: 1; }
+.evtag { display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 1px 6px; border-radius: 3px; margin-right: 4px; }
+.ev-confirmed { background: rgba(40,200,128,0.15); color: var(--green); }
+.ev-contested { background: rgba(232,160,32,0.15); color: var(--amber); }
+.ev-alleged { background: rgba(232,64,64,0.12); color: var(--red); }
+.ev-inference { background: rgba(160,96,232,0.15); color: var(--purple); }
+.anchor-table td, .anchor-table th { font-size: 11px; }
 .hero-title { font-family: var(--font-display); font-size: clamp(22px, 5vw, 40px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 8px; color: var(--fg); }
 .hero-title span { color: var(--red); }
 .subtitle { font-size: 12px; color: var(--fg2); max-width: 900px; margin-bottom: 24px; line-height: 1.7; }
@@ -205,24 +216,27 @@ body { background: var(--bg); color: var(--fg); font-family: var(--font-mono); f
   <div class="meta-badges">
     <span class="badge badge-red">CRÍTICO</span>
     <span class="badge badge-purple">ANÁLISE SISTÊMICA</span>
-    <span class="badge badge-blue">DOCS: 153–175</span>
-    <span class="badge badge-cyan">P1–P10 MAPEADOS</span>
-    <span class="badge badge-green">VERIFICADO ABR/2026</span>
+    <span class="badge badge-blue">DOCS: 153–1594</span>
+    <span class="badge badge-cyan">P1–P12 MAPEADOS</span>
+    <span class="badge badge-mod">P06-B FORMALIZADO</span>
+    <span class="badge badge-green">VERIFICADO JUL/2026</span>
   </div>
   <h1 class="hero-title">Matriz de <span>Indulgência Sistêmica</span><br>Padrões × Operações Anticorrupção</h1>
-  <p class="subtitle">Análise transversal de 10 padrões identificados em 25 anos de operações brasileiras — incluindo os padrões emergentes de captura cultural (P9) e infraestrutura de serviço compartilhada (P10). A falha estrutural não é um vício do sistema — é o seu design principal.</p>
+  <p class="subtitle">Análise transversal de 12 padrões confirmados em 25 anos de operações brasileiras — do vetor judicial-processual (P1–P6, incluindo o subpadrão parlamentar P06-B) ao econômico-estrutural (P11) e ao cognitivo-informacional (P12/P12-B). P10 consolidado como padrão autônomo de infraestrutura de serviço (distinto e complementar a P11). A falha estrutural não é um vício do sistema — é o seu design principal. Nenhum padrão, por si só, chega ao beneficiário final: essa ausência é o dado mais importante do dossiê.</p>
   <div class="stats-grid">
-    <div class="stat-card"><div class="stat-num" style="color:var(--red)">11</div><div class="stat-label">Padrões Mapeados</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:var(--red)">12</div><div class="stat-label">Padrões Confirmados</div></div>
     <div class="stat-card"><div class="stat-num" style="color:var(--amber)">17</div><div class="stat-label">Operações Cobertas</div></div>
     <div class="stat-card"><div class="stat-num" style="color:var(--blue)">R$ 156B+</div><div class="stat-label">Volume Total Estimado</div></div>
     <div class="stat-card"><div class="stat-num" style="color:var(--purple)">5</div><div class="stat-label">Nós do Grafo Dual</div></div>
-    <div class="stat-card"><div class="stat-num" style="color:var(--cyan)">P9–P11</div><div class="stat-label">Padrões Novos 2026</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:var(--cyan)">P9–P12</div><div class="stat-label">Padrões Novos 2026</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:var(--blue)">P06-B</div><div class="stat-label">Subpadrão Parlamentar</div></div>
     <div class="stat-card"><div class="stat-num" style="color:var(--green)">75%</div><div class="stat-label">Taxa de Anulação</div></div>
   </div>
 </header>
 
 <nav class="nav-tabs">
-  <button class="nav-tab active" data-section="section-patterns" onclick="scrollToSection('section-patterns')">Padrões P1–P11</button>
+  <button class="nav-tab active" data-section="section-patterns" onclick="scrollToSection('section-patterns')">Padrões P1–P12</button>
+  <button class="nav-tab" data-section="section-emerging" onclick="scrollToSection('section-emerging')">Arquivo / P13</button>
   <button class="nav-tab" data-section="section-matrix" onclick="scrollToSection('section-matrix')">Matriz P×Ops</button>
   <button class="nav-tab" data-section="section-ops" onclick="scrollToSection('section-ops')">Operações Detalhadas</button>
   <button class="nav-tab" data-section="section-grafo" onclick="scrollToSection('section-grafo')">Grafo Dual-Universo</button>
@@ -236,7 +250,7 @@ body { background: var(--bg); color: var(--fg); font-family: var(--font-mono); f
      SECTION: PADRÕES P1–P10
 ══════════════════════════════════════════════ -->
 <div id="section-patterns" class="tab-panel">
-  <h2 class="section-title">Catálogo Completo de Padrões Sistêmicos — P1–P11</h2>
+  <h2 class="section-title">Catálogo Completo de Padrões Sistêmicos — P1–P12</h2>
   <div class="pattern-grid">
 
     <div class="p-card" style="border-left-color:var(--red)" onclick="togglePattern(this)">
@@ -318,6 +332,26 @@ body { background: var(--bg); color: var(--fg); font-family: var(--font-mono); f
     </div>
 
     <div class="p-card" style="border-left-color:var(--amber)" onclick="togglePattern(this)">
+      <div class="p-num" style="color:var(--amber)">P4b · Midiático / Narrativo <span class="badge badge-novo" style="font-size:9px;padding:1px 5px">FORMALIZADO 2026</span></div>
+      <div class="p-title">Both-sidesism Funcional</div>
+      <div class="p-desc">Distinto de P4: em vez de weaponizar ativamente a narrativa, P4b a neutraliza passivamente — trata mecanismo estrutural documentado como "perspectiva de um lado", sem produzir conteúdo ofensivo. A função prática é idêntica à da weaponização: o mecanismo permanece sem escrutínio.</div>
+      <div class="p-ops">
+        <span class="badge badge-amber">SDGT PCC/CV (ID 1520)</span>
+        <span class="badge badge-gray">Cobertura STF genérica</span>
+        <span class="badge badge-purple">P4b em modelos de IA</span>
+      </div>
+      <div class="p-toggle">▸ Ver mecanismo detalhado</div>
+      <div class="p-detail">
+        <span class="evtag ev-confirmed">ev-confirmed</span> componente factual · <span class="evtag ev-inference">ev-inference</span> diagnóstico de enquadramento<br><br>
+        <strong>Mecanismo central:</strong> P4b não é ausência de cobertura — é presença de cobertura que trata um mecanismo documentado (ev-confirmed) como "um lado" de um debate, ao lado de uma interpretação sem lastro equivalente (ev-inference ou ev-alleged). O enquadramento parece razoável ("ouvir os dois lados"), mas a função prática protege o mecanismo do escrutínio.<br><br>
+        <strong>Exemplo factual documentado (ID 1520, 28/05/2026):</strong> A designação SDGT de PCC e CV pelo Tesouro dos EUA trouxe dados verificáveis — células do FBI em 12 estados, 18 indiciados pelo DOJ, 113 vistos negados pelo State Department (ev-confirmed). A cobertura dominante da imprensa brasileira enquadrou o evento não pelos fatos, mas como "ameaça à soberania nacional" / "ingerência estrangeira" (ev-inference tratada como fato concorrente). Resultado prático: a ausência de resposta brasileira à rede transnacional permaneceu sem escrutínio público.<br><br>
+        <strong>Diagnóstico operacional:</strong> o veículo (ou modelo de IA) compreende o conteúdo e o descarta por metadado — fonte, tom, campo político aparente — em vez de responder aos dados específicos. Não é ignorância: é descarte consciente por atributo externo ao conteúdo.<br><br>
+        <strong>P4b em modelos de IA:</strong> ocorre quando o modelo usa formulações-tipo "alguns críticos argumentam", "múltiplas perspectivas igualmente válidas" ou "as instituições têm imperfeições mas funcionam" sem refutar os dados específicos disponíveis. Não é neutralidade — é a perspectiva do poder estabelecido com aparência de objetividade (ver METHODOLOGY-v2.2 §6.1).<br><br>
+        <strong>Distinção de P4:</strong> P4 é ativo (produz volume, satura); P4b é passivo (dilui sinal, trata assimetria documentada como equivalência de opiniões). Podem coexistir no mesmo ciclo narrativo sem se sobreporem funcionalmente.
+      </div>
+    </div>
+
+    <div class="p-card" style="border-left-color:var(--amber)" onclick="togglePattern(this)">
       <div class="p-num" style="color:var(--amber)">P5 · Financeiro / Público</div>
       <div class="p-title">Uso de Recursos Públicos como Vetor</div>
       <div class="p-desc">Fundos públicos — INSS, FGC, Lei Rouanet, editais culturais — são capturados para financiar e legitimar o esquema. O contribuinte financia a infraestrutura de sua própria espoliação.</div>
@@ -340,19 +374,31 @@ body { background: var(--bg); color: var(--fg); font-family: var(--font-mono); f
     <div class="p-card" style="border-left-color:var(--blue)" onclick="togglePattern(this)">
       <div class="p-num" style="color:var(--blue)">P6 · Temporal / Processual</div>
       <div class="p-title">Estratégia do Silêncio e Prescrição</div>
-      <div class="p-desc">Atraso deliberado de julgamentos via recursos infinitos até que o Estado perca o poder de punir pelo tempo. Cada ano de atraso é um ganho estrutural para o esquema.</div>
+      <div class="p-desc">Atraso deliberado de julgamentos via recursos infinitos até que o Estado perca o poder de punir pelo tempo. Cada ano de atraso é um ganho estrutural para o esquema. <strong>P06-B</strong> (subpadrão): CPI/CPMI que esgota o prazo regimental sem aprovar relatório final — dissipação por maioria simples, não por decurso de prazo judicial.</div>
       <div class="p-ops">
         <span class="badge badge-blue">Castelo de Areia</span>
         <span class="badge badge-amber">Satiagraha</span>
-        <span class="badge badge-gray">Narco Fluxo (indireto)</span>
         <span class="badge badge-purple">Lava Jato</span>
+        <span class="badge badge-mod">P06-B · CPMI INSS</span>
+        <span class="badge badge-mod">P06-B · CPI Crime Organizado</span>
+        <span class="badge badge-gray">CPMI Banestado (2004)</span>
       </div>
       <div class="p-toggle">▸ Ver mecanismo detalhado</div>
       <div class="p-detail">
-        <strong>Mecanismo central:</strong> A prescrição no Brasil é calculada sobre a pena máxima prevista, mas conta a partir do fato — não da investigação. Crimes financeiros complexos levam 5–10 anos para serem provados. A pena máxima para lavagem é 16 anos: prescrevem em 20 anos. Mas se o processo anula e recomeça, o prazo prescricional vai consumindo.<br><br>
+        <strong>Mecanismo central (P06):</strong> A prescrição no Brasil é calculada sobre a pena máxima prevista, mas conta a partir do fato — não da investigação. Crimes financeiros complexos levam 5–10 anos para serem provados. A pena máxima para lavagem é 16 anos: prescrevem em 20 anos. Mas se o processo anula e recomeça, o prazo prescricional vai consumindo.<br><br>
         <strong>Castelo de Areia:</strong> Anulada em 2009, reinvestigada a partir de 2014 — 5 anos de paralisia. O esquema cresceu. Quando recomeçou, parte dos crimes já havia prescrito.<br><br>
         <strong>Zero × Zero (lição internacional):</strong> Na Itália, a prescrição e as manobras processuais absolveram os maiores nomes da Mani Pulite. Berlusconi reformou a lei de prescrição durante investigações que o envolviam diretamente — o acusado legislando sobre o tempo de sua própria punição.<br><br>
-        <strong>Interseção with P3:</strong> A captura judicial emergencial compra tempo. Cada liminar que paralisa 6 meses é 6 meses a mais de prescrição consumida.
+        <strong>Interseção with P3:</strong> A captura judicial emergencial compra tempo. Cada liminar que paralisa 6 meses é 6 meses a mais de prescrição consumida.<br><br>
+        <strong>P06-B — Prescrição Parlamentar / Encerramento sem Relatório</strong> <span class="badge badge-mod" style="font-size:9px;padding:1px 5px">FORMALIZADO JUL/2026</span><br>
+        Subpadrão de P06 em que uma comissão parlamentar de inquérito (CPI/CPMI) esgota seu prazo regimental sem aprovar relatório final, dissipando formalmente o resultado da apuração — mesmo quando o conteúdo levantado é extenso e grave — sem que isso configure absolvição ou arquivamento formal. Distinto de P06 "puro" (prescrição judicial por decurso de prazo processual): aqui o mecanismo é a própria regra de maioria simples do colegiado, operando como válvula de escape estrutural.<br><br>
+        <table class="data-table anchor-table" style="margin-top:10px;">
+          <tr><th>Caso</th><th>Data</th><th>Mecanismo</th></tr>
+          <tr><td>CPMI do Banestado</td><td>dez/2004</td><td>Primeira do século — disputa relator×presidente, texto nunca votado</td></tr>
+          <tr><td>CPMI do INSS</td><td>28/03/2026</td><td>Relatório Gaspar (4.340 páginas, 216+ indiciados incl. Vorcaro e Lulinha) rejeitado 19×12; presidente encerrou sem votar relatório alternativo</td></tr>
+          <tr><td>CPI do Crime Organizado</td><td>14/04/2026</td><td>Relatório rejeitado 6×4; CPI termina sem texto final</td></tr>
+        </table>
+        <br>
+        Levantamento do <em>Congresso em Foco</em>: 8 ocorrências documentadas desde 2004; a CPMI do INSS é a 8ª comissão a terminar sem relatório. Duas instâncias (INSS e Crime Organizado) são de 2026 e convergem no cluster Banco Master/Vorcaro. Variável a monitorar: encaminhamento externo do relatório rejeitado (INSS remeteu cópias ao MPF/STF; CPI Crime Organizado ainda sem equivalente documentado).
       </div>
     </div>
 
@@ -417,23 +463,26 @@ body { background: var(--bg); color: var(--fg); font-family: var(--font-mono); f
     </div>
 
     <div class="p-card" style="border-left-color:var(--green)" onclick="togglePattern(this)">
-      <div class="p-num" style="color:var(--green)">P10 · Infraestrutura / Transversal · NOVO 2026</div>
+      <div class="p-num" style="color:var(--green)">P10 · Infraestrutura / Transversal · CONFIRMADO</div>
       <div class="p-title">Infraestrutura de Serviço Compartilhada</div>
-      <div class="p-desc">A mesma arquitetura jurídico-financeira — fundos em camadas, offshores Delaware/Cayman, assessoria especializada — serve simultaneamente à cleptocracia política e à narcocleptocracia cultural. Não são dois sistemas: é uma infraestrutura de serviço contratável por qualquer organização com escala suficiente.</div>
+      <div class="p-desc">Padrão autônomo (consolidado abr/2026, corroborado jul/2026): a mesma arquitetura jurídico-financeira — fundos em camadas, offshores Delaware/Cayman, assessoria especializada, camada de auditoria — serve simultaneamente à cleptocracia política e à narcocleptocracia cultural. Não compete com P11: P10 é quem presta o serviço; P11 é o substrato macroeconômico que o torna lucrativo.</div>
       <div class="p-ops">
         <span class="badge badge-green">Oliver Ortiz → Master</span>
         <span class="badge badge-blue">PCC → REAG → Master</span>
         <span class="badge badge-amber">Narco Fluxo → cripto → offshore</span>
         <span class="badge badge-red">Hydra → Delaware</span>
+        <span class="badge badge-purple">Auditoria KPMG/PwC/EY/Crowe</span>
       </div>
       <div class="p-toggle">▸ Ver mecanismo detalhado</div>
       <div class="p-detail">
-        <strong>Hipótese central:</strong> Existe um operador financeiro de charneira — pessoa física ou jurídica — que aparece simultaneamente nos dois universos (cleptocracia política e narcocleptocracia cultural), conectando tráfico internacional, sistema financeiro formal e proteção institucional.<br><br>
+        <span class="evtag ev-confirmed">ev-confirmed</span> padrão autônomo · T-222 · ID 1620<br><br>
+        <strong>Definição consolidada (abr/2026):</strong> P10 é infraestrutura de <em>serviço</em> — quem presta lavagem jurídico-financeira compartilhada entre cleptocracia política e narcocleptocracia. P11 é arquitetura <em>macroeconômica</em> — o incentivo estrutural que alimenta essa prestação. Distintos e complementares; não competem.<br><br>
         <strong>Cadeia documentada (ICL Notícias, mar/2026):</strong><br>
         Oliver Ortiz [tráfico internacional] → Grupo Aquilla/Sefer [fundo lavagem] → Benjamim Botelho [operador PT/BR, ex-Banco Garantia] → Banco Master/Vorcaro [sistema financeiro] → REAG [40+ fundos, R$30bi] → PCC [crime organizado doméstico].<br><br>
         <strong>Benjamim Botelho como nó central:</strong> Ex-Banco Garantia (origem BTG), dupla nacionalidade PT/BR, residente Lisboa. Intermediou compra do Banco Máxima por Vorcaro em 2017 com participação de fundo onde Ortiz era cotista. Empresa aberta nas Bahamas 9 dias após liquidação do Master. Aparece em 4 dos 5 nós do grafo dual.<br><br>
+        <strong>Dois nós de serviço verificados (jul/2026):</strong> (1) estruturação de fundos (Reag/CBSF); (2) camada de auditoria (KPMG, PwC, EY, Crowe) — chancela formal converte ativo suspeito em ativo captável; dolo individual não é requisito do padrão.<br><br>
         <strong>5 nós do grafo dual:</strong> (1) Sistema de fundos em camadas, (2) Advogado-estruturador / Sintonia dos Gravatas, (3) Fintech sem rastreamento, (4) Influenciador como infraestrutura narrativa, (5) Offshore Delaware/Cayman como camada final.<br><br>
-        <strong>Pergunta em aberto:</strong> Grupo Aquilla, Sefer Investimentos ou fundo vinculado a Botelho tem participação em gravadoras, agências artísticas, plataformas de apostas ou produtoras que aparecem na Narco Fluxo? Se sim, o grafo fecha.
+        <strong>Status taxonômico:</strong> ~~P10 autônomo ou substrato?~~ <strong>RESOLVIDO</strong> — P10 = infraestrutura de serviço; P11 = substrato macroeconômico (ver card P11).
       </div>
     </div>
 
@@ -463,11 +512,58 @@ body { background: var(--bg); color: var(--fg); font-family: var(--font-mono); f
       </div>
     </div>
 
+    <div class="p-card" style="border-left-color:var(--cyan)" onclick="togglePattern(this)">
+      <div class="p-num" style="color:var(--cyan)">P12 · Cognitivo / Informacional · NOVO 2026</div>
+      <div class="p-title">Paywall Existencial / Captura Cognitiva de Mercado</div>
+      <div class="p-desc">P1–P11 documentam como o sistema captura o fluxo de recursos. P12 documenta como o mesmo sistema captura o fluxo de informação necessária para perceber a captura — o insumo cognitivo que permitiria ao cidadão médio reconhecer P1–P11 em tempo real.</div>
+      <div class="p-ops">
+        <span class="badge badge-cyan">P12-B · Bloqueio seletivo 2026</span>
+        <span class="badge badge-gray">Paywall jornalístico (tese aberta)</span>
+        <span class="badge badge-purple">Interseção P4b</span>
+      </div>
+      <div class="p-toggle">▸ Ver mecanismo detalhado</div>
+      <div class="p-detail">
+        <span class="evtag ev-confirmed">ev-confirmed</span> P12-B (IDs 1590–1594) · <span class="evtag ev-inference">ev-inference</span> P12 geral (tese aberta)<br><br>
+        <strong>Mecanismo central:</strong> opera em duas camadas. Na camada de mercado, o acesso a jornalismo investigativo, dados judiciais estruturados e análise técnica de qualidade está crescentemente atrás de paywalls — não por má-fé editorial, mas porque o modelo de negócio do jornalismo de qualidade colapsou e o paywall é a única âncora de receita restante. O efeito estrutural é que monitorar P1–P11 em tempo real vira bem de consumo de elite — como o acesso a advocacia especializada sempre foi. Quem não paga múltiplas assinaturas fica dependente de resumos gratuitos, redes sociais e modelos de IA, o que reintroduz o risco de P4b numa nova camada.<br><br>
+        <strong>P12-B · Paywall Eleitoral (instância confirmada, IDs 1590–1594, sincronizadas jun/2026):</strong> estudo técnico de bloqueio de internet no Brasil identificou ~46.000 sites bloqueados sob convênio Anatel/Ministério da Fazenda, dos quais 18.000 domínios têm potencial de derrubar colateralmente 250 milhões de domínios por overblocking técnico. Aderência das operadoras às ordens varia entre 3% e 90% — apenas 15% das ordens cumpridas de forma consistente. A própria Anatel confirmou não avaliar nem monitorar quais domínios estão bloqueados. Em ano eleitoral, o mesmo aparato apresenta variação seletiva por horário e tipo de conteúdo (ID 1594) — se confirmado como direcionado, configura P12-B pleno.<br><br>
+        <strong>Distinção de P03 e P06:</strong> P03 captura o ponto de decisão judicial; P06 satura por exaustão de tempo processual. P12 não bloqueia a decisão nem satura a atenção — encarece o acesso ao dado bruto necessário para que qualquer decisão ou atenção seja informada. Os três padrões podem coexistir no mesmo evento sem se sobreporem funcionalmente.<br><br>
+        <strong>Lacuna explícita:</strong> diferente de P9–P11 (3+ instâncias documentadas antes da formalização), P12 tem hoje uma única cadeia robusta de evidência (IDs 1590–1594) sustentando P12-B. P12 "puro" — a tese de mercado sobre paywalls jornalísticos como captura cognitiva geral — permanece hipótese estrutural ainda não testada contra dados de assinaturas, tráfego ou cobertura comparada pré/pós-paywall. Registrado como padrão formal com uma instância confirmada e uma tese aberta, por rigor metodológico — não por acúmulo pleno de casos.
+      </div>
+    </div>
+
   </div>
 
   <div class="alert alert-blue">
     <div class="alert-icon">ℹ</div>
-    <div class="alert-body"><strong>Nota metodológica:</strong> P1–P8 identificados em análise transversal 2000–2025. P9 (Captura Cultural) e P10 (Infraestrutura Compartilhada) emergem da Operação Narco Fluxo (abr/2026). P11 (Loop de Extração Perpétua) emerge do cruzamento do dossiê Prisão Econômica com a Operação Sem Desconto e dados macroeconômicos 2010–2025. Clique em cada padrão para expandir o mecanismo detalhado.</div>
+    <div class="alert-body"><strong>Nota metodológica:</strong> P1–P8 identificados em análise transversal 2000–2025. P4b (Both-sidesism Funcional) formalizado em 2026 como subpadrão distinto de P4. P9 (Captura Cultural) e P10 (Infraestrutura Compartilhada) emergem da Operação Narco Fluxo (abr/2026); P10 promovido a padrão autônomo (T-222, ID 1620, jul/2026). P11 (Loop de Extração Perpétua) emerge do cruzamento do dossiê Prisão Econômica com a Operação Sem Desconto e dados macroeconômicos 2010–2025. P06-B (Prescrição Parlamentar) formalizado jul/2026 com 3 instâncias-âncora + levantamento de 8 casos desde 2004. P12/P12-B (Paywall Existencial / Eleitoral) emerge do estudo técnico de bloqueio seletivo de internet (IDs 1590–1594, jun/2026). Proposta P13 arquivada (jul/2026): caso Consulado HK reclassificado como P02 — ver aba <strong>Arquivo / P13</strong>. Clique em cada padrão para expandir o mecanismo detalhado.</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SECTION: ARQUIVO / P13 (CANDIDATO ARQUIVADO)
+══════════════════════════════════════════════ -->
+<div id="section-emerging" class="tab-panel">
+  <h2 class="section-title">Arquivo Metodológico — P13 (Candidato Arquivado)</h2>
+  <div class="alert alert-blue">
+    <div class="alert-icon">ℹ</div>
+    <div class="alert-body"><strong>Decisão jul/2026:</strong> proposta P13 (Captura Hierárquica em Carreira de Estado Não-Judicial) <strong>arquivada</strong> como candidato prematuro. Caso fundador (Consulado Hong Kong, ID 1623) reclassificado como <strong>P02</strong> (investigador-torna-se-investigado) no domínio diplomático. Critério do corpus: 3+ eventos-âncora independentes — N=1 insuficiente. Ver <code>proposta-padrao-P13.md</code>.</div>
+  </div>
+
+  <div class="p-card candidate" style="border-left-color:var(--fg3);opacity:0.75" onclick="togglePattern(this)">
+    <div class="p-num" style="color:var(--fg3)">P13 · Administrativo / Carreira de Estado <span class="badge badge-gray" style="font-size:9px;padding:1px 5px">ARQUIVADO</span></div>
+    <div class="p-title">Captura Hierárquica em Carreira de Estado Não-Judicial</div>
+    <div class="p-desc">Proposta histórica — não canônica. Mantida apenas como registro de deliberação metodológica. Não inserida na Matriz P×Ops nem no JSON principal.</div>
+    <div class="p-ops">
+      <span class="badge badge-gray">Consulado HK → reclassificado P02</span>
+      <span class="badge badge-obs">IBAMA/Girafas — P13-B parcial, revertido</span>
+      <span class="badge badge-obs">FUNAI/Xavier — reclassificado P02</span>
+    </div>
+    <div class="p-toggle">▸ Ver histórico de validação</div>
+    <div class="p-detail">
+      <strong>Motivo do arquivamento:</strong> dos 3 eventos submetidos como reforço, apenas Hong Kong replicava os 3 componentes propostos simultaneamente — e esse caso encaixa melhor em P02 existente (ex-Corregedor 2018–2020, retaliação contra denunciantes). IBAMA e FUNAI confirmaram retaliação mas tiveram reversão judicial ou condenação pública — oposto do fechamento silencioso que P13 descrevia.<br><br>
+      <strong>Definição operacional original (referência):</strong> (1) concentração de autoridade unilateral; (2) retaliação administrativa por via neutra; (3) fechamento por TAC ou mecanismo correicional de baixa exposição sem PAD público.<br><br>
+      <strong>Próximo passo (se retomado):</strong> buscar 2+ eventos-âncora genuínos com os 3 componentes simultâneos, fora do serviço exterior, antes de reabrir candidatura.
+    </div>
   </div>
 </div>
 
@@ -475,10 +571,14 @@ body { background: var(--bg); color: var(--fg); font-family: var(--font-mono); f
      SECTION: MATRIZ P×OPS
 ══════════════════════════════════════════════ -->
 <div id="section-matrix" class="tab-panel">
-  <h2 class="section-title">Matriz de Correspondência — Padrões × Operações</h2>
+  <h2 class="section-title">Matriz de Correspondência — Padrões × Operações (P1–P11)</h2>
   <div class="alert alert-amber">
     <div class="alert-icon">⚑</div>
     <div class="alert-body"><strong>Legenda:</strong> <span class="dot-yes"></span> Confirmado com fonte primária &nbsp; <span class="dot-partial"></span> Evidência indireta / risco identificado &nbsp; <span class="dot-no"></span> Não documentado</div>
+  </div>
+  <div class="alert alert-blue">
+    <div class="alert-icon">ℹ</div>
+    <div class="alert-body"><strong>Escopo desta matriz:</strong> mantém P1–P11 por operação, como no dossiê original. P4b (both-sidesism funcional) e P12/P12-B (paywall existencial/eleitoral) são padrões de <em>camada informacional transversal</em> — não amarrados a uma "operação" específica da mesma forma que P1–P11, e sim a instâncias de cobertura/acesso documentadas por ID. Atribuir células por operação sem verificação individual violaria o protocolo anti-confirmation-bias do corpus; por isso, P4b e P12 são tratados na tabela de instâncias logo abaixo da matriz, e não como colunas adicionais aqui.</div>
   </div>
   <div class="matrix-wrap">
     <table class="matrix">
@@ -603,6 +703,51 @@ body { background: var(--bg); color: var(--fg); font-family: var(--font-mono); f
   <div class="alert alert-purple">
     <div class="alert-icon">★</div>
     <div class="alert-body"><strong>★ = Padrão primário ou inovação:</strong> Narco Fluxo é a primeira operação a confirmar P7 (recrutamento geracional via cultura) e P9 (captura cultural) simultaneamente. Sem Desconto e Prisão Econômica são os primeiros a confirmar P11 (Loop de Extração Perpétua) como padrão primário. O PCC é o único ator com confirmação plena em todos os 11 padrões.</div>
+  </div>
+
+  <h2 class="section-title" style="margin-top:32px;">Instâncias Documentadas — P4b e P12/P12-B (camada informacional)</h2>
+  <div class="matrix-wrap">
+    <table class="matrix anchor-table">
+      <thead>
+        <tr>
+          <th class="row-h">Instância / ID</th>
+          <th class="row-h">Padrão</th>
+          <th class="row-h">Enquadramento dominante</th>
+          <th class="row-h">Dado factual (ev-confirmed)</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="label"><strong>Designação SDGT PCC/CV</strong><br>ID 1520 · 28/05/2026</td>
+          <td>P4b</td>
+          <td class="label">"Ameaça à soberania nacional" / "ingerência estrangeira" tratado como enquadramento equivalente ao factual</td>
+          <td class="label">Células do FBI em 12 estados; 18 indiciados pelo DOJ; 113 vistos negados pelo State Department</td>
+          <td class="cell-full">✓ ev-confirmed</td>
+        </tr>
+        <tr>
+          <td class="label"><strong>Bloqueio seletivo de internet</strong><br>IDs 1590–1594 · sinc. jun/2026</td>
+          <td>P12-B</td>
+          <td class="label">Convênio Anatel/Min. Fazenda sem avaliação pública dos domínios bloqueados</td>
+          <td class="label">~46.000 sites bloqueados; 18.000 domínios com risco de overblocking sobre 250M de domínios; adesão das operadoras entre 3%–90%; só 15% das ordens cumpridas de forma consistente</td>
+          <td class="cell-full">✓ ev-confirmed</td>
+        </tr>
+        <tr>
+          <td class="label"><strong>Variação seletiva por horário/conteúdo</strong><br>ID 1594</td>
+          <td>P12-B</td>
+          <td class="label">Padrão de bloqueio varia por horário e tipo de conteúdo em ano eleitoral</td>
+          <td class="label">Aguarda confirmação de direcionamento intencional — hipótese ainda ev-inference</td>
+          <td class="cell-part">◑ ev-inference</td>
+        </tr>
+        <tr>
+          <td class="label"><strong>P12 "puro" (tese de mercado)</strong></td>
+          <td>P12</td>
+          <td class="label">Paywalls jornalísticos como captura cognitiva estrutural, sem componente eleitoral</td>
+          <td class="label">Hipótese ainda não testada contra dados de assinaturas, tráfego ou cobertura comparada pré/pós-paywall</td>
+          <td class="cell-none">— hipótese aberta</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
 
@@ -922,6 +1067,14 @@ body { background: var(--bg); color: var(--fg); font-family: var(--font-mono); f
     <div class="lacuna-num">03</div>
     <div class="lacuna-body"><strong>Artistas presos × Recursos públicos culturais</strong><p>Verificar acesso a Lei Rouanet ou PROAC pelas produtoras investigadas.</p></div>
   </div>
+  <div class="lacuna-item">
+    <div class="lacuna-num">04</div>
+    <div class="lacuna-body"><strong>P12 "puro" — teste da tese de mercado</strong><p>Levantar dados de assinaturas, tráfego e cobertura comparada pré/pós-paywall em veículos brasileiros para testar a tese geral de captura cognitiva, hoje sustentada apenas pela instância eleitoral (P12-B).</p></div>
+  </div>
+  <div class="lacuna-item">
+    <div class="lacuna-num">05</div>
+    <div class="lacuna-body"><strong>P06-B — variável de encaminhamento externo</strong><p>Monitorar se relatórios rejeitados em futuras CPI/CPMI são remetidos a MPF/STF (como na CPMI do INSS) ou dissipados sem encaminhamento formal (como na CPI do Crime Organizado, até o momento).</p></div>
+  </div>
 </div>
 
 <!-- Related Artifacts -->
@@ -956,12 +1109,12 @@ body { background: var(--bg); color: var(--fg); font-family: var(--font-mono); f
   <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: flex-start; padding: 20px 0;">
     <div style="flex: 1; min-width: 300px;">
       <div class="badge badge-blue"><strong><a href="https://lawfare-timeline.vercel.app" style="color:var(--blue); text-decoration:none;">lawfare-timeline.vercel.app</a></strong></div>
-      <p class="card-desc" style="margin-top: 12px;">Matriz de Indulgência Sistêmica v3.1 | Mestre de Padrões 2026</p>
+      <p class="card-desc" style="margin-top: 12px;">Matriz de Indulgência Sistêmica v3.3 | Mestre de Padrões 2026 · P1–P12 confirmados · P06-B formalizado · P13 arquivado</p>
       <p class="card-desc" style="font-size:11px; color:var(--fg3);">CC0 1.0 Universal — Domínio Público. Livre para redistribuição analítica.</p>
     </div>
     <div class="card-desc" style="font-size:11px; color:var(--fg3); max-width: 500px; text-align: right;">
       Fontes primárias: PF, COAF, Receita Federal, CVM, CNJ e STF. 
-      Análise cruzada via ICL Notícias, GAECO-SP e FBSP 2025.
+      Análise cruzada via ICL Notícias, GAECO-SP, Congresso em Foco e FBSP 2025.
     </div>
   </div>
 </footer>

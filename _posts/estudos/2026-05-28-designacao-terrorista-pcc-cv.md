@@ -7,7 +7,7 @@ date: 2026-05-28T22:00:00-03:00
 image:
   path: "/assets/img/designacao-terrorista-pcc-cv-2026.jpg"
 tags: ["estudo", "pcc", "cv", "terrorismo", "geopolitica", "p04b", "p08", "p10", "p03", "diplomacia", "eua", "state-dept", "ofac", "fto", "sdgt"]
-categories: estudos
+categories: lawfare
 mermaid: false
 pin: true
 ---

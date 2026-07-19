@@ -7,7 +7,7 @@ date: 2026-07-16T12:00:00-03:00
 image:
   path: "/assets/solid/book-open.svg"
 tags: ["estudo", "lawfare", "p10"]
-categories: estudos
+categories: lawfare
 mermaid: false
 pin: false
 permalink: /posts/2026-07-16-p10-promovido-a-padrao-autonomo-infraestrutura-de-servico-compartilhada-com-dois-nos-verif/

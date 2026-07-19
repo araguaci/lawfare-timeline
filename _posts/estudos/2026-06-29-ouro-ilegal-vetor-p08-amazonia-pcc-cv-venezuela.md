@@ -7,7 +7,8 @@ date: 2026-06-29T12:00:00-03:00
 image:
   path: "/assets/solid/book-open.svg"
 tags: ["estudo", "lawfare", "p08", "p10", "p03", "ouro-ilegal-vetor-p08-amazonia-pcc-"]
-categories: estudos
+categories: lawfare
+ies: estudos
 mermaid: false
 pin: false
 permalink: /posts/2026-06-29-ouro-ilegal-vetor-p08-amazonia-pcc-cv-venezuela/

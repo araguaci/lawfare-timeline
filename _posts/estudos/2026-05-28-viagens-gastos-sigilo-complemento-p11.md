@@ -7,7 +7,7 @@ date: 2026-05-28T12:00:00-03:00
 image:
   path: "/assets/solid/sitemap.svg"
 tags: ["estudo", "p11", "sigilo", "viagens", "governo"]
-categories: estudos
+categories: lawfare
 mermaid: false
 ---
 
