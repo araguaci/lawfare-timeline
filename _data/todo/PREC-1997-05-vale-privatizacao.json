@@ -1,0 +1,30 @@
+{
+  "id": "PREC-1997-05",
+  "date": "1997-05-06",
+  "date_precision": "day",
+  "title": "Privatização da Companhia Vale do Rio Doce (CVRD) — leilão de R$ 3,3 bi com avaliação de reservas contestada e vencedor ligado ao financiador da própria avaliação",
+  "summary": "Em 06/05/1997, após suspensão de 5 horas por liminares judiciais, o governo federal leiloou o controle acionário da CVRD por R$ 3,3 bilhões ao Consórcio Brasil, liderado pelo grupo Vicunha (mesmo grupo que adquirira a CSN em 1993). O preço mínimo foi fixado por avaliação do Bradesco e da Merrill Lynch usando exclusivamente critério de fluxo de caixa, desconsiderando reservas minerais: o edital declarou 1,4 bilhão de toneladas de reserva de ferro em Minas Gerais, enquanto a própria Vale informara à SEC (EUA), dois anos antes, reservas de 7,918 bilhões de toneladas. O Bradesco, uma das instituições avaliadoras, foi autorizado pelo BNDES (coordenador do processo) a financiar a CSN, concorrente no mesmo leilão; a Merrill Lynch tinha vínculo relatado com a Anglo American, também participante. 69 ações populares questionaram o processo nas décadas seguintes.",
+  "category": "mecanismo_sistemico",
+  "actors": [
+    {"name": "BNDES", "role": "Coordenador do Programa Nacional de Desestatização — autorizou avaliador a financiar concorrente", "institution": "BNDES"},
+    {"name": "Bradesco", "role": "Coavaliador do preço mínimo, simultaneamente autorizado a financiar concorrente (CSN) no mesmo leilão", "institution": "Bradesco"},
+    {"name": "Merrill Lynch", "role": "Coavaliador do preço mínimo — vínculo relatado com a Anglo American, concorrente no leilão", "institution": "Merrill Lynch"},
+    {"name": "Consórcio Brasil / Grupo Vicunha", "role": "Vencedor do leilão — mesmo grupo que adquirira a CSN em 1993", "institution": "Consórcio Brasil"}
+  ],
+  "institutions": ["BNDES", "Governo Federal (Presidência FHC)", "Bolsa de Valores do Rio", "Justiça Federal (1º e 2º graus)", "STJ"],
+  "legal_basis": ["Programa Nacional de Desestatização (Lei 8.031/1990, alterada pela Lei 9.491/1997)", "Ações populares 1997 — pedido de anulação do leilão"],
+  "patterns": ["P05", "P09"],
+  "evidence_status": "ev-contested",
+  "sources": [
+    {"title": "Vale é privatizada a preço de banana", "url": "https://memorialdademocracia.com.br/card/vale-e-privatizada-a-preco-de-banana", "outlet": "Memorial da Democracia", "date": "1997-05-06"},
+    {"title": "Privatização da Vale, 25 anos: lucros e crimes cometidos evidenciam mau negócio para o país", "url": "https://www.brasildefato.com.br/2022/05/06/privatizacao-da-vale-25-anos-lucros-e-crimes-cometidos-evidenciam-mau-negocio-para-o-pais/", "outlet": "Brasil de Fato", "date": "2022-05-06"},
+    {"title": "A Vale foi privatizada. 27 anos depois, a coisa ainda está na Justiça", "url": "https://braziljournal.com/a-vale-foi-privatizada-27-anos-depois-a-coisa-ainda-esta-na-justica/", "outlet": "Brazil Journal", "date": "2024-09-24"},
+    {"title": "PRIVATIZAÇÃO - COMPANHIA VALE DO RIO DOCE", "url": "https://www10.trf2.jus.br/memoria/privatizacao-companhia-vale-do-rio-doce/", "outlet": "Memória Institucional TRF2", "date": "2024-01-01"}
+  ],
+  "result": "Controle transferido ao Consórcio Brasil; empresa renomeada Vale, valor de mercado atingiu R$ 260+ bi (2024) frente aos R$ 3,3 bi da venda. 69 ações populares tramitaram por 27 anos; 1ª Turma do STJ encerrou definitivamente o litígio no fim de agosto/2024, fundamentando-se em segurança jurídica e não reversibilidade prática — não em mérito sobre a adequação do preço.",
+  "connections": ["id_T192", "id_T197", "id_1571"],
+  "status": "confirmado",
+  "lacuna_investigativa": "Nenhuma apuração pública determinou destino final dos recursos da venda, apesar da justificativa oficial de abatimento de dívida pública — a dívida cresceu no período subsequente. Não há reconstituição documental completa do critério técnico que descartou as reservas declaradas à SEC em favor da cifra menor usada no edital brasileiro.",
+  "ponto_de_inflexao": "A extinção do processo original por decisão da Justiça Federal do Pará em 2002 sem apreciação de mérito — a partir daí, toda a disputa dos 22 anos seguintes tratou de questões processuais (prescrição, segurança jurídica), nunca retornando ao mérito da subavaliação.",
+  "analise": "Caso fundador do padrão P05 (fundos/ativos públicos como vetor de extração) na modalidade privatização: o mecanismo não depende de conluio provado — depende de estrutura em que o avaliador do preço mínimo é simultaneamente financiador de um concorrente no mesmo leilão, sem necessidade de qualquer ilícito individualizável para produzir resultado sistemicamente favorável a interesses privados às custas do patrimônio público. Precedente relevante para o corpus por estabelecer o template replicado em episódios posteriores mapeados em T-192/T-197 (Operação Rejeito): captura da metodologia de avaliação como vetor mais eficiente que suborno direto."
+}

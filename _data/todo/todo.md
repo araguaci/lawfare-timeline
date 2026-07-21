@@ -1,38 +1,35 @@
 # Notas locais · `_data/todo/`
 
-**Último processamento:** 2026-07-20 (1629–1630 + T-225)
+**Último processamento:** 2026-07-20 (1631–1634 + T-226)
 
-## Snapshot IDs (canônico)
+## Snapshot
 
-| Track | Last | Próximo | Fonte |
-|-------|------|---------|-------|
-| Main | **1630** | **1631** | `lawfare.json` + sync JSON |
-| Thematic | **225** | **T-226** | `_posts/estudos/` |
-| Historical | **PREC-1930-07** | — | `precedentes-republica.json` (14 entradas) |
+| Track | Last | Próximo |
+|-------|------|---------|
+| Main | **1634** | **1635** |
+| Thematic | **226** | **T-227** |
+| Historical | PREC-1930-07 | 14 entradas |
 
-Validação: `pwsh -File tools/validate-ids.ps1` · Sync: `python tools/sync_corpus_ids.py`
+Validação: `pwsh -File tools/validate-ids.ps1` → **0 erros**
 
-## Main track recente (1620–1630)
+## Main recente (1629–1634)
 
 | ID | Evento |
 |----|--------|
-| 1620 | Auditorias Master/Reag (P10) |
-| 1621 | Moraes/Milei |
-| 1622 | Hawala |
-| 1623 | Consulado HK (P02) |
-| 1624 | Revisão criminal Bolsonaro |
-| 1625 | CPI CO (P06-B) |
-| 1626–1627 | Sucessão RJ / Fux (P03) |
-| 1628 | USTR +25% Pix/STF |
-| 1629 | UK CPIN PCC/CV (P10) |
-| 1630 | Efetivo PCC 20k vs 100k (ev-contested, P04) |
+| 1629 | UK CPIN PCC/CV |
+| 1630 | Efetivo PCC 20k vs 100k |
+| 1631 | Dantas / Porto Santos R$ 1 bi |
+| 1632 | ACX ITC / Sterman STM |
+| 1633 | STF penduricalhos (30/06) |
+| 1634 | Moraes/Dino supersalários 48h |
+
+## Colisão resolvida
+
+**1635** → patch **1621** (oitiva Flávio 28/07). Demais elementos já em 1621.
 
 ## Fila
 
-| Arquivo | Status |
-|---------|--------|
-| *(vazio)* | Aguardando batch JSON |
-| `proposta-padrao-P13.md` | Arquivado |
+*(vazio)* — próximo batch → **1635+** ou **T-227**
 
 ## Pipeline
 
@@ -42,12 +39,4 @@ python tools/sync_corpus_ids.py
 pwsh -File tools/validate-ids.ps1
 ```
 
-## Colisões resolvidas
-
-| Batch | → ID |
-|-------|------|
-| USTR 1609 | 1628 |
-| CPI 1624 | 1625 |
-| RJ 1577/1580 | 1626–1627 |
-
-Detalhes e histórico: `TODO.md` (raiz) · espelho `docs/TODO.md`
+Detalhes: `TODO.md` · `docs/TODO.md`

@@ -21,7 +21,7 @@ source_data: "lawfare-batch-gap-0707-0718-2026.json"
 
 ## Resumo
 
-O ministro Alexandre de Moraes (STF) manteve a prisão domiciliar de Jair Bolsonaro e ampliou as restrições cautelares: suspendeu por 30 dias todas as visitas ao ex-presidente, exceto equipe médica, fisioterapeutas e advogados; proibiu recebimento de visitas com finalidade político-eleitoral até o término das Eleições 2026; manteve a suspensão de 90 dias das visitas do senador Flávio Bolsonaro (que atua como advogado do pai); e proibiu a divulgação de manifestos ou mensagens de conteúdo político-eleitoral por Bolsonaro, inclusive por intermédio de terceiros. A decisão foi fundamentada na divulgação da 'Carta aos brasileiros', publicada por Flávio em nome do pai, que Moraes classificou como descumprimento das medidas cautelares. Na mesma decisão, o STF negou o pedido de visita do presidente argentino Javier Milei a Bolsonaro, prevista para coincidir com viagem a Brasília em 25/07 — data que também marca a convenção que deve oficializar a candidatura presidencial de Flávio Bolsonaro.
+O ministro Alexandre de Moraes (STF) manteve a prisão domiciliar de Jair Bolsonaro e ampliou as restrições cautelares: suspendeu por 30 dias todas as visitas ao ex-presidente, exceto equipe médica, fisioterapeutas e advogados; proibiu recebimento de visitas com finalidade político-eleitoral até o término das Eleições 2026; manteve a suspensão de 90 dias das visitas do senador Flávio Bolsonaro (que atua como advogado do pai); e proibiu a divulgação de manifestos ou mensagens de conteúdo político-eleitoral por Bolsonaro, inclusive por intermédio de terceiros. A decisão foi fundamentada na divulgação da 'Carta aos brasileiros', publicada por Flávio em nome do pai, que Moraes classificou como descumprimento das medidas cautelares. Na mesma decisão, o STF negou o pedido de visita do presidente argentino Javier Milei a Bolsonaro, prevista para coincidir com viagem a Brasília em 25/07 — data que também marca a convenção que deve oficializar a candidatura presidencial de Flávio Bolsonaro. Em decisão correlata no inquérito de calúnia (postagem de 03/01/2026), Moraes marcou oitiva de Flávio Bolsonaro pela PF para **28/07/2026** — três dias após a convenção do PL — após a defesa perder o prazo para indicar data.
 
 ***
 
@@ -69,6 +69,7 @@ A decisão consolida o padrão P12-B (Paywall Eleitoral) documentado desde 13/07
 ## Lacunas investigativas
 
 - A decisão fixa proibição 'até o fim das Eleições 2026' sem data específica — cobre o 1º e o eventual 2º turno. Não há prazo de revisão automática registrado; verificar se há mecanismo de reavaliação previsto ou se a restrição permanece indefinida por default.
+- Oitiva de Flávio Bolsonaro marcada para 28/07/2026 (pós-convenção PL 25/07) — verificar se calendário resultou de agenda administrativa da PF/PGR ou de decisão discricionária do relator (delta ex-id_1635, merge 2026-07-20).
 
 ## Fontes verificaveis
 

@@ -1,0 +1,357 @@
+{
+  "_meta": {
+    "batch": "varredura-08-20-jul-2026",
+    "generated": "2026-07-20",
+    "sync_confirmado": true,
+    "main_range_usado": [
+      1631,
+      1634
+    ],
+    "thematic_usado": [
+      "T-226"
+    ],
+    "reserved_check": "1449-1511 intocado — nenhum ID nesse range usado",
+    "colisao_flagged": {
+      "id_1621_existente": "Moraes/Milei — possível sobreposição com id_1635 (pacote de decisões 17/07). Revisar antes de merge: se 1621 já cobre a negativa de visita de Milei, converter 1635 em patch (via _data/ direto) cobrindo apenas os elementos não capturados (suspensão de visitas 30 dias, veto a manifestos por terceiros, agendamento oitiva Flávio 28/07).",
+      "id_1628_existente": "USTR +25% Pix/STF — cobre o item do tarifaço já verificado nesta varredura. Não reproduzido neste batch."
+    },
+    "colisao_resolvida": {
+      "1635": "Merge delta em id_1621 — oitiva Flavio 28/07; demais elementos ja cobertos"
+    }
+  },
+  "entries": [
+    {
+      "id": "1631",
+      "date": "2026-07-17",
+      "date_precision": "day",
+      "title": "Consórcio ligado à mulher, cunhado e sogro do ministro do TCU Bruno Dantas vence licitação de R$ 1 bi no Porto de Santos; Autoridade Portuária defende edital com acórdão redigido pelo próprio Dantas",
+      "summary": "O Consórcio Portolog — integrado pela empresa Oitenta & Nove Ponto Um Administração e Participações, cujos sócios são Camila Funaro Camargo Dantas (mulher do ministro), João Pedro Camargo (cunhado, administrador do consórcio) e João Carlos Camargo (sogro) — venceu licitação estimada em R$ 1 bilhão para operar um condomínio logístico de 242 mil m² no Porto de Santos. O único concorrente, Consórcio TPT Margem Direita, foi inabilitado antes da fase de lances por falhas na documentação. A Autoridade Portuária de Santos (APS) defendeu o edital perante a Justiça citando um acórdão do TCU sobre o megaterminal Tecon Santos 10 — acórdão cujo entendimento restritivo à concorrência foi defendido pelo próprio Bruno Dantas, vencedor por 6x3 e base da redação. O processo julgado por Dantas não era a licitação vencida por seus familiares. Licitação suspensa pela Justiça desde 16/06/2026 após ação da Abratec.",
+      "category": "mecanismo_sistemico",
+      "actors": [
+        {
+          "name": "Bruno Dantas",
+          "role": "Ministro — autor do acórdão TCU sobre Tecon Santos 10 usado como fundamento do edital",
+          "institution": "TCU"
+        },
+        {
+          "name": "Camila Funaro Camargo Dantas",
+          "role": "Sócia da Oitenta & Nove Ponto Um / CEO Esfera Brasil — mulher do ministro",
+          "institution": "Consórcio Portolog"
+        },
+        {
+          "name": "João Pedro Camargo",
+          "role": "Administrador do Consórcio Portolog — cunhado do ministro",
+          "institution": "Consórcio Portolog"
+        },
+        {
+          "name": "João Carlos Camargo",
+          "role": "Sócio — sogro do ministro, fundador do grupo Esfera",
+          "institution": "Consórcio Portolog"
+        },
+        {
+          "name": "Marcos Vinicius Borin",
+          "role": "Sócio da CTC Infra & Construções, integrante do consórcio — citado em investigação da PF sobre propina a senador",
+          "institution": "CTC Infra & Construções"
+        }
+      ],
+      "institutions": [
+        "TCU",
+        "Autoridade Portuária de Santos (APS)",
+        "MPF",
+        "Abratec"
+      ],
+      "legal_basis": [
+        "Lei 14.133/2021 (Lei de Licitações) — princípios de isonomia e competitividade",
+        "Acórdão TCU Tecon Santos 10 — precedente citado pela APS"
+      ],
+      "patterns": [
+        "P05",
+        "P07",
+        "P09",
+        "P11"
+      ],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {
+          "title": "Família de ministro do TCU venceu edital de R$ 1 bi no Porto de Santos",
+          "url": "https://www.uol.com.br",
+          "outlet": "UOL Prime (Fabio Serapião e Natália Portinari)",
+          "date": "2026-07-17"
+        },
+        {
+          "title": "Consórcio ligado à família de ministro do TCU vence edital de R$ 1 bi no Porto de Santos",
+          "url": "https://www.diariodocentrodomundo.com.br/consorcio-ligado-a-familia-de-ministro-do-tcu-vence-edital-de-r-1-bi-no-porto-de-santos/",
+          "outlet": "Diário do Centro do Mundo",
+          "date": "2026-07-18"
+        },
+        {
+          "title": "Empresas da família de Bruno Dantas vencem licitação bilionária no Porto de Santos",
+          "url": "https://www.contrafatos.com.br/empresas-da-familia-de-bruno-dantas-ministro-do-tcu-vencem-licitacao-bilionaria-no-porto-de-santos/",
+          "outlet": "ContraFatos",
+          "date": "2026-07-18"
+        }
+      ],
+      "result": "Licitação permanece suspensa pela Justiça enquanto os questionamentos sobre restrição à concorrência e vínculo familiar são analisados. APS e TCU negam relevância do vínculo.",
+      "connections": [
+        "id_T191",
+        "id_T194"
+      ],
+      "status": "em_andamento",
+      "lacuna_investigativa": "Cronologia fina entre a redação do acórdão Tecon Santos 10 por Dantas e a elaboração das cláusulas do edital do condomínio logístico; se Dantas se declarou impedido em qualquer processo correlato à APS; valor final apurado pelo MPF sobre adequação da contraprestação (R$ 289 mil/mês) frente ao ativo de R$ 1 bi.",
+      "ponto_de_inflexao": "A defesa do edital pela APS não invoca fundamento técnico autônomo — invoca precedente produzido pelo próprio beneficiário indireto, fechando o loop entre função normativa e benefício privado sem necessidade de qualquer ato ilícito individualizável.",
+      "analise": "P11 em escala reduzida, mas com mecanismo P07 (transgeracional/familiar) como vetor de transmissão: o ministro não precisa atuar diretamente no processo que beneficia sua família — basta que a jurisprudência que ele produz em outro caso sirva de blindagem argumentativa ao edital. A ausência de conflito de interesse formalmente configurável é o próprio ponto: não há ilícito identificável, apenas arquitetura estrutural de proximidade funcional entre poder normativo e benefício privado — o padrão OIS aplicado à magistratura de contas."
+    },
+    {
+      "id": "1632",
+      "date": "2026-07-05",
+      "date_precision": "day",
+      "title": "Sócio formal da ACX ITC (rede de lavagem ligada ao 'Careca do INSS', mesma malha da Victory Trading sancionada pela OFAC) confessa à polícia ser 'laranja'; empresa pagou R$ 700 mil ao escritório da ministra do STM Verônica Sterman antes de sua nomeação",
+      "summary": "Ericsson de Azevedo, registrado como proprietário da ACX ITC Serviços de Tecnologia, declarou à Polícia Civil de São Paulo em janeiro/2026 que atuava como 'laranja' — vendeu seus dados pessoais por R$ 5 mil para abertura do CNPJ. A ACX ITC pagou R$ 700 mil ao escritório da então advogada Verônica Sterman entre outubro/2024 e fevereiro/2025, antes de sua nomeação por Lula para o Superior Tribunal Militar (STM) em setembro/2025. A empresa consta no relatório final da CPMI do INSS como parte de rede de lavagem de dinheiro de mais de 40 firmas (R$ 39 bi movimentados) ligada a Antônio Carlos Camilo Antunes ('Careca do INSS'). A mesma rede inclui a Victory Trading, sancionada pelo Departamento do Tesouro dos EUA (OFAC) em 01/07/2026 por suspeita de vínculo com o PCC (id_1609/id_1611). A mesma firma pagou R$ 595 mil ao ex-ministro do STJ Nefi Cordeiro após sua saída da Corte.",
+      "category": "lacuna_investigativa",
+      "actors": [
+        {
+          "name": "Verônica Sterman",
+          "role": "Ministra do STM — recebeu pagamento via escritório de advocacia antes da nomeação",
+          "institution": "STM"
+        },
+        {
+          "name": "Ericsson de Azevedo",
+          "role": "Sócio formal declarado 'laranja' da ACX ITC",
+          "institution": "ACX ITC Serviços de Tecnologia"
+        },
+        {
+          "name": "Antônio Carlos Camilo Antunes ('Careca do INSS')",
+          "role": "Operador central da rede de lavagem apontada pela CPMI do INSS",
+          "institution": "Rede Arpar/CPMI INSS"
+        },
+        {
+          "name": "Nefi Cordeiro",
+          "role": "Ex-ministro STJ — também recebeu pagamento da mesma rede",
+          "institution": "STJ (aposentado)"
+        }
+      ],
+      "institutions": [
+        "STM",
+        "COAF",
+        "CPMI do INSS",
+        "Polícia Civil de São Paulo",
+        "OFAC (Tesouro dos EUA)"
+      ],
+      "legal_basis": [
+        "Relatório de Inteligência Financeira (RIF) COAF enviado à CPMI do INSS"
+      ],
+      "patterns": [
+        "P08",
+        "P10"
+      ],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {
+          "title": "'Dono' de firma que pagou R$ 700 mil a ministra do STM diz ser laranja",
+          "url": "https://www.metropoles.com/colunas/andreza-matais/dono-de-firma-que-pagou-r-700-mil-a-ministra-do-stm-diz-ser-laranja",
+          "outlet": "Metrópoles (Andreza Matais)",
+          "date": "2026-07-05"
+        },
+        {
+          "title": "Empresário diz ser laranja de empresa que pagou R$ 700 mil a ministra do STM indicada por Lula",
+          "url": "https://revistaoeste.com/politica/empresario-se-diz-laranja-em-negocio-que-pagou-ministra-do-stm-nomeada-por-lula/",
+          "outlet": "Revista Oeste",
+          "date": "2026-07-05"
+        }
+      ],
+      "result": "Sem acusação formal contra a ministra até a data de registro. Sterman afirma que o valor correspondeu a três pareceres jurídicos; reportagem não localizou processos em que tenha atuado para o grupo.",
+      "connections": [
+        "id_1609",
+        "id_1611",
+        "id_T220"
+      ],
+      "status": "documentado",
+      "lacuna_investigativa": "Os três pareceres jurídicos citados por Sterman nunca foram exibidos publicamente; não há confirmação de processos judiciais em que ela tenha representado a ACX ITC ou empresas correlatas; natureza do pagamento (honorário legítimo vs. vetor de proximidade) permanece não estabelecida.",
+      "ponto_de_inflexao": null,
+      "analise": "P10 em estado puro: a mesma infraestrutura financeira (rede de mais de 40 CNPJs, R$ 39 bi movimentados) toca simultaneamente a Farra do INSS, a sanção OFAC ao PCC (Victory Trading) e o acesso a um tribunal superior via pagamento a escritório de futura ministra. O pagamento em si é `ev-confirmed`; a natureza ilícita da relação com Sterman é `ev-alleged` — a distinção deve ser mantida com rigor redobrado por ser politicamente sensível em ambas as direções (nomeação por Lula, mas sem elemento probatório de contrapartida)."
+    },
+    {
+      "id": "1633",
+      "date": "2026-06-30",
+      "date_precision": "day",
+      "title": "STF conclui julgamento em plenário virtual extraordinário e libera parte dos penduricalhos restringidos em março/2026; estende quinquênio a aposentados e pensionistas",
+      "summary": "O STF concluiu em sessão virtual extraordinária de 30/06/2026 o julgamento de 41 recursos contra a tese de março/2026 sobre supersalários. Por maioria (voto conjunto de Moraes, Zanin, Dino e Gilmar Mendes, com Fachin e Fux formando os 6 votos), a Corte manteve o limite de até 35% acima do teto constitucional (R$ 46,7 mil) para verbas indenizatórias e outros 35% para o quinquênio por tempo de serviço, mas liberou pagamento de férias não usufruídas, plantões judiciais, licença-prêmio e verbas retroativas já reconhecidas. Determinou que o CNJ apresente em 30 dias a relação de verbas com legalidade verificada, condicionando retomada de passivos a auditorias e referendo do plenário. Datafolha: 83% da população reprova os supersalários.",
+      "category": "mecanismo_sistemico",
+      "actors": [
+        {
+          "name": "Alexandre de Moraes",
+          "role": "Signatário do voto conjunto que fixou a tese de liberação parcial",
+          "institution": "STF"
+        },
+        {
+          "name": "Cristiano Zanin",
+          "role": "Signatário do voto conjunto",
+          "institution": "STF"
+        },
+        {
+          "name": "Flávio Dino",
+          "role": "Signatário do voto conjunto — posteriormente coautor da cobrança aos tribunais em 06/07",
+          "institution": "STF"
+        },
+        {
+          "name": "Gilmar Mendes",
+          "role": "Signatário do voto conjunto",
+          "institution": "STF"
+        },
+        {
+          "name": "Edson Fachin",
+          "role": "Presidente do STF — voto formador da maioria",
+          "institution": "STF"
+        }
+      ],
+      "institutions": [
+        "STF",
+        "CNJ",
+        "CNMP"
+      ],
+      "legal_basis": [
+        "CF/88 — teto constitucional de remuneração do funcionalismo",
+        "Tese fixada em março/2026 sobre regime de transição dos supersalários"
+      ],
+      "patterns": [
+        "P11",
+        "P03"
+      ],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {
+          "title": "STF afrouxa penduricalhos e garante até R$ 16 mil adicionais para juízes e promotores",
+          "url": "https://ndmais.com.br/justica/stf-afrouxa-penduricalhos-e-garante-ate-r-16-mil-adicionais-para-juizes-e-promotores/",
+          "outlet": "ND Mais",
+          "date": "2026-07-01"
+        },
+        {
+          "title": "STF conclui julgamento e libera parte dos penduricalhos que haviam sido barrados pelo tribunal",
+          "url": "https://fenafisco.org.br/01/07/2026/stf-conclui-julgamento-e-libera-parte-dos-penduricalhos-que-haviam-sido-barrados-pelo-tribunal/",
+          "outlet": "Fenafisco/Folha de S.Paulo",
+          "date": "2026-07-01"
+        },
+        {
+          "title": "Supersalários: STF forma maioria para liberar parte de penduricalhos barrados em julgamento",
+          "url": "https://www.cartacapital.com.br/justica/supersalarios-stf-forma-maioria-para-liberar-parte-de-penduricalhos-barrados-em-julgamento/",
+          "outlet": "CartaCapital",
+          "date": "2026-06-27"
+        }
+      ],
+      "result": "Regime de transição flexibilizado; retomada de pagamentos retroativos condicionada a auditorias do CNJ/CNMP com prazo de 30 dias para apresentação ao plenário.",
+      "connections": [
+        "id_1634",
+        "id_T191"
+      ],
+      "status": "confirmado",
+      "lacuna_investigativa": "Se as auditorias do CNJ, órgão presidido por um dos signatários do voto que ampliou as próprias verbas, serão submetidas a fiscalização externa independente.",
+      "ponto_de_inflexao": "A sessão que restringe o próprio grupo decisor amplia o restringido em plenário virtual, sem debate presencial ou sustentação oral pública ampla — modo de decisão que reduz a visibilidade do processo deliberativo sobre a própria remuneração.",
+      "analise": "Nemo judex institucional aplicado à administração da própria remuneração: os mesmos ministros que fixam os limites do teto constitucional julgam os recursos contra esses limites. Não há alegação de ilícito — o mecanismo é inteiramente legal — mas a estrutura decisória carece de terceiro imparcial, condição estrutural do padrão P03 fora do domínio penal."
+    },
+    {
+      "id": "1634",
+      "date": "2026-07-06",
+      "date_precision": "day",
+      "title": "Moraes e Dino dão 48h para sete Tribunais de Justiça explicarem supersalários acima do teto, após Folha revelar 616 magistrados recebendo até R$ 495 mil/mês via resolução CNJ/CNMP",
+      "summary": "Após reportagem da Folha de S.Paulo apurar que ao menos sete tribunais estaduais (DF, GO, MA, PR, RJ, RN, RO) pagaram em maio/2026 salários acima do teto de R$ 46,4 mil — com cifras de até R$ 495 mil no mês — sob fundamento de resolução conjunta do CNJ e CNMP, os ministros Alexandre de Moraes e Flávio Dino determinaram em 06/07/2026 que os presidentes desses tribunais enviem em 48h folhas de pagamento detalhadas de abril a julho, sob pena de punições severas. Os tribunais responderam ao STF em 13/07 afirmando cumprir a decisão e justificando as remunerações elevadas como pagamentos excepcionais e direitos acumulados (férias, acertos funcionais).",
+      "category": "chokepoint_judicial",
+      "actors": [
+        {
+          "name": "Alexandre de Moraes",
+          "role": "Determinou prazo de 48h aos TJs",
+          "institution": "STF"
+        },
+        {
+          "name": "Flávio Dino",
+          "role": "Coautor da determinação",
+          "institution": "STF"
+        }
+      ],
+      "institutions": [
+        "STF",
+        "TJDF",
+        "TJGO",
+        "TJMA",
+        "TJPR",
+        "TJRJ",
+        "TJRN",
+        "TJRO",
+        "CNJ",
+        "CNMP"
+      ],
+      "legal_basis": [
+        "Tese de março/2026 sobre teto constitucional — descumprimento apurado"
+      ],
+      "patterns": [
+        "P11",
+        "P06"
+      ],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {
+          "title": "Moraes dá 48h para sete tribunais explicarem supersalários de juízes",
+          "url": "https://costanorte.com.br/politica/moraes-da-48h-para-sete-tribunais-explicarem-supersalarios-de-juizes.html",
+          "outlet": "Costa Norte",
+          "date": "2026-07-06"
+        },
+        {
+          "title": "Tribunais descumprem decisão do STF sobre penduricalhos e pagam salários de até R$ 495 mil a juízes",
+          "url": "https://eshoje.com.br/politica/justica/2026/07/tribunais-descumprem-decisao-do-stf-sobre-penduricalhos-e-pagam-salarios-de-ate-r-495-mil-a-juizes/",
+          "outlet": "ES Hoje/Folha de S.Paulo",
+          "date": "2026-07-13"
+        },
+        {
+          "title": "Tribunais dizem cumprir decisão sobre penduricalhos e justificam 'supersalários' ao STF",
+          "url": "https://fenafisco.org.br/13/07/2026/tribunais-dizem-cumprir-decisao-sobre-penduricalhos-e-justificam-supersalarios-ao-stf/",
+          "outlet": "Fenafisco/JOTA",
+          "date": "2026-07-13"
+        }
+      ],
+      "result": "Tribunais apresentaram justificativas ao STF em 13/07; nenhuma sanção efetiva registrada até a data de fechamento desta entrada.",
+      "connections": [
+        "id_1633",
+        "id_T191"
+      ],
+      "status": "em_andamento",
+      "lacuna_investigativa": "Se o CNJ, sob a presidência de Edson Fachin — signatário do voto que ampliou o teto flexibilizado — auditará com independência as próprias resoluções que fundamentaram o excesso apurado; se haverá devolução dos valores pagos acima do limite vigente em maio.",
+      "ponto_de_inflexao": "A cobrança de explicações parte dos mesmos ministros que, seis dias antes, haviam assinado o voto conjunto liberando parte das verbas — a fiscalização emerge do próprio grupo que ampliou o patamar contestado, sem terceiro externo no ciclo de controle.",
+      "analise": "Fechamento do loop P11 em tempo real: liberação (30/06) → burla documentada pela imprensa → cobrança performática pelos próprios autores da liberação (06/07) → justificativa aceita sem sanção visível (13/07). O ciclo de três semanas demonstra o padrão como sistema auto-regulado sem accountability externa efetiva, independente da vontade individual de qualquer ministro."
+    }
+  ],
+  "thematic_entries": [
+    {
+      "id": "T-226",
+      "date": "2026-07-06",
+      "date_precision": "day",
+      "title": "O Ciclo do Penduricalho — Restrição, Burla e Autolegitimação (mar-jul/2026)",
+      "summary": "Estudo consolidando id_1633 e id_1634 como ciclo fechado de P11 no Judiciario: restricao (mar/2026) -> liberacao parcial em plenario virtual pelos proprios beneficiarios (30/06) -> burla documentada por 7 TJs (maio, revelada em julho) -> cobranca de 48h pelos autores da propria liberacao (06/07) -> justificativa aceita sem sancao visivel (13/07). Espelha T-191 no eixo Judiciario — candidato a subpattern P11-B.",
+      "category": "mecanismo_sistemico",
+      "patterns": [
+        "P11",
+        "P03"
+      ],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {
+          "title": "STF conclui julgamento e libera parte dos penduricalhos",
+          "url": "https://fenafisco.org.br/01/07/2026/stf-conclui-julgamento-e-libera-parte-dos-penduricalhos-que-haviam-sido-barrados-pelo-tribunal/",
+          "outlet": "Fenafisco",
+          "date": "2026-07-01"
+        },
+        {
+          "title": "Moraes da 48h para sete tribunais explicarem supersalarios",
+          "url": "https://costanorte.com.br/politica/moraes-da-48h-para-sete-tribunais-explicarem-supersalarios-de-juizes.html",
+          "outlet": "Costa Norte",
+          "date": "2026-07-06"
+        }
+      ],
+      "connections": [
+        "1633",
+        "1634",
+        "T-191"
+      ],
+      "analise": "Estudo consolidando id_1633 e id_1634 como ciclo fechado de P11 no Judiciário: restrição (mar/2026) → liberação parcial em plenário virtual pelos próprios beneficiários (30/06) → burla documentada por 7 TJs (maio, revelada em julho) → cobrança de 48h pelos autores da própria liberação (06/07) → justificativa aceita sem sanção (13/07). Espelha estruturalmente o T-191 (Executivo/custeio federal), mas no eixo Judiciário — candidato a padrão autônomo ou subpattern P11-B (Judiciário).",
+      "status": "confirmado"
+    }
+  ]
+}
