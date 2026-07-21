@@ -208,6 +208,18 @@ def main() -> None:
             "Nemo judex formalizado — preliminar DPU AP 2782 (T-221)",
             "nemo-judex-formalizado-dpu",
         ),
+        222: (
+            "P10 promovido a padrão autônomo (T-222)",
+            "p10-promovido-padrao-autonomo",
+        ),
+        223: (
+            "P12-B assimetria de capacidade analítica (T-223)",
+            "p12-b-assimetria-capacidade-analitica",
+        ),
+        224: (
+            "Precedentes República 1891–1930 — sidecar PREC-* (T-224)",
+            "precedentes-republica-1891-1930",
+        ),
     }
     for tid, (topic, artifact) in t_meta.items():
         note = f"Estudo Jekyll _posts/estudos/ ({t_posts.get(tid, '—')})."

@@ -258,13 +258,13 @@ Padrões são documentados com casos, fontes e lacunas. Não são hipóteses —
 | 2.0 | 2026-Q1 | Adição do objeto `meta` com vetor_correcao_disponivel, tipo, entradas_relacionadas; criação das categorias registro-analitico e perseguicao-institucional |
 | 2.2 | 2026-05 | Formalização P04b (Both-sidesism Funcional); padrões P01–P11 canônicos adicionados ao METHODOLOGY.md; próximo ID atualizado para 1577; corpus-bridge T-205/T-209 documentados |
 | 2.3 | 2026-07 | P10 promovido a padrão autônomo (T-222); P12/P12-B instanciados (T-223); main track 1620; posts Jekyll 1577–1578 publicados |
-| 2.4 | 2026-07 | P06-B formalizado (CPMI Banestado, CPMI INSS, CPI Crime Organizado); P10/P11 distinção fechada; P13 arquivado; dashboard v3.3 |
+| 2.4 | 2026-07 | P06-B formalizado (CPMI Banestado, CPMI INSS, CPI Crime Organizado); P10/P11 distinção fechada; P13 arquivado; dashboard v3.3; main 1627 |
 
 ---
 
 ## 9. Convenções de nomenclatura
 
-**IDs:** Sequencial a partir de 1. ID 1 = primeiro evento registrado (1990). ID atual main track: **1620**. Próximo disponível main track: **1621**. Track temático: **T-223** confirmado; próximo **T-224**. Faixa **1449–1510** com gaps permanentes aceitos (1449–1480, 1506–1510). IDs nunca são reutilizados — entradas corrigidas recebem nota no campo `meta.observacao` com referência ao ID original.
+**IDs:** Sequencial a partir de 1. ID atual main track: **1628**. Próximo disponível main track: **1629**. Track temático: **T-223** confirmado; próximo **T-224**. Faixa **1449–1510** com gaps permanentes aceitos (1449–1480, 1506–1510). IDs nunca são reutilizados — entradas corrigidas recebem nota no campo `meta.observacao` com referência ao ID original.
 
 **Tags:** Kebab-case, minúsculas, sem acentos. Máximo 15 por entrada. Devem incluir: nome(s) do(s) ator(es) principal(is), nome da operação ou caso quando aplicável, categoria do mecanismo operacional, nome da instituição afetada.
 

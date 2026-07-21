@@ -1,0 +1,85 @@
+[
+  {
+    "id": "1626",
+    "date": "2026-03-23",
+    "title": "Vácuo prolongado na sucessão do governo do Rio de Janeiro após renúncia de Cláudio Castro mantém desembargador como chefe do Executivo por decisão do STF",
+    "summary": "Cláudio Castro renunciou ao governo do RJ em 23/03/2026, véspera de inelegibilidade no TSE. Sem vice e com presidente da Alerj afastado, Ricardo Couto (presidente do TJ-RJ) assumiu interinamente o Executivo — magistrado não eleito à frente do estado por prazo indeterminado. STF dividido sobre eleição direta vs indireta; Flávio Dino pediu vista por 21 dias.",
+    "category": "stf",
+    "tags": ["claudio-castro", "ricardo-couto", "alerj", "stf", "tse", "sucessao-governo-rj", "P03"],
+    "patterns": ["P03"],
+    "actors": [
+      {"name": "Cláudio Castro", "role": "Ex-governador (PL)", "institution": "Governo do RJ"},
+      {"name": "Ricardo Couto", "role": "Governador interino", "institution": "TJ-RJ"},
+      {"name": "Douglas Ruas", "role": "Presidente da Alerj", "institution": "Alerj"},
+      {"name": "Luiz Fux", "role": "Relator ADI 7942", "institution": "STF"}
+    ],
+    "institutions": ["Governo do Estado do Rio de Janeiro", "TJ-RJ", "Alerj", "TSE", "STF"],
+    "evidence_status": "ev-confirmed",
+    "sources": [
+      {
+        "title": "Cláudio Castro diz que sai do governo do Rio de cabeça erguida",
+        "url": "https://agenciabrasil.ebc.com.br/politica/noticia/2026-03/claudio-castro-diz-que-sai-do-governo-do-rio-de-cabeca-erguida",
+        "outlet": "Agência Brasil",
+        "date": "2026-03-23"
+      },
+      {
+        "title": "TSE torna inelegível ex-governador do Rio Cláudio Castro",
+        "url": "https://www.tse.jus.br/comunicacao/noticias/2026/Marco/tse-torna-inelegivel-ex-governador-do-rio-claudio-castro",
+        "outlet": "TSE",
+        "date": "2026-03-24"
+      },
+      {
+        "title": "Dino libera julgamento sobre sucessão no RJ após travamento de 21 dias",
+        "url": "https://www.gazetadopovo.com.br/republica/dino-libera-julgamento-sobre-sucessao-no-rj-apos-travamento-de-21-dias/",
+        "outlet": "Gazeta do Povo",
+        "date": "2026-06-30"
+      }
+    ],
+    "connections": [],
+    "meta": {
+      "observacao": "Renumerado 2026-07-19: ex-1577 em schema-compliant.json (colisão com ADPF 1141/Cremesp)."
+    },
+    "status": "documentado"
+  },
+  {
+    "id": "1627",
+    "date": "2026-05-29",
+    "title": "Ministro Luiz Fux (STF) nega pedido da Mesa Diretora da Alerj para que Douglas Ruas assuma interinamente o governo do Rio de Janeiro",
+    "summary": "Em 29/05/2026, Fux negou em decisão monocrática pedido da Alerj para que Douglas Ruas (presidente da Casa desde 17/04/2026) assumisse o Executivo estadual, invocando posição prévia do colegiado que mantém Ricardo Couto (TJ-RJ) como interino até definição do mandato-tampão.",
+    "category": "stf",
+    "tags": ["luiz-fux", "douglas-ruas", "ricardo-couto", "alerj", "adi-7942", "stf", "P03", "decisao-monocratica"],
+    "patterns": ["P03"],
+    "actors": [
+      {"name": "Luiz Fux", "role": "Relator ADI 7942", "institution": "STF"},
+      {"name": "Douglas Ruas", "role": "Presidente da Alerj", "institution": "Alerj"},
+      {"name": "Ricardo Couto", "role": "Governador interino", "institution": "TJ-RJ"}
+    ],
+    "institutions": ["STF", "Alerj", "TJ-RJ"],
+    "evidence_status": "ev-confirmed",
+    "sources": [
+      {
+        "title": "STF nega pedido da Alerj e mantém desembargador como governador interino do Rio de Janeiro",
+        "url": "https://noticias.stf.jus.br/postsnoticias/stf-nega-pedido-da-alerj-e-mantem-desembargador-como-governador-interino-do-rio-de-janeiro/",
+        "outlet": "STF Notícias",
+        "date": "2026-05-29"
+      },
+      {
+        "title": "Fux nega pedido de Douglas Ruas para assumir governo interino do Rio",
+        "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-05/fux-nega-pedido-de-douglas-ruas-para-assumir-governo-interino-do-rio",
+        "outlet": "Agência Brasil",
+        "date": "2026-05-29"
+      },
+      {
+        "title": "Fux nega pedido de Ruas para assumir governo do RJ de forma interina",
+        "url": "https://www.band.com.br/politica/noticias/fux-nega-pedido-de-ruas-para-assumir-governo-do-rj-de-forma-interina-202605291935",
+        "outlet": "Band",
+        "date": "2026-05-29"
+      }
+    ],
+    "connections": ["id_1626"],
+    "meta": {
+      "observacao": "Renumerado 2026-07-19: ex-1580 em schema-compliant.json (colisão com Arthur Virgílio/2006). Vinculado a 1626."
+    },
+    "status": "documentado"
+  }
+]

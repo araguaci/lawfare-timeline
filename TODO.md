@@ -1,6 +1,6 @@
 # Próximos passos · lawfare-timeline
 
-**Atualizado:** 2026-07-18 (CPI Crime Organizado → ID 1625 + dashboard P06-B/P10)
+**Atualizado:** 2026-07-19 (Sidecar PREC-* + T-224)
 
 ---
 
@@ -9,9 +9,10 @@
 
 | Track                | Last ID | Próximo | Status                                        |
 | -------------------- | ------- | ------- | --------------------------------------------- |
-| Main (timeline)      | 1625    | 1626    | CPI Crime Organizado P06-B (1625) publicado   |
-| Thematic (estudos T) | 223     | 224     | T-223 P12-B assimetria analítica eleitoral    |
-| Fila editorial       | —       | —       | `_data/todo/` — consulado HK pendente sync    |
+| Main (timeline)      | 1628    | 1629    | USTR tarifa +25% Pix/STF (1628) publicado     |
+| Thematic (estudos T) | 224     | 225     | T-224 Precedentes República 1891–1930         |
+| Historical (sidecar) | PREC-1930-07 | —  | 13 entradas em `precedentes-republica.json`   |
+| Fila editorial       | —       | —       | `_data/todo/` vazio (exc. notas)              |
 | Posts 404 resolvidos | 12      | —       | ✅ permalink + 1 post criado (ID 160)     |
 
 
@@ -141,7 +142,28 @@ JSON arquivados → `_data/processados/` · `_data/todo/` vazio (exceto `todo.md
 | **1623** | Consulado HK — P02, ev-contested, fontes Metrópoles (Corregedor/CPADIS) |
 | **P13** | Arquivado — N=1; caso usa P02 existente |
 
-Faixa **1621–1625** (batch gap + merge): 1621 Moraes/Milei · 1622 Hawala · 1623 Consulado · 1624 revisão criminal Bolsonaro · 1625 CPI Crime Organizado (P06-B, ex-colisão 1624)
+Faixa **1621–1628**: … · **1628** USTR/Pix tarifa +25% (ex-colisão batch 1609)
+
+---
+
+## Rodada USTR/Pix 1628 ✅ (19/07/2026)
+
+| ID | Evento |
+|----|--------|
+| 1628 | USTR recomenda +25% citando Pix, desmatamento, STF/plataformas; Fachin responde (18/07) |
+
+Batch renumerado (1609 ocupado por OFAC/Shimada). Post: `_posts/crise-diplomatica/2026-07-16-ustr-recomenda-tarifa-adicional...`
+
+---
+
+## Rodada RJ sucessão 1626–1627 ✅ (19/07/2026)
+
+| ID | Evento | Padrão |
+|----|--------|--------|
+| 1626 | Vácuo sucessão RJ — Couto interino pós-renúncia Castro | P03 |
+| 1627 | Fux nega Ruas como governador interino (ADI 7942) | P03 |
+
+Origem: `schema-compliant.json` renumerado (ex-colisão 1577/1580). Batch arquivado em `_data/processados/lawfare-batch-rj-sucessao-1626-1627.json`.
 
 ---
 
@@ -150,7 +172,7 @@ Faixa **1621–1625** (batch gap + merge): 1621 Moraes/Milei · 1622 Hawala · 1
 | Ação | Detalhe |
 |------|---------|
 | **1520** | Restaurado ao post P04b imprensa (`2026-05-28-imprensa-brasileira-...`) |
-| **1621** | Revisão criminal Bolsonaro — post canônico `_posts/stf/2026-05-08-bolsonaro-revisao-criminal-...` |
+| **1621** | Revisão criminal Bolsonaro — post canônico `_posts/stf/2026-05-08-bolsonaro-revisao-criminal-...` → renumerado **1624** |
 | Removido | Duplicata `_posts/lawfare/2026-05-08-bolsonaro-protocola-revisao-criminal-...` |
 | Script | `tools/fix_id_1520_176.py` |
 
@@ -168,7 +190,7 @@ Faixa **1621–1625** (batch gap + merge): 1621 Moraes/Milei · 1622 Hawala · 1
 | 1578 | STF suspende resolução CFM aborto após 22 semanas (ADPF 1141) | ✅ post Jekyll |
 
 
-JSON arquivados → `_data/processados/` · `_data/todo/` pendente: consulado HK (`__PENDENTE_SYNC__`)
+JSON arquivados → `_data/processados/` · `_data/todo/` vazio (exceto `todo.md` + `proposta-padrao-P13.md`)
 
 ---
 

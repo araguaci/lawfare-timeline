@@ -1,0 +1,111 @@
+{
+  "_meta": {
+    "generated": "2026-07-20",
+    "session": "claude.ai — verificação UK CPIN / GI-TOC para cluster PCC-CV",
+    "ids_used": ["1629", "1630", "T-225"],
+    "next_available_after_merge": {"main": 1631, "thematic": "T-226"},
+    "staging_path": "_data/todo/lawfare-batch-pcc-cv-ukcpin-1629-1630-T225.json",
+    "note": "IDs confirmados via claude.ai-corpus-ids-sync.json enviado pelo usuário em 2026-07-20 (log de sessão mais recente, 2026-07-19, sobrepõe _meta desatualizado do mesmo arquivo)."
+  },
+  "entries": [
+    {
+      "id": "1629",
+      "date": "2025-03-01",
+      "date_precision": "month",
+      "title": "UK Home Office publica CPIN 'Brazil: Organised Criminal Groups' confirmando estrutura, alcance e modus operandi de PCC e CV via missão de averiguação em campo",
+      "summary": "O Country Policy and Information Team (CPIT) do UK Home Office conduziu missão de averiguação (fact-finding mission) no Brasil entre 9 e 18 de setembro de 2024, visitando Brasília, Rio de Janeiro e São Paulo, com apoio do FCDO. O relatório resultante (publicado dez/2024) e o CPIN formal 'Brazil: Organised Criminal Groups' (versão 1.0, mar/2025) documentam que mais de 80 grupos criminosos organizados operam no Brasil, com PCC (São Paulo) e CV (Rio de Janeiro) como os maiores, ambos operando em todo o território nacional e internacionalmente. O documento também caracteriza milícias como grupos com conexão direta a agentes estatais, atuando predominantemente em favelas do Rio de Janeiro através de extorsão.",
+      "category": "analise_editorial",
+      "actors": [
+        {
+          "name": "Country Policy and Information Team (CPIT)",
+          "role": "Missão de averiguação em campo — 3 oficiais, 9-18 set/2024",
+          "institution": "UK Home Office"
+        }
+      ],
+      "institutions": ["UK Home Office", "FCDO (Foreign, Commonwealth and Development Office)"],
+      "legal_basis": [],
+      "patterns": ["P10"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {
+          "title": "Country Policy and Information Note: Brazil - Organised criminal groups (Version 1.0)",
+          "url": "https://assets.publishing.service.gov.uk/media/67ec0c649eae202448299b40/BRA+CPIN+Organised+Criminal+Groups+_OCGs_.pdf",
+          "outlet": "UK Home Office",
+          "date": "2025-03-01"
+        },
+        {
+          "title": "Report of a fact-finding mission: Organised criminal groups (OCGs), Brazil",
+          "url": "https://gov.uk/government/publications/brazil-country-policy-and-information-notes/report-of-a-fact-finding-mission-organised-criminal-groups-ocgs-brazil-accessible",
+          "outlet": "UK Home Office / CPIT",
+          "date": "2024-12-01"
+        }
+      ],
+      "result": "Documento oficial estrangeiro corrobora, de forma independente do aparato de segurança brasileiro, a estrutura e alcance de PCC/CV documentados no cluster interno do corpus.",
+      "connections": ["PCC-CV-Intel-Dashboard-2026.html"],
+      "status": "confirmado",
+      "lacuna_investigativa": "O CPIN é produzido para fins de decisão de asilo/proteção — não há indicação pública de que o levantamento tenha sido compartilhado ou cruzado com inteligência financeira brasileira (COAF/GAECO).",
+      "analise": "A existência de um levantamento de campo independente, conduzido por um governo estrangeiro para fins de política de imigração (não de cooperação policial), e que chega a caracterização estrutural equivalente à do corpus — incluindo o papel das milícias como atores com conexão estatal direta — funciona como corroboração cruzada de fonte não-brasileira. Isso reduz a dependência do corpus em relação a fontes exclusivamente domésticas para a caracterização estrutural do fenômeno."
+    },
+    {
+      "id": "1630",
+      "date": "2025-11-17",
+      "date_precision": "day",
+      "title": "Correção de registro: efetivo do PCC é reportado com dois números incompatíveis — 20 mil (núcleo) vs. 100 mil (estimativa expansiva) — corpus deve tratar como ev-contested, não como fato único",
+      "summary": "Cobertura da prisão de Ygor Daniel Zago ('Hulk'), liderança do PCC presa em Cascais (Portugal) em nov/2025, cita que o PCC é a maior organização criminosa do Brasil com cerca de 20.000 membros — com algumas estimativas apontando um total ainda maior, somando 40.000 membros vitalícios ('batizados') mais 60.000 prestadores de serviço ('companheiros'), o que gera o número expansivo de 100.000 citado por outras fontes (incluindo o próprio UK CPIN) sem qualificação do range.",
+      "category": "analise_editorial",
+      "actors": [
+        {
+          "name": "Ygor Daniel Zago ('Hulk')",
+          "role": "Liderança do PCC — preso em Cascais/Portugal, nov/2025",
+          "institution": "PCC"
+        }
+      ],
+      "institutions": ["Polícia Judiciária (Portugal)"],
+      "legal_basis": [],
+      "patterns": ["P04"],
+      "evidence_status": "ev-contested",
+      "sources": [
+        {
+          "title": "Portugal arrests 'Hulk', top Brazilian druglord and PCC gang ringleader",
+          "url": "https://ca.news.yahoo.com/portugal-arrests-hulk-top-brazilian-144701461.html",
+          "outlet": "Euronews via Yahoo News",
+          "date": "2025-11-17"
+        }
+      ],
+      "result": "Nenhuma correção pública emitida por qualquer fonte — a divergência (20k núcleo vs. 100k agregado) permanece não resolvida na cobertura disponível.",
+      "connections": ["1629"],
+      "status": "documentado",
+      "lacuna_investigativa": "Não há metodologia pública unificada que explique por que o UK CPIN adota o número agregado (100 mil) como valor único, sem apresentar o range subjacente (20k núcleo + 40k batizados + 60k companheiros como categorias distintas).",
+      "ponto_de_inflexao": null,
+      "analise": "O corpus deve citar o efetivo do PCC sempre como range qualificado (20.000 núcleo / até 100.000 se somadas categorias de prestadores de serviço), nunca como número único de 100.000 — que é o tipo de arredondamento que infla a escala da ameaça e viola a regra de ouro evidencial quando reproduzido sem qualificação em material de inteligência ou dashboards do corpus."
+    }
+  ],
+  "thematic_entries": [
+    {
+      "id": "T-225",
+      "date": "2023-01-01",
+      "date_precision": "year",
+      "title": "Global Organized Crime Index (GI-TOC) atribui ao Brasil pontuação 8/10 em 'ator criminoso tipo máfia' e resiliência estatal de apenas 4,92/10",
+      "summary": "O Global Organized Crime Index, produzido pela Global Initiative Against Transnational Organized Crime (GI-TOC), atribui ao Brasil pontuação de 8 em 10 na categoria de atores criminosos tipo máfia (mafia-style groups) e uma pontuação de resiliência geral de 4,92 em 10 — incluindo sub-pontuação de 4,5/10 em 'políticas nacionais e leis'. O índice também documenta um efeito multiplicador estatístico: cada confronto registrado entre redes criminosas rivais gera aumento imediato de 39% nos homicídios no município afetado no mês subsequente.",
+      "category": "mecanismo_sistemico",
+      "actors": [],
+      "institutions": ["Global Initiative Against Transnational Organized Crime (GI-TOC)"],
+      "legal_basis": [],
+      "patterns": ["P10", "P11"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {
+          "title": "Brazil — Global Organized Crime Index",
+          "url": "https://ocindex.net/country/brazil",
+          "outlet": "GI-TOC",
+          "date": "2023-01-01"
+        }
+      ],
+      "result": "Métrica internacional disponível para benchmarking do Brasil frente a outros países latino-americanos quanto a captura institucional por crime organizado.",
+      "connections": ["1629", "1630"],
+      "status": "confirmado",
+      "lacuna_investigativa": "O índice não decompõe a pontuação de resiliência por unidade federativa — mascarando a variação regional já documentada no corpus (SP hegemônico/pacificado vs. BA/Norte-Nordeste fragmentado e mais letal).",
+      "analise": "O efeito multiplicador de 39% pós-confronto é o dado mais operacionalizável deste índice para o corpus: transforma 'violência de facção' de fenômeno difuso em métrica preditiva e datável, compatível com o padrão de documentação por ponto de inflexão exigido pela metodologia. A pontuação baixa de resiliência em políticas e leis (4,5/10) é consistente com a tese central do corpus — captura institucional que atravessa espectros políticos, não falha técnica pontual."
+    }
+  ]
+}
