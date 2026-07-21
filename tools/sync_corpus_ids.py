@@ -228,6 +228,10 @@ def main() -> None:
             "Ciclo do Penduricalho — P11 Judiciário mar-jul/2026 (T-226)",
             "ciclo-penduricalho-p11-judiciario",
         ),
+        227: (
+            "P04 pela Direita — espelhos P04b OBS narco-soberania (T-227)",
+            "p04-pela-direita-espelho-p04b",
+        ),
     }
     for tid, (topic, artifact) in t_meta.items():
         note = f"Estudo Jekyll _posts/estudos/ ({t_posts.get(tid, '—')})."

@@ -1,6 +1,6 @@
 # Próximos passos · lawfare-timeline
 
-**Atualizado:** 2026-07-20 (varredura 1631–1634 + T-226 · colisão 1635→1621)
+**Atualizado:** 2026-07-21 (1635 Gritzbach + T-227 + PREC-1997-05 · reconcile 1631–1634)
 
 > Espelho: `docs/TODO.md` · Notas: `_data/todo/todo.md` · Legado: `docs/TODO-LEGACY.md`
 
@@ -10,37 +10,37 @@
 
 | Track | Last | Próximo | Validação |
 |-------|------|---------|-----------|
-| Main | **1634** | **1635** | **0 erros** |
-| Thematic | **T-226** | **T-227** | gaps 1449–1480 permanentes |
-| Historical | PREC-1930-07 | — | 14 entradas sidecar |
+| Main | **1635** | **1636** | **0 erros** |
+| Thematic | **T-227** | **T-228** | gaps 1449–1480 permanentes |
+| Historical pre-1990 | PREC-1930-07 | — | 14 entradas · T-224 |
+| Historical pos-1990 | PREC-1997-05 | — | 1 entrada · sidecar |
 | Fila `_data/todo/` | vazio | — | — |
 
 ---
 
-## Rodada varredura 08–20/jul ✅ (20/07/2026)
+## Rodada 21/07/2026 ✅
 
-| ID | Evento | Padrão |
-|----|--------|--------|
-| 1631 | Bruno Dantas / licitação R$ 1 bi Porto Santos | P05/P07/P09/P11 |
-| 1632 | ACX ITC → ministra STM Sterman R$ 700 mil (laranja) | P08/P10 |
-| 1633 | STF libera parte dos penduricalhos (30/06) | P11/P03 |
-| 1634 | Moraes/Dino 48h supersalários 7 TJs | P11/P06 |
-| T-226 | Ciclo do Penduricalho — P11 Judiciário mar–jul/2026 | P11 |
+| ID | Evento | Padrão / track |
+|----|--------|----------------|
+| 1635 | Júri Gritzbach anulado (PMs / delator PCC) | P02/P06 |
+| T-227 | P04 pela Direita — espelhos P04b (OBS) | P04/P04b |
+| PREC-1997-05 | Privatização Vale R$ 3,3 bi | sidecar pos-1990 · P05/P09 |
 
-**Colisão resolvida:** id_1635 (Moraes/Bolsonaro 17/07) → **patch id_1621** (oitiva Flávio 28/07). id_1628 USTR não reproduzido.
+**Reconcile:** IDs 1631–1634 reintegrados em `lawfare.json` (posts já existiam; sync divergia).
 
-Batch: `_data/processados/lawfare-batch-1631-1635-varredura-jul2026.json`
+**Colisão evitada:** id_1635 (Gritzbach) ≠ id_1635 Bolsonaro (batch jul/2020 rejeitado → patch 1621).
 
 ---
 
-## Rodadas anteriores (jul/2026)
+## Main track recente (1631–1635)
 
-| Faixa | Conteúdo |
-|-------|----------|
-| 1629–1630 + T-225 | UK CPIN PCC/CV · efetivo PCC 20k vs 100k · GI-TOC |
-| T-224 | Sidecar PREC-* (14 entradas, PREC-1891-14) |
-| 1620–1628 | Master · Hawala · HK · CPI · RJ · USTR |
-| Taxonomia 18/07 | Dashboard v3.3 · P06-B · P10/P11 · P13 arquivado |
+| ID | Evento |
+|----|--------|
+| 1631 | Bruno Dantas / Porto Santos R$ 1 bi |
+| 1632 | ACX ITC / Sterman STM |
+| 1633 | STF penduricalhos (30/06) |
+| 1634 | Moraes/Dino supersalários 48h |
+| 1635 | Júri Gritzbach anulado |
 
 ---
 
@@ -48,11 +48,11 @@ Batch: `_data/processados/lawfare-batch-1631-1635-varredura-jul2026.json`
 
 | Item | Prioridade |
 |------|------------|
-| Posts PREC individuais (14 slugs) | Baixa |
+| Posts PREC individuais | Baixa |
 | Formalizar P04b em METHODOLOGY | Média |
-| Archive.org espelhamento (1663 URLs) | Média |
-| P11-B Judiciário (T-226) — formalizar subpattern | Média |
-| Recuperação shadowban @araguaci | Externa |
+| P11-B Judiciário (T-226) | Média |
+| Archive.org espelhamento | Média |
+| Índice temático pos-1990 PREC | Baixa |
 
 ---
 
@@ -60,6 +60,7 @@ Batch: `_data/processados/lawfare-batch-1631-1635-varredura-jul2026.json`
 
 ```bash
 python scripts/sync_todo_current.py
+python tools/reconcile_lawfare_batch.py   # se posts existem sem lawfare.json
 python tools/sync_corpus_ids.py
 pwsh -File tools/validate-ids.ps1
 ```
@@ -68,6 +69,6 @@ pwsh -File tools/validate-ids.ps1
 
 ## Referências
 
-- Corpus: `_data/lawfare.json` (1597 entradas · ID 1–1634)
-- Sync: `_data/claude.ai-corpus-ids-sync.json`
+- Corpus: `_data/lawfare.json` (1598 entradas · ID 1–1635)
+- Sidecars: `precedentes-republica.json` · `precedentes-pos-1990.json`
 - [lawfare-timeline.vercel.app](https://lawfare-timeline.vercel.app)

@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "1.1.0",
-    "generated": "2026-07-20",
+    "generated": "2026-07-21",
     "updated": "2026-05-28T23:59:00-03:00",
     "session": "claude.ai — sessão editorial 2026-05-28 (Operação Rejeito, T-191, T-192, Flávio/Trump, posts P11)",
     "purpose": "Mapa de sincronização de IDs — lawfare-timeline corpus",
@@ -79,7 +79,7 @@
           ],
           "status": "confirmed",
           "merge_pending": false,
-          "notes": "Merge lawfare.json 2026-07-20: Biomm 1527-1546, Zema 1547-1550, Homeschooling 1551.",
+          "notes": "Merge lawfare.json 2026-07-21: Biomm 1527-1546, Zema 1547-1550, Homeschooling 1551.",
           "source_files": [
             "_data/processados/lawfare-1527-1546-biomm-renumerado.json",
             "_data/processados/zema-1547-1550-renumerado.json"
@@ -92,7 +92,7 @@
           ],
           "status": "confirmed",
           "merge_pending": false,
-          "notes": "Merge lawfare.json 2026-07-20: Operação Rejeito 1552-1571.",
+          "notes": "Merge lawfare.json 2026-07-21: Operação Rejeito 1552-1571.",
           "source_files": [
             "_data/processados/lawfare-batch-rejeito-1552-1571.json"
           ]
@@ -271,14 +271,22 @@
           ],
           "status": "confirmed",
           "notes": "Merge todo 2026-07-20: main IDs 1631-1634."
+        },
+        {
+          "range": [
+            1635,
+            1635
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-07-21: main IDs 1635-1635."
         }
       ],
-      "last_id": 1634,
-      "last_jekyll_published": 1634,
+      "last_id": 1635,
+      "last_jekyll_published": 1635,
       "last_produced": 1576,
-      "next_available": 1635,
+      "next_available": 1636,
       "merge_queue": [],
-      "last_confirmed": 1634,
+      "last_confirmed": 1635,
       "last_session_produced": 1600
     },
     "thematic": {
@@ -1189,13 +1197,20 @@
         {
           "id": 226,
           "status": "confirmed",
-          "topic": "T-226 (lawfare-batch-1631-1635-varredura-jul2026.json)",
-          "artifact": "2026-07-06-o-ciclo-do-penduricalho-restricao-burla-e-autolegitimacao-mar-jul2026.md",
-          "notes": "Estudo Jekyll _posts/estudos/2026-07-06-o-ciclo-do-penduricalho-restricao-burla-e-autolegitimacao-mar-jul2026.md"
+          "topic": "Ciclo do Penduricalho — P11 Judiciário mar-jul/2026 (T-226)",
+          "artifact": "ciclo-penduricalho-p11-judiciario",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-07-06-o-ciclo-do-penduricalho-restricao-burla-e-autolegitimacao-mar-jul2026)."
+        },
+        {
+          "id": 227,
+          "status": "confirmed",
+          "topic": "P04 pela Direita — espelhos P04b OBS narco-soberania (T-227)",
+          "artifact": "p04-pela-direita-espelho-p04b",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-07-20-p04-pela-direita-narco-soberania-eleitoral-e-diplomacia-das-sombras-como-espelhos-estrutur)."
         }
       ],
-      "last_id": 226,
-      "next_available": 227,
+      "last_id": 227,
+      "next_available": 228,
       "pending": [],
       "pending_notes": {}
     },
@@ -1226,14 +1241,27 @@
       "status": "confirmed",
       "last_sync": "2026-07-19",
       "nota_revisao": "PREC-1891-14 lacuna Castilhos; fontes CPDOC reforçadas em PREC-1891-01/1895-04"
+    },
+    "historical_precedents_pos1990": {
+      "description": "Sidecar pos-1990 (pre-corpus 1990+) — namespace PREC-AAAA-NN",
+      "id_format": "PREC-AAAA-NN",
+      "source_file": "_data/precedentes-pos-1990.json",
+      "periodo": "1997+",
+      "total": 1,
+      "last_id": "PREC-1997-05",
+      "entries": [
+        "PREC-1997-05"
+      ],
+      "status": "confirmed",
+      "last_sync": "2026-07-21"
     }
   },
   "sync_status": {
-    "main_track_last_sync": "2026-07-20",
-    "thematic_track_last_sync": "2026-07-20",
+    "main_track_last_sync": "2026-07-21",
+    "thematic_track_last_sync": "2026-07-21",
     "ids_confirmed_total": {
-      "main_track": "1634",
-      "thematic_track": 226
+      "main_track": "1635",
+      "thematic_track": 227
     },
     "ids_pending_production": [],
     "artifacts_without_thematic_id": [],
@@ -1417,7 +1445,36 @@
       "T-196 Radar Top 30 publicado em estudos/ (2026-07-20)",
       "Próximo thematic: T-226; main next=1631",
       "lawfare.json last_id=1634; próximo ID livre=1635",
-      "Próximo thematic: T-227; main next=1635"
+      "Próximo thematic: T-227; main next=1635",
+      "lawfare.json last_id=1635; próximo ID livre=1636",
+      "Fila editorial 2026-07-21: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-07-21)",
+      "T-198 COAF × Moraes publicado (2026-07-21)",
+      "T-199 Lojas Americanas publicado (2026-07-21)",
+      "T-200 Estatais rombo P11 publicado (2026-07-21)",
+      "T-201 PCC transnacional publicado (2026-07-21)",
+      "T-202 Delegada × PCC publicado (2026-07-21)",
+      "T-203 Zelotes CARF publicado (2026-07-21)",
+      "T-204 Gastos Paris publicado (2026-07-21)",
+      "T-205 Duplo padrão corpus publicado (2026-07-21)",
+      "T-206 SPLC corpus publicado (2026-07-21)",
+      "T-207 Vaza Toga corpus publicado (2026-07-21)",
+      "T-208 Narrativa vs Evidência publicado (2026-07-21)",
+      "T-209 JustiçaWatch Brasil publicado (2026-07-21)",
+      "T-210 Cluster Sepse Parasitas publicado (2026-07-21)",
+      "T-211 Sepse 2ª fase publicado (2026-07-21)",
+      "T-212 Sepse UTI publicado (2026-07-21)",
+      "T-213 CGU Sepse publicado (2026-07-21)",
+      "T-214 Status Sepse publicado (2026-07-21)",
+      "T-215 Vorcaro STF publicado (2026-07-21)",
+      "T-216 TSE USAID publicado (2026-07-21)",
+      "T-217 Seletividade TSE publicado (2026-07-21)",
+      "T-218 Ouro ilegal P08 publicado (2026-07-21)",
+      "T-219 Farra INSS publicado (2026-07-21)",
+      "T-220 PCC-OFAC Arpar publicado (2026-07-21)",
+      "T-221 Nemo judex DPU publicado (2026-07-21)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-07-21)",
+      "Próximo thematic: T-228; main next=1636"
     ],
     "notes": [
       "Correção 2026-07-18: ID 1520→P04b imprensa; revisão criminal Bolsonaro→1621; duplicata lawfare/ removida.",
@@ -1456,7 +1513,7 @@
     "custeio_vs_top30": {
       "T-191": "Custeio P11 — estudo canônico",
       "T-196": "Radar Top 30 — renumerado do antigo T-191",
-      "date": "2026-07-20"
+      "date": "2026-07-21"
     },
     "pcc_namespace": {
       "range": "1481-1500",
