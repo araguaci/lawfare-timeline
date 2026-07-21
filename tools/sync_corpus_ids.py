@@ -224,6 +224,10 @@ def main() -> None:
             "GI-TOC — crime organizado tipo máfia 8/10, resiliência 4,92/10 (T-225)",
             "gi-toc-brasil-crime-organizado-resiliencia",
         ),
+        226: (
+            "Ciclo do Penduricalho — P11 Judiciário mar-jul/2026 (T-226)",
+            "ciclo-penduricalho-p11-judiciario",
+        ),
     }
     for tid, (topic, artifact) in t_meta.items():
         note = f"Estudo Jekyll _posts/estudos/ ({t_posts.get(tid, '—')})."

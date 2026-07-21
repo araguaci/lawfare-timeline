@@ -1,97 +1,73 @@
 # Próximos passos · lawfare-timeline
 
-**Atualizado:** 2026-07-20 (batch UK CPIN 1629–1630 + T-225)
+**Atualizado:** 2026-07-20 (varredura 1631–1634 + T-226 · colisão 1635→1621)
 
-> Espelho canônico: `docs/TODO.md` · Notas operacionais: `_data/todo/todo.md` · Legado social: `docs/TODO-LEGACY.md`
+> Espelho: `docs/TODO.md` · Notas: `_data/todo/todo.md` · Legado: `docs/TODO-LEGACY.md`
 
 ---
 
 ## Snapshot
 
-| Track | Last | Próximo | Status |
-|-------|------|---------|--------|
-| Main | **1630** | **1631** | UK CPIN + correção efetivo PCC |
-| Thematic | **T-225** | **T-226** | GI-TOC 8/10 mafia-style, resiliência 4,92/10 |
-| Historical | **PREC-1930-07** | — | 14 entradas sidecar |
-| Fila `_data/todo/` | — | — | vazio (exc. notas) |
-| Validação | — | — | **0 erros** (gaps 1449–1480, 1506–1510 permanentes) |
+| Track | Last | Próximo | Validação |
+|-------|------|---------|-----------|
+| Main | **1634** | **1635** | **0 erros** |
+| Thematic | **T-226** | **T-227** | gaps 1449–1480 permanentes |
+| Historical | PREC-1930-07 | — | 14 entradas sidecar |
+| Fila `_data/todo/` | vazio | — | — |
 
 ---
 
-## Fila editorial
-
-| Arquivo | Status |
-|---------|--------|
-| *(vazio)* | Próximo batch → main **1631+** ou T-226 |
-| `proposta-padrao-P13.md` | Arquivado (referência) |
-
----
-
-## Rodadas recentes (jul/2026)
-
-### 1629–1630 + T-225 ✅ (20/07/2026)
+## Rodada varredura 08–20/jul ✅ (20/07/2026)
 
 | ID | Evento | Padrão |
 |----|--------|--------|
-| 1629 | UK Home Office CPIN — PCC/CV (missão campo set/2024) | P10 |
-| 1630 | Correção efetivo PCC: 20k núcleo vs 100k agregado (ev-contested) | P04 |
-| T-225 | GI-TOC — 8/10 mafia-style, resiliência 4,92/10 | P10/P11 |
+| 1631 | Bruno Dantas / licitação R$ 1 bi Porto Santos | P05/P07/P09/P11 |
+| 1632 | ACX ITC → ministra STM Sterman R$ 700 mil (laranja) | P08/P10 |
+| 1633 | STF libera parte dos penduricalhos (30/06) | P11/P03 |
+| 1634 | Moraes/Dino 48h supersalários 7 TJs | P11/P06 |
+| T-226 | Ciclo do Penduricalho — P11 Judiciário mar–jul/2026 | P11 |
 
-Batch: `_data/processados/lawfare-batch-pcc-cv-ukcpin-1629-1630-T225.json`
+**Colisão resolvida:** id_1635 (Moraes/Bolsonaro 17/07) → **patch id_1621** (oitiva Flávio 28/07). id_1628 USTR não reproduzido.
 
-### T-224 sidecar PREC-* ✅ (19/07/2026)
-
-14 precedentes 1890–1930 · lacuna **PREC-1891-14** (Castilhos) · índice `_posts/estudos/2026-07-19-precedentes-republica-1891-1930.md`
-
-### Faixa 1620–1628 ✅ (18–19/07/2026)
-
-1620 Master/Reag (P10) · 1621 Moraes/Milei · 1622 Hawala · 1623 Consulado HK (P02) · 1624 Bolsonaro revisão · 1625 CPI CO (P06-B) · 1626–1627 RJ/Fux (P03) · 1628 USTR/Pix
-
-### Taxonomia ✅ (18/07/2026)
-
-Dashboard **v3.3** · METHODOLOGY **v2.4** · P06-B formalizado · P10 autônomo vs P11 · P13 arquivado
+Batch: `_data/processados/lawfare-batch-1631-1635-varredura-jul2026.json`
 
 ---
 
-## Colisões resolvidas (referência)
+## Rodadas anteriores (jul/2026)
 
-| Batch propôs | Ocupado por | → |
-|--------------|-------------|---|
-| 1609 USTR | OFAC Shimada | **1628** |
-| 1624 CPI | Bolsonaro revisão | **1625** |
-| 1577/1580 RJ | Cremesp / Virgílio | **1626–1627** |
-| 1520/176 | P04b imprensa / Bolsonaro | 1520 restaurado · **1624** |
+| Faixa | Conteúdo |
+|-------|----------|
+| 1629–1630 + T-225 | UK CPIN PCC/CV · efetivo PCC 20k vs 100k · GI-TOC |
+| T-224 | Sidecar PREC-* (14 entradas, PREC-1891-14) |
+| 1620–1628 | Master · Hawala · HK · CPI · RJ · USTR |
+| Taxonomia 18/07 | Dashboard v3.3 · P06-B · P10/P11 · P13 arquivado |
 
 ---
 
 ## Pendências abertas
 
-| Item | Prioridade | Notas |
-|------|------------|-------|
-| Posts PREC individuais (14 slugs) | Baixa | Fase 3 T-224 — opcional |
-| Formalizar P04b em METHODOLOGY | Média | Proposta documentada |
-| Archive.org espelhamento | Média | `tools/archive_org_mirror.py` — 1663 URLs |
-| Recuperação shadowban @araguaci | Externa | — |
-| X Article jul/2026 | ✅ | `artigos/corpus-julho-7-20-2026-xarticle.md` |
-
-Histórico completo T-180–T-223: ver commits e `_data/processados/`.
+| Item | Prioridade |
+|------|------------|
+| Posts PREC individuais (14 slugs) | Baixa |
+| Formalizar P04b em METHODOLOGY | Média |
+| Archive.org espelhamento (1663 URLs) | Média |
+| P11-B Judiciário (T-226) — formalizar subpattern | Média |
+| Recuperação shadowban @araguaci | Externa |
 
 ---
 
 ## Comandos
 
 ```bash
-python scripts/sync_todo_current.py    # merge batch _data/todo/*.json
-python tools/sync_corpus_ids.py        # alinha sync file
-pwsh -File tools/validate-ids.ps1      # gate: 0 erros obrigatório
+python scripts/sync_todo_current.py
+python tools/sync_corpus_ids.py
+pwsh -File tools/validate-ids.ps1
 ```
 
 ---
 
 ## Referências
 
+- Corpus: `_data/lawfare.json` (1597 entradas · ID 1–1634)
 - Sync: `_data/claude.ai-corpus-ids-sync.json`
-- Corpus: `_data/lawfare.json` (1593 entradas · ID 1–1630)
-- Sidecar: `_data/precedentes-republica.json`
-- Portal: [lawfare-timeline.vercel.app](https://lawfare-timeline.vercel.app)
-- Dashboard: [gosurf.site/padroes-sistemicos-dashboard](https://gosurf.site/padroes-sistemicos-dashboard)
+- [lawfare-timeline.vercel.app](https://lawfare-timeline.vercel.app)
