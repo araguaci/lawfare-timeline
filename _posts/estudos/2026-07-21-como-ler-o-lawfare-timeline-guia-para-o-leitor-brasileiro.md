@@ -3,9 +3,9 @@ title: "Como Ler o Lawfare Timeline — Guia Sem Jargão Para o Leitor Brasileir
 description: "Guia sem jargão para navegar o corpus: por que o projeto existe, os 5 artigos essenciais, e 3 leituras por perfil de leitor e por categoria."
 date: 2026-07-21T10:00:00-03:00
 image:
-  path: "/assets/solid/compass.svg"
+  path: "/assets/img/como-ler-lawfare-timeline-guia-brasileiro-xarticle-hero.png"
 tags: ["lawfare", "estudos", "diagnostico", "censura", "guia", "corrupcao", "justica", "impunidade"]
-categories: estudos
+categories: estudos1.600+ entradas entre 1855 e 2026 — e ninguém deveria ler tudo de uma vez. / Guia: 5 artigos para começar, roteiro por perfil (cidadão, investigador, juiz, delegado, diplomata) e os 3 melhores de cada categoria.
 mermaid: false
 pin: true
 ---
