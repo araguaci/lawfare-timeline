@@ -510,7 +510,9 @@ def process_all(dry_run: bool) -> tuple[list[dict], list[tuple[int, str, str]], 
             continue
 
         if isinstance(data, dict) and isinstance(data.get("entries"), list):
-            items = data["entries"]
+            items = list(data["entries"])
+            if isinstance(data.get("thematic_entries"), list):
+                items.extend(data["thematic_entries"])
         elif isinstance(data, list):
             items = data
         else:

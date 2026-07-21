@@ -220,6 +220,10 @@ def main() -> None:
             "Precedentes República 1891–1930 — sidecar PREC-* (T-224)",
             "precedentes-republica-1891-1930",
         ),
+        225: (
+            "GI-TOC — crime organizado tipo máfia 8/10, resiliência 4,92/10 (T-225)",
+            "gi-toc-brasil-crime-organizado-resiliencia",
+        ),
     }
     for tid, (topic, artifact) in t_meta.items():
         note = f"Estudo Jekyll _posts/estudos/ ({t_posts.get(tid, '—')})."
