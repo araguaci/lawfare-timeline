@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Eduardo Bolsonaro acusa Huawei de espionagem via 5G; embaixada da China ameaça "consequências negativas""
+title: "Eduardo Bolsonaro acusa Huawei de espionagem via 5G; embaixada da China ameaça \"consequências negativas\""
 description: "Deputado federal Eduardo Bolsonaro, presidente da Comissão de Relações Exteriores da Câmara, publica em rede social acusação de espionagem chinesa via tecnologia 5G da Huawei, associando-se à iniciati..."
 date: 2020-11-24
 image: /assets/img/dragao-onca-brasil-federal.webp

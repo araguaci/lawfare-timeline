@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Workshop "Promoting China-Brazil Scientific Research on Climate & Nature" reúne ONGs em Pequim"
+title: "Workshop \"Promoting China-Brazil Scientific Research on Climate & Nature\" reúne ONGs em Pequim"
 description: "Evento em Pequim reúne organizações não-governamentais brasileiras (incluindo IPAM) e chinesas para alinhar estratégias de monitoramento de impactos climáticos, desmatamento e cadeias produtivas, em p..."
 date: 2025-06-01
 image: /assets/img/dragao-onca-para.webp

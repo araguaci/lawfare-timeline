@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Observatório do Clima cataloga 70 projetos do "Pacote da Destruição" em tramitação no Congresso para 2026"
+title: "Observatório do Clima cataloga 70 projetos do \"Pacote da Destruição\" em tramitação no Congresso para 2026"
 description: "O Observatório do Clima, rede da qual a APIB faz parte, publica levantamento identificando 70 projetos legislativos que ameaçam salvaguardas ambientais e direitos territoriais em 2026, incluindo a PEC..."
 date: 2026-03-04
 image: /assets/img/dragao-onca-braco-juridico.webp

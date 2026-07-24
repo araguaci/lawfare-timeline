@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Congresso derruba vetos de Lula ao "PL da Devastação" dois dias após o encerramento da COP30"
+title: "Congresso derruba vetos de Lula ao \"PL da Devastação\" dois dias após o encerramento da COP30"
 description: "Em sessão mista, o Congresso Nacional derruba a maioria dos vetos do presidente Lula às Leis 15.190/2025 (Licenciamento Ambiental) e 15.300/2025 (Licença Ambiental Especial), dois dias após o encerram..."
 date: 2025-11-27
 image: /assets/img/dragao-onca-braco-juridico.webp

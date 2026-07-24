@@ -68,26 +68,37 @@ layout: page
         {% assign last_year = cur_year %}
       {% endif %}
 
-      <li class="mb-2">
-        {% assign ts = post.date | date: '%s' %}
-        <span class="date day" data-ts="{{ ts }}" data-df="DD">{{ post.date | date: '%d' }}</span>
-        <span class="date month small text-muted ms-1" data-ts="{{ ts }}" data-df="{{ df_dayjs_m }}">
-          {{ post.date | date: df_strftime_m }}
-        </span>
+      <li class="mb-3">
+        <div class="row">
+          <div class="col-md-9">
+            {% assign ts = post.date | date: '%s' %}
+            <span class="date day" data-ts="{{ ts }}" data-df="DD">{{ post.date | date: '%d' }}</span>
+            <span class="date month small text-muted ms-1" data-ts="{{ ts }}" data-df="{{ df_dayjs_m }}">
+              {{ post.date | date: df_strftime_m }}
+            </span>
 
-        <!-- Ícone de status/tipo -->
-        {% if post.timeline_id %}
-          <span class="badge bg-light text-dark" title="ID da entrada">{{ post.timeline_id }}</span>
-        {% endif %}
+            <!-- Ícone de status/tipo -->
+            {% if post.timeline_id %}
+              <span class="badge bg-light text-dark" title="ID da entrada">ID {{ post.timeline_id }}</span>
+            {% endif %}
 
-        <!-- Link para o artigo -->
-        <a href="{{ post.url | relative_url }}" class="ms-2">
-          <strong>{{ post.title }}</strong>
-        </a>
+            <!-- Link para o artigo -->
+            <a href="{{ post.url | relative_url }}" class="ms-2 text-decoration-none">
+              <strong>{{ post.title }}</strong>
+            </a>
 
-        <!-- Resumo compacto -->
-        <div class="text-muted small ms-4 mt-1">
-          {{ post.description | truncate: 120 }}
+            <!-- Resumo compacto -->
+            <div class="text-muted small ms-4 mt-1">
+              {{ post.description | truncate: 150 }}
+            </div>
+          </div>
+
+          <!-- Imagem thumbnail -->
+          {% if post.image %}
+          <div class="col-md-3">
+            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="img-thumbnail img-fluid" style="max-height: 80px; object-fit: cover;">
+          </div>
+          {% endif %}
         </div>
       </li>
 

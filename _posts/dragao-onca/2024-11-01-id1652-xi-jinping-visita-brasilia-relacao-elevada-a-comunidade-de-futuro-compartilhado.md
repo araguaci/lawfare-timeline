@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Xi Jinping visita Brasília; relação elevada a "Comunidade de Futuro Compartilhado Brasil-China por um Mundo Mais Justo e um Planeta Mais Sustentável""
+title: "Xi Jinping visita Brasília; relação elevada a \"Comunidade de Futuro Compartilhado Brasil-China por um Mundo Mais Justo e um Planeta Mais Sustentável\""
 description: "Visita de Estado de Xi Jinping ao Brasil, terceiro encontro com Lula desde 2023, resulta na elevação formal da relação bilateral a novo patamar institucional ('Comunidade de Futuro Compartilhado'), co..."
 date: 2024-11-01
 image: /assets/img/dragao-onca-brasil-federal.webp

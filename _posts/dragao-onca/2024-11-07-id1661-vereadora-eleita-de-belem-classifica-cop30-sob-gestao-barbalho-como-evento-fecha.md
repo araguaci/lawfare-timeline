@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Vereadora eleita de Belém classifica COP30 sob gestão Barbalho como "evento fechado para o povo""
+title: "Vereadora eleita de Belém classifica COP30 sob gestão Barbalho como \"evento fechado para o povo\""
 description: "Vivi Reis, vereadora eleita de Belém, declara em entrevista que a COP30 sob a gestão de Helder Barbalho será 'um evento fechado para o povo, com foco em grandes projetos que apenas beneficiam o agrone..."
 date: 2024-11-07
 image: /assets/img/dragao-onca-para.webp

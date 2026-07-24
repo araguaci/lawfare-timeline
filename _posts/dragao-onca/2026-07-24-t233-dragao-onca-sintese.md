@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "O Dragão e a Onça — Síntese Comparativa: 5 capítulos (Federal, GO, PA, AM, MG), tese "soberania na conta do governador", KPIs e alertas cross-estaduais"
+title: "O Dragão e a Onça — Síntese Comparativa: 5 capítulos (Federal, GO, PA, AM, MG), tese \"soberania na conta do governador\", KPIs e alertas cross-estaduais"
 description: "Artefato de síntese, não introduz fatos novos — consolida e cruza os 4 capítulos estaduais (Caiado/GO, Barbalho/PA, Wilson Lima/AM, Zema/MG) e o capítulo federal já produzidos. Tese central sintetizad..."
 date: 2026-01-01
 image: /assets/img/dragao-onca-sintese.webp
-tags: ["dragao-onca", "", "P04b", "P05"]
+tags: ["dragao-onca", "2026", "P04b", "P05"]
 categories: dragao-onca
 timeline_id: 233
 status: confirmed

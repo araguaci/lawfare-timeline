@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Lula discursa no seminário "Brasil-China: Um Salto Necessário" no BNDES"
+title: "Lula discursa no seminário \"Brasil-China: Um Salto Necessário\" no BNDES"
 description: "Presidente Lula profere discurso de abertura de seminário no BNDES definindo a aproximação com a China como 'salto necessário' para a política externa e econômica brasileira...."
 date: 2003-04-30
 image: /assets/img/dragao-onca-brasil-federal.webp

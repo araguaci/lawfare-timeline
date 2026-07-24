@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Zema, "encalhado nas pesquisas", redobra críticas ao STF como estratégia de viabilização eleitoral"
+title: "Zema, \"encalhado nas pesquisas\", redobra críticas ao STF como estratégia de viabilização eleitoral"
 description: "Com desempenho fraco nas pesquisas presidenciais, Zema troca o discurso de gestor técnico por confronto direto com o Supremo Tribunal Federal, na tentativa de se viabilizar eleitoralmente para 2026. J..."
 date: 2026-07-01
 image: /assets/img/dragao-onca-minas-gerais.webp

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Vale e Pará firmam "Programa Estrutura": até 40% de dívida da mineradora convertida em obras públicas escolhidas com o governo"
+title: "Vale e Pará firmam \"Programa Estrutura\": até 40% de dívida da mineradora convertida em obras públicas escolhidas com o governo"
 description: "Regulamentação do Programa Estrutura permite que a Vale e outras mineradoras convertam até 40% de valores devidos ao estado em obras públicas definidas em conjunto com o governo, em vez de pagamento d..."
 date: 2023-01-01
 image: /assets/img/dragao-onca-para.webp

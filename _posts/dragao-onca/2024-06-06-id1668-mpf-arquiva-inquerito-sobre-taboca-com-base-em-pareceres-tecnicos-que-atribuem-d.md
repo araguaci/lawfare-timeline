@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "MPF arquiva inquérito sobre Taboca com base em pareceres técnicos que atribuem danos a "chuvas extraordinárias""
+title: "MPF arquiva inquérito sobre Taboca com base em pareceres técnicos que atribuem danos a \"chuvas extraordinárias\""
 description: "O Ministério Público Federal arquiva inquérito inicial sobre denúncias de contaminação por metais pesados na bacia hidrográfica próxima à Mineração Taboca, com a decisão baseada exclusivamente em pare..."
 date: 2024-06-06
 image: /assets/img/dragao-onca-amazonas.webp
