@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Dragão e a Onça — Capítulo Amazonas | República Sequestrada</title>
+<meta name="description" content="Mineração Taboca/China Nonferrous e a contaminação denunciada pelo povo Waimiri Atroari, cluster eletroeletrônico chinês no PIM, e a Zona Franca como plataforma eleitoral de Wilson Lima.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --bg:#080c10;--bg2:#0f151b;--bg3:#161e26;
+  --dragon:#d4342c;--dragon2:#ff6b5f;--dragon-dim:#5c1512;
+  --jaguar:#e8b23d;--jaguar2:#ffd270;--jaguar-dim:#6b4e12;
+  --gr:#3ecb6f;--gr2:#78f5a8;--blue:#4a9eff;--blue2:#7ab8ff;
+  --purple:#b07aff;--purple2:#d0a8ff;--teal:#2ecfb0;--teal2:#60ffd8;
+  --border:rgba(255,255,255,0.07);--text:#e8edf0;--text2:#8a99a8;
+  --font:'Syne',sans-serif;--mono:'JetBrains Mono',monospace;
+}
+body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh}
+header{padding:26px 30px 18px;border-bottom:2px solid var(--dragon-dim);background:linear-gradient(135deg,#080c10 0%,#0f1418 55%,#080c10 100%);position:relative;overflow:hidden}
+header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 25% 50%,rgba(212,52,44,0.08) 0%,transparent 55%),radial-gradient(ellipse at 75% 50%,rgba(46,207,176,0.07) 0%,transparent 55%)}
+.hbadge{display:inline-flex;align-items:center;gap:6px;background:rgba(212,52,44,0.1);border:1px solid var(--dragon-dim);border-radius:4px;padding:4px 12px;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--dragon2);text-transform:uppercase;margin-bottom:12px}
+.live-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(212,52,44,0.18);border:1px solid var(--dragon);border-radius:4px;padding:3px 12px;font-size:12px;font-weight:700;letter-spacing:1.5px;color:var(--dragon2);text-transform:uppercase;margin-left:8px}
+.live-dot{width:6px;height:6px;border-radius:50%;background:var(--dragon2);animation:pulse 1.2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+header h1{font-size:26px;font-weight:800;letter-spacing:-0.5px;color:#fff;line-height:1.15}
+header h1 span{color:var(--dragon2)}
+header h1 em{font-style:normal;color:var(--teal2)}
+.hmeta{display:flex;gap:18px;margin-top:12px;flex-wrap:wrap}
+.hm{font-size:12px;color:var(--text2);font-family:var(--mono)}
+.hm b{color:var(--teal2)}
+nav{display:flex;gap:4px;padding:12px 26px;background:rgba(10,14,18,0.96);border-bottom:2px solid var(--dragon-dim);box-shadow:0 6px 18px rgba(0,0,0,0.35);overflow-x:auto;flex-wrap:wrap;position:sticky;top:0;z-index:200;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.nb{padding:7px 14px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--text2);font-family:var(--font);font-size:12px;font-weight:600;cursor:pointer;transition:all .2s;white-space:nowrap;text-decoration:none;display:inline-block}
+.nb:hover{border-color:var(--dragon-dim);color:var(--dragon2)}
+.nb.act{background:linear-gradient(90deg,rgba(212,52,44,0.22),rgba(46,207,176,0.12));border-color:var(--dragon);color:#fff;font-weight:800;box-shadow:0 0 0 1px var(--dragon) inset}
+main{padding:0 20px 32px;max-width:1200px;margin:0 auto}
+.sec{padding:34px 0 12px;border-bottom:1px solid var(--border);scroll-margin-top:70px}
+.sec:last-of-type{border-bottom:none}
+.sec-title{font-size:20px;font-weight:800;color:#fff;margin-bottom:4px;display:flex;align-items:center;gap:12px}
+.sec-title .flag{font-size:15px}
+.sec-sub{font-size:12px;color:var(--text2);font-family:var(--mono);margin-bottom:16px}
+.kgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:16px 0 12px}
+@media(max-width:900px){.kgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.kgrid{grid-template-columns:1fr}}
+.kcard{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:14px 15px;position:relative;overflow:hidden}
+.kcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.kd::before{background:linear-gradient(90deg,var(--dragon),var(--dragon2))}
+.kt::before{background:linear-gradient(90deg,var(--teal),var(--teal2))}
+.kb::before{background:linear-gradient(90deg,var(--blue),var(--blue2))}
+.kp::before{background:linear-gradient(90deg,var(--purple),var(--purple2))}
+.klabel{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);margin-bottom:5px}
+.kval{font-size:20px;font-weight:800;line-height:1.1}
+.ksub{font-size:11px;color:var(--text2);margin-top:3px;font-family:var(--mono)}
+.kd .kval{color:var(--dragon2)}.kt .kval{color:var(--teal2)}.kb .kval{color:var(--blue2)}.kp .kval{color:var(--purple2)}
+.pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:12px}
+@media(max-width:768px){.pgrid{grid-template-columns:1fr}}
+.panel{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:12px}
+.ptitle{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.dd{background:var(--dragon)}.dt{background:var(--teal)}.db{background:var(--blue)}.dp{background:var(--purple)}
+.tag{display:inline-block;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:600;margin:2px 2px 2px 0;font-family:var(--mono)}
+.tg{background:rgba(62,203,111,0.1);color:#78f5a8;border:1px solid rgba(62,203,111,0.2)}
+.tgo{background:rgba(232,178,61,0.12);color:var(--jaguar2);border:1px solid rgba(232,178,61,0.25)}
+.tr{background:rgba(212,52,44,0.12);color:var(--dragon2);border:1px solid rgba(212,52,44,0.25)}
+.tb{background:rgba(74,158,255,0.1);color:var(--blue2);border:1px solid rgba(74,158,255,0.2)}
+.tp{background:rgba(176,122,255,0.1);color:var(--purple2);border:1px solid rgba(176,122,255,0.2)}
+p.body{font-size:14px;color:var(--text2);line-height:1.75;margin-bottom:12px}
+.tli{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--border)}
+.tli:last-child{border-bottom:none}
+.tld{font-family:var(--mono);font-size:11px;color:var(--teal2);min-width:100px;font-weight:600;padding-top:2px;flex-shrink:0}
+.tltitle{font-size:14px;font-weight:700;margin-bottom:3px}
+.tldesc{font-size:12px;color:var(--text2);line-height:1.6}
+.agrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.acard{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px 14px}
+.aname{font-size:14px;font-weight:700;margin-bottom:3px}
+.arole{font-size:11px;color:var(--text2);font-family:var(--mono);margin-bottom:6px}
+.astatus{font-size:12px;color:var(--text2);line-height:1.5}
+.ritem{padding:11px 14px;border-radius:8px;margin-bottom:8px;border-left:3px solid;background:var(--bg3)}
+.rcrit{border-color:var(--dragon)}.ralto{border-color:var(--jaguar2)}.rmedio{border-color:var(--blue)}
+.rheader{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;flex-wrap:wrap;gap:6px}
+.rname{font-size:14px;font-weight:700}
+.rbadge{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;border-radius:3px;font-family:var(--mono)}
+.bcrit{background:rgba(212,52,44,0.2);color:var(--dragon2)}.balto{background:rgba(232,178,61,0.2);color:var(--jaguar2)}.bmedio{background:rgba(74,158,255,0.15);color:var(--blue2)}
+.rdesc{font-size:12px;color:var(--text2);line-height:1.6}
+.destaque-grave{padding:14px 16px;border-radius:8px;background:rgba(212,52,44,0.1);border:1px solid rgba(212,52,44,0.3);margin:12px 0}
+.destaque-label{font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--dragon2);margin-bottom:6px}
+.lacuna{padding:11px 14px;border-radius:8px;margin-bottom:8px;background:var(--bg3);border-left:3px solid var(--purple)}
+.lacuna b{color:var(--purple2)}
+.refitem{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);align-items:flex-start}
+.refitem:last-child{border-bottom:none}
+.refnum{font-family:var(--mono);font-size:11px;color:var(--text2);min-width:30px;margin-top:2px}
+.reftitle{font-size:14px;font-weight:600;margin-bottom:2px}
+.reftitle a{color:var(--teal2);text-decoration:none;border-bottom:1px dotted var(--jaguar-dim)}
+.reftitle a:hover{color:#fff;border-bottom-color:var(--teal2)}
+.refsrc{font-size:11px;color:var(--text2);font-family:var(--mono)}
+footer{padding:22px 26px 40px;border-top:2px solid var(--dragon-dim);text-align:center}
+.footcc0{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;color:var(--text2);letter-spacing:1px}
+.footcc0 b{color:var(--teal2)}
+.footnote{font-size:11px;color:var(--text2);margin-top:8px;font-family:var(--mono)}
+#gotop{position:fixed;right:20px;bottom:20px;z-index:300;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--dragon),var(--teal));color:#0b0f0a;border:none;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,0.45);opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .25s,transform .25s}
+#gotop.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+#gotop:hover{filter:brightness(1.1)}
+.series-nav{margin:0 auto;max-width:1200px;padding:28px 20px 0;border-top:2px solid var(--border)}
+.series-nav-title{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--text2);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.series-nav-title::before{content:'';flex:1;height:1px;background:var(--border)}
+.series-nav-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:14px}
+@media(max-width:720px){.series-nav-grid{grid-template-columns:1fr}}
+.series-card{display:block;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 16px;text-decoration:none;color:inherit;transition:border-color .2s,transform .15s;position:relative;overflow:hidden}
+.series-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--dragon),var(--jaguar))}
+.series-card:hover{border-color:rgba(232,178,61,.45);transform:translateY(-1px)}
+.series-card.is-current{border-color:var(--jaguar);box-shadow:0 0 0 1px rgba(232,178,61,.35) inset;pointer-events:none;opacity:.92}
+.series-card-id{font-family:var(--mono);font-size:10px;color:var(--jaguar2);letter-spacing:1px;margin-bottom:4px}
+.series-card-chapter{font-size:14px;font-weight:800;color:#fff;margin-bottom:4px;line-height:1.2}
+.series-card-desc{font-size:12px;color:var(--text2);line-height:1.55}
+.series-hub{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--jaguar2);text-decoration:none;font-family:var(--mono);margin-bottom:8px}
+.series-hub:hover{color:#fff}
+</style>
+</head>
+<body>
+<header>
+  <div style="display:flex;align-items:center;gap:0;flex-wrap:wrap">
+    <div class="hbadge">Série · Capítulo Estadual</div>
+    <div class="live-badge"><span class="live-dot"></span>Investigação Federal Ativa (MPF + PF)</div>
+  </div>
+  <h1>O <span>Dragão</span> e a <em>Onça</em> — Capítulo <em>Amazonas</em></h1>
+  <div class="hmeta">
+    <span class="hm"><b>Governador:</b> Wilson Lima (2019–2026, pré-candidato ao Senado)</span>
+    <span class="hm"><b>Caso central:</b> Mineração Taboca / China Nonferrous — T.I. Waimiri Atroari</span>
+    <span class="hm"><b>Cluster industrial:</b> BYD, Deye, Megmeet (PIM)</span>
+    <span class="hm"><b>Precedente histórico:</b> quase-genocídio Waimiri Atroari, BR-174, anos 1970</span>
+  </div>
+</header>
+
+<nav id="mainnav">
+  <a class="nb" href="#visao" data-target="visao">Visão Geral</a>
+  <a class="nb" href="#taboca" data-target="taboca">Taboca & Waimiri Atroari</a>
+  <a class="nb" href="#pim" data-target="pim">Cluster PIM (BYD/Deye/Megmeet)</a>
+  <a class="nb" href="#eleitoral" data-target="eleitoral">Zona Franca & Senado</a>
+  <a class="nb" href="#atores" data-target="atores">Atores</a>
+  <a class="nb" href="#riscos" data-target="riscos">Riscos Estruturais</a>
+  <a class="nb" href="#lacunas" data-target="lacunas">Lacunas Investigativas</a>
+  <a class="nb" href="#refs" data-target="refs">Referências</a>
+</nav>
+
+<main>
+
+<section id="visao" class="sec">
+  <div class="sec-title"><span class="flag">📍</span>Visão Geral</div>
+  <div class="sec-sub">O caso mais grave da série até agora</div>
+  <div class="kgrid">
+    <div class="kcard kd"><div class="klabel">Aldeias afetadas (rio Alalaú)</div><div class="kval">22</div><div class="ksub">dependem do rio para água, caça e alimentação</div></div>
+    <div class="kcard kt"><div class="klabel">Investimento Taboca 2026-2028</div><div class="kval">US$100mi</div><div class="ksub">para dobrar produção de minerais críticos</div></div>
+    <div class="kcard kb"><div class="klabel">Pagamento suspeito à ACWA</div><div class="kval">R$12,3mi</div><div class="ksub">2 dias após desconfiança total da comunidade</div></div>
+    <div class="kcard kp"><div class="klabel">Precedente histórico</div><div class="kval">anos 1970</div><div class="ksub">quase-genocídio Waimiri Atroari na construção da BR-174</div></div>
+  </div>
+  <div class="destaque-grave">
+    <div class="destaque-label">⚠ Por que este é o capítulo mais grave da série até agora</div>
+    <p class="body" style="margin-bottom:0">Nenhum outro capítulo reúne, simultaneamente: (1) uma estatal chinesa (China Nonferrous) no controle de uma mineradora que opera ao lado de terra indígena, (2) denúncia de contaminação por mercúrio corroborada por relatório da FUNAI, (3) um pagamento direto de R$12,3 milhões à associação comunitária firmado dois dias depois de a comunidade declarar desconfiança total na empresa, sem mediação do MPF, e (4) escalada institucional simultânea — FUNAI, MPF (inquérito civil) e Polícia Federal (investigação criminal) atuando ao mesmo tempo em julho de 2026. E tudo isso sobre um povo que já quase foi exterminado nos anos 1970 pelo mesmo tipo de projeto de infraestrutura estatal.</p>
+  </div>
+</section>
+
+<section id="taboca" class="sec">
+  <div class="sec-title"><span class="flag">⛏️</span>Mineração Taboca & Povo Waimiri Atroari</div>
+  <div class="sec-sub">De aquisição chinesa a investigação federal — linha do tempo</div>
+  <div class="panel">
+    <div class="tli"><div class="tld">2024</div><div><div class="tltitle">China Nonferrous Metal Mining Group adquire a Taboca</div><div class="tldesc">Estatal chinesa assume comando administrativo da mina de Pitinga (cassiterita, tântalo, nióbio; estuda terras raras). <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">6 jun 2024</div><div><div class="tltitle">MPF arquiva inquérito inicial</div><div class="tldesc">Decisão baseada exclusivamente em pareceres da ANM e do Ipaam (órgão estadual que licencia a própria atividade), que atribuem danos a "chuvas extraordinárias". <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">ago 2025</div><div><div class="tltitle">Relatório da FUNAI (via Aqua Viridi) reacende denúncia</div><div class="tldesc"><span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">29 set 2025</div><div><div class="tltitle">Waimiri Atroari denunciam contaminação por mercúrio no rio Alalaú</div><div class="tldesc">Odor fétido, espuma, peixes mortos, crianças adoecendo. 22 aldeias dependem do rio. MPF reabre Inquérito Civil nº 1.13.000.002675/2025-46. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">jan 2026</div><div><div class="tltitle">Taboca anuncia US$100mi para dobrar produção até 2028</div><div class="tldesc">Anúncio de expansão na mesma janela em que a empresa está sob investigação ativa. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">jan 2026</div><div><div class="tltitle">Termo de Cooperação nº 01/2026: R$12,3mi à ACWA sem mediação do MPF</div><div class="tldesc">Assinado 2 dias após lideranças expressarem desconfiança total na empresa. MPF vê o acordo com preocupação. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">8 abr 2026</div><div><div class="tltitle">Novo ofício Waimiri Atroari ao MPF-AM com suspeitas adicionais</div><div class="tldesc"><span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">5 jul 2026</div><div><div class="tltitle">Polícia Federal abre investigação própria</div><div class="tldesc">Caso escala de inquérito civil para investigação criminal federal. <span class="tag tg">ev-confirmed</span></div></div></div>
+  </div>
+</section>
+
+<section id="pim" class="sec">
+  <div class="sec-title"><span class="flag">🔋</span>Cluster Eletroeletrônico Chinês no PIM</div>
+  <div class="sec-sub">BYD, Deye, Megmeet — um eixo sem os mesmos sinais de captura</div>
+  <div class="panel">
+    <div class="tli"><div class="tld">2020</div><div><div class="tltitle">BYD instala fábrica de baterias no PIM</div><div class="tldesc">Expande em 2024 (blades, barramentos) e estuda em 2026 ampliar produção de componentes para veículos elétricos. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">set 2024</div><div><div class="tltitle">Deye anuncia primeira fábrica fora da China, no PIM</div><div class="tldesc">Inversores solares e baterias. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">14 jan 2026</div><div><div class="tltitle">Megmeet anuncia fábrica eletroeletrônica (R$20mi, 250 empregos)</div><div class="tldesc">Operação prevista para jul/2026; Suframa sinaliza outra empresa chinesa não identificada em negociação. <span class="tag tg">ev-confirmed</span></div></div></div>
+  </div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dt"></span>Contraste dentro da própria série</div>
+    <p class="body">A mesma BYD que opera em Manaus sem controvérsia pública relevante enfrentou, em sua unidade de Camaçari (Bahia), denúncias de trabalho escravo resolvidas via acordo de R$40mi com o Ministério Público do Trabalho. O padrão de risco do capital chinês <b style="color:var(--teal2)">varia por unidade operacional</b> — não deve ser generalizado sob um rótulo único de "captura chinesa".</p>
+  </div>
+</section>
+
+<section id="eleitoral" class="sec">
+  <div class="sec-title"><span class="flag">🗳️</span>Zona Franca & a Transição de Wilson Lima ao Senado</div>
+  <div class="sec-sub">Mesmo padrão estrutural documentado em Goiás — ativo estadual vira capital eleitoral pessoal</div>
+  <div class="panel">
+    <div class="tli"><div class="tld">10 jul 2025</div><div><div class="tltitle">Trump ameaça tarifa de 50%; impacto avaliado como marginal na ZFM</div><div class="tldesc">EUA representam apenas 6,5% das exportações da ZFM (1,7% do faturamento total é exportação) — menos de 0,11% do faturamento total sujeito à tarifa. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">1 jul 2026</div><div><div class="tltitle">Wilson Lima, pré-candidato ao Senado, ataca nota da Receita Federal sobre incentivos da ZFM</div><div class="tldesc">Classifica como "inadmissível"; cita crescimento de 85% do modelo (2021-2026) e 40 mil empregos criados desde 2019 como plataforma de campanha. <span class="tag tg">ev-confirmed</span></div></div></div>
+  </div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dp"></span>O paralelo com Caiado (Goiás)</div>
+    <p class="body">Um governador em fim de mandato converte o ativo econômico-estratégico estadual — em Goiás, terras raras; no Amazonas, o modelo fiscal da Zona Franca que atraiu BYD, Deye e Megmeet — em plataforma pessoal para o próximo cargo eletivo. Mesmo mecanismo estrutural (análogo a P09, captura simbólica), replicado em dois estados com partidos e contextos diferentes — sugerindo padrão sistêmico do federalismo brasileiro, não escolha de um único ator político.</p>
+  </div>
+</section>
+
+<section id="atores" class="sec">
+  <div class="sec-title"><span class="flag">🧭</span>Atores</div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dd"></span>Bloco Mineral (Chinês)</div>
+    <div class="agrid">
+      <div class="acard"><div class="aname">Mineração Taboca S.A.</div><div class="arole">Cassiterita, tântalo, nióbio — mina de Pitinga</div><div class="astatus">Sob controle da China Nonferrous desde 2024; sob investigação MPF+PF em 2026.</div></div>
+      <div class="acard"><div class="aname">China Nonferrous Metal Mining Group</div><div class="arole">Estatal chinesa, controladora da Taboca</div><div class="astatus">Define diretrizes de expansão agressiva na região amazônica.</div></div>
+      <div class="acard"><div class="aname">Associação Comunidade Waimiri Atroari (ACWA)</div><div class="arole">Entidade comunitária, receptora do Termo de Cooperação nº 01/2026</div><div class="astatus">Papel e representatividade questionados pelo MPF.</div></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dt"></span>Bloco Industrial (Chinês, PIM)</div>
+    <div class="agrid">
+      <div class="acard"><div class="aname">BYD</div><div class="arole">Baterias — PIM (Manaus) + Camaçari (BA) + Campinas</div><div class="astatus">Terceira fábrica no Brasil instalada em Manaus; sem controvérsia relevante localizada na unidade amazonense.</div></div>
+      <div class="acard"><div class="aname">Deye</div><div class="arole">Inversores solares e baterias</div><div class="astatus">Primeira fábrica fora da China, no PIM.</div></div>
+      <div class="acard"><div class="aname">Megmeet</div><div class="arole">Eletroeletrônicos</div><div class="astatus">Investimento inicial R$20mi, 250 empregos, operação prevista jul/2026.</div></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dp"></span>Atores Políticos e Institucionais</div>
+    <div class="agrid">
+      <div class="acard"><div class="aname">Wilson Lima</div><div class="arole">Governador do Amazonas (2019–2026); pré-candidato ao Senado</div><div class="astatus">Conduziu pessoalmente as missões à China; converte defesa da ZFM em plataforma eleitoral.</div></div>
+      <div class="acard"><div class="aname">Ministério Público Federal (AM)</div><div class="arole">Investiga Taboca</div><div class="astatus">Arquivou em 2024, reabriu em 2025 sob novo inquérito civil.</div></div>
+      <div class="acard"><div class="aname">Polícia Federal</div><div class="arole">Investigação criminal aberta em jul/2026</div><div class="astatus">Escalada institucional mais recente do caso.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="riscos" class="sec">
+  <div class="sec-title"><span class="flag">⚠️</span>Riscos Estruturais</div>
+  <div class="panel">
+    <div class="ritem rcrit"><div class="rheader"><div class="rname">Auto-referência no licenciamento (análogo a conflito de juiz natural)</div><div class="rbadge bcrit">ponto_de_inflexao</div></div><div class="rdesc">O arquivamento de 2024 se apoiou exclusivamente em pareceres do próprio órgão estadual responsável por licenciar a atividade da Taboca — mesma estrutura de auto-referência que o corpus documenta no eixo judicial (nemo judex in causa propria), aqui no eixo ambiental-regulatório.</div></div>
+    <div class="ritem rcrit"><div class="rheader"><div class="rname">Pagamento direto pós-desconfiança, sem mediação institucional</div><div class="rbadge bcrit">ev-confirmed</div></div><div class="rdesc">R$12,3mi entregues à ACWA dois dias após a comunidade declarar desconfiança total na empresa — padrão reconhecível de neutralização de oposição comunitária via transação financeira direta, à revelia do órgão de controle.</div></div>
+    <div class="ritem ralto"><div class="rheader"><div class="rname">Precedente histórico não mencionado nos anúncios de expansão</div><div class="rbadge balto">ev-inference</div></div><div class="rdesc">O anúncio de investimento de US$100mi para dobrar a produção (jan/2026) não menciona o quase-genocídio Waimiri Atroari dos anos 1970 nem as denúncias de contaminação em curso.</div></div>
+    <div class="ritem rmedio"><div class="rheader"><div class="rname">Ativo estadual como capital eleitoral pessoal (análogo P09)</div><div class="rbadge bmedio">ev-inference</div></div><div class="rdesc">Mesmo padrão do capítulo Goiás — governador converte modelo econômico estadual em plataforma de campanha ao deixar o cargo executivo.</div></div>
+  </div>
+</section>
+
+<section id="lacunas" class="sec">
+  <div class="sec-title"><span class="flag">🔍</span>Lacunas Investigativas</div>
+  <div class="panel">
+    <div class="lacuna"><b>Valor da aquisição da Taboca pela China Nonferrous (2024)</b> — não divulgado publicamente nas fontes consultadas.</div>
+    <div class="lacuna"><b>Perícia técnica independente sobre a contaminação</b> — o arquivamento de 2024 não contou com perícia desvinculada do órgão estadual que licencia a própria atividade.</div>
+    <div class="lacuna"><b>Critério de definição do valor de R$12,3mi à ACWA</b> — e se a ACWA representa todas as 22 aldeias afetadas ou apenas parte da comunidade.</div>
+    <div class="lacuna"><b>Escopo exato da investigação da Polícia Federal (jul/2026)</b> — se cobre também o pagamento à ACWA, não está claro nas fontes.</div>
+    <div class="lacuna"><b>Condicionantes socioambientais do novo investimento de US$100mi</b> — não há registro público de exigências vinculadas ao anúncio de expansão.</div>
+  </div>
+</section>
+
+<section id="refs" class="sec">
+  <div class="sec-title"><span class="flag">📚</span>Referências</div>
+  <div class="sec-sub">Fontes consultadas, com link direto</div>
+  <div class="panel">
+    <div class="refitem"><div class="refnum">[01]</div><div><div class="reftitle"><a href="https://revistacenarium.com.br/mpf-investiga-mineracao-taboca-por-colapso-ambiental-no-amazonas/" target="_blank" rel="noopener">MPF investiga Mineração Taboca por colapso ambiental no Amazonas</a></div><div class="refsrc">Revista Cenarium • 01/07/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[02]</div><div><div class="reftitle"><a href="https://www.business-humanrights.org/en/latest-news/brasil-povo-waimiri-atroari-denuncia-contamina%C3%A7%C3%A3o-do-rio-alala%C3%BA-no-amazonas-por-mineradora-chinesa/" target="_blank" rel="noopener">Brazil: Waimiri-Atroari people denounce contamination of the Alalaú River</a></div><div class="refsrc">Business & Human Rights Resource Centre • 29/09/2025</div></div></div>
+    <div class="refitem"><div class="refnum">[03]</div><div><div class="reftitle"><a href="https://jornalimpressobrasil.com.br/mineracao-waimiri-atroari-contaminacao-amazonas/" target="_blank" rel="noopener">Temor de Contaminação por Mineração Reacende Alerta para o Povo Waimiri Atroari</a></div><div class="refsrc">Jornal Impresso Brasil • 31/03/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[04]</div><div><div class="reftitle"><a href="https://www.brasilmineral.com.br/noticias/mineracao-taboca-investira-us-100-milhoes-e-nova-gestao-reposiciona-a-estrategia" target="_blank" rel="noopener">Mineração Taboca investirá US$ 100 milhões e nova gestão reposiciona a estratégia</a></div><div class="refsrc">Brasil Mineral • 20/03/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[05]</div><div><div class="reftitle"><a href="https://reporterbrasil.org.br/2026/03/mineradora-investigada-contaminacao-rio-terra-indigena-waimiri-atroari/" target="_blank" rel="noopener">Medo de contaminação por mineradora assombra indígenas no AM</a></div><div class="refsrc">Repórter Brasil • 09/04/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[06]</div><div><div class="reftitle"><a href="https://reporterbrasil.org.br/2026/04/indigenas-novas-suspeitas-contaminacao-de-rio-por-mineradora-no-am/" target="_blank" rel="noopener">Indígenas relatam novas suspeitas de contaminação de rio por mineradora no AM</a></div><div class="refsrc">Repórter Brasil • 14/04/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[07]</div><div><div class="reftitle"><a href="https://vocativo.com/2026/07/05/mineracao-taboca-e-investigada-por-possivel-contaminacao-na-ti-waimiri-atroari-no-amazonas/" target="_blank" rel="noopener">Mineração Taboca é investigada por possível contaminação na TI Waimiri Atroari</a></div><div class="refsrc">Vocativo • 05/07/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[08]</div><div><div class="reftitle"><a href="https://reporterbrasil.org.br/2026/07/pf-vai-investigar-contaminacao-mineradora-terra-indigena-am/" target="_blank" rel="noopener">PF vai investigar mineradora por contaminação em terra indígena no Amazonas</a></div><div class="refsrc">Repórter Brasil • 19/07/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[09]</div><div><div class="reftitle"><a href="https://jcam.com.br/colunas/fabrica-de-baterias-da-byd-em-manaus-expande-operacoes-e-investe-em-inovacao-tecnologica/" target="_blank" rel="noopener">Fábrica de baterias da BYD em Manaus expande operações</a></div><div class="refsrc">Jornal do Commercio (AM)</div></div></div>
+    <div class="refitem"><div class="refnum">[10]</div><div><div class="reftitle"><a href="https://revistaempreende.com.br/byd-avalia-ampliar-producao-de-componentes-para-veiculos-eletricos-em-manaus/" target="_blank" rel="noopener">BYD avalia ampliar produção de componentes para veículos elétricos em Manaus</a></div><div class="refsrc">Revista Empreende • 07/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[11]</div><div><div class="reftitle"><a href="https://agenciagov.ebc.com.br/noticias/202409/deye-anuncia-primeira-fabrica-fora-da-china-no-polo-industrial-de-manaus" target="_blank" rel="noopener">Deye anuncia primeira fábrica fora da China no PIM</a></div><div class="refsrc">Agência Gov • 09/2024</div></div></div>
+    <div class="refitem"><div class="refnum">[12]</div><div><div class="reftitle"><a href="https://www.opovo.com.br/trends/nova-fabrica-milionaria-da-china-chega-ao-brasil-e-gera-centenas-de-empregos/" target="_blank" rel="noopener">Nova fábrica milionária da China chega ao Brasil (Megmeet)</a></div><div class="refsrc">O Povo • 16/01/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[13]</div><div><div class="reftitle"><a href="https://www.cnnbrasil.com.br/auto/so-chineses-na-fabrica-byd-desmente-boato-e-abre-3-mil-vagas-na-bahia/" target="_blank" rel="noopener">Só chineses na fábrica? BYD desmente boato e abre 3 mil vagas na Bahia</a></div><div class="refsrc">CNN Brasil • 06/04/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[14]</div><div><div class="reftitle"><a href="https://emtempo.com.br/414014/economia/zona-franca-manaus-trump-tarifa-brasil/" target="_blank" rel="noopener">Zona Franca de Manaus pode ser afetada por tarifa de Trump</a></div><div class="refsrc">Portal Em Tempo • 10/07/2025</div></div></div>
+    <div class="refitem"><div class="refnum">[15]</div><div><div class="reftitle"><a href="https://www.simmmem.org.br/exportacoes-para-os-eua-sao-apenas-65-da-pauta-da-zona-franca-de-manaus/" target="_blank" rel="noopener">Exportações para os EUA são apenas 6,5% da pauta da ZFM</a></div><div class="refsrc">SIMMMEM • 18/07/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[16]</div><div><div class="reftitle"><a href="https://portaldolobao.com.br/wilson-lima-classifica-como-inadmissivel-ameaca-da-receita-federal-aos-incentivos-da-zona-franca/" target="_blank" rel="noopener">Wilson Lima classifica como inadmissível ameaça da Receita Federal aos incentivos da ZFM</a></div><div class="refsrc">Portal do Lobão • 01/07/2026</div></div></div>
+  </div>
+
+</section>
+
+<section class="series-nav" id="serie">
+  <div class="series-nav-title">Artefatos da Série: O Dragão e a Onça</div>
+  <div class="series-nav-grid">
+    <a class="series-card" href="/o-dragao-e-a-onca-goias.html"><div class="series-card-id">T-228 · Capítulo inaugural</div><div class="series-card-chapter">🇧🇷 GO Goiás</div><div class="series-card-desc">Pivô China → EUA/Japão em terras raras</div></a><a class="series-card" href="/dragao-onca-brasil-federal.html"><div class="series-card-id">T-229 · Linha do tempo 1993–2026</div><div class="series-card-chapter">🇧🇷 BR Brasil (Federal)</div><div class="series-card-desc">Parceria estratégica e o caso Doria–Sinovac</div></a><a class="series-card" href="/dragao-onca-para.html"><div class="series-card-id">T-230 · Ferrovia CCCC + Vale</div><div class="series-card-chapter">🇧🇷 PA Pará</div><div class="series-card-desc">Corredor mineral e COP30 como vitrine</div></a><a class="series-card" href="/dragao-onca-amazonas.html"><div class="series-card-id">T-231 · Taboca / China Nonferrous</div><div class="series-card-chapter">🇧🇷 AM Amazonas</div><div class="series-card-desc">Contaminação Waimiri-Atroari e Zona Franca</div></a><a class="series-card" href="/dragao-onca-minas-gerais.html"><div class="series-card-id">T-232 · Vale do Lítio</div><div class="series-card-chapter">🇧🇷 MG Minas Gerais</div><div class="series-card-desc">Sigma Lithium e o contraste ocidental</div></a><a class="series-card" href="/dragao-onca-sintese.html"><div class="series-card-id">T-233 · Cross-estadual</div><div class="series-card-chapter">📊 Síntese Comparativa</div><div class="series-card-desc">Soberania na conta do governador</div></a><a class="series-card" href="/dragao-onca-braco-juridico.html"><div class="series-card-id">T-234 · Transversal · STF × Congresso</div><div class="series-card-chapter">⚖️ Braço Jurídico</div><div class="series-card-desc">Marco temporal, PL da Devastação e ADI 7919</div></a><a class="series-card" href="/dragao-onca-pl2780.html"><div class="series-card-id">T-235 · Elo legislativo central</div><div class="series-card-chapter">📜 PL 2.780/2024</div><div class="series-card-desc">Política Nacional de Minerais Críticos</div></a>
+  </div>
+  <a class="series-hub" href="/odragaoeaonca">← Índice da série · O Dragão e a Onça</a>
+</section>
+
+</main>
+
+<footer>
+  <div class="footcc0">⚖ <b>CC0 1.0</b> — Domínio Público · lawfare-timeline · série "O Dragão e a Onça"</div>
+  <div class="footnote">Capítulo 4 da série (após Federal, Goiás e Pará) · Próximo: Minas Gerais (Zema — Vale do Lítio)</div>
+</footer>
+
+<button id="gotop" title="Voltar ao topo" aria-label="Voltar ao topo">↑</button>
+
+<script>
+const links = document.querySelectorAll('.nb');
+const sections = document.querySelectorAll('main .sec');
+const map = {};
+links.forEach(l=>{map[l.dataset.target]=l});
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      links.forEach(l=>l.classList.remove('act'));
+      const id = entry.target.id;
+      if(map[id]) map[id].classList.add('act');
+    }
+  });
+},{rootMargin:'-30% 0px -60% 0px',threshold:0});
+sections.forEach(s=>observer.observe(s));
+const gotop = document.getElementById('gotop');
+window.addEventListener('scroll',()=>{
+  gotop.classList.toggle('show', window.scrollY > 400);
+});
+gotop.addEventListener('click',()=>{
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+</script>
+</body>
+</html>

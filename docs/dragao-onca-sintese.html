@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Dragão e a Onça — Síntese Comparativa | República Sequestrada</title>
+<meta name="description" content="Síntese cross-estadual da série: Federal, Goiás, Pará, Amazonas, Minas Gerais. Tese: soberania na conta do governador. KPIs, gráficos comparativos e alertas.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --bg:#080c10;--bg2:#0f151b;--bg3:#161e26;
+  --dragon:#d4342c;--dragon2:#ff6b5f;--dragon-dim:#5c1512;
+  --jaguar:#e8b23d;--jaguar2:#ffd270;--jaguar-dim:#6b4e12;
+  --gr:#3ecb6f;--gr2:#78f5a8;--blue:#4a9eff;--blue2:#7ab8ff;
+  --purple:#b07aff;--purple2:#d0a8ff;--teal:#2ecfb0;--teal2:#60ffd8;
+  --border:rgba(255,255,255,0.07);--text:#e8edf0;--text2:#8a99a8;
+  --font:'Syne',sans-serif;--mono:'JetBrains Mono',monospace;
+}
+body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh}
+header{padding:26px 30px 18px;border-bottom:2px solid var(--dragon-dim);background:linear-gradient(135deg,#080c10 0%,#160f1a 55%,#080c10 100%);position:relative;overflow:hidden}
+header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(212,52,44,0.08) 0%,transparent 55%),radial-gradient(ellipse at 50% 50%,rgba(232,178,61,0.06) 0%,transparent 55%),radial-gradient(ellipse at 80% 50%,rgba(74,158,255,0.06) 0%,transparent 55%)}
+.hbadge{display:inline-flex;align-items:center;gap:6px;background:rgba(176,122,255,0.12);border:1px solid var(--purple);border-radius:4px;padding:4px 12px;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--purple2);text-transform:uppercase;margin-bottom:12px}
+.live-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(212,52,44,0.15);border:1px solid var(--dragon-dim);border-radius:4px;padding:3px 12px;font-size:12px;font-weight:700;letter-spacing:1.5px;color:var(--dragon2);text-transform:uppercase;margin-left:8px}
+.live-dot{width:6px;height:6px;border-radius:50%;background:var(--dragon2);animation:pulse 1.2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+header h1{font-size:27px;font-weight:800;letter-spacing:-0.5px;color:#fff;line-height:1.15}
+header h1 span{color:var(--dragon2)}
+header h1 em{font-style:normal;color:var(--purple2)}
+.hmeta{display:flex;gap:18px;margin-top:12px;flex-wrap:wrap}
+.hm{font-size:12px;color:var(--text2);font-family:var(--mono)}
+.hm b{color:var(--purple2)}
+nav{display:flex;gap:4px;padding:12px 26px;background:rgba(10,14,18,0.96);border-bottom:2px solid var(--dragon-dim);box-shadow:0 6px 18px rgba(0,0,0,0.35);overflow-x:auto;flex-wrap:wrap;position:sticky;top:0;z-index:200;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.nb{padding:7px 14px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--text2);font-family:var(--font);font-size:12px;font-weight:600;cursor:pointer;transition:all .2s;white-space:nowrap;text-decoration:none;display:inline-block}
+.nb:hover{border-color:var(--dragon-dim);color:var(--dragon2)}
+.nb.act{background:linear-gradient(90deg,rgba(212,52,44,0.18),rgba(176,122,255,0.14));border-color:var(--purple);color:#fff;font-weight:800;box-shadow:0 0 0 1px var(--purple) inset}
+main{padding:0 20px 32px;max-width:1240px;margin:0 auto}
+.sec{padding:34px 0 12px;border-bottom:1px solid var(--border);scroll-margin-top:70px}
+.sec:last-of-type{border-bottom:none}
+.sec-title{font-size:20px;font-weight:800;color:#fff;margin-bottom:4px;display:flex;align-items:center;gap:12px}
+.sec-title .flag{font-size:15px}
+.sec-sub{font-size:12px;color:var(--text2);font-family:var(--mono);margin-bottom:16px}
+.kgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;padding:16px 0 12px}
+@media(max-width:1000px){.kgrid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.kgrid{grid-template-columns:repeat(2,1fr)}}
+.kcard{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:14px 15px;position:relative;overflow:hidden}
+.kcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.kd::before{background:linear-gradient(90deg,var(--dragon),var(--dragon2))}
+.kj::before{background:linear-gradient(90deg,var(--jaguar),var(--jaguar2))}
+.kt::before{background:linear-gradient(90deg,var(--teal),var(--teal2))}
+.kb::before{background:linear-gradient(90deg,var(--blue),var(--blue2))}
+.kp::before{background:linear-gradient(90deg,var(--purple),var(--purple2))}
+.klabel{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);margin-bottom:5px}
+.kval{font-size:22px;font-weight:800;line-height:1.1}
+.ksub{font-size:11px;color:var(--text2);margin-top:3px;font-family:var(--mono)}
+.kd .kval{color:var(--dragon2)}.kj .kval{color:var(--jaguar2)}.kt .kval{color:var(--teal2)}.kb .kval{color:var(--blue2)}.kp .kval{color:var(--purple2)}
+.panel{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:12px}
+.ptitle{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.dd{background:var(--dragon)}.dj{background:var(--jaguar)}.dt{background:var(--teal)}.db{background:var(--blue)}.dp{background:var(--purple)}
+.tag{display:inline-block;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:600;margin:2px 2px 2px 0;font-family:var(--mono)}
+.tg{background:rgba(62,203,111,0.1);color:#78f5a8;border:1px solid rgba(62,203,111,0.2)}
+.tgo{background:rgba(232,178,61,0.12);color:var(--jaguar2);border:1px solid rgba(232,178,61,0.25)}
+.tr{background:rgba(212,52,44,0.12);color:var(--dragon2);border:1px solid rgba(212,52,44,0.25)}
+p.body{font-size:14px;color:var(--text2);line-height:1.75;margin-bottom:12px}
+table.cmp{width:100%;border-collapse:collapse;font-size:12.5px}
+table.cmp th{text-align:left;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text2);padding:8px 12px;border-bottom:2px solid var(--border)}
+table.cmp td{padding:12px 12px;border-bottom:1px solid var(--border);vertical-align:top;color:var(--text2);line-height:1.5}
+table.cmp td.gov{color:#fff;font-weight:700}
+table.cmp tr:hover td{background:rgba(255,255,255,0.02)}
+.chartwrap{overflow-x:auto}
+svg{max-width:100%;height:auto}
+.alert{padding:14px 15px;border-radius:8px;margin-bottom:8px;border-left:3px solid;background:var(--bg3)}
+.acrit{border-color:var(--dragon)}
+.aalto{border-color:var(--jaguar2)}
+.amed{border-color:var(--blue)}
+.aheader{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;flex-wrap:wrap;gap:6px}
+.aname{font-size:14px;font-weight:700}
+.abadge{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;border-radius:3px;font-family:var(--mono)}
+.bcrit{background:rgba(212,52,44,0.2);color:var(--dragon2)}.balto{background:rgba(232,178,61,0.2);color:var(--jaguar2)}.bmed{background:rgba(74,158,255,0.15);color:var(--blue2)}
+.adesc{font-size:12px;color:var(--text2);line-height:1.6}
+.horizonte{display:inline-block;padding:6px 14px;border-radius:6px;background:var(--bg3);border:1px solid var(--border);font-size:12px;font-weight:600;margin:3px 4px 3px 0}
+.horizonte.novo{border-color:var(--gr);color:var(--gr2)}
+.horizonte.juridico{border-color:var(--purple);color:var(--purple2)}
+.esq-note{font-size:11px;color:var(--text2);font-style:italic;margin-top:8px}
+footer{padding:22px 26px 40px;border-top:2px solid var(--dragon-dim);text-align:center}
+.footcc0{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;color:var(--text2);letter-spacing:1px}
+.footcc0 b{color:var(--purple2)}
+.footnote{font-size:11px;color:var(--text2);margin-top:8px;font-family:var(--mono)}
+#gotop{position:fixed;right:20px;bottom:20px;z-index:300;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--dragon),var(--purple));color:#fff;border:none;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,0.45);opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .25s,transform .25s}
+#gotop.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+#gotop:hover{filter:brightness(1.15)}
+.series-nav{margin:0 auto;max-width:1200px;padding:28px 20px 0;border-top:2px solid var(--border)}
+.series-nav-title{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--text2);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.series-nav-title::before{content:'';flex:1;height:1px;background:var(--border)}
+.series-nav-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:14px}
+@media(max-width:720px){.series-nav-grid{grid-template-columns:1fr}}
+.series-card{display:block;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 16px;text-decoration:none;color:inherit;transition:border-color .2s,transform .15s;position:relative;overflow:hidden}
+.series-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--dragon),var(--jaguar))}
+.series-card:hover{border-color:rgba(232,178,61,.45);transform:translateY(-1px)}
+.series-card.is-current{border-color:var(--jaguar);box-shadow:0 0 0 1px rgba(232,178,61,.35) inset;pointer-events:none;opacity:.92}
+.series-card-id{font-family:var(--mono);font-size:10px;color:var(--jaguar2);letter-spacing:1px;margin-bottom:4px}
+.series-card-chapter{font-size:14px;font-weight:800;color:#fff;margin-bottom:4px;line-height:1.2}
+.series-card-desc{font-size:12px;color:var(--text2);line-height:1.55}
+.series-hub{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--jaguar2);text-decoration:none;font-family:var(--mono);margin-bottom:8px}
+.series-hub:hover{color:#fff}
+</style>
+</head>
+<body>
+<header>
+  <div style="display:flex;align-items:center;gap:0;flex-wrap:wrap">
+    <div class="hbadge">Síntese Comparativa · 5 Capítulos</div>
+    <div class="live-badge"><span class="live-dot"></span>Série em Andamento</div>
+  </div>
+  <h1>O <span>Dragão</span> e a Onça — <em>Síntese</em></h1>
+  <div class="hmeta">
+    <span class="hm"><b>Capítulos consolidados:</b> Federal · Goiás · Pará · Amazonas · Minas Gerais</span>
+    <span class="hm"><b>Entradas produzidas:</b> 62 (main track 1639–1688 + 6 temáticas T-228–T-233)</span>
+    <span class="hm"><b>Tese central:</b> soberania na conta do governador</span>
+  </div>
+</header>
+
+<nav id="mainnav">
+  <a class="nb" href="#tese" data-target="tese">Tese Central</a>
+  <a class="nb" href="#kpis" data-target="kpis">KPIs Consolidados</a>
+  <a class="nb" href="#comparativo" data-target="comparativo">Quadro Comparativo</a>
+  <a class="nb" href="#graficos" data-target="graficos">Gráficos</a>
+  <a class="nb" href="#alertas" data-target="alertas">Alertas Cross-Estaduais</a>
+  <a class="nb" href="#horizontes" data-target="horizontes">Próximos Horizontes</a>
+  <a class="nb" href="#refs" data-target="refs">Fontes por Capítulo</a>
+</nav>
+
+<main>
+
+<section id="tese" class="sec">
+  <div class="sec-title"><span class="flag">🎯</span>Tese Central — Soberania na Conta do Governador</div>
+  <div class="sec-sub">O que os 5 capítulos, somados, revelam que nenhum sozinho revelaria</div>
+  <div class="panel">
+    <p class="body">A União negocia os marcos amplos — tratados, MoUs, cúpulas, planos de ação de mineração sustentável assinados em Pequim ou lançamentos na Nasdaq. Mas quem <b style="color:var(--jaguar2)">assina o contrato específico, enfrenta a comunidade atingida, arca com o desgaste político e recebe (ou não) a fiscalização</b> é sempre o governador estadual. A soberania — no sentido de quem efetivamente decide, negocia e responde pelas consequências — não está concentrada em Brasília. Ela foi <b style="color:var(--dragon2)">terceirizada, na prática, para 27 executivos estaduais</b> operando com graus de transparência, controle e accountability completamente diferentes entre si.</p>
+    <p class="body">Os quatro capítulos estaduais mostram o mesmo mecanismo de três etapas, repetido com atores, partidos e blocos de capital diferentes:</p>
+    <p class="body"><b style="color:var(--teal2)">1. Negociação</b> — governador assina acordo/MoU com capital estrangeiro (chinês em GO/PA/AM, majoritariamente ocidental em MG) para exploração de ativo estratégico (terras raras, ferrovia mineral, mineração crítica, lítio).<br>
+    <b style="color:var(--teal2)">2. Execução sem consulta plena</b> — comunidades tradicionais, indígenas ou locais ficam de fora do desenho do acordo (Pará: consulta 7 anos depois do traçado definido; Amazonas: pagamento direto pós-desconfiança; Minas: sem projeção de retorno per capita).<br>
+    <b style="color:var(--teal2)">3. Conversão eleitoral</b> — o governador, em fim de mandato ou impedido de reeleição, transforma o ativo negociado em capital político pessoal para o cargo seguinte (Caiado e Wilson Lima ao Senado/Presidência usando o ativo diretamente; Zema abandonando o ativo quando não performou e migrando para confronto com o STF).</p>
+    <p class="body" style="margin-bottom:0"><b>Nenhum vetor — chinês, americano, europeu ou sul-coreano — chega ao beneficiário final: a população das regiões onde o ativo está fisicamente localizado.</b> Essa é a mesma tese central do corpus judicial, agora confirmada no eixo econômico-federativo com evidência de cinco capítulos independentes.</p>
+  </div>
+</section>
+
+<section id="kpis" class="sec">
+  <div class="sec-title"><span class="flag">📊</span>KPIs Consolidados</div>
+  <div class="sec-sub">Números agregados dos 5 capítulos produzidos até 22/jul/2026</div>
+  <div class="kgrid">
+    <div class="kcard kd"><div class="klabel">Governadores em transição eleitoral 2026</div><div class="kval">3 de 3</div><div class="ksub">Caiado (GO), Wilson Lima (AM), Zema (MG) — 100% dos mapeados</div></div>
+    <div class="kcard kj"><div class="klabel">Valor total aproximado mobilizado</div><div class="kval">~R$36bi</div><div class="ksub">soma illustrativa, ordem de grandeza — ver nota metodológica</div></div>
+    <div class="kcard kt"><div class="klabel">Investigações federais ativas</div><div class="kval">2</div><div class="ksub">MPF+PF (Taboca/AM); MPF (Norsk Hydro/PA)</div></div>
+    <div class="kcard kb"><div class="klabel">Padrão mais recorrente</div><div class="kval">P05</div><div class="ksub">uso de recursos/ativos públicos como vetor — presente em 4 de 5 capítulos</div></div>
+    <div class="kcard kp"><div class="klabel">Blocos geopolíticos envolvidos</div><div class="kval">5</div><div class="ksub">China, EUA, Japão, Noruega/Europa, Coreia do Sul</div></div>
+  </div>
+  <div class="esq-note">Nota metodológica sobre o KPI de valor total: os capítulos usam moedas e naturezas de valor distintas (investimento anunciado, MoU, aquisição societária, contrato de fornecimento). A soma de ~R$36bi é uma agregação aproximada para fins de visualização de ordem de grandeza — não é um número auditado nem comparável linha a linha. Ver detalhamento por capítulo na seção Gráficos.</div>
+</section>
+
+<section id="comparativo" class="sec">
+  <div class="sec-title"><span class="flag">🗺️</span>Quadro Comparativo — Os Quatro Governadores</div>
+  <div class="panel">
+    <div class="chartwrap">
+    <table class="cmp">
+      <tr><th>Governador</th><th>Estado</th><th>Bloco de capital</th><th>Ativo</th><th>Escala</th><th>Movimento eleitoral 2026</th><th>Evidência de exclusão popular</th></tr>
+      <tr><td class="gov">Ronaldo Caiado</td><td>GO</td><td>China → EUA/Japão (pivô)</td><td>Terras raras (Serra Verde)</td><td>US$2,8bi (aquisição USA Rare Earth)</td><td>Pré-candidato à Presidência (PSD) — usa terras raras como bandeira</td><td>Incentivos fiscais não discriminados; termos do "Manifesto" EUA não públicos</td></tr>
+      <tr><td class="gov">Helder Barbalho</td><td>PA</td><td>China (CCCC) + Noruega (Hydro)</td><td>Ferrovia Marabá-Barcarena + bauxita</td><td>R$10bi (ferrovia) + mineroduto 244km</td><td>Segue governador; rede familiar em 3 pontos de poder/fiscalização</td><td>Consulta popular 7 anos após traçado definido; 39 mortes já registradas na região (trem Vale)</td></tr>
+      <tr><td class="gov">Wilson Lima</td><td>AM</td><td>China (CNMC) + cluster PIM</td><td>Cassiterita/terras raras (Taboca) + ZFM</td><td>US$100mi (expansão Taboca)</td><td>Pré-candidato ao Senado — usa defesa da ZFM como bandeira</td><td>Pagamento de R$12,3mi 2 dias após desconfiança comunitária; MPF+PF investigam</td></tr>
+      <tr><td class="gov">Romeu Zema</td><td>MG</td><td>Ocidental (Nasdaq/Canadá) + Coreia do Sul</td><td>Lítio (Vale do Jequitinhonha)</td><td>R$3bi (Sigma Lithium)</td><td>Pré-candidato à Presidência (Novo) — abandonou o ativo, migrou para STF</td><td>Sem projeção pública de retorno per capita; vistoria de segurança sem resultado público</td></tr>
+    </table>
+    </div>
+  </div>
+</section>
+
+<section id="graficos" class="sec">
+  <div class="sec-title"><span class="flag">📈</span>Gráficos</div>
+  <div class="sec-sub">Visualização comparativa — valores em ordem de grandeza aproximada (R$ bi equivalente)</div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dd"></span>Escala aproximada de capital mobilizado por capítulo estadual</div>
+    <div class="chartwrap">
+    <svg viewBox="0 0 720 260" xmlns="http://www.w3.org/2000/svg">
+      <line x1="140" y1="20" x2="140" y2="220" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+      <!-- Goiás ~18bi -->
+      <text x="10" y="45" fill="#8a99a8" font-size="11" font-family="JetBrains Mono">Goiás</text>
+      <rect x="140" y="32" width="504" height="26" fill="#d4342c" opacity="0.85" rx="3"/>
+      <text x="654" y="49" fill="#ff6b5f" font-size="11" font-family="JetBrains Mono">~R$18bi</text>
+      <!-- Pará ~11bi -->
+      <text x="10" y="93" fill="#8a99a8" font-size="11" font-family="JetBrains Mono">Pará</text>
+      <rect x="140" y="80" width="308" height="26" fill="#e8b23d" opacity="0.85" rx="3"/>
+      <text x="458" y="97" fill="#ffd270" font-size="11" font-family="JetBrains Mono">~R$11bi</text>
+      <!-- Minas ~3.8bi -->
+      <text x="10" y="141" fill="#8a99a8" font-size="11" font-family="JetBrains Mono">Minas Gerais</text>
+      <rect x="140" y="128" width="106" height="26" fill="#4a9eff" opacity="0.85" rx="3"/>
+      <text x="256" y="145" fill="#7ab8ff" font-size="11" font-family="JetBrains Mono">~R$3,8bi</text>
+      <!-- Amazonas ~2.5bi -->
+      <text x="10" y="189" fill="#8a99a8" font-size="11" font-family="JetBrains Mono">Amazonas</text>
+      <rect x="140" y="176" width="70" height="26" fill="#2ecfb0" opacity="0.85" rx="3"/>
+      <text x="220" y="193" fill="#60ffd8" font-size="11" font-family="JetBrains Mono">~R$2,5bi</text>
+      <text x="140" y="245" fill="#8a99a8" font-size="10" font-family="JetBrains Mono">Aproximação ilustrativa — não auditada, valores heterogêneos convertidos a título de ordem de grandeza</text>
+    </svg>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dp"></span>Frequência de padrões estruturais (P0X) nos 5 capítulos</div>
+    <div class="chartwrap">
+    <svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="190" x2="720" y2="190" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+      <!-- P05: 5 -->
+      <rect x="40" y="30" width="60" height="160" fill="#d4342c" opacity="0.85" rx="3"/>
+      <text x="55" y="205" fill="#8a99a8" font-size="12" font-family="JetBrains Mono">P05</text>
+      <text x="58" y="22" fill="#ff6b5f" font-size="13" font-weight="700" font-family="JetBrains Mono">5</text>
+      <!-- P09: 4 -->
+      <rect x="150" y="62" width="60" height="128" fill="#e8b23d" opacity="0.85" rx="3"/>
+      <text x="165" y="205" fill="#8a99a8" font-size="12" font-family="JetBrains Mono">P09</text>
+      <text x="168" y="54" fill="#ffd270" font-size="13" font-weight="700" font-family="JetBrains Mono">4</text>
+      <!-- P10: 4 -->
+      <rect x="260" y="62" width="60" height="128" fill="#b07aff" opacity="0.85" rx="3"/>
+      <text x="275" y="205" fill="#8a99a8" font-size="12" font-family="JetBrains Mono">P10</text>
+      <text x="278" y="54" fill="#d0a8ff" font-size="13" font-weight="700" font-family="JetBrains Mono">4</text>
+      <!-- P04b: 3 -->
+      <rect x="370" y="94" width="60" height="96" fill="#4a9eff" opacity="0.85" rx="3"/>
+      <text x="380" y="205" fill="#8a99a8" font-size="12" font-family="JetBrains Mono">P04b</text>
+      <text x="388" y="86" fill="#7ab8ff" font-size="13" font-weight="700" font-family="JetBrains Mono">3</text>
+      <!-- P06: 2 -->
+      <rect x="480" y="126" width="60" height="64" fill="#2ecfb0" opacity="0.85" rx="3"/>
+      <text x="490" y="205" fill="#8a99a8" font-size="12" font-family="JetBrains Mono">P06</text>
+      <text x="498" y="118" fill="#60ffd8" font-size="13" font-weight="700" font-family="JetBrains Mono">2</text>
+      <text x="40" y="15" fill="#8a99a8" font-size="10" font-family="JetBrains Mono">Nº de capítulos onde o padrão foi aplicado (de 5 possíveis)</text>
+    </svg>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dt"></span>Linha do tempo — convergência das transições eleitorais em 2026</div>
+    <div class="chartwrap">
+    <svg viewBox="0 0 720 160" xmlns="http://www.w3.org/2000/svg">
+      <line x1="40" y1="80" x2="680" y2="80" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+      <circle cx="130" cy="80" r="7" fill="#d4342c"/>
+      <text x="95" y="55" fill="#ff6b5f" font-size="11" font-family="JetBrains Mono">21/jul/2025</text>
+      <text x="80" y="105" fill="#e8edf0" font-size="11">Zema anuncia</text>
+      <circle cx="300" cy="80" r="7" fill="#e8b23d"/>
+      <text x="255" y="55" fill="#ffd270" font-size="11" font-family="JetBrains Mono">30/mar/2026</text>
+      <text x="250" y="105" fill="#e8edf0" font-size="11">Caiado deixa GO</text>
+      <circle cx="420" cy="80" r="7" fill="#b07aff"/>
+      <text x="375" y="55" fill="#d0a8ff" font-size="11" font-family="JetBrains Mono">22/mar/2026</text>
+      <text x="368" y="105" fill="#e8edf0" font-size="11">Zema deixa MG</text>
+      <circle cx="560" cy="80" r="7" fill="#4a9eff"/>
+      <text x="510" y="55" fill="#7ab8ff" font-size="11" font-family="JetBrains Mono">01/jul/2026</text>
+      <text x="500" y="105" fill="#e8edf0" font-size="11">W.Lima pré-cand. Senado</text>
+      <text x="40" y="140" fill="#8a99a8" font-size="10" font-family="JetBrains Mono">Três saídas do executivo estadual em uma janela de ~12 meses — mesmo ciclo eleitoral</text>
+    </svg>
+    </div>
+  </div>
+</section>
+
+<section id="alertas" class="sec">
+  <div class="sec-title"><span class="flag">🚨</span>Alertas Cross-Estaduais</div>
+  <div class="sec-sub">Os sinais mais graves, lidos em conjunto</div>
+  <div class="panel">
+    <div class="alert acrit"><div class="aheader"><div class="aname">Escalada institucional ativa — Amazonas</div><div class="abadge bcrit">CRÍTICO</div></div><div class="adesc">MPF (inquérito civil) + Polícia Federal (investigação criminal) atuando simultaneamente sobre a Taboca/China Nonferrous em julho de 2026 — o único caso da série com investigação criminal federal em curso neste momento.</div></div>
+    <div class="alert acrit"><div class="aheader"><div class="aname">Pagamento direto pós-desconfiança comunitária — Amazonas</div><div class="abadge bcrit">CRÍTICO</div></div><div class="adesc">R$12,3mi repassados à ACWA dois dias após lideranças declararem desconfiança total na empresa, sem mediação do MPF — padrão de possível neutralização de oposição comunitária.</div></div>
+    <div class="alert aalto"><div class="aheader"><div class="aname">Sequência invertida (acordo antes de consulta) — Pará</div><div class="abadge balto">ALTO</div></div><div class="adesc">Traçado da Ferrovia do Pará definido em 2019/2023; audiências públicas só em 2026 — 7 anos de defasagem entre decisão e consulta.</div></div>
+    <div class="alert aalto"><div class="aheader"><div class="aname">Rede familiar em 3 pontos de poder/fiscalização — Pará</div><div class="abadge balto">ALTO</div></div><div class="adesc">Esposa no TCE-PA (fiscaliza o marido), irmão ministro federal, primo prefeito de Belém (sede da COP30) — independência de controle estruturalmente reduzida.</div></div>
+    <div class="alert aalto"><div class="aheader"><div class="aname">Fragilidade financeira do operador-vitrine — Minas Gerais</div><div class="abadge balto">ALTO</div></div><div class="adesc">Sigma Lithium paralisa única mina 5 meses após lançamento pomposo na Nasdaq, com dívida de US$141mi — distância entre anúncio e entrega real.</div></div>
+    <div class="alert amed"><div class="aheader"><div class="aname">Opacidade de incentivos fiscais — todos os capítulos</div><div class="abadge bmed">MÉDIO (recorrente)</div></div><div class="adesc">Nenhum dos 4 capítulos estaduais tem discriminação pública do valor de renúncia fiscal/ICMS concedido às empresas envolvidas — lacuna estrutural repetida.</div></div>
+    <div class="alert amed"><div class="aheader"><div class="aname">MoU federal de mineração sem salvaguardas sociais na origem</div><div class="abadge bmed">MÉDIO (estrutural)</div></div><div class="adesc">O próprio acordo-guarda-chuva Brasil-China de mineração crítica (mai/2025) não incluiu cláusula de consulta a comunidades tradicionais — a exclusão não é falha de execução estadual, é desenho federal desde a origem.</div></div>
+  </div>
+</section>
+
+<section id="horizontes" class="sec">
+  <div class="sec-title"><span class="flag">🧭</span>Próximos Horizontes</div>
+  <div class="sec-sub">Frentes já sinalizadas para a continuidade da série</div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dt"></span>Novos estados a mapear</div>
+    <div><span class="horizonte novo">São Paulo</span><span class="horizonte novo">Paraná</span><span class="horizonte novo">Rio Grande do Sul</span><span class="horizonte novo">Santa Catarina</span></div>
+    <p class="body" style="margin-top:12px">Region Sul/Sudeste ainda não mapeada nesta série — perfil de capital e setor provavelmente distinto dos casos amazônicos/Centro-Oeste (mais indústria/tecnologia, menos mineração bruta; SP já apareceu no capítulo federal via caso Doria-Sinovac, mas sob a gestão atual ainda não foi investigado).</p>
+  </div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dp"></span>Braço jurídico-institucional</div>
+    <div><span class="horizonte juridico">OAB</span><span class="horizonte juridico">STF</span><span class="horizonte juridico">ONGs</span></div>
+    <p class="body" style="margin-top:12px">Eixo distinto dos capítulos estaduais: em vez de mapear governadores negociando com capital estrangeiro, este horizonte mapearia como o sistema de justiça e a sociedade civil organizada reagem (ou deixam de reagir) aos padrões já documentados — possível ponte direta com o corpus judicial principal (INQ 4.781, Banco Master, etc.), unindo as duas frentes do lawfare-timeline sob uma mesma arquitetura analítica.</p>
+  </div>
+</section>
+
+<section id="refs" class="sec">
+  <div class="sec-title"><span class="flag">📚</span>Fontes por Capítulo</div>
+  <div class="sec-sub">Este artefato não introduz fontes novas — consolida os 5 capítulos já publicados</div>
+  <div class="panel">
+    <p class="body">Todas as fontes primárias e secundárias usadas nesta síntese estão detalhadas, com link direto, nos artefatos individuais de cada capítulo:</p>
+    <p class="body">• <b style="color:var(--jaguar2)">Capítulo Federal</b> — dragao-onca-brasil-federal.html (20 fontes, 1993-2026)<br>
+    • <b style="color:var(--dragon2)">Capítulo Goiás</b> — o-dragao-e-a-onca-goias.html (36 fontes)<br>
+    • <b style="color:var(--gr2)">Capítulo Pará</b> — dragao-onca-para.html (15 fontes)<br>
+    • <b style="color:var(--teal2)">Capítulo Amazonas</b> — dragao-onca-amazonas.html (16 fontes)<br>
+    • <b style="color:var(--blue2)">Capítulo Minas Gerais</b> — dragao-onca-minas-gerais.html (13 fontes)</p>
+  </div>
+</section>
+
+<section class="series-nav" id="serie">
+  <div class="series-nav-title">Artefatos da Série: O Dragão e a Onça</div>
+  <div class="series-nav-grid">
+    <a class="series-card" href="/o-dragao-e-a-onca-goias.html"><div class="series-card-id">T-228 · Capítulo inaugural</div><div class="series-card-chapter">🇧🇷 GO Goiás</div><div class="series-card-desc">Pivô China → EUA/Japão em terras raras</div></a><a class="series-card" href="/dragao-onca-brasil-federal.html"><div class="series-card-id">T-229 · Linha do tempo 1993–2026</div><div class="series-card-chapter">🇧🇷 BR Brasil (Federal)</div><div class="series-card-desc">Parceria estratégica e o caso Doria–Sinovac</div></a><a class="series-card" href="/dragao-onca-para.html"><div class="series-card-id">T-230 · Ferrovia CCCC + Vale</div><div class="series-card-chapter">🇧🇷 PA Pará</div><div class="series-card-desc">Corredor mineral e COP30 como vitrine</div></a><a class="series-card" href="/dragao-onca-amazonas.html"><div class="series-card-id">T-231 · Taboca / China Nonferrous</div><div class="series-card-chapter">🇧🇷 AM Amazonas</div><div class="series-card-desc">Contaminação Waimiri-Atroari e Zona Franca</div></a><a class="series-card" href="/dragao-onca-minas-gerais.html"><div class="series-card-id">T-232 · Vale do Lítio</div><div class="series-card-chapter">🇧🇷 MG Minas Gerais</div><div class="series-card-desc">Sigma Lithium e o contraste ocidental</div></a><a class="series-card" href="/dragao-onca-sintese.html"><div class="series-card-id">T-233 · Cross-estadual</div><div class="series-card-chapter">📊 Síntese Comparativa</div><div class="series-card-desc">Soberania na conta do governador</div></a><a class="series-card" href="/dragao-onca-braco-juridico.html"><div class="series-card-id">T-234 · Transversal · STF × Congresso</div><div class="series-card-chapter">⚖️ Braço Jurídico</div><div class="series-card-desc">Marco temporal, PL da Devastação e ADI 7919</div></a><a class="series-card" href="/dragao-onca-pl2780.html"><div class="series-card-id">T-235 · Elo legislativo central</div><div class="series-card-chapter">📜 PL 2.780/2024</div><div class="series-card-desc">Política Nacional de Minerais Críticos</div></a>
+  </div>
+  <a class="series-hub" href="/odragaoeaonca">← Índice da série · O Dragão e a Onça</a>
+</section>
+
+</main>
+
+<footer>
+  <div class="footcc0">⚖ <b>CC0 1.0</b> — Domínio Público · lawfare-timeline · série "O Dragão e a Onça" — Síntese</div>
+  <div class="footnote">Consolidação de 5 capítulos · 62 entradas no corpus (main 1639-1688, temáticas T-228 a T-233)</div>
+</footer>
+
+<button id="gotop" title="Voltar ao topo" aria-label="Voltar ao topo">↑</button>
+
+<script>
+const links = document.querySelectorAll('.nb');
+const sections = document.querySelectorAll('main .sec');
+const map = {};
+links.forEach(l=>{map[l.dataset.target]=l});
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      links.forEach(l=>l.classList.remove('act'));
+      const id = entry.target.id;
+      if(map[id]) map[id].classList.add('act');
+    }
+  });
+},{rootMargin:'-30% 0px -60% 0px',threshold:0});
+sections.forEach(s=>observer.observe(s));
+const gotop = document.getElementById('gotop');
+window.addEventListener('scroll',()=>{
+  gotop.classList.toggle('show', window.scrollY > 400);
+});
+gotop.addEventListener('click',()=>{
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+</script>
+</body>
+</html>

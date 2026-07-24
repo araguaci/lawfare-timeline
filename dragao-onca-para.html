@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Dragão e a Onça — Capítulo Pará | República Sequestrada</title>
+<meta name="description" content="Ferrovia do Pará (CCCC/Vale), mineroduto Norsk Hydro, rede de nepotismo Barbalho e a COP30 como vitrine e vetor de exclusão popular documentada.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --bg:#080c10;--bg2:#0f151b;--bg3:#161e26;
+  --dragon:#d4342c;--dragon2:#ff6b5f;--dragon-dim:#5c1512;
+  --jaguar:#e8b23d;--jaguar2:#ffd270;--jaguar-dim:#6b4e12;
+  --gr:#3ecb6f;--gr2:#78f5a8;--blue:#4a9eff;--blue2:#7ab8ff;
+  --purple:#b07aff;--purple2:#d0a8ff;--teal:#2ecfb0;--teal2:#60ffd8;
+  --border:rgba(255,255,255,0.07);--text:#e8edf0;--text2:#8a99a8;
+  --font:'Syne',sans-serif;--mono:'JetBrains Mono',monospace;
+}
+body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh}
+header{padding:26px 30px 18px;border-bottom:2px solid var(--dragon-dim);background:linear-gradient(135deg,#080c10 0%,#0f1a10 55%,#080c10 100%);position:relative;overflow:hidden}
+header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 25% 50%,rgba(212,52,44,0.08) 0%,transparent 55%),radial-gradient(ellipse at 75% 50%,rgba(62,203,111,0.07) 0%,transparent 55%)}
+.hbadge{display:inline-flex;align-items:center;gap:6px;background:rgba(212,52,44,0.1);border:1px solid var(--dragon-dim);border-radius:4px;padding:4px 12px;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--dragon2);text-transform:uppercase;margin-bottom:12px}
+.live-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(62,203,111,0.15);border:1px solid var(--gr);border-radius:4px;padding:3px 12px;font-size:12px;font-weight:700;letter-spacing:1.5px;color:var(--gr2);text-transform:uppercase;margin-left:8px}
+.live-dot{width:6px;height:6px;border-radius:50%;background:var(--gr2);animation:pulse 1.2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+header h1{font-size:26px;font-weight:800;letter-spacing:-0.5px;color:#fff;line-height:1.15}
+header h1 span{color:var(--dragon2)}
+header h1 em{font-style:normal;color:var(--gr2)}
+.hmeta{display:flex;gap:18px;margin-top:12px;flex-wrap:wrap}
+.hm{font-size:12px;color:var(--text2);font-family:var(--mono)}
+.hm b{color:var(--gr2)}
+nav{display:flex;gap:4px;padding:12px 26px;background:rgba(10,14,18,0.96);border-bottom:2px solid var(--dragon-dim);box-shadow:0 6px 18px rgba(0,0,0,0.35);overflow-x:auto;flex-wrap:wrap;position:sticky;top:0;z-index:200;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.nb{padding:7px 14px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--text2);font-family:var(--font);font-size:12px;font-weight:600;cursor:pointer;transition:all .2s;white-space:nowrap;text-decoration:none;display:inline-block}
+.nb:hover{border-color:var(--dragon-dim);color:var(--dragon2)}
+.nb.act{background:linear-gradient(90deg,rgba(212,52,44,0.18),rgba(62,203,111,0.12));border-color:var(--dragon);color:#fff;font-weight:800;box-shadow:0 0 0 1px var(--dragon) inset}
+main{padding:0 20px 32px;max-width:1200px;margin:0 auto}
+.sec{padding:34px 0 12px;border-bottom:1px solid var(--border);scroll-margin-top:70px}
+.sec:last-of-type{border-bottom:none}
+.sec-title{font-size:20px;font-weight:800;color:#fff;margin-bottom:4px;display:flex;align-items:center;gap:12px}
+.sec-title .flag{font-size:15px}
+.sec-sub{font-size:12px;color:var(--text2);font-family:var(--mono);margin-bottom:16px}
+.kgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:16px 0 12px}
+@media(max-width:900px){.kgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.kgrid{grid-template-columns:1fr}}
+.kcard{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:14px 15px;position:relative;overflow:hidden}
+.kcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.kd::before{background:linear-gradient(90deg,var(--dragon),var(--dragon2))}
+.kg::before{background:linear-gradient(90deg,var(--gr),var(--gr2))}
+.kb::before{background:linear-gradient(90deg,var(--blue),var(--blue2))}
+.kp::before{background:linear-gradient(90deg,var(--purple),var(--purple2))}
+.klabel{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);margin-bottom:5px}
+.kval{font-size:20px;font-weight:800;line-height:1.1}
+.ksub{font-size:11px;color:var(--text2);margin-top:3px;font-family:var(--mono)}
+.kd .kval{color:var(--dragon2)}.kg .kval{color:var(--gr2)}.kb .kval{color:var(--blue2)}.kp .kval{color:var(--purple2)}
+.pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:12px}
+@media(max-width:768px){.pgrid{grid-template-columns:1fr}}
+.panel{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:12px}
+.ptitle{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.dd{background:var(--dragon)}.dgr{background:var(--gr)}.db{background:var(--blue)}.dp{background:var(--purple)}
+.tag{display:inline-block;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:600;margin:2px 2px 2px 0;font-family:var(--mono)}
+.tg{background:rgba(62,203,111,0.1);color:#78f5a8;border:1px solid rgba(62,203,111,0.2)}
+.tgo{background:rgba(232,178,61,0.12);color:var(--jaguar2);border:1px solid rgba(232,178,61,0.25)}
+.tr{background:rgba(212,52,44,0.12);color:var(--dragon2);border:1px solid rgba(212,52,44,0.25)}
+.tb{background:rgba(74,158,255,0.1);color:var(--blue2);border:1px solid rgba(74,158,255,0.2)}
+.tp{background:rgba(176,122,255,0.1);color:var(--purple2);border:1px solid rgba(176,122,255,0.2)}
+p.body{font-size:14px;color:var(--text2);line-height:1.75;margin-bottom:12px}
+.tli{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--border)}
+.tli:last-child{border-bottom:none}
+.tld{font-family:var(--mono);font-size:11px;color:var(--gr2);min-width:100px;font-weight:600;padding-top:2px;flex-shrink:0}
+.tltitle{font-size:14px;font-weight:700;margin-bottom:3px}
+.tldesc{font-size:12px;color:var(--text2);line-height:1.6}
+.agrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.acard{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px 14px}
+.aname{font-size:14px;font-weight:700;margin-bottom:3px}
+.arole{font-size:11px;color:var(--text2);font-family:var(--mono);margin-bottom:6px}
+.astatus{font-size:12px;color:var(--text2);line-height:1.5}
+.ritem{padding:11px 14px;border-radius:8px;margin-bottom:8px;border-left:3px solid;background:var(--bg3)}
+.rcrit{border-color:var(--dragon)}.ralto{border-color:var(--jaguar2)}.rmedio{border-color:var(--blue)}
+.rheader{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;flex-wrap:wrap;gap:6px}
+.rname{font-size:14px;font-weight:700}
+.rbadge{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;border-radius:3px;font-family:var(--mono)}
+.bcrit{background:rgba(212,52,44,0.2);color:var(--dragon2)}.balto{background:rgba(232,178,61,0.2);color:var(--jaguar2)}.bmedio{background:rgba(74,158,255,0.15);color:var(--blue2)}
+.rdesc{font-size:12px;color:var(--text2);line-height:1.6}
+.lacuna{padding:11px 14px;border-radius:8px;margin-bottom:8px;background:var(--bg3);border-left:3px solid var(--purple)}
+.lacuna b{color:var(--purple2)}
+.refitem{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);align-items:flex-start}
+.refitem:last-child{border-bottom:none}
+.refnum{font-family:var(--mono);font-size:11px;color:var(--text2);min-width:30px;margin-top:2px}
+.reftitle{font-size:14px;font-weight:600;margin-bottom:2px}
+.reftitle a{color:var(--gr2);text-decoration:none;border-bottom:1px dotted var(--jaguar-dim)}
+.reftitle a:hover{color:#fff;border-bottom-color:var(--gr2)}
+.refsrc{font-size:11px;color:var(--text2);font-family:var(--mono)}
+footer{padding:22px 26px 40px;border-top:2px solid var(--dragon-dim);text-align:center}
+.footcc0{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;color:var(--text2);letter-spacing:1px}
+.footcc0 b{color:var(--gr2)}
+.footnote{font-size:11px;color:var(--text2);margin-top:8px;font-family:var(--mono)}
+#gotop{position:fixed;right:20px;bottom:20px;z-index:300;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--dragon),var(--gr));color:#0b0f0a;border:none;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,0.45);opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .25s,transform .25s}
+#gotop.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+#gotop:hover{filter:brightness(1.1)}
+.series-nav{margin:0 auto;max-width:1200px;padding:28px 20px 0;border-top:2px solid var(--border)}
+.series-nav-title{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--text2);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.series-nav-title::before{content:'';flex:1;height:1px;background:var(--border)}
+.series-nav-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:14px}
+@media(max-width:720px){.series-nav-grid{grid-template-columns:1fr}}
+.series-card{display:block;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 16px;text-decoration:none;color:inherit;transition:border-color .2s,transform .15s;position:relative;overflow:hidden}
+.series-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--dragon),var(--jaguar))}
+.series-card:hover{border-color:rgba(232,178,61,.45);transform:translateY(-1px)}
+.series-card.is-current{border-color:var(--jaguar);box-shadow:0 0 0 1px rgba(232,178,61,.35) inset;pointer-events:none;opacity:.92}
+.series-card-id{font-family:var(--mono);font-size:10px;color:var(--jaguar2);letter-spacing:1px;margin-bottom:4px}
+.series-card-chapter{font-size:14px;font-weight:800;color:#fff;margin-bottom:4px;line-height:1.2}
+.series-card-desc{font-size:12px;color:var(--text2);line-height:1.55}
+.series-hub{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--jaguar2);text-decoration:none;font-family:var(--mono);margin-bottom:8px}
+.series-hub:hover{color:#fff}
+</style>
+</head>
+<body>
+<header>
+  <div style="display:flex;align-items:center;gap:0;flex-wrap:wrap">
+    <div class="hbadge">Série · Capítulo Estadual</div>
+    <div class="live-badge"><span class="live-dot"></span>2019 — 2027 (obras previstas)</div>
+  </div>
+  <h1>O <span>Dragão</span> e a <em>Onça</em> — Capítulo <em>Pará</em></h1>
+  <div class="hmeta">
+    <span class="hm"><b>Governador:</b> Helder Barbalho (MDB, 2019–presente)</span>
+    <span class="hm"><b>Ativo central:</b> Ferrovia do Pará (Marabá–Barcarena, 492km)</span>
+    <span class="hm"><b>Parceiros:</b> CCCC (China), Vale, Norsk Hydro</span>
+    <span class="hm"><b>Vitrine:</b> COP30 — Belém, nov/2025</span>
+  </div>
+</header>
+
+<nav id="mainnav">
+  <a class="nb" href="#visao" data-target="visao">Visão Geral</a>
+  <a class="nb" href="#ferrovia" data-target="ferrovia">Ferrovia do Pará</a>
+  <a class="nb" href="#estrutura" data-target="estrutura">Programa Estrutura & COP30</a>
+  <a class="nb" href="#hydro" data-target="hydro">Conflito Norsk Hydro</a>
+  <a class="nb" href="#atores" data-target="atores">Atores & Rede Familiar</a>
+  <a class="nb" href="#riscos" data-target="riscos">Riscos Estruturais</a>
+  <a class="nb" href="#lacunas" data-target="lacunas">Lacunas Investigativas</a>
+  <a class="nb" href="#refs" data-target="refs">Referências</a>
+</nav>
+
+<main>
+
+<section id="visao" class="sec">
+  <div class="sec-title"><span class="flag">📍</span>Visão Geral</div>
+  <div class="sec-sub">Pará: onde infraestrutura mineral, capital chinês e vitrine climática se sobrepõem</div>
+  <div class="kgrid">
+    <div class="kcard kd"><div class="klabel">Ferrovia do Pará (2023, Pequim)</div><div class="kval">R$10bi</div><div class="ksub">US$2bi — CCCC + Vale, Marabá-Barcarena</div></div>
+    <div class="kcard kg"><div class="klabel">Minério/grãos a escoar/ano</div><div class="kval">60mi t</div><div class="ksub">50% minério de ferro, 30% agro/fertilizantes</div></div>
+    <div class="kcard kb"><div class="klabel">Programa Estrutura (Vale, 2024)</div><div class="kval">US$206mi</div><div class="ksub">dívida convertida em obras — Parque da Cidade, Porto Futuro II</div></div>
+    <div class="kcard kp"><div class="klabel">Mortes trem Vale (T.I. Mãe Maria)</div><div class="kval">39</div><div class="ksub">em 8 anos, mesma região da nova ferrovia</div></div>
+  </div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dd"></span>Por que o Pará é o capítulo mais denso da série até agora</div>
+    <p class="body">Nenhum outro capítulo reúne, simultaneamente: (1) capital chinês estatal-adjacente (CCCC) em infraestrutura de escoamento mineral, (2) a maior mineradora do país (Vale) como parte formal do acordo, (3) capital norueguês (Norsk Hydro) em conflito documentado com comunidades tradicionais, (4) uma rede de proximidade familiar em três pontos de poder/fiscalização simultâneos, e (5) o maior evento diplomático do planeta (COP30) funcionando como vitrine para o mesmo governo que conduz os projetos criticados. <b style="color:var(--gr2)">A Amazônia é o único lugar do país onde a série "Dragão e Onça" encontra, ao mesmo tempo, o dragão chinês, o capital europeu e o discurso verde global</b> — e onde a tese central do corpus (nenhum vetor chega ao beneficiário final) fica mais visível.</p>
+  </div>
+</section>
+
+<section id="ferrovia" class="sec">
+  <div class="sec-title"><span class="flag">🚆</span>Ferrovia do Pará — Linha do Tempo</div>
+  <div class="sec-sub">De protocolo de intenções (2019) a audiências públicas (2026) — 7 anos de sequência invertida</div>
+  <div class="panel">
+    <div class="tli"><div class="tld">12 nov 2019</div><div><div class="tltitle">Protocolo de intenções com a CCCC (R$7bi)</div><div class="tldesc">Traçado Marabá-Barcarena (492km), cruzando 23 municípios e territórios tradicionais/quilombolas não consultados. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">14 abr 2023</div><div><div class="tltitle">MoU em Pequim: Barbalho + CCCC + Vale (R$10bi/US$2bi)</div><div class="tldesc">Durante comitiva de Lula à China; Vale entra formalmente como parte. Rota serve diretamente Carajás/Parauapebas (maior projeto de minério de ferro do mundo) e o porto de Vila do Conde em Barcarena. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">24 mai 2026</div><div><div class="tltitle">Projeto avança para audiências públicas; obras previstas para 2027</div><div class="tldesc">Licenciamento em curso na Semas-PA; consulta popular ocorre 7 anos após o traçado já estar definido em negociação bilateral. <span class="tag tg">ev-confirmed</span></div></div></div>
+  </div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dgr"></span>O precedente que ninguém menciona nos anúncios oficiais</div>
+    <p class="body">O trem de carga da Vale que já atravessa a Terra Indígena Mãe Maria, em Marabá — na mesma região da nova ferrovia — <b style="color:var(--jaguar2)">matou 39 pessoas em 8 anos</b>, segundo reportagem da época do protocolo original. Nenhum dos comunicados oficiais de 2019, 2023 ou 2026 menciona esse dado ao anunciar a expansão da malha ferroviária na mesma região.</p>
+  </div>
+</section>
+
+<section id="estrutura" class="sec">
+  <div class="sec-title"><span class="flag">🏗️</span>Programa Estrutura & COP30</div>
+  <div class="sec-sub">Dívida de mineradora vira obra pública vira vitrine climática</div>
+  <div class="panel">
+    <div class="tli"><div class="tld">2023</div><div><div class="tltitle">Regulamentação do Programa Estrutura</div><div class="tldesc">Vale e outras mineradoras podem converter até 40% de valores devidos ao estado em obras públicas escolhidas em conjunto com o governo — em vez de pagamento direto ao erário. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">2024</div><div><div class="tltitle">Vale anuncia ~US$206mi em obras do programa</div><div class="tldesc">Financia Parque da Cidade e Porto Futuro II — infraestrutura usada como propaganda de sustentabilidade nas vésperas da COP30. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">13 abr 2025</div><div><div class="tltitle">Barbalho: "COP não é de esquerda nem de direita"</div><div class="tldesc">Declaração ao O Globo em meio a críticas sobre aumento do custo de vida em Belém (hospedagem, alimentos, insumos de construção). Cita abertura de 26 mil empresas no 1º trim/2025 como saldo positivo. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">7 nov 2024</div><div><div class="tltitle">Vereadora eleita: "COP30 será fechada para o povo"</div><div class="tldesc">Vivi Reis acusa o governo de priorizar agronegócio e setores empresariais. <span class="tag tgo">ev-alleged — visão de oposição política, não corroborada de forma independente</span></div></div></div>
+    <div class="tli"><div class="tld">10-21 nov 2025</div><div><div class="tltitle">COP30 realizada em Belém — 55 mil+ participantes, incêndio suspende negociações</div><div class="tldesc">Maior COP já realizada; críticas acadêmicas pós-evento sobre captura da política climática por atores do agronegócio. <span class="tag tg">ev-confirmed</span></div></div></div>
+  </div>
+</section>
+
+<section id="hydro" class="sec">
+  <div class="sec-title"><span class="flag">⚠️</span>Conflito Norsk Hydro (Barcarena)</div>
+  <div class="sec-sub">Capital europeu, mesmo padrão estrutural — a captura não é exclusiva de um bloco geopolítico</div>
+  <div class="panel">
+    <div class="tli"><div class="tld">set 2024</div><div><div class="tltitle">Manifesto de comunidades do Vale do Acará</div><div class="tldesc">Indígenas, quilombolas e ribeirinhos denunciam que o mineroduto de 244km da Norsk Hydro (Paragominas-Barcarena) devastou rios, esgotou recursos hídricos e afetou mais de 600 famílias sem consulta prévia. Acusam o governador de ser "aliado da Hydro" e fornecer "licenças ambientais fraudulentas". <span class="tag tg">ev-confirmed</span> (existência do manifesto e das acusações); <span class="tag tgo">ev-alleged</span> quanto à veracidade específica de fraude nas licenças.</div></div></div>
+    <div class="tli"><div class="tld">2024</div><div><div class="tltitle">Comunidade bloqueia acesso; Hydro obtém liminar</div><div class="tldesc">Justiça autoriza retomada das obras do mineroduto. <span class="tag tg">ev-confirmed</span></div></div></div>
+  </div>
+</section>
+
+<section id="atores" class="sec">
+  <div class="sec-title"><span class="flag">🧭</span>Atores & Rede Familiar</div>
+  <div class="sec-sub">Três pontos de proximidade familiar em posições de poder ou fiscalização simultâneas</div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dd"></span>Bloco Empresarial</div>
+    <div class="agrid">
+      <div class="acard"><div class="aname">CCCC (China Communications Construction Company)</div><div class="arole">Construção — Ferrovia do Pará</div><div class="astatus">Maior construtora da China; sinaliza financiamento via China Development Bank.</div></div>
+      <div class="acard"><div class="aname">Vale S.A.</div><div class="arole">Mineração — parte formal do MoU da ferrovia</div><div class="astatus">Beneficiária direta da logística; financia obras públicas via Programa Estrutura.</div></div>
+      <div class="acard"><div class="aname">Norsk Hydro (Noruega)</div><div class="arole">Mineração de bauxita — Barcarena</div><div class="astatus">Mineroduto de 244km em conflito com comunidades do Vale do Acará.</div></div>
+      <div class="acard"><div class="aname">BYD / Zhongtong Bus / Nine Dragons Paper</div><div class="arole">Indústria — negociações exploratórias</div><div class="astatus">Visitas e reuniões em 2023; sem confirmação de instalação efetiva até jul/2026.</div></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dp"></span>Rede Política Familiar</div>
+    <div class="agrid">
+      <div class="acard"><div class="aname">Helder Barbalho</div><div class="arole">Governador do Pará (MDB)</div><div class="astatus">Articulador direto de todos os acordos com China, Vale e Norsk Hydro; anfitrião estadual da COP30.</div></div>
+      <div class="acard"><div class="aname">Daniela Lima Barbalho</div><div class="arole">Esposa; conselheira do TCE-PA</div><div class="astatus">Órgão que deveria fiscalizar o próprio governo do marido.</div></div>
+      <div class="acard"><div class="aname">Jader Barbalho Filho</div><div class="arole">Irmão; Ministro das Cidades (governo federal)</div><div class="astatus">Coordenação federal-estadual entre parentes diretos.</div></div>
+      <div class="acard"><div class="aname">Igor Normando</div><div class="arole">Primo de 4º grau; Prefeito de Belém (desde jan/2025)</div><div class="astatus">Coordenação executiva estado-município das obras da COP30 entre parentes.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="riscos" class="sec">
+  <div class="sec-title"><span class="flag">⚠️</span>Riscos Estruturais</div>
+  <div class="sec-sub">Padrões análogos ao corpus P0X aplicados ao eixo logístico-mineral amazônico</div>
+  <div class="panel">
+    <div class="ritem rcrit"><div class="rheader"><div class="rname">Sequência invertida: acordo internacional antes de consulta popular</div><div class="rbadge bcrit">ponto_de_inflexao</div></div><div class="rdesc">Protocolo com a CCCC (2019) e MoU com Vale (2023, em Pequim) precedem em 7 anos a fase de audiências públicas (2026) — o traçado já estava definido antes de qualquer consulta formal às comunidades atingidas.</div></div>
+    <div class="ritem ralto"><div class="rheader"><div class="rname">Dívida de mineradora como orçamento paralelo (análogo P05)</div><div class="rbadge balto">ev-confirmed</div></div><div class="rdesc">Programa Estrutura permite à Vale escolher, com o governo, quais obras públicas construir com valores que deveriam ir ao caixa livre do Tesouro estadual — o mesmo ativo (dívida) vira ao mesmo tempo obrigação fiscal e propaganda institucional para a COP30.</div></div>
+    <div class="ritem ralto"><div class="rheader"><div class="rname">Rede familiar em pontos de poder e fiscalização simultâneos</div><div class="rbadge balto">ev-confirmed</div></div><div class="rdesc">Esposa no órgão fiscalizador estadual, irmão em ministério federal com que o estado precisa dialogar, primo na prefeitura da capital-sede da COP30 — nenhum indício de irregularidade formal documentado, mas independência estrutural dos mecanismos de controle fica estruturalmente reduzida.</div></div>
+    <div class="ritem rmedio"><div class="rheader"><div class="rname">Both-sidesism funcional como resposta a crítica estrutural (P04b)</div><div class="rbadge bmedio">ev-inference</div></div><div class="rdesc">Enquadrar críticas concretas e mensuráveis (custo de vida, exclusão popular) como "disputa ideológica" desloca o debate de mecanismo verificável para rótulo político.</div></div>
+    <div class="ritem rmedio"><div class="rheader"><div class="rname">Captura não é exclusiva de um bloco geopolítico</div><div class="rbadge bmedio">ev-inference</div></div><div class="rdesc">O mesmo padrão de exclusão comunitária documentado com capital chinês (Ferrovia/CCCC) se repete com capital norueguês (Norsk Hydro) — o mecanismo estrutural independe da nacionalidade do investidor.</div></div>
+  </div>
+</section>
+
+<section id="lacunas" class="sec">
+  <div class="sec-title"><span class="flag">🔍</span>Lacunas Investigativas</div>
+  <div class="sec-sub">Campo obrigatório, primeira classe</div>
+  <div class="panel">
+    <div class="lacuna"><b>Consulta às comunidades no protocolo original de 2019</b> — não localizado se e como ocorreu antes da assinatura.</div>
+    <div class="lacuna"><b>Termos financeiros completos do MoU CCCC-Vale-Pará (2023)</b> — condições de financiamento, garantias e estrutura de risco não são públicas.</div>
+    <div class="lacuna"><b>Auditoria independente do Programa Estrutura</b> — não localizada comparação entre valor de dívida original e custo real das obras entregues.</div>
+    <div class="lacuna"><b>Resposta formal de Barbalho às acusações de licenças ambientais fraudulentas (Norsk Hydro)</b> — não localizada nesta rodada.</div>
+    <div class="lacuna"><b>Confirmação operacional de BYD, Zhongtong Bus e Nine Dragons Paper no Pará</b> — negociações de 2023 sem confirmação de instalação efetiva até jul/2026.</div>
+    <div class="lacuna"><b>Levantamento quantitativo independente dos beneficiários econômicos da COP30</b> — população local vs. setores empresariais/agronegócio, para corroborar ou refutar a crítica da vereadora Vivi Reis.</div>
+    <div class="lacuna"><b>Medidas de segurança planejadas para trechos da nova ferrovia em terras indígenas</b> — à luz do precedente de 39 mortes em 8 anos na T.I. Mãe Maria.</div>
+  </div>
+</section>
+
+<section id="refs" class="sec">
+  <div class="sec-title"><span class="flag">📚</span>Referências</div>
+  <div class="sec-sub">Fontes consultadas, com link direto</div>
+  <div class="panel">
+    <div class="refitem"><div class="refnum">[01]</div><div><div class="reftitle"><a href="https://www.brasildefato.com.br/2019/11/28/governo-do-para-anuncia-ferrovia-e-comunidades-temem-mais-mortes-e-mais-sofrimento/" target="_blank" rel="noopener">Governo do Pará anuncia ferrovia e comunidades temem "mais mortes e mais sofrimento"</a></div><div class="refsrc">Brasil de Fato • 28/11/2019</div></div></div>
+    <div class="refitem"><div class="refnum">[02]</div><div><div class="reftitle"><a href="https://revistaferroviaria.com.br/2020/04/chineses-vao-investir-r-7-bilhoes-no-para/" target="_blank" rel="noopener">Chineses vão investir R$ 7 bilhões no Pará</a></div><div class="refsrc">Revista Ferroviária • 01/04/2020</div></div></div>
+    <div class="refitem"><div class="refnum">[03]</div><div><div class="reftitle"><a href="https://www.oliberal.com/politica/ferrovia-do-para-helder-assina-acordo-na-china-para-construcao-de-ferrovia-entre-maraba-e-barcarena-1.668574" target="_blank" rel="noopener">Ferrovia do Pará: Helder assina acordo na China</a></div><div class="refsrc">O Liberal • 14/04/2023</div></div></div>
+    <div class="refitem"><div class="refnum">[04]</div><div><div class="reftitle"><a href="https://observatoriodamineracao.com.br/vale-e-uma-das-grandes-beneficiadas-pela-visita-de-lula-a-china-nova-ferrovia-no-para-com-capital-chines-atendera-a-varias-mineradoras-e-ao-agronegocio/" target="_blank" rel="noopener">Vale é uma das grandes beneficiadas pela visita de Lula à China</a></div><div class="refsrc">Observatório da Mineração • 27/11/2024</div></div></div>
+    <div class="refitem"><div class="refnum">[05]</div><div><div class="reftitle"><a href="https://agenciapara.com.br/noticia/31160/ferrovia-do-para-avanca-e-tera-audiencias-publicas-para-receber-novas-contribuicoes" target="_blank" rel="noopener">'Ferrovia do Pará' avança e terá audiências públicas</a></div><div class="refsrc">Agência Pará • 24/05/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[06]</div><div><div class="reftitle"><a href="https://sumauma.com/en/vale-tudo-para-maquiar-belem-para-a-cop-30/" target="_blank" rel="noopener">Vale tudo para maquiar Belém para a COP30?</a></div><div class="refsrc">SUMAÚMA • 20/11/2025</div></div></div>
+    <div class="refitem"><div class="refnum">[07]</div><div><div class="reftitle"><a href="https://observatoriodamineracao.com.br/gigante-norueguesa-norsk-hydro-reforca-discurso-de-aluminio-verde-em-acoes-vinculadas-a-cop-30-e-ignora-impactos-socioambientais-no-para/" target="_blank" rel="noopener">Norsk Hydro reforça discurso de "alumínio verde" e ignora impactos socioambientais</a></div><div class="refsrc">Observatório da Mineração • 12/11/2025</div></div></div>
+    <div class="refitem"><div class="refnum">[08]</div><div><div class="reftitle"><a href="https://noticias.uol.com.br/ultimas-noticias/agencia-estado/2024/10/27/belem-primo-de-helder-barbalho-igor-normando-mdb-e-eleito-prefeito-da-capital.htm" target="_blank" rel="noopener">Belém: Primo de Helder Barbalho é eleito prefeito da capital</a></div><div class="refsrc">UOL/Agência Estado • 27/10/2024</div></div></div>
+    <div class="refitem"><div class="refnum">[09]</div><div><div class="reftitle"><a href="https://almapreta.com.br/sessao/politica/cop-30-sob-gestao-de-helder-barbalho-sera-fechada-para-o-povo-diz-vivi-reis-vereadora-eleita-de-belem/" target="_blank" rel="noopener">"COP 30 sob gestão de Helder Barbalho será fechada para o povo", diz Vivi Reis</a></div><div class="refsrc">Alma Preta • 07/11/2024</div></div></div>
+    <div class="refitem"><div class="refnum">[10]</div><div><div class="reftitle"><a href="https://www.gazetadopovo.com.br/republica/barbalho-diz-que-cop-30-nao-sera-ideologica-e-promete-infraestrutura-pronta-em-belem/" target="_blank" rel="noopener">Barbalho diz que COP-30 não será ideológica</a></div><div class="refsrc">Gazeta do Povo • 13/04/2025</div></div></div>
+    <div class="refitem"><div class="refnum">[11]</div><div><div class="reftitle"><a href="https://www.ncl.ac.uk/business/news/cop30-in-belem" target="_blank" rel="noopener">COP30 in Belém: A Turning Point or Another Missed Opportunity?</a></div><div class="refsrc">Newcastle University • 21/11/2025</div></div></div>
+    <div class="refitem"><div class="refnum">[12]</div><div><div class="reftitle"><a href="https://agenciapara.com.br/noticia/57072/estado-assina-acordo-de-cooperacao-entre-uepa-e-universidade-chinesa-de-shandong" target="_blank" rel="noopener">Estado assina acordo de cooperação entre UEPA e universidade de Shandong</a></div><div class="refsrc">Agência Pará • 03/2025</div></div></div>
+    <div class="refitem"><div class="refnum">[13]</div><div><div class="reftitle"><a href="https://agenciapara.com.br/noticia/42885/na-china-governador-do-para-visita-fabrica-de-veiculos-com-energia-limpa" target="_blank" rel="noopener">Na China, governador do Pará visita fábrica de veículos com energia limpa</a></div><div class="refsrc">Agência Pará • 04/2023</div></div></div>
+    <div class="refitem"><div class="refnum">[14]</div><div><div class="reftitle"><a href="https://ipam.org.br/in-beijing-event-boosts-cooperation-between-brazilian-and-chinese-ngos/" target="_blank" rel="noopener">In Beijing, event boosts cooperation between Brazilian and Chinese NGOs</a></div><div class="refsrc">IPAM • 06/2025</div></div></div>
+    <div class="refitem"><div class="refnum">[15]</div><div><div class="reftitle"><a href="https://en.wikipedia.org/wiki/Igor_Normando" target="_blank" rel="noopener">Igor Normando — biografia e relação familiar com Barbalho</a></div><div class="refsrc">Wikipedia</div></div></div>
+  </div>
+
+</section>
+
+<section class="series-nav" id="serie">
+  <div class="series-nav-title">Artefatos da Série: O Dragão e a Onça</div>
+  <div class="series-nav-grid">
+    <a class="series-card" href="/o-dragao-e-a-onca-goias.html"><div class="series-card-id">T-228 · Capítulo inaugural</div><div class="series-card-chapter">🇧🇷 GO Goiás</div><div class="series-card-desc">Pivô China → EUA/Japão em terras raras</div></a><a class="series-card" href="/dragao-onca-brasil-federal.html"><div class="series-card-id">T-229 · Linha do tempo 1993–2026</div><div class="series-card-chapter">🇧🇷 BR Brasil (Federal)</div><div class="series-card-desc">Parceria estratégica e o caso Doria–Sinovac</div></a><a class="series-card" href="/dragao-onca-para.html"><div class="series-card-id">T-230 · Ferrovia CCCC + Vale</div><div class="series-card-chapter">🇧🇷 PA Pará</div><div class="series-card-desc">Corredor mineral e COP30 como vitrine</div></a><a class="series-card" href="/dragao-onca-amazonas.html"><div class="series-card-id">T-231 · Taboca / China Nonferrous</div><div class="series-card-chapter">🇧🇷 AM Amazonas</div><div class="series-card-desc">Contaminação Waimiri-Atroari e Zona Franca</div></a><a class="series-card" href="/dragao-onca-minas-gerais.html"><div class="series-card-id">T-232 · Vale do Lítio</div><div class="series-card-chapter">🇧🇷 MG Minas Gerais</div><div class="series-card-desc">Sigma Lithium e o contraste ocidental</div></a><a class="series-card" href="/dragao-onca-sintese.html"><div class="series-card-id">T-233 · Cross-estadual</div><div class="series-card-chapter">📊 Síntese Comparativa</div><div class="series-card-desc">Soberania na conta do governador</div></a><a class="series-card" href="/dragao-onca-braco-juridico.html"><div class="series-card-id">T-234 · Transversal · STF × Congresso</div><div class="series-card-chapter">⚖️ Braço Jurídico</div><div class="series-card-desc">Marco temporal, PL da Devastação e ADI 7919</div></a><a class="series-card" href="/dragao-onca-pl2780.html"><div class="series-card-id">T-235 · Elo legislativo central</div><div class="series-card-chapter">📜 PL 2.780/2024</div><div class="series-card-desc">Política Nacional de Minerais Críticos</div></a>
+  </div>
+  <a class="series-hub" href="/odragaoeaonca">← Índice da série · O Dragão e a Onça</a>
+</section>
+
+</main>
+
+<footer>
+  <div class="footcc0">⚖ <b>CC0 1.0</b> — Domínio Público · lawfare-timeline · série "O Dragão e a Onça"</div>
+  <div class="footnote">Capítulo 3 da série (após Federal e Goiás) · Próximos: Amazonas (Wilson Lima) e Minas Gerais (Zema)</div>
+</footer>
+
+<button id="gotop" title="Voltar ao topo" aria-label="Voltar ao topo">↑</button>
+
+<script>
+const links = document.querySelectorAll('.nb');
+const sections = document.querySelectorAll('main .sec');
+const map = {};
+links.forEach(l=>{map[l.dataset.target]=l});
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      links.forEach(l=>l.classList.remove('act'));
+      const id = entry.target.id;
+      if(map[id]) map[id].classList.add('act');
+    }
+  });
+},{rootMargin:'-30% 0px -60% 0px',threshold:0});
+sections.forEach(s=>observer.observe(s));
+const gotop = document.getElementById('gotop');
+window.addEventListener('scroll',()=>{
+  gotop.classList.toggle('show', window.scrollY > 400);
+});
+gotop.addEventListener('click',()=>{
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+</script>
+</body>
+</html>
