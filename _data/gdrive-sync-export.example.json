@@ -1,0 +1,15 @@
+{
+  "enabled": true,
+  "dest_dir": "",
+  "subfolder": "lawfare-timeline",
+  "dest_filename": "claude.ai-corpus-ids-sync.json",
+  "_comments": {
+    "dest_dir": "Caminho absoluto da pasta no Google Drive. Se vazio, usa LAWFARE_GDRIVE_SYNC_DIR ou detecta Meu Drive + subfolder.",
+    "subfolder": "Subpasta dentro da raiz do Google Drive quando dest_dir estiver vazio.",
+    "env_override": "LAWFARE_GDRIVE_SYNC_DIR tem prioridade sobre dest_dir.",
+    "examples_windows": [
+      "G:/Meu Drive/lawfare-timeline",
+      "C:/Users/SEU_USUARIO/Google Drive/lawfare-timeline"
+    ]
+  }
+}

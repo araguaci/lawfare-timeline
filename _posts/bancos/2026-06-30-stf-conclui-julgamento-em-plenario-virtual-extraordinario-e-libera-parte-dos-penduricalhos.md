@@ -4,7 +4,7 @@ description: "O STF concluiu em sessão virtual extraordinária de 30/06/2026 o 
 date: 2026-06-30T12:00:00.000Z
 image:
   path: "/assets/solid/landmark.svg"
-tags: ["bancos", "P11", "P03"]
+tags: ["bancos", "penduricalhos", "P05", "P11", "P03"]
 categories: bancos
 permalink: /posts/2026-06-30-stf-conclui-julgamento-em-plenario-virtual-extraordinario-e-libera-parte-dos-penduricalhos/
 id_corpus: "1633"
@@ -66,15 +66,25 @@ Nemo judex institucional aplicado à administração da própria remuneração: 
 
 ## Conexoes
 
+- id_1448 (TJMG paga acima do teto a um terço dos magistrados, 2026-05-09)
 - id_1634
 - id_T191
+
+## PVTAC e embargos de declaração
+
+Os embargos de declaração de 30/06/2026 confirmaram a implementação automática da **Parcela de Valorização por Tempo de Antiguidade na Carreira (PVTAC)**: 5% do subsídio a cada 5 anos de atividade jurídica, até 35%, devida também a magistrados e membros do MP aposentados e pensionistas, sem requerimento individual. O STF vedou contagem simultânea do mesmo período para PVTAC e para o antigo ATS/VPNI (extinto em 2006), mas autorizou cumulação quando aplicados a períodos distintos da carreira. O conceito de "atividade jurídica" ficou delegado ao CNJ/CNMP — até definição, tribunais devem usar critérios de anuênio/quinquênio pré-2006. O TJRO reconheceu publicamente pagamento simultâneo indevido de PVTAC e ATS no mesmo período em maio/junho, corrigido apenas após a decisão.
 
 ## Lacunas investigativas
 
 - Se as auditorias do CNJ, órgão presidido por um dos signatários do voto que ampliou as próprias verbas, serão submetidas a fiscalização externa independente.
+- Impacto financeiro agregado nacional da PVTAC (ativos + aposentados + pensionistas) não quantificado em nenhuma fonte consultada.
+- Prazo para CNJ/CNMP definirem o conceito de "atividade jurídica" não fixado pelo STF.
 
 ## Fontes verificaveis
 
 1. [STF afrouxa penduricalhos e garante até R$ 16 mil adicionais para juízes e promotores](https://ndmais.com.br/justica/stf-afrouxa-penduricalhos-e-garante-ate-r-16-mil-adicionais-para-juizes-e-promotores/)
 2. [STF conclui julgamento e libera parte dos penduricalhos que haviam sido barrados pelo tribunal](https://fenafisco.org.br/01/07/2026/stf-conclui-julgamento-e-libera-parte-dos-penduricalhos-que-haviam-sido-barrados-pelo-tribunal/)
 3. [Supersalários: STF forma maioria para liberar parte de penduricalhos barrados em julgamento](https://www.cartacapital.com.br/justica/supersalarios-stf-forma-maioria-para-liberar-parte-de-penduricalhos-barrados-em-julgamento/)
+4. [STF libera parte das verbas indenizatórias a magistrados](https://www.conjur.com.br/2026-jul-01/stf-libera-parte-das-verbas-indenizatorias-a-magistrados/) — Conjur
+5. ['Penduricalhos': STF explica pagamento de verbas indenizatórias](https://www.migalhas.com.br/quentes/459567/penduricalhos--stf-explica-pagamento-de-verbas-indenizatorias) — Migalhas
+6. [TJs usam férias e aposentadorias para justificar 'penduricalhos' ao STF](https://www.cnnbrasil.com.br/politica/tjs-usam-ferias-e-aposentadorias-para-justificar-penduricalhos-ao-stf/) — CNN Brasil

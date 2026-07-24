@@ -18,11 +18,14 @@ import argparse
 import json
 import re
 import shutil
+import sys
 import unicodedata
 from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "tools"))
+from gdrive_sync_export import export_sync_to_gdrive
 TODO = ROOT / "_data" / "todo"
 PROC = ROOT / "_data" / "processados"
 POSTS = ROOT / "_posts"
@@ -509,8 +512,10 @@ def process_all(dry_run: bool) -> tuple[list[dict], list[tuple[int, str, str]], 
             archived.append(fpath.name)
             continue
 
-        if isinstance(data, dict) and isinstance(data.get("entries"), list):
-            items = list(data["entries"])
+        if isinstance(data, dict) and (
+            isinstance(data.get("entries"), list) or isinstance(data.get("entradas"), list)
+        ):
+            items = list(data.get("entries") or data.get("entradas") or [])
             if isinstance(data.get("thematic_entries"), list):
                 items.extend(data["thematic_entries"])
         elif isinstance(data, list):
@@ -644,6 +649,8 @@ def update_sync(main_entries: list[dict], thematic: list[tuple[int, str, str]], 
         sync_status.setdefault("ids_confirmed_total", {})["thematic_track"] = max(t[0] for t in thematic)
 
     SYNC.write_text(json.dumps(sync_data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    if not dry_run:
+        export_sync_to_gdrive(quiet=False)
     print("claude.ai-corpus-ids-sync.json atualizado.")
 
 

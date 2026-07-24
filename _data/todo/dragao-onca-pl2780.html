@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Dragão e a Onça — PL 2.780/2024 | República Sequestrada</title>
+<meta name="description" content="Dossiê dedicado ao PL 2.780/2024 (Política Nacional de Minerais Críticos e Estratégicos): o elo legislativo central que amarra os capítulos estaduais da série Dragão e Onça.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --bg:#080c10;--bg2:#0f151b;--bg3:#161e26;
+  --dragon:#d4342c;--dragon2:#ff6b5f;--dragon-dim:#5c1512;
+  --jaguar:#e8b23d;--jaguar2:#ffd270;--jaguar-dim:#6b4e12;
+  --gr:#3ecb6f;--gr2:#78f5a8;--blue:#4a9eff;--blue2:#7ab8ff;
+  --purple:#b07aff;--purple2:#d0a8ff;--teal:#2ecfb0;--teal2:#60ffd8;
+  --border:rgba(255,255,255,0.07);--text:#e8edf0;--text2:#8a99a8;
+  --font:'Syne',sans-serif;--mono:'JetBrains Mono',monospace;
+}
+body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh}
+header{padding:26px 30px 18px;border-bottom:2px solid var(--jaguar-dim);background:linear-gradient(135deg,#080c10 0%,#1a1408 55%,#080c10 100%);position:relative;overflow:hidden}
+header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 25% 50%,rgba(232,178,61,0.1) 0%,transparent 55%),radial-gradient(ellipse at 75% 50%,rgba(212,52,44,0.06) 0%,transparent 55%)}
+.hbadge{display:inline-flex;align-items:center;gap:6px;background:rgba(232,178,61,0.14);border:1px solid var(--jaguar);border-radius:4px;padding:4px 12px;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--jaguar2);text-transform:uppercase;margin-bottom:10px}
+.live-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(212,52,44,0.15);border:1px solid var(--dragon-dim);border-radius:4px;padding:3px 10px;font-size:10px;font-weight:700;letter-spacing:1.5px;color:var(--dragon2);text-transform:uppercase;margin-left:8px}
+.live-dot{width:6px;height:6px;border-radius:50%;background:var(--dragon2);animation:pulse 1.2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+header h1{font-size:26px;font-weight:800;letter-spacing:-0.5px;color:#fff;line-height:1.15}
+header h1 span{color:var(--jaguar2)}
+header h1 em{font-style:normal;color:var(--dragon2)}
+.hmeta{display:flex;gap:18px;margin-top:10px;flex-wrap:wrap}
+.hm{font-size:12px;color:var(--text2);font-family:var(--mono)}
+.hm b{color:var(--jaguar2)}
+nav{display:flex;gap:4px;padding:12px 26px;background:rgba(10,14,18,0.96);border-bottom:2px solid var(--jaguar-dim);box-shadow:0 6px 18px rgba(0,0,0,0.35);overflow-x:auto;flex-wrap:wrap;position:sticky;top:0;z-index:200;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.nb{padding:7px 14px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--text2);font-family:var(--font);font-size:12px;font-weight:600;cursor:pointer;transition:all .2s;white-space:nowrap;text-decoration:none;display:inline-block}
+.nb:hover{border-color:var(--jaguar-dim);color:var(--jaguar2)}
+.nb.act{background:linear-gradient(90deg,rgba(232,178,61,0.22),rgba(212,52,44,0.12));border-color:var(--jaguar);color:#fff;font-weight:800;box-shadow:0 0 0 1px var(--jaguar) inset}
+main{padding:0 20px 32px;max-width:1200px;margin:0 auto}
+.sec{padding:34px 0 10px;border-bottom:1px solid var(--border);scroll-margin-top:70px}
+.sec:last-of-type{border-bottom:none}
+.sec-title{font-size:20px;font-weight:800;color:#fff;margin-bottom:4px;display:flex;align-items:center;gap:10px}
+.sec-title .flag{font-size:15px}
+.sec-sub{font-size:12px;color:var(--text2);font-family:var(--mono);margin-bottom:16px}
+.kgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:16px 0 10px}
+@media(max-width:900px){.kgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.kgrid{grid-template-columns:1fr}}
+.kcard{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 15px;position:relative;overflow:hidden}
+.kcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.kj::before{background:linear-gradient(90deg,var(--jaguar),var(--jaguar2))}
+.kd::before{background:linear-gradient(90deg,var(--dragon),var(--dragon2))}
+.kp::before{background:linear-gradient(90deg,var(--purple),var(--purple2))}
+.kt::before{background:linear-gradient(90deg,var(--teal),var(--teal2))}
+.klabel{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);margin-bottom:5px}
+.kval{font-size:20px;font-weight:800;line-height:1.1}
+.ksub{font-size:11px;color:var(--text2);margin-top:3px;font-family:var(--mono)}
+.kj .kval{color:var(--jaguar2)}.kd .kval{color:var(--dragon2)}.kp .kval{color:var(--purple2)}.kt .kval{color:var(--teal2)}
+.panel{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:18px 20px;margin-bottom:12px}
+.ptitle{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.dj{background:var(--jaguar)}.dd{background:var(--dragon)}.dp{background:var(--purple)}.dt{background:var(--teal)}
+.tag{display:inline-block;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:600;margin:2px 2px 2px 0;font-family:var(--mono)}
+.tg{background:rgba(62,203,111,0.1);color:#78f5a8;border:1px solid rgba(62,203,111,0.2)}
+.tgo{background:rgba(232,178,61,0.12);color:var(--jaguar2);border:1px solid rgba(232,178,61,0.25)}
+.tr{background:rgba(212,52,44,0.12);color:var(--dragon2);border:1px solid rgba(212,52,44,0.25)}
+p.body{font-size:13px;color:var(--text2);line-height:1.75;margin-bottom:10px}
+.tli{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--border)}
+.tli:last-child{border-bottom:none}
+.tld{font-family:var(--mono);font-size:11px;color:var(--jaguar2);min-width:100px;font-weight:600;padding-top:2px;flex-shrink:0}
+.tltitle{font-size:13px;font-weight:700;margin-bottom:3px}
+.tldesc{font-size:12px;color:var(--text2);line-height:1.6}
+.mecgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}
+.meccard{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:14px 15px}
+.mecname{font-size:13px;font-weight:700;margin-bottom:4px;color:#fff}
+.mecart{font-size:11px;color:var(--jaguar2);font-family:var(--mono);margin-bottom:6px}
+.mecdesc{font-size:12px;color:var(--text2);line-height:1.55}
+.ritem{padding:11px 13px;border-radius:8px;margin-bottom:8px;border-left:3px solid;background:var(--bg3)}
+.rcrit{border-color:var(--dragon)}.ralto{border-color:var(--jaguar2)}.rmedio{border-color:var(--blue)}
+.rheader{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;flex-wrap:wrap;gap:6px}
+.rname{font-size:13px;font-weight:700}
+.rbadge{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;border-radius:3px;font-family:var(--mono)}
+.bcrit{background:rgba(212,52,44,0.2);color:var(--dragon2)}.balto{background:rgba(232,178,61,0.2);color:var(--jaguar2)}.bmedio{background:rgba(74,158,255,0.15);color:var(--blue2)}
+.rdesc{font-size:12px;color:var(--text2);line-height:1.6}
+.destaque{padding:16px 18px;border-radius:8px;background:rgba(212,52,44,0.1);border:1px solid rgba(212,52,44,0.3);margin:14px 0}
+.destaque-label{font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--dragon2);margin-bottom:8px}
+.lacuna{padding:11px 13px;border-radius:8px;margin-bottom:8px;background:var(--bg3);border-left:3px solid var(--purple)}
+.lacuna b{color:var(--purple2)}
+.lacuna.resolvida{border-left-color:var(--gr)}
+.lacuna.resolvida b{color:var(--gr2)}
+.refitem{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);align-items:flex-start}
+.refitem:last-child{border-bottom:none}
+.refnum{font-family:var(--mono);font-size:11px;color:var(--text2);min-width:30px;margin-top:2px}
+.reftitle{font-size:13px;font-weight:600;margin-bottom:2px}
+.reftitle a{color:var(--jaguar2);text-decoration:none;border-bottom:1px dotted var(--jaguar-dim)}
+.reftitle a:hover{color:#fff;border-bottom-color:var(--jaguar2)}
+.refsrc{font-size:11px;color:var(--text2);font-family:var(--mono)}
+footer{padding:22px 26px 40px;border-top:2px solid var(--jaguar-dim);text-align:center}
+.footcc0{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;color:var(--text2);letter-spacing:1px}
+.footcc0 b{color:var(--jaguar2)}
+.footnote{font-size:11px;color:var(--text2);margin-top:8px;font-family:var(--mono)}
+#gotop{position:fixed;right:20px;bottom:20px;z-index:300;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--jaguar),var(--dragon));color:#0b0f0a;border:none;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,0.45);opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .25s,transform .25s}
+#gotop.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+#gotop:hover{filter:brightness(1.1)}
+</style>
+</head>
+<body>
+<header>
+  <div style="display:flex;align-items:center;gap:0;flex-wrap:wrap">
+    <div class="hbadge">Dossiê Dedicado · O Elo Central</div>
+    <div class="live-badge"><span class="live-dot"></span>Aguardando Votação no Senado</div>
+  </div>
+  <h1>O Dragão e a Onça — <span>PL 2.780</span>/<em>2024</em></h1>
+  <div class="hmeta">
+    <span class="hm"><b>Autor:</b> Dep. Zé Silva (Solidariedade-MG)</span>
+    <span class="hm"><b>Relator do substitutivo:</b> Dep. Arnaldo Jardim</span>
+    <span class="hm"><b>Status:</b> aprovado na Câmara (06/mai/2026); aguarda Senado</span>
+    <span class="hm"><b>Escopo:</b> 21 → 51 artigos</span>
+  </div>
+</header>
+
+<nav id="mainnav">
+  <a class="nb" href="#visao" data-target="visao">Visão Geral</a>
+  <a class="nb" href="#trajetoria" data-target="trajetoria">Trajetória Legislativa</a>
+  <a class="nb" href="#mecanismos" data-target="mecanismos">Mecanismos do Substitutivo</a>
+  <a class="nb" href="#serraverde" data-target="serraverde">A Conexão Serra Verde</a>
+  <a class="nb" href="#riscos" data-target="riscos">Riscos Estruturais</a>
+  <a class="nb" href="#lacunas" data-target="lacunas">Lacunas — Resolvidas e Pendentes</a>
+  <a class="nb" href="#refs" data-target="refs">Referências</a>
+</nav>
+
+<main>
+
+<section id="visao" class="sec">
+  <div class="sec-title"><span class="flag">🔗</span>Visão Geral</div>
+  <div class="sec-sub">Por que este é o elo legislativo central de toda a série</div>
+  <div class="kgrid">
+    <div class="kcard kj"><div class="klabel">Fundo Garantidor da Atividade Mineral</div><div class="kval">R$2bi</div><div class="ksub">recursos públicos para reduzir risco de investidores privados</div></div>
+    <div class="kcard kd"><div class="klabel">Incentivos federais aprovados</div><div class="kval">R$5bi/5anos</div><div class="ksub">para projetos de beneficiamento e transformação mineral</div></div>
+    <div class="kcard kp"><div class="klabel">Expansão do texto no substitutivo</div><div class="kval">21→51</div><div class="ksub">artigos, aprovados em dias, sem debate de mérito equivalente</div></div>
+    <div class="kcard kt"><div class="klabel">Tempo estagnado antes da urgência</div><div class="kval">~11 meses</div><div class="ksub">de nov/2024 a set/2025, sem parecer apresentado</div></div>
+  </div>
+  <div class="destaque">
+    <div class="destaque-label">🎯 O achado mais importante desta rodada</div>
+    <p class="body" style="margin-bottom:0">A nota técnica do INESC (Instituto de Estudos Socioeconômicos), publicada de forma totalmente independente deste corpus, cita <b style="color:var(--jaguar2)">nominalmente o caso Serra Verde, em Goiás</b> — já documentado no capítulo Goiás da série — como o exemplo nacional de referência para explicar por que os contratos de streaming minerário previstos neste PL ameaçam a soberania mineral brasileira. Isso confirma, por fonte externa e especializada, que o padrão que a série "Dragão e Onça" vem documentando não é uma interpretação isolada deste corpus — é um fenômeno já reconhecido por pesquisadores de política mineral nacional.</p>
+  </div>
+</section>
+
+<section id="trajetoria" class="sec">
+  <div class="sec-title"><span class="flag">📜</span>Trajetória Legislativa</div>
+  <div class="sec-sub">De projeto adormecido a prioridade nacional em 9 meses</div>
+  <div class="panel">
+    <div class="tli"><div class="tld">8 jul 2024</div><div><div class="tltitle">Zé Silva (Solidariedade-MG) apresenta o PL 2.780/2024</div><div class="tldesc">21 artigos; institui PNMCE e CMCE. Distribuído a 5 comissões, regime ordinário. Art. 14 original: obriga grandes empresas a aplicar 0,40% da receita bruta em P&D. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">30 out 2024</div><div><div class="tltitle">Prazo de emendas se encerra; relator sai sem apresentar parecer</div><div class="tldesc">Projeto praticamente paralisado por quase um ano. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">set 2025</div><div><div class="tltitle">Aprovado requerimento de urgência</div><div class="tldesc">Projeto sai do rito lento das comissões, vai direto ao Plenário. Motivo específico da mudança de ritmo não detalhado nas fontes. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">out 2025</div><div><div class="tltitle">10 projetos apensados, incluindo Política Nacional de Terras Raras (PL 3.659/2025)</div><div class="tldesc">Comissão Especial criada (art. 34, II, RICD) por distribuição a mais de 4 comissões, incluindo a nova Comissão da Amazônia e dos Povos Originários e Tradicionais. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">out 2025</div><div><div class="tltitle">Dep. João Daniel requer audiência pública</div><div class="tldesc">Para debater PNMCE junto com a Política Nacional de Terras Raras. Realização efetiva não confirmada nesta rodada. <span class="tag tgo">ev-confirmed quanto ao requerimento; resultado não verificado</span></div></div></div>
+    <div class="tli"><div class="tld">4 mai 2026</div><div><div class="tltitle">Relator Arnaldo Jardim apresenta substitutivo: 21 → 51 artigos</div><div class="tldesc">Reorganização radical: mercado de carbono próprio, Fundo Garantidor privado, contratos de streaming/royalties, leilões com bônus de assinatura, Conselho Especial. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">6 mai 2026</div><div><div class="tltitle">Câmara aprova o substitutivo — "sem debate de mérito e sem participação social", segundo o INESC</div><div class="tldesc">FGAM (R$2bi), incentivos R$5bi/5anos, CMCE, limitação à exportação de minério bruto, Cadastro Nacional de Projetos. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">6 jul 2026</div><div><div class="tltitle">No Senado: urgência (Req. 506/2026) aguarda Ordem do Dia; tramitação conjunta pedida com PL 2.210/2021</div><div class="tldesc">Senadora Roberta Acioly. Sem votação até o fechamento desta rodada. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">9 jun 2026</div><div><div class="tltitle">Especialista defende suspensão de licenciamento de terras raras em Minas Gerais</div><div class="tldesc">Conexão direta com o capítulo Minas Gerais da série (vistoria de segurança requerida na ALMG). <span class="tag tg">ev-confirmed quanto ao fato da manifestação; teor completo não detalhado</span></div></div></div>
+  </div>
+</section>
+
+<section id="mecanismos" class="sec">
+  <div class="sec-title"><span class="flag">⚙️</span>Mecanismos do Substitutivo</div>
+  <div class="sec-sub">O que muda na prática — analisado item por item</div>
+  <div class="panel">
+    <div class="mecgrid">
+      <div class="meccard"><div class="mecname">Fundo Garantidor da Atividade Mineral (FGAM)</div><div class="mecart">Arts. 9, 14, 15</div><div class="mecdesc">R$2bi de recursos públicos para reduzir risco de investidores privados em pesquisa mineral. Sem fundo equivalente para proteção de comunidades afetadas.</div></div>
+      <div class="meccard"><div class="mecname">Certificado Mineral de Baixo Carbono (CMBC)</div><div class="mecart">Arts. 23–27</div><div class="mecdesc">Cria mercado de certificação de carbono próprio para o setor mineral, com autoridade exercida pelo mesmo Conselho (CMCE) que define quais minerais são "críticos" — potencial conflito com a regulamentação em curso do SBCE (Lei 15.042/2024).</div></div>
+      <div class="meccard"><div class="mecname">Acesso ao Fundo Clima (FNMC)</div><div class="mecart">Art. 20</div><div class="mecdesc">BNDES autorizado a destinar recursos do Fundo Nacional sobre Mudança do Clima para beneficiamento mineral — sem instrumento de rastreabilidade do uso final dos minerais financiados.</div></div>
+      <div class="meccard"><div class="mecname">Contratos de Streaming e Royalties Privados</div><div class="mecart">Seção X</div><div class="mecdesc">Mecanismos de financeirização que vinculam produção futura a preço pré-estabelecido — citados pelo INESC com referência direta ao caso Serra Verde/Goiás.</div></div>
+      <div class="meccard"><div class="mecname">Conselho Especial de Minerais Críticos e Estratégicos (CMCE)</div><div class="mecart">Diversos artigos</div><div class="mecdesc">Define e atualiza periodicamente a lista de minerais críticos/estratégicos — definição ampla o suficiente, segundo o INESC, para potencialmente englobar qualquer minério.</div></div>
+      <div class="meccard"><div class="mecname">Cadastro Nacional de Projetos de Minerais Críticos e Estratégicos</div><div class="mecart">—</div><div class="mecdesc">Só projetos cadastrados e habilitados pelo CMCE acessam financiamento e incentivos da nova política.</div></div>
+      <div class="meccard"><div class="mecname">Incentivos fiscais progressivos por beneficiamento</div><div class="mecart">—</div><div class="mecdesc">Quanto maior o nível de processamento em território nacional, maiores os benefícios fiscais — mas o INESC aponta que, historicamente, incentivos distribuídos ao longo da cadeia se concentram na lavra, onde o Brasil já tem vantagem comparativa, não na industrialização.</div></div>
+      <div class="meccard"><div class="mecname">Reformulação do dispositivo de P&D (Art. 14→15)</div><div class="mecart">Arts. 14, 15</div><div class="mecdesc">Obrigação original de 0,40% da receita bruta em P&D é reduzida em base de cálculo (líquida de tributos) e parcialmente redirecionada para capitalizar o próprio FGAM, ao invés de pesquisa e desenvolvimento genuínos.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="serraverde" class="sec">
+  <div class="sec-title"><span class="flag">🇺🇸</span>A Conexão Serra Verde</div>
+  <div class="sec-sub">Quando uma fonte externa confirma o que a série já documentava</div>
+  <div class="destaque">
+    <div class="destaque-label">Citação direta da nota técnica do INESC (maio/2026)</div>
+    <p class="body" style="margin-bottom:0">"Vale lembrar aqui o caso do projeto minerário Serra Verde, em Goiás. O recente rearranjo do controle acionário — em favor de empresas americanas e com participação do governo dos EUA — trouxe consigo mecanismos de controle de acesso a 100% do minério extraído. Contratos de streaming podem facilitar e amplificar arranjos que têm como propósito adicional [...] garantir fornecimento de minerais a baixos preços para empresas fora do país."</p>
+  </div>
+  <div class="panel">
+    <p class="body">Este é o mesmo caso documentado no capítulo Goiás da série: a aquisição da Serra Verde (mina Pela Ema) pela USA Rare Earth por US$2,8bi, com contrato de fornecimento de 15 anos a uma SPV capitalizada por entidades do governo dos EUA. O INESC — instituto de pesquisa socioeconômica sem qualquer relação com este corpus — usa exatamente o mesmo caso para ilustrar, em nível nacional, por que os contratos de streaming previstos no PL 2.780/2024 representam risco à soberania mineral brasileira.</p>
+    <p class="body" style="margin-bottom:0"><b style="color:var(--jaguar2)">Implicação direta para a série:</b> se o mecanismo de streaming já operou (ou operará) no caso Goiás, é razoável monitorar se mecanismos equivalentes surgirão nos capítulos Pará (Vale/CCCC), Amazonas (Taboca/China Nonferrous) e Minas Gerais (Sigma Lithium/LG) à medida que esses projetos amadurecem financeiramente e buscam capital de giro — o PL 2.780/2024, uma vez sancionado, fornecerá o arcabouço legal nacional para isso em qualquer um dos quatro estados.</p>
+  </div>
+</section>
+
+<section id="riscos" class="sec">
+  <div class="sec-title"><span class="flag">⚠️</span>Riscos Estruturais</div>
+  <div class="panel">
+    <div class="ritem rcrit"><div class="rheader"><div class="rname">Aprovação de 51 artigos sem debate de mérito equivalente</div><div class="rbadge bcrit">ponto_de_inflexao</div></div><div class="rdesc">Substitutivo que triplica o tamanho e reformula inteiramente a lógica do projeto original foi apresentado e votado em questão de dias — segundo o INESC, "sem debate de mérito e sem participação social".</div></div>
+    <div class="ritem rcrit"><div class="rheader"><div class="rname">Auto-referência regulatória do CMCE (análogo à auto-referência ANM/Ipaam em Amazonas)</div><div class="rbadge bcrit">ev-inference</div></div><div class="rdesc">O mesmo Conselho criado para fomentar o setor mineral (CMCE) se torna também autoridade que certifica a sustentabilidade desse setor via CMBC — estrutura de conflito de interesse potencial.</div></div>
+    <div class="ritem ralto"><div class="rheader"><div class="rname">Assimetria FGAM: proteção para o capital, nenhuma para as comunidades</div><div class="rbadge balto">ev-confirmed</div></div><div class="rdesc">R$2bi de garantia pública para investidores privados; nenhum mecanismo equivalente para comunidades afetadas pelos mesmos empreendimentos — mesma assimetria documentada em todos os capítulos estaduais.</div></div>
+    <div class="ritem ralto"><div class="rheader"><div class="rname">Recursos do Fundo Clima sem rastreabilidade de uso final</div><div class="rbadge balto">ev-confirmed</div></div><div class="rdesc">Nada no texto impede que recursos climáticos financiem minerais destinados a indústria bélica ou data centers fora do país.</div></div>
+    <div class="ritem rmedio"><div class="rheader"><div class="rname">Contratos de streaming como vetor de exportação de soberania mineral (caso Serra Verde)</div><div class="rbadge bmedio">ev-confirmed</div></div><div class="rdesc">Mecanismo já citado nacionalmente como risco concreto, com o caso Goiás como referência.</div></div>
+  </div>
+</section>
+
+<section id="lacunas" class="sec">
+  <div class="sec-title"><span class="flag">🔍</span>Lacunas — Resolvidas e Pendentes</div>
+  <div class="sec-sub">O que esta rodada dedicada esclareceu, e o que ainda falta</div>
+  <div class="panel">
+    <div class="lacuna resolvida"><b>✓ RESOLVIDA — Status de tramitação do PL 2.780/2024:</b> confirmado aprovado na Câmara (06/mai/2026), aguardando urgência no Senado (06/jul/2026).</div>
+    <div class="lacuna resolvida"><b>✓ RESOLVIDA — Texto consolidado:</b> substitutivo do relator Arnaldo Jardim, 51 artigos, detalhado seção por seção nesta rodada.</div>
+    <div class="lacuna resolvida"><b>✓ RESOLVIDA — Conexão com os capítulos estaduais:</b> confirmada explicitamente via citação do caso Serra Verde (Goiás) pelo INESC.</div>
+    <div class="lacuna"><b>Pendente — Data prevista de votação no Senado:</b> não determinada nesta rodada.</div>
+    <div class="lacuna"><b>Pendente — Realização e conteúdo da audiência pública requerida por João Daniel:</b> não confirmada.</div>
+    <div class="lacuna"><b>Pendente — Teor completo da defesa de suspensão de licenciamento de terras raras em Minas Gerais</b> (9/jun/2026): apenas o fato da manifestação foi confirmado.</div>
+    <div class="lacuna"><b>Pendente — Método de auditoria independente do CMBC:</b> não definido no texto aprovado.</div>
+    <div class="lacuna"><b>Pendente — Se comunidades afetadas por projetos cadastrados no CMCE terão acesso a algum mecanismo de reparação:</b> não previsto no texto atual.</div>
+  </div>
+</section>
+
+<section id="refs" class="sec">
+  <div class="sec-title"><span class="flag">📚</span>Referências</div>
+  <div class="sec-sub">Fontes consultadas, com link direto</div>
+  <div class="panel">
+    <div class="refitem"><div class="refnum">[01]</div><div><div class="reftitle"><a href="https://www.congressonacional.leg.br/materias/materias-bicamerais/-/ver/pl-2780-2024" target="_blank" rel="noopener">Projeto de Lei Nº 2780/2024 — Matérias Bicamerais</a></div><div class="refsrc">Congresso Nacional</div></div></div>
+    <div class="refitem"><div class="refnum">[02]</div><div><div class="reftitle"><a href="https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2447259" target="_blank" rel="noopener">PL 2780/2024 — Ficha de Tramitação</a></div><div class="refsrc">Câmara dos Deputados</div></div></div>
+    <div class="refitem"><div class="refnum">[03]</div><div><div class="reftitle"><a href="https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3122535&filename=Tramitacao-67-PL-2780-2024" target="_blank" rel="noopener">Comissão Especial — Projeto de Lei Nº 2780, de 2024</a></div><div class="refsrc">Câmara dos Deputados</div></div></div>
+    <div class="refitem"><div class="refnum">[04]</div><div><div class="reftitle"><a href="https://apiboficial.org/files/2026/05/Alerta-Congresso-PL-2780_24-Minerais-Cr%C3%ADticos-e-Estrat%C3%A9gicos.pdf" target="_blank" rel="noopener">Alerta Congresso — PL 2780/24 — Minerais Críticos e Estratégicos</a></div><div class="refsrc">APIB • 05/05/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[05]</div><div><div class="reftitle"><a href="https://inesc.org.br/wp-content/uploads/2026/05/nt-substitutivo-pl-minerais-criticos.pdf" target="_blank" rel="noopener">NOTA TÉCNICA — Substitutivo do PL nº 2780/2024: Minerais Críticos e Estratégicos</a></div><div class="refsrc">INESC • maio/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[06]</div><div><div class="reftitle"><a href="https://revistamineracao.com.br/2026/05/07/camara-aprova-pl-2780-2024-que-cria-politica-nacional-para-minerais-criticos-e-estrategicos/" target="_blank" rel="noopener">Câmara aprova PL 2780/2024 que cria política nacional para minerais críticos</a></div><div class="refsrc">Revista Mineração • 07/05/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[07]</div><div><div class="reftitle"><a href="https://www25.senado.leg.br/web/atividade/materias/-/materia/174060" target="_blank" rel="noopener">PL 2780/2024 — Senado Federal</a></div><div class="refsrc">Senado Federal • 06/07/2026</div></div></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footcc0">⚖ <b>CC0 1.0</b> — Domínio Público · lawfare-timeline · série "O Dragão e a Onça"</div>
+  <div class="footnote">Dossiê dedicado · Elo legislativo central confirmado por fonte independente (INESC)</div>
+</footer>
+
+<button id="gotop" title="Voltar ao topo" aria-label="Voltar ao topo">↑</button>
+
+<script>
+const links = document.querySelectorAll('.nb');
+const sections = document.querySelectorAll('main .sec');
+const map = {};
+links.forEach(l=>{map[l.dataset.target]=l});
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      links.forEach(l=>l.classList.remove('act'));
+      const id = entry.target.id;
+      if(map[id]) map[id].classList.add('act');
+    }
+  });
+},{rootMargin:'-30% 0px -60% 0px',threshold:0});
+sections.forEach(s=>observer.observe(s));
+const gotop = document.getElementById('gotop');
+window.addEventListener('scroll',()=>{
+  gotop.classList.toggle('show', window.scrollY > 400);
+});
+gotop.addEventListener('click',()=>{
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+</script>
+</body>
+</html>

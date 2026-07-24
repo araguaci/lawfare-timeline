@@ -395,6 +395,9 @@ def main() -> None:
 
     SYNC.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     html_path = write_status_html(data, last_main, next_main, t_posts, thematic_last)
+    from gdrive_sync_export import export_sync_to_gdrive
+
+    export_sync_to_gdrive(quiet=False)
     print(
         f"sync OK: main last={last_main} next={next_main}; "
         f"thematic last={thematic_last} next={thematic_last + 1}"

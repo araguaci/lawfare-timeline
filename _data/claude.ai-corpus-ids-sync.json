@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "1.1.0",
-    "generated": "2026-07-21",
+    "generated": "2026-07-22",
     "updated": "2026-05-28T23:59:00-03:00",
     "session": "claude.ai — sessão editorial 2026-05-28 (Operação Rejeito, T-191, T-192, Flávio/Trump, posts P11)",
     "purpose": "Mapa de sincronização de IDs — lawfare-timeline corpus",
@@ -79,7 +79,7 @@
           ],
           "status": "confirmed",
           "merge_pending": false,
-          "notes": "Merge lawfare.json 2026-07-21: Biomm 1527-1546, Zema 1547-1550, Homeschooling 1551.",
+          "notes": "Merge lawfare.json 2026-07-22: Biomm 1527-1546, Zema 1547-1550, Homeschooling 1551.",
           "source_files": [
             "_data/processados/lawfare-1527-1546-biomm-renumerado.json",
             "_data/processados/zema-1547-1550-renumerado.json"
@@ -92,7 +92,7 @@
           ],
           "status": "confirmed",
           "merge_pending": false,
-          "notes": "Merge lawfare.json 2026-07-21: Operação Rejeito 1552-1571.",
+          "notes": "Merge lawfare.json 2026-07-22: Operação Rejeito 1552-1571.",
           "source_files": [
             "_data/processados/lawfare-batch-rejeito-1552-1571.json"
           ]
@@ -279,14 +279,22 @@
           ],
           "status": "confirmed",
           "notes": "Merge todo 2026-07-21: main IDs 1635-1635."
+        },
+        {
+          "range": [
+            1636,
+            1638
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-07-22: main IDs 1636-1638."
         }
       ],
-      "last_id": 1635,
-      "last_jekyll_published": 1635,
+      "last_id": 1638,
+      "last_jekyll_published": 1638,
       "last_produced": 1576,
-      "next_available": 1636,
+      "next_available": 1639,
       "merge_queue": [],
-      "last_confirmed": 1635,
+      "last_confirmed": 1638,
       "last_session_produced": 1600
     },
     "thematic": {
@@ -1257,10 +1265,10 @@
     }
   },
   "sync_status": {
-    "main_track_last_sync": "2026-07-21",
-    "thematic_track_last_sync": "2026-07-21",
+    "main_track_last_sync": "2026-07-22",
+    "thematic_track_last_sync": "2026-07-22",
     "ids_confirmed_total": {
-      "main_track": "1635",
+      "main_track": "1638",
       "thematic_track": 227
     },
     "ids_pending_production": [],
@@ -1474,7 +1482,36 @@
       "T-220 PCC-OFAC Arpar publicado (2026-07-21)",
       "T-221 Nemo judex DPU publicado (2026-07-21)",
       "T-196 Radar Top 30 publicado em estudos/ (2026-07-21)",
-      "Próximo thematic: T-228; main next=1636"
+      "Próximo thematic: T-228; main next=1636",
+      "lawfare.json last_id=1638; próximo ID livre=1639",
+      "Fila editorial 2026-07-22: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-07-22)",
+      "T-198 COAF × Moraes publicado (2026-07-22)",
+      "T-199 Lojas Americanas publicado (2026-07-22)",
+      "T-200 Estatais rombo P11 publicado (2026-07-22)",
+      "T-201 PCC transnacional publicado (2026-07-22)",
+      "T-202 Delegada × PCC publicado (2026-07-22)",
+      "T-203 Zelotes CARF publicado (2026-07-22)",
+      "T-204 Gastos Paris publicado (2026-07-22)",
+      "T-205 Duplo padrão corpus publicado (2026-07-22)",
+      "T-206 SPLC corpus publicado (2026-07-22)",
+      "T-207 Vaza Toga corpus publicado (2026-07-22)",
+      "T-208 Narrativa vs Evidência publicado (2026-07-22)",
+      "T-209 JustiçaWatch Brasil publicado (2026-07-22)",
+      "T-210 Cluster Sepse Parasitas publicado (2026-07-22)",
+      "T-211 Sepse 2ª fase publicado (2026-07-22)",
+      "T-212 Sepse UTI publicado (2026-07-22)",
+      "T-213 CGU Sepse publicado (2026-07-22)",
+      "T-214 Status Sepse publicado (2026-07-22)",
+      "T-215 Vorcaro STF publicado (2026-07-22)",
+      "T-216 TSE USAID publicado (2026-07-22)",
+      "T-217 Seletividade TSE publicado (2026-07-22)",
+      "T-218 Ouro ilegal P08 publicado (2026-07-22)",
+      "T-219 Farra INSS publicado (2026-07-22)",
+      "T-220 PCC-OFAC Arpar publicado (2026-07-22)",
+      "T-221 Nemo judex DPU publicado (2026-07-22)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-07-22)",
+      "Próximo thematic: T-228; main next=1639"
     ],
     "notes": [
       "Correção 2026-07-18: ID 1520→P04b imprensa; revisão criminal Bolsonaro→1621; duplicata lawfare/ removida.",
@@ -1513,7 +1550,7 @@
     "custeio_vs_top30": {
       "T-191": "Custeio P11 — estudo canônico",
       "T-196": "Radar Top 30 — renumerado do antigo T-191",
-      "date": "2026-07-21"
+      "date": "2026-07-22"
     },
     "pcc_namespace": {
       "range": "1481-1500",

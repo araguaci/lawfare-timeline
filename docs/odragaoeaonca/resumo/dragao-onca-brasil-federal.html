@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Dragão e a Onça — Brasil (Federal) | Lawfare Timeline</title>
+<meta name="description" content="COSBAN, MoUs federais e a arquitetura que legitima os capítulos estaduais">
+<link rel="canonical" href="https://lawfare-timeline.vercel.app/dragao-onca-brasil-federal.html">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --bg:#080c10;--bg2:#0f151b;--bg3:#161e26;
+  --dragon:#d4342c;--dragon2:#ff6b5f;--dragon-dim:#5c1512;
+  --jaguar:#e8b23d;--jaguar2:#ffd270;--jaguar-dim:#6b4e12;
+  --gr:#3ecb6f;--blue:#4a9eff;--purple:#b07aff;--teal:#2ecfb0;
+  --border:rgba(255,255,255,0.07);--text:#e8edf0;--text2:#8a99a8;
+  --font:'Syne',sans-serif;--mono:'JetBrains Mono',monospace;
+}
+body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh}
+header{padding:26px 30px 18px;border-bottom:2px solid var(--jaguar-dim);background:linear-gradient(135deg,#080c10 0%,#1a1408 55%,#080c10 100%)}
+.hbadge{display:inline-flex;background:rgba(232,178,61,.14);border:1px solid var(--jaguar);border-radius:4px;padding:4px 12px;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--jaguar2);text-transform:uppercase;margin-bottom:10px}
+header h1{font-size:26px;font-weight:800;color:#fff;line-height:1.15}
+header h1 span{color:var(--jaguar2)}
+header h1 em{font-style:normal;color:var(--dragon2)}
+.hmeta{display:flex;gap:18px;margin-top:10px;flex-wrap:wrap;font-size:12px;color:var(--text2);font-family:var(--mono)}
+.hmeta b{color:var(--jaguar2)}
+main{padding:0 20px 32px;max-width:1200px;margin:0 auto}
+.sec{padding:30px 0 10px;border-bottom:1px solid var(--border)}
+.sec-title{font-size:20px;font-weight:800;color:#fff;margin-bottom:4px}
+.sec-sub{font-size:12px;color:var(--text2);font-family:var(--mono);margin-bottom:16px}
+.kgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:12px 0}
+@media(max-width:720px){.kgrid{grid-template-columns:1fr}}
+.kcard{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px}
+.klabel{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);margin-bottom:5px}
+.kval{font-size:18px;font-weight:800;color:var(--jaguar2);line-height:1.2}
+.kd .kval{color:var(--dragon2)}.kp .kval{color:var(--purple)}.kt .kval{color:var(--teal)}
+.panel{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:18px 20px;margin-bottom:12px}
+p.body{font-size:13px;color:var(--text2);line-height:1.75;margin-bottom:10px}
+.tli{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--border)}
+.tli:last-child{border-bottom:none}
+.tld{font-family:var(--mono);font-size:11px;color:var(--jaguar2);min-width:90px;font-weight:600;flex-shrink:0}
+.tltitle{font-size:13px;font-weight:700;margin-bottom:3px;color:#fff}
+.tldesc{font-size:12px;color:var(--text2);line-height:1.6}
+.tag{display:inline-block;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:600;margin-left:6px;font-family:var(--mono)}
+.tg{background:rgba(62,203,111,.1);color:#78f5a8;border:1px solid rgba(62,203,111,.2)}
+.tgo{background:rgba(232,178,61,.12);color:var(--jaguar2);border:1px solid rgba(232,178,61,.25)}
+footer{padding:0 0 40px;border-top:2px solid var(--jaguar-dim)}
+.footcc0{text-align:center;padding:20px;font-family:var(--mono);font-size:11px;color:var(--text2)}
+.footcc0 b{color:var(--jaguar2)}
+
+.series-nav{margin:0 auto;max-width:1200px;padding:28px 20px 0;border-top:2px solid var(--border)}
+.series-nav-title{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--text2);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.series-nav-title::before{content:'';flex:1;height:1px;background:var(--border)}
+.series-nav-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:14px}
+@media(max-width:720px){.series-nav-grid{grid-template-columns:1fr}}
+.series-card{display:block;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 16px;text-decoration:none;color:inherit;transition:border-color .2s,transform .15s;position:relative;overflow:hidden}
+.series-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--dragon),var(--jaguar))}
+.series-card:hover{border-color:rgba(232,178,61,.45);transform:translateY(-1px)}
+.series-card.is-current{border-color:var(--jaguar);box-shadow:0 0 0 1px rgba(232,178,61,.35) inset;pointer-events:none;opacity:.92}
+.series-card-id{font-family:var(--mono);font-size:10px;color:var(--jaguar2);letter-spacing:1px;margin-bottom:4px}
+.series-card-chapter{font-size:14px;font-weight:800;color:#fff;margin-bottom:4px;line-height:1.2}
+.series-card-desc{font-size:12px;color:var(--text2);line-height:1.55}
+.series-hub{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--jaguar2);text-decoration:none;font-family:var(--mono);margin-bottom:8px}
+.series-hub:hover{color:#fff}
+
+</style>
+</head>
+<body>
+<header>
+  <div class="hbadge">T-229 · Linha do tempo 1993–2026</div>
+  <h1>O <span>Dragão</span> e a Onça — <em>Brasil (Federal)</em></h1>
+  <div class="hmeta">
+    <span class="hm"><b>Padrões:</b> P04b · P05 · P10</span>
+    <span class="hm"><b>Ordem:</b> 2/8</span>
+    <span class="hm"><b>Série:</b> Brasil × China · braços institucionais</span>
+  </div>
+</header>
+<main>
+<section class="sec">
+  <div class="sec-title">🇧🇷 BR Parceria estratégica e o caso Doria–Sinovac</div>
+  <div class="sec-sub">COSBAN, MoUs federais e a arquitetura que legitima os capítulos estaduais</div>
+  <div class="kgrid"><div class="kcard kj"><div class="klabel">Marco</div><div class="kval">Parceria Estratégica 1993</div></div><div class="kcard kd"><div class="klabel">Mecanismo</div><div class="kval">COSBAN desde 2004</div></div><div class="kcard kp"><div class="klabel">Correção</div><div class="kval">Desinformação vacinas 2019 refutada</div></div></div>
+  <div class="panel"><p class="body">Timeline federal completa desde a Parceria Estratégica de 1993. Inclui correção factual sobre compra de vacinas pré-pandemia por Doria, fratura interna Bolsonaro (Eduardo × Huawei) e o MoU federal de mineração sustentável Brasil–China (2025) — pano de fundo dos capítulos estaduais.</p></div>
+</section>
+
+<section class="sec">
+  <div class="sec-title">🕐 Linha do tempo verificada</div>
+  <div class="sec-sub">15 eventos mapeados neste capítulo</div>
+  <div class="panel"><div class="tli"><div class="tld">1993</div><div><div class="tltitle">Brasil e China elevam relação a Parceria Estratégica — primeira desse tipo entre países em desenvolvimento <span class="tag tg">ev-confirmed</span></div><div class="tldesc">Governo brasileiro e governo chinês estabelecem Parceria Estratégica bilateral, precedendo por uma década o ciclo de aproximação intensiva que se consolidaria a partir de 2003.</div></div></div><div class="tli"><div class="tld">01/01/2003</div><div><div class="tltitle">Discurso de posse de Lula cita nominalmente necessidade de estreitar laços com China, Japão e Índia <span class="tag tg">ev-confirmed</span></div><div class="tldesc">Em seu discurso de posse na Presidência, Luiz Inácio Lula da Silva menciona explicitamente a prioridade de estreitamento de relações com China, Japão e Índia como eixo de política externa do novo governo.</div></div></div><div class="tli"><div class="tld">30/04/2003</div><div><div class="tltitle">Lula discursa no seminário "Brasil-China: Um Salto Necessário" no BNDES <span class="tag tg">ev-confirmed</span></div><div class="tldesc">Presidente Lula profere discurso de abertura de seminário no BNDES definindo a aproximação com a China como "salto necessário" para a política externa e econômica brasileira.</div></div></div><div class="tli"><div class="tld">mai/2004</div><div><div class="tltitle">Lula visita a China; criação da COSBAN (Comissão Sino-Brasileira de Alto Nível de Concertação e Cooperação) <span class="tag tg">ev-confirmed</span></div><div class="tldesc">Primeira visita de Lula à China como presidente resulta na criação da COSBAN, mecanismo institucional permanente de coordenação bilateral que persiste até 2026.</div></div></div><div class="tli"><div class="tld">12/11/2004</div><div><div class="tltitle">Hu Jintao visita o Brasil; Lula reafirma "parceria estratégica" publicamente <span class="tag tg">ev-confirmed</span></div><div class="tldesc">Presidente chinês Hu Jintao visita o Brasil pela primeira vez desde 1995 (primeira visita de um presidente brasileiro à China desde então também ocorrera em maio do mesmo ano). Lula declara em pronunciamento oficial que a parceria estratégica "consolida-se a cada dia".</div></div></div><div class="tli"><div class="tld">2009</div><div><div class="tltitle">China ultrapassa os EUA e se torna o principal parceiro comercial do Brasil <span class="tag tg">ev-confirmed</span></div><div class="tldesc">Pela primeira vez na história, a China supera os Estados Unidos como maior parceiro comercial do Brasil — posição que mantém ininterruptamente até 2026 (17º ano consecutivo).</div></div></div><div class="tli"><div class="tld">15/04/2010</div><div><div class="tltitle">Lula e Hu Jintao assinam Plano de Ação Conjunta Brasil-China 2010-2014 <span class="tag tg">ev-confirmed</span></div><div class="tldesc">Documento institucionaliza metas de curto e médio prazo para a parceria estratégica, criando mecanismos permanentes de consulta e coordenação além da COSBAN.</div></div></div><div class="tli"><div class="tld">21/06/2012</div><div><div class="tltitle">Dilma Rousseff e premiê Wen Jiabao assinam Plano Decenal de Cooperação 2012-2021 no Rio de Janeiro <span class="tag tg">ev-confirmed</span></div><div class="tldesc">Governo Dilma assina o Plano Decenal de Cooperação, cobrindo ciência, tecnologia, inovação, cooperação econômica e intercâmbio entre os povos, para o período 2012-2021, junto com memorando para centros culturais recíprocos.</div></div></div><div class="tli"><div class="tld">jul/2019</div><div><div class="tltitle">Vice-presidente Mourão declara que Brasil não restringirá a Huawei no 5G, desafiando pressão dos EUA <span class="tag tg">ev-confirmed</span></div><div class="tldesc">Já no governo Bolsonaro — eleito com retórica de campanha crítica à China —, o vice-presidente Hamilton Mourão declara publicamente que o país não vai impedir a Huawei de atuar na futura rede 5G brasileira, contrariando pressão direta do governo Trump.</div></div></div><div class="tli"><div class="tld">09/08/2019</div><div><div class="tltitle">Governador João Doria (SP) inaugura escritório comercial do estado em Xangai durante "Missão China" <span class="tag tg">ev-confirmed</span></div><div class="tldesc">Governo de São Paulo abre escritório de representação comercial em Xangai e anuncia acordos genéricos de cooperação, incluindo transferência de tecnologia entre o Instituto Butantan e a Sinovac Biotech — sem qualquer menção a vacina contra coronavírus, doença ainda inexistente como problema de saúde pública global.</div></div></div><div class="tli"><div class="tld">11/06/2020</div><div><div class="tltitle">Instituto Butantan e Sinovac assinam Acordo de Colaboração de Desenvolvimento Clínico para a Fase 3 da CoronaVac <span class="tag tg">ev-confirmed</span></div><div class="tldesc">Com a pandemia de covid-19 já declarada pela OMS (março/2020), Butantan e Sinovac formalizam acordo específico de 21 páginas para avançar os testes clínicos da CoronaVac à Fase 3, com 9 mil voluntários em São Paulo. Documento não menciona preço ou quantidade de doses; Butantan arca com os custos e não recebe propriedade intelectual.</div></div></div><div class="tli"><div class="tld">set/2020</div><div><div class="tltitle">Doria assina compra antecipada de 46 milhões de doses da CoronaVac com recursos do estado de São Paulo <span class="tag tg">ev-confirmed</span></div><div class="tldesc">Governo de São Paulo firma acordo de compra antecipada de 46 milhões de doses da vacina CoronaVac por aproximadamente US$427 milhões, usando recursos próprios do estado, à frente e paralelamente a qualquer definição do governo federal sobre imunização nacional.</div></div></div><div class="tli"><div class="tld">24/11/2020</div><div><div class="tltitle">Eduardo Bolsonaro acusa Huawei de espionagem via 5G; embaixada da China ameaça "consequências negativas" <span class="tag tg">ev-confirmed</span></div><div class="tldesc">Deputado federal Eduardo Bolsonaro, presidente da Comissão de Relações Exteriores da Câmara, publica em rede social acusação de espionagem chinesa via tecnologia 5G da Huawei, associando-se à iniciativa Clean Network do governo Trump. Embaixada da China reage classificando as declarações como "infames" e alertando que o Brasil poderá "arcar com consequências negativas".</div></div></div><div class="tli"><div class="tld">nov/2024</div><div><div class="tltitle">Xi Jinping visita Brasília; relação elevada a "Comunidade de Futuro Compartilhado Brasil-China por um Mundo Mais Justo e um Planeta Mais Sustentável" <span class="tag tg">ev-confirmed</span></div><div class="tldesc">Visita de Estado de Xi Jinping ao Brasil, terceiro encontro com Lula desde 2023, resulta na elevação formal da relação bilateral a novo patamar institucional ("Comunidade de Futuro Compartilhado"), com cerca de 30 atos assinados.</div></div></div><div class="tli"><div class="tld">13/05/2025</div><div><div class="tltitle">Governo Lula assina 36 acordos com a China em Pequim, incluindo Plano de Ação para Mineração Sustentável 2025-2026 <span class="tag tg">ev-confirmed</span></div><div class="tldesc">Lula encerra quarta visita de Estado à China com a assinatura de 36 acordos cobrindo energia, sustentabilidade, agronegócio, finanças e tecnologia — incluindo o Plano de Ação de Cooperação para o Desenvolvimento Sustentável da Mineração (2025-2026) entre o Ministério de Minas e Energia e a Comissão Nacional de Desenvolvimento e Reforma da China, com foco em minério de ferro verde, nióbio, lítio e níquel, além de swap de moedas locais entre os bancos centrais. Brasil torna-se, ao final de 2025, o maior destino global de investimento direto chinês (US$6,1bi em 52 projetos, alta de 45%).</div></div></div></div>
+</section>
+
+</main>
+<footer>
+
+<section class="series-nav" id="serie">
+  <div class="series-nav-title">Outros artefatos da série</div>
+  <div class="series-nav-grid">
+    <a class="series-card" href="/o-dragao-e-a-onca-goias.html"><div class="series-card-id">T-228 · Capítulo inaugural</div><div class="series-card-chapter">🇧🇷 GO Goiás</div><div class="series-card-desc">Pivô China → EUA/Japão em terras raras</div></a><a class="series-card" href="/dragao-onca-para.html"><div class="series-card-id">T-230 · Ferrovia CCCC + Vale</div><div class="series-card-chapter">🇧🇷 PA Pará</div><div class="series-card-desc">Corredor mineral e COP30 como vitrine</div></a><a class="series-card" href="/dragao-onca-amazonas.html"><div class="series-card-id">T-231 · Taboca / China Nonferrous</div><div class="series-card-chapter">🇧🇷 AM Amazonas</div><div class="series-card-desc">Contaminação Waimiri-Atroari e Zona Franca</div></a><a class="series-card" href="/dragao-onca-minas-gerais.html"><div class="series-card-id">T-232 · Vale do Lítio</div><div class="series-card-chapter">🇧🇷 MG Minas Gerais</div><div class="series-card-desc">Sigma Lithium e o contraste ocidental</div></a><a class="series-card" href="/dragao-onca-sintese.html"><div class="series-card-id">T-233 · Cross-estadual</div><div class="series-card-chapter">📊 Síntese Comparativa</div><div class="series-card-desc">Soberania na conta do governador</div></a><a class="series-card" href="/dragao-onca-braco-juridico.html"><div class="series-card-id">T-234 · Transversal · STF × Congresso</div><div class="series-card-chapter">⚖️ Braço Jurídico</div><div class="series-card-desc">Marco temporal, PL da Devastação e ADI 7919</div></a><a class="series-card" href="/dragao-onca-pl2780.html"><div class="series-card-id">T-235 · Elo legislativo central</div><div class="series-card-chapter">📜 PL 2.780/2024</div><div class="series-card-desc">Política Nacional de Minerais Críticos</div></a>
+  </div>
+  <a class="series-hub" href="/odragaoeaonca">← Índice da série · O Dragão e a Onça</a>
+</section>
+
+  <div class="footcc0">⚖ <b>CC0 1.0</b> — Domínio Público · lawfare-timeline · série "O Dragão e a Onça"</div>
+</footer>
+</body>
+</html>

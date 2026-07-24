@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Dragão e a Onça — Braço Jurídico | República Sequestrada</title>
+<meta name="description" content="Marco temporal (STF x Congresso), PL da Devastação, ADI 7919, caso Cinta Larga, e o contraste entre OAB e ONGs socioambientais na arquitetura legal da corrida mineral brasileira.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --bg:#080c10;--bg2:#0f151b;--bg3:#161e26;
+  --dragon:#d4342c;--dragon2:#ff6b5f;--dragon-dim:#5c1512;
+  --jaguar:#e8b23d;--jaguar2:#ffd270;--jaguar-dim:#6b4e12;
+  --gr:#3ecb6f;--gr2:#78f5a8;--blue:#4a9eff;--blue2:#7ab8ff;
+  --purple:#b07aff;--purple2:#d0a8ff;--teal:#2ecfb0;--teal2:#60ffd8;
+  --border:rgba(255,255,255,0.07);--text:#e8edf0;--text2:#8a99a8;
+  --font:'Syne',sans-serif;--mono:'JetBrains Mono',monospace;
+}
+body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh}
+header{padding:26px 30px 18px;border-bottom:2px solid var(--purple);background:linear-gradient(135deg,#080c10 0%,#130f1a 55%,#080c10 100%);position:relative;overflow:hidden}
+header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 25% 50%,rgba(176,122,255,0.09) 0%,transparent 55%),radial-gradient(ellipse at 75% 50%,rgba(212,52,44,0.06) 0%,transparent 55%)}
+.hbadge{display:inline-flex;align-items:center;gap:6px;background:rgba(176,122,255,0.12);border:1px solid var(--purple);border-radius:4px;padding:4px 12px;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--purple2);text-transform:uppercase;margin-bottom:10px}
+.live-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(212,52,44,0.15);border:1px solid var(--dragon-dim);border-radius:4px;padding:3px 10px;font-size:10px;font-weight:700;letter-spacing:1.5px;color:var(--dragon2);text-transform:uppercase;margin-left:8px}
+.live-dot{width:6px;height:6px;border-radius:50%;background:var(--dragon2);animation:pulse 1.2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+header h1{font-size:26px;font-weight:800;letter-spacing:-0.5px;color:#fff;line-height:1.15}
+header h1 span{color:var(--purple2)}
+header h1 em{font-style:normal;color:var(--dragon2)}
+.hmeta{display:flex;gap:18px;margin-top:10px;flex-wrap:wrap}
+.hm{font-size:12px;color:var(--text2);font-family:var(--mono)}
+.hm b{color:var(--purple2)}
+nav{display:flex;gap:4px;padding:12px 26px;background:rgba(10,14,18,0.96);border-bottom:2px solid var(--purple);box-shadow:0 6px 18px rgba(0,0,0,0.35);overflow-x:auto;flex-wrap:wrap;position:sticky;top:0;z-index:200;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.nb{padding:7px 14px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--text2);font-family:var(--font);font-size:12px;font-weight:600;cursor:pointer;transition:all .2s;white-space:nowrap;text-decoration:none;display:inline-block}
+.nb:hover{border-color:var(--purple);color:var(--purple2)}
+.nb.act{background:linear-gradient(90deg,rgba(176,122,255,0.2),rgba(212,52,44,0.12));border-color:var(--purple);color:#fff;font-weight:800;box-shadow:0 0 0 1px var(--purple) inset}
+main{padding:0 20px 32px;max-width:1200px;margin:0 auto}
+.sec{padding:34px 0 10px;border-bottom:1px solid var(--border);scroll-margin-top:70px}
+.sec:last-of-type{border-bottom:none}
+.sec-title{font-size:20px;font-weight:800;color:#fff;margin-bottom:4px;display:flex;align-items:center;gap:10px}
+.sec-title .flag{font-size:15px}
+.sec-sub{font-size:12px;color:var(--text2);font-family:var(--mono);margin-bottom:16px}
+.kgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:16px 0 10px}
+@media(max-width:900px){.kgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.kgrid{grid-template-columns:1fr}}
+.kcard{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 15px;position:relative;overflow:hidden}
+.kcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.kp::before{background:linear-gradient(90deg,var(--purple),var(--purple2))}
+.kd::before{background:linear-gradient(90deg,var(--dragon),var(--dragon2))}
+.kj::before{background:linear-gradient(90deg,var(--jaguar),var(--jaguar2))}
+.kt::before{background:linear-gradient(90deg,var(--teal),var(--teal2))}
+.klabel{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);margin-bottom:5px}
+.kval{font-size:20px;font-weight:800;line-height:1.1}
+.ksub{font-size:11px;color:var(--text2);margin-top:3px;font-family:var(--mono)}
+.kp .kval{color:var(--purple2)}.kd .kval{color:var(--dragon2)}.kj .kval{color:var(--jaguar2)}.kt .kval{color:var(--teal2)}
+.panel{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:18px 20px;margin-bottom:12px}
+.ptitle{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.dp{background:var(--purple)}.dd{background:var(--dragon)}.dj{background:var(--jaguar)}.dt{background:var(--teal)}
+.tag{display:inline-block;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:600;margin:2px 2px 2px 0;font-family:var(--mono)}
+.tg{background:rgba(62,203,111,0.1);color:#78f5a8;border:1px solid rgba(62,203,111,0.2)}
+.tgo{background:rgba(232,178,61,0.12);color:var(--jaguar2);border:1px solid rgba(232,178,61,0.25)}
+.tr{background:rgba(212,52,44,0.12);color:var(--dragon2);border:1px solid rgba(212,52,44,0.25)}
+p.body{font-size:13px;color:var(--text2);line-height:1.75;margin-bottom:10px}
+.tli{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--border)}
+.tli:last-child{border-bottom:none}
+.tld{font-family:var(--mono);font-size:11px;color:var(--purple2);min-width:100px;font-weight:600;padding-top:2px;flex-shrink:0}
+.tltitle{font-size:13px;font-weight:700;margin-bottom:3px}
+.tldesc{font-size:12px;color:var(--text2);line-height:1.6}
+.ritem{padding:11px 13px;border-radius:8px;margin-bottom:8px;border-left:3px solid;background:var(--bg3)}
+.rcrit{border-color:var(--dragon)}.ralto{border-color:var(--jaguar2)}.rmedio{border-color:var(--blue)}
+.rheader{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;flex-wrap:wrap;gap:6px}
+.rname{font-size:13px;font-weight:700}
+.rbadge{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;border-radius:3px;font-family:var(--mono)}
+.bcrit{background:rgba(212,52,44,0.2);color:var(--dragon2)}.balto{background:rgba(232,178,61,0.2);color:var(--jaguar2)}.bmedio{background:rgba(74,158,255,0.15);color:var(--blue2)}
+.rdesc{font-size:12px;color:var(--text2);line-height:1.6}
+.destaque{padding:14px 16px;border-radius:8px;background:rgba(176,122,255,0.08);border:1px solid rgba(176,122,255,0.25);margin:12px 0}
+.destaque-label{font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--purple2);margin-bottom:6px}
+.lacuna{padding:11px 13px;border-radius:8px;margin-bottom:8px;background:var(--bg3);border-left:3px solid var(--purple)}
+.lacuna b{color:var(--purple2)}
+.refitem{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);align-items:flex-start}
+.refitem:last-child{border-bottom:none}
+.refnum{font-family:var(--mono);font-size:11px;color:var(--text2);min-width:30px;margin-top:2px}
+.reftitle{font-size:13px;font-weight:600;margin-bottom:2px}
+.reftitle a{color:var(--purple2);text-decoration:none;border-bottom:1px dotted var(--jaguar-dim)}
+.reftitle a:hover{color:#fff;border-bottom-color:var(--purple2)}
+.refsrc{font-size:11px;color:var(--text2);font-family:var(--mono)}
+footer{padding:22px 26px 40px;border-top:2px solid var(--purple);text-align:center}
+.footcc0{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;color:var(--text2);letter-spacing:1px}
+.footcc0 b{color:var(--purple2)}
+.footnote{font-size:11px;color:var(--text2);margin-top:8px;font-family:var(--mono)}
+#gotop{position:fixed;right:20px;bottom:20px;z-index:300;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--dragon));color:#fff;border:none;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,0.45);opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .25s,transform .25s}
+#gotop.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+#gotop:hover{filter:brightness(1.15)}
+</style>
+</head>
+<body>
+<header>
+  <div style="display:flex;align-items:center;gap:0;flex-wrap:wrap">
+    <div class="hbadge">Capítulo Transversal · Braço Jurídico</div>
+    <div class="live-badge"><span class="live-dot"></span>ADI 7919 em Tramitação</div>
+  </div>
+  <h1>O <span>Dragão</span> e a Onça — <em>Braço Jurídico</em></h1>
+  <div class="hmeta">
+    <span class="hm"><b>Eixo:</b> STF · Congresso · OAB · ONGs socioambientais</span>
+    <span class="hm"><b>Marco central:</b> saga do marco temporal (2023–2026)</span>
+    <span class="hm"><b>Ponte:</b> corpus judicial principal (INQ 4.781, P01/P03)</span>
+  </div>
+</header>
+
+<nav id="mainnav">
+  <a class="nb" href="#visao" data-target="visao">Visão Geral</a>
+  <a class="nb" href="#marco" data-target="marco">Saga do Marco Temporal</a>
+  <a class="nb" href="#devastacao" data-target="devastacao">PL da Devastação & COP30</a>
+  <a class="nb" href="#cintalarga" data-target="cintalarga">Caso Cinta Larga</a>
+  <a class="nb" href="#oab" data-target="oab">OAB x ONGs — Contraste</a>
+  <a class="nb" href="#riscos" data-target="riscos">Riscos Estruturais</a>
+  <a class="nb" href="#lacunas" data-target="lacunas">Lacunas Investigativas</a>
+  <a class="nb" href="#refs" data-target="refs">Referências</a>
+</nav>
+
+<main>
+
+<section id="visao" class="sec">
+  <div class="sec-title"><span class="flag">📍</span>Visão Geral</div>
+  <div class="sec-sub">A arquitetura legal que viabiliza os quatro capítulos estaduais</div>
+  <div class="kgrid">
+    <div class="kcard kp"><div class="klabel">Votação STF marco temporal (dez/2025)</div><div class="kval">9×1</div><div class="ksub">reafirma inconstitucionalidade, mas mantém a lei parcialmente</div></div>
+    <div class="kcard kd"><div class="klabel">Vetos derrubados após COP30</div><div class="kval">6 dias</div><div class="ksub">entre encerramento da COP30 e derrubada dos vetos ao PL da Devastação</div></div>
+    <div class="kcard kj"><div class="klabel">Projetos no "Pacote da Destruição" 2026</div><div class="kval">70</div><div class="ksub">segundo Observatório do Clima</div></div>
+    <div class="kcard kt"><div class="klabel">Terras/quilombos vulneráveis (Amazônia Legal)</div><div class="kval">118+639</div><div class="ksub">TIs não homologadas + quilombos não titulados, expostos pela nova lei de licenciamento</div></div>
+  </div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dp"></span>Por que este capítulo é diferente dos quatro anteriores</div>
+    <p class="body">Os capítulos Goiás, Pará, Amazonas e Minas Gerais documentam <b style="color:var(--jaguar2)">execução</b> — governadores negociando com capital estrangeiro. Este capítulo documenta a <b style="color:var(--purple2)">arquitetura legal</b> que torna essa execução possível: a saga do marco temporal (STF x Congresso), a flexibilização do licenciamento ambiental (PL da Devastação), e como o sistema de justiça e a sociedade civil reagem — ou não — a esses movimentos. É a ponte que faltava entre a série "Dragão e Onça" e o corpus judicial principal do lawfare-timeline.</p>
+  </div>
+</section>
+
+<section id="marco" class="sec">
+  <div class="sec-title"><span class="flag">⚖️</span>A Saga do Marco Temporal</div>
+  <div class="sec-sub">STF declara, Congresso reintroduz, STF reafirma parcialmente — três anos de disputa institucional</div>
+  <div class="panel">
+    <div class="tli"><div class="tld">set 2023</div><div><div class="tltitle">STF declara o marco temporal inconstitucional (RE 1.017.365, Tema 1.031)</div><div class="tldesc">Relator Gilmar Mendes; decisão com repercussão geral. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">dez 2023</div><div><div class="tltitle">Congresso derruba veto de Lula e promulga Lei 14.701/2023</div><div class="tldesc">Reintroduz por via legislativa a tese já rejeitada pelo STF. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">9 dez 2025</div><div><div class="tltitle">Alcolumbre acelera aprovação da PEC 48/2023 no Senado (52 votos), véspera do julgamento no STF</div><div class="tldesc">Constitucionaliza o marco temporal no art. 231 da CF; segue para a Câmara. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">19 dez 2025</div><div><div class="tltitle">STF reafirma inconstitucionalidade por 9×1, mas mantém a maior parte da lei em vigor</div><div class="tldesc">Único voto contrário: André Mendonça. União tem 10 anos para concluir demarcações. Cláusula de participação em serviços ecossistêmicos: mínimo 50% do faturamento bruto aos indígenas, registro na Funai, comunicação ao MPF. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">18 mar 2026</div><div><div class="tltitle">Acórdão publicado; ainda sujeito a embargos</div><div class="tldesc"><span class="tag tg">ev-confirmed</span></div></div></div>
+  </div>
+  <div class="destaque">
+    <div class="destaque-label">🔗 Conexão direta com o capítulo Amazonas</div>
+    <p class="body" style="margin-bottom:0">A cláusula de 50% do faturamento bruto + comunicação obrigatória ao MPF é exatamente o regime que <b style="color:var(--jaguar2)">não foi seguido</b> no pagamento de R$12,3mi da Mineração Taboca à ACWA (Termo de Cooperação nº 01/2026) — firmado diretamente, sem qualquer mediação institucional, dois dias após a comunidade declarar desconfiança total na empresa. Lido em conjunto, o padrão de descumprimento na prática é mais relevante do que a letra da lei isoladamente.</p>
+  </div>
+</section>
+
+<section id="devastacao" class="sec">
+  <div class="sec-title"><span class="flag">🏗️</span>PL da Devastação & a Contradição da COP30</div>
+  <div class="sec-sub">6 dias entre a vitrine climática e o desmonte legislativo</div>
+  <div class="panel">
+    <div class="tli"><div class="tld">21 mai 2025</div><div><div class="tltitle">Senado aprova o "PL da Devastação" (54×13)</div><div class="tldesc">PL 2.159/2021 cria a Lei Geral do Licenciamento Ambiental; permite autolicenciamento em obras de pequeno/médio porte. MMA e Funai classificam como retrocesso. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">21 nov 2025</div><div><div class="tltitle">Encerramento da COP30 em Belém</div><div class="tldesc">Ver capítulo Pará da série. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">27 nov 2025</div><div><div class="tltitle">Congresso derruba a maioria dos vetos de Lula — 6 dias após a COP30</div><div class="tldesc">Leis 15.190/2025 (Licenciamento) e 15.300/2025 (Licença Ambiental Especial) entram em vigor com autolicenciamento institucionalizado; exclui obrigatoriedade de consulta à Funai/Incra em parte dos casos. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">29 dez 2025</div><div><div class="tltitle">APIB e PSOL protocolam ADI 7919</div><div class="tldesc">Alegam maior retrocesso socioambiental desde a redemocratização. Em tramitação até jul/2026, sem julgamento de mérito localizado. <span class="tag tg">ev-confirmed</span></div></div></div>
+  </div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dd"></span>PL 2.780/2024 — o possível elo central ainda não totalmente mapeado</div>
+    <p class="body">Tramita em paralelo o PL 2.780/2024, que institui a Política Nacional de Minerais Críticos e Estratégicos — junto com o MoU federal de mineração sustentável Brasil-China (mai/2025, capítulo federal da série) e as leis de licenciamento flexibilizado, forma a possível arquitetura jurídica unificada por trás da corrida mineral em Goiás, Pará, Amazonas e Minas Gerais. <span class="tag tgo">ev-alleged — status de tramitação e texto consolidado carecem de verificação dedicada em rodada futura</span></p>
+  </div>
+</section>
+
+<section id="cintalarga" class="sec">
+  <div class="sec-title"><span class="flag">💎</span>Caso Cinta Larga no STF</div>
+  <div class="sec-sub">O mesmo padrão de representação fragmentada, agora em nível constitucional</div>
+  <div class="panel">
+    <div class="tli"><div class="tld">8 abr 2026</div><div><div class="tltitle">APIB protocola manifestação contra regulamentação de mineração de diamantes sem consulta ampla</div><div class="tldesc">Pedido de regulamentação partiu de uma única associação do povo Cinta Larga que, segundo relatório do próprio Ministério dos Povos Indígenas, não representa a totalidade do povo. APIB argumenta ausência de consulta aos 391 povos indígenas do Brasil, nos termos da Convenção 169 da OIT. <span class="tag tg">ev-confirmed</span></div></div></div>
+  </div>
+  <div class="destaque">
+    <div class="destaque-label">🔗 Padrão idêntico ao caso Waimiri Atroari/ACWA (Amazonas)</div>
+    <p class="body" style="margin-bottom:0">Uma entidade comunitária específica — não necessariamente representativa da totalidade do povo — é usada como interlocutor legitimador de uma transação ou regulamentação envolvendo extração mineral. No Amazonas, isso ocorreu num pagamento direto empresa-comunidade; aqui, ocorre em nível de litígio constitucional no STF. A fragmentação da representação indígena funciona como vetor estrutural recorrente, não como incidente isolado de um único caso.</p>
+  </div>
+</section>
+
+<section id="oab" class="sec">
+  <div class="sec-title"><span class="flag">⚖️</span>OAB x ONGs Socioambientais — Um Contraste</div>
+  <div class="sec-sub">Quem ocupou o espaço de contestação institucional, e quem não apareceu nesta rodada de busca</div>
+  <div class="panel">
+    <div class="tli"><div class="tld">set 2025</div><div><div class="tltitle">OAB-DF publica análise da Lei 15.190/2025 com foco em compliance para o agronegócio</div><div class="tldesc">Enquadra os vetos presidenciais como "importantes para manter salvaguardas", tratando o tema primariamente como segurança jurídica para investimento. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">dez 2025</div><div><div class="tltitle">Instituto Socioambiental (ISA) atua como interveniente no julgamento do marco temporal</div><div class="tldesc">Ao lado de APIB, Observatório do Clima e Greenpeace — rede consistente de litigância estratégica e monitoramento legislativo. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">mar 2026</div><div><div class="tltitle">Observatório do Clima cataloga 70 projetos do "Pacote da Destruição" para 2026</div><div class="tldesc">Terminologia da própria rede — útil como mapa de sinalização, não como avaliação jurídica neutra de mérito. <span class="tag tgo">ev-confirmed quanto à existência do levantamento; enquadramento não é neutro</span></div></div></div>
+  </div>
+  <div class="destaque">
+    <div class="destaque-label">⚠ Lacuna a verificar, não conclusão a afirmar</div>
+    <p class="body" style="margin-bottom:0">Não foi localizada, nesta rodada, nota institucional do <b style="color:var(--jaguar2)">Conselho Federal da OAB</b> (órgão nacional, distinto da seccional DF) especificamente sobre os direitos indígenas e quilombolas afetados pelas Leis 15.190/2025 e 15.300/2025. A ausência de resultado de busca <b>não deve ser lida como confirmação de silêncio institucional</b> — é uma lacuna que exige verificação direta no site institucional da OAB Nacional em rodada futura, não uma conclusão sobre a conduta da entidade.</p>
+  </div>
+</section>
+
+<section id="riscos" class="sec">
+  <div class="sec-title"><span class="flag">⚠️</span>Riscos Estruturais</div>
+  <div class="panel">
+    <div class="ritem rcrit"><div class="rheader"><div class="rname">Neutralização de precedente judicial por via legislativa (análogo P01)</div><div class="rbadge bcrit">ev-confirmed</div></div><div class="rdesc">Padrão repetido três vezes em três anos: STF declara (2023) → Congresso reintroduz por lei (Lei 14.701/2023) → Congresso tenta constitucionalizar às vésperas de novo julgamento (PEC 48/2023, dez/2025) → STF reafirma mas mantém efeitos práticos da lei contestada.</div></div>
+    <div class="ritem ralto"><div class="rheader"><div class="rname">Contradição de 6 dias entre vitrine climática e desmonte legislativo</div><div class="rbadge balto">ponto_de_inflexao</div></div><div class="rdesc">Vetos ao PL da Devastação derrubados 6 dias após o encerramento da COP30 — mesmo ciclo político que sediou o evento reverte, na semana seguinte, o que o próprio MMA chamou de maior desmonte de salvaguardas em 40 anos.</div></div>
+    <div class="ritem ralto"><div class="rheader"><div class="rname">Fragmentação da representação indígena como vetor recorrente</div><div class="rbadge balto">ev-inference</div></div><div class="rdesc">Padrão idêntico em dois níveis distintos (negociação direta no Amazonas, litígio constitucional no caso Cinta Larga) — associação específica não-representativa da totalidade do povo usada como interlocutor legitimador.</div></div>
+    <div class="ritem rmedio"><div class="rheader"><div class="rname">Assimetria de atuação institucional (OAB x ONGs)</div><div class="rbadge bmedio">lacuna_investigativa</div></div><div class="rdesc">ONGs de direitos indígenas/socioambientais ocupam de forma consistente o espaço de litigância estratégica; posicionamento do Conselho Federal da OAB sobre os mesmos temas não foi localizado nesta rodada — requer verificação direta antes de qualquer conclusão.</div></div>
+  </div>
+</section>
+
+<section id="lacunas" class="sec">
+  <div class="sec-title"><span class="flag">🔍</span>Lacunas Investigativas</div>
+  <div class="panel">
+    <div class="lacuna"><b>Posicionamento do Conselho Federal da OAB</b> sobre marco temporal, PL da Devastação e mineração em terras indígenas — não verificado diretamente no site institucional nesta rodada.</div>
+    <div class="lacuna"><b>Status de tramitação da ADI 7919</b> (contra Leis 15.190/2025 e 15.300/2025) e data prevista de julgamento — não localizados.</div>
+    <div class="lacuna"><b>Status de tramitação da PEC 48/2023 na Câmara dos Deputados</b> — não detalhado nesta rodada.</div>
+    <div class="lacuna"><b>Texto consolidado e status do PL 2.780/2024</b> (Política Nacional de Minerais Críticos e Estratégicos) — possível elo legislativo central da série, mas não verificado em profundidade.</div>
+    <div class="lacuna"><b>Identidade e eventuais conexões empresariais da associação Cinta Larga</b> peticionária no STF — não detalhadas.</div>
+    <div class="lacuna"><b>Aplicação prática da cláusula dos 50% de faturamento bruto</b> (decisão STF dez/2025) em transações minerais já em curso, incluindo o caso Taboca/ACWA — merece verificação cruzada dedicada.</div>
+  </div>
+</section>
+
+<section id="refs" class="sec">
+  <div class="sec-title"><span class="flag">📚</span>Referências</div>
+  <div class="sec-sub">Fontes consultadas, com link direto</div>
+  <div class="panel">
+    <div class="refitem"><div class="refnum">[01]</div><div><div class="reftitle"><a href="https://noticias.stf.jus.br/postsnoticias/stf-considera-inconstitucional-trecho-de-lei-que-institui-marco-temporal-para-terras-indigenas/" target="_blank" rel="noopener">STF considera inconstitucional trecho de lei que institui marco temporal</a></div><div class="refsrc">STF Notícias • 2023</div></div></div>
+    <div class="refitem"><div class="refnum">[02]</div><div><div class="reftitle"><a href="https://agenciabrasil.ebc.com.br/justica/noticia/2025-12/stf-derruba-tese-do-marco-temporal-para-demarcacao-de-terras-indigenas" target="_blank" rel="noopener">STF derruba tese do marco temporal para demarcação de terras indígenas</a></div><div class="refsrc">Agência Brasil • 19/12/2025</div></div></div>
+    <div class="refitem"><div class="refnum">[03]</div><div><div class="reftitle"><a href="https://www.greenpeace.org/brasil/blog/stf-rejeita-marco-temporal-mas-enfraquece-direitos-indigenas/" target="_blank" rel="noopener">STF rejeita Marco Temporal, mas enfraquece direitos indígenas</a></div><div class="refsrc">Greenpeace Brasil • 19/12/2025</div></div></div>
+    <div class="refitem"><div class="refnum">[04]</div><div><div class="reftitle"><a href="https://jusdocs.com/blog/marco-temporal-terras-indigenas-stf-lei-14701" target="_blank" rel="noopener">Marco temporal: o que o STF decidiu sobre terras indígenas</a></div><div class="refsrc">JusDocs • 19/06/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[05]</div><div><div class="reftitle"><a href="https://www.mattosfilho.com.br/unico/stf-lei-marco-temporal/" target="_blank" rel="noopener">STF publica íntegra do julgamento da Lei do Marco Temporal</a></div><div class="refsrc">Mattos Filho • 09/04/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[06]</div><div><div class="reftitle"><a href="https://socioambiental.org/noticias-socioambientais/novo-julgamento-do-marco-temporal-comeca-apos-senado-confrontar-stf-mais" target="_blank" rel="noopener">Novo julgamento do marco temporal começa após Senado confrontar STF</a></div><div class="refsrc">Instituto Socioambiental • 16/12/2025</div></div></div>
+    <div class="refitem"><div class="refnum">[07]</div><div><div class="reftitle"><a href="https://www.socioambiental.org/noticias-socioambientais/retrocessos-ambientais-dominam-agenda-do-congresso-para-2026-aponta-oc" target="_blank" rel="noopener">Retrocessos ambientais dominam agenda do Congresso para 2026</a></div><div class="refsrc">Instituto Socioambiental • 04/03/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[08]</div><div><div class="reftitle"><a href="https://www.andes.org.br/conteudos/noticia/senado-federal-aprova-pL-da-devastacao-que-altera-normas-para-licenciamento-ambiental1" target="_blank" rel="noopener">Senado Federal aprova PL da Devastação</a></div><div class="refsrc">ANDES-SN • 28/05/2025</div></div></div>
+    <div class="refitem"><div class="refnum">[09]</div><div><div class="reftitle"><a href="https://reporterbrasil.org.br/2025/05/pl-da-devastacao-aprovado-no-senado-o-que-muda-no-licenciamento-ambiental/" target="_blank" rel="noopener">'PL da Devastação' é aprovado no Senado: entenda o que muda</a></div><div class="refsrc">Repórter Brasil • 05/2025</div></div></div>
+    <div class="refitem"><div class="refnum">[10]</div><div><div class="reftitle"><a href="https://tagteam.harvard.edu/hub_feeds/3884/feed_items/17193145" target="_blank" rel="noopener">O licenciamento ambiental brasileiro como fronteira da equidade intergeracional</a></div><div class="refsrc">JOTA • 19/01/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[11]</div><div><div class="reftitle"><a href="https://infoamazonia.org/2025/12/22/mudanca-no-licenciamento-limita-papel-da-funai-e-incra-e-reduz-zona-de-impacto-de-empreendimentos/" target="_blank" rel="noopener">Mudança no licenciamento limita papel da Funai e Incra</a></div><div class="refsrc">InfoAmazonia • 22/12/2025</div></div></div>
+    <div class="refitem"><div class="refnum">[12]</div><div><div class="reftitle"><a href="https://apiboficial.org/2026/04/08/lobby-da-mineracao-avanca-sobre-terras-indigenas-e-pressiona-stf-aponta-relatorio-da-apib/" target="_blank" rel="noopener">Lobby da mineração avança sobre terras indígenas e pressiona STF</a></div><div class="refsrc">APIB • 08/04/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[13]</div><div><div class="reftitle"><a href="https://apiboficial.org/marcotemporal/" target="_blank" rel="noopener">Marco Temporal — cartilha e posição institucional</a></div><div class="refsrc">APIB</div></div></div>
+    <div class="refitem"><div class="refnum">[14]</div><div><div class="reftitle"><a href="https://oabdf.org.br/lei-geral-do-licenciamento-ambiental-lei-federal-15-190-2025-seus-impactos-e-perspectivas-para-o-agronegocio-brasileiro/" target="_blank" rel="noopener">Lei Geral do Licenciamento Ambiental — impactos para o agronegócio</a></div><div class="refsrc">OAB-DF • 07/09/2025</div></div></div>
+    <div class="refitem"><div class="refnum">[15]</div><div><div class="reftitle"><a href="https://www.brasildefato.com.br/2025/08/09/do-pl-da-devastacao-a-lei-da-contencao-de-danos/" target="_blank" rel="noopener">Do 'PL da Devastação' à Lei da Contenção de Danos</a></div><div class="refsrc">Brasil de Fato • 09/08/2025</div></div></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footcc0">⚖ <b>CC0 1.0</b> — Domínio Público · lawfare-timeline · série "O Dragão e a Onça"</div>
+  <div class="footnote">Capítulo 6 da série · Primeiro capítulo transversal — ponte com o corpus judicial principal</div>
+</footer>
+
+<button id="gotop" title="Voltar ao topo" aria-label="Voltar ao topo">↑</button>
+
+<script>
+const links = document.querySelectorAll('.nb');
+const sections = document.querySelectorAll('main .sec');
+const map = {};
+links.forEach(l=>{map[l.dataset.target]=l});
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      links.forEach(l=>l.classList.remove('act'));
+      const id = entry.target.id;
+      if(map[id]) map[id].classList.add('act');
+    }
+  });
+},{rootMargin:'-30% 0px -60% 0px',threshold:0});
+sections.forEach(s=>observer.observe(s));
+const gotop = document.getElementById('gotop');
+window.addEventListener('scroll',()=>{
+  gotop.classList.toggle('show', window.scrollY > 400);
+});
+gotop.addEventListener('click',()=>{
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+</script>
+</body>
+</html>

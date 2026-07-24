@@ -1,0 +1,69 @@
+<!--
+  Uso: em qualquer layout de post (ex: _layouts/entrada.html), inclua:
+
+  {% include botao-pilula.html %}
+
+  Requer que o front matter do post tenha:
+    id: 1637
+    title: "Título da entrada"
+    resumo_pilula: "Resumo curto e factual, SEM opinião — nunca o corpo investigativo completo"
+
+  Se `resumo_pilula` não existir, cai para `page.excerpt` (primeiras linhas do post)
+  como fallback — nunca usa o corpo completo do dossiê.
+-->
+<div class="pilula-widget" data-id="{{ page.id }}">
+  <button
+    id="gerar-pilula-btn"
+    class="btn-pilula"
+    type="button"
+    data-id="{{ page.id }}"
+    data-titulo="{{ page.title | strip_html | escape }}"
+    data-corpo="{{ page.resumo_pilula | default: page.excerpt | strip_html | strip_newlines | truncate: 600 | escape }}"
+  >
+    🧪 Gerar Pílula de Ironia
+  </button>
+
+  <div class="pilula-opcoes" id="pilula-opcoes" hidden>
+    <label>
+      Autor 1
+      <select id="pilula-autor1">
+        <option value="millor">Millôr Fernandes</option>
+        <option value="lessa">Ivan Lessa</option>
+        <option value="machado">Machado de Assis</option>
+        <option value="verissimo">Luis Fernando Verissimo</option>
+        <option value="braga">Rubem Braga</option>
+        <option value="suassuna">Ariano Suassuna</option>
+        <option value="oliveira">Nelson Rodrigues</option>
+        <option value="martins">Martins Pena</option>
+        <option value="stanislaw">Stanislaw Ponte Preta</option>
+      </select>
+    </label>
+    <label>
+      Autor 2 (opcional)
+      <select id="pilula-autor2">
+        <option value="">— nenhum —</option>
+        <option value="millor">Millôr Fernandes</option>
+        <option value="lessa">Ivan Lessa</option>
+        <option value="machado">Machado de Assis</option>
+        <option value="verissimo">Luis Fernando Verissimo</option>
+        <option value="braga">Rubem Braga</option>
+        <option value="suassuna">Ariano Suassuna</option>
+        <option value="oliveira">Nelson Rodrigues</option>
+        <option value="martins">Martins Pena</option>
+        <option value="stanislaw">Stanislaw Ponte Preta</option>
+      </select>
+    </label>
+    <label>
+      Acidez
+      <select id="pilula-acidez">
+        <option value="1">Leve</option>
+        <option value="2" selected>Médio</option>
+        <option value="3">Corrosivo</option>
+      </select>
+    </label>
+  </div>
+
+  <div id="pilula-resultado" class="pilula-box" hidden></div>
+</div>
+
+<script src="{{ '/assets/js/pilula-ironia.js' | relative_url }}" defer></script>

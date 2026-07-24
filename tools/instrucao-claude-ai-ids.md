@@ -140,7 +140,34 @@ Resultado esperado: **STATUS: OK** (zero erros) ou **STATUS: AVISO** (apenas avi
 Novo evento real  →  ID 1512+  →  adicionar em lawfare.json  →  atualizar sync  →  validar
 Novo artigo gosurf →  ID 189+  →  adicionar em thematic entries  →  atualizar sync  →  validar
 Merge PCC batch   →  preencher gap 1449-1480 primeiro  →  mesclar em lawfare.json  →  validar
+Sync concluído    →  export automático para Google Drive (ver §9)
 ```
+
+---
+
+## 9. Export para Google Drive (ferramentas externas)
+
+Após `python tools/sync_corpus_ids.py` ou `python scripts/sync_todo_current.py` atualizar
+`_data/claude.ai-corpus-ids-sync.json`, o arquivo é copiado automaticamente para Google Drive
+via `tools/gdrive_sync_export.py`.
+
+**Configurar destino (uma vez):**
+
+1. Copiar `_data/gdrive-sync-export.example.json` → `_data/gdrive-sync-export.json` (se ainda não existir)
+2. Preencher `dest_dir` com o caminho absoluto da pasta no Drive, por exemplo:
+   - `G:/Meu Drive/lawfare-timeline`
+   - `C:/Users/SEU_USUARIO/Google Drive/lawfare-timeline`
+3. Ou definir variável de ambiente (prioridade máxima):
+   - `LAWFARE_GDRIVE_SYNC_DIR=G:/Meu Drive/lawfare-timeline`
+
+**Manual:**
+
+```powershell
+python tools/gdrive_sync_export.py
+python tools/gdrive_sync_export.py --dry-run
+```
+
+Se o Drive não estiver montado, o sync local conclui normalmente; apenas o export exibe aviso.
 
 ---
 
@@ -153,5 +180,7 @@ Merge PCC batch   →  preencher gap 1449-1480 primeiro  →  mesclar em lawfare
 | `_data/lawfare-unified-corpus.json` | Corpus consolidado Jekyll-ready (34 entradas) |
 | `_data/posts-extraidos.json` | Inventário de _posts/ (IDs posicionais, não usar para tracking) |
 | `tools/validate-ids.ps1` | Script de validação — executar após qualquer merge |
+| `tools/gdrive_sync_export.py` | Exporta sync JSON para Google Drive (automático após sync) |
+| `_data/gdrive-sync-export.json` | Config do destino no Drive |
 | `_data/lawfare-1481-1496-pcc-ndrangheta.json` | Batch PCC/ʼNdrangheta (1481-1496, batch_file_only) |
 | `_data/pcc-novas-entradas-1497-1510.json` | Batch PCC novos (1497-1505, batch_file_only) |
