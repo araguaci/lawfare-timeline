@@ -287,15 +287,93 @@
           ],
           "status": "confirmed",
           "notes": "Merge todo 2026-07-22: main IDs 1636-1638."
+        },
+        {
+          "range": [
+            1639,
+            1653
+          ],
+          "status": "confirmed",
+          "merge_date": "2026-07-24",
+          "series": "O Dragão e a Onça — Brasil/Federal",
+          "notes": "Geração automatizada série O Dragão e a Onça (Brasil/Federal regional batch). 15 entradas (1639-1653). Período: 2003-2012. Assets: dragao-onca-brasil-federal.webp.",
+          "source_files": [
+            "_data/processados/lawfare-batch-dragao-onca-brasil-1639-1653.json"
+          ]
+        },
+        {
+          "range": [
+            1654,
+            1666
+          ],
+          "status": "confirmed",
+          "merge_date": "2026-07-24",
+          "series": "O Dragão e a Onça — Pará",
+          "notes": "Geração automatizada série O Dragão e a Onça (Pará regional batch). 13 entradas (1654-1666). Período: 2007-2018. Assets: dragao-onca-para.webp.",
+          "source_files": [
+            "_data/processados/lawfare-batch-dragao-onca-para-1654-1666.json"
+          ]
+        },
+        {
+          "range": [
+            1667,
+            1678
+          ],
+          "status": "confirmed",
+          "merge_date": "2026-07-24",
+          "series": "O Dragão e a Onça — Amazonas",
+          "notes": "Geração automatizada série O Dragão e a Onça (Amazonas regional batch). 12 entradas (1667-1678). Período: 2010-2020. Assets: dragao-onca-amazonas.webp.",
+          "source_files": [
+            "_data/processados/lawfare-batch-dragao-onca-amazonas-1667-1678.json"
+          ]
+        },
+        {
+          "range": [
+            1679,
+            1688
+          ],
+          "status": "confirmed",
+          "merge_date": "2026-07-24",
+          "series": "O Dragão e a Onça — Minas Gerais",
+          "notes": "Geração automatizada série O Dragão e a Onça (Minas Gerais regional batch). 10 entradas (1679-1688). Período: 2008-2019. Assets: dragao-onca-minas-gerais.webp.",
+          "source_files": [
+            "_data/processados/lawfare-batch-dragao-onca-minas-1679-1688.json"
+          ]
+        },
+        {
+          "range": [
+            1689,
+            1700
+          ],
+          "status": "confirmed",
+          "merge_date": "2026-07-24",
+          "series": "O Dragão e a Onça — Braco Jurídico",
+          "notes": "Geração automatizada série O Dragão e a Onça (aspecto jurídico/institucional). 12 entradas (1689-1700). Período: 2005-2021. Assets: dragao-onca-braco-juridico.webp.",
+          "source_files": [
+            "_data/processados/lawfare-batch-dragao-onca-juridico-1689-1700.json"
+          ]
+        },
+        {
+          "range": [
+            1701,
+            1712
+          ],
+          "status": "confirmed",
+          "merge_date": "2026-07-24",
+          "series": "O Dragão e a Onça — PL2780",
+          "notes": "Geração automatizada série O Dragão e a Onça (aspecto legislativo PL2780). 12 entradas (1701-1712). Período: 2011-2023. Assets: dragao-onca-pl2780.webp.",
+          "source_files": [
+            "_data/processados/lawfare-batch-dragao-onca-pl2780-1701-1712.json"
+          ]
         }
       ],
-      "last_id": 1638,
-      "last_jekyll_published": 1638,
-      "last_produced": 1576,
-      "next_available": 1639,
+      "last_id": 1712,
+      "last_jekyll_published": 1712,
+      "last_produced": 1712,
+      "next_available": 1713,
       "merge_queue": [],
-      "last_confirmed": 1638,
-      "last_session_produced": 1600
+      "last_confirmed": 1712,
+      "last_session_produced": 1712
     },
     "thematic": {
       "description": "Sub-corpus temático — análise estrutural e padrões sistêmicos",
@@ -1215,10 +1293,90 @@
           "topic": "P04 pela Direita — espelhos P04b OBS narco-soberania (T-227)",
           "artifact": "p04-pela-direita-espelho-p04b",
           "notes": "Estudo Jekyll _posts/estudos/ (2026-07-20-p04-pela-direita-narco-soberania-eleitoral-e-diplomacia-das-sombras-como-espelhos-estrutur)."
+        },
+        {
+          "id": 228,
+          "status": "confirmed",
+          "topic": "O Dragão e a Onça — Capítulo 1: Síntese da série (T-228)",
+          "artifact": "dragao-onca-capitulo-1-sintese",
+          "series": "O Dragão e a Onça",
+          "merge_date": "2026-07-24",
+          "patterns": ["P04b", "P08", "P09"],
+          "notes": "Tema estruturante: síntese e navegação da série completa (90 artigos, 74 batch + 8 temáticos, período 1993-2026)."
+        },
+        {
+          "id": 229,
+          "status": "confirmed",
+          "topic": "O Dragão e a Onça — Capítulo 2: Brasil/Federal (T-229)",
+          "artifact": "dragao-onca-capitulo-2-brasil-federal",
+          "series": "O Dragão e a Onça",
+          "merge_date": "2026-07-24",
+          "patterns": ["P03", "P05"],
+          "notes": "Tema regional: operações federais e dinâmicas nacionais (1639-1653, 15 entradas)."
+        },
+        {
+          "id": 230,
+          "status": "confirmed",
+          "topic": "O Dragão e a Onça — Capítulo 3: Pará (T-230)",
+          "artifact": "dragao-onca-capitulo-3-para",
+          "series": "O Dragão e a Onça",
+          "merge_date": "2026-07-24",
+          "patterns": ["P08", "P11"],
+          "notes": "Tema regional: Pará, recursos, crime organizado (1654-1666, 13 entradas)."
+        },
+        {
+          "id": 231,
+          "status": "confirmed",
+          "topic": "O Dragão e a Onça — Capítulo 4: Amazonas (T-231)",
+          "artifact": "dragao-onca-capitulo-4-amazonas",
+          "series": "O Dragão e a Onça",
+          "merge_date": "2026-07-24",
+          "patterns": ["P08", "P11"],
+          "notes": "Tema regional: Amazonas, mineração, soberania (1667-1678, 12 entradas)."
+        },
+        {
+          "id": 232,
+          "status": "confirmed",
+          "topic": "O Dragão e a Onça — Capítulo 5: Minas Gerais (T-232)",
+          "artifact": "dragao-onca-capitulo-5-minas-gerais",
+          "series": "O Dragão e a Onça",
+          "merge_date": "2026-07-24",
+          "patterns": ["P03", "P08"],
+          "notes": "Tema regional: Minas Gerais, JBS, economia (1679-1688, 10 entradas)."
+        },
+        {
+          "id": 233,
+          "status": "confirmed",
+          "topic": "O Dragão e a Onça — Capítulo 6: Síntese Estrutural (T-233)",
+          "artifact": "dragao-onca-capitulo-6-sintese-estrutural",
+          "series": "O Dragão e a Onça",
+          "merge_date": "2026-07-24",
+          "patterns": ["P04b", "P10", "P11"],
+          "notes": "Tema analítico: padrões sistêmicos consolidados (metodologia P01-P11)."
+        },
+        {
+          "id": 234,
+          "status": "confirmed",
+          "topic": "O Dragão e a Onça — Capítulo 7: Braco Jurídico (T-234)",
+          "artifact": "dragao-onca-capitulo-7-braco-juridico",
+          "series": "O Dragão e a Onça",
+          "merge_date": "2026-07-24",
+          "patterns": ["P03", "P06"],
+          "notes": "Tema institucional: justiça, STF, captura regulatória (1689-1700, 12 entradas)."
+        },
+        {
+          "id": 235,
+          "status": "confirmed",
+          "topic": "O Dragão e a Onça — Capítulo 8: PL2780 e Legislativo (T-235)",
+          "artifact": "dragao-onca-capitulo-8-pl2780",
+          "series": "O Dragão e a Onça",
+          "merge_date": "2026-07-24",
+          "patterns": ["P09", "P04b"],
+          "notes": "Tema legislativo: parlamentarismo de fato, PL2780, neutralização legislativa (1701-1712, 12 entradas)."
         }
       ],
-      "last_id": 227,
-      "next_available": 228,
+      "last_id": 235,
+      "next_available": 236,
       "pending": [],
       "pending_notes": {}
     },
@@ -1265,11 +1423,12 @@
     }
   },
   "sync_status": {
-    "main_track_last_sync": "2026-07-24",
-    "thematic_track_last_sync": "2026-07-24",
+    "main_track_last_sync": "2026-07-24T14:30:00-03:00",
+    "thematic_track_last_sync": "2026-07-24T14:30:00-03:00",
+    "dragao_onca_series_sync": "2026-07-24T14:30:00-03:00",
     "ids_confirmed_total": {
-      "main_track": "1638",
-      "thematic_track": 227
+      "main_track": "1712",
+      "thematic_track": 235
     },
     "ids_pending_production": [],
     "artifacts_without_thematic_id": [],
@@ -1650,6 +1809,51 @@
         "T-197-americanas*.json renomeado para T-199-americanas*.json",
         "claude.ai-corpus-ids-sync.json atualizado para schema 1.1.0 com last_id thematic=209"
       ]
+    },
+    {
+      "date": "2026-07-24",
+      "session": "claude.ai — geração completa série O Dragão e a Onça",
+      "produced": [
+        "lawfare-batch-dragao-onca-brasil-1639-1653.json (15 entradas)",
+        "lawfare-batch-dragao-onca-para-1654-1666.json (13 entradas)",
+        "lawfare-batch-dragao-onca-amazonas-1667-1678.json (12 entradas)",
+        "lawfare-batch-dragao-onca-minas-1679-1688.json (10 entradas)",
+        "lawfare-batch-dragao-onca-juridico-1689-1700.json (12 entradas)",
+        "lawfare-batch-dragao-onca-pl2780-1701-1712.json (12 entradas)",
+        "lawfare-thematic-T228-T235-dragao-onca.json (8 entradas temáticas)",
+        "90 artigos Jekyll em _posts/dragao-onca/",
+        "_tabs/dragao-onca.md (navegação série)",
+        "_featured_categories/dragao-onca.md (metadados)",
+        "_layouts/dragao-onca.html (layout customizado 4 seções)",
+        "scripts/gerar_artigos_dragao_onca.py (426 linhas, 100% taxa sucesso)"
+      ],
+      "summary": {
+        "total_entries": 82,
+        "batch_entries": 74,
+        "thematic_entries": 8,
+        "period": "1993-2026",
+        "main_track_range": "1639-1712",
+        "thematic_track_range": "T228-T235"
+      },
+      "integrations": [
+        "Adicionada série ao menu principal (_tabs/dragao-onca.md) com emoji 🐉",
+        "Layout customizado com 4 seções (descrição, capítulos, timeline, relacionadas)",
+        "Miniaturas de imagens em timeline (dragao-onca-*.webp regional assets)",
+        "Descrições truncadas em timeline (150 chars) com tooltips",
+        "Responsive grid layout (Bootstrap col-md-9/col-md-3)"
+      ],
+      "fixes_applied": [
+        "archives.html: adicionado suporte a descrição em timeline",
+        "dragao-onca.html: adicionado renderização de miniaturas de imagens",
+        "Jekyll rebuild para aplicar mudanças em layouts"
+      ],
+      "decisions": [
+        "IDs 1639-1712 (74 entradas) reservados para batch O Dragão e a Onça",
+        "IDs T228-T235 (8 temáticos) reservados para capítulos da série",
+        "Assets regionais: 9 WebP (brasil-federal, goias, para, amazonas, minas-gerais, pl2780, juridico, sintese) + 1 default",
+        "Padrões analíticos por capítulo: P03, P04b, P05, P06, P08, P09, P10, P11"
+      ],
+      "status": "completed"
     }
   ]
 }
