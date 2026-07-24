@@ -1,0 +1,167 @@
+---
+layout: page
+---
+
+{% include lang.html %}
+
+{% assign df_strftime_m = site.data.locales[lang].df.archives.strftime | default: '/ %m' %}
+{% assign df_dayjs_m = site.data.locales[lang].df.archives.dayjs | default: '/ MM' %}
+
+<!-- Descrição da série -->
+{%- assign dragao_onca_cat = site.featured_categories | where: "slug", "dragao-onca" | first -%}
+{%- if dragao_onca_cat and dragao_onca_cat.description -%}
+  <p class="category-description">{{ dragao_onca_cat.description }}</p>
+{%- endif -%}
+
+<!-- Sínteses e Capítulos (Temáticos) -->
+<section id="dragao-onca-tematicos">
+  <h2 class="mt-4 mb-3">🏛️ Capítulos Temáticos</h2>
+  <p class="text-muted small">Sínteses estruturadas de cada região/aspecto da série</p>
+
+  <div class="row g-3">
+    {% assign thematic_posts = site.posts | where_exp:"post","post.title contains 'Capítulo' or post.title contains 'O Dragão'" | sort: "date" | reverse %}
+    {% for post in thematic_posts limit: 10 %}
+      <div class="col-lg-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="{{ post.url | relative_url }}" class="text-decoration-none">
+                {{ post.title }}
+              </a>
+            </h5>
+            <p class="card-text text-muted small">{{ post.description }}</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge bg-secondary">{{ post.date | date: '%Y' }}</span>
+              {% if post.tags %}
+                <span class="text-muted small">
+                  {% for tag in post.tags limit: 2 %}
+                    <span class="badge bg-light text-dark">{{ tag }}</span>
+                  {% endfor %}
+                </span>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Timeline de Artigos -->
+<section id="dragao-onca-timeline">
+  <h2 class="mt-5 mb-3">📅 Timeline Completa</h2>
+  <p class="text-muted small">Entradas da série organizadas por data (mais recentes primeiro)</p>
+
+  <div id="archives" class="pl-xl-3 mt-4">
+    {% assign dragao_onca_posts = site.posts | where_exp:"post","post.categories contains 'dragao-onca'" %}
+    {% assign last_year = "" %}
+
+    {% for post in dragao_onca_posts %}
+      {% assign cur_year = post.date | date: '%Y' %}
+
+      {% if cur_year != last_year %}
+        {% unless forloop.first %}</ul>{% endunless %}
+
+        <time class="year lead d-block mt-3">{{ cur_year }}</time>
+        <ul class="list-unstyled">
+
+        {% assign last_year = cur_year %}
+      {% endif %}
+
+      <li class="mb-2">
+        {% assign ts = post.date | date: '%s' %}
+        <span class="date day" data-ts="{{ ts }}" data-df="DD">{{ post.date | date: '%d' }}</span>
+        <span class="date month small text-muted ms-1" data-ts="{{ ts }}" data-df="{{ df_dayjs_m }}">
+          {{ post.date | date: df_strftime_m }}
+        </span>
+
+        <!-- Ícone de status/tipo -->
+        {% if post.timeline_id %}
+          <span class="badge bg-light text-dark" title="ID da entrada">{{ post.timeline_id }}</span>
+        {% endif %}
+
+        <!-- Link para o artigo -->
+        <a href="{{ post.url | relative_url }}" class="ms-2">
+          <strong>{{ post.title }}</strong>
+        </a>
+
+        <!-- Resumo compacto -->
+        <div class="text-muted small ms-4 mt-1">
+          {{ post.description | truncate: 120 }}
+        </div>
+      </li>
+
+      {% if forloop.last %}</ul>{% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Navegação de Categorias Relacionadas -->
+<section id="dragao-onca-related" class="mt-5">
+  <h3 class="mb-3">🔗 Categorias Relacionadas</h3>
+  <div class="row g-2">
+    <div class="col-auto">
+      <a href="/categories/crise-diplomatica/" class="btn btn-outline-secondary btn-sm">
+        <i class="fas fa-handshake-slash"></i> Crise Diplomática
+      </a>
+    </div>
+    <div class="col-auto">
+      <a href="/categories/operacoes/" class="btn btn-outline-secondary btn-sm">
+        <i class="fas fa-crosshairs"></i> Operações
+      </a>
+    </div>
+    <div class="col-auto">
+      <a href="/categories/lawfare/" class="btn btn-outline-secondary btn-sm">
+        <i class="fas fa-scale-balanced"></i> Lawfare
+      </a>
+    </div>
+    <div class="col-auto">
+      <a href="/categories/escandalos/" class="btn btn-outline-secondary btn-sm">
+        <i class="fas fa-bomb"></i> Escândalos
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .dragao-onca-hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white;
+    padding: 3rem 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+
+  .dragao-onca-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .card {
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .year {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-top: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+  }
+
+  .date.day {
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  .date.month {
+    opacity: 0.8;
+  }
+</style>
