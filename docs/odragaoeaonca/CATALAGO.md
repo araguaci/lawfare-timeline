@@ -47,5 +47,3 @@ Respeite **≤~2 posts/dia** na conta. Espaçar capítulos em dias diferentes ev
 
 - São Paulo, Paraná, Rio Grande do Sul, Santa Catarina
 - Capítulos estaduais restantes nos `public/*.md` (bahia, parana, sao-paulo, etc.)
-
-Quer que eu avance para algum desses estados ou monte um calendário editorial dia a dia?

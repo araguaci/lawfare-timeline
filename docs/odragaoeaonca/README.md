@@ -18,6 +18,8 @@ A União negocia marcos amplos (tratados, MoUs, cúpulas). Quem assina o contrat
 
 ---
 
+
+
 ## Estrutura do repositório
 
 ```
@@ -29,37 +31,49 @@ odragaoeaonca/
 └── dragao-onca-goias.html
 ```
 
+
+
 ### Dossiês interativos (HTML)
 
-| # | Capítulo | Arquivo HTML | Foco |
-|---|----------|--------------|------|
-| 1 | Brasil (Federal) | `dragao-onca-brasil-federal.html` | 1993–2026, Doria-Sinovac, IED chinês |
-| 2 | Goiás | `dragao-onca-goias.html` | Terras raras, pivô China→EUA/Japão, Caiado |
-| 3 | Pará | `dragao-onca-para.html` | Ferrovia CCCC-Vale, COP30, Norsk Hydro |
-| 4 | Amazonas | `dragao-onca-amazonas.html` | Taboca/China Nonferrous, Waimiri Atroari |
-| 5 | Minas Gerais | `dragao-onca-minas-gerais.html` | Vale do Lítio, Sigma Lithium, Zema |
-| — | Síntese | `dragao-onca-sintese.html` | Consolidação cross-estadual |
-| — | PL 2.780/2024 | `dragao-onca-pl2780.html` | Elo legislativo central |
-| — | Braço Jurídico | `dragao-onca-braco-juridico.html` | STF, marco temporal, licenciamento |
+
+| #   | Capítulo         | Arquivo HTML                      | Foco                                       |
+| --- | ---------------- | --------------------------------- | ------------------------------------------ |
+| 1   | Brasil (Federal) | `dragao-onca-brasil-federal.html` | 1993–2026, Doria-Sinovac, IED chinês       |
+| 2   | Goiás            | `dragao-onca-goias.html`          | Terras raras, pivô China→EUA/Japão, Caiado |
+| 3   | Pará             | `dragao-onca-para.html`           | Ferrovia CCCC-Vale, COP30, Norsk Hydro     |
+| 4   | Amazonas         | `dragao-onca-amazonas.html`       | Taboca/China Nonferrous, Waimiri Atroari   |
+| 5   | Minas Gerais     | `dragao-onca-minas-gerais.html`   | Vale do Lítio, Sigma Lithium, Zema         |
+| —   | Síntese          | `dragao-onca-sintese.html`        | Consolidação cross-estadual                |
+| —   | PL 2.780/2024    | `dragao-onca-pl2780.html`         | Elo legislativo central                    |
+| —   | Braço Jurídico   | `dragao-onca-braco-juridico.html` | STF, marco temporal, licenciamento         |
+
+
+
 
 ### X Articles (publicação X.com)
 
-| Capítulo | Markdown | Hero (capa) |
-|----------|----------|-------------|
-| Brasil (Federal) | `artigos/brasil-federal-xarticle.md` | `artigos/brasil-federal-xarticle-hero.png` |
-| Goiás | `artigos/goias-xarticle.md` | `artigos/goias-xarticle-hero.png` |
-| Pará | `artigos/para-xarticle.md` | `artigos/para-xarticle-hero.png` |
-| Amazonas | `artigos/amazonas-xarticle.md` | `artigos/amazonas-xarticle-hero.png` |
-| Minas Gerais | `artigos/minas-gerais-xarticle.md` | `artigos/minas-gerais-xarticle-hero.png` |
-| Síntese | `artigos/sintese-xarticle.md` | `artigos/sintese-xarticle-hero.png` |
-| PL 2.780/2024 | `artigos/pl2780-xarticle.md` | `artigos/pl2780-xarticle-hero.png` |
-| Braço Jurídico | `artigos/braco-juridico-xarticle.md` | `artigos/braco-juridico-xarticle-hero.png` |
+
+| Capítulo         | Markdown                             | Hero (capa)                                |
+| ---------------- | ------------------------------------ | ------------------------------------------ |
+| Brasil (Federal) | `artigos/brasil-federal-xarticle.md` | `public/dragao-onca-federal.webp`          |
+| Goiás            | `artigos/goias-xarticle.md`          | `public/dragao-onca-goias.webp`            |
+| Pará             | `artigos/para-xarticle.md`           | `public/dragao-onca-dragao-onca-para.webp` |
+| Amazonas         | `artigos/amazonas-xarticle.md`       | `public/dragao-onca-amazonas.webp`         |
+| Minas Gerais     | `artigos/minas-gerais-xarticle.md`   | `public/dragao-onca-minas-gerais.webp`     |
+| Síntese          | `artigos/sintese-xarticle.md`        | `public/dragao-onca-sintese.webp`          |
+| PL 2.780/2024    | `artigos/pl2780-xarticle.md`         | `public/dragao-onca-pl2780.webp`           |
+| Braço Jurídico   | `artigos/braco-juridico-xarticle.md` | `public/dragao-onca-braco-juridico.webp`   |
+
+
+
 
 ### Horizontes (dossiês em `public/`, sem X Article ainda)
 
 Bahia, Paraná, Rio Grande do Sul, São Paulo — relatórios em `public/*-china.md` / `.pdf`.
 
 ---
+
+
 
 ## Como publicar no X Articles
 
@@ -72,19 +86,23 @@ Requer conta **X Premium**.
 
 ---
 
-## Regras de promoção v2.1 (X.com)
+
+
+## Regras de promoção v2.1 ([X.com](http://X.com))
 
 Aplicar em **cada lançamento** (tweet de abertura + replies + cadência):
 
-| Prioridade | Regra |
-|------------|-------|
+
+| Prioridade  | Regra                                                                                                              |
+| ----------- | ------------------------------------------------------------------------------------------------------------------ |
 | **Crítico** | Primeiros **~30 min** após publicar: responder todos os replies; rebater comentários próprios quando fizer sentido |
-| **Alto** | Artigo longo nativo + hero/capa — não publicar só link seco |
-| **Alto** | **URLs externas no primeiro reply**, nunca no tweet principal |
-| **Alto** | Tweet de abertura com card do artigo + imagem/teaser |
-| **⚠️** | Máx. **~2 posts/dia** por conta (inclui threads e posts curtos) |
-| **⚠️** | Evitar "O que você acha?" — usar CTAs específicos |
-| **⚠️** | Dados concretos + posição explícita — evitar tom genérico de IA |
+| **Alto**    | Artigo longo nativo + hero/capa — não publicar só link seco                                                        |
+| **Alto**    | **URLs externas no primeiro reply**, nunca no tweet principal                                                      |
+| **Alto**    | Tweet de abertura com card do artigo + imagem/teaser                                                               |
+| **⚠️**      | Máx. **~2 posts/dia** por conta (inclui threads e posts curtos)                                                    |
+| **⚠️**      | Evitar "O que você acha?" — usar CTAs específicos                                                                  |
+| **⚠️**      | Dados concretos + posição explícita — evitar tom genérico de IA                                                    |
+
 
 **Sinais úteis (ordem aproximada):** réplica substantiva → quote → RT → tempo de leitura → bookmark → like isolado.
 
@@ -92,22 +110,28 @@ Aplicar em **cada lançamento** (tweet de abertura + replies + cadência):
 
 ---
 
+
+
 ## Calendário sugerido de lançamento
 
 Espaçar capítulos em **dias diferentes** (≤2 posts/dia). Ordem recomendada:
 
-| Dia | Artefato | Motivo |
-|-----|----------|--------|
-| 1 | Brasil (Federal) | Contexto histórico — pano de fundo |
-| 2 | Goiás | Primeiro caso estadual completo + pivô geopolítico |
-| 3 | Pará | Densidade máxima (ferrovia + COP30) |
-| 4 | Amazonas | Caso mais grave (MPF + PF) |
-| 5 | Minas Gerais | Capítulo de contraste (sem China) |
-| 6 | Síntese | Consolidação — publicar após os 5 capítulos |
-| 7 | PL 2.780/2024 | Elo legislativo |
-| 8 | Braço Jurídico | Arquitetura legal transversal |
+
+| Dia | Artefato         | Motivo                                             |
+| --- | ---------------- | -------------------------------------------------- |
+| 1   | Brasil (Federal) | Contexto histórico — pano de fundo                 |
+| 2   | Goiás            | Primeiro caso estadual completo + pivô geopolítico |
+| 3   | Pará             | Densidade máxima (ferrovia + COP30)                |
+| 4   | Amazonas         | Caso mais grave (MPF + PF)                         |
+| 5   | Minas Gerais     | Capítulo de contraste (sem China)                  |
+| 6   | Síntese          | Consolidação — publicar após os 5 capítulos        |
+| 7   | PL 2.780/2024    | Elo legislativo                                    |
+| 8   | Braço Jurídico   | Arquitetura legal transversal                      |
+
 
 ---
+
+
 
 ## Planos de promoção por artefato
 
@@ -116,6 +140,8 @@ Para cada capítulo: **tweet de abertura** (sem URL externa) → **primeiro repl
 Substitua `[URL_DOSSIÊ]` pela URL pública do HTML quando hospedado (GitHub Pages, site próprio, etc.).
 
 ---
+
+
 
 ### 1. Brasil (Federal)
 
@@ -147,6 +173,8 @@ Substitua `[URL_DOSSIÊ]` pela URL pública do HTML quando hospedado (GitHub Pag
 
 ---
 
+
+
 ### 2. Goiás
 
 **Título do artigo:** *Goiás: de Pequim a Washington em 18 meses — e terras raras viram bandeira presidencial*
@@ -176,6 +204,8 @@ Substitua `[URL_DOSSIÊ]` pela URL pública do HTML quando hospedado (GitHub Pag
 **Janela 30 min:** rebater com dados do pivô (cota de carne 55% excedente vs. acordo mineral EUA) se surgir debate geopolítico simplista.
 
 ---
+
+
 
 ### 3. Pará
 
@@ -207,6 +237,8 @@ Substitua `[URL_DOSSIÊ]` pela URL pública do HTML quando hospedado (GitHub Pag
 
 ---
 
+
+
 ### 4. Amazonas
 
 **Título do artigo:** *Amazonas: estatal chinesa, rio contaminado e R$ 12,3 mi dois dias depois da desconfiança*
@@ -237,6 +269,8 @@ Substitua `[URL_DOSSIÊ]` pela URL pública do HTML quando hospedado (GitHub Pag
 
 ---
 
+
+
 ### 5. Minas Gerais
 
 **Título do artigo:** *Minas Gerais prova que o padrão não é a China — é o mecanismo*
@@ -266,6 +300,8 @@ Substitua `[URL_DOSSIÊ]` pela URL pública do HTML quando hospedado (GitHub Pag
 **Janela 30 min:** rebater leituras que reduzem a série a "anti-China" — citar ausência de China neste capítulo.
 
 ---
+
+
 
 ### 6. Síntese
 
@@ -301,6 +337,8 @@ Substitua `[URL_DOSSIÊ]` pela URL pública do HTML quando hospedado (GitHub Pag
 
 ---
 
+
+
 ### 7. PL 2.780/2024
 
 **Título do artigo:** *PL 2.780/2024: R$ 2 bi para o investidor, zero para a comunidade — e o INESC confirma Goiás*
@@ -322,7 +360,7 @@ Substitua `[URL_DOSSIÊ]` pela URL pública do HTML quando hospedado (GitHub Pag
 
 > Dossiê dedicado: [URL_DOSSIÊ]/dragao-onca-pl2780.html
 >
-> Nota técnica INESC: https://inesc.org.br/wp-content/uploads/2026/05/nt-substitutivo-pl-minerais-criticos.pdf
+> Nota técnica INESC: [https://inesc.org.br/wp-content/uploads/2026/05/nt-substitutivo-pl-minerais-criticos.pdf](https://inesc.org.br/wp-content/uploads/2026/05/nt-substitutivo-pl-minerais-criticos.pdf)
 >
 > Se sancionado, qual capítulo estadual você monitoraria primeiro — Taboca, Ferrovia do Pará ou Sigma Lithium?
 
@@ -331,6 +369,8 @@ Substitua `[URL_DOSSIÊ]` pela URL pública do HTML quando hospedado (GitHub Pag
 **Janela 30 min:** explicar FGAM vs. ausência de fundo comunitário; conectar streaming à aquisição USA Rare Earth–Serra Verde.
 
 ---
+
+
 
 ### 8. Braço Jurídico
 
@@ -363,19 +403,25 @@ Substitua `[URL_DOSSIÊ]` pela URL pública do HTML quando hospedado (GitHub Pag
 
 ---
 
+
+
 ## Dossiês HTML (promoção standalone)
 
 Quando publicar o dossiê interativo **sem** X Article no mesmo dia:
 
-| HTML | Tweet de abertura (modelo) |
-|------|----------------------------|
-| `dragao-onca-sintese.html` | Quadro comparativo dos 4 governadores + KPIs — link no reply |
-| `dragao-onca-pl2780.html` | Alerta legislativo — urgência Senado — link INESC no reply |
-| `dragao-onca-braco-juridico.html` | 6 dias COP30→vetos derrubados — ADI 7919 no reply |
+
+| HTML                              | Tweet de abertura (modelo)                                   |
+| --------------------------------- | ------------------------------------------------------------ |
+| `dragao-onca-sintese.html`        | Quadro comparativo dos 4 governadores + KPIs — link no reply |
+| `dragao-onca-pl2780.html`         | Alerta legislativo — urgência Senado — link INESC no reply   |
+| `dragao-onca-braco-juridico.html` | 6 dias COP30→vetos derrubados — ADI 7919 no reply            |
+
 
 Regra: **HTML externo sempre no reply**, nunca no tweet principal.
 
 ---
+
+
 
 ## Checklist pós-publicação (cada artefato)
 
@@ -390,6 +436,8 @@ Regra: **HTML externo sempre no reply**, nunca no tweet principal.
 
 ---
 
+
+
 ## Corpus e metodologia
 
 - **Entradas produzidas:** 62 (main track 1639–1688 + temáticas T-228–T-233)
@@ -398,6 +446,8 @@ Regra: **HTML externo sempre no reply**, nunca no tweet principal.
 - **Atualização:** jul/2026 — sujeito a revisão conforme tramitação PL 2.780, investigação Taboca e conclusão aquisição Serra Verde
 
 ---
+
+
 
 ## Contribuir / reutilizar
 
