@@ -1,0 +1,37 @@
+{
+  "id": 242,
+  "status": "confirmed",
+  "topic": "O Dragão e a Onça — Ranking Nacional CEBC: investimentos chineses por estado (2007-2025)",
+  "artifact": "dragao-onca-ranking-nacional-cebc",
+  "series": "O Dragão e a Onça",
+  "merge_date": "2026-07-25",
+  "categoria_especial": "ranking_nacional",
+  "patterns": ["P05", "P11"],
+  "notes": "Capítulo transversal com ranking oficial CEBC (Conselho Empresarial Brasil-China), relatório 'Investimentos Chineses no Brasil 2025' (abr/2026). Estoque 2007-2025: US$85,5 bi em 355 projetos, 20 UFs. Contextualiza capítulos T-238 (SP, 151 projetos), T-239 (PR, 8º), T-240 (RS, 6º, caiu do 5º), T-241 (ES, 17º, caiu do 15º). Complementa dossiê HTML dragao-onca-rs-es-ranking-nacional.html.",
+  "ranking_cebc_2007_2025": {
+    "fonte": "CEBC — Investimentos Chineses no Brasil 2025, abr/2026",
+    "estoque_total_usd": "85,5 bi",
+    "projetos_total": 355,
+    "ufs_com_projetos": 20,
+    "top_estados_serie": [
+      {"posicao": 1, "estado": "São Paulo", "projetos": 151, "variacao": "manteve", "capitulo": "T-238"},
+      {"posicao": 3, "estado": "Goiás", "projetos": 26, "variacao": "manteve", "capitulo": "T-228"},
+      {"posicao": 4, "estado": "Bahia", "projetos": 24, "variacao": "manteve", "capitulo": "T-237"},
+      {"posicao": 5, "estado": "Pará", "projetos": 21, "variacao": "subiu (de 10º)", "capitulo": "T-230"},
+      {"posicao": 8, "estado": "Paraná", "projetos": 18, "variacao": "manteve", "capitulo": "T-239"},
+      {"posicao": 11, "estado": "Amazonas", "projetos": 11, "variacao": "manteve", "capitulo": "T-231"},
+      {"posicao": 6, "estado": "Rio Grande do Sul", "projetos": 20, "variacao": "caiu (de 5º)", "capitulo": "T-240"},
+      {"posicao": 17, "estado": "Espírito Santo", "projetos": 3, "variacao": "caiu (de 15º)", "capitulo": "T-241"}
+    ],
+    "setor_lider_valor": "Eletricidade 43,6% (US$36,5 bi)",
+    "distribuicao_regional": "Sudeste 49,8% · Nordeste 14,9% · Centro-Oeste 13,6% · Sul 10,8% · Norte 10,8%"
+  },
+  "analise": "ev-inference: o ranking CEBC desloca a pergunta da série — de 'o governador vendeu soberania?' para 'onde o capital chinês já estava antes da negociação política?'. São Paulo concentra 151 projetos (quase 1/3 do estoque nacional) sem diplomacia pessoal documentada nos capítulos (T-238: variante mercado). RS (6º, 20 projetos) perdeu a GWM para ES (17º, 3 projetos) — prova de que posição histórica no ranking e vitória pontual em disputa específica são variáveis independentes. Pará subiu do 10º para o 5º enquanto RS e ES caíram — o ranking captura tendência de longo prazo, não o desfecho de uma licitação.",
+  "lacuna_investigativa": "Relatório CEBC 2026 ainda não publicado — próxima edição testará se GWM/Aracruz altera posição do ES e se queda do RS (5º→6º) se aprofunda. Valores em US$ por UF (não só contagem de projetos) não foram extraídos neste capítulo.",
+  "ponto_de_inflexao": "Publicação do relatório CEBC 2026 (abr/2027 estimado) — verificar efeito da fábrica GWM no ranking do ES e impacto dos capítulos estaduais documentados (2024-2026) nas posições 2025-2026.",
+  "connections_main_track": [],
+  "connections_thematic": ["T-238", "T-239", "T-240", "T-241", "T-243"],
+  "sources": [
+    {"title": "Investimentos Chineses no Brasil 2025 (relatório completo CEBC)", "url": "https://static.poder360.com.br/2026/05/cebc-investimentos-chineses-no-brasil.pdf", "outlet": "CEBC / Poder360"}
+  ]
+}

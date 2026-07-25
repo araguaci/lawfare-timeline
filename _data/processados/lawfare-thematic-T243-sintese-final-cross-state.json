@@ -1,0 +1,39 @@
+{
+  "id": 243,
+  "status": "confirmed",
+  "topic": "O Dragão e a Onça — Síntese Final: Governadores vs. Potências Estrangeiras (Soberania na Conta do Governador)",
+  "artifact": "dragao-onca-sintese-final-cross-state",
+  "series": "O Dragão e a Onça",
+  "merge_date": "2026-07-25",
+  "categoria_especial": "sintese_final_serie",
+  "patterns": ["P04b", "P05", "P08", "P09", "P11"],
+  "correcao_metodologica": "Rascunho original (jul/2026) afirmava ausência de capítulo Goiás. Pós-merge 25/jul/2026: T-228 + IDs 1740-1748 confirmados no lawfare.json. Serra Verde permanece caso de capital não-chinês (USA Rare Earth); capítulo goiano documenta pivô geopolítico e instrumentalização eleitoral.",
+  "escopo_real_da_serie": {
+    "confirmado_no_lawfare_json": "110 entradas, IDs 1639-1748: Federal, Pará, Amazonas, MG, jurídico, PL2780, diplomático, Bahia, SP, PR, RS, ES, Goiás retroativo",
+    "capitulos_tematicos": "T-228 a T-242 + T-243; T-233 síntese v1",
+    "pendente": null
+  },
+  "tabela_comparativa_estados": [
+    {"estado": "Goiás (Caiado)", "potencia": "China → EUA + Japão", "mecanismo": "diplomacia pessoal + pivô JOGMEC/EUA + venda Serra Verde", "resultado": "ativo migrado para controle americano; terras raras viram plataforma presidencial", "captura_de_valor": "parcial — pivô setorial, agro ainda depende da China"},
+    {"estado": "Federal/Brasil", "potencia": "China + EUA + Japão", "mecanismo": "frameworks diplomáticos amplos (WAICO, memorandos)", "resultado": "alinhamento assimétrico duplo — WAICO (China) + venda Serra Verde (EUA) no mesmo período", "captura_de_valor": "não identificada"},
+    {"estado": "Pará (Barbalho)", "potencia": "China", "mecanismo": "negociação direta do governador (BYD, Zhongtong, Nine Dragons) + MoU CCCC/Vale para ferrovia", "resultado": "ferrovia ainda em fase de audiências públicas (obras previstas 2027); custo ambiental/social local (mineroduto Norsk Hydro, mortes na Terra Indígena Mãe Maria)", "captura_de_valor": "parcial — COP30 como vitrine, sem contrapartida clara às comunidades"},
+    {"estado": "Amazonas (Wilson Lima)", "potencia": "China", "mecanismo": "ZFM como plataforma de atração (BYD, Megmeet) + mineração (Taboca/China Nonferrous)", "resultado": "contaminação por mercúrio denunciada pelo povo Waimiri Atroari; PF investiga desde jul/2026", "captura_de_valor": "custo ambiental local, benefício industrial concentrado no PIM"},
+    {"estado": "Minas Gerais (Zema)", "potencia": "Coreia do Sul (não China)", "mecanismo": "Vale do Lítio, lançamento na Nasdaq, acordo Sigma Lithium-LG", "resultado": "operação com instabilidade (paralisação out/2025, retomada mar/2026); Zema sai do governo para concorrer à Presidência", "captura_de_valor": "não avaliada — caso de potência asiática não-chinesa dentro da série"},
+    {"estado": "Bahia (Jerônimo Rodrigues)", "potencia": "China", "mecanismo": "diplomacia pessoal direta com Xi Jinping (duas viagens)", "resultado": "renegociação da PPP Ponte Salvador-Itaparica com REDUÇÃO da TIR do consórcio chinês (13%→10,88%)", "captura_de_valor": "SIM — único caso de captura de valor real pelo ente subnacional"},
+    {"estado": "São Paulo (Tarcísio)", "potencia": "China", "mecanismo": "leilões técnicos neutros (CRRC vence por preço/escala) + concessão federal (COFCO/Santos)", "resultado": "domínio quase monopolista da CRRC no material rodante paulista; nenhuma negociação política direta", "captura_de_valor": "não identificada — captura ocorre via mercado, não diplomacia"},
+    {"estado": "Paraná (Ratinho Jr)", "potencia": "China", "mecanismo": "presença pessoal do governador desde 2019 + coordenação estado-federal (acordos gêmeos nov/2025)", "resultado": "controle chinês de 90% do TCP desde 2018, renovado e ampliado", "captura_de_valor": "não identificada — único capítulo com coordenação explícita estado-união"},
+    {"estado": "Rio Grande do Sul (Leite)", "potencia": "China", "mecanismo": "diplomacia pessoal (missão a Shenzhen, BYD/Huawei)", "resultado": "PERDEU disputa pela fábrica GWM para o Espírito Santo", "captura_de_valor": "NÃO — cortejo sem captura, apesar do esforço diplomático"},
+    {"estado": "Espírito Santo (Casagrande/Ferraço)", "potencia": "China", "mecanismo": "tratativas técnicas desde 2023, desapropriação de terreno, sem diplomacia pessoal de alto perfil", "resultado": "GANHOU a fábrica GWM — 1ª fora da Ásia, R$4,6-5bi", "captura_de_valor": "SIM — mas por fator logístico (proximidade portuária), não diplomático"}
+  ],
+  "tipologia_mecanismos_identificados": {
+    "diplomacia_pessoal_direta": {"casos": ["Bahia (sucesso)", "Pará (parcial)", "Rio Grande do Sul (fracasso)"], "nota": "mesmo mecanismo produz resultados opostos — não é suficiente nem necessário para captura"},
+    "mercado_leilao_tecnico": {"casos": ["São Paulo"], "nota": "captura sem qualquer diplomacia pessoal — vitória por preço e escala"},
+    "continuidade_institucional_historica": {"casos": ["Paraná"], "nota": "relação de 7+ anos, único caso com coordenação estado-federal explícita"},
+    "fator_logistico_geografico": {"casos": ["Espírito Santo (venceu por isso)", "Rio Grande do Sul (perdeu apesar da diplomacia)"], "nota": "par de controle mais limpo da série — mesma empresa, mesma disputa, resultado explicado por geografia econômica, não por esforço político"},
+    "custo_ambiental_local_beneficio_distante": {"casos": ["Pará (mortes Terra Indígena Mãe Maria, mineroduto Norsk Hydro)", "Amazonas (contaminação por mercúrio, Taboca)"], "nota": "onde a extração é mineral/ambiental, o padrão assimétrico é mais nítido e mais grave que nos casos de investimento industrial/portuário"}
+  },
+  "analise": "ev-inference: a tese 'soberania na conta do governador' formulada no início da série — federal negocia frameworks amplos, governadores executam contratos específicos e absorvem custo político — se confirma com nuance, não de forma universal. Ela é fortemente sustentada nos casos de extração mineral com custo ambiental concentrado (Pará, Amazonas), onde o padrão assimétrico é claro e grave. É parcialmente sustentada nos casos de infraestrutura/manufatura (Paraná, São Paulo), onde a captura ocorre mas por mecanismos de mercado ou continuidade institucional, não por characterização de 'governador vendendo soberania'. E é DIRETAMENTE CONTRARIADA pelo par Bahia (captura COM benefício ao estado) e pelo par RS/ES (mesmo mecanismo de disputa, resultados opostos por fator alheio à vontade do governador). A tese original precisa de uma qualificação: a assimetria estrutural é mais forte quanto mais o ativo negociado for um recurso natural finito extraído do território (minério, terra, água) e mais fraca quanto mais for um contrato de serviço ou manufatura renegociável (PPP, fábrica).",
+  "lacuna_investigativa": "MG: capítulo T-232 é Coreia/lítio — falta recorte China-específico. Goiás: termos Manifesto EUA, renúncias fiscais CMOC/Chint/Weichai, SPV americana contrato 15 anos.",
+  "ponto_de_inflexao": "PL 2.780/2024 (Política Nacional de Minerais Críticos) segue sem votação final no Senado — sem esse marco legal, o padrão observado (negociação estado a estado, sem coordenação nacional) tende a se repetir. A entrada em vigor do PL seria o evento que testaria se a 'tese refinada' desta síntese se mantém sob novo marco regulatório.",
+  "connections_thematic": ["T-228","T-229","T-230","T-231","T-232","T-233","T-234","T-235","T-236","T-237","T-238","T-239","T-240","T-241","T-242"]
+}

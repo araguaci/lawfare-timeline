@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Exporta _data/claude.ai-corpus-ids-sync.json para Google Drive.
+Exporta _data/claude.ai-corpus-ids-sync.json (e opcionalmente lawfare.json)
+para Google Drive.
 
 Chamado automaticamente por sync_corpus_ids.py e sync_todo_current.py após
 atualizar o arquivo de sync. Também pode ser executado manualmente:
@@ -11,7 +12,7 @@ atualizar o arquivo de sync. Também pode ser executado manualmente:
 
 Configuração (prioridade):
   1. Variável de ambiente LAWFARE_GDRIVE_SYNC_DIR (pasta de destino)
-  2. _data/gdrive-sync-export.json (dest_dir, subfolder, enabled)
+  2. _data/gdrive-sync-export.json (dest_dir, subfolder, enabled, export_lawfare)
   3. Detecção automática de Google Drive / Meu Drive no Windows
 """
 from __future__ import annotations
@@ -26,6 +27,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SYNC = ROOT / "_data" / "claude.ai-corpus-ids-sync.json"
+LAWFARE = ROOT / "_data" / "lawfare.json"
 CONFIG = ROOT / "_data" / "gdrive-sync-export.json"
 CONFIG_EXAMPLE = ROOT / "_data" / "gdrive-sync-export.example.json"
 
@@ -120,14 +122,21 @@ def export_sync_to_gdrive(*, dry_run: bool = False, quiet: bool = False) -> bool
 
     filename = config.get("dest_filename") or "claude.ai-corpus-ids-sync.json"
     dest_file = dest_dir / filename
+    lawfare_name = config.get("lawfare_filename") or "lawfare.json"
+    dest_lawfare = dest_dir / lawfare_name
+    export_lawfare = bool(config.get("export_lawfare", True)) and LAWFARE.is_file()
 
     if dry_run:
         print(f"gdrive export [dry-run]: {SYNC} -> {dest_file}")
+        if export_lawfare:
+            print(f"gdrive export [dry-run]: {LAWFARE} -> {dest_lawfare}")
         return True
 
     try:
         dest_dir.mkdir(parents=True, exist_ok=True)
         shutil.copy2(SYNC, dest_file)
+        if export_lawfare:
+            shutil.copy2(LAWFARE, dest_lawfare)
     except OSError as exc:
         print(f"gdrive export ERRO: {exc}", file=sys.stderr)
         return False
@@ -139,11 +148,17 @@ def export_sync_to_gdrive(*, dry_run: bool = False, quiet: bool = False) -> bool
         "dest": str(dest_file),
         "main_last_id": _peek_main_last_id(),
     }
+    if export_lawfare:
+        meta["lawfare_source"] = str(LAWFARE.relative_to(ROOT)).replace("\\", "/")
+        meta["lawfare_dest"] = str(dest_lawfare)
+        meta["lawfare_total"] = _peek_lawfare_total()
     meta_path = dest_dir / f"{filename}.export-meta.json"
     meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     if not quiet:
         print(f"gdrive export OK: {dest_file}")
+        if export_lawfare:
+            print(f"gdrive export OK: {dest_lawfare}")
     return True
 
 
@@ -153,6 +168,15 @@ def _peek_main_last_id() -> int | None:
         main = data.get("tracks", {}).get("main", {})
         return main.get("last_id") or main.get("last_confirmed")
     except (OSError, json.JSONDecodeError):
+        return None
+
+
+def _peek_lawfare_total() -> int | None:
+    try:
+        data = json.loads(LAWFARE.read_text(encoding="utf-8"))
+        assuntos = data.get("assuntos") or []
+        return int(data.get("total") or len(assuntos))
+    except (OSError, json.JSONDecodeError, TypeError, ValueError):
         return None
 
 

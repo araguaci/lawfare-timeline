@@ -4,7 +4,7 @@ title: "O Dragão e a Onça — Síntese Comparativa: 5 capítulos (Federal, GO,
 description: "Artefato de síntese, não introduz fatos novos — consolida e cruza os 4 capítulos estaduais (Caiado/GO, Barbalho/PA, Wilson Lima/AM, Zema/MG) e o capítulo federal já produzidos. Tese central sintetizad..."
 date: 2026-01-01
 image: /assets/img/dragao-onca-sintese.webp
-tags: ["dragao-onca", "2026", "P04b", "P05", "goias", "para", "amazonas", "minas-gerais", "brasil-federal"]
+tags: ["dragao-onca", "2026", "P04b", "P05", "goias", "para", "amazonas", "minas-gerais", "brasil-federal", "bahia"]
 categories: dragao-onca
 timeline_id: 233
 status: confirmed

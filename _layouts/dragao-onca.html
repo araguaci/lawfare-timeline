@@ -60,7 +60,7 @@ layout: page
         {% if post.description %}
           <div class="text-muted small ms-4 mt-1 archive-desc">{{ post.description | truncate: 150 }}</div>
         {% endif %}
-        {% assign state_tags = "goias,para,amazonas,minas-gerais,sao-paulo,brasil-federal" | split: "," %}
+        {% assign state_tags = "goias,para,amazonas,minas-gerais,sao-paulo,brasil-federal,bahia,parana,rio-grande-do-sul,espirito-santo" | split: "," %}
         {% assign shown_states = "" %}
         {% for tag in post.tags %}
           {% if state_tags contains tag %}

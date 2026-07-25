@@ -1,0 +1,36 @@
+---
+description: Caminhos corretos para O Dragão e a Onça — nunca salvar em docs/
+globs: odragaoeaonca/**,**/dragao-onca*.html,**/*xarticle*
+alwaysApply: false
+---
+
+# O Dragão e a Onça — caminhos de arquivos
+
+## Pasta canônica (persistente)
+
+Conteúdo da série **O Dragão e a Onça** (HTML de capítulos, xarticles, heroes, assets do subsite) deve ser criado e editado em:
+
+```
+odragaoeaonca/
+```
+
+Exemplos:
+- `odragaoeaonca/dragao-onca-sao-paulo.html` — dossiês HTML
+- `odragaoeaonca/artigos/sao-paulo-xarticle.md` — artigos para X.com
+- `odragaoeaonca/artigos/sao-paulo-xarticle-hero.png` — capas 1024×600
+
+## NÃO usar `docs/` para conteúdo novo
+
+A pasta `docs/` é **saída regenerada** pelo `jekyll build` / `jekyll serve`. Qualquer arquivo salvo lá será **sobrescrito ou apagado** no próximo build.
+
+- ❌ `docs/odragaoeaonca/artigos/...`
+- ✅ `odragaoeaonca/artigos/...`
+
+Se existir cópia espelhada em `docs/odragaoeaonca/`, tratar como artefato de build — a fonte de verdade é `odragaoeaonca/` na raiz do repositório.
+
+## X Articles (skill xcom-article)
+
+Ao gerar xarticle a partir de dossiê HTML:
+1. Ler fonte em `odragaoeaonca/*.html`
+2. Salvar `.md` e hero em `odragaoeaonca/artigos/`
+3. Nome: `[slug]-xarticle.md` e `[slug]-xarticle-hero.png`

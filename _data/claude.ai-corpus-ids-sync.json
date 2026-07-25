@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schema_version": "1.1.0",
-    "generated": "2026-07-24",
+    "generated": "2026-07-25",
     "updated": "2026-05-28T23:59:00-03:00",
     "session": "claude.ai — sessão editorial 2026-05-28 (Operação Rejeito, T-191, T-192, Flávio/Trump, posts P11)",
     "purpose": "Mapa de sincronização de IDs — lawfare-timeline corpus",
@@ -79,7 +79,7 @@
           ],
           "status": "confirmed",
           "merge_pending": false,
-          "notes": "Merge lawfare.json 2026-07-24: Biomm 1527-1546, Zema 1547-1550, Homeschooling 1551.",
+          "notes": "Merge lawfare.json 2026-07-25: Biomm 1527-1546, Zema 1547-1550, Homeschooling 1551.",
           "source_files": [
             "_data/processados/lawfare-1527-1546-biomm-renumerado.json",
             "_data/processados/zema-1547-1550-renumerado.json"
@@ -92,7 +92,7 @@
           ],
           "status": "confirmed",
           "merge_pending": false,
-          "notes": "Merge lawfare.json 2026-07-24: Operação Rejeito 1552-1571.",
+          "notes": "Merge lawfare.json 2026-07-25: Operação Rejeito 1552-1571.",
           "source_files": [
             "_data/processados/lawfare-batch-rejeito-1552-1571.json"
           ]
@@ -365,14 +365,22 @@
           "source_files": [
             "_data/processados/lawfare-batch-dragao-onca-pl2780-1701-1712.json"
           ]
+        },
+        {
+          "range": [
+            1713,
+            1748
+          ],
+          "status": "confirmed",
+          "notes": "Dragão e a Onça merge 2026-07-25: lawfare-batch-dragao-onca-bahia-1719-1725.json, lawfare-batch-dragao-onca-diplomatico-1713-1718.json, lawfare-batch-dragao-onca-es-1738-1739.json, lawfare-batch-dragao-onca-goias-retroativo-1740-1748.json, lawfare-batch-dragao-onca-pr-1731-1734.json…"
         }
       ],
-      "last_id": 1712,
-      "last_jekyll_published": 1712,
+      "last_id": 1748,
+      "last_jekyll_published": 1748,
       "last_produced": 1712,
-      "next_available": 1713,
+      "next_available": 1749,
       "merge_queue": [],
-      "last_confirmed": 1712,
+      "last_confirmed": 1748,
       "last_session_produced": 1712
     },
     "thematic": {
@@ -1301,7 +1309,11 @@
           "artifact": "dragao-onca-capitulo-1-sintese",
           "series": "O Dragão e a Onça",
           "merge_date": "2026-07-24",
-          "patterns": ["P04b", "P08", "P09"],
+          "patterns": [
+            "P04b",
+            "P08",
+            "P09"
+          ],
           "notes": "Tema estruturante: síntese e navegação da série completa (90 artigos, 74 batch + 8 temáticos, período 1993-2026)."
         },
         {
@@ -1311,7 +1323,10 @@
           "artifact": "dragao-onca-capitulo-2-brasil-federal",
           "series": "O Dragão e a Onça",
           "merge_date": "2026-07-24",
-          "patterns": ["P03", "P05"],
+          "patterns": [
+            "P03",
+            "P05"
+          ],
           "notes": "Tema regional: operações federais e dinâmicas nacionais (1639-1653, 15 entradas)."
         },
         {
@@ -1321,7 +1336,10 @@
           "artifact": "dragao-onca-capitulo-3-para",
           "series": "O Dragão e a Onça",
           "merge_date": "2026-07-24",
-          "patterns": ["P08", "P11"],
+          "patterns": [
+            "P08",
+            "P11"
+          ],
           "notes": "Tema regional: Pará, recursos, crime organizado (1654-1666, 13 entradas)."
         },
         {
@@ -1331,7 +1349,10 @@
           "artifact": "dragao-onca-capitulo-4-amazonas",
           "series": "O Dragão e a Onça",
           "merge_date": "2026-07-24",
-          "patterns": ["P08", "P11"],
+          "patterns": [
+            "P08",
+            "P11"
+          ],
           "notes": "Tema regional: Amazonas, mineração, soberania (1667-1678, 12 entradas)."
         },
         {
@@ -1341,7 +1362,10 @@
           "artifact": "dragao-onca-capitulo-5-minas-gerais",
           "series": "O Dragão e a Onça",
           "merge_date": "2026-07-24",
-          "patterns": ["P03", "P08"],
+          "patterns": [
+            "P03",
+            "P08"
+          ],
           "notes": "Tema regional: Minas Gerais, JBS, economia (1679-1688, 10 entradas)."
         },
         {
@@ -1351,7 +1375,11 @@
           "artifact": "dragao-onca-capitulo-6-sintese-estrutural",
           "series": "O Dragão e a Onça",
           "merge_date": "2026-07-24",
-          "patterns": ["P04b", "P10", "P11"],
+          "patterns": [
+            "P04b",
+            "P10",
+            "P11"
+          ],
           "notes": "Tema analítico: padrões sistêmicos consolidados (metodologia P01-P11)."
         },
         {
@@ -1361,7 +1389,10 @@
           "artifact": "dragao-onca-capitulo-7-braco-juridico",
           "series": "O Dragão e a Onça",
           "merge_date": "2026-07-24",
-          "patterns": ["P03", "P06"],
+          "patterns": [
+            "P03",
+            "P06"
+          ],
           "notes": "Tema institucional: justiça, STF, captura regulatória (1689-1700, 12 entradas)."
         },
         {
@@ -1371,12 +1402,71 @@
           "artifact": "dragao-onca-capitulo-8-pl2780",
           "series": "O Dragão e a Onça",
           "merge_date": "2026-07-24",
-          "patterns": ["P09", "P04b"],
+          "patterns": [
+            "P09",
+            "P04b"
+          ],
           "notes": "Tema legislativo: parlamentarismo de fato, PL2780, neutralização legislativa (1701-1712, 12 entradas)."
+        },
+        {
+          "id": 236,
+          "status": "confirmed",
+          "topic": "T-236 dragao-onca",
+          "artifact": "2026-07-24-t236-dragao-onca.md",
+          "notes": "Dragão e a Onça merge 2026-07-25: lawfare-batch-dragao-onca-bahia-1719-1725.json, lawfare-batch-dragao-onca-diplomatico-1713-1718.json, lawfare-batch-dragao-onca-es-1738-1739.json, lawfare-batch-dragao-onca-goias-retroativo-1740-1748.json, lawfare-batch-dragao-onca-pr-1731-1734.json…"
+        },
+        {
+          "id": 237,
+          "status": "confirmed",
+          "topic": "T-237 dragao-onca",
+          "artifact": "2026-07-24-t237-dragao-onca.md",
+          "notes": "Dragão e a Onça merge 2026-07-25: lawfare-batch-dragao-onca-bahia-1719-1725.json, lawfare-batch-dragao-onca-diplomatico-1713-1718.json, lawfare-batch-dragao-onca-es-1738-1739.json, lawfare-batch-dragao-onca-goias-retroativo-1740-1748.json, lawfare-batch-dragao-onca-pr-1731-1734.json…"
+        },
+        {
+          "id": 238,
+          "status": "confirmed",
+          "topic": "T-238 dragao-onca",
+          "artifact": "2026-07-24-t238-dragao-onca.md",
+          "notes": "Dragão e a Onça merge 2026-07-25: lawfare-batch-dragao-onca-bahia-1719-1725.json, lawfare-batch-dragao-onca-diplomatico-1713-1718.json, lawfare-batch-dragao-onca-es-1738-1739.json, lawfare-batch-dragao-onca-goias-retroativo-1740-1748.json, lawfare-batch-dragao-onca-pr-1731-1734.json…"
+        },
+        {
+          "id": 239,
+          "status": "confirmed",
+          "topic": "T-239 dragao-onca",
+          "artifact": "2026-07-24-t239-dragao-onca.md",
+          "notes": "Dragão e a Onça merge 2026-07-25: lawfare-batch-dragao-onca-bahia-1719-1725.json, lawfare-batch-dragao-onca-diplomatico-1713-1718.json, lawfare-batch-dragao-onca-es-1738-1739.json, lawfare-batch-dragao-onca-goias-retroativo-1740-1748.json, lawfare-batch-dragao-onca-pr-1731-1734.json…"
+        },
+        {
+          "id": 240,
+          "status": "confirmed",
+          "topic": "T-240 dragao-onca",
+          "artifact": "2026-07-24-t240-dragao-onca.md",
+          "notes": "Dragão e a Onça merge 2026-07-25: lawfare-batch-dragao-onca-bahia-1719-1725.json, lawfare-batch-dragao-onca-diplomatico-1713-1718.json, lawfare-batch-dragao-onca-es-1738-1739.json, lawfare-batch-dragao-onca-goias-retroativo-1740-1748.json, lawfare-batch-dragao-onca-pr-1731-1734.json…"
+        },
+        {
+          "id": 241,
+          "status": "confirmed",
+          "topic": "T-241 dragao-onca",
+          "artifact": "2026-07-24-t241-dragao-onca.md",
+          "notes": "Dragão e a Onça merge 2026-07-25: lawfare-batch-dragao-onca-bahia-1719-1725.json, lawfare-batch-dragao-onca-diplomatico-1713-1718.json, lawfare-batch-dragao-onca-es-1738-1739.json, lawfare-batch-dragao-onca-goias-retroativo-1740-1748.json, lawfare-batch-dragao-onca-pr-1731-1734.json…"
+        },
+        {
+          "id": 242,
+          "status": "confirmed",
+          "topic": "T-242 dragao-onca",
+          "artifact": "2026-07-24-t242-dragao-onca-ranking-cebc.md",
+          "notes": "Dragão e a Onça merge 2026-07-25: lawfare-thematic-T242-dragao-onca-ranking-cebc.json"
+        },
+        {
+          "id": 243,
+          "status": "confirmed",
+          "topic": "T-243 dragao-onca",
+          "artifact": "2026-07-24-t243-dragao-onca.md",
+          "notes": "Dragão e a Onça merge 2026-07-25: lawfare-batch-dragao-onca-bahia-1719-1725.json, lawfare-batch-dragao-onca-diplomatico-1713-1718.json, lawfare-batch-dragao-onca-es-1738-1739.json, lawfare-batch-dragao-onca-goias-retroativo-1740-1748.json, lawfare-batch-dragao-onca-pr-1731-1734.json…"
         }
       ],
-      "last_id": 235,
-      "next_available": 236,
+      "last_id": 243,
+      "next_available": 244,
       "pending": [],
       "pending_notes": {}
     },
@@ -1423,8 +1513,8 @@
     }
   },
   "sync_status": {
-    "main_track_last_sync": "2026-07-24T14:30:00-03:00",
-    "thematic_track_last_sync": "2026-07-24T14:30:00-03:00",
+    "main_track_last_sync": "2026-07-25",
+    "thematic_track_last_sync": "2026-07-25",
     "dragao_onca_series_sync": "2026-07-24T14:30:00-03:00",
     "ids_confirmed_total": {
       "main_track": "1712",
@@ -1697,7 +1787,36 @@
       "T-219 Farra INSS publicado (2026-07-24)",
       "T-220 PCC-OFAC Arpar publicado (2026-07-24)",
       "T-221 Nemo judex DPU publicado (2026-07-24)",
-      "T-196 Radar Top 30 publicado em estudos/ (2026-07-24)"
+      "T-196 Radar Top 30 publicado em estudos/ (2026-07-24)",
+      "lawfare.json last_id=1712; próximo ID livre=1713",
+      "Fila editorial 2026-07-25: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-07-25)",
+      "T-198 COAF × Moraes publicado (2026-07-25)",
+      "T-199 Lojas Americanas publicado (2026-07-25)",
+      "T-200 Estatais rombo P11 publicado (2026-07-25)",
+      "T-201 PCC transnacional publicado (2026-07-25)",
+      "T-202 Delegada × PCC publicado (2026-07-25)",
+      "T-203 Zelotes CARF publicado (2026-07-25)",
+      "T-204 Gastos Paris publicado (2026-07-25)",
+      "T-205 Duplo padrão corpus publicado (2026-07-25)",
+      "T-206 SPLC corpus publicado (2026-07-25)",
+      "T-207 Vaza Toga corpus publicado (2026-07-25)",
+      "T-208 Narrativa vs Evidência publicado (2026-07-25)",
+      "T-209 JustiçaWatch Brasil publicado (2026-07-25)",
+      "T-210 Cluster Sepse Parasitas publicado (2026-07-25)",
+      "T-211 Sepse 2ª fase publicado (2026-07-25)",
+      "T-212 Sepse UTI publicado (2026-07-25)",
+      "T-213 CGU Sepse publicado (2026-07-25)",
+      "T-214 Status Sepse publicado (2026-07-25)",
+      "T-215 Vorcaro STF publicado (2026-07-25)",
+      "T-216 TSE USAID publicado (2026-07-25)",
+      "T-217 Seletividade TSE publicado (2026-07-25)",
+      "T-218 Ouro ilegal P08 publicado (2026-07-25)",
+      "T-219 Farra INSS publicado (2026-07-25)",
+      "T-220 PCC-OFAC Arpar publicado (2026-07-25)",
+      "T-221 Nemo judex DPU publicado (2026-07-25)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-07-25)",
+      "Próximo thematic: T-236; main next=1713"
     ],
     "notes": [
       "Correção 2026-07-18: ID 1520→P04b imprensa; revisão criminal Bolsonaro→1621; duplicata lawfare/ removida.",
@@ -1736,7 +1855,7 @@
     "custeio_vs_top30": {
       "T-191": "Custeio P11 — estudo canônico",
       "T-196": "Radar Top 30 — renumerado do antigo T-191",
-      "date": "2026-07-24"
+      "date": "2026-07-25"
     },
     "pcc_namespace": {
       "range": "1481-1500",

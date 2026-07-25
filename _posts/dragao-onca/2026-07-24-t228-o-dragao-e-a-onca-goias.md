@@ -1,5 +1,5 @@
 ---
-## layout: post
+layout: post
 title: "O Dragão e a Onça — Capítulo Goiás: pivô China→EUA/Japão em terras raras e instrumentalização eleitoral (Caiado)"
 description: "Capítulo inaugural da série. Cobre 2023-2026: acordos China (Chint Power, Weichai, YTO, CMOC, Huawei) sob Caiado, pivô 2025-2026 para JOGMEC (Japão) e USA Rare Earth (aquisição Serra Verde, US$2,8bi),..."
 date: 2026-01-01
@@ -77,6 +77,20 @@ A mesma mina Pela Ema hospeda, em sequência, capital privado internacional, cap
 - Status operacional do escritório de Goiás em Hebei
 
 
+
+## 🔗 Artigos Relacionados
+
+Entradas conectadas nesta série (main track 1740–1748):
+
+- [Caiado lidera missões à China (2023-2024): CMOC, Chint Power, Weichai, Huawei e China Railway](/posts/id1740-caiado-lidera-missoes-a-china-2023-2024-cmoc-chint-power-weichai-huawei-e-china/)
+- [Início da negociação com a JOGMEC (Japão) para terras raras em Goiás](/posts/id1741-inicio-da-negociacao-com-a-jogmec-japao-para-terras-raras-em-goias/)
+- [Caiado declara que "Goiás não quer ser apenas exportador de matéria-prima"](/posts/id1742-caiado-declara-que-goias-nao-quer-ser-apenas-exportador-de-materia-prima/)
+- [Acordo de cooperação Goiás-Japão formalizado (modelo JOGMEC)](/posts/id1743-acordo-de-cooperacao-goias-japao-formalizado-modelo-jogmec/)
+- [Caiado deixa o governo de Goiás para concorrer à Presidência; Daniel Vilela assume](/posts/id1744-caiado-deixa-o-governo-de-goias-para-concorrer-a-presidencia-daniel-vilela-assum/)
+- ["Manifesto de Entendimento" entre Goiás e o governo dos EUA sobre terras raras](/posts/id1745-manifesto-de-entendimento-entre-goias-e-o-governo-dos-eua-sobre-terras-raras/)
+- [CMOC (China) compra ativos de ouro da Equinox Gold no Brasil por US$1,015 bilhão](/posts/id1746-cmoc-china-compra-ativos-de-ouro-da-equinox-gold-no-brasil-por-us1015-bilhao/)
+- [Cota de exportação de carne goiana à China quase esgotada; tarifa de 55% sobre excedentes](/posts/id1747-cota-de-exportacao-de-carne-goiana-a-china-quase-esgotada-tarifa-de-55-sobre-exc/)
+- [Caiado, já candidato, associa terras raras à plataforma de campanha presidencial](/posts/id1748-caiado-ja-candidato-associa-terras-raras-a-plataforma-de-campanha-presidencial/)
 
 ## Fontes
 
