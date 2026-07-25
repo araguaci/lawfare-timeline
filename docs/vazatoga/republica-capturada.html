@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>República Capturada — Dashboard Investigativo</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Syne:wght@400;600;700;800&display=swap');
+
+:root {
+  --bg: #0a0a0b;
+  --bg2: #111114;
+  --bg3: #18181d;
+  --border: #2a2a32;
+  --border2: #3a3a45;
+  --text: #e8e6e0;
+  --text2: #9a9890;
+  --text3: #5a5858;
+  --red: #e84040;
+  --red2: #ff6b6b;
+  --amber: #e8a020;
+  --amber2: #ffc940;
+  --green: #28c87a;
+  --blue: #4080ff;
+  --blue2: #80b0ff;
+  --purple: #9060e8;
+  --cyan: #20c8d8;
+  --font-display: 'Syne', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* SCANLINE EFFECT */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.container { max-width: 1400px; margin: 0 auto; padding: 0 24px 80px; }
+
+/* HEADER */
+.header {
+  border-bottom: 1px solid var(--border);
+  padding: 32px 0 24px;
+  margin-bottom: 32px;
+  position: relative;
+}
+.header-badge {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--red);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.header-badge::before {
+  content: '';
+  width: 8px; height: 8px;
+  background: var(--red);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+h1 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 5vw, 52px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+h1 span { color: var(--red); }
+.header-sub {
+  font-size: 12px;
+  color: var(--text3);
+  margin-top: 10px;
+  max-width: 700px;
+}
+.header-meta {
+  position: absolute;
+  right: 0;
+  top: 32px;
+  text-align: right;
+  font-size: 10px;
+  color: var(--text3);
+  line-height: 1.8;
+}
+.cc0 {
+  display: inline-block;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 10px;
+  color: var(--text2);
+  margin-top: 4px;
+}
+
+/* TABS */
+.tab-nav {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+  padding-bottom: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10,10,11,0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.tab-btn {
+  padding: 10px 18px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text3);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  margin-bottom: -1px;
+}
+.tab-btn:hover { color: var(--text2); }
+.tab-btn.active { color: var(--red); border-bottom-color: var(--red); }
+
+.tab-panel { display: none; animation: fadeIn 0.3s ease; }
+.tab-panel.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+/* SECTION TITLES */
+.section-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text3);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* METRICS GRID — 4×2 (8 cards) */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(2, auto);
+  gap: 12px 14px;
+  margin-bottom: 32px;
+  max-width: 100%;
+}
+@media (max-width: 1100px) {
+  .metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+  }
+}
+@media (max-width: 520px) {
+  .metrics { grid-template-columns: 1fr; }
+}
+.metric {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  padding: 16px 18px;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.metric::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+}
+.metric.danger::before { background: var(--red); }
+.metric.warn::before { background: var(--amber); }
+.metric.info::before { background: var(--blue); }
+.metric.ok::before { background: var(--green); }
+.metric-label { font-size: 10px; color: var(--text3); letter-spacing: 0.05em; margin-bottom: 6px; }
+.metric-value {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.1;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.metric.danger .metric-value { color: var(--red2); }
+.metric.warn .metric-value { color: var(--amber2); }
+.metric.info .metric-value { color: var(--blue2); }
+.metric.ok .metric-value { color: var(--green); }
+.metric-sub { font-size: 10px; color: var(--text3); margin-top: auto; padding-top: 6px; }
+
+/* CARDS */
+.card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 12px;
+}
+.card:hover { border-color: var(--border2); }
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.card-icon {
+  width: 32px; height: 32px;
+  border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+.card-icon.red { background: rgba(232,64,64,0.15); }
+.card-icon.amber { background: rgba(232,160,32,0.15); }
+.card-icon.blue { background: rgba(64,128,255,0.15); }
+.card-icon.green { background: rgba(40,200,122,0.15); }
+.card-icon.purple { background: rgba(144,96,232,0.15); }
+.card-icon.gray { background: rgba(90,88,88,0.15); }
+.card-title { font-family: var(--font-display); font-size: 14px; font-weight: 600; line-height: 1.3; }
+.card-date { font-size: 10px; color: var(--text3); margin-top: 3px; }
+.card-body { font-size: 12px; color: var(--text2); line-height: 1.7; }
+.card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.tag {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  border: 1px solid;
+  letter-spacing: 0.04em;
+}
+.tag-red { color: var(--red); border-color: rgba(232,64,64,0.3); background: rgba(232,64,64,0.08); }
+.tag-amber { color: var(--amber2); border-color: rgba(232,160,32,0.3); background: rgba(232,160,32,0.08); }
+.tag-blue { color: var(--blue2); border-color: rgba(64,128,255,0.3); background: rgba(64,128,255,0.08); }
+.tag-green { color: var(--green); border-color: rgba(40,200,122,0.3); background: rgba(40,200,122,0.08); }
+.tag-gray { color: var(--text3); border-color: var(--border); background: var(--bg3); }
+.tag-purple { color: #c090ff; border-color: rgba(144,96,232,0.3); background: rgba(144,96,232,0.08); }
+
+/* ACCORDION */
+.accordion { margin-bottom: 8px; }
+.accordion-header {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  padding: 14px 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 4px;
+  transition: border-color 0.2s;
+  user-select: none;
+}
+.accordion-header:hover { border-color: var(--border2); }
+.accordion-header.open { border-radius: 4px 4px 0 0; border-bottom-color: transparent; }
+.acc-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.acc-title { flex: 1; font-size: 12px; font-weight: 500; }
+.acc-badge { font-size: 10px; padding: 2px 8px; border-radius: 3px; }
+.acc-arrow { font-size: 10px; color: var(--text3); transition: transform 0.2s; }
+.accordion-header.open .acc-arrow { transform: rotate(180deg); }
+.accordion-body {
+  display: none;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-top: none;
+  padding: 16px 18px;
+  border-radius: 0 0 4px 4px;
+}
+.accordion-body.open { display: block; }
+.acc-item { display: flex; gap: 10px; margin-bottom: 8px; font-size: 12px; color: var(--text2); line-height: 1.6; }
+.acc-bullet { width: 4px; height: 4px; border-radius: 50%; background: var(--text3); flex-shrink: 0; margin-top: 7px; }
+
+/* ACTOR GRID */
+.actor-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+.actor-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 16px;
+}
+.actor-card:hover { border-color: var(--border2); }
+.actor-top { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+.actor-avatar {
+  width: 40px; height: 40px;
+  border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+.actor-name { font-weight: 600; font-size: 12px; }
+.actor-org { font-size: 10px; color: var(--text3); margin-top: 2px; }
+.actor-status { display: inline-block; font-size: 10px; padding: 2px 7px; border-radius: 3px; margin-bottom: 8px; }
+.status-preso { background: rgba(232,64,64,0.15); color: var(--red2); border: 1px solid rgba(232,64,64,0.3); }
+.status-inv { background: rgba(232,160,32,0.15); color: var(--amber2); border: 1px solid rgba(232,160,32,0.3); }
+.status-ind { background: rgba(64,128,255,0.15); color: var(--blue2); border: 1px solid rgba(64,128,255,0.3); }
+.status-inst { background: rgba(144,96,232,0.15); color: #c090ff; border: 1px solid rgba(144,96,232,0.3); }
+.status-livre { background: rgba(90,88,88,0.15); color: var(--text3); border: 1px solid var(--border); }
+.actor-ops { font-size: 10px; color: var(--text3); }
+.actor-ops span { color: var(--text2); }
+
+/* RISK MATRIX */
+.risk-matrix { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px; margin-bottom: 20px; }
+.risk-cell {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 10px;
+  cursor: default;
+  transition: transform 0.2s;
+  position: relative;
+}
+.risk-cell:hover { transform: scale(1.02); z-index: 1; }
+.risk-label-x, .risk-label-y {
+  font-size: 10px;
+  color: var(--text3);
+  text-align: center;
+  padding: 6px;
+  letter-spacing: 0.05em;
+}
+.risk-low { background: rgba(40,200,122,0.12); border: 1px solid rgba(40,200,122,0.2); }
+.risk-med { background: rgba(232,160,32,0.12); border: 1px solid rgba(232,160,32,0.2); }
+.risk-high { background: rgba(232,64,64,0.12); border: 1px solid rgba(232,64,64,0.2); }
+.risk-extreme { background: rgba(232,64,64,0.25); border: 1px solid rgba(232,64,64,0.5); }
+.risk-name { font-weight: 600; font-size: 11px; margin-bottom: 4px; }
+
+/* TIMELINE */
+.timeline { position: relative; padding-left: 24px; }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 5px; top: 0; bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+.tl-item { position: relative; margin-bottom: 20px; }
+.tl-dot {
+  position: absolute;
+  left: -22px;
+  top: 4px;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--bg);
+}
+.tl-date { font-size: 10px; color: var(--text3); margin-bottom: 4px; letter-spacing: 0.05em; }
+.tl-title { font-size: 12px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+.tl-desc { font-size: 11px; color: var(--text2); line-height: 1.6; }
+.tl-ops { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 6px; }
+
+/* QUESTION CHAIN */
+.q-chain { display: flex; flex-direction: column; gap: 0; }
+.q-item {
+  display: flex;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+.q-item:last-child { border-bottom: none; }
+.q-num {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 800;
+  flex-shrink: 0;
+  width: 40px;
+  line-height: 1;
+  margin-top: 2px;
+}
+.q-answered .q-num { color: var(--green); }
+.q-partial .q-num { color: var(--amber); }
+.q-unknown .q-num { color: var(--red); }
+.q-body { flex: 1; }
+.q-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  padding: 3px 10px;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+.q-status.answered { background: rgba(40,200,122,0.1); color: var(--green); border: 1px solid rgba(40,200,122,0.25); }
+.q-status.partial { background: rgba(232,160,32,0.1); color: var(--amber2); border: 1px solid rgba(232,160,32,0.25); }
+.q-status.unknown { background: rgba(232,64,64,0.1); color: var(--red2); border: 1px solid rgba(232,64,64,0.25); }
+.q-question { font-size: 13px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+.q-answer { font-size: 12px; color: var(--text2); line-height: 1.7; margin-bottom: 8px; }
+.q-sources { font-size: 10px; color: var(--text3); }
+.q-sources a { color: var(--blue2); text-decoration: none; }
+.q-sources a:hover { text-decoration: underline; }
+.q-logic {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--amber);
+  padding: 10px 14px;
+  border-radius: 0 4px 4px 0;
+  margin-top: 10px;
+  font-size: 11px;
+  color: var(--text2);
+  line-height: 1.6;
+}
+.q-logic strong { color: var(--amber2); }
+
+/* SOURCE LIST */
+.source-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: flex-start;
+}
+.source-num { font-size: 10px; color: var(--text3); min-width: 24px; padding-top: 2px; }
+.source-body { flex: 1; }
+.source-title { font-size: 12px; color: var(--blue2); text-decoration: none; }
+.source-title:hover { text-decoration: underline; }
+.source-meta { font-size: 10px; color: var(--text3); margin-top: 3px; }
+.source-type { display: inline-block; font-size: 9px; padding: 1px 6px; border-radius: 2px; margin-right: 6px; }
+.st-oficial { background: rgba(40,200,122,0.15); color: var(--green); }
+.st-jornalismo { background: rgba(64,128,255,0.15); color: var(--blue2); }
+.st-academico { background: rgba(144,96,232,0.15); color: #c090ff; }
+.st-wiki { background: rgba(90,88,88,0.15); color: var(--text3); }
+
+/* CONCLUSION */
+.conclusion-box {
+  border: 1px solid var(--border);
+  border-left: 4px solid;
+  padding: 20px;
+  border-radius: 0 4px 4px 0;
+  margin-bottom: 16px;
+}
+.conclusion-box.red { border-left-color: var(--red); background: rgba(232,64,64,0.04); }
+.conclusion-box.amber { border-left-color: var(--amber); background: rgba(232,160,32,0.04); }
+.conclusion-box.blue { border-left-color: var(--blue); background: rgba(64,128,255,0.04); }
+.conclusion-box.green { border-left-color: var(--green); background: rgba(40,200,122,0.04); }
+.conclusion-title { font-family: var(--font-display); font-size: 14px; font-weight: 700; margin-bottom: 10px; }
+.conclusion-box.red .conclusion-title { color: var(--red2); }
+.conclusion-box.amber .conclusion-title { color: var(--amber2); }
+.conclusion-box.blue .conclusion-title { color: var(--blue2); }
+.conclusion-box.green .conclusion-title { color: var(--green); }
+.conclusion-text { font-size: 12px; color: var(--text2); line-height: 1.8; }
+
+/* LEGEND */
+.legend { display: flex; flex-wrap: wrap; gap: 16px; padding: 16px; background: var(--bg2); border: 1px solid var(--border); border-radius: 4px; margin-bottom: 20px; }
+.legend-item { display: flex; align-items: center; gap: 8px; font-size: 11px; color: var(--text2); }
+.legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+/* GRID 2 COL */
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 768px) { .grid2 { grid-template-columns: 1fr; } .header-meta { display: none; } }
+
+/* FOOTER */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 10px;
+  color: var(--text3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: gap;
+}
+
+/* HIGHLIGHT */
+.hl-red { color: var(--red2); font-weight: 500; }
+.hl-amber { color: var(--amber2); font-weight: 500; }
+.hl-green { color: var(--green); font-weight: 500; }
+.hl-blue { color: var(--blue2); font-weight: 500; }
+
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+
+.monolith {
+  background: linear-gradient(135deg, var(--bg2) 0%, var(--bg3) 100%);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 24px;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 11px;
+  color: var(--text3);
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.monolith::before {
+  content: '>>> DADOS ABERTOS / CC0 1.0 / NENHUM DIREITO RESERVADO <<<';
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 9px;
+  color: var(--text3);
+  white-space: nowrap;
+  letter-spacing: 0.12em;
+}
+.monolith-value {
+  font-size: clamp(32px, 6vw, 64px);
+  font-weight: 800;
+  color: var(--red);
+  line-height: 1;
+  margin: 24px 0 8px;
+}
+.monolith-label { color: var(--text2); font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="header-badge">INVESTIGAÇÃO ATIVA — ATUALIZAÇÃO CONTÍNUA</div>
+  <h1>República <span>Capturada</span></h1>
+  <div class="header-sub">Dashboard investigativo autônomo. Mapeamento forense das operações Greenwashing, Carbono Oculto, Compliance Zero, Sem Desconto e conexões transversais com Lava Jato e Panama Papers. Dados verificáveis. Fontes primárias. Perguntas com e sem resposta.</div>
+  <div class="header-meta">
+    <div>Atualizado: Abr/2026</div>
+    <div>IDs 124–145 no lawfare-timeline</div>
+    <div>Curadoria: Comunidade Open Source</div>
+    <div class="cc0">CC0 1.0 — Domínio Público</div>
+  </div>
+</div>
+
+<div class="tab-nav">
+  <button class="tab-btn active" onclick="showTab('visao')">Visão Geral</button>
+  <button class="tab-btn" onclick="showTab('operacoes')">Operações</button>
+  <button class="tab-btn" onclick="showTab('atores')">Atores</button>
+  <button class="tab-btn" onclick="showTab('perguntas')">Perguntas</button>
+  <button class="tab-btn" onclick="showTab('risco')">Mapa de Risco</button>
+  <button class="tab-btn" onclick="showTab('timeline')">Linha do Tempo</button>
+  <button class="tab-btn" onclick="showTab('conclusoes')">Conclusões</button>
+  <button class="tab-btn" onclick="showTab('fontes')">Fontes</button>
+</div>
+
+<!-- ==================== VISÃO GERAL ==================== -->
+<div id="tab-visao" class="tab-panel active">
+
+  <div class="monolith">
+    <div class="monolith-value">R$ 140bi</div>
+    <div class="monolith-label">Movimentação ilícita documentada — 3 operações combinadas — 2020–2025</div>
+  </div>
+
+  <div class="metrics">
+    <div class="metric danger">
+      <div class="metric-label">Carbono Oculto</div>
+      <div class="metric-value">R$ 98bi</div>
+      <div class="metric-sub">Postos + fintechs + fundos</div>
+    </div>
+    <div class="metric danger">
+      <div class="metric-label">Banco Master</div>
+      <div class="metric-value">R$ 12,2bi</div>
+      <div class="metric-sub">Carteiras fictícias / BRB</div>
+    </div>
+    <div class="metric danger">
+      <div class="metric-label">Carbono fictício</div>
+      <div class="metric-value">R$ 45,5bi</div>
+      <div class="metric-sub">UECs sem lastro / Amazônia</div>
+    </div>
+    <div class="metric warn">
+      <div class="metric-label">Sonegação constituída</div>
+      <div class="metric-value">R$ 8,67bi</div>
+      <div class="metric-sub">Créditos tributários Receita</div>
+    </div>
+    <div class="metric warn">
+      <div class="metric-label">Offshores EUA</div>
+      <div class="metric-value">15+</div>
+      <div class="metric-sub">Delaware LLCs — beneficiários ocultos</div>
+    </div>
+    <div class="metric info">
+      <div class="metric-label">Postos irregulares</div>
+      <div class="metric-value">1.000+</div>
+      <div class="metric-sub">10 estados brasileiros</div>
+    </div>
+    <div class="metric info">
+      <div class="metric-label">Agentes mobilizados</div>
+      <div class="metric-value">1.400</div>
+      <div class="metric-sub">Maior operação da história BR</div>
+    </div>
+    <div class="metric ok">
+      <div class="metric-label">Presos principais</div>
+      <div class="metric-value">12+</div>
+      <div class="metric-sub">Incluindo Vorcaro 2x</div>
+    </div>
+  </div>
+
+  <div class="section-label">O mecanismo em 7 camadas</div>
+
+  <div class="accordion">
+    <div class="accordion-header" onclick="toggleAcc(this)">
+      <div class="acc-dot" style="background:var(--red)"></div>
+      <div class="acc-title">CAMADA 1 — Origem: Crime organizado (PCC/CV)</div>
+      <div class="acc-badge tag-red">Documentado</div>
+      <div class="acc-arrow">▼</div>
+    </div>
+    <div class="accordion-body">
+      <div class="acc-item"><div class="acc-bullet"></div>Tráfico, extorsão e crimes violentos geram o caixa inicial</div>
+      <div class="acc-item"><div class="acc-bullet"></div>10.900 depósitos em espécie nos postos (2022-2023) = R$ 61mi inseridos abaixo do radar do COAF</div>
+      <div class="acc-item"><div class="acc-bullet"></div>Maquininhas de cartão em postos de fachada como segunda porta de entrada</div>
+      <div class="acc-item"><div class="acc-bullet"></div>Donos de postos que reclamaram dívidas relataram ameaças de morte — coerção documentada pela PF</div>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-header" onclick="toggleAcc(this)">
+      <div class="acc-dot" style="background:var(--amber)"></div>
+      <div class="acc-title">CAMADA 2 — Entrada formal: Rede de combustíveis</div>
+      <div class="acc-badge tag-amber">Documentado</div>
+      <div class="acc-arrow">▼</div>
+    </div>
+    <div class="accordion-body">
+      <div class="acc-item"><div class="acc-bullet"></div>Redes Aster, Copape, Duvale, Arka, GGX Global (103 postos), Rodopetro entre as principais</div>
+      <div class="acc-item"><div class="acc-bullet"></div>140 postos sem movimentação real receberam R$ 2bi em notas fiscais fictícias</div>
+      <div class="acc-item"><div class="acc-bullet"></div>Adulteração de gasolina com metanol importado — dupla fraude: tributária + contra o consumidor</div>
+      <div class="acc-item"><div class="acc-bullet"></div>Importações de R$ 10bi+ em nafta/hidrocarbonetos/diesel pelos investigados (2020–2024)</div>
+      <div class="acc-item"><div class="acc-bullet"></div>Exportadora em Houston (TX) adquirida pelo grupo para aparência legal nas importações</div>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-header" onclick="toggleAcc(this)">
+      <div class="acc-dot" style="background:var(--blue)"></div>
+      <div class="acc-title">CAMADA 3 — Banco paralelo: Fintechs sem rastreamento</div>
+      <div class="acc-badge tag-blue">Documentado</div>
+      <div class="acc-arrow">▼</div>
+    </div>
+    <div class="accordion-body">
+      <div class="acc-item"><div class="acc-bullet"></div>BK Bank: R$ 46bi movimentados sem rastreamento (2020–2024) — "paraíso fiscal doméstico"</div>
+      <div class="acc-item"><div class="acc-bullet"></div>Bankrow: presidente Marcelo Dias de Moraes como alvo direto</div>
+      <div class="acc-item"><div class="acc-bullet"></div>Modelo "contas-bolsão": recursos de vários clientes misturados — impede rastreamento estatal</div>
+      <div class="acc-item"><div class="acc-bullet"></div>Receita revogou normativas de transparência das fintechs no início de 2025 após fake news — brecha permaneceu aberta exatamente durante o período do esquema</div>
+      <div class="acc-item"><div class="acc-bullet"></div>IN 2.278/2025 (Receita) finalmente equipara fintechs às instituições financeiras tradicionais — <em>depois</em> da deflagração</div>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-header" onclick="toggleAcc(this)">
+      <div class="acc-dot" style="background:var(--green)"></div>
+      <div class="acc-title">CAMADA 4 — Ativo fictício: Créditos de carbono amazônicos</div>
+      <div class="acc-badge tag-green">Documentado (Greenwashing)</div>
+      <div class="acc-arrow">▼</div>
+    </div>
+    <div class="accordion-body">
+      <div class="acc-item"><div class="acc-bullet"></div>530.000 hectares de terras públicas da União grilados no sul do Amazonas (Apuí/AM)</div>
+      <div class="acc-item"><div class="acc-bullet"></div>Corrupção de servidores INCRA, IPAAM e cartórios para falsificar títulos de propriedade</div>
+      <div class="acc-item"><div class="acc-bullet"></div>Certificadora Verra (internacional) não verificava cadeia dominial — validou projetos fictícios</div>
+      <div class="acc-item"><div class="acc-bullet"></div>168,8 milhões de UECs (unidades de estoque de carbono) geradas sem lastro real</div>
+      <div class="acc-item"><div class="acc-bullet"></div>Boeing, Gol, Nestlé compraram créditos via intermediárias — vítimas ou compradores de boa-fé</div>
+      <div class="acc-item"><div class="acc-bullet"></div>Stoppe Júnior foi à COP28 em Dubai como "maior vendedor de carbono global" enquanto grilava terras da União</div>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-header" onclick="toggleAcc(this)">
+      <div class="acc-dot" style="background:var(--purple)"></div>
+      <div class="acc-title">CAMADA 5 — Blindagem: Fundos de investimento em cascata (Faria Lima)</div>
+      <div class="acc-badge tag-purple">Documentado</div>
+      <div class="acc-arrow">▼</div>
+    </div>
+    <div class="accordion-body">
+      <div class="acc-item"><div class="acc-bullet"></div>40+ fundos multimercado e imobiliários fechados — cotista único de cada fundo é outro fundo</div>
+      <div class="acc-item"><div class="acc-bullet"></div>REAG DTVM (R$ 299bi sob gestão) como hub central — liquidada pelo BC após a operação</div>
+      <div class="acc-item"><div class="acc-bullet"></div>6 fundos (Astralo 95, Hans 95, Olaf 95, Maia 95, Reag Growth 95, Anna): R$ 102,4bi — PCC + Master</div>
+      <div class="acc-item"><div class="acc-bullet"></div>Global Carbon: fundada como loja de armarinhos com R$ 100 de capital → avaliação bilionária via UECs fictícias</div>
+      <div class="acc-item"><div class="acc-bullet"></div>Pela primeira vez documentado no Brasil: PCC infiltrado em gestoras CVM-reguladas na Avenida Faria Lima</div>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-header" onclick="toggleAcc(this)">
+      <div class="acc-dot" style="background:var(--red)"></div>
+      <div class="acc-title">CAMADA 6 — Legitimação: Banco Master + banco público (BRB)</div>
+      <div class="acc-badge tag-red">Documentado (Compliance Zero)</div>
+      <div class="acc-arrow">▼</div>
+    </div>
+    <div class="accordion-body">
+      <div class="acc-item"><div class="acc-bullet"></div>Master emprestava para empresas que depositavam nos fundos REAG — dinheiro circulava no mesmo dia inflando patrimônio</div>
+      <div class="acc-item"><div class="acc-bullet"></div>Venda de R$ 12,2bi em carteiras de crédito consignado fictícias ao BRB (banco público do DF)</div>
+      <div class="acc-item"><div class="acc-bullet"></div>Suspeita: Vorcaro era acionista oculto do BRB via fundos Borneo/Deneb (REAG) — conflito de interesses direto</div>
+      <div class="acc-item"><div class="acc-bullet"></div>CDBs garantidos pelo FGC — pequenos poupadores financiaram o esquema sem saber</div>
+      <div class="acc-item"><div class="acc-bullet"></div>74% dos contratos de consignado do INSS pelo Master tinham irregularidades</div>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-header" onclick="toggleAcc(this)">
+      <div class="acc-dot" style="background:var(--text3)"></div>
+      <div class="acc-title">CAMADA 7 — Blindagem final: Offshores Delaware + imóveis + luxo</div>
+      <div class="acc-badge tag-gray">Parcialmente documentado</div>
+      <div class="acc-arrow">▼</div>
+    </div>
+    <div class="accordion-body">
+      <div class="acc-item"><div class="acc-bullet"></div>15+ LLCs em Delaware — anonimato total dos sócios, sem tributação local, abertura em 1 dia útil por US$ 250</div>
+      <div class="acc-item"><div class="acc-bullet"></div>R$ 1,2bi enviados ao exterior via "contratos de mútuo" que retornam como "investimento estrangeiro" — fechando o ciclo</div>
+      <div class="acc-item"><div class="acc-bullet"></div>Haddad: "crime organizado usa Delaware para lavagem + compra petróleo russo driblando sanções"</div>
+      <div class="acc-item"><div class="acc-bullet"></div>Lula foi a Trump com material traduzido para o inglês. Resposta americana: silêncio público</div>
+      <div class="acc-item"><div class="acc-bullet"></div>Ativos físicos: 100+ imóveis, 6 fazendas SP (R$ 31mi), casa em Trancoso BA (R$ 13mi), iate, Lamborghini, helicóptero</div>
+      <div class="acc-item"><div class="acc-bullet"></div><strong class="hl-red">BENEFICIÁRIOS FINAIS DAS OFFSHORES AMERICANAS: DESCONHECIDOS PUBLICAMENTE</strong></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ==================== OPERAÇÕES ==================== -->
+<div id="tab-operacoes" class="tab-panel">
+
+  <div class="section-label">Operações e desdobramentos</div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon green">🌿</div>
+      <div>
+        <div class="card-title">Operação Greenwashing — PF / Rondônia</div>
+        <div class="card-date">05/jun/2024 — 6 fases concluídas — Relatório final: 392 páginas — 31 indiciados</div>
+      </div>
+    </div>
+    <div class="card-body">Maior fraude em créditos de carbono da história do Brasil. Grilagem de 530.000 hectares de terras públicas da União no sul do Amazonas para emissão de R$ 180mi em créditos fictícios. Corrupção de servidores do INCRA, IPAAM e cartórios. Principal investigado (Stoppe Jr.) participou da COP28 em Dubai meses antes como "maior vendedor de carbono global". Créditos vendidos para Boeing, Gol e Nestlé via certificadora Verra — que não verificava a cadeia dominial das terras. Fundo AZ Quest Luna (XP) perdeu 10%+ em uma semana.</div>
+    <div class="card-tags">
+      <span class="tag tag-green">Carbono fictício</span>
+      <span class="tag tag-red">Grilagem amazônica</span>
+      <span class="tag tag-amber">Corrupção INCRA/IPAAM</span>
+      <span class="tag tag-gray">Verra / COP28</span>
+      <span class="tag tag-blue">Faria Lima atingida</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon red">⛽</div>
+      <div>
+        <div class="card-title">Operação Carbono Oculto — Receita Federal + GAECO + PF</div>
+        <div class="card-date">28/ago/2025 — 1.400 agentes — 8 estados — Maior operação da história do Brasil</div>
+      </div>
+    </div>
+    <div class="card-body">PCC infiltrado em toda a cadeia de combustíveis e no mercado financeiro formal. R$ 52bi em movimentações via 1.000+ postos, R$ 46bi via BK Bank (banco paralelo), 40+ fundos com R$ 30bi usados para blindagem patrimonial. REAG como hub central. Ações da REAG3 caíram 17,29% na Bolsa no dia da deflagração. Corinthians: 3 postos oficiais em nome de investigados. Ministro Lewandowski: "migração da criminalidade da ilegalidade para a legalidade."</div>
+    <div class="card-tags">
+      <span class="tag tag-red">PCC / Faria Lima</span>
+      <span class="tag tag-amber">Combustíveis fraudados</span>
+      <span class="tag tag-blue">REAG / Fundos</span>
+      <span class="tag tag-gray">BK Bank / fintechs</span>
+      <span class="tag tag-green">R$ 3,2bi bloqueados</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon amber">🏦</div>
+      <div>
+        <div class="card-title">Operação Compliance Zero — PF — Banco Master</div>
+        <div class="card-date">Fase 1: 18/nov/2025 — Fase 2: jan/2026 — Vorcaro preso 2x</div>
+      </div>
+    </div>
+    <div class="card-body">Banco Master liquidado pelo BC. Vorcaro preso tentando deixar o país. Esquema em duas frentes: (1) venda de R$ 12,2bi em carteiras de crédito fictícias ao BRB; (2) empréstimos circulares para inflação artificial de patrimônio via fundos REAG. Suspeita de que Vorcaro era acionista oculto do BRB via fundos da REAG — conflito de interesses estrutural. Família Vorcaro (pai + irmã) controla 80% das UECs fictícias da Amazônia via Alliance Participações. Caso migrou para o STF sob sigilo com Toffoli como relator.</div>
+    <div class="card-tags">
+      <span class="tag tag-red">Banco Master liquidado</span>
+      <span class="tag tag-red">Vorcaro preso 2x</span>
+      <span class="tag tag-amber">BRB / banco público</span>
+      <span class="tag tag-purple">STF / sigilo / Toffoli</span>
+      <span class="tag tag-blue">REAG / PCC</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon blue">📋</div>
+      <div>
+        <div class="card-title">Operação Sem Desconto — PF + CGU — Fraudes INSS</div>
+        <div class="card-date">Abr/2025 — Fraudes em crédito consignado desde 2019</div>
+      </div>
+    </div>
+    <div class="card-body">Investigação sobre fraudes no INSS afetando aposentados e pensionistas. Banco Master tinha Acordo de Cooperação com o INSS — 74% dos contratos de consignado com irregularidades. A CPMI do INSS e a CPI do Crime Organizado chegaram aos mesmos atores por caminhos independentes. Fabiano Zettel (marido de Natália Vorcaro) teve sigilos quebrados em ambas as comissões por conexões com a REAG e a Carbono Oculto.</div>
+    <div class="card-tags">
+      <span class="tag tag-amber">INSS / aposentados</span>
+      <span class="tag tag-red">Banco Master</span>
+      <span class="tag tag-blue">CPI Crime Organizado</span>
+      <span class="tag tag-gray">CPMI INSS</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon purple">🛢️</div>
+      <div>
+        <div class="card-title">Operação Poço de Lobato — Receita Federal</div>
+        <div class="card-date">27/nov/2025 — Grupo Refit — Maior devedor ICMS do país</div>
+      </div>
+    </div>
+    <div class="card-body">Grupo Refit (Ricardo Magro): R$ 26bi em dívidas, R$ 72bi movimentados após 2024 com estrutura completamente renovada após a Carbono Oculto. Exportadora em Houston importou R$ 12,5bi em combustíveis (2020–2025). 15+ offshores em Delaware — anonimato total. R$ 1,2bi em "contratos de mútuo" enviados ao exterior que retornam como "investimento estrangeiro". Haddad anunciou que levaria o caso a Trump com documentação traduzida para o inglês. Petróleo russo comprado via Houston driblando sanções americanas.</div>
+    <div class="card-tags">
+      <span class="tag tag-red">Delaware LLCs</span>
+      <span class="tag tag-amber">Petróleo russo</span>
+      <span class="tag tag-blue">Houston TX</span>
+      <span class="tag tag-gray">Sanções internacionais</span>
+      <span class="tag tag-purple">Cooperação EUA pendente</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- ==================== ATORES ==================== -->
+<div id="tab-atores" class="tab-panel">
+
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:var(--red)"></div> Preso / condenado</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--amber)"></div> Investigado / indiciado</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--blue)"></div> Instituição pública</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--purple)"></div> Ator judicial / STF</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--text3)"></div> Sem status definido / livre</div>
+  </div>
+
+  <div class="section-label">Atores-chave identificados</div>
+
+  <div class="actor-grid">
+
+    <div class="actor-card">
+      <div class="actor-top">
+        <div class="actor-avatar" style="background:rgba(232,64,64,0.15);color:var(--red2)">BL</div>
+        <div>
+          <div class="actor-name">Roberto A. Leme da Silva</div>
+          <div class="actor-org">"Beto Louco" — PCC / rede de postos</div>
+        </div>
+      </div>
+      <div class="actor-status status-preso">● PRESO — DENUNCIADO</div>
+      <div class="card-body">Líder operacional de 1.000+ postos de combustíveis em múltiplos estados. Co-liderança do esquema nacional de lavagem do PCC no setor energético.</div>
+      <div class="actor-ops" style="margin-top:8px">Operações: <span>Carbono Oculto, Carbono Oculto 86</span></div>
+    </div>
+
+    <div class="actor-card">
+      <div class="actor-top">
+        <div class="actor-avatar" style="background:rgba(232,64,64,0.15);color:var(--red2)">PR</div>
+        <div>
+          <div class="actor-name">Mohamad Hussein Mourad</div>
+          <div class="actor-org">"Primo" — GGX Global (103 postos)</div>
+        </div>
+      </div>
+      <div class="actor-status status-preso">● PRESO — DENUNCIADO</div>
+      <div class="card-body">Co-líder da estrutura. Postos do Corinthians cadastrados em nome de seus associados na ANP. GGX Global como braço societário principal.</div>
+      <div class="actor-ops" style="margin-top:8px">Operações: <span>Carbono Oculto, Carbono Oculto 86</span></div>
+    </div>
+
+    <div class="actor-card">
+      <div class="actor-top">
+        <div class="actor-avatar" style="background:rgba(232,160,32,0.15);color:var(--amber2)">DV</div>
+        <div>
+          <div class="actor-name">Daniel Vorcaro</div>
+          <div class="actor-org">Banco Master (liquidado)</div>
+        </div>
+      </div>
+      <div class="actor-status status-preso">● PRESO 2x — INVESTIGADO</div>
+      <div class="card-body">Controlador do Master. Preso tentando deixar o país (nov/2025) e novamente em jan/2026. Família controla créditos de carbono fictícios na Amazônia. Nega crimes, alega crise de liquidez por "ataques reputacionais".</div>
+      <div class="actor-ops" style="margin-top:8px">Operações: <span>Compliance Zero, Carbono Oculto</span></div>
+    </div>
+
+    <div class="actor-card">
+      <div class="actor-top">
+        <div class="actor-avatar" style="background:rgba(144,96,232,0.15);color:#c090ff">JM</div>
+        <div>
+          <div class="actor-name">João Carlos Mansur</div>
+          <div class="actor-org">Fundador REAG Investimentos (liquidada BC)</div>
+        </div>
+      </div>
+      <div class="actor-status status-inv">◐ INVESTIGADO</div>
+      <div class="card-body">Fundador da maior gestora independente do Brasil (R$ 299bi). MPSP: "diretamente implicado na ocultação de valores sem origem." 2 mandados cumpridos: escritório na Faria Lima e casa.</div>
+      <div class="actor-ops" style="margin-top:8px">Operações: <span>Carbono Oculto, Compliance Zero</span></div>
+    </div>
+
+    <div class="actor-card">
+      <div class="actor-top">
+        <div class="actor-avatar" style="background:rgba(40,200,122,0.15);color:var(--green)">RS</div>
+        <div>
+          <div class="actor-name">Ricardo Stoppe Júnior</div>
+          <div class="actor-org">Grupo Ituxi — Lábrea/AM</div>
+        </div>
+      </div>
+      <div class="actor-status status-ind">◈ INDICIADO — SOLTO</div>
+      <div class="card-body">Principal investigado no Greenwashing. Grilou 530.000 ha de terras públicas. Participou da COP28 Dubai como "maior vendedor global de carbono." 31 indiciados no relatório final da PF.</div>
+      <div class="actor-ops" style="margin-top:8px">Operações: <span>Greenwashing</span></div>
+    </div>
+
+    <div class="actor-card">
+      <div class="actor-top">
+        <div class="actor-avatar" style="background:rgba(232,64,64,0.15);color:var(--red2)">RM</div>
+        <div>
+          <div class="actor-name">Ricardo Magro</div>
+          <div class="actor-org">Grupo Refit — Refinaria Manguinhos</div>
+        </div>
+      </div>
+      <div class="actor-status status-inv">◐ INVESTIGADO</div>
+      <div class="card-body">Maior devedor ICMS do país (R$ 26bi). R$ 72bi movimentados em um ano com estrutura renovada pós-Carbono Oculto. Offshores em Delaware, exportadora em Houston.</div>
+      <div class="actor-ops" style="margin-top:8px">Operações: <span>Poço de Lobato, Carbono Oculto</span></div>
+    </div>
+
+    <div class="actor-card">
+      <div class="actor-top">
+        <div class="actor-avatar" style="background:rgba(144,96,232,0.15);color:#c090ff">DT</div>
+        <div>
+          <div class="actor-name">Dias Toffoli</div>
+          <div class="actor-org">Ministro do STF — Relator caso Master</div>
+        </div>
+      </div>
+      <div class="actor-status status-inst">◆ INSTITUCIONAL — RELATOR</div>
+      <div class="card-body">Assumiu o caso Master no STF sob sigilo. Determinou acareação na fase investigativa (antes dos depoimentos individuais) — procedimento atípico criticado por juristas. Recuou parcialmente após pressão.</div>
+      <div class="actor-ops" style="margin-top:8px">Conexão: <span>Compliance Zero / STF sigilo</span></div>
+    </div>
+
+    <div class="actor-card">
+      <div class="actor-top">
+        <div class="actor-avatar" style="background:rgba(64,128,255,0.15);color:var(--blue2)">FH</div>
+        <div>
+          <div class="actor-name">Fernando Haddad</div>
+          <div class="actor-org">Ministro da Fazenda</div>
+        </div>
+      </div>
+      <div class="actor-status status-inst">◆ INSTITUCIONAL</div>
+      <div class="card-body">Anunciou que levaria documentação de Delaware/lavagem a Trump. Classificou a triangulação internacional como "gravíssima". Pediu a Lula que incluísse o tema nas negociações com os EUA.</div>
+      <div class="actor-ops" style="margin-top:8px">Ação: <span>Comunicação às autoridades americanas</span></div>
+    </div>
+
+  </div>
+
+  <div class="section-label" style="margin-top:24px">Beneficiários finais desconhecidos — lacuna crítica</div>
+  <div class="conclusion-box red">
+    <div class="conclusion-title">⚠ Quem está por trás das 15+ offshores de Delaware?</div>
+    <div class="conclusion-text">A Receita Federal identificou a estrutura — Delaware LLCs com anonimato total, representantes legais coincidentes com os fundos brasileiros, exportadora em Houston com R$ 12,5bi em operações. O que não existe publicamente: a identidade dos <strong class="hl-red">beneficiários finais</strong> dessas entidades. Se são apenas os investigados já conhecidos, o sistema consegue processar. Se são atores com proteção política — de qualquer campo — o padrão histórico indica que o processo parará antes de chegar lá.</div>
+  </div>
+
+</div>
+
+<!-- ==================== PERGUNTAS ==================== -->
+<div id="tab-perguntas" class="tab-panel">
+
+  <div class="section-label">Perguntas respondidas, parciais e em aberto</div>
+
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:var(--green)"></div> Respondida com fontes primárias</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--amber)"></div> Parcialmente respondida — evidências indiretas</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--red)"></div> Sem resposta pública — inferência lógica necessária</div>
+  </div>
+
+  <div class="q-chain">
+
+    <div class="q-item q-answered">
+      <div class="q-num">01</div>
+      <div class="q-body">
+        <div class="q-status answered">✓ RESPONDIDA</div>
+        <div class="q-question">O PCC infiltrou o mercado financeiro formal brasileiro?</div>
+        <div class="q-answer">Sim. Documentado pela Operação Carbono Oculto (ago/2025): gestoras de fundos CVM-reguladas na Avenida Faria Lima usadas como estrutura de lavagem. 40+ fundos com R$ 30bi de patrimônio. REAG como hub central. Ministro da Justiça confirmou publicamente a infiltração sistêmica.</div>
+        <div class="q-sources">Fontes: <a href="https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2025/agosto/operacao-carbono-oculto-rrb-e-orgaos-parceiros-combatem-organizacao-responsavel-por-sonegacao-e-lavagem-de-dinheiro-no-setor-de-combustiveis" target="_blank">Receita Federal (oficial)</a> · <a href="https://www.infomoney.com.br/brasil/operacao-carbono-oculto-entenda-o-esquema-bilionario-do-pcc-no-setor-de-combustiveis/" target="_blank">InfoMoney</a></div>
+      </div>
+    </div>
+
+    <div class="q-item q-answered">
+      <div class="q-num">02</div>
+      <div class="q-body">
+        <div class="q-status answered">✓ RESPONDIDA</div>
+        <div class="q-question">Créditos de carbono amazônicos foram usados para inflar ativos financeiros no Brasil?</div>
+        <div class="q-answer">Sim. 168,8 milhões de UECs geradas sobre terras públicas da União (ilegais) foram incorporadas a fundos da REAG. Golden Green e Global Carbon atingiram avaliação conjunta de R$ 45,5bi — sem que uma única UEC tivesse sido efetivamente vendida. INCRA confirmou que a área pertence à União e não pode ser usada para fins econômicos privados.</div>
+        <div class="q-sources">Fontes: <a href="https://climainfo.org.br/2026/01/20/familia-de-daniel-vorcaro-do-master-e-dona-de-projeto-irregular-de-credito-de-carbono-na-amazonia/" target="_blank">ClimaInfo</a> · <a href="https://www.gazetadopovo.com.br/economia/projeto-ambiental-credito-carbono-inflar-fundos-master/" target="_blank">Gazeta do Povo</a></div>
+      </div>
+    </div>
+
+    <div class="q-item q-answered">
+      <div class="q-num">03</div>
+      <div class="q-body">
+        <div class="q-status answered">✓ RESPONDIDA</div>
+        <div class="q-question">O Brasil usou Delaware como paraíso fiscal doméstico para lavagem?</div>
+        <div class="q-answer">Sim. Receita Federal documentou 15+ LLCs em Delaware com anonimato total, representantes legais coincidentes com fundos brasileiros. R$ 1,2bi em contratos de mútuo enviados ao exterior retornando como "investimento estrangeiro". Haddad classificou como "triangulação internacional gravíssima" e levou o caso formalmente ao governo Trump.</div>
+        <div class="q-sources">Fontes: <a href="https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2025/novembro/operacao-poco-de-lobato-receita-federal-e-orgaos-parceiros-desarticulam-esquema-bilionario-ligado-a-operacao-carbono-oculto" target="_blank">Receita Federal / Poço de Lobato</a> · <a href="https://www.otempo.com.br/politica/governo/2025/11/27/haddad-diz-que-crime-organizado-lava-dinheiro-nos-eua-manda-armas-ilegais-ao-brasil-e-pede-parceria.amp" target="_blank">O Tempo / Haddad</a></div>
+      </div>
+    </div>
+
+    <div class="q-item q-partial">
+      <div class="q-num">04</div>
+      <div class="q-body">
+        <div class="q-status partial">◐ PARCIAL — evidências fortes</div>
+        <div class="q-question">Existe interferência judicial atípica no caso Master para proteger investigados?</div>
+        <div class="q-answer">Toffoli assumiu o caso no STF sob sigilo. Determinou acareação na fase investigativa antes dos depoimentos individuais — procedimento atípico criticado por juristas especializados. BCB e TCU entraram em conflito sobre escopo da inspeção — tensão usada pela defesa para atacar cadeia de custódia. Padrão documentado no lawfare-timeline em casos anteriores.</div>
+        <div class="q-logic"><strong>Inferência lógica:</strong> O padrão histórico — casos de grande porte com atores de alto perfil migram para o STF sob sigilo com decisões monocráticas atípicas no momento crítico da investigação — é reproduzível e previsível. A questão não é se ocorre, mas <strong>quem beneficia e por qual acordo implícito.</strong></div>
+        <div class="q-sources">Fontes: <a href="https://www.gazetadopovo.com.br/economia/economia-fraude-banco-master-esquema-falhas-estado/" target="_blank">Gazeta do Povo</a> · <a href="https://www.otempo.com.br/economia/2026/3/4/entenda-o-caso-do-banco-master-que-levou-daniel-vorcaro-a-prisao-pela-segunda-vez" target="_blank">O Tempo</a></div>
+      </div>
+    </div>
+
+    <div class="q-item q-partial">
+      <div class="q-num">05</div>
+      <div class="q-body">
+        <div class="q-status partial">◐ PARCIAL — gap regulatório documentado</div>
+        <div class="q-question">A revogação das normativas de transparência das fintechs em 2025 foi acidental ou intencional?</div>
+        <div class="q-answer">A Receita Federal promoveu em 2024 alterações na e-Financeira para aumentar transparência das fintechs. Essas alterações foram revogadas no início de 2025 após "onda de fake news". A brecha permaneceu aberta durante exatamente o período em que o esquema operou, sendo fechada pela IN 2.278/2025 apenas após a Carbono Oculto.</div>
+        <div class="q-logic"><strong>Pergunta sem resposta:</strong> Quem produziu e disseminou as fake news que levaram à revogação das normativas? O timing é matematicamente preciso — revogação em 2025, operação em ago/2025. Não há investigação pública sobre este episódio específico.</div>
+        <div class="q-sources">Fontes: <a href="https://transparenciainternacional.org.br/posts/operacao-carbono-oculto-revelacoes-e-desdobramentos/" target="_blank">Transparência Internacional Brasil</a></div>
+      </div>
+    </div>
+
+    <div class="q-item q-unknown">
+      <div class="q-num">06</div>
+      <div class="q-body">
+        <div class="q-status unknown">✗ SEM RESPOSTA PÚBLICA</div>
+        <div class="q-question">Quem são os beneficiários finais das 15+ offshores de Delaware?</div>
+        <div class="q-answer">Desconhecido. A Receita Federal identificou a estrutura, os valores (R$ 1bi+ em remessas), os mecanismos (contratos de mútuo convertíveis). Não identificou publicamente os nomes por trás das LLCs com anonimato garantido pela lei de Delaware.</div>
+        <div class="q-logic"><strong>Cadeia lógica:</strong> (1) O MLAT Brasil-EUA existe e foi usado na Lava Jato. (2) O DOJ tem acesso aos registros das LLCs de Delaware. (3) Haddad foi formalmente a Trump com documentação. (4) Os EUA não responderam publicamente. → <strong>Conclusão lógica:</strong> Ou os beneficiários não são de interesse americano (improvável dado petróleo russo + armas), ou são de interesse americano protegê-los, ou a cooperação está em curso sigilosamente. Qualquer das três hipóteses é politicamente explosiva.</div>
+        <div class="q-sources">Fontes: <a href="https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2025/novembro/operacao-poco-de-lobato-receita-federal-e-orgaos-parceiros-desarticulam-esquema-bilionario-ligado-a-operacao-carbono-oculto" target="_blank">Receita Federal</a> · <a href="https://www.tribunadosertao.com.br/financas/2025/12/02/826049-lula-discute-com-trump-lavagem-de-dinheiro-via-delaware-em-fraudes-fiscais-brasileiras" target="_blank">Tribuna do Sertão</a></div>
+      </div>
+    </div>
+
+    <div class="q-item q-unknown">
+      <div class="q-num">07</div>
+      <div class="q-body">
+        <div class="q-status unknown">✗ SEM RESPOSTA PÚBLICA</div>
+        <div class="q-question">Quem comprou o petróleo russo via Houston driblando sanções americanas — e quem nos EUA sabia?</div>
+        <div class="q-answer">Haddad confirmou: combustível russo chegou ao Brasil via Houston driblando sanções internacionais que o Brasil dizia cumprir. A exportadora em Houston está identificada. Os compradores finais no Brasil estão parcialmente mapeados (Grupo Refit). O que não existe: investigação pública sobre quem na cadeia americana participou ou tolerou a operação.</div>
+        <div class="q-logic"><strong>Cadeia lógica:</strong> Violação de sanções americanas em território americano (Houston) é crime federal nos EUA. O DOJ tem jurisdição. Se não agiram, é porque (a) não sabiam — improvável dado OFAC monitor all oil flows, (b) sabiam e toleraram — implica beneficiário americano, ou (c) sabiam e estão investigando silenciosamente. Sem resposta, todas as três hipóteses ficam em aberto.</div>
+        <div class="q-sources">Fontes: <a href="https://www.otempo.com.br/politica/governo/2025/11/27/haddad-diz-que-crime-organizado-lava-dinheiro-nos-eua-manda-armas-ilegais-ao-brasil-e-pede-parceria.amp" target="_blank">Haddad / O Tempo</a></div>
+      </div>
+    </div>
+
+    <div class="q-item q-unknown">
+      <div class="q-num">08</div>
+      <div class="q-body">
+        <div class="q-status unknown">✗ SEM RESPOSTA PÚBLICA</div>
+        <div class="q-question">Quais investigações foram abertas e encerradas silenciosamente antes de chegarem nos beneficiários finais — e por quem?</div>
+        <div class="q-answer">Não existe mapeamento público sistemático dos inquéritos abertos e arquivados nas mesmas operações. O que existe são os pontos de inflexão documentados: Satiagraha (delegado processado), Lava Jato (desmontada ao atingir ambos os campos), Castelo de Areia (arquivada). O padrão é reproduzível.</div>
+        <div class="q-logic"><strong>A pergunta fundamental:</strong> Em cada operação existe um momento exato em que a investigação para de avançar em direção aos beneficiários finais e começa a circular sobre operadores de nível médio. Esse ponto de inflexão nunca foi mapeado sistematicamente com datas, decisores e beneficiários. Este dashboard é uma tentativa inicial. <strong>A comunidade open-source é convidada a continuar.</strong></div>
+      </div>
+    </div>
+
+    <div class="q-item q-unknown">
+      <div class="q-num">09</div>
+      <div class="q-body">
+        <div class="q-status unknown">✗ A PERGUNTA QUE NÃO FIZEMOS</div>
+        <div class="q-question">Se o sistema é auto-referente — se os guardiões das regras são beneficiários da violação — qual é o mecanismo de ruptura que não depende do sistema para se ativar?</div>
+        <div class="q-answer">Historicamente três forças: (1) conflito interno na elite — um grupo usa o sistema contra o outro, mas o instrumento quebra quando atinge ambos; (2) pressão externa com interesse próprio americano — o DOJ só age quando tem interesse próprio em jogo; (3) colapso fiscal — quando o custo de manter os contratos implícitos excede a capacidade de extração dos 200 milhões.</div>
+        <div class="q-logic"><strong>O que falta:</strong> Esta pergunta não tem resposta nos dados. Exige imaginação política, não investigação forense. A documentação aqui produzida é condição necessária mas não suficiente. O instrumento de ruptura que não precise do sistema para funcionar ainda não foi inventado. Ou foi? <strong>Esta é a pergunta aberta para a comunidade.</strong></div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ==================== RISCO ==================== -->
+<div id="tab-risco" class="tab-panel">
+
+  <div class="section-label">Mapa de risco — probabilidade vs impacto sistêmico</div>
+
+  <div class="grid2">
+    <div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon red">⚠</div>
+          <div><div class="card-title">RISCO CRÍTICO — Impacto imediato</div></div>
+        </div>
+        <div class="q-chain">
+          <div style="padding:10px 0;border-bottom:1px solid var(--border)">
+            <div style="font-size:12px;font-weight:600;color:var(--red2);margin-bottom:4px">Sigilo STF / caso Master</div>
+            <div style="font-size:11px;color:var(--text2);line-height:1.6">Caso migrou para STF com decisão monocrática atípica. Se os beneficiários finais do esquema incluem atores com foro privilegiado, a investigação pode ser arquivada judicialmente sem que o público jamais saiba.</div>
+          </div>
+          <div style="padding:10px 0;border-bottom:1px solid var(--border)">
+            <div style="font-size:12px;font-weight:600;color:var(--red2);margin-bottom:4px">Beneficiários Delaware — identidade oculta</div>
+            <div style="font-size:11px;color:var(--text2);line-height:1.6">15+ LLCs com anonimato garantido. Se o MLAT não for acionado formalmente, os beneficiários finais permanecem juridicamente protegidos pela legislação americana.</div>
+          </div>
+          <div style="padding:10px 0">
+            <div style="font-size:12px;font-weight:600;color:var(--red2);margin-bottom:4px">Anulação de condenações</div>
+            <div style="font-size:11px;color:var(--text2);line-height:1.6">Padrão documentado: cadeia de custódia atacada por conflitos entre reguladores (BC x TCU no caso Master). Cada questionamento processual é potencial nulidade futura.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon amber">◉</div>
+          <div><div class="card-title">RISCO ALTO — Impacto estrutural</div></div>
+        </div>
+        <div class="q-chain">
+          <div style="padding:10px 0;border-bottom:1px solid var(--border)">
+            <div style="font-size:12px;font-weight:600;color:var(--amber2);margin-bottom:4px">Mercado de carbono contaminado</div>
+            <div style="font-size:11px;color:var(--text2);line-height:1.6">Projetos fraudulentos venderam créditos para Boeing, Nestlé, Gol. A Lei 15.042/2024 (SBCE) cria mercado regulado, mas não tem efeito retroativo. Credibilidade internacional do Brasil em ESG comprometida antes de funcionar.</div>
+          </div>
+          <div style="padding:10px 0;border-bottom:1px solid var(--border)">
+            <div style="font-size:12px;font-weight:600;color:var(--amber2);margin-bottom:4px">Exposição sistêmica do FGC</div>
+            <div style="font-size:11px;color:var(--text2);line-height:1.6">CDBs do Master garantidos pelo FGC alimentado por compulsórios de todos os depositantes brasileiros. O esquema usou recursos dos 200 milhões como garantia de sua própria espoliação.</div>
+          </div>
+          <div style="padding:10px 0">
+            <div style="font-size:12px;font-weight:600;color:var(--amber2);margin-bottom:4px">Petróleo russo + sanções</div>
+            <div style="font-size:11px;color:var(--text2);line-height:1.6">Se o DOJ decidir agir sobre as violações de sanções americanas, empresas e bancos brasileiros que participaram da cadeia ficam expostos a penalidades americanas extraterritoriais (FCPA / OFAC).</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top:8px">Vetores de ruptura — o que pode quebrar o equilíbrio</div>
+
+  <div class="grid2">
+    <div class="conclusion-box amber">
+      <div class="conclusion-title">Vetor 1 — Conflito interno na elite</div>
+      <div class="conclusion-text">Historicamente o único que funcionou no Brasil. A Lava Jato existiu porque um campo político usou o instrumento contra o outro. O problema estrutural: quando o instrumento começa a atingir ambos os campos simultaneamente, é desmontado. Para funcionar como vetor de ruptura real, precisaria de atores dentro do sistema dispostos a destruir sua própria posição para expor o todo. Probabilidade histórica: baixa.</div>
+    </div>
+    <div class="conclusion-box blue">
+      <div class="conclusion-title">Vetor 2 — Interesse americano próprio</div>
+      <div class="conclusion-text">O DOJ entrou na Lava Jato porque a Odebrecht violou o FCPA pagando propinas em países com acordos americanos. Aqui: petróleo russo via Houston viola sanções OFAC, armas americanas contrabandeadas, Delaware usado para lavagem. Se esses elementos criarem interesse próprio americano suficiente, a cooperação avança. Se não, o MLAT fica na gaveta independente do que o Brasil pedir. O timing depende de política externa, não de justiça.</div>
+    </div>
+    <div class="conclusion-box red">
+      <div class="conclusion-title">Vetor 3 — Documentação pública acumulada</div>
+      <div class="conclusion-text">Este dashboard. O lawfare-timeline. Os 392 páginas do relatório da PF. Os documentos do ICIJ. Pela primeira vez na história brasileira existe documentação pública suficiente para nomear o mecanismo com precisão cirúrgica. Um sistema só pode ser rompido por quem consegue nomeá-lo com exatidão. Esta é condição necessária — mas não suficiente sozinha.</div>
+    </div>
+    <div class="conclusion-box green">
+      <div class="conclusion-title">Vetor 4 — Colapso fiscal progressivo</div>
+      <div class="conclusion-text">Quando o custo de manter os contratos implícitos (impunidade, offshores, blindagem judicial) excede a capacidade do Estado de extrair dos 200 milhões, o sistema se torna matematicamente insustentável. Os R$ 140bi documentados são uma fração do que não foi contabilizado. O ponto de ruptura fiscal não é visível hoje, mas a direção é documentável.</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ==================== TIMELINE ==================== -->
+<div id="tab-timeline" class="tab-panel">
+
+  <div class="section-label">Linha do tempo das operações — 2023–2026</div>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--text3)"></div>
+      <div class="tl-date">DEZ/2023</div>
+      <div class="tl-title">Stoppe Júnior na COP28 Dubai — "maior vendedor de carbono global"</div>
+      <div class="tl-desc">Representa o Brasil como caso de sucesso ambiental enquanto grilava 530.000 hectares de terras públicas da União no Amazonas para emissão de créditos fictícios.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--green)"></div>
+      <div class="tl-date">05/JUN/2024</div>
+      <div class="tl-title">Operação Greenwashing — Fase 1</div>
+      <div class="tl-desc">76 mandados, 5 presos, R$ 1,6bi sequestrado. Maior fraude em créditos de carbono do país revelada. Corrupção sistêmica de servidores INCRA e IPAAM. Fundo da XP perde 10%+.</div>
+      <div class="tl-ops"><span class="tag tag-green">Greenwashing</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--text3)"></div>
+      <div class="tl-date">DEZ/2024</div>
+      <div class="tl-title">Receita revoga normativas de transparência das fintechs — brecha mantida</div>
+      <div class="tl-desc">Alterações da e-Financeira revogadas após "fake news". Brecha permanece aberta. Quem produziu e disseminou as fake news? Pergunta sem investigação pública.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--text3)"></div>
+      <div class="tl-date">DEZ/2024</div>
+      <div class="tl-title">Lei 15.042/2024 — SBCE sancionado</div>
+      <div class="tl-desc">Sistema Brasileiro de Comércio de Emissões regulamentado. Sem efeito retroativo sobre créditos fraudulentos já emitidos e vendidos.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--red)"></div>
+      <div class="tl-date">28/AGO/2025</div>
+      <div class="tl-title">Operação Carbono Oculto — maior operação da história do Brasil</div>
+      <div class="tl-desc">1.400 agentes, 8 estados, 350+ alvos. PCC na Faria Lima exposto. REAG liquidada. BK Bank como banco paralelo (R$ 46bi). REAG3 -17% na Bolsa.</div>
+      <div class="tl-ops"><span class="tag tag-red">Carbono Oculto</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--red)"></div>
+      <div class="tl-date">25/SET/2025</div>
+      <div class="tl-title">Operação Spare — PCC em postos, motéis e jogos de azar</div>
+      <div class="tl-desc">60 motéis do PCC mapeados em SP. Iate, Lamborghini e helicóptero rastreados como ativos de lavagem.</div>
+      <div class="tl-ops"><span class="tag tag-red">Spare</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--amber)"></div>
+      <div class="tl-date">17/NOV/2025</div>
+      <div class="tl-title">BC denuncia ao MPF: fundos do PCC + Banco Master — mesmo ecossistema</div>
+      <div class="tl-desc">6 fundos REAG (R$ 102,4bi) investigados por PCC aparecem nas fraudes do Master. Primeiro elo formal documentado conectando crime organizado, mercado financeiro e banco comercial.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--red)"></div>
+      <div class="tl-date">18/NOV/2025</div>
+      <div class="tl-title">Operação Compliance Zero fase 1 — Vorcaro preso, Master liquidado</div>
+      <div class="tl-desc">Preso tentando deixar o país. R$ 12,2bi em carteiras fictícias vendidas ao BRB.</div>
+      <div class="tl-ops"><span class="tag tag-red">Compliance Zero</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--amber)"></div>
+      <div class="tl-date">27/NOV/2025</div>
+      <div class="tl-title">Operação Poço de Lobato + Haddad vai a Trump</div>
+      <div class="tl-desc">Grupo Refit: R$ 26bi em dívidas, Delaware LLCs, Houston. Haddad anuncia que levará documentação de lavagem via Delaware ao governo americano. Lula pede material traduzido para o inglês.</div>
+      <div class="tl-ops"><span class="tag tag-amber">Poço de Lobato</span><span class="tag tag-purple">Delaware / EUA</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--blue)"></div>
+      <div class="tl-date">JAN/2026</div>
+      <div class="tl-title">Família Vorcaro: 80% dos créditos de carbono fictícios da Amazônia via Alliance</div>
+      <div class="tl-desc">Folha revela: pai e irmã de Vorcaro controlam Alliance Participações — R$ 45,5bi em UECs sem lastro em terra da União.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--red)"></div>
+      <div class="tl-date">JAN/2026</div>
+      <div class="tl-title">Compliance Zero fase 2 — Vorcaro preso pela 2ª vez / Toffoli assume STF</div>
+      <div class="tl-desc">Caso migra para STF sob sigilo. Toffoli determina acareação atípica. BCB e TCU em conflito sobre inspeção.</div>
+      <div class="tl-ops"><span class="tag tag-purple">STF / Toffoli</span><span class="tag tag-red">Sigilo</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--amber)"></div>
+      <div class="tl-date">MAR/2026</div>
+      <div class="tl-title">Carbono Oculto 86 — MP do Piauí denuncia 12 incluindo Beto Louco e Primo</div>
+      <div class="tl-desc">R$ 5bi em lavagem no Nordeste (PI, MA, TO). BK Bank como artéria financeira regional.</div>
+      <div class="tl-ops"><span class="tag tag-red">Carbono Oculto 86</span></div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--text3)"></div>
+      <div class="tl-date">ABR/2026 — HOJE</div>
+      <div class="tl-title">Status: 4 frentes investigativas convergindo nos mesmos atores</div>
+      <div class="tl-desc">CPI Crime Organizado + CPMI INSS + Compliance Zero (STF/sigilo) + Greenwashing (MPF pendente). Cooperação americana: sem resposta pública. Beneficiários Delaware: desconhecidos.</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ==================== CONCLUSÕES ==================== -->
+<div id="tab-conclusoes" class="tab-panel">
+
+  <div class="conclusion-box red">
+    <div class="conclusion-title">1. Não é corrupção episódica — é arquitetura sistêmica</div>
+    <div class="conclusion-text">As cinco operações analisadas não são eventos separados. São janelas para o mesmo mecanismo: crime organizado → economia formal → blindagem financeira → offshore internacional → proteção institucional. A arquitetura evolui com a tecnologia disponível (doleiros → Mossack Fonseca → fintechs → LLCs Delaware) mas a lógica permanece idêntica desde pelo menos 2003 (documentada no Castelo de Areia, 2009).</div>
+  </div>
+
+  <div class="conclusion-box amber">
+    <div class="conclusion-title">2. O modelo colonial financeiro — sem bandeira, sem canhões</div>
+    <div class="conclusion-text">Os recursos extraídos (crédito de carbono amazônico, combustíveis, poupança de aposentados via INSS/FGC) saem via Delaware e Houston e retornam como "investimento estrangeiro". A elite local administra a estrutura em troca de impunidade judicial e proteção institucional. Os 200 milhões pagam pela infraestrutura de sua própria espoliação: cada litro de gasolina adulterada financiou o PCC e o sistema de lavagem. O mecanismo é documentável em números precisos: R$ 140bi em movimentações ilícitas = hospitais, escolas e saneamento que não foram construídos.</div>
+  </div>
+
+  <div class="conclusion-box blue">
+    <div class="conclusion-title">3. Os EUA atuam de forma opaca — isso é política, não incompetência</div>
+    <div class="conclusion-text">O DOJ tem acesso aos registros de Delaware, aos dados da exportadora em Houston, às transações OFAC sobre o petróleo russo. Haddad levou formalmente o caso a Trump com documentação. A ausência de resposta pública americana não é acidente — é decisão política. O MLAT Brasil-EUA funciona quando há interesse americano próprio em jogo (como na Lava Jato / Odebrecht / FCPA). A questão é: quem nos EUA tem interesse em que os beneficiários de Delaware permaneçam ocultos?</div>
+  </div>
+
+  <div class="conclusion-box green">
+    <div class="conclusion-title">4. Pela primeira vez na história brasileira — o mecanismo está nu</div>
+    <div class="conclusion-text">Os Panama Papers existem. O relatório de 392 páginas da PF existe. Os documentos do ICIJ existem. Os JSONs do lawfare-timeline existem. Os dados oficiais da Receita Federal estão em domínio público. Este dashboard é CC0 — nenhum direito reservado. Um sistema só pode ser rompido por quem consegue nomeá-lo com exatidão. Esta documentação é condição necessária. A pergunta que permanece aberta: qual é o mecanismo de ruptura que não depende do próprio sistema para se ativar?</div>
+  </div>
+
+  <div class="conclusion-box red">
+    <div class="conclusion-title">5. A pergunta que não fizemos — e que a comunidade deve fazer</div>
+    <div class="conclusion-text">Não perguntamos quais investigações foram abertas e silenciosamente arquivadas antes de chegarem nos beneficiários finais. Não mapeamos sistematicamente os pontos de inflexão — o momento exato em que cada investigação para de avançar em direção ao topo. Não calculamos o custo per capita anual da corrupção sistêmica para cada brasileiro. Não identificamos o mecanismo de ruptura que não depende do sistema. Estas são as perguntas abertas para a comunidade open-source continuar.</div>
+  </div>
+
+</div>
+
+<!-- ==================== FONTES ==================== -->
+<div id="tab-fontes" class="tab-panel">
+
+  <div class="section-label">Fontes primárias — verificadas e arquivadas</div>
+
+  <div class="source-item">
+    <div class="source-num">01</div>
+    <div class="source-body">
+      <a class="source-title" href="https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2025/agosto/operacao-carbono-oculto-rrb-e-orgaos-parceiros-combatem-organizacao-responsavel-por-sonegacao-e-lavagem-de-dinheiro-no-setor-de-combustiveis" target="_blank">Operação Carbono Oculto — Nota Oficial da Receita Federal</a>
+      <div class="source-meta"><span class="source-type st-oficial">OFICIAL</span>Receita Federal do Brasil · 28/ago/2025</div>
+    </div>
+  </div>
+
+  <div class="source-item">
+    <div class="source-num">02</div>
+    <div class="source-body">
+      <a class="source-title" href="https://www.gov.br/mj/pt-br/assuntos/noticias/operacoes-quasar-tank-e-carbono-oculto-desarticulam-esquemas-bilionarios-de-lavagem-de-dinheiro-e-fraudes-no-setor-de-combustiveis" target="_blank">Operações Quasar, Tank e Carbono Oculto — Ministério da Justiça</a>
+      <div class="source-meta"><span class="source-type st-oficial">OFICIAL</span>Ministério da Justiça e Segurança Pública · 28/ago/2025</div>
+    </div>
+  </div>
+
+  <div class="source-item">
+    <div class="source-num">03</div>
+    <div class="source-body">
+      <a class="source-title" href="https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2025/novembro/operacao-poco-de-lobato-receita-federal-e-orgaos-parceiros-desarticulam-esquema-bilionario-ligado-a-operacao-carbono-oculto" target="_blank">Operação Poço de Lobato — Nota Oficial da Receita Federal</a>
+      <div class="source-meta"><span class="source-type st-oficial">OFICIAL</span>Receita Federal do Brasil · 27/nov/2025 · Delaware LLCs + Houston documentados</div>
+    </div>
+  </div>
+
+  <div class="source-item">
+    <div class="source-num">04</div>
+    <div class="source-body">
+      <a class="source-title" href="https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Carbono_Oculto" target="_blank">Operação Carbono Oculto — Wikipédia</a>
+      <div class="source-meta"><span class="source-type st-wiki">WIKI</span>Compilação com múltiplas fontes primárias · Atualização contínua</div>
+    </div>
+  </div>
+
+  <div class="source-item">
+    <div class="source-num">05</div>
+    <div class="source-body">
+      <a class="source-title" href="https://agenciabrasil.ebc.com.br/geral/noticia/2025-11/sp-megaoperacao-investiga-fraude-fiscal-no-setor-de-combustiveis" target="_blank">Megaoperação investiga fraude fiscal no setor de combustíveis</a>
+      <div class="source-meta"><span class="source-type st-jornalismo">JORNALISMO</span>Agência Brasil / EBC · 27/nov/2025 · Governador Tarcísio + Haddad presentes</div>
+    </div>
+  </div>
+
+  <div class="source-item">
+    <div class="source-num">06</div>
+    <div class="source-body">
+      <a class="source-title" href="https://www.otempo.com.br/politica/governo/2025/11/27/haddad-diz-que-crime-organizado-lava-dinheiro-nos-eua-manda-armas-ilegais-ao-brasil-e-pede-parceria.amp" target="_blank">Haddad diz que crime organizado lava dinheiro nos EUA e pede parceria</a>
+      <div class="source-meta"><span class="source-type st-jornalismo">JORNALISMO</span>O Tempo · 27/nov/2025 · Delaware + petróleo russo + armas</div>
+    </div>
+  </div>
+
+  <div class="source-item">
+    <div class="source-num">07</div>
+    <div class="source-body">
+      <a class="source-title" href="https://www.tribunadosertao.com.br/financas/2025/12/02/826049-lula-discute-com-trump-lavagem-de-dinheiro-via-delaware-em-fraudes-fiscais-brasileiras" target="_blank">Lula discute com Trump lavagem de dinheiro via Delaware</a>
+      <div class="source-meta"><span class="source-type st-jornalismo">JORNALISMO</span>Tribuna do Sertão · 02/dez/2025 · Material traduzido para o inglês</div>
+    </div>
+  </div>
+
+  <div class="source-item">
+    <div class="source-num">08</div>
+    <div class="source-body">
+      <a class="source-title" href="https://amazoniareal.com.br/fraude-de-mercado-de-carbono/" target="_blank">Fraude em mercado de carbono grilou 500 mil hectares no sul do Amazonas</a>
+      <div class="source-meta"><span class="source-type st-jornalismo">JORNALISMO</span>Amazônia Real · 04/jul/2024 · Delegado Scarpellini</div>
+    </div>
+  </div>
+
+  <div class="source-item">
+    <div class="source-num">09</div>
+    <div class="source-body">
+      <a class="source-title" href="https://www.metropoles.com/negocios/pf-faria-lima-esquema-credito-carbono" target="_blank">Alvo da PF, tombo na Faria Lima: o esquema de crédito de carbono no AM</a>
+      <div class="source-meta"><span class="source-type st-jornalismo">JORNALISMO</span>Metrópoles · 18/jun/2024 · Boeing, Gol, Nestlé, AZ Quest Luna</div>
+    </div>
+  </div>
+
+  <div class="source-item">
+    <div class="source-num">10</div>
+    <div class="source-body">
+      <a class="source-title" href="https://climainfo.org.br/2026/01/20/familia-de-daniel-vorcaro-do-master-e-dona-de-projeto-irregular-de-credito-de-carbono-na-amazonia/" target="_blank">Família Vorcaro ligada a projeto de crédito de carbono em área pública</a>
+      <div class="source-meta"><span class="source-type st-jornalismo">JORNALISMO</span>ClimaInfo · 20/jan/2026 · Alliance Participações + R$ 45,5bi</div>
+    </div>
+  </div>
+
+  <div class="source-item">
+    <div class="source-num">11</div>
+    <div class="source-body">
+      <a class="source-title" href="https://www.gazetadopovo.com.br/economia/economia-fraude-banco-master-esquema-falhas-estado/" target="_blank">Banco Master: a fraude bilionária ajudada por falhas de Estado</a>
+      <div class="source-meta"><span class="source-type st-jornalismo">JORNALISMO</span>Gazeta do Povo · 14/jan/2026 · Toffoli + TCU + BC em conflito</div>
+    </div>
+  </div>
+
+  <div class="source-item">
+    <div class="source-num">12</div>
+    <div class="source-body">
+      <a class="source-title" href="https://transparenciainternacional.org.br/posts/operacao-carbono-oculto-revelacoes-e-desdobramentos/" target="_blank">Operação Carbono Oculto: revelações e desdobramentos</a>
+      <div class="source-meta"><span class="source-type st-academico">ACADÊMICO</span>Transparência Internacional Brasil · 19/fev/2026 · 57% empresas sem controles</div>
+    </div>
+  </div>
+
+  <div class="source-item">
+    <div class="source-num">13</div>
+    <div class="source-body">
+      <a class="source-title" href="https://iclnoticias.com.br/caso-master-conexoes-cpi-inss-crime-organizado/" target="_blank">Caso Master: as conexões nas CPIs do INSS e Crime Organizado</a>
+      <div class="source-meta"><span class="source-type st-jornalismo">JORNALISMO</span>ICL Notícias · Mar/2026 · Zettel + REAG + CPI</div>
+    </div>
+  </div>
+
+  <div class="source-item">
+    <div class="source-num">14</div>
+    <div class="source-body">
+      <a class="source-title" href="https://revistaforum.com.br/brasil/banco-master-6-fundos-do-caso-contra-o-pcc-estao-ligados-ao-escandalo-de-vorcaro/" target="_blank">Banco Master: 6 fundos do PCC ligados ao escândalo de Vorcaro</a>
+      <div class="source-meta"><span class="source-type st-jornalismo">JORNALISMO</span>Revista Fórum · 09/jan/2026 · R$ 102,4bi em 6 fundos</div>
+    </div>
+  </div>
+
+  <div class="source-item">
+    <div class="source-num">15</div>
+    <div class="source-body">
+      <a class="source-title" href="https://www.icij.org/investigations/panama-papers/" target="_blank">Panama Papers — ICIJ Investigation</a>
+      <div class="source-meta"><span class="source-type st-jornalismo">JORNALISMO</span>ICIJ · 2016–2024 · 11,5 milhões de documentos · Conexão Brasil / Lava Jato</div>
+    </div>
+  </div>
+
+  <div class="source-item">
+    <div class="source-num">16</div>
+    <div class="source-body">
+      <a class="source-title" href="https://www.ssp.pi.gov.br/ssp-pi-deflagra-operacao-contra-empresas-suspeitas-de-lavar-dinheiro-para-faccao-criminosa/" target="_blank">SSP-PI deflagra operação contra empresas suspeitas de lavar dinheiro</a>
+      <div class="source-meta"><span class="source-type st-oficial">OFICIAL</span>Secretaria da Segurança Pública do Piauí · Nov/2025 · Conexão Carbono Oculto / Nordeste</div>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top:24px">Repositório open-source</div>
+  <div class="card">
+    <div class="card-body">
+      <strong class="hl-amber">Este dashboard é CC0 1.0 — domínio público total.</strong><br><br>
+      Código-fonte, dados e JSONs do lawfare-timeline disponíveis para fork, adaptação e redistribuição sem restrições.<br><br>
+      <strong>Contribuições esperadas da comunidade:</strong><br>
+      → Novos eventos documentados com fontes primárias<br>
+      → Identificação de pontos de inflexão em investigações arquivadas<br>
+      → Cálculo do custo per capita da corrupção sistêmica<br>
+      → Mapeamento de inquéritos abertos e silenciosamente encerrados<br>
+      → Pesquisa sobre beneficiários finais das LLCs de Delaware<br><br>
+      <strong class="hl-blue"><a href="https://lawfare-timeline.vercel.app" target="_blank">lawfare-timeline.vercel.app</a></strong>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div>República Capturada — Dashboard Investigativo · CC0 1.0 Universal · Domínio Público</div>
+  <div>Dados verificáveis · Fontes primárias · Nenhum direito reservado · Fork livre</div>
+</div>
+
+</div>
+
+<script>
+function showTab(id) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  event.target.classList.add('active');
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function toggleAcc(header) {
+  const body = header.nextElementSibling;
+  const isOpen = header.classList.contains('open');
+  header.classList.toggle('open', !isOpen);
+  body.classList.toggle('open', !isOpen);
+}
+</script>
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

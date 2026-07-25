@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Faixa do Silêncio — Dossiê Geopolítico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0d0d0d;--ink2:#2e2e2e;--ink3:#6b6b6b;
+  --paper:#f4efe5;--paper2:#ece6db;--paper3:#ddd6c9;
+  --red:#b5311f;--red2:#e74c3c;
+  --amber:#a8450a;--amber2:#e67e22;
+  --green:#165c30;--green2:#27ae60;
+  --teal:#0a4f55;--teal2:#1abc9c;
+  --border:#c5bba8;--border2:#b0a488;
+  --ff:'Syne',sans-serif;--fm:'JetBrains Mono',monospace;
+}
+body{background:var(--paper);color:var(--ink);font-family:var(--ff);min-height:100vh}
+.wrap{max-width:960px;margin:0 auto;padding:2rem 1.5rem 6rem}
+
+/* HEADER */
+.stamp{display:inline-block;font-family:var(--fm);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--red);border:1.5px solid var(--red);padding:3px 10px;border-radius:2px;margin-bottom:.75rem}
+h1{font-size:clamp(26px,5vw,44px);font-weight:800;line-height:1.05;color:var(--ink);margin-bottom:.35rem}
+.sub{font-family:var(--fm);font-size:11px;color:var(--ink3);margin-bottom:1.75rem;line-height:1.7;max-width:680px}
+.divider{border:none;border-top:1.5px solid var(--border);margin:1.75rem 0}
+.section-label{font-family:var(--fm);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);margin-bottom:.85rem;padding-bottom:.3rem;border-bottom:1px solid var(--border)}
+
+/* NAV */
+.nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-bottom:0;
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(244,239,229,0.97);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  padding:10px 0 11px;
+  border-bottom:2px solid var(--border);
+  box-shadow:0 2px 20px rgba(0,0,0,.09);
+}
+.nav-btn{
+  font-family:var(--fm);
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  padding:5px 13px;
+  border:1px solid var(--border2);
+  border-radius:3px;
+  background:transparent;
+  color:var(--ink3);
+  cursor:pointer;
+  transition:all .18s;
+  position:relative;
+}
+.nav-btn:hover{
+  background:rgba(181,49,31,.07);
+  border-color:rgba(181,49,31,.4);
+  color:var(--red);
+}
+.nav-btn.active{
+  background:var(--red);
+  border-color:var(--red);
+  color:#fff;
+  font-weight:700;
+  box-shadow:0 2px 8px rgba(181,49,31,.3);
+}
+.nav-btn .btn-num{
+  display:inline-block;
+  font-size:8px;
+  margin-right:4px;
+  opacity:.6;
+  letter-spacing:0;
+}
+.nav-btn.active .btn-num{opacity:.8}
+
+/* SECTIONS */
+.section{display:block;padding-top:2.5rem;margin-bottom:3.5rem;scroll-margin-top:60px}
+.section+.section{border-top:1.5px solid var(--border);}
+
+/* KPI GRIDS */
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:1.25rem}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:1.25rem}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-bottom:1.25rem}
+.card{background:var(--paper2);border:1px solid var(--border);border-radius:6px;padding:1rem 1.1rem}
+.card-red{border-left:3px solid var(--red)}
+.card-amber{border-left:3px solid var(--amber)}
+.card-green{border-left:3px solid var(--green)}
+.card-teal{border-left:3px solid var(--teal)}
+.kpi-label{font-family:var(--fm);font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--ink3);margin-bottom:5px}
+.kpi-value{font-size:clamp(24px,4vw,38px);font-weight:800;line-height:1;color:var(--ink)}
+.kpi-unit{font-family:var(--fm);font-size:10px;color:var(--ink3);margin-top:3px}
+.kpi-delta{font-family:var(--fm);font-size:10px;margin-top:5px}
+.up{color:var(--green2)}.down{color:var(--red2)}.warn{color:var(--amber2)}
+
+/* BARS */
+.bar-row{display:flex;align-items:center;gap:10px;margin-bottom:7px}
+.bar-label{font-family:var(--fm);font-size:10px;color:var(--ink2);min-width:110px;text-align:right}
+.bar-track{flex:1;background:var(--paper3);border-radius:2px;height:16px;overflow:hidden}
+.bar-fill{height:100%;border-radius:2px;display:flex;align-items:center;justify-content:flex-end;padding-right:5px}
+.bar-val{font-family:var(--fm);font-size:9px;color:#fff;font-weight:500}
+
+/* MECHANISMS */
+.mechanism-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-bottom:1.25rem}
+.mech{background:var(--paper2);border:1px solid var(--border);border-radius:6px;padding:.9rem 1rem}
+.mech-title{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:.4rem}
+.mech-body{font-size:12px;color:var(--ink2);line-height:1.55}
+.mech-ref{font-family:var(--fm);font-size:10px;color:var(--ink3);margin-top:.5rem;padding-top:.4rem;border-top:1px solid var(--border)}
+
+/* QUOTES */
+.quote{border-left:3px solid var(--amber);padding:.8rem 1.1rem;background:var(--paper2);border-radius:0 6px 6px 0;margin:.9rem 0}
+.quote-text{font-size:13px;color:var(--ink2);line-height:1.6;font-style:italic}
+.quote-attr{font-family:var(--fm);font-size:10px;color:var(--ink3);margin-top:.4rem}
+
+/* TABLE */
+.matrix{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:1.25rem}
+.matrix th{font-family:var(--fm);font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--ink3);padding:7px 9px;border-bottom:1.5px solid var(--border);text-align:left}
+.matrix td{padding:8px 9px;border-bottom:1px solid var(--border);color:var(--ink2);vertical-align:top;font-size:12px;line-height:1.45}
+.matrix tr:last-child td{border-bottom:none}
+.pill{display:inline-block;font-family:var(--fm);font-size:9px;padding:2px 7px;border-radius:10px}
+.pill-r{background:rgba(181,49,31,.12);color:var(--red)}
+.pill-a{background:rgba(168,69,10,.12);color:var(--amber)}
+.pill-g{background:rgba(22,92,48,.12);color:var(--green)}
+.pill-t{background:rgba(10,79,85,.12);color:var(--teal)}
+
+/* TIMELINE */
+.timeline{position:relative;padding-left:22px;border-left:2px solid var(--border)}
+.tl-item{position:relative;margin-bottom:1.25rem}
+.tl-dot{position:absolute;left:-27px;top:4px;width:9px;height:9px;border-radius:50%;border:2px solid var(--red);background:var(--paper)}
+.tl-year{font-family:var(--fm);font-size:10px;color:var(--red);margin-bottom:2px}
+.tl-title{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px}
+.tl-body{font-size:12px;color:var(--ink2);line-height:1.5}
+
+/* THREAT CARDS */
+.threat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-bottom:1.25rem}
+.threat-title{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:.4rem}
+.threat-body{font-size:11px;color:var(--ink2);line-height:1.5}
+.threat-score{display:flex;align-items:center;gap:8px;margin-top:.5rem}
+.score-dots{display:flex;gap:4px}
+.dot{width:8px;height:8px;border-radius:50%}
+.dot-on{background:var(--red)}.dot-off{background:var(--paper3);border:1px solid var(--border)}
+.score-label{font-family:var(--fm);font-size:9px;color:var(--ink3)}
+
+/* CHART */
+.chart-wrap{position:relative;width:100%;height:260px;margin-bottom:.5rem}
+
+/* HIGHLIGHT */
+.highlight{color:var(--red);font-weight:700}
+
+/* RELATED ARTICLES */
+.related{
+  margin-top:3rem;
+  padding-top:1.75rem;
+  border-top:2px solid var(--border2);
+}
+.related-label{
+  font-family:var(--fm);
+  font-size:9px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--ink3);
+  margin-bottom:1.1rem;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.related-label::after{
+  content:'';
+  flex:1;
+  height:1px;
+  background:var(--border);
+}
+.related-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+}
+@media(max-width:760px){.related-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.related-grid{grid-template-columns:1fr}}
+.rel-card{
+  display:block;
+  background:var(--paper2);
+  border:1px solid var(--border);
+  border-top:3px solid var(--border2);
+  border-radius:4px;
+  padding:12px 14px;
+  text-decoration:none;
+  color:inherit;
+  transition:all .18s;
+  cursor:pointer;
+}
+.rel-card:hover{
+  border-top-color:var(--red);
+  background:var(--paper);
+  box-shadow:0 2px 12px rgba(0,0,0,.08);
+  transform:translateY(-1px);
+}
+.rel-tag{
+  font-family:var(--fm);
+  font-size:8px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--ink3);
+  margin-bottom:6px;
+}
+.rel-title{
+  font-size:12px;
+  font-weight:700;
+  color:var(--ink);
+  line-height:1.35;
+  margin-bottom:5px;
+}
+.rel-desc{
+  font-family:var(--fm);
+  font-size:10px;
+  color:var(--ink3);
+  line-height:1.5;
+}
+.rel-read{
+  font-family:var(--fm);
+  font-size:9px;
+  color:var(--red);
+  margin-top:8px;
+  display:flex;
+  align-items:center;
+  gap:4px;
+}
+.rel-read::before{content:'→';font-size:11px}
+
+/* FOOTER */
+.footer{font-family:var(--fm);font-size:10px;color:var(--ink3);padding-top:1.25rem;border-top:1px solid var(--border);line-height:1.7;margin-top:2rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="stamp">Dossiê Geopolítico — Investigação Aberta 2025</div>
+  <h1>A Faixa do Silêncio<br>Por que o Trópico permanece pobre</h1>
+  <p class="sub">Investigação sobre os mecanismos ocultos de supressão do potencial tropical &mdash; recursos minerais, controle financeiro, intervenções documentadas, e o que amedronta as potências do norte global. Fontes primárias e acadêmicas verificáveis.</p>
+
+  <div class="nav" id="main-nav">
+    <button class="nav-btn active" data-section="kpis" onclick="goTo('kpis')"><span class="btn-num">01</span>Potencial Suprimido</button>
+    <button class="nav-btn" data-section="mecanismos" onclick="goTo('mecanismos')"><span class="btn-num">02</span>Mecanismos de Controle</button>
+    <button class="nav-btn" data-section="evidencias" onclick="goTo('evidencias')"><span class="btn-num">03</span>Evidências Históricas</button>
+    <button class="nav-btn" data-section="financeiro" onclick="goTo('financeiro')"><span class="btn-num">04</span>Arquitetura Financeira</button>
+    <button class="nav-btn" data-section="ameaca" onclick="goTo('ameaca')"><span class="btn-num">05</span>Por que Temem</button>
+    <button class="nav-btn" data-section="referencias" onclick="goTo('referencias')"><span class="btn-num">06</span>Fontes &amp; Referências</button>
+  </div>
+
+  <!-- SEÇÃO 1: KPIs -->
+  <div class="section" id="s-kpis">
+    <div class="section-label">01 — Potencial suprimido da faixa tropical (23°N — 23°S)</div>
+
+    <div class="grid4">
+      <div class="card card-red">
+        <div class="kpi-label">Reservas de minerais críticos</div>
+        <div class="kpi-value">~80%</div>
+        <div class="kpi-unit">do total mundial na faixa</div>
+        <div class="kpi-delta down">Extração controlada por 6 corporações</div>
+      </div>
+      <div class="card card-amber">
+        <div class="kpi-label">Nióbio — Brasil</div>
+        <div class="kpi-value">94%</div>
+        <div class="kpi-unit">das reservas globais</div>
+        <div class="kpi-delta warn">Preço definido em Londres</div>
+      </div>
+      <div class="card card-amber">
+        <div class="kpi-label">Cobalto — Congo (DRC)</div>
+        <div class="kpi-value">70%</div>
+        <div class="kpi-unit">das reservas globais</div>
+        <div class="kpi-delta warn">Receita local retida: &lt;5% do PIB</div>
+      </div>
+      <div class="card card-green">
+        <div class="kpi-label">Potencial solar tropical</div>
+        <div class="kpi-value">6.5×</div>
+        <div class="kpi-unit">maior irradiação vs Europa</div>
+        <div class="kpi-delta up">Explorado em &lt;3% da capacidade</div>
+      </div>
+    </div>
+
+    <div class="grid4">
+      <div class="card card-teal">
+        <div class="kpi-label">Água doce — Amazônia</div>
+        <div class="kpi-value">20%</div>
+        <div class="kpi-unit">do total planetário de água doce</div>
+        <div class="kpi-delta warn">"Petróleo do século XXI" — sem monetização</div>
+      </div>
+      <div class="card card-teal">
+        <div class="kpi-label">Terra arável não utilizada</div>
+        <div class="kpi-value">60%</div>
+        <div class="kpi-unit">das reservas mundiais na faixa</div>
+        <div class="kpi-delta warn">África importa 60% dos alimentos que consome</div>
+      </div>
+      <div class="card card-red">
+        <div class="kpi-label">Fuga de capital — África</div>
+        <div class="kpi-value">$88.6bi</div>
+        <div class="kpi-unit">por ano (média 2001–2021)</div>
+        <div class="kpi-delta down">Supera toda ajuda externa recebida em 3:1</div>
+      </div>
+      <div class="card card-red">
+        <div class="kpi-label">Perdas por preços de transferência</div>
+        <div class="kpi-value">$500bi</div>
+        <div class="kpi-unit">anuais em países em desenvolvimento</div>
+        <div class="kpi-delta down">Sub-faturamento de exportações de commodities</div>
+      </div>
+    </div>
+
+    <div class="section-label" style="margin-top:1.5rem">Concentração de reservas vs. receita capturada localmente</div>
+    <div style="margin-bottom:1.5rem">
+      <div class="bar-row"><div class="bar-label">Nióbio (BR) — reservas</div><div class="bar-track"><div class="bar-fill" style="width:94%;background:var(--red)"><span class="bar-val">94%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">Nióbio (BR) — receita local</div><div class="bar-track"><div class="bar-fill" style="width:18%;background:var(--green)"><span class="bar-val">~18%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">Cobalto (DRC) — reservas</div><div class="bar-track"><div class="bar-fill" style="width:70%;background:var(--red)"><span class="bar-val">70%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">Cobalto (DRC) — receita</div><div class="bar-track"><div class="bar-fill" style="width:5%;background:var(--green)"><span class="bar-val">~5%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">Ouro África Oc. — produção</div><div class="bar-track"><div class="bar-fill" style="width:45%;background:var(--amber)"><span class="bar-val">45% global</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">Ouro África Oc. — receita</div><div class="bar-track"><div class="bar-fill" style="width:8%;background:var(--green)"><span class="bar-val">~8%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">Petróleo (Venezuela) — reservas</div><div class="bar-track"><div class="bar-fill" style="width:21%;background:var(--amber)"><span class="bar-val">21% mundial</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">Venezuela — receita soberana</div><div class="bar-track"><div class="bar-fill" style="width:12%;background:var(--green)"><span class="bar-val">~12%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">Lítio Triângulo — reservas</div><div class="bar-track"><div class="bar-fill" style="width:60%;background:var(--amber)"><span class="bar-val">60% global</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">Triângulo — receita local</div><div class="bar-track"><div class="bar-fill" style="width:15%;background:var(--green)"><span class="bar-val">~15%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">Urânio Niger — produção</div><div class="bar-track"><div class="bar-fill" style="width:35%;background:var(--amber)"><span class="bar-val">35% urânio francês</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">Niger — IDH</div><div class="bar-track"><div class="bar-fill" style="width:3%;background:var(--red)"><span class="bar-val">último do mundo</span></div></div></div>
+    </div>
+
+    <div class="section-label">PIB per capita 2024 — faixa tropical vs. zonas temperadas (USD, Banco Mundial)</div>
+    <div class="chart-wrap">
+      <canvas id="chartPop"></canvas>
+    </div>
+
+    <div class="grid3" style="margin-top:1rem">
+      <div class="card card-red">
+        <div class="kpi-label">Dívida externa / receita pública (média)</div>
+        <div class="kpi-value">340%</div>
+        <div class="kpi-unit">Países da África Subsaariana (2023)</div>
+        <div class="kpi-delta down">30–50% do orçamento vai para serviço da dívida</div>
+      </div>
+      <div class="card card-amber">
+        <div class="kpi-label">Royalties mineração — média africana</div>
+        <div class="kpi-value">3–5%</div>
+        <div class="kpi-unit">do valor do recurso extraído</div>
+        <div class="kpi-delta warn">Noruega cobra 78% sobre petróleo</div>
+      </div>
+      <div class="card card-green">
+        <div class="kpi-label">Potencial PIB com industrialização</div>
+        <div class="kpi-value">4–8×</div>
+        <div class="kpi-unit">estimativa se processassem próprios recursos</div>
+        <div class="kpi-delta up">Modelo: Noruega com petróleo, Japão com manufatura</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEÇÃO 2: MECANISMOS -->
+  <div class="section" id="s-mecanismos">
+    <div class="section-label">02 — Os 9 mecanismos ocultos de supressão estrutural</div>
+
+    <div class="mechanism-grid">
+      <div class="mech card-red">
+        <div class="mech-title">1. Armadilha das commodities</div>
+        <div class="mech-body">Países são estruturados para exportar matéria-prima bruta e importar manufaturados com valor agregado 10–40× maior. O gap nunca se fecha porque proteção tarifária é proibida pelos acordos OMC/FMI para países devedores. Chile exporta cobre e importa fio elétrico; Brasil exporta soja e importa fertilizante.</div>
+        <div class="mech-ref">Prebisch-Singer Hypothesis (1950) · Ha-Joon Chang, "Chutando a Escada" (2002)</div>
+      </div>
+      <div class="mech card-amber">
+        <div class="mech-title">2. Condicionalidades estruturais do FMI/BM</div>
+        <div class="mech-body">Todo empréstimo exige "ajuste estrutural": privatizações, corte de subsídios, abertura de mercado, desvalorização cambial. Resultado previsível: desindustrialização, dependência de importações, dívida crescente que exige novos empréstimos — loop permanente.</div>
+        <div class="mech-ref">Stiglitz, "Globalização e seus Malefícios" (2002) · SAPRIN Report (2002)</div>
+      </div>
+      <div class="mech card-red">
+        <div class="mech-title">3. Colonialismo monetário (Franco CFA)</div>
+        <div class="mech-body">14 países africanos mantêm 50% das reservas no Banco da França. Taxa de câmbio fixada por Paris. Qualquer superávit de exportação vai automaticamente para contas francesas. O banco central de 14 nações soberanas está em território estrangeiro. Vigente em 2025.</div>
+        <div class="mech-ref">Ndongo Samba Sylla, "L'arme invisible de la Françafrique" (2020)</div>
+      </div>
+      <div class="mech card-amber">
+        <div class="mech-title">4. Preços de transferência e sub-faturamento</div>
+        <div class="mech-body">Multinacionais vendem commodities para subsidiárias offshore a preço abaixo do mercado, evitando imposto local. O lucro real aparece em Caimã ou Luxemburgo. Estima-se $500bi/ano desviados do sul global — mais que toda ajuda externa combinada.</div>
+        <div class="mech-ref">Global Financial Integrity Reports (2010–2022) · UNCTAD Trade Misinvoicing</div>
+      </div>
+      <div class="mech card-teal">
+        <div class="mech-title">5. Patentes TRIPS e biopirataria</div>
+        <div class="mech-body">O acordo TRIPS (OMC, 1994) impede cópia de tecnologias por países em desenvolvimento, perpetuando dependência tecnológica. A biodiversidade tropical — potencial farmacêutico estimado em trilhões — é bioprospeccionada por corporações do norte e patenteada fora do país de origem.</div>
+        <div class="mech-ref">Ha-Joon Chang, "23 Things They Don't Tell You About Capitalism" (2010) · CBD/Nagoya Protocol</div>
+      </div>
+      <div class="mech card-red">
+        <div class="mech-title">6. Captura e corrupção de elites locais</div>
+        <div class="mech-body">Elites educadas nas metrópoles, com contas offshore, preferem o arranjo atual: exportar commodity bruta, receber comissão de intermediário, manter trabalhador pobre sem poder de barganha. A corrupção local não é falha do sistema — ela é parte constitutiva do sistema de exploração.</div>
+        <div class="mech-ref">Frantz Fanon, "Os Condenados da Terra" (1961) · Walter Rodney, "How Europe Underdeveloped Africa" (1972)</div>
+      </div>
+      <div class="mech card-amber">
+        <div class="mech-title">7. Dívida perpétua como correia</div>
+        <div class="mech-body">Países tropicais gastam em média 2–4× mais em serviço da dívida do que em saúde e educação combinados. Dívidas frequentemente originadas por ditadores (apoiados pelo norte) são herdadas por democracias. A dívida não é acidente — é arquitetura de subordinação.</div>
+        <div class="mech-ref">Eric Toussaint, "The Debt System" (2019) · Jubilee Debt Campaign</div>
+      </div>
+      <div class="mech card-red">
+        <div class="mech-title">8. Golpes e assassinatos seletivos</div>
+        <div class="mech-body">A regra não escrita: pode ter o recurso, não pode industrializá-lo. Quando um líder tenta romper — moeda soberana, nacionalização, industrialização — sofre golpe (Chile 73, Bolivia 19), assassinato (Lumumba 60, Sankara 87) ou sanções econômicas até a capitulação (Venezuela, Irã).</div>
+        <div class="mech-ref">John Perkins, "Confissões de um Assassino Econômico" (2004) · CIA FOIA Declassified Files</div>
+      </div>
+      <div class="mech card-teal">
+        <div class="mech-title">9. Desindustrialização histórica deliberada</div>
+        <div class="mech-body">Inglaterra destruiu a indústria têxtil indiana (1813–1858) via tarifas assimétricas: indiana pagava 80%, inglesa entrava livre. O Brasil teve cláusulas no Tratado de 1810 (pressão britânica) limitando tarifas a 15% — impossível proteger indústria nascente. "Livre comércio" é privilégio de quem já chegou.</div>
+        <div class="mech-ref">Pankaj Mishra, "From the Ruins of Empire" (2012) · Boris Fausto, "História do Brasil"</div>
+      </div>
+    </div>
+
+    <div class="quote">
+      <div class="quote-text">"Os países ricos pregam o livre comércio enquanto usaram protecionismo pesado para se industrializar. Depois de chegar ao topo, chutaram a escada para que outros não subissem."</div>
+      <div class="quote-attr">— Ha-Joon Chang, economista, Universidade de Cambridge</div>
+    </div>
+    <div class="quote">
+      <div class="quote-text">"A África não é pobre. A África é saqueada. Há uma diferença fundamental que as narrativas dominantes propositalmente obscurecem."</div>
+      <div class="quote-attr">— Jason Hickel, "The Divide: A Brief Guide to Global Inequality" (2017)</div>
+    </div>
+    <div class="quote">
+      <div class="quote-text">"Não existe 'subdesenvolvimento' como estado natural — existe o subdesenvolvimento causado pelo desenvolvimento dos outros. São dois lados da mesma moeda histórica."</div>
+      <div class="quote-attr">— Walter Rodney, "How Europe Underdeveloped Africa" (1972)</div>
+    </div>
+  </div>
+
+  <!-- SEÇÃO 3: EVIDÊNCIAS -->
+  <div class="section" id="s-evidencias">
+    <div class="section-label">03 — Intervenções documentadas: quando soberania ameaçou o arranjo</div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">1810</div>
+        <div class="tl-title">Brasil — Tratado com Portugal (pressão britânica)</div>
+        <div class="tl-body">Cláusulas impostas pela Inglaterra limitam tarifas de importação a 15% — tornando impossível proteger qualquer indústria nascente brasileira. Inglaterra exporta manufaturados, Brasil exporta matéria-prima. Template que sobreviveria 200 anos.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">1813–1858</div>
+        <div class="tl-title">Índia — Destruição da indústria têxtil</div>
+        <div class="tl-body">A Índia era o maior exportador têxtil do mundo. A East India Company impõe tarifas de 80% sobre tecidos indianos e zero para ingleses. Indústria destruída em décadas. Gandhi anos depois tecelaria como ato político de soberania.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">1953</div>
+        <div class="tl-title">Irã — Operação Ajax (CIA/MI6)</div>
+        <div class="tl-body">PM Mossadegh nacionaliza petróleo da Anglo-Persian Oil (hoje BP). CIA e MI6 financiam golpe — Operação Ajax. Shah retorna ao poder. Petróleo volta às corporações ocidentais. Desclassificado oficialmente em 2013.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">1960</div>
+        <div class="tl-title">Congo — Assassinato de Patrice Lumumba</div>
+        <div class="tl-body">Primeiro PM do Congo independente planeja industrializar cobalto, urânio e diamantes em benefício do povo congolês. CIA e serviços belgas financiam golpe. Lumumba executado com 36 anos. O Congo permanece até hoje a região mais rica em minerais e mais pobre do mundo (IDH: último terço global).</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">1964</div>
+        <div class="tl-title">Brasil — Golpe com apoio dos EUA</div>
+        <div class="tl-body">Goulart planeja reforma agrária, limitação de remessa de lucros e ampliação do papel da Petrobras. Embaixador Lincoln Gordon e LBJ coordenam "Operação Brother Sam". Documentos LBJ Library desclassificados confirmam a operação. 21 anos de ditadura.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">1973</div>
+        <div class="tl-title">Chile — Allende e o cobre</div>
+        <div class="tl-body">Allende nacionaliza o cobre — maior reserva mundial. Kissinger aprova "Operação Fubelt". Pinochet assume. Cobre retorna às mãos da Anaconda/Kennecott (EUA). Kissinger: "Não vejo razão para ficarmos de braços cruzados enquanto um país vai comunista por irresponsabilidade de seu povo." Câmara de Representantes dos EUA confirma o papel da CIA em 1975.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">1987</div>
+        <div class="tl-title">Burkina Faso — Assassinato de Thomas Sankara</div>
+        <div class="tl-body">Sankara: recusou ajuda do FMI, anulou dívida externa ilegítima, vacinou 2,5 milhões de crianças em semanas, reflorestou o país. Renomeou o país de Alto Volta (nome colonial) para Burkina Faso. Assassinado com 37 anos em golpe articulado com apoio francês e ivoiriano. Seu sucessor reverteu tudo.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">1994</div>
+        <div class="tl-title">OMC/TRIPS — Propriedade intelectual como arma</div>
+        <div class="tl-body">Acordo TRIPS impede países em desenvolvimento de replicar tecnologias patenteadas. Países que se industrializaram via engenharia reversa (Japão, Coreia do Sul, Taiwan) fecham a porta. Estimativa: custo adicional de $50–100bi/ano para o sul global em royalties tecnológicos.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2000–02</div>
+        <div class="tl-title">Venezuela — Tentativa de golpe contra Chávez</div>
+        <div class="tl-body">Chávez nacionaliza PDVSA, usa petrodólares para programas sociais, ameaça vender petróleo em euros. Golpe de abril de 2002 (durou 47 horas): EUA reconhece o governo golpista imediatamente. Chávez retorna. NYT editorial: "A democracia venezuelana não está morta." Anos de sanções e sabotagem econômica seguem.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2011</div>
+        <div class="tl-title">Líbia — A moeda de ouro pan-africana</div>
+        <div class="tl-body">Gaddafi articulava dinar de ouro africano para substituir franco CFA e dólar nas transações do continente, com 143 toneladas de ouro e $33bi em reservas. Email de Hillary Clinton (WikiLeaks, março 2011): preocupação explícita com a moeda de ouro como motivo da intervenção. OTAN intervém. Gaddafi morto. Franco CFA sobrevive.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2019</div>
+        <div class="tl-title">Bolívia — O golpe do lítio</div>
+        <div class="tl-body">Evo Morales assina contrato de industrialização do lítio com empresa alemã — mantendo controle boliviano. Semanas depois: golpe militar. Elon Musk no Twitter (2020): "Nós derrubamos governos que não gostamos. Com o quê?" (depois deletou). Morales exilado. Contrato cancelado. Novo governo assina com corporações favoráveis ao capital estrangeiro.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2023</div>
+        <div class="tl-title">Níger — O urânio e a expulsão francesa</div>
+        <div class="tl-body">Niger fornecia 35% do urânio das usinas nucleares francesas. Após décadas de "parceria" com base militar francesa permanente e IDH no último lugar do mundo, golpe militar expulsa França. CEDEAO (influenciada por Paris) ameaça intervenção militar. A contradição: parceiro mais pobre, recurso mais estratégico, e nenhuma riqueza local.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEÇÃO 4: ARQUITETURA FINANCEIRA -->
+  <div class="section" id="s-financeiro">
+    <div class="section-label">04 — A arquitetura financeira do controle: instrumentos vigentes em 2025</div>
+
+    <table class="matrix">
+      <thead>
+        <tr>
+          <th>Instrumento</th>
+          <th>Como funciona</th>
+          <th>Quem controla</th>
+          <th>Impacto na faixa tropical</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Bretton Woods (FMI/BM)</strong></td>
+          <td>Criados em 1944, votos ponderados por cotas — EUA têm poder de veto permanente</td>
+          <td>EUA + G7</td>
+          <td>Todo socorro vem com condicionalidades de abertura de mercado e privatização</td>
+          <td><span class="pill pill-r">Ativo</span></td>
+        </tr>
+        <tr>
+          <td><strong>Franco CFA</strong></td>
+          <td>14 países africanos guardam 50% das reservas no Banco da França, câmbio fixado em Paris</td>
+          <td>França / BCE</td>
+          <td>Impossibilita política monetária soberana; superávits exportados automaticamente</td>
+          <td><span class="pill pill-r">Ativo</span></td>
+        </tr>
+        <tr>
+          <td><strong>Sistema SWIFT / dólar-reserva</strong></td>
+          <td>Sistema de pagamentos global denominado em dólar, controlado por consórcio ocidental</td>
+          <td>Fed / G7</td>
+          <td>Sanção via SWIFT = arma de guerra sem balas (Irã, Venezuela, Rússia, Sudan)</td>
+          <td><span class="pill pill-r">Ativo</span></td>
+        </tr>
+        <tr>
+          <td><strong>Paraísos fiscais</strong></td>
+          <td>Ilhas Caimã, BVI, Luxemburgo, Delaware — todos sob jurisdição ou proteção ocidental</td>
+          <td>City of London / Wall Street</td>
+          <td>$500bi+/ano em evasão fiscal via preços de transferência e offshoring</td>
+          <td><span class="pill pill-r">Ativo</span></td>
+        </tr>
+        <tr>
+          <td><strong>Contratos de estabilização</strong></td>
+          <td>Mineradoras exigem cláusulas que congelam legislação fiscal por 25–30 anos no ato da concessão</td>
+          <td>Corporações + ICSID</td>
+          <td>País não pode aumentar royalties mesmo se recurso se valorizar 50×</td>
+          <td><span class="pill pill-r">Ativo</span></td>
+        </tr>
+        <tr>
+          <td><strong>ICSID — Tribunal de Investimentos</strong></td>
+          <td>Banco Mundial arbitra conflitos entre corporações e Estados — precedente histórico favorável ao capital</td>
+          <td>Banco Mundial</td>
+          <td>Bolívia, Argentina, Equador condenados a bilhões por tentar renacionalizar setores</td>
+          <td><span class="pill pill-r">Ativo</span></td>
+        </tr>
+        <tr>
+          <td><strong>TRIPS — Propriedade intelectual</strong></td>
+          <td>OMC 1994: impede países em dev. de replicar tecnologias patenteadas pelo norte</td>
+          <td>OMC / corporações</td>
+          <td>$50–100bi/ano em royalties + impossibilidade de política industrial via cópia tecnológica</td>
+          <td><span class="pill pill-r">Ativo</span></td>
+        </tr>
+        <tr>
+          <td><strong>Dívida odiosa herdada</strong></td>
+          <td>Dívidas contraídas por ditadores (apoiados pelo norte) são cobradas de democracias subsequentes</td>
+          <td>Credores privados / FMI</td>
+          <td>Países gastam 30–50% do orçamento servindo dívidas originalmente ilegítimas</td>
+          <td><span class="pill pill-r">Ativo</span></td>
+        </tr>
+        <tr>
+          <td><strong>Acordos EPA / AGOA (acesso assimétrico)</strong></td>
+          <td>"Acesso a mercados" condicionado à abertura: país exporta commodity livre, importa manufaturado subsidiado</td>
+          <td>EUA / UE</td>
+          <td>Impede política industrial — qualquer subsídio à indústria local pode ser bloqueado na OMC</td>
+          <td><span class="pill pill-r">Ativo</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="section-label">O paradoxo da ajuda: sentido real do fluxo financeiro</div>
+    <div class="grid3">
+      <div class="card card-green">
+        <div class="kpi-label">Ajuda externa para África / ano</div>
+        <div class="kpi-value">$30bi</div>
+        <div class="kpi-unit">Noticiada como "generosidade ocidental"</div>
+      </div>
+      <div class="card card-red">
+        <div class="kpi-label">Fuga de capital de África / ano</div>
+        <div class="kpi-value">$88.6bi</div>
+        <div class="kpi-unit">Via preços de transferência, evasão e lucros</div>
+      </div>
+      <div class="card card-red">
+        <div class="kpi-label">Saldo real (África → Norte)</div>
+        <div class="kpi-value">-$58.6bi</div>
+        <div class="kpi-unit">O sul financia o norte — não o inverso</div>
+        <div class="kpi-delta down">Razão: 3:1 — para cada $1 de ajuda, $3 saem</div>
+      </div>
+    </div>
+
+    <div class="quote">
+      <div class="quote-text">"O FMI e o Banco Mundial funcionaram como instrumentos para manter países em desenvolvimento abertos aos mercados globais — mas em condições que perpetuam sua posição subordinada na divisão internacional do trabalho."</div>
+      <div class="quote-attr">— Joseph Stiglitz, ex-economista-chefe do Banco Mundial · Nobel de Economia 2001</div>
+    </div>
+  </div>
+
+  <!-- SEÇÃO 5: POR QUE TEMEM -->
+  <div class="section" id="s-ameaca">
+    <div class="section-label">05 — O que as potências temem: o cenário de soberania tropical real</div>
+
+    <div class="threat-grid">
+      <div class="card card-red">
+        <div class="threat-title">Minerais para transição energética</div>
+        <div class="threat-body">Sem cobalto do Congo, lítio do Triângulo (Bol/Chi/Arg) e nióbio do Brasil, a transição global para carros elétricos e baterias simplesmente para. O "mundo verde" do norte depende inteiramente de minerais extraídos da faixa tropical por trabalhadores em condições medievais.</div>
+        <div class="threat-score"><div class="score-dots"><div class="dot dot-on"></div><div class="dot dot-on"></div><div class="dot dot-on"></div><div class="dot dot-on"></div><div class="dot dot-on"></div></div><div class="score-label">Dependência estrutural: 5/5</div></div>
+      </div>
+      <div class="card card-red">
+        <div class="threat-title">Controle do preço de minerais industrializados</div>
+        <div class="threat-body">Se Congo exportasse baterias prontas (não cobalto bruto), ou Brasil exportasse aço especial com nióbio (não minério), o preço de manufaturados globais dobraria em 5 anos e o norte perderia a principal vantagem comparativa que mantém desde o século XIX.</div>
+        <div class="threat-score"><div class="score-dots"><div class="dot dot-on"></div><div class="dot dot-on"></div><div class="dot dot-on"></div><div class="dot dot-on"></div><div class="dot dot-on"></div></div><div class="score-label">Dependência estrutural: 5/5</div></div>
+      </div>
+      <div class="card card-amber">
+        <div class="threat-title">Moeda alternativa ao dólar</div>
+        <div class="threat-body">Toda tentativa de criar moeda regional tropical (dinar de ouro africano, Petro venezuelano, moeda BRICS) foi sabotada. O dólar como moeda de reserva permite aos EUA financiar déficits ilimitados — o mundo tropical paga via inflação importada e câmbio desfavorável.</div>
+        <div class="threat-score"><div class="score-dots"><div class="dot dot-on"></div><div class="dot dot-on"></div><div class="dot dot-on"></div><div class="dot dot-on"></div><div class="dot dot-on"></div></div><div class="score-label">Dependência estrutural: 5/5</div></div>
+      </div>
+      <div class="card card-amber">
+        <div class="threat-title">Explosão demográfica africana</div>
+        <div class="threat-body">África terá 2.5 bilhões de pessoas em 2050 — a maior força de trabalho jovem do planeta. Com educação e industrialização soberana, seria a principal potência econômica do século XXI. O norte envelhece e automatiza; o sul explode demograficamente sem canalização produtiva.</div>
+        <div class="threat-score"><div class="score-dots"><div class="dot dot-on"></div><div class="dot dot-on"></div><div class="dot dot-on"></div><div class="dot dot-on"></div><div class="dot dot-off"></div></div><div class="score-label">Dependência estrutural: 4/5</div></div>
+      </div>
+      <div class="card card-red">
+        <div class="threat-title">Soberania hídrica</div>
+        <div class="threat-body">Com o colapso hídrico global se acelerando, a Amazônia e os aquíferos africanos valerão mais que petróleo em 2050. A soberania sobre água doce é a próxima fronteira de conflito geopolítico — e 80% das reservas mundiais de água doce superficial estão na faixa tropical.</div>
+        <div class="threat-score"><div class="score-dots"><div class="dot dot-on"></div><div class="dot dot-on"></div><div class="dot dot-on"></div><div class="dot dot-on"></div><div class="dot dot-on"></div></div><div class="score-label">Dependência estrutural: 5/5</div></div>
+      </div>
+      <div class="card card-teal">
+        <div class="threat-title">Biodiversidade e farmacologia</div>
+        <div class="threat-body">Amazônia e florestas tropicais concentram 70% das espécies com potencial farmacológico ainda inexplorado. Estimativa de valor: trilhões. Países megadiversos não controlam pesquisa, patenteamento nem comercialização — corporações do norte bioprospectam e faturam.</div>
+        <div class="threat-score"><div class="score-dots"><div class="dot dot-on"></div><div class="dot dot-on"></div><div class="dot dot-on"></div><div class="dot dot-off"></div><div class="dot dot-off"></div></div><div class="score-label">Dependência estrutural: 3/5</div></div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="section-label">O cenário que nenhuma potência quer ver: a convergência tropical</div>
+    <div class="card" style="margin-bottom:1.5rem">
+      <div style="font-size:13px;color:var(--ink2);line-height:1.8">
+        Se <span class="highlight">Brasil, Congo, Bolívia e Nigéria</span> coordenassem a exportação apenas de produtos industrializados — baterias prontas (não cobalto bruto), aço especial com nióbio (não minério), derivados refinados (não petróleo cru) — a balança de poder global mudaria em uma geração.<br><br>
+        Se <span class="highlight">a União Africana criasse moeda comum lastreada em commodities</span> (ouro, urânio, cobalto), o franco CFA desapareceria e a França perderia o financiamento implícito que extrai de 14 ex-colônias há 60 anos.<br><br>
+        Se <span class="highlight">a Amazônia fosse precificada como ativo estratégico de carbono e água</span> — ao invés de simplesmente não ser desmatada em troca de nada — o Brasil teria poder de negociação geopolítica sem precedente histórico.<br><br>
+        Se <span class="highlight">o Triângulo do Lítio</span> (Bolívia, Chile, Argentina) coordenasse preço mínimo de exportação como a OPEP fez com petróleo, controlaria a transição energética global por décadas.<br><br>
+        <em style="color:var(--ink3);font-size:11px">Nenhum desses cenários requer tecnologia nova. Todos requerem apenas vontade política soberana — e é exatamente por isso que são sistematicamente impedidos via corrupção de elites, golpes, sanções e condicionalidades financeiras.</em>
+      </div>
+    </div>
+
+    <div class="quote">
+      <div class="quote-text">"O controle sobre matérias-primas críticas é o novo controle sobre territórios. O colonialismo do século XXI não precisa de soldados — ele tem contratos de mineração, tribunais de arbitragem e taxas de câmbio."</div>
+      <div class="quote-attr">— Síntese analítica a partir de Hickel, Chang, Rodney e Toussaint</div>
+    </div>
+  </div>
+
+  <!-- SEÇÃO 6: REFERÊNCIAS -->
+  <div class="section" id="s-referencias">
+    <div class="section-label">06 — Fontes, autores e referências verificáveis</div>
+
+    <table class="matrix">
+      <thead>
+        <tr><th>Autor / Obra</th><th>Contribuição central</th><th>Tipo</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Ha-Joon Chang</strong> — "Chutando a Escada" (2002)</td><td>Demonstra que países ricos se industrializaram com protecionismo e depois bloquearam o mesmo caminho ao sul global via OMC/FMI</td><td><span class="pill pill-t">Acadêmico</span></td></tr>
+        <tr><td><strong>Walter Rodney</strong> — "How Europe Underdeveloped Africa" (1972)</td><td>Análise estrutural de como o colonialismo deliberadamente subdesenvolveu o continente para manter dependência permanente</td><td><span class="pill pill-t">Acadêmico</span></td></tr>
+        <tr><td><strong>Jason Hickel</strong> — "The Divide" (2017)</td><td>Quantifica o saque colonial e prova que o sul global é credor líquido do norte, não devedor</td><td><span class="pill pill-t">Acadêmico</span></td></tr>
+        <tr><td><strong>Joseph Stiglitz</strong> — "Globalização e seus Malefícios" (2002)</td><td>Ex-economista-chefe do BM expõe as condicionalidades predatórias do FMI de dentro do sistema</td><td><span class="pill pill-t">Acadêmico</span></td></tr>
+        <tr><td><strong>John Perkins</strong> — "Confissões de um Assassino Econômico" (2004)</td><td>Testemunho de insider sobre como EUA usam dívida, corporações e CIA para controlar países em desenvolvimento</td><td><span class="pill pill-a">Testemunho</span></td></tr>
+        <tr><td><strong>Frantz Fanon</strong> — "Os Condenados da Terra" (1961)</td><td>Análise psicopolítica do colonialismo e do papel da elite local como agente de manutenção do sistema de exploração</td><td><span class="pill pill-t">Acadêmico</span></td></tr>
+        <tr><td><strong>Eric Toussaint</strong> — "The Debt System" (2019)</td><td>História da dívida externa como instrumento de dominação desde o século XIX até os mecanismos vigentes</td><td><span class="pill pill-t">Acadêmico</span></td></tr>
+        <tr><td><strong>Ndongo Samba Sylla</strong> — "L'arme invisible de la Françafrique" (2020)</td><td>Análise definitiva do Franco CFA como mecanismo de colonialismo monetário ainda vigente em 14 países africanos</td><td><span class="pill pill-t">Acadêmico</span></td></tr>
+        <tr><td><strong>Pankaj Mishra</strong> — "From the Ruins of Empire" (2012)</td><td>Como o colonialismo destruiu sistemas econômicos funcionais no Sul e Leste asiático no século XIX</td><td><span class="pill pill-t">Acadêmico</span></td></tr>
+        <tr><td><strong>CIA FOIA Declassified Files</strong> — 1953–2004</td><td>Documentos oficiais confirmando intervenções no Irã (1953), Brasil (1964), Chile (1973), Congo e outros</td><td><span class="pill pill-r">Primário</span></td></tr>
+        <tr><td><strong>WikiLeaks — Clinton Emails (2016)</strong></td><td>Emails de Hillary Clinton confirmando preocupação com dinar de ouro africano como motivação real da intervenção na Líbia</td><td><span class="pill pill-r">Primário</span></td></tr>
+        <tr><td><strong>LBJ Presidential Library</strong> — Documentos desclassificados (1976, 2004)</td><td>Confirmam coordenação dos EUA no golpe brasileiro de 1964, incluindo "Operação Brother Sam"</td><td><span class="pill pill-r">Primário</span></td></tr>
+        <tr><td><strong>Global Financial Integrity</strong> — Relatórios Anuais 2010–2022</td><td>Quantifica preços de transferência e fuga de capital dos países em desenvolvimento: $500bi+/ano</td><td><span class="pill pill-g">Institucional</span></td></tr>
+        <tr><td><strong>UNCTAD</strong> — Trade Misinvoicing Database</td><td>Dados oficiais da ONU sobre sub-faturamento de exportações de commodities por multinacionais</td><td><span class="pill pill-g">Institucional</span></td></tr>
+        <tr><td><strong>SAPRIN Report</strong> (2002) — Structural Adjustment Participatory Review</td><td>Avaliação participativa dos impactos dos programas de ajuste estrutural do FMI/BM em 7 países</td><td><span class="pill pill-g">Institucional</span></td></tr>
+        <tr><td><strong>Banco Mundial</strong> — World Development Indicators (2024)</td><td>PIB, dívida externa, serviço da dívida, exportações de commodities e IDH por país — todos dados citados</td><td><span class="pill pill-g">Institucional</span></td></tr>
+        <tr><td><strong>Jubilee Debt Campaign</strong> — Relatórios de dívida soberana (2010–2024)</td><td>Rastreamento da dívida externa de países em desenvolvimento e sua ilegitimidade histórica</td><td><span class="pill pill-g">Institucional</span></td></tr>
+      </tbody>
+    </table>
+
+    <div class="quote">
+      <div class="quote-text">"Quando vejo países africanos sendo chamados de 'em desenvolvimento', me pergunto: em desenvolvimento em direção a quê? E de onde partiram antes da exploração?"</div>
+      <div class="quote-attr">— Adaptado de Walter Rodney</div>
+    </div>
+  </div>
+
+  <!-- RELATED ARTICLES -->
+  <div class="related">
+    <div class="related-label">Dossiês relacionados · lawfare-timeline</div>
+    <div class="related-grid">
+
+      <a class="rel-card" href="https://gosurf.site/cadeia-influencia-usaid-tse-2022">
+        <div class="rel-tag">Financiamento externo · 8 camadas</div>
+        <div class="rel-title">USAID → ONGs → NetLab → TSE — Cadeia de Influência Jurídica</div>
+        <div class="rel-desc">Como recursos externos financiaram o ecossistema de controle narrativo que operou nas eleições 2022. 18 nós documentados.</div>
+        <div class="rel-read">18 min</div>
+      </a>
+
+      <a class="rel-card" href="https://gosurf.site/global-kompromat">
+        <div class="rel-tag">Geopolítica · Captura institucional global</div>
+        <div class="rel-title">Global Kompromat — Mapa de Captura Institucional</div>
+        <div class="rel-desc">Dossiê forense sobre redes de captura institucional e kompromat em escala global. Padrões P3–P8 identificados em múltiplos países.</div>
+        <div class="rel-read">Dossiê</div>
+      </a>
+
+      <a class="rel-card" href="https://gosurf.site/golpe-brasil-analise-evidencial">
+        <div class="rel-tag">Brasil · Análise evidencial · Dois vetores</div>
+        <div class="rel-title">Quem Deu o Golpe no Brasil? — Análise Evidencial</div>
+        <div class="rel-desc">Síntese baseada em documentos primários: weaponized legalism vs. força física. Assimetria radical de evidência e consequência.</div>
+        <div class="rel-read">20 min</div>
+      </a>
+
+      <a class="rel-card" href="https://gosurf.site/brasil-estado-totalitario">
+        <div class="rel-tag">Brasil · Lawfare · Estado capturado</div>
+        <div class="rel-title">Weaponized Legalism — Brasil: Anatomia de um Estado Capturado</div>
+        <div class="rel-desc">Como o judiciário se tornou arma política: censura digital, prisões seletivas, assimetria eleitoral. O golpe de togas.</div>
+        <div class="rel-read">Dossiê</div>
+      </a>
+
+      <a class="rel-card" href="https://gosurf.site/brasil-maquina-de-captura">
+        <div class="rel-tag">Brasil · Diagnóstico sistêmico</div>
+        <div class="rel-title">Máquina de Captura — Diagnóstico Sistêmico</div>
+        <div class="rel-desc">Cruzamento de indicadores socioeconômicos com arquitetura de direito extrativa. O padrão estrutural que reproduz pobreza e dependência.</div>
+        <div class="rel-read">12 min</div>
+      </a>
+
+      <a class="rel-card" href="https://gosurf.site/brazil-democratic-erosion-2026">
+        <div class="rel-tag">Brasil · Inglês · Relatório 2026</div>
+        <div class="rel-title">Brazil Democratic Erosion Report 2026</div>
+        <div class="rel-desc">Relatório em inglês sobre erosão democrática no Brasil: concentração de poder judicial, interferência eleitoral e estado de direito.</div>
+        <div class="rel-read">Report [EN]</div>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <strong>Dossiê Geopolítico: A Faixa do Silêncio</strong> &mdash; Compilado a partir de fontes acadêmicas verificáveis, documentos governamentais desclassificados e relatórios de organismos internacionais. Nenhuma afirmação sem referência documentável. Uso livre (CC0). Atualização: 2025.
+  </div>
+</div>
+
+<script>
+/* ── Scroll to section ── */
+function goTo(id){
+  const el = document.getElementById('s-'+id);
+  if(!el) return;
+  const navH = document.getElementById('main-nav').offsetHeight;
+  const top = el.getBoundingClientRect().top + window.scrollY - navH - 12;
+  window.scrollTo({top, behavior:'smooth'});
+}
+
+/* ── Scroll spy ── */
+function setActive(id){
+  document.querySelectorAll('.nav-btn').forEach(b=>{
+    b.classList.toggle('active', b.dataset.section===id);
+  });
+}
+
+(function initSpy(){
+  const sections = ['kpis','mecanismos','evidencias','financeiro','ameaca','referencias'];
+  function onScroll(){
+    const navH = (document.getElementById('main-nav')||{offsetHeight:56}).offsetHeight + 32;
+    let current = sections[0];
+    for(const id of sections){
+      const el = document.getElementById('s-'+id);
+      if(!el) continue;
+      if(el.getBoundingClientRect().top <= navH) current = id;
+    }
+    setActive(current);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+
+const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const gridColor = isDark ? 'rgba(255,255,255,0.07)' : 'rgba(0,0,0,0.07)';
+const textColor = isDark ? '#c8bfb0' : '#3a3a3a';
+
+const ctx = document.getElementById('chartPop');
+if(ctx){
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Noruega','EUA','Alemanha','Coreia do Sul','Brasil','Nigéria','Índia','Congo (DRC)','Etiópia','Moçambique','Niger'],
+      datasets: [{
+        label: 'PIB per capita USD (2024)',
+        data: [108100, 80300, 54300, 35000, 10300, 2190, 2700, 760, 1080, 580, 510],
+        backgroundColor: [
+          '#165c30','#165c30','#165c30','#a8450a',
+          '#b5311f','#b5311f','#b5311f','#b5311f','#b5311f','#b5311f','#b5311f'
+        ],
+        borderRadius: 3
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: ctx => 'USD ' + ctx.parsed.y.toLocaleString('pt-BR') } }
+      },
+      scales: {
+        x: { ticks: { color: textColor, font: { size: 10, family: 'JetBrains Mono' } }, grid: { color: gridColor } },
+        y: {
+          ticks: { color: textColor, font: { size: 10 }, callback: v => '$' + (v/1000).toFixed(0) + 'k' },
+          grid: { color: gridColor }
+        }
+      }
+    }
+  });
+}
+</script>
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

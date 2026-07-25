@@ -58,8 +58,8 @@ A ordem cronológica — acordo internacional negociado primeiro, consulta popul
 
 Entradas conectadas nesta série:
 
-- [Entrada 1654](/timeline/entries/1654)
-- [Entrada 1655](/timeline/entries/1655)
+- [Entrada 1654](/posts/id1654-governo-do-para-assina-protocolo-de-intencoes-com-a-cccc-para-a-ferrovia-do-para/)
+- [Entrada 1655](/posts/id1655-barbalho-cccc-e-vale-assinam-mou-da-ferrovia-do-para-em-pequim-r10-bilhoes-us2-b/)
 
 ---
 

@@ -42,7 +42,7 @@ Campo da direita para 2026 passa a ter múltiplos pré-candidatos governadores s
 
 Entradas conectadas nesta série:
 
-- [Entrada 1686](/timeline/entries/1686)
+- [Entrada 1686](/posts/id1686-zema-deixa-o-governo-de-minas-gerais-para-concorrer-a-presidencia-pelo-partido-n/)
 
 ---
 

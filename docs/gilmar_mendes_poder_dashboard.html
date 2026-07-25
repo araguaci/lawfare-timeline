@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gilmar Mendes — Dossiê Investigativo 2026</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Syne:wght@400;600;700;800&display=swap');
+
+:root {
+  --bg:  #09090b;
+  --bg2: #0f0f13;
+  --bg3: #16161c;
+  --bg4: #1e1e26;
+  --border:  #252530;
+  --border2: #333340;
+  --text:  #e6e4de;
+  --text2: #96948c;
+  --text3: #52504e;
+  --red:    #e83a3a;
+  --red2:   #ff6060;
+  --amber:  #e89820;
+  --amber2: #ffc030;
+  --green:  #26c870;
+  --blue:   #3878ff;
+  --blue2:  #78a8ff;
+  --purple: #8858e8;
+  --cyan:   #18c8d8;
+  --orange: #e86020;
+  --font-d: 'Syne', sans-serif;
+  --font-m: 'IBM Plex Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-m);
+  font-size: 13px;
+  line-height: 1.65;
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.025) 2px, rgba(0,0,0,0.025) 4px);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.wrap { max-width: 1360px; margin: 0 auto; padding: 0 24px 100px; }
+
+/* ── HEADER ── */
+.header {
+  border-bottom: 1px solid var(--border);
+  padding: 36px 0 28px;
+  margin-bottom: 36px;
+  position: relative;
+}
+.header-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 14px;
+}
+.pulse-dot {
+  width: 8px; height: 8px;
+  background: var(--red);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,100%{ opacity:1; transform:scale(1); }
+  50%{ opacity:.35; transform:scale(.7); }
+}
+h1 {
+  font-family: var(--font-d);
+  font-size: clamp(26px, 4.5vw, 56px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+h1 .hl-red   { color: var(--red); }
+h1 .hl-amber { color: var(--amber); }
+.header-sub {
+  font-size: 12px;
+  color: var(--text3);
+  margin-top: 12px;
+  max-width: 720px;
+  line-height: 1.7;
+}
+.header-meta {
+  position: absolute;
+  right: 0; top: 36px;
+  text-align: right;
+  font-size: 10px;
+  color: var(--text3);
+  line-height: 1.9;
+}
+.cc0-badge {
+  display: inline-block;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 10px;
+  color: var(--text3);
+  margin-top: 4px;
+}
+
+/* ── SEVERITY BAND ── */
+.severity-band {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+.sev-item {
+  background: var(--bg2);
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.sev-label { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text3); }
+.sev-value { font-family: var(--font-d); font-size: 22px; font-weight: 700; }
+.sev-desc  { font-size: 11px; color: var(--text2); }
+.col-red    { color: var(--red); }
+.col-amber  { color: var(--amber2); }
+.col-green  { color: var(--green); }
+.col-blue   { color: var(--blue2); }
+.col-orange { color: var(--orange); }
+
+/* ── TABS / STICKY NAV ── */
+.tab-nav {
+  display: flex;
+  gap: 2px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 32px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: rgba(9,9,11,0.97);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 2px solid var(--border2);
+  margin-left: -24px;
+  margin-right: -24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-bottom: 40px;
+}
+.tab-nav::-webkit-scrollbar { display: none; }
+.tab-btn {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 10px 18px;
+  font-family: var(--font-m);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text3);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all .2s;
+  margin-bottom: -1px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+.tab-btn:hover { color: var(--text2); }
+.tab-btn.active {
+  color: var(--text);
+  border-bottom-color: var(--red);
+}
+
+/* ── SECTION PANELS ── */
+.tab-panel { display: block; }
+.tab-panel + .tab-panel {
+  border-top: 1px solid var(--border);
+  padding-top: 44px;
+  margin-top: 52px;
+}
+.tab-panel { scroll-margin-top: 52px; }
+
+/* ── SECTION TITLE ── */
+.sec-title {
+  font-family: var(--font-d);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+}
+.sec-sub {
+  font-size: 11px;
+  color: var(--text3);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+/* ── STAT GRID ── */
+.stat-grid4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.stat-grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 24px;
+}
+@media (max-width: 900px) { .stat-grid4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .stat-grid3, .stat-grid4 { grid-template-columns: 1fr 1fr; } }
+.stat-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 14px 18px;
+}
+.stat-label { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text3); margin-bottom: 6px; }
+.stat-val { font-family: var(--font-d); font-size: 24px; font-weight: 700; line-height: 1; }
+.stat-note { font-size: 11px; color: var(--text2); margin-top: 5px; }
+
+/* ── TIMELINE ── */
+.chrono { position: relative; padding-left: 28px; margin-bottom: 36px; }
+.chrono::before {
+  content: '';
+  position: absolute;
+  left: 8px; top: 0; bottom: 0;
+  width: 1px;
+  background: var(--border2);
+}
+.chrono-item {
+  position: relative;
+  margin-bottom: 22px;
+}
+.chrono-item::before {
+  content: '';
+  position: absolute;
+  left: -24px;
+  top: 5px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--border2);
+  border: 2px solid var(--bg);
+}
+.ci-red::before    { background: var(--red); }
+.ci-amber::before  { background: var(--amber); }
+.ci-green::before  { background: var(--green); }
+.ci-blue::before   { background: var(--blue); }
+.ci-orange::before { background: var(--orange); }
+.ci-gray::before   { background: var(--text3); }
+.chrono-date { font-size: 10px; color: var(--text3); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 4px; }
+.chrono-title{ font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+.chrono-body { font-size: 12px; color: var(--text2); line-height: 1.65; }
+.chrono-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.ctag {
+  font-size: 9px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+  padding: 2px 7px; border-radius: 2px; border: 1px solid var(--border2); color: var(--text3);
+}
+.ctag-red    { border-color: rgba(232,58,58,.4);   color: var(--red2); }
+.ctag-amber  { border-color: rgba(232,152,32,.4);  color: var(--amber2); }
+.ctag-blue   { border-color: rgba(56,120,255,.4);  color: var(--blue2); }
+.ctag-orange { border-color: rgba(232,96,32,.4);   color: var(--orange); }
+.ctag-green  { border-color: rgba(38,200,112,.4);  color: var(--green); }
+
+/* ── TWO-COLUMN ── */
+.col-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+  margin-bottom: 24px;
+}
+@media (max-width: 800px) { .col-row { grid-template-columns: 1fr; } }
+
+/* ── GENERIC CARD ── */
+.card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 16px 20px;
+  margin-bottom: 10px;
+}
+.card-title { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+.card-body  { font-size: 12px; color: var(--text2); line-height: 1.65; }
+
+/* ── BLOCK TITLE ── */
+.block-title {
+  font-family: var(--font-d);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.dot-red  { width: 7px; height: 7px; border-radius: 50%; background: var(--red);   flex-shrink: 0; }
+.dot-amber{ width: 7px; height: 7px; border-radius: 50%; background: var(--amber); flex-shrink: 0; }
+
+/* ── BAR CHART ── */
+.bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.bar-label { font-size: 11px; color: var(--text2); width: 120px; flex-shrink: 0; text-align: right; }
+.bar-track { flex: 1; height: 6px; background: var(--bg4); border-radius: 3px; overflow: hidden; }
+.bar-fill  { height: 100%; border-radius: 3px; transition: width .6s ease; }
+.bar-val   { font-family: var(--font-d); font-size: 11px; color: var(--text); width: 80px; }
+.bar-note  { font-size: 10px; color: var(--text3); font-family: var(--font-m); margin: 4px 0 16px; text-align: right; padding-right: 10px; }
+
+/* ── NETWORK LIST ── */
+.network-list { display: flex; flex-direction: column; }
+.network-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+}
+.network-item:last-child { border-bottom: none; }
+.ni-ico    { font-size: 14px; width: 20px; text-align: center; flex-shrink: 0; color: var(--text3); }
+.ni-name   { font-weight: 600; color: var(--text); display: block; margin-bottom: 2px; }
+.ni-detail { color: var(--text2); font-size: 11px; }
+.ni-risk   {
+  font-family: var(--font-m);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  color: var(--red2);
+  margin-left: auto;
+  flex-shrink: 0;
+  background: rgba(232,58,58,.1);
+  border: 1px solid rgba(232,58,58,.25);
+  padding: 2px 6px;
+  border-radius: 2px;
+  align-self: flex-start;
+}
+.ni-risk.warn {
+  color: var(--amber2);
+  background: rgba(232,152,32,.1);
+  border-color: rgba(232,152,32,.25);
+}
+
+/* ── MECH CARDS ── */
+.mech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  margin-bottom: 36px;
+  margin-top: 24px;
+}
+.mech-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.mech-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
+}
+.mech-red::before    { background: var(--red); }
+.mech-amber::before  { background: var(--amber); }
+.mech-blue::before   { background: var(--blue); }
+.mech-green::before  { background: var(--green); }
+.mech-purple::before { background: var(--purple); }
+.mech-orange::before { background: var(--orange); }
+.mech-num   { font-size: 10px; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: var(--text3); margin-bottom: 8px; }
+.mech-title { font-family: var(--font-d); font-size: 15px; font-weight: 700; line-height: 1.3; margin-bottom: 10px; }
+.mech-body  { color: var(--text2); font-size: 12px; line-height: 1.7; }
+
+/* ── HIGHLIGHT QUOTE ── */
+.hq {
+  border-left: 3px solid var(--red);
+  padding: 14px 20px;
+  margin: 24px 0;
+  background: var(--bg2);
+  border-radius: 0 3px 3px 0;
+}
+.hq-text { font-size: 13px; color: var(--text); line-height: 1.7; font-style: italic; }
+.hq-attr { font-size: 11px; color: var(--text3); margin-top: 8px; }
+
+/* ── ALERT BOX ── */
+.alert-box {
+  border: 1px solid rgba(232,96,32,.4);
+  background: rgba(232,96,32,.06);
+  border-radius: 4px;
+  padding: 18px 22px;
+  margin: 24px 0;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.alert-icon { font-size: 20px; flex-shrink: 0; }
+.alert-body { font-size: 12px; color: var(--text2); line-height: 1.7; }
+.alert-body strong { color: var(--text); }
+
+/* ── VERDICT BOX ── */
+.verdict {
+  background: rgba(232,58,58,.06);
+  border: 1px solid rgba(232,58,58,.3);
+  border-radius: 4px;
+  padding: 24px 28px;
+  margin: 32px 0;
+}
+.verdict-title {
+  font-family: var(--font-m);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 12px;
+}
+.verdict-text { font-size: 13px; color: var(--text2); line-height: 1.75; }
+.verdict-text strong { color: var(--text); }
+
+/* ── DIVIDER ── */
+.divider { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
+
+/* ── SIGNAL BOX ── */
+.signal-box {
+  background: var(--bg2);
+  border: 1px solid rgba(232,152,32,.35);
+  border-radius: 4px;
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+.signal-label { font-size: 10px; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: var(--amber); margin-bottom: 10px; }
+.signal-body  { font-size: 12px; color: var(--text2); line-height: 1.75; }
+.signal-body strong { color: var(--text); }
+
+/* ── PROGRESS BAR ── */
+.progress-bar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 9998;
+  height: 2px; background: rgba(255,255,255,0.04); pointer-events: none;
+}
+.progress-fill { height: 100%; background: var(--red); width: 0%; }
+
+/* ── RELATED ARTICLES ── */
+.related-section { margin: 56px 0 32px; }
+.related-heading {
+  font-family: var(--font-d);
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--text3);
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 20px;
+}
+.related-heading::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.related-card {
+  display: flex; flex-direction: column; gap: 5px;
+  padding: 14px 16px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: border-color .15s, background .15s;
+}
+.related-card:hover { border-color: var(--border2); background: var(--bg3); }
+.rc-label { font-size: 9px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text3); }
+.rc-title { font-size: 12px; font-weight: 600; color: var(--text); line-height: 1.4; }
+.rc-desc  { font-size: 11px; color: var(--text2); line-height: 1.5; }
+.rc-red    .rc-label { color: var(--red2); }
+.rc-amber  .rc-label { color: var(--amber2); }
+.rc-blue   .rc-label { color: var(--blue2); }
+.rc-green  .rc-label { color: var(--green); }
+.rc-orange .rc-label { color: var(--orange); }
+
+/* ── LAWFARE BANNER ── */
+.lawfare-banner {
+  display: flex; align-items: center; gap: 18px;
+  padding: 18px 24px;
+  background: var(--bg2);
+  border: 1px solid rgba(232,152,32,0.35);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: border-color .15s, background .15s;
+  margin-top: 12px;
+}
+.lawfare-banner:hover { border-color: rgba(232,152,32,0.65); background: var(--bg3); }
+.lb-icon { font-size: 24px; flex-shrink: 0; }
+.lb-body { flex: 1; }
+.lb-eyebrow { font-size: 9px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--amber); margin-bottom: 4px; }
+.lb-name { font-size: 14px; font-weight: 700; font-family: var(--font-d); color: var(--text); }
+.lb-url { font-size: 11px; color: var(--text3); margin-top: 3px; }
+.lb-arrow { font-size: 20px; color: var(--amber); flex-shrink: 0; opacity: 0.7; }
+
+/* ── FOOTER ── */
+.footer {
+  border-top: 1px solid var(--border);
+  margin-top: 60px;
+  padding-top: 24px;
+  font-size: 10px;
+  color: var(--text3);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer a { color: var(--text3); text-decoration: none; }
+.footer a:hover { color: var(--text2); }
+
+@media (max-width: 600px) {
+  .related-grid { grid-template-columns: 1fr; }
+  .lawfare-banner { flex-wrap: wrap; }
+  .header-meta { display: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="progress-bar"><div class="progress-fill" id="prog"></div></div>
+
+<div class="wrap">
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-eyebrow">
+    <div class="pulse-dot"></div>
+    Dossiê Investigativo · Lawfare-Timeline
+  </div>
+  <h1>
+    <span class="hl-red">GILMAR</span><br>
+    MENDES
+  </h1>
+  <div class="header-sub">
+    24 anos de poder acumulado no STF. Miniaturização da accountability: habeas corpus monocráticos em série, rede IDP de cooptação judicial, conflitos de interesses documentados pela Receita Federal, mecanismos de blindagem contra investigadores. O ministro que mudou as regras do próprio julgamento.
+  </div>
+  <div class="header-meta">
+    <div>ATUALIZADO · 24/ABR/2026</div>
+    <div><a href="https://lawfare-timeline.vercel.app" target="_blank" style="color:var(--amber);text-decoration:none;letter-spacing:inherit">LAWFARE-TIMELINE.VERCEL.APP ↗</a></div>
+    <div class="cc0-badge">CC0 1.0 DOMÍNIO PÚBLICO</div>
+  </div>
+</div>
+
+<!-- SEVERITY BAND -->
+<div class="severity-band">
+  <div class="sev-item">
+    <div class="sev-label">Anos no STF</div>
+    <div class="sev-value col-red">24</div>
+    <div class="sev-desc">Nenhum outro ministro chega perto</div>
+  </div>
+  <div class="sev-item">
+    <div class="sev-label">HCs monocráticos / década</div>
+    <div class="sev-value col-red">620+</div>
+    <div class="sev-desc">60% acima do 2º colocado no período</div>
+  </div>
+  <div class="sev-item">
+    <div class="sev-label">Pedidos de impeachment</div>
+    <div class="sev-value col-amber">18</div>
+    <div class="sev-desc">2015–2020 · nenhum apreciado pelo Senado</div>
+  </div>
+  <div class="sev-item">
+    <div class="sev-label">Reprovação pública (2018)</div>
+    <div class="sev-value col-red">84%</div>
+    <div class="sev-desc">Pesquisa nacional — maior do STF</div>
+  </div>
+  <div class="sev-item">
+    <div class="sev-label">Pedidos de vista acumulados</div>
+    <div class="sev-value col-amber">46</div>
+    <div class="sev-desc">Mais que qualquer outro ministro em atividade</div>
+  </div>
+</div>
+
+<!-- NAV STICKY -->
+<nav class="tab-nav" id="sticky-nav">
+  <a class="tab-btn active" href="#tab-indices">01 · Índices</a>
+  <a class="tab-btn" href="#tab-casos">02 · Casos</a>
+  <a class="tab-btn" href="#tab-idp">03 · IDP</a>
+  <a class="tab-btn" href="#tab-rede">04 · Rede</a>
+  <a class="tab-btn" href="#tab-blindagem">05 · Blindagem</a>
+  <a class="tab-btn" href="#tab-sintese">06 · Síntese</a>
+</nav>
+
+<!-- ═══════════════════════════════════════
+     SEÇÃO 01 — ÍNDICES CRÍTICOS
+════════════════════════════════════════ -->
+<div id="tab-indices" class="tab-panel">
+  <div class="sec-title">Índices Críticos</div>
+  <div class="sec-sub">Métricas objetivas de concentração de poder — 2002–2026</div>
+
+  <div class="stat-grid4">
+    <div class="stat-card">
+      <div class="stat-label">Anos no STF</div>
+      <div class="stat-val col-red">24</div>
+      <div class="stat-note">Nenhum outro chega perto</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">HCs monocráticos / década</div>
+      <div class="stat-val col-red">620</div>
+      <div class="stat-note">60% acima do 2º colocado</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Pedidos de impeachment</div>
+      <div class="stat-val col-amber">18</div>
+      <div class="stat-note">2015–2020 · nenhum apreciado</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Reprovação pública (2018)</div>
+      <div class="stat-val col-red">84%</div>
+      <div class="stat-note">Pesquisa nacional</div>
+    </div>
+  </div>
+
+  <div class="stat-grid3">
+    <div class="stat-card">
+      <div class="stat-label">Pedidos de vista acumulados</div>
+      <div class="stat-val col-amber">46</div>
+      <div class="stat-note">Mais que qualquer outro ministro</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">HCs individuais em 2019</div>
+      <div class="stat-val col-red">250</div>
+      <div class="stat-note">⅓ de todos do tribunal naquele ano</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Taxa de confirmação monocrática</div>
+      <div class="stat-val">98%</div>
+      <div class="stat-note">Apenas 4 de 202 revertidas em 5 anos</div>
+    </div>
+  </div>
+
+  <div class="hq">
+    <div class="hq-text">"Quando um único ministro pode suspender qualquer investigação nacional com uma liminar monocrática, sem prazo para revisão colegiada, o tribunal deixou de ser um tribunal."</div>
+    <div class="hq-attr">— Análise estrutural do lawfare-timeline — Padrão P6: STF como terminal de impunidade</div>
+  </div>
+
+  <div class="alert-box">
+    <div class="alert-icon">⚠</div>
+    <div class="alert-body">
+      <strong>Nota metodológica:</strong> Os dados quantitativos acima derivam de relatórios públicos do CNJ, levantamentos da Transparência Internacional Brasil e análises jornalísticas verificadas (Cruzo, Piauí, Folha de S.Paulo). Os índices não afirmam que cada decisão foi ilegítima — a tese é que <strong>a concentração estatisticamente anômala de poder discricionário, combinada com os conflitos de interesse documentados, cria risco estrutural ao Estado de Direito independentemente das intenções individuais</strong>.
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     SEÇÃO 02 — CASOS EMBLEMÁTICOS
+════════════════════════════════════════ -->
+<div id="tab-casos" class="tab-panel">
+  <div class="sec-title">Casos Emblemáticos</div>
+  <div class="sec-sub">Cronologia de decisões controversas documentadas — 2008–2024</div>
+
+  <div class="chrono">
+
+    <div class="chrono-item ci-red">
+      <div class="chrono-date">Jul 2008 — Operação Satiagraha</div>
+      <div class="chrono-title">Daniel Dantas solto em 48h — investigador expulso</div>
+      <div class="chrono-body">Daniel Dantas preso pela PF. Gilmar, presidente do STF, concede <strong>dois habeas corpus em 48 horas</strong>, soltando Dantas contra a vontade do juiz Fausto de Sanctis. Resultado: delegado Protógenes Queiroz investigado, condenado e expulso da PF. Juiz De Sanctis submetido a procedimentos disciplinares. As provas desidratadas ao longo do processo.</div>
+      <div class="chrono-tags">
+        <span class="ctag ctag-red">Crime organizado → solto em 48h</span>
+        <span class="ctag ctag-amber">Investigador → expulso</span>
+        <span class="ctag ctag-orange">P2 — Investigador vira investigado</span>
+      </div>
+    </div>
+
+    <div class="chrono-item ci-amber">
+      <div class="chrono-date">2014 — Financiamento empresarial de campanhas</div>
+      <div class="chrono-title">Pedido de vista trava decisão nas eleições</div>
+      <div class="chrono-body">Plenário prestes a proibir doações empresariais a campanhas políticas. Gilmar <strong>pediu vista</strong> do processo e só o devolveu em 2015 — as doações permaneceram legais durante todo o ciclo eleitoral daquele ano. Decisão unilateral com impacto nacional sobre financiamento político.</div>
+      <div class="chrono-tags">
+        <span class="ctag ctag-amber">Pedido de vista estratégico</span>
+        <span class="ctag ctag-orange">Eleições 2014 afetadas</span>
+      </div>
+    </div>
+
+    <div class="chrono-item ci-red">
+      <div class="chrono-date">2017 — Lava Jato Rio</div>
+      <div class="chrono-title">Padrinho de casamento solto 3 vezes — sem impedimento</div>
+      <div class="chrono-body"><strong>Jacó Barata Filho</strong> (conhecido como "rei dos ônibus"), que confessou o pagamento de propinas ao longo de 20 anos, foi solto <strong>três vezes</strong> por decisão de Gilmar. Detalhe documentado: Gilmar era padrinho de casamento da filha de Barata. Não se declarou impedido em nenhuma das decisões. No mesmo período: <strong>Eike Batista</strong> liberado e <strong>André Esteves do BTG</strong> recebeu múltiplas decisões favoráveis.</div>
+      <div class="chrono-tags">
+        <span class="ctag ctag-red">Conflito de interesses</span>
+        <span class="ctag ctag-red">Impedimento ignorado</span>
+        <span class="ctag ctag-amber">3 decisões favoráveis</span>
+      </div>
+    </div>
+
+    <div class="chrono-item ci-red">
+      <div class="chrono-date">2018 — Lava Jato — Operação em Massa</div>
+      <div class="chrono-title">21 presos soltos em 30 dias + estuprador foragido</div>
+      <div class="chrono-body"><strong>21 presos da Lava Jato no Rio</strong> soltos em menos de 30 dias por habeas corpus monocráticos. No mesmo período, concedeu habeas corpus ao médico Roger Abdelmassih, condenado a <strong>278 anos por 53 estupros</strong> — que aproveitou a liberdade para fugir ao Paraguai e ficou foragido por três anos antes de ser recapturado.</div>
+      <div class="chrono-tags">
+        <span class="ctag ctag-red">21 presos → soltos em 30 dias</span>
+        <span class="ctag ctag-red">Estuprador → foragido 3 anos</span>
+      </div>
+    </div>
+
+    <div class="chrono-item ci-amber">
+      <div class="chrono-date">2023–2024 — Banco Master / CBF</div>
+      <div class="chrono-title">CPI anulada 2x + contrato CBF via IDP no mesmo período</div>
+      <div class="chrono-body">CPI do Senado aprova quebra de sigilo relacionada ao caso Master — Gilmar <strong>anula monocraticamente duas vezes</strong>. Em paralelo documentado: o IDP assina contrato de 10 anos com a CBF Academy, com o filho Francisco como signatário. Após decisão desfavorável ao presidente da CBF Ednaldo Rodrigues, este cai no mesmo dia em que Gilmar emite despacho de "investigação urgente".</div>
+      <div class="chrono-tags">
+        <span class="ctag ctag-amber">CPI anulada 2x</span>
+        <span class="ctag ctag-amber">Contrato CBF via IDP</span>
+        <span class="ctag ctag-red">P3 — Captura judicial de emergência</span>
+      </div>
+    </div>
+
+    <div class="chrono-item ci-gray">
+      <div class="chrono-date">Dez 2024 — Autopreservação Institucional</div>
+      <div class="chrono-title">Mudou as regras do próprio julgamento</div>
+      <div class="chrono-body">Gilmar <strong>suspende monocraticamente</strong> partes da lei de impeachment de ministros do STF de 1950, elevando o quórum necessário para processar um ministro do Supremo de <strong>41 para 54 votos</strong> no Senado. Em outros termos: alterou unilateralmente as regras do processo que poderia ser usado contra ele próprio.</div>
+      <div class="chrono-tags">
+        <span class="ctag ctag-red">Mudou as regras do próprio julgamento</span>
+        <span class="ctag ctag-orange">Autopreservação institucional</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="hq">
+    <div class="hq-text">"Devolva essa pergunta a seu editor. Manda ele enfiar isso na bunda."</div>
+    <div class="hq-attr">— Gilmar Mendes ao repórter da Folha de S.Paulo que perguntou quem custeou suas passagens e diárias para Lisboa</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     SEÇÃO 03 — INFRAESTRUTURA IDP
+════════════════════════════════════════ -->
+<div id="tab-idp" class="tab-panel">
+  <div class="sec-title">Infraestrutura IDP — Instituto Brasiliense de Direito Público</div>
+  <div class="sec-sub">Antissala do poder · Cooptação judicial · Financiamento com conflito</div>
+
+  <div class="col-row">
+    <div>
+      <div class="block-title"><span class="dot-red"></span>Origem e escala do conglomerado</div>
+      <div class="card">
+        <div class="card-title">De cursinho a holding</div>
+        <div class="card-body">Fundado em 1998 com aproximadamente R$ 1M de capital inicial. Em 2023, Gilmar criou a <strong>Holding Roxell Participações</strong> com dois filhos como sócios. Cresceu de cursinho para conglomerado com graduação, pós-graduação, mestrado e doutorado; campi na Asa Sul, Asa Norte e sede na Faria Lima (SP).</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Cooptação da corte — metade do STF</div>
+        <div class="card-body">Por um período documentado, <strong>5 dos 10 colegas de Gilmar no STF</strong> davam aula no IDP — metade da corte. Circulação sistemática de juízes, procuradores, advogados, reguladores e assessores no mesmo espaço físico e institucional.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Caso Carta Capital (2008) — STJ reverte o que o IDP perdeu</div>
+        <div class="card-body">Capa da revista: "O empresário Gilmar". O IDP processou. <strong>Perdeu em 1ª e 2ª instância</strong>. No STJ a decisão foi revertida — um dos ministros votantes era professor do IDP. Carta Capital condenada a pagar R$ 90.000 e a inserir o acórdão em edições futuras.</div>
+      </div>
+    </div>
+    <div>
+      <div class="block-title"><span class="dot-amber"></span>Financiadores com processos no gabinete</div>
+      <div class="bar-row">
+        <div class="bar-label">Souza Cruz</div>
+        <div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--red)"></div></div>
+        <div class="bar-val">R$ 2M+</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">J&F / JBS</div>
+        <div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--red)"></div></div>
+        <div class="bar-val">R$ 2M</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Bradesco</div>
+        <div class="bar-track"><div class="bar-fill" style="width:70%;background:var(--amber)"></div></div>
+        <div class="bar-val">Empréstimo R$ 26M</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Google</div>
+        <div class="bar-track"><div class="bar-fill" style="width:10%;background:var(--text3)"></div></div>
+        <div class="bar-val">R$ 200k</div>
+      </div>
+      <div class="bar-note">Fonte: Cruzo — 23 empresas, +R$ 7M (2011–2016)</div>
+
+      <div class="card">
+        <div class="card-title">Bradesco — empréstimo em condição anômala</div>
+        <div class="card-body">Empréstimo de R$ 26M a 11,35% a.a. — condição que o próprio banco <strong>não oferecia em 99,92% dos casos</strong>. Liberado no mesmo dia em que o filho de Gilmar comprou a parte do sócio por R$ 12M. Bradesco tem dezenas de processos no STF.</div>
+      </div>
+      <div class="card">
+        <div class="card-title">300+ processos dos financiadores no gabinete</div>
+        <div class="card-body">Desde 2016, ao menos <strong>300 processos</strong> de empresas patrocinadoras do IDP passaram pelo gabinete de Gilmar. Nenhum pedido de impedimento foi protocolado pelo ministro.</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="block-title"><span class="dot-red"></span>Fórum Jurídico de Lisboa — "Maior evento de lobby judicial do planeta"</div>
+  <div class="card">
+    <div class="card-body" style="font-size:13px; line-height:1.75">
+      Evento anual que reúne a cúpula do poder brasileiro a milhares de km do Brasil. Edições recentes incluem: ministros do STF, STJ, TCU, Procurador-Geral da República, presidente da Câmara, governadores e ministros do governo federal. Do lado corporativo: BTG Pactual (5 representantes + jantar reservado), JBS, iFood, Vale, Meta, Bradesco, Google, Amazon, TikTok. Muitos encontros não constam nas agendas oficiais publicadas. Em 2024: pelo menos <strong>R$ 1,3M em diárias e passagens pagas com recursos públicos</strong>, incluindo jatinhos da FAB. A Transparência Internacional classificou como <strong>"o maior evento de lobby judicial do planeta"</strong>.
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     SEÇÃO 04 — REDE DE INTERESSES
+════════════════════════════════════════ -->
+<div id="tab-rede" class="tab-panel">
+  <div class="sec-title">Rede de Interesses</div>
+  <div class="sec-sub">Nexos familiares, conjugais e patrimoniais documentados</div>
+
+  <div class="col-row">
+    <div>
+      <div class="block-title"><span class="dot-red"></span>Nexos familiares e conjugais</div>
+      <div class="network-list">
+        <div class="network-item">
+          <div class="ni-ico">⊙</div>
+          <div>
+            <span class="ni-name">Guiomar Feitosa Mendes (ex-esposa)</span>
+            <span class="ni-detail">Sócia do escritório Sérgio Bermudes — 42.000 causas ativas. Clientes: Vale, Bradesco, Odebrecht, Queiroz Galvão, Itaipu. Chamada nos bastidores de "12ª ministra". A Receita Federal identificou em 2018 que ela declarou ao fisco ter recebido R$ 2,7M do escritório — enquanto o Bermudes declarou distribuir apenas R$ 40.000/ano a ela. Diferença: <strong>70 vezes</strong>.</span>
+          </div>
+          <div class="ni-risk">CONFLITO</div>
+        </div>
+        <div class="network-item">
+          <div class="ni-ico">⊙</div>
+          <div>
+            <span class="ni-name">Francisco Mendes (filho)</span>
+            <span class="ni-detail">Comprou cota do IDP por R$ 12M. Signatário do contrato CBF Academy. Sócio da Holding Roxell Participações (criada em 2023).</span>
+          </div>
+          <div class="ni-risk">SÓCIO</div>
+        </div>
+        <div class="network-item">
+          <div class="ni-ico">⊙</div>
+          <div>
+            <span class="ni-name">Chico Mendes (irmão)</span>
+            <span class="ni-detail">Três mandatos como prefeito de Diamantino (MT). Patrimônio declarado: R$ 6M. Família fornece gado para a JBS — empresa que financiou o IDP com R$ 2M enquanto tinha dezenas de processos no gabinete.</span>
+          </div>
+          <div class="ni-risk warn">JBS</div>
+        </div>
+        <div class="network-item">
+          <div class="ni-ico">⊙</div>
+          <div>
+            <span class="ni-name">Jacó Barata Filho (padrinho político)</span>
+            <span class="ni-detail">Gilmar era padrinho de casamento da filha de Barata. Soltou Barata três vezes sem se declarar impedido. Barata confessou propinas por 20 anos.</span>
+          </div>
+          <div class="ni-risk">IMPEDIMENTO</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="block-title"><span class="dot-amber"></span>Patrimônio declarado</div>
+      <div class="network-list">
+        <div class="network-item">
+          <div class="ni-ico">▪</div>
+          <div><span class="ni-name">Casa no Lago Norte</span><span class="ni-detail">À beira do Lago Paranoá — Brasília</span></div>
+        </div>
+        <div class="network-item">
+          <div class="ni-ico">▪</div>
+          <div><span class="ni-name">Apartamento na Asa Norte</span><span class="ni-detail">Brasília</span></div>
+        </div>
+        <div class="network-item">
+          <div class="ni-ico">▪</div>
+          <div><span class="ni-name">Fazendas — 7.200 ha</span><span class="ni-detail">Mato Grosso</span></div>
+        </div>
+        <div class="network-item">
+          <div class="ni-ico">▪</div>
+          <div><span class="ni-name">6 empresas ativas</span><span class="ni-detail">Incluindo Holding Roxell Participações (2023)</span></div>
+        </div>
+        <div class="network-item">
+          <div class="ni-ico">▪</div>
+          <div><span class="ni-name">Apartamento — Príncipe Real</span><span class="ni-detail">Lisboa, Portugal — uma das regiões mais nobres e valorizadas de Lisboa</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="block-title"><span class="dot-red"></span>Relatório da Receita Federal (2018) — achados sobre o casal</div>
+  <div class="card">
+    <div class="card-body" style="font-size:13px; line-height:1.75">
+      Sistema automatizado da Receita Federal filtrou 800.000 CPFs de agentes públicos. Reduziu a 133 com interesse fiscal prioritário. O casal Gilmar/Guiomar estava na lista. Principais achados: variação patrimonial de quase <strong>R$ 700.000 sem explicação</strong> em nome do ministro. Sobre Guiomar: <strong>"indícios de lavagem de dinheiro"</strong> — o escritório Bermudes declarou distribuir R$ 40.000/ano a ela; ela declarou à Receita ter recebido <strong>R$ 2,7M — 70 vezes mais</strong>. Movimentação total do casal naquele ano: <strong>superior a R$ 17M</strong>. Destino do relatório: Alexandre de Moraes suspendeu os procedimentos e afastou os auditores. Em 2025, a PF abriu inquérito contra os 4 servidores da Receita que produziram o relatório.
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     SEÇÃO 05 — MECANISMOS DE BLINDAGEM
+════════════════════════════════════════ -->
+<div id="tab-blindagem" class="tab-panel">
+  <div class="sec-title">Mecanismos de Blindagem</div>
+  <div class="sec-sub">Investigadores punidos · Ferramentas de poder · Autopreservação institucional</div>
+
+  <div class="block-title"><span class="dot-red"></span>Os investigadores punidos — padrão P2</div>
+  <div class="chrono">
+    <div class="chrono-item ci-red">
+      <div class="chrono-date">Delegado Protógenes Queiroz — Operação Satiagraha (2008)</div>
+      <div class="chrono-title">Investigou Dantas, foi expulso da PF</div>
+      <div class="chrono-body">Conduziu a operação que prendeu Daniel Dantas. Após a soltura por Gilmar, foi investigado, processado, condenado e <strong>expulso da Polícia Federal</strong>. Caso documentado como o padrão-modelo de reversão da persecução.</div>
+    </div>
+    <div class="chrono-item ci-red">
+      <div class="chrono-date">Juiz Fausto de Sanctis (2008)</div>
+      <div class="chrono-title">Decretou prisão, recebeu procedimento disciplinar</div>
+      <div class="chrono-body">Decretou a prisão de Daniel Dantas com base nas provas coletadas. Após a intervenção de Gilmar, foi <strong>submetido a procedimentos disciplinares</strong> no Conselho Nacional de Justiça.</div>
+    </div>
+    <div class="chrono-item ci-amber">
+      <div class="chrono-date">Auditores da Receita Federal (2018 → 2025)</div>
+      <div class="chrono-title">Relatório sobre Gilmar → auditores investigados com tornozeleira</div>
+      <div class="chrono-body">Após produzirem o relatório com "indícios de lavagem de dinheiro" sobre o casal, Alexandre de Moraes <strong>suspendeu os procedimentos e afastou os auditores</strong>. Em 2025, a PF abriu inquérito contra os quatro servidores — com tornozeleira eletrônica, cancelamento de passaporte e recolhimento noturno decretados.</div>
+    </div>
+    <div class="chrono-item ci-amber">
+      <div class="chrono-date">Jornalista Rubens Valente</div>
+      <div class="chrono-title">Livro sobre poder → condenado a pagar indenização</div>
+      <div class="chrono-body">Publicou livro investigativo sobre concentração de poder no Brasil. Gilmar processou. Condenado a pagar indenização e a inserir o acórdão condenatório em todas as edições futuras do livro.</div>
+    </div>
+    <div class="chrono-item ci-amber">
+      <div class="chrono-date">Carta Capital (2008)</div>
+      <div class="chrono-title">Ganhou em 1ª e 2ª — perdeu no STJ com ministro-professor do IDP</div>
+      <div class="chrono-body">Publicou capa crítica ao IDP. Derrotou o IDP nas duas primeiras instâncias. No STJ, um dos ministros votantes era professor do IDP. Decisão revertida. Carta Capital condenada a pagar R$ 90.000.</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="block-title"><span class="dot-amber"></span>As três ferramentas de poder</div>
+  <div class="mech-grid">
+    <div class="mech-card mech-red">
+      <div class="mech-num">Ferramenta 01</div>
+      <div class="mech-title">Decisão Monocrática</div>
+      <div class="mech-body">80% das decisões do STF são monocráticas. Taxa de reversão colegiada: 2%. Na prática, a decisão de um único ministro equivale à decisão do tribunal pleno. Sem prazo obrigatório para referendo colegiado, a liminar monocrática é permanente até que alguém peça a revisão.</div>
+    </div>
+    <div class="mech-card mech-amber">
+      <div class="mech-num">Ferramenta 02</div>
+      <div class="mech-title">Pedido de Vista</div>
+      <div class="mech-body">Trava o julgamento indefinidamente. Até a reforma de 2023, não havia prazo regimental. Gilmar acumula 46 pedidos de vista — mais que qualquer outro ministro em atividade. Quem controla o prazo do vista dita o ritmo da política nacional.</div>
+    </div>
+    <div class="mech-card mech-blue">
+      <div class="mech-num">Ferramenta 03</div>
+      <div class="mech-title">Controle de Pauta</div>
+      <div class="mech-body">Quem decide quando um caso vai a julgamento controla a agenda política do país. A combinação das três ferramentas — monocrática + vista + pauta — cria um poder de veto unilateral sobre qualquer processo de âmbito nacional, exercível por uma única pessoa.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     SEÇÃO 06 — SÍNTESE ESTRUTURAL
+════════════════════════════════════════ -->
+<div id="tab-sintese" class="tab-panel">
+  <div class="sec-title">Síntese Estrutural</div>
+  <div class="sec-sub">Não é anomalia — é o resultado do design institucional</div>
+
+  <div class="verdict">
+    <div class="verdict-title">Conclusão analítica</div>
+    <div class="verdict-text">
+      Gilmar não é uma anomalia — é o <strong>resultado de um sistema desenhado para isso</strong>. A Constituição de 88 deu poder demais ao Supremo e fiscalização de menos. Gilmar levou esse design às últimas consequências: uma faculdade que é antissala do poder, um fórum que é classificado como o maior evento de lobby judicial do planeta, uma teia familiar conectando gabinete, advocacia de alta litigância e agronegócio.<br><br>
+      Quando investigam, os investigadores são punidos. Quando tentam o impeachment, as regras mudam. Quando o relatório da Receita levanta "indícios de lavagem", os auditores são afastados e depois investigados. Seis presidentes vieram e foram. Ele permanece.<br><br>
+      <strong>Aposentadoria compulsória: dezembro de 2030.</strong>
+    </div>
+  </div>
+
+  <div class="mech-grid">
+    <div class="mech-card mech-red">
+      <div class="mech-num">P1 — Anulação Procedimental</div>
+      <div class="mech-title">Atacar o processo, não os fatos</div>
+      <div class="mech-body">Em todos os casos emblemáticos, quando as provas são sólidas, a estratégia é atacar o procedimento: Satiagraha (denúncia anônima), Lava Jato (cadeia de custódia), Barata (prazo e formalidades). O fato nunca desaparece — o vício procedimental, sim.</div>
+    </div>
+    <div class="mech-card mech-orange">
+      <div class="mech-num">P2 — Investigador vira Investigado</div>
+      <div class="mech-title">Reversão da persecução como intimidação</div>
+      <div class="mech-body">Protógenos (expulso da PF), De Sanctis (disciplinar), auditores da Receita (tornozeleira eletrônica em 2025), jornalistas (indenização). O padrão serve dois objetivos: destruir a investigação atual e calcular o risco pessoal de futuras investigações.</div>
+    </div>
+    <div class="mech-card mech-amber">
+      <div class="mech-num">P3 — Captura Judicial de Emergência</div>
+      <div class="mech-title">Liminar monocrática no momento crítico</div>
+      <div class="mech-body">Satiagraha: 48h. Lava Jato Rio: 30 dias, 21 presos. CPI Master: anulação dupla. Autopreservação: quórum do impeachment elevado. Em todos os casos, o momento é exatamente o ponto de maior vulnerabilidade — antes de qualquer revisão colegiada.</div>
+    </div>
+    <div class="mech-card mech-purple">
+      <div class="mech-num">P6 — STF como Terminal de Impunidade</div>
+      <div class="mech-title">Onde as cadeias de responsabilização terminam</div>
+      <div class="mech-body">Único tribunal onde um único ministro pode suspender com liminar monocrática qualquer investigação nacional, a qualquer hora, sem prazo para revisão colegiada — e onde ministros julgam casos envolvendo seus próprios financiadores. A aposentadoria compulsória é o único mecanismo de saída previsto.</div>
+    </div>
+  </div>
+
+  <div class="signal-box">
+    <div class="signal-label">⚡ Questão estrutural em aberto — 2026</div>
+    <div class="signal-body">
+      Se os auditores da Receita Federal que produziram o relatório com "indícios de lavagem" sobre o casal estão sendo investigados pela PF em 2025 — com tornozeleira eletrônica e cancelamento de passaporte — <strong>o que impede que qualquer futuro funcionário público produza qualquer relatório sobre qualquer ministro do STF?</strong> A combinação de impunidade para o investigado com punição para o investigador é, pela definição técnica, a estrutura de um sistema imune ao Estado de Direito.
+    </div>
+  </div>
+
+  <div class="hq">
+    <div class="hq-text">"A pergunta correta não é 'por que o sistema não funciona?'. A pergunta é: para quem ele funciona — e essa resposta está nos dados."</div>
+    <div class="hq-attr">— Princípio analítico do lawfare-timeline: função sobre declaração</div>
+  </div>
+</div>
+
+<!-- ARTIGOS RELACIONADOS -->
+<div class="related-section">
+  <div class="related-heading">Leitura Relacionada — gosurf.site</div>
+
+  <div class="related-grid">
+
+    <a class="related-card rc-red" href="https://gosurf.site/duplo-padrao-judicial.html" target="_blank">
+      <div class="rc-label">Dossiê · Duplo Padrão</div>
+      <div class="rc-title">Duplo Padrão Judicial — Dossiê Investigativo 2026</div>
+      <div class="rc-desc">Perseguição a opositores x proteção ao crime organizado financeiro. COAF, Vorcaro/Master, Toffoli e a seletividade documentada.</div>
+    </a>
+
+    <a class="related-card rc-amber" href="https://gosurf.site/vaza-toga.html" target="_blank">
+      <div class="rc-label">Dossiê · INQ 4.781</div>
+      <div class="rc-title">VAZA TOGA — Dossiê Completo INQ 4.781</div>
+      <div class="rc-desc">Sistema paralelo de produção de provas: gabinete do STF instrumentalizou o TSE para justificar decisões fora dos ritos processuais.</div>
+    </a>
+
+    <a class="related-card rc-red" href="https://gosurf.site/operacao-silencio-digital.html" target="_blank">
+      <div class="rc-label">Dossiê · Censura Judicial</div>
+      <div class="rc-title">Operação Silêncio Digital — Regime de Censura 2020–2026</div>
+      <div class="rc-desc">Ordens sigilosas, remoções de conteúdo e o mecanismo de censura judicial sistêmica nas redes sociais brasileiras.</div>
+    </a>
+
+    <a class="related-card rc-blue" href="https://gosurf.site/padroes-sistemicos-dashboard.html" target="_blank">
+      <div class="rc-label">Dashboard · P1–P8</div>
+      <div class="rc-title">Mestre: Padrões × Operações Anticorrupção 2026</div>
+      <div class="rc-desc">Análise transversal dos padrões identificados em 25 anos de operações — incluindo P2 (investigador vira investigado) e P6 (STF como terminal).</div>
+    </a>
+
+    <a class="related-card rc-orange" href="https://gosurf.site/republica-capturada.html" target="_blank">
+      <div class="rc-label">Dashboard · Captura Institucional</div>
+      <div class="rc-title">República Capturada — Dashboard Investigativo</div>
+      <div class="rc-desc">Mapeamento forense das operações Greenwashing, Carbono Oculto, Compliance Zero e conexões transversais com Lava Jato.</div>
+    </a>
+
+    <a class="related-card rc-red" href="https://gosurf.site/golpe-brasil-analise-evidencial.html" target="_blank">
+      <div class="rc-label">Análise Evidencial · 2026</div>
+      <div class="rc-title">Quem Deu o Golpe no Brasil?</div>
+      <div class="rc-desc">Síntese baseada em documentos primários: dois vetores de ruptura simultâneos, USAID, NetLab e assimetria de consequências.</div>
+    </a>
+
+    <a class="related-card rc-amber" href="https://gosurf.site/brasil-falha-institucional-diagnostico.html" target="_blank">
+      <div class="rc-label">Dashboard · Diagnóstico Sistêmico</div>
+      <div class="rc-title">Falha Institucional: Diagnóstico Sistêmico Brasil (2025)</div>
+      <div class="rc-desc">Análise transversal de falhas estruturais, captura orçamentária e o paradoxo da segurança pública. Dados consolidados 2022–2025.</div>
+    </a>
+
+    <a class="related-card rc-orange" href="https://gosurf.site/rede-master-conexoes.html" target="_blank">
+      <div class="rc-label">Mapa Mental · Banco Master</div>
+      <div class="rc-title">TEIA MASTER — Rede de Conexões Investigativas</div>
+      <div class="rc-desc">Mapeamento das relações entre Banco Master, BRB, PCC, STF e INSS. Delação Vorcaro e o contexto da CPI do Crime Organizado.</div>
+    </a>
+
+  </div>
+
+  <!-- LAWFARE TIMELINE BANNER -->
+  <a class="lawfare-banner" href="https://lawfare-timeline.vercel.app" target="_blank">
+    <div class="lb-icon">⚖</div>
+    <div class="lb-body">
+      <div class="lb-eyebrow">Arquivo completo · Linha do tempo · 1.400+ entradas</div>
+      <div class="lb-name">LAWFARE-TIMELINE</div>
+      <div class="lb-url">lawfare-timeline.vercel.app — INQ 4.781 · Satiagraha · Castelo de Areia · Vaza Toga · STF · TSE/USAID</div>
+    </div>
+    <div class="lb-arrow">→</div>
+  </a>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div>
+    <a href="https://lawfare-timeline.vercel.app" target="_blank" style="color:var(--amber);text-decoration:none">LAWFARE-TIMELINE.VERCEL.APP ↗</a> · DOSSIÊ: GILMAR_MENDES_PODER_DASHBOARD.HTML<br>
+    Produzido por <a href="https://lawfare-timeline.vercel.app">Artes do Sul Desenvolvimento Web</a> · Bombinhas/SC · Brasil
+  </div>
+  <div style="text-align:right">
+    <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 DOMÍNIO PÚBLICO</a><br>
+    Copie, distribua, adapte sem restrições · Atualizado 24/abr/2026
+  </div>
+</div>
+
+</div><!-- /wrap -->
+
+<script>
+// ── PROGRESS BAR ──
+const prog = document.getElementById('prog');
+window.addEventListener('scroll', () => {
+  const total = document.documentElement.scrollHeight - window.innerHeight;
+  if (total > 0) prog.style.width = (window.scrollY / total * 100) + '%';
+}, { passive: true });
+
+// ── SMOOTH SCROLL com offset do sticky nav ──
+const NAV_H = document.getElementById('sticky-nav').offsetHeight + 4;
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.getElementById(a.getAttribute('href').slice(1));
+    if (target) {
+      e.preventDefault();
+      const top = target.getBoundingClientRect().top + window.scrollY - NAV_H;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
+
+// ── SCROLL SPY — destaca tab ativa conforme seção visível ──
+const sections = ['tab-indices','tab-casos','tab-idp','tab-rede','tab-blindagem','tab-sintese'];
+const navLinks = {};
+document.querySelectorAll('#sticky-nav a').forEach(a => {
+  const id = a.getAttribute('href').slice(1);
+  navLinks[id] = a;
+});
+
+function getOffsetTop(el) {
+  return el.getBoundingClientRect().top + window.scrollY;
+}
+
+function updateActiveTab() {
+  const scrollY = window.scrollY + NAV_H + 20;
+  let active = sections[0];
+  for (const id of sections) {
+    const el = document.getElementById(id);
+    if (el && getOffsetTop(el) <= scrollY) active = id;
+  }
+  Object.values(navLinks).forEach(l => l.classList.remove('active'));
+  if (navLinks[active]) navLinks[active].classList.add('active');
+}
+
+window.addEventListener('scroll', updateActiveTab, { passive: true });
+updateActiveTab();
+</script>
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

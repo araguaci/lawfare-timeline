@@ -38,8 +38,8 @@ Base técnica formal que sustenta a reabertura do inquérito civil pelo MPF.
 
 Entradas conectadas nesta série:
 
-- [Entrada 1668](/timeline/entries/1668)
-- [Entrada 1670](/timeline/entries/1670)
+- [Entrada 1668](/posts/id1668-mpf-arquiva-inquerito-sobre-taboca-com-base-em-pareceres-tecnicos-que-atribuem-d/)
+- [Entrada 1670](/posts/id1670-povo-waimiri-atroari-denuncia-contaminacao-do-rio-alalau-por-mercurio-e-rejeitos/)
 
 ---
 

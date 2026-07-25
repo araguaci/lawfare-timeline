@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-analytics-domain="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operação Poço de Lobato — Dashboard Investigativo</title>
+  <meta name="description" content="O grupo opera uma estrutura de cinco camadas para blindar o lucro ilícito. Começa na importação fraudulenta, passa por formuladoras e distribuidoras laranjas, e termina em postos varejistas vinculados ao PCC.">
+  <link rel="canonical" href="https://gosurf.site/operacao-poco-de-lobato">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://gosurf.site/operacao-poco-de-lobato">
+  <meta property="og:title" content="Operação Poço de Lobato — Dashboard Investigativo">
+  <meta property="og:description" content="O grupo opera uma estrutura de cinco camadas para blindar o lucro ilícito. Começa na importação fraudulenta, passa por formuladoras e distribuidoras laranjas, e termina em postos varejistas vinculados ao PCC.">
+  <meta property="og:image" content="https://gosurf.site/og_card_operacao_poco_de_lobato.png">
+
+  <meta property="og:locale" content="pt_BR">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Operação Poço de Lobato — Dashboard Investigativo">
+  <meta name="twitter:description" content="O grupo opera uma estrutura de cinco camadas para blindar o lucro ilícito. Começa na importação fraudulenta, passa por formuladoras e distribuidoras laranjas, e termina em postos varejistas vinculados ao PCC.">
+  <meta name="twitter:image" content="https://gosurf.site/og_card_operacao_poco_de_lobato.png">
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+  
+  *{box-sizing:border-box;margin:0;padding:0}
+  
+  :root{
+    --bg:#0a0e14;--bg2:#121822;--bg3:#1a2332;
+    --red:#e24b4a;--red2:#ff6b6b;--red-dim:#7a2222;
+    --blue:#3a8fff;--blue2:#7ab8ff;--blue-dim:#1a3d7a;
+    --gold:#e8b84b;--gold2:#f5d07a;--gold-dim:#a07830;
+    --teal:#2ecfb0;--teal2:#60ffd8;--teal-dim:#0e6050;
+    --purple:#b07aff;--purple2:#d0a8ff;--purple-dim:#4a2a7a;
+    --orange:#ff8c42;--orange2:#ffb07a;--orange-dim:#7a3a10;
+    --text:#e8eaf0;--text2:#8899aa;
+    --border:rgba(255,255,255,0.07);
+    --font:'Syne',sans-serif;--mono:'JetBrains Mono',monospace;
+  }
+
+  body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh;overflow-x:hidden}
+
+  header{
+    padding:28px 32px 20px;border-bottom:2px solid var(--red-dim);
+    background:linear-gradient(135deg,#0a0e14 0%,#1a2332 60%,#0a0e14 100%);
+    position:relative;overflow:hidden;
+  }
+  header::before{
+    content:'';position:absolute;inset:0;
+    background:radial-gradient(ellipse at 70% 50%,rgba(226,75,74,0.07) 0%,transparent 60%);
+  }
+  .hbadge{display:inline-flex;align-items:center;gap:6px;background:rgba(226,75,74,0.1);border:1px solid var(--red-dim);border-radius:4px;padding:4px 12px;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--red2);text-transform:uppercase;margin-bottom:10px}
+  header h1{font-size:28px;font-weight:800;letter-spacing:-0.5px;color:#fff;line-height:1.1}
+  header h1 span{color:var(--red)}
+  .hmeta{display:flex;gap:20px;margin-top:10px;flex-wrap:wrap}
+  .hm{font-size:12px;color:var(--text2);font-family:var(--mono)}
+  .hm b{color:var(--red2)}
+
+  nav{display:flex;gap:4px;padding:10px 24px;background:rgba(18,24,34,0.9);border-bottom:1px solid var(--border);overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;position:sticky;top:0;z-index:100;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+  nav::-webkit-scrollbar{display:none}
+  .nb{padding:6px 13px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--text2);font-family:var(--font);font-size:12px;font-weight:500;cursor:pointer;transition:all .2s;white-space:nowrap}
+  .nb:hover{border-color:var(--red-dim);color:var(--red2)}
+  .nb.act{background:rgba(226,75,74,0.12);border-color:var(--red);color:var(--red);font-weight:700}
+
+  main{padding:0 22px 32px;max-width:1200px;margin:0 auto}
+  .sec{display:none;padding-top:4px}
+  .sec.act{display:block}
+
+  /* KPI grid */
+  .kgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:18px 0 10px}
+  @media (max-width: 768px) { .kgrid{grid-template-columns:repeat(2,1fr)} }
+  @media (max-width: 480px) { .kgrid{grid-template-columns:1fr} }
+  .kcard{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 15px;position:relative;overflow:hidden}
+  .kcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+  .kr::before{background:linear-gradient(90deg,var(--red),var(--red2))}
+  .kb::before{background:linear-gradient(90deg,var(--blue),var(--blue2))}
+  .kg::before{background:linear-gradient(90deg,var(--gold),var(--gold2))}
+  .kt::before{background:linear-gradient(90deg,var(--teal),var(--teal2))}
+  .ko::before{background:linear-gradient(90deg,var(--orange),var(--orange2))}
+  .kp::before{background:linear-gradient(90deg,var(--purple),var(--purple2))}
+
+  .klabel{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);margin-bottom:5px}
+  .kval{font-size:22px;font-weight:800;line-height:1}
+  .ksub{font-size:11px;color:var(--text2);margin-top:3px;font-family:var(--mono)}
+  .kr .kval{color:var(--red2)}
+  .kb .kval{color:var(--blue2)}
+  .kg .kval{color:var(--gold)}
+  .kt .kval{color:var(--teal)}
+  .ko .kval{color:var(--orange)}
+  .kp .kval{color:var(--purple2)}
+
+  /* Gravity Bar */
+  .gbar{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin-bottom:12px}
+  .gtitle{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);margin-bottom:10px}
+  .gtrack{height:10px;background:var(--bg3);border-radius:999px;overflow:hidden}
+  .gfill{height:100%;border-radius:999px;background:linear-gradient(90deg,#3a8fff,#e8b84b,#e24b4a);transition:width 1.2s ease;width:0}
+  .glabels{display:flex;justify-content:space-between;font-size:10px;color:var(--text2);margin-top:5px;font-family:var(--mono)}
+  .gscore{font-size:24px;font-weight:800;color:var(--red2);margin-top:8px}
+  .gnote{font-size:11px;color:var(--text2);margin-top:2px}
+
+  /* Panels */
+  .pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin-bottom:12px}
+  .panel{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:18px 20px}
+  .ptitle{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+  .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+  .db{background:var(--blue)}.dg{background:var(--gold)}.dr{background:var(--red)}.dt{background:var(--teal)}.do{background:var(--orange)}.dp{background:var(--purple)}
+
+  .body{font-size:13px;color:var(--text2);line-height:1.75;margin-bottom:10px}
+  .tag{display:inline-block;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:600;margin:2px 2px 2px 0;font-family:var(--mono)}
+  .tr{background:rgba(226,75,74,0.12);color:var(--red2);border:1px solid rgba(226,75,74,0.25)}
+  .tb{background:rgba(58,143,255,0.1);color:var(--blue2);border:1px solid rgba(58,143,255,0.2)}
+  .tg{background:rgba(232,184,75,0.1);color:var(--gold);border:1px solid rgba(232,184,75,0.2)}
+  .tt{background:rgba(46,207,176,0.08);color:var(--teal);border:1px solid rgba(46,207,176,0.18)}
+  .tp{background:rgba(176,122,255,0.1);color:var(--purple2);border:1px solid rgba(176,122,255,0.2)}
+  .to{background:rgba(255,140,66,0.1);color:var(--orange);border:1px solid rgba(255,140,66,0.18)}
+  .tgr{background:rgba(136,153,170,0.12);color:var(--text2);border:1px solid rgba(136,153,170,0.2)}
+
+  /* Actors */
+  .agrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}
+  .acard{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:15px;cursor:pointer;transition:transform .2s}
+  .acard:hover{transform:translateY(-2px);border-color:var(--red-dim)}
+  .ahead{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+  .adot{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0;background:var(--bg);border:1px solid var(--border)}
+  .aname{font-size:14px;font-weight:700;color:#fff}
+  .arole{font-size:11px;color:var(--text2);font-family:var(--mono)}
+  .astatus{font-size:12px;color:var(--text2);line-height:1.55;display:none;margin-top:10px;padding-top:10px;border-top:1px solid var(--border)}
+  .acard.open .astatus{display:block}
+
+  /* Timeline */
+  .tli{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--border)}
+  .tli:last-child{border-bottom:none}
+  .tld{font-family:var(--mono);font-size:11px;color:var(--red2);min-width:85px;font-weight:600;padding-top:2px;flex-shrink:0}
+  .tltitle{font-size:13px;font-weight:600;margin-bottom:2px}
+  .tldesc{font-size:12px;color:var(--text2);line-height:1.5;font-family:var(--font)}
+
+  /* Risks */
+  .ritem{padding:12px 14px;border-radius:8px;margin-bottom:8px;border-left:3px solid;background:var(--bg3)}
+  .rcrit{border-color:var(--red)}
+  .ralto{border-color:var(--orange)}
+  .rmedio{border-color:var(--gold)}
+  .rheader{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+  .rname{font-size:13px;font-weight:700}
+  .rbadge{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;border-radius:3px;font-family:var(--mono)}
+  .bcrit{background:rgba(226,75,74,0.2);color:var(--red2)}
+  .balto{background:rgba(255,140,66,0.2);color:var(--orange2)}
+  .bmedio{background:rgba(232,184,75,0.15);color:var(--gold2)}
+  .rdesc{font-size:12px;color:var(--text2);line-height:1.6}
+
+  /* Refs */
+  .refitem{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);align-items:flex-start}
+  .refitem:last-child{border-bottom:none}
+  .refnum{font-family:var(--mono);font-size:11px;color:var(--text2);min-width:28px;margin-top:2px}
+  .reftitle{font-size:13px;font-weight:700;color:var(--blue2);margin-bottom:3px;display:block;text-decoration:none}
+  .reftitle:hover{text-decoration:underline}
+  .refsrc{font-size:11px;color:var(--text2);font-family:var(--mono)}
+
+  /* Flow / Operations */
+  .scard{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:13px 15px;margin-bottom:10px}
+  .sheader{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+  .sname{font-size:13px;font-weight:700}
+  .sdesc{font-size:12px;color:var(--text2);line-height:1.6}
+  .slink{font-size:10px;color:var(--blue2);font-family:var(--mono);text-decoration:none;display:inline-block;margin-top:8px;padding:3px 8px;background:rgba(58,143,255,0.1);border-radius:4px}
+
+  .full{grid-column:1/-1}
+
+  @media (max-width: 600px) {
+    header{padding:20px 20px 15px}
+    header h1{font-size:24px}
+    nav{padding:8px 15px}
+    main{padding:0 15px 25px}
+    .tli{flex-direction:column;gap:4px}
+    .tld{min-width:auto}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="hbadge">DASHBOARD INVESTIGATIVO • INTELIGÊNCIA DE RISCO</div>
+  <h1>Operação <span>Poço de Lobato</span></h1>
+  <div class="hmeta">
+    <span class="hm"><b>Deflagração:</b> 27 nov 2025</span>
+    <span class="hm"><b>Alvo:</b> Grupo Refit (Ricardo Magro)</span>
+    <span class="hm"><b>Órgão:</b> MPSP / Receita Federal / PF</span>
+    <span class="hm"><b>Dívida Base:</b> R$ 28 bilhões</span>
+    <span class="hm"><b>Status:</b> Em curso • Ativos bloqueados</span>
+  </div>
+</header>
+
+<nav>
+  <button class="nb act" onclick="show('visao')">Visão Geral</button>
+  <button class="nb" onclick="show('atores')">Atores Principais</button>
+  <button class="nb" onclick="show('timeline')">Linha do Tempo</button>
+  <button class="nb" onclick="show('operacoes')">Operações Cruzadas</button>
+  <button class="nb" onclick="show('riscos')">Riscos Sistêmicos</button>
+  <button class="nb" onclick="show('fontes')">Fontes & Provas</button>
+</nav>
+
+<main>
+
+<!-- ══════ VISÃO GERAL ══════ -->
+<div id="sec-visao" class="sec act">
+  <div class="kgrid">
+    <div class="kcard kr"><div class="klabel">Dívida Total</div><div class="kval">R$ 28 bi</div><div class="ksub">Estimativa PGFN + Estados</div></div>
+    <div class="kcard kr"><div class="klabel">Bloqueio Judicial</div><div class="kval">R$ 10,1 bi</div><div class="ksub">SP R$ 8,9bi + PGFN R$ 1,2bi</div></div>
+    <div class="kcard ko"><div class="klabel">Prejuízo Mensal</div><div class="kval">R$ 350 mi</div><div class="ksub">Evasão tributária estimada</div></div>
+    <div class="kcard kb"><div class="klabel">Operadores</div><div class="kval">190</div><div class="ksub">Pessoas e empresas alvo</div></div>
+    <div class="kcard kb"><div class="klabel">Agentes</div><div class="kval">621</div><div class="ksub">MPSP, Receita, PC, PM, PGFN</div></div>
+    <div class="kcard kt"><div class="klabel">Volume Petrobras</div><div class="kval">R$ 32 bi</div><div class="ksub">Combustíveis (5 anos)</div></div>
+    <div class="kcard kp"><div class="klabel">Lavagem</div><div class="kval">50+</div><div class="ksub">Fundos fechados em camadas</div></div>
+    <div class="kcard kg"><div class="klabel">Elo Russo</div><div class="kval">4 navios</div><div class="ksub">180 mi litros retidos</div></div>
+  </div>
+
+  <div class="gbar">
+    <div class="gtitle">Índice de Impacto na Ordem Tributária & Segurança Pública</div>
+    <div class="gtrack"><div class="gfill" id="gfill"></div></div>
+    <div class="glabels"><span>Baixo</span><span>Médio</span><span>Alto</span><span>Crítico</span></div>
+    <div class="gscore">96 / 100</div>
+    <div class="gnote">Intersecção inédita entre colarinho branco (sonegação de R$ 28bi) e crime organizado violento (PCC via Carbono Oculto). O esquema envolve violação de sanções internacionais (Rússia/OFAC), lavagem em offshores transnacionais e controle de 96% do diesel importado via Amapá.</div>
+  </div>
+
+  <div class="pgrid">
+    <div class="panel">
+      <div class="ptitle"><span class="dot dr"></span>Arquitetura da Fraude</div>
+      <p class="body">O grupo opera uma estrutura de <b style="color:var(--red2)">cinco camadas</b> para blindar o lucro ilícito. Começa na importação fraudulenta (gasolina declarada como nafta), passa por formuladoras e distribuidoras laranjas, e termina em postos varejistas vinculados ao crime organizado (PCC). A lavagem final ocorre em offshores e fundos de investimento sofisticados.</p>
+      <div style="margin-top:10px">
+        <span class="tag tr">Importação fraudulenta</span>
+        <span class="tag tr">Devedor contumaz</span>
+        <span class="tag tr">Sonegação ICMS</span>
+        <span class="tag tr">Refit (Manguinhos)</span>
+        <span class="tag tr">Transfer pricing</span>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot db"></span>Elo Geopolítico (Rússia)</div>
+      <p class="body">Em 2024, a Receita reteve 180 mi de litros de diesel russo. Ricardo Magro, residindo em Miami e portador de green card, estaria sujeito às <b style="color:var(--blue2)">sanções OFAC</b> dos EUA. O grupo importava diesel pelo Amapá (corredor central) e triangulava pagamentos via Emirados Árabes e Nova York, com sobrepreço de Houston.</p>
+      <div style="margin-top:10px">
+        <span class="tag tb">Diesel Russo Retido</span>
+        <span class="tag tb">Sanções OFAC</span>
+        <span class="tag tb">Extradição (Lula-Trump)</span>
+        <span class="tag tb">Houston Connection</span>
+        <span class="tag tb">Green Card Risk</span>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot dp"></span>Convergência Carbono Oculto</div>
+      <p class="body">Investigações revelam que distribuidoras ligadas ao Grupo Refit forneciam combustível para a rede do PCC desarticulada na <b style="color:var(--purple2)">Operação Carbono Oculto</b>. O uso de "fintechs banco-bolsão" e fundos fechados administrados pela REAG (liquidada pelo BC) é um padrão que conecta o devedor de colarinho branco à lavagem de dinheiro do crime.</p>
+      <div style="margin-top:10px">
+        <span class="tag tp">PCC Combustíveis</span>
+        <span class="tag tp">Lavagem Carbono Oculto</span>
+        <span class="tag tp">Reag DTVM</span>
+        <span class="tag tp">Fintechs Banco-Bolsão</span>
+        <span class="tag tp">Postos PCC</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ ATORES ══════ -->
+<div id="sec-atores" class="sec">
+  <div style="margin-top:16px">
+    <div class="ptitle"><span class="dot dr"></span>Figuras Centrais da Investigação</div>
+    <div class="agrid">
+      <div class="acard" onclick="this.classList.toggle('open')">
+        <div class="ahead"><div class="adot" style="color:var(--red2)">RM</div><div><div class="aname">Ricardo Magro</div><div class="arole">Controlador Grupo Refit · Miami (EUA)</div></div></div>
+        <div class="astatus">Alvo central da Poço de Lobato. Reside em Miami desde 2016. Citado nominalmente por Lula em conversas com Trump. Controla uma rede de 50+ empresas incluindo J. Global Holding (Houston). A Refit alega disputa tributária legítima.</div>
+      </div>
+      <div class="acard" onclick="this.classList.toggle('open')">
+        <div class="ahead"><div class="adot" style="color:var(--orange2)">CB</div><div><div class="aname">Cristiano Beraldo</div><div class="arole">Comentarista Político (Jovem Pan)</div></div></div>
+        <div class="astatus">Alvo de busca e apreensão. Apontado como administrador de offshores americanas (Cascais Bay LLC) no mesmo endereço da esposa de Ricardo Magro. Depoimento colaborou com provas de confusão patrimonial.</div>
+      </div>
+      <div class="acard" onclick="this.classList.toggle('open')">
+        <div class="ahead"><div class="adot" style="color:var(--teal2)">GR</div><div><div class="aname">Grupo Refit</div><div class="arole">Refinaria de Manguinhos (RJ)</div></div></div>
+        <div class="astatus">Hub operacional da fraude. Maior devedor de ICMS de SP. Interditada em 2024. Atravessou R$ 72 bi em movimentação financeira entre 2024-2025 após quedas de distribuidoras da Carbono Oculto.</div>
+      </div>
+      <div class="acard" onclick="this.classList.toggle('open')">
+        <div class="ahead"><div class="adot" style="color:var(--purple2)">MH</div><div><div class="aname">Mohamad Hussein Mourad</div><div class="arole">Operador PCC · Foragido</div></div></div>
+        <div class="astatus">Apontado pelo GAECO como chefe do PCC no setor de combustíveis. Distribuidoras da Refit estariam conectadas às usinas e rede de Mourad para escoamento de produto sonegado e lavagem.</div>
+      </div>
+      <div class="acard" onclick="this.classList.toggle('open')">
+        <div class="ahead"><div class="adot" style="color:var(--blue2)">JG</div><div><div class="aname">J. Global Energy Holdings</div><div class="arole">Holding (Houston / Delaware)</div></div></div>
+        <div class="astatus">Empresa americana usada para transfer pricing. Comprava diesel russo e revendia para a Refit com margens manipuladas para evadir recursos do Brasil para os EUA.</div>
+      </div>
+      <div class="acard" onclick="this.classList.toggle('open')">
+        <div class="ahead"><div class="adot" style="color:var(--gold2)">EC</div><div><div class="aname">Eduardo Cunha</div><div class="arole">Ex-presidente da Câmara</div></div></div>
+        <div class="astatus">Histórico de ligação via grampos da Polícia Civil (2010), onde Magro pedia favores para redução de ICMS. Ex-advogado de Magro. Ponto focal da conexão política inicial do grupo.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ TIMELINE ══════ -->
+<div id="sec-timeline" class="sec">
+  <div class="panel" style="margin-top:16px">
+    <div class="ptitle"><span class="dot dr"></span>Escalada da Investigação</div>
+    <div class="tli"><div class="tld">2008–2010</div><div><div class="tltitle">Aquisição & Grampo Cunha</div><div class="tldesc">Magro compra Refinaria de Manguinhos. Grampo da Polícia Civil RJ revela pedidos de favores políticos para redução tributária via Eduardo Cunha.</div></div></div>
+    <div class="tli"><div class="tld">2016</div><div><div class="tltitle">Operação Recomeço</div><div class="tldesc">Prisão temporária por desvios na Petros/Postalis (R$ 100mi). Magro se muda para os EUA e passa a operar de Miami.</div></div></div>
+    <div class="tli"><div class="tld">2020–2025</div><div><div class="tltitle">Auge da Sonegação</div><div class="tldesc">R$ 32 bi em combustíveis declarados como nafta. Rede de dezenas de empresas laranjas criada. Infiltração maciça no Amapá (96% do fluxo russo).</div></div></div>
+    <div class="tli"><div class="tld">ago 2025</div><div><div class="tltitle" style="color:var(--purple2)">Op. Carbono Oculto</div><div class="tldesc">PCC identificado no setor. Elo com refinarias de colarinho branco é estabelecido via transações das distribuidoras desarticuladas.</div></div></div>
+    <div class="tli"><div class="tld">27 nov 2025</div><div><div class="tltitle" style="color:var(--red2)">Op. Poço de Lobato</div><div class="tldesc">621 agentes desarticulam o núcleo do Grupo Refit. R$ 10,1 bi em ativos bloqueados judicialmente. Tarcísio de Freitas classifica como operação "histórica".</div></div></div>
+    <div class="tli"><div class="tld">dez 2025</div><div><div class="tltitle">Ofensiva Presidencial</div><div class="tldesc">Lula telefona para Trump e cita nominalmente Ricardo Magro, pedindo extradição. Câmara aprova PL do Devedor Contumaz por 436 votos.</div></div></div>
+    <div class="tli"><div class="tld">fev 2026</div><div><div class="tltitle">Dilema Jurídico</div><div class="tldesc">Nova Delhi: Lula envia foto da mansão de Magro a Trump. Conjur aponta que a extradição carece de base sem condenação formal, mas risco OFAC cresce.</div></div></div>
+  </div>
+</div>
+
+<!-- ══════ OPERAÇÕES ══════ -->
+<div id="sec-operacoes" class="sec">
+  <div class="panel" style="margin-top:16px">
+    <div class="ptitle"><span class="dot dp"></span>Ecossistema Digital de Investigações Cruzadas</div>
+    <div class="scard">
+      <div class="sheader"><span class="sname" style="color:var(--red2)">Operação Poço de Lobato (Alvo)</span></div>
+      <div class="sdesc">Foco: Sonegação bilionária e lavagem de dinheiro do Grupo Refit. 190 alvos, R$ 26 bi em dívidas totais.</div>
+      <a href="https://diariocarioca.com/2025/11/27/brasil/megaoperacao-poco-de-lobato-mira-o-grupo-refit-com-r-26-bilhoes-em-dividas/" class="slink" target="_blank">Ver Fonte ↗</a>
+    </div>
+    <div class="scard">
+      <div class="sheader"><span class="sname" style="color:var(--purple2)">Operação Carbono Oculto (Conexão)</span></div>
+      <div class="sdesc">Foco: PCC no setor de combustíveis. R$ 52 bi movimentados. Refit era a fornecedora central das distribuidoras do PCC.</div>
+      <a href="https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2025/agosto/operacao-carbono-oculto-rrb-e-orgaos-parceiros-combatem-organizacao-responsavel-por-sonegacao-e-lavagem-de-dinheiro-no-setor-de-combustiveis" class="slink" target="_blank">Ver Fonte ↗</a>
+    </div>
+    <div class="scard">
+      <div class="sheader"><span class="sname" style="color:var(--orange2)">Operação Compliance Zero (Conexão)</span></div>
+      <div class="sdesc">Foco: Fraudes financeiras e lavagem de dinheiro via fundos fechados e Banco Master / Reag Investimentos.</div>
+      <a href="https://www.cnnbrasil.com.br/nacional/sudeste/sp/liquidada-pelo-bc-reag-ja-foi-alvo-de-megaoperacao-contra-o-pcc-entenda/" class="slink" target="_blank">Ver Fonte ↗</a>
+    </div>
+    <div class="scard">
+      <div class="sheader"><span class="sname" style="color:var(--blue2)">Operação Appius / Castelo de Areia (Antecedente)</span></div>
+      <div class="sdesc">Linha histórica de sonegação em grandes obras e obstrução judicial ligada ao mesmo círculo político.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ RISCOS ══════ -->
+<div id="sec-riscos" class="sec">
+  <div class="pgrid" style="margin-top:16px">
+    <div class="panel">
+      <div class="ptitle"><span class="dot dr"></span>Mapa de Riscos Sistêmicos</div>
+      <div class="ritem rcrit"><div class="rheader"><span class="rname">Colapso Tributário Regional</span><span class="rbadge bcrit">CRÍTICO</span></div><div class="rdesc">R$ 350 mi/mês em evasão drenam recursos essenciais de saúde e educação em SP e RJ. O Grupo Refit é o maior devedor individual isolado do país.</div></div>
+      <div class="ritem rcrit"><div class="rheader"><span class="rname">Captura pelo Crime Organizado</span><span class="rbadge bcrit">CRÍTICO</span></div><div class="rdesc">Infiltração do PCC em 1.000+ postos e na cadeia logística legal. Uso de combustíveis como principal veículo de lavagem de valores do narcotráfico.</div></div>
+      <div class="ritem ralto"><div class="rheader"><span class="rname">Sanções OFAC / DOJ (EUA)</span><span class="rbadge balto">ALTO</span></div><div class="rdesc">Uso de sistema bancário americano para transacionar diesel russo com ágio, violando as sanções internacionais aplicadas após invasão da Ucrânia.</div></div>
+      <div class="ritem ralto"><div class="rheader"><span class="rname">Insegurança do Consumidor</span><span class="rbadge balto">ALTO</span></div><div class="rdesc">Combustível adulterado ou de origem duvidosa/irregular escoado pela rede de postos bandeira branca vinculadas ao esquema.</div></div>
+      <div class="ritem rmedio"><div class="rheader"><span class="rname">Crise de Liquidez Bancária</span><span class="rbadge bmedio">MÉDIO</span></div><div class="rdesc">Desvios bilionários via fundos de investimento afetando a saúde de DTVMs (REAG) e expondo fragilidades em bancos médios (Master).</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ FONTES ══════ -->
+<div id="sec-fontes" class="sec">
+  <div class="panel" style="margin-top:16px">
+    <div class="ptitle"><span class="dot db"></span>Documentos & Referências</div>
+    <div class="refitem"><div class="refnum">[01]</div><div><a href="https://diariocarioca.com/2025/11/27/brasil/megaoperacao-poco-de-lobato-mira-o-grupo-refit-com-r-26-bilhoes-em-dividas/" class="reftitle" target="_blank">Diário Carioca: Megaoperação Poço de Lobato mira o Grupo Refit</a><div class="refsrc">Relatório completo sobre prisões, bloqueios e mandados.</div></div></div>
+    <div class="refitem"><div class="refnum">[02]</div><div><a href="https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2025/agosto/operacao-carbono-oculto-rrb-e-orgaos-parceiros-combatem-organizacao-responsavel-por-sonegacao-e-lavagem-de-dinheiro-no-setor-de-combustiveis" class="reftitle" target="_blank">Receita Federal: Operação Carbono Oculto (Oficial)</a><div class="refsrc">Nota técnica sobre o PCC no setor de combustíveis e lavagem de dinheiro via fintechs.</div></div></div>
+    <div class="refitem"><div class="refnum">[03]</div><div><a href="https://www.conjur.com.br/2026-fev-23/lula-sugere-a-trump-prisao-de-dono-da-refit-sem-base-juridica/" class="reftitle" target="_blank">ConJur: Análise Jurídica sobre Extradição e Green Card</a><div class="refsrc">Discussão sobre a falta de base jurídica imediata e o risco político Lula-Trump.</div></div></div>
+    <div class="refitem"><div class="refnum">[04]</div><div><a href="https://istoe.com.br/quem-e-ricardo-magro-dono-do-grupo-considerado-o-maior-sonegador-do-brasil" class="reftitle" target="_blank">IstoÉ: Perfil de Ricardo Magro e histórico da Refit</a><div class="refsrc">Background do empresário desde a aquisição de Manguinhos até o exílio em Miami.</div></div></div>
+    <div class="refitem"><div class="refnum">[05]</div><div><a href="https://claudiodantas.com.br/na-mira-de-trump-citado-com-pcc-grupo-de-ricardo-magro-e-2o-maior-importador-de-diesel-russo/" class="reftitle" target="_blank">Claudio Dantas: Na mira de Trump - Diesel Russo e PCC</a><div class="refsrc">Investigação sobre triangulação de petróleo sancionado.</div></div></div>
+  </div>
+</div>
+
+</main>
+
+<script>
+function show(id){
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('act'));
+  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('act'));
+  document.getElementById('sec-'+id).classList.add('act');
+  event.target.classList.add('act');
+}
+setTimeout(()=>{
+  const f=document.getElementById('gfill');
+  if(f) f.style.width='96%';
+},400);
+</script>
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

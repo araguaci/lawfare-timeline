@@ -59,7 +59,7 @@ Este é o elo legislativo federal que estrutura financeiramente todos os capítu
 
 Entradas conectadas nesta série:
 
-- [Entrada 1706](/timeline/entries/1706)
+- [Entrada 1706](/posts/id1706-comissao-especial-apresenta-parecersubstitutivo-do-relator-arnaldo-jardim-projet/)
 
 ---
 

@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gilmar Mendes — Perfil Analítico</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#09090e;--surface:#0f0f17;--surface2:#14141f;
+  --border:#1c1c2e;--border-light:#252540;
+  --gold:#c8a94a;--gold-dim:#7a6428;--gold-glow:rgba(200,169,74,0.08);
+  --red:#c0392b;--red-dim:#7a2218;--red-glow:rgba(192,57,43,0.08);
+  --amber:#d4780a;--amber-dim:#7a4205;--amber-glow:rgba(212,120,10,0.08);
+  --blue:#2c5f9e;--blue-dim:#1a3a62;--blue-glow:rgba(44,95,158,0.1);
+  --teal:#1a7a6e;--teal-dim:#0f4a42;
+  --text:#e8e4d8;--text-muted:#8a8070;--text-dim:#4a4438;
+  --serif:'Playfair Display',Georgia,serif;
+  --body:'Crimson Pro',Georgia,serif;
+  --mono:'JetBrains Mono',monospace;
+}
+html,body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.75;min-height:100vh;scroll-behavior: smooth;}
+.wrap{max-width:900px;margin:0 auto;padding:0 2rem 4rem}
+
+/* PDF BUTTON */
+.pdf-control {
+  position: absolute;
+  top: 3.5rem;
+  right: 2rem;
+  z-index: 1000;
+}
+.btn-pdf {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+.btn-pdf:hover {
+  background: var(--surface2);
+  color: var(--gold);
+  border-color: var(--gold-dim);
+}
+
+.site-header{padding:3.5rem 2rem 2rem;text-align:center;border-bottom:1px solid var(--border);margin-bottom:3rem;position:relative}
+.site-header::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:1px;height:2.5rem;background:linear-gradient(to bottom,transparent,var(--gold-dim))}
+.header-label{font-family:var(--mono);font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;opacity:.8}
+.site-header h1{font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);font-weight:900;letter-spacing:-.01em;line-height:1.15;margin-bottom:.6rem}
+.site-header h1 em{font-style:italic;color:var(--gold)}
+.site-header .sub{font-size:.95rem;color:var(--text-muted);font-family:var(--mono);letter-spacing:.04em}
+.divider-gold{width:60px;height:1px;background:var(--gold);margin:1.5rem auto 0;opacity:.4}
+
+.nav-tabs{
+  display:flex;
+  gap:0;
+  border:1px solid var(--border);
+  border-radius:4px;
+  overflow:hidden;
+  margin-bottom:3rem;
+  font-family:var(--mono);
+  font-size:.65rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  flex-wrap:wrap;
+  position: sticky;
+  top: 1rem;
+  z-index: 100;
+  background: rgba(15,15,23,0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.nav-tab{flex:1;min-width:110px;padding:.7rem .3rem;background:var(--surface);color:var(--text-muted);border:none;cursor:pointer;transition:background .2s,color .2s;border-right:1px solid var(--border);text-align:center;text-decoration: none;}
+.nav-tab:last-child{border-right:none}
+.nav-tab:hover{background:var(--surface2);color:var(--text)}
+.nav-tab.active{background:var(--gold-glow);color:var(--gold);border-bottom:2px solid var(--gold)}
+
+.section{display:block; margin-bottom: 6rem; scroll-margin-top: 5rem;}
+
+.block{margin-bottom:3.5rem}
+.block-header{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.5rem;padding-bottom:.75rem;border-bottom:1px solid var(--border)}
+.block-num{font-family:var(--mono);font-size:.6rem;letter-spacing:.15em;color:var(--gold-dim);min-width:2.5rem}
+.block-title{font-family:var(--serif);font-size:1.35rem;font-weight:700;letter-spacing:-.01em}
+.block-year{font-family:var(--mono);font-size:.65rem;color:var(--text-dim);margin-left:auto;letter-spacing:.05em}
+
+.entry{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--gold-dim);border-radius:2px;padding:1.25rem 1.5rem;margin-bottom:1rem;transition:border-color .2s}
+.entry:hover{border-left-color:var(--gold)}
+.entry.severity-alta{border-left-color:var(--red-dim)}
+.entry.severity-alta:hover{border-left-color:var(--red)}
+.entry.severity-critica{border-left-color:var(--red);background:linear-gradient(135deg,var(--surface) 0%,rgba(192,57,43,.04) 100%)}
+.entry.severity-media{border-left-color:var(--amber-dim)}
+.entry.severity-media:hover{border-left-color:var(--amber)}
+.entry.severity-institucional{border-left-color:var(--blue-dim)}
+.entry.severity-institucional:hover{border-left-color:var(--blue)}
+.entry-title{font-family:var(--serif);font-size:1.05rem;font-weight:700;margin-bottom:.4rem}
+.entry-meta{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;color:var(--text-dim);margin-bottom:.75rem;text-transform:uppercase}
+.entry-meta .year{color:var(--gold-dim);margin-right:.75rem}
+.entry-body{font-size:.97rem;color:var(--text-muted);line-height:1.7}
+.entry-body strong{color:var(--text);font-weight:600}
+.entry-body em{color:var(--gold);font-style:italic}
+
+.tag{display:inline-block;font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;padding:2px 8px;border-radius:2px;margin-right:.4rem;margin-bottom:.5rem}
+.tag-red{background:var(--red-glow);color:var(--red);border:1px solid var(--red-dim)}
+.tag-gold{background:var(--gold-glow);color:var(--gold);border:1px solid var(--gold-dim)}
+.tag-blue{background:var(--blue-glow);color:#5a8fd4;border:1px solid var(--blue-dim)}
+.tag-teal{background:rgba(26,122,110,.1);color:#4ab8aa;border:1px solid var(--teal-dim)}
+.tag-amber{background:var(--amber-glow);color:#d4920a;border:1px solid var(--amber-dim)}
+.tag-gray{background:rgba(100,100,120,.1);color:var(--text-muted);border:1px solid #2a2a3e}
+
+.quote-block{border-left:3px solid var(--gold);padding:1rem 1.5rem;margin:1.5rem 0;background:var(--gold-glow);border-radius:0 2px 2px 0}
+.quote-block p{font-family:var(--serif);font-style:italic;font-size:1.05rem;line-height:1.7;margin-bottom:.4rem;color:var(--text)}
+.quote-block cite{font-family:var(--mono);font-size:.65rem;color:var(--gold-dim);letter-spacing:.08em;text-transform:uppercase}
+
+.alert-block{border:1px solid var(--red-dim);background:var(--red-glow);border-radius:2px;padding:1rem 1.5rem;margin:1.5rem 0}
+.alert-block p{font-size:.93rem;color:var(--text-muted);line-height:1.65}
+.alert-block strong{color:var(--red)}
+.info-block{border:1px solid var(--blue-dim);background:var(--blue-glow);border-radius:2px;padding:1rem 1.5rem;margin:1.5rem 0}
+.info-block p{font-size:.93rem;color:var(--text-muted);line-height:1.65}
+.info-block strong{color:#5a8fd4}
+
+.data-table{width:100%;border-collapse:collapse;font-size:.85rem;margin:1.5rem 0}
+.data-table th{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--border-light);padding:.6rem .75rem;text-align:left}
+.data-table td{padding:.65rem .75rem;border-bottom:1px solid var(--border);color:var(--text-muted);font-family:var(--body);font-size:.9rem;line-height:1.5;vertical-align:top}
+.data-table tr:hover td{background:var(--surface2)}
+.data-table td strong{color:var(--text)}
+
+.actors-row{display:flex;gap:.6rem;flex-wrap:wrap;margin:1rem 0}
+.actor-chip{font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;padding:5px 12px;border:1px solid var(--border-light);border-radius:2px;background:var(--surface2);color:var(--text-muted)}
+.actor-chip.cited{border-color:var(--red-dim);color:#c07070;background:var(--red-glow)}
+.actor-chip.reacted{border-color:var(--amber-dim);color:#d4920a;background:var(--amber-glow)}
+
+/* PRINCIPLES GRID */
+.principles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin:1.5rem 0}
+.principle-card{background:var(--surface);border:1px solid var(--border);border-top:2px solid var(--blue);border-radius:2px;padding:1.25rem}
+.principle-card.violated{border-top-color:var(--red)}
+.principle-card.warning{border-top-color:var(--amber)}
+.principle-card.ok{border-top-color:var(--teal)}
+.principle-card h4{font-family:var(--serif);font-size:.95rem;font-weight:700;margin-bottom:.5rem}
+.principle-card p{font-size:.88rem;color:var(--text-muted);line-height:1.6}
+.pstatus{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;margin-top:.6rem;padding:3px 8px;border-radius:2px;display:inline-block}
+.pstatus-ok{background:rgba(26,122,110,.15);color:#4ab8aa}
+.pstatus-violated{background:var(--red-glow);color:var(--red)}
+.pstatus-warning{background:var(--amber-glow);color:#e8960a}
+
+/* ANATOMY COMPARISON */
+.anatomy-wrap{margin:1.5rem 0;border:1px solid var(--border);border-radius:3px;overflow:hidden}
+.anatomy-header{display:grid;grid-template-columns:1fr 1fr;font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase}
+.anatomy-col-h{padding:.75rem 1.25rem;text-align:center}
+.anatomy-col-h.ideal{background:rgba(100,100,120,.12);color:var(--text-muted);border-right:1px solid var(--border)}
+.anatomy-col-h.real{background:var(--red-glow);color:var(--red)}
+.anatomy-row{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border)}
+.anatomy-cell{padding:1rem 1.25rem;font-size:.95rem;line-height:1.5}
+.anatomy-cell.ideal{color:var(--text-muted);border-right:1px solid var(--border)}
+.anatomy-cell.real{color:#d4706a;font-weight:600}
+
+/* FLOW */
+.flow-wrap{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0}
+.flow-col{}
+.flow-col-title{font-family:var(--mono);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;text-align:center;padding:.5rem;margin-bottom:.75rem;border-radius:2px}
+.flow-col-title.ideal{background:rgba(100,100,120,.12);color:var(--text-muted);border:1px solid var(--border)}
+.flow-col-title.real{background:var(--red-glow);color:var(--red);border:1px solid var(--red-dim)}
+.flow-node{padding:.7rem 1rem;border-radius:2px;text-align:center;font-size:.9rem;line-height:1.4;margin-bottom:.4rem}
+.flow-node.ideal-n{background:var(--surface);border:1px solid var(--border);color:var(--text-muted)}
+.flow-node.real-n{background:var(--red-glow);border:1px solid var(--red-dim);color:#d4706a;font-weight:600}
+.flow-node.final-n{background:var(--red);border:1px solid var(--red);color:#fff;font-weight:700;font-size:1rem;padding:1rem}
+.flow-arr{text-align:center;color:var(--text-dim);line-height:1;padding:.25rem 0;font-size:.9rem}
+.flow-arr.red{color:var(--red)}
+.flow-footnote{font-family:var(--mono);font-size:.72rem;color:var(--text-muted);border:1px solid var(--border);padding:.75rem 1rem;border-radius:2px;margin-top:1rem;background:var(--surface);grid-column:1/-1}
+
+/* PARECER */
+.parecer-section{background:var(--surface);border:1px solid var(--border-light);border-radius:3px;padding:2rem;margin-top:2rem}
+.parecer-section h3{font-family:var(--serif);font-size:1.1rem;font-weight:700;color:var(--gold);margin-bottom:1.25rem;padding-bottom:.6rem;border-bottom:1px solid var(--border)}
+.parecer-item{display:flex;gap:1rem;margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--border);align-items:flex-start}
+.parecer-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.parecer-label{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;min-width:80px;color:var(--gold-dim);padding-top:2px}
+.parecer-text{font-size:.92rem;color:var(--text-muted);line-height:1.65;flex:1}
+.parecer-text strong{color:var(--text)}
+
+/* SECTION INTRO */
+.section-intro{font-size:1rem;color:var(--text-muted);line-height:1.75;margin-bottom:2rem;padding-left:1rem;border-left:2px solid var(--gold-dim)}
+
+/* FOOTER */
+/* PRINT STYLES */
+@media print {
+  .nav-tabs, .pdf-control, .site-footer { display: none !important; }
+  .wrap { max-width: 100%; padding: 0; }
+  body { background: #fff; color: #000; font-size: 12pt; }
+  .entry, .section, .block { page-break-inside: avoid; border-color: #ddd !important; }
+  .entry-title, .block-title { color: #000 !important; }
+  .entry-body, .text-muted { color: #333 !important; }
+  .tag { border: 1px solid #999 !important; color: #333 !important; background: transparent !important; }
+  a { text-decoration: none; color: #333; }
+}
+
+/* RELATED ARTIFACTS SYSTEM */
+.agrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+.acard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 18px;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+.acard:hover {
+  border-color: var(--gold);
+  background: var(--surface2);
+}
+.abadge {
+  display: inline-flex;
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  width: fit-content;
+  margin-bottom: 10px;
+}
+.ab-gold { background: var(--gold-glow); color: var(--gold); border: 1px solid var(--gold-dim); }
+.ab-red { background: var(--red-glow); color: var(--red); border: 1px solid var(--red-dim); }
+.ab-blue { background: var(--blue-glow); color: #5a8fd4; border: 1px solid var(--blue-dim); }
+
+.atitle { font-family: var(--serif); font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+.adesc { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+.site-footer{border-top:1px solid var(--border);margin-top:4rem;padding:2rem;text-align:center;font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-dim)}
+</style>
+</head>
+<body>
+
+<div class="pdf-control wrap">
+  <button class="btn-pdf" onclick="window.print()">
+    <span>📄 SALVAR PDF</span>
+  </button>
+</div>
+
+<div class="site-header wrap">
+  <div class="header-label">Perfil Analítico · Compilação de fontes públicas verificadas</div>
+  <h1>Gilmar <em>Mendes</em></h1>
+  <p class="sub">Ministro do STF desde 2002 · Presidente 2008–2010 · Presidente TSE 2012–2014</p>
+  <div class="divider-gold"></div>
+</div>
+
+<div class="wrap">
+
+<nav class="nav-tabs" id="navTabs">
+  <a href="#sec-hc" class="nav-tab active" data-section="hc">Habeas Corpus</a>
+  <a href="#sec-conflitos" class="nav-tab" data-section="conflitos">Conflitos</a>
+  <a href="#sec-cpi" class="nav-tab" data-section="cpi">CPI 2025–2026</a>
+  <a href="#sec-institucional" class="nav-tab" data-section="institucional">Dimensão Institucional</a>
+  <a href="#sec-sintese" class="nav-tab" data-section="sintese">Síntese Jurídica</a>
+</nav>
+
+<!-- ═══ HABEAS CORPUS ═══ -->
+<div class="section active" id="sec-hc">
+
+  <div class="block">
+    <div class="block-header">
+      <span class="block-num">01/05</span>
+      <span class="block-title">Operação Satiagraha</span>
+      <span class="block-year">2008</span>
+    </div>
+    <div class="entry severity-critica">
+      <div class="entry-meta"><span class="year">Jul–Ago 2008</span><span class="tag tag-red">HC Duplo 48h</span><span class="tag tag-gold">Satiagraha</span></div>
+      <div class="entry-title">Daniel Dantas — dois habeas corpus em 48 horas</div>
+      <div class="entry-body">O banqueiro Daniel Dantas, preso na Operação Satiagraha, foi solto duas vezes em 48 horas por decisões monocráticas de Gilmar Mendes. A operação investigava formação de quadrilha, evasão de divisas e lavagem de dinheiro. A Satiagraha seria anulada pelo STJ em 2011. Caso considerado um dos mais emblemáticos da trajetória do ministro.</div>
+    </div>
+    <div class="entry severity-alta">
+      <div class="entry-meta"><span class="year">2008</span><span class="tag tag-red">HC Coletivo</span><span class="tag tag-gold">Satiagraha</span></div>
+      <div class="entry-title">Celso Pitta, Naji Nahas + 8 réus — mesma semana</div>
+      <div class="entry-body">Na mesma semana, habeas corpus ao ex-prefeito de São Paulo <strong>Celso Pitta</strong>, ao investidor <strong>Naji Nahas</strong> e outras oito pessoas presas na mesma operação. O grupo respondia por formação de quadrilha, evasão de divisas e lavagem de dinheiro.</div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-header">
+      <span class="block-num">02/05</span>
+      <span class="block-title">Operação Avalanche / Mensalão</span>
+      <span class="block-year">2009</span>
+    </div>
+    <div class="entry severity-critica">
+      <div class="entry-meta"><span class="year">2009</span><span class="tag tag-red">Conflito de interesse</span><span class="tag tag-gold">Mensalão</span></div>
+      <div class="entry-title">Marcos Valério — Lista de Furnas</div>
+      <div class="entry-body">Gilmar Mendes determinou a soltura de <strong>Marcos Valério</strong>, nome-chave do Mensalão, acusado de fabricação de inquérito falso. <em>Agravante:</em> Gilmar figura na Lista de Furnas — teria recebido <strong>R$ 185 mil</strong> da campanha de reeleição de Eduardo Azeredo em 1998, operação gerida pelo próprio Marcos Valério. Juiz julgou causa de quem o teria financiado.</div>
+    </div>
+    <div class="entry severity-media">
+      <div class="entry-meta"><span class="year">2009</span><span class="tag tag-gold">Operação Pasárgada</span></div>
+      <div class="entry-title">Paulo Sobrinho — contratações irregulares no ES</div>
+      <div class="entry-body">Soltura de Paulo Sobrinho, preso na Operação Pasárgada por contratações sem licitação em obras públicas no Espírito Santo.</div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-header">
+      <span class="block-num">03/05</span>
+      <span class="block-title">Lava Jato e Desdobramentos</span>
+      <span class="block-year">2016–2018</span>
+    </div>
+    <div class="entry severity-critica">
+      <div class="entry-meta"><span class="year">2017</span><span class="tag tag-red">Impedimento não declarado</span><span class="tag tag-gold">Eficiência / Calicute</span></div>
+      <div class="entry-title">Eike Batista — esposa sócia do escritório contratado pelo réu</div>
+      <div class="entry-body">HC para Eike Batista, preso por propinas ao ex-governador Sérgio Cabral. O PGR Rodrigo Janot formalizou pedido de impedimento: a esposa de Gilmar, <strong>Guiomar Mendes</strong>, era sócia de escritório de advocacia com contrato ativo com Eike. Gilmar não se declarou impedido e julgou.</div>
+    </div>
+    <div class="entry severity-alta">
+      <div class="entry-meta"><span class="year">2017</span><span class="tag tag-gold">Operação Calicute</span></div>
+      <div class="entry-title">Hudson Braga — desvio de obras públicas do RJ</div>
+      <div class="entry-body">Soltura do ex-secretário de Obras de Sérgio Cabral, preso por desvio de recursos públicos federais em obras do governo fluminense.</div>
+    </div>
+    <div class="entry severity-alta">
+      <div class="entry-meta"><span class="year">2017</span><span class="tag tag-red">278 anos de pena</span></div>
+      <div class="entry-title">Roger Abdelmassih — 52 crimes de estupro</div>
+      <div class="entry-body">HC para Roger Abdelmassih, condenado a 278 anos de prisão por 52 estupros contra pacientes. Considerado pela comunidade jurídica como o caso mais controverso em matéria de proporcionalidade na trajetória do ministro.</div>
+    </div>
+    <div class="entry severity-alta">
+      <div class="entry-meta"><span class="year">2017–18</span><span class="tag tag-gold">Lava Jato RJ</span></div>
+      <div class="entry-title">Sérgio Côrtes — fraudes em licitações de saúde</div>
+      <div class="entry-body">Soltura do ex-secretário estadual de Saúde do RJ, investigado por fraudes em licitações e contratos na área de saúde pública.</div>
+    </div>
+    <div class="entry severity-alta">
+      <div class="entry-meta"><span class="year">2017–18</span><span class="tag tag-gold">Operação Ararath</span></div>
+      <div class="entry-title">José Riva — 100+ ações de corrupção no MT</div>
+      <div class="entry-body">HC para José Riva, ex-presidente da Assembleia Legislativa do Mato Grosso, réu em mais de 100 ações de corrupção investigado na Operação Ararath.</div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-header">
+      <span class="block-num">04/05</span>
+      <span class="block-title">Fase Pós-Lava Jato</span>
+      <span class="block-year">2019–2024</span>
+    </div>
+    <div class="entry severity-alta">
+      <div class="entry-meta"><span class="year">2025</span><span class="tag tag-red">US$ 239 mi</span><span class="tag tag-gold">Fatura Exposta</span></div>
+      <div class="entry-title">Doleiro Moghrabi — lavagem bilionária</div>
+      <div class="entry-body">HC para o doleiro Moghrabi, preso na Operação Fatura Exposta por movimentar US$ 239 milhões em esquema de lavagem de dinheiro.</div>
+    </div>
+    <div class="entry severity-critica">
+      <div class="entry-meta"><span class="year">2024</span><span class="tag tag-red">Anulação total</span><span class="tag tag-gold">Lava Jato</span></div>
+      <div class="entry-title">José Dirceu — anulação integral de todas as condenações</div>
+      <div class="entry-body">Gilmar Mendes anulou todas as condenações da Lava Jato contra <strong>José Dirceu</strong>, estendendo a decisão da 2ª Turma que reconheceu a parcialidade de Sérgio Moro. Em decisão de 24 páginas, afirmou que a operação "encarava a condenação de Dirceu como objetivo a ser alcançado".</div>
+    </div>
+  </div>
+
+  <h3 style="font-family:var(--serif);font-size:1.05rem;color:var(--text-muted);margin-bottom:1rem;font-weight:600">Mapa cronológico — beneficiados</h3>
+  <table class="data-table">
+    <thead><tr><th>Período</th><th>Beneficiado</th><th>Operação / Contexto</th><th>Gravidade Alegada</th></tr></thead>
+    <tbody>
+      <tr><td><strong>2008</strong></td><td>Daniel Dantas</td><td>Satiagraha</td><td>Crimes financeiros, quadrilha</td></tr>
+      <tr><td><strong>2008</strong></td><td>Celso Pitta + 9</td><td>Satiagraha</td><td>Evasão de divisas, lavagem</td></tr>
+      <tr><td><strong>2009</strong></td><td>Marcos Valério</td><td>Avalanche / Mensalão</td><td>Corrupção — <em>conflito: Lista de Furnas</em></td></tr>
+      <tr><td><strong>2009</strong></td><td>Paulo Sobrinho</td><td>Pasárgada</td><td>Contratações sem licitação</td></tr>
+      <tr><td><strong>2017</strong></td><td>Roger Abdelmassih</td><td>—</td><td>52 estupros, 278 anos</td></tr>
+      <tr><td><strong>2017</strong></td><td>Eike Batista</td><td>Eficiência / Calicute</td><td>Propinas a Cabral — <em>conflito: esposa advogada</em></td></tr>
+      <tr><td><strong>2017–18</strong></td><td>Hudson Braga</td><td>Calicute</td><td>Desvio de obras públicas</td></tr>
+      <tr><td><strong>2017–18</strong></td><td>Sérgio Côrtes</td><td>Lava Jato RJ</td><td>Fraude em licitações de saúde</td></tr>
+      <tr><td><strong>2017–18</strong></td><td>José Riva</td><td>Ararath</td><td>100+ ações de corrupção</td></tr>
+      <tr><td><strong>2024</strong></td><td>José Dirceu</td><td>Extensão Lava Jato</td><td>Anulação total das condenações</td></tr>
+      <tr><td><strong>2025</strong></td><td>Doleiro Moghrabi</td><td>Fatura Exposta</td><td>US$ 239 mi movimentados</td></tr>
+    </tbody>
+  </table>
+
+</div><!-- /sec-hc -->
+
+<!-- ═══ CONFLITOS ═══ -->
+<div class="section" id="sec-conflitos">
+  <div class="block">
+    <div class="block-header">
+      <span class="block-num">—</span>
+      <span class="block-title">Conflitos de Interesse Documentados</span>
+      <span class="block-year">2008–2025</span>
+    </div>
+    <div class="entry severity-critica">
+      <div class="entry-meta"><span class="year">2008–2009</span><span class="tag tag-red">Impedimento não declarado</span></div>
+      <div class="entry-title">Lista de Furnas — Marcos Valério</div>
+      <div class="entry-body">Gilmar figura na Lista de Furnas: suposto repasse de <strong>R$ 185 mil</strong> à campanha de Eduardo Azeredo em 1998, gerida pelo próprio Marcos Valério. Em 2009, Gilmar ordenou a soltura de Valério sem se declarar impedido. O art. 144 do CPC e o art. 252 do CPP vedam ao magistrado julgar causa de quem lhe deu vantagem.</div>
+    </div>
+    <div class="entry severity-critica">
+      <div class="entry-meta"><span class="year">2017</span><span class="tag tag-red">Cônjuge nos autos</span></div>
+      <div class="entry-title">Eike Batista — Guiomar Mendes como sócia remunerada</div>
+      <div class="entry-body">A esposa do ministro, <strong>Guiomar Mendes</strong>, figurava como sócia participando dos lucros de escritório com contrato ativo junto a Eike Batista. O PGR Rodrigo Janot formalizou pedido de impedimento. Gilmar julgou sem se afastar — decisão favorável ao réu.</div>
+    </div>
+    <div class="entry severity-alta">
+      <div class="entry-meta"><span class="year">2024–2025</span><span class="tag tag-red">Citado na CPI</span><span class="tag tag-gold">Banco Master</span></div>
+      <div class="entry-title">Banco Master — conflito de interesse identificado pela CPI</div>
+      <div class="entry-body">O relatório final da CPI do Crime Organizado cita Gilmar Mendes em conexão com o caso Banco Master. O senador relator Alessandro Vieira aponta que Gilmar integra o grupo de magistrados que teriam julgado causa na qual eram suspeitos — configurando crime de responsabilidade. Gilmar não se afastou do julgamento.</div>
+    </div>
+    <div class="entry severity-media">
+      <div class="entry-meta"><span class="year">2008–2025</span></div>
+      <div class="entry-title">Padrão estrutural: parte e juiz na mesma causa</div>
+      <div class="entry-body">Ao longo de 17 anos, o padrão que emerge é a presença recorrente de Gilmar como tomador de decisão em causas nas quais possuía interesses pessoais, financeiros ou de relacionamento com os réus favorecidos — <strong>sem declaração formal de impedimento em nenhum dos casos</strong>.</div>
+    </div>
+  </div>
+</div><!-- /sec-conflitos -->
+
+<!-- ═══ CPI 2025–2026 ═══ -->
+<div class="section" id="sec-cpi">
+  <div class="block">
+    <div class="block-header">
+      <span class="block-num">05/05</span>
+      <span class="block-title">CPI do Crime Organizado — Relatório Final</span>
+      <span class="block-year">2025–2026</span>
+    </div>
+    <div class="entry severity-critica">
+      <div class="entry-meta"><span class="year">2025</span><span class="tag tag-red">Indiciamento proposto</span><span class="tag tag-gold">CPI Crime Organizado</span></div>
+      <div class="entry-title">Relatório Alessandro Vieira — proposta de indiciamento do STF</div>
+      <div class="entry-body">
+        O relatório final da CPI do Crime Organizado, redigido pelo senador <strong>Alessandro Vieira</strong>, propõe o indiciamento de cinco atores por crimes de responsabilidade.<br><br>
+        <strong>Fundamento central:</strong> "proferir julgamento quando, por lei, sejam suspeitos na causa" — sustentado no processo do Banco Master em trâmite no STF, no qual todos os citados possuíam interesses pessoais ou relacionamentos documentados.<br><br>
+        <strong>Citados no relatório da CPI:</strong> Gilmar Mendes, Dias Toffoli, Alexandre de Moraes, Paulo Gonet (PGR).<br>
+        <strong>Citado na investigação do Master:</strong> Kassio Nunes Marques.
+      </div>
+    </div>
+    <div class="entry severity-critica">
+      <div class="entry-meta"><span class="year">2025–2026</span><span class="tag tag-red">Reação pública</span><span class="tag tag-gold">2ª Turma STF</span></div>
+      <div class="entry-title">Gilmar e Toffoli atacam o relatório — comportamento vedado</div>
+      <div class="entry-body">
+        Em lugar de se calar e se afastar, Gilmar reagiu <em>em sessão da 2ª Turma</em>, declarando que o senador relator "se esqueceu dos seus colegas milicianos e decidiu envolver o Supremo Tribunal Federal por ter concedido um habeas corpus". Toffoli também se manifestou publicamente.<br><br>
+        A reação configura exatamente o comportamento vedado pelo princípio da imparcialidade: <strong>o juiz citado como suspeito influenciando a percepção pública sobre a causa em que é parte</strong>.
+      </div>
+    </div>
+    <div class="alert-block">
+      <p><strong>Ponto crítico:</strong> Por força do art. 144 do CPC e do art. 252 do CPP, os ministros citados deveriam ter se declarado impedidos ou suspeitos no caso Banco Master. Ao não fazê-lo — e ao reagir publicamente ao relatório parlamentar — Gilmar, Toffoli, Moraes e Gonet concentraram os papéis de <strong>parte interessada e julgadores</strong> no mesmo processo, comprometendo estruturalmente a imparcialidade do STF.</p>
+    </div>
+    <div class="info-block">
+      <p><strong>Sobre o PGR:</strong> Paulo Gonet, sendo um dos citados no relatório da CPI, também não pode participar da decisão de indiciamento contra si mesmo — vedação que decorre do princípio nemo iudex in causa sua, base universal do direito processual.</p>
+    </div>
+  </div>
+
+  <h3 style="font-family:var(--serif);font-size:1.05rem;color:var(--text-muted);margin-bottom:1rem;font-weight:600">Mapa de interesses — atores citados</h3>
+  <div class="actors-row">
+    <span class="actor-chip cited">Gilmar Mendes · citado CPI</span>
+    <span class="actor-chip cited">Dias Toffoli · citado CPI</span>
+    <span class="actor-chip cited">Alexandre de Moraes · citado CPI</span>
+    <span class="actor-chip cited">Paulo Gonet (PGR) · citado CPI</span>
+    <span class="actor-chip cited">Kassio Nunes Marques · caso Master</span>
+  </div>
+  <div class="actors-row" style="margin-top:.5rem">
+    <span class="actor-chip reacted">Gilmar · reagiu em sessão STF</span>
+    <span class="actor-chip reacted">Toffoli · reagiu publicamente</span>
+    <span class="actor-chip">Alessandro Vieira · relator CPI</span>
+  </div>
+</div><!-- /sec-cpi -->
+
+<!-- ═══ INSTITUCIONAL ═══ -->
+<div class="section" id="sec-institucional">
+
+  <div class="section-intro">
+    Análise baseada na thread de 12 tweets de Adriano Lacerda (@adrianobombeiro) e nos 8 cards visuais associados. O argumento central é <strong>suprapartidário</strong>: o problema não é ideológico, é institucional — a violação dos princípios que sustentam a separação de poderes em qualquer democracia funcional.
+  </div>
+
+  <div class="block">
+    <div class="block-header">
+      <span class="block-num">A</span>
+      <span class="block-title">O Axioma Democrático Violado</span>
+      <span class="block-year">Princípio Universal</span>
+    </div>
+
+    <div class="entry severity-institucional">
+      <div class="entry-meta"><span class="year">Democracia funcional</span><span class="tag tag-blue">Teoria constitucional</span></div>
+      <div class="entry-title">Em nenhuma democracia do mundo um juiz ameaça</div>
+      <div class="entry-body">
+        Juízes julgam casos apresentados. Se o caso os envolve diretamente — como partes, como citados em investigação, como beneficiários de relacionamentos com réus — a obrigação é o silêncio, o afastamento e a designação de substituto isento. <strong>Juiz não dá pitaco.</strong> Não em democracias funcionais. Não em lugar nenhum normal.<br><br>
+        Este não é um preceito ideológico de esquerda ou direita. É a estrutura mínima de separação de poderes que distingue Estado de Direito de poder arbitrário — presente em todas as constituições democráticas do mundo ocidental.
+      </div>
+    </div>
+
+    <div class="quote-block">
+      <p>"Isso não é sobre esquerda ou direita. O problema é cristalino: Em NENHUMA democracia do mundo um juiz ameaça."</p>
+      <cite>Adriano Lacerda (@adrianobombeiro) — Thread 2/12</cite>
+    </div>
+
+  </div>
+
+  <div class="block">
+    <div class="block-header">
+      <span class="block-num">B</span>
+      <span class="block-title">A Armadilha Partidária</span>
+      <span class="block-year">Erro de enquadramento</span>
+    </div>
+
+    <div class="entry severity-institucional">
+      <div class="entry-meta"><span class="year">Análise de enquadramento</span><span class="tag tag-blue">Viés cognitivo</span></div>
+      <div class="entry-title">Por que o debate esquerda × direita é o desvio fatal</div>
+      <div class="entry-body">
+        Quando um ministro do STF ameaça um senador, o instinto partidário produz dois erros simétricas:<br><br>
+        <strong>Erro da esquerda:</strong> "O senador abusou" — focar no conteúdo do relatório em vez de na conduta do ministro.<br>
+        <strong>Erro da direita:</strong> "Mas e o outro lado?" — deflexão whataboutista que igualmente esquiva do problema central.<br><br>
+        <strong>O problema real é institucional e zero a ver com o senador ter cometido um crime ou não.</strong> Mesmo que o relatório fosse infundado ou mal-elaborado, a resposta democrática correta do ministro seria o silêncio e o afastamento — não a ameaça pública de cassação.
+      </div>
+    </div>
+
+    <div class="entry severity-institucional">
+      <div class="entry-meta"><span class="year">Normalização</span><span class="tag tag-blue">Erosão democrática</span></div>
+      <div class="entry-title">A normalização do inaceitável — diagnóstico de erosão</div>
+      <div class="entry-body">
+        O fato de a maioria dos brasileiros ter tratado as ameaças de ministros do STF a parlamentares como "mais um dia de debate político habitual" é, segundo a análise, o sintoma mais grave do processo. A normalização do comportamento excepcional é o mecanismo central de erosão democrática — quando o inaceitável deixa de chocar, o patamar mínimo de civilidade institucional já foi perdido.<br><br>
+        <strong>"Nossa democracia está disfuncional, corroída, na lona. Reconheça a anomalia."</strong>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="block">
+    <div class="block-header">
+      <span class="block-num">C</span>
+      <span class="block-title">A Anatomia do Juiz</span>
+      <span class="block-year">Democracia funcional × corroída</span>
+    </div>
+
+    <div class="anatomy-wrap">
+      <div class="anatomy-header">
+        <div class="anatomy-col-h ideal">Democracia Funcional<br><small style="font-size:.7em;opacity:.7">(o ideal)</small></div>
+        <div class="anatomy-col-h real">Democracia Corroída<br><small style="font-size:.7em;opacity:.7">(a realidade atual)</small></div>
+      </div>
+      <div class="anatomy-row">
+        <div class="anatomy-cell ideal">Julga os casos apresentados</div>
+        <div class="anatomy-cell real">Faz ameaças a parlamentares</div>
+      </div>
+      <div class="anatomy-row">
+        <div class="anatomy-cell ideal">Se cala e se afasta do caso quando há conflito de interesse</div>
+        <div class="anatomy-cell real">Entra no mérito com interesses pessoais em jogo</div>
+      </div>
+      <div class="anatomy-row">
+        <div class="anatomy-cell ideal">Fala apenas nos autos do processo</div>
+        <div class="anatomy-cell real">Dá pitaco público e político em tudo</div>
+      </div>
+      <div class="anatomy-row">
+        <div class="anatomy-cell ideal">Não é ator político — não participa de debates</div>
+        <div class="anatomy-cell real">Politiza a Justiça, destrói um pilar da democracia</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="block">
+    <div class="block-header">
+      <span class="block-num">D</span>
+      <span class="block-title">O Fluxo Quebrado da Justiça</span>
+      <span class="block-year">Caminho legal × realidade</span>
+    </div>
+
+    <div class="flow-wrap">
+      <div class="flow-col">
+        <div class="flow-col-title ideal">O caminho legal</div>
+        <div class="flow-node ideal-n">Conflito de interesse identificado<br><small>(ministro citado em investigação)</small></div>
+        <div class="flow-arr">↓</div>
+        <div class="flow-node ideal-n">Ministro se declara impedido ou suspeito</div>
+        <div class="flow-arr">↓</div>
+        <div class="flow-node ideal-n">Juiz isento substitui e faz a avaliação</div>
+        <div class="flow-arr">↓</div>
+        <div class="flow-node ideal-n" style="border-color:var(--teal-dim);color:#4ab8aa">Decisão isenta — pilar democrático preservado</div>
+      </div>
+      <div class="flow-col">
+        <div class="flow-col-title real">A realidade (Toffoli &amp; Gilmar)</div>
+        <div class="flow-node real-n">Conflito de interesse identificado<br><small>(ambos citados no relatório)</small></div>
+        <div class="flow-arr red">↓</div>
+        <div class="flow-node real-n">Não recuam — permanecem no processo</div>
+        <div class="flow-arr red">↓</div>
+        <div class="flow-node real-n">Manifestam-se publicamente sobre o mérito</div>
+        <div class="flow-arr red">↓</div>
+        <div class="flow-node final-n">Ameaçam o Senador Alessandro Vieira</div>
+      </div>
+      <div class="flow-footnote">⚠ O PGR Paulo Gonet também não pode participar da decisão de indiciamento por ser um dos citados — o princípio <em>nemo iudex in causa sua</em> veda a qualquer autoridade julgar causa própria.</div>
+    </div>
+
+  </div>
+
+  <div class="block">
+    <div class="block-header">
+      <span class="block-num">E</span>
+      <span class="block-title">A Prerrogativa Parlamentar</span>
+      <span class="block-year">O que a lei permite</span>
+    </div>
+
+    <div class="entry severity-institucional">
+      <div class="entry-meta"><span class="year">Direito parlamentar</span><span class="tag tag-blue">Imunidade material</span></div>
+      <div class="entry-title">O parlamentar pode opinar sobre tudo — isso é política</div>
+      <div class="entry-body">
+        Um parlamentar pode opinar o que quiser sobre crime de responsabilidade de ministro. Fundamentado ou não, cabe no relatório final de CPI. Um parlamentar não pode ser cassado por exercer sua função legislativa e fiscalizadora — isso é protegido pela imunidade material do art. 53 da CF/88.<br><br>
+        A consequência do relatório depende exclusivamente de <strong>convencer a maioria dos outros parlamentares</strong>. Isso é política — e o ministro ameaçado com cassação não pode ser o árbitro do processo que o envolve.
+      </div>
+    </div>
+
+    <div class="entry severity-institucional">
+      <div class="entry-meta"><span class="year">Erro de categoria</span><span class="tag tag-blue">Separação de poderes</span></div>
+      <div class="entry-title">Parlamentares são políticos. Ministros do STF não são.</div>
+      <div class="entry-body">
+        O erro de categoria central do episódio é tratar ministros do STF como atores políticos equivalentes a parlamentares. <strong>Parlamentares são eleitos para fazer política.</strong> Ministros do STF são indicados para aplicar o direito com imparcialidade.<br><br>
+        Quando ministros passam a fazer política — ameaçam, interferem, opinam sobre relatórios parlamentares que os envolvem — eles politizam a Justiça. E quando a Justiça é politizada, <strong>um pilar fundamental da democracia desmorona</strong>.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="block">
+    <div class="block-header">
+      <span class="block-num">F</span>
+      <span class="block-title">Diagnóstico Principiológico</span>
+      <span class="block-year">Violações identificadas</span>
+    </div>
+
+    <div class="principles-grid">
+      <div class="principle-card violated">
+        <h4>Nemo iudex in causa sua</h4>
+        <p>Ninguém pode ser juiz de causa própria. Gilmar e Toffoli, citados no relatório, permaneceram como julgadores e reagiram publicamente.</p>
+        <span class="pstatus pstatus-violated">Violado</span>
+      </div>
+      <div class="principle-card violated">
+        <h4>Imparcialidade objetiva</h4>
+        <p>A aparência de imparcialidade é tão importante quanto a imparcialidade real. Reações públicas de ministros citados destroem ambas.</p>
+        <span class="pstatus pstatus-violated">Violado</span>
+      </div>
+      <div class="principle-card violated">
+        <h4>Separação dos poderes</h4>
+        <p>Juízes não ameaçam parlamentares no exercício de função legislativa. Quando fazem, invadem a esfera política e desequilibram o sistema.</p>
+        <span class="pstatus pstatus-violated">Violado</span>
+      </div>
+      <div class="principle-card violated">
+        <h4>Liberdade parlamentar</h4>
+        <p>Parlamentar não pode ser ameaçado de cassação por produzir relatório de CPI, por mais polêmico que seja seu conteúdo — art. 53 CF/88.</p>
+        <span class="pstatus pstatus-violated">Violado</span>
+      </div>
+      <div class="principle-card warning">
+        <h4>Vedação ao ativismo judicial</h4>
+        <p>Juízes julgam casos concretos — não interferem no processo político, não tomam partido público em conflitos institucionais.</p>
+        <span class="pstatus pstatus-warning">Em risco sistêmico</span>
+      </div>
+      <div class="principle-card warning">
+        <h4>Devido processo legal objetivo</h4>
+        <p>O PGR não pode decidir sobre indiciamento quando é ele próprio o investigado — ausência de órgão isento para deliberar.</p>
+        <span class="pstatus pstatus-warning">Ausente no caso</span>
+      </div>
+    </div>
+
+  </div>
+
+</div><!-- /sec-institucional -->
+
+<!-- ═══ SÍNTESE JURÍDICA ═══ -->
+<div class="section" id="sec-sintese">
+
+  <div class="parecer-section">
+    <h3>Síntese Jurídica — Parecer Técnico</h3>
+
+    <div class="parecer-item">
+      <div class="parecer-label">Quadro normativo</div>
+      <div class="parecer-text">Art. 144 CPC (suspeição do juiz por interesse na causa); Art. 252 CPP (impedimento por interesse pessoal); Art. 53 CF/88 (imunidade material parlamentar); LC 35/1979 — LOMAN (deveres e vedações dos magistrados); Art. 5º LIV, LV e LXVIII CF/88 (garantias do devido processo legal).</div>
+    </div>
+
+    <div class="parecer-item">
+      <div class="parecer-label">Ponto crítico I</div>
+      <div class="parecer-text"><strong>Gilmar, Toffoli, Moraes e Gonet foram citados no relatório da CPI.</strong> A lei processual é expressa: magistrado com interesse pessoal na causa deve se declarar suspeito ou impedido. Ao não fazê-lo e ao reagir publicamente ao relatório, os ministros acumularam os papéis de parte e julgador — vício processual de máxima gravidade.</div>
+    </div>
+
+    <div class="parecer-item">
+      <div class="parecer-label">Ponto crítico II</div>
+      <div class="parecer-text"><strong>A ameaça de cassação ao senador Alessandro Vieira é juridicamente inviável.</strong> A imunidade material (art. 53 CF/88) protege o parlamentar por opiniões, palavras e votos no exercício do mandato. Relatório final de CPI é ato parlamentar típico — não enseja cassação, independentemente de seu conteúdo.</div>
+    </div>
+
+    <div class="parecer-item">
+      <div class="parecer-label">Ponto crítico III</div>
+      <div class="parecer-text"><strong>O PGR Paulo Gonet não pode deliberar sobre indiciamento de si mesmo.</strong> O princípio nemo iudex in causa sua é universal. A ausência de um órgão isento para deliberar cria impasse institucional sem solução interna ao sistema — evidência de disfunção estrutural.</div>
+    </div>
+
+    <div class="parecer-item">
+      <div class="parecer-label">Graduação</div>
+      <div class="parecer-text">É <strong>indubitável</strong> que os ministros citados deveriam ter se afastado (norma expressa — arts. 144 CPC e 252 CPP). <strong>Há fundamento jurídico sólido</strong> para sustentar que as reações públicas agravam o vício de imparcialidade. <strong>É controverso</strong> se as condutas configuram crime de responsabilidade no sentido técnico exigido para abertura de processo formal — matéria não pacificada e de alta carga política.</div>
+    </div>
+
+    <div class="parecer-item">
+      <div class="parecer-label">Conclusão</div>
+      <div class="parecer-text">O episódio evidencia <strong>ruptura estrutural com os princípios de imparcialidade judicial</strong>. Independentemente da procedência ou improcedência do relatório Vieira quanto ao mérito, o comportamento dos ministros — permanecendo como julgadores, reagindo publicamente e ameaçando o relator — contraria de forma direta as normas processuais de impedimento e suspeição. Em democracias funcionais, a resposta correta a um relatório que os envolve seria o silêncio e o afastamento. Ponto final.<br><br>
+      <em>Análise técnica. Não substitui consulta a advogado habilitado na OAB. Data: abril 2026.</em></div>
+    </div>
+
+  </div>
+
+</div><!-- /sec-sintese -->
+
+  <!-- RELATED ARTEFACTS -->
+  <div class="block" style="margin-top:6rem">
+    <div class="block-header">
+      <span class="block-num">>>></span>
+      <span class="block-title">Artefatos Relacionados</span>
+    </div>
+    <div class="agrid">
+      <a href="padroes-sistemicos-dashboard.html" class="acard">
+        <div class="abadge ab-red">Doutrina</div>
+        <div class="atitle">Padrões P1–P10</div>
+        <div class="adesc">A base analítica que conecta as 10 falhas de design do sistema estatal brasileiro.</div>
+      </a>
+      <a href="global-kompromat.html" class="acard">
+        <div class="abadge ab-red">Estado Capturado</div>
+        <div class="atitle">Global Kompromat</div>
+        <div class="adesc">Mapa forense de redes de influência, captura institucional e lawfare global.</div>
+      </a>
+      <a href="republica-capturada.html" class="acard">
+        <div class="abadge ab-gold">Dashboard</div>
+        <div class="atitle">República Capturada</div>
+        <div class="adesc">Mapeamento das operações Greenwashing, Carbono Oculto e conexões institucionais.</div>
+      </a>
+      <a href="brasil-falha-institucional-diagnostico.html" class="acard">
+        <div class="abadge ab-blue">Diagnóstico</div>
+        <div class="atitle">Brasil: Falha Institucional</div>
+        <div class="adesc">Análise macro sobre gasto público, impunidade e o paradoxo da economia ilícita.</div>
+      </a>
+    </div>
+  </div>
+
+</div><!-- /wrap -->
+
+<div class="site-footer wrap">
+  Compilação baseada em fontes públicas verificadas · Análise técnico-jurídica · Não constitui propaganda política
+</div>
+
+<script>
+// SCROLL SPY LOGIC
+const sections = document.querySelectorAll('.section');
+const navTabs = document.querySelectorAll('.nav-tab');
+
+const observerOptions = {
+  root: null,
+  rootMargin: '-20% 0px -70% 0px',
+  threshold: 0
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navTabs.forEach(tab => {
+        tab.classList.remove('active');
+        if (tab.getAttribute('href') === '#' + entry.target.id) {
+          tab.classList.add('active');
+        }
+      });
+    }
+  });
+}, observerOptions);
+
+sections.forEach(section => observer.observe(section));
+
+// SMOOTH SCROLL FOR ANCHORS
+navTabs.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const targetId = link.getAttribute('href');
+    document.querySelector(targetId).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+</script>
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-analytics-domain="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operação Castelo de Areia — Dashboard Investigativo</title>
+  <meta name="description" content="Análise da Operação Castelo de Areia: crimes financeiros na Camargo Corrêa e o precedente de anulação por denúncia anônima.">
+  <link rel="canonical" href="https://gosurf.site/operacao-castelo-de-areia">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://gosurf.site/operacao-castelo-de-areia">
+  <meta property="og:title" content="Operação Castelo de Areia — Dashboard Investigativo">
+  <meta property="og:description" content="Investigação sobre crimes financeiros e lavagem de dinheiro na Camargo Corrêa, anulada pelo STJ.">
+  <meta property="og:image" content="https://gosurf.site/og_card_operacao_castelo_de_areia.png">
+  <meta property="og:locale" content="pt_BR">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Operação Castelo de Areia — Dashboard Investigativo">
+  <meta name="twitter:description" content="Investigação anulada pelo STJ.">
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#0a0e17;--bg2:#111827;--bg3:#1a2235;
+    --gold:#e8b84b;--gold2:#f5d07a;--gold-dim:#a07830;
+    --red:#e85555;--red2:#ff7070;--red-dim:#7a2828;
+    --teal:#3ecfb0;--teal2:#6effd8;--teal-dim:#1a7060;
+    --blue:#4a9eff;--blue2:#7ab8ff;--blue-dim:#1a3d7a;
+    --purple:#a96eff;--purple2:#c89fff;--purple-dim:#4a2a7a;
+    --orange:#ff8c42;--orange2:#ffb07a;--orange-dim:#7a3a10;
+    --gray:#6b7280;--gray2:#9ca3af;--text:#e8e8e0;--text2:#a0a0a0;
+    --border:rgba(255,255,255,0.07);
+    --font:'Syne',sans-serif;--mono:'JetBrains Mono',monospace;
+  }
+  body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh;overflow-x:hidden}
+
+  header{
+    background:linear-gradient(135deg,#0d1520 0%,#1a2540 50%,#0d1520 100%);
+    border-bottom:1px solid var(--gold-dim);
+    padding:28px 32px 20px;position:relative;overflow:hidden;
+  }
+  header::before{
+    content:'';position:absolute;inset:0;
+    background:radial-gradient(ellipse at 20% 50%,rgba(232,184,75,0.05) 0%,transparent 60%);
+  }
+  .header-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(232,184,75,0.1);border:1px solid var(--gold-dim);border-radius:4px;padding:4px 12px;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:12px}
+  header h1{font-size:28px;font-weight:800;color:#fff;letter-spacing:-0.5px;line-height:1.1}
+  header h1 span{color:var(--gold)}
+  .header-meta{display:flex;gap:24px;margin-top:12px;flex-wrap:wrap}
+  .meta-item{font-size:12px;color:var(--text2);font-family:var(--mono)}
+  .meta-item b{color:var(--gold2)}
+
+  nav{
+    display:flex;gap:4px;padding:12px 32px;background:rgba(17,24,39,0.9);
+    border-bottom:1px solid var(--border);overflow-x:auto;flex-wrap:wrap;
+    position:sticky;top:0;z-index:100;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  }
+  .nav-btn{
+    padding:6px 14px;border-radius:6px;border:1px solid var(--border);
+    background:transparent;color:var(--text2);font-family:var(--font);
+    font-size:12px;font-weight:500;cursor:pointer;transition:all .2s;white-space:nowrap;
+  }
+  .nav-btn:hover{border-color:var(--gold-dim);color:var(--gold2)}
+  .nav-btn.active{background:rgba(232,184,75,0.12);border-color:var(--gold);color:var(--gold);font-weight:700}
+
+  main{padding:0 24px 32px;max-width:1200px;margin:0 auto}
+
+  /* ─── OVERVIEW SECTION ─── */
+  .overview-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;padding:20px 0 12px}
+  .kpi-card{
+    background:var(--bg2);border:1px solid var(--border);border-radius:10px;
+    padding:14px 16px;position:relative;overflow:hidden;
+  }
+  .kpi-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+  .kpi-gold::before{background:linear-gradient(90deg,var(--gold),var(--gold2))}
+  .kpi-red::before{background:linear-gradient(90deg,var(--red),var(--red2))}
+  .kpi-teal::before{background:linear-gradient(90deg,var(--teal),var(--teal2))}
+  .kpi-blue::before{background:linear-gradient(90deg,var(--blue),var(--blue2))}
+  .kpi-purple::before{background:linear-gradient(90deg,var(--purple),var(--purple2))}
+  .kpi-orange::before{background:linear-gradient(90deg,var(--orange),var(--orange2))}
+  .kpi-label{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);margin-bottom:6px}
+  .kpi-value{font-size:22px;font-weight:800;line-height:1}
+  .kpi-sub{font-size:11px;color:var(--text2);margin-top:4px;font-family:var(--mono)}
+  .kpi-gold .kpi-value{color:var(--gold)}
+  .kpi-red .kpi-value{color:var(--red2)}
+  .kpi-teal .kpi-value{color:var(--teal)}
+  .kpi-blue .kpi-value{color:var(--blue)}
+  .kpi-purple .kpi-value{color:var(--purple)}
+  .kpi-orange .kpi-value{color:var(--orange)}
+
+  /* ─── GRAVITY METER ─── */
+  .gravity-bar{
+    background:var(--bg2);border:1px solid var(--border);border-radius:10px;
+    padding:16px 20px;margin-bottom:12px;
+  }
+  .gravity-title{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);margin-bottom:10px}
+  .gravity-track{height:10px;background:var(--bg3);border-radius:999px;overflow:hidden;position:relative}
+  .gravity-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,#4a9eff,#e8b84b,#e85555);transition:width 1s ease}
+  .gravity-labels{display:flex;justify-content:space-between;font-size:10px;color:var(--text2);margin-top:6px;font-family:var(--mono)}
+  .gravity-score{font-size:24px;font-weight:800;color:var(--red2);margin-top:8px}
+  .gravity-note{font-size:11px;color:var(--text2);margin-top:2px}
+
+  /* ─── PANELS ─── */
+  .section{display:none;padding-top:4px}
+  .section.active{display:block}
+
+  .panel-grid{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:12px;
+    margin-bottom:12px;
+  }
+  @media (max-width: 768px){
+    .panel-grid{grid-template-columns: 1fr;}
+  }
+  .panel{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:18px 20px;position:relative}
+  .panel-title{
+    font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+    margin-bottom:14px;display:flex;align-items:center;gap:8px;
+  }
+  .panel-title-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+  .dot-gold{background:var(--gold)}
+  .dot-red{background:var(--red)}
+  .dot-teal{background:var(--teal)}
+  .dot-blue{background:var(--blue)}
+  .dot-purple{background:var(--purple)}
+  .dot-orange{background:var(--orange)}
+
+  .tag{display:inline-block;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:600;margin:2px 2px 2px 0;font-family:var(--mono)}
+  .tag-gold{background:rgba(232,184,75,0.12);color:var(--gold);border:1px solid rgba(232,184,75,0.25)}
+  .tag-red{background:rgba(232,85,85,0.12);color:var(--red2);border:1px solid rgba(232,85,85,0.25)}
+  .tag-teal{background:rgba(62,207,176,0.1);color:var(--teal);border:1px solid rgba(62,207,176,0.2)}
+  .tag-blue{background:rgba(74,158,255,0.1);color:var(--blue);border:1px solid rgba(74,158,255,0.2)}
+  .tag-purple{background:rgba(169,110,255,0.1);color:var(--purple);border:1px solid rgba(169,110,255,0.2)}
+  .tag-orange{background:rgba(255,140,66,0.1);color:var(--orange);border:1px solid rgba(255,140,66,0.2)}
+  .tag-gray{background:rgba(107,114,128,0.15);color:var(--gray2);border:1px solid rgba(107,114,128,0.25)}
+
+  .timeline-item{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)}
+  .timeline-item:last-child{border-bottom:none}
+  .tl-date{font-family:var(--mono);font-size:11px;color:var(--gold);min-width:90px;font-weight:600;padding-top:2px}
+  .tl-content{flex:1}
+  .tl-title{font-size:13px;font-weight:600;color:var(--text);margin-bottom:2px}
+  .tl-desc{font-size:12px;color:var(--text2);line-height:1.5}
+
+  .risk-item{padding:10px 12px;border-radius:8px;margin-bottom:8px;border-left:3px solid;background:var(--bg3)}
+  .risk-critico{border-color:var(--red)}
+  .risk-alto{border-color:var(--orange)}
+  .risk-medio{border-color:var(--gold)}
+  .risk-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px}
+  .risk-name{font-size:13px;font-weight:600}
+  .risk-badge{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;border-radius:3px;font-family:var(--mono)}
+  .badge-critico{background:rgba(232,85,85,0.2);color:var(--red2)}
+  .badge-alto{background:rgba(255,140,66,0.2);color:var(--orange2)}
+  .badge-medio{background:rgba(232,184,75,0.15);color:var(--gold2)}
+  .risk-desc{font-size:12px;color:var(--text2);line-height:1.5}
+
+  .alert-item{display:flex;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:8px;background:var(--bg3)}
+  .alert-icon{font-size:16px;flex-shrink:0;margin-top:1px}
+  .alert-body{flex:1}
+  .alert-title{font-size:13px;font-weight:600;margin-bottom:2px}
+  .alert-desc{font-size:12px;color:var(--text2);line-height:1.5}
+
+  .actor-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+  .actor-card{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px 14px}
+  .actor-name{font-size:13px;font-weight:700;margin-bottom:4px}
+  .actor-role{font-size:11px;color:var(--text2);margin-bottom:6px;font-family:var(--mono)}
+  .actor-status{font-size:11px}
+
+  .learn-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--border)}
+  .learn-item:last-child{border-bottom:none}
+  .learn-num{font-family:var(--mono);font-size:20px;font-weight:800;color:var(--bg3);min-width:36px;text-align:center;-webkit-text-stroke:1px var(--teal);line-height:1}
+  .learn-title{font-size:13px;font-weight:700;margin-bottom:3px;color:var(--teal)}
+  .learn-desc{font-size:12px;color:var(--text2);line-height:1.6}
+
+  .strategy-card{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:14px 16px;margin-bottom:10px}
+  .strategy-header{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+  .strategy-icon{font-size:18px}
+  .strategy-name{font-size:14px;font-weight:700}
+  .strategy-desc{font-size:12px;color:var(--text2);line-height:1.6}
+  .strategy-result{font-size:11px;margin-top:8px;padding:6px 10px;border-radius:5px;background:var(--bg2);font-family:var(--mono)}
+
+  .ref-item{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);align-items:flex-start}
+  .ref-item:last-child{border-bottom:none}
+  .ref-num{font-family:var(--mono);font-size:11px;color:var(--text2);min-width:28px;margin-top:2px}
+  .ref-body .ref-title{font-size:13px;font-weight:600;color:var(--blue);margin-bottom:2px}
+  .ref-body .ref-source{font-size:11px;color:var(--text2);font-family:var(--mono)}
+
+  .full-width{grid-column:1/-1}
+
+  /* mini connection map */
+  .conn-map{padding:8px 0}
+  .conn-row{display:flex;align-items:center;gap:8px;padding:6px 0;font-size:12px}
+  .conn-node{padding:4px 10px;border-radius:5px;font-weight:600;font-size:11px}
+  .conn-arrow{color:var(--text2);font-size:16px}
+  .conn-label{font-size:11px;color:var(--text2);font-family:var(--mono)}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-badge">MAPA MENTAL • ANÁLISE JURÍDICO-INVESTIGATIVA</div>
+  <h1>Operação <span>Castelo de Areia</span></h1>
+  <div class="header-meta">
+    <span class="meta-item"><b>Deflagração:</b> 25 mar 2009</span>
+    <span class="meta-item"><b>Órgão:</b> Polícia Federal / MPF</span>
+    <span class="meta-item"><b>Vara:</b> 6ª Vara Criminal Federal — SP</span>
+    <span class="meta-item"><b>Juiz:</b> Fausto Martin De Sanctis</span>
+    <span class="meta-item"><b>Status:</b> Anulada pelo STJ (abr/2011)</span>
+  </div>
+</header>
+
+<nav>
+  <button class="nav-btn active" onclick="show('overview')">Visão Geral</button>
+  <button class="nav-btn" onclick="show('timeline')">Linha do Tempo</button>
+  <button class="nav-btn" onclick="show('atores')">Atores</button>
+  <button class="nav-btn" onclick="show('crimes')">Crimes & Esquema</button>
+  <button class="nav-btn" onclick="show('estrategias')">Estratégias</button>
+  <button class="nav-btn" onclick="show('riscos')">Riscos & Alertas</button>
+  <button class="nav-btn" onclick="show('aprendizados')">Aprendizados</button>
+  <button class="nav-btn" onclick="show('referencias')">Referências</button>
+</nav>
+
+<main>
+
+<!-- ══ OVERVIEW ══ -->
+<div id="sec-overview" class="section active">
+  <div class="overview-grid">
+    <div class="kpi-card kpi-gold">
+      <div class="kpi-label">Mandados de Prisão</div>
+      <div class="kpi-value">10</div>
+      <div class="kpi-sub">4 diretores + doleiros</div>
+    </div>
+    <div class="kpi-card kpi-red">
+      <div class="kpi-label">Busca & Apreensão</div>
+      <div class="kpi-value">16</div>
+      <div class="kpi-sub">SP e RJ</div>
+    </div>
+    <div class="kpi-card kpi-teal">
+      <div class="kpi-label">Ações Penais</div>
+      <div class="kpi-value">3 + 1</div>
+      <div class="kpi-sub">+ improbidade adm.</div>
+    </div>
+    <div class="kpi-card kpi-blue">
+      <div class="kpi-label">Proc. Subsidiários</div>
+      <div class="kpi-value">32</div>
+      <div class="kpi-sub">Grandes obras nacionais</div>
+    </div>
+    <div class="kpi-card kpi-purple">
+      <div class="kpi-label">Propina (Palocci)</div>
+      <div class="kpi-value">R$50M</div>
+      <div class="kpi-sub">Camp. PT 2010 (alegado)</div>
+    </div>
+    <div class="kpi-card kpi-orange">
+      <div class="kpi-label">Atraso Lava Jato</div>
+      <div class="kpi-value">~6 anos</div>
+      <div class="kpi-sub">Segundo Deltan Dallagnol</div>
+    </div>
+  </div>
+
+  <div class="gravity-bar">
+    <div class="gravity-title">Índice de Gravidade Institucional</div>
+    <div class="gravity-track"><div class="gravity-fill" style="width:92%"></div></div>
+    <div class="gravity-labels"><span>Baixo</span><span>Médio</span><span>Alto</span><span>Crítico</span></div>
+    <div class="gravity-score">92 / 100</div>
+    <div class="gravity-note">Combinação de: corrupção sistêmica, obstrução judicial, impacto na jurisprudência, precedente negativo para investigações futuras e conexão direta com a Lava Jato</div>
+  </div>
+
+  <div class="panel-grid">
+    <div class="panel">
+      <div class="panel-title"><span class="panel-title-dot dot-gold"></span>Contexto & Origem</div>
+      <p style="font-size:13px;color:var(--text2);line-height:1.7">Investigação iniciada a partir de <b style="color:var(--gold)">denúncia anônima</b> à PF. Visava desarticular esquema de lavagem de dinheiro, evasão de divisas e fraude a licitações envolvendo executivos do Grupo Camargo Corrêa e políticos. Considerada antecessora direta da <b style="color:var(--gold)">Operação Lava Jato</b>.</p>
+      <div style="margin-top:12px">
+        <span class="tag tag-gold">Lavagem de dinheiro</span>
+        <span class="tag tag-gold">Evasão de divisas</span>
+        <span class="tag tag-gold">Corrupção ativa</span>
+        <span class="tag tag-gold">Fraude em licitação</span>
+        <span class="tag tag-gold">Org. criminosa</span>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-title"><span class="panel-title-dot dot-red"></span>Desfecho & Anulação</div>
+      <p style="font-size:13px;color:var(--text2);line-height:1.7">Em <b style="color:var(--red2)">5 abr 2011</b>, a 6ª Turma do STJ anulou a operação por 3×1. Fundamento: <b style="color:var(--red2)">denúncia anônima não pode embasar isoladamente</b> quebra de sigilo e interceptação telefônica. Decisão considerada inédita, contrariando 33 precedentes anteriores do próprio tribunal.</p>
+      <div style="margin-top:12px">
+        <span class="tag tag-red">STJ — anulação 3×1</span>
+        <span class="tag tag-red">Provas ilícitas (nulidade)</span>
+        <span class="tag tag-red">Denúncia anônima</span>
+        <span class="tag tag-red">Precedente invertido</span>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-title"><span class="panel-title-dot dot-purple"></span>Suspeita de Obstrução</div>
+      <p style="font-size:13px;color:var(--text2);line-height:1.7">Em 2019, a <b style="color:var(--purple)">Operação Appius</b> investigou suspeita de pagamento de propina para enterrar a Castelo de Areia. Delação de Palocci indicou que Camargo Corrêa teria pago R$ 50 mi à campanha do PT em 2010 para que o governo ajudasse a arquivar a operação, e que o ex-presidente do STJ César Asfor Rocha receberia nomeação ao STF como contrapartida.</p>
+      <div style="margin-top:12px">
+        <span class="tag tag-purple">Op. Appius (2019)</span>
+        <span class="tag tag-purple">Palocci — delação</span>
+        <span class="tag tag-purple">Asfor Rocha</span>
+        <span class="tag tag-purple">Habeas corpus suspeito</span>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-title"><span class="panel-title-dot dot-teal"></span>Legado & Impacto</div>
+      <p style="font-size:13px;color:var(--text2);line-height:1.7">A anulação da operação é considerada um marco negativo para o combate à corrupção. Segundo o procurador Deltan Dallagnol, os <b style="color:var(--teal)">desvios apurados na Lava Jato poderiam ter sido descobertos 6 anos antes</b>. O caso deixou alertas críticos sobre diligências preliminares, cadeia de custódia e vulnerabilidade institucional do sistema de controle.</p>
+      <div style="margin-top:12px">
+        <span class="tag tag-teal">Antecessora Lava Jato</span>
+        <span class="tag tag-teal">Reforma processual</span>
+        <span class="tag tag-teal">Lição doutrinária</span>
+        <span class="tag tag-teal">Res judicata — perdas</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TIMELINE ══ -->
+<div id="sec-timeline" class="section">
+  <div class="panel" style="margin-top:16px">
+    <div class="panel-title"><span class="panel-title-dot dot-gold"></span>Linha do Tempo Completa</div>
+    <div class="timeline-item">
+      <div class="tl-date">~2008</div>
+      <div class="tl-content">
+        <div class="tl-title">Período dos Crimes Investigados</div>
+        <div class="tl-desc">Fatos relativos a Kurt Paul Pickel e à Camargo Corrêa ocorrem — movimentações financeiras ilegais, operações de câmbio paralelo e envio de valores ao exterior.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-date">~2008–09</div>
+      <div class="tl-content">
+        <div class="tl-title">Denúncia Anônima & Investigação Preliminar</div>
+        <div class="tl-desc">PF recebe denúncia anônima. Consultas a bancos de dados telefônicos por mais de 1 ano sem instauração formal de inquérito — ponto central da invalidade das provas posteriores.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-date">25 mar 2009</div>
+      <div class="tl-content">
+        <div class="tl-title" style="color:var(--gold)">Deflagração — Operação Castelo de Areia</div>
+        <div class="tl-desc">PF cumpre 10 mandados de prisão e 16 de busca e apreensão em SP e RJ. Sede da Camargo Corrêa vasculhada; 4 diretores e 2 secretárias presas. Juiz: Fausto De Sanctis, 6ª Vara Criminal Federal/SP.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-date">23 mar 2009</div>
+      <div class="tl-content">
+        <div class="tl-title">Prisões Preventivas e Temporárias</div>
+        <div class="tl-desc">7 prisões preventivas + 3 temporárias; bloqueio de contas; quebra de sigilo bancário e fiscal.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-date">2009</div>
+      <div class="tl-content">
+        <div class="tl-title">Liminar de Asfor Rocha (STJ)</div>
+        <div class="tl-desc">Então presidente do STJ, Cesar Asfor Rocha concede liminar suspendendo processos criminais e investigações — decisão que pavimentaria a anulação futura.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-date">dez 2009</div>
+      <div class="tl-content">
+        <div class="tl-title">Sentença de 1ª Instância</div>
+        <div class="tl-desc">Juiz Fausto De Sanctis acolhe parte da denúncia do MPF contra três executivos da Camargo Corrêa.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-date">5 abr 2011</div>
+      <div class="tl-content">
+        <div class="tl-title" style="color:var(--red2)">Anulação pelo STJ — 6ª Turma</div>
+        <div class="tl-desc">Decisão 3×1: Min. Maria Thereza Moura + Desemb. Celso Limongi + Desemb. Haroldo Rodrigues vs. Min. Og Fernandes. Fundamento: denúncia anônima não pode embasar, isoladamente, interceptações e quebra de sigilo. Operação anulada.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-date">dez 2011</div>
+      <div class="tl-content">
+        <div class="tl-title">TRF-3 Anula Sentença de De Sanctis</div>
+        <div class="tl-desc">2ª Turma do TRF-3, por unanimidade, determina devolução de bens apreendidos de Pickel, reforçando a cadeia de nulidades derivadas da operação.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-date">2013–2014</div>
+      <div class="tl-content">
+        <div class="tl-title">Operação Lava Jato Deflagrada</div>
+        <div class="tl-desc">Descobre esquemas que, segundo procuradores, poderiam ter sido identificados 6 anos antes caso a Castelo de Areia não tivesse sido derrubada.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-date">2017</div>
+      <div class="tl-content">
+        <div class="tl-title">Delação de Palocci</div>
+        <div class="tl-desc">Ex-ministro da Fazenda afirma que Asfor Rocha recebeu R$ 5 mi para conceder a liminar, e que Camargo Corrêa teria pago R$ 50 mi à campanha do PT 2010 para enterrar a operação. STJ suspende destruição de provas.</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-date">7 nov 2019</div>
+      <div class="tl-content">
+        <div class="tl-title" style="color:var(--orange)">Operação Appius</div>
+        <div class="tl-desc">PF e MPF deflagram Appius: 4 mandados de busca em SP e Fortaleza para apurar propina paga para anular a Castelo de Areia. Alvos: Camargo Corrêa e endereços ligados a Asfor Rocha.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ATORES ══ -->
+<div id="sec-atores" class="section">
+  <div style="margin-top:16px">
+  <div class="panel" style="margin-bottom:12px">
+    <div class="panel-title"><span class="panel-title-dot dot-red"></span>Investigados & Réus</div>
+    <div class="actor-grid">
+      <div class="actor-card">
+        <div class="actor-name" style="color:var(--red2)">Kurt Paul Pickel</div>
+        <div class="actor-role">Doleiro / Intermediário financeiro</div>
+        <div class="actor-status">Acusado de coordenar operações ilegais de câmbio e envio de recursos ao exterior em nome do Grupo Camargo Corrêa</div>
+      </div>
+      <div class="actor-card">
+        <div class="actor-name" style="color:var(--red2)">4 Diretores — Camargo Corrêa</div>
+        <div class="actor-role">Alto escalão da construtora</div>
+        <div class="actor-status">Presos na deflagração de março/2009. Acusados de fraude a licitações, lavagem de dinheiro e corrupção ativa</div>
+      </div>
+      <div class="actor-card">
+        <div class="actor-name" style="color:var(--red2)">2 Secretárias de Alto Escalão</div>
+        <div class="actor-role">Camargo Corrêa</div>
+        <div class="actor-status">Presas junto com diretores. Possivelmente intermediárias operacionais do esquema</div>
+      </div>
+      <div class="actor-card">
+        <div class="actor-name" style="color:var(--red2)">Grupo Camargo Corrêa</div>
+        <div class="actor-role">Construtora nacional — R$ 16 bi faturamento (2008)</div>
+        <div class="actor-status">Centro do esquema. Mais de 60 mil empregos. Atuação em 20 países. Alegou "perplexidade" com a operação</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-bottom:12px">
+    <div class="panel-title"><span class="panel-title-dot dot-blue"></span>Autoridades Investigadoras & Judiciárias</div>
+    <div class="actor-grid">
+      <div class="actor-card">
+        <div class="actor-name" style="color:var(--blue)">Juiz Fausto Martin De Sanctis</div>
+        <div class="actor-role">6ª Vara Criminal Federal — SP</div>
+        <div class="actor-status">Decretou prisões e buscas. Sentença de dez/2009. TRF-3 anulou sua sentença em 2011. Promovido a desembargador do TRF-3</div>
+      </div>
+      <div class="actor-card">
+        <div class="actor-name" style="color:var(--blue)">Polícia Federal — Div. Crimes Financeiros</div>
+        <div class="actor-role">Órgão investigador</div>
+        <div class="actor-status">Conduziu investigação preliminar e deflagração. Também responsável pela Op. Appius em 2019</div>
+      </div>
+      <div class="actor-card">
+        <div class="actor-name" style="color:var(--blue)">Ministério Público Federal</div>
+        <div class="actor-role">Órgão acusador</div>
+        <div class="actor-status">Denúncia aceita em parte. Recorreu ao STF após anulação pelo STJ. Solicitou suspensão da destruição de provas em 2017</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title"><span class="panel-title-dot dot-purple"></span>Atores Judiciais — STJ & Desdobramentos</div>
+    <div class="actor-grid">
+      <div class="actor-card">
+        <div class="actor-name" style="color:var(--purple)">Cesar Asfor Rocha</div>
+        <div class="actor-role">Ex-presidente do STJ</div>
+        <div class="actor-status">Concedeu liminar em 2009 suspendendo investigações. Palocci afirmou (sem provas materiais) que recebeu R$ 5 mi da Camargo Corrêa. Nega todas as acusações</div>
+      </div>
+      <div class="actor-card">
+        <div class="actor-name" style="color:var(--purple)">Min. Maria Thereza de Assis Moura</div>
+        <div class="actor-role">6ª Turma STJ — voto vencedor</div>
+        <div class="actor-status">Acolheu tese de nulidade: denúncia anônima não pode, por si só, embasar violação de direitos fundamentais</div>
+      </div>
+      <div class="actor-card">
+        <div class="actor-name" style="color:var(--teal)">Min. Og Fernandes</div>
+        <div class="actor-role">6ª Turma STJ — voto vencido</div>
+        <div class="actor-status">"Não tenho dúvidas da higidez das investigações." Sustentou que houve diligências preliminares válidas antes dos pedidos de escuta</div>
+      </div>
+      <div class="actor-card">
+        <div class="actor-name" style="color:var(--purple)">Antônio Palocci</div>
+        <div class="actor-role">Ex-ministro da Fazenda — delator</div>
+        <div class="actor-status">Em negociação de delação premiada (2017), alegou pagamento de propina para anular a operação. Sem provas materiais apresentadas</div>
+      </div>
+      <div class="actor-card">
+        <div class="actor-name" style="color:var(--teal)">Deltan Dallagnol</div>
+        <div class="actor-role">Procurador MPF — Lava Jato</div>
+        <div class="actor-status">Afirmou que a Lava Jato poderia ter descoberto desvios 6 anos antes se a Castelo de Areia não fosse anulada</div>
+      </div>
+      <div class="actor-card">
+        <div class="actor-name" style="color:var(--blue)">Min. Luis Roberto Barroso</div>
+        <div class="actor-role">STF</div>
+        <div class="actor-status">Confirmou decisão do STJ que barrou parte da operação</div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<!-- ══ CRIMES ══ -->
+<div id="sec-crimes" class="section">
+  <div style="margin-top:16px" class="panel-grid">
+    <div class="panel">
+      <div class="panel-title"><span class="panel-title-dot dot-gold"></span>Crimes Investigados</div>
+      <div class="conn-map">
+        <div class="conn-row"><span class="conn-node tag-gold">Lavagem de dinheiro</span><span class="conn-arrow">→</span><span class="conn-label">Art. 1º Lei 9.613/98</span></div>
+        <div class="conn-row"><span class="conn-node tag-gold">Evasão de divisas</span><span class="conn-arrow">→</span><span class="conn-label">Lei 7.492/86 — crimes contra o SFN</span></div>
+        <div class="conn-row"><span class="conn-node tag-gold">Fraude em licitação</span><span class="conn-arrow">→</span><span class="conn-label">Art. 90 Lei 8.666/93</span></div>
+        <div class="conn-row"><span class="conn-node tag-gold">Corrupção ativa</span><span class="conn-arrow">→</span><span class="conn-label">Art. 333 Código Penal</span></div>
+        <div class="conn-row"><span class="conn-node tag-gold">Org. criminosa</span><span class="conn-arrow">→</span><span class="conn-label">Lei 12.850/13 (análoga)</span></div>
+        <div class="conn-row"><span class="conn-node tag-gold">Câmbio paralelo</span><span class="conn-arrow">→</span><span class="conn-label">Operações ilegais via doleiros</span></div>
+        <div class="conn-row"><span class="conn-node tag-gold">Improbidade adm.</span><span class="conn-arrow">→</span><span class="conn-label">Lei 8.429/92</span></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-title"><span class="panel-title-dot dot-red"></span>Modus Operandi do Esquema</div>
+      <p style="font-size:13px;color:var(--text2);line-height:1.7;margin-bottom:10px">Estrutura criminosa identificada pela PF funcionava em camadas:</p>
+      <div class="strategy-card">
+        <div class="strategy-header"><span class="strategy-icon">🏗</span><span class="strategy-name">Camada 1 — Empresa Fachada</span></div>
+        <div class="strategy-desc">Camargo Corrêa como estrutura legítima. Dentro dela, executivos gerenciavam o braço financeiro ilícito, desviando recursos de obras públicas e licitações fraudadas.</div>
+      </div>
+      <div class="strategy-card">
+        <div class="strategy-header"><span class="strategy-icon">💱</span><span class="strategy-name">Camada 2 — Operadores Financeiros</span></div>
+        <div class="strategy-desc">Kurt Paul Pickel e doleiros intermediavam operações ilegais de câmbio, transferindo vultuosas quantias ao exterior sem registro formal.</div>
+      </div>
+      <div class="strategy-card">
+        <div class="strategy-header"><span class="strategy-icon">🏛</span><span class="strategy-name">Camada 3 — Propina Política</span></div>
+        <div class="strategy-desc">Segundo as investigações, pagamento de propinas a autoridades para obtenção de contratos públicos e, posteriormente, para enterrar a própria investigação.</div>
+      </div>
+    </div>
+    <div class="panel full-width">
+      <div class="panel-title"><span class="panel-title-dot dot-purple"></span>Fluxo Financeiro Investigado</div>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px;padding:8px 0;font-size:12px">
+        <div style="background:var(--bg3);border:1px solid var(--border);padding:10px 14px;border-radius:8px;text-align:center"><div style="color:var(--text2);font-size:10px;margin-bottom:4px">ORIGEM</div><div style="font-weight:700;color:var(--gold)">Contratos Públicos</div><div style="font-size:10px;color:var(--text2)">obras + licitações</div></div>
+        <div style="color:var(--text2);font-size:20px">→</div>
+        <div style="background:var(--bg3);border:1px solid var(--border);padding:10px 14px;border-radius:8px;text-align:center"><div style="color:var(--text2);font-size:10px;margin-bottom:4px">DESVIO</div><div style="font-weight:700;color:var(--orange)">Caixa 2 Interno</div><div style="font-size:10px;color:var(--text2)">recursos não contabilizados</div></div>
+        <div style="color:var(--text2);font-size:20px">→</div>
+        <div style="background:var(--bg3);border:1px solid var(--border);padding:10px 14px;border-radius:8px;text-align:center"><div style="color:var(--text2);font-size:10px;margin-bottom:4px">OPERADOR</div><div style="font-weight:700;color:var(--red2)">Doleiros (Pickel)</div><div style="font-size:10px;color:var(--text2)">câmbio paralelo</div></div>
+        <div style="color:var(--text2);font-size:20px">→</div>
+        <div style="background:var(--bg3);border:1px solid var(--border);padding:10px 14px;border-radius:8px;text-align:center"><div style="color:var(--text2);font-size:10px;margin-bottom:4px">DESTINO</div><div style="font-weight:700;color:var(--purple)">Exterior / Offshores</div><div style="font-size:10px;color:var(--text2)">contas no exterior</div></div>
+        <div style="color:var(--text2);font-size:20px">⤵</div>
+        <div style="background:var(--bg3);border:1px solid var(--border);padding:10px 14px;border-radius:8px;text-align:center"><div style="color:var(--text2);font-size:10px;margin-bottom:4px">RETORNO</div><div style="font-weight:700;color:var(--teal)">Propina Política</div><div style="font-size:10px;color:var(--text2)">partidos + autoridades</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ESTRATÉGIAS ══ -->
+<div id="sec-estrategias" class="section">
+  <div style="margin-top:16px" class="panel-grid">
+    <div class="panel">
+      <div class="panel-title"><span class="panel-title-dot dot-teal"></span>Estratégias da Acusação (PF / MPF)</div>
+      <div class="strategy-card">
+        <div class="strategy-header"><span class="strategy-icon">📡</span><span class="strategy-name">Interceptação Telemática & Telefônica</span></div>
+        <div class="strategy-desc">Principal instrumento investigativo. Escutas de Pickel e executivos da Camargo Corrêa autorizadas judicialmente após consultas a bancos de dados telefônicos.</div>
+        <div class="strategy-result" style="color:var(--red2)">✗ ANULADO — fundamento: origem em denúncia anônima sem diligências suficientes</div>
+      </div>
+      <div class="strategy-card">
+        <div class="strategy-header"><span class="strategy-icon">🔍</span><span class="strategy-name">Busca e Apreensão Física</span></div>
+        <div class="strategy-desc">16 mandados cumpridos em SP e RJ. Documentos, computadores e mídias apreendidos na sede da construtora e em endereços dos investigados.</div>
+        <div class="strategy-result" style="color:var(--red2)">✗ CONTAMINADA — derivada das interceptações nulas (teoria dos frutos da árvore envenenada)</div>
+      </div>
+      <div class="strategy-card">
+        <div class="strategy-header"><span class="strategy-icon">🏦</span><span class="strategy-name">Quebra de Sigilo Bancário & Fiscal</span></div>
+        <div class="strategy-desc">Autorizada pelo juiz De Sanctis. Bloqueio de contas e análise de movimentações financeiras de Pickel e empresas associadas.</div>
+        <div class="strategy-result" style="color:var(--red2)">✗ NULA — mesma cadeia de ilegalidade da interceptação original</div>
+      </div>
+      <div class="strategy-card">
+        <div class="strategy-header"><span class="strategy-icon">🚔</span><span class="strategy-name">Prisão Preventiva & Temporária</span></div>
+        <div class="strategy-desc">10 mandados de prisão. 7 preventivas + 3 temporárias decretadas pelo juiz De Sanctis para garantir a instrução processual e evitar fuga.</div>
+        <div class="strategy-result" style="color:var(--orange)">⚠ QUESTIONADA — derivação das provas viciadas comprometeu fundamento das custódias</div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-title"><span class="panel-title-dot dot-orange"></span>Estratégias da Defesa (Camargo Corrêa)</div>
+      <div class="strategy-card">
+        <div class="strategy-header"><span class="strategy-icon">⚖</span><span class="strategy-name">Tese do Vício de Origem</span></div>
+        <div class="strategy-desc">Advogado Celso Vilardi: toda a operação seria uma "sucessão de ilegalidades". Pedido de nulidade por ausência de inquérito formal antes da quebra de sigilo.</div>
+        <div class="strategy-result" style="color:var(--teal)">✓ ACEITA pelo STJ — 3 votos a 1</div>
+      </div>
+      <div class="strategy-card">
+        <div class="strategy-header"><span class="strategy-icon">📋</span><span class="strategy-name">Habeas Corpus no STJ</span></div>
+        <div class="strategy-desc">Impetrado para suspender os processos criminais. Liminar concedida por Asfor Rocha em 2009, posteriormente referendada pelo plenário — chave para a anulação.</div>
+        <div class="strategy-result" style="color:var(--teal)">✓ LIMINAR CONCEDIDA — 2009</div>
+      </div>
+      <div class="strategy-card">
+        <div class="strategy-header"><span class="strategy-icon">🏛</span><span class="strategy-name">Recurso ao STJ — 6ª Turma</span></div>
+        <div class="strategy-desc">Levou o caso à revisão colegial. Obteve decisão histórica que contrariou 33 precedentes do próprio tribunal, criando novo entendimento sobre denúncias anônimas.</div>
+        <div class="strategy-result" style="color:var(--teal)">✓ OPERAÇÃO ANULADA — abr/2011</div>
+      </div>
+      <div class="strategy-card">
+        <div class="strategy-header"><span class="strategy-icon">💼</span><span class="strategy-name">Alegação de Propina (suspeita)</span></div>
+        <div class="strategy-desc">Segundo delação de Palocci: a Camargo Corrêa teria ido além da defesa jurídica, pagando R$ 50 mi à campanha do PT 2010 para enterrar politicamente a investigação.</div>
+        <div class="strategy-result" style="color:var(--orange)">⚠ INVESTIGADA — sem provas materiais confirmadas</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ RISCOS ══ -->
+<div id="sec-riscos" class="section">
+  <div style="margin-top:16px" class="panel-grid">
+    <div class="panel">
+      <div class="panel-title"><span class="panel-title-dot dot-red"></span>Mapa de Riscos</div>
+      <div class="risk-item risk-critico">
+        <div class="risk-header"><span class="risk-name" style="color:var(--red2)">Provas Ilícitas por Vício de Origem</span><span class="risk-badge badge-critico">CRÍTICO</span></div>
+        <div class="risk-desc">Toda a cadeia probatória construída sobre denúncia anônima, sem inquérito formal prévio. Um único vício contaminou provas colhidas ao longo de anos.</div>
+      </div>
+      <div class="risk-item risk-critico">
+        <div class="risk-header"><span class="risk-name" style="color:var(--red2)">Captura Institucional do Judiciário</span><span class="risk-badge badge-critico">CRÍTICO</span></div>
+        <div class="risk-desc">Suspeita de que decisão judicial foi comprada com R$ 5 mi. Caso confirmado, representa a mais grave forma de corrupção do sistema: instrumentalização do tribunal para proteger investigados.</div>
+      </div>
+      <div class="risk-item risk-critico">
+        <div class="risk-header"><span class="risk-name" style="color:var(--red2)">Interferência Político-Partidária</span><span class="risk-badge badge-critico">CRÍTICO</span></div>
+        <div class="risk-desc">Alegação de que R$ 50 mi foram pagos para que o poder Executivo ajudasse a arquivar a operação. Contaminação da separação dos poderes.</div>
+      </div>
+      <div class="risk-item risk-alto">
+        <div class="risk-header"><span class="risk-name" style="color:var(--orange)">Destruição de Provas</span><span class="risk-badge badge-alto">ALTO</span></div>
+        <div class="risk-desc">Risco real de destruição material das provas após anulação, suspenso apenas em 2017 por decisão judicial a pedido do MPF, após revelações da delação de Palocci.</div>
+      </div>
+      <div class="risk-item risk-alto">
+        <div class="risk-header"><span class="risk-name" style="color:var(--orange)">Precedente Jurisprudencial Negativo</span><span class="risk-badge badge-alto">ALTO</span></div>
+        <div class="risk-desc">Decisão do STJ contrariou 33 precedentes anteriores e criou incerteza sobre a validade de investigações iniciadas por denúncias anônimas — com impacto em casos futuros.</div>
+      </div>
+      <div class="risk-item risk-medio">
+        <div class="risk-header"><span class="risk-name" style="color:var(--gold)">Responsabilização de Investigadores</span><span class="risk-badge badge-medio">MÉDIO</span></div>
+        <div class="risk-desc">Policiais federais e procuradores expustos a questionamentos sobre excessos nas diligências. A União começou a ser responsabilizada pelos erros da PF.</div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-title"><span class="panel-title-dot dot-orange"></span>Alertas Críticos</div>
+      <div class="alert-item">
+        <div class="alert-icon">🔴</div>
+        <div class="alert-body">
+          <div class="alert-title" style="color:var(--red2)">Alerta: Ausência de Inquérito Formal</div>
+          <div class="alert-desc">A PF consultou bancos de dados telefônicos por mais de 1 ano sem instaurar inquérito. Qualquer investigação deve formalizar o procedimento ANTES de acessar dados sigilosos.</div>
+        </div>
+      </div>
+      <div class="alert-item">
+        <div class="alert-icon">🔴</div>
+        <div class="alert-body">
+          <div class="alert-title" style="color:var(--red2)">Alerta: Cadeia de Custódia de Provas</div>
+          <div class="alert-desc">Toda prova deve ter rastreabilidade completa desde a origem lícita. A teoria dos frutos da árvore envenenada contaminou documentos físicos válidos por terem sido obtidos a partir de interceptações nulas.</div>
+        </div>
+      </div>
+      <div class="alert-item">
+        <div class="alert-icon">🟠</div>
+        <div class="alert-body">
+          <div class="alert-title" style="color:var(--orange)">Alerta: Vulnerabilidade Sistêmica do STJ</div>
+          <div class="alert-desc">Um único ministro presidente pode conceder liminares com poder de suspender operações inteiras. O mecanismo de revisão foi insuficiente para evitar a manobra.</div>
+        </div>
+      </div>
+      <div class="alert-item">
+        <div class="alert-icon">🟠</div>
+        <div class="alert-body">
+          <div class="alert-title" style="color:var(--orange)">Alerta: Delação sem Corroboração Material</div>
+          <div class="alert-desc">A delação de Palocci sobre propina à campanha e ao STJ foi aceita como indício, mas sem provas materiais independentes. Alertas sobre uso unilateral de colaboração premiada.</div>
+        </div>
+      </div>
+      <div class="alert-item">
+        <div class="alert-icon">🟡</div>
+        <div class="alert-body">
+          <div class="alert-title" style="color:var(--gold)">Alerta: "Too Big To Jail" — Empresa Grande Demais</div>
+          <div class="alert-desc">A Camargo Corrêa exibiu seu porte econômico (R$ 16 bi, 60 mil empregos, 20 países) como parte da narrativa de defesa. O peso econômico pode ter influenciado o ambiente político favorável ao arquivamento.</div>
+        </div>
+      </div>
+      <div class="alert-item">
+        <div class="alert-icon">🟡</div>
+        <div class="alert-body">
+          <div class="alert-title" style="color:var(--gold)">Alerta: Custo de Oportunidade Histórico</div>
+          <div class="alert-desc">A anulação custou ao Brasil 6+ anos de combate à corrupção — com desvios bilionários que poderiam ter sido detectados antes de se tornarem o mega-esquema da Lava Jato.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ APRENDIZADOS ══ -->
+<div id="sec-aprendizados" class="section">
+  <div class="panel" style="margin-top:16px">
+    <div class="panel-title"><span class="panel-title-dot dot-teal"></span>Aprendizados Fundamentais</div>
+    <div class="learn-item">
+      <div class="learn-num">01</div>
+      <div>
+        <div class="learn-title">Legalidade da Investigação Preliminar É Inegociável</div>
+        <div class="learn-desc">A denúncia anônima pode e deve funcionar como gatilho investigativo, mas <b>nunca como fundamento autônomo</b> para violação de direitos fundamentais. É preciso instaurar formalmente o inquérito e realizar diligências preliminares documentadas antes de qualquer pedido de quebra de sigilo ou interceptação. Esse procedimento protege tanto as provas quanto os investigadores.</div>
+      </div>
+    </div>
+    <div class="learn-item">
+      <div class="learn-num">02</div>
+      <div>
+        <div class="learn-title">Cadeia de Custódia Como Escudo Estratégico</div>
+        <div class="learn-desc">A teoria dos frutos da árvore envenenada não é apenas doutrina: é arma de defesa. Cada prova deve ter sua origem lícita rastreada e documentada desde o primeiro ato. A excelência técnica-jurídica na produção probatória é tão importante quanto a descoberta da prova em si.</div>
+      </div>
+    </div>
+    <div class="learn-item">
+      <div class="learn-num">03</div>
+      <div>
+        <div class="learn-title">Investigações Complexas Exigem Blindagem Institucional</div>
+        <div class="learn-desc">O caso mostra que investigações de alto impacto atraem pressão política, econômica e judicial proporcional ao tamanho do investigado. Mecanismos de proteção — como forças-tarefa com accountability externo, blindagem contra liminares monocráticas e protocolos de preservação de provas — são necessidades estruturais, não excessos.</div>
+      </div>
+    </div>
+    <div class="learn-item">
+      <div class="learn-num">04</div>
+      <div>
+        <div class="learn-title">Liminar Monocrática em Tribunal Superior Precisa de Controle</div>
+        <div class="learn-desc">A concessão de uma liminar por um único ministro presidente conseguiu suspender uma operação inteira por anos, enquanto o colegiado demorava a se reunir para referendar ou rever. A Castelo de Areia evidenciou a necessidade de mecanismos de revisão rápida para liminares em casos de alta sensibilidade institucional.</div>
+      </div>
+    </div>
+    <div class="learn-item">
+      <div class="learn-num">05</div>
+      <div>
+        <div class="learn-title">Colaboração Premiada Precisa de Corroboração Independente</div>
+        <div class="learn-desc">A delação de Palocci revelou graves acusações — mas sem provas materiais independentes. O aprendizado é duplo: colaborações são ferramentas valiosas, mas delações sem corroboração documental criam processos instáveis e vulneráveis à contestação.</div>
+      </div>
+    </div>
+    <div class="learn-item">
+      <div class="learn-num">06</div>
+      <div>
+        <div class="learn-title">O Custo do Atraso É Sempre Maior</div>
+        <div class="learn-desc">A anulação da Castelo de Areia não significou impunidade imediata — mas postergou por 6 anos a descoberta de um esquema que cresceu, se consolidou e causou danos bilionários ao erário. Investigações interrompidas por vícios procedimentais não "salvam" direitos: criam janelas para que o crime se expanda.</div>
+      </div>
+    </div>
+    <div class="learn-item">
+      <div class="learn-num">07</div>
+      <div>
+        <div class="learn-title">Preservação de Provas Deve Ser Proativa</div>
+        <div class="learn-desc">O MPF precisou pedir urgentemente a suspensão da destruição de provas em 2017 — 8 anos após a operação. A gestão de evidências em processos anuláveis precisa prever cenários de recuperação futura: preservação, digitalização e custódia independente das provas produzidas.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ REFERÊNCIAS ══ -->
+<div id="sec-referencias" class="section">
+  <div class="panel" style="margin-top:16px">
+    <div class="panel-title"><span class="panel-title-dot dot-blue"></span>Referências Documentais & Fontes</div>
+    <div class="ref-item">
+      <div class="ref-num">[01]</div>
+      <div class="ref-body">
+        <div class="ref-title">Operação Castelo de Areia — Wikipédia</div>
+        <div class="ref-source">pt.wikipedia.org • Histórico completo da operação, anulação e desdobramentos</div>
+      </div>
+    </div>
+    <div class="ref-item">
+      <div class="ref-num">[02]</div>
+      <div class="ref-body">
+        <div class="ref-title">Prisões são decretadas na Operação Castelo de Areia — CJF</div>
+        <div class="ref-source">cjf.jus.br • Nota oficial sobre prisões preventivas e temporárias — mar/2009</div>
+      </div>
+    </div>
+    <div class="ref-item">
+      <div class="ref-num">[03]</div>
+      <div class="ref-body">
+        <div class="ref-title">STJ decide que Operação Castelo de Areia foi ilegal — Conjur</div>
+        <div class="ref-source">conjur.com.br • Cobertura do julgamento da 6ª Turma do STJ — abr/2011 • Voto Min. Og Fernandes</div>
+      </div>
+    </div>
+    <div class="ref-item">
+      <div class="ref-num">[04]</div>
+      <div class="ref-body">
+        <div class="ref-title">PF investiga pagamento de propina para suspender Castelo de Areia — Poder360</div>
+        <div class="ref-source">poder360.com.br • Operação Appius, delação Palocci, Asfor Rocha — nov/2019</div>
+      </div>
+    </div>
+    <div class="ref-item">
+      <div class="ref-num">[05]</div>
+      <div class="ref-body">
+        <div class="ref-title">TRF-3 anula sentença de De Sanctis na Operação Castelo de Areia — Conjur</div>
+        <div class="ref-source">conjur.com.br • Devolução de bens apreendidos de Pickel — dez/2011</div>
+      </div>
+    </div>
+    <div class="ref-item">
+      <div class="ref-num">[06]</div>
+      <div class="ref-body">
+        <div class="ref-title">PF faz operação contra crime financeiro em SP — Migalhas</div>
+        <div class="ref-source">migalhas.com.br • Nota da Camargo Corrêa + nota da PF — 25 mar/2009</div>
+      </div>
+    </div>
+    <div class="ref-item">
+      <div class="ref-num">[07]</div>
+      <div class="ref-body">
+        <div class="ref-title">Operação Castelo de Areia — Jusbrasil</div>
+        <div class="ref-source">jusbrasil.com.br • Análise doutrinária dos vícios processuais e impacto jurisprudencial</div>
+      </div>
+    </div>
+    <div class="ref-item">
+      <div class="ref-num">[08]</div>
+      <div class="ref-body">
+        <div class="ref-title">Fase 2 da Operação Castelo de Areia — GAECO/MPSP</div>
+        <div class="ref-source">mpsp.mp.br • Operação homônima contra agiotagem em Franca/SP — jun/2024</div>
+      </div>
+    </div>
+    <div class="ref-item">
+      <div class="ref-num">[09]</div>
+      <div class="ref-body">
+        <div class="ref-title">Cinco condenados na Operação Castelo de Areia — MPSP</div>
+        <div class="ref-source">mpsp.mp.br • 5 condenações: 17 anos + org. criminosa + usura + lavagem — 2025</div>
+      </div>
+    </div>
+    <div class="ref-item">
+      <div class="ref-num">[10]</div>
+      <div class="ref-body">
+        <div class="ref-title">Lei 9.613/98 — Lei de Lavagem de Dinheiro</div>
+        <div class="ref-source">planalto.gov.br • Marco legal dos crimes financeiros investigados</div>
+      </div>
+    </div>
+    <div class="ref-item">
+      <div class="ref-num">[11]</div>
+      <div class="ref-body">
+        <div class="ref-title">Deltan Dallagnol — Declarações sobre antecessora da Lava Jato</div>
+        <div class="ref-source">Força-tarefa Lava Jato / MPF • "Desvios poderiam ter sido descobertos 6 anos antes"</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<script>
+function show(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('sec-'+id).classList.add('active');
+  event.target.classList.add('active');
+}
+
+setTimeout(() => {
+  const fill = document.querySelector('.gravity-fill');
+  if(fill) fill.style.width = '92%';
+}, 300);
+</script>
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

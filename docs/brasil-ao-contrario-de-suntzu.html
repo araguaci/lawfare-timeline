@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Brasil ao Contrário de Sun Tzu | lawfare-timeline</title>
+<meta name="description" content="Cinco princípios de Sun Tzu, invertidos ponto a ponto pelo sistema de captura documentado no corpus lawfare-timeline. Banco Master, FGC, STF, INSS.">
+<link rel="canonical" href="https://lawfare-timeline.vercel.app/brasil-ao-contrario-de-suntzu">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://lawfare-timeline.vercel.app/brasil-ao-contrario-de-suntzu">
+<meta property="og:title" content="O Brasil ao Contrário de Sun Tzu">
+<meta property="og:description" content="Não há guerra. Há um único mecanismo de extração vestido com dois uniformes. Cinco inversões, com fonte e data.">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:title" content="O Brasil ao Contrário de Sun Tzu">
+<meta property="twitter:description" content="Cinco princípios militares invertidos pelo sistema de captura brasileiro — documentado, com fonte.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Bebas+Neue&display=swap');
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#080c10;--bg2:#0e141a;--bg3:#141c24;
+    --red:#e85555;--red2:#ff7575;--red-dim:#7a2020;
+    --gold:#e8c44b;--gold2:#f5d87a;
+    --purple:#b07aff;--purple2:#d0a8ff;
+    --teal:#2ecfb0;--teal2:#60ffd8;
+    --border:rgba(255,255,255,0.08);
+    --text:#e8edf2;--text2:#8a99a8;
+    --display:'Bebas Neue',sans-serif;--font:'Syne',sans-serif;
+    --mono:'IBM Plex Mono',monospace;--serif:'Crimson Pro',serif;
+  }
+  body{background:var(--bg);color:var(--text);font-family:var(--serif);min-height:100vh;line-height:1.7}
+
+  header{
+    padding:40px 24px 28px;border-bottom:2px solid var(--red-dim);
+    background:radial-gradient(ellipse at 25% 30%, rgba(232,85,85,0.08) 0%, transparent 55%), var(--bg);
+    max-width:820px;margin:0 auto;
+  }
+  .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(232,85,85,0.1);border:1px solid var(--red-dim);border-radius:4px;padding:4px 12px;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:2px;color:var(--red2);text-transform:uppercase;margin-bottom:16px}
+  h1{font-family:var(--display);font-size:52px;letter-spacing:0.5px;line-height:1.02;color:#fff;margin-bottom:14px}
+  h1 em{font-style:normal;color:var(--red2)}
+  .dek{font-family:var(--font);font-size:17px;color:var(--text2);max-width:640px;font-weight:500}
+  .hmeta{display:flex;gap:16px;margin-top:18px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;color:var(--text2)}
+  .hmeta b{color:var(--gold)}
+
+  main{max-width:820px;margin:0 auto;padding:34px 24px 20px}
+
+  .kgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:34px}
+  .kcard{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:14px 16px;position:relative;overflow:hidden}
+  .kcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--red),var(--gold))}
+  .klabel{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--text2);margin-bottom:5px}
+  .kval{font-family:var(--font);font-size:21px;font-weight:800;color:var(--red2);line-height:1.1}
+
+  .intro{font-size:18px;color:var(--text);margin-bottom:8px}
+  .intro strong{color:#fff}
+
+  .inversion{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--red);border-radius:12px;padding:22px 24px;margin:22px 0}
+  .inv-num{font-family:var(--mono);font-size:11px;color:var(--red2);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+  .inv-title{font-family:var(--font);font-size:19px;font-weight:700;color:#fff;margin-bottom:12px;line-height:1.3}
+  .inv-body{font-size:16px;color:var(--text)}
+  .inv-body strong{color:var(--gold2)}
+
+  .tag-row{margin-top:14px}
+  .tag{display:inline-block;padding:3px 9px;border-radius:4px;font-family:var(--mono);font-size:10.5px;font-weight:600;margin:2px 4px 2px 0;background:rgba(232,85,85,0.1);color:var(--red2);border:1px solid rgba(232,85,85,0.2)}
+  .tag.p{background:rgba(176,122,255,0.1);color:var(--purple2);border-color:rgba(176,122,255,0.2)}
+
+  .closing{background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:24px;margin:30px 0}
+  .closing h2{font-family:var(--font);font-size:20px;color:#fff;margin-bottom:12px}
+  .closing p{font-size:16px}
+
+  .methodology{border:1px dashed var(--border);border-radius:12px;padding:18px 20px;margin:26px 0;font-family:var(--mono);font-size:12px;color:var(--text2);line-height:1.7}
+  .methodology b{color:var(--teal2)}
+
+  footer{max-width:820px;margin:0 auto;padding:24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:var(--mono);font-size:11px;color:var(--text2)}
+  footer a{color:var(--teal2);text-decoration:none}
+  .cc0{color:var(--gold)}
+
+  @media(max-width:600px){h1{font-size:38px}.inversion{padding:18px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="badge">● lawfare-timeline / análise</div>
+  <h1>O Brasil ao <em>Contrário</em> de Sun Tzu</h1>
+  <p class="dek">Sun Tzu escreveu para dois lados que querem vencer. O sistema documentado aqui não tem dois lados — tem um único mecanismo de extração, vestido com dois uniformes. Cinco princípios, invertidos ponto a ponto, com fonte e data.</p>
+  <div class="hmeta">
+    <span>Caso-base: <b>Banco Master / Compliance Zero</b></span>
+    <span>Evidência: <b>ev-confirmed</b> salvo onde indicado</span>
+    <span>Licença: <b>CC0 1.0</b></span>
+  </div>
+</header>
+
+<main>
+  <div class="kgrid">
+    <div class="kcard"><div class="klabel">Rombo FGC</div><div class="kval">R$51,8 bi</div></div>
+    <div class="kcard"><div class="klabel">Caixa real na liquidação</div><div class="kval">R$4 mi</div></div>
+    <div class="kcard"><div class="klabel">Fundos de previdência lesados</div><div class="kval">R$1,86 bi</div></div>
+    <div class="kcard"><div class="klabel">Comissões XP + BTG</div><div class="kval">até R$1,3 bi</div></div>
+  </div>
+
+  <p class="intro">Toda guerra pressupõe <strong>dois lados competindo por um resultado</strong>. É a premissa mínima de Sun Tzu. O que o corpus lawfare-timeline documenta, caso a caso, é um sistema onde essa premissa não se sustenta: o conflito de superfície — poderes disputando, direita contra esquerda — é o produto que sustenta um mecanismo único de extração por baixo dele.</p>
+
+  <div class="inversion">
+    <div class="inv-num">Inversão 01 — "Toda guerra se baseia no engano"</div>
+    <div class="inv-title">Aqui, ninguém precisa enganar o adversário, porque não há adversário</div>
+    <p class="inv-body">Daniel Vorcaro emitiu CDBs a até <strong>177% do CDI</strong> usando o FGC como selo de segurança. O senador Ciro Nogueira propôs a PEC que quadruplicaria o teto do fundo — a "emenda Master". O sexto maior doador pessoa física de 2022 (operador de Vorcaro) financiou Bolsonaro e Tarcísio de Freitas simultaneamente. Não houve engano entre lados opostos. Houve cooperação em todos os campos.</p>
+    <div class="tag-row"><span class="tag">ev-confirmed</span><span class="tag p">P05</span><span class="tag p">P10</span></div>
+  </div>
+
+  <div class="inversion">
+    <div class="inv-num">Inversão 02 — "Conheça o terreno"</div>
+    <div class="inv-title">Aqui, quem deveria fiscalizar o terreno passou a habitá-lo</div>
+    <p class="inv-body">Mensagens no telefone de Vorcaro revelaram vínculo financeiro com o ministro do STF que relatava o próprio caso — pagamentos ligados à venda de um resort do qual o ministro era sócio. Ele deixou a relatoria. Assinatura clássica do padrão em que o investigador se torna parte do investigado.</p>
+    <div class="tag-row"><span class="tag">ev-confirmed</span><span class="tag p">P02</span></div>
+  </div>
+
+  <div class="inversion">
+    <div class="inv-num">Inversão 03 — "Vitória sem batalha é a arte suprema"</div>
+    <div class="inv-title">Aqui, os dois lados vencem sem batalha — ao mesmo tempo</div>
+    <p class="inv-body">18 institutos de previdência estaduais e municipais perderam <strong>R$1,86 bilhão</strong> em letras financeiras sem cobertura do FGC. Rioprevidência sozinho: R$960 milhões. O custo recai sempre sobre o mesmo lado. O benefício muda de nome, nunca de função.</p>
+    <div class="tag-row"><span class="tag">ev-confirmed</span><span class="tag p">P05</span><span class="tag p">P11</span></div>
+  </div>
+
+  <div class="inversion">
+    <div class="inv-num">Inversão 04 — "Conheça o inimigo e conheça a si mesmo"</div>
+    <div class="inv-title">Aqui, o sistema nunca se conhece, porque não há espelho</div>
+    <p class="inv-body">Crítica estrutural ao mecanismo é reenquadrada como ataque partidário a um dos lados — protegendo o mecanismo, não o lado. Tratar 8 de janeiro como "golpe frustrado" em vez de evento instrumentalizado como pretexto colapsa exatamente essa distinção.</p>
+    <div class="tag-row"><span class="tag">ev-inference</span><span class="tag p">P04b</span></div>
+  </div>
+
+  <div class="inversion">
+    <div class="inv-num">Inversão 05 — "Subjugar o inimigo sem lutar"</div>
+    <div class="inv-title">Aqui, a intendência já vendeu a posição antes do primeiro tiro</div>
+    <p class="inv-body">XP distribuiu <strong>R$26 bilhões</strong> em CDBs do Master; BTG, R$6,7 bilhões. Comissões entre R$650 milhões e R$1,3 bilhão. Nenhuma questionou como o banco multiplicou patrimônio por 20× em poucos anos. Lucro sem nunca ter sido, tecnicamente, parte do crime.</p>
+    <div class="tag-row"><span class="tag">ev-confirmed</span><span class="tag p">P10</span></div>
+  </div>
+
+  <div class="closing">
+    <h2>O padrão final — P11: Loop de Extração Perpétua</h2>
+    <p>Não existem dois lados no sentido militar do termo. Existem dois uniformes sobre a mesma estrutura de custeio. O conflito de superfície cumpre a função de impedir a pergunta central: quem, de fato, está pagando essa conta? Nenhum vetor — nem o da autocratização judicial, nem o dos eventos instrumentalizados como pretexto — chega ao beneficiário final. Essa ausência é o dado mais importante do corpus.</p>
+  </div>
+
+  <div class="methodology">
+    <b>Nota metodológica.</b> Todas as afirmações factuais (valores do rombo, PEC do FGC, vínculo STF-Vorcaro, perdas de fundos de previdência, distribuição XP/BTG) são <b>ev-confirmed</b>, lastreadas em decisões do Banco Central, apuração de imprensa e documentos processuais catalogados no corpus. A leitura de que "não há dois lados" é <b>ev-inference</b> — conclusão analítica, apresentada como tal, nunca colapsada em fato registrado.
+  </div>
+</main>
+
+<footer>
+  <span>lawfare-timeline · <span class="cc0">CC0 1.0</span> · domínio público</span>
+  <span><a href="https://lawfare-timeline.vercel.app">lawfare-timeline.vercel.app</a> · <a href="https://gosurf.site">gosurf.site</a></span>
+</footer>
+
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

@@ -56,7 +56,7 @@ Caso de desinformação verificada (correção obrigatória pelo protocolo anti-
 
 Entradas conectadas nesta série:
 
-- [Entrada 1649](/timeline/entries/1649)
+- [Entrada 1649](/posts/id1649-instituto-butantan-e-sinovac-assinam-acordo-de-colaboracao-de-desenvolvimento-cl/)
 
 ---
 

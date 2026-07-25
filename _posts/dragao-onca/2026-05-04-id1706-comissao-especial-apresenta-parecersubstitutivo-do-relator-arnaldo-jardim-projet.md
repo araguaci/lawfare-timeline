@@ -50,7 +50,7 @@ Texto que serve de base para a votação em Plenário dias depois — mudança d
 
 Entradas conectadas nesta série:
 
-- [Entrada 1704](/timeline/entries/1704)
+- [Entrada 1704](/posts/id1704-multiplos-projetos-sao-apensados-ao-pl-27802024-incluindo-politica-nacional-de-t/)
 
 ---
 

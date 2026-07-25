@@ -1,0 +1,664 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+--bg:#0a0a0b;--bg2:#111113;--bg3:#18181b;--bg4:#1f1f24;
+--border:#2a2a32;--border2:#3a3a45;
+--text:#e8e8f0;--text2:#9898b0;--text3:#5a5a70;
+--red:#ff4444;--red2:#cc2222;--amber:#f59e0b;--amber2:#d97706;
+--teal:#14b8a6;--teal2:#0d9488;
+--blue:#3b82f6;--blue2:#2563eb;
+--muted:#444455;
+}
+body{background:var(--bg);color:var(--text);font-family:'IBM Plex Sans',sans-serif;font-size:13px;line-height:1.6}
+.mono{font-family:'IBM Plex Mono',monospace}
+.shell{max-width:720px;padding:16px;margin:0 auto}
+
+/* ── GO TOP ── */
+.gotop {
+  position: fixed; bottom: 16px; right: 16px; width: 40px; height: 40px;
+  background: var(--bg2); border: 1px solid var(--border); color: var(--red);
+  border-radius: 4px; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; z-index: 1000; opacity: 0; pointer-events: none;
+  transition: opacity 0.3s, background 0.2s, border-color 0.2s;
+  font-family: var(--font-mono); font-weight: bold; font-size: 1.2rem;
+}
+.gotop.show { opacity: 1; pointer-events: auto; }
+.gotop:hover { background: var(--bg3); border-color: var(--red); color: #fff; }
+
+/* ── RELATED ARTIFACTS ── */
+.related-wrap {
+  padding: 40px 0 20px; background: transparent;
+  border-top: 1px solid var(--border); margin-top: 40px;
+}
+.related-title {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: .12em; color: var(--text3);
+  text-transform: uppercase; margin-bottom: 16px; display: flex; align-items: center; gap: 12px;
+}
+.related-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+.related-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px;
+}
+.related-card {
+  display: flex; flex-direction: column; padding: 14px 16px; background: var(--bg2);
+  border: 1px solid var(--border); border-radius: 6px;
+  text-decoration: none; transition: border-color .15s;
+}
+.related-card:hover { border-color: var(--border2); }
+.rc-label { font-size: 9px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 4px; font-family: var(--font-mono); }
+.rc-title { font-size: 12px; font-weight: 600; color: var(--text); }
+.rc-desc { font-size: 11px; color: var(--text2); margin-top: 4px; line-height: 1.4; }
+
+.masthead{border-bottom:1px solid var(--border);padding:20px 0 16px;margin-bottom:0}
+.masthead-top{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.alert-dot{width:8px;height:8px;border-radius:50%;background:var(--red);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.masthead-label{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--red);letter-spacing:.15em;text-transform:uppercase}
+.masthead h1{font-family:'IBM Plex Mono',monospace;font-size:18px;font-weight:600;color:var(--text);letter-spacing:-.02em;line-height:1.3;margin-bottom:4px}
+.masthead-sub{font-size:12px;color:var(--text2);font-weight:300}
+
+.nav{display:flex;gap:4px;padding:12px 0;border-bottom:1px solid var(--border);overflow-x:auto;position:sticky;top:0;background:var(--bg);z-index:100;scrollbar-width:none;-ms-overflow-style:none;}
+.nav::-webkit-scrollbar { display: none; }
+.nav-btn{padding:8px 14px;border:1px solid var(--border);background:var(--bg2);color:var(--text2);cursor:pointer;border-radius:4px;font-size:12px;font-family:'IBM Plex Mono',monospace;white-space:nowrap;transition:all .15s}
+.nav-btn:hover{border-color:var(--border2);color:var(--text)}
+.nav-btn.active{background:var(--bg4);border-color:var(--red);color:var(--text)}
+
+.section{display:block;padding-top:24px;scroll-margin-top:60px;}
+
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin-bottom:16px}
+.stat-card{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:12px}
+.stat-label{font-size:10px;color:var(--text3);font-family:'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.stat-val{font-size:20px;font-weight:600;font-family:'IBM Plex Mono',monospace;line-height:1}
+.stat-sub{font-size:10px;color:var(--text2);margin-top:3px}
+.stat-card.danger .stat-val{color:var(--red)}
+.stat-card.amber .stat-val{color:var(--amber)}
+.stat-card.teal .stat-val{color:var(--teal)}
+.stat-card.blue .stat-val{color:var(--blue)}
+
+.section-title{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--text3);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+
+.timeline{position:relative;padding-left:20px}
+.timeline::before{content:'';position:absolute;left:5px;top:0;bottom:0;width:1px;background:var(--border)}
+.tl-item{position:relative;margin-bottom:14px}
+.tl-dot{position:absolute;left:-18px;top:4px;width:8px;height:8px;border-radius:50%;background:var(--bg3);border:1px solid var(--border2)}
+.tl-item.danger .tl-dot{background:var(--red2);border-color:var(--red)}
+.tl-item.amber .tl-dot{background:var(--amber2);border-color:var(--amber)}
+.tl-item.teal .tl-dot{background:var(--teal2);border-color:var(--teal)}
+.tl-year{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--text3);letter-spacing:.08em}
+.tl-title{font-size:12px;font-weight:500;color:var(--text);margin:1px 0}
+.tl-desc{font-size:11px;color:var(--text2);line-height:1.5}
+.tl-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
+.tag{font-family:'IBM Plex Mono',monospace;font-size:9px;padding:2px 6px;border-radius:3px;letter-spacing:.05em}
+.tag.red{background:#1a0808;color:var(--red);border:1px solid #2a1010}
+.tag.amber{background:#1a1000;color:var(--amber);border:1px solid #2a1a00}
+.tag.teal{background:#001a18;color:var(--teal);border:1px solid #002a25}
+.tag.blue{background:#00081a;color:var(--blue);border:1px solid #001030}
+.tag.gray{background:#111115;color:var(--text2);border:1px solid var(--border)}
+
+.actor-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.actor-card{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:12px}
+.actor-card:hover{border-color:var(--border2)}
+.actor-type{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--text3);text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px}
+.actor-name{font-size:12px;font-weight:500;color:var(--text);margin-bottom:4px}
+.actor-detail{font-size:11px;color:var(--text2);line-height:1.5}
+.actor-badge{display:inline-block;font-size:9px;padding:2px 6px;border-radius:3px;margin-top:6px;font-family:'IBM Plex Mono',monospace}
+.badge-red{background:#1a0808;color:var(--red);border:1px solid #2a1010}
+.badge-amber{background:#1a1000;color:var(--amber);border:1px solid #2a1a00}
+.badge-teal{background:#001a18;color:var(--teal);border:1px solid #002a25}
+.badge-gray{background:#111115;color:var(--text2);border:1px solid var(--border)}
+
+.pattern-list{list-style:none}
+.pattern-item{border-bottom:1px solid var(--border);padding:10px 0;display:grid;grid-template-columns:24px 1fr;gap:10px;align-items:start}
+.pattern-item:last-child{border-bottom:none}
+.pattern-num{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--text3)}
+.pattern-title{font-size:12px;font-weight:500;color:var(--text);margin-bottom:2px}
+.pattern-desc{font-size:11px;color:var(--text2);line-height:1.5}
+
+.case-card{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:14px;margin-bottom:8px}
+.case-card.red-border{border-left:3px solid var(--red)}
+.case-card.amber-border{border-left:3px solid var(--amber)}
+.case-card.teal-border{border-left:3px solid var(--teal)}
+.case-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px}
+.case-title{font-size:12px;font-weight:500;color:var(--text)}
+.case-value{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--amber)}
+.case-meta{font-size:10px;color:var(--text3);margin-bottom:6px;font-family:'IBM Plex Mono',monospace}
+.case-desc{font-size:11px;color:var(--text2);line-height:1.5}
+.case-actors{font-size:10px;color:var(--text3);margin-top:6px}
+.case-actors span{color:var(--text2)}
+
+.alert-banner{background:#0f0808;border:1px solid #2a1010;border-left:3px solid var(--red);border-radius:6px;padding:12px;margin-bottom:12px}
+.alert-title{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--red);text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px}
+.alert-text{font-size:11px;color:#cc9090;line-height:1.6}
+
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:11px}
+th{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--text3);text-transform:uppercase;letter-spacing:.1em;padding:6px 8px;border-bottom:1px solid var(--border);text-align:left;font-weight:500}
+td{padding:7px 8px;border-bottom:1px solid var(--border);color:var(--text2);vertical-align:top}
+td:first-child{color:var(--text);font-weight:500}
+tr:hover td{background:var(--bg3)}
+.val-red{color:var(--red);font-family:'IBM Plex Mono',monospace}
+.val-amber{color:var(--amber);font-family:'IBM Plex Mono',monospace}
+.val-teal{color:var(--teal);font-family:'IBM Plex Mono',monospace}
+
+.ref-item{border-bottom:1px solid var(--border);padding:8px 0;font-size:11px}
+.ref-item:last-child{border-bottom:none}
+.ref-source{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--teal);margin-bottom:2px}
+.ref-title{color:var(--text);font-weight:500;margin-bottom:2px}
+.ref-desc{color:var(--text2);line-height:1.5}
+
+.children-highlight{background:linear-gradient(90deg,#0f0808 0%,var(--bg3) 100%);border:1px solid #2a1010;border-radius:6px;padding:16px;margin-bottom:16px;text-align:center}
+.ch-num{font-family:'IBM Plex Mono',monospace;font-size:42px;font-weight:600;color:var(--red);line-height:1;display:block;margin-bottom:4px}
+.ch-label{font-size:12px;color:#cc8080;margin-bottom:8px}
+.ch-equiv{font-size:11px;color:var(--text3);font-style:italic}
+</style>
+
+<div class="shell">
+<div class="masthead">
+  <div class="masthead-top">
+    <div class="alert-dot"></div>
+    <span class="masthead-label">Dossiê investigativo · Brasil</span>
+  </div>
+  <h1>Exploração da Miséria e Vulnerabilidade Humana</h1>
+  <p class="masthead-sub">Tráfico de pessoas · Trabalho escravo · Exploração sexual · Migração ilegal · Desaparecimento de crianças<br>
+  <span class="mono" style="font-size:10px;color:var(--text3)">Série histórica 1985–2026 · Dados consolidados de fontes oficiais e investigativas</span></p>
+</div>
+
+<nav class="nav" id="main-nav">
+  <button class="nav-btn active" data-target="overview">visão geral</button>
+  <button class="nav-btn" data-target="criancas">crianças</button>
+  <button class="nav-btn" data-target="casos">casos</button>
+  <button class="nav-btn" data-target="atores">atores</button>
+  <button class="nav-btn" data-target="padroes">padrões</button>
+  <button class="nav-btn" data-target="serie">série histórica</button>
+  <button class="nav-btn" data-target="refs">referências</button>
+</nav>
+
+<div id="overview" class="section">
+  <div class="stats-row">
+    <div class="stat-card danger">
+      <div class="stat-label">crianças desaparecidas/ano</div>
+      <div class="stat-val">40.000+</div>
+      <div class="stat-sub">estimativa MMFDH / ABCF</div>
+    </div>
+    <div class="stat-card amber">
+      <div class="stat-label">vítimas de tráfico/ano</div>
+      <div class="stat-val">~60.000</div>
+      <div class="stat-sub">3º maior do mundo</div>
+    </div>
+    <div class="stat-card teal">
+      <div class="stat-label">em trab. escravo (ativo)</div>
+      <div class="stat-val">369.000</div>
+      <div class="stat-sub">Walk Free Foundation 2023</div>
+    </div>
+    <div class="stat-card blue">
+      <div class="stat-label">fluxo financeiro ilícito</div>
+      <div class="stat-val">R$50bi+</div>
+      <div class="stat-sub">estimativa parcial anual</div>
+    </div>
+  </div>
+
+  <div class="alert-banner">
+    <div class="alert-title">Convergência sistêmica</div>
+    <div class="alert-text">O Brasil apresenta sobreposição de cinco modalidades de exploração humana operando com infraestrutura compartilhada: redes de aliciamento, corrupção de agentes públicos, lavagem via empresas de fachada e zonas geográficas de impunidade. A vulnerabilidade econômica funciona como matéria-prima do crime organizado transnacional.</div>
+  </div>
+
+  <p class="section-title">modalidades documentadas</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Modalidade</th><th>Magnitude estimada</th><th>Regiões críticas</th><th>Nível impunidade</th></tr></thead>
+      <tbody>
+        <tr><td>Tráfico sexual interno</td><td class="val-red">30.000–50.000 vít/ano</td><td>Nordeste, AM, PA, RJ</td><td class="val-red">Alto</td></tr>
+        <tr><td>Tráfico internacional</td><td class="val-red">R$240M+ (caso GO)</td><td>GO, SP, AM, fronteiras</td><td class="val-amber">Médio-alto</td></tr>
+        <tr><td>Trabalho escravo urbano</td><td class="val-amber">~50.000/ano resgatados</td><td>SP, RJ, MG, Centro-Oeste</td><td class="val-amber">Médio</td></tr>
+        <tr><td>Trabalho escravo rural</td><td class="val-amber">~10.000/ano resgatados</td><td>MT, PA, TO, BA</td><td class="val-amber">Médio</td></tr>
+        <tr><td>Exploração infantil sexual</td><td class="val-red">Marajó, litoral NE, AM</td><td>PA, CE, BA, PE</td><td class="val-red">Alto</td></tr>
+        <tr><td>Crianças desaparecidas</td><td class="val-red">40.000+/ano</td><td>Nacional</td><td class="val-red">Muito alto</td></tr>
+        <tr><td>Mendicância forçada</td><td class="val-teal">Subnotificado</td><td>Regiões metropolitanas</td><td class="val-red">Alto</td></tr>
+        <tr><td>Migração ilegal organizada</td><td class="val-amber">R$240M (2018–2023)</td><td>GO, AP, AM</td><td class="val-amber">Médio</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div id="criancas" class="section">
+  <div class="children-highlight">
+    <span class="ch-num">40.000+</span>
+    <div class="ch-label">crianças desaparecem no Brasil a cada ano</div>
+    <div class="ch-equiv">equivale a 1 criança a cada 13 minutos — 24h por dia, 365 dias por ano</div>
+  </div>
+
+  <div class="alert-banner">
+    <div class="alert-title">Lacuna sistêmica de dados</div>
+    <div class="alert-text">O SINALID (sistema federal) registra menos de 30% dos casos. A maioria é comunicada apenas localmente, sem integração nacional. Estimativas apontam subnotificação de 60–70%. A ausência de banco de dados unificado é por si só uma política de invisibilidade.</div>
+  </div>
+
+  <p class="section-title">dados estruturais</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Indicador</th><th>Valor</th><th>Fonte</th></tr></thead>
+      <tbody>
+        <tr><td>Desaparecimentos registrados/ano</td><td class="val-red">40.000–42.000</td><td>MMFDH/Anuário ABCF</td></tr>
+        <tr><td>Percentual menores de 12 anos</td><td class="val-amber">~18%</td><td>SINALID</td></tr>
+        <tr><td>Percentual adolescentes (12–17)</td><td class="val-amber">~52%</td><td>SINALID</td></tr>
+        <tr><td>Percentual negras/pardas</td><td class="val-red">&gt;70%</td><td>ABCF 2022</td></tr>
+        <tr><td>Casos com suspeita de tráfico</td><td class="val-red">15–25%</td><td>UNODC/MJSP</td></tr>
+        <tr><td>Casos jamais esclarecidos</td><td class="val-red">&gt;40%</td><td>estimativa ABCF</td></tr>
+        <tr><td>Zonas endêmicas documentadas</td><td class="val-amber">Marajó, litoral NE, AM, fronteiras</td><td>CPI Exploração Sexual 2004/CPMI 2023</td></tr>
+        <tr><td>Crianças em exploração sexual (estimativa)</td><td class="val-red">250.000–500.000</td><td>UNICEF/ABRAPIA</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="section-title" style="margin-top:16px">zonas críticas documentadas</p>
+  <div class="case-card red-border">
+    <div class="case-header"><div class="case-title">Arquipélago de Marajó — PA</div><div class="case-value">EXTREMO</div></div>
+    <div class="case-meta">alerta desde 2003 · múltiplas CPIs · zero condenações efetivas</div>
+    <div class="case-desc">Exploração sexual de crianças e adolescentes em comunidades ribeirinhas isoladas. Presença de redes locais com suspeita de proteção política e envolvimento de agentes públicos. Reportagens do Fantástico (2003, 2007), investigação do MJSP (2019) e declarações do ex-presidente Bolsonaro (2019) repercutiram sem desdobramentos penais expressivos.</div>
+  </div>
+  <div class="case-card amber-border">
+    <div class="case-header"><div class="case-title">Litoral Nordestino — CE, BA, PE</div><div class="case-value">ALTO</div></div>
+    <div class="case-meta">turismo sexual documentado desde anos 1990 · rota internacional</div>
+    <div class="case-desc">Rota de turismo sexual com vítimas majoritariamente jovens negras e pardas. Participação de receptivos turísticos, pousadas e intermediários locais. Conexão com redes europeias documentada em relatórios do Itamaraty e da PF. Municípios de Fortaleza, Natal, Porto Seguro e Maceió figuram em alertas da ECPAT Internacional.</div>
+  </div>
+  <div class="case-card teal-border">
+    <div class="case-header"><div class="case-title">Fronteiras Norte e Oeste</div><div class="case-value">ALTO</div></div>
+    <div class="case-meta">AM, RR, AC, MS — tríplices fronteiras</div>
+    <div class="case-desc">Tráfico transnacional de crianças e adolescentes via fronteiras porosas com Venezuela, Colômbia, Peru, Bolívia e Paraguai. Redes com ramificações para exploração sexual e trabalho forçado. Comunidades indígenas extremamente vulneráveis.</div>
+  </div>
+</div>
+
+<div id="casos" class="section">
+  <p class="section-title">casos estruturantes documentados</p>
+
+  <div class="case-card red-border">
+    <div class="case-header"><div class="case-title">Op. Travessia · Goiás (2026)</div><div class="case-value">R$ 240 milhões</div></div>
+    <div class="case-meta">deflagrada 07/05/2026 · 7 presos · 5 grupos criminosos</div>
+    <div class="case-desc">Rede de migração ilegal de brasileiros para os EUA. Maria Helena de Sousa Netto Costa (sogra do gov. Daniel Vilela/MDB) chefia um dos cinco núcleos. Operação desde 2018–2023; rota: Brasil → México/Panamá → fronteira EUA. Cada migrante pagava ~US$ 20 mil. 477 entradas ilegais confirmadas; estimativa ultrapassa 600. Lavagem via empresas de fachada.</div>
+    <div class="case-actors">Atores: <span>PGR envolvida, Aeroporto de Congonhas como ponto de detecção, grupo com integrantes no exterior</span></div>
+    <div class="tl-tags" style="margin-top:8px">
+      <span class="tag red">migração ilegal</span><span class="tag amber">lavagem</span><span class="tag gray">conexão política</span>
+    </div>
+  </div>
+
+  <div class="case-card red-border">
+    <div class="case-header"><div class="case-title">Exploração Sexual · Marajó (2003–atual)</div><div class="case-value">impunidade total</div></div>
+    <div class="case-meta">múltiplas CPIs · relatórios ONU · zero condenações estruturais</div>
+    <div class="case-desc">Exploração sexual de crianças e adolescentes em comunidades ribeirinhas do Arquipélago de Marajó (PA). Denúncias repetidas por Fantástico, MPF, organizações internacionais. Suspeita de proteção por redes locais de poder. Em 2019, o presidente Bolsonaro citou "sexo com crianças de 2 anos" no arquipélago em entrevista, sem que investigações efetivas se seguissem.</div>
+    <div class="tl-tags" style="margin-top:8px">
+      <span class="tag red">exploração infantil</span><span class="tag red">impunidade crônica</span><span class="tag amber">poder local</span>
+    </div>
+  </div>
+
+  <div class="case-card amber-border">
+    <div class="case-header"><div class="case-title">Turismo Sexual · Litoral Nordeste (1990s–atual)</div><div class="case-value">rota internacional</div></div>
+    <div class="case-meta">CE, RN, BA, PE · vítimas majoritariamente negras</div>
+    <div class="case-desc">Rota consolidada de turismo sexual com vítimas jovens. Participação de receptivos turísticos, cafetões locais e intermediários digitais. Connexão com redes europeias (Itália, Portugal, Alemanha). Alertas da ECPAT Internacional, Childhood Brasil e UNICEF. Municípios com taxa de exploração entre as mais altas do mundo. Operações pontuais da PF não desarticulam a estrutura.</div>
+    <div class="tl-tags" style="margin-top:8px">
+      <span class="tag red">turismo sexual</span><span class="tag amber">redes internacionais</span><span class="tag blue">subnotificação</span>
+    </div>
+  </div>
+
+  <div class="case-card teal-border">
+    <div class="case-header"><div class="case-title">Trabalho Escravo · Fazendas e Oficinas (1995–atual)</div><div class="case-value">369.000 em situação análoga</div></div>
+    <div class="case-meta">MTE/SRTE · "lista suja" · 60.000+ resgatados desde 1995</div>
+    <div class="case-desc">Trabalho em condição análoga à escravidão em fazendas (MT, PA, TO, BA) e oficinas de costura urbanas (SP, RJ). O Brasil mantém a "Lista Suja" do trabalho escravo desde 2003. Mais de 60.000 trabalhadores resgatados em 30 anos. Empresas do vestuário e do agronegócio recorrentemente autuadas. Reincidência documentada mesmo após autuações.</div>
+    <div class="tl-tags" style="margin-top:8px">
+      <span class="tag amber">trabalho escravo</span><span class="tag teal">agronegócio</span><span class="tag gray">reincidência</span>
+    </div>
+  </div>
+
+  <div class="case-card amber-border">
+    <div class="case-header"><div class="case-title">Caso Lava Jato + Conexões (2014–2021)</div><div class="case-value">R$ 10bi+</div></div>
+    <div class="case-meta">investigação interrompida · condenações revertidas</div>
+    <div class="case-desc">Embora focada em corrupção, a Lava Jato documentou o mecanismo pelo qual a captura do Estado por organizações criminosas viabiliza impunidade para crimes conexos, incluindo trabalho escravo em obras públicas e exploração de migrantes em canteiros.</div>
+    <div class="tl-tags" style="margin-top:8px">
+      <span class="tag amber">corrupção estrutural</span><span class="tag red">captura do estado</span>
+    </div>
+  </div>
+</div>
+
+<div id="atores" class="section">
+  <p class="section-title">ecossistema de atores</p>
+
+  <div class="actor-grid">
+    <div class="actor-card">
+      <div class="actor-type">facilitadores</div>
+      <div class="actor-name">Agentes públicos corruptos</div>
+      <div class="actor-detail">Policiais militares e civis, fiscais municipais, vereadores e prefeitos em zonas endêmicas. Fornecem proteção ativa ou passiva às redes.</div>
+      <span class="actor-badge badge-red">recorrência alta</span>
+    </div>
+    <div class="actor-card">
+      <div class="actor-type">operadores</div>
+      <div class="actor-name">Coiotes e aliciadores</div>
+      <div class="actor-detail">Atuam no recrutamento de vítimas com falsas promessas de emprego ou vida melhor. Redes transacionais com hierarquia definida.</div>
+      <span class="actor-badge badge-amber">documentado</span>
+    </div>
+    <div class="actor-card">
+      <div class="actor-type">lavagem</div>
+      <div class="actor-name">Empresas de fachada</div>
+      <div class="actor-detail">Usadas para mascarar fluxo financeiro ilícito. Padrão recorrente: agências de turismo, receptivos, imobiliárias, transportadoras.</div>
+      <span class="actor-badge badge-amber">padrão sistêmico</span>
+    </div>
+    <div class="actor-card">
+      <div class="actor-type">beneficiários</div>
+      <div class="actor-name">Redes políticas locais</div>
+      <div class="actor-detail">Famílias políticas dominantes em municípios de alta vulnerabilidade se beneficiam da impunidade estrutural e do silêncio institucional.</div>
+      <span class="actor-badge badge-red">conexão documentada</span>
+    </div>
+    <div class="actor-card">
+      <div class="actor-type">consumidores</div>
+      <div class="actor-name">Turistas sexuais (nacionais/internacionais)</div>
+      <div class="actor-detail">Europeus, norte-americanos e sul-americanos em rotas documentadas. Plataformas digitais usadas para intermediação pós-2010.</div>
+      <span class="actor-badge badge-gray">mapeado por ECPAT</span>
+    </div>
+    <div class="actor-card">
+      <div class="actor-type">exploradores</div>
+      <div class="actor-name">Empregadores escravocratas</div>
+      <div class="actor-detail">Fazendeiros, empreiteiros, donos de oficinas de costura. Reincidência documentada na Lista Suja mesmo após autuações do MTE.</div>
+      <span class="actor-badge badge-amber">reincidência</span>
+    </div>
+    <div class="actor-card">
+      <div class="actor-type">recrutadores</div>
+      <div class="actor-name">Agenciadores de migração ilegal</div>
+      <div class="actor-detail">Captam migrantes com promessa de "pacote completo" para os EUA. Cobram US$ 20–30 mil. Estrutura empresarial sofisticada.</div>
+      <span class="actor-badge badge-red">caso Travessia/GO</span>
+    </div>
+    <div class="actor-card">
+      <div class="actor-type">omissos</div>
+      <div class="actor-name">Instituições inoperantes</div>
+      <div class="actor-detail">Conselhos Tutelares sem estrutura, Delegacias da Criança deficitárias, Banco de Dados de Desaparecidos fragmentado. A omissão institucional é parte do sistema.</div>
+      <span class="actor-badge badge-gray">sistêmico</span>
+    </div>
+  </div>
+
+  <p class="section-title" style="margin-top:16px">empresas recorrentemente citadas em investigações</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Setor</th><th>Padrão</th><th>Mecanismo</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Agronegócio (MT, PA, TO)</td><td>Trabalho escravo rural</td><td>Gato + dívida fabricada</td><td class="val-red">Lista Suja ativa</td></tr>
+        <tr><td>Confecções (SP, RJ)</td><td>Trabalho escravo urbano</td><td>Imigrantes bolivianos/haitianos</td><td class="val-amber">Autuações recorrentes</td></tr>
+        <tr><td>Turismo (CE, BA, RN)</td><td>Turismo sexual</td><td>Intermediação de vítimas</td><td class="val-red">Subinvestigado</td></tr>
+        <tr><td>Transporte/logística (GO, SP, AM)</td><td>Migração ilegal</td><td>Passagens + suporte de rota</td><td class="val-amber">Op. Travessia 2026</td></tr>
+        <tr><td>Construção civil</td><td>Trabalho análogo à escravidão</td><td>Obra pública + subcontratação</td><td class="val-amber">Parcialmente autuado</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div id="padroes" class="section">
+  <p class="section-title">padrões recorrentes identificados</p>
+  <ul class="pattern-list">
+    <li class="pattern-item">
+      <span class="pattern-num">01</span>
+      <div>
+        <div class="pattern-title">Vulnerabilidade como matéria-prima</div>
+        <div class="pattern-desc">Pobreza extrema, abandono familiar, baixa escolaridade e ausência de perspectiva são ativamente explorados como condição de entrada nas redes. O sistema não "captura" vítimas aleatórias — ele as seleciona sistematicamente nas franjas do abandono estatal.</div>
+      </div>
+    </li>
+    <li class="pattern-item">
+      <span class="pattern-num">02</span>
+      <div>
+        <div class="pattern-title">Proteção política local</div>
+        <div class="pattern-desc">Em todas as zonas endêmicas documentadas (Marajó, litoral nordestino, fronteiras), a impunidade crônica está correlacionada com captura política do poder local. Delegacias inoperantes, fiscalização ausente e CPIs que não resultam em condenações.</div>
+      </div>
+    </li>
+    <li class="pattern-item">
+      <span class="pattern-num">03</span>
+      <div>
+        <div class="pattern-title">Lavagem via economia formal</div>
+        <div class="pattern-desc">Recursos ilícitos são sistematicamente reinseridos via empresas de fachada nos setores de turismo, transporte, imóveis e serviços. Padrão identificado na Op. Travessia, em casos de tráfico sexual e em redes de trabalho escravo urbano.</div>
+      </div>
+    </li>
+    <li class="pattern-item">
+      <span class="pattern-num">04</span>
+      <div>
+        <div class="pattern-title">Subnotificação estrutural</div>
+        <div class="pattern-desc">Sistemas de registro fragmentados (SINALID, boletins de ocorrência locais, SINAN) sem integração nacional criam invisibilidade estatística. A ausência de dados unificados não é falha técnica — é resultado de ausência de vontade política para quantificar o problema.</div>
+      </div>
+    </li>
+    <li class="pattern-item">
+      <span class="pattern-num">05</span>
+      <div>
+        <div class="pattern-title">Recorrência dos mesmos atores</div>
+        <div class="pattern-desc">Empregadores na Lista Suja reaparecem após prazo de exclusão. Municípios endêmicos reaparecem em CPIs sucessivas. Agentes públicos corruptos são raramente responsabilizados. O sistema de impunidade tem memória curta por design.</div>
+      </div>
+    </li>
+    <li class="pattern-item">
+      <span class="pattern-num">06</span>
+      <div>
+        <div class="pattern-title">Racialização das vítimas</div>
+        <div class="pattern-desc">Mais de 70% das vítimas de tráfico e exploração sexual são negras ou pardas. A sobreposição de vulnerabilidade econômica com vulnerabilidade racial é documentada em todos os bancos de dados disponíveis, mas raramente explicitada nas políticas públicas de enfrentamento.</div>
+      </div>
+    </li>
+    <li class="pattern-item">
+      <span class="pattern-num">07</span>
+      <div>
+        <div class="pattern-title">Internacionalização das redes</div>
+        <div class="pattern-desc">Redes de tráfico e exploração operam com infraestrutura transnacional: rotas de migração ilegal via Panamá e México; turismo sexual com fluxo de europeus; lavagem de dinheiro em contas offshore. A dimensão doméstica visível é apenas a camada superficial de estruturas globais.</div>
+      </div>
+    </li>
+    <li class="pattern-item">
+      <span class="pattern-num">08</span>
+      <div>
+        <div class="pattern-title">Impunidade como política</div>
+        <div class="pattern-desc">CPIs, operações policiais e relatórios de organismos internacionais se acumulam sem produzir desarticulação estrutural das redes. A impunidade crônica não resulta de incapacidade institucional — resulta da proteção que as redes recebem de dentro das próprias instituições.</div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div id="serie" class="section">
+  <p class="section-title">série histórica 1985–2026</p>
+  <div class="timeline">
+    <div class="tl-item amber">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1985–1994</div>
+      <div class="tl-title">Primeiros mapeamentos pós-redemocratização</div>
+      <div class="tl-desc">ABRAPIA documenta exploração sexual infantil em capitais. Primeiros relatórios de trabalho escravo rural no Pará e Mato Grosso. Ausência de tipificação legal específica para tráfico de pessoas.</div>
+      <div class="tl-tags"><span class="tag gray">ABRAPIA</span><span class="tag amber">trabalho escravo</span></div>
+    </div>
+    <div class="tl-item teal">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1995</div>
+      <div class="tl-title">Criação do GEFM — Grupo Especial de Fiscalização Móvel</div>
+      <div class="tl-desc">MTE cria o primeiro mecanismo sistemático de combate ao trabalho escravo rural. Primeiros resgates em fazendas do Pará.</div>
+      <div class="tl-tags"><span class="tag teal">política pública</span><span class="tag amber">trabalho escravo</span></div>
+    </div>
+    <div class="tl-item danger">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2003</div>
+      <div class="tl-title">Fantástico expõe Marajó · Lista Suja criada</div>
+      <div class="tl-desc">Reportagem do Fantástico sobre exploração sexual de crianças no Arquipélago de Marajó choca o país. Mesmo ano: MTE publica a primeira "Lista Suja" de empregadores escravocratas. PETI (Programa de Erradicação do Trabalho Infantil) ampliado.</div>
+      <div class="tl-tags"><span class="tag red">Marajó</span><span class="tag teal">lista suja</span><span class="tag amber">trabalho infantil</span></div>
+    </div>
+    <div class="tl-item amber">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2004</div>
+      <div class="tl-title">CPI da Exploração Sexual de Crianças e Adolescentes</div>
+      <div class="tl-desc">CPI parlamentar documenta 937 municípios com ocorrências de exploração sexual infantil. Relatório aponta conivência de agentes públicos. Sem desdobramentos penais estruturais.</div>
+      <div class="tl-tags"><span class="tag red">CPI</span><span class="tag red">impunidade</span></div>
+    </div>
+    <div class="tl-item teal">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2006</div>
+      <div class="tl-title">Lei 11.343 · Lei Maria da Penha</div>
+      <div class="tl-desc">Avanços legislativos no combate à violência doméstica e ao tráfico. Primeiro Plano Nacional de Enfrentamento ao Tráfico de Pessoas (PNETP) em 2006.</div>
+      <div class="tl-tags"><span class="tag teal">legislação</span><span class="tag teal">política pública</span></div>
+    </div>
+    <div class="tl-item amber">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2012</div>
+      <div class="tl-title">Denúncias de tráfico na Copa do Mundo</div>
+      <div class="tl-desc">Relatórios de organizações internacionais alertam para risco de aumento de tráfico sexual durante a Copa 2014 e Olimpíadas 2016. Campanha "Não é não" do Governo Federal.</div>
+      <div class="tl-tags"><span class="tag amber">grandes eventos</span><span class="tag red">alerta</span></div>
+    </div>
+    <div class="tl-item danger">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2017</div>
+      <div class="tl-title">Lei 13.344/2016 — novo marco do tráfico de pessoas</div>
+      <div class="tl-desc">Tipificação ampliada do crime de tráfico de pessoas. OIT estima 369.000 brasileiros em trabalho escravo naquele período. Walk Free Foundation posiciona Brasil entre os 30 países com maior número absoluto.</div>
+      <div class="tl-tags"><span class="tag teal">legislação</span><span class="tag red">trabalho escravo</span></div>
+    </div>
+    <div class="tl-item amber">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2019</div>
+      <div class="tl-title">Desmonte do aparato de fiscalização</div>
+      <div class="tl-desc">Extinção do Ministério do Trabalho no governo Bolsonaro. Redução drástica das operações do GEFM. Tentativas de esvaziamento da Lista Suja. Resgates de trabalhadores escravizados caem ao menor patamar em décadas.</div>
+      <div class="tl-tags"><span class="tag red">retrocesso</span><span class="tag amber">desmonte</span></div>
+    </div>
+    <div class="tl-item teal">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2022–2023</div>
+      <div class="tl-title">CPMI da Exploração Sexual de Crianças e Adolescentes</div>
+      <div class="tl-desc">Nova CPMI reabre investigações sobre Marajó e litoral nordestino. Relatório final aponta 1.011 municípios em situação de risco. Sem punições estruturais documentadas até 2026.</div>
+      <div class="tl-tags"><span class="tag teal">CPMI 2023</span><span class="tag red">impunidade</span></div>
+    </div>
+    <div class="tl-item danger">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2026</div>
+      <div class="tl-title">Operação Travessia · Caso Marajó revisitado</div>
+      <div class="tl-desc">PF deflagra Op. Travessia em Goiás (7/mai/2026) — rede de R$240M de migração ilegal com conexão a sogra de governador. Novo ciclo de denúncias sobre Marajó e turismo sexual no NE. Padrão histórico de denúncia sem desarticulação estrutural se repete.</div>
+      <div class="tl-tags"><span class="tag red">2026</span><span class="tag red">Op. Travessia</span><span class="tag amber">ciclo recorrente</span></div>
+    </div>
+  </div>
+</div>
+
+<div id="refs" class="section">
+  <p class="section-title">referências e fontes</p>
+  <div class="ref-item">
+    <div class="ref-source">UNODC · Global Report on Trafficking in Persons</div>
+    <div class="ref-title">Relatório Global sobre Tráfico de Pessoas — edições 2018, 2020, 2022</div>
+    <div class="ref-desc">Posiciona o Brasil entre os principais países de origem e destino de vítimas de tráfico na América do Sul.</div>
+  </div>
+  <div class="ref-item">
+    <div class="ref-source">Walk Free Foundation · Global Slavery Index 2023</div>
+    <div class="ref-title">Índice Global de Escravidão Moderna</div>
+    <div class="ref-desc">Estima 369.000 brasileiros em condição análoga à escravidão moderna. Brasil entre os 30 maiores em números absolutos.</div>
+  </div>
+  <div class="ref-item">
+    <div class="ref-source">Ministério dos Direitos Humanos (MMFDH)</div>
+    <div class="ref-title">Anuário de Segurança Pública / Relatório de Desaparecidos</div>
+    <div class="ref-desc">Base SINALID — registros de desaparecimentos. 40.000+ casos/ano. Reconhece subnotificação de 60–70%.</div>
+  </div>
+  <div class="ref-item">
+    <div class="ref-source">ABCF — Associação Brasileira de Famílias de Crianças e Adolescentes Desaparecidos</div>
+    <div class="ref-title">Relatório Anual de Desaparecimentos 2022</div>
+    <div class="ref-desc">Maior percentual de vítimas negras e pardas (70%+). Recomenda banco de dados nacional unificado.</div>
+  </div>
+  <div class="ref-item">
+    <div class="ref-source">MTE / Secretaria de Inspeção do Trabalho</div>
+    <div class="ref-title">Dados de Resgates de Trabalhadores — 1995 a 2026</div>
+    <div class="ref-desc">60.000+ trabalhadores resgatados em 30 anos. "Lista Suja" com centenas de empregadores reincidentes.</div>
+  </div>
+  <div class="ref-item">
+    <div class="ref-source">CPI 2004 / CPMI 2023 — Câmara dos Deputados</div>
+    <div class="ref-title">Relatórios das Comissões Parlamentares sobre Exploração Sexual Infantil</div>
+    <div class="ref-desc">937 (2004) e 1.011 (2023) municípios com ocorrências documentadas. Arquipélago de Marajó e litoral nordestino como zonas críticas.</div>
+  </div>
+  <div class="ref-item">
+    <div class="ref-source">ECPAT Internacional</div>
+    <div class="ref-title">Turismo Sexual e Exploração Online de Crianças no Brasil</div>
+    <div class="ref-desc">Rotas internacionais documentadas. Municípios de Fortaleza, Natal, Porto Seguro e Maceió em alertas globais.</div>
+  </div>
+  <div class="ref-item">
+    <div class="ref-source">Polícia Federal — Op. Travessia (2026)</div>
+    <div class="ref-title">Nota de Deflagração da Operação Travessia · 07/05/2026</div>
+    <div class="ref-desc">5 grupos criminosos · R$240M · 477 migrantes ilegais confirmados (estimativa: 600+) · sogra do governador de Goiás presa preventivamente.</div>
+  </div>
+  <div class="ref-item">
+    <div class="ref-source">OIT — Organização Internacional do Trabalho</div>
+    <div class="ref-title">Relatório sobre Formas Contemporâneas de Escravidão no Brasil</div>
+    <div class="ref-desc">Análise estrutural do trabalho escravo urbano e rural. Setor de confecções com imigrantes bolivianos em São Paulo como caso paradigmático.</div>
+  </div>
+</div>
+
+<!-- ══ RELATED ARTIFACTS (CROSS-ECOSYSTEM) ══ -->
+<div class="related-wrap">
+  <div class="related-title">Artefatos Relacionados</div>
+  <div class="related-grid">
+    <a href="/emaranhamento-operacoes.html" class="related-card">
+      <div class="rc-label" style="color:var(--red);">Ecosistema</div>
+      <div class="rc-title">Emaranhamento de Operações 2026</div>
+      <div class="rc-desc">O panorama do fluxo de capitais.</div>
+    </a>
+    <a href="/trilogia-narco.html" class="related-card">
+      <div class="rc-label" style="color:var(--red);">Operação</div>
+      <div class="rc-title">Trilogia Narco: Do Porto à Rede Social</div>
+      <div class="rc-desc">Lavagem de capital transnacional.</div>
+    </a>
+    <a href="/paradoxo-constitucional.html" class="related-card">
+      <div class="rc-label" style="color:var(--blue);">Análise</div>
+      <div class="rc-title">Paradoxo Constitucional</div>
+      <div class="rc-desc">Ruptura e lawfare.</div>
+    </a>
+    <a href="/banco-master-compliance-zero.html" class="related-card">
+      <div class="rc-label" style="color:var(--amber);">Crimes Financeiros</div>
+      <div class="rc-title">Banco Master: Compliance Zero</div>
+      <div class="rc-desc">Estruturas bancárias de captura.</div>
+    </a>
+  </div>
+</div>
+
+<div style="border-top:1px solid var(--border);margin-top:24px;padding-top:16px;font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--text3);display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;line-height:1.4;">
+  <span>DOSSIÊ EXPLORAÇÃO HUMANA · BRASIL · 1985–2026</span>
+  <span>AI NATIVO BRASIL · compilação investigativa</span>
+</div>
+</div>
+
+<div id="gotop" class="gotop" title="Voltar ao topo">↑</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelectorAll('.nav-btn');
+  
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const targetId = tab.getAttribute('data-target');
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        const offset = 60; // offset for sticky nav
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = targetEl.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+      }
+    });
+  });
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '-80px 0px -60% 0px',
+    threshold: 0
+  };
+
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        tabs.forEach(t => t.classList.remove('active'));
+        const activeTab = document.querySelector(`.nav-btn[data-target="${entry.target.id}"]`);
+        if (activeTab) {
+          activeTab.classList.add('active');
+          activeTab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.section').forEach(sec => navObserver.observe(sec));
+
+  const gotop = document.getElementById('gotop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      gotop.classList.add('show');
+    } else {
+      gotop.classList.remove('show');
+    }
+  });
+  gotop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>

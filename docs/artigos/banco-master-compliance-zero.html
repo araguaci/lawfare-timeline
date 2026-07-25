@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banco Master — Operação Compliance Zero | Mapa Mental Analítico</title>
+  <meta name="description" content="Raio-x completo do maior rombo bancário da história do Brasil. R$51 bilhões em fraudes, captura de banco público e conexões políticas sob a lupa da Operação Compliance Zero.">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gosurf.site/banco-master-compliance-zero">
+  <meta property="og:title" content="Banco Master — Operação Compliance Zero | Mapa Mental Analítico">
+  <meta property="og:description" content="Raio-x completo do maior rombo bancário da história do Brasil. R$51 bilhões em fraudes, captura de banco público e conexões políticas.">
+  <meta property="og:image" content="https://gosurf.site/og-banco-master-compliance-zero.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://gosurf.site/banco-master-compliance-zero">
+  <meta property="twitter:title" content="Banco Master — Operação Compliance Zero | Mapa Mental Analítico">
+  <meta property="twitter:description" content="Raio-x completo do maior rombo bancário da história do Brasil. R$51 bilhões em fraudes, captura de banco público e conexões políticas.">
+  <meta property="twitter:image" content="https://gosurf.site/og-banco-master-compliance-zero.png">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#0b0f0a;--bg2:#111a10;--bg3:#182216;
+    --gr:#3ecb6f;--gr2:#78f5a8;--gr-dim:#1a6030;
+    --red:#e85555;--red2:#ff7575;--red-dim:#7a2020;
+    --gold:#e8c44b;--gold2:#f5d87a;--gold-dim:#907820;
+    --blue:#4a9eff;--blue2:#7ab8ff;--blue-dim:#1a3d7a;
+    --orange:#ff8c42;--orange2:#ffb07a;
+    --purple:#b07aff;--purple2:#d0a8ff;
+    --teal:#2ecfb0;--teal2:#60ffd8;
+    --border:rgba(255,255,255,0.07);
+    --text:#e8f0e8;--text2:#8aaa8a;
+    --font:'Syne',sans-serif;--mono:'JetBrains Mono',monospace;
+  }
+  body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh}
+
+  header{
+    padding:26px 30px 18px;border-bottom:2px solid var(--gr-dim);
+    background:linear-gradient(135deg,#0b0f0a 0%,#121e10 60%,#0b0f0a 100%);
+    position:relative;overflow:hidden;
+  }
+  header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 60%,rgba(62,203,111,0.06) 0%,transparent 60%)}
+  .hbadge{display:inline-flex;align-items:center;gap:6px;background:rgba(62,203,111,0.1);border:1px solid var(--gr-dim);border-radius:4px;padding:4px 12px;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--gr);text-transform:uppercase;margin-bottom:10px}
+  .live-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(232,85,85,0.15);border:1px solid var(--red-dim);border-radius:4px;padding:3px 10px;font-size:10px;font-weight:700;letter-spacing:1.5px;color:var(--red2);text-transform:uppercase;margin-left:8px}
+  .live-dot{width:6px;height:6px;border-radius:50%;background:var(--red2);animation:pulse 1.2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+  header h1{font-size:28px;font-weight:800;letter-spacing:-0.5px;color:#fff;line-height:1.1}
+  header h1 span{color:var(--gr2)}
+  .hmeta{display:flex;gap:18px;margin-top:10px;flex-wrap:wrap}
+  .hm{font-size:12px;color:var(--text2);font-family:var(--mono)}
+  .hm b{color:var(--gr2)}
+
+  nav{display:flex;gap:4px;padding:10px 26px;background:rgba(17,26,16,0.9);border-bottom:1px solid var(--border);overflow-x:auto;flex-wrap:wrap;position:sticky;top:0;z-index:100;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+  .nb{padding:6px 13px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--text2);font-family:var(--font);font-size:12px;font-weight:500;cursor:pointer;transition:all .2s;white-space:nowrap}
+  .nb:hover{border-color:var(--gr-dim);color:var(--gr2)}
+  .nb.act{background:rgba(62,203,111,0.12);border-color:var(--gr);color:var(--gr);font-weight:700}
+
+  main{padding:0 20px 32px;max-width:1200px;margin:0 auto}
+  .sec{display:none;padding-top:4px}
+  .sec.act{display:block}
+
+  .kgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:16px 0 10px}
+  @media(max-width:900px){.kgrid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:480px){.kgrid{grid-template-columns:1fr}}
+  .kcard{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 15px;position:relative;overflow:hidden}
+  .kcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+  .kg::before{background:linear-gradient(90deg,var(--gr),var(--gr2))}
+  .kr::before{background:linear-gradient(90deg,var(--red),var(--red2))}
+  .kgo::before{background:linear-gradient(90deg,var(--gold),var(--gold2))}
+  .kb::before{background:linear-gradient(90deg,var(--blue),var(--blue2))}
+  .ko::before{background:linear-gradient(90deg,var(--orange),var(--orange2))}
+  .kp::before{background:linear-gradient(90deg,var(--purple),var(--purple2))}
+  .kt::before{background:linear-gradient(90deg,var(--teal),var(--teal2))}
+  .klabel{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);margin-bottom:5px}
+  .kval{font-size:22px;font-weight:800;line-height:1}
+  .ksub{font-size:11px;color:var(--text2);margin-top:3px;font-family:var(--mono)}
+  .kg .kval{color:var(--gr2)}.kr .kval{color:var(--red2)}.kgo .kval{color:var(--gold)}.kb .kval{color:var(--blue2)}.ko .kval{color:var(--orange)}.kp .kval{color:var(--purple2)}.kt .kval{color:var(--teal)}
+
+  .gbar{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin-bottom:12px}
+  .gtitle{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);margin-bottom:10px}
+  .gtrack{height:10px;background:var(--bg3);border-radius:999px;overflow:hidden}
+  .gfill{height:100%;border-radius:999px;background:linear-gradient(90deg,#4a9eff,#e8c44b,#e85555);transition:width 1.2s ease;width:0}
+  .glabels{display:flex;justify-content:space-between;font-size:10px;color:var(--text2);margin-top:5px;font-family:var(--mono)}
+  .gscore{font-size:24px;font-weight:800;color:var(--red2);margin-top:8px}
+  .gnote{font-size:11px;color:var(--text2);margin-top:2px}
+
+  .pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:12px}
+  @media(max-width:768px){.pgrid{grid-template-columns:1fr}}
+  .panel{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:18px 20px}
+  .ptitle{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+  .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+  .dg{background:var(--gr)}.dr{background:var(--red)}.dgo{background:var(--gold)}.db{background:var(--blue)}.do{background:var(--orange)}.dp{background:var(--purple)}.dt{background:var(--teal)}
+
+  .tag{display:inline-block;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:600;margin:2px 2px 2px 0;font-family:var(--mono)}
+  .tg{background:rgba(62,203,111,0.1);color:var(--gr2);border:1px solid rgba(62,203,111,0.2)}
+  .tr{background:rgba(232,85,85,0.12);color:var(--red2);border:1px solid rgba(232,85,85,0.2)}
+  .tgo{background:rgba(232,196,75,0.1);color:var(--gold);border:1px solid rgba(232,196,75,0.2)}
+  .tb{background:rgba(74,158,255,0.1);color:var(--blue2);border:1px solid rgba(74,158,255,0.2)}
+  .to{background:rgba(255,140,66,0.1);color:var(--orange);border:1px solid rgba(255,140,66,0.2)}
+  .tp{background:rgba(176,122,255,0.1);color:var(--purple2);border:1px solid rgba(176,122,255,0.2)}
+  .tt{background:rgba(46,207,176,0.08);color:var(--teal);border:1px solid rgba(46,207,176,0.18)}
+  .tgr{background:rgba(138,170,138,0.12);color:var(--text2);border:1px solid rgba(138,170,138,0.2)}
+
+  .tli{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)}
+  .tli:last-child{border-bottom:none}
+  .tld{font-family:var(--mono);font-size:11px;color:var(--gr);min-width:95px;font-weight:600;padding-top:2px;flex-shrink:0}
+  .tltitle{font-size:13px;font-weight:600;margin-bottom:2px}
+  .tldesc{font-size:12px;color:var(--text2);line-height:1.5}
+
+  .agrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+  .acard{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px 14px}
+  .aname{font-size:13px;font-weight:700;margin-bottom:3px}
+  .arole{font-size:11px;color:var(--text2);font-family:var(--mono);margin-bottom:6px}
+  .astatus{font-size:12px;color:var(--text2);line-height:1.5}
+
+  .ritem{padding:10px 12px;border-radius:8px;margin-bottom:8px;border-left:3px solid;background:var(--bg3)}
+  .rcrit{border-color:var(--red)}.ralto{border-color:var(--orange)}.rmedio{border-color:var(--gold)}.rbaixo{border-color:var(--teal)}
+  .rheader{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px}
+  .rname{font-size:13px;font-weight:600}
+  .rbadge{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;border-radius:3px;font-family:var(--mono)}
+  .bcrit{background:rgba(232,85,85,0.2);color:var(--red2)}.balto{background:rgba(255,140,66,0.2);color:var(--orange2)}.bmedio{background:rgba(232,196,75,0.15);color:var(--gold2)}.bbaixo{background:rgba(46,207,176,0.1);color:var(--teal2)}
+  .rdesc{font-size:12px;color:var(--text2);line-height:1.5}
+
+  .alitem{display:flex;gap:10px;padding:10px 12px;border-radius:8px;margin-bottom:8px;background:var(--bg3)}
+  .alic{font-size:16px;flex-shrink:0;margin-top:1px}
+  .altitle{font-size:13px;font-weight:600;margin-bottom:2px}
+  .aldesc{font-size:12px;color:var(--text2);line-height:1.5}
+
+  .litem{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--border)}
+  .litem:last-child{border-bottom:none}
+  .lnum{font-family:var(--mono);font-size:20px;font-weight:800;min-width:36px;text-align:center;-webkit-text-stroke:1px var(--gr);color:var(--bg3);line-height:1}
+  .ltitle{font-size:13px;font-weight:700;color:var(--gr2);margin-bottom:3px}
+  .ldesc{font-size:12px;color:var(--text2);line-height:1.6}
+
+  .scard{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:13px 15px;margin-bottom:9px}
+  .sheader{display:flex;align-items:center;gap:9px;margin-bottom:7px}
+  .sico{font-size:16px}.sname{font-size:13px;font-weight:700}
+  .sdesc{font-size:12px;color:var(--text2);line-height:1.6}
+  .sresult{font-size:11px;margin-top:7px;padding:5px 9px;border-radius:5px;background:var(--bg2);font-family:var(--mono)}
+
+  .refitem{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);align-items:flex-start}
+  .refitem:last-child{border-bottom:none}
+  .refnum{font-family:var(--mono);font-size:11px;color:var(--text2);min-width:28px;margin-top:2px}
+  .reftitle{font-size:13px;font-weight:600;color:var(--gr);margin-bottom:2px}
+  .refsrc{font-size:11px;color:var(--text2);font-family:var(--mono)}
+
+  .full{grid-column:1/-1}
+  .frow{display:flex;align-items:center;gap:8px;padding:7px 0;font-size:12px;flex-wrap:wrap}
+  .fnode{padding:5px 11px;border-radius:5px;font-weight:600;font-size:11px}
+  .farr{color:var(--text2);font-size:16px}
+  .flabel{font-size:11px;color:var(--text2);font-family:var(--mono)}
+  p.body{font-size:13px;color:var(--text2);line-height:1.75;margin-bottom:10px}
+
+  .esquema-box{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px 14px;margin-bottom:8px}
+  .esq-header{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+  .esq-num{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0}
+  .esq-title{font-size:13px;font-weight:700}
+  .esq-desc{font-size:12px;color:var(--text2);line-height:1.6}
+  .esq-val{font-family:var(--mono);font-size:11px;margin-top:5px;padding:4px 8px;border-radius:4px;display:inline-block}
+
+  .dual{padding:10px 12px;border-radius:8px;background:var(--bg3);border-left:3px solid var(--border);margin-bottom:8px}
+  .dual-label{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px;font-family:var(--mono)}
+  .dual-a{font-size:12px;color:var(--text2);line-height:1.6}
+
+  .status-live{background:rgba(232,85,85,0.1);border:1px solid rgba(232,85,85,0.25);color:var(--red2);font-size:10px;font-weight:700;padding:2px 6px;border-radius:3px;font-family:var(--mono)}
+
+  /* === RELATED ARTIFACTS === */
+  .related-wrap {
+    padding: 64px 32px;
+    background: linear-gradient(to bottom, var(--bg), var(--bg2));
+    border-top: 2px solid var(--gr-dim);
+    margin-top: 40px;
+  }
+  .related-title {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--text2);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .related-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .related-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    padding: 20px;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+  }
+  .related-card:hover {
+    border-color: var(--gr);
+    background: var(--bg3);
+    transform: translateY(-2px);
+  }
+  .related-card-cat {
+    font-size: 9px;
+    color: var(--gr2);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-family: var(--mono);
+  }
+  .related-card-title {
+    font-family: var(--font);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text);
+    line-height: 1.4;
+  }
+  .related-card-arrow {
+    margin-top: 12px;
+    font-size: 10px;
+    color: var(--text2);
+    text-align: right;
+    font-family: var(--mono);
+  }
+  @media (max-width: 600px) {
+    .related-wrap { padding: 40px 22px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div style="display:flex;align-items:center;gap:0;flex-wrap:wrap">
+    <div class="hbadge">⚖ Mapa Mental • Análise Financeiro-Criminal</div>
+    <div class="live-badge"><span class="live-dot"></span>CASO EM CURSO — mar/2026</div>
+  </div>
+  <h1>Banco Master — <span>Operação Compliance Zero</span></h1>
+  <div class="hmeta">
+    <span class="hm"><b>Deflagração:</b> 17 nov 2025</span>
+    <span class="hm"><b>Liquidação:</b> 18 nov 2025 (BC)</span>
+    <span class="hm"><b>Rombo estimado:</b> R$ 47–51 bilhões</span>
+    <span class="hm"><b>Clientes lesados:</b> ~1,6 milhão</span>
+    <span class="hm"><b>Relator STF:</b> Min. André Mendonça</span>
+    <span class="hm"><b>Status:</b> Investigação ativa — 3ª fase</span>
+  </div>
+</header>
+
+<nav>
+  <button class="nb act" onclick="show('visao')">Visão Geral</button>
+  <button class="nb" onclick="show('timeline')">Linha do Tempo</button>
+  <button class="nb" onclick="show('atores')">Atores</button>
+  <button class="nb" onclick="show('esquema')">Esquema & Crimes</button>
+  <button class="nb" onclick="show('estrategias')">Estratégias</button>
+  <button class="nb" onclick="show('controversias')">Controvérsias</button>
+  <button class="nb" onclick="show('riscos')">Riscos & Alertas</button>
+  <button class="nb" onclick="show('aprendizados')">Aprendizados</button>
+  <button class="nb" onclick="show('refs')">Referências</button>
+</nav>
+
+<main>
+
+<!-- ══ VISÃO GERAL ══ -->
+<div id="sec-visao" class="sec act">
+  <div class="kgrid">
+    <div class="kcard kr"><div class="klabel">Rombo FGC</div><div class="kval">R$51bi</div><div class="ksub">maior da história do Brasil</div></div>
+    <div class="kcard kgo"><div class="klabel">CDBs sem lastro</div><div class="kval">R$50bi</div><div class="ksub">até 177% CDI prometidos</div></div>
+    <div class="kcard kr"><div class="klabel">Créditos falsos → BRB</div><div class="kval">R$12,7bi</div><div class="ksub">via empresa Tirreno</div></div>
+    <div class="kcard kb"><div class="klabel">Fundos Reag inflados</div><div class="kval">R$11,5bi</div><div class="ksub">patrimônio R$102bi (6 fundos)</div></div>
+    <div class="kcard ko"><div class="klabel">Clientes lesados</div><div class="kval">1,6 mi</div><div class="ksub">FGC cobre até R$250mi/CPF</div></div>
+    <div class="kcard kp"><div class="klabel">Caixa no momento da liquidação</div><div class="kval">R$4 mi</div><div class="ksub">banco com bilhões em passivo</div></div>
+    <div class="kcard kt"><div class="klabel">Instituições liquidadas</div><div class="kval">8</div><div class="ksub">Master, Will Bank, Reag, Pleno…</div></div>
+    <div class="kcard kg"><div class="klabel">Preso em mar/2026</div><div class="kval">Vorcaro</div><div class="ksub">3ª fase — min. André Mendonça</div></div>
+  </div>
+
+  <div class="gbar">
+    <div class="gtitle">Índice de Gravidade Sistêmica & Institucional</div>
+    <div class="gtrack"><div class="gfill" id="gfill"></div></div>
+    <div class="glabels"><span>Baixo</span><span>Médio</span><span>Alto</span><span>Crítico</span></div>
+    <div class="gscore">99 / 100 — SISTÊMICO</div>
+    <div class="gnote">Maior rombo bancário da história do Brasil. Fraude estrutural em balanços, captura de banco público (BRB), possível interferência de ministro do STF (Toffoli), 1,6 milhão de investidores lesados, 8 instituições liquidadas, caixa real de R$4mi vs. passivos de R$50bi e envolvimento de governador, senadores e executivos de alto escalão.</div>
+  </div>
+
+  <div class="pgrid">
+    <div class="panel">
+      <div class="ptitle"><span class="dot dg"></span>Contexto & Ascensão</div>
+      <p class="body">Daniel Vorcaro adquiriu o banco em 2018 com capitalização de R$400mi. O modelo de crescimento usou a emissão massiva de <b style="color:var(--gr2)">CDBs a rendimentos de até 177% do CDI</b> — atraindo investidores de varejo pelo FGC como escudo. Em 4 anos, a receita foi de R$190mi para R$1bi. A expansão incluiu Will Bank, Banco Pleno e a gestora Reag, criando um conglomerado financeiro interdependente cuja liquidez real se deteriorava enquanto os balanços pareciam sólidos.</p>
+      <div style="margin-top:10px">
+        <span class="tag tg">CDBs 177% CDI</span><span class="tag tg">FGC como estratégia</span><span class="tag tg">Crédito consignado</span><span class="tag tg">Precatórios</span><span class="tag tg">Conglomerado artificioso</span>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot dr"></span>Colapso & Liquidação</div>
+      <p class="body">O BC identificou em março/2025 que <b style="color:var(--red2)">130 contratos analisados não tinham lastro algum</b>. O banco não conseguia pagar 15% dos vencimentos semanais. No momento da liquidação, o caixa era de apenas <b style="color:var(--red2)">R$4 milhões</b>. O BC decretou a liquidação em 18 nov 2025. A tentativa de venda ao BRB foi barrada em setembro/2025 — as investigações concluíram que o objetivo era fundir balanços para diluir a fraude em um banco público.</p>
+      <div style="margin-top:10px">
+        <span class="tag tr">Liquidação extrajudicial</span><span class="tag tr">Insolvência real</span><span class="tag tr">Fraude em balanço</span><span class="tag tr">Venda frustrada ao BRB</span>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot dp"></span>Dimensão Política</div>
+      <p class="body">O caso ultrapassou o sistema financeiro. O <b style="color:var(--purple2)">governador Ibaneis Rocha (GDF)</b> admitiu reuniões com Vorcaro sobre a fusão BRB/Master. O <b style="color:var(--purple2)">senador Ciro Nogueira</b> apresentou PEC que quadruplicaria o limite do FGC — apelidada de "emenda Master". Vorcaro e aliados compraram ações do BRB via laranjas, chegando a 25% do capital do banco público. E mensagens nos celulares de Vorcaro revelaram vínculos com o ministro do STF <b style="color:var(--purple2)">Dias Toffoli</b>, que acabou saindo da relatoria do caso.</p>
+      <div style="margin-top:10px">
+        <span class="tag tp">Ibaneis Rocha (GDF)</span><span class="tag tp">Ciro Nogueira — PEC</span><span class="tag tp">Toffoli — relatoria</span><span class="tag tp">Nelson Tanure — sócio oculto</span><span class="tag tp">Laranjas no BRB</span>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot dgo"></span>Impacto no FGC & Investidores</div>
+      <p class="body">O FGC vai desembolsar aproximadamente <b style="color:var(--gold)">R$41 bilhões</b> — cerca de 1/3 de todo o seu patrimônio. O maior resgate da história do fundo. Limite: R$250mil por CPF. <b style="color:var(--gold)">18 fundos de pensão</b> estaduais e municipais que investiram R$1,86bi em letras financeiras e fundos do Master <b style="color:var(--gold)">não serão ressarcidos</b> — esses produtos não têm cobertura do FGC. Agências de rating que atestavam saúde financeira do Master terão que explicar suas análises.</p>
+      <div style="margin-top:10px">
+        <span class="tag tgo">FGC — R$41bi a ressarcir</span><span class="tag tgo">18 fundos de pensão sem cobertura</span><span class="tag tgo">Agências de rating</span><span class="tag tgo">R$1,86bi fundos públicos</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TIMELINE ══ -->
+<div id="sec-timeline" class="sec">
+  <div class="panel" style="margin-top:16px">
+    <div class="ptitle"><span class="dot dg"></span>Linha do Tempo Completa</div>
+    <div class="tli"><div class="tld">out 2018</div><div><div class="tltitle">Vorcaro assume o controle do banco</div><div class="tldesc">BC aprova transferência do controle para Daniel Vorcaro e sócios. Banco é rebatizado como Banco Master em 2021. Capitalização inicial de R$400mi. A receita passa de R$190mi para R$1bi em 2 anos via emissão massiva de CDBs com altos rendimentos.</div></div></div>
+    <div class="tli"><div class="tld">2018–2023</div><div><div class="tltitle">Modelo de crescimento insustentável</div><div class="tldesc">Master capta via CDBs com rendimentos de até 177% do CDI — muito acima do mercado. Estratégia usa o FGC como marketing de segurança para investidores de varejo. Adquire Will Bank e Banco Pleno. Exposição crescente a precatórios (R$8,7bi) e créditos duvidosos.</div></div></div>
+    <div class="tli"><div class="tld">2023</div><div><div class="tltitle" style="color:var(--gold)">Primeira denúncia formal ao BC</div><div class="tldesc">Advogado Vladimir Timerman, da Esh Capital, protocola denúncia formal no BC relatando operações suspeitas com precatórios sem lastro e a existência de um sócio oculto: Nelson Tanure. BC começa a investigar internamente mas não age publicamente.</div></div></div>
+    <div class="tli"><div class="tld">2023–2024</div><div><div class="tltitle" style="color:var(--red2)">Triangulação com Reag — R$11,5bi inflados</div><div class="tldesc">Master empresta recursos a empresas-laranja, que aplicam em fundos da Reag Investimentos (gestora do cunhado de Vorcaro). Os fundos compram ativos de baixo ou nenhum valor real (incl. certificados do extinto BESC) por preços inflados. BC identifica 6 fundos da Reag suspeitos com patrimônio conjunto de R$102,4bi.</div></div></div>
+    <div class="tli"><div class="tld">ago 2024</div><div><div class="tltitle" style="color:var(--red2)">PEC da "Emenda Master" — rejeitada</div><div class="tldesc">Senador Ciro Nogueira (PP-PI), aliado de Vorcaro, apresenta PEC que quadruplicaria limite do FGC de R$250mil para R$1 milhão por CPF. Rejeitada na CCJ do Senado em agosto de 2024 após resistência dos grandes bancos tradicionais.</div></div></div>
+    <div class="tli"><div class="tld">28 mar 2025</div><div><div class="tltitle" style="color:var(--gr2)">BRB anuncia compra do Banco Master</div><div class="tldesc">BRB anuncia aquisição de 49% das ações ordinárias e 58% do capital total. Ações do BRB disparam 83,58% em um dia. Presidente Paulo Henrique Costa comanda a operação. O GDF sanciona lei em uma semana autorizando o negócio. Vorcaro passaria ao conselho do BRB.</div></div></div>
+    <div class="tli"><div class="tld">mar–ago 2025</div><div><div class="tltitle">Master vende R$12,7bi em créditos falsos ao BRB</div><div class="tldesc">Engrenagem central da fraude: Master cria empresa Tirreno como fachada. Tirreno "vende" R$6bi em créditos (que não existem) ao Master contabilmente. Master repassa os créditos ao BRB por R$12,7bi após manipulação das taxas de juros. BRB paga à vista. Master não precisa pagar a Tirreno imediatamente.</div></div></div>
+    <div class="tli"><div class="tld">mar 2025</div><div><div class="tltitle">BC questiona Master sobre documentação</div><div class="tldesc">BC questiona os créditos — Master alega que duas associações de servidores da Bahia seriam originadoras. BC analisa CPFs e conclui que os contratos são inexistentes: 130 contratos analisados aleatoriamente sem lastro algum.</div></div></div>
+    <div class="tli"><div class="tld">17 jun 2025</div><div><div class="tltitle">CADE aprova fusão BRB-Master</div><div class="tldesc">Conselho Administrativo de Defesa Econômica (CADE) aprova operação. Câmara Legislativa do DF aprova com 14×7 votos. Negócio avança no político enquanto BC ainda analisa os riscos prudenciais da operação.</div></div></div>
+    <div class="tli"><div class="tld">ago 2025</div><div><div class="tltitle" style="color:var(--gold)">"Estratégia de guerra" — Vorcaro e Ibaneis</div><div class="tldesc">Em agosto, Vorcaro se reúne com o governador Ibaneis Rocha. Mensagem vazada para a namorada Martha Graeff revela que Vorcaro chamou o encontro de definição de uma "estratégia de guerra". Ibaneis nega ter discutido a fusão.</div></div></div>
+    <div class="tli"><div class="tld">3 set 2025</div><div><div class="tltitle" style="color:var(--red2)">BC rejeita a compra do Master pelo BRB</div><div class="tldesc">Após 5 meses de análise, BC barra oficialmente a fusão identificando riscos à solidez do sistema financeiro. BRB fica com R$12,7bi em ativos podres adquiridos do Master. O BRB descumpre limites prudenciais do BC por pelo menos 2 meses (jan-fev 2025).</div></div></div>
+    <div class="tli"><div class="tld">17 nov 2025</div><div><div class="tltitle" style="color:var(--red2)">Operação Compliance Zero — 1ª fase</div><div class="tldesc">PF deflagra operação em 5 estados. Vorcaro é preso às 22h no Aeroporto de Guarulhos tentando embarcar para Dubai. Paulo Henrique Costa (ex-presidente BRB) é afastado judicialmente. BC decreta liquidação no dia seguinte.</div></div></div>
+    <div class="tli"><div class="tld">18 nov 2025</div><div><div class="tltitle" style="color:var(--red2)">Liquidação extrajudicial do Banco Master</div><div class="tldesc">BC presidente Gabriel Galípolo decreta liquidação por insolvência. Rombo estimado: R$47bi. Caixa real do banco: R$4 milhões. FGC passa a ressarcir 1,6 milhão de clientes. Maior liquidação bancária da história do Brasil.</div></div></div>
+    <div class="tli"><div class="tld">28 nov 2025</div><div><div class="tltitle">Vorcaro solto pelo TRF-1</div><div class="tldesc">TRF da 1ª Região revoga a prisão preventiva. Vorcaro sai após 11 dias com tornozeleira eletrônica e proibição de realizar operações financeiras. Passaporte retido.</div></div></div>
+    <div class="tli"><div class="tld">dez 2025</div><div><div class="tltitle" style="color:var(--purple2)">Toffoli assume o caso — acareação polêmica</div><div class="tldesc">Min. Dias Toffoli avoca o caso para o STF, determina custódia de todo material apreendido no STF e tenta marcar acareação incluindo diretor de fiscalização do BC. Febraban e BC protestam. Toffoli recua e manda PF ouvir depoimentos separados.</div></div></div>
+    <div class="tli"><div class="tld">jan 2026</div><div><div class="tltitle">Liquidação da Reag e Will Bank</div><div class="tldesc">BC liquida CBSF (ex-Reag Trust) e Will Bank — banco digital do grupo. Custo total para o FGC sobe para R$51,8bi com 8 instituições em regime de liquidação extrajudicial.</div></div></div>
+    <div class="tli"><div class="tld">fev 2026</div><div><div class="tltitle" style="color:var(--red2)">PF encontra vínculos Vorcaro-Toffoli</div><div class="tldesc">PF descobre mensagens e vínculos financeiros entre Vorcaro e o ministro Dias Toffoli (pagamentos decorrentes da venda do resort Tayayá, do qual Toffoli era sócio). STF reúne todos os ministros em sessão fechada. Toffoli deixa a relatoria. Min. André Mendonça assume.</div></div></div>
+    <div class="tli"><div class="tld">fev 2026</div><div><div class="tltitle">Ações do BRB bloqueadas pela Justiça</div><div class="tldesc">Justiça bloqueia ações do BRB ligadas ao Master. Vorcaro, Tanure, ex-sócio Maurício Quadrado e João Carlos Mansur (Reag) são identificados como sócios do BRB via laranjas, tendo chegado a 25% do capital do banco público.</div></div></div>
+    <div class="tli"><div class="tld">4 mar 2026</div><div><div class="tltitle" style="color:var(--red2)">Vorcaro preso novamente — 3ª fase</div><div class="tldesc">Min. André Mendonça determina nova prisão preventiva. Vorcaro cumpre pena na Penitenciária Federal de Brasília. Acusação: obstrução das investigações além dos crimes originais. PF investiga acesso ilegal de Vorcaro aos sistemas da corporação para vazamento do inquérito sigiloso.</div></div></div>
+  </div>
+</div>
+
+<!-- ══ ATORES ══ -->
+<div id="sec-atores" class="sec">
+  <div style="margin-top:16px">
+    <div class="panel" style="margin-bottom:12px">
+      <div class="ptitle"><span class="dot dr"></span>Investigados Principais</div>
+      <div class="agrid">
+        <div class="acard"><div class="aname" style="color:var(--red2)">Daniel Vorcaro</div><div class="arole">Fundador e controlador — Banco Master</div><div class="astatus">Preso 2× (nov/2025 e mar/2026). Acusado de liderar o esquema de créditos fictícios, gestão fraudulenta e org. criminosa. Tentou embarcar para Dubai na 1ª prisão. Cumpre prisão preventiva na Penitenciária Federal de Brasília.</div></div>
+        <div class="acard"><div class="aname" style="color:var(--red2)">Paulo Henrique Costa</div><div class="arole">Ex-presidente do BRB</div><div class="astatus">Afastado judicialmente em 18/nov/2025. Demitido em 19/nov/2025. Investigado por participação na aquisição de R$12,7bi em ativos inexistentes do Master.</div></div>
+        <div class="acard"><div class="aname" style="color:var(--red2)">Nelson Tanure</div><div class="arole">Empresário — suspeito de sócio oculto</div><div class="astatus">Apontado como sócio oculto do Master desde as denúncias de 2023. Investigado por aquisição de ações do BRB via laranjas. Nega qualquer vínculo com o banco ou com fundos que compraram ações do BRB.</div></div>
+        <div class="acard"><div class="aname" style="color:var(--red2)">Armando Gallo Neto / Felipe Simonsen / Augusto Lima</div><div class="arole">Sócios do Banco Master</div><div class="astatus">Cossócios na reestruturação do banco a partir de 2018. Augusto Lima teve o Banco Pleno (que controlava) liquidado pelo BC em fev/2026.</div></div>
+        <div class="acard"><div class="aname" style="color:var(--red2)">João Carlos Mansur (Reag)</div><div class="arole">Fundador da Reag Investimentos</div><div class="astatus">Gestora liquidada pelo BC em jan/2026. Identificado como um dos que adquiriu ações do BRB via laranjas. Reag usava fundos para inflar artificialmente o balanço do Master.</div></div>
+        <div class="acard"><div class="aname" style="color:var(--red2)">Tirreno / André Felipe Maia (dir.)</div><div class="arole">Empresa fachada — criação de créditos fictícios</div><div class="astatus">Empresa criada pelo grupo Master para originar "créditos" fictícios. Diretor André Felipe Maia (ex-funcionário Master) prestou depoimento à PF. Tirreno gerava os créditos que eram repassados ao BRB por R$12,7bi.</div></div>
+      </div>
+    </div>
+    <div class="panel" style="margin-bottom:12px">
+      <div class="ptitle"><span class="dot dp"></span>Rede Política Investigada</div>
+      <div class="agrid">
+        <div class="acard"><div class="aname" style="color:var(--purple2)">Ibaneis Rocha (MDB)</div><div class="arole">Governador do DF — acionista majoritário do BRB</div><div class="astatus">Reuniu-se com Vorcaro antes da fusão. Sancionou lei em urgência autorizando o BRB a comprar o Master. Nega ter discutido aspectos financeiros. Pedido de CPI e impeachment na CLDF.</div></div>
+        <div class="acard"><div class="aname" style="color:var(--purple2)">Ciro Nogueira (PP-PI)</div><div class="arole">Senador — aliado de Vorcaro</div><div class="astatus">Apresentou PEC para quadruplicar limite do FGC — apelidada "Emenda Master". Rejeitada em ago/2024 na CCJ do Senado. Conexão direta com os interesses do Master no Congresso.</div></div>
+        <div class="acard"><div class="aname" style="color:var(--purple2)">Dias Toffoli</div><div class="arole">Min. STF — ex-relator do caso</div><div class="astatus">Avocou o caso para o STF. Tentou acareação com diretor do BC. PF encontrou mensagens e vínculos financeiros entre ele e Vorcaro (resort Tayayá). Saiu da relatoria em fev/2026. STF afirma que seus atos são válidos.</div></div>
+        <div class="acard"><div class="aname" style="color:var(--purple2)">Roberto Campos Neto</div><div class="arole">Ex-presidente do BC (até dez/2024)</div><div class="astatus">Gestão que aprovou a entrada de Vorcaro em 2018 e que recebeu denúncias em 2023 sem agir imediatamente. Vorcaro visitou o BC "dezenas de vezes" durante sua presidência, segundo LAI. "Ovo da serpente chocado em 2019".</div></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot dg"></span>Autoridades Investigadoras & Reguladoras</div>
+      <div class="agrid">
+        <div class="acard"><div class="aname" style="color:var(--gr2)">Banco Central — Dir. Ailton Aquino</div><div class="arole">Regulador — fiscalização</div><div class="astatus">Decretou liquidação em nov/2025 (sob Galípolo). Aquino declarou à PF que a direção do BRB "deveria ter identificado" os problemas. Toffoli tentou incluí-lo na acareação — BC protestou. Prestou depoimento separadamente.</div></div>
+        <div class="acard"><div class="aname" style="color:var(--gr2)">Polícia Federal</div><div class="arole">Órgão investigador — Compliance Zero</div><div class="astatus">Inquérito sigiloso aberto em 2024 na 10ª Vara Federal de Brasília. Deslocado ao STF após decisão de Toffoli. Prendeu Vorcaro 2×. Descobriu mensagens entre Vorcaro e Toffoli. Investigação de acesso ilegal de Vorcaro aos sistemas da PF.</div></div>
+        <div class="acard"><div class="aname" style="color:var(--gr2)">Min. André Mendonça</div><div class="arole">STF — relator atual (desde fev/2026)</div><div class="astatus">Assumiu a relatoria após saída de Toffoli. Autorizou nova prisão preventiva de Vorcaro em 4 mar 2026. Conduz o processo com maior rigor procedimental.</div></div>
+        <div class="acard"><div class="aname" style="color:var(--gr2)">FGC</div><div class="arole">Fundo Garantidor de Créditos</div><div class="astatus">Responsável por ressarcir 1,6 mi de clientes. Estimativa de R$41bi — 1/3 do patrimônio total do fundo. Pagamento ainda não iniciado (ago/2026): liquidante ainda compilando lista de credores.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ESQUEMA ══ -->
+<div id="sec-esquema" class="sec">
+  <div class="pgrid" style="margin-top:16px">
+    <div class="panel">
+      <div class="ptitle"><span class="dot dr"></span>Os 4 Pilares do Esquema</div>
+      <div class="esquema-box">
+        <div class="esq-header"><span class="esq-num" style="background:rgba(232,85,85,0.2);color:var(--red2)">1</span><span class="esq-title">CDBs sem lastro — captação insustentável</span></div>
+        <div class="esq-desc">Master emitiu cerca de R$50bi em CDBs com promessa de até 177% do CDI — muito acima do mercado (100–105%). Usou o FGC como "seguro de captação" para atrair pequenos investidores. O rendimento prometido era irreal e sem ativos correspondentes para lastrear o pagamento futuro.</div>
+        <div class="esq-val" style="background:rgba(232,85,85,0.1);color:var(--red2)">Exposição: ~R$50 bilhões</div>
+      </div>
+      <div class="esquema-box">
+        <div class="esq-header"><span class="esq-num" style="background:rgba(255,140,66,0.2);color:var(--orange)">2</span><span class="esq-title">Triangulação Tirreno → BRB — créditos fictícios</span></div>
+        <div class="esq-desc">Master cria empresa fachada Tirreno. Tirreno "origina" R$6bi em créditos que nunca existiram. Master registra a aquisição contabilmente sem pagar. Depois revende ao BRB por R$12,7bi após manipulação de taxas. BRB paga à vista. 130 contratos analisados pelo BC: zero com lastro real.</div>
+        <div class="esq-val" style="background:rgba(255,140,66,0.15);color:var(--orange)">Fraude: R$12,7 bilhões</div>
+      </div>
+      <div class="esquema-box">
+        <div class="esq-header"><span class="esq-num" style="background:rgba(176,122,255,0.2);color:var(--purple2)">3</span><span class="esq-title">Reag — inflação de fundos via ativos podres</span></div>
+        <div class="esq-desc">Master empresta a empresas-laranja, que aplicam em fundos da Reag Investimentos (gestora do cunhado de Vorcaro). Os fundos compram ativos de baixíssimo valor real — como certificados físicos ("cártulas") do extinto Banco do Estado de SC (BESC, liquidado em 2008) — por preços inflados, criando aparência de patrimônio sólido.</div>
+        <div class="esq-val" style="background:rgba(176,122,255,0.1);color:var(--purple2)">Inflação: R$11,5 bilhões</div>
+      </div>
+      <div class="esquema-box">
+        <div class="esq-header"><span class="esq-num" style="background:rgba(232,196,75,0.2);color:var(--gold)">4</span><span class="esq-title">Fusão BRB — diluição da fraude em banco público</span></div>
+        <div class="esq-desc">Com o esquema prestes a desmoronar, a tentativa de vender o Master ao BRB visava fundir os balanços e diluir a fraude numa instituição pública — transferindo o passivo para o contribuinte. BC barrou a operação em set/2025. Enquanto isso, Vorcaro e aliados compravam ações do BRB via laranjas para ter controle sobre 25% do capital.</div>
+        <div class="esq-val" style="background:rgba(232,196,75,0.12);color:var(--gold)">Prejuízo BRB: R$5–12,7 bilhões</div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot dgo"></span>Crimes Imputados</div>
+      <div class="frow"><span class="fnode tgo">Gestão fraudulenta</span><span class="farr">→</span><span class="flabel">Lei 7.492/86 — SFN</span></div>
+      <div class="frow"><span class="fnode tgo">Organização criminosa</span><span class="farr">→</span><span class="flabel">Lei 12.850/13</span></div>
+      <div class="frow"><span class="fnode tgo">Lavagem de dinheiro</span><span class="farr">→</span><span class="flabel">Lei 9.613/98</span></div>
+      <div class="frow"><span class="fnode tgo">Indução ao erro — investidores</span><span class="farr">→</span><span class="flabel">Art. 7º Lei 7.492/86</span></div>
+      <div class="frow"><span class="fnode tgo">Manipulação de mercado</span><span class="farr">→</span><span class="flabel">Lei 6.385/76 (CVM)</span></div>
+      <div class="frow"><span class="fnode tgo">Uso de info privilegiada</span><span class="farr">→</span><span class="flabel">Lei 6.385/76</span></div>
+      <div class="frow"><span class="fnode tgo">Evasão de divisas</span><span class="farr">→</span><span class="flabel">Lei 7.492/86</span></div>
+      <div class="frow"><span class="fnode tgo">Fraude em balanço</span><span class="farr">→</span><span class="flabel">Art. 10 Lei 7.492/86</span></div>
+      <div class="frow"><span class="fnode tgo">Obstrução da PF</span><span class="farr">→</span><span class="flabel">Acesso ilegal a sistema corporação</span></div>
+      <div class="frow"><span class="fnode tgo">Uso de laranjas</span><span class="farr">→</span><span class="flabel">Ocultação de propriedade societária</span></div>
+      <div style="margin-top:12px;padding:10px 12px;background:var(--bg3);border-radius:7px;font-size:12px;color:var(--text2)">
+        <b style="color:var(--gr2)">Nota:</b> Também investigado o possível crime de acesso não autorizado aos sistemas da PF, que Vorcaro teria usado para vazar o inquérito sigiloso à mídia — o que se tornaria o fundamento para obstrução de justiça e a segunda prisão em mar/2026.
+      </div>
+    </div>
+    <div class="panel full">
+      <div class="ptitle"><span class="dot db"></span>Fluxo Financeiro do Esquema</div>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px;padding:8px 0;font-size:12px">
+        <div style="background:var(--bg3);border:1px solid var(--border);padding:10px 14px;border-radius:8px;text-align:center"><div style="color:var(--text2);font-size:10px;margin-bottom:3px">CAPTAÇÃO</div><div style="font-weight:700;color:var(--gr2)">Investidores varejo</div><div style="font-size:10px;color:var(--text2)">CDBs 177% CDI + FGC</div></div>
+        <div style="color:var(--text2);font-size:18px">→</div>
+        <div style="background:var(--bg3);border:1px solid var(--border);padding:10px 14px;border-radius:8px;text-align:center"><div style="color:var(--text2);font-size:10px;margin-bottom:3px">INFLAÇÃO</div><div style="font-weight:700;color:var(--purple2)">Fundos Reag</div><div style="font-size:10px;color:var(--text2)">ativos podres (BESC, etc)</div></div>
+        <div style="color:var(--text2);font-size:18px">→</div>
+        <div style="background:var(--bg3);border:1px solid var(--border);padding:10px 14px;border-radius:8px;text-align:center"><div style="color:var(--text2);font-size:10px;margin-bottom:3px">FACHADA</div><div style="font-weight:700;color:var(--red2)">Tirreno</div><div style="font-size:10px;color:var(--text2)">créditos fictícios R$6bi</div></div>
+        <div style="color:var(--text2);font-size:18px">→</div>
+        <div style="background:var(--bg3);border:1px solid var(--border);padding:10px 14px;border-radius:8px;text-align:center"><div style="color:var(--text2);font-size:10px;margin-bottom:3px">VENDA</div><div style="font-weight:700;color:var(--orange)">BRB (banco público)</div><div style="font-size:10px;color:var(--text2)">R$12,7bi à vista</div></div>
+        <div style="color:var(--text2);font-size:18px">→</div>
+        <div style="background:var(--bg3);border:1px solid var(--border);padding:10px 14px;border-radius:8px;text-align:center"><div style="color:var(--text2);font-size:10px;margin-bottom:3px">SALVAMENTO</div><div style="font-weight:700;color:var(--gold)">Fusão tentada</div><div style="font-size:10px;color:var(--text2)">diluir fraude em banco público</div></div>
+        <div style="color:var(--text2);font-size:18px">✗</div>
+        <div style="background:rgba(232,85,85,0.1);border:1px solid var(--red-dim);padding:10px 14px;border-radius:8px;text-align:center"><div style="color:var(--text2);font-size:10px;margin-bottom:3px">RESULTADO</div><div style="font-weight:700;color:var(--red2)">Liquidação</div><div style="font-size:10px;color:var(--text2)">R$51bi rombo / FGC</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ESTRATÉGIAS ══ -->
+<div id="sec-estrategias" class="sec">
+  <div class="pgrid" style="margin-top:16px">
+    <div class="panel">
+      <div class="ptitle"><span class="dot dr"></span>Estratégias do Esquema Fraudulento</div>
+      <div class="scard"><div class="sheader"><span class="sico">🎯</span><span class="sname">FGC como instrumento de captação</span></div><div class="sdesc">Em vez de tratar o FGC como seguro de última instância, o Master o usou como diferencial de marketing — anunciando CDBs de alto rendimento com "garantia do FGC" para atrair pequenos investidores. Estratégia deliberada para captar bilhões com o risco socializado para o sistema.</div><div class="sresult" style="color:var(--red2)">✗ Resultado: FGC terá que desembolsar R$41bi — 1/3 de seu patrimônio total</div></div>
+      <div class="scard"><div class="sheader"><span class="sico">🏦</span><span class="sname">Captura do banco público (BRB)</span></div><div class="sdesc">Operação cuidadosa para transformar o BRB num instrumento de liquidez: venda de créditos fictícios em troca de dinheiro real, e depois tentativa de fusão para diluir o passivo na instituição pública. Paralelamente, aquisição de 25% do capital do BRB via laranjas para ter influência no conselho.</div><div class="sresult" style="color:var(--red2)">✗ Barrada pelo BC em set/2025. BRB ficou com R$5bi de prejuízo estimado</div></div>
+      <div class="scard"><div class="sheader"><span class="sico">📜</span><span class="sname">Lobby parlamentar e PEC do FGC</span></div><div class="sdesc">Com aliados no Congresso (Ciro Nogueira, PP-PI), tentou quadruplicar o limite do FGC — o que tornaria o esquema mais sustentável por mais tempo. Se a PEC passasse, o FGC cobriria mais investidores, reduzindo a pressão por resgates em massa que expunham a insolvência.</div><div class="sresult" style="color:var(--teal)">✗ Rejeitada na CCJ em ago/2024. Resistência dos grandes bancos tradicionais</div></div>
+      <div class="scard"><div class="sheader"><span class="sico">🕵</span><span class="sname">Vazamento do inquérito sigiloso</span></div><div class="sdesc">Vorcaro teria obtido acesso ilegal aos sistemas da PF para conhecer o inquérito sigiloso com antecedência, usado o site "O Bastidor" para esquentar a informação publicamente e depois apresentar petição diretamente ao juiz — tentando neutralizar a investigação antes da operação.</div><div class="sresult" style="color:var(--red2)">✗ Backfired: tornou-se fundamento para obstrução de justiça e nova prisão em mar/2026</div></div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot dg"></span>Estratégias das Autoridades</div>
+      <div class="scard"><div class="sheader"><span class="sico">🔍</span><span class="sname">Inquérito sigiloso proativo (2024)</span></div><div class="sdesc">PF abriu inquérito sigiloso na 10ª Vara Federal de Brasília em 2024, antes da liquidação. Monitorou as operações preventivamente, permitindo que a Operação Compliance Zero fosse deflagrada com mandados cumpridos em 5 estados simultaneamente.</div><div class="sresult" style="color:var(--gr2)">✓ Prisão de Vorcaro no aeroporto evitou fuga para Dubai</div></div>
+      <div class="scard"><div class="sheader"><span class="sico">🏛</span><span class="sname">BC — liquidação imediata e coordenada</span></div><div class="sdesc">BC (sob Galípolo) coordenou liquidação simultânea com a operação da PF. Em vez de tentar um regime de recuperação que desse tempo ao banco, agiu de forma cirúrgica: liquidação extrajudicial imediata, preservando a credibilidade do regulador.</div><div class="sresult" style="color:var(--gr2)">✓ Evitou corrida bancária e contágio sistêmico imediato. Custo: R$41bi ao FGC</div></div>
+      <div class="scard"><div class="sheader"><span class="sico">📊</span><span class="sname">Análise de CPFs pelo BC</span></div><div class="sdesc">Em vez de aceitar a documentação do Master sobre os créditos da Tirreno, o BC fez o básico: verificar os CPFs dos supostos tomadores de crédito. Resultado: 130 contratos analisados aleatoriamente — zero com lastro real. Prova direta de fabricação de créditos.</div><div class="sresult" style="color:var(--gr2)">✓ Fundamento central para a liquidação e a operação da PF</div></div>
+      <div class="scard"><div class="sheader"><span class="sico">⚠</span><span class="sname">Resistência do BC à acareação de Toffoli</span></div><div class="sdesc">Quando Toffoli tentou incluir o diretor de fiscalização do BC numa acareação com investigados, o BC resistiu institucionalmente — Febraban e associações financeiras publicaram nota de apoio ao BC. Toffoli recuou. Importante precedente de independência regulatória frente à pressão judicial.</div><div class="sresult" style="color:var(--gr2)">✓ Regulador preservou independência operacional — modelo para futuras situações semelhantes</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CONTROVÉRSIAS ══ -->
+<div id="sec-controversias" class="sec">
+  <div class="pgrid" style="margin-top:16px">
+    <div class="panel">
+      <div class="ptitle"><span class="dot dp"></span>Controvérsias Centrais</div>
+      <div class="dual" style="border-color:var(--red)"><div class="dual-label" style="color:var(--red2)">1. Toffoli — acareação com o regulador e vínculos com Vorcaro</div><div class="dual-a">Toffoli avocou o caso, mandou todo material ficar no STF, e tentou incluir o diretor de fiscalização do BC — regulador imparcial — numa acareação com investigados criminais. Depois, a PF encontrou mensagens e vínculo financeiro (resort Tayayá) entre ele e Vorcaro. Saiu da relatoria. STF confirma validade dos seus atos. Precedente preocupante de interferência judicial em processo criminal ativo.</div></div>
+      <div class="dual" style="border-color:var(--orange)"><div class="dual-label" style="color:var(--orange)">2. BC demorou anos para agir após denúncias formais</div><div class="dual-a">Timerman denunciou ao BC em 2023. O BC identificou problemas de liquidez em meados de 2025. A gestão Campos Neto aprovou a entrada de Vorcaro em 2018 e recebeu Vorcaro "dezenas de vezes". O "ovo da serpente" foi chocado com a omissão do regulador entre 2023 e o final de 2024.</div></div>
+      <div class="dual" style="border-color:var(--gold)"><div class="dual-label" style="color:var(--gold)">3. Agências de rating que atestavam saúde do Master</div><div class="dual-a">Agências de classificação de risco continuaram atestando a solidez financeira do banco enquanto o BC já identificava problemas internamente. Levanta questões sobre o modelo de remuneração de agências (pagas pelos emissores), conflito de interesses estrutural no mercado de capitais brasileiro.</div></div>
+      <div class="dual" style="border-color:var(--purple)"><div class="dual-label" style="color:var(--purple2)">4. Fusão aprovada pelo CADE e CLDF enquanto BC investigava</div><div class="dual-a">Em junho de 2025, o CADE aprovou a fusão BRB-Master. A CLDF aprovou em urgência em uma semana com 14×7 votos. Enquanto isso, o BC já tinha identificado R$12,7bi em créditos sem lastro. Falha de comunicação interinstitucional ou captura regulatória?</div></div>
+      <div class="dual" style="border-color:var(--blue)"><div class="dual-label" style="color:var(--blue2)">5. Fundos de pensão públicos não serão ressarcidos</div><div class="dual-a">18 fundos de pensão estaduais e municipais que investiram R$1,86bi em letras financeiras e fundos do Master não têm cobertura do FGC. São servidores públicos estaduais e municipais — portanto, a perda recai sobre trabalhadores que investiram por meio de gestores fiduciários, não especuladores.</div></div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot dgo"></span>Comparativo: Castelo de Areia × Lava Jato × Master</div>
+      <div style="font-size:12px;color:var(--text2);margin-bottom:10px">Três operações icônicas — cada uma com uma falha institucional dominante:</div>
+      <div class="scard"><div class="sheader"><span class="sico">🏰</span><span class="sname">Castelo de Areia (2009)</span></div><div class="sdesc" style="color:var(--text2)">Falha: vício de origem na investigação preliminar (denúncia anônima sem inquérito formal). Resultado: operação anulada por inteiro pelo STJ. Lição: procedimento impecável é condição, não detalhe.</div></div>
+      <div class="scard"><div class="sheader"><span class="sico">🚿</span><span class="sname">Lava Jato (2014–2021)</span></div><div class="sdesc" style="color:var(--text2)">Falha: conluio juiz-acusação, espetacularização e uso político. Resultado: anulações em cascata pelo STF. Lição: imparcialidade judicial e separação entre investigação e mídia são inegociáveis.</div></div>
+      <div class="scard"><div class="sheader"><span class="sico">🏦</span><span class="sname">Compliance Zero (2025–)</span></div><div class="sdesc" style="color:var(--text2)">Falha (parcial): omissão regulatória de anos, captura do judiciário (Toffoli), FGC como ferramenta de socialização de risco privado. Resultado: maior rombo bancário do Brasil. Lição: regulação preventiva e independência institucional valem mais que intervenção tardia.</div></div>
+      <div style="font-size:11px;font-family:var(--mono);color:var(--text2);padding:8px 10px;background:var(--bg3);border-radius:6px;margin-top:8px">
+        ⚡ Os três casos têm em comum: a fraude real existia — e o sistema de controle falhou em algum ponto antes, durante ou depois de tentar combatê-la.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ RISCOS ══ -->
+<div id="sec-riscos" class="sec">
+  <div class="pgrid" style="margin-top:16px">
+    <div class="panel">
+      <div class="ptitle"><span class="dot dr"></span>Mapa de Riscos</div>
+      <div class="ritem rcrit"><div class="rheader"><span class="rname" style="color:var(--red2)">Efeito Cascata — BRB à beira da insolvência</span><span class="rbadge bcrit">CRÍTICO</span></div><div class="rdesc">Rombo estimado de R$5bi no BRB supera seu patrimônio líquido de R$4,9bi. O banco descumpriu limites prudenciais do BC por 2 meses. Risco de intervenção no banco público do DF ainda não descartado formalmente. Impacto sobre servidores, aposentados e contratos do GDF.</div></div>
+      <div class="ritem rcrit"><div class="rheader"><span class="rname" style="color:var(--red2)">FGC sob pressão extrema — R$41bi de exposição</span><span class="rbadge bcrit">CRÍTICO</span></div><div class="rdesc">O FGC terá que desembolsar R$41bi — 1/3 de seu patrimônio total. Se outros bancos falissem enquanto o FGC está em reconstrução, o sistema de garantia estaria incapacitado. Risco de fragilidade sistêmica por depleção do fundo de proteção.</div></div>
+      <div class="ritem rcrit"><div class="rheader"><span class="rname" style="color:var(--red2)">Interferência Judicial em Investigação Ativa</span><span class="rbadge bcrit">CRÍTICO</span></div><div class="rdesc">A tentativa de Toffoli de convocar o regulador para acareação com investigados, e os vínculos financeiros descobertos pela PF, representam o risco mais grave: instrumentalização do STF para proteger investigados — repetindo o padrão da Castelo de Areia com muito mais complexidade e escala.</div></div>
+      <div class="ritem ralto"><div class="rheader"><span class="rname" style="color:var(--orange)">Fundos de pensão públicos sem cobertura</span><span class="rbadge balto">ALTO</span></div><div class="rdesc">R$1,86bi de fundos de pensão estaduais e municipais não serão cobertos pelo FGC. Servidores públicos de estados e municípios perderão parcela de suas aposentadorias. Risco de ações judiciais em cascata contra gestores fiduciários e reguladores.</div></div>
+      <div class="ritem ralto"><div class="rheader"><span class="rname" style="color:var(--orange)">Omissão do Regulador — responsabilização do BC</span><span class="rbadge balto">ALTO</span></div><div class="rdesc">Denúncias formais chegaram ao BC em 2023. O BC identificou problemas no meio de 2025. Dois anos de omissão durante os quais o esquema continuou captando bilhões. Risco de processos de responsabilização da autarquia e de seus dirigentes por negligência regulatória.</div></div>
+      <div class="ritem rmedio"><div class="rheader"><span class="rname" style="color:var(--gold)">Agências de rating — responsabilidade civil</span><span class="rbadge bmedio">MÉDIO</span></div><div class="rdesc">Agências atestavam solidez do Master enquanto o BC já investigava. Investidores institucionais que se basearam nos ratings podem entrar com ações de indenização contra as agências por falha no dever fiduciário de análise independente.</div></div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot do"></span>Alertas Críticos</div>
+      <div class="alitem"><div class="alic">🔴</div><div><div class="altitle" style="color:var(--red2)">Alerta: CDB com rendimento anormal É sinal de alarme, não oportunidade</div><div class="aldesc">Rendimentos de 150–177% do CDI sinalizavam insolvência latente — não "banco esperto". Investidores, gestores e reguladores que interpretaram isso como competitividade ignoraram o princípio básico: nenhuma operação legítima sustenta rendimentos sistematicamente acima do mercado por anos sem ativos correspondentes.</div></div></div>
+      <div class="alitem"><div class="alic">🔴</div><div><div class="altitle" style="color:var(--red2)">Alerta: FGC não pode ser estratégia de negócios</div><div class="aldesc">O Master usou o FGC como ferramenta de marketing e escudo competitivo — socializando o risco de uma operação privada para o sistema financeiro coletivo. A regulação precisa proibir que bancos divulguem o FGC como diferencial enquanto praticam captação acima de limites prudenciais.</div></div></div>
+      <div class="alitem"><div class="alic">🟠</div><div><div class="altitle" style="color:var(--orange)">Alerta: Fusão com banco público requer análise coordenada BACEN-CADE-CVM</div><div class="aldesc">CADE aprovou a fusão BRB-Master em junho/2025 sem acesso pleno às informações que o BC já tinha sobre os créditos sem lastro. Os órgãos reguladores não falaram entre si. Fusões envolvendo bancos públicos exigem protocolo obrigatório de compartilhamento de informações entre todos os reguladores.</div></div></div>
+      <div class="alitem"><div class="alic">🟠</div><div><div class="altitle" style="color:var(--orange)">Alerta: Denúncia formal ao BC deve gerar investigação obrigatória e com prazo</div><div class="aldesc">A denúncia de Timerman em 2023 foi protocolar. O BC levou 2 anos para agir. Não existe prazo legal para o BC investigar denúncias formais. O caso Master demonstra a necessidade de um procedimento formal de resposta a denúncias de irregularidades sistêmicas com prazos e accountability.</div></div></div>
+      <div class="alitem"><div class="alic">🟡</div><div><div class="altitle" style="color:var(--gold)">Alerta: Ministro relator não pode interferir em fase investigativa da PF</div><div class="aldesc">Toffoli determinou que material da PF ficasse no STF, tentou convocar o regulador para acareação e avocou o caso antes de qualquer denúncia formal ao tribunal. A linha entre supervisão judicial e interferência na investigação precisa ser constitucionalmente delineada.</div></div></div>
+      <div class="alitem"><div class="alic">🟡</div><div><div class="altitle" style="color:var(--gold)">Alerta: Aprovação regulatória do controlador deve incluir histórico reputacional</div><div class="aldesc">O BC aprovou Vorcaro como controlador em 2018 seguindo o rito formal — sem que houvesse alertas suficientes. O caso mostra que a análise de "fit and proper" de controladores de instituições financeiras precisa ser mais rigorosa, incluindo redes de relacionamento, histórico de empresas associadas e padrões de negócio.</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ APRENDIZADOS ══ -->
+<div id="sec-aprendizados" class="sec">
+  <div class="panel" style="margin-top:16px">
+    <div class="ptitle"><span class="dot dg"></span>Aprendizados Fundamentais</div>
+    <div class="litem"><div class="lnum">01</div><div><div class="ltitle">Rendimento Anormal É Insolvência Anunciada</div><div class="ldesc">Um banco que sistematicamente oferece 150–177% do CDI não é mais eficiente que os concorrentes — está prometendo o que não pode cumprir. O mercado, os gestores e o regulador deveriam tratar rendimentos persistentemente acima da média como sinal de alarme estrutural, não como diferencial competitivo. A assimetria de rendimento é, via de regra, assimetria de risco oculto — não de talento financeiro.</div></div></div>
+    <div class="litem"><div class="lnum">02</div><div><div class="ltitle">Fundos de Garantia São Seguros de Última Instância — Não Ferramentas de Marketing</div><div class="ldesc">O Master transformou o FGC de rede de segurança sistêmica em instrumento de captação agressiva. O custo: R$41bi socializados para o sistema financeiro coletivo. A regulação precisa proibir expressamente que instituições financeiras usem o FGC como argumento de venda enquanto praticam captação acima de limites prudenciais ou têm rating de crédito comprometido.</div></div></div>
+    <div class="litem"><div class="lnum">03</div><div><div class="ltitle">Regulação Preventiva É Incomparavelmente Mais Barata Que Intervenção Tardia</div><div class="ldesc">A denúncia chegou ao BC em 2023. A liquidação foi em 2025. Em dois anos, o banco captou dezenas de bilhões a mais, o esquema se expandiu, e o rombo final foi muito maior do que teria sido se o BC tivesse agido ao receber a denúncia. Um protocolo com prazo obrigatório de investigação para denúncias formais teria custado infinitamente menos que os R$51bi de rombo final.</div></div></div>
+    <div class="litem"><div class="lnum">04</div><div><div class="ltitle">Fusão com Banco Público Exige Coordenação Obrigatória Entre Reguladores</div><div class="ldesc">O CADE aprovou a fusão BRB-Master sem o quadro completo que o BC já tinha sobre os créditos inexistentes. Os dois órgãos atuaram em silos. Qualquer fusão envolvendo banco público deve ter um protocolo de compartilhamento obrigatório e tempestivo de informações entre BACEN, CADE, CVM, AGU e TCU antes de qualquer aprovação parcial — não depois.</div></div></div>
+    <div class="litem"><div class="lnum">05</div><div><div class="ltitle">A Independência do Regulador É Precondição do Sistema Financeiro</div><div class="ldesc">Quando Toffoli tentou incluir o diretor de fiscalização do BC numa acareação com investigados criminais, estava erosionando a fronteira entre regulação e jurisdição. O BC resistiu — e o sistema financeiro precisava que ele resistisse. A independência operacional do regulador não é um privilégio burocrático: é a garantia de que a fiscalização existe fora da esfera de influência dos próprios fiscalizados.</div></div></div>
+    <div class="litem"><div class="lnum">06</div><div><div class="ltitle">Verificação Básica de Lastro Deveria Ser Exigência Contratual e Regulatória</div><div class="ldesc">O BC provou a fraude com uma metodologia simples: verificar os CPFs dos supostos tomadores de crédito. 130 contratos analisados aleatoriamente — zero com lastro real. Qualquer instituição que compra carteiras de crédito deveria ter due diligence contratual e auditoria regulatória obrigatória de amostras de contratos antes e durante a vigência do negócio — não apenas quando há suspeita formal.</div></div></div>
+    <div class="litem"><div class="lnum">07</div><div><div class="ltitle">Aprovação de Controladores Precisa Ir Além do Rito Formal</div><div class="ldesc">Vorcaro foi aprovado pelo BC em 2018 seguindo o "rito das normas vigentes" — mas o resultado foi o maior rombo bancário do Brasil. A análise de idoneidade de controladores de instituições financeiras precisa ser substantiva, não apenas formal: incluir padrão de negócio das empresas associadas, rede de relacionamentos, histórico de empresas anteriores e modelo de crescimento proposto. O cumprimento burocrático de formulários não é análise de risco.</div></div></div>
+    <div class="litem"><div class="lnum">08</div><div><div class="ltitle">Investigações Financeiras de Grande Escala Exigem Protocolo Claro de Acesso Judicial</div><div class="ldesc">O caso criou tensão entre STF, BC e PF sobre custódia de provas, acesso ao material apreendido e convocação do regulador. Essa confusão processual — que Toffoli explorou — mostra que investigações financeiras de grande escala precisam de um protocolo constitucional claro: quem tem acesso ao que, em que momento, com qual supervisão e com quais limites para o relator judicial interferir em fase investigativa da PF e do BC.</div></div></div>
+  </div>
+</div>
+
+<!-- ══ REFERÊNCIAS ══ -->
+<div id="sec-refs" class="sec">
+  <div class="panel" style="margin-top:16px">
+    <div class="ptitle"><span class="dot dg"></span>Referências Documentais & Fontes</div>
+    <div style="font-size:11px;color:var(--text2);font-family:var(--mono);margin-bottom:12px;padding:6px 10px;background:var(--bg3);border-radius:5px">⚡ Caso em curso — fontes atualizadas até mar/2026. Dados e valores podem ser revistos.</div>
+    <div class="refitem"><div class="refnum">[01]</div><div><div class="reftitle">Banco Master: ascensão e queda — R$51bi — NDMais</div><div class="refsrc">ndmais.com.br • História completa, modelo de negócios, Tirreno, Reag e CDBs sem lastro</div></div></div>
+    <div class="refitem"><div class="refnum">[02]</div><div><div class="reftitle">Fraude no Banco Master — maior escândalo financeiro — RIC</div><div class="refsrc">ric.com.br • Síntese das irregularidades, liquidação e prendimentos de Vorcaro</div></div></div>
+    <div class="refitem"><div class="refnum">[03]</div><div><div class="reftitle">Banco Master: como a fraude capturou a República — Brasil de Fato / Agência Pública</div><div class="refsrc">brasildefato.com.br / apublica.org • Reconstrução completa: Tirreno, BRB, Ibaneis, Toffoli, "estratégia de guerra"</div></div></div>
+    <div class="refitem"><div class="refnum">[04]</div><div><div class="reftitle">Justiça bloqueia ações do BRB ligadas ao Banco Master — Agência Brasil</div><div class="refsrc">agenciabrasil.ebc.com.br • Laranjas, Tanure, Mansur, 25% do BRB — fev/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[05]</div><div><div class="reftitle">Banco Master, BRB e bilhões: quem a PF vai ouvir — Seu Dinheiro</div><div class="refsrc">seudinheiro.com • 8 investigados ouvidos, nova fase da operação, depoimentos por videoconferência — jan/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[06]</div><div><div class="reftitle">Entenda as liquidações do Banco Master e da Reag — Agência Brasil</div><div class="refsrc">agenciabrasil.ebc.com.br • FGC R$41bi, fundos de pensão sem cobertura, Toffoli e acareação — jan/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[07]</div><div><div class="reftitle">BRB descarta intervenção e estuda vender ativos do Master — Agência Brasil</div><div class="refsrc">agenciabrasil.ebc.com.br • Limites prudenciais descumpridos, auditoria independente, rombo R$5bi — jan/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[08]</div><div><div class="reftitle">BRB, rombo bilionário e Ibaneis Rocha — Agência Pública</div><div class="refsrc">apublica.org • Governador do DF, CPI, pedido de impeachment, depoimento de Vorcaro — fev/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[09]</div><div><div class="reftitle">Da origem à crise: linha do tempo completa do caso Master — Times Brasil / CNBC</div><div class="refsrc">timesbrasil.com.br • Cronologia detalhada 2021–2026, Toffoli, acareação, André Mendonça</div></div></div>
+    <div class="refitem"><div class="refnum">[10]</div><div><div class="reftitle">Vorcaro preso: relembre a crise do Banco Master — CNN Brasil</div><div class="refsrc">cnnbrasil.com.br • 3ª fase da Compliance Zero, prisão mar/2026, 8 instituições liquidadas, R$51,8bi ao FGC</div></div></div>
+    <div class="refitem"><div class="refnum">[11]</div><div><div class="reftitle">"Ovo da serpente": gestão Campos Neto e a fraude do Master — Vermelho</div><div class="refsrc">vermelho.org.br • Visitas de Vorcaro ao BC, LAI, aprovação de 2018, ação de Galípolo</div></div></div>
+    <div class="refitem"><div class="refnum">[12]</div><div><div class="reftitle">PF ouve 8 envolvidos na compra frustrada do Master — Gazeta do Povo</div><div class="refsrc">gazetadopovo.com.br • Depoimentos, Tirreno, André Maia, R$12bi, crimes imputados — jan/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[13]</div><div><div class="reftitle">BRB diz que recuperou R$10bi das carteiras com Master — Agência Brasil</div><div class="refsrc">agenciabrasil.ebc.com.br • Nota oficial do BRB, substituição de carteiras, R$80bi em ativos</div></div></div>
+    <div class="refitem"><div class="refnum">[14]</div><div><div class="reftitle">Lei 7.492/1986 — Crimes contra o Sistema Financeiro Nacional</div><div class="refsrc">planalto.gov.br • Base legal dos crimes de gestão fraudulenta e indução ao erro investigados</div></div></div>
+    <div class="refitem"><div class="refnum">[15]</div><div><div class="reftitle">BRB cancela assembleia e busca investidores após rombo — Brasil 247</div><div class="refsrc">brasil247.com • Situação atual do BRB, plano de recomposição de capital, relatoria Mendonça — mar/2026</div></div></div>
+  </div>
+</div>
+
+</main>
+
+<div class="related-wrap">
+  <div class="related-title">Artefatos Relacionados</div>
+  <div class="related-grid">
+    <a href="/rede-recorrente-1999-2026.html" class="related-card">
+      <div class="related-card-cat">Investigação</div>
+      <div class="related-card-title">Rede Recorrente: Atores por Função 1999–2026</div>
+      <div class="related-card-arrow">ACESSAR ARTEFATO ➔</div>
+    </a>
+    <a href="/operacao_lava_jato.html" class="related-card">
+      <div class="related-card-cat">Operações</div>
+      <div class="related-card-title">Operação Lava Jato: Mapa Mental Analítico</div>
+      <div class="related-card-arrow">ACESSAR ARTEFATO ➔</div>
+    </a>
+    <a href="/pcc-cv-ameaca-nacional.html" class="related-card">
+      <div class="related-card-cat">Inteligência</div>
+      <div class="related-card-title">PCC & CV: Dashboard de Inteligência 2026</div>
+      <div class="related-card-arrow">ACESSAR ARTEFATO ➔</div>
+    </a>
+    <a href="/republica-capturada.html" class="related-card">
+      <div class="related-card-cat">Estrutura</div>
+      <div class="related-card-title">República Capturada: O Brasil do Lawfare</div>
+      <div class="related-card-arrow">ACESSAR ARTEFATO ➔</div>
+    </a>
+  </div>
+</div>
+
+<script>
+function show(id){
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('act'));
+  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('act'));
+  document.getElementById('sec-'+id).classList.add('act');
+  event.target.classList.add('act');
+}
+setTimeout(()=>{const f=document.getElementById('gfill');if(f)f.style.width='99%'},400);
+</script>
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

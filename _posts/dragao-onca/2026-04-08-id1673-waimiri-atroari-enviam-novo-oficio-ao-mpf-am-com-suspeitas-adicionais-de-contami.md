@@ -37,7 +37,7 @@ Reforça o conjunto probatório do inquérito civil em curso.
 
 Entradas conectadas nesta série:
 
-- [Entrada 1670](/timeline/entries/1670)
+- [Entrada 1670](/posts/id1670-povo-waimiri-atroari-denuncia-contaminacao-do-rio-alalau-por-mercurio-e-rejeitos/)
 
 ---
 

@@ -54,7 +54,7 @@ P10 (infraestrutura de serviço compartilhada) aplicado ao processo legislativo:
 
 Entradas conectadas nesta série:
 
-- [Entrada 1703](/timeline/entries/1703)
+- [Entrada 1703](/posts/id1703-aprovado-requerimento-de-urgencia-para-o-pl-27802024-mudando-o-regime-de-tramita/)
 
 ---
 

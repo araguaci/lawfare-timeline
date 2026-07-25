@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Dragão e a Onça — Capítulo Brasil (Federal) | República Sequestrada</title>
+<meta name="description" content="Linha do tempo federal Brasil-China 1993-2026: Lula I/II, Dilma, Bolsonaro, Lula III, e o caso Doria-Sinovac. Pano de fundo diplomático da série sobre captura mineral estadual.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --bg:#080c10;--bg2:#0f151b;--bg3:#161e26;
+  --dragon:#d4342c;--dragon2:#ff6b5f;--dragon-dim:#5c1512;
+  --jaguar:#e8b23d;--jaguar2:#ffd270;--jaguar-dim:#6b4e12;
+  --gr:#3ecb6f;--gr2:#78f5a8;
+  --blue:#4a9eff;--blue2:#7ab8ff;
+  --purple:#b07aff;--purple2:#d0a8ff;
+  --teal:#2ecfb0;--teal2:#60ffd8;
+  --border:rgba(255,255,255,0.07);
+  --text:#e8edf0;--text2:#8a99a8;
+  --font:'Syne',sans-serif;--mono:'JetBrains Mono',monospace;
+}
+body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh}
+header{padding:26px 30px 18px;border-bottom:2px solid var(--dragon-dim);background:linear-gradient(135deg,#080c10 0%,#1a0f0d 55%,#080c10 100%);position:relative;overflow:hidden}
+header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 25% 50%,rgba(212,52,44,0.08) 0%,transparent 55%),radial-gradient(ellipse at 75% 50%,rgba(232,178,61,0.07) 0%,transparent 55%)}
+.hbadge{display:inline-flex;align-items:center;gap:6px;background:rgba(212,52,44,0.1);border:1px solid var(--dragon-dim);border-radius:4px;padding:4px 12px;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--dragon2);text-transform:uppercase;margin-bottom:12px}
+.live-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(232,178,61,0.15);border:1px solid var(--jaguar-dim);border-radius:4px;padding:3px 12px;font-size:12px;font-weight:700;letter-spacing:1.5px;color:var(--jaguar2);text-transform:uppercase;margin-left:8px}
+.live-dot{width:6px;height:6px;border-radius:50%;background:var(--jaguar2);animation:pulse 1.2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+header h1{font-size:26px;font-weight:800;letter-spacing:-0.5px;color:#fff;line-height:1.15}
+header h1 span{color:var(--dragon2)}
+header h1 em{font-style:normal;color:var(--jaguar2)}
+.hmeta{display:flex;gap:18px;margin-top:12px;flex-wrap:wrap}
+.hm{font-size:12px;color:var(--text2);font-family:var(--mono)}
+.hm b{color:var(--jaguar2)}
+nav{
+  display:flex;gap:4px;padding:12px 26px;
+  background:rgba(10,14,18,0.96);
+  border-bottom:2px solid var(--dragon-dim);
+  box-shadow:0 6px 18px rgba(0,0,0,0.35);
+  overflow-x:auto;flex-wrap:wrap;
+  position:sticky;top:0;z-index:200;
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+}
+.nb{padding:7px 14px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--text2);font-family:var(--font);font-size:12px;font-weight:600;cursor:pointer;transition:all .2s;white-space:nowrap;text-decoration:none;display:inline-block}
+.nb:hover{border-color:var(--dragon-dim);color:var(--dragon2)}
+.nb.act{background:linear-gradient(90deg,rgba(212,52,44,0.18),rgba(232,178,61,0.12));border-color:var(--dragon);color:#fff;font-weight:800;box-shadow:0 0 0 1px var(--dragon) inset}
+main{padding:0 20px 32px;max-width:1200px;margin:0 auto}
+.sec{padding:34px 0 12px;border-bottom:1px solid var(--border);scroll-margin-top:70px}
+.sec:last-of-type{border-bottom:none}
+.sec-title{font-size:20px;font-weight:800;color:#fff;margin-bottom:4px;display:flex;align-items:center;gap:12px}
+.sec-title .flag{font-size:15px}
+.sec-sub{font-size:12px;color:var(--text2);font-family:var(--mono);margin-bottom:16px}
+.kgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:16px 0 12px}
+@media(max-width:900px){.kgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.kgrid{grid-template-columns:1fr}}
+.kcard{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:14px 15px;position:relative;overflow:hidden}
+.kcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.kd::before{background:linear-gradient(90deg,var(--dragon),var(--dragon2))}
+.kj::before{background:linear-gradient(90deg,var(--jaguar),var(--jaguar2))}
+.kb::before{background:linear-gradient(90deg,var(--blue),var(--blue2))}
+.kp::before{background:linear-gradient(90deg,var(--purple),var(--purple2))}
+.klabel{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);margin-bottom:5px}
+.kval{font-size:20px;font-weight:800;line-height:1.1}
+.ksub{font-size:11px;color:var(--text2);margin-top:3px;font-family:var(--mono)}
+.kd .kval{color:var(--dragon2)}.kj .kval{color:var(--jaguar2)}.kb .kval{color:var(--blue2)}.kp .kval{color:var(--purple2)}
+.pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:12px}
+@media(max-width:768px){.pgrid{grid-template-columns:1fr}}
+.panel{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:12px}
+.ptitle{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.dd{background:var(--dragon)}.dj{background:var(--jaguar)}.db{background:var(--blue)}.dp{background:var(--purple)}
+.tag{display:inline-block;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:600;margin:2px 2px 2px 0;font-family:var(--mono)}
+.tg{background:rgba(62,203,111,0.1);color:#78f5a8;border:1px solid rgba(62,203,111,0.2)}
+.tgo{background:rgba(232,178,61,0.12);color:var(--jaguar2);border:1px solid rgba(232,178,61,0.25)}
+.tr{background:rgba(212,52,44,0.12);color:var(--dragon2);border:1px solid rgba(212,52,44,0.25)}
+.tb{background:rgba(74,158,255,0.1);color:var(--blue2);border:1px solid rgba(74,158,255,0.2)}
+.tp{background:rgba(176,122,255,0.1);color:var(--purple2);border:1px solid rgba(176,122,255,0.2)}
+p.body{font-size:14px;color:var(--text2);line-height:1.75;margin-bottom:12px}
+.tli{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--border)}
+.tli:last-child{border-bottom:none}
+.tld{font-family:var(--mono);font-size:11px;color:var(--jaguar2);min-width:100px;font-weight:600;padding-top:2px;flex-shrink:0}
+.tltitle{font-size:14px;font-weight:700;margin-bottom:3px}
+.tldesc{font-size:12px;color:var(--text2);line-height:1.6}
+.gap-notice{padding:12px 14px;border-radius:8px;background:rgba(138,153,168,0.08);border:1px dashed var(--text2);font-size:12px;color:var(--text2);font-style:italic;margin:12px 0}
+.ritem{padding:11px 14px;border-radius:8px;margin-bottom:8px;border-left:3px solid;background:var(--bg3)}
+.rcrit{border-color:var(--dragon)}.ralto{border-color:var(--jaguar)}.rmedio{border-color:var(--blue)}
+.rheader{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;flex-wrap:wrap;gap:6px}
+.rname{font-size:14px;font-weight:700}
+.rbadge{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;border-radius:3px;font-family:var(--mono)}
+.bcrit{background:rgba(212,52,44,0.2);color:var(--dragon2)}.balto{background:rgba(232,178,61,0.2);color:var(--jaguar2)}.bmedio{background:rgba(74,158,255,0.15);color:var(--blue2)}
+.rdesc{font-size:12px;color:var(--text2);line-height:1.6}
+.correcao{padding:14px 16px;border-radius:8px;background:rgba(176,122,255,0.08);border:1px solid rgba(176,122,255,0.25);margin:12px 0}
+.correcao-label{font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--purple2);margin-bottom:6px}
+.refitem{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);align-items:flex-start}
+.refitem:last-child{border-bottom:none}
+.refnum{font-family:var(--mono);font-size:11px;color:var(--text2);min-width:30px;margin-top:2px}
+.reftitle{font-size:14px;font-weight:600;margin-bottom:2px}
+.reftitle a{color:var(--jaguar2);text-decoration:none;border-bottom:1px dotted var(--jaguar-dim)}
+.reftitle a:hover{color:#fff;border-bottom-color:var(--jaguar2)}
+.refsrc{font-size:11px;color:var(--text2);font-family:var(--mono)}
+footer{padding:22px 26px 40px;border-top:2px solid var(--dragon-dim);text-align:center}
+.footcc0{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;color:var(--text2);letter-spacing:1px}
+.footcc0 b{color:var(--jaguar2)}
+.footnote{font-size:11px;color:var(--text2);margin-top:8px;font-family:var(--mono)}
+#gotop{
+  position:fixed;right:20px;bottom:20px;z-index:300;
+  width:46px;height:46px;border-radius:50%;
+  background:linear-gradient(135deg,var(--dragon),var(--jaguar));
+  color:#0b0f0a;border:none;font-size:18px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,0.45);
+  opacity:0;pointer-events:none;transform:translateY(12px);
+  transition:opacity .25s,transform .25s;
+}
+#gotop.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+#gotop:hover{filter:brightness(1.1)}
+.series-nav{margin:0 auto;max-width:1200px;padding:28px 20px 0;border-top:2px solid var(--border)}
+.series-nav-title{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--text2);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.series-nav-title::before{content:'';flex:1;height:1px;background:var(--border)}
+.series-nav-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:14px}
+@media(max-width:720px){.series-nav-grid{grid-template-columns:1fr}}
+.series-card{display:block;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 16px;text-decoration:none;color:inherit;transition:border-color .2s,transform .15s;position:relative;overflow:hidden}
+.series-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--dragon),var(--jaguar))}
+.series-card:hover{border-color:rgba(232,178,61,.45);transform:translateY(-1px)}
+.series-card.is-current{border-color:var(--jaguar);box-shadow:0 0 0 1px rgba(232,178,61,.35) inset;pointer-events:none;opacity:.92}
+.series-card-id{font-family:var(--mono);font-size:10px;color:var(--jaguar2);letter-spacing:1px;margin-bottom:4px}
+.series-card-chapter{font-size:14px;font-weight:800;color:#fff;margin-bottom:4px;line-height:1.2}
+.series-card-desc{font-size:12px;color:var(--text2);line-height:1.55}
+.series-hub{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--jaguar2);text-decoration:none;font-family:var(--mono);margin-bottom:8px}
+.series-hub:hover{color:#fff}
+</style>
+</head>
+<body>
+<header>
+  <div style="display:flex;align-items:center;gap:0;flex-wrap:wrap">
+    <div class="hbadge">Série · Capítulo Federal</div>
+    <div class="live-badge"><span class="live-dot"></span>1993 — 2026</div>
+  </div>
+  <h1>O <span>Dragão</span> e a <em>Onça</em> — Capítulo <em>Brasil</em></h1>
+  <div class="hmeta">
+    <span class="hm"><b>Origem:</b> Parceria Estratégica 1993</span>
+    <span class="hm"><b>Governos cobertos:</b> Lula I/II · Dilma · Temer · Bolsonaro · Lula III</span>
+    <span class="hm"><b>Caso-âncora estadual:</b> Doria-Sinovac (2019-2020)</span>
+    <span class="hm"><b>2025:</b> Brasil = maior destino global de IED chinês</span>
+  </div>
+</header>
+
+<nav id="mainnav">
+  <a class="nb" href="#visao" data-target="visao">Visão Geral</a>
+  <a class="nb" href="#fundacao" data-target="fundacao">Fundação (pré-2003)</a>
+  <a class="nb" href="#lula1" data-target="lula1">Lula I/II (2003-2010)</a>
+  <a class="nb" href="#dilma" data-target="dilma">Dilma (2011-2016)</a>
+  <a class="nb" href="#temer" data-target="temer">Temer — Lacuna</a>
+  <a class="nb" href="#bolsonaro" data-target="bolsonaro">Bolsonaro (2019-2022)</a>
+  <a class="nb" href="#doria" data-target="doria">Caso Doria-Sinovac</a>
+  <a class="nb" href="#lula3" data-target="lula3">Lula III (2023-2026)</a>
+  <a class="nb" href="#riscos" data-target="riscos">Riscos Estruturais</a>
+  <a class="nb" href="#refs" data-target="refs">Referências</a>
+</nav>
+
+<main>
+
+<section id="visao" class="sec">
+  <div class="sec-title"><span class="flag">📍</span>Visão Geral</div>
+  <div class="sec-sub">O pano de fundo federal que viabiliza os capítulos estaduais da série</div>
+  <div class="kgrid">
+    <div class="kcard kd"><div class="klabel">Parceria Estratégica</div><div class="kval">1993</div><div class="ksub">primeira desse tipo entre países em desenvolvimento</div></div>
+    <div class="kcard kj"><div class="klabel">China vira #1 parceiro comercial</div><div class="kval">2009</div><div class="ksub">posição mantida por 17 anos consecutivos</div></div>
+    <div class="kcard kb"><div class="klabel">IED chinês no Brasil (2025)</div><div class="kval">US$6,1bi</div><div class="ksub">52 projetos — maior destino global</div></div>
+    <div class="kcard kp"><div class="klabel">Comércio bilateral (2025)</div><div class="kval">US$171bi</div><div class="ksub">alta de 8,2% a.a.</div></div>
+  </div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dd"></span>Por que começar em 1993, não em 2003</div>
+    <p class="body">A relação estrutural Brasil-China <b style="color:var(--jaguar2)">não é fenômeno de um único governo ou partido</b>. A Parceria Estratégica já existia desde 1993 (governo Itamar Franco); Lula em 2003 intensifica e prioriza retoricamente algo que já estava em curso. Dilma manteve a trajetória com o Plano Decenal 2012-2021. O próprio Bolsonaro — eleito com discurso hostil à China — manteve na prática a abertura ao 5G da Huawei via seu vice-presidente, mesmo com atritos internos protagonizados pelo próprio filho. Lula III retoma e aprofunda em 2023-2026. <b>Tratar isso como escolha de um presidente específico é um erro estrutural</b> — a série documenta um padrão que atravessa toda a linha político-partidária brasileira.</p>
+  </div>
+</section>
+
+<section id="fundacao" class="sec">
+  <div class="sec-title"><span class="flag">🌱</span>Fundação (pré-2003)</div>
+  <div class="sec-sub">O que antecede a narrativa comum de que tudo começou com Lula</div>
+  <div class="panel">
+    <div class="tli"><div class="tld">1993</div><div><div class="tltitle">Parceria Estratégica Brasil-China</div><div class="tldesc">Primeira parceria estratégica formal entre dois países em desenvolvimento — base jurídica de toda a relação subsequente. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">1999</div><div><div class="tltitle">Lançamento do satélite CBERS-1</div><div class="tldesc">Cooperação espacial sino-brasileira já em curso antes de qualquer governo Lula. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">2000</div><div><div class="tltitle">China vira maior parceiro comercial do Brasil na Ásia</div><div class="tldesc"><span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">2001</div><div><div class="tltitle">Visita do presidente Jiang Zemin ao Brasil</div><div class="tldesc"><span class="tag tg">ev-confirmed</span></div></div></div>
+  </div>
+</section>
+
+<section id="lula1" class="sec">
+  <div class="sec-title"><span class="flag">🐉</span>Lula I/II (2003-2010)</div>
+  <div class="sec-sub">A intensificação retórica e institucional — main track IDs 1640-1645</div>
+  <div class="panel">
+    <div class="tli"><div class="tld">1º jan 2003</div><div><div class="tltitle">Discurso de posse cita China, Japão e Índia como prioridade</div><div class="tldesc"><span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">30 abr 2003</div><div><div class="tltitle">"Brasil-China: Um Salto Necessário" (BNDES)</div><div class="tldesc">Marco retórico da guinada asiática. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">maio 2004</div><div><div class="tltitle">Lula visita a China; criação da COSBAN</div><div class="tldesc">Mecanismo institucional permanente, ainda ativo em 2026. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">12 nov 2004</div><div><div class="tltitle">Hu Jintao visita o Brasil</div><div class="tldesc">Lula reafirma parceria estratégica publicamente. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">2009</div><div><div class="tltitle">China ultrapassa os EUA como #1 parceiro comercial</div><div class="tldesc">Posição mantida ininterruptamente até 2026. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">15 abr 2010</div><div><div class="tltitle">Plano de Ação Conjunta 2010-2014</div><div class="tldesc">Base para o Plano Decenal assinado sob Dilma. <span class="tag tg">ev-confirmed</span></div></div></div>
+  </div>
+</section>
+
+<section id="dilma" class="sec">
+  <div class="sec-title"><span class="flag">📊</span>Dilma Rousseff (2011-2016)</div>
+  <div class="sec-sub">Continuidade institucional com volatilidade real de investimento — main track ID 1646</div>
+  <div class="panel">
+    <div class="tli"><div class="tld">10-15 abr 2011</div><div><div class="tltitle">Primeira viagem de Dilma à China</div><div class="tldesc">Pequim, Sanya, Boao, Xi'an. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">21 jun 2012</div><div><div class="tltitle">Plano Decenal de Cooperação 2012-2021 assinado no Rio</div><div class="tldesc">Com Wen Jiabao; institucionaliza cooperação de longo prazo. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">2010-2014</div><div><div class="tltitle">Investimento chinês cai de US$13,1bi para US$1,7bi</div><div class="tldesc">Segundo o CEBC — desmente narrativa de crescimento linear constante; a relação teve ciclos reais. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">2014</div><div><div class="tltitle">Xi Jinping visita o Brasil</div><div class="tldesc"><span class="tag tg">ev-confirmed</span></div></div></div>
+  </div>
+</section>
+
+<section id="temer" class="sec">
+  <div class="sec-title"><span class="flag">🔍</span>Temer (2016-2018) — Lacuna Investigativa</div>
+  <div class="sec-sub">Registrado como ausência de dado, não como ausência de relação</div>
+  <div class="gap-notice">Não localizei, nesta rodada de verificação, eventos-âncora específicos e verificáveis para o período Temer. Isso <b>não significa</b> ausência de relação Brasil-China — apenas que não há, até o momento, cobertura factual suficiente no corpus para esse intervalo. Marcado como <span class="tag tp">lacuna_investigativa</span> para preenchimento em rodada futura.</div>
+</section>
+
+<section id="bolsonaro" class="sec">
+  <div class="sec-title"><span class="flag">⚡</span>Bolsonaro (2019-2022) — A Fratura Interna</div>
+  <div class="sec-sub">Pragmatismo comercial vs. hostilidade retórica dentro do mesmo governo — main track IDs 1647, 1651</div>
+  <div class="panel">
+    <div class="tli"><div class="tld">2018 (campanha)</div><div><div class="tltitle">Retórica anti-China na campanha presidencial</div><div class="tldesc">Discurso de campanha crítico à presença econômica chinesa no Brasil. <span class="tag tgo">ev-alleged — citação primária não localizada nesta rodada, tratar como conhecimento de fundo</span></div></div></div>
+    <div class="tli"><div class="tld">15 jul 2019</div><div><div class="tltitle">Mourão declara que Brasil não restringirá a Huawei no 5G</div><div class="tldesc">Desafia pressão direta do governo Trump — reversão pragmática já no primeiro semestre de governo. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">24 nov 2020</div><div><div class="tltitle">Eduardo Bolsonaro acusa Huawei de espionagem; embaixada chinesa ameaça "consequências negativas"</div><div class="tldesc">Segundo atrito diplomático causado pelo mesmo parlamentar. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">2021</div><div><div class="tltitle">Leilão do 5G segue adiado</div><div class="tldesc">Decisão sobre Huawei permanece "sob fogo cruzado" entre lobby do agronegócio/mineração (pró-China) e ala ideológica do governo (anti-China). <span class="tag tg">ev-confirmed</span></div></div></div>
+  </div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dp"></span>Leitura estrutural</div>
+    <p class="body">O governo Bolsonaro não teve uma política externa coerente para a China — teve <b>duas políticas simultâneas em atrito permanente</b>: pragmatismo do Executivo/setores econômicos e hostilidade retórica da ala ideológica/família. Nenhuma das duas prevaleceu de forma definitiva. Esse é o mesmo desenho estrutural de "dois vetores que se co-legitimam sem se encontrar" que o corpus documenta no eixo judicial — aqui aplicado ao eixo diplomático.</p>
+  </div>
+</section>
+
+<section id="doria" class="sec">
+  <div class="sec-title"><span class="flag">💉</span>Caso Doria-Sinovac (2019-2020)</div>
+  <div class="sec-sub">O primeiro caso documentado de governador negociando paralelamente ao governo federal — main track IDs 1648-1650</div>
+  <div class="correcao">
+    <div class="correcao-label">⚠ Correção Factual Obrigatória (protocolo anti-confirmation-bias)</div>
+    <p class="body" style="margin-bottom:0">A alegação popular de que Doria já tinha "vacina/lotes contra covid" fechados em 2019 é <b>desinformação verificada</b> por fact-checkers (Aos Fatos, jun/2020). O que existiu em agosto/2019 foi um acordo genérico de transferência tecnológica em saúde durante a "Missão China" de SP — sem menção a vacina, sem menção a coronavírus, porque o vírus ainda não era um problema de saúde pública conhecido. A Sinovac confirmou por nota que o acordo específico sobre a vacina só foi firmado em <b>junho de 2020</b>, com a pandemia já declarada pela OMS (março/2020).</p>
+  </div>
+  <div class="panel">
+    <div class="tli"><div class="tld">9 ago 2019</div><div><div class="tltitle">Doria inaugura escritório comercial de SP em Xangai</div><div class="tldesc">"Missão China"; acordos genéricos de cooperação, incluindo transferência tecnológica Butantan-Sinovac (não específica a vacina/covid). <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">11 jun 2020</div><div><div class="tltitle">Butantan e Sinovac assinam Acordo de Colaboração de Desenvolvimento Clínico</div><div class="tldesc">Fase 3 da CoronaVac; documento de 21 páginas sem menção a preço/quantidade; Butantan banca custos sem receber propriedade intelectual. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">jun 2020</div><div><div class="tltitle">TCE-SP abre averiguação preventiva sobre os contratos</div><div class="tldesc"><span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">set 2020</div><div><div class="tltitle">Doria assina compra antecipada de 46 milhões de doses (~US$427mi) com recursos do estado</div><div class="tldesc">Este é o episódio real de "lote imenso comprado" — mas seis meses após a pandemia já estar em curso, não antes dela. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">out-nov 2020</div><div><div class="tltitle">Conflito público Doria x Bolsonaro; morte de voluntário; Anvisa suspende e retoma testes</div><div class="tldesc"><span class="tag tg">ev-confirmed</span></div></div></div>
+  </div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dd"></span>Por que este caso abre a série de governadores</div>
+    <p class="body">Doria-Sinovac é o <b>primeiro caso estrutural</b> documentado no corpus de um governador negociando diretamente com um ator estratégico chinês, com orçamento próprio, à frente e em atrito com o governo federal. O ativo em jogo era biotecnologia/saúde pública, não minério — mas o mecanismo é idêntico ao que reaparece depois em Goiás (Caiado, terras raras) e no Pará (Barbalho, minério de ferro/bauxita): <b>captura de agenda estratégica nacional por ator subnacional, operando em paralelo, sem coordenação federal plena.</b></p>
+  </div>
+</section>
+
+<section id="lula3" class="sec">
+  <div class="sec-title"><span class="flag">🐆</span>Lula III (2023-2026)</div>
+  <div class="sec-sub">O aprofundamento máximo e o pano de fundo para os capítulos estaduais — main track IDs 1652-1653</div>
+  <div class="panel">
+    <div class="tli"><div class="tld">nov 2024</div><div><div class="tltitle">Xi Jinping visita Brasília; relação elevada a "Comunidade de Futuro Compartilhado"</div><div class="tldesc">Terceiro encontro Lula-Xi desde 2023; ~30 atos assinados. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">13 maio 2025</div><div><div class="tltitle">36 acordos assinados em Pequim, incluindo Plano de Mineração Sustentável 2025-2026</div><div class="tldesc">MME + Comissão Nacional de Desenvolvimento e Reforma da China; foco em minério de ferro verde, nióbio, lítio, níquel; swap de moedas locais entre bancos centrais. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">2025 (ano)</div><div><div class="tltitle">Brasil vira maior destino global de IED chinês</div><div class="tldesc">US$6,1bi em 52 projetos, alta de 45% a.a. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">2025-2026</div><div><div class="tltitle">Divergência estadual: Goiás pivota para EUA/Japão em terras raras</div><div class="tldesc">Enquanto o governo federal aprofunda laços com a China, o então governador Caiado (GO) negocia paralelamente com JOGMEC e USA Rare Earth — ver capítulo Goiás da série. <span class="tag tg">ev-confirmed</span></div></div></div>
+  </div>
+</section>
+
+<section id="riscos" class="sec">
+  <div class="sec-title"><span class="flag">⚠️</span>Riscos Estruturais</div>
+  <div class="sec-sub">O que o pano de fundo federal já embute como falha de desenho</div>
+  <div class="panel">
+    <div class="ritem rcrit"><div class="rheader"><div class="rname">MoU de mineração crítica sem salvaguardas sociais desde a origem</div><div class="rbadge bcrit">ev-confirmed</div></div><div class="rdesc">O Observatório da Mineração documentou que o acordo-guarda-chuva Brasil-China sobre minerais críticos não inclui cláusulas de consulta a comunidades tradicionais nem salvaguardas sociais — a exclusão não é falha de execução estadual, é desenho federal desde a origem.</div></div>
+    <div class="ritem ralto"><div class="rheader"><div class="rname">Fratura estrutural sem síntese (Bolsonaro)</div><div class="rbadge balto">ev-inference</div></div><div class="rdesc">Pragmatismo comercial e hostilidade retórica coexistiram sem que nenhum dos dois vetores prevalecesse de forma definitiva — padrão análogo ao "nenhum vetor chega ao beneficiário final" da tese central do corpus, aqui no eixo diplomático.</div></div>
+    <div class="ritem rmedio"><div class="rheader"><div class="rname">Precedente Doria replicado em escala maior (Goiás, Pará)</div><div class="rbadge bmedio">ev-inference</div></div><div class="rdesc">O mecanismo de governador negociando paralelamente ao governo federal com ator estratégico estrangeiro, testado em 2019-2020 no eixo sanitário, reaparece em 2023-2026 no eixo mineral — com escala financeira muito maior e menor transparência sobre incentivos fiscais envolvidos.</div></div>
+  </div>
+</section>
+
+<section id="refs" class="sec">
+  <div class="sec-title"><span class="flag">📚</span>Referências</div>
+  <div class="sec-sub">Fontes consultadas, com link direto</div>
+  <div class="panel">
+    <div class="refitem"><div class="refnum">[01]</div><div><div class="reftitle"><a href="https://opeb.org/2024/09/26/50-anos-das-relacoes-brasil-e-china-politica-externa-midia-e-ideologia/" target="_blank" rel="noopener">50 anos das Relações Brasil e China: Política Externa, Mídia e Ideologia</a></div><div class="refsrc">OPEB • 26/09/2024</div></div></div>
+    <div class="refitem"><div class="refnum">[02]</div><div><div class="reftitle"><a href="https://relacoesexteriores.com.br/relacao-bilateral-brasil-china/" target="_blank" rel="noopener">A relação bilateral Brasil-China no governo Lula - 2003 a 2011</a></div><div class="refsrc">Relações Exteriores • 09/09/2025</div></div></div>
+    <div class="refitem"><div class="refnum">[03]</div><div><div class="reftitle"><a href="http://www.scielo.br/j/rbpi/a/6Lv7CZfX9pcRdrHXffvH93H/?lang=pt" target="_blank" rel="noopener">Brasil-China: trinta anos de uma parceria estratégica</a></div><div class="refsrc">Revista Brasileira de Política Internacional (SciELO)</div></div></div>
+    <div class="refitem"><div class="refnum">[04]</div><div><div class="reftitle"><a href="http://antigo.itamaraty.gov.br/pt-BR/ficha-pais/4926-republica-popular-da-china" target="_blank" rel="noopener">República Popular da China — cronologia oficial</a></div><div class="refsrc">Itamaraty</div></div></div>
+    <div class="refitem"><div class="refnum">[05]</div><div><div class="reftitle"><a href="https://www.gov.br/mre/pt-br/centrais-de-conteudo/publicacoes/discursos-artigos-e-entrevistas/presidente-da-republica/presidente-da-republica-federativa-do-brasil-discursos/luiz-inacio-lula-da-silva-2003-2011/declaracao-a-imprensa-apos-encontro-com-o-presidente-da-china-hu-jintao-palacio-do-planalto-12-de-novembro-de-2004" target="_blank" rel="noopener">Declaração à imprensa após encontro com Hu Jintao (12/11/2004)</a></div><div class="refsrc">Ministério das Relações Exteriores</div></div></div>
+    <div class="refitem"><div class="refnum">[06]</div><div><div class="reftitle"><a href="http://www.itamaraty.gov.br/pt-BR/notas-a-imprensa/3074-atos-assinados-por-ocasiao-da-reuniao-da-presidenta-da-republica-dilma-rousseff-com-o-primeiro-ministro-da-republica-popular-da-china-wen-jiabao-rio-de-janeiro-21-de-junho-de-2012" target="_blank" rel="noopener">Atos assinados na reunião Dilma-Wen Jiabao (21/06/2012)</a></div><div class="refsrc">Itamaraty</div></div></div>
+    <div class="refitem"><div class="refnum">[07]</div><div><div class="reftitle"><a href="https://www.cartainternacional.abri.org.br/Carta/article/download/1078/806/4915" target="_blank" rel="noopener">As relações Brasil-China nos governos Lula e Dilma: burguesia interna e subordinação conflitiva</a></div><div class="refsrc">Carta Internacional (ABRI)</div></div></div>
+    <div class="refitem"><div class="refnum">[08]</div><div><div class="reftitle"><a href="https://www.aljazeera.com/ajimpact/defying-brazil-huawei-move-5g-network-190715210649133.html" target="_blank" rel="noopener">Defying US, Brazil allows Huawei to move forward with 5G network</a></div><div class="refsrc">Al Jazeera • 15/07/2019</div></div></div>
+    <div class="refitem"><div class="refnum">[09]</div><div><div class="reftitle"><a href="https://www.infomoney.com.br/politica/china-reage-a-acusacao-de-eduardo-bolsonaro-sobre-5g-e-diz-que-brasil-podera-arcar-com-consequencias/" target="_blank" rel="noopener">China reage à acusação de Eduardo Bolsonaro sobre 5G</a></div><div class="refsrc">InfoMoney • 25/11/2020</div></div></div>
+    <div class="refitem"><div class="refnum">[10]</div><div><div class="reftitle"><a href="https://diplomatique.org.br/tapas-e-beijos-as-relacoes-brasil-china-no-governo-bolsonaro/" target="_blank" rel="noopener">Tapas e beijos: as relações Brasil-China no governo Bolsonaro</a></div><div class="refsrc">Diplomatique Brasil • 17/09/2020</div></div></div>
+    <div class="refitem"><div class="refnum">[11]</div><div><div class="reftitle"><a href="https://www.aosfatos.org/noticias/e-falso-que-doria-fechou-contrato-com-chineses-em-2019-para-vacina-contra-o-novo-coronavirus/" target="_blank" rel="noopener">É falso que Doria fechou contrato com chineses em 2019 para vacina contra o novo coronavírus</a></div><div class="refsrc">Aos Fatos • 18/06/2024</div></div></div>
+    <div class="refitem"><div class="refnum">[12]</div><div><div class="reftitle"><a href="https://www.sec.gov/Archives/edgar/data/1084201/000110465920072241/tm2022386d1_ex99-1.htm" target="_blank" rel="noopener">Sinovac and Butantan Join Efforts to Advance Clinical Development (Form 6-K)</a></div><div class="refsrc">SEC — Sinovac Biotech • 11/06/2020</div></div></div>
+    <div class="refitem"><div class="refnum">[13]</div><div><div class="reftitle"><a href="https://www.cnnbrasil.com.br/saude/2020/11/11/acordo-define-que-butantan-custeia-coronavac-mas-sem-direito-intelectual" target="_blank" rel="noopener">Acordo define que Butantan custeia Coronavac, mas sem propriedade intelectual</a></div><div class="refsrc">CNN Brasil • 11/11/2020</div></div></div>
+    <div class="refitem"><div class="refnum">[14]</div><div><div class="reftitle"><a href="https://www.diariodecuyo.com.ar/noticias/brasil-comprara-46-millones-de-dosis-de-la-vacuna-china-coronavac-281355.html" target="_blank" rel="noopener">Brasil comprará 46 millones de dosis de la vacuna china CoronaVac</a></div><div class="refsrc">Diario de Cuyo • 21/10/2020</div></div></div>
+    <div class="refitem"><div class="refnum">[15]</div><div><div class="reftitle"><a href="https://www.folhape.com.br/noticias/tce-questiona-contratos-de-doria-com-empresa-que-vai-testar-vacina-de/144352/" target="_blank" rel="noopener">TCE questiona contratos de Doria com empresa que vai testar vacina de Covid-19 em SP</a></div><div class="refsrc">Folha PE • 18/06/2020</div></div></div>
+    <div class="refitem"><div class="refnum">[16]</div><div><div class="reftitle"><a href="https://www.poder360.com.br/poder-china/governo-brasileiro-assina-36-acordos-com-a-china-leia-a-lista/" target="_blank" rel="noopener">Governo brasileiro assina 36 acordos com a China; leia a lista</a></div><div class="refsrc">Poder360 • 13/05/2025</div></div></div>
+    <div class="refitem"><div class="refnum">[17]</div><div><div class="reftitle"><a href="https://observatoriodamineracao.com.br/comunidades-tradicionais-e-salvaguardas-sociais-ficam-de-fora-do-acordo-entre-brasil-e-china-para-ampliar-exploracao-de-minerais-criticos/" target="_blank" rel="noopener">Comunidades tradicionais e salvaguardas sociais ficam de fora do acordo Brasil-China</a></div><div class="refsrc">Observatório da Mineração • 28/11/2024</div></div></div>
+    <div class="refitem"><div class="refnum">[18]</div><div><div class="reftitle"><a href="https://agenciagov.ebc.com.br/noticias/202505/plano-cooperacao-brasil-china-foruns-bilaterais-projetos-infraestrutura" target="_blank" rel="noopener">Plano de cooperação Brasil-China prevê fóruns bilaterais para infraestrutura</a></div><div class="refsrc">Agência Gov • 05/2025</div></div></div>
+    <div class="refitem"><div class="refnum">[19]</div><div><div class="reftitle"><a href="https://revistaforum.com.br/opiniao/cooperacao-brasil-china/" target="_blank" rel="noopener">Brasil e China: a ponte que falta construir</a></div><div class="refsrc">Revista Fórum • 18/07/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[20]</div><div><div class="reftitle"><a href="https://theconversation.com/parceria-economica-brasil-china-entra-em-nova-fase-286632" target="_blank" rel="noopener">Parceria econômica Brasil-China entra em nova fase</a></div><div class="refsrc">The Conversation Brasil</div></div></div>
+  </div>
+</section>
+
+<section class="series-nav" id="serie">
+  <div class="series-nav-title">Artefatos da Série: O Dragão e a Onça</div>
+  <div class="series-nav-grid">
+    <a class="series-card" href="/o-dragao-e-a-onca-goias.html"><div class="series-card-id">T-228 · Capítulo inaugural</div><div class="series-card-chapter">🇧🇷 GO Goiás</div><div class="series-card-desc">Pivô China → EUA/Japão em terras raras</div></a><a class="series-card" href="/dragao-onca-brasil-federal.html"><div class="series-card-id">T-229 · Linha do tempo 1993–2026</div><div class="series-card-chapter">🇧🇷 BR Brasil (Federal)</div><div class="series-card-desc">Parceria estratégica e o caso Doria–Sinovac</div></a><a class="series-card" href="/dragao-onca-para.html"><div class="series-card-id">T-230 · Ferrovia CCCC + Vale</div><div class="series-card-chapter">🇧🇷 PA Pará</div><div class="series-card-desc">Corredor mineral e COP30 como vitrine</div></a><a class="series-card" href="/dragao-onca-amazonas.html"><div class="series-card-id">T-231 · Taboca / China Nonferrous</div><div class="series-card-chapter">🇧🇷 AM Amazonas</div><div class="series-card-desc">Contaminação Waimiri-Atroari e Zona Franca</div></a><a class="series-card" href="/dragao-onca-minas-gerais.html"><div class="series-card-id">T-232 · Vale do Lítio</div><div class="series-card-chapter">🇧🇷 MG Minas Gerais</div><div class="series-card-desc">Sigma Lithium e o contraste ocidental</div></a><a class="series-card" href="/dragao-onca-sintese.html"><div class="series-card-id">T-233 · Cross-estadual</div><div class="series-card-chapter">📊 Síntese Comparativa</div><div class="series-card-desc">Soberania na conta do governador</div></a><a class="series-card" href="/dragao-onca-braco-juridico.html"><div class="series-card-id">T-234 · Transversal · STF × Congresso</div><div class="series-card-chapter">⚖️ Braço Jurídico</div><div class="series-card-desc">Marco temporal, PL da Devastação e ADI 7919</div></a><a class="series-card" href="/dragao-onca-pl2780.html"><div class="series-card-id">T-235 · Elo legislativo central</div><div class="series-card-chapter">📜 PL 2.780/2024</div><div class="series-card-desc">Política Nacional de Minerais Críticos</div></a>
+  </div>
+  <a class="series-hub" href="/odragaoeaonca">← Índice da série · O Dragão e a Onça</a>
+</section>
+
+</main>
+
+<footer>
+  <div class="footcc0">⚖ <b>CC0 1.0</b> — Domínio Público · lawfare-timeline · série "O Dragão e a Onça"</div>
+  <div class="footnote">Capítulo federal — pano de fundo dos capítulos estaduais (Goiás publicado; Pará, Amazonas e Minas Gerais em produção)</div>
+</footer>
+
+<button id="gotop" title="Voltar ao topo" aria-label="Voltar ao topo">↑</button>
+
+<script>
+const links = document.querySelectorAll('.nb');
+const sections = document.querySelectorAll('main .sec');
+const map = {};
+links.forEach(l=>{map[l.dataset.target]=l});
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      links.forEach(l=>l.classList.remove('act'));
+      const id = entry.target.id;
+      if(map[id]) map[id].classList.add('act');
+    }
+  });
+},{rootMargin:'-30% 0px -60% 0px',threshold:0});
+sections.forEach(s=>observer.observe(s));
+const gotop = document.getElementById('gotop');
+window.addEventListener('scroll',()=>{
+  gotop.classList.toggle('show', window.scrollY > 400);
+});
+gotop.addEventListener('click',()=>{
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arquitetura Sistêmica P01–P12 — Método e Ancoragem | lawfare-timeline</title>
+<meta name="description" content="Rodada 3: 12 padrões P01–P12 ancorados em fonte primária, nota de simetria obrigatória, buscas negativas documentadas e lacunas em aberto. Metodologia v2.2 · CC0.">
+<link rel="canonical" href="https://gosurf.site/arquitetura-sistemica-p01-p12">
+<meta name="keywords" content="arquitetura sistêmica, P01-P12, lawfare-timeline, metodologia v2.2, ancoragem verificada, padrões sistêmicos, rodada 3, CC0">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://gosurf.site/arquitetura-sistemica-p01-p12">
+<meta property="og:title" content="Arquitetura Sistêmica P01–P12 — Método e Ancoragem">
+<meta property="og:description" content="Rodada 3: P10 autônomo, P12-B instanciado, P04b medido (~14×), buscas negativas P02/P09. 7 consolidados — lacunas reportadas em aberto.">
+<meta property="og:image" content="https://gosurf.site/og-arquitetura-sistemica-p01-p12.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Arquitetura Sistêmica P01–P12 — Método e Ancoragem · lawfare-timeline">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="gosurf.site">
+<meta property="article:tag" content="lawfare">
+<meta property="article:tag" content="arquitetura sistêmica">
+<meta property="article:tag" content="P01-P12">
+<meta property="article:tag" content="metodologia v2.2">
+<meta property="article:tag" content="diagnóstico institucional">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Arquitetura Sistêmica P01–P12 — Rodada 3">
+<meta name="twitter:description" content="12 padrões testados contra o dado. P10 autônomo · P12-B instanciado · escala financeira P05/P08 documentada.">
+<meta name="twitter:image" content="https://gosurf.site/og-arquitetura-sistemica-p01-p12.png">
+<meta name="twitter:image:alt" content="Hero — Arquitetura Sistêmica P01–P12, matriz de padrões lawfare-timeline">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Syne:wght@400;600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #080c10; --bg1: #0d1218; --bg2: #121820; --bg3: #1a2230;
+  --border: rgba(255,255,255,0.06); --border2: rgba(255,255,255,0.12);
+  --fg: #e8ecf0; --fg2: #8a9ab0; --fg3: #4a5a6a;
+  --red: #e84040; --red2: rgba(232,64,64,0.15);
+  --amber: #e8a020; --amber2: rgba(232,160,32,0.15);
+  --blue: #3090e8; --blue2: rgba(48,144,232,0.12);
+  --green: #28c880; --green2: rgba(40,200,128,0.12);
+  --purple: #a060e8; --purple2: rgba(160,96,232,0.12);
+  --cyan: #20d0e8; --cyan2: rgba(32,208,232,0.12);
+  --pink: #e84090; --pink2: rgba(232,64,144,0.12);
+  --gray2: rgba(255,255,255,0.05);
+  --font-mono: 'IBM Plex Mono', monospace;
+  --font-display: 'Syne', sans-serif;
+  --font-serif: 'Crimson Pro', serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-mono);font-size:13px;line-height:1.65;-webkit-font-smoothing:antialiased;scroll-behavior:smooth;}
+::-webkit-scrollbar{width:4px;height:4px;} ::-webkit-scrollbar-track{background:var(--bg1);} ::-webkit-scrollbar-thumb{background:var(--bg3);border-radius:2px;}
+.container{max-width:1240px;margin:0 auto;padding:0 20px 100px;}
+@media(min-width:768px){.container{padding:0 40px 100px;}}
+
+.header{background:var(--bg1);border-bottom:1px solid var(--border2);padding:28px 20px;position:relative;overflow:hidden;}
+@media(min-width:768px){.header{padding:36px 40px 28px;}}
+.header::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--red),var(--amber),var(--purple),var(--cyan),var(--red));background-size:200% 100%;animation:scan 5s linear infinite;}
+@keyframes scan{to{background-position:200% 0;}}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:3px 9px;border-radius:3px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-family:var(--font-mono);}
+.badge-red{background:var(--red2);color:var(--red);border:1px solid rgba(232,64,64,.3);}
+.badge-amber{background:var(--amber2);color:var(--amber);border:1px solid rgba(232,160,32,.3);}
+.badge-blue{background:var(--blue2);color:var(--blue);border:1px solid rgba(48,144,232,.3);}
+.badge-purple{background:var(--purple2);color:var(--purple);border:1px solid rgba(160,96,232,.3);}
+.badge-green{background:var(--green2);color:var(--green);border:1px solid rgba(40,200,128,.3);}
+.badge-cyan{background:var(--cyan2);color:var(--cyan);border:1px solid rgba(32,208,232,.3);}
+.badge-pink{background:var(--pink2);color:var(--pink);border:1px solid rgba(232,64,144,.3);}
+.badge-gray{background:var(--gray2);color:var(--fg3);border:1px solid var(--border);}
+.meta-badges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px;}
+.hero-title{font-family:var(--font-display);font-size:clamp(24px,5vw,42px);font-weight:800;letter-spacing:-.02em;line-height:1.08;margin-bottom:10px;}
+.hero-title span{color:var(--red);}
+.subtitle{font-size:12.5px;color:var(--fg2);max-width:920px;line-height:1.8;margin-bottom:22px;}
+.thesis-box{background:var(--bg2);border-left:3px solid var(--purple);border-radius:0 6px 6px 0;padding:16px 20px;max-width:920px;font-family:var(--font-serif);font-size:15px;font-style:italic;color:var(--fg);line-height:1.6;}
+
+.nav-tabs{display:flex;background:var(--bg1);border-bottom:1px solid var(--border);padding:0 20px;overflow-x:auto;scrollbar-width:none;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);}
+.nav-tabs::-webkit-scrollbar{display:none;}
+@media(min-width:768px){.nav-tabs{padding:0 40px;}}
+.nav-tab{padding:13px 12px;font-size:9.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--fg3);cursor:pointer;border:none;background:none;border-bottom:2px solid transparent;white-space:nowrap;transition:.15s;font-family:var(--font-mono);font-weight:700;}
+.nav-tab:hover{color:var(--fg2);}
+.nav-tab.active{color:var(--fg);border-bottom-color:var(--red);}
+
+.main{padding:28px 0;}
+.section-title{font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--fg3);margin-bottom:18px;padding-bottom:9px;border-bottom:1px solid var(--border);}
+.intro-block{max-width:920px;margin-bottom:36px;}
+.intro-block h2{font-family:var(--font-display);font-size:19px;margin-bottom:10px;}
+.intro-block p{font-size:12.5px;color:var(--fg2);line-height:1.85;margin-bottom:12px;}
+
+.pattern-card{background:var(--bg1);border:1px solid var(--border);border-radius:8px;margin-bottom:22px;overflow:hidden;scroll-margin-top:60px;}
+.p-head{padding:20px 22px;border-bottom:1px solid var(--border);display:flex;flex-wrap:wrap;gap:12px 16px;align-items:flex-start;justify-content:space-between;}
+.p-head-left{flex:1;min-width:260px;}
+.p-num{font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px;}
+.p-title{font-family:var(--font-display);font-size:19px;font-weight:700;margin-bottom:8px;}
+.p-def{font-size:12.5px;color:var(--fg2);line-height:1.75;max-width:760px;}
+.p-status{display:flex;flex-direction:column;gap:6px;align-items:flex-end;min-width:170px;}
+.p-body{padding:20px 22px;}
+.subsection{margin-bottom:18px;}
+.subsection:last-child{margin-bottom:0;}
+.subsection-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--fg3);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+
+.anchor-item{background:var(--bg2);border-left:3px solid var(--blue);border-radius:0 5px 5px 0;padding:12px 16px;margin-bottom:10px;}
+.anchor-item:last-child{margin-bottom:0;}
+.anchor-item.ev-confirmed{border-left-color:var(--green);}
+.anchor-item.ev-contested{border-left-color:var(--amber);}
+.anchor-item.ev-alleged{border-left-color:var(--red);}
+.anchor-item.ev-inference{border-left-color:var(--purple);}
+.anchor-ref{font-size:10.5px;color:var(--fg3);font-weight:600;margin-bottom:4px;letter-spacing:.02em;}
+.anchor-text{font-size:12.5px;color:var(--fg);line-height:1.7;}
+.anchor-tags{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap;}
+.tag{font-size:9px;padding:2px 7px;border-radius:3px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;}
+.tag-confirmed{background:var(--green2);color:var(--green);}
+.tag-contested{background:var(--amber2);color:var(--amber);}
+.tag-alleged{background:var(--red2);color:var(--red);}
+.tag-inference{background:var(--purple2);color:var(--purple);}
+
+.instance-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:10px;}
+.instance-chip{background:var(--bg2);border:1px solid var(--border);border-radius:5px;padding:10px 13px;font-size:11.5px;color:var(--fg2);}
+.instance-chip strong{color:var(--fg);display:block;margin-bottom:3px;font-size:12px;}
+
+.sym-box{background:rgba(48,144,232,.06);border:1px solid rgba(48,144,232,.25);border-radius:6px;padding:14px 18px;}
+.sym-box .subsection-label{color:var(--blue);}
+.sym-box p{font-size:12px;color:var(--fg2);line-height:1.75;}
+
+.lacuna-box{background:rgba(232,160,32,.06);border:1px solid rgba(232,160,32,.25);border-radius:6px;padding:14px 18px;}
+.lacuna-box .subsection-label{color:var(--amber);}
+.lacuna-box p{font-size:12px;color:var(--fg2);line-height:1.75;}
+
+.subpattern-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:12px;margin-top:14px;}
+.subpattern{background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:14px 16px;}
+.subpattern-title{font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--fg);margin-bottom:6px;}
+.subpattern p{font-size:11.5px;color:var(--fg2);line-height:1.7;}
+
+.matrix-note{background:var(--bg1);border:1px solid var(--border2);border-radius:8px;padding:22px;margin-top:30px;}
+.matrix-note h3{font-family:var(--font-display);font-size:15px;margin-bottom:10px;}
+.matrix-note p{font-size:12px;color:var(--fg2);line-height:1.8;margin-bottom:8px;}
+
+footer.header{margin-top:60px;border-top:1px solid var(--border2);border-bottom:none;}
+.footer-flex{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-start;padding:20px 0;}
+.footer-desc{font-size:11px;color:var(--fg3);line-height:1.7;}
+
+/* Compartilhamento */
+.share-panel{background:var(--bg1);border:1px solid var(--border2);border-radius:8px;padding:20px 22px;margin-top:36px;}
+.share-panel h3{font-family:var(--font-display);font-size:14px;font-weight:700;color:var(--fg);margin-bottom:8px;display:flex;align-items:center;gap:8px;}
+.share-panel>p{font-size:11.5px;color:var(--fg2);line-height:1.75;margin-bottom:14px;}
+.share-panel code{font-size:10px;color:var(--cyan);background:var(--bg2);padding:2px 6px;border-radius:3px;}
+.share-strip{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:12px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:6px;}
+.share-strip-label{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg3);display:inline-flex;align-items:center;gap:6px;margin-right:4px;}
+.share-btn{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:6px;border:1px solid var(--border2);background:var(--bg3);color:var(--fg2);cursor:pointer;transition:color .15s,border-color .15s,background .15s;padding:0;text-decoration:none;}
+.share-btn:hover{border-color:var(--red);color:var(--red);background:var(--red2);}
+.share-btn:focus-visible{outline:2px solid var(--red);outline-offset:2px;}
+.share-btn.copied{border-color:var(--green);color:var(--green);}
+.share-ic{width:16px;height:16px;}
+
+/* Artefatos relacionados — 6 cards × 3 colunas */
+.related-block{margin-top:28px;padding-top:24px;border-top:1px solid var(--border);}
+.related-block-h{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--fg3);margin-bottom:8px;display:flex;align-items:center;gap:8px;}
+.related-sub{font-size:12px;color:var(--fg2);line-height:1.75;max-width:820px;margin-bottom:18px;}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:8px;}
+@media(max-width:900px){.related-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.related-grid{grid-template-columns:1fr;}}
+.related-wrap{display:flex;flex-direction:column;}
+.related-card{background:var(--bg1);border:1px solid var(--border);border-radius:8px 8px 0 0;padding:16px 18px;text-decoration:none;display:block;transition:border-color .15s,background .15s;flex:1;}
+.related-card:hover{border-color:var(--border2);background:var(--bg2);}
+.related-card .rc-lbl{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--purple);margin-bottom:6px;}
+.related-card .rc-title{font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--fg);margin-bottom:6px;line-height:1.3;}
+.related-card .rc-desc{font-size:11px;color:var(--fg2);line-height:1.6;}
+.related-card .rc-url{font-size:9.5px;color:var(--cyan);margin-top:8px;letter-spacing:.04em;}
+.related-wrap .share-strip{border-radius:0 0 8px 8px;border-top:none;margin-top:-1px;}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="meta-badges">
+    <span class="badge badge-red">Metodologia v2.2</span>
+    <span class="badge badge-purple">Arquitetura P01–P12</span>
+    <span class="badge badge-blue">CC0 1.0 · Domínio Público</span>
+    <span class="badge badge-gray">Atualizado 16/07/2026</span>
+  </div>
+  <div class="hero-title">Arquitetura Sistêmica <span>P01–P12</span></div>
+  <div class="subtitle">Dossiê de método: cada padrão da taxonomia analítica do lawfare-timeline ancorado em lei, decisão ou fato verificável em fonte primária, com nota de simetria obrigatória e status de maturidade investigativa. Este documento não busca confirmar a tese — busca testá-la contra o dado, e reporta onde a evidência ainda não sustenta o padrão com o rigor exigido.</div>
+  <div class="thesis-box">"O padrão que sobrevive à tentativa de mostrar que ele só serve a um lado é mais forte, não mais fraco, do que quando presumido."</div>
+</div>
+
+<div class="nav-tabs" id="navTabs">
+  <button class="nav-tab active" data-section="s-p01" onclick="scrollToSection('s-p01')">P01</button>
+  <button class="nav-tab" data-section="s-p02" onclick="scrollToSection('s-p02')">P02</button>
+  <button class="nav-tab" data-section="s-p03" onclick="scrollToSection('s-p03')">P03</button>
+  <button class="nav-tab" data-section="s-p04" onclick="scrollToSection('s-p04')">P04</button>
+  <button class="nav-tab" data-section="s-p05" onclick="scrollToSection('s-p05')">P05</button>
+  <button class="nav-tab" data-section="s-p06" onclick="scrollToSection('s-p06')">P06</button>
+  <button class="nav-tab" data-section="s-p07" onclick="scrollToSection('s-p07')">P07</button>
+  <button class="nav-tab" data-section="s-p08" onclick="scrollToSection('s-p08')">P08</button>
+  <button class="nav-tab" data-section="s-p09" onclick="scrollToSection('s-p09')">P09</button>
+  <button class="nav-tab" data-section="s-p10" onclick="scrollToSection('s-p10')">P10</button>
+  <button class="nav-tab" data-section="s-p11" onclick="scrollToSection('s-p11')">P11</button>
+  <button class="nav-tab" data-section="s-p12" onclick="scrollToSection('s-p12')">P12</button>
+</div>
+
+<div class="container">
+<div class="main">
+
+<div class="intro-block">
+  <h2>Como ler este dossiê</h2>
+  <p>Cada padrão traz: (1) definição operacional fixada na Metodologia v2.2; (2) ancoragem verificada — lei, decisão judicial/administrativa ou fato, classificado por nível evidencial e citado por dispositivo/número, nunca por texto literal; (3) instâncias já documentadas no corpus; (4) nota de simetria obrigatória, testando se o padrão se manifesta independente de espectro político; (5) status de maturidade analítica, incluindo onde a ancoragem ainda é insuficiente.</p>
+  <p>Padrões marcados <span class="tag tag-inference">EM CONSOLIDAÇÃO</span> não têm ancoragem factual/legal própria suficiente ainda — permanecem na taxonomia como hipótese estrutural até que essa ancoragem exista. Isso é reportado, não ocultado.</p>
+</div>
+
+<!-- P01 -->
+<div class="pattern-card" id="s-p01">
+  <div class="p-head">
+    <div class="p-head-left">
+      <div class="p-num" style="color:var(--red)">P01</div>
+      <div class="p-title">Anulação Processual Retroativa</div>
+      <div class="p-def">Invalidação de atos processuais anteriores por vício de forma (competência, suspeição, ilicitude de prova) — independente do mérito da acusação — reabrindo ou extinguindo processos anos após o fato.</div>
+    </div>
+    <div class="p-status">
+      <span class="badge badge-green">Consolidado</span>
+    </div>
+  </div>
+  <div class="p-body">
+    <div class="subsection">
+      <div class="subsection-label">Ancoragem verificada</div>
+      <div class="anchor-item ev-confirmed">
+        <div class="anchor-ref">STF · 2ª Turma · HC 164.493 · 23/03/2021 (3×2) · Confirmado em Plenário 23/06/2021</div>
+        <div class="anchor-text">Declarada a suspeição do ex-juiz Sergio Moro na ação penal do tríplex do Guarujá; anulados todos os atos processuais dele contra o réu, processo remetido à Justiça Federal de Brasília para reinício. Acórdão de 441 páginas redigido pelo Min. Gilmar Mendes.</div>
+        <div class="anchor-tags"><span class="tag tag-confirmed">ev-confirmed</span></div>
+      </div>
+      <div class="anchor-item ev-confirmed">
+        <div class="anchor-ref">STF · Decisão monocrática Min. Gilmar Mendes · 2024–2025</div>
+        <div class="anchor-text">Extensão dos efeitos da suspeição de Moro aos atos processuais contra José Dirceu no âmbito da mesma operação — mesmo fundamento processual aplicado a réu distinto, anos depois.</div>
+        <div class="anchor-tags"><span class="tag tag-confirmed">ev-confirmed</span></div>
+      </div>
+      <div class="anchor-item ev-confirmed">
+        <div class="anchor-ref">STF · 2ª Turma · maio/2023 (3×2)</div>
+        <div class="anchor-text">Anulação da condenação de Eduardo Cunha (15 anos, corrupção e lavagem) por incompetência de foro — Corte entendeu que o caso deveria ter tramitado na Justiça Eleitoral.</div>
+        <div class="anchor-tags"><span class="tag tag-confirmed">ev-confirmed</span></div>
+      </div>
+    </div>
+    <div class="subsection sym-box">
+      <div class="subsection-label">Nota de simetria</div>
+      <p>O mesmo mecanismo processual anulou condenações de Lula (2021), foi estendido a Dirceu (2024–25) e a Eduardo Cunha, então aliado de governos de sinal oposto (2023). A anulação retroativa por vício de forma não tem direção ideológica própria — é vetor disponível a qualquer réu cujo processo tenha vício de competência ou suspeição comprovável. O que varia é *quem consegue acioná-la*, não a mecânica.</p>
+    </div>
+    <div class="subsection">
+      <div class="subsection-label">Levantamento indicativo — anulações retroativas por alinhamento político do réu (2021–2026)</div>
+      <table style="width:100%;border-collapse:collapse;font-size:11.5px;">
+        <thead><tr style="border-bottom:1px solid var(--border2);">
+          <th style="text-align:left;padding:8px 10px;color:var(--fg3);font-size:10px;text-transform:uppercase;letter-spacing:.05em;">Caso</th>
+          <th style="text-align:left;padding:8px 10px;color:var(--fg3);font-size:10px;text-transform:uppercase;letter-spacing:.05em;">Alinhamento do réu</th>
+          <th style="text-align:left;padding:8px 10px;color:var(--fg3);font-size:10px;text-transform:uppercase;letter-spacing:.05em;">Ato anulado</th>
+          <th style="text-align:left;padding:8px 10px;color:var(--fg3);font-size:10px;text-transform:uppercase;letter-spacing:.05em;">Efeito sobre o réu</th>
+          <th style="text-align:left;padding:8px 10px;color:var(--fg3);font-size:10px;text-transform:uppercase;letter-spacing:.05em;">Data</th>
+        </tr></thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 10px;color:var(--fg);">Lula (tríplex)</td><td style="padding:8px 10px;color:var(--fg2);">Esquerda</td><td style="padding:8px 10px;color:var(--fg2);">Suspeição de Moro — todos os atos</td><td style="padding:8px 10px;"><span class="tag tag-confirmed">favorável</span></td><td style="padding:8px 10px;color:var(--fg3);">23/03/2021</td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 10px;color:var(--fg);">Eduardo Cunha</td><td style="padding:8px 10px;color:var(--fg2);">Centro/direita (ex-MDB)</td><td style="padding:8px 10px;color:var(--fg2);">Condenação — incompetência de foro</td><td style="padding:8px 10px;"><span class="tag tag-confirmed">favorável</span></td><td style="padding:8px 10px;color:var(--fg3);">mai/2023</td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 10px;color:var(--fg);">Sérgio Cabral</td><td style="padding:8px 10px;color:var(--fg2);">Centro/direita (ex-MDB)</td><td style="padding:8px 10px;color:var(--fg2);">Uma das acusações extinta</td><td style="padding:8px 10px;"><span class="tag tag-confirmed">favorável</span></td><td style="padding:8px 10px;color:var(--fg3);">ago/2023</td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 10px;color:var(--fg);">José Dirceu</td><td style="padding:8px 10px;color:var(--fg2);">Esquerda</td><td style="padding:8px 10px;color:var(--fg2);">Extensão da suspeição de Moro</td><td style="padding:8px 10px;"><span class="tag tag-confirmed">favorável</span></td><td style="padding:8px 10px;color:var(--fg3);">2024–25</td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 10px;color:var(--fg);">Daniel Silveira</td><td style="padding:8px 10px;color:var(--fg2);">Direita (aliado Bolsonaro)</td><td style="padding:8px 10px;color:var(--fg2);">Indulto presidencial (desvio de finalidade)</td><td style="padding:8px 10px;"><span class="tag tag-alleged">desfavorável</span></td><td style="padding:8px 10px;color:var(--fg3);">10/05/2023</td></tr>
+          <tr><td style="padding:8px 10px;color:var(--fg);">Jair Bolsonaro (AP 2668)</td><td style="padding:8px 10px;color:var(--fg2);">Direita</td><td style="padding:8px 10px;color:var(--fg2);">Pedido de anulação por incompetência/juiz natural — mesmo argumento de P01</td><td style="padding:8px 10px;"><span class="tag tag-contested">pendente</span></td><td style="padding:8px 10px;color:var(--fg3);">protocolado mai/2026</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:11.5px;color:var(--fg2);margin-top:10px;line-height:1.7;">Nota técnica: no julgamento da AP 2668 (set/2025), o Min. Luiz Fux votou vencido pela anulação do processo por "incompetência absoluta" da Primeira Turma — evidência de que o argumento processual de P01 foi levantado *dentro do próprio STF*, por um ministro, contra a maioria, no caso do réu de direita mais visado do período. Registro como indicador de que o mecanismo é argumentativamente disponível a qualquer alinhamento, ainda que sua aceitação pela maioria da Corte varie.</p>
+    </div>
+    <div class="subsection lacuna-box">
+      <div class="subsection-label">Lacuna investigativa — status: parcialmente reduzida, não resolvida</div>
+      <p><strong>O que este levantamento mostra:</strong> em 6 casos de alta visibilidade rastreados (2021–2026), o mecanismo de anulação retroativa favoreceu 2 réus de esquerda, 2 de centro/direita, foi usado *contra* um réu de direita (anulação de indulto, restaurando a condenação de Silveira) e está pendente para o réu de direita mais proeminente do período (Bolsonaro). Não há, nesta amostra, direção política única.</p>
+      <p><strong>O que este levantamento não é:</strong> não é uma amostra sistemática nem exaustiva. Foi construído por busca de casos de alta repercussão midiática — o método sofre viés de saliência (casos famosos ficam sobrerrepresentados; anulações processuais de baixa visibilidade em varas federais e TRFs, que provavelmente formam a maior parte do universo real, ficam invisíveis). Para resolver a lacuna com rigor seria necessário: (1) query estruturada na base de jurisprudência do STF/STJ por classe processual (HC, RHC, RE) e resultado (anulação concedida/negada), não por nome de réu; (2) denominador completo de pedidos de anulação apresentados, não apenas os concedidos — sem isso não se calcula taxa de sucesso, apenas se lista casos concedidos; (3) classificação de alinhamento político do réu por critério pré-registrado (filiação partidária formal, não inferência por caso). Essa base de dados estruturada está fora do escopo de busca web deste dossiê — é tarefa de mineração de jurisprudência, não de pesquisa jornalística.</p>
+      <p><strong>Classificação:</strong> o levantamento acima é <span class="tag tag-alleged">ev-alleged</span> como conjunto (amostra não randômica), com cada linha individual <span class="tag tag-confirmed">ev-confirmed</span> no fato pontual (o caso ocorreu como descrito). Não deve ser citado no corpus como prova de ausência de viés — apenas como evidência de que o viés, se existir, não é unidirecional nos casos de maior visibilidade.</p>
+    </div>
+  </div>
+</div>
+
+<!-- P02 -->
+<div class="pattern-card" id="s-p02">
+  <div class="p-head">
+    <div class="p-head-left">
+      <div class="p-num" style="color:var(--amber)">P02</div>
+      <div class="p-title">Investigador-Investigado (Reversão)</div>
+      <div class="p-def">Agente que conduziu investigação/acusação torna-se, subsequentemente, alvo de apuração pelos mesmos meios ou por conduta correlata ao exercício da função investigativa.</div>
+    </div>
+    <div class="p-status"><span class="badge badge-amber">Em consolidação</span></div>
+  </div>
+  <div class="p-body">
+    <div class="subsection">
+      <div class="subsection-label">Ancoragem verificada</div>
+      <div class="anchor-item ev-confirmed">
+        <div class="anchor-ref">PF · Operação Spoofing · 2019–2020</div>
+        <div class="anchor-text">Investigação sobre invasão de celulares de autoridades (incluindo Sergio Moro e procuradores da força-tarefa Lava Jato) resultou em mensagens que fundamentaram, anos depois, a própria declaração de suspeição de Moro (ver P01) — o instrumento de apuração criminal (interceptação/invasão) tornou-se evidência contra o antigo condutor da operação.</div>
+        <div class="anchor-tags"><span class="tag tag-confirmed">ev-confirmed</span></div>
+      </div>
+    </div>
+    <div class="subsection sym-box">
+      <div class="subsection-label">Nota de simetria</div>
+      <p>P02 depende estruturalmente de mudança de correlação de forças política/institucional habilitando a reversão — por definição, ocorre quando o investigador perde blindagem. Não há, ainda, par de instâncias verificadas com sinais políticos opostos no corpus; isso é reportado como lacuna, não presumido como assimetria.</p>
+    </div>
+    <div class="subsection lacuna-box">
+      <div class="subsection-label">Busca negativa documentada — jul/2026</div>
+      <p>Varredura orientada (CNMP, CNJ, representações PF, 2023–2026; Zelotes, Greenfield, Publicano, Furna da Onça) encontrou representações pontuais por excesso de prazo e reclamações disciplinares ordinárias, mas <strong>nenhum segundo caso de reversão sistêmica completa</strong> — em que o aparato investigativo originalmente empregado tenha se voltado contra seu condutor, como em Spoofing/Vaza Jato. P02 permanece com instância única. Busca negativa é resultado válido: registrada com escopo e data para não ser repetida sem novo fato.</p>
+    </div>
+  </div>
+</div>
+
+<!-- P03 -->
+<div class="pattern-card" id="s-p03">
+  <div class="p-head">
+    <div class="p-head-left">
+      <div class="p-num" style="color:var(--red)">P03</div>
+      <div class="p-title">Captura Judicial de Emergência</div>
+      <div class="p-def">Concentração, num único órgão ou magistrado, de papéis normalmente distribuídos (investigação, acusação, instrução, julgamento), justificada por urgência/exceção, sem prazo de encerramento definido.</div>
+    </div>
+    <div class="p-status"><span class="badge badge-green">Consolidado</span></div>
+  </div>
+  <div class="p-body">
+    <div class="subsection">
+      <div class="subsection-label">Ancoragem verificada</div>
+      <div class="anchor-item ev-confirmed">
+        <div class="anchor-ref">STF · Portaria GP 4.781/2019 (Inquérito das Fake News) · Instaurado por decisão monocrática do então presidente do STF, sem distribuição por sorteio</div>
+        <div class="anchor-text">Inquérito instaurado de ofício pelo próprio tribunal, com o Min. Alexandre de Moraes acumulando funções de relator, e — segundo a defesa técnica de múltiplos investigados — funções de condução investigativa tipicamente atribuídas à PF/MPF. Mais de 150 alvos e 7+ anos de duração sem termo de encerramento fixado.</div>
+        <div class="anchor-tags"><span class="tag tag-confirmed">ev-confirmed</span><span class="tag tag-contested">interpretação contestada</span></div>
+      </div>
+      <div class="anchor-item ev-confirmed">
+        <div class="anchor-ref">Lei 14.365/2022 · alterações ao rito de inquérito e prazo processual penal</div>
+        <div class="anchor-text">Mudança legislativa no regime de prazos de inquérito, referida no corpus como ponto de inflexão formal para o debate sobre duração indeterminada de inquéritos de competência originária do STF.</div>
+        <div class="anchor-tags"><span class="tag tag-confirmed">ev-confirmed</span></div>
+      </div>
+    </div>
+    <div class="subpattern-row">
+      <div class="subpattern">
+        <div class="subpattern-title">P03-A · Execução penal como vetor normativo</div>
+        <p>Uso de decisões de execução de pena/prisão em casos de repercussão nacional (8 de janeiro) para fixar entendimento jurisprudencial de aplicação geral, sem tramitar pelo rito de edição normativa ordinária. Ancoragem: julgamentos em bloco das ações penais 8/jan no STF, 2023–2024 — necessita compilação de números de processo específicos para nível ev-confirmed pleno.</p>
+      </div>
+      <div class="subpattern">
+        <div class="subpattern-title">P03-B · Substituição compulsória de defesa</div>
+        <p>Casos, no contexto de INQ 4.781 e ações correlatas ao 8/jan, de afastamento ou substituição de defesa técnica sob justificativa de urgência processual, reduzindo tempo de preparação da defesa. Ancoragem factual específica (números de HC, datas) ainda pendente de compilação — classificado ev-alleged até verificação processo a processo.</p>
+      </div>
+    </div>
+    <div class="subsection sym-box">
+      <div class="subsection-label">Nota de simetria</div>
+      <p>A concentração de papéis em INQ 4.781 é criticada tanto por juristas identificados com a direita quanto por processualistas sem filiação — a objeção central (violação de juiz natural / nemo judex in causa propria) é técnica, não partidária. Ao mesmo tempo, o inquérito foi instaurado em resposta a ataques concretos e verificáveis às instituições (invasões, ameaças) — a existência do fato que motivou a abertura é ev-confirmed; o desenho institucional da resposta é o que está sob escrutínio.</p>
+    </div>
+  </div>
+</div>
+
+<!-- P04 -->
+<div class="pattern-card" id="s-p04">
+  <div class="p-head">
+    <div class="p-head-left">
+      <div class="p-num" style="color:var(--pink)">P04</div>
+      <div class="p-title">Arma Midiática / P04b Both-Sidesism Funcional</div>
+      <div class="p-def">Uso de narrativa midiática para proteger ou atacar seletivamente um mecanismo institucional; P04b é a reformulação de crítica estrutural como "ataque partidário", produzindo falsa simetria epistêmica que blinda o mecanismo criticado.</div>
+    </div>
+    <div class="p-status"><span class="badge badge-amber">Em consolidação</span></div>
+  </div>
+  <div class="p-body">
+    <div class="subsection">
+      <div class="subsection-label">Ancoragem verificada</div>
+      <div class="anchor-item ev-confirmed">
+        <div class="anchor-ref">STF · Portaria GP 69/2019 · Inquérito 4.781 (fake news)</div>
+        <div class="anchor-text">O próprio objeto declarado do inquérito — combate a notícias fraudulentas contra a Corte — institucionaliza o vínculo entre P04 (arma midiática, usada contra as instituições) e P03 (resposta judicial concentrada), tornando os dois padrões estruturalmente interdependentes neste caso específico.</div>
+        <div class="anchor-tags"><span class="tag tag-confirmed">ev-confirmed</span></div>
+      </div>
+    </div>
+    <div class="subsection">
+      <div class="subsection-label">Medição inicial — par de controle de enquadramento (jul/2026)</div>
+      <div class="anchor-item ev-inference">
+        <div class="anchor-ref">Par de eventos estruturalmente equivalentes · janela de 7 dias · ~15 veículos por evento</div>
+        <div class="anchor-text">Evento A (Judiciário, nov/2025 — decisões monocráticas criminais sem referendo em prazo regimental >90 dias): ~15% das manchetes trataram como mérito processual; ~70% enquadraram como "embate partidário / ataque de alas conservadoras à Corte"; ~15% neutras. Evento B (Legislativo, fev/2026 — emendas "Pix" liberadas sem rastreabilidade mínima): ~80% trataram como mérito técnico/fisiologismo ordinário; ~5% enquadraram como ataque estrutural à democracia; ~15% neutras. Assimetria de enquadramento na direção prevista por P04b: crítica à arquitetura do Judiciário é convertida em rotulação partidária numa taxa ~14× maior que crítica equivalente ao Legislativo.</div>
+        <div class="anchor-tags"><span class="tag tag-inference">ev-inference</span></div>
+      </div>
+    </div>
+    <div class="subsection lacuna-box">
+      <div class="subsection-label">Ressalva de reprodutibilidade — obrigatória antes de citação externa</div>
+      <p>Os percentuais acima vieram de levantamento manual cuja <strong>lista de manchetes subjacente não está arquivada no corpus</strong>. Sem a lista (veículo, título, data, URL, classificação atribuída), a medição não é auditável por terceiros — e uma medição não auditável de both-sidesism seria, ironicamente, vulnerável à mesma crítica que documenta. Ação obrigatória antes de promover para ev-contested ou citação pública: arquivar a planilha de classificação em `_data/` com critério pré-registrado. Até lá, permanece ev-inference interno — a lacuna passou de "não medida" para "medida sem trilha de auditoria", o que é progresso real mas não conclusão.</p>
+    </div>
+  </div>
+</div>
+
+<!-- P05 -->
+<div class="pattern-card" id="s-p05">
+  <div class="p-head">
+    <div class="p-head-left">
+      <div class="p-num" style="color:var(--green)">P05</div>
+      <div class="p-title">Fundos Públicos como Vetor</div>
+      <div class="p-def">Recursos de fundos públicos ou parapúblicos (garantia, previdência, cultura, crédito direcionado) desviados ou capturados por estrutura de intermediação, com socialização de perdas.</div>
+    </div>
+    <div class="p-status"><span class="badge badge-green">Consolidado</span></div>
+  </div>
+  <div class="p-body">
+    <div class="subsection">
+      <div class="subsection-label">Ancoragem verificada</div>
+      <div class="anchor-item ev-confirmed">
+        <div class="anchor-ref">CPMI do INSS · Relatório Alfredo Gaspar (União-AL) · rejeitado 28/03/2026 (19×12) · +4.000 páginas</div>
+        <div class="anchor-text">Danos estimados em R$ 6,3 bilhões (2015–2025) em descontos associativos e consignados não autorizados sobre benefícios de aposentados/pensionistas. Relatório aponta falha do INSS/Dataprev em validar Acordos de Cooperação Técnica baseados em documentação meramente declaratória, e uso de sistemas próprios/provisórios de biometria facial fora de norma.</div>
+        <div class="anchor-tags"><span class="tag tag-confirmed">ev-confirmed</span></div>
+      </div>
+      <div class="anchor-item ev-confirmed">
+        <div class="anchor-ref">PF/CGU · Operação Sem Desconto · 2025</div>
+        <div class="anchor-text">Deflagrada a partir de apuração da CGU iniciada em 2023 sobre descontos ilegais em benefícios, em favor de associações — muitas de fachada.</div>
+        <div class="anchor-tags"><span class="tag tag-confirmed">ev-confirmed</span></div>
+      </div>
+    </div>
+    <div class="subsection sym-box">
+      <div class="subsection-label">Nota de simetria</div>
+      <p>O esquema de descontos do INSS operou de forma contínua entre 2015 e 2025, atravessando governos de sinais políticos diferentes — não é atribuível a uma única gestão. A instrumentalização política pós-fato é que se torna bipartidária: o relatório favorável à oposição pede indiciamento de Jair Bolsonaro; o relatório alternativo da base governista pede indiciamento de Flávio Bolsonaro e nomeia Fábio Luís Lula da Silva no relatório rival — ver P07.</p>
+    </div>
+  </div>
+</div>
+
+<!-- P06 -->
+<div class="pattern-card" id="s-p06">
+  <div class="p-head">
+    <div class="p-head-left">
+      <div class="p-num" style="color:var(--cyan)">P06</div>
+      <div class="p-title">Prescrição Estratégica / P06-B Exaustão de Ciclo de Responsabilização</div>
+      <div class="p-def">Uso de dilação temporal (recursos, sobrestamento, fim de mandato de comissão) para levar apuração à prescrição ou ao encerramento sem conclusão formal, dissipando accountability sem absolvição nem condenação.</div>
+    </div>
+    <div class="p-status"><span class="badge badge-green">Consolidado (P06-B, novo)</span></div>
+  </div>
+  <div class="p-body">
+    <div class="subsection">
+      <div class="subsection-label">Ancoragem verificada</div>
+      <div class="anchor-item ev-confirmed">
+        <div class="anchor-ref">CPMI do INSS · Senado/Câmara · encerrada 28/03/2026, após 7 meses (instalada ago/2025)</div>
+        <div class="anchor-text">Rejeitado o relatório do relator por 19×12; presidente da comissão (Sen. Carlos Viana, Podemos-MG) encerrou os trabalhos sem submeter a votação o relatório alternativo da base governista, apesar de questão de ordem da Sen. Eliziane Gama pedindo sua apreciação. 38 reuniões, 1.000+ quebras de sigilo, nenhum relatório final aprovado — matéria remetida a MPF/STF/PF sem posição institucional conjunta da comissão.</div>
+        <div class="anchor-tags"><span class="tag tag-confirmed">ev-confirmed</span></div>
+      </div>
+    </div>
+    <div class="subsection sym-box">
+      <div class="subsection-label">Nota de simetria</div>
+      <p>O encerramento sem relatório não favoreceu um lado: ambos os relatórios rivais (com listas de indiciamento cruzadas, incluindo familiares de líderes de ambos os campos) morreram junto com a comissão. O padrão P06-B, portanto, funciona aqui como mecanismo de dissipação simétrica de accountability — nem acusação nem absolvição chegam a termo formal para nenhum dos lados.</p>
+    </div>
+    <div class="subsection lacuna-box">
+      <div class="subsection-label">Consideração metodológica registrada</div>
+      <p>Nota interna já sinalizada no corpus: encerramento de comissão parlamentar sem relatório aprovado pode justificar subpadrão formal P06-B autônomo (distinto de prescrição penal clássica). Este caso é a instância fundacional proposta para essa formalização.</p>
+    </div>
+  </div>
+</div>
+
+<!-- P07 -->
+<div class="pattern-card" id="s-p07">
+  <div class="p-head">
+    <div class="p-head-left">
+      <div class="p-num" style="color:var(--purple)">P07</div>
+      <div class="p-title">Captura Transgeracional</div>
+      <div class="p-def">Extensão de mecanismos de proteção, ataque ou benefício estrutural a membros de geração subsequente de uma rede de poder — filhos, sobrinhos, cônjuges — via cargos, contratos ou, inversamente, responsabilização judicial usada como munição política.</div>
+    </div>
+    <div class="p-status"><span class="badge badge-green">Consolidado</span></div>
+  </div>
+  <div class="p-body">
+    <div class="subsection">
+      <div class="subsection-label">Ancoragem verificada</div>
+      <div class="anchor-item ev-confirmed">
+        <div class="anchor-ref">CPMI do INSS · relatórios rivais · 28/03/2026</div>
+        <div class="anchor-text">Relatório de Alfredo Gaspar (oposição) pede indiciamento de Fábio Luís Lula da Silva ("Lulinha"), filho do presidente da República. Relatório alternativo da base governista pede indiciamento do senador Flávio Bolsonaro, filho do ex-presidente, por organização criminosa. Os dois filhos de lideranças de espectros opostos foram nomeados em documentos formais de apuração produzidos pela mesma comissão, no mesmo dia de encerramento.</div>
+        <div class="anchor-tags"><span class="tag tag-confirmed">ev-confirmed</span></div>
+      </div>
+    </div>
+    <div class="subsection sym-box">
+      <div class="subsection-label">Nota de simetria</div>
+      <p>Esta é a instância mais limpa de simetria no dossiê inteiro: P07 se manifestou, no mesmo evento e no mesmo dia, contra descendentes de lideranças de dois campos políticos rivais, cada um nomeado pelo relatório produzido pelo bloco político adversário. Isso não neutraliza os méritos individuais de cada acusação (que requerem apuração própria, ev-alleged até decisão), mas confirma que o *mecanismo* — herdeiro político como alvo de responsabilização formal — não é exclusivo de um lado.</p>
+    </div>
+  </div>
+</div>
+
+<!-- P08 -->
+<div class="pattern-card" id="s-p08">
+  <div class="p-head">
+    <div class="p-head-left">
+      <div class="p-num" style="color:var(--blue)">P08</div>
+      <div class="p-title">Fintech/Cripto como Infraestrutura Paralela / Cooperação Extrajudicial</div>
+      <div class="p-def">Uso de estrutura bancária, fintech ou de garantia (FGC) como via de extração de risco privado com absorção sistêmica de perda, fora do escrutínio regulatório ordinário até o momento de colapso.</div>
+    </div>
+    <div class="p-status"><span class="badge badge-green">Consolidado</span></div>
+  </div>
+  <div class="p-body">
+    <div class="subsection">
+      <div class="subsection-label">Ancoragem verificada</div>
+      <div class="anchor-item ev-confirmed">
+        <div class="anchor-ref">Banco Central · liquidação extrajudicial · 18/11/2025</div>
+        <div class="anchor-text">BC (presidente Gabriel Galípolo) decreta liquidação extrajudicial do Banco Master S.A., Master S.A. Corretora de Câmbio, Banco Letsbank S.A. e Banco Master de Investimento S.A., nomeando EFB Regimes Especiais como liquidante e tornando indisponíveis bens da controladora e de administradores (Daniel Vorcaro, Armando Gallo Neto, Felipe Simonsen).</div>
+        <div class="anchor-tags"><span class="tag tag-confirmed">ev-confirmed</span></div>
+      </div>
+      <div class="anchor-item ev-confirmed">
+        <div class="anchor-ref">FGC · relatório set/2025 e fev/2026</div>
+        <div class="anchor-text">Rombo estimado entre R$ 41 bi (nov/2025) e R$ 51,8 bi (fev/2026, após 10 entidades ligadas ao conglomerado entrarem em liquidação em três ondas). Maior acionamento do FGC em 30 anos de existência do fundo. Ressarcimento limitado a R$ 250 mil por CPF/CNPJ, iniciado em janeiro de 2026.</div>
+        <div class="anchor-tags"><span class="tag tag-confirmed">ev-confirmed</span></div>
+      </div>
+      <div class="anchor-item ev-confirmed">
+        <div class="anchor-ref">Banco Central · liquidação Reag/CBSF · 15/01/2026</div>
+        <div class="anchor-text">BC liquida gestora que, segundo relatório enviado ao TCU, estruturou operações fraudulentas com o Banco Master entre jul/2023 e jul/2024 — evidência de infraestrutura compartilhada entre entidades formalmente distintas.</div>
+        <div class="anchor-tags"><span class="tag tag-confirmed">ev-confirmed</span></div>
+      </div>
+    </div>
+    <div class="subsection sym-box">
+      <div class="subsection-label">Nota de simetria</div>
+      <p>O FGC é fundo privado (custeado por contribuições compulsórias dos bancos, não orçamento público direto) — classificar o caso Master estritamente como P05 seria impreciso; a categorização correta é P08 com efeito de moral hazard sistêmico similar a P05 no resultado (perda socializada entre correntistas de todo o sistema via custo do fundo), mas mecanismo de origem distinto. A CPMI do INSS também investigou ligação do Master com empréstimos consignados irregulares a aposentados — os dois clusters (INSS e Master) compartilham nós de investigação, não necessariamente de autoria.</p>
+    </div>
+  </div>
+</div>
+
+<!-- P09 -->
+<div class="pattern-card" id="s-p09">
+  <div class="p-head">
+    <div class="p-head-left">
+      <div class="p-num" style="color:var(--pink)">P09</div>
+      <div class="p-title">Captura Cultural e Legitimação Simbólica</div>
+      <div class="p-def">Uso de mecanismos de fomento cultural (leis de incentivo, editais) para financiar produção que legitima simbolicamente atores ou narrativas de interesse de rede de poder específica.</div>
+    </div>
+    <div class="p-status"><span class="badge badge-gray">Busca negativa documentada — inativo nos clusters 2026</span></div>
+  </div>
+  <div class="p-body">
+    <div class="subsection">
+      <div class="subsection-label">Ancoragem verificada — mecanismo geral confirmado, ligação a clusters do corpus ainda não</div>
+      <div class="anchor-item ev-confirmed">
+        <div class="anchor-ref">PF/MPF · Operação Boca Livre · 2016 (desdobramentos até 2016)</div>
+        <div class="anchor-text">Esquema de fraude na Lei Rouanet via produtora Bellini Cultural: R$ 180 milhões desviados desde 2001, mais de 250 projetos afetados, 14 presos. Desdobramento identificou 29 empresas patrocinadoras (bancos, montadoras, alimentícia) usando verba cultural para eventos corporativos e contrapartidas ilícitas — prejuízo adicional estimado em R$ 25 milhões.</div>
+        <div class="anchor-tags"><span class="tag tag-confirmed">ev-confirmed</span></div>
+      </div>
+      <div class="anchor-item ev-confirmed">
+        <div class="anchor-ref">PF · Operação Apate · Mato Grosso · 2018</div>
+        <div class="anchor-text">Desvio de R$ 870 mil em contratos Pronac/Lei Rouanet via despesas fictícias e superfaturadas (fatos de 2014–2015).</div>
+        <div class="anchor-tags"><span class="tag tag-confirmed">ev-confirmed</span></div>
+      </div>
+    </div>
+    <div class="subsection lacuna-box">
+      <div class="subsection-label">Busca negativa documentada — jul/2026 (reclassificação aplicada)</div>
+      <p>Cruzamento de CPFs/CNPJs de Vorcaro, Banco Master, projetos Trancoso e Corinthians (núcleo Carbono Oculto) nas bases Salic/Rouanet e PROAC (2024–2026): captações do Corinthians correspondem a projetos ordinários de preservação histórica, sem intersecção com atores sob investigação; incursões culturais de Vorcaro (ex.: tratativas do filme <em>Dark Horse</em>) referidas publicamente como investimento privado, sem renúncia fiscal. <strong>Correção de classificação sobre o relatório de origem:</strong> ausência de evidência pública nas bases consultadas não é "ev-confirmed de ausência" — é busca negativa documentada (escopo: Salic/PROAC 2024–26, atores nomeados). O padrão P09 existe historicamente (Boca Livre, Apate); não foi encontrado ativo nos clusters de 2026 <em>nas bases públicas consultadas</em>.</p>
+    </div>
+  </div>
+</div>
+
+<!-- P10 -->
+<div class="pattern-card" id="s-p10">
+  <div class="p-head">
+    <div class="p-head-left">
+      <div class="p-num" style="color:var(--fg2)">P10</div>
+      <div class="p-title">Infraestrutura de Serviço Compartilhada</div>
+      <div class="p-def">Mesma rede de escritórios de advocacia, auditoria, estruturação societária ou offshore atendendo simultaneamente a múltiplas operações/redes documentadas no corpus — evidência de mercado de serviços comum, não necessariamente de conluio.</div>
+    </div>
+    <div class="p-status"><span class="badge badge-green">Consolidado — status autônomo</span></div>
+  </div>
+  <div class="p-body">
+    <div class="subsection">
+      <div class="subsection-label">Ancoragem verificada — segundo caso encontrado (auditorias)</div>
+      <div class="anchor-item ev-confirmed">
+        <div class="anchor-ref">Poder360 (25/01/2026) · ConJur · O Bastidor (análise dos relatórios 2019–2025) — corroboração múltipla</div>
+        <div class="anchor-text">Quatro firmas globais de auditoria (KPMG, PwC, EY, Crowe) emitiram pareceres sem ressalvas sobre balanços do ecossistema Master/Reag contendo dezenas de bilhões em ativos posteriormente revelados fictícios. Sequência documentada: UHY auditou 2019–2021; KPMG 2022–2024 — no balanço de dez/2024 listou R$ 19,5 bi em cotas de fundos como "Principal Assunto de Auditoria" (categoria de maior risco), alertou incerteza de precificação, e ainda assim concluiu parecer limpo; PwC assumiu em 2025, liquidação veio antes do parecer. EY e Crowe chancelaram ativos da Reag, incluindo créditos de carbono sobre terras públicas. Todos os balanços 2019–2025 saíram sem ressalvas.</div>
+        <div class="anchor-tags"><span class="tag tag-confirmed">ev-confirmed</span></div>
+      </div>
+      <div class="anchor-item ev-confirmed">
+        <div class="anchor-ref">BC · liquidação Reag/CBSF · 15/01/2026 (já ancorado em P08)</div>
+        <div class="anchor-text">Operações estruturadas fraudulentas bilaterais Master↔Reag (jul/2023–jul/2024, relatório BC ao TCU) — o nó de estruturação de fundos compartilhado.</div>
+        <div class="anchor-tags"><span class="tag tag-confirmed">ev-confirmed</span></div>
+      </div>
+    </div>
+    <div class="subsection sym-box">
+      <div class="subsection-label">Nota de simetria e delimitação</div>
+      <p>O que está confirmado é a <em>função estrutural</em>: a mesma camada de serviço (auditoria de grande porte + estruturação de fundos) serviu simultaneamente múltiplas entidades do ecossistema fraudulento, com chancela formal que sustentou captação. O que <em>não</em> está confirmado: dolo das auditorias (responsabilização em apuração — pode configurar falha de ceticismo profissional sem má-fé, conforme debate público em curso), e o nó formal com o cluster INSS — a CPMI apurou repasse de consignados irregulares envolvendo o Master, mas não há contrato/registro CVM-OAB provando que a mesma banca ou consultoria atenda formalmente os dois clusters. Contrato Barci de Moraes × Master (R$ 129 mi) já documentado no corpus permanece classificado como indício de captura (P03/P08), não prova de P10 inter-cluster.</p>
+    </div>
+    <div class="subsection lacuna-box">
+      <div class="subsection-label">Decisão metodológica — status autônomo</div>
+      <p>Com dois nós de serviço distintos verificados (estruturação Reag + camada de auditoria quádrupla), a recomendação anterior deste dossiê se cumpre: <strong>P10 atinge o critério para status autônomo</strong> na taxonomia — deixa de ser subordinado a P05/P08. Nó pendente: ligação formal de serviço com clusters não-financeiros (INSS, PCC-CV).</p>
+    </div>
+  </div>
+</div>
+
+<!-- P11 -->
+<div class="pattern-card" id="s-p11">
+  <div class="p-head">
+    <div class="p-head-left">
+      <div class="p-num" style="color:var(--red)">P11</div>
+      <div class="p-title">Loop de Extração Perpétua</div>
+      <div class="p-def">Ciclo autossustentado onde a resposta ao problema (repressão, sanção) retroalimenta as condições materiais que reproduzem o problema, sem ponto de saída estrutural — o combate ao sintoma financia ou fortalece a causa.</div>
+    </div>
+    <div class="p-status"><span class="badge badge-green">Consolidado</span></div>
+  </div>
+  <div class="p-body">
+    <div class="subsection">
+      <div class="subsection-label">Ancoragem verificada</div>
+      <div class="anchor-item ev-confirmed">
+        <div class="anchor-ref">U.S. Department of State · designação SDGT 28/05/2026 · FTO efetiva 05/06/2026</div>
+        <div class="anchor-text">Secretário Marco Rubio designou Comando Vermelho e PCC como Specially Designated Global Terrorists e anunciou intenção de designá-los Foreign Terrorist Organizations, com base na seção 219 da lei de imigração/nacionalidade dos EUA e na Ordem Executiva 13.224. Medida habilita bloqueio de ativos, cooperação internacional e responsabilização por atos preparatórios.</div>
+        <div class="anchor-tags"><span class="tag tag-confirmed">ev-confirmed</span></div>
+      </div>
+    </div>
+    <div class="subsection sym-box">
+      <div class="subsection-label">Nota de simetria</div>
+      <p>A designação internacional formaliza o padrão mas não o interrompe sozinha — o histórico do corpus (Carbono Oculto, Faixa Tropical, Operação Hydra) já documenta que apreensões e operações de choque produzem realocação de rota e capital, não erradicação. A designação FTO em si é ev-confirmed como fato jurídico; a hipótese de que ela produzirá efeito de loop (endurecimento → adaptação → nova infraestrutura) é ev-inference, a testar nos próximos 12 meses — marcador de acompanhamento fixado nesta entrada.</p>
+    </div>
+  </div>
+</div>
+
+<!-- P12 -->
+<div class="pattern-card" id="s-p12">
+  <div class="p-head">
+    <div class="p-head-left">
+      <div class="p-num" style="color:var(--cyan)">P12</div>
+      <div class="p-title">Paywall Existencial / P12-B Paywall Eleitoral</div>
+      <div class="p-def">Captura cognitiva de mercado via monetização de informação essencial à participação cívica — P12-B é a variante aplicada especificamente ao ciclo eleitoral (análise política, dados, verificação factual) atrás de barreira de pagamento.</div>
+    </div>
+    <div class="p-status"><span class="badge badge-green">Instanciado — assimetria analítica verificada</span></div>
+  </div>
+  <div class="p-body">
+    <div class="subsection">
+      <div class="subsection-label">Camada oficial — falseamento mantido</div>
+      <div class="anchor-item ev-confirmed">
+        <div class="anchor-ref">TSE · Portal de Dados Abertos · DivulgaCandContas · Resolução TSE 23.751/2026</div>
+        <div class="anchor-text">Dados de candidaturas, prestação de contas, doações e microdados históricos (desde 1994) permanecem públicos, gratuitos e sem cadastro. Na infraestrutura estatal, P12-B não se manifesta.</div>
+        <div class="anchor-tags"><span class="tag tag-confirmed">ev-confirmed</span></div>
+      </div>
+    </div>
+    <div class="subsection">
+      <div class="subsection-label">Camada privada verificada — jul/2026</div>
+      <div class="anchor-item ev-confirmed">
+        <div class="anchor-ref">PollingData · Termos de Uso (flex.pollingdata.com.br) · verificado 16/07/2026</div>
+        <div class="anchor-text">Agregador de pesquisas eleitorais opera modelo misto: previsões agregadas gratuitas + "acesso a determinadas áreas, dados, microdados, APIs, ferramentas de personalização, relatórios" condicionado a plano de assinatura (produtos PDVoto, PDGov). Matéria-prima: pesquisas registradas no PesqEle/TSE e dados abertos — 478 pesquisas de 121 institutos processadas no ciclo 2026.</div>
+        <div class="anchor-tags"><span class="tag tag-confirmed">ev-confirmed (fato do modelo de negócio)</span></div>
+      </div>
+      <div class="anchor-item ev-confirmed">
+        <div class="anchor-ref">Politique (politique.com.br) · plataforma de assinatura · verificado 16/07/2026</div>
+        <div class="anchor-text">Segunda instância: plataforma de consulta e comparação de dados eleitorais detalhados por candidato, comercializada por assinatura — mesmo insumo público (TSE), interface analítica paga.</div>
+        <div class="anchor-tags"><span class="tag tag-confirmed">ev-confirmed (fato do modelo de negócio)</span></div>
+      </div>
+    </div>
+    <div class="subsection sym-box">
+      <div class="subsection-label">Delimitação obrigatória — fato vs. padrão</div>
+      <p>Distinção que não pode colapsar: o <em>fato</em> (camada analítica paga construída sobre dado público gratuito) é ev-confirmed. A <em>leitura como padrão de captura cognitiva</em> (P12-B) permanece ev-inference — vender análise sobre dado público é atividade de mercado legítima, praticada por consultorias em qualquer democracia, e nenhuma das plataformas citadas é acusada de irregularidade. O que P12-B documenta não é ilícito: é <strong>assimetria estrutural de capacidade analítica</strong> — campanhas e atores com orçamento acessam inteligência preditiva e cruzamentos de doações prontos; candidaturas pequenas e cidadãos acessam as mesmas informações apenas como planilhas brutas dispersas. A transparência formal (TSE aberto) coexiste com opacidade funcional (custo de processamento). Essa formulação preserva o padrão sem difamar operadores específicos — que aqui têm função ilustrativa do mecanismo, não de acusação.</p>
+    </div>
+    <div class="subsection lacuna-box">
+      <div class="subsection-label">Status: hipótese resolvida em duas camadas</div>
+      <p>Camada oficial: falseada (TSE aberto e gratuito — resultado negativo mantido). Camada privada: mecanismo verificado em duas instâncias independentes. P12-B sai de "proposto" para <strong>instanciado como assimetria de capacidade analítica</strong>, com a fronteira fato/inferência fixada acima. Lacuna remanescente: medir o custo real de acesso (preços não públicos, licenciamento B2B) e se partidos nanicos de fato ficam fora — isso decidiria se a assimetria é severa ou marginal.</p>
+    </div>
+  </div>
+</div>
+
+<div class="matrix-note">
+  <h3>Leitura consolidada do lote (rodada 3 — pós-investigação de lacunas)</h3>
+  <p><strong>Consolidados com ancoragem primária:</strong> P01 (levantamento indicativo de simetria), P03 (+A/B parcial), P05, P06/P06-B, P07, P08, P11, e agora <strong>P10 — promovido a status autônomo</strong> (dois nós de serviço verificados: estruturação Reag + camada de auditoria quádrupla KPMG/PwC/EY/Crowe, corroboração múltipla).</p>
+  <p><strong>Instanciado com fronteira fato/inferência fixada:</strong> P12-B — camada oficial falseada (TSE aberto), camada privada verificada em duas instâncias (PollingData, Politique) como assimetria de capacidade analítica; a leitura como padrão permanece ev-inference por delimitação deliberada.</p>
+  <p><strong>Medido inicialmente, pendente de trilha de auditoria:</strong> P04b — par de controle mostra assimetria de enquadramento ~14× na direção prevista, mas a lista de manchetes subjacente precisa ser arquivada antes de citação externa.</p>
+  <p><strong>Buscas negativas documentadas (resultado válido, com escopo e data):</strong> P02 (nenhum segundo caso de reversão sistêmica completa, 2023–2026) e P09 (nenhum nexo Rouanet/PROAC com clusters ativos nas bases públicas 2024–2026).</p>
+  <p>Das cinco lacunas atacadas: <strong>duas fechadas</strong> (P10, P12-B), <strong>uma reduzida com pendência de auditoria</strong> (P04b), <strong>duas encerradas por busca negativa documentada</strong> (P02, P09). Nenhuma foi fechada com ancoragem forçada. A instância mais forte do dossiê continua sendo P07 via CPMI do INSS.</p>
+</div>
+
+<div class="matrix-note">
+  <h3>Escala Financeira Agregada — P05 / P08 / P11</h3>
+  <p><strong>Categoria 1 — Dano/rombo confirmado (perda real verificada):</strong> Banco Master (rombo FGC) R$ 41–51,8 bi · Banco Master/BRB (carteiras fantasma) R$ 5–9 bi · Farra do INSS/Sem Desconto R$ 6,3 bi · Lava Jato/Petrobras R$ 6–29 bi. <strong>Subtotal defensável: ordem de R$ 60–100 bilhões</strong> — a faixa é larga porque a estimativa Petrobras varia muito por metodologia; não trilhões.</p>
+  <p><strong>Categoria 2 — Movimentação sob suspeita (fluxo através de estrutura investigada, não equivale a dano):</strong> Carbono Oculto, 40+ fundos, R$ 30 bi sob gestão · Grupo Refit, R$ 72 bi movimentados (2024–25) · Precatórios Master, fundos com R$ 102,4 bi de patrimônio líquido suspeito. Não somável à Categoria 1.</p>
+  <p><strong>Categoria 3 — Valor fictício (nunca existiu como ativo real):</strong> Créditos de carbono Golden Green/Global Carbon, R$ 45,5 bi em avaliação conjunta, zero UECs efetivamente vendidas.</p>
+  <p><strong>Categoria 4 — Alegação de captura institucional (ev-alleged, não julgada):</strong> Contratos documentados ligando família de ministros do STF ao esquema Master, R$ 164 mi (Barci de Moraes R$ 129 mi, família Toffoli R$ 35 mi via fundo, Lewandowski R$ 5,25 mi).</p>
+  <p style="color:var(--amber);"><strong>Nota metodológica:</strong> estas quatro categorias não são somáveis entre si — dano real, volume de fluxo, valor de papel inflado e indício de corrupção são grandezas distintas. Um número único agregando tudo produziria cifra vistosa e metodologicamente falsa. A afirmação defensável é: dezenas de bilhões de reais em dano direto confirmado, coexistindo com endividamento recorde das famílias brasileiras (ver sessão anterior) — coexistência estrutural documentada, não cadeia causal comprovada.</p>
+</div>
+
+</div>
+</div>
+
+<div class="container">
+<section class="share-panel" id="compartilhar-arquitetura-sistemica" aria-labelledby="share-head">
+  <h3 id="share-head">
+    <svg class="share-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98M15.41 5.51l-6.82 3.98"/></svg>
+    Compartilhar este dossiê
+  </h3>
+  <p><strong>URL canônica:</strong> <code>https://gosurf.site/arquitetura-sistemica-p01-p12</code> · <strong>Sharecard (Open Graph):</strong> <code>https://gosurf.site/og-arquitetura-sistemica-p01-p12.png</code></p>
+  <div id="page-share-root"></div>
+</section>
+
+<section class="related-block" id="artefatos-relacionados" aria-labelledby="related-head">
+  <div class="related-block-h" id="related-head">Artefatos relacionados no corpus</div>
+  <p class="related-sub">Mapas e dossiês que cruzam a taxonomia P01–P12, operações documentadas e o framework analítico do lawfare-timeline.</p>
+  <div class="related-grid">
+    <div class="related-wrap">
+      <a class="related-card" href="https://gosurf.site/padroes-sistemicos-dashboard" target="_blank" rel="noopener noreferrer">
+        <div class="rc-lbl">Framework · P1–P11</div>
+        <div class="rc-title">Padrões sistêmicos — dashboard</div>
+        <div class="rc-desc">Matriz de indulgência sistêmica × 17 operações anticorrupção (2000–2026).</div>
+        <div class="rc-url">gosurf.site/padroes-sistemicos-dashboard</div>
+      </a>
+    </div>
+    <div class="related-wrap">
+      <a class="related-card" href="https://gosurf.site/matriz-p1-p12-onu" target="_blank" rel="noopener noreferrer">
+        <div class="rc-lbl">Extensão · Portabilidade</div>
+        <div class="rc-title">P1–P12 testados contra a ONU</div>
+        <div class="rc-desc">Mesma taxonomia aplicada ao dossiê Engrenagem Enferrujada — convergência estrutural global.</div>
+        <div class="rc-url">gosurf.site/matriz-p1-p12-onu</div>
+      </a>
+    </div>
+    <div class="related-wrap">
+      <a class="related-card" href="https://gosurf.site/lawfare-timeline" target="_blank" rel="noopener noreferrer">
+        <div class="rc-lbl">Timeline · Corpus</div>
+        <div class="rc-title">Lawfare timeline</div>
+        <div class="rc-desc">Linha do tempo forense com entradas ev-confirmed e grafo de operações.</div>
+        <div class="rc-url">gosurf.site/lawfare-timeline</div>
+      </a>
+    </div>
+    <div class="related-wrap">
+      <a class="related-card" href="https://gosurf.site/operacao-sem-desconto" target="_blank" rel="noopener noreferrer">
+        <div class="rc-lbl">P05 · P06-B · P07</div>
+        <div class="rc-title">Operação Sem Desconto</div>
+        <div class="rc-desc">R$ 6,3 bi no INSS, CPMI encerrada sem relatório, indiciamentos transgeracionais rivais.</div>
+        <div class="rc-url">gosurf.site/operacao-sem-desconto</div>
+      </a>
+    </div>
+    <div class="related-wrap">
+      <a class="related-card" href="https://gosurf.site/banco-master-too-big" target="_blank" rel="noopener noreferrer">
+        <div class="rc-lbl">P08 · FGC</div>
+        <div class="rc-title">Banco Master — too big</div>
+        <div class="rc-desc">Liquidação extrajudicial, rombo FGC R$ 51,8 bi e infraestrutura paralela documentada.</div>
+        <div class="rc-url">gosurf.site/banco-master-too-big</div>
+      </a>
+    </div>
+    <div class="related-wrap">
+      <a class="related-card" href="https://gosurf.site/duplo-padrao-judicial" target="_blank" rel="noopener noreferrer">
+        <div class="rc-lbl">P01 · P03</div>
+        <div class="rc-title">Duplo padrão judicial</div>
+        <div class="rc-desc">Anulação processual retroativa e captura judicial emergencial — casos lado a lado.</div>
+        <div class="rc-url">gosurf.site/duplo-padrao-judicial</div>
+      </a>
+    </div>
+  </div>
+</section>
+</div>
+
+<footer class="header">
+  <div class="container">
+    <div class="footer-flex">
+      <div style="flex:1;min-width:280px;">
+        <div class="badge badge-blue"><strong><a href="https://lawfare-timeline.vercel.app" style="color:var(--blue);text-decoration:none;">lawfare-timeline.vercel.app</a></strong></div>
+        <p class="footer-desc" style="margin-top:10px;">Arquitetura Sistêmica P01–P12 · República Sequestrada · lawfare-timeline</p>
+        <p class="footer-desc">CC0 1.0 Universal — Domínio Público. Livre para redistribuição analítica.</p>
+      </div>
+      <div class="footer-desc" style="max-width:480px;text-align:right;">
+        Fontes primárias: STF, Banco Central, FGC, Senado/Câmara (CPMI INSS), U.S. Department of State, TCU. Verificação web realizada em 16/07/2026. Ancoragens marcadas ev-inference ou em lacuna não sustentam produção de entrada ev-confirmed no lawfare.json até verificação adicional.
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function scrollToSection(id){document.getElementById(id).scrollIntoView({behavior:'smooth'});}
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      const id = entry.target.getAttribute('id');
+      document.querySelectorAll('.nav-tab').forEach(tab=>{
+        tab.classList.remove('active');
+        if(tab.getAttribute('data-section')===id){
+          tab.classList.add('active');
+          tab.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});
+        }
+      });
+    }
+  });
+},{root:null,rootMargin:'-20% 0px -70% 0px',threshold:0});
+document.querySelectorAll('.pattern-card').forEach(el=>observer.observe(el));
+
+(function(){
+  var PAGE_URL='https://gosurf.site/arquitetura-sistemica-p01-p12';
+  var PAGE_TITLE=document.title;
+  function makeShareStrip(url,title){
+    var el=document.createElement('div');
+    el.className='share-strip';
+    el.setAttribute('role','group');
+    el.setAttribute('aria-label','Compartilhar');
+    el.dataset.shareUrl=url;
+    el.dataset.shareTitle=title;
+    el.innerHTML='<span class="share-strip-label"><svg class="share-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98M15.41 5.51l-6.82 3.98"/></svg>Compartilhar</span>'+
+      '<button type="button" class="share-btn" data-share="copy" title="Copiar link" aria-label="Copiar link"><svg class="share-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>'+
+      '<button type="button" class="share-btn" data-share="x" title="X" aria-label="Compartilhar no X"><svg class="share-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></button>'+
+      '<button type="button" class="share-btn" data-share="whatsapp" title="WhatsApp" aria-label="WhatsApp"><svg class="share-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></button>'+
+      '<button type="button" class="share-btn" data-share="telegram" title="Telegram" aria-label="Telegram"><svg class="share-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M23.91 3.79L20.3 20.84c-.25 1.21-.98 1.5-2 .94l-5.5-4.07-2.66 2.57c-.3.3-.55.56-1.1.56-.72 0-.6-.27-.84-.95L6.3 13.7l-5.45-1.7c-1.18-.35-1.19-1.16.26-1.75l21.26-8.2c.97-.43 1.9.24 1.53 1.73z"/></svg></button>'+
+      '<button type="button" class="share-btn" data-share="linkedin" title="LinkedIn" aria-label="LinkedIn"><svg class="share-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></button>'+
+      '<button type="button" class="share-btn share-btn-native" data-share="native" title="Compartilhar…" aria-label="Compartilhar pelo sistema"><svg class="share-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg></button>';
+    if(!navigator.share){var nb=el.querySelector('.share-btn-native');if(nb)nb.hidden=true;}
+    return el;
+  }
+  function mountPageShare(){
+    var root=document.getElementById('page-share-root');
+    if(root&&!root.querySelector('.share-strip'))root.appendChild(makeShareStrip(PAGE_URL,PAGE_TITLE));
+  }
+  function mountRelatedShares(){
+    document.querySelectorAll('.related-wrap').forEach(function(w){
+      if(w.querySelector('.share-strip'))return;
+      var a=w.querySelector('a.related-card[href]');
+      if(!a)return;
+      var t=a.querySelector('.rc-title');
+      var title=((t&&t.textContent)||'').trim();
+      w.appendChild(makeShareStrip(a.href,(title?title+' · ':'')+'gosurf.site'));
+    });
+  }
+  document.addEventListener('click',function(e){
+    var btn=e.target.closest('.share-btn[data-share]');
+    if(!btn||btn.hidden)return;
+    e.preventDefault();
+    var strip=btn.closest('.share-strip');
+    if(!strip)return;
+    var url=strip.dataset.shareUrl||PAGE_URL;
+    var title=strip.dataset.shareTitle||PAGE_TITLE;
+    var kind=btn.dataset.share;
+    if(kind==='copy'){
+      var done=function(){btn.classList.add('copied');setTimeout(function(){btn.classList.remove('copied');},2000);};
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(done).catch(function(){
+        var ta=document.createElement('textarea');ta.value=url;document.body.appendChild(ta);ta.select();
+        try{document.execCommand('copy');done();}catch(err){}document.body.removeChild(ta);
+      });}else{
+        var ta2=document.createElement('textarea');ta2.value=url;document.body.appendChild(ta2);ta2.select();
+        try{document.execCommand('copy');done();}catch(err2){}document.body.removeChild(ta2);
+      }
+      return;
+    }
+    if(kind==='native'&&navigator.share){navigator.share({title:title,text:title,url:url}).catch(function(){});return;}
+    if(kind==='x'){window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(title)+'&url='+encodeURIComponent(url),'_blank','noopener,noreferrer');return;}
+    if(kind==='whatsapp'){window.open('https://wa.me/?text='+encodeURIComponent(title+' '+url),'_blank','noopener,noreferrer');return;}
+    if(kind==='telegram'){window.open('https://t.me/share/url?url='+encodeURIComponent(url)+'&text='+encodeURIComponent(title),'_blank','noopener,noreferrer');return;}
+    if(kind==='linkedin'){window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(url),'_blank','noopener,noreferrer');}
+  });
+  mountPageShare();
+  mountRelatedShares();
+})();
+</script>
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

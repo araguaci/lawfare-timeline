@@ -45,8 +45,8 @@ Não há condicionantes públicas de mitigação socioambiental vinculadas ao an
 
 Entradas conectadas nesta série:
 
-- [Entrada 1667](/timeline/entries/1667)
-- [Entrada 1670](/timeline/entries/1670)
+- [Entrada 1667](/posts/id1667-mineracao-taboca-e-adquirida-pela-estatal-chinesa-china-nonferrous-metal-mining/)
+- [Entrada 1670](/posts/id1670-povo-waimiri-atroari-denuncia-contaminacao-do-rio-alalau-por-mercurio-e-rejeitos/)
 
 ---
 

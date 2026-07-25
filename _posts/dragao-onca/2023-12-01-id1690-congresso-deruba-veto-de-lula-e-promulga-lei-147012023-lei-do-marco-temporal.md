@@ -46,7 +46,7 @@ Lei contestada judicialmente desde a promulgação (ADC 87, ADIs 7582/7583/7586)
 
 Entradas conectadas nesta série:
 
-- [Entrada 1689](/timeline/entries/1689)
+- [Entrada 1689](/posts/id1689-stf-declara-inconstitucional-a-tese-do-marco-temporal-re-1017365-tema-1031/)
 
 ---
 

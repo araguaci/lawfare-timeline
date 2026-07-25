@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thread — Padrões Sistêmicos das Operações Anticorrupção</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+
+  :root {
+    --bg: #0c0c0e;
+    --surface: #131316;
+    --surface2: #1a1a1f;
+    --border: rgba(255,255,255,0.07);
+    --border2: rgba(255,255,255,0.12);
+    --text: #e8e6df;
+    --text-dim: #9a9790;
+    --text-dimmer: #5a5956;
+    --red: #e04444;
+    --amber: #d4921a;
+    --teal: #2a9d7a;
+    --blue: #4a8fd4;
+    --mono: 'IBM Plex Mono', monospace;
+    --serif: 'Source Serif 4', serif;
+    --display: 'Playfair Display', serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--serif);
+    min-height: 100vh;
+    padding: 40px 20px 80px;
+  }
+
+  .page-wrap {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  /* Header */
+  .header {
+    margin-bottom: 48px;
+    padding-bottom: 32px;
+    border-bottom: 0.5px solid var(--border2);
+  }
+
+  .header-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .header-label::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background: var(--red);
+  }
+
+  .header h1 {
+    font-family: var(--display);
+    font-size: clamp(26px, 5vw, 38px);
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 16px;
+  }
+
+  .header-meta {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-dimmer);
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .header-meta span { display: flex; align-items: center; gap: 5px; }
+
+  /* Thread container */
+  .thread { display: flex; flex-direction: column; gap: 0; }
+
+  /* Tweet card */
+  .tweet {
+    display: flex;
+    gap: 14px;
+    padding: 20px 0;
+    border-bottom: 0.5px solid var(--border);
+    position: relative;
+    opacity: 0;
+    transform: translateY(12px);
+    animation: fadeUp 0.4s ease forwards;
+  }
+
+  .tweet:last-child { border-bottom: none; }
+
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Vertical thread line */
+  .tweet-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40px;
+    flex-shrink: 0;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--surface2);
+    border: 1px solid var(--border2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-dim);
+    flex-shrink: 0;
+  }
+
+  .thread-line {
+    width: 1px;
+    flex: 1;
+    background: var(--border2);
+    margin-top: 8px;
+    min-height: 20px;
+  }
+
+  .tweet:last-child .thread-line { display: none; }
+
+  /* Tweet body */
+  .tweet-body { flex: 1; padding-top: 2px; }
+
+  .tweet-header {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .tweet-name {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  .tweet-handle {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-dimmer);
+  }
+
+  .tweet-num {
+    margin-left: auto;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--text-dimmer);
+    background: var(--surface2);
+    padding: 2px 7px;
+    border-radius: 3px;
+    border: 0.5px solid var(--border);
+  }
+
+  .tweet-text {
+    font-family: var(--serif);
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text);
+    white-space: pre-wrap;
+  }
+
+  .tweet-text .highlight { color: var(--red); font-weight: 600; }
+  .tweet-text .hl-amber { color: var(--amber); font-weight: 600; }
+  .tweet-text .hl-teal { color: var(--teal); font-weight: 600; }
+  .tweet-text .hl-blue { color: var(--blue); font-weight: 600; }
+
+  /* Special tweet types */
+  .tweet.opener .tweet-text {
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--text);
+  }
+
+  .tweet.section-break .tweet-body {
+    padding: 8px 0;
+  }
+
+  .section-tag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+
+  .tag-red { background: rgba(224,68,68,0.12); color: var(--red); border: 0.5px solid rgba(224,68,68,0.2); }
+  .tag-amber { background: rgba(212,146,26,0.12); color: var(--amber); border: 0.5px solid rgba(212,146,26,0.2); }
+  .tag-teal { background: rgba(42,157,122,0.12); color: var(--teal); border: 0.5px solid rgba(42,157,122,0.2); }
+  .tag-blue { background: rgba(74,143,212,0.12); color: var(--blue); border: 0.5px solid rgba(74,143,212,0.2); }
+
+  /* Data block inside tweet */
+  .data-block {
+    margin-top: 12px;
+    background: var(--surface2);
+    border: 0.5px solid var(--border2);
+    border-radius: 8px;
+    padding: 14px;
+    font-family: var(--mono);
+    font-size: 12px;
+  }
+
+  .data-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 5px 0;
+    border-bottom: 0.5px solid var(--border);
+  }
+  .data-row:last-child { border-bottom: none; }
+  .data-key { color: var(--text-dim); }
+  .data-val { color: var(--text); font-weight: 500; }
+  .data-val.red { color: var(--red); }
+  .data-val.amber { color: var(--amber); }
+  .data-val.teal { color: var(--teal); }
+
+  /* Quote block */
+  .quote-block {
+    margin-top: 12px;
+    border-left: 2px solid var(--red);
+    padding: 10px 14px;
+    background: rgba(224,68,68,0.05);
+    border-radius: 0 6px 6px 0;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.6;
+  }
+  .quote-block cite {
+    display: block;
+    font-style: normal;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--text-dimmer);
+    margin-top: 6px;
+  }
+
+  /* Closing call-to-action */
+  .cta-block {
+    margin-top: 16px;
+    padding: 16px;
+    background: linear-gradient(135deg, rgba(224,68,68,0.08), rgba(212,146,26,0.06));
+    border: 0.5px solid rgba(224,68,68,0.2);
+    border-radius: 8px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text-dim);
+    line-height: 1.7;
+  }
+
+  /* Copy all button */
+  .copy-section {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 0.5px solid var(--border2);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .copy-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-dimmer);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .copy-buttons { display: flex; gap: 8px; flex-wrap: wrap; }
+
+  .btn {
+    font-family: var(--mono);
+    font-size: 12px;
+    padding: 9px 16px;
+    border-radius: 6px;
+    border: 0.5px solid var(--border2);
+    background: var(--surface2);
+    color: var(--text-dim);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .btn:hover { background: var(--surface); color: var(--text); border-color: var(--border2); }
+  .btn.primary { background: rgba(224,68,68,0.1); border-color: rgba(224,68,68,0.3); color: var(--red); }
+  .btn.primary:hover { background: rgba(224,68,68,0.18); }
+  .btn.success { background: rgba(42,157,122,0.1); border-color: rgba(42,157,122,0.3); color: var(--teal); }
+
+  /* Plain text output */
+  .plain-output {
+    display: none;
+    margin-top: 16px;
+    background: var(--surface);
+    border: 0.5px solid var(--border2);
+    border-radius: 8px;
+    padding: 20px;
+    font-family: var(--mono);
+    font-size: 12px;
+    line-height: 1.8;
+    color: var(--text-dim);
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-height: 500px;
+    overflow-y: auto;
+  }
+
+  /* Staggered animation delays */
+  .tweet:nth-child(1)  { animation-delay: 0.02s; }
+  .tweet:nth-child(2)  { animation-delay: 0.06s; }
+  .tweet:nth-child(3)  { animation-delay: 0.10s; }
+  .tweet:nth-child(4)  { animation-delay: 0.14s; }
+  .tweet:nth-child(5)  { animation-delay: 0.18s; }
+  .tweet:nth-child(6)  { animation-delay: 0.22s; }
+  .tweet:nth-child(7)  { animation-delay: 0.26s; }
+  .tweet:nth-child(8)  { animation-delay: 0.30s; }
+  .tweet:nth-child(9)  { animation-delay: 0.34s; }
+  .tweet:nth-child(10) { animation-delay: 0.38s; }
+  .tweet:nth-child(11) { animation-delay: 0.42s; }
+  .tweet:nth-child(12) { animation-delay: 0.46s; }
+  .tweet:nth-child(13) { animation-delay: 0.50s; }
+  .tweet:nth-child(14) { animation-delay: 0.54s; }
+  .tweet:nth-child(15) { animation-delay: 0.58s; }
+  .tweet:nth-child(16) { animation-delay: 0.62s; }
+  .tweet:nth-child(17) { animation-delay: 0.66s; }
+  .tweet:nth-child(18) { animation-delay: 0.70s; }
+  .tweet:nth-child(19) { animation-delay: 0.74s; }
+  .tweet:nth-child(20) { animation-delay: 0.78s; }
+  .tweet:nth-child(21) { animation-delay: 0.82s; }
+  .tweet:nth-child(22) { animation-delay: 0.86s; }
+  .tweet:nth-child(23) { animation-delay: 0.90s; }
+  .tweet:nth-child(24) { animation-delay: 0.94s; }
+  .tweet:nth-child(25) { animation-delay: 0.98s; }
+  .tweet:nth-child(26) { animation-delay: 1.02s; }
+  .tweet:nth-child(27) { animation-delay: 1.06s; }
+  .tweet:nth-child(28) { animation-delay: 1.10s; }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <div class="header">
+    <div class="header-label">Thread investigativa — X.com</div>
+    <h1>4 operações. 6 padrões. O mesmo desfecho.</h1>
+    <div class="header-meta">
+      <span>28 tweets</span>
+      <span>Castelo de Areia · Satiagraha · Lava Jato · Banco Master</span>
+      <span>2025–2026</span>
+    </div>
+  </div>
+
+  <div class="thread" id="thread">
+
+    <!-- 01 — ABERTURA -->
+    <div class="tweet opener">
+      <div class="tweet-left">
+        <div class="avatar">🧵</div>
+        <div class="thread-line"></div>
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-header">
+          <span class="tweet-name">investigação</span>
+          <span class="tweet-num">01/28</span>
+        </div>
+        <div class="tweet-text">O Brasil investigou corrupção em grande escala 4 vezes nos últimos 17 anos.
+
+Castelo de Areia (2009). Satiagraha (2008). Lava Jato (2014). Banco Master (2025).
+
+3 foram anuladas. A quarta está em andamento — com os mesmos sinais de alerta.
+
+Há 6 padrões que se repetem em todas. Um fio. 🧵</div>
+      </div>
+    </div>
+
+    <!-- 02 — CONTEXTO -->
+    <div class="tweet">
+      <div class="tweet-left">
+        <div class="avatar">📋</div>
+        <div class="thread-line"></div>
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-header">
+          <span class="tweet-name">investigação</span>
+          <span class="tweet-num">02/28</span>
+        </div>
+        <div class="tweet-text">Antes dos padrões, os números brutos:
+
+<div class="data-block">
+  <div class="data-row"><span class="data-key">Rombo investigado total</span><span class="data-val red">R$ 100 bilhões+</span></div>
+  <div class="data-row"><span class="data-key">Condenações mantidas</span><span class="data-val amber">~30% (só Lava Jato)</span></div>
+  <div class="data-row"><span class="data-key">Operações efetivamente encerradas</span><span class="data-val red">75% anuladas</span></div>
+  <div class="data-row"><span class="data-key">Valor recuperado vs investigado</span><span class="data-val amber">~4%</span></div>
+  <div class="data-row"><span class="data-key">Tempo médio até anulação</span><span class="data-val">2,4 anos</span></div>
+</div></div>
+      </div>
+    </div>
+
+    <!-- 03 — PADRÃO 01 intro -->
+    <div class="tweet section-break">
+      <div class="tweet-left">
+        <div class="avatar">⚖️</div>
+        <div class="thread-line"></div>
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-header">
+          <span class="tweet-name">investigação</span>
+          <span class="tweet-num">03/28</span>
+        </div>
+        <div class="tweet-text"><span class="section-tag tag-red">Padrão 01</span>
+<span class="highlight">ANULAÇÃO POR VÍCIO PROCESSUAL</span>
+
+Em nenhuma das 3 operações extintas o investigado foi absolvido no mérito.
+
+Todos foram soltos por irregularidades no processo — nunca porque eram inocentes.</div>
+      </div>
+    </div>
+
+    <!-- 04 — P01 detalhes -->
+    <div class="tweet">
+      <div class="tweet-left">
+        <div class="avatar">⚖️</div>
+        <div class="thread-line"></div>
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-header">
+          <span class="tweet-name">investigação</span>
+          <span class="tweet-num">04/28</span>
+        </div>
+        <div class="tweet-text"><span class="highlight">Castelo de Areia (2011):</span> anulada pelo STJ porque a investigação teria partido de "denúncia anônima".
+
+Inédito: contrariou 33 decisões anteriores da mesma corte, que permitiam investigar a partir de delações anônimas.
+
+O tribunal mudou de posição para este caso específico.</div>
+      </div>
+    </div>
+
+    <!-- 05 — P01 Satiagraha -->
+    <div class="tweet">
+      <div class="tweet-left">
+        <div class="avatar">⚖️</div>
+        <div class="thread-line"></div>
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-header">
+          <span class="tweet-name">investigação</span>
+          <span class="tweet-num">05/28</span>
+        </div>
+        <div class="tweet-text"><span class="highlight">Satiagraha (2011):</span> anulada porque agentes da ABIN participaram da investigação — convocados informalmente pelo delegado.
+
+O STJ considerou "vício insanável".
+
+Mas o único condenado pela operação foi o delegado que investigou, não o banqueiro que foi preso.</div>
+      </div>
+    </div>
+
+    <!-- 06 — P01 Lava Jato -->
+    <div class="tweet">
+      <div class="tweet-left">
+        <div class="avatar">⚖️</div>
+        <div class="thread-line"></div>
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-header">
+          <span class="tweet-name">investigação</span>
+          <span class="tweet-num">06/28</span>
+        </div>
+        <div class="tweet-text"><span class="highlight">Lava Jato (2021):</span> condenações de Lula anuladas por incompetência territorial — os casos deveriam tramitar em Brasília, não em Curitiba.
+
+Quando reiniciados no DF, já estavam prescritos.
+
+O STF também declarou o juiz parcial. As provas não desapareceram. O prazo, sim.</div>
+      </div>
+    </div>
+
+    <!-- 07 — P01 conclusão -->
+    <div class="tweet">
+      <div class="tweet-left">
+        <div class="avatar">⚖️</div>
+        <div class="thread-line"></div>
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-header">
+          <span class="tweet-name">investigação</span>
+          <span class="tweet-num">07/28</span>
+        </div>
+        <div class="tweet-text">O padrão é claro: <span class="highlight">a estratégia defensiva padrão no Brasil é atacar o processo, não os fatos.</span>
+
+Não importa o volume de provas. Se o processo tiver qualquer falha formal — e todo processo tem — a abertura existe.
+
+É uma corrida: quem chega primeiro, a condenação ou a anulação?</div>
+      </div>
+    </div>
+
+    <!-- 08 — PADRÃO 02 intro -->
+    <div class="tweet section-break">
+      <div class="tweet-left">
+        <div class="avatar">🎯</div>
+        <div class="thread-line"></div>
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-header">
+          <span class="tweet-name">investigação</span>
+          <span class="tweet-num">08/28</span>
+        </div>
+        <div class="tweet-text"><span class="section-tag tag-amber">Padrão 02</span>
+<span class="hl-amber">O INVESTIGADOR VIRA INVESTIGADO</span>
+
+Em 3 das 4 operações, os principais responsáveis pela investigação foram processados, condenados ou destruídos institucionalmente.
+
+O polo da persecução se inverte.</div>
+      </div>
+    </div>
+
+    <!-- 09 — P02 casos -->
+    <div class="tweet">
+      <div class="tweet-left">
+        <div class="avatar">🎯</div>
+        <div class="thread-line"></div>
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-header">
+          <span class="tweet-name">investigação</span>
+          <span class="tweet-num">09/28</span>
+        </div>
+        <div class="tweet-text"><span class="hl-amber">Protógenes Queiroz</span> — delegado da Satiagraha. Condenado pelo STF a 2,5 anos. Expulso da PF. Hoje é asilado político na Suíça desde 2016.
+
+<span class="hl-amber">Sérgio Moro</span> — juiz da Lava Jato. Declarado parcial pelo STF em 2021. Provas coletadas durante sua atuação impedidas de uso futuro.
+
+<span class="hl-amber">Deltan Dallagnol</span> — procurador-chefe da LJ. Mandato de deputado cassado pela Justiça Eleitoral.</div>
+      </div>
+    </div>
+
+    <!-- 10 — P02 Master -->
+    <div class="tweet">
+      <div class="tweet-left">
+        <div class="avatar">🎯</div>
+        <div class="thread-line"></div>
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-header">
+          <span class="tweet-name">investigação</span>
+          <span class="tweet-num">10/28</span>
+        </div>
+        <div class="tweet-text">No caso Master, a pressão recai sobre o delegado Andrei Rodrigues, que produziu relatório sugerindo que o ministro Dias Toffoli deveria ser afastado da relatoria por proximidade com Vorcaro.
+
+O relatório foi chamado de <span class="hl-amber">"lixo jurídico"</span> pelos ministros do STF.
+
+O investigador passou a ser o problema.</div>
+      </div>
+    </div>
+
+    <!-- 11 — P02 conclusão -->
+    <div class="tweet">
+      <div class="tweet-left">
+        <div class="avatar">🎯</div>
+        <div class="thread-line"></div>
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-header">
+          <span class="tweet-name">investigação</span>
+          <span class="tweet-num">11/28</span>
+        </div>
+        <div class="tweet-text">O efeito prático desse padrão é devastador para futuras investigações:
+
+<span class="hl-amber">Nenhum delegado, juiz ou procurador observa o destino de Protógenes, Moro e Dallagnol sem calcular o risco pessoal de investigar poder.</span>
+
+A intimidação não precisa ser explícita. Os casos já são o recado.</div>
+      </div>
+    </div>
+
+    <!-- 12 — PADRÃO 03 intro -->
+    <div class="tweet section-break">
+      <div class="tweet-left">
+        <div class="avatar">🏛️</div>
+        <div class="thread-line"></div>
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-header">
+          <span class="tweet-name">investigação</span>
+          <span class="tweet-num">12/28</span>
+        </div>
+        <div class="tweet-text"><span class="section-tag tag-red">Padrão 03</span>
+<span class="highlight">CAPTURA JUDICIAL DE EMERGÊNCIA</span>
+
+Em cada operação, um ou mais membros de tribunal superior concederam liminares ou habeas corpus em circunstâncias atípicas, suspendendo prisões ou investigações no exato momento crítico.</div>
+      </div>
+    </div>
+
+    <!-- 13 — P03 casos -->
+    <div class="tweet">
+      <div class="tweet-left">
+        <div class="avatar">🏛️</div>
+        <div class="thread-line"></div>
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-header">
+          <span class="tweet-name">investigação</span>
+          <span class="tweet-num">13/28</span>
+        </div>
+        <div class="tweet-text"><span class="highlight">Satiagraha:</span> Gilmar Mendes (presidente do STF) concedeu 2 habeas corpus a Daniel Dantas em menos de 48 horas. Dantas entrou preso segunda-feira. Saiu quarta.
+
+O STF pleno depois referendou a decisão por 9 a 1.
+
+<div class="quote-block">"A Madre Teresa de Calcutá raramente pede habeas corpus."
+<cite>— Min. Gilmar Mendes, sobre os perfis que recebem HC no STF</cite></div></div>
+      </div>
+    </div>
+
+    <!-- 14 — P03 Castelo -->
+    <div class="tweet">
+      <div class="tweet-left">
+        <div class="avatar">🏛️</div>
+        <div class="thread-line"></div>
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-header">
+          <span class="tweet-name">investigação</span>
+          <span class="tweet-num">14/28</span>
+        </div>
+        <div class="tweet-text"><span class="highlight">Castelo de Areia:</span> Asfor Rocha (presidente do STJ) concedeu liminar suspendendo toda a operação durante o recesso judicial de janeiro de 2010 — quando os outros ministros estavam de férias.
+
+Anos depois, Palocci alegaria em delação que Asfor Rocha recebeu R$ 5 milhões pela decisão.
+
+A testemunha da acusação (Márcio Thomaz Bastos) havia morrido em 2014.</div>
+      </div>
+    </div>
+
+    <!-- 15 — P03 Master -->
+    <div class="tweet">
+      <div class="tweet-left">
+        <div class="avatar">🏛️</div>
+        <div class="thread-line"></div>
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-header">
+          <span class="tweet-name">investigação</span>
+          <span class="tweet-num">15/28</span>
+        </div>
+        <div class="tweet-text"><span class="highlight">Banco Master:</span> Dias Toffoli era o relator da investigação no STF. Após a 1ª prisão de Vorcaro, decretou sigilo máximo ao pedido da defesa.
+
+Depois veio a público: o cunhado de Vorcaro havia investido em um resort da família Toffoli.
+
+Toffoli foi removido da relatoria. A investigação foi redistribuída para André Mendonça.</div>
+      </div>
+    </div>
+
+    <!-- 16 — PADRÃO 04 intro -->
+    <div class="tweet section-break">
+      <div class="tweet-left">
+        <div class="avatar">📡</div>
+        <div class="thread-line"></div>
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-header">
+          <span class="tweet-name">investigação</span>
+          <span class="tweet-num">16/28</span>
+        </div>
+        <div class="tweet-text"><span class="section-tag tag-blue">Padrão 04</span>
+<span class="hl-blue">WEAPONIZAÇÃO DA MÍDIA</span>
+
+Em todas as operações há evidências de uso estratégico da imprensa — em ambas as direções. A mídia é usada tanto para espetacularizar prisões quanto para minar investigadores.</div>
+      </div>
+    </div>
+
+    <!-- 17 — P04 casos -->
+    <div class="tweet">
+      <div class="tweet-left">
+        <div class="avatar">📡</div>
+        <div class="thread-line"></div>
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-header">
+          <span class="tweet-name">investigação</span>
+          <span class="tweet-num">17/28</span>
+        </div>
+        <div class="tweet-text"><span class="hl-blue">Satiagraha:</span> Protógenes contratou uma equipe da TV Globo para filmar a prisão de Celso Pitta em pijama. Isso virou argumento para sua expulsão.
+
+<span class="hl-blue">Lava Jato:</span> Moro vazou a gravação de Lula com Dilma para a imprensa fora do prazo legal — em período eleitoral. Citado pelo STF como evidência de parcialidade.
+
+<span class="hl-blue">Master:</span> Vorcaro teria contratado influenciadores para atacar o Banco Central após a liquidação.</div>
+      </div>
+    </div>
+
+    <!-- 18 — P04 inversão -->
+    <div class="tweet">
+      <div class="tweet-left">
+        <div class="avatar">📡</div>
+        <div class="thread-line"></div>
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-header">
+          <span class="tweet-name">investigação</span>
+          <span class="tweet-num">18/28</span>
+        </div>
+        <div class="tweet-text">O mais sofisticado: Vorcaro teria acessado <span class="hl-blue">ilegalmente os sistemas da própria PF</span>, obtido informações do inquérito sigiloso e usado um site para "esquentar" a informação publicamente — tornando-a notícia — antes de apresentar uma petição ao juiz baseada nela.
+
+Transformou prova ilegal em peça processual via ciclo midiático.</div>
+      </div>
+    </div>
+
+    <!-- 19 — PADRÃO 05 intro -->
+    <div class="tweet section-break">
+      <div class="tweet-left">
+        <div class="avatar">🏦</div>
+        <div class="thread-line"></div>
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-header">
+          <span class="tweet-name">investigação</span>
+          <span class="tweet-num">19/28</span>
+        </div>
+        <div class="tweet-text"><span class="section-tag tag-teal">Padrão 05</span>
+<span class="hl-teal">COFRES PÚBLICOS COMO VETOR</span>
+
+Todos os esquemas usaram garantias do Estado como alavanca de amplificação. O risco privado foi sistematicamente transferido para o contribuinte.</div>
+      </div>
+    </div>
+
+    <!-- 20 — P05 casos -->
+    <div class="tweet">
+      <div class="tweet-left">
+        <div class="avatar">🏦</div>
+        <div class="thread-line"></div>
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-header">
+          <span class="tweet-name">investigação</span>
+          <span class="tweet-num">20/28</span>
+        </div>
+        <div class="tweet-text"><span class="hl-teal">Lava Jato:</span> contratos superfaturados com a Petrobras — estatal cujo prejuízo estimado foi de R$ 6 a 29 bilhões.
+
+<span class="hl-teal">Castelo de Areia:</span> licitações públicas fraudadas, incluindo o Metrô de Salvador.
+
+<span class="hl-teal">Satiagraha:</span> concessões de telecom com dinheiro de fundos de pensão e entes públicos.
+
+<span class="hl-teal">Master:</span> o próprio FGC — fundo bancado pelos bancos para proteger depositantes — usado como garantia implícita para captar R$ 50 bilhões a taxas insustentáveis.</div>
+      </div>
+    </div>
+
+    <!-- 21 — P05 Master detalhe -->
+    <div class="tweet">
+      <div class="tweet-left">
+        <div class="avatar">🏦</div>
+        <div class="thread-line"></div>
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-header">
+          <span class="tweet-name">investigação</span>
+          <span class="tweet-num">21/28</span>
+        </div>
+        <div class="tweet-text">O Master é o caso mais sofisticado.
+
+O banco oferecia CDBs com 140% do CDI — acima de qualquer banco saudável. A segurança era o FGC: "se quebrar, o fundo paga."
+
+<span class="hl-teal">Resultado:</span> o fundo precisou de R$ 56 bilhões. Os bancos sadios vão contribuir com o equivalente a 5 anos de aportes antecipados.
+
+Quem pagou a conta do risco privado? Os outros bancos — e, indiretamente, os clientes deles.</div>
+      </div>
+    </div>
+
+    <!-- 22 — PADRÃO 06 intro -->
+    <div class="tweet section-break">
+      <div class="tweet-left">
+        <div class="avatar">⏳</div>
+        <div class="thread-line"></div>
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-header">
+          <span class="tweet-name">investigação</span>
+          <span class="tweet-num">22/28</span>
+        </div>
+        <div class="tweet-text"><span class="section-tag tag-red">Padrão 06</span>
+<span class="highlight">PRESCRIÇÃO COMO ÂNCORA ESTRATÉGICA</span>
+
+O mecanismo de extinção mais frequente não é a absolvição no mérito.
+
+É o tempo. Deliberadamente consumido.</div>
+      </div>
+    </div>
+
+    <!-- 23 — P06 casos -->
+    <div class="tweet">
+      <div class="tweet-left">
+        <div class="avatar">⏳</div>
+        <div class="thread-line"></div>
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-header">
+          <span class="tweet-name">investigação</span>
+          <span class="tweet-num">23/28</span>
+        </div>
+        <div class="tweet-text">Na Lava Jato, os casos do tríplex e do sítio de Atibaia — as duas únicas condenações de Lula — prescreveram enquanto aguardavam redistribuição entre Curitiba e Brasília.
+
+<span class="highlight">Não houve absolvição. O prazo simplesmente correu.</span>
+
+Os advogados criminais especializados em grandes casos conhecem este ciclo de cor: anular → redistribuir → aguardar → prescrever.</div>
+      </div>
+    </div>
+
+    <!-- 24 — P06 mecanismo -->
+    <div class="tweet">
+      <div class="tweet-left">
+        <div class="avatar">⏳</div>
+        <div class="thread-line"></div>
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-header">
+          <span class="tweet-name">investigação</span>
+          <span class="tweet-num">24/28</span>
+        </div>
+        <div class="tweet-text">O mecanismo funciona porque o sistema processual brasileiro oferece múltiplos pontos de ataque formal — e cada recurso consome tempo irreversível.
+
+Uma investigação não precisa ser destruída. Só precisa ser <span class="highlight">suficientemente atrasada.</span>
+
+Para maiores de 70 anos, o prazo prescricional é reduzido pela metade. Lula completou 70 em 2015, enquanto os processos ainda tramitavam.</div>
+      </div>
+    </div>
+
+    <!-- 25 — SÍNTESE -->
+    <div class="tweet">
+      <div class="tweet-left">
+        <div class="avatar">🔬</div>
+        <div class="thread-line"></div>
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-header">
+          <span class="tweet-name">investigação</span>
+          <span class="tweet-num">25/28</span>
+        </div>
+        <div class="tweet-text">Os 6 padrões reunidos:
+
+<div class="data-block">
+  <div class="data-row"><span class="data-key">P01</span><span class="data-val">Anulação por vício processual</span></div>
+  <div class="data-row"><span class="data-key">P02</span><span class="data-val">Investigador vira investigado</span></div>
+  <div class="data-row"><span class="data-key">P03</span><span class="data-val">Captura judicial de emergência</span></div>
+  <div class="data-row"><span class="data-key">P04</span><span class="data-val">Weaponização da mídia</span></div>
+  <div class="data-row"><span class="data-key">P05</span><span class="data-val">Cofres públicos como vetor</span></div>
+  <div class="data-row"><span class="data-key">P06</span><span class="data-val red">Prescrição como âncora estratégica</span></div>
+</div>
+
+Cada padrão isolado tem uma explicação razoável. Os 6 juntos, repetidos em 4 operações ao longo de 17 anos, não são coincidência.</div>
+      </div>
+    </div>
+
+    <!-- 26 — O QUE MUDA NO MASTER -->
+    <div class="tweet">
+      <div class="tweet-left">
+        <div class="avatar">🔭</div>
+        <div class="thread-line"></div>
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-header">
+          <span class="tweet-name">investigação</span>
+          <span class="tweet-num">26/28</span>
+        </div>
+        <div class="tweet-text">O que diferencia o caso Master — e por que pode ter desfecho diferente:
+
+1. <span class="highlight">Rombo físico e imediato:</span> R$ 56 bi no FGC são visíveis e exigem reposição por todos os bancos. Não há como negar o prejuízo.
+
+2. <span class="highlight">Relatoria redistribuída:</span> Mendonça desbloqueou perícias que Toffoli havia travado. Acelerou o ritmo.
+
+3. <span class="highlight">3ª prisão em 4 meses:</span> Vorcaro foi preso preventivamente em março/2026 — sinal de que o STF não absorveu o padrão clássico de soltura imediata.</div>
+      </div>
+    </div>
+
+    <!-- 27 — QUESTÃO ABERTA -->
+    <div class="tweet">
+      <div class="tweet-left">
+        <div class="avatar">❓</div>
+        <div class="thread-line"></div>
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-header">
+          <span class="tweet-name">investigação</span>
+          <span class="tweet-num">27/28</span>
+        </div>
+        <div class="tweet-text">A questão que o histórico não responde ainda:
+
+<span class="highlight">É possível condenar com trânsito em julgado alguém com poder econômico e conexões institucionais suficientes para acionar todos os 6 padrões simultaneamente?</span>
+
+Em 17 anos e 4 operações, a resposta empírica brasileira é: não sabemos. Nunca chegamos até o fim com a condenação intacta.</div>
+      </div>
+    </div>
+
+    <!-- 28 — FECHAMENTO -->
+    <div class="tweet">
+      <div class="tweet-left">
+        <div class="avatar">📌</div>
+        <div class="thread-line"></div>
+      </div>
+      <div class="tweet-body">
+        <div class="tweet-header">
+          <span class="tweet-name">investigação</span>
+          <span class="tweet-num">28/28</span>
+        </div>
+        <div class="tweet-text">Esses dados são públicos. As operações, as decisões, os votos, as datas — tudo documentado.
+
+O que raramente se faz é colocá-los lado a lado e medir o padrão.
+
+<span class="highlight">Quando você faz isso, o sistema para de parecer uma série de falhas isoladas e começa a parecer uma arquitetura.</span>
+
+Salve, compartilhe e discuta. O debate público é uma das poucas ferramentas que ainda funciona.
+
+🧵 fim do fio</div>
+        <div class="cta-block">
+📎 Fontes: Wikipedia PT · Agência Brasil · Conjur · Poder360 · CNN Brasil · STF (portal.stf.jus.br) · MPF · Agência Pública · Aos Fatos
+
+Todos os dados verificáveis em fontes primárias públicas.
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /thread -->
+
+  <!-- COPY SECTION -->
+  <div class="copy-section">
+    <div class="copy-label">exportar para publicação</div>
+    <div class="copy-buttons">
+      <button class="btn primary" onclick="showPlainText()">Ver texto puro</button>
+      <button class="btn" onclick="copyAll()">Copiar todos os tweets</button>
+      <button class="btn" onclick="copyTweet(0)">Copiar tweet 01</button>
+    </div>
+    <div class="plain-output" id="plainOutput"></div>
+  </div>
+
+</div><!-- /page-wrap -->
+
+<script>
+const tweets = [
+  `01/28 🧵
+
+O Brasil investigou corrupção em grande escala 4 vezes nos últimos 17 anos.
+
+Castelo de Areia (2009). Satiagraha (2008). Lava Jato (2014). Banco Master (2025).
+
+3 foram anuladas. A quarta está em andamento — com os mesmos sinais de alerta.
+
+Há 6 padrões que se repetem em todas. Um fio. 🧵`,
+
+  `02/28
+
+Antes dos padrões, os números brutos:
+
+▪ Rombo investigado total: R$ 100 bilhões+
+▪ Condenações mantidas: ~30% (só Lava Jato)
+▪ Operações efetivamente extintas: 75%
+▪ Valor recuperado vs investigado: ~4%
+▪ Tempo médio até anulação: 2,4 anos`,
+
+  `03/28
+
+[ PADRÃO 01 — ANULAÇÃO POR VÍCIO PROCESSUAL ]
+
+Em nenhuma das 3 operações extintas o investigado foi absolvido no mérito.
+
+Todos foram soltos por irregularidades no processo — nunca porque eram inocentes.`,
+
+  `04/28
+
+Castelo de Areia (2011): anulada pelo STJ porque a investigação teria partido de "denúncia anônima".
+
+Inédito: contrariou 33 decisões anteriores da mesma corte, que permitiam investigar a partir de delações anônimas.
+
+O tribunal mudou de posição para este caso específico.`,
+
+  `05/28
+
+Satiagraha (2011): anulada porque agentes da ABIN participaram da investigação — convocados informalmente pelo delegado.
+
+O STJ considerou "vício insanável".
+
+Mas o único condenado pela operação foi o delegado que investigou, não o banqueiro que foi preso.`,
+
+  `06/28
+
+Lava Jato (2021): condenações de Lula anuladas por incompetência territorial — os casos deveriam tramitar em Brasília, não em Curitiba.
+
+Quando reiniciados no DF, já estavam prescritos.
+
+O STF também declarou o juiz parcial. As provas não desapareceram. O prazo, sim.`,
+
+  `07/28
+
+O padrão é claro: a estratégia defensiva padrão no Brasil é atacar o processo, não os fatos.
+
+Não importa o volume de provas. Se o processo tiver qualquer falha formal — e todo processo tem — a abertura existe.
+
+É uma corrida: quem chega primeiro, a condenação ou a anulação?`,
+
+  `08/28
+
+[ PADRÃO 02 — O INVESTIGADOR VIRA INVESTIGADO ]
+
+Em 3 das 4 operações, os principais responsáveis pela investigação foram processados, condenados ou destruídos institucionalmente.
+
+O polo da persecução se inverte.`,
+
+  `09/28
+
+Protógenes Queiroz — delegado da Satiagraha. Condenado pelo STF a 2,5 anos. Expulso da PF. Hoje é asilado político na Suíça desde 2016.
+
+Sérgio Moro — juiz da Lava Jato. Declarado parcial pelo STF em 2021. Provas coletadas durante sua atuação impedidas de uso futuro.
+
+Deltan Dallagnol — procurador-chefe da LJ. Mandato de deputado cassado pela Justiça Eleitoral.`,
+
+  `10/28
+
+No caso Master, a pressão recai sobre o delegado Andrei Rodrigues, que produziu relatório sugerindo que Dias Toffoli deveria ser afastado da relatoria por proximidade com Vorcaro.
+
+O relatório foi chamado de "lixo jurídico" pelos ministros do STF.
+
+O investigador passou a ser o problema.`,
+
+  `11/28
+
+O efeito prático desse padrão é devastador para futuras investigações:
+
+Nenhum delegado, juiz ou procurador observa o destino de Protógenes, Moro e Dallagnol sem calcular o risco pessoal de investigar poder.
+
+A intimidação não precisa ser explícita. Os casos já são o recado.`,
+
+  `12/28
+
+[ PADRÃO 03 — CAPTURA JUDICIAL DE EMERGÊNCIA ]
+
+Em cada operação, um ou mais membros de tribunal superior concederam liminares ou habeas corpus em circunstâncias atípicas, suspendendo prisões ou investigações no exato momento crítico.`,
+
+  `13/28
+
+Satiagraha: Gilmar Mendes (presidente do STF) concedeu 2 habeas corpus a Daniel Dantas em menos de 48 horas. Dantas entrou preso segunda-feira. Saiu quarta.
+
+O STF pleno depois referendou a decisão por 9 a 1.
+
+"A Madre Teresa de Calcutá raramente pede habeas corpus." — Min. Gilmar Mendes`,
+
+  `14/28
+
+Castelo de Areia: Asfor Rocha (presidente do STJ) concedeu liminar suspendendo toda a operação durante o recesso judicial de janeiro de 2010 — quando os outros ministros estavam de férias.
+
+Anos depois, Palocci alegaria em delação que Asfor Rocha recebeu R$ 5 milhões pela decisão.
+
+A testemunha da acusação havia morrido em 2014.`,
+
+  `15/28
+
+Banco Master: Dias Toffoli era o relator da investigação no STF. Após a 1ª prisão de Vorcaro, decretou sigilo máximo ao pedido da defesa.
+
+Depois veio a público: o cunhado de Vorcaro havia investido em um resort da família Toffoli.
+
+Toffoli foi removido da relatoria. A investigação redistribuída para André Mendonça.`,
+
+  `16/28
+
+[ PADRÃO 04 — WEAPONIZAÇÃO DA MÍDIA ]
+
+Em todas as operações há evidências de uso estratégico da imprensa — em ambas as direções. A mídia é usada tanto para espetacularizar prisões quanto para minar investigadores.`,
+
+  `17/28
+
+Satiagraha: Protógenes contratou uma equipe da TV Globo para filmar a prisão de Celso Pitta em pijama. Isso virou argumento para sua expulsão.
+
+Lava Jato: Moro vazou a gravação de Lula com Dilma para a imprensa fora do prazo legal — em período eleitoral. Citado pelo STF como evidência de parcialidade.
+
+Master: Vorcaro teria contratado influenciadores para atacar o Banco Central após a liquidação.`,
+
+  `18/28
+
+O mais sofisticado: Vorcaro teria acessado ilegalmente os sistemas da própria PF, obtido informações do inquérito sigiloso e usado um site para "esquentar" a informação publicamente antes de apresentar uma petição ao juiz baseada nela.
+
+Transformou prova ilegal em peça processual via ciclo midiático.`,
+
+  `19/28
+
+[ PADRÃO 05 — COFRES PÚBLICOS COMO VETOR ]
+
+Todos os esquemas usaram garantias do Estado como alavanca de amplificação. O risco privado foi sistematicamente transferido para o contribuinte.`,
+
+  `20/28
+
+Lava Jato: contratos superfaturados com a Petrobras — prejuízo estimado de R$ 6 a 29 bilhões.
+
+Castelo de Areia: licitações públicas fraudadas, incluindo o Metrô de Salvador.
+
+Satiagraha: concessões de telecom com dinheiro de fundos de pensão e entes públicos.
+
+Master: o próprio FGC — fundo bancado pelos bancos para proteger depositantes — usado como garantia implícita para captar R$ 50 bilhões a taxas insustentáveis.`,
+
+  `21/28
+
+O Master é o caso mais sofisticado.
+
+O banco oferecia CDBs com 140% do CDI. A segurança era o FGC: "se quebrar, o fundo paga."
+
+Resultado: o fundo precisou de R$ 56 bilhões. Os bancos sadios vão contribuir com o equivalente a 5 anos de aportes antecipados.
+
+Quem pagou a conta do risco privado? Os outros bancos — e, indiretamente, os clientes deles.`,
+
+  `22/28
+
+[ PADRÃO 06 — PRESCRIÇÃO COMO ÂNCORA ESTRATÉGICA ]
+
+O mecanismo de extinção mais frequente não é a absolvição no mérito.
+
+É o tempo. Deliberadamente consumido.`,
+
+  `23/28
+
+Na Lava Jato, os casos do tríplex e do sítio de Atibaia prescreveram enquanto aguardavam redistribuição entre Curitiba e Brasília.
+
+Não houve absolvição. O prazo simplesmente correu.
+
+Os advogados criminais especializados em grandes casos conhecem este ciclo de cor: anular → redistribuir → aguardar → prescrever.`,
+
+  `24/28
+
+O mecanismo funciona porque o sistema processual brasileiro oferece múltiplos pontos de ataque formal — e cada recurso consome tempo irreversível.
+
+Uma investigação não precisa ser destruída. Só precisa ser suficientemente atrasada.
+
+Para maiores de 70 anos, o prazo prescricional é reduzido pela metade. Lula completou 70 em 2015, enquanto os processos ainda tramitavam.`,
+
+  `25/28
+
+Os 6 padrões reunidos:
+
+P01 — Anulação por vício processual
+P02 — Investigador vira investigado
+P03 — Captura judicial de emergência
+P04 — Weaponização da mídia
+P05 — Cofres públicos como vetor
+P06 — Prescrição como âncora estratégica
+
+Cada padrão isolado tem uma explicação razoável. Os 6 juntos, repetidos em 4 operações ao longo de 17 anos, não são coincidência.`,
+
+  `26/28
+
+O que diferencia o caso Master — e por que pode ter desfecho diferente:
+
+1. Rombo físico e imediato: R$ 56 bi no FGC são visíveis e exigem reposição por todos os bancos.
+
+2. Relatoria redistribuída: Mendonça desbloqueou perícias que Toffoli havia travado.
+
+3. 3ª prisão em 4 meses: sinal de que o STF não absorveu o padrão clássico de soltura imediata.`,
+
+  `27/28
+
+A questão que o histórico não responde ainda:
+
+É possível condenar com trânsito em julgado alguém com poder econômico e conexões institucionais suficientes para acionar todos os 6 padrões simultaneamente?
+
+Em 17 anos e 4 operações, a resposta empírica brasileira é: não sabemos. Nunca chegamos até o fim com a condenação intacta.`,
+
+  `28/28
+
+Esses dados são públicos. As operações, as decisões, os votos, as datas — tudo documentado.
+
+O que raramente se faz é colocá-los lado a lado e medir o padrão.
+
+Quando você faz isso, o sistema para de parecer uma série de falhas isoladas e começa a parecer uma arquitetura.
+
+Salve, compartilhe e discuta. O debate público é uma das poucas ferramentas que ainda funciona.
+
+🧵 fim do fio
+
+📎 Fontes: Agência Brasil · Conjur · Poder360 · CNN Brasil · STF · MPF · Agência Pública`
+];
+
+function showPlainText() {
+  const el = document.getElementById('plainOutput');
+  if (el.style.display === 'block') { el.style.display = 'none'; return; }
+  el.textContent = tweets.join('\n\n' + '─'.repeat(40) + '\n\n');
+  el.style.display = 'block';
+  el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function copyAll() {
+  const text = tweets.join('\n\n' + '─'.repeat(40) + '\n\n');
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelectorAll('.btn')[1];
+    const orig = btn.textContent;
+    btn.textContent = '✓ Copiado!';
+    btn.classList.add('success');
+    setTimeout(() => { btn.textContent = orig; btn.classList.remove('success'); }, 2000);
+  });
+}
+
+function copyTweet(i) {
+  navigator.clipboard.writeText(tweets[i]).then(() => {
+    const btn = document.querySelectorAll('.btn')[2];
+    const orig = btn.textContent;
+    btn.textContent = '✓ Copiado!';
+    btn.classList.add('success');
+    setTimeout(() => { btn.textContent = orig; btn.classList.remove('success'); }, 2000);
+  });
+}
+</script>
+</body>
+</html>

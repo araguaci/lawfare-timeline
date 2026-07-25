@@ -56,7 +56,7 @@ Padrão estrutural agora confirmado em três estados com projetos minerais estra
 
 Entradas conectadas nesta série:
 
-- [Entrada 1685](/timeline/entries/1685)
+- [Entrada 1685](/posts/id1685-zema-aumenta-o-proprio-salario-de-governador-em-300/)
 
 ---
 

@@ -1,0 +1,92 @@
+{
+  "name": "Pílula de Ironia — lawfare-timeline (encerramento de tese)",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "manual-trigger-node",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [220, 300]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "assign-paciente",
+              "name": "paciente",
+              "type": "string",
+              "value": "Estatal acumula 14 trimestres seguidos de prejuízo. União garante novo empréstimo bancário para cobrir o rombo. Contrato obriga o próprio Tesouro a injetar mais dinheiro depois, sob pena de vencimento antecipado da dívida. Bancos cobram até 120% do CDI, sem risco. O risco é todo do pagador de imposto, que também é quem, no fim, garante o próprio empréstimo que financia seu próprio calote."
+            },
+            {
+              "id": "assign-autores",
+              "name": "autores",
+              "type": "array",
+              "value": ["millor", "lessa"]
+            },
+            {
+              "id": "assign-acidez",
+              "name": "acidez",
+              "type": "number",
+              "value": 3
+            }
+          ]
+        }
+      },
+      "id": "set-paciente-node",
+      "name": "Set Paciente (editar aqui a cada tese)",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://pilula-de-ironia.vercel.app/api/gerar",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ { \"texto\": $json.paciente, \"autores\": $json.autores, \"acidez\": $json.acidez } }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "id": "http-request-gerar-node",
+      "name": "POST /api/gerar",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [700, 300]
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Set Paciente (editar aqui a cada tese)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set Paciente (editar aqui a cada tese)": {
+      "main": [
+        [
+          {
+            "node": "POST /api/gerar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "meta": {
+    "description": "Workflow legado para lawfare-timeline: envia o resumo seco de uma tese/análise concluída ao endpoint público /api/gerar da Pílula de Ironia (pilula-de-ironia.vercel.app) e retorna a microcrônica satírica gerada. Ajuste o nó 'Set Paciente' a cada nova tese. Rate limit: 8 req/10min por IP. Ver API.md do repo araguaci/pilula-de-ironia para detalhes de contrato."
+  }
+}

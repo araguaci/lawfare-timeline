@@ -64,7 +64,7 @@ A tripla aliança governo estadual + construtora chinesa + mineradora nacional/g
 
 Entradas conectadas nesta série:
 
-- [Entrada 1654](/timeline/entries/1654)
+- [Entrada 1654](/posts/id1654-governo-do-para-assina-protocolo-de-intencoes-com-a-cccc-para-a-ferrovia-do-para/)
 
 ---
 

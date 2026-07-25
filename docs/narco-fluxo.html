@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NARCO FLUXO — Choquei: Da Campanha Eleitoral ao Crime Organizado</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #060709;
+    --surface: #0a0c10;
+    --surface2: #0e1118;
+    --surface3: #131820;
+    --border: #181f2a;
+    --border-hot: #252f3f;
+    --accent-red: #c0392b;
+    --accent-red-hot: #e74c3c;
+    --accent-amber: #e67e22;
+    --accent-gold: #f39c12;
+    --accent-blue: #2980b9;
+    --accent-teal: #16a085;
+    --accent-purple: #8e44ad;
+    --accent-pink: #c0392b;
+    --text: #ccd0d6;
+    --text-dim: #626e7c;
+    --text-bright: #edf1f4;
+    --text-mono: #a4b4c2;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+    line-height: 1.65;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.02) 2px, rgba(0,0,0,0.02) 4px);
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: linear-gradient(150deg, #08090d 0%, #0d1020 55%, #08090d 100%);
+    border-bottom: 2px solid var(--accent-red);
+    padding: 44px 60px 38px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent-purple), var(--accent-red-hot), var(--accent-amber), var(--accent-red-hot), transparent);
+  }
+
+  /* Money/corruption watermark */
+  .header::after {
+    content: '💰';
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 220px;
+    opacity: 0.03;
+    pointer-events: none;
+    line-height: 1;
+  }
+
+  .header-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .stamp-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+
+  .stamp {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border: 1px solid;
+  }
+
+  .s-red { color: var(--accent-red-hot); border-color: var(--accent-red); background: rgba(192,57,43,0.1); }
+  .s-amber { color: var(--accent-amber); border-color: var(--accent-amber); background: rgba(230,126,34,0.08); }
+  .s-purple { color: #b07fd4; border-color: var(--accent-purple); background: rgba(142,68,173,0.1); }
+  .s-blue { color: #5da8d4; border-color: var(--accent-blue); background: rgba(41,128,185,0.08); }
+
+  .header-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(26px, 3.8vw, 50px);
+    font-weight: 800;
+    color: var(--text-bright);
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+  }
+
+  .header-title .hi { color: var(--accent-red-hot); }
+  .header-title .hi2 { color: var(--accent-amber); }
+
+  .header-subtitle {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+  }
+
+  .header-deck {
+    font-size: 14px;
+    color: var(--text);
+    max-width: 720px;
+    line-height: 1.75;
+    border-left: 3px solid var(--accent-red);
+    padding-left: 18px;
+  }
+
+  .meta-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 190px;
+  }
+
+  .meta-item {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .meta-item strong { color: var(--text-mono); display: block; font-size: 12px; margin-top: 2px; }
+
+  /* ── NAV ── */
+  .nav-bar {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .nav-tab {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 13px 18px;
+    color: var(--text-dim);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    white-space: nowrap;
+    background: none;
+    border-left: none; border-right: none; border-top: none;
+    user-select: none;
+  }
+
+  .nav-tab:hover { color: var(--text); background: var(--surface2); }
+  .nav-tab.active { color: var(--accent-red-hot); border-bottom-color: var(--accent-red-hot); background: var(--surface2); }
+
+  /* ── MAIN ── */
+  .main { max-width: 1400px; margin: 0 auto; padding: 40px 60px; }
+
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  /* ── SECTION ── */
+  .section { margin-bottom: 36px; }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-icon {
+    width: 34px; height: 34px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px; flex-shrink: 0;
+  }
+
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-bright);
+  }
+
+  .section-code {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+    letter-spacing: 2px;
+    margin-left: auto;
+  }
+
+  /* ── TIMELINE ── */
+  .timeline { position: relative; padding-left: 26px; }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--accent-purple), var(--accent-red), var(--accent-amber));
+  }
+
+  .tl-item {
+    position: relative;
+    margin-bottom: 24px;
+    padding: 18px 22px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+  }
+
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    left: -32px; top: 20px;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-red);
+    background: var(--bg);
+  }
+
+  .tl-item.critical { border-top: 2px solid var(--accent-red-hot); }
+  .tl-item.high { border-top: 2px solid var(--accent-amber); }
+  .tl-item.info { border-top: 2px solid var(--accent-blue); }
+  .tl-item.purple { border-top: 2px solid var(--accent-purple); }
+
+  .tl-date {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+  }
+
+  .tl-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-bright);
+    margin-bottom: 7px;
+  }
+
+  .tl-body { font-size: 13px; color: var(--text); line-height: 1.7; }
+
+  .badge {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    padding: 2px 8px;
+    border: 1px solid;
+    margin-bottom: 7px;
+  }
+
+  .b-red { color: var(--accent-red-hot); border-color: var(--accent-red); background: rgba(192,57,43,0.1); }
+  .b-amber { color: var(--accent-amber); border-color: var(--accent-amber); background: rgba(230,126,34,0.08); }
+  .b-blue { color: #5da8d4; border-color: var(--accent-blue); background: rgba(41,128,185,0.08); }
+  .b-purple { color: #b07fd4; border-color: var(--accent-purple); background: rgba(142,68,173,0.1); }
+  .b-teal { color: var(--accent-teal); border-color: var(--accent-teal); background: rgba(22,160,133,0.08); }
+
+  /* ── GRIDS ── */
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: 16px; margin: 16px 0; }
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 14px; margin: 16px 0; }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 18px 20px;
+    transition: border-color 0.2s;
+  }
+  .card:hover { border-color: var(--border-hot); }
+
+  .card-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    margin-bottom: 9px;
+  }
+
+  .card-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-bright);
+    margin-bottom: 9px;
+    line-height: 1.3;
+  }
+
+  .card-body { font-size: 12.5px; color: var(--text); line-height: 1.7; }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 140px), 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin: 20px 0;
+  }
+
+  .stat-cell { background: var(--surface); padding: 18px; text-align: center; }
+
+  .stat-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--accent-red-hot);
+    line-height: 1;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  .stat-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    line-height: 1.4;
+  }
+
+  /* ── CALLOUT BOXES ── */
+  .box {
+    padding: 18px 22px;
+    margin: 14px 0;
+    border: 1px solid;
+  }
+  .box-red { background: rgba(192,57,43,0.08); border-color: rgba(192,57,43,0.4); border-left: 4px solid var(--accent-red-hot); }
+  .box-amber { background: rgba(230,126,34,0.06); border-color: rgba(230,126,34,0.3); border-left: 4px solid var(--accent-amber); }
+  .box-blue { background: rgba(41,128,185,0.06); border-color: rgba(41,128,185,0.3); border-left: 4px solid var(--accent-blue); }
+  .box-purple { background: rgba(142,68,173,0.08); border-color: rgba(142,68,173,0.3); border-left: 4px solid var(--accent-purple); }
+
+  .box h4 {
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text-bright);
+  }
+
+  .box p, .box li { font-size: 13px; color: var(--text); line-height: 1.7; }
+  .box ul { padding-left: 18px; }
+  .box li { margin-bottom: 4px; }
+
+  /* ── NETWORK DIAGRAM (CSS) ── */
+  .network {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 32px;
+    margin: 20px 0;
+    position: relative;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .net-row { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; }
+
+  .net-node {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    padding: 10px 16px;
+    border: 1px solid;
+    text-align: center;
+    line-height: 1.4;
+    min-width: 130px;
+    position: relative;
+  }
+
+  .node-red { color: var(--accent-red-hot); border-color: var(--accent-red); background: rgba(192,57,43,0.12); }
+  .node-amber { color: var(--accent-amber); border-color: var(--accent-amber); background: rgba(230,126,34,0.08); }
+  .node-purple { color: #b07fd4; border-color: var(--accent-purple); background: rgba(142,68,173,0.1); }
+  .node-blue { color: #5da8d4; border-color: var(--accent-blue); background: rgba(41,128,185,0.08); }
+  .node-teal { color: var(--accent-teal); border-color: var(--accent-teal); background: rgba(22,160,133,0.08); }
+  .node-dim { color: var(--text-dim); border-color: var(--border-hot); background: var(--surface2); }
+
+  .net-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--text-dim);
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .net-arrow { color: var(--text-dim); font-size: 18px; }
+
+  /* ── FAKE NEWS LIST ── */
+  .fn-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-red);
+    padding: 14px 18px;
+    margin-bottom: 10px;
+  }
+
+  .fn-date {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    color: var(--text-dim);
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+  }
+
+  .fn-claim { font-size: 13px; color: var(--accent-red-hot); font-weight: 600; margin-bottom: 4px; }
+  .fn-verdict { font-size: 12px; color: var(--text-dim); font-style: italic; }
+
+  /* ── THREAD ── */
+  .thread-wrap { max-width: 580px; margin: 0 auto; }
+
+  .tweet {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 16px 18px;
+    margin-bottom: 2px;
+    position: relative;
+  }
+
+  .tweet::after {
+    content: '';
+    position: absolute;
+    bottom: -18px;
+    left: 28px;
+    width: 2px; height: 16px;
+    background: var(--border-hot);
+  }
+
+  .tweet:last-child::after { display: none; }
+
+  .tweet-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    color: var(--text-dim);
+    letter-spacing: 2px;
+    margin-bottom: 7px;
+  }
+
+  .tweet-body {
+    font-size: 14px;
+    color: var(--text-bright);
+    line-height: 1.7;
+    white-space: pre-wrap;
+  }
+
+  .hl { color: var(--accent-amber); font-weight: 600; }
+  .hl-red { color: var(--accent-red-hot); }
+
+  /* ── PROSE ── */
+  .prose { font-size: 13.5px; color: var(--text); line-height: 1.8; max-width: 900px; }
+  .prose p { margin-bottom: 12px; }
+  .prose strong { color: var(--text-bright); }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: 28px 60px;
+    margin-top: 60px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+    letter-spacing: 1px;
+  }
+
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
+  .footer a { color: var(--accent-blue); text-decoration: none; }
+
+  @media (max-width: 768px) {
+    .header { padding: 26px 18px; }
+    .header-inner { grid-template-columns: 1fr; }
+    .header::after { display: none; }
+    .main { padding: 22px 18px; }
+    .footer { padding: 18px; }
+  }
+
+  @keyframes pulse-critical {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+  .blink { animation: pulse-critical 2s ease-in-out infinite; }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div>
+      <div class="stamp-row">
+        <span class="stamp s-red">🚨 OPERAÇÃO NARCO FLUXO</span>
+        <span class="stamp s-amber">15.04.2026</span>
+        <span class="stamp s-purple">PCC / LAVAGEM R$1,6 BI</span>
+        <span class="stamp s-blue">VERIFICADO</span>
+      </div>
+      <h1 class="header-title">
+        <span class="hi">CHOQUEI</span><br>
+        Da Campanha Eleitoral<br>
+        <span class="hi2">ao Crime Organizado</span>
+      </h1>
+      <p class="header-subtitle">RAPHAEL SOUSA OLIVEIRA — 27M SEGUIDORES — OPERADOR DE MÍDIA DO NARCOCRIMES</p>
+      <p class="header-deck">
+        O maior perfil de fofocas do Brasil — aliado declarado do governo Lula, próximo à primeira-dama Janja, responsável por fake news que contribuíram para o suicídio de uma jovem — foi preso pela Polícia Federal em 15 de abril de 2026 como operador de mídia de organização criminosa com conexões ao PCC e R$ 1,6 bilhão lavados em dois anos.
+      </p>
+    </div>
+    <div class="meta-block">
+      <div class="meta-item">Operação<strong>Narco Fluxo (PF)</strong></div>
+      <div class="meta-item">Data da prisão<strong>15 ABR 2026</strong></div>
+      <div class="meta-item">Preso<strong>Raphael Sousa Oliveira</strong></div>
+      <div class="meta-item">Seguidores<strong>27M (Instagram) + 9,4M (X)</strong></div>
+      <div class="meta-item">Montante lavado<strong style="color:var(--accent-red-hot)">R$ 1,6 bilhão</strong></div>
+      <div class="meta-item">Conexão<strong>PCC / MC Ryan SP</strong></div>
+    </div>
+  </div>
+</header>
+
+<nav class="nav-bar">
+  <div class="nav-inner">
+    <button class="nav-tab active" onclick="showTab('visao')">📌 Visão Geral</button>
+    <button class="nav-tab" onclick="showTab('cronologia')">⏱ Cronologia</button>
+    <button class="nav-tab" onclick="showTab('fakenews')">🔴 Fake News</button>
+    <button class="nav-tab" onclick="showTab('rede')">🕸️ Rede de Conexões</button>
+    <button class="nav-tab" onclick="showTab('operacao')">💰 Narco Fluxo</button>
+    <button class="nav-tab" onclick="showTab('jessica')">💀 Caso Jéssica</button>
+    <button class="nav-tab" onclick="showTab('thread')">🧵 Thread X</button>
+    <button class="nav-tab" onclick="showTab('fontes')">📎 Fontes</button>
+  </div>
+</nav>
+
+<main class="main">
+
+  <!-- ── VISÃO GERAL ── -->
+  <div class="tab-panel active" id="tab-visao">
+
+    <div class="stat-row">
+      <div class="stat-cell"><span class="stat-num">27M</span><span class="stat-label">Seguidores<br>Instagram</span></div>
+      <div class="stat-cell"><span class="stat-num">R$1,6B</span><span class="stat-label">Lavados em<br>24 meses</span></div>
+      <div class="stat-cell"><span class="stat-num">39</span><span class="stat-label">Mandados<br>de prisão</span></div>
+      <div class="stat-cell"><span class="stat-num">8</span><span class="stat-label">Estados +<br>DF</span></div>
+      <div class="stat-cell"><span class="stat-num">200</span><span class="stat-label">Agentes<br>PF</span></div>
+      <div class="stat-cell"><span class="stat-num">3ª</span><span class="stat-label">Maior conta<br>fake news mundo</span></div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">📌</div>
+        <div class="section-title">O Que Este Dossiê Documenta</div>
+      </div>
+
+      <div class="prose">
+        <p>A Choquei não era apenas uma página de fofocas. Era uma operação de influência que funcionou simultaneamente em três camadas: <strong>entretenimento como fachada</strong>, <strong>propaganda política como serviço</strong> e <strong>lavagem de dinheiro como negócio</strong>. As três camadas coexistiram e se reforçaram mutuamente durante anos, com conhecimento e participação ativa de atores no topo da estrutura de poder brasileira.</p>
+        <p>O dossiê aplica o framework P1–P8 do lawfare-timeline e documenta as conexões entre a rede da Choquei, a campanha eleitoral de 2022, a primeira-dama Janja, e o esquema de lavagem de dinheiro ligado ao PCC investigado na Operação Narco Fluxo.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card" style="border-top:2px solid var(--accent-purple);">
+          <div class="card-label">CAMADA 1 — FACHADA</div>
+          <div class="card-title">Entretenimento e Fofoca</div>
+          <div class="card-body">27 milhões de seguidores no Instagram, 9,4 milhões no X. Fundada em 2014. Conteúdo sobre celebridades, reality shows e fofocas criava audiência massiva e legitimidade de marca — o "escudo de conformidade" que a PF identifica como central ao esquema.</div>
+        </div>
+
+        <div class="card" style="border-top:2px solid var(--accent-red);">
+          <div class="card-label">CAMADA 2 — PROPAGANDA</div>
+          <div class="card-title">Arma Eleitoral e Narrativa</div>
+          <div class="card-body">Mais de 10 publicações políticas por hora no 2º turno de 2022. Campanha sistemática pró-Lula. Fake news contra adversários. Acesso privilegiado à primeira-dama. Conteúdos exclusivos enviados por Janja. Subiu no carro de som da vitória.</div>
+        </div>
+
+        <div class="card" style="border-top:2px solid var(--accent-amber);">
+          <div class="card-label">CAMADA 3 — CRIME</div>
+          <div class="card-title">Lavagem e Crime Organizado</div>
+          <div class="card-body">Operador de mídia de organização ligada ao PCC. R$ 1,6 bilhão movimentados em 24 meses via criptoativos, dinheiro em espécie e operações financeiras complexas. Promoção de apostas ilegais, rifas e plataformas criminosas. Gerenciamento de crises de imagem do grupo criminoso.</div>
+        </div>
+      </div>
+
+      <div class="box box-red" style="margin-top:20px;">
+        <h4 style="color:var(--accent-red-hot);">⚠️ A QUESTÃO ESTRUTURAL QUE NINGUÉM RESPONDE</h4>
+        <p>Janja, que mantinha contato direto com Raphael Sousa, que enviava conteúdos exclusivos para a Choquei, que o convidou para o carro de som da vitória, que o recebeu no Palácio do Planalto em fevereiro de 2023 — sabia da relação do influenciador com o crime organizado? Quando soube? E se sabia: o governo utilizou conscientemente recursos de lavagem do PCC para financiar sua narrativa digital?</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CRONOLOGIA ── -->
+  <div class="tab-panel" id="tab-cronologia">
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">⏱</div>
+        <div class="section-title">Cronologia — 2014 a 2026</div>
+        <span class="section-code">ASCENSÃO E QUEDA</span>
+      </div>
+
+      <div class="timeline">
+
+        <div class="tl-item info">
+          <div class="tl-date">2014</div>
+          <span class="badge b-blue">FUNDAÇÃO</span>
+          <div class="tl-title">Raphael Sousa cria a Choquei — abandona faculdade de publicidade</div>
+          <div class="tl-body">Natural de Goiás, Raphael Sousa Oliveira funda a página de fofocas. O modelo é apostas em velocidade, sensacionalismo e reciclagem de conteúdo sem checagem. Cresce rapidamente no ecossistema de celebridades e reality shows brasileiros.</div>
+        </div>
+
+        <div class="tl-item info">
+          <div class="tl-date">2021 — DEZ</div>
+          <span class="badge b-blue">APROXIMAÇÃO POLÍTICA</span>
+          <div class="tl-title">Lula começa a interagir com a Choquei no X</div>
+          <div class="tl-body">Desde dezembro de 2021, Lula segue e responde publicações da Choquei com emojis e comentários descontraídos. A aproximação acontece em paralelo ao início da campanha eleitoral. Em dezembro de 2021, o perfil agradece ao presidente por tê-lo seguido de volta; Lula responde com emoji de soco.</div>
+        </div>
+
+        <div class="tl-item critical">
+          <div class="tl-date">2022 — JUN</div>
+          <span class="badge b-purple">ACESSO PRIVILEGIADO</span>
+          <div class="tl-title">Janja apresenta Raphael a Lula e envia conteúdos exclusivos de bastidores</div>
+          <div class="tl-body">Janja, seguidora da Choquei, facilita o encontro entre Raphael e Lula. Durante a campanha presidencial, a primeira-dama passa a enviar <strong>fotos dos bastidores de debates</strong> para publicação exclusiva na Choquei antes dos demais veículos. Acesso de gabinete dado a um perfil de fofocas com 21 milhões de seguidores.</div>
+        </div>
+
+        <div class="tl-item critical">
+          <div class="tl-date">2022 — 2º TURNO</div>
+          <span class="badge b-red">MÁQUINA ELEITORAL</span>
+          <div class="tl-title">Mais de 10 publicações políticas por hora — Choquei supera André Janones em menções</div>
+          <div class="tl-body">No segundo turno, a Choquei se torna o principal disseminador informal da campanha Lula. <strong>Mais mencionada que André Janones</strong> em grupos de WhatsApp em todos os dias do período. Fake news contra adversários, mobilizações contra eventos bolsonaristas (40 mil inscrições falsas canceladas no evento do PL). O próprio Raphael admite em entrevista ao Flow Podcast que sua atuação ajudou a eleger Lula.</div>
+        </div>
+
+        <div class="tl-item critical">
+          <div class="tl-date">28 OUT 2022</div>
+          <span class="badge b-red">VITÓRIA</span>
+          <div class="tl-title">Raphael sobe no carro de som oficial da equipe de Lula</div>
+          <div class="tl-body">Após a vitória de Lula, Janja convida Raphael para subir no carro de som oficial e acompanhar o discurso de vitória do petista. O influenciador aparece ao lado da cúpula do governo no momento de maior exposição pública da campanha.</div>
+        </div>
+
+        <div class="tl-item purple">
+          <div class="tl-date">FEV 2023</div>
+          <span class="badge b-purple">PLANALTO</span>
+          <div class="tl-title">Choquei recebida no Palácio do Planalto — "influenciadores pela democracia"</div>
+          <div class="tl-body">Lula e Janja recebem Raphael, artistas e influenciadores no Palácio do Planalto para reunião intitulada "influenciadores pela democracia". O grupo havia tido papel central na amplificação digital do candidato em 2022. Raphael integra o grupo formal de influenciadores do governo.</div>
+        </div>
+
+        <div class="tl-item critical">
+          <div class="tl-date">22 DEZ 2023</div>
+          <span class="badge b-red">TRAGÉDIA</span>
+          <div class="tl-title">Jéssica Canedo, 22 anos, comete suicídio após fake news da Choquei</div>
+          <div class="tl-body">A Choquei republica uma fake news sobre suposto relacionamento de Jéssica Canedo com o humorista Whindersson Nunes. A jovem nega o envolvimento, pede que parem de compartilhar. Raphael ironiza o tamanho do texto dela: <em>"Avisa pra ela que a redação do ENEM já passou."</em> Jéssica é encontrada morta em 22 de dezembro. Tinha 22 anos, havia tentado se matar quatro vezes no mesmo ano.</div>
+        </div>
+
+        <div class="tl-item high">
+          <div class="tl-date">28 DEZ 2023</div>
+          <span class="badge b-amber">DEPOIMENTO</span>
+          <div class="tl-title">Raphael presta depoimento à PC-MG — Choquei confessa republicação da fake news</div>
+          <div class="tl-body">A Choquei admite ter republicado conteúdo falso gerado por outro perfil. Alega não ser a fonte original. Raphael apresenta documentos e diálogos. Em 2024, a PC-MG conclui que Jéssica havia forjado as mensagens e as divulgado ela mesma. Nenhum responsável pela amplificação que levou ao suicídio foi criminalmente responsabilizado.</div>
+        </div>
+
+        <div class="tl-item critical">
+          <div class="tl-date">15 ABR 2026</div>
+          <span class="badge b-red">PRISÃO</span>
+          <div class="tl-title">Operação Narco Fluxo — Raphael preso em Goiânia como operador de mídia do crime</div>
+          <div class="tl-body">A PF deflagra a maior operação contra lavagem de dinheiro ligada ao PCC. Raphael Sousa Oliveira é preso em Goiânia. É apontado como <strong>"operador de mídia da organização criminosa, recebendo altos valores"</strong> de MC Ryan SP, líder do esquema, em troca de promoção de artistas, plataformas de apostas ilegais e gerenciamento de crises de imagem relacionadas às investigações.</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FAKE NEWS ── -->
+  <div class="tab-panel" id="tab-fakenews">
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">🔴</div>
+        <div class="section-title">Registro de Fake News Documentadas</div>
+        <span class="section-code">SELEÇÃO — NÃO EXAUSTIVO</span>
+      </div>
+
+      <div class="box box-red" style="margin-bottom:24px;">
+        <h4>3ª CONTA QUE MAIS PRODUZ FAKE NEWS NO MUNDO</h4>
+        <p>Segundo levantamento publicado pela Gazeta do Povo e confirmado por múltiplas verificações, a Choquei figura entre as três contas com maior produção de desinformação no mundo. O método: velocidade + sensacionalismo + reciclagem sem checagem. O objetivo: tráfego, engajamento e, em contexto eleitoral, narrativa favorável ao governo.</p>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-date">DEZ 2023</div>
+        <div class="fn-claim">Fake: Jéssica Canedo teria tido relacionamento com Whindersson Nunes</div>
+        <div class="fn-verdict">Verificação: Jéssica negou. Whindersson negou. A PC-MG concluiu que as mensagens foram forjadas pela própria vítima. Resultado: suicídio de jovem de 22 anos.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-date">2023</div>
+        <div class="fn-claim">Fake: Rio Nilo estava "da cor de sangue"</div>
+        <div class="fn-verdict">Verificação: Era uma lagoa no Chile. Conteúdo compartilhado sem qualquer checagem básica para audiência de dezenas de milhões.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-date">2023</div>
+        <div class="fn-claim">Fake: Vídeo de suposta tentativa de assassinato do presidente palestino Mahmoud Abbas</div>
+        <div class="fn-verdict">Verificação: Era um vídeo de confronto entre criminosos e agentes de segurança sem qualquer relação com Abbas.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-date">NOV 2022 — 2º TURNO</div>
+        <div class="fn-claim">Fake: William Bonner teria aberto cerveja no estúdio do JN para comemorar vitória de Lula</div>
+        <div class="fn-verdict">Verificação: Bonner abriu uma lata de água. A desinformação foi publicada no período mais crítico da campanha eleitoral.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-date">2022</div>
+        <div class="fn-claim">Fake: Damares Alves teria pedido a Bolsonaro que vetasse entrega de leitos de UTI e água potável a indígenas</div>
+        <div class="fn-verdict">Verificação: Falsa. Publicação alcançou mais de 2 milhões de pessoas. Nenhuma retratação com alcance equivalente foi publicada.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-date">2022</div>
+        <div class="fn-claim">Fake: Vídeo de briga em estação de metrô de Nova York publicado como real</div>
+        <div class="fn-verdict">Verificação: Era um esquete humorístico. A Choquei apresentou ficção como realidade para audiência de milhões.</div>
+      </div>
+
+      <div class="fn-item">
+        <div class="fn-date">2022 — CAMPANHA</div>
+        <div class="fn-claim">Ação: Incentivo a lulistas a sabotarem o evento de lançamento da candidatura de Bolsonaro</div>
+        <div class="fn-verdict">Resultado: A organização do evento do PL teve que cancelar 40.000 inscrições falsas. Interferência direta no processo eleitoral.</div>
+      </div>
+
+      <div class="box box-amber" style="margin-top:20px;">
+        <h4>PADRÃO: VELOCIDADE SEM RESPONSABILIDADE</h4>
+        <p>Em nenhum dos casos de fake news documentados a Choquei publicou retratação com alcance equivalente ao da publicação original. O modelo de negócio era baseado em velocidade de publicação — a verificação era um obstáculo, não um valor. Com 27 milhões de seguidores, cada publicação falsa atingia uma audiência equivalente a vários estados brasileiros.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── REDE ── -->
+  <div class="tab-panel" id="tab-rede">
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">🕸️</div>
+        <div class="section-title">Mapa de Conexões</div>
+        <span class="section-code">GOVERNO / INFLUÊNCIA / CRIME</span>
+      </div>
+
+      <div class="network">
+        <div class="net-label">TOPO DA CADEIA POLÍTICA</div>
+        <div class="net-row">
+          <div class="net-node node-red">LULA<br><small>Presidente</small></div>
+          <div class="net-arrow">↔</div>
+          <div class="net-node node-red">JANJA<br><small>Primeira-dama</small></div>
+        </div>
+        <div class="net-row"><div class="net-arrow" style="font-size:24px;">↕</div></div>
+        <div class="net-label">OPERADOR DE MÍDIA</div>
+        <div class="net-row">
+          <div class="net-node node-amber">RAPHAEL SOUSA<br><small>Choquei / 27M seg.</small></div>
+        </div>
+        <div class="net-row"><div class="net-arrow" style="font-size:24px;">↕</div></div>
+        <div class="net-label">REDE CRIMINOSA (OP. NARCO FLUXO)</div>
+        <div class="net-row">
+          <div class="net-node node-purple">MC RYAN SP<br><small>Líder do esquema</small></div>
+          <div class="net-arrow">—</div>
+          <div class="net-node node-purple">MC POZE<br><small>Movimentações</small></div>
+          <div class="net-arrow">—</div>
+          <div class="net-node node-dim">FRANK MAGRINI<br><small>Operador financeiro</small></div>
+        </div>
+        <div class="net-row"><div class="net-arrow" style="font-size:24px;">↕</div></div>
+        <div class="net-label">FONTE DOS RECURSOS ILÍCITOS</div>
+        <div class="net-row">
+          <div class="net-node node-red">PCC<br><small>Primeiro Comando</small></div>
+          <div class="net-arrow">+</div>
+          <div class="net-node node-dim">BETS ILEGAIS<br><small>Jogo do tigrinho</small></div>
+          <div class="net-arrow">+</div>
+          <div class="net-node node-dim">RIFAS DIGITAIS<br><small>Clandestinas</small></div>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="box box-purple">
+          <h4>VETOR: GOVERNO → CHOQUEI</h4>
+          <ul>
+            <li>Janja enviava fotos exclusivas de bastidores de debates</li>
+            <li>Acesso ao carro de som oficial da vitória</li>
+            <li>Reunião no Palácio do Planalto (fev.2023)</li>
+            <li>Integração ao grupo "Influenciadores pela Democracia"</li>
+            <li>Interações públicas regulares de Lula no X</li>
+          </ul>
+        </div>
+
+        <div class="box box-red">
+          <h4>VETOR: CHOQUEI → GOVERNO</h4>
+          <ul>
+            <li>Campanha pró-Lula com 10+ posts políticos/hora no 2º turno</li>
+            <li>Amplificação de narrativas favoráveis ao governo</li>
+            <li>Ataques sistemáticos a adversários via fake news</li>
+            <li>Sabotagem de eventos da oposição</li>
+            <li>Supressão de cobertura de crises do governo</li>
+          </ul>
+        </div>
+
+        <div class="box box-amber">
+          <h4>VETOR: CRIME → CHOQUEI</h4>
+          <ul>
+            <li>Pagamentos de "altos valores" de MC Ryan SP (líder do esquema)</li>
+            <li>Promoção remunerada de plataformas de apostas ilegais</li>
+            <li>Divulgação de rifas digitais clandestinas</li>
+            <li>Gerenciamento pago de crises de imagem da organização</li>
+            <li>Parte do "escudo de conformidade" que dava aparência legal ao esquema</li>
+          </ul>
+        </div>
+
+        <div class="box box-blue">
+          <h4>QUESTÃO ABERTA: O QUE JANJA SABIA?</h4>
+          <ul>
+            <li>Janja mantinha contato direto com Raphael desde 2022</li>
+            <li>Recebeu Raphael no Planalto em fev.2023</li>
+            <li>Parou de usar o X em agosto de 2024 — após início das investigações?</li>
+            <li>Assessoria do Planalto não respondeu perguntas após a prisão</li>
+            <li>Ausência de nota ou distanciamento formal após a operação</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── NARCO FLUXO ── -->
+  <div class="tab-panel" id="tab-operacao">
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">💰</div>
+        <div class="section-title">Operação Narco Fluxo — Estrutura do Esquema</div>
+        <span class="section-code">PF — 15 ABR 2026</span>
+      </div>
+
+      <div class="prose" style="margin-bottom:24px;">
+        <p>A Operação Narco Fluxo é desdobramento direto da Operação Narco Bet. Investiga uma organização criminosa especializada em lavagem de capitais que movimentou <strong>R$ 1,63 bilhão em menos de 24 meses</strong> usando a indústria do entretenimento e das redes sociais como fachada.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-label">ESTRUTURA DO ESQUEMA</div>
+          <div class="card-title">Como o Dinheiro Era Lavado</div>
+          <div class="card-body">
+            1. PCC e operadores injetam capital em bets fraudulentas e rifas digitais clandestinas.<br><br>
+            2. Recursos chegam às produtoras musicais de MC Ryan SP via pagamentos de "apostadores".<br><br>
+            3. Dinheiro é convertido em criptoativos, transferências bancárias de alto valor e numerário em espécie.<br><br>
+            4. Influenciadores como a Choquei recebem para promover artistas e plataformas, adicionando camada de legitimidade e camuflagem.<br><br>
+            5. O alto engajamento da audiência funcionava como "escudo de conformidade" — aparência de legalidade para as movimentações.
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-label">PAPEL DA CHOQUEI</div>
+          <div class="card-title">Operador de Mídia da Organização</div>
+          <div class="card-body">
+            Segundo a decisão judicial que autorizou as prisões, Raphael Sousa é apontado como <strong>"operador de mídia da organização, recebendo altos valores"</strong> em troca de:<br><br>
+            → Produção de conteúdos favoráveis a MC Ryan SP<br>
+            → Promoção de plataformas de apostas ilegais<br>
+            → Divulgação de rifas digitais<br>
+            → <strong>Atuação nas redes sociais para conter crises de imagem relacionadas às investigações</strong><br><br>
+            Este último ponto é estruturalmente crítico: a Choquei era paga para suprimir informações sobre o próprio esquema criminoso — exatamente a função que exercia também em relação às crises do governo Lula.
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item info">
+          <div class="tl-date">2014 — ORIGEM DOCUMENTADA</div>
+          <span class="badge b-blue">FINANCIAMENTO INICIAL</span>
+          <div class="tl-title">Frank Magrini financia início da carreira de MC Ryan SP</div>
+          <div class="tl-body">Segundo as apurações da PF, Frank Magrini — apontado como operador financeiro da organização com conexões ao PCC — teria financiado o início da carreira de Ryan em 2014. A relação envolvia o pagamento de "mensalidades" sistemáticas por estabelecimentos comerciais do grupo. O vínculo entre a carreira artística e o crime organizado existe desde o início.</div>
+        </div>
+
+        <div class="tl-item critical">
+          <div class="tl-date">2024–2026</div>
+          <span class="badge b-red">ESCALA BILIONÁRIA</span>
+          <div class="tl-title">R$ 1,63 bilhão em 24 meses — criptoativos, espécie e operações bancárias</div>
+          <div class="tl-body">O grupo utilizava três camadas de lavagem: (1) criptoativos para movimentações internacionais rápidas e difíceis de rastrear; (2) transporte de numerário em espécie para pagamentos diretos; (3) operações bancárias de alto valor através das produtoras musicais. A investigação aponta conexão com o PCC como fornecedor primário dos recursos ilícitos — tráfico de drogas como fonte principal.</div>
+        </div>
+
+        <div class="tl-item critical">
+          <div class="tl-date">15 ABR 2026 — OPERAÇÃO</div>
+          <span class="badge b-red">MEGAOPERAÇÃO</span>
+          <div class="tl-title">200 agentes, 9 estados + DF, 39 prisões, veículos de luxo e armas</div>
+          <div class="tl-body">A operação mobilizou cerca de 200 agentes da PF com apoio da PM-SP. Foram apreendidos veículos de luxo, altas quantias em dinheiro, armas e — item que chamou atenção — <strong>um colar com a imagem de Pablo Escobar sobre um mapa de São Paulo</strong>, simbolizando a conexão do grupo com referências do narcotráfico internacional. MC Ryan foi preso numa festa na Riviera de São Lourenço; MC Poze, em condomínio de luxo no Recreio dos Bandeirantes; Raphael, em Goiânia.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CASO JÉSSICA ── -->
+  <div class="tab-panel" id="tab-jessica">
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">💀</div>
+        <div class="section-title">Caso Jéssica Canedo — A Morte que Ninguém Pagou</div>
+        <span class="section-code">DEZ 2023 — ARAGUARI/MG</span>
+      </div>
+
+      <div class="box box-red" style="margin-bottom:24px;">
+        <h4 style="color:var(--accent-red-hot);">FATO CENTRAL</h4>
+        <p>Jéssica Vitória Canedo, 22 anos, morreu em 22 de dezembro de 2023 após a Choquei — com 21 milhões de seguidores à época — republicar uma fake news sobre ela. Era sua quinta tentativa de suicídio no mesmo ano. Raphael Sousa, ao invés de remover o conteúdo quando alertado pela mãe e pela própria Jéssica, ironizou o texto de defesa dela: <strong>"Avisa pra ela que a redação do ENEM já passou."</strong></p>
+      </div>
+
+      <div class="timeline">
+
+        <div class="tl-item critical">
+          <div class="tl-date">DEZEMBRO 2023</div>
+          <span class="badge b-red">ORIGEM</span>
+          <div class="tl-title">Perfil "Garotx do Blog" publica fake news — Choquei republica para 21 milhões</div>
+          <div class="tl-body">Um perfil menor publica prints forjados de suposto relacionamento entre Jéssica e o humorista Whindersson Nunes. A Choquei republica sem qualquer verificação para sua audiência massiva. Whindersson nega publicamente. A fake news viraliza em escala nacional.</div>
+        </div>
+
+        <div class="tl-item critical">
+          <div class="tl-date">DEZEMBRO 2023</div>
+          <span class="badge b-red">PEDIDO IGNORADO</span>
+          <div class="tl-title">Mãe e vítima pedem remoção — Raphael ironiza</div>
+          <div class="tl-body">A mãe de Jéssica, Inês Oliveira, faz post desesperado: <em>"Eu estou aqui, como uma mãe, pedindo pelo amor de Deus, gente, parem de postar isso."</em> A própria Jéssica nega e pede que parem. Ela havia tentado se matar quatro vezes naquele ano. Raphael responde ao texto de defesa de Jéssica com: <strong>"Avisa pra ela que a redação do ENEM já passou."</strong></div>
+        </div>
+
+        <div class="tl-item critical">
+          <div class="tl-date">22 DEZ 2023</div>
+          <span class="badge b-red">MORTE</span>
+          <div class="tl-title">Jéssica Vitória Canedo é encontrada morta. 22 anos.</div>
+          <div class="tl-body">Jéssica Canedo morre em Araguari, Minas Gerais. Tinha 22 anos. A quinta tentativa de suicídio no ano foi bem-sucedida. Era a segunda Natal da família sem paz.</div>
+        </div>
+
+        <div class="tl-item high">
+          <div class="tl-date">28 DEZ 2023</div>
+          <span class="badge b-amber">DEPOIMENTO</span>
+          <div class="tl-title">Raphael presta depoimento — Choquei emite nota de "lamento profundo"</div>
+          <div class="tl-body">A Choquei emite nota lamentando o ocorrido. Raphael presta depoimento à PC-MG, apresenta documentos transferindo responsabilidade ao perfil original. A nota não menciona a resposta irônica ao texto de defesa de Jéssica.</div>
+        </div>
+
+        <div class="tl-item info">
+          <div class="tl-date">2024 — CONCLUSÃO</div>
+          <span class="badge b-blue">IMPUNIDADE</span>
+          <div class="tl-title">PC-MG conclui que Jéssica forjou as mensagens — ninguém criminalmente responsabilizado</div>
+          <div class="tl-body">A Polícia Civil de MG conclui que as mensagens foram forjadas pela própria Jéssica e divulgadas por ela a perfis de fofoca. A conclusão exclui responsabilidade criminal da Choquei pela publicação em si — mas não aborda a resposta de Raphael ao pedido de remoção, nem a amplificação para 21 milhões de seguidores de conteúdo que a vítima explicitamente dizia ser falso.</div>
+        </div>
+
+      </div>
+
+      <div class="box box-amber" style="margin-top:16px;">
+        <h4>O APROVEITAMENTO POLÍTICO DA MORTE</h4>
+        <p>Após o suicídio de Jéssica, ministros do governo Lula — Silvio Almeida (Direitos Humanos) e Cida Gonçalves (Mulheres) — usaram o caso publicamente para defender a regulamentação das redes sociais e impulsionar a PL das Fake News. O episódio, causado em parte por um aliado do governo, foi instrumentalizado para avançar uma agenda de controle de plataformas que beneficia o próprio governo. O mesmo governo que recebia no Planalto o responsável pela publicação.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── THREAD ── -->
+  <div class="tab-panel" id="tab-thread">
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">🧵</div>
+        <div class="section-title">Thread para X</div>
+        <span class="section-code">OTIMIZADO PARA ALGORITMO 2026</span>
+      </div>
+
+      <div class="thread-wrap">
+
+        <div class="tweet">
+          <div class="tweet-num">1/11 — GANCHO</div>
+          <div class="tweet-body"><span class="hl-red">🚨 O maior perfil de fofocas do Brasil (27M seguidores) foi preso pela PF.</span>
+
+Motivo: operador de mídia de organização ligada ao PCC que lavou R$1,6 bilhão.
+
+Mas isso é só o começo. O que vem antes é mais grave.
+
+🧵</div>
+        </div>
+
+        <div class="tweet">
+          <div class="tweet-num">2/11</div>
+          <div class="tweet-body">A Choquei não era só uma página de fofoca.
+
+Era uma operação de influência com 3 camadas simultâneas:
+
+→ Entretenimento como fachada
+→ Propaganda política como serviço
+→ Lavagem de dinheiro como negócio
+
+As 3 camadas funcionavam ao mesmo tempo. Com as mesmas pessoas.</div>
+        </div>
+
+        <div class="tweet">
+          <div class="tweet-num">3/11</div>
+          <div class="tweet-body">Durante a campanha de 2022, Janja enviava <span class="hl">fotos exclusivas dos bastidores</span> dos debates para a Choquei publicar antes de qualquer veículo.
+
+No 2º turno: mais de <span class="hl">10 publicações políticas por hora.</span>
+
+A Choquei foi mais mencionada em grupos de WhatsApp que André Janones.
+
+O próprio dono admitiu: ajudou a eleger Lula.</div>
+        </div>
+
+        <div class="tweet">
+          <div class="tweet-num">4/11</div>
+          <div class="tweet-body">Depois da vitória, Janja convidou Raphael para <span class="hl">subir no carro de som oficial.</span>
+
+Em fevereiro de 2023, foi recebido no Palácio do Planalto na reunião de "influenciadores pela democracia".
+
+Lula trocava emojis de soco com ele no X.</div>
+        </div>
+
+        <div class="tweet">
+          <div class="tweet-num">5/11</div>
+          <div class="tweet-body">Em dezembro de 2023, a Choquei publicou uma fake news sobre uma jovem de 22 anos.
+
+A mãe dela implorou para removerm o conteúdo. A própria jovem negou.
+
+Raphael respondeu ao texto de defesa dela:
+
+<span class="hl-red">"Avisa pra ela que a redação do ENEM já passou."</span>
+
+Jéssica Canedo morreu três dias depois.</div>
+        </div>
+
+        <div class="tweet">
+          <div class="tweet-num">6/11</div>
+          <div class="tweet-body">Depois da morte de Jéssica, ministros do governo Lula usaram o caso para defender a regulamentação das redes sociais.
+
+O episódio foi causado por um aliado direto do governo.
+
+E foi aproveitado pelo mesmo governo para avançar uma agenda de controle de plataformas.</div>
+        </div>
+
+        <div class="tweet">
+          <div class="tweet-num">7/11</div>
+          <div class="tweet-body">A 3ª conta que mais produz fake news no mundo, segundo levantamento publicado:
+
+— Rio Nilo da cor de sangue (era lagoa no Chile)
+— Tentativa de assassinato de Mahmoud Abbas (cena de crime comum)
+— Bonner abre cerveja no JN (era água)
+— Damares vetou UTIs para indígenas (falso)
+
+Nenhuma retratação com alcance equivalente.</div>
+        </div>
+
+        <div class="tweet">
+          <div class="tweet-num">8/11</div>
+          <div class="tweet-body">Enquanto isso, nos bastidores:
+
+A Choquei recebia pagamentos de <span class="hl">MC Ryan SP</span> — apontado como líder de organização criminosa com conexões ao PCC.
+
+Em troca: promoção de apostas ilegais, rifas clandestinas e <span class="hl-red">gerenciamento de crises de imagem</span> relacionadas às investigações.
+
+R$1,6 bilhão lavado em 24 meses.</div>
+        </div>
+
+        <div class="tweet">
+          <div class="tweet-num">9/11</div>
+          <div class="tweet-body">Numa das apreensões: um colar com a imagem de Pablo Escobar sobre um mapa de São Paulo.
+
+200 agentes da PF. 9 estados + DF. 39 mandados de prisão.
+
+Raphael preso em Goiânia. MC Ryan numa festa na Riviera de São Lourenço. MC Poze num condomínio de luxo no Rio.</div>
+        </div>
+
+        <div class="tweet">
+          <div class="tweet-num">10/11 — PERGUNTA CENTRAL</div>
+          <div class="tweet-body">Janja <span class="hl">sabia</span>?
+
+Ela mantinha contato direto com Raphael desde 2022.
+Enviava conteúdos exclusivos.
+O recebeu no Planalto em 2023.
+Parou de usar o X em agosto de 2024.
+
+A assessoria do Planalto não respondeu nenhuma pergunta após a prisão.</div>
+        </div>
+
+        <div class="tweet">
+          <div class="tweet-num">11/11 — CTA</div>
+          <div class="tweet-body">A questão não é se a Choquei produzia fake news.
+
+É se o governo Lula <span class="hl">sabia a fonte do financiamento</span> de sua principal arma de influência digital.
+
+E se sabia: usou conscientemente recursos do PCC para construir sua narrativa eleitoral?
+
+Dossiê completo 👇
+RT se isso precisa chegar em mais pessoas.</div>
+        </div>
+
+      </div>
+
+      <div style="max-width:580px;margin:20px auto 0;">
+        <div class="box box-blue">
+          <h4>💡 INSTRUÇÃO DE PUBLICAÇÃO</h4>
+          <p>Link do dossiê no <strong>primeiro reply</strong>, não no tweet 1. Publicar entre 18h–21h (horário de Brasília). Responder replies nas primeiras 2 horas. Tweet 5 (morte de Jéssica) tem alto potencial de quote tweet — engajar nos replies desse tweet especificamente.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FONTES ── -->
+  <div class="tab-panel" id="tab-fontes">
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">📎</div>
+        <div class="section-title">Fontes</div>
+        <span class="section-code">CC0 1.0 — DOMÍNIO PÚBLICO</span>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-label">OPERAÇÃO NARCO FLUXO</div>
+          <div class="card-title">CNN Brasil / Poder360 / Gazeta do Povo</div>
+          <div class="card-body">Cobertura da prisão de Raphael Sousa Oliveira em 15/04/2026. Descrição do papel do dono da Choquei como "operador de mídia da organização criminosa". Detalhamento do esquema de R$1,63 bilhão e das conexões com o PCC via Frank Magrini.</div>
+        </div>
+
+        <div class="card">
+          <div class="card-label">CONEXÕES GOVERNO / CHOQUEI</div>
+          <div class="card-title">Poder360 / Pleno.News / Gazeta do Povo</div>
+          <div class="card-body">Documentação das interações entre Lula, Janja e a Choquei. Registro de conteúdos exclusivos enviados por Janja. Relato da subida no carro de som e da reunião no Planalto em fev.2023. Histórico de interações no X.</div>
+        </div>
+
+        <div class="card">
+          <div class="card-label">FAKE NEWS E CASO JÉSSICA</div>
+          <div class="card-title">Gazeta do Povo / CNN Brasil</div>
+          <div class="card-body">Documentação do caso Jéssica Canedo (dez.2023). Registro da resposta irônica de Raphael. Levantamento de fake news documentadas da Choquei. Classificação como 3ª conta com maior produção de desinformação.</div>
+        </div>
+
+        <div class="card">
+          <div class="card-label">ADMISSÃO DO PRÓPRIO DONO</div>
+          <div class="card-title">Flow Podcast / Entrevistas públicas</div>
+          <div class="card-body">Em entrevista ao Flow Podcast, Raphael Sousa admitiu que sua atuação pode ter ajudado a eleger Lula e que todos os colaboradores da Choquei eram pró-Lula. Admissão pública do papel eleitoral da página.</div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin:20px 0;">
+        <a class="nav-tab" style="border:1px solid var(--border);padding:6px 12px;font-size:10px;" href="operacao-persona-non-grata.html">→ Persona Non Grata</a>
+        <a class="nav-tab" style="border:1px solid var(--border);padding:6px 12px;font-size:10px;" href="inq4781.html">→ INQ 4.781</a>
+        <a class="nav-tab" style="border:1px solid var(--border);padding:6px 12px;font-size:10px;" href="vaza-toga.html">→ Vaza Toga</a>
+        <a class="nav-tab" style="border:1px solid var(--border);padding:6px 12px;font-size:10px;" href="republica-capturada.html">→ República Capturada</a>
+        <a class="nav-tab" style="border:1px solid var(--border);padding:6px 12px;font-size:10px;" href="https://lawfare-timeline.vercel.app" target="_blank">→ lawfare-timeline.vercel.app</a>
+      </div>
+
+      <div class="box box-amber" style="margin-top:8px;">
+        <h4>LACUNAS INVESTIGATIVAS IDENTIFICADAS</h4>
+        <ul>
+          <li>Quando exatamente Janja soube da relação de Raphael com o esquema criminoso?</li>
+          <li>O governo Lula recebeu serviços pagos com recursos de lavagem do PCC?</li>
+          <li>Raphael gerenciou crises relacionadas a investigações que envolviam também figuras do governo?</li>
+          <li>Qual foi o papel da Choquei na supressão da cobertura do caso Banco Master?</li>
+          <li>Existem outros influenciadores da mesma rede ainda não identificados?</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div>LAWFARE-TIMELINE.VERCEL.APP — OBSERVATÓRIO CIVIL BRASIL</div>
+      <div style="margin-top:4px;">DOSSIÊ: NARCO FLUXO — CHOQUEI: DA CAMPANHA ELEITORAL AO CRIME ORGANIZADO — 20.04.2026</div>
+    </div>
+    <div style="text-align:right;">
+      <div>CC0 1.0 UNIVERSAL — DOMÍNIO PÚBLICO</div>
+      <div style="margin-top:4px;"><a href="https://lawfare-timeline.vercel.app">lawfare-timeline.vercel.app</a> | <a href="https://observatorio-civil-br.vercel.app">observatorio-civil-br.vercel.app</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function showTab(id) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

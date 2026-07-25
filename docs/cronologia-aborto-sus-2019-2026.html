@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abortos por Razões Médicas e Legais no SUS — Cronologia Verificada 2019–2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c0b09;
+    --bg-panel:#151310;
+    --bg-panel-2:#1c1915;
+    --border:rgba(201,163,94,0.18);
+    --border-soft:rgba(232,224,208,0.08);
+    --gold:#c9a35e;
+    --gold-bright:#e0bd7d;
+    --cream:#e8e0d0;
+    --cream-dim:#b8ae9a;
+    --cream-faint:#78705f;
+    --red:#a84632;
+    --red-bright:#c9573f;
+    --blue:#5b7a9d;
+    --violet:#8a72a8;
+    --green-muted:#6f8f6a;
+    --shadow: 0 12px 32px rgba(0,0,0,0.45);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--bg);
+    background-image:
+      radial-gradient(circle at 15% 8%, rgba(201,163,94,0.06), transparent 40%),
+      radial-gradient(circle at 85% 92%, rgba(90,70,140,0.05), transparent 45%);
+    color:var(--cream);
+    font-family:'EB Garamond', serif;
+    font-size:18px;
+    line-height:1.65;
+    padding:0 0 80px 0;
+  }
+  .wrap{max-width:920px; margin:0 auto; padding:0 28px;}
+
+  /* HEADER */
+  header.masthead{
+    padding:64px 28px 48px 28px;
+    border-bottom:1px solid var(--border);
+    text-align:center;
+    background:linear-gradient(180deg, rgba(201,163,94,0.05), transparent);
+  }
+  .kicker{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:18px;
+  }
+  h1{
+    font-family:'Playfair Display', serif;
+    font-weight:700;
+    font-size:2.6em;
+    line-height:1.15;
+    color:var(--cream);
+    max-width:780px;
+    margin:0 auto 18px auto;
+  }
+  header .subtitle{
+    font-style:italic;
+    color:var(--cream-dim);
+    max-width:620px;
+    margin:0 auto;
+    font-size:1.05em;
+  }
+  .meta-row{
+    display:flex;
+    justify-content:center;
+    gap:24px;
+    margin-top:28px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    color:var(--cream-faint);
+    letter-spacing:0.05em;
+  }
+
+  /* SECTION HEADERS */
+  section{padding:56px 28px; border-bottom:1px solid var(--border-soft);}
+  .section-label{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:10px;
+  }
+  h2{
+    font-family:'Playfair Display', serif;
+    font-weight:600;
+    font-size:1.9em;
+    color:var(--cream);
+    margin-bottom:8px;
+  }
+  .section-intro{color:var(--cream-dim); max-width:680px; margin-bottom:36px; font-size:0.98em;}
+
+  /* DATA PANEL */
+  .data-panel{
+    background:var(--bg-panel);
+    border:1px solid var(--border);
+    border-radius:6px;
+    padding:32px;
+    box-shadow:var(--shadow);
+  }
+  .chart{
+    display:flex;
+    align-items:flex-end;
+    gap:14px;
+    height:220px;
+    padding:0 8px 8px 8px;
+    border-bottom:1px solid var(--border-soft);
+    margin-bottom:14px;
+  }
+  .bar-col{flex:1; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; height:100%;}
+  .bar{
+    width:100%;
+    max-width:52px;
+    background:linear-gradient(180deg, var(--gold-bright), var(--gold));
+    border-radius:3px 3px 0 0;
+    position:relative;
+    transition:opacity 0.2s;
+  }
+  .bar.partial{background:linear-gradient(180deg, rgba(224,189,125,0.45), rgba(201,163,94,0.45)); border:1px dashed var(--gold);}
+  .bar-val{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px;
+    color:var(--cream);
+    margin-bottom:6px;
+  }
+  .bar-labels{display:flex; gap:14px; padding:0 8px;}
+  .bar-label{flex:1; text-align:center; font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--cream-faint);}
+  .chart-note{font-size:0.85em; color:var(--cream-faint); font-style:italic; margin-top:10px;}
+
+  .stat-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border); margin-top:28px; border:1px solid var(--border); border-radius:6px; overflow:hidden;}
+  .stat{background:var(--bg-panel-2); padding:20px; text-align:center;}
+  .stat-num{font-family:'Playfair Display',serif; font-weight:700; font-size:1.7em; color:var(--gold-bright);}
+  .stat-label{font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--cream-faint); text-transform:uppercase; letter-spacing:0.08em; margin-top:6px;}
+
+  /* TIMELINE */
+  .timeline{position:relative; padding-left:36px; margin-top:8px;}
+  .timeline::before{content:''; position:absolute; left:7px; top:6px; bottom:6px; width:1px; background:linear-gradient(180deg, var(--gold), var(--border));}
+  .event{position:relative; padding-bottom:30px;}
+  .event:last-child{padding-bottom:0;}
+  .event::before{
+    content:''; position:absolute; left:-36px; top:5px; width:11px; height:11px;
+    border-radius:50%; background:var(--bg); border:2px solid var(--gold);
+  }
+  .event.opinion::before{border-color:var(--red);}
+  .event-date{font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--gold); letter-spacing:0.03em;}
+  .event-body{background:var(--bg-panel); border:1px solid var(--border-soft); border-radius:5px; padding:16px 20px; margin-top:8px;}
+  .tag{
+    display:inline-block; font-family:'JetBrains Mono', monospace; font-size:9.5px; letter-spacing:0.08em;
+    text-transform:uppercase; padding:2px 8px; border-radius:3px; margin-right:8px; margin-bottom:8px;
+    border:1px solid currentColor;
+  }
+  .tag.dado{color:var(--blue);}
+  .tag.admin{color:var(--gold);}
+  .tag.judicial{color:var(--violet);}
+  .tag.politico{color:#c98f4a;}
+  .tag.opiniao{color:var(--red-bright);}
+  .event-title{font-weight:600; color:var(--cream); margin-bottom:4px; font-size:1.05em;}
+  .event-desc{color:var(--cream-dim); font-size:0.96em;}
+  .event-src{font-family:'JetBrains Mono', monospace; font-size:10.5px; color:var(--cream-faint); margin-top:10px;}
+
+  /* ALERTS */
+  .alert{
+    background:rgba(168,70,50,0.08);
+    border:1px solid rgba(168,70,50,0.35);
+    border-left:3px solid var(--red-bright);
+    border-radius:4px;
+    padding:18px 22px;
+    margin-bottom:16px;
+  }
+  .alert-head{
+    display:flex; align-items:center; gap:8px;
+    font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:0.1em;
+    text-transform:uppercase; color:var(--red-bright); margin-bottom:8px;
+  }
+  .alert-body{color:var(--cream-dim); font-size:0.96em;}
+  .alert-body b{color:var(--cream);}
+
+  /* LEGAL SECTION */
+  .legal-box{background:var(--bg-panel); border:1px solid var(--border); border-radius:6px; padding:32px;}
+  .legal-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:20px;}
+  @media(max-width:640px){.legal-grid{grid-template-columns:1fr;}}
+  .legal-block h3{
+    font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--gold); margin-bottom:10px; border-bottom:1px solid var(--border-soft); padding-bottom:8px;
+  }
+  .legal-block p{color:var(--cream-dim); font-size:0.95em; margin-bottom:8px;}
+  .certainty{font-style:italic; color:var(--gold-bright);}
+  .legal-disclaimer{
+    margin-top:26px; padding-top:18px; border-top:1px dashed var(--border);
+    font-size:0.85em; color:var(--cream-faint); font-style:italic;
+  }
+
+  /* REFERENCES */
+  .ref-group{margin-bottom:28px;}
+  .ref-group h3{
+    font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--gold); margin-bottom:12px;
+  }
+  .ref-list{list-style:none;}
+  .ref-list li{
+    padding:10px 0; border-bottom:1px solid var(--border-soft);
+    display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;
+  }
+  .ref-list li:last-child{border-bottom:none;}
+  .ref-name{color:var(--cream); font-size:0.95em;}
+  .ref-link{
+    font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--blue);
+    text-decoration:none; word-break:break-all;
+  }
+  .ref-link:hover{color:var(--gold-bright);}
+  .bias-note{font-size:0.8em; color:var(--cream-faint); font-style:italic; margin-top:2px; width:100%;}
+
+  .tag.correcao{color:var(--green-muted);}
+  .tag.nova{color:var(--gold-bright); border-style:dashed;}
+
+  .alert.alert-resolved{
+    background:rgba(111,143,106,0.08);
+    border:1px solid rgba(111,143,106,0.35);
+    border-left:3px solid var(--green-muted);
+  }
+  .alert.alert-resolved .alert-head{color:var(--green-muted);}
+
+  /* NAV STICKY */
+  nav.topnav{
+    position:sticky; top:0; z-index:100;
+    background:rgba(12,11,9,0.92);
+    backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+    display:flex; align-items:center; justify-content:space-between;
+    padding:0 24px; height:56px;
+  }
+  .topnav-brand{
+    font-family:'Playfair Display', serif; font-weight:700; font-size:1.05em;
+    color:var(--gold-bright); text-decoration:none; white-space:nowrap;
+  }
+  .topnav-brand span{color:var(--cream-faint); font-family:'JetBrains Mono', monospace; font-size:0.55em; letter-spacing:0.1em; display:block; margin-top:-2px;}
+  .topnav-links{display:flex; gap:4px; align-items:center; overflow-x:auto; scrollbar-width:none;}
+  .topnav-links::-webkit-scrollbar{display:none;}
+  .topnav-links a{
+    font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase;
+    color:var(--cream-dim); text-decoration:none; padding:8px 12px; border-radius:4px; white-space:nowrap;
+    transition:color 0.15s, background 0.15s;
+  }
+  .topnav-links a:hover, .topnav-links a.active{color:var(--gold-bright); background:rgba(201,163,94,0.08);}
+  .topnav-share{display:flex; gap:6px; align-items:center; margin-left:12px; padding-left:12px; border-left:1px solid var(--border-soft);}
+  .share-btn{
+    width:30px; height:30px; border-radius:5px; border:1px solid var(--border);
+    background:var(--bg-panel-2); color:var(--cream-dim); display:flex; align-items:center; justify-content:center;
+    cursor:pointer; transition:color 0.15s, border-color 0.15s, transform 0.1s;
+  }
+  .share-btn:hover{color:var(--gold-bright); border-color:var(--gold); transform:translateY(-1px);}
+  .share-btn svg{width:14px; height:14px; fill:currentColor;}
+  .share-toast{
+    position:fixed; bottom:32px; left:50%; transform:translateX(-50%) translateY(20px);
+    background:var(--bg-panel-2); border:1px solid var(--gold); color:var(--cream);
+    padding:10px 18px; border-radius:6px; font-family:'JetBrains Mono', monospace; font-size:12px;
+    opacity:0; pointer-events:none; transition:opacity 0.25s, transform 0.25s; z-index:200; box-shadow:var(--shadow);
+  }
+  .share-toast.show{opacity:1; transform:translateX(-50%) translateY(0);}
+
+  @media(max-width:760px){
+    .topnav-links{display:none;}
+    nav.topnav{padding:0 16px;}
+  }
+
+  /* GO TOP */
+  #go-top{
+    position:fixed; bottom:28px; right:28px; z-index:150;
+    width:46px; height:46px; border-radius:50%;
+    background:var(--bg-panel-2); border:1px solid var(--gold);
+    color:var(--gold-bright); display:flex; align-items:center; justify-content:center;
+    cursor:pointer; box-shadow:var(--shadow);
+    opacity:0; visibility:hidden; transform:translateY(10px);
+    transition:opacity 0.25s, transform 0.25s, visibility 0.25s, background 0.15s;
+  }
+  #go-top.visible{opacity:1; visibility:visible; transform:translateY(0);}
+  #go-top:hover{background:rgba(201,163,94,0.15);}
+  #go-top svg{width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:2.4;}
+
+  /* RELATED CARDS */
+  .related-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; margin-top:8px;
+  }
+  @media(max-width:860px){.related-grid{grid-template-columns:repeat(2, 1fr);}}
+  @media(max-width:600px){.related-grid{grid-template-columns:1fr;}}
+  .related-card{
+    background:var(--bg-panel); border:1px solid var(--border-soft); border-radius:6px;
+    padding:20px; display:flex; flex-direction:column; text-decoration:none;
+    transition:border-color 0.18s, transform 0.18s, box-shadow 0.18s;
+  }
+  .related-card:hover{border-color:var(--gold); transform:translateY(-3px); box-shadow:var(--shadow);}
+  .related-card-title{
+    font-family:'Playfair Display', serif; font-weight:600; font-size:1.08em;
+    color:var(--cream); margin-bottom:8px; line-height:1.3;
+  }
+  .related-card-desc{color:var(--cream-dim); font-size:0.85em; line-height:1.5; flex-grow:1; margin-bottom:14px;
+    display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;}
+  .related-card-meta{
+    display:flex; justify-content:space-between; align-items:center;
+    font-family:'JetBrains Mono', monospace; font-size:10px; color:var(--cream-faint);
+    padding-top:12px; border-top:1px solid var(--border-soft); text-transform:uppercase; letter-spacing:0.04em;
+  }
+  .related-card-tag{color:var(--gold);}
+
+  footer{padding:48px 28px; text-align:center;}
+  footer p{color:var(--cream-faint); font-size:0.85em; font-family:'JetBrains Mono', monospace;}
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <a class="topnav-brand" href="https://gosurf.site">gosurf.site<span>LAWFARE-TIMELINE · CORPUS</span></a>
+  <div class="topnav-links">
+    <a href="#dados">Dados</a>
+    <a href="#cronologia">Cronologia</a>
+    <a href="#alertas">Alertas</a>
+    <a href="#juridico">Jurídico</a>
+    <a href="#fontes">Fontes</a>
+    <a href="#relacionados">Relacionados</a>
+  </div>
+  <div class="topnav-share">
+    <button class="share-btn" onclick="shareTo('x')" title="Compartilhar no X">
+      <svg viewBox="0 0 24 24"><path d="M18.9 2H22l-7.6 8.7L23.3 22h-7l-5.5-7.2L4.5 22H1.4l8.2-9.3L1 2h7.2l5 6.6L18.9 2zm-1.2 18h1.7L7.4 3.9H5.6L17.7 20z"/></svg>
+    </button>
+    <button class="share-btn" onclick="shareTo('whatsapp')" title="Compartilhar no WhatsApp">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.2.8.9-3.1-.2-.3c-.9-1.4-1.3-2.9-1.3-4.5 0-4.6 3.7-8.3 8.3-8.3s8.3 3.7 8.3 8.3-3.6 8.5-8.2 8.5zm4.5-6.2c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.2.2-.4.1-.1 0-.3 0-.4-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.4 3.8 3.4.5.2.9.4 1.3.5.5.2 1 .1 1.4.1.4-.1 1.3-.5 1.5-1 .2-.5.2-.9.1-1z"/></svg>
+    </button>
+    <button class="share-btn" onclick="shareTo('linkedin')" title="Compartilhar no LinkedIn">
+      <svg viewBox="0 0 24 24"><path d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.2V9h3.4v1.6h.1c.5-.9 1.7-1.9 3.4-1.9 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4c-1.2 0-2.1-.9-2.1-2.1S4.1 3.2 5.3 3.2s2.1.9 2.1 2.1-.9 2.1-2.1 2.1zM7.1 20.4H3.6V9h3.5v11.4z"/></svg>
+    </button>
+    <button class="share-btn" onclick="shareTo('copy')" title="Copiar link">
+      <svg viewBox="0 0 24 24"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z"/></svg>
+    </button>
+  </div>
+</nav>
+
+<div class="share-toast" id="share-toast">Link copiado</div>
+
+<header class="masthead">
+  <div class="kicker">Dossiê Investigativo · Metodologia Dedo na Balança</div>
+  <h1>Abortos por Razões Médicas e Legais no SUS<br>Cronologia Verificada, 2019–2026</h1>
+  <p class="subtitle">Fatos confirmados, fatores documentados, interpretações isoladas e lacunas metodológicas — reconstruídos a partir de fontes oficiais, imprensa e organismos internacionais.</p>
+  <div class="meta-row">
+    <span>ATUALIZADO 17.JUL.2026</span>
+    <span>FONTE PRIMÁRIA: SIH/SUS · MINISTÉRIO DA SAÚDE</span>
+    <span>38 FONTES CRUZADAS</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+<!-- DADOS -->
+<section id="dados">
+  <div class="section-label">01 · Os Números</div>
+  <h2>O que os dados brutos mostram</h2>
+  <p class="section-intro">Internações classificadas como CID O04 ("abortos por razões médicas e legais") no Sistema de Informações Hospitalares do SUS. Série completa e confiável desde 2009; painel abaixo mostra 2019–2026 para evidenciar a inflexão.</p>
+
+  <div class="data-panel">
+    <div class="chart">
+      <div class="bar-col"><div class="bar-val">1.982</div><div class="bar" style="height:48%"></div></div>
+      <div class="bar-col"><div class="bar-val">2.071</div><div class="bar" style="height:51%"></div></div>
+      <div class="bar-col"><div class="bar-val">2.029</div><div class="bar" style="height:50%"></div></div>
+      <div class="bar-col"><div class="bar-val">2.372</div><div class="bar" style="height:58%"></div></div>
+      <div class="bar-col"><div class="bar-val">2.984</div><div class="bar" style="height:73%"></div></div>
+      <div class="bar-col"><div class="bar-val">3.375</div><div class="bar" style="height:82%"></div></div>
+      <div class="bar-col"><div class="bar-val">4.092</div><div class="bar" style="height:100%"></div></div>
+      <div class="bar-col"><div class="bar-val">1.140</div><div class="bar partial" style="height:28%"></div></div>
+    </div>
+    <div class="bar-labels">
+      <div class="bar-label">2019</div><div class="bar-label">2020</div><div class="bar-label">2021</div>
+      <div class="bar-label">2022</div><div class="bar-label">2023</div><div class="bar-label">2024</div>
+      <div class="bar-label">2025</div><div class="bar-label">2026*</div>
+    </div>
+    <p class="chart-note">*2026: dado parcial, jan–mar apenas (média ≈380/mês). Barra tracejada indica ano incompleto.</p>
+
+    <div class="stat-grid">
+      <div class="stat"><div class="stat-num">+72,5%</div><div class="stat-label">2025 vs. 2022 (último ano Bolsonaro)</div></div>
+      <div class="stat"><div class="stat-num">149→297</div><div class="stat-label">Média mensal, pré vs. pós-2023*</div></div>
+      <div class="stat"><div class="stat-num">428</div><div class="stat-label">Recorde mensal (out/2025)</div></div>
+    </div>
+    <p class="chart-note">*A própria Gazeta do Povo apresenta essa baseline de forma inconsistente entre matérias — ver Alerta 3.</p>
+  </div>
+</section>
+
+<!-- CRONOLOGIA -->
+<section id="cronologia">
+  <div class="section-label">02 · Linha do Tempo</div>
+  <h2>Cronologia cruzada de fatores documentados</h2>
+  <p class="section-intro">Cada evento traz classificação por tipo. Eventos marcados <span style="color:var(--red-bright)">OPINIÃO/NÃO-FATO</span> são interpretações de terceiros, isoladas do dado verificável — nunca fundem-se com ele.</p>
+
+  <div class="timeline">
+
+    <div class="event">
+      <div class="event-date">2022</div>
+      <div class="event-body">
+        <span class="tag dado">DADO</span>
+        <div class="event-title">Recorde histórico de estupros no Brasil</div>
+        <div class="event-desc">Anuário Brasileiro de Segurança Pública 2023 registra o maior número de estupros da série — cerca de 205/dia, 68,3% ocorridos dentro de casa. Antecede o governo Lula; é fator de "demanda" para casos de aborto legal elegíveis nos anos seguintes.</div>
+        <div class="event-src">FONTE: Conselho Nacional de Saúde, citando Fórum Brasileiro de Segurança Pública</div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">16 JAN 2023</div>
+      <div class="event-body">
+        <span class="tag admin">ADMINISTRATIVO</span>
+        <div class="event-title">Revogação da Portaria GM/MS 2.561/2020</div>
+        <div class="event-desc">Ministra Nísia Trindade revoga a norma da era Bolsonaro (assinada por Eduardo Pazuello) que exigia notificação policial e preservação de provas em casos de aborto por estupro. <b>Correção de precisão:</b> a numeração correta é 2.561/2020 — não 2.282/2020, que era uma versão anterior já substituída em set/2020. Confirmado independentemente pelo próprio governo brasileiro em relatório à ONU (CEDAW).</div>
+        <div class="event-src">FONTES: OHCHR/CEDAW · Human Rights Watch · Correio Braziliense · Pleno.News</div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">2021–2023</div>
+      <div class="event-body">
+        <span class="tag dado">DADO</span>
+        <div class="event-title">Expansão de acesso a contracepção</div>
+        <div class="event-desc">Distribuição de DIU pelo SUS cresce 176% no período, segundo relatório do governo brasileiro à ONU — fator que tenderia a reduzir, não aumentar, a demanda por interrupção de gravidez. Relevante para descartar hipóteses simplistas.</div>
+        <div class="event-src">FONTE: OHCHR — submissão do governo brasileiro ao Comitê CEDAW, mai/2024</div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">21 MAR 2024</div>
+      <div class="event-body">
+        <span class="tag judicial">JUDICIAL</span>
+        <span class="tag correcao">DATA CORRIGIDA</span>
+        <div class="event-title">CFM assina a Resolução 2.378/2024</div>
+        <div class="event-desc">Conselho Federal de Medicina proíbe a técnica de assistolia fetal (interrupção dos batimentos cardíacos antes da retirada do útero) em gestações acima de 22 semanas — inclusive em casos de aborto legal por estupro já previstos em lei. Publicada oficialmente em 3 de abril de 2024. <b>Atualização:</b> data exata apurada diretamente no documento oficial do CFM, substituindo a referência genérica "2024" da versão anterior deste dossiê.</div>
+        <div class="event-src">FONTE: Conselho Federal de Medicina (documento oficial) · JOTA.Info</div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">17 MAI 2024</div>
+      <div class="event-body">
+        <span class="tag judicial">JUDICIAL</span>
+        <div class="event-title">Moraes suspende a Resolução do CFM (liminar, ADPF 1.141)</div>
+        <div class="event-desc">Em ação movida pelo PSOL, Moraes classifica a resolução como abuso de poder regulamentar, afirmando que o Código Penal não estabelece limite gestacional para o aborto legal. André Mendonça diverge do voto do relator — não é decisão unânime mesmo na fase liminar. Referendo do plenário virtual previsto para 31/mai–10/jun/2024.</div>
+        <div class="event-src">FONTE: JOTA.Info</div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">12 JUN 2024</div>
+      <div class="event-body">
+        <span class="tag politico">POLÍTICO</span>
+        <div class="event-title">PL 1904/2024 (Sóstenes Cavalcante) aprova urgência, depois trava</div>
+        <div class="event-desc">Deputado Sóstenes Cavalcante (PL-RJ) propõe criminalizar aborto após 22 semanas mesmo em casos legais. Câmara aprova urgência, mas o presidente Arthur Lira adia a votação. <b>Atualização (verificada 17/jul/2026 na ficha oficial de tramitação da Câmara):</b> última movimentação registrada foi em 14/08/2024 (aprovação de requerimento de audiência pública). Situação atual: "Aguardando Despacho do Presidente da Câmara dos Deputados" — parado há cerca de dois anos, sem votação nem arquivamento.</div>
+        <div class="event-src">FONTE: Veja/Abril · Portal da Câmara dos Deputados (ficha de tramitação oficial)</div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">19 JUN 2024</div>
+      <div class="event-body">
+        <span class="tag judicial">JUDICIAL</span>
+        <div class="event-title">Moraes dá 48h a 5 hospitais de SP</div>
+        <div class="event-desc">Determina que Vila Nova Cachoeirinha, Tatuapé, Campo Limpo, Tide Setúbal e Mário Degni comprovem não aplicação da resolução do CFM já suspensa, após relato de que a assistolia fetal não era realizada na cidade desde dez/2023.</div>
+        <div class="event-src">FONTE: Veja/Abril</div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">19 NOV 2024</div>
+      <div class="event-body">
+        <span class="tag judicial">JUDICIAL</span>
+        <span class="tag correcao">DATA CORRIGIDA</span>
+        <div class="event-title">MPF abre formalmente inquérito contra o Cremesp</div>
+        <div class="event-desc">Motivado por denúncia do Simesp (sindicato médico de SP), alegando que médicas suspensas pelo Cremesp estariam sendo perseguidas após possível vazamento de dados de pacientes. <b>Atualização:</b> data exata confirmada por múltiplas fontes independentes (UOL/Agência Brasil, Migalhas, Folha de S.Paulo), substituindo a faixa aproximada "03–19 NOV 2024" da versão anterior.</div>
+        <div class="event-src">FONTES: UOL/Agência Brasil · Migalhas · Folha de S.Paulo</div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">03 DEZ 2024</div>
+      <div class="event-body">
+        <span class="tag judicial">JUDICIAL</span>
+        <div class="event-title">Moraes cobra esclarecimentos de SP sobre prontuários</div>
+        <div class="event-desc">Determina que prefeitura e governo estadual expliquem, em 5 dias, suposta entrega ao Cremesp de dados sensíveis de prontuários de pacientes de aborto legal do CAISM/Unicamp.</div>
+        <div class="event-src">FONTE: Poder360 · Gazeta do Povo</div>
+      </div>
+    </div>
+
+    <div class="event opinion">
+      <div class="event-date">~5–11 DEZ 2024</div>
+      <div class="event-body">
+        <span class="tag opiniao">OPINIÃO / NÃO-FATO</span>
+        <div class="event-title">Coluna de Alexandre Garcia (Gazeta do Povo)</div>
+        <div class="event-desc">Colunista caracteriza a decisão de Moraes como "facilitar o aborto", afirma sem citar dado que mulheres "às vezes" alegam falsamente estupro, e chama de "arrogância fanática" proposta do Conanda. A própria Gazeta do Povo publica isenção de responsabilidade: textos do colunista não representam a posição do veículo. Tratado aqui como fonte de opinião, isolada do dado factual.</div>
+        <div class="event-src">FONTE: Gazeta do Povo, coluna de Alexandre Garcia (documento fornecido pelo usuário)</div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">10 DEZ 2024</div>
+      <div class="event-body">
+        <span class="tag judicial">JUDICIAL</span>
+        <div class="event-title">Moraes proíbe formalmente o Cremesp</div>
+        <div class="event-desc">Veda ao conselho requisitar prontuários de aborto legal em qualquer hospital paulista, citando pedidos ao HC de Botucatu/UNESP. Adverte sobre possível responsabilização pessoal do presidente do Cremesp em caso de descumprimento. Cremesp, por sua vez, alega competência legal de fiscalização e já havia suspendido registros de médicos por irregularidades em abortos.</div>
+        <div class="event-src">FONTES: Exame · ConJur · Migalhas · Poder360</div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">04 MAR 2026</div>
+      <div class="event-body">
+        <span class="tag judicial">JUDICIAL</span>
+        <span class="tag nova">ENTRADA NOVA</span>
+        <div class="event-title">PGR pede restauração da Resolução CFM 2.378/2024</div>
+        <div class="event-desc">O procurador-geral da República, Paulo Gonet, apresenta parecer na ADPF 1.141 — quase dois anos após o prazo regimental para se manifestar — defendendo que o CFM tem competência técnico-disciplinar para vedar a assistolia fetal após 22 semanas e pedindo que a resolução, suspensa por liminar desde maio de 2024, volte a vigorar. Argumento central do parecer: aborto por estupro no Brasil "não é legalizado, só não é punível" — logo, não poderia ser exigido de serviços de saúde ou médicos. <b>Correção de data:</b> o documento oficial do MPF/PGR está assinado digitalmente em 04/03/2026 (não 05/03, como constava em nota preliminar).</div>
+        <div class="event-src">FONTES: Procuradoria-Geral da República (parecer oficial, assinatura digital) · Portal CFM · CLAM/UERJ</div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">~16–19 MAR 2026</div>
+      <div class="event-body">
+        <span class="tag judicial">JUDICIAL</span>
+        <span class="tag nova">ENTRADA NOVA</span>
+        <div class="event-title">Moraes libera ADPF 1.141 para julgamento de mérito</div>
+        <div class="event-desc">Após o parecer favorável da PGR, o relator libera o processo para apreciação pelo plenário do STF. <b>Pequena divergência entre fontes sobre a data exata</b>: o CLAM/UERJ registra 16/03/2026; o portal do CFM e a imprensa médica situam o episódio em torno de 19–20/03/2026 — não foi possível cravar o dia exato com as fontes disponíveis. Até a data desta pesquisa (17/jul/2026), a liminar que suspende a Resolução CFM segue vigente e produzindo efeitos; o mérito ainda não foi julgado pelo plenário.</div>
+        <div class="event-src">FONTES: CFM (portal oficial) · CREMERJ News · CLAM/UERJ · Gazeta do Povo (artigo de opinião, 4/jun/2026 — tratado aqui apenas como confirmação factual de que a liminar segue vigente, não como fonte de interpretação)</div>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">2025–MAR 2026</div>
+      <div class="event-body">
+        <span class="tag dado">DADO</span>
+        <div class="event-title">Série atinge recorde histórico</div>
+        <div class="event-desc">4.092 internações em 2025 (recorde anual) e 1.140 em jan–mar/2026 (dado parcial). Recordes mensais em out/2025 (428), jan/2026 (423), set/2025 (415), dez/2025 (404) e mar/2026 (379). Ministério da Saúde não respondeu à Gazeta do Povo sobre eventual mudança na forma de registro/classificação dos casos — a reportagem (atualizada 11/jul/2026) registra explicitamente o questionamento; buscas até 17/jul/2026 não localizam manifestação posterior do ministério. O silêncio, até esta data, é ele mesmo o dado verificado.</div>
+        <div class="event-src">FONTE: Gazeta do Povo, a partir de dados do SIH/SUS</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ALERTAS -->
+<section id="alertas">
+  <div class="section-label">03 · Alertas Metodológicos</div>
+  <h2>O que os números, sozinhos, não provam</h2>
+  <p class="section-intro">Limitações estruturais e lacunas que qualquer leitura conclusiva precisa reconhecer — inclusive as favoráveis à hipótese de aumento real de acesso.</p>
+
+  <div class="alert">
+    <div class="alert-head">⚠ Alerta 1 — Ambiguidade do código CID O04</div>
+    <div class="alert-body">O SIH/SUS <b>não distingue, dentro do mesmo código</b>, três situações diferentes: (a) aborto legal autorizado judicialmente; (b) conclusão hospitalar de aborto espontâneo; (c) conclusão hospitalar de aborto clandestino/induzido fora do sistema. O aumento pode refletir qualquer combinação das três causas — o dado bruto não isola qual. Essa limitação é reconhecida inclusive por fontes de linha pró-vida (Instituto Isabel) e por análises técnicas independentes (AzMina).</div>
+  </div>
+
+  <div class="alert">
+    <div class="alert-head">⚠ Alerta 2 — Correlação temporal não é prova de causa única</div>
+    <div class="alert-body">A revogação da Portaria 2.561/2020 (jan/2023) coincide com o início da alta, o que é um candidato causal forte e datado — mas não exclui contribuição de outros fatores documentados (recorde de estupros em 2022, mudanças de protocolo, redução de subnotificação, maior acesso geográfico aos serviços).</div>
+  </div>
+
+  <div class="alert">
+    <div class="alert-head">⚠ Alerta 3 — Inconsistência interna da própria fonte primária de imprensa</div>
+    <div class="alert-body">A Gazeta do Povo publicou, em versões diferentes da mesma reportagem, a baseline da média mensal pré-2023 ora como "2009–2022" (149 casos/mês), ora como "2011–2022". Isso não invalida a tendência geral, mas exige cautela ao citar o número exato de "149" como baseline sem verificar qual recorte foi usado.</div>
+  </div>
+
+  <div class="alert">
+    <div class="alert-head">⚠ Alerta 4 — Moldura "genocídio" é interpretação, não dado</div>
+    <div class="alert-body">A leitura de que o aumento representa um "genocídio silencioso" é um enquadramento ético-político, não uma inferência estatística. Da mesma forma, a leitura oposta ("expansão de direitos reprodutivos", usada por HRW/OHCHR) também é enquadramento, não dado bruto. Ambas devem ser tratadas como interpretação explicitamente rotulada, nunca fundidas ao número.</div>
+  </div>
+
+  <div class="alert alert-resolved">
+    <div class="alert-head">✓ Alerta 5 — Itens revisados (atualização concluída 17/jul/2026)</div>
+    <div class="alert-body">Dos quatro itens antes marcados como "não confirmados", três foram verificados em fontes primárias e um permanece sem resposta oficial — o que é, em si, um dado confirmado, não uma lacuna de pesquisa: <b>(1)</b> Resolução CFM 2.378/2024 — assinada 21/03/2024, publicada 03/04/2024 (fonte: documento oficial do CFM). <b>(2)</b> PL 1904/2024 (Sóstenes Cavalcante) — confirmado parado desde 14/08/2024, "aguardando despacho do presidente da Câmara" (ficha oficial de tramitação). <b>(3)</b> Inquérito do MPF contra o Cremesp — aberto em 19/11/2024 (múltiplas fontes independentes). <b>(4)</b> Resposta do Ministério da Saúde sobre mudança de classificação — <u>segue sem manifestação oficial</u>; a própria Gazeta do Povo registra ter questionado a pasta e não ter recebido resposta até a atualização de 11/jul/2026.</div>
+  </div>
+</section>
+
+<!-- SÍNTESE JURÍDICA -->
+<section id="juridico">
+  <div class="section-label">04 · Síntese Jurídica</div>
+  <h2>Enquadramento normativo da disputa CFM × STF</h2>
+  <div class="legal-box">
+    <div class="legal-grid">
+      <div class="legal-block">
+        <h3>I. Quadro Normativo</h3>
+        <p>Art. 128, CP — excludentes de ilicitude para aborto (risco de vida, estupro). ADPF 54/2012, STF — extensão para anencefalia. CF/88, art. 5º — direito à vida e dignidade da pessoa humana, invocados por ambos os lados da disputa. Resolução CFM 2.378/2024 tem natureza infralegal — hierarquicamente subordinada ao Código Penal.</p>
+      </div>
+      <div class="legal-block">
+        <h3>II. Ponto Central da Controvérsia</h3>
+        <p>O CFM tem competência técnico-disciplinar sobre a prática médica, mas não competência legislativa para criar restrição temporal (22 semanas) inexistente no tipo penal do art. 128. A liminar de Moraes se apoia nesse argumento: ausência de previsão legal de prazo é fundamento explícito, não interpretação extensiva.</p>
+      </div>
+      <div class="legal-block">
+        <h3>III. Grau de Certeza Jurídica</h3>
+        <p><span class="certainty">"Há fundamento consolidado para..."</span> a tese de que resoluções de conselhos profissionais não podem criar restrição a direito assegurado por lei penal sem base legal expressa — jurisprudência do STF sobre limites do poder regulamentar; esse foi o fundamento da liminar de Moraes. <span class="certainty">"Há também fundamento para..."</span> a tese oposta, sustentada pela PGR desde março de 2026: que o CFM tem incumbência própria para resolver dilemas ético-médicos, que a resolução não é arbitrária, e que o aborto por estupro no Brasil é uma excludente de punibilidade — não um direito exigível dos serviços de saúde. As duas teses têm lastro técnico-jurídico; o STF ainda não decidiu qual prevalece. <span class="certainty">"É controverso se..."</span> o prazo de 22 semanas deveria ser objeto de lei ordinária (é isso que o PL 1904/2024 tenta fazer) — matéria não pacificada, atualmente parada no Legislativo.</p>
+      </div>
+      <div class="legal-block">
+        <h3>IV. Status Processual (atualizado 17/jul/2026)</h3>
+        <p>Decisão monocrática (liminar) de Moraes na ADPF 1.141 permanece vigente, suspendendo a Resolução CFM 2.378/2024. Em 4 de março de 2026, a PGR (Paulo Gonet) apresentou parecer pedindo o restabelecimento da norma, argumentando que o CFM tem competência para a vedação técnica e que o aborto por estupro "não é legalizado, só não é punível". Em meados de março de 2026 (fontes divergem entre 16 e 19/03), o relator liberou o processo para julgamento de mérito pelo plenário — mas, até esta pesquisa, o referendo ainda não ocorreu e a liminar segue em vigor. O episódio Cremesp corre em apenso à mesma ADPF. Nenhuma das decisões aqui listadas transitou em julgado no mérito até o momento — com a diferença, em relação à versão anterior deste dossiê, de que o processo já está pronto para julgamento e uma decisão de mérito pode ocorrer a qualquer momento a partir de 2026.</p>
+      </div>
+    </div>
+    <div class="legal-disclaimer">
+      Síntese técnico-jurídica de caráter informativo, elaborada para fins de análise jornalística investigativa. Não substitui consulta a advogado(a) habilitado(a) na OAB. Análise não posiciona-se político-partidariamente; limita-se ao enquadramento normativo verificável. Data da análise: 16 de julho de 2026.
+    </div>
+  </div>
+</section>
+
+<!-- FONTES -->
+<section id="fontes">
+  <div class="section-label">05 · Fontes e Referências</div>
+  <h2>32 fontes cruzadas, agrupadas por natureza</h2>
+
+  <div class="ref-group">
+    <h3>Oficiais / Multilaterais</h3>
+    <ul class="ref-list">
+      <li><span class="ref-name">OHCHR — Comitê CEDAW, submissão do governo brasileiro (mai/2024)</span><a class="ref-link" href="https://www.ohchr.org/en/meeting-summaries/2024/05/experts-committee-elimination-discrimination-against-women-praise-brazils" target="_blank">ohchr.org</a></li>
+      <li><span class="ref-name">Conselho Nacional de Saúde — repúdio à Resolução CFM (jun/2024)</span><a class="ref-link" href="https://www.gov.br/conselho-nacional-de-saude/pt-br/assuntos/noticias/2024/junho/cns-repudia-proibicao-de-procedimento-que-e-recomendado-pela-oms-em-casos-de-aborto-legal" target="_blank">gov.br/cns</a></li>
+      <li><span class="ref-name">Câmara dos Deputados — nota sobre revogação da portaria</span><a class="ref-link" href="https://www.camara.leg.br/noticias/1086083" target="_blank">camara.leg.br</a></li>
+      <li><span class="ref-name">Câmara dos Deputados — ficha de tramitação oficial do PL 1904/2024</span><a class="ref-link" href="https://www.camara.leg.br/propostas-legislativas/1904" target="_blank">camara.leg.br</a></li>
+      <li><span class="ref-name">PGR — parecer de Paulo Gonet na ADPF 1.141 (documento oficial assinado)</span><a class="ref-link" href="https://portal.cfm.org.br/wp-content/uploads/2026/03/parecer_gonet_assistolia.pdf" target="_blank">mpf.mp.br</a></li>
+      <li><span class="ref-name">CFM — Resolução 2.378/2024 (PDF oficial) e nota sobre liberação da ADPF para julgamento</span><a class="ref-link" href="https://portal.cfm.org.br/noticias/stf-libera-para-julgamento-acao-que-suspendeu-resolucao-do-cfm-que-veda-assistolia-fetal/" target="_blank">portal.cfm.org.br</a></li>
+    </ul>
+  </div>
+
+  <div class="ref-group">
+    <h3>Organizações Internacionais / ONGs</h3>
+    <ul class="ref-list">
+      <li><span class="ref-name">Human Rights Watch — submissão ao Comitê ESCR da ONU (set/2023)</span><a class="ref-link" href="https://www.hrw.org/news/2023/09/29/brazil-submission-un-committee-economic-social-and-cultural-rights" target="_blank">hrw.org</a><div class="bias-note">Linha editorial: direitos humanos / reprodutivos — enquadra revogação de barreiras como avanço</div></li>
+      <li><span class="ref-name">Human Rights Watch — STF mais perto de descriminalizar aborto</span><a class="ref-link" href="https://www.hrw.org/news/2023/10/05/brazils-supreme-court-step-closer-decriminalizing-abortion" target="_blank">hrw.org</a></li>
+    </ul>
+  </div>
+
+  <div class="ref-group">
+    <h3>Imprensa Nacional</h3>
+    <ul class="ref-list">
+      <li><span class="ref-name">Gazeta do Povo — "Abortos... dobram sob Lula"</span><a class="ref-link" href="https://www.gazetadopovo.com.br/vida-e-cidadania/abortos-por-razoes-medicas-ou-legais-no-sus-dobram-sob-lula/" target="_blank">gazetadopovo.com.br</a><div class="bias-note">Linha editorial: declaradamente pró-vida / conservadora</div></li>
+      <li><span class="ref-name">Gazeta do Povo — coluna de Alexandre Garcia</span><a class="ref-link" href="https://www.gazetadopovo.com.br/vozes/alexandre-garcia/alexandre-de-moraes-aborto-cremesp-prontuarios/" target="_blank">gazetadopovo.com.br</a><div class="bias-note">Opinião — não representa necessariamente a linha do veículo, per aviso do próprio site</div></li>
+      <li><span class="ref-name">CNN Brasil — abortos legais crescem 71% em 5 anos</span><a class="ref-link" href="https://www.cnnbrasil.com.br/blogs/pedro-duran/nacional/abortos-legais-no-sus-crescem-71-em-5-anos-brasil-tem-7-casos-por-dia/" target="_blank">cnnbrasil.com.br</a></li>
+      <li><span class="ref-name">CNN Brasil — Moraes suspende resolução CFM</span><a class="ref-link" href="https://www.cnnbrasil.com.br/politica/stf-moraes-cfm-aborto-estupro-assistolia-fetal/" target="_blank">cnnbrasil.com.br</a></li>
+      <li><span class="ref-name">Portal de Prefeitura — recorde da série histórica</span><a class="ref-link" href="https://portaldeprefeitura.com.br/brasil/abortos-por-razoes-medicas-e-legais-no-sus-crescem-e-atingem-maior/626815/" target="_blank">portaldeprefeitura.com.br</a></li>
+      <li><span class="ref-name">Exame — Moraes proíbe Cremesp</span><a class="ref-link" href="https://exame.com/brasil/moraes-proibe-cremesp-de-pedir-prontuarios-de-pacientes-que-fizeram-aborto-legal/" target="_blank">exame.com</a></li>
+      <li><span class="ref-name">Poder360 — Moraes proíbe Cremesp de pedir dados</span><a class="ref-link" href="https://www.poder360.com.br/poder-justica/moraes-proibe-cremesp-de-pedir-dados-de-pacientes-que-abortaram/" target="_blank">poder360.com.br</a></li>
+      <li><span class="ref-name">Correio Braziliense — revogação de portarias, jan/2023</span><a class="ref-link" href="https://www.correiobraziliense.com.br/brasil/2023/01/5066494" target="_blank">correiobraziliense.com.br</a></li>
+      <li><span class="ref-name">Veja/Abril — Moraes dá 48h a hospitais de SP</span><a class="ref-link" href="https://veja.abril.com.br/coluna/maquiavel/moraes-da-48h-para-hospitais-de-sp-responderem-sobre-aborto-legal/" target="_blank">veja.abril.com.br</a></li>
+    </ul>
+  </div>
+
+  <div class="ref-group">
+    <h3>Jurídico Especializado</h3>
+    <ul class="ref-list">
+      <li><span class="ref-name">JOTA.Info — Moraes suspende resolução do CFM</span><a class="ref-link" href="https://www.jota.info/tributos-e-empresas/saude/moraes-suspende-resolucao-do-cfm-que-restringe-o-aborto-legal-em-casos-de-estupro-17052024" target="_blank">jota.info</a></li>
+      <li><span class="ref-name">ConJur — STF proíbe envio de prontuários ao Cremesp</span><a class="ref-link" href="https://www.conjur.com.br/2024-dez-11/stf-proibe-cremesp-de-requisitar-prontuario-de-pacientes-que-fizeram-aborto-legal/" target="_blank">conjur.com.br</a></li>
+      <li><span class="ref-name">Migalhas — Moraes proíbe Cremesp de exigir prontuário</span><a class="ref-link" href="https://www.migalhas.com.br/quentes/421365" target="_blank">migalhas.com.br</a></li>
+      <li><span class="ref-name">CLAM/UERJ — A empreitada da medicina no cerceamento ao aborto no Brasil</span><a class="ref-link" href="https://clam.org.br/noticias-clam/a-empreitada-da-medicina-no-cerceamento-ao-aborto-no-brasil/31207/" target="_blank">clam.org.br</a><div class="bias-note">Linha editorial: centro acadêmico de estudos de gênero e sexualidade — crítico à Resolução CFM</div></li>
+      <li><span class="ref-name">UOL/Agência Brasil e Folha de S.Paulo — abertura e desdobramentos do inquérito MPF × Cremesp</span><a class="ref-link" href="https://www.migalhas.com.br/quentes/421365" target="_blank">migalhas.com.br (agregador)</a></li>
+    </ul>
+  </div>
+
+  <div class="ref-group">
+    <h3>Acadêmico / Análise de Dados</h3>
+    <ul class="ref-list">
+      <li><span class="ref-name">AzMina — Aborto no Brasil (análise de dados DataSUS)</span><a class="ref-link" href="https://abortonobrasil.info/" target="_blank">abortonobrasil.info</a></li>
+      <li><span class="ref-name">Gênero e Número — SUS atende 9 de cada 10 internações por aborto</span><a class="ref-link" href="https://www.generonumero.media/reportagens/sus-internacoes-aborto/" target="_blank">generonumero.media</a><div class="bias-note">Linha editorial: jornalismo de gênero</div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- RELACIONADOS -->
+<section id="relacionados">
+  <div class="section-label">06 · Itens Relacionados</div>
+  <h2>Outros dossiês do corpus gosurf.site</h2>
+  <p class="section-intro">Selecionados por proximidade temática (STF/Moraes, disputas institucionais, captura e erosão institucional) — curadoria manual a partir do índice do site.</p>
+
+  <div class="related-grid">
+    <a class="related-card" href="https://gosurf.site/arquitetura-sistemica-p01-p12.html" target="_blank">
+      <div class="related-card-title">Arquitetura Sistêmica P01–P12 — Método e Ancoragem</div>
+      <div class="related-card-desc">Cada padrão sistêmico traz definição operacional, ancoragem verificada (lei, decisão judicial/administrativa) e casos aplicados — o framework metodológico usado neste dossiê.</div>
+      <div class="related-card-meta"><span class="related-card-tag">lawfare · diagnóstico</span><span>14 min</span></div>
+    </a>
+    <a class="related-card" href="https://gosurf.site/duplo-padrao-judicial.html" target="_blank">
+      <div class="related-card-title">Duplo Padrão Judicial — Dossiê Investigativo 2026</div>
+      <div class="related-card-desc">Mapeamento de assimetrias no tratamento judicial entre casos e réus comparáveis — mesmo mecanismo estrutural documentado neste dossiê aplicado a outra área do direito.</div>
+      <div class="related-card-meta"><span class="related-card-tag">lawfare · diagnóstico</span><span>22 min</span></div>
+    </a>
+    <a class="related-card" href="https://gosurf.site/caso-jales-homeschooling.html" target="_blank">
+      <div class="related-card-title">Caso Jales — Criminalização do Homeschooling</div>
+      <div class="related-card-desc">Um juiz condenou pais por educação domiciliar ignorando pedido de absolvição do próprio MP — outro caso de decisão judicial isolada colidindo com pareceres técnicos de origem.</div>
+      <div class="related-card-meta"><span class="related-card-tag">brazil · lawfare</span><span>7 min</span></div>
+    </a>
+    <a class="related-card" href="https://gosurf.site/vaza-toga.html" target="_blank">
+      <div class="related-card-title">Vaza Toga — Dossiê Completo INQ 4.781</div>
+      <div class="related-card-desc">Sistema paralelo de produção de provas envolvendo o gabinete do mesmo ministro relator da ADPF 1.141 — para quem quer contexto mais amplo sobre o padrão de atuação de Moraes.</div>
+      <div class="related-card-meta"><span class="related-card-tag">vazatoga · moraes</span><span>22 min</span></div>
+    </a>
+    <a class="related-card" href="https://gosurf.site/mapa-erosao-institucional-1990-2026.html" target="_blank">
+      <div class="related-card-title">Mapa de Erosão Institucional 1990–2026</div>
+      <div class="related-card-desc">Visão panorâmica de longo prazo — onde este episódio específico (CFM × STF × Cremesp) se encaixa dentro do quadro mais amplo de erosão institucional documentado pelo corpus.</div>
+      <div class="related-card-meta"><span class="related-card-tag">brasa · timeline</span><span>7 min</span></div>
+    </a>
+    <a class="related-card" href="https://gosurf.site/como-ler-este-corpus.html" target="_blank">
+      <div class="related-card-title">Como Ler Este Corpus — lawfare-timeline</div>
+      <div class="related-card-desc">Guia de entrada: três trilhas temáticas, hierarquia de evidências e ponto de partida — útil se este for seu primeiro contato com o projeto gosurf.site / lawfare-timeline.</div>
+      <div class="related-card-meta"><span class="related-card-tag">lawfare · brasa</span><span>7 min</span></div>
+    </a>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <p>DOSSIÊ INTERNO · METODOLOGIA: FATO VERIFICADO ≠ INTERPRETAÇÃO ≠ OPINIÃO DE TERCEIRO<br>
+  Gerado em 16.jul.2026 · Revisão do Alerta 5 concluída em 17.jul.2026 · 3 de 4 pendências esclarecidas com fontes primárias; a pendência restante (silêncio do Ministério da Saúde) foi reclassificada como dado confirmado</p>
+</footer>
+
+<script src="https://gosurf.site/counter.js"></script>
+
+<button id="go-top" title="Voltar ao topo" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg>
+</button>
+
+<script>
+(function(){
+  var goTop = document.getElementById('go-top');
+  var navLinks = document.querySelectorAll('.topnav-links a');
+  var sections = Array.from(document.querySelectorAll('section[id]'));
+
+  function onScroll(){
+    goTop.classList.toggle('visible', window.scrollY > 480);
+
+    var current = sections[0] ? sections[0].id : null;
+    var scrollPos = window.scrollY + 90;
+    sections.forEach(function(sec){
+      if(sec.offsetTop <= scrollPos) current = sec.id;
+    });
+    navLinks.forEach(function(a){
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  var pageTitle = document.title;
+  var pageUrl = 'https://gosurf.site/cronologia-aborto-sus-2019-2026.html';
+
+  window.shareTo = function(target){
+    var toast = document.getElementById('share-toast');
+    if(target === 'copy'){
+      navigator.clipboard.writeText(pageUrl).then(function(){
+        toast.textContent = 'Link copiado';
+        toast.classList.add('show');
+        setTimeout(function(){ toast.classList.remove('show'); }, 2000);
+      }).catch(function(){
+        toast.textContent = pageUrl;
+        toast.classList.add('show');
+        setTimeout(function(){ toast.classList.remove('show'); }, 3000);
+      });
+      return;
+    }
+    var urls = {
+      x: 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(pageTitle) + '&url=' + encodeURIComponent(pageUrl),
+      whatsapp: 'https://wa.me/?text=' + encodeURIComponent(pageTitle + ' — ' + pageUrl),
+      linkedin: 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(pageUrl)
+    };
+    if(urls[target]) window.open(urls[target], '_blank', 'noopener,noreferrer,width=600,height=500');
+  };
+})();
+</script>
+</body>
+</html>

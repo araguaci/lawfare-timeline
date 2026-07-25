@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dossiê Hydra — Padrão P8: Infiltração Fintech</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #080c10; --bg1: #0d1218; --bg2: #121820; --bg3: #1a2230;
+  --border: rgba(255,255,255,0.06); --border2: rgba(255,255,255,0.12);
+  --fg: #e8ecf0; --fg2: #8a9ab0; --fg3: #4a5a6a;
+  --red: #e84040; --red2: rgba(232,64,64,0.15);
+  --amber: #e8a020; --amber2: rgba(232,160,32,0.15);
+  --blue: #3090e8; --blue2: rgba(48,144,232,0.12);
+  --purple: #a060e8; --purple2: rgba(160,96,232,0.12);
+  --font-mono: 'IBM Plex Mono', monospace; --font-display: 'Syne', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-mono); font-size: 13px; line-height: 1.6; min-height: 100vh; }
+.header { background: var(--bg1); border-bottom: 2px solid var(--red); padding: 32px 40px 24px; position: relative; }
+.hero-title { font-family: var(--font-display); font-size: clamp(24px, 5vw, 42px); font-weight: 800; color: var(--fg); }
+.hero-title span { color: var(--red); }
+.container { max-width: 1400px; margin: 0 auto; padding: 24px 40px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; margin-bottom: 24px; }
+.card { background: var(--bg1); border: 1px solid var(--border); border-radius: 6px; padding: 20px; }
+.section-title { font-size: 11px; text-transform: uppercase; color: var(--fg3); letter-spacing: 0.2em; border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-bottom: 16px; }
+.badge { display: inline-block; padding: 3px 8px; border-radius: 3px; font-size: 10px; font-weight: 600; text-transform: uppercase; margin-bottom: 8px; }
+.badge-red { background: var(--red2); color: var(--red); border: 1px solid rgba(232,64,64,0.3); }
+
+/* Timeline simple */
+.timeline { border-left: 1px solid var(--border2); padding-left: 20px; margin-left: 10px; }
+.tl-item { margin-bottom: 20px; position: relative; }
+.tl-item::before { content: ''; position: absolute; left: -26px; top: 6px; width: 11px; height: 11px; border-radius: 50%; background: var(--red); border: 2px solid var(--bg); }
+.tl-date { font-size: 10px; color: var(--fg3); font-weight: 600; }
+.tl-title { font-size: 14px; font-weight: 700; margin: 4px 0; }
+.tl-desc { font-size: 12px; color: var(--fg2); }
+
+@media (max-width: 600px) { .header { padding: 24px 20px; } .container { padding: 20px; } }
+</style>
+</head>
+<body>
+<header class="header">
+  <div style="font-size:10px; color:var(--red); font-weight:700; letter-spacing:0.2em; margin-bottom:12px">CASO DE ESTUDO: PADRÃO P8</div>
+  <h1 class="hero-title">Operação <span>Hydra</span></h1>
+  <p style="color:var(--fg2); margin-top:8px">A Lavanderia Global das Fintechs — R$ 6.000.000.000,00 identificados.</p>
+</header>
+
+<div class="container">
+  <h2 class="section-title">Análise de Impacto</h2>
+  <div class="grid">
+    <div class="card">
+      <span class="badge badge-red">Mecanismo</span>
+      <h3 style="margin-bottom:8px">As Fintechs de Prateleira</h3>
+      <p style="color:var(--fg2)">A Hydra revelou o uso de IPs (Instituições de Pagamento) que operam "debaixo" do radar do Banco Central. Dinheiro de jogos ilegais, extração mineral e tráfico era processado como "taxas de serviço" em volume industrial.</p>
+    </div>
+    <div class="card">
+      <span class="badge badge-red">O Ponto Cego</span>
+      <h3 style="margin-bottom:8px">Revogação Institucional</h3>
+      <p style="color:var(--fg2)">Em dez/2024, a e-Financeira foi revogada sob pretexto de "redução de burocracia". O efeito real foi o apagão de dados de IPs não-bancárias por 8 meses críticos da operação.</p>
+    </div>
+    <div class="card">
+      <span class="badge badge-red">Status 2026</span>
+      <h3 style="margin-bottom:8px">Captura da REAG</h3>
+      <p style="color:var(--fg2)">O ecossistema REAG (IPB, BK Bank) surge como o hub central onde as conexões da Hydra encontram as da Compliance Zero (Banco Master). O emaranhamento é total.</p>
+    </div>
+  </div>
+
+  <h2 class="section-title">Cronologia Crítica</h2>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-date">JAN 2024</div>
+      <div class="tl-title">Identificação dos R$ 6 bi</div>
+      <div class="tl-desc">COAF emite alerta sobre 22 empresas de fachada operando via IPs ligadas ao InvBank.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">DEZ 2024</div>
+      <div class="tl-title">O Apagão Planejado</div>
+      <div class="tl-desc">Normativa de compartilhamento de dados é revogada. Investigadores perdem visibilidade em tempo real.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">JUL 2025</div>
+      <div class="tl-title">Morte de Gritzbach</div>
+      <div class="tl-desc">O delator chave da Hydra é morto no aeroporto. PF assume o caso citando "Padrão P2" de intimidação.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">ABR 2026</div>
+      <div class="tl-title">Nexo Master-REAG</div>
+      <div class="tl-desc">A massa falida do Master revela transferências milionárias para as mesmas IPs investigadas na Hydra.</div>
+    </div>
+  </div>
+
+  <footer style="margin-top:40px; padding-top:20px; border-top:1px solid var(--border); font-size:11px; color:var(--fg3)">
+    Dossiê Hydra · Baseado no Padrão P8 do Lawfare Design System · CC0 1.0 Universal
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TJMG × Banco Master — Blindagem Civil ao Acesso à Justiça | lawfare-timeline</title>
+<meta name="description" content="Duas frentes institucionais convergentes protegendo o Banco Master de suas próprias vítimas: triagem automática pré-mérito no TJMG e suspensão estatutária de execuções pela liquidação extrajudicial. Dados comparativos, controvérsias e lacunas investigativas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gosurf.site/tjmg-master-blindagem-civil">
+<meta property="og:title" content="TJMG × Banco Master — Blindagem Civil ao Acesso à Justiça">
+<meta property="og:description" content="Duas frentes institucionais convergentes protegendo o Banco Master de suas próprias vítimas — mapeamento analítico com dados comparativos.">
+<meta property="twitter:card" content="summary_large_image">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0b0f0a;--bg2:#111a10;--bg3:#182216;
+  --gr:#3ecb6f;--gr2:#78f5a8;--gr-dim:#1a6030;
+  --red:#e85555;--red2:#ff7575;--red-dim:#7a2020;
+  --gold:#e8c44b;--gold2:#f5d87a;--gold-dim:#907820;
+  --blue:#4a9eff;--blue2:#7ab8ff;--blue-dim:#1a3d7a;
+  --orange:#ff8c42;--orange2:#ffb07a;
+  --purple:#b07aff;--purple2:#d0a8ff;
+  --teal:#2ecfb0;--teal2:#60ffd8;
+  --border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.14);
+  --text:#e8f0e8;--text2:#8aaa8a;
+  --font:'Syne',sans-serif;--mono:'JetBrains Mono',monospace;--serif:'Crimson Pro',serif;
+}
+body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh}
+::selection{background:var(--gr-dim);color:#fff}
+
+header{padding:26px 30px 18px;border-bottom:2px solid var(--gr-dim);
+  background:linear-gradient(135deg,#0b0f0a 0%,#121e10 60%,#0b0f0a 100%);position:relative;overflow:hidden}
+header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 60%,rgba(62,203,111,0.06) 0%,transparent 60%)}
+.hbadge{display:inline-flex;align-items:center;gap:6px;background:rgba(62,203,111,0.1);border:1px solid var(--gr-dim);border-radius:4px;padding:4px 12px;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--gr);text-transform:uppercase;margin-bottom:10px}
+.live-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(232,85,85,0.15);border:1px solid var(--red-dim);border-radius:4px;padding:3px 10px;font-size:10px;font-weight:700;letter-spacing:1.5px;color:var(--red2);text-transform:uppercase;margin-left:8px}
+.live-dot{width:6px;height:6px;border-radius:50%;background:var(--red2);animation:pulse 1.2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+header h1{font-size:27px;font-weight:800;letter-spacing:-0.5px;color:#fff;line-height:1.15;position:relative}
+header h1 span{color:var(--gr2)}
+.hmeta{display:flex;gap:18px;margin-top:10px;flex-wrap:wrap;position:relative}
+.hm{font-size:12px;color:var(--text2);font-family:var(--mono)}
+.hm b{color:var(--gr2)}
+
+nav{display:flex;gap:4px;padding:10px 26px;background:rgba(17,26,16,0.92);border-bottom:1px solid var(--border);overflow-x:auto;flex-wrap:wrap;position:sticky;top:0;z-index:100;backdrop-filter:blur(8px)}
+.nb{padding:6px 13px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--text2);font-family:var(--font);font-size:12px;font-weight:500;cursor:pointer;transition:all .2s;white-space:nowrap}
+.nb:hover{border-color:var(--gr-dim);color:var(--gr2)}
+.nb.act{background:rgba(62,203,111,0.12);border-color:var(--gr);color:var(--gr);font-weight:700}
+
+main{padding:0 20px 40px;max-width:1200px;margin:0 auto}
+.sec{padding-top:6px;scroll-margin-top:92px}
+.shead{display:flex;align-items:center;gap:12px;margin:44px 0 16px;padding-bottom:10px;border-bottom:2px solid var(--gr-dim)}
+.sec:first-of-type .shead{margin-top:18px}
+.shead-num{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--gr);background:rgba(62,203,111,0.1);border:1px solid var(--gr-dim);border-radius:4px;padding:4px 9px;letter-spacing:1px;flex-shrink:0}
+.shead h2{font-size:19px;font-weight:800;color:#fff;letter-spacing:-0.3px}
+
+.kgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:16px 0 10px}
+@media(max-width:900px){.kgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.kgrid{grid-template-columns:1fr}}
+.kcard{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 15px;position:relative;overflow:hidden}
+.kcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.kg::before{background:linear-gradient(90deg,var(--gr),var(--gr2))}
+.kr::before{background:linear-gradient(90deg,var(--red),var(--red2))}
+.kgo::before{background:linear-gradient(90deg,var(--gold),var(--gold2))}
+.kb::before{background:linear-gradient(90deg,var(--blue),var(--blue2))}
+.ko::before{background:linear-gradient(90deg,var(--orange),var(--orange2))}
+.kp::before{background:linear-gradient(90deg,var(--purple),var(--purple2))}
+.kt::before{background:linear-gradient(90deg,var(--teal),var(--teal2))}
+.klabel{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);margin-bottom:5px}
+.kval{font-size:21px;font-weight:800;line-height:1}
+.ksub{font-size:11px;color:var(--text2);margin-top:3px;font-family:var(--mono)}
+.kg .kval{color:var(--gr2)}.kr .kval{color:var(--red2)}.kgo .kval{color:var(--gold)}.kb .kval{color:var(--blue2)}.ko .kval{color:var(--orange)}.kp .kval{color:var(--purple2)}.kt .kval{color:var(--teal)}
+
+.gbar{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin-bottom:12px}
+.gtitle{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);margin-bottom:10px}
+.gtrack{height:10px;background:var(--bg3);border-radius:999px;overflow:hidden}
+.gfill{height:100%;border-radius:999px;background:linear-gradient(90deg,#4a9eff,#e8c44b,#e85555);transition:width 1.2s ease;width:0}
+.glabels{display:flex;justify-content:space-between;font-size:10px;color:var(--text2);margin-top:5px;font-family:var(--mono)}
+.gscore{font-size:24px;font-weight:800;color:var(--gold2);margin-top:8px}
+.gnote{font-size:11px;color:var(--text2);margin-top:2px;line-height:1.6}
+
+.pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:12px}
+@media(max-width:768px){.pgrid{grid-template-columns:1fr}}
+.panel{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:18px 20px;margin-bottom:12px}
+.ptitle{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.dg{background:var(--gr)}.dr{background:var(--red)}.dgo{background:var(--gold)}.db{background:var(--blue)}.do{background:var(--orange)}.dp{background:var(--purple)}.dt{background:var(--teal)}
+.body{font-size:13px;color:var(--text2);line-height:1.7}
+.body b{color:var(--text)}
+
+.tag{display:inline-block;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:600;margin:2px 2px 2px 0;font-family:var(--mono)}
+.tg{background:rgba(62,203,111,0.1);color:var(--gr2);border:1px solid rgba(62,203,111,0.2)}
+.tr{background:rgba(232,85,85,0.12);color:var(--red2);border:1px solid rgba(232,85,85,0.2)}
+.tgo{background:rgba(232,196,75,0.1);color:var(--gold);border:1px solid rgba(232,196,75,0.2)}
+.tb{background:rgba(74,158,255,0.1);color:var(--blue2);border:1px solid rgba(74,158,255,0.2)}
+.tp{background:rgba(176,122,255,0.1);color:var(--purple2);border:1px solid rgba(176,122,255,0.2)}
+.tt{background:rgba(46,207,176,0.08);color:var(--teal);border:1px solid rgba(46,207,176,0.18)}
+
+/* evidence tags — taxonomia evidencial do corpus */
+.ev{display:inline-flex;align-items:center;gap:4px;padding:2px 7px;border-radius:3px;font-size:9.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;font-family:var(--mono)}
+.ev-confirmed{background:rgba(62,203,111,0.14);color:var(--gr2);border:1px solid rgba(62,203,111,0.3)}
+.ev-contested{background:rgba(74,158,255,0.14);color:var(--blue2);border:1px solid rgba(74,158,255,0.3)}
+.ev-alleged{background:rgba(232,196,75,0.14);color:var(--gold2);border:1px solid rgba(232,196,75,0.3)}
+.ev-inference{background:rgba(176,122,255,0.14);color:var(--purple2);border:1px solid rgba(176,122,255,0.3)}
+
+.tli{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)}
+.tli:last-child{border-bottom:none}
+.tld{font-family:var(--mono);font-size:11px;color:var(--gr);min-width:95px;font-weight:600;padding-top:2px;flex-shrink:0}
+.tltitle{font-size:13px;font-weight:600;margin-bottom:3px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.tldesc{font-size:12px;color:var(--text2);line-height:1.6}
+
+.ritem{padding:12px 14px;border-radius:8px;margin-bottom:9px;border-left:3px solid;background:var(--bg3)}
+.rcrit{border-color:var(--red)}.ralto{border-color:var(--orange)}.rmedio{border-color:var(--gold)}.rbaixo{border-color:var(--teal)}
+.rheader{display:flex;align-items:center;justify-content:space-between;margin-bottom:5px;gap:8px;flex-wrap:wrap}
+.rname{font-size:13px;font-weight:700}
+.rbadge{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;border-radius:3px;font-family:var(--mono)}
+.bcrit{background:rgba(232,85,85,0.2);color:var(--red2)}.balto{background:rgba(255,140,66,0.2);color:var(--orange2)}.bmedio{background:rgba(232,196,75,0.15);color:var(--gold2)}
+.rdesc{font-size:12.5px;color:var(--text2);line-height:1.65}
+
+.alitem{display:flex;gap:10px;padding:12px 14px;border-radius:8px;margin-bottom:9px;background:var(--bg3)}
+.alic{font-size:17px;flex-shrink:0;margin-top:1px}
+.altitle{font-size:13px;font-weight:600;margin-bottom:3px}
+.aldesc{font-size:12.5px;color:var(--text2);line-height:1.65}
+
+.scard{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:14px 16px;margin-bottom:10px}
+.sheader{display:flex;align-items:center;gap:9px;margin-bottom:8px;flex-wrap:wrap}
+.sico{font-size:17px}.sname{font-size:13.5px;font-weight:700}
+.sdesc{font-size:12.5px;color:var(--text2);line-height:1.65}
+.sresult{font-size:11.5px;margin-top:8px;padding:6px 10px;border-radius:5px;background:var(--bg2);font-family:var(--mono)}
+
+.refitem{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);align-items:flex-start}
+.refitem:last-child{border-bottom:none}
+.refnum{font-family:var(--mono);font-size:11px;color:var(--text2);min-width:28px;margin-top:2px}
+.reftitle{font-size:13px;font-weight:600;color:var(--gr);margin-bottom:2px}
+.refsrc{font-size:11px;color:var(--text2);font-family:var(--mono)}
+
+.frow{display:flex;align-items:center;gap:8px;padding:7px 0;font-size:12px;flex-wrap:wrap}
+.fnode{padding:5px 11px;border-radius:5px;font-weight:600;font-size:11px}
+.farr{color:var(--text2);font-size:16px}
+
+.lacuna-card{background:var(--bg3);border:1px solid rgba(232,196,75,0.22);border-radius:8px;padding:13px 16px;margin-bottom:9px}
+.lacuna-num{font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;font-family:var(--mono)}
+.lacuna-text{font-size:12.5px;color:var(--text2);line-height:1.65}
+
+.pattern-card{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--gr);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:14px}
+.pattern-head{display:flex;align-items:center;gap:10px;margin-bottom:8px;flex-wrap:wrap}
+.pattern-id{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--gr2);letter-spacing:.5px}
+.pattern-new{background:rgba(62,203,111,0.15);color:var(--gr2);font-size:9.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 8px;border-radius:3px;font-family:var(--mono)}
+.pattern-name{font-size:15px;font-weight:700;color:#fff;width:100%}
+.pattern-desc{font-size:12.5px;color:var(--text2);line-height:1.7}
+
+/* tabela comparativa */
+.tblwrap{overflow-x:auto;border-radius:10px;border:1px solid var(--border)}
+table.cmp{width:100%;border-collapse:collapse;background:var(--bg2);font-size:12.5px;min-width:560px}
+table.cmp th{background:var(--bg3);color:var(--text2);font-size:10.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;text-align:left;padding:10px 14px;border-bottom:1px solid var(--border)}
+table.cmp td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text)}
+table.cmp tr:last-child td{border-bottom:none}
+table.cmp tr:hover td{background:rgba(62,203,111,0.04)}
+table.cmp td.num{font-family:var(--mono);color:var(--gr2);font-weight:600}
+table.cmp td.hl{color:var(--red2);font-weight:700}
+
+.note-box{background:var(--bg3);border-left:3px solid var(--blue);border-radius:0 8px 8px 0;padding:13px 16px;margin:12px 0;font-size:12.5px;color:var(--text2);line-height:1.7}
+.note-box b{color:var(--blue2)}
+
+/* RELATED / FOOTER CARDS */
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:820px){.rel-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.rel-grid{grid-template-columns:1fr}}
+.rel-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px;
+  display:flex;flex-direction:column;gap:10px;text-decoration:none;color:inherit;transition:background .15s,border-color .15s,transform .15s}
+.rel-card:hover{background:var(--bg3);border-color:var(--gr-dim);transform:translateY(-2px)}
+.rel-card-head{display:flex;align-items:center;gap:10px}
+.rel-card-icon{width:34px;height:34px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.rel-card-cat{font-size:9.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gr2);font-family:var(--mono)}
+.rel-card-title{font-size:13.5px;font-weight:700;color:#fff}
+.rel-card-body{font-size:11.5px;color:var(--text2);line-height:1.6}
+
+footer.pagefoot{margin-top:36px;padding:20px 0 8px;border-top:1px solid var(--border);
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.footer-text{font-size:11px;color:var(--text2);font-family:var(--mono)}
+.badge-muted{font-size:10px;color:var(--text2);border:1px solid var(--border);padding:3px 9px;border-radius:4px;font-family:var(--mono)}
+
+#gotop{position:fixed;bottom:26px;right:22px;z-index:200;width:44px;height:44px;border-radius:8px;
+  background:var(--bg2);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;
+  color:var(--gr2);opacity:0;transform:translateY(10px);transition:opacity .2s,transform .2s,background .15s,border-color .15s;
+  pointer-events:none;cursor:pointer;box-shadow:0 4px 18px rgba(0,0,0,0.35)}
+#gotop.show{opacity:1;transform:translateY(0);pointer-events:auto}
+#gotop:hover{background:var(--bg3);border-color:var(--gr)}
+
+@media print{#gotop{display:none!important}nav{display:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div style="display:flex;align-items:center;gap:0;flex-wrap:wrap">
+    <div class="hbadge">⚖ Extensão Analítica • Cluster Compliance Zero</div>
+    <div class="live-badge"><span class="live-dot"></span>CASO EM ACOMPANHAMENTO — jul/2026</div>
+  </div>
+  <h1>TJMG × Banco Master — <span>Blindagem Civil ao Acesso à Justiça</span></h1>
+  <div class="hmeta">
+    <span class="hm"><b>Denúncia ao CNJ:</b> Edson Alcântara, protocolada jul/2026</span>
+    <span class="hm"><b>Mecanismos mapeados:</b> 2 frentes convergentes</span>
+    <span class="hm"><b>Status TJMG:</b> resposta LGPD evasiva</span>
+    <span class="hm"><b>Passivo Master:</b> R$47–51bi vs. caixa R$4mi</span>
+    <span class="hm"><b>Decisão CNJ:</b> pendente</span>
+  </div>
+</header>
+
+<nav>
+  <button class="nb act" onclick="scrollToSec('visao')">Visão Geral</button>
+  <button class="nb" onclick="scrollToSec('frentes')">Duas Frentes</button>
+  <button class="nb" onclick="scrollToSec('dados')">Dados Comparativos</button>
+  <button class="nb" onclick="scrollToSec('controversias')">Controvérsias</button>
+  <button class="nb" onclick="scrollToSec('responsabilizacao')">Responsabilização</button>
+  <button class="nb" onclick="scrollToSec('timeline')">Linha do Tempo</button>
+  <button class="nb" onclick="scrollToSec('alertas')">Alertas & Riscos</button>
+  <button class="nb" onclick="scrollToSec('lacunas')">Lacunas</button>
+  <button class="nb" onclick="scrollToSec('refs')">Referências</button>
+</nav>
+
+<main>
+
+<!-- ══ VISÃO GERAL ══ -->
+<div id="sec-visao" class="sec">
+  <div class="shead"><span class="shead-num">01</span><h2>Visão Geral</h2></div>
+  <div class="kgrid">
+    <div class="kcard kr"><div class="klabel">Alerta pré-mérito TJMG</div><div class="kval">"Litigância Abusiva"</div><div class="ksub">aplicado na distribuição, antes do mérito</div></div>
+    <div class="kcard kgo"><div class="klabel">Diligências reportadas</div><div class="kval">~300</div><div class="ksub">oficiais de Justiça nas casas de clientes</div></div>
+    <div class="kcard kb"><div class="klabel">Extinção sem mérito (nacional)</div><div class="kval">10–35%</div><div class="ksub">dos processos cíveis — CNJ/ABJ, incerteza reconhecida</div></div>
+    <div class="kcard kr"><div class="klabel">Bancos como réu (TJRN)</div><div class="kval">74,65%</div><div class="ksub">dos casos flagados como litigância abusiva</div></div>
+    <div class="kcard kgo"><div class="klabel">Custo estimado anual (SP)</div><div class="kval">R$2,7bi</div><div class="ksub">337 mil processos/ano — NUMOPEDE-SP</div></div>
+    <div class="kcard kt"><div class="klabel">TJMG no ranking nacional</div><div class="kval">15 casos</div><div class="ksub">11,27% do total 2024 — atrás de SP, RN, CE</div></div>
+    <div class="kcard kp"><div class="klabel">Passivo × caixa Master</div><div class="kval">R$47–51bi / R$4mi</div><div class="ksub">contexto da liquidação extrajudicial</div></div>
+    <div class="kcard kg"><div class="klabel">Base normativa</div><div class="kval">Rec. CNJ 159/2024</div><div class="ksub">+ STJ Tema 1198 (acórdão jun/2026)</div></div>
+  </div>
+
+  <div class="gbar">
+    <div class="gtitle">Índice de Opacidade & Convergência Institucional</div>
+    <div class="gtrack"><div class="gfill" id="gfill"></div></div>
+    <div class="glabels"><span>Baixo</span><span>Médio</span><span>Alto</span><span>Crítico</span></div>
+    <div class="gscore">74 / 100 — ALTO</div>
+    <div class="gnote">Duas frentes de natureza jurídica distinta (uma discricionária/algorítmica, outra estatutária/automática) convergem no mesmo efeito prático: o dano ao consumidor documentado não é reparado, independente do mérito. O componente que eleva o índice não é a existência dos mecanismos — ambos têm justificativa técnica documentada — mas a recusa do TJMG em divulgar os critérios e números aplicados especificamente ao caso Master, apesar de pedido formal via LGPD.</div>
+  </div>
+
+  <div class="pgrid">
+    <div class="panel">
+      <div class="ptitle"><span class="dot dg"></span>Contexto <span class="ev ev-confirmed">ev-confirmed</span></div>
+      <p class="body">O Banco Master está sob liquidação extrajudicial decretada pelo BC (18 nov 2025) e sob investigação da PF (Operação Compliance Zero) por operações de crédito consignado fraudulentas. Nesse cenário, consumidores que buscam a Justiça para contestar contratos fraudulentos contra o próprio Master passaram a ter suas ações classificadas com o alerta <b>"Litigância Abusiva: Analisar indícios"</b> pelo sistema do TJMG — antes de qualquer exame de mérito.</p>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot dgo"></span>Padrão Identificado <span class="ev ev-inference">ev-inference</span></div>
+      <p class="body">O mesmo tipo de mecanismo — barreira técnica/processual introduzida ou aplicada de forma assimétrica — que em P01 protege réus criminais poderosos da persecução penal, aparece aqui protegendo um réu civil (o banco) de suas próprias vítimas. Não são o mesmo instrumento jurídico, mas cumprem a mesma <b>função estrutural</b>: neutralizar o dano documentado sem necessariamente confrontar o mérito da alegação.</p>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot db"></span>Nota de Simetria <span class="ev ev-contested">ev-contested</span></div>
+      <p class="body">A "litigância predatória" bancária é um fenômeno real e documentado — o precedente TJ-MS (64 mil ações, 2015–2021, 80% de improcedência, 43,6% concentradas em um único advogado) fundamentou a Recomendação CNJ 159/2024 e o Tema 1198 do STJ. O sistema de triagem não nasceu para blindar o Master. A questão em aberto é se, no caso específico, um instrumento com justificativa legítima está sendo aplicado de forma seletiva contra um escritório determinado.</p>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot dp"></span>Metodologia Aplicada</div>
+      <p class="body">Toda afirmação abaixo carrega classificação evidencial explícita. Reportagem de fonte única (ICL Notícias) sobre o caso Alcântara×TJMG×Master é tratada como <span class="ev ev-alleged" style="margin:0 2px">ev-alleged</span> até corroboração independente. Dados nacionais oficiais (CNJ/ABJ, STJ, jurisprudência publicada) são <span class="ev ev-confirmed" style="margin:0 2px">ev-confirmed</span>. A conexão estrutural entre as duas frentes é <span class="ev ev-inference" style="margin:0 2px">ev-inference</span> — conclusão analítica, não fato estabelecido.</p>
+    </div>
+  </div>
+
+  <div class="pattern-card">
+    <div class="pattern-head">
+      <span class="pattern-id">P01-B</span>
+      <span class="pattern-new">Subpadrão proposto — jul/2026</span>
+    </div>
+    <div class="pattern-name">Neutralização Civil do Dano</div>
+    <div class="pattern-desc">Espelho de P01 (Anulação via Defeito Processual) aplicado à esfera cível: em vez de anular prova/condenação contra um poderoso, o mecanismo esvazia o remédio judicial de vítimas civis de uma instituição em crise — via (i) triagem discricionária pré-mérito e (ii) suspensão estatutária de execuções mesmo após trânsito em julgado. Resultado: o dano reconhecido judicialmente não é reparado, independente do mérito ter sido confirmado. Proposto para avaliação e atribuição formal de ID no corpus.</div>
+  </div>
+</div>
+
+<!-- ══ DUAS FRENTES ══ -->
+<div id="sec-frentes" class="sec">
+  <div class="shead"><span class="shead-num">02</span><h2>Duas Frentes de Blindagem Civil</h2></div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dr"></span>Frente 1 — Triagem Automática Pré-Mérito (TJMG/NUMOPEDE/CIJMG)</div>
+    <div class="scard">
+      <div class="sheader"><span class="sico">🚩</span><span class="sname">Alerta na distribuição</span> <span class="ev ev-confirmed">ev-confirmed</span></div>
+      <div class="sdesc">Ações de consumidores contra o Master recebem o selo "Litigância Abusiva: Analisar indícios" já na autuação, antes de qualquer decisão sobre o mérito da demanda.</div>
+    </div>
+    <div class="scard">
+      <div class="sheader"><span class="sico">📋</span><span class="sname">Ofício ao NUMOPEDE + representação à OAB</span> <span class="ev ev-confirmed">ev-confirmed</span></div>
+      <div class="sdesc">Padrão documentado em acórdão real do TJMG: o juízo oficia o NUMOPEDE para monitoramento e comunica a OAB/MG sobre possíveis infrações ético-disciplinares do advogado — antes de qualquer julgamento de mérito da ação individual.</div>
+    </div>
+    <div class="scard">
+      <div class="sheader"><span class="sico">🏠</span><span class="sname">Diligência domiciliar</span> <span class="ev ev-alleged">ev-alleged</span></div>
+      <div class="sdesc">Segundo o advogado Edson Alcântara, oficiais de Justiça vão às casas dos clientes confirmar contratação, autorização de ajuizamento e conhecimento do advogado — quase 300 diligências reportadas, a maioria contra ações de instituições financeiras.</div>
+    </div>
+    <div class="scard">
+      <div class="sheader"><span class="sico">⚠️</span><span class="sname">Contradição interna apontada</span> <span class="ev ev-alleged">ev-alleged</span></div>
+      <div class="sdesc">Enquanto CIJMG/NUMOPEDE afirmam operar com dados agregados e impessoais, um despacho anexado ao Pedido de Providências registraria o advogado como "monitorado" nominalmente — usado como fundamento para diligências. Fonte única até o momento; despacho não verificado de forma independente por este corpus.</div>
+      <div class="sresult" style="color:var(--gold2)">✗ Sem resposta objetiva do TJMG ao pedido LGPD até 16/jul/2026</div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="ptitle"><span class="dot db"></span>Frente 2 — Suspensão Estatutária por Liquidação Extrajudicial (Lei 6.024/74)</div>
+    <div class="scard">
+      <div class="sheader"><span class="sico">⚖️</span><span class="sname">Concurso universal de credores</span> <span class="ev ev-confirmed">ev-confirmed</span></div>
+      <div class="sdesc">Decretada a liquidação, suspendem-se automaticamente ações e execuções sobre direitos relativos ao acervo da instituição — o crédito deve ser habilitado junto ao liquidante nomeado pelo BC. Mecanismo estatutário padrão (art. 18, Lei 6.024/74), não discricionário e não exclusivo do caso Master.</div>
+    </div>
+    <div class="scard">
+      <div class="sheader"><span class="sico">📍</span><span class="sname">Caso concreto — Limeira/SP</span> <span class="ev ev-confirmed">ev-confirmed</span></div>
+      <div class="sdesc">Dois consumidores com sentença de mérito já reconhecendo fraude bancária e nulidade contratual tiveram o cumprimento de sentença extinto sem resolução de mérito em razão da liquidação — mesmo tendo <b style="color:var(--text)">vencido</b> a ação. Recurso: habilitação de crédito na massa liquidanda.</div>
+      <div class="sresult" style="color:var(--red2)">✗ Vitória judicial sem efeito prático imediato — fila atrás de R$47–51bi em passivos</div>
+    </div>
+    <div class="scard">
+      <div class="sheader"><span class="sico">🔍</span><span class="sname">Limite jurisprudencial reconhecido</span> <span class="ev ev-confirmed">ev-confirmed</span></div>
+      <div class="sdesc">Jurisprudência (TJ) já reconhece que a suspensão não se aplica a ações de conhecimento (que buscam título executivo), apenas à fase de execução — preservando parcialmente o acesso à Justiça mesmo dentro do regime de liquidação.</div>
+    </div>
+  </div>
+
+  <div class="note-box">
+    <b>Por que separar as duas frentes:</b> a Frente 2 é doutrina padrão aplicável a qualquer instituição financeira em liquidação — não há evidência de aplicação seletiva. A Frente 1 é onde recai a alegação de direcionamento individualizado. Tratá-las como um único fenômeno colapsaria rigor evidencial; tratá-las como desconectadas ignoraria que ambas produzem, na prática, o mesmo resultado para o consumidor lesado pelo Master — daí a proposta de P01-B como categoria funcional, não como acusação de coordenação entre os dois mecanismos.
+  </div>
+</div>
+
+<!-- ══ DADOS COMPARATIVOS ══ -->
+<div id="sec-dados" class="sec">
+  <div class="shead"><span class="shead-num">03</span><h2>Dados Comparativos</h2></div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dg"></span>Ranking nacional — decisões reconhecendo litigância abusiva contra instituições financeiras <span class="ev ev-confirmed">ev-confirmed</span></div>
+    <div style="font-size:11px;color:var(--text2);font-family:var(--mono);margin-bottom:12px">Rec. CNJ 159/2024 até fim de 2024 — análise Mattos Filho sobre decisões de Tribunais Estaduais</div>
+    <div class="tblwrap">
+      <table class="cmp">
+        <thead><tr><th>Tribunal</th><th>Julgados</th><th>% do total nacional</th></tr></thead>
+        <tbody>
+          <tr><td>TJSP</td><td class="num">69</td><td class="num hl">51,87%</td></tr>
+          <tr><td>TJRN</td><td class="num">21</td><td class="num">15,78%</td></tr>
+          <tr><td>TJCE</td><td class="num">20</td><td class="num">15,03%</td></tr>
+          <tr><td><b style="color:var(--gr2)">TJMG</b></td><td class="num"><b style="color:var(--gr2)">15</b></td><td class="num"><b style="color:var(--gr2)">11,27%</b></td></tr>
+          <tr><td>TJPB</td><td class="num">7</td><td class="num">5,26%</td></tr>
+          <tr><td>TJSC</td><td class="num">1</td><td class="num">0,75%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="ptitle"><span class="dot dr"></span>Concentração de instituições financeiras no polo passivo — casos flagados <span class="ev ev-confirmed">ev-confirmed</span></div>
+    <div style="font-size:11px;color:var(--text2);font-family:var(--mono);margin-bottom:12px">Relatório CNJ/ABJ 2025, Tabela 17 (p.257) — via análise crítica Migalhas</div>
+    <div class="tblwrap">
+      <table class="cmp">
+        <thead><tr><th>Tribunal</th><th>% dos casos com instituição financeira como ré</th></tr></thead>
+        <tbody>
+          <tr><td>TJRN</td><td class="num hl">74,65%</td></tr>
+          <tr><td>TJSP</td><td class="num hl">68,92%</td></tr>
+          <tr><td>TJMT</td><td class="num hl">65,33%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note-box" style="margin-top:14px;margin-bottom:0">O próprio relatório oficial registra essa concentração sem extrair a "consequência analítica óbvia" apontada pela crítica acadêmica: o polo passivo do fenômeno é dominado por instituições financeiras, mas o instrumento de controle (Rec. 159/2024) mira formalmente o polo ativo — o cidadão hipossuficiente.</div>
+  </div>
+
+  <div class="panel">
+    <div class="ptitle"><span class="dot dgo"></span>Precedente fundador — TJ-MS (base do Tema 1198/STJ) <span class="ev ev-confirmed">ev-confirmed</span></div>
+    <div class="kgrid" style="padding-top:4px">
+      <div class="kcard kb"><div class="klabel">Ações 2015–2021</div><div class="kval">64 mil+</div><div class="ksub">empréstimos consignados, TJ-MS</div></div>
+      <div class="kcard kgo"><div class="klabel">Concentração</div><div class="kval">43,6%</div><div class="ksub">de um único advogado</div></div>
+      <div class="kcard kr"><div class="klabel">Índice de improcedência</div><div class="kval">80%</div><div class="ksub">sem extrato bancário, procuração genérica</div></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="ptitle"><span class="dot dt"></span>Escala nacional do fenômeno <span class="ev ev-confirmed">ev-confirmed</span></div>
+    <div class="kgrid" style="padding-top:4px">
+      <div class="kcard kgo"><div class="klabel">Novos processos/ano (SP)</div><div class="kval">337 mil</div><div class="ksub">NUMOPEDE-SP</div></div>
+      <div class="kcard kr"><div class="klabel">Prejuízo anual estimado (SP)</div><div class="kval">R$2,7bi</div><div class="ksub">estimativa NUMOPEDE-SP</div></div>
+      <div class="kcard kp"><div class="klabel">Acumulado 2016–2021</div><div class="kval">R$16,7bi</div><div class="ksub">custo médio processual IPEA aplicado</div></div>
+      <div class="kcard kb"><div class="klabel">Amostra CNJ/ABJ — 509 advogados</div><div class="kval">35,36%</div><div class="ksub">com indícios de fraude (tipos I+II)</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CONTROVÉRSIAS ══ -->
+<div id="sec-controversias" class="sec">
+  <div class="shead"><span class="shead-num">04</span><h2>Controvérsias</h2></div>
+  <div class="pgrid">
+    <div class="panel">
+      <div class="ptitle"><span class="dot dg"></span>Argumento pró-triagem <span class="ev ev-contested">ev-contested</span></div>
+      <div class="ritem rbaixo">
+        <div class="rheader"><span class="rname">Fraude concentrada é real e documentada</span></div>
+        <div class="rdesc">TJ-MS: 80% de improcedência em ações concentradas em poucos advogados, sem lastro documental mínimo. O STJ pacificou (Tema 1198) que o juízo pode exigir emenda da inicial para comprovar interesse de agir diante de indícios.</div>
+      </div>
+      <div class="ritem rbaixo">
+        <div class="rheader"><span class="rname">"Litigância predatória" tem base normativa nacional</span></div>
+        <div class="rdesc">Recomendação CNJ 159/2024, aprovada por unanimidade, e Notas Técnicas de Centros de Inteligência de pelo menos 23 tribunais estaduais — não é invenção do TJMG nem exclusividade do caso Master.</div>
+      </div>
+      <div class="ritem rmedio">
+        <div class="rheader"><span class="rname">Conceito ainda impreciso, segundo o próprio CNJ</span></div>
+        <div class="rdesc">O diagnóstico oficial CNJ/ABJ admite "embolar de conceitos" e grande variação nas definições — o que enfraquece tanto acusações de blindagem quanto justificativas automáticas de triagem.</div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot dr"></span>Argumento crítico <span class="ev ev-contested">ev-contested</span></div>
+      <div class="ritem rcrit">
+        <div class="rheader"><span class="rname">Assimetria estrutural documentada pelo próprio CNJ</span></div>
+        <div class="rdesc">74,65% (TJRN), 68,92% (TJSP) e 65,33% (TJMT) dos casos flagados têm bancos como réus — mas o instrumento de controle formal recai sobre quem processa, não sobre quem é processado.</div>
+      </div>
+      <div class="ritem ralto">
+        <div class="rheader"><span class="rname">Incerteza sobre "tratamento silencioso"</span></div>
+        <div class="rdesc">O próprio relatório CNJ/ABJ levanta a hipótese de extinções sem mérito funcionando como descarte silencioso de causas legítimas (10–35% dos processos cíveis) — e declara explicitamente não ter dados para confirmar ou refutar isso.</div>
+      </div>
+      <div class="ritem ralto">
+        <div class="rheader"><span class="rname">Opacidade específica no caso Master</span></div>
+        <div class="rdesc">TJMG não divulga critérios, números ou taxa de acerto do próprio mecanismo aplicado a ações contra o Master, apesar de pedido formal LGPD — mesmo enquanto o Master está sob liquidação e investigação federal.</div>
+      </div>
+    </div>
+  </div>
+  <div class="note-box">
+    <b>Leitura de simetria obrigatória:</b> nenhum dos dois lados, isoladamente, fecha a questão. A existência de fraude processual concentrada em massa não prova que o caso Alcântara×Master seja legítimo; a existência de assimetria estrutural nacional (bancos como maioria dos réus protegidos) não prova que o TJMG esteja deliberadamente blindando o Master. O que está <span class="ev ev-confirmed" style="margin:0 2px">ev-confirmed</span> é a opacidade — o tribunal se recusa a fornecer os dados que resolveriam a questão.
+  </div>
+</div>
+
+<!-- ══ LINHA DO TEMPO ══ -->
+<div id="sec-responsabilizacao" class="sec">
+  <div class="shead"><span class="shead-num">05</span><h2>Probabilidade de Responsabilização — Caso Master</h2></div>
+
+  <div class="note-box">
+    <b>Distinção necessária:</b> "expor" (investigar, prender temporariamente, bloquear bens) e "responsabilizar" (condenação com trânsito em julgado, efetivamente cumprida) são fenômenos diferentes. O caso Master está muito avançado no primeiro eixo. O segundo é onde o padrão histórico do corpus (P01, P02, P03, P06) pesa.
+  </div>
+
+  <div class="kgrid">
+    <div class="kcard kr"><div class="klabel">Prisões em 6 meses</div><div class="kval">21</div><div class="ksub">temporárias + preventivas — mai/2026</div></div>
+    <div class="kcard kgo"><div class="klabel">Mandados de busca</div><div class="kval">116</div><div class="ksub">7 unidades da federação</div></div>
+    <div class="kcard kr"><div class="klabel">Bens bloqueados/sequestrados</div><div class="kval">R$27,7bi</div><div class="ksub">acumulado — mai/2026</div></div>
+    <div class="kcard kb"><div class="klabel">Denúncia formal do MPF</div><div class="kval">Não oferecida</div><div class="ksub">ainda em fase de inquérito — PET 15556/STF</div></div>
+    <div class="kcard kt"><div class="klabel">Fases da Compliance Zero</div><div class="kval">4+</div><div class="ksub">nov/2025–abr/2026, investigação segue ativa</div></div>
+    <div class="kcard kp"><div class="klabel">CPI mista no Congresso</div><div class="kval">Sem consenso</div><div class="ksub">relutância explícita citando proximidade eleitoral</div></div>
+  </div>
+
+  <div class="gbar">
+    <div class="gtitle">Índice de Risco de Impunidade do Beneficiário Final</div>
+    <div class="gtrack"><div class="gfill" id="gfill2"></div></div>
+    <div class="glabels"><span>Baixo</span><span>Médio</span><span>Alto</span><span>Crítico</span></div>
+    <div class="gscore">81 / 100 — CRÍTICO</div>
+    <div class="gnote">Score alto não porque a responsabilização de Vorcaro seja improvável — é a mais provável de todo o caso — mas porque a distância entre "operador central preso" e "beneficiário final/camada institucional responsabilizada" segue o padrão histórico documentado em P01/P02/P03/P06 em praticamente todas as operações do corpus.</div>
+  </div>
+
+  <div class="pgrid">
+    <div class="panel">
+      <div class="ptitle"><span class="dot dg"></span>Fatores a favor da responsabilização</div>
+      <div class="alitem"><div class="alic">✅</div><div><div class="altitle">Evidência incomumente direta</div><div class="aldesc">BC verificou CPFs de 130 contratos amostrados — zero com lastro real. Não depende de teoria complexa nem de interpretação contábil sofisticada.</div></div></div>
+      <div class="alitem"><div class="alic">✅</div><div><div class="altitle">Investigação em expansão, não em retração</div><div class="aldesc">Relatório da PF sobre manipulação de avaliações do app do banco é de uma semana antes desta análise — o inquérito segue produzindo material novo 8 meses depois de aberto.</div></div></div>
+      <div class="alitem"><div class="alic">✅</div><div><div class="altitle">Conflito de interesse identificado antes da sentença</div><div class="aldesc">Diferente da Lava Jato (suspeição de Moro reconhecida só após 278 condenações, anos depois), o vínculo Vorcaro–Toffoli foi descoberto e o ministro removido da relatoria ainda na fase de inquérito.</div></div></div>
+      <div class="alitem"><div class="alic">✅</div><div><div class="altitle">Exposição penal crescente para Vorcaro</div><div class="aldesc">3ª prisão (mar/2026) já é por obstrução de justiça, soma-se aos crimes financeiros originais — múltiplas frentes penais independentes.</div></div></div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot dr"></span>Fatores contra — padrão histórico do corpus</div>
+      <div class="alitem"><div class="alic">🔴</div><div><div class="altitle">P06 — prescrição é o desfecho mais comum</div><div class="aldesc">Tríplex e sítio de Atibaia (Lava Jato) não foram julgados improcedentes: prescreveram entre redistribuições. O caso Master ainda não tem denúncia formal ~1,5 ano após aberto.</div></div></div>
+      <div class="alitem"><div class="alic">🔴</div><div><div class="altitle">Congresso já sinaliza relutância</div><div class="aldesc">CPI mista chamada de "Caixa de Pandora" em reportagem de jan/2026 — sem consenso, explicitamente por proximidade da eleição de 2026.</div></div></div>
+      <div class="alitem"><div class="alic">🔴</div><div><div class="altitle">P03 — ministro do STF é chokepoint terminal</div><div class="aldesc">Toffoli foi removido da relatoria, não investigado formalmente até onde este corpus verificou. Ministro do STF em exercício tem taxa-base de responsabilização penal historicamente próxima de zero — foro por prerrogativa e impeachment pelo Senado (nunca bem-sucedido em casos recentes) são as únicas vias.</div></div></div>
+      <div class="alitem"><div class="alic">🔴</div><div><div class="altitle">Falha regulatória sem precedente de responsabilização</div><div class="aldesc">BC levou 2 anos (2023→2025) para agir sobre denúncia formal de Timerman. Não há precedente de responsabilização de regulador por omissão no Brasil.</div></div></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="ptitle"><span class="dot dgo"></span>Avaliação por camada de ator</div>
+    <div class="ritem rbaixo">
+      <div class="rheader"><span class="rname">Vorcaro individualmente (operador central)</span><span class="rbadge" style="background:rgba(46,207,176,0.15);color:var(--teal2)">MÉDIA-ALTA</span></div>
+      <div class="rdesc">Evidência mais forte de todo o caso, já preso 3×, exposição penal crescente. Mas "eventualmente condenado" pode significar anos até trânsito em julgado, com dosimetria e eventual colaboração premiada reduzindo a pena efetiva. <span class="ev ev-inference">ev-inference</span></div>
+    </div>
+    <div class="ritem rmedio">
+      <div class="rheader"><span class="rname">Rede societária próxima — Tanure, Mansur, Zettel, laranjas do BRB</span><span class="rbadge bmedio">MÉDIA</span></div>
+      <div class="rdesc">Volume de bens bloqueados (R$27,7bi) cria pressão real para acordos e colaboração — mas resultado depende de quantos aceitam delação vs. disputam judicialmente. <span class="ev ev-inference">ev-inference</span></div>
+    </div>
+    <div class="ritem ralto">
+      <div class="rheader"><span class="rname">Camada política — Ibaneis Rocha, Ciro Nogueira, possivelmente Flávio Bolsonaro</span><span class="rbadge balto">BAIXA</span></div>
+      <div class="rdesc">Congresso já sinalizou relutância em abrir CPI mista antes da eleição. Menção a possível representação contra Flávio Bolsonaro no STF é <span class="ev ev-alleged" style="margin:0 2px">ev-alleged</span> — fonte única de viés declarado, tom especulativo ("espera-se que"), não confirmada de forma independente.</div>
+    </div>
+    <div class="ritem rcrit">
+      <div class="rheader"><span class="rname">Camada institucional — Toffoli e falha regulatória do BC</span><span class="rbadge bcrit">MÍNIMA — histórico próximo de zero</span></div>
+      <div class="rdesc">Remoção da relatoria não equivale a investigação própria. Nenhum precedente recente de ministro do STF em exercício ou de regulador responsabilizado por omissão. Esta é a camada que corresponde ao "beneficiário final" da tese central do corpus. <span class="ev ev-confirmed">ev-confirmed</span> quanto à remoção da relatoria; <span class="ev ev-inference">ev-inference</span> quanto à probabilidade de responsabilização.</div>
+    </div>
+  </div>
+
+  <div class="note-box">
+    <b>Síntese:</b> mesmo que Vorcaro seja formalmente condenado — cenário plausível —, isso não equivaleria a "o caso Master responsabilizou os culpados" no sentido estrutural que orienta este corpus. Seria responsabilização do operador visível, não da rede que permitiu e protegeu o esquema enquanto ele crescia (CADE aprovando fusão sem informação completa do BC, BC levando 2 anos para agir, ministro do STF com vínculo financeiro não declarado assumindo a relatoria). "Nenhum vetor chega ao beneficiário final" segue sendo a hipótese mais consistente com o padrão histórico — a confirmar ou refutar conforme o caso avança.
+  </div>
+</div>
+
+<div id="sec-timeline" class="sec">
+  <div class="shead"><span class="shead-num">06</span><h2>Linha do Tempo</h2></div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dg"></span>Do Precedente Nacional (TJ-MS) ao Caso Master</div>
+    <div class="tli"><div class="tld">15 jun 2022</div><div><div class="tltitle">Nota Técnica 01/2022 — CIJMG</div><div class="tldesc">Centro de Inteligência da Justiça de MG formaliza diagnóstico e boas práticas contra litigância predatória. Base para todo o aparato de triagem hoje em uso.</div></div></div>
+    <div class="tli"><div class="tld">22 out 2024</div><div><div class="tltitle">CNJ aprova Recomendação 159/2024</div><div class="tldesc">Plenário do CNJ aprova por unanimidade medidas nacionais de identificação, tratamento e prevenção da litigância abusiva.</div></div></div>
+    <div class="tli"><div class="tld">2024 (ano)</div><div><div class="tltitle">TJMG reconhece 15 casos — 11,27% do total nacional</div><div class="tldesc">Ranking liderado por TJSP (51,87%), TJRN (15,78%) e TJCE (15,03%).</div></div></div>
+    <div class="tli"><div class="tld">18 nov 2025</div><div><div class="tltitle" style="color:var(--red2)">Liquidação extrajudicial do Banco Master</div><div class="tldesc">BC decreta liquidação. Passivo estimado R$47–51bi, caixa de R$4 milhões. Suspensão estatutária de ações/execuções (Lei 6.024/74) passa a incidir sobre todo o litígio civil envolvendo o banco.</div></div></div>
+    <div class="tli"><div class="tld">jan 2026</div><div><div class="tltitle">Execuções suspensas em Limeira/SP</div><div class="tldesc">Dois consumidores com sentença de mérito favorável (fraude reconhecida) têm cumprimento de sentença extinto sem resolução de mérito por força da liquidação.</div></div></div>
+    <div class="tli"><div class="tld">jun 2026</div><div><div class="tltitle">STJ publica acórdão do Tema 1198</div><div class="tldesc">Mais de um ano após o julgamento, acórdão consolida a tese sobre poderes do juiz diante de indícios de litigância abusiva.</div></div></div>
+    <div class="tli"><div class="tld">jun 2026</div><div><div class="tltitle">Advogado protocola pedido LGPD ao TJMG</div><div class="tldesc">Edson Alcântara pede esclarecimento sobre uso do número da OAB como critério de triagem e existência de supervisão humana.</div></div></div>
+    <div class="tli"><div class="tld">15 jul 2026</div><div><div class="tltitle" style="color:var(--gold2)">TJMG responde de forma evasiva</div><div class="tldesc">Após cobrança, tribunal informa apenas que o pedido está "em tratativa" e que a análise "não depende exclusivamente de informações extraídas dos sistemas" — sem responder objetivamente.</div></div></div>
+    <div class="tli"><div class="tld">16 jul 2026</div><div><div class="tltitle" style="color:var(--red2)">Caso vai ao CNJ — matéria publicada</div><div class="tldesc">ICL Notícias publica reportagem sobre o Pedido de Providências de Alcântara. Decisão do CNJ ainda pendente.</div></div></div>
+  </div>
+</div>
+
+<!-- ══ ALERTAS ══ -->
+<div id="sec-alertas" class="sec">
+  <div class="shead"><span class="shead-num">07</span><h2>Alertas & Riscos</h2></div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dr"></span>Riscos e Sinais de Atenção</div>
+    <div class="alitem"><div class="alic">🔴</div><div><div class="altitle" style="color:var(--red2)">Risco: vitória judicial sem efeito prático</div><div class="aldesc">O caso Limeira mostra que mesmo sentença de mérito transitada em julgado pode ser esvaziada pela suspensão estatutária — o consumidor "ganha" e entra numa fila de credores atrás de R$47–51bi em passivos com R$4 milhões em caixa.</div></div></div>
+    <div class="alitem"><div class="alic">🔴</div><div><div class="altitle" style="color:var(--red2)">Risco: opacidade específica sobre o mecanismo discricionário</div><div class="aldesc">TJMG não divulga quantos processos contra o Master foram flagados nem a taxa de extinção resultante — o dado que resolveria a controvérsia é exatamente o que falta.</div></div></div>
+    <div class="alitem"><div class="alic">🟡</div><div><div class="altitle" style="color:var(--gold)">Alerta: possível efeito inibidor sobre advocacia de massa legítima</div><div class="aldesc">Diligências domiciliares e representações disciplinares à OAB, mesmo quando eventualmente arquivadas, têm custo reputacional e operacional para advogados que representam consumidores vulneráveis — efeito dissuasório independente do resultado final.</div></div></div>
+    <div class="alitem"><div class="alic">🟡</div><div><div class="altitle" style="color:var(--gold)">Alerta: conceito de "litigância predatória" ainda impreciso</div><div class="aldesc">A própria imprecisão conceitual reconhecida pelo CNJ/ABJ cria espaço para aplicação discricionária em ambas as direções — tanto para conter fraude real quanto para desencorajar litígio legítimo.</div></div></div>
+    <div class="alitem"><div class="alic">🔵</div><div><div class="altitle" style="color:var(--blue2)">Observação: mecanismo pré-existe ao caso Master</div><div class="aldesc">Importante para não superdimensionar a hipótese de blindagem: o aparato de triagem (NUMOPEDE, CIJMG, Rec. 159/2024) já operava antes da liquidação do Master e se aplica a outras instituições financeiras.</div></div></div>
+  </div>
+</div>
+
+<!-- ══ LACUNAS ══ -->
+<div id="sec-lacunas" class="sec">
+  <div class="shead"><span class="shead-num">08</span><h2>Lacunas Investigativas</h2></div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dgo"></span>O que ainda falta verificar</div>
+    <div class="lacuna-card"><div class="lacuna-num">01 · Dado central ausente</div><div class="lacuna-text">Quantas ações contra o Master especificamente foram marcadas com o alerta de litigância abusiva no TJMG, e qual o desfecho (extinção, prosseguimento, acordo)? O tribunal se recusa a informar.</div></div>
+    <div class="lacuna-card"><div class="lacuna-num">02 · Decisão pendente</div><div class="lacuna-text">O Pedido de Providências de Alcântara ainda não teve decisão publicada pelo CNJ até a data de fechamento desta análise (17/jul/2026).</div></div>
+    <div class="lacuna-card"><div class="lacuna-num">03 · Verificação documental pendente</div><div class="lacuna-text">O despacho que supostamente registra "monitoramento" nominal do advogado não foi acessado de forma independente por este corpus — conhecido apenas via reportagem de fonte única.</div></div>
+    <div class="lacuna-card"><div class="lacuna-num">04 · Escopo do padrão</div><div class="lacuna-text">Não há confirmação de que outros advogados/escritórios que representam vítimas do Master enfrentam o mesmo tratamento — ou se o caso está circunscrito a um único escritório.</div></div>
+    <div class="lacuna-card"><div class="lacuna-num">05 · Dados de desfecho nacionais não totalmente acessados</div><div class="lacuna-text">O Relatório CNJ/ABJ 2025 contém figuras (28–31) com distribuição de desfechos de sentenças por tribunal — acesso direto ao PDF bloqueado por proteção anti-bot; dados citados aqui vêm de fontes secundárias que referenciam o relatório.</div></div>
+    <div class="lacuna-card"><div class="lacuna-num">06 · Série temporal ausente</div><div class="lacuna-text">Não há comparação entre a taxa de flagging do TJMG antes e depois da liquidação do Master — o que permitiria isolar se houve intensificação do mecanismo especificamente após nov/2025.</div></div>
+    <div class="lacuna-card"><div class="lacuna-num">07 · Réplica em outros estados</div><div class="lacuna-text">Não verificado se tribunais de outros estados onde o Master também responde a ações de consumidores (fora de MG) aplicam mecanismo equivalente.</div></div>
+  </div>
+</div>
+
+<!-- ══ REFERÊNCIAS ══ -->
+<div id="sec-refs" class="sec">
+  <div class="shead"><span class="shead-num">09</span><h2>Referências Documentais & Fontes</h2></div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dg"></span>Fontes Citadas</div>
+    <div style="font-size:11px;color:var(--text2);font-family:var(--mono);margin-bottom:12px;padding:6px 10px;background:var(--bg3);border-radius:5px">⚡ Caso em curso — fontes verificadas até 17/jul/2026. Decisão do CNJ e resposta plena do TJMG ainda pendentes.</div>
+    <div class="refitem"><div class="refnum">[01]</div><div><div class="reftitle">Ações contra Banco Master são marcadas como litigância abusiva</div><div class="refsrc">iclnoticias.com.br • Cleber Lourenço • Pedido de Providências ao CNJ, pedido LGPD, ~300 diligências</div></div></div>
+    <div class="refitem"><div class="refnum">[02]</div><div><div class="reftitle">Rede de Informações sobre a Litigância Abusiva</div><div class="refsrc">cnj.jus.br • Painel oficial, Recomendação 159/2024, responsáveis por tribunal</div></div></div>
+    <div class="refitem"><div class="refnum">[03]</div><div><div class="reftitle">O mito da litigância predatória contra bancos</div><div class="refsrc">migalhas.com.br • Análise crítica citando Tabela 17 do Relatório CNJ/ABJ 2025 (concentração bancária no polo passivo)</div></div></div>
+    <div class="refitem"><div class="refnum">[04]</div><div><div class="reftitle">Litigância abusiva, medidas de combate e a devida diligência</div><div class="refsrc">revistaejef.tjmg.jus.br • Revista EJEF/TJMG • Jurisprudência TJMG, STJ Tema 1198, NUMOPEDE-SP (337mil/ano, R$2,7bi)</div></div></div>
+    <div class="refitem"><div class="refnum">[05]</div><div><div class="reftitle">A nova recomendação do CNJ sobre litigância abusiva</div><div class="refsrc">cnj.jus.br • Nota Técnica CIJMG (R$10,7bi/2020), Notas Técnicas TJPI e TJMS</div></div></div>
+    <div class="refitem"><div class="refnum">[06]</div><div><div class="reftitle">Uma matriz prática de enfrentamento à litigância abusiva</div><div class="refsrc">migalhas.com.br • Amostra CNJ/ABJ de 509 advogados — 35,36% indícios de fraude, 58,15% instituições financeiras</div></div></div>
+    <div class="refitem"><div class="refnum">[07]</div><div><div class="reftitle">Acórdão TJMG — extinção por indícios de advocacia predatória</div><div class="refsrc">jusbrasil.com.br • Caso real: ofício ao NUMOPEDE + representação OAB + extinção sem mérito</div></div></div>
+    <div class="refitem"><div class="refnum">[08]</div><div><div class="reftitle">Nota Técnica 01/2022 — Litigância Predatória</div><div class="refsrc">tjmg.jus.br • CIJMG • Documento primário, metodologia de custo médio processual</div></div></div>
+    <div class="refitem"><div class="refnum">[09]</div><div><div class="reftitle">Instituições financeiras e a litigância predatória</div><div class="refsrc">mattosfilho.com.br • Ranking de tribunais por julgados reconhecendo litigância abusiva (2024)</div></div></div>
+    <div class="refitem"><div class="refnum">[10]</div><div><div class="reftitle">Liquidação do Banco Master trava execução de indenizações em Limeira</div><div class="refsrc">diariodejustica.com.br • Caso concreto de suspensão pós-trânsito em julgado</div></div></div>
+    <div class="refitem"><div class="refnum">[11]</div><div><div class="reftitle">Suspensão em razão de liquidação extrajudicial de instituição financeira</div><div class="refsrc">jusbrasil.com.br • Jurisprudência sobre limites da suspensão (ações de conhecimento vs. execução)</div></div></div>
+    <div class="refitem"><div class="refnum">[12]</div><div><div class="reftitle">O acórdão sobre poderes do juiz diante da litigância abusiva</div><div class="refsrc">conjur.com.br • Precedente TJ-MS (64mil ações, 80% improcedência, 43,6% concentração)</div></div></div>
+    <div class="refitem"><div class="refnum">[13]</div><div><div class="reftitle">Diagnóstico sobre o Enfrentamento da Litigância Abusiva no Poder Judiciário</div><div class="refsrc">cnj.jus.br (PDF) • Relatório CNJ/ABJ 2025 — Tabelas 17/28, Figuras 28–31 (acesso direto bloqueado por bot-detection)</div></div></div>
+    <div class="refitem"><div class="refnum">[14]</div><div><div class="reftitle">Lei nº 6.024/1974 — Liquidação extrajudicial de instituições financeiras</div><div class="refsrc">planalto.gov.br • Base legal da suspensão estatutária de ações e execuções</div></div></div>
+    <div class="refitem"><div class="refnum">[15]</div><div><div class="reftitle">Caso Master: relembre a liquidação do banco que envolve BC, STF e TCU</div><div class="refsrc">cnnbrasil.com.br • Contexto geral do passivo, instituições liquidadas, fraude estimada</div></div></div>
+  </div>
+</div>
+
+</main>
+
+<!-- ══ FOOTER — ARTEFATOS RELACIONADOS ══ -->
+<div style="max-width:1200px;margin:0 auto;padding:0 20px">
+  <div class="shead"><span class="shead-num">10</span><h2>Artefatos Relacionados — Cluster Compliance Zero</h2></div>
+  <div class="panel">
+    <div class="rel-grid">
+      <a class="rel-card" href="banco-master-compliance-zero.html">
+        <div class="rel-card-head"><div class="rel-card-icon" style="background:var(--red-dim)">🏦</div><div><div class="rel-card-cat">Mapa Mental</div><div class="rel-card-title">Compliance Zero</div></div></div>
+        <div class="rel-card-body">Raio-x completo do maior rombo bancário do Brasil — R$51bi, captura do BRB, conexões políticas e a relatoria Toffoli.</div>
+      </a>
+      <a class="rel-card" href="banco-master-os-donos.html">
+        <div class="rel-card-head"><div class="rel-card-icon" style="background:var(--purple)">👥</div><div><div class="rel-card-cat">Perfil</div><div class="rel-card-title">Banco Master — Os Donos</div></div></div>
+        <div class="rel-card-body">Rede societária e de controle por trás do Master: Vorcaro, sócios ocultos e a arquitetura de laranjas no BRB.</div>
+      </a>
+      <a class="rel-card" href="banco-master.html">
+        <div class="rel-card-head"><div class="rel-card-icon" style="background:var(--gold-dim)">📉</div><div><div class="rel-card-cat">Linha do Tempo</div><div class="rel-card-title">Banco Master</div></div></div>
+        <div class="rel-card-body">Cronologia da ascensão via CDBs a 177% do CDI até a liquidação extrajudicial e as três prisões de Vorcaro.</div>
+      </a>
+      <a class="rel-card" href="padroes-sistemicos-dashboard.html">
+        <div class="rel-card-head"><div class="rel-card-icon" style="background:var(--gr-dim)">🧩</div><div><div class="rel-card-cat">Framework</div><div class="rel-card-title">Padrões Sistêmicos × Operações</div></div></div>
+        <div class="rel-card-body">Taxonomia P01–P11 aplicada transversalmente a 25 anos de operações — referência para o subpadrão P01-B proposto aqui.</div>
+      </a>
+      <a class="rel-card" href="paradoxo-constitucional.html">
+        <div class="rel-card-head"><div class="rel-card-icon" style="background:var(--blue-dim)">⚖️</div><div><div class="rel-card-cat">Análise Comparada</div><div class="rel-card-title">Paradoxo Constitucional</div></div></div>
+        <div class="rel-card-body">Os dois vetores autoritários que se co-legitimam — contexto estrutural para entender por que mecanismos de blindagem se normalizam.</div>
+      </a>
+      <a class="rel-card" href="banco-master-card-infografico.html">
+        <div class="rel-card-head"><div class="rel-card-icon" style="background:var(--teal)">📊</div><div><div class="rel-card-cat">Infográfico</div><div class="rel-card-title">Banco Master — Card Resumo</div></div></div>
+        <div class="rel-card-body">Versão condensada e compartilhável dos números centrais do caso Compliance Zero.</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer class="pagefoot" style="max-width:1200px;margin:0 auto;padding-left:20px;padding-right:20px">
+  <div class="footer-text">TJMG × Banco Master — Blindagem Civil ao Acesso à Justiça · <a href="https://lawfare-timeline.vercel.app/">lawfare-timeline</a> · atualizado 17/07/2026</div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap">
+    <span class="badge-muted">CC0 1.0 Universal — Domínio Público</span>
+    <span class="badge-muted">Fontes: ICL Notícias · CNJ · Migalhas · Revista EJEF/TJMG · Conjur</span>
+  </div>
+</footer>
+
+<!-- GO TOP -->
+<button id="gotop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Voltar ao topo">
+  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script>
+function scrollToSec(id){
+  var el = document.getElementById('sec-'+id);
+  if(el){ var y = el.getBoundingClientRect().top + window.scrollY - 84; window.scrollTo({top:y,behavior:'smooth'}); }
+}
+
+setTimeout(()=>{const f=document.getElementById('gfill');if(f)f.style.width='74%'},400);
+setTimeout(()=>{const f=document.getElementById('gfill2');if(f)f.style.width='81%'},400);
+
+var gotop = document.getElementById('gotop');
+window.addEventListener('scroll', function(){
+  if(window.scrollY > 320) gotop.classList.add('show');
+  else gotop.classList.remove('show');
+}, {passive:true});
+
+// Scroll-spy: destaca o botão da nav correspondente à seção visível
+var navBtns = document.querySelectorAll('.nb');
+var secMap = {};
+navBtns.forEach(function(b){
+  var id = b.getAttribute('onclick').match(/scrollToSec\('([^']+)'\)/)[1];
+  secMap[id] = b;
+});
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(entry){
+    if(entry.isIntersecting){
+      var id = entry.target.id.replace('sec-','');
+      navBtns.forEach(function(b){ b.classList.remove('act'); });
+      if(secMap[id]) secMap[id].classList.add('act');
+    }
+  });
+}, {rootMargin:'-88px 0px -70% 0px', threshold:0});
+document.querySelectorAll('.sec').forEach(function(s){ io.observe(s); });
+</script>
+</body>
+</html>

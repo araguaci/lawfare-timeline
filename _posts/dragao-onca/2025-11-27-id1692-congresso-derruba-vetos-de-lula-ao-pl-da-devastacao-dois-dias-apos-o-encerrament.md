@@ -56,7 +56,7 @@ Padrão P04b (both-sidesism funcional) em escala nacional: o mesmo Congresso e o
 
 Entradas conectadas nesta série:
 
-- [Entrada 1691](/timeline/entries/1691)
+- [Entrada 1691](/posts/id1691-senado-aprova-o-pl-da-devastacao-pl-21592021-flexibilizando-o-licenciamento-ambi/)
 
 ---
 

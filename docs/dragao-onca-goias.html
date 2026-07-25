@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Dragão e a Onça — Capítulo Goiás | República Sequestrada</title>
+<meta name="description" content="Série O Dragão e a Onça: relações China-Goiás sob Caiado, o pivô 2025-2026 para EUA/Japão em terras raras, e a instrumentalização eleitoral do minério crítico.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --bg:#080c10;--bg2:#0f151b;--bg3:#161e26;
+  --dragon:#d4342c;--dragon2:#ff6b5f;--dragon-dim:#5c1512;
+  --jaguar:#e8b23d;--jaguar2:#ffd270;--jaguar-dim:#6b4e12;
+  --gr:#3ecb6f;--gr2:#78f5a8;
+  --blue:#4a9eff;--blue2:#7ab8ff;
+  --purple:#b07aff;--purple2:#d0a8ff;
+  --teal:#2ecfb0;--teal2:#60ffd8;
+  --border:rgba(255,255,255,0.07);
+  --text:#e8edf0;--text2:#8a99a8;
+  --font:'Syne',sans-serif;--mono:'JetBrains Mono',monospace;
+}
+body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh}
+header{padding:26px 30px 18px;border-bottom:2px solid var(--dragon-dim);background:linear-gradient(135deg,#080c10 0%,#1a0f0d 55%,#080c10 100%);position:relative;overflow:hidden}
+header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 25% 50%,rgba(212,52,44,0.08) 0%,transparent 55%),radial-gradient(ellipse at 75% 50%,rgba(232,178,61,0.07) 0%,transparent 55%)}
+.hbadge{display:inline-flex;align-items:center;gap:6px;background:rgba(212,52,44,0.1);border:1px solid var(--dragon-dim);border-radius:4px;padding:4px 12px;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--dragon2);text-transform:uppercase;margin-bottom:12px}
+.live-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(232,178,61,0.15);border:1px solid var(--jaguar-dim);border-radius:4px;padding:3px 12px;font-size:12px;font-weight:700;letter-spacing:1.5px;color:var(--jaguar2);text-transform:uppercase;margin-left:8px}
+.live-dot{width:6px;height:6px;border-radius:50%;background:var(--jaguar2);animation:pulse 1.2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+header h1{font-size:27px;font-weight:800;letter-spacing:-0.5px;color:#fff;line-height:1.15}
+header h1 span{color:var(--dragon2)}
+header h1 em{font-style:normal;color:var(--jaguar2)}
+.hmeta{display:flex;gap:18px;margin-top:12px;flex-wrap:wrap}
+.hm{font-size:12px;color:var(--text2);font-family:var(--mono)}
+.hm b{color:var(--jaguar2)}
+
+nav{
+  display:flex;gap:4px;padding:12px 26px;
+  background:rgba(10,14,18,0.96);
+  border-bottom:2px solid var(--dragon-dim);
+  box-shadow:0 6px 18px rgba(0,0,0,0.35);
+  overflow-x:auto;flex-wrap:wrap;
+  position:sticky;top:0;z-index:200;
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+}
+.nb{padding:7px 14px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--text2);font-family:var(--font);font-size:12px;font-weight:600;cursor:pointer;transition:all .2s;white-space:nowrap;text-decoration:none;display:inline-block}
+.nb:hover{border-color:var(--dragon-dim);color:var(--dragon2)}
+.nb.act{background:linear-gradient(90deg,rgba(212,52,44,0.18),rgba(232,178,61,0.12));border-color:var(--dragon);color:#fff;font-weight:800;box-shadow:0 0 0 1px var(--dragon) inset}
+
+main{padding:0 20px 32px;max-width:1200px;margin:0 auto}
+.sec{padding:34px 0 12px;border-bottom:1px solid var(--border);scroll-margin-top:70px}
+.sec:last-of-type{border-bottom:none}
+.sec-title{font-size:20px;font-weight:800;color:#fff;margin-bottom:4px;display:flex;align-items:center;gap:12px}
+.sec-title .flag{font-size:15px}
+.sec-sub{font-size:12px;color:var(--text2);font-family:var(--mono);margin-bottom:16px}
+
+.kgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:16px 0 12px}
+@media(max-width:900px){.kgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.kgrid{grid-template-columns:1fr}}
+.kcard{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:14px 15px;position:relative;overflow:hidden}
+.kcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.kd::before{background:linear-gradient(90deg,var(--dragon),var(--dragon2))}
+.kj::before{background:linear-gradient(90deg,var(--jaguar),var(--jaguar2))}
+.kb::before{background:linear-gradient(90deg,var(--blue),var(--blue2))}
+.kp::before{background:linear-gradient(90deg,var(--purple),var(--purple2))}
+.kt::before{background:linear-gradient(90deg,var(--teal),var(--teal2))}
+.klabel{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);margin-bottom:5px}
+.kval{font-size:20px;font-weight:800;line-height:1.1}
+.ksub{font-size:11px;color:var(--text2);margin-top:3px;font-family:var(--mono)}
+.kd .kval{color:var(--dragon2)}.kj .kval{color:var(--jaguar2)}.kb .kval{color:var(--blue2)}.kp .kval{color:var(--purple2)}.kt .kval{color:var(--teal2)}
+
+.pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:12px}
+@media(max-width:768px){.pgrid{grid-template-columns:1fr}}
+.panel{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:12px}
+.ptitle{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.dd{background:var(--dragon)}.dj{background:var(--jaguar)}.db{background:var(--blue)}.dp{background:var(--purple)}.dt{background:var(--teal)}
+.tag{display:inline-block;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:600;margin:2px 2px 2px 0;font-family:var(--mono)}
+.tg{background:rgba(62,203,111,0.1);color:#78f5a8;border:1px solid rgba(62,203,111,0.2)}
+.tgo{background:rgba(232,178,61,0.12);color:var(--jaguar2);border:1px solid rgba(232,178,61,0.25)}
+.tr{background:rgba(212,52,44,0.12);color:var(--dragon2);border:1px solid rgba(212,52,44,0.25)}
+.tb{background:rgba(74,158,255,0.1);color:var(--blue2);border:1px solid rgba(74,158,255,0.2)}
+.tp{background:rgba(176,122,255,0.1);color:var(--purple2);border:1px solid rgba(176,122,255,0.2)}
+.tgr{background:rgba(138,153,168,0.12);color:var(--text2);border:1px solid rgba(138,153,168,0.2)}
+p.body{font-size:14px;color:var(--text2);line-height:1.75;margin-bottom:12px}
+.tli{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--border)}
+.tli:last-child{border-bottom:none}
+.tld{font-family:var(--mono);font-size:11px;color:var(--jaguar2);min-width:100px;font-weight:600;padding-top:2px;flex-shrink:0}
+.tltitle{font-size:14px;font-weight:700;margin-bottom:3px}
+.tldesc{font-size:12px;color:var(--text2);line-height:1.6}
+.agrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.acard{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px 14px}
+.aname{font-size:14px;font-weight:700;margin-bottom:3px}
+.arole{font-size:11px;color:var(--text2);font-family:var(--mono);margin-bottom:6px}
+.astatus{font-size:12px;color:var(--text2);line-height:1.5}
+.ritem{padding:11px 14px;border-radius:8px;margin-bottom:8px;border-left:3px solid;background:var(--bg3)}
+.rcrit{border-color:var(--dragon)}.ralto{border-color:var(--jaguar)}.rmedio{border-color:var(--blue)}.rbaixo{border-color:var(--teal)}
+.rheader{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;flex-wrap:wrap;gap:6px}
+.rname{font-size:14px;font-weight:700}
+.rbadge{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;border-radius:3px;font-family:var(--mono)}
+.bcrit{background:rgba(212,52,44,0.2);color:var(--dragon2)}.balto{background:rgba(232,178,61,0.2);color:var(--jaguar2)}.bmedio{background:rgba(74,158,255,0.15);color:var(--blue2)}.bbaixo{background:rgba(46,207,176,0.12);color:var(--teal2)}
+.rdesc{font-size:12px;color:var(--text2);line-height:1.6}
+.refitem{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);align-items:flex-start}
+.refitem:last-child{border-bottom:none}
+.refnum{font-family:var(--mono);font-size:11px;color:var(--text2);min-width:30px;margin-top:2px}
+.reftitle{font-size:14px;font-weight:600;margin-bottom:2px}
+.reftitle a{color:var(--jaguar2);text-decoration:none;border-bottom:1px dotted var(--jaguar-dim)}
+.reftitle a:hover{color:#fff;border-bottom-color:var(--jaguar2)}
+.refsrc{font-size:11px;color:var(--text2);font-family:var(--mono)}
+.lacuna{padding:11px 14px;border-radius:8px;margin-bottom:8px;background:var(--bg3);border-left:3px solid var(--purple)}
+.lacuna b{color:var(--purple2)}
+.esq-note{font-size:11px;color:var(--text2);font-style:italic;margin-top:6px}
+
+footer{padding:22px 26px 40px;border-top:2px solid var(--dragon-dim);text-align:center}
+.footcc0{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;color:var(--text2);letter-spacing:1px}
+.footcc0 b{color:var(--jaguar2)}
+.footnote{font-size:11px;color:var(--text2);margin-top:8px;font-family:var(--mono)}
+
+#gotop{
+  position:fixed;right:20px;bottom:20px;z-index:300;
+  width:46px;height:46px;border-radius:50%;
+  background:linear-gradient(135deg,var(--dragon),var(--jaguar));
+  color:#0b0f0a;border:none;font-size:18px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,0.45);
+  opacity:0;pointer-events:none;transform:translateY(12px);
+  transition:opacity .25s,transform .25s;
+}
+#gotop.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+#gotop:hover{filter:brightness(1.1)}
+.series-nav{margin:0 auto;max-width:1200px;padding:28px 20px 0;border-top:2px solid var(--border)}
+.series-nav-title{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--text2);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.series-nav-title::before{content:'';flex:1;height:1px;background:var(--border)}
+.series-nav-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:14px}
+@media(max-width:720px){.series-nav-grid{grid-template-columns:1fr}}
+.series-card{display:block;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 16px;text-decoration:none;color:inherit;transition:border-color .2s,transform .15s;position:relative;overflow:hidden}
+.series-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--dragon),var(--jaguar))}
+.series-card:hover{border-color:rgba(232,178,61,.45);transform:translateY(-1px)}
+.series-card.is-current{border-color:var(--jaguar);box-shadow:0 0 0 1px rgba(232,178,61,.35) inset;pointer-events:none;opacity:.92}
+.series-card-id{font-family:var(--mono);font-size:10px;color:var(--jaguar2);letter-spacing:1px;margin-bottom:4px}
+.series-card-chapter{font-size:14px;font-weight:800;color:#fff;margin-bottom:4px;line-height:1.2}
+.series-card-desc{font-size:12px;color:var(--text2);line-height:1.55}
+.series-hub{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--jaguar2);text-decoration:none;font-family:var(--mono);margin-bottom:8px}
+.series-hub:hover{color:#fff}
+</style>
+</head>
+<body>
+<header>
+  <div style="display:flex;align-items:center;gap:0;flex-wrap:wrap">
+    <div class="hbadge">Série · Captura Econômica Transnacional</div>
+    <div class="live-badge"><span class="live-dot"></span>SÉRIE EM ABERTURA — jul/2026</div>
+  </div>
+  <h1>O <span>Dragão</span> e a <em>Onça</em> — Capítulo <em>Goiás</em></h1>
+  <div class="hmeta">
+    <span class="hm"><b>Fase 1 (China):</b> nov 2023 – 2025</span>
+    <span class="hm"><b>Fase 2 (EUA/Japão):</b> jul 2025 – em curso</span>
+    <span class="hm"><b>Ativo central:</b> Terras raras — mina Pela Ema, Minaçu (GO)</span>
+    <span class="hm"><b>Governador (até 31/mar/2026):</b> Ronaldo Caiado</span>
+    <span class="hm"><b>Status Caiado:</b> pré-candidato à Presidência (PSD, 2026)</span>
+  </div>
+</header>
+
+<nav id="mainnav">
+  <a class="nb" href="#visao" data-target="visao">Visão Geral</a>
+  <a class="nb" href="#fase1" data-target="fase1">Fase 1 — China (2023–24)</a>
+  <a class="nb" href="#fase2" data-target="fase2">Fase 2 — O Pivô (2025–26)</a>
+  <a class="nb" href="#atores" data-target="atores">Atores & Empresas</a>
+  <a class="nb" href="#riscos" data-target="riscos">Riscos Estruturais</a>
+  <a class="nb" href="#pipeline" data-target="pipeline">Contratos Futuros / Pipeline</a>
+  <a class="nb" href="#lacunas" data-target="lacunas">Lacunas Investigativas</a>
+  <a class="nb" href="#refs" data-target="refs">Referências</a>
+</nav>
+
+<main>
+
+<section id="visao" class="sec">
+  <div class="sec-title"><span class="flag">📍</span>Visão Geral</div>
+  <div class="sec-sub">Síntese analítica</div>
+  <div class="kgrid">
+    <div class="kcard kd"><div class="klabel">Investido/anunciado China (2023-25)</div><div class="kval">R$3,1bi+</div><div class="ksub">CMOC + Weichai + Chint (parcial, não discriminado por incentivo)</div></div>
+    <div class="kcard kj"><div class="klabel">Aquisição EUA — Serra Verde</div><div class="kval">US$2,8bi</div><div class="ksub">USA Rare Earth compra 100% do grupo, anunciado 20/abr/2026</div></div>
+    <div class="kcard kb"><div class="klabel">Cota exportação carne à China 2026</div><div class="kval">~1,1mi t</div><div class="ksub">quase esgotada em jun/2026 — tarifa 55% sobre excedente</div></div>
+    <div class="kcard kp"><div class="klabel">Reserva goiana de óxidos de terras raras</div><div class="kval">~25%</div><div class="ksub">das reservas globais de OTR, segundo governo estadual</div></div>
+  </div>
+
+  <div class="pgrid">
+    <div class="panel">
+      <div class="ptitle"><span class="dot dd"></span>Fase 1 — Aproximação Chinesa (2023–2025)</div>
+      <p class="body">Sob Caiado, Goiás institucionalizou uma aproximação com capital chinês em mineração, energia, agromáquinas e tecnologia — <span class="tag tg">ev-confirmed</span> via memorandos e contratos assinados em missões oficiais a Pequim/Xangai (nov/2023). O eixo foi mineração (CMOC, já presente desde 2016) e indústria (Weichai, Chint Power), com Huawei em tecnologia. Missão institucional incluiu abertura de escritório representativo na província de Hebei — item ainda sem confirmação de operação plena.</p>
+      <div style="margin-top:12px"><span class="tag tg">China Railway MOU</span><span class="tag tg">Chint Power</span><span class="tag tg">Weichai/Shandong</span><span class="tag tg">CMOC nióbio/fosfato</span><span class="tag tgo">Huawei — parceria não detalhada</span></div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot dj"></span>Fase 2 — O Pivô para EUA e Japão (2025–2026)</div>
+      <p class="body">A partir de jul/2025, Goiás abre negociação paralela com a estatal japonesa JOGMEC para terras raras <span class="tag tg">ev-confirmed</span>. Em abr/2026, Caiado assina "Manifesto de Entendimento" com o governo americano — um mês antes da <b style="color:var(--jaguar2)">venda da Serra Verde (mina Pela Ema) à USA Rare Earth por US$2,8bi</b>, com contrato de fornecimento de 15 anos a uma SPV capitalizada por entidades do governo dos EUA. O texto integral do contrato de fornecimento não é público — <span class="tag tgo">ev-alleged/parcial</span>.</p>
+      <div style="margin-top:12px"><span class="tag tg">JOGMEC (Japão)</span><span class="tag tg">USA Rare Earth — aquisição Serra Verde</span><span class="tag tgo">SPV governo EUA — termos não públicos</span></div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot dp"></span>Dimensão Eleitoral (P09 análogo — captura simbólica)</div>
+      <p class="body">Caiado deixou o governo de Goiás em 31/mar/2026 para concorrer à Presidência pelo PSD. Em campanha (jun/2026), ele transforma o ativo estadual — terras raras — em plataforma nacional: <span class="tag tg">ev-confirmed</span> "aposta em terras raras" e "reindustrialização" como eixos centrais do discurso presidencial. <b style="color:var(--dragon2)">O padrão a monitorar:</b> um ativo mineral estratégico negociado por um governador em fim de mandato torna-se capital político pessoal na disputa presidencial seguinte — mecanismo estruturalmente análogo a P09 (captura cultural/simbólica), aplicado à esfera econômico-eleitoral.</p>
+      <div style="margin-top:12px"><span class="tag tp">Saída do governo 31/mar/2026</span><span class="tag tp">Pré-candidatura PSD</span><span class="tag tp">Terras raras como bandeira nacional</span></div>
+    </div>
+    <div class="panel">
+      <div class="ptitle"><span class="dot db"></span>Fricção Comercial com a China (contraponto)</div>
+      <p class="body">Em paralelo ao pivô mineral, o eixo agro tradicional (carne bovina, soja) sofre pressão: cota chinesa de 1,1 milhão de toneladas de carne para 2026 estava perto do esgotamento já em jun/2026, com tarifa de 55% sobre excedentes <span class="tag tg">ev-confirmed</span>. Relevante para a tese central da série: <b>nenhum vetor — chinês ou americano — necessariamente transfere benefício líquido ao produtor ou à população goiana</b>; ambos operam como compradores estratégicos de commodity/minério bruto, com valor agregado ainda majoritariamente fora do Estado.</p>
+      <div style="margin-top:12px"><span class="tag tb">Cota de carne quase esgotada</span><span class="tag tb">Tarifa 55% sobre excedente</span><span class="tag tr">ev-inference: padrão extrativo-exportador mantido</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="fase1" class="sec">
+  <div class="sec-title"><span class="flag">🐉</span>Fase 1 — Aproximação com a China (2023–2025)</div>
+  <div class="sec-sub">Linha do tempo detalhada, com nível de evidência por item</div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dd"></span>Linha do Tempo</div>
+    <div class="tli"><div class="tld">abr 2023</div><div><div class="tltitle">Contatos preliminares — Chint Power</div><div class="tldesc">Reunião em Goiânia entre prefeito de Itumbiara, governo estadual e representantes da Chint Power/Stemac para tratar de instalação futura. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">7 nov 2023</div><div><div class="tltitle">Missão oficial a Xangai — Chint Power</div><div class="tldesc">Caiado assina acordo comercial com fundador Nan Cunhui e CEO global Lily Zhang para instalação da primeira planta da Chint na América do Sul, em Itumbiara. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">nov 2023</div><div><div class="tltitle">Memorando com China Railway (Crec)</div><div class="tldesc">MOU para estudos de projetos estruturantes em infraestrutura/mineração; valor não divulgado. <span class="tag tgo">ev-alleged (valor não confirmado)</span></div></div></div>
+    <div class="tli"><div class="tld">7–11 nov 2023</div><div><div class="tltitle">Acordo com Weichai Power (Grupo Shandong Heavy Industry)</div><div class="tldesc">Fabricante de motores e máquinas agrícolas confirma operação em Itumbiara; grupo antecipa trazer também Sinotruk (caminhões), Shantui e Lowval (máquinas agrícolas/construção) — pipeline futuro. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">nov 2023</div><div><div class="tltitle">Huawei — parceria tecnológica</div><div class="tldesc">Governadores de Goiás e Minas Gerais fecham parceria com a Huawei durante a missão à China (5G, IA, saúde/transporte). Escopo e valor não detalhados publicamente. <span class="tag tgo">ev-alleged</span></div></div></div>
+    <div class="tli"><div class="tld">2023–24</div><div><div class="tltitle">UEG–Universidade Hebei / Tsinghua</div><div class="tldesc">Parceria acadêmica para intercâmbio de pesquisadores e estudantes; cooperação com Tsinghua em mudanças climáticas. Sem atualização localizada para 2025–2026. <span class="tag tgo">ev-alleged</span></div></div></div>
+    <div class="tli"><div class="tld">2023–24</div><div><div class="tltitle">Escritório representativo de Goiás em Hebei</div><div class="tldesc">Articulação de abertura de escritório para facilitar relações comerciais/institucionais com a província chinesa. <span class="tag tgo">ev-alleged — status operacional não confirmado nesta rodada</span></div></div></div>
+    <div class="tli"><div class="tld">[recente]</div><div><div class="tltitle">Weichai inicia operações em Itumbiara</div><div class="tldesc">Investimento de ~R$100 milhões; primeira fábrica da Weichai no Brasil, produção de motores e máquinas agrícolas para exportação à América Latina. <span class="tag tg">ev-confirmed</span> (ano exato de inauguração carece de nova verificação cruzada).</div></div></div>
+    <div class="tli"><div class="tld">2024–25</div><div><div class="tltitle">Chint Power — primeira fase operacional</div><div class="tldesc">Fábrica em Itumbiara inicia produção de disjuntores; segunda fase (inversores) em estudo, associada a crescimento de +200% em vendas da Chint Power no período. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">1º sem 2025</div><div><div class="tltitle">CMOC Brasil — recorde de produção</div><div class="tldesc">Produção de nióbio em Ouvidor/Catalão (GO) atinge 5.231 t, +3% a.a.; EBITDA consolidado US$266,7mi. Operação já estabelecida desde 2016. <span class="tag tg">ev-confirmed</span></div></div></div>
+  </div>
+  <div class="esq-note">Nota metodológica: valores de incentivo fiscal/ICMS concedidos a cada empresa não constam nas fontes consultadas nesta rodada — ver Lacunas Investigativas.</div>
+</section>
+
+<section id="fase2" class="sec">
+  <div class="sec-title"><span class="flag">🐆</span>Fase 2 — O Pivô para EUA e Japão (2025–2026)</div>
+  <div class="sec-sub">Reorientação geoestratégica em curso — janela eleitoral 2026</div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dj"></span>Linha do Tempo</div>
+    <div class="tli"><div class="tld">jul 2025</div><div><div class="tltitle">Início da negociação com a JOGMEC (Japão)</div><div class="tldesc">Estatal japonesa vinculada ao Ministério da Economia, Comércio e Indústria inicia tratativas de cooperação para exploração e processamento de terras raras em Goiás. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">ago 2025</div><div><div class="tltitle">Caiado: "Goiás não quer ser apenas exportador de matéria-prima"</div><div class="tldesc">Declaração pública que antecipa a reorientação da política mineral estadual para agregação de valor (separação/processamento de óxidos). <span class="tag tg">ev-confirmed</span> (declaração); <span class="tag tp">ev-inference</span>: contraste com o padrão observado até aqui (exportação de concentrado/carbonato bruto).</div></div></div>
+    <div class="tli"><div class="tld">mar 2026</div><div><div class="tltitle">Acordo de cooperação internacional com o Japão formalizado</div><div class="tldesc">Governo goiano assina cooperação semelhante ao modelo JOGMEC, incluindo instalação de capacidade de separação/processamento de óxidos de terras raras (OTR) em Goiás. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">30 mar 2026</div><div><div class="tltitle">Caiado confirmado pré-candidato à Presidência (PSD)</div><div class="tldesc">Substitui Ratinho Jr. como nome do partido após desistência deste; mandato de governador se encerra 31/mar/2026 para viabilizar a candidatura (Daniel Vilela assume). <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">17 abr 2026</div><div><div class="tltitle">"Manifesto de Entendimento" com o governo dos EUA</div><div class="tldesc">Caiado anuncia acordo classificado por ele como "talvez o mais importante geoeconômico já assinado por um governador", sobre exploração de terras raras. <span class="tag tg">ev-confirmed</span> (existência do anúncio); <span class="tag tgo">ev-alleged</span> quanto ao conteúdo jurídico exato do "Manifesto".</div></div></div>
+    <div class="tli"><div class="tld">20 abr 2026</div><div><div class="tltitle">USA Rare Earth adquire 100% da Serra Verde — US$2,8bi</div><div class="tldesc">Acordo definitivo: US$300mi em caixa + ~126,8 milhões de ações ordinárias (referência US$19,95/ação, 17/abr/2026). Acionistas atuais da Serra Verde ficam com ~34% da companhia combinada; CEO Thras Moraitis assume posição de liderança na estrutura ampliada. Conclusão prevista para o 3º trimestre de 2026, condicionada a aprovações regulatórias. Contrato de fornecimento de 15 anos com preços mínimos garantidos a uma SPV capitalizada por entidades do governo dos EUA. <span class="tag tg">ev-confirmed</span> (múltiplas fontes primárias: SEC 8-K, comunicado oficial Serra Verde, cobertura Poder360/Agência Pública)</div></div></div>
+    <div class="tli"><div class="tld">dez 2025</div><div><div class="tltitle">CMOC (China) compra ativos de ouro da Equinox Gold no Brasil — US$1,015bi</div><div class="tldesc">Aurizona, RDM e Bahia Complex; fechamento previsto 1º trim/2026. Fora de Goiás, mas mostra que o capital chinês não recua do Brasil — expande para outro metal (ouro) enquanto Goiás pivota em terras raras. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">jun 2026</div><div><div class="tltitle">Cota de exportação de carne à China quase esgotada</div><div class="tldesc">Cota de 1,1 milhão de toneladas para 2026 perto de ser atingida já em junho; tarifa de 55% sobre excedentes. Sinaliza fricção comercial simultânea ao estreitamento com EUA/Japão em minério. <span class="tag tg">ev-confirmed</span></div></div></div>
+    <div class="tli"><div class="tld">18 jun 2026</div><div><div class="tltitle">Caiado, já candidato, associa "terras raras" a plataforma de campanha</div><div class="tldesc">Em entrevista de campanha, defende reindustrialização via minerais críticos e ajuste fiscal como eixos centrais; segurança pública segue como bandeira histórica. <span class="tag tg">ev-confirmed</span></div></div></div>
+  </div>
+</section>
+
+<section id="atores" class="sec">
+  <div class="sec-title"><span class="flag">🧭</span>Atores & Empresas</div>
+  <div class="sec-sub">Bloco chinês, bloco EUA/Japão, e atores políticos</div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dd"></span>Bloco Chinês</div>
+    <div class="agrid">
+      <div class="acard"><div class="aname">CMOC Group / CMOC Brasil</div><div class="arole">Mineração — nióbio e fosfato</div><div class="astatus">Operação em Catalão/Ouvidor (GO) desde 2016; 2º maior produtor mundial de nióbio. Em 2025-26 expande para ouro no Brasil via compra de ativos da Equinox Gold (fora de GO).</div></div>
+      <div class="acard"><div class="aname">Chint Power / Grupo Chint</div><div class="arole">Energia — disjuntores, inversores</div><div class="astatus">Primeira planta na América do Sul, Itumbiara (GO). Fase 1: disjuntores. Fase 2 (inversores): em estudo, sem data.</div></div>
+      <div class="acard"><div class="aname">Weichai Power / Shandong Heavy Industry</div><div class="arole">Motores, máquinas agrícolas</div><div class="astatus">Operação em Itumbiara (~R$100mi). Anuncia trazer Sinotruk, Shantui e Lowval — ainda não confirmadas operacionalmente.</div></div>
+      <div class="acard"><div class="aname">YTO Group Corporation</div><div class="arole">Tratores</div><div class="astatus">Interesse manifestado em 2023; sem confirmação de instalação efetiva localizada nesta rodada.</div></div>
+      <div class="acard"><div class="aname">Huawei</div><div class="arole">Tecnologia / 5G / IA</div><div class="astatus">Parceria anunciada nov/2023 com governos de GO e MG; escopo e cronograma não detalhados publicamente.</div></div>
+      <div class="acard"><div class="aname">China Railway (Crec)</div><div class="arole">Infraestrutura / logística</div><div class="astatus">MOU para estudos; sem projeto executivo público identificado.</div></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dj"></span>Bloco EUA / Japão (Fase 2)</div>
+    <div class="agrid">
+      <div class="acard"><div class="aname">USA Rare Earth, Inc. (Nasdaq)</div><div class="arole">Mineração/metais/ímãs — CEO Barbara Humpton</div><div class="astatus">Adquire 100% da Serra Verde por US$2,8bi (abr/2026). Objetivo declarado: cadeia mina-a-ímã fora da Ásia.</div></div>
+      <div class="acard"><div class="aname">Serra Verde (Grupo)</div><div class="arole">CEO Thras Moraitis; acionistas Denham Capital, EMG, Vision Blue</div><div class="astatus">Opera a mina Pela Ema (Minaçu, GO) há 16 anos; único produtor de ETRPs em escala fora da Ásia.</div></div>
+      <div class="acard"><div class="aname">JOGMEC (Japão)</div><div class="arole">Estatal japonesa de minerais/petróleo/gás</div><div class="astatus">Cooperação para exploração e processamento de OTR desde jul/2025; acordo formalizado mar/2026.</div></div>
+      <div class="acard"><div class="aname">Governo dos EUA (SPV não identificada)</div><div class="arole">Comprador estratégico via contrato de 15 anos</div><div class="astatus">Entidades governamentais dos EUA capitalizam veículo de propósito específico para garantir fornecimento e preço mínimo — identidade exata e termos não públicos.</div></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dp"></span>Atores Políticos e Redes de Influência</div>
+    <div class="agrid">
+      <div class="acard"><div class="aname">Ronaldo Caiado</div><div class="arole">Ex-governador GO (2019–31/mar/2026); pré-candidato à Presidência (PSD)</div><div class="astatus">Articulador direto de todos os acordos com China, Japão e EUA; converte o ativo mineral em bandeira de campanha nacional.</div></div>
+      <div class="acard"><div class="aname">Daniel Vilela</div><div class="arole">Vice-governador; sucessor de Caiado a partir de 31/mar/2026</div><div class="astatus">Articulador de missões à China e parcerias acadêmicas (UEG-Hebei); assume a gestão dos contratos em andamento.</div></div>
+      <div class="acard"><div class="aname">Joel de Sant'Anna Braga Filho</div><div class="arole">Secretário de Indústria e Comércio (SIC-GO)</div><div class="astatus">Facilitador operacional das negociações industriais com China (Chint, Weichai).</div></div>
+      <div class="acard"><div class="aname">Luís Guimarães</div><div class="arole">Presidente da Associação Sino Brasileira de Mineração (ASBN)</div><div class="astatus">Mediador entre Goiás e empresários chineses, foco em mineração. <span class="tag tgo">ev-alleged</span></div></div>
+      <div class="acard"><div class="aname">Zheng Wei</div><div class="arole">Vice-presidente da ASBN na Ásia</div><div class="astatus">Articula vinda de delegações empresariais chinesas a Goiás. <span class="tag tgo">ev-alleged</span></div></div>
+      <div class="acard"><div class="aname">Autoridades chinesas (dossiê original)</div><div class="arole">Embaixador Zhu Qingqiao; vice-gov. Jin Hui e Shi Qingshuang (Hebei)</div><div class="astatus">Presença institucional em missões e protocolos 2023-24. <span class="tag tgo">ev-alleged</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="riscos" class="sec">
+  <div class="sec-title"><span class="flag">⚠️</span>Riscos Estruturais</div>
+  <div class="sec-sub">Padrões análogos ao corpus P0X, aplicados ao eixo econômico-eleitoral</div>
+  <div class="panel">
+    <div class="ritem rcrit"><div class="rheader"><div class="rname">Dupla-dependência extrativa-exportadora</div><div class="rbadge bcrit">ev-inference</div></div><div class="rdesc">O pivô China→EUA/Japão não reduz a dependência estrutural de commodity/minério bruto — apenas substitui o comprador estratégico. Processamento e agregação de valor permanecem majoritariamente fora de Goiás em ambas as fases. Análogo funcional ao padrão de "nenhum vetor chega ao beneficiário final" da tese central do corpus, transposto do eixo judicial para o econômico.</div></div>
+    <div class="ritem ralto"><div class="rheader"><div class="rname">Captura simbólico-eleitoral do ativo mineral (análogo P09)</div><div class="rbadge balto">ev-inference</div></div><div class="rdesc">Um ativo estratégico negociado por um governador em fim de mandato torna-se, meses depois, a bandeira central de sua candidatura presidencial. Não há, nas fontes consultadas, indício de irregularidade formal — mas a sobreposição temporal entre a assinatura dos acordos (mar–abr/2026) e o lançamento da pré-candidatura (30/mar/2026) merece monitoramento contínuo.</div></div>
+    <div class="ritem ralto"><div class="rheader"><div class="rname">Opacidade de incentivos fiscais</div><div class="rbadge balto">lacuna_investigativa</div></div><div class="rdesc">Nenhuma das fontes consultadas discrimina publicamente o valor de renúncia fiscal/ICMS/incentivos concedidos a CMOC, Chint Power ou Weichai para atrair as plantas a Itumbiara/Catalão/Ouvidor.</div></div>
+    <div class="ritem rmedio"><div class="rheader"><div class="rname">Infraestrutura compartilhada entre atores concorrentes (análogo P10)</div><div class="rbadge bmedio">ev-confirmed</div></div><div class="rdesc">A mesma mina (Pela Ema) e o mesmo ecossistema regulatório goiano hospedam, em sequência, capital privado internacional, depois controle chinês indireto via mercado de nióbio/fosfato adjacente (CMOC), e agora controle americano (USA Rare Earth) — a "captura" de infraestrutura crítica é setorialmente promíscua, não exclusiva de um bloco geopolítico.</div></div>
+    <div class="ritem rmedio"><div class="rheader"><div class="rname">Fricção comercial paralela (agro)</div><div class="rbadge bmedio">ev-confirmed</div></div><div class="rdesc">Cota de carne à China quase esgotada e tarifa de 55% sobre excedentes evidenciam que a relação Goiás-China é multissetorial e não unidirecionalmente amistosa.</div></div>
+    <div class="ritem rbaixo"><div class="rheader"><div class="rname">Impacto socioambiental da mina Pela Ema</div><div class="rbadge bbaixo">lacuna_investigativa</div></div><div class="rdesc">Nenhuma fonte consultada nesta rodada traz auditoria independente de impacto ambiental/social da operação em Minaçu, nem manifestação de comunidades locais quanto à mudança de controle acionário.</div></div>
+  </div>
+</section>
+
+<section id="pipeline" class="sec">
+  <div class="sec-title"><span class="flag">📄</span>Contratos Futuros / Pipeline</div>
+  <div class="sec-sub">O que ainda não se concretizou — a acompanhar</div>
+  <div class="panel">
+    <div class="ritem ralto"><div class="rheader"><div class="rname">Conclusão da aquisição USA Rare Earth–Serra Verde</div><div class="rbadge balto">pendente — 3º trim. 2026</div></div><div class="rdesc">Condicionada a aprovações regulatórias. Acompanhar: composição final do conselho, manutenção de 34% dos acionistas atuais, e se termos do contrato de fornecimento de 15 anos serão tornados públicos.</div></div>
+    <div class="ritem ralto"><div class="rheader"><div class="rname">Fábricas Sinotruk, Shantui e Lowval (Grupo Shandong/Weichai)</div><div class="rbadge balto">anunciado, sem data</div></div><div class="rdesc">Grupo afirmou que "serão implantadas em breve" em Itumbiara junto à Weichai — sem cronograma ou valor de investimento públicos até o momento desta apuração.</div></div>
+    <div class="ritem rmedio"><div class="rheader"><div class="rname">Segunda fase Chint Power — produção de inversores</div><div class="rbadge bmedio">em estudo</div></div><div class="rdesc">Planta de Itumbiara iniciou com disjuntores; expansão para inversores fotovoltaicos mencionada pela liderança da Chint Power em 2024-25, sem data de decisão de investimento.</div></div>
+    <div class="ritem rmedio"><div class="rheader"><div class="rname">Escritório representativo de Goiás em Hebei (China)</div><div class="rbadge bmedio">status incerto</div></div><div class="rdesc">Articulação anunciada em 2023-24; nenhuma fonte desta rodada confirma se o escritório está operacional, e sob qual gestão.</div></div>
+    <div class="ritem rbaixo"><div class="rheader"><div class="rname">UEG–Universidade Hebei / Tsinghua</div><div class="rbadge bbaixo">sem atualização</div></div><div class="rdesc">Parcerias acadêmicas anunciadas em 2023-24 sem cobertura de continuidade em 2025-26 localizada nesta rodada.</div></div>
+  </div>
+</section>
+
+<section id="lacunas" class="sec">
+  <div class="sec-title"><span class="flag">🔍</span>Lacunas Investigativas</div>
+  <div class="sec-sub">Campo obrigatório, primeira classe — a preencher em rodadas futuras</div>
+  <div class="panel">
+    <div class="lacuna"><b>Incentivos fiscais não discriminados</b> — valor total de renúncia de ICMS/incentivos estaduais concedidos a CMOC, Chint Power e Weichai não está publicamente quantificado.</div>
+    <div class="lacuna"><b>Termos completos do "Manifesto de Entendimento" Goiás-EUA (17/abr/2026)</b> — texto integral não localizado; apenas declarações de Caiado em entrevistas/redes sociais.</div>
+    <div class="lacuna"><b>Identidade da SPV do governo dos EUA</b> no contrato de fornecimento de 15 anos com a Serra Verde — não identificada nas fontes primárias consultadas.</div>
+    <div class="lacuna"><b>Auditoria socioambiental independente da mina Pela Ema</b> — não localizada.</div>
+    <div class="lacuna"><b>Conflito de interesse na transição de mandato</b> — sobreposição temporal entre acordos (mar-abr/2026) e pré-candidatura (30/mar/2026), sem evidência de irregularidade nas fontes consultadas, mas a monitorar.</div>
+    <div class="lacuna"><b>Situação atual do escritório de representação de Goiás em Hebei</b> — sem confirmação operacional.</div>
+    <div class="lacuna"><b>Posição de comunidades locais e povos originários/quilombolas</b> na região de Minaçu quanto à mudança de controle da mina — não localizada.</div>
+    <div class="lacuna"><b>Redes de influência empresarial (ASBN)</b> — Luís Guimarães e Zheng Wei aparecem apenas no dossiê original (2023-24); sem verificação cruzada nesta rodada, permanecem <span class="tag tgo">ev-alleged</span>.</div>
+  </div>
+</section>
+
+<section id="refs" class="sec">
+  <div class="sec-title"><span class="flag">📚</span>Referências</div>
+  <div class="sec-sub">Fontes primárias e secundárias consultadas, com link direto</div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot" style="background:var(--teal)"></span>Rodada de Atualização (2025–2026)</div>
+    <div class="refitem"><div class="refnum">[01]</div><div><div class="reftitle"><a href="https://www.brasil247.com/economia/goias-ja-fechou-com-os-estados-unidos-disse-caiado-ao-firmar-acordo-sobre-terras-raras" target="_blank" rel="noopener">"Goiás já fechou com os Estados Unidos" — Manifesto de Entendimento terras raras</a></div><div class="refsrc">brasil247.com • 21/abr/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[02]</div><div><div class="reftitle"><a href="https://www.jornalopcao.com.br/ultimas-noticias/china-fecha-o-cerco-para-exportacoes-de-carne-e-soja-e-coloca-goias-na-corda-bamba-835751/" target="_blank" rel="noopener">China fecha o cerco para exportações de carne e soja — cota quase esgotada</a></div><div class="refsrc">jornalopcao.com.br • 13/jun/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[03]</div><div><div class="reftitle"><a href="https://goias.gov.br/institucional/caiado-assina-contrato-e-traz-gigante-chinesa-para-goias/" target="_blank" rel="noopener">Governo de Goiás assina contrato e traz gigante chinesa (Chint Power)</a></div><div class="refsrc">goias.gov.br/institucional • 07/nov/2023</div></div></div>
+    <div class="refitem"><div class="refnum">[04]</div><div><div class="reftitle"><a href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-04/goias-defende-acordo-com-eua-para-exploracao-de-minerais-criticos" target="_blank" rel="noopener">Goiás defende acordo com EUA para exploração de minerais críticos (cita JOGMEC/Japão)</a></div><div class="refsrc">Agência Brasil • 27/abr/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[05]</div><div><div class="reftitle"><a href="https://www.sec.gov/Archives/edgar/data/0001970622/000121390026045339/ea028691001ex99-2.htm" target="_blank" rel="noopener">USA Rare Earth, Inc. — Form 8-K FY2026 (comunicado sobre combinação com Serra Verde)</a></div><div class="refsrc">sec.gov/Archives/edgar • abr/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[06]</div><div><div class="reftitle"><a href="https://jornalgrandebahia.com.br/2026/05/compra-da-serra-verde-por-empresa-dos-eua-coloca-goias-no-centro-da-disputa-global-por-terras-raras/" target="_blank" rel="noopener">Compra da Serra Verde por empresa dos EUA coloca Goiás no centro da disputa por terras raras</a></div><div class="refsrc">Jornal Grande Bahia (JGB) • 03/mai/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[07]</div><div><div class="reftitle"><a href="https://www.poder360.com.br/poder-infra/empresa-dos-eua-compra-unica-mina-de-terras-raras-do-brasil/" target="_blank" rel="noopener">Empresa dos EUA compra única mina de terras-raras do Brasil</a></div><div class="refsrc">Poder360 • 20/abr/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[08]</div><div><div class="reftitle"><a href="https://svpm.com.br/br/serraverdeusarareearth-2/" target="_blank" rel="noopener">Serra Verde Anuncia Acordo de Combinação com a USA Rare Earth (comunicado oficial)</a></div><div class="refsrc">svpm.com.br • 20/abr/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[09]</div><div><div class="reftitle"><a href="https://apublica.org/2026/04/terras-raras-mineradora-em-goias-vira-negocio-bilionario/" target="_blank" rel="noopener">Extração de terras raras em Goiás vira negócio bilionário com aquisição americana</a></div><div class="refsrc">Agência Pública (apublica.org) • 21/abr/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[10]</div><div><div class="reftitle"><a href="https://www.brasilmineral.com.br/noticias/cmoc-brasil-produz-3-a-mais-de-niobio-no-primeiro-semestre" target="_blank" rel="noopener">CMOC Brasil produz 3% a mais de nióbio no primeiro semestre de 2025</a></div><div class="refsrc">Brasil Mineral / Notícias de Mineração • set/2025</div></div></div>
+    <div class="refitem"><div class="refnum">[11]</div><div><div class="reftitle"><a href="https://minerabrasil.com.br/equinox-gold-vende-operacoes-no-brasil-para-chinesa-cmoc-por-us-1015-bilhao/2025/12/15/" target="_blank" rel="noopener">Equinox Gold vende operações no Brasil para chinesa CMOC por US$1,015 bilhão</a></div><div class="refsrc">Minera Brasil • 15/dez/2025</div></div></div>
+    <div class="refitem"><div class="refnum">[12]</div><div><div class="reftitle"><a href="https://en.wikipedia.org/wiki/CMOC_Group_Limited" target="_blank" rel="noopener">CMOC Group Limited — aquisição Aurizona/RDM/Bahia Complex</a></div><div class="refsrc">Wikipedia • 2026</div></div></div>
+    <div class="refitem"><div class="refnum">[13]</div><div><div class="reftitle"><a href="https://itumbiara.go.gov.br/weichai-inicia-atividades-em-itumbiara/" target="_blank" rel="noopener">Weichai inicia atividades em Itumbiara</a></div><div class="refsrc">Prefeitura Municipal de Itumbiara</div></div></div>
+    <div class="refitem"><div class="refnum">[14]</div><div><div class="reftitle"><a href="https://www.pv-magazine-brasil.com/2024/09/05/grupo-chint-estuda-produzir-inversores-no-brasil/" target="_blank" rel="noopener">Com nova fábrica de disjuntores, Grupo Chint estuda produzir inversores no Brasil</a></div><div class="refsrc">pv magazine Brasil • out/2025</div></div></div>
+    <div class="refitem"><div class="refnum">[15]</div><div><div class="reftitle"><a href="https://www.congressoemfoco.com.br/noticia/117684/quem-e-ronaldo-caiado-aposta-do-psd-para-o-planalto-em-2026" target="_blank" rel="noopener">Quem é Ronaldo Caiado, aposta do PSD para o Planalto em 2026</a></div><div class="refsrc">Congresso em Foco • 30/mar/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[16]</div><div><div class="reftitle"><a href="https://neofeed.com.br/videos/eleicoes-2026/caiado-promete-cortar-na-carne-e-aposta-em-terras-raras-e-afina-discurso-contra-pt-lula-e-o-melhor-presidente-que-o-paraguai-ja-teve/en/" target="_blank" rel="noopener">Caiado promete cortar na carne, aposta em terras raras (entrevista de campanha)</a></div><div class="refsrc">NeoFeed • 18/jun/2026</div></div></div>
+  </div>
+
+  <div class="panel">
+    <div class="ptitle"><span class="dot dd"></span>Dossiê Original (2023–2024) — footnotes completas</div>
+    <div class="refitem"><div class="refnum">[^1]</div><div><div class="reftitle"><a href="https://goias.gov.br/em-pequim-caiado-formaliza-acordos-com-china-railway/" target="_blank" rel="noopener">Em Pequim, Caiado formaliza acordos com China Railway</a></div><div class="refsrc">goias.gov.br</div></div></div>
+    <div class="refitem"><div class="refnum">[^2]</div><div><div class="reftitle"><a href="https://agenciacoradenoticias.go.gov.br/101988-caiado-lidera-missao-a-china-para-consolidar-investimentos-em-goias" target="_blank" rel="noopener">Caiado lidera missão à China para consolidar investimentos em Goiás</a></div><div class="refsrc">agenciacoradenoticias.go.gov.br</div></div></div>
+    <div class="refitem"><div class="refnum">[^3]</div><div><div class="reftitle"><a href="https://goias.gov.br/industriaecomercio/goias-e-china-25-anos-de-cooperacao-e-novo-marco-nas-relacoes-brasil-china/" target="_blank" rel="noopener">25 anos de cooperação e novo marco nas relações Brasil-China</a></div><div class="refsrc">goias.gov.br/industriaecomercio</div></div></div>
+    <div class="refitem"><div class="refnum">[^4]</div><div><div class="reftitle"><a href="https://agenciacoradenoticias.go.gov.br/140057-caiado-reforca-parceria-estrategica-com-a-china" target="_blank" rel="noopener">Caiado reforça parceria estratégica com a China</a></div><div class="refsrc">agenciacoradenoticias.go.gov.br</div></div></div>
+    <div class="refitem"><div class="refnum">[^5]</div><div><div class="reftitle"><a href="https://www.jornalopcao.com.br/economia/saldo-da-viagem-de-caiado-a-china-6-empresas-devem-investir-em-goias-551496/" target="_blank" rel="noopener">Saldo da viagem de Caiado à China: 6 empresas devem investir em Goiás</a></div><div class="refsrc">jornalopcao.com.br</div></div></div>
+    <div class="refitem"><div class="refnum">[^6]</div><div><div class="reftitle"><a href="https://www.forumchinaplp.org.mo/pt/economic_trade/view/215" target="_blank" rel="noopener">Fórum China-PLP — comércio econômico (registro missão 2023)</a></div><div class="refsrc">forumchinaplp.org.mo</div></div></div>
+    <div class="refitem"><div class="refnum">[^7]</div><div><div class="reftitle"><a href="https://omundodiplomatico.com.br/2023/11/14/governadores-de-goias-e-minas-fecham-parceria-com-a-huawei-durante-missao-a-china/" target="_blank" rel="noopener">Governadores de Goiás e Minas fecham parceria com a Huawei</a></div><div class="refsrc">omundodiplomatico.com.br • 14/11/2023</div></div></div>
+    <div class="refitem"><div class="refnum">[^8]</div><div><div class="reftitle"><a href="https://www.jornalhoraextra.com.br/noticias/governador-de-goias-inicia-missao-internacional-na-china-para-impulsionar-acordos-comerciais-e-investimentos" target="_blank" rel="noopener">Governador de Goiás inicia missão internacional na China</a></div><div class="refsrc">jornalhoraextra.com.br</div></div></div>
+    <div class="refitem"><div class="refnum">[^9]</div><div><div class="reftitle"><a href="https://empreenderemgoias.com.br/2023/08/16/caiado-anuncia-tres-empresas-chinesas-para-goias/" target="_blank" rel="noopener">Caiado anuncia três empresas chinesas para Goiás</a></div><div class="refsrc">empreenderemgoias.com.br • 16/08/2023</div></div></div>
+    <div class="refitem"><div class="refnum">[^10]</div><div><div class="reftitle"><a href="https://www.jornalopcao.com.br/ultimas-noticias/caiado-articula-abertura-de-escritorio-representativo-de-goias-na-china-550359/" target="_blank" rel="noopener">Caiado articula abertura de escritório representativo de Goiás na China</a></div><div class="refsrc">jornalopcao.com.br</div></div></div>
+    <div class="refitem"><div class="refnum">[^11]</div><div><div class="reftitle"><a href="https://www.forumchinaplp.org.mo/en/economic_trade/view/7993" target="_blank" rel="noopener">Chinese delegation in search of new business in Goiás</a></div><div class="refsrc">forumchinaplp.org.mo</div></div></div>
+    <div class="refitem"><div class="refnum">[^12]</div><div><div class="reftitle"><a href="https://www.diariodeaparecida.com.br/2023/11/15/avanco-historico-diz-caiado-ao-encerrar-missao-oficial-a-china/" target="_blank" rel="noopener">"Avanço histórico", diz Caiado ao encerrar missão oficial à China</a></div><div class="refsrc">diariodeaparecida.com.br • 15/11/2023</div></div></div>
+    <div class="refitem"><div class="refnum">[^13]</div><div><div class="reftitle"><a href="https://www.chintglobal.com/gb/en/about-us/news-center/news/brazils-goias-state-delegation-visits-chint.html" target="_blank" rel="noopener">Brazil's Goiás state delegation visits Chint</a></div><div class="refsrc">chintglobal.com</div></div></div>
+    <div class="refitem"><div class="refnum">[^14]</div><div><div class="reftitle"><a href="https://goias.gov.br/industriaecomercio/sic-coordena-nova-missao-tecnica-do-governo-de-goias-a-china/" target="_blank" rel="noopener">SIC coordena nova missão técnica do governo de Goiás à China</a></div><div class="refsrc">goias.gov.br/industriaecomercio</div></div></div>
+    <div class="refitem"><div class="refnum">[^15]</div><div><div class="reftitle"><a href="https://agenciacoradenoticias.go.gov.br/146066-caiado-abre-rodada-de-negocios-com-empresarios-indianos" target="_blank" rel="noopener">Caiado abre rodada de negócios com empresários indianos</a></div><div class="refsrc">agenciacoradenoticias.go.gov.br — contexto de diversificação de parceiros, fora do escopo China</div></div></div>
+    <div class="refitem"><div class="refnum">[^16]</div><div><div class="reftitle"><a href="https://bricspolicycenter.org/en/download/12292/" target="_blank" rel="noopener">BRICS Policy Center — documento de referência (relações Brasil-China)</a></div><div class="refsrc">bricspolicycenter.org</div></div></div>
+    <div class="refitem"><div class="refnum">[^17]</div><div><div class="reftitle"><a href="https://www.jornalopcao.com.br/governo-de-goias/imprensa-nacional-destaca-missao-de-caiado-a-china-551442/" target="_blank" rel="noopener">Imprensa nacional destaca missão de Caiado à China</a></div><div class="refsrc">jornalopcao.com.br</div></div></div>
+    <div class="refitem"><div class="refnum">[^18]</div><div><div class="reftitle"><a href="https://agenciacoradenoticias.go.gov.br/103131-avanco-historico-diz-caiado-ao-encerrar-missao-oficial-a-china" target="_blank" rel="noopener">"Avanço histórico", diz Caiado ao encerrar missão oficial à China (2)</a></div><div class="refsrc">agenciacoradenoticias.go.gov.br</div></div></div>
+    <div class="refitem"><div class="refnum">[^19]</div><div><div class="reftitle"><a href="https://portal.al.go.leg.br/noticias-dos-gabinetes/139294/jamil-calife-e-ronaldo-caiado-destacam-a-importancia-da-educacao-durante-visita-a-china" target="_blank" rel="noopener">Jamil Calife e Ronaldo Caiado destacam a importância da educação durante visita à China</a></div><div class="refsrc">portal.al.go.leg.br</div></div></div>
+    <div class="refitem"><div class="refnum">[^20]</div><div><div class="reftitle"><a href="https://www.podergoias.com.br/materia/16918/goias-celebra-acordos-com-multinacionais-chinesas-apos-missao-de-caiado" target="_blank" rel="noopener">Goiás celebra acordos com multinacionais chinesas após missão de Caiado</a></div><div class="refsrc">podergoias.com.br</div></div></div>
+  </div>
+</section>
+
+<section class="series-nav" id="serie">
+  <div class="series-nav-title">Artefatos da Série: O Dragão e a Onça</div>
+  <div class="series-nav-grid">
+    <a class="series-card" href="/o-dragao-e-a-onca-goias.html"><div class="series-card-id">T-228 · Capítulo inaugural</div><div class="series-card-chapter">🇧🇷 GO Goiás</div><div class="series-card-desc">Pivô China → EUA/Japão em terras raras</div></a><a class="series-card" href="/dragao-onca-brasil-federal.html"><div class="series-card-id">T-229 · Linha do tempo 1993–2026</div><div class="series-card-chapter">🇧🇷 BR Brasil (Federal)</div><div class="series-card-desc">Parceria estratégica e o caso Doria–Sinovac</div></a><a class="series-card" href="/dragao-onca-para.html"><div class="series-card-id">T-230 · Ferrovia CCCC + Vale</div><div class="series-card-chapter">🇧🇷 PA Pará</div><div class="series-card-desc">Corredor mineral e COP30 como vitrine</div></a><a class="series-card" href="/dragao-onca-amazonas.html"><div class="series-card-id">T-231 · Taboca / China Nonferrous</div><div class="series-card-chapter">🇧🇷 AM Amazonas</div><div class="series-card-desc">Contaminação Waimiri-Atroari e Zona Franca</div></a><a class="series-card" href="/dragao-onca-minas-gerais.html"><div class="series-card-id">T-232 · Vale do Lítio</div><div class="series-card-chapter">🇧🇷 MG Minas Gerais</div><div class="series-card-desc">Sigma Lithium e o contraste ocidental</div></a><a class="series-card" href="/dragao-onca-sintese.html"><div class="series-card-id">T-233 · Cross-estadual</div><div class="series-card-chapter">📊 Síntese Comparativa</div><div class="series-card-desc">Soberania na conta do governador</div></a><a class="series-card" href="/dragao-onca-braco-juridico.html"><div class="series-card-id">T-234 · Transversal · STF × Congresso</div><div class="series-card-chapter">⚖️ Braço Jurídico</div><div class="series-card-desc">Marco temporal, PL da Devastação e ADI 7919</div></a><a class="series-card" href="/dragao-onca-pl2780.html"><div class="series-card-id">T-235 · Elo legislativo central</div><div class="series-card-chapter">📜 PL 2.780/2024</div><div class="series-card-desc">Política Nacional de Minerais Críticos</div></a>
+  </div>
+  <a class="series-hub" href="/odragaoeaonca">← Índice da série · O Dragão e a Onça</a>
+</section>
+
+</main>
+
+<footer>
+  <div class="footcc0">⚖ <b>CC0 1.0</b> — Domínio Público · lawfare-timeline · série "O Dragão e a Onça"</div>
+  <div class="footnote">Última atualização de conteúdo: rodada de verificação jul/2026 · Sujeito a revisão conforme conclusão da aquisição USA Rare Earth–Serra Verde (3º trim. 2026)</div>
+</footer>
+
+<button id="gotop" title="Voltar ao topo" aria-label="Voltar ao topo">↑</button>
+
+<script>
+const links = document.querySelectorAll('.nb');
+const sections = document.querySelectorAll('main .sec');
+const map = {};
+links.forEach(l=>{map[l.dataset.target]=l});
+
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      links.forEach(l=>l.classList.remove('act'));
+      const id = entry.target.id;
+      if(map[id]) map[id].classList.add('act');
+    }
+  });
+},{rootMargin:'-30% 0px -60% 0px',threshold:0});
+sections.forEach(s=>observer.observe(s));
+
+const gotop = document.getElementById('gotop');
+window.addEventListener('scroll',()=>{
+  gotop.classList.toggle('show', window.scrollY > 400);
+});
+gotop.addEventListener('click',()=>{
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+</script>
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

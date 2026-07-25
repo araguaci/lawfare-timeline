@@ -61,7 +61,7 @@ Padrão recorrente na série: anúncios de missões internacionais frequentement
 
 Entradas conectadas nesta série:
 
-- [Entrada 1655](/timeline/entries/1655)
+- [Entrada 1655](/posts/id1655-barbalho-cccc-e-vale-assinam-mou-da-ferrovia-do-para-em-pequim-r10-bilhoes-us2-b/)
 
 ---
 

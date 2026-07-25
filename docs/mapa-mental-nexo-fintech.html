@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEXO FINTECH — Mapa Mental Investigativo 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #080c10; --bg1: #0d1218; --bg2: #121820; --bg3: #1a2230;
+  --border: rgba(255,255,255,0.06); --border2: rgba(255,255,255,0.12);
+  --fg: #e8ecf0; --fg2: #8a9ab0; --fg3: #4a5a6a;
+  --red: #e84040; --red2: rgba(232,64,64,0.15);
+  --amber: #e8a020; --amber2: rgba(232,160,32,0.15);
+  --blue: #3090e8; --blue2: rgba(48,144,232,0.12);
+  --green: #28c880; --green2: rgba(40,200,128,0.12);
+  --purple: #a060e8; --purple2: rgba(160,96,232,0.12);
+  --cyan: #20d0e8;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --font-display: 'Syne', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-mono); font-size: 13px; line-height: 1.6; min-height: 100vh; overflow-x: hidden; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--bg1); }
+::-webkit-scrollbar-thumb { background: var(--bg3); border-radius: 2px; }
+
+/* Layout */
+.container { max-width: 1400px; margin: 0 auto; padding: 0 20px 80px; }
+@media (min-width: 768px) { .container { padding: 0 40px 80px; } }
+
+/* Header */
+.header { background: var(--bg1); border-bottom: 1px solid var(--border2); padding: 24px 20px; position: relative; overflow: hidden; }
+@media (min-width: 768px) { .header { padding: 32px 40px 24px; } }
+.header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--red), var(--amber), var(--purple), var(--red)); background-size: 200% 100%; animation: scanline 3s linear infinite; }
+@keyframes scanline { to { background-position: 200% 0; } }
+
+.meta-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.badge { display: inline-flex; align-items: center; gap: 6px; padding: 3px 8px; border-radius: 3px; font-size: 10px; font-weight: 600; letter-spacing: 0.10em; text-transform: uppercase; }
+.b-red { background: var(--red2); color: var(--red); border: 1px solid rgba(232,64,64,0.3); }
+.b-amber { background: var(--amber2); color: var(--amber); border: 1px solid rgba(232,160,32,0.3); }
+.b-purple { background: var(--purple2); color: var(--purple); border: 1px solid rgba(160,96,232,0.3); }
+.b-blue { background: var(--blue2); color: var(--blue); border: 1px solid rgba(48,144,232,0.3); }
+
+.hero-title { font-family: var(--font-display); font-size: clamp(28px, 5vw, 42px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 8px; }
+.hero-title span { color: var(--red); }
+.subtitle { color: var(--fg2); font-size: 13px; max-width: 700px; margin-bottom: 24px; }
+
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; max-width: 900px; }
+.stat-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 6px; padding: 12px 16px; }
+.stat-num { font-family: var(--font-display); font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
+.stat-label { font-size: 10px; color: var(--fg3); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 2px; }
+
+/* Navigation */
+.nav-tabs { display: flex; background: var(--bg1); border-bottom: 1px solid var(--border); padding: 0 20px; overflow-x: auto; scrollbar-width: none; margin-bottom: 32px; }
+@media (min-width: 768px) { .nav-tabs { padding: 0 40px; } }
+.nav-tab { padding: 14px 16px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg3); cursor: pointer; border: none; background: none; border-bottom: 2px solid transparent; white-space: nowrap; transition: all 0.15s; font-family: var(--font-mono); font-weight: 600; }
+.nav-tab:hover { color: var(--fg2); }
+.nav-tab.active { color: var(--fg); border-bottom-color: var(--red); }
+
+/* Tab Panels */
+.tab-panel { display: none; animation: fadeIn 0.3s ease; }
+.tab-panel.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Grid System */
+.agrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 16px; margin-bottom: 32px; }
+.grid-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 32px; }
+.grid-3col { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px; margin-bottom: 32px; }
+
+/* Components */
+.card { background: var(--bg1); border: 1px solid var(--border); border-radius: 6px; padding: 20px; height: 100%; border-top: 1px solid var(--border2); }
+.card-head { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
+.card-icon { width: 32px; height: 32px; border-radius: 6px; background: var(--bg2); display: flex; align-items: center; justify-content: center; font-size: 15px; border: 1px solid var(--border); flex-shrink: 0; }
+.card-title { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--fg); line-height: 1.2; }
+.card-subtitle { font-size: 10px; color: var(--fg3); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 2px; }
+.card-body { font-size: 12px; color: var(--fg2); line-height: 1.6; }
+.card-footer { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+
+.section-title { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--fg3); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 8px; }
+
+/* SVG Mindmap */
+.mindmap-wrap { background: var(--bg1); border: 1px solid var(--border); border-radius: 8px; padding: 20px; overflow-x: auto; margin-bottom: 32px; }
+svg.mindmap { width: 100%; min-width: 1000px; height: auto; display: block; filter: drop-shadow(0 0 30px rgba(232, 64, 64, 0.05)); }
+.node-label { font-family: var(--font-mono); font-size: 11px; fill: var(--fg); font-weight: 600; }
+.node-sub { font-family: var(--font-mono); font-size: 9px; fill: var(--fg3); text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* Footer */
+.footer { padding: 40px 20px; border-top: 1px solid var(--border); margin-top: 80px; text-align: center; }
+.footer-text { font-size: 11px; color: var(--fg3); margin-bottom: 8px; }
+
+/* Utility Classes */
+.txt-red { color: var(--red); }
+.txt-amber { color: var(--amber); }
+.txt-purple { color: var(--purple); }
+.txt-cyan { color: var(--cyan); }
+
+@media print {
+  body { background: #fff; color: #111; }
+  .header, .nav-tabs, .footer { display: none; }
+  .tab-panel { display: block !important; page-break-after: always; }
+  .card { border: 1px solid #ddd; background: #fff; color: #111; }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="meta-row">
+    <div class="badge b-purple">Dossiê Especial</div>
+    <div class="badge b-red">Doutrina P8 & P10</div>
+    <div class="badge b-amber">Captura Sistêmica</div>
+    <div style="font-size:10px; color:var(--fg3); margin-left:auto">v1.2 // ABRIL 2026</div>
+  </div>
+  <h1 class="hero-title">NEXO <span>FINTECH</span></h1>
+  <p class="subtitle">Mapeamento forense da infraestrutura de serviço compartilhada utilizada pelo crime organizado para lavagem, influência e captura institucional.</p>
+  
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-num txt-red">R$ 9.2 Bi</div>
+      <div class="stat-label">Volume Estimado (2020–26)</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num txt-amber">142</div>
+      <div class="stat-label">Fintechs/IPs Conectadas</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num txt-purple">8</div>
+      <div class="stat-label">Operações Convergentes</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num txt-cyan">100%</div>
+      <div class="stat-label">E-Financeira Revogada</div>
+    </div>
+  </div>
+</header>
+
+<nav class="nav-tabs">
+  <div class="nav-tab active" onclick="showTab('mapa')">Mapa Mental</div>
+  <div class="nav-tab" onclick="showTab('atores')">Atores & Hubs</div>
+  <div class="nav-tab" onclick="showTab('padroes')">Padrões P8/P10</div>
+  <div class="nav-tab" onclick="showTab('conexoes')">Conexões Operacionais</div>
+</nav>
+
+<div class="container">
+
+  <!-- TAB: MAPA MENTAL -->
+  <div id="tab-mapa" class="tab-panel active">
+    <div class="section-title"><span>◈</span> Grafo de Dependência Sistêmica</div>
+    <div class="mindmap-wrap">
+      <svg class="mindmap" viewBox="0 0 1100 750" xmlns="http://www.w3.org/2000/svg">
+        <rect width="1100" height="750" fill="#0d1218" rx="8" />
+        
+        <!-- Connections: Shared Infrastructure Lines -->
+        <g stroke-opacity="0.2" stroke-width="1.5">
+          <!-- Hub connections -->
+          <line x1="550" y1="375" x2="300" y2="200" stroke="var(--red)" />
+          <line x1="550" y1="375" x2="800" y2="200" stroke="var(--purple)" />
+          <line x1="550" y1="375" x2="300" y2="550" stroke="var(--amber)" />
+          <line x1="550" y1="375" x2="800" y2="550" stroke="var(--cyan)" />
+          
+          <!-- Secondary lines -->
+          <line x1="300" y1="200" x2="100" y2="100" stroke="var(--red)" stroke-dasharray="5,5" />
+          <line x1="300" y1="200" x2="100" y2="300" stroke="var(--red)" stroke-dasharray="5,5" />
+          <line x1="800" y1="200" x2="1000" y2="100" stroke="var(--purple)" stroke-dasharray="2,2" />
+          <line x1="800" y1="200" x2="1000" y2="300" stroke="var(--purple)" stroke-dasharray="2,2" />
+        </g>
+
+        <!-- Node: Central Hub -->
+        <g transform="translate(425, 335)">
+          <rect width="250" height="80" rx="40" fill="var(--bg2)" stroke="var(--red)" stroke-width="2" />
+          <text x="125" y="40" text-anchor="middle" class="node-label" style="font-size: 14px">Shared Infra (P10)</text>
+          <text x="125" y="58" text-anchor="middle" class="node-sub" fill="var(--fg3)">O Hub do Ecossistema</text>
+        </g>
+
+        <!-- Node Group: Financeiro (Master/REAG) -->
+        <g transform="translate(200, 160)">
+          <rect width="200" height="60" rx="6" fill="var(--bg2)" stroke="var(--red)" stroke-width="1.5" />
+          <text x="100" y="30" text-anchor="middle" class="node-label">BANCO MASTER / REAG</text>
+          <text x="100" y="46" text-anchor="middle" class="node-sub">Financiamento & FIPs</text>
+        </g>
+
+        <!-- Node Group: Infiltração (IPB / Fintechs) -->
+        <g transform="translate(700, 160)">
+          <rect width="200" height="60" rx="6" fill="var(--bg2)" stroke="var(--purple)" stroke-width="1.5" />
+          <text x="100" y="30" text-anchor="middle" class="node-label">ECOSSISTEMA IPB</text>
+          <text x="100" y="46" text-anchor="middle" class="node-sub">2GO / InvBank / IPB</text>
+        </g>
+
+        <!-- Node Group: Operacional (Lavagem / PCC) -->
+        <g transform="translate(200, 520)">
+          <rect width="200" height="60" rx="6" fill="var(--bg2)" stroke="var(--amber)" stroke-width="1.5" />
+          <text x="100" y="30" text-anchor="middle" class="node-label">OPERACIONAL PCC</text>
+          <text x="100" y="46" text-anchor="middle" class="node-sub">Narcoestética / Gritzbach</text>
+        </g>
+
+        <!-- Node Group: Cultural (Digital Capture P9) -->
+        <g transform="translate(700, 520)">
+          <rect width="200" height="60" rx="6" fill="var(--bg2)" stroke="var(--cyan)" stroke-width="1.5" />
+          <text x="100" y="30" text-anchor="middle" class="node-label">CAPTURA CULTURAL</text>
+          <text x="100" y="46" text-anchor="middle" class="node-sub">Choquei / Mynd / Vybbe</text>
+        </g>
+
+        <!-- Satellite Nodes -->
+        <circle cx="100" cy="100" r="40" fill="var(--bg3)" stroke="var(--red)" stroke-dasharray="3,3" />
+        <text x="100" y="105" text-anchor="middle" fill="var(--fg)" font-size="10">CDBs</text>
+        
+        <circle cx="100" cy="300" r="40" fill="var(--bg3)" stroke="var(--red)" stroke-dasharray="3,3" />
+        <text x="100" y="305" text-anchor="middle" fill="var(--fg)" font-size="10">FIDCs</text>
+
+        <circle cx="1000" cy="100" r="40" fill="var(--bg3)" stroke="var(--purple)" stroke-dasharray="3,3" />
+        <text x="1000" y="105" text-anchor="middle" fill="var(--fg)" font-size="10">STF</text>
+        
+        <circle cx="1000" cy="300" r="40" fill="var(--bg3)" stroke="var(--purple)" stroke-dasharray="3,3" />
+        <text x="1000" y="305" text-anchor="middle" fill="var(--fg)" font-size="10">CENSURA</text>
+
+        <!-- Annotation -->
+        <text x="550" y="720" text-anchor="middle" fill="var(--fg3)" font-size="10">Análise Transversal: Nexo Fintech — Lawfare Timeline v1.2</text>
+      </svg>
+    </div>
+    <div class="agrid">
+      <div class="card">
+        <div class="card-title txt-red">O Hub de Infraestrutura</div>
+        <div class="card-body" style="margin-top:10px">A grande descoberta de 2026 não é uma operação específica, mas o <strong>Padrão P10</strong>: as mesmas contas, IPs e gateways de pagamento do Banco Master/REAG servem simultaneamente à lavagem do narcotráfico (Hydra), à captura de minerais (Mineração) e à sustentação de narrativas de rede (Narco Fluxo).</div>
+      </div>
+      <div class="card">
+        <div class="card-title txt-amber">O Apagão e-Financeira</div>
+        <div class="card-body" style="margin-top:10px">O nexo foi selado com a revogação da Instrução Normativa da Receita Federal que obrigava bancos a reportarem movimentações via PIX de fintechs. Esta "janela" permitiu R$ 6bi em trânsito sem rastreabilidade do beneficiário final.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB: ATORES -->
+  <div id="tab-atores" class="tab-panel">
+    <div class="section-title"><span>◈</span> Hubs e Figuras Centrais</div>
+    <div class="agrid">
+      <div class="card">
+        <div class="card-head">
+          <div class="card-icon">🏦</div>
+          <div>
+            <div class="card-title">Daniel Vorcaro</div>
+            <div class="card-subtitle">Hub Financeiro / Banco Master</div>
+          </div>
+        </div>
+        <div class="card-body">Arquiteto do crescimento de 1000% do Master. Conectado a Moraes (STF) via consultorias e à REAG Investimentos via João Mansur.</div>
+        <div class="card-footer">
+          <span class="badge b-amber">INVESTIGADO</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <div class="card-icon">⛓️</div>
+          <div>
+            <div class="card-title">Vinícius Gritzbach</div>
+            <div class="card-subtitle">Operador PCC / Lavagem Automotiva</div>
+          </div>
+        </div>
+        <div class="card-body">Documentou o uso de fintechs e agências de narcoestética para lavar dinheiro do tráfico internacional. Executado em 2024.</div>
+        <div class="card-footer">
+          <span class="badge b-red">MORTO / DELATOR</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <div class="card-icon">🌀</div>
+          <div>
+            <div class="card-title">João Carlos Mansur</div>
+            <div class="card-subtitle">REAG Investimentos / Gestão de FIDCs</div>
+          </div>
+        </div>
+        <div class="card-body">Operador mestre dos fundos que servem de "camada de invisibilidade" para os aportes no Banco Master e projetos de carbono.</div>
+        <div class="card-footer">
+          <span class="badge b-blue">EM MONITORAMENTO</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB: PADROES -->
+  <div id="tab-padroes" class="tab-panel">
+    <div class="section-title"><span>◈</span> Mecanismos de Captura (P8 e P10)</div>
+    <div class="agrid">
+      <div class="card" style="border-left: 3px solid var(--purple)">
+        <div class="card-title">P8: Infiltração Fintech</div>
+        <div class="card-body" style="margin-top:12px">O crime não cria bancos; ele compra ou infiltra <strong>IPs (Instituições de Pagamento)</strong> reguladas. A "lavagem" ocorre no fluxo digital, protegida pelo sigilo bancário de uma instituição que aparenta legalidade.</div>
+      </div>
+      <div class="card" style="border-left: 3px solid var(--red)">
+        <div class="card-title">P10: Infraestrutura Compartilhada</div>
+        <div class="card-body" style="margin-top:12px">A descoberta de IPs idênticos disparando ordens de censura (Silêncio Digital) e ordens de pagamento para gravadoras (Narco Fluxo). Uma única "usina" de tecnologia servindo a múltiplos propósitos criminosos.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB: CONEXOES -->
+  <div id="tab-conexoes" class="tab-panel">
+    <div class="section-title"><span>◈</span> Convergência de Operações</div>
+    <div class="grid-3col">
+      <div class="card">
+        <div class="badge b-red" style="margin-bottom:12px">Hydra</div>
+        <div class="card-title">Lavanderia Fintech</div>
+        <div class="card-body" style="margin-top:8px">O duto de saída. R$ 6bi lavados via InvBank e 2GO. Vínculo direto com o extermínio de delatores do PCC.</div>
+      </div>
+      <div class="card">
+        <div class="badge b-purple" style="margin-bottom:12px">Narco Fluxo</div>
+        <div class="card-title">Captura Cultural</div>
+        <div class="card-body" style="margin-top:8px">O duto de influência. Gravadoras e influenciadores financiados por dinheiro do tráfico via fintechs.</div>
+      </div>
+      <div class="card">
+        <div class="badge b-amber" style="margin-bottom:12px">Mineração</div>
+        <div class="card-title">Captura de Recursos</div>
+        <div class="card-body" style="margin-top:8px">O duto de capitalização. Uso do hub Master para arrematar leilões estratégicos de minerais críticos.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RELATED ARTEFACTS -->
+  <div class="section-title" style="margin-top: 64px"><span>◈</span> Artefatos Relacionados</div>
+  <div class="agrid">
+    <a href="operacao-narco-fluxo.html" style="text-decoration:none">
+      <div class="card" style="border-top: 1px solid var(--purple)">
+        <div class="badge b-purple" style="margin-bottom:8px">Narco Fluxo</div>
+        <div class="card-title" style="font-size:14px">Captura Cultural P9/P10</div>
+        <div class="card-body" style="font-size:11px; margin-top:4px">O duto de influência e o financiamento de gravadoras via fintechs.</div>
+      </div>
+    </a>
+    <a href="operacao-hydra-fintech-laundry.html" style="text-decoration:none">
+      <div class="card" style="border-top: 1px solid var(--red)">
+        <div class="badge b-red" style="margin-bottom:8px">Operação Hydra</div>
+        <div class="card-title" style="font-size:14px">Lavanderia Fintech P8</div>
+        <div class="card-body" style="font-size:11px; margin-top:4px">O primeiro duto de R$ 6bi mapeado no ecossistema de pagamento.</div>
+      </div>
+    </a>
+    <a href="banco-master-compliance-zero.html" style="text-decoration:none">
+      <div class="card" style="border-top: 1px solid var(--blue)">
+        <div class="badge b-blue" style="margin-bottom:8px">Banco Master</div>
+        <div class="card-title" style="font-size:14px">Compliance Zero</div>
+        <div class="card-body" style="font-size:11px; margin-top:4px">Análise do hub financeiro central e suas conexões políticas.</div>
+      </div>
+    </a>
+    <a href="padroes-sistemicos-dashboard.html" style="text-decoration:none">
+      <div class="card" style="border-top: 1px solid var(--amber)">
+        <div class="badge b-amber" style="margin-bottom:8px">Padrões Sistêmicos</div>
+        <div class="card-title" style="font-size:14px">Matriz P1–P10</div>
+        <div class="card-body" style="font-size:11px; margin-top:4px">A base doutrinária que conecta todas as operações brasileiras.</div>
+      </div>
+    </a>
+    <a href="operacao-mineracao.html" style="text-decoration:none">
+      <div class="card" style="border-top: 1px solid var(--red)">
+        <div class="badge b-red" style="margin-bottom:8px">Mineração</div>
+        <div class="card-title" style="font-size:14px">Captura de Minerais</div>
+        <div class="card-body" style="font-size:11px; margin-top:4px">Uso do nexo financeiro para controle de recursos estratégicos.</div>
+      </div>
+    </a>
+    <a href="carbono_oculto.html" style="text-decoration:none">
+      <div class="card" style="border-top: 1px solid var(--green)">
+        <div class="badge b-green" style="margin-bottom:8px">Carbono Oculto</div>
+        <div class="card-title" style="font-size:14px">Captura Ambiental</div>
+        <div class="card-body" style="font-size:11px; margin-top:4px">Blindagem via greenwashing e uso de FIDCs para lavagem.</div>
+      </div>
+    </a>
+    <a href="emaranhamento_operacoes.html" style="text-decoration:none">
+      <div class="card" style="border-top: 1px solid var(--purple)">
+        <div class="badge b-purple" style="margin-bottom:8px">Emaranhamento</div>
+        <div class="card-title" style="font-size:14px">Matriz de Intersecção</div>
+        <div class="card-body" style="font-size:11px; margin-top:4px">Mapeamento visual das conexões Master/PCC em larga escala.</div>
+      </div>
+    </a>
+    <a href="republica-capturada.html" style="text-decoration:none">
+      <div class="card" style="border-top: 1px solid var(--blue)">
+        <div class="badge b-blue" style="margin-bottom:8px">Dossiê Mestre</div>
+        <div class="card-title" style="font-size:14px">República Capturada</div>
+        <div class="card-body" style="font-size:11px; margin-top:4px">A visão panorâmica da falência institucional brasileira.</div>
+      </div>
+    </a>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-text">NEXO FINTECH — Dossiê de Inteligência lawfare-timeline</div>
+  <div class="footer-text">CC0 1.0 Universal — Domínio Público · Sem Direitos Reservados</div>
+  <div class="footer-text" style="opacity: 0.5">Fontes: COAF (Rel. 2024), Inq. Hydra (MPSP), Dados Auditáveis Banco Master 2026.</div>
+</footer>
+
+<script>
+function showTab(id) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+
+</body>
+</html>

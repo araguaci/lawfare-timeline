@@ -61,8 +61,8 @@ Butantan banca integralmente os custos da Fase 3 sem contrapartida de propriedad
 
 Entradas conectadas nesta série:
 
-- [Entrada 1648](/timeline/entries/1648)
-- [Entrada 1650](/timeline/entries/1650)
+- [Entrada 1648](/posts/id1648-governador-joao-doria-sp-inaugura-escritorio-comercial-do-estado-em-xangai-duran/)
+- [Entrada 1650](/posts/id1650-doria-assina-compra-antecipada-de-46-milhoes-de-doses-da-coronavac-com-recursos/)
 
 ---
 

@@ -52,8 +52,8 @@ O evento que deveria simbolizar alinhamento entre clima e natureza ocorre no mes
 
 Entradas conectadas nesta série:
 
-- [Entrada 1657](/timeline/entries/1657)
-- [Entrada 1661](/timeline/entries/1661)
+- [Entrada 1657](/posts/id1657-vale-e-para-firmam-programa-estrutura-ate-40-de-divida-da-mineradora-convertida/)
+- [Entrada 1661](/posts/id1661-vereadora-eleita-de-belem-classifica-cop30-sob-gestao-barbalho-como-evento-fecha/)
 
 ---
 

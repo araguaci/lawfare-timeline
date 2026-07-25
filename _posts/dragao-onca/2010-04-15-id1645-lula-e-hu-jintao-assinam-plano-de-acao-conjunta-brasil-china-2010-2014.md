@@ -45,7 +45,7 @@ Base para o Plano Decenal de Cooperação 2012-2021, assinado dois anos depois s
 
 Entradas conectadas nesta série:
 
-- [Entrada 1644](/timeline/entries/1644)
+- [Entrada 1644](/posts/id1644-china-ultrapassa-os-eua-e-se-torna-o-principal-parceiro-comercial-do-brasil/)
 
 ---
 

@@ -57,8 +57,8 @@ Padrão análogo ao P05/P06 do corpus: um pagamento direto e reservado, sem medi
 
 Entradas conectadas nesta série:
 
-- [Entrada 1670](/timeline/entries/1670)
-- [Entrada 1671](/timeline/entries/1671)
+- [Entrada 1670](/posts/id1670-povo-waimiri-atroari-denuncia-contaminacao-do-rio-alalau-por-mercurio-e-rejeitos/)
+- [Entrada 1671](/posts/id1671-taboca-anuncia-investimento-de-us100-milhoes-para-dobrar-producao-ate-2028/)
 
 ---
 

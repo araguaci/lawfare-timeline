@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assimetria Punitiva — P3 Invertido · Jan/2023 × Pandemia · lawfare-timeline ID 179</title>
+<meta name="description" content="O mesmo sistema judicial que condenou 1.500 manifestantes em velocidade recorde não produziu nenhuma condenação definitiva de mandante por R$ 2,27B em desvios pandêmicos. Padrão P3 documentado.">
+<link rel="canonical" href="https://gosurf.site/assimetria-punitiva">
+<!-- Open Graph / Sharecard -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gosurf.site/assimetria-punitiva">
+<meta property="og:title" content="Assimetria Punitiva — P3 Invertido · Jan/2023 × Pandemia">
+<meta property="og:description" content="~1.500 condenados (Jan/2023) em &lt; 2 anos vs. 0 mandantes condenados por R$ 2,27B em desvios pandêmicos (2020–2024). O mesmo STF em velocidades opostas — lawfare-timeline ID 179.">
+<meta property="og:image" content="https://gosurf.site/og-assimetria-punitiva.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Assimetria Punitiva — ~1.500 condenados vs. R$ 2,27B sem mandantes condenados">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="gosurf.site">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Assimetria Punitiva — P3 Invertido · Jan/2023 × Pandemia">
+<meta name="twitter:description" content="~1.500 condenados (Jan/2023) em &lt; 2 anos vs. 0 mandantes condenados por R$ 2,27B em desvios pandêmicos. O mesmo STF em velocidades opostas — ID 179.">
+<meta name="twitter:image" content="https://gosurf.site/og-assimetria-punitiva.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Syne:wght@400;700;800;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:    #080c10;
+  --bg1:   #0d1218;
+  --bg2:   #121820;
+  --bg3:   #1a2230;
+  --border:  rgba(255,255,255,0.06);
+  --border2: rgba(255,255,255,0.13);
+  --fg:  #e8ecf0;
+  --fg2: #8a9ab0;
+  --fg3: #4a5a6a;
+  --red:    #e84040;
+  --red2:   rgba(232,64,64,0.13);
+  --red3:   rgba(232,64,64,0.25);
+  --amber:  #e8a020;
+  --amber2: rgba(232,160,32,0.13);
+  --blue:   #3090e8;
+  --blue2:  rgba(48,144,232,0.12);
+  --green:  #28c880;
+  --green2: rgba(40,200,128,0.12);
+  --purple: #a060e8;
+  --purple2:rgba(160,96,232,0.12);
+  --mono:    'IBM Plex Mono', monospace;
+  --display: 'Syne', sans-serif;
+  --serif:   'Crimson Pro', serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.65;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* noise */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 9999; opacity: 0.5;
+}
+
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px 80px; }
+
+/* ═══ HEADER ═══ */
+.site-header {
+  background: var(--bg1);
+  border-bottom: 1px solid var(--border2);
+  padding: 40px 24px 32px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.site-header::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--red), var(--amber), var(--red));
+  background-size: 200% 100%;
+  animation: scan 3s linear infinite;
+}
+@keyframes scan { to { background-position: 200% 0; } }
+
+.header-inner { max-width: 1100px; margin: 0 auto; }
+
+.meta-row {
+  display: flex; gap: 8px; flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.tag {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 3px 9px; border: 1px solid;
+}
+.tag-red    { color: var(--red);    border-color: var(--red);    background: var(--red2); }
+.tag-amber  { color: var(--amber);  border-color: var(--amber);  background: var(--amber2); }
+.tag-blue   { color: var(--blue);   border-color: var(--blue);   background: var(--blue2); }
+.tag-gray   { color: var(--fg3);    border-color: var(--border);  background: transparent; }
+.tag-green  { color: var(--green);  border-color: var(--green);  background: var(--green2); }
+.tag-purple { color: var(--purple); border-color: var(--purple); background: var(--purple2); }
+
+h1 {
+  font-family: var(--display);
+  font-size: clamp(26px, 4.5vw, 52px);
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  line-height: 1.0;
+  margin-bottom: 16px;
+}
+h1 .hl { color: var(--red); }
+h1 .hl2 { color: var(--amber); }
+
+.hero-sub {
+  font-family: var(--serif);
+  font-size: 18px; font-weight: 300; font-style: italic;
+  color: var(--fg2); max-width: 720px; line-height: 1.65;
+  margin-bottom: 32px;
+}
+
+/* ═══ PLACAR PRINCIPAL ═══ */
+.placar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 0;
+  background: var(--border);
+  border: 1px solid var(--border2);
+  margin: 40px 0;
+}
+
+.placar-lado {
+  background: var(--bg1);
+  padding: 32px 28px;
+}
+.placar-lado.vermelho { border-left: 3px solid var(--red); }
+.placar-lado.ambar    { border-right: 3px solid var(--amber); }
+
+.placar-divider {
+  background: var(--bg2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+}
+.placar-vs {
+  font-family: var(--display);
+  font-size: 32px; font-weight: 900;
+  color: var(--fg3);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  letter-spacing: 0.05em;
+}
+
+.placar-label {
+  font-size: 10px; color: var(--fg3);
+  letter-spacing: 0.15em; text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.placar-titulo {
+  font-family: var(--display);
+  font-size: 18px; font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.15;
+}
+.placar-titulo.r { color: var(--red); }
+.placar-titulo.a { color: var(--amber); }
+
+.metrica {
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+.metrica:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.metrica-key {
+  font-size: 10px; color: var(--fg3);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.metrica-val {
+  font-family: var(--display);
+  font-size: 22px; font-weight: 800;
+  line-height: 1;
+}
+.metrica-val.r { color: var(--red); }
+.metrica-val.a { color: var(--amber); }
+.metrica-sub {
+  font-size: 11px; color: var(--fg2);
+  margin-top: 3px; line-height: 1.4;
+}
+
+/* ═══ TESE CENTRAL ═══ */
+.tese {
+  border: 1px solid var(--border2);
+  background: var(--bg2);
+  padding: 36px;
+  margin: 40px 0;
+  position: relative;
+}
+.tese::before {
+  content: '';
+  position: absolute; top: 0; left: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--red), var(--amber));
+}
+
+.tese-label {
+  font-size: 10px; color: var(--fg3);
+  letter-spacing: 0.15em; text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.tese-corpo {
+  font-family: var(--serif);
+  font-size: 20px; font-weight: 300; font-style: italic;
+  line-height: 1.75; color: var(--fg);
+}
+.tese-corpo strong {
+  font-style: normal; font-weight: 600; color: var(--red);
+}
+.tese-corpo em {
+  font-style: normal; color: var(--amber);
+}
+
+/* ═══ SEÇÕES ═══ */
+.section { margin: 48px 0; }
+
+.section-head {
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--fg3);
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+
+/* ═══ TABELA COMPARATIVA ═══ */
+.comp-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 8px;
+}
+.comp-table th {
+  font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--fg3); font-weight: 600;
+  padding: 10px 16px;
+  text-align: left;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+}
+.comp-table th:nth-child(2) { color: var(--red); }
+.comp-table th:nth-child(3) { color: var(--amber); }
+
+.comp-table td {
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  font-size: 12px;
+  vertical-align: top;
+  line-height: 1.55;
+}
+.comp-table tr:nth-child(even) td { background: var(--bg1); }
+.comp-table tr:nth-child(odd) td  { background: var(--bg); }
+
+.comp-table td:first-child {
+  color: var(--fg3); font-size: 11px;
+  letter-spacing: 0.06em; width: 22%;
+}
+.comp-table td:nth-child(2) { color: var(--fg); }
+.comp-table td:nth-child(3) { color: var(--fg2); }
+
+.val-fast { color: var(--red);   font-weight: 600; }
+.val-slow { color: var(--amber); font-weight: 600; }
+.val-zero { color: var(--green); font-weight: 700; font-size: 14px; }
+
+/* ═══ CARDS DE EVIDÊNCIA ═══ */
+.ev-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  margin-bottom: 8px;
+}
+.ev-card {
+  background: var(--bg2);
+  padding: 20px 22px;
+}
+.ev-num {
+  font-family: var(--display);
+  font-size: 36px; font-weight: 900;
+  line-height: 1; margin-bottom: 8px;
+}
+.ev-titulo {
+  font-size: 12px; font-weight: 600;
+  color: var(--fg2); margin-bottom: 8px;
+  line-height: 1.4;
+}
+.ev-corpo {
+  font-family: var(--serif);
+  font-size: 14px; font-weight: 300;
+  color: var(--fg2); line-height: 1.6;
+}
+
+/* ═══ LINHA DO TEMPO COMPARATIVA ═══ */
+.timeline-comp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  margin-bottom: 24px;
+}
+@media (max-width: 640px) {
+  .timeline-comp { grid-template-columns: 1fr; }
+  .placar { grid-template-columns: 1fr; }
+  .placar-divider { display: none; }
+  .placar-lado.ambar { border-right: none; border-left: 3px solid var(--amber); }
+  .crossref-grid { grid-template-columns: 1fr; }
+}
+
+.tl-col { background: var(--bg1); }
+
+.tl-header {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+}
+.tl-header.r { color: var(--red); border-left: 2px solid var(--red); }
+.tl-header.a { color: var(--amber); border-left: 2px solid var(--amber); }
+
+.tl-item {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 12px;
+}
+.tl-item:last-child { border-bottom: none; }
+
+.tl-data {
+  font-size: 10px; color: var(--fg3);
+  letter-spacing: 0.08em; padding-top: 2px;
+}
+.tl-texto {
+  font-size: 12px; color: var(--fg2);
+  line-height: 1.5;
+}
+.tl-texto strong { color: var(--fg); font-weight: 600; }
+
+/* ═══ DIAGRAMA P3 ═══ */
+.p3-diagram {
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  padding: 32px;
+  margin: 24px 0;
+}
+.p3-title {
+  font-family: var(--display);
+  font-size: 16px; font-weight: 800;
+  margin-bottom: 24px;
+  color: var(--fg);
+}
+
+.p3-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.p3-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.p3-cell {
+  padding: 14px 16px;
+  border: 1px solid;
+}
+.p3-cell.jan {
+  border-color: var(--red);
+  background: var(--red2);
+}
+.p3-cell.cov {
+  border-color: var(--amber);
+  background: var(--amber2);
+}
+
+.p3-cell-label {
+  font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--fg3); margin-bottom: 6px;
+}
+.p3-cell-val {
+  font-family: var(--display);
+  font-size: 15px; font-weight: 700;
+}
+.p3-cell-val.r { color: var(--red); }
+.p3-cell-val.a { color: var(--amber); }
+
+.p3-arrow {
+  font-size: 20px; color: var(--fg3);
+  text-align: center; white-space: nowrap;
+}
+.p3-dim {
+  font-size: 9px; color: var(--fg3);
+  letter-spacing: 0.12em; text-transform: uppercase;
+  text-align: center; line-height: 1.4;
+}
+
+/* ═══ CITAÇÕES ESTRUTURAIS ═══ */
+.citacao {
+  border-left: 3px solid var(--red);
+  padding: 20px 24px;
+  margin: 24px 0;
+  background: var(--red2);
+}
+.citacao-texto {
+  font-family: var(--serif);
+  font-size: 17px; font-weight: 300; font-style: italic;
+  line-height: 1.7; color: var(--fg);
+  margin-bottom: 10px;
+}
+.citacao-fonte {
+  font-size: 10px; color: var(--fg3);
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+
+/* ═══ CONCLUSÃO ═══ */
+.conclusao {
+  background: var(--bg1);
+  border: 1px solid var(--border2);
+  padding: 40px;
+  margin: 48px 0 0;
+  position: relative;
+}
+.conclusao::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--red), var(--amber), transparent);
+}
+.conclusao-titulo {
+  font-family: var(--display);
+  font-size: 22px; font-weight: 800;
+  margin-bottom: 20px;
+}
+.conclusao-corpo {
+  font-family: var(--serif);
+  font-size: 17px; font-weight: 300;
+  line-height: 1.85; color: var(--fg2);
+}
+.conclusao-corpo strong { color: var(--fg); font-weight: 600; }
+.conclusao-corpo .hl-r { color: var(--red); }
+.conclusao-corpo .hl-a { color: var(--amber); }
+
+/* ═══ CROSS-REFS ═══ */
+.crossref-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  margin-top: 40px;
+}
+.crossref-card {
+  background: var(--bg2);
+  padding: 16px 18px;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s;
+}
+.crossref-card:hover { background: var(--bg3); }
+.crossref-id {
+  font-size: 10px; color: var(--fg3);
+  letter-spacing: 0.1em; margin-bottom: 6px;
+}
+.crossref-titulo {
+  font-size: 12px; font-weight: 600;
+  color: var(--fg2); line-height: 1.4;
+}
+
+/* ═══ FOOTER ═══ */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 0 0;
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+footer .left { font-size: 11px; color: var(--fg3); line-height: 1.8; }
+footer .left a { color: var(--fg3); text-decoration: none; border-bottom: 1px solid var(--border); }
+footer .right { font-size: 10px; color: var(--fg3); text-align: right; letter-spacing: 0.06em; }
+</style>
+</head>
+<body>
+
+<div class="site-header">
+<div class="header-inner">
+  <div class="meta-row">
+    <span class="tag tag-red">ID 179</span>
+    <span class="tag tag-red">P3 · Seletividade Punitiva</span>
+    <span class="tag tag-amber">Análise Comparativa</span>
+    <span class="tag tag-gray">lawfare-timeline · mai/2026</span>
+  </div>
+
+  <h1>
+    <span class="hl">Assimetria</span><br>
+    <span class="hl2">Punitiva</span>
+  </h1>
+
+  <p class="hero-sub">
+    O mesmo sistema judicial. Os mesmos quatro anos. Velocidade máxima para quem ameaça o poder. Velocidade zero para quem desvia R$ 2,27 bilhões de recursos de saúde durante uma pandemia.
+  </p>
+
+  <div class="meta-row">
+    <span class="tag tag-blue">Jan/2023: ~1.500 condenados</span>
+    <span class="tag tag-amber">Covid 2020–2024: 0 mandantes condenados</span>
+    <span class="tag tag-green">R$ 2,27B investigados</span>
+  </div>
+</div>
+</div>
+
+<div class="wrap">
+
+<!-- ═══════════════════════════════════
+     PLACAR
+═══════════════════════════════════ -->
+<div class="placar">
+  <div class="placar-lado vermelho">
+    <div class="placar-label">Vetor A · Jan/2023</div>
+    <div class="placar-titulo r">8 de Janeiro de 2023</div>
+
+    <div class="metrica">
+      <div class="metrica-key">Atos</div>
+      <div class="metrica-val r">~1.500</div>
+      <div class="metrica-sub">Manifestantes processados e condenados</div>
+    </div>
+    <div class="metrica">
+      <div class="metrica-key">Velocidade de processamento</div>
+      <div class="metrica-val r">&lt; 2 anos</div>
+      <div class="metrica-sub">Do ato à condenação definitiva</div>
+    </div>
+    <div class="metrica">
+      <div class="metrica-key">Penas aplicadas</div>
+      <div class="metrica-val r">até 17 anos</div>
+      <div class="metrica-sub">Reclusão em regime fechado</div>
+    </div>
+    <div class="metrica">
+      <div class="metrica-key">Perfil dos condenados</div>
+      <div class="metrica-sub">Manifestantes sem poder institucional; danos a patrimônio público</div>
+    </div>
+    <div class="metrica">
+      <div class="metrica-key">Prejuízo documentado</div>
+      <div class="metrica-val r">~R$ 40M</div>
+      <div class="metrica-sub">Danos ao patrimônio público (estimativa)</div>
+    </div>
+  </div>
+
+  <div class="placar-divider">
+    <div class="placar-vs">VS</div>
+  </div>
+
+  <div class="placar-lado ambar">
+    <div class="placar-label">Vetor B · Pandemia 2020–2024</div>
+    <div class="placar-titulo a">Desvios Covid-19</div>
+
+    <div class="metrica">
+      <div class="metrica-key">Operações PF deflagradas</div>
+      <div class="metrica-val a">77</div>
+      <div class="metrica-sub">Em 20 unidades federativas (abr/20–abr/21)</div>
+    </div>
+    <div class="metrica">
+      <div class="metrica-key">Mandantes condenados definitivamente</div>
+      <div class="metrica-val" style="color:var(--green); font-size:32px; font-family:var(--display)">0</div>
+      <div class="metrica-sub">Em 4+ anos de investigações</div>
+    </div>
+    <div class="metrica">
+      <div class="metrica-key">Volume investigado</div>
+      <div class="metrica-val a">R$ 2,27B</div>
+      <div class="metrica-sub">Recursos emergenciais de saúde desviados</div>
+    </div>
+    <div class="metrica">
+      <div class="metrica-key">Perfil dos investigados</div>
+      <div class="metrica-sub">Governadores, secretários, parlamentares federais com foro privilegiado</div>
+    </div>
+    <div class="metrica">
+      <div class="metrica-key">Desfecho dos mandantes</div>
+      <div class="metrica-val a">Ministros</div>
+      <div class="metrica-sub">Vários nomeados para cargos no governo federal em 2023</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     TESE
+═══════════════════════════════════ -->
+<div class="tese">
+  <div class="tese-label">Formulação Estrutural · P3 Invertido</div>
+  <div class="tese-corpo">
+    O sistema capturado demonstra sua natureza com precisão clínica neste contraste:
+    <strong>velocidade máxima para punição dos que ameaçam o controle narrativo e do poder;</strong>
+    <em>velocidade mínima para os que desviam recursos dentro da estrutura.</em>
+    <br><br>
+    Os que desviam são <strong>funcionais ao sistema.</strong>
+    Os que protestam são <strong>ameaça ao sistema.</strong>
+    <br><br>
+    Esta não é uma falha. É o sistema operando conforme seu design.
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     TABELA COMPARATIVA
+═══════════════════════════════════ -->
+<div class="section">
+  <div class="section-head">Matriz Comparativa — Dimensão por Dimensão</div>
+
+  <div style="overflow-x:auto">
+  <table class="comp-table">
+    <thead>
+      <tr>
+        <th>Dimensão</th>
+        <th>Jan/2023 — Manifestantes</th>
+        <th>Covid 2020–2024 — Mandantes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Volume financeiro</td>
+        <td>~R$ 40M em danos ao patrimônio</td>
+        <td class="val-slow">R$ 2,27 bilhões investigados</td>
+      </tr>
+      <tr>
+        <td>Velocidade processo</td>
+        <td class="val-fast">Condenações em &lt; 2 anos</td>
+        <td>Zero condenações em 4+ anos</td>
+      </tr>
+      <tr>
+        <td>Resultado</td>
+        <td class="val-fast">~1.500 condenados · penas até 17 anos</td>
+        <td class="val-zero">0 mandantes condenados definitivamente</td>
+      </tr>
+      <tr>
+        <td>Foro</td>
+        <td>STF — processamento direto e célere</td>
+        <td>STJ — proteção por foro privilegiado; processos morosos</td>
+      </tr>
+      <tr>
+        <td>STF como ator</td>
+        <td>Condutor das condenações</td>
+        <td>Bloqueou CPI que investigaria os mandantes (jun/2021)</td>
+      </tr>
+      <tr>
+        <td>Prisões efetivadas</td>
+        <td>Centenas de preventivas; cumprimento imediato</td>
+        <td>152 temporárias no período (maioria solta); 0 preventivas de mandante</td>
+      </tr>
+      <tr>
+        <td>Perfil do processado</td>
+        <td>Manifestantes sem poder institucional</td>
+        <td>Governadores, vice-governadores, secretários, senadores</td>
+      </tr>
+      <tr>
+        <td>Desfecho dos investigados</td>
+        <td>Condenação, reclusão, perda de direitos políticos</td>
+        <td>Reeleição, senado, ministério de Estado</td>
+      </tr>
+      <tr>
+        <td>Vítima imediata</td>
+        <td>Patrimônio público (prédios, mobiliário)</td>
+        <td>Vidas humanas — mortes por falta de oxigênio (AM, jan/2021) em contexto de contratos superfaturados</td>
+      </tr>
+      <tr>
+        <td>Cobertura midiática</td>
+        <td>Cobertura exaustiva, diária, por anos</td>
+        <td>Episódica; diluída entre 20 estados e 77 operações</td>
+      </tr>
+      <tr>
+        <td>Padrão sistêmico</td>
+        <td colspan="2" style="text-align:center; color:var(--red); font-weight:600">P3 — Seletividade Punitiva (inversão simétrica documentada)</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     LINHA DO TEMPO COMPARATIVA
+═══════════════════════════════════ -->
+<div class="section">
+  <div class="section-head">Linhas do Tempo Paralelas — O Sistema em Velocidades Distintas</div>
+
+  <div class="timeline-comp">
+    <div class="tl-col">
+      <div class="tl-header r">Jan/2023 — Velocidade Máxima</div>
+
+      <div class="tl-item">
+        <div class="tl-data">08/01/2023</div>
+        <div class="tl-texto"><strong>Atos ocorrem.</strong> Invasão de prédios públicos em Brasília.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-data">09/01/2023</div>
+        <div class="tl-texto"><strong>Primeiras prisões.</strong> Centenas detidas ainda no dia seguinte.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-data">Jan/2023</div>
+        <div class="tl-texto"><strong>Ibaneis Rocha afastado</strong> da governadoria do DF em menos de 48h por decisão monocrática de Moraes.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-data">2023–2024</div>
+        <div class="tl-texto"><strong>Condenações em série.</strong> STF processa ~1.500 réus. Penas de até 17 anos. Perda de direitos políticos.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-data">&lt; 2 anos</div>
+        <div class="tl-texto"><strong>Trânsito em julgado</strong> de centenas de condenações. Processo concluído.</div>
+      </div>
+    </div>
+
+    <div class="tl-col">
+      <div class="tl-header a">Pandemia — Velocidade Mínima</div>
+
+      <div class="tl-item">
+        <div class="tl-data">Mar/2020</div>
+        <div class="tl-texto"><strong>Contratos fraudulentos</strong> assinados (Veigamed, Hempcare). Pagamentos antecipados integrais sem garantias.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-data">Abr/2020</div>
+        <div class="tl-texto"><strong>TCE-SC já aponta</strong> empresa-fantasma. PF abre investigações. Equipamentos não entregues.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-data">Jun/2021</div>
+        <div class="tl-texto"><strong>STF bloqueia</strong> convocação de 9 governadores pela CPI da Pandemia. Investigação parlamentar encerrada.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-data">2022</div>
+        <div class="tl-texto"><strong>Governadores investigados</strong> disputam eleições. A maioria é reeleita ou muda para o legislativo.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-data">2023</div>
+        <div class="tl-texto"><strong>Mandantes nomeados ministros:</strong> Rui Costa (Casa Civil), Waldez Góes (Integração), Wellington Dias (Des. Social), Flávio Dino (STF).</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-data">2024</div>
+        <div class="tl-texto"><strong>Op. Cianose Fase II:</strong> 34 mandados. 4 anos depois, investigação ainda tentando recuperar valores. Zero condenações de mandante.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     DIAGRAMA P3
+═══════════════════════════════════ -->
+<div class="section">
+  <div class="section-head">Anatomia do P3 — Seletividade Punitiva em Inversão Simétrica</div>
+
+  <div class="p3-diagram">
+    <div class="p3-title">Por que o sistema processa em velocidades distintas?</div>
+
+    <div class="p3-row">
+      <div class="p3-cell jan">
+        <div class="p3-cell-label">Jan/2023</div>
+        <div class="p3-cell-val r">Ameaça ao controle</div>
+      </div>
+      <div>
+        <div class="p3-arrow">→</div>
+        <div class="p3-dim">Variável<br>determinante</div>
+      </div>
+      <div class="p3-cell cov">
+        <div class="p3-cell-label">Covid</div>
+        <div class="p3-cell-val a">Funcional ao sistema</div>
+      </div>
+    </div>
+
+    <div class="p3-row">
+      <div class="p3-cell jan">
+        <div class="p3-cell-label">Jan/2023 · Mecanismo</div>
+        <div class="p3-cell-val r">Narrativa de ruptura democrática → legitimidade máxima para punição acelerada</div>
+      </div>
+      <div>
+        <div class="p3-arrow">⟷</div>
+        <div class="p3-dim">Mecanismo</div>
+      </div>
+      <div class="p3-cell cov">
+        <div class="p3-cell-label">Covid · Mecanismo</div>
+        <div class="p3-cell-val a">Foro privilegiado + STF bloqueando CPI + diluição entre 20 UFs = impunidade estrutural</div>
+      </div>
+    </div>
+
+    <div class="p3-row">
+      <div class="p3-cell jan">
+        <div class="p3-cell-label">Jan/2023 · Resultado</div>
+        <div class="p3-cell-val r">~1.500 condenados · penas até 17 anos · velocidade recorde</div>
+      </div>
+      <div>
+        <div class="p3-arrow">→</div>
+        <div class="p3-dim">Resultado</div>
+      </div>
+      <div class="p3-cell cov">
+        <div class="p3-cell-label">Covid · Resultado</div>
+        <div class="p3-cell-val a">0 mandantes condenados · investigados nomeados ministros</div>
+      </div>
+    </div>
+
+    <div class="p3-row">
+      <div class="p3-cell jan" style="grid-column: 1 / -1; border-left: 3px solid var(--red)">
+        <div class="p3-cell-label">Conclusão estrutural</div>
+        <div style="font-family: var(--serif); font-size: 16px; font-weight: 300; font-style: italic; color: var(--fg); line-height: 1.7; margin-top: 8px;">
+          O P3 não é uma distorção do sistema — é sua <strong style="font-style:normal; color:var(--red)">função primária</strong>. Um sistema de extração precisa punir quem o ameaça e proteger quem o alimenta. A seletividade punitiva não é um bug; é a feature que garante a sobrevivência do sistema capturado.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     EVIDÊNCIAS CHAVE
+═══════════════════════════════════ -->
+<div class="section">
+  <div class="section-head">Evidências que Fecham o Argumento</div>
+
+  <div class="ev-grid">
+    <div class="ev-card">
+      <div class="ev-num" style="color:var(--red)">77</div>
+      <div class="ev-titulo">Operações PF em desvios pandêmicos (abr/2020–abr/2021)</div>
+      <div class="ev-corpo">Em 20 estados. Média de 6 operações por mês. Contratos investigados: R$ 100M+. 12 prisões preventivas, 140 temporárias. Nenhum governador preso preventivamente.</div>
+    </div>
+    <div class="ev-card">
+      <div class="ev-num" style="color:var(--amber)">4</div>
+      <div class="ev-titulo">Ex-governadores investigados nomeados para o governo federal em 2023</div>
+      <div class="ev-corpo">Rui Costa (BA → Casa Civil), Waldez Góes (AP → Integração Nacional), Wellington Dias (PI → Desenvolvimento Social), Flávio Dino (MA → Min. Justiça → STF). O sistema reabsorveu os investigados como operadores de Estado.</div>
+    </div>
+    <div class="ev-card">
+      <div class="ev-num" style="color:var(--green)">0</div>
+      <div class="ev-titulo">Mandantes condenados definitivamente por desvios pandêmicos até 2024</div>
+      <div class="ev-corpo">Em contraste com as centenas de condenações definitivas do Jan/2023 processadas no mesmo período pelo mesmo STF que bloqueou a CPI que investigaria os mandantes pandêmicos.</div>
+    </div>
+    <div class="ev-card">
+      <div class="ev-num" style="color:var(--purple)">9</div>
+      <div class="ev-titulo">Governadores bloqueados pelo STF antes de depor na CPI da Pandemia</div>
+      <div class="ev-corpo">Os mesmos governadores impetraram ADPF coletiva no STF. A maioria do Supremo concedeu liminar em jun/2021, impedindo que o Senado investigasse os mandantes estaduais. O STF que acelerou Jan/2023 freou a CPI da Pandemia.</div>
+    </div>
+    <div class="ev-card">
+      <div class="ev-num" style="color:var(--blue)">R$ 2,27B</div>
+      <div class="ev-titulo">Volume investigado em desvios Covid — 57× o dano estimado do Jan/2023</div>
+      <div class="ev-corpo">O volume financeiro investigado nos desvios pandêmicos é aproximadamente 57 vezes maior do que os danos ao patrimônio público estimados nos atos de 8 de janeiro. A equação punitiva está inversamente proporcional ao dano financeiro.</div>
+    </div>
+    <div class="ev-card">
+      <div class="ev-num" style="color:var(--amber)">Jan/21</div>
+      <div class="ev-titulo">Mortes por falta de oxigênio no AM enquanto contratos eram superfaturados</div>
+      <div class="ev-corpo">Em janeiro de 2021, Manaus registrou mortes documentadas por falta de oxigênio hospitalar. O estado vivia o 2º colapso do sistema de saúde. No mesmo período, a Operação Sangria investigava superfaturamento nos contratos de insumos de saúde no estado.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     CITAÇÃO ESTRUTURAL
+═══════════════════════════════════ -->
+<div class="citacao">
+  <div class="citacao-texto">
+    "A maioria do STF impede convocação de governadores pela CPI da Pandemia, sob argumento de que a convocação de chefes estaduais do Poder Executivo pelo Senado Federal excedeu os limites constitucionais inerentes à atividade investigatória do Poder Legislativo."
+  </div>
+  <div class="citacao-fonte">Agência Brasil · 24/jun/2021 · O mesmo STF que, 18 meses depois, conduziria com velocidade recorde o processamento de Jan/2023</div>
+</div>
+
+<!-- ═══════════════════════════════════
+     CONCLUSÃO
+═══════════════════════════════════ -->
+<div class="conclusao">
+  <div class="conclusao-titulo">O Sistema que se Revela a Si Mesmo</div>
+  <div class="conclusao-corpo">
+    A assimetria pandêmica não é o produto de um sistema <em>imperfeito</em>. É o produto de um sistema que <strong>funciona exatamente como projetado.</strong>
+    <br><br>
+    Um sistema de extração tem dois imperativos estruturais: <strong class="hl-r">punir quem ameaça o controle</strong> e <strong class="hl-a">proteger quem alimenta o fluxo.</strong> O P3 (Seletividade Punitiva) é o mecanismo que executa ambos simultaneamente — com o mesmo aparato institucional, operando em velocidades opostas conforme o perfil do alvo.
+    <br><br>
+    O contraste Jan/2023 × Pandemia expõe o design com uma clareza que nenhum documento isolado conseguiria: <strong>o STF que bloqueou a investigação dos mandantes pandêmicos em junho de 2021 foi o mesmo que condenou ~1.500 manifestantes com velocidade recorde a partir de janeiro de 2023.</strong> Não é contradição. É consistência — com a lógica do sistema capturado.
+    <br><br>
+    A pergunta correta não é "por que o sistema falhou com os desvios pandêmicos?". A pergunta correta é: <strong class="hl-r">quem se beneficia quando o sistema processa em velocidades tão distintas?</strong> A resposta está no desfecho: os mandantes pandêmicos tornaram-se ministros. Os manifestantes tornaram-se presos. O sistema funcionou.
+    <br><br>
+    <strong>Entrada para o corpus:</strong> ID 179 · P3 Invertido · Assimetria Punitiva Pandêmica · Evidência primária de seletividade sistêmica documentada. Cross-ref: IDs 149, 172–178.
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     CROSS-REFS
+═══════════════════════════════════ -->
+<div class="section-head" style="margin-top:48px">Entradas Relacionadas no Corpus</div>
+<div class="crossref-grid">
+  <a class="crossref-card" href="pandemia-capturada.html">
+    <div class="crossref-id">ID 172 · P3+P7+P1</div>
+    <div class="crossref-titulo">Pandemia Capturada — Diagnóstico Transversal</div>
+  </a>
+  <a class="crossref-card" href="pandemia-capturada.html">
+    <div class="crossref-id">ID 173 · P3+P7+P1</div>
+    <div class="crossref-titulo">Veigamed/SC — Empresa-Fantasma</div>
+  </a>
+  <a class="crossref-card" href="pandemia-capturada.html">
+    <div class="crossref-id">ID 174 · P3+P7+P1</div>
+    <div class="crossref-titulo">Consórcio NE × Hempcare — R$ 48,7M</div>
+  </a>
+  <a class="crossref-card" href="pandemia-capturada.html">
+    <div class="crossref-id">ID 175 · P3+P7</div>
+    <div class="crossref-titulo">Operação Sangria — Amazonas</div>
+  </a>
+  <a class="crossref-card" href="pandemia-capturada.html">
+    <div class="crossref-id">ID 177 · P1+P3</div>
+    <div class="crossref-titulo">STF Bloqueia CPI da Pandemia</div>
+  </a>
+  <a class="crossref-card" href="padroes-sistemicos-dashboard.html">
+    <div class="crossref-id">ID 149 · P3</div>
+    <div class="crossref-titulo">STF como Terminal Chokepoint</div>
+  </a>
+</div>
+
+<footer>
+  <div class="left">
+    <a href="https://gosurf.site">gosurf.site</a> · lawfare-timeline · ID 179<br>
+    Fontes: STF, PF, CGU, CPI da Pandemia/Senado, Agência Brasil, Metrópoles<br>
+    CC0 1.0 · Domínio Público · Reprodução livre
+  </div>
+  <div class="right">
+    Produzido: mai/2026<br>
+    Padrão: P3 · Seletividade Punitiva<br>
+    Tipo: Análise Comparativa
+  </div>
+</footer>
+
+</div><!-- /wrap -->
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

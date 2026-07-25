@@ -55,7 +55,7 @@ Interessante contraponto aos capítulos Goiás e Amazonas: enquanto Caiado e Wil
 
 Entradas conectadas nesta série:
 
-- [Entrada 1687](/timeline/entries/1687)
+- [Entrada 1687](/posts/id1687-zema-lancado-pre-candidato-a-presidencia-em-evento-do-partido-novo-com-aval-de-b/)
 
 ---
 

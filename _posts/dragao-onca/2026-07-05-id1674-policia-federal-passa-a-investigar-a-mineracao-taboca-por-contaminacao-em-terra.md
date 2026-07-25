@@ -50,8 +50,8 @@ Este é o caso mais grave documentado até agora na série em termos de escalada
 
 Entradas conectadas nesta série:
 
-- [Entrada 1672](/timeline/entries/1672)
-- [Entrada 1673](/timeline/entries/1673)
+- [Entrada 1672](/posts/id1672-taboca-firma-termo-de-cooperacao-no-012026-com-r123-milhoes-a-acwa-dois-dias-apo/)
+- [Entrada 1673](/posts/id1673-waimiri-atroari-enviam-novo-oficio-ao-mpf-am-com-suspeitas-adicionais-de-contami/)
 
 ---
 

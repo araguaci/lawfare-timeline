@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Operação Sem Desconto · INSS | lawfare-timeline</title>
+<meta name="description" content="Operação Sem Desconto (PF/CGU): fraude previdenciária sistêmica no INSS — Rede Arpar, 9+ milhões de beneficiários afetados, R$ 39 bilhões movimentados, padrões P7×P9 no corpus anticorrupção.">
+<link rel="canonical" href="https://gosurf.site/operacao-sem-desconto">
+
+<!-- Open Graph / Sharecard (imagem na raiz do site, ex.: og-operacao-sem-desconto.png) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gosurf.site/operacao-sem-desconto">
+<meta property="og:title" content="Operação Sem Desconto — Fraude INSS">
+<meta property="og:description" content="Operação Sem Desconto (PF/CGU): fraude previdenciária sistêmica no INSS — Rede Arpar, 9+ milhões de beneficiários afetados, R$ 39 bilhões movimentados, padrões P7×P9 no corpus anticorrupção.">
+<meta property="og:image" content="https://gosurf.site/og-operacao-sem-desconto.png">
+<meta property="og:site_name" content="gosurf.site">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Operação Sem Desconto — Fraude INSS">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://gosurf.site/operacao-sem-desconto">
+<meta name="twitter:title" content="Operação Sem Desconto — Fraude INSS">
+<meta name="twitter:description" content="Operação Sem Desconto (PF/CGU): fraude previdenciária sistêmica no INSS — Rede Arpar, 9+ milhões de beneficiários afetados, R$ 39 bilhões movimentados, padrões P7×P9 no corpus anticorrupção.">
+<meta name="twitter:image" content="https://gosurf.site/og-operacao-sem-desconto.png">
+<meta name="twitter:image:alt" content="Operação Sem Desconto — Fraude INSS">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg0: #040508;
+  --bg1: #08090f;
+  --bg2: #0d0e18;
+  --bg3: #111220;
+  --bg4: #171828;
+  --border: #1c1d2e;
+  --border-hi: #272840;
+
+  --text0: #eeeef8;
+  --text1: #c0c0d8;
+  --text2: #808098;
+  --text3: #484860;
+
+  --amber:  #ffaa00;
+  --amber-d:#7a4f00;
+  --red:    #ff3535;
+  --red-d:  #7a1010;
+  --orange: #ff6820;
+  --green:  #00e676;
+  --cyan:   #00d4ff;
+  --blue:   #4a9eff;
+  --purple: #b06aff;
+  --pink:   #ff4da6;
+
+  /* semantic severity */
+  --sev-critical: #ff3535;
+  --sev-high:     #ff6820;
+  --sev-medium:   #ffaa00;
+  --sev-low:      #4a9eff;
+  --sev-pattern:  #b06aff;
+
+  --font-d: 'Syne', sans-serif;
+  --font-m: 'IBM Plex Mono', monospace;
+  --font-b: 'IBM Plex Sans', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg0);
+  color: var(--text1);
+  font-family: var(--font-b);
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* SCANLINES */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.04) 2px, rgba(0,0,0,.04) 4px);
+  pointer-events: none; z-index: 999;
+}
+
+/* ── HEADER ── */
+.hdr {
+  position: relative; z-index: 100;
+  background: var(--bg0);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 24px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.hdr-brand { font-family: var(--font-m); font-size: 12px; color: var(--text3); letter-spacing: .08em; text-transform: uppercase; }
+.hdr-brand span { color: var(--amber); }
+.hdr-right { display: flex; align-items: center; gap: 16px; }
+.hdr-status {
+  font-family: var(--font-m); font-size: 12px; color: var(--text3);
+  display: flex; align-items: center; gap: 6px; letter-spacing: .06em;
+}
+.dot-live { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: blink 2s ease-in-out infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.2} }
+.hdr-ids { font-family: var(--font-m); font-size: 12px; color: var(--text3); letter-spacing: .04em; }
+
+/* ── HERO ── */
+.hero {
+  max-width: 1100px; margin: 0 auto;
+  padding: 52px 24px 40px;
+}
+.hero-eyebrow {
+  font-family: var(--font-m); font-size: 12px; color: var(--amber);
+  letter-spacing: .14em; text-transform: uppercase;
+  display: flex; align-items: center; gap: 12px; margin-bottom: 22px;
+}
+.hero-eyebrow::before { content: ''; display: block; width: 28px; height: 1px; background: var(--amber); }
+.hero-h1 {
+  font-family: var(--font-d); font-size: clamp(30px, 5.5vw, 58px);
+  font-weight: 800; color: var(--text0); line-height: 1.05;
+  letter-spacing: -.025em; margin-bottom: 10px;
+}
+.hero-h1 .a1 { color: var(--amber); }
+.hero-h1 .a2 { color: var(--red); }
+.hero-sub {
+  font-family: var(--font-m); font-size: 11px; color: var(--text3);
+  letter-spacing: .05em; margin-bottom: 24px;
+}
+.hero-lead {
+  max-width: 700px; font-size: 15px; color: var(--text1); line-height: 1.7;
+  border-left: 2px solid var(--amber); padding-left: 20px; margin-bottom: 36px;
+}
+
+/* ── METRICS GRID ── */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 2px; margin-bottom: 52px;
+}
+.metric {
+  background: var(--bg2); border: 1px solid var(--border);
+  padding: 16px 18px;
+}
+.metric-val {
+  font-family: var(--font-m); font-size: 20px; font-weight: 500;
+  line-height: 1; margin-bottom: 5px; letter-spacing: -.02em;
+}
+.metric-val.cr { color: var(--sev-critical); }
+.metric-val.hi { color: var(--sev-high); }
+.metric-val.me { color: var(--sev-medium); }
+.metric-val.lo { color: var(--sev-low); }
+.metric-val.pa { color: var(--sev-pattern); }
+.metric-lbl { font-family: var(--font-m); font-size: 9px; color: var(--text3); letter-spacing: .1em; text-transform: uppercase; }
+
+/* ── LAYOUT ── */
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.section { margin-bottom: 56px; }
+.sec-hdr {
+  display: flex; align-items: center; gap: 14px;
+  padding-bottom: 14px; border-bottom: 1px solid var(--border);
+  margin-bottom: 28px;
+}
+.sec-n { font-family: var(--font-m); font-size: 12px; color: var(--text3); letter-spacing: .08em; }
+.sec-t { font-family: var(--font-d); font-size: 17px; font-weight: 700; color: var(--text0); letter-spacing: -.01em; }
+.sec-line { flex: 1; height: 1px; background: var(--border); }
+
+/* ── TABS ── */
+.tabs {
+  display: flex; gap: 2px; border-bottom: 1px solid var(--border); margin-bottom: 32px; flex-wrap: wrap;
+  position: sticky; top: 0; z-index: 101; background: var(--bg0); padding-top: 10px;
+}
+.tab {
+  font-family: var(--font-m); font-size: 12px; letter-spacing: .08em; text-transform: uppercase;
+  padding: 10px 16px; background: none; border: none; border-bottom: 2px solid transparent;
+  color: var(--text3); cursor: pointer; transition: color .2s; margin-bottom: -1px;
+}
+.tab:hover { color: var(--text1); }
+.tab.on { color: var(--amber); border-bottom-color: var(--amber); }
+.panel { display: block; scroll-margin-top: 80px; }
+
+/* ── GO TOP ── */
+.gotop {
+  position: fixed; bottom: 24px; right: 24px; width: 40px; height: 40px;
+  background: var(--bg2); border: 1px solid var(--border); color: var(--amber);
+  border-radius: 4px; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; z-index: 1000; opacity: 0; pointer-events: none;
+  transition: opacity 0.3s, background 0.2s, border-color 0.2s;
+}
+.gotop.show { opacity: 1; pointer-events: auto; }
+.gotop:hover { background: var(--bg3); border-color: var(--amber); color: var(--text0); }
+
+/* ── RELATED ARTIFACTS ── */
+.related-wrap {
+  padding: 56px 24px; background: linear-gradient(to bottom, var(--bg0), var(--bg1));
+  border-top: 1px solid var(--border); margin-top: 40px;
+}
+.related-title {
+  font-family: var(--font-m); font-size: 11px; letter-spacing: .12em; color: var(--text3);
+  text-transform: uppercase; margin-bottom: 24px; display: flex; align-items: center; gap: 12px;
+  max-width: 1100px; margin-left: auto; margin-right: auto;
+}
+.related-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+.related-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px;
+  max-width: 1100px; margin: 0 auto;
+}
+.related-card {
+  background: var(--bg2); border: 1px solid var(--border); padding: 20px;
+  text-decoration: none; transition: all 0.2s; display: flex; flex-direction: column;
+  justify-content: space-between; border-radius: 2px;
+}
+.related-card:hover { border-color: var(--amber); background: var(--bg3); transform: translateY(-2px); }
+.related-card-cat {
+  font-family: var(--font-m); font-size: 9px; color: var(--amber); letter-spacing: .1em;
+  text-transform: uppercase; margin-bottom: 8px;
+}
+.related-card-title {
+  font-family: var(--font-d); font-size: 15px; font-weight: 700; color: var(--text0); line-height: 1.4;
+}
+.related-card-arrow {
+  margin-top: 16px; font-family: var(--font-m); font-size: 9px; color: var(--text2);
+  text-align: right; letter-spacing: .08em;
+}
+
+/* ── NUCLEOS ── */
+.nucleos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2px; margin-bottom: 28px;
+}
+.nucleo {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-top: 3px solid;
+  padding: 18px;
+}
+.nucleo.n-tecnico   { border-top-color: var(--cyan); }
+.nucleo.n-admin     { border-top-color: var(--blue); }
+.nucleo.n-financeiro{ border-top-color: var(--amber); }
+.nucleo.n-servidores{ border-top-color: var(--orange); }
+.nucleo.n-politico  { border-top-color: var(--red); }
+.nucleo-lbl {
+  font-family: var(--font-m); font-size: 9px; letter-spacing: .1em;
+  text-transform: uppercase; margin-bottom: 8px;
+}
+.n-tecnico   .nucleo-lbl { color: var(--cyan); }
+.n-admin     .nucleo-lbl { color: var(--blue); }
+.n-financeiro.nucleo-lbl, .n-financeiro .nucleo-lbl { color: var(--amber); }
+.n-servidores .nucleo-lbl { color: var(--orange); }
+.n-politico  .nucleo-lbl { color: var(--red); }
+.nucleo-title { font-family: var(--font-d); font-size: 13px; font-weight: 700; color: var(--text0); margin-bottom: 8px; }
+.nucleo-desc { font-size: 12px; color: var(--text2); line-height: 1.55; }
+
+/* ── ATORES ── */
+.atores { display: flex; flex-direction: column; gap: 2px; margin-bottom: 28px; }
+.ator {
+  background: var(--bg2); border: 1px solid var(--border);
+  padding: 14px 18px; display: grid;
+  grid-template-columns: 200px 1fr auto;
+  gap: 16px; align-items: start;
+}
+.ator-name { font-family: var(--font-d); font-size: 13px; font-weight: 700; color: var(--text0); }
+.ator-papel { font-size: 12px; color: var(--text1); line-height: 1.5; margin-top: 4px; }
+.ator-role { font-family: var(--font-m); font-size: 9px; color: var(--text3); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 4px; }
+.badge {
+  font-family: var(--font-m); font-size: 9px; letter-spacing: .08em; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 2px; white-space: nowrap; align-self: start;
+}
+.b-preso   { background: rgba(255,53,53,.1); border: 1px solid rgba(255,53,53,.3); color: var(--red); }
+.b-invest  { background: rgba(255,170,0,.1); border: 1px solid rgba(255,170,0,.3); color: var(--amber); }
+.b-delatou { background: rgba(0,230,118,.1); border: 1px solid rgba(0,230,118,.3); color: var(--green); }
+.b-negado  { background: rgba(74,158,255,.1); border: 1px solid rgba(74,158,255,.3); color: var(--blue); }
+
+/* ── ESCALONAMENTO ── */
+.escala-bar { margin-bottom: 28px; }
+.escala-row {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 0; border-bottom: 1px solid var(--border);
+}
+.escala-year { font-family: var(--font-m); font-size: 11px; color: var(--text3); width: 42px; flex-shrink: 0; }
+.escala-fill-wrap { flex: 1; background: var(--bg3); height: 24px; border-radius: 1px; overflow: hidden; }
+.escala-fill {
+  height: 100%; border-radius: 1px;
+  display: flex; align-items: center; padding-left: 10px;
+  font-family: var(--font-m); font-size: 12px; font-weight: 500;
+  transition: width .6s ease; white-space: nowrap;
+}
+.escala-mult { font-family: var(--font-m); font-size: 12px; color: var(--text3); width: 60px; text-align: right; flex-shrink: 0; }
+
+/* ── CRONOLOGIA ── */
+.crono { padding-left: 36px; position: relative; }
+.crono::before {
+  content: ''; position: absolute; left: 10px; top: 6px; bottom: 6px;
+  width: 1px;
+  background: linear-gradient(180deg, var(--amber), var(--red), var(--purple));
+}
+.crono-item { position: relative; padding: 14px 0 14px 16px; border-bottom: 1px solid var(--border); }
+.crono-item:last-child { border-bottom: none; }
+.crono-dot {
+  position: absolute; left: -30px; top: 20px;
+  width: 9px; height: 9px; border-radius: 50%; border: 2px solid;
+}
+.crono-item.ev-pf   .crono-dot { border-color: var(--amber); background: rgba(255,170,0,.25); }
+.crono-item.ev-stf  .crono-dot { border-color: var(--blue); background: rgba(74,158,255,.25); }
+.crono-item.ev-cpmi .crono-dot { border-color: var(--purple); background: rgba(176,106,255,.25); }
+.crono-item.ev-fail .crono-dot { border-color: var(--red); background: rgba(255,53,53,.25); }
+.crono-item.ev-pol  .crono-dot { border-color: var(--orange); background: rgba(255,104,32,.25); }
+.crono-date { font-family: var(--font-m); font-size: 12px; color: var(--text3); letter-spacing: .05em; margin-bottom: 3px; }
+.crono-title { font-family: var(--font-d); font-size: 13px; font-weight: 700; color: var(--text0); margin-bottom: 4px; }
+.crono-body { font-size: 12px; color: var(--text2); line-height: 1.55; }
+.crono-tag {
+  display: inline-block; font-family: var(--font-m); font-size: 9px; letter-spacing: .08em;
+  text-transform: uppercase; padding: 2px 7px; border-radius: 2px; margin-top: 6px;
+}
+.ct-pf   { background: rgba(255,170,0,.08); border: 1px solid rgba(255,170,0,.2); color: var(--amber); }
+.ct-stf  { background: rgba(74,158,255,.08); border: 1px solid rgba(74,158,255,.2); color: var(--blue); }
+.ct-cpmi { background: rgba(176,106,255,.08); border: 1px solid rgba(176,106,255,.2); color: var(--purple); }
+.ct-fail { background: rgba(255,53,53,.08); border: 1px solid rgba(255,53,53,.2); color: var(--red); }
+.ct-pol  { background: rgba(255,104,32,.08); border: 1px solid rgba(255,104,32,.2); color: var(--orange); }
+
+/* ── PADRÕES CHIPS ── */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+.chip {
+  font-family: var(--font-m); font-size: 12px; letter-spacing: .06em;
+  padding: 5px 12px; border-radius: 2px; cursor: default;
+}
+.chip-p7 { background: rgba(255,170,0,.08); border: 1px solid rgba(255,170,0,.25); color: var(--amber); }
+.chip-p9 { background: rgba(176,106,255,.08); border: 1px solid rgba(176,106,255,.25); color: var(--purple); }
+.chip-p3 { background: rgba(74,158,255,.08); border: 1px solid rgba(74,158,255,.2); color: var(--blue); }
+.chip-p1 { background: rgba(0,212,255,.08); border: 1px solid rgba(0,212,255,.2); color: var(--cyan); }
+.chip-p2 { background: rgba(0,230,118,.08); border: 1px solid rgba(0,230,118,.2); color: var(--green); }
+
+/* ── BLOCOS ANALÍTICOS ── */
+.analysis-block {
+  background: var(--bg2); border: 1px solid var(--border);
+  padding: 26px; margin-bottom: 16px; position: relative;
+}
+.analysis-block.sev-critical { border-left: 3px solid var(--sev-critical); }
+.analysis-block.sev-high     { border-left: 3px solid var(--sev-high); }
+.analysis-block.sev-medium   { border-left: 3px solid var(--sev-medium); }
+.analysis-block.sev-pattern  { border-left: 3px solid var(--sev-pattern); }
+.ab-tag {
+  font-family: var(--font-m); font-size: 9px; letter-spacing: .12em;
+  text-transform: uppercase; margin-bottom: 10px;
+}
+.cr .ab-tag, .analysis-block.sev-critical .ab-tag { color: var(--sev-critical); }
+.analysis-block.sev-high .ab-tag     { color: var(--sev-high); }
+.analysis-block.sev-medium .ab-tag   { color: var(--sev-medium); }
+.analysis-block.sev-pattern .ab-tag  { color: var(--sev-pattern); }
+.ab-title { font-family: var(--font-d); font-size: 16px; font-weight: 700; color: var(--text0); margin-bottom: 10px; letter-spacing: -.01em; }
+.ab-body { font-size: 13px; color: var(--text1); line-height: 1.7; }
+.ab-body strong { color: var(--text0); }
+
+/* ── DEFESA CAMADAS ── */
+.defesa-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 2px; margin-bottom: 28px;
+}
+.defesa-card {
+  background: var(--bg2); border: 1px solid var(--border);
+  padding: 20px; position: relative; overflow: hidden;
+}
+.defesa-card::before {
+  content: ''; position: absolute;
+  top: 0; left: 0; right: 0; height: 2px;
+}
+.defesa-card.d-p7::before { background: var(--amber); }
+.defesa-card.d-p3::before { background: var(--blue); }
+.defesa-card.d-p9::before { background: var(--purple); }
+.defesa-camada {
+  font-family: var(--font-m); font-size: 9px; letter-spacing: .1em;
+  text-transform: uppercase; margin-bottom: 10px;
+}
+.d-p7 .defesa-camada { color: var(--amber); }
+.d-p3 .defesa-camada { color: var(--blue); }
+.d-p9 .defesa-camada { color: var(--purple); }
+.defesa-padrao { font-family: var(--font-d); font-size: 15px; font-weight: 700; color: var(--text0); margin-bottom: 6px; }
+.defesa-status {
+  font-family: var(--font-m); font-size: 12px; padding: 3px 8px; border-radius: 2px;
+  display: inline-block; margin-bottom: 10px;
+}
+.st-alto  { background: rgba(255,53,53,.1); border:1px solid rgba(255,53,53,.3); color: var(--red); }
+.st-baixo { background: rgba(74,158,255,.1); border:1px solid rgba(74,158,255,.3); color: var(--blue); }
+.defesa-desc { font-size: 12px; color: var(--text2); line-height: 1.55; }
+
+/* ── LACUNAS ── */
+.lacunas { display: flex; flex-direction: column; gap: 2px; margin-bottom: 28px; }
+.lacuna {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-left: 3px solid var(--amber);
+  padding: 14px 18px; display: flex; gap: 14px;
+}
+.lacuna-ico { font-size: 15px; flex-shrink: 0; margin-top: 2px; }
+.lacuna-q { font-family: var(--font-d); font-size: 13px; font-weight: 700; color: var(--text0); margin-bottom: 4px; }
+.lacuna-a { font-size: 12px; color: var(--text2); line-height: 1.5; }
+
+/* ── FALHAS INSTITUCIONAIS ── */
+.falhas { display: flex; flex-direction: column; gap: 2px; margin-bottom: 28px; }
+.falha {
+  background: var(--bg2); border: 1px solid rgba(255,53,53,.2);
+  padding: 16px 18px;
+}
+.falha-head { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
+.falha-titulo { font-family: var(--font-d); font-size: 13px; font-weight: 700; color: var(--text0); }
+.falha-grav {
+  font-family: var(--font-m); font-size: 9px; letter-spacing: .1em; text-transform: uppercase;
+  padding: 2px 7px; border-radius: 2px;
+}
+.fg-critica { background: rgba(255,53,53,.1); border: 1px solid rgba(255,53,53,.3); color: var(--red); }
+.fg-alta    { background: rgba(255,104,32,.1); border: 1px solid rgba(255,104,32,.3); color: var(--orange); }
+.falha-desc { font-size: 12px; color: var(--text2); line-height: 1.55; }
+.falha-resp { font-family: var(--font-m); font-size: 12px; color: var(--text3); margin-top: 6px; }
+
+/* ── QUOTE ── */
+.qt {
+  background: var(--bg2); border: 1px solid var(--border);
+  padding: 28px 32px; position: relative; margin: 36px 0;
+}
+.qt::before {
+  content: '// ANÁLISE EDITORIAL';
+  position: absolute; top: -1px; left: 24px;
+  background: var(--bg0); padding: 0 8px;
+  font-family: var(--font-m); font-size: 9px; color: var(--text3); letter-spacing: .1em;
+}
+.qt-text {
+  font-family: var(--font-d); font-size: clamp(14px, 2vw, 18px);
+  font-weight: 600; color: var(--text0); line-height: 1.5;
+  font-style: italic; margin-bottom: 14px;
+}
+.qt-text em { color: var(--amber); font-style: normal; }
+.qt-attr { font-family: var(--font-m); font-size: 12px; color: var(--text3); letter-spacing: .06em; }
+
+/* ── CONEXOES ── */
+.conexoes { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 2px; margin-bottom: 28px; }
+.conexao {
+  background: var(--bg2); border: 1px solid var(--border);
+  padding: 16px;
+}
+.con-op { font-family: var(--font-m); font-size: 9px; color: var(--cyan); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 6px; }
+.con-title { font-family: var(--font-d); font-size: 13px; font-weight: 700; color: var(--text0); margin-bottom: 6px; }
+.con-body { font-size: 12px; color: var(--text2); line-height: 1.5; }
+.con-ids { font-family: var(--font-m); font-size: 12px; color: var(--text3); margin-top: 8px; }
+
+/* ── JSON SNIPPET ── */
+.json {
+  background: var(--bg2); border: 1px solid var(--border);
+  padding: 18px; font-family: var(--font-m); font-size: 11px; line-height: 1.9;
+  color: var(--text2); overflow-x: auto; margin-bottom: 16px;
+}
+.jk { color: var(--cyan); }
+.jv { color: var(--green); }
+.jn { color: var(--amber); }
+.js { color: var(--pink); }
+
+/* ── FOOTER ── */
+.ftr {
+  border-top: 1px solid var(--border); padding: 24px;
+  max-width: 1100px; margin: 0 auto;
+  display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center;
+}
+.ftr-lic { font-family: var(--font-m); font-size: 12px; color: var(--text3); }
+.ftr-lic span { color: var(--green); }
+.ftr-src { font-family: var(--font-m); font-size: 12px; color: var(--text3); }
+.ftr-src a { color: var(--cyan); text-decoration: none; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .nucleos-grid, .defesa-grid { grid-template-columns: 1fr; }
+  .ator { grid-template-columns: 1fr; gap: 8px; }
+  .hero { padding: 32px 16px 24px; }
+  .wrap { padding: 0 16px; }
+  .metrics { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── P9 BANNER ── */
+.p9-banner {
+  background: linear-gradient(135deg, rgba(176,106,255,.06), rgba(255,53,53,.04));
+  border: 1px solid rgba(176,106,255,.25);
+  border-left: 3px solid var(--purple);
+  padding: 20px 24px; margin-bottom: 24px;
+}
+.p9-label { font-family: var(--font-m); font-size: 9px; color: var(--purple); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 8px; }
+.p9-title { font-family: var(--font-d); font-size: 16px; font-weight: 700; color: var(--text0); margin-bottom: 8px; }
+.p9-body { font-size: 13px; color: var(--text1); line-height: 1.6; }
+
+/* ── VITIMAS BOX ── */
+.vitimas-box {
+  background: rgba(255,170,0,.04);
+  border: 1px solid rgba(255,170,0,.2);
+  padding: 22px 24px; margin-bottom: 28px;
+  display: grid; grid-template-columns: 120px 1fr; gap: 24px; align-items: center;
+}
+.vitimas-num {
+  font-family: var(--font-m); font-size: 36px; font-weight: 500;
+  color: var(--amber); line-height: 1; letter-spacing: -.03em;
+}
+.vitimas-num span { font-size: 16px; display: block; color: var(--text3); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; margin-top: 4px; }
+.vitimas-desc { font-size: 13px; color: var(--text1); line-height: 1.6; }
+
+/* DIVIDER */
+.div { height: 1px; background: var(--border); max-width: 1100px; margin: 0 auto 48px; }
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="hdr-brand"><span>lawfare-timeline</span> · dossier · P7+P9</div>
+  <div class="hdr-right">
+    <div class="hdr-status"><span class="dot-live"></span>INVESTIGAÇÃO EM ANDAMENTO</div>
+    <div class="hdr-ids">IDs 164–171 · CC0 1.0</div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-eyebrow">POLÍCIA FEDERAL + CGU · FRAUDE PREVIDENCIÁRIA · 2019–2026</div>
+  <h1 class="hero-h1">
+    Operação<br>
+    <span class="a1">Sem Desconto</span><br>
+    <span class="a2" style="font-size:.6em; letter-spacing:-.01em">O Estado como Instrumento de Predação</span>
+  </h1>
+  <div class="hero-sub">INSS · REDE ARPAR · 9+ MILHÕES DE VÍTIMAS · P7 × P9 · R$ 39 BILHÕES MOVIMENTADOS</div>
+  <p class="hero-lead">
+    O maior esquema de fraude previdenciária já documentado no Brasil não foi um ataque externo 
+    ao Estado — foi executado <em>de dentro</em>, por servidores corrompidos, dirigentes omissos 
+    e uma rede clandestina de 40+ empresas que transformou o INSS em caixa automático do crime organizado. 
+    Seis anos de operação. Nove milhões de vítimas identificáveis pelo CPF. 
+    E uma CPMI encerrada sem relatório por articulação do próprio governo.
+  </p>
+
+  <div class="metrics">
+    <div class="metric"><div class="metric-val cr">9M+</div><div class="metric-lbl">beneficiários afetados</div></div>
+    <div class="metric"><div class="metric-val cr">R$ 6,3 bi</div><div class="metric-lbl">prejuízo direto INSS</div></div>
+    <div class="metric"><div class="metric-val hi">R$ 39 bi</div><div class="metric-lbl">Rede Arpar movimentados</div></div>
+    <div class="metric"><div class="metric-val me">R$ 2,8 bi</div><div class="metric-lbl">bloqueados AGU</div></div>
+    <div class="metric"><div class="metric-val lo">6 fases</div><div class="metric-lbl">operações PF</div></div>
+    <div class="metric"><div class="metric-val lo">40+</div><div class="metric-lbl">empresas Rede Arpar</div></div>
+    <div class="metric"><div class="metric-val pa">P7+P9</div><div class="metric-lbl">padrões sistêmicos</div></div>
+    <div class="metric"><div class="metric-val cr">×67</div><div class="metric-lbl">escalonamento 2020–2024</div></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- TABS -->
+  <div class="tabs" id="scroll-spy-nav">
+    <button class="tab on"  data-target="p-nucleos">NÚCLEOS</button>
+    <button class="tab"     data-target="p-atores">ATORES</button>
+    <button class="tab"     data-target="p-rede-arpar">REDE ARPAR</button>
+    <button class="tab"     data-target="p-cronologia">CRONOLOGIA</button>
+    <button class="tab"     data-target="p-padrao">P7 + P9</button>
+    <button class="tab"     data-target="p-institucional">FALHAS INST.</button>
+    <button class="tab"     data-target="p-conexoes">CONEXÕES</button>
+    <button class="tab"     data-target="p-lacunas">LACUNAS</button>
+  </div>
+
+  <!-- ══ NÚCLEOS ══ -->
+  <div id="p-nucleos" class="panel section">
+    <div class="sec-hdr">
+      <span class="sec-n">01</span>
+      <span class="sec-t">Os Cinco Núcleos da Organização Criminosa</span>
+      <div class="sec-line"></div>
+    </div>
+
+    <div class="vitimas-box">
+      <div>
+        <div class="vitimas-num">9M<span>vítimas diretas</span></div>
+      </div>
+      <p class="vitimas-desc">
+        Mais de <strong>9 milhões de aposentados e pensionistas</strong> tiveram descontos não autorizados 
+        em seus benefícios — a maioria idosos de baixa renda recebendo até 2 salários mínimos. 
+        Em alguns municípios do interior do Nordeste, <strong>mais de 60% dos aposentados</strong> foram afetados. 
+        É o maior número de vítimas identificáveis individualmente de qualquer operação do dataset.
+      </p>
+    </div>
+
+    <div class="nucleos-grid">
+      <div class="nucleo n-tecnico">
+        <div class="nucleo-lbl">Núcleo Técnico</div>
+        <div class="nucleo-title">Operação das Fraudes</div>
+        <p class="nucleo-desc">Falsificação de documentos, assinaturas e áudios para simular autorização dos beneficiários. Acesso direto ao sistema do INSS para efetivar descontos automáticos sem consentimento real.</p>
+      </div>
+      <div class="nucleo n-admin">
+        <div class="nucleo-lbl">Núcleo Administrativo</div>
+        <div class="nucleo-title">Gestão dos ACTs</div>
+        <p class="nucleo-desc">Gerenciamento das entidades com Acordos de Cooperação Técnica com o INSS — estrutura formal que legitimava o acesso ao sistema de descontos automáticos em folha de benefícios.</p>
+      </div>
+      <div class="nucleo n-financeiro">
+        <div class="nucleo-lbl">Núcleo Financeiro / Empresarial</div>
+        <div class="nucleo-title">Rede Arpar — Banco Clandestino</div>
+        <p class="nucleo-desc">Lavagem e ocultação via 40+ empresas de fachada. Despersonalização de pagamentos, contratos falsos de consultoria, criptoativos e remessas internacionais. Hub central da extração.</p>
+      </div>
+      <div class="nucleo n-servidores">
+        <div class="nucleo-lbl">Núcleo de Servidores</div>
+        <div class="nucleo-title">Estado como Cúmplice</div>
+        <p class="nucleo-desc">Servidores corrompidos dentro do INSS e Dataprev mantinham o sistema vulnerável e viabilizavam o acesso continuado. Reunião CGU de agosto/2024 documenta que a cúpula sabia e se omitiu.</p>
+      </div>
+      <div class="nucleo n-politico">
+        <div class="nucleo-lbl">Núcleo Político</div>
+        <div class="nucleo-title">Blindagem Institucional</div>
+        <p class="nucleo-desc">Parlamentares e agentes públicos garantiam fluidez e proteção. Planilha apreendida: "Grupo Senador Weverton". Lobby no Congresso afrouxou regras de ACTs entre 2021–2024, viabilizando escalonamento.</p>
+      </div>
+    </div>
+
+    <div class="chips">
+      <span class="chip chip-p7">P7 — Captura Previdenciária</span>
+      <span class="chip chip-p9">P9 — Neutralização Parlamentar</span>
+      <span class="chip chip-p3">P3 — Captura Judicial (parcial)</span>
+      <span class="chip chip-p1">P1 — Segmentação de Fluxos</span>
+      <span class="chip chip-p2">P2 — Fachadas Empresariais</span>
+    </div>
+  </div>
+
+  <!-- ══ ATORES ══ -->
+  <div id="p-atores" class="panel section">
+    <div class="sec-hdr">
+      <span class="sec-n">02</span>
+      <span class="sec-t">Atores Identificados</span>
+      <div class="sec-line"></div>
+    </div>
+    <div class="atores">
+      <div class="ator">
+        <div>
+          <div class="ator-role">Lobista Central</div>
+          <div class="ator-name">Antônio Carlos Camilo Antunes</div>
+          <div class="ator-papel">"Careca do INSS" — operador principal do esquema de ACTs fraudulentos. Articulou o acesso ao sistema de descontos automáticos via entidades com acordos formalizados. Filho Romeu preso em dez/2025 ao sucedê-lo operacionalmente.</div>
+        </div>
+        <div></div>
+        <span class="badge b-preso">Preso — Fase 1</span>
+      </div>
+      <div class="ator">
+        <div>
+          <div class="ator-role">Coordenador do Esquema</div>
+          <div class="ator-name">Maurício Camisotti</div>
+          <div class="ator-papel">Coordenador operacional. Movimentou R$ 165 milhões na Aielo Motors (concessionária de luxo) usada como veículo de lavagem. Filho Paulo ouvido duas vezes pela CPI. Sinaliza possível delação premiada.</div>
+        </div>
+        <div></div>
+        <span class="badge b-preso">Preso — Set/2025</span>
+      </div>
+      <div class="ator">
+        <div>
+          <div class="ator-role">Ex-Presidente do INSS</div>
+          <div class="ator-name">Alessandro Stefanutto</div>
+          <div class="ator-papel">Preso em novembro 2025. Gestão do INSS documentada como omissa — reunião CGU de ago/2024 registra que a cúpula sabia do esquema e não agiu.</div>
+        </div>
+        <div></div>
+        <span class="badge b-preso">Preso — Nov/2025</span>
+      </div>
+      <div class="ator">
+        <div>
+          <div class="ator-role">Ex-Ministro da Previdência</div>
+          <div class="ator-name">Carlos Lupi (PDT)</div>
+          <div class="ator-papel">Demitido após repercussão pública da operação. Depôs na CPMI em setembro 2025. Aconselhado por aliados a declarar que as fraudes teriam começado no governo Bolsonaro.</div>
+        </div>
+        <div></div>
+        <span class="badge b-invest">Investigado</span>
+      </div>
+      <div class="ator">
+        <div>
+          <div class="ator-role">Núcleo Político — Senado</div>
+          <div class="ator-name">Sen. Weverton Rocha (PDT-MA)</div>
+          <div class="ator-papel">Apontado pela PF como "sustentáculo político" da organização. Planilha apreendida: "Grupo Senador Weverton". Pedido de prisão negado por Mendonça. Pedido de indiciamento rejeitado pela CPMI (19×12). Assessor Gustavo Gaspar citado como articulador e facilitador de empresas de fachada.</div>
+        </div>
+        <div></div>
+        <span class="badge b-negado">Prisão Negada</span>
+      </div>
+      <div class="ator">
+        <div>
+          <div class="ator-role">Mencionado em Delação</div>
+          <div class="ator-name">Fábio Luís Lula da Silva ("Lulinha")</div>
+          <div class="ator-papel">Filho do presidente Lula — mencionado por ex-funcionários do INSS em delação premiada (fev/2026) por suposto envolvimento com "Careca do INSS". Maior repercussão política do caso. Investigação em andamento.</div>
+        </div>
+        <div></div>
+        <span class="badge b-invest">Em Investigação</span>
+      </div>
+      <div class="ator">
+        <div>
+          <div class="ator-role">Vínculo — Irmão do Presidente</div>
+          <div class="ator-name">Frei Chico (irmão de Lula)</div>
+          <div class="ator-papel">Sindnapi (ligado a Frei Chico) teve R$ 500 milhões bloqueados pela Justiça em março 2026 em ação sigilosa movida pelo próprio INSS contra o sindicato.</div>
+        </div>
+        <div></div>
+        <span class="badge b-invest">Bloqueio R$ 500mi</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ REDE ARPAR ══ -->
+  <div id="p-rede-arpar" class="panel section">
+    <div class="sec-hdr">
+      <span class="sec-n">03</span>
+      <span class="sec-t">Rede Arpar — Banco Clandestino</span>
+      <div class="sec-line"></div>
+    </div>
+
+    <div class="analysis-block sev-critical">
+      <div class="ab-tag">MAIOR REDE DE LAVAGEM MAPEADA — CPMI INSS</div>
+      <div class="ab-title">O Banco Clandestino: R$ 39 Bilhões em 40+ Empresas</div>
+      <p class="ab-body">
+        A CPMI do INSS batizou de <strong>Rede Arpar</strong> a organização que operacionalizava a lavagem 
+        de capitais do esquema. Funcionava como um banco clandestino integrado por pelo menos 
+        <strong>40 empresas</strong> cuja função era despersonalizar pagamentos, ocultar origens e 
+        remeter bilhões ilegalmente ao exterior. Após quebra de sigilo de ~40 empresas: 
+        <strong>R$ 39 bilhões</strong> em movimentações documentadas — podendo ultrapassar R$ 45 bi 
+        considerando empresas não rastreadas. A organização demonstrou <strong>altíssima capacidade 
+        de regeneração</strong>, continuando a operar durante as próprias investigações.
+      </p>
+    </div>
+
+    <div class="sec-hdr" style="margin-top:28px">
+      <span class="sec-n">→</span>
+      <span class="sec-t">Fontes dos Recursos Processados pela Rede</span>
+      <div class="sec-line"></div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:2px;margin-bottom:28px">
+      <div style="background:var(--bg2);border:1px solid var(--border);padding:14px">
+        <div style="font-family:var(--font-m);font-size:9px;color:var(--amber);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px">Documentado</div>
+        <div style="font-family:var(--font-d);font-size:13px;font-weight:700;color:var(--text0)">Fraudes INSS</div>
+        <div style="font-size:11px;color:var(--text2);margin-top:4px">R$ 6,3 bi diretos — 2019–2024</div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);padding:14px">
+        <div style="font-family:var(--font-m);font-size:9px;color:var(--red);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px">PCC — investigado</div>
+        <div style="font-family:var(--font-d);font-size:13px;font-weight:700;color:var(--text0)">Tráfico de Drogas</div>
+        <div style="font-size:11px;color:var(--text2);margin-top:4px">Facções — PCC como cliente da rede</div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);padding:14px">
+        <div style="font-family:var(--font-m);font-size:9px;color:var(--orange);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px">Investigado</div>
+        <div style="font-family:var(--font-d);font-size:13px;font-weight:700;color:var(--text0)">Adulteração de Combustíveis</div>
+        <div style="font-size:11px;color:var(--text2);margin-top:4px">Conexão Carbono Oculto / BK Bank</div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);padding:14px">
+        <div style="font-family:var(--font-m);font-size:9px;color:var(--purple);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px">Investigado</div>
+        <div style="font-family:var(--font-d);font-size:13px;font-weight:700;color:var(--text0)">Bets Irregulares</div>
+        <div style="font-size:11px;color:var(--text2);margin-top:4px">Apostas ilegais como fonte + cripto</div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);padding:14px">
+        <div style="font-family:var(--font-m);font-size:9px;color:var(--text3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px">Investigado</div>
+        <div style="font-family:var(--font-d);font-size:13px;font-weight:700;color:var(--text0)">Comércio de Armas</div>
+        <div style="font-size:11px;color:var(--text2);margin-top:4px">Roubos, extorsões, facções</div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);padding:14px">
+        <div style="font-family:var(--font-m);font-size:9px;color:var(--text3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px">Documentado</div>
+        <div style="font-family:var(--font-d);font-size:13px;font-weight:700;color:var(--text0)">Propinas Políticas</div>
+        <div style="font-size:11px;color:var(--text2);margin-top:4px">Contratos falsos + contas de laranjas</div>
+      </div>
+    </div>
+
+    <div class="sec-hdr">
+      <span class="sec-n">→</span>
+      <span class="sec-t">Escalonamento: de R$ 36 Milhões a R$ 2,4 Bilhões (×67 em 4 anos)</span>
+      <div class="sec-line"></div>
+    </div>
+
+    <div class="escala-bar">
+      <div class="escala-row">
+        <div class="escala-year">2020</div>
+        <div class="escala-fill-wrap">
+          <div class="escala-fill" style="width:1.5%;background:var(--cyan)">R$ 36mi</div>
+        </div>
+        <div class="escala-mult">base</div>
+      </div>
+      <div class="escala-row">
+        <div class="escala-year">2021</div>
+        <div class="escala-fill-wrap">
+          <div class="escala-fill" style="width:6%;background:var(--blue)">~R$ 150mi</div>
+        </div>
+        <div class="escala-mult">~×4</div>
+      </div>
+      <div class="escala-row">
+        <div class="escala-year">2022</div>
+        <div class="escala-fill-wrap">
+          <div class="escala-fill" style="width:15%;background:var(--blue)">~R$ 500mi</div>
+        </div>
+        <div class="escala-mult">~×14</div>
+      </div>
+      <div class="escala-row">
+        <div class="escala-year">2023</div>
+        <div class="escala-fill-wrap">
+          <div class="escala-fill" style="width:35%;background:var(--orange)">~R$ 1,2bi</div>
+        </div>
+        <div class="escala-mult">~×33</div>
+      </div>
+      <div class="escala-row">
+        <div class="escala-year">2024</div>
+        <div class="escala-fill-wrap">
+          <div class="escala-fill" style="width:100%;background:var(--red)">R$ 2,4 bilhões</div>
+        </div>
+        <div class="escala-mult" style="color:var(--red)">×67</div>
+      </div>
+    </div>
+    <div style="font-family:var(--font-m);font-size:11px;color:var(--text3);margin-bottom:28px">
+      Escalonamento de ×67 em 4 anos é matematicamente incompatível com crescimento orgânico — 
+      requer modificação das regras de acesso ao sistema de descontos (lobby regulatório não investigado formalmente).
+    </div>
+  </div>
+
+  <!-- ══ CRONOLOGIA ══ -->
+  <div id="p-cronologia" class="panel section">
+    <div class="sec-hdr">
+      <span class="sec-n">04</span>
+      <span class="sec-t">Cronologia: 2019–2026</span>
+      <div class="sec-line"></div>
+    </div>
+    <div class="crono">
+      <div class="crono-item ev-fail">
+        <div class="crono-dot"></div>
+        <div class="crono-date">2019–2024</div>
+        <div class="crono-title">Operação do esquema — 6 anos sem interrupção</div>
+        <div class="crono-body">R$ 6,3 bi desviados de 9+ milhões de beneficiários via descontos associativos fraudulentos. Sistema vulnerável mantido deliberadamente. ACTs afrouxados por lobby.</div>
+        <span class="crono-tag ct-fail">P7 em operação</span>
+      </div>
+      <div class="crono-item ev-fail">
+        <div class="crono-dot"></div>
+        <div class="crono-date">Dez/2023</div>
+        <div class="crono-title">Metrópoles publica denúncia sobre AMBEC</div>
+        <div class="crono-body">Primeiro registro público do esquema — AMBEC descontando R$ 45/mês sem consentimento dos aposentados. Primeiro gatilho público.</div>
+        <span class="crono-tag ct-pol">Denúncia jornalística</span>
+      </div>
+      <div class="crono-item ev-fail">
+        <div class="crono-dot"></div>
+        <div class="crono-date">9 Ago/2024</div>
+        <div class="crono-title">Reunião CGU + cúpula INSS: sabiam e se omitiram</div>
+        <div class="crono-body">Ata registra que a direção do INSS sabia que "esquema monumental estava para ser estourado" e optou pela omissão. Dataprev mantém sistema vulnerável por mais 6 meses tendo alternativa disponível.</div>
+        <span class="crono-tag ct-fail">Omissão deliberada documentada</span>
+      </div>
+      <div class="crono-item ev-pf">
+        <div class="crono-dot"></div>
+        <div class="crono-date">23 Abr/2025</div>
+        <div class="crono-title">Operação Sem Desconto — Fase 1</div>
+        <div class="crono-body">700 policiais federais + 80 CGU. 211 mandados. 6 prisões temporárias. Sequestro de bens acima de R$ 1 bi. Carlos Lupi demitido.</div>
+        <span class="crono-tag ct-pf">PF + CGU</span>
+      </div>
+      <div class="crono-item ev-cpmi">
+        <div class="crono-dot"></div>
+        <div class="crono-date">Jun/2025</div>
+        <div class="crono-title">AGU bloqueia R$ 2,8 bilhões — processo dividido em 15 ações</div>
+        <div class="crono-body">Medidas atingem dezenas de entidades e dirigentes. Quebra de sigilo bancário e fiscal de 2019 a 2025 autorizada.</div>
+        <span class="crono-tag ct-cpmi">AGU</span>
+      </div>
+      <div class="crono-item ev-pf">
+        <div class="crono-dot"></div>
+        <div class="crono-date">Set/2025</div>
+        <div class="crono-title">Operação Cambota — embaraço à investigação</div>
+        <div class="crono-body">Desdobramento focado em crimes de dilapidação patrimonial e obstrução. Organização criminosa se reorganizou estruturalmente durante as investigações.</div>
+        <span class="crono-tag ct-pf">PF</span>
+      </div>
+      <div class="crono-item ev-pf">
+        <div class="crono-dot"></div>
+        <div class="crono-date">Nov/2025</div>
+        <div class="crono-title">Alessandro Stefanutto preso</div>
+        <div class="crono-body">Ex-presidente do INSS detido. Aielo Motors (concessionária de luxo) identificada como veículo de lavagem de R$ 165 mi do Careca. Victor Aielo preso em fev/2026.</div>
+        <span class="crono-tag ct-pf">Prisão</span>
+      </div>
+      <div class="crono-item ev-stf">
+        <div class="crono-dot"></div>
+        <div class="crono-date">18 Dez/2025</div>
+        <div class="crono-title">Nova fase — filho do Careca preso. Weverton: prisão negada</div>
+        <div class="crono-body">Romeu Antunes preso como sucessor operacional do pai. PF pede prisão de Weverton Rocha. Mendonça nega acompanhando MPF — provas ainda "baseadas em inferências não consolidadas".</div>
+        <span class="crono-tag ct-stf">STF — Mendonça</span>
+      </div>
+      <div class="crono-item ev-pol">
+        <div class="crono-dot"></div>
+        <div class="crono-date">Fev/2026</div>
+        <div class="crono-title">Delação premiada menciona Lulinha</div>
+        <div class="crono-body">Dois ex-funcionários do INSS com altos cargos aderem à delação. Mencionam Fábio Luís Lula da Silva (Lulinha) por suposto envolvimento com Careca do INSS.</div>
+        <span class="crono-tag ct-pol">Delação</span>
+      </div>
+      <div class="crono-item ev-stf">
+        <div class="crono-dot"></div>
+        <div class="crono-date">5 Mar/2026</div>
+        <div class="crono-title">Justiça bloqueia R$ 500 mi do Sindnapi (Frei Chico)</div>
+        <div class="crono-body">Ação sigilosa movida pelo próprio INSS contra sindicato ligado ao irmão do presidente Lula.</div>
+        <span class="crono-tag ct-stf">Bloqueio judicial</span>
+      </div>
+      <div class="crono-item ev-cpmi">
+        <div class="crono-dot"></div>
+        <div class="crono-date">28 Mar/2026</div>
+        <div class="crono-title">CPMI encerrada SEM relatório — P9 executado</div>
+        <div class="crono-body">Por 19 votos a 12, após articulação do governo Lula, rejeitado o parecer do relator com 216 pedidos de indiciamento (4.340 páginas). Comissão encerrada sem texto final. Weverton, Sarney Filho e Lulinha poupados da base probatória parlamentar.</div>
+        <span class="crono-tag ct-fail">P9 — CPMI neutralizada</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ PADRÕES ══ -->
+  <div id="p-padrao" class="panel section">
+    <div class="sec-hdr">
+      <span class="sec-n">05</span>
+      <span class="sec-t">P7 × P9: Estrutura de Defesa Sistêmica</span>
+      <div class="sec-line"></div>
+    </div>
+
+    <div class="defesa-grid">
+      <div class="defesa-card d-p7">
+        <div class="defesa-camada">Camada 1 — Construção (2019–2025)</div>
+        <div class="defesa-padrao">P7 — Captura Previdenciária</div>
+        <span class="defesa-status st-alto">Efetividade: Alta</span>
+        <p class="defesa-desc">Parasitismo do aparato previdenciário. INSS transformado em caixa automático via ACTs fraudulentos e servidores corrompidos. Operou por 6 anos sem interrupção. O Estado não foi atacado de fora — foi capturado por dentro.</p>
+      </div>
+      <div class="defesa-card d-p3">
+        <div class="defesa-camada">Camada 2 — Investigação (2025–2026)</div>
+        <div class="defesa-padrao">P3 — Captura Judicial (parcial)</div>
+        <span class="defesa-status st-baixo">Efetividade: Baixa</span>
+        <p class="defesa-desc">Compliance Zero/Master tentou Toffoli como relator — removido por conflito de interesse (cunhado investiu em resort da família Toffoli). Sem Desconto ficou com Mendonça — relator menos permeável. P3 tentado e frustrado neste caso.</p>
+      </div>
+      <div class="defesa-card d-p9">
+        <div class="defesa-camada">Camada 3 — Encerramento (Mar/2026)</div>
+        <div class="defesa-padrao">P9 — Neutralização Parlamentar</div>
+        <span class="defesa-status st-alto">Efetividade: Alta</span>
+        <p class="defesa-desc">Articulação do governo Lula encerrou a CPMI sem relatório (19×12). 216 indiciamentos propostos não votados. Base parlamentar da investigação neutralizada. Lulinha e Frei Chico poupados da exposição de um relatório aprovado.</p>
+      </div>
+    </div>
+
+    <div class="p9-banner">
+      <div class="p9-label">NOVO PADRÃO — ID 170</div>
+      <div class="p9-title">P9 — Neutralização Parlamentar de Emergência</div>
+      <p class="p9-body">
+        P9 distingue-se do P3 por operar no parlamento, não no judiciário. O mecanismo é a 
+        articulação de votos para rejeição de relatório conclusivo — ato político, não jurisdicional, 
+        <strong>não recorrível judicialmente</strong>. P3 usa liminares; P9 usa maioria.
+        P3 deixa rastro formal atacável; P9 encerra o accountability sem recurso possível.
+        Com P9 formalizado, o dataset documenta agora <strong>9 padrões sistêmicos</strong> de impunidade 
+        estrutural (P1–P9) — cobrindo os ramos Judiciário, Executivo, Legislativo e Cultural.
+      </p>
+    </div>
+
+    <div class="qt">
+      <p class="qt-text">
+        "A investigação criminal da PF prossegue — mas sem o combustível político e a base 
+        probatória consolidada que um relatório da CPMI produziria. 
+        <em>P9 não é absolvição. É redução de pressão.</em> 
+        E no Brasil, redução de pressão suficiente é, na prática, impunidade."
+      </p>
+      <div class="qt-attr">// SÍNTESE ANALÍTICA · lawfare-timeline · CC0 · ID 171</div>
+    </div>
+  </div>
+
+  <!-- ══ FALHAS INSTITUCIONAIS ══ -->
+  <div id="p-institucional" class="panel section">
+    <div class="sec-hdr">
+      <span class="sec-n">06</span>
+      <span class="sec-t">Falhas Institucionais Documentadas</span>
+      <div class="sec-line"></div>
+    </div>
+    <div class="falhas">
+      <div class="falha">
+        <div class="falha-head">
+          <div class="falha-titulo">Dataprev manteve sistema vulnerável por 6 meses deliberadamente</div>
+          <span class="falha-grav fg-critica">Crítica</span>
+        </div>
+        <p class="falha-desc">O presidente da Dataprev confirmou em entrevista à Folha de S.Paulo (jun/2025) que a autarquia optou por manter o sistema vulnerável por seis meses mesmo tendo um sistema mais seguro disponível. O sistema vulnerável foi descontinuado apenas após a Operação Sem Desconto. A vulnerabilidade não foi um lapso — foi uma escolha.</p>
+        <div class="falha-resp">// Responsável declarado: Rodrigo Assumpção — presidente da Dataprev</div>
+      </div>
+      <div class="falha">
+        <div class="falha-head">
+          <div class="falha-titulo">CGU documenta: cúpula do INSS sabia do esquema em ago/2024 e se omitiu</div>
+          <span class="falha-grav fg-critica">Crítica</span>
+        </div>
+        <p class="falha-desc">Ata de reunião da CGU com a direção do INSS em 9 de agosto de 2024 mostrou que a liderança da autarquia já sabia que "um esquema monumental estava para ser estourado" — e optou pela inação. A operação só foi deflagrada 8 meses depois, em abril de 2025.</p>
+        <div class="falha-resp">// Responsável: cúpula do INSS à época — Alessandro Stefanutto (preso nov/2025)</div>
+      </div>
+      <div class="falha">
+        <div class="falha-head">
+          <div class="falha-titulo">Lobby afrouxou regras de ACTs no Congresso (2021–2024)</div>
+          <span class="falha-grav fg-alta">Alta</span>
+        </div>
+        <p class="falha-desc">Afrouxamento das regras de Acordos de Cooperação Técnica no Congresso foi condição necessária para o escalonamento de ×67 entre 2020 e 2024. A identidade dos parlamentares responsáveis pelo lobby e sua eventual vinculação com os beneficiários do esquema não foi investigada formalmente.</p>
+        <div class="falha-resp">// Responsável: não identificado publicamente — lacuna investigativa crítica (ID 169)</div>
+      </div>
+      <div class="falha">
+        <div class="falha-head">
+          <div class="falha-titulo">CPMI encerrada sem relatório por articulação governamental</div>
+          <span class="falha-grav fg-alta">Alta</span>
+        </div>
+        <p class="falha-desc">O governo do presidente cujos familiares são mencionados nas investigações articulou votos para encerrar a CPMI sem relatório aprovado. O conflito de interesses é arquitetônico — não resolvível por voluntarismo político. O Estado é simultaneamente vítima (INSS), garantidor (MPF/PF) e principal interessado na contenção (familiares investigados).</p>
+        <div class="falha-resp">// P9 — ID 170 — primeira manifestação plena documentada no dataset</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ CONEXÕES ══ -->
+  <div id="p-conexoes" class="panel section">
+    <div class="sec-hdr">
+      <span class="sec-n">07</span>
+      <span class="sec-t">Conexões com Outras Operações do Dataset</span>
+      <div class="sec-line"></div>
+    </div>
+    <div class="conexoes">
+      <div class="conexao">
+        <div class="con-op">Compliance Zero · IDs 143–145</div>
+        <div class="con-title">Banco Master — 74% dos consignados irregulares</div>
+        <p class="con-body">Banco Master tinha Acordo de Cooperação com o INSS. 74% dos contratos de consignado apresentavam irregularidades. Fabiano Zettel (marido de Natália Vorcaro) teve sigilos quebrados tanto na CPMI do INSS quanto na CPI do Crime Organizado.</p>
+        <div class="con-ids">// IDs ref: 143–145 · Ator-ponte: Zettel</div>
+      </div>
+      <div class="conexao">
+        <div class="con-op">Carbono Oculto · IDs 139–142</div>
+        <div class="con-title">REAG como hub comum — PCC transversal</div>
+        <p class="con-body">REAG aparece como hub conectando Compliance Zero, Carbono Oculto e Sem Desconto. PCC documentado como cliente transversal da infraestrutura de lavagem — combustíveis adulterados e fraude previdenciária como fontes distintas processadas pela mesma rede.</p>
+        <div class="con-ids">// IDs ref: 139–142 · Hub: REAG / Zettel</div>
+      </div>
+      <div class="conexao">
+        <div class="con-op">Trilogia Narco — Narcobet · ID 154</div>
+        <div class="con-title">Bets irregulares — infraestrutura possivelmente compartilhada</div>
+        <p class="con-body">Bets irregulares aparecem como fonte de recursos processados pela Rede Arpar. Possível sobreposição de infraestrutura com o ecossistema investigado na Narcobet — apostas como câmara de lavagem usada por múltiplas organizações.</p>
+        <div class="con-ids">// ID ref: 154 · Hipótese: ID 160</div>
+      </div>
+      <div class="conexao">
+        <div class="con-op">Convergência Independente</div>
+        <div class="con-title">CPMI INSS + CPI Crime Organizado — mesmos atores</div>
+        <p class="con-body">Duas comissões parlamentares com mandatos distintos e composições diferentes chegaram ao mesmo conjunto de atores sem coordenação explícita. Metodologicamente, essa convergência independente é evidência robusta de infraestrutura comum.</p>
+        <div class="con-ids">// ID: 167 · Análise transversal</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ LACUNAS ══ -->
+  <div id="p-lacunas" class="panel section">
+    <div class="sec-hdr">
+      <span class="sec-n">08</span>
+      <span class="sec-t">Lacunas Investigativas — Perguntas Sem Resposta</span>
+      <div class="sec-line"></div>
+    </div>
+    <div class="lacunas">
+      <div class="lacuna">
+        <div class="lacuna-ico">🏛️</div>
+        <div>
+          <div class="lacuna-q">Quem fez o lobby que afrouxou as regras de ACT entre 2021 e 2024?</div>
+          <p class="lacuna-a">O escalonamento de ×67 requer modificação formal das regras de acesso. Há votações, portarias, reuniões documentadas. Os responsáveis são rastreáveis — mas ninguém está investigando. Esta é a lacuna mais politicamente sensível do caso: conecta lobby regulatório, beneficiários do esquema e a cronologia do escalonamento de forma juridicamente sólida.</p>
+        </div>
+      </div>
+      <div class="lacuna">
+        <div class="lacuna-ico">💰</div>
+        <div>
+          <div class="lacuna-q">Quem são os beneficiários finais das remessas internacionais da Rede Arpar?</div>
+          <p class="lacuna-a">R$ 39 bilhões movimentados, parte com destino ao exterior. Os beneficiários das contas de destino não foram identificados publicamente. O chokepoint terminal — padrão recorrente no dataset — opera também aqui: a rede é documentada, o fluxo é rastreado, mas o último elo permanece invisível.</p>
+        </div>
+      </div>
+      <div class="lacuna">
+        <div class="lacuna-ico">🔗</div>
+        <div>
+          <div class="lacuna-q">O PCC é formalmente cliente da Rede Arpar ou apenas circunstancialmente presente?</div>
+          <p class="lacuna-a">O relatório da CPMI aponta o PCC como uma das fontes dos recursos processados pela Rede Arpar. Mas a conexão formal — contrato, relacionamento documentado, fluxo específico — não foi estabelecida publicamente. A hipótese de lavagem-as-a-service (ID 160) depende de esclarecer este ponto.</p>
+        </div>
+      </div>
+      <div class="lacuna">
+        <div class="lacuna-ico">🧑‍⚖️</div>
+        <div>
+          <div class="lacuna-q">O papel exato de Lulinha — investigação criminal em que pé?</div>
+          <p class="lacuna-a">A delação premiada de fev/2026 menciona Lulinha por "suposto envolvimento" com o Careca. Mas "menção em delação" e "indiciamento" são coisas muito diferentes. O que a PF e o MPF fizeram com essas informações nos dois meses seguintes não foi reportado publicamente.</p>
+        </div>
+      </div>
+      <div class="lacuna">
+        <div class="lacuna-ico">📊</div>
+        <div>
+          <div class="lacuna-q">Por que 9 milhões de vítimas identificáveis não produziram mobilização proporcional ao dano?</div>
+          <p class="lacuna-a">Pergunta analítica — não investigativa. A resposta mais provável: são idosos de baixa renda, geograficamente dispersos, com acesso limitado a redes digitais. A vulnerabilidade que os tornou alvos ideais é a mesma que os impede de se defender. É o mecanismo de predação mais eficiente documentado no dataset: atacar quem não pode responder.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="json">
+      <span class="jk">"dataset_status"</span>: {<br>
+      &nbsp;&nbsp;<span class="jk">"ids_gerados_sessao"</span>: <span class="js">"153–171"</span>,<br>
+      &nbsp;&nbsp;<span class="jk">"padroes_completos"</span>: <span class="js">"P1–P9"</span>,<br>
+      &nbsp;&nbsp;<span class="jk">"p7_manifestacao_plena"</span>: <span class="js">"Sem Desconto / INSS (IDs 164–169)"</span>,<br>
+      &nbsp;&nbsp;<span class="jk">"p8_formalizado"</span>: <span class="js">"Narco Fluxo (ID 163)"</span>,<br>
+      &nbsp;&nbsp;<span class="jk">"p9_formalizado"</span>: <span class="js">"CPMI INSS (ID 170)"</span>,<br>
+      &nbsp;&nbsp;<span class="jk">"vitimas_maximas_dataset"</span>: <span class="jn">9000000</span>,<br>
+      &nbsp;&nbsp;<span class="jk">"proxima_operacao_sugerida"</span>: <span class="js">"aprofundamento Sem Desconto ou Greenwashing MPF"</span>,<br>
+      &nbsp;&nbsp;<span class="jk">"mirroring_pendente"</span>: <span class="js">"GitHub · IPFS · archive.org"</span><br>
+      }
+    </div>
+  </div>
+
+</div><!-- /wrap -->
+
+<!-- ══ RELATED ARTIFACTS ══ -->
+<div class="related-wrap">
+  <div class="related-title">Artefatos Relacionados</div>
+  <div class="related-grid">
+    <a href="/emaranhamento-operacoes.html" class="related-card">
+      <div class="related-card-cat">Ecosistema</div>
+      <div class="related-card-title">Emaranhamento de Operações 2026</div>
+      <div class="related-card-arrow">ACESSAR ➔</div>
+    </a>
+    <a href="/banco-master-compliance-zero.html" class="related-card">
+      <div class="related-card-cat">Crimes Financeiros</div>
+      <div class="related-card-title">Banco Master: Compliance Zero</div>
+      <div class="related-card-arrow">ACESSAR ➔</div>
+    </a>
+    <a href="/operacao-carbono-oculto.html" class="related-card">
+      <div class="related-card-cat">Operação</div>
+      <div class="related-card-title">Operação Carbono Oculto</div>
+      <div class="related-card-arrow">ACESSAR ➔</div>
+    </a>
+    <a href="/trilogia-narco.html" class="related-card">
+      <div class="related-card-cat">Operação</div>
+      <div class="related-card-title">Trilogia Narco — Narcobet</div>
+      <div class="related-card-arrow">ACESSAR ➔</div>
+    </a>
+  </div>
+</div>
+
+<div class="div" style="margin-bottom: 0;"></div>
+
+<div id="gotop" class="gotop" title="Voltar ao topo">↑</div>
+
+<footer class="ftr">
+  <div class="ftr-lic"><span>CC0 1.0 Universal</span> · Domínio Público · Nenhum direito reservado<br>Reprodução, adaptação e distribuição livre — sem restrições</div>
+  <div class="ftr-src">
+    Fontes: <a href="https://www.gov.br/pf/pt-br" target="_blank">PF Oficial</a> ·
+    <a href="https://www.gazetadopovo.com.br" target="_blank">Gazeta do Povo</a> ·
+    <a href="https://www.poder360.com.br" target="_blank">Poder360</a> ·
+    <a href="https://atual7.com" target="_blank">Atual7</a> ·
+    <a href="https://pt.wikipedia.org/wiki/Esquema_de_fraudes_no_INSS" target="_blank">Wikipedia INSS</a> ·
+    <a href="https://lawfare-timeline.vercel.app" target="_blank">lawfare-timeline.vercel.app</a><br>
+    IDs 164–171 · Padrões P7+P9 · 16.04.2026
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelectorAll('.tab');
+  
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const targetId = tab.getAttribute('data-target');
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        const offset = 70; // offset for sticky nav
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = targetEl.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+      }
+    });
+  });
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '-100px 0px -50% 0px',
+    threshold: 0
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        tabs.forEach(t => t.classList.remove('on'));
+        const activeTab = document.querySelector(`.tab[data-target="${entry.target.id}"]`);
+        if (activeTab) {
+          activeTab.classList.add('on');
+          activeTab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.panel').forEach(sec => observer.observe(sec));
+
+  const gotop = document.getElementById('gotop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      gotop.classList.add('show');
+    } else {
+      gotop.classList.remove('show');
+    }
+  });
+  gotop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>

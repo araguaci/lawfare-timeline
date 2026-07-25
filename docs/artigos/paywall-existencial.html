@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P12 · Paywall Existencial — Corpus Lawfare-Timeline</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0a0b;
+  --bg2: #111114;
+  --bg3: #18181d;
+  --border: #232328;
+  --border2: #32323a;
+  --red: #e24b4a;
+  --red-dim: #7a2929;
+  --amber: #ef9f27;
+  --amber-dim: #7a4f0a;
+  --teal: #1d9e75;
+  --teal2: #5dcaa5;
+  --blue: #378add;
+  --blue2: #85b7eb;
+  --coral: #d85a30;
+  --coral-dim: #6b2a12;
+  --ink: #e8e8e0;
+  --ink2: #a0a098;
+  --ink3: #555550;
+  --tag-p12: #e24b4a;
+  --tag-p07: #ef9f27;
+  --tag-p12b: #d85a30;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'IBM Plex Mono', monospace;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+.scanline {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(55,138,221,0.025) 2px, rgba(55,138,221,0.025) 4px);
+  pointer-events: none; z-index: 9999; opacity: 0.5;
+}
+
+.wrap { max-width: 900px; margin: 0 auto; padding: 0 32px 80px; }
+
+/* ─── HEADER ─── */
+.header {
+  padding: 52px 0 40px;
+  border-bottom: 1px solid var(--border2);
+}
+.header-eyebrow {
+  font-size: 10px; letter-spacing: .22em; color: var(--red);
+  text-transform: uppercase; margin-bottom: 16px;
+  display: flex; align-items: center; gap: 10px;
+}
+.header-eyebrow::before {
+  content: ''; width: 28px; height: 1px; background: var(--red);
+}
+.header-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 800; line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 20px;
+}
+.header-title span { color: var(--red); }
+.header-desc {
+  font-family: 'Crimson Pro', serif;
+  font-size: 17px; color: var(--ink2);
+  max-width: 600px; line-height: 1.7;
+}
+.header-meta {
+  margin-top: 24px;
+  display: flex; gap: 20px; flex-wrap: wrap;
+}
+.meta-pill {
+  font-size: 10px; letter-spacing: .14em; text-transform: uppercase;
+  padding: 5px 12px; border: 1px solid var(--border2);
+  border-radius: 2px; color: var(--ink3);
+}
+.meta-pill.active { border-color: var(--red); color: var(--red); }
+
+/* ─── SECTION TITLES ─── */
+.section { margin-top: 60px; }
+.section-tag {
+  font-size: 9px; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--ink3); margin-bottom: 8px;
+  display: flex; align-items: center; gap: 8px;
+}
+.section-tag::before {
+  content: ''; width: 16px; height: 1px; background: var(--ink3);
+}
+.section-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--ink); margin-bottom: 24px;
+  letter-spacing: -0.01em;
+}
+
+/* ─── PATTERN CARD ─── */
+.pattern-def {
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  border-left: 3px solid var(--red);
+  padding: 28px 32px;
+  margin-bottom: 24px;
+}
+.pattern-code {
+  font-size: 11px; letter-spacing: .15em;
+  color: var(--red); text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.pattern-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 20px; font-weight: 700;
+  color: var(--ink); margin-bottom: 14px;
+}
+.pattern-body {
+  font-family: 'Crimson Pro', serif;
+  font-size: 16px; color: var(--ink2);
+  line-height: 1.75; margin-bottom: 16px;
+}
+
+/* ─── FUNIL ─── */
+.funil-wrap {
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  padding: 32px;
+  margin-bottom: 24px;
+}
+.funil-title {
+  font-size: 11px; letter-spacing: .15em; text-transform: uppercase;
+  color: var(--ink3); margin-bottom: 24px;
+}
+.funil-steps {
+  display: flex; flex-direction: column; gap: 0;
+}
+.funil-step {
+  display: flex; align-items: flex-start; gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+.funil-step:last-child { border-bottom: none; }
+.funil-num {
+  font-size: 11px; color: var(--ink3);
+  min-width: 24px; padding-top: 2px;
+}
+.funil-content { flex: 1; }
+.funil-label {
+  font-size: 13px; font-weight: 500;
+  color: var(--amber); margin-bottom: 4px;
+  letter-spacing: .05em;
+}
+.funil-desc {
+  font-family: 'Crimson Pro', serif;
+  font-size: 15px; color: var(--ink2);
+  line-height: 1.6;
+}
+.funil-arrow {
+  position: absolute; left: 11px; bottom: -12px;
+  width: 1px; height: 12px; background: var(--border2);
+}
+.funil-step:last-child .funil-arrow { display: none; }
+
+/* ─── CASOS ─── */
+.casos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 2px;
+}
+.caso-card {
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+}
+.caso-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 2px;
+}
+.caso-card.tipo-guru::before { background: var(--red); }
+.caso-card.tipo-politico::before { background: var(--coral); }
+.caso-card.tipo-precursor::before { background: var(--ink3); }
+
+.caso-header {
+  display: flex; justify-content: space-between;
+  align-items: flex-start; margin-bottom: 16px;
+  gap: 12px;
+}
+.caso-nome {
+  font-family: 'Syne', sans-serif;
+  font-size: 16px; font-weight: 700;
+  color: var(--ink);
+}
+.caso-sub {
+  font-size: 11px; color: var(--ink3);
+  margin-top: 2px; letter-spacing: .05em;
+}
+.caso-tags {
+  display: flex; flex-direction: column; gap: 4px;
+  align-items: flex-end;
+}
+.tag {
+  font-size: 9px; letter-spacing: .12em; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 2px;
+  white-space: nowrap;
+}
+.tag-p12 { background: rgba(226,75,74,.15); color: var(--red); border: 1px solid rgba(226,75,74,.3); }
+.tag-p07 { background: rgba(239,159,39,.12); color: var(--amber); border: 1px solid rgba(239,159,39,.25); }
+.tag-p12b { background: rgba(216,90,48,.15); color: var(--coral); border: 1px solid rgba(216,90,48,.3); }
+.tag-gray { background: rgba(160,160,152,.08); color: var(--ink3); border: 1px solid var(--border); }
+
+.caso-body {
+  font-family: 'Crimson Pro', serif;
+  font-size: 15px; color: var(--ink2);
+  line-height: 1.7; margin-bottom: 20px;
+}
+
+.caso-mecanismo {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  padding: 14px 16px;
+  margin-bottom: 16px;
+}
+.mec-label {
+  font-size: 9px; letter-spacing: .15em; text-transform: uppercase;
+  color: var(--ink3); margin-bottom: 8px;
+}
+.mec-items {
+  list-style: none;
+}
+.mec-items li {
+  font-size: 12px; color: var(--ink2);
+  padding: 3px 0;
+  display: flex; gap: 8px;
+}
+.mec-items li::before {
+  content: '·'; color: var(--ink3);
+}
+
+.caso-frase {
+  border-left: 2px solid var(--border2);
+  padding: 10px 16px;
+  font-family: 'Crimson Pro', serif;
+  font-style: italic;
+  font-size: 14px; color: var(--ink3);
+}
+.caso-frase.destaque {
+  border-left-color: var(--red);
+  color: var(--red);
+}
+
+.caso-dados {
+  display: flex; gap: 12px; flex-wrap: wrap;
+  margin-top: 16px; padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.dado {
+  background: var(--bg3);
+  padding: 8px 12px;
+  flex: 1; min-width: 100px;
+}
+.dado-label {
+  font-size: 9px; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--ink3); margin-bottom: 4px;
+}
+.dado-valor {
+  font-size: 14px; font-weight: 500; color: var(--amber);
+}
+
+/* ─── COMPARAÇÃO ─── */
+.comp-table {
+  width: 100%; border-collapse: collapse;
+  font-size: 12px; background: var(--bg2);
+  border: 1px solid var(--border2);
+}
+.comp-table th {
+  background: var(--bg3);
+  font-size: 10px; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--ink3); padding: 12px 16px;
+  text-align: left; border-bottom: 1px solid var(--border2);
+  font-weight: 400;
+}
+.comp-table td {
+  padding: 12px 16px; color: var(--ink2);
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  font-family: 'Crimson Pro', serif;
+  font-size: 14px;
+}
+.comp-table tr:last-child td { border-bottom: none; }
+.comp-table td:first-child {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px; color: var(--ink3);
+  min-width: 140px;
+}
+.comp-table td.val-daniel { color: var(--red); }
+.comp-table td.val-nikolas { color: var(--coral); }
+.comp-table td.val-tetzel { color: var(--ink3); }
+
+/* ─── GENEALOGIA ─── */
+.genealogia {
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  padding: 28px 32px;
+}
+.gen-row {
+  display: flex; align-items: flex-start; gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+.gen-row:last-child { border-bottom: none; }
+.gen-era {
+  font-size: 10px; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--ink3); min-width: 80px; padding-top: 2px;
+}
+.gen-content { flex: 1; }
+.gen-nome {
+  font-size: 13px; font-weight: 500; color: var(--ink);
+  margin-bottom: 4px;
+}
+.gen-desc {
+  font-family: 'Crimson Pro', serif;
+  font-size: 14px; color: var(--ink2);
+  line-height: 1.6;
+}
+.gen-frase {
+  font-style: italic; color: var(--ink3);
+  margin-top: 6px; font-size: 13px;
+}
+
+/* ─── SUBVARIANTE ─── */
+.subvar {
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  border-left: 3px solid var(--coral);
+  padding: 24px 28px;
+  margin-bottom: 24px;
+}
+.subvar-code { font-size: 11px; color: var(--coral); letter-spacing: .15em; text-transform: uppercase; margin-bottom: 8px; }
+.subvar-title { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: var(--ink); margin-bottom: 12px; }
+.subvar-body { font-family: 'Crimson Pro', serif; font-size: 15px; color: var(--ink2); line-height: 1.7; }
+
+/* ─── ALERTA ─── */
+.alerta {
+  background: rgba(216,90,48,.06);
+  border: 1px solid rgba(216,90,48,.25);
+  padding: 20px 24px; margin-top: 40px;
+  display: flex; gap: 16px; align-items: flex-start;
+}
+.alerta-icon { font-size: 18px; color: var(--coral); padding-top: 2px; }
+.alerta-body { font-family: 'Crimson Pro', serif; font-size: 15px; color: var(--ink2); line-height: 1.7; }
+.alerta-body strong { color: var(--coral); font-weight: 400; font-style: italic; }
+
+/* ─── LACUNAS ─── */
+.lacunas {
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  padding: 28px 32px;
+}
+.lacuna-item {
+  display: flex; gap: 16px; align-items: flex-start;
+  padding: 12px 0; border-bottom: 1px solid var(--border);
+}
+.lacuna-item:last-child { border-bottom: none; }
+.lacuna-n {
+  font-size: 10px; color: var(--ink3);
+  min-width: 20px; padding-top: 2px;
+}
+.lacuna-q {
+  font-family: 'Crimson Pro', serif;
+  font-size: 15px; color: var(--ink2); line-height: 1.6;
+}
+
+/* ─── FOOTER ─── */
+.footer {
+  margin-top: 80px; padding-top: 24px;
+  border-top: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 10px; color: var(--ink3); letter-spacing: .1em;
+  flex-wrap: wrap; gap: 12px;
+}
+.footer-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.footer-tag {
+  padding: 3px 8px; border: 1px solid var(--border);
+  border-radius: 2px;
+}
+</style>
+</head>
+<body>
+<div class="scanline"></div>
+<div class="wrap">
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-eyebrow">Corpus Lawfare-Timeline · Padrões Sistêmicos</div>
+  <h1 class="header-title">P12 · <span>Paywall</span><br>Existencial</h1>
+  <p class="header-desc">Monetização de ansiedade coletiva via funil de conversão baseado em ameaça existencial. Padrão identificado no ecossistema digital brasileiro — precursores documentados desde o séc. XV.</p>
+  <div class="header-meta">
+    <span class="meta-pill active">Novo 2026</span>
+    <span class="meta-pill">CC0 1.0</span>
+    <span class="meta-pill">lawfare-timeline.vercel.app</span>
+    <span class="meta-pill">gosurf.site</span>
+  </div>
+</header>
+
+<!-- DEFINIÇÃO -->
+<section class="section">
+  <div class="section-tag">01 / Definição formal</div>
+  <div class="section-title">Padrão P12 — Definição</div>
+
+  <div class="pattern-def">
+    <div class="pattern-code">P12 · Captura Cognitiva de Mercado</div>
+    <div class="pattern-name">Paywall Existencial</div>
+    <div class="pattern-body">
+      Mecanismo de extração de renda que opera sobre populações com déficit de representação simbólica e herói ausente. O operador monetiza ansiedade política ou espiritual via funil de três estágios: (1) hiperbolização de ameaça real, (2) posicionamento como tradutor exclusivo de realidade inacessível, (3) paywall como única via de proteção. A solução nunca é entregue — sua entrega encerra o ciclo de dependência e elimina a receita recorrente. O mecanismo é auto-reprodutivo: cada não-resolução gera nova rodada de ansiedade, nova promessa de revelação, nova conversão.
+    </div>
+    <div class="pattern-body" style="margin-bottom:0;">
+      Distinção do P09 (Captura Cultural): P09 documenta legitimidade simbólica como escudo para operações criminosas. P12 documenta captura cognitiva como produto primário — a mente do seguidor é o ativo, não o escudo.
+    </div>
+  </div>
+</section>
+
+<!-- FUNIL -->
+<section class="section">
+  <div class="section-tag">02 / Anatomia</div>
+  <div class="section-title">O funil de três estágios</div>
+
+  <div class="funil-wrap">
+    <div class="funil-title">Estrutura invariante — documentada em todos os casos mapeados</div>
+    <div class="funil-steps">
+
+      <div class="funil-step">
+        <div class="funil-num">01</div>
+        <div class="funil-content">
+          <div class="funil-label">Hiperbolização do pânico</div>
+          <div class="funil-desc">Escolha de tema real de alta volatilidade (pandemia, colapso econômico, guerra cultural, crise geopolítica). Dados legítimos são introduzidos para ancorar credibilidade, depois envoltos em "maldade global e omissão midiática". O espectador é desancorado da realidade institucional e lançado em vulnerabilidade psicológica.</div>
+        </div>
+        <div class="funil-arrow"></div>
+      </div>
+
+      <div class="funil-step">
+        <div class="funil-num">02</div>
+        <div class="funil-content">
+          <div class="funil-label">Monopólio da salvação</div>
+          <div class="funil-desc">Operador se posiciona como único analista, pastor ou porta-voz corajoso capaz de decifrar o mistério. Cria-se o binário in-group (pagantes) vs. out-group (ignorantes do canal gratuito). A "perseguição" pelos eles — jornalistas, governo, plataformas — é usada como prova de que a informação é valiosa demais para ser dita publicamente.</div>
+        </div>
+        <div class="funil-arrow"></div>
+      </div>
+
+      <div class="funil-step">
+        <div class="funil-num">03</div>
+        <div class="funil-content">
+          <div class="funil-label">Fechamento comercial — monetização da escassez</div>
+          <div class="funil-desc">A revelação prometida só ocorre em ambiente pago (arca, curso, comunidade fechada). O conteúdo entregue é frequentemente público e acessível — a escassez é narrativa, não informacional. Nenhuma solução estrutural é oferecida: soluções encerram o ciclo de dependência.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CASOS -->
+<section class="section">
+  <div class="section-tag">03 / Casos documentados</div>
+  <div class="section-title">Instâncias mapeadas no corpus</div>
+
+  <div class="casos-grid">
+
+    <!-- DANIEL LOPEZ -->
+    <div class="caso-card tipo-guru">
+      <div class="caso-header">
+        <div>
+          <div class="caso-nome">Daniel Lopez</div>
+          <div class="caso-sub">Canal YouTube · "A Arca" · Geopolítica/Teologia</div>
+        </div>
+        <div class="caso-tags">
+          <span class="tag tag-p12">P12</span>
+          <span class="tag tag-gray">Guru independente</span>
+        </div>
+      </div>
+
+      <div class="caso-body">
+        Jornalista formado pela UFRJ, doutor em Linguística (UFF). Credencial acadêmica real como âncora de autoridade. 1,3M inscritos, lives diárias de segunda a sexta. Produto: assinatura anual da "Arca" — plataforma fechada onde "o que não pode ser dito ao vivo" é revelado.
+      </div>
+
+      <div class="caso-mecanismo">
+        <div class="mec-label">Mecanismo verificado</div>
+        <ul class="mec-items">
+          <li>Base documental real + curadoria seletiva = credibilidade técnica</li>
+          <li>Fonte primária: livros de Daniel Mastral (públicos e acessíveis)</li>
+          <li>Vende acesso ao que já existe como se fosse ultra-secreto</li>
+          <li>Narrativa de perseguição + propaganda Volvo (dias depois)</li>
+          <li>Precificação crescente: R$630 → R$1.300 (segmentação de público)</li>
+        </ul>
+      </div>
+
+      <div class="caso-frase destaque">
+        "Único lugar em que dá para falar sobre esses assuntos. E é claro que esse lugar é a arca."
+      </div>
+
+      <div class="caso-dados">
+        <div class="dado">
+          <div class="dado-label">Produto</div>
+          <div class="dado-valor">R$ 928–1.300/ano</div>
+        </div>
+        <div class="dado">
+          <div class="dado-label">Inscritos</div>
+          <div class="dado-valor">~1,8M</div>
+        </div>
+        <div class="dado">
+          <div class="dado-label">Arca desde</div>
+          <div class="dado-valor">Out/2023</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NIKOLAS FERREIRA -->
+    <div class="caso-card tipo-politico">
+      <div class="caso-header">
+        <div>
+          <div class="caso-nome">Nikolas Ferreira</div>
+          <div class="caso-sub">Deputado Federal PL-MG · Destra Cursos LTDA</div>
+        </div>
+        <div class="caso-tags">
+          <span class="tag tag-p12">P12</span>
+          <span class="tag tag-p07">P07</span>
+          <span class="tag tag-p12b">P12-B</span>
+        </div>
+      </div>
+
+      <div class="caso-body">
+        Deputado mais votado em 2022 (1,47M votos). Sócio da Destra Cursos LTDA — fundada em set/2022, um mês antes da eleição. O mandato é o funil de topo; a Destra é a máquina de conversão; o eleitor radicalizado é o produto final para 2026.
+      </div>
+
+      <div class="caso-mecanismo">
+        <div class="mec-label">Mecanismo verificado</div>
+        <ul class="mec-items">
+          <li>Vídeo PIX (jan/2025): norma da Receita era real e legítima — enquadramento "taxação" era falso [P04b]</li>
+          <li>Efeito documentado: uso do PIX caiu 10,9% em uma semana; governo revogou norma de combate à lavagem</li>
+          <li>Beneficiário estrutural do recuo: fintechs usadas por crime organizado escaparam de rastreamento</li>
+          <li>Copy: "A verdade que eles NÃO querem que VOCÊ saiba!" — norma foi reintroduzida em ago/2025</li>
+          <li>Cobertura jornalística crítica convertida em prova de perseguição → funil Destra</li>
+          <li>R$745,3 mil em anúncios Meta (abr/24–abr/25) — 3.300+ peças</li>
+          <li>Curso "O Cristão e a Política" — preparação explícita para 2026</li>
+          <li>MP pediu cassação por fake news na eleição de BH (jul/2025)</li>
+        </ul>
+      </div>
+      <div class="caso-frase" style="margin-bottom:12px; border-left-color: var(--amber); color: var(--ink3);">
+        <span style="color:var(--amber); font-style:normal; font-size:10px; letter-spacing:.1em; text-transform:uppercase;">Nota epistêmica · </span>Nikolas não afirmou explicitamente "o PIX será taxado". O enquadramento sugerido — monitoramento como antecâmara de tributação — era falso. A norma era instrumento legítimo de combate ao crime organizado. Distinção relevante para o corpus: <em>enquadramento distorcido de fato real</em> ≠ <em>fabricação de fato inexistente</em>. Ambos produzem pânico; o primeiro tem deniabilidade técnica.
+      </div>
+
+      <div class="caso-frase destaque">
+        "Se querem guerra, vão ter guerra" — antes de anunciar "super oferta" do curso.
+      </div>
+
+      <div class="caso-dados">
+        <div class="dado">
+          <div class="dado-label">Investimento Meta</div>
+          <div class="dado-valor">R$ 745k/ano</div>
+        </div>
+        <div class="dado">
+          <div class="dado-label">Curso</div>
+          <div class="dado-valor">R$ 297–497</div>
+        </div>
+        <div class="dado">
+          <div class="dado-label">Seguidores IG</div>
+          <div class="dado-valor">16,9M</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SUBVARIANTE P12-B -->
+<section class="section">
+  <div class="section-tag">04 / Subpadrão</div>
+  <div class="section-title">P12-B — Paywall Eleitoral</div>
+
+  <div class="subvar">
+    <div class="subvar-code">P12-B · Subvariante institucional</div>
+    <div class="subvar-title">Paywall Eleitoral</div>
+    <div class="subvar-body">
+      Quando o operador do P12 detém mandato eletivo, o mecanismo adquire dimensão adicional: o produto vendido é simultaneamente renda imediata (curso) e base eleitoral pré-ativada (militante radicalizado com data de ativação). O mandato funciona como funil de topo de alcance massivo; a plataforma paga como câmara de radicalização; o eleitor convertido como ativo eleitoral para 2026. Distingue-se do P12 puro pela ausência de retorno econômico para o seguidor — no P12 puro, o seguidor ao menos recebe conteúdo. No P12-B, o seguidor paga para se tornar instrumento.
+    </div>
+  </div>
+
+  <div class="alerta">
+    <div class="alerta-icon">⚠</div>
+    <div class="alerta-body">
+      <strong>Hipótese inferencial (não documentada como fato):</strong> A combinação P12-B + P07 (Captura Transgeracional via fé) pode produzir o que a economia comportamental chama de "comunidade de identidade" — grupo cuja lealdade transcende o programa político e resiste à evidência contrária. Se verificada, essa arquitetura é estruturalmente mais resistente do que a militância partidária convencional e potencialmente mais difícil de reverter mesmo em casos de derrota eleitoral.
+    </div>
+  </div>
+</section>
+
+<!-- COMPARAÇÃO -->
+<section class="section">
+  <div class="section-tag">05 / Análise comparativa</div>
+  <div class="section-title">Daniel Lopez vs. Nikolas Ferreira</div>
+
+  <table class="comp-table">
+    <thead>
+      <tr>
+        <th>Dimensão</th>
+        <th>Daniel Lopez</th>
+        <th>Nikolas Ferreira</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Função institucional</td>
+        <td class="val-daniel">Nenhuma — operador privado</td>
+        <td class="val-nikolas">Deputado federal em exercício</td>
+      </tr>
+      <tr>
+        <td>Insumo de pânico</td>
+        <td class="val-daniel">Conspirações geopolíticas, ocultismo, pragas</td>
+        <td class="val-nikolas">Enquadramento distorcido de norma real (PIX) + guerra cultural [P04b]</td>
+      </tr>
+      <tr>
+        <td>Produto vendido</td>
+        <td class="val-daniel">Acesso a "segredos" públicos (livros Mastral)</td>
+        <td class="val-nikolas">Doutrinação política com roupagem religiosa</td>
+      </tr>
+      <tr>
+        <td>Paywall</td>
+        <td class="val-daniel">Arca — assinatura anual R$928–1.300</td>
+        <td class="val-nikolas">Destra Cursos — R$297–497 por curso</td>
+      </tr>
+      <tr>
+        <td>Produto real</td>
+        <td class="val-daniel">Dependência cognitiva + receita recorrente</td>
+        <td class="val-nikolas">Militante radicalizado com data de ativação 2026</td>
+      </tr>
+      <tr>
+        <td>Uso da perseguição</td>
+        <td class="val-daniel">Carro Volvo → anúncio Volvo dias depois</td>
+        <td class="val-nikolas">Reportagem crítica → prova de silenciamento → funil</td>
+      </tr>
+      <tr>
+        <td>Padrões ativos</td>
+        <td class="val-daniel">P12</td>
+        <td class="val-nikolas">P12 + P07 + P12-B</td>
+      </tr>
+      <tr>
+        <td>Risco jurídico documentado</td>
+        <td class="val-daniel">Nenhum ativo identificado</td>
+        <td class="val-nikolas">MP pediu cassação por fake news (jul/2025)</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- GENEALOGIA -->
+<section class="section">
+  <div class="section-tag">06 / Genealogia histórica</div>
+  <div class="section-title">O mecanismo através dos séculos</div>
+
+  <div class="genealogia">
+    <div class="gen-row">
+      <div class="gen-era">Séc. XV</div>
+      <div class="gen-content">
+        <div class="gen-nome">Johann Tetzel — Monge dominicano, Europa renascentista</div>
+        <div class="gen-desc">Viajava por vilarejos apavorando camponeses analfabetos com descrições gráficas do fogo do purgatório. Afirmava que as almas de familiares falecidos gritavam por socorro. Produto: cartas de indulgências papais. Acesso bloqueado por barreira financeira — quem não pagava permanecia no desespero espiritual.</div>
+        <div class="gen-frase">"Assim que a moeda no cofre cai, a alma do purgatório sai."</div>
+      </div>
+    </div>
+
+    <div class="gen-row">
+      <div class="gen-era">Séc. XIX–XX</div>
+      <div class="gen-content">
+        <div class="gen-nome">Snake Oil Salesmen — EUA e Europa durante surtos epidêmicos</div>
+        <div class="gen-desc">Durante epidemias de cólera e peste, grupos espalhavam boatos de que médicos tradicionais "queriam ver a população arrebatada". Vendiam elixires com "fórmula secreta da imunidade". A receita e o frasco só eram entregues mediante moedas de prata. Estrutura idêntica: pânico → monopólio da solução → paywall.</div>
+      </div>
+    </div>
+
+    <div class="gen-row">
+      <div class="gen-era">1970s</div>
+      <div class="gen-content">
+        <div class="gen-nome">Jim Jones — Peoples Temple / Jonestown</div>
+        <div class="gen-desc">Usou o medo de uma "aniquilação iminente" para desestruturar psicologicamente seguidores nos EUA. Apresentou o templo e depois a colônia em Jonestown como "a única arca" geograficamente segura. Paywall não monetário: isolamento total, identidade substituída, custo de saída insuportável.</div>
+      </div>
+    </div>
+
+    <div class="gen-row">
+      <div class="gen-era">2000s–hoje</div>
+      <div class="gen-content">
+        <div class="gen-nome">Daniel Mastral / Olavo de Carvalho — Precursores diretos (Brasil)</div>
+        <div class="gen-desc">Transferência do modelo para o ecossistema evangélico-conspiratório brasileiro. Mastral: ex-ocultista "revelando segredos do satanismo" em livros (30+ títulos). Olavo: intelectual-guru com escola paga, discurso de "verdade que a universidade esconde". Nikolas e Daniel Lopez são herdeiros funcionais deste modelo — não precisa haver relação pessoal, apenas replicação do funil.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LACUNAS -->
+<section class="section">
+  <div class="section-tag">07 / Lacunas investigativas</div>
+  <div class="section-title">Perguntas em aberto — não documentadas</div>
+
+  <div class="lacunas">
+
+    <div class="lacuna-item">
+      <div class="lacuna-n">L1</div>
+      <div class="lacuna-q">Existe cadeia de financiamento entre a Destra Cursos LTDA e a estrutura de fundo de campanha de Nikolas para 2026? A empresa foi aberta um mês antes da eleição de 2022 — a trajetória financeira pós-eleição está documentada?</div>
+    </div>
+
+    <div class="lacuna-item">
+      <div class="lacuna-n">L2</div>
+      <div class="lacuna-q">Quantos inscritos a Arca de Daniel Lopez tem? A receita total é pública? Existe declaração à Receita Federal como pessoa jurídica ou os valores transitam como pessoa física (risco de omissão de renda)?</div>
+    </div>
+
+    <div class="lacuna-item">
+      <div class="lacuna-n">L3</div>
+      <div class="lacuna-q">O Intercept Brasil documentou que a Destra "não evangeliza, radicaliza". Existe mapeamento de quais candidatos de 2026 são apoiados pela rede de militantes formados pela Destra? A rede é centralizada ou distribuída?</div>
+    </div>
+
+    <div class="lacuna-item">
+      <div class="lacuna-n">L4</div>
+      <div class="lacuna-q">Existem outros operadores do padrão P12 com escala comparável não mapeados aqui? (canais com 500k+ inscritos + produto pago + narrativa de perseguição/censura como copy de vendas)</div>
+    </div>
+
+    <div class="lacuna-item">
+      <div class="lacuna-n">L5</div>
+      <div class="lacuna-q">A propagação dos canais IA-gerados (caso "Os Bastidores do Poder", Agência Lupa mai/2026) representa uma industrialização do P12? Se sim, o modelo de extração cognitiva deixa de depender de operador humano — implicações para a taxonomia.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTRAPONTO -->
+<section class="section">
+  <div class="section-tag">08 / Contraponto estrutural</div>
+  <div class="section-title">O antídoto documentável — acesso como princípio, não como produto</div>
+
+  <div class="pattern-def" style="border-left-color: var(--teal2);">
+    <div class="pattern-code" style="color: var(--teal2);">Princípio fundacional · Lawfare-Timeline</div>
+    <div class="pattern-name" style="font-size:17px;">Por que este projeto não tem arca, curso ou assinatura</div>
+    <div class="pattern-body">
+      O padrão P12 opera sobre uma condição estrutural: população com déficit de representação simbólica, herói ausente e soluções que não aparecem. Os operadores identificam esse déficit com precisão — e então o monetizam, transformando a carência em produto.
+    </div>
+    <div class="pattern-body">
+      O lawfare-timeline parte da mesma observação sobre o mesmo déficit — e faz a escolha inversa: publicação sob CC0 1.0 Universal (domínio público), sem paywall, sem assinatura, sem curso, sem "arca". O corpus é acessível a qualquer pessoa com conexão à internet, incluindo quem não tem R$297 para um curso de deputado nem R$1.300 para uma plataforma de pastor.
+    </div>
+    <div class="pattern-body" style="margin-bottom:0;">
+      Essa escolha não é apenas ética — é metodológica. Um projeto de documentação forense que cobra acesso às suas conclusões replica, em escala menor, o mesmo mecanismo que documenta: transforma informação em barreira. O contraditório seria irrecuperável. A gratuidade e o domínio público são, portanto, condições de integridade do corpus — não generosidade.
+    </div>
+  </div>
+
+  <div style="background:var(--bg2); border:1px solid var(--border2); padding:24px 28px; margin-top:2px;">
+    <div class="mec-label" style="margin-bottom:16px;">Distinção estrutural documentada</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:2px;">
+
+      <div style="background:var(--bg3); padding:18px 20px; border-left:2px solid var(--red);">
+        <div style="font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--red); margin-bottom:10px;">Operador P12</div>
+        <ul class="mec-items">
+          <li>Identifica déficit informacional real</li>
+          <li>Amplifica ansiedade até estado de dependência</li>
+          <li>Transforma solução em produto pago</li>
+          <li>Nunca entrega solução estrutural</li>
+          <li>Receita recorrente depende da continuidade do problema</li>
+          <li>Público-alvo: quem não tem recursos para pesquisar</li>
+        </ul>
+      </div>
+
+      <div style="background:var(--bg3); padding:18px 20px; border-left:2px solid var(--teal2);">
+        <div style="font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--teal2); margin-bottom:10px;">Lawfare-Timeline</div>
+        <ul class="mec-items">
+          <li>Identifica o mesmo déficit informacional</li>
+          <li>Documenta mecanismos sem amplificar pânico</li>
+          <li>Publica sob CC0 — domínio público irrevogável</li>
+          <li>Documenta lacunas e incertezas explicitamente</li>
+          <li>Sem receita recorrente — sem incentivo para manter o problema</li>
+          <li>Público-alvo: qualquer pessoa com acesso à internet</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div style="margin-top:20px; padding:16px 20px; background:rgba(29,158,117,.06); border:1px solid rgba(29,158,117,.2);">
+      <div style="font-family:'Crimson Pro',serif; font-size:15px; color:var(--ink2); line-height:1.75;">
+        "Um povo carente de informação e manipulado ideologicamente precisa de caridade e não de exploração. Caso contrário, eu mesmo estaria monetizando este projeto e tornando-o exclusivo para assinantes somente."
+        <div style="margin-top:8px; font-size:12px; color:var(--ink3); font-style:normal;">— Araguaci, fundador do lawfare-timeline · mai/2026</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div>
+    <a href="https://gosurf.site" target="_blank" style="color:var(--ink3);text-decoration:none;">gosurf.site</a>
+    · lawfare-timeline · CC0 1.0 Universal
+  </div>
+  <div class="footer-tags">
+    <span class="footer-tag">P12</span>
+    <span class="footer-tag">P07</span>
+    <span class="footer-tag">P12-B</span>
+    <span class="footer-tag">Captura Cognitiva</span>
+    <span class="footer-tag">2026</span>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

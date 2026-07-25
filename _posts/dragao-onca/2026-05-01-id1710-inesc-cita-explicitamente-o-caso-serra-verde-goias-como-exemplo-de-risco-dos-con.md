@@ -56,7 +56,7 @@ Esta é a confirmação mais direta, nesta rodada, de que a série "Dragão e On
 
 Entradas conectadas nesta série:
 
-- [Entrada 1707](/timeline/entries/1707)
+- [Entrada 1707](/posts/id1707-camara-aprova-o-pl-27802024-na-forma-do-substitutivo-fgam-de-r2bi-incentivos-de/)
 
 ---
 

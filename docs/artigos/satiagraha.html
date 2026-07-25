@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mapa Mental — Operação Satiagraha & Gilmar Mendes</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0b;
+    --surface: #111114;
+    --surface2: #16161a;
+    --border: #2a2a35;
+    --red: #c0392b;
+    --red-glow: #e74c3c;
+    --amber: #d4a017;
+    --amber-light: #f1c40f;
+    --blue: #2980b9;
+    --blue-light: #5dade2;
+    --green: #1e8449;
+    --green-light: #27ae60;
+    --gray: #7f8c8d;
+    --text: #dce1e7;
+    --text-dim: #8892a0;
+    --stamp-red: rgba(192,57,43,0.18);
+    --stamp-border: rgba(192,57,43,0.55);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Courier Prime', monospace;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Noise texture overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
+  }
+
+  /* HEADER */
+  .header {
+    position: relative;
+    z-index: 10;
+    padding: 40px 48px 32px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(180deg, rgba(192,57,43,0.06) 0%, transparent 100%);
+  }
+
+  .header-eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 12px;
+    opacity: 0.9;
+  }
+
+  .header-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(40px, 7vw, 80px);
+    letter-spacing: 4px;
+    color: var(--text);
+    line-height: 0.9;
+    margin-bottom: 8px;
+  }
+
+  .header-title span {
+    color: var(--red-glow);
+    text-shadow: 0 0 30px rgba(231,76,60,0.4);
+  }
+
+  .header-subtitle {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 2px;
+    margin-top: 16px;
+  }
+
+  .header-meta {
+    position: absolute;
+    top: 40px;
+    right: 48px;
+    text-align: right;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+    letter-spacing: 1px;
+    line-height: 2;
+  }
+
+  .stamp {
+    display: inline-block;
+    border: 2px solid var(--stamp-border);
+    background: var(--stamp-red);
+    color: var(--red);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 5px;
+    padding: 4px 16px;
+    transform: rotate(-8deg);
+    margin-top: 16px;
+  }
+
+  /* TIMELINE SECTION */
+  .section {
+    position: relative;
+    z-index: 10;
+    padding: 48px 48px;
+  }
+
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13px;
+    letter-spacing: 5px;
+    color: var(--amber);
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--amber) 0%, transparent 100%);
+    opacity: 0.3;
+  }
+
+  /* TIMELINE */
+  .timeline {
+    position: relative;
+    padding-left: 32px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--red) 0%, var(--amber) 30%, var(--blue) 60%, var(--red) 100%);
+    opacity: 0.5;
+  }
+
+  .tl-item {
+    position: relative;
+    margin-bottom: 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    left: -37px;
+    top: 20px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 2px solid var(--red);
+    transition: all 0.2s;
+    z-index: 2;
+  }
+
+  .tl-item:hover::before {
+    background: var(--red);
+    box-shadow: 0 0 12px var(--red-glow);
+    transform: scale(1.4);
+  }
+
+  .tl-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding: 18px 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--red);
+    transition: all 0.2s;
+    margin-bottom: 1px;
+  }
+
+  .tl-item:hover .tl-header {
+    background: var(--surface2);
+    border-color: rgba(192,57,43,0.5);
+    border-left-color: var(--red-glow);
+  }
+
+  .tl-date {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--amber);
+    letter-spacing: 2px;
+    white-space: nowrap;
+    min-width: 100px;
+  }
+
+  .tl-badge {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    padding: 2px 8px;
+    border-radius: 2px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .badge-red { background: rgba(192,57,43,0.15); color: var(--red-glow); border: 1px solid rgba(192,57,43,0.3); }
+  .badge-amber { background: rgba(212,160,23,0.15); color: var(--amber-light); border: 1px solid rgba(212,160,23,0.3); }
+  .badge-blue { background: rgba(41,128,185,0.15); color: var(--blue-light); border: 1px solid rgba(41,128,185,0.3); }
+  .badge-green { background: rgba(30,132,73,0.15); color: var(--green-light); border: 1px solid rgba(30,132,73,0.3); }
+  .badge-gray { background: rgba(127,140,141,0.15); color: #aab; border: 1px solid rgba(127,140,141,0.3); }
+
+  .tl-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+    flex: 1;
+    line-height: 1.4;
+  }
+
+  .tl-expand {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--gray);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .tl-item:hover .tl-expand { opacity: 1; }
+
+  .tl-body {
+    display: none;
+    padding: 16px 20px 20px;
+    background: rgba(17,17,20,0.8);
+    border: 1px solid rgba(42,42,53,0.5);
+    border-top: none;
+    border-left: 3px solid rgba(192,57,43,0.25);
+    margin-bottom: 16px;
+    animation: slideDown 0.2s ease;
+  }
+
+  .tl-body.open { display: block; }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .tl-body p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+  }
+
+  .tl-body p:last-child { margin-bottom: 0; }
+
+  .tl-body strong { color: var(--text); font-weight: 700; }
+
+  .tl-body .highlight {
+    display: inline-block;
+    background: rgba(192,57,43,0.1);
+    border-left: 2px solid var(--red);
+    padding: 4px 10px;
+    margin: 8px 0;
+    font-style: italic;
+    color: #bbb;
+    font-size: 12px;
+  }
+
+  /* NODES GRID */
+  .nodes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+  }
+
+  .node-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  .node-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+  }
+
+  .node-card.color-red::before { background: var(--red); }
+  .node-card.color-amber::before { background: var(--amber); }
+  .node-card.color-blue::before { background: var(--blue); }
+  .node-card.color-green::before { background: var(--green); }
+  .node-card.color-gray::before { background: var(--gray); }
+
+  .node-card:hover {
+    background: var(--surface2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  }
+
+  .node-id {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--gray);
+    margin-bottom: 10px;
+    opacity: 0.7;
+  }
+
+  .node-name {
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+
+  .node-role {
+    font-size: 11px;
+    color: var(--text-dim);
+    margin-bottom: 12px;
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  .node-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 12px;
+  }
+
+  .node-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    padding: 2px 7px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--text-dim);
+    letter-spacing: 0.5px;
+  }
+
+  .node-detail {
+    font-size: 11px;
+    color: #666;
+    line-height: 1.6;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 10px;
+    margin-top: 4px;
+  }
+
+  /* CRIMES SECTION */
+  .crimes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+  }
+
+  .crime-item {
+    border: 1px solid var(--border);
+    padding: 14px 16px;
+    background: var(--surface);
+    position: relative;
+  }
+
+  .crime-item::after {
+    content: attr(data-num);
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: rgba(255,255,255,0.04);
+    line-height: 1;
+  }
+
+  .crime-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--red-glow);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .crime-desc {
+    font-size: 11px;
+    color: var(--text-dim);
+    line-height: 1.6;
+  }
+
+  /* CONSEQUENCES */
+  .consequences {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  @media (max-width: 700px) {
+    .consequences { grid-template-columns: 1fr; }
+    .header { padding: 28px 20px; }
+    .section { padding: 32px 20px; }
+    .header-meta { display: none; }
+  }
+
+  .consequence-block {
+    border: 1px solid var(--border);
+    padding: 20px;
+    background: var(--surface);
+  }
+
+  .consequence-block h4 {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .consequence-block h4.red { color: var(--red-glow); }
+  .consequence-block h4.amber { color: var(--amber-light); }
+
+  .consequence-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .consequence-list li {
+    font-size: 12px;
+    color: var(--text-dim);
+    line-height: 1.6;
+    padding-left: 14px;
+    position: relative;
+  }
+
+  .consequence-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--border);
+  }
+
+  .consequence-list li strong { color: var(--text); }
+
+  /* FOOTER */
+  .footer {
+    position: relative;
+    z-index: 10;
+    padding: 24px 48px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+    opacity: 0.6;
+  }
+
+  /* Divider */
+  hr.divider {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    margin: 0 48px;
+  }
+
+  /* Intro box */
+  .intro-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--amber);
+    padding: 20px 24px;
+    margin-bottom: 40px;
+  }
+
+  .intro-box p {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.9;
+  }
+
+  .intro-box strong { color: var(--text); }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-eyebrow">◼ DOSSIÊ CLASSIFICADO · PODER JUDICIÁRIO BRASILEIRO</div>
+  <div class="header-title">OPERAÇÃO<br><span>SATIAGRAHA</span></div>
+  <div class="header-title" style="font-size: clamp(22px, 3vw, 36px); color: var(--text-dim); letter-spacing: 6px; margin-top: 4px;">& GILMAR MENDES</div>
+  <div class="header-subtitle">CRONOLOGIA COMPLETA · PERSONAGENS · CRIMES · CONSEQUÊNCIAS · 2004–2015</div>
+  <div class="header-meta">
+    <div>CLASSIFICAÇÃO: PÚBLICO</div>
+    <div>ORIGEM: POLÍCIA FEDERAL / STF</div>
+    <div>PERÍODO: 2004 – 2015</div>
+    <div class="stamp">ANULADO</div>
+  </div>
+</header>
+
+<!-- INTRO -->
+<section class="section" style="padding-bottom: 0;">
+  <div class="intro-box">
+    <p>
+      A <strong>Operação Satiagraha</strong> foi uma investigação da Polícia Federal iniciada em 2004 contra uma organização criminosa voltada a crimes no mercado financeiro. Em 8 de julho de 2008, a operação resultou na prisão do banqueiro <strong>Daniel Dantas</strong> (Grupo Opportunity), do investidor <strong>Naji Nahas</strong> e do ex-prefeito de São Paulo <strong>Celso Pitta</strong>. Menos de 48 horas depois, o então presidente do STF, ministro <strong>Gilmar Mendes</strong>, concedeu dois habeas corpus sucessivos ao banqueiro, gerando uma das maiores crises institucionais do Judiciário brasileiro. A operação foi declarada <strong>ilegal</strong> pelo STJ em 2011 e a anulação foi confirmada pelo STF em 2015.
+    </p>
+  </div>
+</section>
+
+<!-- CRONOLOGIA -->
+<section class="section">
+  <div class="section-title">◼ CRONOLOGIA — LINHA DO TEMPO COMPLETA</div>
+
+  <div class="timeline">
+
+    <div class="tl-item" onclick="toggle(this)">
+      <div class="tl-header">
+        <span class="tl-date">2004–2007</span>
+        <span class="tl-badge badge-blue">FASE PRÉ-OPERAÇÃO</span>
+        <span class="tl-title">Investigação sigilosa é iniciada pelo Del. Protógenes Queiroz</span>
+        <span class="tl-expand">[+]</span>
+      </div>
+      <div class="tl-body">
+        <p>O delegado federal <strong>Protógenes Queiroz</strong>, da Delegacia de Repressão a Crimes Financeiros (DELEFIN) em São Paulo, inicia investigações sigilosas sobre o <strong>Grupo Opportunity</strong> de Daniel Dantas, suspeito de lavagem de dinheiro, evasão de divisas, corrupção e crime organizado no setor de telecomunicações.</p>
+        <p>O procurador da República <strong>Rodrigo de Grandis</strong> acompanha a investigação integralmente. Conforme declarou depois, Daniel Dantas e Naji Nahas comandavam <strong>duas organizações distintas</strong>, ambas voltadas a crimes no mercado financeiro.</p>
+        <p>A investigação revela que Dantas teria conexões com parlamentares de ambos os lados do espectro político — tanto da oposição quanto da situação — o que explica o silêncio do Congresso quando a operação eclodiu.</p>
+      </div>
+    </div>
+
+    <div class="tl-item" onclick="toggle(this)">
+      <div class="tl-header">
+        <span class="tl-date">08 JUL 2008</span>
+        <span class="tl-badge badge-red">DEFLAGRAÇÃO</span>
+        <span class="tl-title">300 agentes partem para as ruas em 4 estados — presos Dantas, Nahas e Pitta</span>
+        <span class="tl-expand">[+]</span>
+      </div>
+      <div class="tl-body">
+        <p>Na madrugada do dia 8 de julho de 2008, <strong>300 agentes da Polícia Federal</strong> são deslocados para São Paulo, Rio de Janeiro, Bahia e Distrito Federal. A operação é batizada de <strong>"Satiagraha"</strong> — palavra sânscrita adotada por Gandhi, que significa "força da verdade" ou "resistência não-violenta".</p>
+        <p>São presos: <strong>Daniel Dantas</strong> (banqueiro, dono do Grupo Opportunity), <strong>Naji Nahas</strong> (investidor libanês-brasileiro) e <strong>Celso Pitta</strong> (ex-prefeito de São Paulo). A paralisação de movimentação de ativos suspeitos é considerada <strong>a maior da história do Brasil</strong> até então.</p>
+        <p>O juiz federal <strong>Fausto De Sanctis</strong>, da 6ª Vara Criminal Federal de São Paulo, assina os mandados de prisão.</p>
+        <div class="highlight">"Uma nova era na Justiça do país, em que os grandes criminosos financeiros seriam punidos." — percepção inicial da operação</div>
+      </div>
+    </div>
+
+    <div class="tl-item" onclick="toggle(this)">
+      <div class="tl-header">
+        <span class="tl-date">08–09 JUL 2008</span>
+        <span class="tl-badge badge-amber">GILMAR — 1º HC</span>
+        <span class="tl-title">Presidente do STF Gilmar Mendes concede primeiro habeas corpus a Dantas</span>
+        <span class="tl-expand">[+]</span>
+      </div>
+      <div class="tl-body">
+        <p>Antes mesmo de Dantas ser preso, sua defesa havia protocolado pedido de habeas corpus no STF. Como era período de recesso do Judiciário, o ministro <strong>Gilmar Mendes</strong> — presidente do STF e plantonista — recebe o pedido.</p>
+        <p>Mendes já havia declarado publicamente ser contra o que chamou de <strong>"espetacularização das prisões"</strong> por parte da Polícia Federal — antes de analisar o caso.</p>
+        <p>Apesar da <strong>Súmula 691</strong> do próprio STF, que veda a apreciação de habeas corpus contra decisões liminares de instâncias inferiores, Mendes acolhe o pedido, alegando <strong>"constrangimento ilegal"</strong> na decretação da prisão temporária. <strong>Dantas é solto menos de 24 horas depois de ser preso.</strong></p>
+      </div>
+    </div>
+
+    <div class="tl-item" onclick="toggle(this)">
+      <div class="tl-header">
+        <span class="tl-date">09 JUL 2008</span>
+        <span class="tl-badge badge-amber">GILMAR — 2º HC</span>
+        <span class="tl-title">Juiz De Sanctis manda prender Dantas de novo por suborno; Gilmar solta novamente</span>
+        <span class="tl-expand">[+]</span>
+      </div>
+      <div class="tl-body">
+        <p>Cerca de <strong>10 horas depois de sair da prisão</strong>, o juiz Fausto De Sanctis decreta nova prisão de Daniel Dantas — desta vez por <strong>tentativa de corrupção ativa</strong> contra um delegado da PF (o banqueiro teria tentado subornar um agente para ter seu nome retirado das investigações).</p>
+        <p>A defesa recorre novamente ao STF. Gilmar Mendes <strong>concede um segundo habeas corpus</strong> em menos de 72 horas, soltando Dantas pela segunda vez.</p>
+        <p>O STF, em plenário, por <strong>9 votos a 1</strong>, referenda a decisão de Mendes e garante a liberdade de Dantas, entendendo que a segunda prisão também havia sido decretada sem fundamentação adequada.</p>
+        <div class="highlight">"Gilmar Mendes concedeu dois habeas corpus a Daniel Dantas em menos de 72 horas." — descrição central do livro de Rubens Valente</div>
+      </div>
+    </div>
+
+    <div class="tl-item" onclick="toggle(this)">
+      <div class="tl-header">
+        <span class="tl-date">JUL 2008</span>
+        <span class="tl-badge badge-red">CRISE INSTITUCIONAL</span>
+        <span class="tl-title">Gilmar envia sentenças de De Sanctis ao CNJ; associações de magistrados reagem</span>
+        <span class="tl-expand">[+]</span>
+      </div>
+      <div class="tl-body">
+        <p>Após soltar os presos, Gilmar Mendes envia as decisões do juiz De Sanctis ao <strong>CNJ (Conselho Nacional de Justiça)</strong> — do qual ele próprio é presidente. A medida é vista como uma tentativa de pressão sobre o magistrado de primeira instância.</p>
+        <p>Associações de magistrados, de procuradores e de delegados federais <strong>reagem publicamente</strong> contra Mendes. Diversas entidades fazem ato público de apoio ao juiz De Sanctis e ao delegado Protógenes.</p>
+        <p>O deputado <strong>Raul Jungmann</strong> (PPS-PE), ele próprio investigado pelo MPF, entra com representação no CNJ contra De Sanctis por supostamente ter concedido senhas de acesso telefônico ilimitadas a agentes da PF na Satiagraha.</p>
+      </div>
+    </div>
+
+    <div class="tl-item" onclick="toggle(this)">
+      <div class="tl-header">
+        <span class="tl-date">14–16 JUL 2008</span>
+        <span class="tl-badge badge-amber">POLÍTICA</span>
+        <span class="tl-title">Reunião no Planalto com Lula, Gilmar Mendes e Tarso Genro; Protógenes é afastado</span>
+        <span class="tl-expand">[+]</span>
+      </div>
+      <div class="tl-body">
+        <p>Em 14 de julho, o presidente <strong>Lula</strong> reúne-se no Palácio do Planalto com o ministro do STF <strong>Gilmar Mendes</strong> e o ministro da Justiça <strong>Tarso Genro</strong>. Após a reunião, ambos dão coletiva à imprensa aparentemente alinhados — e o delegado <strong>Protógenes Queiroz</strong> é afastado do comando da investigação.</p>
+        <p>Em 16 de julho, diante da repercussão negativa do afastamento, Lula determina ao ministro Tarso Genro que acerte com a PF o retorno de Protógenes. A PF informa que Protógenes encerraria o relatório e se afastaria voluntariamente.</p>
+        <p>As declarações de Tarso Genro são contraditórias: ele havia dito na TV que o relatório "já estava pronto", enquanto a PF afirma que ainda seria finalizado.</p>
+      </div>
+    </div>
+
+    <div class="tl-item" onclick="toggle(this)">
+      <div class="tl-header">
+        <span class="tl-date">AGO 2008</span>
+        <span class="tl-badge badge-red">ESCÂNDALO ABIN</span>
+        <span class="tl-title">Revista Veja publica gravação de Gilmar Mendes sendo grampeado; crise na ABIN</span>
+        <span class="tl-expand">[+]</span>
+      </div>
+      <div class="tl-body">
+        <p>Em 9 de agosto de 2008, a <strong>revista Veja</strong> divulga a transcrição de trechos de uma conversa telefônica entre o ministro <strong>Gilmar Mendes</strong> e o senador <strong>Demóstenes Torres</strong> (DEM-GO), sugerindo que a ABIN havia grampeado o telefone do presidente do STF.</p>
+        <p>A suspeita recai sobre a cooperação entre <strong>ABIN e PF</strong> durante a Satiagraha — agentes da ABIN teriam participado ilegalmente da investigação, usando as mesmas senhas de monitoramento concedidas pelo juiz De Sanctis à PF. Documentos apreendidos nas casas de agentes da ABIN apontam os bastidores da relação entre a agência e a equipe de Protógenes.</p>
+        <p>Outras autoridades supostamente grampeadas: senadores <strong>Arthur Virgílio, Álvaro Dias, Tasso Jereissati, Tião Viana</strong>, presidente do Senado <strong>Garibaldi Alves</strong> e ministro do STF <strong>Marco Aurélio Mello</strong>.</p>
+        <p>Tanto a PF quanto o GSI abrem sindicâncias internas. A apuração do GSI é encerrada por <strong>falta de provas</strong>. Nenhuma autoria é confirmada.</p>
+      </div>
+    </div>
+
+    <div class="tl-item" onclick="toggle(this)">
+      <div class="tl-header">
+        <span class="tl-date">SET 2008</span>
+        <span class="tl-badge badge-amber">ABIN DESMANTELADA</span>
+        <span class="tl-title">Lula exonera Paulo Lacerda e afasta toda a cúpula da ABIN</span>
+        <span class="tl-expand">[+]</span>
+      </div>
+      <div class="tl-body">
+        <p>Após Gilmar Mendes acusar funcionários da ABIN de terem grampeado seu telefone, o presidente <strong>Lula exonera o diretor-geral Paulo Lacerda</strong> e determina o afastamento de <strong>toda a cúpula da Agência Brasileira de Inteligência</strong>.</p>
+        <p>Na CPI das Escutas, o próprio <strong>Daniel Dantas</strong> declara que a Satiagraha foi articulada pela ABIN como represália a um suposto dossiê que teria elaborado contra Paulo Lacerda — ex-diretor da PF e então diretor-geral da ABIN.</p>
+        <p>Confirma-se que um agente aposentado do extinto <strong>SNI (Serviço Nacional de Informações)</strong>, Francisco Ambrósio do Nascimento, participou das investigações da Satiagraha a partir de uma sala na sede da PF em Brasília.</p>
+      </div>
+    </div>
+
+    <div class="tl-item" onclick="toggle(this)">
+      <div class="tl-header">
+        <span class="tl-date">2008–2010</span>
+        <span class="tl-badge badge-gray">INVESTIGADOS VIRAM INVESTIGADORES</span>
+        <span class="tl-title">Protógenes é indiciado; De Sanctis transferido; CPI das Escutas investigada</span>
+        <span class="tl-expand">[+]</span>
+      </div>
+      <div class="tl-body">
+        <p>Em uma inversão simbólica, os principais investigadores da Satiagraha <strong>passam a ser os investigados</strong>. O delegado Amaro Ferreira, que preside o inquérito sobre vazamentos, aponta Protógenes por ter compartilhado informações com a ABIN sem respaldo superior da direção da PF.</p>
+        <p>O juiz <strong>Fausto De Sanctis</strong> recusa-se a prestar informações ao TRF, STJ e STF sob argumento de sigilo — atitude que posteriormente o STF considera "conduta indevida". De Sanctis é afastado de sua área de especialidade ao ser promovido a desembargador.</p>
+        <p>A <strong>CPI das Escutas</strong> investiga tanto o suposto grampo do gabinete do STF quanto a possível obstrução pela cúpula da PF às investigações de Protógenes.</p>
+      </div>
+    </div>
+
+    <div class="tl-item" onclick="toggle(this)">
+      <div class="tl-header">
+        <span class="tl-date">2011</span>
+        <span class="tl-badge badge-red">ANULAÇÃO — STJ</span>
+        <span class="tl-title">STJ declara a Operação Satiagraha inteiramente nula</span>
+        <span class="tl-expand">[+]</span>
+      </div>
+      <div class="tl-body">
+        <p>O <strong>Superior Tribunal de Justiça</strong> declara a Operação Satiagraha inteiramente nula e ilegal, confirmando os habeas corpus concedidos por Gilmar Mendes. As provas coletadas na investigação são integralmente descartadas.</p>
+        <p>O principal fundamento: a participação irregular de agentes da ABIN na investigação, sem autorização da cúpula da PF e sem respaldo legal. O delegado Protógenes teria cometido erro grave ao solicitar colaboração da inteligência sem o devido respaldo institucional.</p>
+        <p>Para críticos, os erros processuais de Protógenes — embora reais — <strong>jamais teriam a capacidade de levar à anulação</strong> em condições normais. Em circunstâncias ordinárias, as irregularidades seriam corrigidas sem afetar a validade das provas.</p>
+      </div>
+    </div>
+
+    <div class="tl-item" onclick="toggle(this)">
+      <div class="tl-header">
+        <span class="tl-date">OUT 2014</span>
+        <span class="tl-badge badge-amber">CONDENAÇÃO</span>
+        <span class="tl-title">STF condena Protógenes Queiroz por unanimidade; ex-delegado é expulso da PF</span>
+        <span class="tl-expand">[+]</span>
+      </div>
+      <div class="tl-body">
+        <p>Em 21 de outubro de 2014, o <strong>Supremo Tribunal Federal</strong> condena em votação unânime o ex-delegado <strong>Protógenes Queiroz</strong> por sua atuação na Satiagraha. A pena de 2 anos e 6 meses é convertida em prestação de serviços à comunidade.</p>
+        <p>Protógenes é <strong>expulso da Polícia Federal</strong>. Permanece investigado por prevaricação e corrupção. Notavelmente, ele havia sido eleito <strong>deputado federal</strong> após ser afastado da PF — tornando-se figura pública com mandato parlamentar.</p>
+        <p>O STF pontua que Protógenes "se negou a prestar informações pedidas pelo Supremo" e "dribrou a decisão do então presidente do STF, ministro Gilmar Mendes" durante o período em que ainda estava no comando da investigação.</p>
+      </div>
+    </div>
+
+    <div class="tl-item" onclick="toggle(this)">
+      <div class="tl-header">
+        <span class="tl-date">JUN 2015</span>
+        <span class="tl-badge badge-red">ENCERRAMENTO</span>
+        <span class="tl-title">STF ratifica STJ: Satiagraha definitivamente anulada</span>
+        <span class="tl-expand">[+]</span>
+      </div>
+      <div class="tl-body">
+        <p>Em 24 de junho de 2015, o <strong>Supremo Tribunal Federal</strong> ratifica a decisão do STJ. A Operação Satiagraha é oficialmente encerrada e declarada nula em definitivo. Todos os processos derivados da investigação original são encerrados.</p>
+        <p>Daniel Dantas, que havia sido acusado de múltiplos crimes financeiros e de tentativa de suborno, <strong>escapa de mais de 10 anos de prisão</strong>. O Grupo Opportunity continua operando no mercado financeiro brasileiro.</p>
+        <div class="highlight">"A Satiagraha foi anulada. Uma operação inteiramente acompanhada pelo MPF, com indícios sólidos de crimes, encerrada sem condenação." — síntese do desfecho</div>
+      </div>
+    </div>
+
+    <div class="tl-item" onclick="toggle(this)">
+      <div class="tl-header">
+        <span class="tl-date">2014–2021</span>
+        <span class="tl-badge badge-gray">PÓS-OPERAÇÃO</span>
+        <span class="tl-title">Livro "Operação Banqueiro" é publicado; Gilmar processa jornalista; Moraes intervém</span>
+        <span class="tl-expand">[+]</span>
+      </div>
+      <div class="tl-body">
+        <p>Em 2014, o jornalista <strong>Rubens Valente</strong> publica <em>"Operação Banqueiro: As Provas Secretas do Caso Satiagraha"</em> — 462 páginas de documentos e bastidores. O livro descreve como Daniel Dantas "escapou da prisão com apoio do STF" e dedica um capítulo inteiro à atuação de Gilmar Mendes.</p>
+        <p>Gilmar Mendes processa Valente e a editora por danos morais. Em fevereiro de 2019, o STJ fixa indenização de <strong>R$ 60 mil</strong>, a ser dividida entre o jornalista e a editora.</p>
+        <p>Em 2021, o ministro <strong>Alexandre de Moraes</strong> determina que Valente publique a petição de Gilmar Mendes e outra decisão judicial no corpo do livro, em nova edição. Valente declara publicamente que a medida equivale a <strong>"a morte do livro"</strong> e que se recusa a adulterar sua obra. O caso é considerado sem precedente na história do STF pelo próprio jornalista.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- PERSONAGENS -->
+<section class="section">
+  <div class="section-title">◼ PERSONAGENS CENTRAIS</div>
+  <div class="nodes-grid">
+
+    <div class="node-card color-red">
+      <div class="node-id">SUSPEITO #001</div>
+      <div class="node-name">DANIEL DANTAS</div>
+      <div class="node-role">Banqueiro · Fundador e controlador do Grupo Opportunity</div>
+      <div class="node-tags">
+        <span class="node-tag">PRESO 08/07/2008</span>
+        <span class="node-tag">SOLTO 2× EM 72H</span>
+        <span class="node-tag">ABSOLVIDO</span>
+      </div>
+      <div class="node-detail">Principal alvo da operação. Acusado de lavagem de dinheiro, corrupção, evasão de divisas e crime organizado no setor de telecomunicações (Brasil Telecom / Telemar). Solto duas vezes por Gilmar Mendes. A Satiagraha foi anulada antes de sua condenação definitiva.</div>
+    </div>
+
+    <div class="node-card color-amber">
+      <div class="node-id">MINISTRO STF</div>
+      <div class="node-name">GILMAR MENDES</div>
+      <div class="node-role">Presidente do STF em 2008 · Ministro plantonista no recesso</div>
+      <div class="node-tags">
+        <span class="node-tag">2× HABEAS CORPUS</span>
+        <span class="node-tag">PRESIDENTE STF/CNJ</span>
+        <span class="node-tag">CENTRO DA CRISE</span>
+      </div>
+      <div class="node-detail">Concedeu dois HC a Dantas em menos de 72h, violando a Súmula 691 do próprio STF. Presidente do CNJ para o qual encaminhou as sentenças do juiz De Sanctis. Acusou a ABIN de grampeá-lo. Processou o jornalista que narrou sua atuação no caso.</div>
+    </div>
+
+    <div class="node-card color-blue">
+      <div class="node-id">INVESTIGADOR #001</div>
+      <div class="node-name">DEL. PROTÓGENES QUEIROZ</div>
+      <div class="node-role">Delegado Federal · DELEFIN São Paulo · Responsável pela Satiagraha</div>
+      <div class="node-tags">
+        <span class="node-tag">AFASTADO JUL/2008</span>
+        <span class="node-tag">CONDENADO 2014</span>
+        <span class="node-tag">EXPULSO DA PF</span>
+      </div>
+      <div class="node-detail">Conduziu a investigação desde 2004. Afastado após reunião no Planalto com Lula e Gilmar Mendes. Investigado, indiciado e condenado pelo STF a 2,5 anos de pena. Expulso da PF. Ironia: foi eleito deputado federal pelo PCdoB-SP após o afastamento.</div>
+    </div>
+
+    <div class="node-card color-blue">
+      <div class="node-id">MAGISTRADO #001</div>
+      <div class="node-name">JUIZ FAUSTO DE SANCTIS</div>
+      <div class="node-role">Juiz Federal · 6ª Vara Criminal Federal de SP</div>
+      <div class="node-tags">
+        <span class="node-tag">ASSINOU MANDADOS</span>
+        <span class="node-tag">RECUSOU STF/STJ</span>
+        <span class="node-tag">PROMOVIDO/AFASTADO</span>
+      </div>
+      <div class="node-detail">Autorizou a operação e decretou as prisões. Decretou segunda prisão de Dantas por suborno 10h após a soltura. Recusou-se a prestar informações ao TRF, STJ e STF — conduta considerada "indevida" pelo CNJ. Promovido a desembargador mas afastado de sua área de especialidade.</div>
+    </div>
+
+    <div class="node-card color-red">
+      <div class="node-id">SUSPEITO #002</div>
+      <div class="node-name">NAJI NAHAS</div>
+      <div class="node-role">Investidor libanês-brasileiro · Mercado financeiro</div>
+      <div class="node-tags">
+        <span class="node-tag">PRESO 08/07/2008</span>
+        <span class="node-tag">OPERAÇÃO DISTINTA</span>
+      </div>
+      <div class="node-detail">Preso na mesma operação. Segundo o procurador Rodrigo de Grandis, chefiava uma organização criminosa distinta da de Dantas, mas igualmente voltada a crimes no mercado financeiro. Liberado subsequentemente.</div>
+    </div>
+
+    <div class="node-card color-red">
+      <div class="node-id">SUSPEITO #003</div>
+      <div class="node-name">CELSO PITTA</div>
+      <div class="node-role">Ex-prefeito de São Paulo (1997–2001)</div>
+      <div class="node-tags">
+        <span class="node-tag">PRESO 08/07/2008</span>
+        <span class="node-tag">EX-PREFEITO SP</span>
+      </div>
+      <div class="node-detail">Preso na deflagração da Satiagraha em São Paulo. Ex-prefeito ligado ao governo de Paulo Maluf. Sua prisão foi um dos elementos de maior impacto simbólico da operação.</div>
+    </div>
+
+    <div class="node-card color-green">
+      <div class="node-id">MINISTÉRIO PÚBLICO</div>
+      <div class="node-name">PROC. RODRIGO DE GRANDIS</div>
+      <div class="node-role">Procurador da República · Acompanhou toda a operação</div>
+      <div class="node-tags">
+        <span class="node-tag">MPF</span>
+        <span class="node-tag">TESTEMUNHO CHAVE</span>
+      </div>
+      <div class="node-detail">Único a acompanhar integralmente a operação pelo lado do Ministério Público. Declarou em entrevista posterior que Dantas e Nahas chefiavam organizações distintas, mas ambas criminosas, e que as irregularidades de Protógenes não justificariam a anulação em circunstâncias normais.</div>
+    </div>
+
+    <div class="node-card color-amber">
+      <div class="node-id">INTELIGÊNCIA</div>
+      <div class="node-name">PAULO LACERDA</div>
+      <div class="node-role">Diretor-geral da ABIN · Ex-diretor da PF</div>
+      <div class="node-tags">
+        <span class="node-tag">EXONERADO SET/2008</span>
+        <span class="node-tag">ABIN-PF COOPERAÇÃO</span>
+      </div>
+      <div class="node-detail">Acusado por Dantas de ter "encomendado" a Satiagraha como represália por dossiê. Exonerado por Lula após as denúncias de grampo ao STF. Toda a cúpula da ABIN foi afastada na sequência.</div>
+    </div>
+
+    <div class="node-card color-gray">
+      <div class="node-id">SENADOR</div>
+      <div class="node-name">DEMÓSTENES TORRES</div>
+      <div class="node-role">Senador · DEM-GO · Interlocutor de Gilmar Mendes</div>
+      <div class="node-tags">
+        <span class="node-tag">CONVERSA GRAMPEADA</span>
+        <span class="node-tag">VEJA AGO/2008</span>
+      </div>
+      <div class="node-detail">Aparece na conversa grampeada publicada pela Veja com Gilmar Mendes em 15 de julho de 2008. A revelação do grampo aprofundou a crise institucional e gerou investigações sobre o uso de equipamentos da PF e da ABIN.</div>
+    </div>
+
+    <div class="node-card color-gray">
+      <div class="node-id">JORNALISMO</div>
+      <div class="node-name">RUBENS VALENTE</div>
+      <div class="node-role">Repórter investigativo · Folha de São Paulo · Autor do livro</div>
+      <div class="node-tags">
+        <span class="node-tag">LIVRO 2014</span>
+        <span class="node-tag">CONDENADO R$60K</span>
+        <span class="node-tag">DECISÃO MORAES</span>
+      </div>
+      <div class="node-detail">Investigou o caso por mais de dois anos. Publicou "Operação Banqueiro" com 462 páginas de documentos e bastidores. Processado por Gilmar Mendes. Condenado em R$ 60 mil pelo STJ. Em 2021, Moraes ordenou que a petição de Gilmar fosse publicada no próprio livro — decisão inédita na história do STF.</div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CRIMES INVESTIGADOS -->
+<section class="section">
+  <div class="section-title">◼ CRIMES INVESTIGADOS NA SATIAGRAHA</div>
+  <div class="crimes-grid">
+    <div class="crime-item" data-num="01">
+      <div class="crime-title">Lavagem de Dinheiro</div>
+      <div class="crime-desc">Movimentação suspeita de ativos via estruturas offshore e empresas do Grupo Opportunity no mercado financeiro.</div>
+    </div>
+    <div class="crime-item" data-num="02">
+      <div class="crime-title">Corrupção Ativa</div>
+      <div class="crime-desc">Tentativa de suborno de delegado da PF para retirar o nome de Dantas das investigações. Base da segunda prisão decretada por De Sanctis.</div>
+    </div>
+    <div class="crime-item" data-num="03">
+      <div class="crime-title">Evasão de Divisas</div>
+      <div class="crime-desc">Transferências ilícitas de recursos ao exterior por meio de contas e estruturas no sistema financeiro internacional.</div>
+    </div>
+    <div class="crime-item" data-num="04">
+      <div class="crime-title">Crime Organizado</div>
+      <div class="crime-desc">Organização criminosa voltada especificamente a crimes no mercado de capitais e telecomunicações (Brasil Telecom).</div>
+    </div>
+    <div class="crime-item" data-num="05">
+      <div class="crime-title">Gestão Fraudulenta</div>
+      <div class="crime-desc">Irregularidades na gestão de fundos de investimento e empresas de telecomunicações sob controle do Opportunity.</div>
+    </div>
+    <div class="crime-item" data-num="06">
+      <div class="crime-title">Tráfico de Influência</div>
+      <div class="crime-desc">Suspeitas de financiamento irregular de campanhas políticas e relações com parlamentares da situação e da oposição.</div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CONSEQUÊNCIAS -->
+<section class="section">
+  <div class="section-title">◼ CONSEQUÊNCIAS E DESDOBRAMENTOS</div>
+  <div class="consequences">
+
+    <div class="consequence-block">
+      <h4 class="red">▸ PARA OS INVESTIGADORES</h4>
+      <ul class="consequence-list">
+        <li><strong>Del. Protógenes:</strong> afastado, investigado, indiciado, condenado, expulso da PF. Virou deputado federal.</li>
+        <li><strong>Juiz De Sanctis:</strong> desgastado institucionalmente, promovido a desembargador mas afastado de área penal/financeira.</li>
+        <li><strong>Paulo Lacerda (ABIN):</strong> exonerado. Cúpula inteira da ABIN afastada por Lula.</li>
+        <li><strong>Proc. Rodrigo de Grandis:</strong> permanece no MPF; é uma das únicas vozes a manter que as provas eram sólidas.</li>
+        <li><strong>Todos:</strong> de investigadores, passaram a ser os investigados — inversão completa de papéis.</li>
+      </ul>
+    </div>
+
+    <div class="consequence-block">
+      <h4 class="amber">▸ PARA DANTAS E O OPPORTUNITY</h4>
+      <ul class="consequence-list">
+        <li>Solto duas vezes em 72 horas. Nunca condenado pelos crimes da Satiagraha.</li>
+        <li>Evitou mais de 10 anos de prisão, segundo análise do livro de Rubens Valente.</li>
+        <li>A operação foi inteiramente anulada em 2011 (STJ) e 2015 (STF).</li>
+        <li>Grupo Opportunity continuou operando no mercado financeiro brasileiro.</li>
+        <li>Passou de acusado a acusador — movendo processos contra delegados e investigadores.</li>
+      </ul>
+    </div>
+
+    <div class="consequence-block">
+      <h4 class="red">▸ PARA O JUDICIÁRIO E INSTITUIÇÕES</h4>
+      <ul class="consequence-list">
+        <li>Crise profunda entre PF, STF, CNJ, ABIN e Presidência da República.</li>
+        <li>Questionamento sobre a aplicação seletiva da Súmula 691 pelo próprio STF.</li>
+        <li>Debate nacional sobre "espetacularização das prisões" vs. impunidade de poderosos.</li>
+        <li>CPI das Escutas criada no Congresso para apurar grampos e obstruções.</li>
+        <li>Silêncio do Congresso Nacional — notórias ligações de Dantas com parlamentares dos dois lados.</li>
+      </ul>
+    </div>
+
+    <div class="consequence-block">
+      <h4 class="amber">▸ PARA GILMAR MENDES</h4>
+      <ul class="consequence-list">
+        <li>Pedido de impeachment no Congresso — defendido pelo PSDB como "risco à democracia".</li>
+        <li>Acusação de ter seu gabinete grampeado — investigação encerrada sem provas.</li>
+        <li>Processou e obteve R$ 60K de indenização do jornalista autor do livro sobre o caso.</li>
+        <li>Obteve decisão de Alexandre de Moraes para inserir sua defesa no livro de Valente.</li>
+        <li>Permanece ministro do STF. Sua atuação na Satiagraha é tema recorrente em debates sobre o Judiciário.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- FOOTER -->
+<footer class="footer">
+  <span>MAPA MENTAL · OPERAÇÃO SATIAGRAHA · BRASIL 2008–2015</span>
+  <span>FONTES: WIKIPEDIA · JUSBRASIL · CARTA CAPITAL · CONJUR · CORREIO BRAZILIENSE · CNN BRASIL</span>
+</footer>
+
+<script>
+  function toggle(item) {
+    const body = item.querySelector('.tl-body');
+    const expand = item.querySelector('.tl-expand');
+    const isOpen = body.classList.contains('open');
+    body.classList.toggle('open', !isOpen);
+    if (expand) expand.textContent = isOpen ? '[+]' : '[−]';
+  }
+
+  // Stagger animation on load
+  document.querySelectorAll('.tl-item, .node-card, .crime-item').forEach((el, i) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(12px)';
+    el.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+    setTimeout(() => {
+      el.style.opacity = '1';
+      el.style.transform = 'translateY(0)';
+    }, 80 + i * 30);
+  });
+</script>
+
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

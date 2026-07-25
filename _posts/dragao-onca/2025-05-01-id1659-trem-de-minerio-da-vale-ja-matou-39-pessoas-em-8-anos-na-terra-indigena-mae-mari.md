@@ -54,7 +54,7 @@ Precedente concreto e mensurável (39 mortes/8 anos) do custo humano do modelo l
 
 Entradas conectadas nesta série:
 
-- [Entrada 1654](/timeline/entries/1654)
+- [Entrada 1654](/posts/id1654-governo-do-para-assina-protocolo-de-intencoes-com-a-cccc-para-a-ferrovia-do-para/)
 
 ---
 

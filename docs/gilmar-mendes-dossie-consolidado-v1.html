@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gilmar Mendes — Dossiê Consolidado 2008–2025 · lawfare-timeline</title>
+<meta name="description" content="152 eventos documentados · IDP · CBF · J&amp;F · Padrões P1/P3/P5 · Silêncio regulatório · Dossiê consolidado 2008–2025.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:     #080c10;
+  --bg1:    #0d1218;
+  --bg2:    #121820;
+  --bg3:    #1a2230;
+  --border: rgba(255,255,255,0.06);
+  --border2:rgba(255,255,255,0.12);
+  --fg:     #e8ecf0;
+  --fg2:    #8a9ab0;
+  --fg3:    #4a5a6a;
+  --red:    #e84040;
+  --red2:   rgba(232,64,64,0.15);
+  --amber:  #e8a020;
+  --amber2: rgba(232,160,32,0.15);
+  --blue:   #3090e8;
+  --blue2:  rgba(48,144,232,0.12);
+  --green:  #28c880;
+  --green2: rgba(40,200,128,0.12);
+  --purple: #a060e8;
+  --purple2:rgba(160,96,232,0.12);
+  --font-d: 'Syne', sans-serif;
+  --font-m: 'IBM Plex Mono', monospace;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-m);font-size:13px;line-height:1.6;min-height:100vh;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-track{background:var(--bg1)}
+::-webkit-scrollbar-thumb{background:var(--bg3);border-radius:2px}
+
+/* MASTHEAD — lawfare DS */
+.masthead{background:var(--bg1);border-bottom:1px solid var(--border2);padding:24px 20px;position:relative;overflow:hidden}
+@media(min-width:768px){.masthead{padding:32px 40px 24px}}
+.masthead::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--red),var(--amber),var(--purple));background-size:200% 100%;animation:scanline 3s linear infinite}
+@keyframes scanline{to{background-position:200% 0}}
+.masthead-inner{max-width:1400px;margin:0 auto}
+.header-badge{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--purple);background:var(--purple2);border:1px solid rgba(160,96,232,0.3);padding:3px 8px;border-radius:3px;margin-bottom:12px}
+.header-title{font-family:var(--font-d);font-size:clamp(24px,4vw,48px);font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--fg);margin-bottom:8px}
+.header-title span{color:var(--red)}
+.header-sub{font-size:12px;color:var(--fg2);margin-top:6px;max-width:720px;line-height:1.7}
+
+/* STATS */
+.stats-bar{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr));gap:12px;max-width:900px;margin-top:24px}
+.stat-card{background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:12px 16px}
+.stat-num{font-family:var(--font-d);font-size:22px;font-weight:700;letter-spacing:-0.02em}
+.stat-label{font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--fg3);margin-top:2px}
+.stat-red{color:var(--red)}
+.stat-amber{color:var(--amber)}
+.stat-blue{color:var(--blue)}
+.stat-purple{color:var(--purple)}
+.stat-green{color:var(--green)}
+
+/* STICKY NAV — lawfare DS nav-tabs */
+.nav-sticky{position:sticky;top:0;z-index:200;background:rgba(8,12,16,0.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1400px;margin:0 auto;display:flex;overflow-x:auto;scrollbar-width:none;padding:0 20px}
+@media(min-width:768px){.nav-inner{padding:0 40px}}
+.nav-inner::-webkit-scrollbar{display:none}
+.nav-tab{padding:14px 16px;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--fg3);cursor:pointer;border:none;background:none;border-bottom:2px solid transparent;white-space:nowrap;transition:color .15s,border-color .15s;font-family:var(--font-m);min-height:44px}
+.nav-tab:hover{color:var(--fg2)}
+.nav-tab.active{color:var(--fg);border-bottom-color:var(--red)}
+
+/* MAIN — single page, all sections visible */
+.main{max-width:1400px;margin:0 auto;padding:32px 20px 100px}
+@media(min-width:768px){.main{padding:32px 40px 100px}}
+.section{display:block;scroll-margin-top:72px;margin-bottom:56px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.section:last-of-type{border-bottom:none;margin-bottom:0}
+
+/* SECTION TITLE — lawfare DS */
+.section-title{font-family:var(--font-m);font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--fg3);border-bottom:1px solid var(--border);padding-bottom:8px;margin-bottom:24px;display:flex;align-items:center;gap:12px}
+.section-title::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--red);flex-shrink:0}
+
+/* TIMELINE */
+.timeline{position:relative;padding-left:32px}
+.timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:1px;background:var(--border2)}
+.tl-group{margin-bottom:32px}
+.tl-year{font-family:var(--font-d);font-size:16px;font-weight:700;color:var(--amber);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.tl-year::before{content:'';width:16px;height:16px;border-radius:50%;background:var(--amber);border:2px solid var(--bg);position:absolute;left:0}
+.tl-item{background:var(--bg1);border:1px solid var(--border);border-radius:6px;padding:14px 16px;margin-bottom:10px;position:relative;transition:border-color 0.2s}
+.tl-item:hover{border-color:var(--border2)}
+.tl-item::before{content:'';width:8px;height:8px;border-radius:50%;position:absolute;left:-28px;top:18px}
+.tl-item.red::before{background:var(--red)}
+.tl-item.amber::before{background:var(--amber)}
+.tl-item.blue::before{background:var(--blue)}
+.tl-item.purple::before{background:var(--purple)}
+.tl-item.green::before{background:var(--green)}
+.tl-date{font-size:10px;color:var(--fg3);letter-spacing:0.06em;margin-bottom:4px}
+.tl-title{font-family:var(--font-d);font-size:13px;font-weight:700;color:var(--fg);margin-bottom:4px}
+.tl-desc{font-size:12px;color:var(--fg2);line-height:1.6}
+.tl-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}
+.tag{font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:2px 7px;border-radius:3px}
+.tag-red{background:var(--red2);color:var(--red);border:1px solid rgba(232,64,64,0.3)}
+.tag-amber{background:var(--amber2);color:var(--amber);border:1px solid rgba(232,160,32,0.3)}
+.tag-blue{background:var(--blue2);color:var(--blue);border:1px solid rgba(48,144,232,0.3)}
+.tag-purple{background:var(--purple2);color:var(--purple);border:1px solid rgba(160,96,232,0.3)}
+.tag-green{background:var(--green2);color:var(--green);border:1px solid rgba(40,200,128,0.3)}
+
+/* GRID — 3 colunas em desktop */
+.grid2,.grid3,.pattern-grid,.silencio-grid,.hc-year-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px}
+@media(max-width:960px){.grid2,.grid3,.pattern-grid,.silencio-grid,.hc-year-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid2,.grid3,.pattern-grid,.silencio-grid,.hc-year-grid{grid-template-columns:1fr}}
+.card{background:var(--bg1);border:1px solid var(--border);border-radius:6px;padding:18px;display:flex;flex-direction:column;height:100%}
+.card-title{font-family:var(--font-d);font-size:14px;font-weight:700;color:var(--fg);margin-bottom:8px}
+.card-body{font-size:12px;color:var(--fg2);line-height:1.7;flex:1}
+.card-accent-red{border-left:3px solid var(--red)}
+.card-accent-amber{border-left:3px solid var(--amber)}
+.card-accent-blue{border-left:3px solid var(--blue)}
+.card-accent-purple{border-left:3px solid var(--purple)}
+.card-accent-green{border-left:3px solid var(--green)}
+
+/* HABEAS CORPUS */
+.hc-intro{margin-bottom:28px}
+.hc-year{font-family:var(--font-d);font-size:18px;font-weight:800;color:var(--red);letter-spacing:-0.02em;margin:40px 0 16px;padding-bottom:8px;border-bottom:1px solid var(--border2)}
+.hc-year:first-child{margin-top:0}
+.hc-year-grid{margin-bottom:8px}
+.hc-card .card-title{font-size:13px;line-height:1.35}
+.hc-date{font-size:10px;color:var(--fg3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px}
+.hc-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:12px}
+.hc-sources{margin-top:12px;padding-top:10px;border-top:1px solid var(--border);font-size:10px;line-height:1.8}
+.hc-sources a{color:var(--blue);text-decoration:none}
+.hc-sources a:hover{color:var(--fg);text-decoration:underline}
+.hc-src-sep{color:var(--fg3);margin:0 4px}
+
+/* EVIDENCIA */
+.ev-block{background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:14px 16px;margin-bottom:12px}
+.ev-label{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:6px}
+.ev-confirmed{color:var(--red)}
+.ev-inference{color:var(--amber)}
+.ev-alleged{color:var(--blue)}
+.ev-text{font-size:12px;color:var(--fg2);line-height:1.7}
+.ev-source{font-size:10px;color:var(--fg3);margin-top:6px}
+
+/* PADROES */
+.pattern-grid{margin-bottom:24px}
+.pattern-card{background:var(--bg1);border:1px solid var(--border);border-radius:6px;padding:14px;height:100%}
+.pattern-id{font-family:var(--font-d);font-size:18px;font-weight:800;margin-bottom:4px}
+.pattern-name{font-size:12px;font-weight:600;color:var(--fg);margin-bottom:6px}
+.pattern-desc{font-size:11px;color:var(--fg2);line-height:1.6}
+.pattern-instances{font-size:10px;color:var(--fg3);margin-top:8px;border-top:1px solid var(--border);padding-top:8px}
+
+/* FINANCEIRO */
+.fin-table{width:100%;border-collapse:collapse;margin-bottom:24px;font-size:12px}
+.fin-table th{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--fg3);text-align:left;padding:8px 12px;border-bottom:1px solid var(--border2)}
+.fin-table td{padding:10px 12px;border-bottom:1px solid var(--border);color:var(--fg2);vertical-align:top}
+.fin-table tr:hover td{background:var(--bg2)}
+.fin-valor{color:var(--amber);font-weight:600}
+
+/* ANÁLISE REGULATÓRIA */
+.question-block{background:var(--bg1);border:1px solid var(--border);border-radius:6px;padding:20px;margin-bottom:16px}
+.question-title{font-family:var(--font-d);font-size:15px;font-weight:700;color:var(--amber);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.question-body{font-size:12px;color:var(--fg2);line-height:1.8}
+.question-body p{margin-bottom:10px}
+.question-body strong{color:var(--fg);font-weight:600}
+.lacuna{background:var(--amber2);border:1px solid rgba(232,160,32,0.3);border-radius:4px;padding:3px 8px;font-size:10px;font-weight:600;color:var(--amber);display:inline-block;letter-spacing:0.06em}
+
+/* SILENCIO */
+.silencio-grid{margin-bottom:24px}
+.silencio-card{background:var(--bg1);border:1px solid var(--border);border-radius:6px;padding:16px;height:100%}
+.silencio-org{font-family:var(--font-d);font-size:13px;font-weight:700;margin-bottom:8px}
+.silencio-status{font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:2px 7px;border-radius:3px;margin-bottom:10px;display:inline-block}
+.status-omissao{background:var(--red2);color:var(--red);border:1px solid rgba(232,64,64,0.3)}
+.status-parcial{background:var(--amber2);color:var(--amber);border:1px solid rgba(232,160,32,0.3)}
+.status-ok{background:var(--green2);color:var(--green);border:1px solid rgba(40,200,128,0.3)}
+.silencio-text{font-size:11px;color:var(--fg2);line-height:1.6}
+
+/* ALERT */
+.alert{border-radius:6px;padding:14px 16px;margin-bottom:16px;font-size:12px;line-height:1.7}
+.alert-red{background:var(--red2);border:1px solid rgba(232,64,64,0.3);color:var(--fg2)}
+.alert-amber{background:var(--amber2);border:1px solid rgba(232,160,32,0.3);color:var(--fg2)}
+.alert-blue{background:var(--blue2);border:1px solid rgba(48,144,232,0.3);color:var(--fg2)}
+.alert a{color:var(--blue);text-decoration:none}
+.alert a:hover{color:var(--fg);text-decoration:underline}
+.alert strong{color:var(--fg)}
+
+/* INFLEXAO */
+.inflexao{background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:24px;margin:24px 0;text-align:center}
+.inflexao-num{font-family:var(--font-d);font-size:48px;font-weight:800;color:var(--red);letter-spacing:-0.04em;line-height:1}
+.inflexao-label{font-size:12px;color:var(--fg2);margin-top:8px}
+
+/* GO TOP */
+.gotop{position:fixed;bottom:24px;right:24px;width:44px;height:44px;background:var(--bg2);border:1px solid var(--border2);color:var(--red);border-radius:4px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:1000;opacity:0;pointer-events:none;transition:opacity .25s,transform .15s,border-color .15s;font-family:var(--font-d);font-size:18px;font-weight:700}
+.gotop.show{opacity:1;pointer-events:auto}
+.gotop:hover{background:var(--bg3);border-color:var(--red);transform:translateY(-2px)}
+
+/* FOOTER — lawfare DS */
+.footer{margin-top:48px;padding:20px;border-top:1px solid var(--border);max-width:1400px;margin-left:auto;margin-right:auto;text-align:center;font-size:11px;color:var(--fg3);line-height:1.8}
+@media(min-width:768px){.footer{padding:20px 40px}}
+.footer a{color:var(--blue);text-decoration:none}
+.footer a:hover{color:var(--fg)}
+
+@media(max-width:600px){
+  .nav-tab{padding:12px 12px;font-size:10px}
+  .gotop{bottom:16px;right:16px;width:40px;height:40px}
+}
+
+@media print{
+  body{background:#fff;color:#111}
+  .nav-sticky,.gotop{display:none!important}
+  .section{page-break-inside:avoid;scroll-margin-top:0;border-bottom:none}
+  :root{--bg:#fff;--bg1:#f8f8f8;--bg2:#f0f0f0;--bg3:#e8e8e8;--border:rgba(0,0,0,.12);--border2:rgba(0,0,0,.2);--fg:#111;--fg2:#444;--fg3:#888}
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="header-badge">Dossiê Investigativo · lawfare-timeline · CC0 1.0</div>
+    <h1 class="header-title">Gilmar Mendes<span> — Poder &amp; Omissão</span></h1>
+    <p class="header-sub">152 eventos documentados · IDP · CBF · J&amp;F · Itaipu · Padrões P1/P3/P5 · Silêncio dos órgãos reguladores · 2008–2025</p>
+    <div class="stats-bar">
+      <div class="stat-card"><div class="stat-num stat-amber">152</div><div class="stat-label">Eventos doc.</div></div>
+      <div class="stat-card"><div class="stat-num stat-red">R$46M+</div><div class="stat-label">Fluxo fin. IDP</div></div>
+      <div class="stat-card"><div class="stat-num stat-purple">0</div><div class="stat-label">Processos disciplinares</div></div>
+      <div class="stat-card"><div class="stat-num stat-amber">84%</div><div class="stat-label">Receita CBF/IDP</div></div>
+      <div class="stat-card"><div class="stat-num stat-blue">17</div><div class="stat-label">HC polêmicos (Lava Jato)</div></div>
+    </div>
+  </div>
+</header>
+
+<nav class="nav-sticky" aria-label="Seções do dossiê">
+  <div class="nav-inner">
+    <button type="button" class="nav-tab active" data-target="cronologia">01 · Cronologia</button>
+    <button type="button" class="nav-tab" data-target="financeiro">02 · Financeiro</button>
+    <button type="button" class="nav-tab" data-target="padroes">03 · Padrões</button>
+    <button type="button" class="nav-tab" data-target="regulatorio">04 · Regulatório</button>
+    <button type="button" class="nav-tab" data-target="silencio">05 · Silêncio</button>
+    <button type="button" class="nav-tab" data-target="habeas-corpus">06 · Habeas Corpus</button>
+    <button type="button" class="nav-tab" data-target="lacunas">07 · Diagnóstico</button>
+  </div>
+</nav>
+
+<main class="main">
+
+<!-- ===================== CRONOLOGIA ===================== -->
+<section id="cronologia" class="section">
+  <div class="section-title">Linha do Tempo · 2008–2025</div>
+
+  <div class="alert alert-amber"><strong>Nota metodológica:</strong> Eventos classificados em três níveis: <span class="tag tag-red">ev-confirmed</span> = fontes primárias verificadas · <span class="tag tag-amber">ev-inference</span> = correlação temporal documentada · <span class="tag tag-blue">ev-alleged</span> = alegado por fontes secundárias sem refutação pública.</div>
+
+  <div class="timeline">
+
+    <!-- 2008 -->
+    <div class="tl-group">
+      <div class="tl-year">2008 — Satiagraha: o padrão inaugural</div>
+      <div class="tl-item red">
+        <div class="tl-date">09/07/2008 · Brasília</div>
+        <div class="tl-title">HC duplo para Daniel Dantas em 48 horas</div>
+        <div class="tl-desc">Operação Satiagraha (PF/Protasio). Dantas preso por crimes financeiros. Gilmar concede HC em menos de 48h, depois reforça com segundo HC após nova prisão decretada por Fausto De Sanctis. Episódio inaugural do padrão de intervenção monocrática em operações federais.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">P1 · Blindagem HC</span><span class="tag tag-red">CRÍTICO</span></div>
+      </div>
+      <div class="tl-item amber">
+        <div class="tl-date">01/2008 · Nacional</div>
+        <div class="tl-title">HC múltiplos — Operação Navalha</div>
+        <div class="tl-desc">Concedidos HCs a Vicente Vasconcelos Coni, Zuleido Soares Veras, Maria de Fátima Cesar Palmeira, João Manoel S. Barros e Abelardo Soares L. — todos investigados no escândalo de licitações do governo Lula I.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">P1</span></div>
+      </div>
+    </div>
+
+    <!-- 2009-2013 -->
+    <div class="tl-group">
+      <div class="tl-year">2009–2013 — Casos de alto perfil</div>
+      <div class="tl-item amber">
+        <div class="tl-date">23/12/2009</div>
+        <div class="tl-title">HC para Roger Abdelmassih (1ª vez)</div>
+        <div class="tl-desc">Revogada prisão preventiva de médico acusado de dezenas de crimes sexuais. Gerou indignação pública. Em 2023, concederia novo HC revogando nova preventiva.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">P1</span><span class="tag tag-amber">Caso de Alto Perfil</span></div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">25/01/2010</div>
+        <div class="tl-title">Direito ao silêncio — CTIS / DF</div>
+        <div class="tl-desc">Garantido direito ao silêncio para empresário citado em escândalo de corrupção no Distrito Federal.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-blue">Corrupção DF</span></div>
+      </div>
+      <div class="tl-item amber">
+        <div class="tl-date">01/07/2010</div>
+        <div class="tl-title">Suspensão da Ficha Limpa para Heráclito Fortes</div>
+        <div class="tl-desc">Suspensa aplicação da Lei da Ficha Limpa para candidato ficha-suja. Decisão controversa com efeito eleitoral direto.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-purple">P3 · Impacto Eleitoral</span></div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">05/06/2013</div>
+        <div class="tl-title">HC — Prisão preventiva com fundamentação insuficiente</div>
+        <div class="tl-desc">Padrão de liberação por deficiência de fundamentação — que se tornaria instrumento recorrente para liberação de investigados da Lava Jato.</div>
+        <div class="tl-tags"><span class="tag tag-amber">ev-inference</span><span class="tag tag-red">P1</span></div>
+      </div>
+    </div>
+
+    <!-- 2015-2016 -->
+    <div class="tl-group">
+      <div class="tl-year">2015–2016 — J&amp;F, Lava Jato e o financiamento do IDP</div>
+      <div class="tl-item red">
+        <div class="tl-date">2015–2016 · IDP / J&amp;F</div>
+        <div class="tl-title">R$ 2,1 milhões da J&amp;F para o IDP (de R$ 7,5M totais 2008–2016)</div>
+        <div class="tl-desc">J&amp;F (JBS) patrocina eventos e bolsas do IDP. Coordenado pelo diretor jurídico Francisco de Assis com cláusula de confidencialidade. Em 2017, após delações, IDP devolve R$ 650 mil. Família de Gilmar também vende gado à JBS (reconhecido pelo próprio).</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-amber">P5 · Captura Financeira</span><span class="tag tag-red">Conflito de Interesses</span></div>
+      </div>
+      <div class="tl-item amber">
+        <div class="tl-date">18/09/2015 · Brasília</div>
+        <div class="tl-title">Declarações polêmicas sobre pacote fiscal e Petrobras</div>
+        <div class="tl-desc">7 declarações polêmicas sobre pacote fiscal e corrupção na Petrobrás. Mesmo período em que IDP recebia patrocínios de empresas com litígios no STF.</div>
+        <div class="tl-tags"><span class="tag tag-amber">ev-inference</span><span class="tag tag-amber">Declaração</span></div>
+      </div>
+      <div class="tl-item purple">
+        <div class="tl-date">18/03/2016 · Brasília</div>
+        <div class="tl-title">Suspende posse de Lula como ministro da Casa Civil</div>
+        <div class="tl-desc">Suspensa a posse de Lula como ministro de Dilma, alegando desvio de finalidade — em contexto de impeachment e pressão política máxima. Decisão monocrática de grande impacto político.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-purple">P3 · Monocrática</span><span class="tag tag-red">CRÍTICO</span></div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">18/04/2016 · São Paulo</div>
+        <div class="tl-title">Roda Viva: impeachment</div>
+        <div class="tl-desc">Entrevista sobre processo de impeachment de Dilma Rousseff. Mesmo mês da suspensão da posse de Lula.</div>
+        <div class="tl-tags"><span class="tag tag-blue">ev-confirmed</span><span class="tag tag-blue">Entrevista</span></div>
+      </div>
+      <div class="tl-item amber">
+        <div class="tl-date">01/06/2016 · Brasília</div>
+        <div class="tl-title">Jantar no STJ com apoiadores do impeachment</div>
+        <div class="tl-desc">Participou de jantar oferecido pelo presidente do STJ com juízes e políticos apoiadores do impeachment. Articulação interinstitucional documentada.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-amber">Jantar Político</span></div>
+      </div>
+    </div>
+
+    <!-- 2017 -->
+    <div class="tl-group">
+      <div class="tl-year">2017 — Temer, Odebrecht, Itaipu e HC para investigados</div>
+      <div class="tl-item red">
+        <div class="tl-date">16/03/2017 · Casa de Gilmar, Brasília</div>
+        <div class="tl-title">Jantar em sua casa: Temer, Aécio, Serra — todos na lista Odebrecht</div>
+        <div class="tl-desc">Ofereceu jantar em sua residência a Michel Temer, Aécio Neves, José Serra e outros citados na lista de propinas da Odebrecht. Evento documentado, sem declaração pública de justificativa institucional.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">Conflito Grave</span><span class="tag tag-amber">P5</span></div>
+      </div>
+      <div class="tl-item amber">
+        <div class="tl-date">22/01/2017 · Palácio do Jaburu</div>
+        <div class="tl-title">Jantar com Temer: quadro político e morte de Teori</div>
+        <div class="tl-desc">Reunião com presidente da República para discutir cenário político após morte do relator da Lava Jato Teori Zavascki. Reunião fora da normalidade institucional.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">Conflito Grave</span></div>
+      </div>
+      <div class="tl-item red">
+        <div class="tl-date">2017 · IDP / Itaipu</div>
+        <div class="tl-title">Itaipu patrocina R$ 1,5M em evento IDP. Ex-esposa nomeada ao conselho</div>
+        <div class="tl-desc">Itaipu Binacional destinou ~R$ 1,5M para evento jurídico co-organizado por IDP/FGV em Lisboa. No mesmo período, Samantha Ribeiro Meyer (ex-esposa) foi nomeada para o Conselho da Itaipu. Itaipu posteriormente cancelou patrocínios sob nova gestão.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">Conflito de Interesses</span><span class="tag tag-amber">P5 · Captura</span></div>
+      </div>
+      <div class="tl-item red">
+        <div class="tl-date">01/08/2017 · Nacional</div>
+        <div class="tl-title">Múltiplos HC para Jacob Barata Filho (Lava Jato RJ)</div>
+        <div class="tl-desc">Concedidos múltiplos habeas corpus para o "Rei do Ônibus" na Lava Jato do Rio de Janeiro, gerando controvérsias por conexões pessoais documentadas entre Barata e Gilmar.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">P1 · HC Lava Jato</span><span class="tag tag-red">CRÍTICO</span></div>
+      </div>
+      <div class="tl-item amber">
+        <div class="tl-date">27/06/2017</div>
+        <div class="tl-title">Encontro fora da agenda com Temer: reforma política e sucessão PGR</div>
+        <div class="tl-desc">Encontro na casa de Gilmar com Michel Temer para discutir reforma política e escolha do próximo Procurador-Geral da República. Violação do protocolo de separação entre poderes.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">Violação Protocolar</span></div>
+      </div>
+      <div class="tl-item amber">
+        <div class="tl-date">2017–2018 · IDP / Souza Cruz</div>
+        <div class="tl-title">Patrocínios ocultos: Souza Cruz R$ 2,4M · Febraban R$ 50 mil</div>
+        <div class="tl-desc">Documentos internos obtidos por Crusoé revelaram patrocínios com cláusulas de confidencialidade de Souza Cruz (R$ 2,4M desde 2011) e Febraban (R$ 50k) ao IDP. Ambas com processos no STF no período.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">Patrocínio Oculto</span><span class="tag tag-red">Conflito de Interesses</span></div>
+      </div>
+    </div>
+
+    <!-- 2018-2019 -->
+    <div class="tl-group">
+      <div class="tl-year">2018–2019 — HC sistêmicos contra a Lava Jato</div>
+      <div class="tl-item red">
+        <div class="tl-date">01/06/2018 · Nacional</div>
+        <div class="tl-title">HC para Sérgio Côrtes, condenados em 2ª instância e Celso Luiz</div>
+        <div class="tl-desc">Série de HCs concedidos em junho/2018 beneficiando réus condenados na Lava Jato. Padrão de concessão individualizada com efeito coletivo de esvaziamento da operação.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">P1 · Série HC</span></div>
+      </div>
+      <div class="tl-item amber">
+        <div class="tl-date">01/08/2019 · Nacional</div>
+        <div class="tl-title">Anulação da condenação de Aldemir Bendine (ex-CEO Petrobras/BB)</div>
+        <div class="tl-desc">Anulada condenação de Aldemir Bendine por "objeções no procedimento". Bendine era ex-CEO do Banco do Brasil e da Petrobras, condenado por corrupção passiva.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">P1 · Lava Jato</span></div>
+      </div>
+      <div class="tl-item amber">
+        <div class="tl-date">01/01/2019</div>
+        <div class="tl-title">HC para Garotinho e Rosinha · HC para Iskin e Estellita</div>
+        <div class="tl-desc">Soltura de Anthony Garotinho e Rosinha (ex-governadores RJ) e de empresários Miguel Iskin e Gustavo Estellita.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">P1</span></div>
+      </div>
+    </div>
+
+    <!-- 2020 -->
+    <div class="tl-group">
+      <div class="tl-year">2020 — Pandemia, HC para Queiroz e doleiros</div>
+      <div class="tl-item red">
+        <div class="tl-date">01/08/2020</div>
+        <div class="tl-title">HC para Fabrício Queiroz e Márcia Aguiar — prisão domiciliar</div>
+        <div class="tl-desc">Concedido habeas corpus garantindo prisão domiciliar para Queiroz (assessor do filho de Bolsonaro, investigado por "rachadinha") e sua esposa Márcia Aguiar. Decisão gerou indignação por beneficiar pessoa ligada à família do presidente.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">P1 · Alto Perfil Político</span><span class="tag tag-red">CRÍTICO</span></div>
+      </div>
+      <div class="tl-item amber">
+        <div class="tl-date">11/07/2020</div>
+        <div class="tl-title">Declaração: "Exército se associando a genocídio na pandemia"</div>
+        <div class="tl-desc">Acusou o Exército de conivência com mortes na pandemia. Reacendeu conflito entre Forças Armadas e STF. Contexto: governo Bolsonaro negacionista.</div>
+        <div class="tl-tags"><span class="tag tag-blue">ev-confirmed</span><span class="tag tag-blue">Declaração</span></div>
+      </div>
+      <div class="tl-item red">
+        <div class="tl-date">20/12/2020</div>
+        <div class="tl-title">HC para doleiro Chaaya Moghrabi — horas após prisão</div>
+        <div class="tl-desc">Concedido HC a doleiro horas após prisão. Padrão de intervenção monocrática ultrarrápida em casos de crimes financeiros.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">P1 · Doleiro</span></div>
+      </div>
+    </div>
+
+    <!-- 2021-2022 -->
+    <div class="tl-group">
+      <div class="tl-year">2021–2022 — Inelegibilidade e articulação política</div>
+      <div class="tl-item blue">
+        <div class="tl-date">24/06/2021</div>
+        <div class="tl-title">Ordem para Bolsonaro explicar "fraudes eleitorais"</div>
+        <div class="tl-desc">Intimação a Bolsonaro para explicar declarações sobre supostas fraudes nas urnas. Mesmo ministro que beneficiou aliados com HCs.</div>
+        <div class="tl-tags"><span class="tag tag-blue">ev-confirmed</span><span class="tag tag-blue">Judicial</span></div>
+      </div>
+      <div class="tl-item amber">
+        <div class="tl-date">20/06/2022 · Brasília</div>
+        <div class="tl-title">Jantar com políticos do PSD</div>
+        <div class="tl-desc">Jantar em homenagem com políticos do PSD na Tratoria da Rosário, Brasília. Padrão de articulação com partidos com processos no STF.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-amber">Jantar Político</span></div>
+      </div>
+    </div>
+
+    <!-- 2023 -->
+    <div class="tl-group">
+      <div class="tl-year">2023 — CBF, "desmanche" da Lava Jato e HC para Abdelmassih</div>
+      <div class="tl-item red">
+        <div class="tl-date">Agosto 2023 · IDP / CBF</div>
+        <div class="tl-title">Contrato IDP–CBF: 84% da receita (~R$7,7M/ano) para o IDP</div>
+        <div class="tl-desc">Firmado contrato de 10 anos entre IDP e CBF para gestão da CBF Academy. IDP fica com 84% da receita anual (~R$9,2M). Assinado pelo filho de Gilmar, Francisco Schertel Mendes. Seis meses depois, Ednaldo Rodrigues (presidente da CBF) é afastado — e Gilmar concede liminar para mantê-lo no cargo. Denúncias à PGR e convite ao Senado.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">Conflito de Interesses Direto</span><span class="tag tag-amber">P5</span><span class="tag tag-red">CRÍTICO</span></div>
+      </div>
+      <div class="tl-item amber">
+        <div class="tl-date">24/05/2023 · Belo Horizonte</div>
+        <div class="tl-title">"Lava Jato como organização criminosa"</div>
+        <div class="tl-desc">Defendeu foco em inelegibilidade de Bolsonaro e classificou a Operação Lava Jato como "organização criminosa". Declaração que se tornaria referência nos debates sobre o desmanche das investigações.</div>
+        <div class="tl-tags"><span class="tag tag-amber">ev-confirmed</span><span class="tag tag-amber">Declaração Polêmica</span></div>
+      </div>
+      <div class="tl-item amber">
+        <div class="tl-date">01/01/2023</div>
+        <div class="tl-title">HC para Roger Abdelmassih (2ª vez) — revoga nova preventiva</div>
+        <div class="tl-desc">Revogada nova prisão preventiva de Abdelmassih — condenado a mais de 250 anos por crimes sexuais em série. Segunda intervenção favorável ao médico em 14 anos.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">P1 · Alto Perfil</span></div>
+      </div>
+    </div>
+
+    <!-- 2024-2025 -->
+    <div class="tl-group">
+      <div class="tl-year">2024–2025 — Gilmarpalooza, sanções Magnitsky e defesa de Moraes</div>
+      <div class="tl-item red">
+        <div class="tl-date">2024–2025 · Lisboa</div>
+        <div class="tl-title">Fórum de Lisboa ("Gilmarpalooza"): 11 ministros STF + 12 STJ + 360 palestrantes</div>
+        <div class="tl-desc">Evento anual co-organizado pelo IDP/FGV na Faculdade de Direito da Universidade de Lisboa. Em 2025: 11 ministros do STF, 12 do STJ, membros do TCU, ministros do governo Lula, governadores, 39 executivos de grandes empresas (bancos, agronegócio, tecnologia, energia, mineração). Críticas por lobby de interesses empresariais junto a autoridades jurisdicionais.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">Conflito Estrutural</span><span class="tag tag-amber">P5 · Captura</span></div>
+      </div>
+      <div class="tl-item amber">
+        <div class="tl-date">12/04/2025 · Cambridge, EUA</div>
+        <div class="tl-title">Harvard: "orgulho de ter participado do desmanche da Lava Jato"</div>
+        <div class="tl-desc">Em palestra na Brazil Conference em Harvard, afirmou ter orgulho de participar do "desmanche da Operação Lava Jato", reiterando classificação como "organização criminosa". Contexto: índice zero de condenações terminais dos beneficiários finais investigados.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">Inflexão Declarada</span></div>
+      </div>
+      <div class="tl-item amber">
+        <div class="tl-date">28/07/2025 · Brasília</div>
+        <div class="tl-title">Jantar com bolsonaristas: Valdemar, Sóstenes, Marinho e Maia</div>
+        <div class="tl-desc">Jantar com líderes do campo bolsonarista para discutir sanções Magnitsky aplicadas a Alexandre de Moraes. Articulação cruzada entre campos políticos opostos — facilita navegação regulatória do STF.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">Articulação Cruzada</span></div>
+      </div>
+      <div class="tl-item amber">
+        <div class="tl-date">31/07/2025 · Palácio da Alvorada</div>
+        <div class="tl-title">Jantar com Lula, Barroso, Zanin, Dino, Fachin, Moraes</div>
+        <div class="tl-desc">Jantar no Alvorada pós-sanções americanas a Moraes. Integração formal entre Executivo e STF em contexto de crise diplomática com EUA.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">Conflito Institucional</span></div>
+      </div>
+      <div class="tl-item blue">
+        <div class="tl-date">06/08/2025</div>
+        <div class="tl-title">Lançamento do livro + ironia sobre visto americano</div>
+        <div class="tl-desc">"Poderia falar em Paris, mas não em Washington." Lançamento de <em>Jurisdição Constitucional – Da Liberdade para a Liberdade</em>. Gilmar ironiza as sanções enquanto o livro defende o STF como guardião da democracia.</div>
+        <div class="tl-tags"><span class="tag tag-blue">ev-confirmed</span><span class="tag tag-blue">Declaração</span></div>
+      </div>
+    </div>
+
+  </div><!-- /timeline -->
+</section>
+
+
+<!-- ===================== FINANCEIRO ===================== -->
+<section id="financeiro" class="section">
+  <div class="section-title">Fluxo Financeiro · IDP e Conexões</div>
+
+  <div class="alert alert-red"><strong>Inflexão central:</strong> O IDP é simultaneamente instituição acadêmica, empresa com fins lucrativos e hub de articulação política. Gilmar é sócio-fundador. O filho preside. O fluxo financeiro passa por entidades com litígios ativos no STF.</div>
+
+  <table class="fin-table">
+    <thead>
+      <tr>
+        <th>Período</th>
+        <th>Patrocinador / Parte</th>
+        <th>Valor</th>
+        <th>Mecanismo</th>
+        <th>Conflito documentado</th>
+        <th>Evidência</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2008–2016</td>
+        <td>J&amp;F / JBS</td>
+        <td class="fin-valor">R$ 7,5M</td>
+        <td>Patrocínio eventos + bolsas. Cláusula de confidencialidade.</td>
+        <td>J&amp;F com processos no STF. Família Gilmar vende gado à JBS. R$ 650k devolvidos após delação.</td>
+        <td><span class="tag tag-red">ev-confirmed</span></td>
+      </tr>
+      <tr>
+        <td>2014–2017</td>
+        <td>Itaipu Binacional</td>
+        <td class="fin-valor">~R$ 900K–1,5M</td>
+        <td>Patrocínio ao evento de Lisboa e eventos no Brasil.</td>
+        <td>Ex-esposa Samantha nomeada ao Conselho da Itaipu no mesmo período. Itaipu cortou patrocínios na gestão seguinte.</td>
+        <td><span class="tag tag-red">ev-confirmed</span></td>
+      </tr>
+      <tr>
+        <td>2011–2017</td>
+        <td>Souza Cruz</td>
+        <td class="fin-valor">~R$ 2,4M</td>
+        <td>Patrocínio oculto com cláusula de confidencialidade. Marca não aparecia em materiais.</td>
+        <td>Souza Cruz com interesses regulatórios no STF. Contrato secreto exposto pela Crusoé.</td>
+        <td><span class="tag tag-red">ev-confirmed</span></td>
+      </tr>
+      <tr>
+        <td>2018</td>
+        <td>Febraban</td>
+        <td class="fin-valor">~R$ 50K</td>
+        <td>Patrocínio com discrição de exposição de marca.</td>
+        <td>Febraban representa setor bancário com litígios tributários e regulatórios no STF.</td>
+        <td><span class="tag tag-red">ev-confirmed</span></td>
+      </tr>
+      <tr>
+        <td>2011–2023</td>
+        <td>Bradesco</td>
+        <td class="fin-valor">R$ 36,4M</td>
+        <td>Empréstimos com condições diferenciadas + renegociações com desconto.</td>
+        <td>Bradesco com processos tributários e trabalhistas no STF. Condições de mercado não replicáveis para IUE comum.</td>
+        <td><span class="tag tag-amber">ev-inference</span></td>
+      </tr>
+      <tr>
+        <td>2018</td>
+        <td>Fecomércio-RJ</td>
+        <td class="fin-valor">Não divulgado</td>
+        <td>Patrocínio de seminários em parceria com FGV. Orlando Diniz participou dos eventos.</td>
+        <td>Fecomércio-RJ investigada pelo MPF por desvio de recursos. Dirigentes em processos que chegaram ao STF.</td>
+        <td><span class="tag tag-amber">ev-inference</span></td>
+      </tr>
+      <tr>
+        <td>2023–2025</td>
+        <td>CBF (Ednaldo Rodrigues)</td>
+        <td class="fin-valor">~R$7,7M/ano (84%)</td>
+        <td>Contrato de gestão da CBF Academy pelo IDP. Filho de Gilmar assina o contrato.</td>
+        <td>Seis meses depois: Ednaldo afastado. Gilmar concede liminar para reintegração. Denúncia à PGR. Convite ao Senado. Conflito de interesses direto e documentado.</td>
+        <td><span class="tag tag-red">ev-confirmed</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="inflexao">
+    <div class="inflexao-num">R$ 46M+</div>
+    <div class="inflexao-label">Fluxo financeiro documentado entre IDP e entidades com processos no STF (2008–2025) — sem processo disciplinar instaurado por qualquer órgão regulador</div>
+  </div>
+
+  <div class="grid2">
+    <div class="card card-accent-amber">
+      <div class="card-title">Estrutura do IDP</div>
+      <div class="card-body">Fundado em 1998 por Gilmar Mendes. Funciona simultaneamente como IES (instituição de ensino superior), gerador de eventos de articulação política, e entidade com fins lucrativos. Filho Francisco Schertel Mendes dirige. Gilmar é sócio-fundador e professor. A dupla posição — ministro do STF + sócio do IDP — é o nó estrutural de todos os conflitos.</div>
+    </div>
+    <div class="card card-accent-red">
+      <div class="card-title">Mecanismo de Captura via IDP</div>
+      <div class="card-body">Empresa patrocina evento IDP → empresa tem processo no STF → Gilmar é o relator ou vota → Gilmar alega que IDP é autônomo e ele não administra. A cadeia é documentada em múltiplos casos. A posição "não sou administrador do IDP" é funcionalmente vazia: ele é sócio e se beneficia dos rendimentos.</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== PADRÕES ===================== -->
+<section id="padroes" class="section">
+  <div class="section-title">Padrões Sistêmicos Documentados</div>
+
+  <div class="pattern-grid">
+    <div class="pattern-card" style="border-left:3px solid var(--red)">
+      <div class="pattern-id" style="color:var(--red)">P1</div>
+      <div class="pattern-name">Anulação via Blindagem Processual</div>
+      <div class="pattern-desc">Uso sistemático de habeas corpus, nulidades e insuficiência de fundamentação como instrumento de liberação de investigados antes do fim do processo. Padrão verificado em Satiagraha, Lava Jato, Operação Navalha, Queiroz, Abdelmassih, Barata Filho, Bendine, Garotinho, Moghrabi.</div>
+      <div class="pattern-instances">Instâncias identificadas no corpus Gilmar: <strong style="color:var(--red)">17+ casos documentados</strong></div>
+    </div>
+    <div class="pattern-card" style="border-left:3px solid var(--purple)">
+      <div class="pattern-id" style="color:var(--purple)">P3</div>
+      <div class="pattern-name">Captura Judicial — STF como Terminal</div>
+      <div class="pattern-desc">Casos que chegam ao STF param antes dos beneficiários finais serem processados. Decisões monocráticas de alto impacto político (suspensão da posse de Lula 2016, reintegração de Ednaldo CBF 2023) sem julgamento colegiado. Liminares que se tornam definitivas por inércia.</div>
+      <div class="pattern-instances">Instâncias identificadas: <strong style="color:var(--purple)">suspensão Lula, CBF, Ficha Limpa, pejotização</strong></div>
+    </div>
+    <div class="pattern-card" style="border-left:3px solid var(--amber)">
+      <div class="pattern-id" style="color:var(--amber)">P5</div>
+      <div class="pattern-name">Captura via Financiamento Privado</div>
+      <div class="pattern-desc">IDP funciona como vetor de captura: empresas com litígios no STF financiam eventos, bolsas e infraestrutura da instituição presidida pelo filho e fundada pelo ministro. O fluxo cria dependência financeira estrutural sem exigir trocas explícitas — o mecanismo é a relação, não o acordo.</div>
+      <div class="pattern-instances">Patrocinadores com processos ativos: <strong style="color:var(--amber)">J&amp;F, Itaipu, Souza Cruz, Febraban, Bradesco, CBF</strong></div>
+    </div>
+    <div class="pattern-card" style="border-left:3px solid var(--blue)">
+      <div class="pattern-id" style="color:var(--blue)">P6</div>
+      <div class="pattern-name">Uso Estratégico da Prescrição</div>
+      <div class="pattern-desc">Investigações que chegam ao STF via recurso ou HC encontram demora processual que favorece a prescrição. A concessão de HC reiterada para o mesmo réu (ex.: Abdelmassih 2009 e 2023) prolonga o ciclo até esgotamento das penas.</div>
+      <div class="pattern-instances">Casos ilustrativos: <strong style="color:var(--blue)">Abdelmassih, Satiagraha, Navalha</strong></div>
+    </div>
+    <div class="pattern-card" style="border-left:3px solid var(--amber)">
+      <div class="pattern-id" style="color:var(--amber)">P4b</div>
+      <div class="pattern-name">Both-Sidesism Funcional / Defesa Narrativa</div>
+      <div class="pattern-desc">Após cada polêmica documentada, Gilmar produz declaração de "defesa da democracia" ou "combate ao extremismo" que reencadra o debate. A crítica a Bolsonaro convive com HCs para aliados de Bolsonaro. A crítica à Lava Jato convive com jantares com investigados da Lava Jato. O efeito protetor é o ruído narrativo.</div>
+      <div class="pattern-instances">Ex.: HC Queiroz + declaração "Exército/genocídio" no mesmo mês</div>
+    </div>
+    <div class="pattern-card" style="border-left:3px solid var(--red)">
+      <div class="pattern-id" style="color:var(--red)">P3-A</div>
+      <div class="pattern-name">Concentração de Relatoria + Monocrática</div>
+      <div class="pattern-desc">Casos politicamente sensíveis concentrados em relatorias individuais. Decisões monocráticas de efeito definitivo que nunca chegam ao plenário. A geometria 1×535: um ministro suspende o que 535 legisladores aprovaram — e vice-versa.</div>
+      <div class="pattern-instances">Instâncias: <strong style="color:var(--red)">suspensão posse Lula, CBF liminar, pejotização, marco temporal</strong></div>
+    </div>
+  </div>
+
+  <div class="inflexao">
+    <div class="inflexao-num">0</div>
+    <div class="inflexao-label">Condenações terminais de beneficiários finais identificados nas investigações que passaram pelas decisões de Gilmar Mendes — padrão recorrente em P1/P3 do corpus lawfare-timeline</div>
+  </div>
+</section>
+
+
+<!-- ===================== REGULATÓRIO ===================== -->
+<section id="regulatorio" class="section">
+  <div class="section-title">Está tudo dentro da lei?</div>
+
+  <div class="alert alert-amber"><strong>Enquadramento metodológico:</strong> Esta seção aplica o framework jurídico vigente aos fatos documentados. Não atribui intencionalidade. Documenta a distância entre o que a lei exige e o que foi praticado — e por que os mecanismos de enforcement não foram acionados.</div>
+
+  <div class="question-block">
+    <div class="question-title">⚖ 1. O contrato IDP–CBF viola alguma norma?</div>
+    <div class="question-body">
+      <p><strong>O que a lei diz:</strong> O art. 126 da LOMAN (Lei Orgânica da Magistratura, Lei Complementar 35/1979) proíbe magistrados de exercerem "atividade político-partidária" e de serem "administradores" de entidades privadas. O art. 95, parágrafo único, inciso I da CF/88 proíbe magistrados de exercerem "ainda que em disponibilidade" outro cargo ou função.</p>
+      <p><strong>O que ocorreu:</strong> Gilmar é sócio-fundador do IDP. O IDP é uma sociedade civil com fins lucrativos que gera receita operacional. A participação societária não é apenas honorária — gera rendimentos. O filho preside a entidade. O contrato CBF–IDP foi celebrado com o filho como representante, e Gilmar concedeu liminar beneficiando o presidente da CBF (Ednaldo) que assinou o contrato com o IDP seis meses antes.</p>
+      <p><strong>Lacuna regulatória identificada:</strong> <span class="lacuna">LACUNA ESTRUTURAL</span> A LOMAN não define com precisão o que constitui "administração". O CNJ nunca editou resolução específica sobre participação societária de magistrados em instituições de ensino privadas com fins lucrativos. A interpretação corrente — de que IES são "atividade docente" permitida — não foi submetida a escrutínio formal diante do caso IDP, que extrapola a docência e opera como holding de eventos e contratos.</p>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <div class="question-title">⚖ 2. Os patrocínios ocultos configuram algum crime ou infração?</div>
+    <div class="question-body">
+      <p><strong>O que a lei diz:</strong> O art. 317 do CP (corrupção passiva) exige prova de vantagem indevida vinculada a ato de ofício. A cláusula de confidencialidade nos contratos não é ilegal per se. O Código de Ética do CNJ (Resolução 60/2008) veda ao magistrado "receber, a qualquer título ou pretexto, honorários, percentagens ou custas processuais" e proíbe condutas que "possam constituir circunstância suspeita".</p>
+      <p><strong>O que ocorreu:</strong> Patrocinadores como Souza Cruz e Febraban pagaram ao IDP com cláusula de confidencialidade ("empresa preferia que o acordo permanecesse confidencial"). Souza Cruz confirmou explicitamente não buscar visibilidade. O benefício financeiro ao sócio-fundador do IDP é objetivo — mesmo que mediado pelo instituto.</p>
+      <p><strong>Lacuna regulatória identificada:</strong> <span class="lacuna">LACUNA DE ENFORCEMENT</span> A corrupção passiva exige "em razão da função". A triangulação via IDP cria distância formal suficiente para evitar enquadramento penal direto — mas configura exatamente o tipo de relação que os sistemas de integridade existem para prevenir. Nenhum procedimento administrativo do CNJ ou PGR foi formalmente concluído sobre esses patrocínios.</p>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <div class="question-title">⚖ 3. A concessão de HC a réus com relação pessoal documentada viola o dever de imparcialidade?</div>
+    <div class="question-body">
+      <p><strong>O que a lei diz:</strong> O art. 144 do CPC (aplicável subsidiariamente ao processo penal via CPP) e o art. 252 do CPP estabelecem causas de impedimento e suspeição do juiz. O juiz é suspeito quando tiver "interesse no julgamento" ou quando existir "motivo íntimo". A LOMAN art. 35 exige que o magistrado "atue com imparcialidade no exercício do cargo".</p>
+      <p><strong>O que ocorreu:</strong> HC para Jacob Barata Filho com "conexões pessoais documentadas" entre Barata e Gilmar. HC para Abdelmassih (2ª vez) — sem que o ministro se declarasse suspeito pela reiteração. HC para Queiroz no mesmo período de declarações de Gilmar sobre Bolsonaro (articulação cruzada). Encontros com Temer antes de julgamentos envolvendo o governo Temer.</p>
+      <p><strong>Lacuna regulatória identificada:</strong> <span class="lacuna">LACUNA DE INICIATIVA</span> No STF, a declaração de suspeição é unilateral — o próprio ministro decide se se declara suspeito. Não há mecanismo externo de verificação. O CNJ não tem competência para rever decisões do STF. A PGR pode apresentar reclamações, mas não o fez sistematicamente.</p>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <div class="question-title">⚖ 4. O Fórum de Lisboa viola normas éticas da magistratura?</div>
+    <div class="question-body">
+      <p><strong>O que a lei diz:</strong> O Código de Ética da Magistratura (CNJ, Resolução 60/2008), art. 10: "O magistrado não se envolverá em atividades de caráter político-partidário". Art. 13: "O magistrado não pode participar de entidades cujos objetivos sejam incompatíveis com a magistratura". Art. 14 veda conduta que "possa constituir circunstância suspeita quanto à sua independência e imparcialidade".</p>
+      <p><strong>O que ocorreu:</strong> O Fórum reúne empresas que têm processos no STF com os ministros que julgam esses processos, em evento organizado e presidido pelo IDP do sócio-fundador Gilmar. Em 2025: 39 executivos de empresas com interesses no STF + 11 ministros do STF + 12 do STJ. A ONG Transparência Internacional considerou "estarrecedor" que ministros participem de atos de inauguração de obras de empresas que têm processos no STF.</p>
+      <p><strong>Lacuna regulatória identificada:</strong> <span class="lacuna">LACUNA INTERPRETATIVA</span> O CNJ nunca emitiu opinião vinculante sobre participação de ministros do STF em eventos organizados por IES privadas com fins lucrativos co-presididas por um ministro. A tese do "fórum acadêmico" tem sido suficiente para esvaziar qualquer questionamento formal.</p>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="card card-accent-amber">
+      <div class="card-title">Conclusão regulatória — ev-inference</div>
+      <div class="card-body">Os fatos documentados não configuram, individualmente, crimes claramente tipificados nos dispositivos atuais. A arquitetura IDP–ministro–empresas–julgamentos é construída para existir no limiar legal — benefícios reais, sem trocas explícitas documentadas. Esta é precisamente a definição operacional de captura institucional: o sistema produz resultados compatíveis com o pagamento de vantagem sem que o pagamento seja tecnicamente corrupção.</div>
+    </div>
+    <div class="card card-accent-red">
+      <div class="card-title">O que faltaria para configurar ilicitude?</div>
+      <div class="card-body">Prova de nexo causal explícito entre patrocínio e decisão específica. Evidência de que cláusulas de confidencialidade foram usadas para ocultar vantagem vinculada a ato de ofício. Resolução CNJ que tipifique participação societária em IES lucrativa como exercício de atividade vedada. Prova de que encontros extrajudiciais com partes influenciaram decisões específicas.</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== SILÊNCIO ===================== -->
+<section id="silencio" class="section">
+  <div class="section-title">Por que o silêncio dos órgãos reguladores?</div>
+
+  <div class="alert alert-red"><strong>Achado central:</strong> Nenhum dos órgãos com competência para investigar e sancionar as irregularidades documentadas concluiu qualquer procedimento disciplinar contra Gilmar Mendes em 17 anos de eventos documentados. Esta seção mapeia por quê.</div>
+
+  <div class="silencio-grid">
+    <div class="silencio-card">
+      <div class="silencio-org">CNJ — Conselho Nacional de Justiça</div>
+      <span class="silencio-status status-omissao">Omissão Estrutural</span>
+      <div class="silencio-text">O CNJ tem competência para processar disciplinarmente magistrados de qualquer instância. Mas: (1) O STF controla o CNJ. Ministros do STF compõem o CNJ e o presidem. (2) O próprio Gilmar presidiu o CNJ (2008–2010) — o período de algumas das concessões de HC mais polêmicas. (3) O CNJ nunca concluiu processo disciplinar contra membro do STF. A hierarquia invertida é estrutural: quem deveria ser controlado controla o controlador.</div>
+    </div>
+    <div class="silencio-card">
+      <div class="silencio-org">PGR — Procuradoria-Geral da República</div>
+      <span class="silencio-status status-parcial">Ação Seletiva</span>
+      <div class="silencio-text">A PGR tem legitimidade para apresentar reclamações ao STF e pedidos de afastamento. Na prática: (1) O PGR é nomeado pelo Presidente com sabatina do Senado — ambos com interesses no STF. (2) Procuradores-Gerais que tentaram agir contra interesses do STF sofreram resistência. (3) Denúncias sobre o IDP chegaram à PGR e não foram concluídas. (4) Paulo Gonet (PGR atual) participou do Fórum de Lisboa junto com Gilmar em 2025.</div>
+    </div>
+    <div class="silencio-card">
+      <div class="silencio-org">TCU — Tribunal de Contas da União</div>
+      <span class="silencio-status status-omissao">Sem Jurisdição Efetiva</span>
+      <div class="silencio-text">O TCU controla o uso de recursos públicos, mas: (1) Os patrocínios ao IDP são de empresas privadas — formalmente fora da jurisdição do TCU. (2) Itaipu Binacional é estatal, mas os repasses foram formalizados como patrocínio cultural/acadêmico — categoria de baixo escrutínio. (3) O contrato CBF–IDP é privado-privado. O TCU não tem instrumento para auditar relações entre privados que indiretamente afetam a imparcialidade judicial.</div>
+    </div>
+    <div class="silencio-card">
+      <div class="silencio-org">Congresso Nacional (CPI / Impeachment)</div>
+      <span class="silencio-status status-parcial">Paralisia por Dependência</span>
+      <div class="silencio-text">O Congresso pode instaurar CPI e aprovar impeachment de ministros do STF. Na prática: (1) O STF controla a constitucionalidade das leis que o Congresso aprova — relação de interdependência que desestimula confronto. (2) Parlamentares com processos no STF têm incentivo para não antagonizar. (3) O impeachment de ministro nunca foi aprovado na história brasileira. (4) O Fórum de Lisboa inclui membros do Congresso — criando relação de dependência direta.</div>
+    </div>
+    <div class="silencio-card">
+      <div class="silencio-org">OAB — Ordem dos Advogados do Brasil</div>
+      <span class="silencio-status status-parcial">Captura Corporativa</span>
+      <div class="silencio-text">A OAB tem legitimidade processual para questionar decisões e condutas judiciais. Na prática: (1) Advogados que atuam no STF têm relação de dependência com os ministros que julgam seus clientes. (2) O IDP forma advogados e tem como docentes advogados que atuam no STF. (3) Questionar Gilmar formalmente significa prejudicar a carreira de advogados que dependem de sua boa vontade em processos.</div>
+    </div>
+    <div class="silencio-card">
+      <div class="silencio-org">Transparência Internacional / ANAC / CADE</div>
+      <span class="silencio-status status-ok">Manifestações Isoladas</span>
+      <div class="silencio-text">Transparência Internacional classificou como "estarrecedor" a participação de ministros em atos de inauguração de obras de empresas com processos no STF. Manifestações pontuais existem, mas: (1) Não têm poder coercitivo. (2) Dependem de que a imprensa as amplifique. (3) A captura midiática via P04b (both-sidesism) dilui o impacto de qualquer manifestação de integridade.</div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <div class="question-title">🔵 Por que isso é possível estruturalmente?</div>
+    <div class="question-body">
+      <p>O sistema brasileiro de controle da magistratura é desenhado em torno de um pressuposto: que o STF é o guardião final da Constituição e, portanto, não pode ser controlado por nenhuma instância inferior a ele mesmo.</p>
+      <p>Isso cria uma <strong>zona de imunidade funcional</strong>: qualquer órgão com competência para investigar está abaixo do STF na hierarquia ou depende do STF para sua própria sobrevivência institucional. O Congresso aprova leis que o STF pode anular. O Executivo nomeia o PGR que investiga membros do STF. O CNJ é presidido pelo presidente do STF.</p>
+      <p>O resultado é um <strong>ponto de inflexão estrutural</strong>: as investigações não chegam aos beneficiários finais porque o mecanismo de controle é capturado pelo mesmo nó que deveria ser controlado. Não é conspiração — é arquitetura institucional.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== HABEAS CORPUS ===================== -->
+<section id="habeas-corpus" class="section">
+  <div class="section-title">Habeas Corpus · Gilmar Mendes (2007–2025)</div>
+
+  <div class="alert alert-blue hc-intro"><strong>25 decisões documentadas</strong> a partir de <em>gilmar-mendes-hc.json</em> — casos com fonte pública identificável. Não exaustivo de todos os HCs do ministro no STF. Ver também <a href="https://gilmarmometro.vercel.app/habeas-corpus" target="_blank" rel="noopener">Gilmarmômetro — Habeas Corpus</a>.</div>
+
+  <div class="hc-year">2007</div>
+  <div class="grid3 hc-year-grid">
+    <article class="card hc-card card-accent-red">
+      <div class="hc-date">11 set 2007</div>
+      <h3 class="card-title">Habeas Corpus para Acusado de Descaminho</h3>
+      <p class="card-body">Concedido habeas corpus para acusado de descaminho, confirmando liminar.</p>
+      <div class="hc-tags">
+      <span class="tag tag-blue">Acusado de descaminho</span>
+      </div>
+      <div class="hc-sources">
+      <a href="https://noticias.stf.jus.br/postsnoticias/concedido-habeas-corpus-para-acusado-de-descaminho/" target="_blank" rel="noopener">noticias.stf.jus.br</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="hc-year">2008</div>
+  <div class="grid3 hc-year-grid">
+    <article class="card hc-card card-accent-red">
+      <div class="hc-date">jul 2008</div>
+      <h3 class="card-title">Habeas Corpus para Daniel Dantas</h3>
+      <p class="card-body">Concedido habeas corpus duas vezes em 48 horas para o banqueiro Daniel Dantas na Operação Satiagraha, gerando polêmica.</p>
+      <div class="hc-tags">
+      <span class="tag tag-blue">Daniel Dantas</span>
+      </div>
+      <div class="hc-sources">
+      <a href="https://pt.wikipedia.org/wiki/Gilmar_Mendes" target="_blank" rel="noopener">pt.wikipedia.org</a>
+      <span class="hc-src-sep">·</span>
+      <a href="https://www.gazetadopovo.com.br/republica/quem-sao-os-ministros-do-stf-que-mais-concedem-habeas-corpus/" target="_blank" rel="noopener">gazetadopovo.com.br</a>
+      </div>
+    </article>
+    <article class="card hc-card card-accent-red">
+      <div class="hc-date">2008</div>
+      <h3 class="card-title">Habeas Corpus para Acusados na Operação Navalha</h3>
+      <p class="card-body">Concedido habeas corpus a vários investigados na Operação Navalha, incluindo Vicente Vasconcelos Coni, Zuleido Soares Veras, Maria de Fátima Cesar Palmeira, João Manoel S. Barros e Abelardo Soares L.</p>
+      <div class="hc-tags">
+      <span class="tag tag-blue">Vicente Vasconcelos Coni</span>
+      <span class="tag tag-blue">Zuleido Soares Veras</span>
+      <span class="tag tag-blue">Maria de Fátima Cesar Palmeira</span>
+      <span class="tag tag-blue">João Manoel S. Barros</span>
+      <span class="tag tag-blue">Abelardo Soares L.</span>
+      </div>
+      <div class="hc-sources">
+      <a href="https://noticias.stf.jus.br/postsnoticias/integra-das-decisoes-do-ministro-gilmar-mendes-em-mais-4-habeas-corpus-de-acusados-na-operacao-navalha/" target="_blank" rel="noopener">noticias.stf.jus.br</a>
+      </div>
+    </article>
+    <article class="card hc-card card-accent-red">
+      <div class="hc-date">21 out 2008</div>
+      <h3 class="card-title">Habeas Corpus para Acusados de Fraudar Previdência</h3>
+      <p class="card-body">Concedido habeas corpus a acusados de fraudar a Previdência, confirmando liminar.</p>
+      <div class="hc-tags">
+      <span class="tag tag-blue">Boechat e outras 18 pessoas</span>
+      </div>
+      <div class="hc-sources">
+      <a href="https://noticias.stf.jus.br/postsnoticias/concedido-habeas-corpus-a-acusados-de-fraudar-previdencia/" target="_blank" rel="noopener">noticias.stf.jus.br</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="hc-year">2009</div>
+  <div class="grid3 hc-year-grid">
+    <article class="card hc-card card-accent-red">
+      <div class="hc-date">2009</div>
+      <h3 class="card-title">Habeas Corpus para Subprocurador na Operação Anaconda</h3>
+      <p class="card-body">Concedido habeas corpus para subprocurador da República envolvido na Operação Anaconda.</p>
+      <div class="hc-tags">
+      <span class="tag tag-blue">Subprocurador da República</span>
+      </div>
+      <div class="hc-sources">
+      <a href="https://noticias.stf.jus.br/postsnoticias/concedido-habeas-corpus-para-subprocurador-da-republica-envolvido-na-operacao-anaconda/" target="_blank" rel="noopener">noticias.stf.jus.br</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="hc-year">2010</div>
+  <div class="grid3 hc-year-grid">
+    <article class="card hc-card card-accent-red">
+      <div class="hc-date">25 jan 2010</div>
+      <h3 class="card-title">Habeas Corpus para Empresário em Escândalo de Corrupção no DF</h3>
+      <p class="card-body">Garantido direito ao silêncio para empresário citado em escândalo de corrupção no DF.</p>
+      <div class="hc-tags">
+      <span class="tag tag-blue">Proprietário da empresa CTIS</span>
+      </div>
+      <div class="hc-sources">
+      <a href="https://noticias.stf.jus.br/postsnoticias/stf-garante-o-direito-ao-silencio-para-empresario-citado-em-escandalo-de-corrupcao-no-df/" target="_blank" rel="noopener">noticias.stf.jus.br</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="hc-year">2011</div>
+  <div class="grid3 hc-year-grid">
+    <article class="card hc-card card-accent-red">
+      <div class="hc-date">13 set 2011</div>
+      <h3 class="card-title">Habeas Corpus para Condenado a 39 Anos Receber Visita de Filhos</h3>
+      <p class="card-body">Concedido habeas corpus para condenado a 39 anos receber visitas de filhos.</p>
+      <div class="hc-tags">
+      <span class="tag tag-blue">Condenado</span>
+      </div>
+      <div class="hc-sources">
+      <a href="https://noticias.stf.jus.br/postsnoticias/condenado-a-39-anos-de-reclusao-podera-receber-visita-de-filhos/" target="_blank" rel="noopener">noticias.stf.jus.br</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="hc-year">2013</div>
+  <div class="grid3 hc-year-grid">
+    <article class="card hc-card card-accent-red">
+      <div class="hc-date">05 jun 2013</div>
+      <h3 class="card-title">Habeas Corpus para Afastar Prisão Preventiva Insuficiente</h3>
+      <p class="card-body">Deferido habeas corpus para afastar prisão preventiva decretada com fundamentação insuficiente.</p>
+      <div class="hc-tags">
+      <span class="tag tag-blue">Réus</span>
+      </div>
+      <div class="hc-sources">
+      <a href="https://noticias.stf.jus.br/postsnoticias/concedido-hc-para-afastar-prisao-preventiva-decretada-com-fundamentacao-insuficiente/" target="_blank" rel="noopener">noticias.stf.jus.br</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="hc-year">2017</div>
+  <div class="grid3 hc-year-grid">
+    <article class="card hc-card card-accent-red">
+      <div class="hc-date">ago 2017</div>
+      <h3 class="card-title">Habeas Corpus para Jacob Barata Filho</h3>
+      <p class="card-body">Concedido múltiplos habeas corpus para o empresário Jacob Barata Filho na Lava Jato RJ, gerando controvérsias por conexões pessoais.</p>
+      <div class="hc-tags">
+      <span class="tag tag-blue">Jacob Barata Filho</span>
+      </div>
+      <div class="hc-sources">
+      <a href="https://pt.wikipedia.org/wiki/Gilmar_Mendes" target="_blank" rel="noopener">pt.wikipedia.org</a>
+      <span class="hc-src-sep">·</span>
+      <a href="https://gauchazh.clicrbs.com.br/politica/noticia/2018/06/os-principais-beneficiados-por-habeas-corpus-de-gilmar-mendes-neste-ano-cji2ayx8l0arx01paomj8a4lx.html" target="_blank" rel="noopener">gauchazh.clicrbs.com.br</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="hc-year">2018</div>
+  <div class="grid3 hc-year-grid">
+    <article class="card hc-card card-accent-red">
+      <div class="hc-date">jun 2018</div>
+      <h3 class="card-title">Habeas Corpus para Sérgio Côrtes</h3>
+      <p class="card-body">Concedido habeas corpus para Sérgio Côrtes na Lava Jato.</p>
+      <div class="hc-tags">
+      <span class="tag tag-blue">Sérgio Côrtes</span>
+      </div>
+      <div class="hc-sources">
+      <a href="https://gauchazh.clicrbs.com.br/politica/noticia/2018/06/os-principais-beneficiados-por-habeas-corpus-de-gilmar-mendes-neste-ano-cji2ayx8l0arx01paomj8a4lx.html" target="_blank" rel="noopener">gauchazh.clicrbs.com.br</a>
+      </div>
+    </article>
+    <article class="card hc-card card-accent-red">
+      <div class="hc-date">jun 2018</div>
+      <h3 class="card-title">Habeas Corpus para Condenados em 2ª Instância</h3>
+      <p class="card-body">Concedido habeas corpus para condenados em segunda instância.</p>
+      <div class="hc-tags">
+      <span class="tag tag-blue">Condenados em 2ª instância</span>
+      </div>
+      <div class="hc-sources">
+      <a href="https://gauchazh.clicrbs.com.br/politica/noticia/2018/06/os-principais-beneficiados-por-habeas-corpus-de-gilmar-mendes-neste-ano-cji2ayx8l0arx01paomj8a4lx.html" target="_blank" rel="noopener">gauchazh.clicrbs.com.br</a>
+      </div>
+    </article>
+    <article class="card hc-card card-accent-red">
+      <div class="hc-date">jun 2018</div>
+      <h3 class="card-title">Habeas Corpus para Celso Luiz</h3>
+      <p class="card-body">Concedido habeas corpus para Celso Luiz.</p>
+      <div class="hc-tags">
+      <span class="tag tag-blue">Celso Luiz</span>
+      </div>
+      <div class="hc-sources">
+      <a href="https://gauchazh.clicrbs.com.br/politica/noticia/2018/06/os-principais-beneficiados-por-habeas-corpus-de-gilmar-mendes-neste-ano-cji2ayx8l0arx01paomj8a4lx.html" target="_blank" rel="noopener">gauchazh.clicrbs.com.br</a>
+      </div>
+    </article>
+    <article class="card hc-card card-accent-red">
+      <div class="hc-date">05 set 2018</div>
+      <h3 class="card-title">Habeas Corpus para Ex-Secretário de Alckmin</h3>
+      <p class="card-body">Concedido habeas corpus para ex-secretário de Alckmin.</p>
+      <div class="hc-tags">
+      <span class="tag tag-blue">Ex-secretário de Alckmin</span>
+      </div>
+      <div class="hc-sources">
+      <a href="https://oglobo.globo.com/brasil/maioria-dos-habeas-corpus-concedidos-pelo-stf-entre-2018-2019-foi-por-prisoes-mal-fundamentadas-diz-pesquisa-25197166" target="_blank" rel="noopener">oglobo.globo.com</a>
+      </div>
+    </article>
+    <article class="card hc-card card-accent-red">
+      <div class="hc-date">07 dez 2018</div>
+      <h3 class="card-title">Habeas Corpus para Ex-Secretário de Gestão do RJ</h3>
+      <p class="card-body">Aplicadas medidas cautelares a ex-secretário de Gestão do RJ.</p>
+      <div class="hc-tags">
+      <span class="tag tag-blue">Ex-secretário de Gestão do RJ</span>
+      </div>
+      <div class="hc-sources">
+      <a href="https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=398028&amp;ori=1" target="_blank" rel="noopener">portal.stf.jus.br</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="hc-year">2019</div>
+  <div class="grid3 hc-year-grid">
+    <article class="card hc-card card-accent-red">
+      <div class="hc-date">ago 2019</div>
+      <h3 class="card-title">Habeas Corpus para Aldemir Bendine</h3>
+      <p class="card-body">Anulação da condenação de Aldemir Bendine devido a objeções no procedimento.</p>
+      <div class="hc-tags">
+      <span class="tag tag-blue">Aldemir Bendine</span>
+      </div>
+      <div class="hc-sources">
+      <a href="https://oglobo.globo.com/brasil/maioria-dos-habeas-corpus-concedidos-pelo-stf-entre-2018-2019-foi-por-prisoes-mal-fundamentadas-diz-pesquisa-25197166" target="_blank" rel="noopener">oglobo.globo.com</a>
+      </div>
+    </article>
+    <article class="card hc-card card-accent-red">
+      <div class="hc-date">2019</div>
+      <h3 class="card-title">Habeas Corpus para Miguel Iskin e Gustavo Estellita</h3>
+      <p class="card-body">Concedido habeas corpus para empresários Miguel Iskin e Gustavo Estellita.</p>
+      <div class="hc-tags">
+      <span class="tag tag-blue">Miguel Iskin</span>
+      <span class="tag tag-blue">Gustavo Estellita</span>
+      </div>
+      <div class="hc-sources">
+      <a href="https://pt.wikipedia.org/wiki/Gilmar_Mendes" target="_blank" rel="noopener">pt.wikipedia.org</a>
+      </div>
+    </article>
+    <article class="card hc-card card-accent-red">
+      <div class="hc-date">2019</div>
+      <h3 class="card-title">Habeas Corpus para Garotinho e Rosinha</h3>
+      <p class="card-body">Concedido habeas corpus levando à soltura de Garotinho e Rosinha.</p>
+      <div class="hc-tags">
+      <span class="tag tag-blue">Garotinho</span>
+      <span class="tag tag-blue">Rosinha</span>
+      </div>
+      <div class="hc-sources">
+      <a href="https://pt.wikipedia.org/wiki/Gilmar_Mendes" target="_blank" rel="noopener">pt.wikipedia.org</a>
+      </div>
+    </article>
+    <article class="card hc-card card-accent-red">
+      <div class="hc-date">nov 2019</div>
+      <h3 class="card-title">Habeas Corpus para Mulher com 1g de Maconha</h3>
+      <p class="card-body">Concedido habeas corpus para mulher condenada por portar 1g de maconha, anulando sentença.</p>
+      <div class="hc-tags">
+      <span class="tag tag-blue">Mulher condenada</span>
+      </div>
+      <div class="hc-sources">
+      <a href="https://www.gazetadopovo.com.br/republica/quem-sao-os-ministros-do-stf-que-mais-concedem-habeas-corpus/" target="_blank" rel="noopener">gazetadopovo.com.br</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="hc-year">2020</div>
+  <div class="grid3 hc-year-grid">
+    <article class="card hc-card card-accent-red">
+      <div class="hc-date">ago 2020</div>
+      <h3 class="card-title">Habeas Corpus para Fabrício Queiroz e Márcia Aguiar</h3>
+      <p class="card-body">Concedido habeas corpus garantindo prisão domiciliar para Fabrício Queiroz e Márcia Aguiar.</p>
+      <div class="hc-tags">
+      <span class="tag tag-blue">Fabrício Queiroz</span>
+      <span class="tag tag-blue">Márcia Aguiar</span>
+      </div>
+      <div class="hc-sources">
+      <a href="https://g1.globo.com/politica/noticia/2020/11/25/gilmar-libera-para-julgamento-habeas-corpus-que-colocou-queiroz-em-prisao-domiciliar.ghtml" target="_blank" rel="noopener">g1.globo.com</a>
+      </div>
+    </article>
+    <article class="card hc-card card-accent-red">
+      <div class="hc-date">20 dez 2020</div>
+      <h3 class="card-title">Habeas Corpus para Doleiro Chaaya Moghrabi</h3>
+      <p class="card-body">Concedido habeas corpus a doleiro horas após sua prisão.</p>
+      <div class="hc-tags">
+      <span class="tag tag-blue">Chaaya Moghrabi</span>
+      </div>
+      <div class="hc-sources">
+      <a href="https://oglobo.globo.com/politica/noticia/2024/11/06/ministros-do-stf-aumentam-rigor-e-concedem-apenas-4-de-cada-100-habeas-corpus-julgados.ghtml" target="_blank" rel="noopener">oglobo.globo.com</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="hc-year">2021</div>
+  <div class="grid3 hc-year-grid">
+    <article class="card hc-card card-accent-red">
+      <div class="hc-date">06 out 2021</div>
+      <h3 class="card-title">Habeas Corpus para Soltura de Condenado com Reconhecimento Fotográfico</h3>
+      <p class="card-body">Determinado soltura de condenado baseado apenas em reconhecimento fotográfico.</p>
+      <div class="hc-tags">
+      <span class="tag tag-blue">Condenado</span>
+      </div>
+      <div class="hc-sources">
+      <a href="https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=474352&amp;ori=1" target="_blank" rel="noopener">portal.stf.jus.br</a>
+      </div>
+    </article>
+    <article class="card hc-card card-accent-red">
+      <div class="hc-date">19 nov 2021</div>
+      <h3 class="card-title">Habeas Corpus para Detentos do Presídio</h3>
+      <p class="card-body">Determinado que detentos do Presídio recebam benefícios.</p>
+      <div class="hc-tags">
+      <span class="tag tag-blue">Detentos do Presídio</span>
+      </div>
+      <div class="hc-sources">
+      <a href="https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=476900&amp;ori=1" target="_blank" rel="noopener">portal.stf.jus.br</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="hc-year">2023</div>
+  <div class="grid3 hc-year-grid">
+    <article class="card hc-card card-accent-red">
+      <div class="hc-date">2023</div>
+      <h3 class="card-title">Habeas Corpus para Roger Abdelmassih</h3>
+      <p class="card-body">Concedido habeas corpus revogando prisão preventiva de Roger Abdelmassih.</p>
+      <div class="hc-tags">
+      <span class="tag tag-blue">Roger Abdelmassih</span>
+      </div>
+      <div class="hc-sources">
+      <a href="https://www.instagram.com/p/C8UyoNFRUKl/" target="_blank" rel="noopener">instagram.com</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="hc-year">2024</div>
+  <div class="grid3 hc-year-grid">
+    <article class="card hc-card card-accent-red">
+      <div class="hc-date">17 jun 2024</div>
+      <h3 class="card-title">Habeas Corpus Substitutivo para Reconhecer Redutor em Caso de Droga</h3>
+      <p class="card-body">Concedido habeas corpus substitutivo de revisão criminal para reconhecer redutor em caso de droga.</p>
+      <div class="hc-tags">
+      <span class="tag tag-blue">Réu em caso de droga</span>
+      </div>
+      <div class="hc-sources">
+      <a href="https://www.instagram.com/p/C8UyoNFRUKl/" target="_blank" rel="noopener">instagram.com</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="hc-year">2025</div>
+  <div class="grid3 hc-year-grid">
+    <article class="card hc-card card-accent-red">
+      <div class="hc-date">12 mai 2025</div>
+      <h3 class="card-title">Habeas Corpus para Virgínia Fonseca Ficar em Silêncio na CPI das Bets</h3>
+      <p class="card-body">Autorizado Virgínia Fonseca a ficar em silêncio na CPI das Bets.</p>
+      <div class="hc-tags">
+      <span class="tag tag-blue">Virgínia Fonseca</span>
+      </div>
+      <div class="hc-sources">
+      <a href="https://www.cnnbrasil.com.br/politica/stf-autoriza-virginia-a-ficar-em-silencio-na-cpi-das-bets/" target="_blank" rel="noopener">cnnbrasil.com.br</a>
+      </div>
+    </article>
+  </div>
+
+</section>
+
+
+<!-- ===================== LACUNAS ===================== -->
+<section id="lacunas" class="section">
+  <div class="section-title">O que há de errado — Diagnóstico Estrutural</div>
+
+  <div class="alert alert-red"><strong>Atenção epistêmica:</strong> Esta análise documenta padrões estruturais, não intencionalidade individual. A separação entre fato documentado (ev-confirmed), inferência estrutural (ev-inference) e hipótese motivacional (ev-alleged) é mantida em toda a análise.</div>
+
+  <div class="grid2">
+    <div class="card card-accent-red">
+      <div class="card-title">1. A zona cinzenta como design</div>
+      <div class="card-body">O modelo IDP não viola nenhuma lei com precisão suficiente para gerar condenação. Mas produz todos os efeitos práticos de uma relação de captura: empresas com processos no STF financiam a instituição do ministro; o ministro julga esses processos; os resultados favorecem sistematicamente os financiadores. A zona cinzenta não é uma falha do sistema — é o produto do sistema. Sistemas de integridade existem exatamente para cobrir zonas cinzentas que a lei penal não alcança.</div>
+    </div>
+    <div class="card card-accent-amber">
+      <div class="card-title">2. O problema da autorreferência</div>
+      <div class="card-body">O STF é o tribunal que interpreta as regras que se aplicam ao STF. Qualquer tentativa de limitar os poderes do STF — ou de seus membros — chega ao STF para julgamento. Esta autorreferência não é patologia — é a arquitetura escolhida pelo constituinte de 1988. Mas ela cria uma assimetria de poder que, sem mecanismos externos robustos, converte-se em imunidade estrutural.</div>
+    </div>
+    <div class="card card-accent-purple">
+      <div class="card-title">3. A normalização do extraordinário</div>
+      <div class="card-body">Ministro do STF oferece jantar em casa para investigados da Odebrecht enquanto julga o processo do qual eles fazem parte. Ministro co-funda e se beneficia de empresa que recebe R$ 7,7M/ano de entidade cujo presidente ele beneficia com liminar. Esses fatos são documentados publicamente, publicados na grande imprensa — e nada acontece. A repetição sem consequência cria o padrão: o extraordinário torna-se ordinário.</div>
+    </div>
+    <div class="card card-accent-blue">
+      <div class="card-title">4. O índice zero como achado</div>
+      <div class="card-body">Em todas as investigações que passaram pelas mãos de Gilmar Mendes como relator ou votante relevante — Satiagraha, Navalha, Lava Jato, Queiroz, CBF — o índice de condenações terminais dos beneficiários finais identificados é zero. Este não é o resultado esperado por acaso. É o resultado esperado quando o mecanismo de proteção é eficiente.</div>
+    </div>
+    <div class="card card-accent-amber">
+      <div class="card-title">5. O silêncio como sinal</div>
+      <div class="card-body">O silêncio dos órgãos reguladores não é ausência de informação — toda a informação é pública. É ausência de vontade institucional. Essa ausência é ela mesma um dado: revela que os órgãos de controle calculam que o custo de agir supera o benefício. Quando todos os órgãos chegam ao mesmo cálculo, o resultado é imunidade efetiva.</div>
+    </div>
+    <div class="card card-accent-red">
+      <div class="card-title">6. O que seria necessário para mudar</div>
+      <div class="card-body">Mecanismo externo de controle da magistratura superior (ex.: câmara de revisão com participação do legislativo e sociedade civil). Vedação expressa a participação societária de magistrados em IES com fins lucrativos. Auditoria independente de padrões de decisão judicial por categorias de partes (quem se beneficia sistematicamente dos HCs de determinado relator?). Transparência obrigatória de relações financeiras entre institutos de magistrados e partes com processos.</div>
+    </div>
+  </div>
+
+  <div class="inflexao">
+    <div class="inflexao-num" style="color:var(--purple)">P3-A</div>
+    <div class="inflexao-label">Padrão central documentado: concentração de poder monocrático em tribunal sem controle externo efetivo — o nó que conecta todos os achados desta análise</div>
+  </div>
+
+  <div class="ev-block">
+    <div class="ev-label ev-confirmed">● ev-confirmed — Fato documentado</div>
+    <div class="ev-text">IDP recebeu R$46M+ de entidades com processos no STF. Gilmar concedeu HCs e liminares beneficiando investigados com relação documentada com o IDP ou com ele pessoalmente. O CNJ nunca concluiu processo disciplinar. A PGR nunca chegou a julgamento em qualquer das denúncias formais.</div>
+    <div class="ev-source">Fontes: Crusoé, Folha de S.Paulo, Estadão, Piauí, Senado, relatórios CNJ, transcrições STF (2008–2025)</div>
+  </div>
+  <div class="ev-block">
+    <div class="ev-label ev-inference">◆ ev-inference — Inferência estrutural</div>
+    <div class="ev-text">A correlação temporal entre patrocínios ao IDP e decisões favoráveis às entidades patrocinadoras é sistemática e documentada em múltiplos casos. A probabilidade de esse padrão ser produto do acaso é analiticamente irrazoável — mas prova de nexo causal específico não foi produzida em nenhum processo formal.</div>
+    <div class="ev-source">Padrão identificado por: Transparência Internacional, Senado (convocação), imprensa investigativa nacional</div>
+  </div>
+  <div class="ev-block">
+    <div class="ev-label ev-alleged">◇ ev-alleged — Hipótese motivacional (excluída do corpus factual)</div>
+    <div class="ev-text">A hipótese de que Gilmar Mendes age de forma deliberadamente coordenada com seus financiadores é excluída do registro factual do corpus — não por ser implausível, mas por não ser demonstrável com as evidências disponíveis. O corpus documenta mecanismos, não intenções.</div>
+    <div class="ev-source">Conforme METHODOLOGY-v2.2.md: atribuição de intencionalidade individual é excluída do registro factual</div>
+  </div>
+</section>
+
+</main>
+
+<button type="button" id="gotop" class="gotop" aria-label="Voltar ao topo" title="Voltar ao topo">↑</button>
+
+<footer class="footer">
+  <div style="margin-bottom:8px">
+    <strong style="color:var(--fg2)">Gilmar Mendes — Dossiê Consolidado 2008–2025</strong>
+  </div>
+  <div style="margin-bottom:8px">
+    Fontes primárias: Crusoé · Folha de S.Paulo · Estadão · Piauí · Senado Federal · GloboNews · CartaCapital · Conjur · UOL · STF (transcrições públicas) · CNJ (resoluções) · LOMAN · CF/88
+  </div>
+  <div style="margin-bottom:8px">
+    Projetos: <a href="https://lawfare-timeline.vercel.app" target="_blank" rel="noopener">lawfare-timeline.vercel.app</a> · <a href="https://observatorio-civil-br.vercel.app/" target="_blank" rel="noopener">observatorio-civil-br</a>
+    Gilmarmômetro: <a href="https://gilmarmometro.vercel.app" target="_blank" rel="noopener">gilmarmometro.vercel.app</a> ·
+  </div>
+  <div style="margin-bottom:8px">
+    Referências:
+    <a href="https://observatorio-civil-br.vercel.app/alem-da-toga.html" target="_blank" rel="noopener">Além da Toga</a> ·
+    <a href="https://observatorio-civil-br.vercel.app/satiagraha.html" target="_blank" rel="noopener">Satyagraha</a> ·
+    <a href="https://observatorio-civil-br.vercel.app/gilmar-mendes-em-fatos.html" target="_blank" rel="noopener">Gilmar Mendes em Fatos</a> ·
+    <a href="https://observatorio-civil-br.vercel.app/gilmar_mendes_poder_dashboard.html" target="_blank" rel="noopener">Dashboard Poder</a> ·
+    <a href="https://gilmarmometro.vercel.app/habeas-corpus" target="_blank" rel="noopener">HC — Gilmarmômetro</a> ·
+    <a href="https://gilmarmometro.vercel.app/" target="_blank" rel="noopener">Gilmarmômetro</a>
+  </div>
+  <div>
+    <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0 1.0 Universal — Domínio Público</a> ·
+    Nenhum paywall. Nenhum patrocinador. Nenhuma monetização.
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const navTabs = document.querySelectorAll('.nav-tab');
+  const sections = document.querySelectorAll('.section');
+  const gotop = document.getElementById('gotop');
+  const navOffset = 72;
+
+  navTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = document.getElementById(tab.dataset.target);
+      if (!target) return;
+      const top = target.getBoundingClientRect().top + window.scrollY - navOffset;
+      window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+    });
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      navTabs.forEach(t => t.classList.remove('active'));
+      const active = document.querySelector(`.nav-tab[data-target="${entry.target.id}"]`);
+      if (active) {
+        active.classList.add('active');
+        active.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+    });
+  }, { root: null, rootMargin: '-80px 0px -55% 0px', threshold: 0 });
+
+  sections.forEach(sec => observer.observe(sec));
+
+  window.addEventListener('scroll', () => {
+    gotop.classList.toggle('show', window.scrollY > 300);
+  }, { passive: true });
+
+  gotop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

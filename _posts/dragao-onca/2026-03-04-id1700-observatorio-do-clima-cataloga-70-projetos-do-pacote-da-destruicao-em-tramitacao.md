@@ -45,7 +45,7 @@ Fonte secundária de parte interessada (rede de ONGs ambientalistas) — tratada
 
 Entradas conectadas nesta série:
 
-- [Entrada 1697](/timeline/entries/1697)
+- [Entrada 1697](/posts/id1697-pl-27802024-institui-a-politica-nacional-de-minerais-criticos-e-estrategicos/)
 
 ---
 

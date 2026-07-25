@@ -54,7 +54,7 @@ Marco estrutural que precede e independe de qualquer governo posterior — a par
 
 Entradas conectadas nesta série:
 
-- [Entrada 1643](/timeline/entries/1643)
+- [Entrada 1643](/posts/id1643-hu-jintao-visita-o-brasil-lula-reafirma-parceria-estrategica-publicamente/)
 
 ---
 

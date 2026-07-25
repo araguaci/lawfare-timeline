@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Duplo Padrão Judicial — Dossiê Investigativo 2026</title>
+<meta name="description" content="Duplo padrão judicial: perseguição acelerada (8 Jan · INQ 4.781) vs. proteção em lavagem e crimes financeiros (anulações, prescrição, valores bilionários). Duas réguas, um sistema — dossiê 2026.">
+<link rel="canonical" href="https://gosurf.site/duplo-padrao-judicial">
+<!-- Open Graph / Sharecard -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gosurf.site/duplo-padrao-judicial">
+<meta property="og:title" content="Duplo Padrão Judicial — Como o Brasil pune opinião e absolve lavagem">
+<meta property="og:description" content="Perseguição (08/01) vs. proteção (R$ 260bi+, 115+ anulações, investigações engavetadas). INQ 4.781 / STF × lavagem e crimes financeiros — infográfico verificável.">
+<meta property="og:image" content="https://gosurf.site/og-duplo-padrao-judicial.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Duplo Padrão Judicial — perseguição vs. proteção · duas réguas, um sistema">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="gosurf.site">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Duplo Padrão Judicial — Como o Brasil pune opinião e absolve lavagem">
+<meta name="twitter:description" content="Perseguição (08/01) vs. proteção bilionária. INQ 4.781 × lavagem e crimes financeiros — dossiê 2026.">
+<meta name="twitter:image" content="https://gosurf.site/og-duplo-padrao-judicial.png">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Syne:wght@400;600;700;800&display=swap');
+
+:root {
+  --bg:  #09090b;
+  --bg2: #0f0f13;
+  --bg3: #16161c;
+  --bg4: #1e1e26;
+  --border:  #252530;
+  --border2: #333340;
+  --text:  #e6e4de;
+  --text2: #96948c;
+  --text3: #52504e;
+  --red:    #e83a3a;
+  --red2:   #ff6060;
+  --amber:  #e89820;
+  --amber2: #ffc030;
+  --green:  #26c870;
+  --blue:   #3878ff;
+  --blue2:  #78a8ff;
+  --purple: #8858e8;
+  --cyan:   #18c8d8;
+  --orange: #e86020;
+  --font-d: 'Syne', sans-serif;
+  --font-m: 'IBM Plex Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-m);
+  font-size: 13px;
+  line-height: 1.65;
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.025) 2px, rgba(0,0,0,0.025) 4px);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.wrap { max-width: 1360px; margin: 0 auto; padding: 0 24px 100px; }
+
+/* ── HEADER ── */
+.header {
+  border-bottom: 1px solid var(--border);
+  padding: 36px 0 28px;
+  margin-bottom: 36px;
+  position: relative;
+}
+.header-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 14px;
+}
+.pulse-dot {
+  width: 8px; height: 8px;
+  background: var(--red);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,100%{ opacity:1; transform:scale(1); }
+  50%{ opacity:.35; transform:scale(.7); }
+}
+h1 {
+  font-family: var(--font-d);
+  font-size: clamp(26px, 4.5vw, 56px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+h1 .hl-red   { color: var(--red); }
+h1 .hl-amber { color: var(--amber); }
+.header-sub {
+  font-size: 12px;
+  color: var(--text3);
+  margin-top: 12px;
+  max-width: 720px;
+  line-height: 1.7;
+}
+.header-meta {
+  position: absolute;
+  right: 0; top: 36px;
+  text-align: right;
+  font-size: 10px;
+  color: var(--text3);
+  line-height: 1.9;
+}
+.cc0-badge {
+  display: inline-block;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 10px;
+  color: var(--text3);
+  margin-top: 4px;
+}
+
+/* ── SEVERITY BAND ── */
+.severity-band {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+.sev-item {
+  background: var(--bg2);
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.sev-label { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text3); }
+.sev-value { font-family: var(--font-d); font-size: 22px; font-weight: 700; }
+.sev-desc  { font-size: 11px; color: var(--text2); }
+.col-red    { color: var(--red); }
+.col-amber  { color: var(--amber2); }
+.col-green  { color: var(--green); }
+.col-blue   { color: var(--blue2); }
+.col-orange { color: var(--orange); }
+
+/* ── TABS ── */
+.tab-nav {
+  display: flex;
+  gap: 2px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 32px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.tab-nav::-webkit-scrollbar { display: none; }
+.tab-btn {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 10px 18px;
+  font-family: var(--font-m);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text3);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all .2s;
+  margin-bottom: -1px;
+}
+.tab-btn:hover { color: var(--text2); }
+.tab-btn.active {
+  color: var(--text);
+  border-bottom-color: var(--red);
+}
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* ── SECTION TITLE ── */
+.sec-title {
+  font-family: var(--font-d);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+}
+.sec-sub {
+  font-size: 11px;
+  color: var(--text3);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+/* ── CONTRAST TABLE ── */
+.contrast-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+  margin-bottom: 40px;
+}
+@media(max-width:700px){ .contrast-table { grid-template-columns: 1fr; } }
+.contrast-header {
+  padding: 12px 20px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ch-red   { background: rgba(232,58,58,.12); color: var(--red);   border: 1px solid rgba(232,58,58,.3); border-radius: 3px 3px 0 0; }
+.ch-green { background: rgba(38,200,112,.06); color: var(--green); border: 1px solid rgba(38,200,112,.2); border-radius: 3px 3px 0 0; }
+.contrast-col {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.contrast-row {
+  padding: 14px 18px;
+  border: 1px solid var(--border);
+  background: var(--bg2);
+  transition: background .15s;
+}
+.contrast-row:hover { background: var(--bg3); }
+.cr-name {
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 3px;
+  font-size: 12px;
+}
+.cr-body { color: var(--text2); font-size: 11px; line-height: 1.6; }
+.cr-tag {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 2px;
+  margin-top: 6px;
+}
+.tag-preso   { background: rgba(232,58,58,.15); color: var(--red2); }
+.tag-exil    { background: rgba(232,152,32,.15); color: var(--amber2); }
+.tag-inelig  { background: rgba(136,88,232,.15); color: #b090ff; }
+.tag-solto   { background: rgba(38,200,112,.12); color: var(--green); }
+.tag-anulado { background: rgba(56,120,255,.15); color: var(--blue2); }
+.tag-livre   { background: rgba(24,200,216,.12); color: var(--cyan); }
+
+/* ── MECHANISM CARDS ── */
+.mech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  margin-bottom: 36px;
+  margin-top: 24px;
+}
+.mech-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.mech-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
+}
+.mech-red::before   { background: var(--red); }
+.mech-amber::before { background: var(--amber); }
+.mech-blue::before  { background: var(--blue); }
+.mech-green::before { background: var(--green); }
+.mech-purple::before{ background: var(--purple); }
+.mech-orange::before{ background: var(--orange); }
+.mech-num {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text3);
+  margin-bottom: 8px;
+}
+.mech-title {
+  font-family: var(--font-d);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+.mech-body { color: var(--text2); font-size: 12px; line-height: 1.7; }
+.mech-cite {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: var(--bg3);
+  border-left: 2px solid var(--border2);
+  font-size: 11px;
+  color: var(--text3);
+  font-style: italic;
+}
+
+/* ── COAF SECTION ── */
+.coaf-diagram {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 28px;
+  margin-bottom: 32px;
+}
+.coaf-flow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: 20px 0;
+}
+.flow-node {
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: 4px;
+  padding: 12px 16px;
+  font-size: 11px;
+  text-align: center;
+  min-width: 140px;
+  flex: 1;
+}
+.flow-arrow {
+  padding: 0 8px;
+  color: var(--text3);
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.fn-normal { border-color: var(--border2); }
+.fn-broken { border-color: var(--red); background: rgba(232,58,58,.06); }
+.fn-result { border-color: var(--amber); background: rgba(232,152,32,.06); }
+.fn-label  { font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: var(--text3); margin-bottom: 4px; }
+.fn-value  { font-weight: 600; color: var(--text); }
+.fn-note   { font-size: 10px; color: var(--text3); margin-top: 2px; }
+
+.coaf-consequences {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+.cons-item {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 14px 16px;
+}
+.cons-num  { font-size: 10px; color: var(--text3); margin-bottom: 6px; letter-spacing: .1em; text-transform: uppercase; }
+.cons-title{ font-size: 12px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+.cons-body { font-size: 11px; color: var(--text2); line-height: 1.6; }
+.cons-red  { border-left: 3px solid var(--red); }
+.cons-amber{ border-left: 3px solid var(--amber); }
+.cons-blue { border-left: 3px solid var(--blue); }
+.cons-orange{border-left: 3px solid var(--orange); }
+
+/* ── VORCARO TIMELINE ── */
+.vorcaro-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+@media (max-width: 900px) { .vorcaro-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 580px) { .vorcaro-grid { grid-template-columns: 1fr; } }
+.vc-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 18px 20px;
+}
+.vc-date { font-size: 10px; color: var(--text3); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 6px; }
+.vc-title { font-family: var(--font-d); font-size: 14px; font-weight: 700; margin-bottom: 8px; }
+.vc-body  { font-size: 12px; color: var(--text2); line-height: 1.65; }
+.vc-status {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+.vs-active  { background: rgba(232,152,32,.15); color: var(--amber2); }
+.vs-critical{ background: rgba(232,58,58,.15); color: var(--red2); }
+.vs-pending { background: rgba(56,120,255,.12); color: var(--blue2); }
+.vs-alert   { background: rgba(232,96,32,.15); color: var(--orange); }
+
+.signal-box {
+  background: var(--bg2);
+  border: 1px solid rgba(232,152,32,.35);
+  border-radius: 4px;
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+.signal-label { font-size: 10px; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: var(--amber); margin-bottom: 10px; }
+.signal-body  { font-size: 12px; color: var(--text2); line-height: 1.75; }
+.signal-body strong { color: var(--text); }
+
+/* ── CHRONOLOGY ── */
+.chrono { position: relative; padding-left: 28px; margin-bottom: 36px; }
+.chrono::before {
+  content: '';
+  position: absolute;
+  left: 8px; top: 0; bottom: 0;
+  width: 1px;
+  background: var(--border2);
+}
+.chrono-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+.chrono-item::before {
+  content: '';
+  position: absolute;
+  left: -24px;
+  top: 5px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--border2);
+  border: 2px solid var(--bg);
+}
+.ci-red::before    { background: var(--red); }
+.ci-amber::before  { background: var(--amber); }
+.ci-green::before  { background: var(--green); }
+.ci-blue::before   { background: var(--blue); }
+.ci-orange::before { background: var(--orange); }
+.chrono-date { font-size: 10px; color: var(--text3); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 4px; }
+.chrono-title{ font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+.chrono-body { font-size: 12px; color: var(--text2); line-height: 1.65; }
+.chrono-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.ctag {
+  font-size: 9px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+  padding: 2px 7px; border-radius: 2px; border: 1px solid var(--border2); color: var(--text3);
+}
+.ctag-red    { border-color: rgba(232,58,58,.4); color: var(--red2); }
+.ctag-amber  { border-color: rgba(232,152,32,.4); color: var(--amber2); }
+.ctag-blue   { border-color: rgba(56,120,255,.4); color: var(--blue2); }
+.ctag-orange { border-color: rgba(232,96,32,.4); color: var(--orange); }
+.ctag-green  { border-color: rgba(38,200,112,.4); color: var(--green); }
+
+/* ── PATTERNS ── */
+.pattern-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+  margin-bottom: 36px;
+}
+.pat-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 20px;
+}
+.pat-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.pat-id {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .15em;
+  color: var(--text3);
+  white-space: nowrap;
+}
+.pat-status {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.ps-confirmed { background: rgba(232,58,58,.15); color: var(--red2); }
+.ps-partial   { background: rgba(232,152,32,.15); color: var(--amber2); }
+.pat-title { font-family: var(--font-d); font-size: 14px; font-weight: 700; margin-bottom: 8px; }
+.pat-body  { font-size: 12px; color: var(--text2); line-height: 1.65; }
+.pat-evidence {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: var(--bg3);
+  border-radius: 3px;
+  font-size: 11px;
+  color: var(--text3);
+}
+.pat-evidence strong { color: var(--text2); }
+
+/* ── CONCLUSION ── */
+.conclusion-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+@media (max-width: 900px) { .conclusion-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 580px) { .conclusion-grid { grid-template-columns: 1fr; } }
+.concl-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 20px;
+}
+.concl-num {
+  font-family: var(--font-d);
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 10px;
+  opacity: .25;
+}
+.concl-title { font-family: var(--font-d); font-size: 15px; font-weight: 700; margin-bottom: 10px; }
+.concl-body  { font-size: 12px; color: var(--text2); line-height: 1.7; }
+.concl-red    .concl-num { color: var(--red); }
+.concl-amber  .concl-num { color: var(--amber); }
+.concl-blue   .concl-num { color: var(--blue); }
+.concl-green  .concl-num { color: var(--green); }
+.concl-orange .concl-num { color: var(--orange); }
+.concl-purple .concl-num { color: var(--purple); }
+
+/* ── ALERT BOX ── */
+.alert-box {
+  border: 1px solid rgba(232,96,32,.4);
+  background: rgba(232,96,32,.06);
+  border-radius: 4px;
+  padding: 18px 22px;
+  margin: 24px 0;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.alert-icon { font-size: 20px; flex-shrink: 0; }
+.alert-body { font-size: 12px; color: var(--text2); line-height: 1.7; }
+.alert-body strong { color: var(--text); }
+
+/* ── SOURCES ── */
+.sources-list { display: flex; flex-direction: column; gap: 8px; }
+.source-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 12px 16px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+}
+.src-num { font-size: 10px; color: var(--text3); min-width: 24px; padding-top: 2px; }
+.src-body { flex: 1; }
+.src-title { font-size: 12px; color: var(--blue2); margin-bottom: 3px; text-decoration: none; }
+.src-title:hover { text-decoration: underline; }
+.src-meta { font-size: 10px; color: var(--text3); }
+.src-type {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 1px 6px;
+  border-radius: 2px;
+  margin-right: 6px;
+}
+.st-jornalismo { background: rgba(56,120,255,.12); color: var(--blue2); }
+.st-oficial    { background: rgba(38,200,112,.1);  color: var(--green); }
+.st-primario   { background: rgba(232,152,32,.1);  color: var(--amber2); }
+.st-analise    { background: rgba(136,88,232,.1);  color: #b090ff; }
+
+/* ── FOOTER ── */
+.footer {
+  border-top: 1px solid var(--border);
+  margin-top: 60px;
+  padding-top: 24px;
+  font-size: 10px;
+  color: var(--text3);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer a { color: var(--text3); text-decoration: none; }
+.footer a:hover { color: var(--text2); }
+
+/* ── DIVIDER ── */
+.divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+
+/* ── HIGHLIGHT QUOTE ── */
+.hq {
+  border-left: 3px solid var(--red);
+  padding: 14px 20px;
+  margin: 24px 0;
+  background: var(--bg2);
+  border-radius: 0 3px 3px 0;
+}
+.hq-text { font-size: 13px; color: var(--text); line-height: 1.7; font-style: italic; }
+.hq-attr { font-size: 11px; color: var(--text3); margin-top: 8px; }
+
+/* ════════════════════════════════════════
+   OVERRIDES — tudo expandido / visível
+   ════════════════════════════════════════ */
+.tab-panel { display: block !important; }
+.tab-panel + .tab-panel {
+  border-top: 1px solid var(--border);
+  padding-top: 44px;
+  margin-top: 52px;
+}
+.tab-panel { scroll-margin-top: 52px; }
+
+/* ── STICKY TAB NAV ── */
+.tab-nav {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: rgba(9,9,11,0.97);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 2px solid var(--border2);
+  margin-left: -24px;
+  margin-right: -24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-bottom: 40px;
+}
+.tab-btn {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+.tab-btn.active {
+  color: var(--text);
+  border-bottom-color: var(--red);
+}
+
+/* ── PROGRESS BAR ── */
+.progress-bar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 9998;
+  height: 2px; background: rgba(255,255,255,0.04); pointer-events: none;
+}
+.progress-fill { height: 100%; background: var(--red); width: 0%; }
+
+/* ── RELATED ARTICLES ── */
+.related-section { margin: 56px 0 32px; }
+.related-heading {
+  font-family: var(--font-d);
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--text3);
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 20px;
+}
+.related-heading::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.related-card {
+  display: flex; flex-direction: column; gap: 5px;
+  padding: 14px 16px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: border-color .15s, background .15s;
+}
+.related-card:hover { border-color: var(--border2); background: var(--bg3); }
+.rc-label { font-size: 9px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text3); }
+.rc-title { font-size: 12px; font-weight: 600; color: var(--text); line-height: 1.4; }
+.rc-desc  { font-size: 11px; color: var(--text2); line-height: 1.5; }
+.rc-red    .rc-label { color: var(--red2); }
+.rc-amber  .rc-label { color: var(--amber2); }
+.rc-blue   .rc-label { color: var(--blue2); }
+.rc-green  .rc-label { color: var(--green); }
+.rc-orange .rc-label { color: var(--orange); }
+
+/* ── LAWFARE BANNER ── */
+.lawfare-banner {
+  display: flex; align-items: center; gap: 18px;
+  padding: 18px 24px;
+  background: var(--bg2);
+  border: 1px solid rgba(232,152,32,0.35);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: border-color .15s, background .15s;
+  margin-top: 12px;
+}
+.lawfare-banner:hover { border-color: rgba(232,152,32,0.65); background: var(--bg3); }
+.lb-icon { font-size: 24px; flex-shrink: 0; }
+.lb-body { flex: 1; }
+.lb-eyebrow { font-size: 9px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--amber); margin-bottom: 4px; }
+.lb-name { font-size: 14px; font-weight: 700; font-family: var(--font-d); color: var(--text); }
+.lb-url { font-size: 11px; color: var(--text3); margin-top: 3px; }
+.lb-arrow { font-size: 20px; color: var(--amber); flex-shrink: 0; opacity: 0.7; }
+
+@media (max-width: 600px) {
+  .related-grid { grid-template-columns: 1fr; }
+  .lawfare-banner { flex-wrap: wrap; }
+}
+</style>
+</head>
+<body>
+<div class="progress-bar"><div class="progress-fill" id="prog"></div></div>
+<div class="wrap">
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-eyebrow">
+    <div class="pulse-dot"></div>
+    Dossiê Investigativo · Lawfare-Timeline
+  </div>
+  <h1>
+    <span class="hl-red">DUPLO PADRÃO</span><br>
+    JUDICIAL
+  </h1>
+  <div class="header-sub">
+    Mapeamento sistemático da seletividade judicial no Brasil 2019–2026: perseguição a atores políticos da oposição em contraste com proteção, anulação e soltura de agentes do crime organizado financeiro. Inclui a autoferida institucional do COAF e o estado atual da delação Vorcaro/Banco Master.
+  </div>
+  <div class="header-meta">
+    <div>ATUALIZADO · 23/ABR/2026</div>
+    <div><a href="https://lawfare-timeline.vercel.app" target="_blank" style="color:var(--amber);text-decoration:none;letter-spacing:inherit">LAWFARE-TIMELINE.VERCEL.APP ↗</a></div>
+    <div class="cc0-badge">CC0 1.0 DOMÍNIO PÚBLICO</div>
+  </div>
+</div>
+
+<!-- SEVERITY BAND -->
+<div class="severity-band">
+  <div class="sev-item">
+    <div class="sev-label">Presos por opinião/política</div>
+    <div class="sev-value col-red">8+</div>
+    <div class="sev-desc">Alvos documentados no INQ 4.781 e correlatos</div>
+  </div>
+  <div class="sev-item">
+    <div class="sev-label">Soltos por lavagem</div>
+    <div class="sev-value col-green">115+</div>
+    <div class="sev-desc">Beneficiados pela anulação Toffoli/Odebrecht (2023–26)</div>
+  </div>
+  <div class="sev-item">
+    <div class="sev-label">Volume lavagem MC Ryan</div>
+    <div class="sev-value col-amber">R$ 260bi</div>
+    <div class="sev-desc">Solto por "erro de prazo" — STJ min. Azulay Neto</div>
+  </div>
+  <div class="sev-item">
+    <div class="sev-label">Multa Odebrecht suspensa</div>
+    <div class="sev-value col-orange">R$ 8,5bi</div>
+    <div class="sev-desc">Suspensa monocraticamente por Toffoli (fev/2024)</div>
+  </div>
+  <div class="sev-item">
+    <div class="sev-label">Investigações anuladas p/ COAF</div>
+    <div class="sev-value col-blue">Em curso</div>
+    <div class="sev-desc">PCC/Piauí, tigrinho, Carbono Oculto 86 — cascata iniciada</div>
+  </div>
+</div>
+
+<!-- NAV STICKY -->
+<nav class="tab-nav" id="sticky-nav">
+  <a class="tab-btn active" href="#tab-contraste">01 · Contraste</a>
+  <a class="tab-btn" href="#tab-coaf">02 · Autoferida COAF</a>
+  <a class="tab-btn" href="#tab-vorcaro">03 · Vorcaro/Master</a>
+  <a class="tab-btn" href="#tab-cronologia">04 · Cronologia</a>
+  <a class="tab-btn" href="#tab-padroes">05 · Padrões P1–P8</a>
+  <a class="tab-btn" href="#tab-conclusoes">06 · Conclusões</a>
+  <a class="tab-btn" href="#tab-fontes">07 · Fontes</a>
+</nav>
+
+<!-- ═══════════════════════════════════════
+     TAB 01 — CONTRASTE
+════════════════════════════════════════ -->
+<div id="tab-contraste" class="tab-panel active">
+  <div class="sec-title">Tabela de Contraste Sistêmico</div>
+  <div class="sec-sub">Perseguição judicial × Proteção institucional</div>
+
+  <div class="hq">
+    <div class="hq-text">"Ou a justiça é igual para todos — ou é instrumento de poder para alguns."</div>
+    <div class="hq-attr">— Princípio da isonomia, art. 5º caput CF/88 — Aplicação: seletiva</div>
+  </div>
+
+  <div class="contrast-table">
+    <!-- COLUNA A -->
+    <div class="contrast-col">
+      <div class="contrast-header ch-red">⬛ PERSEGUIDOS — Opinião / Oposição Política</div>
+      <div class="contrast-row">
+        <div class="cr-name">Alexandre Ramagem</div>
+        <div class="cr-body">Detido em Orlando via ICE — liaison office utilizado como substituto de extradição formal. Investigado por suposto golpe. Preso antes de qualquer condenação. Operação Armadilha ICE documentada no lawfare-timeline.</div>
+        <div class="cr-tag tag-preso">Detido no exterior</div>
+      </div>
+      <div class="contrast-row">
+        <div class="cr-name">Carla Zambelli</div>
+        <div class="cr-body">Exilada voluntariamente na Itália para evitar prisão decretada por Moraes. Alvo do INQ 4.781. Sem condenação definitiva. Passaporte bloqueado.</div>
+        <div class="cr-tag tag-exil">Exilada</div>
+      </div>
+      <div class="contrast-row">
+        <div class="cr-name">Filipe Martins</div>
+        <div class="cr-body">Preso com base em interpretação de gesto filmado como "sinal nazista" — hipótese negada pelo próprio réu. Processo integralmente baseado em leitura intencional de movimento corporal.</div>
+        <div class="cr-tag tag-preso">Preso — gesto interpretado</div>
+      </div>
+      <div class="contrast-row">
+        <div class="cr-name">Daniel Silveira</div>
+        <div class="cr-body">Deputado federal preso e condenado a 8 anos e 9 meses por discursos críticos ao STF — ainda que no exercício do mandato. Imunidade parlamentar desconsiderada. Condenado por opinião.</div>
+        <div class="cr-tag tag-preso">Preso por discurso</div>
+      </div>
+      <div class="contrast-row">
+        <div class="cr-name">Jair Bolsonaro</div>
+        <div class="cr-body">Declarado inelegível até 2030 pelo TSE por "abuso de poder" em reunião com embaixadores onde questionou urnas eletrônicas. Indiciado pela PF em inquérito de golpe baseado amplamente em ilações e interpretações.</div>
+        <div class="cr-tag tag-inelig">Inelegível</div>
+      </div>
+      <div class="contrast-row">
+        <div class="cr-name">Manifestantes 8 de Janeiro</div>
+        <div class="cr-body">Mais de 1.400 processados. 25 já condenados com penas de 10 a 17 anos em regime fechado. Crimes: depredação, associação criminosa. Penas superiores às de assassinos em série em vários estados.</div>
+        <div class="cr-tag tag-preso">Penas 10–17 anos</div>
+      </div>
+      <div class="contrast-row">
+        <div class="cr-name">Allan dos Santos</div>
+        <div class="cr-body">Exilado nos EUA desde 2021. Governo brasileiro pediu extradição — nunca concedida pelos americanos. Alvo do INQ 4.781 por conteúdo crítico ao STF. Quatro anos fora do país sem julgamento.</div>
+        <div class="cr-tag tag-exil">Exilado 4 anos</div>
+      </div>
+      <div class="contrast-row">
+        <div class="cr-name">Manifestantes portugueses (pró-Brasil)</div>
+        <div class="cr-body">Brasileiros residentes em Portugal detidos ou monitorados em protestos de apoio a Bolsonaro. Cooperação policial internacional acionada para manifestações políticas.</div>
+        <div class="cr-tag tag-preso">Cooperação internacional</div>
+      </div>
+    </div>
+
+    <!-- COLUNA B -->
+    <div class="contrast-col">
+      <div class="contrast-header ch-green">✓ PROTEGIDOS — Crime Organizado / Lavagem</div>
+      <div class="contrast-row">
+        <div class="cr-name">MC Ryan SP — Operação Narco Fluxo</div>
+        <div class="cr-body">Apontado como líder de organização criminosa que movimentou R$ 260 bilhões via PCC, apostas ilegais e tráfico. Preso em 15/abr. STJ (min. Azulay Neto) soltou em 23/abr por "flagrante ilegalidade": juiz decretou 30 dias, PF pediu 5 dias.</div>
+        <div class="cr-tag tag-solto">Solto — erro de prazo</div>
+      </div>
+      <div class="contrast-row">
+        <div class="cr-name">Daniel Dantas — Operação Satiagraha</div>
+        <div class="cr-body">Preso em 07/07/2008, acusado de lavagem, corrupção e crime organizado. Gilmar Mendes concedeu 2 habeas corpus em menos de 72 horas. Saiu quarta-feira. STF pleno referendou por 9×1.</div>
+        <div class="cr-tag tag-solto">Solto em 72h — Gilmar</div>
+      </div>
+      <div class="contrast-row">
+        <div class="cr-name">115+ alvos Lava Jato — Anulação Toffoli</div>
+        <div class="cr-body">Toffoli anulou monocraticamente em set/2023 todas as provas do acordo de leniência Odebrecht. 115+ condenados beneficiados. Conflito de interesses: o próprio Toffoli era citado nas delações como "amigo do amigo de meu pai".</div>
+        <div class="cr-tag tag-anulado">115+ anulados</div>
+      </div>
+      <div class="contrast-row">
+        <div class="cr-name">José Dirceu — Mensalão + Lava Jato</div>
+        <div class="cr-body">Condenado a mais de 30 anos de prisão por corrupção e lavagem. Já tinha sido anistiado no Mensalão. Em outubro de 2024, Gilmar Mendes anulou todas as suas condenações da Lava Jato.</div>
+        <div class="cr-tag tag-anulado">30 anos → anulado (2024)</div>
+      </div>
+      <div class="contrast-row">
+        <div class="cr-name">Odebrecht — multa de R$ 8,5bi suspensa</div>
+        <div class="cr-body">Em fevereiro de 2024, Toffoli suspendeu o pagamento das multas do acordo de leniência que a empresa deveria ao Estado brasileiro. Crítica expressa da OEA e OCDE. Apenas R$ 40,9mi de R$ 203mi em acordos efetivamente pagos.</div>
+        <div class="cr-tag tag-livre">Multa suspensa</div>
+      </div>
+      <div class="contrast-row">
+        <div class="cr-name">Asfor Rocha — Castelo de Areia (STJ)</div>
+        <div class="cr-body">Presidente do STJ concedeu liminar suspendendo toda a Operação Castelo de Areia durante o recesso de janeiro de 2010 — quando outros ministros estavam de férias. Delação de Palocci (sem provas materiais) afirmou R$ 5mi da Camargo Corrêa.</div>
+        <div class="cr-tag tag-solto">Liminar no recesso</div>
+      </div>
+      <div class="contrast-row">
+        <div class="cr-name">PCC/Piauí — Anulação via decisão COAF</div>
+        <div class="cr-body">Decisão de Moraes restringindo uso de relatórios do COAF pela CPI criou precedente que anulou investigação da Carbono Oculto 86 sobre empresários de combustíveis ligados ao PCC no Piauí. Soltos com base na árvore envenenada.</div>
+        <div class="cr-tag tag-anulado">Anulado — efeito colateral Moraes</div>
+      </div>
+      <div class="contrast-row">
+        <div class="cr-name">Influenciador Tigrinho e similares</div>
+        <div class="cr-body">Advogados de réus processados por jogos ilegais (tigrinho) usaram imediatamente a decisão de Moraes sobre COAF para pedir anulação de ações — COAF gerou alerta antes da abertura formal do inquérito.</div>
+        <div class="cr-tag tag-anulado">Pedidos de anulação em série</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert-box">
+    <div class="alert-icon">⚠</div>
+    <div class="alert-body">
+      <strong>Nota metodológica:</strong> O contraste acima não afirma que todos os investigados da coluna A são inocentes ou que todos da coluna B são culpados. A tese analítica é estrutural: o <strong>critério de aplicação rigorosa ou branda da lei não segue a gravidade objetiva dos crimes</strong>, mas o posicionamento político dos réus em relação ao grupo que controla os instrumentos judiciais. Isso é documentável na sequência temporal das decisões, na identidade dos ministros envolvidos, e nos volumes financeiros em contraste.
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     TAB 02 — AUTOFERIDA COAF
+════════════════════════════════════════ -->
+<div id="tab-coaf" class="tab-panel">
+  <div class="sec-title">A Autoferida Institucional do COAF</div>
+  <div class="sec-sub">Moraes tenta proteger o STF da CPI — e liberta o crime organizado</div>
+
+  <div class="coaf-diagram">
+    <div class="sec-title" style="font-size:14px; margin-bottom:6px">Fluxo Normal de Inteligência Financeira</div>
+    <div style="font-size:11px; color:var(--text3); margin-bottom:16px">Como o COAF funciona quando o sistema opera corretamente</div>
+    <div class="coaf-flow">
+      <div class="flow-node fn-normal">
+        <div class="fn-label">Etapa 1</div>
+        <div class="fn-value">COAF gera alerta</div>
+        <div class="fn-note">Movimentação atípica detectada</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node fn-normal">
+        <div class="fn-label">Etapa 2</div>
+        <div class="fn-value">PF investiga</div>
+        <div class="fn-note">Abertura de inquérito formal</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node fn-normal">
+        <div class="fn-label">Etapa 3</div>
+        <div class="fn-value">Provas coletadas</div>
+        <div class="fn-note">Cadeia de custódia preservada</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node fn-normal">
+        <div class="fn-label">Etapa 4</div>
+        <div class="fn-value">Denúncia / prisão</div>
+        <div class="fn-note">Processo penal regular</div>
+      </div>
+    </div>
+
+    <hr class="divider" style="margin: 20px 0;">
+
+    <div class="sec-title" style="font-size:14px; margin-bottom:6px; color:var(--red)">Fluxo Quebrado — Após Decisão Moraes (2025)</div>
+    <div style="font-size:11px; color:var(--text3); margin-bottom:16px">Decisão para proteger STF da CPI cria efeito cascata de anulações</div>
+    <div class="coaf-flow">
+      <div class="flow-node fn-broken">
+        <div class="fn-label">Origem</div>
+        <div class="fn-value">CPI Crime Organizado</div>
+        <div class="fn-note">Relatórios COAF chegam à CPI com dados sobre ministros STF</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node fn-broken">
+        <div class="fn-label">Decisão Moraes</div>
+        <div class="fn-value">COAF bloqueado</div>
+        <div class="fn-note">Proibido compartilhar sem investigação prévia</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node fn-result">
+        <div class="fn-label">Efeito colateral</div>
+        <div class="fn-value">Cascata de anulações</div>
+        <div class="fn-note">Árvore envenenada — provas anteriores contaminadas</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node fn-result">
+        <div class="fn-label">Resultado</div>
+        <div class="fn-value">Crime organizado solto</div>
+        <div class="fn-note">PCC/Piauí, tigrinho, Carbono Oculto 86</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hq">
+    <div class="hq-text">"A decisão é tão esdrúxula que não se aplica ao próprio caso em que foi tomada. Foi tomada num inquérito de 2018 sobre importação de cavalos — e nem nesse caso é válida, porque ela só vale a partir de agora."</div>
+    <div class="hq-attr">— Análise jurídica de especialistas sobre a decisão ex-nunc de Moraes</div>
+  </div>
+
+  <div class="coaf-consequences">
+    <div class="cons-item cons-red">
+      <div class="cons-num">Consequência 01</div>
+      <div class="cons-title">Anulação PCC/Piauí — Carbono Oculto 86</div>
+      <div class="cons-body">Juiz federal anulou investigação sobre empresários de combustíveis ligados ao PCC no Piauí. A operação havia sido iniciada com base em relatório do COAF produzido antes da abertura formal do inquérito — exatamente o modelo que Moraes proibiu.</div>
+    </div>
+    <div class="cons-item cons-amber">
+      <div class="cons-num">Consequência 02</div>
+      <div class="cons-title">Pedidos em série — influenciadores tigrinho</div>
+      <div class="cons-body">Advogados de investigados em esquemas de jogos ilegais ingressaram com pedidos de anulação usando a mesma lógica: o alerta do COAF precede o inquérito formal. A teoria da árvore envenenada torna inutilizáveis todas as provas subsequentes.</div>
+    </div>
+    <div class="cons-item cons-blue">
+      <div class="cons-num">Consequência 03</div>
+      <div class="cons-title">Gambiarra ex-nunc — incoerência interna</div>
+      <div class="cons-body">Ao perceber o estrago, Moraes mudou a decisão para ex-nunc (vale só a partir de agora, não retroage). Mas isso criou outro problema: se o COAF era ilegal antes, por que os casos passados não são anulados? A incoerência expõe o caráter político da decisão.</div>
+    </div>
+    <div class="cons-item cons-orange">
+      <div class="cons-num">Consequência 04</div>
+      <div class="cons-title">Erosão da credibilidade judicial</div>
+      <div class="cons-body">A decisão foi tomada num inquérito de 2018 (Operação Sangue Impuro) para agilidade — e não vale nem para esse processo. O padrão de pegar processos antigos para emitir decisões rápidas, documentado desde Gilmar Mendes (Satiagraha), reproduz-se.</div>
+    </div>
+  </div>
+
+  <div class="mech-grid">
+    <div class="mech-card mech-red">
+      <div class="mech-num">Mecanismo Central</div>
+      <div class="mech-title">Autopreservação que se volta contra o autor</div>
+      <div class="mech-body">Moraes tomou a decisão para impedir que o COAF enviasse relatórios sobre ele e Toffoli à CPI do Crime Organizado. O objetivo era proteger o STF do escrutínio parlamentar. O efeito foi criar precedente que agora anula investigações do PCC, do tigrinho e de redes de lavagem — ou seja, o perseguidor virou o melhor advogado involuntário do perseguido.</div>
+      <div class="mech-cite">Padrão P3 — Captura Judicial de Emergência — aplicado de forma reativa, com consequências não controladas.</div>
+    </div>
+    <div class="mech-card mech-amber">
+      <div class="mech-num">Paradoxo Jurídico</div>
+      <div class="mech-title">Ou o COAF é justo ou não é</div>
+      <div class="mech-body">O direito penal brasileiro tem regra de retroatividade pró-réu (lex mitior): se algo é declarado injusto agora, isso beneficia casos passados. A decisão ex-nunc de Moraes viola essa lógica internamente — ele declarou o procedimento injusto apenas para o futuro, preservando convenientemente os casos onde o COAF já foi usado contra seus alvos políticos.</div>
+      <div class="mech-cite">Artigo 5º, XL, CF/88 — retroatividade da lei penal mais benéfica. Aplicação: seletiva.</div>
+    </div>
+    <div class="mech-card mech-blue">
+      <div class="mech-num">Dimensão Sistêmica</div>
+      <div class="mech-title">Credibilidade como ativo não renovável</div>
+      <div class="mech-body">A justiça funciona porque as pessoas acreditam que ela tem propósito razoável. Decisões visivelmente políticas corroem esse ativo de forma assimétrica: cada decisão seletiva reduz a legitimidade do sistema, mas a recuperação de legitimidade exige anos de consistência. O STF está consumindo credibilidade institucional acumulada em décadas.</div>
+      <div class="mech-cite">Referência: Transparência Internacional — Retrospectiva Poder Judiciário 2024.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     TAB 03 — VORCARO / MASTER
+════════════════════════════════════════ -->
+<div id="tab-vorcaro" class="tab-panel">
+  <div class="sec-title">Vorcaro / Banco Master — Estado da Delação</div>
+  <div class="sec-sub">Abril 2026 · Sinais de bastidor</div>
+
+  <div class="signal-box">
+    <div class="signal-label">⚡ Análise de bastidor — baseada em sinais públicos</div>
+    <div class="signal-body">
+      As informações a seguir combinam fatos verificados (prisão de Paulo Henrique Costa/BRB, isolamento de 5 dias da PF, passagem de Vorcaro ao hospital) com análise de padrões de comportamento de delatores em condições similares. O grau de incerteza é indicado em cada item. <strong>Não se trata de relato factual confirmado, mas de análise de sinais que, historicamente, precedem movimentos de delação de grande impacto.</strong>
+    </div>
+  </div>
+
+  <div class="vorcaro-grid">
+    <div class="vc-card">
+      <div class="vc-date">16 ABR 2026</div>
+      <div class="vc-title">Paulo Henrique Costa preso — BRB</div>
+      <div class="vc-body">O ex-presidente do BRB (Banco de Brasília) é preso pela Polícia Federal. Apontado como "operador de Vorcaro dentro do BRB". Vorcaro toma ciência da prisão no mesmo dia. Este é o último contato antes do período de isolamento.</div>
+      <span class="vc-status vs-critical">Fato verificado</span>
+    </div>
+    <div class="vc-card">
+      <div class="vc-date">17–21 ABR 2026</div>
+      <div class="vc-title">5 dias sem advogados — PF dedetiza</div>
+      <div class="vc-body">Vorcaro fica 5 dias sem acesso aos seus advogados. Justificativa oficial: dedetização da sede da PF. A coincidência do timing — exatamente quando a delação estava em fase quase final e um aliado chave acabava de ser preso — gerou análises sobre a função estratégica do isolamento para pressionar o delator.</div>
+      <span class="vc-status vs-alert">Sinal de análise</span>
+    </div>
+    <div class="vc-card">
+      <div class="vc-date">22 ABR 2026</div>
+      <div class="vc-title">Vorcaro retorna — e descobre o estrago</div>
+      <div class="vc-body">No primeiro contato com advogados após o isolamento: confirmação que Costa troca de advogado para fazer delação própria; executivos da REAG e Zetel já estão em processo de delação. Vorcaro, que tentava controlar a narrativa, descobre que a narrativa já está sendo construída por outros.</div>
+      <span class="vc-status vs-critical">Fato verificado</span>
+    </div>
+    <div class="vc-card">
+      <div class="vc-date">23 ABR 2026</div>
+      <div class="vc-title">Cólica renal — hospital como "sala limpa"</div>
+      <div class="vc-body">Vorcaro relata mal-estar, urina sangue e tem fortes dores. Advogados pedem remoção ao hospital junto ao relator André Mendonça. Não houve necessidade de internação emergencial. A análise de bastidor aponta que o ambiente hospitalar, sem risco de escuta, seria propício para acertar os toques finais da delação — o que incluiria nomes sensíveis que não convém registrar formalmente.</div>
+      <span class="vc-status vs-alert">Hipótese analítica — padrão recorrente</span>
+    </div>
+    <div class="vc-card">
+      <div class="vc-date">Investigações em curso</div>
+      <div class="vc-title">R$ 700mi em offshores + terras raras</div>
+      <div class="vc-body">PGR identificou cerca de R$ 700 milhões enviados ao exterior via offshores. Adicionalmente, investigadores trabalham a hipótese de ocultação de ativos em criptoativos e em contratos de terras raras — mecanismo incomum que dificultaria rastreamento convencional.</div>
+      <span class="vc-status vs-pending">Investigação ativa</span>
+    </div>
+    <div class="vc-card">
+      <div class="vc-date">Ibanês Rocha — Governador do DF</div>
+      <div class="vc-title">Da amizade ao "olho do furacão"</div>
+      <div class="vc-body">A PF suspeita fortemente que Ibanês não era apenas um aliado político, mas um "fiador financeiro" que tornou possível a relação BRB-Master. Independente da fusão, cada vez que o Master fazia uma operação problemática, o BRB aportava recursos. Após renunciar ao governo, Ibanês candidatou-se ao Senado — padrão observado em figuras que tentam converter mandatos parlamentares em foro privilegiado.</div>
+      <span class="vc-status vs-critical">Investigação avançada</span>
+    </div>
+  </div>
+
+  <div class="mech-grid">
+    <div class="mech-card mech-purple">
+      <div class="mech-num">Dinâmica de Delação</div>
+      <div class="mech-title">Estratégia da defesa: "existe alguém acima"</div>
+      <div class="mech-body">A defesa de Vorcaro construiu sua narrativa em torno da tese de que ele recebia ordens de uma estrutura acima dele. Isso é comum em delatores que buscam trocar informações sobre alvos maiores por redução de pena. O problema é provar, com documentos, não apenas relatar. É nesse ponto que a PGR estaria pressionando.</div>
+    </div>
+    <div class="mech-card mech-red">
+      <div class="mech-num">Recado Institucional</div>
+      <div class="mech-title">Faquim + André Mendonça — tom idêntico</div>
+      <div class="mech-body">No mesmo dia, com poucas horas de diferença, os ministros Faquim e André Mendonça emitiram declarações dizendo que a CPI não poderia investigar de forma irrestrita e que autoridades deveriam ser investigadas pelos trâmites formais. Dois ministros de perfis distintos, mesma régua moral, mesmo semitom — interpretado como recado institucional coordenado de contenção do alcance da CPI.</div>
+    </div>
+    <div class="mech-card mech-amber">
+      <div class="mech-num">Risco de Colapso</div>
+      <div class="mech-title">Se a delação vazar, o tribunal vai ao colapso</div>
+      <div class="mech-body">O que está sendo gerenciado não é apenas a delação de um banqueiro. É o ritmo controlado de revelações sobre figuras do STF. A tese dos bastidores é que Faquim sustenta institucionalmente e Mendonça faz a parte operacional — garantindo que as revelações não produzam anulações, que o processo siga o princípio da indivisibilidade processual, e que o relator único previna que partes do processo migrem para outras varas onde o controle seria menor.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     TAB 04 — CRONOLOGIA
+════════════════════════════════════════ -->
+<div id="tab-cronologia" class="tab-panel">
+  <div class="sec-title">Linha do Tempo — Decisões Seletivas</div>
+  <div class="sec-sub">2008–2026 · Marco temporal das assimetrias documentadas</div>
+
+  <div class="chrono">
+    <div class="chrono-item ci-red">
+      <div class="chrono-date">08 Jul 2008</div>
+      <div class="chrono-title">Daniel Dantas preso — Satiagraha</div>
+      <div class="chrono-body">Delegado Protógenes prende o banqueiro por lavagem, corrupção e crime organizado. Em menos de 72 horas, Gilmar Mendes concede dois habeas corpus e Dantas é solto. STF pleno referenda 9×1. Protógenes é afastado, investigado, condenado e expulso da PF.</div>
+      <div class="chrono-tags"><span class="ctag ctag-red">Crime organizado → solto</span><span class="ctag ctag-amber">Investigador → perseguido</span></div>
+    </div>
+    <div class="chrono-item ci-amber">
+      <div class="chrono-date">Jan 2010</div>
+      <div class="chrono-title">Castelo de Areia — liminar no recesso</div>
+      <div class="chrono-body">Asfor Rocha, presidente do STJ, concede liminar suspendendo a Operação Castelo de Areia durante o recesso de janeiro — quando os demais ministros estavam de férias. Anos depois, Palocci alegaria (sem provas materiais) que R$ 5mi foram pagos pela Camargo Corrêa pela decisão.</div>
+      <div class="chrono-tags"><span class="ctag ctag-amber">Liminar no recesso</span><span class="ctag ctag-red">Investigação suspensa</span></div>
+    </div>
+    <div class="chrono-item ci-blue">
+      <div class="chrono-date">2019–2021</div>
+      <div class="chrono-title">INQ 4.781 — escalada da perseguição política</div>
+      <div class="chrono-body">Inquérito das Fake News expande escopo continuamente. Daniel Silveira preso por discurso parlamentar (fev/2021). Filipe Martins preso por gesto filmado. Allan dos Santos exilado nos EUA. Bloqueios de redes sociais a críticos do STF. Investigadores viram investigados.</div>
+      <div class="chrono-tags"><span class="ctag ctag-red">Oposição → presa</span><span class="ctag ctag-blue">Sem condenação definitiva</span></div>
+    </div>
+    <div class="chrono-item ci-orange">
+      <div class="chrono-date">Set 2023</div>
+      <div class="chrono-title">Toffoli anula provas Odebrecht — 115+ beneficiados</div>
+      <div class="chrono-body">Decisão monocrática declara imprestáveis todas as provas do acordo de leniência da Odebrecht. Conflito de interesses: Toffoli citado nas delações como "amigo do amigo de meu pai" — e anula exatamente as provas que poderiam investigá-lo. Três recursos apresentados pelo MP — nenhum analisado até hoje (2,5 anos depois).</div>
+      <div class="chrono-tags"><span class="ctag ctag-orange">115+ anulados</span><span class="ctag ctag-red">Conflito de interesses</span></div>
+    </div>
+    <div class="chrono-item ci-red">
+      <div class="chrono-date">Jan 2023 / Condenações 2024–26</div>
+      <div class="chrono-title">8 de Janeiro — penas de 10 a 17 anos</div>
+      <div class="chrono-body">Manifestantes que invadiram e depredaram prédios públicos recebem penas de 10 a 17 anos em regime fechado por associação criminosa armada e abolição do estado democrático de direito. Simultaneamente, condenados por lavagem bilionária e corrupção sistêmica têm condenações anuladas ou multas suspensas.</div>
+      <div class="chrono-tags"><span class="ctag ctag-red">Vandalismo → 17 anos</span><span class="ctag ctag-green">Lavagem bilionária → anulada</span></div>
+    </div>
+    <div class="chrono-item ci-orange">
+      <div class="chrono-date">Fev 2024</div>
+      <div class="chrono-title">Toffoli suspende multa R$ 8,5bi — Odebrecht</div>
+      <div class="chrono-body">Suspende o pagamento das multas do acordo de leniência previstas à Odebrecht. OEA e OCDE criticam publicamente. Total recuperado dos acordos de leniência: apenas R$ 40,9mi de R$ 203mi previstos. Brasil, após exportar corrupção, exporta impunidade.</div>
+      <div class="chrono-tags"><span class="ctag ctag-orange">R$ 8,5bi suspensos</span><span class="ctag ctag-amber">OEA critica</span></div>
+    </div>
+    <div class="chrono-item ci-amber">
+      <div class="chrono-date">Out 2024</div>
+      <div class="chrono-title">Gilmar anula condenações de Dirceu</div>
+      <div class="chrono-body">Ministro Gilmar Mendes anula todas as condenações de José Dirceu derivadas da Lava Jato. Dirceu, já anistiado pelo Mensalão, tinha mais de 30 anos de pena acumulados. Todas anuladas.</div>
+      <div class="chrono-tags"><span class="ctag ctag-amber">30+ anos → anulado</span></div>
+    </div>
+    <div class="chrono-item ci-blue">
+      <div class="chrono-date">Abr 2026 (1ª quinzena)</div>
+      <div class="chrono-title">Operação Narco Fluxo — MC Ryan e outros</div>
+      <div class="chrono-body">PF deflagra operação contra organização criminosa de R$ 260 bilhões ligada ao PCC. 33 de 39 mandados cumpridos. MC Ryan preso em 15/abr como suposto líder. Paulo Henrique Costa (BRB) preso em 16/abr. Vorcaro entra em isolamento.</div>
+      <div class="chrono-tags"><span class="ctag ctag-blue">Operação PF</span><span class="ctag ctag-red">R$ 260bi</span></div>
+    </div>
+    <div class="chrono-item ci-green">
+      <div class="chrono-date">23 Abr 2026 — Hoje</div>
+      <div class="chrono-title">STJ solta MC Ryan — "flagrante ilegalidade"</div>
+      <div class="chrono-body">Min. Messod Azulay Neto revoga prisão temporária: juiz decretou 30 dias, mas PF pediu apenas 5 dias — prazo já vencido. Tecnicamente correto. Efeito prático: acusado de liderar lavagem de R$ 260bi ligada ao PCC está livre enquanto manifestantes do 8/jan cumprem 17 anos em regime fechado.</div>
+      <div class="chrono-tags"><span class="ctag ctag-green">R$ 260bi → livre</span><span class="ctag ctag-amber">Erro processual</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     TAB 05 — PADRÕES P1–P8
+════════════════════════════════════════ -->
+<div id="tab-padroes" class="tab-panel">
+  <div class="sec-title">Framework P1–P8 — Padrões Sistêmicos</div>
+  <div class="sec-sub">Aplicação ao duplo padrão judicial e à autoferida COAF</div>
+
+  <div class="pattern-grid">
+    <div class="pat-card">
+      <div class="pat-header">
+        <div class="pat-id">P1 — Anulação Procedimental</div>
+        <div class="pat-status ps-confirmed">✓ Confirmado</div>
+      </div>
+      <div class="pat-title">Atacar o processo, não os fatos</div>
+      <div class="pat-body">O padrão central: quando as provas são sólidas, a estratégia é atacar o procedimento. Satiagraha: denúncia anônima sem inquérito formal. Castelo de Areia: quebra de cadeia de custódia. Odebrecht/Toffoli: cooperação internacional fora dos canais oficiais. MC Ryan: prazo errado. O fato nunca desaparece — o prazo, sim.</div>
+      <div class="pat-evidence"><strong>Evidência no corpus:</strong> Todos os casos documentados no lawfare-timeline têm este padrão como primeiro instrumento de defesa.</div>
+    </div>
+    <div class="pat-card">
+      <div class="pat-header">
+        <div class="pat-id">P2 — Investigador vira Investigado</div>
+        <div class="pat-status ps-confirmed">✓ Confirmado</div>
+      </div>
+      <div class="pat-title">Reversão da persecução</div>
+      <div class="pat-body">Protógenes (expulso da PF), Moro (declarado parcial), Dallagnol (mandato cassado), Andrei Rodrigues (relatório chamado de "lixo jurídico"). O padrão serve dois objetivos: destruir a investigação atual e intimidar futuros investigadores. O cálculo de risco pessoal impede que delegados, juízes e procuradores investiguem poder.</div>
+      <div class="pat-evidence"><strong>Atualização 2026:</strong> Delegado do BRB/Master sob pressão após relatório sugerindo afastamento de Toffoli.</div>
+    </div>
+    <div class="pat-card">
+      <div class="pat-header">
+        <div class="pat-id">P3 — Captura Judicial de Emergência</div>
+        <div class="pat-status ps-confirmed">✓ Confirmado</div>
+      </div>
+      <div class="pat-title">Liminar monocrática no momento crítico</div>
+      <div class="pat-body">Satiagraha: Gilmar Mendes em 72h. Castelo de Areia: Asfor Rocha no recesso. Banco Master: Toffoli com sigilo máximo após primeira prisão. Decisão COAF de Moraes: tomada em processo de 2018 para produzir efeito imediato. Em todos os casos, o momento é exatamente o ponto de maior vulnerabilidade do investigado.</div>
+      <div class="pat-evidence"><strong>Variante 2026:</strong> Autoferida — a captura de emergência para proteger o STF da CPI cria dano colateral ao crime organizado investigado pela mesma CPI.</div>
+    </div>
+    <div class="pat-card">
+      <div class="pat-header">
+        <div class="pat-id">P4 — Weaponização da Mídia</div>
+        <div class="pat-status ps-confirmed">✓ Confirmado</div>
+      </div>
+      <div class="pat-title">Narrativa como instrumento de perseguição</div>
+      <div class="pat-body">O INQ 4.781 expandiu-se para alcançar críticos na mídia digital. Criadores de conteúdo conservadores tiveram canais bloqueados por decisão judicial. A "weaponização" opera nos dois sentidos: suprimindo críticos ao poder e amplificando narrativas favoráveis ao grupo dominante via veículos com contratos publicitários estatais.</div>
+      <div class="pat-evidence"><strong>Evidência:</strong> INQ 4.781, vaza-toga.html, operacao-silencio-digital.html — corpus do lawfare-timeline.</div>
+    </div>
+    <div class="pat-card">
+      <div class="pat-header">
+        <div class="pat-id">P5 — Fundos Públicos como Vetor</div>
+        <div class="pat-status ps-confirmed">✓ Confirmado</div>
+      </div>
+      <div class="pat-title">Estado como garantidor do esquema</div>
+      <div class="pat-body">BRB (banco público do DF) como veículo de capitalização do Banco Master privado. INSS como fonte de consignado para o esquema Master. FGC como garantidor implícito da pirâmide de CRIs. A lógica da federalização — comprar banco insolvente para depois federalizar usando recursos públicos — reproduz o padrão do PROER, PROES e Banestado.</div>
+      <div class="pat-evidence"><strong>Investigação ativa:</strong> Ibanês como "fiador financeiro" da operação BRB-Master, segundo PF.</div>
+    </div>
+    <div class="pat-card">
+      <div class="pat-header">
+        <div class="pat-id">P6 — STF como Terminal de Impunidade</div>
+        <div class="pat-status ps-confirmed">✓ Confirmado</div>
+      </div>
+      <div class="pat-title">Onde as cadeias de responsabilização terminam</div>
+      <div class="pat-body">Em todos os casos documentados no lawfare-timeline, a cadeia de accountability é severada no STF. Único tribunal do mundo onde um único ministro pode suspender com liminar monocrática qualquer investigação nacional, a qualquer hora, sem prazo para revisão colegiada — e onde ministros julgam casos envolvendo seus próprios indicadores.</div>
+      <div class="pat-evidence"><strong>Confirmação 2026:</strong> Toffoli anula 115+ condenados. Recursos contra a decisão: 2,5 anos sem análise pelo plenário.</div>
+    </div>
+    <div class="pat-card">
+      <div class="pat-header">
+        <div class="pat-id">P7 — Prescrição Estratégica</div>
+        <div class="pat-status ps-confirmed">✓ Confirmado</div>
+      </div>
+      <div class="pat-title">O prazo como arma definitiva</div>
+      <div class="pat-body">Quando processos são anulados, reiniciados e sujeitos a novos recursos, o prazo prescricional corre. Casos do mensalão que foram para o DF já estavam prescritos quando reiniciados. A combinação de anulação procedimental + reinício + prescrição é o mecanismo definitivo de impunidade para quem tem recursos jurídicos suficientes.</div>
+      <div class="pat-evidence"><strong>Risco ativo:</strong> Caso MC Ryan — sem condenação, investigação recomeça. Prazo prescricional de lavagem: 16 anos, mas com interrupções.</div>
+    </div>
+    <div class="pat-card">
+      <div class="pat-header">
+        <div class="pat-id">P8 — Jurisdição Internacional como único vetor efetivo</div>
+        <div class="pat-status ps-partial">◐ Parcial</div>
+      </div>
+      <div class="pat-title">Quando o Brasil não consegue punir, o exterior sim</div>
+      <div class="pat-body">JBS: DOJ americano processou. Odebrecht: FCPA americano, Suíça, Peru. Ramagem: EUA (ICE). A assimetria é confirmada pelo silêncio seletivo: DOJ age quando há interesse americano próprio (FCPA, sanções OFAC). Quando o interesse não está em jogo, o silêncio americano protege os beneficiários de Delaware.</div>
+      <div class="pat-evidence"><strong>Questão em aberto:</strong> Por que o DOJ permanece silencioso sobre as LLCs de Delaware identificadas nas operações brasileiras?</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     TAB 06 — CONCLUSÕES
+════════════════════════════════════════ -->
+<div id="tab-conclusoes" class="tab-panel">
+  <div class="sec-title">Conclusões Analíticas</div>
+  <div class="sec-sub">Síntese estrutural — não é disfunção, é design</div>
+
+  <div class="conclusion-grid">
+    <div class="concl-card concl-red">
+      <div class="concl-num">01</div>
+      <div class="concl-title">O sistema não é disfuncional — ele funciona como foi calibrado</div>
+      <div class="concl-body">A seletividade não é erro ou incompetência. É o output esperado de um Judiciário que acumulou poder sem accountability externo. Quando o critério de aplicação da lei não segue a gravidade objetiva dos crimes, mas o posicionamento político dos réus, o sistema cumpre sua função real: proteger quem está no poder e perseguir quem desafia.</div>
+    </div>
+    <div class="concl-card concl-amber">
+      <div class="concl-num">02</div>
+      <div class="concl-title">A autoferida do COAF é o microcosmo do problema macro</div>
+      <div class="concl-body">Moraes tomou uma decisão politicamente motivada para proteger o STF da CPI, criou precedente que liberta o crime organizado que a mesma CPI investiga. Isso não é coincidência — é a consequência inevitável de usar instrumentos jurídicos para fins políticos: as ferramentas perdem especificidade e produzem dano indiscriminado.</div>
+    </div>
+    <div class="concl-card concl-blue">
+      <div class="concl-num">03</div>
+      <div class="concl-title">A delação Vorcaro é o teste mais importante desde a Lava Jato</div>
+      <div class="concl-body">Se a delação chegar a nomes no STF com provas materiais, cria dilema insolúvel: ou o STF julga seus próprios membros (impossível por conflito de interesse), ou o caso vai para outro tribunal (improvável pelo design institucional), ou prescreve (provável dado o histórico). A gestão do ritmo das revelações por Mendonça e Faquim é o sinal mais concreto de que todos os atores sabem o que está em jogo.</div>
+    </div>
+    <div class="concl-card concl-orange">
+      <div class="concl-num">04</div>
+      <div class="concl-title">A credibilidade judicial é ativo não renovável no curto prazo</div>
+      <div class="concl-body">Cada decisão visualmente seletiva consome capital de legitimidade acumulado em décadas. A recuperação exige anos de consistência. O Brasil vai enfrentar a questão de como recuperar a credibilidade da justiça após a passagem desta configuração pelo STF — independentemente do resultado das investigações em curso.</div>
+    </div>
+    <div class="concl-card concl-green">
+      <div class="concl-num">05</div>
+      <div class="concl-title">A janela de 2026 é a mais estreita</div>
+      <div class="concl-body">Com eleições em outubro de 2026, o ciclo de pressão investigativa enfrenta prazo concreto. Histórico documentado: investigações de grande impacto que não produzem condenações definitivas antes de um ciclo eleitoral tendem a ser absorvidas pelo novo arranjo político pós-eleição. A CPI do Crime Organizado, a delação Vorcaro e as operações em curso precisam de velocidade que o sistema foi projetado para impedir.</div>
+    </div>
+    <div class="concl-card concl-purple">
+      <div class="concl-num">06</div>
+      <div class="concl-title">A pergunta que ainda não foi feita</div>
+      <div class="concl-body">Se o BRB (banco público) era veículo de capitalização do Master (banco privado insolvente), e se a intenção era federalizar o Master após a fusão, então os recursos públicos do DF foram usados conscientemente para socializar perdas privadas. Isso é crime de responsabilidade fiscal de dimensão que ultrapassa qualquer dos atores individuais identificados até agora. Quem, na União, autorizou implicitamente essa operação?</div>
+    </div>
+  </div>
+
+  <div class="hq">
+    <div class="hq-text">"A pergunta correta não é 'por que o sistema não funciona?'. A pergunta é: para quem ele funciona — e essa resposta está nos dados."</div>
+    <div class="hq-attr">— Princípio analítico do lawfare-timeline: função sobre declaração</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     TAB 07 — FONTES
+════════════════════════════════════════ -->
+<div id="tab-fontes" class="tab-panel">
+  <div class="sec-title">Fontes e Referências</div>
+  <div class="sec-sub">Documentação primária e jornalismo investigativo verificado</div>
+
+  <div class="sources-list">
+    <div class="source-item">
+      <div class="src-num">01</div>
+      <div class="src-body">
+        <div class="src-title">CNN Brasil — STJ aceita HC de MC Ryan SP — Operação Narco Fluxo (23/abr/2026)</div>
+        <div class="src-meta"><span class="src-type st-jornalismo">JORNALISMO</span>CNN Brasil · Decisão min. Messod Azulay Neto · R$ 260bi movimentados · PCC</div>
+      </div>
+    </div>
+    <div class="source-item">
+      <div class="src-num">02</div>
+      <div class="src-body">
+        <div class="src-title">Metrópoles — STJ concede liberdade a MC Ryan: "Flagrante ilegalidade" (23/abr/2026)</div>
+        <div class="src-meta"><span class="src-type st-jornalismo">JORNALISMO</span>Metrópoles · Detalhe: PF pediu 5 dias, juiz decretou 30 dias</div>
+      </div>
+    </div>
+    <div class="source-item">
+      <div class="src-num">03</div>
+      <div class="src-body">
+        <div class="src-title">Transparência Internacional Brasil — Anulação provas Odebrecht completa 2,5 anos (mar/2026)</div>
+        <div class="src-meta"><span class="src-type st-analise">ANÁLISE</span>TI Brasil · 115+ alvos beneficiados · Conflito de interesses Toffoli · R$ 8,5bi suspensos</div>
+      </div>
+    </div>
+    <div class="source-item">
+      <div class="src-num">04</div>
+      <div class="src-body">
+        <div class="src-title">OEA/MESICIC — Relatório 6ª Rodada Brasil — Decisões Toffoli "minam confiança pública" (mar/2025)</div>
+        <div class="src-meta"><span class="src-type st-oficial">OFICIAL</span>Organização dos Estados Americanos · Convenção Interamericana contra Corrupção</div>
+      </div>
+    </div>
+    <div class="source-item">
+      <div class="src-num">05</div>
+      <div class="src-body">
+        <div class="src-title">Transparência Internacional — Retrospectiva 2024 Poder Judiciário</div>
+        <div class="src-meta"><span class="src-type st-analise">ANÁLISE</span>TI Brasil · Chilling effect · Magistrados PAD · Anulações em série Lava Jato</div>
+      </div>
+    </div>
+    <div class="source-item">
+      <div class="src-num">06</div>
+      <div class="src-body">
+        <div class="src-title">CNN Brasil — Mensalão: 20 anos depois, todos os condenados estão soltos (jun/2025)</div>
+        <div class="src-meta"><span class="src-type st-jornalismo">JORNALISMO</span>CNN Brasil · Dirceu, Jefferson, Delúbio, Costa Neto — todos em liberdade</div>
+      </div>
+    </div>
+    <div class="source-item">
+      <div class="src-num">07</div>
+      <div class="src-body">
+        <div class="src-title">Transparência Internacional — Caso Odebrecht: após exportar corrupção, Brasil exporta impunidade (mai/2025)</div>
+        <div class="src-meta"><span class="src-type st-analise">ANÁLISE</span>TI Brasil · Peru × Brasil · Acordos leniência · Non bis in idem invertido</div>
+      </div>
+    </div>
+    <div class="source-item">
+      <div class="src-num">08</div>
+      <div class="src-body">
+        <a class="src-title" href="https://lawfare-timeline.vercel.app/posts/inq4781/" target="_blank">Lawfare-Timeline — INQ 4.781 — Inquérito das Fake News ↗</a>
+        <div class="src-meta"><span class="src-type st-primario">PRIMÁRIO</span>lawfare-timeline.vercel.app · Análise completa do inquérito · Alvos documentados</div>
+      </div>
+    </div>
+    <div class="source-item">
+      <div class="src-num">09</div>
+      <div class="src-body">
+        <a class="src-title" href="https://lawfare-timeline.vercel.app" target="_blank">Lawfare-Timeline — Operação Satiagraha ↗</a>
+        <div class="src-meta"><span class="src-type st-primario">PRIMÁRIO</span>lawfare-timeline.vercel.app · Daniel Dantas · Gilmar Mendes · Protógenes Queiroz</div>
+      </div>
+    </div>
+    <div class="source-item">
+      <div class="src-num">10</div>
+      <div class="src-body">
+        <a class="src-title" href="https://lawfare-timeline.vercel.app" target="_blank">Lawfare-Timeline — Operação Castelo de Areia ↗</a>
+        <div class="src-meta"><span class="src-type st-primario">PRIMÁRIO</span>lawfare-timeline.vercel.app · Asfor Rocha · Liminar recesso · Palocci delação</div>
+      </div>
+    </div>
+    <div class="source-item">
+      <div class="src-num">11</div>
+      <div class="src-body">
+        <a class="src-title" href="https://lawfare-timeline.vercel.app" target="_blank">Lawfare-Timeline — República Capturada / Thread Operações Brasil ↗</a>
+        <div class="src-meta"><span class="src-type st-primario">PRIMÁRIO</span>lawfare-timeline.vercel.app · Padrões P1–P8 · CPI Crime Organizado · Banco Master</div>
+      </div>
+    </div>
+    <div class="source-item">
+      <div class="src-num">12</div>
+      <div class="src-body">
+        <div class="src-title">Agência Brasil — Um ano após 8/jan, STF mantém 66 presos (jan/2024)</div>
+        <div class="src-meta"><span class="src-type st-jornalismo">JORNALISMO</span>Agência Brasil · 25 condenados · Penas 10–17 anos · Regime fechado</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert-box" style="margin-top:32px">
+    <div class="alert-icon">📋</div>
+    <div class="alert-body">
+      <strong>Lacunas identificadas:</strong> (1) Decisão completa e fundamentação do juiz federal do Piauí que anulou a investigação PCC com base na decisão COAF de Moraes — ainda não localizada em fontes primárias. (2) Lista completa dos processos judiciais usando o precedente COAF para pedidos de anulação — em formação. (3) Documentação sobre cooperação Ibanês-Vorcaro além das afirmações da PF divulgadas na imprensa.
+    </div>
+  </div>
+</div>
+
+<!-- ARTIGOS RELACIONADOS -->
+<div class="related-section">
+  <div class="related-heading">Leitura Relacionada — gosurf.site</div>
+
+  <div class="related-grid">
+
+    <a class="related-card rc-red" href="https://gosurf.site/vaza-toga.html" target="_blank">
+      <div class="rc-label">Dossiê · INQ 4.781</div>
+      <div class="rc-title">VAZA TOGA — Dossiê Completo INQ 4.781</div>
+      <div class="rc-desc">Sistema paralelo de produção de provas: o gabinete do STF instrumentalizou o TSE para justificar decisões fora dos ritos processuais.</div>
+    </a>
+
+    <a class="related-card rc-amber" href="https://gosurf.site/operacao-silencio-digital.html" target="_blank">
+      <div class="rc-label">Dossiê · Censura Judicial</div>
+      <div class="rc-title">Operação Silêncio Digital — Regime de Censura 2020–2026</div>
+      <div class="rc-desc">Ordens sigilosas, remoções de conteúdo e o mecanismo de censura judicial sistêmica nas redes sociais brasileiras.</div>
+    </a>
+
+    <a class="related-card rc-red" href="https://gosurf.site/choquei-narco-fluxo.html" target="_blank">
+      <div class="rc-label">Operação · Narco Fluxo</div>
+      <div class="rc-title">NARCO FLUXO — Choquei: Da Campanha ao Crime Organizado</div>
+      <div class="rc-desc">MC Ryan SP, Choquei e os 33 presos com 55M de seguidores — operador de mídia do crime organizado documentado pela PF.</div>
+    </a>
+
+    <a class="related-card rc-orange" href="https://gosurf.site/operacao-armadilha-ice.html" target="_blank">
+      <div class="rc-label">Operação · Perseguição Transnacional</div>
+      <div class="rc-title">Operação Armadilha ICE — Perseguição Transnacional</div>
+      <div class="rc-desc">Como o liaison da PF no ICE em Miami foi utilizado como instrumento de perseguição extrajudicial a opositores. Ramagem documentado.</div>
+    </a>
+
+    <a class="related-card rc-blue" href="https://gosurf.site/padroes-sistemicos-dashboard.html" target="_blank">
+      <div class="rc-label">Dashboard · P1–P8</div>
+      <div class="rc-title">Mestre: Padrões × Operações Anticorrupção 2026</div>
+      <div class="rc-desc">Análise transversal dos 10 padrões identificados em 25 anos de operações — incluindo P9 (captura cultural) e P10 (infraestrutura compartilhada).</div>
+    </a>
+
+    <a class="related-card rc-amber" href="https://gosurf.site/gilmar-mendes-em-fatos.html" target="_blank">
+      <div class="rc-label">Perfil · STF</div>
+      <div class="rc-title">Gilmar Mendes — Perfil Analítico em Fatos</div>
+      <div class="rc-desc">Satiagraha, habeas corpus em 72h, anulação Dirceu — cronologia completa das decisões controversas do ministro com maior frequência de conflito de interesses.</div>
+    </a>
+
+    <a class="related-card rc-red" href="https://gosurf.site/golpe-brasil-analise-evidencial.html" target="_blank">
+      <div class="rc-label">Análise Evidencial · 2026</div>
+      <div class="rc-title">Quem Deu o Golpe no Brasil?</div>
+      <div class="rc-desc">Síntese baseada em documentos primários: dois vetores de ruptura simultâneos, USAID, NetLab e assimetria de consequências.</div>
+    </a>
+
+    <a class="related-card rc-blue" href="https://gosurf.site/brasil-estado-totalitario.html" target="_blank">
+      <div class="rc-label">Análise · Weaponized Legalism</div>
+      <div class="rc-title">Brasil: Anatomia de um Estado Capturado</div>
+      <div class="rc-desc">Como o Brasil se tornou um estado de duplo padrão sem golpe: weaponized legalism, captura judicial, censura digital e perseguição seletiva.</div>
+    </a>
+
+    <a class="related-card rc-green" href="https://gosurf.site/republica-capturada.html" target="_blank">
+      <div class="rc-label">Dashboard · Captura Institucional</div>
+      <div class="rc-title">República Capturada — Dashboard Investigativo</div>
+      <div class="rc-desc">Mapeamento forense das operações Greenwashing, Carbono Oculto, Compliance Zero e conexões transversais com Lava Jato e Panama Papers.</div>
+    </a>
+
+    <a class="related-card rc-orange" href="https://gosurf.site/rede-master-conexoes.html" target="_blank">
+      <div class="rc-label">Mapa Mental · Banco Master</div>
+      <div class="rc-title">TEIA MASTER — Rede de Conexões Investigativas</div>
+      <div class="rc-desc">Mapeamento das relações entre Banco Master, Fictor, Reag Investimentos, PCC, STF e INSS. Delação Vorcaro e o contexto da CPI.</div>
+    </a>
+
+    <a class="related-card rc-red" href="https://gosurf.site/splc-modelo-brasil.html" target="_blank">
+      <div class="rc-label">Análise Estrutural · Modelo SPLC</div>
+      <div class="rc-title">SPLC → Brasil — Modelo Estrutural Transferível</div>
+      <div class="rc-desc">Seis funções do modelo de captura via antirracismo: financiamento externo, argumento circular como blindagem, weaponização judicial documentada.</div>
+    </a>
+
+    <a class="related-card rc-amber" href="https://gosurf.site/brasil-falha-institucional-diagnostico.html" target="_blank">
+      <div class="rc-label">Dashboard · Diagnóstico Sistêmico</div>
+      <div class="rc-title">Falha Institucional: Diagnóstico Sistêmico Brasil (2025)</div>
+      <div class="rc-desc">Análise transversal de falhas estruturais, captura orçamentária e o paradoxo da segurança pública. Dados consolidados 2022–2025.</div>
+    </a>
+
+  </div>
+
+  <!-- LAWFARE TIMELINE BANNER -->
+  <a class="lawfare-banner" href="https://lawfare-timeline.vercel.app" target="_blank">
+    <div class="lb-icon">⚖</div>
+    <div class="lb-body">
+      <div class="lb-eyebrow">Arquivo completo · Linha do tempo · 1.400+ entradas</div>
+      <div class="lb-name">LAWFARE-TIMELINE</div>
+      <div class="lb-url">lawfare-timeline.vercel.app — INQ 4.781 · Satiagraha · Castelo de Areia · Vaza Toga · STF · TSE/USAID</div>
+    </div>
+    <div class="lb-arrow">→</div>
+  </a>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div>
+    <a href="https://lawfare-timeline.vercel.app" target="_blank" style="color:var(--amber);text-decoration:none">LAWFARE-TIMELINE.VERCEL.APP ↗</a> · DOSSIÊ: DUPLO-PADRAO-JUDICIAL.HTML<br>
+    Produzido por <a href="https://lawfare-timeline.vercel.app">Artes do Sul Desenvolvimento Web</a> · Bombinhas/SC · Brasil
+  </div>
+  <div style="text-align:right">
+    <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 DOMÍNIO PÚBLICO</a><br>
+    Copie, distribua, adapte sem restrições · Atualizado 23/abr/2026
+  </div>
+</div>
+
+</div><!-- /wrap -->
+
+<script>
+// ── PROGRESS BAR ──
+const prog = document.getElementById('prog');
+window.addEventListener('scroll', () => {
+  const total = document.documentElement.scrollHeight - window.innerHeight;
+  if (total > 0) prog.style.width = (window.scrollY / total * 100) + '%';
+}, { passive: true });
+
+// ── SMOOTH SCROLL com offset do sticky nav ──
+const NAV_H = document.getElementById('sticky-nav').offsetHeight + 4;
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.getElementById(a.getAttribute('href').slice(1));
+    if (target) {
+      e.preventDefault();
+      const top = target.getBoundingClientRect().top + window.scrollY - NAV_H;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
+
+// ── SCROLL SPY — destaca tab ativa conforme seção visível ──
+const sections = [
+  'tab-contraste', 'tab-coaf', 'tab-vorcaro',
+  'tab-cronologia', 'tab-padroes', 'tab-conclusoes', 'tab-fontes'
+];
+const navLinks = {};
+document.querySelectorAll('#sticky-nav a').forEach(a => {
+  const id = a.getAttribute('href').slice(1);
+  navLinks[id] = a;
+});
+
+function getOffsetTop(el) {
+  return el.getBoundingClientRect().top + window.scrollY;
+}
+
+function updateActiveTab() {
+  const scrollY = window.scrollY + NAV_H + 20;
+  let active = sections[0];
+  for (const id of sections) {
+    const el = document.getElementById(id);
+    if (el && getOffsetTop(el) <= scrollY) active = id;
+  }
+  Object.values(navLinks).forEach(l => l.classList.remove('active'));
+  if (navLinks[active]) navLinks[active].classList.add('active');
+}
+
+window.addEventListener('scroll', updateActiveTab, { passive: true });
+updateActiveTab();
+</script>
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

@@ -54,7 +54,7 @@ A cadeia de valor do lítio mineiro atravessa múltiplos blocos geopolíticos si
 
 Entradas conectadas nesta série:
 
-- [Entrada 1679](/timeline/entries/1679)
+- [Entrada 1679](/posts/id1679-zema-lanca-mundialmente-o-projeto-vale-do-litio-na-nasdaq-em-nova-york/)
 
 ---
 

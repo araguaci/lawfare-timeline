@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gilmar Mendes — Dossiê Consolidado v2 · lawfare-timeline</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080c10;--bg1:#0d1218;--bg2:#121820;--bg3:#1a2230;
+  --border:rgba(255,255,255,0.06);--border2:rgba(255,255,255,0.12);
+  --fg:#e8ecf0;--fg2:#8a9ab0;--fg3:#4a5a6a;
+  --red:#e84040;--red2:rgba(232,64,64,0.15);
+  --amber:#e8a020;--amber2:rgba(232,160,32,0.15);
+  --blue:#3090e8;--blue2:rgba(48,144,232,0.12);
+  --green:#28c880;--green2:rgba(40,200,128,0.12);
+  --purple:#a060e8;--purple2:rgba(160,96,232,0.12);
+  --font-d:'Syne',sans-serif;--font-m:'IBM Plex Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-m);font-size:13px;line-height:1.65;min-height:100vh}
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
+
+.masthead{background:var(--bg1);border-bottom:1px solid var(--border2);padding:28px 24px 0;position:relative;overflow:hidden}
+.masthead::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--red),var(--amber),var(--purple));animation:scan 3s linear infinite;background-size:200% 100%}
+@keyframes scan{to{background-position:200% 0}}
+.masthead-inner{max-width:1200px;margin:0 auto}
+.badge{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--purple);background:var(--purple2);border:1px solid rgba(160,96,232,0.3);padding:3px 8px;border-radius:3px;display:inline-block;margin-bottom:10px}
+h1{font-family:var(--font-d);font-size:clamp(22px,3.5vw,40px);font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--fg)}
+h1 span{color:var(--red)}
+.sub{font-size:12px;color:var(--fg2);margin-top:6px;max-width:780px;line-height:1.7}
+.new-badge{font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;background:rgba(40,200,128,0.15);color:var(--green);border:1px solid rgba(40,200,128,0.3);padding:2px 6px;border-radius:3px;margin-left:6px;vertical-align:middle}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;max-width:1200px;margin:20px auto 0;padding:0 24px 20px}
+.sc{background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:12px 14px}
+.sn{font-family:var(--font-d);font-size:22px;font-weight:700;letter-spacing:-0.02em}
+.sl{font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--fg3);margin-top:2px}
+
+.nav{position:sticky;top:0;z-index:200;background:rgba(8,12,16,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;overflow-x:auto;scrollbar-width:none;padding:0 24px}
+.nav-inner::-webkit-scrollbar{display:none}
+.nav-tab{padding:13px 14px;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--fg3);cursor:pointer;border:none;background:none;border-bottom:2px solid transparent;white-space:nowrap;transition:color .15s,border-color .15s;font-family:var(--font-m)}
+.nav-tab:hover{color:var(--fg2)}
+.nav-tab.active{color:var(--fg);border-bottom-color:var(--red)}
+
+.main{max-width:1200px;margin:0 auto;padding:28px 24px 100px}
+.section{scroll-margin-top:60px;margin-bottom:52px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.section:last-of-type{border-bottom:none}
+
+.sec-title{font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--fg3);border-bottom:1px solid var(--border);padding-bottom:8px;margin-bottom:22px;display:flex;align-items:center;gap:10px}
+.sec-title::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--red);flex-shrink:0}
+
+/* TIMELINE */
+.timeline{position:relative;padding-left:28px}
+.timeline::before{content:'';position:absolute;left:6px;top:0;bottom:0;width:1px;background:var(--border2)}
+.tl-group{margin-bottom:28px}
+.tl-year{font-family:var(--font-d);font-size:15px;font-weight:700;color:var(--amber);margin-bottom:14px;position:relative}
+.tl-year::before{content:'';width:14px;height:14px;border-radius:50%;background:var(--amber);border:2px solid var(--bg);position:absolute;left:-25px;top:2px}
+.tl-item{background:var(--bg1);border:1px solid var(--border);border-radius:6px;padding:13px 15px;margin-bottom:9px;position:relative;transition:border-color .2s}
+.tl-item:hover{border-color:var(--border2)}
+.tl-item::before{content:'';width:7px;height:7px;border-radius:50%;position:absolute;left:-24px;top:16px}
+.tl-item.red{border-left:3px solid var(--red)}.tl-item.red::before{background:var(--red)}
+.tl-item.amber{border-left:3px solid var(--amber)}.tl-item.amber::before{background:var(--amber)}
+.tl-item.blue{border-left:3px solid var(--blue)}.tl-item.blue::before{background:var(--blue)}
+.tl-item.purple{border-left:3px solid var(--purple)}.tl-item.purple::before{background:var(--purple)}
+.tl-item.green{border-left:3px solid var(--green)}.tl-item.green::before{background:var(--green)}
+.tl-date{font-size:10px;color:var(--fg3);letter-spacing:0.06em;margin-bottom:4px}
+.tl-title{font-family:var(--font-d);font-size:13px;font-weight:700;color:var(--fg);margin-bottom:5px;line-height:1.3}
+.tl-desc{font-size:12px;color:var(--fg2);line-height:1.65}
+.tl-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}
+.tag{font-size:10px;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;padding:2px 6px;border-radius:3px}
+.tag-red{background:var(--red2);color:var(--red);border:1px solid rgba(232,64,64,0.3)}
+.tag-amber{background:var(--amber2);color:var(--amber);border:1px solid rgba(232,160,32,0.3)}
+.tag-blue{background:var(--blue2);color:var(--blue);border:1px solid rgba(48,144,232,0.3)}
+.tag-purple{background:var(--purple2);color:var(--purple);border:1px solid rgba(160,96,232,0.3)}
+.tag-green{background:var(--green2);color:var(--green);border:1px solid rgba(40,200,128,0.3)}
+.tl-item.new-item{border-color:rgba(40,200,128,0.3)}
+.tl-item.new-item::after{content:'NOVO';font-size:9px;font-weight:700;letter-spacing:0.08em;background:var(--green2);color:var(--green);border:1px solid rgba(40,200,128,0.3);padding:1px 5px;border-radius:3px;position:absolute;top:10px;right:10px}
+
+/* QUOTE */
+.quote{background:var(--bg3);border-left:3px solid var(--amber);border-radius:0 6px 6px 0;padding:14px 16px;margin:12px 0;font-size:12px;color:var(--fg2);font-style:italic;line-height:1.7}
+.quote cite{display:block;margin-top:6px;font-size:10px;color:var(--fg3);font-style:normal;letter-spacing:0.06em}
+
+/* GRID — 3 colunas em desktop */
+.grid2,.grid3,.pattern-grid,.silencio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:22px}
+@media(max-width:960px){.grid2,.grid3,.pattern-grid,.silencio-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid2,.grid3,.pattern-grid,.silencio-grid{grid-template-columns:1fr}}
+.card{background:var(--bg1);border:1px solid var(--border);border-radius:6px;padding:16px;display:flex;flex-direction:column;height:100%}
+.card-title{font-family:var(--font-d);font-size:13px;font-weight:700;color:var(--fg);margin-bottom:7px}
+.card-body{font-size:12px;color:var(--fg2);line-height:1.7;flex:1}
+.card-accent-red{border-left:3px solid var(--red)}
+.card-accent-amber{border-left:3px solid var(--amber)}
+.card-accent-blue{border-left:3px solid var(--blue)}
+.card-accent-purple{border-left:3px solid var(--purple)}
+.card-accent-green{border-left:3px solid var(--green)}
+
+/* FINANCEIRO */
+.fin-wrap{overflow-x:auto;margin-bottom:22px}
+.fin-table{width:100%;border-collapse:collapse;font-size:12px}
+.fin-table th{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--fg3);text-align:left;padding:8px 10px;border-bottom:1px solid var(--border2);white-space:nowrap}
+.fin-table td{padding:9px 10px;border-bottom:1px solid var(--border);color:var(--fg2);vertical-align:top}
+.fin-table tr:hover td{background:var(--bg2)}
+.fin-valor{color:var(--amber);font-weight:600;white-space:nowrap}
+.fin-new{background:rgba(40,200,128,0.05)!important}
+.fin-new td{border-left:2px solid var(--green)}
+
+/* MECANISMOS */
+.mec-num{font-family:var(--font-d);font-size:32px;font-weight:800;color:var(--red);letter-spacing:-0.03em;line-height:1;margin-bottom:4px}
+.mec-sub{font-size:11px;color:var(--amber);font-weight:600;margin-bottom:8px}
+
+/* PATRIMÔNIO */
+.pat-item{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)}
+.pat-item:last-child{border-bottom:none}
+.pat-dot{width:6px;height:6px;border-radius:50%;background:var(--amber);flex-shrink:0;margin-top:5px}
+.pat-text{font-size:12px;color:var(--fg2);line-height:1.6}
+
+/* ALERT */
+.alert{border-radius:6px;padding:13px 15px;margin-bottom:16px;font-size:12px;line-height:1.7}
+.alert-red{background:var(--red2);border:1px solid rgba(232,64,64,0.3);color:var(--fg2)}
+.alert-amber{background:var(--amber2);border:1px solid rgba(232,160,32,0.3);color:var(--fg2)}
+.alert-blue{background:var(--blue2);border:1px solid rgba(48,144,232,0.3);color:var(--fg2)}
+.alert-green{background:var(--green2);border:1px solid rgba(40,200,128,0.3);color:var(--fg2)}
+.alert strong{color:var(--fg)}
+
+/* INFLEXAO */
+.inflexao{background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:22px;margin:22px 0;text-align:center}
+.in{font-family:var(--font-d);font-size:44px;font-weight:800;letter-spacing:-0.04em;line-height:1}
+.il{font-size:12px;color:var(--fg2);margin-top:8px;max-width:600px;margin-left:auto;margin-right:auto}
+
+/* PADROES */
+.pattern-grid{margin-bottom:22px}
+.pattern-card{background:var(--bg1);border:1px solid var(--border);border-radius:6px;padding:14px;height:100%}
+.pattern-id{font-family:var(--font-d);font-size:18px;font-weight:800;margin-bottom:4px}
+.pattern-name{font-size:12px;font-weight:600;color:var(--fg);margin-bottom:6px}
+.pattern-desc{font-size:11px;color:var(--fg2);line-height:1.6}
+.pattern-instances{font-size:10px;color:var(--fg3);margin-top:8px;border-top:1px solid var(--border);padding-top:8px}
+
+/* SILENCIO */
+.silencio-grid{margin-bottom:22px}
+.silencio-card{background:var(--bg1);border:1px solid var(--border);border-radius:6px;padding:15px;height:100%}
+.silencio-org{font-family:var(--font-d);font-size:13px;font-weight:700;margin-bottom:7px}
+.silencio-status{font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:2px 6px;border-radius:3px;margin-bottom:9px;display:inline-block}
+.status-omissao{background:var(--red2);color:var(--red);border:1px solid rgba(232,64,64,0.3)}
+.status-parcial{background:var(--amber2);color:var(--amber);border:1px solid rgba(232,160,32,0.3)}
+.status-ok{background:var(--green2);color:var(--green);border:1px solid rgba(40,200,128,0.3)}
+.silencio-text{font-size:11px;color:var(--fg2);line-height:1.6}
+
+/* EV BLOCKS */
+.ev-block{background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:13px 15px;margin-bottom:11px}
+.ev-label{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:6px}
+.ev-confirmed{color:var(--red)}
+.ev-inference{color:var(--amber)}
+.ev-alleged{color:var(--blue)}
+.ev-text{font-size:12px;color:var(--fg2);line-height:1.7}
+.ev-source{font-size:10px;color:var(--fg3);margin-top:6px}
+
+/* QUESTION BLOCKS */
+.question-block{background:var(--bg1);border:1px solid var(--border);border-radius:6px;padding:18px;margin-bottom:14px}
+.question-title{font-family:var(--font-d);font-size:14px;font-weight:700;color:var(--amber);margin-bottom:11px}
+.question-body{font-size:12px;color:var(--fg2);line-height:1.8}
+.question-body p{margin-bottom:9px}
+.question-body strong{color:var(--fg)}
+.lacuna{background:var(--amber2);border:1px solid rgba(232,160,32,0.3);border-radius:3px;padding:2px 7px;font-size:10px;font-weight:600;color:var(--amber);display:inline-block;letter-spacing:0.06em}
+
+/* GO TOP */
+.gotop{position:fixed;bottom:24px;right:24px;width:44px;height:44px;background:var(--bg2);border:1px solid var(--border2);color:var(--red);border-radius:4px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:1000;opacity:0;pointer-events:none;transition:opacity .25s,transform .15s,border-color .15s;font-family:var(--font-d);font-size:18px;font-weight:700}
+.gotop.show{opacity:1;pointer-events:auto}
+.gotop:hover{background:var(--bg3);border-color:var(--red);transform:translateY(-2px)}
+
+.footer{margin-top:48px;padding:20px 24px;border-top:1px solid var(--border);max-width:1200px;margin-left:auto;margin-right:auto;text-align:center;font-size:11px;color:var(--fg3);line-height:1.8}
+.footer a{color:var(--blue);text-decoration:none}
+.footer a:hover{color:var(--fg)}
+
+@media(max-width:600px){
+  .nav-tab{padding:11px 10px;font-size:9px}
+  .gotop{bottom:16px;right:16px;width:40px;height:40px}
+}
+@media print{.nav,.gotop{display:none!important}.section{page-break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="badge">Dossiê Investigativo v2 · lawfare-timeline · CC0 1.0 · Atualizado com Spotniks/Rodrigo da Silva (abr/2026)</div>
+    <h1>Gilmar Mendes<span> — Sistema, Poder &amp; Imunidade</span></h1>
+    <p class="sub">174 eventos documentados · 620 HCs monocráticos em uma década · 46 pedidos de vista · IDP R$46M+ · Holding Roxell · Patrimônio Lisboa/MT · Receita Federal neutralizada · Padrões P1/P3/P5/P6/P4b · 2002–2026 <span class="new-badge">v2</span></p>
+  </div>
+  <div class="stats">
+    <div class="sc"><div class="sn" style="color:var(--red)">620</div><div class="sl">HCs monocráticos / década</div></div>
+    <div class="sc"><div class="sn" style="color:var(--amber)">98%</div><div class="sl">Taxa de confirmação HC</div></div>
+    <div class="sc"><div class="sn" style="color:var(--amber)">46</div><div class="sl">Pedidos de vista acumulados</div></div>
+    <div class="sc"><div class="sn" style="color:var(--red)">R$46M+</div><div class="sl">Fluxo fin. IDP</div></div>
+    <div class="sc"><div class="sn" style="color:var(--purple)">0</div><div class="sl">Processos disciplinares concluídos</div></div>
+    <div class="sc"><div class="sn" style="color:var(--blue)">18</div><div class="sl">Pedidos de impeachment ignorados</div></div>
+    <div class="sc"><div class="sn" style="color:var(--red)">2030</div><div class="sl">Permanência garantida</div></div>
+  </div>
+</header>
+
+<nav class="nav" aria-label="Seções">
+  <div class="nav-inner">
+    <button class="nav-tab active" onclick="goTo('origem')">Origem</button>
+    <button class="nav-tab" onclick="goTo('mecanismos')">Mecanismos</button>
+    <button class="nav-tab" onclick="goTo('cronologia')">Cronologia</button>
+    <button class="nav-tab" onclick="goTo('financeiro')">Financeiro</button>
+    <button class="nav-tab" onclick="goTo('patrimonio')">Patrimônio</button>
+    <button class="nav-tab" onclick="goTo('padroes')">Padrões</button>
+    <button class="nav-tab" onclick="goTo('regulatorio')">Regulatório</button>
+    <button class="nav-tab" onclick="goTo('silencio')">Silêncio</button>
+    <button class="nav-tab" onclick="goTo('diagnostico')">Diagnóstico</button>
+  </div>
+</nav>
+
+<main class="main">
+
+<!-- ========== 01 ORIGEM ========== -->
+<section id="origem" class="section">
+  <div class="sec-title">Origem e Ascensão · 1955–2002</div>
+
+  <div class="alert alert-amber"><strong>Contexto estrutural:</strong> Gilmar não é uma anomalia. É o resultado de um sistema desenhado para isso. A CF/88 deu poder demais ao STF e fiscalização de menos. Gilmar levou isso às últimas consequências. — Spotniks/Rodrigo da Silva, abr/2026.</div>
+
+  <div class="grid3">
+    <div class="card card-accent-amber">
+      <div class="card-title">Linhagem · Diamantino, MT</div>
+      <div class="card-body">Bisavô era coronel. Avô Mario Ferreira Mendes: presidente do Tribunal de Justiça do MT. Pai Francisco: prefeito de Diamantino durante a ditadura. Dois tios: desembargadores do judiciário mato-grossense. Outro tio: procurador do estado. Primos: juízes. Irmão Chico: prefeito de Diamantino por três mandatos (patrimônio declarado R$6M ao TSE). Família fornece gado à JBS — maior processadora de carne do mundo. <strong>Nenhum desses fatos é isolado: é uma linhagem de poder territorial e judicial em construção há cinco gerações.</strong></div>
+    </div>
+    <div class="card card-accent-blue">
+      <div class="card-title">Credencial Intelectual · Alemanha</div>
+      <div class="card-body">UnB → concurso Itamaraty → Bona/Alemanha → primeiro contato com constitucionalismo alemão. Mestrado na UnB. Doutorado na Universidade de Münster com distinção Magna Cum Laude. Tese: controle da constitucionalidade no Brasil e na Alemanha comparados. Voltou com uma ideia política vestida de doutrina jurídica: <strong>o judiciário brasileiro precisava concentrar mais poder — não o judiciário como um todo, o topo: o STF.</strong></div>
+    </div>
+    <div class="card card-accent-purple">
+      <div class="card-title">Arquiteto do Próprio Tribunal</div>
+      <div class="card-body">Procurador da República (1º lugar em concurso) → Ministério da Justiça → formulação de projetos de lei → Advogado-Geral da União (2000–2002, nomeado por FHC). Na AGU, expandiu instrumentos que permitem ao STF decidir diretamente sobre validade de leis, defendeu efeito vinculante das decisões, trabalhou para que o STF deixasse de ser corte de recursos e se tornasse <strong>centro permanente de arbitragem da política brasileira.</strong> Quando FHC o indicou em 2002, ele não entrou num tribunal pronto: <em>entrou num tribunal que ele mesmo ajudou a projetar.</em></div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="card card-accent-red">
+      <div class="card-title">A soma de quatro coisas que nenhum outro ministro reúne</div>
+      <div class="card-body">
+        <strong style="color:var(--amber)">1. Longevidade:</strong> 24 anos no STF. VP + Presidente do STF + Presidente do CNJ (simultâneo) + Presidente do TSE (2 vezes). Tempo = relações + precedentes + domínio interno.<br><br>
+        <strong style="color:var(--amber)">2. Adaptação ideológica:</strong> Nomeado por FHC (tucano). Próximo de Temer. Pragmático com Bolsonaro (foi a Diamantino apoiar o irmão na eleição). Declarou a imprensa portuguesa que Lula faz "um excelente governo". <em>Cada governo descobre que precisa mais de Gilmar do que Gilmar precisa do governo.</em><br><br>
+        <strong style="color:var(--amber)">3. Trânsito entre elites:</strong> Abraça banqueiros um dia e sindicalistas no outro. Padrinho de casamento de empresários, conselheiro informal de presidentes de partidos adversários.<br><br>
+        <strong style="color:var(--amber)">4. Infraestrutura de poder fora da toga:</strong> IDP + Fórum de Lisboa + rede familiar. Não depende apenas do cargo.
+      </div>
+    </div>
+    <div class="card card-accent-amber">
+      <div class="card-title">A Visão de Mundo — o escudo moral</div>
+      <div class="card-body">Gilmar se enxerga como civilizador — um freio contra o punitivismo brasileiro, defensor das garantias constitucionais num país com tradição autoritária. Essa visão funciona ao mesmo tempo como escudo moral e justificativa conveniente.
+        <br><br>
+        <div class="quote">"Ela permite que o mesmo homem que defende garantias constitucionais faça isso de maneira seletiva, sempre a favor de quem tem os recursos necessários para bater na porta do gabinete dele. A garantia é universal na teoria e personalíssima na prática."<cite>— Rodrigo da Silva, Spotniks, abr/2026 (transcrição)</cite></div>
+        Quem critica é rotulado como bárbaro, inquisidor, populista. <strong>Ele transformou o vocabulário da proteção de direitos no vocabulário da proteção de poderosos.</strong> E discordar dele virou sinônimo de golpismo.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 02 MECANISMOS ========== -->
+<section id="mecanismos" class="section">
+  <div class="sec-title">As Três Ferramentas · Como o Poder Funciona na Prática</div>
+
+  <div class="alert alert-red"><strong>Dado estrutural (Spotniks, abr/2026):</strong> 80% das decisões do STF em 2024 foram monocráticas. Em 5 anos, apenas 4 das 202 decisões monocráticas do período foram revertidas pelo colegiado — taxa de confirmação de <strong>98%</strong>. Na prática, a decisão de um ministro tem o mesmo peso que a do tribunal inteiro.</div>
+
+  <div class="grid3">
+    <div class="card card-accent-red">
+      <div class="mec-num">620</div>
+      <div class="mec-sub">HC monocráticos em uma década</div>
+      <div class="card-title">1. Decisão Monocrática</div>
+      <div class="card-body">Individual, sem passar pelo plenário. Gilmar concedeu 620 habeas corpus monocráticos em uma década — <strong>quase 60% mais que o segundo colocado.</strong> Só em 2019: 250 HCs individuais, quase ⅓ de todos os HCs individuais do tribunal naquele ano. Taxa de reversão pelo colegiado: 2%. A decisão individual tem peso de tribunal pleno.</div>
+    </div>
+    <div class="card card-accent-amber">
+      <div class="mec-num">46</div>
+      <div class="mec-sub">Pedidos de vista acumulados</div>
+      <div class="card-title">2. Pedido de Vista</div>
+      <div class="card-body">Quando o ministro pede vista, trava o julgamento. Até 2023, sem prazo — podia reter indefinidamente. Desde então: prazo regimental de 90 dias. Gilmar acumula 46 pedidos de vista — mais que qualquer outro ministro. <strong>Exemplo operacional:</strong> Em 2014, a maioria do plenário já formava para proibir doações empresariais em campanhas. Gilmar pediu vista e só devolveu em 2015. As doações continuaram legais na eleição do ano. <em>Foi Gilmar quem decidiu isso, mesmo a contra-gosto do plenário.</em></div>
+    </div>
+    <div class="card card-accent-purple">
+      <div class="mec-num">∞</div>
+      <div class="mec-sub">Controle unilateral de pauta</div>
+      <div class="card-title">3. Controle de Pauta</div>
+      <div class="card-body">Quem decide quando um caso vai a julgamento dita o ritmo da política nacional. Essas três ferramentas combinadas com longevidade e rede de relações que nenhum outro membro do judiciário possui fazem de Gilmar a <strong>personificação extrema de poder concentrado no STF.</strong> Travas, liberações, ritmos — todos controlados unilateralmente.</div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="card card-accent-red">
+      <div class="card-title">Mecânica da Súmula Vinculante 11 — pós-Satiagraha</div>
+      <div class="card-body">Pouco depois da controvérsia sobre a prisão de Dantas em 2008, Gilmar aprovou a Súmula Vinculante 11, que restringiu o uso de algemas em todo o país. A sequência é o padrão: crise → saída mais forte + mudança normativa que consolida a posição. A mesma lógica de dezembro/2025 com a Lei do Impeachment.</div>
+    </div>
+    <div class="card card-accent-red">
+      <div class="card-title">Lei do Impeachment — dezembro/2025</div>
+      <div class="card-body">Em dez/2025, Gilmar suspendeu monocraticamente partes da Lei do Impeachment (Lei 1.079/1950) nas ADPFs 1259/1260. Elevou o quórum para processar ministro do STF de 41 para 54 votos (⅔ do Senado), proibiu interpretações que enquadrem mérito de decisões como crime de responsabilidade, e suspendeu dispositivos de afastamento cautelar. <strong>Mudou as regras do próprio julgamento.</strong> A liminar coincidiu com julgamento de ADIs sobre Marco Temporal Indígena, de sua própria relatoria.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 03 CRONOLOGIA ========== -->
+<section id="cronologia" class="section">
+  <div class="sec-title">Cronologia · 2002–2026</div>
+
+  <div class="alert alert-amber"><strong>Nota metodológica:</strong> <span class="tag tag-red">ev-confirmed</span> = fontes primárias verificadas · <span class="tag tag-amber">ev-inference</span> = correlação temporal documentada · <span class="tag tag-blue">ev-alleged</span> = alegado sem refutação pública. Eventos <span class="tag tag-green">NOVO</span> = adicionados a partir da transcrição Spotniks (abr/2026).</div>
+
+  <div class="timeline">
+
+    <div class="tl-group">
+      <div class="tl-year">2002–2007 — Entrada e consolidação</div>
+      <div class="tl-item amber new-item">
+        <div class="tl-date">2002 · Brasília</div>
+        <div class="tl-title">Nomeado ao STF por FHC — entra num tribunal que ajudou a projetar</div>
+        <div class="tl-desc">Nomeado após atuar como AGU expandindo os instrumentos do STF. Desde a entrada: vice-presidente, presidente do STF, presidente simultâneo do CNJ, presidente do TSE (2 vezes). Nenhum outro ministro acumula essa sequência de cargos.</div>
+        <div class="tl-tags"><span class="tag tag-blue">ev-confirmed</span><span class="tag tag-blue">Posse STF</span></div>
+      </div>
+    </div>
+
+    <div class="tl-group">
+      <div class="tl-year">2008 — Satiagraha: o padrão inaugural + Súmula 11</div>
+      <div class="tl-item red">
+        <div class="tl-date">08–09/07/2008 · São Paulo/Brasília</div>
+        <div class="tl-title">HC duplo para Daniel Dantas — 2 prisões, 2 libertações, 48 horas</div>
+        <div class="tl-desc">Dantas preso pela Operação Satiagraha (PF/delegado Protógenes). 1º HC em menos de 24h violando Súmula 691 do próprio STF. Juiz De Sanctis decreta nova prisão por tentativa de subornar delegado da PF. Gilmar concede 2º HC em menos de 48h. STF pleno referenda por 9×1. 42 procuradores assinam carta aberta declarando "dia de luto para as instituições democráticas".</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">P1 · Inaugural</span><span class="tag tag-red">CRÍTICO</span></div>
+      </div>
+      <div class="tl-item red new-item">
+        <div class="tl-date">Jul/2008 — Desdobramentos</div>
+        <div class="tl-title">Investigadores punidos · Gilmar sai mais forte · Súmula 11</div>
+        <div class="tl-desc">Delegado Protógenes: investigado, condenado pelo STF a 2,5 anos, expulso da PF (hoje asilado político na Suíça desde 2016). Juiz De Sanctis: submetido a procedimentos disciplinares. Operação: desidratada na Justiça, provas anuladas. Gilmar: sai mais forte e aprova Súmula Vinculante 11 restringindo uso de algemas em todo o país. <strong>Padrão P2 inaugurado: investigadores tornam-se investigados.</strong></div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">P2 · Investigador vira Alvo</span><span class="tag tag-red">CRÍTICO</span></div>
+      </div>
+    </div>
+
+    <div class="tl-group">
+      <div class="tl-year">2009–2013 — HC sistemáticos e casos de alto perfil</div>
+      <div class="tl-item amber">
+        <div class="tl-date">23/12/2009</div>
+        <div class="tl-title">HC para Roger Abdelmassih (1ª vez) — condenado a 278 anos por 53 estupros</div>
+        <div class="tl-desc">Revogada prisão preventiva de médico acusado de crimes sexuais contra pacientes sedadas. Abdelmassih fugiu para o Paraguai e ficou foragido por 3 anos. Quando apresentadora de TV criticou a decisão, Gilmar processou e ganhou. Em 2023, concederia segundo HC para o mesmo réu.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">P1</span><span class="tag tag-red">P6 · Prescrição</span></div>
+      </div>
+      <div class="tl-item amber new-item">
+        <div class="tl-date">2014 · Brasília</div>
+        <div class="tl-title">Pedido de vista nas doações empresariais — manteve doações legais para eleição 2014</div>
+        <div class="tl-desc">Maioria do plenário já formada para proibir doações de empresas em campanhas. Gilmar pediu vista e só devolveu em 2015. As doações continuaram legais para toda a eleição daquele ano. <strong>Uma decisão de um ministro contra a vontade da maioria do tribunal, com efeito sobre toda uma eleição.</strong></div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-purple">P3 · Controle de Pauta</span><span class="tag tag-red">CRÍTICO</span></div>
+      </div>
+    </div>
+
+    <div class="tl-group">
+      <div class="tl-year">2015–2016 — J&F, IDP, Impeachment</div>
+      <div class="tl-item red">
+        <div class="tl-date">2015–2016 · IDP / J&amp;F</div>
+        <div class="tl-title">R$ 7,5M da J&amp;F para o IDP (2008–2016) · Família vende gado à JBS</div>
+        <div class="tl-desc">J&amp;F patrocina eventos e bolsas com cláusula de confidencialidade. R$ 650k devolvidos após delação de 2017. Família de Gilmar vende gado à JBS — ele próprio confirma. Desde 2016: pelo menos 300 processos das empresas patrocinadoras do IDP passaram pelo gabinete de Gilmar.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-amber">P5 · Captura Financeira</span></div>
+      </div>
+      <div class="tl-item purple">
+        <div class="tl-date">18/03/2016 · Brasília</div>
+        <div class="tl-title">Suspende posse de Lula como ministro da Casa Civil — monocrática de alto impacto político</div>
+        <div class="tl-desc">Decisão unilateral no auge da crise do impeachment de Dilma. Efeito político imediato: impede Lula de usar o foro privilegiado como ministro para se proteger da Lava Jato de Curitiba.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-purple">P3 · Monocrática</span></div>
+      </div>
+    </div>
+
+    <div class="tl-group">
+      <div class="tl-year">2017 — Odebrecht, Barata, Batista, Temer, Itaipu</div>
+      <div class="tl-item red">
+        <div class="tl-date">16/03/2017 · Casa de Gilmar, Brasília</div>
+        <div class="tl-title">Jantar em casa: Temer, Aécio Neves, José Serra — todos na lista Odebrecht</div>
+        <div class="tl-desc">Jantar na residência de Gilmar para investigados da Odebrecht. Mesmo período em que IDP recebia patrocínios milionários de empresas com litígios no STF.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">Conflito Grave</span></div>
+      </div>
+      <div class="tl-item red">
+        <div class="tl-date">01/08/2017 · RJ</div>
+        <div class="tl-title">HC múltiplos para Jacob Barata Filho — conflito triplo documentado</div>
+        <div class="tl-desc">Múltiplos HCs para o "Rei do Ônibus". Gilmar era padrinho do casamento da filha de Barata com seu sobrinho. Esposa Guiomar advogava no escritório que representava os sindicatos patronais de ônibus em ações da Lava Jato RJ. Não se declarou impedido.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">Conflito Triplo</span><span class="tag tag-red">CRÍTICO</span></div>
+      </div>
+      <div class="tl-item red new-item">
+        <div class="tl-date">2017 · Nacional</div>
+        <div class="tl-title">HC para "Batista" — preso por propinas ao governador Sérgio Cabral</div>
+        <div class="tl-desc">Soltura de empresário preso pelo pagamento de propinas ao governador do RJ Sérgio Cabral. Parte da série de HCs que desativou a Lava Jato do Rio de Janeiro.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">P1 · Lava Jato RJ</span></div>
+      </div>
+      <div class="tl-item red">
+        <div class="tl-date">2017 · IDP / Itaipu</div>
+        <div class="tl-title">Itaipu: R$ 1,5M para evento IDP · Ex-esposa nomeada ao Conselho da Itaipu</div>
+        <div class="tl-desc">Samantha Ribeiro Meyer (ex-esposa) nomeada ao Conselho da Itaipu Binacional no mesmo período dos patrocínios.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">Conflito de Interesses</span><span class="tag tag-amber">P5</span></div>
+      </div>
+    </div>
+
+    <div class="tl-group">
+      <div class="tl-year">2017–2018 — André Esteves, BTG, Patrocínios Ocultos, Receita Federal</div>
+      <div class="tl-item red new-item">
+        <div class="tl-date">2017–2018</div>
+        <div class="tl-title">André Esteves / BTG Pactual — múltiplas decisões favoráveis</div>
+        <div class="tl-desc">Bilionário André Esteves (BTG Pactual) recebeu múltiplas decisões favoráveis. Gilmar chegou a declarar que a prisão de Esteves foi "um caso clássico de um grotesco erro judiciário perpetrado pelo Supremo". BTG levou 5 representantes ao Fórum de Lisboa de 2025 e organizou jantar reservado em restaurante de luxo.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">P1</span><span class="tag tag-amber">Fórum Lisboa</span></div>
+      </div>
+      <div class="tl-item amber">
+        <div class="tl-date">2017–2018 · IDP</div>
+        <div class="tl-title">Patrocínios ocultos: Souza Cruz R$2,4M · Google R$200k · Febraban R$50k</div>
+        <div class="tl-desc">Souza Cruz com cláusula de confidencialidade. Google: R$200k para centro de estudos — único projeto da empresa no mundo sem exibição da marca. Febraban com discrição de exposição. Desde 2016: 300+ processos dos patrocinadores passaram pelo gabinete de Gilmar.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">Patrocínio Oculto</span><span class="tag tag-red">Conflito</span></div>
+      </div>
+      <div class="tl-item red new-item">
+        <div class="tl-date">2017/Bradesco · IDP</div>
+        <div class="tl-title">Bradesco: empréstimo de R$26M no dia em que filho de Gilmar comprou cota do sócio</div>
+        <div class="tl-desc">Em 2017, Bradesco concedeu empréstimo de R$26M ao IDP a taxa de 11,35% ao ano — condição que o banco não oferecia em 99,92% dos casos. No mesmo dia em que o empréstimo foi liberado, o filho de Gilmar Francisco comprou a cota do sócio Paulo Gonet por R$12 milhões. Coincidência temporal documentada publicamente pela Spotniks.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">Correlação Temporal</span><span class="tag tag-amber">P5</span></div>
+      </div>
+      <div class="tl-item red new-item">
+        <div class="tl-date">Maio/2018 · Receita Federal</div>
+        <div class="tl-title">Receita produz relatório: variação patrimonial de R$700k sem explicação · "Indícios de lavagem de dinheiro" de Guiomar</div>
+        <div class="tl-desc">Sistema automatizado filtrou 800.000 CPFs de agentes públicos e reduziu a 133 com interesse fiscal prioritário. Casal Gilmar/Guiomar estava na lista. Achados: variação patrimonial de ~R$700k sem explicação do ministro. Guiomar: declarou receber R$40k do Bermudes em 2016 — declarou à Receita ter recebido R$2,7M, 70x mais. Movimentação total do casal em 2016: R$17,3M+.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">Lavagem · Indício</span><span class="tag tag-red">CRÍTICO</span></div>
+      </div>
+      <div class="tl-item red new-item">
+        <div class="tl-date">Fev/2019 · Receita/STF</div>
+        <div class="tl-title">Cadeia completa de neutralização: Gilmar → Toffoli → Moraes → auditores afastados</div>
+        <div class="tl-desc">Antes mesmo da imprensa publicar, Gilmar mandou ofício a Toffoli pedindo "providências urgentes", declarando que a Receita não pode ser "gestapo ou pistolagem de juízes". Toffoli acionou ministério da economia, PGR e secretário da Receita. Em 3 dias, Receita emitiu nota negando procedimento. Moraes suspendeu todos os procedimentos investigatórios e afastou os auditores signatários do relatório. Em fev/2026, PF foi atrás de 4 servidores da Receita por acesso a dados fiscais de familiares de Gilmar: tornozeleira eletrônica, cancelamento de passaporte, recolhimento noturno.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">P2 · Investigador vira Alvo</span><span class="tag tag-red">CRÍTICO</span></div>
+      </div>
+    </div>
+
+    <div class="tl-group">
+      <div class="tl-year">2018 — Lava Jato: 21 presos soltos em 30 dias</div>
+      <div class="tl-item red new-item">
+        <div class="tl-date">2018 · Lava Jato RJ</div>
+        <div class="tl-title">21 presos da Lava Jato RJ soltos em 30 dias</div>
+        <div class="tl-desc">Em 30 dias de 2018, Gilmar mandou soltar 21 presos da Lava Jato do Rio de Janeiro. Demonstração de escala: não são casos isolados, é um padrão de desativação em série de uma operação federal inteira.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">P1 · Série</span><span class="tag tag-red">CRÍTICO</span></div>
+      </div>
+      <div class="tl-item amber">
+        <div class="tl-date">01/06/2018 · Nacional</div>
+        <div class="tl-title">HC série: Sérgio Côrtes, condenados em 2ª instância, Celso Luiz</div>
+        <div class="tl-desc">Série de HCs em junho/2018. Antecipação da mudança jurisprudencial de novembro/2019 que acabaria com a prisão após 2ª instância — libertando Lula e dezenas de condenados da Lava Jato.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">P1</span></div>
+      </div>
+      <div class="tl-item amber new-item">
+        <div class="tl-date">2018 · Feércio do Rio / Bermudes</div>
+        <div class="tl-title">Feércio: patrocinava IDP + era representada pelo Bermudes no STF com Gilmar como relator</div>
+        <div class="tl-desc">A Feércio do Rio patrocinava eventos do IDP de Gilmar e ao mesmo tempo era representada pelo escritório Bermudes — do qual a esposa Guiomar era sócia — em recurso no STF do qual Gilmar era relator. Conflito triangular: IDP + escritório da esposa + relatoria. O PGR Rodrigo Janot pediu o impedimento de Gilmar. O ministro recusou.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">Conflito Triangular</span><span class="tag tag-red">CRÍTICO</span></div>
+      </div>
+      <div class="tl-item amber new-item">
+        <div class="tl-date">2018 · Aik Batista</div>
+        <div class="tl-title">Aik Batista: pagou R$6M ao Bermudes em causas cíveis · Gilmar concedeu HC na esfera criminal</div>
+        <div class="tl-desc">Aik Batista pagou R$6 milhões ao escritório Bermudes (do qual Guiomar era sócia) em causas cíveis. Gilmar concedeu HC para Batista na esfera criminal. PGR Janot pediu impedimento. Gilmar recusou.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">Conflito Direto</span></div>
+      </div>
+    </div>
+
+    <div class="tl-group">
+      <div class="tl-year">2018–2019 — Janot armado no STF · Fim da prisão em 2ª instância</div>
+      <div class="tl-item red new-item">
+        <div class="tl-date">2018 · STF</div>
+        <div class="tl-title">Ex-PGR Rodrigo Janot confessou ter entrado armado no STF com intenção de assassinar Gilmar</div>
+        <div class="tl-desc">Rodrigo Janot detalhou em entrevista à Veja que entrou no STF com uma arma com intenção de matar Gilmar Mendes e depois cometer suicídio. O episódio não gerou processos disciplinares contra Gilmar — gerou, ao contrário, mais exposição de Janot. Revelador da intensidade das tensões criadas pelo padrão de atuação do ministro.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">Tensão Institucional</span></div>
+      </div>
+      <div class="tl-item amber">
+        <div class="tl-date">Nov/2019 · STF</div>
+        <div class="tl-title">Fim da prisão após condenação em 2ª instância — Lula solto após 580 dias</div>
+        <div class="tl-desc">STF reverte jurisprudência de 2016 por 6×5. Gilmar vota pela inconstitucionalidade. Lula solto em 8/11/2019. Dezenas de condenados da Lava Jato beneficiados. Gilmar também votou contra a jurisdição de Curitiba em casos não-Petrobras e pela suspeição de Moro.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">Lava Jato · Anulação</span></div>
+      </div>
+    </div>
+
+    <div class="tl-group">
+      <div class="tl-year">2020–2022 — Queiroz, Moghrabi, pandemia</div>
+      <div class="tl-item red">
+        <div class="tl-date">01/08/2020</div>
+        <div class="tl-title">HC para Fabrício Queiroz — preso no escritório do advogado de Bolsonaro</div>
+        <div class="tl-desc">Queiroz investigado pela "rachadinha" no gabinete do filho de Bolsonaro. Preso no escritório do advogado de Bolsonaro. HC monocrático de Gilmar garante prisão domiciliar. Mesmo período de declarações de Gilmar contra Bolsonaro — articulação cruzada.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">P1</span><span class="tag tag-red">P4b · Both-sidesism</span></div>
+      </div>
+      <div class="tl-item red">
+        <div class="tl-date">20/12/2020</div>
+        <div class="tl-title">HC para doleiro Chaaya Moghrabi — horas após prisão</div>
+        <div class="tl-desc">Mesmo padrão de Daniel Dantas em 2008, repetido 12 anos depois. Doleiro solto em horas. Assinatura: velocidade.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">P1 · Padrão Dantas</span></div>
+      </div>
+    </div>
+
+    <div class="tl-group">
+      <div class="tl-year">2023 — CBF, Abdelmassih 2ª vez, Barroso/Joaquim na sessão</div>
+      <div class="tl-item red">
+        <div class="tl-date">Agosto 2023 · IDP / CBF</div>
+        <div class="tl-title">Contrato IDP–CBF: 84% da receita (~R$7,7M/ano) · 6 pessoas do IDP em cargos na CBF</div>
+        <div class="tl-desc">Contrato de 10 anos. Filho Francisco assina. Pelo menos 6 pessoas ligadas ao IDP ganham postos na direção da CBF. Seis meses depois: TJ-RJ afasta Ednaldo por unanimidade. Ednaldo bate na porta de Gilmar. Gilmar concede liminar recolocando-o. Meses depois: emite despacho remetendo denúncias à 1ª instância. <em>Sem a proteção do decano, Ednaldo caiu no mesmo dia.</em></div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">Conflito Direto</span><span class="tag tag-amber">P5</span></div>
+      </div>
+      <div class="tl-item amber">
+        <div class="tl-date">01/01/2023</div>
+        <div class="tl-title">HC para Roger Abdelmassih — 2ª vez em 14 anos</div>
+        <div class="tl-desc">Segunda intervenção favorável ao médico condenado a 278 anos por 53 estupros de pacientes sedadas. 14 anos depois do primeiro HC.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">P1</span><span class="tag tag-red">P6 · Reiteração</span></div>
+      </div>
+      <div class="tl-item red new-item">
+        <div class="tl-date">2023 · STF Plenário</div>
+        <div class="tl-title">Barroso ao vivo: "Você é uma pessoa horrível. Uma mistura do mal com atraso e pitadas de psicopatia"</div>
+        <div class="tl-desc">Em sessão plenária ao vivo, Luís Roberto Barroso declarou a Gilmar: "Você é uma pessoa horrível. Uma mistura do mal com atraso e pitadas de psicopatia. Vossa Excelência nos envergonha. É uma desonra para o tribunal." Joaquim Barbosa anteriormente: "Vossa Excelência está destruindo a justiça desse país. Você não está falando com os seus capangas do Mato Grosso, ministro." <strong>Críticas vindas dos próprios pares — não de adversários externos.</strong></div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">Crise Institucional</span></div>
+      </div>
+    </div>
+
+    <div class="tl-group">
+      <div class="tl-year">2024–2026 — Banco Master, Toffoli, Lei do Impeachment, PF contra auditores</div>
+      <div class="tl-item red new-item">
+        <div class="tl-date">2024–2025 · Banco Master</div>
+        <div class="tl-title">Banco Master / Vorcaro: anulatória monocrática da CPI (2×) + voo em jato de empresa de Vorcaro</div>
+        <div class="tl-desc">Daniel Vorcaro (dono do Banco Master) gastou milhões levando autoridades a eventos em Londres, Nova York e Lisboa. Pelo menos 4 ministros do STF usaram aviões ligados a ele. Quando a CPI do Senado aprovou a quebra de sigilo de empresa ligada a Toffoli (no caso Master), Gilmar anulou a medida monocraticamente duas vezes. Gilmar voou de Diamantino a Brasília em jato Phenom 300 da Embraer operado por empresa da qual Vorcaro era sócio. Disse que aceitou "carona do empresário Marcos Molina" e que não sabia da ligação com Vorcaro.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-purple">P3 · Blindagem Toffoli</span><span class="tag tag-red">CRÍTICO</span></div>
+      </div>
+      <div class="tl-item red new-item">
+        <div class="tl-date">Dez/2025 · STF</div>
+        <div class="tl-title">Lei do Impeachment suspensa monocraticamente — eleva quórum de 41 para 54 votos</div>
+        <div class="tl-desc">ADPFs 1259/1260. Gilmar muda as regras do próprio julgamento: quórum para processar ministro sobe de maioria simples (41 votos) para 2/3 do Senado (54 votos). Proíbe enquadramento do mérito de decisões como crime de responsabilidade. Coincide com julgamento de ADIs sobre Marco Temporal Indígena de sua própria relatoria. 18 pedidos de impeachment entre 2015–2020: nenhum apreciado pelo Senado.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">Autoproteção</span><span class="tag tag-red">CRÍTICO</span></div>
+      </div>
+      <div class="tl-item red new-item">
+        <div class="tl-date">Fev/2026 · PF</div>
+        <div class="tl-title">PF contra auditores da Receita: tornozeleira eletrônica por investigar família de Gilmar</div>
+        <div class="tl-desc">Quatro servidores da Receita Federal recebem medidas cautelares (tornozeleira, cancelamento de passaporte, recolhimento noturno) por acessar dados fiscais de familiares de Gilmar. Sequência completa de inversão: investigados → os investigadores.</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">P2 · Inversão</span><span class="tag tag-red">CRÍTICO</span></div>
+      </div>
+      <div class="tl-item amber">
+        <div class="tl-date">2024–2025 · Lisboa</div>
+        <div class="tl-title">Gilmarpalooza 2025: 11 STF + 12 STJ + BTG + JBS + iFood + Vale + Meta + Bradesco + Amazon</div>
+        <div class="tl-desc">Reunião anual do poder brasileiro em Lisboa. Empresas com processos bilionários no STF: BTG (5 representantes + jantar reservado), JBS, iFood, Vale, Meta, Bradesco, Amazon/Google. Muitos encontros fora das agendas oficiais. R$1,3M em diárias e passagens (incluindo jatinhos FAB dos presidentes da Câmara e Senado) em 2024. Transparência Internacional: "maior evento de lobby judicial do planeta".</div>
+        <div class="tl-tags"><span class="tag tag-red">ev-confirmed</span><span class="tag tag-red">Lobby Judicial</span><span class="tag tag-amber">P5</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== 04 FINANCEIRO ========== -->
+<section id="financeiro" class="section">
+  <div class="sec-title">Fluxo Financeiro · IDP, Holding Roxell e Patrocínios</div>
+
+  <div class="alert alert-red"><strong>Dado novo (Spotniks):</strong> Em 2023, Gilmar criou a Holding Roxell Participações com capital de quase R$10 milhões, reunindo dois filhos como sócios. O IDP deixou de ser apenas uma faculdade: é agora um conglomerado societário familiar formalizado.</div>
+
+  <div class="fin-wrap">
+    <table class="fin-table">
+      <thead>
+        <tr><th>Período</th><th>Fonte</th><th>Valor</th><th>Mecanismo</th><th>Conflito</th><th>Ev.</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>2008–2016</td><td>J&amp;F / JBS</td><td class="fin-valor">R$ 7,5M</td><td>Patrocínio + bolsas. Confidencialidade. R$650k devolvidos pós-delação. 300+ processos da empresa no gabinete de Gilmar desde 2016.</td><td>Família vende gado à JBS. Empresa com processos no STF.</td><td><span class="tag tag-red">ev-conf</span></td></tr>
+        <tr><td>2011–2017</td><td>Souza Cruz</td><td class="fin-valor">~R$ 2,4M</td><td>Oculto. Cláusula de confidencialidade. Marca não aparecia em materiais.</td><td>Interesses regulatórios (cigarros) no STF.</td><td><span class="tag tag-red">ev-conf</span></td></tr>
+        <tr class="fin-new"><td>2016 · NOVO</td><td>Google</td><td class="fin-valor">R$ 200K</td><td>Centro de estudos — único projeto Google no mundo sem exibição da marca.</td><td>Google com processos de plataformas no STF. 300+ processos passaram pelo gabinete.</td><td><span class="tag tag-red">ev-conf</span></td></tr>
+        <tr><td>2014–2017</td><td>Itaipu Binacional</td><td class="fin-valor">~R$ 900K–1,5M</td><td>Patrocínio Lisboa e eventos Brasil.</td><td>Ex-esposa Samantha nomeada ao Conselho da Itaipu. Cancelado na gestão seguinte.</td><td><span class="tag tag-red">ev-conf</span></td></tr>
+        <tr><td>2018</td><td>Febraban</td><td class="fin-valor">~R$ 50K</td><td>Discrição de marca.</td><td>Setor bancário com litígios tributários no STF.</td><td><span class="tag tag-red">ev-conf</span></td></tr>
+        <tr class="fin-new"><td>2017 · NOVO</td><td>Bradesco — Empréstimo</td><td class="fin-valor">R$ 26M</td><td>Taxa 11,35% ao ano — não oferecida em 99,92% dos casos. Liberado no mesmo dia em que filho comprou cota de Paulo Gonet por R$12M.</td><td>Bradesco com processos tributários/trabalhistas no STF. Correlação temporal documentada.</td><td><span class="tag tag-red">ev-conf</span></td></tr>
+        <tr><td>2018</td><td>Fecomércio-RJ</td><td class="fin-valor">Não divulgado</td><td>Patrocínios com FGV. Orlando Diniz participou.</td><td>Investigada por desvio de recursos. Processos no STF.</td><td><span class="tag tag-amber">ev-inf</span></td></tr>
+        <tr><td>2023–2025</td><td>CBF (Ednaldo)</td><td class="fin-valor">~R$7,7M/ano</td><td>84% da receita CBF Academy. Filho assina. 6 pessoas do IDP em cargos na CBF.</td><td>Gilmar concede liminar reintegrando Ednaldo após afastamento. Depois o deixa cair.</td><td><span class="tag tag-red">ev-conf</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="inflexao">
+    <div class="in" style="color:var(--amber)">R$46M+</div>
+    <div class="il">Fluxo financeiro documentado entre IDP/Holding Roxell e entidades com processos no STF (2008–2025) · Zero processos disciplinares concluídos</div>
+  </div>
+
+  <div class="grid2">
+    <div class="card card-accent-amber">
+      <div class="card-title">Estrutura societária do IDP (2023)</div>
+      <div class="card-body">
+        Fundado em 1998 (capital ~R$1M). Inocêncio Mártires saiu em 2012 — vendeu cota a Gilmar por R$8M. Paulo Gonet saiu em 2017 — filho Francisco comprou por R$12M (IDP avaliado em ~R$28M; empréstimo Bradesco liberado no mesmo dia). Em 2023, Gilmar cria a <strong>Holding Roxell Participações</strong> com capital próximo de R$10M e dois filhos como sócios. O IDP cresceu de cursinho (1 sala na casa de Inocêncio) para conglomerado: Campus Asa Sul, Campus Asa Norte, sede na Faria Lima, graduação + pós + mestrado + doutorado.
+      </div>
+    </div>
+    <div class="card card-accent-red">
+      <div class="card-title">A Carta Capital e o STJ — o loop fechado</div>
+      <div class="card-body">
+        Em 2008, Carta Capital publicou capa "O Empresário Gilmar" acusando o IDP de tráfico de influência. O IDP processou. Perdeu em 1ª instância. Perdeu em 2ª instância. No STJ, a decisão foi revertida: Carta Capital condenada a pagar R$90.000. <strong>Um dos ministros que votou na condenação era professor do próprio IDP.</strong> O loop fecha-se: quem julga o IDP foi formado pelo IDP.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 05 PATRIMÔNIO ========== -->
+<section id="patrimonio" class="section">
+  <div class="sec-title">Patrimônio Pessoal Documentado</div>
+
+  <div class="alert alert-amber"><strong>Fonte:</strong> Transcrição Spotniks (abr/2026) com base em declarações públicas e reportagens investigativas. Patrimônio cresceu de forma consistente durante o período em que o IDP acumulava patrocínios de empresas com processos no STF.</div>
+
+  <div class="grid2">
+    <div class="card card-accent-amber">
+      <div class="card-title">Imóveis e propriedades documentadas</div>
+      <div class="card-body">
+        <div class="pat-item"><div class="pat-dot"></div><div class="pat-text"><strong>Casa no Lago Norte, Brasília</strong> — à beira do Lago Paranoá</div></div>
+        <div class="pat-item"><div class="pat-dot"></div><div class="pat-text"><strong>Apartamento na Asa Norte, Brasília</strong></div></div>
+        <div class="pat-item"><div class="pat-dot"></div><div class="pat-text"><strong>Fazendas: 7.200 hectares no Mato Grosso</strong> — propriedades registradas em nome do ministro e irmãos; MP/MT abriu ação por uso ilegal de agrotóxicos e transgênicos em área de preservação (2018)</div></div>
+        <div class="pat-item"><div class="pat-dot"></div><div class="pat-text"><strong>Apartamento no Príncipe Real, Lisboa</strong> — uma das regiões mais nobres de Portugal, onde também organiza o Fórum anual</div></div>
+      </div>
+    </div>
+    <div class="card card-accent-red">
+      <div class="card-title">Empresas e estrutura societária</div>
+      <div class="card-body">
+        <div class="pat-item"><div class="pat-dot"></div><div class="pat-text"><strong>IDP — sócio-fundador</strong> (1998–presente)</div></div>
+        <div class="pat-item"><div class="pat-dot"></div><div class="pat-text"><strong>Holding Roxell Participações</strong> — capital ~R$10M, filhos como sócios (2023)</div></div>
+        <div class="pat-item"><div class="pat-dot"></div><div class="pat-text"><strong>6 empresas declaradas</strong> no período investigado</div></div>
+        <div class="pat-item"><div class="pat-dot"></div><div class="pat-text"><strong>Guiomar Mendes</strong> (ex-esposa): sócia do escritório Sérgio Bermudes Advogados — 42.000 causas em andamento, clientes: Vale, Bradesco, Odebrecht, Queiroz Galvão, Itaipu. Declarou R$2,7M em 2016 ao receber — 70x o que o Bermudes informou ter distribuído (R$40k)</div></div>
+        <div class="pat-item"><div class="pat-dot"></div><div class="pat-text"><strong>Irmão Chico</strong>: prefeito de Diamantino (3 mandatos), patrimônio R$6M, fornece gado à JBS</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert alert-red"><strong>Relatório Receita Federal (mai/2018):</strong> Variação patrimonial de R$696.396 sem explicação do ministro em 2015. Guiomar: "indícios de lavagem de dinheiro" com valores recebidos sem correspondência na escrituração do Bermudes. Movimentação total do casal em 2016: superior a R$17,3 milhões. O relatório foi bloqueado antes de resultar em procedimento de fiscalização formal.</div>
+</section>
+
+<!-- ========== 06 PADRÕES ========== -->
+<section id="padroes" class="section">
+  <div class="sec-title">Padrões Sistêmicos · P1–P6 / P4b</div>
+
+  <div class="pattern-grid">
+    <div class="pattern-card" style="border-left:3px solid var(--red)">
+      <div class="pattern-id" style="color:var(--red)">P1</div>
+      <div class="pattern-name">Blindagem Processual</div>
+      <div class="pattern-desc">HC, nulidades, insuficiência de fundamentação. Velocidade como assinatura (Dantas: &lt;24h; Moghrabi: horas). 620 HCs monocráticos em uma década. 21 presos da Lava Jato RJ soltos em 30 dias.</div>
+      <div class="pattern-instances">Dantas · Barata · Abdelmassih · Queiroz · Moghrabi · Esteves · Garotinho · Bendine · Batista + 21 Lava Jato RJ</div>
+    </div>
+    <div class="pattern-card" style="border-left:3px solid var(--blue)">
+      <div class="pattern-id" style="color:var(--blue)">P2</div>
+      <div class="pattern-name">Investigador vira Alvo</div>
+      <div class="pattern-desc">Protógenes: condenado/expulso/exilado. Auditores da Receita: afastados por Moraes (2019), processados pela PF (2026). Janot processado após pedir impedimento. Rubens Valente condenado a inserir acórdão no livro.</div>
+      <div class="pattern-instances">Protógenes · Auditores Receita · Rubens Valente · Janot · Servidores PF 2026</div>
+    </div>
+    <div class="pattern-card" style="border-left:3px solid var(--purple)">
+      <div class="pattern-id" style="color:var(--purple)">P3</div>
+      <div class="pattern-name">Captura Judicial — STF como Terminal</div>
+      <div class="pattern-desc">Monocrática com efeito de plenário. Pedido de vista como arma (doações de campanha, 2014). Controle unilateral de pauta. Lei do Impeachment reescrita por quem seria julgado.</div>
+      <div class="pattern-instances">Suspensão Lula 2016 · Doações 2014 · CBF liminar · Pejotização · Marco Temporal · Lei Impeachment 2025</div>
+    </div>
+    <div class="pattern-card" style="border-left:3px solid var(--amber)">
+      <div class="pattern-id" style="color:var(--amber)">P5</div>
+      <div class="pattern-name">Captura via Financiamento</div>
+      <div class="pattern-desc">IDP como vetor: 23 empresas patrocinadoras (2011–2016), R$7M+. Empréstimo Bradesco R$26M em condições atípicas. 300+ processos dos patrocinadores no gabinete desde 2016. Fórum Lisboa: encontros extra-agenda com empresas litigantes.</div>
+      <div class="pattern-instances">J&amp;F · Souza Cruz · Google · Bradesco · Itaipu · Feérrio · BTG · JBS · iFood · Vale · Meta</div>
+    </div>
+    <div class="pattern-card" style="border-left:3px solid var(--amber)">
+      <div class="pattern-id" style="color:var(--amber)">P4b</div>
+      <div class="pattern-name">Both-sidesism Funcional</div>
+      <div class="pattern-desc">Critica Bolsonaro publicamente + solta Queiroz (aliado de Bolsonaro) no mesmo período. Critica Lava Jato + tem orgulho do desmanche. Declara democracia + janta com investigados da Odebrecht. Ruído narrativo como proteção sistêmica.</div>
+      <div class="pattern-instances">HC Queiroz + declaração genocídio militar (ago/2020) · "Desmanche Lava Jato" + jantar Temer/Aécio/Serra</div>
+    </div>
+    <div class="pattern-card" style="border-left:3px solid var(--blue)">
+      <div class="pattern-id" style="color:var(--blue)">P6</div>
+      <div class="pattern-name">Uso Estratégico da Prescrição</div>
+      <div class="pattern-desc">Intervenção reiterada para o mesmo réu ao longo de anos (Abdelmassih 2009 + 2023). Séries de HCs que interrompem o ritmo das investigações até esgotamento de penas ou prescrição.</div>
+      <div class="pattern-instances">Abdelmassih (14 anos entre intervenções) · Dantas (3 intervenções em 4 meses) · 21 presos LJ RJ</div>
+    </div>
+  </div>
+
+  <div class="inflexao">
+    <div class="in" style="color:var(--purple)">0</div>
+    <div class="il">Condenações transitadas em julgado de beneficiários de HCs críticos listados neste corpus. Zero é o achado central — não é coincidência, é o mecanismo funcionando.</div>
+  </div>
+</section>
+
+<!-- ========== 07 REGULATÓRIO ========== -->
+<section id="regulatorio" class="section">
+  <div class="sec-title">Está Tudo Dentro da Lei? · Análise Jurídica</div>
+
+  <div class="question-block">
+    <div class="question-title">⚖ Contrato IDP–CBF: conflito de interesses direto</div>
+    <div class="question-body">
+      <p><strong>O que a lei diz:</strong> Art. 126 LOMAN: vedado ao magistrado ser "administrador" de entidade privada. Art. 95, §único, I CF: vedado exercer outro cargo ou função. Código de Ética CNJ (Res. 60/2008): vedado "receber honorários ou percentagens" e conduta que "possa constituir circunstância suspeita".</p>
+      <p><strong>O que ocorreu:</strong> Gilmar é sócio-fundador do IDP com fins lucrativos. Filho preside e assinou o contrato CBF. Gilmar concedeu liminar reintegrando presidente da CBF que havia assinado contrato com o IDP 6 meses antes. Depois o deixou cair ao emitir despacho investigativo.</p>
+      <p><strong>Lacuna:</strong> <span class="lacuna">LACUNA ESTRUTURAL</span> O CNJ nunca editou resolução específica sobre participação societária de magistrados em IES lucrativas. A tese "é atividade docente permitida" nunca foi submetida a escrutínio formal diante do caso IDP.</p>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <div class="question-title">⚖ Receita Federal: sequência de neutralização em 5 passos</div>
+    <div class="question-body">
+      <p><strong>O que ocorreu (documentado):</strong></p>
+      <p>1. Receita produz relatório (mai/2018): variação patrimonial R$700k + "indícios de lavagem" de Guiomar.</p>
+      <p>2. Gilmar envia ofício a Toffoli antes da imprensa publicar, declarando "gestapo/pistolagem de juízes".</p>
+      <p>3. Toffoli aciona Ministério da Economia, PGR e Secretário da Receita.</p>
+      <p>4. Moraes suspende 133 procedimentos investigatórios e afasta dois auditores signatários.</p>
+      <p>5. Em fev/2026, PF processa 4 servidores da Receita com medidas cautelares por acessar dados de familiares de Gilmar.</p>
+      <p><strong>Lacuna:</strong> <span class="lacuna">LACUNA DE ENFORCEMENT</span> Não existe mecanismo que impeça o alvo de uma investigação de acionar o presidente do tribunal para interrompê-la. A autorreferência converte qualquer investigação sobre ministros do STF em ação passível de bloqueio pelo próprio tribunal.</p>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <div class="question-title">⚖ Fórum de Lisboa: lobby judicial ou evento acadêmico?</div>
+    <div class="question-body">
+      <p><strong>O que ocorreu:</strong> Transparência Internacional classificou o evento como "maior evento de lobby judicial do planeta". Empresas com processos bilionários no STF — BTG, JBS, Bradesco, Vale, Meta, Amazon/Google — participam com representantes, organizam jantares reservados e almoços privados. Muitos encontros não constam das agendas oficiais dos ministros. R$1,3M em recursos públicos (diárias e passagens FAB) financiaram participação de presidentes da Câmara e do Senado em 2024.</p>
+      <p><strong>Lacuna:</strong> <span class="lacuna">LACUNA INTERPRETATIVA</span> O CNJ nunca emitiu opinião vinculante sobre participação de ministros do STF em eventos organizados por IES privada lucrativa co-presidida por um ministro. A tese do "fórum acadêmico" permanece sem contestação formal.</p>
+    </div>
+  </div>
+
+  <div class="ev-block">
+    <div class="ev-label ev-confirmed">● ev-confirmed</div>
+    <div class="ev-text">IDP recebeu R$46M+ de entidades com processos no STF. 300+ processos dessas entidades passaram pelo gabinete de Gilmar desde 2016. Gilmar concedeu 620 HCs monocráticos em uma década com taxa de reversão de 2%. Zero processos disciplinares concluídos em 24 anos.</div>
+    <div class="ev-source">Fontes: Crusoé · Folha · Estadão · Piauí · Veja · Agência Brasil · STF (jurisprudência) · Spotniks (transcrição abr/2026)</div>
+  </div>
+  <div class="ev-block">
+    <div class="ev-label ev-inference">◆ ev-inference</div>
+    <div class="ev-text">A correlação temporal entre patrocínios ao IDP, empréstimo Bradesco, voo no jato de Vorcaro e decisões favoráveis às mesmas entidades é sistemática e documentada em múltiplos casos. A probabilidade de esse padrão ser produto do acaso é analiticamente irrazoável.</div>
+    <div class="ev-source">Identificado por: Transparência Internacional · Senado · imprensa investigativa · Spotniks (abr/2026)</div>
+  </div>
+  <div class="ev-block">
+    <div class="ev-label ev-alleged">◇ ev-alleged — excluído do registro factual</div>
+    <div class="ev-text">Hipótese de coordenação deliberada entre Gilmar e seus financiadores é excluída do corpus factual. O corpus documenta mecanismos, não intenções — conforme METHODOLOGY-v2.2.md.</div>
+    <div class="ev-source">Conf. METHODOLOGY-v2.2.md: atribuição de intencionalidade individual é excluída do registro factual</div>
+  </div>
+</section>
+
+<!-- ========== 08 SILÊNCIO ========== -->
+<section id="silencio" class="section">
+  <div class="sec-title">Por que o Silêncio dos Órgãos Reguladores?</div>
+
+  <div class="alert alert-red"><strong>Achado central:</strong> As instituições que deveriam fiscalizar Gilmar estão neutralizadas. A PGR é chefiada pelo co-fundador do IDP (Paulo Gonet). O CNJ Gilmar já presidiu. O Senado nunca apreciou um pedido de impeachment. A Receita aprendeu a não investigar. Quem ousa fiscalizar paga o preço. — Spotniks, abr/2026.</div>
+
+  <div class="silencio-grid">
+    <div class="silencio-card">
+      <div class="silencio-org">CNJ — Conselho Nacional de Justiça</div>
+      <span class="silencio-status status-omissao">Omissão Estrutural</span>
+      <div class="silencio-text">Gilmar presidiu o CNJ (2008–2010) — o período de alguns dos HCs mais polêmicos. O CNJ nunca concluiu processo disciplinar contra membro do STF. Quem deveria ser controlado controlou o controlador.</div>
+    </div>
+    <div class="silencio-card">
+      <div class="silencio-org">PGR — Paulo Gonet</div>
+      <span class="silencio-status status-omissao">Co-fundador do IDP</span>
+      <div class="silencio-text">Paulo Gonet é co-fundador do IDP de Gilmar. Vendeu sua cota em 2017 ao filho Francisco por R$12M (no mesmo dia do empréstimo Bradesco). É hoje o PGR. A instituição que deveria investigar Gilmar é chefiada por seu ex-sócio.</div>
+    </div>
+    <div class="silencio-card">
+      <div class="silencio-org">Receita Federal</div>
+      <span class="silencio-status status-omissao">Neutralizada Ativamente</span>
+      <div class="silencio-text">Relatório de 2018 bloqueado em 3 dias via acionamento de Toffoli e Moraes. Auditores afastados em 2019. Novos servidores processados com medidas cautelares em 2026. A Receita aprendeu a não investigar.</div>
+    </div>
+    <div class="silencio-card">
+      <div class="silencio-org">Senado Federal</div>
+      <span class="silencio-status status-parcial">Paralisia por Dependência</span>
+      <div class="silencio-text">18 pedidos de impeachment entre 2015–2020: nenhum apreciado. Em dez/2025, Gilmar elevou o quórum para apreciação de 41 para 54 votos antes que nova pressão surgisse. Parlamentares com processos no STF têm incentivo estrutural para não antagonizar.</div>
+    </div>
+    <div class="silencio-card">
+      <div class="silencio-org">Imprensa / Jornalistas</div>
+      <span class="silencio-status status-parcial">Efeito Inibidor Ativo</span>
+      <div class="silencio-text">Rubens Valente (livro sobre poder): processado, condenado a inserir acórdão em edições futuras. Carta Capital (capa 2008): condenada a pagar R$90k. Ministro do STJ que votou na condenação era professor do IDP. Repórter que perguntou sobre Lisboa: "Manda ele enfiar isso na bunda."</div>
+    </div>
+    <div class="silencio-card">
+      <div class="silencio-org">OAB / Advogados</div>
+      <span class="silencio-status status-parcial">Captura Corporativa</span>
+      <div class="silencio-text">Metade dos ministros do STF já foi professor no IDP. Advogados que atuam no STF dependem da boa vontade dos ministros. Questionar Gilmar formalmente significa prejudicar a carreira em processos futuros.</div>
+    </div>
+  </div>
+
+  <div class="quote">"Gilmar não é uma anomalia. Ele é o resultado de um sistema que foi desenhado para isso. A Constituição de 88 deu poder demais ao Supremo e fiscalização de menos. Gilmar só levou isso às últimas consequências."<cite>— Spotniks / Rodrigo da Silva, abr/2026 (transcrição)</cite></div>
+</section>
+
+<!-- ========== 09 DIAGNÓSTICO ========== -->
+<section id="diagnostico" class="section">
+  <div class="sec-title">Diagnóstico Estrutural · O que Há de Errado</div>
+
+  <div class="grid3">
+    <div class="card card-accent-red">
+      <div class="card-title">1. Lobby judicial substitui lobby legislativo</div>
+      <div class="card-body">Quando atores econômicos percebem que é mais eficiente investir na relação com um ministro do STF do que no Congresso, param de fazer lobby legislativo e passam a fazer lobby judicial. A política se desloca do parlamento para o gabinete. O Congresso esvaziado perde relevância. O Fórum de Lisboa é a institucionalização desse deslocamento.</div>
+    </div>
+    <div class="card card-accent-amber">
+      <div class="card-title">2. Segurança jurídica vira risco relacional</div>
+      <div class="card-body">Quando uma decisão bilionária depende da caneta de um único homem que pode travar o julgamento por tempo indefinido, empresas param de calcular risco jurídico e passam a calcular risco relacional. O que importa não é o que diz a lei — é quem você conhece no tribunal.</div>
+    </div>
+    <div class="card card-accent-purple">
+      <div class="card-title">3. A normalização do conflito de interesses</div>
+      <div class="card-body">Quando conflitos de interesse deixam de gerar escândalo e viram rotina, as pessoas param de se indignar. Esse é o estrago mais profundo — não as decisões individuais. É a erosão silenciosa da ideia de que a Justiça é imparcial.</div>
+    </div>
+    <div class="card card-accent-red">
+      <div class="card-title">4. A zona cinzenta como design</div>
+      <div class="card-body">O modelo IDP–ministro–empresas–julgamentos não viola nenhuma lei com precisão suficiente para gerar condenação. Produz todos os efeitos práticos de captura sem configurar tecnicamente corrupção passiva. A zona cinzenta não é falha do sistema — é o produto do sistema.</div>
+    </div>
+    <div class="card card-accent-blue">
+      <div class="card-title">5. O índice zero como achado</div>
+      <div class="card-body">Em todas as investigações que passaram pelas mãos de Gilmar — Satiagraha, Navalha, Lava Jato RJ, Queiroz, CBF, Moghrabi — o índice de condenações terminais dos beneficiários finais é zero. Não é resultado esperado por acaso: é o resultado esperado quando o mecanismo de proteção é eficiente.</div>
+    </div>
+    <div class="card card-accent-green">
+      <div class="card-title">6. O que seria necessário mudar</div>
+      <div class="card-body">Mecanismo externo de controle da magistratura superior (câmara com participação do legislativo e sociedade civil). Vedação expressa a participação societária em IES lucrativas. Auditoria de padrões de decisão por categorias de partes. Transparência obrigatória das relações financeiras entre institutos de magistrados e litigantes. Prazo improrrogável para pedidos de vista.</div>
+    </div>
+  </div>
+
+  <div class="inflexao">
+    <div class="in" style="color:var(--amber)">2030</div>
+    <div class="il">Gilmar não se aposenta antes de dezembro de 2030. Sobreviveu a 6 presidentes da República, às acusações mais graves que um magistrado pode enfrentar e aos insultos mais pesados de colegas de tribunal. A cada crise, saiu mais forte. Ele não governa — ele julga. E ao julgar decide quem governa, quem é preso, quem é solto, quem avança e quem cai.</div>
+  </div>
+
+  <div class="quote">"Construiu uma faculdade que é antissala do poder, um fórum que é o maior evento de lobby judicial do planeta, uma teia familiar que conecta gabinete, escritório de advocacia e agronegócio. E quando tentam investigar, os investigadores são punidos. Quando tentam impechar, os pedidos são ignorados. Quando tentam mudar as regras, ele muda primeiro."<cite>— Spotniks / Rodrigo da Silva, abr/2026 (transcrição)</cite></div>
+</section>
+
+</main>
+
+<button type="button" id="gotop" class="gotop" aria-label="Voltar ao topo" title="Voltar ao topo">↑</button>
+
+<footer class="footer">
+  <div style="margin-bottom:8px">
+    <strong style="color:var(--fg2)">Gilmar Mendes — Dossiê v2 · Sistema, Poder &amp; Imunidade (2002–2026)</strong>
+  </div>
+  <div style="margin-bottom:8px">
+    Fontes primárias: Spotniks/Rodrigo da Silva (transcrição abr/2026) · Crusoé · Folha de S.Paulo · Estadão · Veja · Piauí · Senado Federal · GloboNews · CartaCapital · Conjur · UOL · Agência Brasil · STF (transcrições e jurisprudência públicas) · CNJ (resoluções) · LOMAN · CF/88 · Rubens Valente, <em>Os Patrões da PF</em> · Transparência Internacional
+  </div>
+  <div style="margin-bottom:8px">
+    Projetos: <a href="https://lawfare-timeline.vercel.app" target="_blank" rel="noopener">lawfare-timeline.vercel.app</a> · <a href="https://observatorio-civil-br.vercel.app/" target="_blank" rel="noopener">observatorio-civil-br</a> ·
+    Gilmarmômetro: <a href="https://gilmarmometro.vercel.app" target="_blank" rel="noopener">gilmarmometro.vercel.app</a>
+  </div>
+  <div style="margin-bottom:8px">
+    Referências:
+    <a href="https://observatorio-civil-br.vercel.app/alem-da-toga.html" target="_blank" rel="noopener">Além da Toga</a> ·
+    <a href="https://observatorio-civil-br.vercel.app/satiagraha.html" target="_blank" rel="noopener">Satyagraha</a> ·
+    <a href="https://observatorio-civil-br.vercel.app/gilmar-mendes-em-fatos.html" target="_blank" rel="noopener">Gilmar Mendes em Fatos</a> ·
+    <a href="https://observatorio-civil-br.vercel.app/gilmar_mendes_poder_dashboard.html" target="_blank" rel="noopener">Dashboard Poder</a> ·
+    <a href="https://gilmarmometro.vercel.app/habeas-corpus" target="_blank" rel="noopener">HC — Gilmarmômetro</a> ·
+    <a href="https://gilmarmometro.vercel.app/" target="_blank" rel="noopener">Gilmarmômetro</a> ·
+    <a href="https://www.youtube.com/watch?v=cki5923vWkE" target="_blank" rel="noopener">Spotniks (abr/2026)</a>
+  </div>
+  <div>
+    <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0 1.0 Universal — Domínio Público</a> ·
+    Nenhum paywall. Nenhum patrocinador. Nenhuma monetização.
+  </div>
+</footer>
+
+<script>
+function goTo(id){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+  document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
+  event.target.classList.add('active');
+}
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const id=e.target.id;
+      document.querySelectorAll('.nav-tab').forEach(t=>{
+        if(t.getAttribute('onclick')&&t.getAttribute('onclick').includes("'"+id+"'"))t.classList.add('active');
+        else t.classList.remove('active');
+      });
+    }
+  });
+},{threshold:0.2,rootMargin:'-60px 0px 0px 0px'});
+document.querySelectorAll('.section').forEach(s=>obs.observe(s));
+
+const gotop=document.getElementById('gotop');
+window.addEventListener('scroll',()=>{
+  gotop.classList.toggle('show',window.scrollY>300);
+},{passive:true});
+gotop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+</script>
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

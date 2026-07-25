@@ -59,8 +59,8 @@ Este é o episódio real de "lote imenso de vacinas comprado" mencionado na orig
 
 Entradas conectadas nesta série:
 
-- [Entrada 1649](/timeline/entries/1649)
-- [Entrada 1651](/timeline/entries/1651)
+- [Entrada 1649](/posts/id1649-instituto-butantan-e-sinovac-assinam-acordo-de-colaboracao-de-desenvolvimento-cl/)
+- [Entrada 1651](/posts/id1651-eduardo-bolsonaro-acusa-huawei-de-espionagem-via-5g-embaixada-da-china-ameaca-co/)
 
 ---
 

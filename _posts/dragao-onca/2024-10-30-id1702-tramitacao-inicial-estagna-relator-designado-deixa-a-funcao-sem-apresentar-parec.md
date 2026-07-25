@@ -40,7 +40,7 @@ Projeto praticamente paralisado entre novembro/2024 e agosto/2025.
 
 Entradas conectadas nesta série:
 
-- [Entrada 1701](/timeline/entries/1701)
+- [Entrada 1701](/posts/id1701-dep-ze-silva-solidariedade-mg-apresenta-o-pl-27802024-instituindo-a-politica-nac/)
 
 ---
 

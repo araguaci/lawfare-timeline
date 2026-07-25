@@ -45,7 +45,7 @@ Motivo específico e articulação política por trás da mudança de ritmo em s
 
 Entradas conectadas nesta série:
 
-- [Entrada 1702](/timeline/entries/1702)
+- [Entrada 1702](/posts/id1702-tramitacao-inicial-estagna-relator-designado-deixa-a-funcao-sem-apresentar-parec/)
 
 ---
 

@@ -37,8 +37,8 @@ ONGs socioambientais (ISA, APIB, Observatório do Clima, Greenpeace) ocupam de f
 
 Entradas conectadas nesta série:
 
-- [Entrada 1694](/timeline/entries/1694)
-- [Entrada 1698](/timeline/entries/1698)
+- [Entrada 1694](/posts/id1694-stf-reafirma-inconstitucionalidade-do-marco-temporal-por-9x1-mas-mantem-grande-p/)
+- [Entrada 1698](/posts/id1698-oab-df-publica-analise-tecnica-sobre-a-lei-geral-do-licenciamento-ambiental-com/)
 
 ---
 

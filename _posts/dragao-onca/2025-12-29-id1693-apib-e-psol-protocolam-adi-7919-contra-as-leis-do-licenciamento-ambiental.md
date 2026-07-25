@@ -46,7 +46,7 @@ Status atual de tramitação da ADI 7919 e data prevista de julgamento não loca
 
 Entradas conectadas nesta série:
 
-- [Entrada 1692](/timeline/entries/1692)
+- [Entrada 1692](/posts/id1692-congresso-derruba-vetos-de-lula-ao-pl-da-devastacao-dois-dias-apos-o-encerrament/)
 
 ---
 

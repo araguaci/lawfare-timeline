@@ -58,7 +58,7 @@ Este projeto de lei é, potencialmente, o elo legislativo que faltava conectar f
 
 Entradas conectadas nesta série:
 
-- [Entrada 1691](/timeline/entries/1691)
+- [Entrada 1691](/posts/id1691-senado-aprova-o-pl-da-devastacao-pl-21592021-flexibilizando-o-licenciamento-ambi/)
 
 ---
 

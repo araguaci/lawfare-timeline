@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOSSIÊ — Desembargadora Ivana David × PCC/CV</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Syne:wght@700;800&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0c0f;
+  --bg2: #0f1318;
+  --bg3: #141920;
+  --border: #1e2530;
+  --border-hot: #2a3545;
+  --text: #c8d4e0;
+  --text-dim: #6b7e94;
+  --text-faint: #3a4a5c;
+  --accent: #e05a2b;
+  --accent2: #f0a030;
+  --accent3: #3a9be0;
+  --critical: #ff3b3b;
+  --high: #ff7c35;
+  --medium: #f0c030;
+  --low: #5cb870;
+  --info: #3a9be0;
+  --mono: 'IBM Plex Mono', monospace;
+  --display: 'Syne', sans-serif;
+  --body: 'Crimson Pro', Georgia, serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.65;
+  min-height: 100vh;
+}
+
+/* SCANNER LINE EFFECT */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.03) 2px,
+    rgba(0,0,0,0.03) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* HEADER */
+.masthead {
+  border-bottom: 1px solid var(--border);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
+}
+
+.masthead-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.masthead-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--critical);
+  border: 1px solid var(--critical);
+  padding: 3px 8px;
+  text-transform: uppercase;
+  animation: pulse-border 2s ease-in-out infinite;
+}
+
+@keyframes pulse-border {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.masthead-title {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 0.08em;
+}
+
+.masthead-date {
+  margin-left: auto;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text-faint);
+}
+
+/* HERO */
+.hero {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 32px 40px;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-kicker {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.hero-title {
+  font-family: var(--display);
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 800;
+  line-height: 1.05;
+  color: #e8f0f8;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.hero-title em {
+  color: var(--accent);
+  font-style: normal;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: var(--text-dim);
+  max-width: 680px;
+  line-height: 1.55;
+}
+
+.hero-meta {
+  margin-top: 28px;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.hero-badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  padding: 4px 10px;
+  text-transform: uppercase;
+}
+
+.badge-critical { background: rgba(255,59,59,0.15); color: var(--critical); border: 1px solid rgba(255,59,59,0.3); }
+.badge-p04b { background: rgba(58,155,224,0.12); color: var(--info); border: 1px solid rgba(58,155,224,0.3); }
+.badge-cc0 { background: rgba(92,184,112,0.1); color: var(--low); border: 1px solid rgba(92,184,112,0.25); }
+
+/* MAIN GRID */
+.main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px 80px;
+}
+
+/* SECTION */
+.section {
+  margin-top: 56px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-num {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  min-width: 40px;
+}
+
+.section-title {
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 700;
+  color: #d8e8f4;
+  letter-spacing: 0.01em;
+}
+
+.section-badge {
+  margin-left: auto;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  padding: 3px 8px;
+  text-transform: uppercase;
+}
+
+/* TRANSCRIPT BOX */
+.transcript {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  padding: 24px 28px;
+  position: relative;
+}
+
+.transcript::before {
+  content: '▶ FONTE PRIMÁRIA VERIFICADA — youtube.com/watch?v=OTSc6c94vhU';
+  display: block;
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--low);
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.transcript p {
+  font-family: var(--body);
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.transcript p:last-child { margin-bottom: 0; }
+
+.transcript strong {
+  color: #ffd080;
+  font-weight: 600;
+}
+
+.timestamp {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--text-faint);
+  margin-right: 6px;
+}
+
+/* ANALYSIS BOX */
+.analysis-box {
+  background: rgba(224,90,43,0.06);
+  border: 1px solid rgba(224,90,43,0.2);
+  padding: 16px 20px;
+  margin-top: 16px;
+}
+
+.analysis-box .analysis-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.analysis-box p {
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* CARD GRID */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+/* DECISION CARD */
+.decision-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  padding: 20px 22px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.decision-card:hover {
+  border-color: var(--border-hot);
+}
+
+.decision-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px;
+  height: 100%;
+}
+
+.card-condenatorio::before { background: var(--low); }
+.card-denegatorio::before { background: var(--low); }
+.card-absolutorio::before { background: var(--medium); }
+.card-misto::before { background: var(--info); }
+
+.card-process {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--text-faint);
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.card-title {
+  font-family: var(--display);
+  font-size: 14px;
+  font-weight: 700;
+  color: #d0dce8;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.card-body {
+  font-size: 14px;
+  color: var(--text-dim);
+  line-height: 1.55;
+  margin-bottom: 12px;
+}
+
+.card-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.tag {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  padding: 2px 7px;
+  text-transform: uppercase;
+}
+
+.tag-condenatorio { background: rgba(92,184,112,0.12); color: var(--low); border: 1px solid rgba(92,184,112,0.25); }
+.tag-denegatorio { background: rgba(92,184,112,0.12); color: var(--low); border: 1px solid rgba(92,184,112,0.25); }
+.tag-absolutorio-parcial { background: rgba(240,192,48,0.12); color: var(--medium); border: 1px solid rgba(240,192,48,0.25); }
+.tag-relator { background: rgba(58,155,224,0.12); color: var(--info); border: 1px solid rgba(58,155,224,0.25); }
+.tag-colegiado { background: rgba(100,100,100,0.12); color: #888; border: 1px solid rgba(100,100,100,0.25); }
+.tag-pcc { background: rgba(255,59,59,0.1); color: #ff8080; border: 1px solid rgba(255,59,59,0.2); }
+.tag-trafico { background: rgba(255,124,53,0.1); color: var(--high); border: 1px solid rgba(255,124,53,0.2); }
+
+/* STRUCTURAL TABLE */
+.struct-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.struct-table th {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding: 8px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg2);
+}
+
+.struct-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.struct-table tr:hover td {
+  background: rgba(255,255,255,0.02);
+}
+
+.sev-alta { color: var(--critical); font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 0.1em; }
+.sev-media { color: var(--medium); font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; }
+.sev-baixa { color: var(--low); font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; }
+
+/* QUOTE */
+.pull-quote {
+  border-left: 3px solid var(--accent2);
+  padding: 16px 22px;
+  background: rgba(240,160,48,0.05);
+  margin: 20px 0;
+}
+
+.pull-quote p {
+  font-size: 17px;
+  color: #e0cc80;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.pull-quote cite {
+  display: block;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text-faint);
+  font-style: normal;
+  margin-top: 8px;
+  letter-spacing: 0.1em;
+}
+
+/* TAXONOMY BOX */
+.taxonomy {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  padding: 20px 24px;
+  margin-top: 16px;
+}
+
+.taxonomy-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.taxonomy-row:last-child { border-bottom: none; }
+
+.taxonomy-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding-top: 2px;
+}
+
+.taxonomy-value {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+.taxonomy-value.fact { color: var(--low); }
+.taxonomy-value.inference { color: var(--info); }
+.taxonomy-value.hypothesis { color: var(--text-faint); font-style: italic; }
+
+/* PATTERN BOX */
+.pattern-box {
+  border: 1px solid var(--border);
+  padding: 20px 24px;
+  background: var(--bg2);
+}
+
+.pattern-id {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--accent3);
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+
+.pattern-name {
+  font-family: var(--display);
+  font-size: 16px;
+  font-weight: 700;
+  color: #d0e0f0;
+  margin-bottom: 10px;
+}
+
+.pattern-body {
+  font-size: 14px;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+/* GAPS TABLE */
+.gap-row {
+  display: grid;
+  grid-template-columns: 28px 1fr auto;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+
+.gap-row:last-child { border-bottom: none; }
+
+.gap-num {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text-faint);
+  padding-top: 2px;
+}
+
+.gap-text {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.gap-sev {
+  font-family: var(--mono);
+  font-size: 9px;
+  padding: 3px 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* VERDICT BANNER */
+.verdict-banner {
+  background: linear-gradient(135deg, rgba(224,90,43,0.1), rgba(255,59,59,0.08));
+  border: 1px solid rgba(224,90,43,0.3);
+  padding: 24px 28px;
+  margin-top: 32px;
+}
+
+.verdict-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.verdict-text {
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 700;
+  color: #e8f0f8;
+  line-height: 1.4;
+}
+
+.verdict-sub {
+  margin-top: 12px;
+  font-size: 15px;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+/* FOOTER */
+.footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 32px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: gap;
+  gap: 16px;
+}
+
+.footer-left {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text-faint);
+  line-height: 1.6;
+}
+
+.footer-right {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--text-faint);
+  text-align: right;
+}
+
+/* SOURCE LINK */
+.src-link {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--info);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(58,155,224,0.3);
+}
+.src-link:hover { color: #6ab8f0; }
+
+/* DIVIDER */
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 28px 0;
+}
+
+/* INLINE MONO */
+code {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-dim);
+  background: rgba(255,255,255,0.04);
+  padding: 1px 5px;
+}
+
+/* WARNING STRIP */
+.warning-strip {
+  background: rgba(255,59,59,0.07);
+  border-top: 1px solid rgba(255,59,59,0.15);
+  border-bottom: 1px solid rgba(255,59,59,0.15);
+  padding: 10px 32px;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: #ff8080;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+p { margin-bottom: 12px; }
+p:last-child { margin-bottom: 0; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <span class="masthead-tag">⚠ investigação ativa</span>
+    <span class="masthead-title">lawfare-timeline.vercel.app / dossiês / ivana-david-pcc-cv</span>
+    <span class="masthead-date">29 MAI 2026 — CC0 1.0 UNIVERSAL</span>
+  </div>
+</header>
+
+<div class="warning-strip">
+  REGISTRO FORENSE — FATOS DOCUMENTADOS · INFERÊNCIAS ESTRUTURAIS · HIPÓTESES MOTIVACIONAIS EXCLUÍDAS — LACUNAS EXPLICITADAS
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-kicker">Dossiê #INV-2026-0529 · Segurança Pública · TJSP · Padrão P04b</div>
+  <h1 class="hero-title">
+    "O preço da cocaína subiu" —<br>
+    <em>Des. Ivana David</em> e o nexo<br>
+    com PCC e Comando Vermelho
+  </h1>
+  <p class="hero-subtitle">
+    A desembargadora do TJSP argumentou ao vivo na CNN Brasil contra a designação terrorista americana do PCC e CV, citando o aumento do preço da cocaína como consequência. Investigação sistemática sobre suas decisões judiciais com nexo a esses grupos e análise estrutural da posição pública.
+  </p>
+  <div class="hero-meta">
+    <span class="hero-badge badge-critical">P04b · Both-sidesism funcional</span>
+    <span class="hero-badge badge-p04b">4ª Câmara Criminal TJSP</span>
+    <span class="hero-badge badge-cc0">CC0 1.0 · Domínio Público</span>
+  </div>
+</section>
+
+<main class="main">
+
+  <!-- SEÇÃO 1: FONTE PRIMÁRIA -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-num">01 //</span>
+      <h2 class="section-title">FONTE PRIMÁRIA — TRANSCRIÇÃO VERIFICADA</h2>
+      <span class="section-badge badge-critical">VERIFICADO</span>
+    </div>
+
+    <div class="transcript">
+      <p><span class="timestamp">[3:38]</span>"Nós, né, cidadãos americanos que convivemos aqui, moramos aqui em São Paulo, vamos ter a nossa vida hoje como tivemos ontem. e o PCC e o Comando Vermelho vão <strong>continuar atuando</strong>."</p>
+
+      <p><span class="timestamp">[3:52]</span>"E pior do que isso, hoje já, né, nas trocas de informação, a inteligência, a contrainteligência, a investigação não para, <strong>já sabemos que o preço da cocaína subiu</strong>. Quanto mais dificuldade, obviamente, né, a droga vai ficando mais cara."</p>
+
+      <p><span class="timestamp">[4:05]</span>"Eu ainda não consegui vislumbrar nenhuma vantagem, confesso a vocês."</p>
+    </div>
+
+    <div class="analysis-box">
+      <div class="analysis-label">⚑ Nota de Contexto Analítico</div>
+      <p>A declaração sobre o preço da cocaína não é uma "reclamação" de consumidor — é apresentada como dado de inteligência ("nas trocas de informação, a inteligência não para"). A desembargadora usa o argumento econômico para sustentar a tese de que a designação terrorista americana é ineficaz. O efeito argumentativo é apresentar a lucratividade das facções como problema da designação, não como consequência esperada do endurecimento — invertendo a lógica do incentivo.</p>
+    </div>
+
+    <div class="pull-quote" style="margin-top:20px;">
+      <p>"Quando a gente atribui essa possibilidade, você abre esse viés, onde os Estados Unidos, entendendo que aquela organização criminosa possa colocar em risco a segurança nacional dele, ele se coloca numa posição de intervir e resolver aquele problema."</p>
+      <cite>— Des. Ivana David, CNN Brasil, 29/05/2026 · [1:48–2:13]</cite>
+    </div>
+
+    <p style="font-size:14px; color:var(--text-dim); margin-top:16px;">
+      Fonte: <a class="src-link" href="https://www.youtube.com/watch?v=OTSc6c94vhU" target="_blank">youtube.com/watch?v=OTSc6c94vhU</a> · CNN Brasil · 29 mai 2026
+    </p>
+  </section>
+
+  <!-- SEÇÃO 2: PERFIL INSTITUCIONAL -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-num">02 //</span>
+      <h2 class="section-title">PERFIL INSTITUCIONAL — IVANA DAVID</h2>
+      <span class="section-badge badge-p04b">TJSP</span>
+    </div>
+
+    <div class="taxonomy">
+      <div class="taxonomy-row">
+        <span class="taxonomy-label">Cargo</span>
+        <span class="taxonomy-value fact">Desembargadora do Tribunal de Justiça de São Paulo (TJSP)</span>
+      </div>
+      <div class="taxonomy-row">
+        <span class="taxonomy-label">Câmaras</span>
+        <span class="taxonomy-value fact">4ª Câmara de Direito Criminal + 12ª Câmara Criminal Extraordinária + composições eventuais em outras câmaras (7ª confirmada em nov/2025)</span>
+      </div>
+      <div class="taxonomy-row">
+        <span class="taxonomy-label">Ingresso</span>
+        <span class="taxonomy-value fact">1990 — 35 anos de magistratura em 2025</span>
+      </div>
+      <div class="taxonomy-row">
+        <span class="taxonomy-label">Histórico PCC</span>
+        <span class="taxonomy-value fact">Juíza corregedora dos presídios paulistas 1999–2008 — testemunhou surgimento e ascensão do PCC in loco</span>
+      </div>
+      <div class="taxonomy-row">
+        <span class="taxonomy-label">Funções paralelas</span>
+        <span class="taxonomy-value fact">VP Comissão de Segurança TJSP · Fórum Brasileiro de Segurança Pública · Programa Nacional de Combate à Corrupção do MJ · OAB-SP (Direito Digital e Execução Penal)</span>
+      </div>
+      <div class="taxonomy-row">
+        <span class="taxonomy-label">Especialidade</span>
+        <span class="taxonomy-value fact">Teoria da Prova · Lavagem de Dinheiro · Crime Organizado · Direito Digital</span>
+      </div>
+      <div class="taxonomy-row">
+        <span class="taxonomy-label">Mídia</span>
+        <span class="taxonomy-value fact">Presença frequente na CNN Brasil, Metrópoles, Balanço Geral · 45K seguidores no Instagram · colunista/entrevistada recorrente em temas de segurança pública</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 3: DECISÕES JUDICIAIS DOCUMENTADAS -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-num">03 //</span>
+      <h2 class="section-title">DECISÕES JUDICIAIS — NEXO PCC/CV/TRÁFICO</h2>
+      <span class="section-badge badge-critical">FONTES PRIMÁRIAS</span>
+    </div>
+
+    <p style="color:var(--text-dim); font-size:14.5px; margin-bottom:20px;">
+      Levantamento a partir de acórdãos e repertórios de jurisprudência do TJSP disponíveis publicamente. O acesso sistemático ao ESAJ requer pesquisa direta no portal — as decisões abaixo são verificadas por fontes secundárias confiáveis (CADICRIM/TJSP, Jusbrasil, EsaJ público).
+    </p>
+
+    <div class="card-grid">
+
+      <div class="decision-card card-condenatorio">
+        <div class="card-process">APR 0107185-54.2017.8.26.0050 · São Paulo · 23/03/2021</div>
+        <div class="card-title">Apelação Criminal — Funcionário público + organização criminosa</div>
+        <div class="card-body">
+          Ivana David como <strong>relatora</strong>. Recurso desprovido. Condenação mantida com qualificadoras, perda do cargo público decretada, regime mais gravoso mantido. Ementa registra condenação por crime com nexo a organização criminosa envolvendo agente público.
+        </div>
+        <div class="card-meta">
+          <span class="tag tag-relator">Relatora</span>
+          <span class="tag tag-condenatorio">Condenação mantida</span>
+        </div>
+        <div style="margin-top:10px; font-family:var(--mono); font-size:9px; color:var(--text-faint);">
+          Fonte: CADICRIM/TJSP · Repertório Março 2021
+        </div>
+      </div>
+
+      <div class="decision-card card-misto">
+        <div class="card-process">APR 1502818-27.2019.8.26.0050 · São Paulo · 24/11/2020</div>
+        <div class="card-title">Tráfico + associação ao tráfico — Negado privilégio</div>
+        <div class="card-body">
+          Ivana David como <strong>relatora</strong>. Condenação por tráfico mantida; rejeição de desclassificação para uso pessoal; aplicação do art. 33 + 35 Lei de Drogas. Ementa explicita nexo com finalidade de comercialização e produção de drogas.
+        </div>
+        <div class="card-meta">
+          <span class="tag tag-relator">Relatora</span>
+          <span class="tag tag-trafico">Tráfico</span>
+          <span class="tag tag-condenatorio">Mantida</span>
+        </div>
+        <div style="margin-top:10px; font-family:var(--mono); font-size:9px; color:var(--text-faint);">
+          Fonte: CADICRIM/TJSP · Repertório Novembro 2020
+        </div>
+      </div>
+
+      <div class="decision-card card-denegatorio">
+        <div class="card-process">HC XXXXX-54.2025.8.26.0000 · Ribeirão Preto · nov/2025</div>
+        <div class="card-title">Habeas Corpus — Tráfico de cocaína/maconha/haxixe</div>
+        <div class="card-body">
+          Ivana David integra colegiado da 7ª Câmara Criminal. HC <strong>denegado</strong> — prisão preventiva mantida. Réu preso com R$2.043, balanças de precisão, cocaína, maconha e haxixe em Franca/SP, no âmbito de mandado de busca e apreensão de investigação maior.
+        </div>
+        <div class="card-meta">
+          <span class="tag tag-colegiado">Colegiado</span>
+          <span class="tag tag-denegatorio">HC Denegado</span>
+          <span class="tag tag-trafico">Tráfico</span>
+        </div>
+        <div style="margin-top:10px; font-family:var(--mono); font-size:9px; color:var(--text-faint);">
+          Fonte: Jusbrasil · TJ-SP · processo 5260757742
+        </div>
+      </div>
+
+      <div class="decision-card card-absolutorio">
+        <div class="card-process">APR 1502818-44.2017.8.26.0127 · 15ª Câmara Criminal</div>
+        <div class="card-title">PCC — Absolvições parciais mantidas por falta de provas</div>
+        <div class="card-body">
+          Caso de grande porte envolvendo PCC com múltiplos réus. Acórdão manteve absolvições de Hugo e outros por "insuficiência de provas de envolvimento com o PCC" — mecanismo previsto em lei aplicado regularmente. <strong>Nota:</strong> não há confirmação de que Ivana David foi a relatora neste processo específico — requer verificação no ESAJ.
+        </div>
+        <div class="card-meta">
+          <span class="tag tag-pcc">PCC</span>
+          <span class="tag tag-absolutorio-parcial">Absolvições parciais</span>
+        </div>
+        <div style="margin-top:10px; font-family:var(--mono); font-size:9px; color:var(--text-faint); color: var(--medium);">
+          ⚠ LACUNA: Vinculação à relatora não confirmada — verificar esaj.tjsp.jus.br
+        </div>
+      </div>
+
+    </div>
+
+    <div class="analysis-box" style="margin-top:20px; border-color: rgba(58,155,224,0.2); background: rgba(58,155,224,0.05);">
+      <div class="analysis-label" style="color:var(--info);">⊕ Inferência Estrutural</div>
+      <p>O padrão das decisões documentadas é consistente com uma magistrada que <strong>condena e mantém prisões</strong> em casos de tráfico e organização criminosa. Não há nenhuma decisão identificada que beneficie membros identificados do PCC ou CV. A posição pública de oposição à designação terrorista americana é, portanto, de natureza <em>política-processual</em> — não judicial. A tensão analítica reside justamente aí: ela critica o instrumento americano enquanto exerce jurisdição criminal sobre as mesmas facções.</p>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 4: POSIÇÕES PÚBLICAS -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-num">04 //</span>
+      <h2 class="section-title">POSIÇÕES PÚBLICAS — NEXO DIRETO COM PCC/CV</h2>
+    </div>
+
+    <table class="struct-table">
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Veículo</th>
+          <th>Declaração-chave</th>
+          <th>Nexo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-family:var(--mono); font-size:11px; white-space:nowrap;">29/05/2026</td>
+          <td style="font-family:var(--mono); font-size:11px;">CNN Brasil</td>
+          <td>"Já sabemos que o preço da cocaína subiu. Quanto mais dificuldade, a droga vai ficando mais cara. Não vislumbrei nenhuma vantagem."</td>
+          <td><span class="tag tag-pcc">PCC/CV</span></td>
+        </tr>
+        <tr>
+          <td style="font-family:var(--mono); font-size:11px; white-space:nowrap;">29/05/2026</td>
+          <td style="font-family:var(--mono); font-size:11px;">EBC Rádios</td>
+          <td>"Vira tema de segurança nacional e passa para a cúpula do Exército e Forças Armadas. Muda a forma de diálogo. E isso é um grande problema."</td>
+          <td><span class="tag tag-pcc">PCC/CV</span></td>
+        </tr>
+        <tr>
+          <td style="font-family:var(--mono); font-size:11px; white-space:nowrap;">mai/2025</td>
+          <td style="font-family:var(--mono); font-size:11px;">Metrópoles</td>
+          <td>"Isso foi uma gestão entre advogados das duas organizações criminosas, tentando vender uma versão de que estavam unidas para lutar contra a opressão do SPF." [sobre aliança PCC-CV]</td>
+          <td><span class="tag tag-pcc">PCC/CV</span></td>
+        </tr>
+        <tr>
+          <td style="font-family:var(--mono); font-size:11px; white-space:nowrap;">nov/2024</td>
+          <td style="font-family:var(--mono); font-size:11px;">CNN Brasil</td>
+          <td>"Estão se encontrando brechas e entendimentos que acabam por reduzir a pena de 40, 30 anos para um patamar de 8."</td>
+          <td><span class="tag tag-pcc">Facções</span></td>
+        </tr>
+        <tr>
+          <td style="font-family:var(--mono); font-size:11px; white-space:nowrap;">nov/2024</td>
+          <td style="font-family:var(--mono); font-size:11px;">Metrópoles</td>
+          <td>"Uma organização criminosa não sobrevive sem os braços dados com o Estado."</td>
+          <td><span class="tag tag-pcc">PCC</span></td>
+        </tr>
+        <tr>
+          <td style="font-family:var(--mono); font-size:11px; white-space:nowrap;">fev/2026</td>
+          <td style="font-family:var(--mono); font-size:11px;">Terra/Perfil Poder</td>
+          <td>"Hoje, temos grandes empresários que investem no tráfico e lavam dinheiro através de fintechs, postos de gasolina e licitações públicas."</td>
+          <td><span class="tag tag-trafico">Lavagem</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- SEÇÃO 5: ANÁLISE ESTRUTURAL P04b -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-num">05 //</span>
+      <h2 class="section-title">ANÁLISE ESTRUTURAL — PADRÃO P04b</h2>
+      <span class="section-badge badge-p04b">BOTH-SIDESISM FUNCIONAL</span>
+    </div>
+
+    <div class="pattern-box">
+      <div class="pattern-id">P04b · SUBCATEGORIA CONFIRMADA</div>
+      <div class="pattern-name">Both-sidesism Funcional — Mecanismo de Proteção Estrutural via Expertise Institucional</div>
+      <div class="pattern-body">
+        Framing que usa autoridade técnica legítima para apresentar medidas de enforcement contra crime organizado como equivalentemente problemáticas às próprias facções criminosas. O argumento opera via: (1) credencialização pelo histórico de combate ao crime; (2) uso de dado real (preço da cocaína) para construir argumento contra a medida; (3) convergência com posição do governo federal sem nominá-lo. O efeito estrutural é proteção das rotas financeiras das facções no sistema bancário brasileiro, independente de intenção.
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px; margin-top:0;">
+      <div class="taxonomy" style="background:rgba(92,184,112,0.04); border-color:rgba(92,184,112,0.2);">
+        <div style="font-family:var(--mono); font-size:10px; color:var(--low); letter-spacing:0.12em; margin-bottom:12px;">✓ FATOS DOCUMENTADOS</div>
+        <ul style="list-style:none; font-size:14px; color:var(--text); line-height:1.8;">
+          <li>→ Declaração pública contra designação terrorista (CNN, 29/05/2026)</li>
+          <li>→ Citou aumento de preço de cocaína como argumento (fonte: YT verificado)</li>
+          <li>→ Convergência operacional com posição do gov. Lula</li>
+          <li>→ 35 anos de magistratura criminal em SP</li>
+          <li>→ Corregedora de presídios 1999–2008 (ascensão do PCC)</li>
+          <li>→ Histórico decisório: sem concessões indevidas a faccionados identificadas</li>
+        </ul>
+      </div>
+      <div class="taxonomy" style="background:rgba(58,155,224,0.04); border-color:rgba(58,155,224,0.2);">
+        <div style="font-family:var(--mono); font-size:10px; color:var(--info); letter-spacing:0.12em; margin-bottom:12px;">≈ INFERÊNCIAS ESTRUTURAIS</div>
+        <ul style="list-style:none; font-size:14px; color:var(--text); line-height:1.8;">
+          <li>→ Posição reduz pressão sobre ativos das facções no sist. financeiro BR</li>
+          <li>→ Argumento econômico inverte lógica de desincentivo ao tráfico</li>
+          <li>→ Sua expertise dá legitimidade extra ao posicionamento contrário à designação</li>
+          <li>→ Framing "soberania" oculta que benefício imediato é das facções</li>
+          <li>→ Argumento idêntico ao do governo que não quis a designação</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="taxonomy" style="margin-top:16px; background:rgba(59,59,59,0.2); border-color:rgba(100,100,100,0.2);">
+      <div style="font-family:var(--mono); font-size:10px; color:var(--text-faint); letter-spacing:0.12em; margin-bottom:12px;">✗ HIPÓTESES MOTIVACIONAIS — EXCLUÍDAS DO CORPUS</div>
+      <p style="font-size:14px; color:var(--text-faint); font-style:italic; line-height:1.6;">
+        Qualquer alegação sobre intenção corrupta, captura, favorecimento deliberado ou relação pessoal com membros de facções requer evidência primária — não há nenhuma nos dados disponíveis. A análise estrutural descreve efeito funcional, não motivação. Ivana David tem histórico declaratório e decisório que aponta na direção oposta. O P04b pode operar sem que o agente tenha consciência de seus efeitos sistêmicos.
+      </p>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 6: LACUNAS INVESTIGATIVAS -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-num">06 //</span>
+      <h2 class="section-title">LACUNAS INVESTIGATIVAS — PASSO 8 COMPLETO</h2>
+      <span class="section-badge badge-critical">PENDENTE</span>
+    </div>
+
+    <div style="background:var(--bg2); border:1px solid var(--border); padding:20px 24px;">
+
+      <div class="gap-row">
+        <span class="gap-num">L1</span>
+        <div>
+          <div class="gap-text"><strong>Pesquisa sistemática no ESAJ</strong> — buscar todos acórdãos com relatora "Ivana David" + ementa contendo "PCC", "Primeiro Comando", "organização criminosa" nos últimos 10 anos. O volume não está levantado. Metodologia: esaj.tjsp.jus.br → CJSG → relator: "Ivana David" + chave de busca.</div>
+          <div style="margin-top:6px; font-family:var(--mono); font-size:10px; color:var(--text-faint);">Endereço: https://esaj.tjsp.jus.br/cjsg/consultaCompleta.do</div>
+        </div>
+        <span class="gap-sev sev-alta">ALTA</span>
+      </div>
+
+      <div class="gap-row">
+        <span class="gap-num">L2</span>
+        <div class="gap-text"><strong>Mapeamento de advogados das facções</strong> — verificar se causídicos conhecidos do PCC/CV (ex: advogados identificados na "Operação Ethos", advogados do "núcleo R do PCC" identificados pelo STF) tiveram recursos julgados pela 4ª Câmara Criminal enquanto ela exerceu relatoria. Fonte: HC 151793 STF (Gilmar Mendes) identifica advogados do PCC.</div>
+        <span class="gap-sev sev-alta">ALTA</span>
+      </div>
+
+      <div class="gap-row">
+        <span class="gap-num">L3</span>
+        <div class="gap-text"><strong>Vinculação ao acórdão 14030041 TJSP</strong> — processo PCC com absolvições parciais. Câmara registrada como 15ª; Ivana David atua na 4ª e 7ª. Requer verificação do relator real via acesso autenticado ao ESAJ.</div>
+        <span class="gap-sev sev-alta">ALTA</span>
+      </div>
+
+      <div class="gap-row">
+        <span class="gap-num">L4</span>
+        <div class="gap-text"><strong>Habeas corpus deferidos em casos faccionais</strong> — a busca atual só identificou HC denegados e condenações mantidas. Ausência de evidência ≠ evidência de ausência. Busca por HCs deferidos onde ela foi relatora em casos PCC/CV não foi realizada.</div>
+        <span class="gap-sev sev-alta">ALTA</span>
+      </div>
+
+      <div class="gap-row">
+        <span class="gap-num">L5</span>
+        <div class="gap-text"><strong>Nexo "brechas de 40 para 8 anos"</strong> — ela própria denuncia redução de penas de líderes faccionais por "entendimentos jurídicos". Investigar se alguma dessas decisões de redução passou pela câmara onde ela atua, e qual foi seu voto.</div>
+        <span class="gap-sev sev-media">MÉDIA</span>
+      </div>
+
+      <div class="gap-row">
+        <span class="gap-num">L6</span>
+        <div class="gap-text"><strong>Programa Nacional MJ × PCC</strong> — ela integra o Programa Nacional de Combate à Corrupção e Lavagem de Dinheiro do Ministério da Justiça (governo Lula). Verificar se há conflito entre sua atuação nesse programa e a posição pública de hoje contra o instrumento americano.</div>
+        <span class="gap-sev sev-media">MÉDIA</span>
+      </div>
+
+      <div class="gap-row">
+        <span class="gap-num">L7</span>
+        <div class="gap-text"><strong>Casos no Agravo de Execução Penal 0011052-75.2024.8.26.0996 (7ª Câmara)</strong> — identificado na pesquisa mas sem acesso ao mérito. Verificar se envolve faccionados e qual foi a posição de Ivana David.</div>
+        <span class="gap-sev sev-media">MÉDIA</span>
+      </div>
+
+      <div class="gap-row" style="border-bottom:none;">
+        <span class="gap-num">L8</span>
+        <div class="gap-text"><strong>Declaração do promotor Lincoln Gakiya vs. Ivana David</strong> — ambos foram entrevistados no mesmo dia (EBC Rádios). Gakiya alertou que a designação pode prejudicar cooperação policial. Ivana David foi além. Comparar profundidade das posições e quem foi mais longe na oposição à medida americana.</div>
+        <span class="gap-sev sev-baixa">BAIXA</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEÇÃO 7: VEREDICTO ANALÍTICO -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-num">07 //</span>
+      <h2 class="section-title">VEREDICTO ANALÍTICO — SÍNTESE FORENSE</h2>
+    </div>
+
+    <div class="verdict-banner">
+      <div class="verdict-label">⊕ Conclusão Estrutural — Epistemicamente Calibrada</div>
+      <div class="verdict-text">
+        Nenhuma evidência de captura ou favorecimento. Padrão P04b operacional identificado.
+      </div>
+      <div class="verdict-sub">
+        <p>Ivana David é uma magistrada com histórico documentado de combate ao crime organizado — suas decisões identificadas <em>mantêm</em> condenações e <em>negam</em> habeas corpus em casos de tráfico. A declaração pública de hoje opera, entretanto, como um mecanismo de proteção estrutural involuntário (P04b): usa autoridade técnica real para construir argumento que reduz pressão sobre as rotas financeiras do PCC e CV no sistema bancário e econômico brasileiro.</p>
+        <p style="margin-top:10px;">O argumento econômico (preço da cocaína subiu) é factualmente correto como previsão — mas invertido logicamente como crítica à designação. Todo instrumento de enforcement aumenta custos operacionais para quem é alvo. Isso é o objetivo, não o problema.</p>
+        <p style="margin-top:10px;">A convergência operacional com o governo Lula — que entregou a Trump documento contra a designação — é estruturalmente significativa independente de motivação.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 8: PRÓXIMOS PASSOS -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-num">08 //</span>
+      <h2 class="section-title">PRÓXIMOS PASSOS — AGENDA INVESTIGATIVA</h2>
+    </div>
+
+    <table class="struct-table">
+      <thead>
+        <tr>
+          <th>Passo</th>
+          <th>Ação</th>
+          <th>Ferramentas</th>
+          <th>Prioridade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-family:var(--mono); font-size:10px; white-space:nowrap;">P8.1</td>
+          <td>Pesquisa ESAJ sistemática: relator=Ivana David + chave PCC/organização criminosa</td>
+          <td style="font-family:var(--mono); font-size:11px;">esaj.tjsp.jus.br/cjsg</td>
+          <td><span class="sev-alta">URGENTE</span></td>
+        </tr>
+        <tr>
+          <td style="font-family:var(--mono); font-size:10px; white-space:nowrap;">P8.2</td>
+          <td>Cruzar advogados do PCC identificados na Op. Ethos (STF HC 151793) com causas julgadas pela 4ª Câmara Criminal</td>
+          <td style="font-family:var(--mono); font-size:11px;">STF / ESAJ</td>
+          <td><span class="sev-alta">URGENTE</span></td>
+        </tr>
+        <tr>
+          <td style="font-family:var(--mono); font-size:10px; white-space:nowrap;">P8.3</td>
+          <td>Registrar evento como JSON no corpus lawfare-timeline: P04b + P09</td>
+          <td style="font-family:var(--mono); font-size:11px;">corpus local</td>
+          <td><span class="sev-alta">ALTA</span></td>
+        </tr>
+        <tr>
+          <td style="font-family:var(--mono); font-size:10px; white-space:nowrap;">P8.4</td>
+          <td>Publicar como artefato em gosurf.site + atualizar pages.json</td>
+          <td style="font-family:var(--mono); font-size:11px;">Jekyll/Vercel</td>
+          <td><span class="sev-alta">ALTA</span></td>
+        </tr>
+        <tr>
+          <td style="font-family:var(--mono); font-size:10px; white-space:nowrap;">P8.5</td>
+          <td>Mirror IPFS via Pinata + archive.org (item recorrente pendente)</td>
+          <td style="font-family:var(--mono); font-size:11px;">Pinata / IA</td>
+          <td><span class="sev-media">MÉDIA</span></td>
+        </tr>
+        <tr>
+          <td style="font-family:var(--mono); font-size:10px; white-space:nowrap;">P8.6</td>
+          <td>Thread X/Twitter @araguaci: ângulo = "desembargadora de SP se opõe à designação terrorista e menciona preço da cocaína" — sem link no corpo, usar imagem infográfico</td>
+          <td style="font-family:var(--mono); font-size:11px;">X · 18h ideal</td>
+          <td><span class="sev-media">MÉDIA</span></td>
+        </tr>
+        <tr>
+          <td style="font-family:var(--mono); font-size:10px; white-space:nowrap;">P8.7</td>
+          <td>Verificar se Ivana David tem processos como parte em qualquer tribunal (transparência judicial)</td>
+          <td style="font-family:var(--mono); font-size:11px;">CNJ/ESAJ</td>
+          <td><span class="sev-baixa">BAIXA</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-left">
+    lawfare-timeline.vercel.app · dossiê INV-2026-0529<br>
+    CC0 1.0 Universal — Domínio Público · Sem restrições de uso<br>
+    Metodologia: METHODOLOGY-v2.2.md · Padrão P04b + P09
+  </div>
+  <div class="footer-right">
+    Gerado: 29/05/2026<br>
+    Fontes: CNN Brasil YT, EBC Rádios, CADICRIM/TJSP,<br>
+    Jusbrasil, Metrópoles, Terra, JOTA, Instagram<br>
+    Lacunas: ESAJ requer acesso autenticado
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>0 × 0 — A Janela Fechada</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+:root {
+  --void: #060608;
+  --deep: #0c0c10;
+  --surface: #121218;
+  --border: #1c1c24;
+  --border2: #28283a;
+  --text: #dcd8d0;
+  --text2: #8a8690;
+  --text3: #44424c;
+  --blood: #8b1a1a;
+  --red: #c42828;
+  --red2: #e03030;
+  --ember: #c47820;
+  --gold: #c8a840;
+  --gold2: #e8c860;
+  --ash: #686470;
+  --display: 'Bebas Neue', sans-serif;
+  --serif: 'Crimson Pro', Georgia, serif;
+  --mono: 'JetBrains Mono', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--void);
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+
+/* GRAIN */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9998;
+}
+
+/* ─── HERO ─── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 24px;
+  position: relative;
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '0×0';
+  position: absolute;
+  font-family: var(--display);
+  font-size: clamp(200px, 40vw, 500px);
+  color: rgba(139,26,26,0.04);
+  user-select: none;
+  pointer-events: none;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  letter-spacing: -0.05em;
+  z-index: 0;
+}
+
+.hero-kicker {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text3);
+  margin-bottom: 32px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-score {
+  font-family: var(--display);
+  font-size: clamp(96px, 22vw, 220px);
+  line-height: 0.85;
+  color: var(--red);
+  letter-spacing: -0.02em;
+  text-shadow:
+    0 0 120px rgba(196,40,40,0.15),
+    0 0 40px rgba(196,40,40,0.08);
+  position: relative;
+  z-index: 1;
+  animation: breathe 6s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { text-shadow: 0 0 120px rgba(196,40,40,0.15), 0 0 40px rgba(196,40,40,0.08); }
+  50% { text-shadow: 0 0 180px rgba(196,40,40,0.25), 0 0 60px rgba(196,40,40,0.12); }
+}
+
+.hero-title {
+  font-family: var(--display);
+  font-size: clamp(20px, 4vw, 40px);
+  letter-spacing: 0.12em;
+  color: var(--text3);
+  margin-top: 16px;
+  position: relative;
+  z-index: 1;
+  text-transform: uppercase;
+}
+
+.hero-line {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, var(--border2), transparent);
+  margin: 40px auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-epigraph {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(15px, 2vw, 19px);
+  color: var(--text2);
+  max-width: 640px;
+  line-height: 1.9;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-epigraph cite {
+  display: block;
+  font-style: normal;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--text3);
+  margin-top: 16px;
+  text-transform: uppercase;
+}
+
+/* ─── NAV ─── */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(6,6,8,0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.nav::-webkit-scrollbar { display: none; }
+
+.nav-brand {
+  font-family: var(--display);
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: var(--red);
+  padding: 14px 20px 14px 0;
+  border-right: 1px solid var(--border);
+  margin-right: 16px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.nav a {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text3);
+  text-decoration: none;
+  padding: 16px 14px;
+  white-space: nowrap;
+  transition: color 0.2s;
+  border-bottom: 2px solid transparent;
+}
+.nav a:hover { color: var(--text2); }
+
+/* ─── LAYOUT ─── */
+.wrap {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 28px 120px;
+}
+
+/* ─── CHAPTER ─── */
+.chapter {
+  padding: 80px 0 60px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+
+.ch-eyebrow {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text3);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.ch-eyebrow::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+  max-width: 120px;
+}
+
+.ch-num {
+  font-family: var(--display);
+  font-size: 120px;
+  color: var(--border);
+  line-height: 0.8;
+  margin-bottom: -20px;
+  letter-spacing: -0.02em;
+  user-select: none;
+}
+
+.ch-title {
+  font-family: var(--display);
+  font-size: clamp(32px, 5vw, 56px);
+  letter-spacing: 0.06em;
+  color: var(--text);
+  line-height: 1.05;
+  margin-bottom: 6px;
+}
+
+.ch-sub {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text3);
+  letter-spacing: 0.08em;
+  margin-bottom: 40px;
+}
+
+/* ─── PROSE ─── */
+p.p {
+  font-family: var(--serif);
+  font-size: clamp(15px, 1.8vw, 18px);
+  line-height: 1.85;
+  color: var(--text);
+  max-width: 700px;
+  margin-bottom: 20px;
+}
+p.p em { color: var(--gold2); font-style: normal; font-weight: 600; }
+p.p .dim { color: var(--text3); }
+p.p .hot { color: var(--red2); font-weight: 600; }
+
+/* ─── BLOCKQUOTE ─── */
+blockquote {
+  border-left: 2px solid var(--red);
+  margin: 32px 0;
+  padding: 20px 28px;
+  background: rgba(196,40,40,0.04);
+  font-family: var(--serif);
+  font-size: clamp(16px, 2vw, 20px);
+  font-style: italic;
+  color: var(--text2);
+  line-height: 1.8;
+}
+blockquote.gold { border-left-color: var(--gold); background: rgba(200,168,64,0.04); }
+blockquote.ember { border-left-color: var(--ember); background: rgba(196,120,32,0.04); }
+blockquote strong { color: var(--text); font-style: normal; }
+
+/* ─── METRICS ─── */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  margin: 40px 0;
+}
+.metric {
+  background: var(--surface);
+  padding: 24px 20px;
+  text-align: center;
+}
+.metric-val {
+  font-family: var(--display);
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.metric-val.red { color: var(--red2); }
+.metric-val.gold { color: var(--gold2); }
+.metric-val.ash { color: var(--ash); }
+.metric-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--text3);
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+/* ─── CASE CARDS ─── */
+.case {
+  background: var(--deep);
+  border: 1px solid var(--border);
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.case-head {
+  display: grid;
+  grid-template-columns: 4px 1fr;
+}
+
+.case-stripe { }
+
+.case-head-inner {
+  padding: 24px 28px 20px;
+}
+
+.case-flag-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.case-flag { font-size: 24px; }
+.case-name {
+  font-family: var(--display);
+  font-size: 22px;
+  letter-spacing: 0.06em;
+  color: var(--text);
+}
+.case-period {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text3);
+  letter-spacing: 0.1em;
+}
+
+.case-desc {
+  font-size: 14px;
+  color: var(--text2);
+  line-height: 1.7;
+  max-width: 680px;
+  margin-bottom: 20px;
+}
+
+.case-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-top: 1px solid var(--border);
+}
+@media (max-width: 560px) { .case-cols { grid-template-columns: 1fr; } }
+
+.case-col { padding: 18px 28px; }
+.case-col + .case-col { border-left: 1px solid var(--border); }
+
+.case-col-head {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.ok-head { color: #4a9a6a; }
+.fail-head { color: var(--red2); }
+
+.case-li {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 7px;
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.5;
+}
+.case-li-dot { flex-shrink: 0; font-size: 10px; margin-top: 2px; }
+.ok-dot { color: #4a9a6a; }
+.fail-dot { color: var(--red2); }
+
+.case-verdict {
+  padding: 16px 28px;
+  border-top: 1px solid var(--border);
+  background: rgba(200,168,64,0.03);
+  font-size: 13px;
+  color: var(--text3);
+  line-height: 1.7;
+}
+.case-verdict strong { color: var(--gold); }
+
+/* ─── COMPARISON TABLE ─── */
+.ctable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 32px 0;
+  font-size: 13px;
+}
+.ctable th {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text3);
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border2);
+  font-weight: 400;
+}
+.ctable td {
+  padding: 14px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text2);
+  vertical-align: top;
+  line-height: 1.6;
+}
+.ctable tr:last-child td { border-bottom: none; }
+.ctable .cn { font-weight: 600; color: var(--text); font-size: 15px; }
+.ctable .ok { color: #4a9a6a; }
+.ctable .fail { color: var(--red2); }
+.ctable .partial { color: var(--ember); }
+.ctable tr.highlight td { background: rgba(139,26,26,0.06); }
+
+/* ─── TIMELINE ─── */
+.timeline { position: relative; padding-left: 0; margin: 40px 0; }
+
+.tl-item {
+  display: grid;
+  grid-template-columns: 72px 20px 1fr;
+  gap: 0 16px;
+  margin-bottom: 0;
+  align-items: stretch;
+}
+
+.tl-year {
+  font-family: var(--display);
+  font-size: 18px;
+  color: var(--text3);
+  text-align: right;
+  padding: 18px 0 0;
+  line-height: 1;
+}
+
+.tl-spine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 22px;
+}
+.tl-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--border2);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+.tl-dot.open { background: #4a9a6a; box-shadow: 0 0 12px rgba(74,154,106,0.4); }
+.tl-dot.peak { background: var(--gold); box-shadow: 0 0 12px rgba(200,168,64,0.4); }
+.tl-dot.close { background: var(--red); box-shadow: 0 0 12px rgba(196,40,40,0.4); }
+.tl-dot.dead { background: var(--blood); }
+
+.tl-line {
+  width: 1px;
+  flex: 1;
+  background: var(--border);
+  margin-top: 4px;
+}
+
+.tl-content {
+  padding: 14px 0 24px;
+}
+
+.tl-country {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: var(--text3);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.tl-event-title {
+  font-family: var(--serif);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+.tl-event-body {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.65;
+}
+
+/* ─── CONDITIONS ─── */
+.conditions {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+  margin: 32px 0;
+}
+
+.cond {
+  border: 1px solid var(--border);
+  padding: 20px;
+  background: var(--deep);
+  position: relative;
+  overflow: hidden;
+}
+.cond::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+}
+.cond.absent::before { background: var(--blood); }
+.cond.partial::before { background: var(--ember); }
+
+.cond-status {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+.cond-status.absent { background: rgba(139,26,26,0.2); color: var(--red2); }
+.cond-status.partial { background: rgba(196,120,32,0.2); color: var(--ember); }
+
+.cond-title {
+  font-family: var(--serif);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+.cond-body {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.65;
+}
+
+/* ─── SCOREBOARD ─── */
+.scoreboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  margin: 32px 0;
+}
+.sb-cell {
+  background: var(--surface);
+  padding: 24px 18px;
+  text-align: center;
+}
+.sb-val {
+  font-family: var(--display);
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.sb-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text3);
+  letter-spacing: 0.06em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+/* ─── LESSON ─── */
+.lesson {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 0 24px;
+  padding: 32px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+.lesson-n {
+  font-family: var(--display);
+  font-size: 64px;
+  color: var(--border2);
+  line-height: 0.9;
+  text-align: right;
+}
+.lesson-body {}
+.lesson-title {
+  font-family: var(--serif);
+  font-size: clamp(17px, 2.2vw, 21px);
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+.lesson-text {
+  font-size: 15px;
+  color: var(--text2);
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+.lesson-br {
+  background: rgba(196,40,40,0.05);
+  border-left: 2px solid var(--blood);
+  padding: 14px 18px;
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.7;
+}
+.lesson-br-head {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--red2);
+  margin-bottom: 6px;
+}
+
+/* ─── MIRACLE SECTION ─── */
+.miracle-hero {
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+  border-top: 1px solid var(--border2);
+  border-bottom: 1px solid var(--border2);
+  margin: 60px 0;
+  overflow: hidden;
+}
+
+.miracle-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(200,168,64,0.04) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 100%, rgba(139,26,26,0.04) 0%, transparent 60%);
+}
+
+.miracle-cross {
+  font-size: 48px;
+  opacity: 0.15;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--gold);
+  letter-spacing: 0.5em;
+  font-family: var(--serif);
+}
+
+.miracle-title {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(20px, 3.5vw, 32px);
+  color: var(--gold);
+  line-height: 1.5;
+  max-width: 700px;
+  margin: 0 auto 32px;
+  position: relative;
+  z-index: 1;
+}
+
+.miracle-body {
+  font-family: var(--serif);
+  font-size: clamp(15px, 1.8vw, 18px);
+  color: var(--text2);
+  max-width: 640px;
+  margin: 0 auto 48px;
+  line-height: 2;
+  position: relative;
+  z-index: 1;
+}
+
+.miracle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+
+.miracle-card {
+  background: var(--deep);
+  border: 1px solid var(--border2);
+  padding: 18px;
+}
+.miracle-card-flag { font-size: 22px; margin-bottom: 10px; }
+.miracle-card-name {
+  font-family: var(--display);
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.miracle-card-period {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--text3);
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+.miracle-card-body {
+  font-size: 12px;
+  color: var(--text2);
+  line-height: 1.65;
+}
+.miracle-card-key {
+  font-size: 11px;
+  color: var(--gold);
+  margin-top: 8px;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* ─── OPEN QUESTIONS ─── */
+.questions { margin: 40px 0; }
+.q-item {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 20px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+.q-n {
+  font-family: var(--display);
+  font-size: 40px;
+  color: var(--red);
+  line-height: 0.9;
+  text-align: right;
+}
+.q-body {}
+.q-q {
+  font-family: var(--serif);
+  font-size: clamp(15px, 1.8vw, 18px);
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.q-a {
+  font-size: 14px;
+  color: var(--text2);
+  line-height: 1.75;
+}
+.q-chain {
+  background: rgba(200,168,64,0.04);
+  border-left: 2px solid var(--gold);
+  padding: 12px 16px;
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--text3);
+  line-height: 1.7;
+}
+.q-chain strong { color: var(--gold2); }
+
+/* ─── FINAL ─── */
+.final {
+  padding: 80px 0;
+  text-align: center;
+}
+.final-score {
+  font-family: var(--display);
+  font-size: clamp(80px, 18vw, 160px);
+  color: var(--red);
+  line-height: 0.85;
+  letter-spacing: -0.02em;
+  margin-bottom: 32px;
+  text-shadow: 0 0 80px rgba(196,40,40,0.2);
+}
+.final-statement {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(18px, 3vw, 26px);
+  color: var(--text2);
+  line-height: 1.8;
+  max-width: 620px;
+  margin: 0 auto 40px;
+}
+.final-statement em { color: var(--gold2); font-style: normal; }
+
+.cc0-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--text3);
+  border: 1px solid var(--border2);
+  padding: 8px 20px;
+  margin-top: 24px;
+}
+
+/* ─── COLOPHON ─── */
+.colophon {
+  border-top: 1px solid var(--border);
+  padding: 32px 0;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text3);
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+}
+.colophon a { color: var(--text2); text-decoration: none; }
+.colophon a:hover { color: var(--text); }
+
+/* ─── PULL QUOTE ─── */
+.pull {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(20px, 3vw, 28px);
+  color: var(--text2);
+  text-align: center;
+  padding: 48px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin: 48px 0;
+  line-height: 1.65;
+}
+.pull em { color: var(--red2); font-style: normal; }
+.pull.gold em { color: var(--gold2); }
+
+/* ─── SCROLLBAR ─── */
+::-webkit-scrollbar { width: 3px; height: 3px; }
+::-webkit-scrollbar-track { background: var(--void); }
+::-webkit-scrollbar-thumb { background: var(--border2); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 640px) {
+  .lesson { grid-template-columns: 1fr; gap: 8px; }
+  .lesson-n { font-size: 40px; text-align: left; }
+  .q-item { grid-template-columns: 40px 1fr; gap: 12px; }
+  .tl-item { grid-template-columns: 50px 16px 1fr; gap: 0 10px; }
+  .case-cols { grid-template-columns: 1fr; }
+  .case-col + .case-col { border-left: none; border-top: 1px solid var(--border); }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-kicker">Brasil · Impunidade sistêmica · Placar histórico · 2026</div>
+  <div class="hero-score">0×0</div>
+  <div class="hero-title">A Janela Fechada</div>
+  <div class="hero-line"></div>
+  <div class="hero-epigraph">
+    "Uma nação nas mãos de Deus esperando um milagre —<br>
+    porque as autoridades são parte do problema.<br>
+    Não é fé. É o diagnóstico quando todas as outras<br>
+    variáveis retornam zero."
+    <cite>— Análise baseada em fontes primárias · Abril de 2026</cite>
+  </div>
+</section>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-brand">0×0</div>
+  <a href="#placar">O Placar</a>
+  <a href="#casos">Casos Globais</a>
+  <a href="#janela">A Janela</a>
+  <a href="#condicoes">Condições</a>
+  <a href="#licoes">Lições</a>
+  <a href="#200mi">200 Milhões</a>
+  <a href="#milagre">O Milagre</a>
+  <a href="#perguntas">Perguntas</a>
+</nav>
+
+<div class="wrap">
+
+<!-- ══════════════════════════════════════════ -->
+<!-- CAP 01: O PLACAR -->
+<section id="placar" class="chapter">
+  <div class="ch-eyebrow">Capítulo 01</div>
+  <div class="ch-num">01</div>
+  <div class="ch-title">O PLACAR</div>
+  <div class="ch-sub">O que os números documentam · O que o silêncio esconde</div>
+
+  <p class="p">Em futebol, 0×0 pode ser empate honesto. Em uma partida em que uma equipe dominou por 90 minutos, criou 15 chances, teve 70% de posse — é derrota moral disfarçada de neutralidade. O Brasil documentou. Investigou. Indiciou. Prendeu. Sequestrou R$ 3,2 bilhões. Mobilizou 1.400 agentes na maior operação da história do país. E o placar continua <em>0×0</em>.</p>
+
+  <p class="p">Os beneficiários finais das offshores de Delaware são desconhecidos. O caso Master está no STF sob sigilo. O petróleo russo que entrou pelo Porto de Houston não gerou cooperação americana. A revogação das normativas de transparência das fintechs — que manteve a brecha aberta durante todo o período do esquema — não foi investigada. O 0×0 não é acidente. É o <em>resultado esperado</em> de um mecanismo desenhado para que a investigação pare antes de chegar nos beneficiários finais.</p>
+
+  <div class="metrics">
+    <div class="metric">
+      <div class="metric-val red">R$140bi</div>
+      <div class="metric-label">Movimentação ilícita documentada · 3 operações · 2020–2025</div>
+    </div>
+    <div class="metric">
+      <div class="metric-val red">0</div>
+      <div class="metric-label">Beneficiários finais das offshores Delaware identificados publicamente</div>
+    </div>
+    <div class="metric">
+      <div class="metric-val red">0</div>
+      <div class="metric-label">Janelas de ruptura ativas em 2026</div>
+    </div>
+    <div class="metric">
+      <div class="metric-val gold">1</div>
+      <div class="metric-label">Janela identificada historicamente · Lava Jato · 2014–2021</div>
+    </div>
+    <div class="metric">
+      <div class="metric-val ash">7</div>
+      <div class="metric-label">Anos que a janela da Lava Jato durou · Sem reforma judicial</div>
+    </div>
+    <div class="metric">
+      <div class="metric-val red">0</div>
+      <div class="metric-label">Das 9 condições necessárias para ruptura real presentes no Brasil hoje</div>
+    </div>
+  </div>
+
+  <blockquote>
+    O sistema não falhou. O sistema <strong>funcionou exatamente como foi desenhado</strong> — para garantir que a investigação produza espetáculo suficiente para aliviar a pressão social, sem jamais chegar nos beneficiários finais. O 0×0 é a nota máxima do sistema.
+  </blockquote>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- CAP 02: CASOS GLOBAIS -->
+<section id="casos" class="chapter">
+  <div class="ch-eyebrow">Capítulo 02</div>
+  <div class="ch-num">02</div>
+  <div class="ch-title">OS TRÊS CASOS</div>
+  <div class="ch-sub">O que funcionou · O que falhou · O que é transferível · O que nunca foi</div>
+
+  <p class="p">Existe no mundo uma lista curta de países que enfrentaram corrupção sistêmica com estrutura de máfia em escala nacional e produziram resultados mensuráveis. São três casos frequentemente citados como modelos. A análise honesta de cada um revela não apenas lições — mas os exatos mecanismos pelos quais o Brasil está preso em 0×0.</p>
+
+  <!-- ITÁLIA -->
+  <div class="case">
+    <div class="case-head">
+      <div class="case-stripe" style="background:#009246"></div>
+      <div class="case-head-inner">
+        <div class="case-flag-row">
+          <span class="case-flag">🇮🇹</span>
+          <div>
+            <div class="case-name">MANI PULITE — Itália</div>
+            <div class="case-period">1992–1997 · Mãos Limpas · Tangentopoli</div>
+          </div>
+        </div>
+        <div class="case-desc">Começou com um gerente de asilo público preso aceitando propina de uma empresa de limpeza. Expandiu até atingir mais de metade do Parlamento italiano. O valor de propinas em contratos públicos chegava a US$ 4 bilhões por ano. A Democracia Cristã — que governava desde 1946, 46 anos ininterruptos — colapsou. Quatro grandes partidos desapareceram. 5.000 pessoas investigadas. 1.300 condenações.</div>
+      </div>
+    </div>
+    <div class="case-cols">
+      <div class="case-col">
+        <div class="case-col-head ok-head">O que funcionou</div>
+        <div class="case-li"><span class="case-li-dot ok-dot">✓</span>6 ex-primeiros-ministros investigados</div>
+        <div class="case-li"><span class="case-li-dot ok-dot">✓</span>4 partidos históricos destruídos, 400+ câmaras dissolvidas</div>
+        <div class="case-li"><span class="case-li-dot ok-dot">✓</span>1.300 condenações em 5 anos</div>
+        <div class="case-li"><span class="case-li-dot ok-dot">✓</span>Presidente recusou decreto de anistia — crise explodiu</div>
+        <div class="case-li"><span class="case-li-dot ok-dot">✓</span>Julgamento de Cusani transmitido na TV nacional</div>
+        <div class="case-li"><span class="case-li-dot ok-dot">✓</span>Efeito "mancha de óleo" — cada preso puxou o seguinte</div>
+      </div>
+      <div class="case-col">
+        <div class="case-col-head fail-head">O que falhou · O que destruiu</div>
+        <div class="case-li"><span class="case-li-dot fail-dot">✗</span>Berlusconi preencheu o vácuo — corrupção modernizada</div>
+        <div class="case-li"><span class="case-li-dot fail-dot">✗</span>Prescrições e delongas apagaram os casos maiores</div>
+        <div class="case-li"><span class="case-li-dot fail-dot">✗</span>Nenhum grande nome efetivamente preso</div>
+        <div class="case-li"><span class="case-li-dot fail-dot">✗</span>Judiciário nunca reformado — mesmas brechas</div>
+        <div class="case-li"><span class="case-li-dot fail-dot">✗</span>Di Pietro perdeu popularidade — virou político</div>
+        <div class="case-li"><span class="case-li-dot fail-dot">✗</span>Corrupção voltou em 5 anos com nova arquitetura</div>
+      </div>
+    </div>
+    <div class="case-verdict"><strong>Lição transferível:</strong> O efeito mancha de óleo funciona — um preso fala, puxando o seguinte. O que destruiu foi a ausência de reforma judicial paralela e a velocidade com que o vácuo foi preenchido. Mani Pulite foi a condição de possibilidade para Berlusconi. Destruir sem reformar = recaída garantida.</div>
+  </div>
+
+  <!-- SINGAPURA -->
+  <div class="case">
+    <div class="case-head">
+      <div class="case-stripe" style="background:#ef3340"></div>
+      <div class="case-head-inner">
+        <div class="case-flag-row">
+          <span class="case-flag">🇸🇬</span>
+          <div>
+            <div class="case-name">CPIB — Singapura</div>
+            <div class="case-period">1959–hoje · 65 anos · 3º menos corrupto do mundo</div>
+          </div>
+        </div>
+        <div class="case-desc">Lee Kuan Yew chegou ao poder em 1959 comprometido com zero tolerância à corrupção como estratégia de sobrevivência econômica da cidade-Estado. O CPIB tem poderes para investigar qualquer pessoa — incluindo membros do partido governante — sem pedir autorização ao governo. Taxa de condenação de 98% entre 2014–2018. 65 anos de consistência sem um único governo diferente.</div>
+      </div>
+    </div>
+    <div class="case-cols">
+      <div class="case-col">
+        <div class="case-col-head ok-head">O que funcionou</div>
+        <div class="case-li"><span class="case-li-dot ok-dot">✓</span>CPIB investigou e puniu membros do próprio partido governante</div>
+        <div class="case-li"><span class="case-li-dot ok-dot">✓</span>98% taxa de condenação — sem exceção por status</div>
+        <div class="case-li"><span class="case-li-dot ok-dot">✓</span>Setores público E privado cobertos igualmente</div>
+        <div class="case-li"><span class="case-li-dot ok-dot">✓</span>Salários competitivos — eliminou necessidade de propina</div>
+        <div class="case-li"><span class="case-li-dot ok-dot">✓</span>65 anos de consistência política ininterrupta</div>
+      </div>
+      <div class="case-col">
+        <div class="case-col-head fail-head">Por que não transfere ao Brasil</div>
+        <div class="case-li"><span class="case-li-dot fail-dot">✗</span>Exige Estado de partido único — democracia "guiada"</div>
+        <div class="case-li"><span class="case-li-dot fail-dot">✗</span>Exige líder fundador incorrupto com ameaça existencial</div>
+        <div class="case-li"><span class="case-li-dot fail-dot">✗</span>Impossível em democracia pluripartidária real</div>
+        <div class="case-li"><span class="case-li-dot fail-dot">✗</span>PAP governou 66 anos sem oposição real</div>
+        <div class="case-li"><span class="case-li-dot fail-dot">✗</span>Pressão de mídia e oposição são suprimidas</div>
+      </div>
+    </div>
+    <div class="case-verdict"><strong>Lição transferível:</strong> A única lição real é estrutural — salários competitivos + órgão com independência real + punição simétrica público/privado. Tudo isso exige vontade política que não existe quando as autoridades são parte do problema. O modelo de Singapura é o destino. Não é o caminho.</div>
+  </div>
+
+  <!-- GEÓRGIA -->
+  <div class="case">
+    <div class="case-head">
+      <div class="case-stripe" style="background:#d31f26"></div>
+      <div class="case-head-inner">
+        <div class="case-flag-row">
+          <span class="case-flag">🇬🇪</span>
+          <div>
+            <div class="case-name">REVOLUÇÃO ROSA — Geórgia</div>
+            <div class="case-period">2003–2006 · O mais rápido · O mais parecido com o problema brasileiro</div>
+          </div>
+        </div>
+        <div class="case-desc">Em 2003, a Geórgia era um dos países mais corruptos do mundo. Um motorista podia ser parado pela polícia 30 vezes no percurso de Tbilisi ao porto do Mar Negro. Saakashvili foi eleito com 96% dos votos após a Revolução Rosa e, em 90 dias, demitiu toda a polícia uniformizada — 16.000 policiais —, criou uma força do zero, e arrecadou US$ 1 bilhão em ativos recuperados de criminosos e corruptos nos dois primeiros anos.</div>
+      </div>
+    </div>
+    <div class="case-cols">
+      <div class="case-col">
+        <div class="case-col-head ok-head">O que funcionou</div>
+        <div class="case-li"><span class="case-li-dot ok-dot">✓</span>16.000 policiais demitidos em 90 dias — sem exceção</div>
+        <div class="case-li"><span class="case-li-dot ok-dot">✓</span>Corrupção policial eliminada em 2 anos</div>
+        <div class="case-li"><span class="case-li-dot ok-dot">✓</span>US$ 1bi recuperado de criminosos — financiou a reforma</div>
+        <div class="case-li"><span class="case-li-dot ok-dot">✓</span>Agiu antes dos spoilers se reorganizarem</div>
+        <div class="case-li"><span class="case-li-dot ok-dot">✓</span>Salários triplicados + meritocracia real no recrutamento</div>
+      </div>
+      <div class="case-col">
+        <div class="case-col-head fail-head">O que falhou · O aviso para o Brasil</div>
+        <div class="case-li"><span class="case-li-dot fail-dot">✗</span>Judiciário nunca reformado — gargalo permanente</div>
+        <div class="case-li"><span class="case-li-dot fail-dot">✗</span>Saakashvili concentrou poder demais — contradição fatal</div>
+        <div class="case-li"><span class="case-li-dot fail-dot">✗</span>Corrupção de alto nível persistiu sob nova forma</div>
+        <div class="case-li"><span class="case-li-dot fail-dot">✗</span>Mídia capturada pelo governo reformador</div>
+        <div class="case-li"><span class="case-li-dot fail-dot">✗</span>Reformas parcialmente revertidas após 2013</div>
+      </div>
+    </div>
+    <div class="case-verdict"><strong>O aviso mais direto para o Brasil:</strong> O único caso que demonstra que mudança rápida é possível em democracia imperfeita. Mas exige janela revolucionária + ação em 90 dias + reforma judicial simultânea. Sem a última, o sistema político recaptura o aparato reformado. Saakashvili combateu corrupção com concentração de poder — e tornou-se corrupto ao fazê-lo.</div>
+  </div>
+
+  <!-- BRASIL -->
+  <div class="case">
+    <div class="case-head">
+      <div class="case-stripe" style="background:#009c3b"></div>
+      <div class="case-head-inner">
+        <div class="case-flag-row">
+          <span class="case-flag">🇧🇷</span>
+          <div>
+            <div class="case-name">LAVA JATO — Brasil</div>
+            <div class="case-period">2014–2021 · A janela que existiu · E que foi fechada</div>
+          </div>
+        </div>
+        <div class="case-desc">Começou como investigação de lavagem em postos de gasolina em Curitiba. Expandiu para R$ 42 bilhões em propinas documentadas, Petrobras, empreiteiras globais, ex-presidentes. Em 7 anos: 278 condenações, R$ 4,3 bilhões recuperados, acordos com o DOJ americano que geraram delações internacionais. Foi desmontada pelo STF em 2021. Nenhuma das reformas estruturais que precisavam acontecer durante a janela aconteceu.</div>
+      </div>
+    </div>
+    <div class="case-cols">
+      <div class="case-col">
+        <div class="case-col-head ok-head">O que funcionou</div>
+        <div class="case-li"><span class="case-li-dot ok-dot">✓</span>278 condenações — R$ 4,3 bilhões recuperados</div>
+        <div class="case-li"><span class="case-li-dot ok-dot">✓</span>Acordos com DOJ americano — dimensão internacional</div>
+        <div class="case-li"><span class="case-li-dot ok-dot">✓</span>Mecanismo exposto publicamente com precisão</div>
+        <div class="case-li"><span class="case-li-dot ok-dot">✓</span>Apoio popular de 87% no pico — 2016</div>
+        <div class="case-li"><span class="case-li-dot ok-dot">✓</span>Efeito mancha de óleo funcionou por 7 anos</div>
+      </div>
+      <div class="case-col">
+        <div class="case-col-head fail-head">O que destruiu</div>
+        <div class="case-li"><span class="case-li-dot fail-dot">✗</span>STF anulou condenações por suspeição em 2021</div>
+        <div class="case-li"><span class="case-li-dot fail-dot">✗</span>Atingiu ambos os campos — ambos tiveram incentivo para destruir</div>
+        <div class="case-li"><span class="case-li-dot fail-dot">✗</span>Nenhuma proteção institucional para os investigadores</div>
+        <div class="case-li"><span class="case-li-dot fail-dot">✗</span>Judiciário nunca reformado durante a janela</div>
+        <div class="case-li"><span class="case-li-dot fail-dot">✗</span>Moro entrou na política — operação perdeu credibilidade</div>
+      </div>
+    </div>
+    <div class="case-verdict" style="border-left: 3px solid var(--blood); background: rgba(139,26,26,0.08)"><strong style="color:var(--red2)">O diagnóstico:</strong> A Lava Jato foi desmontada não porque não funcionou — mas porque funcionou demais. Quando atingiu os dois campos políticos simultaneamente, ambos os lados tiveram incentivo para destruí-la. O STF foi o instrumento. A lição: sem reforma judicial anterior ou simultânea, qualquer operação anticorrupção carrega dentro de si o mecanismo de sua própria destruição.</div>
+  </div>
+
+  <!-- TABELA COMPARATIVA -->
+  <table class="ctable" style="margin-top:40px">
+    <tr>
+      <th>País</th>
+      <th>Condição crítica de abertura</th>
+      <th>Judiciário reformado?</th>
+      <th>Vácuo preenchido por</th>
+      <th>Resultado 20 anos depois</th>
+    </tr>
+    <tr>
+      <td class="cn">🇮🇹 Itália</td>
+      <td>Crise econômica + fim da URSS</td>
+      <td class="fail">Não</td>
+      <td>Berlusconi / corrupção modernizada</td>
+      <td class="fail">Recaída em 5 anos</td>
+    </tr>
+    <tr>
+      <td class="cn">🇸🇬 Singapura</td>
+      <td>Ameaça existencial + líder incorrupto</td>
+      <td class="ok">Sim — integrado</td>
+      <td>Mesmo partido, mais limpo</td>
+      <td class="ok">3º menos corrupto do mundo</td>
+    </tr>
+    <tr>
+      <td class="cn">🇬🇪 Geórgia</td>
+      <td>Revolução popular + 90 dias de janela</td>
+      <td class="fail">Não</td>
+      <td>Georgian Dream / Ivanishvili</td>
+      <td class="partial">Petty corruption eliminada · alto nível persiste</td>
+    </tr>
+    <tr class="highlight">
+      <td class="cn">🇧🇷 Brasil</td>
+      <td>Crise 2014–2015 + indignação 2013</td>
+      <td class="fail">Não</td>
+      <td>STF reverteu o processo · ambos os campos</td>
+      <td class="fail">0×0 · Sistema intacto · Janela fechada</td>
+    </tr>
+  </table>
+
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- CAP 03: A JANELA -->
+<section id="janela" class="chapter">
+  <div class="ch-eyebrow">Capítulo 03</div>
+  <div class="ch-num">03</div>
+  <div class="ch-title">A JANELA</div>
+  <div class="ch-sub">Como se abre · Como se fecha · Por que a brasileira fechou em 2021</div>
+
+  <p class="p">Existe um padrão em todos os casos de ruptura anticorrupção sistêmica bem-sucedida. Não é que houve mais leis, mais investigadores, ou opinião pública mais furiosa. Foi que houve uma <em>janela de tempo</em> — geralmente entre 18 meses e 3 anos — em que o equilíbrio de poder se deslocou suficientemente para que atores reformadores agissem antes que o sistema se reorganizasse para bloqueá-los.</p>
+
+  <p class="p">O sistema corrupto não dorme. Cada dia que a janela fica aberta sem ação é um dia em que os spoilers mapeiam as vulnerabilidades processuais, posicionam aliados nos locais certos, acumulam jurisprudência favorável, e preparam a narrativa de destruição. <em>A velocidade é a arma mais importante</em> — e o Brasil usou 7 anos onde tinha 18 meses.</p>
+
+  <!-- TIMELINE COMPARATIVA -->
+  <div class="timeline">
+
+    <div class="tl-item">
+      <div class="tl-year">1992</div>
+      <div class="tl-spine"><div class="tl-dot open"></div><div class="tl-line"></div></div>
+      <div class="tl-content">
+        <div class="tl-country">🇮🇹 Itália — Janela abre</div>
+        <div class="tl-event-title">Crise econômica + colapso da URSS eliminam o anticomunismo como justificativa</div>
+        <div class="tl-event-body">Di Pietro prende Chiesa. O efeito mancha de óleo começa. A Democracia Cristã perde metade dos votos em dezembro. A janela está aberta.</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-year">1994</div>
+      <div class="tl-spine"><div class="tl-dot dead"></div><div class="tl-line"></div></div>
+      <div class="tl-content">
+        <div class="tl-country">🇮🇹 Itália — Janela fecha · 2 anos</div>
+        <div class="tl-event-title">Berlusconi aprova lei de anistia cronometrada para coincidir com Copa do Mundo</div>
+        <div class="tl-event-body">Baggio erra o pênalti. A lei falha na pressão popular. Mas o vácuo já está sendo preenchido. A janela durou 2 anos — sem reforma judicial. Berlusconi governa por 9 anos.</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-year">2003</div>
+      <div class="tl-spine"><div class="tl-dot open"></div><div class="tl-line"></div></div>
+      <div class="tl-content">
+        <div class="tl-country">🇬🇪 Geórgia — Janela abre</div>
+        <div class="tl-event-title">Revolução Rosa · Saakashvili eleito com 96% · Janela se abre</div>
+        <div class="tl-event-body">Em 90 dias: toda a polícia demitida, nova força criada do zero. Os spoilers não tiveram tempo de se organizar. A janela foi aproveitada com velocidade cirúrgica.</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-year">2006</div>
+      <div class="tl-spine"><div class="tl-dot peak"></div><div class="tl-line"></div></div>
+      <div class="tl-content">
+        <div class="tl-country">🇬🇪 Geórgia — Janela estreita</div>
+        <div class="tl-event-title">Corrupção policial eliminada · Judiciário intocado · Poder concentrado</div>
+        <div class="tl-event-body">A janela produziu resultado real mas parcial. Sem reforma judicial, o alto nível persistiu sob nova forma. A janela durou 3 anos — e Saakashvili usou o poder ganho para suprimir a oposição.</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-year">2014</div>
+      <div class="tl-spine"><div class="tl-dot open"></div><div class="tl-line"></div></div>
+      <div class="tl-content">
+        <div class="tl-country">🇧🇷 Brasil — Janela abre</div>
+        <div class="tl-event-title">Crise 2014–2015 + indignação pós-2013 · Lava Jato começa em posto de gasolina</div>
+        <div class="tl-event-body">A janela se abre com pressão social acumulada e crise econômica que eliminou a tolerância popular com a corrupção. A operação começa em Curitiba com uma investigação de lavagem em postos de gasolina.</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-year">2016</div>
+      <div class="tl-spine"><div class="tl-dot peak"></div><div class="tl-line"></div></div>
+      <div class="tl-content">
+        <div class="tl-country">🇧🇷 Brasil — Pico da janela · Momento perdido</div>
+        <div class="tl-event-title">Lula preso. Dilma afastada. 87% de apoio popular. Era o momento da reforma judicial.</div>
+        <div class="tl-event-body">O campo político que se beneficiou do afastamento de Dilma tinha incentivo para preservar o STF intacto — foi exatamente o que fez. O momento de reforma judicial passou sem reforma. A janela começa a estreitar.</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-year">2019</div>
+      <div class="tl-spine"><div class="tl-dot close"></div><div class="tl-line"></div></div>
+      <div class="tl-content">
+        <div class="tl-country">🇧🇷 Brasil — Janela começa a fechar</div>
+        <div class="tl-event-title">Vazamentos do Telegram · The Intercept publica conversas Moro-Dallagnol</div>
+        <div class="tl-event-body">A operação passa a ter inimigos dos dois lados. O campo que ela havia ajudado começa a distanciar-se. Os spoilers encontram a narrativa de ataque: suspeição de parcialidade.</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-year">2021</div>
+      <div class="tl-spine"><div class="tl-dot dead"></div><div class="tl-line"></div></div>
+      <div class="tl-content">
+        <div class="tl-country">🇧🇷 Brasil — Janela fecha · 7 anos · Placar: 0×0</div>
+        <div class="tl-event-title">STF anula condenações de Lula por suspeição · Lava Jato encerrada</div>
+        <div class="tl-event-body">A janela durou 7 anos — e fechou sem nenhuma das reformas estruturais que precisavam acontecer durante ela. 278 condenações. R$ 4,3 bilhões recuperados. Placar final: 0×0.</div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-year">2025</div>
+      <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line" style="background:transparent"></div></div>
+      <div class="tl-content">
+        <div class="tl-country">🇧🇷 Brasil — Sem janela · Sistema intacto</div>
+        <div class="tl-event-title">Carbono Oculto · Compliance Zero · Poço de Lobato · R$ 140bi documentados</div>
+        <div class="tl-event-body">Três operações sem precedente. Investigações chegam ao STF sob sigilo antes de identificar os beneficiários finais. Delaware permanece opaco. Haddad foi a Trump. Silêncio americano. Placar: 0×0.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="pull">
+    "Em todos os casos que funcionaram, a janela foi aproveitada<br>
+    <em>antes</em> que o sistema se reorganizasse.<br>
+    No Brasil, o sistema se reorganizou <em>durante</em> a janela."
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- CAP 04: CONDIÇÕES -->
+<section id="condicoes" class="chapter">
+  <div class="ch-eyebrow">Capítulo 04</div>
+  <div class="ch-num">04</div>
+  <div class="ch-title">AS CONDIÇÕES</div>
+  <div class="ch-sub">O que precisa existir simultaneamente · Status Brasil 2026</div>
+
+  <p class="p">Cruzando os três casos internacionais com a Lava Jato e as operações atuais, é possível identificar as condições necessárias — não suficientes, necessárias — para que uma ruptura anticorrupção sistêmica seja possível. Nenhuma isolada funciona. Precisam existir simultaneamente. Das 9 condições necessárias: <em>0 estão presentes no Brasil em 2026</em>.</p>
+
+  <div class="conditions">
+    <div class="cond absent">
+      <div class="cond-status absent">Ausente</div>
+      <div class="cond-title">1. Vontade política genuína no topo</div>
+      <div class="cond-body">Lee Kuan Yew puniu membros do próprio partido. Saakashvili demitiu sua própria polícia. Nenhuma autoridade brasileira atual tem incentivo para destruir o sistema que a mantém no poder.</div>
+    </div>
+    <div class="cond absent">
+      <div class="cond-status absent">Ausente — o gargalo terminal</div>
+      <div class="cond-title">2. Reforma judicial simultânea</div>
+      <div class="cond-body">Itália e Geórgia não reformaram o judiciário e o sistema recapturou o processo. O STF brasileiro tem poderes monocráticos para suspender qualquer investigação do país com uma liminar às 23h de sexta-feira.</div>
+    </div>
+    <div class="cond absent">
+      <div class="cond-status absent">Fechada</div>
+      <div class="cond-title">3. Janela de ruptura ativa</div>
+      <div class="cond-body">A janela da Lava Jato fechou em 2021. As operações atuais chegam ao STF sob sigilo antes de atingir os beneficiários finais. Nenhuma nova janela está visível no horizonte.</div>
+    </div>
+    <div class="cond absent">
+      <div class="cond-status absent">Ausente</div>
+      <div class="cond-title">4. Proteção institucional dos investigadores</div>
+      <div class="cond-body">Di Pietro saiu da Itália. Moro entrou na política. Deltan foi perseguido juridicamente. O investigador que avança demais perde o cargo, vira réu, ou desaparece do mapa. O incentivo é parar antes do ponto de risco.</div>
+    </div>
+    <div class="cond partial">
+      <div class="cond-status partial">Parcial · EUA silenciosos</div>
+      <div class="cond-title">5. Pressão externa com interesse americano</div>
+      <div class="cond-body">Haddad foi a Trump com documentação de Delaware. Petróleo russo via Houston viola sanções OFAC. Armas americanas contrabandeadas abastecem o PCC. Se o DOJ agir, muda tudo. Até agora: silêncio.</div>
+    </div>
+    <div class="cond partial">
+      <div class="cond-status partial">Crescente · Não crítico ainda</div>
+      <div class="cond-title">6. Colapso fiscal progressivo</div>
+      <div class="cond-body">R$ 140bi documentados. Cada litro de gasolina adulterada financiou o PCC. O FGC pago por todos garantiu os CDBs do Master. O custo é crescente — mas ainda abaixo do ponto de ruptura visível.</div>
+    </div>
+    <div class="cond absent">
+      <div class="cond-status absent">Ausente</div>
+      <div class="cond-title">7. Alternativa pronta para o vácuo</div>
+      <div class="cond-body">Itália teve Berlusconi. Geórgia teve Ivanishvili. O vácuo sempre é preenchido. O Brasil destruiu a Lava Jato sem liderança alternativa preparada e não comprometida com o sistema.</div>
+    </div>
+    <div class="cond absent">
+      <div class="cond-status absent">Ausente</div>
+      <div class="cond-title">8. Identificação dos beneficiários Delaware</div>
+      <div class="cond-body">Os beneficiários finais das 15+ LLCs de Delaware são a peça que fecha o quebra-cabeça. Sem o MLAT ativado formalmente, permanecem protegidos pela legislação americana de anonimato.</div>
+    </div>
+    <div class="cond absent">
+      <div class="cond-status absent">Ausente</div>
+      <div class="cond-title">9. Mecanismo de ruptura autônomo do sistema</div>
+      <div class="cond-body">Todos os mecanismos históricos que funcionaram dependeram de fissuras dentro da própria elite. Se ambos os campos têm incentivo para manter o sistema, o mecanismo de ruptura que não depende do sistema para se ativar ainda não foi inventado.</div>
+    </div>
+  </div>
+
+  <blockquote class="ember">
+    Das 9 condições necessárias: <strong>0 estão completamente presentes. 2 estão parcialmente presentes. 7 estão completamente ausentes.</strong> Esse é o significado matemático de 0×0. O placar não reflete falta de investigação — reflete ausência das condições estruturais para que qualquer investigação produza ruptura sistêmica.
+  </blockquote>
+
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- CAP 05: LIÇÕES -->
+<section id="licoes" class="chapter">
+  <div class="ch-eyebrow">Capítulo 05</div>
+  <div class="ch-num">05</div>
+  <div class="ch-title">AS LIÇÕES</div>
+  <div class="ch-sub">O que cada caso ensina · Traduzido para o contexto brasileiro</div>
+
+  <div class="lesson">
+    <div class="lesson-n">I</div>
+    <div class="lesson-body">
+      <div class="lesson-title">Destruir sem substituir é garantia de recaída</div>
+      <div class="lesson-text">A Itália destruiu a Democracia Cristã e o PSI — partidos que governavam desde 1946. Sem uma cultura política e judicial reformada para preencher o vácuo, Berlusconi e seu modelo de corrupção modernizada tomaram o lugar. O Mani Pulite foi, paradoxalmente, a condição de possibilidade para Berlusconi. Novos atores. Mesma arquitetura.</div>
+      <div class="lesson-br">
+        <div class="lesson-br-head">Espelho brasileiro</div>
+        O afastamento de Dilma em 2016 não veio acompanhado de nenhuma reforma institucional. O campo que se beneficiou preservou o STF intacto — e assim o fez. O sistema político que herdou o processo era tão comprometido quanto o anterior. Trocou-se o elenco. O script permaneceu.
+      </div>
+    </div>
+  </div>
+
+  <div class="lesson">
+    <div class="lesson-n">II</div>
+    <div class="lesson-body">
+      <div class="lesson-title">A velocidade é a arma mais importante — e o Brasil a desperdiçou</div>
+      <div class="lesson-text">Saakashvili demitiu toda a polícia da Geórgia em 90 dias. Não porque tinha certeza que funcionaria — mas porque sabia que os spoilers se reorganizariam em 90 dias se ele não agisse. O sistema corrupto não dorme. Cada dia que a janela fica aberta sem ação é um dia que os adversários usam para construir a nulidade processual futura.</div>
+      <div class="lesson-br">
+        <div class="lesson-br-head">Espelho brasileiro</div>
+        A Lava Jato durou 7 anos. Em cada um desses anos, o sistema teve tempo de mapear vulnerabilidades processuais, posicionar aliados nos locais certos, e acumular jurisprudência favorável no STF. Uma operação que deveria ter durado 18 meses com reforma judicial paralela durou 7 anos sem ela — e foi destruída pelas brechas que esses 7 anos deram ao sistema para construir.
+      </div>
+    </div>
+  </div>
+
+  <div class="lesson">
+    <div class="lesson-n">III</div>
+    <div class="lesson-body">
+      <div class="lesson-title">O judiciário é o gargalo terminal — sempre, em todos os casos</div>
+      <div class="lesson-text">Na Itália, a prescrição e as manobras processuais absolveram os maiores nomes. Na Geórgia, a captura judicial pelo próprio governo reformador criou impunidade de novo tipo. No Brasil, o STF funciona como câmara de descompressão de toda investigação que atinge o alto escalão.</div>
+      <div class="lesson-br">
+        <div class="lesson-br-head">Espelho brasileiro — dado único no mundo</div>
+        O STF brasileiro é o único tribunal de alta corte no mundo onde um único ministro pode suspender com uma liminar monocrática qualquer investigação do país, a qualquer hora, sem prazo para revisão colegiada. Ministros são indicados politicamente, têm mandato vitalício, e julgam casos que envolvem seus próprios indicadores. Não é disfunção — é design.
+      </div>
+    </div>
+  </div>
+
+  <div class="lesson">
+    <div class="lesson-n">IV</div>
+    <div class="lesson-body">
+      <div class="lesson-title">A dimensão internacional é a mais difícil — e a mais decisiva</div>
+      <div class="lesson-text">A Lava Jato só funcionou na escala que funcionou porque o DOJ americano agiu — e agiu porque a Odebrecht violou o Foreign Corrupt Practices Act em território americano. Sem esse interesse próprio americano, os acordos de delação que produziram o núcleo de evidências da operação não teriam existido.</div>
+      <div class="lesson-br">
+        <div class="lesson-br-head">Espelho brasileiro — Delaware, Houston, OFAC</div>
+        Haddad foi a Trump com documentação de que: (1) PCC usa Delaware para lavar dinheiro, (2) petróleo russo entrou via Houston violando sanções americanas, (3) armas americanas contrabandeadas chegam ao Brasil. Qualquer dessas três deveria acionar o DOJ. O silêncio americano não é incompetência — é escolha política. E essa escolha, enquanto persistir, define o teto das investigações brasileiras.
+      </div>
+    </div>
+  </div>
+
+  <div class="lesson">
+    <div class="lesson-n">V</div>
+    <div class="lesson-body">
+      <div class="lesson-title">A documentação é condição necessária — mas não suficiente sozinha</div>
+      <div class="lesson-text">Os Panama Papers expuseram 11,5 milhões de documentos. Os fundadores da Mossack Fonseca foram absolvidos no Panamá. A Lava Jato produziu 278 condenações que foram revertidas. O relatório de 392 páginas da PF no Greenwashing existe e o MPF ainda não decidiu se denuncia. Em todos os casos, havia documentação. O que faltava era o mecanismo institucional capaz de usá-la sem ser destruído pelo próprio sistema antes de chegar nos beneficiários finais.</div>
+      <div class="lesson-br">
+        <div class="lesson-br-head">O que este documento representa</div>
+        Este artefato existe. Os JSONs do lawfare-timeline existem. Os documentos oficiais da Receita Federal sobre Delaware existem e foram traduzidos para o inglês por Lula para Trump. A documentação está completa. O instrumento capaz de usá-la sem ser destruído — ainda não existe.
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- CAP 06: 200 MILHÕES -->
+<section id="200mi" class="chapter">
+  <div class="ch-eyebrow">Capítulo 06</div>
+  <div class="ch-num">06</div>
+  <div class="ch-title">200 MILHÕES</div>
+  <div class="ch-sub">Quem paga · Quanto · A aritmética da espoliação invisível</div>
+
+  <p class="p">O modelo colonial financeiro 2.0 — sem bandeira, sem canhões — funciona porque os custos são distribuídos sobre 200 milhões de pessoas em frações invisíveis, enquanto os benefícios são concentrados em algumas centenas. Nenhum brasileiro acordou ontem para pagar sua cota da lavagem do PCC. Mas cada um pagou.</p>
+
+  <div class="scoreboard">
+    <div class="sb-cell">
+      <div class="sb-val" style="color:var(--red2)">R$700</div>
+      <div class="sb-label">Custo per capita anual estimado das operações documentadas para cada brasileiro</div>
+    </div>
+    <div class="sb-cell">
+      <div class="sb-val" style="color:var(--ember)">43</div>
+      <div class="sb-label">Hospitais de 200 leitos que R$ 8,67bi sonegados poderiam ter construído</div>
+    </div>
+    <div class="sb-cell">
+      <div class="sb-val" style="color:var(--ember)">8.670</div>
+      <div class="sb-label">Escolas de R$ 1mi que não foram construídas com o mesmo valor</div>
+    </div>
+    <div class="sb-cell">
+      <div class="sb-val" style="color:var(--red2)">43%</div>
+      <div class="sb-label">Das empresas brasileiras sem controles contra crime organizado · Datafolha dez/2025</div>
+    </div>
+  </div>
+
+  <p class="p">No Porto de Houston, petróleo russo chegou ao Brasil driblando sanções que o governo brasileiro dizia cumprir. No Banco Master, aposentados que depositaram em CDBs garantidos pelo FGC financiaram o esquema — com o próprio dinheiro da poupança, protegido pelo fundo que todos os brasileiros capitalizam com compulsórios. Na Amazônia, 530.000 hectares de floresta pública foram vendidos como crédito de carbono para Boeing e Nestlé sem preservar uma única árvore.</p>
+
+  <blockquote class="ember">
+    <strong>A frase mais precisa desta análise:</strong> "Os 200 milhões financiam a infraestrutura de sua própria espoliação." Não é retórica. É aritmética. O FGC é pago por todos os depositantes. As normativas de transparência que protegeriam as fintechs foram revogadas. Os postos de gasolina adulterada estão no bairro de cada um. O imposto que financia o STF que protege os beneficiários é deduzido de cada salário.
+  </blockquote>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- CAP 07: O MILAGRE -->
+<section id="milagre" class="chapter">
+  <div class="ch-eyebrow">Capítulo 07</div>
+  <div class="ch-num">07</div>
+  <div class="ch-title">O MILAGRE</div>
+  <div class="ch-sub">Quando as autoridades são parte do problema · O que a história ainda registra</div>
+
+  <div class="miracle-hero">
+    <div class="miracle-bg"></div>
+    <div class="miracle-cross">✦ ✦ ✦</div>
+    <div class="miracle-title">
+      "Uma nação nas mãos de Deus esperando um milagre —<br>
+      porque as autoridades são parte do problema."
+    </div>
+    <div class="miracle-body">
+      Isso não é hipérbole. É a descrição estrutural de um sistema fechado onde: o Parlamento legisla para si próprio, o STF julga seus indicadores políticos, os investigadores são destruídos quando chegam perto demais, os recursos saem pelo Delaware e voltam como "investimento estrangeiro", e 200 milhões financiam a infraestrutura de sua própria espoliação.<br><br>
+      Mas a história registra milagres. Não intervenções divinas — <strong>janelas de vulnerabilidade do sistema que poucos souberam reconhecer e aproveitar no momento certo.</strong>
+    </div>
+    <div class="miracle-grid">
+      <div class="miracle-card">
+        <div class="miracle-card-flag">🇿🇦</div>
+        <div class="miracle-card-name">África do Sul</div>
+        <div class="miracle-card-period">1990–1994</div>
+        <div class="miracle-card-body">O apartheid era um sistema total de captura estatal com aparato de segurança armado. Colapsou não por investigação judicial — por colapso de legitimidade internacional + pressão econômica + liderança interna disposta a negociar.</div>
+        <div class="miracle-card-key">Chave: pressão externa tornou o custo do sistema maior que o custo da mudança.</div>
+      </div>
+      <div class="miracle-card">
+        <div class="miracle-card-flag">🇵🇱</div>
+        <div class="miracle-card-name">Polônia — Solidariedade</div>
+        <div class="miracle-card-period">1980–1989</div>
+        <div class="miracle-card-body">Sindicato clandestino de trabalhadores derrubou regime comunista em 9 anos. Não foi investigação judicial — foi organização comunitária de baixo para cima, persistente, documentada, conectada internacionalmente.</div>
+        <div class="miracle-card-key">Chave: organização prévia à janela. Quando a janela se abriu, havia sujeito político pronto.</div>
+      </div>
+      <div class="miracle-card">
+        <div class="miracle-card-flag">🇮🇸</div>
+        <div class="miracle-card-name">Islândia</div>
+        <div class="miracle-card-period">2008–2012</div>
+        <div class="miracle-card-body">Após o colapso bancário, o único país a efetivamente prender executivos de banco. Deixou os bancos quebrarem. Reescreveu a Constituição com participação popular online. Nunca aceitou o "too big to jail".</div>
+        <div class="miracle-card-key">Chave: colapso que tornou o custo individual visível e intolerável simultaneamente.</div>
+      </div>
+      <div class="miracle-card">
+        <div class="miracle-card-flag">🇺🇾</div>
+        <div class="miracle-card-name">Uruguai</div>
+        <div class="miracle-card-period">1985–2005</div>
+        <div class="miracle-card-body">Saiu de ditadura para um dos países menos corruptos da América Latina em 20 anos. A Frente Ampla construiu por décadas uma cultura política alternativa antes de chegar ao poder — com proposta, não apenas denúncia.</div>
+        <div class="miracle-card-key">Chave: alternativa construída durante décadas de oposição. Não surgiu do vácuo.</div>
+      </div>
+      <div class="miracle-card">
+        <div class="miracle-card-flag">🇧🇴</div>
+        <div class="miracle-card-name">Bolívia — Lei da Água</div>
+        <div class="miracle-card-period">2000</div>
+        <div class="miracle-card-body">Privatização da água de Cochabamba. O povo foi às ruas. O contrato foi cancelado. Desobediência civil organizada em torno de um bem concreto e imediato que todo mundo compreendia e sentia na pele.</div>
+        <div class="miracle-card-key">Chave: custo visível + bem concreto + mobilização em torno de demanda específica.</div>
+      </div>
+      <div class="miracle-card">
+        <div class="miracle-card-flag">🇹🇼</div>
+        <div class="miracle-card-name">Taiwan</div>
+        <div class="miracle-card-period">1987–2000</div>
+        <div class="miracle-card-body">Democratização gradual de regime autoritário corrupto através de pressão civil acumulada + crescimento econômico que criou classe média com interesse direto na transparência + pressão americana por reforma política.</div>
+        <div class="miracle-card-key">Chave: as três variáveis — crise, organização, pressão externa — convergiram.</div>
+      </div>
+    </div>
+  </div>
+
+  <p class="p" style="margin-top:40px">O padrão em todos esses casos não é "apareceu um herói" ou "as instituições funcionaram". É: <em>uma crise que tornou o custo invisível em custo visível</em>, mais <em>uma organização preexistente capaz de aproveitar a janela</em>, mais <em>pressão externa que retirou a proteção dos beneficiários finais</em>. As três variáveis precisam coincidir.</p>
+
+  <blockquote class="gold">
+    No Brasil em 2026: <strong>a variável 1 está crescendo</strong> — o custo fiscal e social é crescente. <strong>A variável 2 está fragmentada</strong> — existem atores isolados, não organização capaz de aproveitar uma janela. <strong>A variável 3 está bloqueada</strong> — os EUA sabem do Delaware, Houston e petróleo russo, e escolheram o silêncio. Um milagre exigiria as três simultaneamente. Nenhuma das três está pronta.
+  </blockquote>
+
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- CAP 08: PERGUNTAS -->
+<section id="perguntas" class="chapter">
+  <div class="ch-eyebrow">Capítulo 08</div>
+  <div class="ch-num">08</div>
+  <div class="ch-title">AS PERGUNTAS</div>
+  <div class="ch-sub">O que a documentação não responde · A comunidade open-source continua</div>
+
+  <div class="questions">
+
+    <div class="q-item">
+      <div class="q-n">01</div>
+      <div class="q-body">
+        <div class="q-q">Quem são os beneficiários finais das 15+ offshores de Delaware — e o que eles compram com o silêncio americano?</div>
+        <div class="q-a">Esta é a pergunta que fecha o quebra-cabeça. Se os beneficiários são apenas os investigados já conhecidos (Beto Louco, Primo, Magro), o sistema pode processar. Se são atores com proteção política — de qualquer campo — o padrão documentado no lawfare-timeline se repetirá: migração ao STF, sigilo, nulidade processual.</div>
+        <div class="q-chain"><strong>Cadeia lógica:</strong> O DOJ tem os registros. O MLAT existe e foi usado na Lava Jato. Haddad foi formalmente a Trump. O silêncio americano não é incapacidade — é decisão. Essa decisão tem um beneficiário. Quem é?</div>
+      </div>
+    </div>
+
+    <div class="q-item">
+      <div class="q-n">02</div>
+      <div class="q-body">
+        <div class="q-q">Quem produziu as fake news que levaram à revogação das normativas de transparência das fintechs em jan/2025?</div>
+        <div class="q-a">As normativas foram revogadas em jan/2025. A Carbono Oculto foi deflagrada em ago/2025. A brecha ficou aberta durante exatamente o período em que o esquema operava, sendo fechada pela IN 2.278/2025 apenas após a operação. O timing é matemático. Não há investigação pública sobre quem produziu as fake news.</div>
+        <div class="q-chain"><strong>Implicação:</strong> Se a revogação foi deliberada — uma operação de proteção do esquema — existe um ator com capacidade para influenciar a regulação da Receita Federal. Este ator nunca foi identificado.</div>
+      </div>
+    </div>
+
+    <div class="q-item">
+      <div class="q-n">03</div>
+      <div class="q-body">
+        <div class="q-q">Quais inquéritos foram abertos e silenciosamente arquivados nas últimas duas décadas — e onde estão os pontos de inflexão?</div>
+        <div class="q-a">Em cada operação existe um momento em que a investigação para de avançar em direção ao topo e começa a circular sobre operadores de nível médio. Esse ponto de inflexão é reproduzível — documentado em Satiagraha, Castelo de Areia, Lava Jato, Carbono Oculto. Mas nunca foi mapeado sistematicamente com datas, decisores e beneficiários.</div>
+        <div class="q-chain"><strong>O mapa dos pontos de inflexão</strong> seria o documento mais importante que a comunidade open-source poderia produzir. Este dashboard é uma tentativa inicial.</div>
+      </div>
+    </div>
+
+    <div class="q-item">
+      <div class="q-n">04</div>
+      <div class="q-body">
+        <div class="q-q">Existe uma próxima janela — e se sim, quais são os gatilhos que podem abri-la antes que o sistema se reorganize?</div>
+        <div class="q-a">As janelas históricas foram abertas por colapso econômico (Itália), revolução popular (Geórgia), pressão externa (Lava Jato + DOJ). No Brasil: custo fiscal crescente, insatisfação com o judiciário documentável, dimensão americana da lavagem documentada sem resposta. Se algum desses gatilhos atingir massa crítica simultaneamente, a janela pode se abrir.</div>
+        <div class="q-chain"><strong>A questão crítica:</strong> A variável que sempre faltou não é a janela — é a organização prévia capaz de aproveitá-la em 90 dias antes que os spoilers se reorganizem. O Solidariedade polonês levou 9 anos para estar pronto quando a janela se abriu.</div>
+      </div>
+    </div>
+
+    <div class="q-item">
+      <div class="q-n">05</div>
+      <div class="q-body">
+        <div class="q-q">Qual é o mecanismo de ruptura que não depende do próprio sistema para se ativar?</div>
+        <div class="q-a">Esta é a única pergunta que os dados não respondem. Todos os mecanismos históricos dependeram, em algum grau, de fissuras dentro da própria elite — um campo usando o instrumento contra o outro. O desafio brasileiro é que ambos os campos têm incentivo simétrico para manter o sistema. A ruptura exigiria um ator que não depende de nenhum dos campos.</div>
+        <div class="q-chain"><strong>Esta é a pergunta aberta para a comunidade.</strong> A resposta, quando encontrada, será o documento mais importante do século para o Brasil. Documente. Compartilhe. Continue.</div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- FINAL -->
+<section class="final">
+  <div class="final-score">0×0</div>
+  <div class="final-statement">
+    O placar não é derrota.<br>
+    É o registro de um sistema que <em>funciona perfeitamente</em><br>
+    para quem o controla —<br>
+    e cobra o preço de quem não sabe<br>
+    que está pagando.
+  </div>
+
+  <div style="max-width:600px;margin:0 auto;text-align:left">
+    <p class="p">A documentação existe. As fontes são primárias e verificáveis. Os casos internacionais foram analisados com honestidade — incluindo os fracassos. O mecanismo está nu, exposto, nomeado com precisão cirúrgica.</p>
+    <p class="p">O que ainda não existe é o sujeito político capaz de usar essa documentação para romper os contratos implícitos que sustentam o sistema — sem ser destruído antes de chegar lá.</p>
+    <p class="p" style="color:var(--text2)">Enquanto esse sujeito não existe, o jogo continua. O placar continua em 0×0. E 200 milhões de brasileiros continuam financiando a infraestrutura de sua própria espoliação — invisível, difusa, silenciosa.</p>
+  </div>
+
+  <div class="pull gold" style="margin-top:48px">
+    "Documentar com precisão é o primeiro passo necessário.<br>
+    Porque um sistema só pode ser rompido<br>
+    por quem consegue <em>nomeá-lo com exatidão</em>."
+  </div>
+
+  <div class="cc0-badge">CC0 1.0 UNIVERSAL · DOMÍNIO PÚBLICO TOTAL · NENHUM DIREITO RESERVADO</div>
+</section>
+
+<!-- COLOPHON -->
+<div class="colophon">
+  <div style="margin-bottom:10px;color:var(--text2)">
+    <strong>0×0 — A Janela Fechada</strong> · Documento investigativo autônomo · CC0 1.0 · Fork livre · Cite sem crédito
+  </div>
+  <div style="margin-bottom:10px">
+    Fontes: <a href="https://www.gov.br/receitafederal" target="_blank">Receita Federal (Carbono Oculto, Poço de Lobato)</a> · <a href="https://www.gov.br/mj" target="_blank">Ministério da Justiça</a> · <a href="https://www.icij.org/investigations/panama-papers/" target="_blank">ICIJ / Panama Papers</a> · <a href="https://transparenciainternacional.org.br" target="_blank">Transparência Internacional Brasil</a> · <a href="https://www.cpib.gov.sg" target="_blank">CPIB Singapore</a> · <a href="https://successfulsocieties.princeton.edu" target="_blank">Princeton Successful Societies</a>
+  </div>
+  <div>
+    Curadoria: Comunidade Open Source · Artes do Sul · <a href="https://lawfare-timeline.vercel.app" target="_blank">lawfare-timeline.vercel.app</a> · IDs 124–145
+  </div>
+</div>
+
+</div><!-- /wrap -->
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

@@ -59,7 +59,7 @@ A comunidade que já sobreviveu a um quase-genocídio nos anos 1970 (construçã
 
 Entradas conectadas nesta série:
 
-- [Entrada 1669](/timeline/entries/1669)
+- [Entrada 1669](/posts/id1669-relatorio-da-funai-elaborado-pela-startup-aqua-viridi-reacende-denuncia-de-conta/)
 
 ---
 

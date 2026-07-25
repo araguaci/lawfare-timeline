@@ -45,7 +45,7 @@ Institucionaliza cooperação de longo prazo até 2021, atravessando os governos
 
 Entradas conectadas nesta série:
 
-- [Entrada 1645](/timeline/entries/1645)
+- [Entrada 1645](/posts/id1645-lula-e-hu-jintao-assinam-plano-de-acao-conjunta-brasil-china-2010-2014/)
 
 ---
 

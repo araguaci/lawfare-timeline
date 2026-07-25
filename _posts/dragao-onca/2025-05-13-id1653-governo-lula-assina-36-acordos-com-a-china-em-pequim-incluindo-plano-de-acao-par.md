@@ -63,7 +63,7 @@ Este é o pano de fundo federal que legitima e viabiliza juridicamente os capít
 
 Entradas conectadas nesta série:
 
-- [Entrada 1652](/timeline/entries/1652)
+- [Entrada 1652](/posts/id1652-xi-jinping-visita-brasilia-relacao-elevada-a-comunidade-de-futuro-compartilhado/)
 
 ---
 

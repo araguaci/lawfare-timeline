@@ -54,7 +54,7 @@ Status de tramitação na Câmara e votos favoráveis/contrários detalhados por
 
 Entradas conectadas nesta série:
 
-- [Entrada 1694](/timeline/entries/1694)
+- [Entrada 1694](/posts/id1694-stf-reafirma-inconstitucionalidade-do-marco-temporal-por-9x1-mas-mantem-grande-p/)
 
 ---
 

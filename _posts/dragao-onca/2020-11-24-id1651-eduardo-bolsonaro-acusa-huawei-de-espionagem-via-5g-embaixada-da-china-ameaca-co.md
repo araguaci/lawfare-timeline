@@ -54,7 +54,7 @@ Consolida o padrão de fratura interna do governo Bolsonaro: pragmatismo comerci
 
 Entradas conectadas nesta série:
 
-- [Entrada 1647](/timeline/entries/1647)
+- [Entrada 1647](/posts/id1647-vice-presidente-mourao-declara-que-brasil-nao-restringira-a-huawei-no-5g-desafia/)
 
 ---
 

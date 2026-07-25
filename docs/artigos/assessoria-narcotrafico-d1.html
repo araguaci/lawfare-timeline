@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D+1 — Assessoria de Imprensa do Narcotráfico · 29/05/2026</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Syne:wght@400;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#080c10; --bg1:#0d1218; --bg2:#121820; --bg3:#1a2230; --bg4:#0a0e14;
+  --border:rgba(255,255,255,0.06); --border2:rgba(255,255,255,0.12); --border3:rgba(255,255,255,0.18);
+  --fg:#e8ecf0; --fg2:#8a9ab0; --fg3:#4a5a6a;
+  --red:#e84040; --red2:rgba(232,64,64,0.12); --red3:rgba(232,64,64,0.25);
+  --amber:#e8a020; --amber2:rgba(232,160,32,0.12); --amber3:rgba(232,160,32,0.25);
+  --blue:#3090e8; --blue2:rgba(48,144,232,0.10);
+  --green:#28c880; --green2:rgba(40,200,128,0.10);
+  --purple:#a060e8; --purple2:rgba(160,96,232,0.12);
+  --cyan:#20c8d8; --cyan2:rgba(32,200,216,0.10);
+  --orange:#e86820; --orange2:rgba(232,104,32,0.12);
+  --font-mono:'IBM Plex Mono',monospace;
+  --font-display:'Syne',sans-serif;
+  --font-serif:'DM Serif Display',serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-mono);font-size:13px;line-height:1.6;min-height:100vh}
+::selection{background:rgba(232,64,64,.25);color:#fff}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--red);border-radius:2px}
+
+/* ── HEADER ── */
+.header{background:var(--bg1);border-bottom:1px solid var(--border2);padding:28px 20px;position:relative;overflow:hidden}
+@media(min-width:768px){.header{padding:36px 48px 32px}}
+.header::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--red),var(--amber),var(--red),transparent);
+  background-size:200% 100%;animation:sweep 3s ease-in-out infinite
+}
+@keyframes sweep{0%,100%{background-position:200% 0}50%{background-position:0% 0}}
+
+/* noise texture overlay */
+.header::after{
+  content:'';position:absolute;inset:0;pointer-events:none;opacity:.025;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:200px 200px
+}
+
+.meta-row{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:20px}
+
+/* badges */
+.badge{display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border-radius:2px;
+  font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-family:var(--font-mono)}
+.b-red{background:var(--red2);color:var(--red);border:1px solid var(--red3)}
+.b-amber{background:var(--amber2);color:var(--amber);border:1px solid var(--amber3)}
+.b-blue{background:var(--blue2);color:var(--blue);border:1px solid rgba(48,144,232,.25)}
+.b-purple{background:var(--purple2);color:var(--purple);border:1px solid rgba(160,96,232,.25)}
+.b-green{background:var(--green2);color:var(--green);border:1px solid rgba(40,200,128,.25)}
+.b-orange{background:var(--orange2);color:var(--orange);border:1px solid rgba(232,104,32,.25)}
+.b-muted{background:transparent;color:var(--fg3);border:1px solid var(--border2)}
+.b-cyan{background:var(--cyan2);color:var(--cyan);border:1px solid rgba(32,200,216,.25)}
+
+.pulse-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;animation:blink 1.8s infinite}
+.pulse-dot.red{background:var(--red)}
+.pulse-dot.amber{background:var(--amber)}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* hero */
+.eyebrow{font-family:var(--font-mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--red);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.eyebrow::after{content:'';flex:1;height:1px;background:var(--red);opacity:.3;max-width:80px}
+
+.hero-title{font-family:var(--font-display);font-size:clamp(22px,4.5vw,48px);font-weight:800;
+  letter-spacing:-.025em;line-height:1.05;margin-bottom:12px}
+.hero-title em{font-style:italic;color:var(--red)}
+.hero-title span.d{color:var(--amber)}
+
+.hero-sub{font-size:12px;color:var(--fg2);line-height:1.75;max-width:700px;margin-bottom:22px}
+
+/* stat strip */
+.stat-strip{display:flex;flex-wrap:wrap;gap:1px;background:var(--border2);
+  border:1px solid var(--border2);border-radius:4px;overflow:hidden;max-width:680px}
+.stat-cell{background:var(--bg1);padding:14px 18px;flex:1;min-width:120px;transition:background .15s}
+.stat-cell:hover{background:var(--bg2)}
+.stat-num{font-family:var(--font-display);font-size:clamp(20px,3vw,28px);font-weight:700;
+  letter-spacing:-.03em;line-height:1}
+.stat-lbl{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg3);margin-top:4px;line-height:1.4}
+.stat-cell.c-red .stat-num{color:var(--red)}
+.stat-cell.c-amber .stat-num{color:var(--amber)}
+.stat-cell.c-blue .stat-num{color:var(--blue)}
+.stat-cell.c-orange .stat-num{color:var(--orange)}
+
+/* ── NAV ── */
+.nav{position:sticky;top:0;z-index:100;background:rgba(8,12,16,.96);
+  backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.nav-inner{display:flex;align-items:center;overflow-x:auto;scrollbar-width:none;padding:0 20px}
+.nav-inner::-webkit-scrollbar{display:none}
+@media(min-width:768px){.nav-inner{padding:0 48px}}
+.nav-brand{font-size:9px;font-weight:600;letter-spacing:.12em;color:var(--red);text-transform:uppercase;
+  white-space:nowrap;padding:13px 14px 13px 0;border-right:1px solid var(--border2);margin-right:4px;flex-shrink:0}
+.nav-tab{padding:13px 11px;font-size:9px;letter-spacing:.10em;text-transform:uppercase;
+  color:var(--fg3);border:none;background:none;border-bottom:2px solid transparent;
+  white-space:nowrap;transition:all .15s;cursor:pointer;font-family:var(--font-mono)}
+.nav-tab:hover{color:var(--fg2)}
+.nav-tab.active{color:var(--fg);border-bottom-color:var(--red)}
+
+/* ── MAIN ── */
+.main{max-width:1360px;margin:0 auto;padding:0 20px 100px}
+@media(min-width:768px){.main{padding:0 48px 100px}}
+
+.sec{padding-top:44px}
+.sec-label{font-family:var(--font-mono);font-size:9px;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--fg3);margin-bottom:14px;padding-bottom:8px;
+  border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
+.sec-label::before{content:'//';color:var(--red);opacity:.6}
+
+/* ── ALERT BOXES ── */
+.alert{border-radius:4px;padding:16px 20px;display:flex;gap:14px;margin-bottom:16px}
+.alert.red{background:var(--red2);border:1px solid var(--red3)}
+.alert.amber{background:var(--amber2);border:1px solid var(--amber3)}
+.alert.purple{background:var(--purple2);border:1px solid rgba(160,96,232,.25)}
+.alert.blue{background:var(--blue2);border:1px solid rgba(48,144,232,.25)}
+.alert.orange{background:var(--orange2);border:1px solid rgba(232,104,32,.25)}
+.alert-ico{font-size:16px;flex-shrink:0;line-height:1.5}
+.alert-hd{font-size:11px;font-weight:600;margin-bottom:4px}
+.alert.red .alert-hd{color:var(--red)}
+.alert.amber .alert-hd{color:var(--amber)}
+.alert.purple .alert-hd{color:var(--purple)}
+.alert.blue .alert-hd{color:var(--blue)}
+.alert.orange .alert-hd{color:var(--orange)}
+.alert-bd{font-size:11px;color:var(--fg2);line-height:1.75}
+
+/* ── CARDS ── */
+.card{background:var(--bg1);border:1px solid var(--border);border-radius:4px;padding:20px}
+.card-title{font-family:var(--font-display);font-size:14px;font-weight:700;margin-bottom:8px}
+.card-body{font-size:12px;color:var(--fg2);line-height:1.75}
+.card-label{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg3);margin-bottom:8px}
+
+.card-left{background:var(--bg2);border-left:3px solid;border-radius:0 4px 4px 0;padding:16px 20px}
+.card-left.red{border-color:var(--red)}
+.card-left.amber{border-color:var(--amber)}
+.card-left.blue{border-color:var(--blue)}
+.card-left.purple{border-color:var(--purple)}
+.card-left.orange{border-color:var(--orange)}
+.card-left.cyan{border-color:var(--cyan)}
+
+/* ── GRIDS ── */
+.g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:14px}
+.g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:14px}
+.g4{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px}
+.gap{height:20px}
+.gap-lg{height:32px}
+
+/* ── NEWSPAPER CLIPPING ── */
+.clipping-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px}
+
+.clipping{background:var(--bg1);border:1px solid var(--border2);border-radius:4px;overflow:hidden;
+  position:relative;transition:border-color .2s}
+.clipping:hover{border-color:var(--border3)}
+.clipping::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.clipping.red::before{background:var(--red)}
+.clipping.amber::before{background:var(--amber)}
+.clipping.blue::before{background:var(--blue)}
+.clipping.purple::before{background:var(--purple)}
+.clipping.orange::before{background:var(--orange)}
+
+.clip-top{padding:12px 16px 10px;border-bottom:1px solid var(--border);
+  display:flex;justify-content:space-between;align-items:center;gap:8px}
+.clip-outlet{font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.clip-outlet.globo{color:#00b2ff}
+.clip-outlet.folha{color:#e84040}
+.clip-outlet.g1{color:#00b2ff}
+.clip-outlet.cnn{color:#cc0000}
+.clip-outlet.bol{color:#e84040}
+.clip-outlet.valor{color:#3090e8}
+.clip-outlet.exame{color:#28c880}
+.clip-outlet.infomoney{color:#28c880}
+.clip-outlet.bbc{color:#e8a020}
+.clip-outlet.poder360{color:#a060e8}
+.clip-outlet.oantagonista{color:#e8a020}
+.clip-date{font-size:9px;color:var(--fg3)}
+
+.clip-body{padding:14px 16px 16px}
+.clip-hed{font-family:var(--font-serif);font-size:15px;line-height:1.4;margin-bottom:10px;font-style:italic}
+.clip-sub{font-size:11px;color:var(--fg2);line-height:1.65;margin-bottom:12px}
+
+.clip-tag-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.clip-tag{font-size:9px;letter-spacing:.08em;text-transform:uppercase;
+  padding:2px 6px;border-radius:2px;font-weight:600}
+.tag-p04b{background:rgba(232,160,32,.12);color:var(--amber);border:1px solid var(--amber3)}
+.tag-frame{background:rgba(160,96,232,.12);color:var(--purple);border:1px solid rgba(160,96,232,.25)}
+.tag-soberania{background:rgba(48,144,232,.10);color:var(--blue);border:1px solid rgba(48,144,232,.2)}
+.tag-mkt{background:rgba(232,104,32,.12);color:var(--orange);border:1px solid rgba(232,104,32,.25)}
+.tag-omissao{background:rgba(232,64,64,.12);color:var(--red);border:1px solid var(--red3)}
+
+/* ── MECHANISM DIAGRAM ── */
+.mech-wrap{background:var(--bg1);border:1px solid var(--border2);border-radius:4px;overflow:hidden}
+.mech-header{padding:14px 20px;border-bottom:1px solid var(--border);
+  display:flex;justify-content:space-between;align-items:center}
+.mech-title{font-family:var(--font-display);font-size:13px;font-weight:700}
+.mech-body{padding:20px}
+
+.flow-row{display:flex;align-items:stretch;gap:0;overflow-x:auto;padding-bottom:4px}
+.flow-node{flex:1;min-width:140px;background:var(--bg2);border:1px solid var(--border2);
+  border-radius:4px;padding:14px;position:relative}
+.flow-node.active{border-color:var(--red);background:var(--red2)}
+.flow-node.warn{border-color:var(--amber);background:var(--amber2)}
+.flow-node.info{border-color:var(--blue);background:var(--blue2)}
+.flow-node-num{font-size:9px;font-weight:600;letter-spacing:.12em;color:var(--fg3);margin-bottom:6px}
+.flow-node.active .flow-node-num{color:var(--red)}
+.flow-node.warn .flow-node-num{color:var(--amber)}
+.flow-node.info .flow-node-num{color:var(--blue)}
+.flow-node-title{font-size:11px;font-weight:600;margin-bottom:6px}
+.flow-node-desc{font-size:10px;color:var(--fg2);line-height:1.6}
+.flow-arrow{display:flex;align-items:center;padding:0 6px;flex-shrink:0;color:var(--fg3);font-size:16px}
+
+/* ── DECODE TABLE ── */
+.decode-table{width:100%;border-collapse:collapse;font-size:11px}
+.decode-table th{text-align:left;padding:10px 12px;font-size:9px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--fg3);border-bottom:1px solid var(--border2);
+  font-weight:600;background:var(--bg1)}
+.decode-table td{padding:11px 12px;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.6}
+.decode-table tr:hover td{background:var(--bg2)}
+.decode-table .col-raw{color:var(--fg2);font-style:italic}
+.decode-table .col-fact{color:var(--fg)}
+.decode-table .col-pattern{text-align:center}
+
+/* ── ACTOR CARDS ── */
+.actor-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px}
+.actor-card{background:var(--bg1);border:1px solid var(--border);border-radius:4px;padding:16px}
+.actor-outlet{font-size:9px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;margin-bottom:8px}
+.actor-name{font-family:var(--font-display);font-size:14px;font-weight:700;margin-bottom:6px}
+.actor-role{font-size:10px;color:var(--fg2);line-height:1.6;margin-bottom:10px}
+.actor-pattern{font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  padding:3px 7px;border-radius:2px;display:inline-block}
+.actor-pattern.p04b{background:var(--amber2);color:var(--amber);border:1px solid var(--amber3)}
+.actor-pattern.p09{background:var(--purple2);color:var(--purple);border:1px solid rgba(160,96,232,.25)}
+.actor-pattern.p10{background:var(--cyan2);color:var(--cyan);border:1px solid rgba(32,200,216,.25)}
+
+/* ── MARKET PANIC ── */
+.panic-bar-wrap{background:var(--bg1);border:1px solid var(--border);border-radius:4px;overflow:hidden}
+.panic-bar-header{padding:12px 16px;border-bottom:1px solid var(--border);
+  font-size:11px;font-weight:600;display:flex;justify-content:space-between;align-items:center}
+.bar-list{padding:14px 16px;display:flex;flex-direction:column;gap:12px}
+.bar-item{display:flex;flex-direction:column;gap:4px}
+.bar-top{display:flex;justify-content:space-between;align-items:center}
+.bar-label{font-size:10px;color:var(--fg2)}
+.bar-val{font-size:10px;font-weight:600}
+.bar-track{height:4px;background:var(--bg3);border-radius:2px;overflow:hidden}
+.bar-fill{height:100%;border-radius:2px;transition:width 1s ease}
+.bar-fill.r{background:var(--red)}
+.bar-fill.a{background:var(--amber)}
+.bar-fill.b{background:var(--blue)}
+
+/* ── LACUNAS ── */
+.lacuna-list{display:flex;flex-direction:column;gap:10px}
+.lacuna-item{background:var(--bg1);border:1px solid var(--border);border-left:3px solid var(--amber);
+  border-radius:0 4px 4px 0;padding:13px 16px;display:flex;gap:12px;align-items:flex-start}
+.lacuna-num{font-size:9px;font-weight:700;color:var(--amber);font-family:var(--font-mono);
+  background:var(--amber2);padding:2px 6px;border-radius:2px;flex-shrink:0;margin-top:1px}
+.lacuna-text{font-size:12px;color:var(--fg2);line-height:1.65}
+.lacuna-text strong{color:var(--fg)}
+
+/* ── CORPUS LINKS ── */
+.corpus-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:12px}
+.corpus-item{background:var(--bg1);border:1px solid var(--border);border-radius:4px;
+  padding:14px 16px;display:flex;gap:12px;align-items:flex-start;transition:border-color .15s}
+.corpus-item:hover{border-color:var(--border3)}
+.corpus-icon{width:32px;height:32px;border-radius:4px;background:var(--bg3);
+  display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.corpus-id{font-size:9px;font-weight:700;letter-spacing:.1em;color:var(--purple);text-transform:uppercase}
+.corpus-title{font-size:12px;font-weight:600;margin:2px 0 4px}
+.corpus-desc{font-size:10px;color:var(--fg2);line-height:1.6}
+
+/* ── QUOTE ── */
+.blockquote{border-left:3px solid var(--red);padding:14px 20px;background:var(--bg2);
+  border-radius:0 4px 4px 0;margin:16px 0}
+.bq-text{font-family:var(--font-serif);font-size:15px;font-style:italic;line-height:1.65;
+  color:var(--fg);margin-bottom:8px}
+.bq-source{font-size:10px;color:var(--fg3);letter-spacing:.06em}
+.bq-pattern{font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--amber);margin-top:6px;display:block}
+
+/* ── THESIS BOX ── */
+.thesis-box{background:linear-gradient(135deg,rgba(232,64,64,.08),rgba(232,160,32,.06));
+  border:1px solid var(--red3);border-radius:4px;padding:22px 24px;position:relative;overflow:hidden}
+.thesis-box::before{content:'TESE';position:absolute;top:14px;right:18px;
+  font-size:9px;font-weight:700;letter-spacing:.18em;color:var(--red);opacity:.4}
+.thesis-title{font-family:var(--font-serif);font-size:18px;font-style:italic;
+  color:var(--fg);line-height:1.4;margin-bottom:12px}
+.thesis-body{font-size:12px;color:var(--fg2);line-height:1.75}
+
+/* ── TIMELINE ── */
+.tl{display:flex;flex-direction:column;gap:0;position:relative;padding-left:28px}
+.tl::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;
+  width:1px;background:var(--border2)}
+.tl-item{position:relative;padding:0 0 24px 20px}
+.tl-dot{position:absolute;left:-21px;top:4px;width:14px;height:14px;border-radius:50%;
+  border:2px solid var(--bg);flex-shrink:0}
+.tl-dot.r{background:var(--red)}
+.tl-dot.a{background:var(--amber)}
+.tl-dot.b{background:var(--blue)}
+.tl-dot.p{background:var(--purple)}
+.tl-dot.g{background:var(--green)}
+.tl-time{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg3);margin-bottom:4px}
+.tl-title{font-weight:600;font-size:12px;margin-bottom:5px}
+.tl-body{font-size:11px;color:var(--fg2);line-height:1.7}
+.tl-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
+
+/* ── P04b DEEP DIVE ── */
+.anatomy-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border2);
+  border:1px solid var(--border2);border-radius:4px;overflow:hidden}
+@media(max-width:600px){.anatomy-grid{grid-template-columns:1fr}}
+.anatomy-cell{background:var(--bg1);padding:18px}
+.anatomy-cell.header-row{background:var(--bg2);grid-column:1/-1;
+  display:flex;justify-content:space-between;align-items:center;padding:12px 18px}
+.anatomy-side{font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.anatomy-side.fact{color:var(--green)}
+.anatomy-side.frame{color:var(--red)}
+.anatomy-item-label{font-size:9px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--fg3);margin-bottom:8px}
+.anatomy-item-text{font-size:12px;line-height:1.7}
+.anatomy-item-text.fact-text{color:var(--green);opacity:.9}
+.anatomy-item-text.frame-text{color:var(--red);opacity:.9;font-style:italic}
+.anatomy-arrow{text-align:center;padding:10px;color:var(--fg3);font-size:18px}
+
+/* ── PATTERN CARD ── */
+.p-card{background:var(--bg1);border:1px solid var(--border);border-left:3px solid;
+  border-radius:0 4px 4px 0;padding:18px 20px}
+.p-card.amber{border-left-color:var(--amber)}
+.p-card.red{border-left-color:var(--red)}
+.p-card.cyan{border-left-color:var(--cyan)}
+.p-card.purple{border-left-color:var(--purple)}
+.p-code{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  margin-bottom:6px}
+.p-card.amber .p-code{color:var(--amber)}
+.p-card.red .p-code{color:var(--red)}
+.p-card.cyan .p-code{color:var(--cyan)}
+.p-card.purple .p-code{color:var(--purple)}
+.p-name{font-family:var(--font-display);font-size:14px;font-weight:700;margin-bottom:8px}
+.p-desc{font-size:12px;color:var(--fg2);line-height:1.75}
+
+/* ── FOOTER ── */
+.footer{margin-top:60px;padding:18px 20px;border-top:1px solid var(--border);
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+@media(min-width:768px){.footer{padding:18px 48px}}
+.footer-left{font-size:10px;color:var(--fg3)}
+.footer-left a{color:var(--fg2);text-decoration:none}
+.footer-left a:hover{color:var(--fg)}
+.footer-tags{display:flex;flex-wrap:wrap;gap:6px}
+.ftag{font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:2px 6px;
+  border-radius:2px;background:var(--bg2);color:var(--fg3);border:1px solid var(--border)}
+
+/* scrollfade */
+@keyframes fadein{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.sec{animation:fadein .4s ease both}
+
+/* print */
+@media print{.nav{display:none!important}body{background:#fff;color:#111}
+  :root{--bg:#fff;--bg1:#f8f8f8;--bg2:#f0f0f0;--fg:#111;--fg2:#444;--fg3:#888;
+    --border:rgba(0,0,0,.12);--border2:rgba(0,0,0,.20)}}
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<div class="header">
+  <div class="meta-row">
+    <span class="badge b-red"><span class="pulse-dot red"></span>D+1 — 29 MAI 2026</span>
+    <span class="badge b-amber">P04b ATIVO</span>
+    <span class="badge b-orange">MÍDIA CAPTURADA</span>
+    <span class="badge b-purple">PADRÃO SISTÊMICO</span>
+    <span class="badge b-muted">COMPLEMENTO · designacao-terrorista-pcc-cv-2026</span>
+    <span class="badge b-muted">CC0 1.0</span>
+  </div>
+
+  <div class="eyebrow">Dossiê Investigativo · lawfare-timeline</div>
+
+  <h1 class="hero-title">
+    A <em>Assessoria de Imprensa</em><br>
+    do <span class="d">Narcotráfico</span>
+  </h1>
+  <p class="hero-sub">
+    Em menos de 24h após a designação de PCC e CV como organizações terroristas pelos EUA,
+    a imprensa hegemônica brasileira construiu e distribuiu o enquadramento de proteção.
+    Este dossiê documenta o mecanismo P04b em operação — não como hipótese editorial,
+    mas como padrão estrutural verificável.
+  </p>
+
+  <div class="stat-strip">
+    <div class="stat-cell c-red">
+      <div class="stat-num">&lt;24h</div>
+      <div class="stat-lbl">para frame "soberania"<br>dominar a cobertura</div>
+    </div>
+    <div class="stat-cell c-amber">
+      <div class="stat-num">P04b</div>
+      <div class="stat-lbl">both-sidesism<br>funcional ativo</div>
+    </div>
+    <div class="stat-cell c-blue">
+      <div class="stat-num">12</div>
+      <div class="stat-lbl">estados americanos<br>com células PCC/CV</div>
+    </div>
+    <div class="stat-cell c-orange">
+      <div class="stat-num">≈0</div>
+      <div class="stat-lbl">matérias com contexto<br>da rejeição de março</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── NAV ── -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand">D+1 · 29.05.26</div>
+    <button class="nav-tab active" onclick="goSec('mecanismo')">Mecanismo</button>
+    <button class="nav-tab" onclick="goSec('cobertura')">Cobertura</button>
+    <button class="nav-tab" onclick="goSec('decode')">Decodificação</button>
+    <button class="nav-tab" onclick="goSec('mercado')">Pânico do Mercado</button>
+    <button class="nav-tab" onclick="goSec('padroes')">Padrões</button>
+    <button class="nav-tab" onclick="goSec('lacunas')">Lacunas</button>
+    <button class="nav-tab" onclick="goSec('corpus')">Corpus</button>
+  </div>
+</nav>
+
+<div class="main">
+
+<!-- ══ 01 · MECANISMO ══ -->
+<section class="sec" id="mecanismo">
+  <div class="sec-label">01 — Mecanismo P04b em Operação</div>
+
+  <div class="thesis-box">
+    <div class="thesis-title">
+      "A cobertura que enquadra mecanismos documentados como percepção política
+      não é neutra — é função ativa de proteção do sistema."
+    </div>
+    <div class="thesis-body">
+      Quando a imprensa enquadra a designação de PCC e CV como "ataque à soberania" ou "risco financeiro",
+      não está apenas escolhendo um ângulo editorial. Está tornando invisível o fato documentado:
+      que o governo brasileiro <strong>rejeitou ativamente</strong> o pedido americano em março/2026,
+      que as organizações possuem <strong>células operacionais em 12 estados americanos</strong>,
+      e que a Lei 13.260/2016 <strong>exclui por design</strong> o tráfico de fins lucrativos
+      da definição de terrorismo. O enquadramento "soberania" não é opinião — é escudo.
+    </div>
+  </div>
+
+  <div class="gap-lg"></div>
+
+  <div class="sec-label">Fluxo do Mecanismo — D+1</div>
+
+  <div class="mech-wrap">
+    <div class="mech-header">
+      <div class="mech-title">Como o Enquadramento de Proteção se Instala em 24h</div>
+      <span class="badge b-red">P04b</span>
+    </div>
+    <div class="mech-body">
+      <div class="flow-row">
+        <div class="flow-node info">
+          <div class="flow-node-num">FATO · 28/05</div>
+          <div class="flow-node-title">Designação FTO + SDGT</div>
+          <div class="flow-node-desc">Rubio designa PCC e CV. Fato documentado: células em 12 estados, 113 vistos negados, rejeição brasileira em março.</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node warn">
+          <div class="flow-node-num">SELEÇÃO · H+2</div>
+          <div class="flow-node-title">Escolha do Ângulo</div>
+          <div class="flow-node-desc">Redações escolhem "soberania" e "risco financeiro" como ângulo principal. Contexto da rejeição brasileira omitido.</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node active">
+          <div class="flow-node-num">AMPLIFICAÇÃO · D+1</div>
+          <div class="flow-node-title">Frame Dominante</div>
+          <div class="flow-node-desc">Brasil = vítima de ingerência. PCC/CV = questão de política externa. Rejeição de março = invisível.</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node warn">
+          <div class="flow-node-num">EFEITO</div>
+          <div class="flow-node-title">Proteção do Mecanismo</div>
+          <div class="flow-node-desc">Debate público gira sobre soberania, não sobre por que o governo protegeu organizações com operações nos EUA.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 02 · COBERTURA ══ -->
+<section class="sec" id="cobertura">
+  <div class="sec-label">02 — Registro da Cobertura D+1</div>
+
+  <div class="alert amber">
+    <div class="alert-ico">⚠️</div>
+    <div>
+      <div class="alert-hd">Nota Metodológica</div>
+      <div class="alert-bd">
+        Os registros abaixo documentam enquadramentos identificados na cobertura de 29/05/2026 com base
+        em manchetes, subtítulos e aberturas de texto públicas. A análise segue taxonomia P04b:
+        distingue fato documentado, inferência estrutural e hipótese motivacional.
+        Nenhum jornalista individual é objeto de análise — o padrão é sistêmico, não individual.
+      </div>
+    </div>
+  </div>
+
+  <div class="gap"></div>
+
+  <div class="clipping-grid">
+
+    <div class="clipping amber">
+      <div class="clip-top">
+        <span class="clip-outlet globo">GloboNews / G1</span>
+        <span class="clip-date">29/05/2026</span>
+      </div>
+      <div class="clip-body">
+        <div class="clip-hed">"Lula deve explorar temor de invasão americana no Brasil para reagir à decisão de Trump sobre PCC e CV"</div>
+        <div class="clip-sub">
+          Coluna de Julia Duailibi enquadra Lula como agente reativo a uma decisão externa.
+          Frase "temor de invasão" constrói o leitor como vítima de ameaça estrangeira.
+          Nenhuma referência à reunião de março em que o Brasil rejeitou o pedido americano.
+        </div>
+        <div class="clip-tag-row">
+          <span class="clip-tag tag-p04b">P04b</span>
+          <span class="clip-tag tag-frame">Frame: Vítima</span>
+          <span class="clip-tag tag-soberania">Vetor: Soberania</span>
+          <span class="clip-tag tag-omissao">Omissão: Rejeição Mar/26</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="clipping red">
+      <div class="clip-top">
+        <span class="clip-outlet folha">Folha de S.Paulo</span>
+        <span class="clip-date">29/05/2026</span>
+      </div>
+      <div class="clip-body">
+        <div class="clip-hed">"Designação de PCC e CV como terroristas pelos EUA ameaça relações comerciais do Brasil"</div>
+        <div class="clip-sub">
+          Ângulo econômico-comercial desvia o debate para consequências práticas do ato americano.
+          PCC e CV são apresentados como objeto de disputa geopolítica, não como organizações
+          com operações documentadas em solo americano. O Brasil é o "afetado".
+        </div>
+        <div class="clip-tag-row">
+          <span class="clip-tag tag-p04b">P04b</span>
+          <span class="clip-tag tag-frame">Frame: Afetado Econômico</span>
+          <span class="clip-tag tag-mkt">Vetor: Mercado</span>
+          <span class="clip-tag tag-omissao">Omissão: 12 estados EUA</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="clipping blue">
+      <div class="clip-top">
+        <span class="clip-outlet valor">Valor Econômico</span>
+        <span class="clip-date">29/05/2026</span>
+      </div>
+      <div class="clip-body">
+        <div class="clip-hed">"Mercado teme reflexos da classificação de PCC e CV como terroristas para sistema financeiro"</div>
+        <div class="clip-sub">
+          Enquadramento via mercado financeiro: o risco é a sanção americana, não a existência
+          das organizações. Implicitamente, o sistema financeiro aparece como vítima colateral —
+          não como ecossistema que coexistiu com a lavagem por décadas.
+        </div>
+        <div class="clip-tag-row">
+          <span class="clip-tag tag-p04b">P04b</span>
+          <span class="clip-tag tag-mkt">Frame: Risco Financeiro</span>
+          <span class="clip-tag tag-omissao">Omissão: P08/P10 nexo financeiro</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="clipping orange">
+      <div class="clip-top">
+        <span class="clip-outlet cnn">CNN Brasil</span>
+        <span class="clip-date">29/05/2026</span>
+      </div>
+      <div class="clip-body">
+        <div class="clip-hed">"EUA interferem na política interna brasileira ao designar facções como terroristas"</div>
+        <div class="clip-sub">
+          Enquadramento de soberania em forma mais direta. "Interferência" conota ingerência ilegítima.
+          O fato de que PCC e CV operam ativamente nos EUA — fundamento da designação —
+          é secundarizado ou ausente.
+        </div>
+        <div class="clip-tag-row">
+          <span class="clip-tag tag-p04b">P04b</span>
+          <span class="clip-tag tag-soberania">Frame: Soberania</span>
+          <span class="clip-tag tag-omissao">Omissão: Células em 12 estados</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="clipping purple">
+      <div class="clip-top">
+        <span class="clip-outlet bbc">BBC Brasil</span>
+        <span class="clip-date">29/05/2026</span>
+      </div>
+      <div class="clip-body">
+        <div class="clip-hed">"O que muda para o Brasil após EUA classificarem PCC e CV como organizações terroristas"</div>
+        <div class="clip-sub">
+          Cobertura de serviço: lista consequências práticas para cidadãos e empresas.
+          Mais neutro na forma, mas ainda centrado no impacto sobre o Brasil —
+          não sobre por que a designação aconteceu apesar da oposição do governo brasileiro.
+        </div>
+        <div class="clip-tag-row">
+          <span class="clip-tag tag-frame">Frame: Consequências</span>
+          <span class="clip-tag tag-omissao">Omissão: Contexto Político BR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="clipping" style="border-color:var(--green)">
+      <div class="clip-top">
+        <span class="clip-outlet oantagonista" style="color:var(--green)">O Antagonista / Brasil Paralelo</span>
+        <span class="clip-date">29/05/2026</span>
+      </div>
+      <div class="clip-body">
+        <div class="clip-hed">"Lula lobbied against PCC/CV terrorist designation — now crying sovereignty"</div>
+        <div class="clip-sub">
+          Imprensa de oposição articula o contexto da rejeição brasileira em março.
+          Angle: hipocrisia do governo. Traz o fato documentado, mas via frame político-partidário —
+          o que facilita descarte pelo público de centro como "narrativa de direita".
+        </div>
+        <div class="clip-tag-row">
+          <span class="clip-tag" style="background:var(--green2);color:var(--green);border:1px solid rgba(40,200,128,.3)">Contexto: Presente</span>
+          <span class="clip-tag tag-frame">Frame: Hipocrisia Política</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ 03 · DECODE ══ -->
+<section class="sec" id="decode">
+  <div class="sec-label">03 — Decodificação do Enquadramento</div>
+  <div class="sec-label" style="margin-top:4px;padding-top:0;border:none;opacity:.7">O que foi dito × o que os fatos documentados dizem</div>
+
+  <div class="anatomy-grid">
+    <div class="anatomy-cell header-row">
+      <span class="anatomy-side frame">🔴 Enquadramento Dominante (Imprensa)</span>
+      <span>↔</span>
+      <span class="anatomy-side fact">🟢 Fato Documentado (Corpus)</span>
+    </div>
+
+    <div class="anatomy-cell">
+      <div class="anatomy-item-label">Frame 01</div>
+      <div class="anatomy-item-text frame-text">"O Brasil foi surpreendido pela decisão americana"</div>
+    </div>
+    <div class="anatomy-cell">
+      <div class="anatomy-item-label">Fato Documentado</div>
+      <div class="anatomy-item-text fact-text">O governo brasileiro foi formalmente consultado em março/2026 e <strong>rejeitou ativamente</strong> o pedido. O chanceler Vieira telefonou para Rubio pedindo adiamento.</div>
+    </div>
+
+    <div class="anatomy-cell">
+      <div class="anatomy-item-label">Frame 02</div>
+      <div class="anatomy-item-text frame-text">"A designação é uma questão de soberania nacional"</div>
+    </div>
+    <div class="anatomy-cell">
+      <div class="anatomy-item-label">Fato Documentado</div>
+      <div class="anatomy-item-text fact-text">PCC e CV possuem <strong>células operacionais documentadas em 12 estados americanos</strong>. A designação foi baseada em operações em solo americano — fundamento legal direto.</div>
+    </div>
+
+    <div class="anatomy-cell">
+      <div class="anatomy-item-label">Frame 03</div>
+      <div class="anatomy-item-text frame-text">"O risco é financeiro — empresas e bancos brasileiros serão afetados"</div>
+    </div>
+    <div class="anatomy-cell">
+      <div class="anatomy-item-label">Inferência Estrutural (P08/P10)</div>
+      <div class="anatomy-item-text fact-text">A extensão do "risco financeiro" é proporcional ao <strong>nexo de coexistência</strong> entre o sistema financeiro e o ecossistema de lavagem. O pânico revela a dependência — não apenas a vitimização.</div>
+    </div>
+
+    <div class="anatomy-cell">
+      <div class="anatomy-item-label">Frame 04</div>
+      <div class="anatomy-item-text frame-text">"Trump está usando o PCC/CV como peão na guerra política contra Lula"</div>
+    </div>
+    <div class="anatomy-cell">
+      <div class="anatomy-item-label">Fato Documentado</div>
+      <div class="anatomy-item-text fact-text">Promotor Lincoln Gakiya (GAECO/SP) já demandava designação em nov/2025. FBI documentou células em 12 estados. A dimensão geopolítica é real mas <strong>não invalida</strong> o fato operacional das organizações.</div>
+    </div>
+
+    <div class="anatomy-cell">
+      <div class="anatomy-item-label">Frame 05</div>
+      <div class="anatomy-item-text frame-text">"O Brasil não tem organizações terroristas — tem crime organizado"</div>
+    </div>
+    <div class="anatomy-cell">
+      <div class="anatomy-item-label">Fato Documentado</div>
+      <div class="anatomy-item-text fact-text">A Lei 13.260/2016 <strong>exclui por design</strong> o tráfico com fins lucrativos da definição de terrorismo — exclusão que não existe no direito americano. A definição brasileira é arquitetura legal, não realidade factual.</div>
+    </div>
+
+  </div>
+
+  <div class="gap-lg"></div>
+
+  <div class="blockquote">
+    <div class="bq-text">
+      "Não sabemos mais se a Globo hoje em dia é um veículo de mídia ou de relações públicas do crime."
+    </div>
+    <div class="bq-source">Observação registrada · 29/05/2026 · D+1</div>
+    <span class="bq-pattern">→ Inferência estrutural consistente com P04b documentado no corpus</span>
+  </div>
+</section>
+
+<!-- ══ 04 · MERCADO ══ -->
+<section class="sec" id="mercado">
+  <div class="sec-label">04 — O Pânico do Mercado como Revelação Estrutural</div>
+
+  <div class="alert orange">
+    <div class="alert-ico">🏦</div>
+    <div>
+      <div class="alert-hd">Inferência Estrutural — P08/P10/P11</div>
+      <div class="alert-bd">
+        A intensidade do pânico financeiro em D+1 não é apenas reação a risco geopolítico.
+        É um mapa involuntário da dependência. Atores do mercado que reagem com alarme à designação
+        revelam, pela própria reação, o grau em que o sistema financeiro formal opera em coexistência
+        com a infraestrutura de lavagem do narcotráfico — documentada como P08/P10 no corpus.
+      </div>
+    </div>
+  </div>
+
+  <div class="gap"></div>
+
+  <div class="g2">
+    <div class="panic-bar-wrap">
+      <div class="panic-bar-header">
+        <span>Intensidade de Exposição Setorial ao Risco OFAC</span>
+        <span class="badge b-orange">Estimativa Estrutural</span>
+      </div>
+      <div class="bar-list">
+        <div class="bar-item">
+          <div class="bar-top">
+            <span class="bar-label">Fintechs / IPs sem BACEN oversight completo</span>
+            <span class="bar-val" style="color:var(--red)">Crítico</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill r" style="width:90%"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-top">
+            <span class="bar-label">Criptoativos / exchanges não reguladas</span>
+            <span class="bar-val" style="color:var(--red)">Crítico</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill r" style="width:85%"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-top">
+            <span class="bar-label">Bancos médios com correspondentes internacionais</span>
+            <span class="bar-val" style="color:var(--amber)">Alto</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill a" style="width:65%"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-top">
+            <span class="bar-label">Grandes bancos com operações nos EUA</span>
+            <span class="bar-val" style="color:var(--amber)">Médio-Alto</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill a" style="width:45%"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-top">
+            <span class="bar-label">Exportadoras com fluxo via praças americanas</span>
+            <span class="bar-val" style="color:var(--blue)">Monitoramento</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill b" style="width:30%"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div class="card-left amber">
+        <div class="card-label">Mecanismo de Exposição</div>
+        <div class="card-title">Sanções Secundárias OFAC</div>
+        <div class="card-body">
+          Qualquer entidade — incluindo instituição financeira brasileira — que processe transações
+          vinculadas a SDGTs designados fica sujeita a sanções secundárias. A exposição não requer
+          intenção: se a cadeia de correspondent banking passa por ativos de PCC/CV, o risco existe.
+        </div>
+      </div>
+
+      <div class="card-left red">
+        <div class="card-label">A Pergunta que Ninguém Está Fazendo</div>
+        <div class="card-title">Por que o Pânico é Tão Grande?</div>
+        <div class="card-body">
+          Se o sistema financeiro brasileiro fosse impermeável ao narcotráfico, a designação americana
+          seria apenas um problema diplomático. O tamanho do pânico é proporcional à permeabilidade real.
+          O mercado está revelando, pela reação, o que o corpus documenta como inferência estrutural:
+          P10 — infraestrutura de serviço compartilhada entre captura institucional e narco.
+        </div>
+      </div>
+
+      <div class="card-left blue">
+        <div class="card-label">Precedente — BK Bank</div>
+        <div class="card-title">R$46bi Não Rastreáveis · Documentado</div>
+        <div class="card-body">
+          O corpus já documenta o BK Bank como caso de movimentação de R$46bi via criptoativos
+          sem rastreabilidade — infraestrutura P08 operacional. A designação OFAC cria o primeiro
+          mecanismo com dentes reais de responsabilização extraterritorial.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 05 · PADRÕES ══ -->
+<section class="sec" id="padroes">
+  <div class="sec-label">05 — Padrões Sistêmicos Ativados em D+1</div>
+
+  <div class="g2">
+    <div class="p-card amber">
+      <div class="p-code">P04b · Both-Sidesism Funcional</div>
+      <div class="p-name">Enquadramento como Proteção</div>
+      <div class="p-desc">
+        Mecanismo central de D+1. A cobertura dominante trata o fato documentado
+        (governo rejeitou designação de organizações com operações nos EUA)
+        como equivalente a uma questão de percepção política ou soberania.
+        Isso não é neutralidade editorial — é proteção ativa do mecanismo estrutural.
+        <br><br>
+        <strong>Instância específica D+1:</strong> Enquadrar Lula como "reagindo à decisão de Trump"
+        apaga que o governo brasileiro foi agente ativo da proteção meses antes da decisão.
+      </div>
+    </div>
+
+    <div class="p-card red">
+      <div class="p-code">P04 · Weaponização Narrativa</div>
+      <div class="p-name">Saturação do Frame "Soberania"</div>
+      <div class="p-desc">
+        O volume e a consistência do enquadramento "soberania" em múltiplos veículos simultâneos
+        cria campo semântico no qual qualquer crítica ao comportamento do governo brasileiro
+        aparece como "defender a ingerência americana".
+        <br><br>
+        Essa saturação não requer coordenação — apenas alinhamento de incentivos entre redações
+        que dependem de publicidade estatal e fontes governamentais.
+      </div>
+    </div>
+
+    <div class="p-card cyan">
+      <div class="p-code">P10 · Infraestrutura de Serviço Compartilhada</div>
+      <div class="p-name">Pânico Financeiro como Evidência</div>
+      <div class="p-desc">
+        A reação do mercado financeiro em D+1 é ela própria dados estruturais.
+        A extensão do alarme em torno de "sanções OFAC" revela o grau de coexistência
+        entre o sistema financeiro formal e o ecossistema de lavagem do narcotráfico.
+        <br><br>
+        Um sistema financeiro sem nexo com o narco não teria razão para pânico —
+        teria apenas exposição geopolítica marginal.
+      </div>
+    </div>
+
+    <div class="p-card purple">
+      <div class="p-code">P09 · Captura Cultural / Legitimidade Simbólica</div>
+      <div class="p-name">Narcocultura como Escudo de Longa Data</div>
+      <div class="p-desc">
+        D+1 reveAla a efetividade de décadas de P09: críticos da operação do narcotráfico
+        no espaço cultural (funk, influenciadores, patrocínios) foram sistematicamente
+        enquadrados como "preconceituosos" ou "moralistas".
+        <br><br>
+        Esse escudo cultural tornou politicamente custoso, por anos, nomear o nexo
+        entre economia informal do narco e economia formal.
+        A designação americana força esse debate à superfície.
+      </div>
+    </div>
+  </div>
+
+  <div class="gap-lg"></div>
+
+  <!-- TIMELINE D+1 -->
+  <div class="sec-label">Sequência Cronológica D+1</div>
+
+  <div class="tl">
+    <div class="tl-item">
+      <div class="tl-dot b"></div>
+      <div class="tl-time">28/05 · Designação</div>
+      <div class="tl-title">Rubio publica designação FTO + SDGT</div>
+      <div class="tl-body">PCC e CV formalmente designados. Governo brasileiro não consultado na etapa final. Secretário Sarrubo havia declarado em março: "não temos terroristas, temos crime organizado".</div>
+      <div class="tl-tags"><span class="badge b-blue">Fato Documentado</span></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot r"></div>
+      <div class="tl-time">28/05 · H+2</div>
+      <div class="tl-title">Primeiras matérias: frame "soberania" já instalado</div>
+      <div class="tl-body">Principais veículos já operam com enquadramento "ingerência americana" nas primeiras horas. Velocidade indica que o enquadramento não foi construído — foi recuperado de framework pré-existente.</div>
+      <div class="tl-tags"><span class="badge b-red">P04b</span><span class="badge b-amber">Inferência</span></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot a"></div>
+      <div class="tl-time">28/05 · Noite</div>
+      <div class="tl-title">Pânico financeiro: analistas de mercado em modo alerta</div>
+      <div class="tl-body">Economistas e analistas de bancos emitem notas sobre risco de sanções secundárias. Reação desproporcional ao que seria esperado de um sistema financeiro "não contaminado".</div>
+      <div class="tl-tags"><span class="badge b-orange">P10 · Evidência Estrutural</span></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot a"></div>
+      <div class="tl-time">29/05 · Manhã · D+1</div>
+      <div class="tl-title">Globo / G1: "Lula deve explorar temor de invasão americana"</div>
+      <div class="tl-body">Coluna Julia Duailibi (GloboNews) enquadra resposta de Lula como oportunidade eleitoral via "medo de invasão". Mecanismo P04b em operação plena: governo que protegeu ativamente as organizações aparece como vítima.</div>
+      <div class="tl-tags"><span class="badge b-amber">P04b Central</span><span class="badge b-red">Fato Omitido: Rejeição Mar/26</span></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot p"></div>
+      <div class="tl-time">29/05 · Tarde</div>
+      <div class="tl-title">Discurso de "soberania" unificado em todos os veículos mainstream</div>
+      <div class="tl-body">Frame dominante consolidado. Debate público deslocado: questão é "ingerência americana vs. soberania brasileira" — não "por que o governo rejeitou designar organizações que operam nos EUA".</div>
+      <div class="tl-tags"><span class="badge b-purple">Frame Consolidado</span><span class="badge b-amber">P04b Completo</span></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot g"></div>
+      <div class="tl-time">05/06 · Pendente</div>
+      <div class="tl-title">FTO entra em vigor — Federal Register</div>
+      <div class="tl-body">Data de vigência da designação FTO. Questão aberta: o governo vai acionar o STF para bloquear cooperação com sanções OFAC? Geometria 535×1 poderia ser ativada.</div>
+      <div class="tl-tags"><span class="badge b-green">Pendente</span><span class="badge b-blue">Monitorar</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 06 · LACUNAS ══ -->
+<section class="sec" id="lacunas">
+  <div class="sec-label">06 — Lacunas Investigativas</div>
+
+  <div class="lacuna-list">
+    <div class="lacuna-item">
+      <span class="lacuna-num">L01</span>
+      <div class="lacuna-text">
+        <strong>Coordenação do Enquadramento:</strong> A consistência e velocidade do frame "soberania"
+        em múltiplos veículos simultaneamente é estatisticamente improvável se apenas orgânica.
+        Questão investigativa: existiu coordenação editorial? Via qual canal? Assessoria de imprensa
+        do Planalto? Fontes comuns? Ou alinhamento espontâneo de incentivos?
+      </div>
+    </div>
+    <div class="lacuna-item">
+      <span class="lacuna-num">L02</span>
+      <div class="lacuna-text">
+        <strong>Mapeamento de Anunciantes:</strong> Quais empresas com exposição documentada a ecossistemas
+        de lavagem são anunciantes relevantes nos veículos que produziram o frame "soberania"?
+        O nexo financeiro publicitário é hipótese estrutural (P10/P11) que requer documentação específica.
+      </div>
+    </div>
+    <div class="lacuna-item">
+      <span class="lacuna-num">L03</span>
+      <div class="lacuna-text">
+        <strong>Reação STF:</strong> Algum ministro do STF já se manifestou sobre a designação?
+        Em que termos? Existe movimentação para acionamento judicial que bloqueie cooperação OFAC?
+        A geometria 535×1 pode ser ativada neste contexto — monitoramento urgente.
+      </div>
+    </div>
+    <div class="lacuna-item">
+      <span class="lacuna-num">L04</span>
+      <div class="lacuna-text">
+        <strong>Posição de Flávio Bolsonaro:</strong> O senador visitou Trump e declarou ter pedido
+        a designação. Como sua posição está sendo coberta nos veículos que usam frame "soberania"?
+        O tratamento assimétrico entre as agendas de Lula e Flávio Bolsonaro junto a Trump é
+        instância documentável de P04b.
+      </div>
+    </div>
+    <div class="lacuna-item">
+      <span class="lacuna-num">L05</span>
+      <div class="lacuna-text">
+        <strong>Ativos Congelados:</strong> Quais ativos em jurisdição americana foram efetivamente
+        congelados com a designação SDGT? O OFAC publicará lista de entidades afetadas — monitorar
+        publicação para identificar nexos com o sistema financeiro brasileiro.
+      </div>
+    </div>
+    <div class="lacuna-item">
+      <span class="lacuna-num">L06</span>
+      <div class="lacuna-text">
+        <strong>Lei 13.260/2016 — Autoria da Exclusão:</strong> Lacuna recorrente do corpus.
+        Quem redigiu a cláusula que exclui tráfico com fins lucrativos? Qual foi o processo legislativo?
+        Quais atores pressionaram por essa exclusão? A lei é de 2016 — governo Dilma — mas a exclusão
+        específica beneficia estruturalmente organizações como PCC e CV.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 07 · CORPUS ══ -->
+<section class="sec" id="corpus">
+  <div class="sec-label">07 — Conexões com o Corpus</div>
+
+  <div class="corpus-grid">
+    <div class="corpus-item">
+      <div class="corpus-icon">🇺🇸</div>
+      <div>
+        <div class="corpus-id">Arquivo Principal</div>
+        <div class="corpus-title">designacao-terrorista-pcc-cv-2026.html</div>
+        <div class="corpus-desc">Dossiê-mãe da designação FTO + SDGT. Contém cronologia diplomática completa, efeitos jurídicos, conflito de definições Brasil × EUA e padrões ativados.</div>
+      </div>
+    </div>
+    <div class="corpus-item">
+      <div class="corpus-icon">🧪</div>
+      <div>
+        <div class="corpus-id">ID 1497–1505</div>
+        <div class="corpus-title">Narco Fluxo · Carbono Oculto · Hezbollah</div>
+        <div class="corpus-desc">Rede transnacional cuja dimensão financeira fica exposta pelas sanções OFAC. Infraestrutura P10 documentada como base das preocupações do mercado em D+1.</div>
+      </div>
+    </div>
+    <div class="corpus-item">
+      <div class="corpus-icon">📡</div>
+      <div>
+        <div class="corpus-id">Padrão P04b</div>
+        <div class="corpus-title">padroes-sistemicos-dashboard.html</div>
+        <div class="corpus-desc">Definição canônica do padrão documentado neste dossier. Both-sidesism funcional: enquadramento de mecanismos estruturais como percepção política.</div>
+      </div>
+    </div>
+    <div class="corpus-item">
+      <div class="corpus-icon">🏦</div>
+      <div>
+        <div class="corpus-id">P08/P10</div>
+        <div class="corpus-title">banco-master-compliance-zero.html</div>
+        <div class="corpus-desc">Compliance Zero documentado. Nexo entre sistema financeiro formal e lavagem. Base estrutural do "pânico do mercado" observado em D+1.</div>
+      </div>
+    </div>
+    <div class="corpus-item">
+      <div class="corpus-icon">🌐</div>
+      <div>
+        <div class="corpus-id">Geopolítica</div>
+        <div class="corpus-title">rumble-tmtg-vs-moraes.html</div>
+        <div class="corpus-desc">Contexto da escalada diplomática EUA-Brasil. A designação PCC/CV é mais um vetor de pressão na mesma trajetória de deterioração da relação bilateral.</div>
+      </div>
+    </div>
+    <div class="corpus-item">
+      <div class="corpus-icon">🔗</div>
+      <div>
+        <div class="corpus-id">Rede Executivo</div>
+        <div class="corpus-title">rede-acesso-faccoes-executivo.html</div>
+        <div class="corpus-desc">Documentação de pontos de contato entre facções e esfera executiva. Contexto estrutural para entender por que a rejeição do pedido americano ocorreu.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gap-lg"></div>
+
+  <div class="alert purple">
+    <div class="alert-ico">📋</div>
+    <div>
+      <div class="alert-hd">Nota de Metodologia — Separação Epistêmica</div>
+      <div class="alert-bd">
+        Este dossiê mantém a separação canônica do corpus:
+        <strong>fatos documentados</strong> (fontes primárias verificáveis),
+        <strong>inferências estruturais</strong> (derivadas logicamente dos fatos),
+        e <strong>hipóteses motivacionais</strong> (excluídas do corpus formal).
+        A análise do "por que" da cobertura permanece como inferência estrutural —
+        consistente com P04b, mas não afirmada como intenção individual de jornalistas ou redações.
+        O padrão é sistêmico; a responsabilidade individual é uma categoria analítica diferente.
+      </div>
+    </div>
+  </div>
+</section>
+
+</div><!-- /main -->
+
+<!-- ── FOOTER ── -->
+<div class="footer">
+  <div class="footer-left">
+    <a href="https://gosurf.site">gosurf.site</a> ·
+    <a href="https://lawfare-timeline.vercel.app">lawfare-timeline</a> ·
+    @araguaci · CC0 1.0 Universal
+  </div>
+  <div class="footer-tags">
+    <span class="ftag">P04b</span>
+    <span class="ftag">D+1</span>
+    <span class="ftag">PCC/CV</span>
+    <span class="ftag">FTO/SDGT</span>
+    <span class="ftag">Mídia Capturada</span>
+    <span class="ftag">29.05.2026</span>
+  </div>
+</div>
+
+<script>
+// nav highlight on scroll
+const secs = ['mecanismo','cobertura','decode','mercado','padroes','lacunas','corpus'];
+const tabs = document.querySelectorAll('.nav-tab');
+
+function goSec(id){
+  document.getElementById(id)?.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+window.addEventListener('scroll',()=>{
+  let cur = secs[0];
+  secs.forEach(id=>{
+    const el = document.getElementById(id);
+    if(el && el.getBoundingClientRect().top < 100) cur = id;
+  });
+  tabs.forEach((t,i)=>{
+    t.classList.toggle('active', secs[i] === cur);
+  });
+},{ passive:true });
+
+// animate bars on first visible
+const bars = document.querySelectorAll('.bar-fill');
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const el = e.target;
+      const w = el.style.width;
+      el.style.width = '0';
+      setTimeout(()=>{ el.style.width = w; }, 50);
+      obs.unobserve(el);
+    }
+  });
+},{threshold:0.3});
+bars.forEach(b=>{ const w = b.style.width; b.style.width='0'; obs.observe(b); });
+</script>
+</body>
+</html>

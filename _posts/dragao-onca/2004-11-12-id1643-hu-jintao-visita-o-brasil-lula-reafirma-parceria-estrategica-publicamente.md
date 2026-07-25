@@ -46,7 +46,7 @@ Exportações brasileiras à China em 2004 já superam o total de 2003 (US$4,5bi
 
 Entradas conectadas nesta série:
 
-- [Entrada 1642](/timeline/entries/1642)
+- [Entrada 1642](/posts/id1642-lula-visita-a-china-criacao-da-cosban-comissao-sino-brasileira-de-alto-nivel-de/)
 
 ---
 

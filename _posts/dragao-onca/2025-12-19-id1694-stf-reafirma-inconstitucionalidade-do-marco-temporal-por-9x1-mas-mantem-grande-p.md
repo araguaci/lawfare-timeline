@@ -66,7 +66,7 @@ A cláusula dos 50% de faturamento bruto e da comunicação obrigatória ao MPF 
 
 Entradas conectadas nesta série:
 
-- [Entrada 1690](/timeline/entries/1690)
+- [Entrada 1690](/posts/id1690-congresso-deruba-veto-de-lula-e-promulga-lei-147012023-lei-do-marco-temporal/)
 
 ---
 

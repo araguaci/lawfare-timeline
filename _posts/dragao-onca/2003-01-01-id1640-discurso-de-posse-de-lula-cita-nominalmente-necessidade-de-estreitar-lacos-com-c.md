@@ -53,7 +53,7 @@ Marco retórico que antecede em 4 meses o discurso de abril/2003 no BNDES — mo
 
 Entradas conectadas nesta série:
 
-- [Entrada 1639](/timeline/entries/1639)
+- [Entrada 1639](/posts/id1639-brasil-e-china-elevam-relacao-a-parceria-estrategica-primeira-desse-tipo-entre-p/)
 
 ---
 

@@ -47,7 +47,7 @@ Não há registro público de perícia técnica independente (não vinculada ao 
 
 Entradas conectadas nesta série:
 
-- [Entrada 1667](/timeline/entries/1667)
+- [Entrada 1667](/posts/id1667-mineracao-taboca-e-adquirida-pela-estatal-chinesa-china-nonferrous-metal-mining/)
 
 ---
 

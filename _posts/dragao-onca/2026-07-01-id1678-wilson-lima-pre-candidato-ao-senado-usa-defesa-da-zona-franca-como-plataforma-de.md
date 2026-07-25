@@ -54,8 +54,8 @@ Padrão idêntico ao documentado no capítulo Goiás: um governador em fim de ma
 
 Entradas conectadas nesta série:
 
-- [Entrada 1675](/timeline/entries/1675)
-- [Entrada 1676](/timeline/entries/1676)
+- [Entrada 1675](/posts/id1675-byd-instala-fabrica-de-baterias-no-polo-industrial-de-manaus/)
+- [Entrada 1676](/posts/id1676-grupo-chines-megmeet-anuncia-fabrica-eletroeletronica-no-pim-com-previsao-de-ope/)
 
 ---
 

@@ -53,8 +53,8 @@ Diferença de enquadramento entre a peça jurídica consultada da OAB-DF e o con
 
 Entradas conectadas nesta série:
 
-- [Entrada 1691](/timeline/entries/1691)
-- [Entrada 1692](/timeline/entries/1692)
+- [Entrada 1691](/posts/id1691-senado-aprova-o-pl-da-devastacao-pl-21592021-flexibilizando-o-licenciamento-ambi/)
+- [Entrada 1692](/posts/id1692-congresso-derruba-vetos-de-lula-ao-pl-da-devastacao-dois-dias-apos-o-encerrament/)
 
 ---
 

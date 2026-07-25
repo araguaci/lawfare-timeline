@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Brasil Sangra — Painel de Dados</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0a0a0a;
+  --bg2: #111111;
+  --bg3: #161616;
+  --bg4: #1c1c1c;
+  --border: rgba(255,255,255,0.07);
+  --border2: rgba(255,255,255,0.12);
+  --text: #e8e8e4;
+  --text2: #888880;
+  --text3: #505048;
+  --accent-red: #c0392b;
+  --accent-red-dim: rgba(192,57,43,0.15);
+  --accent-red-dim2: rgba(192,57,43,0.08);
+  --accent-green: #27ae60;
+  --accent-green-dim: rgba(39,174,96,0.12);
+  --accent-amber: #d4860a;
+  --accent-amber-dim: rgba(212,134,10,0.12);
+  --font-display: 'Syne', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --r: 6px;
+  --r2: 10px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ── HEADER ── */
+.masthead {
+  border-bottom: 1px solid var(--border2);
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10,10,10,0.96);
+  backdrop-filter: blur(12px);
+}
+
+.masthead-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.masthead-flag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text3);
+}
+
+.masthead-title {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.masthead-title span {
+  color: var(--accent-red);
+}
+
+.masthead-date {
+  font-size: 10px;
+  color: var(--text3);
+  letter-spacing: 0.12em;
+}
+
+.masthead-nav {
+  display: flex;
+  gap: 2px;
+}
+
+.nav-pill {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 99px;
+  border: 1px solid var(--border);
+  color: var(--text3);
+  text-decoration: none;
+  transition: all 0.15s;
+}
+
+.nav-pill:hover {
+  border-color: var(--border2);
+  color: var(--text2);
+}
+
+/* ── MAIN ── */
+.main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 40px 32px 80px;
+}
+
+/* ── HERO ── */
+.hero {
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent-red);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: var(--accent-red);
+}
+
+.hero-heading {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.hero-heading em {
+  color: var(--accent-red);
+  font-style: normal;
+}
+
+.hero-sub {
+  font-size: 13px;
+  color: var(--text2);
+  max-width: 640px;
+  line-height: 1.8;
+}
+
+/* ── SECTION HEADER ── */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.section-label {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text3);
+}
+
+.section-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.section-count {
+  font-size: 10px;
+  color: var(--text3);
+  letter-spacing: 0.1em;
+}
+
+/* ── KPI GRID ── */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 48px;
+}
+
+@media (max-width: 900px) {
+  .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 500px) {
+  .kpi-grid { grid-template-columns: 1fr; }
+}
+
+.kpi-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.kpi-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--accent-red);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.kpi-card:hover {
+  border-color: var(--border2);
+}
+
+.kpi-card:hover::before {
+  opacity: 1;
+}
+
+.kpi-card.amber::before { background: var(--accent-amber); }
+.kpi-card.green::before { background: var(--accent-green); }
+
+.kpi-label {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text3);
+  margin-bottom: 10px;
+}
+
+.kpi-number {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--accent-red);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.kpi-card.amber .kpi-number { color: var(--accent-amber); }
+.kpi-card.green .kpi-number { color: var(--accent-green); }
+
+.kpi-desc {
+  font-size: 11px;
+  color: var(--text2);
+  line-height: 1.5;
+}
+
+.kpi-src {
+  font-size: 10px;
+  color: var(--text3);
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.kpi-src a {
+  color: var(--text3);
+  text-decoration: none;
+}
+
+.kpi-src a:hover {
+  color: var(--text2);
+  text-decoration: underline;
+}
+
+/* ── TWO COLUMN ── */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 48px;
+}
+
+@media (max-width: 768px) {
+  .two-col { grid-template-columns: 1fr; }
+}
+
+/* ── CRIMES PANEL ── */
+.panel {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  overflow: hidden;
+}
+
+.panel-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.panel-title {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text2);
+}
+
+.panel-badge {
+  font-size: 10px;
+  padding: 3px 9px;
+  border-radius: 99px;
+  border: 1px solid;
+}
+
+.panel-badge.red {
+  border-color: rgba(192,57,43,0.4);
+  color: var(--accent-red);
+  background: var(--accent-red-dim2);
+}
+
+.panel-badge.green {
+  border-color: rgba(39,174,96,0.3);
+  color: var(--accent-green);
+  background: var(--accent-green-dim);
+}
+
+.panel-badge.amber {
+  border-color: rgba(212,134,10,0.3);
+  color: var(--accent-amber);
+  background: var(--accent-amber-dim);
+}
+
+.crime-list {
+  list-style: none;
+}
+
+.crime-item {
+  display: flex;
+  gap: 14px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+  align-items: flex-start;
+  transition: background 0.15s;
+}
+
+.crime-item:last-child {
+  border-bottom: none;
+}
+
+.crime-item:hover {
+  background: rgba(255,255,255,0.02);
+}
+
+.crime-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.crime-dot.red { background: var(--accent-red); }
+.crime-dot.amber { background: var(--accent-amber); }
+.crime-dot.green { background: var(--accent-green); }
+
+.crime-body {
+  flex: 1;
+}
+
+.crime-text {
+  font-size: 12px;
+  color: var(--text);
+  line-height: 1.6;
+  margin-bottom: 5px;
+}
+
+.crime-meta {
+  font-size: 10px;
+  color: var(--text3);
+}
+
+.crime-meta a {
+  color: var(--text3);
+  text-decoration: none;
+}
+
+.crime-meta a:hover {
+  color: var(--text2);
+  text-decoration: underline;
+}
+
+/* ── SALARY SECTION ── */
+.salary-section {
+  margin-bottom: 48px;
+}
+
+.salary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .salary-grid { grid-template-columns: 1fr; }
+}
+
+.salary-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  overflow: hidden;
+}
+
+.salary-card-header {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.salary-power-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.salary-power-icon.executivo { background: rgba(212,134,10,0.15); }
+.salary-power-icon.legislativo { background: rgba(39,174,96,0.12); }
+.salary-power-icon.judiciario { background: rgba(59,130,246,0.12); }
+
+.salary-power-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text2);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.salary-esfera {
+  font-size: 10px;
+  color: var(--text3);
+}
+
+.vote-list {
+  list-style: none;
+}
+
+.vote-item {
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+
+.vote-item:last-child { border-bottom: none; }
+
+.vote-item:hover { background: rgba(255,255,255,0.015); }
+
+.vote-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.vote-desc {
+  font-size: 11px;
+  color: var(--text);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.vote-pct {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent-amber);
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.vote-meta {
+  font-size: 10px;
+  color: var(--text3);
+  margin-top: 4px;
+}
+
+.vote-meta a {
+  color: var(--text3);
+  text-decoration: none;
+}
+
+.vote-meta a:hover {
+  color: var(--text2);
+  text-decoration: underline;
+}
+
+.vote-method {
+  display: inline-block;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-left: 6px;
+}
+
+.vote-method.simbolica {
+  background: rgba(192,57,43,0.12);
+  color: var(--accent-red);
+  border: 1px solid rgba(192,57,43,0.25);
+}
+
+.vote-method.nominal {
+  background: rgba(39,174,96,0.1);
+  color: var(--accent-green);
+  border: 1px solid rgba(39,174,96,0.25);
+}
+
+/* ── CONTRAST BAR ── */
+.contrast-block {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  padding: 28px 32px;
+  margin-bottom: 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contrast-block::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--accent-red);
+}
+
+.contrast-heading {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.contrast-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+@media (max-width: 640px) {
+  .contrast-row { grid-template-columns: 1fr; }
+}
+
+.contrast-col-label {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.contrast-col-label.red { color: var(--accent-red); }
+.contrast-col-label.green { color: var(--accent-green); }
+
+.contrast-col-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.3;
+}
+
+.contrast-stat {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.contrast-stat.red { color: var(--accent-red); }
+.contrast-stat.green { color: var(--accent-green); }
+
+.contrast-stat-desc {
+  font-size: 12px;
+  color: var(--text2);
+  line-height: 1.6;
+}
+
+/* ── VERDICT ── */
+.verdict-block {
+  background: var(--bg3);
+  border: 1px solid rgba(192,57,43,0.2);
+  border-radius: var(--r2);
+  padding: 28px 32px;
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.verdict-text {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.7;
+  color: var(--text2);
+}
+
+.verdict-text strong {
+  color: var(--accent-red);
+  font-weight: 700;
+}
+
+/* ── FULL WIDTH TABLE ── */
+.data-table-wrap {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  overflow: hidden;
+  margin-bottom: 48px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.data-table th {
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text3);
+  border-bottom: 1px solid var(--border);
+  font-weight: 500;
+  background: var(--bg3);
+}
+
+.data-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  vertical-align: top;
+}
+
+.data-table tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table tr:hover td {
+  background: rgba(255,255,255,0.015);
+}
+
+.data-table td.mono {
+  font-family: var(--font-mono);
+  color: var(--accent-amber);
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.data-table td.muted {
+  color: var(--text3);
+  font-size: 11px;
+}
+
+.data-table td a {
+  color: var(--text3);
+  text-decoration: none;
+}
+
+.data-table td a:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 3px;
+}
+
+.badge.simbolica {
+  background: rgba(192,57,43,0.1);
+  color: var(--accent-red);
+  border: 1px solid rgba(192,57,43,0.25);
+}
+
+.badge.urgencia {
+  background: rgba(212,134,10,0.1);
+  color: var(--accent-amber);
+  border: 1px solid rgba(212,134,10,0.3);
+}
+
+.badge.aprovado {
+  background: rgba(39,174,96,0.08);
+  color: var(--accent-green);
+  border: 1px solid rgba(39,174,96,0.25);
+}
+
+/* ── FOOTER ── */
+.footer {
+  border-top: 1px solid var(--border);
+  padding-top: 32px;
+  margin-top: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+@media (max-width: 600px) {
+  .footer { grid-template-columns: 1fr; }
+}
+
+.footer-label {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text3);
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-links li a {
+  font-size: 11px;
+  color: var(--text3);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.15s;
+}
+
+.footer-links li a:hover {
+  color: var(--text2);
+}
+
+.footer-links li a::before {
+  content: '↗';
+  font-size: 10px;
+  opacity: 0.5;
+}
+
+.update-stamp {
+  font-size: 10px;
+  color: var(--text3);
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero { animation: fadeIn 0.5s ease both; }
+.kpi-card { animation: fadeIn 0.5s ease both; }
+.kpi-card:nth-child(1) { animation-delay: 0.05s; }
+.kpi-card:nth-child(2) { animation-delay: 0.1s; }
+.kpi-card:nth-child(3) { animation-delay: 0.15s; }
+.kpi-card:nth-child(4) { animation-delay: 0.2s; }
+.kpi-card:nth-child(5) { animation-delay: 0.25s; }
+.kpi-card:nth-child(6) { animation-delay: 0.3s; }
+.kpi-card:nth-child(7) { animation-delay: 0.35s; }
+.kpi-card:nth-child(8) { animation-delay: 0.4s; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <div class="masthead-left">
+    <span class="masthead-flag">🇧🇷 Brasil</span>
+    <span style="color:var(--border2)">|</span>
+    <span class="masthead-title">O Brasil <em>Sangra</em></span>
+  </div>
+  <nav class="masthead-nav">
+    <a href="#violencia" class="nav-pill">Violência</a>
+    <a href="#salarios" class="nav-pill">Salários</a>
+    <a href="#contraste" class="nav-pill">Contraste</a>
+    <a href="#fontes" class="nav-pill">Fontes</a>
+  </nav>
+  <span class="masthead-date">ATUALIZADO · MAR 2026</span>
+</header>
+
+<!-- MAIN -->
+<main class="main">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-eyebrow">Painel de Dados Oficiais · Segurança Pública &amp; Remuneração do Estado</div>
+    <h1 class="hero-heading">O Brasil<br><em>sangra nas ruas</em></h1>
+    <p class="hero-sub">
+      Enquanto crianças são violadas a cada 8 minutos e feminicídios batem recordes históricos, o aparato estatal mobiliza recursos institucionais extraordinários para processar palavras em telas e votar reajustes salariais para si mesmo — em votações simbólicas, sem registro nominal, em regime de urgência.
+    </p>
+  </section>
+
+  <!-- KPIs VIOLÊNCIA -->
+  <section id="violencia">
+    <div class="section-header">
+      <span class="section-label">KPIs — Violência 2024</span>
+      <div class="section-line"></div>
+      <span class="section-count">Anuário Brasileiro de Segurança Pública 2025</span>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-label">Estupros registrados</div>
+        <div class="kpi-number">87.545</div>
+        <div class="kpi-desc">Recorde histórico da série. 76,8% das vítimas têm até 14 anos. 1 estupro a cada 6 minutos.</div>
+        <div class="kpi-src"><a href="https://sinpaf.org.br/violencia-mulher-anuario-2025/" target="_blank">↗ Anuário BSP 2025 via SINPAF</a></div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-label">Feminicídios</div>
+        <div class="kpi-number">1.492</div>
+        <div class="kpi-desc">Maior número desde 2015. 97% dos assassinos são homens. 80% eram companheiro ou ex.</div>
+        <div class="kpi-src"><a href="https://www.brasildefato.com.br/2025/07/24/feminicidios-injurias-raciais-e-violencia-contra-lgbt-crescem-no-brasil-aponta-anuario-de-seguranca-publica/" target="_blank">↗ Brasil de Fato · FBSP</a></div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-label">Crianças mortas (3 anos)</div>
+        <div class="kpi-number">15.000+</div>
+        <div class="kpi-desc">Mortes violentas de 0 a 19 anos entre 2021–2023. 165 mil vítimas de violência sexual no mesmo período.</div>
+        <div class="kpi-src"><a href="https://www.unicef.org/brazil/comunicados-de-imprensa/mais-de-15-mil-criancas-e-adolescentes-foram-mortos-de-forma-violenta-no-brasil-nos-ultimos-3-anos" target="_blank">↗ UNICEF + FBSP · Ago/2024</a></div>
+      </div>
+
+      <div class="kpi-card amber">
+        <div class="kpi-label">Medidas protetivas descumpridas</div>
+        <div class="kpi-number">101 mil</div>
+        <div class="kpi-desc">Em 2024. 121 mulheres assassinadas já tinham medida protetiva vigente no momento do crime.</div>
+        <div class="kpi-src"><a href="https://www.mprs.mp.br/noticias/evcm/63454/" target="_blank">↗ Anuário BSP 2025 via MPRS</a></div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-label">Estupro de vulnerável (+4 anos)</div>
+        <div class="kpi-number">+23,5%</div>
+        <div class="kpi-desc">Aumento de violência sexual contra crianças de até 4 anos entre 2022 e 2023. Faixa 5–9 anos: +17,3%.</div>
+        <div class="kpi-src"><a href="https://www.unicef.org/brazil/comunicados-de-imprensa/mais-de-15-mil-criancas-e-adolescentes-foram-mortos-de-forma-violenta-no-brasil-nos-ultimos-3-anos" target="_blank">↗ UNICEF · Panorama da Violência</a></div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-label">Letalidade policial</div>
+        <div class="kpi-number">6.243</div>
+        <div class="kpi-desc">Mortes causadas por policiais em 2024 — 14,1% do total de mortes violentas. SP: +61% no ano.</div>
+        <div class="kpi-src"><a href="https://www.andes.org.br/conteudos/noticia/brasil-tem-novo-recorde-de-casos-de-feminicidios-e-estupros-diz-fBSP1" target="_blank">↗ FBSP via ANDES</a></div>
+      </div>
+
+      <div class="kpi-card amber">
+        <div class="kpi-label">Estupros reais estimados (IPEA)</div>
+        <div class="kpi-number">~822 mil</div>
+        <div class="kpi-desc">Apenas 8,5% dos casos chegam à polícia. O dado oficial (87 mil) representa menos de 1/10 da realidade.</div>
+        <div class="kpi-src"><a href="https://www.ipea.gov.br/atlasviolencia/publicacoes" target="_blank">↗ IPEA · Atlas da Violência 2025</a></div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-label">Absolvição TJMG — 2026</div>
+        <div class="kpi-number">0 anos</div>
+        <div class="kpi-desc">Pena aplicada a homem de 35 anos por relações com menina de 12 anos. TJMG reconheceu "vínculo afetivo consensual".</div>
+        <div class="kpi-src"><a href="https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-02/estupro-de-vulneravel-decisao-do-tjmg-abre-precedente-perigoso" target="_blank">↗ Agência Brasil · Fev/2026</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CRIMES + PRIORIDADES -->
+  <section>
+    <div class="section-header">
+      <span class="section-label">Criminalidade vs. Prioridade do Estado</span>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="two-col">
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title">Crimes contra a pessoa — casos documentados</span>
+          <span class="panel-badge red">crítico</span>
+        </div>
+        <ul class="crime-list">
+          <li class="crime-item">
+            <div class="crime-dot red"></div>
+            <div class="crime-body">
+              <div class="crime-text">Criança ou adolescente vítima de estupro a cada 8 minutos no Brasil — 63.430 casos em 2023, crescimento constante</div>
+              <div class="crime-meta"><a href="https://www.unicef.org/brazil/comunicados-de-imprensa/mais-de-15-mil-criancas-e-adolescentes-foram-mortos-de-forma-violenta-no-brasil-nos-ultimos-3-anos" target="_blank">UNICEF + FBSP · Ago/2024</a></div>
+            </div>
+          </li>
+          <li class="crime-item">
+            <div class="crime-dot red"></div>
+            <div class="crime-body">
+              <div class="crime-text">TJMG inocenta homem de 35 anos por sexo com menina de 12 — "consentimento e vínculo afetivo" aceitos como defesa. Menina abandonou escola com aval da mãe</div>
+              <div class="crime-meta"><a href="https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-02/estupro-de-vulneravel-decisao-do-tjmg-abre-precedente-perigoso" target="_blank">Agência Brasil · Fev/2026 · Araguari, MG</a></div>
+            </div>
+          </li>
+          <li class="crime-item">
+            <div class="crime-dot red"></div>
+            <div class="crime-body">
+              <div class="crime-text">207 feminicídios em SP nos primeiros 10 meses de 2025 — maior índice desde 2018. 22 vítimas apenas em outubro</div>
+              <div class="crime-meta"><a href="https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2025-12/crimes-recentes-mostram-grave-cenario-de-violencia-contra-mulher" target="_blank">SSP-SP via Agência Brasil · Dez/2025</a></div>
+            </div>
+          </li>
+          <li class="crime-item">
+            <div class="crime-dot red"></div>
+            <div class="crime-body">
+              <div class="crime-text">Produção de material de abuso sexual infantil cresceu 14,1% em 2024 — recorde histórico na série</div>
+              <div class="crime-meta"><a href="https://sinpaf.org.br/violencia-mulher-anuario-2025/" target="_blank">Anuário BSP 2025 · FBSP</a></div>
+            </div>
+          </li>
+          <li class="crime-item">
+            <div class="crime-dot amber"></div>
+            <div class="crime-body">
+              <div class="crime-text">6.243 pessoas mortas pela polícia em 2024 — alta de 61% em SP após Operação Escudo. 60.394 em 10 anos</div>
+              <div class="crime-meta"><a href="https://www.andes.org.br/conteudos/noticia/brasil-tem-novo-recorde-de-casos-de-feminicidios-e-estupros-diz-fBSP1" target="_blank">FBSP · Anuário BSP 2025</a></div>
+            </div>
+          </li>
+          <li class="crime-item">
+            <div class="crime-dot amber"></div>
+            <div class="crime-body">
+              <div class="crime-text">Stalking +18,2% e violência psicológica +6,3% em 2024. Crimes sexuais online (pornografia): +13,1%</div>
+              <div class="crime-meta"><a href="https://www.brasildefato.com.br/2025/07/24/feminicidios-injurias-raciais-e-violencia-contra-lgbt-crescem-no-brasil-aponta-anuario-de-seguranca-publica/" target="_blank">FBSP · ANDES · Jul/2025</a></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title">Prioridade das autoridades — 2024–2026</span>
+          <span class="panel-badge green">ativo</span>
+        </div>
+        <ul class="crime-list">
+          <li class="crime-item">
+            <div class="crime-dot green"></div>
+            <div class="crime-body">
+              <div class="crime-text">STF aprova por 8×3 responsabilização das redes por "discurso de ódio" — 6 sessões plenárias dedicadas, Marco Civil reformulado</div>
+              <div class="crime-meta"><a href="https://agenciabrasil.ebc.com.br/justica/noticia/2025-06/stf-decide-que-redes-devem-ser-responsabilizadas-por-conteudos-ilegais" target="_blank">Agência Brasil · Jun/2025</a></div>
+            </div>
+          </li>
+          <li class="crime-item">
+            <div class="crime-dot green"></div>
+            <div class="crime-body">
+              <div class="crime-text">AGU aciona STF em regime de urgência para punir redes por desinformação — 9 ministérios envolvidos na proposta</div>
+              <div class="crime-meta"><a href="https://www.cnnbrasil.com.br/politica/governo-pede-que-stf-adote-medidas-contra-redes-sociais-por-desinformacao/" target="_blank">CNN Brasil · Mai/2025</a></div>
+            </div>
+          </li>
+          <li class="crime-item">
+            <div class="crime-dot green"></div>
+            <div class="crime-body">
+              <div class="crime-text">Moraes vota para obrigar plataformas a terem sede no Brasil e adotar transparência algorítmica. Critica "inconstitucionalização silenciosa"</div>
+              <div class="crime-meta"><a href="https://www.migalhas.com.br/quentes/433462/stf-redes-respondem-por-posts-mesmo-sem-ordem-judicial-veja-tese" target="_blank">Migalhas · Jun/2025</a></div>
+            </div>
+          </li>
+          <li class="crime-item">
+            <div class="crime-dot green"></div>
+            <div class="crime-body">
+              <div class="crime-text">Lula visita a China e pede que Pequim intervenha junto ao TikTok por "conteúdos nocivos" — pauta de viagem de Estado</div>
+              <div class="crime-meta"><a href="https://www.cnnbrasil.com.br/politica/regulamentacao-das-redes-sociais-mobiliza-planalto-congresso-e-stf/" target="_blank">CNN Brasil · Mai/2025</a></div>
+            </div>
+          </li>
+          <li class="crime-item">
+            <div class="crime-dot green"></div>
+            <div class="crime-body">
+              <div class="crime-text">Congresso aprova supersalários de até R$77mil para servidores — PL 179/2026 + PL 6070/2025 em votação simbólica sem registro nominal</div>
+              <div class="crime-meta"><a href="https://www.gazetadopovo.com.br/economia/congresso-aprova-reajuste-e-gratificacao-de-ate-100-servidores-camara-senado/" target="_blank">Gazeta do Povo · Fev/2026</a></div>
+            </div>
+          </li>
+          <li class="crime-item">
+            <div class="crime-dot green"></div>
+            <div class="crime-body">
+              <div class="crime-text">STF envia ao Congresso PL 4750/2025 para reajuste de 8%/ano (2026–2028) para servidores do Judiciário</div>
+              <div class="crime-meta"><a href="https://www.cartacapital.com.br/justica/stf-envia-projeto-ao-congresso-para-reajustar-os-salarios-dos-servidores-do-judiciario/" target="_blank">CartaCapital · Set/2025</a></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SALARY SECTION -->
+  <section id="salarios" style="margin-bottom: 48px;">
+    <div class="section-header">
+      <span class="section-label">Votações de Reajuste Salarial — 3 Esferas de Poder</span>
+      <div class="section-line"></div>
+      <span class="section-count">Federal · Estadual · Municipal</span>
+    </div>
+
+    <!-- TABELA COMPLETA -->
+    <div class="data-table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Votação / Medida</th>
+            <th>Poder</th>
+            <th>Esfera</th>
+            <th>Reajuste</th>
+            <th>Valores (R$)</th>
+            <th>Método</th>
+            <th>Data</th>
+            <th>Fonte</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>PDL 471/2022 — subsídios de parlamentares, Presidente, ministros de Estado</td>
+            <td>Executivo + Legislativo</td>
+            <td class="muted">Federal</td>
+            <td class="mono">+37,4%</td>
+            <td class="muted">R$33.763 → R$46.366 (escalonado 2023–2025)</td>
+            <td><span class="badge simbolica">Simbólica</span></td>
+            <td class="muted">Dez/2022</td>
+            <td class="muted"><a href="https://www.camara.leg.br/noticias/930619-camara-aprova-reajuste-de-subsidios-do-presidente-da-republica-de-parlamentares-e-ministros-de-estado/" target="_blank">↗ Câmara</a></td>
+          </tr>
+          <tr>
+            <td>Lei 14.520/2023 — subsídio dos ministros do STF (teto do funcionalismo)</td>
+            <td>Judiciário</td>
+            <td class="muted">Federal</td>
+            <td class="mono">+18%</td>
+            <td class="muted">R$39.293 → R$46.366 | Efeito cascata: R$255mi no Judiciário</td>
+            <td><span class="badge simbolica">Simbólica</span></td>
+            <td class="muted">Jan/2023</td>
+            <td class="muted"><a href="https://www.camara.leg.br/noticias/933771-sancionadas-leis-que-reajustam-salario-de-servidores-publicos-de-ministros-do-stf-e-de-outras-autoridades/" target="_blank">↗ Câmara</a></td>
+          </tr>
+          <tr>
+            <td>Lei 14.523/2023 — servidores do Judiciário federal</td>
+            <td>Judiciário</td>
+            <td class="muted">Federal</td>
+            <td class="mono">+18,36%</td>
+            <td class="muted">6% em fev/23 + 6% fev/24 + 6,13% fev/25 | Cascata estadual: desembargadores a R$41.845</td>
+            <td><span class="badge simbolica">Simbólica</span></td>
+            <td class="muted">Jan/2023</td>
+            <td class="muted"><a href="https://sinfrerj.com.br/conteudo/2593/reajuste-a-ministros-do-stf-vai-provocar-efeito-cascata-nos-salarios-de-servidores" target="_blank">↗ SINFRERJ</a></td>
+          </tr>
+          <tr>
+            <td>MP 1286/2024 — reestruturação de 38 carreiras do Executivo federal</td>
+            <td>Executivo</td>
+            <td class="muted">Federal</td>
+            <td class="mono">9–34%</td>
+            <td class="muted">9% em 2025 + 9% em 2026 (piso). Algumas carreiras: até +34% nos níveis iniciais</td>
+            <td><span class="badge aprovado">Aprovado</span></td>
+            <td class="muted">Mai/2025</td>
+            <td class="muted"><a href="https://www.camara.leg.br/noticias/1161067-camara-aprova-projeto-que-reajusta-salarios-e-reestrutura-carreiras-de-servidores-do-executivo-federal/" target="_blank">↗ Câmara</a></td>
+          </tr>
+          <tr>
+            <td>PL 179/2026 — servidores da Câmara dos Deputados (GDAE + licença compensatória)</td>
+            <td>Legislativo</td>
+            <td class="muted">Federal</td>
+            <td class="mono">+9,25% + até 100% GDAE</td>
+            <td class="muted">Remuneração pode chegar a R$77.000 (acima do teto por indenizações IR-free)</td>
+            <td><span class="badge simbolica">Simbólica</span> <span class="badge urgencia">Urgência</span></td>
+            <td class="muted">Fev/2026</td>
+            <td class="muted"><a href="https://www.gazetadopovo.com.br/economia/congresso-aprova-reajuste-e-gratificacao-de-ate-100-servidores-camara-senado/" target="_blank">↗ Gazeta do Povo</a></td>
+          </tr>
+          <tr>
+            <td>PL 6070/2025 — servidores do Senado Federal (reestruturação escalonada 2026–2029)</td>
+            <td>Legislativo</td>
+            <td class="muted">Federal</td>
+            <td class="mono">até +76%</td>
+            <td class="muted">Nível 1: R$3.334 → R$5.863 até 2029 | Nível 3: R$13.753 → R$24.181</td>
+            <td><span class="badge simbolica">Simbólica</span> <span class="badge urgencia">Urgência</span></td>
+            <td class="muted">Fev/2026</td>
+            <td class="muted"><a href="https://www.poder360.com.br/poder-congresso/salarios-do-congresso-poderao-chegar-a-r-61-800-com-reajuste-fora-do-teto/" target="_blank">↗ Poder360</a></td>
+          </tr>
+          <tr>
+            <td>PL 4750/2025 (STF→Congresso) — servidores do Judiciário da União (perda 24,21% inflação)</td>
+            <td>Judiciário</td>
+            <td class="muted">Federal</td>
+            <td class="mono">+8%/ano × 3</td>
+            <td class="muted">8% em jul/26, 8% jul/27, 8% jul/28 | Ministros do STF excluídos (já no teto)</td>
+            <td><span class="badge aprovado">Em tramitação</span></td>
+            <td class="muted">Set/2025</td>
+            <td class="muted"><a href="https://anajustrafederal.org.br/noticias/parlamentar/2025/09/stf-envia-ao-congresso-projeto-para-reajuste-salarial-do-judiciario-veja-percentuais" target="_blank">↗ ANAJUSTRA</a></td>
+          </tr>
+          <tr>
+            <td>Efeito cascata estadual — desembargadores dos TJs (teto subteto = 90,25% do STF)</td>
+            <td>Judiciário</td>
+            <td class="muted">Estadual</td>
+            <td class="mono">+18%</td>
+            <td class="muted">R$35.462 → R$41.845 (automático após reajuste STF 2023)</td>
+            <td><span class="badge aprovado">Automático</span></td>
+            <td class="muted">2023–2025</td>
+            <td class="muted"><a href="https://sinfrerj.com.br/conteudo/2593/reajuste-a-ministros-do-stf-vai-provocar-efeito-cascata-nos-salarios-de-servidores" target="_blank">↗ SINFRERJ</a></td>
+          </tr>
+          <tr>
+            <td>Supersalários estaduais — juízes de TJs acima do teto via "penduricalhos" e benefícios</td>
+            <td>Judiciário</td>
+            <td class="muted">Estadual</td>
+            <td class="mono">2× teto</td>
+            <td class="muted">Juízes auxiliares de ministros do STF ganham mais que os próprios ministros por verbas estaduais</td>
+            <td><span class="badge simbolica">Estrutural</span></td>
+            <td class="muted">Crônico</td>
+            <td class="muted"><a href="https://www.migalhas.com.br/quentes/423479/enquanto-juizes-de-tjs-tem-supersalarios-stj-e-stf-respeitam-teto" target="_blank">↗ Migalhas</a></td>
+          </tr>
+          <tr>
+            <td>Prefeitos e vereadores — reajustes municipais vinculados ao subsídio estadual (Lei Orgânica)</td>
+            <td>Executivo + Legislativo</td>
+            <td class="muted">Municipal</td>
+            <td class="mono">Variável</td>
+            <td class="muted">Câmaras municipais fixam salários próprios; maioria aprova na última sessão do mandato anterior</td>
+            <td><span class="badge simbolica">Simbólica</span></td>
+            <td class="muted">Recorrente</td>
+            <td class="muted"><a href="https://www.congressoemfoco.com.br/noticia/116126/salarios-do-legislativo-veja-a-posicao-de-cada-partido-na-votacao" target="_blank">↗ Congresso em Foco</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- SALARY CARDS POR PODER -->
+    <div class="salary-grid">
+      <div class="salary-card">
+        <div class="salary-card-header">
+          <div class="salary-power-icon executivo">⚡</div>
+          <div>
+            <div class="salary-power-name">Executivo</div>
+            <div class="salary-esfera">Federal · Estadual · Municipal</div>
+          </div>
+        </div>
+        <ul class="vote-list">
+          <li class="vote-item">
+            <div class="vote-top">
+              <div class="vote-desc">Presidente da República — reajuste escalonado aprovado em dezembro/2022 "no apagar das luzes"</div>
+              <div class="vote-pct">+37,4%</div>
+            </div>
+            <div class="vote-meta">R$30.900 → R$46.366 · <span class="vote-method simbolica">Simbólica</span> · <a href="https://www.metropoles.com/brasil/camara-aprova-aumento-de-salario-de-presidente-ministros-e-parlamentares" target="_blank">↗ Metrópoles</a></div>
+          </li>
+          <li class="vote-item">
+            <div class="vote-top">
+              <div class="vote-desc">Ministros de Estado — subsídio equalizado ao teto do STF (R$46.366)</div>
+              <div class="vote-pct">+37,4%</div>
+            </div>
+            <div class="vote-meta">Escalonado 2023–2025 · <span class="vote-method simbolica">Simbólica</span> · <a href="https://www.camara.leg.br/noticias/930619-camara-aprova-reajuste-de-subsidios-do-presidente-da-republica-de-parlamentares-e-ministros-de-estado/" target="_blank">↗ Câmara</a></div>
+          </li>
+          <li class="vote-item">
+            <div class="vote-top">
+              <div class="vote-desc">38 carreiras do funcionalismo federal — MP 1286/2024 (greves e negociações em 2024)</div>
+              <div class="vote-pct">9–34%</div>
+            </div>
+            <div class="vote-meta">Aprovado mai/2025 · retroativo jan/2025 · <a href="https://www.camara.leg.br/noticias/1161067-camara-aprova-projeto-que-reajusta-salarios-e-reestrutura-carreiras-de-servidores-do-executivo-federal/" target="_blank">↗ Câmara</a></div>
+          </li>
+          <li class="vote-item">
+            <div class="vote-top">
+              <div class="vote-desc">Governadores (subteto estadual) — impacto automático do reajuste do STF via efeito cascata</div>
+              <div class="vote-pct">+18%</div>
+            </div>
+            <div class="vote-meta">2023–2025 · Automático constitucional · <a href="https://sinfrerj.com.br/conteudo/2593/reajuste-a-ministros-do-stf-vai-provocar-efeito-cascata-nos-salarios-de-servidores" target="_blank">↗ SINFRERJ</a></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="salary-card">
+        <div class="salary-card-header">
+          <div class="salary-power-icon legislativo">⚖</div>
+          <div>
+            <div class="salary-power-name">Legislativo</div>
+            <div class="salary-esfera">Federal · Estadual · Municipal</div>
+          </div>
+        </div>
+        <ul class="vote-list">
+          <li class="vote-item">
+            <div class="vote-top">
+              <div class="vote-desc">Deputados federais e senadores — PDL 471/2022, 4 etapas até 2025</div>
+              <div class="vote-pct">+37,4%</div>
+            </div>
+            <div class="vote-meta">R$33.763 → R$46.366 · <span class="vote-method simbolica">Simbólica</span> · <a href="https://www.cnnbrasil.com.br/politica/salario-dos-parlamentares-brasileiros-e-15-vezes-maior-que-renda-da-populacao/" target="_blank">↗ CNN Brasil · 15× renda média</a></div>
+          </li>
+          <li class="vote-item">
+            <div class="vote-top">
+              <div class="vote-desc">Servidores da Câmara — PL 179/2026 com GDAE (40–100% salário) + licença compensatória indenizável</div>
+              <div class="vote-pct">até R$77K</div>
+            </div>
+            <div class="vote-meta">Acima do teto via indenizações · <span class="vote-method simbolica">Simbólica</span> · urgência · sem comissões · <a href="https://www.congressoemfoco.com.br/noticia/116126/salarios-do-legislativo-veja-a-posicao-de-cada-partido-na-votacao" target="_blank">↗ Congresso em Foco</a></div>
+          </li>
+          <li class="vote-item">
+            <div class="vote-top">
+              <div class="vote-desc">Servidores do Senado — PL 6070/2025, reestruturação escalonada 2026–2029</div>
+              <div class="vote-pct">+76%</div>
+            </div>
+            <div class="vote-meta">Nível 3: R$13.753 → R$24.181 até 2029 · <span class="vote-method simbolica">Simbólica</span> · <a href="https://www.poder360.com.br/poder-congresso/salarios-do-congresso-poderao-chegar-a-r-61-800-com-reajuste-fora-do-teto/" target="_blank">↗ Poder360</a></div>
+          </li>
+          <li class="vote-item">
+            <div class="vote-top">
+              <div class="vote-desc">Vereadores e deputados estaduais — reajustes locais aprovados por lei orgânica municipal/estadual</div>
+              <div class="vote-pct">variável</div>
+            </div>
+            <div class="vote-meta">Vinculados ao subteto estadual · aprovações recorrentes no fim de mandato · <a href="https://novo.org.br/noticias/camara-senado-aprovam-supersalarios-77-mil-servidores/" target="_blank">↗ Partido Novo</a></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="salary-card">
+        <div class="salary-card-header">
+          <div class="salary-power-icon judiciario">⚔</div>
+          <div>
+            <div class="salary-power-name">Judiciário</div>
+            <div class="salary-esfera">Federal · Estadual · Municipal</div>
+          </div>
+        </div>
+        <ul class="vote-list">
+          <li class="vote-item">
+            <div class="vote-top">
+              <div class="vote-desc">Ministros do STF — Lei 14.520/2023 (teto do funcionalismo, referência nacional)</div>
+              <div class="vote-pct">+18%</div>
+            </div>
+            <div class="vote-meta">R$39.293 → R$46.366 · efeito cascata R$255mi · <span class="vote-method simbolica">Simbólica</span> · <a href="https://www12.senado.leg.br/noticias/materias/2022/12/21/aprovado-aumento-na-remuneracao-dos-ministros-do-stf-de-membros-da-dpu-e-da-pgr" target="_blank">↗ Senado</a></div>
+          </li>
+          <li class="vote-item">
+            <div class="vote-top">
+              <div class="vote-desc">Servidores do Judiciário federal — Lei 14.523/2023 (mesmos percentuais do STF)</div>
+              <div class="vote-pct">+18,36%</div>
+            </div>
+            <div class="vote-meta">3 parcelas · 2023–2025 · impacto cascata na magistratura estadual · <a href="https://www.camara.leg.br/noticias/933771-sancionadas-leis-que-reajustam-salario-de-servidores-publicos-de-ministros-do-stf-e-de-outras-autoridades/" target="_blank">↗ Câmara</a></div>
+          </li>
+          <li class="vote-item">
+            <div class="vote-top">
+              <div class="vote-desc">Novo reajuste Judiciário — PL 4750/2025 enviado por Barroso ao Congresso (8% ao ano por 3 anos)</div>
+              <div class="vote-pct">+24%+ </div>
+            </div>
+            <div class="vote-meta">jul/2026, 27, 28 · recompor perda de 24,21% desde 2019 · <a href="https://www.cartacapital.com.br/justica/stf-envia-projeto-ao-congresso-para-reajustar-os-salarios-dos-servidores-do-judiciario/" target="_blank">↗ CartaCapital</a></div>
+          </li>
+          <li class="vote-item">
+            <div class="vote-top">
+              <div class="vote-desc">Desembargadores estaduais — subteto 90,25% do STF. TJs pagam acima via "penduricalhos" e benefícios</div>
+              <div class="vote-pct">&gt;2× teto</div>
+            </div>
+            <div class="vote-meta">Juízes aux. do STF ganham mais que ministros · estrutural · <a href="https://www.migalhas.com.br/quentes/423479/enquanto-juizes-de-tjs-tem-supersalarios-stj-e-stf-respeitam-teto" target="_blank">↗ Migalhas</a></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTRASTE -->
+  <section id="contraste">
+    <div class="section-header">
+      <span class="section-label">O Contraste</span>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="contrast-block" style="margin-bottom:8px;">
+      <div class="contrast-heading">Votos simbólicos, sem registro nominal, em regime de urgência</div>
+      <div class="contrast-row">
+        <div>
+          <div class="contrast-col-label red">O que o Estado faz</div>
+          <div class="contrast-stat red">6 sessões</div>
+          <div class="contrast-stat-desc">do STF dedicadas a regulamentar "discurso de ódio" nas redes sociais. PDL 471/2022 aprovado na última semana do recesso, em votação simbólica, sem registro de quem votou.</div>
+        </div>
+        <div>
+          <div class="contrast-col-label green">O que o Estado ignora</div>
+          <div class="contrast-stat green">822 mil</div>
+          <div class="contrast-stat-desc">estupros estimados por ano (IPEA). Apenas 8,5% chegam à polícia. Uma criança violada a cada 8 minutos. 101 mil medidas protetivas descumpridas em 2024.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contrast-block">
+      <div class="contrast-heading">A distância entre Brasília e o cidadão</div>
+      <div class="contrast-row">
+        <div>
+          <div class="contrast-col-label red">Salário dos parlamentares</div>
+          <div class="contrast-stat red">R$46.366</div>
+          <div class="contrast-stat-desc">Subsídio de deputados e senadores após reajuste de 37,4% aprovado em votação simbólica. Com penduricalhos aprovados em 2026, servidores do Congresso podem chegar a R$77.000.</div>
+        </div>
+        <div>
+          <div class="contrast-col-label green">Renda média do brasileiro</div>
+          <div class="contrast-stat green">R$2.737</div>
+          <div class="contrast-stat-desc">Segundo o IPEA/PNAD. O salário parlamentar é 15,2× maior que a renda média nacional. O salário mínimo em 2025 é R$1.518 — o subsídio parlamentar equivale a 30,5 salários mínimos.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VERDICT -->
+  <div class="verdict-block">
+    <p class="verdict-text">
+      Em 2024, o Brasil registrou <strong>87.545 estupros</strong> — recorde histórico. <strong>1.492 feminicídios</strong>. <strong>15.000 crianças</strong> mortas violentamente em três anos. Uma menina de 12 anos tem seu agressor inocentado pelo TJMG por "consenso". A cada 6 minutos, alguém é violada. A cada 8 minutos, uma criança.<br><br>
+      No mesmo período, o aparato estatal aprovou reajustes de <strong>até 76% para si mesmo</strong>, em votações simbólicas sem registro de nomes, em regime de urgência, sem passar por comissões — enquanto mobilizava 6 sessões plenárias do STF e 9 ministérios para processar tweets.<br><br>
+      <strong>O Brasil sangra nas ruas. O verdadeiro crime, segundo as autoridades, é o post errado.</strong>
+    </p>
+  </div>
+
+  <!-- FONTES -->
+  <section id="fontes">
+    <div class="section-header">
+      <span class="section-label">Fontes &amp; Referências</span>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="footer">
+      <div>
+        <div class="footer-label">Violência &amp; Segurança Pública</div>
+        <ul class="footer-links">
+          <li><a href="https://sinpaf.org.br/violencia-mulher-anuario-2025/" target="_blank">Anuário Brasileiro de Segurança Pública 2025 — FBSP via SINPAF</a></li>
+          <li><a href="https://www.unicef.org/brazil/comunicados-de-imprensa/mais-de-15-mil-criancas-e-adolescentes-foram-mortos-de-forma-violenta-no-brasil-nos-ultimos-3-anos" target="_blank">UNICEF + FBSP — Panorama da Violência contra Crianças 2024</a></li>
+          <li><a href="https://www.ipea.gov.br/atlasviolencia/publicacoes" target="_blank">IPEA — Atlas da Violência 2025</a></li>
+          <li><a href="https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2025-12/crimes-recentes-mostram-grave-cenario-de-violencia-contra-mulher" target="_blank">Agência Brasil — Feminicídios SP 2025</a></li>
+          <li><a href="https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-02/estupro-de-vulneravel-decisao-do-tjmg-abre-precedente-perigoso" target="_blank">Agência Brasil — Decisão TJMG / Precedente Perigoso Fev/2026</a></li>
+          <li><a href="https://www.brasildefato.com.br/2025/07/24/feminicidios-injurias-raciais-e-violencia-contra-lgbt-crescem-no-brasil-aponta-anuario-de-seguranca-publica/" target="_blank">Brasil de Fato — Feminicídios e crimes raciais crescem (Jul/2025)</a></li>
+          <li><a href="https://www.andes.org.br/conteudos/noticia/brasil-tem-novo-recorde-de-casos-de-feminicidios-e-estupros-diz-fBSP1" target="_blank">ANDES — Novo recorde estupros e feminicídios FBSP</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-label">Reajustes Salariais &amp; Votações</div>
+        <ul class="footer-links">
+          <li><a href="https://www.gazetadopovo.com.br/economia/congresso-aprova-reajuste-e-gratificacao-de-ate-100-servidores-camara-senado/" target="_blank">Gazeta do Povo — PL 179/2026 supersalários R$77mil (Fev/2026)</a></li>
+          <li><a href="https://www.poder360.com.br/poder-congresso/salarios-do-congresso-poderao-chegar-a-r-61-800-com-reajuste-fora-do-teto/" target="_blank">Poder360 — Salários Congresso fora do teto</a></li>
+          <li><a href="https://www.congressoemfoco.com.br/noticia/116126/salarios-do-legislativo-veja-a-posicao-de-cada-partido-na-votacao" target="_blank">Congresso em Foco — Posição dos partidos na votação</a></li>
+          <li><a href="https://www.camara.leg.br/noticias/930619-camara-aprova-reajuste-de-subsidios-do-presidente-da-republica-de-parlamentares-e-ministros-de-estado/" target="_blank">Portal da Câmara — PDL 471/2022 (reajuste parlamentares)</a></li>
+          <li><a href="https://www.camara.leg.br/noticias/1161067-camara-aprova-projeto-que-reajusta-salarios-e-reestrutura-carreiras-de-servidores-do-executivo-federal/" target="_blank">Portal da Câmara — MP 1286/2024 (Executivo federal)</a></li>
+          <li><a href="https://www.cartacapital.com.br/justica/stf-envia-projeto-ao-congresso-para-reajustar-os-salarios-dos-servidores-do-judiciario/" target="_blank">CartaCapital — PL 4750/2025 STF envia reajuste ao Congresso</a></li>
+          <li><a href="https://www.migalhas.com.br/quentes/423479/enquanto-juizes-de-tjs-tem-supersalarios-stj-e-stf-respeitam-teto" target="_blank">Migalhas — Supersalários em TJs estaduais</a></li>
+          <li><a href="https://agenciabrasil.ebc.com.br/justica/noticia/2025-06/stf-decide-que-redes-devem-ser-responsabilizadas-por-conteudos-ilegais" target="_blank">Agência Brasil — STF responsabiliza redes por discurso de ódio</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="update-stamp">
+      PAINEL AUTÔNOMO — DADOS OFICIAIS — ATUALIZADO MARÇO 2026
+      · FÓRUM BRASILEIRO DE SEGURANÇA PÚBLICA · UNICEF · IPEA · CÂMARA DOS DEPUTADOS · SENADO FEDERAL · STF · AGÊNCIA BRASIL ·
+      Todos os dados são de domínio público e linkados às fontes originais.
+    </div>
+  </section>
+
+</main>
+
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

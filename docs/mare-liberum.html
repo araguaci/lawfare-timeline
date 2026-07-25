@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)file:///C:/Users/aragu/Downloads/mare-liberum.html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Operação Mare Liberum — Análise Transversal · lawfare-timeline</title>
+<meta name="description" content="R$ 86,6 bilhões. 17.000 declarações de importação irregulares. Porto do Rio. Mapeamento completo nos 7 padrões sistêmicos do corpus anticorrupção brasileiro.">
+<link rel="canonical" href="https://gosurf.site/mare-liberum">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Syne:wght@400;600;700;800&display=swap');
+
+:root {
+  --bg:  #09090b;
+  --bg2: #0f0f13;
+  --bg3: #16161c;
+  --bg4: #1e1e26;
+  --border:  #252530;
+  --border2: #333340;
+  --text:  #e6e4de;
+  --text2: #96948c;
+  --text3: #52504e;
+  --red:    #e83a3a;
+  --red2:   #ff6060;
+  --red-bg:  rgba(232,58,58,0.08);
+  --amber:  #e89820;
+  --amb-bg:  rgba(232,152,32,0.08);
+  --teal:    #26c870;
+  --tea-bg:  rgba(38,200,112,0.08);
+  --blue:    #3878ff;
+  --blu-bg:  rgba(56,120,255,0.08);
+  --purple:  #8858e8;
+  --pur-bg:  rgba(136,88,232,0.08);
+  --gray:    #6b6965;
+  --gra-bg:  rgba(107,105,101,0.08);
+  --font-m: 'IBM Plex Mono', monospace;
+  --font-d: 'Syne', sans-serif;
+  --mono: var(--font-m);
+  --serif: Georgia, 'Times New Roman', serif;
+  --display: var(--font-d);
+  --surface: var(--bg2);
+  --s2: var(--bg3);
+  --s3: var(--bg4);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.025) 2px, rgba(0,0,0,0.025) 4px);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ── HERO ───────────────────────────────────── */
+.hero {
+  position: relative;
+  padding: 48px 0 36px;
+  max-width: none;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -60px; left: -40px;
+  width: 500px; height: 300px;
+  background: radial-gradient(ellipse at 30% 40%, rgba(224,60,60,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-m);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 20px;
+}
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--red);
+  border-radius: 50%;
+  flex-shrink: 0;
+  animation: pulse-ml 2s infinite;
+}
+@keyframes pulse-ml {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.35; transform: scale(0.7); }
+}
+.hero h1 {
+  font-family: var(--display);
+  font-size: clamp(28px, 5vw, 46px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+.hero h1 em {
+  font-style: normal;
+  color: var(--red2);
+}
+.hero-lead {
+  font-size: 15px;
+  color: var(--text2);
+  max-width: 580px;
+  margin-bottom: 24px;
+  font-family: var(--serif);
+  font-style: italic;
+}
+.severity-band {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+.sev-item {
+  background: var(--bg2);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.sev-label {
+  font-family: var(--font-m);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text3);
+}
+.sev-value {
+  font-family: var(--font-d);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--red2);
+  line-height: 1.1;
+}
+.sev-desc {
+  font-family: var(--font-m);
+  font-size: 10px;
+  color: var(--text2);
+  line-height: 1.45;
+}
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text3);
+  padding-top: 20px;
+  border-top: 0.5px solid var(--border);
+}
+.meta-row a {
+  color: var(--text3);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.meta-row a:hover { color: var(--text2); }
+.meta-dot { color: var(--border2); }
+
+/* ── LAYOUT ─────────────────────────────────── */
+.wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px 100px;
+}
+.page {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sec-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text3);
+  margin: 36px 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.sec-label::after {
+  content: '';
+  flex: 1;
+  height: 0.5px;
+  background: var(--border);
+}
+
+/* Navegação: .tab-nav + âncoras (ver bloco sticky abaixo) */
+
+/* ── BADGES ─────────────────────────────────── */
+.badge {
+  display: inline-flex; align-items: center;
+  padding: 2px 9px; border-radius: 20px;
+  font-family: var(--mono); font-size: 10px; font-weight: 500;
+  border: 0.5px solid; margin: 2px; white-space: nowrap;
+}
+.b-ml  { background: var(--red-bg); color: #f07070; border-color: rgba(224,60,60,0.3); }
+.b-lj  { background: var(--blu-bg); color: #6aa0e8; border-color: rgba(61,136,216,0.3); }
+.b-co  { background: var(--tea-bg); color: #4ab890; border-color: rgba(26,157,114,0.3); }
+.b-pl  { background: var(--amb-bg); color: #e0a030; border-color: rgba(209,141,18,0.3); }
+.b-sa  { background: var(--pur-bg); color: #9d97e8; border-color: rgba(125,119,219,0.3); }
+.b-ca  { background: var(--gra-bg); color: #888580; border-color: rgba(107,105,101,0.3); }
+.b-bm  { background: rgba(208,80,40,0.08); color: #d0885a; border-color: rgba(208,80,40,0.3); }
+.b-risk { background: var(--red-bg); color: #f07070; border-color: rgba(224,60,60,0.3); border-style: dashed; }
+.b-new { background: var(--tea-bg); color: #4ab890; border-color: rgba(26,157,114,0.3); border-style: dashed; }
+
+/* ── PATTERN CARDS ──────────────────────────── */
+.pattern-list { display: flex; flex-direction: column; gap: 8px; }
+
+.pcard {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color 0.15s;
+}
+.pcard:hover { border-color: var(--border2); }
+.pcard.p-new { border-left: 2px solid var(--teal); }
+
+.pcard-head {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 13px 16px; cursor: pointer;
+  user-select: none;
+}
+.pcard-head:hover .pcard-toggle { opacity: 1; }
+
+.pnum {
+  font-family: var(--mono); font-size: 10px;
+  color: var(--text3); min-width: 28px; padding-top: 3px;
+}
+.pinfo { flex: 1; }
+.ptitle {
+  font-family: var(--display); font-weight: 600;
+  font-size: 14px; color: var(--text); margin-bottom: 2px;
+}
+.psub {
+  font-family: var(--mono); font-size: 11px;
+  color: var(--text3); margin-bottom: 7px;
+}
+.pbadges { display: flex; flex-wrap: wrap; gap: 2px; }
+
+.pstatus { margin-top: 3px; flex-shrink: 0; }
+.dot-full   { width: 8px; height: 8px; border-radius: 50%; background: var(--red); }
+.dot-strong { width: 8px; height: 8px; border-radius: 50%; background: var(--amber); }
+.dot-partial { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); }
+.dot-new    { width: 8px; height: 8px; border-radius: 50%; background: var(--text3); }
+
+.pcard-toggle {
+  font-family: var(--mono); font-size: 11px;
+  color: var(--text3); opacity: 0.6;
+  transition: opacity 0.15s, transform 0.2s;
+  padding-top: 2px;
+}
+.pcard-toggle.open { transform: rotate(90deg); opacity: 1; }
+
+.pcard-body {
+  display: none;
+  padding: 0 16px 16px 56px;
+  font-family: var(--serif); font-size: 14px;
+  color: var(--text2); line-height: 1.75;
+  border-top: 0.5px solid var(--border);
+}
+.pcard-body.open { display: block; }
+
+.callout {
+  margin-top: 12px;
+  padding: 11px 14px;
+  background: var(--s2);
+  border-left: 2px solid var(--red);
+  border-radius: 0 6px 6px 0;
+  font-size: 13px; line-height: 1.65;
+  color: var(--text2);
+}
+.callout.amber { border-left-color: var(--amber); }
+.callout.teal  { border-left-color: var(--teal); }
+.callout strong { color: var(--text); font-style: normal; }
+
+/* ── MATRIX ─────────────────────────────────── */
+.matrix-wrap { overflow-x: auto; border-radius: 10px; }
+table.mx {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.mx th, .mx td {
+  padding: 8px 10px;
+  text-align: center;
+  border-bottom: 0.5px solid var(--border);
+}
+.mx th {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text3);
+  background: var(--s2);
+  font-weight: 400;
+}
+.mx td:first-child {
+  text-align: left;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text2);
+  max-width: 160px;
+  padding-left: 14px;
+}
+.mx tr:last-child td { border-bottom: none; }
+.mx tr:hover td { background: rgba(255,255,255,0.015); }
+.mx .ml-th { color: var(--red2) !important; font-weight: 500; }
+.vc { writing-mode: vertical-rl; transform: rotate(180deg); min-width: 28px; padding: 10px 4px !important; }
+.c-full    { color: var(--red2); font-size: 16px; }
+.c-strong  { color: var(--amber); font-size: 14px; }
+.c-partial { color: var(--teal); font-size: 13px; }
+.c-none    { color: var(--text3); font-size: 11px; }
+
+/* matrix alert */
+.mx-note {
+  margin-top: 12px;
+  padding: 12px 16px;
+  background: var(--s2);
+  border: 0.5px solid var(--border);
+  border-left: 2px solid var(--red);
+  border-radius: 0 8px 8px 0;
+  font-size: 13px; color: var(--text2); line-height: 1.65;
+}
+.mx-note strong { color: var(--text); }
+
+/* legend */
+.legend {
+  display: flex; flex-wrap: wrap; gap: 14px;
+  align-items: center;
+  padding: 10px 14px;
+  background: var(--s2);
+  border: 0.5px solid var(--border);
+  border-radius: 8px;
+  margin-top: 10px;
+  font-family: var(--mono); font-size: 11px; color: var(--text3);
+}
+.leg-item { display: flex; align-items: center; gap: 5px; }
+
+/* ── CONNECTIONS ─────────────────────────────── */
+.conn-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 10px;
+  margin-top: 4px;
+}
+.ccard {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  transition: border-color 0.15s;
+}
+.ccard:hover { border-color: var(--border2); }
+.ccard-head { display: flex; align-items: center; gap: 8px; margin-bottom: 7px; }
+.ctitle { font-family: var(--display); font-size: 13px; font-weight: 600; color: var(--text); }
+.cbody { font-family: var(--serif); font-size: 13px; color: var(--text2); line-height: 1.65; }
+.cnew {
+  background: var(--tea-bg);
+  border-color: rgba(26,157,114,0.2);
+}
+
+/* ── GAPS ───────────────────────────────────── */
+.gap-list { display: flex; flex-direction: column; gap: 8px; }
+.gcard {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.gcard-head {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 13px 16px; cursor: pointer; user-select: none;
+}
+.gnum {
+  font-family: var(--mono); font-size: 10px;
+  color: var(--text3); min-width: 28px; padding-top: 2px;
+}
+.gtitle { font-family: var(--display); font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+.gsub   { font-family: var(--mono); font-size: 11px; color: var(--text3); }
+.gstatus { font-family: var(--mono); font-size: 10px; padding: 2px 8px; border-radius: 12px; white-space: nowrap; margin-top: 2px; }
+.g-open    { background: var(--red-bg); color: var(--red2); border: 0.5px solid rgba(224,60,60,0.3); }
+.g-partial { background: var(--amb-bg); color: var(--amber); border: 0.5px solid rgba(209,141,18,0.3); }
+.g-resolved { background: var(--tea-bg); color: var(--teal); border: 0.5px solid rgba(26,157,114,0.3); }
+.g-new  { background: var(--blu-bg); color: var(--blue); border: 0.5px solid rgba(61,136,216,0.3); }
+.gcard-body {
+  display: none;
+  padding: 0 16px 16px 56px;
+  font-family: var(--serif); font-size: 14px;
+  color: var(--text2); line-height: 1.75;
+  border-top: 0.5px solid var(--border);
+}
+.gcard-body.open { display: block; }
+
+/* ── RELATED LINKS ──────────────────────────── */
+.rel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 8px;
+}
+.rlink {
+  display: block;
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+.rlink:hover {
+  border-color: var(--border2);
+  background: var(--s2);
+}
+.rlink-title {
+  font-family: var(--display);
+  font-size: 13px; font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+  line-height: 1.35;
+}
+.rlink-tag {
+  font-family: var(--mono); font-size: 10px;
+  color: var(--text3); letter-spacing: 0.08em;
+}
+.rlink-arrow {
+  float: right;
+  color: var(--text3); font-size: 12px;
+  margin-top: 2px;
+}
+.rlink.highlight-link {
+  border-color: rgba(26,157,114,0.25);
+  background: rgba(26,157,114,0.04);
+}
+.rlink.highlight-link .rlink-title { color: #5acba0; }
+
+/* ── FOOTER ─────────────────────────────────── */
+.footer {
+  border-top: 1px solid var(--border);
+  margin-top: 56px;
+  padding-top: 24px;
+  padding-bottom: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-m);
+  font-size: 11px;
+  color: var(--text3);
+}
+.footer a { color: var(--text3); text-decoration: none; }
+.footer a:hover { color: var(--text2); }
+
+/* ── SOURCES ─────────────────────────────────── */
+.src-list { display: flex; flex-direction: column; gap: 6px; }
+.src-item {
+  display: flex; gap: 10px; align-items: flex-start;
+  padding: 10px 14px;
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: 8px; font-size: 12px;
+}
+.src-n { font-family: var(--mono); color: var(--text3); min-width: 22px; }
+.src-body { flex: 1; }
+.src-title { color: var(--text2); text-decoration: none; }
+.src-title:hover { color: var(--text); }
+.src-meta { font-family: var(--mono); font-size: 10px; color: var(--text3); margin-top: 2px; }
+.src-badge {
+  font-family: var(--mono); font-size: 9px; padding: 1px 6px;
+  border-radius: 10px; margin-right: 4px;
+}
+.sb-pf   { background: var(--blu-bg); color: var(--blue); border: 0.5px solid rgba(61,136,216,0.3); }
+.sb-rfb  { background: var(--tea-bg); color: var(--teal); border: 0.5px solid rgba(26,157,114,0.3); }
+.sb-imp  { background: var(--amb-bg); color: var(--amber); border: 0.5px solid rgba(209,141,18,0.3); }
+
+/* ═══ NAVEGAÇÃO LONGA · STICKY + SCROLLSPY (referência duplo-padrão-judicial) ═══ */
+.tab-panel {
+  display: block !important;
+}
+
+.tab-panel + .tab-panel {
+  border-top: 1px solid var(--border);
+  padding-top: 44px;
+  margin-top: 52px;
+}
+
+.tab-panel {
+  scroll-margin-top: 56px;
+}
+
+.tab-nav {
+  display: flex;
+  gap: 2px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: rgba(9, 9, 11, 0.97);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 2px solid var(--border2);
+  margin-left: -24px;
+  margin-right: -24px;
+  margin-bottom: 36px;
+  padding: 0 24px;
+}
+
+.tab-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-nav .tab-btn {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 12px 14px;
+  font-family: var(--font-m);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text3);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s, border-color 0.2s;
+  margin-bottom: -2px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 0;
+}
+
+.tab-nav .tab-btn:hover {
+  color: var(--text2);
+}
+
+.tab-nav .tab-btn.active {
+  color: var(--text);
+  border-bottom-color: var(--red);
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9998;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--red);
+  width: 0%;
+}
+
+.go-top {
+  position: fixed;
+  right: 18px;
+  bottom: 22px;
+  z-index: 250;
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: rgba(15, 15, 19, 0.96);
+  color: var(--text2);
+  cursor: pointer;
+  font-family: var(--font-m);
+  font-size: 17px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s, border-color 0.15s, color 0.15s;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.go-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.go-top:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.go-top:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+  .wrap { padding-left: 16px; padding-right: 16px; }
+  .tab-nav { margin-left: -16px; margin-right: -16px; padding: 0 16px; }
+  .go-top { right: 12px; bottom: 16px; }
+  .pcard-body { padding-left: 16px; }
+  .gcard-body { padding-left: 16px; }
+  .conn-grid  { grid-template-columns: 1fr; }
+  .rel-grid   { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="progress-bar"><div class="progress-fill" id="prog"></div></div>
+<button type="button" class="go-top" id="go-top" aria-label="Voltar ao topo">↑</button>
+
+<div class="wrap">
+
+<!-- ══════ HERO ══════ -->
+<div class="hero">
+  <div class="hero-eyebrow"><span class="pulse-dot" aria-hidden="true"></span> lawfare-timeline · deflagrada em 28 abr 2026</div>
+  <h1>Operação<br><em>Mare Liberum</em></h1>
+  <p class="hero-lead">Porto do Rio. 17 mil declarações de importação irregulares. Maior operação da história da Corregedoria da Receita Federal. Análise transversal nos 7 padrões sistêmicos do corpus anticorrupção brasileiro.</p>
+  <div class="severity-band">
+    <div class="sev-item"><span class="sev-value">R$ 86,6B</span><span class="sev-label">Mercadorias irregulares</span><span class="sev-desc">Volume citado pela Receita / imprensa</span></div>
+    <div class="sev-item"><span class="sev-value">17.000</span><span class="sev-label">Declarações de importação</span><span class="sev-desc">Volume do acervo irregular</span></div>
+    <div class="sev-item"><span class="sev-value">25</span><span class="sev-label">Servidores afastados</span><span class="sev-desc">Auditores + analistas (deflagração)</span></div>
+    <div class="sev-item"><span class="sev-value">R$ 102M</span><span class="sev-label">Bens bloqueados</span><span class="sev-desc">Medida cautelar</span></div>
+    <div class="sev-item"><span class="sev-value">R$ 500M</span><span class="sev-label">Prejuízo fiscal estimado</span><span class="sev-desc">Faixa inicial</span></div>
+    <div class="sev-item"><span class="sev-value">5,5/7</span><span class="sev-label">Padrões sistêmicos ativos</span><span class="sev-desc">Este dossiê</span></div>
+  </div>
+  <div class="meta-row">
+    <span>PF · GAECO/MPF · Corregedoria RFB</span>
+    <span class="meta-dot">·</span>
+    <span>Jul/2021 – Mar/2026</span>
+    <span class="meta-dot">·</span>
+    <span>RJ · ES</span>
+    <span class="meta-dot">·</span>
+    <a href="https://gosurf.site/" target="_blank" rel="noopener">gosurf.site</a>
+    <span class="meta-dot">·</span>
+    <span>CC0 1.0 — domínio público</span>
+  </div>
+</div>
+
+<!-- ══════ CORPO ══════ -->
+<div class="page">
+
+  <nav class="tab-nav" id="sticky-nav" aria-label="Seções do dossiê">
+    <a class="tab-btn active" href="#tab-padroes">01 · Padrões</a>
+    <a class="tab-btn" href="#tab-matrix">02 · Matriz</a>
+    <a class="tab-btn" href="#tab-conexoes">03 · Conexões</a>
+    <a class="tab-btn" href="#tab-lacunas">04 · Lacunas</a>
+    <a class="tab-btn" href="#tab-fontes">05 · Fontes</a>
+    <a class="tab-btn" href="#tab-relacionados">06 · Relacionados</a>
+  </nav>
+
+  <!-- ═══ TAB: PADRÕES ═══ -->
+  <div id="tab-padroes" class="tab-panel">
+
+    <div class="sec-label">Lenda de status</div>
+    <div class="legend">
+      <span class="leg-item"><span class="dot-full"></span> Documentado na deflagração</span>
+      <span class="leg-item"><span class="dot-strong"></span> Forte evidência estrutural</span>
+      <span class="leg-item"><span class="dot-partial"></span> Latente / a confirmar</span>
+      <span class="leg-item"><span class="dot-new"></span> Novo padrão do corpus</span>
+    </div>
+
+    <div class="sec-label" style="margin-top:24px">6 padrões históricos + 1 emergente</div>
+    <div class="pattern-list">
+
+      <!-- P01 -->
+      <div class="pcard">
+        <div class="pcard-head" onclick="toggle(this)">
+          <span class="pnum">P01</span>
+          <div class="pinfo">
+            <div class="ptitle">Anulação por vício processual</div>
+            <div class="psub">Estratégia defensiva padrão — atacar o rito, nunca o mérito</div>
+            <div class="pbadges">
+              <span class="badge b-lj">LJ</span>
+              <span class="badge b-ca">CA</span>
+              <span class="badge b-sa">SA</span>
+              <span class="badge b-bm">BM</span>
+              <span class="badge b-risk">ML → risco imediato</span>
+            </div>
+          </div>
+          <div class="pstatus"><span class="dot-strong"></span></div>
+          <span class="pcard-toggle">▶</span>
+        </div>
+        <div class="pcard-body">
+          Na Mare Liberum, a cadeia de custódia está sob pressão imediata: <strong>17 auditores fiscais e 8 analistas tributários afastados em um único dia</strong>. Operações com afastamentos em massa criam oportunidade defensiva clássica — cada um dos 25 servidores tem advogado próprio, interesses divergentes e potencial de questionar separadamente a legalidade do monitoramento interno que originou o caso (conduzido pela Corregedoria da RFB desde fev/2022, sem mandado judicial declarado até a deflagração).
+          <div class="callout">
+            <strong>Vetor de risco preciso:</strong> A Corregedoria da Receita atuou por 4 anos internamente. Se qualquer fase do monitoramento não tiver suporte legal explícito para coleta de provas, a defesa tem um alvo — exatamente como a participação informal da ABIN derrubou a Satiagraha. O histórico processual de 17.000 declarações também pode ser fragmentado em episódios individuais, multiplicando os pontos de ataque.
+          </div>
+        </div>
+      </div>
+
+      <!-- P02 -->
+      <div class="pcard">
+        <div class="pcard-head" onclick="toggle(this)">
+          <span class="pnum">P02</span>
+          <div class="pinfo">
+            <div class="ptitle">O investigador vira investigado</div>
+            <div class="psub">Polo da persecução se inverte — padrão com lag de 12–24 meses</div>
+            <div class="pbadges">
+              <span class="badge b-sa">SA — Protógenes</span>
+              <span class="badge b-lj">LJ — Moro · Dallagnol</span>
+              <span class="badge b-bm">BM — Andrei Rodrigues</span>
+              <span class="badge b-risk">ML → latente</span>
+            </div>
+          </div>
+          <div class="pstatus"><span class="dot-partial"></span></div>
+          <span class="pcard-toggle">▶</span>
+        </div>
+        <div class="pcard-body">
+          Não ativado ainda na Mare Liberum, mas o padrão histórico é previsível: com 300+ agentes envolvidos nas diligências e 4 anos de investigação interna, a probabilidade de ao menos um procedimento formalmente questionável é alta. O GAECO/MPF co-assina a operação, o que cria proteção institucional adicional — mas também significa que qualquer fragilidade processual pode acionar a corregedoria do MPF.
+          <div class="callout">
+            <strong>Sinal de alerta precoce:</strong> Monitorar nos próximos 6–12 meses se algum dos servidores afastados apresenta queixa-crime contra o delegado responsável ou contra membros da Corregedoria da RFB. Esse foi o primeiro sinal na Satiagraha (Dantas vs. Protógenes) e no Banco Master (Vorcaro vs. Andrei Rodrigues, cujo relatório foi chamado de "lixo jurídico").
+          </div>
+        </div>
+      </div>
+
+      <!-- P03 -->
+      <div class="pcard">
+        <div class="pcard-head" onclick="toggle(this)">
+          <span class="pnum">P03</span>
+          <div class="pinfo">
+            <div class="ptitle">Captura judicial de emergência</div>
+            <div class="psub">Único padrão presente nas 4 operações-núcleo do corpus — o mais crítico</div>
+            <div class="pbadges">
+              <span class="badge b-sa">SA — Gilmar 48h</span>
+              <span class="badge b-ca">CA — Asfor Rocha</span>
+              <span class="badge b-lj">LJ — STF incompetência</span>
+              <span class="badge b-bm">BM — Toffoli sigilo</span>
+              <span class="badge b-risk">ML → próximo passo provável</span>
+            </div>
+          </div>
+          <div class="pstatus"><span class="dot-full"></span></div>
+          <span class="pcard-toggle">▶</span>
+        </div>
+        <div class="pcard-body">
+          Este é o padrão de maior risco nos próximos 90 dias. Os afastamentos de 25 servidores via TRF-2 já criaram o <em>threshold</em> para contestação em instância superior. <strong>25 servidores = 25 potenciais habeas corpus</strong>. A questão estrutural: qual tribunal recebe os recursos em segunda instância? Se algum investigado tiver conexão suficiente para atrair o caso ao STJ ou STF por via monocrática, o padrão histórico se fecha.
+          <div class="callout">
+            <strong>Variável crítica ainda não pública:</strong> Quem são os 9 despachantes aduaneiros e empresários afastados? Se algum tiver relação com grupos econômicos com representação jurídica frequente em tribunais superiores, o gatilho deste padrão existe. A inclusão do <strong>Aeroporto do Galeão</strong> nas diligências sugere que o esquema era mais amplo do que o Porto — o que complica a questão de competência territorial (Porto do Rio vs. Galeão são alfândegas distintas).
+          </div>
+        </div>
+      </div>
+
+      <!-- P04 -->
+      <div class="pcard">
+        <div class="pcard-head" onclick="toggle(this)">
+          <span class="pnum">P04</span>
+          <div class="pinfo">
+            <div class="ptitle">Weaponização da mídia</div>
+            <div class="psub">Imprensa como arma em ambas as direções — espetáculo e contra-narrativa</div>
+            <div class="pbadges">
+              <span class="badge b-sa">SA — TV Globo na prisão</span>
+              <span class="badge b-lj">LJ — Moro vazou gravação</span>
+              <span class="badge b-bm">BM — influenciadores/site PF</span>
+              <span class="badge b-ml">ML → ativa desde manhã</span>
+            </div>
+          </div>
+          <div class="pstatus"><span class="dot-full"></span></div>
+          <span class="pcard-toggle">▶</span>
+        </div>
+        <div class="pcard-body">
+          A comunicação da deflagração foi arquitetada: nota oficial PF + CNN Brasil + Agência Brasil + frame "maior operação da Corregedoria da Receita Federal da história" — tudo no mesmo dia. Este é o modo <em>espetáculo</em> do padrão, usado para blindar a operação politicamente antes que a defesa se organize.
+          <div class="callout amber">
+            <strong>Diferença estrutural em 2026:</strong> A Corregedoria da RFB co-liderando reduz o risco do <em>cowboy da investigação</em> que custou Protógenes. Mas o frame de "maior operação da história" é o mesmo playbook da Lava Jato — com os mesmos riscos processuais. Aguardar nos próximos dias a contra-narrativa dos servidores afastados e de eventuais empresários investigados na frente de óleo e gás.
+          </div>
+        </div>
+      </div>
+
+      <!-- P05 -->
+      <div class="pcard">
+        <div class="pcard-head" onclick="toggle(this)">
+          <span class="pnum">P05</span>
+          <div class="pinfo">
+            <div class="ptitle">Cofres públicos como vetor</div>
+            <div class="psub">Estado como alavanca e vítima simultânea — presente em 100% do corpus</div>
+            <div class="pbadges">
+              <span class="badge b-lj">LJ — Petrobras</span>
+              <span class="badge b-ca">CA — Licitações</span>
+              <span class="badge b-sa">SA — Fundos de pensão</span>
+              <span class="badge b-bm">BM — FGC R$ 56B</span>
+              <span class="badge b-ml">ML — Auditor como nó</span>
+            </div>
+          </div>
+          <div class="pstatus"><span class="dot-full"></span></div>
+          <span class="pcard-toggle">▶</span>
+        </div>
+        <div class="pcard-body">
+          Na Mare Liberum, o vetor é <strong>qualitativamente mais grave que nas operações anteriores</strong>: os servidores públicos não são apenas corrompidos — eles <em>são</em> o mecanismo operacional do esquema. 17 mil declarações de importação passaram pela alfândega com conivência ativa de auditores com poder de liberação. Isso é diferente da Lava Jato (diretores da Petrobras direcionavam contratos via intermediários) — aqui o servidor <em>é</em> o nó de verificação estatal comprado diretamente.
+          <div class="callout">
+            <strong>Escala do dano:</strong> R$ 500 milhões em prejuízo fiscal direto documentado (Jornal de Brasília). R$ 102 milhões em bens bloqueados. A diferença entre esses números e os R$ 86,6B em mercadorias indica que nem toda movimentação era ilegal — parte era mercadoria legítima sub-tributada ou mal classificada, o que torna a prova individualizada mais complexa.
+          </div>
+        </div>
+      </div>
+
+      <!-- P06 -->
+      <div class="pcard">
+        <div class="pcard-head" onclick="toggle(this)">
+          <span class="pnum">P06</span>
+          <div class="pinfo">
+            <div class="ptitle">Prescrição como âncora estratégica</div>
+            <div class="psub">Tempo consumido via recursos em cascata — janela crítica 2026–2030</div>
+            <div class="pbadges">
+              <span class="badge b-lj">LJ — casos prescritos no DF</span>
+              <span class="badge b-ca">CA — anulada · recomeçou · prescreveu</span>
+              <span class="badge b-risk">ML → fragmentação = gatilho</span>
+            </div>
+          </div>
+          <div class="pstatus"><span class="dot-strong"></span></div>
+          <span class="pcard-toggle">▶</span>
+        </div>
+        <div class="pcard-body">
+          Os fatos mais antigos da Mare Liberum datam de <strong>julho de 2021</strong>. Para crimes tributários qualificados, o prazo prescricional pode começar a correr a partir da data de cada liberação irregular. Se a defesa conseguir fragmentar o caso em 17.000 episódios individuais (um por declaração de importação), cada um com prazo próprio, e travar a progressão via recursos protelatórios entre 2026 e 2030, os fatos mais antigos prescrevem antes do trânsito em julgado.
+          <div class="callout">
+            <strong>Lição da Lava Jato aplicada diretamente:</strong> A redistribuição Curitiba → Brasília foi o intervalo onde a prescrição correu. Na Mare Liberum, qualquer decisão de incompetência territorial (Rio de Janeiro vs. Brasília, ou Porto vs. Galeão como alfândegas separadas) cria a mesma janela. O calendário de risco: deflagração abr/2026 → denúncia esperada 2027 → recursos de incompetência → redistribuição → 2029/2030.
+          </div>
+        </div>
+      </div>
+
+      <!-- P07 novo -->
+      <div class="pcard p-new">
+        <div class="pcard-head" onclick="toggle(this)">
+          <span class="pnum">P07</span>
+          <div class="pinfo">
+            <div class="ptitle">Infraestrutura advisória compartilhada</div>
+            <div class="psub">Novo padrão emergente identificado no corpus em 2025 — hipótese na ML</div>
+            <div class="pbadges">
+              <span class="badge b-bm">BM — fundos fechados</span>
+              <span class="badge b-co">CO — 40 fundos lavagem</span>
+              <span class="badge b-pl">PL — Delaware LLCs</span>
+              <span class="badge b-new">ML → hipótese a investigar</span>
+            </div>
+          </div>
+          <div class="pstatus"><span class="dot-new"></span></div>
+          <span class="pcard-toggle">▶</span>
+        </div>
+        <div class="pcard-body">
+          Padrão identificado no corpus em 2025: fundos fechados de cota única e SPEs offshore aparecem em Banco Master, Carbono Oculto, Poço de Lobato e Greenwashing como veículos de lavagem — sugerindo assessoria jurídico-financeira comum. Na Carbono Oculto, a Receita identificou <strong>40 fundos de investimento usados para blindar R$ 30 bilhões</strong>. Na Mare Liberum, a pergunta estrutural: qual é a estrutura financeira por trás dos <em>dezenas de milhões</em> em propinas para os 25 servidores?
+          <div class="callout teal">
+            <strong>Pergunta investigativa de alto valor:</strong> Algum dos 9 despachantes aduaneiros ou importadores afastados tem participação societária ou mandato em fundos de investimento fechados? A resposta conecta ou desconecta a Mare Liberum da infraestrutura advisória documentada nas demais operações.
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /pattern-list -->
+  </div><!-- /tab-padroes -->
+
+  <!-- ═══ TAB: MATRIX ═══ -->
+  <div id="tab-matrix" class="tab-panel">
+    <div class="sec-label">Presença por operação — 7 padrões × 7 operações</div>
+    <div class="matrix-wrap">
+      <table class="mx">
+        <thead>
+          <tr>
+            <th style="text-align:left;width:170px;padding-left:14px">Padrão</th>
+            <th class="vc ml-th">Mare Liberum</th>
+            <th class="vc">Lava Jato</th>
+            <th class="vc">Carbono Oculto</th>
+            <th class="vc">Poço de Lobato</th>
+            <th class="vc">Satiagraha</th>
+            <th class="vc">Castelo de Areia</th>
+            <th class="vc">Banco Master</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>P01 — Vício processual</td>
+            <td class="c-strong">◑</td>
+            <td class="c-full">●</td>
+            <td class="c-partial">◔</td>
+            <td class="c-partial">◔</td>
+            <td class="c-full">●</td>
+            <td class="c-full">●</td>
+            <td class="c-strong">◑</td>
+          </tr>
+          <tr>
+            <td>P02 — Investigador investigado</td>
+            <td class="c-partial">◔</td>
+            <td class="c-full">●</td>
+            <td class="c-none">—</td>
+            <td class="c-none">—</td>
+            <td class="c-full">●</td>
+            <td class="c-none">—</td>
+            <td class="c-strong">◑</td>
+          </tr>
+          <tr>
+            <td>P03 — Captura judicial</td>
+            <td class="c-strong">◑</td>
+            <td class="c-full">●</td>
+            <td class="c-partial">◔</td>
+            <td class="c-partial">◔</td>
+            <td class="c-full">●</td>
+            <td class="c-full">●</td>
+            <td class="c-full">●</td>
+          </tr>
+          <tr>
+            <td>P04 — Weaponização mídia</td>
+            <td class="c-full">●</td>
+            <td class="c-full">●</td>
+            <td class="c-strong">◑</td>
+            <td class="c-partial">◔</td>
+            <td class="c-full">●</td>
+            <td class="c-none">—</td>
+            <td class="c-full">●</td>
+          </tr>
+          <tr>
+            <td>P05 — Cofres públicos</td>
+            <td class="c-full">●</td>
+            <td class="c-full">●</td>
+            <td class="c-full">●</td>
+            <td class="c-full">●</td>
+            <td class="c-strong">◑</td>
+            <td class="c-full">●</td>
+            <td class="c-full">●</td>
+          </tr>
+          <tr>
+            <td>P06 — Prescrição estratégica</td>
+            <td class="c-strong">◑</td>
+            <td class="c-full">●</td>
+            <td class="c-none">—</td>
+            <td class="c-none">—</td>
+            <td class="c-none">—</td>
+            <td class="c-full">●</td>
+            <td class="c-strong">◑</td>
+          </tr>
+          <tr>
+            <td>P07 — Infra advisória</td>
+            <td class="c-partial">◔</td>
+            <td class="c-none">—</td>
+            <td class="c-strong">◑</td>
+            <td class="c-strong">◑</td>
+            <td class="c-none">—</td>
+            <td class="c-none">—</td>
+            <td class="c-full">●</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="legend">
+      <span class="leg-item"><span style="color:var(--red2);font-size:14px">●</span> Documentado</span>
+      <span class="leg-item"><span style="color:var(--amber);font-size:13px">◑</span> Forte evidência</span>
+      <span class="leg-item"><span style="color:var(--teal);font-size:12px">◔</span> Parcial / latente</span>
+      <span class="leg-item"><span style="color:var(--text3);font-size:11px">—</span> Ausente</span>
+    </div>
+
+    <div class="mx-note">
+      <strong>Mare Liberum: 5,5/7 padrões ativos ou em risco na deflagração.</strong> Perfil de risco mais alto do corpus no momento zero — supera o Banco Master no dia da liquidação. P03 (captura judicial) e P05 (cofres públicos) plenamente documentados. P01, P04 e P06 com forte evidência estrutural. P02 latente. P07 como hipótese pendente de confirmação pelas estruturas financeiras das propinas.
+    </div>
+  </div>
+
+  <!-- ═══ TAB: CONEXÕES ═══ -->
+  <div id="tab-conexoes" class="tab-panel">
+    <div class="sec-label">Conexões com operações do corpus</div>
+    <div class="conn-grid">
+
+      <div class="ccard">
+        <div class="ccard-head"><span class="badge b-co">Carbono Oculto</span></div>
+        <div class="ctitle">Setor de combustíveis — convergência parcial</div>
+        <div class="cbody" style="margin-top:6px">
+          Carbono Oculto (ago/2025) documentou importação fraudulenta de combustíveis em 8 estados incluindo RJ, com mais de <strong>R$ 10 bilhões importados por interpostas pessoas</strong>. A Mare Liberum identifica "favorecimento a operações no setor de óleo e gás via admissão temporária de embarcações e equipamentos" como frente específica. Mecânica diferente (admissão temporária vs. interposição fraudulenta), mesmo setor, sobreposição temporal jul/2021–mar/2026. Conexão indireta documentada, não confirmada.
+        </div>
+      </div>
+
+      <div class="ccard">
+        <div class="ccard-head"><span class="badge b-pl">Poço de Lobato</span></div>
+        <div class="ctitle">Corredor portuário Rio · diesel russo</div>
+        <div class="cbody" style="margin-top:6px">
+          Grupo Refit usou portos como corredor de importação irregular de diesel russo retido pela Receita Federal. O Porto do Rio é um dos pontos da cadeia identificada. As 17.000 declarações irregulares da ML cobrem o mesmo período das operações do Grupo Refit (2021–2026). Pergunta em aberto: alguma das 17.000 declarações coincide com operações já mapeadas pela Receita em Poço de Lobato?
+        </div>
+      </div>
+
+      <div class="ccard">
+        <div class="ccard-head"><span class="badge b-lj">Lava Jato</span></div>
+        <div class="ctitle">Modelo operacional — servidor como nó central</div>
+        <div class="cbody" style="margin-top:6px">
+          Lava Jato: diretores da Petrobras como nó de corrupção ativa, recebendo propinas via operadores financeiros. Mare Liberum: auditores fiscais como nó de liberação fraudulenta, recebendo propinas diretamente de despachantes. Estrutura idêntica — servidor com poder de decisão comprado por intermediários privados. Mesmo vetor, diferente setor e diferente escala de sofisticação.
+        </div>
+      </div>
+
+      <div class="ccard">
+        <div class="ccard-head"><span class="badge b-sa">Satiagraha</span></div>
+        <div class="ctitle">Corregedoria interna — força e vulnerabilidade</div>
+        <div class="cbody" style="margin-top:6px">
+          Satiagraha começou com denúncia externa + participação informal da ABIN — que foi seu calcanhar de Aquiles legal. Mare Liberum começa com mecanismos internos de controle da própria Corregedoria da RFB + denúncias. A Corregedoria co-liderando protege contra o vício da Satiagraha, mas coloca toda a robustez processual sobre os procedimentos internos da Receita — qualquer falha nessa fase é mais grave do que seria num inquérito externo.
+        </div>
+      </div>
+
+      <div class="ccard">
+        <div class="ccard-head"><span class="badge b-bm">Banco Master</span></div>
+        <div class="ctitle">Estrutura de lavagem — hipótese em aberto</div>
+        <div class="cbody" style="margin-top:6px">
+          Banco Master revelou fundos fechados como veículo de lavagem sofisticada. Carbono Oculto: 40 fundos usados para blindar R$ 30B. Se as "dezenas de milhões" em propinas da ML usaram estrutura similar — fundos, SPEs, offshores — há possível conexão advisória. Variável a observar: estrutura patrimonial dos 25 servidores afastados após bloqueio de bens.
+        </div>
+      </div>
+
+      <div class="ccard cnew">
+        <div class="ccard-head"><span class="badge" style="background:var(--tea-bg);color:#4ab890;border-color:rgba(26,157,114,0.3)">Descoberta nova</span></div>
+        <div class="ctitle">Aeroporto do Galeão — alfândega paralela</div>
+        <div class="cbody" style="margin-top:6px">
+          Dado não amplamente divulgado: as diligências incluíram endereços ligados à <strong>alfândega do Aeroporto do Galeão</strong>, além da sede da Receita no RJ e cidades do interior fluminense (Nilópolis, Nova Friburgo). Isso indica que o esquema não era exclusivo do Porto, mas abrangia toda a estrutura aduaneira do estado do Rio. Implicação processual: dois pontos de entrada (porto + aeroporto) podem ser tratados como competências distintas pelos advogados de defesa.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ TAB: LACUNAS ═══ -->
+  <div id="tab-lacunas" class="tab-panel">
+    <div class="sec-label">Status atualizado pós-pesquisa de 28/abr/2026</div>
+    <div class="gap-list">
+
+      <div class="gcard">
+        <div class="gcard-head" onclick="toggleG(this)">
+          <span class="gnum">L01</span>
+          <div style="flex:1">
+            <div class="gtitle">Quem são os beneficiários finais das 17.000 declarações?</div>
+            <div class="gsub">Os importadores/empresários não foram nomeados na deflagração</div>
+          </div>
+          <span class="gstatus g-open">Não resolvida</span>
+        </div>
+        <div class="gcard-body">
+          A nota oficial da PF menciona "importadores, despachantes e servidores" como categorias — mas nenhuma fonte pública disponível (PF, Agência Brasil, CNN Brasil, Jornal de Brasília, Metrópoles, Brasil 247) nomeia os importadores ou empresários. O sigilo investigativo está mantido para os beneficiários do lado privado. <strong>Lacuna não resolvida pelas fontes abertas.</strong>
+          <div class="callout">
+            <strong>Por que isso importa:</strong> O padrão histórico do corpus (P03) mostra que quando os beneficiários finais são de alto perfil, o caso frequentemente para exatamente neste nível. A ausência de nomes no dia da deflagração é consistente tanto com sigilo investigativo legítimo quanto com o padrão de operações que atingem apenas operadores de nível médio.
+          </div>
+        </div>
+      </div>
+
+      <div class="gcard">
+        <div class="gcard-head" onclick="toggleG(this)">
+          <span class="gnum">L02</span>
+          <div style="flex:1">
+            <div class="gtitle">Estrutura financeira das propinas</div>
+            <div class="gsub">Dezenas de milhões bloqueados em R$ 102M — veículos ainda não revelados</div>
+          </div>
+          <span class="gstatus g-partial">Parcial</span>
+        </div>
+        <div class="gcard-body">
+          <strong>Dado novo encontrado:</strong> O Jornal de Brasília e A Tribuna RJ reportam que a Justiça determinou <strong>bloqueio de até R$ 102 milhões em bens</strong>. Isso significa que as propinas foram parcialmente rastreadas até ativos específicos dos investigados. A estrutura de lavagem, porém, não foi descrita publicamente em nenhuma fonte disponível.
+          <div class="callout amber">
+            <strong>Desproporção analítica reveladora:</strong> R$ 86,6B em mercadorias → "dezenas de milhões" em propinas → R$ 102M bloqueados. O bloqueio cobriu apenas bens rastreados diretamente para os servidores. A estrutura de lavagem dos importadores/despachantes — que receberam tributação sub-valorada sobre R$ 86,6B — não aparece nos dados públicos. Prejuízo fiscal declarado: R$ 500M (Jornal de Brasília), bem abaixo do total de mercadorias, confirmando que parte era sub-tributação, não contrabando puro.
+          </div>
+        </div>
+      </div>
+
+      <div class="gcard">
+        <div class="gcard-head" onclick="toggleG(this)">
+          <span class="gnum">L03</span>
+          <div style="flex:1">
+            <div class="gtitle">Conexão com Carbono Oculto / Poço de Lobato via óleo e gás</div>
+            <div class="gsub">Mecânica da frente identificada com precisão — sobreposição documentada mas não confirmada</div>
+          </div>
+          <span class="gstatus g-partial">Parcialmente resolvida</span>
+        </div>
+        <div class="gcard-body">
+          <strong>Dado novo de alta relevância (Brasil 247):</strong> A segunda frente do esquema envolvia especificamente o <strong>regime de admissão temporária no setor de óleo e gás</strong> — procedimentos artificiais criados para permitir a entrada de embarcações e equipamentos sem respaldo legal, favorecendo empresas privadas. Isso é qualitativamente diferente da Carbono Oculto (importação fraudulenta de combustível) — aqui o mecanismo era a admissão temporária de ativos de alto valor (plataformas, navios, equipamentos offshore).
+          <div class="callout teal">
+            <strong>Implicação:</strong> A frente de óleo e gás da ML está ligada ao setor offshore (Petrobras, prestadoras de serviços de exploração), não necessariamente às distribuidoras de combustível da Carbono Oculto. São esquemas paralelos no mesmo setor, via instrumentos aduaneiros diferentes. Sobreposição geográfica e temporal documentada, conexão operacional não confirmada.
+          </div>
+        </div>
+      </div>
+
+      <div class="gcard">
+        <div class="gcard-head" onclick="toggleG(this)">
+          <span class="gnum">L04</span>
+          <div style="flex:1">
+            <div class="gtitle">Dimensão internacional e MLAT</div>
+            <div class="gsub">Importações de R$ 86,6B têm origem externa — cooperação internacional não mencionada</div>
+          </div>
+          <span class="gstatus g-open">Não resolvida</span>
+        </div>
+        <div class="gcard-body">
+          Nenhuma fonte disponível menciona pedido de cooperação internacional ou MLAT no contexto da Mare Liberum. O regime de admissão temporária para óleo e gás (frente 2) envolve equipamentos com origem em países fabricantes — Europa, EUA, Ásia. Se os procedimentos artificiais favoreceram empresas com matriz estrangeira, há dimensão FCPA/cooperação latente.
+          <div class="callout">
+            <strong>Paralelo com Poço de Lobato:</strong> Haddad levou formalmente o caso do petróleo russo via Houston ao governo Trump — MLAT sem resposta pública até hoje. A Mare Liberum pode ativar a mesma thread se a frente de óleo e gás incluir atores com presença ou transações nos EUA. Variável a monitorar nos próximos meses.
+          </div>
+        </div>
+      </div>
+
+      <div class="gcard">
+        <div class="gcard-head" onclick="toggleG(this)">
+          <span class="gnum">L05</span>
+          <div style="flex:1">
+            <div class="gtitle">Aeroporto do Galeão — escopo real do esquema</div>
+            <div class="gsub">Descoberta nova pós-mapeamento inicial — alfândega do porto + Galeão</div>
+          </div>
+          <span class="gstatus g-new">Nova descoberta</span>
+        </div>
+        <div class="gcard-body">
+          O Jornal de Brasília reporta que as diligências ocorreram em <strong>"endereços ligados às alfândegas do porto e do Aeroporto do Galeão, além da sede da Receita no estado"</strong> — dado não presente na nota oficial da PF. Isso expande o escopo da operação além do Porto do Rio para incluir toda a estrutura aduaneira fluminense.
+          <div class="callout amber">
+            <strong>Implicação processual de alta relevância:</strong> Porto do Rio e Aeroporto do Galeão são alfândegas juridicamente distintas. Se o mesmo servidor atuou em ambas, a competência territorial pode ser contestada com um argumento diferente do da Lava Jato (não é sobre a sede do crime organizado, mas sobre qual vara tem competência sobre cada alfândega). Esse dado deve ser acompanhado como potencial gatilho do P01 (vício processual) e P06 (prescrição via redistribuição).
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ TAB: FONTES ═══ -->
+  <div id="tab-fontes" class="tab-panel">
+    <div class="sec-label">Fontes primárias verificadas — 28 abr 2026</div>
+    <div class="src-list">
+
+      <div class="src-item">
+        <span class="src-n">01</span>
+        <div class="src-body">
+          <a class="src-title" href="https://www.gov.br/pf/pt-br/assuntos/noticias/2026/04/pf-deflagra-operacao-para-combater-corrupcao-na-alfandega-do-porto-do-rio" target="_blank">Operação Mare Liberum — Nota Oficial da Polícia Federal</a>
+          <div class="src-meta"><span class="src-badge sb-pf">OFICIAL PF</span>gov.br/pf · 28 abr 2026 · Nota institucional · Fonte primária</div>
+        </div>
+      </div>
+
+      <div class="src-item">
+        <span class="src-n">02</span>
+        <div class="src-body">
+          <a class="src-title" href="https://www.cnnbrasil.com.br/nacional/sudeste/rj/pf-faz-operacao-contra-corrupcao-na-alfandega-do-porto-do-rio/" target="_blank">Operação mira esquema bilionário na alfândega do Porto do Rio — CNN Brasil</a>
+          <div class="src-meta"><span class="src-badge sb-imp">IMPRENSA</span>CNN Brasil · 28 abr 2026 · Três frentes de atuação + R$ 86,6B + GAECO</div>
+        </div>
+      </div>
+
+      <div class="src-item">
+        <span class="src-n">03</span>
+        <div class="src-body">
+          <a class="src-title" href="https://agenciabrasil.ebc.com.br/geral/noticia/2026-04/esquema-de-corrupcao-no-porto-do-rio-e-alvo-de-operacao-da-pf" target="_blank">Esquema de corrupção no Porto do Rio é alvo de operação da PF — Agência Brasil</a>
+          <div class="src-meta"><span class="src-badge sb-pf">OFICIAL EBC</span>Agência Brasil · 28 abr 2026</div>
+        </div>
+      </div>
+
+      <div class="src-item">
+        <span class="src-n">04</span>
+        <div class="src-body">
+          <a class="src-title" href="https://www.brasil247.com/regionais/sudeste/pf-deflagra-operacao-contra-esquema-bilionario-na-alfandega-do-rio-de-janeiro" target="_blank">PF deflagra operação contra esquema bilionário na alfândega do Rio — Brasil 247</a>
+          <div class="src-meta"><span class="src-badge sb-imp">IMPRENSA</span>Brasil 247 · 28 abr 2026 · <strong>Detalhamento das 3 frentes + admissão temporária óleo/gás</strong></div>
+        </div>
+      </div>
+
+      <div class="src-item">
+        <span class="src-n">05</span>
+        <div class="src-body">
+          <a class="src-title" href="https://jornaldebrasilia.com.br/noticias/brasil/operacao-mira-esquema-de-propina-no-porto-do-rio-e-afasta-servidores-da-receita/" target="_blank">Operação mira esquema de propina no Porto do Rio — Jornal de Brasília</a>
+          <div class="src-meta"><span class="src-badge sb-imp">IMPRENSA</span>Jornal de Brasília · 28 abr 2026 · <strong>R$ 102M bloqueados · R$ 500M prejuízo fiscal · Galeão incluído</strong></div>
+        </div>
+      </div>
+
+      <div class="src-item">
+        <span class="src-n">06</span>
+        <div class="src-body">
+          <a class="src-title" href="https://www.atribunarj.com.br/materia/pf-cumpre-mandados-em-niteroi-contra-esquema-no-porto-do-rio" target="_blank">PF cumpre mandados em Niterói contra esquema no Porto do Rio — A Tribuna RJ</a>
+          <div class="src-meta"><span class="src-badge sb-imp">IMPRENSA</span>A Tribuna RJ · 28 abr 2026 · Niterói · crimes adicionais: estelionato, falsidade ideológica</div>
+        </div>
+      </div>
+
+      <div class="src-item">
+        <span class="src-n">07</span>
+        <div class="src-body">
+          <a class="src-title" href="https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2025/agosto/operacao-carbono-oculto-rrb-e-orgaos-parceiros-combatem-organizacao-responsavel-por-sonegacao-e-lavagem-de-dinheiro-no-setor-de-combustiveis" target="_blank">Operação Carbono Oculto — Nota Oficial da Receita Federal</a>
+          <div class="src-meta"><span class="src-badge sb-rfb">OFICIAL RFB</span>Receita Federal · 28 ago 2025 · Contexto corpus — 40 fundos, R$ 10B importações, RJ incluso</div>
+        </div>
+      </div>
+
+      <div class="src-item">
+        <span class="src-n">08</span>
+        <div class="src-body">
+          <a class="src-title" href="https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2025/novembro/operacao-poco-de-lobato-receita-federal-e-orgaos-parceiros-desarticulam-esquema-bilionario-ligado-a-operacao-carbono-oculto" target="_blank">Operação Poço de Lobato — Nota Oficial da Receita Federal</a>
+          <div class="src-meta"><span class="src-badge sb-rfb">OFICIAL RFB</span>Receita Federal · 27 nov 2025 · Delaware LLCs + Houston + diesel russo</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ TAB: RELACIONADOS ═══ -->
+  <div id="tab-relacionados" class="tab-panel">
+    <div class="sec-label">Corpus do lawfare-timeline — operações diretamente relacionadas</div>
+    <div class="rel-grid">
+
+      <a class="rlink highlight-link" href="https://gosurf.site/paralelos" target="_blank">
+        <span class="rlink-arrow">↗</span>
+        <div class="rlink-title">Paralelos — Painel das 4 Operações Anticorrupção</div>
+        <div class="rlink-tag">PADRÕES SISTÊMICOS · BASE DO CORPUS</div>
+      </a>
+
+      <a class="rlink highlight-link" href="https://gosurf.site/padroes-sistemicos-dashboard" target="_blank">
+        <span class="rlink-arrow">↗</span>
+        <div class="rlink-title">Mestre: Padrões × Operações — Dossiê 2026</div>
+        <div class="rlink-tag">DASHBOARD · ANÁLISE TRANSVERSAL</div>
+      </a>
+
+      <a class="rlink" href="https://gosurf.site/carbono-oculto" target="_blank">
+        <span class="rlink-arrow">↗</span>
+        <div class="rlink-title">Operação Carbono Oculto — Mapa Forense</div>
+        <div class="rlink-tag">OPERAÇÃO · COMBUSTÍVEIS · PCC</div>
+      </a>
+
+      <a class="rlink" href="https://gosurf.site/operacao-poco-de-lobato" target="_blank">
+        <span class="rlink-arrow">↗</span>
+        <div class="rlink-title">Operação Poço de Lobato — Dashboard</div>
+        <div class="rlink-tag">OPERAÇÃO · DIESEL RUSSO · OFAC</div>
+      </a>
+
+      <a class="rlink" href="https://gosurf.site/banco-master-compliance-zero" target="_blank">
+        <span class="rlink-arrow">↗</span>
+        <div class="rlink-title">Banco Master — Operação Compliance Zero</div>
+        <div class="rlink-tag">OPERAÇÃO · CAPTURA JUDICIAL · STF</div>
+      </a>
+
+      <a class="rlink" href="https://gosurf.site/republica-capturada" target="_blank">
+        <span class="rlink-arrow">↗</span>
+        <div class="rlink-title">República Capturada — Dashboard</div>
+        <div class="rlink-tag">ANÁLISE SISTÊMICA · PERGUNTAS ABERTAS</div>
+      </a>
+
+      <a class="rlink" href="https://gosurf.site/operacao-castelo-de-areia" target="_blank">
+        <span class="rlink-arrow">↗</span>
+        <div class="rlink-title">Operação Castelo de Areia</div>
+        <div class="rlink-tag">OPERAÇÃO · ANULAÇÃO · STJ</div>
+      </a>
+
+      <a class="rlink" href="https://gosurf.site/satiagraha" target="_blank">
+        <span class="rlink-arrow">↗</span>
+        <div class="rlink-title">Mapa Mental — Operação Satiagraha</div>
+        <div class="rlink-tag">OPERAÇÃO · ABIN · PROTÓGENES</div>
+      </a>
+
+      <a class="rlink" href="https://gosurf.site/emaranhamento-operacoes" target="_blank">
+        <span class="rlink-arrow">↗</span>
+        <div class="rlink-title">Matriz de Emaranhamento de Operações</div>
+        <div class="rlink-tag">ANÁLISE SISTÊMICA · CRUZAMENTOS</div>
+      </a>
+
+      <a class="rlink" href="https://gosurf.site/rede-master-conexoes" target="_blank">
+        <span class="rlink-arrow">↗</span>
+        <div class="rlink-title">TEIA MASTER — Rede de Conexões</div>
+        <div class="rlink-tag">MAPA MENTAL · MASTER · STF · PCC</div>
+      </a>
+
+      <a class="rlink" href="https://gosurf.site/polvorcaro-registro" target="_blank">
+        <span class="rlink-arrow">↗</span>
+        <div class="rlink-title">O Polvorcaro — Registro Documental</div>
+        <div class="rlink-tag">BANCO MASTER · TOFFOLI</div>
+      </a>
+
+      <a class="rlink" href="https://gosurf.site/operacao-sem-desconto" target="_blank">
+        <span class="rlink-arrow">↗</span>
+        <div class="rlink-title">Operação Sem Desconto — Dossiê Analítico</div>
+        <div class="rlink-tag">PRÓXIMA NO CORPUS</div>
+      </a>
+
+      <a class="rlink" href="https://gosurf.site/jbs-leviata-batista" target="_blank">
+        <span class="rlink-arrow">↗</span>
+        <div class="rlink-title">O Leviatã dos Batistas — JBS/J&amp;F</div>
+        <div class="rlink-tag">IMPUNIDADE SISTÊMICA</div>
+      </a>
+
+      <a class="rlink" href="https://gosurf.site/mapa-erosao-institucional-1990-2026" target="_blank">
+        <span class="rlink-arrow">↗</span>
+        <div class="rlink-title">Mapa de Erosão Institucional 1990–2026</div>
+        <div class="rlink-tag">TIMELINE · CONTEXTO HISTÓRICO</div>
+      </a>
+
+      <a class="rlink" href="https://gosurf.site/duplo-padrao-judicial" target="_blank">
+        <span class="rlink-arrow">↗</span>
+        <div class="rlink-title">Duplo Padrão Judicial — Dossiê 2026</div>
+        <div class="rlink-tag">LAWFARE · ASSIMETRIA JUDICIAL</div>
+      </a>
+
+      <a class="rlink" href="https://gosurf.site/operacao-hydra-fintech-laundry" target="_blank">
+        <span class="rlink-arrow">↗</span>
+        <div class="rlink-title">Operação Hydra — Fintech Laundry</div>
+        <div class="rlink-tag">LAVAGEM · INFRAESTRUTURA P07</div>
+      </a>
+
+    </div>
+
+    <div class="sec-label" style="margin-top:28px">Análise sistêmica · contexto político</div>
+    <div class="rel-grid">
+      <a class="rlink" href="https://gosurf.site/brasil-maquina-de-captura" target="_blank">
+        <span class="rlink-arrow">↗</span>
+        <div class="rlink-title">Máquina de Captura — Diagnóstico Sistêmico</div>
+        <div class="rlink-tag">DASHBOARD · INDICADORES</div>
+      </a>
+      <a class="rlink" href="https://gosurf.site/narrativa-vs-evidencia" target="_blank">
+        <span class="rlink-arrow">↗</span>
+        <div class="rlink-title">O Espelho Partido — Narrativa vs. Evidência</div>
+        <div class="rlink-tag">METODOLOGIA · ANÁLISE</div>
+      </a>
+      <a class="rlink" href="https://gosurf.site/global-kompromat" target="_blank">
+        <span class="rlink-arrow">↗</span>
+        <div class="rlink-title">Global Kompromat — Captura Institucional</div>
+        <div class="rlink-tag">GEOPOLÍTICA · COMPARATIVO</div>
+      </a>
+    </div>
+  </div>
+
+</div><!-- /page -->
+
+<div class="footer">
+  <span>lawfare-timeline · <a href="https://gosurf.site/" target="_blank" rel="noopener">gosurf.site</a></span>
+  <span>Deflagrada 28 abr 2026 · atualizado no mesmo dia</span>
+  <span>CC0 1.0 Universal — domínio público</span>
+  <span>Fontes primárias verificadas · 8 referências</span>
+</div>
+
+</div><!-- /wrap -->
+
+<script>
+(function () {
+  const prog = document.getElementById('prog');
+  const nav = document.getElementById('sticky-nav');
+  const goTop = document.getElementById('go-top');
+  if (!nav || !prog || !goTop) return;
+
+  const NAV_H = () => nav.offsetHeight + 4;
+
+  window.addEventListener('scroll', function () {
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    if (total > 0) prog.style.width = (window.scrollY / total * 100) + '%';
+    goTop.classList.toggle('is-visible', window.scrollY > 380);
+  }, { passive: true });
+
+  goTop.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    var id = a.getAttribute('href').slice(1);
+    if (!id) return;
+    a.addEventListener('click', function (e) {
+      var target = document.getElementById(id);
+      if (!target) return;
+      e.preventDefault();
+      var top = target.getBoundingClientRect().top + window.scrollY - NAV_H();
+      window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+    });
+  });
+
+  var sections = ['tab-padroes', 'tab-matrix', 'tab-conexoes', 'tab-lacunas', 'tab-fontes', 'tab-relacionados'];
+  var navLinks = {};
+  document.querySelectorAll('#sticky-nav a').forEach(function (a) {
+    navLinks[a.getAttribute('href').slice(1)] = a;
+  });
+
+  function getOffsetTop(el) {
+    return el.getBoundingClientRect().top + window.scrollY;
+  }
+
+  function updateActiveNav() {
+    var y = window.scrollY + NAV_H() + 24;
+    var active = sections[0];
+    for (var i = 0; i < sections.length; i++) {
+      var sid = sections[i];
+      var el = document.getElementById(sid);
+      if (el && getOffsetTop(el) <= y) active = sid;
+    }
+    Object.keys(navLinks).forEach(function (k) {
+      navLinks[k].classList.remove('active');
+    });
+    if (navLinks[active]) navLinks[active].classList.add('active');
+  }
+
+  window.addEventListener('scroll', updateActiveNav, { passive: true });
+  updateActiveNav();
+})();
+
+function toggle(head) {
+  const body = head.nextElementSibling;
+  const arrow = head.querySelector('.pcard-toggle');
+  body.classList.toggle('open');
+  arrow.classList.toggle('open');
+}
+
+function toggleG(head) {
+  const body = head.nextElementSibling;
+  body.classList.toggle('open');
+}
+</script>
+
+
+<script src="https://gosurf.site/counter.js"></script>
+</body></html>

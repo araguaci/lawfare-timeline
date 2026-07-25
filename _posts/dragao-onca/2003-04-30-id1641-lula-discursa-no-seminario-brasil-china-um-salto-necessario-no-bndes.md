@@ -45,7 +45,7 @@ Discurso citado por pesquisadores como marco retórico da guinada asiática do g
 
 Entradas conectadas nesta série:
 
-- [Entrada 1640](/timeline/entries/1640)
+- [Entrada 1640](/posts/id1640-discurso-de-posse-de-lula-cita-nominalmente-necessidade-de-estreitar-lacos-com-c/)
 
 ---
 

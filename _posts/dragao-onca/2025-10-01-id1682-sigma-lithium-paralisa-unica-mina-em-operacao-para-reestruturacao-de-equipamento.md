@@ -46,7 +46,7 @@ Fragilidade financeira do principal operador do projeto-vitrine estadual (lança
 
 Entradas conectadas nesta série:
 
-- [Entrada 1680](/timeline/entries/1680)
+- [Entrada 1680](/posts/id1680-sigma-lithium-opera-com-r3-bilhoes-investidos-no-complexo-grota-do-cirilo-e-acor/)
 
 ---
 

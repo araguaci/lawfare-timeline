@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Americanas — R$ 25,3 bi de fraude contábil, zero condenações. Dossiê investigativo T-199 — P08 / P06 / P03 / P09.">
+<title>T-199 · Americanas — R$ 25,3 bi · Zero Condenações · lawfare-timeline</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ═══ DESIGN SYSTEM — lawfare-timeline v1.0 ═══ */
+:root {
+  --bg:      #080c10;
+  --bg1:     #0d1218;
+  --bg2:     #121820;
+  --bg3:     #1a2230;
+  --border:  rgba(255,255,255,0.06);
+  --border2: rgba(255,255,255,0.12);
+  --fg:      #e8ecf0;
+  --fg2:     #8a9ab0;
+  --fg3:     #4a5a6a;
+  --red:     #e84040;
+  --red2:    rgba(232,64,64,0.15);
+  --amber:   #e8a020;
+  --amber2:  rgba(232,160,32,0.15);
+  --blue:    #3090e8;
+  --blue2:   rgba(48,144,232,0.12);
+  --green:   #28c880;
+  --green2:  rgba(40,200,128,0.12);
+  --purple:  #a060e8;
+  --purple2: rgba(160,96,232,0.12);
+  --font-mono:    'IBM Plex Mono', monospace;
+  --font-display: 'Syne', sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-mono);font-size:13px;line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh}
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-track{background:var(--bg1)}
+::-webkit-scrollbar-thumb{background:var(--bg3);border-radius:2px}
+
+/* ─── HEADER ─── */
+.header{background:var(--bg1);border-bottom:1px solid var(--border2);padding:24px 20px 28px;position:relative;overflow:hidden}
+@media(min-width:768px){.header{padding:32px 40px 28px}}
+.header::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--red),var(--amber),var(--red),var(--amber));background-size:200% 100%;animation:scanline 3s linear infinite}
+@keyframes scanline{to{background-position:200% 0}}
+.header-eyebrow{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.badge{display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border-radius:3px;font-size:10px;font-weight:600;letter-spacing:.10em;text-transform:uppercase;font-family:var(--font-mono)}
+.badge-red{background:var(--red2);color:var(--red);border:1px solid rgba(232,64,64,.3)}
+.badge-amber{background:var(--amber2);color:var(--amber);border:1px solid rgba(232,160,32,.3)}
+.badge-blue{background:var(--blue2);color:var(--blue);border:1px solid rgba(48,144,232,.3)}
+.badge-green{background:var(--green2);color:var(--green);border:1px solid rgba(40,200,128,.3)}
+.badge-muted{background:transparent;color:var(--fg3);border:1px solid var(--border2)}
+.badge-pulse{display:inline-flex;align-items:center;gap:6px}
+.pulse-dot{width:7px;height:7px;border-radius:50%;background:var(--red);animation:pulse 2s infinite;flex-shrink:0}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
+.header-title{font-family:var(--font-display);font-size:clamp(26px,5vw,48px);font-weight:800;letter-spacing:-.02em;line-height:1.08;margin-bottom:10px}
+.header-title .accent{color:var(--red)}
+.header-title .dim{color:var(--fg2)}
+.header-sub{font-size:13px;color:var(--fg2);line-height:1.7;max-width:640px;margin-bottom:0}
+
+/* ─── NAV STICKY ─── */
+.sticky-nav{position:sticky;top:0;z-index:100;background:rgba(8,12,16,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.sticky-nav-inner{display:flex;align-items:center;padding:0 20px;gap:0;overflow-x:auto;scrollbar-width:none;max-width:1200px;margin:0 auto}
+.sticky-nav-inner::-webkit-scrollbar{display:none}
+@media(min-width:768px){.sticky-nav-inner{padding:0 40px}}
+.nav-brand{font-size:10px;font-weight:600;letter-spacing:.1em;color:var(--red);text-transform:uppercase;white-space:nowrap;padding:14px 16px 14px 0;border-right:1px solid var(--border2);margin-right:4px;flex-shrink:0}
+.nav-tab{padding:14px 14px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg3);text-decoration:none;border:none;background:none;border-bottom:2px solid transparent;white-space:nowrap;transition:all .15s;font-family:var(--font-mono);cursor:pointer;display:flex;align-items:center;gap:5px}
+.nav-tab:hover{color:var(--fg2)}
+.nav-tab.active{color:var(--fg);border-bottom-color:var(--red)}
+.nav-tab svg{width:12px;height:12px;opacity:.7;flex-shrink:0}
+
+/* ─── PAGE ─── */
+.page{max-width:1000px;margin:0 auto;padding:32px 20px 100px}
+@media(min-width:768px){.page{padding:40px 40px 100px}}
+
+/* ─── NUMS (3 por linha) ─── */
+.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border2);border:1px solid var(--border2);border-radius:6px;overflow:hidden;margin-bottom:40px}
+@media(max-width:600px){.nums{grid-template-columns:1fr 1fr}}
+.nc{background:var(--bg1);padding:18px 16px;transition:background .15s;display:flex;flex-direction:column;gap:8px}
+.nc:hover{background:var(--bg2)}
+.nc-icon{width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.nc-icon svg{width:16px;height:16px}
+.nv{font-family:var(--font-display);font-size:clamp(18px,3vw,26px);font-weight:700;letter-spacing:-.02em;line-height:1}
+.nv.r{color:var(--red)}.nv.a{color:var(--amber)}.nv.g{color:var(--green)}
+.nl{font-family:var(--font-mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--fg3);line-height:1.45}
+
+/* ─── SECTION ─── */
+.sec{margin-bottom:52px;scroll-margin-top:52px}
+.sh{font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--fg3);margin-bottom:6px}
+h2{font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--fg);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+p{color:var(--fg2);line-height:1.8;margin-bottom:13px;font-size:13px}
+p:last-child{margin-bottom:0}
+strong{color:var(--fg);font-weight:500}
+
+/* ─── ALERT / HIGHLIGHT ─── */
+.hl{display:flex;gap:12px;border-radius:6px;padding:16px 18px;margin:18px 0}
+.hl.r{background:var(--red2);border:1px solid rgba(232,64,64,.25)}
+.hl.a{background:var(--amber2);border:1px solid rgba(232,160,32,.25)}
+.hl.b{background:var(--blue2);border:1px solid rgba(48,144,232,.25)}
+.hl.g{background:var(--bg2);border:1px solid var(--border2)}
+.hl-icon{font-size:16px;line-height:1;flex-shrink:0;margin-top:1px}
+.hl p{font-size:13px;margin:0;line-height:1.7}
+.hl.r p{color:var(--fg2)}.hl.r strong{color:var(--red)}
+.hl.a p{color:var(--fg2)}.hl.a strong{color:var(--amber)}
+.hl.b p{color:var(--fg2)}.hl.b strong{color:var(--blue)}
+.hl.g p{color:var(--fg2)}.hl.g strong{color:var(--fg)}
+
+/* ─── CADEIA LÓGICA ─── */
+.chain{display:flex;align-items:center;flex-wrap:wrap;gap:5px;background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:14px 16px;margin:16px 0}
+.cn{font-family:var(--font-mono);font-size:11px;padding:4px 10px;border-radius:3px;background:var(--bg3);border:1px solid var(--border2);color:var(--fg);white-space:nowrap}
+.cn.g{border-color:rgba(40,200,128,.3);color:var(--green)}
+.cn.r{border-color:rgba(232,64,64,.3);color:var(--red)}
+.cn.x{border-color:transparent;color:var(--fg3)}
+.arr{color:var(--fg3);font-size:12px;padding:0 2px}
+
+/* ─── TABELA ATORES ─── */
+.tbl-wrap{overflow-x:auto;margin:18px 0}
+.atable{width:100%;border-collapse:collapse;font-size:12px;min-width:560px}
+.atable thead th{font-family:var(--font-mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--fg3);text-align:left;padding:8px 12px;border-bottom:1px solid var(--border2);background:var(--bg2);white-space:nowrap}
+.atable tbody td{padding:10px 12px;border-bottom:1px solid var(--border);color:var(--fg2);vertical-align:top;line-height:1.5}
+.atable tbody td.name{color:var(--fg);font-weight:500}
+.atable tbody tr:hover td{background:var(--bg2)}
+.atable td.status{white-space:nowrap}
+.pill{display:inline-flex;align-items:center;font-family:var(--font-mono);font-size:10px;font-weight:500;padding:2px 7px;border-radius:3px;border:.5px solid;white-space:nowrap}
+.pr{background:var(--red2);color:var(--red);border-color:rgba(232,64,64,.3)}
+.pa{background:var(--amber2);color:var(--amber);border-color:rgba(232,160,32,.3)}
+.pg{background:var(--green2);color:var(--green);border-color:rgba(40,200,128,.3)}
+.px{background:transparent;color:var(--fg3);border-color:var(--border2)}
+
+/* ─── TIMELINE ─── */
+.tl{padding-left:24px;position:relative;margin:18px 0}
+.tl::before{content:'';position:absolute;left:6px;top:6px;bottom:6px;width:1px;background:var(--border2)}
+.tli{position:relative;margin-bottom:22px}
+.tld{position:absolute;left:-21px;top:5px;width:10px;height:10px;border-radius:50%;background:var(--fg3);border:2px solid var(--bg)}
+.tld.r{background:var(--red)}.tld.a{background:var(--amber)}.tld.g{background:var(--green)}.tld.x{background:var(--fg3)}
+.tldate{font-family:var(--font-mono);font-size:10px;color:var(--fg3);margin-bottom:3px;letter-spacing:.06em}
+.tld.r~.tldate,.tli:has(.tld.r) .tldate{color:var(--red)}
+.tld.a~.tldate,.tli:has(.tld.a) .tldate{color:var(--amber)}
+.tltitle{font-family:var(--font-display);font-size:13px;font-weight:600;color:var(--fg);margin-bottom:4px}
+.tlbody{font-size:12px;color:var(--fg2);line-height:1.6}
+
+/* ─── PADRÕES (2 colunas) ─── */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:14px;margin:18px 0}
+@media(min-width:860px){.pgrid{grid-template-columns:repeat(2,1fr)}}
+.pcard{background:var(--bg1);border:1px solid var(--border);border-radius:6px;padding:18px;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:10px}
+.pcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.pcard.r::before{background:var(--red)}.pcard.a::before{background:var(--amber)}.pcard.b::before{background:var(--blue)}.pcard.g::before{background:var(--green)}
+.pcard:hover{background:var(--bg2);border-color:var(--border2)}
+.pcard-head{display:flex;align-items:flex-start;gap:12px}
+.pcard-icon{width:36px;height:36px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.pcard-icon svg{width:18px;height:18px}
+.pcard.r .pcard-icon{background:var(--red2)}
+.pcard.a .pcard-icon{background:var(--amber2)}
+.pcard.b .pcard-icon{background:var(--blue2)}
+.pcard.g .pcard-icon{background:var(--green2)}
+.pid{font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px}
+.pcard.r .pid{color:var(--red)}.pcard.a .pid{color:var(--amber)}.pcard.b .pid{color:var(--blue)}.pcard.g .pid{color:var(--green)}
+.pname{font-family:var(--font-display);font-size:14px;font-weight:700;color:var(--fg);line-height:1.2}
+.pdesc{font-size:12px;color:var(--fg2);line-height:1.65}
+
+/* ─── CONEXÕES ─── */
+.conns{display:flex;flex-direction:column;gap:8px;margin:16px 0}
+.conn{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;background:var(--bg1);border:1px solid var(--border);border-radius:6px;transition:background .15s}
+.conn:hover{background:var(--bg2)}
+.conn-icon{width:28px;height:28px;border-radius:4px;background:var(--blue2);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.conn-icon svg{width:13px;height:13px;color:var(--blue)}
+.cid{font-family:var(--font-mono);font-size:11px;font-weight:600;color:var(--amber);min-width:56px;flex-shrink:0;padding-top:2px}
+.cdesc{font-size:12px;color:var(--fg2);line-height:1.6}
+
+/* ─── POSTS RELACIONADOS (3×2) ─── */
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0}
+@media(max-width:700px){.rel-grid{grid-template-columns:1fr}}
+@media(min-width:480px) and (max-width:700px){.rel-grid{grid-template-columns:repeat(2,1fr)}}
+.rel-card{background:var(--bg1);border:1px solid var(--border);border-radius:6px;padding:16px;display:flex;flex-direction:column;gap:10px;text-decoration:none;color:inherit;transition:background .15s,border-color .15s}
+.rel-card:hover{background:var(--bg2);border-color:var(--border2)}
+.rel-card-head{display:flex;align-items:flex-start;gap:10px}
+.rel-card-icon{width:34px;height:34px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px}
+.rel-card-meta{flex:1}
+.rel-card-id{font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);margin-bottom:2px}
+.rel-card-title{font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--fg);line-height:1.25}
+.rel-card-body{font-size:11px;color:var(--fg2);line-height:1.6}
+.rel-card-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto}
+.rel-tag{font-family:var(--font-mono);font-size:9px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;padding:2px 6px;border-radius:2px}
+
+/* ─── CÓDIGO BLOCO ─── */
+.code-block{background:var(--bg2);border:1px solid var(--border);border-radius:6px;overflow:hidden;margin:16px 0}
+.code-header{background:var(--bg3);border-bottom:1px solid var(--border);padding:7px 14px;font-family:var(--font-mono);font-size:10px;color:var(--fg3);display:flex;align-items:center;gap:8px}
+.code-header::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--amber2);display:inline-block}
+.code-body{padding:16px;font-family:var(--font-mono);font-size:11px;line-height:1.75;color:var(--fg2);overflow-x:auto;white-space:pre-wrap}
+
+/* ─── FOOTER ─── */
+.footer{border-top:1px solid var(--border);padding-top:24px;margin-top:56px;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px}
+.fl,.fr{font-size:11px;color:var(--fg3);line-height:1.65;font-family:var(--font-mono)}
+.fr{text-align:right}
+
+/* ─── GO-TO-TOP ─── */
+#gotop{position:fixed;bottom:28px;right:24px;z-index:200;width:42px;height:42px;border-radius:6px;background:var(--bg2);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;transform:translateY(10px);transition:opacity .2s,transform .2s,background .15s;pointer-events:none}
+#gotop.show{opacity:1;transform:translateY(0);pointer-events:auto}
+#gotop:hover{background:var(--bg3);border-color:var(--red)}
+#gotop svg{width:16px;height:16px;color:var(--fg2)}
+#gotop:hover svg{color:var(--red)}
+
+/* ─── PRINT ─── */
+@media print{
+  body{background:#fff;color:#111}
+  .sticky-nav,#gotop{display:none!important}
+  :root{--bg:#fff;--bg1:#f8f8f8;--bg2:#f0f0f0;--bg3:#e8e8e8;--border:rgba(0,0,0,.12);--border2:rgba(0,0,0,.2);--fg:#111;--fg2:#444;--fg3:#888}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header class="header">
+  <div class="header-eyebrow">
+    <span class="badge badge-red badge-pulse"><span class="pulse-dot"></span>dossiê ativo</span>
+    <span class="badge badge-amber">T-199 · thematic track</span>
+    <span class="badge badge-muted">P08 · P06 · P03 · P09</span>
+    <span class="badge badge-muted">Score 55.0</span>
+    <span class="badge badge-muted">CC0 1.0</span>
+  </div>
+  <h1 class="header-title">
+    <span class="accent">R$ 25,3 bilhões</span><br>
+    de fraude contábil<br>
+    <span class="dim">zero condenações</span>
+  </h1>
+  <p class="header-sub">Americanas — o maior escândalo corporativo da história do Brasil. Sete anos de fraude sistemática. Três anos de investigação. Nenhuma condenação. Acionistas controladores intocados.</p>
+</header>
+
+<!-- ═══ NAV STICKY ═══ -->
+<nav class="sticky-nav" id="sticky-nav">
+  <div class="sticky-nav-inner">
+    <span class="nav-brand">T-199 Americanas</span>
+    <a href="#mecanismo" class="nav-tab active" data-section="mecanismo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      Mecanismo
+    </a>
+    <a href="#atores" class="nav-tab" data-section="atores">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      Atores
+    </a>
+    <a href="#cronologia" class="nav-tab" data-section="cronologia">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      Cronologia
+    </a>
+    <a href="#padroes" class="nav-tab" data-section="padroes">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      Padrões
+    </a>
+    <a href="#controladores" class="nav-tab" data-section="controladores">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Controladores
+    </a>
+    <a href="#auditores" class="nav-tab" data-section="auditores">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      Auditores
+    </a>
+    <a href="#corpus" class="nav-tab" data-section="corpus">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+      Corpus
+    </a>
+    <a href="#relacionados" class="nav-tab" data-section="relacionados">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      Relacionados
+    </a>
+  </div>
+</nav>
+
+<!-- ═══ PAGE CONTENT ═══ -->
+<div class="page">
+
+<!-- ─── NÚMEROS (3 por linha) ─── -->
+<div class="nums">
+  <div class="nc">
+    <div class="nc-icon" style="background:var(--red2)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+    </div>
+    <div class="nv r">R$ 25,3 bi</div>
+    <div class="nl">fraude contábil documentada<br>MPF / abr/2025</div>
+  </div>
+  <div class="nc">
+    <div class="nc-icon" style="background:var(--red2)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+    </div>
+    <div class="nv r">R$ 43 bi</div>
+    <div class="nl">dívida total declarada<br>recuperação judicial</div>
+  </div>
+  <div class="nc">
+    <div class="nc-icon" style="background:var(--amber2)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+    </div>
+    <div class="nv a">R$ 70 bi</div>
+    <div class="nl">destruição de valor<br>mercado acionário</div>
+  </div>
+  <div class="nc">
+    <div class="nc-icon" style="background:var(--blue2)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    </div>
+    <div class="nv" style="color:var(--blue)">7 anos</div>
+    <div class="nl">duração da fraude<br>fev/2016 a dez/2022</div>
+  </div>
+  <div class="nc">
+    <div class="nc-icon" style="background:var(--red2)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+    </div>
+    <div class="nv r">0</div>
+    <div class="nl">condenações criminais<br>mai/2026</div>
+  </div>
+  <div class="nc">
+    <div class="nc-icon" style="background:var(--red2)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+    </div>
+    <div class="nv r">0</div>
+    <div class="nl">controladores 3G Capital<br>denunciados pelo MPF</div>
+  </div>
+</div>
+
+<!-- ─── 01 MECANISMO ─── -->
+<section class="sec" id="mecanismo">
+  <div class="sh">01 · como funcionou</div>
+  <h2>O mecanismo da fraude</h2>
+  <p>Entre fevereiro de 2016 e dezembro de 2022, a antiga diretoria das Americanas operou um esquema sistemático de manipulação contábil. O instrumento central foi a <strong>Verba de Propaganda Cooperada (VPC)</strong> — contratos fictícios que permitiam registrar como receita operações que eram, na prática, dívidas financeiras com fornecedores.</p>
+  <p>O segundo instrumento foi o <strong>risco sacado não declarado</strong>: operações de crédito para pagamento de fornecedores eram lançadas como se fossem contas a pagar comuns, ocultando bilhões em dívidas financeiras dos balanços. O resultado: a empresa apresentava ao mercado uma saúde financeira que não existia — ações sobrevalorizadas, bônus pagos com base em resultados fictícios, bancos e investidores enganados.</p>
+
+  <div class="hl r">
+    <span class="hl-icon">⚠</span>
+    <p><strong>Escala da fraude:</strong> de R$ 20 bi anunciados em 11/jan/2023, o rombo foi crescendo à medida que as auditorias avançavam — R$ 25,3 bi em fraudes confirmadas + R$ 3,6 bi em juros não declarados + passivos adicionais que levaram a dívida total para R$ 43 bi. A dívida com credores superava R$ 42 bi, consideradas as inconsistências contábeis.</p>
+  </div>
+
+  <div class="chain">
+    <span class="cn g">VPC fictícia criada</span><span class="arr">→</span>
+    <span class="cn">Dívida registrada como receita</span><span class="arr">→</span>
+    <span class="cn">Balanço apresenta lucro fictício</span><span class="arr">→</span>
+    <span class="cn g">Ações sobrevalorizadas</span><span class="arr">→</span>
+    <span class="cn">Bônus pagos com resultado falso</span><span class="arr">→</span>
+    <span class="cn r">Colapso — jan/2023</span>
+  </div>
+
+  <p>A investigação da PF indica que as fraudes ocorreram entre fevereiro de 2016 e dezembro de 2022, período em que Gutierrez comandou a empresa. O esquema permitia que as ações fossem sobrevalorizadas no mercado. Entre as provas do MPF estão e-mails, mensagens de WhatsApp e documentos que evidenciam a discrepância entre a contabilidade real e a manipulada.</p>
+</section>
+
+<!-- ─── 02 ATORES ─── -->
+<section class="sec" id="atores">
+  <div class="sh">02 · quem é quem</div>
+  <h2>Atores — denunciados e intocados</h2>
+
+  <div class="tbl-wrap">
+    <table class="atable">
+      <thead>
+        <tr><th>Nome</th><th>Função no esquema</th><th>Status mai/2026</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name">Miguel Gutierrez</td>
+          <td>Ex-CEO — "planejou, ordenou e executou" a fraude (MPF). Saiu do país antes das prisões.</td>
+          <td class="status"><span class="pill pr">denunciado MPF</span> <span class="pill px">livre · Madri</span></td>
+        </tr>
+        <tr>
+          <td class="name">Anna Christina Saicali</td>
+          <td>Ex-CEO da B2W (digital). Presa preventiva jun/2024 — estava no exterior.</td>
+          <td class="status"><span class="pill pr">denunciada MPF</span></td>
+        </tr>
+        <tr>
+          <td class="name">Timótheo Barros</td>
+          <td>Ex-VP financeiro. Operador principal do risco sacado.</td>
+          <td class="status"><span class="pill pr">denunciado MPF</span></td>
+        </tr>
+        <tr>
+          <td class="name">Márcio Cruz</td>
+          <td>Ex-vice-presidente. Denunciado junto ao grupo central.</td>
+          <td class="status"><span class="pill pr">denunciado MPF</span></td>
+        </tr>
+        <tr>
+          <td class="name">+ 9 ex-diretores</td>
+          <td>Padilha, Guerra, Corrêa, Nascimento, Picavet, Fabiano, Saraiva, Lessa, Sotero.</td>
+          <td class="status"><span class="pill pr">denunciados MPF</span></td>
+        </tr>
+        <tr style="background:var(--red2)">
+          <td class="name" style="color:var(--red)">Jorge Paulo Lemann</td>
+          <td>Acionista controlador 3G Capital (31% das ações). Beneficiário de dividendos por 7 anos de resultados fictícios. Não foi alvo da denúncia do MPF.</td>
+          <td class="status"><span class="pill px">NÃO denunciado</span></td>
+        </tr>
+        <tr style="background:var(--red2)">
+          <td class="name" style="color:var(--red)">Marcel Telles</td>
+          <td>Acionista controlador 3G Capital. Mesmo status de Lemann.</td>
+          <td class="status"><span class="pill px">NÃO denunciado</span></td>
+        </tr>
+        <tr style="background:var(--red2)">
+          <td class="name" style="color:var(--red)">Carlos Alberto Sicupira</td>
+          <td>Acionista controlador 3G Capital. Mesmo status de Lemann.</td>
+          <td class="status"><span class="pill px">NÃO denunciado</span></td>
+        </tr>
+        <tr>
+          <td class="name">Sérgio Rial</td>
+          <td>CEO por 9 dias. Denunciou as inconsistências e renunciou em 11/jan/2023.</td>
+          <td class="status"><span class="pill px">testemunha / CVM</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="hl r">
+    <span class="hl-icon">⚠</span>
+    <p><strong>A lacuna central do processo:</strong> os controladores da companhia — Beto Sicupira, Jorge Paulo Lemann e Marcel Telles — não são alvo da denúncia do MPF. Detêm 31% das ações. O MPF responsabilizou apenas os gestores executivos, deixando os acionistas de referência fora do alcance penal mesmo após 7 anos de dividendos baseados em resultados fictícios.</p>
+  </div>
+</section>
+
+<!-- ─── 03 CRONOLOGIA ─── -->
+<section class="sec" id="cronologia">
+  <div class="sh">03 · cronologia</div>
+  <h2>Da fraude ao limbo — 2016–2026</h2>
+  <div class="tl">
+    <div class="tli">
+      <div class="tld x"></div>
+      <div class="tldate">2016–2022</div>
+      <div class="tltitle">7 anos de fraude operada sistematicamente</div>
+      <div class="tlbody">VPCs fictícias e risco sacado não declarado. Auditorias da KPMG e PwC aprovam balanços. Ações sobem, bônus são pagos com base em lucros fictícios. A fraude atravessa ao menos três ciclos de auditoria externa sem detecção formal.</div>
+    </div>
+    <div class="tli">
+      <div class="tld a"></div>
+      <div class="tldate">11/jan/2023</div>
+      <div class="tltitle">Sérgio Rial anuncia "inconsistências" de R$ 20 bi — e renuncia em 9 dias</div>
+      <div class="tlbody">Novo CEO comunica ao mercado via fato relevante. Ações despencam 77% no dia seguinte. Do dia 10 de janeiro de 2023 até janeiro de 2025, as ações acumularam queda de 99,5%.</div>
+    </div>
+    <div class="tli">
+      <div class="tld a"></div>
+      <div class="tldate">19/jan/2023</div>
+      <div class="tltitle">Recuperação judicial — R$ 43 bilhões em 16.300 credores</div>
+      <div class="tlbody">Maior pedido de recuperação judicial da história do Brasil. Bancos, fornecedores e fundos de investimento entre os credores. CPI da Câmara instalada em março.</div>
+    </div>
+    <div class="tli">
+      <div class="tld x"></div>
+      <div class="tldate">Jun – Set/2023</div>
+      <div class="tltitle">CPI encerrada sem incriminar ninguém</div>
+      <div class="tlbody">A CPI encerrou ainda em 2023 sem incriminar ninguém. Relatório final publicado em setembro — dívida documentada: R$ 42 bi. Resultado prático: nenhum indiciamento parlamentar.</div>
+    </div>
+    <div class="tli">
+      <div class="tld r"></div>
+      <div class="tldate">27/jun/2024</div>
+      <div class="tltitle">Operação Disclosure — PF prende preventivamente; ex-CEO já no exterior</div>
+      <div class="tlbody">Operação com 2 mandados de prisão preventiva e 15 mandados de busca e apreensão. Gutierrez não é localizado — nome incluído na lista da Interpol. Anna Saicali também não é encontrada.</div>
+    </div>
+    <div class="tli">
+      <div class="tld r"></div>
+      <div class="tldate">Ago/2024</div>
+      <div class="tltitle">TRF-2 concede HC ao ex-CEO — retirado da lista da Interpol</div>
+      <div class="tlbody">O TRF da 2ª região concede habeas corpus ao ex-CEO. Ofício enviado à Interpol solicitando remoção de Gutierrez da difusão vermelha. Ex-CEO responde em liberdade em Madri.</div>
+    </div>
+    <div class="tli">
+      <div class="tld a"></div>
+      <div class="tldate">Jan/2026</div>
+      <div class="tltitle">CVM acusa Gutierrez e mais 29 executivos</div>
+      <div class="tlbody">Em caso de condenação, penas vão do pagamento de multa à proibição de atuar no mercado de capitais. Processo em fase de citação — possibilidade de acordo mediante pagamento de multa.</div>
+    </div>
+    <div class="tli">
+      <div class="tld r"></div>
+      <div class="tldate">31/mar/2025</div>
+      <div class="tltitle">MPF denuncia 13 ex-executivos — acionistas controladores excluídos</div>
+      <div class="tlbody">O MPF denunciou 13 antigos executivos e funcionários por fraude de R$ 25,3 bilhões. Gutierrez "planejou, ordenou e executou" a fraude (denúncia). Mora em Madri.</div>
+    </div>
+    <div class="tli">
+      <div class="tld x"></div>
+      <div class="tldate">Mai/2026</div>
+      <div class="tltitle">Status: processo em andamento, zero condenações</div>
+      <div class="tlbody">Denúncia do MPF em análise na 10ª Vara Federal Criminal do RJ. Ação penal em fase inicial. Ex-CEO em Madri. Acionistas controladores intocados. Nenhuma condenação criminal transitada em julgado.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 04 PADRÕES (2 colunas) ─── -->
+<section class="sec" id="padroes">
+  <div class="sh">04 · framework analítico</div>
+  <h2>Padrões sistêmicos ativados</h2>
+  <div class="pgrid">
+
+    <div class="pcard r">
+      <div class="pcard-head">
+        <div class="pcard-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div>
+          <div class="pid">P08 · Fraude Contábil Estrutural</div>
+          <div class="pname">Fachada de conformidade durante 7 anos</div>
+        </div>
+      </div>
+      <div class="pdesc">VPCs fictícias + risco sacado não declarado funcionaram como mecanismo P08 clássico: atividade ilegal (manipulação de balanço) encoberta por atividade legal (contratos com fornecedores). Auditores externos aprovaram por 7 anos. Análogo à blendagem mineral da Operação Rejeito — lavagem por mistura com ativo legítimo.</div>
+      <div><span class="badge badge-red">crítico</span></div>
+    </div>
+
+    <div class="pcard r">
+      <div class="pcard-head">
+        <div class="pcard-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="pid">P06 · Delonga Processual</div>
+          <div class="pname">3 anos sem condenação — ex-CEO em Madri</div>
+        </div>
+      </div>
+      <div class="pdesc">Jan/2023: fraude revelada. Jun/2024: Operação Disclosure. Ago/2024: TRF-2 concede HC, ex-CEO sai da Interpol. Mar/2025: MPF denuncia. Mai/2026: fase inicial. A cada etapa o passivo temporal cresce e a probabilidade de prescrição aumenta.</div>
+      <div><span class="badge badge-red">crítico</span></div>
+    </div>
+
+    <div class="pcard a">
+      <div class="pcard-head">
+        <div class="pcard-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <div class="pid">P03 · HC como Chokepoint</div>
+          <div class="pname">TRF-2 reverte prisão preventiva em 2 meses</div>
+        </div>
+      </div>
+      <div class="pdesc">PF emite mandados preventivos em jun/2024. TRF-2 concede HC em ago/2024 — 2 meses depois. Ex-CEO removido da Interpol. Mesma geometria: órgão de 2ª instância reverte a medida mais eficaz de pressão processual antes de qualquer mérito.</div>
+      <div><span class="badge badge-amber">alto</span></div>
+    </div>
+
+    <div class="pcard a">
+      <div class="pcard-head">
+        <div class="pcard-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+        </div>
+        <div>
+          <div class="pid">P09 · Seletividade na Responsabilização</div>
+          <div class="pname">Executivos denunciados — controladores intocados</div>
+        </div>
+      </div>
+      <div class="pdesc">MPF responsabilizou apenas os 13 gestores executivos, excluindo acionistas que se beneficiaram de 7 anos de dividendos fictícios. Reproduz o padrão documentado em T-192 (Vorcaro): quem ocupa posições formais responde; quem detém poder econômico real, não.</div>
+      <div><span class="badge badge-amber">alto</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── 05 CONTROLADORES ─── -->
+<section class="sec" id="controladores">
+  <div class="sh">05 · a questão estrutural</div>
+  <h2>Os controladores e a questão que o processo não responde</h2>
+  <p>Jorge Paulo Lemann, Marcel Telles e Carlos Alberto Sicupira — fundadores da 3G Capital e acionistas de referência com 31% das ações — receberam dividendos e desfrutaram de valorização patrimonial durante os 7 anos em que a empresa apresentava resultados fictícios. Beneficiados pelo esquema, os controladores não são alvo da denúncia do MPF.</p>
+  <p>A pergunta que o processo criminal não endereça: <strong>em que ponto o benefício econômico de acionistas controladores de uma empresa que fraudava seus balanços há 7 anos implica responsabilidade?</strong> A resposta do MPF foi: não implica criminalmente. A responsabilidade civil via arbitragem continua em aberto: investidores requereram arbitragem coletiva contra Americanas e 3G Capital na B3, demandando R$ 500 milhões.</p>
+
+  <div class="hl g">
+    <span class="hl-icon">🔗</span>
+    <p><strong>Comparação estrutural com o corpus:</strong> na Operação Rejeito, Vorcaro (T-192) não aparecia formalmente na Tamisa — o vínculo era via fundo de investimento. Na Americanas, Lemann, Telles e Sicupira não dirigiam operacionalmente — o vínculo era via controle acionário e escolha dos gestores. Em ambos os casos, a estrutura jurídica formal foi suficiente para isolar o controlador da responsabilização direta. Isso não é falha de execução — é arquitetura.</p>
+  </div>
+</section>
+
+<!-- ─── 06 AUDITORES ─── -->
+<section class="sec" id="auditores">
+  <div class="sh">06 · omissão sistêmica</div>
+  <h2>Auditores, bancos e o silêncio de sete anos</h2>
+  <p>A KPMG e a PwC auditaram os balanços das Americanas durante parte do período de fraude sem identificar as inconsistências publicamente. A CVM abriu processos administrativos sobre as auditorias. Os bancos credores — BTG, Bradesco, Itaú, Santander — financiaram a empresa e detinham exposição de dezenas de bilhões sem questionar os balanços formalmente.</p>
+  <p>O Santander declarou que as inconsistências eram de responsabilidade exclusiva das Americanas. O BTG usou a expressão mais direta: <strong>"É o fraudador pedindo proteção à Justiça contra sua própria fraude"</strong>. Mas nenhum banco foi responsabilizado por não ter identificado o risco sacado não declarado — que estava nas suas próprias carteiras de crédito.</p>
+
+  <div class="hl a">
+    <span class="hl-icon">🔍</span>
+    <p><strong>Lacuna investigativa:</strong> como sete anos de fraude atravessaram múltiplos ciclos de auditoria pela KPMG e PwC sem detecção formal? A resposta ainda não foi dada em nenhum processo público. As firmas de auditoria não foram alvo da Operação Disclosure nem da denúncia do MPF.</p>
+  </div>
+</section>
+
+<!-- ─── 07 CORPUS ─── -->
+<section class="sec" id="corpus">
+  <div class="sh">07 · emaranhamento</div>
+  <h2>Conexões com o corpus</h2>
+  <div class="conns">
+    <div class="conn">
+      <div class="conn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></div>
+      <span class="cid">T-123</span>
+      <span class="cdesc">Zero × Zero — assimetria punitiva: mesmo padrão de condenação nula 3 anos após evento. Americanas é a instância corporativa mais documentada do padrão.</span>
+    </div>
+    <div class="conn">
+      <div class="conn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <span class="cid">T-192</span>
+      <span class="cdesc">Vorcaro triângulo: mecanismo análogo de isolamento do controlador via estrutura jurídica. Vorcaro usou fundo; 3G Capital usou controle acionário indireto. Mesmo efeito: controlador não alcançado pela responsabilização formal.</span>
+    </div>
+    <div class="conn">
+      <div class="conn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+      <span class="cid">T-128</span>
+      <span class="cdesc">Brasil Sangra — P11 macroeconômico: R$ 70 bi destruídos em valor de mercado + R$ 43 bi em dívidas = um dos maiores eventos de destruição de patrimônio privado da história recente do país.</span>
+    </div>
+    <div class="conn">
+      <div class="conn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+      <span class="cid">T-114/115</span>
+      <span class="cdesc">Banco Master — fraude contábil como padrão recorrente no sistema financeiro. Americanas = fraude corporativa; Master = fraude bancária. Escala e mecanismo distintos, P08 idêntico.</span>
+    </div>
+    <div class="conn">
+      <div class="conn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+      <span class="cid">ID 1563</span>
+      <span class="cdesc">Toffoli revoga preventivas Rejeito: mesma geometria do TRF-2 no caso Americanas (ago/2024). Prisão preventiva → recurso → revogação antes do mérito. Padrão P03 em contextos distintos.</span>
+    </div>
+  </div>
+
+  <!-- Registro JSON -->
+  <div class="code-block" style="margin-top:32px">
+    <div class="code-header">_data/processados/T-199-americanas-fraude-contabil-zero-condenacoes.json</div>
+    <div class="code-body"><span style="color:#7ec8e3">"id"</span>: <span style="color:var(--amber)">199</span>,
+<span style="color:#7ec8e3">"slug"</span>: <span style="color:#c3e88d">"americanas-fraude-contabil-zero-condenacoes"</span>,
+<span style="color:#7ec8e3">"tipo"</span>: <span style="color:#c3e88d">"analise_estrutural"</span>,
+<span style="color:#7ec8e3">"data_evento"</span>: <span style="color:#c3e88d">"2023-01-11"</span>,
+<span style="color:#7ec8e3">"padroes_ativados"</span>: [<span style="color:#c3e88d">"P08"</span>, <span style="color:#c3e88d">"P06"</span>, <span style="color:#c3e88d">"P03"</span>, <span style="color:#c3e88d">"P09"</span>],
+<span style="color:#7ec8e3">"cadeia_logica"</span>: <span style="color:#c3e88d">"VPCs fictícias (2016-2022) → balanços manipulados → auditores não detectam → ações sobrevalorizadas → bônus pagos com resultado fictício → nova diretoria revela (jan/2023) → R$ 70 bi destruídos → CPI encerra sem incriminar (set/2023) → Operação Disclosure (jun/2024) → ex-CEO já no exterior → TRF-2 concede HC (ago/2024) → MPF denuncia 13, exclui controladores (mar/2025) → zero condenações (mai/2026)"</span>,
+<span style="color:#7ec8e3">"status"</span>: <span style="color:#c3e88d">"confirmado"</span>, <span style="color:#7ec8e3">"licenca"</span>: <span style="color:#c3e88d">"CC0 1.0"</span></div>
+  </div>
+</section>
+
+<!-- ─── 08 RELACIONADOS (3×2) ─── -->
+<section class="sec" id="relacionados">
+  <div class="sh">08 · dossiês relacionados</div>
+  <h2>Posts do corpus — leituras complementares</h2>
+  <div class="rel-grid">
+
+    <a href="/posts/vorcaro-triangulo-carbono-mineracao-banco/" class="rel-card">
+      <div class="rel-card-head">
+        <div class="rel-card-icon" style="background:var(--amber2)">🏭</div>
+        <div class="rel-card-meta">
+          <div class="rel-card-id">T-192 · P08+P11+P03</div>
+          <div class="rel-card-title">Vorcaro — Triângulo Carbono–Mineração–Banco</div>
+        </div>
+      </div>
+      <div class="rel-card-body">R$ 45,5 bi em UECs fictícias, Tamisa/ANM e Banco Master. Isolamento do controlador via fundo — mesma geometria dos 3G.</div>
+      <div class="rel-card-tags">
+        <span class="rel-tag" style="background:var(--amber2);color:var(--amber)">P08</span>
+        <span class="rel-tag" style="background:var(--amber2);color:var(--amber)">controlador isolado</span>
+      </div>
+    </a>
+
+    <a href="/posts/banco-master-compliance-zero/" class="rel-card">
+      <div class="rel-card-head">
+        <div class="rel-card-icon" style="background:var(--red2)">🏦</div>
+        <div class="rel-card-meta">
+          <div class="rel-card-id">T-114 · P08+P03+P09</div>
+          <div class="rel-card-title">Banco Master — Compliance Zero</div>
+        </div>
+      </div>
+      <div class="rel-card-body">R$ 12,2 bi em carteiras fictícias. Toffoli como relator. Sigilo absoluto no STF. P08 bancário vs. corporativo.</div>
+      <div class="rel-card-tags">
+        <span class="rel-tag" style="background:var(--red2);color:var(--red)">crítico</span>
+        <span class="rel-tag" style="background:var(--red2);color:var(--red)">P08</span>
+      </div>
+    </a>
+
+    <a href="/posts/assimetria-punitiva/" class="rel-card">
+      <div class="rel-card-head">
+        <div class="rel-card-icon" style="background:var(--blue2)">⚖️</div>
+        <div class="rel-card-meta">
+          <div class="rel-card-id">T-123 · Zero × Zero</div>
+          <div class="rel-card-title">Assimetria Punitiva — 0 × 0</div>
+        </div>
+      </div>
+      <div class="rel-card-body">8/Jan: 1.500 processados, 10–17 anos. Lava Jato / Americanas: zero condenações definitivas. Tabela comparativa com fontes.</div>
+      <div class="rel-card-tags">
+        <span class="rel-tag" style="background:var(--blue2);color:var(--blue)">P03</span>
+        <span class="rel-tag" style="background:var(--blue2);color:var(--blue)">P06</span>
+      </div>
+    </a>
+
+    <a href="/posts/custeio-administrativo-federal-p11/" class="rel-card">
+      <div class="rel-card-head">
+        <div class="rel-card-icon" style="background:var(--amber2)">📊</div>
+        <div class="rel-card-meta">
+          <div class="rel-card-id">T-191 · P11</div>
+          <div class="rel-card-title">Custeio Federal — R$ 32,4 bi P11</div>
+        </div>
+      </div>
+      <div class="rel-card-body">P11 público vs. P11 privado (Americanas). R$ 32,4 bi no 1º sem/2025. Extração estrutural via orçamento — legalmente orçada, auditada e repetida.</div>
+      <div class="rel-card-tags">
+        <span class="rel-tag" style="background:var(--amber2);color:var(--amber)">P11</span>
+        <span class="rel-tag" style="background:var(--amber2);color:var(--amber)">orçamento</span>
+      </div>
+    </a>
+
+    <a href="/posts/emaranhamento-operacoes/" class="rel-card">
+      <div class="rel-card-head">
+        <div class="rel-card-icon" style="background:var(--purple2)">🕸️</div>
+        <div class="rel-card-meta">
+          <div class="rel-card-id">T-147 · análise sistêmica</div>
+          <div class="rel-card-title">Matriz de Emaranhamento de Operações</div>
+        </div>
+      </div>
+      <div class="rel-card-body">Nexo estrutural entre Panamericano, Americanas, Carbono Oculto e Compliance Zero. Padrão P08 recorrente no sistema financeiro 1995–2023.</div>
+      <div class="rel-card-tags">
+        <span class="rel-tag" style="background:var(--purple2);color:var(--purple)">P08</span>
+        <span class="rel-tag" style="background:var(--purple2);color:var(--purple)">sistêmico</span>
+      </div>
+    </a>
+
+    <a href="/posts/republica-capturada/" class="rel-card">
+      <div class="rel-card-head">
+        <div class="rel-card-icon" style="background:var(--red2)">🏛️</div>
+        <div class="rel-card-meta">
+          <div class="rel-card-id">T-122 · dashboard forense</div>
+          <div class="rel-card-title">República Capturada</div>
+        </div>
+      </div>
+      <div class="rel-card-body">R$ 140 bi documentados. 6 operações-núcleo. Atores nomeados com datas e decisões. Americanas como instância corporativa do mapa sistêmico.</div>
+      <div class="rel-card-tags">
+        <span class="rel-tag" style="background:var(--red2);color:var(--red)">crítico</span>
+        <span class="rel-tag" style="background:var(--red2);color:var(--red)">R$ 140 bi</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer class="footer">
+  <div class="fl">lawfare-timeline · gosurf.site · @araguaci<br>CC0 1.0 Universal — Domínio Público Total</div>
+  <div class="fr">T-199 · P08+P06+P03+P09<br>gerado 2026-05-28 · score 55.0</div>
+</footer>
+
+</div><!-- /page -->
+
+<!-- ─── GO-TO-TOP ─── -->
+<button id="gotop" title="Voltar ao topo" aria-label="Voltar ao topo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script>
+/* ─── SCROLL SPY + GOTOP ─── */
+(function(){
+  var gotop = document.getElementById('gotop');
+  var tabs  = document.querySelectorAll('.nav-tab[data-section]');
+  var secs  = document.querySelectorAll('.sec');
+
+  /* GoTop visibility */
+  window.addEventListener('scroll', function(){
+    if (window.scrollY > 320) gotop.classList.add('show');
+    else gotop.classList.remove('show');
+  }, {passive:true});
+
+  /* Scroll-spy via IntersectionObserver */
+  if (!('IntersectionObserver' in window)) return;
+
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){
+        var id = e.target.id;
+        tabs.forEach(function(t){
+          t.classList.toggle('active', t.getAttribute('data-section') === id);
+        });
+      }
+    });
+  }, {rootMargin:'-30% 0px -60% 0px', threshold:0});
+
+  secs.forEach(function(s){ io.observe(s); });
+
+  /* Smooth anchor clicks */
+  document.querySelectorAll('a.nav-tab').forEach(function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      var target = document.querySelector(a.getAttribute('href'));
+      if (target) target.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  });
+})();
+</script>
+</body>
+</html>

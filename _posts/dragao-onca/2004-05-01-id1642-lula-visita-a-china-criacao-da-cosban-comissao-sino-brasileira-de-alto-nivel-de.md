@@ -55,7 +55,7 @@ P10 (infraestrutura de serviço compartilhada) aplicado por analogia ao eixo dip
 
 Entradas conectadas nesta série:
 
-- [Entrada 1641](/timeline/entries/1641)
+- [Entrada 1641](/posts/id1641-lula-discursa-no-seminario-brasil-china-um-salto-necessario-no-bndes/)
 
 ---
 

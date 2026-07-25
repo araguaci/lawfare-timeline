@@ -53,7 +53,7 @@ Padrão P04b (both-sidesism funcional) aplicado pelo próprio agente do poder ex
 
 Entradas conectadas nesta série:
 
-- [Entrada 1661](/timeline/entries/1661)
+- [Entrada 1661](/posts/id1661-vereadora-eleita-de-belem-classifica-cop30-sob-gestao-barbalho-como-evento-fecha/)
 
 ---
 

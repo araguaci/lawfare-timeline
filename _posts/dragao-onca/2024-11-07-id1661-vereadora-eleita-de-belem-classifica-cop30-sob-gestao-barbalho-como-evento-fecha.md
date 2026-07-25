@@ -57,7 +57,7 @@ Mantida como ev-alleged por rigor metodológico: é a visão de uma vereadora de
 
 Entradas conectadas nesta série:
 
-- [Entrada 1660](/timeline/entries/1660)
+- [Entrada 1660](/posts/id1660-primo-de-quarto-grau-de-helder-barbalho-e-eleito-prefeito-de-belem/)
 
 ---
 

@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T-209 · JustiçaWatch Brasil — Base Pública de Decisões de Alto Impacto</title>
+<meta name="description" content="Base pública de decisões judiciais brasileiras (soltura, progressão, arquivamento) em casos violentos. Dados verificáveis em portais oficiais. 2005–2025.">
+<meta property="og:title" content="T-209 · JustiçaWatch Brasil">
+<meta property="og:description" content="Conheça as decisões. Exija prestação de contas.">
+<meta property="og:locale" content="pt_BR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Syne:wght@400;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:     #08080a;
+  --bg2:    #0f0f13;
+  --bg3:    #161619;
+  --bg4:    #1e1e24;
+  --border: #252530;
+  --border2:#363644;
+  --text:   #ebe9e2;
+  --text2:  #98968e;
+  --text3:  #555460;
+  --text4:  #35343c;
+  --red:    #e03e3e;
+  --red2:   #ff7070;
+  --amber:  #d4890e;
+  --amber2: #f0ad3c;
+  --green:  #1fb86a;
+  --green2: #44d486;
+  --blue:   #3a78f0;
+  --blue2:  #7aabff;
+  --purple: #8858d8;
+  --purple2:#b090ff;
+  --cyan:   #18b8cc;
+  --dim:    rgba(255,255,255,0.04);
+  --accent: var(--red);
+  --accent2: var(--red2);
+  --font-display: 'Syne', sans-serif;
+  --font-serif:   'DM Serif Display', serif;
+  --font-mono:    'IBM Plex Mono', monospace;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.65;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+body::after {
+  content: '';
+  position: fixed; inset: 0;
+  background: repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.025) 2px,rgba(0,0,0,.025) 4px);
+  pointer-events: none; z-index: 9998;
+}
+
+/* ─── STICKY NAV (scroll-spy) ─── */
+.snav {
+  position: sticky; top: 0; z-index: 200;
+  background: rgba(8,8,10,.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  height: 48px;
+  display: flex; align-items: center;
+  overflow-x: auto; scrollbar-width: none;
+}
+.snav::-webkit-scrollbar { display: none; }
+.snav-inner {
+  max-width: 1160px; margin: 0 auto;
+  padding: 0 24px;
+  display: flex; align-items: center; gap: 0;
+  white-space: nowrap;
+}
+.snav-brand {
+  font-family: var(--font-display);
+  font-size: 12px; font-weight: 700;
+  color: var(--text2);
+  padding: 0 16px 0 0;
+  border-right: 1px solid var(--border);
+  margin-right: 8px;
+  letter-spacing: -0.01em;
+}
+.snav a {
+  font-size: 11px; color: var(--text3);
+  text-decoration: none;
+  padding: 0 14px; height: 48px;
+  display: flex; align-items: center;
+  border-bottom: 2px solid transparent;
+  transition: color .15s, border-color .15s;
+  letter-spacing: .04em;
+}
+.snav a:hover { color: var(--text); }
+.snav a.active { color: var(--red2); border-bottom-color: var(--red2); }
+
+/* ─── LAYOUT ─── */
+.wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px 100px; }
+
+/* ─── HERO ─── */
+.hero {
+  padding: 52px 0 40px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 48px;
+  position: relative;
+}
+.hero-eyebrow {
+  font-size: 10px; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--red);
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 16px;
+}
+.pulse {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(224,62,62,.1);
+  border: 1px solid rgba(224,62,62,.3);
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-size: 10px; letter-spacing: .12em;
+  color: var(--red2);
+}
+.pulse-dot {
+  width: 6px; height: 6px;
+  background: var(--red);
+  border-radius: 50%;
+  animation: blink 2s infinite;
+}
+@keyframes blink { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.3;transform:scale(.7)} }
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(30px, 5vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -.01em;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+.hero-title em { font-style: italic; color: var(--red2); }
+.hero-subtitle {
+  font-family: var(--font-display);
+  font-size: clamp(13px, 1.8vw, 15px);
+  color: var(--text2); max-width: 680px;
+  margin-top: 14px; line-height: 1.6; font-weight: 400;
+}
+.hero-meta {
+  position: absolute; right: 0; top: 52px;
+  text-align: right; font-size: 10px;
+  color: var(--text3); line-height: 2;
+}
+.cc0 {
+  display: inline-block;
+  border: 1px solid var(--border2);
+  padding: 2px 8px; border-radius: 3px;
+  font-size: 9px; color: var(--text3);
+  letter-spacing: .08em; margin-top: 4px;
+}
+
+/* ─── SECTION LABELS ─── */
+.sec-label {
+  font-size: 10px; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--text3);
+  margin-bottom: 18px;
+  display: flex; align-items: center; gap: 10px;
+}
+.sec-label::before {
+  content: ''; width: 24px; height: 1px;
+  background: var(--border2);
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(18px, 2.5vw, 26px);
+  font-weight: 700; letter-spacing: -.02em;
+  color: var(--text); margin-bottom: 6px;
+}
+.section-sub {
+  font-size: 12px; color: var(--text2);
+  margin-bottom: 28px; max-width: 620px; line-height: 1.6;
+}
+section { margin-bottom: 60px; }
+hr.divider { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+/* ─── AVISO ─── */
+.notice {
+  display: flex; gap: 12px; align-items: flex-start;
+  background: rgba(212,137,14,.06);
+  border: 1px solid rgba(212,137,14,.25);
+  border-radius: 6px;
+  padding: 14px 18px;
+  margin-bottom: 40px;
+  font-size: 12px; color: var(--text2); line-height: 1.6;
+}
+.notice-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+.notice strong { color: var(--amber2); }
+
+/* ─── NUMS (3 colunas) ─── */
+.nums {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 12px;
+  margin-bottom: 40px;
+}
+.num-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex; flex-direction: column; gap: 10px;
+  transition: border-color .15s;
+}
+.num-card:hover { border-color: var(--border2); }
+.num-icon {
+  width: 36px; height: 36px; border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+}
+.num-icon.red    { background: rgba(224,62,62,.1); }
+.num-icon.amber  { background: rgba(212,137,14,.1); }
+.num-icon.green  { background: rgba(31,184,106,.1); }
+.num-icon.blue   { background: rgba(58,120,240,.1); }
+.num-icon.purple { background: rgba(136,88,216,.1); }
+.num-icon.cyan   { background: rgba(24,184,204,.1); }
+.num-val {
+  font-family: var(--font-mono);
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 600; line-height: 1;
+  color: var(--text);
+}
+.num-val span { font-size: .55em; color: var(--text3); margin-left: 4px; }
+.num-label { font-size: 11px; color: var(--text2); font-weight: 500; }
+.num-sub { font-size: 10px; color: var(--text3); line-height: 1.5; }
+
+/* ─── PGRID (2 colunas) ─── */
+.pgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  gap: 14px;
+  margin-bottom: 40px;
+}
+.pcard {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px 22px;
+  position: relative; overflow: hidden;
+}
+.pcard::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 3px;
+}
+.pcard.red::before    { background: linear-gradient(90deg, var(--red), transparent); }
+.pcard.amber::before  { background: linear-gradient(90deg, var(--amber), transparent); }
+.pcard.blue::before   { background: linear-gradient(90deg, var(--blue), transparent); }
+.pcard.green::before  { background: linear-gradient(90deg, var(--green), transparent); }
+.pcard.purple::before { background: linear-gradient(90deg, var(--purple), transparent); }
+.pcard.cyan::before   { background: linear-gradient(90deg, var(--cyan), transparent); }
+.pcard-head {
+  display: flex; align-items: flex-start; gap: 12px;
+  margin-bottom: 12px;
+}
+.pcard-icon { font-size: 20px; margin-top: 2px; }
+.pcard-code {
+  font-size: 9px; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--text3); margin-bottom: 4px;
+}
+.pcard-title {
+  font-family: var(--font-display);
+  font-size: 14px; font-weight: 700;
+  color: var(--text); letter-spacing: -.01em;
+}
+.pcard-body {
+  font-size: 12px; color: var(--text2); line-height: 1.65;
+}
+.pcard-body strong { color: var(--text); font-weight: 500; }
+.pcard-ref {
+  margin-top: 10px; padding: 8px 12px;
+  background: rgba(255,255,255,.03);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 10px; color: var(--text3); line-height: 1.5;
+}
+.pcard-ref a { color: var(--text3); text-decoration: none; border-bottom: 1px dotted var(--border2); }
+.pcard-ref a:hover { color: var(--cyan); }
+
+/* ─── CASES ─── */
+.cases-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 40px; }
+.case-item {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px 18px;
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 16px;
+  align-items: start;
+  transition: border-color .15s;
+}
+.case-item:hover { border-color: var(--border2); }
+.case-year-wrap { display: flex; flex-direction: column; gap: 3px; }
+.case-year-num {
+  font-family: var(--font-mono);
+  font-size: 20px; font-weight: 600;
+  color: var(--text3); line-height: 1;
+}
+.case-year-tri {
+  font-size: 9px; letter-spacing: .1em;
+  color: var(--text4);
+}
+.case-name {
+  font-family: var(--font-display);
+  font-size: 13px; font-weight: 700;
+  color: var(--text); margin-bottom: 4px;
+  letter-spacing: -.01em;
+}
+.case-desc { font-size: 11px; color: var(--text2); line-height: 1.6; margin-bottom: 8px; }
+.case-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+.case-tag {
+  font-size: 9px; letter-spacing: .08em;
+  padding: 2px 7px; border-radius: 3px; border: 1px solid;
+}
+.tag-trafico   { color: #9060e8; border-color: rgba(144,96,232,.25); background: rgba(144,96,232,.06); }
+.tag-homicidio { color: #e03e3e; border-color: rgba(224,62,62,.25);  background: rgba(224,62,62,.06); }
+.tag-corrupcao { color: #d4890e; border-color: rgba(212,137,14,.25); background: rgba(212,137,14,.06); }
+.tag-estupro   { color: #ff7070; border-color: rgba(255,112,112,.25);background: rgba(255,112,112,.06); }
+.tag-foragido  { color: #f0ad3c; border-color: rgba(240,173,60,.35); background: rgba(240,173,60,.1); font-weight: 600; }
+.tag-milicia   { color: #3a78f0; border-color: rgba(58,120,240,.25); background: rgba(58,120,240,.06); }
+.tag-latrocinio{ color: #18b8cc; border-color: rgba(24,184,204,.25); background: rgba(24,184,204,.06); }
+.tag-stf       { color: #555460; border-color: var(--border2); background: var(--bg3); }
+.tag-stj       { color: #555460; border-color: var(--border2); background: var(--bg3); }
+
+/* ─── ALERTAS ─── */
+.alert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 12px;
+  margin-bottom: 40px;
+}
+.alert-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 18px 20px;
+}
+.alert-icon { font-size: 22px; margin-bottom: 10px; display: block; }
+.alert-title {
+  font-family: var(--font-display);
+  font-size: 13px; font-weight: 700;
+  color: var(--text); margin-bottom: 8px;
+  letter-spacing: -.01em;
+}
+.alert-desc { font-size: 11px; color: var(--text2); line-height: 1.6; }
+.alert-stat {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 18px; font-weight: 600;
+  color: var(--red2); margin-top: 8px;
+}
+
+/* ─── MÉTODO ─── */
+.method-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 12px; margin-bottom: 40px;
+}
+.method-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px 18px;
+  display: flex; gap: 12px;
+}
+.method-step {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 600; color: var(--text3);
+  flex-shrink: 0; margin-top: 2px;
+}
+.method-title {
+  font-size: 12px; font-weight: 600; color: var(--text);
+  margin-bottom: 4px; font-family: var(--font-display);
+}
+.method-desc { font-size: 11px; color: var(--text2); line-height: 1.55; }
+
+/* ─── CORPUS BRIDGE ─── */
+.conns { display: flex; flex-direction: column; gap: 8px; margin-bottom: 40px; }
+.conn {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 12px 16px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  transition: border-color .15s;
+}
+.conn:hover { border-color: var(--border2); }
+.conn-icon { font-size: 16px; margin-top: 1px; flex-shrink: 0; }
+.conn-id { font-size: 10px; letter-spacing: .1em; color: var(--text3); margin-bottom: 3px; }
+.conn-title { font-size: 12px; color: var(--text); font-weight: 500; }
+.conn-desc { font-size: 11px; color: var(--text3); margin-top: 2px; line-height: 1.5; }
+.conn-link { font-size: 10px; color: var(--red2); text-decoration: none; margin-top: 4px; display: block; }
+.conn-link:hover { color: var(--text); }
+
+/* ─── RELATED (3x2) ─── */
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 12px; margin-bottom: 48px;
+}
+.rel-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 18px;
+  text-decoration: none; color: inherit;
+  display: flex; flex-direction: column; gap: 6px;
+  min-height: 100px;
+  transition: border-color .15s, transform .12s;
+}
+.rel-card:hover { border-color: var(--red); transform: translateY(-2px); }
+.rel-card-top { display: flex; gap: 10px; align-items: flex-start; }
+.rel-card-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+.rel-card-id   { font-size: 9px; letter-spacing: .1em; color: var(--text3); margin-bottom: 2px; }
+.rel-card-title { font-size: 13px; color: var(--text); font-weight: 600; font-family: var(--font-display); letter-spacing: -.01em; line-height: 1.25; }
+.rel-card-desc  { font-size: 11px; color: var(--text2); line-height: 1.5; flex: 1; }
+.rel-card-meta  { font-size: 10px; color: var(--text4); margin-top: auto; }
+
+/* ─── GO-TO-TOP ─── */
+#gotop {
+  position: fixed; right: 20px; bottom: 22px; z-index: 999;
+  width: 42px; height: 42px; border-radius: 8px;
+  border: 1px solid var(--border2);
+  background: rgba(15,15,19,.92);
+  backdrop-filter: blur(10px);
+  color: var(--text3); cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,.45);
+  opacity: 0; pointer-events: none; transition: opacity .2s, transform .15s, border-color .15s, color .15s;
+}
+#gotop.visible { opacity: 1; pointer-events: auto; }
+#gotop:hover { transform: translateY(-2px); border-color: var(--red); color: var(--red2); }
+
+/* ─── FOOTER ─── */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 0 40px;
+  font-size: 10px; color: var(--text3);
+  display: flex; justify-content: space-between;
+  align-items: flex-start; flex-wrap: wrap; gap: 14px;
+}
+.footer a { color: var(--text3); text-decoration: none; border-bottom: 1px solid var(--border2); }
+.footer a:hover { color: var(--cyan); border-bottom-color: var(--cyan); }
+
+@media (max-width: 768px) {
+  .hero-meta { display: none; }
+  .nums { grid-template-columns: 1fr 1fr; }
+  .snav-brand { display: none; }
+  .case-item { grid-template-columns: 56px 1fr; }
+}
+@media (max-width: 480px) {
+  .nums { grid-template-columns: 1fr; }
+  .case-item { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ STICKY NAV ═══ -->
+<nav class="snav" aria-label="Navegação interna">
+  <div class="snav-inner">
+    <span class="snav-brand">T-209</span>
+    <a href="#projeto" class="active">O Projeto</a>
+    <a href="#estatisticas">Estatísticas</a>
+    <a href="#casos">Casos Âncora</a>
+    <a href="#alertas">Alertas</a>
+    <a href="#metodologia">Metodologia</a>
+    <a href="#corpus">Corpus</a>
+    <a href="#relacionados">Relacionados</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <!-- ═══ HERO ═══ -->
+  <div class="hero">
+    <div class="hero-meta">
+      Base 2005–2025<br>
+      lawfare-timeline<br>
+      dados públicos verificáveis<br>
+      <span class="cc0">CC0 1.0 · DOMÍNIO PÚBLICO</span>
+    </div>
+    <div class="hero-eyebrow">
+      <span class="pulse"><span class="pulse-dot"></span>BASE ATIVA</span>
+      Monitoramento Judicial · Dados Públicos
+    </div>
+    <h1 class="hero-title">JustiçaWatch <em>Brasil</em></h1>
+    <p class="hero-subtitle">
+      Base pública de decisões judiciais brasileiras que resultaram em soltura, progressão de regime ou arquivamento de processos em casos de crimes violentos.
+      Todos os dados são verificáveis em portais oficiais — STF, STJ, CNJ, BNMP, tribunais estaduais.
+    </p>
+  </div>
+
+  <!-- ═══ AVISO ═══ -->
+  <div class="notice">
+    <div class="notice-icon">⚠️</div>
+    <div>
+      <strong>AVISO DE DADOS:</strong> Esta base apresenta apenas registros verificáveis em fontes primárias públicas.
+      A apresentação de casos <em>não implica culpa ou erro do magistrado</em> — registra o impacto público de decisões judiciais.
+      Alguns casos resultaram em soltura de inocentes, devidamente anotado.
+      Erros ou correções: abra issue no repositório público.
+    </div>
+  </div>
+
+  <!-- ═══ STATS ═══ -->
+  <section id="estatisticas">
+    <div class="sec-label">Números da Base</div>
+    <h2 class="section-title">Escala sistêmica — dados verificáveis em fontes primárias</h2>
+    <p class="section-sub">Cada número é rastreável a portais oficiais. A grandeza revela padrão sistêmico, não exceção.</p>
+
+    <div class="nums">
+      <div class="num-card">
+        <div class="num-icon red">⚖️</div>
+        <div class="num-val">9.166</div>
+        <div class="num-label">HC para traficantes — STJ (2024)</div>
+        <div class="num-sub">Habeas corpus concedidos no ano, casos de tráfico de drogas</div>
+      </div>
+      <div class="num-card">
+        <div class="num-icon red">🏛️</div>
+        <div class="num-val">577</div>
+        <div class="num-label">HC tráfico — STF (2024)</div>
+        <div class="num-sub">Corte Suprema — casos de tráfico com decisão favorável</div>
+      </div>
+      <div class="num-card">
+        <div class="num-icon amber">🔄</div>
+        <div class="num-val">42%</div>
+        <div class="num-label">Taxa de reincidência criminal (BR)</div>
+        <div class="num-sub">Percentual de ex-detentos que reincidem em 5 anos</div>
+      </div>
+      <div class="num-card">
+        <div class="num-icon purple">🔒</div>
+        <div class="num-val">834k</div>
+        <div class="num-label">População carcerária brasileira</div>
+        <div class="num-sub">3ª maior do mundo — CNJ/SISDEPEN 2024</div>
+      </div>
+      <div class="num-card">
+        <div class="num-icon amber">🏃</div>
+        <div class="num-val">21+</div>
+        <div class="num-label">Foragidos via HC Marco Aurélio (2020)</div>
+        <div class="num-sub">Liminares revertidas pelo colegiado — réus já haviam fugido</div>
+      </div>
+      <div class="num-card">
+        <div class="num-icon cyan">📅</div>
+        <div class="num-val">20<span>anos</span></div>
+        <div class="num-label">Cobertura temporal da base</div>
+        <div class="num-sub">Decisões mapeadas de 2005 a 2025</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ CASOS ÂNCORA ═══ -->
+  <section id="casos">
+    <div class="sec-label">Decisões de Alto Impacto</div>
+    <h2 class="section-title">Casos âncora — linha do tempo (2005–2025)</h2>
+    <p class="section-sub">Seleção dos casos com maior impacto sistêmico documentado. Todos verificáveis em portais públicos.</p>
+
+    <div class="cases-list">
+
+      <div class="case-item">
+        <div class="case-year-wrap">
+          <div class="case-year-num">2006</div>
+          <div class="case-year-tri">STF</div>
+        </div>
+        <div>
+          <div class="case-name">Progressão de regime — Crimes hediondos</div>
+          <div class="case-desc">HC 82.959-7: STF declara inconstitucional obrigatoriedade de regime fechado integral para crimes hediondos. Julgado a pedido de condenado por atentado violento ao pudor contra três crianças. Impacto: dezenas de milhares de condenados por estupro, latrocínio e tortura passaram a ter acesso à progressão.</div>
+          <div class="case-tags">
+            <span class="case-tag tag-estupro">estupro</span>
+            <span class="case-tag tag-homicidio">crimes hediondos</span>
+            <span class="case-tag tag-latrocinio">latrocínio</span>
+            <span class="case-tag tag-stf">HC 82.959-7</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-item">
+        <div class="case-year-wrap">
+          <div class="case-year-num">2009</div>
+          <div class="case-year-tri">STF</div>
+        </div>
+        <div>
+          <div class="case-name">Mudança — Trânsito em julgado para início de pena</div>
+          <div class="case-desc">HC 84.078: STF reverte entendimento de 1988 — réu só pode ser preso após exaurimento de todos os recursos. Tornou-se instrumento protelatório para condenados com recursos para contratar advogados. Revertida em 2016 e novamente em 2019.</div>
+          <div class="case-tags">
+            <span class="case-tag tag-corrupcao">corrupção</span>
+            <span class="case-tag tag-corrupcao">impunidade sistêmica</span>
+            <span class="case-tag tag-stf">HC 84.078</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-item">
+        <div class="case-year-wrap">
+          <div class="case-year-num">2019</div>
+          <div class="case-year-tri">STF</div>
+        </div>
+        <div>
+          <div class="case-name">Retorno ao trânsito em julgado — Reversão Lava Jato</div>
+          <div class="case-desc">ADCs 43, 44 e 54: STF proíbe novamente prisão após segunda instância. Impacto imediato: soltura de condenados pela Operação Lava Jato, incluindo Lula e outros políticos. CNJ estimou até 4.895 presos potencialmente afetados.</div>
+          <div class="case-tags">
+            <span class="case-tag tag-corrupcao">corrupção</span>
+            <span class="case-tag tag-corrupcao">Lava Jato</span>
+            <span class="case-tag tag-stf">ADC 43/44/54</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-item">
+        <div class="case-year-wrap">
+          <div class="case-year-num">2020</div>
+          <div class="case-year-tri">STF</div>
+        </div>
+        <div>
+          <div class="case-name">André do Rap — Líder do PCC solto e foragido</div>
+          <div class="case-desc">André Oliveira Macedo, condenado a 25 anos por tráfico e liderança do PCC, solto por HC monocrático do Min. Marco Aurélio. Decisão revertida — criminoso já havia fugido. Continua foragido 5 anos depois, procurado pela Interpol.</div>
+          <div class="case-tags">
+            <span class="case-tag tag-trafico">tráfico internacional</span>
+            <span class="case-tag tag-trafico">PCC</span>
+            <span class="case-tag tag-foragido">⚠ FORAGIDO</span>
+            <span class="case-tag tag-stf">HC 191.836</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-item">
+        <div class="case-year-wrap">
+          <div class="case-year-num">2020</div>
+          <div class="case-year-tri">STF</div>
+        </div>
+        <div>
+          <div class="case-name">21 criminosos foragidos — liminares Marco Aurélio</div>
+          <div class="case-desc">Levantamento do Estadão: ao menos 21 réus obtiveram liminares de HC com Min. Marco Aurélio, fugiram antes de o colegiado reverter a decisão. Crimes: tráfico internacional, estelionato, homicídio qualificado, extorsão e formação de milícia. O "intervalo de fuga" entre liminar monocrática e análise colegiada como falha estrutural.</div>
+          <div class="case-tags">
+            <span class="case-tag tag-trafico">tráfico</span>
+            <span class="case-tag tag-homicidio">homicídio</span>
+            <span class="case-tag tag-milicia">milícia</span>
+            <span class="case-tag tag-foragido">⚠ 21 FORAGIDOS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-item">
+        <div class="case-year-wrap">
+          <div class="case-year-num">2021</div>
+          <div class="case-year-tri">TJ-GO</div>
+        </div>
+        <div>
+          <div class="case-name">Lázaro Barbosa — Progressão ignorando laudo de periculosidade</div>
+          <div class="case-desc">Lázaro Barbosa, com histórico de homicídios, crimes sexuais e fuga, recebeu progressão para regime semiaberto por "bom comportamento". Junta psiquiátrica havia emitido parecer contrário — ignorado. Evadiu-se e cometeu nova série de crimes antes de ser morto por força-tarefa de 200+ agentes.</div>
+          <div class="case-tags">
+            <span class="case-tag tag-homicidio">homicídio múltiplo</span>
+            <span class="case-tag tag-estupro">estupro</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-item">
+        <div class="case-year-wrap">
+          <div class="case-year-num">2022</div>
+          <div class="case-year-tri">STJ</div>
+        </div>
+        <div>
+          <div class="case-name">Anulação por busca pessoal — 122 porções de droga devolvidas</div>
+          <div class="case-desc">STJ anula condenação de homem preso com 72 porções de cocaína + 50 de maconha + balança digital, sob argumento que abordagem policial foi irregular por "atitude suspeita". Condenado em liberdade, drogas inutilizadas. Precedente sistêmico para proibição de busca pessoal com base em atitude suspeita.</div>
+          <div class="case-tags">
+            <span class="case-tag tag-trafico">tráfico</span>
+            <span class="case-tag tag-stj">nulidade processual</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ ALERTAS SISTÊMICOS ═══ -->
+  <section id="alertas">
+    <div class="sec-label">Padrões de Risco</div>
+    <h2 class="section-title">Alertas sistêmicos — padrões recorrentes documentados</h2>
+    <p class="section-sub">Comportamentos sistêmicos identificados ao longo de 20 anos de decisões — não casos isolados.</p>
+
+    <div class="pgrid">
+      <div class="pcard red">
+        <div class="pcard-head">
+          <div class="pcard-icon">⏱️</div>
+          <div>
+            <div class="pcard-code">ALERTA 01</div>
+            <div class="pcard-title">O intervalo de fuga</div>
+          </div>
+        </div>
+        <div class="pcard-body">
+          Janela entre liminar monocrática e análise colegiada. O STF pode reverter uma decisão errada — mas o réu já fugiu. André do Rap e os 21 foragidos de Marco Aurélio documentam o mesmo padrão. A velocidade de execução da liminar supera consistentemente a velocidade de revisão pelo colegiado.
+          <div class="pcard-ref">Casos documentados: André do Rap (HC 191.836), 21 foragidos (Estadão, out/2020)</div>
+        </div>
+      </div>
+
+      <div class="pcard amber">
+        <div class="pcard-head">
+          <div class="pcard-icon">🔄</div>
+          <div>
+            <div class="pcard-code">ALERTA 02</div>
+            <div class="pcard-title">Mudanças jurisprudenciais retroativas</div>
+          </div>
+        </div>
+        <div class="pcard-body">
+          O STF mudou o entendimento sobre trânsito em julgado três vezes em 10 anos (2009, 2016, 2019). Cada mudança gera impacto retroativo imediato sobre milhares de presos. A incerteza jurisprudencial cria janelas de oportunidade para quem pode aguardar o próximo ciclo de mudanças.
+          <div class="pcard-ref">HC 84.078 (2009) → ADC 44 (2016) → ADCs 43/44/54 (2019)</div>
+        </div>
+      </div>
+
+      <div class="pcard purple">
+        <div class="pcard-head">
+          <div class="pcard-icon">📊</div>
+          <div>
+            <div class="pcard-code">ALERTA 03</div>
+            <div class="pcard-title">Dessimetria de acesso</div>
+          </div>
+        </div>
+        <div class="pcard-body">
+          A mudança do trânsito em julgado (2009) favoreceu desproporcionalmente réus com recursos para contratar advogados e recorrer indefinidamente. A progressão de regime de crimes hediondos (2006) impactou majoritariamente condenados sem recursos para recorrer individualmente. Dois regimes, dois pesos.
+          <div class="pcard-ref">Dados: CNJ · Relatório Reincidência Criminal 2023 · SISDEPEN 2024</div>
+        </div>
+      </div>
+
+      <div class="pcard blue">
+        <div class="pcard-head">
+          <div class="pcard-icon">🧬</div>
+          <div>
+            <div class="pcard-code">ALERTA 04</div>
+            <div class="pcard-title">Laudo técnico ignorado</div>
+          </div>
+        </div>
+        <div class="pcard-body">
+          O caso Lázaro Barbosa documentou decisão de progressão contrariando laudos psiquiátricos explícitos de periculosidade. O padrão é sistêmico: critérios formais de "bom comportamento" sobrepõem avaliações técnicas de risco. Resultado: progressão de réus com indicadores de reincidência elevados.
+          <div class="pcard-ref">Relatório SESP-GO/2021 · Análise Gazeta do Povo (benefícios excessivos)</div>
+        </div>
+      </div>
+
+      <div class="pcard green">
+        <div class="pcard-head">
+          <div class="pcard-icon">🏭</div>
+          <div>
+            <div class="pcard-code">ALERTA 05</div>
+            <div class="pcard-title">Volume sistêmico de HCs</div>
+          </div>
+        </div>
+        <div class="pcard-body">
+          9.166 HCs concedidos pelo STJ para casos de tráfico em 2024. 577 no STF. Este volume transforma o habeas corpus de instrumento excepcional de liberdade em mecanismo rotineiro de gestão prisional — com impacto sobre segurança pública impossível de ser avaliado sistematicamente.
+          <div class="pcard-ref">Fonte: STJ · Relatório Estatístico 2024 · STF · Painel de Informações</div>
+        </div>
+      </div>
+
+      <div class="pcard red">
+        <div class="pcard-head">
+          <div class="pcard-icon">📉</div>
+          <div>
+            <div class="pcard-code">ALERTA 06</div>
+            <div class="pcard-title">Ausência de rastreamento pós-soltura</div>
+          </div>
+        </div>
+        <div class="pcard-body">
+          O HC Coletivo COVID do STJ (2020) soltou presos em todo o país — sem mecanismo de acompanhamento pós-soltura. O impacto real em termos de crimes cometidos por libertos nunca foi sistematicamente monitorado. A decisão existe; a responsabilização pelo resultado, não.
+          <div class="pcard-ref">HC coletivo — 3ª Seção STJ, out/2020 · Recomendação CNJ 62/2020</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ METODOLOGIA ═══ -->
+  <section id="metodologia">
+    <div class="sec-label">Método</div>
+    <h2 class="section-title">Critérios de inclusão — como os casos são selecionados</h2>
+    <p class="section-sub">Processo rigoroso de verificação para garantir que cada caso seja rastreável a fonte primária pública.</p>
+
+    <div class="method-grid">
+      <div class="method-card">
+        <div class="method-step">1</div>
+        <div>
+          <div class="method-title">Fonte primária verificável</div>
+          <div class="method-desc">Cada caso requer link para portal oficial: STF, STJ, CNJ, BNMP, ou tribunal estadual. Fontes de imprensa apenas como referência secundária.</div>
+        </div>
+      </div>
+      <div class="method-card">
+        <div class="method-step">2</div>
+        <div>
+          <div class="method-title">Impacto público documentado</div>
+          <div class="method-desc">Foco em decisões com impacto mensurável: soltura efetiva, progressão de regime, arquivamento. Decisões técnicas sem impacto imediato não são incluídas.</div>
+        </div>
+      </div>
+      <div class="method-card">
+        <div class="method-step">3</div>
+        <div>
+          <div class="method-title">Isenção política</div>
+          <div class="method-desc">A base inclui casos em governos de esquerda e direita, federais e estaduais. Não é argumento político — é registro factual de padrões sistêmicos.</div>
+        </div>
+      </div>
+      <div class="method-card">
+        <div class="method-step">4</div>
+        <div>
+          <div class="method-title">Anotação de inocentes</div>
+          <div class="method-desc">Casos onde a soltura foi de fato justa (inocentes presos indevidamente) são devidamente anotados — a base não é contra a liberdade, é sobre transparência.</div>
+        </div>
+      </div>
+      <div class="method-card">
+        <div class="method-step">5</div>
+        <div>
+          <div class="method-title">Correção aberta</div>
+          <div class="method-desc">Erros ou dados desatualizados são corrigidos via issue público no repositório. Transparência sobre as limitações da base é parte do método.</div>
+        </div>
+      </div>
+      <div class="method-card">
+        <div class="method-step">6</div>
+        <div>
+          <div class="method-title">Atualização contínua</div>
+          <div class="method-desc">A base é atualizada conforme novas decisões são documentadas. Decisões pendentes de verificação ficam marcadas como "em apuração" até confirmação.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ CORPUS BRIDGE ═══ -->
+  <section id="corpus">
+    <div class="sec-label">Corpus Bridge</div>
+    <h2 class="section-title">Entradas do corpus — conexões com o lawfare-timeline</h2>
+    <p class="section-sub">O JustiçaWatch Brasil conecta os dados de segurança pública com a documentação de captura institucional do projeto.</p>
+
+    <div class="conns">
+      <div class="conn">
+        <div class="conn-icon">⚖️</div>
+        <div>
+          <div class="conn-id">T-209-A · padrão-sistêmico</div>
+          <div class="conn-title">STF como dual-use terminal — casos criminais e anticorrupção</div>
+          <div class="conn-desc">O STF documentado no JustiçaWatch (HCs para tráfico, mudanças de jurisprudência) é o mesmo STF documentado no lawfare-timeline (Gilmar Mendes × Satiagraha, Toffoli × Compliance Zero). A mesma arquitetura institucional opera nas duas dimensões.</div>
+          <a href="https://gosurf.site/paralelos" class="conn-link" target="_blank" rel="noopener">→ paralelos.html — P03 Captura Judicial de Emergência</a>
+        </div>
+      </div>
+      <div class="conn">
+        <div class="conn-icon">📋</div>
+        <div>
+          <div class="conn-id">T-209-B · conexão-cruzada</div>
+          <div class="conn-title">André do Rap e PCC × Carbono Oculto — mesma infraestrutura</div>
+          <div class="conn-desc">André do Rap (PCC, tráfico) solto pelo mesmo STF que em 2025 documentou PCC infiltrado em gestoras da Faria Lima via Carbono Oculto. A impunidade no nível de varejo cria as condições de escala para a sofisticação financeira.</div>
+          <a href="../carbono_oculto.html" class="conn-link">→ carbono_oculto.html — PCC nas gestoras CVM-reguladas</a>
+        </div>
+      </div>
+      <div class="conn">
+        <div class="conn-icon">📊</div>
+        <div>
+          <div class="conn-id">T-209-C · escala-sistêmica</div>
+          <div class="conn-title">9.166 HCs/ano × padrão P01 — a mesma lógica em duas escalas</div>
+          <div class="conn-desc">O P01 (anulação por vício processual) documentado nas 4 operações anticorrupção é a versão de elite da mesma lógica que gera 9.166 HCs para tráfico no STJ. O vício processual como escudo é recurso universal — da criminalidade organizada ao crime de colarinho branco.</div>
+          <a href="t208-narrativa-vs-evidencia.html" class="conn-link">→ T-208 — P01 Anulação por Vício Processual (padrão sistêmico)</a>
+        </div>
+      </div>
+      <div class="conn">
+        <div class="conn-icon">🔍</div>
+        <div>
+          <div class="conn-id">T-209-D · dado-verificável</div>
+          <div class="conn-title">Base de dados aberta — gosurf.site/jusmonitor</div>
+          <div class="conn-desc">A versão completa da base com filtros interativos, legenda de tipos e expansão de detalhes está disponível em formato navegável. Inclui casos de 2005 a 2025 com referências para todas as fontes primárias.</div>
+          <a href="jusmonitor.html" class="conn-link">→ jusmonitor.html — base interativa completa</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ RELACIONADOS (3x2) ═══ -->
+  <section id="relacionados">
+    <div class="sec-label">Posts Relacionados</div>
+    <h2 class="section-title">Corpus — artefatos vinculados</h2>
+    <p class="section-sub">Dossiês e análises do lawfare-timeline com conexão direta aos padrões documentados nesta base.</p>
+
+    <div class="related-grid">
+      <a href="jusmonitor.html" class="rel-card">
+        <div class="rel-card-top">
+          <div class="rel-card-icon">🔍</div>
+          <div>
+            <div class="rel-card-id">jusmonitor.html</div>
+            <div class="rel-card-title">JustiçaWatch — Base Interativa</div>
+          </div>
+        </div>
+        <div class="rel-card-desc">Versão completa com filtros por tipo de crime, linha do tempo navegável e expansão de detalhes para cada caso.</div>
+        <div class="rel-card-meta">gosurf.site · base interativa</div>
+      </a>
+
+      <a href="t208-narrativa-vs-evidencia.html" class="rel-card">
+        <div class="rel-card-top">
+          <div class="rel-card-icon">🪞</div>
+          <div>
+            <div class="rel-card-id">T-208</div>
+            <div class="rel-card-title">O Espelho Partido</div>
+          </div>
+        </div>
+        <div class="rel-card-desc">Narrativa pública de captura vs. documentação forense. Os 6 padrões sistêmicos que conectam casos criminais e anticorrupção.</div>
+        <div class="rel-card-meta">T-208 · dossiê · DS v1.1</div>
+      </a>
+
+      <a href="https://gosurf.site/paralelos" class="rel-card" target="_blank" rel="noopener">
+        <div class="rel-card-top">
+          <div class="rel-card-icon">🔗</div>
+          <div>
+            <div class="rel-card-id">paralelos.html</div>
+            <div class="rel-card-title">Paralelos entre Operações</div>
+          </div>
+        </div>
+        <div class="rel-card-desc">P03 — Captura Judicial de Emergência. O mesmo STF que concede HC para traficantes concede liminares para proteger operações de lavagem.</div>
+        <div class="rel-card-meta">lawfare-timeline · análise estrutural</div>
+      </a>
+
+      <a href="../carbono_oculto.html" class="rel-card">
+        <div class="rel-card-top">
+          <div class="rel-card-icon">🌫️</div>
+          <div>
+            <div class="rel-card-id">carbono_oculto.html</div>
+            <div class="rel-card-title">Carbono Oculto — PCC na Faria Lima</div>
+          </div>
+        </div>
+        <div class="rel-card-desc">PCC com R$ 30bi em gestoras CVM-reguladas. A impunidade no varejo (André do Rap) escala para o mercado financeiro regulado.</div>
+        <div class="rel-card-meta">lawfare-timeline · operação</div>
+      </a>
+
+      <a href="../banco-master-compliance-zero.html" class="rel-card">
+        <div class="rel-card-top">
+          <div class="rel-card-icon">🏦</div>
+          <div>
+            <div class="rel-card-id">compliance-zero.html</div>
+            <div class="rel-card-title">Banco Master — Compliance Zero</div>
+          </div>
+        </div>
+        <div class="rel-card-desc">Toffoli com conflito de interesse — o mesmo padrão P03 que protege corruptos protege a si próprio. FGC como vetor de socialização do rombo.</div>
+        <div class="rel-card-meta">lawfare-timeline · operação · ativa</div>
+      </a>
+
+      <a href="t197-americanas-fraude-contabil-zero-condenacoes.html" class="rel-card">
+        <div class="rel-card-top">
+          <div class="rel-card-icon">📉</div>
+          <div>
+            <div class="rel-card-id">T-199</div>
+            <div class="rel-card-title">Americanas — Fraude Contábil, Zero Condenações</div>
+          </div>
+        </div>
+        <div class="rel-card-desc">R$ 25,3bi de fraude, zero presos. A impunidade sistêmica dos processos criminais documenta o mesmo padrão: anulação antes da condenação.</div>
+        <div class="rel-card-meta">T-199 · dossiê · DS v1.1</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <div class="footer">
+    <div>
+      <strong>T-209</strong> · JustiçaWatch Brasil<br>
+      lawfare-timeline · monitoramento judicial · 2005–2025<br>
+      <a href="https://gosurf.site/jusmonitor">gosurf.site/jusmonitor</a> · <a href="../index.html">timeline</a>
+    </div>
+    <div style="text-align:right">
+      Base ativa · dados públicos verificáveis<br>
+      STF · STJ · CNJ · BNMP · Tribunais estaduais<br>
+      <span class="cc0">CC0 1.0 · Domínio Público</span>
+    </div>
+  </div>
+
+</div><!-- /wrap -->
+
+<!-- GO TO TOP -->
+<button id="gotop" aria-label="Voltar ao topo" title="Voltar ao topo">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script>
+// scroll-spy
+const navLinks = document.querySelectorAll('.snav a[href^="#"]');
+const sections = [...navLinks].map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navLinks.forEach(a => a.classList.remove('active'));
+      const active = document.querySelector(`.snav a[href="#${e.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-48px 0px -60% 0px', threshold: 0 });
+sections.forEach(s => observer.observe(s));
+
+// go-to-top
+const gotop = document.getElementById('gotop');
+window.addEventListener('scroll', () => {
+  gotop.classList.toggle('visible', window.scrollY > 320);
+}, { passive: true });
+gotop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+</script>
+</body>
+</html>

@@ -40,7 +40,7 @@ Recuperação de mercado após 5 meses de dúvidas sobre liquidez; caixa dobra p
 
 Entradas conectadas nesta série:
 
-- [Entrada 1682](/timeline/entries/1682)
+- [Entrada 1682](/posts/id1682-sigma-lithium-paralisa-unica-mina-em-operacao-para-reestruturacao-de-equipamento/)
 
 ---
 

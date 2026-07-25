@@ -46,7 +46,7 @@ Estabelece o patamar institucional mais alto já atingido na relação bilateral
 
 Entradas conectadas nesta série:
 
-- [Entrada 1653](/timeline/entries/1653)
+- [Entrada 1653](/posts/id1653-governo-lula-assina-36-acordos-com-a-china-em-pequim-incluindo-plano-de-acao-par/)
 
 ---
 
