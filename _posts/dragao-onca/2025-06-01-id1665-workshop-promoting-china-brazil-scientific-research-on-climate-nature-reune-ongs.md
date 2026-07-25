@@ -4,7 +4,7 @@ title: "Workshop \"Promoting China-Brazil Scientific Research on Climate & Natur
 description: "Evento em Pequim reúne organizações não-governamentais brasileiras (incluindo IPAM) e chinesas para alinhar estratégias de monitoramento de impactos climáticos, desmatamento e cadeias produtivas, em p..."
 date: 2025-06-01
 image: /assets/img/dragao-onca-para.webp
-tags: ["incidente_diplomatico", "2025"]
+tags: ["incidente_diplomatico", "2025", "para"]
 categories: dragao-onca
 timeline_id: 1665
 status: confirmado
@@ -44,4 +44,4 @@ Contraste relevante: enquanto o eixo governo-governo (Barbalho-CCCC-Vale) segue 
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-para-1654-1666*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-para-1654-1666*

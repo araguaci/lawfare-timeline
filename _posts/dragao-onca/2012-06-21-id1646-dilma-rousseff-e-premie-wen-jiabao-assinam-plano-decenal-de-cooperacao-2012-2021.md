@@ -4,7 +4,7 @@ title: "Dilma Rousseff e premiê Wen Jiabao assinam Plano Decenal de Cooperaçã
 description: "Governo Dilma assina o Plano Decenal de Cooperação, cobrindo ciência, tecnologia, inovação, cooperação econômica e intercâmbio entre os povos, para o período 2012-2021, junto com memorando para centro..."
 date: 2012-06-21
 image: /assets/img/dragao-onca-brasil-federal.webp
-tags: ["incidente_diplomatico", "2012", "P10"]
+tags: ["incidente_diplomatico", "2012", "P10", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1646
 status: confirmado
@@ -49,4 +49,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-brasil-1639-1653*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-brasil-1639-1653*

@@ -4,7 +4,7 @@ title: "Trump ameaça tarifa de 50% sobre produtos brasileiros; governo do Amazo
 description: "Carta de Trump a Lula ameaça tarifa de 50% sobre produtos brasileiros, justificada como resposta aos processos contra Bolsonaro no STF. Governo do Amazonas calcula que menos de 0,11% do faturamento da..."
 date: 2025-07-10
 image: /assets/img/dragao-onca-amazonas.webp
-tags: ["incidente_diplomatico", "2025"]
+tags: ["incidente_diplomatico", "2025", "amazonas"]
 categories: dragao-onca
 timeline_id: 1677
 status: confirmado
@@ -37,4 +37,4 @@ Impacto direto avaliado como marginal, mas episódio reforça a lógica já docu
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-amazonas-1667-1678*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-amazonas-1667-1678*

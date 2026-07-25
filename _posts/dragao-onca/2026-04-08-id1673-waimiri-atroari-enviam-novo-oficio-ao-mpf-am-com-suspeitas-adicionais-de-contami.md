@@ -4,7 +4,7 @@ title: "Waimiri Atroari enviam novo ofício ao MPF-AM com suspeitas adicionais d
 description: "Lideranças Waimiri Atroari protocolam ofício junto ao MPF-AM relatando novas suspeitas de contaminação de rio por atividade da Mineração Taboca, anexado ao inquérito civil em curso...."
 date: 2026-04-08
 image: /assets/img/dragao-onca-amazonas.webp
-tags: ["mecanismo_sistemico", "2026"]
+tags: ["mecanismo_sistemico", "2026", "amazonas"]
 categories: dragao-onca
 timeline_id: 1673
 status: em_andamento
@@ -41,4 +41,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-amazonas-1667-1678*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-amazonas-1667-1678*

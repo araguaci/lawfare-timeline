@@ -4,7 +4,7 @@ title: "Lula discursa no seminário \"Brasil-China: Um Salto Necessário\" no BN
 description: "Presidente Lula profere discurso de abertura de seminário no BNDES definindo a aproximação com a China como 'salto necessário' para a política externa e econômica brasileira...."
 date: 2003-04-30
 image: /assets/img/dragao-onca-brasil-federal.webp
-tags: ["incidente_diplomatico", "2003", "P10"]
+tags: ["incidente_diplomatico", "2003", "P10", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1641
 status: confirmado
@@ -49,4 +49,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-brasil-1639-1653*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-brasil-1639-1653*

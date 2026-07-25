@@ -4,7 +4,7 @@ title: "Zema lançado pré-candidato à Presidência em evento do partido Novo, 
 description: "Zema comunica a Jair Bolsonaro sua intenção de se candidatar à Presidência antes de o partido Novo formalizar o lançamento da pré-candidatura em evento em São Paulo (16 de agosto de 2025). Bolsonaro r..."
 date: 2025-07-21
 image: /assets/img/dragao-onca-minas-gerais.webp
-tags: ["incidente_diplomatico", "2025"]
+tags: ["incidente_diplomatico", "2025", "minas-gerais"]
 categories: dragao-onca
 timeline_id: 1687
 status: confirmado
@@ -46,4 +46,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-minas-1679-1688*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-minas-1679-1688*

@@ -4,7 +4,7 @@ title: "Congresso derruba vetos de Lula ao \"PL da Devastação\" dois dias apó
 description: "Em sessão mista, o Congresso Nacional derruba a maioria dos vetos do presidente Lula às Leis 15.190/2025 (Licenciamento Ambiental) e 15.300/2025 (Licença Ambiental Especial), dois dias após o encerram..."
 date: 2025-11-27
 image: /assets/img/dragao-onca-braco-juridico.webp
-tags: ["ato_legislativo", "2025", "P04b", "P05"]
+tags: ["ato_legislativo", "2025", "P04b", "P05", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1692
 status: confirmado
@@ -60,4 +60,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-juridico-1689-1700*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-juridico-1689-1700*

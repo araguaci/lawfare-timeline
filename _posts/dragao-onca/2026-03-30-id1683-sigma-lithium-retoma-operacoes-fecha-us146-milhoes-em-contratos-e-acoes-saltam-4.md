@@ -4,7 +4,7 @@ title: "Sigma Lithium retoma operações, fecha US$146 milhões em contratos e a
 description: "Sigma Lithium anuncia retomada da mineração no Vale do Jequitinhonha, dois novos contratos de venda antecipada somando US$146 milhões, e planos de retomar construção da segunda planta industrial (Gree..."
 date: 2026-03-30
 image: /assets/img/dragao-onca-minas-gerais.webp
-tags: ["mecanismo_sistemico", "2026"]
+tags: ["mecanismo_sistemico", "2026", "minas-gerais"]
 categories: dragao-onca
 timeline_id: 1683
 status: confirmado
@@ -44,4 +44,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-minas-1679-1688*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-minas-1679-1688*

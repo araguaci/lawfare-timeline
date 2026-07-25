@@ -4,7 +4,7 @@ title: "O Dragão e a Onça — Capítulo Pará: Ferrovia CCCC/Vale, mineroduto 
 description: "Cobre Ferrovia do Pará (protocolo 2019 R$7bi → MoU Pequim 2023 R$10bi/US$2bi CCCC+Vale → audiências públicas 2026), Programa Estrutura (dívida de mineradora convertida em obra pública), conflito Norsk..."
 date: 2026-01-01
 image: /assets/img/dragao-onca-para.webp
-tags: ["dragao-onca", "2026", "P04b", "P05"]
+tags: ["dragao-onca", "2026", "P04b", "P05", "para"]
 categories: dragao-onca
 timeline_id: 230
 status: confirmed
@@ -115,4 +115,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-thematic-T230-para*
+*Série O Dragão e a Onça • lawfare-thematic-T230-para*

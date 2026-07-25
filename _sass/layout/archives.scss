@@ -57,7 +57,8 @@
   ul {
     li {
       font-size: 1.1rem;
-      line-height: 3rem;
+      line-height: 1.5rem;
+      padding: 0.65rem 0 0.85rem;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -79,12 +80,28 @@
 
         top: 0;
         left: 77px;
-        height: 3.1rem;
+        height: 100%;
+        min-height: 3.1rem;
+      }
+
+      .archive-desc,
+      .text-muted.small {
+        white-space: normal;
+        line-height: 1.4;
+        overflow: visible;
+        text-overflow: unset;
+      }
+
+      .badge {
+        white-space: nowrap;
+        font-weight: 500;
+        font-size: 0.7rem;
       }
     }
 
     &:last-child li:last-child::before {
-      height: 1.5rem;
+      height: 50%;
+      min-height: 1.5rem;
     }
   } /* #archives ul */
 

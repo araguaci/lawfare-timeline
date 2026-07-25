@@ -4,7 +4,7 @@ title: "Dep. Zé Silva (Solidariedade-MG) apresenta o PL 2.780/2024, instituindo
 description: "Protocolado na Câmara dos Deputados, o PL 2.780/2024 institui a Política Nacional de Minerais Críticos e Estratégicos (PNMCE) e o Comitê de Minerais Críticos e Estratégicos (CMCE), vinculado ao Consel..."
 date: 2024-07-08
 image: /assets/img/dragao-onca-pl2780.webp
-tags: ["ato_legislativo", "2024"]
+tags: ["ato_legislativo", "2024", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1701
 status: confirmado
@@ -43,4 +43,4 @@ Início de uma tramitação de quase 2 anos que culminaria em substitutivo radic
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-pl2780-1701-1712*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-pl2780-1701-1712*

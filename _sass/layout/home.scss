@@ -4,6 +4,10 @@
 
 #post-list {
   margin-top: 2rem;
+}
+
+#post-list,
+.post-list {
 
   .card-wrapper {
     &:hover {
@@ -21,6 +25,17 @@
 
     %img-radius {
       border-radius: $base-radius $base-radius 0 0;
+    }
+
+    .post-preview {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .col-md-5,
+    .col-md-7,
+    .col-md-12 {
+      min-width: 0;
     }
 
     .preview-img {
@@ -81,7 +96,7 @@
       }
     }
   }
-} /* #post-list */
+} /* #post-list, .post-list */
 
 .pagination {
   color: var(--text-color);
@@ -134,7 +149,8 @@
     border-radius: 0 $base-radius $base-radius 0;
   }
 
-  #post-list {
+  #post-list,
+  .post-list {
     .card {
       .card-body {
         padding: 1.75rem 1.75rem 1.25rem 1.75rem;

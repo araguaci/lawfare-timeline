@@ -4,7 +4,7 @@ title: "Wilson Lima, pré-candidato ao Senado, usa defesa da Zona Franca como pl
 description: "Já como pré-candidato ao Senado, Wilson Lima classifica como 'inadmissível' nota da Receita Federal (Cosit/Sutri/RFB nº 141/2026) que ameaça incentivos fiscais da Zona Franca de Manaus, e reafirma que..."
 date: 2026-07-01
 image: /assets/img/dragao-onca-amazonas.webp
-tags: ["mecanismo_sistemico", "2026", "P09"]
+tags: ["mecanismo_sistemico", "2026", "P09", "amazonas"]
 categories: dragao-onca
 timeline_id: 1678
 status: confirmado
@@ -59,4 +59,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-amazonas-1667-1678*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-amazonas-1667-1678*

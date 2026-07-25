@@ -4,7 +4,7 @@ title: "Observatório do Clima cataloga 70 projetos do \"Pacote da Destruição\
 description: "O Observatório do Clima, rede da qual a APIB faz parte, publica levantamento identificando 70 projetos legislativos que ameaçam salvaguardas ambientais e direitos territoriais em 2026, incluindo a PEC..."
 date: 2026-03-04
 image: /assets/img/dragao-onca-braco-juridico.webp
-tags: ["analise_editorial", "2026"]
+tags: ["analise_editorial", "2026", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1700
 status: confirmado
@@ -49,4 +49,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-juridico-1689-1700*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-juridico-1689-1700*

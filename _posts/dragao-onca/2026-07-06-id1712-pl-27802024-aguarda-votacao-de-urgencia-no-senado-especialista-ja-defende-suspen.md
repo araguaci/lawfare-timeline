@@ -4,7 +4,7 @@ title: "PL 2.780/2024 aguarda votação de urgência no Senado; especialista já
 description: "Após aprovação na Câmara, o PL 2.780/2024 é autuado no Senado Federal. A senadora Roberta Acioly requer tramitação conjunta com o PL 2.210/2021; requerimento de urgência (nº 506/2026) aguarda inclusão..."
 date: 2026-07-06
 image: /assets/img/dragao-onca-pl2780.webp
-tags: ["ato_legislativo", "2026"]
+tags: ["ato_legislativo", "2026", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1712
 status: em_andamento
@@ -64,4 +64,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-pl2780-1701-1712*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-pl2780-1701-1712*

@@ -4,7 +4,7 @@ title: "Brasil e China elevam relação a Parceria Estratégica — primeira des
 description: "Governo brasileiro e governo chinês estabelecem Parceria Estratégica bilateral, precedendo por uma década o ciclo de aproximação intensiva que se consolidaria a partir de 2003...."
 date: 1993-01-01
 image: /assets/img/dragao-onca-brasil-federal.webp
-tags: ["incidente_diplomatico", "1993", "P10"]
+tags: ["incidente_diplomatico", "1993", "P10", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1639
 status: confirmado
@@ -57,4 +57,4 @@ Ponto de origem formal de uma trajetória de 30+ anos que antecede e independe d
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-brasil-1639-1653*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-brasil-1639-1653*

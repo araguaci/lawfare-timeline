@@ -4,7 +4,7 @@ title: "Discurso de posse de Lula cita nominalmente necessidade de estreitar la�
 description: "Em seu discurso de posse na Presidência, Luiz Inácio Lula da Silva menciona explicitamente a prioridade de estreitamento de relações com China, Japão e Índia como eixo de política externa do novo gove..."
 date: 2003-01-01
 image: /assets/img/dragao-onca-brasil-federal.webp
-tags: ["incidente_diplomatico", "2003", "P10"]
+tags: ["incidente_diplomatico", "2003", "P10", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1640
 status: confirmado
@@ -57,4 +57,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-brasil-1639-1653*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-brasil-1639-1653*

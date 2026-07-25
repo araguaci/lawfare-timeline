@@ -4,7 +4,7 @@ title: "BYD instala fábrica de baterias no Polo Industrial de Manaus"
 description: "A fabricante chinesa BYD instala unidade fabril de baterias no PIM, iniciando trajetória de expansão que inclui, em 2024, nova linha de produção de blades (módulos de bateria de nova geração) e barram..."
 date: 2020-01-01
 image: /assets/img/dragao-onca-amazonas.webp
-tags: ["mecanismo_sistemico", "2020"]
+tags: ["mecanismo_sistemico", "2020", "amazonas"]
 categories: dragao-onca
 timeline_id: 1675
 status: confirmado
@@ -45,4 +45,4 @@ Contraste relevante dentro da própria série: a mesma empresa (BYD) que em Mana
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-amazonas-1667-1678*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-amazonas-1667-1678*

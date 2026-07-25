@@ -4,7 +4,7 @@ title: "Barbalho declara que COP30 \"não é de esquerda nem de direita\" em mei
 description: "Governador Helder Barbalho declara ao jornal O Globo que a COP30 não deve ser instrumentalizada por ideologias políticas, defendendo o impacto econômico positivo do evento (26 mil empresas abertas no ..."
 date: 2025-04-13
 image: /assets/img/dragao-onca-para.webp
-tags: ["incidente_diplomatico", "2025", "P04b"]
+tags: ["incidente_diplomatico", "2025", "P04b", "para"]
 categories: dragao-onca
 timeline_id: 1666
 status: confirmado
@@ -57,4 +57,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-para-1654-1666*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-para-1654-1666*

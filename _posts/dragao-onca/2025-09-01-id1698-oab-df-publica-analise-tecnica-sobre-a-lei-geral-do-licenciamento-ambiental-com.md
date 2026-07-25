@@ -4,7 +4,7 @@ title: "OAB-DF publica análise técnica sobre a Lei Geral do Licenciamento Ambi
 description: "A seccional da OAB no Distrito Federal publica análise técnica sobre a Lei 15.190/2025, com foco predominante em seus impactos e perspectivas para o agronegócio, argumentando que os vetos presidenciai..."
 date: 2025-09-01
 image: /assets/img/dragao-onca-braco-juridico.webp
-tags: ["analise_editorial", "2025"]
+tags: ["analise_editorial", "2025", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1698
 status: documentado
@@ -58,4 +58,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-juridico-1689-1700*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-juridico-1689-1700*

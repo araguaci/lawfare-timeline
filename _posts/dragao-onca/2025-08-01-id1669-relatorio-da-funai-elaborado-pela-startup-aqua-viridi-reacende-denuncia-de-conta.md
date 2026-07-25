@@ -4,7 +4,7 @@ title: "Relatório da FUNAI (elaborado pela startup Aqua Viridi) reacende denún
 description: "Relatório técnico elaborado pela biotech Aqua Viridi para a Fundação Nacional dos Povos Indígenas (FUNAI) é encaminhado ao Ministério Público Federal, reacendendo formalmente a denúncia de contaminaçã..."
 date: 2025-08-01
 image: /assets/img/dragao-onca-amazonas.webp
-tags: ["mecanismo_sistemico", "2025"]
+tags: ["mecanismo_sistemico", "2025", "amazonas"]
 categories: dragao-onca
 timeline_id: 1669
 status: confirmado
@@ -43,4 +43,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-amazonas-1667-1678*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-amazonas-1667-1678*

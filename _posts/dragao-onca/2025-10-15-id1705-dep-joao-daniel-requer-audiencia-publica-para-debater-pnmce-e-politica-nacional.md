@@ -4,7 +4,7 @@ title: "Dep. João Daniel requer audiência pública para debater PNMCE e Polít
 description: "O deputado João Daniel requer, no âmbito da Comissão Especial, a realização de audiência pública destinada a debater conjuntamente o PL 2.780/2024, o PL 3.659/2025 e o PL 3.699/2025 — que tratam da in..."
 date: 2025-10-15
 image: /assets/img/dragao-onca-pl2780.webp
-tags: ["ato_legislativo", "2025"]
+tags: ["ato_legislativo", "2025", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1705
 status: documentado
@@ -52,4 +52,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-pl2780-1701-1712*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-pl2780-1701-1712*

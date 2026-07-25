@@ -4,7 +4,7 @@ title: "O Dragão e a Onça — Capítulo Goiás: pivô China→EUA/Japão em te
 description: "Capítulo inaugural da série. Cobre 2023-2026: acordos China (Chint Power, Weichai, YTO, CMOC, Huawei) sob Caiado, pivô 2025-2026 para JOGMEC (Japão) e USA Rare Earth (aquisição Serra Verde, US$2,8bi),..."
 date: 2026-01-01
 image: /assets/img/dragao-onca-goias.webp
-tags: ["dragao-onca", "2026", "P05", "P09"]
+tags: ["dragao-onca", "2026", "P05", "P09", "goias"]
 categories: dragao-onca
 timeline_id: 228
 status: confirmed
@@ -91,4 +91,4 @@ A mesma mina Pela Ema hospeda, em sequência, capital privado internacional, cap
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-thematic-T228-T229-dragao-onca*
+*Série O Dragão e a Onça • lawfare-thematic-T228-T229-dragao-onca*

@@ -4,7 +4,7 @@ title: "Lula e Hu Jintao assinam Plano de Ação Conjunta Brasil-China 2010-2014
 description: "Documento institucionaliza metas de curto e médio prazo para a parceria estratégica, criando mecanismos permanentes de consulta e coordenação além da COSBAN...."
 date: 2010-04-15
 image: /assets/img/dragao-onca-brasil-federal.webp
-tags: ["incidente_diplomatico", "2010", "P10"]
+tags: ["incidente_diplomatico", "2010", "P10", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1645
 status: confirmado
@@ -49,4 +49,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-brasil-1639-1653*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-brasil-1639-1653*

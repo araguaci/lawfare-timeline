@@ -4,7 +4,7 @@ title: "STF declara inconstitucional a tese do marco temporal (RE 1.017.365, Tem
 description: "Em julgamento com repercussão geral, o STF declara inconstitucional a tese do marco temporal, segundo a qual povos indígenas só poderiam reivindicar territórios ocupados ou disputados em 5 de outubro ..."
 date: 2023-09-01
 image: /assets/img/dragao-onca-braco-juridico.webp
-tags: ["chokepoint_judicial", "2023", "P01"]
+tags: ["chokepoint_judicial", "2023", "P01", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1689
 status: confirmado
@@ -55,4 +55,4 @@ Padrão P01 (anulação via defeito processual) em sua forma inversa: em vez de 
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-juridico-1689-1700*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-juridico-1689-1700*

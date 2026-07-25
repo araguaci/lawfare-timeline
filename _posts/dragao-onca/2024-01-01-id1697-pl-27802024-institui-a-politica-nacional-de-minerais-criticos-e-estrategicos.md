@@ -4,7 +4,7 @@ title: "PL 2.780/2024 institui a Política Nacional de Minerais Críticos e Estr
 description: "Tramita no Congresso o PL 2.780/2024, que institui a Política Nacional de Minerais Críticos e Estratégicos — o veículo legislativo que, em conjunto com o MoU federal de mineração sustentável Brasil-Ch..."
 date: 2024-01-01
 image: /assets/img/dragao-onca-braco-juridico.webp
-tags: ["ato_legislativo", "2024", "P05", "P10"]
+tags: ["ato_legislativo", "2024", "P05", "P10", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1697
 status: em_andamento
@@ -62,4 +62,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-juridico-1689-1700*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-juridico-1689-1700*

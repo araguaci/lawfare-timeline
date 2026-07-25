@@ -4,7 +4,7 @@ title: "COP30 é realizada em Belém com mais de 55 mil participantes; incêndio
 description: "A 30ª Conferência do Clima da ONU ocorre em Belém entre 10 e 21 de novembro de 2025, reunindo mais de 55 mil participantes — a maior COP já realizada. Um incêndio no local do evento interrompe tempora..."
 date: 2025-11-10
 image: /assets/img/dragao-onca-para.webp
-tags: ["incidente_diplomatico", "2025"]
+tags: ["incidente_diplomatico", "2025", "para"]
 categories: dragao-onca
 timeline_id: 1662
 status: confirmado
@@ -57,4 +57,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-para-1654-1666*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-para-1654-1666*

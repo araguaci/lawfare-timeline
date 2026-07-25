@@ -4,7 +4,7 @@ title: "Vale e Pará firmam \"Programa Estrutura\": até 40% de dívida da miner
 description: "Regulamentação do Programa Estrutura permite que a Vale e outras mineradoras convertam até 40% de valores devidos ao estado em obras públicas definidas em conjunto com o governo, em vez de pagamento d..."
 date: 2023-01-01
 image: /assets/img/dragao-onca-para.webp
-tags: ["mecanismo_sistemico", "2023", "P05"]
+tags: ["mecanismo_sistemico", "2023", "P05", "para"]
 categories: dragao-onca
 timeline_id: 1657
 status: confirmado
@@ -56,4 +56,4 @@ Mecanismo análogo ao padrão P05 (uso de recursos/ativos públicos como vetor):
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-para-1654-1666*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-para-1654-1666*

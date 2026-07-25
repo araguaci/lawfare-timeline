@@ -332,7 +332,8 @@ sup {
 
     @extend %rounded;
 
-    @at-root #post-list & {
+    @at-root #post-list &,
+    .post-list & {
       width: 100%;
     }
   }

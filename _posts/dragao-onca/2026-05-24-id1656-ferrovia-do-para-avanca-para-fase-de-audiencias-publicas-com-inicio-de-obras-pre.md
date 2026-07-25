@@ -4,7 +4,7 @@ title: "Ferrovia do Pará avança para fase de audiências públicas, com iníci
 description: "Secretário da Sedeme (PA) declara que a expectativa é iniciar as obras da Ferrovia do Pará no primeiro semestre de 2027, com duração prevista de três anos, após conclusão do licenciamento ambiental pe..."
 date: 2026-05-24
 image: /assets/img/dragao-onca-para.webp
-tags: ["mecanismo_sistemico", "2026", "P05"]
+tags: ["mecanismo_sistemico", "2026", "P05", "para"]
 categories: dragao-onca
 timeline_id: 1656
 status: em_andamento
@@ -63,4 +63,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-para-1654-1666*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-para-1654-1666*

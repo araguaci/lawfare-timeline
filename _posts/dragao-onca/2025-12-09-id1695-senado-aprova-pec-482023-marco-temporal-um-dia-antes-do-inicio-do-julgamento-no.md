@@ -4,7 +4,7 @@ title: "Senado aprova PEC 48/2023 (marco temporal) um dia antes do início do ju
 description: "O presidente do Senado, Davi Alcolumbre, acelera a tramitação da PEC 48/2023 — que constitucionaliza o marco temporal no art. 231 da CF — aprovando-a no Senado com 52 votos, um dia antes do início do ..."
 date: 2025-12-09
 image: /assets/img/dragao-onca-braco-juridico.webp
-tags: ["ato_legislativo", "2025", "P01", "P04b"]
+tags: ["ato_legislativo", "2025", "P01", "P04b", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1695
 status: em_andamento
@@ -58,4 +58,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-juridico-1689-1700*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-juridico-1689-1700*

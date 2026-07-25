@@ -4,7 +4,7 @@ title: "Instituto Butantan e Sinovac assinam Acordo de Colaboração de Desenvol
 description: "Com a pandemia de covid-19 já declarada pela OMS (março/2020), Butantan e Sinovac formalizam acordo específico de 21 páginas para avançar os testes clínicos da CoronaVac à Fase 3, com 9 mil voluntário..."
 date: 2020-06-11
 image: /assets/img/dragao-onca-brasil-federal.webp
-tags: ["incidente_diplomatico", "2020", "P05"]
+tags: ["incidente_diplomatico", "2020", "P05", "sao-paulo"]
 categories: dragao-onca
 timeline_id: 1649
 status: confirmado
@@ -66,4 +66,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-brasil-1639-1653*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-brasil-1639-1653*

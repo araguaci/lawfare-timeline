@@ -4,7 +4,7 @@ title: "Grupo chinês Megmeet anuncia fábrica eletroeletrônica no PIM com prev
 description: "O grupo chinês Megmeet anuncia instalação de fábrica no Polo Industrial de Manaus, com investimento inicial de R$20 milhões e previsão de geração de 250 empregos diretos, com operação prevista para ju..."
 date: 2026-01-14
 image: /assets/img/dragao-onca-amazonas.webp
-tags: ["mecanismo_sistemico", "2026"]
+tags: ["mecanismo_sistemico", "2026", "amazonas"]
 categories: dragao-onca
 timeline_id: 1676
 status: confirmado
@@ -39,4 +39,4 @@ Expansão do cluster eletroeletrônico chinês no PIM, somando-se à Deye (inver
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-amazonas-1667-1678*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-amazonas-1667-1678*

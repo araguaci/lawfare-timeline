@@ -4,7 +4,7 @@ title: "Taboca firma Termo de Cooperação nº 01/2026 com R$12,3 milhões à AC
 description: "A Mineração Taboca firma diretamente com a Associação Comunidade Waimiri Atroari (ACWA) o Termo de Cooperação nº 01/2026, repassando R$12,3 milhões, sem qualquer participação, anuência ou mediação ins..."
 date: 2026-01-01
 image: /assets/img/dragao-onca-amazonas.webp
-tags: ["mecanismo_sistemico", "2026", "P05", "P06"]
+tags: ["mecanismo_sistemico", "2026", "P05", "P06", "amazonas"]
 categories: dragao-onca
 timeline_id: 1672
 status: em_andamento
@@ -62,4 +62,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-amazonas-1667-1678*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-amazonas-1667-1678*

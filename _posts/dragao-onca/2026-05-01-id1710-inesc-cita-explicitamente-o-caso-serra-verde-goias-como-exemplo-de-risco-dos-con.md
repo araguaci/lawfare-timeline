@@ -4,7 +4,7 @@ title: "INESC cita explicitamente o caso Serra Verde (Goiás) como exemplo de ri
 description: "A nota técnica do INESC, ao analisar a Seção X do substitutivo (contratos de Streaming e Royalties Minerários Privados), cita nominalmente o projeto Serra Verde, em Goiás, como exemplo concreto do ris..."
 date: 2026-05-01
 image: /assets/img/dragao-onca-pl2780.webp
-tags: ["analise_editorial", "2026", "P05", "P10"]
+tags: ["analise_editorial", "2026", "P05", "P10", "goias"]
 categories: dragao-onca
 timeline_id: 1710
 status: confirmado
@@ -60,4 +60,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-pl2780-1701-1712*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-pl2780-1701-1712*

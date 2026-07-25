@@ -4,7 +4,7 @@ title: "Aprovado requerimento de urgência para o PL 2.780/2024, mudando o regim
 description: "Em setembro de 2025, é aprovado requerimento de urgência que retira o PL 2.780/2024 do rito lento das comissões temáticas, permitindo apreciação direta pelo Plenário. A partir deste momento, a tramita..."
 date: 2025-09-01
 image: /assets/img/dragao-onca-pl2780.webp
-tags: ["ato_legislativo", "2025"]
+tags: ["ato_legislativo", "2025", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1703
 status: confirmado
@@ -49,4 +49,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-pl2780-1701-1712*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-pl2780-1701-1712*

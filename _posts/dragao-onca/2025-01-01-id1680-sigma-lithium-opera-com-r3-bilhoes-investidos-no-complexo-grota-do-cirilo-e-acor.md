@@ -4,7 +4,7 @@ title: "Sigma Lithium opera com R$3 bilhões investidos no complexo Grota do Cir
 description: "A Sigma Lithium, mineradora brasileira-canadense listada na Nasdaq, TSXV e B3 (via BDR), já investiu R$3 bilhões no complexo Grota do Cirilo (Itinga, MG) e mantém acordo de fornecimento de lítio com a..."
 date: 2025-01-01
 image: /assets/img/dragao-onca-minas-gerais.webp
-tags: ["mecanismo_sistemico", "2025", "P10"]
+tags: ["mecanismo_sistemico", "2025", "P10", "minas-gerais"]
 categories: dragao-onca
 timeline_id: 1680
 status: confirmado
@@ -58,4 +58,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-minas-1679-1688*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-minas-1679-1688*

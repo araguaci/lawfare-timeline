@@ -4,7 +4,7 @@ title: "O Dragão e a Onça — Capítulo Braço Jurídico: marco temporal (STF 
 description: "Primeiro capítulo transversal da série — ponte direta com o corpus judicial principal do lawfare-timeline (INQ 4.781, padrão P01/P03). Documenta arquitetura legal que viabiliza os 4 capítulos estaduai..."
 date: 2026-01-01
 image: /assets/img/dragao-onca-braco-juridico.webp
-tags: ["dragao-onca", "2026", "P01", "P04b"]
+tags: ["dragao-onca", "2026", "P01", "P04b", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 234
 status: confirmed
@@ -111,4 +111,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-thematic-T234-juridico*
+*Série O Dragão e a Onça • lawfare-thematic-T234-juridico*

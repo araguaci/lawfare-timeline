@@ -4,7 +4,7 @@ title: "UEPA e Universidade Normal de Shandong assinam convênio de cooperação
 description: "Governo do Pará formaliza acordo de cooperação entre a Universidade do Estado do Pará (UEPA) e a Universidade Normal de Shandong (China) para intercâmbio científico e capacitação de professores em pro..."
 date: 2025-01-01
 image: /assets/img/dragao-onca-para.webp
-tags: ["incidente_diplomatico", "2025"]
+tags: ["incidente_diplomatico", "2025", "para"]
 categories: dragao-onca
 timeline_id: 1663
 status: confirmado
@@ -43,4 +43,4 @@ Escopo financeiro e número de bolsas/intercâmbios efetivamente realizados não
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-para-1654-1666*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-para-1654-1666*

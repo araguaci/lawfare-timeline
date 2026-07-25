@@ -4,7 +4,7 @@ title: "Zema aumenta o próprio salário de governador em 300%"
 description: "Em 2023, já em seu segundo mandato, o governador Romeu Zema aumenta seu próprio salário em 300%...."
 date: 2023-01-01
 image: /assets/img/dragao-onca-minas-gerais.webp
-tags: ["mecanismo_sistemico", "2023", "P05"]
+tags: ["mecanismo_sistemico", "2023", "P05", "minas-gerais"]
 categories: dragao-onca
 timeline_id: 1685
 status: documentado
@@ -46,4 +46,4 @@ Mecanismo legal específico do aumento (lei estadual, decreto, ou resolução da
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-minas-1679-1688*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-minas-1679-1688*

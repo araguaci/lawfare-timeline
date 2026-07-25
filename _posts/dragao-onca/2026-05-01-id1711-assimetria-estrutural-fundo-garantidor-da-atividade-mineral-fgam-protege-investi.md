@@ -4,7 +4,7 @@ title: "Assimetria estrutural: Fundo Garantidor da Atividade Mineral (FGAM) prot
 description: "O substitutivo cria o FGAM com aporte de até R$2 bilhões de recursos públicos para reduzir riscos de investidores em pesquisa mineral — atividade de natureza incerta e frequentemente financiada por ca..."
 date: 2026-05-01
 image: /assets/img/dragao-onca-pl2780.webp
-tags: ["ato_legislativo", "2026", "P05"]
+tags: ["ato_legislativo", "2026", "P05", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1711
 status: confirmado
@@ -61,4 +61,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-pl2780-1701-1712*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-pl2780-1701-1712*

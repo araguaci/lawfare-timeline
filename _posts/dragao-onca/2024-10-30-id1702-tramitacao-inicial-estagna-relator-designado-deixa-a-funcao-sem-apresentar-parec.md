@@ -4,7 +4,7 @@ title: "Tramitação inicial estagna: relator designado deixa a função sem apr
 description: "Após prazo de emendas encerrado em 30/out/2024, a tramitação do PL 2.780/2024 entra em período de baixa movimentação. Embora tenha sido designado relator nas comissões temáticas, este deixa a função s..."
 date: 2024-10-30
 image: /assets/img/dragao-onca-pl2780.webp
-tags: ["ato_legislativo", "2024"]
+tags: ["ato_legislativo", "2024", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1702
 status: confirmado
@@ -44,4 +44,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-pl2780-1701-1712*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-pl2780-1701-1712*

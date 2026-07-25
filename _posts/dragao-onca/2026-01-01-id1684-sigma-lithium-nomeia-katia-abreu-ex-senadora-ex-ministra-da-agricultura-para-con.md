@@ -4,7 +4,7 @@ title: "Sigma Lithium nomeia Katia Abreu (ex-senadora, ex-ministra da Agricultur
 description: "A Sigma Lithium aprova por unanimidade a nomeação de Katia Abreu, ex-presidente da CNA e ex-senadora pelo Tocantins (2007-2022), com experiência em relações exteriores e defesa no Senado, para o conse..."
 date: 2026-01-01
 image: /assets/img/dragao-onca-minas-gerais.webp
-tags: ["mecanismo_sistemico", "2026", "P09"]
+tags: ["mecanismo_sistemico", "2026", "P09", "minas-gerais"]
 categories: dragao-onca
 timeline_id: 1684
 status: confirmado
@@ -55,4 +55,4 @@ Padrão análogo ao P09 (captura cultural/simbólica de legitimidade): a incorpo
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-minas-1679-1688*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-minas-1679-1688*

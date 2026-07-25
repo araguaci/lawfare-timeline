@@ -4,7 +4,7 @@ title: "Comissão Especial apresenta parecer/substitutivo do relator Arnaldo Jar
 description: "O deputado Arnaldo Jardim, relator da Comissão Especial, apresenta parecer que não se limita a manifestação opinativa: é, na prática, um substitutivo que reorganiza radicalmente o projeto original, in..."
 date: 2026-05-04
 image: /assets/img/dragao-onca-pl2780.webp
-tags: ["ato_legislativo", "2026", "P05", "P10"]
+tags: ["ato_legislativo", "2026", "P05", "P10", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1706
 status: confirmado
@@ -54,4 +54,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-pl2780-1701-1712*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-pl2780-1701-1712*

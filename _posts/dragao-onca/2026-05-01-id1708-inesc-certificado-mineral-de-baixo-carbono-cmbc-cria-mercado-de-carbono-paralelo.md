@@ -4,7 +4,7 @@ title: "INESC: Certificado Mineral de Baixo Carbono (CMBC) cria mercado de carbo
 description: "Nota técnica do INESC (Instituto de Estudos Socioeconômicos) aponta que o substitutivo cria, nos Artigos 23 a 27, o Certificado Mineral de Baixo Carbono (CMBC) — instrumento de certificação com autori..."
 date: 2026-05-01
 image: /assets/img/dragao-onca-pl2780.webp
-tags: ["analise_editorial", "2026", "P05"]
+tags: ["analise_editorial", "2026", "P05", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1708
 status: confirmado
@@ -63,4 +63,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-pl2780-1701-1712*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-pl2780-1701-1712*

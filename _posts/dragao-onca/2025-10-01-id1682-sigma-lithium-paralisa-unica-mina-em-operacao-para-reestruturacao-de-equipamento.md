@@ -4,7 +4,7 @@ title: "Sigma Lithium paralisa única mina em operação para reestruturação d
 description: "A Sigma Lithium paralisa a Mina 1 no Vale do Jequitinhonha para reestruturação de equipamentos, buscando triplicar a capacidade de movimentação de material via nova frota 'off-road'. Analistas e inves..."
 date: 2025-10-01
 image: /assets/img/dragao-onca-minas-gerais.webp
-tags: ["mecanismo_sistemico", "2025"]
+tags: ["mecanismo_sistemico", "2025", "minas-gerais"]
 categories: dragao-onca
 timeline_id: 1682
 status: confirmado
@@ -50,4 +50,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-minas-1679-1688*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-minas-1679-1688*

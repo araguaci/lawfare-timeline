@@ -4,7 +4,7 @@ title: "Instituto Socioambiental (ISA) atua como interveniente/amicus no julgame
 description: "O Instituto Socioambiental (ISA), organização da sociedade civil, manifesta-se formalmente durante as sessões de julgamento do marco temporal no STF (dezembro de 2025), ao lado de outras entidades hab..."
 date: 2025-06-01
 image: /assets/img/dragao-onca-braco-juridico.webp
-tags: ["analise_editorial", "2025"]
+tags: ["analise_editorial", "2025", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1699
 status: confirmado
@@ -42,4 +42,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-juridico-1689-1700*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-juridico-1689-1700*

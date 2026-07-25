@@ -4,7 +4,7 @@ title: "APIB e PSOL protocolam ADI 7919 contra as leis do licenciamento ambienta
 description: "A Articulação dos Povos Indígenas do Brasil (Apib) e o PSOL protocolam ADI 7919 no STF, alegando que as Leis 15.190/2025 e 15.300/2025 representam o maior retrocesso da legislação socioambiental desde..."
 date: 2025-12-29
 image: /assets/img/dragao-onca-braco-juridico.webp
-tags: ["chokepoint_judicial", "2025"]
+tags: ["chokepoint_judicial", "2025", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1693
 status: em_andamento
@@ -50,4 +50,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-juridico-1689-1700*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-juridico-1689-1700*

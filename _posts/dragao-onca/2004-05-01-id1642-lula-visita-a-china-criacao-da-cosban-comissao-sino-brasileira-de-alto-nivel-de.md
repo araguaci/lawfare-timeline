@@ -4,7 +4,7 @@ title: "Lula visita a China; criação da COSBAN (Comissão Sino-Brasileira de A
 description: "Primeira visita de Lula à China como presidente resulta na criação da COSBAN, mecanismo institucional permanente de coordenação bilateral que persiste até 2026...."
 date: 2004-05-01
 image: /assets/img/dragao-onca-brasil-federal.webp
-tags: ["incidente_diplomatico", "2004", "P10"]
+tags: ["incidente_diplomatico", "2004", "P10", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1642
 status: confirmado
@@ -59,4 +59,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-brasil-1639-1653*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-brasil-1639-1653*

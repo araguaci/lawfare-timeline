@@ -4,7 +4,7 @@ title: "Câmara aprova o PL 2.780/2024 na forma do substitutivo: FGAM de R$2bi, 
 description: "A Câmara dos Deputados aprova o PL 2.780/2024 na forma do substitutivo Arnaldo Jardim. Principais pontos: criação do Fundo Garantidor da Atividade Mineral (FGAM), com aporte de até R$2 bilhões da Uniã..."
 date: 2026-05-06
 image: /assets/img/dragao-onca-pl2780.webp
-tags: ["ato_legislativo", "2026", "P05", "P10"]
+tags: ["ato_legislativo", "2026", "P05", "P10", "brasil-federal", "goias"]
 categories: dragao-onca
 timeline_id: 1707
 status: confirmado
@@ -63,4 +63,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-pl2780-1701-1712*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-pl2780-1701-1712*

@@ -4,7 +4,7 @@ title: "Assembleia Legislativa de Minas Gerais requer vistoria de segurança no 
 description: "Requerimento (RQC 19563/2026) na ALMG solicita visita técnica às estruturas do complexo de mineração e beneficiamento de lítio Grota do Cirilo, em Itinga, para verificar condições de segurança do comp..."
 date: 2026-01-01
 image: /assets/img/dragao-onca-minas-gerais.webp
-tags: ["mecanismo_sistemico", "2026"]
+tags: ["mecanismo_sistemico", "2026", "minas-gerais"]
 categories: dragao-onca
 timeline_id: 1681
 status: documentado
@@ -45,4 +45,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-minas-1679-1688*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-minas-1679-1688*

@@ -4,7 +4,7 @@ title: "Governo Lula assina 36 acordos com a China em Pequim, incluindo Plano de
 description: "Lula encerra quarta visita de Estado à China com a assinatura de 36 acordos cobrindo energia, sustentabilidade, agronegócio, finanças e tecnologia — incluindo o Plano de Ação de Cooperação para o Dese..."
 date: 2025-05-13
 image: /assets/img/dragao-onca-brasil-federal.webp
-tags: ["mecanismo_sistemico", "2025", "P05", "P10"]
+tags: ["mecanismo_sistemico", "2025", "P05", "P10", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1653
 status: confirmado
@@ -67,4 +67,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-brasil-1639-1653*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-brasil-1639-1653*

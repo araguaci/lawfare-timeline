@@ -4,7 +4,7 @@ title: "Vice-presidente Mourão declara que Brasil não restringirá a Huawei no
 description: "Já no governo Bolsonaro — eleito com retórica de campanha crítica à China —, o vice-presidente Hamilton Mourão declara publicamente que o país não vai impedir a Huawei de atuar na futura rede 5G brasi..."
 date: 2019-07-15
 image: /assets/img/dragao-onca-brasil-federal.webp
-tags: ["incidente_diplomatico", "2019", "P04b"]
+tags: ["incidente_diplomatico", "2019", "P04b", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1647
 status: confirmado
@@ -52,4 +52,4 @@ Primeira evidência documentada da fratura interna do governo Bolsonaro entre pr
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-brasil-1639-1653*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-brasil-1639-1653*

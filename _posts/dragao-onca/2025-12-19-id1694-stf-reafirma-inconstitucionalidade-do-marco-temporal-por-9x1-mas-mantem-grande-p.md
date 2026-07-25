@@ -4,7 +4,7 @@ title: "STF reafirma inconstitucionalidade do marco temporal por 9x1, mas manté
 description: "Em julgamento conjunto da ADC 87 e das ADIs 7582/7583/7586, o STF reafirma por 9 votos a 1 (único voto contrário: André Mendonça) a inconstitucionalidade da tese do marco temporal, mas mantém em vigor..."
 date: 2025-12-19
 image: /assets/img/dragao-onca-braco-juridico.webp
-tags: ["chokepoint_judicial", "2025", "P04b"]
+tags: ["chokepoint_judicial", "2025", "P04b", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1694
 status: confirmado
@@ -70,4 +70,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-juridico-1689-1700*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-juridico-1689-1700*

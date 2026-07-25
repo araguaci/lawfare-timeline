@@ -4,7 +4,7 @@ title: "Polícia Federal passa a investigar a Mineração Taboca por contaminaç
 description: "Além do inquérito civil do MPF, a Polícia Federal abre investigação própria sobre a Mineração Taboca por suspeita de contaminação de rios que abastecem a Terra Indígena Waimiri Atroari...."
 date: 2026-07-05
 image: /assets/img/dragao-onca-amazonas.webp
-tags: ["operacao_policial", "2026"]
+tags: ["operacao_policial", "2026", "amazonas"]
 categories: dragao-onca
 timeline_id: 1674
 status: em_andamento
@@ -55,4 +55,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-amazonas-1667-1678*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-amazonas-1667-1678*

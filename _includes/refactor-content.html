@@ -130,11 +130,23 @@
     {% endif %}
 
     {% if page.layout == 'home' %}
-      <!-- create the image wrapper -->
-      {% assign _wrapper_start = '<div class="preview-img ' | append: _class | append: '">' %}
+      <!-- Skip if post-card.html already wrapped the image -->
+      {% assign _already_preview = false %}
+      {% assign _tail = _img_content | split: 'preview-img' | last %}
+      {% if _img_content contains 'preview-img' %}
+        {% assign _tail_len = _tail | size %}
+        {% if _tail_len < 80 %}
+          {% assign _already_preview = true %}
+        {% endif %}
+      {% endif %}
 
-      {% assign _img_content = _img_content | append: _wrapper_start %}
-      {% assign _right = _right | prepend: '></div' %}
+      {% unless _already_preview %}
+        <!-- create the image wrapper -->
+        {% assign _wrapper_start = '<div class="preview-img ' | append: _class | append: '">' %}
+
+        {% assign _img_content = _img_content | append: _wrapper_start %}
+        {% assign _right = _right | prepend: '></div' %}
+      {% endunless %}
 
     {% else %}
       <!-- make sure the `<img>` is wrapped by `<a>` -->

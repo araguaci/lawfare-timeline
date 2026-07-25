@@ -4,7 +4,7 @@ title: "Doria assina compra antecipada de 46 milhões de doses da CoronaVac com 
 description: "Governo de São Paulo firma acordo de compra antecipada de 46 milhões de doses da vacina CoronaVac por aproximadamente US$427 milhões, usando recursos próprios do estado, à frente e paralelamente a qua..."
 date: 2020-09-01
 image: /assets/img/dragao-onca-brasil-federal.webp
-tags: ["incidente_diplomatico", "2020", "P05"]
+tags: ["incidente_diplomatico", "2020", "P05", "sao-paulo", "goias"]
 categories: dragao-onca
 timeline_id: 1650
 status: confirmado
@@ -64,4 +64,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-brasil-1639-1653*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-brasil-1639-1653*

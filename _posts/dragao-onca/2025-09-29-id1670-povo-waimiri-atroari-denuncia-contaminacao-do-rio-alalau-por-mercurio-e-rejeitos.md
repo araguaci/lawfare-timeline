@@ -4,7 +4,7 @@ title: "Povo Waimiri Atroari denuncia contaminação do rio Alalaú por mercúri
 description: "Representantes do povo Waimiri Atroari (Kinja) denunciam sinais de contaminação no rio Alalaú, em Presidente Figueiredo (AM), na fronteira com Roraima: odor fétido, espuma, peixes mortos e casos de cr..."
 date: 2025-09-29
 image: /assets/img/dragao-onca-amazonas.webp
-tags: ["mecanismo_sistemico", "2025", "P05"]
+tags: ["mecanismo_sistemico", "2025", "P05", "amazonas"]
 categories: dragao-onca
 timeline_id: 1670
 status: confirmado
@@ -63,4 +63,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-amazonas-1667-1678*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-amazonas-1667-1678*
