@@ -18,6 +18,12 @@ IMAGE_TO_STATE = {
     "dragao-onca.webp": "brasil-federal",
     "dragao-onca-braco-juridico.webp": "brasil-federal",
     "dragao-onca-pl2780.webp": "brasil-federal",
+    "dragao-onca-bahia.webp": "bahia",
+    "dragao-onca-sao-paulo.webp": "sao-paulo",
+    "dragao-onca-parana.webp": "parana",
+    "dragao-onca-rio-grande-do-sul.webp": "rio-grande-do-sul",
+    "dragao-onca-espirito-santo.webp": "espirito-santo",
+    "dragao-onca-ranking-cebc.webp": "brasil-federal",
 }
 
 ID_OVERRIDES = {
@@ -35,6 +41,14 @@ FILE_OVERRIDES = {
     "t232": "minas-gerais",
     "t234": "brasil-federal",
     "t235": "brasil-federal",
+    "t236": "brasil-federal",
+    "t237": "bahia",
+    "t238": "sao-paulo",
+    "t239": "parana",
+    "t240": "rio-grande-do-sul",
+    "t241": "espirito-santo",
+    "t242": "brasil-federal",
+    "t243": "brasil-federal",
 }
 
 STATE_TAGS = {
@@ -44,9 +58,16 @@ STATE_TAGS = {
     "minas-gerais",
     "sao-paulo",
     "brasil-federal",
+    "bahia",
+    "parana",
+    "rio-grande-do-sul",
+    "espirito-santo",
 }
 
-SINTESE_TAGS = ["goias", "para", "amazonas", "minas-gerais", "brasil-federal"]
+SINTESE_TAGS = [
+    "goias", "para", "amazonas", "minas-gerais", "brasil-federal",
+    "bahia", "sao-paulo", "parana", "rio-grande-do-sul", "espirito-santo",
+]
 
 
 def parse_tags(raw: str) -> list[str]:
@@ -84,7 +105,7 @@ def main() -> None:
             continue
 
         stem = path.stem.lower()
-        if "t233" in stem or "sintese" in stem:
+        if "t233" in stem or "t243" in stem or "sintese" in stem:
             states = list(SINTESE_TAGS)
         else:
             state = None

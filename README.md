@@ -16,17 +16,18 @@ Valores abaixo vêm de `_data/lawfare.json` e `_data/claude.ai-corpus-ids-sync.j
 
 | Track | Último ID | Próximo | Fonte de verdade |
 |---|---:|---:|---|
-| **Main timeline** | **1608** | 1609 | `_data/lawfare.json` → `assuntos[].id` |
-| **Temático (T-)** | **218** | 219 | `_posts/estudos/` com `id_corpus: "T-NNN"` |
+| **Main timeline** | **1748** | 1749 | `_data/lawfare.json` → `assuntos[].id` |
+| **Temático (T-)** | **243** | 244 | `_data/claude.ai-corpus-ids-sync.json` + `_posts/` |
 | **Estudos T em disco** | — | — | ~32 posts com `id_corpus` temático |
-| **Posts `_posts/`** | — | — | ~280+ entradas Jekyll |
+| **Posts `_posts/`** | — | — | ~400+ entradas Jekyll |
+| **Série Dragão e a Onça** | **1748** / **T-243** | 1749 / T-244 | `_posts/dragao-onca/` (126 posts) |
 
 ### Dois tracks de ID (não confundir)
 
 | Track | Namespace | Onde vive | Exemplo |
 |---|---|---|---|
-| Main | inteiros 1–1608+ | `lawfare.json`, posts timeline | `id_corpus: "1572"` |
-| Temático | T-100+ (registry 100–218) | `_posts/estudos/`, sync JSON | `id_corpus: "T-207"` |
+| Main | inteiros 1–1748+ | `lawfare.json`, posts timeline | `id_corpus: "1748"` |
+| Temático | T-100+ (registry 100–243) | `_posts/estudos/`, `_posts/dragao-onca/`, sync JSON | `id_corpus: "T-243"` |
 
 Posts **corpus-bridge** (T-205–T-209) ligam artefatos HTML do [gosurf.site](https://gosurf.site) ao índice Jekyll. Detalhes em [TODO.md](./TODO.md).
 
@@ -36,10 +37,70 @@ Posts **corpus-bridge** (T-205–T-209) ligam artefatos HTML do [gosurf.site](ht
 |---|---|---|
 | 1–1448 | Publicados | Não reeditar sem justificativa |
 | **1449–1510** | `batch_file_only` | PCC/Ndrangheta canônico — posts Jekyll existem, **fora** de `lawfare.json`; merge só com validação |
-| 1511–1608 | Publicados | Correntes (incl. batches Biomm, Rejeito, Flávio/Trump, Sepse) |
-| **1609+** | Disponível | Próximo ID livre para novos eventos |
+| 1511–1638 | Publicados | Correntes (incl. batches Biomm, Rejeito, Flávio/Trump, Sepse) |
+| **1639–1748** | Publicados | Série **O Dragão e a Onça** (110 entradas `categoria: dragao-onca`) |
+| **1749+** | Disponível | Próximo ID livre para novos eventos |
 
 Gap esperado em `lawfare.json`: **1449–1510** (62 slots) — aviso normal em `validate-ids.ps1`.
+
+---
+
+## Série O Dragão e a Onça 🐉🐆
+
+Investigação verificável **Brasil × China** (1993–2026): soberania mineral, investimentos CEBC, execução territorial por governadores. **Concluída** em 25/jul/2026.
+
+| Métrica | Valor |
+|---|---|
+| Posts Jekyll | **126** (`_posts/dragao-onca/`) |
+| Main track | **110** entradas · IDs **1639–1748** |
+| Temático | **T-228 → T-243** (16 capítulos) |
+| Dossiês HTML | **16** interativos |
+| X Articles | **14** em `odragaoeaonca/artigos/` |
+| Promo X.com | **`odragaoeaonca/promo/x-posts-promocao.md`** |
+
+### Hub e navegação
+
+| Artefato | Caminho (fonte) | URL produção |
+|---|---|---|
+| Dashboard da série | `odragaoeaonca/index.html` | [/odragaoeaonca/](https://lawfare-timeline.vercel.app/odragaoeaonca/) |
+| Categoria Jekyll | `_tabs/dragao-onca.md`, `_featured_categories/dragao-onca.md` | [/categories/dragao-onca/](https://lawfare-timeline.vercel.app/categories/dragao-onca/) |
+| Layout timeline | `_layouts/dragao-onca.html` | — |
+| Changelog subsite | `odragaoeaonca/changelog.md` | — |
+
+> **Fonte canônica:** pasta `odragaoeaonca/` na raiz — não `docs/odragaoeaonca/` (artefato de build).
+
+### Dossiês HTML (`odragaoeaonca/*.html`)
+
+| Capítulo | T- | Arquivo | Foco |
+|---|:---:|---|---|
+| Goiás | 228 | `dragao-onca-goias.html` | Terras raras, pivô EUA/Japão |
+| Brasil Federal | 229 | `dragao-onca-brasil-federal.html` | COSBAN, Doria–Sinovac |
+| Pará | 230 | `dragao-onca-para.html` | CCCC/Vale, COP30 |
+| Amazonas | 231 | `dragao-onca-amazonas.html` | Taboca, Waimiri-Atroari |
+| Minas Gerais | 232 | `dragao-onca-minas-gerais.html` | Sigma Lithium |
+| Síntese v1 | 233 | `dragao-onca-sintese.html` | 5 UFs comparadas |
+| Braço Jurídico | 234 | `dragao-onca-braco-juridico.html` | Marco temporal, ADI 7919 |
+| PL 2780 | 235 | `dragao-onca-pl2780.html` | Minerais críticos |
+| Braço Diplomático | 236 | `dragao-onca-braco-diplomatico.html` | WAICO, Serra Verde |
+| Bahia | 237 | `dragao-onca-bahia.html` | Ponte Salvador-Itaparica |
+| São Paulo | 238 | `dragao-onca-sao-paulo.html` | CRRC, COFCO |
+| Paraná | 239 | `dragao-onca-parana.html` | TCP Paranaguá |
+| RS · ES · Ranking | 240–242 | `dragao-onca-rs-es-ranking-nacional.html` | GWM, CEBC 2007-2025 |
+| Síntese final | 243 | `dragao-onca-sintese-final-cross-state.html` | 9 UFs + tipologia |
+
+URLs na produção: `https://lawfare-timeline.vercel.app/dragao-onca-[slug].html`
+
+### X Articles e promoção
+
+| Tipo | Pasta | Uso |
+|---|---|---|
+| Artigos longos | `odragaoeaonca/artigos/*-xarticle.md` | Upload em [x.com/compose/article](https://x.com/compose/article) |
+| Heroes share card | `odragaoeaonca/artigos/*-hero.png`, `odragaoeaonca/public/*.webp` | Capa 1024×600 / WebP regional |
+| **Posts promo X** | **`odragaoeaonca/promo/x-posts-promocao.md`** | Tweet + reply por artefato (32 entradas, calendário 15 dias) |
+
+Scripts da série: `scripts/gerar_artigos_dragao_onca.py`, `scripts/fix_dragao_onca_*.py`, `scripts/validate_dragao_onca_yaml.py`.
+
+Batches arquivados: `_data/processados/lawfare-*dragao-onca*`.
 
 ---
 

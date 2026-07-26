@@ -9,10 +9,10 @@ Propósito: Converter dados estruturados JSON em artigos MD com referências, li
 """
 
 import json
-import os
 import re
+import shutil
 import unicodedata
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 from urllib.parse import quote
@@ -20,8 +20,11 @@ from urllib.parse import quote
 # ===================== CONFIG =====================
 ROOT = Path(__file__).resolve().parents[1]
 TODO_DIR = ROOT / "_data" / "todo"
+PROC_DIR = ROOT / "_data" / "processados"
 POSTS_DIR = ROOT / "_posts" / "dragao-onca"
 ASSETS_DIR = ROOT / "assets" / "img"
+LAWFARE = ROOT / "_data" / "lawfare.json"
+SYNC = ROOT / "_data" / "claude.ai-corpus-ids-sync.json"
 
 # Mapa de regiões para imagens
 REGION_IMAGE_MAP = {
@@ -35,6 +38,19 @@ REGION_IMAGE_MAP = {
     "pl2780": "dragao-onca-pl2780.webp",
     "juridico": "dragao-onca-braco-juridico.webp",
     "braco-juridico": "dragao-onca-braco-juridico.webp",
+    "diplomatico": "dragao-onca-brasil-federal.webp",
+    "diplomatic": "dragao-onca-brasil-federal.webp",
+    "espirito": "dragao-onca-espirito-santo.webp",
+    "es": "dragao-onca-espirito-santo.webp",
+    "bahia": "dragao-onca-bahia.webp",
+    "sao-paulo": "dragao-onca-sao-paulo.webp",
+    "sp": "dragao-onca-sao-paulo.webp",
+    "parana": "dragao-onca-parana.webp",
+    "pr": "dragao-onca-parana.webp",
+    "rs": "dragao-onca-rio-grande-do-sul.webp",
+    "rio-grande": "dragao-onca-rio-grande-do-sul.webp",
+    "ranking": "dragao-onca-ranking-cebc.webp",
+    "cebc": "dragao-onca-ranking-cebc.webp",
     "sintese": "dragao-onca-sintese.webp",
 }
 
@@ -137,7 +153,124 @@ def format_date_yaml(date_str: str) -> str:
 
 
 def yaml_escape(s: str) -> str:
-    return s.replace("\\", "\\\\").replace('"', '\\"').replace("\n", " ")
+    return s.replace('"', '\\"').replace("\n", " ")
+
+
+def assunto_to_entry(assunto: dict) -> dict:
+    """Converte assunto lawfare.json → entry do gerador."""
+    tags = assunto.get("tags") or []
+    patterns = [t for t in tags if re.match(r"^P\d", str(t), re.I)]
+    fontes = assunto.get("fontes") or []
+    sources = []
+    for f in fontes:
+        if isinstance(f, str) and f.startswith("http"):
+            sources.append({"title": "Fonte", "url": f})
+        elif isinstance(f, dict):
+            sources.append(f)
+    actors = [{"name": n, "role": "", "institution": ""} for n in (assunto.get("pessoas_envolvidas") or [])]
+    return {
+        "id": str(assunto.get("id", "")),
+        "date": (assunto.get("data_evento") or assunto.get("data_iso") or "")[:10],
+        "title": assunto.get("titulo") or assunto.get("title", ""),
+        "summary": assunto.get("descricao") or assunto.get("summary", ""),
+        "category": assunto.get("categoria") or "dragao-onca",
+        "actors": actors,
+        "institutions": assunto.get("instituicoes_envolvidas") or [],
+        "patterns": patterns,
+        "sources": sources,
+        "connections": assunto.get("connections") or [],
+        "status": "confirmado",
+        "lacuna_investigativa": assunto.get("lacuna_investigativa") or "",
+        "analise": assunto.get("analise") or "",
+        "result": assunto.get("result") or assunto.get("impacto_diplomatico") or "",
+    }
+
+
+def thematic_slug_from_batch(batch_file: Path, entry_id: str) -> str:
+    m = re.search(rf"T{entry_id}-(.+?)(?:\s*\(\d+\))?\.json$", batch_file.name, re.I)
+    if m:
+        return f"t{entry_id}-{m.group(1)}"
+    return f"t{entry_id}-dragao-onca"
+
+
+def extract_entries_from_batch(data: dict, batch_file: Path) -> list[dict]:
+    entries: list[dict] = []
+    if isinstance(data.get("entries"), list):
+        entries.extend(data["entries"])
+    if isinstance(data.get("assuntos"), list):
+        entries.extend(assunto_to_entry(a) for a in data["assuntos"])
+    if not entries and data.get("topic") and data.get("id") is not None:
+        entries.append(data)
+    return entries
+
+
+def generate_synthesis_sections(entry: dict) -> str:
+    """Seções extras para síntese cross-state (T-243)."""
+    parts: list[str] = []
+    if entry.get("correcao_metodologica"):
+        parts.extend(["## ⚠️ Correção metodológica", "", entry["correcao_metodologica"], ""])
+    if entry.get("escopo_real_da_serie"):
+        escopo = entry["escopo_real_da_serie"]
+        parts.extend(["## 📊 Escopo da série", ""])
+        if isinstance(escopo, dict):
+            for k, v in escopo.items():
+                parts.append(f"- **{k.replace('_', ' ').title()}:** {v}")
+        else:
+            parts.append(str(escopo))
+        parts.append("")
+    rows = entry.get("tabela_comparativa_estados") or []
+    if rows:
+        parts.extend(["## 🗺️ Comparativo entre estados", ""])
+        for row in rows:
+            if not isinstance(row, dict):
+                continue
+            estado = row.get("estado", "—")
+            parts.append(f"### {estado}")
+            for key in ("potencia", "mecanismo", "resultado", "captura_de_valor"):
+                if row.get(key):
+                    parts.append(f"- **{key.replace('_', ' ').title()}:** {row[key]}")
+            parts.append("")
+    tipologia = entry.get("tipologia_mecanismos_identificados") or {}
+    if tipologia:
+        parts.extend(["## 🔬 Tipologia de mecanismos", ""])
+        for nome, info in tipologia.items():
+            if isinstance(info, dict):
+                parts.append(f"- **{nome.replace('_', ' ')}** — casos: {', '.join(info.get('casos', []))}; {info.get('nota', '')}")
+            else:
+                parts.append(f"- **{nome}:** {info}")
+        parts.append("")
+    ranking = entry.get("ranking_cebc_2007_2025") or {}
+    if ranking:
+        parts.extend(["## 📊 Ranking CEBC (2007-2025)", ""])
+        if isinstance(ranking, dict):
+            if ranking.get("fonte"):
+                parts.append(f"**Fonte:** {ranking['fonte']}")
+            meta = []
+            for k in ("estoque_total_usd", "projetos_total", "ufs_com_projetos"):
+                if ranking.get(k):
+                    meta.append(f"{k.replace('_', ' ')}: {ranking[k]}")
+            if meta:
+                parts.append(" · ".join(meta))
+            parts.append("")
+            top = ranking.get("top_estados_serie") or []
+            if top:
+                parts.append("| # | Estado | Projetos | Variação | Capítulo |")
+                parts.append("|---|--------|----------|----------|----------|")
+                for row in top:
+                    if isinstance(row, dict):
+                        parts.append(
+                            f"| {row.get('posicao', '—')} | {row.get('estado', '—')} | "
+                            f"{row.get('projetos', '—')} | {row.get('variacao', '—')} | {row.get('capitulo', '—')} |"
+                        )
+                parts.append("")
+            if ranking.get("setor_lider_valor"):
+                parts.append(f"- **Setor líder (valor):** {ranking['setor_lider_valor']}")
+            if ranking.get("distribuicao_regional"):
+                parts.append(f"- **Distribuição regional:** {ranking['distribuicao_regional']}")
+            parts.append("")
+    if entry.get("ponto_de_inflexao"):
+        parts.extend(["## 📌 Ponto de inflexão", "", entry["ponto_de_inflexao"], ""])
+    return "\n".join(parts)
 
 
 def extract_year(date_str: str) -> str:
@@ -291,7 +424,9 @@ def generate_lacunas_section(lacuna: str) -> str:
 
 # ===================== MAIN GENERATION =====================
 
-def generate_post_from_entry(entry: Dict, batch_name: str) -> Tuple[str, str]:
+def generate_post_from_entry(
+    entry: Dict, batch_name: str, batch_file: Optional[Path] = None
+) -> Tuple[str, str]:
     """
     Gera um post Jekyll (arquivo .md) a partir de uma entry JSON.
     Retorna (filepath, status_message)
@@ -314,9 +449,12 @@ def generate_post_from_entry(entry: Dict, batch_name: str) -> Tuple[str, str]:
 
     # Para temáticos: usar 'artifact' se disponível, ou slugify do topic
     if not date_event and entry.get("artifact"):
-        # Temático: usar artifact como base para nome
-        artifact_name = entry.get("artifact", "").replace(".html", "")
-        filename = f"2026-07-24-t{entry_id}-{artifact_name}.md"
+        if batch_file:
+            slug_part = thematic_slug_from_batch(batch_file, entry_id)
+            filename = f"2026-07-24-{slug_part}.md"
+        else:
+            artifact_name = entry.get("artifact", "").replace(".html", "")
+            filename = f"2026-07-24-t{entry_id}-{artifact_name}.md"
     else:
         # Batch: padrão normal
         slug = slugify(title)
@@ -396,6 +534,8 @@ status: {entry.get('status', 'confirmado')}
         body += generate_patterns_section(patterns)
         body += "\n"
 
+    body += generate_synthesis_sections(entry)
+
     # Lacunas investigativas
     if entry.get("lacuna_investigativa"):
         body += generate_lacunas_section(entry.get("lacuna_investigativa"))
@@ -411,9 +551,11 @@ status: {entry.get('status', 'confirmado')}
         body += "\n"
 
     # Referências internas (connections + connects_to_main_ids)
-    connections = entry.get("connections", [])
-    main_ids = entry.get("connects_to_main_ids", [])
-    all_connections = connections + [f"id_{mid}" for mid in main_ids]
+    connections = entry.get("connections") or []
+    main_ids = entry.get("connects_to_main_ids") or entry.get("connections_main_track") or []
+    all_connections = list(connections) + [
+        f"id_{mid}" if not str(mid).startswith("id") else str(mid) for mid in main_ids
+    ]
 
     if all_connections:
         body += generate_connections_section(all_connections, entry_id)
@@ -434,22 +576,23 @@ status: {entry.get('status', 'confirmado')}
         return "", f"❌ Erro ao escrever {filename}: {str(e)}"
 
 
-def process_batch_file(batch_file: Path) -> Tuple[int, int]:
+def process_batch_file(batch_file: Path) -> Tuple[int, int, list[dict]]:
     """
     Processa um arquivo JSON de batch.
-    Retorna (total_processado, total_com_sucesso)
+    Retorna (total_processado, total_com_sucesso, assuntos_para_lawfare)
     """
     try:
         with open(batch_file, "r", encoding="utf-8") as f:
             data = json.load(f)
     except Exception as e:
         print(f"❌ Erro ao ler {batch_file.name}: {e}")
-        return 0, 0
+        return 0, 0, []
 
-    entries = data.get("entries", [])
+    entries = extract_entries_from_batch(data, batch_file)
+    assuntos_raw = data.get("assuntos") or []
     if not entries:
         print(f"⚠️  Nenhuma entrada em {batch_file.name}")
-        return 0, 0
+        return 0, 0, []
 
     batch_name = batch_file.stem
     success_count = 0
@@ -457,14 +600,90 @@ def process_batch_file(batch_file: Path) -> Tuple[int, int]:
     print(f"\n📄 Processando {batch_file.name} ({len(entries)} entradas)...")
 
     for entry in entries:
-        filepath, status_msg = generate_post_from_entry(entry, batch_name)
+        filepath, status_msg = generate_post_from_entry(entry, batch_name, batch_file)
         if filepath:
             print(f"   {status_msg}")
             success_count += 1
         else:
             print(f"   {status_msg}")
 
-    return len(entries), success_count
+    return len(entries), success_count, assuntos_raw
+
+
+def merge_lawfare_assuntos(assuntos: list[dict]) -> int:
+    if not assuntos or not LAWFARE.is_file():
+        return 0
+    lf = json.loads(LAWFARE.read_text(encoding="utf-8"))
+    items = lf.get("assuntos") or []
+    new_ids = {int(a["id"]) for a in assuntos if a.get("id") is not None}
+    items = [a for a in items if a.get("id") not in new_ids]
+    items.extend(assuntos)
+    items.sort(key=lambda x: x.get("id") or 0)
+    lf["assuntos"] = items
+    lf["total"] = len(items)
+    lf["data_extração"] = date.today().isoformat()
+    datas = [a["data_evento"] for a in items if a.get("data_evento") and a["data_evento"] != "0001-01-01"]
+    if datas:
+        lf["periodo"] = f"{min(datas)} a {max(datas)}"
+    LAWFARE.write_text(json.dumps(lf, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"lawfare.json: +{len(assuntos)} assuntos (total {len(items)})")
+    return len(assuntos)
+
+
+def update_sync_json(main_ids: list[int], thematic_ids: list[int], batch_names: list[str]) -> None:
+    if not SYNC.is_file():
+        return
+    sync = json.loads(SYNC.read_text(encoding="utf-8"))
+    note = f"Dragão e a Onça merge {date.today().isoformat()}: {', '.join(batch_names[:5])}{'…' if len(batch_names) > 5 else ''}"
+    if main_ids:
+        last = max(main_ids)
+        main = sync.setdefault("tracks", {}).setdefault("main", {})
+        main["last_id"] = last
+        main["next_available"] = last + 1
+        main["last_confirmed"] = last
+        main["last_jekyll_published"] = last
+        main.setdefault("confirmed_batches", []).append({
+            "range": [min(main_ids), last],
+            "status": "confirmed",
+            "notes": note,
+        })
+    if thematic_ids:
+        last_t = max(thematic_ids)
+        th = sync.setdefault("tracks", {}).setdefault("thematic", {})
+        prev_last = int(th.get("last_id") or 0)
+        if last_t < prev_last:
+            last_t = prev_last
+        th["last_id"] = last_t
+        th["next_available"] = last_t + 1
+        entries = th.setdefault("entries", [])
+        existing = {int(e["id"]) for e in entries}
+        for tid in thematic_ids:
+            if tid not in existing:
+                entries.append({
+                    "id": tid,
+                    "status": "confirmed",
+                    "topic": f"T-{tid} dragao-onca",
+                    "artifact": f"2026-07-24-t{tid}-dragao-onca.md",
+                    "notes": note,
+                })
+        entries.sort(key=lambda x: int(x["id"]))
+    st = sync.setdefault("sync_status", {})
+    st["main_track_last_sync"] = date.today().isoformat()
+    st["thematic_track_last_sync"] = date.today().isoformat()
+    SYNC.write_text(json.dumps(sync, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print("claude.ai-corpus-ids-sync.json atualizado.")
+
+
+def archive_todo_files(files: list[Path]) -> None:
+    PROC_DIR.mkdir(parents=True, exist_ok=True)
+    for src in files:
+        if not src.is_file():
+            continue
+        dst = PROC_DIR / src.name
+        if dst.is_file():
+            dst.unlink()
+        shutil.move(str(src), str(dst))
+        print(f"  archive -> processados/{src.name}")
 
 
 def main():
@@ -479,8 +698,13 @@ def main():
         return
 
     # Listar arquivos JSON
-    batch_files = sorted(TODO_DIR.glob("lawfare-batch-dragao-onca-*.json"))
-    thematic_files = sorted(TODO_DIR.glob("lawfare-thematic-*.json"))
+    batch_files = sorted(
+        p for p in TODO_DIR.glob("lawfare-batch-dragao-onca-*.json")
+    )
+    thematic_files = sorted(
+        p for p in TODO_DIR.glob("lawfare-thematic-*.json")
+        if " (1)" not in p.name
+    )
 
     all_files = batch_files + thematic_files
 
@@ -489,17 +713,41 @@ def main():
         return
 
     print(f"\n🔍 Encontrados {len(all_files)} arquivos JSON")
-    print(f"   - {len(batch_files)} batches temáticos")
-    print(f"   - {len(thematic_files)} batches geográficos")
+    print(f"   - {len(batch_files)} batches main track")
+    print(f"   - {len(thematic_files)} capítulos temáticos")
 
-    # Processar cada arquivo
     total_processed = 0
     total_success = 0
+    all_assuntos: list[dict] = []
+    main_ids: list[int] = []
+    thematic_ids: list[int] = []
+    processed_files: list[Path] = []
 
     for batch_file in all_files:
-        processed, success = process_batch_file(batch_file)
+        processed, success, assuntos = process_batch_file(batch_file)
         total_processed += processed
         total_success += success
+        if success:
+            processed_files.append(batch_file)
+        if assuntos:
+            all_assuntos.extend(assuntos)
+            main_ids.extend(int(a["id"]) for a in assuntos if a.get("id") is not None)
+        if batch_file.name.startswith("lawfare-thematic-"):
+            try:
+                data = json.loads(batch_file.read_text(encoding="utf-8"))
+                tid = data.get("id")
+                if tid is not None:
+                    thematic_ids.append(int(tid))
+            except json.JSONDecodeError:
+                pass
+
+    if all_assuntos:
+        merge_lawfare_assuntos(all_assuntos)
+    if main_ids or thematic_ids:
+        update_sync_json(main_ids, thematic_ids, [p.name for p in processed_files])
+    if processed_files:
+        print("\n📦 Arquivando JSON processados...")
+        archive_todo_files(processed_files)
 
     # Resumo final
     print("\n" + "=" * 70)

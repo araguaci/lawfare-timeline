@@ -7,6 +7,114 @@ Formato: data (ISO) → resumo → arquivos de fonte.
 
 ---
 
+## 2026-07-25 — Conclusão da série O Dragão e a Onça (IDs 1713–1748 · T-236–T-243)
+
+Merge dos capítulos pendentes: diplomático federal, Bahia, São Paulo, Paraná, RS, ES, Goiás retroativo e síntese final cross-state. **Build Jekyll pausado** para revisão editorial antes de `bundle exec jekyll build`.
+
+### Fontes
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Criado** | `_posts/dragao-onca/*.md` (+43) | 36 main (1713–1748) + 7 temáticos (T236–T241, T243). Total pasta: **125 posts**. |
+| **Alterado** | `_data/lawfare.json` | +36 assuntos dragao-onca (total categoria: **110**, max ID **1748**). |
+| **Alterado** | `_data/claude.ai-corpus-ids-sync.json` | main next **1749**, thematic last **T-243**. |
+| **Arquivado** | `_data/processados/lawfare-batch-dragao-onca-*-1713-1748.json` | 7 batches main track. |
+| **Arquivado** | `_data/processados/lawfare-thematic-T236–T243*.json` | 7 capítulos temáticos. |
+| **Alterado** | `scripts/gerar_artigos_dragao_onca.py` | Suporte `assuntos`, temáticos soltos, síntese T-243, merge lawfare + sync + archive. |
+| **Alterado** | `scripts/add_dragao_onca_state_tags.py` | Tags bahia, parana, rio-grande-do-sul, espirito-santo; overrides T236–T243. |
+| **Alterado** | `_layouts/dragao-onca.html` | Badges de estado na timeline (+4 UFs). |
+| **Corrigido** | `_posts/dragao-onca/2026-07-24-t228-o-dragao-e-a-onca-goias.md` | Front matter YAML (`layout: post`). |
+| **Alterado** | `TODO.md` | Snapshot main **1748**, thematic **T-243**, fila todo vazia. |
+
+### Capítulos temáticos (ordem)
+
+| T | Capítulo |
+|---|----------|
+| T-228 | Goiás |
+| T-229 | Brasil federal |
+| T-230 | Pará |
+| T-231 | Amazonas |
+| T-232 | Minas Gerais |
+| T-233 | Síntese comparativa (v1) |
+| T-234 | Braço jurídico |
+| T-235 | PL 2.780/2024 |
+| T-236 | Braço diplomático |
+| T-237 | Bahia |
+| T-238 | São Paulo |
+| T-239 | Paraná |
+| T-240 | Rio Grande do Sul |
+| T-241 | Espírito Santo |
+| T-243 | Síntese final cross-state |
+
+### Verificação (sem build)
+
+- `python scripts/validate_dragao_onca_yaml.py` → OK (125 arquivos)
+- T-243: correção metodológica e escopo atualizados (Goiás T-228 + 1740–1748)
+- `_data/todo/` esvaziada (batches arquivados em `processados/`)
+- `bundle exec jekyll build` → **não executado** (pausa solicitada)
+
+---
+
+## 2026-07-25 (b) — T-242, imagens hero e xarticles (itens 1–3)
+
+### Fontes
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Criado** | `_posts/dragao-onca/2026-07-24-t242-dragao-onca-ranking-cebc.md` | Capítulo ranking CEBC 2007-2025 (T-242). Total pasta: **126 posts**. |
+| **Criado** | `assets/img/dragao-onca-{bahia,sao-paulo,parana,rio-grande-do-sul,espirito-santo,ranking-cebc}.webp` | Heroes regionais (26 posts + capítulos temáticos atualizados). |
+| **Criado** | `scripts/fix_dragao_onca_hero_images.py` | Atualiza `image:` por faixa ID e capítulo temático. |
+| **Criado** | `odragaoeaonca/artigos/parana-xarticle.md` | X Article Cap. 12 (TCP/CMPort). |
+| **Criado** | `odragaoeaonca/artigos/rs-es-ranking-xarticle.md` | X Article RS/ES + ranking CEBC. |
+| **Alterado** | `_data/claude.ai-corpus-ids-sync.json` | Entrada T-242; thematic last **243**. |
+| **Alterado** | `_posts/dragao-onca/2026-07-24-t243-sintese-final-cross-state.md` | T-242 integrado; lacuna removida. |
+
+---
+
+### Fontes
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Criado** | `.cursor/rules/odragaoeaonca-paths.mdc` | Regra: xarticles, heroes e HTML em `odragaoeaonca/`; proíbe salvar em `docs/odragaoeaonca/`. |
+
+---
+
+## 2026-07-24 — Links internos e títulos nos capítulos temáticos Dragão e a Onça
+
+Links de artigos relacionados passam de `/timeline/entries/{id}` para `/posts/{slug}/` (permalink Jekyll). Capítulos `2026-07-24-t*` exibem o **título real** do post no texto do link, não `Entrada {id}`.
+
+### Fontes
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Alterado** | `_posts/dragao-onca/*.md` (61 arquivos) | URLs `/timeline/entries/` → `/posts/{slug}/`. |
+| **Alterado** | `_posts/dragao-onca/2026-07-24-t*.md` (6 arquivos) | Labels dos links: título do artigo destino (t229, t230, t231, t232, t234, t235). |
+| **Alterado** | `scripts/gerar_artigos_dragao_onca.py` | `build_post_index()` (slug + título), `post_url_for_timeline_id()`, `post_title_for_timeline_id()`, `yaml_escape()` nos títulos/descrições, filtro de tags vazias, `extract_year()` com fallback. |
+| **Criado** | `scripts/fix_dragao_onca_post_links.py` | Corrige URLs e labels de links em lote. |
+| **Alterado** | `scripts/fix_dragao_onca_yaml_titles.py` | Modos `--tags`, `--rebuild-titles`; skip de títulos já escapados. |
+
+---
+
+## 2026-07-24 — Correção YAML em `_posts/dragao-onca/`
+
+Build Jekyll falhava com `did not find expected key` em 16 posts: aspas duplas internas no campo `title` do front matter sem escape. Tags de ano vazias (`""`) em capítulos temáticos geravam aviso `Empty slug generated for ''`.
+
+### Fontes
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Alterado** | `_posts/dragao-onca/*.md` (16 títulos + 15 tags) | Escape `\"` em títulos com citações; tag `"2026"` no lugar de `""`. |
+| **Alterado** | `scripts/gerar_artigos_dragao_onca.py` | Prevenção na geração (ver entrada acima). |
+| **Criado** | `scripts/fix_dragao_onca_yaml_titles.py` | Correção pontual de títulos e tags vazias. |
+| **Criado** | `scripts/validate_dragao_onca_yaml.py` | Valida front matter YAML dos 90 posts da pasta. |
+
+### Verificação
+
+- `python scripts/validate_dragao_onca_yaml.py` → OK (90 arquivos)
+- `bundle exec jekyll build` → concluído sem erros de YAML
+
+---
+
 ## 2026-07-24 — Cards sem colisão + timeline estilo /timeline/
 
 Ajuste visual da página `/dragao-onca/`: capítulos com card idêntico à home (sem texto sobre a imagem) e lista cronológica no padrão `#archives` de `/timeline/`.
