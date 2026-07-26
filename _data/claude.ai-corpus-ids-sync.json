@@ -377,11 +377,11 @@
       ],
       "last_id": 1748,
       "last_jekyll_published": 1748,
-      "last_produced": 1712,
+      "last_produced": 1748,
       "next_available": 1749,
       "merge_queue": [],
       "last_confirmed": 1748,
-      "last_session_produced": 1712
+      "last_session_produced": 1748
     },
     "thematic": {
       "description": "Sub-corpus temático — análise estrutural e padrões sistêmicos",
@@ -1314,7 +1314,7 @@
             "P08",
             "P09"
           ],
-          "notes": "Tema estruturante: síntese e navegação da série completa (90 artigos, 74 batch + 8 temáticos, período 1993-2026)."
+          "notes": "Tema estruturante: síntese e navegação da série completa (126 posts Jekyll: 110 main + 16 temáticos, período 1993-2026)."
         },
         {
           "id": 229,
@@ -1515,10 +1515,10 @@
   "sync_status": {
     "main_track_last_sync": "2026-07-25",
     "thematic_track_last_sync": "2026-07-25",
-    "dragao_onca_series_sync": "2026-07-24T14:30:00-03:00",
+    "dragao_onca_series_sync": "2026-07-25T21:35:00-03:00",
     "ids_confirmed_total": {
-      "main_track": "1712",
-      "thematic_track": 235
+      "main_track": "1748",
+      "thematic_track": 243
     },
     "ids_pending_production": [],
     "artifacts_without_thematic_id": [],
@@ -1788,7 +1788,7 @@
       "T-220 PCC-OFAC Arpar publicado (2026-07-24)",
       "T-221 Nemo judex DPU publicado (2026-07-24)",
       "T-196 Radar Top 30 publicado em estudos/ (2026-07-24)",
-      "lawfare.json last_id=1712; próximo ID livre=1713",
+      "lawfare.json last_id=1748; próximo ID livre=1749 (série Dragão e a Onça concluída)",
       "Fila editorial 2026-07-25: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
       "T-197 Operação Rejeito publicado (2026-07-25)",
       "T-198 COAF × Moraes publicado (2026-07-25)",
@@ -1816,7 +1816,7 @@
       "T-220 PCC-OFAC Arpar publicado (2026-07-25)",
       "T-221 Nemo judex DPU publicado (2026-07-25)",
       "T-196 Radar Top 30 publicado em estudos/ (2026-07-25)",
-      "Próximo thematic: T-236; main next=1713"
+      "Série Dragão e a Onça concluída: main 1639-1748 (110), thematic T-228-T-243 (16), 126 posts; próximo main=1749, thematic=T-244"
     ],
     "notes": [
       "Correção 2026-07-18: ID 1520→P04b imprensa; revisão criminal Bolsonaro→1621; duplicata lawfare/ removida.",
@@ -1971,6 +1971,37 @@
         "IDs T228-T235 (8 temáticos) reservados para capítulos da série",
         "Assets regionais: 9 WebP (brasil-federal, goias, para, amazonas, minas-gerais, pl2780, juridico, sintese) + 1 default",
         "Padrões analíticos por capítulo: P03, P04b, P05, P06, P08, P09, P10, P11"
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2026-07-25",
+      "session": "claude.ai — conclusão série O Dragão e a Onça",
+      "produced": [
+        "Merge batches 1713-1748 (BA, diplomático, PR, RS, SP, ES, GO retroativo)",
+        "lawfare-thematic-T242-dragao-onca-ranking-cebc.json (T-242 ranking CEBC)",
+        "126 artigos Jekyll em _posts/dragao-onca/ (110 main + 16 temáticos)",
+        "Heroes webp regionais (BA, SP, PR, RS, ES, ranking-cebc)",
+        "X Articles: parana-xarticle.md, rs-es-ranking-xarticle.md",
+        "odragaoeaonca/index.html reorganizado (transversal → UFs CEBC → sínteses)"
+      ],
+      "summary": {
+        "total_entries": 126,
+        "batch_entries": 110,
+        "thematic_entries": 16,
+        "period": "1993-2026",
+        "main_track_range": "1639-1748",
+        "thematic_track_range": "T228-T243"
+      },
+      "integrations": [
+        "lawfare.json e claude.ai-corpus-ids-sync.json sincronizados e validados (validate-ids.ps1: 0 erros)",
+        "Todos os batches arquivados em _data/processados/",
+        "_data/todo/ vazia"
+      ],
+      "decisions": [
+        "T-243 síntese final cross-state mantida como capítulo de fechamento",
+        "T-233 (síntese estrutural v1) preservado como capítulo analítico intermediário",
+        "jekyll build pausado aguardando autorização"
       ],
       "status": "completed"
     }
