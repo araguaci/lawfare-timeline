@@ -19,6 +19,7 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
   *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
   :root{
     --bg:#0b0f0a;--bg2:#111a10;--bg3:#182216;
     --gr:#3ecb6f;--gr2:#78f5a8;--gr-dim:#1a6030;
@@ -42,13 +43,13 @@
   .hmeta{display:flex;gap:18px;margin-top:10px;flex-wrap:wrap}
   .hm{font-size:12px;color:var(--text2);font-family:var(--mono)}
   .hm b{color:var(--gr2)}
-  nav{display:flex;gap:4px;padding:10px 26px;background:rgba(17,26,16,0.9);border-bottom:1px solid var(--border);overflow-x:auto;flex-wrap:wrap;position:sticky;top:0;z-index:100;backdrop-filter:blur(8px)}
-  .nb{padding:6px 13px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--text2);font-family:var(--font);font-size:12px;font-weight:500;cursor:pointer;transition:all .2s;white-space:nowrap}
-  .nb:hover{border-color:var(--gr-dim);color:var(--gr2)}
-  .nb.act{background:rgba(62,203,111,0.12);border-color:var(--gr);color:var(--gr);font-weight:700}
+  nav{display:flex;gap:4px;padding:12px 26px;background:rgba(10,14,18,0.96);border-bottom:2px solid var(--gr-dim,var(--border));box-shadow:0 6px 18px rgba(0,0,0,0.35);overflow-x:auto;flex-wrap:wrap;position:sticky;top:0;z-index:200;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+  .nb{padding:7px 14px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--text2);font-family:var(--font);font-size:12px;font-weight:600;cursor:pointer;transition:all .2s;white-space:nowrap;text-decoration:none;display:inline-block}
+  .nb:hover{border-color:var(--gold-dim,var(--gr-dim));color:var(--gold,var(--gr2))}
+  .nb.act{background:linear-gradient(90deg,rgba(232,196,75,0.2),rgba(62,203,111,0.12));border-color:var(--gold,var(--gr));color:#fff;font-weight:800;box-shadow:0 0 0 1px var(--gold,var(--gr)) inset}
   main{padding:0 20px 40px;max-width:1200px;margin:0 auto}
-  .sec{display:none;padding-top:4px}
-  .sec.act{display:block}
+  .sec{padding:34px 0 12px;border-bottom:1px solid var(--border);scroll-margin-top:70px}
+  .sec:last-of-type{border-bottom:none}
   .kgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:16px 0 10px}
   @media(max-width:900px){.kgrid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:480px){.kgrid{grid-template-columns:1fr}}
@@ -102,12 +103,30 @@
   .alert{padding:10px 12px;border-radius:8px;background:var(--bg3);border-left:3px solid var(--gold);margin-bottom:10px;font-size:12px;color:var(--text2);line-height:1.6}
   .alert.crit{border-left-color:var(--red)}
   .alert.info{border-left-color:var(--blue)}
-  .gotop{position:fixed;bottom:22px;right:22px;width:42px;height:42px;border-radius:50%;background:var(--gr-dim);border:1px solid var(--gr);color:var(--gr2);display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s;z-index:200;font-size:18px}
-  .gotop.vis{opacity:1;pointer-events:auto}
+  #gotop{position:fixed;right:20px;bottom:20px;z-index:300;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--gold,var(--jaguar,#e8b23d)),var(--blue,#4a9eff));color:#0b0f0a;border:none;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,0.45);opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .25s,transform .25s}
+#gotop.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+#gotop:hover{filter:brightness(1.1)}
   .copy-all-btn{background:var(--bg3);border:1px solid var(--gr-dim);color:var(--gr2);font-family:var(--mono);font-size:11px;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:14px}
   footer{border-top:1px solid var(--border);padding:22px 26px;text-align:center}
   .flinks a{color:var(--gr2);text-decoration:none;font-size:12px;margin:0 10px;font-family:var(--mono)}
   .fmeta{font-size:11px;color:var(--text2);margin-top:10px;line-height:1.7;font-family:var(--mono)}
+.footdev{font-size:11px;color:var(--text2);margin-top:10px;font-family:var(--mono)}
+.footdev a{color:var(--jaguar2,var(--gold,var(--gr2,#e8b23d)));text-decoration:none}
+.footdev a:hover{color:#fff;text-decoration:underline}
+.series-nav{margin:0 auto;max-width:1200px;padding:28px 20px 0;border-top:2px solid var(--border)}
+.series-nav-title{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--text2);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.series-nav-title::before{content:'';flex:1;height:1px;background:var(--border)}
+.series-nav-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:14px}
+@media(max-width:720px){.series-nav-grid{grid-template-columns:1fr}}
+.series-card{display:block;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 16px;text-decoration:none;color:inherit;transition:border-color .2s,transform .15s;position:relative;overflow:hidden}
+.series-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--dragon,var(--red,#d4342c)),var(--jaguar,var(--gold,#e8b23d)))}
+.series-card:hover{border-color:rgba(232,178,61,.45);transform:translateY(-1px)}
+.series-card.is-current{border-color:var(--jaguar,var(--gold,#e8b23d));box-shadow:0 0 0 1px rgba(232,178,61,.35) inset;pointer-events:none;opacity:.92}
+.series-card-id{font-family:var(--mono);font-size:10px;color:var(--jaguar2,var(--gold2,var(--gold,#e8b23d)));letter-spacing:1px;margin-bottom:4px}
+.series-card-chapter{font-size:14px;font-weight:800;color:#fff;margin-bottom:4px;line-height:1.2}
+.series-card-desc{font-size:12px;color:var(--text2);line-height:1.55}
+.series-hub{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--jaguar2,var(--gold2,var(--gold,#e8b23d)));text-decoration:none;font-family:var(--mono);margin-bottom:8px}
+.series-hub:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -126,19 +145,19 @@
 </header>
 
 <nav>
-  <button class="nb act" onclick="show('visao')">Visão Geral</button>
-  <button class="nb" onclick="show('timeline')">Linha do Tempo</button>
-  <button class="nb" onclick="show('eventos')">As 7 Entradas</button>
-  <button class="nb" onclick="show('simetria')">Nota de Simetria</button>
-  <button class="nb" onclick="show('tese')">Tese Analítica</button>
-  <button class="nb" onclick="show('lacunas')">Lacunas</button>
-  <button class="nb" onclick="show('refs')">Referências</button>
+  <a class="nb" href="#sec-visao" data-target="sec-visao">Visão Geral</a>
+  <a class="nb" href="#sec-timeline" data-target="sec-timeline">Linha do Tempo</a>
+  <a class="nb" href="#sec-eventos" data-target="sec-eventos">As 7 Entradas</a>
+  <a class="nb" href="#sec-simetria" data-target="sec-simetria">Nota de Simetria</a>
+  <a class="nb" href="#sec-tese" data-target="sec-tese">Tese Analítica</a>
+  <a class="nb" href="#sec-lacunas" data-target="sec-lacunas">Lacunas</a>
+  <a class="nb" href="#sec-refs" data-target="sec-refs">Referências</a>
 </nav>
 
 <main>
 
 <!-- VISÃO GERAL -->
-<div id="sec-visao" class="sec act">
+<div id="sec-visao" class="sec">
   <button class="copy-all-btn" onclick="copyAll()">⊕ Copiar dossiê completo para IA</button>
   <div class="kgrid">
     <div class="kcard kgo"><div class="klabel">Eventos Documentados</div><div class="kval">7</div><div class="ksub">IDs 1719–1725</div></div>
@@ -264,11 +283,35 @@
   </div>
 </div>
 
+<section class="series-nav" id="serie">
+  <div class="series-nav-title">Artefatos da Série: O Dragão e a Onça</div>
+  <div class="series-nav-grid">
+    <a class="series-card" href="/odragaoeaonca"><div class="series-card-id">0 · Hub</div><div class="series-card-chapter">Índice da série</div><div class="series-card-desc">Mapa completo + tese · 16 dossiês</div></a>
+    <a class="series-card" href="/dragao-onca-brasil-federal.html"><div class="series-card-id">1 · T-229 · Crítico</div><div class="series-card-chapter">🇧🇷 BR Brasil (Federal)</div><div class="series-card-desc">Pano de fundo 1993–2026 · Doria–Sinovac</div></a>
+    <a class="series-card" href="/dragao-onca-braco-diplomatico.html"><div class="series-card-id">2 · T-236 · Crítico</div><div class="series-card-chapter">🌐 Braço Diplomático</div><div class="series-card-desc">WAICO + Serra Verde + alinhamento duplo</div></a>
+    <a class="series-card" href="/dragao-onca-sao-paulo.html"><div class="series-card-id">3 · T-238 · Alto</div><div class="series-card-chapter">🇧🇷 SP São Paulo</div><div class="series-card-desc">Variante “mercado” — CRRC/COFCO</div></a>
+    <a class="series-card" href="/dragao-onca-goias.html"><div class="series-card-id">4 · T-228 · Alto</div><div class="series-card-chapter">🇧🇷 GO Goiás</div><div class="series-card-desc">Pivô China→EUA/Japão, terras raras</div></a>
+    <a class="series-card" href="/dragao-onca-minas-gerais.html"><div class="series-card-id">5 · T-232 · Alto</div><div class="series-card-chapter">🇧🇷 MG Minas Gerais</div><div class="series-card-desc">Contraste ocidental (Sigma/Nasdaq)</div></a>
+    <a class="series-card is-current" href="/dragao-onca-bahia.html"><div class="series-card-id">6 · T-237 · Alto</div><div class="series-card-chapter">🇧🇷 BA Bahia</div><div class="series-card-desc">Caso de controle — padrão falha</div></a>
+    <a class="series-card" href="/dragao-onca-para.html"><div class="series-card-id">7 · T-230 · Alto</div><div class="series-card-chapter">🇧🇷 PA Pará</div><div class="series-card-desc">Ferrovia + COP30 + 39 mortes</div></a>
+    <a class="series-card" href="/dragao-onca-amazonas.html"><div class="series-card-id">8 · T-231 · Alto</div><div class="series-card-chapter">🇧🇷 AM Amazonas</div><div class="series-card-desc">Taboca/MPF/PF — mais grave</div></a>
+    <a class="series-card" href="/dragao-onca-parana.html"><div class="series-card-id">9 · T-239 · Médio</div><div class="series-card-chapter">🇧🇷 PR Paraná</div><div class="series-card-desc">Coordenação estado–união (TCP)</div></a>
+    <a class="series-card" href="/dragao-onca-rio-grande-do-sul.html"><div class="series-card-id">10 · T-240 · Médio</div><div class="series-card-chapter">🇧🇷 RS Rio Grande do Sul</div><div class="series-card-desc">CEEE-T + cortejo GWM sem captura</div></a>
+    <a class="series-card" href="/dragao-onca-rs-es-ranking-nacional.html"><div class="series-card-id">11 · T-240–242 · Médio</div><div class="series-card-chapter">🇧🇷 RS · ES · Ranking CEBC</div><div class="series-card-desc">Par de controle + ranking nacional</div></a>
+    <a class="series-card" href="/dragao-onca-sintese.html"><div class="series-card-id">12 · T-233 · Consolidação</div><div class="series-card-chapter">📊 Síntese v1</div><div class="series-card-desc">5 UFs originais · soberania do governador</div></a>
+    <a class="series-card" href="/dragao-onca-pl2780.html"><div class="series-card-id">13 · T-235 · Legislativo</div><div class="series-card-chapter">📜 PL 2.780/2024</div><div class="series-card-desc">FGAM R$ 2 bi · minerais críticos</div></a>
+    <a class="series-card" href="/dragao-onca-braco-juridico.html"><div class="series-card-id">14 · T-234 · Transversal</div><div class="series-card-chapter">⚖️ Braço Jurídico</div><div class="series-card-desc">STF, marco temporal, ADI 7919</div></a>
+    <a class="series-card" href="/dragao-onca-sintese-final-cross-state.html"><div class="series-card-id">15 · T-243 · Fechamento</div><div class="series-card-chapter">🎯 Síntese final · 9 UFs</div><div class="series-card-desc">Onde a tese confirma, enfraquece ou falha</div></a>
+  </div>
+  <a class="series-hub" href="/odragaoeaonca">← Índice da série · O Dragão e a Onça</a>
+</section>
+
 </main>
 
 <footer>
   <div class="flinks">
-    <a href="https://lawfare-timeline.vercel.app/" target="_blank">⚖ Lawfare Timeline</a>
+        <a href="https://www.artesdosul.com/" target="_blank" rel="noopener">✦ Artes do Sul</a>
+<a href="https://lawfare-timeline.vercel.app/" target="_blank">⚖ Lawfare Timeline</a>
     <a href="https://gosurf.site" target="_blank">🌐 gosurf.site</a>
     <a href="https://observatorio-civil-br.vercel.app/" target="_blank">👁 Observatório Civil BR</a>
   </div>
@@ -278,19 +321,32 @@
     Fontes: A Tarde · Bahia.ba · Carta Capital · BNews · Gazeta do Povo · Casa Civil (gov.br) · Concremat · Radar PPP<br>
     Todo conteúdo baseado em fontes jornalísticas e documentais verificáveis. Análises estruturais identificadas como ev-inference.
   </div>
+  <div class="footdev">Desenvolvido por <a href="https://www.artesdosul.com/" target="_blank" rel="noopener">Artes do Sul</a></div>
 </footer>
 
-<div class="gotop" id="gotop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
+<button id="gotop" title="Voltar ao topo" aria-label="Voltar ao topo">↑</button>
 
 <script>
-function show(id){
-  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('act'));
-  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('act'));
-  document.getElementById('sec-'+id).classList.add('act');
-  event.target.classList.add('act');
-}
-window.addEventListener('scroll', () => {
-  document.getElementById('gotop').classList.toggle('vis', window.scrollY > 400);
+const links = document.querySelectorAll('.nb');
+const sections = document.querySelectorAll('main .sec');
+const map = {};
+links.forEach(l=>{map[l.dataset.target]=l});
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      links.forEach(l=>l.classList.remove('act'));
+      const id = entry.target.id;
+      if(map[id]) map[id].classList.add('act');
+    }
+  });
+},{rootMargin:'-30% 0px -60% 0px',threshold:0});
+sections.forEach(s=>observer.observe(s));
+const gotop = document.getElementById('gotop');
+window.addEventListener('scroll',()=>{
+  if(gotop) gotop.classList.toggle('show', window.scrollY > 400);
+});
+if(gotop) gotop.addEventListener('click',()=>{
+  window.scrollTo({top:0,behavior:'smooth'});
 });
 function copyAll(){
   const content = document.querySelector('main').innerText;

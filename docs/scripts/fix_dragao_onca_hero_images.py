@@ -12,6 +12,11 @@ RANGES = [
     (1731, 1734, "dragao-onca-parana.webp"),
     (1735, 1737, "dragao-onca-rio-grande-do-sul.webp"),
     (1738, 1739, "dragao-onca-espirito-santo.webp"),
+    (1749, 1749, "dragao-onca-espirito-santo.webp"),
+    (1750, 1755, "dragao-onca-minas-gerais.webp"),
+    (1756, 1756, "dragao-onca-rio-grande-do-sul.webp"),
+    (1757, 1759, "dragao-onca-amapa.webp"),
+    (1760, 1762, "dragao-onca-rj.webp"),
 ]
 
 THEMATIC = {
@@ -21,6 +26,8 @@ THEMATIC = {
     "t240": "dragao-onca-rio-grande-do-sul.webp",
     "t241": "dragao-onca-espirito-santo.webp",
     "t242": "dragao-onca-ranking-cebc.webp",
+    "t244": "dragao-onca-amapa.webp",
+    "t245": "dragao-onca-rj.webp",
 }
 
 

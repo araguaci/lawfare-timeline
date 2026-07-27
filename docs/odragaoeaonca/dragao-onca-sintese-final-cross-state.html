@@ -4,21 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>O Dragão e a Onça — Síntese Final: Soberania na Conta do Governador | lawfare-timeline</title>
-<meta name="description" content="9 estados, 5 potências estrangeiras, uma tese testada: governadores negociam com a China, EUA, Coreia do Sul — quem captura valor, quem absorve custo, e por quê. Síntese final da série — CC0.">
+<meta name="description" content="Síntese final T-243 atualizada 27/jul/2026: 11 UFs + Amapá (controle) e RJ (Açu + Castro). Onde a tese confirma, enfraquece e falha — CC0.">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://gosurf.site/dragao-onca-sintese-final">
 <meta property="og:title" content="O Dragão e a Onça — Síntese Final">
-<meta property="og:description" content="Soberania na conta do governador: testada em 9 estados. Confirmada onde há extração mineral. Contrariada onde há mercado ou logística.">
+<meta property="og:description" content="Soberania na conta do governador — testada em 11 estados. Amapá (controle) + RJ (composição infra + governador).">
 <meta property="og:image" content="https://gosurf.site/dragao-onca-sintese.webp">
 <meta property="og:locale" content="pt_BR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="O Dragão e a Onça — Síntese Final">
-<meta name="twitter:description" content="A tese central testada contra 9 estados: onde se confirma, onde se refina, onde é diretamente contrariada.">
+<meta name="twitter:description" content="A tese central testada contra 11 estados: onde se confirma, onde se refina, onde é diretamente contrariada.">
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
   *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
   :root{
     --bg:#0b0f0a;--bg2:#111a10;--bg3:#182216;
     --gr:#3ecb6f;--gr2:#78f5a8;--gr-dim:#1a6030;
@@ -42,13 +43,13 @@
   .hmeta{display:flex;gap:18px;margin-top:10px;flex-wrap:wrap}
   .hm{font-size:12px;color:var(--text2);font-family:var(--mono)}
   .hm b{color:var(--gr2)}
-  nav{display:flex;gap:4px;padding:10px 26px;background:rgba(17,26,16,0.9);border-bottom:1px solid var(--border);overflow-x:auto;flex-wrap:wrap;position:sticky;top:0;z-index:100;backdrop-filter:blur(8px)}
-  .nb{padding:6px 13px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--text2);font-family:var(--font);font-size:12px;font-weight:500;cursor:pointer;transition:all .2s;white-space:nowrap}
-  .nb:hover{border-color:var(--gr-dim);color:var(--gr2)}
-  .nb.act{background:rgba(62,203,111,0.12);border-color:var(--gr);color:var(--gr);font-weight:700}
+  nav{display:flex;gap:4px;padding:12px 26px;background:rgba(10,14,18,0.96);border-bottom:2px solid var(--gr-dim,var(--border));box-shadow:0 6px 18px rgba(0,0,0,0.35);overflow-x:auto;flex-wrap:wrap;position:sticky;top:0;z-index:200;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+  .nb{padding:7px 14px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--text2);font-family:var(--font);font-size:12px;font-weight:600;cursor:pointer;transition:all .2s;white-space:nowrap;text-decoration:none;display:inline-block}
+  .nb:hover{border-color:var(--gold-dim,var(--gr-dim));color:var(--gold,var(--gr2))}
+  .nb.act{background:linear-gradient(90deg,rgba(232,196,75,0.2),rgba(62,203,111,0.12));border-color:var(--gold,var(--gr));color:#fff;font-weight:800;box-shadow:0 0 0 1px var(--gold,var(--gr)) inset}
   main{padding:0 20px 40px;max-width:1240px;margin:0 auto}
-  .sec{display:none;padding-top:4px}
-  .sec.act{display:block}
+  .sec{padding:34px 0 12px;border-bottom:1px solid var(--border);scroll-margin-top:70px}
+  .sec:last-of-type{border-bottom:none}
   .kgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:16px 0 10px}
   @media(max-width:900px){.kgrid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:480px){.kgrid{grid-template-columns:1fr}}
@@ -94,89 +95,120 @@
   .refnum{font-family:var(--mono);font-size:11px;color:var(--text2);min-width:28px;margin-top:2px}
   .reftitle{font-size:13px;font-weight:600;margin-bottom:2px;color:var(--gr2)}
   .refsrc{font-size:11px;color:var(--text2);font-family:var(--mono)}
-  .gotop{position:fixed;bottom:22px;right:22px;width:42px;height:42px;border-radius:50%;background:var(--gr-dim);border:1px solid var(--gr);color:var(--gr2);display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s;z-index:200;font-size:18px}
-  .gotop.vis{opacity:1;pointer-events:auto}
+  #gotop{position:fixed;right:20px;bottom:20px;z-index:300;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--gold,var(--jaguar,#e8b23d)),var(--blue,#4a9eff));color:#0b0f0a;border:none;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,0.45);opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .25s,transform .25s}
+#gotop.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+#gotop:hover{filter:brightness(1.1)}
   .copy-all-btn{background:var(--bg3);border:1px solid var(--gr-dim);color:var(--gr2);font-family:var(--mono);font-size:11px;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:14px}
   footer{border-top:1px solid var(--border);padding:22px 26px;text-align:center}
   .flinks a{color:var(--gr2);text-decoration:none;font-size:12px;margin:0 10px;font-family:var(--mono)}
   .fmeta{font-size:11px;color:var(--text2);margin-top:10px;line-height:1.7;font-family:var(--mono)}
   .chaplink{display:inline-block;background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:6px 12px;font-size:11px;margin:3px;color:var(--gr2);font-family:var(--mono)}
+.footdev{font-size:11px;color:var(--text2);margin-top:10px;font-family:var(--mono)}
+.footdev a{color:var(--jaguar2,var(--gold,var(--gr2,#e8b23d)));text-decoration:none}
+.footdev a:hover{color:#fff;text-decoration:underline}
+.series-nav{margin:0 auto;max-width:1200px;padding:28px 20px 0;border-top:2px solid var(--border)}
+.series-nav-title{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--text2);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.series-nav-title::before{content:'';flex:1;height:1px;background:var(--border)}
+.series-nav-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:14px}
+@media(max-width:720px){.series-nav-grid{grid-template-columns:1fr}}
+.series-card{display:block;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 16px;text-decoration:none;color:inherit;transition:border-color .2s,transform .15s;position:relative;overflow:hidden}
+.series-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--dragon,var(--red,#d4342c)),var(--jaguar,var(--gold,#e8b23d)))}
+.series-card:hover{border-color:rgba(232,178,61,.45);transform:translateY(-1px)}
+.series-card.is-current{border-color:var(--jaguar,var(--gold,#e8b23d));box-shadow:0 0 0 1px rgba(232,178,61,.35) inset;pointer-events:none;opacity:.92}
+.series-card-id{font-family:var(--mono);font-size:10px;color:var(--jaguar2,var(--gold2,var(--gold,#e8b23d)));letter-spacing:1px;margin-bottom:4px}
+.series-card-chapter{font-size:14px;font-weight:800;color:#fff;margin-bottom:4px;line-height:1.2}
+.series-card-desc{font-size:12px;color:var(--text2);line-height:1.55}
+.series-hub{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--jaguar2,var(--gold2,var(--gold,#e8b23d)));text-decoration:none;font-family:var(--mono);margin-bottom:8px}
+.series-hub:hover{color:#fff}
 </style>
 </head>
 <body>
 <header>
   <div style="display:flex;align-items:center;gap:0;flex-wrap:wrap">
     <div class="hbadge">🐉 O Dragão e a Onça · Síntese Final</div>
-    <div class="live-badge">Governadores vs. Potências Estrangeiras</div>
+    <div class="live-badge">+ Amapá · + RJ · 27/jul/2026</div>
   </div>
-  <h1>Soberania na Conta do <span>Governador</span> — Testada em 9 Estados</h1>
+  <h1>Soberania na Conta do <span>Governador</span> — Testada em 11 Estados</h1>
   <div class="hmeta">
-    <span class="hm"><b>Capítulos:</b> 14 + Ranking</span>
-    <span class="hm"><b>Estados:</b> 9 + Federal</span>
-    <span class="hm"><b>Potências:</b> China, EUA, Coreia do Sul</span>
-    <span class="hm"><b>Síntese:</b> T-243</span>
+    <span class="hm"><b>Capítulos:</b> 17 dossiês + Ranking</span>
+    <span class="hm"><b>Estados:</b> 11 + Federal</span>
+    <span class="hm"><b>Corpus:</b> T-228 → T-245 · 142 posts</span>
+    <span class="hm"><b>Síntese:</b> T-243 (atualizada)</span>
+    <span class="hm"><b>~R$81bi+</b> rastreados (ordem de grandeza)</span>
   </div>
 </header>
 
 <nav>
-  <button class="nb act" onclick="show('visao')">Visão Geral</button>
-  <button class="nb" onclick="show('correcao')">Correção Metodológica</button>
-  <button class="nb" onclick="show('comparativo')">Tabela Comparativa</button>
-  <button class="nb" onclick="show('tipologia')">Tipologia de Mecanismos</button>
-  <button class="nb" onclick="show('tese')">Tese Refinada</button>
-  <button class="nb" onclick="show('lacunas')">Lacunas & Próximos Passos</button>
-  <button class="nb" onclick="show('capitulos')">Todos os Capítulos</button>
+  <a class="nb" href="#sec-visao" data-target="sec-visao">Visão Geral</a>
+  <a class="nb" href="#sec-correcao" data-target="sec-correcao">Correção Metodológica</a>
+  <a class="nb" href="#sec-comparativo" data-target="sec-comparativo">Tabela Comparativa</a>
+  <a class="nb" href="#sec-tipologia" data-target="sec-tipologia">Tipologia de Mecanismos</a>
+  <a class="nb" href="#sec-tese" data-target="sec-tese">Tese Refinada</a>
+  <a class="nb" href="#sec-lacunas" data-target="sec-lacunas">Lacunas & Próximos Passos</a>
+  <a class="nb" href="#sec-capitulos" data-target="sec-capitulos">Todos os Capítulos</a>
 </nav>
 
 <main>
 
 <!-- VISÃO GERAL -->
-<div id="sec-visao" class="sec act">
+<div id="sec-visao" class="sec">
   <button class="copy-all-btn" onclick="copyAll()">⊕ Copiar dossiê completo para IA</button>
   <div class="kgrid">
-    <div class="kcard kgo"><div class="klabel">Estados Analisados</div><div class="kval">10</div><div class="ksub">+ nível federal · Goiás é o pivô inaugural</div></div>
-    <div class="kcard kg"><div class="klabel">Captura de Valor Real</div><div class="kval">2 de 10</div><div class="ksub">Bahia, Espírito Santo (Goiás = captura eleitoral, não econômica)</div></div>
-    <div class="kcard kr"><div class="klabel">Cortejo Sem Captura</div><div class="kval">1 confirmado</div><div class="ksub">Rio Grande do Sul</div></div>
-    <div class="kcard kb"><div class="klabel">Custo Ambiental Local</div><div class="kval">2 casos</div><div class="ksub">Pará, Amazonas</div></div>
+    <div class="kcard kgo"><div class="klabel">Estados Analisados</div><div class="kval">11+1</div><div class="ksub">UFs + federal · Goiás = pivô inaugural</div></div>
+    <div class="kcard kg"><div class="klabel">Benefício ao estado</div><div class="kval">2</div><div class="ksub">Bahia (TIR↓) · ES (fábrica GWM) — GO/MG = eleitoral</div></div>
+    <div class="kcard kr"><div class="klabel">Não confirma tese</div><div class="kval">AP · Açu</div><div class="ksub">cooperativa extrativista · infra sem governador</div></div>
+    <div class="kcard kb"><div class="klabel">Composição mista</div><div class="kval">RJ</div><div class="ksub">CMPort/Vast + Castro/Hikvision — dois padrões</div></div>
   </div>
 
   <div class="panel" style="margin-top:12px">
     <div class="ptitle"><span class="dot dgo"></span>O que esta síntese testa</div>
     <p class="body">A tese central da série, formulada no Capítulo 1: o governo federal negocia frameworks diplomáticos amplos com potências estrangeiras, enquanto governadores executam contratos específicos — absorvendo o custo político e convertendo ativos estaduais em capital eleitoral, sem que o benefício econômico chegue de forma proporcional à população local. <b>"Soberania na conta do governador."</b></p>
-    <p class="body">Depois de 14 capítulos cobrindo 9 estados e o nível federal, esta síntese testa a tese contra a evidência acumulada — e a confirma parcialmente, refina em pontos importantes, e a contraria diretamente em pelo menos dois casos.</p>
+    <p class="body">Depois dos dossiês cobrindo <b>11 estados</b> e o nível federal — com Amapá (T-244) e Rio de Janeiro (T-245) integrados em 27/jul/2026 — esta síntese testa a tese contra a evidência acumulada: confirma parcialmente, refina, e contraria em pelo menos três eixos (Bahia; par RS/ES; casos de controle AP/RJ-infra).</p>
+    <p class="body" style="margin-bottom:0">Espelho consolidado (KPIs/gráficos): <a href="/dragao-onca-sintese.html" style="color:var(--gold)">Síntese v1 atualizada</a> · novos: <a href="/dragao-onca-amapa.html" style="color:var(--gold)">Amapá</a> · <a href="/dragao-onca-rj.html" style="color:var(--gold)">RJ</a>.</p>
   </div>
 </div>
 
 <!-- CORREÇÃO METODOLÓGICA -->
 <div id="sec-correcao" class="sec">
   <div class="panel" style="margin-top:16px">
-    <div class="ptitle"><span class="dot dr"></span>Correção da Correção</div>
+    <div class="ptitle"><span class="dot dr"></span>Correções metodológicas (anti-confirmation-bias)</div>
     <div class="alert crit">
-      <b>Uma versão anterior desta síntese afirmou, erroneamente, que Goiás/Caiado nunca foi produzido como capítulo.</b> Isso estava errado. Goiás é o <b>T-228 — o capítulo inaugural da série</b>, o pivô que motivou toda a investigação (China 2023-24 → EUA/Japão 2025-26, mina Pela Ema/Serra Verde). O erro real era mais estreito e específico: as entradas JSON de main track do capítulo Goiás nunca haviam sido geradas ou mescladas ao <code>lawfare.json</code> — um gap de backfill, não uma inexistência do capítulo. <b>Corrigido nesta sessão: IDs 1740–1748 criados retroativamente</b> a partir do artefato HTML original fornecido pelo usuário.
+      <b>1 · Goiás.</b> Versão antiga afirmou que Goiás/Caiado “nunca foi produzido”. Errado: é o <b>T-228 — capítulo inaugural</b>. O gap era de backfill JSON (IDs 1740–1748), não de inexistência do dossiê.
     </div>
-    <p class="body"><b>Escopo real confirmado no corpus:</b></p>
-    <p class="body">• <b>Já mesclado ao lawfare.json antes desta sessão</b> (74 entradas, IDs 1639-1712): Federal/Brasil, Pará, Amazonas, Minas Gerais, Braço Jurídico, PL2780/Legislativo</p>
-    <p class="body">• <b>Produzido nesta sessão, pendente de merge</b>: IDs 1713-1739 (Braço Diplomático, Bahia, São Paulo, Paraná, Rio Grande do Sul, Espírito Santo + Ranking Nacional CEBC) e IDs 1740-1748 (Goiás/Caiado — backfill retroativo do capítulo inaugural)</p>
-    <div class="alert info">Nota adicional de escopo: o capítulo de Minas Gerais documenta a relação com a <b>Coreia do Sul</b> (Sigma Lithium/LG), não com a China — um desvio do foco central da série que é preservado aqui por transparência, mas que merece decisão editorial futura sobre se permanece no "Dragão e a Onça" ou migra para uma sub-série própria.</div>
+    <div class="alert crit">
+      <b>2 · Minas Gerais (26/jul/2026).</b> Versão anterior desta síntese tratou MG como capítulo “só Coreia / sem China”. <b>Incompleto.</b> O dossiê T-232 documenta vitrine Ocidente (Sigma/LG, R$3bi) <em>e</em> camada chinesa paralela sob o mesmo Zema: CRRC R$700mi (Metrô BH), Midea R$828mi, Wondfo/Celer, BYD com direitos de lítio em Coronel Murta (mesmo Jequitinhonha). A tese “MG prova padrão sem China” não resiste à checagem.
+    </div>
+    <div class="alert info">
+      <b>3 · Rio Grande do Sul (26/jul/2026).</b> Reduzir RS a “cortejo GWM perdido” apaga a captura energética: CEEE-T → CPFL/State Grid (R$2,67bi, 2021), ato do governo Leite. O dossiê dedicado <code>dragao-onca-rio-grande-do-sul.html</code> (T-240) mantém o par de controle com o ES <b>e</b> o paradoxo energia capturada ≠ fábrica ganha. IDs GWM 1735–1737 · CEEE-T 1758–1759 · RS Day <b>1756</b> (não 1760 — este é CMPort/Vast no RJ).
+    </div>
+    <div class="alert info">
+      <b>4 · Amapá (27/jul/2026).</b> Forçar P05 no açaí Amazonbai seria strawman: a cooperativa vende direto. Forçar “soberania na conta do governador” no petróleo offshore ignora que a decisão é ANP/União. Capítulo T-244 documenta <b>controle negativo</b> e <b>captura federal sem intermediário estadual</b>.
+    </div>
+    <div class="alert info">
+      <b>5 · Rio de Janeiro (27/jul/2026).</b> RJ não se encaixa em um único padrão: CMPort/Vast (US$714mi, ~30% exportações petróleo) replica arquitetura AP/RJ-infra; missão Castro/Hikvision-Dahua replica GO/PA/AM/MG. Composição de dois mecanismos no mesmo estado.
+    </div>
+    <p class="body"><b>Escopo corpus (resumo):</b> mesclado 1639–1712 · expandido 1713–1762 (Diplomático, BA, SP, PR, RS, ES, Ranking, GO backfill, AP, RJ). Corpus temático T-228→T-245 · 142 posts dragao-onca.</p>
   </div>
 </div>
 
 <!-- TABELA COMPARATIVA -->
 <div id="sec-comparativo" class="sec">
   <div class="panel" style="margin-top:16px">
-    <div class="ptitle"><span class="dot dgo"></span>Tabela Comparativa — 9 Estados + Federal</div>
+    <div class="ptitle"><span class="dot dgo"></span>Tabela Comparativa — 11 Estados + Federal</div>
     <table class="comp">
       <tr><th>Estado</th><th>Potência</th><th>Mecanismo</th><th>Resultado</th><th>Captura</th></tr>
       <tr class="parcial" style="background:rgba(232,196,75,0.06)"><td><b>Goiás</b> 🐉<br><span style="color:var(--text2);font-size:10px">Caiado — CAPÍTULO PIVÔ</span></td><td>China (2023-24) → EUA+Japão (2025-26)</td><td>Missões pessoais (China) → "Manifesto de Entendimento" (EUA) + JOGMEC (Japão)</td><td>Venda de 100% da Serra Verde à USA Rare Earth (US$2,8bi), 3 dias após o Manifesto; Caiado sai do governo para concorrer à Presidência no mesmo trimestre</td><td><span class="badge-capture bc-parcial">Captura simbólico-eleitoral pessoal</span></td></tr>
       <tr class="nao"><td><b>Federal</b></td><td>China+EUA+Japão</td><td>Frameworks amplos (WAICO, memorandos)</td><td>Alinhamento assimétrico duplo — WAICO + venda Serra Verde no mesmo período</td><td><span class="badge-capture bc-nao">Não identificada</span></td></tr>
       <tr class="parcial"><td><b>Pará</b><br><span style="color:var(--text2);font-size:10px">Barbalho</span></td><td>China</td><td>Negociação direta (BYD, Zhongtong) + MoU CCCC/Vale ferrovia</td><td>Ferrovia em audiências públicas; custo ambiental (mineroduto, mortes Terra Indígena)</td><td><span class="badge-capture bc-parcial">Parcial</span></td></tr>
       <tr class="nao"><td><b>Amazonas</b><br><span style="color:var(--text2);font-size:10px">Wilson Lima</span></td><td>China</td><td>ZFM (BYD, Megmeet) + mineração (Taboca)</td><td>Contaminação por mercúrio; PF investiga desde jul/2026</td><td><span class="badge-capture bc-nao">Custo local, benefício distante</span></td></tr>
-      <tr class="parcial"><td><b>Minas Gerais</b><br><span style="color:var(--text2);font-size:10px">Zema</span></td><td>Coreia do Sul</td><td>Vale do Lítio, Nasdaq, Sigma Lithium-LG</td><td>Instabilidade operacional; Zema deixa o governo para concorrer à Presidência</td><td><span class="badge-capture bc-parcial">Não avaliada (potência não-China)</span></td></tr>
-      <tr class="sim"><td><b>Bahia</b><br><span style="color:var(--text2);font-size:10px">Jerônimo Rodrigues</span></td><td>China</td><td>Diplomacia pessoal direta com Xi Jinping</td><td>TIR do consórcio chinês REDUZIDA (13%→10,88%)</td><td><span class="badge-capture bc-sim">SIM — único caso real</span></td></tr>
+      <tr class="parcial"><td><b>Minas Gerais</b><br><span style="color:var(--text2);font-size:10px">Zema</span></td><td>Coreia + China</td><td>Vitrine Sigma/LG (R$3bi) + CRRC/Midea/BYD (~R$1,4bi+)</td><td>Paralisa mina; abandona bandeira lítio; sai p/ Presidência; FDI chinês paralelo no mesmo mandato</td><td><span class="badge-capture bc-parcial">P09 eleitoral · corrige “sem China”</span></td></tr>
+      <tr class="sim"><td><b>Bahia</b><br><span style="color:var(--text2);font-size:10px">Jerônimo Rodrigues</span></td><td>China</td><td>Diplomacia pessoal direta com Xi Jinping</td><td>TIR do consórcio chinês REDUZIDA (13%→10,88%)</td><td><span class="badge-capture bc-sim">SIM — benefício ao estado</span></td></tr>
       <tr class="nao"><td><b>São Paulo</b><br><span style="color:var(--text2);font-size:10px">Tarcísio</span></td><td>China</td><td>Leilões técnicos neutros + concessão federal</td><td>CRRC domina material rodante paulista</td><td><span class="badge-capture bc-nao">Via mercado, não diplomacia</span></td></tr>
-      <tr class="nao"><td><b>Paraná</b><br><span style="color:var(--text2);font-size:10px">Ratinho Jr</span></td><td>China</td><td>Presença pessoal desde 2019 + coordenação estado-federal</td><td>CMPort controla 90% do TCP desde 2018</td><td><span class="badge-capture bc-nao">Não identificada</span></td></tr>
-      <tr class="nao"><td><b>Rio Grande do Sul</b><br><span style="color:var(--text2);font-size:10px">Leite</span></td><td>China</td><td>Diplomacia pessoal (Shenzhen, BYD/Huawei)</td><td>PERDEU disputa da fábrica GWM para o ES</td><td><span class="badge-capture bc-nao">NÃO — cortejo sem captura</span></td></tr>
-      <tr class="sim"><td><b>Espírito Santo</b><br><span style="color:var(--text2);font-size:10px">Casagrande/Ferraço</span></td><td>China</td><td>Tratativas técnicas desde 2023, sem diplomacia de alto perfil</td><td>GANHOU a fábrica GWM (1ª fora da Ásia)</td><td><span class="badge-capture bc-sim">SIM — por logística, não diplomacia</span></td></tr>
+      <tr class="nao"><td><b>Paraná</b><br><span style="color:var(--text2);font-size:10px">Ratinho Jr</span></td><td>China</td><td>Presença pessoal desde 2019 + coordenação estado-federal</td><td>CMPort controla 90% do TCP desde 2018</td><td><span class="badge-capture bc-nao">Continuidade · não “venda”</span></td></tr>
+      <tr class="parcial"><td><b>Rio Grande do Sul</b><br><span style="color:var(--text2);font-size:10px">Leite</span></td><td>China</td><td>CEEE-T→State Grid (2021) + cortejo BYD/GWM (Shenzhen)</td><td>Rede elétrica capturada (R$2,67bi); PERDEU fábrica GWM para o ES</td><td><span class="badge-capture bc-parcial">Energia SIM · GWM NÃO</span></td></tr>
+      <tr class="sim"><td><b>Espírito Santo</b><br><span style="color:var(--text2);font-size:10px">Casagrande/Ferraço</span></td><td>China</td><td>Tratativas técnicas desde 2023, sem diplomacia de alto perfil</td><td>GANHOU a fábrica GWM (1ª fora da Ásia) · R$4,6–5bi</td><td><span class="badge-capture bc-sim">SIM — logística, não diplomacia</span></td></tr>
+      <tr class="nao"><td><b>Amapá</b><br><span style="color:var(--text2);font-size:10px">facilitador estadual</span></td><td>China</td><td>Cooperativa extrativista (açaí) + leilão ANP offshore (CNPC/Chevron)</td><td>Amazonbai vende direto (15 mil t); 9 blocos Foz do Amazonas (R$582mi bônus)</td><td><span class="badge-capture bc-nao">NÃO confirma — controle + federal</span></td></tr>
+      <tr class="parcial"><td><b>Rio de Janeiro</b><br><span style="color:var(--text2);font-size:10px">Castro</span></td><td>China</td><td>CMPort 70% Vast (Açu) + missão Castro (Hikvision/Dahua) + CNOOC cliente</td><td>~30% export. petróleo; vigilância 92 municípios; CEBC 5º (21 proj.)</td><td><span class="badge-capture bc-parcial">MISTO — infra sem gov. + P09 clássico</span></td></tr>
     </table>
   </div>
 </div>
@@ -185,18 +217,18 @@
 <div id="sec-tipologia" class="sec">
   <div class="mech-card" style="border-color:rgba(232,196,75,0.3)">
     <div class="mech-title">0. Captura Simbólico-Eleitoral do Ativo (P09) 🐉</div>
-    <div class="mech-cases">Goiás (Caiado)</div>
-    <div class="mech-note">O caso fundador da série: não é "soberania na conta do governador" no sentido de custo absorvido pelo estado, mas ativo mineral negociado nos últimos meses de mandato e convertido, semanas depois, em bandeira central de candidatura presidencial. Captura de valor <b>simbólico-eleitoral pessoal</b>, distinta da captura (ou falta dela) para o estado.</div>
+    <div class="mech-cases">Goiás (Caiado) · Minas Gerais (Zema — variante)</div>
+    <div class="mech-note">Caso fundador (GO): ativo mineral convertido em bandeira de Presidência. Em MG, Zema lança o Vale do Lítio na Nasdaq e <b>abandona</b> a bandeira quando não performa — P09 aparece, mas a conversão eleitoral não é automática. Captura simbólico-eleitoral <b>pessoal</b>, distinta do benefício ao estado.</div>
   </div>
   <div class="mech-card">
     <div class="mech-title">1. Diplomacia Pessoal Direta</div>
-    <div class="mech-cases">Bahia (sucesso) · Pará (parcial) · Rio Grande do Sul (fracasso)</div>
-    <div class="mech-note">O mesmo mecanismo produz resultados opostos — negociar pessoalmente com autoridades chinesas não é condição suficiente nem necessária para captura de valor.</div>
+    <div class="mech-cases">Bahia (sucesso) · Pará (parcial) · Rio Grande do Sul (fracasso na GWM)</div>
+    <div class="mech-note">O mesmo mecanismo produz resultados opostos — negociar pessoalmente com autoridades chinesas não é condição suficiente nem necessária para captura de valor industrial.</div>
   </div>
   <div class="mech-card">
     <div class="mech-title">2. Mercado / Leilão Técnico</div>
-    <div class="mech-cases">São Paulo</div>
-    <div class="mech-note">Captura ocorre sem qualquer diplomacia pessoal do governador — vitória por preço e escala em processo licitatório neutro.</div>
+    <div class="mech-cases">São Paulo · camada CRRC também em MG (Metrô BH)</div>
+    <div class="mech-note">Em SP, captura sem diplomacia pessoal do governador — preço e escala. Em MG, CRRC R$700mi convive com a vitrine Ocidente do lítio: o leilão/contrato ferroviário chinês não apaga a Sigma, e a Sigma não apaga a China.</div>
   </div>
   <div class="mech-card">
     <div class="mech-title">3. Continuidade Institucional Histórica</div>
@@ -205,13 +237,38 @@
   </div>
   <div class="mech-card">
     <div class="mech-title">4. Fator Logístico-Geográfico</div>
-    <div class="mech-cases">Espírito Santo (venceu por isso) · Rio Grande do Sul (perdeu apesar da diplomacia)</div>
-    <div class="mech-note">O par de controle mais limpo da série: mesma empresa (GWM), mesma disputa, resultado explicado por proximidade portuária — geografia econômica, não esforço político.</div>
+    <div class="mech-cases">Espírito Santo (venceu) · Rio Grande do Sul (perdeu a GWM apesar do cortejo)</div>
+    <div class="mech-note">Par de controle mais limpo: mesma empresa (GWM), mesma disputa, desfecho por proximidade portuária — geografia econômica, não esforço político.</div>
   </div>
   <div class="mech-card">
     <div class="mech-title">5. Custo Ambiental Local / Benefício Distante</div>
-    <div class="mech-cases">Pará (mortes na Terra Indígena Mãe Maria, mineroduto Norsk Hydro) · Amazonas (contaminação por mercúrio, Taboca)</div>
-    <div class="mech-note">Onde a extração é mineral/ambiental, o padrão assimétrico é mais nítido e mais grave que nos casos de investimento industrial ou portuário.</div>
+    <div class="mech-cases">Pará (TI Mãe Maria, mineroduto) · Amazonas (mercúrio, Taboca)</div>
+    <div class="mech-note">Onde a extração é mineral/ambiental, o padrão assimétrico é mais nítido e mais grave que em PPP, fábrica ou concessão portuária.</div>
+  </div>
+  <div class="mech-card" style="border-color:rgba(176,122,255,0.35)">
+    <div class="mech-title">6. Captura de Infraestrutura Crítica ≠ Vitória Manufatureira</div>
+    <div class="mech-cases">Rio Grande do Sul (CEEE-T / State Grid)</div>
+    <div class="mech-note">Privatização da transmissão estadual (R$2,67bi, 2021) para controlada da State Grid — captura energética concreta sob Leite — <b>não</b> se traduz em fábrica GWM (2026). Variáveis independentes: energia/agro vs. FDI industrial pontual. Também: China 22,5% das exportações gaúchas sem garantir a planta.</div>
+  </div>
+  <div class="mech-card" style="border-color:rgba(255,107,95,0.35)">
+    <div class="mech-title">7. Vitrine Ocidente + Camada Chinesa Paralela</div>
+    <div class="mech-cases">Minas Gerais (Sigma/LG + CRRC/Midea/BYD)</div>
+    <div class="mech-note">O ativo que o governador leva à Nasdaq não esgota a presença estrangeira no estado. MG exige leitura em duas camadas: Ocidente no lítio-vitrine; China em ferrovia, eletrodomésticos e direitos minerais no mesmo vale. Correção obrigatória da tipológia “contraste sem China”.</div>
+  </div>
+  <div class="mech-card" style="border-color:rgba(74,158,255,0.35)">
+    <div class="mech-title">8. Captura Federal / Mercado sem Governador</div>
+    <div class="mech-cases">Amapá (CNPC/Chevron offshore) · RJ (CMPort/Vast Açu)</div>
+    <div class="mech-note">Infraestrutura crítica (petróleo, portos VLCC) capturada por transação de mercado ou leilão federal — governador ausente da negociação documentada. Arquitetura distinta do governador-negociador; soberania operacional migrada para outro nível ou para o mercado.</div>
+  </div>
+  <div class="mech-card" style="border-color:rgba(62,203,111,0.35)">
+    <div class="mech-title">9. Controle Cooperativista (controle negativo)</div>
+    <div class="mech-cases">Amapá (Amazonbai/açaí)</div>
+    <div class="mech-note">Produtor extrativista vende direto; Estado facilita certificação e feira — sem intermediário corporativo ou captura eleitoral documentada. Caso de controle metodológico: ausência de captura não prova inexistência do padrão, mas limita a generalização da tese.</div>
+  </div>
+  <div class="mech-card" style="border-color:rgba(232,196,75,0.35)">
+    <div class="mech-title">10. Composição Infra + Governador</div>
+    <div class="mech-cases">Rio de Janeiro (Açu + Castro/Hikvision)</div>
+    <div class="mech-note">Dois vetores de presença chinesa no mesmo estado, naturezas jurídicas distintas: transação societária de infra crítica (P10) convive com diplomacia pessoal do governador (P09 clássico). RJ exige leitura composta — não um único rótulo tipológico.</div>
   </div>
 </div>
 
@@ -220,10 +277,10 @@
   <div class="panel" style="margin-top:16px">
     <div class="ptitle"><span class="dot dgo"></span>Tese Refinada <span style="font-weight:400;color:var(--text2);text-transform:none;letter-spacing:0;font-size:11px">(ev-inference)</span></div>
     <p class="body">A tese "soberania na conta do governador" se confirma com nuance, não de forma universal.</p>
-    <div class="alert ok"><b>Fortemente sustentada</b> nos casos de extração mineral com custo ambiental concentrado (Pará, Amazonas) — o padrão assimétrico é claro e grave: benefício industrial/comercial concentrado, custo ambiental e humano absorvido por comunidades locais e povos indígenas.</div>
-    <div class="alert info"><b>Parcialmente sustentada</b> nos casos de infraestrutura e manufatura (Paraná, São Paulo) — a captura ocorre, mas por mecanismos de mercado ou continuidade institucional, não por um governador "vendendo soberania" em sentido literal.</div>
-    <div class="alert crit"><b>Diretamente contrariada</b> pelo caso da Bahia (captura COM benefício comprovado ao estado — redução da TIR chinesa) e pelo par Rio Grande do Sul/Espírito Santo (mesmo mecanismo de disputa, resultados opostos por fator alheio à vontade do governador).</div>
-    <p class="body"><b>Qualificação proposta:</b> a assimetria estrutural é mais forte quanto mais o ativo negociado for um recurso natural finito extraído do território (minério, terra, água) — e mais fraca quanto mais for um contrato de serviço ou manufatura renegociável (PPP, fábrica, concessão portuária).</p>
+    <div class="alert ok"><b>Fortemente sustentada</b> nos casos de extração mineral com custo ambiental concentrado (Pará, Amazonas) e na captura simbólico-eleitoral (Goiás; MG/Zema como variante incompleta). Padrão assimétrico claro onde o custo local é ambiental/humano.</div>
+    <div class="alert info"><b>Parcialmente sustentada / refinada</b> em infraestrutura e manufatura (Paraná, São Paulo; camada CRRC/Midea em MG). A captura ocorre por mercado, continuidade ou contratos setoriais — não necessariamente por “venda de soberania” literal. Em MG, a vitrine Ocidente <b>coexiste</b> com FDI chinês.</div>
+    <div class="alert crit"><b>Diretamente contrariada ou não confirmada</b> pela Bahia (captura COM benefício ao estado — TIR 13%→10,88%); pelo eixo RS/ES (Leite tinha State Grid na transmissão e cortejou em Shenzhen — e ainda perdeu a GWM para o ES por logística); pelo Amapá-açaí (cooperativa vende direto); e pelos casos AP-petróleo/RJ-Açu (infra crítica sem governador na transação). Diplomacia ≠ vitória industrial; captura energética ≠ fábrica.</div>
+    <p class="body"><b>Qualificação proposta:</b> a assimetria é mais forte quanto mais o ativo for recurso natural finito com custo local — e mais fraca em PPP, fábrica e concessão renegociável. Acrescenta-se: <b>tipo de ativo importa</b> (transmissão ≠ montadora ≠ porto VLCC); <b>vitrine midiática ≠ mapa completo do FDI</b> (lição MG); <b>governador-negociador é uma configuração entre várias</b> (lição AP/RJ).</p>
   </div>
 </div>
 
@@ -231,10 +288,11 @@
 <div id="sec-lacunas" class="sec">
   <div class="panel" style="margin-top:16px">
     <div class="ptitle"><span class="dot dr"></span>Lacunas & Próximos Passos</div>
-    <p class="body">• <b>Goiás/Caiado</b> nunca foi produzido como capítulo dedicado — Serra Verde já está documentado (id_1710, id_1715), mas falta o ângulo específico do papel do governador na negociação, se houve algum.</p>
-    <p class="body">• <b>Minas Gerais sob ótica China-específica</b> não existe — o capítulo atual documenta a Coreia do Sul (Sigma Lithium/LG). Decisão editorial pendente: manter como está, produzir um capítulo China-específico separado, ou reclassificar.</p>
-    <p class="body">• <b>PL 2.780/2024</b> (Política Nacional de Minerais Críticos) segue sem votação final no Senado — sem esse marco legal, o padrão observado (negociação estado a estado sem coordenação nacional) tende a se repetir. A aprovação do PL seria o evento que testaria se esta tese refinada se mantém sob novo marco regulatório.</p>
-    <p class="body">• <b>Merge pendente:</b> IDs 1713-1739 (Diplomático, Bahia, SP, PR, RS, ES) e T-236 a T-243 precisam ser mesclados ao lawfare.json e ao sync file antes da próxima rodada de produção.</p>
+    <p class="body">• <b>CADE CMPort/Vast (RJ)</b> — aprovação regulatória pendente para US$714mi · ~30% exportações petróleo.</p>
+    <p class="body">• <b>Certificação GACC (AP)</b> — contrato Amazonbai pode ser intenção, não venda efetiva (id_1758).</p>
+    <p class="body">• <b>PL 2.780/2024</b> segue sem votação final no Senado — teste regulatório da tese sob novo marco de minerais críticos.</p>
+    <p class="body">• <b>UFs candidatas:</b> Santa Catarina · Maranhão — ainda sem capítulo dedicado.</p>
+    <p class="body">• <b>X Articles</b> — <a href="/artigos/sintese-final-xarticle.md" style="color:var(--gold)">sintese-final-xarticle.md</a> · <a href="/artigos/sintese-xarticle.md" style="color:var(--gold)">sintese-xarticle.md</a></p>
   </div>
 </div>
 
@@ -242,58 +300,102 @@
 <div id="sec-capitulos" class="sec">
   <div class="panel" style="margin-top:16px">
     <div class="ptitle"><span class="dot dg"></span>Mapa Completo da Série</div>
-    <div class="chaplink" style="border-color:var(--gold);color:var(--gold)">Cap.1 · Goiás/Caiado — PIVÔ (T-228)</div>
-    <div class="chaplink">Cap.2 · Federal/Brasil (T-229)</div>
-    <div class="chaplink">Cap.3 · Pará (T-230)</div>
-    <div class="chaplink">Cap.4 · Amazonas (T-231)</div>
-    <div class="chaplink">Cap.5 · Minas Gerais (T-232)</div>
-    <div class="chaplink">Cap.6 · Síntese Estrutural (T-233)</div>
-    <div class="chaplink">Cap.7 · Braço Jurídico (T-234)</div>
-    <div class="chaplink">Cap.8 · PL2780/Legislativo (T-235)</div>
-    <div class="chaplink">Cap.9 · Braço Diplomático (T-236)</div>
-    <div class="chaplink">Cap.10 · Bahia (T-237)</div>
-    <div class="chaplink">Cap.11 · São Paulo (T-238)</div>
-    <div class="chaplink">Cap.12 · Paraná (T-239)</div>
-    <div class="chaplink">Cap.13 · Rio Grande do Sul (T-240)</div>
-    <div class="chaplink">Cap.14 · Espírito Santo (T-241)</div>
-    <div class="chaplink">Ranking Nacional CEBC (T-242)</div>
+    <a class="chaplink" style="border-color:var(--gold);color:var(--gold);text-decoration:none" href="/dragao-onca-goias.html">Cap.1 · Goiás — PIVÔ (T-228)</a>
+    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-brasil-federal.html">Cap.2 · Federal (T-229)</a>
+    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-para.html">Cap.3 · Pará (T-230)</a>
+    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-amazonas.html">Cap.4 · Amazonas (T-231)</a>
+    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-minas-gerais.html">Cap.5 · Minas Gerais (T-232) · releitura China</a>
+    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-sintese.html">Cap.6 · Síntese v1 (T-233)</a>
+    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-braco-juridico.html">Cap.7 · Braço Jurídico (T-234)</a>
+    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-pl2780.html">Cap.8 · PL 2.780 (T-235)</a>
+    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-braco-diplomatico.html">Cap.9 · Braço Diplomático (T-236)</a>
+    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-bahia.html">Cap.10 · Bahia (T-237)</a>
+    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-sao-paulo.html">Cap.11 · São Paulo (T-238)</a>
+    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-parana.html">Cap.12 · Paraná (T-239)</a>
+    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-rio-grande-do-sul.html">Cap.13 · Rio Grande do Sul (T-240)</a>
+    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-rs-es-ranking-nacional.html">Cap.14 · ES + Ranking CEBC (T-241–242)</a>
+    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-amapa.html">Cap.16 · Amapá (T-244) · controle + federal</a>
+    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-rj.html">Cap.17 · Rio de Janeiro (T-245) · Açu + Castro</a>
     <div class="chaplink" style="border-color:var(--gold);color:var(--gold)">Síntese Final (T-243) ← você está aqui</div>
   </div>
 
   <div class="panel">
     <div class="ptitle"><span class="dot dg"></span>Referências-Chave</div>
-    <div class="refitem"><div class="refnum">[01]</div><div><div class="reftitle">Conselho Empresarial Brasil-China — Investimentos Chineses no Brasil 2025</div><div class="refsrc">CEBC, abr/2026 · Fonte primária do ranking nacional</div></div></div>
-    <div class="refitem"><div class="refnum">[02]</div><div><div class="reftitle">Todos os batches JSON e artefatos HTML dos Capítulos 9-14</div><div class="refsrc">lawfare-timeline corpus, produzidos nesta sessão</div></div></div>
+    <div class="refitem"><div class="refnum">[01]</div><div><div class="reftitle">Conselho Empresarial Brasil-China — Investimentos Chineses no Brasil 2025</div><div class="refsrc">CEBC, abr/2026 · ranking nacional</div></div></div>
+    <div class="refitem"><div class="refnum">[02]</div><div><div class="reftitle"><a href="/dragao-onca-minas-gerais.html" style="color:var(--gr2)">Dossiê MG — Sigma + CRRC/Midea/BYD</a></div><div class="refsrc">T-232 · releitura 26/jul/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[03]</div><div><div class="reftitle"><a href="/dragao-onca-rio-grande-do-sul.html" style="color:var(--gr2)">Dossiê RS — CEEE-T + derrota GWM</a></div><div class="refsrc">T-240 · IDs 1735–1737 · 1756 (RS Day) · 1758–1759</div></div></div>
+    <div class="refitem"><div class="refnum">[04]</div><div><div class="reftitle"><a href="/dragao-onca-amapa.html" style="color:var(--gr2)">Dossiê AP — controle + captura federal</a></div><div class="refsrc">T-244 · IDs 1757–1759 · 27/jul/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[05]</div><div><div class="reftitle"><a href="/dragao-onca-rj.html" style="color:var(--gr2)">Dossiê RJ — Açu + Castro/Hikvision</a></div><div class="refsrc">T-245 · IDs 1760–1762 · 27/jul/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[06]</div><div><div class="reftitle"><a href="/dragao-onca-sintese.html" style="color:var(--gr2)">Síntese v1 — KPIs ~R$81bi+</a></div><div class="refsrc">T-233 · espelho consolidado 27/jul/2026</div></div></div>
   </div>
 </div>
+
+<section class="series-nav" id="serie">
+  <div class="series-nav-title">Artefatos da Série: O Dragão e a Onça</div>
+  <div class="series-nav-grid">
+    <a class="series-card" href="/odragaoeaonca"><div class="series-card-id">0 · Hub</div><div class="series-card-chapter">Índice da série</div><div class="series-card-desc">Mapa completo + tese · 17 dossiês</div></a>
+    <a class="series-card" href="/dragao-onca-brasil-federal.html"><div class="series-card-id">1 · T-229 · Crítico</div><div class="series-card-chapter">🇧🇷 BR Brasil (Federal)</div><div class="series-card-desc">Pano de fundo 1993–2026 · Doria–Sinovac</div></a>
+    <a class="series-card" href="/dragao-onca-braco-diplomatico.html"><div class="series-card-id">2 · T-236 · Crítico</div><div class="series-card-chapter">🌐 Braço Diplomático</div><div class="series-card-desc">WAICO + Serra Verde + alinhamento duplo</div></a>
+    <a class="series-card" href="/dragao-onca-sao-paulo.html"><div class="series-card-id">3 · T-238 · Alto</div><div class="series-card-chapter">🇧🇷 SP São Paulo</div><div class="series-card-desc">Variante “mercado” — CRRC/COFCO</div></a>
+    <a class="series-card" href="/dragao-onca-goias.html"><div class="series-card-id">4 · T-228 · Alto</div><div class="series-card-chapter">🇧🇷 GO Goiás</div><div class="series-card-desc">Pivô China→EUA/Japão, terras raras</div></a>
+    <a class="series-card" href="/dragao-onca-minas-gerais.html"><div class="series-card-id">5 · T-232 · Alto</div><div class="series-card-chapter">🇧🇷 MG Minas Gerais</div><div class="series-card-desc">Sigma + China paralela (CRRC/Midea/BYD)</div></a>
+    <a class="series-card" href="/dragao-onca-bahia.html"><div class="series-card-id">6 · T-237 · Alto</div><div class="series-card-chapter">🇧🇷 BA Bahia</div><div class="series-card-desc">Caso de controle — padrão falha</div></a>
+    <a class="series-card" href="/dragao-onca-para.html"><div class="series-card-id">7 · T-230 · Alto</div><div class="series-card-chapter">🇧🇷 PA Pará</div><div class="series-card-desc">Ferrovia + COP30 + 39 mortes</div></a>
+    <a class="series-card" href="/dragao-onca-amazonas.html"><div class="series-card-id">8 · T-231 · Alto</div><div class="series-card-chapter">🇧🇷 AM Amazonas</div><div class="series-card-desc">Taboca/MPF/PF — mais grave</div></a>
+    <a class="series-card" href="/dragao-onca-parana.html"><div class="series-card-id">9 · T-239 · Médio</div><div class="series-card-chapter">🇧🇷 PR Paraná</div><div class="series-card-desc">Coordenação estado–união (TCP)</div></a>
+    <a class="series-card" href="/dragao-onca-rio-grande-do-sul.html"><div class="series-card-id">10 · T-240 · Médio</div><div class="series-card-chapter">🇧🇷 RS Rio Grande do Sul</div><div class="series-card-desc">CEEE-T + cortejo GWM sem captura</div></a>
+    <a class="series-card" href="/dragao-onca-rs-es-ranking-nacional.html"><div class="series-card-id">11 · T-240–242 · Médio</div><div class="series-card-chapter">🇧🇷 RS · ES · Ranking CEBC</div><div class="series-card-desc">Par de controle + ranking nacional</div></a>
+    <a class="series-card" href="/dragao-onca-sintese.html"><div class="series-card-id">12 · T-233 · Consolidação</div><div class="series-card-chapter">📊 Síntese v1</div><div class="series-card-desc">5 UFs originais · soberania do governador</div></a>
+    <a class="series-card" href="/dragao-onca-pl2780.html"><div class="series-card-id">13 · T-235 · Legislativo</div><div class="series-card-chapter">📜 PL 2.780/2024</div><div class="series-card-desc">FGAM R$ 2 bi · minerais críticos</div></a>
+    <a class="series-card" href="/dragao-onca-braco-juridico.html"><div class="series-card-id">14 · T-234 · Transversal</div><div class="series-card-chapter">⚖️ Braço Jurídico</div><div class="series-card-desc">STF, marco temporal, ADI 7919</div></a>
+    <a class="series-card is-current" href="/dragao-onca-sintese-final-cross-state.html"><div class="series-card-id">15 · T-243 · Fechamento</div><div class="series-card-chapter">🎯 Síntese final · 11 UFs</div><div class="series-card-desc">Onde a tese confirma, enfraquece ou falha</div></a>
+    <a class="series-card" href="/dragao-onca-amapa.html"><div class="series-card-id">16 · T-244 · Controle</div><div class="series-card-chapter">🇧🇷 AP Amapá</div><div class="series-card-desc">Açaí cooperativista + CNPC offshore</div></a>
+    <a class="series-card" href="/dragao-onca-rj.html"><div class="series-card-id">17 · T-245 · Alto</div><div class="series-card-chapter">🇧🇷 RJ Rio de Janeiro</div><div class="series-card-desc">Porto do Açu + Castro/Hikvision</div></a>
+  </div>
+  <a class="series-hub" href="/odragaoeaonca">← Índice da série · O Dragão e a Onça</a>
+</section>
 
 </main>
 
 <footer>
   <div class="flinks">
-    <a href="https://lawfare-timeline.vercel.app/" target="_blank">⚖ Lawfare Timeline</a>
+        <a href="https://www.artesdosul.com/" target="_blank" rel="noopener">✦ Artes do Sul</a>
+<a href="https://lawfare-timeline.vercel.app/" target="_blank">⚖ Lawfare Timeline</a>
     <a href="https://gosurf.site" target="_blank">🌐 gosurf.site</a>
     <a href="https://observatorio-civil-br.vercel.app/" target="_blank">👁 Observatório Civil BR</a>
   </div>
   <div class="fmeta">
     O DRAGÃO E A ONÇA · SÍNTESE FINAL CROSS-STATE · CC0 1.0 Universal — Domínio Público Total<br>
-    Thematic T-243 · Fecha 14 capítulos · Gerado em 25/07/2026<br>
-    Todo conteúdo baseado em fontes jornalísticas e documentais verificáveis já catalogadas nos capítulos individuais da série.<br>
-    Análises estruturais identificadas como ev-inference. Correção metodológica sobre Goiás registrada nesta síntese.
+    Thematic T-243 · Fechamento tipológico · Atualizado 27/07/2026<br>
+    + Amapá (T-244) · + Rio de Janeiro (T-245) · 11 UFs · corpus T-228→T-245 · 142 posts<br>
+    Correções: Goiás (backfill) · MG (“sem China”) · RS (RS Day 1756) · AP/RJ (novos padrões).
   </div>
+  <div class="footdev">Desenvolvido por <a href="https://www.artesdosul.com/" target="_blank" rel="noopener">Artes do Sul</a></div>
 </footer>
 
-<div class="gotop" id="gotop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
+<button id="gotop" title="Voltar ao topo" aria-label="Voltar ao topo">↑</button>
 
 <script>
-function show(id){
-  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('act'));
-  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('act'));
-  document.getElementById('sec-'+id).classList.add('act');
-  event.target.classList.add('act');
-}
-window.addEventListener('scroll', () => {
-  document.getElementById('gotop').classList.toggle('vis', window.scrollY > 400);
+const links = document.querySelectorAll('.nb');
+const sections = document.querySelectorAll('main .sec');
+const map = {};
+links.forEach(l=>{map[l.dataset.target]=l});
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      links.forEach(l=>l.classList.remove('act'));
+      const id = entry.target.id;
+      if(map[id]) map[id].classList.add('act');
+    }
+  });
+},{rootMargin:'-30% 0px -60% 0px',threshold:0});
+sections.forEach(s=>observer.observe(s));
+const gotop = document.getElementById('gotop');
+window.addEventListener('scroll',()=>{
+  if(gotop) gotop.classList.toggle('show', window.scrollY > 400);
+});
+if(gotop) gotop.addEventListener('click',()=>{
+  window.scrollTo({top:0,behavior:'smooth'});
 });
 function copyAll(){
   const content = document.querySelector('main').innerText;

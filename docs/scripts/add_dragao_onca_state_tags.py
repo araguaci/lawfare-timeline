@@ -24,6 +24,8 @@ IMAGE_TO_STATE = {
     "dragao-onca-rio-grande-do-sul.webp": "rio-grande-do-sul",
     "dragao-onca-espirito-santo.webp": "espirito-santo",
     "dragao-onca-ranking-cebc.webp": "brasil-federal",
+    "dragao-onca-amapa.webp": "amapa",
+    "dragao-onca-rj.webp": "rio-de-janeiro",
 }
 
 ID_OVERRIDES = {
@@ -49,6 +51,8 @@ FILE_OVERRIDES = {
     "t241": "espirito-santo",
     "t242": "brasil-federal",
     "t243": "brasil-federal",
+    "t244": "amapa",
+    "t245": "rio-de-janeiro",
 }
 
 STATE_TAGS = {
@@ -62,6 +66,8 @@ STATE_TAGS = {
     "parana",
     "rio-grande-do-sul",
     "espirito-santo",
+    "amapa",
+    "rio-de-janeiro",
 }
 
 SINTESE_TAGS = [

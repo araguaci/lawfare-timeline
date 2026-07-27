@@ -48,10 +48,17 @@ REGION_IMAGE_MAP = {
     "parana": "dragao-onca-parana.webp",
     "pr": "dragao-onca-parana.webp",
     "rs": "dragao-onca-rio-grande-do-sul.webp",
+    "rio-grande-do-sul": "dragao-onca-rio-grande-do-sul.webp",
     "rio-grande": "dragao-onca-rio-grande-do-sul.webp",
+    "china": "dragao-onca.webp",
     "ranking": "dragao-onca-ranking-cebc.webp",
     "cebc": "dragao-onca-ranking-cebc.webp",
     "sintese": "dragao-onca-sintese.webp",
+    "amapa": "dragao-onca-amapa.webp",
+    "ap": "dragao-onca-amapa.webp",
+    "rj": "dragao-onca-rj.webp",
+    "rio-de-janeiro": "dragao-onca-rj.webp",
+    "rio": "dragao-onca-rj.webp",
 }
 
 DEFAULT_IMAGE = "dragao-onca.webp"
@@ -140,6 +147,95 @@ def resolve_region_image(batch_name: str) -> str:
     return f"/assets/img/{DEFAULT_IMAGE}"
 
 
+def resolve_entry_image(entry: dict, batch_name: str) -> str:
+    """Hero regional por tags da entrada; fallback no nome do batch."""
+    for raw in entry.get("tags") or []:
+        key = str(raw).lower().replace("_", "-")
+        if key in REGION_IMAGE_MAP:
+            return f"/assets/img/{REGION_IMAGE_MAP[key]}"
+    return resolve_region_image(batch_name)
+
+
+def normalize_lawfare_entry(entry: dict, batch_file: Path | None = None) -> dict:
+    """Normaliza entries lawfare.json / todo → formato do gerador."""
+    e = dict(entry)
+    e["title"] = (e.get("title") or e.get("titulo") or "").strip()
+    e["summary"] = e.get("summary") or e.get("descricao") or e.get("notes") or ""
+    e["date"] = (e.get("date") or e.get("data_evento") or e.get("data_iso") or "")[:10]
+    if is_dragao_onca_batch(batch_file):
+        e["category"] = "dragao-onca"
+    else:
+        e["category"] = e.get("category") or e.get("categoria") or "dragao-onca"
+    tid = parse_thematic_id(e.get("id"))
+    if tid is not None and is_dragao_onca_batch(batch_file) and batch_file.name.startswith("lawfare-thematic-"):
+        e["id"] = tid
+    patterns = list(e.get("patterns") or [])
+    for tag in e.get("tags") or []:
+        if re.match(r"^P\d", str(tag), re.I) and tag not in patterns:
+            patterns.append(tag)
+    e["patterns"] = patterns
+    if not e.get("actors") and e.get("pessoas_envolvidas"):
+        e["actors"] = [
+            {"name": n, "role": "", "institution": ""}
+            for n in e["pessoas_envolvidas"]
+        ]
+    if not e.get("institutions") and e.get("instituicoes_envolvidas"):
+        e["institutions"] = list(e["instituicoes_envolvidas"])
+    if not e.get("sources") and e.get("fontes"):
+        e["sources"] = [
+            {"title": "Fonte", "url": u}
+            if isinstance(u, str)
+            else u
+            for u in e["fontes"]
+        ]
+    if e.get("impacto_diplomatico") and not e.get("result"):
+        e["result"] = e["impacto_diplomatico"]
+    return e
+
+
+def entry_to_assunto(entry: dict, rel_post: str) -> dict:
+    """Converte entry normalizada → assunto lawfare.json."""
+    e = normalize_lawfare_entry(entry)
+    tags = list(e.get("tags") or [])
+    for p in e.get("patterns") or []:
+        if p not in tags:
+            tags.append(p)
+    if e.get("category") and e["category"] not in tags:
+        tags.insert(0, e["category"])
+    fontes = []
+    for s in e.get("sources") or []:
+        if isinstance(s, dict) and s.get("url"):
+            fontes.append(s["url"])
+        elif isinstance(s, str) and s.startswith("http"):
+            fontes.append(s)
+    return {
+        "titulo": e["title"],
+        "data_evento": e["date"],
+        "data_iso": format_iso(e["date"]),
+        "categoria": e["category"],
+        "tags": tags[:12],
+        "descricao": e["summary"],
+        "relevancia": entry.get("relevancia") or "alta",
+        "impacto_diplomatico": entry.get("impacto_diplomatico") or e.get("result") or "N/A",
+        "tipo_escandalo": entry.get("tipo_escandalo") or "N/A",
+        "fontes": fontes,
+        "pessoas_envolvidas": [a.get("name", a) if isinstance(a, dict) else a for a in (e.get("actors") or [])],
+        "instituicoes_envolvidas": e.get("institutions") or [],
+        "pais": entry.get("pais") or "Brasil",
+        "valor_envolvido": entry.get("valor_envolvido") or "N/A",
+        "prioridade": entry.get("prioridade") or 1,
+        "analise": entry.get("analise") or "",
+        "lacuna_investigativa": entry.get("lacuna_investigativa") or "",
+        "connections": entry.get("connections") or [],
+        "fonte_arquivo": rel_post.replace("/", "\\"),
+        "id": int(e["id"]),
+    }
+
+
+def format_iso(d: str) -> str:
+    return f"{(d or '2026-01-01')[:10]}T12:00:00.000Z"
+
+
 def format_date_yaml(date_str: str) -> str:
     """Formata data para YAML front matter (YYYY-MM-DD)."""
     if not date_str:
@@ -186,21 +282,42 @@ def assunto_to_entry(assunto: dict) -> dict:
     }
 
 
+def parse_thematic_id(raw) -> int | None:
+    """Converte id temático (244, 'T-244', 't244') → int."""
+    if raw is None:
+        return None
+    s = str(raw).strip().upper()
+    m = re.match(r"^T-?(\d+)$", s)
+    if m:
+        return int(m.group(1))
+    if s.isdigit():
+        return int(s)
+    return None
+
+
+def is_dragao_onca_batch(batch_file: Path | None) -> bool:
+    return bool(batch_file and "dragao-onca" in batch_file.stem.lower())
+
+
 def thematic_slug_from_batch(batch_file: Path, entry_id: str) -> str:
-    m = re.search(rf"T{entry_id}-(.+?)(?:\s*\(\d+\))?\.json$", batch_file.name, re.I)
+    stem = batch_file.stem
+    m = re.search(rf"T-?{entry_id}-(.+)$", stem, re.I)
     if m:
         return f"t{entry_id}-{m.group(1)}"
     return f"t{entry_id}-dragao-onca"
 
 
-def extract_entries_from_batch(data: dict, batch_file: Path) -> list[dict]:
+def extract_entries_from_batch(data, batch_file: Path) -> list[dict]:
     entries: list[dict] = []
+    if isinstance(data, list):
+        data = {"entries": data}
     if isinstance(data.get("entries"), list):
-        entries.extend(data["entries"])
+        entries.extend(normalize_lawfare_entry(x, batch_file) for x in data["entries"])
     if isinstance(data.get("assuntos"), list):
         entries.extend(assunto_to_entry(a) for a in data["assuntos"])
-    if not entries and data.get("topic") and data.get("id") is not None:
-        entries.append(data)
+    if not entries and isinstance(data, dict) and data.get("id") is not None:
+        if data.get("topic") or data.get("title"):
+            entries.append(normalize_lawfare_entry(data, batch_file))
     return entries
 
 
@@ -435,7 +552,10 @@ def generate_post_from_entry(
     1. Batch entries (com 'date', 'summary', etc.)
     2. Thematic entries (com 'topic', 'notes', 'artifact', etc.)
     """
-    entry_id = str(entry.get("id", "")).strip()
+    is_thematic = is_dragao_onca_batch(batch_file) and batch_file.name.startswith("lawfare-thematic-")
+    raw_id = entry.get("id", "")
+    thematic_num = parse_thematic_id(raw_id) if is_thematic else None
+    entry_id = str(thematic_num if thematic_num is not None else raw_id).strip()
 
     # Suporte para ambos os formatos
     title = entry.get("title") or entry.get("topic", "Sem título")
@@ -447,8 +567,11 @@ def generate_post_from_entry(
     # Componentes do arquivo
     date_event = entry.get("date", "")[:10]
 
-    # Para temáticos: usar 'artifact' se disponível, ou slugify do topic
-    if not date_event and entry.get("artifact"):
+    if is_thematic and batch_file:
+        date_event = "2026-01-01"
+        slug_part = thematic_slug_from_batch(batch_file, entry_id)
+        filename = f"2026-07-24-{slug_part}.md"
+    elif not date_event and entry.get("artifact"):
         if batch_file:
             slug_part = thematic_slug_from_batch(batch_file, entry_id)
             filename = f"2026-07-24-{slug_part}.md"
@@ -456,7 +579,6 @@ def generate_post_from_entry(
             artifact_name = entry.get("artifact", "").replace(".html", "")
             filename = f"2026-07-24-t{entry_id}-{artifact_name}.md"
     else:
-        # Batch: padrão normal
         slug = slugify(title)
         filename = f"{date_event}-id{entry_id}-{slug}.md"
 
@@ -467,13 +589,19 @@ def generate_post_from_entry(
     # Frontmatter
     description = yaml_escape((entry.get("summary") or entry.get("notes", ""))[:200])
     year = extract_year(date_event)
-    image_path = resolve_region_image(batch_name)
+    image_path = resolve_entry_image(entry, batch_name)
 
     # Tags baseadas em categoria e padrões
     tags = [entry.get("category", "dragao-onca"), year]
-    if "patterns" in entry and entry["patterns"]:
-        tags.extend(entry["patterns"][:2])  # Primeiros 2 padrões
-    tags = [tag for tag in tags if tag]
+    if entry.get("patterns"):
+        tags.extend(entry["patterns"][:2])
+    state_tags = [
+        t for t in (entry.get("tags") or [])
+        if t not in tags and t not in ("dragao-onca", "china", "diplomacia", "simetria")
+        and not re.match(r"^P\d", str(t), re.I)
+    ]
+    tags.extend(state_tags[:2])
+    tags = list(dict.fromkeys(tag for tag in tags if tag))
 
     frontmatter = f"""---
 layout: post
@@ -588,8 +716,12 @@ def process_batch_file(batch_file: Path) -> Tuple[int, int, list[dict]]:
         print(f"❌ Erro ao ler {batch_file.name}: {e}")
         return 0, 0, []
 
+    if isinstance(data, list):
+        data = {"entries": data}
+
     entries = extract_entries_from_batch(data, batch_file)
-    assuntos_raw = data.get("assuntos") or []
+    is_thematic = batch_file.name.startswith("lawfare-thematic-")
+    assuntos_raw = list(data.get("assuntos") or []) if not is_thematic else []
     if not entries:
         print(f"⚠️  Nenhuma entrada em {batch_file.name}")
         return 0, 0, []
@@ -604,6 +736,8 @@ def process_batch_file(batch_file: Path) -> Tuple[int, int, list[dict]]:
         if filepath:
             print(f"   {status_msg}")
             success_count += 1
+            if not is_thematic:
+                assuntos_raw.append(entry_to_assunto(entry, filepath))
         else:
             print(f"   {status_msg}")
 
@@ -642,6 +776,8 @@ def update_sync_json(main_ids: list[int], thematic_ids: list[int], batch_names: 
         main["next_available"] = last + 1
         main["last_confirmed"] = last
         main["last_jekyll_published"] = last
+        main["last_produced"] = last
+        main["last_session_produced"] = last
         main.setdefault("confirmed_batches", []).append({
             "range": [min(main_ids), last],
             "status": "confirmed",
@@ -670,6 +806,9 @@ def update_sync_json(main_ids: list[int], thematic_ids: list[int], batch_names: 
     st = sync.setdefault("sync_status", {})
     st["main_track_last_sync"] = date.today().isoformat()
     st["thematic_track_last_sync"] = date.today().isoformat()
+    st["dragao_onca_series_sync"] = f"{date.today().isoformat()}T12:00:00-03:00"
+    if main_ids:
+        st.setdefault("ids_confirmed_total", {})["main_track"] = str(max(main_ids))
     SYNC.write_text(json.dumps(sync, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("claude.ai-corpus-ids-sync.json atualizado.")
 
@@ -735,9 +874,9 @@ def main():
         if batch_file.name.startswith("lawfare-thematic-"):
             try:
                 data = json.loads(batch_file.read_text(encoding="utf-8"))
-                tid = data.get("id")
+                tid = parse_thematic_id(data.get("id"))
                 if tid is not None:
-                    thematic_ids.append(int(tid))
+                    thematic_ids.append(tid)
             except json.JSONDecodeError:
                 pass
 
