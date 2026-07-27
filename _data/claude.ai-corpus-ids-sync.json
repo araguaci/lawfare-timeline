@@ -2,7 +2,7 @@
   "_meta": {
     "schema_version": "1.1.0",
     "generated": "2026-07-25",
-    "updated": "2026-05-28T23:59:00-03:00",
+    "updated": "2026-07-27T14:30:00-03:00",
     "session": "claude.ai — sessão editorial 2026-05-28 (Operação Rejeito, T-191, T-192, Flávio/Trump, posts P11)",
     "purpose": "Mapa de sincronização de IDs — lawfare-timeline corpus",
     "source_project": "gosurf.site / lawfare-timeline.vercel.app",
@@ -11,20 +11,20 @@
     "tracks": {
       "main": {
         "description": "Track principal — eventos institucionais, decisões judiciais, episódios políticos",
-        "id_range": "1–1600 (confirmed)",
+        "id_range": "1–1762 (confirmed)",
         "id_format": "integer",
-        "last_confirmed": 1600,
-        "last_jekyll_published": 1600,
-        "last_session_produced": 1600,
-        "notes": "lawfare.json confirmado até 1576. Jekyll publica 1527–1571. Batch 1572–1576 merged 2026-05-28."
+        "last_confirmed": 1762,
+        "last_jekyll_published": 1762,
+        "last_session_produced": 1762,
+        "notes": "lawfare.json confirmado até 1762 (1725 assuntos). Série Dragão e a Onça main 1639–1762. Próximo ID livre: 1763."
       },
       "thematic": {
         "description": "Sub-corpus temático — análise estrutural de operações e padrões",
-        "id_range": "100–215",
+        "id_range": "100–245",
         "id_format": "integer",
-        "last_confirmed": 215,
-        "last_session_produced": 192,
-        "notes": "T-197 a T-207 confirmados 2026-05-28. T-208/T-209 reserved. Americanas = T-199 (não T-197 como decidido na sessão — repo já tinha T-197=Rejeito). SPLC = T-206 (não T-202 como decidido na sessão — repo já tinha T-202=Delegada×PCC)."
+        "last_confirmed": 245,
+        "last_session_produced": 245,
+        "notes": "T-228–T-245 confirmados (série Dragão e a Onça, 18 capítulos temáticos). Próximo thematic livre: T-246. T-208/T-209 reservados pendente formalização."
       }
     }
   },
@@ -1338,7 +1338,7 @@
             "P08",
             "P09"
           ],
-          "notes": "Tema estruturante: síntese e navegação da série completa (134 posts Jekyll: 118 main + 16 temáticos, período 1993-2026)."
+          "notes": "Tema estruturante: síntese e navegação da série completa (142 posts Jekyll: 124 main + 18 temáticos, período 1993-2026)."
         },
         {
           "id": 229,
@@ -1551,12 +1551,12 @@
     }
   },
   "sync_status": {
-    "main_track_last_sync": "2026-07-26",
-    "thematic_track_last_sync": "2026-07-26",
-    "dragao_onca_series_sync": "2026-07-26T12:00:00-03:00",
+    "main_track_last_sync": "2026-07-27",
+    "thematic_track_last_sync": "2026-07-27",
+    "dragao_onca_series_sync": "2026-07-27T14:30:00-03:00",
     "ids_confirmed_total": {
       "main_track": "1762",
-      "thematic_track": 243
+      "thematic_track": 245
     },
     "ids_pending_production": [],
     "artifacts_without_thematic_id": [],
@@ -2062,6 +2062,27 @@
         "RS Day renumerado 1760→1756 (continuidade de IDs)",
         "MG: capítulo ampliado além do eixo Sigma Lítio ocidental"
       ],
+      "status": "completed"
+    },
+    {
+      "date": "2026-07-27",
+      "session": "cursor — auditoria sincronização corpus",
+      "produced": [
+        "Verificação lawfare.json vs _posts/dragao-onca/ (124 main 1639-1762: OK)",
+        "Verificação claude.ai-corpus-ids-sync.json tracks.main/thematic vs posts (OK)",
+        "Correção _meta.tracks stale (main 1600→1762, thematic 215→245)",
+        "Correção sync_status.ids_confirmed_total.thematic_track (243→245)",
+        "_data/dragao-onca.json export dedicado (142 assuntos: 124 main + 18 temáticos T-228–T-245)"
+      ],
+      "summary": {
+        "lawfare_total": 1725,
+        "lawfare_max_id": 1762,
+        "next_main_id": 1763,
+        "thematic_last": "T-245",
+        "next_thematic": "T-246",
+        "dragao_posts": 142,
+        "thematic_not_in_lawfare_json": "T-228–T-245 ficam em dragao-onca.json (IDs 228–245 ocupados por entradas históricas no corpus principal)"
+      },
       "status": "completed"
     }
   ]
