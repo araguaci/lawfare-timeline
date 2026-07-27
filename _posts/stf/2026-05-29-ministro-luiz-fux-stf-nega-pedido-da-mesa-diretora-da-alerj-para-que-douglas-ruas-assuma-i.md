@@ -4,7 +4,7 @@ description: "Em 29/05/2026, Fux negou em decisão monocrática pedido da Alerj 
 date: 2026-05-29T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["P03", "luiz-fux", "douglas-ruas", "ricardo-couto", "alerj", "adi-7942", "stf", "decisao-monocratica"]
+tags: ["p03", "luiz-fux", "douglas-ruas", "ricardo-couto", "alerj", "adi-7942", "stf", "decisao-monocratica"]
 categories: stf
 permalink: /posts/2026-05-29-ministro-luiz-fux-stf-nega-pedido-da-mesa-diretora-da-alerj-para-que-douglas-ruas-assuma-i/
 id_corpus: "1627"

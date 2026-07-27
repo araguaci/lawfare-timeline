@@ -4,7 +4,7 @@ title: "Vereadora eleita de Belém classifica COP30 sob gestão Barbalho como \"
 description: "Vivi Reis, vereadora eleita de Belém, declara em entrevista que a COP30 sob a gestão de Helder Barbalho será 'um evento fechado para o povo, com foco em grandes projetos que apenas beneficiam o agrone..."
 date: 2024-11-07
 image: /assets/img/dragao-onca-para.webp
-tags: ["mecanismo_sistemico", "2024", "P09", "para"]
+tags: ["mecanismo_sistemico", "2024", "p09", "para"]
 categories: dragao-onca
 timeline_id: 1661
 status: documentado

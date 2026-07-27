@@ -4,7 +4,7 @@ description: "A Investigação publica o 3º manuscrito apreendido no celular de
 date: 2026-05-27T12:00:00.000Z
 image:
   path: "/assets/solid/bullseye.svg"
-tags: ["operacoes", "P08", "P11", "terceiro-manuscrito-vale-gerdau-trafigura", "operacao-rejeito"]
+tags: ["operacoes", "p08", "p11", "terceiro-manuscrito-vale-gerdau-trafigura", "operacao-rejeito"]
 categories: operacoes
 permalink: /posts/terceiro-manuscrito-vale-gerdau-trafigura/
 id_corpus: "1571"

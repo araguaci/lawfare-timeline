@@ -4,7 +4,7 @@ title: "Consórcio C2 (CRRC + Comporte) vence leilão do Trem Intercidades São 
 description: "O consórcio C2, formado pela fabricante chinesa CRRC (40% de participação, controlada pelo governo chinês) e o Grupo Comporte (família Constantino, fundadora da Gol), vence o leilão do Trem Intercidad..."
 date: 2024-02-29
 image: /assets/img/dragao-onca-sao-paulo.webp
-tags: ["dragao-onca", "2024", "P05", "sao-paulo"]
+tags: ["dragao-onca", "2024", "p05", "sao-paulo"]
 categories: dragao-onca
 timeline_id: 1726
 status: confirmado

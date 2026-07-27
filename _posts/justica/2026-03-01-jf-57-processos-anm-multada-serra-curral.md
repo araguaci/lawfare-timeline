@@ -4,7 +4,7 @@ description: "Justiça Federal suspende todos os 57 processos minerários na Ser
 date: 2026-03-01T12:00:00.000Z
 image:
   path: "/assets/solid/hammer.svg"
-tags: ["justica", "P03", "P11", "jf-57-processos-anm-multada-serra-curral", "operacao-parcours"]
+tags: ["justica", "p03", "p11", "jf-57-processos-anm-multada-serra-curral", "operacao-parcours"]
 categories: justica
 permalink: /posts/jf-57-processos-anm-multada-serra-curral/
 id_corpus: "1568"

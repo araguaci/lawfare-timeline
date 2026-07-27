@@ -4,7 +4,7 @@ title: "Consórcio Chevron/CNPC arremata 9 blocos na Bacia da Foz do Amazonas (M
 description: "No 5º Ciclo da Oferta Permanente de Concessão da ANP (Rio de Janeiro, 17/06/2025), o consórcio formado por Chevron Brasil Óleo (operadora, 50%–65% de participação conforme o bloco) e CNPC Brasil (esta..."
 date: 2025-06-17
 image: /assets/img/dragao-onca-amapa.webp
-tags: ["dragao-onca", "2025", "P05", "amapa"]
+tags: ["dragao-onca", "2025", "p05", "amapa"]
 categories: dragao-onca
 timeline_id: 1759
 status: documentado

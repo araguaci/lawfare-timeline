@@ -4,7 +4,7 @@ description: "Reportagem do Fantástico (TV Globo, 28/06/2026), baseada em inves
 date: 2026-06-28T12:00:00.000Z
 image:
   path: "/assets/solid/bullseye.svg"
-tags: ["operacoes", "P08", "P10"]
+tags: ["operacoes", "p08", "p10"]
 categories: operacoes
 permalink: /posts/2026-06-28-comando-vermelho-assume-controle-de-garimpo-ilegal-na-terra-indigena-sarare-mt-e-usa-ouro-/
 id_corpus: "1607"

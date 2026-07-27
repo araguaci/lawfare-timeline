@@ -4,7 +4,7 @@ description: "Em 26/fev/2021 às 21h31, Daniela Wandeck envia via WhatsApp três
 date: 2021-02-26T12:00:00.000Z
 image:
   path: "/assets/solid/bullseye.svg"
-tags: ["operacoes", "P03", "P05", "manuscritos-serra-curral-teixeira-retencao", "operacao-rejeito-antecedente"]
+tags: ["operacoes", "p03", "p05", "manuscritos-serra-curral-teixeira-retencao", "operacao-rejeito-antecedente"]
 categories: operacoes
 permalink: /posts/2021-02-26-manuscritos-serra-curral-teixeira-retencao/
 id_corpus: "1553"

@@ -4,7 +4,7 @@ description: "A Polícia Civil do Rio de Janeiro e o Ministério Público do Rio
 date: 2026-07-15T12:00:00.000Z
 image:
   path: "/assets/solid/bullseye.svg"
-tags: ["operacoes", "P08", "P10"]
+tags: ["operacoes", "p08", "p10"]
 categories: operacoes
 permalink: /posts/2026-07-15-operacao-hawala-mira-estrutura-de-lavagem-compartilhada-por-pcc-cv-e-tcp-r100-mi-2021-2024/
 id_corpus: "1622"

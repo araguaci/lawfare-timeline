@@ -4,7 +4,7 @@ title: "Hotgen Biotech (China) firma parceria com a Bahiafarma para produção d
 description: "Jerônimo Rodrigues se reúne com representantes da Hotgen Biotech, empresa chinesa líder em testes diagnósticos rápidos, e confirma parceria com a Bahiafarma para produção local de testes de Zika, Deng..."
 date: 2025-05-16
 image: /assets/img/dragao-onca-bahia.webp
-tags: ["dragao-onca", "2025", "P05", "bahia"]
+tags: ["dragao-onca", "2025", "p05", "bahia"]
 categories: dragao-onca
 timeline_id: 1721
 status: confirmado

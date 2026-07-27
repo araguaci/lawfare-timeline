@@ -4,7 +4,7 @@ description: "Candidato do PSDB à Presidência, Geraldo Alckmin, afirmou em vis
 date: 2006-05-02T12:00:00.000Z
 image:
   path: "/assets/solid/skull.svg"
-tags: ["escandalos", "P04b", "P09"]
+tags: ["escandalos", "p04b", "p09"]
 categories: escandalos
 permalink: /posts/2006-05-02-alckmin-responsabiliza-lula-pelo-crescimento-do-pcc-contexto-eleitoral-2006/
 id_corpus: "1577"

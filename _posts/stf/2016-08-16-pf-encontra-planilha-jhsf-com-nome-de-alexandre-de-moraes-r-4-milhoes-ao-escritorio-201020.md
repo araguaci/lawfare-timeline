@@ -4,7 +4,7 @@ description: "Durante a 6ª fase da Operação Acrônimo, no cumprimento de mand
 date: 2016-08-16T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P07", "P03", "P02"]
+tags: ["stf", "p07", "p03", "p02"]
 categories: stf
 permalink: /posts/2016-08-16-pf-encontra-planilha-jhsf-com-nome-de-alexandre-de-moraes-r-4-milhoes-ao-escritorio-201020/
 id_corpus: "1596"

@@ -4,7 +4,7 @@ title: "EUA articulam bloco de minerais críticos para reduzir dependência da C
 description: "Washington propõe um bloco multilateral de minerais críticos visando diversificar fornecedores fora da China. O Ministério das Relações Exteriores chinês reage publicamente classificando iniciativas '..."
 date: 2026-02-06
 image: /assets/img/dragao-onca-brasil-federal.webp
-tags: ["dragao-onca", "2026", "P11", "P04b", "brasil-federal"]
+tags: ["dragao-onca", "2026", "p11", "p04b", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1714
 status: confirmado

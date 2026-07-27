@@ -4,7 +4,7 @@ description: "Em 5 de fevereiro de 2025, a Procuradora-Geral dos EUA Pam Bondi a
 date: 2025-02-05T12:00:00.000Z
 image:
   path: "/assets/solid/globe.svg"
-tags: ["crise-diplomatica", "P08", "P10"]
+tags: ["crise-diplomatica", "p08", "p10"]
 categories: crise-diplomatica
 permalink: /posts/2025-02-05-memorando-pam-bondi-total-elimination-of-cartels-and-tcos-doutrina-doj-para-persecucao-de-/
 id_corpus: "1589"

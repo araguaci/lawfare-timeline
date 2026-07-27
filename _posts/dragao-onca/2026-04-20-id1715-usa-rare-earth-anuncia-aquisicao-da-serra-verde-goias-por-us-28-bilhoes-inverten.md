@@ -4,7 +4,7 @@ title: "USA Rare Earth anuncia aquisição da Serra Verde (Goiás) por US$ 2,8 b
 description: "A norte-americana USA Rare Earth (Nasdaq: USAR) firma acordo definitivo para adquirir 100% da Serra Verde Group, dona da mina Pela Ema em Minaçu (GO) — única operação fora da Ásia capaz de fornecer as..."
 date: 2026-04-20
 image: /assets/img/dragao-onca-brasil-federal.webp
-tags: ["dragao-onca", "2026", "P05", "P11", "brasil-federal"]
+tags: ["dragao-onca", "2026", "p05", "p11", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1715
 status: confirmado

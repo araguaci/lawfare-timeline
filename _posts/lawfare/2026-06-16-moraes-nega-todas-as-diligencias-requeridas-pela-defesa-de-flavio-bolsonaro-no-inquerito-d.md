@@ -4,7 +4,7 @@ description: "No inquérito instaurado em abril/2026 para apurar calúnia (art. 
 date: 2026-06-16T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P03", "P06", "lawfare"]
+tags: ["stf", "p03", "p06", "lawfare"]
 categories: lawfare
 permalink: /posts/2026-06-16-moraes-nega-todas-as-diligencias-requeridas-pela-defesa-de-flavio-bolsonaro-no-inquerito-d/
 id_corpus: "1615"

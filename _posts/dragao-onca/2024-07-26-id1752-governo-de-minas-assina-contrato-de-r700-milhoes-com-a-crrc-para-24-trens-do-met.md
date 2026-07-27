@@ -4,7 +4,7 @@ title: "Governo de Minas assina contrato de ~R$700 milhões com a CRRC para 24 t
 description: "O Governo de Minas, por meio da Secretaria de Estado de Infraestrutura, Mobilidade e Parcerias (Seinfra) e da concessionária Metrô BH, anuncia contrato de aproximadamente R$700 milhões com a Changchun..."
 date: 2024-07-26
 image: /assets/img/dragao-onca-minas-gerais.webp
-tags: ["dragao-onca", "2024", "P05", "P10", "soberania", "minas-gerais"]
+tags: ["dragao-onca", "2024", "p05", "p10", "soberania", "minas-gerais"]
 categories: dragao-onca
 timeline_id: 1752
 status: confirmado

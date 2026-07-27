@@ -4,7 +4,7 @@ title: "Zema autoriza em Xangai fábrica da Celer Biotecnologia em parceria com 
 description: "Durante missão oficial à Ásia, o governador Romeu Zema assina em Xangai despacho que autoriza a construção de unidade industrial da Celer Biotecnologia, em parceria com a chinesa Guangzhou Wondfo Biot..."
 date: 2023-11-06
 image: /assets/img/dragao-onca-minas-gerais.webp
-tags: ["dragao-onca", "2023", "P05", "soberania", "minas-gerais"]
+tags: ["dragao-onca", "2023", "p05", "soberania", "minas-gerais"]
 categories: dragao-onca
 timeline_id: 1751
 status: confirmado

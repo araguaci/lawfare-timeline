@@ -4,7 +4,7 @@ description: "Alexandre Silveira declara ter sido 'surpreendido' pelas prisões 
 date: 2025-09-22T12:00:00.000Z
 image:
   path: "/assets/solid/sitemap.svg"
-tags: ["governo", "P03", "P09", "silveira-evento-cedro-cinco-dias-rejeito", "operacao-rejeito"]
+tags: ["governo", "p03", "p09", "silveira-evento-cedro-cinco-dias-rejeito", "operacao-rejeito"]
 categories: governo
 permalink: /posts/2025-09-22-silveira-evento-cedro-cinco-dias-rejeito/
 id_corpus: "1560"

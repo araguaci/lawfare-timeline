@@ -4,7 +4,7 @@ title: "Renegociação da PPP Ponte Salvador-Itaparica: valor sobe para R$10,6 b
 description: "Após negociação complexa com participação do Ministério Público de Contas, o TCE-BA aprova o Primeiro Termo Aditivo ao contrato de 2020: valor sobe de R$7,4 bi para R$10,6 bi, com R$5,3 bi de aporte p..."
 date: 2026-02-23
 image: /assets/img/dragao-onca-bahia.webp
-tags: ["dragao-onca", "2026", "P05", "bahia"]
+tags: ["dragao-onca", "2026", "p05", "bahia"]
 categories: dragao-onca
 timeline_id: 1722
 status: confirmado

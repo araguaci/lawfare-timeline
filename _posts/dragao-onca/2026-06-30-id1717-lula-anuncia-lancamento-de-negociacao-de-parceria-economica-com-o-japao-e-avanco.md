@@ -4,7 +4,7 @@ title: "Lula anuncia lançamento de negociação de parceria econômica com o Ja
 description: "Na cúpula do Mercosul no Paraguai, Lula anuncia o lançamento de negociações de parceria econômica com o Japão e defende que o bloco inicie negociações formais de acordo comercial com a China, nos mold..."
 date: 2026-06-30
 image: /assets/img/dragao-onca-brasil-federal.webp
-tags: ["dragao-onca", "2026", "P05", "brasil-federal"]
+tags: ["dragao-onca", "2026", "p05", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1717
 status: confirmado

@@ -4,7 +4,7 @@ description: "Ericsson de Azevedo, registrado como proprietário da ACX ITC Serv
 date: 2026-07-05T12:00:00.000Z
 image:
   path: "/assets/solid/skull.svg"
-tags: ["escandalos", "P08", "P10"]
+tags: ["escandalos", "p08", "p10"]
 categories: escandalos
 permalink: /posts/2026-07-05-socio-formal-da-acx-itc-rede-de-lavagem-ligada-ao-careca-do-inss-mesma-malha-da-victory-tr/
 id_corpus: "1632"

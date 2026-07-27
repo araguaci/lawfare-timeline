@@ -4,7 +4,7 @@ description: "O Consórcio Portolog — integrado pela empresa Oitenta & Nove Po
 date: 2026-07-17T12:00:00.000Z
 image:
   path: "/assets/solid/landmark.svg"
-tags: ["bancos", "P05", "P07", "P09", "P11"]
+tags: ["bancos", "p05", "p07", "p09", "p11"]
 categories: bancos
 permalink: /posts/2026-07-17-consorcio-ligado-a-mulher-cunhado-e-sogro-do-ministro-do-tcu-bruno-dantas-vence-licitacao-/
 id_corpus: "1631"

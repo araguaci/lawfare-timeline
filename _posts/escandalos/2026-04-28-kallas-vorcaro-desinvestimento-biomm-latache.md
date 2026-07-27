@@ -4,7 +4,7 @@ description: "Cedro Participações (Lucas Kallas) anuncia venda de participaç�
 date: 2026-04-28T12:00:00.000Z
 image:
   path: "/assets/solid/skull.svg"
-tags: ["escandalos", "P08", "kallas-vorcaro-desinvestimento-biomm-latache", "operacao-compliance-zero"]
+tags: ["escandalos", "p08", "kallas-vorcaro-desinvestimento-biomm-latache", "operacao-compliance-zero"]
 categories: escandalos
 permalink: /posts/kallas-vorcaro-desinvestimento-biomm-latache/
 id_corpus: "1570"

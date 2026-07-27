@@ -4,7 +4,7 @@ description: "Funcionários do Consulado-Geral do Brasil em Hong Kong enviaram a
 date: 2026-07-16T12:00:00.000Z
 image:
   path: "/assets/solid/globe.svg"
-tags: ["crise-diplomatica", "P02"]
+tags: ["crise-diplomatica", "p02"]
 categories: crise-diplomatica
 permalink: /posts/2026-07-16-funcionarios-do-consulado-geral-do-brasil-em-hong-kong-denunciam-perseguicao-e-intimidacao/
 id_corpus: "1623"

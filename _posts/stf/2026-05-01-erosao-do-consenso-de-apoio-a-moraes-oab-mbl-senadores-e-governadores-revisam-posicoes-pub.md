@@ -4,7 +4,7 @@ description: "Reportagem da Gazeta do Povo documenta 9 figuras e entidades que a
 date: 2026-05-01T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P04b", "P04", "P09"]
+tags: ["stf", "p04b", "P04", "p09"]
 categories: stf
 permalink: /posts/2026-05-01-erosao-do-consenso-de-apoio-a-moraes-oab-mbl-senadores-e-governadores-revisam-posicoes-pub/
 id_corpus: "1599"

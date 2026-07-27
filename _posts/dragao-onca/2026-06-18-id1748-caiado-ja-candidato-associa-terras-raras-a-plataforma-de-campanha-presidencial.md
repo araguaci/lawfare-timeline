@@ -4,7 +4,7 @@ title: "Caiado, já candidato, associa terras raras à plataforma de campanha pr
 description: "Em entrevista de campanha, Caiado defende reindustrialização via minerais críticos e ajuste fiscal como eixos centrais de sua pré-candidatura presidencial, mantendo segurança pública como bandeira his..."
 date: 2026-06-18
 image: /assets/img/dragao-onca-goias.webp
-tags: ["dragao-onca", "2026", "P09", "goias"]
+tags: ["dragao-onca", "2026", "p09", "goias"]
 categories: dragao-onca
 timeline_id: 1748
 status: confirmado

@@ -4,7 +4,7 @@ description: "Poder360 publica levantamento mostrando que KPMG, PwC, EY e Crowe 
 date: 2026-01-25T12:00:00.000Z
 image:
   path: "/assets/solid/landmark.svg"
-tags: ["bancos", "P10", "P08", "P05"]
+tags: ["bancos", "p10", "p08", "p05"]
 categories: bancos
 permalink: /posts/2026-01-25-reportagem-documenta-pareceres-sem-ressalvas-de-quatro-auditorias-globais-sobre-balancos-f/
 id_corpus: "1620"

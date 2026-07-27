@@ -4,7 +4,7 @@ title: "Missão de Jerônimo Rodrigues à China: memorando com a Windey para fá
 description: "Durante missão oficial à China integrada à comitiva do presidente Lula, o governador Jerônimo Rodrigues e o então secretário Rui Costa apresentam a Bahia como destino estratégico para investimentos em..."
 date: 2025-05-13
 image: /assets/img/dragao-onca-bahia.webp
-tags: ["dragao-onca", "2025", "P05", "bahia"]
+tags: ["dragao-onca", "2025", "p05", "bahia"]
 categories: dragao-onca
 timeline_id: 1720
 status: confirmado

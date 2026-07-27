@@ -4,7 +4,7 @@ title: "O Dragão e a Onça — Capítulo Amazonas: Taboca/China Nonferrous e co
 description: "Caso mais grave da série até agora em termos de escalada institucional simultânea (FUNAI + MPF + PF) e precedente histórico (quase-genocídio Waimiri Atroari nos anos 1970, BR-174). Documenta pagamento..."
 date: 2026-01-01T07:01:01.001Z
 image: /assets/img/dragao-onca-amazonas.webp
-tags: ["dragao-onca", "2026", "P04b", "P05", "amazonas"]
+tags: ["dragao-onca", "2026", "p04b", "p05", "amazonas"]
 categories: dragao-onca
 timeline_id: 231
 status: confirmed

@@ -4,7 +4,7 @@ description: "PF identifica empresas que simulavam obras de terraplanagem em ter
 date: 2019-07-18T12:00:00.000Z
 image:
   path: "/assets/solid/bullseye.svg"
-tags: ["operacoes", "P08", "poeira-vermelha-terraplanagem-nova-lima", "operacao-poeira-vermelha"]
+tags: ["operacoes", "p08", "poeira-vermelha-terraplanagem-nova-lima", "operacao-poeira-vermelha"]
 categories: operacoes
 permalink: /posts/2019-07-18-poeira-vermelha-terraplanagem-nova-lima/
 id_corpus: "1552"

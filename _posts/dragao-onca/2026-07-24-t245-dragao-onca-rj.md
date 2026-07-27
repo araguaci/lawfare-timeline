@@ -4,7 +4,7 @@ title: "O Dragão e a Onça — Capítulo Rio de Janeiro: infraestrutura portuá
 description: "Síntese do capítulo RJ na série O Dragão e a Onça, cobrindo: (1) aquisição societária da CMPort (70% da Vast Infraestrutura, dona do terminal de petróleo do Porto do Açu, US$714mi, id_1760); (2) missã..."
 date: 2026-01-01T14:01:01.001Z
 image: /assets/img/dragao-onca-rj.webp
-tags: ["dragao-onca", "2026", "P05", "P10", "rio-de-janeiro"]
+tags: ["dragao-onca", "2026", "p05", "p10", "rio-de-janeiro"]
 categories: dragao-onca
 timeline_id: 245
 status: analise_editorial

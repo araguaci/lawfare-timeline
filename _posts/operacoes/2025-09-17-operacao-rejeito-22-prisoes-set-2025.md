@@ -4,7 +4,7 @@ description: "PF com apoio CGU cumpre 22 mandados de prisão preventiva, 79 de b
 date: 2025-09-17T12:00:00.000Z
 image:
   path: "/assets/solid/bullseye.svg"
-tags: ["operacoes", "P03", "P08", "P11", "operacao-rejeito-22-prisoes-set-2025", "operacao-rejeito"]
+tags: ["operacoes", "p03", "p08", "p11", "operacao-rejeito-22-prisoes-set-2025", "operacao-rejeito"]
 categories: operacoes
 permalink: /posts/2025-09-17-operacao-rejeito-22-prisoes-set-2025/
 id_corpus: "1555"

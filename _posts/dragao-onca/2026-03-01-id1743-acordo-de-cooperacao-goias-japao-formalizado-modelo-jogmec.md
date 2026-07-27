@@ -4,7 +4,7 @@ title: "Acordo de cooperação Goiás-Japão formalizado (modelo JOGMEC)"
 description: "Governo goiano formaliza acordo de cooperação internacional com o Japão, incluindo instalação de capacidade de separação/processamento de óxidos de terras raras (OTR) em território goiano — nos moldes..."
 date: 2026-03-01
 image: /assets/img/dragao-onca-goias.webp
-tags: ["dragao-onca", "2026", "P05", "goias"]
+tags: ["dragao-onca", "2026", "p05", "goias"]
 categories: dragao-onca
 timeline_id: 1743
 status: confirmado

@@ -4,7 +4,7 @@ title: "Consórcio chinês CCCC + CR20 assina Contrato de Concessão nº 001/202
 description: "O consórcio formado pelas empresas chinesas China Communications Construction Company (CCCC) e China Railway 20 Bureau Group Corporation (CR20), vencedor do leilão de dezembro de 2019, assina com o Go..."
 date: 2020-11-12
 image: /assets/img/dragao-onca-bahia.webp
-tags: ["dragao-onca", "2020", "P05", "bahia"]
+tags: ["dragao-onca", "2020", "p05", "bahia"]
 categories: dragao-onca
 timeline_id: 1719
 status: confirmado

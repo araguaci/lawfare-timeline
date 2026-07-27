@@ -4,7 +4,7 @@ title: "O Dragão e a Onça — Capítulo Minas Gerais: Vale do Lítio (Sigma Li
 description: "Capítulo de contraste deliberado: capital majoritariamente ocidental (Nasdaq/TSXV/B3, demanda sul-coreana via LG), não chinês — confirma que o padrão estrutural (governador em transição eleitoral + at..."
 date: 2026-01-01T08:01:01.001Z
 image: /assets/img/dragao-onca-minas-gerais.webp
-tags: ["dragao-onca", "2026", "P04b", "P05", "minas-gerais"]
+tags: ["dragao-onca", "2026", "p04b", "p05", "minas-gerais"]
 categories: dragao-onca
 timeline_id: 232
 status: confirmed

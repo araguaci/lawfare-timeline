@@ -4,7 +4,7 @@ description: "Ministro Dias Toffoli revoga prisões preventivas de Alan Cavalcan
 date: 2025-12-19T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P03", "P06", "toffoli-revoga-preventivas-lideres-rejeito", "operacao-rejeito"]
+tags: ["stf", "p03", "p06", "toffoli-revoga-preventivas-lideres-rejeito", "operacao-rejeito"]
 categories: stf
 permalink: /posts/2025-12-19-toffoli-revoga-preventivas-lideres-rejeito/
 id_corpus: "1563"

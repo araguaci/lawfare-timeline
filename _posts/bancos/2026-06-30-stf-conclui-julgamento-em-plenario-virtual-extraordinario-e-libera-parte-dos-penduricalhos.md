@@ -4,7 +4,7 @@ description: "O STF concluiu em sessão virtual extraordinária de 30/06/2026 o 
 date: 2026-06-30T12:00:00.000Z
 image:
   path: "/assets/solid/landmark.svg"
-tags: ["bancos", "penduricalhos", "P05", "P11", "P03"]
+tags: ["bancos", "penduricalhos", "p05", "p11", "p03"]
 categories: bancos
 permalink: /posts/2026-06-30-stf-conclui-julgamento-em-plenario-virtual-extraordinario-e-libera-parte-dos-penduricalhos/
 id_corpus: "1633"

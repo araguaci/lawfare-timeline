@@ -4,7 +4,7 @@ title: "Início da negociação com a JOGMEC (Japão) para terras raras em Goiá
 description: "A JOGMEC (estatal japonesa vinculada ao Ministério da Economia, Comércio e Indústria) inicia tratativas de cooperação com o governo de Goiás para exploração e processamento de terras raras — marco ini..."
 date: 2025-07-01
 image: /assets/img/dragao-onca-goias.webp
-tags: ["dragao-onca", "2025", "P05", "goias"]
+tags: ["dragao-onca", "2025", "p05", "goias"]
 categories: dragao-onca
 timeline_id: 1741
 status: confirmado

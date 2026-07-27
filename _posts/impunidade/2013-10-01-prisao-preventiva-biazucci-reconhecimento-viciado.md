@@ -4,7 +4,7 @@ description: "O dentista André Luiz Medeiros Biazucci Cardoso, 39 anos, é pres
 date: 2013-10-01T12:00:00.000Z
 image:
   path: "/assets/solid/handcuffs.svg"
-tags: ["impunidade", "justica", "P01"]
+tags: ["impunidade", "justica", "p01"]
 categories: impunidade
 permalink: /timeline/1511/
 id_corpus: "1511"

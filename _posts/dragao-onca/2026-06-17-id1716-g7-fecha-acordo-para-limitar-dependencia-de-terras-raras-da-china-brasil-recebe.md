@@ -4,7 +4,7 @@ title: "G7 fecha acordo para limitar dependência de terras raras da China; Bras
 description: "Líderes do G7 estabelecem meta de limitar a dependência de qualquer fornecedor único a menos de 60% em terras raras e ímãs permanentes até 2030, com ambição de longo prazo de chegar a 50%. O plano pre..."
 date: 2026-06-17
 image: /assets/img/dragao-onca-brasil-federal.webp
-tags: ["dragao-onca", "2026", "P11", "brasil-federal"]
+tags: ["dragao-onca", "2026", "p11", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1716
 status: confirmado

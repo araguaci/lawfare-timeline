@@ -4,7 +4,7 @@ description: "Departamento do Tesouro dos EUA (OFAC) sancionou Victor Henrique d
 date: 2026-07-01T12:00:00.000Z
 image:
   path: "/assets/solid/bullseye.svg"
-tags: ["operacoes", "P08"]
+tags: ["operacoes", "p08"]
 categories: operacoes
 permalink: /posts/2026-07-01-ofac-sanciona-dois-brasileiros-e-quatro-empresas-por-alegado-vinculo-financeiro-com-o-pcc/
 id_corpus: "1609"

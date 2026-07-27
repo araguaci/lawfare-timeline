@@ -4,7 +4,7 @@ title: "Midea Group anuncia R$198 milhões em 4 novos projetos em Minas Gerais, 
 description: "No primeiro dia de missão à Ásia, o governador Romeu Zema reúne-se em Pequim com executivos do Midea Group, multinacional chinesa de eletrodomésticos, que anuncia R$198 milhões em quatro novos projeto..."
 date: 2025-06-16
 image: /assets/img/dragao-onca-minas-gerais.webp
-tags: ["dragao-onca", "2025", "P05", "soberania", "minas-gerais"]
+tags: ["dragao-onca", "2025", "p05", "soberania", "minas-gerais"]
 categories: dragao-onca
 timeline_id: 1754
 status: confirmado

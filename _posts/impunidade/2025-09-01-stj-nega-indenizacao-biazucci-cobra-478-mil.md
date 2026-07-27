@@ -4,7 +4,7 @@ description: "Em setembro de 2025, o Superior Tribunal de Justiça rejeita em de
 date: 2025-09-01T12:00:00.000Z
 image:
   path: "/assets/solid/handcuffs.svg"
-tags: ["impunidade", "justica", "lawfare", "P03", "P11"]
+tags: ["impunidade", "justica", "lawfare", "p03", "p11"]
 categories: impunidade
 permalink: /timeline/1512/
 id_corpus: "1512"

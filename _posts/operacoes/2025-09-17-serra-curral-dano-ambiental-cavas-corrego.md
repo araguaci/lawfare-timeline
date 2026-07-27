@@ -4,7 +4,7 @@ description: "PF documenta: cavas Sump 3 e Sump 4 abertas entre 2014â€“2019 em Ã
 date: 2025-09-17T12:00:00.000Z
 image:
   path: "/assets/solid/bullseye.svg"
-tags: ["operacoes", "P08", "P11", "serra-curral-dano-ambiental-cavas-corrego", "operacao-rejeito-parcours"]
+tags: ["operacoes", "p08", "p11", "serra-curral-dano-ambiental-cavas-corrego", "operacao-rejeito-parcours"]
 categories: operacoes
 permalink: /posts/2025-09-17-serra-curral-dano-ambiental-cavas-corrego/
 id_corpus: "1557"

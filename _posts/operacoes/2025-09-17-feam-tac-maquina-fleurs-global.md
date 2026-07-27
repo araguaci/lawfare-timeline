@@ -4,7 +4,7 @@ description: "Presidente da FEAM Rodrigo Franco preso na Rejeito. PF aponta cobr
 date: 2025-09-17T12:00:00.000Z
 image:
   path: "/assets/solid/bullseye.svg"
-tags: ["operacoes", "P03", "P08", "feam-tac-maquina-fleurs-global", "operacao-rejeito"]
+tags: ["operacoes", "p03", "p08", "feam-tac-maquina-fleurs-global", "operacao-rejeito"]
 categories: operacoes
 permalink: /posts/2025-09-17-feam-tac-maquina-fleurs-global/
 id_corpus: "1559"

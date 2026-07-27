@@ -4,7 +4,7 @@ title: "\"Manifesto de Entendimento\" entre Goiás e o governo dos EUA sobre ter
 description: "Caiado anuncia acordo classificado por ele como 'talvez o mais importante geoeconômico já assinado por um governador', referente à exploração de terras raras em Goiás com o governo dos Estados Unidos...."
 date: 2026-04-17
 image: /assets/img/dragao-onca-goias.webp
-tags: ["dragao-onca", "2026", "P05", "P04b", "goias"]
+tags: ["dragao-onca", "2026", "p05", "p04b", "goias"]
 categories: dragao-onca
 timeline_id: 1745
 status: confirmado

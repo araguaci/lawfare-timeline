@@ -4,7 +4,7 @@ description: "O diretor-geral da Polícia Federal, Andrei Rodrigues, declarou qu
 date: 2026-07-01T12:00:00.000Z
 image:
   path: "/assets/solid/bullseye.svg"
-tags: ["operacoes", "P04b"]
+tags: ["operacoes", "p04b"]
 categories: operacoes
 permalink: /posts/2026-07-01-diretor-geral-da-pf-diverge-publicamente-da-avaliacao-do-tesouro-dos-eua-sobre-vinculo-de-/
 id_corpus: "1610"

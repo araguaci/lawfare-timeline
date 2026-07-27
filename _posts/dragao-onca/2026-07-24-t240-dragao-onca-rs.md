@@ -4,7 +4,7 @@ title: "O Dragão e a Onça — Capítulo 13: Rio Grande do Sul (Eduardo Leite, 
 description: "Estado: Rio Grande do Sul. Período: 2025-09 a 2026-06 (3 entradas main track, 1735-1737). Único capítulo da série com desfecho negativo confirmado: GWM avaliou o RS para a 2ª fábrica brasileira mas es..."
 date: 2026-01-01T12:01:01.001Z
 image: /assets/img/dragao-onca-rio-grande-do-sul.webp
-tags: ["dragao-onca", "2026", "P05", "rio-grande-do-sul"]
+tags: ["dragao-onca", "2026", "p05", "rio-grande-do-sul"]
 categories: dragao-onca
 timeline_id: 240
 status: confirmed

@@ -4,7 +4,7 @@ description: "A Comissão Parlamentar de Inquérito (CPI) do Crime Organizado, d
 date: 2026-04-14T12:00:00.000Z
 image:
   path: "/assets/solid/skull.svg"
-tags: ["escandalos", "P06", "P06-B", "cpi-crime-organizado", "senado", "banco-master", "prescricao-parlamentar"]
+tags: ["escandalos", "p06", "P06-B", "cpi-crime-organizado", "senado", "banco-master", "prescricao-parlamentar"]
 categories: escandalos
 permalink: /posts/2026-04-14-cpi-do-crime-organizado-encerra-trabalhos-sem-relatorio-final-aprovado-segunda-cpmicpi-do-/
 id_corpus: "1625"

@@ -4,7 +4,7 @@ description: "MPF (Gaeco) e Polícia Federal cumprem 15 mandados de busca, apree
 date: 2026-04-23T12:00:00.000Z
 image:
   path: "/assets/solid/book-open.svg"
-tags: ["estudo", "operacao-sepse", "P05", "P10"]
+tags: ["estudo", "operacao-sepse", "p05", "p10"]
 categories: estudos
 permalink: /posts/2026-04-23-mpf-e-pf-deflagram-2-fase-da-operacao-sepse-contra-rede-de-lavagem-ligada-ao-hmap/
 id_corpus: "T-211"

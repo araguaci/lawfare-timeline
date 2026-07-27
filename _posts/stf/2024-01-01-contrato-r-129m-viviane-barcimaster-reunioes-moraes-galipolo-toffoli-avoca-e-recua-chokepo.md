@@ -4,7 +4,7 @@ description: "Jan/2024: escritório Barci de Moraes Sociedade de Advogados assin
 date: 2024-01-01T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P03", "P05", "P07", "P02"]
+tags: ["stf", "p03", "p05", "p07", "p02"]
 categories: stf
 permalink: /posts/2024-01-01-contrato-r-129m-viviane-barcimaster-reunioes-moraes-galipolo-toffoli-avoca-e-recua-chokepo/
 id_corpus: "1600"

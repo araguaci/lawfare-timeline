@@ -4,7 +4,7 @@ title: "GWM escolhe Espírito Santo em vez do Rio Grande do Sul para segunda fá
 description: "A GWM confirma a escolha do Espírito Santo (Aracruz) para sua segunda fábrica brasileira, encerrando a disputa que envolveu Paraná, Rio Grande do Sul e Bahia. Segundo o diretor de operações da GWM Bra..."
 date: 2026-06-22
 image: /assets/img/dragao-onca-rio-grande-do-sul.webp
-tags: ["dragao-onca", "2026", "P05", "rio-grande-do-sul"]
+tags: ["dragao-onca", "2026", "p05", "rio-grande-do-sul"]
 categories: dragao-onca
 timeline_id: 1737
 status: confirmado

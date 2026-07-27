@@ -4,7 +4,7 @@ title: "Governador João Doria (SP) inaugura escritório comercial do estado em 
 description: "Governo de São Paulo abre escritório de representação comercial em Xangai e anuncia acordos genéricos de cooperação, incluindo transferência de tecnologia entre o Instituto Butantan e a Sinovac Biotec..."
 date: 2019-08-09
 image: /assets/img/dragao-onca-brasil-federal.webp
-tags: ["incidente_diplomatico", "2019", "P10", "sao-paulo"]
+tags: ["incidente_diplomatico", "2019", "p10", "sao-paulo"]
 categories: dragao-onca
 timeline_id: 1648
 status: confirmado

@@ -4,7 +4,7 @@ description: "Colunista da Veja, Reinaldo Azevedo, publicou artigo com o título
 date: 2016-03-01T12:00:00.000Z
 image:
   path: "/assets/solid/skull.svg"
-tags: ["escandalos", "P04b", "P09"]
+tags: ["escandalos", "p04b", "p09"]
 categories: escandalos
 permalink: /posts/2016-03-01-reinaldo-azevedo-veja-publica-coluna-o-pcc-o-pt-e-as-eleicoes-enquadramento-de-equivalenci/
 id_corpus: "1583"

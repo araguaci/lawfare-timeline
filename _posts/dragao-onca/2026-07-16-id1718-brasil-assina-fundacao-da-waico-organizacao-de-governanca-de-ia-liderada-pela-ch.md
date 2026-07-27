@@ -4,7 +4,7 @@ title: "Brasil assina fundação da WAICO, organização de governança de IA li
 description: "Em Xangai, durante a Conferência Mundial de Inteligência Artificial (WAIC), 29 países — incluindo Brasil, Rússia, Paquistão, Indonésia, África do Sul, Cuba, Venezuela e Belarus — assinam o acordo cons..."
 date: 2026-07-16
 image: /assets/img/dragao-onca-brasil-federal.webp
-tags: ["dragao-onca", "2026", "P08", "P09", "brasil-federal"]
+tags: ["dragao-onca", "2026", "p08", "p09", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1718
 status: confirmado

@@ -4,7 +4,7 @@ title: "CMOC (China) compra ativos de ouro da Equinox Gold no Brasil por US$1,01
 description: "A estatal chinesa CMOC (já presente em Goiás desde 2016, nióbio/fosfato em Catalão/Ouvidor) adquire os ativos de ouro Aurizona, RDM e Bahia Complex da canadense Equinox Gold — fechamento previsto para..."
 date: 2025-12-15
 image: /assets/img/dragao-onca-goias.webp
-tags: ["dragao-onca", "2025", "P05", "P11", "goias"]
+tags: ["dragao-onca", "2025", "p05", "p11", "goias"]
 categories: dragao-onca
 timeline_id: 1746
 status: confirmado

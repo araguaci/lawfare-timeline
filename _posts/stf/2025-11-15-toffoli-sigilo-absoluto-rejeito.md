@@ -4,7 +4,7 @@ description: "Ministro Dias Toffoli amplia sigilo das operações Rejeito, Intra
 date: 2025-11-15T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P03", "P06", "toffoli-sigilo-absoluto-rejeito", "operacao-rejeito"]
+tags: ["stf", "p03", "p06", "toffoli-sigilo-absoluto-rejeito", "operacao-rejeito"]
 categories: stf
 permalink: /posts/2025-11-15-toffoli-sigilo-absoluto-rejeito/
 id_corpus: "1562"

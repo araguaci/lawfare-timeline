@@ -4,7 +4,7 @@ title: "Zema deixa o governo de Minas Gerais para concorrer à Presidência pelo
 description: "Romeu Zema encerra o mandato de governador (impedido constitucionalmente de um terceiro mandato consecutivo, já que foi eleito em 2018 e reeleito em 2022) para se candidatar à Presidência da República..."
 date: 2026-03-22
 image: /assets/img/dragao-onca-minas-gerais.webp
-tags: ["incidente_diplomatico", "2026", "P09", "minas-gerais"]
+tags: ["incidente_diplomatico", "2026", "p09", "minas-gerais"]
 categories: dragao-onca
 timeline_id: 1686
 status: confirmado

@@ -4,7 +4,7 @@ title: "Caiado deixa o governo de Goiás para concorrer à Presidência; Daniel 
 description: "Ronaldo Caiado é confirmado pré-candidato à Presidência pelo PSD, substituindo Ratinho Jr (que desistiu). Encerra mandato de governador em 31/03/2026 para viabilizar a candidatura; vice-governador Dan..."
 date: 2026-03-30
 image: /assets/img/dragao-onca-goias.webp
-tags: ["dragao-onca", "2026", "P09", "goias"]
+tags: ["dragao-onca", "2026", "p09", "goias"]
 categories: dragao-onca
 timeline_id: 1744
 status: confirmado

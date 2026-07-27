@@ -4,7 +4,7 @@ description: "Em 23/dez/2025, três meses após a Rejeito, Marília Carvalho de 
 date: 2025-12-23T12:00:00.000Z
 image:
   path: "/assets/solid/sitemap.svg"
-tags: ["governo", "P03", "P09", "marilia-melo-semad-copasa", "operacao-rejeito"]
+tags: ["governo", "p03", "p09", "marilia-melo-semad-copasa", "operacao-rejeito"]
 categories: governo
 permalink: /posts/2025-12-23-marilia-melo-semad-copasa/
 id_corpus: "1564"

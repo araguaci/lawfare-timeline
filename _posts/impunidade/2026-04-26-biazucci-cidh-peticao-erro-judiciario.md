@@ -4,7 +4,7 @@ description: "Os advogados Rafael Júnior Soares e Luiz Antônio Borri protocola
 date: 2026-04-26T12:00:00.000Z
 image:
   path: "/assets/solid/handcuffs.svg"
-tags: ["impunidade", "justica", "lawfare", "P03", "P11"]
+tags: ["impunidade", "justica", "lawfare", "p03", "p11"]
 categories: impunidade
 permalink: /timeline/1513/
 id_corpus: "1513"

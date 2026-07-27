@@ -4,7 +4,7 @@ description: "Segundo apuração jornalística publicada em 01/07/2026, a Victor
 date: 2026-07-01T12:00:00.000Z
 image:
   path: "/assets/solid/skull.svg"
-tags: ["escandalos", "P08", "P10"]
+tags: ["escandalos", "p08", "p10"]
 categories: escandalos
 permalink: /posts/2026-07-01-victory-trading-sancionada-pela-ofac-recebeu-r-5145-milhoes-da-wave-intermediacoes-cnpj-ap/
 id_corpus: "1611"

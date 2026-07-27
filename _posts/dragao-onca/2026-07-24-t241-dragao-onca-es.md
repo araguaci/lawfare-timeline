@@ -4,7 +4,7 @@ title: "O Dragão e a Onça — Capítulo 14: Espírito Santo (GWM Aracruz, cort
 description: "Estado: Espírito Santo. Período: 2026-01 a 2026-06 (2 entradas main track, 1738-1739). Par direto do capítulo do Rio Grande do Sul (T-240): mesma disputa (2ª fábrica GWM), desfechos opostos. ES venceu..."
 date: 2026-01-01T13:01:01.001Z
 image: /assets/img/dragao-onca-espirito-santo.webp
-tags: ["dragao-onca", "2026", "P05", "espirito-santo"]
+tags: ["dragao-onca", "2026", "p05", "espirito-santo"]
 categories: dragao-onca
 timeline_id: 241
 status: confirmed

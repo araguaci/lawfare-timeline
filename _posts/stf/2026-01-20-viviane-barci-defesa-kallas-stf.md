@@ -4,7 +4,7 @@ description: "Viviane Barci de Moraes — esposa do ministro Alexandre de Moraes
 date: 2026-01-20T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P03", "P09", "viviane-barci-defesa-kallas-stf", "operacao-rejeito-parcours"]
+tags: ["stf", "p03", "p09", "viviane-barci-defesa-kallas-stf", "operacao-rejeito-parcours"]
 categories: stf
 permalink: /posts/2026-01-20-viviane-barci-defesa-kallas-stf/
 id_corpus: "1566"

@@ -4,7 +4,7 @@ description: "Toffoli determina retorno das operações Rejeito, Intrafortis, Co
 date: 2026-04-15T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P06", "toffoli-retorno-1a-instancia-rejeito", "operacao-rejeito"]
+tags: ["stf", "p06", "toffoli-retorno-1a-instancia-rejeito", "operacao-rejeito"]
 categories: stf
 permalink: /posts/toffoli-retorno-1a-instancia-rejeito/
 id_corpus: "1569"

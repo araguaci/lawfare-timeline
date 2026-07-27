@@ -4,7 +4,7 @@ description: "O ministro Alexandre de Moraes (STF) manteve a prisão domiciliar 
 date: 2026-07-17T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P03", "P06", "P12-B"]
+tags: ["stf", "p03", "p06", "P12-B"]
 categories: stf
 permalink: /posts/2026-07-17-moraes-mantem-domiciliar-de-bolsonaro-suspende-todas-as-visitas-por-30-dias-e-nega-pedido-/
 id_corpus: "1621"

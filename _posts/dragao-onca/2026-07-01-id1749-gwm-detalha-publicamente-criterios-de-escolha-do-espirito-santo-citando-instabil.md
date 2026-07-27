@@ -4,7 +4,7 @@ title: "GWM detalha publicamente critérios de escolha do Espírito Santo, citan
 description: "Em cerimônia de inauguração em Aracruz, Ricardo Bastos, diretor de Relações Institucionais da GWM Brasil, detalha os critérios de escolha do Espírito Santo perante seis estados concorrentes (Rio Grand..."
 date: 2026-07-01
 image: /assets/img/dragao-onca-espirito-santo.webp
-tags: ["dragao-onca", "2026", "P05", "espirito-santo"]
+tags: ["dragao-onca", "2026", "p05", "espirito-santo"]
 categories: dragao-onca
 timeline_id: 1749
 status: confirmado

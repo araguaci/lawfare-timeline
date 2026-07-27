@@ -4,7 +4,7 @@ description: "Ao fim dos 90 dias da prisão domiciliar humanitária temporária 
 date: 2026-07-03T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P03", "lawfare"]
+tags: ["stf", "p03", "lawfare"]
 categories: lawfare
 permalink: /posts/2026-07-03-moraes-prorroga-domiciliar-de-bolsonaro-por-prazo-indeterminado-e-ordena-apreensao-de-10-a/
 id_corpus: "1617"

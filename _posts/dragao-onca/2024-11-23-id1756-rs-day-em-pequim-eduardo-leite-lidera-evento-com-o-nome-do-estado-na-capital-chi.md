@@ -4,7 +4,7 @@ title: "\"RS Day\" em Pequim — Eduardo Leite lidera evento com o nome do Estad
 description: "O governo do Rio Grande do Sul promove o 'RS Day' no Hotel St. Regis, em Pequim, integrado ao III Fórum sobre Desenvolvimento Sustentável da Cadeia de Comércio Internacional e ao III Fórum de Cooperaç..."
 date: 2024-11-23
 image: /assets/img/dragao-onca-rio-grande-do-sul.webp
-tags: ["dragao-onca", "2024", "P05", "rio-grande-do-sul"]
+tags: ["dragao-onca", "2024", "p05", "rio-grande-do-sul"]
 categories: dragao-onca
 timeline_id: 1756
 status: confirmado

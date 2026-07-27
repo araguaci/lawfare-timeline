@@ -4,7 +4,7 @@ description: "Citação aos senadores Rodrigo Pacheco (PSD-MG) e Carlos Viana (P
 date: 2025-10-01T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P03", "P06", "rejeito-remessa-stf-pacheco-viana", "operacao-rejeito"]
+tags: ["stf", "p03", "p06", "rejeito-remessa-stf-pacheco-viana", "operacao-rejeito"]
 categories: stf
 permalink: /posts/2025-10-01-rejeito-remessa-stf-pacheco-viana/
 id_corpus: "1561"

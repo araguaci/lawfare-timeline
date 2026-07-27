@@ -4,7 +4,7 @@ title: "Senado aprova o \"PL da Devastação\" (PL 2.159/2021), flexibilizando o
 description: "Por 54 votos a 13, o Senado aprova o PL 2.159/2021, que cria a Lei Geral do Licenciamento Ambiental (LGLA), flexibilizando regras de licenciamento em todo o país e permitindo autolicenciamento por emp..."
 date: 2025-05-21
 image: /assets/img/dragao-onca-braco-juridico.webp
-tags: ["ato_legislativo", "2025", "P05", "P10", "brasil-federal"]
+tags: ["ato_legislativo", "2025", "p05", "p10", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1691
 status: confirmado

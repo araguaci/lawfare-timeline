@@ -4,7 +4,7 @@ description: "Alexandre de Moraes, relator da AP 2782, negou pedido da Defensori
 date: 2026-06-15T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P03", "lawfare"]
+tags: ["stf", "p03", "lawfare"]
 categories: lawfare
 permalink: /posts/2026-06-15-moraes-nega-adiamento-do-julgamento-de-eduardo-bolsonaro-dpu-arguira-quorum-incompleto-e-v/
 id_corpus: "1613"

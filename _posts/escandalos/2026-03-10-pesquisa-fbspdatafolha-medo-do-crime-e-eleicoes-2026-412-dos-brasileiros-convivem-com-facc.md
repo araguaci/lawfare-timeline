@@ -4,7 +4,7 @@ description: "O Fórum Brasileiro de Segurança Pública (FBSP) divulgou em maio
 date: 2026-03-10T12:00:00.000Z
 image:
   path: "/assets/solid/skull.svg"
-tags: ["escandalos", "P07", "P09", "P11"]
+tags: ["escandalos", "p07", "p09", "p11"]
 categories: escandalos
 permalink: /posts/2026-03-10-pesquisa-fbspdatafolha-medo-do-crime-e-eleicoes-2026-412-dos-brasileiros-convivem-com-facc/
 id_corpus: "1588"

@@ -4,7 +4,7 @@ description: "A Polícia Federal encaminhou ao STF o relatório final do inquér
 date: 2026-06-29T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P03", "lawfare"]
+tags: ["stf", "p03", "lawfare"]
 categories: lawfare
 permalink: /posts/2026-06-29-pf-conclui-relatorio-apontando-indicios-de-calunia-por-flavio-bolsonaro-moraes-da-15-dias-/
 id_corpus: "1616"

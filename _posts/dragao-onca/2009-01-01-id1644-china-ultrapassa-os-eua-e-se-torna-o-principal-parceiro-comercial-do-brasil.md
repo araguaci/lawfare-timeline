@@ -4,7 +4,7 @@ title: "China ultrapassa os EUA e se torna o principal parceiro comercial do Bra
 description: "Pela primeira vez na história, a China supera os Estados Unidos como maior parceiro comercial do Brasil — posição que mantém ininterruptamente até 2026 (17º ano consecutivo)...."
 date: 2009-01-01
 image: /assets/img/dragao-onca-brasil-federal.webp
-tags: ["mecanismo_sistemico", "2009", "P10", "P11", "brasil-federal"]
+tags: ["mecanismo_sistemico", "2009", "p10", "p11", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1644
 status: confirmado

@@ -4,7 +4,7 @@ description: "Após reportagem da Folha de S.Paulo apurar que ao menos sete trib
 date: 2026-07-06T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P11", "P06"]
+tags: ["stf", "p11", "p06"]
 categories: stf
 permalink: /posts/2026-07-06-moraes-e-dino-dao-48h-para-sete-tribunais-de-justica-explicarem-supersalarios-acima-do-tet/
 id_corpus: "1634"

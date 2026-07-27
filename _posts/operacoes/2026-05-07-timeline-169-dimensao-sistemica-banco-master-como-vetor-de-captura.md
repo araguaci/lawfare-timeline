@@ -4,7 +4,7 @@ description: "O conjunto de fatos revelados pela PF e pela imprensa consolida o 
 date: 2026-05-07T00:00:00.000Z
 image:
   path: "/assets/solid/network-wired.svg"
-tags: ["captura-institucional", "tres-poderes", "banco-master", "cleptocracia", "P01", "P03", "P06"]
+tags: ["captura-institucional", "tres-poderes", "banco-master", "cleptocracia", "p01", "p03", "p06"]
 categories: operacoes
 timeline_id: 169
 source_data: compliance-zero-ciro-nogueira-166-170.json

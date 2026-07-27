@@ -4,7 +4,7 @@ title: "Zema visita pessoalmente a fábrica da CRRC em Changchun (China), inclui
 description: "Na mesma missão internacional em que reuniu-se com o Midea Group em Pequim (id_1754), o governador Romeu Zema e comitiva visitam as instalações da Changchun Railway Vehicles (CRRC) para conhecer o pro..."
 date: 2025-06-18
 image: /assets/img/dragao-onca-minas-gerais.webp
-tags: ["dragao-onca", "2025", "P05", "soberania", "minas-gerais"]
+tags: ["dragao-onca", "2025", "p05", "soberania", "minas-gerais"]
 categories: dragao-onca
 timeline_id: 1753
 status: confirmado

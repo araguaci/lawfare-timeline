@@ -4,7 +4,7 @@ title: "Mineração Taboca é adquirida pela estatal chinesa China Nonferrous Me
 description: "A Mineração Taboca S.A., que opera a mina de Pitinga (Presidente Figueiredo, AM) extraindo cassiterita, tântalo e nióbio, e estuda extração de terras raras, é adquirida pela holding estatal China Nonf..."
 date: 2024-01-01
 image: /assets/img/dragao-onca-amazonas.webp
-tags: ["mecanismo_sistemico", "2024", "P05", "P10", "amazonas"]
+tags: ["mecanismo_sistemico", "2024", "p05", "p10", "amazonas"]
 categories: dragao-onca
 timeline_id: 1667
 status: confirmado

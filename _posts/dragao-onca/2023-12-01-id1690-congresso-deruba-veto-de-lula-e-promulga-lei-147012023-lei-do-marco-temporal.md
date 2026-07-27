@@ -4,7 +4,7 @@ title: "Congresso deruba veto de Lula e promulga Lei 14.701/2023 (Lei do Marco T
 description: "Após o STF declarar o marco temporal inconstitucional, o Congresso aprova e, diante do veto parcial de Lula, derruba o veto presidencial, promulgando a Lei 14.701/2023, que reintroduz por via legislat..."
 date: 2023-12-01
 image: /assets/img/dragao-onca-braco-juridico.webp
-tags: ["ato_legislativo", "2023", "P01", "P04b", "brasil-federal"]
+tags: ["ato_legislativo", "2023", "p01", "p04b", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1690
 status: confirmado

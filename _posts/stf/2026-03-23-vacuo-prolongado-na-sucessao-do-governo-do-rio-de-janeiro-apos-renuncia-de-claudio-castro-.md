@@ -4,7 +4,7 @@ description: "Cláudio Castro renunciou ao governo do RJ em 23/03/2026, véspera
 date: 2026-03-23T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["P03", "claudio-castro", "ricardo-couto", "alerj", "stf", "tse", "sucessao-governo-rj"]
+tags: ["p03", "claudio-castro", "ricardo-couto", "alerj", "stf", "tse", "sucessao-governo-rj"]
 categories: stf
 permalink: /posts/2026-03-23-vacuo-prolongado-na-sucessao-do-governo-do-rio-de-janeiro-apos-renuncia-de-claudio-castro-/
 id_corpus: "1626"

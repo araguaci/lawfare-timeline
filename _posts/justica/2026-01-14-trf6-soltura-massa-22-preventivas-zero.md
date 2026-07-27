@@ -4,7 +4,7 @@ description: "TRF-6 determina soltura de todos os investigados da Rejeito ainda 
 date: 2026-01-14T12:00:00.000Z
 image:
   path: "/assets/solid/hammer.svg"
-tags: ["justica", "P03", "P06", "trf6-soltura-massa-22-preventivas-zero", "operacao-rejeito"]
+tags: ["justica", "p03", "p06", "trf6-soltura-massa-22-preventivas-zero", "operacao-rejeito"]
 categories: justica
 permalink: /posts/2026-01-14-trf6-soltura-massa-22-preventivas-zero/
 id_corpus: "1565"

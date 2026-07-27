@@ -4,7 +4,7 @@ description: "Segundo apurado pelo MPF/PF/CGU, controladores da organização so
 date: 2026-04-23T12:00:00.000Z
 image:
   path: "/assets/solid/book-open.svg"
-tags: ["estudo", "operacao-sepse", "P05", "P08"]
+tags: ["estudo", "operacao-sepse", "p05", "p08"]
 categories: estudos
 permalink: /posts/2026-04-23-esquema-na-operacao-sepse-contratos-superfaturados-de-uti-com-repasse-de-10-a-cupula-da-os/
 id_corpus: "T-212"

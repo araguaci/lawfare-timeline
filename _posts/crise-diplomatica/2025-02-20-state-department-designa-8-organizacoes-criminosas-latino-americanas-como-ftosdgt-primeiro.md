@@ -4,7 +4,7 @@ description: "Em 20 de fevereiro de 2025, o Secretário de Estado Marco Rubio fo
 date: 2025-02-20T12:00:00.000Z
 image:
   path: "/assets/solid/globe.svg"
-tags: ["crise-diplomatica", "P08", "P10"]
+tags: ["crise-diplomatica", "p08", "p10"]
 categories: crise-diplomatica
 permalink: /posts/2025-02-20-state-department-designa-8-organizacoes-criminosas-latino-americanas-como-ftosdgt-primeiro/
 id_corpus: "1585"

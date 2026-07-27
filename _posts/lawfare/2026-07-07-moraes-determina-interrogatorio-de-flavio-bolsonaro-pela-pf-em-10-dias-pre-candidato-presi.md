@@ -4,7 +4,7 @@ description: "Acolhendo manifestação da PGR após o relatório final da PF, Al
 date: 2026-07-07T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P03", "P12-B", "lawfare"]
+tags: ["stf", "p03", "P12-B", "lawfare"]
 categories: lawfare
 permalink: /posts/2026-07-07-moraes-determina-interrogatorio-de-flavio-bolsonaro-pela-pf-em-10-dias-pre-candidato-presi/
 id_corpus: "1618"

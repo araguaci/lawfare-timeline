@@ -4,7 +4,7 @@ title: "Zema, \"encalhado nas pesquisas\", redobra críticas ao STF como estrat�
 description: "Com desempenho fraco nas pesquisas presidenciais, Zema troca o discurso de gestor técnico por confronto direto com o Supremo Tribunal Federal, na tentativa de se viabilizar eleitoralmente para 2026. J..."
 date: 2026-07-01
 image: /assets/img/dragao-onca-minas-gerais.webp
-tags: ["incidente_diplomatico", "2026", "P04b", "minas-gerais"]
+tags: ["incidente_diplomatico", "2026", "p04b", "minas-gerais"]
 categories: dragao-onca
 timeline_id: 1688
 status: confirmado

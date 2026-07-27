@@ -4,7 +4,7 @@ description: "No primeiro dia de seu segundo mandato, o presidente Donald Trump 
 date: 2025-01-20T12:00:00.000Z
 image:
   path: "/assets/solid/globe.svg"
-tags: ["crise-diplomatica", "P08", "P10"]
+tags: ["crise-diplomatica", "p08", "p10"]
 categories: crise-diplomatica
 permalink: /posts/2025-01-20-trump-assina-eo-14157-carteis-internacionais-como-ftosdgt-arquitetura-juridica-que-precede/
 id_corpus: "1584"

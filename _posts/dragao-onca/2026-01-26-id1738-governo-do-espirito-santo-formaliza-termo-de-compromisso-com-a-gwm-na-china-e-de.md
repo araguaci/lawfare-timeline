@@ -4,7 +4,7 @@ title: "Governo do Espírito Santo formaliza Termo de Compromisso com a GWM na C
 description: "Comitiva estadual liderada pelo então vice-governador Ricardo Ferraço viaja à China em janeiro de 2026 para formalizar o Termo de Compromisso de Investimento com a GWM, após tratativas iniciadas em 20..."
 date: 2026-01-26
 image: /assets/img/dragao-onca-espirito-santo.webp
-tags: ["dragao-onca", "2026", "P05", "espirito-santo"]
+tags: ["dragao-onca", "2026", "p05", "espirito-santo"]
 categories: dragao-onca
 timeline_id: 1738
 status: confirmado

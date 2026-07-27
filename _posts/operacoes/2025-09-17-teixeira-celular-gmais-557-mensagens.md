@@ -4,7 +4,7 @@ description: "Extração forense revela: 557 mensagens de Teixeira no grupo What
 date: 2025-09-17T12:00:00.000Z
 image:
   path: "/assets/solid/bullseye.svg"
-tags: ["operacoes", "P03", "P08", "teixeira-celular-gmais-557-mensagens", "operacao-rejeito"]
+tags: ["operacoes", "p03", "p08", "teixeira-celular-gmais-557-mensagens", "operacao-rejeito"]
 categories: operacoes
 permalink: /posts/2025-09-17-teixeira-celular-gmais-557-mensagens/
 id_corpus: "1556"

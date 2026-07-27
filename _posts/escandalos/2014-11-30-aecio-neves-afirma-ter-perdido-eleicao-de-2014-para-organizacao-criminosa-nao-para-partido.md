@@ -4,7 +4,7 @@ description: "Após derrota para Dilma Rousseff no segundo turno de 2014, o cand
 date: 2014-11-30T12:00:00.000Z
 image:
   path: "/assets/solid/skull.svg"
-tags: ["escandalos", "P04b", "P09"]
+tags: ["escandalos", "p04b", "p09"]
 categories: escandalos
 permalink: /posts/2014-11-30-aecio-neves-afirma-ter-perdido-eleicao-de-2014-para-organizacao-criminosa-nao-para-partido/
 id_corpus: "1582"

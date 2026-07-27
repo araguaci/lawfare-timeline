@@ -4,7 +4,7 @@ description: "O juiz Adevanir Carlos Moreira da Silveira, da 4ª Vara Cível do 
 date: 2015-08-26T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P02", "P05", "P01"]
+tags: ["stf", "p02", "p05", "p01"]
 categories: stf
 permalink: /posts/2015-08-26-tj-sp-condena-transcooper-por-subfaturamento-de-tarifas-sptrans-20052009-cooperativa-retin/
 id_corpus: "1598"

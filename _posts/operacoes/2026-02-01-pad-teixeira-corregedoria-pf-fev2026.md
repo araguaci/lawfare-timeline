@@ -4,7 +4,7 @@ description: "Corregedoria da PF instaura Processo Administrativo Disciplinar co
 date: 2026-02-01T12:00:00.000Z
 image:
   path: "/assets/solid/bullseye.svg"
-tags: ["operacoes", "P03", "pad-teixeira-corregedoria-pf-fev2026", "operacao-rejeito"]
+tags: ["operacoes", "p03", "pad-teixeira-corregedoria-pf-fev2026", "operacao-rejeito"]
 categories: operacoes
 permalink: /posts/2026-02-01-pad-teixeira-corregedoria-pf-fev2026/
 id_corpus: "1567"

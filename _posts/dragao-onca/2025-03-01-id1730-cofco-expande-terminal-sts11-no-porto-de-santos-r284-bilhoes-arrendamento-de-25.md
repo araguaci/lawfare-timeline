@@ -4,7 +4,7 @@ title: "COFCO expande terminal STS11 no Porto de Santos, R$2,84 bilhões, arrend
 description: "A estatal chinesa de agronegócio COFCO inicia operação parcial do terminal STS11 no Porto de Santos — R$1,64 bilhão em investimento direto, área de 98 mil m² na Margem Direita arrendada por 25 anos (p..."
 date: 2025-03-01
 image: /assets/img/dragao-onca-sao-paulo.webp
-tags: ["dragao-onca", "2025", "P05", "P11", "sao-paulo"]
+tags: ["dragao-onca", "2025", "p05", "p11", "sao-paulo"]
 categories: dragao-onca
 timeline_id: 1730
 status: confirmado

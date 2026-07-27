@@ -4,7 +4,7 @@ description: "Vazamento do WikiLeaks revelou que José Serra, no início de seu 
 date: 2011-01-01T12:00:00.000Z
 image:
   path: "/assets/solid/globe.svg"
-tags: ["crise-diplomatica", "P04b", "P08"]
+tags: ["crise-diplomatica", "p04b", "p08"]
 categories: crise-diplomatica
 permalink: /posts/2011-01-01-wikileaks-revela-serra-pediu-cooperacao-americana-de-inteligencia-contra-o-pcc-sem-informa/
 id_corpus: "1581"

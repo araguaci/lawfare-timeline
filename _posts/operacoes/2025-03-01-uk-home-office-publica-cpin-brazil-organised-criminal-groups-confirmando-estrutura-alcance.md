@@ -4,7 +4,7 @@ description: "O Country Policy and Information Team (CPIT) do UK Home Office con
 date: 2025-03-01T12:00:00.000Z
 image:
   path: "/assets/solid/bullseye.svg"
-tags: ["operacoes", "P10"]
+tags: ["operacoes", "p10"]
 categories: operacoes
 permalink: /posts/2025-03-01-uk-home-office-publica-cpin-brazil-organised-criminal-groups-confirmando-estrutura-alcance/
 id_corpus: "1629"

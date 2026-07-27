@@ -4,7 +4,7 @@ description: "Em 25 de junho de 2025, o FinCEN (Financial Crimes Enforcement Net
 date: 2025-06-25T12:00:00.000Z
 image:
   path: "/assets/solid/globe.svg"
-tags: ["crise-diplomatica", "P08", "P10", "P05"]
+tags: ["crise-diplomatica", "p08", "p10", "p05"]
 categories: crise-diplomatica
 permalink: /posts/2025-06-25-fincen-designa-cibanco-intercam-e-vector-como-primary-money-laundering-concern-primeiro-us/
 id_corpus: "1587"

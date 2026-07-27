@@ -4,7 +4,7 @@ description: "O senador Arthur Virgílio (AM/PSDB) responsabilizou o presidente 
 date: 2006-09-05T12:00:00.000Z
 image:
   path: "/assets/solid/skull.svg"
-tags: ["escandalos", "P04b"]
+tags: ["escandalos", "p04b"]
 categories: escandalos
 permalink: /posts/2006-09-05-senador-arthur-virgilio-psdb-culpa-lula-pelos-ataques-do-pcc-e-pela-porosidade-das-frontei/
 id_corpus: "1580"

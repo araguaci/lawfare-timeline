@@ -4,7 +4,7 @@ description: "Em 11 de julho de 2025, Ovidio Guzmán López, 35, herdeiro da lid
 date: 2025-07-11T12:00:00.000Z
 image:
   path: "/assets/solid/globe.svg"
-tags: ["crise-diplomatica", "P08", "P10"]
+tags: ["crise-diplomatica", "p08", "p10"]
 categories: crise-diplomatica
 permalink: /posts/2025-07-11-ovidio-guzman-filho-de-el-chapo-se-declara-culpado-em-chicago-com-forfeiture-de-us-80-mi-e/
 id_corpus: "1586"

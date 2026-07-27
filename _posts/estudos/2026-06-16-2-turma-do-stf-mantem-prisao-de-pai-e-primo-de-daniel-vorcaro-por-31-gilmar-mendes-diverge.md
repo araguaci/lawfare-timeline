@@ -4,7 +4,7 @@ description: "Na sessão presencial da 2ª Turma do STF, André Mendonça (relat
 date: 2026-06-16T12:00:00.000Z
 image:
   path: "/assets/solid/book-open.svg"
-tags: ["estudo", "compliance-zero", "gilmar-mendes", "P01", "P04b"]
+tags: ["estudo", "compliance-zero", "gilmar-mendes", "p01", "p04b"]
 categories: lawfare
 permalink: /posts/2026-06-16-2-turma-do-stf-mantem-prisao-de-pai-e-primo-de-daniel-vorcaro-por-31-gilmar-mendes-diverge/
 id_corpus: "T-215"

@@ -4,7 +4,7 @@ description: "PF deflagra Operação Parcours investigando uso do Plano de Recup
 date: 2025-03-28T12:00:00.000Z
 image:
   path: "/assets/solid/bullseye.svg"
-tags: ["operacoes", "P08", "P01", "parcours-serra-curral-prad-fachada", "operacao-parcours"]
+tags: ["operacoes", "p08", "p01", "parcours-serra-curral-prad-fachada", "operacao-parcours"]
 categories: operacoes
 permalink: /posts/2025-03-28-parcours-serra-curral-prad-fachada/
 id_corpus: "1554"

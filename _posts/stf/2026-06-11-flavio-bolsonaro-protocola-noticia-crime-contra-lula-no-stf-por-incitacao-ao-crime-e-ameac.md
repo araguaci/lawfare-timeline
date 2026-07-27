@@ -4,7 +4,7 @@ description: "O senador Flávio Bolsonaro (PL-RJ), pré-candidato à Presidênci
 date: 2026-06-11T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P03"]
+tags: ["stf", "p03"]
 categories: stf
 permalink: /posts/2026-06-11-flavio-bolsonaro-protocola-noticia-crime-contra-lula-no-stf-por-incitacao-ao-crime-e-ameac/
 id_corpus: "1637"

@@ -4,7 +4,7 @@ description: "Ministro Ricardo Lewandowski, relator da ADI 7331 (ajuizada pelo P
 date: 2023-03-16T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P03", "P05"]
+tags: ["stf", "p03", "p05"]
 categories: stf
 permalink: /posts/2023-03-16-stf-suspende-monocraticamente-restricoes-da-lei-das-estatais-a-indicacoes-politico-partida/
 id_corpus: "1612"

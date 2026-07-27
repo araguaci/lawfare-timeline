@@ -4,7 +4,7 @@ description: "O Tribunal de Justiça de São Paulo iniciou em 22/06/2026 o julga
 date: 2026-06-22T12:00:00.000Z
 image:
   path: "/assets/solid/bullseye.svg"
-tags: ["operacoes", "P02", "P06"]
+tags: ["operacoes", "p02", "p06"]
 categories: operacoes
 permalink: /posts/2026-06-22-juri-dos-tres-pms-acusados-de-executar-o-delator-do-pcc-vinicius-gritzbach-e-anulado-no-pr/
 id_corpus: "1635"

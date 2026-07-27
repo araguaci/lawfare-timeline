@@ -4,7 +4,7 @@ description: "O presidente nacional do PFL, senador Jorge Bornhausen (SC), lanç
 date: 2006-07-13T12:00:00.000Z
 image:
   path: "/assets/solid/skull.svg"
-tags: ["escandalos", "P04b", "P09"]
+tags: ["escandalos", "p04b", "p09"]
 categories: escandalos
 permalink: /posts/2006-07-13-bornhausen-pfl-afirma-que-pt-pode-estar-manuseando-acoes-do-pcc-em-sao-paulo/
 id_corpus: "1578"

@@ -4,7 +4,7 @@ description: "A Polícia Federal e o Ministério Público Federal deflagram a Op
 date: 2015-05-29T12:00:00.000Z
 image:
   path: "/assets/solid/bullseye.svg"
-tags: ["operacoes", "P05", "P07"]
+tags: ["operacoes", "p05", "p07"]
 categories: operacoes
 permalink: /posts/2015-05-29-operacao-acronimo-deflagracao-pfmpf-investigam-financiamento-ilegal-da-campanha-pimentel-p/
 id_corpus: "1595"

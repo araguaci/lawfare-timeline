@@ -4,7 +4,7 @@ title: "Primeiro trem da CRRC chega ao pátio São Gabriel (BH); Zema e vice-gov
 description: "O governador Romeu Zema e o vice-governador Mateus Simões apresentam à população o primeiro dos 24 novos trens do Metrô da Região Metropolitana de Belo Horizonte, produzido na China pela Changchun Rai..."
 date: 2026-02-05
 image: /assets/img/dragao-onca-minas-gerais.webp
-tags: ["dragao-onca", "2026", "P05", "soberania", "minas-gerais"]
+tags: ["dragao-onca", "2026", "p05", "soberania", "minas-gerais"]
 categories: dragao-onca
 timeline_id: 1755
 status: confirmado

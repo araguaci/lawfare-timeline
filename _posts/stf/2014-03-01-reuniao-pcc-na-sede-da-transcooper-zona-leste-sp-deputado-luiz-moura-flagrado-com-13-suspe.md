@@ -4,7 +4,7 @@ description: "Em março de 2014, a Polícia Civil de São Paulo flagra, em opera
 date: 2014-03-01T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P05", "P01", "P02"]
+tags: ["stf", "p05", "p01", "p02"]
 categories: stf
 permalink: /posts/2014-03-01-reuniao-pcc-na-sede-da-transcooper-zona-leste-sp-deputado-luiz-moura-flagrado-com-13-suspe/
 id_corpus: "1597"

@@ -4,7 +4,7 @@ title: "Windey formaliza fábrica de turbinas eólicas em Camaçari, promete 500
 description: "A fabricante chinesa Windey anuncia formalmente a instalação de fábrica em Camaçari, com previsão de 500 empregos diretos. Executivo da empresa credita o início das tratativas à missão de maio de 2025..."
 date: 2026-06-09
 image: /assets/img/dragao-onca-bahia.webp
-tags: ["dragao-onca", "2026", "P05", "bahia"]
+tags: ["dragao-onca", "2026", "p05", "bahia"]
 categories: dragao-onca
 timeline_id: 1724
 status: confirmado

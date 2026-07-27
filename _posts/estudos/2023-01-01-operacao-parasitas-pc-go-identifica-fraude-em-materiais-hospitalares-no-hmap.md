@@ -4,7 +4,7 @@ description: "Polícia Civil do Estado de Goiás identifica, entre 2020 e iníci
 date: 2023-01-01T12:00:00.000Z
 image:
   path: "/assets/solid/book-open.svg"
-tags: ["estudo", "operacao-sepse", "P05"]
+tags: ["estudo", "operacao-sepse", "p05"]
 categories: estudos
 permalink: /posts/2023-01-01-operacao-parasitas-pc-go-identifica-fraude-em-materiais-hospitalares-no-hmap/
 id_corpus: "T-210"

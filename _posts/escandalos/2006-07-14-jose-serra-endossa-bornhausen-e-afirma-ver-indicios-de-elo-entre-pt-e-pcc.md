@@ -4,7 +4,7 @@ description: "José Serra, candidato ao governo de São Paulo (PSDB), endossou a
 date: 2006-07-14T12:00:00.000Z
 image:
   path: "/assets/solid/skull.svg"
-tags: ["escandalos", "P04b", "P09"]
+tags: ["escandalos", "p04b", "p09"]
 categories: escandalos
 permalink: /posts/2006-07-14-jose-serra-endossa-bornhausen-e-afirma-ver-indicios-de-elo-entre-pt-e-pcc/
 id_corpus: "1579"

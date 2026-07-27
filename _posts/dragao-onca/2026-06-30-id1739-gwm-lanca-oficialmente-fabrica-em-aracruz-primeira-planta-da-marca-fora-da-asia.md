@@ -4,7 +4,7 @@ title: "GWM lança oficialmente fábrica em Aracruz — primeira planta da marca
 description: "Cerimônia de lançamento da fábrica da GWM em Aracruz (Barra do Riacho), com presença do governador Ricardo Ferraço — primeira planta da montadora chinesa construída do zero fora da Ásia, com investime..."
 date: 2026-06-30
 image: /assets/img/dragao-onca-espirito-santo.webp
-tags: ["dragao-onca", "2026", "P05", "espirito-santo"]
+tags: ["dragao-onca", "2026", "p05", "espirito-santo"]
 categories: dragao-onca
 timeline_id: 1739
 status: confirmado

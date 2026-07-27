@@ -4,7 +4,7 @@ title: "Eduardo Bolsonaro acusa Huawei de espionagem via 5G; embaixada da China 
 description: "Deputado federal Eduardo Bolsonaro, presidente da Comissão de Relações Exteriores da Câmara, publica em rede social acusação de espionagem chinesa via tecnologia 5G da Huawei, associando-se à iniciati..."
 date: 2020-11-24
 image: /assets/img/dragao-onca-brasil-federal.webp
-tags: ["incidente_diplomatico", "2020", "P04b", "brasil-federal"]
+tags: ["incidente_diplomatico", "2020", "p04b", "brasil-federal"]
 categories: dragao-onca
 timeline_id: 1651
 status: confirmado

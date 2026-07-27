@@ -4,7 +4,7 @@ description: "Em 22/nov/2024, 1h antes de sessão da ANM, Allan Cavalcante envia
 date: 2024-11-22T12:00:00.000Z
 image:
   path: "/assets/solid/bullseye.svg"
-tags: ["operacoes", "P03", "P08", "caio-seabra-voto-whatsapp-propina-anm", "operacao-rejeito"]
+tags: ["operacoes", "p03", "p08", "caio-seabra-voto-whatsapp-propina-anm", "operacao-rejeito"]
 categories: operacoes
 permalink: /posts/2024-11-22-caio-seabra-voto-whatsapp-propina-anm/
 id_corpus: "1558"

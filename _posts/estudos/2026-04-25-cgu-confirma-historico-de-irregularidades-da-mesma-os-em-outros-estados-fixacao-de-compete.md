@@ -4,7 +4,7 @@ description: "A CGU forneceu cruzamentos de dados que atestaram histórico de ir
 date: 2026-04-25T12:00:00.000Z
 image:
   path: "/assets/solid/book-open.svg"
-tags: ["estudo", "operacao-sepse", "P10"]
+tags: ["estudo", "operacao-sepse", "p10"]
 categories: estudos
 permalink: /posts/2026-04-25-cgu-confirma-historico-de-irregularidades-da-mesma-os-em-outros-estados-fixacao-de-compete/
 id_corpus: "T-213"

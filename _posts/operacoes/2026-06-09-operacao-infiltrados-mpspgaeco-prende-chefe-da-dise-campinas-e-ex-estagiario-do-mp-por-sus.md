@@ -4,7 +4,7 @@ description: "Em 09/06/2026, o GAECO do Ministério Público de São Paulo defla
 date: 2026-06-09T12:00:00.000Z
 image:
   path: "/assets/solid/bullseye.svg"
-tags: ["operacoes", "P02", "P08", "P10", "operacao-infiltrados-dise-campinas-pcc"]
+tags: ["operacoes", "p02", "p08", "p10", "operacao-infiltrados-dise-campinas-pcc"]
 categories: operacoes
 permalink: /posts/2026-06-09-operacao-infiltrados-mpspgaeco-prende-chefe-da-dise-campinas-e-ex-estagiario-do-mp-por-sus/
 id_corpus: "1606"
