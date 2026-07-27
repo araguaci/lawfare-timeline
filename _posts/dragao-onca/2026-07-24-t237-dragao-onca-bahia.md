@@ -2,7 +2,7 @@
 layout: post
 title: "O Dragão e a Onça — Capítulo 10: Bahia (Jerônimo Rodrigues, Ponte Salvador-Itaparica, Windey, Hotgen)"
 description: "Estado: Bahia. Período: 2020-11 a 2026-07 (7 entradas main track, 1719-1725). Eixo central: PPP Ponte Salvador-Itaparica (consórcio CCCC+CRCC/CCECC, R$10,6bi, 35 anos) + Windey (energia eólica, Camaça..."
-date: 2026-01-01
+date: 2026-01-01T09:01:01.001Z
 image: /assets/img/dragao-onca-bahia.webp
 tags: ["dragao-onca", "2026", "P05", "bahia"]
 categories: dragao-onca

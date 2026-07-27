@@ -2,7 +2,7 @@
 layout: post
 title: "O Dragão e a Onça — Capítulo Goiás: pivô China→EUA/Japão em terras raras e instrumentalização eleitoral (Caiado)"
 description: "Capítulo inaugural da série. Cobre 2023-2026: acordos China (Chint Power, Weichai, YTO, CMOC, Huawei) sob Caiado, pivô 2025-2026 para JOGMEC (Japão) e USA Rare Earth (aquisição Serra Verde, US$2,8bi),..."
-date: 2026-01-01
+date: 2026-01-01T05:01:01.001Z
 image: /assets/img/dragao-onca-goias.webp
 tags: ["dragao-onca", "2026", "P05", "P09", "goias"]
 categories: dragao-onca

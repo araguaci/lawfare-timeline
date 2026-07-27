@@ -2,7 +2,7 @@
 layout: post
 title: "O Dragão e a Onça — Capítulo Brasil: linha do tempo federal 1993-2026 (Lula I/II, Dilma, Bolsonaro, Lula III) e o caso Doria-Sinovac"
 description: "Timeline federal completa desde a Parceria Estratégica de 1993. Inclui correção factual da desinformação sobre compra de vacinas 'pré-pandemia' por Doria (o acordo genérico de 2019 não envolvia covid;..."
-date: 2026-01-01
+date: 2026-01-01T01:01:01.001Z
 image: /assets/img/dragao-onca.webp
 tags: ["dragao-onca", "2026", "P04b", "P05", "brasil-federal"]
 categories: dragao-onca

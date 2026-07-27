@@ -7,6 +7,18 @@ Formato: data (ISO) → resumo → arquivos de fonte.
 
 ---
 
+## 2026-07-27 (e) — Sínteses refeitas (11 UFs)
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Reescrito** | `dragao-onca-sintese.html` | v1 T-233: 11 UFs, KPIs, comparativo AP/RJ, alertas, horizontes SC/MA. |
+| **Reescrito** | `dragao-onca-sintese-final-cross-state.html` | T-243: 10 mecanismos; tabela 11 estados; RS Day **1756**; lacunas CADE/GACC. |
+| **Reescrito** | `artigos/sintese-xarticle.md` · `sintese-final-xarticle.md` | X Articles alinhados; tweet 11 estados / 10 mecanismos. |
+
+Corpus referenciado: **T-228→T-245** · **142 posts** · **17 dossiês HTML**.
+
+---
+
 ## 2026-07-27 (d) — Hero RJ (T-245)
 
 | Ação | Arquivo | Descrição |

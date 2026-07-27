@@ -7,6 +7,68 @@ Formato: data (ISO) → resumo → arquivos de fonte.
 
 ---
 
+## 2026-07-27 — Sínteses cross-estadual refeitas (11 UFs)
+
+Após os capítulos **Amapá (T-244)** e **Rio de Janeiro (T-245)**, os quatro artefatos de síntese foram reescritos: KPIs, tabela comparativa, tipologia ampliada (10 mecanismos), alertas, horizontes e `series-nav` (17 dossiês). Correção **RS Day → id_1756** (1760 = CMPort/Vast no RJ). Corpus **T-228→T-245** · **142 posts** · IDs **1639–1762**.
+
+### Fontes (`odragaoeaonca/`)
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Alterado** | `dragao-onca-sintese.html` | Síntese v1 (T-233): 11 UFs, + AP/RJ na tese, KPIs, comparativo, alertas, horizontes (SC/MA candidatos). |
+| **Alterado** | `dragao-onca-sintese-final-cross-state.html` | Fechamento T-243: tabela 11 estados; mecanismos 8–10 (captura federal, controle cooperativista, composição infra+gov.); lacunas CADE/GACC. |
+| **Alterado** | `artigos/sintese-xarticle.md` | X Article v1: 11 UFs, seções AP/RJ, 10 mecanismos, tweet atualizado. |
+| **Alterado** | `artigos/sintese-final-xarticle.md` | X Article T-243: fechamento tipológico 11 estados; links AP/RJ; RS Day 1756. |
+
+### Snapshot pós-síntese
+
+| Track | Last | Próximo |
+|-------|------|---------|
+| Main | **1762** | **1763** |
+| Thematic | **T-245** | **T-246** |
+| Posts `dragao-onca` | **142** | — |
+| Dossiês HTML | **17** | — |
+
+---
+
+## 2026-07-26 — Amapá T-244 · Rio de Janeiro T-245 · expansão MG/RS
+
+Rodada pós-síntese T-243: backfill **MG** (China paralela CRRC/Midea/BYD), **RS Day** (1756), novos capítulos **AP** e **RJ**. `_data/todo/` esvaziada após merge.
+
+### Fontes
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Criado** | `_posts/dragao-onca/*.md` (+16) | IDs **1749–1762** + temáticos **T-244**, **T-245**. Total pasta: **142 posts**. |
+| **Alterado** | `_data/lawfare.json` | +16 assuntos dragao-onca (max ID **1762**). |
+| **Alterado** | `_data/claude.ai-corpus-ids-sync.json` | main next **1763** · thematic last **T-245** (next **T-246**). |
+| **Arquivado** | `_data/processados/lawfare-batch-dragao-onca-*-1749*.json` etc. | MG 1750–1755, RS Day 1756, AP 1757–1759, RJ 1760–1762, T-244, T-245. |
+| **Patch** | `scripts/apply_lawfare_patch.py` | id_1100 (FZA-M-59 — contexto Margem Equatorial). |
+| **Criado** | `odragaoeaonca/dragao-onca-amapa.html` | Dossiê Cap. 16 (controle + captura federal). |
+| **Criado** | `odragaoeaonca/dragao-onca-rj.html` | Dossiê Cap. 17 (Açu + Castro/Hikvision). |
+| **Criado** | `odragaoeaonca/artigos/amapa-xarticle.md` · `rj-xarticle.md` | X Articles T-244 · T-245. |
+| **Criado** | `assets/img/dragao-onca-{amapa,rj}.webp` | Heroes regionais. |
+| **Alterado** | `scripts/gerar_artigos_dragao_onca.py` | T-244, T-245, mapeamentos AP/RJ, arrays de batch. |
+| **Alterado** | `scripts/fix_dragao_onca_hero_images.py` | Faixas 1757–1762, t244, t245. |
+| **Alterado** | `scripts/add_dragao_onca_state_tags.py` | Tags `amapa`, `rio-de-janeiro`, overrides T-244/T-245. |
+| **Alterado** | `scripts/apply_dragao_onca_og_and_dossier_links.py` | OG T-245; THEMATIC_DOSSIER 244/245. |
+| **Alterado** | `odragaoeaonca/index.html` · `README.md` · `CATALAGO.md` | Hub 17 dossiês; cards AP/RJ. |
+
+### Capítulos novos
+
+| T / IDs | Capítulo |
+|---------|----------|
+| 1749–1756 | MG expandido + RS Day Pequim |
+| T-244 · 1757–1759 | Amapá — Amazonbai/açaí, GACC, Chevron/CNPC |
+| T-245 · 1760–1762 | RJ — CMPort/Vast, Castro/Hikvision, CNOOC cliente |
+
+### Verificação
+
+- `tools/validate-ids.ps1` → 0 erros
+- `bundle exec jekyll build` → **não executado** (pausa editorial mantida)
+
+---
+
 ## 2026-07-25 — Conclusão da série O Dragão e a Onça (IDs 1713–1748 · T-236–T-243)
 
 Merge dos capítulos pendentes: diplomático federal, Bahia, São Paulo, Paraná, RS, ES, Goiás retroativo e síntese final cross-state. **Build Jekyll pausado** para revisão editorial antes de `bundle exec jekyll build`.

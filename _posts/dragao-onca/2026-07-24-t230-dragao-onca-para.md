@@ -2,7 +2,7 @@
 layout: post
 title: "O Dragão e a Onça — Capítulo Pará: Ferrovia CCCC/Vale, mineroduto Norsk Hydro, rede de nepotismo e COP30 como vitrine"
 description: "Cobre Ferrovia do Pará (protocolo 2019 R$7bi → MoU Pequim 2023 R$10bi/US$2bi CCCC+Vale → audiências públicas 2026), Programa Estrutura (dívida de mineradora convertida em obra pública), conflito Norsk..."
-date: 2026-01-01
+date: 2026-01-01T05:06:01.001Z
 image: /assets/img/dragao-onca-para.webp
 tags: ["dragao-onca", "2026", "P04b", "P05", "para"]
 categories: dragao-onca

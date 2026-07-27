@@ -4,7 +4,7 @@ description: "Wagner, líder do governo Lula no Senado, é o principal alvo da 9
 date: 2026-06-18T12:00:00.000Z
 image:
   path: "/assets/solid/bullseye.svg"
-tags: ["operacoes", "PF", "busca_e_apreensão", "lider_do_governo", "consignado", "Bahia"]
+tags: ["operacoes", "PF", "busca_e_apreensão", "lider_do_governo", "consignado", "bahia"]
 categories: operacoes
 permalink: /posts/2026-06-18-9-fase-da-operacao-compliance-zero-tem-jaques-wagner-como-alvo-principal/
 id_corpus: "1603"

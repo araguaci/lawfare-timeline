@@ -2,7 +2,7 @@
 layout: post
 title: "O Dragão e a Onça — Capítulo 9: Braço Diplomático (registro federal Brasil-China, 2025-2026)"
 description: "Tema federal/nacional: memorando Fazenda-China (id_1713), disputa EUA-China por minerais críticos (id_1714), venda da Serra Verde à USA Rare Earth (id_1715), acordo G7 terras raras (id_1716), Mercosul..."
-date: 2026-01-01
+date: 2026-01-01T03:01:01.001Z
 image: /assets/img/dragao-onca-brasil-federal.webp
 tags: ["dragao-onca", "2026", "P04b", "P05", "brasil-federal"]
 categories: dragao-onca

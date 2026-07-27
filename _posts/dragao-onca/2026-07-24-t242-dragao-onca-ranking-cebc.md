@@ -2,7 +2,7 @@
 layout: post
 title: "O Dragão e a Onça — Ranking Nacional CEBC: investimentos chineses por estado (2007-2025)"
 description: "Capítulo transversal com ranking oficial CEBC (Conselho Empresarial Brasil-China), relatório 'Investimentos Chineses no Brasil 2025' (abr/2026). Estoque 2007-2025: US$85,5 bi em 355 projetos, 20 UFs. ..."
-date: 2026-01-01
+date: 2026-01-01T18:01:01.001Z
 image: /assets/img/dragao-onca-ranking-cebc.webp
 tags: ["dragao-onca", "2026", "P05", "P11", "brasil-federal"]
 categories: dragao-onca

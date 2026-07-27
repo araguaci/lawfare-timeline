@@ -2,7 +2,7 @@
 layout: post
 title: "O Dragão e a Onça — Capítulo Amapá: três padrões estruturais distintos (açaí/controle, petróleo/federal, mineração-comparação Goiás-Pará-Amazonas-Minas)"
 description: "Síntese analítica comparando três relações Amapá-China de arquitetura estrutural distinta: (1) acordo Amazonbai–China (açaí, 15 mil toneladas até 2031, ids 1757–1758) — caso de controle, sem captura; ..."
-date: 2026-01-01
+date: 2026-01-01T15:01:01.001Z
 image: /assets/img/dragao-onca-amapa.webp
 tags: ["dragao-onca", "2026", "amapa"]
 categories: dragao-onca

@@ -2,7 +2,7 @@
 layout: post
 title: "O Dragão e a Onça — Capítulo Braço Jurídico: marco temporal (STF x Congresso), PL da Devastação, ADI 7919, caso Cinta Larga, e o contraste OAB x ONGs socioambientais"
 description: "Primeiro capítulo transversal da série — ponte direta com o corpus judicial principal do lawfare-timeline (INQ 4.781, padrão P01/P03). Documenta arquitetura legal que viabiliza os 4 capítulos estaduai..."
-date: 2026-01-01
+date: 2026-01-01T04:01:01.001Z
 image: /assets/img/dragao-onca-braco-juridico.webp
 tags: ["dragao-onca", "2026", "P01", "P04b", "brasil-federal"]
 categories: dragao-onca

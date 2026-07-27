@@ -2,7 +2,7 @@
 layout: post
 title: "O Dragão e a Onça — Capítulo 11: São Paulo (Tarcísio de Freitas, CRRC, COFCO)"
 description: "Estado: São Paulo. Período: 2024-02 a 2026 (5 entradas main track, 1726-1730). Eixo 1: CRRC (estatal ferroviária chinesa) consolida domínio quase total do material rodante paulista sob o programa de c..."
-date: 2026-01-01
+date: 2026-01-01T10:01:01.001Z
 image: /assets/img/dragao-onca-sao-paulo.webp
 tags: ["dragao-onca", "2026", "P05", "P11", "sao-paulo"]
 categories: dragao-onca

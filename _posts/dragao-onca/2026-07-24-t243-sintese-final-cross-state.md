@@ -2,7 +2,7 @@
 layout: post
 title: "O Dragão e a Onça — Síntese Final: Governadores vs. Potências Estrangeiras (Soberania na Conta do Governador)"
 description: "Síntese final cross-state: tese soberania na conta do governador qualificada — comparativo Federal, GO, PA, AM, MG, BA, SP, PR, RS, ES; tipologia de mecanismos e correção metodológica Goiás."
-date: 2026-01-01
+date: 2026-01-01T17:01:01.001Z
 image: /assets/img/dragao-onca-sintese.webp
 tags: ["dragao-onca", "2026", "P04b", "P05", "goias", "para", "amazonas", "minas-gerais", "brasil-federal", "bahia"]
 categories: dragao-onca
