@@ -16,6 +16,11 @@ status: confirmed
 
 ***
 
+> **Link para dossiê completo:** [Síntese comparativa (5 UFs)](https://gosurf.site/dragao-onca-sintese)
+
+***
+
+
 # Soberania na conta do governador: o que 5 capítulos revelam juntos
 
 A União negocia tratados, MoUs, cúpulas, planos de mineração sustentável assinados em Pequim ou lançamentos na Nasdaq. Mas quem **assina o contrato específico, enfrenta a comunidade atingida, arca com o desgaste político e recebe (ou não) a fiscalização** é sempre o governador estadual.

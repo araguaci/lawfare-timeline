@@ -23,7 +23,7 @@ layout: page
       | where_exp: "post", "post.title contains 'Capítulo' or post.title contains 'O Dragão' or post.title contains 'Dossiê Dedicado' or post.title contains 'Síntese Comparativa'"
       | sort: "date"
       | reverse %}
-    {% for post in thematic_posts limit: 10 %}
+    {% for post in thematic_posts limit: 22 %}
       {% include post-card.html %}
     {% endfor %}
   </div>

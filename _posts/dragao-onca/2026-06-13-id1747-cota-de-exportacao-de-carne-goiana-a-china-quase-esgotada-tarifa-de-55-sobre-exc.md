@@ -53,4 +53,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-goias-retroativo-1740-1748*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-goias-retroativo-1740-1748*

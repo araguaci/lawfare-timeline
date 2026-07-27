@@ -56,4 +56,4 @@ ev-inference: diferente das entradas 1726-1729 (negociação direta Estado-CRRC)
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-sp-1726-1730*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-sp-1726-1730*

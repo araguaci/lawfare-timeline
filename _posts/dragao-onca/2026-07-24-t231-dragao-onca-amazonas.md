@@ -16,6 +16,11 @@ status: confirmed
 
 ***
 
+> **Link para dossiê completo:** [Capítulo Amazonas](https://gosurf.site/dragao-onca-amazonas)
+
+***
+
+
 ## 📋 Resumo
 
 Caso mais grave da série até agora em termos de escalada institucional simultânea (FUNAI + MPF + PF) e precedente histórico (quase-genocídio Waimiri Atroari nos anos 1970, BR-174). Documenta pagamento suspeito (Termo de Cooperação nº 01/2026, R$12,3mi) firmado 2 dias após comunidade expressar desconfiança total na empresa. Cluster eletroeletrônico chinês (BYD, Deye, Megmeet) no PIM tratado à parte, sem os mesmos sinais de captura. Wilson Lima pré-candidato ao Senado replica o padrão Caiado: ativo econômico estadual vira plataforma eleitoral pessoal.

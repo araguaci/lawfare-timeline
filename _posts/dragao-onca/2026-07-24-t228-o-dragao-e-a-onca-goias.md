@@ -16,6 +16,11 @@ status: confirmed
 
 ***
 
+> **Link para dossiê completo:** [Capítulo Goiás — pivô China→EUA/Japão](https://gosurf.site/dragao-onca-goias)
+
+***
+
+
 # Goiás: de Pequim a Washington em 18 meses — e terras raras viram bandeira presidencial
 
 Ronaldo Caiado fez o que nenhum outro capítulo da série faz com tanta clareza: negociou com a China, pivotou para EUA e Japão, e converteu o ativo mineral em plataforma de campanha à Presidência — tudo antes de deixar o governo em 31 de março de 2026.

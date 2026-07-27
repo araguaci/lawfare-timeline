@@ -16,6 +16,11 @@ status: confirmed
 
 ***
 
+> **Link para dossiê completo:** [Capítulo Espírito Santo (dossiê RS·ES·Ranking)](https://gosurf.site/dragao-onca-rs-es-ranking)
+
+***
+
+
 ## 📋 Resumo
 
 Estado: Espírito Santo. Período: 2026-01 a 2026-06 (2 entradas main track, 1738-1739). Par direto do capítulo do Rio Grande do Sul (T-240): mesma disputa (2ª fábrica GWM), desfechos opostos. ES venceu por proximidade portuária de Aracruz, após dois anos de tratativas (desde 2023) e desapropriação de área pública de 1,74 milhão de m². Posição no ranking CEBC 2007-2025: 17º lugar nacional, apenas 3 projetos — caiu 2 posições em relação ao ranking 2007-2024, entre as maiores quedas do país, mesmo tendo acabado de capturar um investimento de grande porte (a discrepância se explica pelo recorte temporal do ranking, que não captura ainda plenamente o efeito da fábrica GWM anunciada em 2026).
@@ -47,4 +52,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-thematic-T241-dragao-onca-es*
+*Série O Dragão e a Onça • lawfare-thematic-T241-dragao-onca-es*

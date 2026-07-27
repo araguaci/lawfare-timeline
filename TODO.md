@@ -1,6 +1,6 @@
 # Próximos passos · lawfare-timeline
 
-**Atualizado:** 2026-07-25 (série Dragão e a Onça completa · IDs 1639–1748 · T-228–T-243)
+**Atualizado:** 2026-07-26 (expansão MG + RS · IDs 1749–1756)
 
 > Espelho: `docs/TODO.md` · Notas: `_data/todo/todo.md` · Legado: `docs/TODO-LEGACY.md`
 
@@ -10,11 +10,23 @@
 
 | Track | Last | Próximo | Validação |
 |-------|------|---------|-----------|
-| Main | **1748** | **1749** | dragao-onca 110 entradas |
+| Main | **1756** | **1757** | dragao-onca **118** entradas |
 | Thematic | **T-243** | **T-244** | síntese final + ranking CEBC T-242 |
 | Historical pre-1990 | PREC-1930-07 | — | 14 entradas · T-224 |
 | Historical pos-1990 | PREC-1997-05 | — | 1 entrada · sidecar |
 | Fila `_data/todo/` | vazio | — | — |
+
+---
+
+## Rodada 26/07/2026 ✅ — Expansão MG + RS (investigação profunda)
+
+| Faixa | Conteúdo |
+|-------|----------|
+| **1749** | GWM — critérios ES (instabilidade institucional; complementa id_1737) |
+| **1750–1755** | MG expandido — BYD/Coronel Murta, Wondfo/Celer, CRRC Metrô BH, visita Changchun, Midea R$198mi, 1º trem CRRC |
+| **1756** | RS Day Pequim (23/11/2024) — precede missão BYD/GWM |
+
+**134 posts** em `_posts/dragao-onca/` · batches em `_data/processados/lawfare-batch-dragao-onca-*-1749*.json` etc.
 
 ---
 
@@ -98,6 +110,6 @@ pwsh -File tools/validate-ids.ps1
 
 ## Referências
 
-- Corpus: `_data/lawfare.json` (1601 entradas · ID 1–1638)
+- Corpus: `_data/lawfare.json` (1719 entradas · ID 1–1756)
 - Sidecars: `precedentes-republica.json` · `precedentes-pos-1990.json`
 - [lawfare-timeline.vercel.app](https://lawfare-timeline.vercel.app)

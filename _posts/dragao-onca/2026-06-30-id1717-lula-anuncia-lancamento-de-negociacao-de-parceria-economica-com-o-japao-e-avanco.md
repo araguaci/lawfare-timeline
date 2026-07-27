@@ -46,4 +46,4 @@ Brasil busca diversificar parcerias comerciais (Japão, China) via bloco Mercosu
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-diplomatico-1713-1718*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-diplomatico-1713-1718*

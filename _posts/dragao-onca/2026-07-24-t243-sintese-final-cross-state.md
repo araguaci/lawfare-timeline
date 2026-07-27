@@ -16,6 +16,11 @@ status: confirmed
 
 ***
 
+> **Link para dossiê completo:** [Síntese final cross-state (T-243)](https://gosurf.site/dragao-onca-sintese-final)
+
+***
+
+
 ## 📋 Resumo
 
 Síntese final cross-state da série: qualifica a tese *soberania na conta do governador* com comparativo entre Federal, Goiás, Pará, Amazonas, Minas Gerais, Bahia, São Paulo, Paraná, Rio Grande do Sul e Espírito Santo; tipologia de cinco mecanismos de captura; correção metodológica pós-merge dos capítulos T-228 e IDs 1740–1748.
@@ -145,4 +150,4 @@ ev-inference: a tese 'soberania na conta do governador' formulada no início da 
 - [📖 Buscar na Wikipedia](https://pt.wikipedia.org/w/index.php?search=O%20Drag%C3%A3o%20e%20a%20On%C3%A7a%20%E2%80%94%20S%C3%ADntese%20Final%3A%20Governadores%20vs.%20Pot%C3%AAncias%20Estrangeiras%20%28Soberania%20na%20Conta%20do%20Governador%29)
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-thematic-T243-sintese-final-cross-state*
+*Série O Dragão e a Onça • lawfare-thematic-T243-sintese-final-cross-state*

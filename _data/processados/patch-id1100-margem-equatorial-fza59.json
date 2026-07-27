@@ -1,0 +1,23 @@
+{
+  "patch_target_id": 1100,
+  "patch_type": "correcao_bug_parser",
+  "descricao_bug": "Entrada original tinha pessoas_envolvidas populado com headers de template (['Data','Autoridade','Frase','Local','Gravidade','Marcadores','Fontes']) e fontes: ['N/A'] — instância do bug de parser conhecido em categorias lawfare/indecoro.",
+  "campos_corrigidos": {
+    "titulo": "Lula critica o 'lenga-lenga' do Ibama na liberação da pesquisa de petróleo na Margem Equatorial (bloco FZA-M-59, Amapá)",
+    "descricao": "Em entrevista à Rádio Diário FM de Macapá (12/02/2025), o presidente Lula criticou a demora do Ibama em liberar licença de pesquisa à Petrobras no bloco FZA-M-59, na Bacia da Foz do Amazonas, a 175km da costa do Amapá. Disse que 'não dá para a gente ficar nesse lenga-lenga, o Ibama é um órgão do governo, parecendo que é um órgão contra o governo'. Ibama havia indeferido a licença em maio de 2023; após revisão do projeto (incluindo construção de centro de resposta a emergências em Oiapoque/AP), a licença de operação foi finalmente emitida em 20/10/2025 (LO nº 1.684/2025).",
+    "pessoas_envolvidas": [
+      "Luiz Inácio Lula da Silva (Presidente da República)",
+      "Rodrigo Agostinho (Presidente do Ibama)"
+    ],
+    "instituicoes_envolvidas": ["Presidência da República", "Ibama", "Petrobras", "Casa Civil"],
+    "fontes": [
+      "https://www.brasil247.com/brasil/apos-lula-cobrar-o-fim-da-lenga-lenga-sobre-a-margem-equatorial-presidente-do-ibama-fala-em-pressao",
+      "https://www.infomoney.com.br/politica/lula-x-ibama-entenda-a-disputa-envolvendo-a-exploracao-da-margem-equatorial/",
+      "https://horadopovo.com.br/lula-critica-o-lenga-lenga-do-ibama-na-liberacao-da-pesquisa-na-margem-equatorial/",
+      "https://www.cnnbrasil.com.br/economia/macroeconomia/lula-pressiona-ibama-a-estudar-extracao-da-margem-equatorial/"
+    ],
+    "evidence_status": "ev-confirmed",
+    "nota_metodologica": "Bloco FZA-M-59 é ativo da Petrobras leiloado em 2013 — SEM participação chinesa. Não confundir com os blocos FZA-M-405/473/475 (id_1759), arrematados por consórcio Chevron/CNPC em 2025. Mesma bacia e mesmo tema regulatório (licenciamento Ibama na Margem Equatorial), ativos e processos de licenciamento distintos.",
+    "connections": ["id_1759"]
+  }
+}

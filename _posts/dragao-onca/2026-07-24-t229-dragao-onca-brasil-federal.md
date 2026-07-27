@@ -16,6 +16,11 @@ status: confirmed
 
 ***
 
+> **Link para dossiê completo:** [Capítulo Brasil (Federal)](https://gosurf.site/dragao-onca-brasil-federal)
+
+***
+
+
 # Brasil-China desde 1993: não é escolha de um governo — é desenho institucional
 
 A relação estrutural Brasil-China não começou com Lula em 2003. A Parceria Estratégica existe desde **1993**, governo Itamar Franco. China virou parceiro comercial nº 1 em **2009** — posição mantida por 17 anos consecutivos.

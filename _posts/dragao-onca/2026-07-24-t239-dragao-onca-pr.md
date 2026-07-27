@@ -16,6 +16,11 @@ status: confirmed
 
 ***
 
+> **Link para dossiê completo:** [Capítulo Paraná](https://gosurf.site/dragao-onca-parana)
+
+***
+
+
 ## 📋 Resumo
 
 Estado: Paraná. Período: 2018-03 a 2025-11 (4 entradas main track, 1731-1734). Eixo central: China Merchants Port (CMPort) controla 90% do TCP desde 2018; Ratinho Jr presente pessoalmente em cerimônias com autoridades chinesas (2019); renovação de acordos estratégicos estadual (APPA) e federal (MPor) em novembro de 2025, ambos assinados na China com dois dias de diferença. NOTA: frente Ratinho/Tayayá/Banco Master investigada em paralelo NÃO tem vínculo chinês e foi deliberadamente excluída deste capítulo — registrada como to-do separado (ver memory) para futura atualização dos dossiês banco-master.html/banco-master-os-donos.html, que já documentam Toffoli-Tayayá mas não a conexão Ratinho.
@@ -48,4 +53,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-thematic-T239-dragao-onca-pr*
+*Série O Dragão e a Onça • lawfare-thematic-T239-dragao-onca-pr*

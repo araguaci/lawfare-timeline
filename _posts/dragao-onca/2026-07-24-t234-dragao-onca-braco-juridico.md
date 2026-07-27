@@ -16,6 +16,11 @@ status: confirmed
 
 ***
 
+> **Link para dossiê completo:** [Braço Jurídico](https://gosurf.site/dragao-onca-braco-juridico)
+
+***
+
+
 # Braço Jurídico: a arquitetura legal que viabiliza os capítulos estaduais
 
 Os capítulos Goiás, Pará, Amazonas e Minas Gerais documentam **execução** — governadores negociando com capital estrangeiro. Este capítulo documenta a **arquitetura legal** que torna essa execução possível.

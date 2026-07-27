@@ -16,6 +16,11 @@ status: confirmed
 
 ***
 
+> **Link para dossiê completo:** [Braço Diplomático](https://gosurf.site/dragao-onca-braco-diplomatico)
+
+***
+
+
 ## 📋 Resumo
 
 Tema federal/nacional: memorando Fazenda-China (id_1713), disputa EUA-China por minerais críticos (id_1714), venda da Serra Verde à USA Rare Earth (id_1715), acordo G7 terras raras (id_1716), Mercosul-China/Japão (id_1717), adesão à WAICO (id_1718). Período: 2025-08 a 2026-07 (6 entradas main track, 1713-1718).
@@ -54,4 +59,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-thematic-T236-dragao-onca-diplomatico*
+*Série O Dragão e a Onça • lawfare-thematic-T236-dragao-onca-diplomatico*

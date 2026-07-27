@@ -50,4 +50,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-sp-1726-1730*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-sp-1726-1730*

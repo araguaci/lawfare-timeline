@@ -16,6 +16,11 @@ status: confirmed
 
 ***
 
+> **Link para dossiê completo:** [Ranking CEBC 2007-2025](https://gosurf.site/dragao-onca-rs-es-ranking)
+
+***
+
+
 ## 📋 Resumo
 
 Capítulo transversal com ranking oficial CEBC (Conselho Empresarial Brasil-China), relatório 'Investimentos Chineses no Brasil 2025' (abr/2026). Estoque 2007-2025: US$85,5 bi em 355 projetos, 20 UFs. Contextualiza capítulos T-238 (SP, 151 projetos), T-239 (PR, 8º), T-240 (RS, 6º, caiu do 5º), T-241 (ES, 17º, caiu do 15º). Complementa dossiê HTML dragao-onca-rs-es-ranking-nacional.html.
@@ -67,4 +72,4 @@ ev-inference: o ranking CEBC desloca a pergunta da série — de 'o governador v
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-thematic-T242-dragao-onca-ranking-cebc*
+*Série O Dragão e a Onça • lawfare-thematic-T242-dragao-onca-ranking-cebc*

@@ -16,6 +16,11 @@ status: confirmed
 
 ***
 
+> **Link para dossiê completo:** [Capítulo Pará](https://gosurf.site/dragao-onca-para)
+
+***
+
+
 # Pará: ferrovia chinesa, COP30 e 39 mortes que ninguém menciona nos anúncios
 
 Helder Barbalho reúne, num único estado, capital chinês em infraestrutura mineral, a Vale como parte formal do acordo, capital norueguês em conflito com comunidades, rede familiar em três pontos de poder simultâneos — e a COP30 como vitrine.

@@ -36912,7 +36912,7 @@
       "id": 1099
     },
     {
-      "titulo": "Lula - Criticou o 'lenga-lenga' do Ibama na exploração por petróleo na foz do Amazonas, na chamada Margem Equatorial....",
+      "titulo": "Lula critica o 'lenga-lenga' do Ibama na liberação da pesquisa de petróleo na Margem Equatorial (bloco FZA-M-59, Amapá)",
       "data_evento": "2025-02-12",
       "data_iso": "2025-02-12T00:00:00Z",
       "categoria": "indecoro",
@@ -36921,30 +36921,39 @@
         "lula",
         "lula",
         "meio ambiente",
-        "política energética"
+        "política energética",
+        "ev-confirmed"
       ],
-      "descricao": "Frase dita por lula em Entrevista à Rádio Diário FM, Amapá",
+      "descricao": "Em entrevista à Rádio Diário FM de Macapá (12/02/2025), o presidente Lula criticou a demora do Ibama em liberar licença de pesquisa à Petrobras no bloco FZA-M-59, na Bacia da Foz do Amazonas, a 175km da costa do Amapá. Disse que 'não dá para a gente ficar nesse lenga-lenga, o Ibama é um órgão do governo, parecendo que é um órgão contra o governo'. Ibama havia indeferido a licença em maio de 2023; após revisão do projeto (incluindo construção de centro de resposta a emergências em Oiapoque/AP), a licença de operação foi finalmente emitida em 20/10/2025 (LO nº 1.684/2025).",
       "relevancia": "media",
       "impacto_diplomatico": "N/A",
       "tipo_escandalo": "N/A",
       "fontes": [
-        "N/A"
+        "https://www.brasil247.com/brasil/apos-lula-cobrar-o-fim-da-lenga-lenga-sobre-a-margem-equatorial-presidente-do-ibama-fala-em-pressao",
+        "https://www.infomoney.com.br/politica/lula-x-ibama-entenda-a-disputa-envolvendo-a-exploracao-da-margem-equatorial/",
+        "https://horadopovo.com.br/lula-critica-o-lenga-lenga-do-ibama-na-liberacao-da-pesquisa-na-margem-equatorial/",
+        "https://www.cnnbrasil.com.br/economia/macroeconomia/lula-pressiona-ibama-a-estudar-extracao-da-margem-equatorial/"
       ],
       "pessoas_envolvidas": [
-        "Data",
-        "Autoridade",
-        "Frase",
-        "Local",
-        "Gravidade",
-        "Marcadores",
-        "Fontes"
+        "Luiz Inácio Lula da Silva (Presidente da República)",
+        "Rodrigo Agostinho (Presidente do Ibama)"
       ],
-      "instituicoes_envolvidas": [],
+      "instituicoes_envolvidas": [
+        "Presidência da República",
+        "Ibama",
+        "Petrobras",
+        "Casa Civil"
+      ],
       "pais": "Brasil",
       "valor_envolvido": "N/A",
       "prioridade": 2,
       "fonte_arquivo": "_posts\\indecoro\\2025-02-12-lula-criticou-o-lenga-lenga-do.md",
-      "id": 1100
+      "id": 1100,
+      "connections": [
+        "id_1759"
+      ],
+      "nota_metodologica": "Bloco FZA-M-59 é ativo da Petrobras leiloado em 2013 — SEM participação chinesa. Não confundir com os blocos FZA-M-405/473/475 (id_1759), arrematados por consórcio Chevron/CNPC em 2025. Mesma bacia e mesmo tema regulatório (licenciamento Ibama na Margem Equatorial), ativos e processos de licenciamento distintos.",
+      "nota_correcao_parser": "Entrada original tinha pessoas_envolvidas populado com headers de template (['Data','Autoridade','Frase','Local','Gravidade','Marcadores','Fontes']) e fontes: ['N/A'] — instância do bug de parser conhecido em categorias lawfare/indecoro."
     },
     {
       "titulo": "Entrevista à CNN Brasil",
@@ -58561,10 +58570,570 @@
       ],
       "fonte_arquivo": "_posts\\dragao-onca\\2026-06-18-id1748-caiado-terras-raras-campanha.md",
       "id": 1748
+    },
+    {
+      "titulo": "GWM detalha publicamente critérios de escolha do Espírito Santo, citando instabilidade institucional dos concorrentes",
+      "data_evento": "2026-07-01",
+      "data_iso": "2026-07-01T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "dragao-onca",
+        "china",
+        "rio-grande-do-sul",
+        "espirito-santo",
+        "P05",
+        "simetria"
+      ],
+      "descricao": "Em cerimônia de inauguração em Aracruz, Ricardo Bastos, diretor de Relações Institucionais da GWM Brasil, detalha os critérios de escolha do Espírito Santo perante seis estados concorrentes (Rio Grande do Sul, São Paulo, Minas Gerais, Santa Catarina e Paraná, além do próprio ES): 'transparência, profissionalismo, segurança jurídica' e menciona explicitamente instabilidade institucional dos concorrentes como fator de desempate, além da facilidade logística já registrada anteriormente (id_1737). É a atribuição pública mais específica e nominal de critérios de derrota já identificada nesta série — o RS perdeu não apenas por logística portuária, mas por percepção de instabilidade institucional relativa ao ES.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "Amplia e qualifica o encerramento do capítulo RS×GWM (id_1737): a explicação original (logística portuária) já havia sido registrada, mas esta declaração posterior introduz um segundo critério — instabilidade institucional — não capturado na cobertura de junho/2026. Reforça a leitura de que diplomacia pessoal do governador (Leite em Shenzhen, id_1735) não neutraliza desvantagens percebidas de ambiente institucional.",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://elimarcortes.com.br/2026/07/01/justica-historica-ricardo-ferraco-e-o-maior-responsavel-pela-instalacao-de-fabrica-de-veiculos-da-china-no-estado/"
+      ],
+      "pessoas_envolvidas": [
+        "Ricardo Bastos (diretor de Relações Institucionais, GWM Brasil)",
+        "Ricardo Ferraço (Governador do Espírito Santo)"
+      ],
+      "instituicoes_envolvidas": [
+        "GWM Brasil",
+        "Governo do Estado do Espírito Santo"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 2,
+      "analise": "ev-confirmed: complementa id_1737 com critério adicional (instabilidade institucional) não presente na cobertura original de junho/2026. Não contradiz a análise anterior (par de controle RS×ES) — reforça-a com uma segunda métrica.",
+      "lacuna_investigativa": "",
+      "connections": [
+        "id_1735",
+        "id_1736",
+        "id_1737",
+        "id_1738",
+        "id_1739"
+      ],
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-07-01-id1749-gwm-detalha-publicamente-criterios-de-escolha-do-espirito-santo-citando-instabil.md",
+      "id": 1749
+    },
+    {
+      "titulo": "BYD adquire direitos minerais de lítio em Coronel Murta (MG), no mesmo Vale do Jequitinhonha da Sigma Lithium",
+      "data_evento": "2025-02-16",
+      "data_iso": "2025-02-16T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "dragao-onca",
+        "china",
+        "minas-gerais",
+        "soberania",
+        "P05"
+      ],
+      "descricao": "Reportagem baseada em apuração da Reuters revela que a montadora chinesa BYD, via subsidiária Exploração Mineral do Brasil, adquiriu em 2023 direitos minerais sobre dois terrenos em Coronel Murta, no Vale do Jequitinhonha — mesma macrorregião onde a Sigma Lithium opera em Itinga (id_1680), mas projeto e município distintos. Veículos de imprensa alinhados à esquerda (Brasil 247, Revista Fórum) tratam a aquisição sob a moldura de 'entreguismo' de reserva mineral estratégica por parte de Zema, em paralelo à medida do governo Bolsonaro que facilitou a compra.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "Contradiz a leitura de que o capítulo mineiro do lítio é puramente ocidental (Sigma Lithium/Nasdaq/TSXV/B3, fornecimento à LG sul-coreana). Há capital chinês direto na mesma região mineral, sob regime de exploração distinto e com cobertura estatal muito menor que a dada à Sigma pelo governo de Minas.",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://www.brasil247.com/mundo/byd-e-vale-do-litio-bolsonaro-e-a-entrega-da-riqueza-mineral-para-a-china/",
+        "https://revistaforum.com.br/global/chinaemfoco/2025/2/14/byd-vale-do-litio-bolsonaro-entrega-da-riqueza-mineral-para-china-174111.html"
+      ],
+      "pessoas_envolvidas": [
+        "Romeu Zema (Governador de Minas Gerais)"
+      ],
+      "instituicoes_envolvidas": [
+        "BYD",
+        "Exploração Mineral do Brasil"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "analise": "ev-confirmed (aquisição, via Reuters) + ev-alleged (caracterização de 'entreguismo', enquadramento de imprensa partidária, não conclusão factual de irregularidade).",
+      "lacuna_investigativa": "Data exata da transação de 2023 não confirmada em fonte primária — apenas a data de revelação jornalística (fev/2025). Termos do regime de exploração (incentivos, contrapartidas, cronograma) não discriminados publicamente, em contraste com a cobertura extensa dada à Sigma Lithium.",
+      "connections": [
+        "id_1679",
+        "id_1680"
+      ],
+      "fonte_arquivo": "_posts\\dragao-onca\\2025-02-16-id1750-byd-adquire-direitos-minerais-de-litio-em-coronel-murta-mg-no-mesmo-vale-do-jequ.md",
+      "id": 1750
+    },
+    {
+      "titulo": "Zema autoriza em Xangai fábrica da Celer Biotecnologia em parceria com a chinesa Guangzhou Wondfo Biotech (Montes Claros)",
+      "data_evento": "2023-11-06",
+      "data_iso": "2023-11-06T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "dragao-onca",
+        "china",
+        "minas-gerais",
+        "soberania",
+        "P05"
+      ],
+      "descricao": "Durante missão oficial à Ásia, o governador Romeu Zema assina em Xangai despacho que autoriza a construção de unidade industrial da Celer Biotecnologia, em parceria com a chinesa Guangzhou Wondfo Biotech, em Montes Claros (Norte de Minas). Investimento de R$17 milhões previsto para o período 2023-2026, cerca de 100 novos empregos, com início de operação em agosto de 2024. Mesma missão trouxe balanço declarado de mais de 2 mil vagas e R$1 bilhão em investimentos para o Estado.",
+      "relevancia": "media",
+      "impacto_diplomatico": "Primeiro investimento chinês direto documentado sob Zema fora do eixo mineral/lítio — leva capital industrial chinês ao Norte de Minas, região historicamente menos favorecida, em contraste com a concentração de atenção institucional no Vale do Lítio (Jequitinhonha).",
+      "tipo_escandalo": "N/A",
+      "fontes": [
+        "https://www.agenciaminas.mg.gov.br/noticia/na-china-governo-de-minas-garante-atracao-de-nova-fabrica-que-vai-gerar-cem-novos-empregos-no-norte-de-minas"
+      ],
+      "pessoas_envolvidas": [
+        "Romeu Zema (Governador de Minas Gerais)"
+      ],
+      "instituicoes_envolvidas": [
+        "Celer Biotecnologia",
+        "Guangzhou Wondfo Biotech"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "R$ 17 milhões",
+      "prioridade": 2,
+      "analise": "",
+      "lacuna_investigativa": "",
+      "connections": [
+        "id_1750",
+        "id_1752"
+      ],
+      "fonte_arquivo": "_posts\\dragao-onca\\2023-11-06-id1751-zema-autoriza-em-xangai-fabrica-da-celer-biotecnologia-em-parceria-com-a-chinesa.md",
+      "id": 1751
+    },
+    {
+      "titulo": "Governo de Minas assina contrato de ~R$700 milhões com a CRRC para 24 trens do Metrô BH",
+      "data_evento": "2024-07-26",
+      "data_iso": "2024-07-26T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "dragao-onca",
+        "china",
+        "minas-gerais",
+        "soberania",
+        "P05",
+        "P10"
+      ],
+      "descricao": "O Governo de Minas, por meio da Secretaria de Estado de Infraestrutura, Mobilidade e Parcerias (Seinfra) e da concessionária Metrô BH, anuncia contrato de aproximadamente R$700 milhões com a Changchun Railway Vehicles, subsidiária da estatal chinesa CRRC Corporation — maior fabricante de material rodante do mundo — para 24 novos trens da Série 2000. O investimento foi antecipado pelo Estado dentro do contrato de concessão de 30 anos com a Metrô BH.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "Maior compromisso individual documentado entre MG e capital chinês nesta série — concentra a modernização de infraestrutura crítica de transporte metropolitano em um único fornecedor estatal estrangeiro, repetindo padrão já observado em São Paulo (id_1726-1729) com a mesma CRRC.",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "http://www.infraestrutura.mg.gov.br/transparencia-publica/informacoes-classificadas-e-desclassificadas/story/3470-governo-de-minas-anuncia-compra-de-24-novos-trens-para-o-metro-de-bh"
+      ],
+      "pessoas_envolvidas": [
+        "Romeu Zema (Governador de Minas Gerais)",
+        "Mateus Simões (Vice-Governador)"
+      ],
+      "instituicoes_envolvidas": [
+        "CRRC Corporation",
+        "Changchun Railway Vehicles",
+        "Metrô BH",
+        "Seinfra-MG"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "R$ 700 milhões (aprox.)",
+      "prioridade": 1,
+      "analise": "",
+      "lacuna_investigativa": "",
+      "connections": [
+        "id_1726",
+        "id_1727",
+        "id_1728",
+        "id_1729",
+        "id_1753",
+        "id_1755"
+      ],
+      "fonte_arquivo": "_posts\\dragao-onca\\2024-07-26-id1752-governo-de-minas-assina-contrato-de-r700-milhoes-com-a-crrc-para-24-trens-do-met.md",
+      "id": 1752
+    },
+    {
+      "titulo": "Zema visita pessoalmente a fábrica da CRRC em Changchun (China), incluindo joint venture CRRC-Alstom",
+      "data_evento": "2025-06-18",
+      "data_iso": "2025-06-18T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "dragao-onca",
+        "china",
+        "minas-gerais",
+        "soberania",
+        "P05"
+      ],
+      "descricao": "Na mesma missão internacional em que reuniu-se com o Midea Group em Pequim (id_1754), o governador Romeu Zema e comitiva visitam as instalações da Changchun Railway Vehicles (CRRC) para conhecer o processo de fabricação dos trens do Metrô BH, incluindo a joint venture CRRC-Alstom (Carc), responsável pelos painéis elétricos e consoles dos trens. A mesma missão incluiu reunião com o vice-ministro do Comércio Exterior chinês, Li Chenggang, sobre embargo sanitário à carne de frango brasileira.",
+      "relevancia": "media",
+      "impacto_diplomatico": "Padrão de protagonismo pessoal do governador em negociações com fornecedores estatais chineses, análogo ao de Eduardo Leite com a State Grid/CPFL (RS) e à visita de Leite à BYD em Shenzhen (id_1735).",
+      "tipo_escandalo": "N/A",
+      "fontes": [
+        "http://www.infraestrutura.mg.gov.br/component/gmg/story/3668-na-china-governo-de-minas-conhece-fabrica-dos-novos-trens-do-metro-da-rmbh"
+      ],
+      "pessoas_envolvidas": [
+        "Romeu Zema (Governador de Minas Gerais)",
+        "Li Chenggang (Vice-ministro do Comércio Exterior da China)"
+      ],
+      "instituicoes_envolvidas": [
+        "CRRC Corporation",
+        "CRRC-Alstom (Carc)",
+        "Ministério do Comércio Exterior da China"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 2,
+      "analise": "",
+      "lacuna_investigativa": "",
+      "connections": [
+        "id_1735",
+        "id_1752",
+        "id_1754"
+      ],
+      "fonte_arquivo": "_posts\\dragao-onca\\2025-06-18-id1753-zema-visita-pessoalmente-a-fabrica-da-crrc-em-changchun-china-incluindo-joint-ve.md",
+      "id": 1753
+    },
+    {
+      "titulo": "Midea Group anuncia R$198 milhões em 4 novos projetos em Minas Gerais, em reunião com Zema em Pequim",
+      "data_evento": "2025-06-16",
+      "data_iso": "2025-06-16T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "dragao-onca",
+        "china",
+        "minas-gerais",
+        "soberania",
+        "P05"
+      ],
+      "descricao": "No primeiro dia de missão à Ásia, o governador Romeu Zema reúne-se em Pequim com executivos do Midea Group, multinacional chinesa de eletrodomésticos, que anuncia R$198 milhões em quatro novos projetos — fábrica de motores Welling Motor (Santa Rita do Sapucaí), centro de distribuição (Extrema) e fábrica de EPS (Pouso Alegre) — com 830 empregos diretos projetados. Soma-se aos R$630 milhões já investidos anteriormente pela Midea em Pouso Alegre, com unidade operando desde dezembro de 2024, totalizando R$828 milhões em dois ciclos de investimento no Sul de Minas.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "Investidor chinês mais recorrente e ativo em MG sob Zema, com dois ciclos de aporte documentados — contraponto de capital industrial (não mineral) ao eixo do lítio que dominou a cobertura institucional do governo.",
+      "tipo_escandalo": "N/A",
+      "fontes": [
+        "https://www.agenciaminas.mg.gov.br/noticia/em-primeiro-dia-da-missao-na-asia-governo-de-minas-atrai-investimento-de-r-198-milhoes-do-midea-group"
+      ],
+      "pessoas_envolvidas": [
+        "Romeu Zema (Governador de Minas Gerais)"
+      ],
+      "instituicoes_envolvidas": [
+        "Midea Group"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "R$ 198 milhões (2025) + R$ 630 milhões (ciclo anterior) = R$ 828 milhões",
+      "prioridade": 1,
+      "analise": "",
+      "lacuna_investigativa": "",
+      "connections": [
+        "id_1753"
+      ],
+      "fonte_arquivo": "_posts\\dragao-onca\\2025-06-16-id1754-midea-group-anuncia-r198-milhoes-em-4-novos-projetos-em-minas-gerais-em-reuniao.md",
+      "id": 1754
+    },
+    {
+      "titulo": "Primeiro trem da CRRC chega ao pátio São Gabriel (BH); Zema e vice-governador apresentam à população",
+      "data_evento": "2026-02-05",
+      "data_iso": "2026-02-05T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "dragao-onca",
+        "china",
+        "minas-gerais",
+        "soberania",
+        "P05"
+      ],
+      "descricao": "O governador Romeu Zema e o vice-governador Mateus Simões apresentam à população o primeiro dos 24 novos trens do Metrô da Região Metropolitana de Belo Horizonte, produzido na China pela Changchun Railway Vehicles (CRRC) e recebido no pátio São Gabriel (região Nordeste de BH). A composição passa por testes operacionais antes de entrar em serviço na Linha 1. Marca a entrega concreta do contrato firmado em julho de 2024 (id_1752).",
+      "relevancia": "media",
+      "impacto_diplomatico": "Marco de verificação de cumprimento do contrato CRRC — primeiro de 24 trens entregues; acompanhar cronograma de conclusão total como próximo ponto de checagem.",
+      "tipo_escandalo": "N/A",
+      "fontes": [
+        "https://www.agenciaminas.mg.gov.br/noticia/governo-de-minas-apresenta-primeiro-dos-novos-trens-do-metro-da-regiao-metropolitana-de-belo-horizonte"
+      ],
+      "pessoas_envolvidas": [
+        "Romeu Zema (Governador de Minas Gerais)",
+        "Mateus Simões (Vice-Governador)"
+      ],
+      "instituicoes_envolvidas": [
+        "CRRC Corporation",
+        "Metrô BH"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 2,
+      "analise": "",
+      "lacuna_investigativa": "Cronograma de entrega dos 23 trens restantes não confirmado em fonte pública — marco de verificação futuro.",
+      "connections": [
+        "id_1752",
+        "id_1753"
+      ],
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-02-05-id1755-primeiro-trem-da-crrc-chega-ao-patio-sao-gabriel-bh-zema-e-vice-governador-apres.md",
+      "id": 1755
+    },
+    {
+      "titulo": "\"RS Day\" em Pequim — Eduardo Leite lidera evento com o nome do Estado na capital chinesa",
+      "data_evento": "2024-11-23",
+      "data_iso": "2024-11-23T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "dragao-onca",
+        "china",
+        "rio-grande-do-sul",
+        "diplomacia",
+        "P05"
+      ],
+      "descricao": "O governo do Rio Grande do Sul promove o 'RS Day' no Hotel St. Regis, em Pequim, integrado ao III Fórum sobre Desenvolvimento Sustentável da Cadeia de Comércio Internacional e ao III Fórum de Cooperação Econômica e Comercial China-Brasil, durante missão oficial do governo gaúcho à China e ao Japão (18-27/11/2024). Programação aberta com discursos do governador Eduardo Leite e do presidente no Brasil do Conselho da China para a Promoção do Comércio Internacional (CCPIT), Guo Yinghui. Leite declara a China 'o principal destino das exportações do Estado' e defende aprofundar a relação em agricultura, desenvolvimento sustentável, infraestrutura e inovação. Secretários estaduais apresentam setores econômicos e projetos estratégicos do RS aos investidores presentes.",
+      "relevancia": "media",
+      "impacto_diplomatico": "Marco de institucionalização da diplomacia pessoal do governador com a China — um evento batizado com o nome do próprio Estado em solo chinês, precedendo em cerca de 10 meses a missão de Shenzhen com a BYD (id_1736) e cerca de 14 meses o início da disputa pela fábrica da GWM (id_1735). Nenhuma fonte oficial do dia nomeia um investimento de FDI manufatureiro específico decorrente do evento — reforça a leitura do capítulo de que diplomacia pessoal extensa não se traduziu em captura de investimento industrial (contraste com a derrota na disputa GWM, id_1737).",
+      "tipo_escandalo": "N/A",
+      "fontes": [
+        "https://www.estado.rs.gov.br/em-pequim-rs-day-reforca-parcerias-estrategicas-do-rio-grande-do-sul-com-a-china",
+        "https://www.sema.rs.gov.br/em-pequim-rs-day-reforca-parcerias-estrategicas-do-rio-grande-do-sul-com-a-china"
+      ],
+      "pessoas_envolvidas": [
+        "Eduardo Leite (Governador do Rio Grande do Sul)",
+        "Guo Yinghui (presidente no Brasil do CCPIT)"
+      ],
+      "instituicoes_envolvidas": [
+        "Governo do Estado do Rio Grande do Sul",
+        "CCPIT (China Council for the Promotion of International Trade)"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 2,
+      "analise": "",
+      "lacuna_investigativa": "Nenhum investimento ou memorando específico nomeado nas fontes oficiais do evento — o RS Day é registrado como marco institucional-diplomático, sem contrapartida de FDI documentada no mesmo dia.",
+      "connections": [
+        "id_1735",
+        "id_1736",
+        "id_1737"
+      ],
+      "fonte_arquivo": "_posts\\dragao-onca\\2024-11-23-id1756-rs-day-em-pequim-eduardo-leite-lidera-evento-com-o-nome-do-estado-na-capital-chi.md",
+      "id": 1756
+    },
+    {
+      "titulo": "Cooperativa Amazonbai (Amapá) fecha contrato de exportação de açaí à China — 15 mil toneladas até 2031, série O Dragão e a Onça, capítulo de controle",
+      "data_evento": "2026-05-22",
+      "data_iso": "2026-05-22T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "dragao-onca"
+      ],
+      "descricao": "Cooperativa dos Produtores Extrativistas do Estado do Amapá (Amazonbai) firmou acordo com a segunda maior rede de distribuição de alimentos da China, durante a Sial China 2026 (Xangai, 18–20/mai), para fornecimento de 15 mil toneladas de açaí ao longo de cinco anos, com escoamento integral da safra até 2031. Missão apoiada pelo Ministério da Integração e do Desenvolvimento Regional (MIDR — Rotas de Integração Nacional, R$207 mil investidos em 8 cooperativas) e pelo Governo do Amapá (Selo Amapá, gestão do governador Clécio Luís). Vendedor é a própria cooperativa extrativista; não há intermediário estatal ou corporativo identificado entre produtor e comprador.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "Contrato anunciado; cooperativa passa a ter comprador garantido para toda a safra pelos próximos 5 anos. Preço por tonelada não divulgado em nenhuma fonte apurada.",
+      "tipo_escandalo": "N/A",
+      "fontes": [
+        "https://www.gov.br/mdr/pt-br/noticias/acai-do-amapa-conquista-mercado-chines",
+        "https://agenciagov.ebc.com.br/noticias/202605/acai-do-amapa-conquista-mercado-chines",
+        "https://diariodopara.com.br/noticias/brasil/gigante-chinesa-compra-toda-a-safra-de-acai-do-amapa/",
+        "https://www.diariodoamapa.com.br/cadernos/cidades/com-o-selo-amapa-governo-do-estado-transforma-produtos-regionais-em-marcas-competitivas-no-mercado-global/"
+      ],
+      "pessoas_envolvidas": [
+        "Amiraldo Picanço",
+        "Waldez Góes",
+        "Clécio Luís"
+      ],
+      "instituicoes_envolvidas": [
+        "Amazonbai",
+        "MIDR",
+        "Governo do Amapá",
+        "Agência de Desenvolvimento Econômico do Amapá"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "analise": "Caso de controle metodológico para a série O Dragão e a Onça. Ao contrário dos capítulos Goiás (CMOC/nióbio), Pará (bauxita), Amazonas e Minas Gerais (terras raras/lítio), aqui o vendedor é o próprio produtor extrativista organizado em cooperativa — não há governador ou multinacional posicionados como intermediários que capturam o excedente entre extração e exportação. A estrutura de benefício documentada nas fontes disponíveis não reproduz o padrão 'soberania na conta do governador': o Estado (federal e estadual) aparece como facilitador de acesso a mercado (feira comercial, certificação de origem), não como parte que retém valor. Aplicar P05 ou P10 aqui seria strawman — os R$207 mil do MIDR financiam participação em feira comercial de 8 cooperativas, não um vetor de extração de renda. Este registro serve para testar o limite da tese central: nem todo acordo comercial Brasil-China envolvendo recursos naturais amazônicos replica o mecanismo de captura documentado nos capítulos anteriores da série.",
+      "lacuna_investigativa": "Preço por tonelada e cláusulas de reajuste do contrato não divulgados. Não há apuração jornalística independente dos termos financeiros — todas as fontes derivam de comunicado oficial (MIDR/Agência Gov) ou replicam esse comunicado.",
+      "connections": [
+        "id_1740",
+        "id_1748",
+        "id_1750",
+        "id_1756"
+      ],
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-05-22-id1757-cooperativa-amazonbai-amapa-fecha-contrato-de-exportacao-de-acai-a-china-15-mil.md",
+      "id": 1757
+    },
+    {
+      "titulo": "Venda de açaí do Amapá à China pendente de certificação GACC — contrato ainda não concluído",
+      "data_evento": "2026-05-25",
+      "data_iso": "2026-05-25T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "dragao-onca"
+      ],
+      "descricao": "Reportagem publicada em 25/05/2026 esclarece que a venda de açaí da Amazonbai à China, anunciada em 22/05/2026, ainda não foi concluída: falta a certificação/registro GACC (General Administration of Customs of China), exigência obrigatória do governo chinês para importação de alimentos. O anúncio oficial (MIDR, Governo do Amapá) tratou o acordo como fechado; a ressalva sobre a pendência regulatória apareceu apenas em cobertura jornalística posterior, não no comunicado original.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "Contrato anunciado publicamente antes da conclusão regulatória efetiva. Sem confirmação posterior encontrada de emissão da certificação GACC até a data de fechamento desta entrada.",
+      "tipo_escandalo": "N/A",
+      "fontes": [
+        "https://oantagonico.net.br/o-amapa-a-amazonbai-a-china-o-contrato-as-15-mil-toneladas-de-acai/"
+      ],
+      "pessoas_envolvidas": [
+        "Amazonbai"
+      ],
+      "instituicoes_envolvidas": [
+        "Amazonbai",
+        "GACC (China)",
+        "MIDR"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "analise": "Gargalo de certificação (GACC) é o único ponto estrutural, nas fontes disponíveis, com potencial de se tornar vetor de captura futura — quem controla o ritmo de certificação tem poder de barganha sobre o comprador único chinês. Até o momento, não há evidência de que esse poder tenha sido exercido de forma extrativa; é registrado aqui como hipótese de vigilância (`ev-inference`), não como padrão confirmado.",
+      "lacuna_investigativa": "Não há fonte que confirme emissão da certificação GACC após 25/05/2026, nem prazo estimado para conclusão. Gargalo regulatório é ponto de vigilância: se a certificação não for emitida, o 'contrato' anunciado é acordo de intenção, não venda efetiva.",
+      "connections": [
+        "id_1757"
+      ],
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-05-25-id1758-venda-de-acai-do-amapa-a-china-pendente-de-certificacao-gacc-contrato-ainda-nao.md",
+      "id": 1758
+    },
+    {
+      "titulo": "Consórcio Chevron/CNPC arremata 9 blocos na Bacia da Foz do Amazonas (Margem Equatorial) — primeira entrada da estatal chinesa na região",
+      "data_evento": "2025-06-17",
+      "data_iso": "2025-06-17T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "dragao-onca",
+        "P05"
+      ],
+      "descricao": "No 5º Ciclo da Oferta Permanente de Concessão da ANP (Rio de Janeiro, 17/06/2025), o consórcio formado por Chevron Brasil Óleo (operadora, 50%–65% de participação conforme o bloco) e CNPC Brasil (estatal chinesa, 50%–65%) arrematou 9 dos 19 blocos vendidos na Bacia da Foz do Amazonas, área da Margem Equatorial nas águas marítimas entre os estados do Pará e do Amapá. Blocos identificados nominalmente: FZA-M-405, FZA-M-473, FZA-M-475 (lista completa dos 9 não consolidada em fonte única). Valor pago em bônus de assinatura: R$582,2 milhões — parte dos R$845 milhões totais arrecadados nos 19 blocos da bacia (Petrobras/ExxonMobil arremataram os outros 10, por ~R$262 milhões). Para a CNPC, que até então operava no Brasil apenas no pré-sal da Bacia de Santos, a aquisição representa primeira entrada na Margem Equatorial e diversificação estratégica de portfólio.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "Consórcio Chevron/CNPC torna-se o maior arrematante individual da Bacia da Foz do Amazonas em número de blocos (9 de 19), superando a concorrência de Petrobras/ExxonMobil em 7 deles.",
+      "tipo_escandalo": "N/A",
+      "fontes": [
+        "https://www.migalhas.com.br/quentes/433844/anp-concede-19-areas-para-exploracao-de-petroleo-na-foz-do-amazonas",
+        "https://www.brasildefato.com.br/2025/06/17/em-consorcio-com-a-multinacional-exxonmobil-petrobras-arremata-10-dos-47-blocos-de-petroleo-da-foz-do-amazonas/",
+        "https://en.clickpetroleoegas.com.br/presenca-chinesa-na-foz-do-amazonas-como-a-cnpc-em-parceria-com-a-chevron-garantiu-9-blocos-por-r-5822-milhoes-btl96/",
+        "https://diario.dopovo.com.br/2025/06/18/cnpc-participa-de-leilao-e-explora-blocos-na-foz-do-amazonas/"
+      ],
+      "pessoas_envolvidas": [
+        "CNPC Brasil (China National Petroleum Corporation)",
+        "Chevron Brasil Óleo",
+        "Agência Nacional do Petróleo, Gás Natural e Biocombustíveis (ANP)"
+      ],
+      "instituicoes_envolvidas": [
+        "ANP",
+        "CNPC Brasil",
+        "Chevron Brasil Óleo"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "analise": "Terceiro padrão estrutural na relação Amapá-China, distinto dos dois já mapeados na série: aqui não há governador nem cooperativa como interlocutor — é leilão federal (ANP/União) de ativo offshore que afeta diretamente o litoral do Amapá (risco de vazamento reconhecido pela própria Petrobras em relatório sobre bloco vizinho, FZA-M-59), sem que o estado tenha assento formal na negociação federal. Diferente do padrão 'soberania na conta do governador' (Goiás/Pará/Amazonas/MG) — aqui a decisão é inteiramente federal — e diferente do caso de controle do açaí (Amapá vende diretamente, sem intermediário). É um terceiro tipo: captura de decisão sobre território costeiro estadual por esfera federal, com participação de capital estatal estrangeiro (China), sem voz institucional documentada do governo do Amapá no processo do leilão em si. Aplicação de P05 (uso de recursos/ativos públicos como vetor) é preliminar — não há, nas fontes disponíveis, evidência de irregularidade no processo licitatório da ANP, apenas ausência de interlocução estadual documentada. Não forçar além do que as fontes sustentam.",
+      "lacuna_investigativa": "(1) Lista completa dos 9 blocos não consolidada em fonte única — apenas 3 códigos (FZA-M-405, FZA-M-473, FZA-M-475) identificados nominalmente. (2) Nenhuma fonte localizada sobre status de licenciamento ambiental ou início de atividade exploratória especificamente nos blocos Chevron/CNPC — todo o noticiário de licenciamento/vazamento/multas encontrado refere-se ao bloco FZA-M-59, ativo distinto da Petrobras (leiloado em 2013, sem participação chinesa). (3) Não localizada nota sobre consulta prévia a povos indígenas/quilombolas especificamente para os blocos Chevron/CNPC.",
+      "connections": [
+        "id_1757",
+        "id_1758"
+      ],
+      "fonte_arquivo": "_posts\\dragao-onca\\2025-06-17-id1759-consorcio-chevroncnpc-arremata-9-blocos-na-bacia-da-foz-do-amazonas-margem-equat.md",
+      "id": 1759
+    },
+    {
+      "titulo": "China Merchants Port (CMPort) assina acordo para adquirir 70% da Vast Infraestrutura, dona do terminal de petróleo do Porto do Açu (RJ)",
+      "data_evento": "2025-02-28",
+      "data_iso": "2025-02-28T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "dragao-onca",
+        "P05",
+        "P10"
+      ],
+      "descricao": "A China Merchants Port Holdings (CMPORT), braço portuário do grupo estatal chinês China Merchants Group (CMG), assinou no fim de fevereiro de 2025 contrato para adquirir participação de 70% na Vast Infraestrutura (ex-Açu Petróleo), subsidiária da Prumo Logística e proprietária do terminal de petróleo (T-Oil) do Porto do Açu, em São João da Barra (RJ). Valor da transação: cerca de US$714 milhões. O terminal é o único da América do Sul apto a receber navios VLCC (Very Large Crude Carrier) e responde por cerca de 25-30% das exportações brasileiras de petróleo, movimentando ~560 mil barris/dia (capacidade licenciada de até 1,2 milhão b/d). A Prumo mantém 30% de participação. Transação sujeita a condições precedentes e aprovação de órgãos reguladores brasileiros — status de conclusão não confirmado em fontes até a data de fechamento desta entrada. Precedente direto: CMPort já havia adquirido 90% do Terminal de Contêineres de Paranaguá (TCP) em 2018 (id_ já presente no corpus) — mesma estratégia de consolidação portuária chinesa na América do Sul, citada por fontes ao lado do megaporto de Chancay (Peru).",
+      "relevancia": "alta",
+      "impacto_diplomatico": "Acordo assinado, aguardando aprovação regulatória. Repercussão na imprensa especializada inclui alerta explícito de risco à soberania nacional sobre controle estrangeiro-estatal de infraestrutura crítica de exportação de petróleo.",
+      "tipo_escandalo": "N/A",
+      "fontes": [
+        "https://www.abrazpe.org.br/index.php/2025/06/12/china-avanca-sobre-os-portos-do-brasil-estatal-compra-participacao-em-terminal-estrategico-de-petroleo-no-porto-do-acu/",
+        "https://dialogo-americas.com/articles/china-advances-global-port-dominance-strategy-in-brazil/",
+        "https://fusoesaquisicoes.com/acontece-no-setor/prumo-vende-aos-chineses-a-vast-que-opera-no-porto-do-acu/",
+        "https://www.brasil247.com/brasil/china-amplia-influencia-no-brasil-ao-adquirir-parte-de-terminal-estrategico-de-petroleo-no-porto-do-acu"
+      ],
+      "pessoas_envolvidas": [
+        "China Merchants Port Holdings (CMPORT)",
+        "Prumo Logística"
+      ],
+      "instituicoes_envolvidas": [
+        "China Merchants Port",
+        "Prumo Logística",
+        "Vast Infraestrutura",
+        "EIG Partners"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "analise": "Diferente do capítulo Amapá (petróleo/Margem Equatorial, id_1759), aqui não é leilão federal de bloco exploratório — é aquisição direta de participação societária em ativo logístico privado já operacional, por empresa estatal chinesa, com um fundo de private equity americano (EIG) como vendedor. Padrão de infraestrutura compartilhada (P10): controle de ativo crítico de escoamento nacional de petróleo passa a capital estatal estrangeiro via transação de mercado, sem que a operação em si envolva irregularidade aparente no processo de venda. O risco estrutural — já verbalizado por especialistas em fonte jornalística — é de concentração de controle sobre infraestrutura logística essencial (30% das exportações de petróleo do país) nas mãos de um único operador estatal estrangeiro, replicando padrão observado em outros portos da América do Sul (Chancay/Peru, TCP/Paranaguá).",
+      "lacuna_investigativa": "Status final de aprovação regulatória (CADE e órgãos setoriais) não confirmado em nenhuma fonte apurada até jul/2026 — não localizada nota de conclusão ou rejeição da transação. Valor exato da participação final (70% anunciado inicialmente; algumas fontes tratam como 'compra', outras como 'negociação em andamento') carece de fonte primária pós-fechamento.",
+      "connections": [
+        "id_1761",
+        "id_1762"
+      ],
+      "fonte_arquivo": "_posts\\dragao-onca\\2025-02-28-id1760-china-merchants-port-cmport-assina-acordo-para-adquirir-70-da-vast-infraestrutur.md",
+      "id": 1760
+    },
+    {
+      "titulo": "Governador Cláudio Castro (RJ) lidera missão à China: acordos de videomonitoramento com Hikvision e Dahua, reuniões em Pequim e Zhejiang",
+      "data_evento": "2025-04-17",
+      "data_iso": "2025-04-17T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "dragao-onca",
+        "P05"
+      ],
+      "descricao": "Em missão oficial à China (abril de 2025), o governador do Rio de Janeiro, Cláudio Castro, se reuniu com o vice-prefeito de Pequim, Jin Wei (17/abr), e com o governador da província de Zhejiang, Liu Jie, além do Conselho Chinês para Promoção de Investimentos Internacionais (CCPIT, ~300 empresários, também 17/abr). Firmou acordos com as empresas Hikvision e Dahua — ambas sancionadas pelos EUA por vigilância em massa em Xinjiang — para expandir sistema de videomonitoramento com inteligência artificial aos 92 municípios fluminenses, como extensão do sistema já em operação (mais de 500 prisões atribuídas à tecnologia). Apresentou o Porto do Açu como projeto estratégico (potencial de se tornar 2º maior porto do país, ZPE) a investidores chineses, e discutiu com a Envision Energy (Xangai) possível investimento em combustível sustentável de aviação (SAF) no RJ. Participou do Summit Valor Econômico Brasil-China em Xangai (22-23/abr), posicionando o RJ como 'hub nacional de transição energética'.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "Acordos de videomonitoramento firmados e em fase de aquisição de equipamentos pelo Estado (municípios responsáveis por instalação/manutenção). Tratativas de investimento (Envision Energy, Porto do Açu) permanecem em estágio exploratório, sem contrapartida financeira nomeada nas fontes apuradas.",
+      "tipo_escandalo": "N/A",
+      "fontes": [
+        "https://www.revistafatorbrasil.com.br/2025/04/18/claudio-castro-apresenta-vantagens-para-empresas-chinesas-se-instalarem-e-ampliarem-seus-negocios-no-estado-do-rio-de-janeiro/",
+        "https://diariodorio.com/claudio-castro-fecha-acordos-na-china-para-expandir-videomonitoramento-em-todo-o-estado-do-rio/",
+        "https://www.zmnoticias.com.br/em-evento-na-china-claudio-castro-destaca-potencialidades-do-rio-de-janeiro-para-atrair-investimentos-internacionais/",
+        "https://sinfrerj.com.br/conteudo/8763/governador-e-prefeito-buscam-investimentos-e-negocios-com-companhias-chinesas"
+      ],
+      "pessoas_envolvidas": [
+        "Cláudio Castro",
+        "Jin Wei",
+        "Liu Jie"
+      ],
+      "instituicoes_envolvidas": [
+        "Governo do Estado do Rio de Janeiro",
+        "Hikvision",
+        "Dahua",
+        "CCPIT",
+        "Envision Energy"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "analise": "Padrão clássico de 'soberania na conta do governador' já documentado em Goiás/Pará/Amazonas/Minas Gerais: governador em cortejo direto e pessoal à China, oferecendo vantagens comparativas do estado (infraestrutura portuária, mercado consumidor, matriz energética limpa) e fechando acordo concreto (vigilância) enquanto tratativas maiores (investimento industrial/energético) permanecem em fase exploratória. Elemento de simetria a registrar sem juízo moral: Hikvision e Dahua estão na entity list do Departamento de Comércio dos EUA desde 2019 por fornecimento de tecnologia de vigilância usada contra a minoria uigur em Xinjiang — fato público e verificável, relevante para o registro simétrico do corpus independentemente de qualquer posição sobre a política de segurança pública do Rio.",
+      "lacuna_investigativa": "Valor total do contrato Hikvision/Dahua não divulgado nas fontes apuradas. Não localizada análise de risco de segurança de dados/privacidade sobre uso de tecnologia de vigilância de empresas sob sanção internacional por direitos humanos em sistema de segurança pública estadual — tema relevante para nota de simetria, não resolvido nesta rodada.",
+      "connections": [
+        "id_1760"
+      ],
+      "fonte_arquivo": "_posts\\dragao-onca\\2025-04-17-id1761-governador-claudio-castro-rj-lidera-missao-a-china-acordos-de-videomonitoramento.md",
+      "id": 1761
+    },
+    {
+      "titulo": "CNOOC e PetroChina iniciam operações comerciais no terminal Vast (Porto do Açu) — distinto da aquisição societária CMPort",
+      "data_evento": "2026-03-23",
+      "data_iso": "2026-03-23T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "dragao-onca"
+      ],
+      "descricao": "Segundo comunicado da Vast Infraestrutura (ex-Açu Petróleo, mar/2026), duas empresas chinesas iniciaram operação comercial no terminal do Porto do Açu: a CNOOC (China National Offshore Oil Corporation), que já produz nos campos de Mero e Búzios (pré-sal, Bacia de Santos/Campos) e assinou contrato para que a Vast seja sua principal parceira logística no Brasil para exportação da produção; e a PetroChina (CNPC), que realizou sua primeira operação no terminal em abril. Estes são contratos comerciais de cliente/logística — distintos da aquisição societária da CMPort na Vast (id_1760), que é participação acionária na empresa proprietária do terminal.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "Consolidação de presença comercial chinesa (cliente) no terminal, em paralelo à pendente aquisição societária pela CMPort — dois vetores de presença chinesa no mesmo ativo (societário e comercial), com naturezas jurídicas distintas.",
+      "tipo_escandalo": "N/A",
+      "fontes": [
+        "https://portodoacu.com.br/acu-petroleo-agora-e-vast-infraestrutura/"
+      ],
+      "pessoas_envolvidas": [
+        "CNOOC (China National Offshore Oil Corporation)",
+        "PetroChina (CNPC)"
+      ],
+      "instituicoes_envolvidas": [
+        "CNOOC",
+        "PetroChina/CNPC",
+        "Vast Infraestrutura"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "analise": "Nota metodológica importante para não confundir dois fenômenos: (1) aquisição societária CMPort na Vast (id_1760) — controle de propriedade do terminal; (2) contratos comerciais CNOOC/PetroChina como clientes do terminal (esta entrada) — uso do terminal por produtoras chinesas do pré-sal para escoar sua própria produção. São vetores de presença chinesa distintos e não devem ser somados como se fossem uma única captura — um é propriedade de infraestrutura, o outro é relação comercial de cliente-fornecedor, comum a qualquer operador do setor.",
+      "lacuna_investigativa": "Valores dos contratos comerciais CNOOC/PetroChina com a Vast não divulgados. Não localizada informação sobre volume de óleo movimentado por essas operações em relação ao total do terminal.",
+      "connections": [
+        "id_1760"
+      ],
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-03-23-id1762-cnooc-e-petrochina-iniciam-operacoes-comerciais-no-terminal-vast-porto-do-acu-di.md",
+      "id": 1762
     }
   ],
-  "total": 1711,
-  "data_extração": "2026-07-25",
+  "total": 1725,
+  "data_extração": "2026-07-26",
   "periodo": "1855-01-01 a 2026-07-20",
   "fonte_original": "D:\\_deploy\\lawfare-timeline\\_posts",
   "nota": "Merge fila editorial 2026-05-28: lawfare.json 1527-1576 (Biomm, Zema, Homeschooling, Rejeito, Flávio/Trump)"

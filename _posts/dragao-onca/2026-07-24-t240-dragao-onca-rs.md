@@ -16,6 +16,11 @@ status: confirmed
 
 ***
 
+> **Link para dossiê completo:** [Capítulo Rio Grande do Sul](https://gosurf.site/dragao-onca-rio-grande-do-sul)
+
+***
+
+
 ## 📋 Resumo
 
 Estado: Rio Grande do Sul. Período: 2025-09 a 2026-06 (3 entradas main track, 1735-1737). Único capítulo da série com desfecho negativo confirmado: GWM avaliou o RS para a 2ª fábrica brasileira mas escolheu o Espírito Santo (ver T-241). Posição oficial no ranking CEBC 2007-2025: 6º lugar nacional, 20 projetos — mas caiu da 5ª posição no ranking 2007-2024, uma das poucas unidades federativas que perderam colocação relativa.
@@ -47,4 +52,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-thematic-T240-dragao-onca-rs*
+*Série O Dragão e a Onça • lawfare-thematic-T240-dragao-onca-rs*

@@ -16,6 +16,11 @@ status: confirmed
 
 ***
 
+> **Link para dossiê completo:** [Capítulo Bahia](https://gosurf.site/dragao-onca-bahia)
+
+***
+
+
 ## 📋 Resumo
 
 Estado: Bahia. Período: 2020-11 a 2026-07 (7 entradas main track, 1719-1725). Eixo central: PPP Ponte Salvador-Itaparica (consórcio CCCC+CRCC/CCECC, R$10,6bi, 35 anos) + Windey (energia eólica, Camaçari) + Hotgen Biotech (Bahiafarma).
@@ -51,4 +56,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-thematic-T237-dragao-onca-bahia*
+*Série O Dragão e a Onça • lawfare-thematic-T237-dragao-onca-bahia*

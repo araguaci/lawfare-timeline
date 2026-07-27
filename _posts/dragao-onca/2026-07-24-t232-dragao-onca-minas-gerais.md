@@ -16,6 +16,11 @@ status: confirmed
 
 ***
 
+> **Link para dossiê completo:** [Capítulo Minas Gerais](https://gosurf.site/dragao-onca-minas-gerais)
+
+***
+
+
 # Minas Gerais prova que o padrão não é a China — é o mecanismo
 
 Em Goiás, Pará e Amazonas, o capital estratégico era majoritariamente chinês. Minas Gerais quebra essa expectativa — e, por isso, é o capítulo mais importante da série *O Dragão e a Onça*.

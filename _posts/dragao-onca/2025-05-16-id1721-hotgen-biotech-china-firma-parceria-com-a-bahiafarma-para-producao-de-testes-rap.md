@@ -48,4 +48,4 @@ Fonte única identificada; evento >90 dias, não bloqueia ev-confirmed.
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-batch-dragao-onca-bahia-1719-1725*
+*Série O Dragão e a Onça • lawfare-batch-dragao-onca-bahia-1719-1725*

@@ -16,6 +16,11 @@ status: confirmed
 
 ***
 
+> **Link para dossiê completo:** [Capítulo São Paulo](https://gosurf.site/dragao-onca-sao-paulo)
+
+***
+
+
 ## 📋 Resumo
 
 Estado: São Paulo. Período: 2024-02 a 2026 (5 entradas main track, 1726-1730). Eixo 1: CRRC (estatal ferroviária chinesa) consolida domínio quase total do material rodante paulista sob o programa de concessões de Tarcísio. Eixo 2: COFCO expande terminal STS11 no Porto de Santos. Frentes descartadas por ausência de evidência: Sabesp (privatização 2024 não teve comprador chinês) e energia solar/eólica (investimentos CGN/SPIC concentrados em RN/PB/PI, não em SP). Vaga reservada para fala de Tarcísio em convenção partidária (2026-07-25) sobre socialismo, pendente de transcrição fornecida pelo usuário — próximo ID disponível no momento da confirmação.
@@ -50,4 +55,4 @@ Entradas conectadas nesta série:
 
 ---
 
-*Entrada gerada automaticamente • Série O Dragão e a Onça • lawfare-thematic-T238-dragao-onca-sp*
+*Série O Dragão e a Onça • lawfare-thematic-T238-dragao-onca-sp*
