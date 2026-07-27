@@ -4,7 +4,7 @@ description: 94 milhões de brasileiros no Cadastro Único não é o fracasso de
 date: 2026-05-09T12:00:00-03:00
 image:
   path: "/assets/img/estudos/prisao_economica_hero_xarticle.webp"
-tags: ["economia", "diagnostico", "mapa-mental", "timeline", "brasil", "crime", "justica"]
+tags: ["economia", "diagnostico", "mapa-mental", "timeline", "brasil", "crime", "justica", "p02"]
 categories: estudos
 mermaid: false
 pin: false

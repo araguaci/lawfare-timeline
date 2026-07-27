@@ -4,7 +4,7 @@ description: "A PF deflagrou a Operação Narco Fluxo em março de 2025, terceir
 date: 2025-03-15T12:00:00.000Z
 image:
   path: "/assets/solid/pills.svg"
-tags: ["pcc", "narco-fluxo", "choquei", "mc-ryan-sp", "funk", "lavagem-dinheiro", "policia-federal", "cultura-massa"]
+tags: ["pcc", "narco-fluxo", "choquei", "mc-ryan-sp", "funk", "lavagem-dinheiro", "policia-federal", "cultura-massa", "p01", "p12"]
 categories: operacoes
 permalink: /posts/operacao-narco-fluxo-pcc-choquei-mc-ryan-r163bi/
 id_corpus: "1497"

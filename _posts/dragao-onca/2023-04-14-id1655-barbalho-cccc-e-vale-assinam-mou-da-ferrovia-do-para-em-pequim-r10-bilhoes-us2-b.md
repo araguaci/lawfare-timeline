@@ -4,7 +4,7 @@ title: "Barbalho, CCCC e Vale assinam MoU da Ferrovia do Pará em Pequim (R$10 b
 description: "Durante a comitiva de Lula à China, o governador Helder Barbalho, o vice-presidente da CCCC Sun Liqiang, e o vice-presidente executivo da Vale Alexandre Silva D'Ambrosio assinam Memorando de Entendime..."
 date: 2023-04-14
 image: /assets/img/dragao-onca-para.webp
-tags: ["incidente_diplomatico", "2023", "p05", "p10", "para"]
+tags: ["incidente_diplomatico", "2023", "para", "p05", "p10"]
 categories: dragao-onca
 timeline_id: 1655
 status: confirmado

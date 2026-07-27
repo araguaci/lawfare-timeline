@@ -4,7 +4,7 @@ description: "Sistema da Receita identifica variação patrimonial inexplicada d
 date: 2018-05-01T12:00:00.000Z
 image:
   path: "/assets/solid/money-bill.svg"
-tags: ['gilmar-mendes', stf, corrupcao, impunidade, 'receita-federal', decano, gravidade-alta]
+tags: ['gilmar-mendes', stf, corrupcao, impunidade, 'receita-federal', decano, gravidade-alta, "p02"]
 categories: decano
 timeline_id: 1431
 source_data: lawfare-export-timeline-15abr2026.json

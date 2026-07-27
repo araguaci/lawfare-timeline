@@ -4,7 +4,7 @@ title: "Governo do Pará assina protocolo de intenções com a CCCC para a Ferro
 description: "Governador Helder Barbalho assina em Brasília protocolo de intenções para estudos de viabilidade da Ferrovia do Pará com a China Communications Construction Company (CCCC) e a Concremat, ligando Marab..."
 date: 2019-11-12
 image: /assets/img/dragao-onca-para.webp
-tags: ["mecanismo_sistemico", "2019", "p05", "p10", "para"]
+tags: ["mecanismo_sistemico", "2019", "para", "p05", "p10"]
 categories: dragao-onca
 timeline_id: 1654
 status: confirmado

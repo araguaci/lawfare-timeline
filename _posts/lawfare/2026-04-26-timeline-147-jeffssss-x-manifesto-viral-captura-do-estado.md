@@ -4,7 +4,7 @@ description: "Post viral no X formula tese sobre captura do Estado em linguagem 
 date: 2026-04-26T12:00:00.000Z
 image:
   path: "/assets/solid/bullhorn.svg"
-tags: ['análise-editorial', 'redes-sociais', 'captura-do-estado', 'discurso-publico', 'viral', 'compliance-zero', 'lava-jato', 'carbono-oculto']
+tags: ['análise-editorial', 'redes-sociais', 'captura-do-estado', 'discurso-publico', 'viral', 'compliance-zero', 'lava-jato', 'carbono-oculto', 'p04', 'p05']
 categories: lawfare
 timeline_id: 147
 source_data: lawfare-timeline-IDs-146-149.json

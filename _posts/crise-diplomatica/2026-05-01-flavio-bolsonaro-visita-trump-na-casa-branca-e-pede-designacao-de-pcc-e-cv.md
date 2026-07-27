@@ -4,7 +4,7 @@ description: "Flávio Bolsonaro visitou Trump na Casa Branca e pediu 'enfaticame
 date: 2026-05-01T00:00:00-03:00
 image:
   path: "/assets/solid/globe.svg"
-tags: ['crise-diplomatica', 'bolsonaro', 'pcc', 'trump', 'faccoes-criminosas', 'lawfare']
+tags: ['crise-diplomatica', 'bolsonaro', 'pcc', 'trump', 'faccoes-criminosas', 'lawfare', 'p04', 'p04b']
 categories: crise-diplomatica
 permalink: /posts/flavio-bolsonaro-visita-trump-na-casa-branca-e-pede-designacao-de-pcc-e-cv/
 ---

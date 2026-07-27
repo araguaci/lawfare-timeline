@@ -4,7 +4,7 @@ description: "A BR-262, de Corumbá (MS) ao Sudeste, é o principal corredor rod
 date: 2025-11-01T12:00:00.000Z
 image:
   path: "/assets/solid/users.svg"
-tags: ["pcc", "corumba", "br-262", "mato-grosso-do-sul", "bolivia", "cocaina", "prf", "porto-de-santos"]
+tags: ["pcc", "corumba", "br-262", "mato-grosso-do-sul", "bolivia", "cocaina", "prf", "porto-de-santos", "p01", "p12"]
 categories: operacoes
 permalink: /posts/corumba-br262-corredor-cocaina-pcc-bolivia-santos-europa/
 id_corpus: "1492"

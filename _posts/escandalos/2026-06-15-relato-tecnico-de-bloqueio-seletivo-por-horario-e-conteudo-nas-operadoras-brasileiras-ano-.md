@@ -4,7 +4,7 @@ description: "Relato documentado de falhas de conectividade com padrão seletivo
 date: 2026-06-15T12:00:00.000Z
 image:
   path: "/assets/solid/skull.svg"
-tags: ["escandalos", "bloqueio-internet", "censura-digital", "interferencia-eleitoral-2026", "operadoras", "cloudflare", "P12-B"]
+tags: ["escandalos", "bloqueio-internet", "censura-digital", "interferencia-eleitoral-2026", "operadoras", "cloudflare", "p12-b"]
 categories: escandalos
 permalink: /posts/2026-06-15-relato-tecnico-de-bloqueio-seletivo-por-horario-e-conteudo-nas-operadoras-brasileiras-ano-/
 id_corpus: "1594"

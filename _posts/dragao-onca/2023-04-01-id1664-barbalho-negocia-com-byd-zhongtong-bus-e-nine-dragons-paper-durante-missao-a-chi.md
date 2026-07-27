@@ -4,7 +4,7 @@ title: "Barbalho negocia com BYD, Zhongtong Bus e Nine Dragons Paper durante mis
 description: "Durante a mesma missão à China de abril de 2023, o governador Helder Barbalho visita fábrica da BYD e se reúne com executivos da Zhongtong Bus (veículos de energia limpa) e da Nine Dragons Paper (indú..."
 date: 2023-04-01
 image: /assets/img/dragao-onca-para.webp
-tags: ["incidente_diplomatico", "2023", "p05", "para"]
+tags: ["incidente_diplomatico", "2023", "para", "p05"]
 categories: dragao-onca
 timeline_id: 1664
 status: em_andamento

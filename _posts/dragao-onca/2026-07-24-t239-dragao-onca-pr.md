@@ -4,7 +4,7 @@ title: "O Dragão e a Onça — Capítulo 12: Paraná (Ratinho Jr, China Merchan
 description: "Estado: Paraná. Período: 2018-03 a 2025-11 (4 entradas main track, 1731-1734). Eixo central: China Merchants Port (CMPort) controla 90% do TCP desde 2018; Ratinho Jr presente pessoalmente em cerimônia..."
 date: 2026-01-01T11:01:01.001Z
 image: /assets/img/dragao-onca-parana.webp
-tags: ["dragao-onca", "2026", "p05", "parana"]
+tags: ["dragao-onca", "2026", "parana", "p05"]
 categories: dragao-onca
 timeline_id: 239
 status: confirmed

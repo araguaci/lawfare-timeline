@@ -4,7 +4,7 @@ description: "Minutos após a promulgação da Lei 15.402/2026, a defesa de Bols
 date: 2026-05-08T12:00:00.000Z
 image:
   path: "/assets/solid/triangle-exclamation.svg"
-tags: ["bolsonaro", "revisao-criminal", "lei-dosimetria", "stf", "mauro-cid", "erro-judiciario", "8-janeiro"]
+tags: ["bolsonaro", "revisao-criminal", "lei-dosimetria", "stf", "mauro-cid", "erro-judiciario", "8-janeiro", "p01", "p12"]
 categories: stf
 permalink: /posts/bolsonaro-revisao-criminal-stf-dosimetria-erro-judiciario/
 id_corpus: "1624"

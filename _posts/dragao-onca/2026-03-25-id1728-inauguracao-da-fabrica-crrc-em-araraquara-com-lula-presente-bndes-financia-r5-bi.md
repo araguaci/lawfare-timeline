@@ -4,7 +4,7 @@ title: "Inauguração da fábrica CRRC em Araraquara com Lula presente; BNDES fi
 description: "Cerimônia de inauguração da fábrica da CRRC em Araraquara, com presença do presidente Lula e do vice-presidente Geraldo Alckmin. São firmados contratos de financiamento do BNDES somando mais de R$5 bi..."
 date: 2026-03-25
 image: /assets/img/dragao-onca-sao-paulo.webp
-tags: ["dragao-onca", "2026", "p05", "sao-paulo"]
+tags: ["dragao-onca", "2026", "sao-paulo", "p05"]
 categories: dragao-onca
 timeline_id: 1728
 status: confirmado

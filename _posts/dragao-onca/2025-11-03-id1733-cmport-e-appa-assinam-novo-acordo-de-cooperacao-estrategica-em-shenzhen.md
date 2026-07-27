@@ -4,7 +4,7 @@ title: "CMPort e APPA assinam novo Acordo de Cooperação Estratégica em Shenzh
 description: "Em reunião na sede da CMPort em Shenzhen, o vice-presidente e CEO da CMPort, Xu Song, e o secretário nacional adjunto de Portos e Aeroportos do Brasil, Alex Sandro de Ávila, assinam Acordo de Cooperaç..."
 date: 2025-11-03
 image: /assets/img/dragao-onca-parana.webp
-tags: ["dragao-onca", "2025", "p05", "parana"]
+tags: ["dragao-onca", "2025", "parana", "p05"]
 categories: dragao-onca
 timeline_id: 1733
 status: confirmado

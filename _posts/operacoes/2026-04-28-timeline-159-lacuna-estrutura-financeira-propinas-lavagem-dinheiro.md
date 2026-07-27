@@ -4,7 +4,7 @@ description: "As propinas recebidas pelos 25 servidores afastados são estimadas
 date: 2026-04-28T12:00:00.000Z
 image:
   path: "/assets/solid/money-bill-transfer.svg"
-tags: ['operacoes', 'mare-liberum', 'lavagem-dinheiro', 'estrutura-financeira', 'fundos', 'lacuna', 'padrão-07']
+tags: ['operacoes', 'mare-liberum', 'lavagem-dinheiro', 'estrutura-financeira', 'fundos', 'lacuna', 'p07']
 categories: operacoes
 timeline_id: 159
 source_data: lawfare-mare-liberum-timeline.json

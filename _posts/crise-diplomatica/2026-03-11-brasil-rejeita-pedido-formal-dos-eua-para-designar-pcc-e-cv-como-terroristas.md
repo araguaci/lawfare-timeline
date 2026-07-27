@@ -4,7 +4,7 @@ description: "David Gamble (State Dept.) apresentou pedido formal de designaçã
 date: 2026-03-11T00:00:00-03:00
 image:
   path: "/assets/solid/shield.svg"
-tags: ['crise-diplomatica', 'pcc', 'soberania', 'crime-organizado', 'faccoes-criminosas', 'lawfare']
+tags: ['crise-diplomatica', 'pcc', 'soberania', 'crime-organizado', 'faccoes-criminosas', 'lawfare', 'p04b', 'p10']
 categories: crise-diplomatica
 permalink: /posts/brasil-rejeita-pedido-formal-dos-eua-para-designar-pcc-e-cv-como-terroristas/
 ---

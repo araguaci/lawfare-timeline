@@ -4,7 +4,7 @@ description: "A PGE-SP (governo Tarcísio) ingressou com ação cautelar visando
 date: 2025-08-28T12:00:00.000Z
 image:
   path: "/assets/solid/leaf.svg"
-tags: ["pcc", "carbono-oculto", "genial-investimentos", "pge-sp", "lavagem-dinheiro", "faria-lima", "fidc", "beto-louco", "primo"]
+tags: ["pcc", "carbono-oculto", "genial-investimentos", "pge-sp", "lavagem-dinheiro", "faria-lima", "fidc", "beto-louco", "p01", "p12"]
 categories: operacoes
 permalink: /posts/carbono-oculto-pge-sp-bloqueia-r176mi-genial-investimentos-pcc-faria-lima/
 id_corpus: "1499"

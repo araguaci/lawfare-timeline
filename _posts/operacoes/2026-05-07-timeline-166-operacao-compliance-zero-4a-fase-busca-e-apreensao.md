@@ -4,7 +4,7 @@ description: "Polícia Federal deflagra nova fase da Operação Compliance Zero 
 date: 2026-05-07T00:00:00.000Z
 image:
   path: "/assets/solid/building-shield.svg"
-tags: ["compliance-zero", "ciro-nogueira", "banco-master", "busca-e-apreensao", "lobby-parlamentar", "corrupção-ativa"]
+tags: ["compliance-zero", "ciro-nogueira", "banco-master", "busca-e-apreensao", "lobby-parlamentar", "p01", "p02", "p04", "p06", "p08"]
 categories: operacoes
 timeline_id: 166
 source_data: compliance-zero-ciro-nogueira-166-170.json

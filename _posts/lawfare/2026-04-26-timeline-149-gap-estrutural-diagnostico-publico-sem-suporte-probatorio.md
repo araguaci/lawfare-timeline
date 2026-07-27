@@ -4,7 +4,7 @@ description: "Identificação de falha institucional de segundo nível: a tese d
 date: 2026-04-26T12:00:00.000Z
 image:
   path: "/assets/solid/bridge-circle-exclamation.svg"
-tags: ['falha-institucional', 'gap-narrativo', 'captura-do-estado', 'responsabilização', 'documentação-forense', 'compliance-zero', 'lava-jato', 'satiagraha', 'castelo-de-areia']
+tags: ['falha-institucional', 'gap-narrativo', 'captura-do-estado', 'responsabilização', 'documentação-forense', 'compliance-zero', 'lava-jato', 'p03', 'p04', 'p05']
 categories: lawfare
 timeline_id: 149
 source_data: lawfare-timeline-IDs-146-149.json

@@ -4,7 +4,7 @@ description: "Relatórios da PF e do UNODC documentam que o PCC acessa cocaína 
 date: 2023-01-01T12:00:00.000Z
 image:
   path: "/assets/solid/users.svg"
-tags: ["pcc", "farc-dissidentes", "clan-do-golfo", "amazonia", "mato-grosso-do-sul", "trafico-cocaina", "unodc", "policia-federal"]
+tags: ["pcc", "farc-dissidentes", "clan-do-golfo", "amazonia", "mato-grosso-do-sul", "trafico-cocaina", "unodc", "policia-federal", "p01", "p12"]
 categories: estudos
 permalink: /posts/pcc-farc-clan-golfo-rotas-amazonia-ms-cocaina/
 id_corpus: "1502"

@@ -4,7 +4,7 @@ description: "Auditoria do TCU aprovada em 16/07/2025 revela que de R$ 55,5 milh
 date: 2023-01-01T12:00:00.000Z
 image:
   path: "/assets/solid/credit-card.svg"
-tags: ["cartão corporativo", "CPGF", "sigilo", "TCU", "transparência", "Presidência", "2023", "2024", "2025"]
+tags: ["cartão corporativo", "CPGF", "sigilo", "TCU", "transparência", "Presidência", "2023", "2024", "p06", "p07"]
 categories: governo
 timeline_id: 167
 source_data: extravagancia-2023-2026.json

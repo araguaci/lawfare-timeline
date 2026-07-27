@@ -4,7 +4,7 @@ description: "Relatórios do GAFILAT e do COAF brasileiro apontam sobreposição
 date: 2024-01-01T12:00:00.000Z
 image:
   path: "/assets/solid/dollar-sign.svg"
-tags: ["pcc", "hezbollah", "tri-fronteira", "gafilat", "coaf", "hawala", "lavagem-dinheiro", "terrorismo"]
+tags: ["pcc", "hezbollah", "tri-fronteira", "gafilat", "coaf", "hawala", "lavagem-dinheiro", "terrorismo", "p01", "p12"]
 categories: estudos
 permalink: /posts/gafilat-coaf-sobreposicao-pcc-hezbollah-tri-fronteira/
 id_corpus: "1501"

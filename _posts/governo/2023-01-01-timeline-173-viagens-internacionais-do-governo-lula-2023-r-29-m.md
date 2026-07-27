@@ -4,7 +4,7 @@ description: "Somente em 2023, o governo federal gastou R$ 29 milhões em hosped
 date: 2023-01-01T12:00:00.000Z
 image:
   path: "/assets/solid/globe.svg"
-tags: ["viagens internacionais", "hospedagem", "luxo", "Lula", "Janja", "2023", "extravagância"]
+tags: ["viagens internacionais", "hospedagem", "luxo", "Lula", "Janja", "2023", "extravagância", "p06"]
 categories: governo
 timeline_id: 173
 source_data: extravagancia-2023-2026.json

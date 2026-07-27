@@ -4,7 +4,7 @@ description: "Cálculo prescricional de risco: fatos mais antigos datam de jul/2
 date: 2026-04-28T12:00:00.000Z
 image:
   path: "/assets/solid/clock-rotate-left.svg"
-tags: ['operacoes', 'mare-liberum', 'prescrição', 'janela-prescricional', 'competência-territorial', 'P06', 'análise-risco']
+tags: ['operacoes', 'mare-liberum', 'prescrição', 'janela-prescricional', 'competência-territorial', 'análise-risco', 'p06']
 categories: operacoes
 timeline_id: 164
 source_data: lawfare-mare-liberum-timeline.json

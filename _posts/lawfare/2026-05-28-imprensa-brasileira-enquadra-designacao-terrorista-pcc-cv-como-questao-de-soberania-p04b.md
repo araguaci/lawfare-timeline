@@ -4,7 +4,7 @@ description: "A cobertura dominante em 28/05/2026 desloca o debate dos fatos doc
 date: 2026-05-28T18:00:00-03:00
 image:
   path: "/assets/solid/rss.svg"
-tags: ['lawfare', 'pcc', 'crime-organizado', 'censura', 'soberania', 'stf']
+tags: ['lawfare', 'pcc', 'crime-organizado', 'censura', 'soberania', 'stf', 'p04', 'p04b']
 categories: lawfare
 permalink: /posts/imprensa-brasileira-enquadra-designacao-terrorista-pcc-cv-como-questao-de-soberania-p04b/
 id_corpus: "1520"

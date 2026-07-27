@@ -4,7 +4,7 @@ description: "PF, GAECO/MPF e Corregedoria da Receita Federal deflagram a Opera�
 date: 2026-04-28T12:00:00.000Z
 image:
   path: "/assets/solid/handcuffs.svg"
-tags: ['operacoes', 'mare-liberum', 'deflagração', 'porto-rio', 'receita-federal', 'pf', 'gaeco', 'alfândega']
+tags: ['operacoes', 'mare-liberum', 'deflagração', 'porto-rio', 'receita-federal', 'pf', 'gaeco', 'alfândega', 'p04', 'p05']
 categories: operacoes
 timeline_id: 148
 source_data: lawfare-mare-liberum-timeline.json

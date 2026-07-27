@@ -4,7 +4,7 @@ description: "A Desenvolve SP, agência de fomento do governo Tarcísio, possui 
 date: 2026-05-11T12:00:00.000Z
 image:
   path: "/assets/solid/leaf.svg"
-tags: ["pcc", "carbono-oculto", "genial-investimentos", "desenvolve-sp", "tarcisio-freitas", "fidc", "paradoxo-institucional"]
+tags: ["pcc", "carbono-oculto", "genial-investimentos", "desenvolve-sp", "tarcisio-freitas", "fidc", "paradoxo-institucional", "p01", "p12"]
 categories: escandalos
 permalink: /posts/desenvolve-sp-r951mi-fundos-genial-carbono-oculto/
 id_corpus: "1500"

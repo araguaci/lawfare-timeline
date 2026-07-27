@@ -4,7 +4,7 @@ description: "Em operação conjunta da PF, Interpol e polícia italiana, Rocco 
 date: 2021-04-08T12:00:00.000Z
 image:
   path: "/assets/solid/flag.svg"
-tags: ["ndrangheta", "pcc", "morabito", "pasquino", "joao-pessoa", "interpol", "trafico-cocaina"]
+tags: ["ndrangheta", "pcc", "morabito", "pasquino", "joao-pessoa", "interpol", "trafico-cocaina", "p01", "p12"]
 categories: escandalos
 permalink: /posts/morabito-pasquino-ndrangheta-presos-joao-pessoa/
 id_corpus: "1482"

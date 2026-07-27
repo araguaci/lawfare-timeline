@@ -4,7 +4,7 @@ description: "O Tribunal Superior do Trabalho adquiriu 30 veículos Lexus ES 300
 date: 2025-08-08T12:00:00.000Z
 image:
   path: "/assets/solid/car.svg"
-tags: ["TST", "Lexus", "veículos", "sala VIP", "aeroporto", "Barroso", "escritório advocacia", "TCU", "2025", "extravagância", "judiciário"]
+tags: ["TST", "Lexus", "veículos", "sala VIP", "aeroporto", "Barroso", "escritório advocacia", "p03", "p05", "p06"]
 categories: governo
 timeline_id: 174
 source_data: extravagancia-2023-2026.json

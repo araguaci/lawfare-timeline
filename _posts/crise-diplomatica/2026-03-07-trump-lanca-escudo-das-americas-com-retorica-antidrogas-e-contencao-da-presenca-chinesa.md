@@ -4,7 +4,7 @@ description: "Donald Trump lançou a iniciativa 'Shield of the Americas' context
 date: 2026-03-07T00:00:00-03:00
 image:
   path: "/assets/solid/globe.svg"
-tags: ['crise-diplomatica', 'trump', 'pcc', 'crime-organizado', 'soberania', 'faccoes-criminosas']
+tags: ['crise-diplomatica', 'trump', 'pcc', 'crime-organizado', 'soberania', 'faccoes-criminosas', 'p04', 'p10']
 categories: crise-diplomatica
 permalink: /posts/trump-lanca-escudo-das-americas-com-retorica-antidrogas-e-contencao-da-presenca-chinesa/
 ---

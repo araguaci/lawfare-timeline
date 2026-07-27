@@ -4,7 +4,7 @@ title: "Ratinho Jr inaugura expansão do TCP ao lado de autoridades chinesas"
 description: "O governador Carlos Massa Ratinho Júnior inaugura as obras de ampliação do Terminal de Contêineres de Paranaguá (TCP), elevando a capacidade em 66% (1,5mi para 2,5mi TEUs/ano). Investimento de R$550 m..."
 date: 2019-10-10
 image: /assets/img/dragao-onca-parana.webp
-tags: ["dragao-onca", "2019", "p05", "parana"]
+tags: ["dragao-onca", "2019", "parana", "p05"]
 categories: dragao-onca
 timeline_id: 1732
 status: confirmado

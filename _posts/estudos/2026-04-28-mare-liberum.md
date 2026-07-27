@@ -4,7 +4,7 @@ description: R$ 86,6 bilhões. 17.000 declarações de importação irregulares.
 date: 2026-04-28T12:00:00-03:00
 image:
   path: "/assets/img/estudos/mare_liberum_hero.webp"
-tags: ["brasa", "operacao", "diagnostico", "soberania"]
+tags: ["brasa", "operacao", "diagnostico", "soberania", "p07"]
 categories: estudos
 mermaid: false
 pin: false

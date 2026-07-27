@@ -4,7 +4,7 @@ title: "Ministério da Fazenda oficializa memorandos de cooperação econômico-
 description: "Haddad e o ministro das Finanças da Rússia, Anton Siluanov, assinam documento que cria o Diálogo Econômico e Financeiro bilateral; memorando equivalente é firmado com a China no mesmo dia. Os textos n..."
 date: 2025-08-11
 image: /assets/img/dragao-onca-brasil-federal.webp
-tags: ["dragao-onca", "2025", "p04b", "brasil-federal"]
+tags: ["dragao-onca", "2025", "brasil-federal", "p04b"]
 categories: dragao-onca
 timeline_id: 1713
 status: confirmado

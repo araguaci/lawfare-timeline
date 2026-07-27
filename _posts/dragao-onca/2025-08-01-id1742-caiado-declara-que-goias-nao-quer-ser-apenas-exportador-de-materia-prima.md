@@ -4,7 +4,7 @@ title: "Caiado declara que \"Goiás não quer ser apenas exportador de matéria-
 description: "Declaração pública de Caiado antecipando reorientação da política mineral estadual para agregação de valor (separação/processamento de óxidos de terras raras), em contraste com o padrão histórico de e..."
 date: 2025-08-01
 image: /assets/img/dragao-onca-goias.webp
-tags: ["dragao-onca", "2025", "p04b", "goias"]
+tags: ["dragao-onca", "2025", "goias", "p04b"]
 categories: dragao-onca
 timeline_id: 1742
 status: confirmado

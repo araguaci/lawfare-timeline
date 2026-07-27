@@ -4,7 +4,7 @@ description: "Os gastos da Câmara com diárias em viagens oficiais saltaram de 
 date: 2024-04-01T12:00:00.000Z
 image:
   path: "/assets/solid/landmark.svg"
-tags: ["Câmara", "diárias", "viagens", "reajuste", "Lira", "Motta", "2024", "2025", "extravagância", "legislativo"]
+tags: ["Câmara", "diárias", "viagens", "reajuste", "Lira", "Motta", "2024", "2025", "extravagância", "p06"]
 categories: governo
 timeline_id: 176
 source_data: extravagancia-2023-2026.json

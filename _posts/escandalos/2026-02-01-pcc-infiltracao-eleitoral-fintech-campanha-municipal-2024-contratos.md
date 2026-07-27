@@ -4,7 +4,7 @@ description: "Em fevereiro de 2026, a PF prendeu operador de fintech identificad
 date: 2026-02-01T12:00:00.000Z
 image:
   path: "/assets/solid/credit-card.svg"
-tags: ["pcc", "financiamento-eleitoral", "eleicoes-2024", "fintech", "corrupcao", "contratos-publicos", "captura-politica"]
+tags: ["pcc", "financiamento-eleitoral", "eleicoes-2024", "fintech", "corrupcao", "contratos-publicos", "captura-politica", "p01", "p12"]
 categories: escandalos
 permalink: /posts/pcc-infiltracao-eleitoral-fintech-campanha-municipal-2024-contratos/
 id_corpus: "1495"

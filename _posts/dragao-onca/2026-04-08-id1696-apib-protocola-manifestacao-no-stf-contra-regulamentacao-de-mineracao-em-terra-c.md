@@ -4,7 +4,7 @@ title: "APIB protocola manifestação no STF contra regulamentação de mineraç
 description: "A Articulação dos Povos Indígenas do Brasil (Apib) protocola manifestação em processo no STF sobre mineração de diamantes em terra do povo Cinta Larga, destacando que o pedido de regulamentação partiu..."
 date: 2026-04-08
 image: /assets/img/dragao-onca-braco-juridico.webp
-tags: ["chokepoint_judicial", "2026", "p09", "brasil-federal"]
+tags: ["chokepoint_judicial", "2026", "brasil-federal", "p09"]
 categories: dragao-onca
 timeline_id: 1696
 status: em_andamento

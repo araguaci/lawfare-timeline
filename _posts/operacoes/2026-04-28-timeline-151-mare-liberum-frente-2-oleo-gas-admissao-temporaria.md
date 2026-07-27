@@ -4,7 +4,7 @@ description: "Segunda frente do esquema: uso do regime de admissão temporária 
 date: 2026-04-28T12:00:00.000Z
 image:
   path: "/assets/solid/gas-pump.svg"
-tags: ['operacoes', 'mare-liberum', 'óleo-gás', 'admissão-temporária', 'offshore', 'embarcações', 'receita-federal']
+tags: ['operacoes', 'mare-liberum', 'óleo-gás', 'admissão-temporária', 'offshore', 'embarcações', 'receita-federal', 'p05', 'p07']
 categories: operacoes
 timeline_id: 151
 source_data: lawfare-mare-liberum-timeline.json

@@ -4,7 +4,7 @@ title: "Zema lança mundialmente o projeto \"Vale do Lítio\" na Nasdaq, em Nova
 description: "Governador Romeu Zema lança em cerimônia na Nasdaq (Nova York) a iniciativa Lithium Valley Brazil, cobrindo 14 municípios do Nordeste e Norte de Minas Gerais (Araçuaí, Capelinha, Coronel Murta, Itaobi..."
 date: 2025-05-09
 image: /assets/img/dragao-onca-minas-gerais.webp
-tags: ["mecanismo_sistemico", "2025", "p05", "p09", "minas-gerais"]
+tags: ["mecanismo_sistemico", "2025", "minas-gerais", "p05", "p09"]
 categories: dragao-onca
 timeline_id: 1679
 status: confirmado

@@ -4,7 +4,7 @@ title: "Eduardo Leite lidera missão a Shenzhen: reunião com a BYD, visita à H
 description: "Na segunda etapa de missão oficial ao Japão e à China, o governador Eduardo Leite inicia agenda em Shenzhen com reunião na sede da BYD, líder mundial em veículos elétricos e baterias. Leite apresenta ..."
 date: 2025-11-22
 image: /assets/img/dragao-onca-rio-grande-do-sul.webp
-tags: ["dragao-onca", "2025", "p05", "rio-grande-do-sul"]
+tags: ["dragao-onca", "2025", "rio-grande-do-sul", "p05"]
 categories: dragao-onca
 timeline_id: 1735
 status: confirmado

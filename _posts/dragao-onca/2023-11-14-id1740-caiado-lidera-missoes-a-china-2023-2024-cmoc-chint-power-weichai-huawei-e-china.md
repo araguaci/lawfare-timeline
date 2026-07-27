@@ -4,7 +4,7 @@ title: "Caiado lidera missões à China (2023-2024): CMOC, Chint Power, Weichai,
 description: "Entrada retroativa consolidando a 'Fase 1' do capítulo Goiás (dossiê original 2023-2024, nunca antes mesclado ao corpus). Governador Ronaldo Caiado lidera missões à China resultando em: expansão da CM..."
 date: 2023-11-14
 image: /assets/img/dragao-onca-goias.webp
-tags: ["dragao-onca", "2023", "p05", "goias"]
+tags: ["dragao-onca", "2023", "goias", "p05"]
 categories: dragao-onca
 timeline_id: 1740
 status: confirmado

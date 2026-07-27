@@ -4,7 +4,7 @@ title: "Trem de minério da Vale já matou 39 pessoas em 8 anos na Terra Indíge
 description: "Reportagem documenta que o trem de carga da Vale que atravessa a Terra Indígena Mãe Maria, em Marabá, na mesma região servida pela futura Ferrovia do Pará, já causou 39 mortes em 8 anos...."
 date: 2025-05-01
 image: /assets/img/dragao-onca-para.webp
-tags: ["mecanismo_sistemico", "2025", "p05", "para"]
+tags: ["mecanismo_sistemico", "2025", "para", "p05"]
 categories: dragao-onca
 timeline_id: 1659
 status: confirmado

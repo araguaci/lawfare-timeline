@@ -4,7 +4,7 @@ title: "CRRC confirma instalação de fábrica de trens em Araraquara (SP)"
 description: "Após meses de estudo revelados por Tarcísio de Freitas em fevereiro de 2025, a CRRC confirma a instalação de fábrica de trens em Araraquara, no interior paulista — R$50 milhões, com arrendamento de pa..."
 date: 2025-07-30
 image: /assets/img/dragao-onca-sao-paulo.webp
-tags: ["dragao-onca", "2025", "p05", "sao-paulo"]
+tags: ["dragao-onca", "2025", "sao-paulo", "p05"]
 categories: dragao-onca
 timeline_id: 1727
 status: confirmado

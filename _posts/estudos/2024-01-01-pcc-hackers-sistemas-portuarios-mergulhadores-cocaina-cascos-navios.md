@@ -4,7 +4,7 @@ description: "O WSJ e a PJ portuguesa documentam a sofisticação técnica do PC
 date: 2024-01-01T12:00:00.000Z
 image:
   path: "/assets/solid/users.svg"
-tags: ["pcc", "hackers", "porto-santos", "mergulhadores", "rip-on-rip-off", "logistica-criminal", "cocaina"]
+tags: ["pcc", "hackers", "porto-santos", "mergulhadores", "rip-on-rip-off", "logistica-criminal", "cocaina", "p01", "p12"]
 categories: estudos
 permalink: /posts/pcc-hackers-sistemas-portuarios-mergulhadores-cocaina-cascos-navios/
 id_corpus: "1493"

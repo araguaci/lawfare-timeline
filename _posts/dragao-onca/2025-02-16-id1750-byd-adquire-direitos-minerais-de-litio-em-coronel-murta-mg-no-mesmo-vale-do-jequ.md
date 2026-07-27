@@ -4,7 +4,7 @@ title: "BYD adquire direitos minerais de lítio em Coronel Murta (MG), no mesmo 
 description: "Reportagem baseada em apuração da Reuters revela que a montadora chinesa BYD, via subsidiária Exploração Mineral do Brasil, adquiriu em 2023 direitos minerais sobre dois terrenos em Coronel Murta, no ..."
 date: 2025-02-16
 image: /assets/img/dragao-onca-minas-gerais.webp
-tags: ["dragao-onca", "2025", "p05", "soberania", "minas-gerais"]
+tags: ["dragao-onca", "2025", "soberania", "minas-gerais", "p05"]
 categories: dragao-onca
 timeline_id: 1750
 status: confirmado

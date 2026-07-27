@@ -4,7 +4,7 @@ description: "Marco Rubio publicou designação formal de PCC e CV como SDGTs (S
 date: 2026-05-28T12:00:00-03:00
 image:
   path: "/assets/solid/shield.svg"
-tags: ['crise-diplomatica', 'pcc', 'soberania', 'crime-organizado', 'faccoes-criminosas', 'lawfare', 'sancoes']
+tags: ['crise-diplomatica', 'pcc', 'soberania', 'crime-organizado', 'faccoes-criminosas', 'lawfare', 'p03', 'p04b', 'p08', 'p10']
 categories: crise-diplomatica
 permalink: /posts/departamento-de-estado-designa-pcc-e-cv-como-sdgt-com-efeito-imediato/
 ---

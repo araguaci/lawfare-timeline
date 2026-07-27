@@ -4,7 +4,7 @@ description: "Governo federal gasta R$ 26,8 milhões com reformas e compra de m�
 date: 2023-01-01T12:00:00.000Z
 image:
   path: "/assets/solid/couch.svg"
-tags: ["palácios", "mobília", "reforma", "Alvorada", "Planalto", "Janja", "extravagância", "2023"]
+tags: ["palácios", "mobília", "reforma", "Alvorada", "Planalto", "Janja", "extravagância", "2023", "p06"]
 categories: governo
 timeline_id: 166
 source_data: extravagancia-2023-2026.json

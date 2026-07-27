@@ -13,18 +13,19 @@ layout: page
   <p class="category-description">{{ dragao_onca_cat.description }}</p>
 {%- endif -%}
 
-<!-- Sínteses e Capítulos (Temáticos) — cards iguais à home -->
+<!-- Sínteses e Capítulos (Temáticos) — ordem de importância (README / T-228→T-245) -->
 <section id="dragao-onca-tematicos">
   <h2 class="mt-4 mb-3">🏛️ Capítulos Temáticos</h2>
-  <p class="text-muted small">Sínteses estruturadas de cada região/aspecto da série</p>
+  <p class="text-muted small">Sínteses estruturadas de cada região/aspecto da série — ordem de leitura por importância</p>
 
   <div id="post-list" class="post-list flex-grow-1 px-xl-1">
-    {% assign thematic_posts = site.posts
-      | where_exp: "post", "post.title contains 'Capítulo' or post.title contains 'O Dragão' or post.title contains 'Dossiê Dedicado' or post.title contains 'Síntese Comparativa'"
-      | sort: "date"
-      | reverse %}
-    {% for post in thematic_posts limit: 22 %}
-      {% include post-card.html %}
+    {% assign thematic_ids = site.data.dragao_onca_thematic_order.ids %}
+    {% assign dragao_onca_posts = site.posts | where_exp: "post", "post.categories contains 'dragao-onca'" %}
+    {% for tid in thematic_ids %}
+      {% assign post = dragao_onca_posts | where: "timeline_id", tid | first %}
+      {% if post %}
+        {% include post-card.html %}
+      {% endif %}
     {% endfor %}
   </div>
 </section>

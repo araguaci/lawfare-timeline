@@ -4,7 +4,7 @@ description: "Lincoln Gakiya (GAECO/SP) declarou à Bloomberg que os EUA devem d
 date: 2025-11-08T00:00:00-03:00
 image:
   path: "/assets/solid/shield.svg"
-tags: ['crise-diplomatica', 'pcc', 'crime-organizado', 'faccoes-criminosas', 'investigacao-criminal', 'gaeco']
+tags: ['crise-diplomatica', 'pcc', 'crime-organizado', 'faccoes-criminosas', 'investigacao-criminal', 'gaeco', 'p08', 'p10']
 categories: crise-diplomatica
 permalink: /posts/2025-11-08-promotor-gakiya-sinaliza-designacao-terrorista-iminente-do-pcc-e-cv-pelos-eua/
 ---

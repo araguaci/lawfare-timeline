@@ -4,7 +4,7 @@ title: "GWM avalia cidade de Rio Grande (RS) para segunda fábrica no Brasil"
 description: "A montadora chinesa Great Wall Motor (GWM), que já opera fábrica em Iracemápolis (SP), estuda instalar sua segunda planta brasileira na cidade de Rio Grande (RS), com investimento estimado em R$5 bilh..."
 date: 2025-09-02
 image: /assets/img/dragao-onca-rio-grande-do-sul.webp
-tags: ["dragao-onca", "2025", "p05", "rio-grande-do-sul"]
+tags: ["dragao-onca", "2025", "rio-grande-do-sul", "p05"]
 categories: dragao-onca
 timeline_id: 1736
 status: confirmado

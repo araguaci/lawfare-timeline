@@ -4,7 +4,7 @@ description: "Marco inicial do intervalo temporal coberto pelas 17.000 Declaraç
 date: 2021-07-01T00:00:00.000Z
 image:
   path: "/assets/solid/anchor.svg"
-tags: ['operacoes', 'mare-liberum', 'porto-rio', 'galeão', 'alfândega', 'importação', 'receita-federal']
+tags: ['operacoes', 'mare-liberum', 'porto-rio', 'galeão', 'alfândega', 'importação', 'receita-federal', 'p05']
 categories: operacoes
 timeline_id: 146
 source_data: lawfare-mare-liberum-timeline.json

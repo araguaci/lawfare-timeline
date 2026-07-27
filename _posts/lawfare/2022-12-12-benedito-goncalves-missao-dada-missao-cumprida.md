@@ -4,7 +4,7 @@ description: "Microfone aberto captou Benedito Gonçalves abraçando Alexandre d
 date: 2022-12-12T12:00:00.000Z
 image:
   path: "/assets/solid/weight-scale.svg"
-tags: ["benedito-goncalves", "cnj", "tse", "moraes", "circuito-recompensa", "inelegibilidade-bolsonaro", "p03", "p08"]
+tags: ["benedito-goncalves", "cnj", "tse", "moraes", "circuito-recompensa", "inelegibilidade-bolsonaro", "p01", "p03", "p08", "p12"]
 categories: lawfare
 permalink: /posts/benedito-goncalves-missao-dada-missao-cumprida/
 id_corpus: "166"

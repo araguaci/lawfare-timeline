@@ -4,7 +4,7 @@ description: "As diligências da Mare Liberum incluíram endereços ligados à a
 date: 2026-04-28T12:00:00.000Z
 image:
   path: "/assets/solid/ferry.svg"
-tags: ['operacoes', 'mare-liberum', 'galeão', 'aeroporto', 'competência-territorial', 'alfândega', 'receita-federal']
+tags: ['operacoes', 'mare-liberum', 'galeão', 'aeroporto', 'competência-territorial', 'alfândega', 'receita-federal', 'p01', 'p06']
 categories: operacoes
 timeline_id: 154
 source_data: lawfare-mare-liberum-timeline.json

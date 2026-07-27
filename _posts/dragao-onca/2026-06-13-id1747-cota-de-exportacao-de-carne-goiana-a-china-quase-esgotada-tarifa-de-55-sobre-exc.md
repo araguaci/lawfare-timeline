@@ -4,7 +4,7 @@ title: "Cota de exportação de carne goiana à China quase esgotada; tarifa de 
 description: "Cota de exportação de carne de Goiás à China (1,1 milhão de toneladas para 2026) está perto de ser atingida já em junho, com tarifa de 55% sobre excedentes. Sinaliza fricção comercial simultânea ao es..."
 date: 2026-06-13
 image: /assets/img/dragao-onca-goias.webp
-tags: ["dragao-onca", "2026", "p04b", "goias"]
+tags: ["dragao-onca", "2026", "goias", "p04b"]
 categories: dragao-onca
 timeline_id: 1747
 status: confirmado

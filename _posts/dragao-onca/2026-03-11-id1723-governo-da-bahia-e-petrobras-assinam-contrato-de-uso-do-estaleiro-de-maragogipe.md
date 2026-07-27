@@ -4,7 +4,7 @@ title: "Governo da Bahia e Petrobras assinam contrato de uso do estaleiro de Mar
 description: "Jerônimo Rodrigues anuncia contrato com a Petrobras para cessão de uso de área do Estaleiro São Roque do Paraguaçu, em Maragogipe (Recôncavo Baiano), ao consórcio chinês responsável pela Ponte Salvado..."
 date: 2026-03-11
 image: /assets/img/dragao-onca-bahia.webp
-tags: ["dragao-onca", "2026", "p05", "bahia"]
+tags: ["dragao-onca", "2026", "bahia", "p05"]
 categories: dragao-onca
 timeline_id: 1723
 status: confirmado

@@ -4,7 +4,7 @@ description: "A documentação da Narco Fluxo revela que o uso do funk pelo PCC 
 date: 2025-03-15T12:00:00.000Z
 image:
   path: "/assets/solid/music.svg"
-tags: ["pcc", "funk", "cultura-massa", "recrutamento", "lavagem-dinheiro", "crime-branding", "streaming", "policia-federal"]
+tags: ["pcc", "funk", "cultura-massa", "recrutamento", "lavagem-dinheiro", "crime-branding", "streaming", "policia-federal", "p01", "p12"]
 categories: estudos
 permalink: /posts/funk-infraestrutura-recrutamento-propaganda-pcc-crime-branding/
 id_corpus: "1498"

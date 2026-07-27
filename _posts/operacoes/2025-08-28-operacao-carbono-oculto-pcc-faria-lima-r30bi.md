@@ -4,7 +4,7 @@ description: "Em 28 de agosto de 2025, a PF deflagrou a Operação Carbono Ocult
 date: 2025-08-28T12:00:00.000Z
 image:
   path: "/assets/solid/leaf.svg"
-tags: ["pcc", "carbono-oculto", "faria-lima", "lavagem-dinheiro", "fintechs", "fundos-investimento", "policia-federal", "receita-federal"]
+tags: ["pcc", "carbono-oculto", "faria-lima", "lavagem-dinheiro", "fintechs", "fundos-investimento", "policia-federal", "receita-federal", "p01", "p12"]
 categories: operacoes
 permalink: /posts/operacao-carbono-oculto-pcc-faria-lima-r30bi/
 id_corpus: "1486"

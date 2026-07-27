@@ -4,7 +4,7 @@ description: "O presidente do Congresso Davi Alcolumbre promulgou a Lei 15.402/2
 date: 2026-05-08T12:00:00.000Z
 image:
   path: "/assets/solid/weight-scale.svg"
-tags: ["lei-dosimetria", "lei-15402-2026", "alcolumbre", "lula", "condenados-8-janeiro", "bolsonaro", "penas"]
+tags: ["lei-dosimetria", "lei-15402-2026", "alcolumbre", "lula", "condenados-8-janeiro", "bolsonaro", "penas", "p01", "p12"]
 categories: lawfare
 permalink: /posts/lei-15402-2026-lei-dosimetria-promulgada-alcolumbre/
 id_corpus: "173"

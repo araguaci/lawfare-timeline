@@ -4,7 +4,7 @@ description: "Análise da diferença entre o valor das mercadorias (R$ 86,6 bilh
 date: 2026-04-28T12:00:00.000Z
 image:
   path: "/assets/solid/chart-bar.svg"
-tags: ['operacoes', 'mare-liberum', 'sub-tributação', 'classificação-indevida', 'canal-vermelho', 'prejuízo-fiscal', 'dado-quantitativo']
+tags: ['operacoes', 'mare-liberum', 'sub-tributação', 'classificação-indevida', 'canal-vermelho', 'prejuízo-fiscal', 'dado-quantitativo', 'p05']
 categories: operacoes
 timeline_id: 162
 source_data: lawfare-mare-liberum-timeline.json

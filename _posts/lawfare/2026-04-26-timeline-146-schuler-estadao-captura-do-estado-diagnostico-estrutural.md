@@ -4,7 +4,7 @@ description: "Fernando Schüler publica coluna no Estadão descrevendo o Estado 
 date: 2026-04-26T12:00:00.000Z
 image:
   path: "/assets/solid/newspaper.svg"
-tags: ['análise-editorial', 'estadão', 'captura-do-estado', 'fernando-schuler', 'grande-imprensa', 'compliance-zero', 'lava-jato', 'satiagraha', 'castelo-de-areia']
+tags: ['análise-editorial', 'estadão', 'captura-do-estado', 'fernando-schuler', 'grande-imprensa', 'compliance-zero', 'lava-jato', 'satiagraha', 'p03', 'p05']
 categories: lawfare
 timeline_id: 146
 source_data: lawfare-timeline-IDs-146-149.json

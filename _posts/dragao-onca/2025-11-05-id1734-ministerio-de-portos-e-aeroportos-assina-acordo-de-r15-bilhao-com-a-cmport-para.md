@@ -4,7 +4,7 @@ title: "Ministério de Portos e Aeroportos assina acordo de R$1,5 bilhão com a 
 description: "O Ministério de Portos e Aeroportos (MPor) assina, em Xangai, acordo de investimento de mais de R$1,5 bilhão com a CMPort para ampliar a capacidade de armazenagem e movimentação de cargas do Terminal ..."
 date: 2025-11-05
 image: /assets/img/dragao-onca-parana.webp
-tags: ["dragao-onca", "2025", "p05", "parana"]
+tags: ["dragao-onca", "2025", "parana", "p05"]
 categories: dragao-onca
 timeline_id: 1734
 status: confirmado

@@ -4,7 +4,7 @@ title: "Comunidades do Vale do Acará denunciam mineroduto da Norsk Hydro sem co
 description: "Associações de indígenas, quilombolas e ribeirinhos do Vale do Acará assinam manifesto denunciando que o mineroduto de 244km da Norsk Hydro (Paragominas-Barcarena) devastou rios e florestas, esgotou r..."
 date: 2024-09-01
 image: /assets/img/dragao-onca-para.webp
-tags: ["mecanismo_sistemico", "2024", "p05", "para"]
+tags: ["mecanismo_sistemico", "2024", "para", "p05"]
 categories: dragao-onca
 timeline_id: 1658
 status: confirmado

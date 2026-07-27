@@ -4,7 +4,7 @@ title: "Taboca anuncia investimento de US$100 milhões para dobrar produção at
 description: "Sob nova gestão da China Nonferrous, a Mineração Taboca anuncia ciclo de investimentos de US$100 milhões (R$523 milhões) até 2028, com modernização das plantas de Pitinga e Pirapora, buscando dobrar a..."
 date: 2026-01-01
 image: /assets/img/dragao-onca-amazonas.webp
-tags: ["mecanismo_sistemico", "2026", "p05", "amazonas"]
+tags: ["mecanismo_sistemico", "2026", "amazonas", "p05"]
 categories: dragao-onca
 timeline_id: 1671
 status: confirmado

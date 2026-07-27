@@ -4,7 +4,7 @@ description: "Sobreposição temporal e geográfica documentada entre Mare Liber
 date: 2026-04-28T12:00:00.000Z
 image:
   path: "/assets/solid/fire-flame-curved.svg"
-tags: ['operacoes', 'mare-liberum', 'carbono-oculto', 'conexão-corpus', 'porto-rio', 'setor-combustíveis']
+tags: ['operacoes', 'mare-liberum', 'carbono-oculto', 'conexão-corpus', 'porto-rio', 'setor-combustíveis', 'p05', 'p07']
 categories: operacoes
 timeline_id: 156
 source_data: lawfare-mare-liberum-timeline.json

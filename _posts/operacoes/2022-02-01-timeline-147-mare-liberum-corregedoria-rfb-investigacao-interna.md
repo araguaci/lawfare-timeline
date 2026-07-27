@@ -4,7 +4,7 @@ description: "A Corregedoria da Receita Federal identifica indícios de irregula
 date: 2022-02-01T00:00:00.000Z
 image:
   path: "/assets/solid/magnifying-glass-arrow-right.svg"
-tags: ['operacoes', 'mare-liberum', 'corregedoria', 'investigação-interna', 'porto-rio', 'receita-federal']
+tags: ['operacoes', 'mare-liberum', 'corregedoria', 'investigação-interna', 'porto-rio', 'receita-federal', 'p01', 'p04']
 categories: operacoes
 timeline_id: 147
 source_data: lawfare-mare-liberum-timeline.json

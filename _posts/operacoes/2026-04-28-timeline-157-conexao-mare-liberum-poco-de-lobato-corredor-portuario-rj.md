@@ -4,7 +4,7 @@ description: "Sobreposição geográfica e temporal entre Mare Liberum e Poço d
 date: 2026-04-28T12:00:00.000Z
 image:
   path: "/assets/solid/gas-pump.svg"
-tags: ['operacoes', 'mare-liberum', 'poco-de-lobato', 'conexão-corpus', 'grupo-refit', 'diesel-russo', 'porto-rio']
+tags: ['operacoes', 'mare-liberum', 'poco-de-lobato', 'conexão-corpus', 'grupo-refit', 'diesel-russo', 'porto-rio', 'p05', 'p07']
 categories: operacoes
 timeline_id: 157
 source_data: lawfare-mare-liberum-timeline.json

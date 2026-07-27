@@ -4,7 +4,7 @@ title: "Substitutivo cria acesso preferencial das mineradoras ao Fundo Clima (Fu
 description: "O Artigo 20 do substitutivo autoriza o BNDES a destinar parcela dos recursos do Fundo Nacional sobre Mudança do Clima (FNMC) para financiamento reembolsável do beneficiamento e transformação mineral. ..."
 date: 2026-05-01
 image: /assets/img/dragao-onca-pl2780.webp
-tags: ["ato_legislativo", "2026", "p05", "brasil-federal"]
+tags: ["ato_legislativo", "2026", "brasil-federal", "p05"]
 categories: dragao-onca
 timeline_id: 1709
 status: confirmado

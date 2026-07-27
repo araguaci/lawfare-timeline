@@ -4,7 +4,7 @@ title: "Múltiplos projetos são apensados ao PL 2.780/2024, incluindo Política
 description: "São apensados ao PL 2.780/2024 os projetos PL 3659/2025, PL 3699/2025, PL 3829/2025, PL 4404/2025, PL 4428/2025, PL 4429/2025, PL 4430/2025, PL 4442/2025, PL 5445/2025 e PL 737/2025 — incluindo a cham..."
 date: 2025-10-01
 image: /assets/img/dragao-onca-pl2780.webp
-tags: ["ato_legislativo", "2025", "p10", "brasil-federal"]
+tags: ["ato_legislativo", "2025", "brasil-federal", "p10"]
 categories: dragao-onca
 timeline_id: 1704
 status: confirmado

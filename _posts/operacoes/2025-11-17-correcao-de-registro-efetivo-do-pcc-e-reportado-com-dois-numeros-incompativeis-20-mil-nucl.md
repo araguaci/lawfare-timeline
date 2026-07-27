@@ -4,7 +4,7 @@ description: "Cobertura da prisão de Ygor Daniel Zago ('Hulk'), liderança do P
 date: 2025-11-17T12:00:00.000Z
 image:
   path: "/assets/solid/bullseye.svg"
-tags: ["operacoes", "P04"]
+tags: ["operacoes", "p04"]
 categories: operacoes
 permalink: /posts/2025-11-17-correcao-de-registro-efetivo-do-pcc-e-reportado-com-dois-numeros-incompativeis-20-mil-nucl/
 id_corpus: "1630"

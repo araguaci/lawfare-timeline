@@ -4,7 +4,7 @@ description: "Em 9 de maio de 2026, às 14h26, Alexandre de Moraes suspendeu a a
 date: 2026-05-09T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["moraes", "lei-dosimetria", "lei-15402-2026", "decisao-monocratica", "8-janeiro", "execucao-penal", "chokepoint", "venire-contra-factum"]
+tags: ["moraes", "lei-dosimetria", "lei-15402-2026", "decisao-monocratica", "8-janeiro", "execucao-penal", "chokepoint", "venire-contra-factum", "p01", "p12"]
 categories: stf
 permalink: /posts/moraes-suspende-lei-dosimetria-monocraticamente-10-execucoes-penais-8j/
 id_corpus: "181"

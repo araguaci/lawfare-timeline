@@ -4,7 +4,7 @@ description: "Análise transversal posiciona a Mare Liberum com o perfil de risc
 date: 2026-04-28T12:00:00.000Z
 image:
   path: "/assets/solid/chart-simple.svg"
-tags: ['operacoes', 'mare-liberum', 'análise', 'padrões-sistêmicos', 'risco-processual', 'análise-editorial']
+tags: ['operacoes', 'mare-liberum', 'análise', 'p01', 'p02', 'p03', 'p04', 'p05', 'p06', 'p07']
 categories: operacoes
 timeline_id: 155
 source_data: lawfare-mare-liberum-timeline.json

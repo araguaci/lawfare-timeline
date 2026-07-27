@@ -4,7 +4,7 @@ title: "China Merchants Port (CMPort) adquire 90% do Terminal de Contêineres de
 description: "Após mais de um ano de negociações, a estatal chinesa China Merchants Port Holding (CMPort) anuncia a compra de 90% do Terminal de Contêineres de Paranaguá (TCP) e da TCP Log por R$2,9 bilhões (US$925..."
 date: 2018-03-01
 image: /assets/img/dragao-onca-parana.webp
-tags: ["dragao-onca", "2018", "p05", "parana"]
+tags: ["dragao-onca", "2018", "parana", "p05"]
 categories: dragao-onca
 timeline_id: 1731
 status: confirmado

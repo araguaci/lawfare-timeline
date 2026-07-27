@@ -4,7 +4,7 @@ title: "STF declara inconstitucional a tese do marco temporal (RE 1.017.365, Tem
 description: "Em julgamento com repercussão geral, o STF declara inconstitucional a tese do marco temporal, segundo a qual povos indígenas só poderiam reivindicar territórios ocupados ou disputados em 5 de outubro ..."
 date: 2023-09-01
 image: /assets/img/dragao-onca-braco-juridico.webp
-tags: ["chokepoint_judicial", "2023", "p01", "brasil-federal"]
+tags: ["chokepoint_judicial", "2023", "brasil-federal", "p01"]
 categories: dragao-onca
 timeline_id: 1689
 status: confirmado

@@ -4,7 +4,7 @@ title: "China Merchants Port (CMPort) assina acordo para adquirir 70% da Vast In
 description: "A China Merchants Port Holdings (CMPORT), braço portuário do grupo estatal chinês China Merchants Group (CMG), assinou no fim de fevereiro de 2025 contrato para adquirir participação de 70% na Vast In..."
 date: 2025-02-28
 image: /assets/img/dragao-onca-rj.webp
-tags: ["dragao-onca", "2025", "p05", "p10", "rio-de-janeiro"]
+tags: ["dragao-onca", "2025", "rio-de-janeiro", "p05", "p10"]
 categories: dragao-onca
 timeline_id: 1760
 status: em_andamento

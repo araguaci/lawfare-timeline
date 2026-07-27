@@ -7,7 +7,7 @@ image:
   alt: "Silhueta solitária diante de uma porta de tribunal monumental — metáfora do cidadão contra o Estado"
   prompt: "A lone tiny human silhouette standing at the base of a monumental cold marble courthouse door five times the person's height. The door is closed. The building shadow completely engulfs the small figure clutching a thin folder of documents. Dramatic top light from a narrow slit above, deep shadows consuming the figure. The building is featureless and oppressive. Editorial investigative photography, dark atmosphere, photorealistic. No faces visible."
   target: "/assets/img/estudos/estado-como-reu-frontmatter-hero.webp"
-tags: [erro-judiciario, responsabilidade-civil-estado, stj, cidh, due-process, acesso-justica, prisao-preventiva, weaponized-legalism, pge, indenizacao]
+tags: [erro-judiciario, responsabilidade-civil-estado, stj, cidh, due-process, acesso-justica, prisao-preventiva, weaponized-legalism, pge, indenizacao, "p02"]
 categories: estudos
 pin: false
 ---

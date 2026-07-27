@@ -4,7 +4,7 @@ description: "Viagem da comitiva presidencial às Olimpíadas de Paris (julho 20
 date: 2024-07-26T12:00:00.000Z
 image:
   path: "/assets/solid/medal.svg"
-tags: ["Janja", "Paris", "Olimpíadas", "comitiva", "FAB", "2024", "extravagância", "viagem internacional"]
+tags: ["Janja", "Paris", "Olimpíadas", "comitiva", "FAB", "2024", "extravagância", "viagem internacional", "p06"]
 categories: governo
 timeline_id: 170
 source_data: extravagancia-2023-2026.json

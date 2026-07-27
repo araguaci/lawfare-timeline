@@ -4,7 +4,7 @@ description: "No mesmo dia da promulgação da Lei 15.402/2026, ABI e PSOL-Rede 
 date: 2026-05-08T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["adi", "lei-dosimetria", "moraes", "abi", "psol-rede", "nemo-judex", "impedimento", "stf"]
+tags: ["adi", "lei-dosimetria", "moraes", "abi", "psol-rede", "nemo-judex", "impedimento", "stf", "p01", "p12"]
 categories: stf
 permalink: /posts/adis-abi-psol-lei-dosimetria-sorteadas-moraes-prevencao/
 id_corpus: "174"

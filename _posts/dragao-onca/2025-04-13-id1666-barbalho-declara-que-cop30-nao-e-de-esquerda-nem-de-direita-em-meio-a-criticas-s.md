@@ -4,7 +4,7 @@ title: "Barbalho declara que COP30 \"não é de esquerda nem de direita\" em mei
 description: "Governador Helder Barbalho declara ao jornal O Globo que a COP30 não deve ser instrumentalizada por ideologias políticas, defendendo o impacto econômico positivo do evento (26 mil empresas abertas no ..."
 date: 2025-04-13
 image: /assets/img/dragao-onca-para.webp
-tags: ["incidente_diplomatico", "2025", "p04b", "para"]
+tags: ["incidente_diplomatico", "2025", "para", "p04b"]
 categories: dragao-onca
 timeline_id: 1666
 status: confirmado

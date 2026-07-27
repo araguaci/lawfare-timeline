@@ -4,7 +4,7 @@ description: "Decisão judicial determina afastamento imediato de 17 auditores-f
 date: 2026-04-28T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ['operacoes', 'mare-liberum', 'trf-2', 'afastamento', 'bloqueio-bens', 'decisão-judicial', 'risco-processual']
+tags: ['operacoes', 'mare-liberum', 'trf-2', 'afastamento', 'bloqueio-bens', 'decisão-judicial', 'risco-processual', 'p01', 'p03', 'p06']
 categories: operacoes
 timeline_id: 149
 source_data: lawfare-mare-liberum-timeline.json

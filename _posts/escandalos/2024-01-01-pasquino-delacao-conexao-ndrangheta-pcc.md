@@ -4,7 +4,7 @@ description: "Em 2024, Vincenzo Pasquino — mafioso condenado na Itália — fi
 date: 2024-01-01T12:00:00.000Z
 image:
   path: "/assets/solid/flag.svg"
-tags: ["ndrangheta", "pcc", "pasquino", "delacao-premiada", "cooperacao-brasil-italia", "trafico-cocaina"]
+tags: ["ndrangheta", "pcc", "pasquino", "delacao-premiada", "cooperacao-brasil-italia", "trafico-cocaina", "p01", "p12"]
 categories: escandalos
 permalink: /posts/pasquino-delacao-conexao-ndrangheta-pcc/
 id_corpus: "1483"

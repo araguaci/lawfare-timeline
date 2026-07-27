@@ -4,7 +4,7 @@ title: "MPF arquiva inquérito sobre Taboca com base em pareceres técnicos que 
 description: "O Ministério Público Federal arquiva inquérito inicial sobre denúncias de contaminação por metais pesados na bacia hidrográfica próxima à Mineração Taboca, com a decisão baseada exclusivamente em pare..."
 date: 2024-06-06
 image: /assets/img/dragao-onca-amazonas.webp
-tags: ["mecanismo_sistemico", "2024", "p04b", "p06", "amazonas"]
+tags: ["mecanismo_sistemico", "2024", "amazonas", "p04b", "p06"]
 categories: dragao-onca
 timeline_id: 1668
 status: confirmado

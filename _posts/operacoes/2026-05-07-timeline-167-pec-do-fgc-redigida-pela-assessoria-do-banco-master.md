@@ -4,7 +4,7 @@ description: "Documentos apreendidos pela PF indicam que a Proposta de Emenda à
 date: 2026-05-07T00:00:00.000Z
 image:
   path: "/assets/solid/file-signature.svg"
-tags: ["pec-fgc", "banco-master", "ciro-nogueira", "lobby-legislativo", "captura-regulatoria", "FGC"]
+tags: ["pec-fgc", "banco-master", "ciro-nogueira", "lobby-legislativo", "captura-regulatoria", "FGC", "p01", "p04", "p07"]
 categories: operacoes
 timeline_id: 167
 source_data: compliance-zero-ciro-nogueira-166-170.json

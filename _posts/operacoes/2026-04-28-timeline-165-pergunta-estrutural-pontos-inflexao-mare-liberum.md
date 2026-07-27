@@ -4,7 +4,7 @@ description: "A pergunta mais importante que o corpus ainda não responde: em qu
 date: 2026-04-28T12:00:00.000Z
 image:
   path: "/assets/solid/crosshairs.svg"
-tags: ['operacoes', 'mare-liberum', 'ponto-de-inflexão', 'beneficiários-finais', 'pergunta-estrutural', 'monitoramento']
+tags: ['operacoes', 'mare-liberum', 'ponto-de-inflexão', 'beneficiários-finais', 'pergunta-estrutural', 'monitoramento', 'p01', 'p02', 'p03']
 categories: operacoes
 timeline_id: 165
 source_data: lawfare-mare-liberum-timeline.json

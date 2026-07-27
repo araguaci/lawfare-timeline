@@ -4,7 +4,7 @@ description: "A Procuradoria Distrital Antimáfia de Turim enquadrou formalmente
 date: 2024-01-01T12:00:00.000Z
 image:
   path: "/assets/solid/flag.svg"
-tags: ["pcc", "italia", "antimafia", "turim", "art-416bis", "pasquino", "operacao-samba", "ndrangheta"]
+tags: ["pcc", "italia", "antimafia", "turim", "art-416bis", "pasquino", "operacao-samba", "ndrangheta", "p01", "p12"]
 categories: estudos
 permalink: /posts/italia-enquadra-pcc-legislacao-antimafia-primeira-vez-organizacao-brasileira/
 id_corpus: "1504"

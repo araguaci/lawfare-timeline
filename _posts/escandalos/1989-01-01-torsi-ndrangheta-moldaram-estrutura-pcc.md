@@ -4,7 +4,7 @@ description: "Os irmãos Torsi, membros da ʼNdrangheta presos no Brasil entre 1
 date: 1989-01-01T12:00:00.000Z
 image:
   path: "/assets/solid/flag.svg"
-tags: ["pcc", "ndrangheta", "mafia-italiana", "torsi", "sistema-prisional", "crime-transnacional"]
+tags: ["pcc", "ndrangheta", "mafia-italiana", "torsi", "sistema-prisional", "crime-transnacional", "p01", "p12"]
 categories: escandalos
 permalink: /posts/torsi-ndrangheta-moldaram-estrutura-pcc/
 id_corpus: "1481"

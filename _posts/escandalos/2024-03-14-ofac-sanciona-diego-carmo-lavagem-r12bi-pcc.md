@@ -4,7 +4,7 @@ description: "O OFAC do Departamento do Tesouro dos EUA designou Diego Gonçalve
 date: 2024-03-14T12:00:00.000Z
 image:
   path: "/assets/solid/dollar-sign.svg"
-tags: ["pcc", "ofac", "tesouro-eua", "sancao", "lavagem-dinheiro", "diego-carmo", "crime-transnacional"]
+tags: ["pcc", "ofac", "tesouro-eua", "sancao", "lavagem-dinheiro", "diego-carmo", "crime-transnacional", "p01", "p12"]
 categories: escandalos
 permalink: /posts/ofac-sanciona-diego-carmo-lavagem-r12bi-pcc/
 id_corpus: "1488"

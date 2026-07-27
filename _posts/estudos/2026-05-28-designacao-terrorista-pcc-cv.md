@@ -6,7 +6,7 @@ description: "State Dept. designa PCC e CV como FTO + SDGT em 28/05/2026. IDs 15
 date: 2026-05-28T22:00:00-03:00
 image:
   path: "/assets/img/designacao-terrorista-pcc-cv-2026.jpg"
-tags: ["estudo", "pcc", "cv", "terrorismo", "geopolitica", "p04b", "p08", "p10", "p03", "diplomacia", "eua", "state-dept", "ofac", "fto", "sdgt"]
+tags: ["estudo", "pcc", "cv", "terrorismo", "geopolitica", "diplomacia", "p03", "p04b", "p08", "p10"]
 categories: lawfare
 mermaid: false
 pin: true

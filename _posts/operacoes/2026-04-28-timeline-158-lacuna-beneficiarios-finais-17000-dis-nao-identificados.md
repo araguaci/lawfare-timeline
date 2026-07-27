@@ -4,7 +4,7 @@ description: "As notas oficiais e fontes de imprensa mencionam 'importadores' co
 date: 2026-04-28T12:00:00.000Z
 image:
   path: "/assets/solid/eye-slash.svg"
-tags: ['operacoes', 'mare-liberum', 'beneficiários-finais', 'lacuna', 'importadores', 'sigilo', 'ponto-de-inflexão']
+tags: ['operacoes', 'mare-liberum', 'beneficiários-finais', 'lacuna', 'importadores', 'sigilo', 'ponto-de-inflexão', 'p01', 'p03']
 categories: operacoes
 timeline_id: 158
 source_data: lawfare-mare-liberum-timeline.json

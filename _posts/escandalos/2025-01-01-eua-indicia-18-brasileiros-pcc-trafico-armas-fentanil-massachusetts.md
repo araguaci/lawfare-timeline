@@ -4,7 +4,7 @@ description: "O MPF dos EUA (Massachusetts) indiciou 18 brasileiros por envolvim
 date: 2025-01-01T12:00:00.000Z
 image:
   path: "/assets/solid/users.svg"
-tags: ["pcc", "eua", "massachusetts", "trafico-armas", "fentanil", "crime-transnacional", "florida", "new-york"]
+tags: ["pcc", "eua", "massachusetts", "trafico-armas", "fentanil", "crime-transnacional", "florida", "new-york", "p01", "p12"]
 categories: escandalos
 permalink: /posts/eua-indicia-18-brasileiros-pcc-trafico-armas-fentanil-massachusetts/
 id_corpus: "1496"

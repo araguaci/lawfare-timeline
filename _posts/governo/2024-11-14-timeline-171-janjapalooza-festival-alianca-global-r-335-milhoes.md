@@ -4,7 +4,7 @@ description: "O Festival Aliança Global Contra a Fome e a Pobreza, organizado p
 date: 2024-11-14T12:00:00.000Z
 image:
   path: "/assets/solid/music.svg"
-tags: ["Janjapalooza", "G20", "Petrobras", "Itaipu", "estatais", "festival", "TCU", "2024", "extravagância"]
+tags: ["Janjapalooza", "G20", "Petrobras", "Itaipu", "estatais", "festival", "TCU", "2024", "p05", "p06"]
 categories: governo
 timeline_id: 171
 source_data: extravagancia-2023-2026.json

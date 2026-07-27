@@ -4,7 +4,7 @@ description: "Corregedoria da Receita Federal identifica 17.000 Declarações de
 date: 2026-04-28T12:00:00.000Z
 image:
   path: "/assets/solid/file-import.svg"
-tags: ['operacoes', 'mare-liberum', 'declaração-importação', 'R$86bi', 'prejuízo-fiscal', 'prescrição', 'receita-federal']
+tags: ['operacoes', 'mare-liberum', 'declaração-importação', 'R$86bi', 'prejuízo-fiscal', 'prescrição', 'receita-federal', 'p05', 'p06']
 categories: operacoes
 timeline_id: 153
 source_data: lawfare-mare-liberum-timeline.json

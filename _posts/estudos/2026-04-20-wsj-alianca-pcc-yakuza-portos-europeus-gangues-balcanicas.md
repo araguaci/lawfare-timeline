@@ -4,7 +4,7 @@ description: "O WSJ documenta que o PCC estabeleceu alianças com a Yakuza japon
 date: 2026-04-20T12:00:00.000Z
 image:
   path: "/assets/solid/newspaper.svg"
-tags: ["pcc", "yakuza", "portos-europeus", "antuérpia", "roterdã", "hamburgo", "gangues-albanesas", "wsj"]
+tags: ["pcc", "yakuza", "portos-europeus", "antuérpia", "roterdã", "hamburgo", "gangues-albanesas", "wsj", "p01", "p12"]
 categories: estudos
 permalink: /posts/wsj-alianca-pcc-yakuza-portos-europeus-gangues-balcanicas/
 id_corpus: "1503"

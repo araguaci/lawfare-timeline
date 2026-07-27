@@ -4,7 +4,7 @@ description: "A Polícia Judiciária portuguesa identificou 87 membros do PCC em
 date: 2025-03-11T12:00:00.000Z
 image:
   path: "/assets/solid/dollar-sign.svg"
-tags: ["pcc", "portugal", "policia-judiciaria", "lavagem-dinheiro", "futebol", "imobiliario", "cocaina", "europa"]
+tags: ["pcc", "portugal", "policia-judiciaria", "lavagem-dinheiro", "futebol", "imobiliario", "cocaina", "europa", "p01", "p12"]
 categories: estudos
 permalink: /posts/pcc-portugal-87-membros-operacoes-portuarias-lavagem/
 id_corpus: "1489"

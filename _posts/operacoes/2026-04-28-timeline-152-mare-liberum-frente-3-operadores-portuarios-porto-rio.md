@@ -4,7 +4,7 @@ description: "Terceira frente do esquema: recebimento sistemático de vantagens 
 date: 2026-04-28T12:00:00.000Z
 image:
   path: "/assets/solid/building-shield.svg"
-tags: ['operacoes', 'mare-liberum', 'operadores-portuários', 'redução-tributos', 'porto-rio', 'receita-federal']
+tags: ['operacoes', 'mare-liberum', 'operadores-portuários', 'redução-tributos', 'porto-rio', 'receita-federal', 'p05']
 categories: operacoes
 timeline_id: 152
 source_data: lawfare-mare-liberum-timeline.json

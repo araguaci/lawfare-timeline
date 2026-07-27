@@ -4,7 +4,7 @@ title: "Hu Jintao visita o Brasil; Lula reafirma \"parceria estratégica\" publi
 description: "Presidente chinês Hu Jintao visita o Brasil pela primeira vez desde 1995 (primeira visita de um presidente brasileiro à China desde então também ocorrera em maio do mesmo ano). Lula declara em pronunc..."
 date: 2004-11-12
 image: /assets/img/dragao-onca-brasil-federal.webp
-tags: ["incidente_diplomatico", "2004", "p10", "brasil-federal"]
+tags: ["incidente_diplomatico", "2004", "brasil-federal", "p10"]
 categories: dragao-onca
 timeline_id: 1643
 status: confirmado

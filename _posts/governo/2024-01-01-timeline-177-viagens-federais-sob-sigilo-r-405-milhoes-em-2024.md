@@ -4,7 +4,7 @@ description: "As viagens sob sigilo de servidores do governo federal somaram R$ 
 date: 2024-01-01T12:00:00.000Z
 image:
   path: "/assets/solid/user-secret.svg"
-tags: ["viagens sigilosas", "STF", "Senado", "PF", "sigilo", "transparência", "2023", "2024", "extravagância"]
+tags: ["viagens sigilosas", "STF", "Senado", "PF", "sigilo", "transparência", "2023", "2024", "p06", "p07"]
 categories: governo
 timeline_id: 177
 source_data: extravagancia-2023-2026.json

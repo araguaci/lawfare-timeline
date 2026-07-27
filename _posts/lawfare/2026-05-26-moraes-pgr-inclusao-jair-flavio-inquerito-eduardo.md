@@ -4,7 +4,7 @@ description: "Alexandre de Moraes determinou que a PGR se manifeste em 5 dias so
 date: 2026-05-26T12:00:00.000Z
 image:
   path: "/assets/solid/weight-scale.svg"
-tags: ["lawfare", "alexandre-de-moraes", "flavio-bolsonaro", "jair-bolsonaro", "eduardo-bolsonaro", "daniel-vorcaro", "banco-master", "the-intercept", "lindbergh-farias", "pgr", "2026", "p03", "P04", "P12-B"]
+tags: ["lawfare", "alexandre-de-moraes", "flavio-bolsonaro", "jair-bolsonaro", "eduardo-bolsonaro", "daniel-vorcaro", "banco-master", "the-intercept", "lindbergh-farias", "pgr", "2026", "p03", "p04", "p12-b"]
 categories: lawfare
 permalink: /posts/2026-05-26-moraes-pgr-inclusao-jair-flavio-inquerito-eduardo/
 id_corpus: "1619"

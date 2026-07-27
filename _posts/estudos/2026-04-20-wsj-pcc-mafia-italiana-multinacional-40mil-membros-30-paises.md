@@ -4,7 +4,7 @@ description: "O WSJ publicou em abril de 2026 reportagem extensa comparando o PC
 date: 2026-04-20T12:00:00.000Z
 image:
   path: "/assets/solid/newspaper.svg"
-tags: ["pcc", "wall-street-journal", "mafia-italiana", "multinacional", "trafico-cocaina", "antuérpia", "trump", "organizacao-terrorista"]
+tags: ["pcc", "wall-street-journal", "mafia-italiana", "multinacional", "trafico-cocaina", "antuérpia", "trump", "organizacao-terrorista", "p01", "p12"]
 categories: estudos
 permalink: /posts/wsj-pcc-mafia-italiana-multinacional-40mil-membros-30-paises/
 id_corpus: "1494"

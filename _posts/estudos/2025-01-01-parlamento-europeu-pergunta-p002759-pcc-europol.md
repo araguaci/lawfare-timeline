@@ -4,7 +4,7 @@ description: "Parlamentar europeu protocolou pergunta formal P-002759/2025 à Co
 date: 2025-01-01T12:00:00.000Z
 image:
   path: "/assets/solid/users.svg"
-tags: ["parlamento-europeu", "pcc", "europol", "uniao-europeia", "trafico-drogas", "portos", "cooperacao-internacional"]
+tags: ["parlamento-europeu", "pcc", "europol", "uniao-europeia", "trafico-drogas", "portos", "cooperacao-internacional", "p01", "p12"]
 categories: estudos
 permalink: /posts/parlamento-europeu-pergunta-p002759-pcc-europol/
 id_corpus: "1491"

@@ -4,7 +4,7 @@ description: "O Procurador-Geral Antimáfia italiano Giovanni Melillo veio a Sã
 date: 2025-06-24T12:00:00.000Z
 image:
   path: "/assets/solid/flag.svg"
-tags: ["pgr", "italia", "acordo-bilateral", "investigacao-conjunta", "pcc", "ndrangheta", "cooperacao-internacional"]
+tags: ["pgr", "italia", "acordo-bilateral", "investigacao-conjunta", "pcc", "ndrangheta", "cooperacao-internacional", "p01", "p12"]
 categories: escandalos
 permalink: /posts/acordo-pgr-italia-investigacao-conjunta-pcc-ndrangheta/
 id_corpus: "1485"

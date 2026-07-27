@@ -4,7 +4,7 @@ description: "A Agência Brasileira de Promoção de Exportações e Investiment
 date: 2025-06-01T12:00:00.000Z
 image:
   path: "/assets/solid/person-dress.svg"
-tags: ["Janja", "Paris", "Apex", "desfile", "Brigitte Macron", "2025", "extravagância", "viagem internacional"]
+tags: ["Janja", "Paris", "Apex", "desfile", "Brigitte Macron", "2025", "extravagância", "viagem internacional", "p05", "p06"]
 categories: governo
 timeline_id: 172
 source_data: extravagancia-2023-2026.json

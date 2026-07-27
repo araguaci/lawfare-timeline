@@ -4,7 +4,7 @@ title: "Primo de quarto grau de Helder Barbalho é eleito prefeito de Belém"
 description: "Igor Normando (MDB), primo de quarto grau do governador Helder Barbalho e ex-secretário de cidadania do governo estadual, é eleito prefeito de Belém — cidade-sede da COP30, cujas obras de infraestrutu..."
 date: 2024-10-27
 image: /assets/img/dragao-onca-para.webp
-tags: ["mecanismo_sistemico", "2024", "p09", "para"]
+tags: ["mecanismo_sistemico", "2024", "para", "p09"]
 categories: dragao-onca
 timeline_id: 1660
 status: confirmado

@@ -4,7 +4,7 @@ description: "Em 17 de setembro de 2024, a Polícia Federal deflagrou a Operaç�
 date: 2024-09-17T12:00:00.000Z
 image:
   path: "/assets/solid/bullseye.svg"
-tags: ["operacao-rejeito", "feam", "anm", "mineracao", "serra-do-curral", "licenciamento-fraudulento", "zema", "toffoli", "stf-sigilo", "vorcaro-kallas", "minas-gerais"]
+tags: ["operacao-rejeito", "feam", "anm", "mineracao", "serra-do-curral", "licenciamento-fraudulento", "zema", "toffoli", "stf-sigilo", "vorcaro-kallas", "minas-gerais", "p02"]
 categories: operacoes
 permalink: /posts/2024-09-17-operacao-rejeito-pf-desmantela-esquema-de-r-15-bi-em-licenciamentos-ambientais-fraudulento/
 id_corpus: "1549"

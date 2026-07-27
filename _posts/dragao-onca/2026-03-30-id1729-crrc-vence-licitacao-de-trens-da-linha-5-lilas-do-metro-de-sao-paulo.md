@@ -4,7 +4,7 @@ title: "CRRC vence licitação de trens da Linha 5-Lilás do Metrô de São Paul
 description: "A CRRC vence a licitação de fornecimento de trens para a Linha 5-Lilás do Metrô de São Paulo, superando propostas da francesa Alstom e da espanhola CAF — fornecedoras tradicionais da linha. Consolida ..."
 date: 2026-03-30
 image: /assets/img/dragao-onca-sao-paulo.webp
-tags: ["dragao-onca", "2026", "p05", "sao-paulo"]
+tags: ["dragao-onca", "2026", "sao-paulo", "p05"]
 categories: dragao-onca
 timeline_id: 1729
 status: confirmado

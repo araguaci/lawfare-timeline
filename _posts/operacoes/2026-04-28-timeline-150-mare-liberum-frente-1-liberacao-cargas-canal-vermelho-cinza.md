@@ -4,7 +4,7 @@ description: "Primeira frente do esquema: liberação de cargas classificadas no
 date: 2026-04-28T12:00:00.000Z
 image:
   path: "/assets/solid/boxes-stacked.svg"
-tags: ['operacoes', 'mare-liberum', 'canal-vermelho', 'canal-cinza', 'modus-operandi', 'servidor-como-nó', 'alfândega']
+tags: ['operacoes', 'mare-liberum', 'canal-vermelho', 'canal-cinza', 'modus-operandi', 'servidor-como-nó', 'alfândega', 'p05']
 categories: operacoes
 timeline_id: 150
 source_data: lawfare-mare-liberum-timeline.json

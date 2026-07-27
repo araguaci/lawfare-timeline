@@ -4,7 +4,7 @@ description: "Em fevereiro de 2025, durante a XIV Cimeira Luso-Brasileira, Portu
 date: 2025-02-01T12:00:00.000Z
 image:
   path: "/assets/solid/globe.svg"
-tags: ["portugal", "brasil", "cimeira", "cooperacao-policial", "pcc", "crime-organizado", "trafico-drogas"]
+tags: ["portugal", "brasil", "cimeira", "cooperacao-policial", "pcc", "crime-organizado", "trafico-drogas", "p01", "p12"]
 categories: escandalos
 permalink: /posts/cimeira-luso-brasileira-acordos-investigacao-pcc/
 id_corpus: "1490"

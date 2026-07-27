@@ -4,7 +4,7 @@ description: "Alexandre de Moraes acumula três funções no mesmo conjunto de c
 date: 2026-05-09T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["moraes", "acumulacao-funcoes", "nemo-judex", "juiz-natural", "lei-dosimetria", "8-janeiro", "stf", "impedimento"]
+tags: ["moraes", "acumulacao-funcoes", "nemo-judex", "juiz-natural", "lei-dosimetria", "8-janeiro", "stf", "impedimento", "p01", "p12"]
 categories: stf
 permalink: /posts/acumulacao-funcoes-moraes-julgou-condenou-relator-lei-reduziria-penas-8j/
 id_corpus: "182"

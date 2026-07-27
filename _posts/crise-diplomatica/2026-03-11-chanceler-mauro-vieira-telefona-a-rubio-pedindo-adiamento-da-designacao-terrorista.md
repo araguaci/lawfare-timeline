@@ -4,7 +4,7 @@ description: "MRE pediu que a designação de PCC e CV fosse adiada até encontr
 date: 2026-03-11T12:00:00-03:00
 image:
   path: "/assets/solid/globe.svg"
-tags: ['crise-diplomatica', 'pcc', 'soberania', 'lawfare']
+tags: ['crise-diplomatica', 'pcc', 'soberania', 'lawfare', 'p04b']
 categories: crise-diplomatica
 permalink: /posts/chanceler-mauro-vieira-telefona-a-rubio-pedindo-adiamento-da-designacao-terrorista/
 ---

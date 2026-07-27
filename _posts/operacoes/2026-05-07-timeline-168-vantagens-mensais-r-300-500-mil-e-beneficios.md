@@ -4,7 +4,7 @@ description: "Segundo as diligências autorizadas pelo min. André Mendonça (ST
 date: 2026-05-07T00:00:00.000Z
 image:
   path: "/assets/solid/money-bill-transfer.svg"
-tags: ["ciro-nogueira", "vantagens-indevidas", "corrupção-passiva", "mesadas", "banco-master", "vorcaro"]
+tags: ["ciro-nogueira", "vantagens-indevidas", "corrupção-passiva", "mesadas", "banco-master", "vorcaro", "p01", "p02", "p06"]
 categories: operacoes
 timeline_id: 168
 source_data: compliance-zero-ciro-nogueira-166-170.json

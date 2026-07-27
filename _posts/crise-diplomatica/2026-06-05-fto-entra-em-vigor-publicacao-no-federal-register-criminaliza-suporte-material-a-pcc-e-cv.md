@@ -4,7 +4,7 @@ description: "A partir de 05/06/2026, fornecer qualquer suporte material a PCC o
 date: 2026-05-28T00:00:00-03:00
 image:
   path: "/assets/solid/shield.svg"
-tags: ['crise-diplomatica', 'pcc', 'crime-organizado', 'sancoes', 'faccoes-criminosas', 'bancos', 'lavagem-de-dinheiro']
+tags: ['crise-diplomatica', 'pcc', 'crime-organizado', 'sancoes', 'faccoes-criminosas', 'bancos', 'lavagem-de-dinheiro', 'p08', 'p10']
 categories: crise-diplomatica
 permalink: /posts/fto-entra-em-vigor-publicacao-no-federal-register-criminaliza-suporte-material-a-pcc-e-cv/
 ---

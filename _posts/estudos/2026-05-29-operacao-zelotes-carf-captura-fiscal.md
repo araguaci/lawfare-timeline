@@ -6,7 +6,7 @@ description: Fraude no Conselho Administrativo de Recursos Fiscais (2015) — pr
 date: 2026-05-29T10:00:00-03:00
 image:
   path: "/assets/solid/landmark-dome.svg"
-tags: ["estudo", "zelotes", "carf", "fraude-fiscal", "p03", "p07", "corrupcao"]
+tags: ["estudo", "zelotes", "carf", "fraude-fiscal", "corrupcao", "p01", "p03", "p07"]
 categories: lawfare
 mermaid: false
 pin: false

@@ -4,7 +4,7 @@ description: "Rosângela da Silva participou da 68ª Sessão da Comissão sobre 
 date: 2024-03-09T12:00:00.000Z
 image:
   path: "/assets/solid/plane.svg"
-tags: ["Janja", "ONU", "Nova York", "viagem", "equipe informal", "2024", "extravagância"]
+tags: ["Janja", "ONU", "Nova York", "viagem", "equipe informal", "2024", "extravagância", "p06"]
 categories: governo
 timeline_id: 169
 source_data: extravagancia-2023-2026.json

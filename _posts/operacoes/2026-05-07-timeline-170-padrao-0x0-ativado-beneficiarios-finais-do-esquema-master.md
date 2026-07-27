@@ -4,7 +4,7 @@ description: "Apesar de 4 fases da Operação Compliance Zero, duas prisões pre
 date: 2026-05-07T00:00:00.000Z
 image:
   path: "/assets/solid/user-secret.svg"
-tags: ["0x0", "beneficiarios-finais", "banco-master", "offshore", "rastreamento-patrimonial", "MLAT"]
+tags: ["0x0", "beneficiarios-finais", "banco-master", "offshore", "rastreamento-patrimonial", "MLAT", "p07", "p08"]
 categories: operacoes
 timeline_id: 170
 source_data: compliance-zero-ciro-nogueira-166-170.json

@@ -4,7 +4,7 @@ title: "Xi Jinping visita Brasília; relação elevada a \"Comunidade de Futuro 
 description: "Visita de Estado de Xi Jinping ao Brasil, terceiro encontro com Lula desde 2023, resulta na elevação formal da relação bilateral a novo patamar institucional ('Comunidade de Futuro Compartilhado'), co..."
 date: 2024-11-01
 image: /assets/img/dragao-onca-brasil-federal.webp
-tags: ["incidente_diplomatico", "2024", "p10", "brasil-federal"]
+tags: ["incidente_diplomatico", "2024", "brasil-federal", "p10"]
 categories: dragao-onca
 timeline_id: 1652
 status: confirmado

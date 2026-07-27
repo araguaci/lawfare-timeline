@@ -4,7 +4,7 @@ description: "Padrão emergente identificado no corpus em 2025: fundos fechados 
 date: 2026-04-28T12:00:00.000Z
 image:
   path: "/assets/solid/chart-diagram.svg"
-tags: ['operacoes', 'mare-liberum', 'padrão-07', 'infraestrutura-advisória', 'fundos-fechados', 'spe', 'análise-padrão']
+tags: ['operacoes', 'mare-liberum', 'p07', 'infraestrutura-advisória', 'fundos-fechados', 'spe', 'análise-padrão']
 categories: operacoes
 timeline_id: 161
 source_data: lawfare-mare-liberum-timeline.json

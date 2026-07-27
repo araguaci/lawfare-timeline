@@ -4,7 +4,7 @@ description: "Entre 29 de abril e 9 de maio de 2026: (1) 29/04 — Senado rejeit
 date: 2026-05-09T12:00:00.000Z
 image:
   path: "/assets/solid/weight-scale.svg"
-tags: ["geometria-poder", "lei-dosimetria", "moraes", "congresso", "535-parlamentares", "rejeicao-sabatina", "jorge-messias", "desequilibrio-institucional"]
+tags: ["geometria-poder", "lei-dosimetria", "moraes", "congresso", "535-parlamentares", "rejeicao-sabatina", "jorge-messias", "desequilibrio-institucional", "p01", "p12"]
 categories: lawfare
 permalink: /posts/geometria-535x1-quatro-atos-quatro-dias-poder-institucional-brasileiro/
 id_corpus: "183"

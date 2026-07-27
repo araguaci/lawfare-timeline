@@ -4,7 +4,7 @@ description: "As despesas administrativas da máquina pública federal atingiram
 date: 2025-01-01T12:00:00.000Z
 image:
   path: "/assets/solid/chart-line.svg"
-tags: ["custeio", "máquina pública", "desperdício", "2025", "arcabouço fiscal", "IFI"]
+tags: ["custeio", "máquina pública", "desperdício", "2025", "arcabouço fiscal", "IFI", "p06"]
 categories: governo
 timeline_id: 178
 source_data: extravagancia-2023-2026.json

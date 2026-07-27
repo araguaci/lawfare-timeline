@@ -4,7 +4,7 @@ description: "A CPI do Crime Organizado do Senado produziu mapeamento detalhado 
 date: 2025-01-01T12:00:00.000Z
 image:
   path: "/assets/solid/credit-card.svg"
-tags: ["pcc", "cv", "cpi-crime-organizado", "senado", "mapeamento-territorial", "captura-politica", "fintechs"]
+tags: ["pcc", "cv", "cpi-crime-organizado", "senado", "mapeamento-territorial", "captura-politica", "fintechs", "p01", "p12"]
 categories: escandalos
 permalink: /posts/cpi-crime-organizado-mapeamento-pcc-cv-infiltracao-municipal/
 id_corpus: "1505"

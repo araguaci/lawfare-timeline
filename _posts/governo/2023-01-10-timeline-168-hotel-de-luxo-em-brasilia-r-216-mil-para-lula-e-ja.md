@@ -4,7 +4,7 @@ description: "Em janeiro de 2023, o casal presidencial hospedou-se em hotel de l
 date: 2023-01-10T12:00:00.000Z
 image:
   path: "/assets/solid/hotel.svg"
-tags: ["hotel", "hospedagem", "Janja", "Alvorada", "2023", "extravagância"]
+tags: ["hotel", "hospedagem", "Janja", "Alvorada", "2023", "extravagância", "p06"]
 categories: governo
 timeline_id: 168
 source_data: extravagancia-2023-2026.json

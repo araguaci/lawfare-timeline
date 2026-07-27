@@ -4,7 +4,7 @@ title: "O Dragão e a Onça — Capítulo Brasil: linha do tempo federal 1993-20
 description: "Timeline federal completa desde a Parceria Estratégica de 1993. Inclui correção factual da desinformação sobre compra de vacinas 'pré-pandemia' por Doria (o acordo genérico de 2019 não envolvia covid;..."
 date: 2026-01-01T01:01:01.001Z
 image: /assets/img/dragao-onca.webp
-tags: ["dragao-onca", "2026", "p04b", "p05", "brasil-federal"]
+tags: ["dragao-onca", "2026", "brasil-federal", "p04b", "p05", "p10"]
 categories: dragao-onca
 timeline_id: 229
 status: confirmed

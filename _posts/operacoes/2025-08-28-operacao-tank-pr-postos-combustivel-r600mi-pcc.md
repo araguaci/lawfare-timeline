@@ -4,7 +4,7 @@ description: "A Operação Tank investigou no Paraná rede em que Daniel Dias Lo
 date: 2025-08-28T12:00:00.000Z
 image:
   path: "/assets/solid/credit-card.svg"
-tags: ["pcc", "operacao-tank", "parana", "postos-combustivel", "lavagem-dinheiro", "fintech", "curitiba"]
+tags: ["pcc", "operacao-tank", "parana", "postos-combustivel", "lavagem-dinheiro", "fintech", "curitiba", "p01", "p12"]
 categories: operacoes
 permalink: /posts/operacao-tank-pr-postos-combustivel-r600mi-pcc/
 id_corpus: "1487"

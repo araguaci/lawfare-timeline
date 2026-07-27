@@ -4,7 +4,7 @@ title: "Governo Federal libera recursos do Novo PAC e dá início às obras da P
 description: "A Casa Civil da Presidência anuncia início oficial das obras da Ponte Salvador-Itaparica com recursos do Novo PAC, formalizando o aporte federal de R$3 bilhões definido na renegociação de fevereiro de..."
 date: 2026-07-04
 image: /assets/img/dragao-onca-bahia.webp
-tags: ["dragao-onca", "2026", "p05", "bahia"]
+tags: ["dragao-onca", "2026", "bahia", "p05"]
 categories: dragao-onca
 timeline_id: 1725
 status: confirmado

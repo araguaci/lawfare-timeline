@@ -4,7 +4,7 @@ description: "A configuração jurídico-política de 08/05/2026 cria um mecanis
 date: 2026-05-08T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["lei-dosimetria", "moraes", "sequestro-pauta", "adi", "1402-condenados", "8-janeiro", "prisao-por-omissao", "stf"]
+tags: ["lei-dosimetria", "moraes", "sequestro-pauta", "adi", "1402-condenados", "8-janeiro", "prisao-por-omissao", "stf", "p01", "p12"]
 categories: stf
 permalink: /posts/sequestro-pauta-dosimetria-1402-condenados-limbo-processual/
 id_corpus: "175"

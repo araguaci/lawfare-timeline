@@ -4,7 +4,7 @@ description: "A investigação interna da Corregedoria da RFB iniciada em fev/20
 date: 2026-04-28T12:00:00.000Z
 image:
   path: "/assets/solid/shield-virus.svg"
-tags: ['operacoes', 'mare-liberum', 'corregedoria', 'cadeia-custódia', 'risco-processual', 'P01', 'análise-risco']
+tags: ['operacoes', 'mare-liberum', 'corregedoria', 'cadeia-custódia', 'risco-processual', 'p01', 'análise-risco']
 categories: operacoes
 timeline_id: 163
 source_data: lawfare-mare-liberum-timeline.json

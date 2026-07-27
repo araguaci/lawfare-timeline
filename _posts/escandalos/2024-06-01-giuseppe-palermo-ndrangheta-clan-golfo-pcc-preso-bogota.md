@@ -4,7 +4,7 @@ description: "Giuseppe Palermo, peça-chave na conexão entre ʼNdrangheta e car
 date: 2024-06-01T12:00:00.000Z
 image:
   path: "/assets/solid/flag.svg"
-tags: ["ndrangheta", "pcc", "clan-do-golfo", "palermo", "bogota", "europol", "trafico-cocaina", "colombia"]
+tags: ["ndrangheta", "pcc", "clan-do-golfo", "palermo", "bogota", "europol", "trafico-cocaina", "colombia", "p01", "p12"]
 categories: escandalos
 permalink: /posts/giuseppe-palermo-ndrangheta-clan-golfo-pcc-preso-bogota/
 id_corpus: "1484"

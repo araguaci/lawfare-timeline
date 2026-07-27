@@ -4,7 +4,7 @@ title: "Governador Cláudio Castro (RJ) lidera missão à China: acordos de vide
 description: "Em missão oficial à China (abril de 2025), o governador do Rio de Janeiro, Cláudio Castro, se reuniu com o vice-prefeito de Pequim, Jin Wei (17/abr), e com o governador da província de Zhejiang, Liu J..."
 date: 2025-04-17
 image: /assets/img/dragao-onca-rj.webp
-tags: ["dragao-onca", "2025", "p05", "rio-de-janeiro"]
+tags: ["dragao-onca", "2025", "rio-de-janeiro", "p05"]
 categories: dragao-onca
 timeline_id: 1761
 status: documentado
