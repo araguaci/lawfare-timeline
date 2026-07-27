@@ -7,7 +7,7 @@ image:
   alt: "Estátua da Justiça com balança manipulada: lado pesado sobe, lado vazio desce — dosimetria invertida"
   prompt: "A blindfolded marble Lady Justice statue on a courthouse pediment. The scale is visibly rigged: the left tray holds heavy gold bars and stacks of legal documents yet floats upward impossibly; the right tray is completely empty yet sinks down, defying physics. Dark stormy sky with dramatic side lighting, marble texture, stone architecture framing the scene. Surreal photorealism. Editorial investigative photography. No real people."
   target: "/assets/img/estudos/dosimetria-impunidade-frontmatter-hero.webp"
-tags: [dosimetria, lei-15402-2026, ep72, alexandre-moraes, 8-de-janeiro, toffoli, seletividade, monocratica, stf, adi-7966, adi-7967, p3, p7, p8]
+tags: [dosimetria, lei-15402-2026, ep72, alexandre-moraes, 8-de-janeiro, toffoli, seletividade, monocratica, stf, adi-7966, adi-7967, p03, p07, p08]
 categories: estudos
 pin: false
 ---

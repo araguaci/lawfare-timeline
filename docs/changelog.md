@@ -7,6 +7,36 @@ Formato: data (ISO) → resumo → arquivos de fonte.
 
 ---
 
+## 2026-07-27 — Tags padrão P0x · índice temático por importância
+
+Auditoria e sincronização de tags `p01`–`p12` / `p04b` / `p06-b` / `p12-b` com padrões declarados no corpo dos posts. Reordenação da seção **Capítulos Temáticos** em `/dragao-onca/` pela ordem de leitura do README/`series-nav` (importância), não por data.
+
+### Tags de padrão
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Criado** | `scripts/sync_pattern_tags.py` | Extrai padrões do corpo (`**Padrões:**`, `## Padrões Analíticos`, `### Padrões sistêmicos ativados`); modos `--audit-only`, `--dry-run`, `--apply`, `--normalize-casing`. |
+| **Alterado** | `_posts/**/*.md` (~199) | Tags `p0x` mescladas no front matter; 0 gaps pós-sync (200 posts declaram padrões). |
+| **Alterado** | `_posts/**/*.md` (51) | Normalização de casing: `P01`→`p01`, `padrão-07`→`p07`, `P12-B`→`p12-b`; **`p04b`** preservado (≠ `p04-b`). |
+| **Alterado** | `_posts/operacoes/2026-06-18-9-fase-da-operacao-compliance-zero-*.md` | Tag `"Bahia"` → `"bahia"` (colisão Jekyll em `/tags/bahia/`). |
+
+Séries corrigidas: arco PCC/crise-diplomática (7 posts), temáticos T-228→T-243 + id1718, Mare Liberum + Compliance Zero + timelines governo/lawfare.
+
+### Índice temático Dragão e a Onça
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Criado** | `_data/dragao_onca_thematic_order.yml` | Ordem canônica por `timeline_id` (T-229 → T-245), alinhada a `odragaoeaonca/README.md` e `series-nav`. |
+| **Alterado** | `_layouts/dragao-onca.html` | **Capítulos Temáticos** itera a lista de importância; exclui posts atômicos (ex.: Amazonbai id1757) que entravam pelo filtro antigo de título. Timeline completa permanece cronológica. |
+
+### Verificação
+
+- `python scripts/sync_pattern_tags.py --audit-only` → **0 gaps**
+- `bundle exec jekyll build` → OK (~25 min)
+- Spot-check: `/tags/p10/`, `/tags/p04b/`, `/tags/bahia/`; `/dragao-onca/` abre com T-229 (Brasil Federal)
+
+---
+
 ## 2026-07-27 — Sínteses cross-estadual refeitas (11 UFs)
 
 Após os capítulos **Amapá (T-244)** e **Rio de Janeiro (T-245)**, os quatro artefatos de síntese foram reescritos: KPIs, tabela comparativa, tipologia ampliada (10 mecanismos), alertas, horizontes e `series-nav` (17 dossiês). Correção **RS Day → id_1756** (1760 = CMPort/Vast no RJ). Corpus **T-228→T-245** · **142 posts** · IDs **1639–1762**.

@@ -7,7 +7,7 @@ image:
   alt: "Rei e peão de xadrez se confrontando no chão de uma cela — dilema do prisioneiro e colaboração premiada"
   prompt: "A chess king piece and a chess pawn piece facing each other across a chess board sitting on a cold concrete prison cell floor. Iron bars frame the scene on both sides. The pieces cast long dramatic shadows across the board. The king leans slightly toward the pawn in a gesture of negotiation. Oversized hyperrealistic carved ivory pieces. Cold institutional fluorescent light from above with harsh shadows. Editorial noir photography. No people."
   target: "/assets/img/estudos/delacao-como-jogo-frontmatter-hero.webp"
-tags: [delacao-premiada, colaboracao-premiada, teoria-dos-jogos, lava-jato, stf, ministerio-publico, impunidade, p3, p6, weaponized-legalism, due-process]
+tags: [delacao-premiada, colaboracao-premiada, teoria-dos-jogos, lava-jato, stf, ministerio-publico, impunidade, "p03", "p06", "p07", weaponized-legalism, due-process]
 categories: estudos
 pin: false
 ---

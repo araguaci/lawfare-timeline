@@ -7,7 +7,7 @@ image:
   alt: "Duas portas de cela idênticas: uma trancada com correntes, outra aberta — duplo padrão no acesso ao habeas corpus"
   prompt: "Two identical massive iron prison cell doors side by side in a cold stone corridor. Left door: heavy chains and padlock, a small crouching shadowed figure behind thick bars in near total darkness. Right door: ornate brass handle barely latched, swinging open, warm golden light spills through as a suited silhouette walks out freely. Dramatic split lighting, sharp contrast between cold blue darkness and warm freedom. Photorealistic editorial photography. No faces."
   target: "/assets/img/estudos/hc-seletivo-frontmatter-hero.webp"
-tags: [hc-seletivo, habeas-corpus, duplo-padrao, stf, prisao-preventiva, due-process, erro-judiciario, seletividade, weaponized-legalism, p3, p2]
+tags: [hc-seletivo, habeas-corpus, duplo-padrao, stf, prisao-preventiva, due-process, erro-judiciario, seletividade, weaponized-legalism, "p02", "p03", "p07"]
 categories: estudos
 pin: false
 ---

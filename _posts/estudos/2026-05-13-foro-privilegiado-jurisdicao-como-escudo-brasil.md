@@ -7,7 +7,7 @@ image:
   alt: "Figura de costas segurando escudo jurídico ao pé dos degraus do Supremo — documentos deflectidos pelo foro privilegiado"
   prompt: "Rear view of a faceless figure in a tailored dark suit standing at the foot of wide marble Supreme Court steps in deep perspective. The figure holds a gleaming shield bearing engraved scales of justice. Official legal documents, subpoenas, and court papers fly toward the figure from all sides but deflect off the shield and scatter to the ground. Dramatic overhead institutional lighting, cold marble and shadow, editorial investigative photography. No faces."
   target: "/assets/img/estudos/foro-privilegiado-frontmatter-hero.webp"
-tags: [foro-privilegiado, foro-prerrogativa, stf, ap937, bolsonaro, lava-jato, jurisdicao, impunidade, p3, p7, duplo-padrao, weaponized-legalism]
+tags: [foro-privilegiado, foro-prerrogativa, stf, ap937, bolsonaro, lava-jato, jurisdicao, impunidade, p03, p07, duplo-padrao, weaponized-legalism]
 categories: estudos
 pin: false
 ---

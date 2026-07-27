@@ -7,7 +7,7 @@ image:
   alt: "Martelo judicial fragmentando um livro de lei de cristal — metáfora do poder monocrático sem controle"
   prompt: "A black judicial robe sleeve and hand holding a heavy wooden gavel that has just shattered an open law book made of crystal glass. Frozen glass shards explode outward in midair, suspended. Dramatic bright backlight creates a sharp halo effect behind the destruction, contrasting with the dark surrounding space. Hyperrealistic macro photography. Metaphor of unilateral judicial power overriding legislative process. No faces. Deep black background."
   target: "/assets/img/estudos/anatomia-liminar-monocratica-frontmatter-hero.webp"
-tags: [liminar-monocratica, stf, toffoli, alexandre-moraes, coaf, ep72, adi, due-process, concentracao-poder, p3, p6, compliance-zero, hydra, dosimetria]
+tags: [liminar-monocratica, stf, toffoli, alexandre-moraes, coaf, ep72, adi, due-process, concentracao-poder, "p03", "p06", "p07", compliance-zero, hydra, dosimetria]
 categories: estudos
 pin: false
 ---

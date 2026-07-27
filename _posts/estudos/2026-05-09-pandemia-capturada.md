@@ -4,7 +4,7 @@ description: Mapeamento forense dos desvios de verbas da pandemia por unidade fe
 date: 2026-05-09T12:00:00-03:00
 image:
   path: "/assets/img/estudos/pandemia_capturada_hero_xarticle.webp"
-tags: ["saude", "operacao", "corrupcao", "timeline", "brasil", "crime", "diagnostico"]
+tags: ["saude", "operacao", "corrupcao", "timeline", "brasil", "crime", "diagnostico", "p01", "p03", "p07"]
 categories: estudos
 mermaid: false
 pin: false

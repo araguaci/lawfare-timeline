@@ -7,6 +7,19 @@ Formato: data (ISO) → resumo → arquivos de fonte.
 
 ---
 
+## 2026-07-27 (f) — Hub Jekyll: ordem de importância nos Capítulos Temáticos
+
+A página `/dragao-onca/` (layout Chirpy) passou a listar os 18 posts **T-228→T-245** na mesma ordem de leitura deste README (0 Hub → 17 T-245), em vez de data decrescente.
+
+| Ação | Arquivo (repositório principal) | Descrição |
+|------|----------------------------------|-----------|
+| **Criado** | `_data/dragao_onca_thematic_order.yml` | Lista `timeline_id` 229, 236, 238, 228… 245. |
+| **Alterado** | `_layouts/dragao-onca.html` | Seção **Capítulos Temáticos** usa ordem de importância; timeline cronológica inalterada. |
+
+Detalhes de tags `p0x` e build: [`changelog.md`](../changelog.md) (entrada 2026-07-27).
+
+---
+
 ## 2026-07-27 (e) — Sínteses refeitas (11 UFs)
 
 | Ação | Arquivo | Descrição |
