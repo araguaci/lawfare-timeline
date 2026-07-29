@@ -14,30 +14,28 @@ Compositor X Articles: `https://x.com/compose/article`
 
 **Tweet principal**
 ```
-🐉🐆 Série concluída: O Dragão e a Onça — 126 posts, 16 dossiês, ranking CEBC 2007-2025.
+🐉🐆 Série O Dragão e a Onça — 19 artefatos (0–18), 12 UFs, corpus T-228→T-246.
 
-Brasil × China onde importa: governador, não só Itamaraty. Federal → jurídico → PL 2780 → 9 UFs por investimento chinês.
-
-Hub interativo ↓ (link no reply)
+Brasil × China onde importa: governador, Legislativo ou União — conforme o capítulo. Hub interativo ↓ (link no reply)
 ```
 
 **Reply 1**
 ```
-https://lawfare-timeline.vercel.app/odragaoeaonca/
+https://odragaoeaonca.vercel.app/
 ```
 
 **Reply 2**
 ```
-Ordem sugerida: eixos transversais → estados (ranking CEBC) → síntese T-243. Bookmark se for ler aos poucos.
+Ordem sugerida: eixos → UFs → sínteses → controles (AP/RJ/SC). Bookmark se for ler aos poucos.
 ```
 
 ---
 
-### A2 · Corpus Jekyll (126 posts · IDs 1639–1748)
+### A2 · Corpus Jekyll (150 posts · IDs 1639–1770)
 
 **Tweet principal**
 ```
-⚖️ Corpus verificável no Lawfare Timeline: 110 eventos main track + 16 capítulos temáticos (T-228→T-243).
+⚖️ Corpus verificável: ~150 posts · T-228→T-246 · IDs 1639–1770 (+ SC + backfill CEEE-T).
 
 Cada entrada com fonte, lacuna explícita e padrão P01–P11. Série O Dragão e a Onça — link no reply.
 ```
@@ -49,7 +47,7 @@ https://lawfare-timeline.vercel.app/categories/dragao-onca/
 
 **Reply 2**
 ```
-Próximo ID livre: 1749. Metodologia completa em METHODOLOGY.md (P04b, P05, P11 na série).
+Hub do subsite: https://odragaoeaonca.vercel.app/ · Metodologia em METHODOLOGY.md (P04b, P05, P11).
 ```
 
 ---
@@ -255,12 +253,30 @@ KPIs dos primeiros capítulos territoriais antes da expansão para 9 UFs. Dossi�
 
 **Tweet**
 ```
-🎯 T-243 · Síntese final: 9 UFs + federal — onde a tese confirma, enfraquece e contraria.
+🎯 T-243 · Síntese final: 12 UFs + federal — onde a tese confirma, enfraquece e contraria.
 
-5 mecanismos tipológicos, correção Goiás, PL 2780 como elo. Fechamento da série ↓ reply
+Tipologia + correção Goiás + PL 2780. Controles AP/RJ/SC depois. Fechamento tipológico ↓ reply
 ```
 
-**Reply 1** `https://lawfare-timeline.vercel.app/dragao-onca-sintese-final-cross-state.html`
+**Reply 1** `https://odragaoeaonca.vercel.app/dragao-onca-sintese-final-cross-state.html`
+
+---
+
+### B17 · Santa Catarina · T-246
+
+**Tweet**
+```
+🇧🇷 SC · Alesc assina termo com a JMEV em Pequim. O ES já tinha acordo um mês antes.
+
+Mar/2026: zero fábrica — nem SC, nem o “vencedor”. Cortejo legislativo, captura industrial nula. Dossiê ↓ reply
+```
+
+**Reply 1** `https://odragaoeaonca.vercel.app/dragao-onca-santa-catarina.html`
+
+**Reply 2**
+```
+IDs 1764–1770 · T-246. Contraste com RS/GWM: lá o ES ganhou de fato. Aqui ninguém materializou a planta.
+```
 
 ---
 
@@ -442,16 +458,32 @@ Mesma disputa, desfechos opostos + tabela nacional. [Article]
 
 **Tweet**
 ```
-Síntese estrutural v1: padrões P01–P11 nos cinco primeiros capítulos territoriais.
+Síntese estrutural v1: padrões P01–P11 nos capítulos territoriais.
 
-Antes da expansão para 9 UFs — [Article]
+Espelho KPIs antes do fechamento tipológico — [Article]
 ```
 
-**Reply 1** `https://lawfare-timeline.vercel.app/dragao-onca-sintese.html`
+**Reply 1** `https://odragaoeaonca.vercel.app/dragao-onca-sintese.html`
 
 ---
 
-## D · Calendário editorial sugerido (15 dias · 2 posts/dia)
+### C15 · Santa Catarina (`santa-catarina-xarticle.md`)
+
+**Tweet**
+```
+Alesc assinou termo com a JMEV em Pequim. O ES já tinha acordo um mês antes.
+Em mar/2026: zero fábrica — nem em SC, nem no “vencedor”.
+
+Cap. SC (T-246): cortejo legislativo, captura industrial nula. [Article]
+```
+
+**Reply 1** `https://odragaoeaonca.vercel.app/dragao-onca-santa-catarina.html`
+
+**Hero:** `public/dragao-onca-santa-catarina.webp`
+
+---
+
+## D · Calendário editorial sugerido (~16 dias · ≤2 posts/dia)
 
 | Dia | Manhã | Tarde |
 |-----|-------|-------|
@@ -470,6 +502,7 @@ Antes da expansão para 9 UFs — [Article]
 | 13 | C2 Goiás | C6 MG |
 | 14 | C4 Pará + C5 AM (1/dia — dividir) | C7 Jurídico |
 | 15 | C8 PL2780 | C14 Síntese |
+| 16 | B17 SC dossiê | C15 SC X Article |
 
 ---
 

@@ -35,7 +35,7 @@ Síntese final cross-state da série: qualifica a tese *soberania na conta do go
 
 ## ⚠️ Correção metodológica
 
-O rascunho original desta síntese (jul/2026) afirmava que Goiás/Caiado não tinha capítulo dedicado — apenas referências cruzadas em PL2780 (id_1710) e Diplomático Federal (id_1715). **Correção pós-merge (25/jul/2026):** o corpus confirmado passou a incluir o capítulo temático [T-228](/posts/t228-o-dragao-e-a-onca-goias/) e **9 entradas main track** (IDs 1740–1748), cobrindo missões à China (2023–2024), pivô JOGMEC/EUA, Manifesto Goiás–EUA, aquisição Serra Verde pela USA Rare Earth e instrumentalização eleitoral. Serra Verde continua sendo caso de capital **não chinês** (EUA) — o capítulo goiano documenta o pivô geopolítico, não captura por estatal chinesa.
+O rascunho original desta síntese (jul/2026) afirmava que Goiás/Caiado não tinha capítulo dedicado — apenas referências cruzadas em PL2780 (id_1710) e Diplomático Federal (id_1715). **Correção pós-merge (25/jul/2026):** o corpus confirmado passou a incluir o capítulo temático [T-228 — Goiás](/posts/2026-07-24-t228-o-dragao-e-a-onca-goias/) e **9 entradas main track** (IDs 1740–1748), cobrindo missões à China (2023–2024), pivô JOGMEC/EUA, Manifesto Goiás–EUA, aquisição Serra Verde pela USA Rare Earth e instrumentalização eleitoral. Serra Verde continua sendo caso de capital **não chinês** (EUA) — o capítulo goiano documenta o pivô geopolítico, não captura por estatal chinesa.
 
 ## 📊 Escopo da série
 
@@ -128,20 +128,23 @@ ev-inference: a tese 'soberania na conta do governador' formulada no início da 
 
 ## 🔗 Capítulos da série
 
-- [T-228 — Goiás](/posts/t228-o-dragao-e-a-onca-goias/)
-- [T-229 — Brasil federal](/posts/t229-dragao-onca-brasil-federal/)
-- [T-230 — Pará](/posts/t230-dragao-onca-para/)
-- [T-231 — Amazonas](/posts/t231-dragao-onca-amazonas/)
-- [T-232 — Minas Gerais](/posts/t232-dragao-onca-minas-gerais/)
-- [T-234 — Braço jurídico](/posts/t234-dragao-onca-braco-juridico/)
-- [T-235 — PL 2.780/2024](/posts/t235-dragao-onca-pl2780/)
-- [T-236 — Braço diplomático](/posts/t236-dragao-onca-diplomatico/)
-- [T-237 — Bahia](/posts/t237-dragao-onca-bahia/)
-- [T-238 — São Paulo](/posts/t238-dragao-onca-sp/)
-- [T-239 — Paraná](/posts/t239-dragao-onca-pr/)
-- [T-240 — Rio Grande do Sul](/posts/t240-dragao-onca-rs/)
-- [T-241 — Espírito Santo](/posts/t241-dragao-onca-es/)
-- [T-242 — Ranking CEBC](/posts/t242-dragao-onca-ranking-cebc/)
+- [T-228 — Goiás](/posts/2026-07-24-t228-o-dragao-e-a-onca-goias/)
+- [T-229 — Brasil federal](/posts/2026-07-24-t229-dragao-onca-brasil-federal/)
+- [T-230 — Pará](/posts/2026-07-24-t230-dragao-onca-para/)
+- [T-231 — Amazonas](/posts/2026-07-24-t231-dragao-onca-amazonas/)
+- [T-232 — Minas Gerais](/posts/2026-07-24-t232-dragao-onca-minas-gerais/)
+- [T-234 — Braço jurídico](/posts/2026-07-24-t234-dragao-onca-braco-juridico/)
+- [T-235 — PL 2.780/2024](/posts/2026-07-24-t235-dragao-onca-pl2780/)
+- [T-236 — Braço diplomático](/posts/2026-07-24-t236-dragao-onca-diplomatico/)
+- [T-237 — Bahia](/posts/2026-07-24-t237-dragao-onca-bahia/)
+- [T-238 — São Paulo](/posts/2026-07-24-t238-dragao-onca-sp/)
+- [T-239 — Paraná](/posts/2026-07-24-t239-dragao-onca-pr/)
+- [T-240 — Rio Grande do Sul](/posts/2026-07-24-t240-dragao-onca-rs/)
+- [T-241 — Espírito Santo](/posts/2026-07-24-t241-dragao-onca-es/)
+- [T-242 — Ranking CEBC](/posts/2026-07-24-t242-dragao-onca-ranking-cebc/)
+- [T-244 — Amapá](/posts/2026-07-24-t244-dragao-onca-amapa-controle/)
+- [T-245 — Rio de Janeiro](/posts/2026-07-24-t245-dragao-onca-rj/)
+- [T-246 — Santa Catarina](/posts/2026-07-24-t246-dragao-onca-santa-catarina/)
 
 ### Links para Pesquisa
 

@@ -61,10 +61,10 @@ A decisão consolida o padrão P12-B (Paywall Eleitoral) documentado desde 13/07
 
 ## Conexoes
 
-- id_1235
-- id_1238
-- id_1617
-- id_1618
+- [1235 · Decretada prisão domiciliar de Bolsonaro por suposto descumprimento de…](/posts/decretada-prisao-domiciliar-de-bolsonaro-por-suposto-descumprimento-de-medidas-cautelares/)
+- [1238 · Prisão domiciliar de Bolsonaro](/posts/prisao-domiciliar-de-bolsonaro/)
+- [1617 · Moraes prorroga domiciliar de Bolsonaro por prazo indeterminado e orden…](/posts/2026-07-03-moraes-prorroga-domiciliar-de-bolsonaro-por-prazo-indeterminado-e-ordena-apreensao-de-10-a/)
+- [1618 · Moraes determina interrogatório de Flávio Bolsonaro pela PF em 10 dias…](/posts/2026-07-07-moraes-determina-interrogatorio-de-flavio-bolsonaro-pela-pf-em-10-dias-pre-candidato-presi/)
 
 ## Lacunas investigativas
 

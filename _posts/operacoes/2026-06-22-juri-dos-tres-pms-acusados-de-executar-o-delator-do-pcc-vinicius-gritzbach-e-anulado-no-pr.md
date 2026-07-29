@@ -67,8 +67,8 @@ Caso ilustra P02 em sua forma mais direta — o delator que colaborava com inves
 
 ## Conexoes
 
-- id_T220
-- id_1606
+- [T-220 · T-220 · Convergência estrutural: vetor PCC-OFAC × rede Arpar × Farra do…](/posts/2026-07-01-convergencia-estrutural-vetor-pcc-ofac-rede-arpar-farra-do-inss-via-infraestrutura-finance/)
+- [1606 · Operação Infiltrados — MPSP/GAECO prende chefe da DISE Campinas e ex-es…](/posts/2026-06-09-operacao-infiltrados-mpspgaeco-prende-chefe-da-dise-campinas-e-ex-estagiario-do-mp-por-sus/)
 
 ## Lacunas investigativas
 

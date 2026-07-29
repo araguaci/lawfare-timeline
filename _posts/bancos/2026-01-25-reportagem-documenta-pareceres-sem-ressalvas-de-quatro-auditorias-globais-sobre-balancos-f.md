@@ -68,10 +68,10 @@ ev-inference: A função estrutural documentada não exige dolo das auditorias �
 
 ## Conexoes
 
-- id_1601
-- id_1574
-- T-192
-- T-215
+- [1601 · Quebra de sigilo expõe vínculos de Ciro Nogueira e Hugo Motta com Vorca…](/posts/2026-06-16-quebra-de-sigilo-expoe-vinculos-de-ciro-nogueira-e-hugo-motta-com-vorcaro/)
+- [1574 · Viagem a Washington ocorre após filtração que vincula Flávio Bolsonaro…](/posts/2026-05-27-flavio-bolsonaro-vorcaro-peso-eleitoral/)
+- [T-192 · Vorcaro — Triângulo Carbono–Mineração–Banco](/posts/vorcaro-triangulo-carbono-mineracao-banco/)
+- [T-215 · 2ª Turma do STF mantém prisão de pai e primo de Daniel Vorcaro…](/posts/2026-06-16-2-turma-do-stf-mantem-prisao-de-pai-e-primo-de-daniel-vorcaro-por-31-gilmar-mendes-diverge/)
 
 ## Lacunas investigativas
 

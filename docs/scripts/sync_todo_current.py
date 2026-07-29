@@ -25,6 +25,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
+sys.path.insert(0, str(ROOT / "scripts"))
+from corpus_links import build_corpus_index, build_thematic_index, format_connection
 from gdrive_sync_export import export_sync_to_gdrive
 TODO = ROOT / "_data" / "todo"
 PROC = ROOT / "_data" / "processados"
@@ -319,7 +321,12 @@ def render_timeline_post(u: dict) -> str:
         ])
     conns = u.get("_connections") or []
     if conns:
-        parts.extend(["## Conexoes", ""] + [f"- {c}" for c in conns] + [""])
+        conn_index = build_corpus_index()
+        theme_index = build_thematic_index()
+        conn_lines = [
+            f"- {format_connection(c, conn_index, theme_index)}" for c in conns
+        ]
+        parts.extend(["## Conexoes", ""] + conn_lines + [""])
     lacunas = u.get("_lacunas") or []
     if lacunas:
         parts.extend(["## Lacunas investigativas", ""] + [f"- {x}" for x in lacunas] + [""])
@@ -419,7 +426,12 @@ def render_estudos_post(data: dict, tid: int) -> tuple[str, str]:
         parts.append("")
     conns = data.get("connections") or []
     if conns:
-        parts.extend(["## Conexoes", ""] + [f"- {c}" for c in conns] + [""])
+        conn_index = build_corpus_index()
+        theme_index = build_thematic_index()
+        conn_lines = [
+            f"- {format_connection(c, conn_index, theme_index)}" for c in conns
+        ]
+        parts.extend(["## Conexoes", ""] + conn_lines + [""])
     fonte_lines: list[str] = []
     url = ev.get("url_referencia", "")
     if url:

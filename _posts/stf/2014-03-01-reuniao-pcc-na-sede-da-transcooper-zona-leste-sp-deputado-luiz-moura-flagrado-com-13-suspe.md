@@ -57,9 +57,9 @@ Luiz Moura foi expulso do PT posteriormente. A investigação sobre a Transcoope
 
 ## Conexões no corpus
 
-- id_1512 — Operação Acrônimo: contexto investigativo paralelo envolvendo Moraes
-- id_1513 — Planilha JHSF: segundo vetor de investigação arquivada
-- id_1515 — TJ condena Transcooper por subfaturamento tarifário SPTrans
+- [1512 · STJ Nega Indenização a Inocente Preso 210 Dias e Estado Cobra R$478,9 M…](/timeline/1512/) — Operação Acrônimo: contexto investigativo paralelo envolvendo Moraes
+- [1513 · Defesa de Biazucci Recorre à CIDH por Violação de Direitos Fundamentais…](/timeline/1513/) — Planilha JHSF: segundo vetor de investigação arquivada
+- [1515 · Brasil revoga visto de assessor de Trump Darren Beattie por falsidade d…](/posts/brasil-revoga-visto-de-assessor-de-trump-darren-beattie-por-falsidade-de-informacoes/) — TJ condena Transcooper por subfaturamento tarifário SPTrans
 
 ## Lacunas investigativas
 

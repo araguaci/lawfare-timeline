@@ -59,6 +59,8 @@ REGION_IMAGE_MAP = {
     "rj": "dragao-onca-rj.webp",
     "rio-de-janeiro": "dragao-onca-rj.webp",
     "rio": "dragao-onca-rj.webp",
+    "santa-catarina": "dragao-onca-santa-catarina.webp",
+    "sc": "dragao-onca-santa-catarina.webp",
 }
 
 DEFAULT_IMAGE = "dragao-onca.webp"

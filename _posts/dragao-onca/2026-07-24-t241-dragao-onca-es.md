@@ -46,9 +46,9 @@ ev-inference: par estrutural com o Rio Grande do Sul — mesma montadora, mesma 
 
 Entradas conectadas nesta série:
 
-- [Governo do Espírito Santo formaliza Termo de Compromisso com a GWM na China e desapropria terreno em Aracruz](/posts/id1738-governo-do-espirito-santo-formaliza-termo-de-compromisso-com-a-gwm-na-china-e-de/)
-- [GWM lança oficialmente fábrica em Aracruz — primeira planta da marca fora da Ásia, R$4,6-5 bilhões](/posts/id1739-gwm-lanca-oficialmente-fabrica-em-aracruz-primeira-planta-da-marca-fora-da-asia/)
-- [GWM escolhe Espírito Santo em vez do Rio Grande do Sul para segunda fábrica](/posts/id1737-gwm-escolhe-espirito-santo-em-vez-do-rio-grande-do-sul-para-segunda-fabrica/)
+- [Governo do Espírito Santo formaliza Termo de Compromisso com a GWM na China e desapropr...](/posts/2026-01-26-id1738-governo-do-espirito-santo-formaliza-termo-de-compromisso-com-a-gwm-na-china-e-de/)
+- [GWM lança oficialmente fábrica em Aracruz — primeira planta da marca fora da Ásia, R$4,...](/posts/2026-06-30-id1739-gwm-lanca-oficialmente-fabrica-em-aracruz-primeira-planta-da-marca-fora-da-asia/)
+- [GWM escolhe Espírito Santo em vez do Rio Grande do Sul para segunda fábrica](/posts/2026-06-22-id1737-gwm-escolhe-espirito-santo-em-vez-do-rio-grande-do-sul-para-segunda-fabrica/)
 
 ---
 

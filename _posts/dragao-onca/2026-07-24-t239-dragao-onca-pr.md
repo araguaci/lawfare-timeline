@@ -46,10 +46,10 @@ ev-inference: Paraná é o único capítulo da série com evidência de coordena
 
 Entradas conectadas nesta série:
 
-- [China Merchants Port (CMPort) adquire 90% do Terminal de Contêineres de Paranaguá por R$2,9 bilhões](/posts/id1731-china-merchants-port-cmport-adquire-90-do-terminal-de-conteineres-de-paranagua-p/)
-- [Ratinho Jr inaugura expansão do TCP ao lado de autoridades chinesas](/posts/id1732-ratinho-jr-inaugura-expansao-do-tcp-ao-lado-de-autoridades-chinesas/)
-- [CMPort e APPA assinam novo Acordo de Cooperação Estratégica em Shenzhen](/posts/id1733-cmport-e-appa-assinam-novo-acordo-de-cooperacao-estrategica-em-shenzhen/)
-- [Ministério de Portos e Aeroportos assina acordo de R$1,5 bilhão com a CMPort para expansão do TCP, em Xangai](/posts/id1734-ministerio-de-portos-e-aeroportos-assina-acordo-de-r15-bilhao-com-a-cmport-para/)
+- [China Merchants Port (CMPort) adquire 90% do Terminal de Contêineres de Paranaguá por R...](/posts/2018-03-01-id1731-china-merchants-port-cmport-adquire-90-do-terminal-de-conteineres-de-paranagua-p/)
+- [Ratinho Jr inaugura expansão do TCP ao lado de autoridades chinesas](/posts/2019-10-10-id1732-ratinho-jr-inaugura-expansao-do-tcp-ao-lado-de-autoridades-chinesas/)
+- [CMPort e APPA assinam novo Acordo de Cooperação Estratégica em Shenzhen](/posts/2025-11-03-id1733-cmport-e-appa-assinam-novo-acordo-de-cooperacao-estrategica-em-shenzhen/)
+- [Ministério de Portos e Aeroportos assina acordo de R$1,5 bilhão com a CMPort para expan...](/posts/2025-11-05-id1734-ministerio-de-portos-e-aeroportos-assina-acordo-de-r15-bilhao-com-a-cmport-para/)
 
 ---
 

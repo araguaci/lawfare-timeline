@@ -101,18 +101,18 @@ Março de 2026: Observatório do Clima cataloga **70 projetos** do "Pacote da De
 
 Entradas conectadas nesta série:
 
-- [STF declara inconstitucional a tese do marco temporal (RE 1.017.365, Tema 1.031)](/posts/id1689-stf-declara-inconstitucional-a-tese-do-marco-temporal-re-1017365-tema-1031/)
-- [Congresso deruba veto de Lula e promulga Lei 14.701/2023 (Lei do Marco Temporal)](/posts/id1690-congresso-deruba-veto-de-lula-e-promulga-lei-147012023-lei-do-marco-temporal/)
-- [Senado aprova o "PL da Devastação" (PL 2.159/2021), flexibilizando o licenciamento ambiental](/posts/id1691-senado-aprova-o-pl-da-devastacao-pl-21592021-flexibilizando-o-licenciamento-ambi/)
-- [Congresso derruba vetos de Lula ao "PL da Devastação" dois dias após o encerramento da COP30](/posts/id1692-congresso-derruba-vetos-de-lula-ao-pl-da-devastacao-dois-dias-apos-o-encerrament/)
-- [APIB e PSOL protocolam ADI 7919 contra as leis do licenciamento ambiental](/posts/id1693-apib-e-psol-protocolam-adi-7919-contra-as-leis-do-licenciamento-ambiental/)
-- [STF reafirma inconstitucionalidade do marco temporal por 9x1, mas mantém grande parte da lei em vigor](/posts/id1694-stf-reafirma-inconstitucionalidade-do-marco-temporal-por-9x1-mas-mantem-grande-p/)
-- [Senado aprova PEC 48/2023 (marco temporal) um dia antes do início do julgamento no STF](/posts/id1695-senado-aprova-pec-482023-marco-temporal-um-dia-antes-do-inicio-do-julgamento-no/)
-- [APIB protocola manifestação no STF contra regulamentação de mineração em terra Cinta Larga sem consulta ampla](/posts/id1696-apib-protocola-manifestacao-no-stf-contra-regulamentacao-de-mineracao-em-terra-c/)
-- [PL 2.780/2024 institui a Política Nacional de Minerais Críticos e Estratégicos](/posts/id1697-pl-27802024-institui-a-politica-nacional-de-minerais-criticos-e-estrategicos/)
-- [OAB-DF publica análise técnica sobre a Lei Geral do Licenciamento Ambiental com foco em impactos ao agronegócio](/posts/id1698-oab-df-publica-analise-tecnica-sobre-a-lei-geral-do-licenciamento-ambiental-com/)
-- [Instituto Socioambiental (ISA) atua como interveniente/amicus no julgamento do marco temporal no STF](/posts/id1699-instituto-socioambiental-isa-atua-como-intervenienteamicus-no-julgamento-do-marc/)
-- [Observatório do Clima cataloga 70 projetos do "Pacote da Destruição" em tramitação no Congresso para 2026](/posts/id1700-observatorio-do-clima-cataloga-70-projetos-do-pacote-da-destruicao-em-tramitacao/)
+- [STF declara inconstitucional a tese do marco temporal (RE 1.017.365, Tema 1.031)](/posts/2023-09-01-id1689-stf-declara-inconstitucional-a-tese-do-marco-temporal-re-1017365-tema-1031/)
+- [Congresso deruba veto de Lula e promulga Lei 14.701/2023 (Lei do Marco Temporal)](/posts/2023-12-01-id1690-congresso-deruba-veto-de-lula-e-promulga-lei-147012023-lei-do-marco-temporal/)
+- [Senado aprova o "PL da Devastação" (PL 2.159/2021), flexibilizando o licenciamento ambi...](/posts/2025-05-21-id1691-senado-aprova-o-pl-da-devastacao-pl-21592021-flexibilizando-o-licenciamento-ambi/)
+- [Congresso derruba vetos de Lula ao "PL da Devastação" dois dias após o encerramento da ...](/posts/2025-11-27-id1692-congresso-derruba-vetos-de-lula-ao-pl-da-devastacao-dois-dias-apos-o-encerrament/)
+- [APIB e PSOL protocolam ADI 7919 contra as leis do licenciamento ambiental](/posts/2025-12-29-id1693-apib-e-psol-protocolam-adi-7919-contra-as-leis-do-licenciamento-ambiental/)
+- [STF reafirma inconstitucionalidade do marco temporal por 9x1, mas mantém grande parte d...](/posts/2025-12-19-id1694-stf-reafirma-inconstitucionalidade-do-marco-temporal-por-9x1-mas-mantem-grande-p/)
+- [Senado aprova PEC 48/2023 (marco temporal) um dia antes do início do julgamento no STF](/posts/2025-12-09-id1695-senado-aprova-pec-482023-marco-temporal-um-dia-antes-do-inicio-do-julgamento-no/)
+- [APIB protocola manifestação no STF contra regulamentação de mineração em terra Cinta La...](/posts/2026-04-08-id1696-apib-protocola-manifestacao-no-stf-contra-regulamentacao-de-mineracao-em-terra-c/)
+- [PL 2.780/2024 institui a Política Nacional de Minerais Críticos e Estratégicos](/posts/2024-01-01-id1697-pl-27802024-institui-a-politica-nacional-de-minerais-criticos-e-estrategicos/)
+- [OAB-DF publica análise técnica sobre a Lei Geral do Licenciamento Ambiental com foco em...](/posts/2025-09-01-id1698-oab-df-publica-analise-tecnica-sobre-a-lei-geral-do-licenciamento-ambiental-com/)
+- [Instituto Socioambiental (ISA) atua como interveniente/amicus no julgamento do marco te...](/posts/2025-06-01-id1699-instituto-socioambiental-isa-atua-como-intervenienteamicus-no-julgamento-do-marc/)
+- [Observatório do Clima cataloga 70 projetos do "Pacote da Destruição" em tramitação no C...](/posts/2026-03-04-id1700-observatorio-do-clima-cataloga-70-projetos-do-pacote-da-destruicao-em-tramitacao/)
 
 ---
 

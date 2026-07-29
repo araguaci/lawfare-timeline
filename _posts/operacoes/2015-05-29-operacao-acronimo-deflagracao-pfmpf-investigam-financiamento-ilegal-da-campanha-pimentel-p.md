@@ -64,7 +64,7 @@ Fernando Pimentel foi condenado por tráfico de influência e lavagem de dinheir
 
 ## Conexões no corpus
 
-- id_1513 — planilha JHSF/Moraes descoberta na 6ª fase da Acrônimo
+- [1513 · Defesa de Biazucci Recorre à CIDH por Violação de Direitos Fundamentais…](/timeline/1513/) — planilha JHSF/Moraes descoberta na 6ª fase da Acrônimo
 
 ## Lacunas investigativas
 

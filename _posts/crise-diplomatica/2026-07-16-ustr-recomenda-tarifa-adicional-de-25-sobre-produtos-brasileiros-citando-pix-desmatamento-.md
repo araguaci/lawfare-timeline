@@ -56,10 +56,10 @@ Este evento não se encaixa limpamente em nenhum padrão P01–P11 do corpus —
 
 ## Conexoes
 
-- id_1514
-- id_1524
-- id_1572
-- id_1576
+- [1514 · Ramagem liberado pelo ICE após 48h; pedido de asilo barra deportação ao…](/posts/ramagem-liberado-pelo-ice-apos-48h-pedido-de-asilo-barra-deportacao-ao-brasil/)
+- [1524 · Plano Trump: possível descredenciamento da embaixadora brasileira e rup…](/posts/2025-07-26-plano-trump-possivel-descredenciamento-da-embaixadora-brasileira-e-ruptura-diplomatica/)
+- [1572 · Flávio Bolsonaro recebido por Trump na Casa Branca — promete adesão ao…](/posts/2026-05-27-flavio-bolsonaro-trump-casa-branca-mai2026/)
+- [1576 · Escudo das Américas — governo Lula opõe soberania nacional à aliança re…](/posts/2026-05-27-escudo-americas-brasil-soberania-lula-oposicao/)
 
 ## Lacunas investigativas
 

@@ -66,16 +66,16 @@ Três arquiteturas distintas de relação Amapá-China, nenhuma delas confirmand
 
 Entradas conectadas nesta série:
 
-- [Cooperativa Amazonbai (Amapá) fecha contrato de exportação de açaí à China — 15 mil toneladas até 2031, série O Dragão e a Onça, capítulo de controle](/posts/id1757-cooperativa-amazonbai-amapa-fecha-contrato-de-exportacao-de-acai-a-china-15-mil/)
-- [Venda de açaí do Amapá à China pendente de certificação GACC — contrato ainda não concluído](/posts/id1758-venda-de-acai-do-amapa-a-china-pendente-de-certificacao-gacc-contrato-ainda-nao/)
-- [Consórcio Chevron/CNPC arremata 9 blocos na Bacia da Foz do Amazonas (Margem Equatorial) — primeira entrada da estatal chinesa na região](/posts/id1759-consorcio-chevroncnpc-arremata-9-blocos-na-bacia-da-foz-do-amazonas-margem-equat/)
+- [Cooperativa Amazonbai (Amapá) fecha contrato de exportação de açaí à China — 15 mil ton...](/posts/2026-05-22-id1757-cooperativa-amazonbai-amapa-fecha-contrato-de-exportacao-de-acai-a-china-15-mil/)
+- [Venda de açaí do Amapá à China pendente de certificação GACC — contrato ainda não concl...](/posts/2026-05-25-id1758-venda-de-acai-do-amapa-a-china-pendente-de-certificacao-gacc-contrato-ainda-nao/)
+- [Consórcio Chevron/CNPC arremata 9 blocos na Bacia da Foz do Amazonas (Margem Equatorial...](/posts/2025-06-17-id1759-consorcio-chevroncnpc-arremata-9-blocos-na-bacia-da-foz-do-amazonas-margem-equat/)
 - [Entrada 1100](/timeline/entries/1100)
-- [Entrada T-228](/timeline/entries/T-228)
-- [Entrada T-230](/timeline/entries/T-230)
-- [Entrada T-231](/timeline/entries/T-231)
-- [Entrada T-232](/timeline/entries/T-232)
-- [Entrada T-233](/timeline/entries/T-233)
-- [Entrada T-243](/timeline/entries/T-243)
+- [T-228 — Goiás](/posts/2026-07-24-t228-o-dragao-e-a-onca-goias/)
+- [T-230 — Pará](/posts/2026-07-24-t230-dragao-onca-para/)
+- [T-231 — Amazonas](/posts/2026-07-24-t231-dragao-onca-amazonas/)
+- [T-232 — Minas Gerais](/posts/2026-07-24-t232-dragao-onca-minas-gerais/)
+- [T-233 — Síntese v1](/posts/2026-07-24-t233-dragao-onca-sintese/)
+- [T-243 — Síntese final](/posts/2026-07-24-t243-sintese-final-cross-state/)
 
 ---
 

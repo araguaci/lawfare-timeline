@@ -7,6 +7,70 @@ Formato: data (ISO) → resumo → arquivos de fonte.
 
 ---
 
+## 2026-07-27 (l) — series-nav 0–18 + pipeline timeline/
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Atualizado** | `scripts/updater_series_nav.py` | Sequência 0–18 (+ SC T-246); fallback RJ sem `<main>`. |
+| **Atualizado** | `scripts/generate_timeline_pages.py` | Cap. 18 SC; extrator `.tlitem`; 18 timelines. |
+| **Criado** | `scripts/run_series_pipeline.py` | Orquestra: series-nav → generate → patch index. |
+| **Atualizado** | `scripts/patch_timeline_index_hrefs.py` | Href SC + contagens 0–18 / T-246. |
+| **Regenerado** | 18× `dragao-onca-*.html` series-nav | Cards 0–18; `is-current` por capítulo. |
+| **Gerado** | `timeline/timeline-santa-catarina.html` | Condensado IDs 1764–1770. |
+| **Atualizado** | `timeline/index.html` · `index.html` | Card/chip SC; link Timeline; aliases `#sc`/`#t-246`. |
+
+Uso: `python scripts/run_series_pipeline.py`
+
+---
+
+## 2026-07-27 (k) — Docs: Santa Catarina (T-246) no índice da série
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Atualizado** | `README.md` | Cap. 18: paths X Article + hero; tese T-243–246; calendário dia 18; corpus ~150 / IDs→1770. |
+| **Atualizado** | `CATALAGO.md` | Índice #18 + prompt hero SC; UF SC; pendência hero fechada. |
+| **Atualizado** | `promo/x-posts-promocao.md` | Hub/corpus; B17 dossiê SC; C15 X Article; calendário dia 16. |
+
+---
+
+## 2026-07-27 (j) — X Article Santa Catarina (T-246)
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Criado** | `artigos/santa-catarina-xarticle.md` | X Article: Alesc×JMEV, cortejo duplo SC/ES sem fábrica; ferrovias exploratórias; GACC/frango como controle. |
+| **Criado** | `public/dragao-onca-santa-catarina.webp` | Hero share card (~1024×600, 5:2). |
+
+Fonte: `dragao-onca-santa-catarina.html` · IDs 1764–1770 · T-246.
+
+---
+
+## 2026-07-27 (i) — Fix cards do timeline hub (âncoras aninhadas)
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Corrigido** | `timeline/index.html` | Cards 0–17: `div.card` + `a.card-main` + `#âncora` no topo — remove `<a>` dentro de `<a>` que quebrava layout/clique. |
+
+---
+
+## 2026-07-27 (h) — Timelines condensadas + hub reordenado
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Criado** | `scripts/generate_timeline_pages.py` | Extrai KPIs + eventos dos dossiês → `timeline/timeline-*.html`. |
+| **Gerado** | 17× `timeline/timeline-*.html` | Capítulos 1–17 (Federal→RJ), series-nav ordem de importância. |
+| **Reescrito** | `index.html` | Ordem 1–17 + âncoras; links Dossiê + Timeline por card. |
+| **Atualizado** | `timeline/index.html` | Cards apontam às timelines condensadas. |
+
+---
+
+## 2026-07-27 (g) — Timeline hub: ordem de importância + âncoras
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Reescrito** | `timeline/index.html` | 18 artefatos (0–17); índice inteligente sticky; âncoras `#federal`…`#rj`; aliases UF/T-ID; links dossiês + X Articles. |
+
+---
+
 ## 2026-07-27 (f) — Hub Jekyll: ordem de importância nos Capítulos Temáticos
 
 A página `/dragao-onca/` (layout Chirpy) passou a listar os 18 posts **T-228→T-245** na mesma ordem de leitura deste README (0 Hub → 17 T-245), em vez de data decrescente.
@@ -36,7 +100,7 @@ Corpus referenciado: **T-228→T-245** · **142 posts** · **17 dossiês HTML**.
 
 | Ação | Arquivo | Descrição |
 |------|---------|-----------|
-| **Criado** | `artigos/rj-xarticle-hero.png` | Hero 1024×600 — Açu + vigilância. |
+| **Criado** | `public/dragao-onca-rj.webp` | Hero 1024×600 — Açu + vigilância. |
 | **Atualizado** | `public/dragao-onca-rj.webp` | Capa web exportada do hero. |
 | **Atualizado** | `README.md` · `CATALAGO.md` | Path hero RJ; pendência fechada. |
 
@@ -63,7 +127,7 @@ Corpus referenciado: **T-228→T-245** · **142 posts** · **17 dossiês HTML**.
 | Ação | Arquivo | Descrição |
 |------|---------|-----------|
 | **Atualizado** | `artigos/amapa-xarticle.md` | X Article Cap. 16: Amazonbai 15 mil t, GACC pendente, Chevron/CNPC R$582,2mi; URL vercel; contraste Bahia. |
-| **Criado** | `artigos/amapa-xarticle-hero.png` | Hero share card X (1024×600, wide 5:2). |
+| **Criado** | `public/dragao-onca-amapa.webp` | Hero share card X (1024×600, wide 5:2). |
 | **Atualizado** | `README.md` | Hero path no índice X Articles. |
 
 ---
@@ -96,7 +160,7 @@ Corpus referenciado: **T-228→T-245** · **142 posts** · **17 dossiês HTML**.
 | Ação | Arquivo | Descrição |
 |------|---------|-----------|
 | **Criado** | `artigos/sintese-final-xarticle.md` | Fechamento tipológico 8 mecanismos; releitura MG/RS; confirma/enfraquece/contraria. |
-| **Criado** | `artigos/sintese-final-xarticle-hero.png` | Hero share card X (1024×600, wide 5:2). |
+| **Criado** | `public/dragao-onca-sintese-final.webp` | Hero share card X (1024×600, wide 5:2). |
 | **Atualizado** | `README.md` · `dragao-onca-sintese-final-cross-state.html` | Índice X Article; lacuna T-243 fechada. |
 
 ---
@@ -142,7 +206,7 @@ Corpus referenciado: **T-228→T-245** · **142 posts** · **17 dossiês HTML**.
 | Ação | Arquivo | Descrição |
 |------|---------|-----------|
 | **Atualizado** | `artigos/rs-es-ranking-xarticle.md` | X Article T-240–242: par de controle GWM, logística vs diplomacia, ranking CEBC US$85,5bi / 355 projetos. |
-| **Criado** | `artigos/rs-es-ranking-xarticle-hero.png` | Hero share card X (1024×600, composição wide 5:2). |
+| **Criado** | `public/dragao-onca-rs-es-ranking.webp` | Hero share card X (1024×600, composição wide 5:2). |
 
 ---
 
@@ -151,7 +215,7 @@ Corpus referenciado: **T-228→T-245** · **142 posts** · **17 dossiês HTML**.
 | Ação | Arquivo | Descrição |
 |------|---------|-----------|
 | **Atualizado** | `artigos/parana-xarticle.md` | X Article T-239: CMPort 90%, acordos gêmeos APPA/MPor (3–5/nov/2025), contraste SP, nota anti-confirmation-bias. |
-| **Criado** | `artigos/parana-xarticle-hero.png` | Hero share card X (1024×600, composição wide 5:2). |
+| **Criado** | `public/dragao-onca-parana.webp` | Hero share card X (1024×600, composição wide 5:2). |
 
 ---
 
@@ -160,7 +224,7 @@ Corpus referenciado: **T-228→T-245** · **142 posts** · **17 dossiês HTML**.
 | Ação | Arquivo | Descrição |
 |------|---------|-----------|
 | **Atualizado** | `artigos/sintese-xarticle.md` | X Article T-233 alinhado à síntese de 9 UFs: confirma / enfraquece / contraria; KPIs CEBC; ponte T-243. |
-| **Criado** | `artigos/sintese-xarticle-hero.png` | Hero share card X (1024×600, composição wide 5:2). |
+| **Criado** | `public/dragao-onca-sintese.webp` | Hero share card X (1024×600, composição wide 5:2). |
 
 ---
 
@@ -255,7 +319,7 @@ Artigo longo para X.com a partir do dossiê HTML `dragao-onca-sao-paulo.html` (C
 | Ação | Arquivo | Descrição |
 |------|---------|-----------|
 | **Criado** | `artigos/sao-paulo-xarticle.md` | X Article: leilões/concessões, domínio CRRC, terminal COFCO Santos, tese T-238, lacunas, fontes. |
-| **Criado** | `artigos/sao-paulo-xarticle-hero.png` | Capa share card X, 1024×600 px, composição wide 5:2. |
+| **Criado** | `public/dragao-onca-sao-paulo.webp` | Capa share card X, 1024×600 px, composição wide 5:2. |
 | **Fonte** | `dragao-onca-sao-paulo.html` | Dossiê interativo Cap. 11 (5 entradas + 1 vaga, fev/2024–2026). |
 
 ### Publicação X (referência)

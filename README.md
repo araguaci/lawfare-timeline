@@ -16,18 +16,18 @@ Valores abaixo vêm de `_data/lawfare.json` e `_data/claude.ai-corpus-ids-sync.j
 
 | Track | Último ID | Próximo | Fonte de verdade |
 |---|---:|---:|---|
-| **Main timeline** | **1756** | 1757 | `_data/lawfare.json` → `assuntos[].id` |
-| **Temático (T-)** | **243** | 244 | `_data/claude.ai-corpus-ids-sync.json` + `_posts/` |
+| **Main timeline** | **1774** | 1775 | `_data/lawfare.json` → `assuntos[].id` |
+| **Temático (T-)** | **246** | 247 | `_data/claude.ai-corpus-ids-sync.json` + `_posts/` |
 | **Estudos T em disco** | — | — | ~32 posts com `id_corpus` temático |
 | **Posts `_posts/`** | — | — | ~400+ entradas Jekyll |
-| **Série Dragão e a Onça** | **1756** / **T-243** | 1757 / T-244 | `_posts/dragao-onca/` (134 posts) |
+| **Série Dragão e a Onça** | **1770** / **T-246** | 1775 / T-247 | `_posts/dragao-onca/` (151 posts) |
 
 ### Dois tracks de ID (não confundir)
 
 | Track | Namespace | Onde vive | Exemplo |
 |---|---|---|---|
-| Main | inteiros 1–1756+ | `lawfare.json`, posts timeline | `id_corpus: "1756"` |
-| Temático | T-100+ (registry 100–243) | `_posts/estudos/`, `_posts/dragao-onca/`, sync JSON | `id_corpus: "T-243"` |
+| Main | inteiros 1–1762+ | `lawfare.json`, posts timeline | `id_corpus: "1762"` |
+| Temático | T-100+ (registry 100–245) | `_posts/estudos/`, `_posts/dragao-onca/`, sync JSON | `id_corpus: "T-245"` |
 
 Posts **corpus-bridge** (T-205–T-209) ligam artefatos HTML do [gosurf.site](https://gosurf.site) ao índice Jekyll. Detalhes em [TODO.md](./TODO.md).
 
@@ -229,6 +229,8 @@ Pipeline de geração e merge — uso pontual ou batch. Cópias espelhadas em `d
 ---
 
 ## Fontes de dados (`_data/`)
+
+Mapa completo, pipeline editorial e plano de reorganização: **[`_data/README.md`](./_data/README.md)**.
 
 ### Núcleo do corpus
 

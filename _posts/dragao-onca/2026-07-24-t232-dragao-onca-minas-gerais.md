@@ -129,16 +129,16 @@ A conversão de ativo econômico em capital eleitoral não é fórmula garantida
 
 Entradas conectadas nesta série:
 
-- [Zema lança mundialmente o projeto "Vale do Lítio" na Nasdaq, em Nova York](/posts/id1679-zema-lanca-mundialmente-o-projeto-vale-do-litio-na-nasdaq-em-nova-york/)
-- [Sigma Lithium opera com R$3 bilhões investidos no complexo Grota do Cirilo e acordo de fornecimento com a LG (Coreia do Sul)](/posts/id1680-sigma-lithium-opera-com-r3-bilhoes-investidos-no-complexo-grota-do-cirilo-e-acor/)
-- [Assembleia Legislativa de Minas Gerais requer vistoria de segurança no complexo Grota do Cirilo (Sigma Lithium)](/posts/id1681-assembleia-legislativa-de-minas-gerais-requer-vistoria-de-seguranca-no-complexo/)
-- [Sigma Lithium paralisa única mina em operação para reestruturação de equipamentos; liquidez questionada](/posts/id1682-sigma-lithium-paralisa-unica-mina-em-operacao-para-reestruturacao-de-equipamento/)
-- [Sigma Lithium retoma operações, fecha US$146 milhões em contratos e ações saltam 41% na Nasdaq](/posts/id1683-sigma-lithium-retoma-operacoes-fecha-us146-milhoes-em-contratos-e-acoes-saltam-4/)
-- [Sigma Lithium nomeia Katia Abreu (ex-senadora, ex-ministra da Agricultura) para conselho de administração](/posts/id1684-sigma-lithium-nomeia-katia-abreu-ex-senadora-ex-ministra-da-agricultura-para-con/)
-- [Zema aumenta o próprio salário de governador em 300%](/posts/id1685-zema-aumenta-o-proprio-salario-de-governador-em-300/)
-- [Zema deixa o governo de Minas Gerais para concorrer à Presidência pelo partido Novo](/posts/id1686-zema-deixa-o-governo-de-minas-gerais-para-concorrer-a-presidencia-pelo-partido-n/)
-- [Zema lançado pré-candidato à Presidência em evento do partido Novo, com aval de Bolsonaro](/posts/id1687-zema-lancado-pre-candidato-a-presidencia-em-evento-do-partido-novo-com-aval-de-b/)
-- [Zema, "encalhado nas pesquisas", redobra críticas ao STF como estratégia de viabilização eleitoral](/posts/id1688-zema-encalhado-nas-pesquisas-redobra-criticas-ao-stf-como-estrategia-de-viabiliz/)
+- [Zema lança mundialmente o projeto "Vale do Lítio" na Nasdaq, em Nova York](/posts/2025-05-09-id1679-zema-lanca-mundialmente-o-projeto-vale-do-litio-na-nasdaq-em-nova-york/)
+- [Sigma Lithium opera com R$3 bilhões investidos no complexo Grota do Cirilo e acordo de ...](/posts/2025-01-01-id1680-sigma-lithium-opera-com-r3-bilhoes-investidos-no-complexo-grota-do-cirilo-e-acor/)
+- [Assembleia Legislativa de Minas Gerais requer vistoria de segurança no complexo Grota d...](/posts/2026-01-01-id1681-assembleia-legislativa-de-minas-gerais-requer-vistoria-de-seguranca-no-complexo/)
+- [Sigma Lithium paralisa única mina em operação para reestruturação de equipamentos; liqu...](/posts/2025-10-01-id1682-sigma-lithium-paralisa-unica-mina-em-operacao-para-reestruturacao-de-equipamento/)
+- [Sigma Lithium retoma operações, fecha US$146 milhões em contratos e ações saltam 41% na...](/posts/2026-03-30-id1683-sigma-lithium-retoma-operacoes-fecha-us146-milhoes-em-contratos-e-acoes-saltam-4/)
+- [Sigma Lithium nomeia Katia Abreu (ex-senadora, ex-ministra da Agricultura) para conselh...](/posts/2026-01-01-id1684-sigma-lithium-nomeia-katia-abreu-ex-senadora-ex-ministra-da-agricultura-para-con/)
+- [Zema aumenta o próprio salário de governador em 300%](/posts/2023-01-01-id1685-zema-aumenta-o-proprio-salario-de-governador-em-300/)
+- [Zema deixa o governo de Minas Gerais para concorrer à Presidência pelo partido Novo](/posts/2026-03-22-id1686-zema-deixa-o-governo-de-minas-gerais-para-concorrer-a-presidencia-pelo-partido-n/)
+- [Zema lançado pré-candidato à Presidência em evento do partido Novo, com aval de Bolsonaro](/posts/2025-07-21-id1687-zema-lancado-pre-candidato-a-presidencia-em-evento-do-partido-novo-com-aval-de-b/)
+- [Zema, "encalhado nas pesquisas", redobra críticas ao STF como estratégia de viabilizaçã...](/posts/2026-07-01-id1688-zema-encalhado-nas-pesquisas-redobra-criticas-ao-stf-como-estrategia-de-viabiliz/)
 
 ---
 

@@ -28,6 +28,8 @@ Séries corrigidas: arco PCC/crise-diplomática (7 posts), temáticos T-228→T-
 |------|---------|-----------|
 | **Criado** | `_data/dragao_onca_thematic_order.yml` | Ordem canônica por `timeline_id` (T-229 → T-245), alinhada a `odragaoeaonca/README.md` e `series-nav`. |
 | **Alterado** | `_layouts/dragao-onca.html` | **Capítulos Temáticos** itera a lista de importância; exclui posts atômicos (ex.: Amazonbai id1757) que entravam pelo filtro antigo de título. Timeline completa permanece cronológica. |
+| **Criado** | `_data/dragao-onca.json` | Export dedicado (142 assuntos: 124 main + 18 temáticos), schema lawfare.json + `track` / `thematic_id`. |
+| **Criado** | `scripts/export_dragao_onca_json.py` | Gera `dragao-onca.json` a partir de `lawfare.json` + posts `2026-07-24-t*.md`. |
 
 ### Verificação
 

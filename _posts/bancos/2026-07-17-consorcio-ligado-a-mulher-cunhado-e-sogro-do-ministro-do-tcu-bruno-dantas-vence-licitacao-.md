@@ -67,8 +67,8 @@ P11 em escala reduzida, mas com mecanismo P07 (transgeracional/familiar) como ve
 
 ## Conexoes
 
-- id_T191
-- id_T194
+- [T-191 · T-191 · Custeio Administrativo Federal — R$ 32,4 bi e o Padrão P11](/posts/custeio-administrativo-federal-p11/)
+- [T-194 · T-194 · Máquina de Gastos P11 — Índice do Cluster](/posts/maquina-gastos-p11-indice-cluster/)
 
 ## Lacunas investigativas
 

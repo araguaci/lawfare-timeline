@@ -65,8 +65,8 @@ Erosão documentada do consenso de apoio que sustentou a expansão do INQ 4.781 
 
 ## Conexões no corpus
 
-- id_1513 — Arquivamento Fux/JHSF: instância de P07 que o consenso de apoio permitiu passar sem escrutínio
-- id_1516 — conexão temática com INQ 4.781 (inq4781.html do corpus)
+- [1513 · Defesa de Biazucci Recorre à CIDH por Violação de Direitos Fundamentais…](/timeline/1513/) — Arquivamento Fux/JHSF: instância de P07 que o consenso de apoio permitiu passar sem escrutínio
+- [1516 · Flávio Bolsonaro na CPAC pede 'pressão diplomática' dos EUA sobre eleiç…](/posts/flavio-bolsonaro-na-cpac-pede-pressao-diplomatica-dos-eua-sobre-eleicoes-brasileiras-de-20/) — conexão temática com INQ 4.781 (inq4781.html do corpus)
 
 ## Lacunas investigativas
 

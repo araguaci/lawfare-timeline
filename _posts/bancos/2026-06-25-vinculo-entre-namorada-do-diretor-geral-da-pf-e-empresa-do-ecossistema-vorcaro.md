@@ -4,7 +4,7 @@ description: "Renata Varandas, namorada do diretor-geral da PF Andrei Rodrigues,
 date: 2026-06-25T12:00:00.000Z
 image:
   path: "/assets/solid/landmark.svg"
-tags: ["bancos", "PF", "conflito_de_interesse", "imprensa", "lobby", "CVM"]
+tags: ["bancos", "pF", "conflito_de_interesse", "imprensa", "lobby", "CVM"]
 categories: bancos
 permalink: /posts/2026-06-25-vinculo-entre-namorada-do-diretor-geral-da-pf-e-empresa-do-ecossistema-vorcaro/
 id_corpus: "1604"

@@ -54,8 +54,8 @@ Esta entrada é metodologicamente relevante por testar a simetria do mecanismo: 
 
 ## Conexoes
 
-- id_1636 (declaração 02/jun)
-- id_1638 (repetição 20/jul)
+- [1636 · Lula associa Flávio Bolsonaro a 'traidores da pátria' e cita enforcamen…](/posts/2026-06-02-lula-associa-flavio-bolsonaro-a-traidores-da-patria-e-cita-enforcamento-de-silverio-dos-re/) (declaração 02/jun)
+- [1638 · Lula repete referência a enforcamento de 'traidores' mirando Flávio Bol…](/posts/2026-07-20-lula-repete-referencia-a-enforcamento-de-traidores-mirando-flavio-bolsonaro-em-convencao-d/) (repetição 20/jul)
 
 ## Lacunas investigativas
 

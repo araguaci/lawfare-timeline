@@ -50,12 +50,12 @@ ev-inference: o capítulo documenta um padrão de alinhamento assimétrico duplo
 
 Entradas conectadas nesta série:
 
-- [Ministério da Fazenda oficializa memorandos de cooperação econômico-financeira com Rússia e China](/posts/id1713-ministerio-da-fazenda-oficializa-memorandos-de-cooperacao-economico-financeira-c/)
-- [EUA articulam bloco de minerais críticos para reduzir dependência da China; Pequim reage e Brasil é posicionado como ativo geopolítico](/posts/id1714-eua-articulam-bloco-de-minerais-criticos-para-reduzir-dependencia-da-china-pequi/)
-- [USA Rare Earth anuncia aquisição da Serra Verde (Goiás) por US$ 2,8 bilhões, invertendo destino da produção que ia para a China](/posts/id1715-usa-rare-earth-anuncia-aquisicao-da-serra-verde-goias-por-us-28-bilhoes-inverten/)
-- [G7 fecha acordo para limitar dependência de terras raras da China; Brasil recebe medida como oportunidade de barganha](/posts/id1716-g7-fecha-acordo-para-limitar-dependencia-de-terras-raras-da-china-brasil-recebe/)
-- [Lula anuncia lançamento de negociação de parceria econômica com o Japão e avanço no diálogo Mercosul-China durante cúpula no Paraguai](/posts/id1717-lula-anuncia-lancamento-de-negociacao-de-parceria-economica-com-o-japao-e-avanco/)
-- [Brasil assina fundação da WAICO, organização de governança de IA liderada pela China, sem participação dos EUA](/posts/id1718-brasil-assina-fundacao-da-waico-organizacao-de-governanca-de-ia-liderada-pela-ch/)
+- [Ministério da Fazenda oficializa memorandos de cooperação econômico-financeira com Rúss...](/posts/2025-08-11-id1713-ministerio-da-fazenda-oficializa-memorandos-de-cooperacao-economico-financeira-c/)
+- [EUA articulam bloco de minerais críticos para reduzir dependência da China; Pequim reag...](/posts/2026-02-06-id1714-eua-articulam-bloco-de-minerais-criticos-para-reduzir-dependencia-da-china-pequi/)
+- [USA Rare Earth anuncia aquisição da Serra Verde (Goiás) por US$ 2,8 bilhões, invertendo...](/posts/2026-04-20-id1715-usa-rare-earth-anuncia-aquisicao-da-serra-verde-goias-por-us-28-bilhoes-inverten/)
+- [G7 fecha acordo para limitar dependência de terras raras da China; Brasil recebe medida...](/posts/2026-06-17-id1716-g7-fecha-acordo-para-limitar-dependencia-de-terras-raras-da-china-brasil-recebe/)
+- [Lula anuncia lançamento de negociação de parceria econômica com o Japão e avanço no diá...](/posts/2026-06-30-id1717-lula-anuncia-lancamento-de-negociacao-de-parceria-economica-com-o-japao-e-avanco/)
+- [Brasil assina fundação da WAICO, organização de governança de IA liderada pela China, s...](/posts/2026-07-16-id1718-brasil-assina-fundacao-da-waico-organizacao-de-governanca-de-ia-liderada-pela-ch/)
 
 ---
 

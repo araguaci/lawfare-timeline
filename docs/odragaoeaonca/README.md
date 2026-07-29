@@ -3,7 +3,7 @@
 Investigação documental sobre captura econômico-eleitoral no federalismo brasileiro: como governadores negociam ativos estratégicos com capital estrangeiro (chinês, americano, europeu, japonês, sul-coreano) e convertem esses ativos em capital político pessoal — frequentemente sem que o benefício chegue à população das regiões afetadas.
 
 **Licença:** CC0 1.0 — Domínio Público · série *lawfare-timeline*  
-**Hub:** https://odragaoeaonca.vercel.app/ · **Corpus:** T-228 → T-245 · atualizado 27/jul/2026
+**Hub:** https://odragaoeaonca.vercel.app/ · **Corpus:** T-228 → T-246 · atualizado 27/jul/2026
 
 ---
 
@@ -11,7 +11,7 @@ Investigação documental sobre captura econômico-eleitoral no federalismo bras
 
 > **Nenhum vetor — chinês, americano, europeu ou sul-coreano — chega ao beneficiário final.**
 
-A União negocia marcos amplos (tratados, MoUs, cúpulas). Quem assina o contrato específico, enfrenta a comunidade atingida e responde eleitoralmente é o **governador estadual** — com nuance (T-243–245): confirma-se em extração mineral com custo local e em P09 eleitoral (GO; MG variante; RJ/Castro em vigilância); enfraquece em mercado/continuidade (SP, PR; Açu/CMPort no RJ); contraria-se na Bahia (TIR↓), no RS/ES (CEEE-T ≠ GWM; logística > diplomacia) e no Amapá (controle açaí + petróleo federal sem governador).
+A União negocia marcos amplos (tratados, MoUs, cúpulas). Quem assina o contrato específico, enfrenta a comunidade atingida e responde eleitoralmente é o **governador estadual** — com nuance (T-243–246): confirma-se em extração mineral com custo local e em P09 eleitoral (GO; MG variante; RJ/Castro em vigilância); enfraquece em mercado/continuidade (SP, PR; Açu/CMPort no RJ); contraria-se na Bahia (TIR↓), no RS/ES (CEEE-T ≠ GWM; logística > diplomacia), no Amapá (controle açaí + petróleo federal sem governador) e em Santa Catarina (cortejo legislativo Alesc×JMEV sem fábrica em SC nem no ES).
 
 ---
 
@@ -19,14 +19,19 @@ A União negocia marcos amplos (tratados, MoUs, cúpulas). Quem assina o contrat
 
 ```
 odragaoeaonca/
-├── artigos/                    # 18 X Articles (.md) + heroes 1024×600
+├── artigos/                    # 19 X Articles (.md) + heroes 1024×600
 ├── public/                     # Capas webp + relatórios estaduais (MD/PDF)
 ├── docs/                       # Dossiês-fonte, imagens, notas
+├── timeline/                   # Hub por ordem de importância + âncoras (#rj, #t-245, #t-246…)
 ├── CATALAGO.md                 # Índice + prompts hero completos por capítulo
-├── dragao-onca-*.html          # 17 dossiês interativos (+ index hub)
+├── dragao-onca-*.html          # 18 dossiês interativos (+ index hub)
 ├── index.html                  # Dashboard (ordem CEBC + eixos)
 └── vercel.json                 # Deploy estático (@vercel/static)
 ```
+
+**Índice inteligente (âncoras):** [`timeline/`](timeline/) — ordem README 0–18; deep-links `timeline/#amapa`, `timeline/#rj`, `timeline/#santa-catarina`.  
+**Timelines condensadas:** `timeline/timeline-{slug}.html` (geradas de `dragao-onca-*.html`).  
+**Pipeline:** `python scripts/run_series_pipeline.py` → series-nav nos dossiês + regenera `timeline/` + patch do hub.
 
 ---
 
@@ -54,6 +59,7 @@ Publicar nesta sequência (≤2 posts/dia). **Eixos transversais primeiro** → 
 | 15 | Fechamento | Síntese final | Tipologia confirma/enfraquece/contraria | T-243 |
 | 16 | Controle | Amapá | Amazonbai + Chevron/CNPC federal | T-244 |
 | 17 | Alto | Rio de Janeiro | Açu/CMPort + Castro/Hikvision | T-245 |
+| 18 | Distintivo | Santa Catarina | JMEV cortejo duplo + ferrovias exploratórias | T-246 |
 
 **URL base dos dossiês:** `https://odragaoeaonca.vercel.app`  
 **Catálogo + prompts hero:** [`CATALAGO.md`](CATALAGO.md)
@@ -66,24 +72,25 @@ Publicar nesta sequência (≤2 posts/dia). **Eixos transversais primeiro** → 
 |------:|----------|----------|-----------------|------|
 | 0 | Índice | `artigos/odragaoeaonca-xarticle.md` | `public/dragao-onca.webp` | `index.html` |
 | 1 | Federal | `artigos/brasil-federal-xarticle.md` | `public/dragao-onca-brasil-federal.webp` | `dragao-onca-brasil-federal.html` |
-| 2 | Diplomático | `artigos/braco-diplomatico-xarticle.md` | `artigos/braco-diplomatico-xarticle-hero.png` | `dragao-onca-braco-diplomatico.html` |
-| 3 | São Paulo | `artigos/sao-paulo-xarticle.md` | `artigos/sao-paulo-xarticle-hero.png` | `dragao-onca-sao-paulo.html` |
+| 2 | Diplomático | `artigos/braco-diplomatico-xarticle.md` | `public/dragao-onca-braco-diplomatico.webp` | `dragao-onca-braco-diplomatico.html` |
+| 3 | São Paulo | `artigos/sao-paulo-xarticle.md` | `public/dragao-onca-sao-paulo.webp` | `dragao-onca-sao-paulo.html` |
 | 4 | Goiás | `artigos/goias-xarticle.md` | `public/dragao-onca-goias.webp` | `dragao-onca-goias.html` |
 | 5 | Minas Gerais | `artigos/minas-gerais-xarticle.md` | `public/dragao-onca-minas-gerais.webp` | `dragao-onca-minas-gerais.html` |
-| 6 | Bahia | `artigos/bahia-xarticle.md` | `artigos/bahia-xarticle-hero.png` | `dragao-onca-bahia.html` |
+| 6 | Bahia | `artigos/bahia-xarticle.md` | `public/dragao-onca-bahia.webp` | `dragao-onca-bahia.html` |
 | 7 | Pará | `artigos/para-xarticle.md` | `public/dragao-onca-para.webp` | `dragao-onca-para.html` |
 | 8 | Amazonas | `artigos/amazonas-xarticle.md` | `public/dragao-onca-amazonas.webp` | `dragao-onca-amazonas.html` |
-| 9 | Paraná | `artigos/parana-xarticle.md` | `artigos/parana-xarticle-hero.png` | `dragao-onca-parana.html` |
+| 9 | Paraná | `artigos/parana-xarticle.md` | `public/dragao-onca-parana.webp` | `dragao-onca-parana.html` |
 | 10 | Rio Grande do Sul | `artigos/rio-grande-do-sul-xarticle.md` | `public/dragao-onca-rio-grande-do-sul.webp` | `dragao-onca-rio-grande-do-sul.html` |
-| 11 | RS · ES · Ranking | `artigos/rs-es-ranking-xarticle.md` | `artigos/rs-es-ranking-xarticle-hero.png` | `dragao-onca-rs-es-ranking-nacional.html` |
-| 12 | Síntese v1 | `artigos/sintese-xarticle.md` | `artigos/sintese-xarticle-hero.png` | `dragao-onca-sintese.html` |
+| 11 | RS · ES · Ranking | `artigos/rs-es-ranking-xarticle.md` | `public/dragao-onca-rs-es-ranking.webp` | `dragao-onca-rs-es-ranking-nacional.html` |
+| 12 | Síntese v1 | `artigos/sintese-xarticle.md` | `public/dragao-onca-sintese.webp` | `dragao-onca-sintese.html` |
 | 13 | PL 2.780 | `artigos/pl2780-xarticle.md` | `public/dragao-onca-pl2780.webp` | `dragao-onca-pl2780.html` |
 | 14 | Braço Jurídico | `artigos/braco-juridico-xarticle.md` | `public/dragao-onca-braco-juridico.webp` | `dragao-onca-braco-juridico.html` |
-| 15 | Síntese final | `artigos/sintese-final-xarticle.md` | `artigos/sintese-final-xarticle-hero.png` | `dragao-onca-sintese-final-cross-state.html` |
-| 16 | Amapá | `artigos/amapa-xarticle.md` | `artigos/amapa-xarticle-hero.png` | `dragao-onca-amapa.html` |
-| 17 | Rio de Janeiro | `artigos/rj-xarticle.md` | `artigos/rj-xarticle-hero.png` | `dragao-onca-rj.html` |
+| 15 | Síntese final | `artigos/sintese-final-xarticle.md` | `public/dragao-onca-sintese-final.webp` | `dragao-onca-sintese-final-cross-state.html` |
+| 16 | Amapá | `artigos/amapa-xarticle.md` | `public/dragao-onca-amapa.webp` | `dragao-onca-amapa.html` |
+| 17 | Rio de Janeiro | `artigos/rj-xarticle.md` | `public/dragao-onca-rj.webp` | `dragao-onca-rj.html` |
+| 18 | Santa Catarina | `artigos/santa-catarina-xarticle.md` | `public/dragao-onca-santa-catarina.webp` | `dragao-onca-santa-catarina.html` |
 
-**Total:** 18 X Articles · **UFs:** SP · GO · MG · BA · PA · AM · PR · RS · ES (via ranking) · AP · RJ
+**Total:** 19 X Articles / dossiês · **UFs:** SP · GO · MG · BA · PA · AM · PR · RS · ES · AP · RJ · **SC** (12)
 
 Prompts completos de hero (base + capítulo): [`CATALAGO.md`](CATALAGO.md).
 
@@ -214,7 +221,7 @@ Fluxo: **tweet de abertura** (sem URL externa) → **primeiro reply** (dossiê +
 
 **Título:** *Brasil assina governança de IA com a China e vende terras raras aos EUA — no mesmo semestre*
 
-**Arquivos:** `artigos/braco-diplomatico-xarticle.md` · `artigos/braco-diplomatico-xarticle-hero.png` · `dragao-onca-braco-diplomatico.html`
+**Arquivos:** `artigos/braco-diplomatico-xarticle.md` · `public/dragao-onca-braco-diplomatico.webp` · `dragao-onca-braco-diplomatico.html`
 
 **Prompt hero:**
 ```
@@ -250,7 +257,7 @@ Fluxo: **tweet de abertura** (sem URL externa) → **primeiro reply** (dossiê +
 
 **Título:** *São Paulo: leilão “neutro”, monopólio chinês no material rodante*
 
-**Arquivos:** `artigos/sao-paulo-xarticle.md` · `artigos/sao-paulo-xarticle-hero.png` · `dragao-onca-sao-paulo.html`
+**Arquivos:** `artigos/sao-paulo-xarticle.md` · `public/dragao-onca-sao-paulo.webp` · `dragao-onca-sao-paulo.html`
 
 **Prompt hero:**
 ```
@@ -353,7 +360,7 @@ Fluxo: **tweet de abertura** (sem URL externa) → **primeiro reply** (dossiê +
 
 **Título:** *Jerônimo negociou com Xi Jinping — e a TIR chinesa caiu de 13% para 10,88%*
 
-**Arquivos:** `artigos/bahia-xarticle.md` · `artigos/bahia-xarticle-hero.png` · `dragao-onca-bahia.html`
+**Arquivos:** `artigos/bahia-xarticle.md` · `public/dragao-onca-bahia.webp` · `dragao-onca-bahia.html`
 
 **Prompt hero:**
 ```
@@ -454,7 +461,7 @@ Fluxo: **tweet de abertura** (sem URL externa) → **primeiro reply** (dossiê +
 
 **Título:** *Paraná: acordos gêmeos na China — estado e união, dois dias de diferença*
 
-**Arquivos:** `artigos/parana-xarticle.md` · `artigos/parana-xarticle-hero.png` · `dragao-onca-parana.html`
+**Arquivos:** `artigos/parana-xarticle.md` · `public/dragao-onca-parana.webp` · `dragao-onca-parana.html`
 
 **Prompt hero:**
 ```
@@ -523,7 +530,7 @@ Fluxo: **tweet de abertura** (sem URL externa) → **primeiro reply** (dossiê +
 
 **Título:** *RS perdeu, ES ganhou — e o ranking CEBC explica por que diplomacia não basta*
 
-**Arquivos:** `artigos/rs-es-ranking-xarticle.md` · `artigos/rs-es-ranking-xarticle-hero.png` · `dragao-onca-rs-es-ranking-nacional.html`
+**Arquivos:** `artigos/rs-es-ranking-xarticle.md` · `public/dragao-onca-rs-es.webp` · `dragao-onca-rs-es-ranking-nacional.html`
 
 **Prompt hero:**
 ```
@@ -559,7 +566,7 @@ Fluxo: **tweet de abertura** (sem URL externa) → **primeiro reply** (dossiê +
 
 **Título:** *Soberania na conta do governador: onde a tese confirma, enfraquece e falha*
 
-**Arquivos:** `artigos/sintese-xarticle.md` · `artigos/sintese-xarticle-hero.png` · `dragao-onca-sintese.html`
+**Arquivos:** `artigos/sintese-xarticle.md` · `public/dragao-onca-sintese.webp` · `dragao-onca-sintese.html`
 
 **Prompt hero:**
 ```
@@ -668,7 +675,7 @@ Fluxo: **tweet de abertura** (sem URL externa) → **primeiro reply** (dossiê +
 
 **Título:** *Soberania na conta do governador — testada em 9 estados*
 
-**Arquivos:** `artigos/sintese-final-xarticle.md` · `artigos/sintese-final-xarticle-hero.png` · `dragao-onca-sintese-final-cross-state.html`
+**Arquivos:** `artigos/sintese-final-xarticle.md` · `public/dragao-onca-sintese-final.webp` · `dragao-onca-sintese-final-cross-state.html`
 
 **Prompt hero:**
 ```
@@ -694,7 +701,7 @@ Fluxo: **tweet de abertura** (sem URL externa) → **primeiro reply** (dossiê +
 > Espelho KPIs (síntese v1):
 > https://odragaoeaonca.vercel.app/dragao-onca-sintese.html
 >
-> Controles posteriores: Amapá (Cap. 16) · RJ (Cap. 17)
+> Controles posteriores: Amapá (Cap. 16) · RJ (Cap. 17) · SC (Cap. 18)
 
 **Janela 30 min:** tipologias 6–7 (CEEE-T; vitrine+China); evitar “o que você acha?”.
 
@@ -704,7 +711,7 @@ Fluxo: **tweet de abertura** (sem URL externa) → **primeiro reply** (dossiê +
 
 **Título:** *No Amapá, a cooperativa vende o açaí — e Pequim licita petróleo sem o governador na mesa*
 
-**Arquivos:** `artigos/amapa-xarticle.md` · `artigos/amapa-xarticle-hero.png` · `dragao-onca-amapa.html`
+**Arquivos:** `artigos/amapa-xarticle.md` · `public/dragao-onca-amapa.webp` · `dragao-onca-amapa.html`
 
 **Prompt hero:**
 ```
@@ -738,7 +745,7 @@ Fluxo: **tweet de abertura** (sem URL externa) → **primeiro reply** (dossiê +
 
 **Título:** *Rio de Janeiro: o terminal estratégico de US$ 714 milhões e a vigilância sob sanção na conta do governador*
 
-**Arquivos:** `artigos/rj-xarticle.md` · `artigos/rj-xarticle-hero.png` · `dragao-onca-rj.html`
+**Arquivos:** `artigos/rj-xarticle.md` · `public/dragao-onca-rj.webp` · `dragao-onca-rj.html`
 
 **Prompt hero:**
 ```
@@ -768,7 +775,41 @@ Fluxo: **tweet de abertura** (sem URL externa) → **primeiro reply** (dossiê +
 
 ---
 
-## Calendário sugerido (≤2 posts/dia · ~18 dias)
+### 18. Santa Catarina (T-246)
+
+**Título:** *Em Santa Catarina, deputados cortejaram a JMEV em Pequim — e a fábrica não veio para ninguém*
+
+**Arquivos:** `artigos/santa-catarina-xarticle.md` · `public/dragao-onca-santa-catarina.webp` · `dragao-onca-santa-catarina.html` · capa web `public/dragao-onca-santa-catarina.webp`
+
+**Prompt hero:**
+```
+[TÍTULO] = SANTA CATARINA / Cortejo Duplo Sem Captura
+[CONCEITO] = Alesc×JMEV em Pequim vs. fábrica vazia; cortejo SC/ES sem planta confirmada
+[CORES] = azul legislativo #4a9eff + vermelho dragão #d4342c + onça #e8b23d
+```
+
+**Tweet de abertura:**
+
+> Alesc assinou termo com a JMEV em Pequim. O ES já tinha acordo um mês antes.
+>
+> Em mar/2026: zero fábrica — nem em SC, nem no “vencedor”.
+>
+> Cap. SC (T-246): cortejo legislativo, captura industrial nula. Artigo abaixo.
+
+**Primeiro reply:**
+
+> Dossiê interativo:
+> https://odragaoeaonca.vercel.app/dragao-onca-santa-catarina.html
+>
+> IDs 1764–1770 · T-246
+>
+> Termo Alesc–JMEV ou status Jaguaré/ES: qual lacuna fechar primeiro?
+
+**Janela 30 min:** contraste com RS/GWM (lá o ES ganhou de fato); frango/GACC = controle, não captura.
+
+---
+
+## Calendário sugerido (≤2 posts/dia · ~19 dias)
 
 | Dia | Artigo | Motivo |
 |----:|--------|--------|
@@ -790,6 +831,7 @@ Fluxo: **tweet de abertura** (sem URL externa) → **primeiro reply** (dossiê +
 | 15 | Síntese final | Tipologia T-243 |
 | 16 | Amapá | Controle + captura federal |
 | 17 | Rio de Janeiro | Açu + Castro/Hikvision |
+| 18 | Santa Catarina | Cortejo legislativo JMEV · captura zero |
 
 ---
 
@@ -806,8 +848,8 @@ Fluxo: **tweet de abertura** (sem URL externa) → **primeiro reply** (dossiê +
 
 ## Corpus e metodologia
 
-- **Dossiês HTML:** 17 (+ hub) · **X Articles:** 18 (índice 0–17)
-- **Entradas:** ~142 posts · IDs 1639–1762 · temáticas **T-228 → T-245**
+- **Dossiês HTML:** 18 (+ hub) · **X Articles:** 19 (índice 0–18)
+- **Entradas:** ~150 posts · IDs 1639–1770 · temáticas **T-228 → T-246**
 - **CEBC abr/2026:** US$ 85,5 bi · 355 projetos · ranking por UF
 - **Níveis de evidência:** `ev-confirmed` · `ev-alleged` · `ev-inference` · `lacuna_investigativa`
 - **Padrões:** P05 · P09 · P10 · P04b · P11 (ranking/mercado)

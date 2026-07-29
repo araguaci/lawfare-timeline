@@ -61,8 +61,8 @@ Condenação transitada em julgado após dois acórdãos (2017). A Transcooper p
 
 ## Conexões no corpus
 
-- id_1514 — Reunião PCC na Transcooper: contexto investigativo da cooperativa
-- id_1513 — Planilha JHSF: arquivamento paralelo de investigação envolvendo Moraes
+- [1514 · Ramagem liberado pelo ICE após 48h; pedido de asilo barra deportação ao…](/posts/ramagem-liberado-pelo-ice-apos-48h-pedido-de-asilo-barra-deportacao-ao-brasil/) — Reunião PCC na Transcooper: contexto investigativo da cooperativa
+- [1513 · Defesa de Biazucci Recorre à CIDH por Violação de Direitos Fundamentais…](/timeline/1513/) — Planilha JHSF: arquivamento paralelo de investigação envolvendo Moraes
 
 ## Lacunas investigativas
 

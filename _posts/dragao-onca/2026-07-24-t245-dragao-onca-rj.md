@@ -70,12 +70,13 @@ O capítulo RJ tem dupla natureza: de um lado, a aquisição CMPort/Vast é estr
 
 Entradas conectadas nesta série:
 
-- [China Merchants Port (CMPort) assina acordo para adquirir 70% da Vast Infraestrutura, dona do terminal de petróleo do Porto do Açu (RJ)](/posts/id1760-china-merchants-port-cmport-assina-acordo-para-adquirir-70-da-vast-infraestrutur/)
-- [Governador Cláudio Castro (RJ) lidera missão à China: acordos de videomonitoramento com Hikvision e Dahua, reuniões em Pequim e Zhejiang](/posts/id1761-governador-claudio-castro-rj-lidera-missao-a-china-acordos-de-videomonitoramento/)
-- [CNOOC e PetroChina iniciam operações comerciais no terminal Vast (Porto do Açu) — distinto da aquisição societária CMPort](/posts/id1762-cnooc-e-petrochina-iniciam-operacoes-comerciais-no-terminal-vast-porto-do-acu-di/)
-- [Entrada T-233](/timeline/entries/T-233)
-- [Entrada T-243](/timeline/entries/T-243)
-- [Entrada T-244](/timeline/entries/T-244)
+- [China Merchants Port (CMPort) assina acordo para adquirir 70% da Vast Infraestrutura, d...](/posts/2025-02-28-id1760-china-merchants-port-cmport-assina-acordo-para-adquirir-70-da-vast-infraestrutur/)
+- [Governador Cláudio Castro (RJ) lidera missão à China: acordos de videomonitoramento com...](/posts/2025-04-17-id1761-governador-claudio-castro-rj-lidera-missao-a-china-acordos-de-videomonitoramento/)
+- [CNOOC e PetroChina iniciam operações comerciais no terminal Vast (Porto do Açu) — disti...](/posts/2026-03-23-id1762-cnooc-e-petrochina-iniciam-operacoes-comerciais-no-terminal-vast-porto-do-acu-di/)
+- [T-233 — Síntese v1](/posts/2026-07-24-t233-dragao-onca-sintese/)
+- [T-243 — Síntese final](/posts/2026-07-24-t243-sintese-final-cross-state/)
+- [T-244 — Amapá](/posts/2026-07-24-t244-dragao-onca-amapa-controle/)
+- [T-246 — Santa Catarina](/posts/2026-07-24-t246-dragao-onca-santa-catarina/)
 
 ---
 

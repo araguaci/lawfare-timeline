@@ -104,19 +104,19 @@ Nenhum indício de irregularidade formal documentado. Mas a independência dos m
 
 Entradas conectadas nesta série:
 
-- [Governo do Pará assina protocolo de intenções com a CCCC para a Ferrovia do Pará (R$7 bilhões)](/posts/id1654-governo-do-para-assina-protocolo-de-intencoes-com-a-cccc-para-a-ferrovia-do-para/)
-- [Barbalho, CCCC e Vale assinam MoU da Ferrovia do Pará em Pequim (R$10 bilhões / US$2 bilhões)](/posts/id1655-barbalho-cccc-e-vale-assinam-mou-da-ferrovia-do-para-em-pequim-r10-bilhoes-us2-b/)
-- [Ferrovia do Pará avança para fase de audiências públicas, com início de obras previsto para 2027](/posts/id1656-ferrovia-do-para-avanca-para-fase-de-audiencias-publicas-com-inicio-de-obras-pre/)
-- [Vale e Pará firmam "Programa Estrutura": até 40% de dívida da mineradora convertida em obras públicas escolhidas com o governo](/posts/id1657-vale-e-para-firmam-programa-estrutura-ate-40-de-divida-da-mineradora-convertida/)
-- [Comunidades do Vale do Acará denunciam mineroduto da Norsk Hydro sem consulta prévia](/posts/id1658-comunidades-do-vale-do-acara-denunciam-mineroduto-da-norsk-hydro-sem-consulta-pr/)
-- [Trem de minério da Vale já matou 39 pessoas em 8 anos na Terra Indígena Mãe Maria (Marabá)](/posts/id1659-trem-de-minerio-da-vale-ja-matou-39-pessoas-em-8-anos-na-terra-indigena-mae-mari/)
-- [Primo de quarto grau de Helder Barbalho é eleito prefeito de Belém](/posts/id1660-primo-de-quarto-grau-de-helder-barbalho-e-eleito-prefeito-de-belem/)
-- [Vereadora eleita de Belém classifica COP30 sob gestão Barbalho como "evento fechado para o povo"](/posts/id1661-vereadora-eleita-de-belem-classifica-cop30-sob-gestao-barbalho-como-evento-fecha/)
-- [COP30 é realizada em Belém com mais de 55 mil participantes; incêndio suspende negociações](/posts/id1662-cop30-e-realizada-em-belem-com-mais-de-55-mil-participantes-incendio-suspende-ne/)
-- [UEPA e Universidade Normal de Shandong assinam convênio de cooperação científica](/posts/id1663-uepa-e-universidade-normal-de-shandong-assinam-convenio-de-cooperacao-cientifica/)
-- [Barbalho negocia com BYD, Zhongtong Bus e Nine Dragons Paper durante missão à China](/posts/id1664-barbalho-negocia-com-byd-zhongtong-bus-e-nine-dragons-paper-durante-missao-a-chi/)
-- [Workshop "Promoting China-Brazil Scientific Research on Climate & Nature" reúne ONGs em Pequim](/posts/id1665-workshop-promoting-china-brazil-scientific-research-on-climate-nature-reune-ongs/)
-- [Barbalho declara que COP30 "não é de esquerda nem de direita" em meio a críticas sobre custo de vida em Belém](/posts/id1666-barbalho-declara-que-cop30-nao-e-de-esquerda-nem-de-direita-em-meio-a-criticas-s/)
+- [Governo do Pará assina protocolo de intenções com a CCCC para a Ferrovia do Pará (R$7 b...](/posts/2019-11-12-id1654-governo-do-para-assina-protocolo-de-intencoes-com-a-cccc-para-a-ferrovia-do-para/)
+- [Barbalho, CCCC e Vale assinam MoU da Ferrovia do Pará em Pequim (R$10 bilhões / US$2 bi...](/posts/2023-04-14-id1655-barbalho-cccc-e-vale-assinam-mou-da-ferrovia-do-para-em-pequim-r10-bilhoes-us2-b/)
+- [Ferrovia do Pará avança para fase de audiências públicas, com início de obras previsto ...](/posts/2026-05-24-id1656-ferrovia-do-para-avanca-para-fase-de-audiencias-publicas-com-inicio-de-obras-pre/)
+- [Vale e Pará firmam "Programa Estrutura": até 40% de dívida da mineradora convertida em ...](/posts/2023-01-01-id1657-vale-e-para-firmam-programa-estrutura-ate-40-de-divida-da-mineradora-convertida/)
+- [Comunidades do Vale do Acará denunciam mineroduto da Norsk Hydro sem consulta prévia](/posts/2024-09-01-id1658-comunidades-do-vale-do-acara-denunciam-mineroduto-da-norsk-hydro-sem-consulta-pr/)
+- [Trem de minério da Vale já matou 39 pessoas em 8 anos na Terra Indígena Mãe Maria (Marabá)](/posts/2025-05-01-id1659-trem-de-minerio-da-vale-ja-matou-39-pessoas-em-8-anos-na-terra-indigena-mae-mari/)
+- [Primo de quarto grau de Helder Barbalho é eleito prefeito de Belém](/posts/2024-10-27-id1660-primo-de-quarto-grau-de-helder-barbalho-e-eleito-prefeito-de-belem/)
+- [Vereadora eleita de Belém classifica COP30 sob gestão Barbalho como "evento fechado par...](/posts/2024-11-07-id1661-vereadora-eleita-de-belem-classifica-cop30-sob-gestao-barbalho-como-evento-fecha/)
+- [COP30 é realizada em Belém com mais de 55 mil participantes; incêndio suspende negociações](/posts/2025-11-10-id1662-cop30-e-realizada-em-belem-com-mais-de-55-mil-participantes-incendio-suspende-ne/)
+- [UEPA e Universidade Normal de Shandong assinam convênio de cooperação científica](/posts/2025-01-01-id1663-uepa-e-universidade-normal-de-shandong-assinam-convenio-de-cooperacao-cientifica/)
+- [Barbalho negocia com BYD, Zhongtong Bus e Nine Dragons Paper durante missão à China](/posts/2023-04-01-id1664-barbalho-negocia-com-byd-zhongtong-bus-e-nine-dragons-paper-durante-missao-a-chi/)
+- [Workshop "Promoting China-Brazil Scientific Research on Climate & Nature" reúne ONGs em...](/posts/2025-06-01-id1665-workshop-promoting-china-brazil-scientific-research-on-climate-nature-reune-ongs/)
+- [Barbalho declara que COP30 "não é de esquerda nem de direita" em meio a críticas sobre ...](/posts/2025-04-13-id1666-barbalho-declara-que-cop30-nao-e-de-esquerda-nem-de-direita-em-meio-a-criticas-s/)
 
 ---
 

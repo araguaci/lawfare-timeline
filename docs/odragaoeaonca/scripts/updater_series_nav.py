@@ -3,8 +3,9 @@ import re
 
 ROOT = Path(__file__).resolve().parent.parent
 
+# Ordem de importância resolvida (README 0–18)
 ARTIFACTS = [
-    ("./", "0 · Hub", "Índice da série", "Mapa completo + tese · hub + dossiês"),
+    ("index.html", "0 · Hub", "Índice da série", "Mapa completo + tese · 19 artefatos · 12 UFs"),
     ("/dragao-onca-brasil-federal.html", "1 · T-229 · Crítico", "🇧🇷 BR Brasil (Federal)", "Pano de fundo 1993–2026 · Doria–Sinovac"),
     ("/dragao-onca-braco-diplomatico.html", "2 · T-236 · Crítico", "🌐 Braço Diplomático", "WAICO + Serra Verde + alinhamento duplo"),
     ("/dragao-onca-sao-paulo.html", "3 · T-238 · Alto", "🇧🇷 SP São Paulo", "Variante “mercado” — CRRC/COFCO"),
@@ -16,10 +17,13 @@ ARTIFACTS = [
     ("/dragao-onca-parana.html", "9 · T-239 · Médio", "🇧🇷 PR Paraná", "Coordenação estado–união (TCP)"),
     ("/dragao-onca-rio-grande-do-sul.html", "10 · T-240 · Médio", "🇧🇷 RS Rio Grande do Sul", "CEEE-T + cortejo GWM sem captura"),
     ("/dragao-onca-rs-es-ranking-nacional.html", "11 · T-240–242 · Médio", "🇧🇷 RS · ES · Ranking CEBC", "Par de controle + ranking nacional"),
-    ("/dragao-onca-sintese.html", "12 · T-233 · Consolidação", "📊 Síntese v1", "5 UFs originais · soberania do governador"),
+    ("/dragao-onca-sintese.html", "12 · T-233 · Consolidação", "📊 Síntese v1", "KPIs · 12 UFs · soberania do governador"),
     ("/dragao-onca-pl2780.html", "13 · T-235 · Legislativo", "📜 PL 2.780/2024", "FGAM R$ 2 bi · minerais críticos"),
     ("/dragao-onca-braco-juridico.html", "14 · T-234 · Transversal", "⚖️ Braço Jurídico", "STF, marco temporal, ADI 7919"),
-    ("/dragao-onca-sintese-final-cross-state.html", "15 · T-243 · Fechamento", "🎯 Síntese final · 9 UFs", "Onde a tese confirma, enfraquece ou falha"),
+    ("/dragao-onca-sintese-final-cross-state.html", "15 · T-243 · Fechamento", "🎯 Síntese final · 12 UFs", "Onde a tese confirma, enfraquece ou falha"),
+    ("/dragao-onca-amapa.html", "16 · T-244 · Controle", "🇧🇷 AP Amapá", "Amazonbai + Chevron/CNPC federal"),
+    ("/dragao-onca-rj.html", "17 · T-245 · Alto", "🇧🇷 RJ Rio de Janeiro", "Açu/CMPort + Castro/Hikvision"),
+    ("/dragao-onca-santa-catarina.html", "18 · T-246 · Distintivo", "🇧🇷 SC Santa Catarina", "JMEV: cortejo duplo, captura zero"),
 ]
 
 CSS = """
@@ -55,6 +59,9 @@ FILES = [
     "dragao-onca-pl2780.html",
     "dragao-onca-braco-juridico.html",
     "dragao-onca-sintese-final-cross-state.html",
+    "dragao-onca-amapa.html",
+    "dragao-onca-rj.html",
+    "dragao-onca-santa-catarina.html",
 ]
 
 SECTION_RE = re.compile(
@@ -84,7 +91,7 @@ def build_nav(current_href: str) -> str:
         '  <div class="series-nav-grid">\n'
         f"{body}\n"
         "  </div>\n"
-        '  <a class="series-hub" href="/odragaoeaonca">← Índice da série · O Dragão e a Onça</a>\n'
+        '  <a class="series-hub" href="index.html">← Índice da série · O Dragão e a Onça</a>\n'
         "</section>"
     )
 
@@ -102,10 +109,18 @@ def main() -> None:
             text = SECTION_RE.sub(nav, text, count=1)
             action.append("replaced-nav")
         else:
-            if "</main>" not in text:
-                raise SystemExit(f"No </main> in {name}")
-            text = text.replace("</main>", nav + "\n\n</main>", 1)
-            action.append("inserted-nav")
+            # Prefer </main>; fallback: before <footer> or </body> (ex.: RJ sem <main>)
+            if "</main>" in text:
+                text = text.replace("</main>", nav + "\n\n</main>", 1)
+                action.append("inserted-nav")
+            elif "<footer" in text:
+                text = text.replace("<footer", nav + "\n\n<footer", 1)
+                action.append("inserted-nav-before-footer")
+            elif "</body>" in text:
+                text = text.replace("</body>", nav + "\n</body>", 1)
+                action.append("inserted-nav-before-body")
+            else:
+                raise SystemExit(f"No </main>/<footer>/</body> in {name}")
 
         if ".series-nav{" not in text:
             if "</style>" not in text:
@@ -115,6 +130,10 @@ def main() -> None:
         elif CSS_RE.search(text):
             text = CSS_RE.sub(CSS, text, count=1)
             action.append("updated-css")
+        elif ".series-card{" not in text:
+            # CSS parcial (só .series-nav) — completa antes de </style>
+            text = text.replace("</style>", CSS + "\n</style>", 1)
+            action.append("completed-css")
         else:
             action.append("css-kept")
 
@@ -122,7 +141,7 @@ def main() -> None:
         results.append(f"{name}: {', '.join(action)}")
 
     print("\n".join(results))
-    print(f"\nDone: {len(results)} files")
+    print(f"\nDone: {len(results)} files · {len(ARTIFACTS)} artefatos (0–18)")
 
 
 if __name__ == "__main__":

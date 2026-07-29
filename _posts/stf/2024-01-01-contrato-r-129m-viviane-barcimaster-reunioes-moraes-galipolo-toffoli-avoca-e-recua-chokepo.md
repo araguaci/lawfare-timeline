@@ -69,8 +69,8 @@ Liquidação extrajudicial do Master decretada em nov/2025. Rombo de R$ 41–57,
 
 ## Conexões no corpus
 
-- id_1513 — Arquivamento Fux JHSF: instância anterior de chokepoint STF protegendo Moraes
-- id_1516 — Erosão do consenso: caso Master como segundo vetor das revisões de posição
+- [1513 · Defesa de Biazucci Recorre à CIDH por Violação de Direitos Fundamentais…](/timeline/1513/) — Arquivamento Fux JHSF: instância anterior de chokepoint STF protegendo Moraes
+- [1516 · Flávio Bolsonaro na CPAC pede 'pressão diplomática' dos EUA sobre eleiç…](/posts/flavio-bolsonaro-na-cpac-pede-pressao-diplomatica-dos-eua-sobre-eleicoes-brasileiras-de-20/) — Erosão do consenso: caso Master como segundo vetor das revisões de posição
 - banco-master-compliance-zero.html — dossiê completo no corpus
 
 ## Lacunas investigativas

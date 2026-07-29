@@ -46,13 +46,13 @@ ev-inference: Bahia é o CASO DE CONTROLE do 'soberania na conta do governador' 
 
 Entradas conectadas nesta série:
 
-- [Consórcio chinês CCCC + CR20 assina Contrato de Concessão nº 001/2020 para construção da Ponte Salvador-Itaparica](/posts/id1719-consorcio-chines-cccc-cr20-assina-contrato-de-concessao-no-0012020-para-construc/)
-- [Missão de Jerônimo Rodrigues à China: memorando com a Windey para fábrica de turbinas eólicas em Camaçari](/posts/id1720-missao-de-jeronimo-rodrigues-a-china-memorando-com-a-windey-para-fabrica-de-turb/)
-- [Hotgen Biotech (China) firma parceria com a Bahiafarma para produção de testes rápidos de diagnóstico](/posts/id1721-hotgen-biotech-china-firma-parceria-com-a-bahiafarma-para-producao-de-testes-rap/)
-- [Renegociação da PPP Ponte Salvador-Itaparica: valor sobe para R$10,6 bi, TIR do consórcio chinês é reduzida, Jerônimo cita reuniões diretas com Xi Jinping](/posts/id1722-renegociacao-da-ppp-ponte-salvador-itaparica-valor-sobe-para-r106-bi-tir-do-cons/)
-- [Governo da Bahia e Petrobras assinam contrato de uso do estaleiro de Maragogipe pelo consórcio chinês da Ponte Salvador-Itaparica](/posts/id1723-governo-da-bahia-e-petrobras-assinam-contrato-de-uso-do-estaleiro-de-maragogipe/)
-- [Windey formaliza fábrica de turbinas eólicas em Camaçari, promete 500 empregos](/posts/id1724-windey-formaliza-fabrica-de-turbinas-eolicas-em-camacari-promete-500-empregos/)
-- [Governo Federal libera recursos do Novo PAC e dá início às obras da Ponte Salvador-Itaparica](/posts/id1725-governo-federal-libera-recursos-do-novo-pac-e-da-inicio-as-obras-da-ponte-salvad/)
+- [Consórcio chinês CCCC + CR20 assina Contrato de Concessão nº 001/2020 para construção d...](/posts/2020-11-12-id1719-consorcio-chines-cccc-cr20-assina-contrato-de-concessao-no-0012020-para-construc/)
+- [Missão de Jerônimo Rodrigues à China: memorando com a Windey para fábrica de turbinas e...](/posts/2025-05-13-id1720-missao-de-jeronimo-rodrigues-a-china-memorando-com-a-windey-para-fabrica-de-turb/)
+- [Hotgen Biotech (China) firma parceria com a Bahiafarma para produção de testes rápidos ...](/posts/2025-05-16-id1721-hotgen-biotech-china-firma-parceria-com-a-bahiafarma-para-producao-de-testes-rap/)
+- [Renegociação da PPP Ponte Salvador-Itaparica: valor sobe para R$10,6 bi, TIR do consórc...](/posts/2026-02-23-id1722-renegociacao-da-ppp-ponte-salvador-itaparica-valor-sobe-para-r106-bi-tir-do-cons/)
+- [Governo da Bahia e Petrobras assinam contrato de uso do estaleiro de Maragogipe pelo co...](/posts/2026-03-11-id1723-governo-da-bahia-e-petrobras-assinam-contrato-de-uso-do-estaleiro-de-maragogipe/)
+- [Windey formaliza fábrica de turbinas eólicas em Camaçari, promete 500 empregos](/posts/2026-06-09-id1724-windey-formaliza-fabrica-de-turbinas-eolicas-em-camacari-promete-500-empregos/)
+- [Governo Federal libera recursos do Novo PAC e dá início às obras da Ponte Salvador-Itap...](/posts/2026-07-04-id1725-governo-federal-libera-recursos-do-novo-pac-e-da-inicio-as-obras-da-ponte-salvad/)
 
 ---
 

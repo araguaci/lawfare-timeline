@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "O Dragão e a Onça — Capítulo 13: Rio Grande do Sul (Eduardo Leite, cortejo sem captura)"
-description: "Estado: Rio Grande do Sul. Período: 2025-09 a 2026-06 (3 entradas main track, 1735-1737). Único capítulo da série com desfecho negativo confirmado: GWM avaliou o RS para a 2ª fábrica brasileira mas es..."
+description: "Estado: Rio Grande do Sul. Período: 2021 (CEEE-T, id_1763) e 2025-09 a 2026-06 (GWM, 1735-1737). Captura energética confirmada + cortejo industrial perdido (GWM→ES)."
 date: 2026-01-01T12:01:01.001Z
 image: /assets/img/dragao-onca-rio-grande-do-sul.webp
 tags: ["dragao-onca", "2026", "rio-grande-do-sul", "p05"]
@@ -23,7 +23,7 @@ status: confirmed
 
 ## 📋 Resumo
 
-Estado: Rio Grande do Sul. Período: 2025-09 a 2026-06 (3 entradas main track, 1735-1737). Único capítulo da série com desfecho negativo confirmado: GWM avaliou o RS para a 2ª fábrica brasileira mas escolheu o Espírito Santo (ver T-241). Posição oficial no ranking CEBC 2007-2025: 6º lugar nacional, 20 projetos — mas caiu da 5ª posição no ranking 2007-2024, uma das poucas unidades federativas que perderam colocação relativa.
+Estado: Rio Grande do Sul. Período: 2021 (CEEE-T, id_1763) e 2025-09 a 2026-06 (GWM, 3 entradas, 1735-1737). Capítulo combina captura energética confirmada (CEEE-T→State Grid, id_1763) com cortejo industrial perdido (GWM→ES). Único capítulo da série com desfecho negativo confirmado na manufatura: GWM avaliou o RS para a 2ª fábrica brasileira mas escolheu o Espírito Santo (ver T-241). Posição oficial no ranking CEBC 2007-2025: 6º lugar nacional, 20 projetos — mas caiu da 5ª posição no ranking 2007-2024, uma das poucas unidades federativas que perderam colocação relativa.
 
 ## 📊 Padrões Analíticos
 
@@ -46,9 +46,10 @@ ev-inference: RS é o contraponto metodológico da série — cortejou ativament
 
 Entradas conectadas nesta série:
 
-- [Eduardo Leite lidera missão a Shenzhen: reunião com a BYD, visita à Huawei e ao Porto de Yantian](/posts/id1735-eduardo-leite-lidera-missao-a-shenzhen-reuniao-com-a-byd-visita-a-huawei-e-ao-po/)
-- [GWM avalia cidade de Rio Grande (RS) para segunda fábrica no Brasil](/posts/id1736-gwm-avalia-cidade-de-rio-grande-rs-para-segunda-fabrica-no-brasil/)
-- [GWM escolhe Espírito Santo em vez do Rio Grande do Sul para segunda fábrica](/posts/id1737-gwm-escolhe-espirito-santo-em-vez-do-rio-grande-do-sul-para-segunda-fabrica/)
+- [CPFL Energia (grupo State Grid) vence leilão de privatização da CEEE-T por R$ 2,67 bilhões, ágio de 57,13%](/posts/2021-07-16-id1763-cpfl-energia-grupo-state-grid-vence-leilao-de-privatizacao-da-ceee-t-por-r-267-b/)
+- [Eduardo Leite lidera missão a Shenzhen: reunião com a BYD, visita à Huawei e ao Porto d...](/posts/2025-11-22-id1735-eduardo-leite-lidera-missao-a-shenzhen-reuniao-com-a-byd-visita-a-huawei-e-ao-po/)
+- [GWM avalia cidade de Rio Grande (RS) para segunda fábrica no Brasil](/posts/2025-09-02-id1736-gwm-avalia-cidade-de-rio-grande-rs-para-segunda-fabrica-no-brasil/)
+- [GWM escolhe Espírito Santo em vez do Rio Grande do Sul para segunda fábrica](/posts/2026-06-22-id1737-gwm-escolhe-espirito-santo-em-vez-do-rio-grande-do-sul-para-segunda-fabrica/)
 
 ---
 

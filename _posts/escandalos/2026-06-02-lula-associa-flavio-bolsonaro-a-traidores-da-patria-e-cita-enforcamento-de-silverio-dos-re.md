@@ -52,8 +52,8 @@ O evento configura precedente direto para a repetição de 20/07/2026 — mesmo 
 
 ## Conexoes
 
-- id_1637 (notícia-crime 11/jun)
-- id_1638 (repetição 20/jul)
+- [1637 · Flávio Bolsonaro protocola notícia-crime contra Lula no STF por incitaç…](/posts/2026-06-11-flavio-bolsonaro-protocola-noticia-crime-contra-lula-no-stf-por-incitacao-ao-crime-e-ameac/) (notícia-crime 11/jun)
+- [1638 · Lula repete referência a enforcamento de 'traidores' mirando Flávio Bol…](/posts/2026-07-20-lula-repete-referencia-a-enforcamento-de-traidores-mirando-flavio-bolsonaro-em-convencao-d/) (repetição 20/jul)
 
 ## Lacunas investigativas
 

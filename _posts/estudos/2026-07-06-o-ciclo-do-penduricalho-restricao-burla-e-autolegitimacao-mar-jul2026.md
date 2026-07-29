@@ -34,7 +34,7 @@ Estudo consolidando id_1633 e id_1634 como ciclo fechado de P11 no Judiciário: 
 
 - 1633
 - 1634
-- T-191
+- [T-191 · T-191 · Custeio Administrativo Federal — R$ 32,4 bi e o Padrão P11](/posts/custeio-administrativo-federal-p11/)
 
 ## Fontes
 

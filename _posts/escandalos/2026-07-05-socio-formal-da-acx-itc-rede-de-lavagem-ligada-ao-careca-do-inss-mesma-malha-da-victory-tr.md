@@ -62,9 +62,9 @@ P10 em estado puro: a mesma infraestrutura financeira (rede de mais de 40 CNPJs,
 
 ## Conexoes
 
-- id_1609
-- id_1611
-- id_T220
+- [1609 · OFAC sanciona dois brasileiros e quatro empresas por alegado vínculo fi…](/posts/2026-07-01-ofac-sanciona-dois-brasileiros-e-quatro-empresas-por-alegado-vinculo-financeiro-com-o-pcc/)
+- [1611 · Victory Trading (sancionada pela OFAC) recebeu R$ 514,5 milhões da Wave…](/posts/2026-07-01-victory-trading-sancionada-pela-ofac-recebeu-r-5145-milhoes-da-wave-intermediacoes-cnpj-ap/)
+- [T-220 · T-220 · Convergência estrutural: vetor PCC-OFAC × rede Arpar × Farra do…](/posts/2026-07-01-convergencia-estrutural-vetor-pcc-ofac-rede-arpar-farra-do-inss-via-infraestrutura-finance/)
 
 ## Lacunas investigativas
 

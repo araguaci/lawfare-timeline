@@ -37,13 +37,13 @@ Não há mapeamento público consolidado da rede Arpar que trate PCC, Careca do 
 
 ## Conexoes
 
-- id_1609
-- id_1610
-- id_1611
-- T-201
-- T-218
+- [1609 · OFAC sanciona dois brasileiros e quatro empresas por alegado vínculo fi…](/posts/2026-07-01-ofac-sanciona-dois-brasileiros-e-quatro-empresas-por-alegado-vinculo-financeiro-com-o-pcc/)
+- [1610 · Diretor-geral da PF diverge publicamente da avaliação do Tesouro dos EU…](/posts/2026-07-01-diretor-geral-da-pf-diverge-publicamente-da-avaliacao-do-tesouro-dos-eua-sobre-vinculo-de-/)
+- [1611 · Victory Trading (sancionada pela OFAC) recebeu R$ 514,5 milhões da Wave…](/posts/2026-07-01-victory-trading-sancionada-pela-ofac-recebeu-r-5145-milhoes-da-wave-intermediacoes-cnpj-ap/)
+- [T-201 · T-201 · PCC Transnacional — OFAC, EUA e Eixo Luso](/posts/pcc-transnacional-ofac-eua-luso/)
+- [T-218 · T-218 · Ouro ilegal na Amazônia como vetor P08](/posts/2026-06-29-ouro-ilegal-vetor-p08-amazonia-pcc-cv-venezuela/)
 - T-219 (pendente)
-- id_1400-1448 — CPI INSS batch
+- [1400 · Tse](/posts/tse/)-1448 — CPI INSS batch
 
 ## Fontes
 

@@ -32,24 +32,25 @@ Cadência: **≤2 posts/dia**; URLs externas no **1º reply**.
 |--:|------|----------|------|----------|------|------|
 | 0 | Hub | Índice da série | — | `odragaoeaonca-xarticle.md` | `public/dragao-onca.webp` | `index.html` |
 | 1 | Crítico | Brasil (Federal) | T-229 | `brasil-federal-xarticle.md` | `public/dragao-onca-brasil-federal.webp` | `dragao-onca-brasil-federal.html` |
-| 2 | Crítico | Braço Diplomático | T-236 | `braco-diplomatico-xarticle.md` | `artigos/braco-diplomatico-xarticle-hero.png` | `dragao-onca-braco-diplomatico.html` |
-| 3 | Alto | **São Paulo** | T-238 | `sao-paulo-xarticle.md` | `artigos/sao-paulo-xarticle-hero.png` | `dragao-onca-sao-paulo.html` |
+| 2 | Crítico | Braço Diplomático | T-236 | `braco-diplomatico-xarticle.md` | `public/dragao-onca-braco-diplomatico.webp` | `dragao-onca-braco-diplomatico.html` |
+| 3 | Alto | **São Paulo** | T-238 | `sao-paulo-xarticle.md` | `public/dragao-onca-sao-paulo.webp` | `dragao-onca-sao-paulo.html` |
 | 4 | Alto | **Goiás** | T-228 | `goias-xarticle.md` | `public/dragao-onca-goias.webp` | `dragao-onca-goias.html` |
 | 5 | Alto | **Minas Gerais** | T-232 | `minas-gerais-xarticle.md` | `public/dragao-onca-minas-gerais.webp` | `dragao-onca-minas-gerais.html` |
-| 6 | Alto | **Bahia** | T-237 | `bahia-xarticle.md` | `artigos/bahia-xarticle-hero.png` | `dragao-onca-bahia.html` |
+| 6 | Alto | **Bahia** | T-237 | `bahia-xarticle.md` | `public/dragao-onca-bahia.webp` | `dragao-onca-bahia.html` |
 | 7 | Alto | **Pará** | T-230 | `para-xarticle.md` | `public/dragao-onca-para.webp` | `dragao-onca-para.html` |
 | 8 | Alto | **Amazonas** | T-231 | `amazonas-xarticle.md` | `public/dragao-onca-amazonas.webp` | `dragao-onca-amazonas.html` |
-| 9 | Médio | **Paraná** | T-239 | `parana-xarticle.md` | `artigos/parana-xarticle-hero.png` | `dragao-onca-parana.html` |
+| 9 | Médio | **Paraná** | T-239 | `parana-xarticle.md` | `public/dragao-onca-parana.webp` | `dragao-onca-parana.html` |
 | 10 | Médio | **Rio Grande do Sul** | T-240 | `rio-grande-do-sul-xarticle.md` | `public/dragao-onca-rio-grande-do-sul.webp` | `dragao-onca-rio-grande-do-sul.html` |
-| 11 | Médio | RS · ES · Ranking | T-240–242 | `rs-es-ranking-xarticle.md` | `artigos/rs-es-ranking-xarticle-hero.png` | `dragao-onca-rs-es-ranking-nacional.html` |
-| 12 | Consol. | Síntese v1 | T-233 | `sintese-xarticle.md` | `artigos/sintese-xarticle-hero.png` | `dragao-onca-sintese.html` |
+| 11 | Médio | RS · ES · Ranking | T-240–242 | `rs-es-ranking-xarticle.md` | `public/dragao-onca-rs-es-ranking.webp` | `dragao-onca-rs-es-ranking-nacional.html` |
+| 12 | Consol. | Síntese v1 | T-233 | `sintese-xarticle.md` | `public/dragao-onca-sintese.webp` | `dragao-onca-sintese.html` |
 | 13 | Legis. | PL 2.780/2024 | T-235 | `pl2780-xarticle.md` | `public/dragao-onca-pl2780.webp` | `dragao-onca-pl2780.html` |
 | 14 | Transv. | Braço Jurídico | T-234 | `braco-juridico-xarticle.md` | `public/dragao-onca-braco-juridico.webp` | `dragao-onca-braco-juridico.html` |
-| 15 | Fecha. | Síntese final | T-243 | `sintese-final-xarticle.md` | `artigos/sintese-final-xarticle-hero.png` | `dragao-onca-sintese-final-cross-state.html` |
-| 16 | Controle | **Amapá** | T-244 | `amapa-xarticle.md` | `artigos/amapa-xarticle-hero.png` | `dragao-onca-amapa.html` |
-| 17 | Alto | **Rio de Janeiro** | T-245 | `rj-xarticle.md` | `artigos/rj-xarticle-hero.png` | `dragao-onca-rj.html` |
+| 15 | Fecha. | Síntese final | T-243 | `sintese-final-xarticle.md` | `public/dragao-onca-sintese-final.webp` | `dragao-onca-sintese-final-cross-state.html` |
+| 16 | Controle | **Amapá** | T-244 | `amapa-xarticle.md` | `public/dragao-onca-amapa.webp` | `dragao-onca-amapa.html` |
+| 17 | Alto | **Rio de Janeiro** | T-245 | `rj-xarticle.md` | `public/dragao-onca-rj.webp` | `dragao-onca-rj.html` |
+| 18 | Distintivo | **Santa Catarina** | T-246 | `santa-catarina-xarticle.md` | `public/dragao-onca-santa-catarina.webp` | `dragao-onca-santa-catarina.html` |
 
-**UFs na série:** SP · GO · MG · BA · PA · AM · PR · RS · ES (via ranking) · AP · RJ — **11 estados** (+ federal / eixos).
+**UFs na série:** SP · GO · MG · BA · PA · AM · PR · RS · ES (via ranking) · AP · RJ · **SC** — **12 estados** (+ federal / eixos).
 
 ---
 
@@ -327,6 +328,21 @@ Estilo: documentário investigativo, data journalism, tipografia editorial bold.
 Grain sutil, sem emojis, sem clipart, sem fundo branco flat.
 ```
 
+### 18 · Santa Catarina · T-246
+
+**Título X:** *Em Santa Catarina, deputados cortejaram a JMEV em Pequim — e a fábrica não veio para ninguém*
+
+```
+Hero image para artigo X.com "Em Santa Catarina, deputados cortejaram a JMEV em Pequim — e a fábrica não veio para ninguém".
+Dimensões exatas: 1024×600 pixels (share card / preview do artigo).
+Composição wide 5:2: bloco editorial central com título "SANTA CATARINA" e subtítulo "Cortejo Duplo Sem Captura" em destaque;
+conteúdo importante centrado, margens seguras para recorte em feed.
+Tema visual: Alesc (legislativo) × JMEV em Pequim à esquerda; fábrica vazia / planta fantasma SC×ES à direita — cortejo duplo sem captura industrial.
+Paleta: fundo #080c10, vermelho dragão #d4342c, dourado onça #e8b23d, acentos azul legislativo #4a9eff.
+Estilo: documentário investigativo, data journalism, tipografia editorial bold.
+Grain sutil, sem emojis, sem clipart, sem fundo branco flat.
+```
+
 ---
 
 ## UFs — atalho rápido
@@ -343,7 +359,8 @@ Grain sutil, sem emojis, sem clipart, sem fundo branco flat.
 | RS | 10 | T-240 | Contraria (CEEE-T ≠ GWM) | `dragao-onca-rio-grande-do-sul.webp` |
 | ES | 11* | T-241 | Contraria (logística) | via `rs-es-ranking-xarticle-hero.png` |
 | AP | 16 | T-244 | Controle + federal | `amapa-xarticle-hero.png` |
-| RJ | 17 | T-245 | Açu federal + Castro P09 | `artigos/rj-xarticle-hero.png` |
+| RJ | 17 | T-245 | Açu federal + Castro P09 | `public/dragao-onca-rj.webp` |
+| SC | 18 | T-246 | Não confirma (Alesc×JMEV · captura 0) | `public/dragao-onca-santa-catarina.webp` |
 
 \*ES sem X Article dedicado — coberto no ranking RS/ES (T-240–242).
 
@@ -353,7 +370,8 @@ Grain sutil, sem emojis, sem clipart, sem fundo branco flat.
 
 Gerar/atualizar com o prompt completo acima quando o arquivo for só `.webp` de capa web ou estiver ausente:
 
-- [x] `artigos/rj-xarticle-hero.png` (+ `public/dragao-onca-rj.webp`)
+- [x] `public/dragao-onca-rj.webp` (+ `public/dragao-onca-rj.webp`)
+- [x] `public/dragao-onca-santa-catarina.webp` (+ `public/dragao-onca-santa-catarina.webp`)
 - [ ] Opcional: regenerar MG com conceito “Sigma + China paralela”
 - [ ] Opcional: regenerar RS com conceito “CEEE-T ≠ GWM”
 

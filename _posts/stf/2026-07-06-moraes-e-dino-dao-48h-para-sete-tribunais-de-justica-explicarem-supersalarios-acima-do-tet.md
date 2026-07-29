@@ -69,8 +69,8 @@ Fechamento do loop P11 em tempo real: liberação (30/06) → burla documentada 
 
 ## Conexoes
 
-- id_1633
-- id_T191
+- [1633 · STF conclui julgamento em plenário virtual extraordinário e libera part…](/posts/2026-06-30-stf-conclui-julgamento-em-plenario-virtual-extraordinario-e-libera-parte-dos-penduricalhos/)
+- [T-191 · T-191 · Custeio Administrativo Federal — R$ 32,4 bi e o Padrão P11](/posts/custeio-administrativo-federal-p11/)
 
 ## Lacunas investigativas
 

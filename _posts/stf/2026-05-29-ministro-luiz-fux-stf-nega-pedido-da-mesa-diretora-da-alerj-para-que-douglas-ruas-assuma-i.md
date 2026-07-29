@@ -47,7 +47,7 @@ Em 29/05/2026, Fux negou em decisão monocrática pedido da Alerj para que Dougl
 
 ## Conexoes
 
-- id_1626
+- [1626 · Vácuo prolongado na sucessão do governo do Rio de Janeiro após renúncia…](/posts/2026-03-23-vacuo-prolongado-na-sucessao-do-governo-do-rio-de-janeiro-apos-renuncia-de-claudio-castro-/)
 
 ## Fontes verificaveis
 

@@ -56,8 +56,8 @@ Reforça P10 (infraestrutura de serviço compartilhada): um único núcleo opera
 
 ## Conexoes
 
-- id_1481
-- id_1505
+- [1481 · Irmãos Torsi (ʼNdrangheta) moldam estrutura organizacional do PCC dentr…](/posts/torsi-ndrangheta-moldaram-estrutura-pcc/)
+- [1505 · CPI do Crime Organizado: mapeamento nacional confirma PCC no Sul/SP/CO…](/posts/cpi-crime-organizado-mapeamento-pcc-cv-infiltracao-municipal/)
 
 ## Lacunas investigativas
 

@@ -97,18 +97,18 @@ Mesmo padrão de Caiado em Goiás: governador em fim de mandato converte ativo e
 
 Entradas conectadas nesta série:
 
-- [Mineração Taboca é adquirida pela estatal chinesa China Nonferrous Metal Mining Group](/posts/id1667-mineracao-taboca-e-adquirida-pela-estatal-chinesa-china-nonferrous-metal-mining/)
-- [MPF arquiva inquérito sobre Taboca com base em pareceres técnicos que atribuem danos a "chuvas extraordinárias"](/posts/id1668-mpf-arquiva-inquerito-sobre-taboca-com-base-em-pareceres-tecnicos-que-atribuem-d/)
-- [Relatório da FUNAI (elaborado pela startup Aqua Viridi) reacende denúncia de contaminação](/posts/id1669-relatorio-da-funai-elaborado-pela-startup-aqua-viridi-reacende-denuncia-de-conta/)
-- [Povo Waimiri Atroari denuncia contaminação do rio Alalaú por mercúrio e rejeitos industriais](/posts/id1670-povo-waimiri-atroari-denuncia-contaminacao-do-rio-alalau-por-mercurio-e-rejeitos/)
-- [Taboca anuncia investimento de US$100 milhões para dobrar produção até 2028](/posts/id1671-taboca-anuncia-investimento-de-us100-milhoes-para-dobrar-producao-ate-2028/)
-- [Taboca firma Termo de Cooperação nº 01/2026 com R$12,3 milhões à ACWA, dois dias após lideranças expressarem desconfiança total](/posts/id1672-taboca-firma-termo-de-cooperacao-no-012026-com-r123-milhoes-a-acwa-dois-dias-apo/)
-- [Waimiri Atroari enviam novo ofício ao MPF-AM com suspeitas adicionais de contaminação](/posts/id1673-waimiri-atroari-enviam-novo-oficio-ao-mpf-am-com-suspeitas-adicionais-de-contami/)
-- [Polícia Federal passa a investigar a Mineração Taboca por contaminação em terra indígena](/posts/id1674-policia-federal-passa-a-investigar-a-mineracao-taboca-por-contaminacao-em-terra/)
-- [BYD instala fábrica de baterias no Polo Industrial de Manaus](/posts/id1675-byd-instala-fabrica-de-baterias-no-polo-industrial-de-manaus/)
-- [Grupo chinês Megmeet anuncia fábrica eletroeletrônica no PIM com previsão de operação em julho/2026](/posts/id1676-grupo-chines-megmeet-anuncia-fabrica-eletroeletronica-no-pim-com-previsao-de-ope/)
-- [Trump ameaça tarifa de 50% sobre produtos brasileiros; governo do Amazonas avalia impacto marginal na ZFM](/posts/id1677-trump-ameaca-tarifa-de-50-sobre-produtos-brasileiros-governo-do-amazonas-avalia/)
-- [Wilson Lima, pré-candidato ao Senado, usa defesa da Zona Franca como plataforma de campanha](/posts/id1678-wilson-lima-pre-candidato-ao-senado-usa-defesa-da-zona-franca-como-plataforma-de/)
+- [Mineração Taboca é adquirida pela estatal chinesa China Nonferrous Metal Mining Group](/posts/2024-01-01-id1667-mineracao-taboca-e-adquirida-pela-estatal-chinesa-china-nonferrous-metal-mining/)
+- [MPF arquiva inquérito sobre Taboca com base em pareceres técnicos que atribuem danos a ...](/posts/2024-06-06-id1668-mpf-arquiva-inquerito-sobre-taboca-com-base-em-pareceres-tecnicos-que-atribuem-d/)
+- [Relatório da FUNAI (elaborado pela startup Aqua Viridi) reacende denúncia de contaminação](/posts/2025-08-01-id1669-relatorio-da-funai-elaborado-pela-startup-aqua-viridi-reacende-denuncia-de-conta/)
+- [Povo Waimiri Atroari denuncia contaminação do rio Alalaú por mercúrio e rejeitos indust...](/posts/2025-09-29-id1670-povo-waimiri-atroari-denuncia-contaminacao-do-rio-alalau-por-mercurio-e-rejeitos/)
+- [Taboca anuncia investimento de US$100 milhões para dobrar produção até 2028](/posts/2026-01-01-id1671-taboca-anuncia-investimento-de-us100-milhoes-para-dobrar-producao-ate-2028/)
+- [Taboca firma Termo de Cooperação nº 01/2026 com R$12,3 milhões à ACWA, dois dias após l...](/posts/2026-01-01-id1672-taboca-firma-termo-de-cooperacao-no-012026-com-r123-milhoes-a-acwa-dois-dias-apo/)
+- [Waimiri Atroari enviam novo ofício ao MPF-AM com suspeitas adicionais de contaminação](/posts/2026-04-08-id1673-waimiri-atroari-enviam-novo-oficio-ao-mpf-am-com-suspeitas-adicionais-de-contami/)
+- [Polícia Federal passa a investigar a Mineração Taboca por contaminação em terra indígena](/posts/2026-07-05-id1674-policia-federal-passa-a-investigar-a-mineracao-taboca-por-contaminacao-em-terra/)
+- [BYD instala fábrica de baterias no Polo Industrial de Manaus](/posts/2020-01-01-id1675-byd-instala-fabrica-de-baterias-no-polo-industrial-de-manaus/)
+- [Grupo chinês Megmeet anuncia fábrica eletroeletrônica no PIM com previsão de operação e...](/posts/2026-01-14-id1676-grupo-chines-megmeet-anuncia-fabrica-eletroeletronica-no-pim-com-previsao-de-ope/)
+- [Trump ameaça tarifa de 50% sobre produtos brasileiros; governo do Amazonas avalia impac...](/posts/2025-07-10-id1677-trump-ameaca-tarifa-de-50-sobre-produtos-brasileiros-governo-do-amazonas-avalia/)
+- [Wilson Lima, pré-candidato ao Senado, usa defesa da Zona Franca como plataforma de camp...](/posts/2026-07-01-id1678-wilson-lima-pre-candidato-ao-senado-usa-defesa-da-zona-franca-como-plataforma-de/)
 
 ---
 

@@ -32,9 +32,9 @@ Correção metodológica registrada em duas etapas nesta versão. Primeira: a al
 
 ## Conexoes
 
-- id_T206
-- id_T208
-- id_T217
+- [T-206 · T-206 · SPLC Modelo Brasil — Índice Corpus](/posts/splc-modelo-brasil-corpus-bridge/)
+- [T-208 · T-208 · Narrativa vs Evidência — Índice Corpus](/posts/narrativa-vs-evidencia-corpus-bridge/)
+- [T-217 · Seletividade Punitiva — TSE: Casos Isolados (Atualizado)](/posts/2026-06-29-seletividade-punitiva-tse-casos-isolados/)
 
 ## Fontes
 

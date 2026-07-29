@@ -91,21 +91,21 @@ Enquanto o governo federal aprofunda laços com a China, Caiado em Goiás negoci
 
 Entradas conectadas nesta série:
 
-- [Brasil e China elevam relação a Parceria Estratégica — primeira desse tipo entre países em desenvolvimento](/posts/id1639-brasil-e-china-elevam-relacao-a-parceria-estrategica-primeira-desse-tipo-entre-p/)
-- [Discurso de posse de Lula cita nominalmente necessidade de estreitar laços com China, Japão e Índia](/posts/id1640-discurso-de-posse-de-lula-cita-nominalmente-necessidade-de-estreitar-lacos-com-c/)
-- [Lula discursa no seminário "Brasil-China: Um Salto Necessário" no BNDES](/posts/id1641-lula-discursa-no-seminario-brasil-china-um-salto-necessario-no-bndes/)
-- [Lula visita a China; criação da COSBAN (Comissão Sino-Brasileira de Alto Nível de Concertação e Cooperação)](/posts/id1642-lula-visita-a-china-criacao-da-cosban-comissao-sino-brasileira-de-alto-nivel-de/)
-- [Hu Jintao visita o Brasil; Lula reafirma "parceria estratégica" publicamente](/posts/id1643-hu-jintao-visita-o-brasil-lula-reafirma-parceria-estrategica-publicamente/)
-- [China ultrapassa os EUA e se torna o principal parceiro comercial do Brasil](/posts/id1644-china-ultrapassa-os-eua-e-se-torna-o-principal-parceiro-comercial-do-brasil/)
-- [Lula e Hu Jintao assinam Plano de Ação Conjunta Brasil-China 2010-2014](/posts/id1645-lula-e-hu-jintao-assinam-plano-de-acao-conjunta-brasil-china-2010-2014/)
-- [Dilma Rousseff e premiê Wen Jiabao assinam Plano Decenal de Cooperação 2012-2021 no Rio de Janeiro](/posts/id1646-dilma-rousseff-e-premie-wen-jiabao-assinam-plano-decenal-de-cooperacao-2012-2021/)
-- [Vice-presidente Mourão declara que Brasil não restringirá a Huawei no 5G, desafiando pressão dos EUA](/posts/id1647-vice-presidente-mourao-declara-que-brasil-nao-restringira-a-huawei-no-5g-desafia/)
-- [Governador João Doria (SP) inaugura escritório comercial do estado em Xangai durante "Missão China"](/posts/id1648-governador-joao-doria-sp-inaugura-escritorio-comercial-do-estado-em-xangai-duran/)
-- [Instituto Butantan e Sinovac assinam Acordo de Colaboração de Desenvolvimento Clínico para a Fase 3 da CoronaVac](/posts/id1649-instituto-butantan-e-sinovac-assinam-acordo-de-colaboracao-de-desenvolvimento-cl/)
-- [Doria assina compra antecipada de 46 milhões de doses da CoronaVac com recursos do estado de São Paulo](/posts/id1650-doria-assina-compra-antecipada-de-46-milhoes-de-doses-da-coronavac-com-recursos/)
-- [Eduardo Bolsonaro acusa Huawei de espionagem via 5G; embaixada da China ameaça "consequências negativas"](/posts/id1651-eduardo-bolsonaro-acusa-huawei-de-espionagem-via-5g-embaixada-da-china-ameaca-co/)
-- [Xi Jinping visita Brasília; relação elevada a "Comunidade de Futuro Compartilhado Brasil-China por um Mundo Mais Justo e um Planeta Mais Sustentável"](/posts/id1652-xi-jinping-visita-brasilia-relacao-elevada-a-comunidade-de-futuro-compartilhado/)
-- [Governo Lula assina 36 acordos com a China em Pequim, incluindo Plano de Ação para Mineração Sustentável 2025-2026](/posts/id1653-governo-lula-assina-36-acordos-com-a-china-em-pequim-incluindo-plano-de-acao-par/)
+- [Brasil e China elevam relação a Parceria Estratégica — primeira desse tipo entre países...](/posts/1993-01-01-id1639-brasil-e-china-elevam-relacao-a-parceria-estrategica-primeira-desse-tipo-entre-p/)
+- [Discurso de posse de Lula cita nominalmente necessidade de estreitar laços com China, J...](/posts/2003-01-01-id1640-discurso-de-posse-de-lula-cita-nominalmente-necessidade-de-estreitar-lacos-com-c/)
+- [Lula discursa no seminário "Brasil-China: Um Salto Necessário" no BNDES](/posts/2003-04-30-id1641-lula-discursa-no-seminario-brasil-china-um-salto-necessario-no-bndes/)
+- [Lula visita a China; criação da COSBAN (Comissão Sino-Brasileira de Alto Nível de Conce...](/posts/2004-05-01-id1642-lula-visita-a-china-criacao-da-cosban-comissao-sino-brasileira-de-alto-nivel-de/)
+- [Hu Jintao visita o Brasil; Lula reafirma "parceria estratégica" publicamente](/posts/2004-11-12-id1643-hu-jintao-visita-o-brasil-lula-reafirma-parceria-estrategica-publicamente/)
+- [China ultrapassa os EUA e se torna o principal parceiro comercial do Brasil](/posts/2009-01-01-id1644-china-ultrapassa-os-eua-e-se-torna-o-principal-parceiro-comercial-do-brasil/)
+- [Lula e Hu Jintao assinam Plano de Ação Conjunta Brasil-China 2010-2014](/posts/2010-04-15-id1645-lula-e-hu-jintao-assinam-plano-de-acao-conjunta-brasil-china-2010-2014/)
+- [Dilma Rousseff e premiê Wen Jiabao assinam Plano Decenal de Cooperação 2012-2021 no Rio...](/posts/2012-06-21-id1646-dilma-rousseff-e-premie-wen-jiabao-assinam-plano-decenal-de-cooperacao-2012-2021/)
+- [Vice-presidente Mourão declara que Brasil não restringirá a Huawei no 5G, desafiando pr...](/posts/2019-07-15-id1647-vice-presidente-mourao-declara-que-brasil-nao-restringira-a-huawei-no-5g-desafia/)
+- [Governador João Doria (SP) inaugura escritório comercial do estado em Xangai durante "M...](/posts/2019-08-09-id1648-governador-joao-doria-sp-inaugura-escritorio-comercial-do-estado-em-xangai-duran/)
+- [Instituto Butantan e Sinovac assinam Acordo de Colaboração de Desenvolvimento Clínico p...](/posts/2020-06-11-id1649-instituto-butantan-e-sinovac-assinam-acordo-de-colaboracao-de-desenvolvimento-cl/)
+- [Doria assina compra antecipada de 46 milhões de doses da CoronaVac com recursos do esta...](/posts/2020-09-01-id1650-doria-assina-compra-antecipada-de-46-milhoes-de-doses-da-coronavac-com-recursos/)
+- [Eduardo Bolsonaro acusa Huawei de espionagem via 5G; embaixada da China ameaça "consequ...](/posts/2020-11-24-id1651-eduardo-bolsonaro-acusa-huawei-de-espionagem-via-5g-embaixada-da-china-ameaca-co/)
+- [Xi Jinping visita Brasília; relação elevada a "Comunidade de Futuro Compartilhado Brasi...](/posts/2024-11-01-id1652-xi-jinping-visita-brasilia-relacao-elevada-a-comunidade-de-futuro-compartilhado/)
+- [Governo Lula assina 36 acordos com a China em Pequim, incluindo Plano de Ação para Mine...](/posts/2025-05-13-id1653-governo-lula-assina-36-acordos-com-a-china-em-pequim-incluindo-plano-de-acao-par/)
 
 ---
 

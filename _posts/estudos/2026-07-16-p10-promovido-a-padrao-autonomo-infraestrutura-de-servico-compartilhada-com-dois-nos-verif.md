@@ -35,8 +35,8 @@ Nó formal de serviço com clusters não-financeiros pendente: não há contrato
 
 ## Conexoes
 
-- id_1620
-- id_1601
+- [1620 · Reportagem documenta pareceres sem ressalvas de quatro auditorias globa…](/posts/2026-01-25-reportagem-documenta-pareceres-sem-ressalvas-de-quatro-auditorias-globais-sobre-balancos-f/)
+- [1601 · Quebra de sigilo expõe vínculos de Ciro Nogueira e Hugo Motta com Vorca…](/posts/2026-06-16-quebra-de-sigilo-expoe-vinculos-de-ciro-nogueira-e-hugo-motta-com-vorcaro/)
 
 ## Fontes
 

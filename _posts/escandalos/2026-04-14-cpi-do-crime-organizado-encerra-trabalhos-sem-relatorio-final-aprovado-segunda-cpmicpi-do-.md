@@ -61,8 +61,8 @@ Rejeição do relatório de Alessandro Vieira por 6 votos a 4 — maioria simple
 
 ## Conexoes
 
-- id_1601
-- id_1605
+- [1601 · Quebra de sigilo expõe vínculos de Ciro Nogueira e Hugo Motta com Vorca…](/posts/2026-06-16-quebra-de-sigilo-expoe-vinculos-de-ciro-nogueira-e-hugo-motta-com-vorcaro/)
+- [1605 · Partido Novo protocola representação na PGR contra Andrei Rodrigues](/posts/2026-05-04-partido-novo-protocola-representacao-na-pgr-contra-andrei-rodrigues/)
 
 ## Lacunas investigativas
 

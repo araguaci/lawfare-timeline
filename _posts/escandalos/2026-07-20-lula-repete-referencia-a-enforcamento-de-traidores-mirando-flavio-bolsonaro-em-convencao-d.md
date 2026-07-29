@@ -55,8 +55,8 @@ A repetição da mesma associação retórica após uma notícia-crime formal j�
 
 ## Conexoes
 
-- id_1636 (declaração 02/jun)
-- id_1637 (notícia-crime 11/jun)
+- [1636 · Lula associa Flávio Bolsonaro a 'traidores da pátria' e cita enforcamen…](/posts/2026-06-02-lula-associa-flavio-bolsonaro-a-traidores-da-patria-e-cita-enforcamento-de-silverio-dos-re/) (declaração 02/jun)
+- [1637 · Flávio Bolsonaro protocola notícia-crime contra Lula no STF por incitaç…](/posts/2026-06-11-flavio-bolsonaro-protocola-noticia-crime-contra-lula-no-stf-por-incitacao-ao-crime-e-ameac/) (notícia-crime 11/jun)
 
 ## Lacunas investigativas
 

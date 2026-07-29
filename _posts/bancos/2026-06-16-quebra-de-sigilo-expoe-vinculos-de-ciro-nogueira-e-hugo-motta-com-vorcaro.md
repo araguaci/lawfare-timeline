@@ -4,7 +4,7 @@ description: "Relatórios da PF enviados ao STF, com sigilo retirado em 16/06/20
 date: 2026-06-16T12:00:00.000Z
 image:
   path: "/assets/solid/landmark.svg"
-tags: ["bancos", "PF", "STF", "sigilo_quebrado", "mesada", "viagens_internacionais"]
+tags: ["bancos", "pF", "STF", "sigilo_quebrado", "mesada", "viagens_internacionais"]
 categories: bancos
 permalink: /posts/2026-06-16-quebra-de-sigilo-expoe-vinculos-de-ciro-nogueira-e-hugo-motta-com-vorcaro/
 id_corpus: "1601"

@@ -63,8 +63,8 @@ Processo arquivado por Fux em 22/09/2016 com sigilo. Tema não foi levado à sab
 
 ## Conexões no corpus
 
-- id_1512 — Operação Acrônimo: contexto da descoberta
-- id_1514 — Transcooper: segundo vetor de investigação arquivada envolvendo Moraes
+- [1512 · STJ Nega Indenização a Inocente Preso 210 Dias e Estado Cobra R$478,9 M…](/timeline/1512/) — Operação Acrônimo: contexto da descoberta
+- [1514 · Ramagem liberado pelo ICE após 48h; pedido de asilo barra deportação ao…](/posts/ramagem-liberado-pelo-ice-apos-48h-pedido-de-asilo-barra-deportacao-ao-brasil/) — Transcooper: segundo vetor de investigação arquivada envolvendo Moraes
 
 ## Lacunas investigativas
 
