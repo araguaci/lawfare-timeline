@@ -7,6 +7,56 @@ Formato: data (ISO) → resumo → arquivos de fonte.
 
 ---
 
+## 2026-07-29 (b) — Batch INQ 4.781 · IDs 1777–1796
+
+Sessão investigativa: origem INQ 4.781, bloqueios TSE 2022, desmonetização YouTube, autocensura Sivis, escândalo Master/Londres, Magnitsky Moraes.
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Processado** | `lawfare-batch-sessao-2026-07-29-1777-1796.json` | 20 posts em escandalos/stf/bancos/operacoes/crise-diplomatica |
+| **Alterado** | `_data/lawfare.json` | +20 assuntos (total **1758**, IDs **1777–1796**) |
+| **Alterado** | `_data/lawfare-unified-corpus.json` | +20 entradas (total **136**) |
+| **Alterado** | `_data/claude.ai-corpus-ids-sync.json` | main **1796** · next **1797** |
+
+---
+
+## 2026-07-29 — Sync fila todo + T-243 final + build docs
+
+Processamento dos 2 JSON pendentes em `_data/todo/`; síntese final T-243 alinhada ao dossiê HTML (151 entradas, correções MG/RS/CEEE-T, tipologia ampliada); snapshot TODO atualizado; build Jekyll para espelhar `docs/`.
+
+### Fila `_data/todo/`
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Processado** | `lawfare-batch-salles-patrimonio-tse-1766.json` | Post `estudos` id_1766 — Salles Senado SP / patrimônio TSE |
+| **Processado** | `lawfare-batch-vorcaro-sigilo-100anos-1763.json` | Posts `bancos` id_1763 + Alcolumbre INSS; síntese P10 `estudos` |
+| **Arquivado** | `_data/processados/` | Ambos batches movidos pós-merge |
+| **Hold** | `_hold/lawfare-batch-lula-*` · `_hold/havengate-*` | Conflito IDs 1749–1752 e 1767–1768 — não processados |
+
+### Síntese final (T-243)
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Alterado** | `_posts/dragao-onca/2026-07-24-t243-sintese-final-cross-state.md` | Intro narrativa; 5 correções metodológicas; MG China+Ocidente; RS CEEE-T id_1763; 14 mecanismos tipológicos; tese refinada + conclusão |
+| **Alterado** | `_data/dragao-onca.json` | `descricao` T-243 com AP/RJ/SC |
+
+### Snapshot / sync
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Alterado** | `TODO.md` · `docs/TODO.md` | Main **1774** · dragao-onca **151** · fila vazia · `_hold/` documentado |
+| **Alterado** | `_data/lawfare.json` | +2 assuntos sigilo; **corrigido** conflito 1763/1764 (restaurado dragao-onca; Vorcaro/Alcolumbre → **1775/1776**); total **1738** |
+| **Criado** | `scripts/fix_id_conflict_1763_1764.py` | Restauração automática de IDs dragao-onca vs batch sigilo |
+| **Alterado** | `_data/claude.ai-corpus-ids-sync.json` | Tracks atualizados via `sync_todo_current.py` |
+
+### Verificação
+
+- `python scripts/sync_todo_current.py` → 2 timeline + 2 estudos
+- `python scripts/validate_dragao_onca_yaml.py` → **151 files OK**
+- `bundle exec jekyll build` → `docs/` (29/jul)
+
+---
+
 ## 2026-07-27 — Tags padrão P0x · índice temático por importância
 
 Auditoria e sincronização de tags `p01`–`p12` / `p04b` / `p06-b` / `p12-b` com padrões declarados no corpo dos posts. Reordenação da seção **Capítulos Temáticos** em `/dragao-onca/` pela ordem de leitura do README/`series-nav` (importância), não por data.

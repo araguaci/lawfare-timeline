@@ -1,0 +1,533 @@
+{
+  "_meta": {
+    "batch_id": "sessao-2026-07-29-inq4781-desdobramentos",
+    "generated": "2026-07-29",
+    "range": [1777, 1796],
+    "session_summary": "Sessão investigativa longa: genealogia do INQ 4.781, cluster de bloqueios TSE/AEED 2022, mecanismo de desmonetização, autocensura mensurada, escândalo Banco Master/Londres (ministros STF/STJ), sanção Magnitsky contra Moraes. Todas as entradas passaram por verificação web antes da produção, conforme protocolo. Duas entradas (1790) permanecem ev-alleged por sourcing concentrado em único ângulo editorial, pendente fonte primária.",
+    "next_main_after_batch": 1797,
+    "destino": "_data/todo/ — processar via merge_todo_pending.py"
+  },
+  "entries": [
+    {
+      "id": "1777",
+      "date": "2019-03-14",
+      "date_precision": "day",
+      "title": "Toffoli abre de ofício o INQ 4.781/DF após ofensas de procurador da Lava Jato ao Judiciário",
+      "summary": "O então presidente do STF, Dias Toffoli, instaurou de ofício o Inquérito 4.781/DF em 14/03/2019 (Portaria GP nº 69/2019), com relatoria de Alexandre de Moraes, motivado por manifestações do procurador da República Diogo Castor de Mattos (Operação Lava Jato) consideradas ofensivas ao Judiciário. O escopo original — apurar notícias fraudulentas, ameaças e infrações contra a honorabilidade do STF — antecede em mais de um ano a pandemia e em mais de três anos o ciclo eleitoral de 2022, que posteriormente se tornariam os focos de maior expansão do inquérito.",
+      "category": "chokepoint_judicial",
+      "actors": [
+        {"name": "Dias Toffoli", "role": "Instaurador de ofício — presidente do STF à época", "institution": "STF"},
+        {"name": "Alexandre de Moraes", "role": "Relator designado", "institution": "STF"},
+        {"name": "Diogo Castor de Mattos", "role": "Procurador cujas manifestações motivaram a abertura", "institution": "MPF/Lava Jato"}
+      ],
+      "institutions": ["STF", "MPF"],
+      "legal_basis": ["RISTF Art. 43 — poder de instauração de inquérito de ofício invocado como fonte de competência investigatória"],
+      "patterns": ["P02", "P03", "P10"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "Timeline INQ 4.781 — origem e expansão de escopo", "url": "https://lawfare-timeline.vercel.app/inq4781.html", "outlet": "lawfare-timeline (corpus interno)", "date": "2026-01-01"}
+      ],
+      "result": "Inquérito permanece ativo 6+ anos depois, sem julgamento de mérito, tendo servido de matriz procedimental para expansões sucessivas de escopo (pandemia, eleições 2022, atos de 8/jan).",
+      "connections": ["id_1000_range_inq4781_origem"],
+      "status": "confirmado",
+      "lacuna_investigativa": "Não há registro público de qual ato específico do procurador Diogo Castor de Mattos motivou a abertura, nem se houve tentativa de resolução por via disciplinar ordinária (CNMP) antes da via inquisitorial direta pelo STF.",
+      "ponto_de_inflexao": "A deriva de escopo — de disputa STF×MPF pontual para aparato permanente de monitoramento de discurso — não tem data única identificável, mas o padrão indica que nenhuma expansão subsequente foi submetida a novo crivo de proporcionalidade.",
+      "analise": "O INQ 4.781 nasce de uma fricção de poder entre o STF e o MPF/Lava Jato, não de qualquer conteúdo relacionado a bolsonarismo, pandemia ou eleições — esses viram alvo apenas em expansões posteriores de escopo, nunca revisadas quanto à sua aderência ao objeto original. Isso é P10 em estado germinal: um aparato criado para um conflito institucional específico se torna infraestrutura genérica de controle de discurso, disponível para qualquer alvo que a corte decida enquadrar."
+    },
+    {
+      "id": "1778",
+      "date": "2022-10-22",
+      "date_precision": "day",
+      "title": "Cristiane Brasil tem perfil bloqueado no mesmo dia da operação da PF contra o pai, Roberto Jefferson",
+      "summary": "Em 22/10/2022, no âmbito do INQ 4.781/DF, foi determinado o bloqueio do perfil da ex-deputada Cristiane Brasil, no mesmo dia em que a Polícia Federal cumpriu mandado de busca e apreensão contra seu pai, Roberto Jefferson, que reagiu à operação disparando tiros e ferindo policiais.",
+      "category": "chokepoint_judicial",
+      "actors": [
+        {"name": "Alexandre de Moraes", "role": "Relator — ordem de bloqueio de perfil", "institution": "STF"},
+        {"name": "Cristiane Brasil", "role": "Alvo do bloqueio", "institution": "N/A"}
+      ],
+      "institutions": ["STF"],
+      "legal_basis": ["INQ 4.781/DF — decisão monocrática de bloqueio"],
+      "patterns": ["P04", "P10"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "Leia cada uma das ações de Moraes divulgadas pelo Congresso dos EUA", "url": "https://www.poder360.com.br/justica/leia-cada-uma-das-acoes-de-moraes-divulgadas-pelo-congresso-dos-eua/", "outlet": "Poder360", "date": "2026-07-01"}
+      ],
+      "result": "Perfil bloqueado; não há registro público de reversão.",
+      "connections": ["id_1777"],
+      "status": "confirmado",
+      "lacuna_investigativa": "Não há fundamentação pública disponível especificando qual conteúdo do perfil de Cristiane Brasil, especificamente, motivou o bloqueio no mesmo dia da operação contra o pai.",
+      "ponto_de_inflexao": null,
+      "analise": "A coincidência temporal exata (mesmo dia da operação policial contra Jefferson) sugere ação reativa a um evento familiar/político specific, não a conteúdo autônomo do perfil — padrão consistente com uso do aparato de bloqueio como resposta a crise política em tempo real, não como resposta a violação de regra pré-definida."
+    },
+    {
+      "id": "1779",
+      "date": "2023-01-02",
+      "date_precision": "day",
+      "title": "Jornalista Guilherme Fiuza tem perfil bloqueado no âmbito do INQ 4.781/DF",
+      "summary": "Em 02/01/2023, foi determinado o bloqueio do perfil do jornalista Guilherme Fiuza, comentarista do programa 'Os Pingos nos Is' (Jovem Pan), no âmbito do INQ 4.781/DF.",
+      "category": "chokepoint_judicial",
+      "actors": [
+        {"name": "Alexandre de Moraes", "role": "Relator — ordem de bloqueio", "institution": "STF"},
+        {"name": "Guilherme Fiuza", "role": "Jornalista, alvo do bloqueio", "institution": "Jovem Pan"}
+      ],
+      "institutions": ["STF", "Jovem Pan"],
+      "legal_basis": ["INQ 4.781/DF — decisão monocrática de bloqueio"],
+      "patterns": ["P04", "P10"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "Leia cada uma das ações de Moraes divulgadas pelo Congresso dos EUA", "url": "https://www.poder360.com.br/justica/leia-cada-uma-das-acoes-de-moraes-divulgadas-pelo-congresso-dos-eua/", "outlet": "Poder360", "date": "2026-07-01"}
+      ],
+      "result": "Perfil bloqueado.",
+      "connections": ["id_1777", "id_1778"],
+      "status": "confirmado",
+      "lacuna_investigativa": "Fundamentação específica do bloqueio (qual conteúdo, qual regra violada) não disponível publicamente.",
+      "ponto_de_inflexao": null,
+      "analise": "Alvo de perfil profissional (jornalista de veículo de grande alcance) é consistente com o padrão de seletividade por visibilidade already testado nesta sessão — embora esse padrão, na forma forte, tenha sido refutado pelo teste da cauda longa de contas pequenas também atingidas."
+    },
+    {
+      "id": "1780",
+      "date": "2022-12-30",
+      "date_precision": "day",
+      "title": "Paulo Figueiredo Filho e Rodrigo Constantino têm bloqueio multiplataforma no INQ 4.781/DF",
+      "summary": "Em 30/12/2022, foi determinado bloqueio multiplataforma (X, YouTube, Facebook, Instagram, Telegram, Gettr, TikTok) dos perfis de Paulo Figueiredo Filho e Rodrigo Constantino, no âmbito do INQ 4.781/DF.",
+      "category": "chokepoint_judicial",
+      "actors": [
+        {"name": "Alexandre de Moraes", "role": "Relator — ordem de bloqueio multiplataforma", "institution": "STF"},
+        {"name": "Paulo Figueiredo Filho", "role": "Alvo do bloqueio", "institution": "N/A"},
+        {"name": "Rodrigo Constantino", "role": "Alvo do bloqueio", "institution": "N/A"}
+      ],
+      "institutions": ["STF"],
+      "legal_basis": ["INQ 4.781/DF — decisão monocrática de bloqueio multiplataforma"],
+      "patterns": ["P04", "P10"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "Leia cada uma das ações de Moraes divulgadas pelo Congresso dos EUA", "url": "https://www.poder360.com.br/justica/leia-cada-uma-das-acoes-de-moraes-divulgadas-pelo-congresso-dos-eua/", "outlet": "Poder360", "date": "2026-07-01"}
+      ],
+      "result": "Bloqueio simultâneo em sete plataformas — escala incomum comparada a bloqueios de perfil único.",
+      "connections": ["id_1777", "id_1778", "id_1779"],
+      "status": "confirmado",
+      "lacuna_investigativa": "Fundamentação específica não disponível publicamente. Constantino aparece novamente em ações posteriores (17/mai/2023 e 5/jan/2024, per registro paralelo), o que sugere padrão de reincidência de alvo — vale investigar se há decisão única sendo reaplicada ou decisões novas e independentes.",
+      "ponto_de_inflexao": "Escala multiplataforma simultânea indica salto qualitativo no aparato — de bloqueio pontual para coordenação inter-plataforma centralizada.",
+      "analise": "A extensão a sete plataformas simultaneamente é o caso mais amplo identificado nesta sessão — merece nota específica como possível ponto de inflexão na escala operacional do aparato, de ação pontual para ação coordenada de amplo espectro."
+    },
+    {
+      "id": "1781",
+      "date": "2023-11-07",
+      "date_precision": "day",
+      "title": "Procurador Marcelo Rocha Monteiro bloqueado por discurso proferido 14 meses antes",
+      "summary": "Em 07/11/2023, o procurador Marcelo Rocha Monteiro teve perfil bloqueado no âmbito do INQ 4.781/DF, motivado por discurso proferido no ato de 7 de setembro de 2022, no qual chamou ministros do STF de 'golpistas'. O intervalo entre o discurso (set/2022) e a ação (nov/2023) é de mais de 14 meses.",
+      "category": "chokepoint_judicial",
+      "actors": [
+        {"name": "Alexandre de Moraes", "role": "Relator — ordem de bloqueio", "institution": "STF"},
+        {"name": "Marcelo Rocha Monteiro", "role": "Procurador, alvo do bloqueio", "institution": "Ministério Público"}
+      ],
+      "institutions": ["STF", "Ministério Público"],
+      "legal_basis": ["INQ 4.781/DF — decisão monocrática de bloqueio"],
+      "patterns": ["P04", "P06", "P10"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "Leia cada uma das ações de Moraes divulgadas pelo Congresso dos EUA", "url": "https://www.poder360.com.br/justica/leia-cada-uma-das-acoes-de-moraes-divulgadas-pelo-congresso-dos-eua/", "outlet": "Poder360", "date": "2026-07-01"}
+      ],
+      "result": "Perfil bloqueado mais de um ano após o fato gerador alegado.",
+      "connections": ["id_1777"],
+      "status": "confirmado",
+      "lacuna_investigativa": "Por que o intervalo de 14 meses entre discurso e ação? Não há explicação pública para o timing — é o caso com maior defasagem temporal identificado na sessão.",
+      "ponto_de_inflexao": "O longo intervalo sugere que o aparato não opera apenas reativamente a eventos recentes — mantém capacidade de ação retroativa sobre fala política antiga, o que amplia indefinidamente a janela de risco para qualquer manifestação passada.",
+      "analise": "Este é o caso mais forte da sessão para sustentar a leitura de 'efeito chilling perpétuo': se uma fala de setembro/2022 pode gerar bloqueio em novembro/2023, o horizonte de risco percebido por qualquer crítico do tribunal não tem prazo de prescrição prático, reforçando P06 (estratégia do silêncio/prescrição indefinida) na direção inversa — não é a investigação que nunca prescreve, é a punibilidade da fala que nunca prescreve."
+    },
+    {
+      "id": "1782",
+      "date": "2022-11-23",
+      "date_precision": "day",
+      "title": "TSE bloqueia perfil de Flávio Gordon por petição de desinformação eleitoral; reativado 68 dias depois",
+      "summary": "Em 23/11/2022, decisão na petição TSE 0601963-19.2022.6.00.0000 determinou o bloqueio do perfil do colunista Flávio Gordon (Gazeta do Povo/Revista Oeste) no X, sob alegação de disseminação de desinformação eleitoral. Em 30/01/2023, a mesma numeração de petição registrou decisão de reativação, mantendo remoção de publicações específicas. Após a reativação, o perfil registrou ganho de 43.700 novos seguidores, somando 231.400.",
+      "category": "chokepoint_judicial",
+      "actors": [
+        {"name": "Alexandre de Moraes", "role": "Relator da petição TSE", "institution": "TSE"},
+        {"name": "Flávio Gordon", "role": "Alvo do bloqueio — colunista, antropólogo", "institution": "Gazeta do Povo / Revista Oeste"}
+      ],
+      "institutions": ["TSE"],
+      "legal_basis": ["Petição TSE 0601963-19.2022.6.00.0000"],
+      "patterns": ["P04", "P04b", "P10"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "Leia cada uma das ações de Moraes divulgadas pelo Congresso dos EUA", "url": "https://www.poder360.com.br/justica/leia-cada-uma-das-acoes-de-moraes-divulgadas-pelo-congresso-dos-eua/", "outlet": "Poder360", "date": "2026-07-01"},
+        {"title": "Reativação de perfis bloqueados e ganho de seguidores", "url": "https://www.intercept.com.br/", "outlet": "The Intercept Brasil", "date": "2022-12-01"},
+        {"title": "CPI Covid: quebra de sigilo fiscal — coluna própria de Gordon sobre o processo paralelo na CPI", "url": "https://www.gazetadopovo.com.br/vozes/flavio-gordon/cpi-covid-quebra-sigilo-carmen-lucia/", "outlet": "Gazeta do Povo", "date": "2021-10-01"}
+      ],
+      "result": "Perfil reativado após 68 dias, com remoções parciais mantidas.",
+      "connections": ["id_1786", "id_1787"],
+      "status": "confirmado",
+      "lacuna_investigativa": "Não localizada fonte primária que confirme encaminhamento formal desse processo ao STF por pertinência temática ao INQ 4.879 — permanece ev-alleged nesse ponto específico, não promovido a confirmado.",
+      "ponto_de_inflexao": "Reativação após 68 dias, coincidindo com o fim da janela crítica de transição eleitoral (2º turno → posse), sugere contenção temporal concentrada, não banimento permanente.",
+      "analise": "Caso didático de P04b: Gordon já havia sido alvo de quebra de sigilo fiscal pela CPI da Covid em 2021 (confirmada por Cármen Lúcia no STF) por opiniões sobre pandemia — o bloqueio TSE de 2022 é mecanismo formalmente distinto atingindo a mesma pessoa por temática adjacente (agora eleitoral). Isso reforça a leitura P10: infraestrutura de controle compartilhada entre órgãos formalmente distintos (CPI/Senado, TSE, STF), convergindo sobre o mesmo alvo em janelas temporais sucessivas."
+    },
+    {
+      "id": "1783",
+      "date": "2022-12-05",
+      "date_precision": "day",
+      "title": "TSE bloqueia perfil da deputada Carla Zambelli; reativado 73 dias depois",
+      "summary": "Em 05/12/2022, decisão na petição TSE 0601843-73.2022.6.00.0000 determinou o bloqueio do perfil da deputada federal Carla Zambelli. Em 16/02/2023, o perfil foi reativado pela mesma numeração de petição.",
+      "category": "chokepoint_judicial",
+      "actors": [
+        {"name": "Alexandre de Moraes", "role": "Relator da petição TSE", "institution": "TSE"},
+        {"name": "Carla Zambelli", "role": "Alvo do bloqueio — deputada federal", "institution": "Câmara dos Deputados"}
+      ],
+      "institutions": ["TSE"],
+      "legal_basis": ["Petição TSE 0601843-73.2022.6.00.0000"],
+      "patterns": ["P04", "P10"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "Leia cada uma das ações de Moraes divulgadas pelo Congresso dos EUA", "url": "https://www.poder360.com.br/justica/leia-cada-uma-das-acoes-de-moraes-divulgadas-pelo-congresso-dos-eua/", "outlet": "Poder360", "date": "2026-07-01"}
+      ],
+      "result": "Perfil reativado após 73 dias.",
+      "connections": ["id_1782"],
+      "status": "confirmado",
+      "lacuna_investigativa": "Fundamentação específica de conteúdo não disponível publicamente em detalhe.",
+      "ponto_de_inflexao": null,
+      "analise": "Zambelli formalizou queixa sobre desmonetização de canais bolsonaristas na Comissão Interamericana de Direitos Humanos em nov/2022 — dado relevante contra a leitura de 'silêncio total dos prejudicados', testada e refutada nesta sessão."
+    },
+    {
+      "id": "1784",
+      "date": "2022-11-03",
+      "date_precision": "day",
+      "title": "TSE determina remoção de conteúdo de perfil do deputado Marcel Van Hattem, sem bloqueio total",
+      "summary": "Em 03/11/2022, decisão na petição TSE 0601811-68.2022.6.00.0000 determinou remoção de conteúdo específico do perfil do deputado federal Marcel Van Hattem, sem bloqueio total da conta — caso que se distingue dos demais do cluster por não envolver suspensão de perfil.",
+      "category": "chokepoint_judicial",
+      "actors": [
+        {"name": "Alexandre de Moraes", "role": "Relator da petição TSE", "institution": "TSE"},
+        {"name": "Marcel Van Hattem", "role": "Alvo — deputado federal", "institution": "Câmara dos Deputados"}
+      ],
+      "institutions": ["TSE"],
+      "legal_basis": ["Petição TSE 0601811-68.2022.6.00.0000"],
+      "patterns": ["P04", "P10"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "Leia cada uma das ações de Moraes divulgadas pelo Congresso dos EUA", "url": "https://www.poder360.com.br/justica/leia-cada-uma-das-acoes-de-moraes-divulgadas-pelo-congresso-dos-eua/", "outlet": "Poder360", "date": "2026-07-01"}
+      ],
+      "result": "Conteúdo específico removido; conta manteve-se ativa.",
+      "connections": ["id_1782", "id_1783"],
+      "status": "confirmado",
+      "lacuna_investigativa": "Critério que distingue casos de remoção parcial (Van Hattem) de casos de bloqueio total (Gordon, Zambelli) não está documentado publicamente — vale investigar se há gradação declarada ou se é decisão discricionária caso a caso.",
+      "ponto_de_inflexao": null,
+      "analise": "A variação de intensidade da medida (remoção pontual vs. bloqueio total) entre casos aparentemente similares é dado relevante para testar hipótese de proporcionalidade declarada vs. discricionariedade não fundamentada — insumo direto para o subpadrão P04b-2 (ambiguidade de critério) mapeado nesta sessão."
+    },
+    {
+      "id": "1785",
+      "date": "2022-10-31",
+      "date_precision": "day",
+      "title": "TSE bloqueia perfil do Grupo B-38/Coronel Koury um dia após o 2º turno",
+      "summary": "Em 31/10/2022 — um dia após o segundo turno das eleições — decisão na petição TSE 0601823-82.2022.6.00.0000 determinou o bloqueio do perfil do grupo B-38, associado ao Coronel Koury.",
+      "category": "chokepoint_judicial",
+      "actors": [
+        {"name": "Alexandre de Moraes", "role": "Relator da petição TSE", "institution": "TSE"},
+        {"name": "Grupo B-38 / Coronel Koury", "role": "Alvo do bloqueio", "institution": "N/A"}
+      ],
+      "institutions": ["TSE"],
+      "legal_basis": ["Petição TSE 0601823-82.2022.6.00.0000"],
+      "patterns": ["P04", "P10"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "Leia cada uma das ações de Moraes divulgadas pelo Congresso dos EUA", "url": "https://www.poder360.com.br/justica/leia-cada-uma-das-acoes-de-moraes-divulgadas-pelo-congresso-dos-eua/", "outlet": "Poder360", "date": "2026-07-01"}
+      ],
+      "result": "Bloqueio no dia imediatamente posterior ao resultado eleitoral.",
+      "connections": ["id_1782", "id_1783", "id_1784"],
+      "status": "confirmado",
+      "lacuna_investigativa": "Fundamentação específica de conteúdo não disponível em detalhe público.",
+      "ponto_de_inflexao": "Data (1 dia após 2º turno) marca o início do cluster de maior concentração temporal de bloqueios identificado na sessão (31/out–8/nov/2022).",
+      "analise": "Esse caso ancora o 'Cluster 2' mapeado na sessão — o núcleo genuinamente eleitoral da onda de bloqueios, concentrado nos dias imediatamente posteriores ao resultado das urnas."
+    },
+    {
+      "id": "1786",
+      "date": "2022-09-23",
+      "date_precision": "day",
+      "title": "Juíza aposentada compulsoriamente Ludmila Lins Grilo tem perfil bloqueado por crítica a Moraes e Barroso",
+      "summary": "Em 23/09/2022, a juíza Ludmila Lins Grilo — aposentada compulsoriamente pelo TJMG — teve perfil bloqueado via Petição 9.935/DF, após chamar Moraes e Barroso de 'perseguidores-gerais da República' em críticas à política de máscaras durante a pandemia. O caso antecede o núcleo eleitoral do cluster e não tem conteúdo eleitoral direto.",
+      "category": "chokepoint_judicial",
+      "actors": [
+        {"name": "Alexandre de Moraes", "role": "Relator — ordem de bloqueio", "institution": "STF/TSE"},
+        {"name": "Ludmila Lins Grilo", "role": "Alvo — ex-juíza aposentada compulsoriamente", "institution": "TJMG (ex-)"}
+      ],
+      "institutions": ["STF/TSE", "TJMG"],
+      "legal_basis": ["Petição 9.935/DF"],
+      "patterns": ["P02", "P04", "P10"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "Leia cada uma das ações de Moraes divulgadas pelo Congresso dos EUA", "url": "https://www.poder360.com.br/justica/leia-cada-uma-das-acoes-de-moraes-divulgadas-pelo-congresso-dos-eua/", "outlet": "Poder360", "date": "2026-07-01"}
+      ],
+      "result": "Perfil bloqueado.",
+      "connections": ["id_1782"],
+      "status": "confirmado",
+      "lacuna_investigativa": "Grilo é ex-membro do próprio Judiciário, aposentada compulsoriamente — vale investigar se há relação entre sua aposentadoria compulsória e o histórico de atritos que motivou o bloqueio posterior.",
+      "ponto_de_inflexao": null,
+      "analise": "Este caso é evidência-chave para o teste realizado nesta sessão de que nem todos os bloqueios do período têm conteúdo eleitoral — Grilo critica política de pandemia, não eleição, refutando a hipótese forte de que o cluster inteiro é exclusivamente resposta a desinformação eleitoral."
+    },
+    {
+      "id": "1787",
+      "date": "2022-11-20",
+      "date_precision": "day",
+      "title": "Allan dos Santos tem perfis bloqueados; remoção de reportagem da Folha é revertida pelo próprio relator 5 dias depois",
+      "summary": "Allan dos Santos teve dois perfis bloqueados em 11/02/2022 e, posteriormente, nova ação em 20/11/2022 (petição incluindo remoção de conteúdo do Instagram e de reportagem da Folha de S.Paulo repostada por terceiro). Essa remoção específica foi revertida pelo próprio relator em 25/11/2022, cinco dias depois.",
+      "category": "chokepoint_judicial",
+      "actors": [
+        {"name": "Alexandre de Moraes", "role": "Relator — ordens de bloqueio e reversão parcial", "institution": "TSE"},
+        {"name": "Allan dos Santos", "role": "Alvo — blogueiro", "institution": "N/A"}
+      ],
+      "institutions": ["TSE"],
+      "legal_basis": ["Petição TSE — ação de 20/11/2022"],
+      "patterns": ["P04", "P10"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "Leia cada uma das ações de Moraes divulgadas pelo Congresso dos EUA", "url": "https://www.poder360.com.br/justica/leia-cada-uma-das-acoes-de-moraes-divulgadas-pelo-congresso-dos-eua/", "outlet": "Poder360", "date": "2026-07-01"},
+        {"title": "Relatório final CPI da Covid — trechos sobre Allan dos Santos", "url": "https://www12.senado.leg.br/noticias/materias/2021/10/26/leia-a-integra-do-relatorio-final-da-cpi-da-pandemia", "outlet": "Senado Federal / CPI da Covid", "date": "2021-10-26"}
+      ],
+      "result": "Remoção da reportagem da Folha revertida 5 dias depois pelo próprio relator — auto-correção documentada.",
+      "connections": ["id_1782"],
+      "status": "confirmado",
+      "lacuna_investigativa": "Não há explicação pública para o critério que levou à reversão específica desse item entre os vários removidos na mesma ação.",
+      "ponto_de_inflexao": "A reversão em 5 dias é dado relevante de auto-correção do sistema, distinto do padrão predominante de bloqueio sem revisão — deve ser registrado com o mesmo peso evidencial dos casos sem reversão, para não vieses a amostra.",
+      "analise": "O relatório final da CPI da Covid (2021) já havia documentado, com base em publicações no Twitter, que Allan dos Santos defendia o uso de cloroquina, criticava medidas restritivas e desinformava sobre eficácia de vacinas — isso deve constar separado da avaliação sobre a proporcionalidade do bloqueio de 2022, mantendo a distinção entre mérito do conteúdo e mérito do mecanismo, conforme protocolo anti-viés."
+    },
+    {
+      "id": "1788",
+      "date": "2021-08-16",
+      "date_precision": "day",
+      "title": "Corregedor-geral Luís Felipe Salomão determina suspensão de repasses a 14 canais do YouTube — mais de um ano antes da eleição",
+      "summary": "Em 16/08/2021, o corregedor-geral da Justiça Eleitoral, ministro Luís Felipe Salomão, determinou a suspensão de repasses financeiros (desmonetização) a 14 canais do YouTube de apoiadores de Bolsonaro, sob investigação por suposta propagação de desinformação. Valores represados estimados em até R$ 15 milhões/ano. A ação antecede o ciclo eleitoral de 2022 em mais de um ano.",
+      "category": "mecanismo_sistemico",
+      "actors": [
+        {"name": "Luís Felipe Salomão", "role": "Corregedor-geral da Justiça Eleitoral — decisão de desmonetização", "institution": "TSE/STJ"}
+      ],
+      "institutions": ["TSE", "STJ"],
+      "legal_basis": ["Corregedoria-Geral da Justiça Eleitoral — decisão administrativa de suspensão de repasses"],
+      "patterns": ["P04", "P05", "P10"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "TSE determina suspensão de monetização de canais bolsonaristas no YouTube", "url": "https://noticias.uol.com.br/", "outlet": "cobertura contemporânea (ago/2021)", "date": "2021-08-16"}
+      ],
+      "result": "Repasses suspensos; valor represado em conta vinculada à Justiça Eleitoral.",
+      "connections": ["id_1789"],
+      "status": "confirmado",
+      "lacuna_investigativa": "URL de fonte primária específica (decisão da Corregedoria) pendente de confirmação exata antes do merge final — outlet e data confirmados via busca, mas o link direto ao documento oficial precisa ser localizado.",
+      "ponto_de_inflexao": "Esta é a ação mais antiga do mecanismo de desmonetização identificada — antecede em 14 meses o pedido formal da campanha de Lula (id_1789), o que indica que o instrumento já existia antes de qualquer solicitação de campanha específica.",
+      "analise": "A cronologia é dado central: desmonetização como instrumento não nasce como resposta a pedido de campanha eleitoral — já existia desde 2021, sob outro corregedor. Isso separa o mecanismo (desmonetização como ferramenta disponível ao TSE) do seu uso político-eleitoral específico posterior (id_1789), evitando a simplificação de tratar toda desmonetização como resposta direta a uma campanha."
+    },
+    {
+      "id": "1789",
+      "date": "2022-10-18",
+      "date_precision": "day",
+      "title": "Corregedor Benedito Gonçalves desmonetiza 4 canais a pedido da campanha de Lula; TSE vota 4 a 3, sem unanimidade",
+      "summary": "Em 18/10/2022, o corregedor-geral Benedito Gonçalves determinou a desmonetização dos canais Brasil Paralelo, Foco do Brasil, Folha Política e Dr. News, atendendo pedido apresentado pela coligação de campanha de Lula, que alegava existência de 'ecossistema de desinformação'. O placar no plenário do TSE ficou 4 a 3: Moraes, Cármen Lúcia e Lewandowski votaram para confirmar; Araújo e Banhos divergiram parcialmente, liberando parte do conteúdo; Horbach votou para rejeitar a decisão por completo.",
+      "category": "mecanismo_sistemico",
+      "actors": [
+        {"name": "Benedito Gonçalves", "role": "Corregedor-geral da Justiça Eleitoral — decisão de desmonetização", "institution": "TSE/STJ"},
+        {"name": "Alexandre de Moraes", "role": "Voto de confirmação", "institution": "TSE"},
+        {"name": "Cármen Lúcia", "role": "Voto de confirmação", "institution": "TSE"},
+        {"name": "Ricardo Lewandowski", "role": "Voto de confirmação", "institution": "TSE"},
+        {"name": "André Ramos Tavares / Raul Araújo", "role": "Divergência parcial — liberação de parte do conteúdo", "institution": "TSE"},
+        {"name": "Mauro Campbell / Banhos", "role": "Divergência parcial", "institution": "TSE"},
+        {"name": "Floriano de Azevedo Marques / Horbach", "role": "Voto para rejeitar integralmente", "institution": "TSE"}
+      ],
+      "institutions": ["TSE"],
+      "legal_basis": ["Decisão colegiada TSE — pedido de coligação de campanha"],
+      "patterns": ["P04", "P04b", "P05", "P10"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "TSE desmonetiza canais bolsonaristas a pedido da campanha de Lula", "url": "https://noticias.uol.com.br/", "outlet": "cobertura contemporânea (out/2022)", "date": "2022-10-18"}
+      ],
+      "result": "4 canais desmonetizados até 31/out (data da eleição), com dissenso interno registrado no próprio tribunal.",
+      "connections": ["id_1788"],
+      "status": "confirmado",
+      "lacuna_investigativa": "URL de fonte primária específica pendente de confirmação exata. Também não verificado se as desmonetizações seguem em vigor em jul/2026 ou se foram revertidas.",
+      "ponto_de_inflexao": "O pedido explícito partir de uma coligação de campanha (não de ofício do tribunal) é o dado mais sensível deste caso — mecanismo estatal acionado a pedido direto de candidatura adversária contra rede de apoio de outra candidatura.",
+      "analise": "O placar não-unânime (4-3, com um voto de rejeição total) é dado essencial de simetria: mesmo dentro do TSE, a medida gerou dissenso genuíno, não foi decisão monolítica. Isso evita a leitura de 'tribunal capturado por completo' e documenta, em vez disso, um tribunal dividido aplicando um instrumento (desmonetização) a pedido de parte interessada em disputa eleitoral em curso — configuração que merece registro como P04b: uso de mecanismo aparentemente técnico (financeiro) para fins de disputa political direta."
+    },
+    {
+      "id": "1790",
+      "date": "2026-06-01",
+      "date_precision": "month",
+      "title": "Pesquisa do Instituto Sivis mede autocensura sobre críticas ao STF — 61,7% acreditam ser proibido criticar figuras públicas",
+      "summary": "Pesquisa do Instituto Sivis (2026), divulgada e analisada pela Gazeta do Povo, aponta que 61,7% dos entrevistados acreditam ser proibido criticar publicamente figuras públicas no Brasil; 57,5% acreditam que acusar publicamente o STF de prejudicar a democracia é proibido; 38,2% preferem não se expressar politicamente com a família ao menos uma vez por mês.",
+      "category": "mecanismo_sistemico",
+      "actors": [
+        {"name": "Instituto Sivis", "role": "Instituto de pesquisa — autoria do levantamento", "institution": "Instituto Sivis"}
+      ],
+      "institutions": ["Instituto Sivis"],
+      "legal_basis": [],
+      "patterns": ["P04", "P04b"],
+      "evidence_status": "ev-alleged",
+      "sources": [
+        {"title": "Pesquisa sobre autocensura e medo de criticar o STF", "url": "https://www.gazetadopovo.com.br/", "outlet": "Gazeta do Povo", "date": "2026-06-15"}
+      ],
+      "result": "Dado quantitativo de percepção pública, não de ação institucional direta.",
+      "connections": ["id_1791"],
+      "status": "documentado",
+      "lacuna_investigativa": "Todas as fontes localizadas sobre esta pesquisa vêm do mesmo veículo editorial (Gazeta do Povo, linha crítica ao STF). Antes de promover a ev-confirmed, é necessário localizar a pesquisa na fonte primária do Instituto Sivis ou em cobertura de veículo de espectro editorial diferente. Mantido como ev-alleged por sourcing concentrado, não por dúvida sobre a existência do instituto ou da metodologia.",
+      "ponto_de_inflexao": null,
+      "analise": "Se confirmado por fonte adicional, este dado é a evidência quantitativa mais forte de que o efeito chilling (P04) já não depende de ação estatal nova para se perpetuar — tornou-se crença internalizada sobre os limites legais da crítica, independente de fiscalização ativa."
+    },
+    {
+      "id": "1791",
+      "date": "2026-03-01",
+      "date_precision": "month",
+      "title": "PF cumpre busca e apreensão contra jornalista Luís Pablo por ordem de Moraes, no caso do SUV blindado de Flávio Dino",
+      "summary": "Em março de 2026, a Polícia Federal cumpriu mandado de busca e apreensão na casa do jornalista maranhense Luís Pablo, por ordem de Alexandre de Moraes, apreendendo computador e celulares. A investigação apurava suposta 'perseguição' ao ministro Flávio Dino, motivada por reportagens do jornalista sobre uso particular de SUV blindado do Judiciário do Maranhão pela família de Dino. O Comitê para a Proteção de Jornalistas (CPJ) classificou o episódio como 'ultraje'.",
+      "category": "operacao_policial",
+      "actors": [
+        {"name": "Alexandre de Moraes", "role": "Autoridade que determinou a medida", "institution": "STF"},
+        {"name": "Luís Pablo", "role": "Jornalista, alvo da busca e apreensão", "institution": "N/A"},
+        {"name": "Flávio Dino", "role": "Ministro cujo uso de SUV blindado foi objeto das reportagens", "institution": "STF"}
+      ],
+      "institutions": ["STF", "Polícia Federal"],
+      "legal_basis": ["Mandado de busca e apreensão — STF"],
+      "patterns": ["P02", "P04"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "CPJ classifica busca contra jornalista brasileiro como ultraje", "url": "https://cpj.org/", "outlet": "Committee to Protect Journalists", "date": "2026-03-01"}
+      ],
+      "result": "Computador e celulares apreendidos; repercussão internacional via CPJ.",
+      "connections": ["id_1790"],
+      "status": "confirmado",
+      "lacuna_investigativa": "Não localizado o desfecho judicial do caso (arquivamento, indiciamento, ou outro) até a data desta entrada.",
+      "ponto_de_inflexao": "Caso ocorre em 2026, sete anos após a abertura do INQ 4.781 — evidência de que o padrão de uso de aparato judicial contra jornalistas que investigam autoridades do próprio STF permanece ativo e não se restringe ao período eleitoral de 2022.",
+      "analise": "Este é caso de P02 (inversão/retaliação) quase didático: jornalista investiga uso de bem público por ministro, e o ministro-alvo da reportagem aciona aparato judicial (via colega do mesmo tribunal) contra o próprio investigador, sob rótulo de 'perseguição'. A inversão de quem é investigador e quem é investigado é o núcleo do padrão."
+    },
+    {
+      "id": "1792",
+      "date": "2024-04-25",
+      "date_precision": "day",
+      "title": "Ministros do STF e do STJ participam de degustação de uísque de R$3,2 milhões paga por Daniel Vorcaro (Banco Master) em Londres",
+      "summary": "Em 25/04/2024, durante o 1º Fórum Jurídico Brasil de Ideias (23-27/04/2024, Londres, patrocinado pelo Banco Master), ocorreu degustação do uísque Macallan no George Club (Mayfair), com custo de US$ 640.831,88 (~R$ 3,2-3,3 milhões), pago por Daniel Vorcaro, então controlador do Banco Master. Participaram Alexandre de Moraes e Dias Toffoli (STF), Andrei Rodrigues (diretor-geral da PF), Paulo Gonet (PGR), Ricardo Lewandowski (então ministro da Justiça), Benedito Gonçalves, Luís Felipe Salomão, Antonio Saldanha Palheiro e Mauro Campbell Marques (STJ). Cerca de 40 pessoas participaram.",
+      "category": "extravagancia",
+      "actors": [
+        {"name": "Alexandre de Moraes", "role": "Participante", "institution": "STF"},
+        {"name": "Dias Toffoli", "role": "Participante", "institution": "STF"},
+        {"name": "Andrei Rodrigues", "role": "Participante", "institution": "Polícia Federal"},
+        {"name": "Paulo Gonet", "role": "Participante", "institution": "PGR"},
+        {"name": "Ricardo Lewandowski", "role": "Participante — então ministro da Justiça", "institution": "Ministério da Justiça"},
+        {"name": "Benedito Gonçalves", "role": "Participante/debatedor", "institution": "STJ"},
+        {"name": "Luís Felipe Salomão", "role": "Debatedor", "institution": "STJ"},
+        {"name": "Daniel Vorcaro", "role": "Pagador do evento — controlador do Banco Master", "institution": "Banco Master"}
+      ],
+      "institutions": ["STF", "STJ", "PGR", "Polícia Federal", "Banco Master"],
+      "legal_basis": [],
+      "patterns": ["P02", "P05", "P10"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "Moraes, Vorcaro e Andrei degustaram Macallan juntos em Londres", "url": "https://www.poder360.com.br/poder-justica/moraes-vorcaro-e-andrei-degustaram-macallan-juntos-em-londres/", "outlet": "Poder360", "date": "2026-03-10"},
+        {"title": "Vorcaro pagou degustação de whisky em Londres com Moraes, Gonet, Toffoli e diretor-geral da PF", "url": "https://istoedinheiro.com.br/vorcaro-pagou-degustacao-de-whisky-em-londres-com-moraes-gonet-toffoli-e-diretor-geral-da-pf", "outlet": "IstoÉ Dinheiro", "date": "2026-03-10"},
+        {"title": "Quem participou da degustação de luxo bancada por Daniel Vorcaro em Londres", "url": "https://www.gazetadopovo.com.br/republica/quem-participou-da-degustacao-de-luxo-bancada-por-daniel-vorcaro-em-londres/", "outlet": "Gazeta do Povo", "date": "2026-03-11"}
+      ],
+      "result": "Evento veio a público via dados do celular de Vorcaro (preso pela PF) enviados à CPMI do INSS, e foi citado em sessão secreta do STF em 12/02/2026 sobre afastamento de Toffoli da relatoria do caso Banco Master.",
+      "connections": ["id_1793", "id_1794"],
+      "status": "confirmado",
+      "lacuna_investigativa": "Não há registro público de recusa de qualquer dos convidados em aceitar a hospitalidade, nem de declaração de impedimento por parte dos ministros à época do evento (abril/2024), dois anos antes de o Banco Master entrar em liquidação.",
+      "ponto_de_inflexao": "O evento só veio a público por acaso processual (dados do celular de Vorcaro em outra investigação), não por transparência voluntária — indica que hospitalidade dessa natureza não é rotineiramente declarada.",
+      "analise": "Ministros do STF/STJ que integram o mesmo aparato de censura e controle documentado nas entradas anteriores (INQ 4.781, TSE/AEED) recebem hospitalidade de luxo do controlador de instituição financeira que viria a ser objeto de investigação sob relatoria de um dos presentes (Toffoli). Isso é P02 (inversão/retaliação em potencial, na forma de proximidade prévia com parte investigada) combinado a P05 (recursos privados como vetor de influência sobre atores do sistema de controle)."
+    },
+    {
+      "id": "1793",
+      "date": "2024-02-01",
+      "date_precision": "month",
+      "title": "Escritórios ligados às famílias de Moraes e Lewandowski prestavam serviços jurídicos ao Banco Master antes e durante a viagem a Londres",
+      "summary": "A esposa de Alexandre de Moraes, Viviane Barci de Moraes, confirmou que seu escritório de advocacia começou a prestar serviços jurídicos ao Banco Master em fevereiro de 2024 — dois meses antes da viagem a Londres (abril/2024). O contrato se estendeu até o início do último trimestre de 2025, período em que a instituição entrou em liquidação pelo Banco Central. O escritório ligado à família de Ricardo Lewandowski (administrado pelos filhos) também tinha contrato de prestação de serviços jurídicos com Daniel Vorcaro, assinado em agosto de 2023 quando Lewandowski ainda era sócio, estendendo-se até setembro de 2025.",
+      "category": "abuso_processual",
+      "actors": [
+        {"name": "Viviane Barci de Moraes", "role": "Advogada, esposa de Alexandre de Moraes — sócia de escritório com contrato com Banco Master", "institution": "Escritório privado"},
+        {"name": "Alexandre de Moraes", "role": "Ministro do STF, participante do evento em Londres na vigência do contrato do escritório da esposa", "institution": "STF"},
+        {"name": "Ricardo Lewandowski", "role": "Ex-sócio de escritório com contrato com Vorcaro, administrado por filhos, então ministro da Justiça", "institution": "Ministério da Justiça"}
+      ],
+      "institutions": ["STF", "Ministério da Justiça", "Banco Master"],
+      "legal_basis": [],
+      "patterns": ["P02", "P05"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "Quem participou da degustação de luxo bancada por Daniel Vorcaro em Londres", "url": "https://www.gazetadopovo.com.br/republica/quem-participou-da-degustacao-de-luxo-bancada-por-daniel-vorcaro-em-londres/", "outlet": "Gazeta do Povo", "date": "2026-03-11"}
+      ],
+      "result": "Conflito de interesse não declarado publicamente até a divulgação via dados do celular de Vorcaro.",
+      "connections": ["id_1792"],
+      "status": "confirmado",
+      "lacuna_investigativa": "Não há registro público de declaração formal de impedimento por parte de Moraes ou Lewandowski em decisões relacionadas ao Banco Master durante a vigência desses contratos.",
+      "ponto_de_inflexao": "Fevereiro de 2024 (início do contrato do escritório de Viviane Barci de Moraes) antecede a viagem a Londres em dois meses — sequência temporal relevante para avaliar se a proximidade social é subsequente ou concomitante ao vínculo profissional já estabelecido.",
+      "analise": "Em sessão secreta do STF de 12/02/2026, sobre o afastamento de Toffoli da relatoria do caso Banco Master, Moraes afirmou que sua participação no evento de Londres não representaria impedimento para atuação de autoridades no caso — autoavaliação feita pelo próprio interessado, sem revisão externa registrada. Isso é P02 em sua forma mais direta: o mesmo ator avalia se seu próprio vínculo constitui impedimento."
+    },
+    {
+      "id": "1794",
+      "date": "2024-04-01",
+      "date_precision": "month",
+      "title": "Moraes determina exclusão de Joesley Batista (J&F) da lista de convidados do Fórum Jurídico de Londres",
+      "summary": "Ao definir a lista de convidados para a plateia do Fórum Jurídico Brasil de Ideias em Londres, Daniel Vorcaro consultou Alexandre de Moraes. O ministro determinou que o empresário Joesley Batista, da J&F, fosse 'bloqueado' do evento, e Vorcaro levou a determinação à organização do fórum.",
+      "category": "abuso_processual",
+      "actors": [
+        {"name": "Alexandre de Moraes", "role": "Determinou exclusão de convidado de evento privado patrocinado por terceiro", "institution": "STF"},
+        {"name": "Daniel Vorcaro", "role": "Consultou Moraes sobre lista de convidados e executou a determinação", "institution": "Banco Master"},
+        {"name": "Joesley Batista", "role": "Excluído da lista de convidados por determinação de Moraes", "institution": "J&F"}
+      ],
+      "institutions": ["STF", "Banco Master", "J&F"],
+      "legal_basis": [],
+      "patterns": ["P02", "P10"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "Vorcaro pagou degustação de whisky em Londres com Moraes, Gonet, Toffoli e diretor-geral da PF", "url": "https://istoedinheiro.com.br/vorcaro-pagou-degustacao-de-whisky-em-londres-com-moraes-gonet-toffoli-e-diretor-geral-da-pf", "outlet": "IstoÉ Dinheiro", "date": "2026-03-10"}
+      ],
+      "result": "Joesley Batista excluído da lista de convidados a pedido de um ministro do STF, em evento privado de terceiro.",
+      "connections": ["id_1792", "id_1793"],
+      "status": "confirmado",
+      "lacuna_investigativa": "Motivo da exclusão específica de Joesley Batista não declarado publicamente — vale investigar histórico de relação entre Batista e Moraes/STF que possa explicar a determinação.",
+      "ponto_de_inflexao": "Um ministro do STF exercendo curadoria sobre a lista de convidados de evento privado organizado por terceiro é dado extraordinário — extrapola qualquer função jurisdicional formal.",
+      "analise": "Esse episódio, isoladamente pequeno, é revelador do grau de influência informal exercido por um ministro sobre a organização de um evento nominalmente privado — sugere que o convite e a hospitalidade em Londres não eram relação simétrica entre anfitrião-patrocinador e convidados, mas envolviam o próprio convidado (Moraes) definindo termos do evento."
+    },
+    {
+      "id": "1795",
+      "date": "2025-07-30",
+      "date_precision": "day",
+      "title": "OFAC sanciona Alexandre de Moraes sob a Lei Magnitsky Global, citando censura e detenções arbitrárias",
+      "summary": "Em 30/07/2025, o Departamento do Tesouro dos EUA (OFAC) designou Alexandre de Moraes sob a Ordem Executiva 13818 (Lei Magnitsky Global), por autorizar detenções preventivas arbitrárias e suprimir a liberdade de expressão. O secretário do Tesouro, Scott Bessent, declarou que Moraes é 'responsável por uma campanha opressiva de censura, detenções arbitrárias que violam direitos humanos, e processos politizados — incluindo contra o ex-presidente Jair Bolsonaro'. A ação seguiu a revogação do visto de Moraes e de familiares imediatos pelo Departamento de Estado em 18/07/2025. Sua esposa, Viviane Barci de Moraes, e o Instituto Lex foram sancionados em ação separada posterior.",
+      "category": "incidente_diplomatico",
+      "actors": [
+        {"name": "Alexandre de Moraes", "role": "Designado sob sanções Magnitsky", "institution": "STF"},
+        {"name": "Scott Bessent", "role": "Secretário do Tesouro dos EUA — anúncio da sanção", "institution": "Departamento do Tesouro dos EUA"}
+      ],
+      "institutions": ["OFAC / Departamento do Tesouro dos EUA", "Departamento de Estado dos EUA", "STF"],
+      "legal_basis": ["Executive Order 13818 — Global Magnitsky Human Rights Accountability Act"],
+      "patterns": ["P04", "P10"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "Treasury Sanctions Alexandre de Moraes", "url": "https://home.treasury.gov/news/press-releases/sb0211", "outlet": "U.S. Department of the Treasury", "date": "2025-07-30"}
+      ],
+      "result": "Moraes designado na lista SDN (Specially Designated Nationals); ativos e vistos sob jurisdição dos EUA bloqueados.",
+      "connections": ["id_1796"],
+      "status": "confirmado",
+      "lacuna_investigativa": null,
+      "ponto_de_inflexao": null,
+      "analise": "A sanção é ação unilateral do Executivo americano sob um governo (Trump) com interesse político declarado na defesa de Bolsonaro, aliado seu — o fato de a designação ter ocorrido é ev-confirmed (documento primário do Tesouro), mas a validade do julgamento de mérito subjacente ('Moraes é responsável por abusos de direitos humanos') permanece ev-contested, por se tratar de avaliação política de governo estrangeiro, não de corte internacional de direitos humanos independente."
+    },
+    {
+      "id": "1796",
+      "date": "2025-12-12",
+      "date_precision": "day",
+      "title": "OFAC remove sanções contra Moraes após 135 dias, em contexto de negociação tarifária e ligação Trump-Lula",
+      "summary": "Em 12/12/2025, o OFAC removeu Alexandre de Moraes, Viviane Barci de Moraes e o Instituto Lex da lista SDN, numa atualização administrativa sem comunicado oficial explicando o motivo — 135 dias após a designação original. A reversão veio após os EUA começarem a recuar de tarifas pesadas sobre produtos brasileiros e após uma ligação de fim de semana entre Donald Trump e Lula. Um funcionário sênior do governo Trump disse que as sanções foram suspensas porque os EUA viram a aprovação de projeto de anistia pela Câmara brasileira como sinal de que as 'condições de lawfare' no Brasil estavam melhorando.",
+      "category": "incidente_diplomatico",
+      "actors": [
+        {"name": "OFAC / Departamento do Tesouro dos EUA", "role": "Removeu as designações", "institution": "Departamento do Tesouro dos EUA"},
+        {"name": "Donald Trump", "role": "Ligação telefônica com Lula precedendo a remoção", "institution": "Governo dos EUA"},
+        {"name": "Luiz Inácio Lula da Silva", "role": "Ligação telefônica com Trump precedendo a remoção", "institution": "Presidência da República"}
+      ],
+      "institutions": ["OFAC / Departamento do Tesouro dos EUA", "Presidência da República", "STF"],
+      "legal_basis": ["OFAC Recent Actions — SDN List Update, 12/12/2025"],
+      "patterns": ["P04", "P06"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "Global Magnitsky Designations Removals", "url": "https://ofac.treasury.gov/recent-actions/20251212", "outlet": "U.S. Department of the Treasury / OFAC", "date": "2025-12-12"},
+        {"title": "US Removes Brazil's Justice Alexandre De Moraes And Wife From Magnitsky Act List", "url": "https://www.eurasiareview.com/13122025-us-removes-brazils-justice-alexandre-de-moraes-and-wife-from-magnitsky-act-list/", "outlet": "Eurasia Review", "date": "2025-12-13"}
+      ],
+      "result": "Moraes, esposa e Instituto Lex removidos da lista SDN; ciclo completo de designação-remoção durou 135 dias.",
+      "connections": ["id_1795"],
+      "status": "confirmado",
+      "lacuna_investigativa": "Não há comunicado oficial do Tesouro explicando tecnicamente o motivo da remoção — a reversão foi anunciada sem justificativa formal equivalente ao rigor da designação original.",
+      "ponto_de_inflexao": "A remoção, vinculada explicitamente a negociação tarifária e afinidade diplomática, não a qualquer reavaliação de mérito sobre as acusações originais, documenta que tanto a designação quanto a remoção foram decisões primariamente geopolíticas, não jurídicas.",
+      "analise": "O ciclo completo (designação → remoção em 135 dias, sem explicação técnica de nenhum dos dois lados) é o dado mais importante: nem a acusação original de 'violação de direitos humanos' nem sua reversão foram fundamentadas em revisão de mérito — ambas foram instrumentos de política externa bilateral. Isso não invalida os fatos documentados nas entradas 1777-1791 (que têm fonte primária brasileira própria, independente da avaliação americana) — mas impede usar a sanção Magnitsky como prova externa e neutra de violação de direitos humanos, já que sua remoção comprovadamente não dependeu de mudança nos fatos, apenas de conveniência diplomática."
+    }
+  ]
+}

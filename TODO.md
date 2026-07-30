@@ -1,8 +1,8 @@
 # Próximos passos · lawfare-timeline
 
-**Atualizado:** 2026-07-26 (expansão MG + RS · IDs 1749–1756)
+**Atualizado:** 2026-07-29 (batch INQ 4.781 · IDs 1777–1796)
 
-> Espelho: `docs/TODO.md` · Notas: `_data/todo/todo.md` · Legado: `docs/TODO-LEGACY.md`
+> Espelho: `docs/TODO.md` · Notas: `_data/processados/todo.md` · Legado: `docs/TODO-LEGACY.md`
 
 ---
 
@@ -10,73 +10,61 @@
 
 | Track | Last | Próximo | Validação |
 |-------|------|---------|-----------|
-| Main | **1756** | **1757** | dragao-onca **118** entradas |
-| Thematic | **T-243** | **T-244** | síntese final + ranking CEBC T-242 |
+| Main | **1796** | **1797** | lawfare.json **1758** entradas |
+| Dragão e a Onça | **1770** / **T-246** | **1771** / **T-247** | `dragao-onca.json` **151** · 151 posts YAML OK |
+| Thematic (geral) | **T-246** | **T-247** | — |
 | Historical pre-1990 | PREC-1930-07 | — | 14 entradas · T-224 |
 | Historical pos-1990 | PREC-1997-05 | — | 1 entrada · sidecar |
-| Fila `_data/todo/` | vazio | — | — |
+| Fila `_data/todo/` | **vazia** | — | 2 batches em `_hold/` |
 
 ---
 
-## Rodada 26/07/2026 ✅ — Expansão MG + RS (investigação profunda)
+## Rodada 29/07/2026 (b) ✅ — Sessão INQ 4.781 + desdobramentos (1777–1796)
 
 | Faixa | Conteúdo |
 |-------|----------|
-| **1749** | GWM — critérios ES (instabilidade institucional; complementa id_1737) |
-| **1750–1755** | MG expandido — BYD/Coronel Murta, Wondfo/Celer, CRRC Metrô BH, visita Changchun, Midea R$198mi, 1º trem CRRC |
-| **1756** | RS Day Pequim (23/11/2024) — precede missão BYD/GWM |
+| **1777–1786** | INQ 4.781 — origem, bloqueios TSE/AEED 2022, cluster desmonetização |
+| **1787–1790** | Autocensura Sivis, PF jornalista, escândalo Master/Londres (STF/STJ) |
+| **1791–1796** | Magnitsky Moraes (jul/dez 2025), desdobramentos diplomáticos |
 
-**134 posts** em `_posts/dragao-onca/` · batches em `_data/processados/lawfare-batch-dragao-onca-*-1749*.json` etc.
-
----
-
-## Rodada 25/07/2026 ✅ — Série O Dragão e a Onça (conclusão)
-
-| Faixa | Conteúdo |
-|-------|----------|
-| **1713–1718** | Braço diplomático federal (WAICO, Serra Verde, G7) |
-| **1719–1725** | Bahia — caso de controle (PPP Ponte, Windey) |
-| **1726–1730** | São Paulo — variante mercado (CRRC, COFCO) |
-| **1731–1734** | Paraná — TCP / CM Port |
-| **1735–1737** | Rio Grande do Sul — missão BYD/Huawei (GWM → ES) |
-| **1738–1739** | Espírito Santo — fábrica GWM Aracruz |
-| **1740–1748** | Goiás retroativo — Caiado, JOGMEC, terras raras |
-| **T-236–T-241** | Capítulos temáticos novos |
-| **T-243** | Síntese final cross-state |
-
-**126 posts** em `_posts/dragao-onca/` · **build Jekyll pausado** para revisão editorial.
+**20 posts** · batch `lawfare-batch-sessao-2026-07-29-1777-1796.json` arquivado.
 
 ---
 
-## Rodada 25/07/2026 (b) — T-242, heroes, xarticles
+## Rodada 29/07/2026 ✅ — Sync fila + síntese final
 
 | Item | Entrega |
 |------|---------|
-| **T-242** | Post + JSON CEBC ranking; sync thematic **243** |
-| **Heroes** | `dragao-onca-{bahia,sao-paulo,parana,rio-grande-do-sul,espirito-santo,ranking-cebc}.webp` + 26 posts atualizados |
-| **X Articles** | `parana-xarticle.md`, `rs-es-ranking-xarticle.md` |
-| **Scripts** | `fix_dragao_onca_hero_images.py`; gerador com seção ranking CEBC |
-
-
-| ID | Evento | Padrão / track |
-|----|--------|----------------|
-| 1636 | Lula associa Flávio a "traidores" + enforcamento (Catalão, 02/jun) | escândalos |
-| 1637 | Flávio protocola notícia-crime contra Lula no STF (11/jun) | P03 · stf |
-| 1638 | Lula repete enforcamento de "traidores" na convenção PDT (20/jul) | escândalos |
-| — | STF PVTAC batch → **duplicata id_1633** (enriquecimento, sem novo ID) | penduricalhos |
+| **1775–1776** | Sigilo 100 anos Vorcaro + Alcolumbre (`bancos`) — realocados após conflito com dragao-onca 1763/1764 |
+| **T-1765** | Síntese P10 sigilo centenário (`estudos`) |
+| **T-1766** | Ricardo Salles patrimônio TSE (`estudos`) |
+| **T-243** | Síntese final cross-state atualizada (151 entradas, AP/RJ/SC, tipologia 14 mecanismos, correções MG/RS/CEEE-T) |
+| **Sync** | `sync_todo_current.py` · `claude.ai-corpus-ids-sync.json` · GDrive export |
+| **Build** | `bundle exec jekyll build` → `docs/` |
 
 ---
 
-## Main track recente (1633–1638)
+## Rodada 27/07/2026 ✅ — Amapá, RJ, SC (T-244–T-246)
 
-| ID | Evento |
-|----|--------|
-| 1633 | STF libera penduricalhos + PVTAC (30/06) — enriquecido |
-| 1634 | Moraes/Dino supersalários 48h |
-| 1635 | Júri Gritzbach anulado |
-| 1636 | Lula "traidores/enforcamento" Catalão |
-| 1637 | Notícia-crime Flávio × Lula |
-| 1638 | Lula repete enforcamento PDT |
+| Faixa | Conteúdo |
+|-------|----------|
+| **1757–1759** | Amapá — Amazonbai/açaí, GACC, leilão ANP |
+| **1760–1761** | Rio de Janeiro — CMPort/Vast, Castro/Hikvision |
+| **1763–1770** | RS CEEE-T, SC JMEV/ferrovias/GACC, ES GWM duplo |
+| **T-244–T-246** | Capítulos temáticos finais da série |
+
+**151 posts** em `_posts/dragao-onca/`.
+
+---
+
+## `_hold/` — conflito de IDs (não processar automaticamente)
+
+| Batch | Motivo |
+|-------|--------|
+| `lawfare-batch-lula-traidor-pvtac-1749-1752.json` | Faixa 1749–1752 já ocupada (MG/RS dragao-onca) |
+| `lawfare-batch-havengate-calixto-1767-1768.json` | IDs 1767–1768 já usados (SC ferrovias/GACC) |
+
+Ver `_data/todo/_hold/README-conflito-1749-1752.md`.
 
 ---
 
@@ -84,9 +72,10 @@
 
 | Item | Prioridade |
 |------|------------|
-| T-242 (ranking CEBC) | Concluído (T-242 publicado) |
-| Revisão editorial T-243 vs T-233 | Concluída (T-243 = síntese final) |
-| `bundle exec jekyll build` | **Pausado** — aguardando admin lawfare-thematic/ids |
+| T-242 (ranking CEBC) | ✅ Concluído |
+| Revisão editorial T-243 vs T-233 | ✅ Concluída |
+| `bundle exec jekyll build` | ✅ Concluído (29/jul · batch 1777–1796) |
+| Reatribuir IDs batches `_hold/` | Média |
 | Posts PREC individuais | Baixa |
 | Formalizar P04b em METHODOLOGY | Média |
 | P11-B Judiciário (T-226) | Média |
@@ -100,9 +89,11 @@
 
 ```bash
 python scripts/sync_todo_current.py
-python tools/reconcile_lawfare_batch.py   # se posts existem sem lawfare.json
-python tools/sync_corpus_ids.py          # exporta sync → Google Drive se configurado
-python tools/gdrive_sync_export.py       # export manual
+python scripts/export_dragao_onca_json.py
+python scripts/validate_dragao_onca_yaml.py
+python tools/reconcile_lawfare_batch.py
+python tools/sync_corpus_ids.py
+bundle exec jekyll build
 pwsh -File tools/validate-ids.ps1
 ```
 
@@ -110,6 +101,8 @@ pwsh -File tools/validate-ids.ps1
 
 ## Referências
 
-- Corpus: `_data/lawfare.json` (1719 entradas · ID 1–1756)
+- Corpus: `_data/lawfare.json` (1758 entradas · ID 1–1796)
+- Unified: `_data/lawfare-unified-corpus.json` (136 entradas verificadas)
+- Sidecar dragão: `_data/dragao-onca.json` (151 assuntos · 1639–1770 + T-228–T-246)
 - Sidecars: `precedentes-republica.json` · `precedentes-pos-1990.json`
 - [lawfare-timeline.vercel.app](https://lawfare-timeline.vercel.app)

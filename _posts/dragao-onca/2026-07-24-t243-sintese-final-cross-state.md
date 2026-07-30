@@ -1,18 +1,19 @@
 ---
 layout: post
 title: "O Dragão e a Onça — Síntese Final: Governadores vs. Potências Estrangeiras (Soberania na Conta do Governador)"
-description: "Síntese final cross-state: tese soberania na conta do governador qualificada — comparativo Federal, GO, PA, AM, MG, BA, SP, PR, RS, ES; tipologia de mecanismos e correção metodológica Goiás."
+description: "Síntese final cross-state: tese soberania na conta do governador qualificada — comparativo Federal, GO, PA, AM, MG, BA, SP, PR, RS, ES, AP, RJ, SC; tipologia de mecanismos e correção metodológica Goiás."
 date: 2026-01-01T17:01:01.001Z
 image: /assets/img/dragao-onca-sintese.webp
 tags: ["dragao-onca", "2026", "goias", "para", "amazonas", "p04b", "p05", "p08", "p09", "p11"]
 categories: dragao-onca
 timeline_id: 243
+id_corpus: "T-243"
 status: confirmed
 ---
 
 # O Dragão e a Onça — Síntese Final: Governadores vs. Potências Estrangeiras (Soberania na Conta do Governador)
 
-**Data:**  | **ID:** 243 | **Status:** confirmed
+**Data:** 2026-01-01 | **ID:** T-243 | **Status:** confirmed
 
 ***
 
@@ -21,26 +22,42 @@ status: confirmed
 ***
 
 
+# Soberania na conta do governador — testada em 13 entes
+
+A tese central da série, formulada no Capítulo 1: o governo federal negocia frameworks diplomáticos amplos com potências estrangeiras, enquanto governadores executam contratos específicos — absorvendo o custo político e convertendo ativos estaduais em capital eleitoral, sem que o benefício econômico chegue de forma proporcional à população local. **Soberania na conta do governador.**
+
+Depois dos dossiês cobrindo **13 entes** (12 UFs + Federal) — com Amapá (T-244), Rio de Janeiro (T-245) e Santa Catarina (T-246) integrados — esta síntese testa a tese contra **151 entradas** do corpus: confirma parcialmente, refina e contraria em pelo menos quatro eixos (Bahia; par RS/ES; casos de controle AP/RJ-infra; SC — cortejo duplo sem captura).
+
 ## 📋 Resumo
 
-Síntese final cross-state da série: qualifica a tese *soberania na conta do governador* com comparativo entre Federal, Goiás, Pará, Amazonas, Minas Gerais, Bahia, São Paulo, Paraná, Rio Grande do Sul e Espírito Santo; tipologia de cinco mecanismos de captura; correção metodológica pós-merge dos capítulos T-228 e IDs 1740–1748.
+Síntese final cross-state da série: qualifica a tese *soberania na conta do governador* com comparativo entre Federal, Goiás, Pará, Amazonas, Minas Gerais, Bahia, São Paulo, Paraná, Rio Grande do Sul, Espírito Santo, Amapá, Rio de Janeiro e Santa Catarina; tipologia de mecanismos de captura; correção metodológica pós-merge dos capítulos T-228 e IDs 1740–1748; atualização pós-merge jul/2026 (T-244–T-246, mains 1764–1770).
 
 ## 📊 Padrões Analíticos
 
 - **P04b** — Both-sidesism funcional — padrão de falsa equivalência
 - **P05** — Uso de recursos/ativos públicos como vetor de apropriação privada
-- **P08**
+- **P08** — Cadeias de commodities e extração mineral como vetor estrutural
 - **P09** — Captura regulatória — controle de agências por interesses capturados
 - **P11** — Escalada de consolidação — replicação e amplificação de padrão
 
 ## ⚠️ Correção metodológica
 
-O rascunho original desta síntese (jul/2026) afirmava que Goiás/Caiado não tinha capítulo dedicado — apenas referências cruzadas em PL2780 (id_1710) e Diplomático Federal (id_1715). **Correção pós-merge (25/jul/2026):** o corpus confirmado passou a incluir o capítulo temático [T-228 — Goiás](/posts/2026-07-24-t228-o-dragao-e-a-onca-goias/) e **9 entradas main track** (IDs 1740–1748), cobrindo missões à China (2023–2024), pivô JOGMEC/EUA, Manifesto Goiás–EUA, aquisição Serra Verde pela USA Rare Earth e instrumentalização eleitoral. Serra Verde continua sendo caso de capital **não chinês** (EUA) — o capítulo goiano documenta o pivô geopolítico, não captura por estatal chinesa.
+O rascunho original desta síntese (jul/2026) continha cinco erros sistemáticos, corrigidos nesta versão:
+
+1. **Goiás.** Afirmava que Caiado “nunca teve capítulo dedicado”. Errado: [T-228 — Goiás](/posts/2026-07-24-t228-o-dragao-e-a-onca-goias/) é o capítulo inaugural; o gap era de backfill JSON (IDs 1740–1748), não de inexistência do dossiê. Serra Verde permanece caso de capital **não chinês** (EUA) — documenta pivô geopolítico, não captura por estatal chinesa.
+
+2. **Minas Gerais (26/jul/2026).** Tratar MG como capítulo “só Coreia / sem China” é **incompleto**. O T-232 documenta vitrine Ocidente (Sigma/LG, R$3 bi) **e** camada chinesa paralela: CRRC R$700 mi (Metrô BH), Midea R$828 mi, Wondfo/Celer, BYD com direitos de lítio em Coronel Murta. A tese “MG prova padrão sem China” não resiste à checagem.
+
+3. **Rio Grande do Sul (27/jul/2026).** Reduzir RS a “cortejo GWM perdido” apaga captura energética documentada: **CEEE-T → CPFL/State Grid** (R$ 2,67 bi, leilão B3 16/jul/2021), ato do governo Leite (**id_1763**). O T-240 mantém o par de controle com o ES **e** o paradoxo energia capturada ≠ fábrica ganha.
+
+4. **Amapá (27/jul/2026).** Forçar P05 no açaí Amazonbai seria strawman: a cooperativa vende direto. Forçar “soberania na conta do governador” no petróleo offshore ignora que a decisão é ANP/União. T-244 documenta **controle negativo** e **captura federal sem intermediário estadual**.
+
+5. **Rio de Janeiro (27/jul/2026).** RJ não se encaixa em um único padrão: CMPort/Vast (id_1760) replica arquitetura infra sem governador; missão Castro/Hikvision-Dahua (id_1761) replica GO/PA/AM/MG. Composição de dois mecanismos no mesmo estado.
 
 ## 📊 Escopo da série
 
-- **Corpus confirmado (lawfare.json, dragao-onca):** **110 entradas**, IDs **1639–1748** — Federal, Pará, Amazonas, Minas Gerais, braço jurídico, PL2780, diplomático federal, Bahia, São Paulo, Paraná, RS, ES, Goiás retroativo
-- **Capítulos temáticos:** T-228 a T-242 + T-243 (síntese final); T-233 permanece como síntese comparativa v1
+- **Corpus confirmado (`dragao-onca.json`):** **151 entradas**, IDs main **1639–1770** — Federal, Pará, Amazonas, Minas Gerais, braço jurídico, PL 2.780, diplomático federal, Bahia, São Paulo, Paraná, RS, ES, Goiás retroativo, Amapá, Rio de Janeiro, Santa Catarina (CEEE-T/RS id_1763)
+- **Capítulos temáticos:** **T-228 a T-246**; [T-233](/posts/t233-dragao-onca-sintese/) permanece como síntese comparativa v1; **T-243** (este capítulo) como síntese final cross-state
 
 ## 🗺️ Comparativo entre estados
 
@@ -69,10 +86,10 @@ O rascunho original desta síntese (jul/2026) afirmava que Goiás/Caiado não ti
 - **Captura De Valor:** custo ambiental local, benefício industrial concentrado no PIM
 
 ### Minas Gerais (Zema)
-- **Potencia:** Coreia do Sul (não China)
-- **Mecanismo:** Vale do Lítio, lançamento na Nasdaq, acordo Sigma Lithium-LG
-- **Resultado:** operação com instabilidade (paralisação out/2025, retomada mar/2026); Zema sai do governo para concorrer à Presidência
-- **Captura De Valor:** não avaliada — caso de potência asiática não-chinesa dentro da série
+- **Potencia:** Coreia do Sul (vitrine) + **China** (camada paralela)
+- **Mecanismo:** Vale do Lítio / Sigma-LG (Nasdaq) + CRRC Metrô BH, Midea, Wondfo/Celer, BYD/Coronel Murta
+- **Resultado:** paralisação out/2025 e retomada mar/2026; Zema abandona bandeira lítio e concorre à Presidência; FDI chinês convive com vitrine Ocidente no mesmo mandato
+- **Captura De Valor:** parcial — captura simbólico-eleitoral (P09); corrige leitura “MG sem China”
 
 ### Bahia (Jerônimo Rodrigues)
 - **Potencia:** China
@@ -94,9 +111,9 @@ O rascunho original desta síntese (jul/2026) afirmava que Goiás/Caiado não ti
 
 ### Rio Grande do Sul (Leite)
 - **Potencia:** China
-- **Mecanismo:** diplomacia pessoal (missão a Shenzhen, BYD/Huawei)
-- **Resultado:** PERDEU disputa pela fábrica GWM para o Espírito Santo
-- **Captura De Valor:** NÃO — cortejo sem captura, apesar do esforço diplomático
+- **Mecanismo:** **CEEE-T → State Grid/CPFL** (id_1763, R$ 2,67 bi, 2021) + diplomacia pessoal (missão Shenzhen, BYD/Huawei, ids 1735–1737)
+- **Resultado:** rede elétrica estadual capturada; **PERDEU** disputa pela fábrica GWM para o Espírito Santo
+- **Captura De Valor:** parcial — **energia SIM, GWM NÃO**; variáveis independentes (transmissão ≠ montadora)
 
 ### Espírito Santo (Casagrande/Ferraço)
 - **Potencia:** China
@@ -104,14 +121,40 @@ O rascunho original desta síntese (jul/2026) afirmava que Goiás/Caiado não ti
 - **Resultado:** GANHOU a fábrica GWM — 1ª fora da Ásia, R$4,6-5bi
 - **Captura De Valor:** SIM — mas por fator logístico (proximidade portuária), não diplomático
 
+### Amapá (Clécio Luiz / facilitadores estaduais)
+- **Potencia:** China (açaí, CNPC petróleo)
+- **Mecanismo:** cooperativa extrativista (Amazonbai) + leilão ANP federal na Margem Equatorial — **sem governador como negociador central**
+- **Resultado:** açaí = caso de **controle metodológico** (acesso a mercado, não captura); petróleo = captura **federal** sobre litoral amapaense, contornando o executivo estadual
+- **Captura De Valor:** NÃO nos dois eixos documentados — qualifica limites da tese central (ver [T-244](/posts/2026-07-24-t244-dragao-onca-amapa-controle/))
+
+### Rio de Janeiro (Cláudio Castro)
+- **Potencia:** China
+- **Mecanismo:** arquitetura **mista** — aquisição CMPort/Porto do Açu (id_1760, esfera societária/regulatória) + missão do governador com Hikvision/Dahua e cortejo institucional (id_1761)
+- **Resultado:** estoque histórico relevante (CEBC: 21 projetos acumulados, empate com Pará), mas fluxo 2025 modesto; terminal estratégico de exportação sob controle de capital chinês
+- **Captura De Valor:** parcial — infraestrutura portuária capturada sem interlocução direta do governador na transação CMPort; cortejo clássico em paralelo
+
+### Santa Catarina (Jorginho Mello / Alesc)
+- **Potencia:** China
+- **Mecanismo:** cortejo **legislativo** à JMEV (id_1766) + ferrovias em estudo (PowerChina/CRRC/CRCC) + pedido GACC/frango (id_1768, controle)
+- **Resultado:** **cortejo duplo SC×ES** sem fábrica confirmada até mar/2026 — variante mais severa que RS/GWM, onde ao menos o ES obteve a GWM
+- **Captura De Valor:** NÃO — menor grau de captura confirmada da série, ao lado do controle amapaense (açaí)
+
 ## 🔬 Tipologia de mecanismos
 
-- **diplomacia pessoal direta** — casos: Bahia (sucesso), Pará (parcial), Rio Grande do Sul (fracasso); mesmo mecanismo produz resultados opostos — não é suficiente nem necessário para captura
-- **mercado leilao tecnico** — casos: São Paulo; captura sem qualquer diplomacia pessoal — vitória por preço e escala
-- **continuidade institucional historica** — casos: Paraná; relação de 7+ anos, único caso com coordenação estado-federal explícita
-- **fator logistico geografico** — casos: Espírito Santo (venceu por isso), Rio Grande do Sul (perdeu apesar da diplomacia); par de controle mais limpo da série — mesma empresa, mesma disputa, resultado explicado por geografia econômica, não por esforço político
-- **custo ambiental local beneficio distante** — casos: Pará (mortes Terra Indígena Mãe Maria, mineroduto Norsk Hydro), Amazonas (contaminação por mercúrio, Taboca); onde a extração é mineral/ambiental, o padrão assimétrico é mais nítido e mais grave que nos casos de investimento industrial/portuário
-- **pivô geopolítico setorial** — casos: Goiás; governador negocia com China, depois redireciona ativo crítico para EUA/Japão sem coordenação nacional — variante de *soberania na conta do governador* com instrumentalização eleitoral
+- **captura simbólico-eleitoral (P09)** — casos: Goiás (Caiado/terras raras → Presidência), MG (Zema/lítio abandonado); ativo convertido em bandeira pessoal, distinto de benefício ao estado
+- **diplomacia pessoal direta** — casos: Bahia (sucesso), Pará (parcial), Rio Grande do Sul (fracasso na GWM); mesmo mecanismo produz resultados opostos — não é suficiente nem necessário para captura
+- **mercado leilao tecnico** — casos: São Paulo; camada CRRC também em MG (Metrô BH); captura sem diplomacia pessoal — vitória por preço e escala
+- **continuidade institucional historica** — casos: Paraná; relação de 7+ anos, único caso com coordenação explícita estado-federal
+- **fator logistico geografico** — casos: Espírito Santo (venceu), Rio Grande do Sul (perdeu a GWM apesar do cortejo); par de controle mais limpo — mesma empresa, mesma disputa, geografia econômica
+- **custo ambiental local beneficio distante** — casos: Pará (TI Mãe Maria, mineroduto), Amazonas (mercúrio, Taboca); padrão assimétrico mais grave que PPP/fábrica
+- **captura de infraestrutura crítica ≠ vitória manufatureira** — casos: RS (CEEE-T/State Grid id_1763); energia capturada não se traduz em fábrica GWM
+- **vitrine ocidente + camada chinesa paralela** — casos: MG (Sigma/LG + CRRC/Midea/BYD); leitura em duas camadas obrigatória
+- **captura federal / mercado sem governador** — casos: Amapá (CNPC offshore), RJ (CMPort/Vast id_1760); infra crítica sem interlocução do executivo estadual
+- **controle cooperativista (controle negativo)** — casos: Amapá (Amazonbai/açaí); produtor vende direto — limita generalização da tese
+- **composição infra + governador** — casos: RJ (Açu + Castro/Hikvision); dois vetores jurídicos distintos no mesmo estado
+- **pivô geopolítico setorial** — casos: Goiás; China → EUA/Japão sem coordenação nacional
+- **controle de acesso a mercado** — casos: Amapá (açaí/GACC, id_1757–1758), SC (frango/GACC, id_1768)
+- **cortejo sem captura** — casos: SC/JMEV (duplo com ES, ids 1764–1770), RS/GWM (T-240, parcial — ES venceu)
 
 ## 📌 Ponto de inflexão
 
@@ -119,12 +162,30 @@ PL 2.780/2024 (Política Nacional de Minerais Críticos) segue sem votação fin
 
 ## ❓ Lacunas Investigativas
 
-- **Minas Gerais (China):** capítulo existente (T-232) cobre Coreia do Sul/lítio — falta recorte China-específico se a série mantiver escopo estritamente sino-brasileiro
+- **Minas Gerais:** termos dos contratos CRRC/Midea/BYD (ids 1750–1755) e impacto regulatório sobre direitos minerais em Coronel Murta
 - **Goiás:** termos completos do Manifesto Goiás–EUA, renúncias fiscais a CMOC/Chint/Weichai e identidade da SPV americana no contrato de 15 anos (Serra Verde)
+- **Rio Grande do Sul:** desdobramentos regulatórios pós-privatização CEEE-T (id_1763) e status final da planta GWM no ES vs. RS
+- **Amapá:** termos financeiros do contrato açaí (Amazonbai); status de certificação GACC; posição pública do governo estadual sobre leilão ANP na Margem Equatorial (id_1759)
+- **Rio de Janeiro:** aprovação regulatória final da aquisição CMPort/Vast (id_1760); valores dos acordos Hikvision/Dahua (id_1761)
+- **Santa Catarina:** desfecho do termo JMEV/Alesc (id_1766); status operacional das tratativas ferroviárias (ids 1767, 1769) e do convite Inspur
 
-## 🔍 Análise
+## 🔍 Análise — tese refinada
 
-ev-inference: a tese 'soberania na conta do governador' formulada no início da série — federal negocia frameworks amplos, governadores executam contratos específicos e absorvem custo político — se confirma com nuance, não de forma universal. Ela é fortemente sustentada nos casos de extração mineral com custo ambiental concentrado (Pará, Amazonas), onde o padrão assimétrico é claro e grave. É parcialmente sustentada nos casos de infraestrutura/manufatura (Paraná, São Paulo), onde a captura ocorre mas por mecanismos de mercado ou continuidade institucional, não por characterização de 'governador vendendo soberania'. E é DIRETAMENTE CONTRARIADA pelo par Bahia (captura COM benefício ao estado) e pelo par RS/ES (mesmo mecanismo de disputa, resultados opostos por fator alheio à vontade do governador). A tese original precisa de uma qualificação: a assimetria estrutural é mais forte quanto mais o ativo negociado for um recurso natural finito extraído do território (minério, terra, água) e mais fraca quanto mais for um contrato de serviço ou manufatura renegociável (PPP, fábrica).
+A tese *soberania na conta do governador* se confirma com nuance, não de forma universal.
+
+**Fortemente sustentada** nos casos de extração mineral com custo ambiental concentrado (Pará, Amazonas) e na captura simbólico-eleitoral (Goiás; MG/Zema como variante incompleta). O padrão assimétrico é claro onde o custo local é ambiental ou humano.
+
+**Parcialmente sustentada** em infraestrutura e manufatura (Paraná, São Paulo; camada CRRC/Midea em MG). A captura ocorre por mercado, continuidade ou contratos setoriais — não necessariamente por “venda de soberania” literal. Em MG, a vitrine Ocidente **coexiste** com FDI chinês.
+
+**Diretamente contrariada ou não confirmada** pela Bahia (captura **com** benefício ao estado — TIR 13%→10,88%); pelo eixo RS/ES (Leite tinha State Grid na transmissão e cortejou em Shenzhen — e ainda perdeu a GWM para o ES por logística); pelo Amapá-açaí (cooperativa vende direto); e pelos casos AP-petróleo/RJ-Açu (infra crítica sem governador na transação).
+
+**Qualificação proposta:** a assimetria é mais forte quanto mais o ativo for recurso natural finito com custo local — e mais fraca em PPP, fábrica e concessão renegociável. Acrescenta-se: **tipo de ativo importa** (transmissão ≠ montadora ≠ porto VLCC); **vitrine midiática ≠ mapa completo do FDI** (lição MG); **governador-negociador é uma configuração entre várias** (lição AP/RJ).
+
+## 🎯 Conclusão
+
+A série documenta que a soberania operacional — quem decide, quem arca com o custo, quem converte em capital eleitoral — está fragmentada entre 27 executivos estaduais com graus de transparência distintos. O federal negocia frameworks; os governadores assinam contratos; a população local frequentemente absorve o custo sem contrapartida proporcional.
+
+O **PL 2.780/2024** permanece como teste regulatório pendente: sem marco nacional de minerais críticos, o padrão estado a estado tende a se repetir. Esta síntese (T-243) consolida a leitura final; [T-233](/posts/t233-dragao-onca-sintese/) permanece como síntese comparativa v1 de cinco capítulos iniciais.
 
 ## 🔗 Capítulos da série
 
@@ -133,6 +194,7 @@ ev-inference: a tese 'soberania na conta do governador' formulada no início da 
 - [T-230 — Pará](/posts/2026-07-24-t230-dragao-onca-para/)
 - [T-231 — Amazonas](/posts/2026-07-24-t231-dragao-onca-amazonas/)
 - [T-232 — Minas Gerais](/posts/2026-07-24-t232-dragao-onca-minas-gerais/)
+- [T-233 — Síntese comparativa v1](/posts/t233-dragao-onca-sintese/)
 - [T-234 — Braço jurídico](/posts/2026-07-24-t234-dragao-onca-braco-juridico/)
 - [T-235 — PL 2.780/2024](/posts/2026-07-24-t235-dragao-onca-pl2780/)
 - [T-236 — Braço diplomático](/posts/2026-07-24-t236-dragao-onca-diplomatico/)
@@ -142,6 +204,7 @@ ev-inference: a tese 'soberania na conta do governador' formulada no início da 
 - [T-240 — Rio Grande do Sul](/posts/2026-07-24-t240-dragao-onca-rs/)
 - [T-241 — Espírito Santo](/posts/2026-07-24-t241-dragao-onca-es/)
 - [T-242 — Ranking CEBC](/posts/2026-07-24-t242-dragao-onca-ranking-cebc/)
+- [T-243 — Síntese final cross-state](/posts/t243-sintese-final-cross-state/) *(este capítulo)*
 - [T-244 — Amapá](/posts/2026-07-24-t244-dragao-onca-amapa-controle/)
 - [T-245 — Rio de Janeiro](/posts/2026-07-24-t245-dragao-onca-rj/)
 - [T-246 — Santa Catarina](/posts/2026-07-24-t246-dragao-onca-santa-catarina/)

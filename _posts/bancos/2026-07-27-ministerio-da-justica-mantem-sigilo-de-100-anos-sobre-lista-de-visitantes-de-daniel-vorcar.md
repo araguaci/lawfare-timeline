@@ -7,9 +7,9 @@ image:
 tags: ["bancos", "p06", "p10"]
 categories: bancos
 permalink: /posts/2026-07-27-ministerio-da-justica-mantem-sigilo-de-100-anos-sobre-lista-de-visitantes-de-daniel-vorcar/
-id_corpus: "1774"
+id_corpus: "1775"
 corpus_unificado: true
-source_data: "lawfare-batch-vorcaro-sigilo-100anos-1774.json"
+source_data: "lawfare-batch-vorcaro-sigilo-100anos-1763.json"
 ---
 
 - &nbsp;
@@ -29,7 +29,7 @@ O ministro da Justiça e Segurança Pública, Wellington César Lima e Silva, ne
 
 | Campo | Valor |
 | --- | --- |
-| `id_corpus` | **1774** |
+| `id_corpus` | **1763** |
 | Categoria analitica | mecanismo_sistemico |
 | Evidencia | ev-confirmed |
 
