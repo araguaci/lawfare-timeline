@@ -1,6 +1,6 @@
 # `_data/` — Corpus Lawfare Timeline
 
-**Última revisão:** 2026-07-28  
+**Última revisão:** 2026-08-05  
 **Site:** [lawfare-timeline.vercel.app](https://lawfare-timeline.vercel.app)  
 **Painel de sync:** [`sync_status_latest.html`](./sync_status_latest.html)
 
@@ -8,16 +8,16 @@ Este diretório concentra **dados tabulares do corpus editorial** e **metadados 
 
 ---
 
-## Estado atual (2026-07-28)
+## Estado atual (2026-08-05)
 
 | Track | Último confirmado | Próximo livre | Fonte |
 |-------|-------------------|---------------|-------|
-| **Main** | **1774** | **1775** | `lawfare.json` |
-| **Temático (T-)** | **T-246** | **T-247** | `claude.ai-corpus-ids-sync.json` |
+| **Main** | **1838** | **1839** | `lawfare.json` |
+| **Temático (T-)** | **T-250** | **T-251** | `claude.ai-corpus-ids-sync.json` |
 | **Dragão e a Onça** | 132 main + 19 temáticos | — | `dragao-onca.json` + `_posts/dragao-onca/` (151 posts) |
 
-- **`lawfare.json`:** 1737 assuntos · max ID 1774
-- **`todo/`:** vazia (merge 2026-07-28) · `_hold/` = batch Lula 1749–1752 aguardando renumeração
+- **`lawfare.json`:** 1799 assuntos · max ID **1838** (gap intencional **1820** → **T-248**)
+- **`todo/`:** sem JSON pendente (último merge main **1836–1838**, temático **T-249–T-250**, ago/2026) · HTML staging + `_hold/` legado
 
 Regenerar dashboard: `python tools/sync_corpus_ids.py`
 
@@ -105,7 +105,7 @@ Fonte de verdade do **main track**. Cada `assunto` tem:
 Mapa operacional entre sessões editoriais e o repo:
 
 - `tracks.main` — batches confirmados, `last_confirmed`, `next_available`
-- `tracks.thematic` — entradas T-100+, capítulos Dragão T-228–T-245
+- `tracks.thematic` — entradas T-100+, capítulos Dragão T-228–T-246; estudos **T-248–T-250**
 - `sync_status` — contadores e fila
 - `session_log` — histórico de merges
 
@@ -183,7 +183,7 @@ Objetivo: reduzir ruído na raiz de `_data/`, separar **corpus**, **tema Jekyll*
 ### Fase 0 — Documentação (concluída)
 
 - [x] Criar `_data/README.md` (este ficheiro)
-- [ ] Atualizar secção `_data/` em [`README.md`](../README.md) com link para aqui e IDs atuais (1762 / T-245)
+- [x] Atualizar secção `_data/` em [`README.md`](../README.md) com link para aqui e IDs atuais (**1838** / **T-250**)
 
 ### Fase 1 — Higiene imediata (baixo risco)
 
@@ -253,11 +253,12 @@ Integrar no fluxo pós-merge junto com `validate-ids.ps1`.
 
 ## Fila atual (`todo/`)
 
-**Vazia** após merge 2026-07-28 (1771–1774: PortosRio/UFRJ, Sidônio Palmeira, sigilo Vorcaro).
+**Sem batches JSON** na raiz (merge **2026-08-05**: main **1827–1838**, temático **T-248–T-250**; ver `processados/`).
 
 | Local | Conteúdo |
 |-------|----------|
-| `_data/todo/_hold/` | `lawfare-batch-lula-traidor-pvtac-1749-1752.json` — IDs 1749–1752 já ocupados; renumeração pendente (1775+) |
+| `_data/todo/*.html` | Staging editorial (`dois-pesos-duas-medidas.html`, `o-teto-que-nao-existe.html`, etc.) |
+| `_data/todo/_hold/` | Batches legados (Lula 1749–1752, Havengate) — conteúdo já publicado com IDs realocados (**1821–1826**) |
 
 ---
 

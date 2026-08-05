@@ -16,18 +16,18 @@ Valores abaixo vêm de `_data/lawfare.json` e `_data/claude.ai-corpus-ids-sync.j
 
 | Track | Último ID | Próximo | Fonte de verdade |
 |---|---:|---:|---|
-| **Main timeline** | **1774** | 1775 | `_data/lawfare.json` → `assuntos[].id` |
-| **Temático (T-)** | **246** | 247 | `_data/claude.ai-corpus-ids-sync.json` + `_posts/` |
-| **Estudos T em disco** | — | — | ~32 posts com `id_corpus` temático |
+| **Main timeline** | **1838** | 1839 | `_data/lawfare.json` → `assuntos[].id` (1799 assuntos) |
+| **Temático (T-)** | **250** | 251 | `_data/claude.ai-corpus-ids-sync.json` + `_posts/` |
+| **Estudos T em disco** | — | — | ~33 posts com `id_corpus` temático |
 | **Posts `_posts/`** | — | — | ~400+ entradas Jekyll |
-| **Série Dragão e a Onça** | **1770** / **T-246** | 1775 / T-247 | `_posts/dragao-onca/` (151 posts) |
+| **Série Dragão e a Onça** | **1770** / **T-246** | — | `_posts/dragao-onca/` (151 posts); main pós-série usa **1839+** |
 
 ### Dois tracks de ID (não confundir)
 
 | Track | Namespace | Onde vive | Exemplo |
 |---|---|---|---|
-| Main | inteiros 1–1762+ | `lawfare.json`, posts timeline | `id_corpus: "1762"` |
-| Temático | T-100+ (registry 100–245) | `_posts/estudos/`, `_posts/dragao-onca/`, sync JSON | `id_corpus: "T-245"` |
+| Main | inteiros 1–1838+ | `lawfare.json`, posts timeline | `id_corpus: "1838"` |
+| Temático | T-100+ (registry 100–250) | `_posts/estudos/`, `_posts/dragao-onca/`, sync JSON | `id_corpus: "T-250"` |
 
 Posts **corpus-bridge** (T-205–T-209) ligam artefatos HTML do [gosurf.site](https://gosurf.site) ao índice Jekyll. Detalhes em [TODO.md](./TODO.md).
 
@@ -39,7 +39,8 @@ Posts **corpus-bridge** (T-205–T-209) ligam artefatos HTML do [gosurf.site](ht
 | **1449–1510** | `batch_file_only` | PCC/Ndrangheta canônico — posts Jekyll existem, **fora** de `lawfare.json`; merge só com validação |
 | 1511–1638 | Publicados | Correntes (incl. batches Biomm, Rejeito, Flávio/Trump, Sepse) |
 | **1639–1756** | Publicados | Série **O Dragão e a Onça** (118 entradas `categoria: dragao-onca`) |
-| **1757+** | Disponível | Próximo ID livre para novos eventos |
+| **1757–1838** | Publicados | Batches pós-Dragão (jul–ago/2026); **1763–1764** reservados (CEEE-T/JMEV); gap main **1820** → temático **T-248** |
+| **1839+** | Disponível | Próximo ID main livre (`sync.tracks.main.next_available`) |
 
 Gap esperado em `lawfare.json`: **1449–1510** (62 slots) — aviso normal em `validate-ids.ps1`.
 
