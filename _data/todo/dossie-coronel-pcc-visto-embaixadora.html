@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Duas Pontas do Mesmo Fio — Coronel do PCC na SSP e a Crise do Visto</title>
+<meta name="description" content="Dossiê analítico: infraestrutura de segurança compartilhada (SSP-SP/Moraes) e assimetria evidencial na crise diplomática Brasil-EUA, 04/08/2026.">
+<link rel="canonical" href="https://gosurf.site/dossie-coronel-pcc-visto-embaixadora">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Crimson+Pro:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg0: #080c10;
+    --bg1: #0d1319;
+    --bg2: #131b22;
+    --text: #e6e8ea;
+    --muted: #8b98a3;
+    --red: #c53d4f;
+    --gold: #d4af5a;
+    --border: #1e2830;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg0);
+    color: var(--text);
+    font-family: 'Crimson Pro', serif;
+    font-size: 18px;
+    line-height: 1.65;
+  }
+  a { color: var(--gold); }
+
+  #navbar {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(8,12,16,.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    display: flex; gap: 4px; overflow-x: auto;
+    padding: 0 16px;
+  }
+  #navbar a {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--muted); text-decoration: none;
+    padding: 14px 12px; white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color .2s, border-color .2s;
+  }
+  #navbar a:hover, #navbar a.active { color: var(--text); border-color: var(--red); }
+
+  header.hero {
+    padding: 64px 24px 40px; max-width: 880px; margin: 0 auto;
+    border-bottom: 1px solid var(--border);
+  }
+  .kicker {
+    font-family: 'JetBrains Mono', monospace; font-size: 12px;
+    letter-spacing: .14em; text-transform: uppercase; color: var(--red);
+    margin-bottom: 14px;
+  }
+  h1 {
+    font-family: 'Syne', sans-serif; font-weight: 800;
+    font-size: clamp(1.8rem, 4vw, 2.9rem); line-height: 1.12;
+    letter-spacing: -.01em; margin-bottom: 18px;
+  }
+  h1 em { font-style: normal; color: var(--gold); }
+  .lede { color: var(--muted); font-size: 1.05rem; max-width: 62ch; }
+  .meta-row {
+    display: flex; gap: 18px; flex-wrap: wrap; margin-top: 22px;
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted);
+    text-transform: uppercase; letter-spacing: .06em;
+  }
+
+  section { max-width: 880px; margin: 0 auto; padding: 56px 24px; }
+  section + section { border-top: 1px solid var(--border); }
+  h2 {
+    font-family: 'DM Serif Display', serif; font-size: 1.7rem;
+    color: var(--text); margin-bottom: 22px;
+  }
+  h2 .n { color: var(--red); font-family: 'JetBrains Mono', monospace; font-size: 1rem; margin-right: 10px; }
+  h3 { font-family: 'Syne', sans-serif; font-size: 1.05rem; font-weight: 700; margin: 26px 0 10px; color: var(--gold); }
+  p { margin-bottom: 16px; }
+  strong { color: var(--text); font-weight: 600; }
+
+  .badge {
+    display: inline-block; font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
+    padding: 3px 9px; border-radius: 3px; border: 1px solid;
+    margin: 0 6px 6px 0;
+  }
+  .badge.confirmed { color: #7ec87e; border-color: #7ec87e33; background: #7ec87e10; }
+  .badge.contested { color: var(--gold); border-color: #d4af5a33; background: #d4af5a10; }
+  .badge.pattern { color: var(--red); border-color: #c53d4f44; background: #c53d4f10; }
+
+  .card-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px; margin: 20px 0;
+  }
+  .card {
+    background: var(--bg1); border: 1px solid var(--border); border-radius: 6px;
+    padding: 18px;
+  }
+  .card .role { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; margin-top: 4px; }
+  .card .name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.05rem; }
+
+  .asymmetry {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    border: 1px solid var(--border); border-radius: 8px; overflow: hidden;
+    margin: 24px 0;
+  }
+  .asymmetry > div { padding: 22px; }
+  .asymmetry > div:first-child { background: var(--bg1); border-right: 1px solid var(--border); }
+  .asymmetry > div:last-child { background: var(--bg2); }
+  .asymmetry h4 { font-family: 'IBM Plex Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: 10px; }
+  @media (max-width: 640px) { .asymmetry { grid-template-columns: 1fr; } .asymmetry > div:first-child { border-right: none; border-bottom: 1px solid var(--border); } }
+
+  blockquote {
+    border-left: 3px solid var(--red); padding-left: 18px; margin: 20px 0;
+    color: var(--muted); font-style: italic;
+  }
+
+  .source-list { list-style: none; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; }
+  .source-list li { padding: 8px 0; border-bottom: 1px solid var(--border); }
+  .source-list a { text-decoration: none; }
+  .source-list a:hover { text-decoration: underline; }
+  .source-list .outlet { color: var(--muted); margin-left: 6px; }
+
+  .lacuna {
+    background: var(--bg1); border: 1px dashed var(--border);
+    border-radius: 6px; padding: 18px; margin: 20px 0;
+    font-family: 'Crimson Pro', serif;
+  }
+  .lacuna .tag { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: .08em; color: var(--gold); display: block; margin-bottom: 8px; }
+
+  footer {
+    text-align: center; padding: 48px 24px 64px;
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    color: var(--muted); letter-spacing: .04em;
+  }
+  footer a { color: var(--muted); }
+
+  #gotop {
+    position: fixed; bottom: 24px; right: 24px; z-index: 90;
+    width: 42px; height: 42px; border-radius: 50%;
+    background: var(--bg2); border: 1px solid var(--border); color: var(--text);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; opacity: 0; pointer-events: none;
+    transition: opacity .25s;
+    font-size: 18px;
+  }
+  #gotop.show { opacity: 1; pointer-events: auto; }
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="#coronel">01 · Coronel &amp; SSP</a>
+  <a href="#visto">02 · Visto da Embaixadora</a>
+  <a href="#assimetria">03 · Assimetria Evidencial</a>
+  <a href="#fontes">04 · Fontes</a>
+</nav>
+
+<header class="hero">
+  <div class="kicker">lawfare-timeline · dossiê editorial · 04/08/2026</div>
+  <h1>Duas pontas do mesmo fio: <em>infraestrutura compartilhada</em> e <em>assimetria de prova</em></h1>
+  <p class="lede">No mesmo dia em que os EUA revogaram o visto da embaixadora do Brasil em Washington, o Metrópoles revelou que a chefia da assessoria militar da SSP-SP — durante a gestão de Alexandre de Moraes — foi ocupada por um coronel hoje descrito pela PF como "grande amigo" de operadores financeiros do PCC. Dois eventos sem relação direta, unidos pela mesma exigência metodológica: separar o que está provado do que é apenas afirmado por parte interessada.</p>
+  <div class="meta-row">
+    <span>CC0 1.0 — domínio público</span>
+    <span>Evidence taxonomy: ev-confirmed / ev-contested</span>
+    <span>Patterns: P10 · P04</span>
+  </div>
+</header>
+
+<section id="coronel">
+  <h2><span class="n">01</span>O coronel, o PCC e a cadeira ao lado de Moraes</h2>
+  <span class="badge confirmed">ev-confirmed</span>
+  <span class="badge pattern">P10 — infraestrutura de serviço compartilhada</span>
+
+  <p>Relatório da Delegacia de Repressão à Corrupção e aos Crimes Financeiros da Polícia Federal, produzido no âmbito da Operação Janus (Ministério Público de São Paulo), define o coronel da reserva <strong>Luiz Carlos Pereira Martins</strong> como <em>"grande amigo"</em> de Cléber Azevedo dos Santos e Robson Martins de Souza — dois empresários investigados por movimentar e ocultar recursos financeiros para integrantes do Primeiro Comando da Capital (PCC).</p>
+
+  <p>Publicações de gratificação no Diário Oficial do Estado mostram que Pereira Martins chefiou a assessoria militar da Secretaria da Segurança Pública de São Paulo entre outubro de 2014 e dezembro de 2016 — período que cobre a gestão de <strong>Alexandre de Moraes</strong> à frente da pasta (2015-2016), hoje ministro do Supremo Tribunal Federal, e a de seu sucessor Mágino Alves Barbosa, atualmente advogado no escritório de Viviane Barci, esposa de Moraes.</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="name">Luiz Carlos Pereira Martins</div>
+      <div class="role">Coronel da reserva PM · chefe da assessoria militar SSP-SP 2014-2016</div>
+    </div>
+    <div class="card">
+      <div class="name">Alexandre de Moraes</div>
+      <div class="role">Secretário SSP-SP 2015-2016 · hoje ministro STF</div>
+    </div>
+    <div class="card">
+      <div class="name">Cléber Azevedo · Robson M. de Souza</div>
+      <div class="role">Investigados · Operação Janus (MPSP)</div>
+    </div>
+  </div>
+
+  <h3>O que a PF documenta — e o que não documenta</h3>
+  <p>Mensagens analisadas mostram Pereira Martins tratando diretamente com os investigados sobre uso de colônias de lazer da AOPM e sobre veículos de luxo levados a eventos da associação, com contatos mantidos até novembro de 2023. O relatório não indicia o coronel nem afirma que as reservas tenham violado regras internas. A AOPM confirmou a amizade publicamente, mas negou qualquer indício de prática ilícita por parte do oficial.</p>
+
+  <div class="lacuna">
+    <span class="tag">lacuna investigativa</span>
+    Não há registro público de contato pessoal entre Moraes e Pereira Martins, nem de conhecimento das relações do coronel. A estrutura documentada é de proximidade institucional — mesma cadeia de comando da SSP — não de conluio pessoal. Permanece sem resposta quem indicou Pereira Martins para a chefia da assessoria militar e sob que critério de vetting.
+  </div>
+
+  <p><strong>Leitura estrutural (P10):</strong> a mesma cadeia de comando de segurança pública que produziu o ministro hoje operando como chokepoint judicial terminal em processos de repercussão nacional também produziu, na mesma pasta e no mesmo período, um oficial com rede social documentada de proximidade a operadores financeiros do PCC. O dado relevante é arquitetural, não biográfico: os mecanismos de vetting da segurança pública paulista não diferenciam, na prática, entre a cadeia que serve a captura político-institucional e a que serve a narcocleptocracia.</p>
+</section>
+
+<section id="visto">
+  <h2><span class="n">02</span>O visto da embaixadora e o visto negado a dois funcionários</h2>
+  <span class="badge confirmed">ev-confirmed (fatos)</span>
+  <span class="badge contested">ev-contested (motivo)</span>
+  <span class="badge pattern">P04 — arma midiática</span>
+
+  <p>Em 04/08/2026 o Departamento de Estado dos EUA revogou o visto da embaixadora do Brasil em Washington, <strong>Maria Luiza Ribeiro Viotti</strong>. A justificativa americana cita dois fatos que nenhum dos lados contesta: o Brasil não concedeu agrément ao indicado de Trump para embaixador em Brasília, Daniel Perez, desde sua indicação em 01/06/2026; e o Brasil negou vistos, entre 20 e 26/07/2026, a dois funcionários do Departamento de Estado — <strong>Riley M. Barnes</strong> (secretário-assistente, Bureau de Democracia, Direitos Humanos e Trabalho) e <strong>Samuel Samson</strong> (subsecretário-assistente do mesmo bureau).</p>
+
+  <p>A nota da Secretaria de Comunicação Social da Presidência classificou a viagem negada de Barnes e Samson como <em>"tentativa inaceitável de interferir no processo político nacional"</em>, ao afirmar que os dois planejavam "colocar em dúvida a integridade do sistema eleitoral brasileiro". O porta-voz do Departamento de Estado já havia negado publicamente essa caracterização em 25/07/2026, descrevendo a pauta da viagem como "integridade eleitoral e liberdade de expressão".</p>
+
+  <blockquote>"Os dois funcionários do governo norte-americano que tiveram seus vistos de entrada no Brasil negados planejavam visitar o País para colocar em dúvida a integridade do sistema eleitoral brasileiro, em tentativa inaceitável de interferir no processo político nacional." — Nota da Secom, 04/08/2026</blockquote>
+
+  <p>Nenhum documento primário — agenda oficial de viagem, comunicação interna, depoimento de terceiro — foi tornado público por qualquer dos dois lados para sustentar ou refutar a intenção real de Barnes e Samson.</p>
+</section>
+
+<section id="assimetria">
+  <h2><span class="n">03</span>A assimetria que importa</h2>
+  <p>O ponto não é apurar quem mente — isso exigiria prova de conhecimento da própria falsidade, que o corpus não possui. O ponto documentável é a <strong>assimetria de fundamentação</strong> entre as duas ações:</p>
+
+  <div class="asymmetry">
+    <div>
+      <h4>Ação dos EUA</h4>
+      <p>Revogar o visto da embaixadora é reação a fatos diretamente observáveis e não contestados por nenhuma das partes: agrément não concedido, vistos negados a dois funcionários. Não exige leitura de intenção de ninguém.</p>
+    </div>
+    <div>
+      <h4>Ação do Brasil</h4>
+      <p>Negar visto a Barnes e Samson — e apresentar essa negativa, em comunicado oficial de Estado, como fato consumado de "tentativa de interferência" — depende de uma inferência sobre a intenção de dois indivíduos, não documentada publicamente e diretamente contestada pelo lado acusado.</p>
+    </div>
+  </div>
+
+  <p>Essa é a leitura correta do padrão P04 aqui: não "dois lados mentindo por igual", mas dois lados fundamentando suas ações com graus completamente diferentes de exigência probatória — um deles apoiado em fato, o outro em leitura de mente do adversário, elevada a fato de Estado sem prova.</p>
+</section>
+
+<section id="fontes">
+  <h2><span class="n">04</span>Fontes primárias</h2>
+  <ul class="source-list">
+    <li><a href="https://www.metropoles.com/colunas/vinicius-passarelli/coronel-amigo-de-operador-do-pcc-cuidou-da-seguranca-de-moraes-na-ssp" target="_blank" rel="noopener">Coronel amigo de operador do PCC cuidou da segurança de Moraes na SSP</a><span class="outlet">Metrópoles · 04/08/2026</span></li>
+    <li><a href="https://vermelho.org.br/2026/07/22/mp-aponta-elo-entre-coroneis-da-pm-paulista-e-operadores-do-pcc/" target="_blank" rel="noopener">MP aponta elo entre coronéis da PM paulista e operadores do PCC</a><span class="outlet">Vermelho · 22/07/2026</span></li>
+    <li><a href="https://revistaforum.com.br/politica/coronel-operadores-do-pcc/" target="_blank" rel="noopener">Coronel reservava vagas exclusivas a operadores do PCC em clube da PM</a><span class="outlet">Revista Fórum · 28/07/2026</span></li>
+    <li><a href="https://www.reuters.com/world/americas/us-revokes-visa-brazilian-ambassador-over-diplomatic-dispute-official-says-2026-08-04/" target="_blank" rel="noopener">US revokes visa of Brazilian ambassador over diplomatic dispute</a><span class="outlet">Reuters · 04/08/2026</span></li>
+    <li><a href="https://revistaforum.com.br/politica/quem-sao-funcionarios-enviados-trump-contestar-eleicao/" target="_blank" rel="noopener">Quem são os funcionários enviados pelo governo Trump para contestar eleição brasileira</a><span class="outlet">Revista Fórum · 26/07/2026</span></li>
+    <li><a href="https://timesbrasil.com.br/mundo/eua-negam-que-missao-ao-brasil-buscasse-interferir-nas-eleicoes/" target="_blank" rel="noopener">EUA negam que missão ao Brasil buscasse interferir nas eleições</a><span class="outlet">Times Brasil / CNBC · 25/07/2026</span></li>
+    <li><a href="https://www.folhavitoria.com.br/politica/planalto-acusa-eua-de-interferencia-eleitoral-e-repudia-cancelamento-de-visto-de-embaixadora/" target="_blank" rel="noopener">Planalto acusa EUA de interferência eleitoral e repudia cancelamento de visto</a><span class="outlet">Folha Vitória / Secom · 04/08/2026</span></li>
+  </ul>
+</section>
+
+<footer>
+  lawfare-timeline · Artes do Sul Desenvolvimento Web · AI Nativo Brasil · @araguaci<br>
+  CC0 1.0 Universal — copie, adapte, distribua sem restrição
+</footer>
+
+<div id="gotop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
+
+<script>
+  // scroll-spy
+  const links = document.querySelectorAll('#navbar a');
+  const sections = Array.from(links).map(l => document.querySelector(l.getAttribute('href')));
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector('#navbar a[href="#' + e.target.id + '"]');
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  sections.forEach(s => s && io.observe(s));
+
+  // gotop button
+  const gotop = document.getElementById('gotop');
+  window.addEventListener('scroll', () => {
+    gotop.classList.toggle('show', window.scrollY > 500);
+  });
+</script>
+
+</body>
+</html>

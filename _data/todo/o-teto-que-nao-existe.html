@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Teto Que Não Existe — Penduricalhos, Supersalários e o Custo da Indenização Negada</title>
+<meta name="description" content="R$ 136 bilhões em penduricalhos no Judiciário em 7 anos. R$ 40 mil de indenização, quando concedida, para quem passou anos preso por erro do Estado. Corpus lawfare-timeline.">
+<link rel="canonical" href="https://gosurf.site/o-teto-que-nao-existe">
+<meta property="og:type" content="website">
+<meta property="og:title" content="O Teto Que Não Existe — lawfare-timeline">
+<meta property="og:description" content="R$ 136 bi em penduricalhos em 7 anos vs. o teto que nunca chega para quem processa o Estado.">
+<meta property="og:locale" content="pt_BR">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Crimson+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#080c10; --surface:#0d1319; --surface2:#131b22; --border:#1e2934;
+    --text:#e8edf2; --muted:#8896a3; --accent:#c53d4f; --gold:#d4af5a;
+    --ok:#4a9d6e; --font-scale:1;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--text);font-family:'Crimson Pro',serif;font-size:calc(17px*var(--font-scale));line-height:1.65;}
+  a{color:var(--gold);}
+  #navbar{position:sticky;top:0;z-index:100;background:rgba(8,12,16,.92);backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--border);display:flex;gap:4px;padding:14px 24px;flex-wrap:wrap;align-items:center;}
+  #navbar .brand{font-family:'Syne',sans-serif;font-weight:800;font-size:14px;margin-right:auto;color:var(--text);}
+  #navbar .brand span{color:var(--accent);}
+  #navbar a{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:6px;transition:.2s;}
+  #navbar a:hover,#navbar a.active{color:var(--text);background:var(--surface2);}
+
+  header.hero{padding:70px 24px 50px;text-align:center;max-width:920px;margin:0 auto;}
+  header.hero .kicker{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;}
+  header.hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.1;}
+  header.hero h1 em{font-style:normal;color:var(--gold);}
+  header.hero .subtitle{margin-top:20px;font-size:1.15rem;color:var(--muted);max-width:680px;margin-left:auto;margin-right:auto;}
+  header.hero .meta{margin-top:26px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);}
+  header.hero .backlink{margin-top:18px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;}
+
+  section{max-width:1080px;margin:0 auto;padding:56px 24px;}
+  section h2{font-family:'Syne',sans-serif;font-weight:800;font-size:1.7rem;margin-bottom:8px;}
+  section h2 span{color:var(--accent);}
+  .lede{color:var(--muted);font-size:1.05rem;max-width:760px;margin-bottom:34px;}
+
+  .bignum-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:40px;}
+  .bignum{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:26px;text-align:center;}
+  .bignum .num{font-family:'Syne',sans-serif;font-weight:800;font-size:2.1rem;color:var(--accent);line-height:1;}
+  .bignum .label{margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.04em;}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:22px;}
+  .card .tag{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+    display:inline-block;padding:3px 9px;border-radius:20px;margin-bottom:12px;background:rgba(197,61,79,.15);color:var(--accent);}
+  .card.watch .tag{background:rgba(212,175,90,.15);color:var(--gold);}
+  .card h3{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin-bottom:10px;line-height:1.3;}
+  .card p{color:var(--muted);font-size:.93rem;}
+  .card .fact{font-family:'IBM Plex Mono',monospace;font-size:.8rem;color:var(--muted);border-top:1px solid var(--border);padding-top:10px;margin-top:12px;}
+  .card .fact b{color:var(--text);}
+
+  .callout{background:var(--surface2);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:10px;padding:24px 26px;margin:28px 0;}
+  .callout .label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+  .callout p{margin:0;}
+
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin:32px 0;}
+  @media(max-width:760px){.split{grid-template-columns:1fr;}}
+  .split .col{background:var(--surface);padding:28px;}
+  .split .col.against{border-top:3px solid var(--accent);}
+  .split .col.for{border-top:3px solid var(--ok);}
+  .split .col h3{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px;}
+  .split .col.against h3{color:var(--accent);}
+  .split .col.for h3{color:var(--ok);}
+  .split .col .big{font-family:'Syne',sans-serif;font-weight:800;font-size:2rem;line-height:1.05;margin-bottom:6px;}
+  .split .col .sub{color:var(--muted);font-size:.92rem;}
+
+  footer{max-width:1080px;margin:0 auto;padding:50px 24px 90px;border-top:1px solid var(--border);
+    font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);}
+  footer .cc0{margin-top:14px;line-height:1.8;}
+  footer a{color:var(--muted);}
+  #gotop{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;
+    background:var(--surface2);border:1px solid var(--border);color:var(--text);cursor:pointer;
+    display:none;align-items:center;justify-content:center;font-size:18px;z-index:99;}
+  #gotop.show{display:flex;}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="brand">lawfare<span>·</span>timeline</div>
+  <a href="#numeros">Números</a>
+  <a href="#resistencia">Resistência ao Teto</a>
+  <a href="#comparacao">Comparação</a>
+  <a href="#leitura">Leitura</a>
+</nav>
+
+<header class="hero">
+  <div class="kicker">República Sequestrada · lawfare-timeline · dossiê complementar</div>
+  <h1>O teto que <em>não existe</em></h1>
+  <p class="subtitle">R$ 136 bilhões em penduricalhos no Judiciário em 7 anos. Enquanto isso, quem processa o Estado por anos de prisão indevida disputa, no melhor dos casos, R$ 40 mil — e só depois de recorrer.</p>
+  <div class="meta">CC0 1.0 · domínio público · complementa "Dois Pesos, Duas Medidas"</div>
+  <div class="backlink"><a href="dois-pesos-duas-medidas.html">← Dois Pesos, Duas Medidas</a></div>
+</header>
+
+<section id="numeros">
+  <h2>Os <span>números</span></h2>
+  <p class="lede">Todos os valores abaixo já constam confirmados no corpus lawfare-timeline (levantamentos de Transparência Brasil, CNJ e imprensa especializada, 2024–2026).</p>
+
+  <div class="bignum-grid">
+    <div class="bignum"><div class="num">R$ 136 bi</div><div class="label">em penduricalhos no Judiciário — 7 anos (id_1024)</div></div>
+    <div class="bignum"><div class="num">R$ 20 bi</div><div class="label">em supersalários da elite de servidores — 6 anos (id_1011)</div></div>
+    <div class="bignum"><div class="num">R$ 30 bi</div><div class="label">em penduricalhos — outro levantamento, 8 anos (id_1023)</div></div>
+    <div class="bignum"><div class="num">616</div><div class="label">magistrados recebendo até R$ 495 mil/mês em 7 tribunais (id_1634)</div></div>
+    <div class="bignum"><div class="num">63.816</div><div class="label">casos de supersalários acima de R$ 100 mil identificados (id_1056)</div></div>
+    <div class="bignum"><div class="num">49,3%</div><div class="label">de aumento no custo dos supersalários em 2024 (id_1158/1163)</div></div>
+  </div>
+</section>
+
+<section id="resistencia">
+  <h2>A <span>resistência</span> ao próprio teto</h2>
+  <p class="lede">Em março de 2026 o STF limitou penduricalhos a 35% do teto constitucional. A reação institucional que se seguiu é, em si, um dado do corpus.</p>
+
+  <div class="grid">
+    <div class="card watch">
+      <span class="tag">Manobra identificada</span>
+      <h3>CNJ e CNMP recriam penduricalho que o próprio STF havia extinto</h3>
+      <p>Em 09/04/2026, Resolução Conjunta nº 14/2026 do CNJ/CNMP criou novos auxílios extrateto — incluindo auxílio-moradia e gratificação de primeira infância — que o STF havia explicitamente extinto em 25/03/2026.</p>
+      <div class="fact"><span>Corpus</span><b>id_1444</b></div>
+    </div>
+    <div class="card watch">
+      <span class="tag">Manobra barrada</span>
+      <h3>STF proíbe reclassificações e bônus criados para driblar o teto</h3>
+      <p>Dino, Zanin e Gilmar Mendes identificaram e proibiram práticas administrativas de tribunais para contornar o limite: reclassificação de jurisdições como "difícil provimento", bônus por acúmulo de função, mudança de cargos.</p>
+      <div class="fact"><span>Corpus</span><b>id_1447</b></div>
+    </div>
+    <div class="card watch">
+      <span class="tag">Escala do problema</span>
+      <h3>Sete tribunais pagaram até R$ 495 mil/mês, mesmo após o teto</h3>
+      <p>Folha revela em jul/2026 que DF, GO, MA, PR, RJ, RN e RO pagaram salários muito acima do teto de R$ 46,4 mil sob fundamento da própria resolução do CNJ/CNMP — Moraes e Dino deram 48h para explicações.</p>
+      <div class="fact"><span>Corpus</span><b>id_1634</b></div>
+    </div>
+  </div>
+</section>
+
+<section id="comparacao">
+  <h2>A <span>comparação</span> que importa</h2>
+  <div class="split">
+    <div class="col against">
+      <h3>Quando o cidadão pede reparação</h3>
+      <div class="big">R$ 40 mil</div>
+      <div class="sub">indenização concedida a Severino (PB) — depois de 2 instâncias, após 1ª instância negar e ainda cobrar dele 10% de custas — para reparar prisão por homonímia</div>
+    </div>
+    <div class="col for">
+      <h3>Quando o próprio sistema se paga</h3>
+      <div class="big">R$ 136 bi</div>
+      <div class="sub">em penduricalhos pagos pelo próprio Judiciário a si mesmo em 7 anos — sem necessidade de qualquer um deles processar ninguém</div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <div class="label">Rigor exigido</div>
+    <p>Isso não é uma comparação matemática direta — penduricalhos são despesa orçamentária corrente, indenização é reparação individual por dano específico. O ponto não é equivaler os dois valores, é notar a disparidade de esforço institucional: o STF levou anos para sequer regulamentar um teto para os próprios penduricalhos, e a regulamentação segue sendo contornada por resoluções administrativas — enquanto vítimas de erro estatal individual enfrentam, sistematicamente, a exigência de prova de má conduta específica e recursos custosos só para obter valores modestos.</p>
+  </div>
+</section>
+
+<section id="leitura">
+  <h2>Leitura <span>estrutural</span></h2>
+  <p class="lede">Este dossiê não afirma que penduricalhos "financiam" a negativa de indenizações — não há relação causal direta demonstrada, e essa non-conexão deve ficar clara. O que os dois fenômenos compartilham é uma variável estrutural: <b>o custo de acionar o sistema contra si mesmo</b>. Para o próprio Judiciário se autolimitar, foram necessárias decisões sucessivas do STF, resoluções, prazos de 48h e ainda assim resistência administrativa documentada (id_1444, id_1447). Para um cidadão comum obter reparação por anos de prisão indevida, o padrão dominante na amostra (ver "Dois Pesos, Duas Medidas") é a negativa em 1ª instância, às vezes com cobrança de custas — revertida, quando revertida, só em instância superior.</p>
+</section>
+
+<footer>
+  <div>lawfare-timeline · República Sequestrada · gosurf.site</div>
+  <div class="cc0">
+    CC0 1.0 Universal — domínio público total. Copie, adapte, distribua sem restrição.<br>
+    Ver também: <a href="dois-pesos-duas-medidas.html">Dois Pesos, Duas Medidas</a> · <a href="https://lawfare-timeline.vercel.app" target="_blank" rel="noopener">lawfare-timeline.vercel.app</a> · <a href="https://gosurf.site" target="_blank" rel="noopener">gosurf.site</a>
+  </div>
+</footer>
+
+<button id="gotop" aria-label="Voltar ao topo" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+  const links = document.querySelectorAll('#navbar a');
+  const secs = Array.from(links).map(a => document.querySelector(a.getAttribute('href')));
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const idx = secs.indexOf(e.target);
+        if (idx >= 0) links[idx].classList.add('active');
+      }
+    });
+  }, { rootMargin: '-40% 0px -50% 0px' });
+  secs.forEach(s => s && obs.observe(s));
+  const gotop = document.getElementById('gotop');
+  window.addEventListener('scroll', () => gotop.classList.toggle('show', window.scrollY > 500));
+</script>
+
+</body>
+</html>

@@ -429,14 +429,38 @@
           ],
           "status": "confirmed",
           "notes": "Merge todo 2026-07-29: main IDs 1777-1796."
+        },
+        {
+          "range": [
+            1797,
+            1826
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-08-04: main IDs 1797-1826."
+        },
+        {
+          "range": [
+            1827,
+            1835
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-08-05: main IDs 1827-1835."
+        },
+        {
+          "range": [
+            1836,
+            1838
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-08-05: main IDs 1836-1838."
         }
       ],
-      "last_id": 1796,
-      "last_jekyll_published": 1796,
+      "last_id": 1838,
+      "last_jekyll_published": 1838,
       "last_produced": 1770,
-      "next_available": 1797,
+      "next_available": 1839,
       "merge_queue": [],
-      "last_confirmed": 1796,
+      "last_confirmed": 1838,
       "last_session_produced": 1770
     },
     "thematic": {
@@ -1543,22 +1567,40 @@
           "notes": "Dossiê HTML gosurf.site/dragao-onca-santa-catarina · main IDs 1764–1770 · backfill CEEE-T 1763"
         },
         {
-          "id": 1765,
+          "id": 247,
           "status": "confirmed",
-          "topic": "T-1765 (lawfare-batch-vorcaro-sigilo-100anos-1763.json)",
-          "artifact": "2026-07-27-sintese-estrutural-sigilo-de-100-anos-como-padrao-p10-confirmado-vorcaro-executivo-e-carec.md",
-          "notes": "Estudo Jekyll _posts/estudos/2026-07-27-sintese-estrutural-sigilo-de-100-anos-como-padrao-p10-confirmado-vorcaro-executivo-e-carec.md"
+          "topic": "T-247 (lawfare-thematic-T247-dedo-na-balanca-t2-video-ia.json)",
+          "artifact": "2026-07-25-episodio-video-de-ia-de-bolsonaro-na-convencao-do-pl-detona-disputa-de-competencia-stftse-.md",
+          "notes": "Estudo Jekyll _posts/estudos/2026-07-25-episodio-video-de-ia-de-bolsonaro-na-convencao-do-pl-detona-disputa-de-competencia-stftse-.md"
         },
         {
-          "id": 1766,
+          "id": 248,
           "status": "confirmed",
-          "topic": "T-1766 (lawfare-batch-salles-patrimonio-tse-1766.json)",
-          "artifact": "2026-07-28-ricardo-salles-registra-candidatura-ao-senado-por-sp-e-declara-ao-tse-patrimonio-de-r-905-.md",
-          "notes": "Estudo Jekyll _posts/estudos/2026-07-28-ricardo-salles-registra-candidatura-ao-senado-por-sp-e-declara-ao-tse-patrimonio-de-r-905-.md"
+          "topic": "ADI cartórios BA — nota STF P04b (ex-id 1820 editorial)",
+          "artifact": "2026-08-03-stf-defende-publicamente-tramitacao-de-14-anos-da-adi-dos-cartorios-da-bahia-como-decorren.md",
+          "patterns": [
+            "P04b",
+            "P03"
+          ],
+          "notes": "Renumerado de T-1820 (colisão main track). Main 1819 = IEPTBA; gap intencional 1820 no lawfare.json."
+        },
+        {
+          "id": 249,
+          "status": "confirmed",
+          "topic": "T-249 (lawfare-batch-lulinha-sorteio-1763-T247.json)",
+          "artifact": "2026-08-04-sorteio-correto-resultado-sensivel-quando-a-distribuicao-aleatoria-nao-resolve-o-conflito-.md",
+          "notes": "Estudo Jekyll _posts/estudos/2026-08-04-sorteio-correto-resultado-sensivel-quando-a-distribuicao-aleatoria-nao-resolve-o-conflito-.md"
+        },
+        {
+          "id": 250,
+          "status": "confirmed",
+          "topic": "T-250 — Dois pesos, duas medidas (erro judiciário / indenização assimétrica)",
+          "artifact": "2026-08-05-dois-pesos-duas-medidas-erro-judiciario-indenizacao-assimetrica.md",
+          "notes": "Síntese id_1511-1513 + id_1834-1835; dossiê dois-pesos-duas-medidas.html. Distinto de T-248 (cartórios BA)."
         }
       ],
-      "last_id": 1766,
-      "next_available": 1767,
+      "last_id": 250,
+      "next_available": 251,
       "pending": [],
       "pending_notes": {}
     },
@@ -1605,12 +1647,12 @@
     }
   },
   "sync_status": {
-    "main_track_last_sync": "2026-07-29",
-    "thematic_track_last_sync": "2026-07-29",
+    "main_track_last_sync": "2026-08-05",
+    "thematic_track_last_sync": "2026-08-05",
     "dragao_onca_series_sync": "2026-07-27T12:00:00-03:00",
     "ids_confirmed_total": {
-      "main_track": "1796 (Jekyll + lawfare.json)",
-      "thematic_track": 1766
+      "main_track": "1838 (Jekyll + lawfare.json)",
+      "thematic_track": 250
     },
     "ids_pending_production": [],
     "artifacts_without_thematic_id": [],

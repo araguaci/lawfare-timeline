@@ -1,0 +1,95 @@
+{
+  "id": "T-247",
+  "date": "2026-07-25",
+  "date_precision": "day",
+  "title": "Episódio: vídeo de IA de Bolsonaro na convenção do PL detona disputa de competência STF×TSE sobre deepfake eleitoral",
+  "summary": "Em 25/07/2026, a convenção nacional do PL que oficializou a pré-candidatura de Flávio Bolsonaro à Presidência exibiu vídeo com simulação de imagem e voz de Jair Bolsonaro (gerado por IA), no qual declara apoio ao filho e critica sua prisão. Bolsonaro está em prisão domiciliar humanitária, com direitos políticos suspensos e cautelares que proíbem manifestação político-eleitoral por terceiros. Em 28/07/2026, Alexandre de Moraes determinou que a defesa de Bolsonaro se manifeste em 48h sobre autorização do uso de imagem e voz. PT e Federação Brasil da Esperança acionaram tanto o STF (Moraes, alegando descumprimento de cautelares) quanto o TSE (Kássio Nunes Marques, alegando propaganda eleitoral antecipada e uso irregular de IA/deepfake). Paralelamente, em 16/07/2026, o TSE havia formalizado parcerias com sete plataformas digitais (Google, Meta, X, TikTok, Telegram, Kwai, LinkedIn) e termo de adesão de três empresas de IA generativa (OpenAI, Anthropic, ElevenLabs) ao Programa Permanente de Enfrentamento à Desinformação. Em reportagem de 29/07/2026 (coluna Bela Megale), ministros do STF sinalizaram que podem agir caso o TSE não puna o vídeo, motivados pela declaração do presidente do TSE de que uso de IA é lícito desde que não prejudique alguém.",
+  "category": "chokepoint_judicial",
+  "actors": [
+    {
+      "name": "Alexandre de Moraes",
+      "role": "Relator no STF — determinação de manifestação em 48h sobre autorização do vídeo",
+      "institution": "STF"
+    },
+    {
+      "name": "Jair Bolsonaro",
+      "role": "Imagem e voz simuladas por IA — em prisão domiciliar humanitária, direitos políticos suspensos",
+      "institution": "N/A"
+    },
+    {
+      "name": "Flávio Bolsonaro",
+      "role": "Pré-candidato à Presidência oficializado na convenção; advogado constituído do pai",
+      "institution": "PL"
+    },
+    {
+      "name": "Kássio Nunes Marques",
+      "role": "Presidente do TSE — relator da ação sobre propaganda eleitoral antecipada e deepfake",
+      "institution": "TSE"
+    },
+    {
+      "name": "PT / Federação Brasil da Esperança",
+      "role": "Autores das representações no STF e no TSE",
+      "institution": "PT"
+    }
+  ],
+  "institutions": [
+    "STF",
+    "TSE",
+    "PL"
+  ],
+  "legal_basis": [
+    "Medidas cautelares da condenação criminal de Bolsonaro — restrição a manifestação político-eleitoral por terceiros",
+    "Resolução TSE sobre uso de conteúdo sintético/IA em propaganda eleitoral — exige aviso de simulação e veda conteúdo inverídico ou desequilibrante"
+  ],
+  "patterns": [
+    "P03",
+    "P04",
+    "P04b",
+    "P10"
+  ],
+  "evidence_status": "ev-confirmed",
+  "sources": [
+    {
+      "title": "Cobertura do despacho de Moraes sobre o vídeo de IA de Bolsonaro",
+      "url": "https://agenciabrasil.ebc.com.br/",
+      "outlet": "Agência Brasil",
+      "date": "2026-07-28"
+    },
+    {
+      "title": "Cobertura do processo distribuído a Kássio Nunes Marques no TSE",
+      "url": "https://g1.globo.com/",
+      "outlet": "G1",
+      "date": "2026-07-28"
+    },
+    {
+      "title": "TSE e plataformas digitais firmam parcerias para ampliar combate à desinformação",
+      "url": "https://www.tse.jus.br/comunicacao/noticias",
+      "outlet": "TSE",
+      "date": "2026-07-16"
+    },
+    {
+      "title": "STF se prepara para agir caso vídeo de Bolsonaro com IA não seja punido pelo TSE",
+      "url": "https://oglobo.globo.com/blogs/bela-megale/",
+      "outlet": "O Globo — coluna Bela Megale",
+      "date": "2026-07-29"
+    }
+  ],
+  "result": "Defesa de Bolsonaro intimada a se manifestar em 48h; processos em curso simultâneo no STF e no TSE sobre o mesmo fato; ministros do STF sinalizam publicamente disposição de agir antes de decisão formal do TSE.",
+  "connections": [
+    "id_1000_range_inq4781_origem",
+    "id_1777"
+  ],
+  "status": "em_andamento",
+  "lacuna_investigativa": "Desfecho da manifestação da defesa (autorização ou não) ainda não ocorrido nesta data. Não está estabelecido se a sinalização preventiva dos ministros do STF se concretizará em ação antes de decisão do TSE, nem qual seria o instrumento processual para isso, dado que o STF atua aqui na esfera de execução penal, não eleitoral.",
+  "ponto_de_inflexao": "A declaração pública do presidente do TSE de que o uso de IA é lícito 'desde que não prejudique alguém' é o gatilho explícito da preocupação dos ministros do STF — não o vídeo em si, que na avaliação dos próprios magistrados não teria, isoladamente, potencial para justificar cassação de chapa.",
+  "analise": "Este episódio documenta uma configuração institucional rara: o STF sinalizando publicamente, antes de qualquer decisão formal, desconfiança preventiva sobre a disposição do TSE de aplicar sua própria norma. Não se trata de usurpação de competência por decisão unilateral consumada — é uma ameaça declarada de substituição funcional, condicionada ao desempenho de outro tribunal. Isso estende o padrão P10 (infraestrutura de serviço compartilhada) para um novo nível: dois tribunais formalmente distintos, cada um com competência própria sobre a mesma matéria de fato (uso eleitoral de conteúdo sintético), com um deles anunciando preventivamente que absorverá a função do outro caso julgue seu rigor insuficiente. A armadilha estrutural, já observada no caso do vídeo (se Bolsonaro autorizou, viola cautelar penal; se não autorizou, Flávio/PL respondem por deepfake), se soma agora a uma segunda camada de armadilha institucional: qualquer que seja a decisão do TSE, o STF já se posicionou como instância de reserva insatisfeita com a possibilidade de resultado brando. A adesão de empresas de IA generativa (incluindo a Anthropic, desenvolvedora deste sistema) ao programa do TSE via termo de adesão — mecanismo mais frouxo que os memorandos de entendimento assinados pelas redes sociais — documenta a entrada formal de provedores de modelos de linguagem no aparato de fiscalização eleitoral brasileiro, capítulo novo sem precedente direto no corpus até esta sessão.",
+  "nota_simetria": "Perspectiva crítica: o uso de IA generativa em vídeo de convenção partidária pode não configurar propaganda eleitoral antecipada em sentido técnico, e o vídeo alertava explicitamente sobre sua natureza simulada nos primeiros segundos — o que enfraquece a caracterização de intenção de engano exigida pela norma do TSE. Perspectiva favorável à atuação: as restrições às manifestações político-eleitorais de Bolsonaro (diretas ou por terceiros) são objeto de cautelar sob relatoria do STF, distinta da competência do TSE sobre propaganda antecipada — a sobreposição de jurisdição é inerente ao fato de o mesmo evento tocar simultaneamente uma condenação criminal com cautelares em execução e uma regra eleitoral autônoma, não indica necessariamente conflito de competência mal resolvido.",
+  "_meta": {
+    "batch_id": "sessao-2026-07-29-dedo-na-balanca-t2-episodio",
+    "generated": "2026-07-29",
+    "thematic_id": "T-247",
+    "serie": "Dedo na Balança — Temporada 2",
+    "destino": "_data/todo/ — processar via merge_todo_pending.py"
+  },
+  "_source_file": "lawfare-thematic-T247-dedo-na-balanca-t2-video-ia.json"
+}

@@ -1,0 +1,151 @@
+{
+  "_meta": {
+    "gerado_em": "2026-08-05",
+    "sessao": "claude.ai — triagem editorial, verificação web obrigatória aplicada",
+    "status": "PENDENTE — aguardando validação de Araguaci antes de merge_todo_pending.py",
+    "observacao_metodologica": "Narrativa original do usuário continha inversão factual (PF pediu SORTEIO para EVITAR Mendonça, não para lhe dar acesso continuado) e um salto inferencial não sourced ('Lula terá acesso total ao material', 'contenção prévia de danos'). Entrada abaixo reflete apenas o que é ev-confirmed pelas fontes citadas. O campo 'patterns' foi deixado vazio no main track — o caso não se encaixa limpo em P01–P12 e não deve ser forçado; ver 'analise' para proposta de candidato a novo padrão."
+  },
+  "main": [
+    {
+      "id": 1833,
+      "date": "2026-08-04",
+      "date_precision": "day",
+      "title": "PF solicita três inquéritos contra Fábio Luís Lula da Silva (Lulinha); sorteio eletrônico distribui dois a André Mendonça e um a Flávio Dino",
+      "summary": "Entre 24/07 e 03/08/2026, a Polícia Federal solicitou ao STF três inquéritos contra Fábio Luís Lula da Silva (Lulinha), todos por suspeita de tráfico de influência. Em cada pedido, PF e PGR requereram distribuição por sorteio eletrônico — não prevenção ao ministro André Mendonça, relator da Operação Sem Desconto (fraudes no INSS) — alegando ausência de conexão direta com aquela investigação. Alexandre de Moraes, presidente em exercício do STF, acatou o parecer da PGR (27/07) e determinou sorteio. O sorteio recaiu sobre Mendonça no 1º pedido (autorizado 30/07 — suspeita de tráfico de influência via cannabis medicinal/Ministério da Saúde, citando a lobista Roberta Luchsinger e Antonio Carlos Camilo Antunes, 'Careca do INSS') e no 2º pedido (autorizado 31/07 — relação com o empresário Cléber Ribas de Oliveira, sócio da 3Structure IT Ltda, suspeita de tráfico de influência para contratos com a Dataprev). O 3º pedido foi sorteado para Flávio Dino, indicado ao STF por Lula, ex-ministro da Justiça e ex-diretor-geral da PF no governo Lula 3; Dino autorizou o inquérito em despacho assinado 03/08 (tornado público 04/08) — suspeita de tráfico de influência favorecendo contratos da 3Structure IT com a União (R$ 81 milhões contratados, R$ 46 milhões pagos), novamente citando Luchsinger. No mesmo despacho, Dino autorizou uma quarta apuração, separada, sobre vazamento ilegal de dados sigilosos dos inquéritos — pedido feito pela própria defesa de Lulinha, não por Lula.",
+      "category": "mecanismo_sistemico",
+      "actors": [
+        {
+          "name": "Fábio Luís Lula da Silva (Lulinha)",
+          "role": "investigado — suspeita de tráfico de influência em 3 inquéritos distintos",
+          "institution": "n/a — empresário"
+        },
+        {
+          "name": "André Mendonça",
+          "role": "relator sorteado — inquéritos 1 e 2; também relator da Operação Sem Desconto (INSS)",
+          "institution": "STF — indicado por Jair Bolsonaro"
+        },
+        {
+          "name": "Flávio Dino",
+          "role": "relator sorteado — inquérito 3 e apuração de vazamentos",
+          "institution": "STF — indicado por Luiz Inácio Lula da Silva"
+        },
+        {
+          "name": "Alexandre de Moraes",
+          "role": "presidente em exercício do STF — determinou distribuição por sorteio conforme parecer da PGR",
+          "institution": "STF"
+        },
+        {
+          "name": "Roberta Luchsinger",
+          "role": "lobista/empresária citada como suspeita em dois dos três inquéritos",
+          "institution": "n/a"
+        }
+      ],
+      "institutions": [
+        "STF",
+        "Polícia Federal",
+        "PGR",
+        "Ministério da Saúde",
+        "Dataprev"
+      ],
+      "legal_basis": [
+        "RISTF — distribuição por sorteio eletrônico entre ministros (dispositivo específico não detalhado nas fontes consultadas)"
+      ],
+      "patterns": [],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {
+          "title": "André Mendonça assume inquérito de Lulinha após sorteio no STF",
+          "url": "https://bpmoney.com.br/politica/andre-mendonca-assume-inquerito-de-lulinha-apos-sorteio-no-stf/",
+          "outlet": "BPMoney",
+          "date": "2026-08-01"
+        },
+        {
+          "title": "PF tentou evitar que investigação de Lulinha fosse para André Mendonça",
+          "url": "https://m.imirante.com/noticias/brasil/2026/07/31/ipolitica-pf-tentou-evitar-que-investigacao-de-lulinha-fosse-para-andre-mendonca",
+          "outlet": "Imirante.com",
+          "date": "2026-07-31"
+        },
+        {
+          "title": "Mendonça autoriza segundo inquérito da PF contra Lulinha",
+          "url": "https://sbtnews.sbt.com.br/noticia/politica/mendonca-autoriza-segundo-inquerito-da-pf-contra-lulinha",
+          "outlet": "SBT News",
+          "date": "2026-07-31"
+        },
+        {
+          "title": "PF tentou diluir poder de Mendonça sobre Lulinha, mas não teve sorte",
+          "url": "https://www.metropoles.com/colunas/igor-gadelha/pf-tentou-diluir-poder-de-mendonca-sobre-lulinha-mas-nao-teve-sorte",
+          "outlet": "Metrópoles (Igor Gadelha)",
+          "date": "2026-08-04"
+        },
+        {
+          "title": "Flávio Dino autoriza abertura de 3º inquérito contra Lulinha por tráfico de influência",
+          "url": "https://www.otempo.com.br/politica/judiciario/2026/8/4/flavio-dino-autoriza-abertura-de-3-inquerito-contra-lulinha-por-trafico-de-influencia",
+          "outlet": "O Tempo",
+          "date": "2026-08-04"
+        },
+        {
+          "title": "Flávio Dino autoriza PF a abrir terceiro inquérito sobre Lulinha",
+          "url": "https://www.diariodepernambuco.com.br/politica/2026/08/11720328-flavio-dino-autoriza-pf-a-abrir-terceiro-inquerito-sobre-lulinha.html",
+          "outlet": "Diario de Pernambuco",
+          "date": "2026-08-04"
+        },
+        {
+          "title": "DINO SERÁ O RELATOR DE 3° PEDIDO DA PF DE INQUÉRITO CONTRA LULINHA",
+          "url": "https://www.erivanjustino.com.br/2026/08/dino-sera-o-relator-de-3-pedido-da-pf.html",
+          "outlet": "Blog do Erivan Justino",
+          "date": "2026-08-04"
+        }
+      ],
+      "result": "Três inquéritos abertos e autorizados contra Lulinha (dois sob Mendonça, um sob Dino); quarta apuração aberta sobre vazamentos de dados sigilosos, sob Dino.",
+      "connections": [],
+      "status": "confirmado",
+      "lacuna_investigativa": "O ordenamento não prevê impedimento automático para ministro indicado por presidente em investigação que atinge filho do indicante — a hipótese de impedimento cobre parentesco entre julgador e parte, não julgador e nomeante. Não há, nas fontes consultadas, indicação de que Dino tenha considerado ou seja obrigado a considerar autoimpedimento. Também não está esclarecido se/como Mendonça repassará a Dino o material já colhido na Operação Sem Desconto que cita Lulinha, dado que os processos tramitam sob sigilo e são formalmente desconectados por decisão da própria PGR.",
+      "ponto_de_inflexao": "N/A — os três inquéritos foram autorizados a avançar, não bloqueados. Ponto de inflexão pendente de observação futura: eventual pedido de apensamento, redistribuição por conexão, ou arquivamento.",
+      "analise": "O procedimento formal foi o mais rigoroso disponível — sorteio eletrônico, não prevenção, com PF e PGR pedindo ativamente por essa rota para evitar concentração em Mendonça. O resultado, ainda assim, produziu uma configuração estruturalmente sensível: dois relatores distintos, indicados por presidentes de campos opostos (Mendonça por Bolsonaro, Dino por Lula), dividindo inquéritos correlatos contra o filho do presidente em exercício — sem que a origem da indicação de Dino constitua, por si, causa de impedimento no ordenamento vigente. Isso não é violação de juiz natural (o sorteio correu conforme regra) nem P02/P03 no sentido já tipificado no corpus. É um caso-limite que documenta como a lacuna estrutural persiste mesmo quando o mecanismo processual funciona corretamente — candidato a padrão novo (provisório: 'conflito de interesse por cadeia de indicação, sem mecanismo de impedimento correspondente'), precisando de pelo menos mais dois casos-âncora fora do contexto Lula/Lulinha para promoção a P-código confirmado. Recomendo não forçar em P01–P12 existentes."
+    }
+  ],
+  "thematic": [
+    {
+      "id": "T-249",
+      "date": "2026-08-04",
+      "date_precision": "day",
+      "title": "Sorteio correto, resultado sensível: quando a distribuição aleatória não resolve o conflito de interesse por cadeia de indicação",
+      "summary": "Síntese analítica do caso Lulinha/Mendonça/Dino como estudo de caso sobre os limites do sorteio eletrônico como salvaguarda de imparcialidade quando a composição da própria corte reflete indicações presidenciais recentes e ativas.",
+      "category": "analise_editorial",
+      "actors": [
+        {
+          "name": "André Mendonça",
+          "role": "relator — indicado por Jair Bolsonaro",
+          "institution": "STF"
+        },
+        {
+          "name": "Flávio Dino",
+          "role": "relator — indicado por Luiz Inácio Lula da Silva",
+          "institution": "STF"
+        }
+      ],
+      "institutions": [
+        "STF"
+      ],
+      "legal_basis": [],
+      "patterns": [],
+      "evidence_status": "ev-inference",
+      "sources": [
+        {
+          "title": "ver id_1763 — mesmas fontes primárias",
+          "url": "",
+          "outlet": "",
+          "date": "2026-08-04"
+        }
+      ],
+      "result": "N/A — entrada analítica, não factual.",
+      "connections": [
+        "id_1833"
+      ],
+      "status": "analise_editorial",
+      "lacuna_investigativa": "Quantos outros casos no corpus envolvem ministro relator indicado por presidente cuja família ou aliados próximos são objeto direto do inquérito sob sua relatoria? Levantamento sistemático necessário para avaliar se isso constitui padrão recorrente ou caso isolado.",
+      "ponto_de_inflexao": "N/A",
+      "analise": "O caso é analiticamente valioso justamente por não caber nas categorias já mapeadas do corpus (P01–P12): não há vício processual (P01), não há inversão investigador-investigado (P02), não há bloqueio (P03), não há uso de mídia (P04). A PF e a PGR, aliás, agiram no sentido oposto à captura — pedindo ativamente a rota mais neutra disponível. O resultado documenta um problema estrutural diferente: a imparcialidade formal (sorteio) não elimina a imparcialidade material quando o universo de sorteáveis é composto por indicações políticas recentes de ambos os campos em disputa. Registrar como candidato a padrão novo, não forçar em taxonomia existente — consistente com o princípio metodológico de não force-fit."
+    }
+  ]
+}

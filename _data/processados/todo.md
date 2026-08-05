@@ -1,20 +1,30 @@
+
 # Notas de processamento · `_data/todo/`
 
-**Atualizado:** 2026-07-29 (batch 1777–1796)
+**Atualizado:** 2026-08-05
 
 ## Fila
 
-- `_data/todo/` — **vazia**
-- `_data/todo/_hold/` — 2 batches com conflito de IDs
+- `_data/todo/` — **vazia** (5 batches arquivados)
+- `_hold/` — legado (não reprocessar)
 
-## Última rodada (29/jul/2026 — sessão INQ 4.781)
+## Merge 05/08/2026 (sem colisão)
 
-| Batch | Resultado |
-|-------|-----------|
-| `lawfare-batch-sessao-2026-07-29-1777-1796.json` | **20 posts** (escandalos, stf, bancos, operacoes, crise-diplomatica) |
+| Batch | IDs finais |
+|-------|------------|
+| coronel + visto embaixadora | **1827–1828** |
+| Maridt / Ratinho / Toffoli | **1829–1830** |
+| Hardt + Argentina | **1831–1832** |
+| Lulinha sorteio (ex-1763 / ex-T-247) | **1833** + **T-249** |
+| jornalista / juízas aeroporto (ex-1768–1769) | **1834–1835** |
+
+## Editorial pós-merge
+
+- **T-250** — síntese *Dois pesos, duas medidas* (corrigidas conexões erradas id_1764–1767 → dragão-onca)
+- Dossiês HTML: `dois-pesos-duas-medidas.html`, `o-teto-que-nao-existe.html` (publicar / espelhar gosurf)
 
 ## Sync
 
-- `lawfare.json`: **1758** entradas · main **1796** · próximo **1797**
-- `lawfare-unified-corpus.json`: **136** entradas (+20)
-- `bundle exec jekyll build`: OK (~15 min)
+- main **1835** · next **1836**
+- thematic **T-250** · next **T-251**
+- `validate-ids.ps1` → 0 erros

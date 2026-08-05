@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dois Pesos, Duas Medidas — Erro Judiciário e o Custo Assimétrico da Correção</title>
+<meta name="description" content="7 casos documentados: quando o erro é do Estado contra o cidadão, 'risco normal'. Quando o erro é da própria magistratura, dano moral indenizável. Corpus lawfare-timeline.">
+<link rel="canonical" href="https://gosurf.site/dois-pesos-duas-medidas">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dois Pesos, Duas Medidas — lawfare-timeline">
+<meta property="og:description" content="7 casos, dois padrões: erro do Estado contra o cidadão vs. erro a favor da própria magistratura.">
+<meta property="og:locale" content="pt_BR">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Crimson+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#080c10; --surface:#0d1319; --surface2:#131b22; --border:#1e2934;
+    --text:#e8edf2; --muted:#8896a3; --accent:#c53d4f; --gold:#d4af5a;
+    --ok:#4a9d6e; --font-scale:1;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--text);font-family:'Crimson Pro',serif;font-size:calc(17px*var(--font-scale));line-height:1.65;}
+  a{color:var(--gold);}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+
+  /* NAVBAR */
+  #navbar{position:sticky;top:0;z-index:100;background:rgba(8,12,16,.92);backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--border);display:flex;gap:4px;padding:14px 24px;flex-wrap:wrap;align-items:center;}
+  #navbar .brand{font-family:'Syne',sans-serif;font-weight:800;font-size:14px;letter-spacing:.02em;margin-right:auto;color:var(--text);}
+  #navbar .brand span{color:var(--accent);}
+  #navbar a{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:6px;transition:.2s;}
+  #navbar a:hover,#navbar a.active{color:var(--text);background:var(--surface2);}
+
+  header.hero{padding:70px 24px 50px;text-align:center;max-width:920px;margin:0 auto;}
+  header.hero .kicker{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;}
+  header.hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.1;letter-spacing:-.01em;}
+  header.hero h1 em{font-style:normal;color:var(--gold);}
+  header.hero .subtitle{margin-top:20px;font-size:1.15rem;color:var(--muted);max-width:680px;margin-left:auto;margin-right:auto;}
+  header.hero .meta{margin-top:26px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.05em;}
+
+  section{max-width:1080px;margin:0 auto;padding:56px 24px;}
+  section h2{font-family:'Syne',sans-serif;font-weight:800;font-size:1.7rem;margin-bottom:8px;}
+  section h2 span{color:var(--accent);}
+  .lede{color:var(--muted);font-size:1.05rem;max-width:760px;margin-bottom:34px;}
+
+  /* SPLIT COMPARISON */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:40px;}
+  @media(max-width:760px){.split{grid-template-columns:1fr;}}
+  .split .col{background:var(--surface);padding:28px;}
+  .split .col.against{border-top:3px solid var(--accent);}
+  .split .col.for{border-top:3px solid var(--ok);}
+  .split .col h3{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px;}
+  .split .col.against h3{color:var(--accent);}
+  .split .col.for h3{color:var(--ok);}
+  .split .col .big{font-family:'Syne',sans-serif;font-weight:800;font-size:2.2rem;line-height:1.05;margin-bottom:6px;}
+  .split .col .sub{color:var(--muted);font-size:.95rem;}
+
+  /* CARD GRID */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:22px;transition:.2s;}
+  .card:hover{border-color:var(--muted);}
+  .card .tag{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+    display:inline-block;padding:3px 9px;border-radius:20px;margin-bottom:12px;}
+  .card.deny .tag{background:rgba(197,61,79,.15);color:var(--accent);}
+  .card.grant .tag{background:rgba(74,157,110,.15);color:var(--ok);}
+  .card h3{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:10px;line-height:1.3;}
+  .card p{color:var(--muted);font-size:.94rem;margin-bottom:10px;}
+  .card .quote{font-style:italic;color:var(--text);border-left:2px solid var(--gold);padding-left:12px;margin:12px 0;font-size:.94rem;}
+  .card .fact{font-family:'IBM Plex Mono',monospace;font-size:.82rem;color:var(--muted);display:flex;justify-content:space-between;
+    border-top:1px solid var(--border);padding-top:10px;margin-top:12px;}
+  .card .fact b{color:var(--text);}
+  .card .src{margin-top:10px;font-size:.78rem;}
+  .card .src a{color:var(--muted);text-decoration:underline;}
+
+  /* TIMELINE */
+  .timeline{border-left:2px solid var(--border);padding-left:28px;margin-left:6px;}
+  .tl-item{position:relative;margin-bottom:28px;}
+  .tl-item::before{content:'';position:absolute;left:-33px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--accent);}
+  .tl-item.grant::before{background:var(--ok);}
+  .tl-item .date{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:.05em;}
+  .tl-item h4{font-family:'Syne',sans-serif;font-size:1rem;margin:4px 0 6px;}
+  .tl-item p{color:var(--muted);font-size:.92rem;}
+
+  .callout{background:var(--surface2);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:10px;padding:24px 26px;margin:28px 0;}
+  .callout p{margin:0;}
+  .callout .label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+
+  table{width:100%;border-collapse:collapse;font-size:.92rem;}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);}
+  th{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);}
+  td.neg{color:var(--accent);}
+  td.pos{color:var(--ok);}
+
+  footer{max-width:1080px;margin:0 auto;padding:50px 24px 90px;border-top:1px solid var(--border);
+    font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);}
+  footer .cc0{margin-top:14px;line-height:1.8;}
+  footer a{color:var(--muted);}
+
+  #gotop{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;
+    background:var(--surface2);border:1px solid var(--border);color:var(--text);cursor:pointer;
+    display:none;align-items:center;justify-content:center;font-size:18px;z-index:99;}
+  #gotop.show{display:flex;}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="brand">lawfare<span>·</span>timeline</div>
+  <a href="#tese">Tese</a>
+  <a href="#casos">Os Casos</a>
+  <a href="#contraste">Contraste</a>
+  <a href="#acesso">Mesmo Termo, Dois Acessos</a>
+  <a href="#domiciliar">Prisão Domiciliar</a>
+  <a href="#linha-do-tempo">Linha do Tempo</a>
+  <a href="#leitura">Leitura</a>
+  <a href="#fontes">Fontes</a>
+</nav>
+
+<header class="hero">
+  <div class="kicker">República Sequestrada · lawfare-timeline · dossiê T-250</div>
+  <h1>Dois pesos, <em>duas medidas</em></h1>
+  <p class="subtitle">Sete decisões judiciais brasileiras, 2020–2026. Quando o erro é do Estado contra o cidadão comum: "risco normal da atividade judiciária". Quando o erro é da própria magistratura ou seus pares: dano moral indenizável.</p>
+  <div class="meta">CC0 1.0 · domínio público · atualizado 2026-08-05</div>
+</header>
+
+<section id="tese">
+  <h2>A <span>tese</span> em uma comparação</h2>
+  <p class="lede">Não é retórica — é o mesmo tipo de fato (erro, seguido de pedido de reparação) julgado por magistrados brasileiros com fundamentações opostas, dependendo de quem errou e quem pede.</p>
+
+  <div class="split">
+    <div class="col against">
+      <h3>Erro do Estado, contra o cidadão</h3>
+      <div class="big">4 de 4</div>
+      <div class="sub">indenizações negadas ou dificultadas em 1ª instância, mesmo diante de anos de prisão comprovadamente indevida</div>
+    </div>
+    <div class="col for">
+      <h3>Erro da própria magistratura, ou de pares</h3>
+      <div class="big">2 de 2</div>
+      <div class="sub">indenizações concedidas — incluindo dano moral por "estresse" numa viagem de lazer causado por engano das próprias autoras</div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <div class="label">O que este dossiê não afirma</div>
+    <p>Não há evidência de conluio, instrução ou dolo em nenhum dos casos individualmente — cada decisão tem fundamentação jurídica própria, contestável nos seus próprios termos. O que a amostra documenta é um <b>padrão decisório assimétrico</b> replicado em tribunais diferentes (RJ, SP, RS, PB), não um caso isolado. E documenta também as correções: quando ocorrem, ocorrem em instância superior, nunca na origem — com o custo do litígio recaindo sobre quem já foi prejudicado pelo erro original.</p>
+  </div>
+</section>
+
+<section id="casos">
+  <h2>Erro do Estado <span>vs.</span> cidadão</h2>
+  <p class="lede">Quatro casos, quatro tribunais diferentes, mesmo tipo de fundamentação na origem.</p>
+
+  <div class="grid">
+    <div class="card deny">
+      <span class="tag">Indenização negada</span>
+      <h3>Sílvio "Pantera" da Silva — 2.174 dias preso</h3>
+      <p>Condenado por assalto que não cometeu (RJ, 2015) com base em reconhecimento fotográfico depois anulado pelo STJ por indução policial. TJRJ negou indenização por 3 a 2.</p>
+      <div class="quote">"Risco normal da atividade judiciária, que erra todo dia."</div>
+      <div class="fact"><span>Voto</span><b>3×2, desempate do relator</b></div>
+      <div class="src"><a href="https://www.correio24horas.com.br/brasil/aborrecimento-normal-justica-nega-indenizacao-a-lutador-que-ficou-6-anos-preso-por-engano-0826" target="_blank" rel="noopener">Correio24Horas</a> · <a href="https://agendadopoder.com.br/justica-do-rio-nega-indenizacao-a-lutador-preso-injustamente-por-quase-seis-anos/" target="_blank" rel="noopener">Agenda do Poder</a></div>
+    </div>
+
+    <div class="card deny">
+      <span class="tag">Negada + cobrança de custas</span>
+      <h3>André Biazucci Cardoso — 210 dias preso</h3>
+      <p>Dentista preso por 7 estupros que não cometeu (RJ, 2013), inocentado por DNA custeado pela própria defesa. STJ nega indenização (2025) e condena Biazucci a pagar <b>R$ 478,9 mil</b> em custas à PGE-RJ — o Estado que o prendeu errado. Recurso à CIDH em 2026.</p>
+      <div class="quote">Prisão preventiva de inocente = "exercício regular da atividade repressiva penal".</div>
+      <div class="fact"><span>Já no corpus</span><b>id_1511–1513</b></div>
+      <div class="src"><a href="https://revistaoeste.com/brasil/dentista-preso-por-estupros-que-nao-cometeu-e-condenado-a-pagar-r-478-mil-ao-rj/" target="_blank" rel="noopener">Revista Oeste</a> · <a href="https://revistaforum.com.br/brasil/homem-preso-injustica-indenizacao-condenado/" target="_blank" rel="noopener">Revista Fórum</a></div>
+    </div>
+
+    <div class="card deny">
+      <span class="tag">Negada em 1ª instância</span>
+      <h3>Severino Rodrigues da Silva Jr. — homonímia, PB</h3>
+      <p>Preso por engano por ser "quase homônimo" de acusado (Itaporanga/PB, 2019). 1ª instância nega e ainda condena a pagar 10% da causa em custas. TJPB reforma em 2023 e concede R$ 40 mil, reconhecendo "falha estatal".</p>
+      <div class="quote">"Eventualidade da vida" — depois chamada de fundamentação frágil pelo próprio TJPB.</div>
+      <div class="fact"><span>Desfecho</span><b>Corrigido só em 2ª instância</b></div>
+      <div class="src"><a href="https://canalcienciascriminais.com.br/negada-indenizacao-a-homem-preso-por-engano-eventualidade-da-vida/" target="_blank" rel="noopener">Canal Ciências Criminais</a> · <a href="https://www.conjur.com.br/2023-mar-19/estado-devera-indenizar-40-mil-homem-preso-lugar-homonimo/" target="_blank" rel="noopener">ConJur</a></div>
+    </div>
+
+    <div class="card deny">
+      <span class="tag">Indenização negada</span>
+      <h3>Ângelo "Gugu" Gustavo Pereira — 363 dias preso</h3>
+      <p>Reconhecido por foto de Facebook — a própria vítima admitiu não ter visto bem o autor. Juíza do RJ negou indenização por falta de prova de "má conduta" na condução do processo, mesmo com reconhecimento fotográfico irregular.</p>
+      <div class="quote">"É preciso verificar se houve qualquer má conduta na condução do processo..."</div>
+      <div class="fact"><span>Campanha</span><b>Justiça para Inocentes / OAB-RJ</b></div>
+      <div class="src"><a href="https://www.migalhas.com.br/quentes/398436/juiza-do-rio-nega-indenizacao-a-jovem-preso-injustamente-por-um-ano" target="_blank" rel="noopener">Migalhas</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="contraste">
+  <h2>Erro <span>a favor</span> da própria magistratura</h2>
+  <p class="lede">Mesma pergunta jurídica — quando o Estado (ou seus agentes) erra, quem paga? — resposta invertida.</p>
+
+  <div class="grid">
+    <div class="card grant">
+      <span class="tag">Indenização concedida</span>
+      <h3>Juízas Cristiane Lima e Larissa Sally — erro próprio, viagem de lazer</h3>
+      <p>Foram ao aeroporto errado (Galeão em vez de Santos Dumont) durante viagem de férias com os filhos, perderam a conexão. A Latam cancelou as 12 passagens por no-show — política regulada pela ANAC. O 2º Juizado de Niterói condenou a Latam a pagar <b>R$ 74 mil</b>, incluindo dano moral por "estresse desmedido" numa viagem de lazer.</p>
+      <div class="quote">"Por mais que as juízas tenham errado ao se dirigir ao Galeão... é abusivo a Latam cancelar 12 passagens."</div>
+      <div class="fact"><span>Confirmado em</span><b>3 instâncias</b></div>
+      <div class="src"><a href="https://www.conjur.com.br/2020-11-26/latam-indenizar-juizas-erraram-aeroporto-perderam-voo/" target="_blank" rel="noopener">ConJur</a> · <a href="https://www.migalhas.com.br/quentes/336983/latam-indenizara-juizas-que-perderam-voo-e-tiveram-passagens-canceladas" target="_blank" rel="noopener">Migalhas</a></div>
+    </div>
+
+    <div class="card grant">
+      <span class="tag">Dano moral concedido</span>
+      <h3>Desembargadora Iris Nogueira — R$ 662 mil em 1 mês, salário público exposto pela imprensa</h3>
+      <p>Jornal publicou dados de salário público, obrigatórios por lei desde 2015. Juíza de 1ª instância condenou jornalista Rosane Oliveira e o Zero Hora a pagar <b>R$ 600 mil</b> por danos morais à desembargadora — mesmo reconhecendo que os dados eram verdadeiros. TJRS reverteu por unanimidade 6 meses depois.</p>
+      <div class="quote">Condenação fundamentada no "tom" da reportagem, não na veracidade dos dados.</div>
+      <div class="fact"><span>Revertido em</span><b>2ª instância, unânime</b></div>
+      <div class="src"><a href="https://www.conjur.com.br/2025-mai-23/jornal-e-colunista-sao-condenados-a-pagar-r-600-mil-a-desembargadora-do-rs/" target="_blank" rel="noopener">ConJur</a> · <a href="https://coletiva.net/noticias/tjrs-reverte-condenacao-e-livra-jornalista-e-zero-hora-de-pagar-danos-morais/" target="_blank" rel="noopener">Coletiva.net</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="acesso">
+  <h2>Mesmo termo, <span>dois acessos</span></h2>
+  <p class="lede">"Erro judiciário" não é só um conceito jurídico neutro — é também uma porta. Para uns, ela fica na 1ª instância, esperando anos. Para outros, abre direto no STF.</p>
+
+  <div class="split">
+    <div class="col against">
+      <h3>Acesso comum</h3>
+      <div class="big">Anos</div>
+      <div class="sub">Pantera, Biazucci, Severino e Gugu tiveram que esgotar 1ª instância — em regra, negando — antes de qualquer chance de reversão em tribunal superior</div>
+    </div>
+    <div class="col for">
+      <h3>Acesso direto ao STF</h3>
+      <div class="big">Imediato</div>
+      <div class="sub">Bolsonaro protocola Revisão Criminal diretamente no STF invocando "erro judiciário" e cerceamento de defesa, com apoio de lei aprovada dias antes</div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card grant">
+      <span class="tag">Acesso direto</span>
+      <h3>Bolsonaro invoca "erro judiciário" — direto no STF</h3>
+      <p>Em 08/05/2026, a defesa de Jair Bolsonaro protocolou Revisão Criminal no STF alegando "erro judiciário" e cerceamento de defesa, apoiada na Lei 15.402/2026, sancionada dias antes. Mesmo tribunal, mesmo termo jurídico — sem passar pelos anos de tramitação em 1ª instância que caracterizam os casos de Pantera, Biazucci, Severino e Gugu.</p>
+      <div class="fact"><span>Corpus</span><b>id_1624</b></div>
+    </div>
+    <div class="card grant">
+      <span class="tag">Chokepoint estrutural</span>
+      <h3>Foro privilegiado — remessa automática ao topo</h3>
+      <p>Operação Rejeito (2025): citação a senadores nos manuscritos investigados aciona foro privilegiado e remete automaticamente o caso ao STF. Um manuscrito apreendido chegou a descrever esse mecanismo como "canal de blindagem" para escapar da 2ª instância comum.</p>
+      <div class="fact"><span>Corpus</span><b>id_1561</b></div>
+    </div>
+  </div>
+</section>
+
+<section id="domiciliar">
+  <h2>Prisão domiciliar <span>humanitária</span></h2>
+  <p class="lede">O mecanismo existe para proteger saúde e dignidade — e às vezes funciona exatamente assim. O padrão de acesso a ele, porém, não é uniforme.</p>
+
+  <div class="grid">
+    <div class="card deny">
+      <span class="tag">Sem prisão especificada</span>
+      <h3>Wellington Macedo — 42 dias sem saber a acusação</h3>
+      <p>Jornalista preso por ordem do STF em 2021 permaneceu 42 dias no Complexo da Papuda sem saber qual crime era investigado, até finalmente passar à prisão domiciliar.</p>
+      <div class="fact"><span>Corpus</span><b>id_710</b></div>
+    </div>
+    <div class="card deny">
+      <span class="tag">Pedido negado 24 vezes</span>
+      <h3>Daniel Silveira — tratamento médico negado</h3>
+      <p>Mesmo com laudos apontando "sérios riscos de infecção e elevada gravidade" após cirurgia no joelho, foram protocolados 24 pedidos de urgência ao STF para transferência hospitalar ou domiciliar humanitária — sem concessão tempestiva.</p>
+      <div class="fact"><span>Corpus</span><b>id_1234</b></div>
+    </div>
+    <div class="card grant">
+      <span class="tag">Concedida e prorrogada</span>
+      <h3>Bolsonaro — domiciliar humanitária prorrogada por prazo indeterminado</h3>
+      <p>Concedida em março/2026 por broncopneumonia. Ao fim dos 90 dias, Moraes prorrogou sem novo prazo definido — reconhecendo simultaneamente, na mesma decisão, que a apreensão de uma arma em posse de Bolsonaro <b>não</b> configurou falta grave.</p>
+      <div class="fact"><span>Corpus</span><b>id_1617 / id_1621</b></div>
+    </div>
+    <div class="card grant">
+      <span class="tag">Controle — concedida a réu comum</span>
+      <h3>Antônio Teodoro de Moraes, 74 anos — condenado por 8/1, domiciliar concedida</h3>
+      <p>Empresário aposentado de Maringá (PR), condenado a 14 anos por participação no 8 de janeiro, teve revisão criminal negada mas prisão domiciliar humanitária concedida pelo STF em razão da idade. Caso de controle: o mecanismo humanitário não é exclusivo de ex-presidentes.</p>
+      <div class="fact"><span>Corpus</span><b>id_1797</b></div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <div class="label">Leitura sem force-fit</div>
+    <p>O caso de Antônio Teodoro impede a leitura simplista "domiciliar humanitária é só para poderosos" — o mecanismo concedeu o benefício também a um réu comum condenado pelo mesmo processo político (8/1). A assimetria real está em outro lugar: na velocidade e na quantidade de tentativas — Daniel Silveira precisou de 24 pedidos negados; Wellington Macedo esperou 42 dias sem sequer saber a acusação; Bolsonaro teve o benefício prorrogado por prazo indeterminado já na primeira reavaliação, com reconhecimento simultâneo de ausência de falta grave mesmo diante de descumprimento documentado (posse de arma).</p>
+  </div>
+</section>
+
+<section id="linha-do-tempo">
+  <h2>Linha do <span>tempo</span></h2>
+  <div class="timeline">
+    <div class="tl-item grant">
+      <div class="date">26/11/2020</div>
+      <h4>Latam condenada a indenizar juízas por erro próprio</h4>
+      <p>2º Juizado Especial Cível de Niterói — confirmado em 3 instâncias até out/2020.</p>
+    </div>
+    <div class="tl-item">
+      <div class="date">2022–2023</div>
+      <h4>Severino (PB): negado + custas em 1ª instância, revertido em 2ª</h4>
+      <p>Único caso da série com desfecho final favorável à vítima — mas só após recurso.</p>
+    </div>
+    <div class="tl-item">
+      <div class="date">21/05/2025</div>
+      <h4>Jornalista Rosane Oliveira condenada a R$ 600 mil</h4>
+      <p>13ª Vara Cível de Porto Alegre — por publicar salário público de desembargadora.</p>
+    </div>
+    <div class="tl-item">
+      <div class="date">01/09/2025</div>
+      <h4>STJ nega indenização definitiva a Biazucci e cobra R$ 478,9 mil</h4>
+      <p>Corpus lawfare-timeline id_1512.</p>
+    </div>
+    <div class="tl-item grant">
+      <div class="date">16/09/2025</div>
+      <h4>Contraste: SP indeniza Jonathan Macedo em R$ 386,8 mil</h4>
+      <p>11ª Vara da Fazenda Pública/SP reconhece responsabilidade objetiva sem necessidade de recurso.</p>
+    </div>
+    <div class="tl-item grant">
+      <div class="date">26/11/2025</div>
+      <h4>TJRS reverte condenação de Rosane Oliveira, por unanimidade</h4>
+      <p>9ª Câmara Cível — jornalista e jornal absolvidos.</p>
+    </div>
+    <div class="tl-item">
+      <div class="date">01/08/2026</div>
+      <h4>TJRJ nega indenização a Pantera por 3 a 2</h4>
+      <p>2.174 dias preso por erro do Estado; "risco normal da atividade judiciária".</p>
+    </div>
+  </div>
+</section>
+
+<section id="leitura">
+  <h2>Leitura <span>estrutural</span></h2>
+  <table>
+    <thead><tr><th>Caso</th><th>Quem errou</th><th>Quem pediu reparação</th><th>1ª instância</th><th>Desfecho final</th></tr></thead>
+    <tbody>
+      <tr><td>Pantera</td><td>Estado (RJ)</td><td>Cidadão</td><td class="neg">Negado</td><td class="neg">Negado (3×2)</td></tr>
+      <tr><td>Biazucci</td><td>Estado (RJ)</td><td>Cidadão</td><td class="neg">Negado + custas R$478,9k</td><td class="neg">Confirmado STJ</td></tr>
+      <tr><td>Severino</td><td>Estado (PB)</td><td>Cidadão</td><td class="neg">Negado + custas</td><td class="pos">Revertido — R$40k</td></tr>
+      <tr><td>Gugu</td><td>Estado (RJ)</td><td>Cidadão</td><td class="neg">Negado</td><td class="neg">Sem reversão localizada</td></tr>
+      <tr><td>Juízas × Latam</td><td>As próprias autoras</td><td>Juízas</td><td class="pos">Concedido — R$74k</td><td class="pos">Confirmado, 3 instâncias</td></tr>
+      <tr><td>Jornalista × Desemb.</td><td>Ninguém (dados verdadeiros)</td><td>Desembargadora</td><td class="neg">Condenação R$600k</td><td class="pos">Revertido, unânime</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout" style="margin-top:32px;">
+    <div class="label">O padrão, sem adjetivo</div>
+    <p>Em quatro dos seis casos onde o Estado errou contra um cidadão comum, a primeira instância normalizou o erro ou exigiu prova quase inatingível de má conduta. Nos dois casos em que magistradas foram parte interessada — como autoras contra uma empresa, ou como beneficiárias de uma ação contra a imprensa — a primeira instância decidiu a favor delas, em um caso reconhecendo o próprio erro das autoras como irrelevante para a indenização. A correção, quando ocorre, é sempre em instância superior, nunca na origem — e depende de a parte prejudicada ter fôlego para recorrer.</p>
+  </div>
+</section>
+
+<section id="fontes">
+  <h2>Fontes e <span>corpus</span></h2>
+  <p class="lede">Corpus: id_1511–1513 (Biazucci), id_1834–1838 (merge 2026-08-05), **T-250**. Macedo (SP) pendente 2ª fonte. id_1764–1767 = Dragão e a Onça (não erro judiciário).</p>
+  <p style="color:var(--muted);font-size:.9rem;">Todas as fontes primárias estão linkadas em cada card acima. Taxonomia evidencial: todos os casos classificados como <b>ev-confirmed</b> (2+ fontes independentes cada). Leituras estruturais marcadas como <b>ev-inference</b>, separadas dos fatos.</p>
+  <p style="margin-top:16px;"><a href="o-teto-que-nao-existe.html">→ Dossiê complementar: O Teto Que Não Existe — penduricalhos e supersalários</a></p>
+</section>
+
+<footer>
+  <div>lawfare-timeline · República Sequestrada · gosurf.site</div>
+  <div class="cc0">
+    CC0 1.0 Universal — domínio público total. Copie, adapte, distribua sem restrição.<br>
+    Corrija, contribua, cite: <a href="https://lawfare-timeline.vercel.app" target="_blank" rel="noopener">lawfare-timeline.vercel.app</a> · <a href="https://gosurf.site" target="_blank" rel="noopener">gosurf.site</a>
+  </div>
+</footer>
+
+<button id="gotop" aria-label="Voltar ao topo" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+  // scroll spy
+  const links = document.querySelectorAll('#navbar a');
+  const secs = Array.from(links).map(a => document.querySelector(a.getAttribute('href')));
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const idx = secs.indexOf(e.target);
+        if (idx >= 0) links[idx].classList.add('active');
+      }
+    });
+  }, { rootMargin: '-40% 0px -50% 0px' });
+  secs.forEach(s => s && obs.observe(s));
+
+  // gotop button
+  const gotop = document.getElementById('gotop');
+  window.addEventListener('scroll', () => {
+    gotop.classList.toggle('show', window.scrollY > 500);
+  });
+</script>
+
+</body>
+</html>

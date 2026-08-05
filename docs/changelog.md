@@ -7,6 +7,35 @@ Formato: data (ISO) → resumo → arquivos de fonte.
 
 ---
 
+## 2026-08-05 — Batch 1827–1835 + T-249 (realocação anti-colisão)
+
+| Faixa | Conteúdo |
+|-------|----------|
+| **1827–1828** | Coronel PCC / visto embaixadora |
+| **1829–1830** | Maridt / Ratinho / Toffoli |
+| **1831–1832** | Hardt CNJ / crise Argentina |
+| **1833** | Lulinha sorteio (ex-**1763** dragão) |
+| **1834–1835** | Juízas aeroporto / jornalista (ex-**1768–1769**) |
+| **T-249** | Editorial sorteio STF (ex-**T-247** no batch) |
+| **T-250** | Dois pesos, duas medidas (erro judiciário; distinto de **T-248** cartórios) |
+
+---
+
+## 2026-08-04 — Realocação de IDs + merge 1797–1826 + T-247
+
+Batches colidiam com dragao-onca (1763–1768) e `_hold`; sequência corrigida antes do merge. Track temático realinhado a **T-247**.
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Criado** | `scripts/reassign_todo_batch_ids.py` | Realocação ordenada de IDs em batches |
+| **Alterado** | `scripts/sync_todo_current.py` | Main ≥1000 não vira T-NNN por `lacuna_investigativa` |
+| **Corrigido** | Havengate **1826** | Post main `bancos` (antes `T-1826` estudos) |
+| **Corrigido** | `claude.ai-corpus-ids-sync.json` | thematic **247/248**; main **1826/1827** |
+| **Corrigido** | Editorial cartórios | **T-248** (antes T-1820 / colisão main) |
+| **Preservado** | `lawfare.json` 1763/1764 | CEEE-T e JMEV (dragao-onca) |
+
+---
+
 ## 2026-07-29 (b) — Batch INQ 4.781 · IDs 1777–1796
 
 Sessão investigativa: origem INQ 4.781, bloqueios TSE 2022, desmonetização YouTube, autocensura Sivis, escândalo Master/Londres, Magnitsky Moraes.

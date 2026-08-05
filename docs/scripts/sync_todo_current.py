@@ -63,7 +63,7 @@ def format_iso(d: str) -> str:
 def thematic_id_from_file(path: Path, data: dict) -> int | None:
     if not isinstance(data, dict):
         return None
-    m = re.search(r"T-(\d+)", path.stem, re.I)
+    m = re.match(r"^lawfare-thematic-T(\d+)", path.stem, re.I)
     if m:
         return int(m.group(1))
     eid = data.get("id")
@@ -88,8 +88,12 @@ def thematic_id_from_entry(entry: dict) -> int | None:
         or ""
     ).lower()
     if tipo in ("analise_estrutural", "lacuna_investigativa", "analise_editorial"):
-        if isinstance(eid, int) and eid >= 100:
-            return eid
+        if isinstance(eid, int):
+            # IDs main track (>=1000) nunca viram T-NNN automático
+            if eid >= 1000:
+                return None
+            if eid >= 100:
+                return eid
     return None
 
 
@@ -98,6 +102,8 @@ def parse_main_id(eid) -> int | None:
         return eid
     if isinstance(eid, str):
         if re.match(r"^T-\d+$", eid.strip(), re.I):
+            return None
+        if "PENDENTE" in eid.upper():
             return None
         try:
             return int(eid)
@@ -122,6 +128,9 @@ def resolve_category(entry: dict) -> str:
         "judicial": "justica",
         "crise-diplomatica": "crise-diplomatica",
         "censura-digital": "lawfare",
+        "impunidade": "impunidade",
+        "abuso_processual": "impunidade",
+        "erro-judiciario": "impunidade",
     }
     if cat in mapping:
         return mapping[cat]
@@ -180,6 +189,10 @@ def parse_fontes(entry: dict) -> list[dict]:
 
 
 def normalize_main_entry(entry: dict, source: str) -> dict | None:
+    cat_raw = (entry.get("category") or entry.get("categoria") or entry.get("tipo") or "").lower()
+    if cat_raw == "analise_editorial":
+        return None
+
     eid = entry.get("id")
     if eid is None:
         return None
@@ -524,17 +537,39 @@ def process_all(dry_run: bool) -> tuple[list[dict], list[tuple[int, str, str]], 
             archived.append(fpath.name)
             continue
 
-        if isinstance(data, dict) and (
-            isinstance(data.get("entries"), list) or isinstance(data.get("entradas"), list)
-        ):
-            items = list(data.get("entries") or data.get("entradas") or [])
+        items: list[dict] = []
+        thematic_only: list[dict] = []
+        if isinstance(data, dict):
+            if isinstance(data.get("main"), list):
+                items.extend(data["main"])
+            if isinstance(data.get("entries"), list):
+                items.extend(data["entries"])
+            if isinstance(data.get("entradas"), list):
+                items.extend(data["entradas"])
             if isinstance(data.get("thematic_entries"), list):
                 items.extend(data["thematic_entries"])
+            if isinstance(data.get("thematic"), list):
+                thematic_only.extend(data["thematic"])
         elif isinstance(data, list):
             items = data
         else:
             items = [data]
         batch_had_output = False
+        for item in thematic_only:
+            tid = thematic_id_from_entry(item)
+            if tid is None:
+                continue
+            item["_source_file"] = fpath.name
+            content, md_fname = render_estudos_post(item, tid)
+            target = POSTS / "estudos" / md_fname
+            if dry_run:
+                print(f"  [dry-run] T-{tid}: {target.relative_to(ROOT)}")
+            else:
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_text(content, encoding="utf-8")
+                print(f"  OK {target.relative_to(ROOT)}")
+            thematic.append((tid, fpath.name, md_fname))
+            batch_had_output = True
         for item in items:
             tid = thematic_id_from_entry(item)
             if tid is not None:
