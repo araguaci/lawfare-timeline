@@ -7,6 +7,17 @@ Formato: data (ISO) → resumo → arquivos de fonte.
 
 ---
 
+## 2026-08-05 — Fix 404 `dragao-onca.webp` na raiz Vercel
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Atualizado** | `vercel.json` | Rewrite `/dragao-onca.webp` e `/dragao-onca-*.webp` → `/public/…`. |
+| **Corrigido** | `index.html` · `timeline/index.html` | `og:image` aponta para `/public/dragao-onca.webp` (já 200 no deploy). |
+
+Causa: asset vive em `public/`; com `@vercel/static` a URL real é `/public/…`, não a raiz.
+
+---
+
 ## 2026-07-27 (l) — series-nav 0–18 + pipeline timeline/
 
 | Ação | Arquivo | Descrição |

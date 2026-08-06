@@ -6,5 +6,15 @@
       "src": "**/*",
       "use": "@vercel/static"
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/dragao-onca.webp",
+      "destination": "/public/dragao-onca.webp"
+    },
+    {
+      "source": "/dragao-onca-:slug.webp",
+      "destination": "/public/dragao-onca-:slug.webp"
+    }
   ]
 }
