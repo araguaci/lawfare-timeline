@@ -3,6 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/public/icons/icon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#080c10">
 <title>O Dragão e a Onça — Capítulo Rio de Janeiro | lawfare-timeline</title>
 <meta name="description" content="CMPort no Porto do Açu (70% Vast, US$714mi), missão Cláudio Castro à China (Hikvision/Dahua) e CNOOC/PetroChina — dois padrões estruturais no RJ. Série O Dragão e a Onça — CC0.">
 
@@ -89,6 +94,10 @@ footer{margin-top:60px; padding-top:24px; border-top:1px solid var(--border); fo
 
 #gotop{position:fixed; bottom:24px; right:24px; background:var(--bg2); border:1px solid var(--border); color:var(--gold2); font-family:var(--mono); font-size:11px; padding:10px 14px; border-radius:8px; cursor:pointer; opacity:0; pointer-events:none; transition:.25s; z-index:99;}
 #gotop.show{opacity:1; pointer-events:auto;}
+.footdev{font-size:11px;color:var(--text2);margin-top:10px;font-family:var(--mono)}
+.footdev a{color:var(--jaguar2,var(--gold,var(--gr2,#e8b23d)));text-decoration:none}
+.footdev a:hover{color:#fff;text-decoration:underline}
+#ads-counter{font-family:var(--mono);font-size:11px;color:var(--text2);margin-top:8px;text-align:center}
 .series-nav{margin:0 auto;max-width:1200px;padding:28px 20px 0;border-top:2px solid var(--border)}
 .series-nav-title{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--text2);margin-bottom:14px;display:flex;align-items:center;gap:10px}
 .series-nav-title::before{content:'';flex:1;height:1px;background:var(--border)}
@@ -261,7 +270,9 @@ footer{margin-top:60px; padding-top:24px; border-top:1px solid var(--border); fo
 <footer>
     lawfare-timeline · CC0 1.0 Universal — domínio público total · @araguaci<br>
     Capítulo Rio de Janeiro · série O Dragão e a Onça · IDs 1760–1762 / T-245
-  </footer>
+      <div class="footdev">Desenvolvido por <a href="https://www.artesdosul.com/" target="_blank" rel="noopener">@artesdosul</a></div>
+  <div id="ads-counter"></div>
+</footer>
 
 </div>
 
@@ -287,5 +298,12 @@ window.addEventListener('scroll', ()=>{
 });
 </script>
 
+<script defer src="https://stats.artesdosul.com/v.js"
+  data-site="Zjt0Xma8E766TTRDfK0L"
+  data-key="pk_a9d707d4d64804ab5736f17d85c8674b"></script>
+<script defer src="https://stats.artesdosul.com/c.js"
+  data-site="Zjt0Xma8E766TTRDfK0L"
+  data-key="pk_a9d707d4d64804ab5736f17d85c8674b"
+  data-target="#ads-counter"></script>
 </body>
 </html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leitor de Artigo | lawfare-timeline</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0b0f0a;color:#e8f0e8;font-family:'Syne',sans-serif;min-height:100vh;padding:40px 20px}
+  .container{max-width:800px;margin:0 auto}
+  header{border-bottom:1px solid rgba(255,255,255,0.08);padding-bottom:20px;margin-bottom:30px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+  .back-btn{color:#e8c44b;text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;display:inline-flex;align-items:center;gap:6px}
+  .back-btn:hover{color:#fff}
+  .actions{display:flex;gap:8px}
+  .btn{background:#182216;border:1px solid rgba(62,203,111,0.25);color:#78f5a8;font-family:'JetBrains Mono',monospace;font-size:11px;padding:6px 12px;border-radius:6px;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:6px}
+  .btn:hover{border-color:#3ecb6f;color:#fff}
+  .btn.copied{border-color:#3ecb6f;background:rgba(62,203,111,0.1);color:#fff}
+  h1.art-title{font-size:24px;font-weight:800;color:#fff;margin-bottom:8px}
+  .art-meta{font-family:'JetBrains Mono',monospace;font-size:11px;color:#8aaa8a}
+  .content{line-height:1.75;font-size:14px;color:#8aaa8a}
+  .content p{margin-bottom:16px}
+  .content h1, .content h2, .content h3{color:#fff;font-weight:800;margin:30px 0 14px;letter-spacing:-0.5px}
+  .content h1{font-size:24px}
+  .content h2{font-size:20px}
+  .content h3{font-size:16px}
+  .content code{font-family:'JetBrains Mono',monospace;background:#182216;padding:2px 6px;border-radius:4px;font-size:12px;color:#78f5a8}
+  .content pre{background:#182216;padding:16px;border-radius:8px;overflow-x:auto;margin:20px 0;border:1px solid rgba(255,255,255,0.06)}
+  .content pre code{background:transparent;padding:0;color:#e8f0e8}
+  .content a{color:#e8c44b;text-decoration:none;border-bottom:1px dashed #e8c44b}
+  .content a:hover{color:#fff;border-bottom-style:solid}
+  .content ul, .content ol{margin:0 0 20px 20px}
+  .content li{margin-bottom:8px}
+  .error-box{background:rgba(232,85,85,0.08);border:1px solid rgba(232,85,85,0.2);border-radius:8px;padding:20px;text-align:center;color:#ff7575}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div>
+      <a href="/index.html" class="back-btn">← Voltar ao Índice</a>
+      <div class="art-meta" id="art-filename">Carregando arquivo...</div>
+    </div>
+    <div class="actions">
+      <button class="btn" id="copy-btn" style="display:none">⊕ Copiar Markdown</button>
+    </div>
+  </header>
+  
+  <main id="art-container">
+    <h1 class="art-title" id="art-title-placeholder">Carregando conteúdo do artigo...</h1>
+    <div class="content" id="art-body"></div>
+  </main>
+</div>
+
+<script>
+let rawMarkdown = '';
+
+document.addEventListener("DOMContentLoaded", () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const file = urlParams.get('file');
+  const filenameEl = document.getElementById('art-filename');
+  const titlePlaceholder = document.getElementById('art-title-placeholder');
+  const artBody = document.getElementById('art-body');
+  const copyBtn = document.getElementById('copy-btn');
+
+  if (!file) {
+    showError("Erro: Nenhum arquivo especificado na URL.");
+    return;
+  }
+
+  // Basic security validation to prevent directory traversal
+  if (file.includes('..') || file.startsWith('/') || file.includes('\\')) {
+    showError("Erro: Nome de arquivo inválido ou não autorizado.");
+    return;
+  }
+
+  filenameEl.textContent = file;
+
+  fetch(`./${file}`)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Arquivo não encontrado ou erro no servidor.");
+      }
+      return response.text();
+    })
+    .then(md => {
+      rawMarkdown = md;
+      titlePlaceholder.style.display = 'none';
+      copyBtn.style.display = 'inline-flex';
+      
+      const parsedHTML = parseMarkdown(md);
+      artBody.innerHTML = parsedHTML;
+    })
+    .catch(err => {
+      showError(`Erro ao carregar o artigo: ${err.message}`);
+    });
+
+  copyBtn.addEventListener('click', () => {
+    navigator.clipboard.writeText(rawMarkdown).then(() => {
+      copyBtn.textContent = '✓ Copiado!';
+      copyBtn.classList.add('copied');
+      setTimeout(() => {
+        copyBtn.textContent = '⊕ Copiar Markdown';
+        copyBtn.classList.remove('copied');
+      }, 2000);
+    });
+  });
+
+  function showError(msg) {
+    titlePlaceholder.style.display = 'none';
+    artBody.innerHTML = `<div class="error-box">${msg}</div>`;
+  }
+
+  function parseMarkdown(md) {
+    // Escape HTML tag characters to prevent raw HTML execution
+    let html = md
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+
+    // Headers
+    html = html.replace(/^### (.*?)$/gm, '<h3>$1</h3>');
+    html = html.replace(/^## (.*?)$/gm, '<h2>$1</h2>');
+    html = html.replace(/^# (.*?)$/gm, '<h1>$1</h1>');
+
+    // Bold & Italics
+    html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
+
+    // Code blocks & Inline code
+    html = html.replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>');
+    html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+
+    // Links
+    html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+
+    // List items
+    html = html.replace(/^\- (.*?)$/gm, '<li>$1</li>');
+
+    // Paragraph split & wrap
+    const blocks = html.split(/\n\n+/);
+    html = blocks.map(block => {
+      block = block.trim();
+      if (!block) return '';
+      
+      if (block.startsWith('<h') || block.startsWith('<pre') || block.startsWith('<li>')) {
+        return block;
+      }
+      
+      if (block.includes('<li>')) {
+        return `<ul>${block}</ul>`;
+      }
+      
+      return `<p>${block}</p>`;
+    }).join('\n');
+
+    return html;
+  }
+});
+</script>
+</body>
+</html>

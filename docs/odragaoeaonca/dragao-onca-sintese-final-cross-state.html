@@ -3,6 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/public/icons/icon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#080c10">
 <title>O Dragão e a Onça — Síntese Final: Soberania na Conta do Governador | lawfare-timeline</title>
 <meta name="description" content="Síntese final T-243 atualizada 27/jul/2026: 11 UFs + Amapá (controle) e RJ (Açu + Castro). Onde a tese confirma, enfraquece e falha — CC0.">
 
@@ -16,8 +21,10 @@
 <meta name="twitter:title" content="O Dragão e a Onça — Síntese Final">
 <meta name="twitter:description" content="A tese central testada contra 12 estados: onde se confirma, onde se refina, onde é diretamente contrariada.">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   :root{
@@ -32,6 +39,22 @@
     --border:rgba(255,255,255,0.07);
     --text:#e8f0e8;--text2:#8aaa8a;
     --font:'Syne',sans-serif;--mono:'JetBrains Mono',monospace;
+    --jaguar:#e8b23d;--jaguar2:#f5d87a;
+    --dragon:#d4342c;
+
+    /* Unified Semantic States */
+    --status-sim-bg: rgba(62,203,111,0.12);
+    --status-sim-text: var(--gr2);
+    --status-sim-border: rgba(62,203,111,0.25);
+    --status-nao-bg: rgba(232,85,85,0.12);
+    --status-nao-text: var(--red2);
+    --status-nao-border: rgba(232,85,85,0.25);
+    --status-parcial-bg: rgba(232,196,75,0.12);
+    --status-parcial-text: var(--gold);
+    --status-parcial-border: rgba(232,196,75,0.25);
+    --status-info-bg: rgba(74,158,255,0.12);
+    --status-info-text: var(--blue2);
+    --status-info-border: rgba(74,158,255,0.25);
   }
   body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh}
   header{padding:26px 30px 18px;border-bottom:2px solid var(--gr-dim);background:linear-gradient(135deg,#0b0f0a 0%,#121e10 60%,#0b0f0a 100%);position:relative;overflow:hidden}
@@ -67,25 +90,71 @@
   .ptitle{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px}
   .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
   .dg{background:var(--gr)}.dr{background:var(--red)}.dgo{background:var(--gold)}.db{background:var(--blue)}.dp{background:var(--purple)}
+  /* Unified Semantic States */
   .tag{display:inline-block;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:600;margin:2px 2px 2px 0;font-family:var(--mono)}
-  .tg{background:rgba(62,203,111,0.1);color:var(--gr2);border:1px solid rgba(62,203,111,0.2)}
-  .tr{background:rgba(232,85,85,0.12);color:var(--red2);border:1px solid rgba(232,85,85,0.2)}
-  .tgo{background:rgba(232,196,75,0.1);color:var(--gold);border:1px solid rgba(232,196,75,0.2)}
+  .tg{background:var(--status-sim-bg);color:var(--status-sim-text);border:1px solid var(--status-sim-border)}
+  .tr{background:var(--status-nao-bg);color:var(--status-nao-text);border:1px solid var(--status-nao-border)}
+  .tgo{background:var(--status-parcial-bg);color:var(--status-parcial-text);border:1px solid var(--status-parcial-border)}
   p.body{font-size:13px;color:var(--text2);line-height:1.75;margin-bottom:10px}
   .alert{padding:10px 12px;border-radius:8px;background:var(--bg3);border-left:3px solid var(--gold);margin-bottom:10px;font-size:12px;color:var(--text2);line-height:1.6}
   .alert.crit{border-left-color:var(--red)}
   .alert.info{border-left-color:var(--blue2)}
   .alert.ok{border-left-color:var(--gr)}
-  table.comp{width:100%;border-collapse:collapse;font-size:12px}
-  table.comp th{text-align:left;padding:9px 10px;color:var(--gold);font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:1px;border-bottom:2px solid var(--gr-dim)}
-  table.comp td{padding:9px 10px;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.5}
-  table.comp tr.sim td:first-child{border-left:3px solid var(--gr)}
-  table.comp tr.nao td:first-child{border-left:3px solid var(--red)}
-  table.comp tr.parcial td:first-child{border-left:3px solid var(--gold)}
-  .badge-capture{font-size:10px;font-weight:700;padding:2px 7px;border-radius:3px;font-family:var(--mono);text-transform:uppercase}
-  .bc-sim{background:rgba(62,203,111,0.15);color:var(--gr2)}
-  .bc-nao{background:rgba(232,85,85,0.15);color:var(--red2)}
-  .bc-parcial{background:rgba(232,196,75,0.15);color:var(--gold)}
+  
+  /* Scrollable Table and Filter UI */
+  .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0;background:var(--bg2);border:1px solid var(--border);border-radius:8px}
+  table.comp{width:100%;border-collapse:collapse;font-size:12px;min-width:610px}
+  table.comp th{text-align:left;padding:12px 14px;color:var(--gold);font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:1px;border-bottom:2px solid var(--gr-dim);background:var(--bg3)}
+  table.comp td{padding:12px 14px;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.55}
+  
+  /* Sticky First Column for Table Scroll */
+  table.comp th:first-child, table.comp td:first-child{
+    position:sticky; left:0; background:var(--bg2); z-index:2;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.25);
+  }
+  table.comp th:first-child{ background:var(--bg3); z-index:3; }
+  
+  table.comp tr.sim td:first-child{border-left:4px solid var(--gr)}
+  table.comp tr.nao td:first-child{border-left:4px solid var(--red)}
+  table.comp tr.parcial td:first-child{border-left:4px solid var(--gold)}
+  .badge-capture{font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;font-family:var(--mono);text-transform:uppercase;display:inline-block;letter-spacing:0.5px}
+  .bc-sim{background:var(--status-sim-bg);color:var(--status-sim-text);border:1px solid var(--status-sim-border)}
+  .bc-nao{background:var(--status-nao-bg);color:var(--status-nao-text);border:1px solid var(--status-nao-border)}
+  .bc-parcial{background:var(--status-parcial-bg);color:var(--status-parcial-text);border:1px solid var(--status-parcial-border)}
+
+  /* Interactive Filters */
+  .filter-panel{display:flex;gap:12px;margin:20px 0 12px;flex-wrap:wrap;align-items:center}
+  .filter-search{flex:1;min-width:200px;background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:8px 14px;color:var(--text);font-family:var(--font);font-size:13px;outline:none;transition:border-color .2s}
+  .filter-search:focus{border-color:var(--gold)}
+  .filter-group{display:flex;gap:4px;flex-wrap:wrap}
+  .filter-btn{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:7px 14px;color:var(--text2);font-family:var(--font);font-size:11px;font-weight:600;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:6px}
+  .filter-btn:hover{border-color:var(--gold-dim);color:var(--gold)}
+  .filter-btn.active{background:rgba(232, 196, 75, 0.15);border-color:var(--gold);color:#fff;font-weight:700}
+  
+  /* State x Mechanism Matrix */
+  .matrix-title{font-size:11px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:1.5px;margin:18px 0 6px}
+  .matrix-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 18px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px 14px}
+  .matrix-grid{display:grid;grid-template-columns:120px repeat(11, 42px);gap:5px;min-width:582px;font-size:10px;font-family:var(--mono)}
+  .matrix-header{color:var(--text2);font-weight:700;text-align:center;padding:4px 0;border-bottom:1px solid var(--border)}
+  .matrix-header.uf-col{text-align:left}
+  .matrix-row-label{font-weight:700;color:#fff;padding:6px 0;display:flex;align-items:center}
+  .matrix-cell{height:26px;border-radius:4px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;position:relative}
+  .matrix-cell:hover{filter:brightness(1.35);transform:scale(1.08);z-index:5}
+  .matrix-cell.active-sim{background:rgba(62,203,111,0.22);border-color:var(--gr);color:var(--gr2);box-shadow:0 0 8px rgba(62,203,111,0.2)}
+  .matrix-cell.active-parcial{background:rgba(232,196,75,0.22);border-color:var(--gold);color:var(--gold2);box-shadow:0 0 8px rgba(232,196,75,0.2)}
+  .matrix-cell.active-nao{background:rgba(232,85,85,0.22);border-color:var(--red);color:var(--red2);box-shadow:0 0 8px rgba(232,85,85,0.2)}
+  .matrix-tooltip{visibility:hidden;position:absolute;bottom:130%;left:50%;transform:translateX(-50%);background:#182216;color:#fff;padding:6px 10px;border-radius:6px;border:1px solid var(--gold-dim);width:220px;font-family:var(--font);font-size:11px;line-height:1.4;z-index:100;box-shadow:0 6px 20px rgba(0,0,0,0.6);pointer-events:none;opacity:0;transition:opacity .15s}
+  .matrix-cell:hover .matrix-tooltip{visibility:visible;opacity:1}
+  
+  @keyframes card-glow {
+    0% { box-shadow: 0 0 0 0 rgba(232,196,75,0.4); border-color: var(--gold); }
+    50% { box-shadow: 0 0 20px 4px rgba(232,196,75,0.7); border-color: var(--gold2); }
+    100% { box-shadow: 0 0 0 0 rgba(232,196,75,0.4); border-color: var(--border); }
+  }
+  .mech-card.highlight-glow {
+    animation: card-glow 2s ease-in-out;
+  }
+
   .mech-card{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:14px 16px;margin-bottom:10px}
   .mech-title{font-size:13px;font-weight:700;color:var(--gr2);margin-bottom:6px}
   .mech-cases{font-size:11px;color:var(--gold);font-family:var(--mono);margin-bottom:6px}
@@ -95,7 +164,7 @@
   .refnum{font-family:var(--mono);font-size:11px;color:var(--text2);min-width:28px;margin-top:2px}
   .reftitle{font-size:13px;font-weight:600;margin-bottom:2px;color:var(--gr2)}
   .refsrc{font-size:11px;color:var(--text2);font-family:var(--mono)}
-  #gotop{position:fixed;right:20px;bottom:20px;z-index:300;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--gold,var(--jaguar,#e8b23d)),var(--blue,#4a9eff));color:#0b0f0a;border:none;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,0.45);opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .25s,transform .25s}
+  #gotop{position:fixed;right:20px;bottom:20px;z-index:300;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--jaguar),var(--blue));color:#0b0f0a;border:none;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,0.45);opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .25s,transform .25s}
 #gotop.show{opacity:1;pointer-events:auto;transform:translateY(0)}
 #gotop:hover{filter:brightness(1.1)}
   .copy-all-btn{background:var(--bg3);border:1px solid var(--gr-dim);color:var(--gr2);font-family:var(--mono);font-size:11px;padding:6px 12px;border-radius:6px;cursor:pointer;margin-bottom:14px}
@@ -104,8 +173,9 @@
   .fmeta{font-size:11px;color:var(--text2);margin-top:10px;line-height:1.7;font-family:var(--mono)}
   .chaplink{display:inline-block;background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:6px 12px;font-size:11px;margin:3px;color:var(--gr2);font-family:var(--mono)}
 .footdev{font-size:11px;color:var(--text2);margin-top:10px;font-family:var(--mono)}
-.footdev a{color:var(--jaguar2,var(--gold,var(--gr2,#e8b23d)));text-decoration:none}
+.footdev a{color:var(--jaguar2);text-decoration:none}
 .footdev a:hover{color:#fff;text-decoration:underline}
+#ads-counter{font-family:var(--mono);font-size:11px;color:var(--text2);margin-top:8px;text-align:center}
 .series-nav{margin:0 auto;max-width:1200px;padding:28px 20px 0;border-top:2px solid var(--border)}
 .series-nav-title{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--text2);margin-bottom:14px;display:flex;align-items:center;gap:10px}
 .series-nav-title::before{content:'';flex:1;height:1px;background:var(--border)}
@@ -140,12 +210,13 @@
 
 <nav>
   <a class="nb" href="#sec-visao" data-target="sec-visao">Visão Geral</a>
-  <a class="nb" href="#sec-correcao" data-target="sec-correcao">Correção Metodológica</a>
-  <a class="nb" href="#sec-comparativo" data-target="sec-comparativo">Tabela Comparativa</a>
-  <a class="nb" href="#sec-tipologia" data-target="sec-tipologia">Tipologia de Mecanismos</a>
+  <a class="nb" href="#sec-correcao" data-target="sec-correcao">Correções (5)</a>
+  <a class="nb" href="#sec-comparativo" data-target="sec-comparativo">Tabela Comparativa (13)</a>
+  <a class="nb" href="#sec-tipologia" data-target="sec-tipologia">Tipologia (11)</a>
   <a class="nb" href="#sec-tese" data-target="sec-tese">Tese Refinada</a>
-  <a class="nb" href="#sec-lacunas" data-target="sec-lacunas">Lacunas & Próximos Passos</a>
-  <a class="nb" href="#sec-capitulos" data-target="sec-capitulos">Todos os Capítulos</a>
+  <a class="nb" href="#sec-lacunas" data-target="sec-lacunas">Lacunas (5)</a>
+  <a class="nb" href="#sec-referencias" data-target="sec-referencias">Referências (7)</a>
+  <a class="nb" href="#serie" data-target="serie">Todos os Capítulos (19)</a>
 </nav>
 
 <main>
@@ -195,8 +266,32 @@
 <div id="sec-comparativo" class="sec">
   <div class="panel" style="margin-top:16px">
     <div class="ptitle"><span class="dot dgo"></span>Tabela Comparativa — 12 Estados + Federal</div>
-    <table class="comp">
-      <tr><th>Estado</th><th>Potência</th><th>Mecanismo</th><th>Resultado</th><th>Captura</th></tr>
+    
+    <!-- State x Mechanism Matrix -->
+    <div class="matrix-title">🌐 Matriz Cruzada: Estados × Mecanismos (Clique na célula para navegar)</div>
+    <div class="matrix-scroll">
+      <div id="matrix-grid" class="matrix-grid">
+        <!-- Dynamically generated via Javascript -->
+      </div>
+    </div>
+    
+    <!-- Beautiful Filter Bar -->
+    <div class="filter-panel">
+      <input type="text" id="table-search" class="filter-search" placeholder="Buscar estado (ex: Goiás, SP)...">
+      <div class="filter-group">
+        <button class="filter-btn active" data-filter="all" aria-pressed="true">Todos</button>
+        <button class="filter-btn" data-filter="sim" aria-pressed="false" style="border-color: rgba(62,203,111,0.25)"><span class="dot dg" style="width:6px;height:6px;margin:0"></span>Sim</button>
+        <button class="filter-btn" data-filter="nao" aria-pressed="false" style="border-color: rgba(232,85,85,0.25)"><span class="dot dr" style="width:6px;height:6px;margin:0"></span>Não</button>
+        <button class="filter-btn" data-filter="parcial" aria-pressed="false" style="border-color: rgba(232,196,75,0.25)"><span class="dot dgo" style="width:6px;height:6px;margin:0"></span>Parcial</button>
+      </div>
+    </div>
+
+    <div class="table-scroll">
+      <table class="comp">
+      <thead>
+        <tr><th>Estado</th><th>Potência</th><th>Mecanismo</th><th>Resultado</th><th>Captura</th></tr>
+      </thead>
+      <tbody>
       <tr class="parcial" style="background:rgba(232,196,75,0.06)"><td><b>Goiás</b> 🐉<br><span style="color:var(--text2);font-size:10px">Caiado — CAPÍTULO PIVÔ</span></td><td>China (2023-24) → EUA+Japão (2025-26)</td><td>Missões pessoais (China) → "Manifesto de Entendimento" (EUA) + JOGMEC (Japão)</td><td>Venda de 100% da Serra Verde à USA Rare Earth (US$2,8bi), 3 dias após o Manifesto; Caiado sai do governo para concorrer à Presidência no mesmo trimestre</td><td><span class="badge-capture bc-parcial">Captura simbólico-eleitoral pessoal</span></td></tr>
       <tr class="nao"><td><b>Federal</b></td><td>China+EUA+Japão</td><td>Frameworks amplos (WAICO, memorandos)</td><td>Alinhamento assimétrico duplo — WAICO + venda Serra Verde no mesmo período</td><td><span class="badge-capture bc-nao">Não identificada</span></td></tr>
       <tr class="parcial"><td><b>Pará</b><br><span style="color:var(--text2);font-size:10px">Barbalho</span></td><td>China</td><td>Negociação direta (BYD, Zhongtong) + MoU CCCC/Vale ferrovia</td><td>Ferrovia em audiências públicas; custo ambiental (mineroduto, mortes Terra Indígena)</td><td><span class="badge-capture bc-parcial">Parcial</span></td></tr>
@@ -210,63 +305,70 @@
       <tr class="nao"><td><b>Amapá</b><br><span style="color:var(--text2);font-size:10px">facilitador estadual</span></td><td>China</td><td>Cooperativa extrativista (açaí) + leilão ANP offshore (CNPC/Chevron)</td><td>Amazonbai vende direto (15 mil t); 9 blocos Foz do Amazonas (R$582mi bônus)</td><td><span class="badge-capture bc-nao">NÃO confirma — controle + federal</span></td></tr>
       <tr class="parcial"><td><b>Rio de Janeiro</b><br><span style="color:var(--text2);font-size:10px">Castro</span></td><td>China</td><td>CMPort 70% Vast (Açu) + missão Castro (Hikvision/Dahua) + CNOOC cliente</td><td>~30% export. petróleo; vigilância 92 municípios; CEBC 5º (21 proj.)</td><td><span class="badge-capture bc-parcial">MISTO — infra sem gov. + P09 clássico</span></td></tr>
       <tr class="nao"><td><b>Santa Catarina</b><br><span style="color:var(--text2);font-size:10px">Jorginho Mello / Alesc</span></td><td>China</td><td>Cortejo legislativo à JMEV (não do governador) + ferrovias exploratórias (PowerChina/CRRC/CRCC)</td><td>Termo de intenção assinado, mas JMEV já tinha acordo prévio com o ES; nenhuma fábrica confirmada em nenhum dos dois estados até mar/2026</td><td><span class="badge-capture bc-nao">NÃO confirma — captura zero em ambas as pontas</span></td></tr>
-    </table>
+        <tr class="no-results" style="display:none; background:transparent">
+          <td colspan="5" style="text-align:center; padding:30px; color:var(--text2); font-family:var(--mono)">
+            🔍 Nenhum estado encontrado para "<span id="search-term-display"></span>"
+          </td>
+        </tr>
+      </tbody>
+      </table>
+    </div>
   </div>
 </div>
 
 <!-- TIPOLOGIA -->
 <div id="sec-tipologia" class="sec">
-  <div class="mech-card" style="border-color:rgba(232,196,75,0.3)">
+  <div class="mech-card" id="mech-0" style="border-color:rgba(232,196,75,0.3)">
     <div class="mech-title">0. Captura Simbólico-Eleitoral do Ativo (P09) 🐉</div>
     <div class="mech-cases">Goiás (Caiado) · Minas Gerais (Zema — variante)</div>
     <div class="mech-note">Caso fundador (GO): ativo mineral convertido em bandeira de Presidência. Em MG, Zema lança o Vale do Lítio na Nasdaq e <b>abandona</b> a bandeira quando não performa — P09 aparece, mas a conversão eleitoral não é automática. Captura simbólico-eleitoral <b>pessoal</b>, distinta do benefício ao estado.</div>
   </div>
-  <div class="mech-card">
+  <div class="mech-card" id="mech-1">
     <div class="mech-title">1. Diplomacia Pessoal Direta</div>
     <div class="mech-cases">Bahia (sucesso) · Pará (parcial) · Rio Grande do Sul (fracasso na GWM)</div>
     <div class="mech-note">O mesmo mecanismo produz resultados opostos — negociar pessoalmente com autoridades chinesas não é condição suficiente nem necessária para captura de valor industrial.</div>
   </div>
-  <div class="mech-card">
+  <div class="mech-card" id="mech-2">
     <div class="mech-title">2. Mercado / Leilão Técnico</div>
     <div class="mech-cases">São Paulo · camada CRRC também em MG (Metrô BH)</div>
     <div class="mech-note">Em SP, captura sem diplomacia pessoal do governador — preço e escala. Em MG, CRRC R$700mi convive com a vitrine Ocidente do lítio: o leilão/contrato ferroviário chinês não apaga a Sigma, e a Sigma não apaga a China.</div>
   </div>
-  <div class="mech-card">
+  <div class="mech-card" id="mech-3">
     <div class="mech-title">3. Continuidade Institucional Histórica</div>
     <div class="mech-cases">Paraná</div>
     <div class="mech-note">Relação de 7+ anos com a mesma estatal chinesa; único capítulo com coordenação explícita entre os níveis estadual e federal na negociação.</div>
   </div>
-  <div class="mech-card">
+  <div class="mech-card" id="mech-4">
     <div class="mech-title">4. Fator Logístico-Geográfico</div>
     <div class="mech-cases">Espírito Santo (venceu) · Rio Grande do Sul (perdeu a GWM apesar do cortejo)</div>
     <div class="mech-note">Par de controle mais limpo: mesma empresa (GWM), mesma disputa, desfecho por proximidade portuária — geografia econômica, não esforço político.</div>
   </div>
-  <div class="mech-card">
+  <div class="mech-card" id="mech-5">
     <div class="mech-title">5. Custo Ambiental Local / Benefício Distante</div>
     <div class="mech-cases">Pará (TI Mãe Maria, mineroduto) · Amazonas (mercúrio, Taboca)</div>
     <div class="mech-note">Onde a extração é mineral/ambiental, o padrão assimétrico é mais nítido e mais grave que em PPP, fábrica ou concessão portuária.</div>
   </div>
-  <div class="mech-card" style="border-color:rgba(176,122,255,0.35)">
+  <div class="mech-card" id="mech-6" style="border-color:rgba(176,122,255,0.35)">
     <div class="mech-title">6. Captura de Infraestrutura Crítica ≠ Vitória Manufatureira</div>
     <div class="mech-cases">Rio Grande do Sul (CEEE-T / State Grid)</div>
     <div class="mech-note">Privatização da transmissão estadual (R$2,67bi, 2021) para controlada da State Grid — captura energética concreta sob Leite — <b>não</b> se traduz em fábrica GWM (2026). Variáveis independentes: energia/agro vs. FDI industrial pontual. Também: China 22,5% das exportações gaúchas sem garantir a planta.</div>
   </div>
-  <div class="mech-card" style="border-color:rgba(255,107,95,0.35)">
+  <div class="mech-card" id="mech-7" style="border-color:rgba(255,107,95,0.35)">
     <div class="mech-title">7. Vitrine Ocidente + Camada Chinesa Paralela</div>
     <div class="mech-cases">Minas Gerais (Sigma/LG + CRRC/Midea/BYD)</div>
     <div class="mech-note">O ativo que o governador leva à Nasdaq não esgota a presença estrangeira no estado. MG exige leitura em duas camadas: Ocidente no lítio-vitrine; China em ferrovia, eletrodomésticos e direitos minerais no mesmo vale. Correção obrigatória da tipológia “contraste sem China”.</div>
   </div>
-  <div class="mech-card" style="border-color:rgba(74,158,255,0.35)">
+  <div class="mech-card" id="mech-8" style="border-color:rgba(74,158,255,0.35)">
     <div class="mech-title">8. Captura Federal / Mercado sem Governador</div>
     <div class="mech-cases">Amapá (CNPC/Chevron offshore) · RJ (CMPort/Vast Açu)</div>
     <div class="mech-note">Infraestrutura crítica (petróleo, portos VLCC) capturada por transação de mercado ou leilão federal — governador ausente da negociação documentada. Arquitetura distinta do governador-negociador; soberania operacional migrada para outro nível ou para o mercado.</div>
   </div>
-  <div class="mech-card" style="border-color:rgba(62,203,111,0.35)">
+  <div class="mech-card" id="mech-9" style="border-color:rgba(62,203,111,0.35)">
     <div class="mech-title">9. Controle Cooperativista (controle negativo)</div>
     <div class="mech-cases">Amapá (Amazonbai/açaí)</div>
     <div class="mech-note">Produtor extrativista vende direto; Estado facilita certificação e feira — sem intermediário corporativo ou captura eleitoral documentada. Caso de controle metodológico: ausência de captura não prova inexistência do padrão, mas limita a generalização da tese.</div>
   </div>
-  <div class="mech-card" style="border-color:rgba(232,196,75,0.35)">
+  <div class="mech-card" id="mech-10" style="border-color:rgba(232,196,75,0.35)">
     <div class="mech-title">10. Composição Infra + Governador</div>
     <div class="mech-cases">Rio de Janeiro (Açu + Castro/Hikvision)</div>
     <div class="mech-note">Dois vetores de presença chinesa no mesmo estado, naturezas jurídicas distintas: transação societária de infra crítica (P10) convive com diplomacia pessoal do governador (P09 clássico). RJ exige leitura composta — não um único rótulo tipológico.</div>
@@ -293,33 +395,12 @@
     <p class="body">• <b>Certificação GACC (AP)</b> — contrato Amazonbai pode ser intenção, não venda efetiva (id_1758).</p>
     <p class="body">• <b>PL 2.780/2024</b> segue sem votação final no Senado — teste regulatório da tese sob novo marco de minerais críticos.</p>
     <p class="body">• <b>UFs candidatas:</b> Santa Catarina · Maranhão — ainda sem capítulo dedicado.</p>
-    <p class="body">• <b>X Articles</b> — <a href="/artigos/sintese-final-xarticle.md" style="color:var(--gold)">sintese-final-xarticle.md</a> · <a href="/artigos/sintese-xarticle.md" style="color:var(--gold)">sintese-xarticle.md</a></p>
+    <p class="body">• <b>X Articles</b> — <a href="/artigos/viewer.html?file=sintese-final-xarticle.md" style="color:var(--gold)">sintese-final-xarticle.md</a> · <a href="/artigos/viewer.html?file=sintese-xarticle.md" style="color:var(--gold)">sintese-xarticle.md</a></p>
   </div>
 </div>
 
-<!-- TODOS OS CAPÍTULOS -->
-<div id="sec-capitulos" class="sec">
-  <div class="panel" style="margin-top:16px">
-    <div class="ptitle"><span class="dot dg"></span>Mapa Completo da Série</div>
-    <a class="chaplink" style="border-color:var(--gold);color:var(--gold);text-decoration:none" href="/dragao-onca-goias.html">Cap.1 · Goiás — PIVÔ (T-228)</a>
-    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-brasil-federal.html">Cap.2 · Federal (T-229)</a>
-    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-para.html">Cap.3 · Pará (T-230)</a>
-    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-amazonas.html">Cap.4 · Amazonas (T-231)</a>
-    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-minas-gerais.html">Cap.5 · Minas Gerais (T-232) · releitura China</a>
-    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-sintese.html">Cap.6 · Síntese v1 (T-233)</a>
-    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-braco-juridico.html">Cap.7 · Braço Jurídico (T-234)</a>
-    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-pl2780.html">Cap.8 · PL 2.780 (T-235)</a>
-    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-braco-diplomatico.html">Cap.9 · Braço Diplomático (T-236)</a>
-    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-bahia.html">Cap.10 · Bahia (T-237)</a>
-    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-sao-paulo.html">Cap.11 · São Paulo (T-238)</a>
-    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-parana.html">Cap.12 · Paraná (T-239)</a>
-    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-rio-grande-do-sul.html">Cap.13 · Rio Grande do Sul (T-240)</a>
-    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-rs-es-ranking-nacional.html">Cap.14 · ES + Ranking CEBC (T-241–242)</a>
-    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-amapa.html">Cap.16 · Amapá (T-244) · controle + federal</a>
-    <a class="chaplink" style="text-decoration:none" href="/dragao-onca-rj.html">Cap.17 · Rio de Janeiro (T-245) · Açu + Castro</a>
-    <div class="chaplink" style="border-color:var(--gold);color:var(--gold)">Síntese Final (T-243) ← você está aqui</div>
-  </div>
-
+<!-- REFERÊNCIAS -->
+<div id="sec-referencias" class="sec">
   <div class="panel">
     <div class="ptitle"><span class="dot dg"></span>Referências-Chave</div>
     <div class="refitem"><div class="refnum">[01]</div><div><div class="reftitle">Conselho Empresarial Brasil-China — Investimentos Chineses no Brasil 2025</div><div class="refsrc">CEBC, abr/2026 · ranking nacional</div></div></div>
@@ -328,7 +409,7 @@
     <div class="refitem"><div class="refnum">[04]</div><div><div class="reftitle"><a href="/dragao-onca-amapa.html" style="color:var(--gr2)">Dossiê AP — controle + captura federal</a></div><div class="refsrc">T-244 · IDs 1757–1759 · 27/jul/2026</div></div></div>
     <div class="refitem"><div class="refnum">[05]</div><div><div class="reftitle"><a href="/dragao-onca-rj.html" style="color:var(--gr2)">Dossiê RJ — Açu + Castro/Hikvision</a></div><div class="refsrc">T-245 · IDs 1760–1762 · 27/jul/2026</div></div></div>
     <div class="refitem"><div class="refnum">[06]</div><div><div class="reftitle"><a href="/dragao-onca-santa-catarina.html" style="color:var(--gr2)">Dossiê SC — JMEV (cortejo duplo) + ferrovias</a></div><div class="refsrc">T-246 · IDs 1764–1770 · 27/jul/2026</div></div></div>
-    <div class="refitem"><div class="refnum">[06]</div><div><div class="reftitle"><a href="/dragao-onca-sintese.html" style="color:var(--gr2)">Síntese v1 — KPIs ~R$81bi+</a></div><div class="refsrc">T-233 · espelho consolidado 27/jul/2026</div></div></div>
+    <div class="refitem"><div class="refnum">[07]</div><div><div class="reftitle"><a href="/dragao-onca-sintese.html" style="color:var(--gr2)">Síntese v1 — KPIs ~R$81bi+</a></div><div class="refsrc">T-233 · espelho consolidado 27/jul/2026</div></div></div>
   </div>
 </div>
 
@@ -362,7 +443,7 @@
 
 <footer>
   <div class="flinks">
-        <a href="https://www.artesdosul.com/" target="_blank" rel="noopener">✦ Artes do Sul</a>
+        <a href="https://www.artesdosul.com/" target="_blank" rel="noopener">✦ @artesdosul</a>
 <a href="https://lawfare-timeline.vercel.app/" target="_blank">⚖ Lawfare Timeline</a>
     <a href="https://gosurf.site" target="_blank">🌐 gosurf.site</a>
     <a href="https://observatorio-civil-br.vercel.app/" target="_blank">👁 Observatório Civil BR</a>
@@ -373,14 +454,15 @@
     + Amapá (T-244) · + Rio de Janeiro (T-245) · + Santa Catarina (T-246) · 12 UFs · corpus T-228→T-246 · 150 posts<br>
     Correções: Goiás (backfill) · MG (“sem China”) · RS (RS Day 1756) · AP/RJ (novos padrões).
   </div>
-  <div class="footdev">Desenvolvido por <a href="https://www.artesdosul.com/" target="_blank" rel="noopener">Artes do Sul</a></div>
+      <div class="footdev">Desenvolvido por <a href="https://www.artesdosul.com/" target="_blank" rel="noopener">@artesdosul</a></div>
+  <div id="ads-counter"></div>
 </footer>
 
 <button id="gotop" title="Voltar ao topo" aria-label="Voltar ao topo">↑</button>
 
 <script>
 const links = document.querySelectorAll('.nb');
-const sections = document.querySelectorAll('main .sec');
+const sections = document.querySelectorAll('main .sec, #serie');
 const map = {};
 links.forEach(l=>{map[l.dataset.target]=l});
 const observer = new IntersectionObserver((entries)=>{
@@ -408,6 +490,175 @@ function copyAll(){
     setTimeout(() => { btn.textContent = '⊕ Copiar dossiê completo para IA'; }, 2000);
   });
 }
+
+// Live Search & Filter Logic & Dynamic Matrix
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.getElementById('table-search');
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const rows = document.querySelectorAll('table.comp tbody tr:not(.no-results)');
+
+  const matrixData = [
+    { uf: "Goiás", result: "parcial", mechs: [0] },
+    { uf: "Federal", result: "nao", mechs: [8] },
+    { uf: "Pará", result: "parcial", mechs: [1, 5] },
+    { uf: "Amazonas", result: "nao", mechs: [5] },
+    { uf: "Minas Gerais", result: "parcial", mechs: [0, 2, 7] },
+    { uf: "Bahia", result: "sim", mechs: [1] },
+    { uf: "São Paulo", result: "nao", mechs: [2] },
+    { uf: "Paraná", result: "nao", mechs: [3] },
+    { uf: "Rio Grande do Sul", result: "parcial", mechs: [1, 4, 6] },
+    { uf: "Espírito Santo", result: "sim", mechs: [4] },
+    { uf: "Amapá", result: "nao", mechs: [8, 9] },
+    { uf: "Rio de Janeiro", result: "parcial", mechs: [8, 10] },
+    { uf: "Santa Catarina", result: "nao", mechs: [] }
+  ];
+
+  const mechLabels = [
+    "M0: Captura Eleitoral (P09)",
+    "M1: Diplomacia Direta",
+    "M2: Mercado / Leilão",
+    "M3: Continuidade Histórica",
+    "M4: Fator Logístico",
+    "M5: Custo Ambiental Local",
+    "M6: Captura de Infraestrutura",
+    "M7: Vitrine Ocidente + China",
+    "M8: Captura Federal",
+    "M9: Controle Cooperativo",
+    "M10: Composição Infra+Gov"
+  ];
+
+  function buildMatrix() {
+    const grid = document.getElementById('matrix-grid');
+    if (!grid) return;
+    grid.innerHTML = '';
+
+    // Header row
+    const headerUf = document.createElement('div');
+    headerUf.className = 'matrix-header uf-col';
+    headerUf.textContent = 'UF / Mecanismo';
+    grid.appendChild(headerUf);
+
+    for (let m = 0; m <= 10; m++) {
+      const headerCell = document.createElement('div');
+      headerCell.className = 'matrix-header';
+      headerCell.textContent = 'M' + m;
+      headerCell.title = mechLabels[m];
+      grid.appendChild(headerCell);
+    }
+
+    // Row for each state
+    matrixData.forEach(row => {
+      const ufLabel = document.createElement('div');
+      ufLabel.className = 'matrix-row-label';
+      ufLabel.innerHTML = `<b>${row.uf}</b>`;
+      grid.appendChild(ufLabel);
+
+      for (let m = 0; m <= 10; m++) {
+        const cell = document.createElement('div');
+        cell.className = 'matrix-cell';
+        const applies = row.mechs.includes(m);
+        if (applies) {
+          cell.classList.add('active-' + row.result);
+          cell.textContent = '●';
+          
+          // Tooltip
+          const tooltip = document.createElement('div');
+          tooltip.className = 'matrix-tooltip';
+          tooltip.textContent = `${row.uf} utiliza ${mechLabels[m]} (${row.result.toUpperCase()})`;
+          cell.appendChild(tooltip);
+
+          // Click handler to smooth scroll to mech card
+          cell.addEventListener('click', () => {
+            const target = document.getElementById('mech-' + m);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              target.classList.add('highlight-glow');
+              setTimeout(() => {
+                target.classList.remove('highlight-glow');
+              }, 2000);
+            }
+          });
+        } else {
+          cell.textContent = '-';
+          cell.style.opacity = '0.2';
+        }
+        grid.appendChild(cell);
+      }
+    });
+  }
+
+  function filterTable() {
+    const query = searchInput.value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
+    let visibleCount = 0;
+
+    rows.forEach(row => {
+      const stateCell = row.querySelector('td:first-child');
+      if (!stateCell) return;
+      
+      const stateText = stateCell.innerText.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      const matchesSearch = stateText.includes(query);
+      
+      let matchesFilter = false;
+      if (activeFilter === 'all') {
+        matchesFilter = true;
+      } else {
+        matchesFilter = row.classList.contains(activeFilter);
+      }
+
+      if (matchesSearch && matchesFilter) {
+        row.style.display = '';
+        visibleCount++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+
+    const noResultsRow = document.querySelector('table.comp tr.no-results');
+    if (noResultsRow) {
+      if (visibleCount === 0) {
+        noResultsRow.style.display = '';
+        const termSpan = document.getElementById('search-term-display');
+        if (termSpan) termSpan.textContent = searchInput.value;
+      } else {
+        noResultsRow.style.display = 'none';
+      }
+    }
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener('input', filterTable);
+  }
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
+      filterTable();
+    });
+  });
+
+  // Initialize Matrix & Register Service Worker
+  buildMatrix();
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(reg => console.log('Service Worker registrado!', reg))
+        .catch(err => console.log('Erro ao registrar Service Worker:', err));
+    });
+  }
+});
 </script>
+<script defer src="https://stats.artesdosul.com/v.js"
+  data-site="Zjt0Xma8E766TTRDfK0L"
+  data-key="pk_a9d707d4d64804ab5736f17d85c8674b"></script>
+<script defer src="https://stats.artesdosul.com/c.js"
+  data-site="Zjt0Xma8E766TTRDfK0L"
+  data-key="pk_a9d707d4d64804ab5736f17d85c8674b"
+  data-target="#ads-counter"></script>
 </body>
 </html>

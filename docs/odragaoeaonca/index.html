@@ -3,6 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/public/icons/icon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#080c10">
 <title>O Dragão e a Onça — Série Brasil × China | Lawfare Timeline</title>
 <meta name="description" content="Hub da série O Dragão e a Onça — 19 artefatos na ordem de importância (0–18), dossiês HTML + timelines condensadas. Corpus T-228 → T-246 · atualizado 27/jul/2026.">
 <link rel="canonical" href="https://odragaoeaonca.vercel.app/">
@@ -10,9 +15,54 @@
 <meta property="og:url" content="https://odragaoeaonca.vercel.app/">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://odragaoeaonca.vercel.app/public/dragao-onca.webp">
-<link rel="icon" href="/favicon.ico" sizes="48x48">
+
+<!-- Google Fonts Preconnect and Link tags (Optimized for Lighthouse) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+
+<!-- Structured JSON-LD Metadata (Optimized for Google SEO & AI Crawlers) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "O Dragão e a Onça",
+  "url": "https://odragaoeaonca.vercel.app/",
+  "description": "Série investigativa estrutural sobre as relações Brasil-China. Analisa como acordos bilaterais federais e contratos estaduais afetam a soberania mineral e as dinâmicas de poder dos governadores.",
+  "about": {
+    "@type": "Thing",
+    "name": "Lawfare & Relações Internacionais",
+    "description": "Investigação sobre o uso estratégico de marcos regulatórios e parcerias internacionais para captura de ativos minerais, infraestrutura crítica e capital político."
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Artes do Sul & Observatório Civil BR",
+    "url": "https://stats.artesdosul.com"
+  },
+  "hasPart": [
+    { "@type": "WebPage", "name": "Goiás — PIVÔ (T-228)", "url": "https://odragaoeaonca.vercel.app/dragao-onca-goias.html" },
+    { "@type": "WebPage", "name": "Federal (T-229)", "url": "https://odragaoeaonca.vercel.app/dragao-onca-brasil-federal.html" },
+    { "@type": "WebPage", "name": "Pará (T-230)", "url": "https://odragaoeaonca.vercel.app/dragao-onca-para.html" },
+    { "@type": "WebPage", "name": "Amazonas (T-231)", "url": "https://odragaoeaonca.vercel.app/dragao-onca-amazonas.html" },
+    { "@type": "WebPage", "name": "Minas Gerais (T-232)", "url": "https://odragaoeaonca.vercel.app/dragao-onca-minas-gerais.html" },
+    { "@type": "WebPage", "name": "Síntese v1 (T-233)", "url": "https://odragaoeaonca.vercel.app/dragao-onca-sintese.html" },
+    { "@type": "WebPage", "name": "Braço Jurídico (T-234)", "url": "https://odragaoeaonca.vercel.app/dragao-onca-braco-juridico.html" },
+    { "@type": "WebPage", "name": "PL 2.780 (T-235)", "url": "https://odragaoeaonca.vercel.app/dragao-onca-pl2780.html" },
+    { "@type": "WebPage", "name": "Braço Diplomático (T-236)", "url": "https://odragaoeaonca.vercel.app/dragao-onca-braco-diplomatico.html" },
+    { "@type": "WebPage", "name": "Bahia (T-237)", "url": "https://odragaoeaonca.vercel.app/dragao-onca-bahia.html" },
+    { "@type": "WebPage", "name": "São Paulo (T-238)", "url": "https://odragaoeaonca.vercel.app/dragao-onca-sao-paulo.html" },
+    { "@type": "WebPage", "name": "Paraná (T-239)", "url": "https://odragaoeaonca.vercel.app/dragao-onca-parana.html" },
+    { "@type": "WebPage", "name": "Rio Grande do Sul (T-240)", "url": "https://odragaoeaonca.vercel.app/dragao-onca-rio-grande-do-sul.html" },
+    { "@type": "WebPage", "name": "ES + Ranking CEBC (T-241–242)", "url": "https://odragaoeaonca.vercel.app/dragao-onca-rs-es-ranking-nacional.html" },
+    { "@type": "WebPage", "name": "Amapá (T-244)", "url": "https://odragaoeaonca.vercel.app/dragao-onca-amapa.html" },
+    { "@type": "WebPage", "name": "Rio de Janeiro (T-245)", "url": "https://odragaoeaonca.vercel.app/dragao-onca-rj.html" },
+    { "@type": "WebPage", "name": "Santa Catarina (T-246)", "url": "https://odragaoeaonca.vercel.app/dragao-onca-santa-catarina.html" },
+    { "@type": "WebPage", "name": "Síntese Final (T-243)", "url": "https://odragaoeaonca.vercel.app/dragao-onca-sintese-final-cross-state.html" }
+  ]
+}
+</script>
+
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 :root{
@@ -76,6 +126,10 @@ footer{padding:24px;text-align:center;border-top:2px solid var(--jaguar-dim)}
 .foot{font-family:var(--mono);font-size:11px;color:var(--text2)}
 .foot b,.foot a{color:var(--jaguar2)}
 .foot a{text-decoration:none}
+.footdev{font-size:11px;color:var(--text2);margin-top:10px;font-family:var(--mono)}
+.footdev a{color:var(--jaguar2);text-decoration:none}
+.footdev a:hover{color:#fff;text-decoration:underline}
+#ads-counter{font-family:var(--mono);font-size:11px;color:var(--text2);margin-top:8px;text-align:center}
 </style>
 </head>
 <body>
@@ -92,6 +146,20 @@ footer{padding:24px;text-align:center;border-top:2px solid var(--jaguar-dim)}
   </div>
 </header>
 <main>
+
+  <!-- AI Anchor Summary: Propósito Editorial e Metodologia (Otimizado para LLMs e Busca) -->
+  <section class="thesis" style="margin-top:0; margin-bottom:20px; background:rgba(232,178,61,0.06); border-color:rgba(232,178,61,0.2)">
+    <details open>
+      <summary style="font-size:14px; font-weight:800; color:var(--jaguar2); cursor:pointer; outline:none; user-select:none; padding-bottom:6px">
+        🔍 Propósito do Projeto & Metodologia de Análise (AI & Search Engine Summary)
+      </summary>
+      <div style="margin-top:10px; font-size:13px; color:var(--text2); line-height:1.7">
+        <p style="margin-bottom:8px"><b>Objetivo:</b> Este hub documental analisa as relações diplomáticas, comerciais e jurídicas entre a República Federativa do Brasil e potências estrangeiras (com foco nos fluxos de investimentos e infraestrutura da República Popular da China), mapeando a assimetria regulatória e a hipótese de <i>"Soberania na Conta do Governador"</i>.</p>
+        <p style="margin-bottom:8px"><b>Tese Central:</b> O governo federal brasileiro estabelece acordos e frameworks diplomáticos gerais de alto nível, enquanto os governadores estaduais executam contratos de concessão, privatizações e licenciamentos específicos. Nesse modelo, os líderes regionais absorvem o custo político local e capturam valor simbólico-eleitoral direto, enquanto ativos estratégicos (como minerais críticos e infraestrutura de transporte/energia) são transferidos sob termos de dependência assimétrica.</p>
+        <p style="margin-bottom:0"><b>Metodologia:</b> Avaliação cruzada baseada em dados reais de investimentos (CEBC, B3), relatórios institucionais e o acompanhamento temporal de 12 Unidades Federativas (UFs), servindo de controle empírico para testar onde a hipótese central se confirma (Pará, Goiás, Amazonas), se qualifica (São Paulo, Minas Gerais, Paraná) ou é contrariada (Bahia, Espírito Santo, Amapá, Santa Catarina).</p>
+      </div>
+    </details>
+  </section>
 
   <div class="sec-label" id="indice">Índice inteligente · âncoras</div>
   <p class="sec-hint">Deep-links estáveis. Timelines em <a href="timeline/" style="color:var(--jaguar2)">/timeline/</a> · espelho com chips também lá.</p>
@@ -376,25 +444,25 @@ footer{padding:24px;text-align:center;border-top:2px solid var(--jaguar-dim)}
 
   <div class="sec-label" id="x-articles">X Articles · ordem 0–18</div>
   <div class="x-grid">
-    <a class="xlink" href="artigos/odragaoeaonca-xarticle.md"><b>0 · Índice</b><span>odragaoeaonca-xarticle.md</span></a>
-    <a class="xlink" href="artigos/brasil-federal-xarticle.md"><b>1 · Federal</b><span>T-229</span></a>
-    <a class="xlink" href="artigos/braco-diplomatico-xarticle.md"><b>2 · Diplomático</b><span>T-236</span></a>
-    <a class="xlink" href="artigos/sao-paulo-xarticle.md"><b>3 · São Paulo</b><span>T-238</span></a>
-    <a class="xlink" href="artigos/goias-xarticle.md"><b>4 · Goiás</b><span>T-228</span></a>
-    <a class="xlink" href="artigos/minas-gerais-xarticle.md"><b>5 · Minas Gerais</b><span>T-232</span></a>
-    <a class="xlink" href="artigos/bahia-xarticle.md"><b>6 · Bahia</b><span>T-237</span></a>
-    <a class="xlink" href="artigos/para-xarticle.md"><b>7 · Pará</b><span>T-230</span></a>
-    <a class="xlink" href="artigos/amazonas-xarticle.md"><b>8 · Amazonas</b><span>T-231</span></a>
-    <a class="xlink" href="artigos/parana-xarticle.md"><b>9 · Paraná</b><span>T-239</span></a>
-    <a class="xlink" href="artigos/rio-grande-do-sul-xarticle.md"><b>10 · RS</b><span>T-240</span></a>
-    <a class="xlink" href="artigos/rs-es-ranking-xarticle.md"><b>11 · RS·ES</b><span>T-240–242</span></a>
-    <a class="xlink" href="artigos/sintese-xarticle.md"><b>12 · Síntese</b><span>T-233</span></a>
-    <a class="xlink" href="artigos/pl2780-xarticle.md"><b>13 · PL 2.780</b><span>T-235</span></a>
-    <a class="xlink" href="artigos/braco-juridico-xarticle.md"><b>14 · Jurídico</b><span>T-234</span></a>
-    <a class="xlink" href="artigos/sintese-final-xarticle.md"><b>15 · Final</b><span>T-243</span></a>
-    <a class="xlink" href="artigos/amapa-xarticle.md"><b>16 · Amapá</b><span>T-244</span></a>
-    <a class="xlink" href="artigos/rj-xarticle.md"><b>17 · RJ</b><span>T-245</span></a>
-    <a class="xlink" href="artigos/santa-catarina-xarticle.md"><b>18 · SC</b><span>T-246</span></a>
+    <a class="xlink" href="artigos/viewer.html?file=odragaoeaonca-xarticle.md"><b>0 · Índice</b><span>odragaoeaonca-xarticle.md</span></a>
+    <a class="xlink" href="artigos/viewer.html?file=brasil-federal-xarticle.md"><b>1 · Federal</b><span>T-229</span></a>
+    <a class="xlink" href="artigos/viewer.html?file=braco-diplomatico-xarticle.md"><b>2 · Diplomático</b><span>T-236</span></a>
+    <a class="xlink" href="artigos/viewer.html?file=sao-paulo-xarticle.md"><b>3 · São Paulo</b><span>T-238</span></a>
+    <a class="xlink" href="artigos/viewer.html?file=goias-xarticle.md"><b>4 · Goiás</b><span>T-228</span></a>
+    <a class="xlink" href="artigos/viewer.html?file=minas-gerais-xarticle.md"><b>5 · Minas Gerais</b><span>T-232</span></a>
+    <a class="xlink" href="artigos/viewer.html?file=bahia-xarticle.md"><b>6 · Bahia</b><span>T-237</span></a>
+    <a class="xlink" href="artigos/viewer.html?file=para-xarticle.md"><b>7 · Pará</b><span>T-230</span></a>
+    <a class="xlink" href="artigos/viewer.html?file=amazonas-xarticle.md"><b>8 · Amazonas</b><span>T-231</span></a>
+    <a class="xlink" href="artigos/viewer.html?file=parana-xarticle.md"><b>9 · Paraná</b><span>T-239</span></a>
+    <a class="xlink" href="artigos/viewer.html?file=rio-grande-do-sul-xarticle.md"><b>10 · RS</b><span>T-240</span></a>
+    <a class="xlink" href="artigos/viewer.html?file=rs-es-ranking-xarticle.md"><b>11 · RS·ES</b><span>T-240–242</span></a>
+    <a class="xlink" href="artigos/viewer.html?file=sintese-xarticle.md"><b>12 · Síntese</b><span>T-233</span></a>
+    <a class="xlink" href="artigos/viewer.html?file=pl2780-xarticle.md"><b>13 · PL 2.780</b><span>T-235</span></a>
+    <a class="xlink" href="artigos/viewer.html?file=braco-juridico-xarticle.md"><b>14 · Jurídico</b><span>T-234</span></a>
+    <a class="xlink" href="artigos/viewer.html?file=sintese-final-xarticle.md"><b>15 · Final</b><span>T-243</span></a>
+    <a class="xlink" href="artigos/viewer.html?file=amapa-xarticle.md"><b>16 · Amapá</b><span>T-244</span></a>
+    <a class="xlink" href="artigos/viewer.html?file=rj-xarticle.md"><b>17 · RJ</b><span>T-245</span></a>
+    <a class="xlink" href="artigos/viewer.html?file=santa-catarina-xarticle.md"><b>18 · SC</b><span>T-246</span></a>
   </div>
 
   <div class="thesis" id="tese">
@@ -403,7 +471,24 @@ footer{padding:24px;text-align:center;border-top:2px solid var(--jaguar-dim)}
   </div>
 </main>
 <footer>
-  <div class="foot">⚖ <b>CC0 1.0</b> — Domínio Público · <a href="https://odragaoeaonca.vercel.app/">odragaoeaonca.vercel.app</a> · <a href="timeline/">timeline/</a> · <a href="https://lawfare-timeline.vercel.app/">lawfare-timeline</a></div>
+  <div class="foot">⚖ <b>CC0 1.0</b> — Domínio Público · <a href="https://odragaoeaonca.vercel.app/">odragaoeaonca.vercel.app</a> · <a href="timeline/">timeline/</a> · <a href="https://lawfare-timeline.vercel.app/">lawfare-timeline</a> · Desenvolvido por <a href="https://www.artesdosul.com/" target="_blank" rel="noopener">@artesdosul</a></div>
+  <div id="ads-counter"></div>
 </footer>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(reg => console.log('Service Worker registrado!', reg))
+      .catch(err => console.log('Erro ao registrar Service Worker:', err));
+  });
+}
+</script>
+<script defer src="https://stats.artesdosul.com/v.js"
+  data-site="Zjt0Xma8E766TTRDfK0L"
+  data-key="pk_a9d707d4d64804ab5736f17d85c8674b"></script>
+<script defer src="https://stats.artesdosul.com/c.js"
+  data-site="Zjt0Xma8E766TTRDfK0L"
+  data-key="pk_a9d707d4d64804ab5736f17d85c8674b"
+  data-target="#ads-counter"></script>
 </body>
 </html>

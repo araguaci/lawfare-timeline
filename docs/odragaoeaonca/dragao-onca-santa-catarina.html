@@ -3,6 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/public/icons/icon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#080c10">
 <title>O Dragão e a Onça — Santa Catarina: Cortejo Duplo Sem Captura | República Sequestrada</title>
 <meta name="description" content="Capítulo Santa Catarina (T-246): JMEV/SC×ES sem fábrica, ferrovias em estudo com PowerChina/CRRC/CRCC, GACC/frango. IDs 1764-1770. CC0.">
 
@@ -96,12 +101,9 @@ footer{padding:22px 26px 40px;border-top:2px solid var(--dragon-dim);text-align:
 .footdev{font-size:11px;color:var(--text2);margin-top:10px;font-family:var(--mono)}
 .footdev a{color:var(--jaguar2);text-decoration:none}
 .footdev a:hover{color:#fff;text-decoration:underline}
+#ads-counter{font-family:var(--mono);font-size:11px;color:var(--text2);margin-top:8px;text-align:center}
 #gotop{position:fixed;right:20px;bottom:20px;z-index:300;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--dragon),var(--purple));color:#fff;border:none;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,0.45);opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .25s,transform .25s}
 #gotop.show{opacity:1;pointer-events:auto;transform:translateY(0)}
-.series-nav{margin:0 auto;max-width:1100px;padding:28px 20px 0;border-top:2px solid var(--border)}
-.series-nav-title{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--text2);margin-bottom:14px}
-.bridge{margin-top:12px;padding:14px 16px;border-radius:10px;background:rgba(176,122,255,0.08);border:1px solid rgba(176,122,255,0.25);font-size:13px;color:var(--text2);line-height:1.65}
-.bridge a{color:var(--purple2);font-weight:700;text-decoration:none}
 .series-nav{margin:0 auto;max-width:1200px;padding:28px 20px 0;border-top:2px solid var(--border)}
 .series-nav-title{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--text2);margin-bottom:14px;display:flex;align-items:center;gap:10px}
 .series-nav-title::before{content:'';flex:1;height:1px;background:var(--border)}
@@ -268,7 +270,8 @@ footer{padding:22px 26px 40px;border-top:2px solid var(--dragon-dim);text-align:
 <footer>
   <div class="footcc0">⚖ <b>CC0 1.0</b> — Domínio Público · lawfare-timeline · série "O Dragão e a Onça" — Capítulo Santa Catarina</div>
   <div class="footnote">Publicado 27/jul/2026 · T-246 · IDs 1764–1770 · <a href="/dragao-onca-sintese.html" style="color:var(--text2)">Síntese comparativa</a> · <a href="/dragao-onca-sintese-final-cross-state.html" style="color:var(--text2)">Síntese final (T-243)</a></div>
-  <div class="footdev">Desenvolvido por <a href="https://www.artesdosul.com/" target="_blank" rel="noopener">Artes do Sul</a></div>
+      <div class="footdev">Desenvolvido por <a href="https://www.artesdosul.com/" target="_blank" rel="noopener">@artesdosul</a></div>
+  <div id="ads-counter"></div>
 </footer>
 
 <button id="gotop" title="Voltar ao topo" aria-label="Voltar ao topo">↑</button>
@@ -296,5 +299,12 @@ gotop.addEventListener('click',()=>{
   window.scrollTo({top:0,behavior:'smooth'});
 });
 </script>
+<script defer src="https://stats.artesdosul.com/v.js"
+  data-site="Zjt0Xma8E766TTRDfK0L"
+  data-key="pk_a9d707d4d64804ab5736f17d85c8674b"></script>
+<script defer src="https://stats.artesdosul.com/c.js"
+  data-site="Zjt0Xma8E766TTRDfK0L"
+  data-key="pk_a9d707d4d64804ab5736f17d85c8674b"
+  data-target="#ads-counter"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 Investigação documental sobre captura econômico-eleitoral no federalismo brasileiro: como governadores negociam ativos estratégicos com capital estrangeiro (chinês, americano, europeu, japonês, sul-coreano) e convertem esses ativos em capital político pessoal — frequentemente sem que o benefício chegue à população das regiões afetadas.
 
 **Licença:** CC0 1.0 — Domínio Público · série *lawfare-timeline*  
-**Hub:** https://odragaoeaonca.vercel.app/ · **Corpus:** T-228 → T-246 · atualizado 27/jul/2026
+**Hub:** https://odragaoeaonca.vercel.app/ · **Corpus:** T-228 → T-246 · status sincronizado 06/ago/2026
 
 ---
 
@@ -15,23 +15,55 @@ A União negocia marcos amplos (tratados, MoUs, cúpulas). Quem assina o contrat
 
 ---
 
+## Status do projeto
+
+Inventário alinhado aos arquivos no disco (06/ago/2026).
+
+| Camada | Estado | Artefatos |
+|--------|--------|-----------|
+| Dossiês HTML | Pronto | 18× `dragao-onca-*.html` + `index.html` + `odragaoeaonca.html` |
+| X Articles (locais) | Pronto | 19× `artigos/*-xarticle.md` (0–18); arquivados: `amapa-xarticle-old.md`, `rj-xarticle-old.md` |
+| Publicação no X | Aguardando API | Gap vs [@araguaci/articles](https://x.com/araguaci/articles): [`artigos/publication-status.md`](artigos/publication-status.md) — rodar `python scripts/fetch_x_articles.py` com token (ver [scripts/README-x-articles.md](scripts/README-x-articles.md)) |
+| Capas webp | Pronto | 19 capas de capítulo em `public/dragao-onca*.webp` (+ extras: `espirito-santo`, `pr`, `ranking-cebc`, `soberania`, `rs-es`) |
+| Hero PNG 1024×600 | Parcial | Só `artigos/santa-catarina-xarticle-hero.png`; demais capítulos usam capa `.webp` ou regenerar via [`CATALAGO.md`](CATALAGO.md) |
+| Timelines | Pronto | `timeline/index.html` + 18× `timeline/timeline-*.html` |
+| Favicon / PWA | Pronto | Fonte `public/Gemini_Generated_Transparent.png` → `favicon.ico` · `apple-touch-icon.png` · `public/icons/*` · `manifest.webmanifest` — links em 39 HTML |
+| Pipeline | Pronto | `scripts/run_series_pipeline.py` (+ generate / series-nav / patch) |
+| Promoção X | Pronto | planos neste README + `promo/x-posts-promocao.md` |
+| Catálogo / changelog | Pronto | [`CATALAGO.md`](CATALAGO.md) · [`changelog.md`](changelog.md) |
+| Qualidade | Pronto | `docs/qualidade-artefato-referencia.md` |
+
+**Pendências operacionais:** opcional regenerar heroes PNG 1024×600 em `artigos/`; regenerar ícones com `python scripts/generate_pwa_icons.py` se a arte fonte mudar.
+
+---
+
 ## Estrutura do repositório
 
 ```
 odragaoeaonca/
-├── artigos/                    # 19 X Articles (.md) + heroes 1024×600
-├── public/                     # Capas webp + relatórios estaduais (MD/PDF)
-├── docs/                       # Dossiês-fonte, imagens, notas
-├── timeline/                   # Hub por ordem de importância + âncoras (#rj, #t-245, #t-246…)
-├── CATALAGO.md                 # Índice + prompts hero completos por capítulo
-├── dragao-onca-*.html          # 18 dossiês interativos (+ index hub)
-├── index.html                  # Dashboard (ordem CEBC + eixos)
+├── artigos/                    # 19 X Articles canônicos (+ 2 *-old.md) · 1 hero PNG
+├── artigos/publication-status.md  # Gap locais vs X publicados (fetch_x_articles.py)
+├── public/                     # Capas webp (19+ extras) + relatórios MD estaduais
+├── public/icons/               # Pack PWA (any + maskable) gerado do emblema Gemini
+├── docs/                       # Dossiês-fonte, qualidade-artefato, notas
+├── timeline/                   # Hub + 18 timelines condensadas
+├── scripts/                    # Pipeline series-nav + timeline + fetch_x_articles.py
+├── promo/                      # x-posts-promocao.md
+├── CATALAGO.md                 # Índice + prompts hero por capítulo
+├── changelog.md                # Histórico de fontes
+├── dragao-onca-*.html          # 18 dossiês interativos
+├── favicon.ico                 # Tab 16/32/48 (raiz) — emblema Gemini
+├── apple-touch-icon.png        # iOS 180×180 (raiz)
+├── manifest.webmanifest        # PWA (theme #080c10)
+├── index.html                  # Hub / dashboard
+├── odragaoeaonca.html          # Entrada espelho
 └── vercel.json                 # Deploy estático (@vercel/static)
 ```
 
-**Índice inteligente (âncoras):** [`timeline/`](timeline/) — ordem README 0–18; deep-links `timeline/#amapa`, `timeline/#rj`, `timeline/#santa-catarina`.  
+**Índice inteligente (âncoras):** [`timeline/`](timeline/) — ordem 0–18; deep-links `timeline/#amapa`, `timeline/#rj`, `timeline/#santa-catarina`.  
 **Timelines condensadas:** `timeline/timeline-{slug}.html` (geradas de `dragao-onca-*.html`).  
-**Pipeline:** `python scripts/run_series_pipeline.py` → series-nav nos dossiês + regenera `timeline/` + patch do hub.
+**Pipeline:** `python scripts/run_series_pipeline.py` → series-nav nos dossiês + regenera `timeline/` + patch do hub.  
+**Ícones PWA:** `python scripts/generate_pwa_icons.py` ← `public/Gemini_Generated_Transparent.png` ([Ícones PWA](#ícones-pwa)).
 
 ---
 
@@ -81,7 +113,7 @@ Publicar nesta sequência (≤2 posts/dia). **Eixos transversais primeiro** → 
 | 8 | Amazonas | `artigos/amazonas-xarticle.md` | `public/dragao-onca-amazonas.webp` | `dragao-onca-amazonas.html` |
 | 9 | Paraná | `artigos/parana-xarticle.md` | `public/dragao-onca-parana.webp` | `dragao-onca-parana.html` |
 | 10 | Rio Grande do Sul | `artigos/rio-grande-do-sul-xarticle.md` | `public/dragao-onca-rio-grande-do-sul.webp` | `dragao-onca-rio-grande-do-sul.html` |
-| 11 | RS · ES · Ranking | `artigos/rs-es-ranking-xarticle.md` | `public/dragao-onca-rs-es-ranking.webp` | `dragao-onca-rs-es-ranking-nacional.html` |
+| 11 | RS · ES · Ranking | `artigos/rs-es-ranking-xarticle.md` | `public/dragao-onca-rs-es.webp` | `dragao-onca-rs-es-ranking-nacional.html` |
 | 12 | Síntese v1 | `artigos/sintese-xarticle.md` | `public/dragao-onca-sintese.webp` | `dragao-onca-sintese.html` |
 | 13 | PL 2.780 | `artigos/pl2780-xarticle.md` | `public/dragao-onca-pl2780.webp` | `dragao-onca-pl2780.html` |
 | 14 | Braço Jurídico | `artigos/braco-juridico-xarticle.md` | `public/dragao-onca-braco-juridico.webp` | `dragao-onca-braco-juridico.html` |
@@ -90,7 +122,10 @@ Publicar nesta sequência (≤2 posts/dia). **Eixos transversais primeiro** → 
 | 17 | Rio de Janeiro | `artigos/rj-xarticle.md` | `public/dragao-onca-rj.webp` | `dragao-onca-rj.html` |
 | 18 | Santa Catarina | `artigos/santa-catarina-xarticle.md` | `public/dragao-onca-santa-catarina.webp` | `dragao-onca-santa-catarina.html` |
 
-**Total:** 19 X Articles / dossiês · **UFs:** SP · GO · MG · BA · PA · AM · PR · RS · ES · AP · RJ · **SC** (12)
+**Total:** 19 X Articles · 18 dossiês HTML (+ hub) · **UFs:** SP · GO · MG · BA · PA · AM · PR · RS · ES · AP · RJ · **SC** (12)
+
+**Capas:** arquivo em `public/` conforme coluna Hero (cap. 11 = `dragao-onca-rs-es.webp`; extra CEBC = `dragao-onca-ranking-cebc.webp`).  
+**Hero PNG X:** só SC em `artigos/*-xarticle-hero.png`; demais — usar webp ou regenerar ([`CATALAGO.md`](CATALAGO.md)).
 
 Prompts completos de hero (base + capítulo): [`CATALAGO.md`](CATALAGO.md).
 
@@ -154,13 +189,13 @@ Fluxo: **tweet de abertura** (sem URL externa) → **primeiro reply** (dossiê +
 **Prompt hero:**
 ```
 [TÍTULO] = O Dragão e a Onça
-[CONCEITO] = mapa do Brasil fragmentado em estados, linhas geopolíticas Brasil×China, 16 capítulos
+[CONCEITO] = mapa do Brasil fragmentado em estados, linhas geopolíticas Brasil×China, 19 artefatos (0–18)
 [CORES] = roxo #b07aff para dados
 ```
 
 **Tweet de abertura:**
 
-> 17 dossiês. 10 UFs. 4 eixos transversais.
+> 18 dossiês. 12 UFs. 4 eixos transversais.
 >
 > Pequim assina MoUs. Brasília eleva a relação. Mas quem assina o contrato, enfrenta a comunidade e leva o crédito eleitoral é o governador estadual.
 >
@@ -170,10 +205,10 @@ Fluxo: **tweet de abertura** (sem URL externa) → **primeiro reply** (dossiê +
 
 **Primeiro reply:**
 
-> Dashboard da série (17 dossiês):
+> Dashboard da série (18 dossiês + hub):
 > https://odragaoeaonca.vercel.app/
 >
-> Ordem sugerida: Federal → Diplomático → SP → GO → … → Síntese → PL 2.780 → Jurídico
+> Ordem sugerida: Federal → Diplomático → SP → GO → … → Síntese → PL 2.780 → Jurídico → SC
 >
 > Qual capítulo priorizar — Taboca, ferrovia do Pará ou terras raras de Goiás?
 
@@ -846,16 +881,84 @@ Fluxo: **tweet de abertura** (sem URL externa) → **primeiro reply** (dossiê +
 
 ---
 
+## Ícones PWA
+
+**Status:** pack **gerado** a partir de [`public/Gemini_Generated_Transparent.png`](public/Gemini_Generated_Transparent.png) (emblema dragão×onça).  
+Regenerar: `python scripts/generate_pwa_icons.py` · religar HTML: `python scripts/patch_pwa_icon_links.py`.
+
+Fonte: ilustração circular vermelho/dourado (dragão × onça), composta em canvas `#080c10`. Maskable usa escala ~72% (safe zone). O prompt abaixo permanece como especificação alternativa se a arte for regenerada.
+
+### Prompt master (gerar 1024×1024)
+
+```
+App icon / PWA brand mark for "O Dragão e a Onça" (investigative documentary series Brazil × China mineral sovereignty).
+
+Exact canvas: 1024×1024 pixels, square, PNG with opaque background (no transparency for the master).
+
+Concept: symbolic emblem — stylized silhouette of a Chinese dragon head on the LEFT in dragon red, stylized jaguar (onça) head on the RIGHT in jaguar gold; the two faces confront or interlock as a single circular seal / shield badge. High contrast, closed shapes, bold negative space. Must remain instantly readable when scaled down to 48×48 and 32×32.
+
+Palette (strict):
+- Background: #080c10 (near-black charcoal)
+- Dragon: #d4342c primary, #ff6b5f highlight edges only
+- Jaguar / onça: #e8b23d primary, #ffd270 highlight edges only
+- Optional thin accent ring or split bar: gradient #e8b23d → #d4342c
+- No purple, no blue, no green, no white fill fields
+
+Style: flat-to-soft vector emblem, editorial / geopolitics brand mark, slight grain OK. Not photorealistic, not 3D render, not comic, not cute mascot, not clipart.
+Composition: subject centered; generous outer margin so the emblem sits in the middle ~70–75% of the canvas (safe for later maskable crop). Circular or rounded-square badge OK; full-bleed background #080c10 to the edges.
+
+Hard constraints:
+- NO text, letters, numbers, watermarks, logos of countries, flags, maps, UI charts, emojis
+- NO photographic dragon/jaguar faces from the hero cover
+- NO busy detail that disappears at small sizes (no fine scales, no whiskers mesh, no tiny ornaments)
+- Eyes/silhouettes must read as two opposing forces (China / Brazil) without needing labels
+
+Output: one master PNG 1024×1024, centered emblem, dark #080c10 field edge-to-edge.
+```
+
+### Variante maskable (mesmo master ou re-export)
+
+```
+Same emblem as the O Dragão e a Onça PWA master, 1024×1024.
+Maskable / adaptive icon rules: keep ALL critical silhouette detail inside the center 80% safe zone (inner ~820×820). Outer 10% on each side is only solid background #080c10 — no horns, ears, snout, or ring touching the crop edge. Android circular/squircle masks must not clip the dragon or jaguar faces.
+```
+
+### Pack de arquivos (após o master)
+
+Gerar o master → exportar / redimensionar com nitidez (não upscale a partir de 48px). Destinos sugeridos:
+
+| Arquivo | Tamanho | purpose / uso | Estado |
+|---------|---------|----------------|--------|
+| `favicon.ico` | 16 · 32 · 48 (multi) | aba do browser (raiz) | Pronto |
+| `apple-touch-icon.png` | 180×180 | iOS home screen (raiz) | Pronto |
+| `public/icons/icon-32.png` | 32×32 | `<link rel=icon type=png>` | Pronto |
+| `public/icons/icon-72.png` … `icon-152.png` | 72–152 | any | Pronto |
+| `public/icons/icon-192.png` / `icon-512.png` | 192 / 512 | `manifest` purpose `any` | Pronto |
+| `public/icons/icon-*-maskable.png` | 192 / 512 | `manifest` purpose `maskable` | Pronto |
+| `public/icons/icon-1024.png` | 1024 | master | Pronto |
+| `manifest.webmanifest` | — | PWA install | Pronto |
+
+**Manifest:** [`manifest.webmanifest`](manifest.webmanifest) — `theme_color` / `background_color` = `#080c10`.
+
+**Checklist:** validar maskable em [maskable.app](https://maskable.app) · hard-refresh da aba se o `.ico` antigo estiver em cache.
+
+---
+
 ## Corpus e metodologia
 
-- **Dossiês HTML:** 18 (+ hub) · **X Articles:** 19 (índice 0–18)
+- **Dossiês HTML:** 18 (+ `index.html` hub + `odragaoeaonca.html`) · **X Articles:** 19 canônicos (índice 0–18)
+- **Timelines:** 18 + `timeline/index.html`
+- **Capas webp:** 19 capítulos cobertos em `public/` (cap. 11 → `dragao-onca-rs-es.webp`)
+- **Hero PNG X:** 1/19 (`santa-catarina-xarticle-hero.png`)
 - **Entradas:** ~150 posts · IDs 1639–1770 · temáticas **T-228 → T-246**
 - **CEBC abr/2026:** US$ 85,5 bi · 355 projetos · ranking por UF
 - **Níveis de evidência:** `ev-confirmed` · `ev-alleged` · `ev-inference` · `lacuna_investigativa`
 - **Padrões:** P05 · P09 · P10 · P04b · P11 (ranking/mercado)
 - **Qualidade de artefato (benchmark Bahia):** `docs/qualidade-artefato-referencia.md` — checklist + prompts para capítulos ≥ T-237
 - **Catálogo + prompts hero:** [`CATALAGO.md`](CATALAGO.md)
-- **Atualização:** 27/jul/2026
+- **Ícones PWA:** emblema Gemini → [`public/icons/`](public/icons/) + [`manifest.webmanifest`](manifest.webmanifest) ([acima](#ícones-pwa))
+- **X Articles publicados:** gap analysis via [`scripts/fetch_x_articles.py`](scripts/fetch_x_articles.py) → [`artigos/publication-status.md`](artigos/publication-status.md) ([setup](scripts/README-x-articles.md))
+- **Status sync:** 07/ago/2026
 
 ---
 
@@ -863,4 +966,4 @@ Fluxo: **tweet de abertura** (sem URL externa) → **primeiro reply** (dossiê +
 
 Conteúdo em **domínio público (CC0)**. Citar a série *O Dragão e a Onça* / *lawfare-timeline*.
 
-Para novos X Articles: ler dossiê HTML → formatar `.md` → gerar hero 1024×600 ([`CATALAGO.md`](CATALAGO.md) ou prompt base acima) → salvar em `artigos/[slug]-xarticle.md` + hero → atualizar índice neste README e no catálogo.
+Para novos X Articles: ler dossiê HTML → formatar `.md` → gerar hero 1024×600 ([`CATALAGO.md`](CATALAGO.md) ou prompt base acima) → salvar em `artigos/[slug]-xarticle.md` + hero → atualizar [Status do projeto](#status-do-projeto), o índice neste README e o catálogo.

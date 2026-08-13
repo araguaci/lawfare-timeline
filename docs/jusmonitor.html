@@ -1,0 +1,2047 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JusMonitor — Painel de Monitoramento de Captura Judicial | República Sequestrada</title>
+<meta name="description" content="Monitoramento contínuo de eventos de captura institucional do Judiciário brasileiro: venda de sentenças, penduricalhos, chokepoints do STF, ações disciplinares do CNJ. Corpus CC0.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080c10; --bg2:#0d1319; --bg3:#131b22;
+  --border:rgba(255,255,255,0.08); --border2:rgba(255,255,255,0.15);
+  --ink:#eef1f4; --ink2:#9aa5b1; --ink3:#5c6672;
+  --red:#c53d4f; --red-bg:rgba(197,61,79,0.12); --red-l:#e0687a;
+  --gold:#d4af5a; --gold-bg:rgba(212,175,90,0.12); --gold-l:#e6c883;
+  --green:#4f9d6e; --green-bg:rgba(79,157,110,0.12);
+  --blue:#5a8fc5; --blue-bg:rgba(90,143,197,0.12);
+  --sans:'Syne',system-ui,sans-serif;
+  --mono:'IBM Plex Mono','Courier New',monospace;
+  --serif:'Crimson Pro',Georgia,serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+::selection{background:var(--red);color:#fff}
+
+.skip-link{position:absolute;top:-100px;left:1rem;background:var(--gold);color:#080c10;padding:.6rem 1rem;font-family:var(--mono);font-weight:600;font-size:.8rem;border-radius:4px;z-index:200;transition:top .2s}
+.skip-link:focus{top:1rem}
+
+/* ── TOPBAR (sticky) ── */
+.topbar{position:sticky;top:0;z-index:100;background:rgba(8,12,16,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--border2)}
+.topbar-inner{max-width:1180px;margin:0 auto;padding:.85rem 1.25rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.brand{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap;display:flex;align-items:center;gap:.5rem}
+.brand .dot{width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--red-bg);animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.search-wrap{flex:1;min-width:180px}
+#search{width:100%;background:var(--bg3);border:1px solid var(--border);color:var(--ink);padding:.55rem .8rem;border-radius:6px;font-family:var(--serif);font-size:.9rem}
+#search:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--gold)}
+#search::placeholder{color:var(--ink3)}
+.topbar-stat{font-family:var(--mono);font-size:.7rem;color:var(--ink2);white-space:nowrap}
+.topbar-stat b{color:var(--ink)}
+
+/* ── HEADER ── */
+.header{max-width:1180px;margin:0 auto;padding:2.8rem 1.25rem 1.5rem;position:relative}
+.header::before{content:'';position:absolute;top:0;left:1.25rem;right:1.25rem;height:2px;background:linear-gradient(90deg,var(--red) 0%,var(--gold) 55%,transparent 100%)}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--red-l);margin-bottom:1rem;display:flex;align-items:center;gap:.9rem}
+.eyebrow::after{content:'';flex:1;height:1px;background:var(--border)}
+h1{font-family:var(--sans);font-weight:800;font-size:clamp(1.9rem,4.6vw,3rem);letter-spacing:-.01em;line-height:1.08;margin-bottom:.9rem}
+h1 span{color:var(--gold-l)}
+.lede{font-size:1.05rem;color:var(--ink2);max-width:760px;margin-bottom:1.4rem}
+.lede b{color:var(--ink)}
+
+/* ── STAT GRID ── */
+.stat-grid{max-width:1180px;margin:0 auto;padding:0 1.25rem 2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--border)}
+.stat-cell{background:var(--bg2);padding:1.1rem 1.2rem}
+.stat-num{font-family:var(--sans);font-weight:800;font-size:1.9rem;color:var(--ink);line-height:1}
+.stat-num.red{color:var(--red-l)}
+.stat-num.gold{color:var(--gold-l)}
+.stat-lbl{font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);margin-top:.35rem}
+
+/* ── FILTERS ── */
+.filters{max-width:1180px;margin:0 auto;padding:0 1.25rem 1.4rem;display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.filters-label{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-right:.3rem}
+.chip{font-family:var(--mono);font-size:.72rem;padding:.42rem .78rem;border-radius:20px;border:1px solid var(--border2);background:var(--bg2);color:var(--ink2);cursor:pointer;transition:all .15s;white-space:nowrap}
+.chip:hover{border-color:var(--gold);color:var(--gold-l)}
+.chip.active{background:var(--gold);color:#080c10;border-color:var(--gold);font-weight:600}
+.chip.active[data-grp="corrupcao_judicial"],.chip.active[data-grp="cnj_disciplinar"]{background:var(--red);border-color:var(--red);color:#fff}
+
+/* ── FEED ── */
+.feed{max-width:1180px;margin:0 auto;padding:0 1.25rem 4rem}
+.count-row{font-family:var(--mono);font-size:.75rem;color:var(--ink3);padding-bottom:1rem;border-bottom:1px solid var(--border);margin-bottom:1.4rem}
+.count-row b{color:var(--ink2)}
+.card-list{display:flex;flex-direction:column;gap:.9rem}
+.card{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--border2);border-radius:6px;padding:1.2rem 1.35rem;transition:border-color .15s,transform .15s}
+.card:hover{border-left-color:var(--gold)}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap;margin-bottom:.55rem}
+.card-date{font-family:var(--mono);font-size:.72rem;color:var(--gold-l);letter-spacing:.03em}
+.card-badges{display:flex;gap:.4rem;flex-wrap:wrap}
+.badge{font-family:var(--mono);font-size:.62rem;letter-spacing:.05em;text-transform:uppercase;padding:.2rem .55rem;border-radius:3px;border:1px solid}
+.badge-grp-corrupcao_judicial{background:var(--red-bg);color:var(--red-l);border-color:rgba(197,61,79,.35)}
+.badge-grp-cnj_disciplinar{background:var(--red-bg);color:var(--red-l);border-color:rgba(197,61,79,.35)}
+.badge-grp-penduricalhos{background:var(--gold-bg);color:var(--gold-l);border-color:rgba(212,175,90,.35)}
+.badge-grp-chokepoint_stf{background:var(--blue-bg);color:var(--blue);border-color:rgba(90,143,197,.35)}
+.badge-grp-eleitoral_tse{background:var(--blue-bg);color:var(--blue);border-color:rgba(90,143,197,.35)}
+.badge-grp-outros_judiciario{background:transparent;color:var(--ink3);border-color:var(--border2)}
+.badge-ev{background:transparent}
+.badge-ev.confirmed{color:var(--green);border-color:rgba(79,157,110,.35)}
+.badge-ev.alleged{color:var(--ink3);border-color:var(--border2)}
+.card h3{font-family:var(--sans);font-weight:700;font-size:1.08rem;line-height:1.3;margin-bottom:.5rem;color:var(--ink)}
+.card p{color:var(--ink2);font-size:.95rem;line-height:1.65;margin-bottom:.6rem}
+.card-meta{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;font-family:var(--mono);font-size:.7rem;color:var(--ink3)}
+.tag{background:var(--bg3);border:1px solid var(--border);padding:.15rem .5rem;border-radius:3px}
+.card-valor{font-family:var(--mono);font-size:.75rem;color:var(--gold-l);margin-top:.5rem}
+.card-sources{margin-top:.7rem;padding-top:.6rem;border-top:1px dashed var(--border);display:flex;flex-direction:column;gap:.25rem}
+.card-sources a{font-size:.78rem;color:var(--blue);text-decoration:none;word-break:break-all}
+.card-sources a:hover{text-decoration:underline;color:var(--gold-l)}
+.empty-state{text-align:center;padding:3.5rem 1rem;color:var(--ink3);font-family:var(--mono);font-size:.85rem}
+
+/* ── SOBRE / LACUNA ── */
+.about{max-width:1180px;margin:0 auto;padding:0 1.25rem 3rem}
+.about-box{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:1.6rem}
+.about-box h2{font-family:var(--sans);font-weight:700;font-size:1.15rem;margin-bottom:.8rem;color:var(--ink)}
+.about-box h4{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-l);margin:1rem 0 .4rem}
+.about-box p{color:var(--ink2);font-size:.92rem;line-height:1.7;margin-bottom:.5rem}
+.about-box code{font-family:var(--mono);background:var(--bg3);padding:.1rem .4rem;border-radius:3px;font-size:.82em;color:var(--gold-l)}
+.about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:.5rem}
+
+/* ── FOOTER ── */
+footer{border-top:1px solid var(--border);padding:2rem 1.25rem;text-align:center}
+footer .fwrap{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+footer p{font-family:var(--mono);font-size:.72rem;color:var(--ink3)}
+footer a{color:var(--gold-l);text-decoration:none}
+footer a:hover{text-decoration:underline}
+
+/* ── GOTOP ── */
+#gotop{position:fixed;bottom:1.5rem;right:1.5rem;width:44px;height:44px;border-radius:50%;background:var(--gold);color:#080c10;border:none;font-size:1.2rem;font-weight:700;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s;z-index:150;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+#gotop.show{opacity:1;pointer-events:auto}
+
+@media(max-width:640px){
+  .topbar-stat{display:none}
+  .stat-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+<a href="#feed" class="skip-link">Pular para o feed</a>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand"><span class="dot"></span>JusMonitor</div>
+    <div class="search-wrap">
+      <input type="text" id="search" placeholder="Buscar por título, tribunal, tag, instituição…" aria-label="Buscar eventos">
+    </div>
+    <div class="topbar-stat">Sync corpus: <b id="syncDate">—</b></div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="eyebrow">República Sequestrada · Painel Temático · lawfare-timeline</div>
+  <h1>Jus<span>Monitor</span></h1>
+  <p class="lede">Feed contínuo de eventos de <b>captura institucional do Judiciário brasileiro</b> — venda de sentenças, penduricalhos acima do teto constitucional, ações disciplinares do CNJ e chokepoints do STF. Cada entrada é extraída do corpus <b>lawfare-timeline</b> (CC0), com classificação evidencial e fontes primárias linkadas.</p>
+</header>
+
+<div class="stat-grid" id="statGrid"></div>
+
+<div class="filters" id="filters">
+  <span class="filters-label">Filtrar:</span>
+</div>
+
+<main class="feed" id="feed">
+  <div class="count-row" id="countRow"></div>
+  <div class="card-list" id="cardList"></div>
+</main>
+
+<div class="about">
+  <div class="about-box">
+    <h2>Sobre este painel</h2>
+    <p>O JusMonitor agrega, do corpus <code>lawfare-timeline</code>, eventos categorizados como captura institucional do Judiciário: corrupção judicial (venda de sentenças), penduricalhos/supersalários, ações disciplinares do CNJ e chokepoints do STF em processos de repercussão. Não é um feed com atualização automática em tempo real — é regenerado a partir do sync mais recente de <code>lawfare.json</code> a cada rodada de produção do corpus.</p>
+    <p><code>ev-confirmed</code> = evento com fonte jornalística/documental identificada e verificável no momento da curadoria do corpus. <code>ev-alleged</code> = entrada do corpus ainda sem fonte primária registrada — tratada como pendente de verificação, nunca como confirmada.</p>
+    <div class="about-grid">
+      <div>
+        <h4>Lacuna investigativa</h4>
+        <p id="lacunaText" style="font-size:.85rem"></p>
+      </div>
+      <div>
+        <h4>Como atualizar</h4>
+        <p style="font-size:.85rem">Rodar <code>extract_jusmonitor.py</code> sobre o <code>lawfare.json</code> mais recente, regenerando o array embutido neste arquivo. Novas entradas seguem o schema padrão do corpus.</p>
+      </div>
+      <div>
+        <h4>Padrões relacionados</h4>
+        <p style="font-size:.85rem">P05 (fundos públicos como vetor — penduricalhos) · P03 (captura judicial de emergência — chokepoints STF) · P06 (prescrição estratégica — casos CNJ sem desfecho público)</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="fwrap">
+    <p>lawfare-timeline · República Sequestrada · CC0 1.0 Universal — domínio público, copie e distribua sem restrição</p>
+    <p><a href="https://gosurf.site">gosurf.site</a> · <a href="https://lawfare-timeline.vercel.app">lawfare-timeline.vercel.app</a> · <a href="https://republica-sequestrada-hub.vercel.app">hub</a></p>
+  </div>
+</footer>
+
+<button id="gotop" aria-label="Voltar ao topo">↑</button>
+
+<script id="jusmonitor-data" type="application/json">
+{
+ "gerado_de": "lawfare.json",
+ "sync_date": "2026-08-05",
+ "total": 76,
+ "excluidos_pendente_enriquecimento": 62,
+ "cards": [
+  {
+   "id": 1448,
+   "data": "2026-05-09",
+   "titulo": "TJMG Paga Acima Do Teto A Um Terço Dos Magistrados Em 2026",
+   "descricao": "Em maio de 2026, levantamento revela que o TJMG (Tribunal de Justiça de Minas Gerais) ainda paga acima do teto constitucional a um terço de seus magistrados — mesmo após a decisão do STF de 25/03/2026. O tribunal havia pago R$ 1,22 bilhão acima do teto em 2025, sendo o segundo colocado nacional atrás do TJSP (R$ 3,94 bilhões). Em 61% dos casos, os penduricalhos responderam por mais da metade da remuneração bruta dos magistrados mineiros.",
+   "grupo": "penduricalhos",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "TJMG — Tribunal de Justiça de Minas Gerais"
+   ],
+   "tags": [
+    "penduricalhos",
+    "magistrado",
+    "tjmg",
+    "minas-gerais",
+    "mg",
+    "supersalario",
+    "teto-constitucional",
+    "penduricalho"
+   ],
+   "fontes": [
+    "https://www.em.com.br/politica/2026/05/7416348-tjmg-paga-acima-do-teto-a-um-terco-dos-magistrados.html"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 1.220.000.000,00 pagos acima do teto em 2025"
+  },
+  {
+   "id": 1447,
+   "data": "2026-05-08",
+   "titulo": "STF Barra Manobras De Juízes Para Driblar Limite De Penduricalhos — Reclassificações E Bônus Proibidos",
+   "descricao": "Em 8 de maio de 2026, os ministros Flávio Dino, Cristiano Zanin e Gilmar Mendes publicaram decisões para barrar manobras administrativas criadas por tribunais para contornar o limite de penduricalhos fixado em 25/03/2026. Foram identificadas e proibidas práticas como: reclassificação de jurisdições como 'difícil provimento', criação de bônus por acúmulo de funções, alteração de cargos e pagamento por múltiplas folhas. O STF determinou que qualquer ato posterior a 25/03/2026 que amplie indiretamente a remuneração é nulo.",
+   "grupo": "penduricalhos",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF — Supremo Tribunal Federal"
+   ],
+   "tags": [
+    "penduricalhos",
+    "magistrado",
+    "promotor",
+    "stf",
+    "flavio-dino",
+    "cristiano-zanin",
+    "gilmar-mendes",
+    "manobra",
+    "brasil"
+   ],
+   "fontes": [
+    "https://agenciabrasil.ebc.com.br/justica/noticia/2026-05/supremo-profere-nova-decisao-para-barrar-criacao-de-penduricalhos",
+    "https://www.correiobraziliense.com.br/politica/2026/05/7415463-stf-publica-acordao-de-julgamento-que-barrou-penduricalhos-para-judiciario-e-mp.html",
+    "https://www.ocafezinho.com/2026/05/08/stf-endurece-regras-e-limita-penduricalhos-no-judiciario-e-no-ministerio-publico",
+    "https://tvbrasil.ebc.com.br/reporter-brasil/2026/05/stf-reforca-limite-penduricalhos-no-judiciario"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1605,
+   "data": "2026-05-04",
+   "titulo": "Partido Novo protocola representação na PGR contra Andrei Rodrigues",
+   "descricao": "O partido Novo, via o desembargador aposentado Sebastião Coelho, protocolou duas representações na PGR pedindo investigação de Andrei Rodrigues por improbidade administrativa e conflito de interesse, referentes à viagem a Londres (abr/2024) custeada por evento patrocinado pelo Banco Master. A PF confirmou, via LAI, que não pagou diárias para a viagem e disse desconhecer o valor total gasto pelos organizadores do evento.",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [],
+   "tags": [
+    "justica",
+    "PGR",
+    "representação",
+    "improbidade",
+    "conflito_de_interesse"
+   ],
+   "fontes": [
+    "https://revistaoeste.com/politica/novo-pede-investigacao-de-viagem-do-diretor-da-pf-a-evento-patrocinado-pelo-master/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1446,
+   "data": "2026-05-01",
+   "titulo": "Penduricalhos Na Justiça Militar — Benefícios Extras Para Militares Em Cargos Judiciais",
+   "descricao": "Em maio de 2026, análise publicada documenta a existência de penduricalhos específicos na Justiça Militar brasileira, afetando magistrados e militares em funções judiciais. O caso insere-se no contexto do debate geral sobre penduricalhos pós-decisão do STF de março de 2026, com a questão de se os limites se aplicam também à estrutura militar.",
+   "grupo": "penduricalhos",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STM — Superior Tribunal Militar",
+    "Justiça Militar da União"
+   ],
+   "tags": [
+    "penduricalhos",
+    "magistrado",
+    "justica-militar",
+    "stm",
+    "penduricalho",
+    "supersalario",
+    "brasil",
+    "militar"
+   ],
+   "fontes": [
+    "https://www.antoniopessoacardoso.com.br/2026/05/penduricalhos-na-justica-militar.html"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1409,
+   "data": "2026-04-13",
+   "titulo": "Moraes destitui advogados constituídos e nomeia Defensoria Pública — sub-padrão: substituição compulsória de defesa técnica",
+   "descricao": "Alexandre de Moraes determina compulsoriamente a destituição dos advogados Paulo Faria e Filipe de Oliveira e nomeia a Defensoria Pública da União como defensora de Tagliaferro, com base em alegação d...",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF"
+   ],
+   "tags": [
+    "vazatoga"
+   ],
+   "fontes": [
+    "https://x.com/drpaulofaria22/status/2044191950522462496",
+    "https://www.gazetadopovo.com.br/republica/moraes-destitui-advogados-de-tagliaferro-e-nomeia-defensor-publico/",
+    "https://terrabrasilnoticias.com/2026/02/defesa-de-tagliaferro-quer-que-stf-decida-sobre-suspeicao-de-alexandre-de-moraes/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1444,
+   "data": "2026-04-09",
+   "titulo": "CNJ E CNMP Aprovam Resolução Conjunta Nº 14/2026 Com Novos Penduricalhos Que Afrontam Decisão Do STF",
+   "descricao": "Em 9 de abril de 2026, o CNJ e o CNMP aprovaram a Resolução Conjunta nº 14/2026 para regulamentar os penduricalhos conforme determinado pelo STF. Contudo, a resolução foi além: criou novos auxílios extrateto não previstos na decisão do Supremo — incluindo auxílio-moradia e gratificação de proteção à primeira infância e à maternidade — que o próprio STF havia extinto em 25/03/2026. A Transparência Brasil publicou nota pública denunciando que a resolução afronta a tese do STF.",
+   "grupo": "penduricalhos",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "CNJ — Conselho Nacional de Justiça",
+    "CNMP — Conselho Nacional do Ministério Público",
+    "Transparência Brasil"
+   ],
+   "tags": [
+    "penduricalhos",
+    "magistrado",
+    "promotor",
+    "cnj",
+    "cnmp",
+    "resolucao",
+    "brasil",
+    "penduricalho",
+    "afronta-stf"
+   ],
+   "fontes": [
+    "https://agenciabrasil.ebc.com.br/justica/noticia/2026-04/cnj-e-cnmp-aprovam-novos-penduricalhos-para-juizes-e-membros-do-mp",
+    "https://www.transparencia.org.br/noticias/resolucao-do-cnmp-e-cnj-afronta-tese-do-stf/",
+    "https://www.infomoney.com.br/politica/cnj-e-cnmp-regulamentam-penduricalhos-mas-com-novos-auxilios-extra-teto/",
+    "https://iclnoticias.com.br/cnj-cnmp-ampliam-penduricalhos-regra-simbolica/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1405,
+   "data": "2026-04-02",
+   "titulo": "Defesa protocola representação à OAB denunciando acusação de 'abandono de causa'",
+   "descricao": "No mesmo dia dos embargos de declaração, os advogados Paulo Faria e Filipe de Oliveira apresentam representação ao Conselho Federal da OAB pedindo providências urgentes. Documentam que foram acusados ...",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF"
+   ],
+   "tags": [
+    "vazatoga"
+   ],
+   "fontes": [
+    "https://www.ainvestigacao.com/p/moraes-e-forcado-a-anular-audiencia"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1443,
+   "data": "2026-03-25",
+   "titulo": "STF Limita Penduricalhos A 35% Do Teto E Extingue Auxílio-Alimentação, Moradia, Combustível E Peru",
+   "descricao": "Em 25 de março de 2026, o plenário do STF fixou por unanimidade o limite de 35% do teto constitucional (R$ 16.228,16) para o somatório de penduricalhos de magistrados e membros do MP. Foram extintos: auxílio-alimentação, moradia, combustível, creche, assistência pré-escolar, natalidade, telefone, bônus natalino ('auxílio-peru' e 'auxílio-panetone') e licença compensatória paga. Magistrados no final de carreira podem acumular ATS e penduricalhos, atingindo até R$ 78.822,52/mês (70% acima do teto). Estimativa de economia: R$ 7,3 bilhões/ano. A partir de abril de 2026, com impacto nos salários de maio.",
+   "grupo": "penduricalhos",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF — Supremo Tribunal Federal"
+   ],
+   "tags": [
+    "penduricalhos",
+    "magistrado",
+    "promotor",
+    "stf",
+    "teto-constitucional",
+    "extincao-auxilios",
+    "brasil",
+    "flavio-dino"
+   ],
+   "fontes": [
+    "https://noticias.stf.jus.br/postsnoticias/stf-aprova-tese-que-unifica-teto-salarial-e-extingue-pagamentos-extras-para-magistratura-e-mp/",
+    "https://agenciabrasil.ebc.com.br/justica/noticia/2026-03/decisao-do-stf-permite-penduricalhos-de-ate-70-acima-do-teto",
+    "https://www.otempo.com.br/politica/judiciario/2026/3/25/auxilio-combustivel-peru-alimentacao-e-creche-estao-entre-penduricalhos-extintos-pelo-stf",
+    "https://agenciabrasil.ebc.com.br/justica/noticia/2026-03/confira-penduricalhos-cortados-e-mantidos-apos-decisao-do-supremo"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "Economia estimada de R$ 7,3 bilhões/ano"
+  },
+  {
+   "id": 1337,
+   "data": "2026-03-04",
+   "titulo": "Flávio Dino invalida quebras de sigilo da CPMI do INSS a pedido de investigada ligada a Lulinha",
+   "descricao": "Flávio Dino atende Roberta Luchsinger e invalida quebras de sigilo da CPMI do INSS. No dia seguinte, advogados de Lulinha fazem o mesmo pedido e são atendidos.",
+   "grupo": "chokepoint_stf",
+   "gravidade": "alta",
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF",
+    "PF",
+    "INSS"
+   ],
+   "tags": [
+    "stf",
+    "inss",
+    "lawfare",
+    "devido-processo-legal",
+    "impunidade"
+   ],
+   "fontes": [
+    "https://www.cartacapital.com.br/politica/quebra-de-sigilos-esvazia-suspeitas-e-planalto-ve-lulinha-fora-do-escandalo-do-inss/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 25 milhões"
+  },
+  {
+   "id": 1442,
+   "data": "2026-03-01",
+   "titulo": "Tribunais Dos Estados E DF Pagaram R$ 10,7 Bilhões Acima Do Teto Em 2025",
+   "descricao": "Levantamento de março de 2026 da Transparência Brasil e República.org revela que os Tribunais de Justiça dos estados e do DF pagaram entre R$ 10,7 bilhões e R$ 11 bilhões acima do teto constitucional em 2025 — mais do dobro dos R$ 4,5 bilhões de 2023 e 42% acima dos R$ 7,5 bilhões de 2024. O TJSP lidera com R$ 3,94 bilhões; o TJMG em segundo com R$ 1,22 bilhão. Em 61% dos casos no TJMG, os penduricalhos responderam por mais da metade da remuneração bruta dos magistrados.",
+   "grupo": "penduricalhos",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "TJSP",
+    "TJMG",
+    "Tribunais de Justiça Estaduais",
+    "Transparência Brasil",
+    "República.org"
+   ],
+   "tags": [
+    "penduricalhos",
+    "magistrado",
+    "supersalario",
+    "tj-sp",
+    "tjmg",
+    "teto-constitucional",
+    "brasil",
+    "transparencia-brasil"
+   ],
+   "fontes": [
+    "https://www.gazetadopovo.com.br/economia/tribunais-gastaram-10-7-bilhoes-salarios-acima-teto-2025/",
+    "https://www.acessa.com/politica/2026/03/316818-tribunais-dos-estados-e-do-df-pagaram-rs-11-bilhoes-acima-do-teto-em-2025.html",
+    "https://www.em.com.br/politica/2026/03/7385266-tjmg-pagou-rs-122-bilhao-acima-do-teto-salarial-em-2025.html"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 10,7 bilhões (2025)"
+  },
+  {
+   "id": 1568,
+   "data": "2026-03-01",
+   "titulo": "Justiça Federal suspende 57 processos minerários na Serra do Curral e multa ANM em R$ 4 mi",
+   "descricao": "Justiça Federal suspende todos os 57 processos minerários na Serra do Curral, restaura proteção integral da área e multa a ANM em R$ 4 milhões por descumprimento deliberado de ordem judicial que proibia novos direitos minerários desde fins de 2018. ANM havia autorizado ao menos 4 novos empreendimentos ciente da proibição. Portaria do IPHAN que reduziu área protegida de 42 para 9 hectares declarada ilegal.",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [],
+   "tags": [
+    "P03",
+    "P11",
+    "operacao-rejeito"
+   ],
+   "fontes": [
+    "Justiça Federal MG; MPF"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1336,
+   "data": "2026-02-27",
+   "titulo": "CNJ afasta desembargador relator do caso de absolvição de estuprador após denúncias de crimes sexuais praticados por ele mesmo",
+   "descricao": "O CNJ afasta Magid Nauef Láuar do TJMG após investigação apontar indícios de que ele próprio teria praticado crimes sexuais quando era juiz. Cinco vítimas foram ouvidas.",
+   "grupo": "cnj_disciplinar",
+   "gravidade": "alta",
+   "relevancia": "alta",
+   "instituicoes": [
+    "PF",
+    "CNJ"
+   ],
+   "tags": [
+    "justica",
+    "judiciario",
+    "crianca",
+    "impunidade",
+    "cnj"
+   ],
+   "fontes": [
+    "https://www.migalhas.com.br/quentes/450813/cnj-afasta-desembargador-que-atuou-em-caso-de-estupro-pf-faz-operacao",
+    "https://www.gazetadopovo.com.br/vida-e-cidadania/cnj-afasta-desembargador-que-absolveu-homem-por-estupro/",
+    "https://agenciabrasil.ebc.com.br/justica/noticia/2026-02/cnj-afasta-desembargador-que-absolveu-acusado-de-estupro-de-vulneravel",
+    "https://www.correiobraziliense.com.br/politica/2026/02/7360678-tjmg-apura-denuncia-de-violencia-sexual-contra-desembargador.html"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1334,
+   "data": "2026-02-24",
+   "titulo": "Desembargador do TJGO é aposentado compulsoriamente pelo CNJ por assédio sexual a servidora",
+   "descricao": "O CNJ aprova por unanimidade a aposentadoria compulsória do desembargador Orloff Neves Rocha, do TJGO. Em 2021, ele propôs encontro a servidora e tentou beijá-la.",
+   "grupo": "cnj_disciplinar",
+   "gravidade": "alta",
+   "relevancia": "alta",
+   "instituicoes": [
+    "CNJ"
+   ],
+   "tags": [
+    "justica",
+    "judiciario",
+    "assedio-sexual",
+    "impunidade",
+    "cnj"
+   ],
+   "fontes": [
+    "https://www.cnj.jus.br/desembargador-do-tjgo-e-aposentado-pelo-cnj-por-assedio-sexual/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1333,
+   "data": "2026-02-01",
+   "titulo": "TJMG absolve estuprador de menina de 12 anos alegando 'vínculo afetivo consensual' — réu tinha passagem por homicídio",
+   "descricao": "A 9ª Câmara Criminal do TJMG absolve por 2 votos a 1 homem de 35 anos condenado por estupro de vulnerável de menina de 12 anos. Acórdão usou IA como suporte.",
+   "grupo": "outros_judiciario",
+   "gravidade": "alta",
+   "relevancia": "alta",
+   "instituicoes": [
+    "CNJ",
+    "Câmara"
+   ],
+   "tags": [
+    "justica",
+    "crianca",
+    "estupro-de-vulneravel",
+    "impunidade",
+    "judiciario"
+   ],
+   "fontes": [
+    "https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2026-02/estupro-de-vulneravel-decisao-do-tjmg-abre-precedente-perigoso",
+    "https://diariodonordeste.verdesmares.com.br/ultima-hora/pais/desembargador-do-tjmg-usa-ia-em-absolvicao-do-caso-de-estupro-de-crianca-de-12-anos-1.3745512"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1439,
+   "data": "2026-02-01",
+   "titulo": "Flávio Dino Suspende Pagamento De Penduricalhos No Judiciário E MP",
+   "descricao": "O ministro Flávio Dino, do STF, determinou a suspensão do pagamento de penduricalhos no Judiciário e no Ministério Público, antecipando a discussão que seria levada ao plenário do STF. A decisão monocrática motivou resposta de entidades de magistrados e membros do MP, que pediram adiamento do julgamento definitivo.",
+   "grupo": "penduricalhos",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF — Supremo Tribunal Federal",
+    "Judiciário Brasileiro",
+    "Ministério Público"
+   ],
+   "tags": [
+    "penduricalhos",
+    "magistrado",
+    "promotor",
+    "supersalario",
+    "stf",
+    "flavio-dino",
+    "suspensao",
+    "brasil"
+   ],
+   "fontes": [
+    "https://www.extraclasse.org.br/justica/2026/02/supersalarios-flavio-dino-suspende-pagamento-de-penduricalhos/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1565,
+   "data": "2026-01-14",
+   "titulo": "TRF-6 solta restantes da Rejeito — 22 prisões preventivas chegam a zero em 118 dias",
+   "descricao": "TRF-6 determina soltura de todos os investigados da Rejeito ainda presos, seguindo lógica fixada por Toffoli: manter parte do grupo presa enquanto líderes respondem em liberdade seria desproporcional. Último a sair: Gilberto Horta de Carvalho, em 22/jan/2026, após 129 dias. Das 22 preventivas decretadas em 17/set/2025, nenhuma em vigor em 22/jan/2026.",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [],
+   "tags": [
+    "P03",
+    "P06",
+    "operacao-rejeito"
+   ],
+   "fontes": [
+    "TRF-6; imprensa"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1437,
+   "data": "2025-12-15",
+   "titulo": "Remuneração Acima Do Teto Coloca 40 Mil Servidores No Grupo Do 1% Mais Rico Do País",
+   "descricao": "Levantamento publicado em 15 de dezembro de 2025 revela que aproximadamente 40 mil servidores públicos com remuneração acima do teto constitucional (R$ 46.366,19) integram o grupo do 1% mais rico do país. A concentração é liderada pela magistratura, que responde por R$ 11,5 bilhões em pagamentos extrateto destinados a cerca de 21 mil juízes.",
+   "grupo": "penduricalhos",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "Judiciário Brasileiro",
+    "Transparência Brasil"
+   ],
+   "tags": [
+    "penduricalhos",
+    "magistrado",
+    "supersalario",
+    "desigualdade",
+    "teto-constitucional",
+    "servidor-publico",
+    "brasil"
+   ],
+   "fontes": [
+    "https://asmetro.org.br/portalsn/2025/12/15/remuneracao-acima-do-teto-poe-40-mil-servidores-no-grupo-1-mais-rico-do-pais/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 11,5 bilhões (magistratura)"
+  },
+  {
+   "id": 1328,
+   "data": "2025-11-28",
+   "titulo": "Toffoli coloca caso de investigado do Master sob sigilo máximo após ser sorteado como relator",
+   "descricao": "Um dia após ser sorteado para relatar recurso de Vorcaro no STF, Toffoli coloca o processo sob sigilo máximo e restringe acesso da PF a dados do celular.",
+   "grupo": "chokepoint_stf",
+   "gravidade": "alta",
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF",
+    "PF"
+   ],
+   "tags": [
+    "stf",
+    "dias-toffoli",
+    "banco-master",
+    "sigilo",
+    "devido-processo-legal"
+   ],
+   "fontes": [
+    "https://www.gazetadopovo.com.br/republica/moraes-segue-postura-toffoli-deixa-lacunas-caso-banco-master/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 129 milhões"
+  },
+  {
+   "id": 1326,
+   "data": "2025-11-17",
+   "titulo": "Vorcaro troca mensagens com Moraes no dia de sua primeira prisão, aponta perícia da PF",
+   "descricao": "Perícia da PF revela que Daniel Vorcaro trocou mensagens com o ministro Alexandre de Moraes entre 7h19 e 20h48 do dia de sua primeira prisão. Vorcaro teria perguntado 'Conseguiu bloquear?'.",
+   "grupo": "chokepoint_stf",
+   "gravidade": "alta",
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF",
+    "PF"
+   ],
+   "tags": [
+    "stf",
+    "alexandre-de-moraes",
+    "banco-master",
+    "lawfare",
+    "devido-processo-legal"
+   ],
+   "fontes": [
+    "https://www.cnnbrasil.com.br/politica/vorcaro-trocou-mensagens-com-moraes-no-dia-em-que-foi-preso-diz-jornal/",
+    "https://www.gazetadopovo.com.br/republica/moraes-segue-postura-toffoli-deixa-lacunas-caso-banco-master/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 129 milhões"
+  },
+  {
+   "id": 1321,
+   "data": "2025-11-12",
+   "titulo": "Áudio revela colaboradora informal do TSE admitindo ter denunciado empresários",
+   "descricao": "Gravação mostra Letícia Sallorenzo sugerindo perícia em celulares de empresários do grupo 'Empresários & Política' investigado por Moraes.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF",
+    "TSE"
+   ],
+   "tags": [
+    "vazatoga",
+    "tse",
+    "espionagem",
+    "perseguicao",
+    "censura",
+    "alexandre-de-moraes",
+    "dossie"
+   ],
+   "fontes": [
+    "https://tvfloridausa.com/2025/11/12/em-audio-colaboradora-informal-do-tse-admite-ter-denunciado-empresarios-paulo-figueiredo/",
+    "https://paulofigueiredoshow.com/em-audio-colaboradora-informal-do-tse-admite-ter-denunciado-empresarios/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1322,
+   "data": "2025-11-12",
+   "titulo": "David Ágape denuncia tentativa de criminalizar jornalismo investigativo através do STF",
+   "descricao": "Jornalista David Ágape afirma que ação judicial repete padrão de criminalização de jornalistas independentes e garante que não vai recuar.",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF",
+    "TSE"
+   ],
+   "tags": [
+    "lawfare",
+    "david-agape",
+    "perseguicao-jornalistas",
+    "censura",
+    "stf",
+    "vazatoga",
+    "liberdade de expressão"
+   ],
+   "fontes": [
+    "https://www.gazetadopovo.com.br/vozes/entrelinhas/fa-de-moraes-quer-criminalizar-o-jornalismo-atraves-do-stf-aponta-reporter-investigativo/",
+    "https://www.jornaldacidadeonline.com.br/noticias/75655/bruxa-da-vaza-toga-tenta-criminalizar-o-jornalismo-investigativo-e-jornalista-garante-que-nao-vai-recuar"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1323,
+   "data": "2025-11-12",
+   "titulo": "Flávio Dino reintegra candidata a delegada casada com traficante condenado, contrariando TJSC e delegado-geral",
+   "descricao": "O ministro Flávio Dino concede liminar reintegrando ao concurso de delegada a advogada Lays Lopes Carneiro Barcelos, eliminada por ser casada com condenado por tráfico de drogas.",
+   "grupo": "chokepoint_stf",
+   "gravidade": "alta",
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF"
+   ],
+   "tags": [
+    "stf",
+    "flavio-dino",
+    "seguranca-publica",
+    "crime-organizado",
+    "concurso-publico"
+   ],
+   "fontes": [
+    "https://revistaoeste.com/politica/dino-reitera-a-concurso-candidata-casada-com-ex-traficante/",
+    "https://www.band.com.br/noticias/jornal-da-band/ultimas/stf-autoriza-advogada-casada-com-condenado-por-trafico-a-seguir-em-concurso-de-delegada-202511151610"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1320,
+   "data": "2025-11-09",
+   "titulo": "STF forma maioria para tornar Eduardo Tagliaferro réu por revelações da Vaza Toga",
+   "descricao": "Primeira Turma do STF forma maioria para aceitar denúncia contra Tagliaferro por quatro crimes, incluindo abolição do Estado Democrático de Direito.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF",
+    "TSE",
+    "PGR"
+   ],
+   "tags": [
+    "vazatoga",
+    "tagliaferro",
+    "stf",
+    "lawfare",
+    "perseguicao-jornalistas",
+    "alexandre-de-moraes",
+    "censura"
+   ],
+   "fontes": [
+    "https://www.conjur.com.br/2025-nov-10/stf-tem-maioria-para-tornar-reu-ex-assessor-do-tse-que-vazou-informacoes-sigilosas/",
+    "https://www.dgabc.com.br/Noticia/4268023/tagliaferro-e-julgado-pelo-supremo-tribunal-federal",
+    "https://circuitomt.com.br/tagliaferro-julgado-pelo-supremo-tribunal-federal/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1316,
+   "data": "2025-10-30",
+   "titulo": "Moraes encaminha ação contra jornalistas da Vaza Toga à PGR para análise",
+   "descricao": "Ministro Alexandre de Moraes aceita relatoria do caso e encaminha pedido de investigação de jornalistas à Procuradoria-Geral da República.",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF",
+    "TSE",
+    "PGR"
+   ],
+   "tags": [
+    "lawfare",
+    "stf",
+    "alexandre-de-moraes",
+    "david-agape",
+    "eli-vieira",
+    "censura",
+    "perseguicao-jornalistas",
+    "vazatoga"
+   ],
+   "fontes": [
+    "https://www.brasilparalelo.com.br/noticias/acao-contra-jornalistas-da-vaza-toga-e-enviada-ao-stf",
+    "https://paulofigueiredoshow.com/jornalistas-da-vaza-toga-sao-alvo-de-pedido-de-investigacao-no-stf/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1312,
+   "data": "2025-10-25",
+   "titulo": "Jornalistas David Ágape e Eli Vieira são alvo de queixa-crime no STF por revelações da Vaza Toga",
+   "descricao": "Letícia Sallorenzo apresenta petição criminal contra jornalistas da Vaza Toga pedindo investigação por difamação, organização criminosa e abolição do Estado Democrático.",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF",
+    "TSE",
+    "PGR"
+   ],
+   "tags": [
+    "lawfare",
+    "david-agape",
+    "eli-vieira",
+    "vazatoga",
+    "perseguicao-jornalistas",
+    "censura",
+    "stf",
+    "alexandre-de-moraes"
+   ],
+   "fontes": [
+    "https://www.poder360.com.br/opiniao/jornalismo-nao-e-milicia-acao-mira-autores-da-vaza-toga-no-stf/",
+    "https://www.brasilparalelo.com.br/noticias/acao-contra-jornalistas-da-vaza-toga-e-enviada-ao-stf",
+    "https://revistaoeste.com/imprensa/jornalista-aciona-stf-contra-reporteres-e-ex-assessor-de-moraes/",
+    "https://terrabrasilnoticias.com/2025/11/jornalistas-que-denunciaram-a-vaza-toga-viram-alvo-de-acao-no-stf/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1313,
+   "data": "2025-10-25",
+   "titulo": "Novo dossiê aponta venda de sentenças em tribunal federal",
+   "descricao": "Investigação revela grupo de magistrados envolvidos na comercialização de decisões judiciais em processos cíveis.",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "CNJ"
+   ],
+   "tags": [
+    "justica",
+    "decisao-judicial"
+   ],
+   "fontes": [
+    "https://noticias.uol.com.br/ultimas/venda-de-sentencas-dossie-2025/",
+    "https://www.conjur.com.br/2025/10/25/dossie-magistrados-corrupcao"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1310,
+   "data": "2025-10-14",
+   "titulo": "CNJ abre PAD contra desembargador do TJPR por décadas de assédio moral e sexual contra servidoras",
+   "descricao": "O CNJ abre processo administrativo disciplinar contra Luís César de Paula Espíndola, do TJPR, por assédio moral e sexual sistemático desde a década de 1980.",
+   "grupo": "cnj_disciplinar",
+   "gravidade": "media",
+   "relevancia": "alta",
+   "instituicoes": [
+    "CNJ"
+   ],
+   "tags": [
+    "justica",
+    "judiciario",
+    "assedio-sexual",
+    "impunidade",
+    "cnj"
+   ],
+   "fontes": [
+    "https://www.conjur.com.br/2025-out-14/cnj-analisa-denuncia-de-assedio-moral-e-sexual-contra-desembargador/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1303,
+   "data": "2025-09-02",
+   "titulo": "Eduardo Tagliaferro depõe no Senado sobre operações paralelas do gabinete de Moraes",
+   "descricao": "Ex-assessor confirma no Senado legitimidade do material da Vaza Toga e expõe métodos suspeitos para incriminar pessoas sem devido processo.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF",
+    "TSE",
+    "CNJ",
+    "Senado"
+   ],
+   "tags": [
+    "vazatoga",
+    "tagliaferro",
+    "stf",
+    "tse",
+    "gabinete-paralelo",
+    "alexandre-de-moraes",
+    "censura",
+    "senado"
+   ],
+   "fontes": [
+    "https://www12.senado.leg.br/radio/1/noticia/2025/09/02/comissao-ouve-ex-assessor-de-moraes-que-expos-conversas-que-ficaram-conhecidas-como-vaza-toga",
+    "https://www.nsctotal.com.br/noticias/quem-e-eduardo-tagliaferro-e-o-que-sao-as-denuncias-contra-moraes-que-miram-julgamento-no-stf"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1304,
+   "data": "2025-09-02",
+   "titulo": "Senado decide enviar relatório sobre Vaza Toga aos EUA e organismos internacionais",
+   "descricao": "Comissão de Segurança Pública decide enviar denúncias de Tagliaferro ao governo dos EUA, TSE, CNJ, CNMP e OAB, além de pedir proteção ao denunciante.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF",
+    "TSE",
+    "CNJ",
+    "Senado"
+   ],
+   "tags": [
+    "vazatoga",
+    "senado",
+    "relacoes-internacionais",
+    "stf",
+    "alexandre-de-moraes",
+    "tagliaferro"
+   ],
+   "fontes": [
+    "https://www12.senado.leg.br/radio/1/noticia/2025/09/02/comissao-ouve-ex-assessor-de-moraes-que-expos-conversas-que-ficaram-conhecidas-como-vaza-toga"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1265,
+   "data": "2025-08-17",
+   "titulo": "Pontos Centrais Vazatoga2 - Crise Institucional e Judicial",
+   "descricao": "Arquivos do 8 de Janeiro e o Sistema Paralelo do STF/TSE",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF",
+    "TSE",
+    "FAB"
+   ],
+   "tags": [
+    "censura",
+    "vazatoga",
+    "prisao-em-massa",
+    "biometria",
+    "viés político",
+    "repressão judicial",
+    "direitos fundamentais",
+    "abuso-de-poder",
+    "processo-legal",
+    "perseguicao-politica",
+    "certidões"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": "R$ 30 milhões"
+  },
+  {
+   "id": 1266,
+   "data": "2025-08-17",
+   "titulo": "Detalhamento Vazatoga2 - Crise Institucional e Judicial",
+   "descricao": "Arquivos do 8 de Janeiro e o Sistema Paralelo do STF/TSE",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF",
+    "TSE",
+    "PGR",
+    "FAB"
+   ],
+   "tags": [
+    "vazatoga",
+    "prisao-em-massa",
+    "biometria",
+    "viés político",
+    "repressão judicial",
+    "direitos fundamentais",
+    "abuso-de-poder",
+    "processo-legal",
+    "perseguicao-politica",
+    "certidões"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": "R$ 30 milhões"
+  },
+  {
+   "id": 1267,
+   "data": "2025-08-17",
+   "titulo": "Vazatoga2 - Resumo Executivo Crise Institucional e Judicial",
+   "descricao": "Arquivos do 8 de Janeiro e o Sistema Paralelo do STF/TSE",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF",
+    "TSE",
+    "PGR",
+    "FAB"
+   ],
+   "tags": [
+    "vazatoga",
+    "prisao-em-massa",
+    "biometria",
+    "viés político",
+    "repressão judicial",
+    "direitos fundamentais",
+    "abuso-de-poder",
+    "processo-legal",
+    "perseguicao-politica",
+    "certidões"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1268,
+   "data": "2025-08-17",
+   "titulo": "Vazatoga2 - Resumo Geral Crise Institucional e Judicial",
+   "descricao": "Arquivos do 8 de Janeiro e o Sistema Paralelo do STF/TSE",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF",
+    "TSE",
+    "FAB"
+   ],
+   "tags": [
+    "vazatoga",
+    "prisao-em-massa",
+    "biometria",
+    "viés político",
+    "repressão judicial",
+    "direitos fundamentais",
+    "abuso-de-poder",
+    "processo-legal",
+    "perseguicao-politica",
+    "certidões"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1262,
+   "data": "2025-08-15",
+   "titulo": "Vaza Toga expõe gabinete paralelo de Alexandre de Moraes",
+   "descricao": "Série de reportagens 'Vaza Toga' revelou operações de gabinete paralelo do ministro Alexandre de Moraes usando WhatsApp para monitorar e censurar críticos.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF"
+   ],
+   "tags": [
+    "vazatoga",
+    "gabinete-paralelo",
+    "alexandre-de-moraes",
+    "stf",
+    "tse",
+    "censura"
+   ],
+   "fontes": [
+    "https://revistaoeste.com/politica/gabinete-paralelo-de-moraes-usurpou-funcoes-censurou-a-imprensa-e-violou-a-constituicao-afirmam-juristas/",
+    "https://www.gazetadopovo.com.br/republica/vaza-toga-2-capitulo-mais-sombrio-autoritarismo-moraes/",
+    "https://revistaoeste.com/revista/edicao-285/a-fraude-exposta/",
+    "https://www.gazetadopovo.com.br/republica/mensagens-vazadas-justica-paralela-moraes-8-janeiro/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1066,
+   "data": "2025-01-01",
+   "titulo": "Esquema de Corrupção com Ex-Governador Witzel",
+   "descricao": "Condenação por corrupção no Poder Judiciário durante gestão de Wilson Witzel✧  envolvendo venda de decisões.Desembargadores do TJ-RJ✧  ex-governador Wilson Witzel.",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "justica",
+    "judiciario",
+    "rj"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1070,
+   "data": "2025-01-01",
+   "titulo": "Operação 18 Minutos – venda de sentenças no TJ‑MA",
+   "descricao": "Indiciamento de desembargadores e juízes por corrupção✧  lavagem e organização criminosa por liberação fraudulenta de alvarás judiciais.Desembargadores Nelma Sarney✧  Antônio Guerreiro Júnior✧  Luiz Gonzaga Almeidajuízes Alice de Sousa Rocha✧  Cristiano Simas de Sousaadvogados e servidores",
+   "grupo": "corrupcao_judicial",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "PF",
+    "CNJ"
+   ],
+   "tags": [
+    "justica",
+    "judiciario",
+    "ma",
+    "venda-de-sentencas"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1072,
+   "data": "2025-01-01",
+   "titulo": "Operação Mais Valia",
+   "descricao": "STJ condena desembargadores do Rio por esquema com ex-governador Wilson Witzel.DesembargadoresWilson Witzel",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "justica",
+    "judiciario",
+    "rio-de-janeiro"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1073,
+   "data": "2025-01-01",
+   "titulo": "Operação Naufrágio Corrupção na Justiça do ES",
+   "descricao": "Esquema de corrupção e venda de sentenças deflagrado em 2008✧  com condenações finais em 2025.Juízes✧  advogados✧  desembargadores do TJ-ES.",
+   "grupo": "corrupcao_judicial",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "justica",
+    "judiciario",
+    "es",
+    "venda-de-sentencas"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1077,
+   "data": "2025-01-01",
+   "titulo": "Operação Sisamnes",
+   "descricao": "Investigação da Polícia Federal sobre esquema milionário de vazamento de informações sigilosas e venda de sentenças judiciais✧  iniciado em 2020 e intensificado após o assassinato do advogado Roberto Zampieri em 2023✧  em Cuiabá (MT).",
+   "grupo": "corrupcao_judicial",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "justica",
+    "judiciario",
+    "ms",
+    "venda-de-sentencas"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": "R$ 50 milhões"
+  },
+  {
+   "id": 1079,
+   "data": "2025-01-01",
+   "titulo": "Operação Última Ratio (continuação)",
+   "descricao": "PF pede ação contra 7 desembargadores por venda de decisão✧  com provas de corrupção.Sete desembargadores",
+   "grupo": "corrupcao_judicial",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "PF",
+    "PGR"
+   ],
+   "tags": [
+    "justica",
+    "judiciario",
+    "mato-grosso-do-sul",
+    "venda-de-sentencas"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1082,
+   "data": "2025-01-01",
+   "titulo": "Venda de Decisões no TJ-MS",
+   "descricao": "Esquema de corrupção envolvendo venda de decisões judiciais por desembargadores✧  com intermediação de advogados e filhos dos magistrados.Desembargadores Alexandre Aguiar Bastos✧  Marcos José de Brito Rodrigues✧  Sideni Soncini Pimentel✧  Vladimir Abreu da Silva✧  Sergio Fernandes Martins✧  Julio Roberto Siqueira Cardoso (aposentado)✧  Divoncir Schreiner Maran (aposentado)✧  advogado Felix Jayme da Cunha✧  conselheiro Osmar Domingues Jeronymo.",
+   "grupo": "corrupcao_judicial",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF",
+    "PGR"
+   ],
+   "tags": [
+    "justica",
+    "judiciario",
+    "ms",
+    "venda-de-sentencas"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": "R$ 3 milhões"
+  },
+  {
+   "id": 1083,
+   "data": "2025-01-01",
+   "titulo": "Venda de Sentenças por Desembargador de SP",
+   "descricao": "Desembargador acusado de vender sentenças em quatro processos✧  incluindo revogação de prisões e decisões favoráveis a réus.Desembargador Ivo de Almeida✧  quatro outros denunciados.",
+   "grupo": "corrupcao_judicial",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "PGR"
+   ],
+   "tags": [
+    "justica",
+    "judiciario",
+    "sp",
+    "venda-de-sentencas"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 895,
+   "data": "2024-01-01",
+   "titulo": "Investigações em cortes estaduais",
+   "descricao": "Investigações recentes sobre venda de decisões judiciais✧  com conexão a grilagem de terra e envolvimento de filhos de desembargadores.Cinco desembargadores (afastados pelo STJ)Andreson Oliveira (lobista✧  preso desde 26/11/2023)",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF"
+   ],
+   "tags": [
+    "justica",
+    "judiciario",
+    "mato-grosso-do-sul"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 896,
+   "data": "2024-01-01",
+   "titulo": "Operação 18 Minutos",
+   "descricao": "Investigação sobre suposta corrupção no Tribunal de Justiça do Maranhão✧  envolvendo liberação de alvarás em prejuízo do Banco do Nordeste✧  com estimativa de prejuízo de R$ 17 milhões e tentativa de nova fraude de R$ 29 milhões.Desembargador Luiz Gonzaga Almeida FilhoDesembargador Marcelino Everton ChavesDesembargadora Nelma Celeste Sousa Silva Sarney CostaDesembargador Antônio Pacheco Guerreiro JúniorJuiz Cristiano Simas de SousaJuiz Alice de Sousa RochaEx-advogado do Banco (F.X. de S.F.)",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "justica",
+    "judiciario",
+    "maranhao",
+    "ma"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": "R$ 17 milhões"
+  },
+  {
+   "id": 898,
+   "data": "2024-01-01",
+   "titulo": "Rede de Venda de Sentenças Envolvendo STJ",
+   "descricao": "Investigação de venda de sentenças em gabinetes de ministros do STJ.Funcionários e ministros do STJ✧  advogados e lobistas.",
+   "grupo": "corrupcao_judicial",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "PF"
+   ],
+   "tags": [
+    "justica",
+    "judiciario",
+    "federal",
+    "venda-de-sentencas"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 900,
+   "data": "2024-01-01",
+   "titulo": "Venda de Liminares por Ex-Desembargadores",
+   "descricao": "Recurso contra sentença de ex-desembargadores acusados de venda de liminares.Ex-desembargadores do TJ-CE e esposa de um deles.",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "justica",
+    "judiciario",
+    "ce"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 901,
+   "data": "2024-01-01",
+   "titulo": "Venda de Sentenças no TJ-MA",
+   "descricao": "Esquema de venda de sentenças com propinas fracionadas contra o Banco do Nordeste.Desembargadores e juízes do TJ-MA.",
+   "grupo": "corrupcao_judicial",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "PF"
+   ],
+   "tags": [
+    "justica",
+    "judiciario",
+    "ma",
+    "venda-de-sentencas"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 854,
+   "data": "2023-07-19",
+   "titulo": "CNJ suspende redes sociais de juiz do TRF-2 acusado de atuar como ‘coach’ de advogados... Leia mais em https://www.cartacapital.com.br/justica/cnj-suspende-redes-sociais-de-juiz-do-trf-2-acusado-de-atuar-como-coach-de-advogados/. O conteúdo de CartaCapital está protegido pela legislação brasileira sobre direito autoral. Essa defesa é necessária para manter o jornalismo corajoso e transparente de CartaCapital vivo e acessível a todos.",
+   "descricao": "2023-07-19-cartacapital-CNJ-Censura",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "CNJ"
+   ],
+   "tags": [
+    "lawfare",
+    "cnj",
+    "censura"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 816,
+   "data": "2023-05-23",
+   "titulo": "Decisão do Órgão Especial do Tribunal de Justiça de Minas Gerais (TJMG) foi publicada nesta quinta-feira (25). Vídeo em que Ludmila Lins Grilo ´ensinava´ a andar sem máscara em shopping viralizou em 2021.",
+   "descricao": "2023-05-23-g1-CNJ-STF",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF",
+    "CNJ"
+   ],
+   "tags": [
+    "lawfare",
+    "cnj",
+    "stf"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 769,
+   "data": "2023-01-01",
+   "titulo": "Esquema no TJ-MT",
+   "descricao": "Investigação sobre suposto esquema de venda de sentenças no Tribunal de Justiça de Mato Grosso✧  com base em conversas no celular de Roberto Zampieri✧  apontado como lobista✧  incluindo suspeitas de propinas via Pix e barra de ouro.Desembargador Sebastião de Moraes FilhoDesembargador João Ferreira FilhoJuiz Ivan Lúcio AmaranteRoberto Zampieri",
+   "grupo": "corrupcao_judicial",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "CNJ"
+   ],
+   "tags": [
+    "justica",
+    "judiciario",
+    "mato-grosso",
+    "venda-de-sentencas"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 771,
+   "data": "2023-01-01",
+   "titulo": "Operação Habeas Pater",
+   "descricao": "Operação de 2023 que investigou um juiz do TRF-1 por decisões que beneficiaram organização criminosa envolvida em tráfico internacional de drogas✧  lavagem de dinheiro e crimes financeiros.Um juiz do TRF-1 (aposentado após a operação)",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "justica",
+    "judiciario",
+    "regiao-nao-especificada-trf-1"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 772,
+   "data": "2023-01-01",
+   "titulo": "Operação Máximus",
+   "descricao": "Investigação sobre suposto esquema de venda de sentenças no Tribunal de Justiça do Tocantins✧  envolvendo cinco desembargadores✧  três juízes e o governador✧  com áudios revelando insatisfação com pagamentos de propina.Desembargador Helvécio de Brito Maia NetoDesembargadora Angela Issa HaonatDesembargadora Angela Maria Ribeiro PrudenteDesembargadora Etelvina Maria Sampaio FelipeDesembargador João Rigo GuimarãesJuiz José Maria LimaJuiz Marcelo Eliseu RostirollaJuiz Ocelio Nobre da SilvaJuiz Ronic...",
+   "grupo": "corrupcao_judicial",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "justica",
+    "judiciario",
+    "tocantins",
+    "venda-de-sentencas"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 773,
+   "data": "2023-01-01",
+   "titulo": "Operação Última Ratio",
+   "descricao": "Investigação sobre esquema de venda de sentenças no Tribunal de Justiça de Mato Grosso do Sul✧  com afastamento de desembargadores e uso de tornozeleiras eletrônicas para monitoramento.Desembargador Vladimir Abreu da SilvaDesembargador Alexandre Aguiar BastosDesembargador Sideni Soncini PimentelDesembargador Marcos José de Brito RodriguesDesembargador Sérgio Fernandes MartinsConselheiro do TCE-MS Osmar Domingues JeronymoServidor do TJ-MS Danillo Moya JeronymoEmpresário Andreson de Oliveira Gonça...",
+   "grupo": "corrupcao_judicial",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "justica",
+    "judiciario",
+    "mato-grosso-do-sul",
+    "venda-de-sentencas"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": "R$ 3 milhões"
+  },
+  {
+   "id": 775,
+   "data": "2023-01-01",
+   "titulo": "Sistema Faroeste de Corrupção no Judiciário",
+   "descricao": "Investigações sobre venda de decisões atingindo 14 tribunais de justiça.Magistrados de vários TJs estaduais.",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "justica",
+    "judiciario",
+    "federal"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 733,
+   "data": "2022-09-21",
+   "titulo": "Juíza de Minas Gerais atacou ministros do Supremo; para corregedor do CNJ, atitude pode ter violado deveres funcionais da magistratura.",
+   "descricao": "2022-09-21-g1-CNJ-STF",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF",
+    "CNJ"
+   ],
+   "tags": [
+    "lawfare",
+    "cnj",
+    "stf"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 681,
+   "data": "2022-01-01",
+   "titulo": "Judges atuando em casos de recuperação judicial",
+   "descricao": "Juízes que atuaram em grandes recuperações judiciais aceitaram cargos ou consultorias em empresas envolvidas nos processos✧  violando impedimentos legais.Juiz do ES responsável por recuperações da Itapemirim e outras empresasadministradores judiciais e credores",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "CNJ"
+   ],
+   "tags": [
+    "justica",
+    "judiciario",
+    "es"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 683,
+   "data": "2022-01-01",
+   "titulo": "Processo contra desembargadora aposentada",
+   "descricao": "Ação aberta em 2022 contra uma desembargadora aposentada do Tribunal de Justiça do Amazonas✧  sob suspeita de beneficiar traficantes e outras organizações criminosas.Uma desembargadora aposentada do TJ-AM",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "justica",
+    "judiciario",
+    "amazonas"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 582,
+   "data": "2021-01-01",
+   "titulo": "Operação Expresso 150",
+   "descricao": "Investigação sobre esquema de venda de liminares no Tribunal de Justiça do Ceará.Quatro desembargadoresJuízesAdvogados",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "justica",
+    "judiciario",
+    "ceara"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 583,
+   "data": "2021-01-01",
+   "titulo": "Operação Faroeste",
+   "descricao": "Investigação que levou seis desembargadores do Tribunal de Justiça da Bahia a se tornarem réus✧  com conexão a grilagem de terra e delação premiada rescindida.Seis desembargadores (réus)Uma desembargadora (colaboração premiada✧  rescindida em 2024)68 nomes citados na delação (magistrados✧  advogados✧  servidores públicos✧  empresários)Adailton Maturino (empresário✧  falso cônsul)",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "justica",
+    "judiciario",
+    "bahia"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 480,
+   "data": "2020-01-01",
+   "titulo": "Caso Witzel",
+   "descricao": "Investigação sobre esquema de corrupção durante a gestão do ex-governador Wilson Witzel✧  com condenações de desembargadores.Wilson WitzelDesembargadores condenados",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "justica",
+    "judiciario",
+    "rio-de-janeiro"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 473,
+   "data": "2019-11-19",
+   "titulo": "Operação Faroeste",
+   "descricao": "2019-11-19-Salvador, BA-corrupção judicial-grilagem terras",
+   "grupo": "corrupcao_judicial",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "operacoes",
+    "corrupcao",
+    "corrupcao-judicial",
+    "grilagem-terras"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 432,
+   "data": "2019-01-01",
+   "titulo": "Operação Faroeste",
+   "descricao": "Esquema de grilagem de terras e venda de sentenças envolvendo desembargadores do TJ‑BA✧  advogados e servidores públicos.Desembargadores Maria do Socorro Barreto Santiago✧  Ilona Reis✧  Lígia Cunha✧  José Olegário Monção✧  Maria da Graça Osórioprodutores rurais✧  advogados✧  servidoras e servidores do MP‑BA",
+   "grupo": "corrupcao_judicial",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "justica",
+    "judiciario",
+    "ba",
+    "venda-de-sentencas"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 433,
+   "data": "2019-01-01",
+   "titulo": "Vaza Jato Vazamento de Mensagens da Lava Jato",
+   "descricao": "Vazamento de conversas mostrando colaboração imprópria entre juiz e procuradores✧  sugerindo parcialidade.Juiz Sergio Moro✧  procurador Deltan Dallagnol✧  equipe da Lava Jato.",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF"
+   ],
+   "tags": [
+    "justica",
+    "judiciario",
+    "pr"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 387,
+   "data": "2017-01-01",
+   "titulo": "Esquema de venda de sentenças (TRF‑5)",
+   "descricao": "Desembargador aposentado e outros envolvidos condenados por exploração de prestígio✧  falsidade ideológica✧  lavagem de dinheiro✧  associação criminosa entre 2015–2017.Desembargador Francisco Barros Dias (aposentado)outros seis acusados",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "justica",
+    "judiciario",
+    "rn"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 367,
+   "data": "2016-01-01",
+   "titulo": "Caso José Admilson Gomes Pereira",
+   "descricao": "Juiz cobrou R$ 70 mil por habeas corpus que garantiu liberdade de acusado de contratar pistoleiros.José Admilson Gomes PereiraCarlos José Campos SoutoIrmã de Carlos José Campos SoutoIrmão do magistrado",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "justica",
+    "judiciario",
+    "para"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": "R$ 70 mi"
+  },
+  {
+   "id": 355,
+   "data": "2015-01-01",
+   "titulo": "Operação Expresso 150",
+   "descricao": "Desembargadores e juízes do Ceará investigados por venda de habeas corpus e liminares durante plantões judiciais.Desembargadores Francisco Pedrosa Teixeira✧  Sergia Maria Mendonça Miranda✧  Váldsen da Silva Alves Pereira (aposentado)advogados e traficantes beneficiados",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "justica",
+    "judiciario",
+    "ce"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 358,
+   "data": "2015-01-01",
+   "titulo": "Operação Zelotes",
+   "descricao": "Operação iniciada em março de 2015 investigando corrupção no CARF✧  com empresas pagando propinas para anular multas fiscais✧  causando prejuízo estimado de R$ 19 bilhões.GerdauBradescoSantanderRBSBanco SafraAndré GerdauGuido MantegaLuiz Claudio (filho de Lula)Lobistas",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "justica",
+    "judiciario",
+    "nacional"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": "R$ 19 bilhões"
+  },
+  {
+   "id": 326,
+   "data": "2012-01-01",
+   "titulo": "Caso Edgard Antônio Lippmann Júnior",
+   "descricao": "Desembargador recebeu três aposentadorias compulsórias por venda de sentenças✧  incluindo decisão para urgência no pagamento de dívida do governo.Edgard Antônio Lippmann Júnior",
+   "grupo": "corrupcao_judicial",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "justica",
+    "judiciario",
+    "rio-grande-do-sul",
+    "venda-de-sentencas"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": "R$ 35 mi"
+  },
+  {
+   "id": 302,
+   "data": "2010-01-01",
+   "titulo": "Caso Jovaldo dos Santos Aguiar",
+   "descricao": "Corregedor cobrou decisão de empresário e advogado✧  deixando 31 processos parados✧  e foi denunciado por não entregar decisão negociada.Jovaldo dos Santos Aguiar",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "justica",
+    "judiciario",
+    "amazonas"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": "R$ 13 mi"
+  },
+  {
+   "id": 288,
+   "data": "2008-01-01",
+   "titulo": "Operação Naufrágio",
+   "descricao": "Investigação iniciada em 2008 sobre suspeitas de nepotismo e venda de decisões no Tribunal de Justiça do Espírito Santo✧  com ação penal ainda não julgada pelo STJ.Três desembargadores (presos em 2008)Um desembargador (réu atual)26 pessoas denunciadas em 2010 pelo Ministério Público Federal",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "justica",
+    "judiciario",
+    "espirito-santo"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 277,
+   "data": "2007-04-13",
+   "titulo": "Operação Hurricane",
+   "descricao": "2007-04-13-Rio de Janeiro, RJ-jogo ilegal-corrupção judicial",
+   "grupo": "corrupcao_judicial",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "operacoes",
+    "corrupcao",
+    "jogo-ilegal",
+    "corrupcao-judicial"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 256,
+   "data": "2007-01-01",
+   "titulo": "Caso José Dantas de Lira",
+   "descricao": "Juiz cobrava R$ 750 por liminar em esquema com filho✧  advogado✧  funcionário do tribunal e corretores✧  movimentando mais de R$ 3 milhões entre 2007 e 2009.José Dantas de LiraFilho de José Dantas de LiraIvan Holanda PereiraFuncionário do tribunalDois corretores",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "justica",
+    "judiciario",
+    "rio-grande-do-norte"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": "R$ 750 "
+  },
+  {
+   "id": 258,
+   "data": "2007-01-01",
+   "titulo": "Caso Rubem Dário Peregrino Cunha",
+   "descricao": "Desembargador cobrou R$ 400 mil para livrar prefeito de acusação de corrupção✧  além de pedir cargo para a namorada do filho.Rubem Dário Peregrino CunhaAntônio Pascoal BatistaNizan Gomes Cunha Neto",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "justica",
+    "judiciario",
+    "bahia"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": "R$ 400 mi"
+  },
+  {
+   "id": 172,
+   "data": "2003-10-30",
+   "titulo": "Operação Anaconda",
+   "descricao": "2003-10-30-São Paulo, SP-corrupção judicial-venda de sentenças",
+   "grupo": "corrupcao_judicial",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF"
+   ],
+   "tags": [
+    "operacoes",
+    "corrupcao",
+    "corrupcao-judicial",
+    "venda-de-sentencas"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 127,
+   "data": "2001-01-01",
+   "titulo": "Caso Antônio Fernando Guimarães",
+   "descricao": "Desembargador teve aluguel de apartamento de luxo pago por escritório de advocacia em troca de decisões favoráveis.Antônio Fernando GuimarãesEscritório Vilhena&Vilhena",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "justica",
+    "judiciario",
+    "minas-gerais"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": "R$ 37 mi"
+  },
+  {
+   "id": 42,
+   "data": "1992-01-01",
+   "titulo": "Caso do Fórum do TRT-SP",
+   "descricao": "Esquema de corrupção envolvendo a construção do fórum do Tribunal Regional do Trabalho em São Paulo✧  com desvios de verbas iniciados em 1992✧  detectados por auditorias do TCU em 1995✧  e obra abandonada em 1998.Nicolau dos Santos NetoLuiz EstevãoConstrutora IncalGrupo OK",
+   "grupo": "outros_judiciario",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "TCU"
+   ],
+   "tags": [
+    "justica",
+    "judiciario",
+    "sao-paulo"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": "R$ 2 bilhões"
+  }
+ ]
+}
+</script>
+
+<script>
+(function(){
+  const raw = JSON.parse(document.getElementById('jusmonitor-data').textContent);
+  const cards = raw.cards;
+
+  document.getElementById('syncDate').textContent = raw.sync_date;
+
+  const GROUP_LABELS = {
+    todos: 'Todos',
+    corrupcao_judicial: 'Corrupção judicial',
+    cnj_disciplinar: 'CNJ disciplinar',
+    penduricalhos: 'Penduricalhos',
+    chokepoint_stf: 'Chokepoint STF',
+    eleitoral_tse: 'Eleitoral / TSE',
+    outros_judiciario: 'Outros'
+  };
+
+  // stat grid
+  const alta = cards.filter(c => c.relevancia === 'alta').length;
+  const confirmed = cards.filter(c => c.evidence_status === 'ev-confirmed').length;
+  const anos = cards.map(c => c.data.slice(0,4)).filter(y => y !== '0001');
+  const minY = Math.min(...anos), maxY = Math.max(...anos);
+  const statGrid = document.getElementById('statGrid');
+  const stats = [
+    [cards.length, 'casos no painel'],
+    [alta, 'relevância alta', 'red'],
+    [confirmed, 'ev-confirmed', 'gold'],
+    [raw.excluidos_pendente_enriquecimento, 'pendentes de enriquecimento'],
+    [minY + '–' + maxY, 'período coberto']
+  ];
+  statGrid.innerHTML = stats.map(function(s){
+    return '<div class="stat-cell"><div class="stat-num ' + (s[2]||'') + '">' + s[0] + '</div><div class="stat-lbl">' + s[1] + '</div></div>';
+  }).join('');
+
+  document.getElementById('lacunaText').textContent =
+    raw.excluidos_pendente_enriquecimento + ' entradas do corpus original correspondem ao escopo temático mas carecem de descrição/fonte estruturada (dados legados de importação) — excluídas deste painel até enriquecimento, não descartadas do corpus.';
+
+  // filters
+  const groupCounts = {};
+  cards.forEach(c => groupCounts[c.grupo] = (groupCounts[c.grupo]||0) + 1);
+  const filtersEl = document.getElementById('filters');
+  const groupOrder = ['todos','corrupcao_judicial','cnj_disciplinar','chokepoint_stf','penduricalhos','eleitoral_tse','outros_judiciario'];
+  groupOrder.forEach(function(g){
+    if (g !== 'todos' && !groupCounts[g]) return;
+    const btn = document.createElement('button');
+    btn.className = 'chip' + (g === 'todos' ? ' active' : '');
+    btn.dataset.grp = g;
+    btn.textContent = GROUP_LABELS[g] + (g === 'todos' ? ' (' + cards.length + ')' : ' (' + (groupCounts[g]||0) + ')');
+    btn.onclick = function(){
+      document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+      state.grp = g;
+      render();
+    };
+    filtersEl.appendChild(btn);
+  });
+
+  const state = { grp: 'todos', q: '' };
+  document.getElementById('search').addEventListener('input', function(e){
+    state.q = e.target.value.trim().toLowerCase();
+    render();
+  });
+
+  function esc(s){ return (s||'').replace(/[&<>"']/g, function(c){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]; }); }
+
+  function matches(c){
+    if (state.grp !== 'todos' && c.grupo !== state.grp) return false;
+    if (!state.q) return true;
+    const hay = [c.titulo, c.descricao, (c.tags||[]).join(' '), (c.instituicoes||[]).join(' ')].join(' ').toLowerCase();
+    return hay.indexOf(state.q) !== -1;
+  }
+
+  function cardHTML(c){
+    const fontesHTML = (c.fontes && c.fontes.length)
+      ? '<div class="card-sources">' + c.fontes.slice(0,4).map(u => '<a href="'+esc(u)+'" target="_blank" rel="noopener">↗ '+esc(u)+'</a>').join('') + '</div>'
+      : '';
+    const tagsHTML = (c.tags||[]).slice(0,6).map(t => '<span class="tag">'+esc(t)+'</span>').join('');
+    const valorHTML = c.valor_envolvido ? '<div class="card-valor">💰 '+esc(c.valor_envolvido)+'</div>' : '';
+    const evClass = c.evidence_status === 'ev-confirmed' ? 'confirmed' : 'alleged';
+    return '' +
+    '<article class="card">' +
+      '<div class="card-top">' +
+        '<span class="card-date">' + esc(c.data) + '</span>' +
+        '<div class="card-badges">' +
+          '<span class="badge badge-grp-'+c.grupo+'">'+GROUP_LABELS[c.grupo]+'</span>' +
+          '<span class="badge badge-ev '+evClass+'">'+esc(c.evidence_status)+'</span>' +
+        '</div>' +
+      '</div>' +
+      '<h3>' + esc(c.titulo) + '</h3>' +
+      '<p>' + esc(c.descricao) + '</p>' +
+      valorHTML +
+      '<div class="card-meta">' + tagsHTML + '</div>' +
+      fontesHTML +
+    '</article>';
+  }
+
+  function render(){
+    const list = cards.filter(matches);
+    document.getElementById('countRow').innerHTML = '<b>' + list.length + '</b> de ' + cards.length + ' casos exibidos';
+    const container = document.getElementById('cardList');
+    container.innerHTML = list.length
+      ? list.map(cardHTML).join('')
+      : '<div class="empty-state">Nenhum caso corresponde ao filtro atual.</div>';
+  }
+
+  render();
+
+  // gotop
+  const gotop = document.getElementById('gotop');
+  window.addEventListener('scroll', function(){
+    gotop.classList.toggle('show', window.scrollY > 500);
+  });
+  gotop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+</html>
