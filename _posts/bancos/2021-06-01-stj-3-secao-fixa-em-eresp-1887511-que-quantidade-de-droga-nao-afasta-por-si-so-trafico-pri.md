@@ -4,7 +4,7 @@ description: "Em embargos de divergência (EREsp 1.887.511), a 3ª Seção do ST
 date: 2021-06-01T12:00:00.000Z
 image:
   path: "/assets/solid/landmark.svg"
-tags: ["bancos", "P01", "P01-B"]
+tags: ["bancos", "p01", "p01-B"]
 categories: bancos
 permalink: /posts/2021-06-01-stj-3-secao-fixa-em-eresp-1887511-que-quantidade-de-droga-nao-afasta-por-si-so-trafico-pri/
 id_corpus: "1804"

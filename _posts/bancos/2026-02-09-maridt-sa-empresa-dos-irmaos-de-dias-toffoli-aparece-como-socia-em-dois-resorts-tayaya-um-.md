@@ -4,7 +4,7 @@ description: "Documentos da Junta Comercial do Paraná e reportagem do Estadão 
 date: 2026-02-09T12:00:00.000Z
 image:
   path: "/assets/solid/landmark.svg"
-tags: ["bancos", "P10"]
+tags: ["bancos", "p10"]
 categories: bancos
 permalink: /posts/2026-02-09-maridt-sa-empresa-dos-irmaos-de-dias-toffoli-aparece-como-socia-em-dois-resorts-tayaya-um-/
 id_corpus: "1830"

@@ -4,7 +4,7 @@ description: "Segundo reportagem de Malu Gaspar (O Globo), replicada por CNN Bra
 date: 2025-11-17T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P02", "P06"]
+tags: ["stf", "p02", "p06"]
 categories: stf
 permalink: /posts/2025-11-17-dados-periciados-pela-pf-indicam-troca-de-mensagens-entre-vorcaro-e-moraes-no-dia-da-prisa/
 id_corpus: "1846"
@@ -59,9 +59,9 @@ O uso deliberado de recurso de visualização única por ambos os interlocutores
 
 ## Conexoes
 
-- id_1843
-- id_1844
-- id_1845
+- [id_1843 — Revelado contrato de R$ 129 milhões entre escritório da esposa de Moraes e Banco Master](/posts/2025-12-09-revelado-contrato-de-r-129-milhoes-entre-escritorio-da-esposa-de-moraes-e-banco-master/)
+- [id_1844 — Metrópoles revela duas visitas de Moraes à mansão de Vorcaro em Brasília; Moraes nega for…](/posts/2026-01-27-metropoles-revela-duas-visitas-de-moraes-a-mansao-de-vorcaro-em-brasilia-moraes-nega-forma/)
+- [id_1845 — Moraes emite três notas sucessivas e contraditórias sobre contatos com Galípolo; Estadão…](/posts/2025-12-23-moraes-emite-tres-notas-sucessivas-e-contraditorias-sobre-contatos-com-galipolo-estadao-re/)
 
 ## Lacunas investigativas
 

@@ -4,7 +4,7 @@ description: "O Conselho Nacional de Justiça formou maioria em 04/08/2026 para 
 date: 2026-08-04T12:00:00.000Z
 image:
   path: "/assets/solid/skull.svg"
-tags: ["escandalos", "P02"]
+tags: ["escandalos", "p02"]
 categories: escandalos
 permalink: /posts/2026-08-04-cnj-forma-maioria-para-afastar-por-dois-anos-a-juiza-gabriela-hardt-sucessora-de-moro-na-1/
 id_corpus: "1831"

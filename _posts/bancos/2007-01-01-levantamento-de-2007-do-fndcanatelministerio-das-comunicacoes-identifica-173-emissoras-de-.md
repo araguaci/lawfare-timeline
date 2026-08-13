@@ -4,7 +4,7 @@ description: "Estudo do Fórum Nacional pela Democratização da Comunicação (
 date: 2007-01-01T12:00:00.000Z
 image:
   path: "/assets/solid/landmark.svg"
-tags: ["bancos", "P06", "P09"]
+tags: ["bancos", "p06", "p09"]
 categories: bancos
 permalink: /posts/2007-01-01-levantamento-de-2007-do-fndcanatelministerio-das-comunicacoes-identifica-173-emissoras-de-/
 id_corpus: "1810"

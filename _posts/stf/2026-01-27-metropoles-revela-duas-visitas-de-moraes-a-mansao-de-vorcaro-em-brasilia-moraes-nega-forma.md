@@ -4,7 +4,7 @@ description: "Coluna de Andreza Matais (Metrópoles) relata, com base em quatro 
 date: 2026-01-27T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P02", "P05"]
+tags: ["stf", "p02", "p05"]
 categories: stf
 permalink: /posts/2026-01-27-metropoles-revela-duas-visitas-de-moraes-a-mansao-de-vorcaro-em-brasilia-moraes-nega-forma/
 id_corpus: "1844"
@@ -60,9 +60,9 @@ Caso clássico de ev-contested: reportagem com múltiplas testemunhas nomeadas i
 
 ## Conexoes
 
-- id_1843
-- id_1845
-- id_1846
+- [id_1843 — Revelado contrato de R$ 129 milhões entre escritório da esposa de Moraes e Banco Master](/posts/2025-12-09-revelado-contrato-de-r-129-milhoes-entre-escritorio-da-esposa-de-moraes-e-banco-master/)
+- [id_1845 — Moraes emite três notas sucessivas e contraditórias sobre contatos com Galípolo; Estadão…](/posts/2025-12-23-moraes-emite-tres-notas-sucessivas-e-contraditorias-sobre-contatos-com-galipolo-estadao-re/)
+- [id_1846 — Dados periciados pela PF indicam troca de mensagens entre Vorcaro e Moraes no dia da pris…](/posts/2025-11-17-dados-periciados-pela-pf-indicam-troca-de-mensagens-entre-vorcaro-e-moraes-no-dia-da-prisa/)
 
 ## Lacunas investigativas
 

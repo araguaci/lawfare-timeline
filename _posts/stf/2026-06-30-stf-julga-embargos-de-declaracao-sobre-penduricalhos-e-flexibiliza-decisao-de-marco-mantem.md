@@ -4,7 +4,7 @@ description: "O STF concluiu, em sessão virtual extraordinária, o julgamento d
 date: 2026-06-30T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P05", "P11"]
+tags: ["stf", "p05", "p11"]
 categories: stf
 permalink: /posts/2026-06-30-stf-julga-embargos-de-declaracao-sobre-penduricalhos-e-flexibiliza-decisao-de-marco-mantem/
 id_corpus: "1824"

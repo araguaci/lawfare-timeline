@@ -4,7 +4,7 @@ description: "Em 27/11/2013, quando o STF finalmente pautou a ADPF 165 para julg
 date: 2013-11-27T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P03", "P06"]
+tags: ["stf", "p03", "p06"]
 categories: stf
 permalink: /posts/2013-11-27-agu-e-banco-central-mudam-de-posicao-e-defendem-teses-bancarias-na-adpf-165-stf-suspende-j/
 id_corpus: "1813"

@@ -4,7 +4,7 @@ description: "Em 23/05/2025, o STF concluiu por unanimidade o julgamento da ADPF
 date: 2025-05-23T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P06"]
+tags: ["stf", "p06"]
 categories: stf
 permalink: /posts/2025-05-23-stf-conclui-adpf-165-apos-16-anos-declara-constitucionais-os-planos-economicos-veda-acao-r/
 id_corpus: "1815"

@@ -4,7 +4,7 @@ description: "O ministro Alexandre de Moraes (STF) determinou, em quatro process
 date: 2026-08-05T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P03"]
+tags: ["stf", "p03"]
 categories: stf
 permalink: /posts/2026-08-05-moraes-intima-telegram-a-fornecer-dados-cadastrais-de-canais-e-grupos-sob-pena-de-multa-di/
 id_corpus: "1840"
@@ -59,9 +59,9 @@ Reforça o padrão P03 (STF como chokepoint) já documentado: acumulação de fu
 
 ## Conexoes
 
-- id_167
-- id_168
-- id_1514
+- [id_712 — Bloqueio de Telegram no Brasil por desobediência a ordens judiciais](/posts/bloqueio-de-telegram-no-brasil-por-desobediencia-a-ordens-judiciais/)
+- [id_808 — Censura a Telegram por campanha contra PL das Fake News](/posts/censura-a-telegram-por-campanha-contra-pl-das-fake-news/)
+- [id_1514 — Ramagem liberado pelo ICE após 48h; pedido de asilo barra deportação ao Brasil](/posts/ramagem-liberado-pelo-ice-apos-48h-pedido-de-asilo-barra-deportacao-ao-brasil/)
 
 ## Lacunas investigativas
 

@@ -4,7 +4,7 @@ description: "2ª Turma do STF anula apreensão de 695kg de cocaína realizada p
 date: 2023-06-01T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P01", "P01-B"]
+tags: ["stf", "p01", "p01-B"]
 categories: stf
 permalink: /posts/2023-06-01-stf-2-turma-anula-apreensao-de-695kg-de-cocaina-no-porto-de-itaguai-por-vicio-de-fundada-s/
 id_corpus: "1806"

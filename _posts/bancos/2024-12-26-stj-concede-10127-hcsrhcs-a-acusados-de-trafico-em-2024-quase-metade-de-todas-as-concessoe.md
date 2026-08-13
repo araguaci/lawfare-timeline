@@ -4,7 +4,7 @@ description: "Segundo levantamento do próprio STJ citado pelo Consultor Jurídi
 date: 2024-12-26T12:00:00.000Z
 image:
   path: "/assets/solid/landmark.svg"
-tags: ["bancos", "P01-B"]
+tags: ["bancos", "p01-B"]
 categories: bancos
 permalink: /posts/2024-12-26-stj-concede-10127-hcsrhcs-a-acusados-de-trafico-em-2024-quase-metade-de-todas-as-concessoe/
 id_corpus: "1808"

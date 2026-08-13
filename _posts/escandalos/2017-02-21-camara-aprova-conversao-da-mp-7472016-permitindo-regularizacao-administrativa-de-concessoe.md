@@ -4,7 +4,7 @@ description: "O Plenário da Câmara dos Deputados aprovou, em 21/02/2017, o pro
 date: 2017-02-21T12:00:00.000Z
 image:
   path: "/assets/solid/skull.svg"
-tags: ["escandalos", "P06"]
+tags: ["escandalos", "p06"]
 categories: escandalos
 permalink: /posts/2017-02-21-camara-aprova-conversao-da-mp-7472016-permitindo-regularizacao-administrativa-de-concessoe/
 id_corpus: "1811"

@@ -4,7 +4,7 @@ description: "Em fevereiro de 2026, o ministro Dias Toffoli declarou suspeição
 date: 2026-02-01T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P02", "P03"]
+tags: ["stf", "p02", "p03"]
 categories: stf
 permalink: /posts/2026-02-01-toffoli-declara-suspeicao-para-o-caso-master-apos-pf-citar-seu-nome-em-relatorio-enviado-a/
 id_corpus: "1847"
@@ -59,7 +59,7 @@ Padrão P02: um dos possíveis investigados na mesma rede de relações do caso 
 
 ## Conexoes
 
-- id_1848
+- [id_1848 — Gilmar Mendes suspende quebra de sigilo de empresa da família Toffoli requisitada por CPI…](/posts/2026-03-05-gilmar-mendes-suspende-quebra-de-sigilo-de-empresa-da-familia-toffoli-requisitada-por-cpi-/)
 
 ## Lacunas investigativas
 

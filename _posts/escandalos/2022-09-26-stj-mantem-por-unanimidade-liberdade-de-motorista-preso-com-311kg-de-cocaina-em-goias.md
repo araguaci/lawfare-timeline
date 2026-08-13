@@ -4,7 +4,7 @@ description: "6ª Turma do STJ (Min. Olindo Menezes, relator; acompanhado por La
 date: 2022-09-26T12:00:00.000Z
 image:
   path: "/assets/solid/skull.svg"
-tags: ["escandalos", "P01-B"]
+tags: ["escandalos", "p01-B"]
 categories: escandalos
 permalink: /posts/2022-09-26-stj-mantem-por-unanimidade-liberdade-de-motorista-preso-com-311kg-de-cocaina-em-goias/
 id_corpus: "1805"

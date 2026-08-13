@@ -4,7 +4,7 @@ description: "Durante a convenção nacional do PDT em Brasília, que oficializo
 date: 2026-07-20T12:00:00.000Z
 image:
   path: "/assets/solid/globe.svg"
-tags: ["crise-diplomatica", "P04"]
+tags: ["crise-diplomatica", "p04"]
 categories: crise-diplomatica
 permalink: /posts/2026-07-20-lula-repete-fala-sobre-traidor-era-enforcado-na-convencao-do-pdt-mira-flavio-bolsonaro/
 id_corpus: "1823"

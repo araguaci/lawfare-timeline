@@ -4,7 +4,7 @@ description: "Após anos de suspensão, representantes de bancos (FEBRABAN, CONS
 date: 2018-01-01T12:00:00.000Z
 image:
   path: "/assets/solid/landmark.svg"
-tags: ["bancos", "P06"]
+tags: ["bancos", "p06"]
 categories: bancos
 permalink: /posts/2018-01-01-primeiro-acordo-coletivo-entre-bancos-e-poupadores-e-homologado-pelo-stf-na-adpf-165-com-p/
 id_corpus: "1814"

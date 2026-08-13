@@ -4,7 +4,7 @@ description: "O ministro Alexandre de Moraes autorizou busca e apreensão contra
 date: 2026-08-11T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P03", "P04"]
+tags: ["stf", "p03", "p04"]
 categories: stf
 permalink: /posts/2026-08-11-moraes-autoriza-busca-e-apreensao-contra-fonte-de-jornalista-que-investigou-uso-de-veiculo/
 id_corpus: "1849"

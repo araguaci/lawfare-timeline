@@ -4,7 +4,7 @@ description: "Coronel da reserva Luiz Carlos Pereira Martins, identificado em re
 date: 2026-08-04T12:00:00.000Z
 image:
   path: "/assets/solid/landmark.svg"
-tags: ["bancos", "P10"]
+tags: ["bancos", "p10"]
 categories: bancos
 permalink: /posts/2026-08-04-coronel-pm-descrito-por-pf-como-amigo-de-operadores-financeiros-do-pcc-chefiou-assessoria-/
 id_corpus: "1827"

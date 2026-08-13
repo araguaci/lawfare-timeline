@@ -4,7 +4,7 @@ description: "Durante a inauguração do campus Catalão do Instituto Federal Go
 date: 2026-06-02T12:00:00.000Z
 image:
   path: "/assets/solid/globe.svg"
-tags: ["crise-diplomatica", "P04"]
+tags: ["crise-diplomatica", "p04"]
 categories: crise-diplomatica
 permalink: /posts/2026-06-02-lula-chama-flavio-e-eduardo-bolsonaro-de-vendilhoes-da-patria-e-traidores-em-discurso-em-c/
 id_corpus: "1821"

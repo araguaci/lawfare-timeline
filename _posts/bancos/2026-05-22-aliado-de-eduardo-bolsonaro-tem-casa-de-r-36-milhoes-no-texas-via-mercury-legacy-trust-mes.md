@@ -4,7 +4,7 @@ description: "André Porciúncula, ex-policial militar, ex-secretário de Cultur
 date: 2026-05-22T12:00:00.000Z
 image:
   path: "/assets/solid/landmark.svg"
-tags: ["bancos", "P08"]
+tags: ["bancos", "p08"]
 categories: bancos
 permalink: /posts/2026-05-22-aliado-de-eduardo-bolsonaro-tem-casa-de-r-36-milhoes-no-texas-via-mercury-legacy-trust-mes/
 id_corpus: "1826"

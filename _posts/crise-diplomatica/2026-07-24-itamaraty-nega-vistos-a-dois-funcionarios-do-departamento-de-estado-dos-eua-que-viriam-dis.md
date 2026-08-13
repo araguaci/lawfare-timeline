@@ -59,7 +59,7 @@ NOTA DE CORREÇÃO: a moldura do usuário ('EUA se preocupam com liberdade e sã
 
 ## Conexoes
 
-- id_1514
+- [id_1514 — Ramagem liberado pelo ICE após 48h; pedido de asilo barra deportação ao Brasil](/posts/ramagem-liberado-pelo-ice-apos-48h-pedido-de-asilo-barra-deportacao-ao-brasil/)
 
 ## Lacunas investigativas
 

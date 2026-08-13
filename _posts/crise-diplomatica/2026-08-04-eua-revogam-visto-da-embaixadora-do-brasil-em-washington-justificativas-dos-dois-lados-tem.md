@@ -4,7 +4,7 @@ description: "Departamento de Estado dos EUA revogou em 04/08/2026 o visto da em
 date: 2026-08-04T12:00:00.000Z
 image:
   path: "/assets/solid/globe.svg"
-tags: ["crise-diplomatica", "P04"]
+tags: ["crise-diplomatica", "p04"]
 categories: crise-diplomatica
 permalink: /posts/2026-08-04-eua-revogam-visto-da-embaixadora-do-brasil-em-washington-justificativas-dos-dois-lados-tem/
 id_corpus: "1828"

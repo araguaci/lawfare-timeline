@@ -4,7 +4,7 @@ description: "Min. Sebastião Reis Júnior (6ª Turma do STJ) concede liminar em
 date: 2024-10-30T12:00:00.000Z
 image:
   path: "/assets/solid/skull.svg"
-tags: ["escandalos", "P01-B"]
+tags: ["escandalos", "p01-B"]
 categories: escandalos
 permalink: /posts/2024-10-30-stj-concede-liberdade-a-motorista-flagrado-com-832kg-de-cocaina-entre-parana-e-sao-paulo/
 id_corpus: "1807"

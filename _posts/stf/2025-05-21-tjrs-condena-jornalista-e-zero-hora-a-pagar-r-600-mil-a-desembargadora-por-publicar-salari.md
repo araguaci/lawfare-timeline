@@ -4,7 +4,7 @@ description: "A juíza Karen Rick Bertoncello (Vara Cível de Porto Alegre) cond
 date: 2025-05-21T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P04"]
+tags: ["stf", "p04"]
 categories: stf
 permalink: /posts/2025-05-21-tjrs-condena-jornalista-e-zero-hora-a-pagar-r-600-mil-a-desembargadora-por-publicar-salari/
 id_corpus: "1834"

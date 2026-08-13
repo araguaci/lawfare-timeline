@@ -4,7 +4,7 @@ description: "O Ministério das Comunicações enviou ao TCU, em 03/04/2025, os 
 date: 2025-04-03T12:00:00.000Z
 image:
   path: "/assets/solid/landmark.svg"
-tags: ["bancos", "P06", "P09"]
+tags: ["bancos", "p06", "p09"]
 categories: bancos
 permalink: /posts/2025-04-03-ministerio-das-comunicacoes-relanca-licitacoes-de-radio-e-tv-apos-15-anos-sem-novos-certam/
 id_corpus: "1818"

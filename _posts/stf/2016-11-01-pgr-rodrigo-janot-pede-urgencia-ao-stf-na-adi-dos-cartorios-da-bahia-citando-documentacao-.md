@@ -4,7 +4,7 @@ description: "Em 2016, o então procurador-geral da República, Rodrigo Janot, f
 date: 2016-11-01T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P06", "P03"]
+tags: ["stf", "p06", "p03"]
 categories: stf
 permalink: /posts/2016-11-01-pgr-rodrigo-janot-pede-urgencia-ao-stf-na-adi-dos-cartorios-da-bahia-citando-documentacao-/
 id_corpus: "1816"

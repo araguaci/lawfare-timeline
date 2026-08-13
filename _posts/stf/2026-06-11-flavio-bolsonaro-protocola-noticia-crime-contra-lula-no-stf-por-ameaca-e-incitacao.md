@@ -4,7 +4,7 @@ description: "O senador Flávio Bolsonaro (PL-RJ) protocolou notícia-crime no S
 date: 2026-06-11T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P04"]
+tags: ["stf", "p04"]
 categories: stf
 permalink: /posts/2026-06-11-flavio-bolsonaro-protocola-noticia-crime-contra-lula-no-stf-por-ameaca-e-incitacao/
 id_corpus: "1822"

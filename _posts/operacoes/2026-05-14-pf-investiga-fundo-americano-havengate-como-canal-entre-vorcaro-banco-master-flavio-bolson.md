@@ -4,7 +4,7 @@ description: "A Polícia Federal investiga se recursos do ex-banqueiro Daniel Vo
 date: 2026-05-14T12:00:00.000Z
 image:
   path: "/assets/solid/bullseye.svg"
-tags: ["operacoes", "P08"]
+tags: ["operacoes", "p08"]
 categories: operacoes
 permalink: /posts/2026-05-14-pf-investiga-fundo-americano-havengate-como-canal-entre-vorcaro-banco-master-flavio-bolson/
 id_corpus: "1825"

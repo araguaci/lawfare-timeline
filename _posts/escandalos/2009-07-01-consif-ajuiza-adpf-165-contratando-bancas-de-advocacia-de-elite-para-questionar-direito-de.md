@@ -4,7 +4,7 @@ description: "A Confederação Nacional do Sistema Financeiro (CONSIF) ajuizou a
 date: 2009-07-01T12:00:00.000Z
 image:
   path: "/assets/solid/skull.svg"
-tags: ["escandalos", "P06"]
+tags: ["escandalos", "p06"]
 categories: escandalos
 permalink: /posts/2009-07-01-consif-ajuiza-adpf-165-contratando-bancas-de-advocacia-de-elite-para-questionar-direito-de/
 id_corpus: "1812"

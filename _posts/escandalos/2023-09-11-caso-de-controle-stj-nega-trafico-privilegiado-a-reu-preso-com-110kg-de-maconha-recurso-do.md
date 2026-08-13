@@ -4,7 +4,7 @@ description: "Em sentido contrário aos casos id_1805/id_1807, o STJ afastou a a
 date: 2023-09-11T12:00:00.000Z
 image:
   path: "/assets/solid/skull.svg"
-tags: ["escandalos", "P01-B"]
+tags: ["escandalos", "p01-B"]
 categories: escandalos
 permalink: /posts/2023-09-11-caso-de-controle-stj-nega-trafico-privilegiado-a-reu-preso-com-110kg-de-maconha-recurso-do/
 id_corpus: "1809"

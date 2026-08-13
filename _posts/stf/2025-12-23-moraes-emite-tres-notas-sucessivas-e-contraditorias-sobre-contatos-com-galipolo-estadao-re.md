@@ -4,7 +4,7 @@ description: "Em 22/12/2025, a colunista Malu Gaspar (O Globo) revelou que o min
 date: 2025-12-23T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P02"]
+tags: ["stf", "p02"]
 categories: stf
 permalink: /posts/2025-12-23-moraes-emite-tres-notas-sucessivas-e-contraditorias-sobre-contatos-com-galipolo-estadao-re/
 id_corpus: "1845"
@@ -59,9 +59,9 @@ A evolução das três notas — de menção genérica a 'reuniões' para negati
 
 ## Conexoes
 
-- id_1843
-- id_1844
-- id_1846
+- [id_1843 — Revelado contrato de R$ 129 milhões entre escritório da esposa de Moraes e Banco Master](/posts/2025-12-09-revelado-contrato-de-r-129-milhoes-entre-escritorio-da-esposa-de-moraes-e-banco-master/)
+- [id_1844 — Metrópoles revela duas visitas de Moraes à mansão de Vorcaro em Brasília; Moraes nega for…](/posts/2026-01-27-metropoles-revela-duas-visitas-de-moraes-a-mansao-de-vorcaro-em-brasilia-moraes-nega-forma/)
+- [id_1846 — Dados periciados pela PF indicam troca de mensagens entre Vorcaro e Moraes no dia da pris…](/posts/2025-11-17-dados-periciados-pela-pf-indicam-troca-de-mensagens-entre-vorcaro-e-moraes-no-dia-da-prisa/)
 
 ## Lacunas investigativas
 

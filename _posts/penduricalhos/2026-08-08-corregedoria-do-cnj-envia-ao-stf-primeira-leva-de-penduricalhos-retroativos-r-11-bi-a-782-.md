@@ -4,7 +4,7 @@ description: "A Corregedoria-Geral de Justiça do CNJ, sob o corregedor Mauro Ca
 date: 2026-08-08T12:00:00.000Z
 image:
   path: "/assets/solid/gift.svg"
-tags: ["penduricalhos", "P05", "P11"]
+tags: ["penduricalhos", "p05", "p11"]
 categories: penduricalhos
 permalink: /posts/2026-08-08-corregedoria-do-cnj-envia-ao-stf-primeira-leva-de-penduricalhos-retroativos-r-11-bi-a-782-/
 id_corpus: "1842"
@@ -54,7 +54,7 @@ R$ 1,1 bi em passivos de 4 tribunais (de 63 analisados) validados pela Corregedo
 
 ## Analise
 
-O mecanismo documenta um loop fechado de autolegitimação orçamentária (P05/P11): o mesmo STF que em março/2026 impôs o teto aos penduricalhos é o órgão que agora referenda a liberação dos valores retroativos apurados pelo CNJ — corpo colegiado cuja composição inclui beneficiários estruturais do mesmo sistema remuneratório do Judiciário. A auditoria da Corregedoria funciona simultaneamente como controle (barrando 58 de 63 tribunais) e como canal de legitimação técnica para os valores que passam no crivo (782 magistrados, R$1,1bi) — sem que a fiscalização se estenda a uma auditoria pública nominal dos beneficiários. O padrão é o mesmo documentado em T-226 (Ciclo do Penduricalho): restrição formal seguida de reabertura por interpretação técnica, sem que o beneficiário final do desenho institucional — o próprio corpo da magistratura — seja submetido a controle externo equivalente ao aplicado a outros setores do funcionalismo.
+O mecanismo documenta um loop fechado de autolegitimação orçamentária (P05/P11): o mesmo STF que em março/2026 impôs o teto aos penduricalhos é o órgão que agora referenda a liberação dos valores retroativos apurados pelo CNJ — corpo colegiado cuja composição inclui beneficiários estruturais do mesmo sistema remuneratório do Judiciário. A auditoria da Corregedoria funciona simultaneamente como controle (barrando 58 de 63 tribunais) e como canal de legitimação técnica para os valores que passam no crivo (782 magistrados, R$1,1bi) — sem que a fiscalização se estenda a uma auditoria pública nominal dos beneficiários. O padrão é o mesmo documentado em [T-226 · O Ciclo do Penduricalho](/posts/2026-07-06-o-ciclo-do-penduricalho-restricao-burla-e-autolegitimacao-mar-jul2026/): restrição formal seguida de reabertura por interpretação técnica, sem que o beneficiário final do desenho institucional — o próprio corpo da magistratura — seja submetido a controle externo equivalente ao aplicado a outros setores do funcionalismo.
 
 ## Base legal
 
@@ -63,9 +63,9 @@ O mecanismo documenta um loop fechado de autolegitimação orçamentária (P05/P
 
 ## Conexoes
 
-- id_1633
-- id_1824
-- T-226
+- [id_1633 — STF conclui julgamento em plenário virtual extraordinário e libera parte dos penduricalhos](/posts/2026-06-30-stf-conclui-julgamento-em-plenario-virtual-extraordinario-e-libera-parte-dos-penduricalhos/)
+- [id_1824 — STF julga embargos de declaração sobre penduricalhos e flexibiliza decisão de março](/posts/2026-06-30-stf-julga-embargos-de-declaracao-sobre-penduricalhos-e-flexibiliza-decisao-de-marco-mantem/)
+- [T-226 — O Ciclo do Penduricalho](/posts/2026-07-06-o-ciclo-do-penduricalho-restricao-burla-e-autolegitimacao-mar-jul2026/)
 
 ## Lacunas investigativas
 

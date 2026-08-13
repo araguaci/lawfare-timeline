@@ -4,7 +4,7 @@ description: "O Ministério do Trabalho e Emprego oficializou, via Termo de Fome
 date: 2026-07-13T12:00:00.000Z
 image:
   path: "/assets/solid/skull.svg"
-tags: ["escandalos", "drones", "seguranca-publica", "P05"]
+tags: ["escandalos", "drones", "seguranca-publica", "p05"]
 categories: escandalos
 permalink: /posts/2026-07-13-ministerio-do-trabalho-oficializa-r-200-mil-para-curso-gratuito-de-pilotagem-de-drones-em-/
 id_corpus: "1800"

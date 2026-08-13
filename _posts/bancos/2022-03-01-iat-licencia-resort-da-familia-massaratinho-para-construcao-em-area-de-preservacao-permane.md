@@ -4,7 +4,7 @@ description: "O Instituto Água e Terra (IAT), órgão ambiental do governo do P
 date: 2022-03-01T12:00:00.000Z
 image:
   path: "/assets/solid/landmark.svg"
-tags: ["bancos", "P10"]
+tags: ["bancos", "p10"]
 categories: bancos
 permalink: /posts/2022-03-01-iat-licencia-resort-da-familia-massaratinho-para-construcao-em-area-de-preservacao-permane/
 id_corpus: "1829"

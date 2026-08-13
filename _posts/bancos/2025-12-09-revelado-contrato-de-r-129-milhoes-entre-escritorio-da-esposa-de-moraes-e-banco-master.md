@@ -4,7 +4,7 @@ description: "Coluna de Malu Gaspar (O Globo) revela contrato firmado em 2024 en
 date: 2025-12-09T12:00:00.000Z
 image:
   path: "/assets/solid/landmark.svg"
-tags: ["bancos", "P02", "P07"]
+tags: ["bancos", "p02", "p07"]
 categories: bancos
 permalink: /posts/2025-12-09-revelado-contrato-de-r-129-milhoes-entre-escritorio-da-esposa-de-moraes-e-banco-master/
 id_corpus: "1843"
@@ -61,10 +61,10 @@ O contrato antecede em mais de um ano a chegada do caso Master ao STF (dez/2025)
 
 ## Conexoes
 
-- id_192
-- id_215
-- id_1845
-- id_1846
+- [T-192 — Vorcaro — Triângulo Carbono–Mineração–Banco](/posts/vorcaro-triangulo-carbono-mineracao-banco/)
+- [T-215 — 2ª Turma do STF mantém prisão de pai e primo de Daniel Vorcaro por 3×1; Gilmar Me…](/posts/2026-06-16-2-turma-do-stf-mantem-prisao-de-pai-e-primo-de-daniel-vorcaro-por-31-gilmar-mendes-diverge/)
+- [id_1845 — Moraes emite três notas sucessivas e contraditórias sobre contatos com Galípolo; Estadão…](/posts/2025-12-23-moraes-emite-tres-notas-sucessivas-e-contraditorias-sobre-contatos-com-galipolo-estadao-re/)
+- [id_1846 — Dados periciados pela PF indicam troca de mensagens entre Vorcaro e Moraes no dia da pris…](/posts/2025-11-17-dados-periciados-pela-pf-indicam-troca-de-mensagens-entre-vorcaro-e-moraes-no-dia-da-prisa/)
 
 ## Lacunas investigativas
 

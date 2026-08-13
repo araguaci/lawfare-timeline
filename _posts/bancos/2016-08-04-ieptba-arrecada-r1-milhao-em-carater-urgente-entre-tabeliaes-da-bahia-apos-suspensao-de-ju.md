@@ -4,7 +4,7 @@ description: "Ata de reunião do Instituto de Estudos e Protestos de Títulos da
 date: 2016-08-04T12:00:00.000Z
 image:
   path: "/assets/solid/landmark.svg"
-tags: ["bancos", "P06"]
+tags: ["bancos", "p06"]
 categories: bancos
 permalink: /posts/2016-08-04-ieptba-arrecada-r1-milhao-em-carater-urgente-entre-tabeliaes-da-bahia-apos-suspensao-de-ju/
 id_corpus: "1819"
