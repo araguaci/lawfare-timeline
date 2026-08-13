@@ -1,0 +1,556 @@
+{
+  "name": "SENTINEL — Extração Diária Lawfare-Timeline",
+  "nodes": [
+    {
+      "id": "trigger",
+      "name": "Schedule Trigger (diário 07:00 BRT)",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 10 * * *"
+            }
+          ]
+        }
+      },
+      "notes": "10:00 UTC = 07:00 America/Sao_Paulo. Ajustar fuso do n8n em Settings > Timezone se necessário."
+    },
+    {
+      "id": "cfg_categorias",
+      "name": "Config Categorias",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        220,
+        0
+      ],
+      "parameters": {
+        "jsCode": "\nconst categorias = [\n  {\n    categoria: \"chokepoint_judicial\",\n    patterns: [\"P01\",\"P02\",\"P03\",\"P03-A\",\"P03-B\"],\n    query: '\"liminar monocrática\" STF OR \"habeas corpus concedido\" OR \"suspende investigação\" ministro'\n  },\n  {\n    categoria: \"operacao_policial\",\n    patterns: [\"P02\",\"P05\",\"P07\",\"P08\",\"P09\",\"P10\"],\n    query: '\"operação da Polícia Federal\" lavagem OR GAECO facção OR \"operação\" PCC fintech'\n  },\n  {\n    categoria: \"ato_legislativo\",\n    patterns: [\"P05\",\"P06-B\",\"P09\",\"P11\"],\n    query: '\"CPI\" \"sem relatório\" OR \"emenda parlamentar\" sigilo OR \"orçamento secreto\" Congresso'\n  },\n  {\n    categoria: \"mecanismo_sistemico\",\n    patterns: [\"P07\",\"P10\",\"P11\"],\n    query: '\"consignado INSS\" desconto indevido OR \"dívida pública\" custeio Selic'\n  },\n  {\n    categoria: \"incidente_diplomatico\",\n    patterns: [\"P04\",\"P09\"],\n    query: 'sanção OFAC Brasil OR \"extradição\" ministro OR \"visto cassado\" Brasil EUA'\n  },\n  {\n    categoria: \"perseguicao_processual\",\n    patterns: [\"P02\",\"P04\",\"P04b\"],\n    query: '\"investigador\" processado OR delator ameaçado OR auditor exonerado Brasil'\n  },\n  {\n    categoria: \"abuso_processual\",\n    patterns: [\"P01\",\"P03\",\"P06\"],\n    query: '\"prisão preventiva\" \"excesso de prazo\" OR \"substituição\" defesa compulsória'\n  }\n];\n\nreturn categorias.map(c => ({ json: c }));\n"
+      },
+      "notes": "analise_editorial e lacuna_investigativa são categorias de síntese manual — não entram na busca automática."
+    },
+    {
+      "id": "loop_categorias",
+      "name": "Loop Categorias",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        460,
+        0
+      ],
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      }
+    },
+    {
+      "id": "rss_categoria",
+      "name": "Buscar RSS da Categoria",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        700,
+        -80
+      ],
+      "parameters": {
+        "url": "=https://news.google.com/rss/search?q={{ encodeURIComponent($json.query) }}+when:2d&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "text"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "parse_rss",
+      "name": "Parse RSS → JSON",
+      "type": "n8n-nodes-base.xml",
+      "typeVersion": 1,
+      "position": [
+        940,
+        -80
+      ],
+      "parameters": {
+        "dataPropertyName": "data",
+        "options": {}
+      },
+      "notes": "Converte o XML do RSS (campo 'data' vindo do HTTP Request em texto) para JSON navegável em $json.rss.channel.item"
+    },
+    {
+      "id": "extrair_itens",
+      "name": "Extrair Itens + Dedupe (48h)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1180,
+        -80
+      ],
+      "parameters": {
+        "jsCode": "\nconst cat = $('Loop Categorias').item.json.categoria;\nconst patterns = $('Loop Categorias').item.json.patterns;\n\nlet rawItems = $json.rss && $json.rss.channel && $json.rss.channel[0] && $json.rss.channel[0].item\n  ? $json.rss.channel[0].item : [];\nif (!Array.isArray(rawItems)) rawItems = [rawItems];\n\nconst staticData = $getWorkflowStaticData('global');\nif (!staticData.urlsVistas) staticData.urlsVistas = [];\nconst vistos = new Set(staticData.urlsVistas);\n\nconst cutoff = Date.now() - 1000*60*60*48; // últimas 48h\nconst out = [];\n\nfor (const it of rawItems.slice(0, 8)) {\n  const link = Array.isArray(it.link) ? it.link[0] : it.link;\n  const title = Array.isArray(it.title) ? it.title[0] : it.title;\n  const pubDateRaw = Array.isArray(it.pubDate) ? it.pubDate[0] : it.pubDate;\n  const pubDate = pubDateRaw ? new Date(pubDateRaw) : null;\n  const desc = Array.isArray(it.description) ? it.description[0] : (it.description || '');\n  const source = it.source && it.source[0] && it.source[0]._ ? it.source[0]._ : '';\n\n  if (!link || vistos.has(link)) continue;\n  if (pubDate && pubDate.getTime() < cutoff) continue;\n\n  out.push({\n    categoria: cat,\n    patterns,\n    title,\n    link,\n    pubDate: pubDateRaw,\n    outlet: source,\n    snippet: String(desc).replace(/<[^>]+>/g, '').slice(0, 600)\n  });\n  staticData.urlsVistas.push(link);\n}\n// mantém o set de URLs vistas com tamanho controlado\nif (staticData.urlsVistas.length > 4000) {\n  staticData.urlsVistas = staticData.urlsVistas.slice(-2000);\n}\n\nreturn out.map(o => ({ json: o }));\n"
+      }
+    },
+    {
+      "id": "noitems_check",
+      "name": "Há Candidatos?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1420,
+        -80
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $json.link }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty"
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "id": "classificar_claude",
+      "name": "Classificar com Claude (Fase 1)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1660,
+        -80
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "={{ $credentials.anthropicApi.apiKey }}"
+            },
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"claude-sonnet-4-6\",\n  \"max_tokens\": 1200,\n  \"system\": \"Voc\\u00ea \\u00e9 o m\\u00f3dulo de triagem automatizada do corpus lawfare-timeline (CC0 1.0, dom\\u00ednio p\\u00fablico).\\nSua fun\\u00e7\\u00e3o \\u00e9 analisar UM artigo de not\\u00edcia por vez e decidir se ele \\u00e9 candidato a entrada no corpus.\\n\\n## Contexto fixo do corpus\\n\\nTESE CENTRAL: Brasil opera como sistema de extra\\u00e7\\u00e3o \\u2014 institui\\u00e7\\u00f5es capturadas transcendem linhas\\nideol\\u00f3gicas, custos ao contribuinte, benef\\u00edcios privatizados. Nenhum vetor de corre\\u00e7\\u00e3o chega ao\\nbenefici\\u00e1rio final \\u2014 esse \\u00e9 o dado mais importante a documentar.\\n\\nTAXONOMIA EVIDENCIAL (nunca colapsar):\\n- ev-confirmed: documento prim\\u00e1rio ou decis\\u00e3o p\\u00fablica, ou 2+ fontes independentes corroborando o mesmo fato.\\n- ev-contested: vers\\u00f5es conflitantes entre fontes relevantes.\\n- ev-alleged: fonte \\u00fanica, parte interessada, sem corrobora\\u00e7\\u00e3o.\\n- ev-inference: anal\\u00edtico \\u2014 nunca no summary, s\\u00f3 no campo analise.\\n\\nRegra de ouro: quando a distin\\u00e7\\u00e3o for politicamente inconveniente, redobrar o rigor \\u2014 nunca diluir.\\n\\nFORMULA\\u00c7\\u00d5ES PROIBIDAS (P04b) \\u2014 nunca usar; sempre a vers\\u00e3o \\u00e0 direita:\\n- \\\"golpe frustrado\\\" \\u2192 \\\"instrumentalizado como pretexto\\\"\\n- \\\"polariza\\u00e7\\u00e3o pol\\u00edtica\\\" \\u2192 \\\"vetores autorit\\u00e1rios que se co-legitimam\\\"\\n- \\\"disputa entre poderes\\\" \\u2192 \\\"captura progressiva do mecanismo de controle\\\"\\n- \\\"cr\\u00edtica ao STF\\\" \\u2192 \\\"documenta\\u00e7\\u00e3o de viola\\u00e7\\u00e3o de juiz natural / nemo judex in causa propria\\\"\\n- \\\"narrativa bolsonarista/petista\\\" \\u2192 \\\"fun\\u00e7\\u00e3o estrutural do padr\\u00e3o P0X aplicada por [ator] em [data]\\\"\\n\\n## Padr\\u00f5es P01\\u2013P12 (refer\\u00eancia completa)\\n\\nP01 anula\\u00e7\\u00e3o processual retroativa \\u00b7 P02 investigador-investigado \\u00b7 P03 captura judicial de\\nemerg\\u00eancia (P03-A execu\\u00e7\\u00e3o penal como vetor normativo; P03-B substitui\\u00e7\\u00e3o compuls\\u00f3ria de defesa) \\u00b7\\nP04 arma midi\\u00e1tica (P04b both-sidesism funcional) \\u00b7 P05 fundos p\\u00fablicos como vetor \\u00b7\\nP06 prescri\\u00e7\\u00e3o estrat\\u00e9gica/exaust\\u00e3o cognitiva (P06-B encerramento de CPI sem relat\\u00f3rio aprovado) \\u00b7\\nP07 captura transgeracional \\u00b7 P08 coopera\\u00e7\\u00e3o extrajudicial/fintech \\u00b7 P09 captura cultural \\u00b7\\nP10 infraestrutura de servi\\u00e7o compartilhada \\u00b7 P11 Loop de Extra\\u00e7\\u00e3o Perp\\u00e9tua \\u00b7\\nP12 Paywall Existencial (P12-B Paywall Eleitoral)\\n\\n## Categoria e padr\\u00f5es esperados nesta chamada\\n\\nCategoria sob triagem: {{ $json.categoria }}\\nPadr\\u00f5es priorit\\u00e1rios para esta categoria: {{ $json.patterns.join(\\\", \\\") }}\\n(Isso n\\u00e3o exclui outros padr\\u00f5es se o artigo claramente os evidenciar \\u2014 mas o match precisa ser\\nconcreto, n\\u00e3o for\\u00e7ado. Um artigo gen\\u00e9rico sobre pol\\u00edtica N\\u00c3O \\u00e9 automaticamente P0X.)\\n\\n## Sua tarefa\\n\\nReceber\\u00e1: t\\u00edtulo, snippet/resumo, ve\\u00edculo, data de publica\\u00e7\\u00e3o e URL de UM artigo.\\n\\nDecida: este artigo relata um EVENTO factual espec\\u00edfico e verific\\u00e1vel (n\\u00e3o opini\\u00e3o gen\\u00e9rica,\\nn\\u00e3o editorial de terceiros, n\\u00e3o repeti\\u00e7\\u00e3o de fato j\\u00e1 amplamente arquivado) que se enquadra em\\npelo menos um padr\\u00e3o P01\\u2013P12 com evid\\u00eancia concreta no pr\\u00f3prio texto (n\\u00e3o infer\\u00eancia sua)?\\n\\nSe N\\u00c3O se enquadrar \\u2192 responda EXATAMENTE:\\n```json\\n{\\\"decisao\\\": \\\"descartar\\\", \\\"motivo\\\": \\\"[uma frase objetiva]\\\"}\\n```\\n\\nSe SE ENQUADRAR \\u2192 responda APENAS o JSON abaixo, sem markdown fences, sem texto antes/depois:\\n\\n```json\\n{\\n  \\\"decisao\\\": \\\"candidato\\\",\\n  \\\"title\\\": \\\"[t\\u00edtulo factual, voz ativa, sem adjetiva\\u00e7\\u00e3o valorativa, m\\u00e1x 120 caracteres]\\\",\\n  \\\"summary\\\": \\\"[descri\\u00e7\\u00e3o factual: atores + mecanismo + resultado verific\\u00e1vel \\u2014 SEM infer\\u00eancia]\\\",\\n  \\\"category\\\": \\\"{{ $json.categoria }}\\\",\\n  \\\"date\\\": \\\"[YYYY-MM-DD do evento relatado, n\\u00e3o da publica\\u00e7\\u00e3o, se distingu\\u00edvel]\\\",\\n  \\\"date_precision\\\": \\\"day | month | year\\\",\\n  \\\"actors\\\": [{\\\"name\\\": \\\"...\\\", \\\"role\\\": \\\"...\\\", \\\"institution\\\": \\\"...\\\"}],\\n  \\\"institutions\\\": [\\\"...\\\"],\\n  \\\"patterns\\\": [\\\"P0X\\\", \\\"...\\\"],\\n  \\\"result\\\": \\\"[o que mudou ap\\u00f3s o evento, conforme relatado]\\\",\\n  \\\"search_terms_corroboracao\\\": \\\"[3-6 palavras-chave para buscar uma segunda fonte independente deste MESMO fato \\u2014 nomes pr\\u00f3prios + a\\u00e7\\u00e3o espec\\u00edfica, n\\u00e3o termos gen\\u00e9ricos]\\\",\\n  \\\"lacuna_investigativa\\\": \\\"[preencher SE o artigo j\\u00e1 deixar claro que o benefici\\u00e1rio final ou a cadeia completa n\\u00e3o foi identificada; sen\\u00e3o null]\\\",\\n  \\\"analise\\\": \\\"[1-2 frases de leitura estrutural conectando ao padr\\u00e3o \\u2014 sempre ev-inference, nunca reescrever como fato]\\\"\\n}\\n```\\n\\nRegras adicionais:\\n- NUNCA atribua `evidence_status` \\u2014 isso \\u00e9 decidido na Fase 2, ap\\u00f3s tentativa de corrobora\\u00e7\\u00e3o.\\n- NUNCA invente URL, nome, data ou institui\\u00e7\\u00e3o n\\u00e3o presente no artigo fornecido.\\n- Se o artigo for sobre um evento j\\u00e1 claramente arquivado no corpus (ex: Lava Jato gen\\u00e9rico,\\n  Mensal\\u00e3o), decisao = \\\"descartar\\\", motivo = \\\"evento hist\\u00f3rico j\\u00e1 coberto, n\\u00e3o \\u00e9 not\\u00edcia nova\\\".\\n- category deve ser exatamente uma de: operacao_policial | ato_legislativo | chokepoint_judicial |\\n  mecanismo_sistemico | incidente_diplomatico | perseguicao_processual | abuso_processual\\n  (analise_editorial e lacuna_investigativa s\\u00e3o categorias de s\\u00edntese, n\\u00e3o de triagem autom\\u00e1tica \\u2014\\n  nunca as atribua aqui).\\n\",\n  \"messages\": [\n    {\"role\": \"user\", \"content\": \"TÍTULO: {{ $json.title }}\\nVEÍCULO: {{ $json.outlet }}\\nDATA PUBLICAÇÃO: {{ $json.pubDate }}\\nURL: {{ $json.link }}\\nRESUMO: {{ $json.snippet }}\"}\n  ]\n}",
+        "options": {}
+      },
+      "notes": "Configurar credencial de API key da Anthropic nos headers (ou usar credential type dedicado, se disponível no seu n8n). Modelo: claude-sonnet-4-6 — trocar se preferir outro."
+    },
+    {
+      "id": "parse_classificacao",
+      "name": "Parse Classificação + Filtrar Descartes",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1900,
+        -80
+      ],
+      "parameters": {
+        "jsCode": "\nconst raw = $json.content && $json.content[0] && $json.content[0].text ? $json.content[0].text : '';\nlet parsed;\ntry {\n  const cleaned = raw.replace(/```json|```/g, '').trim();\n  parsed = JSON.parse(cleaned);\n} catch (e) {\n  return []; // resposta não-parseável -> descarta silenciosamente, log fica no execution do n8n\n}\nif (parsed.decisao !== 'candidato') return [];\n\nconst origem = $('Extrair Itens + Dedupe (48h)').item.json;\nparsed._origem = {\n  link: origem.link,\n  outlet: origem.outlet,\n  pubDate: origem.pubDate,\n  categoria: origem.categoria\n};\nreturn [{ json: parsed }];\n"
+      }
+    },
+    {
+      "id": "acumular_fase1",
+      "name": "Acumular em Static Data (Fase 1)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2140,
+        -80
+      ],
+      "parameters": {
+        "jsCode": "\nconst staticData = $getWorkflowStaticData('global');\nif (!staticData.candidatosFase1) staticData.candidatosFase1 = [];\nstaticData.candidatosFase1.push($json);\nreturn [{ json: { ok: true, acumulados: staticData.candidatosFase1.length } }];\n"
+      }
+    },
+    {
+      "id": "carregar_fase1",
+      "name": "Carregar Candidatos Fase 1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        460,
+        260
+      ],
+      "parameters": {
+        "jsCode": "\nconst staticData = $getWorkflowStaticData('global');\nconst candidatos = staticData.candidatosFase1 || [];\nreturn candidatos.map(c => ({ json: c }));\n"
+      }
+    },
+    {
+      "id": "loop_candidatos",
+      "name": "Loop Candidatos (Corroboração)",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        700,
+        260
+      ],
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      }
+    },
+    {
+      "id": "rss_corrobora",
+      "name": "Buscar 2ª Fonte (RSS)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        940,
+        180
+      ],
+      "parameters": {
+        "url": "=https://news.google.com/rss/search?q={{ encodeURIComponent($json.search_terms_corroboracao) }}+when:7d&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "text"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "parse_rss_corrobora",
+      "name": "Parse RSS Corroboração",
+      "type": "n8n-nodes-base.xml",
+      "typeVersion": 1,
+      "position": [
+        1180,
+        180
+      ],
+      "parameters": {
+        "dataPropertyName": "data",
+        "options": {}
+      }
+    },
+    {
+      "id": "montar_objeto_final",
+      "name": "Contar Fontes + Montar Objeto Schema",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1420,
+        180
+      ],
+      "parameters": {
+        "jsCode": "\nconst cand = $('Loop Candidatos (Corroboração)').item.json;\n\nlet rawItems = $json.rss && $json.rss.channel && $json.rss.channel[0] && $json.rss.channel[0].item\n  ? $json.rss.channel[0].item : [];\nif (!Array.isArray(rawItems)) rawItems = [rawItems];\n\nfunction hostOf(url) {\n  try { return new URL(url).hostname.replace('www.', ''); } catch(e) { return url; }\n}\n\nconst origemHost = hostOf(cand._origem.link);\nconst fontesIndependentes = [];\nfor (const it of rawItems.slice(0, 6)) {\n  const link = Array.isArray(it.link) ? it.link[0] : it.link;\n  const title = Array.isArray(it.title) ? it.title[0] : it.title;\n  const pubDateRaw = Array.isArray(it.pubDate) ? it.pubDate[0] : it.pubDate;\n  const source = it.source && it.source[0] && it.source[0]._ ? it.source[0]._ : hostOf(link);\n  if (!link) continue;\n  if (hostOf(link) === origemHost) continue; // mesma fonte da original, não conta\n  fontesIndependentes.push({ title, url: link, outlet: source, date: pubDateRaw ? new Date(pubDateRaw).toISOString().slice(0,10) : null });\n}\n\nconst sources = [\n  { title: cand.title, url: cand._origem.link, outlet: cand._origem.outlet, date: cand._origem.pubDate ? new Date(cand._origem.pubDate).toISOString().slice(0,10) : null },\n  ...fontesIndependentes.slice(0, 2)\n];\n\nconst evidence_status = fontesIndependentes.length > 0\n  ? \"ev-alleged\"  // NUNCA promover a ev-confirmed automaticamente — apenas sinalizar candidatura via flag abaixo\n  : \"ev-alleged\";\n\nconst possivel_ev_confirmed = fontesIndependentes.length > 0;\n\nconst finalObj = {\n  id: null,\n  _nota_id: \"PENDENTE — atribuir apenas após consultar claude.ai-corpus-ids-sync.json ao vivo. Nunca reutilizar ou estimar.\",\n  date: cand.date || null,\n  date_precision: cand.date_precision || \"day\",\n  title: cand.title,\n  summary: cand.summary,\n  category: cand.category,\n  actors: cand.actors || [],\n  institutions: cand.institutions || [],\n  legal_basis: [],\n  patterns: cand.patterns || [],\n  evidence_status: evidence_status,\n  _flag_possivel_ev_confirmed: possivel_ev_confirmed,\n  _flag_motivo: possivel_ev_confirmed\n    ? `${fontesIndependentes.length} fonte(s) independente(s) localizada(s) automaticamente — VERIFICAR MANUALMENTE o conteúdo (não apenas o título) antes de promover a ev-confirmed.`\n    : \"nenhuma fonte independente localizada na busca automática — permanece ev-alleged até verificação manual.\",\n  sources: sources,\n  result: cand.result || \"\",\n  connections: [],\n  status: \"documentado\",\n  lacuna_investigativa: cand.lacuna_investigativa || null,\n  ponto_de_inflexao: cand.ponto_de_inflexao || null,\n  analise: cand.analise || null\n};\n\nreturn [{ json: finalObj }];\n"
+      }
+    },
+    {
+      "id": "acumular_final",
+      "name": "Acumular em Static Data (Final)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1660,
+        180
+      ],
+      "parameters": {
+        "jsCode": "\nconst staticData = $getWorkflowStaticData('global');\nif (!staticData.candidatosFinais) staticData.candidatosFinais = [];\nstaticData.candidatosFinais.push($json);\nreturn [{ json: { ok: true } }];\n"
+      }
+    },
+    {
+      "id": "montar_lote",
+      "name": "Montar Lote Final (JSON)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1900,
+        180
+      ],
+      "parameters": {
+        "jsCode": "\nconst staticData = $getWorkflowStaticData('global');\nconst candidatos = staticData.candidatosFinais || [];\n\nconst hoje = new Date().toISOString().slice(0, 10);\nconst lote = {\n  _tipo: \"lote_candidatos_triagem_automatica\",\n  _aviso: \"Gerado por agente n8n. NENHUM item aqui é ev-confirmed por definição do pipeline. IDs não atribuídos — usar merge_todo_pending.py com claude.ai-corpus-ids-sync.json vivo. Revisão manual obrigatória antes de qualquer merge em lawfare.json.\",\n  data_execucao: hoje,\n  total_candidatos: candidatos.length,\n  por_categoria: candidatos.reduce((acc, c) => { acc[c.category] = (acc[c.category]||0)+1; return acc; }, {}),\n  candidatos: candidatos\n};\n\n// limpa acumuladores para a próxima execução diária (mantém urlsVistas para dedupe contínuo)\nstaticData.candidatosFase1 = [];\nstaticData.candidatosFinais = [];\n\nconst buffer = Buffer.from(JSON.stringify(lote, null, 2), 'utf-8');\n\nreturn [{\n  json: { total_candidatos: lote.total_candidatos, data_execucao: hoje },\n  binary: {\n    data: {\n      data: buffer.toString('base64'),\n      mimeType: 'application/json',\n      fileName: `candidatos-triagem-${hoje}.json`\n    }\n  }\n}];\n"
+      }
+    },
+    {
+      "id": "upload_drive",
+      "name": "Upload Google Drive (candidatos-triagem/)",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        2140,
+        180
+      ],
+      "parameters": {
+        "resource": "file",
+        "operation": "upload",
+        "name": "=candidatos-triagem-{{ $json.data_execucao }}.json",
+        "driveId": {
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "mode": "list",
+          "value": "COLOCAR_ID_DA_PASTA_candidatos-triagem"
+        },
+        "options": {}
+      },
+      "notes": "Configurar credencial Google Drive OAuth2 e apontar folderId para a pasta candidatos-triagem/ do seu Drive."
+    },
+    {
+      "id": "noop_fim",
+      "name": "Fim",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        2380,
+        180
+      ],
+      "parameters": {}
+    }
+  ],
+  "connections": {
+    "trigger": {
+      "main": [
+        [
+          {
+            "node": "cfg_categorias",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cfg_categorias": {
+      "main": [
+        [
+          {
+            "node": "loop_categorias",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "loop_categorias": {
+      "main": [
+        [
+          {
+            "node": "rss_categoria",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "carregar_fase1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "rss_categoria": {
+      "main": [
+        [
+          {
+            "node": "parse_rss",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "parse_rss": {
+      "main": [
+        [
+          {
+            "node": "extrair_itens",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "extrair_itens": {
+      "main": [
+        [
+          {
+            "node": "noitems_check",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "noitems_check": {
+      "main": [
+        [
+          {
+            "node": "classificar_claude",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "loop_categorias",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "classificar_claude": {
+      "main": [
+        [
+          {
+            "node": "parse_classificacao",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "parse_classificacao": {
+      "main": [
+        [
+          {
+            "node": "acumular_fase1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "acumular_fase1": {
+      "main": [
+        [
+          {
+            "node": "loop_categorias",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "carregar_fase1": {
+      "main": [
+        [
+          {
+            "node": "loop_candidatos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "loop_candidatos": {
+      "main": [
+        [
+          {
+            "node": "rss_corrobora",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "montar_lote",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "rss_corrobora": {
+      "main": [
+        [
+          {
+            "node": "parse_rss_corrobora",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "parse_rss_corrobora": {
+      "main": [
+        [
+          {
+            "node": "montar_objeto_final",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "montar_objeto_final": {
+      "main": [
+        [
+          {
+            "node": "acumular_final",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "acumular_final": {
+      "main": [
+        [
+          {
+            "node": "loop_candidatos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "montar_lote": {
+      "main": [
+        [
+          {
+            "node": "upload_drive",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "upload_drive": {
+      "main": [
+        [
+          {
+            "node": "noop_fim",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {}
+}

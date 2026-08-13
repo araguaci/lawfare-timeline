@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lawfare-timeline.vercel.app/_data/jusmonitor/schema.json",
+  "title": "JusMonitor enrichment patch",
+  "description": "Patch por id para enriquecer cards do feed JusMonitor sem reescrever lawfare.json em massa.",
+  "type": "object",
+  "required": ["schema_version", "updated", "patches"],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0.0" },
+    "updated": { "type": "string", "format": "date" },
+    "patches": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/patch" }
+    }
+  },
+  "$defs": {
+    "patch": {
+      "type": "object",
+      "required": ["id", "fontes", "descricao_resumo", "descricao_detalhada", "evidence_status"],
+      "properties": {
+        "id": {
+          "oneOf": [{ "type": "integer" }, { "type": "string" }],
+          "description": "id do card captura (inteiro) ou id slug de decisão (jw-...)"
+        },
+        "fontes": {
+          "type": "array",
+          "items": { "type": "string", "format": "uri" },
+          "minItems": 0
+        },
+        "descricao_resumo": { "type": "string", "minLength": 20 },
+        "descricao_detalhada": { "type": "string", "minLength": 40 },
+        "evidence_status": {
+          "type": "string",
+          "enum": ["ev-confirmed", "ev-alleged"]
+        },
+        "gravidade": {
+          "type": ["string", "null"],
+          "enum": ["alta", "media", "baixa", null]
+        },
+        "alerta_critico": { "type": "boolean" },
+        "titulo": { "type": "string" },
+        "notas": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

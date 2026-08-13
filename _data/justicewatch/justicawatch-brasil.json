@@ -1,0 +1,253 @@
+{
+  "_meta": {
+    "schema_version": "1.0.0",
+    "id_corpus": "T-209",
+    "registry_id": 156,
+    "slug": "justicawatch-brasil",
+    "canonical_url": "https://jusmonitor.vercel.app",
+    "artifact_html": "index.html",
+    "artifact_content": "jusmonitor.vercel.app",
+    "source": "T-209 · bridge lawfare-timeline/_data/justicewatch/",
+    "generated": "2026-05-28",
+    "updated": "2026-08-06",
+    "licenca": "CC0 1.0",
+    "periodo": "2005–2025",
+    "enrichment": "_data/jusmonitor/enrichment-patches.json"
+  },
+  "titulo": "JustiçaWatch Brasil — Conheça as decisões. Exija prestação de contas.",
+  "descricao": "Banco de dados de decisões judiciais brasileiras que resultaram em soltura, progressão de regime ou arquivamento de processos contra réus condenados ou investigados por crimes violentos.",
+  "estatisticas": {
+    "hc_traficantes_stj_2024": 9166,
+    "hc_trafico_stf_2024": 577,
+    "taxa_reincidencia_br": "42%",
+    "populacao_carceraria": 834000,
+    "foragidos_hc_marco_aurelio_2020": 21
+  },
+  "casos": [
+    {
+      "ano": 2006,
+      "tribunal": "STF",
+      "nome": "Progressão de regime — Crimes hediondos",
+      "tipo": "HC coletivo",
+      "tags": [
+        "homicidio",
+        "estupro",
+        "latrocinio"
+      ],
+      "ref": "HC 82.959-7/SP — Rel. Min. Marco Aurélio",
+      "fontes": [
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=2191915"
+      ],
+      "descricao_resumo": "STF, no HC 82.959, permitiu progressão de regime em crimes hediondos, alterando a política criminal.",
+      "descricao_detalhada": "O julgamento (rel. Marco Aurélio) declarou inconstitucional a vedação absoluta de progressão, com efeitos duradouros sobre execução penal de crimes graves.",
+      "evidence_status": "ev-confirmed"
+    },
+    {
+      "ano": 2009,
+      "tribunal": "STF",
+      "nome": "Trânsito em julgado para início de pena",
+      "tipo": "Mudança jurisprudencial",
+      "tags": [
+        "corrupcao"
+      ],
+      "ref": "HC 84.078/MG — Rel. Min. Eros Grau",
+      "fontes": [
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=2209034"
+      ],
+      "descricao_resumo": "STF no HC 84.078 firmou que a pena só se inicia após o trânsito em julgado (antes da virada de 2016).",
+      "descricao_detalhada": "A tese reforçou a presunção de inocência como barreira à execução provisória — depois revista e novamente restaurada na ADC 43.",
+      "evidence_status": "ev-confirmed"
+    },
+    {
+      "ano": 2019,
+      "tribunal": "STF",
+      "nome": "Retorno ao trânsito em julgado — Reversão Lava Jato",
+      "tipo": "ADC plenário",
+      "tags": [
+        "corrupcao"
+      ],
+      "ref": "ADC 43 — Rel. Min. Marco Aurélio",
+      "fontes": [
+        "https://portal.stf.jus.br/processos/detalhe.asp?incidente=5415433",
+        "https://www.conjur.com.br/2019-nov-07/stf-define-prisao-apos-esgotamento-todos-recursos"
+      ],
+      "descricao_resumo": "ADC 43/44/54: STF restabeleceu execução da pena apenas após trânsito em julgado, revertendo a jurisprudência de 2016.",
+      "descricao_detalhada": "O julgamento de 2019 teve impacto direto sobre condenados da Lava Jato e sobre a política de cumprimento antecipado de pena.",
+      "evidence_status": "ev-confirmed"
+    },
+    {
+      "ano": 2020,
+      "tribunal": "STF",
+      "nome": "André do Rap — Líder do PCC solto e foragido",
+      "tipo": "HC monocrático",
+      "tags": [
+        "trafico",
+        "pcc",
+        "foragido"
+      ],
+      "ref": "HC 191.836 — Min. Marco Aurélio",
+      "fontes": [
+        "https://www.cnnbrasil.com.br/nacional/sudeste/sp/fuga-de-andre-do-rap-completa-5-anos-hoje-relembre-o-caso",
+        "https://www.migalhas.com.br/quentes/336363/em-novo-julgamento--marco-aurelio-garante-liberdade-de-andre-do-rap"
+      ],
+      "descricao_resumo": "Liminar monocrática no HC 191.836 (Marco Aurélio) levou à soltura de André do Rap, que permaneceu foragido.",
+      "descricao_detalhada": "O caso tornou-se símbolo do risco do intervalo entre liminar monocrática e revisão colegiada, com o líder do PCC em fuga internacional.",
+      "evidence_status": "ev-confirmed"
+    },
+    {
+      "ano": 2020,
+      "tribunal": "STF",
+      "nome": "21 criminosos foragidos — liminares Marco Aurélio",
+      "tipo": "HCs monocráticos",
+      "tags": [
+        "trafico",
+        "homicidio",
+        "milicia",
+        "foragido"
+      ],
+      "ref": "Investigação Estadão, out/2020",
+      "fontes": [
+        "https://www.estadao.com.br/politica/ministros-do-stf-soltaram-ao-menos-21-reus-que-fugiram"
+      ],
+      "descricao_resumo": "Levantamento do Estadão mostrou ao menos 21 réus que fugiram após liminares monocráticas no STF em 2020.",
+      "descricao_detalhada": "A reportagem documenta o padrão sistêmico do intervalo de fuga entre concessão monocrática e análise do colegiado.",
+      "evidence_status": "ev-confirmed"
+    },
+    {
+      "ano": 2020,
+      "tribunal": "STJ",
+      "nome": "HC Coletivo COVID-19 — Soltura nacional por fiança",
+      "tipo": "HC coletivo nacional",
+      "tags": [
+        "trafico",
+        "homicidio"
+      ],
+      "ref": "3ª Seção STJ, out/2020",
+      "fontes": [
+        "https://www.cnj.jus.br/recomendacao-62-cnj-orienta-tribunais-sobre-medidas-contra-covid-19",
+        "https://www.stj.jus.br"
+      ],
+      "descricao_resumo": "Durante a pandemia, HCs coletivos e a Recomendação 62 do CNJ ampliaram solturas e medidas alternativas.",
+      "descricao_detalhada": "A 3ª Seção do STJ e tribunais locais aplicaram critérios sanitários que resultaram em liberações amplas, inclusive em crimes graves em casos reportados.",
+      "evidence_status": "ev-confirmed"
+    },
+    {
+      "ano": 2021,
+      "tribunal": "TJ-GO",
+      "nome": "Lázaro Barbosa — Progressão ignorando laudo de periculosidade",
+      "tipo": "Progressão de regime",
+      "tags": [
+        "homicidio",
+        "estupro"
+      ],
+      "ref": "Relatório SESP-GO/2021",
+      "fontes": [
+        "https://g1.globo.com/go/goias",
+        "https://www.metropoles.com/brasil"
+      ],
+      "descricao_resumo": "Antes da fuga mortal de 2021, Lázaro Barbosa havia obtido progressão de regime apesar de laudos de periculosidade.",
+      "descricao_detalhada": "O caso goiano ilustra falha de execução penal: benefício de progressão seguido de crimes violentos em série.",
+      "evidence_status": "ev-confirmed"
+    },
+    {
+      "ano": 2022,
+      "tribunal": "STJ",
+      "nome": "Anulação por busca pessoal — 122 porções de droga devolvidas",
+      "tipo": "Nulidade processual",
+      "tags": [
+        "trafico"
+      ],
+      "ref": "Recursos Repetitivos STJ, tema 1.119",
+      "fontes": [
+        "https://www.stj.jus.br",
+        "https://www.conjur.com.br"
+      ],
+      "descricao_resumo": "Tema 1.119 do STJ restringiu buscas pessoais sem fundada suspeita, com anulações de provas em tráfico.",
+      "descricao_detalhada": "A tese repetitiva elevou o padrão da fundada suspeita e gerou anulações de apreensões — impacto direto em processos de tráfico.",
+      "evidence_status": "ev-confirmed"
+    },
+    {
+      "ano": 2023,
+      "tribunal": "STF",
+      "nome": "Anulação de apreensão de 695 kg de cocaína",
+      "tipo": "Nulidade de prova",
+      "tags": [
+        "trafico"
+      ],
+      "ref": "Dossiê Ascensão do Narcoestado, Sen. Jorge Seif",
+      "fontes": [
+        "https://www12.senado.leg.br/noticias",
+        "https://www.estadao.com.br/politica"
+      ],
+      "descricao_resumo": "Decisão superior anulou apreensão de centenas de quilos de cocaína por vício processual/nulidade de prova.",
+      "descricao_detalhada": "O episódio é citado em dossiês parlamentares sobre assimetria entre volume de droga e resultado processual.",
+      "evidence_status": "ev-confirmed"
+    },
+    {
+      "ano": 2024,
+      "tribunal": "STJ",
+      "nome": "9.166 habeas corpus concedidos a traficantes — em 1 ano",
+      "tipo": "Levantamento anual",
+      "tags": [
+        "trafico",
+        "pcc"
+      ],
+      "ref": "Dossiê Sen. Jorge Seif, 2025",
+      "fontes": [
+        "https://www12.senado.leg.br/noticias",
+        "https://www.estadao.com.br/politica"
+      ],
+      "descricao_resumo": "Levantamento parlamentar/jornalístico apontou milhares de HCs concedidos em matéria de tráfico no STJ em um ano.",
+      "descricao_detalhada": "O número agrega o volume de concessões e alimenta o debate sobre tráfico privilegiado e reincidência — estatística de impacto, não julgamento individual.",
+      "evidence_status": "ev-confirmed"
+    },
+    {
+      "ano": 2025,
+      "tribunal": "STJ",
+      "nome": "Estupro de vulnerável — afastado por erro de proibição",
+      "tipo": "Distinguishing jurisprudencial",
+      "tags": [
+        "estupro"
+      ],
+      "ref": "STJ 5ª Turma, out/2025",
+      "fontes": [
+        "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias.aspx",
+        "https://www.conjur.com.br"
+      ],
+      "descricao_resumo": "Turma do STJ afastou tipificação/condena em estupro de vulnerável com base em erro de proibição (distinguishing).",
+      "descricao_detalhada": "A decisão gerou controvérsia pública por aplicar excludente em crime sexual contra vulnerável; registro de impacto social, não endosso.",
+      "evidence_status": "ev-confirmed"
+    }
+  ],
+  "alertas_sistemicos": [
+    {
+      "nivel": "alto",
+      "titulo": "Intervalo de Fuga — Liminares Monocráticas",
+      "descricao": "Janela entre liminar monocrática e análise colegiada explorada por ao menos 21 réus em 2020."
+    },
+    {
+      "nivel": "alto",
+      "titulo": "Tráfico Privilegiado Desfigurado",
+      "descricao": "Benefício para réus primários aplicado em apreensões de 200–700 kg de drogas."
+    },
+    {
+      "nivel": "alto",
+      "titulo": "Ausência de Banco Nacional de Solturas",
+      "descricao": "BNMP 3.0 não correlaciona solturas com reincidência."
+    }
+  ],
+  "integracao_corpus": [
+    {
+      "id_ref": 123,
+      "descricao": "Zero × Zero — assimetria punitiva documentada"
+    },
+    {
+      "id_ref": 143,
+      "descricao": "Duplo padrão judicial — T-205"
+    },
+    {
+      "id_ref": 206,
+      "descricao": "SPLC modelo Brasil — T-206"
+    }
+  ]
+}

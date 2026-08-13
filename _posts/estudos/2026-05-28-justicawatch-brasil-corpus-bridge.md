@@ -21,12 +21,14 @@ Entrada canônica do **registry T-156** no track temático Jekyll. O observatór
 
 | Camada | Recurso |
 | --- | --- |
+| **Produto canônico (2026-08-06)** | [jusmonitor.vercel.app](https://jusmonitor.vercel.app) — captura + decisões unificados |
 | **Dossiê canônico (DS v1.1)** | [/artigos/t209-justicawatch-brasil.html](/artigos/t209-justicawatch-brasil.html) |
-| Artefato HTML (gosurf.site) | [gosurf.site/jusmonitor](https://gosurf.site/jusmonitor) |
-| Redirect | [justicawatch-brasil.html](/artigos/justicawatch-brasil.html) → jusmonitor |
+| Artefato HTML (gosurf.site, espelho) | [gosurf.site/jusmonitor](https://gosurf.site/jusmonitor) |
+| Redirect legado | [justicawatch-brasil.html](/artigos/justicawatch-brasil.html) → jusmonitor |
 | Espelho local | [/artigos/jusmonitor.html](/artigos/jusmonitor.html) |
-| Data file | [`_data/justicawatch/justicawatch-brasil.json`](/_data/justicewatch/justicawatch-brasil.json) |
-| Registry | T-156 · pages.json slug `jusmonitor` |
+| Data file | [`_data/justicewatch/justicawatch-brasil.json`](/_data/justicewatch/justicawatch-brasil.json) |
+| Extract decisões | [`_data/extract_decisoes.py`](/_data/extract_decisoes.py) |
+| Registry | T-156 · pages.json slug `jusmonitor` · domínio canônico `jusmonitor.vercel.app` |
 
 > Conheça as decisões. Exija prestação de contas. Apresentação de casos não implica culpa do magistrado — registra impacto público verificável.
 

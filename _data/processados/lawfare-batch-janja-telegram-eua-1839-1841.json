@@ -1,0 +1,80 @@
+[
+  {
+    "id": "1839",
+    "date": "2026-08-06",
+    "date_precision": "day",
+    "title": "Primeira-dama pede bloqueio do Discord após morte de adolescente; AGU anuncia ação civil pública contra a plataforma",
+    "summary": "Durante sanção do PL 3066/2025 (endurecimento de penas para crimes sexuais digitais contra menores), a primeira-dama Rosângela 'Janja' da Silva pediu ao ministro da Justiça, Wellington César Lima e Silva, que o Discord seja retirado do ar no Brasil, citando o caso de uma adolescente de 13 anos induzida a se suicidar em transmissão ao vivo na plataforma (Naviraí/MS, jul/2026). O advogado-geral da União, Jorge Messias, anunciou que a AGU moverá ação civil pública pedindo responsabilização e retirada de uso da plataforma. A decisão sobre bloqueio efetivo cabe ao Judiciário, não ao Executivo diretamente. Nos dias anteriores, o MJSP já havia notificado Discord e Telegram por descumprimento do ECA Digital, no âmbito das Operações Lívia e Rede Interrompida.",
+    "category": "mecanismo_sistemico",
+    "actors": [
+      {"name": "Rosângela 'Janja' da Silva", "role": "Primeira-dama — apelo público por bloqueio", "institution": "Presidência da República"},
+      {"name": "Jorge Messias", "role": "Advogado-Geral da União — anuncia ação civil pública", "institution": "AGU"},
+      {"name": "Wellington César Lima e Silva", "role": "Ministro da Justiça — destinatário do apelo", "institution": "MJSP"}
+    ],
+    "institutions": ["Presidência da República", "AGU", "MJSP", "Discord Inc."],
+    "legal_basis": ["ECA Digital (decretos presidenciais jul/2026) — responsabilidade de plataformas por proteção de menores"],
+    "patterns": [],
+    "evidence_status": "ev-confirmed",
+    "sources": [
+      {"title": "Janja pede que Discord seja retirado do ar, e AGU promete ação civil pública contra plataforma", "url": "https://www.otempo.com.br/politica/governo/2026/8/6/janja-pede-que-discord-seja-retirado-do-ar-e-agu-promete-acao-civil-publica-contra-plataforma", "outlet": "O Tempo", "date": "2026-08-06"},
+      {"title": "AGU cita falta de compromisso e deve pedir derrubada do Discord no Brasil", "url": "https://www.cnnbrasil.com.br/politica/agu-cita-falta-de-compromisso-e-deve-pedir-derrubada-do-discord-no-brasil/", "outlet": "CNN Brasil", "date": "2026-08-05"}
+    ],
+    "result": "AGU prepara ação civil pública; decisão de bloqueio pendente do Judiciário. Caso também encaminhado à ANPD para apurar falha sistêmica de plataformas.",
+    "connections": [],
+    "status": "em_andamento",
+    "lacuna_investigativa": "Não há, até o momento, decisão judicial de bloqueio — apenas anúncio de ação civil pública. Resta acompanhar se o caso evolui para um padrão de infraestrutura de controle de plataformas (candidato a P10) ou permanece isolado como resposta a caso concreto de proteção à infância.",
+    "ponto_de_inflexao": null,
+    "analise": "Nota metodológica obrigatória (protocolo anti-viés): diferente dos casos Telegram/STF já documentados no corpus (ids 167-168, 1514-1524), esta entrada tem lastro em um crime concreto contra uma criança, não em conteúdo político. Classificar automaticamente como 'mais um caso de censura de plataforma' seria strawman de template — importar o roteiro de um padrão (P03/P04 aplicado a discurso político) para um caso de outra natureza (proteção à infância). Um único anchor não sustenta promoção a padrão; a entrada fica sem P0X atribuído até que hajam eventos adicionais que demonstrem função sistêmica análoga aos casos já documentados de controle de infraestrutura digital."
+  },
+  {
+    "id": "1840",
+    "date": "2026-08-05",
+    "date_precision": "day",
+    "title": "Moraes intima Telegram a fornecer dados cadastrais de canais e grupos sob pena de multa diária de R$ 100 mil",
+    "summary": "O ministro Alexandre de Moraes (STF) determinou, em quatro processos distintos, que o Telegram forneça em 48h dados cadastrais e conteúdos de canais/grupos investigados por suposta divulgação de mensagens 'antidemocráticas' (questionamento da lisura eleitoral, incitação a ruptura institucional), sob pena de multa diária de R$ 100 mil. A decisão atende requerimento da PGR após descumprimento de ordem anterior pela plataforma. NOTA DE CORREÇÃO EDITORIAL: a formulação do usuário ('multa milionária já imposta por promover conteúdo antidemocrático') não corresponde ao que as fontes verificadas mostram para agosto/2026 — trata-se de uma intimação com multa cominatória futura por não-fornecimento de dados, não de uma multa já aplicada pela promoção de conteúdo em si.",
+    "category": "chokepoint_judicial",
+    "actors": [
+      {"name": "Alexandre de Moraes", "role": "Ministro relator — determina intimação sob multa cominatória", "institution": "STF"},
+      {"name": "Procuradoria-Geral da República", "role": "Requerente da intimação e da elevação da multa", "institution": "PGR"}
+    ],
+    "institutions": ["STF", "PGR", "Telegram FZ-LLC"],
+    "legal_basis": ["CPC Art. 537 — multa cominatória (astreintes) por descumprimento de ordem judicial"],
+    "patterns": ["P03"],
+    "evidence_status": "ev-confirmed",
+    "sources": [
+      {"title": "Moraes aumenta o cerco ao Telegram e cobra dados de grupos investigados pelo STF", "url": "https://terrabrasilnoticias.com/2026/08/moraes-aumenta-o-cerco-ao-telegram-e-cobra-dados-de-grupos-investigados-pelo-stf/", "outlet": "Terra Brasil Notícias", "date": "2026-08-05"}
+    ],
+    "result": "Prazo de 48h fixado; multa de R$ 100 mil/dia só se aplica em caso de descumprimento. Processos tramitam majoritariamente sob sigilo.",
+    "connections": ["id_167", "id_168", "id_1514"],
+    "status": "em_andamento",
+    "lacuna_investigativa": "Critério de definição de 'conteúdo antidemocrático' não é público nos processos sigilosos — impede auditoria externa do padrão de seletividade (conectar a T-217, seletividade punitiva TSE/Câmara já documentada).",
+    "ponto_de_inflexao": null,
+    "analise": "Reforça o padrão P03 (STF como chokepoint) já documentado: acumulação de funções de decisão monocrática, ausência de critério público de triagem do que conta como conteúdo ilícito, e uso de sigilo processual em três das quatro decisões. Mantém-se ev-confirmed apenas para os fatos verificáveis (intimação, prazo, valor da multa cominatória) — qualquer leitura de motivação política do STF ou de má-fé do Telegram permanece ev-inference e não deve ser confundida com o fato registrado."
+  },
+  {
+    "id": "1841",
+    "date": "2026-07-24",
+    "date_precision": "day",
+    "title": "Itamaraty nega vistos a dois funcionários do Departamento de Estado dos EUA que viriam discutir liberdade de expressão e eleições",
+    "summary": "O Ministério das Relações Exteriores negou vistos de entrada a Riley M. Barnes (subsecretário-assistente para Democracia, Direitos Humanos e Trabalho) e Samuel D. Samson (subsecretário-assistente), indicados políticos da administração Trump. A justificativa oficial da viagem era discutir liberdade de expressão no contexto eleitoral de 2026; segundo o Washington Post e diplomatas brasileiros, o objetivo real seria questionar a integridade do sistema eleitoral e se reunir com críticos das urnas eletrônicas. O TSE anunciou reunião com embaixadores em 17/08 e confirmou que OEA, UE e outros órgãos internacionais já aceitaram compor a Missão de Observadores Eleitorais para outubro/2026.",
+    "category": "incidente_diplomatico",
+    "actors": [
+      {"name": "Riley M. Barnes", "role": "Subsecretário-assistente para Democracia, Direitos Humanos e Trabalho — visto negado", "institution": "Departamento de Estado (EUA)"},
+      {"name": "Samuel D. Samson", "role": "Subsecretário-assistente — visto negado", "institution": "Departamento de Estado (EUA)"}
+    ],
+    "institutions": ["Itamaraty", "Departamento de Estado (EUA)", "TSE"],
+    "legal_basis": [],
+    "patterns": [],
+    "evidence_status": "ev-contested",
+    "sources": [
+      {"title": "Brasil barra emissários dos EUA que fiscalizariam sistema eleitoral", "url": "https://www.gazetadopovo.com.br/mundo/brasil-nega-vistos-a-emissarios-de-trump-em-suposta-missao-para-questionar-urnas-eletronicas/", "outlet": "Gazeta do Povo", "date": "2026-07-24"},
+      {"title": "Barrado de entrar no Brasil, funcionário dos EUA é ligado à extrema-direita da Europa", "url": "https://www.brasil247.com/mundo/barrado-de-entrar-no-brasil-funcionario-dos-eua-e-ligado-a-extrema-direita-da-europa/", "outlet": "Brasil 247", "date": "2026-07-26"}
+    ],
+    "result": "Vistos negados; viagem não ocorreu. TSE mantém missão internacional de observação eleitoral com outros organismos multilaterais.",
+    "connections": ["id_1514"],
+    "status": "confirmado",
+    "lacuna_investigativa": "O propósito real da viagem (fiscalização eleitoral genuína vs. apoio a narrativa de fraude) é uma disputa de interpretação entre fontes brasileiras e americanas não resolvida por documento primário público — classificado ev-contested por essa razão, não ev-confirmed.",
+    "ponto_de_inflexao": null,
+    "analise": "NOTA DE CORREÇÃO: a moldura do usuário ('EUA se preocupam com liberdade e são barrados') importa acriticamente a versão do Departamento de Estado sem registrar a contestação formal do lado brasileiro — isso seria o mesmo erro invertido de um both-sidesism (P04b), mas na direção oposta: aceitar a versão de uma parte interessada sem marcá-la como ev-alleged. A entrada mantém as duas leituras (viagem sobre liberdade de expressão vs. tentativa de deslegitimar o sistema eleitoral) lado a lado, sem resolver o conflito, por não haver documento primário que dirima a real motivação da viagem."
+  }
+]

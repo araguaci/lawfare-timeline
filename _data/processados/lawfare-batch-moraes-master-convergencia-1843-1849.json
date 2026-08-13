@@ -1,0 +1,210 @@
+{
+  "_meta": {
+    "batch": "moraes-master-convergencia",
+    "id_range_main": "1843-1849",
+    "note_id_1842": "1842 já consumido por lawfare-batch-cnj-penduricalhos-retroativos-1842.json — próximo livre confirmado = 1843",
+    "generated": "2026-08-12",
+    "verification": "Todas as entradas verificadas via busca web nesta sessão — nenhuma produzida de memória do modelo",
+    "destino": "_data/todo/ — processar via merge_todo_pending.py"
+  },
+  "assuntos": [
+    {
+      "id": 1843,
+      "date": "2025-12-09",
+      "date_precision": "day",
+      "title": "Revelado contrato de R$ 129 milhões entre escritório da esposa de Moraes e Banco Master",
+      "summary": "Coluna de Malu Gaspar (O Globo) revela contrato firmado em 2024 entre o escritório Barci de Moraes Advogados — comandado por Viviane Barci de Moraes, esposa do ministro Alexandre de Moraes, com dois filhos do casal como sócios — e o Banco Master, então controlado por Daniel Vorcaro. Contrato previa pagamento mensal de R$ 3,5–3,6 milhões ao longo de 36 meses (2024–2027), totalizando R$ 129 milhões, cobrindo representação em causas envolvendo Banco Central, Receita Federal, PGFN, CADE e Congresso Nacional. Pagamentos interrompidos com a liquidação extrajudicial do Master pelo Banco Central em 18/11/2025. O escritório, em nota, confirmou o contrato e afirmou que sua atuação nunca alcançou processos no STF.",
+      "category": "mecanismo_sistemico",
+      "actors": [
+        {"name": "Viviane Barci de Moraes", "role": "Sócia responsável — escritório contratado", "institution": "Barci de Moraes Advogados"},
+        {"name": "Daniel Vorcaro", "role": "Controlador — parte contratante", "institution": "Banco Master"},
+        {"name": "Alexandre de Moraes", "role": "Cônjuge da contratada — ministro do STF", "institution": "STF"}
+      ],
+      "institutions": ["STF", "Banco Master", "Barci de Moraes Advogados", "Banco Central"],
+      "legal_basis": [],
+      "patterns": ["P02", "P07"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "Contrato da mulher de Moraes com Banco Master era de R$ 129 milhões", "url": "https://www.metropoles.com/colunas/andreza-matais/contrato-da-mulher-de-moraes-com-banco-master-era-de-r-129-milhoes", "outlet": "Metrópoles", "date": "2025-12-09"},
+        {"title": "Mulher de Moraes manteve contrato de R$ 129 milhões com Master, diz jornal", "url": "https://www.cnnbrasil.com.br/politica/mulher-de-moraes-manteve-contrato-de-r-129-milhoes-com-master-diz-jornal/", "outlet": "CNN Brasil", "date": "2025-12-12"},
+        {"title": "Esposa de Moraes detalha contrato de R$ 129 milhões com Banco Master", "url": "https://www.terra.com.br/noticias/esposa-de-moraes-detalha-contrato-de-r-129-milhoes-com-banco-master,6b5577dcbdbb4c605e253fb6ade282aenx6h7t2k.html", "outlet": "Terra", "date": "2026-03-09"}
+      ],
+      "result": "Contrato confirmado publicamente pelo próprio escritório contratado. Pagamentos cessados com a liquidação do banco. Cópia digitalizada apreendida no celular de Vorcaro pela Operação Compliance Zero.",
+      "connections": ["id_192", "id_215", "id_1845", "id_1846"],
+      "status": "confirmado",
+      "lacuna_investigativa": "Não há confirmação pública de quanto do valor total (R$129 mi) foi efetivamente pago antes da interrupção, nem do escopo real de trabalho prestado além da nota do próprio escritório.",
+      "ponto_de_inflexao": null,
+      "analise": "O contrato antecede em mais de um ano a chegada do caso Master ao STF (dez/2025), mas cria um vínculo financeiro direto entre a família de um ministro da Corte e uma instituição que se tornaria, meses depois, objeto de inquérito sob relatoria de colega do mesmo tribunal (Toffoli). A nota do escritório nega atuação no STF, mas não resolve a questão estrutural: um ministro cuja família recebe R$ 3,6 milhões/mês de uma instituição financeira integra o mesmo colegiado que decide sobre o destino penal dos controladores dessa instituição."
+    },
+    {
+      "id": 1844,
+      "date": "2026-01-27",
+      "date_precision": "day",
+      "title": "Metrópoles revela duas visitas de Moraes à mansão de Vorcaro em Brasília; Moraes nega formalmente",
+      "summary": "Coluna de Andreza Matais (Metrópoles) relata, com base em quatro testemunhas, que o ministro Alexandre de Moraes esteve ao menos duas vezes na mansão de Daniel Vorcaro em Brasília, incluindo um encontro no primeiro semestre de 2025 em que foi apresentado ao então presidente do BRB, Paulo Henrique Costa — no momento em que o Master buscava no BRB uma tentativa de venda/socorro financeiro, posteriormente barrada pelo Banco Central. Em nota oficial do STF, Moraes classificou a reportagem como 'falsa e mentirosa' e negou que o encontro tenha ocorrido, chamando-a de padrão de 'ataques desqualificados' contra ministros da Corte.",
+      "category": "mecanismo_sistemico",
+      "actors": [
+        {"name": "Alexandre de Moraes", "role": "Ministro — presença contestada no encontro", "institution": "STF"},
+        {"name": "Daniel Vorcaro", "role": "Anfitrião — controlador Banco Master", "institution": "Banco Master"},
+        {"name": "Paulo Henrique Costa", "role": "Então presidente — parte no encontro relatado", "institution": "BRB"}
+      ],
+      "institutions": ["STF", "Banco Master", "BRB"],
+      "legal_basis": [],
+      "patterns": ["P02", "P05"],
+      "evidence_status": "ev-contested",
+      "sources": [
+        {"title": "O encontro de Moraes com o presidente do BRB na mansão de Vorcaro, do Master", "url": "https://www.metropoles.com/colunas/andreza-matais/o-encontro-de-moraes-e-paulo-henrique-na-mansao-de-vorcaro-do-master", "outlet": "Metrópoles", "date": "2026-01-27"},
+        {"title": "Moraes nega encontro com ex-presidente do BRB e Vorcaro em Brasília", "url": "https://oantagonista.com.br/brasil/moraes-nega-encontro-com-ex-presidente-do-brb-e-vorcaro-em-brasilia/", "outlet": "O Antagonista", "date": "2026-01-27"},
+        {"title": "Moraes nega encontro com ex-presidente do BRB na casa de Vorcaro", "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-01/moraes-nega-encontro-com-ex-presidente-do-brb-na-casa-de-vorcaro", "outlet": "Agência Brasil", "date": "2026-01-28"}
+      ],
+      "result": "Nenhuma apuração formal ou pericial independente confirmou ou refutou o encontro além da nota de negativa de Moraes. Metrópoles manteve a reportagem após a negativa.",
+      "connections": ["id_1843", "id_1845", "id_1846"],
+      "status": "documentado",
+      "lacuna_investigativa": "Identidade completa das quatro testemunhas citadas não é pública. Não há registro oficial de agenda do ministro para o período que confirme ou negue a presença em Brasília naquele fim de semana.",
+      "ponto_de_inflexao": null,
+      "analise": "Caso clássico de ev-contested: reportagem com múltiplas testemunhas nomeadas indiretamente vs. negativa formal e categórica do investigado. A negativa por si não neutraliza o padrão estrutural relevante — a proximidade física alegada ocorre no mesmo período em que a família do ministro mantinha contrato milionário ativo com o banco do anfitrião."
+    },
+    {
+      "id": 1845,
+      "date": "2025-12-23",
+      "date_precision": "day",
+      "title": "Moraes emite três notas sucessivas e contraditórias sobre contatos com Galípolo; Estadão relata seis ligações em um dia",
+      "summary": "Em 22/12/2025, a colunista Malu Gaspar (O Globo) revelou que o ministro Alexandre de Moraes contatou o presidente do Banco Central, Gabriel Galípolo, em quatro oportunidades (um encontro presencial e três ligações) após a liquidação do Banco Master (18/11/2025). Em 23/12, o jornal O Estado de S. Paulo, citando fontes do meio jurídico e financeiro, elevou o número para seis ligações telefônicas em um único dia. No mesmo dia, Moraes emitiu três notas sucessivas: a primeira mencionava genericamente 'reuniões' com Galípolo sem detalhar número ou natureza; a segunda também evitava detalhamento; a terceira — divulgada à noite, já após a reportagem do Estadão — afirmou que houve apenas dois encontros presenciais em seu gabinete (14/08 e 30/09/2025), ambos sobre os efeitos da Lei Magnitsky, e declarou que 'inexistiu qualquer ligação telefônica entre ambos, para esse ou qualquer outro assunto'. A nota continha um erro factual sobre a data de aplicação da sanção Magnitsky (30 de agosto, quando a sanção ocorreu em 30 de julho). Galípolo confirmou os encontros em nota própria, também restringindo o tema à Lei Magnitsky. O caso motivou pedido de impeachment contra Moraes protocolado pela oposição no Congresso.",
+      "category": "mecanismo_sistemico",
+      "actors": [
+        {"name": "Alexandre de Moraes", "role": "Ministro STF — autor das três notas, negou ligações telefônicas", "institution": "STF"},
+        {"name": "Gabriel Galípolo", "role": "Presidente — confirmou encontros presenciais, negou tema Master", "institution": "Banco Central"}
+      ],
+      "institutions": ["STF", "Banco Central", "Congresso Nacional"],
+      "legal_basis": [],
+      "patterns": ["P02"],
+      "evidence_status": "ev-contested",
+      "sources": [
+        {"title": "Moraes ligou seis vezes para Galípolo num dia para tratar de Banco Master, diz jornal", "url": "https://www.gazetadopovo.com.br/republica/moraes-ligou-seis-vezes-para-galipolo-num-dia-para-tratar-de-banco-master-diz-jornal/", "outlet": "Gazeta do Povo (citando O Estado de S. Paulo)", "date": "2025-12-24"},
+        {"title": "Em nova nota, Moraes nega conversas com Galípolo sobre o Banco Master", "url": "https://www.cnnbrasil.com.br/politica/alexandre-moraes-nega-conversas-com-galipolo-sobre-o-banco-master/", "outlet": "CNN Brasil", "date": "2025-12-24"},
+        {"title": "Em nova nota, Moraes afirma que não discutiu caso Master com Galípolo", "url": "https://www.cartacapital.com.br/politica/em-nova-nota-moraes-afirma-que-nao-discutiu-caso-master-com-galipolo/", "outlet": "CartaCapital", "date": "2025-12-24"},
+        {"title": "Moraes, Banco Master e Galípolo: caso gera guerra de narrativas e ofensiva da extrema direita no Congresso", "url": "https://www.brasildefato.com.br/2025/12/26/moraes-banco-master-e-galipolo-caso-gera-guerra-de-narrativas-e-ofensiva-da-extrema-direita-no-congresso/", "outlet": "Brasil de Fato", "date": "2025-12-26"},
+        {"title": "Banco Master: casos envolvendo Moraes e o BC acendem alerta no Congresso", "url": "https://revistaoeste.com/politica/banco-master-casos-envolvendo-moraes-e-o-bc-acendem-alerta-no-congresso/", "outlet": "Revista Oeste", "date": "2025-12-24"}
+      ],
+      "result": "Pedido de impeachment contra Moraes protocolado no Congresso. Nenhuma apuração independente (perícia de registros telefônicos) tornada pública para resolver a contradição entre as reportagens (Globo: 1 encontro + 3 ligações; Estadão: até 6 ligações em um dia) e a nota final de Moraes (2 encontros presenciais, nenhuma ligação).",
+      "connections": ["id_1843", "id_1844", "id_1846"],
+      "status": "documentado",
+      "lacuna_investigativa": "Registros de operadora ou dados do STF/Banco Central que confirmem ou refutem a existência de ligações telefônicas não foram tornados públicos. A causa da divergência entre as duas primeiras notas de Moraes (vagas) e a terceira (negativa categórica e específica) não foi explicada por ele.",
+      "ponto_de_inflexao": "23/12/2025 — a nota final de Moraes só nega ligações telefônicas especificamente depois que o Estadão publica o número de seis chamadas em um dia; as duas notas anteriores, mais vagas, não tinham feito essa negativa específica.",
+      "analise": "A evolução das três notas — de menção genérica a 'reuniões' para negativa específica e categórica de qualquer ligação telefônica, coincidindo com a publicação do dado mais específico (seis ligações/um dia) — é o padrão relevante independentemente de qual versão factual seja verdadeira: a especificidade da negativa aumenta na mesma proporção da especificidade da acusação, e não antes dela."
+    },
+    {
+      "id": 1846,
+      "date": "2025-11-17",
+      "date_precision": "day",
+      "title": "Dados periciados pela PF indicam troca de mensagens entre Vorcaro e Moraes no dia da prisão do banqueiro",
+      "summary": "Segundo reportagem de Malu Gaspar (O Globo), replicada por CNN Brasil, InfoMoney e Gazeta do Povo, dados extraídos do celular de Daniel Vorcaro pela Polícia Federal mostram troca de mensagens com o ministro Alexandre de Moraes ao longo de 17/11/2025 — dia em que Vorcaro foi preso no Aeroporto de Guarulhos. As mensagens teriam ocorrido entre 7h19 e 20h48, com Vorcaro relatando o andamento da tentativa de venda do banco e perguntando sobre o inquérito sigiloso. Ambos os interlocutores usavam o recurso de visualização única do WhatsApp após escrever o texto no bloco de notas — mas Vorcaro manteve os rascunhos salvos, permitindo a reconstrução pela perícia. Moraes, em nota, negou ter recebido as mensagens e classificou a informação como 'ilação mentirosa' contra o STF.",
+      "category": "mecanismo_sistemico",
+      "actors": [
+        {"name": "Daniel Vorcaro", "role": "Remetente — controlador Banco Master preso no mesmo dia", "institution": "Banco Master"},
+        {"name": "Alexandre de Moraes", "role": "Destinatário contestado das mensagens", "institution": "STF"}
+      ],
+      "institutions": ["STF", "Polícia Federal", "Banco Master"],
+      "legal_basis": [],
+      "patterns": ["P02", "P06"],
+      "evidence_status": "ev-contested",
+      "sources": [
+        {"title": "Vorcaro trocou mensagens com Moraes no dia da prisão para salvar Master, diz jornal", "url": "https://www.infomoney.com.br/politica/vorcaro-trocou-mensagens-com-moraes-no-dia-da-prisao-para-salvar-master-diz-jornal/", "outlet": "InfoMoney", "date": "2026-03-06"},
+        {"title": "Vorcaro trocou mensagens com Moraes no dia em que foi preso, diz jornal", "url": "https://www.cnnbrasil.com.br/politica/vorcaro-trocou-mensagens-com-moraes-no-dia-em-que-foi-preso-diz-jornal/", "outlet": "CNN Brasil", "date": "2026-03-06"},
+        {"title": "Como foi o cronograma do dia da primeira prisão de Vorcaro", "url": "https://www.gazetadopovo.com.br/republica/um-dia-na-vida-de-vorcaro-venda-do-banco-reuniao-com-bc-mensagens-a-moraes-e-prisao/", "outlet": "Gazeta do Povo", "date": "2026-03-08"}
+      ],
+      "result": "Moraes nega ter recebido as mensagens. Não há confirmação pericial independente de que o número/conta atribuídos a Moraes nas capturas de tela pertençam de fato a ele — os prints foram enviados via visualização única, sem histórico de conversa recuperável no aparelho do próprio Moraes.",
+      "connections": ["id_1843", "id_1844", "id_1845"],
+      "status": "documentado",
+      "lacuna_investigativa": "Perícia independente sobre a autenticidade e a titularidade do número de destino não foi tornada pública. Conteúdo integral das mensagens de Moraes (segundo a reportagem, ao menos duas respostas às 20h21 e 20h23) permanece parcialmente reproduzido pela imprensa, não pela PF oficialmente.",
+      "ponto_de_inflexao": "20h48 de 17/11/2025 — última mensagem de Vorcaro ao suposto destinatário, pouco antes da prisão por volta das 22h, no momento em que o banqueiro buscava fechar a venda do banco a investidores estrangeiros.",
+      "analise": "O uso deliberado de recurso de visualização única por ambos os interlocutores (segundo a reportagem) é, em si, um dado analítico relevante — sugere consciência de que a comunicação não deveria deixar rastro. A negativa de Moraes não é verificável de forma independente enquanto a origem pericial completa da extração não for auditada por terceiros."
+    },
+    {
+      "id": 1847,
+      "date": "2026-02-01",
+      "date_precision": "month",
+      "title": "Toffoli declara suspeição para o caso Master após PF citar seu nome em relatório enviado a Fachin",
+      "summary": "Em fevereiro de 2026, o ministro Dias Toffoli declarou suspeição por 'razões de foro íntimo' para atuar nos processos da Operação Compliance Zero, um dia depois de a Polícia Federal enviar ao presidente do STF, Edson Fachin, relatório mencionando o próprio Toffoli no caso Master. A decisão foi tomada em reunião com todos os ministros da Corte. André Mendonça foi sorteado como novo relator. Toffoli também se declarou suspeito, separadamente, para o Mandado de Segurança 40791, que tratava de pedido de CPI na Câmara sobre o Banco Master.",
+      "category": "chokepoint_judicial",
+      "actors": [
+        {"name": "Dias Toffoli", "role": "Ministro — declarou suspeição, ex-relator", "institution": "STF"},
+        {"name": "André Mendonça", "role": "Novo relator sorteado", "institution": "STF"},
+        {"name": "Edson Fachin", "role": "Presidente do STF — destinatário do relatório da PF", "institution": "STF"}
+      ],
+      "institutions": ["STF", "Polícia Federal"],
+      "legal_basis": ["RISTF — normas de suspeição e impedimento"],
+      "patterns": ["P02", "P03"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "Com voto de Gilmar Mendes, STF mantém por unanimidade prisão de Vorcaro, do Banco Master", "url": "https://www.correiobraziliense.com.br/mundo/2026/03/7380814-com-voto-de-gilmar-mendes-stf-mantem-por-unanimidade-prisao-de-vorcaro-do-banco-master.html", "outlet": "Correio Braziliense", "date": "2026-03-20"},
+        {"title": "2ª Turma do STF mantém prisão de Daniel Vorcaro e de outros investigados no caso Master", "url": "https://noticias.stf.jus.br/postsnoticias/2a-turma-do-stf-mantem-prisao-de-daniel-vorcaro-e-de-outros-investigados-no-caso-master/", "outlet": "STF (notícias oficiais)", "date": "2026-03-20"}
+      ],
+      "result": "André Mendonça assume a relatoria das investigações penais do caso Master. Toffoli permanece na 2ª Turma que julga medidas cautelares relacionadas (voto em referendos de prisão preventiva), mesmo após se afastar da relatoria direta.",
+      "connections": ["id_1848"],
+      "status": "confirmado",
+      "lacuna_investigativa": "Conteúdo integral do relatório da PF que motivou a suspeição não foi tornado público. Data exata da reunião de fevereiro não localizada com precisão de dia nesta sessão.",
+      "ponto_de_inflexao": "A suspeição só é declarada depois que a PF formalmente cita o nome de Toffoli em relatório oficial — não por iniciativa espontânea anterior, apesar de a Maridt (empresa da família Toffoli) já ter ligação societária indireta com fundos ligados ao Master documentada antes disso.",
+      "analise": "Padrão P02: um dos possíveis investigados na mesma rede de relações do caso muda de posição — de relator das investigações penais para membro do colegiado (2ª Turma) que ainda vota nas medidas cautelares decorrentes dessas mesmas investigações. A suspeição resolve o conflito de interesse na relatoria, mas não o remove inteiramente do processo decisório."
+    },
+    {
+      "id": 1848,
+      "date": "2026-03-05",
+      "date_precision": "day",
+      "title": "Gilmar Mendes suspende quebra de sigilo de empresa da família Toffoli requisitada por CPI do Crime Organizado",
+      "summary": "O ministro Gilmar Mendes suspendeu liminarmente decisão que autorizava a quebra de sigilo da Maridt, empresa da família de Dias Toffoli com participação societária no Resort Tayayá (Paraná), negócio que envolveu fundo (administrado pela Reag) ligado ao entorno de Daniel Vorcaro e também citado na Operação Carbono Oculto. A CPI do Crime Organizado buscava os dados para verificar origem e destino de recursos e eventual conexão com as investigações do Master. Toffoli reconheceu a participação societária, declarou ter informado os valores à Receita Federal e negou recebimento direto de Vorcaro. Analistas identificaram ao menos oito falhas processuais na decisão de Gilmar Mendes, incluindo o uso de prevenção fundada em processo de terceiros arquivado e sem similitude fática, segundo o constitucionalista André Marsiglia.",
+      "category": "chokepoint_judicial",
+      "actors": [
+        {"name": "Gilmar Mendes", "role": "Ministro — autor da liminar de suspensão da quebra de sigilo", "institution": "STF"},
+        {"name": "Dias Toffoli", "role": "Sócio da empresa cujo sigilo foi protegido", "institution": "Maridt / família Toffoli"}
+      ],
+      "institutions": ["STF", "CPI do Crime Organizado", "Maridt"],
+      "legal_basis": ["RISTF — regras de prevenção e distribuição por dependência"],
+      "patterns": ["P02", "P03", "P07"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "Master e quebra de sigilo: Gilmar Mendes blinda Toffoli no STF", "url": "https://www.gazetadopovo.com.br/republica/golpismo-juridico-corporativismo-e-manobras-processuais-de-gilmar-mendes-blindam-toffoli-no-stf/", "outlet": "Gazeta do Povo", "date": "2026-03-05"},
+        {"title": "Gilmar Mendes blinda Dias Toffoli: os supremos se protegem", "url": "https://www.gazetadopovo.com.br/opiniao/editoriais/gilmar-mendes-dias-toffoli-quebra-sigilo/", "outlet": "Gazeta do Povo (editorial)", "date": "2026-03-04"}
+      ],
+      "result": "CPI do Crime Organizado impedida de acessar dados de origem/destino de recursos da Maridt até decisão de mérito. CPI teria de decidir entre recorrer ao plenário ou reformular o requerimento.",
+      "connections": ["id_1843", "id_1847"],
+      "status": "documentado",
+      "lacuna_investigativa": "Não há decisão de plenário do STF, até esta verificação, revertendo ou confirmando a liminar de Gilmar Mendes. Vínculo financeiro completo entre a Maridt/Resort Tayayá e o fundo Reag/Master não foi objeto de perícia pública independente.",
+      "ponto_de_inflexao": "A liminar suspende o acesso da CPI antes de qualquer produção de prova sobre o conteúdo do sigilo — efeito preventivo, não corretivo.",
+      "analise": "'Blindagem' é a caracterização amplamente usada pela imprensa especializada (inclusive por editorial que classifica a decisão como 'golpismo jurídico'), mas no corpus essa leitura fica no campo ev-inference: o fato ev-confirmed é a suspensão liminar da quebra de sigilo por decisão de um colega de tribunal do sócio protegido, com base em fundamentação processual descrita por especialistas externos como falha. A concentração de decisões sobre o mesmo núcleo de fatos (Master → Toffoli → Gilmar) dentro do mesmo colegiado é o dado estrutural, independentemente do rótulo."
+    },
+    {
+      "id": 1849,
+      "date": "2026-08-11",
+      "date_precision": "day",
+      "title": "Moraes autoriza busca e apreensão contra fonte de jornalista que investigou uso de veículo oficial por família de Flávio Dino",
+      "summary": "O ministro Alexandre de Moraes autorizou busca e apreensão contra o ex-secretário de Assuntos Legislativos do Maranhão, Raimundo Cutrim, identificado pela Polícia Federal como fonte do jornalista Luís Pablo, autor de reportagens sobre uso de veículo oficial do TJ-MA por familiares do ministro do STF Flávio Dino. A medida foi solicitada pela PF e teve parecer favorável da PGR. Foram apreendidos celulares, computadores e outros dispositivos de Cutrim e de um advogado. O jornalista já havia sido alvo de quebra de sigilo em março de 2026, após publicar as informações. Associações de imprensa (ANJ, ABERT, ANER, FENAJ, Sindjor-MA) manifestaram preocupação pública com a decisão, citando o Art. 5º, XIV, da Constituição Federal.",
+      "category": "abuso_processual",
+      "actors": [
+        {"name": "Alexandre de Moraes", "role": "Ministro — autorizou a medida", "institution": "STF"},
+        {"name": "Raimundo Cutrim", "role": "Alvo — apontado como fonte jornalística", "institution": "Ex-Secretaria de Assuntos Legislativos do Maranhão"},
+        {"name": "Luís Pablo", "role": "Jornalista cuja fonte foi identificada", "institution": "Imprensa maranhense"},
+        {"name": "Flávio Dino", "role": "Ministro STF — parte que representou/solicitou apuração original", "institution": "STF"}
+      ],
+      "institutions": ["STF", "Polícia Federal", "PGR", "TJ-MA"],
+      "legal_basis": ["CF/88 Art. 5º, XIV — sigilo da fonte jornalística"],
+      "patterns": ["P03", "P04"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {"title": "Decisão de Moraes é ameaça ao sigilo da fonte, afirma ANJ", "url": "https://www.correiobraziliense.com.br/politica/2026/08/7478318-decisao-de-moraes-e-ameaca-ao-sigilo-da-fonte-afirma-anj.html", "outlet": "Correio Braziliense", "date": "2026-08-11"},
+        {"title": "Moraes autoriza operação de busca e apreensão contra fonte de jornalista no Maranhão", "url": "https://www.gazetadopovo.com.br/vida-e-cidadania/moraes-autoriza-operacao-de-busca-e-apreensao-contra-fonte-de-jornalista-no-maranhao/", "outlet": "Gazeta do Povo", "date": "2026-08-11"},
+        {"title": "Representantes da imprensa criticam Moraes por quebrar sigilo de fonte de jornalista em reportagem sobre Dino", "url": "https://j3news.com/2026/08/12/representantes-da-imprensa-criticam-moraes-por-quebrar-sigilo-de-fonte-de-jornalista-em-reportagem-sobre-dino/", "outlet": "J3News", "date": "2026-08-12"}
+      ],
+      "result": "Dispositivos eletrônicos de Cutrim e de um advogado apreendidos. Jornalista Luís Pablo relata temer perder outras fontes. Associações de imprensa emitem notas de repúdio conjuntas.",
+      "connections": [],
+      "status": "confirmado",
+      "lacuna_investigativa": "Não há, até a data de verificação, decisão colegiada do STF revisando a medida monocrática. Fundamentação completa da decisão de Moraes (inteiro teor) não estava disponível publicamente nas fontes consultadas.",
+      "ponto_de_inflexao": "A medida mira a fonte, não o jornalista diretamente — mecanismo que contorna a proteção formal ao sigilo jornalístico ao atingir quem forneceu a informação.",
+      "analise": "Caso não pertence ao cluster Banco Master, mas ao mesmo padrão estrutural de acumulação de competências documentado em INQ 4.781 (id-101/102/103): o ministro cujo colega de Corte é objeto da reportagem original (Dino) autoriza medida que afeta diretamente a cadeia de apuração jornalística sobre esse mesmo colega. Não há, nas fontes verificadas, alegação de que Moraes tenha conflito de interesse direto neste episódio específico — o padrão aqui é P04 (uso de aparato judicial contra fonte de imprensa) mais do que P02."
+    }
+  ],
+  "sync_update": {
+    "main_next_available": 1850,
+    "note": "IDs 1839-1841 permanecem pendentes de merge (batch anterior, não relacionado). 1842 consumido por lawfare-batch-cnj-penduricalhos-retroativos-1842.json. Este batch consome 1843-1849."
+  }
+}

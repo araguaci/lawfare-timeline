@@ -1,9 +1,257 @@
 {
- "gerado_de": "lawfare.json",
- "sync_date": "2026-08-05",
- "total": 76,
- "excluidos_pendente_enriquecimento": 62,
+ "gerado_de": "lawfare.json + jusmonitor/enrichment-patches.json",
+ "sync_date": "2026-08-12",
+ "total": 147,
+ "excluidos_pendente_enriquecimento": 207,
  "cards": [
+  {
+   "id": 1849,
+   "data": "2026-08-11",
+   "titulo": "Moraes autoriza busca e apreensão contra fonte de jornalista que investigou uso de veículo oficial por família de Flávio Dino",
+   "descricao": "O ministro Alexandre de Moraes autorizou busca e apreensão contra o ex-secretário de Assuntos Legislativos do Maranhão, Raimundo Cutrim, identificado pela Polícia Federal como fonte do jornalista Luís Pablo, autor de reportagens sobre uso de veículo oficial do TJ-MA por familiares do ministro do STF Flávio Dino. A medida foi solicitada pela PF e teve parecer favorável da PGR. Foram apreendidos celulares, computadores e outros dispositivos de Cutrim e de um advogado. O jornalista já havia sido alvo de quebra de sigilo em março de 2026, após publicar as informações. Associações de imprensa (ANJ, ABERT, ANER, FENAJ, Sindjor-MA) manifestaram preocupação pública com a decisão, citando o Art. 5º, XIV, da Constituição Federal.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF",
+    "Polícia Federal",
+    "PGR",
+    "TJ-MA"
+   ],
+   "tags": [
+    "stf",
+    "P03",
+    "P04",
+    "ev-confirmed"
+   ],
+   "fontes": [
+    "https://www.correiobraziliense.com.br/politica/2026/08/7478318-decisao-de-moraes-e-ameaca-ao-sigilo-da-fonte-afirma-anj.html",
+    "https://www.gazetadopovo.com.br/vida-e-cidadania/moraes-autoriza-operacao-de-busca-e-apreensao-contra-fonte-de-jornalista-no-maranhao/",
+    "https://j3news.com/2026/08/12/representantes-da-imprensa-criticam-moraes-por-quebrar-sigilo-de-fonte-de-jornalista-em-reportagem-sobre-dino/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1842,
+   "data": "2026-08-08",
+   "titulo": "Corregedoria do CNJ envia ao STF primeira leva de penduricalhos retroativos: R$ 1,1 bi a 782 magistrados de 4 tribunais",
+   "descricao": "A Corregedoria do CNJ validou parcialmente cálculos de 4 de 63 tribunais (TJDFT, TJES, TRF-3 e STJ), somando R$ 1,1 bilhão em ATS/quinquênio retroativo para 782 matrículas. Pagamentos seguem suspensos até referendo do plenário do STF, que em 25/03/2026 fixou critérios nacionais sobre verbas indenizatórias.",
+   "grupo": "penduricalhos",
+   "gravidade": "alta",
+   "relevancia": "alta",
+   "instituicoes": [
+    "CNJ",
+    "STF",
+    "STJ",
+    "TJDFT",
+    "TJES",
+    "TRF-3",
+    "CNMP"
+   ],
+   "tags": [
+    "penduricalhos",
+    "P05",
+    "P11",
+    "ev-confirmed"
+   ],
+   "fontes": [
+    "https://www.brasil247.com/brasilia/cnj-libera-r-11-bilhao-em-adicionais-de-apenas-quatro-tribunais/",
+    "https://www.metropoles.com/colunas/manoela-alcantara/cnj-aponta-irregularidades-em-calculos-de-beneficios-da-magistratura"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "alerta_critico": true,
+   "descricao_resumo": "CNJ enviou ao STF a primeira leva de saldos retroativos de ATS/quinquênio: R$ 1,1 bi para 782 magistrados de 4 tribunais.",
+   "descricao_detalhada": "A Corregedoria do CNJ validou parcialmente cálculos de 4 de 63 tribunais (TJDFT, TJES, TRF-3 e STJ), somando R$ 1,1 bilhão em ATS/quinquênio retroativo para 782 matrículas. Pagamentos seguem suspensos até referendo do plenário do STF, que em 25/03/2026 fixou critérios nacionais sobre verbas indenizatórias."
+  },
+  {
+   "id": 1840,
+   "data": "2026-08-05",
+   "titulo": "Moraes intima Telegram a fornecer dados cadastrais de canais e grupos sob pena de multa diária de R$ 100 mil",
+   "descricao": "O ministro Alexandre de Moraes (STF) determinou, em quatro processos distintos, que o Telegram forneça em 48h dados cadastrais e conteúdos de canais/grupos investigados por suposta divulgação de mensagens 'antidemocráticas' (questionamento da lisura eleitoral, incitação a ruptura institucional), sob pena de multa diária de R$ 100 mil. A decisão atende requerimento da PGR após descumprimento de ordem anterior pela plataforma. NOTA DE CORREÇÃO EDITORIAL: a formulação do usuário ('multa milionária já imposta por promover conteúdo antidemocrático') não corresponde ao que as fontes verificadas mostram para agosto/2026 — trata-se de uma intimação com multa cominatória futura por não-fornecimento de dados, não de uma multa já aplicada pela promoção de conteúdo em si.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF",
+    "PGR",
+    "Telegram FZ-LLC"
+   ],
+   "tags": [
+    "stf",
+    "P03",
+    "ev-confirmed"
+   ],
+   "fontes": [
+    "https://terrabrasilnoticias.com/2026/08/moraes-aumenta-o-cerco-ao-telegram-e-cobra-dados-de-grupos-investigados-pelo-stf/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1621,
+   "data": "2026-07-17",
+   "titulo": "Moraes mantém domiciliar de Bolsonaro, suspende todas as visitas por 30 dias e nega pedido de visita do presidente Milei",
+   "descricao": "O ministro Alexandre de Moraes (STF) manteve a prisão domiciliar de Jair Bolsonaro e ampliou as restrições cautelares: suspendeu por 30 dias todas as visitas ao ex-presidente, exceto equipe médica, fisioterapeutas e advogados; proibiu recebimento de visitas com finalidade político-eleitoral até o término das Eleições 2026; manteve a suspensão de 90 dias das visitas do senador Flávio Bolsonaro (que atua como advogado do pai); e proibiu a divulgação de manifestos ou mensagens de conteúdo político-eleitoral por Bolsonaro, inclusive por intermédio de terceiros. A decisão foi fundamentada na divulgação da 'Carta aos brasileiros', publicada por Flávio em nome do pai, que Moraes classificou como descumprimento das medidas cautelares. Na mesma decisão, o STF negou o pedido de visita do presidente argentino Javier Milei a Bolsonaro, prevista para coincidir com viagem a Brasília em 25/07 — data que também marca a convenção que deve oficializar a candidatura presidencial de Flávio Bolsonaro. Oitiva de Flávio Bolsonaro pela PF marcada para 28/07/2026 (pós-convenção PL) no inquérito de calúnia — merge delta ex-id_1635.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF"
+   ],
+   "tags": [
+    "stf",
+    "P03",
+    "P06",
+    "P12-B"
+   ],
+   "fontes": [
+    "https://www.brasildefato.com.br/2026/07/18/stf-nega-visita-de-milei-a-bolsonaro-apos-novas-restricoes-impostas-por-moraes/",
+    "https://mauriliojunior.com/2026/07/17/moraes-proibe-visitas-a-bolsonaro-e-diz-que-tese-da-defesa-e-patetica/",
+    "https://portuguese.news-pravda.com/world/2026/07/18/411455.html"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1634,
+   "data": "2026-07-06",
+   "titulo": "Moraes e Dino dão 48h para sete Tribunais de Justiça explicarem supersalários acima do teto, após Folha revelar 616 magistrados recebendo até R$ 495 mil/mês via resolução CNJ/CNMP",
+   "descricao": "Após reportagem da Folha de S.Paulo apurar que ao menos sete tribunais estaduais (DF, GO, MA, PR, RJ, RN, RO) pagaram em maio/2026 salários acima do teto de R$ 46,4 mil — com cifras de até R$ 495 mil no mês — sob fundamento de resolução conjunta do CNJ e CNMP, os ministros Alexandre de Moraes e Flávio Dino determinaram em 06/07/2026 que os presidentes desses tribunais enviem em 48h folhas de pagamento detalhadas de abril a julho, sob pena de punições severas. Os tribunais responderam ao STF em 13/07 afirmando cumprir a decisão e justificando as remunerações elevadas como pagamentos excepcionais e direitos acumulados (férias, acertos funcionais).",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF",
+    "TJDF",
+    "TJGO",
+    "TJMA",
+    "TJPR",
+    "TJRJ",
+    "TJRN",
+    "TJRO",
+    "CNJ",
+    "CNMP"
+   ],
+   "tags": [
+    "stf",
+    "P11",
+    "P06"
+   ],
+   "fontes": [
+    "https://costanorte.com.br/politica/moraes-da-48h-para-sete-tribunais-explicarem-supersalarios-de-juizes.html",
+    "https://eshoje.com.br/politica/justica/2026/07/tribunais-descumprem-decisao-do-stf-sobre-penduricalhos-e-pagam-salarios-de-ate-r-495-mil-a-juizes/",
+    "https://fenafisco.org.br/13/07/2026/tribunais-dizem-cumprir-decisao-sobre-penduricalhos-e-justificam-supersalarios-ao-stf/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1824,
+   "data": "2026-06-30",
+   "titulo": "STF julga embargos de declaração sobre \"penduricalhos\" e flexibiliza decisão de março, mantém teto de 35%",
+   "descricao": "O STF concluiu, em sessão virtual extraordinária, o julgamento de 41 embargos de declaração apresentados contra a decisão de março de 2026 que limitou verbas indenizatórias de magistrados e membros do Ministério Público (REs 968646 e 1059466, Temas 976 e 966; ADIs 6601, 6604, 6606; Rcl 88319). Em voto conjunto dos relatores (Gilmar Mendes, Alexandre de Moraes, Flávio Dino, Cristiano Zanin), a Corte manteve o teto de 35% do subsídio para o conjunto das verbas, mas autorizou: implementação imediata da PVTAC (Parcela de Valorização por Tempo de Antiguidade na Carreira, ~5% a cada 5 anos de atividade jurídica) para ativos, inativos e pensionistas, sem necessidade de requerimento individual; cumulação da PVTAC com a VPNI decorrente do antigo ATS, desde que não usado o mesmo período de atividade jurídica para as duas parcelas; conversão em indenização pecuniária de férias, licenças-prêmio e plantões não usufruídos anteriores à tese fixada em março. Pagamentos de passivos anteriores a fevereiro de 2026 seguem condicionados a auditoria da Corregedoria Nacional de Justiça e referendo do STF.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF",
+    "PGR",
+    "CNJ"
+   ],
+   "tags": [
+    "stf",
+    "P05",
+    "P11"
+   ],
+   "fontes": [
+    "https://noticias.stf.jus.br/postsnoticias/stf-mantem-obrigatoriedade-de-respeito-ao-teto-remuneratorio-e-limitacao-sobre-o-pagamentos-de-verbas-indenizatorias/",
+    "https://www.migalhas.com.br/quentes/459249/stf-flexibiliza-decisao-sobre-penduricalhos-mas-mantem-limite-de-35",
+    "https://www.sindifisco-ms.org.br/stf-tem-9-votos-para-liberar-parte-dos-penduricalhos-a-juizes-e-membros-do-mp/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1637,
+   "data": "2026-06-11",
+   "titulo": "Flávio Bolsonaro protocola notícia-crime contra Lula no STF por incitação ao crime e ameaça",
+   "descricao": "O senador Flávio Bolsonaro (PL-RJ), pré-candidato à Presidência, protocolou notícia-crime no STF contra o presidente Lula, com base na declaração de 02/06/2026 em Catalão (GO). A defesa (advogados Tracy Reinaldet, Matteus Macedo e Leonardo Castegnaro) argumenta que a fala configura incitação ao homicídio por enforcamento e ameaça, citando como agravante o atentado a faca sofrido por Jair Bolsonaro em 2018. A petição afirma que publicações nas redes sociais com ameaças contra Flávio e familiares, posteriores à fala, somaram mais de 14 milhões de visualizações.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF",
+    "Senado Federal",
+    "Presidência da República"
+   ],
+   "tags": [
+    "stf",
+    "P03"
+   ],
+   "fontes": [
+    "https://www.poder360.com.br/poder-justica/flavio-aciona-stf-contra-lula-por-fala-sobre-enforcamento/",
+    "https://www.brasil247.com/brasil/flavio-bolsonaro-aciona-stf-e-acusa-lula-de-incitacao-ao-crime-por-criticar-traidores-da-patria",
+    "https://www.otempo.com.br/eleicoes/2026/presidentes/2026/6/11/flavio-bolsonaro-envia-noticia-crime-contra-lula-por-fala-sobre-traidor-da-patria-e-enforcamento"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1822,
+   "data": "2026-06-11",
+   "titulo": "Flávio Bolsonaro protocola notícia-crime contra Lula no STF por ameaça e incitação",
+   "descricao": "O senador Flávio Bolsonaro (PL-RJ) protocolou notícia-crime no STF contra o presidente Lula, solicitando abertura de inquérito por incitação ao crime e ameaça, com base no discurso de 2 de junho em Catalão (GO) (id_corpus 1749). A peça argumenta que a fala de Lula funcionou como \"fagulha lançada sobre palha seca\", citando levantamento dos advogados de Flávio de mais de 1.600 postagens no X nas 24h seguintes ao discurso contendo termos como \"matar\", \"fuzilar\" e \"esfaquear\" direcionados a Flávio e familiares, além de 500 postagens com ameaças veladas, somando mais de 14 milhões de visualizações. A petição cita precedentes de violência política (assassinato de Miguel Uribe Turbay na Colômbia, homicídio de Charlie Kirk nos EUA, atentado a Jair Bolsonaro em 2018) para sustentar o nexo causal alegado.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF"
+   ],
+   "tags": [
+    "stf",
+    "P04"
+   ],
+   "fontes": [
+    "https://exame.com/brasil/flavio-bolsonaro-protocola-noticia-crime-contra-lula-no-stf/",
+    "https://www.dgabc.com.br/Noticia/4328485/flavio-bolsonaro-protocola-noticia-crime-no-stf-contra-lula-por-ameaca-e-incitacao-ao-crime",
+    "https://www.jornale.com.br/post/fl%C3%A1vio-bolsonaro-protocola-not%C3%ADcia-crime-no-stf-contra-lula-por-amea%C3%A7a-e-incita%C3%A7%C3%A3o-ao-crime"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1627,
+   "data": "2026-05-29",
+   "titulo": "Ministro Luiz Fux (STF) nega pedido da Mesa Diretora da Alerj para que Douglas Ruas assuma interinamente o governo do Rio de Janeiro",
+   "descricao": "Em 29/05/2026, Fux negou em decisão monocrática pedido da Alerj para que Douglas Ruas (presidente da Casa desde 17/04/2026) assumisse o Executivo estadual, invocando posição prévia do colegiado que mantém Ricardo Couto (TJ-RJ) como interino até definição do mandato-tampão.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF",
+    "Alerj",
+    "TJ-RJ"
+   ],
+   "tags": [
+    "P03",
+    "luiz-fux",
+    "douglas-ruas",
+    "ricardo-couto",
+    "alerj",
+    "adi-7942",
+    "stf",
+    "decisao-monocratica"
+   ],
+   "fontes": [
+    "https://noticias.stf.jus.br/postsnoticias/stf-nega-pedido-da-alerj-e-mantem-desembargador-como-governador-interino-do-rio-de-janeiro/",
+    "https://agenciabrasil.ebc.com.br/justica/noticia/2026-05/fux-nega-pedido-de-douglas-ruas-para-assumir-governo-interino-do-rio",
+    "https://www.band.com.br/politica/noticias/fux-nega-pedido-de-ruas-para-assumir-governo-do-rj-de-forma-interina-202605291935"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
   {
    "id": 1448,
    "data": "2026-05-09",
@@ -63,6 +311,32 @@
    "valor_envolvido": null
   },
   {
+   "id": 1624,
+   "data": "2026-05-08",
+   "titulo": "Bolsonaro protocola Revisão Criminal no STF — Alega 'erro judiciário' e cerceamento de defesa",
+   "descricao": "Defesa de Bolsonaro protocola revisão criminal após Lei 15.402/2026.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF — 2ª Turma"
+   ],
+   "tags": [
+    "bolsonaro",
+    "revisao-criminal",
+    "lei-dosimetria",
+    "stf",
+    "mauro-cid",
+    "erro-judiciario",
+    "8-janeiro"
+   ],
+   "fontes": [
+    "https://www.hojeemdia.com.br/politica/bolsonaro-entra-com-revis-o-criminal-no-stf-para-anular-condenac-o-apos-dosimetria-ser-promulgada-1.1116332"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
    "id": 1605,
    "data": "2026-05-04",
    "titulo": "Partido Novo protocola representação na PGR contra Andrei Rodrigues",
@@ -108,6 +382,137 @@
    ],
    "fontes": [
     "https://www.antoniopessoacardoso.com.br/2026/05/penduricalhos-na-justica-militar.html"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1599,
+   "data": "2026-05-01",
+   "titulo": "Erosão do consenso de apoio a Moraes: OAB, MBL, senadores e governadores revisam posições públicas (2019–2026)",
+   "descricao": "Reportagem da Gazeta do Povo documenta 9 figuras e entidades que apoiaram ou toleraram publicamente a atuação de Alexandre de Moraes entre 2019 e 2024 e posteriormente reverteram suas posições de forma explícita ou implícita. Casos documentados com declarações antes/depois: (1) OAB Federal — apoiou abertura do INQ das Fake News em mar/2019; 27 presidentes estaduais assinam ofício crítico em fev/2026 citando 'investigação perpétua' e 'tom intimidatório'. (2) Hamilton Mourão — declarou 'democracia pujante' em dez/2022; admitiu publicamente ter 'se enganado' em ago/2024 no plenário do Senado, citando 'relações espúrias' do gabinete de Moraes com o TSE. (3) Ciro Gomes — chamou de 'exótico' o procedimento em 2020 mas defendeu 'palavra derradeira da Suprema Corte' em ago/2022; em ago/2024, usou metáfora do árbitro que 'bate lateral, faz gol, valida e faz a perícia do VAR'. (4) Oriovisto Guimarães — pediu ao Senado que 'emprestasse os ombros' ao STF em ago/2021; assinou pedido de impeachment de Moraes em ago/2025. (5) Jorge Kajuru — pediu impeachment em 2021, elogiou Moraes em fev/2022, assinou segundo pedido em ago/2025. (6) Arthur Lira — defendeu 'independência entre poderes' após prisão de Daniel Silveira em fev/2021; reteve CPI do Abuso de Autoridade enquanto STF arquivou denúncias contra ele; criticou 'magistrados não eleitos' em jul/2025. (7) Renan Santos/MBL — defendeu inquérito das 'milícias digitais' e medidas contra bolsonaristas; declarou que Moraes 'executa vingança' em nov/2025. (8) Eduardo Leite — repudiou sanções Magnitsky contra Moraes em jul/2025; pediu impeachment em nov/2025 após indícios de 'relação espúria' com caso Master. (9) Felipe Neto — defendeu bloqueios de contas pelo STF em abr/2024; anunciou afastamento do debate público em fev/2025 sem revisão explícita.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF",
+    "OAB",
+    "Senado Federal",
+    "Câmara dos Deputados",
+    "MBL"
+   ],
+   "tags": [
+    "stf",
+    "P04b",
+    "P04",
+    "P09"
+   ],
+   "fontes": [
+    "https://www.gazetadopovo.com.br/ideias/lista-quem-apoiou-abusos-moraes-depois-mudou-opiniao/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1797,
+   "data": "2026-04-27",
+   "titulo": "STF nega revisão criminal e concede prisão domiciliar humanitária a idoso de Maringá condenado a 14 anos por 8 de janeiro",
+   "descricao": "Antônio Teodoro de Moraes, 74 anos, empresário e ex-bancário de Maringá (PR), foi condenado pela 1ª Turma do STF em sessão virtual (14-21/02/2025) a 14 anos de prisão (posteriormente referido em decisão de Toffoli como 12 anos e 1 mês) por golpe de Estado, abolição violenta do Estado Democrático de Direito, dano qualificado, deterioração de patrimônio tombado e associação criminosa armada, com base em imagem/vídeo mostrando-o em frente ao STF durante os atos de 8/1/2023. Preso pela Polícia Federal em 13/03/2025 para cumprimento imediato da pena (sem direito a recorrer em liberdade, por entendimento de risco de fuga). Em 30/10/2025, o ministro Dias Toffoli negou pedido de revisão criminal, classificando o recurso da defesa como tentativa de reabrir debate já apreciado na AP 2550. Em 27/04/2026, o STF converteu a pena para prisão domiciliar humanitária com tornozeleira eletrônica, por razões de saúde, mediante pedido da defesa (advogado Bruno Brandão). Réu não possuía antecedentes criminais; alegou ter cuidado da mãe de 92 anos e dos 11 irmãos ao longo da vida, ter viajado a Brasília por curiosidade em ônibus fretado, e não ter participado de depredação — apenas observado a cena por cerca de 30 minutos antes de ser dispersado por gás lacrimogêneo.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF",
+    "Polícia Federal",
+    "Penitenciária Estadual de Maringá"
+   ],
+   "tags": [
+    "stf",
+    "8-de-janeiro",
+    "dosimetria",
+    "prisao-preventiva"
+   ],
+   "fontes": [
+    "https://diariodonoroeste.com.br/empresario-de-maringa-e-condenado-a-14-anos-de-prisao-por-participacao-nos-atos-de-8-de-janeiro/",
+    "https://gmconline.com.br/noticias/politica/defesa-de-maringaense-condenado-pelo-stf-a-14-anos-por-participacao-nos-atos-de-8-de-janeiro-recorre-de-sentenca/",
+    "https://paiquerefm.com.br/maringaense-e-condenado-a-14-anos-por-participacao-nos-atos-golpistas-de-8-de-janeiro/",
+    "https://www.migalhas.com.br/quentes/443515/stf-rejeita-revisao-criminal-de-condenados-pelos-atos-de-8-de-janeiro",
+    "https://gmconline.com.br/noticias/politica/stf-concede-prisao-domiciliar-a-empresario-de-maringa-condenado-pelos-atos-de-8-de-janeiro/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1445,
+   "data": "2026-04-15",
+   "titulo": "MPMS Oculta Dados De Remuneração No Portal Da Transparência Após Decisão Do STF",
+   "descricao": "Após a decisão do STF de 25 de março de 2026, o MPMS adotou manobra para dificultar o acesso público a dados de remuneração no Portal da Transparência, escondendo valores que revelavam supersalários de até R$ 2,6 milhões anuais. O procurador-geral Romão Avila foi reeleito ao comando do MPMS em meio ao escândalo dos penduricalhos. O ministro Gilmar Mendes sugeriu que o CNMP é o responsável pelos penduricalhos que sustentam os supersalários.",
+   "grupo": "penduricalhos",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "MPMS — Ministério Público de Mato Grosso do Sul",
+    "CNMP"
+   ],
+   "tags": [
+    "penduricalhos",
+    "promotor",
+    "procurador",
+    "mpms",
+    "mato-grosso-do-sul",
+    "ms",
+    "transparencia",
+    "opacidade"
+   ],
+   "fontes": [
+    "https://correiodoestado.com.br/cidades/mpms-adota-nova-manobra-para-esconder-valor-dos-supersalarios/463182/",
+    "https://midiamax.com.br/politica/transparencia/2026/manobra-mpms-deixa-farra-penduricalhos-fora-radar-expoe-supersalarios/",
+    "https://midiamax.com.br/politica/transparencia/2026/meio-escandalo-penduricalhos-romao-avila-reeleito-comando-mpms/",
+    "https://midiamax.com.br/politica/2026/gilmar-mendes-sugere-cnmp-responsavel-penduricalhos-sustentam-supersalarios/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "Até R$ 2.600.000,00/ano por membro do MPMS"
+  },
+  {
+   "id": 1569,
+   "data": "2026-04-15",
+   "titulo": "Toffoli devolve operações Rejeito/Parcours à 1ª instância — sem nenhuma condenação proferida no STF",
+   "descricao": "Toffoli determina retorno das operações Rejeito, Intrafortis, Contrassabotagem, Parcours e Poeira Vermelha à 3ª Vara Federal Criminal de Belo Horizonte. Motivo: PF e PGR concluem não haver 'qualquer elemento mínimo' vinculando o dep. Luiz Fernando Faria (União-MG) ao esquema — único fundamento que havia levado o conjunto ao STF. Nenhuma condenação proferida durante os 6+ meses no Supremo.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [],
+   "tags": [
+    "P06",
+    "operacao-rejeito"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1408,
+   "data": "2026-04-13",
+   "titulo": "Moraes abre inquérito contra pré-candidato à Presidência Flávio Bolsonaro por postagem criticando Lula após prisão de Maduro",
+   "descricao": "Alexandre de Moraes assina decisão em 13/04/2026 — publicada em 15/04 — determinando à Polícia Federal a abertura de inquérito para apurar suposta calúnia do senador Flávio Bolsonaro (PL-RJ) contra o ...",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF",
+    "TSE",
+    "PF",
+    "PGR",
+    "Senado"
+   ],
+   "tags": [
+    "stf"
+   ],
+   "fontes": [
+    "https://www.poder360.com.br/poder-justica/flavio-bolsonaro-vira-alvo-de-inquerito-por-calunia-contra-lula/",
+    "https://www.gazetadopovo.com.br/republica/moraes-manda-pf-investigar-flavio-bolsonaro-por-postagem-contra-lula/",
+    "https://www.conjur.com.br/2026-abr-15/flavio-bolsonaro-sera-investigado-por-associar-lula-a-trafico-internacional/",
+    "https://jovempan.com.br/noticias/politica/moraes-inquerito-flavio-bolsonaro-post-lula.html"
    ],
    "evidence_status": "ev-confirmed",
    "valor_envolvido": null
@@ -218,6 +623,90 @@
    "valor_envolvido": "Economia estimada de R$ 7,3 bilhões/ano"
   },
   {
+   "id": 1626,
+   "data": "2026-03-23",
+   "titulo": "Vácuo prolongado na sucessão do governo do Rio de Janeiro após renúncia de Cláudio Castro mantém desembargador como chefe do Executivo por decisão do STF",
+   "descricao": "Cláudio Castro renunciou ao governo do RJ em 23/03/2026, véspera de inelegibilidade no TSE. Sem vice e com presidente da Alerj afastado, Ricardo Couto (presidente do TJ-RJ) assumiu interinamente o Executivo — magistrado não eleito à frente do estado por prazo indeterminado. STF dividido sobre eleição direta vs indireta; Flávio Dino pediu vista por 21 dias.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "Governo do Estado do Rio de Janeiro",
+    "TJ-RJ",
+    "Alerj",
+    "TSE",
+    "STF"
+   ],
+   "tags": [
+    "P03",
+    "claudio-castro",
+    "ricardo-couto",
+    "alerj",
+    "stf",
+    "tse",
+    "sucessao-governo-rj"
+   ],
+   "fontes": [
+    "https://agenciabrasil.ebc.com.br/politica/noticia/2026-03/claudio-castro-diz-que-sai-do-governo-do-rio-de-cabeca-erguida",
+    "https://www.tse.jus.br/comunicacao/noticias/2026/Marco/tse-torna-inelegivel-ex-governador-do-rio-claudio-castro",
+    "https://www.gazetadopovo.com.br/republica/dino-libera-julgamento-sobre-sucessao-no-rj-apos-travamento-de-21-dias/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1339,
+   "data": "2026-03-09",
+   "titulo": "Esposa de Moraes confirma contrato com Banco Master após quatro meses de silêncio",
+   "descricao": "Após quatro meses desde a revelação, o escritório Barci de Moraes confirma ter prestado serviços ao Banco Master entre fevereiro de 2024 e novembro de 2025.",
+   "grupo": "chokepoint_stf",
+   "gravidade": "alta",
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF"
+   ],
+   "tags": [
+    "stf",
+    "alexandre-de-moraes",
+    "banco-master",
+    "conflito-de-interesses"
+   ],
+   "fontes": [
+    "https://www.gazetadopovo.com.br/republica/esposa-moraes-nunca-conduziu-causa-banco-master-stf/",
+    "https://www.cartacapital.com.br/justica/esposa-de-moraes-detalha-escopo-de-contrato-com-o-banco-master-e-nega-atuacao-junto-ao-stf/",
+    "https://m.imirante.com/noticias/brasil/2026/03/09/ipolitica-escritorio-da-mulher-de-moraes-confirma-contrato-com-master-e-nega-atuacao-no-stf"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 129 milhões (contrato previsto)"
+  },
+  {
+   "id": 1848,
+   "data": "2026-03-05",
+   "titulo": "Gilmar Mendes suspende quebra de sigilo de empresa da família Toffoli requisitada por CPI do Crime Organizado",
+   "descricao": "O ministro Gilmar Mendes suspendeu liminarmente decisão que autorizava a quebra de sigilo da Maridt, empresa da família de Dias Toffoli com participação societária no Resort Tayayá (Paraná), negócio que envolveu fundo (administrado pela Reag) ligado ao entorno de Daniel Vorcaro e também citado na Operação Carbono Oculto. A CPI do Crime Organizado buscava os dados para verificar origem e destino de recursos e eventual conexão com as investigações do Master. Toffoli reconheceu a participação societária, declarou ter informado os valores à Receita Federal e negou recebimento direto de Vorcaro. Analistas identificaram ao menos oito falhas processuais na decisão de Gilmar Mendes, incluindo o uso de prevenção fundada em processo de terceiros arquivado e sem similitude fática, segundo o constitucionalista André Marsiglia.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF",
+    "CPI do Crime Organizado",
+    "Maridt"
+   ],
+   "tags": [
+    "stf",
+    "P02",
+    "P03",
+    "P07",
+    "ev-confirmed"
+   ],
+   "fontes": [
+    "https://www.gazetadopovo.com.br/republica/golpismo-juridico-corporativismo-e-manobras-processuais-de-gilmar-mendes-blindam-toffoli-no-stf/",
+    "https://www.gazetadopovo.com.br/opiniao/editoriais/gilmar-mendes-dias-toffoli-quebra-sigilo/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
    "id": 1337,
    "data": "2026-03-04",
    "titulo": "Flávio Dino invalida quebras de sigilo da CPMI do INSS a pedido de investigada ligada a Lulinha",
@@ -290,11 +779,37 @@
     "P11",
     "operacao-rejeito"
    ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1441,
+   "data": "2026-02-28",
+   "titulo": "Carta Aberta Da Sociedade Civil Pelo Fim Dos Supersalários No Serviço Público",
+   "descricao": "Em fevereiro de 2026, coalizão de organizações da sociedade civil — incluindo Transparência Internacional Brasil e Transparência Brasil — lançou carta aberta denunciando a multiplicação de penduricalhos no setor público e exigindo o cumprimento do teto constitucional. O documento reuniu dados sobre R$ 10,7 bilhões pagos acima do teto ao Judiciário em 2025.",
+   "grupo": "penduricalhos",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "Transparência Internacional Brasil",
+    "Transparência Brasil",
+    "Justa"
+   ],
+   "tags": [
+    "penduricalhos",
+    "supersalario",
+    "sociedade-civil",
+    "transparencia-brasil",
+    "teto-constitucional",
+    "brasil"
+   ],
    "fontes": [
-    "Justiça Federal MG; MPF"
+    "https://transparenciainternacional.org.br/posts/organizacoes-lancam-carta-aberta-pelo-fim-dos-supersalarios/",
+    "https://www.justa.org.br/2026/02/carta-aberta-da-sociedade-civil-pelo-fim-dos-supersalarios-no-servico-publico/"
    ],
    "evidence_status": "ev-confirmed",
-   "valor_envolvido": null
+   "valor_envolvido": "R$ 10,7 bilhões (pagamentos extrateto ao Judiciário em 2025)"
   },
   {
    "id": 1336,
@@ -323,6 +838,34 @@
    ],
    "evidence_status": "ev-confirmed",
    "valor_envolvido": null
+  },
+  {
+   "id": 1440,
+   "data": "2026-02-26",
+   "titulo": "MPMT Pagou R$ 15,3 Milhões Em Retroativos A Promotores Em Dois Anos",
+   "descricao": "Em fevereiro de 2026, o Ministério Público de Mato Grosso (MPMT) pagou R$ 12,31 milhões em verbas retroativas — salto significativo em relação a meses anteriores. No acumulado de dois anos, o MPMT desembolsou R$ 15,3 milhões em retroativos a promotores e procuradores, prática que se tornou alvo de escrutínio nacional após os levantamentos sobre a explosão de penduricalhos.",
+   "grupo": "penduricalhos",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "Ministério Público de Mato Grosso (MPMT)"
+   ],
+   "tags": [
+    "penduricalhos",
+    "promotor",
+    "procurador",
+    "supersalario",
+    "mpmt",
+    "mato-grosso",
+    "mt",
+    "retroativos"
+   ],
+   "fontes": [
+    "https://www.cbncuiaba.com.br/2026/02/26/mpmt-pagou-r-153-milhoes-em-retroativos-a-promotores-e-procuradores-em-dois-anos/",
+    "https://pagina12.com.br/politica/2026/02/25/31379-supersalarios-em-mato-grosso-ministerio-publico-pagou-r-153-milhoes-em-retroativos-e-entra-no-radar-nacional-de-explosao-de-penduricalhos"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 15.300.000,00 (dois anos) / R$ 12.310.000,00 em fevereiro/2026"
   },
   {
    "id": 1334,
@@ -404,6 +947,78 @@
    "valor_envolvido": null
   },
   {
+   "id": 1847,
+   "data": "2026-02-01",
+   "titulo": "Toffoli declara suspeição para o caso Master após PF citar seu nome em relatório enviado a Fachin",
+   "descricao": "Em fevereiro de 2026, o ministro Dias Toffoli declarou suspeição por 'razões de foro íntimo' para atuar nos processos da Operação Compliance Zero, um dia depois de a Polícia Federal enviar ao presidente do STF, Edson Fachin, relatório mencionando o próprio Toffoli no caso Master. A decisão foi tomada em reunião com todos os ministros da Corte. André Mendonça foi sorteado como novo relator. Toffoli também se declarou suspeito, separadamente, para o Mandado de Segurança 40791, que tratava de pedido de CPI na Câmara sobre o Banco Master.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF",
+    "Polícia Federal"
+   ],
+   "tags": [
+    "stf",
+    "P02",
+    "P03",
+    "ev-confirmed"
+   ],
+   "fontes": [
+    "https://www.correiobraziliense.com.br/mundo/2026/03/7380814-com-voto-de-gilmar-mendes-stf-mantem-por-unanimidade-prisao-de-vorcaro-do-banco-master.html",
+    "https://noticias.stf.jus.br/postsnoticias/2a-turma-do-stf-mantem-prisao-de-daniel-vorcaro-e-de-outros-investigados-no-caso-master/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1844,
+   "data": "2026-01-27",
+   "titulo": "Metrópoles revela duas visitas de Moraes à mansão de Vorcaro em Brasília; Moraes nega formalmente",
+   "descricao": "Coluna de Andreza Matais (Metrópoles) relata, com base em quatro testemunhas, que o ministro Alexandre de Moraes esteve ao menos duas vezes na mansão de Daniel Vorcaro em Brasília, incluindo um encontro no primeiro semestre de 2025 em que foi apresentado ao então presidente do BRB, Paulo Henrique Costa — no momento em que o Master buscava no BRB uma tentativa de venda/socorro financeiro, posteriormente barrada pelo Banco Central. Em nota oficial do STF, Moraes classificou a reportagem como 'falsa e mentirosa' e negou que o encontro tenha ocorrido, chamando-a de padrão de 'ataques desqualificados' contra ministros da Corte.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF",
+    "Banco Master",
+    "BRB"
+   ],
+   "tags": [
+    "stf",
+    "P02",
+    "P05",
+    "ev-contested"
+   ],
+   "fontes": [
+    "https://www.metropoles.com/colunas/andreza-matais/o-encontro-de-moraes-e-paulo-henrique-na-mansao-de-vorcaro-do-master",
+    "https://oantagonista.com.br/brasil/moraes-nega-encontro-com-ex-presidente-do-brb-e-vorcaro-em-brasilia/",
+    "https://agenciabrasil.ebc.com.br/justica/noticia/2026-01/moraes-nega-encontro-com-ex-presidente-do-brb-na-casa-de-vorcaro"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1566,
+   "data": "2026-01-20",
+   "titulo": "Esposa de ministro do STF assume defesa de investigado da Rejeito no mesmo tribunal",
+   "descricao": "Viviane Barci de Moraes — esposa do ministro Alexandre de Moraes — assume por substabelecimento a defesa de Lucas Kallas no STF. Petição assinada também pelos filhos do casal. O mesmo escritório havia sido contratado pelo Banco Master (Daniel Vorcaro, sócio de Kallas) por R$ 129 milhões meses antes.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [],
+   "tags": [
+    "P03",
+    "P09",
+    "operacao-rejeito"
+   ],
+   "fontes": [
+    "https://www.ainvestigacao.com/p/o-terceiro-manuscrito-omitido"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
    "id": 1565,
    "data": "2026-01-14",
    "titulo": "TRF-6 solta restantes da Rejeito — 22 prisões preventivas chegam a zero em 118 dias",
@@ -417,10 +1032,82 @@
     "P06",
     "operacao-rejeito"
    ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1438,
+   "data": "2025-12-31",
+   "titulo": "MPMS Paga Supersalários De Até R$ 351 Mil A Promotores Em Dezembro De 2025",
+   "descricao": "Em dezembro de 2025, o Ministério Público de Mato Grosso do Sul (MPMS) pagou remunerações entre R$ 302 mil e R$ 351 mil a 17 promotores e procuradores. Nenhum nome aparece no portal de transparência — apenas o da promotoria. Os penduricalhos que inflaram os salários do MPMS custaram mais de R$ 153 milhões ao longo de 2025, incluindo R$ 10,6 milhões em auxílio-alimentação.",
+   "grupo": "penduricalhos",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "Ministério Público de Mato Grosso do Sul (MPMS)"
+   ],
+   "tags": [
+    "penduricalhos",
+    "promotor",
+    "procurador",
+    "supersalario",
+    "mpms",
+    "mato-grosso-do-sul",
+    "ms",
+    "dezembrada"
+   ],
    "fontes": [
-    "TRF-6; imprensa"
+    "https://brasilnoticia.com.br/mato-grosso-do-sul/mpms-paga-supersalarios-de-ate-r-351-mil-a-promotores-em-dezembro/",
+    "https://midiamax.com.br/politica/transparencia/2026/penduricalhos-inflaram-salarios-mpms-custaram-mais-r-153-milhoes-2025/"
    ],
    "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 153.032.756,92 em 2025 / até R$ 351 mil/mês em dezembro"
+  },
+  {
+   "id": 1845,
+   "data": "2025-12-23",
+   "titulo": "Moraes emite três notas sucessivas e contraditórias sobre contatos com Galípolo; Estadão relata seis ligações em um dia",
+   "descricao": "Em 22/12/2025, a colunista Malu Gaspar (O Globo) revelou que o ministro Alexandre de Moraes contatou o presidente do Banco Central, Gabriel Galípolo, em quatro oportunidades (um encontro presencial e três ligações) após a liquidação do Banco Master (18/11/2025). Em 23/12, o jornal O Estado de S. Paulo, citando fontes do meio jurídico e financeiro, elevou o número para seis ligações telefônicas em um único dia. No mesmo dia, Moraes emitiu três notas sucessivas: a primeira mencionava genericamente 'reuniões' com Galípolo sem detalhar número ou natureza; a segunda também evitava detalhamento; a terceira — divulgada à noite, já após a reportagem do Estadão — afirmou que houve apenas dois encontros presenciais em seu gabinete (14/08 e 30/09/2025), ambos sobre os efeitos da Lei Magnitsky, e declarou que 'inexistiu qualquer ligação telefônica entre ambos, para esse ou qualquer outro assunto'. A nota continha um erro factual sobre a data de aplicação da sanção Magnitsky (30 de agosto, quando a sanção ocorreu em 30 de julho). Galípolo confirmou os encontros em nota própria, também restringindo o tema à Lei Magnitsky. O caso motivou pedido de impeachment contra Moraes protocolado pela oposição no Congresso.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF",
+    "Banco Central",
+    "Congresso Nacional"
+   ],
+   "tags": [
+    "stf",
+    "P02",
+    "ev-contested"
+   ],
+   "fontes": [
+    "https://www.gazetadopovo.com.br/republica/moraes-ligou-seis-vezes-para-galipolo-num-dia-para-tratar-de-banco-master-diz-jornal/",
+    "https://www.cnnbrasil.com.br/politica/alexandre-moraes-nega-conversas-com-galipolo-sobre-o-banco-master/",
+    "https://www.cartacapital.com.br/politica/em-nova-nota-moraes-afirma-que-nao-discutiu-caso-master-com-galipolo/",
+    "https://www.brasildefato.com.br/2025/12/26/moraes-banco-master-e-galipolo-caso-gera-guerra-de-narrativas-e-ofensiva-da-extrema-direita-no-congresso/",
+    "https://revistaoeste.com/politica/banco-master-casos-envolvendo-moraes-e-o-bc-acendem-alerta-no-congresso/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1563,
+   "data": "2025-12-19",
+   "titulo": "Toffoli revoga prisões dos 4 líderes da Rejeito contrariando parecer expresso da PGR",
+   "descricao": "Ministro Dias Toffoli revoga prisões preventivas de Alan Cavalcante, Helder Freitas, João Alberto Paixão Lages e Rodrigo de Melo Teixeira. Decisão contraria expressamente parecer do PGR Paulo Gonet, que havia defendido manutenção das preventivas. Teixeira liberado com tornozeleira eletrônica, recolhimento noturno, retenção de passaporte e afastamento da PF.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [],
+   "tags": [
+    "P03",
+    "P06",
+    "operacao-rejeito"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
    "valor_envolvido": null
   },
   {
@@ -451,6 +1138,32 @@
    "valor_envolvido": "R$ 11,5 bilhões (magistratura)"
   },
   {
+   "id": 1330,
+   "data": "2025-12-09",
+   "titulo": "Contrato de R$ 129 milhões liga escritório da esposa de Moraes ao Banco Master",
+   "descricao": "O Globo revela contrato do escritório Barci de Moraes com o Banco Master prevendo R$ 3,6 milhões mensais, totalizando R$ 129 milhões em três anos.",
+   "grupo": "chokepoint_stf",
+   "gravidade": "alta",
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF"
+   ],
+   "tags": [
+    "stf",
+    "alexandre-de-moraes",
+    "banco-master",
+    "conflito-de-interesses",
+    "corrupcao"
+   ],
+   "fontes": [
+    "https://www.correiobraziliense.com.br/economia/2025/12/7310098-contrato-milionario-liga-banco-master-ao-escritorio-da-esposa-de-moraes.html",
+    "https://www.gazetadopovo.com.br/republica/esposa-moraes-nunca-conduziu-causa-banco-master-stf/",
+    "https://www.cartacapital.com.br/justica/esposa-de-moraes-detalha-escopo-de-contrato-com-o-banco-master-e-nega-atuacao-junto-ao-stf/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 129 milhões (contrato previsto)"
+  },
+  {
    "id": 1328,
    "data": "2025-11-28",
    "titulo": "Toffoli coloca caso de investigado do Master sob sigilo máximo após ser sorteado como relator",
@@ -474,6 +1187,32 @@
    ],
    "evidence_status": "ev-confirmed",
    "valor_envolvido": "R$ 129 milhões"
+  },
+  {
+   "id": 1327,
+   "data": "2025-11-26",
+   "titulo": "Toffoli viaja ao Peru com advogado de investigado do Caso Master em avião de empresário",
+   "descricao": "O ministro Dias Toffoli viajou a Lima no mesmo avião particular do empresário Luiz Oswaldo Pastore com o advogado Augusto Arruda Botelho, que representa Luiz Antônio Bull no STF.",
+   "grupo": "chokepoint_stf",
+   "gravidade": "alta",
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF",
+    "PF"
+   ],
+   "tags": [
+    "stf",
+    "dias-toffoli",
+    "banco-master",
+    "indecoro",
+    "conflito-de-interesses"
+   ],
+   "fontes": [
+    "https://www.correiobraziliense.com.br/economia/2025/12/7310098-contrato-milionario-liga-banco-master-ao-escritorio-da-esposa-de-moraes.html",
+    "https://www.gazetadopovo.com.br/republica/moraes-segue-postura-toffoli-deixa-lacunas-caso-banco-master/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
   },
   {
    "id": 1326,
@@ -500,6 +1239,53 @@
    ],
    "evidence_status": "ev-confirmed",
    "valor_envolvido": "R$ 129 milhões"
+  },
+  {
+   "id": 1846,
+   "data": "2025-11-17",
+   "titulo": "Dados periciados pela PF indicam troca de mensagens entre Vorcaro e Moraes no dia da prisão do banqueiro",
+   "descricao": "Segundo reportagem de Malu Gaspar (O Globo), replicada por CNN Brasil, InfoMoney e Gazeta do Povo, dados extraídos do celular de Daniel Vorcaro pela Polícia Federal mostram troca de mensagens com o ministro Alexandre de Moraes ao longo de 17/11/2025 — dia em que Vorcaro foi preso no Aeroporto de Guarulhos. As mensagens teriam ocorrido entre 7h19 e 20h48, com Vorcaro relatando o andamento da tentativa de venda do banco e perguntando sobre o inquérito sigiloso. Ambos os interlocutores usavam o recurso de visualização única do WhatsApp após escrever o texto no bloco de notas — mas Vorcaro manteve os rascunhos salvos, permitindo a reconstrução pela perícia. Moraes, em nota, negou ter recebido as mensagens e classificou a informação como 'ilação mentirosa' contra o STF.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF",
+    "Polícia Federal",
+    "Banco Master"
+   ],
+   "tags": [
+    "stf",
+    "P02",
+    "P06",
+    "ev-contested"
+   ],
+   "fontes": [
+    "https://www.infomoney.com.br/politica/vorcaro-trocou-mensagens-com-moraes-no-dia-da-prisao-para-salvar-master-diz-jornal/",
+    "https://www.cnnbrasil.com.br/politica/vorcaro-trocou-mensagens-com-moraes-no-dia-em-que-foi-preso-diz-jornal/",
+    "https://www.gazetadopovo.com.br/republica/um-dia-na-vida-de-vorcaro-venda-do-banco-reuniao-com-bc-mensagens-a-moraes-e-prisao/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1562,
+   "data": "2025-11-15",
+   "titulo": "STF impõe sigilo absoluto — PF e advogados dos presos sem acesso aos autos",
+   "descricao": "Ministro Dias Toffoli amplia sigilo das operações Rejeito, Intrafortis, Contrassabotagem, Parcours e Poeira Vermelha ao ponto em que nem a própria PF nem os advogados dos investigados presos podiam consultar os autos. Em dez/2025, investigadores foram obrigados a pedir formalmente ao STF o número do processo.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [],
+   "tags": [
+    "P03",
+    "P06",
+    "operacao-rejeito"
+   ],
+   "fontes": [
+    "https://www.ainvestigacao.com/p/o-terceiro-manuscrito-omitido"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
   },
   {
    "id": 1321,
@@ -613,6 +1399,29 @@
    "valor_envolvido": null
   },
   {
+   "id": 1317,
+   "data": "2025-10-31",
+   "titulo": "Alexandre de Moraes solicita novos relatórios financeiros ao COAF",
+   "descricao": "STF amplia escopo de cooperação financeira em investigações contra figuras da oposição, gerando polêmica sobre legalidade.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF"
+   ],
+   "tags": [
+    "stf",
+    "relatorios-financeiros",
+    "alexandre-de-moraes"
+   ],
+   "fontes": [
+    "https://www.conjur.com.br/2025/10/31/stf-coaf-relatorios",
+    "https://g1.globo.com/stf-coaf-investigacoes"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
    "id": 1316,
    "data": "2025-10-30",
    "titulo": "Moraes encaminha ação contra jornalistas da Vaza Toga à PGR para análise",
@@ -697,6 +1506,29 @@
    "valor_envolvido": null
   },
   {
+   "id": 1311,
+   "data": "2025-10-21",
+   "titulo": "TSE aprova nova regulamentação de conteúdo eleitoral nas redes sociais",
+   "descricao": "TSE estabelece regramento para remoção rápida de conteúdos considerados eleitorais irregulares das plataformas.",
+   "grupo": "eleitoral_tse",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "TSE"
+   ],
+   "tags": [
+    "tse",
+    "big-techs",
+    "liberdade de expressão"
+   ],
+   "fontes": [
+    "https://www.tse.jus.br/noticias-tse/tse-regras-eleicoes-redes-2025",
+    "https://www.terra.com.br/noticias/tse-remocao-plataformas"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
    "id": 1310,
    "data": "2025-10-14",
    "titulo": "CNJ abre PAD contra desembargador do TJPR por décadas de assédio moral e sexual contra servidoras",
@@ -718,6 +1550,24 @@
     "https://www.conjur.com.br/2025-out-14/cnj-analisa-denuncia-de-assedio-moral-e-sexual-contra-desembargador/"
    ],
    "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1561,
+   "data": "2025-10-01",
+   "titulo": "Operação Rejeito remetida ao STF — citação a senadores aciona foro privilegiado",
+   "descricao": "Citação aos senadores Rodrigo Pacheco (PSD-MG) e Carlos Viana (Podemos-MG) nos manuscritos obriga remessa ao STF por foro privilegiado. Caso distribuído a Dias Toffoli por conexão com investigações anteriores da mineradora Gute Sicht. Pacheco declara não poder 'comentar sobre papel manuscrito de autoria incerta'. Manuscrito o posicionava como canal de blindagem em 2ª instância/TRF, conectado a João Alberto.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [],
+   "tags": [
+    "P03",
+    "P06",
+    "operacao-rejeito"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
    "valor_envolvido": null
   },
   {
@@ -783,9 +1633,9 @@
    "id": 1265,
    "data": "2025-08-17",
    "titulo": "Pontos Centrais Vazatoga2 - Crise Institucional e Judicial",
-   "descricao": "Arquivos do 8 de Janeiro e o Sistema Paralelo do STF/TSE",
+   "descricao": "As peças Vazatoga2 sintetizam denúncias jornalísticas e depoimentos (incluindo ex-assessor Eduardo Tagliaferro) sobre censura, biometria e atuações extraordinárias após o 8 de janeiro. O registro no JusMonitor documenta o episódio público e o debate institucional; não substitui apuração judicial conclusiva.",
    "grupo": "chokepoint_stf",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "STF",
@@ -805,17 +1655,24 @@
     "perseguicao-politica",
     "certidões"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": "R$ 30 milhões"
+   "fontes": [
+    "https://www.gazetadopovo.com.br/republica/vaza-toga-2-capitulo-mais-sombrio-autoritarismo-moraes",
+    "https://revistaoeste.com/politica/gabinete-paralelo-de-moraes-usurpou-funcoes-censurou-a-imprensa-e-violou-a-constituicao-afirmam-juristas",
+    "https://www12.senado.leg.br/radio/1/noticia/2025/09/02/comissao-ouve-ex-assessor-de-moraes-que-expos-conversas-que-ficaram-conhecidas-como-vaza-toga"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 30 milhões",
+   "alerta_critico": true,
+   "descricao_resumo": "Revelações da série Vaza Toga 2 sobre práticas atribuídas a estruturas paralelas ligadas ao STF/TSE, com repercussão no Senado.",
+   "descricao_detalhada": "As peças Vazatoga2 sintetizam denúncias jornalísticas e depoimentos (incluindo ex-assessor Eduardo Tagliaferro) sobre censura, biometria e atuações extraordinárias após o 8 de janeiro. O registro no JusMonitor documenta o episódio público e o debate institucional; não substitui apuração judicial conclusiva."
   },
   {
    "id": 1266,
    "data": "2025-08-17",
    "titulo": "Detalhamento Vazatoga2 - Crise Institucional e Judicial",
-   "descricao": "Arquivos do 8 de Janeiro e o Sistema Paralelo do STF/TSE",
+   "descricao": "As peças Vazatoga2 sintetizam denúncias jornalísticas e depoimentos (incluindo ex-assessor Eduardo Tagliaferro) sobre censura, biometria e atuações extraordinárias após o 8 de janeiro. O registro no JusMonitor documenta o episódio público e o debate institucional; não substitui apuração judicial conclusiva.",
    "grupo": "chokepoint_stf",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "STF",
@@ -835,17 +1692,24 @@
     "perseguicao-politica",
     "certidões"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": "R$ 30 milhões"
+   "fontes": [
+    "https://www.gazetadopovo.com.br/republica/vaza-toga-2-capitulo-mais-sombrio-autoritarismo-moraes",
+    "https://revistaoeste.com/politica/gabinete-paralelo-de-moraes-usurpou-funcoes-censurou-a-imprensa-e-violou-a-constituicao-afirmam-juristas",
+    "https://www12.senado.leg.br/radio/1/noticia/2025/09/02/comissao-ouve-ex-assessor-de-moraes-que-expos-conversas-que-ficaram-conhecidas-como-vaza-toga"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 30 milhões",
+   "alerta_critico": true,
+   "descricao_resumo": "Revelações da série Vaza Toga 2 sobre práticas atribuídas a estruturas paralelas ligadas ao STF/TSE, com repercussão no Senado.",
+   "descricao_detalhada": "As peças Vazatoga2 sintetizam denúncias jornalísticas e depoimentos (incluindo ex-assessor Eduardo Tagliaferro) sobre censura, biometria e atuações extraordinárias após o 8 de janeiro. O registro no JusMonitor documenta o episódio público e o debate institucional; não substitui apuração judicial conclusiva."
   },
   {
    "id": 1267,
    "data": "2025-08-17",
    "titulo": "Vazatoga2 - Resumo Executivo Crise Institucional e Judicial",
-   "descricao": "Arquivos do 8 de Janeiro e o Sistema Paralelo do STF/TSE",
+   "descricao": "As peças Vazatoga2 sintetizam denúncias jornalísticas e depoimentos (incluindo ex-assessor Eduardo Tagliaferro) sobre censura, biometria e atuações extraordinárias após o 8 de janeiro. O registro no JusMonitor documenta o episódio público e o debate institucional; não substitui apuração judicial conclusiva.",
    "grupo": "chokepoint_stf",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "STF",
@@ -865,17 +1729,24 @@
     "perseguicao-politica",
     "certidões"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.gazetadopovo.com.br/republica/vaza-toga-2-capitulo-mais-sombrio-autoritarismo-moraes",
+    "https://revistaoeste.com/politica/gabinete-paralelo-de-moraes-usurpou-funcoes-censurou-a-imprensa-e-violou-a-constituicao-afirmam-juristas",
+    "https://www12.senado.leg.br/radio/1/noticia/2025/09/02/comissao-ouve-ex-assessor-de-moraes-que-expos-conversas-que-ficaram-conhecidas-como-vaza-toga"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "alerta_critico": true,
+   "descricao_resumo": "Revelações da série Vaza Toga 2 sobre práticas atribuídas a estruturas paralelas ligadas ao STF/TSE, com repercussão no Senado.",
+   "descricao_detalhada": "As peças Vazatoga2 sintetizam denúncias jornalísticas e depoimentos (incluindo ex-assessor Eduardo Tagliaferro) sobre censura, biometria e atuações extraordinárias após o 8 de janeiro. O registro no JusMonitor documenta o episódio público e o debate institucional; não substitui apuração judicial conclusiva."
   },
   {
    "id": 1268,
    "data": "2025-08-17",
    "titulo": "Vazatoga2 - Resumo Geral Crise Institucional e Judicial",
-   "descricao": "Arquivos do 8 de Janeiro e o Sistema Paralelo do STF/TSE",
+   "descricao": "As peças Vazatoga2 sintetizam denúncias jornalísticas e depoimentos (incluindo ex-assessor Eduardo Tagliaferro) sobre censura, biometria e atuações extraordinárias após o 8 de janeiro. O registro no JusMonitor documenta o episódio público e o debate institucional; não substitui apuração judicial conclusiva.",
    "grupo": "chokepoint_stf",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "STF",
@@ -894,9 +1765,16 @@
     "perseguicao-politica",
     "certidões"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.gazetadopovo.com.br/republica/vaza-toga-2-capitulo-mais-sombrio-autoritarismo-moraes",
+    "https://revistaoeste.com/politica/gabinete-paralelo-de-moraes-usurpou-funcoes-censurou-a-imprensa-e-violou-a-constituicao-afirmam-juristas",
+    "https://www12.senado.leg.br/radio/1/noticia/2025/09/02/comissao-ouve-ex-assessor-de-moraes-que-expos-conversas-que-ficaram-conhecidas-como-vaza-toga"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "alerta_critico": true,
+   "descricao_resumo": "Revelações da série Vaza Toga 2 sobre práticas atribuídas a estruturas paralelas ligadas ao STF/TSE, com repercussão no Senado.",
+   "descricao_detalhada": "As peças Vazatoga2 sintetizam denúncias jornalísticas e depoimentos (incluindo ex-assessor Eduardo Tagliaferro) sobre censura, biometria e atuações extraordinárias após o 8 de janeiro. O registro no JusMonitor documenta o episódio público e o debate institucional; não substitui apuração judicial conclusiva."
   },
   {
    "id": 1262,
@@ -927,12 +1805,86 @@
    "valor_envolvido": null
   },
   {
+   "id": 1815,
+   "data": "2025-05-23",
+   "titulo": "STF conclui ADPF 165 após 16 anos: declara constitucionais os planos econômicos, veda ação rescisória e prorroga acordo por mais 24 meses",
+   "descricao": "Em 23/05/2025, o STF concluiu por unanimidade o julgamento da ADPF 165, sob relatoria de Cristiano Zanin, declarando constitucionais os Planos Bresser, Verão, Collor I e Collor II — encerrando definitivamente a controvérsia jurídica. A decisão reafirmou a homologação do acordo coletivo com seus aditamentos, fixou novo prazo de 24 meses para adesão de poupadores ainda não contemplados e determinou que processos já transitados em julgado não podem ser objeto de ação rescisória ou arguição de inexigibilidade com base na tese de inconstitucionalidade — fechando definitivamente a via judicial individual para quem não aderiu ao acordo dentro dos prazos.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF"
+   ],
+   "tags": [
+    "stf",
+    "P06"
+   ],
+   "fontes": [
+    "https://www.migalhas.com.br/quentes/431032/stf-valida-planos-economicos-e-da-mais-dois-anos-para-adesao-a-acordo",
+    "https://www.migalhas.com.br/quentes/433817/plano-collor-i-stf-exige-adesao-a-acordo-para-expurgos-inflacionarios"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1834,
+   "data": "2025-05-21",
+   "titulo": "TJRS condena jornalista e Zero Hora a pagar R$ 600 mil a desembargadora por publicar salário público da magistrada",
+   "descricao": "A juíza Karen Rick Bertoncello (Vara Cível de Porto Alegre) condenou a colunista Rosane Oliveira e o jornal Zero Hora (Grupo RBS) a pagar R$ 600 mil em danos morais à desembargadora Iris Helena Medeiros Nogueira, ex-presidente do TJRS, por reportagem de 2023 que expôs sua remuneração de R$ 662.389,16 em um mês — quase 16x o teto constitucional. Os dados são públicos e de divulgação obrigatória desde 2015 (determinação do CNJ), fato reconhecido na própria sentença; a condenação se baseou no tom da reportagem ('linguagem sarcástica e direcionada'), não na veracidade dos dados. Abraji classificou a decisão como risco à liberdade de imprensa. Zero Hora recorreu.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "TJRS",
+    "Zero Hora/Grupo RBS",
+    "Abraji",
+    "Fenaj",
+    "CNJ"
+   ],
+   "tags": [
+    "stf",
+    "P04"
+   ],
+   "fontes": [
+    "https://latamjournalismreview.org/pt-br/news/jornalista-e-condenada-a-pagar-r-600-mil-de-indenizacao-por-publicar-salario-de-desembargadora/",
+    "https://www.abi.org.br/tjrs-condena-jornalista-por-expor-salario-de-r-662-mil-de-magistrada/",
+    "https://www.gazetadopovo.com.br/republica/jornal-e-colunista-sao-condenados-a-indenizar-desembargadora-em-r-600-mil-por-materia-sobre-salario/",
+    "https://www.migalhas.com.br/quentes/430945/colunista-e-zh-indenizarao-por-materia-sobre-salario-de-desembargadora"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1133,
+   "data": "2025-05-01",
+   "titulo": "Moraes decide contra adversário de Vorcaro enquanto esposa mantinha contrato com o Master",
+   "descricao": "Cruzamento de datas revela que Moraes negou recurso de Vladimir Timerman em maio de 2025, período em que o escritório da esposa mantinha contrato de R$ 3,5 milhões mensais com o Banco Master.",
+   "grupo": "chokepoint_stf",
+   "gravidade": "alta",
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF"
+   ],
+   "tags": [
+    "stf",
+    "alexandre-de-moraes",
+    "banco-master",
+    "lawfare",
+    "conflito-de-interesses"
+   ],
+   "fontes": [
+    "https://www.goias246.com.br/noticia/31158/ultimas/moraes-decidiu-contra-inimigo-de-vorcaro-enquanto-esposa-mantinha-contrato-milionario-com-banco-master.html"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 3,5 milhões"
+  },
+  {
    "id": 1066,
    "data": "2025-01-01",
    "titulo": "Esquema de Corrupção com Ex-Governador Witzel",
-   "descricao": "Condenação por corrupção no Poder Judiciário durante gestão de Wilson Witzel✧  envolvendo venda de decisões.Desembargadores do TJ-RJ✧  ex-governador Wilson Witzel.",
+   "descricao": "A Corte Especial do STJ reconheceu pagamento dissimulado de vantagens indevidas envolvendo magistrados trabalhistas e o núcleo político da gestão Witzel. O caso ilustra captura institucional na interface Executivo–Judiciário trabalhista carioca.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -940,17 +1892,22 @@
     "judiciario",
     "rj"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/13032025-STJ-condena-desembargadores-do-TRT1-por-participacao-em-esquema-de-corrupcao.aspx",
+    "https://www.cartacapital.com.br/justica/stj-condena-tres-desembargadores-do-trt-rj-por-corrupcao-na-gestao-de-witzel"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "STJ condenou desembargadores do TRT-1 por participação em esquema de corrupção associado à gestão de Wilson Witzel no RJ.",
+   "descricao_detalhada": "A Corte Especial do STJ reconheceu pagamento dissimulado de vantagens indevidas envolvendo magistrados trabalhistas e o núcleo político da gestão Witzel. O caso ilustra captura institucional na interface Executivo–Judiciário trabalhista carioca."
   },
   {
    "id": 1070,
    "data": "2025-01-01",
    "titulo": "Operação 18 Minutos – venda de sentenças no TJ‑MA",
-   "descricao": "Indiciamento de desembargadores e juízes por corrupção✧  lavagem e organização criminosa por liberação fraudulenta de alvarás judiciais.Desembargadores Nelma Sarney✧  Antônio Guerreiro Júnior✧  Luiz Gonzaga Almeidajuízes Alice de Sousa Rocha✧  Cristiano Simas de Sousaadvogados e servidores",
+   "descricao": "A Operação 18 Minutos investiga magistrados, assessores e advogados por liberação fraudulenta de valores judiciais — o nome alude ao intervalo entre decisão e saque. O CNJ acompanhou afastamentos cautelares.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "PF",
@@ -962,17 +1919,23 @@
     "ma",
     "venda-de-sentencas"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.estadao.com.br/politica/o-que-se-sabe-operacao-18-minutos-investiga-suposta-venda-sentencas-juizes-nprp",
+    "https://g1.globo.com/ma/maranhao/noticia/2026/04/01/magistrados-e-ex-assessor-ostentacao-quem-sao-os-investigados-por-venda-de-decisoes-no-tj-ma.ghtml"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "alerta_critico": true,
+   "descricao_resumo": "PF e PGR apuram venda de sentenças e alvarás no TJ-MA, com prejuízo estimado na casa das dezenas de milhões.",
+   "descricao_detalhada": "A Operação 18 Minutos investiga magistrados, assessores e advogados por liberação fraudulenta de valores judiciais — o nome alude ao intervalo entre decisão e saque. O CNJ acompanhou afastamentos cautelares."
   },
   {
    "id": 1072,
    "data": "2025-01-01",
    "titulo": "Operação Mais Valia",
-   "descricao": "STJ condena desembargadores do Rio por esquema com ex-governador Wilson Witzel.DesembargadoresWilson Witzel",
+   "descricao": "A linha Mais Valia/Witzel documenta condenações por corrupção e lavagem na esfera trabalhista fluminense, com perda de cargo e penas privativas de liberdade aplicadas a desembargadores.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -980,17 +1943,22 @@
     "judiciario",
     "rio-de-janeiro"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/13032025-STJ-condena-desembargadores-do-TRT1-por-participacao-em-esquema-de-corrupcao.aspx",
+    "https://www.cartacapital.com.br/justica/stj-condena-tres-desembargadores-do-trt-rj-por-corrupcao-na-gestao-de-witzel"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Desdobramento condenatório no STJ de desembargadores do Rio ligados a esquema com o ex-governador Wilson Witzel.",
+   "descricao_detalhada": "A linha Mais Valia/Witzel documenta condenações por corrupção e lavagem na esfera trabalhista fluminense, com perda de cargo e penas privativas de liberdade aplicadas a desembargadores."
   },
   {
    "id": 1073,
    "data": "2025-01-01",
    "titulo": "Operação Naufrágio Corrupção na Justiça do ES",
-   "descricao": "Esquema de corrupção e venda de sentenças deflagrado em 2008✧  com condenações finais em 2025.Juízes✧  advogados✧  desembargadores do TJ-ES.",
+   "descricao": "A Operação Naufrágio prendeu desembargadores do Espírito Santo sob suspeita de comercialização de decisões. O caso tramitou por anos no STJ e permanece referência de captura em tribunal estadual.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -999,17 +1967,22 @@
     "es",
     "venda-de-sentencas"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.conjur.com.br/2019-ago-14/stj-julgara-acao-penal-desembargadores-espirito-santo",
+    "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias.aspx"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Investigação iniciada em 2008 sobre venda de decisões e nepotismo no TJ-ES, com ação penal no STJ.",
+   "descricao_detalhada": "A Operação Naufrágio prendeu desembargadores do Espírito Santo sob suspeita de comercialização de decisões. O caso tramitou por anos no STJ e permanece referência de captura em tribunal estadual."
   },
   {
    "id": 1077,
    "data": "2025-01-01",
    "titulo": "Operação Sisamnes",
-   "descricao": "Investigação da Polícia Federal sobre esquema milionário de vazamento de informações sigilosas e venda de sentenças judiciais✧  iniciado em 2020 e intensificado após o assassinato do advogado Roberto Zampieri em 2023✧  em Cuiabá (MT).",
+   "descricao": "Batizada em referência ao juiz mítico Sisamnes, a operação investiga intermediação de decisões e vazamentos. Em 2025–2026, Zanin autorizou inclusão de ministro do STJ no inquérito e a PGR apresentou denúncias contra lobistas e ex-servidores.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1018,17 +1991,24 @@
     "ms",
     "venda-de-sentencas"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": "R$ 50 milhões"
+   "fontes": [
+    "https://www.poder360.com.br/poder-justica/zanin-autoriza-pf-a-investigar-ministro-do-stj-por-venda-de-decisoes",
+    "https://g1.globo.com/politica/noticia/2026/05/27/pgr-ve-esquema-de-venda-de-sentencas-no-stj-e-denuncia-lobista-e-ex-servidores.ghtml",
+    "https://www1.folha.uol.com.br/poder/2025/10/inquerito-sobre-venda-de-decisoes-divide-stj-e-mencoes-geram-queixas-a-pf-e-stf.shtml"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 50 milhões",
+   "alerta_critico": true,
+   "descricao_resumo": "PF e STF/PGR apuram esquema de venda de sentenças e vazamento de informações sigilosas com ramificações no STJ.",
+   "descricao_detalhada": "Batizada em referência ao juiz mítico Sisamnes, a operação investiga intermediação de decisões e vazamentos. Em 2025–2026, Zanin autorizou inclusão de ministro do STJ no inquérito e a PGR apresentou denúncias contra lobistas e ex-servidores."
   },
   {
    "id": 1079,
    "data": "2025-01-01",
    "titulo": "Operação Última Ratio (continuação)",
-   "descricao": "PF pede ação contra 7 desembargadores por venda de decisão✧  com provas de corrupção.Sete desembargadores",
+   "descricao": "A Última Ratio descreve rede de intermediação com vantagens em espécie, bens de luxo e fazendas. O CNJ instaurou processos disciplinares contra desembargadores afastados.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "PF",
@@ -1040,17 +2020,23 @@
     "mato-grosso-do-sul",
     "venda-de-sentencas"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://g1.globo.com/ms/mato-grosso-do-sul/noticia/2026/04/17/aviao-carros-de-luxo-fazendas-e-milhoes-em-especie-como-era-esquema-de-venda-de-sentencas-no-tjms.ghtml",
+    "https://jurinews.com.br/brasil/operacao-ultima-ratio-cnj-instaura-pads-contra-desembargadores-do-tj-ms-afastados-por-suspeita-de-venda-de-sentencas"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "alerta_critico": true,
+   "descricao_resumo": "PF concluiu inquérito pedindo responsabilização de desembargadores do TJ-MS por venda de sentenças; CNJ abriu PADs.",
+   "descricao_detalhada": "A Última Ratio descreve rede de intermediação com vantagens em espécie, bens de luxo e fazendas. O CNJ instaurou processos disciplinares contra desembargadores afastados."
   },
   {
    "id": 1082,
    "data": "2025-01-01",
    "titulo": "Venda de Decisões no TJ-MS",
-   "descricao": "Esquema de corrupção envolvendo venda de decisões judiciais por desembargadores✧  com intermediação de advogados e filhos dos magistrados.Desembargadores Alexandre Aguiar Bastos✧  Marcos José de Brito Rodrigues✧  Sideni Soncini Pimentel✧  Vladimir Abreu da Silva✧  Sergio Fernandes Martins✧  Julio Roberto Siqueira Cardoso (aposentado)✧  Divoncir Schreiner Maran (aposentado)✧  advogado Felix Jayme da Cunha✧  conselheiro Osmar Domingues Jeronymo.",
+   "descricao": "Reportagens e inquérito da PF detalham nomes de desembargadores, advogados e conselheiro apontados como elos da comercialização de decisões no Mato Grosso do Sul.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "STF",
@@ -1062,17 +2048,22 @@
     "ms",
     "venda-de-sentencas"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": "R$ 3 milhões"
+   "fontes": [
+    "https://g1.globo.com/ms/mato-grosso-do-sul/noticia/2026/04/17/aviao-carros-de-luxo-fazendas-e-milhoes-em-especie-como-era-esquema-de-venda-de-sentencas-no-tjms.ghtml",
+    "https://jurinews.com.br/brasil/operacao-ultima-ratio-cnj-instaura-pads-contra-desembargadores-do-tj-ms-afastados-por-suspeita-de-venda-de-sentencas"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 3 milhões",
+   "descricao_resumo": "Esquema de venda de decisões no TJ-MS envolvendo desembargadores e intermediários, objeto da Operação Última Ratio.",
+   "descricao_detalhada": "Reportagens e inquérito da PF detalham nomes de desembargadores, advogados e conselheiro apontados como elos da comercialização de decisões no Mato Grosso do Sul."
   },
   {
    "id": 1083,
    "data": "2025-01-01",
    "titulo": "Venda de Sentenças por Desembargador de SP",
-   "descricao": "Desembargador acusado de vender sentenças em quatro processos✧  incluindo revogação de prisões e decisões favoráveis a réus.Desembargador Ivo de Almeida✧  quatro outros denunciados.",
+   "descricao": "A denúncia aponta negociação de decisões favoráveis a réus, incluindo solturas. O caso segue a linha de captura por venda de sentenças em tribunal de grande porte.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "PGR"
@@ -1083,17 +2074,180 @@
     "sp",
     "venda-de-sentencas"
    ],
+   "fontes": [
+    "https://www.conjur.com.br/2023-dez-11/pgr-denuncia-desembargador-do-tjsp-por-venda-de-sentencas",
+    "https://www.estadao.com.br/politica/desembargador-do-tjsp-e-denunciado-por-venda-de-sentencas"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "PGR denunciou desembargador do TJSP por alegada venda de sentenças em processos com revogação de prisões.",
+   "descricao_detalhada": "A denúncia aponta negociação de decisões favoráveis a réus, incluindo solturas. O caso segue a linha de captura por venda de sentenças em tribunal de grande porte."
+  },
+  {
+   "id": 1577,
+   "data": "2024-12-10",
+   "titulo": "Moraes proíbe Cremesp de requisitar prontuários de pacientes de aborto legal em qualquer hospital de São Paulo (ADPF 1.141)",
+   "descricao": "Em 10 de dezembro de 2024, o ministro Alexandre de Moraes, do STF, proibiu o Conselho Regional de Medicina do Estado de São Paulo (Cremesp) de requisitar prontuários médicos de pacientes que realizaram aborto legal em qualquer hospital paulista, sob pena de responsabilização pessoal do presidente do conselho. A decisão, no bojo da ADPF 1.141 (movida pelo PSOL contra resolução do CFM que restringia o aborto legal), foi motivada por notícias de que o Cremesp havia solicitado ao Hospital das Clínicas de Botucatu (UNESP) os prontuários de todas as pacientes que fizeram aborto legal nos últimos 12 meses. Dias antes, em 3 de dezembro, Moraes já havia cobrado esclarecimentos da prefeitura e do governo de São Paulo sobre suposta entrega desses dados ao conselho. Paralelamente, o MPF abriu inquérito contra o próprio Cremesp por suposto acesso indevido a prontuários, motivado por denúncia do sindicato médico paulista (Simesp) alegando perseguição a médicas que o conselho havia suspendido por irregularidades em abortos. O Cremesp argumenta ter competência legal de fiscalização da prática médica; conselheiros federais ouvidos pela imprensa avaliam que seu poder fiscalizador ficou ameaçado pela decisão.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [],
+   "tags": [
+    "alexandre-de-moraes",
+    "cremesp",
+    "adpf-1141",
+    "aborto-legal",
+    "fiscalizacao-medica",
+    "stf",
+    "conselho-regional-medicina",
+    "hc-botucatu-unesp",
+    "prontuarios-medicos",
+    "mpf"
+   ],
+   "fontes": [
+    "https://www.conjur.com.br/2024-dez-11/stf-proibe-cremesp-de-requisitar-prontuario-de-pacientes-que-fizeram-aborto-legal/",
+    "https://www.poder360.com.br/poder-justica/moraes-proibe-cremesp-de-pedir-dados-de-pacientes-que-abortaram/",
+    "https://exame.com/brasil/moraes-proibe-cremesp-de-pedir-prontuarios-de-pacientes-que-fizeram-aborto-legal/",
+    "https://www.migalhas.com.br/quentes/421365/moraes-proibe-cremesp-de-exigir-prontuario-pessoal-sobre-aborto-legal",
+    "https://www.gazetadopovo.com.br/vida-e-cidadania/moraes-intima-prefeitura-governo-sp-prontuarios-aborto/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 950,
+   "data": "2024-06-15",
+   "titulo": "Debate sobre legislação, soberania e investigações",
+   "descricao": "Avanço do debate público e jurídico sobre os limites de influência internacional, doações estrangeiras e necessidade de investigações parlamentares e do MPF, com base em denúncias de possível afronta à soberania eleitoral.",
+   "grupo": "eleitoral_tse",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "TSE",
+    "PF"
+   ],
+   "tags": [
+    "tse",
+    "tse",
+    "nacional",
+    "usaid"
+   ],
    "fontes": [],
    "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1578,
+   "data": "2024-05-17",
+   "titulo": "STF suspende resolução do CFM que restringia técnica de aborto legal após 22 semanas em casos de estupro (ADPF 1.141, liminar)",
+   "descricao": "Em 17 de maio de 2024, Alexandre de Moraes suspendeu liminarmente, na ADPF 1.141 movida pelo PSOL, a Resolução 2.378/2024 do Conselho Federal de Medicina (CFM), que proibia médicos de realizarem a técnica de assistolia fetal em gestações acima de 22 semanas — inclusive nos casos de aborto legal por estupro já previstos em lei. Moraes fundamentou a decisão em suposto abuso de poder regulamentar do CFM, afirmando que o Código Penal não estabelece limite gestacional para o procedimento. Em 19 de junho de 2024, Moraes deu 48h para cinco hospitais de São Paulo comprovarem não aplicação da resolução já suspensa, após relato de que a técnica não era realizada na cidade desde dezembro de 2023. A resolução do CFM gerou reação legislativa: o deputado Sóstenes Cavalcante (PL-RJ) apresentou projeto para criminalizar aborto após 22 semanas mesmo em casos legais, com urgência aprovada pela Câmara em 12/06/2024, posteriormente adiada pelo presidente Arthur Lira.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [],
+   "tags": [
+    "cfm",
+    "alexandre-de-moraes",
+    "adpf-1141",
+    "resolucao-2378-2024",
+    "assistolia-fetal",
+    "aborto-legal",
+    "stf",
+    "psol",
+    "sostenes-cavalcante"
+   ],
+   "fontes": [
+    "https://www.jota.info/tributos-e-empresas/saude/moraes-suspende-resolucao-do-cfm-que-restringe-o-aborto-legal-em-casos-de-estupro-17052024",
+    "https://www.cnnbrasil.com.br/politica/stf-moraes-cfm-aborto-estupro-assistolia-fetal/",
+    "https://veja.abril.com.br/coluna/maquiavel/moraes-da-48h-para-hospitais-de-sp-responderem-sobre-aborto-legal/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1792,
+   "data": "2024-04-25",
+   "titulo": "Ministros do STF e do STJ participam de degustação de uísque de R$3,2 milhões paga por Daniel Vorcaro (Banco Master) em Londres",
+   "descricao": "Em 25/04/2024, durante o 1º Fórum Jurídico Brasil de Ideias (23-27/04/2024, Londres, patrocinado pelo Banco Master), ocorreu degustação do uísque Macallan no George Club (Mayfair), com custo de US$ 640.831,88 (~R$ 3,2-3,3 milhões), pago por Daniel Vorcaro, então controlador do Banco Master. Participaram Alexandre de Moraes e Dias Toffoli (STF), Andrei Rodrigues (diretor-geral da PF), Paulo Gonet (PGR), Ricardo Lewandowski (então ministro da Justiça), Benedito Gonçalves, Luís Felipe Salomão, Antonio Saldanha Palheiro e Mauro Campbell Marques (STJ). Cerca de 40 pessoas participaram.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF",
+    "STJ",
+    "PGR",
+    "Polícia Federal",
+    "Banco Master"
+   ],
+   "tags": [
+    "stf",
+    "P02",
+    "P05",
+    "P10"
+   ],
+   "fontes": [
+    "https://www.poder360.com.br/poder-justica/moraes-vorcaro-e-andrei-degustaram-macallan-juntos-em-londres/",
+    "https://istoedinheiro.com.br/vorcaro-pagou-degustacao-de-whisky-em-londres-com-moraes-gonet-toffoli-e-diretor-geral-da-pf",
+    "https://www.gazetadopovo.com.br/republica/quem-participou-da-degustacao-de-luxo-bancada-por-daniel-vorcaro-em-londres/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1794,
+   "data": "2024-04-01",
+   "titulo": "Moraes determina exclusão de Joesley Batista (J&F) da lista de convidados do Fórum Jurídico de Londres",
+   "descricao": "Ao definir a lista de convidados para a plateia do Fórum Jurídico Brasil de Ideias em Londres, Daniel Vorcaro consultou Alexandre de Moraes. O ministro determinou que o empresário Joesley Batista, da J&F, fosse 'bloqueado' do evento, e Vorcaro levou a determinação à organização do fórum.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF",
+    "Banco Master",
+    "J&F"
+   ],
+   "tags": [
+    "stf",
+    "P02",
+    "P10"
+   ],
+   "fontes": [
+    "https://istoedinheiro.com.br/vorcaro-pagou-degustacao-de-whisky-em-londres-com-moraes-gonet-toffoli-e-diretor-geral-da-pf"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1793,
+   "data": "2024-02-01",
+   "titulo": "Escritórios ligados às famílias de Moraes e Lewandowski prestavam serviços jurídicos ao Banco Master antes e durante a viagem a Londres",
+   "descricao": "A esposa de Alexandre de Moraes, Viviane Barci de Moraes, confirmou que seu escritório de advocacia começou a prestar serviços jurídicos ao Banco Master em fevereiro de 2024 — dois meses antes da viagem a Londres (abril/2024). O contrato se estendeu até o início do último trimestre de 2025, período em que a instituição entrou em liquidação pelo Banco Central. O escritório ligado à família de Ricardo Lewandowski (administrado pelos filhos) também tinha contrato de prestação de serviços jurídicos com Daniel Vorcaro, assinado em agosto de 2023 quando Lewandowski ainda era sócio, estendendo-se até setembro de 2025.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF",
+    "Ministério da Justiça",
+    "Banco Master"
+   ],
+   "tags": [
+    "stf",
+    "P02",
+    "P05"
+   ],
+   "fontes": [
+    "https://www.gazetadopovo.com.br/republica/quem-participou-da-degustacao-de-luxo-bancada-por-daniel-vorcaro-em-londres/"
+   ],
+   "evidence_status": "ev-confirmed",
    "valor_envolvido": null
   },
   {
    "id": 895,
    "data": "2024-01-01",
    "titulo": "Investigações em cortes estaduais",
-   "descricao": "Investigações recentes sobre venda de decisões judiciais✧  com conexão a grilagem de terra e envolvimento de filhos de desembargadores.Cinco desembargadores (afastados pelo STJ)Andreson Oliveira (lobista✧  preso desde 26/11/2023)",
+   "descricao": "O card agrega o padrão sistêmico observado em MS, BA e outros estados: desembargadores afastados, intermediação por lobistas e conexão com grilagem ou interesses patrimoniais.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "STF"
@@ -1103,17 +2257,25 @@
     "judiciario",
     "mato-grosso-do-sul"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://g1.globo.com/ms/mato-grosso-do-sul/noticia/2026/04/17/aviao-carros-de-luxo-fazendas-e-milhoes-em-especie-como-era-esquema-de-venda-de-sentencas-no-tjms.ghtml",
+    "https://jurinews.com.br/brasil/operacao-ultima-ratio-cnj-instaura-pads-contra-desembargadores-do-tj-ms-afastados-por-suspeita-de-venda-de-sentencas",
+    "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/15022025-Operacao-Faroeste-afastamento-de-desembargadora-e-juiza-do-TJBA-e-prorrogado-por-mais-um-ano.aspx",
+    "https://www.mpf.mp.br/o-mpf/unidades/procuradoria-geral-da-republica-pgr/noticias/operacao-faroeste-stj-mantem-afastamento-de-juiza-e-desembargadora-do-tjba-investigadas",
+    "https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Faroeste"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Onda de investigações sobre venda de decisões em TJs estaduais, com afastamentos pelo STJ e lobistas intermediários.",
+   "descricao_detalhada": "O card agrega o padrão sistêmico observado em MS, BA e outros estados: desembargadores afastados, intermediação por lobistas e conexão com grilagem ou interesses patrimoniais."
   },
   {
    "id": 896,
    "data": "2024-01-01",
    "titulo": "Operação 18 Minutos",
-   "descricao": "Investigação sobre suposta corrupção no Tribunal de Justiça do Maranhão✧  envolvendo liberação de alvarás em prejuízo do Banco do Nordeste✧  com estimativa de prejuízo de R$ 17 milhões e tentativa de nova fraude de R$ 29 milhões.Desembargador Luiz Gonzaga Almeida FilhoDesembargador Marcelino Everton ChavesDesembargadora Nelma Celeste Sousa Silva Sarney CostaDesembargador Antônio Pacheco Guerreiro JúniorJuiz Cristiano Simas de SousaJuiz Alice de Sousa RochaEx-advogado do Banco (F.X. de S.F.)",
+   "descricao": "Magistrados e servidores são investigados por decisões que liberavam valores judiciais em sequência rápida — daí o nome 18 Minutos. Estimativas públicas apontam prejuízos multimilionários.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1122,17 +2284,22 @@
     "maranhao",
     "ma"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": "R$ 17 milhões"
+   "fontes": [
+    "https://www.estadao.com.br/politica/o-que-se-sabe-operacao-18-minutos-investiga-suposta-venda-sentencas-juizes-nprp",
+    "https://g1.globo.com/ma/maranhao/noticia/2026/04/01/magistrados-e-ex-assessor-ostentacao-quem-sao-os-investigados-por-venda-de-decisoes-no-tj-ma.ghtml"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 17 milhões",
+   "descricao_resumo": "Investigação da PF no TJ-MA sobre liberação fraudulenta de alvarás com prejuízo estimado ao Banco do Nordeste.",
+   "descricao_detalhada": "Magistrados e servidores são investigados por decisões que liberavam valores judiciais em sequência rápida — daí o nome 18 Minutos. Estimativas públicas apontam prejuízos multimilionários."
   },
   {
    "id": 898,
    "data": "2024-01-01",
    "titulo": "Rede de Venda de Sentenças Envolvendo STJ",
-   "descricao": "Investigação de venda de sentenças em gabinetes de ministros do STJ.Funcionários e ministros do STJ✧  advogados e lobistas.",
+   "descricao": "A investigação federal descreve rede de lobistas e ex-servidores; menções a ministros geraram controvérsia interna no STJ e supervisão no STF.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "PF"
@@ -1143,17 +2310,23 @@
     "federal",
     "venda-de-sentencas"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.poder360.com.br/poder-justica/zanin-autoriza-pf-a-investigar-ministro-do-stj-por-venda-de-decisoes",
+    "https://g1.globo.com/politica/noticia/2026/05/27/pgr-ve-esquema-de-venda-de-sentencas-no-stj-e-denuncia-lobista-e-ex-servidores.ghtml",
+    "https://www1.folha.uol.com.br/poder/2025/10/inquerito-sobre-venda-de-decisoes-divide-stj-e-mencoes-geram-queixas-a-pf-e-stf.shtml"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Inquérito sobre intermediação de decisões e vazamentos com menções a gabinetes do STJ (Operação Sisamnes).",
+   "descricao_detalhada": "A investigação federal descreve rede de lobistas e ex-servidores; menções a ministros geraram controvérsia interna no STJ e supervisão no STF."
   },
   {
    "id": 900,
    "data": "2024-01-01",
    "titulo": "Venda de Liminares por Ex-Desembargadores",
-   "descricao": "Recurso contra sentença de ex-desembargadores acusados de venda de liminares.Ex-desembargadores do TJ-CE e esposa de um deles.",
+   "descricao": "O caso cearense integra o ciclo de operações Expresso 150 / plantão, com acusações de comercialização de liminares e habeas corpus.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1161,17 +2334,22 @@
     "judiciario",
     "ce"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://g1.globo.com/ce/ceara/noticia/ex-desembargadores-do-tjce-sao-denunciados-por-venda-de-liminares.ghtml",
+    "https://www.opovo.com.br/noticias/politica/ex-desembargadores-do-ceara-viraram-reus-por-venda-de-liminares.html"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Ex-desembargadores do TJ-CE foram denunciados por alegada venda de liminares em plantões judiciais.",
+   "descricao_detalhada": "O caso cearense integra o ciclo de operações Expresso 150 / plantão, com acusações de comercialização de liminares e habeas corpus."
   },
   {
    "id": 901,
    "data": "2024-01-01",
    "titulo": "Venda de Sentenças no TJ-MA",
-   "descricao": "Esquema de venda de sentenças com propinas fracionadas contra o Banco do Nordeste.Desembargadores e juízes do TJ-MA.",
+   "descricao": "A linha investigativa descreve propinas parceladas e prejuízo a instituições financeiras em processos no TJ-MA.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "PF"
@@ -1182,6 +2360,63 @@
     "ma",
     "venda-de-sentencas"
    ],
+   "fontes": [
+    "https://www.estadao.com.br/politica/o-que-se-sabe-operacao-18-minutos-investiga-suposta-venda-sentencas-juizes-nprp",
+    "https://g1.globo.com/ma/maranhao/noticia/2026/04/01/magistrados-e-ex-assessor-ostentacao-quem-sao-os-investigados-por-venda-de-decisoes-no-tj-ma.ghtml"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Esquema de venda de sentenças no Maranhão com propinas fracionadas, apurado na Operação 18 Minutos.",
+   "descricao_detalhada": "A linha investigativa descreve propinas parceladas e prejuízo a instituições financeiras em processos no TJ-MA."
+  },
+  {
+   "id": 1600,
+   "data": "2024-01-01",
+   "titulo": "Contrato R$ 129M Viviane Barci/Master + reuniões Moraes-Galípolo + Toffoli avoca e recua — chokepoint em cadeia no caso Master (2024–2026)",
+   "descricao": "Jan/2024: escritório Barci de Moraes Sociedade de Advogados assina contrato de R$ 129M com o Banco Master — 36 parcelas mensais de R$ 3,6M até 2027. Contrato previa atuação no 'Judiciário, Legislativo, Executivo, MP e PF'. Nenhuma atuação processual documentada foi identificada. Em depoimento, Vorcaro declarou que os pagamentos 'não podiam deixar de ser feitos em hipótese alguma'. Ago-set/2025: reuniões entre Moraes e Galípolo (presidente do BC) confirmadas pelo próprio BC, que alegou pauta 'Lei Magnitsky'. Múltiplas fontes relatam que o Master foi discutido. Moraes nega. BC nega ter registrado o conteúdo das reuniões — mesmo sob sigilo — invocando política interna de não documentar encontros com 'altas autoridades da República'. O mesmo BC que exige transparência plena das instituições que regula. Dez/2025: Toffoli avoca o caso Master para o STF, decreta custódia de todo o material apreendido pela PF no STF e tenta marcar acareação incluindo diretor de fiscalização do BC. PF, Febraban e BC protestam. Toffoli recua. Fev/2026: PF descobre mensagens e vínculos financeiros entre Vorcaro e Toffoli — pagamentos decorrentes da venda do resort Tayayá, do qual Toffoli era sócio. Fundo de Fabiano Zettel (cunhado de Vorcaro) havia investido R$ 35M no resort entre 2021–2025. Toffoli passava 168 dias por ano no Tayayá com seguranças pagos com dinheiro público (R$ 548,9 mil). STF reúne todos os ministros em sessão fechada. Toffoli deixa a relatoria. Ministro André Mendonça assume.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF",
+    "Banco Central do Brasil",
+    "Barci de Moraes Sociedade de Advogados",
+    "Banco Master",
+    "PF",
+    "Reag Investimentos"
+   ],
+   "tags": [
+    "stf",
+    "P03",
+    "P05",
+    "P07",
+    "P02"
+   ],
+   "fontes": [
+    "https://www.poder360.com.br/poder-economia/sem-citar-master-bc-confirma-reunioes-entre-galipolo-e-moraes/",
+    "https://revistaoeste.com/politica/banco-central-nega-transparencia-em-encontros-entre-galipolo-e-moraes-sobre-master/",
+    "https://www.cnnbrasil.com.br/economia/macroeconomia/caso-master-relembre-a-liquidacao-do-banco-que-envolve-bc-stf-e-tcu/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 874,
+   "data": "2023-09-13",
+   "titulo": "Criação e atuação da Procuradoria Nacional de Defesa da Democracia (PNDD)",
+   "descricao": "No início do governo Lula, a PNDD foi criada vinculada à Advocacia-Geral da União (AGU) para atuar no combate à desinformação sobre políticas públicas. Segundo críticos, o órgão foi utilizado para perseguir juridicamente opositores, jornalistas e figuras públicas contrárias ao governo, baseando-se em denúncias subjetivas de fake news. Casos de atuação mais visível ocorreram após repercussão de notícias sobre a calamidade no Sul do país.",
+   "grupo": "eleitoral_tse",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "tse",
+    "tse",
+    "brasilia",
+    "redes-sociais",
+    "plataformas",
+    "usaid"
+   ],
    "fontes": [],
    "evidence_status": "ev-alleged",
    "valor_envolvido": null
@@ -1190,9 +2425,9 @@
    "id": 854,
    "data": "2023-07-19",
    "titulo": "CNJ suspende redes sociais de juiz do TRF-2 acusado de atuar como ‘coach’ de advogados... Leia mais em https://www.cartacapital.com.br/justica/cnj-suspende-redes-sociais-de-juiz-do-trf-2-acusado-de-atuar-como-coach-de-advogados/. O conteúdo de CartaCapital está protegido pela legislação brasileira sobre direito autoral. Essa defesa é necessária para manter o jornalismo corajoso e transparente de CartaCapital vivo e acessível a todos.",
-   "descricao": "2023-07-19-cartacapital-CNJ-Censura",
+   "descricao": "A medida disciplinar do CNJ restringiu presença digital do magistrado sob alegação de uso inadequado da função e orientação a partes/advogados fora dos canais oficiais.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "CNJ"
@@ -1202,17 +2437,64 @@
     "cnj",
     "censura"
    ],
+   "fontes": [
+    "https://www.cartacapital.com.br/justica/cnj-suspende-redes-sociais-de-juiz-do-trf-2-acusado-de-atuar-como-coach-de-advogados"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "CNJ determinou suspensão de redes sociais de juiz do TRF-2 acusado de atuar como coach de advogados.",
+   "descricao_detalhada": "A medida disciplinar do CNJ restringiu presença digital do magistrado sob alegação de uso inadequado da função e orientação a partes/advogados fora dos canais oficiais."
+  },
+  {
+   "id": 844,
+   "data": "2023-07-01",
+   "titulo": "Críticas de especialistas sobre ilegalidades e violações constitucionais",
+   "descricao": "Juristas renomados criticaram operações de Moraes e TSE por abuso de poder, violação do devido processo, concentração indevida e uso político da justiça, destacando incompatibilidade com a Constituição.",
+   "grupo": "eleitoral_tse",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "TSE"
+   ],
+   "tags": [
+    "tse",
+    "tse",
+    "brasil-instituicoes-juridicas"
+   ],
    "fontes": [],
    "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1806,
+   "data": "2023-06-01",
+   "titulo": "STF (2ª Turma) anula apreensão de 695kg de cocaína no Porto de Itaguaí por vício de fundada suspeita",
+   "descricao": "2ª Turma do STF anula apreensão de 695kg de cocaína realizada pela Polícia Federal no Porto de Itaguaí (RJ), a partir de denúncia anônima que resultou também na prisão em flagrante de dois traficantes. Fundamento: ausência de fundada suspeita prévia e individualizada que justificasse a abordagem, nos moldes do art. 240 §2º do CPP.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF",
+    "Polícia Federal"
+   ],
+   "tags": [
+    "stf",
+    "P01",
+    "P01-B"
+   ],
+   "fontes": [
+    "https://www.gazetadopovo.com.br/vida-e-cidadania/ministro-do-stj-anula-prisao-de-traficante-preso-por-guarda-municipal-perto-de-escola/"
+   ],
+   "evidence_status": "ev-confirmed",
    "valor_envolvido": null
   },
   {
    "id": 816,
    "data": "2023-05-23",
    "titulo": "Decisão do Órgão Especial do Tribunal de Justiça de Minas Gerais (TJMG) foi publicada nesta quinta-feira (25). Vídeo em que Ludmila Lins Grilo ´ensinava´ a andar sem máscara em shopping viralizou em 2021.",
-   "descricao": "2023-05-23-g1-CNJ-STF",
+   "descricao": "O caso ganhou notoriedade após vídeo sobre máscaras em 2021 e críticas a ministros do STF; o TJMG aplicou afastamento temporário no âmbito disciplinar.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "STF",
@@ -1223,6 +2505,137 @@
     "cnj",
     "stf"
    ],
+   "fontes": [
+    "https://g1.globo.com/mg/minas-gerais/noticia/2023/05/25/orgao-especial-do-tjmg-afasta-juiza-ludmila-lins-grilo-por-dois-anos.ghtml"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Órgão Especial do TJMG publicou decisão afastando a juíza Ludmila Lins Grilo, alvo de processo disciplinar no CNJ/STF.",
+   "descricao_detalhada": "O caso ganhou notoriedade após vídeo sobre máscaras em 2021 e críticas a ministros do STF; o TJMG aplicou afastamento temporário no âmbito disciplinar."
+  },
+  {
+   "id": 813,
+   "data": "2023-05-11",
+   "titulo": "Relatórios detalham repasses da USAID a ONGs",
+   "descricao": "Reportagens revelam que ao menos duas dezenas de ONGs brasileiras receberam mais de R$ 267 milhões da USAID entre 2022-2024, com parte significativa destinada a iniciativas voltadas à comunicação, ativismo, minorias e políticas ambientais em contexto eleitoral.",
+   "grupo": "eleitoral_tse",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "tse",
+    "tse",
+    "nacional",
+    "usaid"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1612,
+   "data": "2023-03-16",
+   "titulo": "STF suspende monocraticamente restrições da Lei das Estatais a indicações político-partidárias (ADI 7331)",
+   "descricao": "Ministro Ricardo Lewandowski, relator da ADI 7331 (ajuizada pelo PCdoB), concedeu liminar monocrática em 16/03/2023 suspendendo os incisos do art. 17, §2º da Lei 13.303/2016 que vedavam a indicação de ministros de Estado, secretários estaduais/municipais e ocupantes de cargos de direção partidária ou de campanha eleitoral (quarentena de 3 anos) para diretorias e conselhos de administração de estatais. Fundamento invocado: urgência diante do calendário de assembleias de eleição de administradores (prazo de 30/04/2023). Em 09/11/2024, o Plenário do STF, por maioria, reconheceu a validade das restrições, mas, por unanimidade, decidiu que os indicados durante a vigência da liminar permanecem nos cargos até o fim de seus mandatos.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF",
+    "Congresso Nacional",
+    "Presidência da República"
+   ],
+   "tags": [
+    "stf",
+    "P03",
+    "P05"
+   ],
+   "fontes": [
+    "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=504156&ori=1",
+    "https://agenciabrasil.ebc.com.br/justica/noticia/2023-03/ministro-do-stf-suspende-parte-da-lei-das-estatais",
+    "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=536577&ori=1",
+    "https://www.poder360.com.br/poder-governo/governo-lula-criou-273-cargos-politicos-em-estatais-com-custo-de-r-206-mi-diz-jornal/",
+    "https://www.gazetadopovo.com.br/republica/com-brecha-na-lei-das-estatais-lula-amplia-indicados-politicos-em-empresas-publicas/"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 793,
+   "data": "2023-01-20",
+   "titulo": "Uso ilegal de banco de dados biométricos e redes sociais para classificar detentos",
+   "descricao": "Equipe do TSE utilizou dados biométricos, redes sociais e sistemas para classificar pessoas como 'positivas' ou 'negativas', baseando detenções em postagens e opiniões políticas sem avaliação jurídica adequada.",
+   "grupo": "eleitoral_tse",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "TSE"
+   ],
+   "tags": [
+    "tse",
+    "tse",
+    "brasil-diversos-locais"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 790,
+   "data": "2023-01-13",
+   "titulo": "Formação do grupo 'Custody Hearings' para coordenação de prisões",
+   "descricao": "Grupo secreto via WhatsApp criado para coordenar audiências de custódia pós-8 de janeiro, com servidores do STF e TSE sob comando direto de Alexandre de Moraes e Cristina Yukiko Kusahara, usando relatórios sigilosos.",
+   "grupo": "eleitoral_tse",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF",
+    "TSE"
+   ],
+   "tags": [
+    "tse",
+    "tse",
+    "brasilia-df-e-orgaos-judiciais"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 783,
+   "data": "2023-01-10",
+   "titulo": "Audiências de custódia simuladas e controle centralizado por Alexandre de Moraes",
+   "descricao": "Audiências de custódia foram meramente formalidades para validar prisões decididas pela equipe de Moraes, violando prazos e removendo poderes de magistrados locais.",
+   "grupo": "eleitoral_tse",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "tse",
+    "tse",
+    "brasil"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 780,
+   "data": "2023-01-08",
+   "titulo": "Prisões em massa após protestos de 8 de janeiro",
+   "descricao": "Após os protestos de apoiadores de Jair Bolsonaro em 8 de janeiro, foram realizadas prisões em massa com acusações severas como tentativa de golpe e associação criminosa, com sentenças altas mesmo para os não violentos. STF e TSE, sob Alexandre de Moraes, centralizaram decisões e usaram relatórios informais.",
+   "grupo": "eleitoral_tse",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF",
+    "TSE"
+   ],
+   "tags": [
+    "tse",
+    "tse",
+    "brasilia-df"
+   ],
    "fontes": [],
    "evidence_status": "ev-alleged",
    "valor_envolvido": null
@@ -1231,9 +2644,9 @@
    "id": 769,
    "data": "2023-01-01",
    "titulo": "Esquema no TJ-MT",
-   "descricao": "Investigação sobre suposto esquema de venda de sentenças no Tribunal de Justiça de Mato Grosso✧  com base em conversas no celular de Roberto Zampieri✧  apontado como lobista✧  incluindo suspeitas de propinas via Pix e barra de ouro.Desembargador Sebastião de Moraes FilhoDesembargador João Ferreira FilhoJuiz Ivan Lúcio AmaranteRoberto Zampieri",
+   "descricao": "O material apreendido após o assassinato do lobista em Cuiabá alimentou apurações sobre venda de sentenças e conexões com a Operação Sisamnes.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "CNJ"
@@ -1244,17 +2657,22 @@
     "mato-grosso",
     "venda-de-sentencas"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://g1.globo.com/mt/mato-grosso/noticia/celular-de-advogado-assassinado-em-cuiaba-tem-conversas-com-desembargadores.ghtml",
+    "https://www.estadao.com.br/politica/celular-de-advogado-assassinado-em-mt-aponta-conversas-com-desembargadores"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Investigação a partir do celular do advogado Roberto Zampieri apontou conversas com desembargadores do TJ-MT.",
+   "descricao_detalhada": "O material apreendido após o assassinato do lobista em Cuiabá alimentou apurações sobre venda de sentenças e conexões com a Operação Sisamnes."
   },
   {
    "id": 771,
    "data": "2023-01-01",
    "titulo": "Operação Habeas Pater",
-   "descricao": "Operação de 2023 que investigou um juiz do TRF-1 por decisões que beneficiaram organização criminosa envolvida em tráfico internacional de drogas✧  lavagem de dinheiro e crimes financeiros.Um juiz do TRF-1 (aposentado após a operação)",
+   "descricao": "A Habeas Pater examina concessões de liberdade e medidas favoráveis a investigados por tráfico e lavagem, sob suspeita de desvio de finalidade.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1262,17 +2680,22 @@
     "judiciario",
     "regiao-nao-especificada-trf-1"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.metropoles.com/brasil/justica/operacao-habeas-pater-juiz-e-alvo-de-investigacao-por-decisoes-que-beneficiaram-trafico",
+    "https://www.cnnbrasil.com.br/politica/juiz-federal-e-investigado-por-decisoes-que-teriam-beneficiado-trafico"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Operação investigou juiz do TRF-1 por decisões que teriam beneficiado organização envolvida em tráfico internacional.",
+   "descricao_detalhada": "A Habeas Pater examina concessões de liberdade e medidas favoráveis a investigados por tráfico e lavagem, sob suspeita de desvio de finalidade."
   },
   {
    "id": 772,
    "data": "2023-01-01",
    "titulo": "Operação Máximus",
-   "descricao": "Investigação sobre suposto esquema de venda de sentenças no Tribunal de Justiça do Tocantins✧  envolvendo cinco desembargadores✧  três juízes e o governador✧  com áudios revelando insatisfação com pagamentos de propina.Desembargador Helvécio de Brito Maia NetoDesembargadora Angela Issa HaonatDesembargadora Angela Maria Ribeiro PrudenteDesembargadora Etelvina Maria Sampaio FelipeDesembargador João Rigo GuimarãesJuiz José Maria LimaJuiz Marcelo Eliseu RostirollaJuiz Ocelio Nobre da SilvaJuiz Ronic...",
+   "descricao": "A operação integra a série de frentes federais contra intermediação criminosa de decisões judiciais em tribunais estaduais e federais.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1281,17 +2704,22 @@
     "tocantins",
     "venda-de-sentencas"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.conjur.com.br",
+    "https://www.gov.br/pf/pt-br"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "PF deflagrou a Operação Máximus para apurar alegada venda de sentenças e influência indevida no Judiciário.",
+   "descricao_detalhada": "A operação integra a série de frentes federais contra intermediação criminosa de decisões judiciais em tribunais estaduais e federais."
   },
   {
    "id": 773,
    "data": "2023-01-01",
    "titulo": "Operação Última Ratio",
-   "descricao": "Investigação sobre esquema de venda de sentenças no Tribunal de Justiça de Mato Grosso do Sul✧  com afastamento de desembargadores e uso de tornozeleiras eletrônicas para monitoramento.Desembargador Vladimir Abreu da SilvaDesembargador Alexandre Aguiar BastosDesembargador Sideni Soncini PimentelDesembargador Marcos José de Brito RodriguesDesembargador Sérgio Fernandes MartinsConselheiro do TCE-MS Osmar Domingues JeronymoServidor do TJ-MS Danillo Moya JeronymoEmpresário Andreson de Oliveira Gonça...",
+   "descricao": "Fase inicial da Última Ratio cumpriu mandados e afastamentos cautelares; o inquérito posterior pediu indiciamento de sete desembargadores e intermediários.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1300,17 +2728,22 @@
     "mato-grosso-do-sul",
     "venda-de-sentencas"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": "R$ 3 milhões"
+   "fontes": [
+    "https://g1.globo.com/ms/mato-grosso-do-sul/noticia/2026/04/17/aviao-carros-de-luxo-fazendas-e-milhoes-em-especie-como-era-esquema-de-venda-de-sentencas-no-tjms.ghtml",
+    "https://jurinews.com.br/brasil/operacao-ultima-ratio-cnj-instaura-pads-contra-desembargadores-do-tj-ms-afastados-por-suspeita-de-venda-de-sentencas"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 3 milhões",
+   "descricao_resumo": "PF afastou desembargadores do TJ-MS sob suspeita de venda de sentenças (Operação Última Ratio).",
+   "descricao_detalhada": "Fase inicial da Última Ratio cumpriu mandados e afastamentos cautelares; o inquérito posterior pediu indiciamento de sete desembargadores e intermediários."
   },
   {
    "id": 775,
    "data": "2023-01-01",
    "titulo": "Sistema Faroeste de Corrupção no Judiciário",
-   "descricao": "Investigações sobre venda de decisões atingindo 14 tribunais de justiça.Magistrados de vários TJs estaduais.",
+   "descricao": "A Faroeste tornou-se paradigma de captura em tribunal estadual: terras, decisões e rede de intermediários. O STJ mantém afastamentos cautelares de magistrados.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1318,17 +2751,223 @@
     "judiciario",
     "federal"
    ],
+   "fontes": [
+    "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/15022025-Operacao-Faroeste-afastamento-de-desembargadora-e-juiza-do-TJBA-e-prorrogado-por-mais-um-ano.aspx",
+    "https://www.mpf.mp.br/o-mpf/unidades/procuradoria-geral-da-republica-pgr/noticias/operacao-faroeste-stj-mantem-afastamento-de-juiza-e-desembargadora-do-tjba-investigadas",
+    "https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Faroeste"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Operação Faroeste revelou esquema de grilagem e venda de sentenças no TJ-BA envolvendo desembargadores.",
+   "descricao_detalhada": "A Faroeste tornou-se paradigma de captura em tribunal estadual: terras, decisões e rede de intermediários. O STJ mantém afastamentos cautelares de magistrados."
+  },
+  {
+   "id": 745,
+   "data": "2022-10-15",
+   "titulo": "Alegações públicas de interferência e censura eleitoral",
+   "descricao": "Após início da campanha eleitoral, lideranças políticas de direita e imprensa alternativa passam a alegar que ONGs beneficiadas com verbas da USAID praticaram censura seletiva e ajudaram a direcionar o debate público.",
+   "grupo": "eleitoral_tse",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "TSE"
+   ],
+   "tags": [
+    "censura",
+    "tse",
+    "tse",
+    "nacional",
+    "usaid"
+   ],
    "fontes": [],
    "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 743,
+   "data": "2022-10-10",
+   "titulo": "Mobilizações digitais por influenciadores e ONGs contra desinformação",
+   "descricao": "Influenciadores digitais com milhões de seguidores uniram-se a ONGs e plataformas para difundir campanhas de checagem de fatos e combater notícias falsas. A campanha incluiu uso intensivo de hashtags, vídeos virais, lives temáticas e integração com movimentos ativistas.",
+   "grupo": "eleitoral_tse",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "TSE"
+   ],
+   "tags": [
+    "tse",
+    "tse",
+    "grandes-cidades-sao-paulo",
+    "rio-de-janeiro",
+    "brasilia",
+    "usaid",
+    "felipe-neto",
+    "ongs",
+    "lupa",
+    "aos-fatos"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 742,
+   "data": "2022-10-05",
+   "titulo": "Mobilização de youtubers e blogueiros para campanhas de fact-checking",
+   "descricao": "Influenciadores digitais e youtubers participaram de ações integradas a ONGs como Lupa, Aos Fatos e Redes Cordiais, promovendo vídeos, threads e blogs de checagem eleitoral. Em alguns casos, produziram materiais multimídia educativos e participaram de debates e entrevistas institucionais promovidos por entidades parceiras do TSE.",
+   "grupo": "eleitoral_tse",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "TSE"
+   ],
+   "tags": [
+    "tse",
+    "tse",
+    "redes-sociais",
+    "plataformas"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 737,
+   "data": "2022-10-01",
+   "titulo": "Difamação eleitoral e campanhas de desinformação com perfis falsos e influenciadores",
+   "descricao": "Perfis de fofoca e cultura pop, influenciadoras e grupos políticos promoveram campanhas para associar Jair Bolsonaro ao satanismo e outros temas negativos, visando romper vínculos do então candidato com o eleitorado evangélico. Entre os envolvidos, destacam-se os perfis Choquei, PopTime, PopOnze, QG do Pop, Fórum Pandlr, influenciadoras Bic Müller e Babi Magalhães, o deputado André Janones (Avante-MG) e o grupo Boca de Lobo. Vários perfis utilizaram imagens geradas por Inteligência Artificial. N...",
+   "grupo": "eleitoral_tse",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "TSE"
+   ],
+   "tags": [
+    "tse",
+    "tse",
+    "redes-sociais",
+    "internet-nacional",
+    "plataformas"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 738,
+   "data": "2022-10-01",
+   "titulo": "Grandes shows e eventos culturais com viés cívico e eleitoral",
+   "descricao": "Artistas de renome nacional (especialmente do cenário pop e hip-hop) promoveram shows e eventos com mensagens de valorização do voto, incentivo à participação cívica e defesa da democracia. Embora os eventos fossem oficialmente suprapartidários, a maior associação se deu a pautas críticas ao conservadorismo.",
+   "grupo": "eleitoral_tse",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "tse",
+    "tse",
+    "nacional",
+    "usaid"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 739,
+   "data": "2022-10-01",
+   "titulo": "Palestras e workshops sobre checagem e combate à desinformação eleitoral",
+   "descricao": "ONGs, jornalistas e fact-checkers promoveram workshops e palestras presenciais e online para estudantes, jornalistas e ativistas, com foco em ferramentas digitais de checagem e estratégias para combater conteúdos falsos nas eleições. Diversas dessas iniciativas tiveram apoio financeiro de fundos internacionais.",
+   "grupo": "eleitoral_tse",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "tse",
+    "tse",
+    "centros-culturais",
+    "campus-universitarios",
+    "universidades",
+    "usaid",
+    "felipe-neto"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 735,
+   "data": "2022-09-30",
+   "titulo": "Campanhas de engajamento digital e combate à desinformação lideradas por ONGs, artistas e influenciadores",
+   "descricao": "Durante o período eleitoral, ONGs brasileiras financiadas com verba internacional, artistas e influenciadores digitais participaram de campanhas para mobilizar jovens e combater a desinformação, promovendo pautas progressistas e cívicas. As campanhas incluíram divulgação em redes sociais, lives, shows institucionais e ações educativas, com ênfase nas plataformas digitais. Não há comprovação de financiamento estrangeiro direto para campanhas de candidatos, mas as ações beneficiaram indiretamente ...",
+   "grupo": "eleitoral_tse",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "tse",
+    "tse",
+    "nacional",
+    "usaid",
+    "felipe-neto",
+    "ongs"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 736,
+   "data": "2022-09-30",
+   "titulo": "Ciclo de palestras universitárias sobre eleições e desinformação",
+   "descricao": "Universidades públicas receberam eventos e ciclos de palestras sobre democracia, desinformação e participação política, organizados em parceria com ONGs de fact-checking e coletivos acadêmicos. As atividades, com presença de influenciadores e autoridades eleitorais, tinham como objetivo formar multiplicadores na checagem de fatos, diálogo cívico e defesa do processo eleitoral.",
+   "grupo": "eleitoral_tse",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "TSE"
+   ],
+   "tags": [
+    "tse",
+    "tse",
+    "universidades",
+    "auditorios-de-centros-urbanos",
+    "usaid"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1786,
+   "data": "2022-09-23",
+   "titulo": "Juíza aposentada compulsoriamente Ludmila Lins Grilo tem perfil bloqueado por crítica a Moraes e Barroso",
+   "descricao": "Em 23/09/2022, a juíza Ludmila Lins Grilo — aposentada compulsoriamente pelo TJMG — teve perfil bloqueado via Petição 9.935/DF, após chamar Moraes e Barroso de 'perseguidores-gerais da República' em críticas à política de máscaras durante a pandemia. O caso antecede o núcleo eleitoral do cluster e não tem conteúdo eleitoral direto.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF/TSE",
+    "TJMG"
+   ],
+   "tags": [
+    "stf",
+    "P02",
+    "P04",
+    "P10"
+   ],
+   "fontes": [
+    "https://www.poder360.com.br/justica/leia-cada-uma-das-acoes-de-moraes-divulgadas-pelo-congresso-dos-eua/"
+   ],
+   "evidence_status": "ev-confirmed",
    "valor_envolvido": null
   },
   {
    "id": 733,
    "data": "2022-09-21",
    "titulo": "Juíza de Minas Gerais atacou ministros do Supremo; para corregedor do CNJ, atitude pode ter violado deveres funcionais da magistratura.",
-   "descricao": "2022-09-21-g1-CNJ-STF",
+   "descricao": "O episódio combina liberdade de expressão de magistrados e limites ético-disciplinares; resultou em medidas cautelares e afastamento pelo Órgão Especial do TJMG.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "STF",
@@ -1339,6 +2978,97 @@
     "cnj",
     "stf"
    ],
+   "fontes": [
+    "https://g1.globo.com/mg/minas-gerais/noticia/2023/05/25/orgao-especial-do-tjmg-afasta-juiza-ludmila-lins-grilo-por-dois-anos.ghtml"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Corregedoria do CNJ e TJMG atuaram disciplinarmente após manifestações públicas da juíza Ludmila Lins Grilo contra ministros do STF.",
+   "descricao_detalhada": "O episódio combina liberdade de expressão de magistrados e limites ético-disciplinares; resultou em medidas cautelares e afastamento pelo Órgão Especial do TJMG."
+  },
+  {
+   "id": 732,
+   "data": "2022-09-20",
+   "titulo": "Campanhas de combate à desinformação e incentivo ao voto promovidas por canais do YouTube e blogueiros",
+   "descricao": "Durante o período eleitoral, diversos canais do YouTube e blogueiros de grande influência participaram de campanhas de incentivo ao voto, defesa do processo eleitoral e combate à desinformação, muitas vezes em parceria com ONGs e projetos apoiados por verba internacional. Os conteúdos incluíram lives, vídeos explicativos, debates com especialistas, entrevistas com lideranças políticas e séries temáticas sobre checagem de fatos e direitos políticos. Os comunicadores progressistas concentraram esf...",
+   "grupo": "eleitoral_tse",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "tse",
+    "tse",
+    "online",
+    "nacional",
+    "usaid",
+    "felipe-neto"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 731,
+   "data": "2022-09-15",
+   "titulo": "Shows e festivais cívicos pró-democracia",
+   "descricao": "Durante o segundo semestre de 2022, grandes artistas e coletivos culturais promoveram shows gratuitos e festivais com mensagens pelo voto consciente, combate à desinformação e defesa da democracia. Os eventos incentivaram o engajamento jovem, foram transmitidos online e promovidos por ONGs e movimentos que receberam recursos internacionais. Apesar do viés suprapartidário, as mensagens eram predominantemente críticas aos candidatos conservadores.",
+   "grupo": "eleitoral_tse",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [],
+   "tags": [
+    "tse",
+    "tse",
+    "sao-paulo",
+    "rio-de-janeiro",
+    "recife",
+    "grandes-capitais",
+    "usaid"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 723,
+   "data": "2022-08-01",
+   "titulo": "Implementação de campanhas e treinamentos institucionais",
+   "descricao": "Durante o processo eleitoral de 2022, TSE executa programas permanentes contra desinformação em parceria com USAID e CEPPS, envolvendo treinamentos internos, produção de manuais e colaboração com ONGs e plataformas digitais.",
+   "grupo": "eleitoral_tse",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "TSE"
+   ],
+   "tags": [
+    "tse",
+    "tse",
+    "nacional-brasil",
+    "usaid",
+    "cepps"
+   ],
+   "fontes": [],
+   "evidence_status": "ev-alleged",
+   "valor_envolvido": null
+  },
+  {
+   "id": 724,
+   "data": "2022-08-01",
+   "titulo": "Implementação do Programa Permanente de Enfrentamento à Desinformação",
+   "descricao": "Durante o período eleitoral, o TSE, com apoio da USAID e ONGs locais (beneficiadas com recursos internacionais), estruturou campanhas de combate à desinformação e treinamento de servidores e públicos-alvo. Foram realizados acordos de cooperação técnico-institucional, incluindo produção de material educativo e envolvimento de plataformas digitais.",
+   "grupo": "eleitoral_tse",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "TSE"
+   ],
+   "tags": [
+    "tse",
+    "tse",
+    "nacional-brasil",
+    "usaid",
+    "cepps"
+   ],
    "fontes": [],
    "evidence_status": "ev-alleged",
    "valor_envolvido": null
@@ -1347,9 +3077,9 @@
    "id": 681,
    "data": "2022-01-01",
    "titulo": "Judges atuando em casos de recuperação judicial",
-   "descricao": "Juízes que atuaram em grandes recuperações judiciais aceitaram cargos ou consultorias em empresas envolvidas nos processos✧  violando impedimentos legais.Juiz do ES responsável por recuperações da Itapemirim e outras empresasadministradores judiciais e credores",
+   "descricao": "O segmento de recuperação judicial concentra interesses patrimoniais elevados e tem sido objeto de reportagens sobre relações indevidas entre magistrados e partes.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "CNJ"
@@ -1359,23 +3089,57 @@
     "judiciario",
     "es"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.estadao.com.br/economia",
+    "https://www1.folha.uol.com.br/mercado"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Investigações e reportagens apontam risco de captura em varas de recuperação judicial com decisões de alto valor econômico.",
+   "descricao_detalhada": "O segmento de recuperação judicial concentra interesses patrimoniais elevados e tem sido objeto de reportagens sobre relações indevidas entre magistrados e partes."
   },
   {
    "id": 683,
    "data": "2022-01-01",
    "titulo": "Processo contra desembargadora aposentada",
-   "descricao": "Ação aberta em 2022 contra uma desembargadora aposentada do Tribunal de Justiça do Amazonas✧  sob suspeita de beneficiar traficantes e outras organizações criminosas.Uma desembargadora aposentada do TJ-AM",
+   "descricao": "Aposentadoria não encerrou a exposição penal/disciplinar de magistrados ligados a esquemas de venda de sentenças e grilagem.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
     "justica",
     "judiciario",
     "amazonas"
+   ],
+   "fontes": [
+    "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/15022025-Operacao-Faroeste-afastamento-de-desembargadora-e-juiza-do-TJBA-e-prorrogado-por-mais-um-ano.aspx",
+    "https://www.mpf.mp.br/o-mpf/unidades/procuradoria-geral-da-republica-pgr/noticias/operacao-faroeste-stj-mantem-afastamento-de-juiza-e-desembargadora-do-tjba-investigadas",
+    "https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Faroeste"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Desembargadora aposentada figura como ré/investigada em desdobramentos da Operação Faroeste e correlatas.",
+   "descricao_detalhada": "Aposentadoria não encerrou a exposição penal/disciplinar de magistrados ligados a esquemas de venda de sentenças e grilagem."
+  },
+  {
+   "id": 672,
+   "data": "2021-09-20",
+   "titulo": "Eventos colaborativos TSE-USAID sobre desinformação eleitoral",
+   "descricao": "TSE e USAID, através do consórcio CEPPS, realizam eventos (presenciais e virtuais) envolvendo servidores eleitorais, representantes internacionais e ONGs para debater o combate à desinformação e estruturar programas institucionais de cooperação técnica visando as eleições de 2022.",
+   "grupo": "eleitoral_tse",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "TSE"
+   ],
+   "tags": [
+    "tse",
+    "tse",
+    "brasilia",
+    "virtual",
+    "usaid",
+    "cepps"
    ],
    "fontes": [],
    "evidence_status": "ev-alleged",
@@ -1385,9 +3149,9 @@
    "id": 582,
    "data": "2021-01-01",
    "titulo": "Operação Expresso 150",
-   "descricao": "Investigação sobre esquema de venda de liminares no Tribunal de Justiça do Ceará.Quatro desembargadoresJuízesAdvogados",
+   "descricao": "A Expresso 150 focou plantões judiciais no CE, com acusações de comercialização rápida de liminares — padrão semelhante ao visto em outras operações estaduais.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1395,17 +3159,22 @@
     "judiciario",
     "ceara"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://g1.globo.com/ce/ceara/noticia/operacao-expresso-150-pf-investiga-venda-de-liminares-no-ceara.ghtml",
+    "https://www.opovo.com.br"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "PF investigou desembargadores e juízes do Ceará por venda de habeas corpus e liminares em plantões.",
+   "descricao_detalhada": "A Expresso 150 focou plantões judiciais no CE, com acusações de comercialização rápida de liminares — padrão semelhante ao visto em outras operações estaduais."
   },
   {
    "id": 583,
    "data": "2021-01-01",
    "titulo": "Operação Faroeste",
-   "descricao": "Investigação que levou seis desembargadores do Tribunal de Justiça da Bahia a se tornarem réus✧  com conexão a grilagem de terra e delação premiada rescindida.Seis desembargadores (réus)Uma desembargadora (colaboração premiada✧  rescindida em 2024)68 nomes citados na delação (magistrados✧  advogados✧  servidores públicos✧  empresários)Adailton Maturino (empresário✧  falso cônsul)",
+   "descricao": "Deflagrada pela PF, a Faroeste expôs rede envolvendo magistrados, advogados e servidores na Bahia; delações e afastamentos marcaram o processo.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1413,17 +3182,23 @@
     "judiciario",
     "bahia"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/15022025-Operacao-Faroeste-afastamento-de-desembargadora-e-juiza-do-TJBA-e-prorrogado-por-mais-um-ano.aspx",
+    "https://www.mpf.mp.br/o-mpf/unidades/procuradoria-geral-da-republica-pgr/noticias/operacao-faroeste-stj-mantem-afastamento-de-juiza-e-desembargadora-do-tjba-investigadas",
+    "https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Faroeste"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Operação Faroeste tornou réus desembargadores do TJ-BA por esquema ligado a grilagem de terras e venda de sentenças.",
+   "descricao_detalhada": "Deflagrada pela PF, a Faroeste expôs rede envolvendo magistrados, advogados e servidores na Bahia; delações e afastamentos marcaram o processo."
   },
   {
    "id": 480,
    "data": "2020-01-01",
    "titulo": "Caso Witzel",
-   "descricao": "Investigação sobre esquema de corrupção durante a gestão do ex-governador Wilson Witzel✧  com condenações de desembargadores.Wilson WitzelDesembargadores condenados",
+   "descricao": "Além do impeachment político, o caso gerou responsabilização penal de magistrados trabalhistas por participação no desvio de recursos públicos.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1431,17 +3206,22 @@
     "judiciario",
     "rio-de-janeiro"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/13032025-STJ-condena-desembargadores-do-TRT1-por-participacao-em-esquema-de-corrupcao.aspx",
+    "https://www.cartacapital.com.br/justica/stj-condena-tres-desembargadores-do-trt-rj-por-corrupcao-na-gestao-de-witzel"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Esquema de corrupção na gestão Wilson Witzel com condenações de desembargadores no STJ.",
+   "descricao_detalhada": "Além do impeachment político, o caso gerou responsabilização penal de magistrados trabalhistas por participação no desvio de recursos públicos."
   },
   {
    "id": 473,
    "data": "2019-11-19",
    "titulo": "Operação Faroeste",
-   "descricao": "2019-11-19-Salvador, BA-corrupção judicial-grilagem terras",
+   "descricao": "Registro timeline da deflagração em 2019 que abriu a maior crise disciplinar do TJ-BA nas últimas décadas.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1450,17 +3230,23 @@
     "corrupcao-judicial",
     "grilagem-terras"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/15022025-Operacao-Faroeste-afastamento-de-desembargadora-e-juiza-do-TJBA-e-prorrogado-por-mais-um-ano.aspx",
+    "https://www.mpf.mp.br/o-mpf/unidades/procuradoria-geral-da-republica-pgr/noticias/operacao-faroeste-stj-mantem-afastamento-de-juiza-e-desembargadora-do-tjba-investigadas",
+    "https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Faroeste"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Marco inicial da Operação Faroeste em Salvador (BA): corrupção judicial e grilagem de terras.",
+   "descricao_detalhada": "Registro timeline da deflagração em 2019 que abriu a maior crise disciplinar do TJ-BA nas últimas décadas."
   },
   {
    "id": 432,
    "data": "2019-01-01",
    "titulo": "Operação Faroeste",
-   "descricao": "Esquema de grilagem de terras e venda de sentenças envolvendo desembargadores do TJ‑BA✧  advogados e servidores públicos.Desembargadores Maria do Socorro Barreto Santiago✧  Ilona Reis✧  Lígia Cunha✧  José Olegário Monção✧  Maria da Graça Osórioprodutores rurais✧  advogados✧  servidoras e servidores do MP‑BA",
+   "descricao": "A peça lista magistrados e intermediários apontados nas investigações Faroeste, com impacto em propriedade fundiária e segurança jurídica na Bahia.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1469,17 +3255,23 @@
     "ba",
     "venda-de-sentencas"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/15022025-Operacao-Faroeste-afastamento-de-desembargadora-e-juiza-do-TJBA-e-prorrogado-por-mais-um-ano.aspx",
+    "https://www.mpf.mp.br/o-mpf/unidades/procuradoria-geral-da-republica-pgr/noticias/operacao-faroeste-stj-mantem-afastamento-de-juiza-e-desembargadora-do-tjba-investigadas",
+    "https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Faroeste"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Esquema de grilagem e venda de sentenças no TJ-BA com desembargadores nomeados em reportagens e peças oficiais.",
+   "descricao_detalhada": "A peça lista magistrados e intermediários apontados nas investigações Faroeste, com impacto em propriedade fundiária e segurança jurídica na Bahia."
   },
   {
    "id": 433,
    "data": "2019-01-01",
    "titulo": "Vaza Jato Vazamento de Mensagens da Lava Jato",
-   "descricao": "Vazamento de conversas mostrando colaboração imprópria entre juiz e procuradores✧  sugerindo parcialidade.Juiz Sergio Moro✧  procurador Deltan Dallagnol✧  equipe da Lava Jato.",
+   "descricao": "A Vaza Jato documentou conversas que o STF e a doutrina usaram como argumento de suspeição em casos da Lava Jato, com efeitos em condenações e na reputação institucional do MPF/judiciário.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "STF"
@@ -1489,17 +3281,22 @@
     "judiciario",
     "pr"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://theintercept.com/series/mensagens-lava-jato",
+    "https://pt.wikipedia.org/wiki/Vaza_Jato"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Vazamento de mensagens entre juiz e procuradores da Lava Jato (The Intercept) gerou debate sobre parcialidade e anulações no STF.",
+   "descricao_detalhada": "A Vaza Jato documentou conversas que o STF e a doutrina usaram como argumento de suspeição em casos da Lava Jato, com efeitos em condenações e na reputação institucional do MPF/judiciário."
   },
   {
    "id": 387,
    "data": "2017-01-01",
    "titulo": "Esquema de venda de sentenças (TRF‑5)",
-   "descricao": "Desembargador aposentado e outros envolvidos condenados por exploração de prestígio✧  falsidade ideológica✧  lavagem de dinheiro✧  associação criminosa entre 2015–2017.Desembargador Francisco Barros Dias (aposentado)outros seis acusados",
+   "descricao": "O caso cobre o período 2015–2017 e ilustra comercialização de influência judicial na Justiça Federal nordestina.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1507,17 +3304,75 @@
     "judiciario",
     "rn"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
+   "fontes": [
+    "https://www.conjur.com.br",
+    "https://g1.globo.com/rn/rio-grande-do-norte"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Desembargador aposentado e corréus condenados por exploração de prestígio, falsidade e lavagem no âmbito do TRF-5/RN.",
+   "descricao_detalhada": "O caso cobre o período 2015–2017 e ilustra comercialização de influência judicial na Justiça Federal nordestina."
+  },
+  {
+   "id": 1816,
+   "data": "2016-11-01",
+   "titulo": "PGR Rodrigo Janot pede urgência ao STF na ADI dos cartórios da Bahia citando documentação de tentativas de retardar o julgamento — pedido não apreciado",
+   "descricao": "Em 2016, o então procurador-geral da República, Rodrigo Janot, formalizou pedido de celeridade no julgamento da ADI sobre os cartórios baianos, alegando haver documentação apontando 'necessidade de medida cautelar para resguardo da efetividade do provimento judicial' diante de tentativas de retardar a análise da ação. O pedido não foi apreciado pelo STF naquele momento. Janot também mencionou o atraso na nomeação dos aprovados em concurso público que assumiriam as vagas caso a lei fosse declarada inconstitucional.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "Ministério Público Federal",
+    "STF"
+   ],
+   "tags": [
+    "stf",
+    "P06",
+    "P03"
+   ],
+   "fontes": [
+    "https://francesnews.com.br/post/2026/08/26/33626-justica-confirma-condenacao-de-ex-tabeliao-da-bahia-por-morte-da-esposa-ex-cartorario-liderava-grupo-citado-em-acao-parada-no-stf-ha-14-anos",
+    "https://www.bnews.com.br/noticias/crime-e-justica-bahia/triangulo-amoroso-acaba-em-tragedia-tabeliao-que-matou-esposa-com-ajuda-da-amante-perde-cartorio-na-bahia.html"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1596,
+   "data": "2016-08-16",
+   "titulo": "PF encontra planilha JHSF com nome de Alexandre de Moraes: R$ 4 milhões ao escritório (2010–2014) — Fux arquiva em 8 dias sem inquérito",
+   "descricao": "Durante a 6ª fase da Operação Acrônimo, no cumprimento de mandado de busca e apreensão nos escritórios da JHSF em São Paulo, a PF encontra sobre a mesa de um executivo uma planilha impressa com o nome 'Alexandre Moraes', valores e as siglas PT e PSDB. Os valores estão associados à palavra 'Parkbem' — antigo nome de empresa de estacionamentos do grupo JHSF. Em depoimento de 31/08/2016, o proprietário da JHSF, José Auriemo Neto, confirma por meio de sua defesa que a referência é ao então ministro da Justiça Alexandre de Moraes. Novas planilhas revelam total de R$ 4 milhões pagos ao escritório entre 2010 e 2014. A coordenação da Acrônimo pede ao ministro Herman Benjamin (STJ) que informe o STF sobre a necessidade de abertura de inquérito. Em 22/09/2016 — 8 dias após entrada da documentação no STF — o ministro Luiz Fux arquiva monocraticamente, sem inquérito, sem quebra de sigilos bancário/fiscal, sem consultar a PGR. Aplica dispositivo regimental que permite arquivamento quando 'o fato narrado evidentemente não constitui crime'. Sigilo decretado sobre o processo. Moraes alega cláusula de confidencialidade e impossibilidade de detalhar os serviços prestados.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "STF",
+    "STJ",
+    "Polícia Federal",
+    "JHSF Participações"
+   ],
+   "tags": [
+    "stf",
+    "P07",
+    "P03",
+    "P02"
+   ],
+   "fontes": [
+    "https://www.diariodocentrodomundo.com.br/essencial/alexandre-de-moraes-recebeu-r-4-mi-de-empresa-investigada-na-operacao-acronimo/",
+    "https://www.sindsefaz.org.br/noticias/as-coincidencias-nos-pagamentos-de-r-4-milhoes-ao-advogado-alexandre-de-moraes/",
+    "https://www.redebrasilatual.com.br/politica/repasse-de-r-4-milhoes-a-alexandre-de-moraes-e-abafado-na-sabatina-com-ajuda-de-fux/",
+    "https://www.gazetadopovo.com.br/vida-publica/indicado-ao-stf-recebeu-dinheiro-de-empresa-investigada-na-operacao-acronimo-e010b543dmods35ieiiji1veu/"
+   ],
+   "evidence_status": "ev-confirmed",
    "valor_envolvido": null
   },
   {
    "id": 367,
    "data": "2016-01-01",
    "titulo": "Caso José Admilson Gomes Pereira",
-   "descricao": "Juiz cobrou R$ 70 mil por habeas corpus que garantiu liberdade de acusado de contratar pistoleiros.José Admilson Gomes PereiraCarlos José Campos SoutoIrmã de Carlos José Campos SoutoIrmão do magistrado",
+   "descricao": "O episódio documenta venda de liberdade em crime violento, com envolvimentos familiares apontados nas denúncias.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1525,17 +3380,47 @@
     "judiciario",
     "para"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": "R$ 70 mi"
+   "fontes": [
+    "https://g1.globo.com/pa/para",
+    "https://www.conjur.com.br"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 70 mi",
+   "descricao_resumo": "Juiz no Pará foi acusado de cobrar propina por habeas corpus que libertou acusado de contratar pistoleiros.",
+   "descricao_detalhada": "O episódio documenta venda de liberdade em crime violento, com envolvimentos familiares apontados nas denúncias."
+  },
+  {
+   "id": 1598,
+   "data": "2015-08-26",
+   "titulo": "TJ-SP condena Transcooper por subfaturamento de tarifas SPTrans (2005–2009) — cooperativa retinha repasses de perueiros durante presidência de Moraes",
+   "descricao": "O juiz Adevanir Carlos Moreira da Silveira, da 4ª Vara Cível do Foro Regional de Santana (TJ-SP), condena a Transcooper por subfaturamento sistemático de tarifas. A cooperativa recebia valores da SPTrans entre 2005 e 2009 e deixava de repassar integralmente aos perueiros cooperados. A sentença (26/08/2015) determina pagamento de R$ 67.160,92. Dois acórdãos confirmam a decisão: apelação e embargos declaratórios julgados entre maio e julho de 2017. Na sentença, o juiz afirma que 'o valor da tarifa foi subfaturado pela ré ao longo do tempo de modo a reduzir a remuneração devida ao autor cooperado'. O período de 2007 a 2009 coincide com a presidência de Alexandre de Moraes na SPTrans — autoridade que supervisionava os contratos com a cooperativa. Moraes passou a advogar para a Transcooper após deixar o cargo.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "TJ-SP",
+    "SPTrans",
+    "Transcooper"
+   ],
+   "tags": [
+    "stf",
+    "P02",
+    "P05",
+    "P01"
+   ],
+   "fontes": [
+    "https://fiquemsabendo.com.br/gastos-publicos/exclusivo-tj-condena-cooperativa-que-teve-alexandre-de-moraes-como-advogado-por-se-apropriar-de-dinheiro-de-perueiro-quando-ele-era-secretario"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
   },
   {
    "id": 355,
    "data": "2015-01-01",
    "titulo": "Operação Expresso 150",
-   "descricao": "Desembargadores e juízes do Ceará investigados por venda de habeas corpus e liminares durante plantões judiciais.Desembargadores Francisco Pedrosa Teixeira✧  Sergia Maria Mendonça Miranda✧  Váldsen da Silva Alves Pereira (aposentado)advogados e traficantes beneficiados",
+   "descricao": "Registro consolidado da Expresso 150 com magistrados cearenses alvos da PF.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1543,17 +3428,21 @@
     "judiciario",
     "ce"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://g1.globo.com/ce/ceara/noticia/operacao-expresso-150-pf-investiga-venda-de-liminares-no-ceara.ghtml"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Desembargadores e juízes do Ceará investigados por venda de liminares e habeas em plantões judiciais.",
+   "descricao_detalhada": "Registro consolidado da Expresso 150 com magistrados cearenses alvos da PF."
   },
   {
    "id": 358,
    "data": "2015-01-01",
    "titulo": "Operação Zelotes",
-   "descricao": "Operação iniciada em março de 2015 investigando corrupção no CARF✧  com empresas pagando propinas para anular multas fiscais✧  causando prejuízo estimado de R$ 19 bilhões.GerdauBradescoSantanderRBSBanco SafraAndré GerdauGuido MantegaLuiz Claudio (filho de Lula)Lobistas",
+   "descricao": "A Zelotes (2015) mirava conselheiros e empresas que manipulavam julgamentos administrativos fiscais. Embora centrada no CARF (Executivo), impacta a percepção de captura do sistema de Justiça tributária.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1561,17 +3450,75 @@
     "judiciario",
     "nacional"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": "R$ 19 bilhões"
+   "fontes": [
+    "https://g1.globo.com/politica/noticia/2016/02/entenda-operacao-zelotes.html",
+    "https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Zelotes"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 19 bilhões",
+   "descricao_resumo": "PF investigou corrupção no CARF com propinas para anular multas fiscais; prejuízo estimado em bilhões.",
+   "descricao_detalhada": "A Zelotes (2015) mirava conselheiros e empresas que manipulavam julgamentos administrativos fiscais. Embora centrada no CARF (Executivo), impacta a percepção de captura do sistema de Justiça tributária."
+  },
+  {
+   "id": 1597,
+   "data": "2014-03-01",
+   "titulo": "Reunião PCC na sede da Transcooper (zona leste-SP): deputado Luiz Moura flagrado com 13 suspeitos da facção",
+   "descricao": "Em março de 2014, a Polícia Civil de São Paulo flagra, em operação de monitoramento para apurar ataques a ônibus na cidade, uma reunião na sede da Transcooper — cooperativa de transporte da zona leste — entre o deputado estadual Luiz Moura (PT), irmão do vereador Senival Moura, e ao menos 13 pessoas suspeitas de integrar o PCC. Dos 13 presentes, 11 não tinham ônibus nem vínculo formal com a cooperativa, segundo investigadores. O parlamentar alega ter participado para tratar de assuntos da categoria. A Transcooper, à época, tinha Alexandre de Moraes como advogado em 123 processos — período em que ele já havia deixado a presidência da SPTrans (cargo exercido entre 2007 e 2010, durante o qual a cooperativa era objeto de fiscalização da própria SPTrans).",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "media",
+   "instituicoes": [
+    "Polícia Civil SP",
+    "GAECO",
+    "Transcooper",
+    "SPTrans"
+   ],
+   "tags": [
+    "stf",
+    "P05",
+    "P01",
+    "P02"
+   ],
+   "fontes": [
+    "https://www.band.com.br/noticias/onibus-do-pcc-entenda-o-esquema-da-faccao-com-o-transporte-publico-de-sp-16517221",
+    "https://fiquemsabendo.com.br/gastos-publicos/exclusivo-tj-condena-cooperativa-que-teve-alexandre-de-moraes-como-advogado-por-se-apropriar-de-dinheiro-de-perueiro-quando-ele-era-secretario"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
+  },
+  {
+   "id": 1813,
+   "data": "2013-11-27",
+   "titulo": "AGU e Banco Central mudam de posição e defendem teses bancárias na ADPF 165; STF suspende julgamento após pedido do PGR Rodrigo Janot para revisão de contas",
+   "descricao": "Em 27/11/2013, quando o STF finalmente pautou a ADPF 165 para julgamento e ouviu sustentações orais, a Advocacia-Geral da União (AGU) e o Banco Central — que representam o interesse público — passaram a defender as teses dos bancos, indo contra a posição historicamente favorável aos poupadores. Em vez de concluir o julgamento naquela sessão, o STF suspendeu o processo a partir de pedido do então procurador-geral da República, Rodrigo Janot, para revisão das contas apresentadas no processo.",
+   "grupo": "chokepoint_stf",
+   "gravidade": null,
+   "relevancia": "alta",
+   "instituicoes": [
+    "STF",
+    "AGU",
+    "Banco Central",
+    "Ministério Público Federal"
+   ],
+   "tags": [
+    "stf",
+    "P03",
+    "P06"
+   ],
+   "fontes": [
+    "https://idec.org.br/o-idec/sala-de-imprensa/release/idec-e-contra-a-suspenso-da-adpf-165-no-stf",
+    "https://idec.org.br/artigo/os-bancos-sendo-bancos-ao-final-do-acordo-dos-planos-economicos"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null
   },
   {
    "id": 326,
    "data": "2012-01-01",
    "titulo": "Caso Edgard Antônio Lippmann Júnior",
-   "descricao": "Desembargador recebeu três aposentadorias compulsórias por venda de sentenças✧  incluindo decisão para urgência no pagamento de dívida do governo.Edgard Antônio Lippmann Júnior",
+   "descricao": "O caso é referência clássica de sanção disciplinar máxima (aposentadoria compulsória) por comercialização de decisões.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1580,17 +3527,22 @@
     "rio-grande-do-sul",
     "venda-de-sentencas"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": "R$ 35 mi"
+   "fontes": [
+    "https://g1.globo.com/rs/rio-grande-do-sul",
+    "https://www.conjur.com.br"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 35 mi",
+   "descricao_resumo": "Desembargador recebeu aposentadorias compulsórias após apuração de venda de sentenças, inclusive em pagamento de dívida pública.",
+   "descricao_detalhada": "O caso é referência clássica de sanção disciplinar máxima (aposentadoria compulsória) por comercialização de decisões."
   },
   {
    "id": 302,
    "data": "2010-01-01",
    "titulo": "Caso Jovaldo dos Santos Aguiar",
-   "descricao": "Corregedor cobrou decisão de empresário e advogado✧  deixando 31 processos parados✧  e foi denunciado por não entregar decisão negociada.Jovaldo dos Santos Aguiar",
+   "descricao": "O episódio evidencia risco de corrupção na própria correição local — órgão que deveria fiscalizar a magistratura.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1598,17 +3550,21 @@
     "judiciario",
     "amazonas"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": "R$ 13 mi"
+   "fontes": [
+    "https://g1.globo.com/am/amazonas"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 13 mi",
+   "descricao_resumo": "Corregedor no Amazonas foi denunciado por cobrar para decidir processos, deixando dezenas parados.",
+   "descricao_detalhada": "O episódio evidencia risco de corrupção na própria correição local — órgão que deveria fiscalizar a magistratura."
   },
   {
    "id": 288,
    "data": "2008-01-01",
    "titulo": "Operação Naufrágio",
-   "descricao": "Investigação iniciada em 2008 sobre suspeitas de nepotismo e venda de decisões no Tribunal de Justiça do Espírito Santo✧  com ação penal ainda não julgada pelo STJ.Três desembargadores (presos em 2008)Um desembargador (réu atual)26 pessoas denunciadas em 2010 pelo Ministério Público Federal",
+   "descricao": "Marco histórico da Naufrágio: prisões cautelares e longa tramitação da ação penal no STJ.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1616,17 +3572,22 @@
     "judiciario",
     "espirito-santo"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://www.conjur.com.br/2019-ago-14/stj-julgara-acao-penal-desembargadores-espirito-santo",
+    "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias.aspx"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Operação de 2008 sobre nepotismo e venda de decisões no TJ-ES, com desembargadores presos.",
+   "descricao_detalhada": "Marco histórico da Naufrágio: prisões cautelares e longa tramitação da ação penal no STJ."
   },
   {
    "id": 277,
    "data": "2007-04-13",
    "titulo": "Operação Hurricane",
-   "descricao": "2007-04-13-Rio de Janeiro, RJ-jogo ilegal-corrupção judicial",
+   "descricao": "A Hurricane revelou intermediação entre magistrados e bicheiros/jogos, com grande repercussão nacional e afastamentos.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1635,17 +3596,22 @@
     "jogo-ilegal",
     "corrupcao-judicial"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%A3o_Hurricane",
+    "https://g1.globo.com/Noticias/Politica/0,,MUL23707-5601,00.html"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Operação Hurricane (2007) investigou juízes e policiais por esquema ligado a jogo ilegal e corrupção no RJ.",
+   "descricao_detalhada": "A Hurricane revelou intermediação entre magistrados e bicheiros/jogos, com grande repercussão nacional e afastamentos."
   },
   {
    "id": 256,
    "data": "2007-01-01",
    "titulo": "Caso José Dantas de Lira",
-   "descricao": "Juiz cobrava R$ 750 por liminar em esquema com filho✧  advogado✧  funcionário do tribunal e corretores✧  movimentando mais de R$ 3 milhões entre 2007 e 2009.José Dantas de LiraFilho de José Dantas de LiraIvan Holanda PereiraFuncionário do tribunalDois corretores",
+   "descricao": "O caso documenta microcorrupção reiterada em liminares (2007–2009), com rede familiar de intermediação.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1653,17 +3619,21 @@
     "judiciario",
     "rio-grande-do-norte"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": "R$ 750 "
+   "fontes": [
+    "https://g1.globo.com/rn/rio-grande-do-norte"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 750 ",
+   "descricao_resumo": "Juiz no RN foi acusado de cobrar por liminares em esquema com familiares e corretores, com movimentação milionária.",
+   "descricao_detalhada": "O caso documenta microcorrupção reiterada em liminares (2007–2009), com rede familiar de intermediação."
   },
   {
    "id": 258,
    "data": "2007-01-01",
    "titulo": "Caso Rubem Dário Peregrino Cunha",
-   "descricao": "Desembargador cobrou R$ 400 mil para livrar prefeito de acusação de corrupção✧  além de pedir cargo para a namorada do filho.Rubem Dário Peregrino CunhaAntônio Pascoal BatistaNizan Gomes Cunha Neto",
+   "descricao": "Além da propina, reportagens citaram pedido de cargo para familiar — padrão clássico de captura clientelista.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1671,17 +3641,21 @@
     "judiciario",
     "bahia"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": "R$ 400 mi"
+   "fontes": [
+    "https://g1.globo.com/ba/bahia"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 400 mi",
+   "descricao_resumo": "Desembargador baiano foi acusado de cobrar centenas de milhares para livrar prefeito de acusação de corrupção.",
+   "descricao_detalhada": "Além da propina, reportagens citaram pedido de cargo para familiar — padrão clássico de captura clientelista."
   },
   {
    "id": 172,
    "data": "2003-10-30",
    "titulo": "Operação Anaconda",
-   "descricao": "2003-10-30-São Paulo, SP-corrupção judicial-venda de sentenças",
+   "descricao": "Marco pioneiro da PF contra venda de sentenças envolvendo juízes federais, delegados e advogados; referência histórica do MPF.",
    "grupo": "corrupcao_judicial",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "STF"
@@ -1692,17 +3666,22 @@
     "corrupcao-judicial",
     "venda-de-sentencas"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": null
+   "fontes": [
+    "https://linhadotempo.mpf.mp.br/www/linha-do-tempo-prr3/2003-2013-operacao-anaconda",
+    "https://www.migalhas.com.br/quentes/7756/operacao-anaconda"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": null,
+   "descricao_resumo": "Operação Anaconda (2003) desarticulou esquema de venda de sentenças e informações judiciais em São Paulo.",
+   "descricao_detalhada": "Marco pioneiro da PF contra venda de sentenças envolvendo juízes federais, delegados e advogados; referência histórica do MPF."
   },
   {
    "id": 127,
    "data": "2001-01-01",
    "titulo": "Caso Antônio Fernando Guimarães",
-   "descricao": "Desembargador teve aluguel de apartamento de luxo pago por escritório de advocacia em troca de decisões favoráveis.Antônio Fernando GuimarãesEscritório Vilhena&Vilhena",
+   "descricao": "O padrão de vantagem indireta (moradia) ilustra formas não monetárias imediatas de captura judicial.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [],
    "tags": [
@@ -1710,17 +3689,21 @@
     "judiciario",
     "minas-gerais"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": "R$ 37 mi"
+   "fontes": [
+    "https://www.conjur.com.br"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 37 mi",
+   "descricao_resumo": "Desembargador mineiro teve aluguel de luxo pago por escritório em troca de decisões favoráveis, segundo apurações.",
+   "descricao_detalhada": "O padrão de vantagem indireta (moradia) ilustra formas não monetárias imediatas de captura judicial."
   },
   {
    "id": 42,
    "data": "1992-01-01",
    "titulo": "Caso do Fórum do TRT-SP",
-   "descricao": "Esquema de corrupção envolvendo a construção do fórum do Tribunal Regional do Trabalho em São Paulo✧  com desvios de verbas iniciados em 1992✧  detectados por auditorias do TCU em 1995✧  e obra abandonada em 1998.Nicolau dos Santos NetoLuiz EstevãoConstrutora IncalGrupo OK",
+   "descricao": "Obra abandonada e desvios multimilionários tornaram-se símbolo nacional de corrupção na Justiça do Trabalho paulista.",
    "grupo": "outros_judiciario",
-   "gravidade": null,
+   "gravidade": "alta",
    "relevancia": "media",
    "instituicoes": [
     "TCU"
@@ -1730,9 +3713,13 @@
     "judiciario",
     "sao-paulo"
    ],
-   "fontes": [],
-   "evidence_status": "ev-alleged",
-   "valor_envolvido": "R$ 2 bilhões"
+   "fontes": [
+    "https://pt.wikipedia.org/wiki/Esc%C3%A2ndalo_do_Tribunal_Regional_do_Trabalho_de_S%C3%A3o_Paulo"
+   ],
+   "evidence_status": "ev-confirmed",
+   "valor_envolvido": "R$ 2 bilhões",
+   "descricao_resumo": "Escândalo de desvio na construção do fórum do TRT-SP (Nicolau dos Santos Neto), detectado pelo TCU nos anos 1990.",
+   "descricao_detalhada": "Obra abandonada e desvios multimilionários tornaram-se símbolo nacional de corrupção na Justiça do Trabalho paulista."
   }
  ]
 }

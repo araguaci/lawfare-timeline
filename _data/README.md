@@ -59,7 +59,14 @@ _data/
 ├── posts-since-2026-05-26.json
 │
 ├── ── SIDECARS E DOMÍNIOS ESPECÍFICOS ──
-├── justicewatch/                      Corpus JustiçaWatch (bridge T-209)
+├── jusmonitor/                        Enriquecimento evidencial captura → https://jusmonitor.vercel.app
+│   ├── enrichment-patches.json        Patches por id (fontes + descrições)
+│   ├── candidates-grave.json          Fila gravidade-alta / alertas críticos
+│   ├── schema.json                    Contrato do patch
+│   └── README.md
+├── justicewatch/                      Corpus JustiçaWatch (bridge T-209) → canônico https://jusmonitor.vercel.app
+│   ├── justicawatch-brasil.json
+│   └── decisoes-seed.json             (via extract_decisoes.py)
 ├── atores-gilmar-mendes-carmen-lucia.json
 ├── bloqueios-nikolas_dm*.json
 ├── tinyurls_related.json
