@@ -7,6 +7,101 @@ Formato: data (ISO) → resumo → arquivos de fonte.
 
 ---
 
+## 2026-08-13 (d) — T-252 lacuna resolvida · fila todo/ esvaziada · sync
+
+A lacuna de T-252 (coordenação formal entre Frente 1 Lei/ANPD e Frente 2 sigilo de fonte) fecha-se como **achado negativo**. Fila `_data/todo/` arquivada (batch 1850–1856 + thematic T-252). Tracks: main **1856** / next **1857** · temático **T-252** / next **T-253**.
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Alterado** | `_posts/estudos/` T-252 | Secção «Lacuna resolvida»; notas |
+| **Alterado** | `processados/` T-252 JSON | `lacuna_status: resolvida` |
+| **Arquivado** | `_data/todo/` → `processados/` | `lawfare-batch-lei15487-…-1850-1856.json` + T-252 |
+| **Alterado** | `TODO.md` · `_data/README.md` · `processados/todo.md` | Snapshot 1856 / T-252; fila vazia |
+| **Alterado** | `tools/sync_corpus_ids.py` | Topic T-252 = duas frentes (override em entries existentes) |
+| **Sync** | `claude.ai-corpus-ids-sync.json` | Regenerado |
+
+---
+
+## 2026-08-13 (c) — Ajustes fila: patch 1855 + id_1856 + rewrite T-252
+
+Fila `_data/todo/` com correções sobre entradas já processadas: **1855** reescrito (seletividade Discord/Telegram + indeferimento → `ev-contested`); **1856** novo (sigilo de fonte / Moraes–Dino, ligado a **id_1849**); **T-252** reformulado em duas frentes. Sync: main **1856** / next **1857**.
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Alterado** | `_posts/justica/` + `lawfare.json` 1855 | Operação Rede Interrompida / seletividade |
+| **Criado** | `_posts/stf/` id_1856 | Busca contra fonte (Cutrim / Luís Pablo) |
+| **Alterado** | `_posts/estudos/` T-252 | Duas frentes: plataforma + sigilo de fonte |
+| **Alterado** | id_1849 post | Conexão → id_1856 |
+| **Arquivado** | `processados/` | Batches ajustados sobrescritos |
+
+---
+
+## 2026-08-13 (b) — Merge 1850–1855 + T-252 · purge mislabels temáticos
+
+Merge da fila `_data/todo/` (Lei 15.487 / ANPD / Discord); posts com `id_corpus` e conexões `[título](/permalink/)`; limpeza do registry temático (T-1512/1765/1766). Tracks: main **1855** / next **1856** · temático **T-252** / next **T-253**.
+
+| Faixa | Conteúdo |
+|-------|----------|
+| **1850** | ANPD suspende Go Live do Discord (criptografia ≠ eximente) |
+| **1851–1853** | Lei 15.487/2026 — sanção, art. 226-A (VPN), ronda virtual |
+| **1854–1855** | Pedido Janja/AGU + indeferimento judicial prévio (ev-alleged) |
+| **T-252** | Escalada sequencial anonimização → doutrina ANPD (6 dias) |
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Criado** | `scripts/merge_todo_queue_1850_1855.py` | Merge + linkify conexões/inline `id_*`/`T-*` |
+| **Alterado** | `_data/lawfare.json` | +6 assuntos (**1850–1855**); total **1816**; max **1855** |
+| **Criado** | `_posts/lawfare|escandalos|justica|estudos/` | 7 posts; conexões `[id_N — título](/posts/…)` |
+| **Arquivado** | `_data/processados/` | Batches lei15487 + thematic T-252 |
+| **Alterado** | `tools/sync_corpus_ids.py` | Purge entries T-≥500; `mislabeled_on_disk`; session_log sem T-1767 |
+| **Alterado** | `claude.ai-corpus-ids-sync.json` | Main **1855**; thematic **T-252**; open_items → T-253 |
+| **Alterado** | `README.md` · `_data/README.md` | IDs **1855** / **T-252** |
+| **Sync** | Google Drive | `claude.ai-corpus-ids-sync.json` + `lawfare.json` |
+
+---
+
+## 2026-08-13 — Merge 1839–1849 + T-251 · JusMonitor · sync corpus/Drive
+
+Merge da fila `_data/todo/` (main **1839–1849**, temático **T-251**); camada de enriquecimento evidencial para JusMonitor; contador de acessos no footer; sync de IDs e Google Drive. Tracks canônicos: main **1849** / next **1850** · temático **T-251** / next **T-252**.
+
+### Fila `_data/todo/` → corpus + posts
+
+| Faixa | Conteúdo |
+|-------|----------|
+| **1839–1841** | Janja/Discord · Telegram/Moraes · Itamaraty/vistos EUA |
+| **1842** | CNJ → STF: penduricalhos retroativos |
+| **1843–1849** | Cluster Moraes–Master (contrato família, Vorcaro, notas, PF, Toffoli, Gilmar, BA jornalista) |
+| **T-251** | Convergência estrutural STF/família/banco Master (P02/P05/P07) |
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Criado** | `scripts/merge_todo_queue_1839_1849.py` | Merge batches → `lawfare.json` + posts |
+| **Alterado** | `_data/lawfare.json` | +11 assuntos (**1839–1849**); total **~1810**; max **1849** |
+| **Criado** | `_posts/**` (escandalos/stf/crise-diplomatica/penduricalhos/bancos/estudos) | Posts com `id_corpus` 1839–1849 e **T-251** |
+| **Arquivado** | `_data/processados/` | Batches Janja/Telegram, CNJ 1842, Moraes–Master 1843–1849, thematic T-251 |
+| **Corrigido** | Conexões `id_*` nos posts | Links `[id_NNNN — título](/posts/...)`; Telegram → **id_712** / **id_808** |
+
+### JusMonitor (fontes verificáveis)
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Criado** | `_data/jusmonitor/` | `enrichment-patches.json` (57), `schema.json`, `candidates-grave.json`, `unresolved.json`, `README.md` |
+| **Alterado** | `_data/extract_jusmonitor.py` | Aplica patches; R1 sem URL → `ev-alleged`; categorias `penduricalhos`/`stf`/`tse` |
+| **Alterado** | `justicewatch/` + bridge JusMonitor | Decisões T-209 enriquecidas; `build-unified.py` propaga fontes |
+
+### Site / sync
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Alterado** | `_includes/footer.html` | Contagem de acessos (`stats.artesdosul.com`, `#ads-counter`) |
+| **Alterado** | `tools/sync_corpus_ids.py` | Batch auto + discover T-* (teto 500); atualiza `_meta` / Drive export |
+| **Alterado** | `claude.ai-corpus-ids-sync.json` | Main **1849**; thematic **T-251**; batch 1839–1849 confirmed |
+| **Alterado** | `README.md` · `_data/README.md` | IDs atuais **1849** / **T-251** |
+| **Sync** | Google Drive | `claude.ai-corpus-ids-sync.json` + `lawfare.json` |
+| **Criado** | `_data/sync_status_2026-08-13.html` | Snapshot de status (também `sync_status_latest.html`) |
+
+---
+
 ## 2026-08-05 — Batch 1827–1835 + T-249 (realocação anti-colisão)
 
 | Faixa | Conteúdo |
