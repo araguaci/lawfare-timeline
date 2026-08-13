@@ -16,18 +16,18 @@ Valores abaixo vêm de `_data/lawfare.json` e `_data/claude.ai-corpus-ids-sync.j
 
 | Track | Último ID | Próximo | Fonte de verdade |
 |---|---:|---:|---|
-| **Main timeline** | **1838** | 1839 | `_data/lawfare.json` → `assuntos[].id` (1799 assuntos) |
-| **Temático (T-)** | **250** | 251 | `_data/claude.ai-corpus-ids-sync.json` + `_posts/` |
-| **Estudos T em disco** | — | — | ~33 posts com `id_corpus` temático |
+| **Main timeline** | **1856** | 1857 | `_data/lawfare.json` → `assuntos[].id` (~1817 assuntos) |
+| **Temático (T-)** | **252** | 253 | `_data/claude.ai-corpus-ids-sync.json` + `_posts/` |
+| **Estudos T em disco** | — | — | ~45+ posts com `id_corpus` temático (registry ≤500) |
 | **Posts `_posts/`** | — | — | ~400+ entradas Jekyll |
-| **Série Dragão e a Onça** | **1770** / **T-246** | — | `_posts/dragao-onca/` (151 posts); main pós-série usa **1839+** |
+| **Série Dragão e a Onça** | **1770** / **T-246** | — | `_posts/dragao-onca/` (151 posts); main pós-série usa **1856+** |
 
 ### Dois tracks de ID (não confundir)
 
 | Track | Namespace | Onde vive | Exemplo |
 |---|---|---|---|
-| Main | inteiros 1–1838+ | `lawfare.json`, posts timeline | `id_corpus: "1838"` |
-| Temático | T-100+ (registry 100–250) | `_posts/estudos/`, `_posts/dragao-onca/`, sync JSON | `id_corpus: "T-250"` |
+| Main | inteiros 1–1856+ | `lawfare.json`, posts timeline | `id_corpus: "1856"` |
+| Temático | T-100+ (registry 100–252) | `_posts/estudos/`, `_posts/dragao-onca/`, sync JSON | `id_corpus: "T-252"` |
 
 Posts **corpus-bridge** (T-205–T-209) ligam artefatos HTML do [gosurf.site](https://gosurf.site) ao índice Jekyll. Detalhes em [TODO.md](./TODO.md).
 
@@ -40,7 +40,9 @@ Posts **corpus-bridge** (T-205–T-209) ligam artefatos HTML do [gosurf.site](ht
 | 1511–1638 | Publicados | Correntes (incl. batches Biomm, Rejeito, Flávio/Trump, Sepse) |
 | **1639–1756** | Publicados | Série **O Dragão e a Onça** (118 entradas `categoria: dragao-onca`) |
 | **1757–1838** | Publicados | Batches pós-Dragão (jul–ago/2026); **1763–1764** reservados (CEEE-T/JMEV); gap main **1820** → temático **T-248** |
-| **1839+** | Disponível | Próximo ID main livre (`sync.tracks.main.next_available`) |
+| **1839–1849** | Publicados | Merge ago/2026: Janja/Telegram/EUA, CNJ penduricalhos, cluster Moraes–Master; temático **T-251** |
+| **1850–1856** | Publicados | Lei 15.487/ANPD/Discord; **1855** seletividade Telegram/Discord; **1856** sigilo de fonte (Moraes); **T-252** duas frentes |
+| **1857+** | Disponível | Próximo ID main livre (`sync.tracks.main.next_available`) |
 
 Gap esperado em `lawfare.json`: **1449–1510** (62 slots) — aviso normal em `validate-ids.ps1`.
 

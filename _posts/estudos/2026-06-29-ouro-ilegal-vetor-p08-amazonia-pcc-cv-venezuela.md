@@ -55,7 +55,7 @@ Nenhuma fonte verificada quantifica a real interseção operacional entre o cont
 
 - faixa-tropical.html
 - cocaina-vermelha.html
-- [T-201 · T-201 · PCC Transnacional — OFAC, EUA e Eixo Luso](/posts/pcc-transnacional-ofac-eua-luso/)
+- [T-201 · PCC Transnacional — OFAC, EUA e Eixo Luso](/posts/pcc-transnacional-ofac-eua-luso/)
 - carbono_oculto.html
 
 ## Fontes

@@ -1,0 +1,64 @@
+{
+  "id": "T-252",
+  "date": "2026-08-13",
+  "date_precision": "day",
+  "title": "Escalada em duas frentes na mesma semana: doutrina de que proteção técnica não isenta responsabilidade, aplicada a dados de usuário e a sigilo de fonte jornalística",
+  "summary": "Entre 06/08/2026 e 12/08/2026, o mesmo princípio estrutural — mecanismo de proteção técnica não isenta o Estado/operador de encontrar via de acesso equivalente — avançou em duas frentes distintas, com sobreposição parcial de atores e calendário: FRENTE 1 (dados de usuário/plataforma): 06-07/08, Lei 15.487/2026 torna VPN/mascaramento de IP agravante penal (art. 226-A, id_1852) e autoriza acesso a dados cadastrais sem autorização judicial prévia mediante comunicação em 48h ('ronda virtual', id_1853); 12/08, nota técnica da ANPD (id_1850) declara que criptografia ponta a ponta do Discord não isenta a plataforma de responsabilidade, exigindo 'controles substitutivos' de efetividade equivalente à leitura de conteúdo. Na cerimônia de sanção, a primeira-dama Janja da Silva — sem cargo formal — pediu publicamente a derrubada do Discord (id_1854), com resposta operacional imediata da AGU. FRENTE 2 (sigilo de fonte jornalística): 11/08, o STF (min. Alexandre de Moraes) autorizou busca e apreensão contra a fonte de um jornalista que investigava outro ministro do STF (Flávio Dino), identificada não porque o jornalista a revelou, mas porque a perícia em dispositivos apreendidos do próprio jornalista (por acusação distinta, em março) permitiu rastreá-la (id_1856). A garantia constitucional do sigilo de fonte (CF art. 5º, XIV) não foi revogada — foi contornada por via técnica, mesmo mecanismo estrutural da Frente 1 aplicado a um objeto diferente (identidade da fonte, não conteúdo cifrado).",
+  "category": "analise_editorial",
+  "actors": [],
+  "institutions": [
+    "Presidência da República",
+    "ANPD",
+    "CGI.br",
+    "Advocacia-Geral da União",
+    "STF"
+  ],
+  "legal_basis": [
+    "Lei 15.487/2026, art. 226-A",
+    "Lei 15.487/2026 — ronda virtual",
+    "Estatuto Digital da Criança e do Adolescente (ECA Digital, 2025)",
+    "CF/88, art. 5º, XIV — sigilo da fonte jornalística"
+  ],
+  "patterns": [
+    "P03",
+    "P04b",
+    "P02"
+  ],
+  "evidence_status": "ev-inference",
+  "sources": [
+    {
+      "title": "Lei aumenta penas para violência sexual digital contra crianças e adolescentes e endurece punições",
+      "url": "https://www.camara.leg.br/noticias/1295754-lei-aumenta-penas-para-violencia-sexual-digital-contra-criancas-e-adolescentes-e-endurece-punicoes",
+      "outlet": "Portal da Câmara dos Deputados",
+      "date": "2026-08-07"
+    },
+    {
+      "title": "ANPD detona sistemas de segurança do Discord",
+      "url": "https://nucleo.jor.br/reportagem/2026/08/12/anpd-detona-sistemas-de-seguranca-do-discord/",
+      "outlet": "Núcleo Jornalismo",
+      "date": "2026-08-12"
+    },
+    {
+      "title": "O que levou Moraes a determinar busca na casa de fonte de jornalista maranhense",
+      "url": "https://www.cartacapital.com.br/justica/por-que-moraes-determinou-busca-e-apreensao-em-casa-de-fonte-de-jornalista/",
+      "outlet": "CartaCapital",
+      "date": "2026-08-11"
+    }
+  ],
+  "result": "Duas frentes institucionais distintas (lei federal + nota regulatória; decisão judicial do STF) convergindo sobre o mesmo princípio estrutural em janela de 6 dias, com sobreposição parcial de atores (mesmo caso-gatilho Naviraí para a Frente 1; mesmo tribunal, STF, para ambas as frentes via Moraes).",
+  "connections": [
+    "id_1850",
+    "id_1851",
+    "id_1852",
+    "id_1853",
+    "id_1854",
+    "id_1855",
+    "id_1856"
+  ],
+  "status": "confirmado",
+  "lacuna_investigativa": "RESOLVIDA (2026-08-13). A ausência de coordenação formal entre as duas frentes deixa de ser gap e passa a achado: origens institucionais distintas (Legislativo/ANPD vs. STF/caso individual); cluster 1850–1856 não produziu documento que prove nexo causal além da coincidência temporal e do princípio estrutural compartilhado. O padrão documentado é a doutrina ('proteção técnica não isenta'), não planejamento conjunto.",
+  "ponto_de_inflexao": "12/08/2026 — mesmo dia em que a ANPD estende a doutrina 'proteção técnica não exime responsabilidade' ao conteúdo cifrado do Discord, a Frente 2 (sigilo de fonte, iniciada em 11/08) já estava em curso sob o mesmo princípio estrutural aplicado a garantia constitucional distinta.",
+  "analise": "As duas frentes compartilham uma mesma arquitetura de raciocínio institucional: identificar um mecanismo de proteção (criptografia de conteúdo; sigilo de fonte constitucional) e, em vez de revogá-lo formalmente — o que seria juridicamente indefensável em público nos dois casos —, encontrar via técnica de contorno que preserva a garantia no papel e a esvazia na prática. Na Frente 1, o contorno é regulatório (ônus do operador encontrar substituto de vigilância). Na Frente 2, o contorno é pericial (extrair da perícia de um dispositivo apreendido por outro motivo aquilo que a garantia formal impede pedir diretamente). Contraponto obrigatório por rigor simétrico: nem toda checagem institucional falhou neste cluster — a Justiça já havia negado pedido de suspensão total do Discord antes da pressão pública (id_1855, agora reforçado por evidência de seletividade Discord/Telegram e rebaixado a ev-contested), e o CGI.br emitiu advertência técnica formal contra o art. 226-A, ainda que ignorada (id_1852). Na Frente 2, a assessoria de Dino contesta a narrativa da reportagem original — o ponto estrutural documentado não depende de qual versão dos fatos de fundo é verdadeira, apenas do método usado para identificar a fonte.",
+  "lacuna_status": "resolvida",
+  "lacuna_resolvida_em": "2026-08-13"
+}

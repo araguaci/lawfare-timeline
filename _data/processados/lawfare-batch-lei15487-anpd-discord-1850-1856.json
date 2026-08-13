@@ -1,0 +1,332 @@
+[
+  {
+    "id": "1850",
+    "date": "2026-08-12",
+    "date_precision": "day",
+    "title": "ANPD determina suspensão do recurso Go Live do Discord, tratando criptografia ponta a ponta como não-eximente de responsabilidade",
+    "summary": "A Superintendência de Fiscalização da ANPD determinou a suspensão do recurso 'Go Live' (transmissão de tela em tempo real) do Discord no Brasil, dando prazo de 3 dias úteis para desativação, com base em falhas de moderação de conteúdo relacionadas a menores. A nota técnica declara que a escolha de arquitetura do serviço (criptografia ponta a ponta, obrigatória desde 02/03/2026) não exime a plataforma de responsabilidade, cabendo ao operador implementar 'controles substitutivos' com 'efetividade equivalente ou superior' — citando como exemplo possível a detecção executada no próprio dispositivo do usuário. O gatilho declarado foi o suicídio transmitido ao vivo de uma adolescente de 13 anos em Naviraí/MS em 22/07/2026. Discord permanece no ar; apenas a função Go Live foi visada.",
+    "category": "mecanismo_sistemico",
+    "actors": [
+      {
+        "name": "Superintendência de Fiscalização da ANPD",
+        "role": "Órgão emissor da nota técnica e da determinação de suspensão",
+        "institution": "ANPD"
+      }
+    ],
+    "institutions": ["ANPD", "Discord Inc.", "Ministério da Justiça e Segurança Pública"],
+    "legal_basis": ["Estatuto Digital da Criança e do Adolescente (ECA Digital, 2025) — mandato de fiscalização da ANPD"],
+    "patterns": ["P03"],
+    "evidence_status": "ev-confirmed",
+    "sources": [
+      {
+        "title": "ANPD detona sistemas de segurança do Discord",
+        "url": "https://nucleo.jor.br/reportagem/2026/08/12/anpd-detona-sistemas-de-seguranca-do-discord/",
+        "outlet": "Núcleo Jornalismo",
+        "date": "2026-08-12"
+      },
+      {
+        "title": "Discord: ANPD cria precedente perigoso sobre criptografia, diz especialista",
+        "url": "https://www.cnnbrasil.com.br/politica/discord-anpd-cria-precedente-perigoso-sobre-criptografia-diz-especialista/",
+        "outlet": "CNN Brasil",
+        "date": "2026-08-12"
+      }
+    ],
+    "result": "Discord recebeu prazo de 3 dias úteis para desativar o Go Live no Brasil. Plataforma classificou a decisão como prematura.",
+    "connections": ["id_1854", "id_1855"],
+    "status": "confirmado",
+    "lacuna_investigativa": "A nota técnica não especifica qual mecanismo técnico concreto satisfaria o padrão de 'efetividade equivalente' sem acesso ao conteúdo cifrado — permanece indefinido se 'controles substitutivos' significa varredura no dispositivo (client-side scanning) ou apenas análise comportamental/metadados.",
+    "ponto_de_inflexao": null,
+    "analise": "A nota técnica estabelece doutrina regulatória de que arquitetura de proteção (criptografia ponta a ponta) não isenta responsabilidade — o ônus de encontrar 'substituto funcionalmente equivalente' à leitura de conteúdo recai sobre o operador. Como não há meio-termo tecnicamente honesto entre criptografia ponta a ponta e moderação de conteúdo por terceiro, a doutrina abre precedente estrutural aplicável a qualquer plataforma cifrada, não apenas ao caso concreto. Especialista consultado por veículo independente já formaliza essa leitura como precedente preocupante."
+  },
+  {
+    "id": "1851",
+    "date": "2026-08-06",
+    "date_precision": "day",
+    "title": "Lula sanciona Lei 15.487/2026, que endurece penas por crimes sexuais digitais contra crianças e cria a 'ronda virtual'",
+    "summary": "O presidente Lula sancionou sem vetos o PL 3066/2025 (autoria do deputado Osmar Terra, MDB-RS), convertido em Lei 15.487/2026, publicada no Diário Oficial da União em 07/08/2026. A norma altera o ECA: aumenta penas para produção/venda/armazenamento de material de violência sexual contra crianças e adolescentes (de 4-8 para 4-10 anos), inclui esses crimes no rol dos hediondos, criminaliza deepfakes e simulações via IA, substitui 'pornografia infantil' por 'violência sexual contra criança ou adolescente' em toda a legislação, e autoriza a 'ronda virtual' — rastreamento automatizado de arquivos em ambientes digitais públicos. Cerimônia no Palácio do Planalto contou com apoio de empresas de tecnologia presentes.",
+    "category": "ato_legislativo",
+    "actors": [
+      {
+        "name": "Luiz Inácio Lula da Silva",
+        "role": "Presidente da República — sancionou sem vetos",
+        "institution": "Presidência da República"
+      },
+      {
+        "name": "Osmar Terra",
+        "role": "Deputado federal autor do projeto (MDB-RS, ex-ministro de Bolsonaro e Temer)",
+        "institution": "Câmara dos Deputados"
+      }
+    ],
+    "institutions": ["Presidência da República", "Câmara dos Deputados", "Senado Federal"],
+    "legal_basis": ["Lei 15.487/2026 — altera Lei 8.069/1990 (ECA), Decreto-Lei 2.848/1940 (Código Penal), Lei 8.072/1990 (Crimes Hediondos)"],
+    "patterns": [],
+    "evidence_status": "ev-confirmed",
+    "sources": [
+      {
+        "title": "Lula sanciona lei que endurece penas por violência sexual contra crianças",
+        "url": "https://www.cnnbrasil.com.br/politica/lula-sanciona-lei-que-endurece-penas-por-violencia-sexual-contra-criancas/",
+        "outlet": "CNN Brasil",
+        "date": "2026-08-06"
+      },
+      {
+        "title": "Lei aumenta penas para violência sexual digital contra crianças e adolescentes e endurece punições",
+        "url": "https://www.camara.leg.br/noticias/1295754-lei-aumenta-penas-para-violencia-sexual-digital-contra-criancas-e-adolescentes-e-endurece-punicoes",
+        "outlet": "Portal da Câmara dos Deputados",
+        "date": "2026-08-07"
+      }
+    ],
+    "result": "Lei 15.487/2026 em vigor desde 07/08/2026, sem vetos.",
+    "connections": ["id_1852", "id_1853", "id_1854"],
+    "status": "confirmado",
+    "lacuna_investigativa": null,
+    "ponto_de_inflexao": null,
+    "analise": "Autoria de direita (Osmar Terra, ex-ministro de governos Bolsonaro e Temer), sanção por presidente de esquerda, apoio de empresas de tecnologia presentes na cerimônia — caso confirmador da tese central do corpus: o aparelho de endurecimento sobre anonimização/criptografia digital tem apoio transversal, não decorre de um único campo ideológico."
+  },
+  {
+    "id": "1852",
+    "date": "2026-08-07",
+    "date_precision": "day",
+    "title": "Art. 226-A da Lei 15.487/2026 torna uso de VPN e mascaramento de IP fator agravante em crimes do ECA, apesar de pedido de veto do CGI.br",
+    "summary": "O art. 226-A, inserido no ECA pela Lei 15.487/2026, aumenta a pena de 1/3 a 2/3 quando o agente usa VPN, proxy ou outra técnica de mascaramento/ocultação de IP na prática de crimes de violência sexual digital contra crianças e adolescentes. O Comitê Gestor da Internet no Brasil (CGI.br) enviou nota pública pedindo veto ao dispositivo, alegando que a redação ampla equipara ferramentas tecnicamente distintas (VPN comercial, proxy corporativo, mascaramento de IP) e que o agravante 'não melhora a capacidade técnica de rastreamento', já que só incide após o suspeito já ter sido identificado. Um grupo de 8 entidades da sociedade civil e do setor digital (incluindo ISOC Brasil) também pediu a supressão do artigo, sem se opor ao restante da lei. Lula sancionou sem vetar o dispositivo.",
+    "category": "ato_legislativo",
+    "actors": [
+      {
+        "name": "CGI.br",
+        "role": "Solicitou veto público ao art. 226-A",
+        "institution": "Comitê Gestor da Internet no Brasil"
+      },
+      {
+        "name": "Luiz Inácio Lula da Silva",
+        "role": "Sancionou o dispositivo sem veto, apesar do pedido do CGI.br",
+        "institution": "Presidência da República"
+      }
+    ],
+    "institutions": ["CGI.br", "ISOC Brasil", "Presidência da República"],
+    "legal_basis": ["Lei 15.487/2026, art. 226-A — inserido no ECA"],
+    "patterns": ["P04b"],
+    "evidence_status": "ev-confirmed",
+    "sources": [
+      {
+        "title": "Senado aprova criação de 'ronda virtual' para coibir abuso infantil online",
+        "url": "https://www.cnnbrasil.com.br/politica/senado-aprova-criacao-de-ronda-virtual-para-coibir-abuso-infantil-online/",
+        "outlet": "CNN Brasil",
+        "date": "2026-07-07"
+      },
+      {
+        "title": "Carta Aberta em defesa do uso legítimo de VPNs e ferramentas de segurança digital",
+        "url": "https://isoc.org.br/noticia/carta-aberta-em-defesa-do-uso-legitimo-de-vpns-e-ferramentas-de-seguranca-digital",
+        "outlet": "ISOC Brasil",
+        "date": "2026-07-06"
+      },
+      {
+        "title": "Brazil Law Makes VPN Use an Aggravating Factor in Crimes as the First Lady Pushes For a Discord Ban",
+        "url": "https://reclaimthenet.org/brazil-law-makes-vpn-use-an-aggravating-factor",
+        "outlet": "Reclaim The Net",
+        "date": "2026-08-11"
+      }
+    ],
+    "result": "Art. 226-A em vigor. Nenhum veto apesar de pedido formal do órgão gestor técnico da internet brasileira (CGI.br) e de coalizão de 8 entidades civis.",
+    "connections": ["id_1851"],
+    "status": "confirmado",
+    "lacuna_investigativa": "Não há mecanismo declarado para diferenciar, na aplicação prática do art. 226-A, uso legítimo de VPN (segurança corporativa, jornalismo, vítimas de violência) de uso para dificultar identificação em crime — o próprio texto da lei reconhece proteção a uso 'legítimo' sem definir o critério de aferição.",
+    "ponto_de_inflexao": "Veto solicitado formalmente pelo órgão técnico responsável pela governança da internet no Brasil (CGI.br) e ignorado — checagem institucional documentada que não surtiu efeito.",
+    "analise": "O CGI.br é o órgão técnico, não político, responsável pela governança da internet no Brasil — sua advertência não pode ser lida como oposição ideológica ao projeto. A crítica é estritamente técnica: o agravante penaliza a ferramenta, não o mecanismo causal do crime, e por incidir apenas pós-identificação do suspeito não gera nenhuma capacidade investigativa adicional. Isso configura precedente formal — codificado em lei, não apenas em decisão judicial pontual — de que uso de ferramenta de anonimização é presuntivamente suspeito perante o Estado."
+  },
+  {
+    "id": "1853",
+    "date": "2026-08-07",
+    "date_precision": "day",
+    "title": "Lei 15.487/2026 autoriza 'ronda virtual' com acesso a dados cadastrais sem autorização judicial prévia em casos de flagrante ou risco à vida",
+    "summary": "A Lei 15.487/2026 autoriza órgãos de investigação a realizar 'ronda virtual' — rastreamento automatizado de arquivos relacionados a violência sexual contra crianças e adolescentes em ambientes digitais públicos (fóruns, sites, canais, redes sociais). Nos casos de flagrante delito ou risco à vida/integridade física da vítima, autoridade policial ou Ministério Público podem requisitar diretamente aos provedores dados cadastrais (nome, CPF, endereço — não dados de conexão/IP-log) sem autorização judicial prévia, com comunicação à Justiça em até 48 horas. O mecanismo se apoia em precedente do STJ (Sexta Turma, out/2025, rel. min. Rogerio Schietti Cruz), que já validara ronda virtual sem autorização judicial prévia para rastreamento de arquivos em redes P2P, com base no art. 10, §3º do Marco Civil da Internet — dispositivo que já permitia acesso administrativo a dados cadastrais sem ordem judicial.",
+    "category": "ato_legislativo",
+    "actors": [],
+    "institutions": ["Polícia Federal", "Ministério Público", "STJ"],
+    "legal_basis": [
+      "Lei 15.487/2026 — autoriza ronda virtual e requisição de dados cadastrais sem autorização judicial prévia em flagrante/risco à vida, com comunicação à Justiça em 48h",
+      "Marco Civil da Internet (Lei 12.965/2014), art. 10, §3º — base jurisprudencial prévia para acesso administrativo a dados cadastrais"
+    ],
+    "patterns": ["P03"],
+    "evidence_status": "ev-confirmed",
+    "sources": [
+      {
+        "title": "Lei aumenta penas para violência sexual digital contra crianças e adolescentes e endurece punições",
+        "url": "https://www.camara.leg.br/noticias/1295754-lei-aumenta-penas-para-violencia-sexual-digital-contra-criancas-e-adolescentes-e-endurece-punicoes",
+        "outlet": "Portal da Câmara dos Deputados",
+        "date": "2026-08-07"
+      },
+      {
+        "title": "STJ valida ronda virtual para localizar pornografia infantil",
+        "url": "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/2025/30102025-Sexta-Turma-valida-ronda-virtual-contra-pornografia-infantil-feita-por-software-da-policia.aspx",
+        "outlet": "STJ",
+        "date": "2025-10-30"
+      }
+    ],
+    "result": "Ronda virtual em vigor como instrumento investigativo estatutário, generalizando precedente jurisprudencial estreito (P2P/arquivo já público) para gatilho mais amplo (flagrante ou risco à vida).",
+    "connections": ["id_1851", "id_1850"],
+    "status": "confirmado",
+    "lacuna_investigativa": "O texto legal não define com precisão operacional o que caracteriza 'risco à vida ou integridade física' como gatilho para acesso sem autorização prévia — abertura para interpretação extensiva pela autoridade policial sem controle judicial ex ante.",
+    "ponto_de_inflexao": null,
+    "analise": "Distinção técnica relevante, frequentemente borrada em cobertura em língua inglesa (ver id_1852 fonte Reclaim The Net): o dispositivo trata de dados cadastrais (identidade), não dados de conexão (IP/timestamp) — categorias com proteção escalonada distinta no Marco Civil. A lei não cria o mecanismo do zero; codifica e generaliza uma exceção jurisprudencial estreita (STJ, rastreamento P2P em ambiente virtualmente público) para um gatilho mais amplo e discricionário (flagrante ou risco à vida, aplicável a qualquer contexto de investigação, não só P2P aberto). É weaponized legalism de segundo grau: pega precedente judicial limitado e o expande por via legislativa."
+  },
+  {
+    "id": "1854",
+    "date": "2026-08-06",
+    "date_precision": "day",
+    "title": "Primeira-dama Janja da Silva pede publicamente a derrubada do Discord durante cerimônia de sanção da Lei 15.487/2026; AGU anuncia ação civil pública",
+    "summary": "Durante a cerimônia de sanção da Lei 15.487/2026 no Palácio do Planalto, a primeira-dama Janja da Silva declarou: 'A gente precisa bloquear o Discord no Brasil de qualquer forma', citando o suicídio transmitido ao vivo de uma adolescente de 13 anos em Naviraí/MS em 22/07/2026. Janja não ocupa cargo público formal. O ministro-chefe da AGU, Jorge Messias, presente à cerimônia, declarou que moveria ação civil pública contra o Discord pedindo 'a imediata responsabilização e a retirada de seu uso pela sociedade brasileira'. Em 08/08/2026, Janja reiterou publicamente o pedido de banimento em evento do MTST, chamando a plataforma de 'cúmplice' de violência. Até a data de fechamento desta entrada, a AGU não havia protocolado a ação anunciada.",
+    "category": "incidente_diplomatico",
+    "actors": [
+      {
+        "name": "Janja Lula da Silva",
+        "role": "Primeira-dama — pediu publicamente bloqueio do Discord; não ocupa cargo público formal",
+        "institution": "Sem investidura formal"
+      },
+      {
+        "name": "Jorge Messias",
+        "role": "Ministro-chefe da AGU — anunciou intenção de ação civil pública contra o Discord",
+        "institution": "Advocacia-Geral da União"
+      }
+    ],
+    "institutions": ["Advocacia-Geral da União", "Presidência da República"],
+    "legal_basis": [],
+    "patterns": ["P04"],
+    "evidence_status": "ev-confirmed",
+    "sources": [
+      {
+        "title": "Janja pede que Discord seja bloqueado no Brasil",
+        "url": "https://www.poder360.com.br/poder-gente/janja-pede-que-discord-seja-bloqueado-no-brasil/",
+        "outlet": "Poder360",
+        "date": "2026-08-06"
+      },
+      {
+        "title": "Lula sanciona lei que endurece penas por violência sexual contra crianças",
+        "url": "https://www.cnnbrasil.com.br/politica/lula-sanciona-lei-que-endurece-penas-por-violencia-sexual-contra-criancas/",
+        "outlet": "CNN Brasil",
+        "date": "2026-08-06"
+      },
+      {
+        "title": "Janja volta a defender banimento do Discord: 'É cúmplice' de violência",
+        "url": "https://www.poder360.com.br/poder-eleicoes-2026/janja-volta-a-defender-banimento-do-discord-e-cumplice-de-violencia/",
+        "outlet": "Poder360",
+        "date": "2026-08-08"
+      }
+    ],
+    "result": "Nenhum bloqueio efetivado até a data de fechamento desta entrada. Ação civil pública anunciada por Messias não protocolada.",
+    "connections": ["id_1851", "id_1855", "id_1850"],
+    "status": "em_andamento",
+    "lacuna_investigativa": "Não há explicação pública sobre qual base legal sustentaria bloqueio total de uma plataforma com múltiplos usos lícitos, nem sobre o que o bloqueio efetivamente preveniria — jornalismo independente registrou que nenhum dos que pedem a derrubada esclareceu esse ponto.",
+    "ponto_de_inflexao": null,
+    "analise": "Pedido de política de Estado sobre infraestrutura digital feito por pessoa sem investidura formal, em cerimônia oficial, com ministro respondendo operacionalmente ao pedido em tempo real (anúncio de ação civil pública). Não é caso isolado no corpus — id_204/T-204 já registra outro episódio de influência de política/gasto por parte da mesma figura. Aqui o padrão se repete em escala maior: não é gasto discricionário, é direcionamento de política de plataforma digital. Candidato a subpadrão distinto de P08/P09: autoridade de fato sem cargo formal como vetor de agenda de política pública."
+  },
+  {
+    "id": "1855",
+    "date": "2026-08-04",
+    "date_precision": "day",
+    "title": "Seletividade plataforma-a-plataforma: Operação Rede Interrompida mira grupo neonazista exclusivo do Telegram no mesmo dia da Operação Lívia, sem gerar sanção de plataforma",
+    "summary": "Em 04/08/2026, o Ministério da Justiça e Segurança Pública divulgou simultaneamente duas operações contra grupos de extrema-direita que recrutavam adolescentes: a Operação Lívia (Naviraí/MS, Discord + Telegram, origem do caso que motivou a sanção ANPD/Discord de 12/08 — id_1850) e a Operação Rede Interrompida, conduzida pela Polícia Civil do DF contra um grupo que disseminava conteúdo neonazista, antissemita e misógino exclusivamente pelo Telegram, planejando um ataque a prédios da Esplanada dos Ministérios durante o período eleitoral de 2026 — 8 mandados de busca e apreensão cumpridos. Adicionalmente, Victor Fernandes, secretário de Direitos Digitais do MJSP, afirmou publicamente que a Polícia Federal já havia solicitado à Justiça a suspensão do Discord antes do apelo público de Janja da Silva (id_1854), e o pedido foi indeferido. Nenhuma das duas operações — nem a Rede Interrompida (Telegram puro) nem o indeferimento judicial anterior contra o Discord — resultou em ação regulatória equivalente à que a ANPD tomou contra o Discord oito dias depois.",
+    "category": "chokepoint_judicial",
+    "actors": [
+      {
+        "name": "Victor Fernandes",
+        "role": "Secretário de Direitos Digitais — confirmou publicamente o indeferimento judicial anterior contra suspensão do Discord",
+        "institution": "Ministério da Justiça e Segurança Pública"
+      }
+    ],
+    "institutions": ["Polícia Federal", "Polícia Civil do Distrito Federal", "Poder Judiciário", "Ministério da Justiça e Segurança Pública"],
+    "legal_basis": [],
+    "patterns": ["P04b"],
+    "evidence_status": "ev-contested",
+    "sources": [
+      {
+        "title": "Operação Lívia combate grupo neonazista que coagiu adolescente ao suicídio em Naviraí",
+        "url": "https://www.enfoquems.com.br/operacao-livia-combate-grupo-neonazista-que-coagiu-adolescente-ao-suicidio-em-navirai/",
+        "outlet": "Enfoque MS",
+        "date": "2026-08-04"
+      },
+      {
+        "title": "Caso Discord: entenda como a plataforma virou alvo do governo",
+        "url": "https://www.poder360.com.br/poder-tech/caso-discord-entenda-como-a-plataforma-virou-alvo-do-governo/",
+        "outlet": "Poder360",
+        "date": "2026-08-08"
+      },
+      {
+        "title": "Brazil Law Makes VPN Use an Aggravating Factor in Crimes as the First Lady Pushes For a Discord Ban",
+        "url": "https://reclaimthenet.org/brazil-law-makes-vpn-use-an-aggravating-factor",
+        "outlet": "Reclaim The Net",
+        "date": "2026-08-11"
+      }
+    ],
+    "result": "Discord recebeu determinação de suspensão do Go Live (id_1850) em 12/08. Nenhuma medida equivalente contra Telegram até a data de fechamento desta entrada, apesar de grupo investigado na Rede Interrompida operar exclusivamente ali com plano de ataque a prédio federal. Indeferimento judicial anterior contra suspensão do Discord permanece com fonte única (Reclaim The Net, citando declaração de Victor Fernandes) — não localizada segunda fonte independente nem decisão judicial primária.",
+    "connections": ["id_1850", "id_1854"],
+    "status": "documentado",
+    "lacuna_investigativa": "Data, vara e fundamentação do indeferimento judicial anterior contra o Discord não foram localizadas em fonte primária. Não há explicação pública oficial sobre por que a Rede Interrompida (Telegram, plano de ataque a prédio federal) não gerou processo de fiscalização ANPD equivalente ao aberto contra o Discord por um caso de mesma gravidade.",
+    "ponto_de_inflexao": null,
+    "analise": "Registrado como padrão de seletividade estrutural, não coincidência isolada: das duas operações do mesmo dia (04/08) contra grupos de extrema-direita recrutando/manipulando adolescentes, apenas a que envolvia Discord — plataforma com CNPJ e representação legal no Brasil — gerou processo regulatório amplificado publicamente. Telegram, sem escritório nem representação legal robusta no país, não sofreu ação equivalente apesar do grupo da Rede Interrompida planejar ataque a prédio federal. Isso é o mesmo mecanismo do id_1852 (CGI.br) em outro plano: o sistema pune quem coopera e tem endereço, não quem é mais opaco. Contraponto simétrico mantido: o indeferimento judicial anterior contra suspensão do Discord (rebaixado a ev-contested por fonte única) mostra que nem toda tentativa de captura via Judiciário teve sucesso — a seletividade aparece no nível regulatório (ANPD), não necessariamente no nível judicial."
+  },
+  {
+    "id": "1856",
+    "date": "2026-08-11",
+    "date_precision": "day",
+    "title": "Moraes autoriza busca e apreensão contra fonte de jornalista que investigou uso de carro oficial por família de Flávio Dino, identificada via perícia em dispositivos apreendidos do próprio jornalista",
+    "summary": "O ministro Alexandre de Moraes (STF) autorizou, a pedido da Polícia Federal e com aval da Procuradoria-Geral da República, busca e apreensão contra Raimundo Cutrim, ex-secretário de Segurança Pública e de Assuntos Legislativos do Maranhão, identificado como fonte do jornalista Luís Pablo. Este publicara, desde novembro de 2025, reportagens sobre uso de carro oficial do TJ-MA por familiares do ministro Flávio Dino (STF). Em março de 2026, Moraes já havia autorizado busca e apreensão contra o próprio jornalista (celulares, notebook, HD), citando o crime de perseguição (art. 147-A CP) e possível relação com o inquérito das fake news — equipamentos devolvidos em abril, após extração pericial completa dos dados. Foi a partir da análise desse material que a investigação identificou Cutrim como a fonte, segundo a própria decisão de Moraes. A medida contra Cutrim atendeu denúncia formulada pelo próprio ministro Flávio Dino — colega de Moraes no STF e sujeito das reportagens originais. Cutrim nega irregularidade e diz que os veículos particulares de sua família eram monitorados. Luís Pablo permaneceu em silêncio sobre a fonte durante depoimento.",
+    "category": "chokepoint_judicial",
+    "actors": [
+      {
+        "name": "Alexandre de Moraes",
+        "role": "Ministro do STF — autorizou buscas contra o jornalista (mar/2026) e contra a fonte identificada (ago/2026), a partir de denúncia de colega de tribunal",
+        "institution": "STF"
+      },
+      {
+        "name": "Flávio Dino",
+        "role": "Ministro do STF, alvo original das reportagens — formulou a denúncia que motivou a busca contra a fonte identificada",
+        "institution": "STF"
+      },
+      {
+        "name": "Luís Pablo Conceição Almeida",
+        "role": "Jornalista autor das reportagens — teve dispositivos apreendidos e periciados; manteve sigilo da fonte em depoimento",
+        "institution": "Imprensa independente (Maranhão)"
+      },
+      {
+        "name": "Raimundo Cutrim",
+        "role": "Ex-secretário de Segurança Pública/Assuntos Legislativos do MA — identificado como fonte via perícia; alvo de busca e apreensão",
+        "institution": "Governo do Maranhão (ex-cargo)"
+      }
+    ],
+    "institutions": ["STF", "Polícia Federal", "Procuradoria-Geral da República"],
+    "legal_basis": ["CF/88, art. 5º, XIV — sigilo da fonte jornalística", "Código Penal, art. 147-A — perseguição (stalking), citado na decisão de março contra o jornalista"],
+    "patterns": ["P02", "P03"],
+    "evidence_status": "ev-confirmed",
+    "sources": [
+      {
+        "title": "O que levou Moraes a determinar busca na casa de fonte de jornalista maranhense",
+        "url": "https://www.cartacapital.com.br/justica/por-que-moraes-determinou-busca-e-apreensao-em-casa-de-fonte-de-jornalista/",
+        "outlet": "CartaCapital",
+        "date": "2026-08-11"
+      },
+      {
+        "title": "Entenda a decisão de Moraes sobre busca contra fonte de jornalista no MA",
+        "url": "https://www.cnnbrasil.com.br/politica/entenda-a-decisao-de-moraes-sobre-busca-contra-fonte-de-jornalista-no-ma/",
+        "outlet": "CNN Brasil",
+        "date": "2026-08-11"
+      },
+      {
+        "title": "Especialistas avaliam decisão de Moraes sobre fonte de jornalista",
+        "url": "https://www.cnnbrasil.com.br/politica/especialistas-avaliam-decisao-de-moraes-sobre-fonte-de-jornalista/",
+        "outlet": "CNN Brasil",
+        "date": "2026-08-12"
+      },
+      {
+        "title": "'Violaram o sigilo da minha fonte', diz jornalista depois de operação de Moraes",
+        "url": "https://revistaoeste.com/imprensa/violaram-o-sigilo-da-minha-fonte-diz-jornalista-depois-de-operacao-de-moraes/",
+        "outlet": "Revista Oeste",
+        "date": "2026-08-11"
+      }
+    ],
+    "result": "Celulares, computadores e documentos de Cutrim e de um advogado ligado ao caso (Diogo Diniz Lima) apreendidos. Sindjor-MA e FENAJ pediram esclarecimentos formais. Assessoria de Dino nega uso irregular de veículo oficial e contra-alega monitoramento de veículos particulares da família.",
+    "connections": ["id_1850", "id_1851"],
+    "status": "em_andamento",
+    "lacuna_investigativa": "Autos correm sob sigilo no STF — nem a versão da acusação (uso do cargo por Cutrim para acessar sistemas restritos, valor de R$ 100 mil transferido a Luís Pablo por terceiro investigado) nem a versão da defesa são verificáveis externamente neste momento. Se houve autorização judicial prévia específica para a análise forense atingir dados que revelassem a fonte — distinto de simplesmente periciar o aparelho por outro motivo — não está claro nas decisões públicas.",
+    "ponto_de_inflexao": "Momento em que a extração pericial de um dispositivo apreendido do jornalista (por acusação distinta, perseguição) foi usada para identificar a fonte protegida constitucionalmente — sem que a fonte fosse revelada por decisão do jornalista. A garantia constitucional (CF art. 5º, XIV) não foi revogada; foi contornada por via técnica.",
+    "analise": "Estrutura de conflito de interesse direta, não inferencial: o ministro cujo colega de tribunal decide sobre medida investigativa é o mesmo ministro que formulou a denúncia original contra a fonte do jornalista que o investigou. Especialista consultada por veículo (Vera Chemin) formaliza o princípio violado: sigilo de fonte não pode ser quebrado para depois verificar se houve crime — a ordem lógica foi invertida. Mecanismo é estruturalmente equivalente ao precedente que o próprio STF fixou na ADPF 601 (2019, caso Glenn Greenwald/Vaza Jato, rel. Gilmar Mendes): Estado não pode usar medida coercitiva para devassar a forma de recepção e transmissão de informação de interesse público. A garantia permanece formalmente vigente; o mecanismo pericial contornou-a na prática, sem necessidade de revogá-la ou de declará-la inaplicável. Contraponto obrigatório: a investigação subjacente (uso de cargo público por Cutrim para acessar sistemas restritos; transferência de R$ 100 mil de origem não esclarecida) pode ser legítima — o ponto estrutural não é que a investigação seja ilegítima, é que o método usado para chegar à fonte contorna uma garantia constitucional explícita antes de qualquer comprovação de crime."
+  }
+]

@@ -4,10 +4,14 @@ from __future__ import annotations
 
 import json
 import re
+import sys
 from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+TOOLS = Path(__file__).resolve().parent
+if str(TOOLS) not in sys.path:
+    sys.path.insert(0, str(TOOLS))
 SYNC = ROOT / "_data" / "claude.ai-corpus-ids-sync.json"
 LAWFARE = ROOT / "_data" / "lawfare.json"
 POSTS = ROOT / "_posts" / "estudos"
@@ -40,8 +44,23 @@ def main() -> None:
     main = data["tracks"]["main"]
     main["last_id"] = last_main
     main["next_available"] = next_main
+    main["last_confirmed"] = last_main
+    main["last_jekyll_published"] = last_main
 
     batches = main["confirmed_batches"]
+    # Append confirmed batch for IDs beyond last recorded range end
+    max_batch_end = max((b["range"][1] for b in batches if b.get("range")), default=0)
+    if last_main > max_batch_end:
+        batches.append(
+            {
+                "range": [max_batch_end + 1, last_main],
+                "status": "confirmed",
+                "notes": (
+                    f"Merge todo {date.today().isoformat()}: "
+                    f"main IDs {max_batch_end + 1}-{last_main}."
+                ),
+            }
+        )
     for b in batches:
         if b.get("range") == [1449, 1511]:
             b["range"] = [1449, 1510]
@@ -245,15 +264,77 @@ def main() -> None:
             by_id[tid].update(payload)
         elif tid in t_posts:
             entries.append({"id": tid, **payload})
+    # Auto-discover T-* studies on disk not yet in registry.
+    # Ceiling 500: IDs altos (ex. T-1512/T-1765/T-1766) são mislabel de main track —
+    # NÃO entram no registry temático nem no cálculo de next_available.
+    THEMATIC_ID_CEILING = 500
+    purged_high = [e for e in entries if int(e.get("id") or 0) >= THEMATIC_ID_CEILING]
+    if purged_high:
+        entries = [e for e in entries if int(e.get("id") or 0) < THEMATIC_ID_CEILING]
+        print(
+            "Purge thematic mislabels (>= "
+            + str(THEMATIC_ID_CEILING)
+            + "): "
+            + ", ".join(f"T-{e['id']}" for e in purged_high)
+        )
+    by_id = {e["id"]: e for e in entries}
+    title_overrides = {
+        251: "Convergência estrutural STF–família–Banco Master (P02/P05/P07)",
+        252: "Escalada em duas frentes: proteção técnica não isenta (plataforma + sigilo de fonte)",
+    }
+    for tid, topic in title_overrides.items():
+        if tid not in by_id:
+            continue
+        stem = t_posts.get(tid)
+        by_id[tid]["topic"] = f"T-{tid} — {topic}"
+        by_id[tid]["status"] = "confirmed"
+        if stem:
+            by_id[tid]["artifact"] = f"{stem}.md"
+            by_id[tid]["notes"] = (
+                f"Estudo Jekyll _posts/estudos/{stem}.md "
+                f"(auto-sync {date.today().isoformat()})"
+            )
+    for tid, stem in sorted(t_posts.items()):
+        if tid >= THEMATIC_ID_CEILING or tid in by_id:
+            continue
+        title_hint = title_overrides.get(tid, stem)
+        entries.append(
+            {
+                "id": tid,
+                "status": "confirmed",
+                "topic": f"T-{tid} — {title_hint}",
+                "artifact": f"{stem}.md",
+                "notes": f"Estudo Jekyll _posts/estudos/{stem}.md (auto-sync {date.today().isoformat()})",
+            }
+        )
     entries.sort(key=lambda e: e["id"])
     thematic["entries"] = entries
 
-    thematic_last = max((e["id"] for e in entries), default=196)
+    thematic_ids = [
+        e["id"] for e in entries if e["id"] < THEMATIC_ID_CEILING
+    ] + [tid for tid in t_posts if tid < THEMATIC_ID_CEILING]
+    thematic_last = max(thematic_ids or [196])
     thematic["last_id"] = thematic_last
     thematic["next_available"] = thematic_last + 1
+    thematic["last_confirmed"] = thematic_last
     pending = []
     thematic["pending"] = pending
     thematic["pending_notes"] = {}
+    mislabel_disk = sorted(tid for tid in t_posts if tid >= THEMATIC_ID_CEILING)
+    if mislabel_disk:
+        thematic["mislabeled_on_disk"] = [
+            {
+                "id": tid,
+                "artifact": f"{t_posts[tid]}.md",
+                "notes": (
+                    f"Mislabel: id_corpus T-{tid} coincide com main track. "
+                    "Não avança next_available. Renomear opcionalmente para T-sequencial."
+                ),
+            }
+            for tid in mislabel_disk
+        ]
+    else:
+        thematic.pop("mislabeled_on_disk", None)
 
     merge_done = last_main >= 1571
     sync = data["sync_status"]
@@ -371,8 +452,13 @@ def main() -> None:
         if not any(s in item for s in stale_open)
     ]
     next_note = f"Próximo thematic: T-{thematic_last + 1}; main next={next_main}"
-    if next_note not in sync["open_items"]:
-        sync["open_items"].append(next_note)
+    # Remove notas contraditórias de next thematic (ex.: T-1767 vs T-252)
+    sync["open_items"] = [
+        item
+        for item in sync.get("open_items", [])
+        if not str(item).startswith("Próximo thematic:")
+    ]
+    sync["open_items"].append(next_note)
 
     artifact_t_map = {
         "duplo-padrao-judicial.html": 205,
@@ -392,6 +478,74 @@ def main() -> None:
         "T-196": "Radar Top 30 — renumerado do antigo T-191",
         "date": date.today().isoformat(),
     }
+
+    # Root + _meta mirrors (consumidos por Drive / claude.ai)
+    data["last_main_id"] = last_main
+    data["next_available"] = next_main
+    data["updated"] = date.today().isoformat()
+    meta = data.setdefault("_meta", {})
+    meta["generated"] = date.today().isoformat()
+    meta["updated"] = date.today().isoformat()
+    meta_tracks = meta.setdefault("tracks", {})
+    meta_tracks.setdefault("main", {}).update(
+        {
+            "last_confirmed": last_main,
+            "last_jekyll_published": last_main,
+            "id_range": f"1–{last_main} (confirmed)",
+            "notes": (
+                f"lawfare.json confirmado até {last_main}. "
+                f"Próximo ID livre: {next_main}."
+            ),
+        }
+    )
+    meta_tracks.setdefault("thematic", {}).update(
+        {
+            "last_confirmed": thematic_last,
+            "last_session_produced": thematic_last,
+            "id_range": f"100–{thematic_last}",
+            "notes": (
+                f"T-{thematic_last} confirmado. "
+                f"Próximo thematic livre: T-{thematic_last + 1}."
+            ),
+        }
+    )
+    sync["ids_confirmed_total"] = {
+        "main_track": f"{last_main} (Jekyll + lawfare.json)",
+        "thematic_track": thematic_last,
+    }
+
+    slog = data.setdefault("session_log", [])
+    slog_entry = {
+        "date": date.today().isoformat(),
+        "session": "cursor — sync corpus IDs + Drive",
+        "produced": [
+            f"Main track sync last_id={last_main} next={next_main}",
+            f"Thematic sync last=T-{thematic_last} next=T-{thematic_last + 1}",
+            "Export gdrive_sync_export.py (claude.ai-corpus-ids-sync.json + lawfare.json)",
+        ],
+        "summary": {
+            "lawfare_max_id": last_main,
+            "next_main_id": next_main,
+            "thematic_last": f"T-{thematic_last}",
+            "next_thematic": f"T-{thematic_last + 1}",
+            "t_studies_on_disk": len(
+                [tid for tid in t_posts if tid < THEMATIC_ID_CEILING]
+            ),
+            "thematic_mislabeled_ignored": [
+                f"T-{tid}" for tid in sorted(t_posts) if tid >= THEMATIC_ID_CEILING
+            ],
+        },
+        "status": "completed",
+    }
+    # Substitui entrada do mesmo dia/sessão (evita T-1767 e T-252 contraditórios)
+    replaced = False
+    for i, e in enumerate(slog):
+        if e.get("date") == slog_entry["date"] and e.get("session") == slog_entry["session"]:
+            slog[i] = slog_entry
+            replaced = True
+            break
+    if not replaced:
+        slog.append(slog_entry)
 
     SYNC.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     html_path = write_status_html(data, last_main, next_main, t_posts, thematic_last)

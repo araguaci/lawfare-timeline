@@ -35,7 +35,7 @@ ev-inference: A formulação correta do padrão exige a delimitação: vender an
 
 ## Conexoes
 
-- [T-216 · T-216 · TSE-USAID](/posts/2026-06-29-tse-usaid-parceria-censura-seletiva/)
+- [T-216 · TSE-USAID](/posts/2026-06-29-tse-usaid-parceria-censura-seletiva/)
 - [T-217 · Seletividade Punitiva — TSE: Casos Isolados (Atualizado)](/posts/2026-06-29-seletividade-punitiva-tse-casos-isolados/)
 
 ## Fontes

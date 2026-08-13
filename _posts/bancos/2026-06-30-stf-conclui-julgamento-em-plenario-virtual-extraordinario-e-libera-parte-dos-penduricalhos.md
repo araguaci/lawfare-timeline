@@ -68,7 +68,7 @@ Nemo judex institucional aplicado à administração da própria remuneração: 
 
 - [1448 · TJMG Paga Acima Do Teto A Um Terço Dos Magistrados Em 2026](/posts/tjmg-paga-acima-teto-um-terco-magistrados-2026/) (TJMG paga acima do teto a um terço dos magistrados, 2026-05-09)
 - [1634 · Moraes e Dino dão 48h para sete Tribunais de Justiça explicarem supersa…](/posts/2026-07-06-moraes-e-dino-dao-48h-para-sete-tribunais-de-justica-explicarem-supersalarios-acima-do-tet/)
-- [T-191 · T-191 · Custeio Administrativo Federal — R$ 32,4 bi e o Padrão P11](/posts/custeio-administrativo-federal-p11/)
+- [T-191 · Custeio Administrativo Federal — R$ 32,4 bi e o Padrão P11](/posts/custeio-administrativo-federal-p11/)
 
 ## PVTAC e embargos de declaração
 

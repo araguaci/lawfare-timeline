@@ -52,6 +52,4 @@ Não há, nesta data, decisão colegiada do STF (plenário) que tenha revisado q
 - [id_1848 — Gilmar Mendes suspende quebra de sigilo da empresa da família Toffoli](/posts/2026-03-05-gilmar-mendes-suspende-quebra-de-sigilo-de-empresa-da-familia-toffoli-requisitada-por-cpi-/)
 - [id_1849 — Moraes autoriza busca e apreensão contra fonte de jornalista (caso Dino)](/posts/2026-08-11-moraes-autoriza-busca-e-apreensao-contra-fonte-de-jornalista-que-investigou-uso-de-veiculo/)
 
-## Notas
 
-Thematic id 251 — próximo livre confirmado via Google Drive canônico (last_id=250, next_available=251) em 2026-08-12.

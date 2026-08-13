@@ -62,6 +62,8 @@ Caso não pertence ao cluster Banco Master, mas ao mesmo padrão estrutural de a
 
 ## Conexoes
 
+- [id_1856 — Moraes autoriza busca e apreensão contra fonte de jornalista que investigou uso …](/posts/2026-08-11-moraes-autoriza-busca-e-apreensao-contra-fonte-de-jornalista-que-investigou-uso-de-carro-o/)
+
 - _N/A_
 
 ## Lacunas investigativas
