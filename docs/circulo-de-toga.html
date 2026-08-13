@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Círculo de Toga — STF, Banco Master e a rede que se protege</title>
+<meta name="description" content="Cluster analítico lawfare-timeline: convergência estrutural entre três ministros do STF (Moraes, Toffoli, Gilmar Mendes) e o Banco Master. IDs 1843–1849 + T-251. CC0.">
+<link rel="canonical" href="https://gosurf.site/circulo-de-toga">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #080c10;
+    --bg2: #0d1319;
+    --surface: #10181f;
+    --border: #1c2830;
+    --text: #e6ecf0;
+    --muted: #7a8b96;
+    --accent: #c9a227;
+    --confirmed: #4caf6e;
+    --contested: #e0a83c;
+    --alleged: #e0715c;
+    --inference: #6f9ce0;
+    --p02: #c87ebe;
+    --p05: #7ec87e;
+    --p07: #5c9ee0;
+    --p03: #e05c5c;
+    --p04: #e09e5c;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  h1, h2, h3 { font-family: 'Syne', sans-serif; letter-spacing: -0.01em; }
+  a { color: var(--accent); }
+  .prose { font-family: 'Crimson Pro', serif; font-size: 17px; line-height: 1.75; }
+
+  /* NAVBAR */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(8,12,16,0.95); backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--border);
+    display: flex; gap: 4px; overflow-x: auto; padding: 0 20px;
+  }
+  nav a {
+    color: var(--muted); text-decoration: none; font-size: 11px;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 16px 12px; white-space: nowrap; border-bottom: 2px solid transparent;
+    transition: all .2s;
+  }
+  nav a:hover, nav a.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+  /* HERO */
+  header.hero { padding: 64px 24px 40px; max-width: 980px; margin: 0 auto; }
+  .kicker {
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 14px; display: flex; align-items: center; gap: 10px;
+  }
+  .kicker::before { content: ''; width: 24px; height: 1px; background: var(--accent); }
+  h1.title { font-size: clamp(32px, 5vw, 54px); font-weight: 800; line-height: 1.05; margin-bottom: 18px; }
+  h1.title em { color: var(--accent); font-style: normal; }
+  .subtitle { color: var(--muted); font-size: 16px; max-width: 720px; margin-bottom: 28px; }
+  .meta-row { display: flex; flex-wrap: wrap; gap: 10px; font-size: 11px; color: var(--muted); }
+  .meta-row span { border: 1px solid var(--border); padding: 4px 10px; border-radius: 3px; }
+
+  section { max-width: 980px; margin: 0 auto; padding: 48px 24px; border-top: 1px solid var(--border); }
+  section h2 { font-size: 26px; margin-bottom: 20px; }
+  section h2 .num { color: var(--accent); font-family: 'IBM Plex Mono', monospace; font-weight: 400; margin-right: 10px; }
+
+  /* LEGEND */
+  .legend { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0 32px; }
+  .badge { font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 10px; border-radius: 3px; font-weight: 600; }
+  .b-confirmed { background: rgba(76,175,110,0.15); color: var(--confirmed); border: 1px solid var(--confirmed); }
+  .b-contested { background: rgba(224,168,60,0.15); color: var(--contested); border: 1px solid var(--contested); }
+  .b-alleged { background: rgba(224,113,92,0.15); color: var(--alleged); border: 1px solid var(--alleged); }
+  .b-inference { background: rgba(111,156,224,0.15); color: var(--inference); border: 1px solid var(--inference); }
+  .ptag { font-size: 10px; padding: 2px 8px; border-radius: 10px; border: 1px solid var(--border); color: var(--muted); }
+
+  /* TIMELINE CARDS */
+  .card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+    padding: 24px; margin-bottom: 20px; position: relative;
+  }
+  .card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; margin-bottom: 12px; }
+  .card-id { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); }
+  .card-date { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 600; }
+  .card h3 { font-size: 18px; margin: 8px 0 12px; line-height: 1.35; }
+  .card .summary { font-family: 'Crimson Pro', serif; font-size: 16px; color: var(--text); margin-bottom: 14px; }
+  .card .patterns { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+  .field { margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--border); }
+  .field-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+  .field .prose { font-size: 14.5px; color: var(--muted); }
+  .analise { border-left: 3px solid var(--inference); padding-left: 14px; margin-top: 14px; }
+  .analise .field-label { color: var(--inference); }
+  .lacuna { border-left: 3px solid var(--contested); padding-left: 14px; margin-top: 14px; }
+  .lacuna .field-label { color: var(--contested); }
+  .sources { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .sources a {
+    font-size: 11px; color: var(--muted); text-decoration: none; border: 1px solid var(--border);
+    padding: 4px 10px; border-radius: 3px; transition: all .2s;
+  }
+  .sources a:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* MINISTROS GRID */
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+  .minister {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 22px;
+  }
+  .minister h3 { font-size: 17px; margin-bottom: 10px; }
+  .minister .role { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 14px; }
+  .minister ul { list-style: none; }
+  .minister li { font-size: 13.5px; padding: 6px 0; border-top: 1px solid var(--border); color: var(--text); }
+  .minister li:first-child { border-top: none; }
+  .minister li a { color: var(--muted); font-size: 11px; display: block; margin-top: 2px; }
+
+  /* SYNTHESIS */
+  .synth-box {
+    background: var(--surface); border: 1px solid var(--accent); border-radius: 8px; padding: 28px;
+  }
+  .synth-box .prose { font-size: 16.5px; }
+
+  /* FOOTER */
+  footer {
+    max-width: 980px; margin: 0 auto; padding: 48px 24px 80px;
+    border-top: 1px solid var(--border); color: var(--muted); font-size: 12px;
+  }
+  footer a { color: var(--muted); }
+  .cc0 { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .related { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+  .related a { border: 1px solid var(--border); padding: 4px 10px; border-radius: 3px; text-decoration: none; font-size: 11px; }
+
+  #gotop {
+    position: fixed; bottom: 24px; right: 24px; width: 44px; height: 44px;
+    background: var(--accent); color: var(--bg); border: none; border-radius: 50%;
+    font-size: 18px; cursor: pointer; display: none; align-items: center; justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4); z-index: 50;
+  }
+  #gotop.show { display: flex; }
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="#tese">Tese</a>
+  <a href="#linha-do-tempo">Linha do Tempo</a>
+  <a href="#tres-ministros">Três Ministros</a>
+  <a href="#sintese">Síntese T-251</a>
+  <a href="#metodologia">Metodologia</a>
+  <a href="#lacunas">Lacunas</a>
+  <a href="#fontes">Fontes</a>
+</nav>
+
+<header class="hero">
+  <div class="kicker">lawfare-timeline · cluster id_1843–1849 · T-251</div>
+  <h1 class="title">Círculo de <em>Toga</em></h1>
+  <p class="subtitle">STF, Banco Master e a rede que se protege — três ministros do mesmo colegiado, três mecanismos distintos, um único núcleo de fatos. Documentado com taxonomia evidencial separada: o que é fato confirmado não depende do que ainda está contestado.</p>
+  <div class="meta-row">
+    <span>8 entradas main track</span>
+    <span>1 síntese temática (T-251)</span>
+    <span>período: nov/2025 – ago/2026</span>
+    <span>CC0 1.0 · domínio público</span>
+  </div>
+</header>
+
+<section id="tese">
+  <h2><span class="num">01</span>Tese do cluster</h2>
+  <p class="prose">O Banco Master foi liquidado extrajudicialmente pelo Banco Central em 18/11/2025, com rombo estimado em R$ 41 bilhões ao Fundo Garantidor de Créditos. Nos meses seguintes, três ministros do Supremo Tribunal Federal apareceram no mesmo núcleo de fatos, por mecanismos diferentes: <strong>Alexandre de Moraes</strong> (vínculo financeiro familiar direto com o banco, contatos com o Banco Central, presença contestada na órbita social do controlador), <strong>Dias Toffoli</strong> (relator das investigações penais até se declarar suspeito, com empresa familiar ligada a fundo do entorno do banco) e <strong>Gilmar Mendes</strong> (autor da decisão que suspendeu o acesso de uma CPI aos dados financeiros dessa mesma empresa familiar).</p>
+  <p class="prose" style="margin-top:14px;">O argumento estrutural deste cluster não depende de nenhum item contestado ser verdadeiro. Mesmo isolando apenas os fatos <span class="badge b-confirmed" style="display:inline;">ev-confirmed</span>, a rede de proximidade financeira, decisória e protetiva dentro do mesmo colegiado já é documentável.</p>
+</section>
+
+<section id="linha-do-tempo">
+  <h2><span class="num">02</span>Linha do tempo — 8 entradas verificadas</h2>
+  <div class="legend">
+    <span class="badge b-confirmed">ev-confirmed</span>
+    <span class="badge b-contested">ev-contested</span>
+    <span class="badge b-alleged">ev-alleged</span>
+    <span class="badge b-inference">ev-inference (só em análise)</span>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <div><span class="card-id">id_1843</span><br><span class="card-date">09/12/2025</span></div>
+      <span class="badge b-confirmed">ev-confirmed</span>
+    </div>
+    <h3>Revelado contrato de R$ 129 milhões entre escritório da esposa de Moraes e Banco Master</h3>
+    <p class="summary">Malu Gaspar (O Globo) revela contrato de 2024 entre Barci de Moraes Advogados — esposa e dois filhos do ministro como sócios — e o Banco Master: R$ 3,5–3,6 mi/mês, 36 meses, R$ 129 milhões no total, cobrindo causas junto a BC, Receita Federal, PGFN, CADE e Congresso. Pagamentos cessados com a liquidação. Escritório confirmou o contrato em nota; negou atuação no STF.</p>
+    <div class="patterns"><span class="ptag" style="border-color:var(--p02);color:var(--p02);">P02</span><span class="ptag" style="border-color:var(--p07);color:var(--p07);">P07</span></div>
+    <div class="sources">
+      <a href="https://www.metropoles.com/colunas/andreza-matais/contrato-da-mulher-de-moraes-com-banco-master-era-de-r-129-milhoes" target="_blank">Metrópoles</a>
+      <a href="https://www.cnnbrasil.com.br/politica/mulher-de-moraes-manteve-contrato-de-r-129-milhoes-com-master-diz-jornal/" target="_blank">CNN Brasil</a>
+      <a href="https://www.terra.com.br/noticias/esposa-de-moraes-detalha-contrato-de-r-129-milhoes-com-banco-master,6b5577dcbdbb4c605e253fb6ade282aenx6h7t2k.html" target="_blank">Terra</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <div><span class="card-id">id_1844</span><br><span class="card-date">27/01/2026</span></div>
+      <span class="badge b-contested">ev-contested</span>
+    </div>
+    <h3>Metrópoles revela duas visitas de Moraes à mansão de Vorcaro; Moraes nega formalmente</h3>
+    <p class="summary">Com base em quatro testemunhas, reportagem relata duas visitas de Moraes à mansão de Vorcaro em Brasília, incluindo apresentação ao então presidente do BRB, Paulo Henrique Costa, no 1º semestre de 2025 — período em que o Master buscava socorro via venda ao BRB. Moraes classifica a reportagem como "falsa e mentirosa" em nota oficial do STF.</p>
+    <div class="patterns"><span class="ptag" style="border-color:var(--p02);color:var(--p02);">P02</span><span class="ptag" style="border-color:var(--p05);color:var(--p05);">P05</span></div>
+    <div class="sources">
+      <a href="https://www.metropoles.com/colunas/andreza-matais/o-encontro-de-moraes-e-paulo-henrique-na-mansao-de-vorcaro-do-master" target="_blank">Metrópoles</a>
+      <a href="https://oantagonista.com.br/brasil/moraes-nega-encontro-com-ex-presidente-do-brb-e-vorcaro-em-brasilia/" target="_blank">O Antagonista</a>
+      <a href="https://agenciabrasil.ebc.com.br/justica/noticia/2026-01/moraes-nega-encontro-com-ex-presidente-do-brb-na-casa-de-vorcaro" target="_blank">Agência Brasil</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <div><span class="card-id">id_1845</span><br><span class="card-date">23/12/2025</span></div>
+      <span class="badge b-contested">ev-contested</span>
+    </div>
+    <h3>Moraes emite três notas contraditórias sobre contatos com Galípolo; Estadão relata 6 ligações em um dia</h3>
+    <p class="summary">O Globo (22/12) relata 4 contatos com o presidente do BC; Estadão (23/12) eleva para 6 ligações em um dia. Moraes emite três notas no mesmo dia — as duas primeiras vagas, a terceira (já após o dado do Estadão) nega categoricamente qualquer ligação telefônica e restringe tudo a 2 encontros presenciais sobre a Lei Magnitsky. Nota contém erro factual na data da sanção. Motivou pedido de impeachment no Congresso.</p>
+    <div class="patterns"><span class="ptag" style="border-color:var(--p02);color:var(--p02);">P02</span></div>
+    <div class="field lacuna">
+      <div class="field-label">lacuna investigativa</div>
+      <p class="prose">Registros de operadora que confirmem ou refutem as ligações não foram tornados públicos. A causa da divergência entre as notas 1–2 (vagas) e a nota 3 (negativa específica) não foi explicada.</p>
+    </div>
+    <div class="field analise">
+      <div class="field-label">análise (ev-inference)</div>
+      <p class="prose">A especificidade da negativa cresce na mesma proporção da especificidade da acusação — e só depois dela, nunca antes.</p>
+    </div>
+    <div class="sources">
+      <a href="https://www.gazetadopovo.com.br/republica/moraes-ligou-seis-vezes-para-galipolo-num-dia-para-tratar-de-banco-master-diz-jornal/" target="_blank">Gazeta do Povo</a>
+      <a href="https://www.cnnbrasil.com.br/politica/alexandre-moraes-nega-conversas-com-galipolo-sobre-o-banco-master/" target="_blank">CNN Brasil</a>
+      <a href="https://www.cartacapital.com.br/politica/em-nova-nota-moraes-afirma-que-nao-discutiu-caso-master-com-galipolo/" target="_blank">CartaCapital</a>
+      <a href="https://www.brasildefato.com.br/2025/12/26/moraes-banco-master-e-galipolo-caso-gera-guerra-de-narrativas-e-ofensiva-da-extrema-direita-no-congresso/" target="_blank">Brasil de Fato</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <div><span class="card-id">id_1846</span><br><span class="card-date">17/11/2025</span></div>
+      <span class="badge b-contested">ev-contested</span>
+    </div>
+    <h3>PF pericia mensagens entre Vorcaro e Moraes no dia da prisão do banqueiro</h3>
+    <p class="summary">Dados extraídos do celular de Vorcaro mostram troca de mensagens (7h19–20h48) no dia da prisão, com Vorcaro relatando a venda do banco e perguntando sobre o inquérito sigiloso. Ambos usavam visualização única do WhatsApp; Vorcaro manteve rascunhos salvos, permitindo reconstrução pericial. Moraes nega ter recebido as mensagens ("ilação mentirosa").</p>
+    <div class="patterns"><span class="ptag" style="border-color:var(--p02);color:var(--p02);">P02</span><span class="ptag" style="border-color:var(--muted);color:var(--muted);">P06</span></div>
+    <div class="sources">
+      <a href="https://www.infomoney.com.br/politica/vorcaro-trocou-mensagens-com-moraes-no-dia-da-prisao-para-salvar-master-diz-jornal/" target="_blank">InfoMoney</a>
+      <a href="https://www.cnnbrasil.com.br/politica/vorcaro-trocou-mensagens-com-moraes-no-dia-em-que-foi-preso-diz-jornal/" target="_blank">CNN Brasil</a>
+      <a href="https://www.gazetadopovo.com.br/republica/um-dia-na-vida-de-vorcaro-venda-do-banco-reuniao-com-bc-mensagens-a-moraes-e-prisao/" target="_blank">Gazeta do Povo</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <div><span class="card-id">id_1847</span><br><span class="card-date">fev/2026</span></div>
+      <span class="badge b-confirmed">ev-confirmed</span>
+    </div>
+    <h3>Toffoli declara suspeição após PF citar seu nome em relatório enviado a Fachin</h3>
+    <p class="summary">Toffoli declara suspeição por "razões de foro íntimo" um dia depois de a PF enviar a Fachin relatório mencionando-o no caso Master. André Mendonça é sorteado novo relator. Toffoli permanece na 2ª Turma que vota medidas cautelares do mesmo caso.</p>
+    <div class="patterns"><span class="ptag" style="border-color:var(--p02);color:var(--p02);">P02</span><span class="ptag" style="border-color:var(--p03);color:var(--p03);">P03</span></div>
+    <div class="sources">
+      <a href="https://www.correiobraziliense.com.br/mundo/2026/03/7380814-com-voto-de-gilmar-mendes-stf-mantem-por-unanimidade-prisao-de-vorcaro-do-banco-master.html" target="_blank">Correio Braziliense</a>
+      <a href="https://noticias.stf.jus.br/postsnoticias/2a-turma-do-stf-mantem-prisao-de-daniel-vorcaro-e-de-outros-investigados-no-caso-master/" target="_blank">STF (oficial)</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <div><span class="card-id">id_1848</span><br><span class="card-date">05/03/2026</span></div>
+      <span class="badge b-confirmed">ev-confirmed</span>
+    </div>
+    <h3>Gilmar Mendes suspende quebra de sigilo de empresa da família Toffoli requisitada por CPI</h3>
+    <p class="summary">Gilmar suspende liminarmente a quebra de sigilo da Maridt (empresa da família Toffoli, sócia do Resort Tayayá/PR, ligado a fundo administrado pela Reag — mesmo grupo citado na Operação Carbono Oculto e no entorno de Vorcaro). Toffoli reconhece a sociedade, nega recebimento direto do banqueiro. Analistas apontam ao menos oito falhas processuais na decisão de Gilmar.</p>
+    <div class="patterns"><span class="ptag" style="border-color:var(--p02);color:var(--p02);">P02</span><span class="ptag" style="border-color:var(--p03);color:var(--p03);">P03</span><span class="ptag" style="border-color:var(--p07);color:var(--p07);">P07</span></div>
+    <div class="field analise">
+      <div class="field-label">análise (ev-inference)</div>
+      <p class="prose">"Blindagem" é caracterização da imprensa especializada, não fato do corpus — o fato confirmado é a suspensão liminar do sigilo de empresa da família de um colega, por decisão fundamentada em prevenção descrita externamente como processualmente falha.</p>
+    </div>
+    <div class="sources">
+      <a href="https://www.gazetadopovo.com.br/republica/golpismo-juridico-corporativismo-e-manobras-processuais-de-gilmar-mendes-blindam-toffoli-no-stf/" target="_blank">Gazeta do Povo</a>
+      <a href="https://www.gazetadopovo.com.br/opiniao/editoriais/gilmar-mendes-dias-toffoli-quebra-sigilo/" target="_blank">Gazeta do Povo (editorial)</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <div><span class="card-id">id_1849</span><br><span class="card-date">11/08/2026</span></div>
+      <span class="badge b-confirmed">ev-confirmed</span>
+    </div>
+    <h3>Moraes autoriza busca e apreensão contra fonte de jornalista que investigou colega de Corte</h3>
+    <p class="summary">Moraes autoriza busca e apreensão contra Raimundo Cutrim, apontado pela PF como fonte do jornalista Luís Pablo em reportagens sobre uso de veículo oficial por família do ministro Flávio Dino. Medida a pedido da PF, parecer favorável da PGR. ANJ, ABERT, ANER, FENAJ e Sindjor-MA emitem notas de repúdio citando o Art. 5º, XIV da Constituição.</p>
+    <div class="patterns"><span class="ptag" style="border-color:var(--p03);color:var(--p03);">P03</span><span class="ptag" style="border-color:var(--p04);color:var(--p04);">P04</span></div>
+    <div class="sources">
+      <a href="https://www.correiobraziliense.com.br/politica/2026/08/7478318-decisao-de-moraes-e-ameaca-ao-sigilo-da-fonte-afirma-anj.html" target="_blank">Correio Braziliense</a>
+      <a href="https://www.gazetadopovo.com.br/vida-e-cidadania/moraes-autoriza-operacao-de-busca-e-apreensao-contra-fonte-de-jornalista-no-maranhao/" target="_blank">Gazeta do Povo</a>
+      <a href="https://j3news.com/2026/08/12/representantes-da-imprensa-criticam-moraes-por-quebrar-sigilo-de-fonte-de-jornalista-em-reportagem-sobre-dino/" target="_blank">J3News</a>
+    </div>
+  </div>
+</section>
+
+<section id="tres-ministros">
+  <h2><span class="num">03</span>Três ministros, três mecanismos</h2>
+  <div class="grid-3">
+    <div class="minister">
+      <h3>Alexandre de Moraes</h3>
+      <div class="role">Vínculo financeiro + contato regulatório</div>
+      <ul>
+        <li>Contrato familiar R$ 129 mi <a href="#linha-do-tempo">id_1843</a></li>
+        <li>Presença contestada na órbita social do controlador <a href="#linha-do-tempo">id_1844</a></li>
+        <li>Contatos contestados com o BC <a href="#linha-do-tempo">id_1845</a></li>
+        <li>Mensagens contestadas no dia da prisão <a href="#linha-do-tempo">id_1846</a></li>
+        <li>Medida contra fonte de jornalista (caso distinto) <a href="#linha-do-tempo">id_1849</a></li>
+      </ul>
+    </div>
+    <div class="minister">
+      <h3>Dias Toffoli</h3>
+      <div class="role">Relator até a suspeição</div>
+      <ul>
+        <li>Relator da Compliance Zero até fev/2026 <a href="#linha-do-tempo">id_1847</a></li>
+        <li>Empresa familiar (Maridt) ligada a fundo do entorno do Master <a href="#linha-do-tempo">id_1848</a></li>
+        <li>Permanece votando em cautelares na 2ª Turma</li>
+      </ul>
+    </div>
+    <div class="minister">
+      <h3>Gilmar Mendes</h3>
+      <div class="role">Decisor sobre o sigilo do colega</div>
+      <ul>
+        <li>Suspende quebra de sigilo da empresa da família Toffoli <a href="#linha-do-tempo">id_1848</a></li>
+        <li>Fundamentação apontada como falha por especialistas externos</li>
+        <li>Votou pela manutenção da prisão preventiva de Vorcaro</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="sintese">
+  <h2><span class="num">04</span>Síntese temática — T-251</h2>
+  <div class="synth-box">
+    <p class="prose">O corpus já documentava isoladamente o contrato Master–Viviane (T-192/id_192), a manutenção de prisão de familiares de Vorcaro pela 2ª Turma (T-215) e a assimetria indenizatória em T-250. Esta síntese conecta os fatos <strong>ev-confirmed</strong> — o contrato existe; Toffoli só se declara suspeito depois de citado pela PF; Gilmar suspende o acesso da CPI aos dados financeiros da empresa da família de um colega — aos fatos <strong>ev-contested</strong> sem colapsar a distinção evidencial. Nenhuma negativa formal de Moraes foi corroborada ou refutada por perícia independente até esta data.</p>
+    <p class="prose" style="margin-top:14px;">O padrão estrutural (P02 + P05 + P07) não depende da resolução dos itens contestados. Um ministro cuja família recebe R$ 3,6 milhões/mês de um banco, um colega que só se declara suspeito depois de citado oficialmente, e um terceiro colega que suspende o acesso de uma CPI aos dados financeiros da empresa familiar desse segundo colega — juntos, formam uma rede de proteção mútua documentável sem qualquer inferência sobre intenção.</p>
+  </div>
+</section>
+
+<section id="metodologia">
+  <h2><span class="num">05</span>Metodologia</h2>
+  <p class="prose">Taxonomia evidencial aplicada item a item, nunca colapsada: <span class="badge b-confirmed">ev-confirmed</span> exige documento primário, decisão pública ou nota oficial confirmando o fato em si. <span class="badge b-contested">ev-contested</span> é reportagem consistente e corroborada, mas com negativa formal da parte envolvida. <span class="badge b-inference">ev-inference</span> aparece só no campo de análise, nunca no resumo factual. Mínimo de 2 fontes independentes para eventos com menos de 90 dias — aplicado em todas as 8 entradas.</p>
+</section>
+
+<section id="lacunas">
+  <h2><span class="num">06</span>Lacunas investigativas</h2>
+  <p class="prose">Registros de operadora sobre as ligações Moraes–Galípolo não são públicos. Perícia independente sobre titularidade do número nas mensagens do dia da prisão não foi divulgada. Não há decisão de plenário do STF revisando a liminar de Gilmar Mendes sobre a Maridt. O beneficiário final da estrutura de extração do Banco Master — além do rombo de R$ 41 bilhões ao FGC — segue não identificado.</p>
+</section>
+
+<footer id="fontes">
+  <h2 style="font-size:16px;margin-bottom:12px;">Corpus relacionado</h2>
+  <div class="related">
+    <a href="/banco-master.html">Banco Master — dossiê completo</a>
+    <a href="/banco-master-os-donos.html">Banco Master — os donos</a>
+    <a href="/alem-da-toga.html">Além da Toga — Gilmar Mendes</a>
+    <a href="/inq4781.html">INQ 4.781</a>
+    <a href="/republica-capturada.html">República Capturada</a>
+  </div>
+  <div class="cc0">
+    <p>lawfare-timeline · gosurf.site · @araguaci — AI Nativo Brasil · Artes do Sul Desenvolvimento Web</p>
+    <p>CC0 1.0 Universal — domínio público total. Copie, adapte, distribua sem restrição.</p>
+    <p style="margin-top:10px;">Todas as entradas deste cluster (id_1843–1849, T-251) verificadas via busca web em 12/08/2026 — nenhuma produzida de memória do modelo.</p>
+  </div>
+</footer>
+
+<button id="gotop" aria-label="Voltar ao topo">↑</button>
+
+<script>
+  const links = document.querySelectorAll('nav a');
+  const sections = document.querySelectorAll('section, header.hero, footer');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const match = document.querySelector('nav a[href="#' + e.target.id + '"]');
+        if (match) match.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-40% 0px -50% 0px' });
+  document.querySelectorAll('section[id], footer[id]').forEach(s => obs.observe(s));
+
+  const gotop = document.getElementById('gotop');
+  window.addEventListener('scroll', () => {
+    gotop.classList.toggle('show', window.scrollY > 600);
+  });
+  gotop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+</script>
+
+</body>
+</html>
