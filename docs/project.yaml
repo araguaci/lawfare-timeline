@@ -1,0 +1,108 @@
+name: lawfare-timeline
+description: Site estático Jekyll (tema Chirpy) que documenta cronologicamente eventos
+  e análises sobre erosão institucional e lawfare no Brasil (1990–2026), incluindo
+  a série investigativa O Dragão e a Onça sobre relações Brasil-China.
+status: produção
+version: 0.1.0
+priority: alto
+stack:
+- Vercel
+repo: https://github.com/araguaci/lawfare-timeline.git
+deploy_url: ''
+last_updated: '2026-08-15'
+tags:
+- jekyll
+- site-estatico
+- timeline
+- lawfare
+- brasil
+- investigacao
+- chirpy
+- vercel
+- documentacao
+- china-brasil
+owner: araguaci
+notes: Corpus massivo com 1800+ entradas no track principal e 252+ no temático, ~400
+  posts Jekyll, série O Dragão e a Onça com 134 posts e 16 dossiês HTML interativos.
+  Sistema de IDs dual (main e temático) com scripts de sincronização e validação.
+  Integração com claude.ai para sync de corpus IDs.
+git:
+  branch: main
+  last_commit: 'feat: AtualizaÃ§Ã£o do changelog com a resoluÃ§Ã£o da lacuna T-252,
+    arquivamento da fila _data/todo/, e adiÃ§Ã£o de novos registros ao corpus, incluindo
+    a Lei 15.487/2026 e a OperaÃ§Ã£o Rede Interrompida. SincronizaÃ§Ã£o de dados e
+    ajustes nos arquivos relacionados.'
+  last_commit_date: '2026-08-13'
+roi:
+  score: 35
+  nivel: baixo
+  justificativa: Projeto de documentação e investigação jornalística/analítica com
+    grande valor informacional e cívico, mas apelo comercial limitado. O nicho é muito
+    específico (lawfare brasileiro) e o conteúdo é público por natureza, dificultando
+    monetização direta.
+  fatores_positivos:
+  - Corpus extenso e bem estruturado com 1800+ entradas e sistema de IDs robusto
+  - Série investigativa O Dragão e a Onça com profundidade rara sobre relações Brasil-China
+  - Infraestrutura madura com scripts de validação, sincronização e geração automatizada
+  fatores_negativos:
+  - Nicho extremamente específico com público limitado
+  - Conteúdo de interesse público difícil de monetizar sem comprometer credibilidade
+  - Dependência de manutenção contínua para acompanhar eventos políticos em tempo
+    real
+conversao:
+  score: 15
+  nivel: baixo
+  justificativa: Projeto essencialmente editorial e de interesse público. A monetização
+    direta é improvável sem transformação significativa do modelo, como consultoria
+    política, relatórios premium ou licenciamento de base de dados para pesquisadores
+    acadêmicos.
+  modelo_sugerido: doações/crowdfunding ou consultoria especializada
+  publico_alvo: Jornalistas investigativos, pesquisadores acadêmicos, analistas políticos,
+    advogados constitucionalistas e cidadãos engajados com accountability institucional
+kpi:
+  producao:
+    uptime_meta: 99.9%
+    usuarios_ativos: a medir
+    receita_mensal: a medir
+    taxa_erro_meta: < 1%
+    tempo_resposta_meta: < 500ms (site estático via Vercel CDN)
+    nps: a medir
+    maturidade: médio
+    notas: Site em produção no Vercel com URL pública funcional. Por ser site estático
+      servido via CDN, uptime e performance são naturalmente altos, mas não há evidência
+      de monitoramento estruturado de métricas de usuário.
+  desenvolvimento:
+    velocidade: alta
+    cobertura_testes: a medir
+    divida_tecnica: média
+    bugs_abertos: a medir
+    features_pendentes: Merge dos 62 slots batch_file_only (1449-1510), sync contínuo
+      de corpus IDs, expansão editorial conforme TODO.md
+    notas: Desenvolvimento claramente ativo com batches frequentes até ago/2026, múltiplos
+      scripts de automação (Python, PowerShell), e sistema de sync com claude.ai.
+      Gap conhecido nos IDs 1449-1510 documentado como esperado. Dívida técnica média
+      pela complexidade do sistema dual de IDs e múltiplos formatos (JSON, posts Jekyll,
+      HTML interativo).
+    commits_ultima_semana: 6
+    commits_ultimo_mes: 47
+    total_commits: 121
+    arquivos_nao_commitados: 0
+  planejamento:
+    nivel_planejamento: estruturado
+    tem_roadmap: true
+    tem_backlog: true
+    tem_deadline_definido: false
+    prazo_mvp: já em produção
+    progresso_estimado: 85%
+    proxima_entrega: ID main 1857+ (próximo batch editorial disponível)
+    riscos_identificados:
+    - Complexidade crescente do sistema de IDs dual pode gerar inconsistências sem
+      validação rigorosa
+    - Dependência de sincronização manual/semi-automatizada com claude.ai
+    - Volume massivo de conteúdo pode dificultar manutenção a longo prazo por equipe
+      pequena
+    notas: Planejamento notavelmente bem documentado com TODO.md, painel de sync,
+      tabelas de faixas de IDs com restrições, e scripts de validação. Roadmap editorial
+      claro com próximos IDs disponíveis identificados.
+_gerado_em: '2026-08-15'
+_gerado_por: generate_manifests.py
