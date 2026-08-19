@@ -7,6 +7,28 @@ Formato: data (ISO) → resumo → arquivos de fonte.
 
 ---
 
+## 2026-08-19 — Merge 1857–1864 + T-253/T-254 (colisões resolvidas)
+
+Fila `_data/todo/` processada. **1857** tinha 3 revisões do mesmo filtro X (canônico: revisão 5 / `(2)`). **T-253** estava duplicado (AP 470 vs P13) → AP 470 permanece T-253; P13 Porta Giratória realocado para **T-254**. Main 1857–1864 estava livre (last **1856**). Tracks: main **1864** / next **1865** · temático **T-254** / next **T-255**.
+
+| Faixa | Conteúdo |
+|-------|----------|
+| **1857** | X Brazil2026ElectionFilter — 665 perfis, P12-B (`_posts/tse/`) |
+| **1858** | Mendonça / IterCast — competência penal originária (`_posts/stf/`) |
+| **1859–1864** | Cluster P13 porta giratória (Airbus, AEL, Nubank, BTG, agregada) |
+| **T-253** | AP 470 Mensalão — critério evidencial |
+| **T-254** | Proposta P13 Porta Giratória (METHODOLOGY ainda pendente) |
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Criado** | `scripts/merge_todo_queue_1857_1864.py` | Dedup 1857, reassign T-254, merge + archive |
+| **Alterado** | `_data/lawfare.json` | +8 assuntos (**1857–1864**); total **1825**; max **1864** |
+| **Criado** | `_posts/tse|stf|escandalos|bancos|estudos/` | 8 main + 2 temáticos |
+| **Arquivado** | `_data/processados/` | Batches 1857–1864 + T-253 + T-254 |
+| **Sync** | `claude.ai-corpus-ids-sync.json` | Main **1864**; thematic **T-254** |
+
+---
+
 ## 2026-08-13 (d) — T-252 lacuna resolvida · fila todo/ esvaziada · sync
 
 A lacuna de T-252 (coordenação formal entre Frente 1 Lei/ANPD e Frente 2 sigilo de fonte) fecha-se como **achado negativo**. Fila `_data/todo/` arquivada (batch 1850–1856 + thematic T-252). Tracks: main **1856** / next **1857** · temático **T-252** / next **T-253**.

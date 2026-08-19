@@ -1,0 +1,106 @@
+{
+  "batch_meta": {
+    "generated": "2026-08-16",
+    "session": "claude.ai — X Brazil2026ElectionFilter (reclassificado: P12-B, simetria formal vs. assimetria substantiva)",
+    "id_range": [
+      1857,
+      1857
+    ],
+    "track": "main",
+    "next_available_after_merge": 1858,
+    "revision_note": "Segunda revisão: usuário forneceu código-fonte completo com lista nomeada de 665 perfis. Inspeção direta mostra composição cross-partidária (Lula e Flávio Bolsonaro ambos incluídos, entre outros), invalidando leitura de seletividade político-partidária na construção da lista. Hipótese P12-B mantida mas reformulada: eixo de assimetria proposto é capital institucional pré-existente (cargo, imprensa tradicional) vs. dependência de alcance orgânico digital — não filiação partidária. legal_basis promovido a ev-confirmed via citação de comentário no código-fonte primário. Terceira revisão: usuário forneceu dashboard (@BrandiYeda) com dados de pesquisa Quaest e engajamento Bites/Poder360. Ambos verificados como reais via fonte primária Poder360. Bloco de 'previsão ajustada' do dashboard (simulação com fatores de conversão inventados) descartado por não ter metodologia declarada. Caso Lula/Flávio incorporado como ilustração bem-documentada da hipótese P12-B reformulada (dependência de amplificação algorítmica vs. base institucional), não como prova da hipótese para os 665 perfis como um todo. Quarta revisão: usuário trouxe contranarrativa em circulação (@Ideiasradicais) atribuindo o filtro a 'ordem da Justiça Eleitoral sem critério contra a direita'. Checado ponto a ponto contra fonte primária já inspecionada; elementos centrais da contranarrativa (ausência de base legal, direcionamento partidário, replicação em outras plataformas) não se sustentam ou permanecem não verificados. Registrado como caso de padrão P04b para fins de documentação simétrica do corpus."
+  },
+  "entries": [
+    {
+      "id": "1857",
+      "date": "2026-08-15",
+      "date_precision": "day",
+      "title": "X publica código-fonte do Brazil2026ElectionFilter — 665 perfis, testes públicos, exclusão de recomendação algorítmica",
+      "summary": "X (plataforma, controlada por xAI) publicou no repositório público xai-org/x-algorithm o código-fonte do Brazil2026ElectionFilter, mecanismo que remove posts de 665 contas de candidatas/candidatos registrados no TSE para as eleições 2026 do feed 'Para Você' quando o usuário não segue o perfil listado. O arquivo publicado inclui a lista completa de IDs de usuário, a lógica do filtro (repostagens e citações que destacam os perfis também são filtradas; respostas cujo histórico de conversa destacaria um perfil listado são filtradas; seguir o perfil desativa o filtro para aquele usuário) e testes unitários que verificam programaticamente a contagem de 665 entradas. X declarou, via conta oficial @XBR, que a medida cumpre a Resolução TSE nº 23.610/2019 e entra em vigor em 16/08/2026, coincidindo com o início da propaganda eleitoral. A empresa afirma explicitamente que o mecanismo não remove, suspende ou bloqueia contas — publicações permanecem acessíveis diretamente e para seguidores; impulsionamento pago legalmente permitido é tratado por lógica separada.",
+      "category": "mecanismo_sistemico",
+      "actors": [
+        {
+          "name": "X Corp / xAI",
+          "role": "Implementação e publicação do mecanismo de filtro",
+          "institution": "X (plataforma)"
+        },
+        {
+          "name": "Tribunal Superior Eleitoral",
+          "role": "Autoridade reguladora citada como base da exigência",
+          "institution": "TSE"
+        }
+      ],
+      "institutions": [
+        "X (plataforma)",
+        "TSE"
+      ],
+      "legal_basis": [
+        "Comentário no código-fonte (fonte primária, xai-org/x-algorithm): provedores de aplicações que usam sistema de recomendação devem excluir dos resultados canais e perfis reportados ao Tribunal Eleitoral, ressalvados casos de impulsionamento pago — texto do dispositivo confirmado diretamente no arquivo-fonte, não apenas via comunicado da empresa. Artigo específico da Res. TSE (número exato do parágrafo/artigo) ainda não localizado no texto consolidado oficial — comentário no código não cita o número do artigo."
+      ],
+      "patterns": [
+        "P12-B"
+      ],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {
+          "title": "x-algorithm/home-mixer/filters/brazil_2026_election_filter.rs",
+          "url": "https://github.com/xai-org/x-algorithm/blob/main/home-mixer/filters/brazil_2026_election_filter.rs",
+          "outlet": "GitHub / xai-org (fonte primária)",
+          "date": "2026-08-15"
+        },
+        {
+          "title": "X divulga código de filtro eleitoral e revela 665 perfis de campanha excluídos das recomendações",
+          "url": "https://www.aliadosbrasiloficial.com.br/noticia/x-divulga-codigo-de-filtro-eleitoral-e-revela-665-perfis-de-campanha-excluidos-das-recomendacoes-entenda",
+          "outlet": "Aliados Brasil",
+          "date": "2026-08-15"
+        },
+        {
+          "title": "brazil_2026_election_filter.rs (fonte primária completa, lista de 665 IDs nomeados)",
+          "url": "https://raw.githubusercontent.com/xai-org/x-algorithm/c65aa179db7bdd61e2c2821eac87f208a105c053/home-mixer/filters/brazil_2026_election_filter.rs",
+          "outlet": "GitHub / xai-org (fonte primária, commit fixado)",
+          "date": "2026-08-15"
+        },
+        {
+          "title": "Flávio engaja 4 vezes mais que Lula nas redes pós-tarifaço",
+          "url": "https://www.poder360.com.br/poder-eleicoes-2026/flavio-engaja-4-vezes-mais-que-lula-nas-redes-pos-tarifaco/",
+          "outlet": "Poder360 (dados: Bites)",
+          "date": "2026-07-23"
+        },
+        {
+          "title": "Flávio Bolsonaro supera Lula em interações nas redes sociais",
+          "url": "https://www.poder360.com.br/poder-governo/flavio-bolsonaro-supera-lula-em-interacoes-nas-redes-sociais/",
+          "outlet": "Poder360 (dados: Bites)",
+          "date": "2026-03-15"
+        },
+        {
+          "title": "Lula tem 43% ante 40% de Flávio Bolsonaro no 2º turno, diz Quaest",
+          "url": "https://www.poder360.com.br/poder-eleicoes-2026/lula-tem-43-ante-40-de-flavio-bolsonaro-no-2o-turno-diz-quaest/",
+          "outlet": "Poder360 / Quaest (TSE BR-06773/2026)",
+          "date": "2026-08-14"
+        },
+        {
+          "title": "Post @Ideiasradicais (X) — narrativa 'eleição roubada pela Justiça Eleitoral'",
+          "url": "https://x.com/Ideiasradicais/status/2089008987647656044",
+          "outlet": "X / conta pessoal (fonte primária de opinião, não de fato verificado)",
+          "date": "2026-08-16"
+        }
+      ],
+      "result": "Filtro ativo a partir de 16/08/2026. Alcance orgânico não-solicitado (via recomendação algorítmica a não-seguidores) reduzido para 665 contas de campanha registradas; acesso direto e circulação entre seguidores preservados. Mecanismo e lista integralmente auditáveis por terceiros.",
+      "connections": [
+        "id_1850",
+        "id_1851",
+        "id_1852",
+        "id_1853",
+        "id_1854",
+        "id_1855",
+        "id_1856",
+        "hub_externo: Abuso Supremo (abusosupremo.vercel.app) — documentação de bloqueios/remoções judiciais de contas 2019-2025, mecanismo distinto (ordem judicial vs. filtro algorítmico) mas potencialmente parte da mesma assimetria estrutural — ver analise",
+        "dado_contextual: par Lula(PT)/Flávio Bolsonaro(PL) como caso ilustrativo do eixo de assimetria — não confundir com a lista completa de 665 perfis, é apenas o par mais visível e mais bem documentado"
+      ],
+      "status": "documentado",
+      "lacuna_investigativa": "Lacuna 1 (parcialmente resolvida): dispositivo legal confirmado via comentário no código-fonte primário (citação de fonte primária de engenharia, não mais apenas comunicado corporativo), mas número exato do artigo/parágrafo da Res. TSE ainda não localizado no texto consolidado oficial. Lacuna 2 (revisada, não resolvida): inspeção direta da lista de 665 IDs nomeados mostra composição cross-partidária — inclui simultaneamente o presidente-candidato (Lula, PT) e o principal opositor (Flávio Bolsonaro, PL), liderança da Câmara (Hugo Motta, centrão), bancadas de PT, PL, PSOL, PSD, Republicanos, Novo, MDB, PSDB, União. A lista não é seletiva por campo político — é, pelo comentário no código, extraída do dataset oficial completo de candidatos do TSE. Isso invalida a leitura de assimetria político-partidária na CONSTRUÇÃO da lista, mas não resolve a questão de IMPACTO diferencial: permanece não verificado se a perda de alcance recai desproporcionalmente sobre candidaturas sem outros canais de amplificação (imprensa paga, cargo executivo, aparato de Estado) vs. as que já dispõem desses canais — eixo que corta transversalmente os partidos, não corresponde a um único campo ideológico. Dados necessários para testar essa versão revisada da hipótese: engajamento orgânico pré-filtro por perfil, cruzado com proxy de acesso institucional (titular de cargo executivo, tempo de TV/rádio histórico, cobertura de imprensa tradicional) — não disponíveis nesta sessão. Lacuna 3 (nova, aberta por dado do usuário): confirmado via Poder360/Bites que Flávio Bolsonaro tem consistentemente 4x-1,7x mais interações que Lula em múltiplos períodos de 2026 (jan-fev: 49,7mi vs 28,2mi; 15-22/07 pós-tarifaço: 6,09mi vs 1,375mi), apesar de ter ~11 milhões de seguidores a menos — indício de que parcela relevante do alcance de Flávio hoje depende de amplificação algorítmica a não-seguidores (exatamente o canal cortado pelo Brazil2026ElectionFilter a partir de 16/08). Não verificado: proporção do engajamento de cada perfil que vem de seguidores diretos vs. recomendação/descoberta — sem isso, a hipótese de impacto desproporcional sobre Flávio específico é plausível mas não medida. Janela natural de teste: filtro entrou em vigor no mesmo dia da pesquisa Quaest mais recente (16/08) — acompanhar série de engajamento Bites/Poder360 nas semanas seguintes para checar se a curva de Flávio cai de forma desproporcional à de Lula é o teste empírico direto da hipótese. IMPORTANTE: descartado do corpus o bloco 'Previsão Ajustada' do dashboard de origem (@BrandiYeda) — simulação com fatores de conversão (20-25%) sem metodologia declarada, o próprio documento a rotula como 'simulação analítica, não resultado de pesquisa'; não é dado, não deve ser citado como tal em nenhuma síntese futura do corpus. Lacuna 4 (contranarrativa documentada e checada): circulou em 16/08/2026 narrativa alternativa (@Ideiasradicais) caracterizando o mesmo filtro como 'ordem da Justiça Eleitoral' discricionária, 'sem base legal ou critério', direcionada a prejudicar candidatos de direita, com alegação não-sourceada de replicação silenciosa em Instagram/YouTube/TikTok. Checagem contra a fonte primária (código-fonte, já inspecionado nesta entrada): (a) 'sem base legal/critério' é contradito pelo comentário no próprio código, que cita o dispositivo regulatório e a fonte de dados (dataset aberto TSE candidatos-2026); (b) enquadramento de lista discricionária/direcionada é contradito pela composição cross-partidária já verificada (Lula e bancada do PT presentes); (c) alegação de replicação em outras plataformas: sem nenhuma fonte, não verificável nesta sessão, permanece ev-alleged; (d) anedota pessoal do autor sobre queda de alcance em candidatura de 2024: fonte única interessada, não corroborada, correlação apresentada sem controle de outras variáveis. Elementos não refutáveis nem confirmáveis com os dados disponíveis: mecanismo técnico de perda de sinal algorítmico por redução de engajamento com não-seguidores — hipótese tecnicamente coerente mas apresentada pelo próprio autor como especulação ('não sabemos exatamente o código').",
+      "ponto_de_inflexao": null,
+      "analise": "Correção de rota sobre a hipótese de assimetria: a inspeção da fonte primária completa (lista nomeada de 665 perfis) não sustenta uma leitura de seletividade político-partidária — presidente-candidato e principal opositor, governo e oposição, PT e PL, estão simetricamente presentes, consistente com extração do dataset oficial completo do TSE (confirmado por comentário no próprio código-fonte). Isso reforça a classificação P12-B, mas exige reformulação do eixo de assimetria: não é esquerda-vs-direita, é canal-único-digital vs. canal-múltiplo-institucional, um eixo que atravessa todos os campos políticos. Um deputado de segundo escalão de qualquer partido, sem tempo de TV, sem cargo executivo, sem cobertura de imprensa tradicional, perde proporcionalmente mais com a exclusão de recomendação algorítmica do que um presidente em exercício ou um governador com aparato de comunicação institucional — porque para o primeiro grupo o alcance orgânico digital é o canal, e para o segundo é um canal entre vários. Essa é uma hipótese estrutural sobre desigualdade de capital político pré-existente amplificada por um mecanismo formalmente neutro — não uma alegação de captura partidária do filtro. Permanece ev-inference: não testada com dados de engajamento real nesta sessão. O valor analítico do caso para o corpus muda de 'contraexemplo' (versão 1) para 'exemplo P12-B de composição cross-partidária mas impacto potencialmente desigual por outro eixo' (versão 2) — ilustra por que simetria formal e simetria substantiva são perguntas diferentes, e por que a resposta pode não seguir o eixo político mais óbvio (esquerda-direita) sem que isso invalide a existência de assimetria por outro eixo (capital institucional pré-existente). Adenda pós-verificação de dado de engajamento: o par Lula/Flávio Bolsonaro — o mais visível e mais bem documentado dos 665 perfis — mostra exatamente a assinatura que a hipótese reformulada previa: candidato com menor base institucional formal direta (Flávio é senador, não titular de cargo executivo; Lula é presidente em exercício) e menor base de seguidores tem engajamento digital desproporcionalmente maior (4x em múltiplos períodos), sugerindo dependência maior de amplificação algorítmica não-solicitada — justamente o canal que o filtro restringe. Isso não prova impacto do filtro (que só entrou em vigor em 16/08, o mesmo dia da pesquisa mais recente citada); é um caso ilustrativo bem documentado que torna a hipótese testável com dados públicos já existentes (séries Bites/Poder360) nas próximas semanas. Tratamento de fonte: dashboard de origem (@BrandiYeda, X) mistura dado verificável (Quaest, Bites/Poder360) com simulação própria não-metodologizada (bloco 'Previsão Ajustada') — a segunda camada foi descartada integralmente desta entrada por não atender ao padrão evidencial do corpus, apesar de o dado de base ser real. Segunda adenda — contranarrativa documentada: em 16/08/2026 circulou leitura do mesmo evento como 'eleição roubada pela Justiça Eleitoral' contra a direita, atribuindo a lista de 665 perfis a decisão judicial discricionária sem critério. Checagem ponto a ponto contra a fonte primária já inspecionada mostra que os elementos verificáveis dessa narrativa não se sustentam: a lista tem base regulatória declarada no próprio código e composição cross-partidária confirmada, contradizendo tanto 'sem base legal' quanto 'lista direcionada a um campo'. Isso é caso de manual do padrão P04b operando: o mesmo evento, com a mesma fonte primária disponível para checagem, gera narrativa oposta e factualmente mais fraca quando testada. Registro isso com o mesmo rigor que seria aplicado à narrativa inversa (ex.: se alguém do campo governista tivesse celebrado o filtro como prova de neutralidade algorítmica sem checar se ele de fato reduz alcance de forma assimétrica por outro eixo) — o padrão anti-confirmation-bias exige isso simetricamente. O núcleo tecnicamente plausível da narrativa alternativa (perda de sinal algorítmico por engajamento reduzido com não-seguidores pode comprimir alcance mesmo entre seguidores) não é refutado por esta checagem — apenas não está demonstrado para este filtro específico, e é hipótese distinta da questão de composição/seletividade da lista, que é o ponto onde a narrativa alternativa falha na checagem."
+    }
+  ]
+}

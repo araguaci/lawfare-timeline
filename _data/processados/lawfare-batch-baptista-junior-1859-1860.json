@@ -1,0 +1,111 @@
+{
+  "_meta": {
+    "batch": "baptista-junior-porta-giratoria",
+    "generated": "2026-08-18",
+    "sync_status": "__PENDENTE_SYNC__",
+    "sync_note": "Drive claude_ai-corpus-ids-sync.json (lido 2026-08-18) mostra main last_confirmed=1856 / next_available=1857 — NÃO reflete ainda o batch ANPD/Discord (1849-1857) nem a entrada André Mendonça/IterCast (1858), ambos delivered em sessões anteriores conforme memória de sessão (2026-08-13 e 2026-08-16) mas ainda não mesclados no arquivo Drive. IDs abaixo (1859, 1860) partem da numeração mais alta conhecida (1858, Mendonça) + 1, NÃO do valor lido no Drive. Araguaci deve reconciliar com o estado real de lawfare.json antes do merge — se 1849-1858 ainda não foram mesclados, estes IDs podem colidir. Thematic: Drive confirma T-252 confirmado / next=T-253 — este valor bate com a memória de sessão, T-253 usado abaixo com confiança maior que os IDs do main track.",
+    "target_dir": "_data/todo/",
+    "merge_script": "merge_todo_pending.py"
+  },
+  "entries": [
+    {
+      "id": 1859,
+      "date": "2023-11-01",
+      "date_precision": "month",
+      "title": "Ex-comandante da Aeronáutica Baptista Júnior assume consultoria na Airbus meses após aprovar compra exclusiva de jatos A330 convertidos em KC-30",
+      "summary": "Tenente-brigadeiro Carlos de Almeida Baptista Júnior, Comandante da Aeronáutica (12/abr/2021–02/jan/2023), conduziu em 2022 concorrência da FAB para compra de dois jatos usados Airbus A330-200 (orçamento US$80,6 milhões), com requisitos técnicos que restringiram a disputa ao equipamento Airbus (excluindo Boeing KC-46 e conversão IAI). Os jatos (batizados KC-30) chegaram ao Brasil em jul/out de 2022 e seguem, até a data de registro desta entrada, sem a conversão para configuração de reabastecimento MRTT prevista, operando como transporte de passageiros/carga/aeronave presidencial. Em novembro de 2023, meses após deixar o comando (jan/2023), Baptista Júnior assumiu o cargo de Senior Advisor for Strategy (Consultor Sênior de Estratégia) na Airbus, conforme perfil profissional público (LinkedIn) e reportagens especializadas.",
+      "category": "mecanismo_sistemico",
+      "actors": [
+        {
+          "name": "Carlos de Almeida Baptista Júnior",
+          "role": "Comandante da Aeronáutica (2021-2023) → Consultor Sênior de Estratégia, Airbus (2023-)",
+          "institution": "FAB / Airbus"
+        }
+      ],
+      "institutions": ["FAB", "Ministério da Defesa", "Airbus", "Airbus Getafe (Espanha)"],
+      "legal_basis": [
+        "Lei 12.813/2013 — conflito de interesses e quarentena para agentes públicos federais; aplicabilidade a oficiais-generais das Forças Armadas na reserva não regulamentada de forma explícita — lacuna citada por especialistas e pela própria reportagem-fonte"
+      ],
+      "patterns": ["P13"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {
+          "title": "Ex-comandante da FAB que aprovou compra dos jatos KC-30 virou consultor da Airbus",
+          "url": "https://www.airway.com.br/ex-comandante-da-fab-que-aprovou-compra-dos-jatos-kc-30-virou-consultor-da-airbus/",
+          "outlet": "Airway (Ricardo Meier)",
+          "date": "2025-03-27"
+        },
+        {
+          "title": "Ex-comandante da FAB fechou contratos com Airbus antes de assumir cargo na empresa",
+          "url": "https://iclnoticias.com.br/ex-comandante-da-fab-fechou-contratos-airbus/",
+          "outlet": "ICL Notícias (Cleber Lourenço)",
+          "date": "2025-03-25"
+        }
+      ],
+      "result": "Baptista Júnior segue em cargo de consultoria na Airbus (situação vigente até a data de registro). Nenhuma sanção, apuração formal ou resposta pública do próprio Baptista Júnior foi localizada — Airway registra tentativa de contato sem sucesso. Airbus, via assessoria, declarou que contratos com o governo brasileiro são públicos e que colaboradores seguem 'princípios éticos e de conformidade'.",
+      "connections": ["id_1860"],
+      "status": "documentado",
+      "lacuna_investigativa": "(1) Não há confirmação pública de acordo formal Airbus-FAB para a conversão MRTT dos KC-30 — a reportagem-fonte nota que, 'se existe, não foi tornado público'. (2) Ausência de regulamentação de quarentena específica para oficiais-generais das Forças Armadas na reserva — vácuo normativo citado como estrutural, não pontual. (3) Termos e remuneração do cargo na Airbus não são públicos.",
+      "ponto_de_inflexao": "A restrição técnica da concorrência 2022 ao equipamento Airbus (excluindo concorrentes Boeing/IAI) precede em ~1 ano a contratação do ex-comandante pela mesma empresa — sequência documentada, não presumida.",
+      "analise": "Caso-âncora candidato ao padrão P13 (Porta Giratória) — categoria ainda não promovida no METHODOLOGY.md, pendente de mais âncoras conforme protocolo do corpus (mínimo 3 eventos para promoção de padrão candidato). A estrutura é: autoridade pública restringe concorrência a fornecedor único durante o mandato → autoridade assume cargo remunerado no mesmo fornecedor após deixar o cargo. Isso é compatível com o conceito de Operador Inconsciente do Sistema (OIS) apenas se houver declaração pública do próprio ator racionalizando o movimento — não localizada até o momento; na ausência de fala documentada, a classificação correta é estrutural (função do cargo), não psicológica-individual, conforme princípio metodológico 3.1 do corpus (função sistêmica, não biografia)."
+    },
+    {
+      "id": 1860,
+      "date": "2011-01-01",
+      "date_precision": "year",
+      "title": "Filho de Baptista Júnior é contratado pela AEL Sistemas (Elbit/Embraer) enquanto o pai presidia a comissão que definiu o caça Gripen",
+      "summary": "Em 2011-2012, enquanto o então coronel/brigadeiro Carlos de Almeida Baptista Júnior presidia a Comissão Coordenadora do Programa Aeronave de Combate (COPAC) — responsável pela condução do processo que selecionou o caça Saab Gripen NG —, seu filho Bruno Baptista foi contratado como analista pela AEL Sistemas, empresa brasileira de defesa subsidiária da israelense Elbit Systems (com 25% do capital detido pela divisão de defesa da Embraer), fornecedora de aviônicos para o próprio programa Gripen (sistema WAD) e do datalink Link-BR2 usado pelas três Forças. Um Inquérito Civil do Ministério Público Federal (nº 1.16.000.004707/2014-83) apurou irregularidades na aquisição dos caças e listou nominalmente três contratados da AEL com vínculo familiar direto com militares da cúpula da Aeronáutica, entre eles Bruno Baptista — o inquérito foi arquivado em 2015 (Promoção de Arquivamento nº 865/2015) sem apontar irregularidade formal comprovada. Bruno Baptista permaneceu na empresa: promovido a especialista em abril/2022 e a Gerente de Relações Institucionais em agosto/2024 — período que inclui o comando de seu pai à frente da FAB (2021-2023).",
+      "category": "mecanismo_sistemico",
+      "actors": [
+        {
+          "name": "Carlos de Almeida Baptista Júnior",
+          "role": "Presidente da COPAC (2011-12) → Comandante da Aeronáutica (2021-2023)",
+          "institution": "FAB"
+        },
+        {
+          "name": "Bruno Baptista",
+          "role": "Analista (2011) → Especialista (2022) → Gerente de Relações Institucionais (2024)",
+          "institution": "AEL Sistemas (Elbit Systems / Embraer Defesa)"
+        }
+      ],
+      "institutions": ["FAB", "COPAC", "AEL Sistemas", "Elbit Systems", "Embraer Defesa", "MPF"],
+      "legal_basis": [
+        "Lei 12.813/2013 — posterior à contratação original (2011); não retroage, mas relevante para o período 2021-2024"
+      ],
+      "patterns": ["P07", "P13"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        {
+          "title": "Sob as asas dos pais",
+          "url": "https://www.defesanet.com.br/defesa/sob-as-asas-dos-pais/",
+          "outlet": "DefesaNet",
+          "date": "2011-01-01"
+        },
+        {
+          "title": "MPF - Íntegra Pedido Arquivamento referente ao Gripen NG e WAD",
+          "url": "https://defesanet.com.br/gripenbrazil/noticia/20233/mpf-integra-pedido-arquivamento-referente-ao-gripen-ng-e-wad",
+          "outlet": "MPF via DefesaNet",
+          "date": "2015-01-01"
+        },
+        {
+          "title": "Link-BR2: a Lava Jato contra a soberania nacional",
+          "url": "https://jornalggn.com.br/coluna-economica/link-br2-a-lava-jato-contra-a-soberania-nacional-por-luis-nassif/",
+          "outlet": "GGN (Luís Nassif)",
+          "date": "2025-09-19"
+        },
+        {
+          "title": "Ex-comandante da FAB fechou contratos com Airbus antes de assumir cargo na empresa",
+          "url": "https://iclnoticias.com.br/ex-comandante-da-fab-fechou-contratos-airbus/",
+          "outlet": "ICL Notícias (Cleber Lourenço)",
+          "date": "2025-03-25"
+        }
+      ],
+      "result": "Inquérito arquivado em 2015. Bruno Baptista segue empregado na AEL Sistemas, com progressão de carreira até cargo de relações institucionais (2024), sobreposta ao período em que o pai comandou a FAB.",
+      "connections": ["id_1859"],
+      "status": "documentado",
+      "lacuna_investigativa": "(1) Valor exato dos contratos AEL-FAB durante a janela específica do comando de Baptista Júnior (abr/2021-jan/2023) não está confirmado por documento primário — a única cifra encontrada (R$300 milhões) vem de fonte jornalística única (ICL Notícias, 25/03/2025), refere-se ao 'governo Bolsonaro' como um todo (jan/2019-dez/2022, período mais amplo que o comando de Baptista Jr.) e não cita link de Portal da Transparência/DOU/Comprasnet. Classificar como `ev-alleged` até verificação — NÃO promover a `ev-confirmed` sem documento primário. (2) Não localizada participação acionária (ações/quotas) de Baptista Júnior ou do filho na AEL Sistemas — os vínculos documentados são empregatícios/consultivos, não societários. (3) Motivo do arquivamento do inquérito MPF 2015 não detalhado nas fontes disponíveis — se por ausência de fato típico ou por insuficiência probatória, muda a leitura do caso.",
+      "ponto_de_inflexao": "Contratação do filho (2011-12) coincide temporalmente com a presidência do pai na comissão que definiu o fornecedor cujos produtos a AEL fabricava — MPF abriu inquérito, mas o processo foi arquivado antes de qualquer instrução probatória aprofundada aparente nas fontes públicas.",
+      "analise": "Caso de captura transgeracional (P07) com estrutura bidirecional rara no corpus: não é apenas o filho beneficiado pela posição do pai — é o mesmo núcleo familiar aparecendo em dois momentos de autoridade sobre compras de defesa (COPAC 2011-12; comando FAB 2021-23), com o fornecedor beneficiado sendo o mesmo ecossistema industrial (AEL/Elbit) nos dois momentos, e a mesma dinâmica de porta giratória se repetindo com o pai (Airbus, id_1859) ao final do segundo mandato. A persistência do padrão através de duas décadas e duas gerações reforça a leitura estrutural do corpus (princípio 3.1): o cargo — COPAC, depois Cmt. FAB — opera como nó de conversão de autoridade pública em capital relacional privado, independentemente do ocupante específico. Isso não prova irregularidade individual (o inquérito de 2015 foi arquivado); prova arquitetura institucional sem barreira efetiva contra o mecanismo, que é o dado analítico relevante para o corpus."
+    }
+  ]
+}

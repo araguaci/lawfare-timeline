@@ -1,6 +1,6 @@
 # `_data/` — Corpus Lawfare Timeline
 
-**Última revisão:** 2026-08-13  
+**Última revisão:** 2026-08-19  
 **Site:** [lawfare-timeline.vercel.app](https://lawfare-timeline.vercel.app)  
 **Painel de sync:** [`sync_status_latest.html`](./sync_status_latest.html)
 
@@ -8,16 +8,16 @@ Este diretório concentra **dados tabulares do corpus editorial** e **metadados 
 
 ---
 
-## Estado atual (2026-08-13)
+## Estado atual (2026-08-19)
 
 | Track | Último confirmado | Próximo livre | Fonte |
 |-------|-------------------|---------------|-------|
-| **Main** | **1856** | **1857** | `lawfare.json` |
-| **Temático (T-)** | **T-252** | **T-253** | `claude.ai-corpus-ids-sync.json` |
+| **Main** | **1864** | **1865** | `lawfare.json` |
+| **Temático (T-)** | **T-254** | **T-255** | `claude.ai-corpus-ids-sync.json` |
 | **Dragão e a Onça** | 132 main + 19 temáticos | — | `dragao-onca.json` + `_posts/dragao-onca/` (151 posts) |
 
-- **`lawfare.json`:** **1817** assuntos · max ID **1856** (gap intencional **1820** → **T-248**)
-- **`todo/`:** sem batches JSON (13/08: T-252 lacuna resolvida; 1850–1856 arquivado) · `_hold/` removido (IDs **1821–1826**)
+- **`lawfare.json`:** **1825** assuntos · max ID **1864** (gap intencional **1820** → **T-248**)
+- **`todo/`:** sem batches JSON (19/08: 1857–1864 + T-253/T-254 arquivados) · staging HTML/MD permanece
 - **Drive:** `python tools/gdrive_sync_export.py` → `G:/Meu Drive/claude.ai-corpus-ids-sync.json` (+ `lawfare.json`)
 
 Regenerar dashboard + sync Drive: `python tools/sync_corpus_ids.py`
@@ -113,7 +113,7 @@ Fonte de verdade do **main track**. Cada `assunto` tem:
 Mapa operacional entre sessões editoriais e o repo:
 
 - `tracks.main` — batches confirmados, `last_confirmed`, `next_available`
-- `tracks.thematic` — entradas T-100+, capítulos Dragão T-228–T-246; estudos **T-248–T-252** (mislabels T-1512/1765/1766 fora do registry)
+- `tracks.thematic` — entradas T-100+, capítulos Dragão T-228–T-246; estudos **T-248–T-254** (mislabels T-1512/1765/1766 fora do registry)
 - `sync_status` — contadores e fila
 - `session_log` — histórico de merges
 
@@ -191,7 +191,7 @@ Objetivo: reduzir ruído na raiz de `_data/`, separar **corpus**, **tema Jekyll*
 ### Fase 0 — Documentação (concluída)
 
 - [x] Criar `_data/README.md` (este ficheiro)
-- [x] Atualizar secção `_data/` em [`README.md`](../README.md) com link para aqui e IDs atuais (**1856** / **T-252**)
+- [x] Atualizar secção `_data/` em [`README.md`](../README.md) com link para aqui e IDs atuais (**1864** / **T-254**)
 
 ### Fase 1 — Higiene imediata (baixo risco)
 
@@ -261,12 +261,12 @@ Integrar no fluxo pós-merge junto com `validate-ids.ps1`.
 
 ## Fila atual (`todo/`)
 
-**Sem batches JSON** (13/08/2026): T-252 lacuna resolvida; batch **1850–1856** em `processados/`.
+**Sem batches JSON** (19/08/2026): 1857–1864 + T-253/T-254 em `processados/`.
 
 | Local | Conteúdo |
 |-------|----------|
-| `_data/todo/*.html` | Staging editorial (`dois-pesos-duas-medidas.html`, `o-teto-que-nao-existe.html`, etc.) |
-| `_data/processados/lawfare-thematic-T252-*.json` | T-252 confirmado; `lacuna_status: resolvida` |
+| `_data/todo/*.html` / `*.md` | Staging (`p13-porta-giratoria.html`, `prompt-tratamento-pdfs-mensalao.md`) |
+| `_data/processados/lawfare-thematic-T254-*.json` | P13 Porta Giratória (reassign de T-253) |
 | `_data/processados/README-hold-resolvido-1749-1768.md` | `_hold/` encerrado: Lula/Havengate publicados como **1821–1826** |
 
 ---

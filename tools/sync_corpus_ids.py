@@ -281,6 +281,8 @@ def main() -> None:
     title_overrides = {
         251: "Convergência estrutural STF–família–Banco Master (P02/P05/P07)",
         252: "Escalada em duas frentes: proteção técnica não isenta (plataforma + sigilo de fonte)",
+        253: "AP 470 Mensalão — critério evidencial STF (Lula fora do polo passivo)",
+        254: "P13 Porta Giratória — proposta de promoção (âncoras 1859–1864)",
     }
     for tid, topic in title_overrides.items():
         if tid not in by_id:

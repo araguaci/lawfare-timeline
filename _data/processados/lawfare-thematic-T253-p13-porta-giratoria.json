@@ -1,0 +1,91 @@
+{
+  "_meta": {
+    "batch": "thematic-T253-p13-promocao",
+    "generated": "2026-08-18",
+    "sync_status": "__PENDENTE_SYNC__",
+    "sync_note": "Drive claude_ai-corpus-ids-sync.json (lido 2026-08-18) confirma thematic last_id=252 / next_available=253. T-253 é o próximo livre com confiança alta (Drive e memória de sessão convergem). Requer atualização correspondente em METHODOLOGY.md caso Araguaci aprove a promoção do P13.",
+    "target_dir": "_data/todo/",
+    "acao_requerida": "Se aprovado: adicionar P13 à tabela de padrões em METHODOLOGY.md e em prompt-sistema-lawfare-ai.md (seção 2 e enum patterns do schema JSON)"
+  },
+  "entries": [
+    {
+      "id": 253,
+      "thematic_id": "T-253",
+      "date": "2026-08-18",
+      "date_precision": "day",
+      "title": "T-253 — P13 promovido a padrão: Porta Giratória como conversão de autoridade pública em capital relacional privado",
+      "summary": "Proposta de promoção formal do padrão candidato P13 (Porta Giratória) a padrão autônomo do corpus, com base em cinco âncoras documentadas em `ev-confirmed` distribuídas em três domínios institucionais distintos (defesa/aviação, defesa/eletrônica, regulação financeira, telecomunicações) e uma entrada de dimensão agregada quantitativa. Critério de promoção do corpus (mínimo 3 âncoras) satisfeito com margem, e — requisito adicional imposto nesta sessão para evitar viés de amostra — as âncoras não dependem de um único ator, família ou setor.",
+      "category": "mecanismo_sistemico",
+      "definicao_proposta": "P13 — Porta Giratória: mecanismo pelo qual autoridade sobre decisões públicas de compra, concessão ou regulação é convertida em posição remunerada no ente privado afetado por essas decisões, sem que a conversão exija ilegalidade, dissimulação ou coordenação. O ativo transferido não é informação de curta validade, mas capital relacional e conhecimento estrutural do órgão — ambos duráveis, o que torna prazos curtos de quarentena inoperantes por desenho.",
+      "subvariantes_propostas": [
+        {
+          "codigo": "P13-A",
+          "nome": "Sequencial",
+          "descricao": "Autoridade deixa o cargo público e assume posição no ente privado afetado por suas decisões anteriores. Quarentena aplicável, cumprida ou não.",
+          "ancoras": ["id_1859 (Baptista Júnior → Airbus)", "id_1862 (Campos Neto → Nubank)"]
+        },
+        {
+          "codigo": "P13-B",
+          "nome": "Simultânea",
+          "descricao": "Autoridade acumula cargo público ativo e posição deliberativa ou remunerada no fornecedor/regulado. Variante mais severa; quarentena inaplicável por definição.",
+          "ancoras": ["id_1861 (Burnier, brigadeiro da ativa, conselho consultivo AEL)"]
+        },
+        {
+          "codigo": "P13-C",
+          "nome": "Por barreira neutralizada",
+          "descricao": "A quarentena não é cumprida nem burlada — é dispensada pelo órgão encarregado de aplicá-la. Caracteriza captura do regulador da porta giratória, não apenas uso da porta.",
+          "ancoras": ["id_1863 (Fábio Faria → BTG, quarentena dispensada pela CEP)"]
+        },
+        {
+          "codigo": "P13-D",
+          "nome": "Transgeracional / por interposta pessoa",
+          "descricao": "O beneficiário não é a autoridade, mas familiar posicionado no ente afetado. Sobrepõe-se a P07; catalogar com ambos os códigos.",
+          "ancoras": ["id_1860 (Bruno Baptista → AEL durante presidência do pai na COPAC)", "id_1861 (filho de Burnier; Pondé, concunhado de Saito)"]
+        }
+      ],
+      "criterio_distintivo": "P13 se distingue de P05 (fundos públicos como vetor) porque o objeto transferido não é recurso orçamentário, e sim autoridade decisória convertida em valor privado. Distingue-se de P02 (investigador-investigado) porque não há inversão adversarial — há continuidade de interesse. Distingue-se de P10 (infraestrutura compartilhada) porque não requer arquitetura jurídico-financeira comum, apenas a existência do cargo.",
+      "regra_anti_confirmation_bias": "Legalidade formal cumprida NÃO constitui contraexemplo ao P13. O caso Campos Neto (id_1862) cumpriu integralmente a quarentena de seis meses e é a âncora metodologicamente mais forte do conjunto justamente por isso: demonstra que o padrão opera dentro da lei. Inversamente, é PROIBIDO tratar qualquer transição público→privado como P13 automaticamente — a classificação exige (a) decisão pública documentada que afetou o ente privado especificamente, e (b) posição no mesmo ente ou grupo. Ausente qualquer dos dois, a entrada não é P13. Transições público→público (militarização de estatais, PTTC) estão explicitamente FORA do escopo do P13.",
+      "contraexemplos_a_buscar": "O corpus precisa de pelo menos um caso documentado de autoridade que declinou posição em ente afetado, ou de quarentena efetivamente aplicada com bloqueio de contratação, para testar a hipótese de que o mecanismo é universal e não seletivo. Nenhum localizado até esta sessão — registrar como lacuna ativa, não como confirmação da universalidade.",
+      "patterns": ["P13", "P07", "P05", "P06"],
+      "evidence_status": "ev-inference",
+      "sources": [
+        {
+          "title": "Forças Armadas têm 67% dos contratos com empresas de militares",
+          "url": "https://www.poder360.com.br/governo/forcas-armadas-tem-67-dos-contratos-com-empresas-de-militares/",
+          "outlet": "Poder360",
+          "date": "2023-06-20"
+        },
+        {
+          "title": "Sob as asas dos pais",
+          "url": "https://www.defesanet.com.br/defesa/sob-as-asas-dos-pais/",
+          "outlet": "DefesaNet / IstoÉ",
+          "date": "2011-01-01"
+        },
+        {
+          "title": "Ex-comandante da FAB que aprovou compra dos jatos KC-30 virou consultor da Airbus",
+          "url": "https://www.airway.com.br/ex-comandante-da-fab-que-aprovou-compra-dos-jatos-kc-30-virou-consultor-da-airbus/",
+          "outlet": "Airway",
+          "date": "2025-03-27"
+        },
+        {
+          "title": "Campos Neto assume cargo no Nubank seis meses após deixar presidência do BC",
+          "url": "https://istoedinheiro.com.br/campos-neto-assume-cargo-no-nubank",
+          "outlet": "IstoÉ Dinheiro",
+          "date": "2025-07-01"
+        },
+        {
+          "title": "Fábio Faria autorizou empresa do BTG a captar R$ 2,5 bilhões um dia antes de sair do governo",
+          "url": "https://www.brasildefato.com.br/2023/03/03/fabio-faria-autorizou-empresa-do-btg-a-captar-r-2-5-bilhoes-um-dia-antes-de-sair-do-governo/",
+          "outlet": "Brasil de Fato",
+          "date": "2023-03-03"
+        }
+      ],
+      "result": "Proposta de promoção. Requer decisão de Araguaci e edição de METHODOLOGY.md + prompt-sistema-lawfare-ai.md (tabela de padrões e enum do schema).",
+      "connections": ["id_1859", "id_1860", "id_1861", "id_1862", "id_1863", "id_1864", "T-222"],
+      "status": "analise_editorial",
+      "lacuna_investigativa": "(1) Ausência de contraexemplo documentado (quarentena que efetivamente bloqueou uma contratação) — lacuna metodológica ativa que enfraquece a generalização e deve ser registrada como tal, não contornada. (2) Nenhum caso identificado de aplicação do dispositivo penal da Lei 14.133/2021 sobre uso posterior de informação privilegiada. (3) Série de dados sobre empresas de militares não atualizada além de 2022/2023. (4) Status atual (ago/2026) da proposta governamental de quarentena de 18 meses não verificado.",
+      "ponto_de_inflexao": "O achado transversal às cinco âncoras: em nenhum dos casos a norma faltava. Lei 12.813/2013 existe desde 2013; Lei 14.133/2021 criminaliza expressamente o uso posterior de informação privilegiada; a quarentena de seis meses é regra vigente; o Estatuto dos Militares restringe atividade privada de militar da ativa. O padrão persiste por ausência de execução, não por vácuo normativo — e no caso id_1863 o próprio órgão de aplicação removeu a barreira. Este é o dado analítico mais relevante do padrão.",
+      "analise": "P13 é o padrão que fecha um circuito até aqui descrito de forma fragmentada no corpus: P05 documenta o recurso público sendo capturado; P13 documenta a autoridade sobre esse recurso sendo capturada. Juntos, descrevem extração em dois níveis — o dinheiro e a decisão sobre o dinheiro. A distribuição das âncoras através de governos de orientações distintas (Burnier/2011 em governo Dilma; Baptista Jr., Faria e Campos Neto com origem no governo Bolsonaro; Campos Neto consumando a transição já sob governo Lula, com o próprio Executivo de Lula propondo endurecer a regra) satisfaz a exigência de simetria evidencial do corpus: o padrão é transideológico e opera sob qualquer administração, o que é exatamente a tese central — instituições capturadas transcendem linhas ideológicas, e nenhum vetor chega ao beneficiário final. Coerente com o princípio de hierarquia funcional sobre atores individuais: o objeto documentado é o cargo como nó de conversão, não a moralidade de quem o ocupou."
+    }
+  ]
+}

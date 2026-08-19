@@ -1,6 +1,6 @@
 # Próximos passos · lawfare-timeline
 
-**Atualizado:** 2026-08-13 (T-252 lacuna resolvida; fila `todo/` esvaziada; main **1856** / T-252)
+**Atualizado:** 2026-08-19 (merge 1857–1864 + T-253/T-254; colisões resolvidas)
 
 > Espelho: `docs/TODO.md` · Notas: `_data/processados/todo.md` · Legado: `docs/TODO-LEGACY.md`
 
@@ -10,37 +10,33 @@
 
 | Track | Last | Próximo | Validação |
 |-------|------|---------|-----------|
-| Main | **1856** | **1857** | lawfare.json (ver `sync_corpus_ids.py`) |
-| Thematic | **T-252** | **T-253** | sync 100–252 · lacuna T-252 **resolvida** |
+| Main | **1864** | **1865** | lawfare.json **1825** entradas |
+| Thematic | **T-254** | **T-255** | sync 100–254 |
 | Dragão e a Onça | **1770** / **T-246** | — | `dragao-onca.json` **151** |
-| Fila `_data/todo/` | **vazia** (JSON) | — | `_hold/` **removido** (13/08) |
+| Fila `_data/todo/` | staging HTML/MD | — | JSON arquivado 19/08 |
 
 ---
 
-## Rodada 13/08/2026 ✅ — T-252 lacuna + fila
+## Rodada 19/08/2026 ✅ — Fila 1857–1864 + T-253/T-254
 
-| Item | Resultado |
-|------|-----------|
-| **T-252** lacuna (coordenação formal entre frentes) | **Resolvida** — achado negativo; origens distintas (Legislativo/ANPD vs. STF) |
-| Fila `_data/todo/` | Arquivada: batch **1850–1856** + thematic T-252 → `processados/` |
-| Main / temático | **1856** / **T-252** · próximos **1857** / **T-253** |
+Colisões evitadas:
 
----
-
-## Rodada 04/08/2026 ✅ — Sequência corrigida + merge
+| Conflito | Resolução |
+|----------|-----------|
+| **1857** ×3 (revisões do filtro X) | Canônico = revisão 5 / arquivo `(2)` |
+| **T-253** ×2 | AP 470 permanece **T-253**; P13 Porta Giratória → **T-254** |
+| Main 1857–1864 vs corpus | Livres (last era **1856**) |
 
 | Faixa | Conteúdo |
 |-------|----------|
-| **1797–1799** | Teodoro / Oruam / Japa PCC |
-| **1800–1803** | Drones Complexo da Penha |
-| **1804–1809** | P01-B garantismo seletivo (ex-1763–1768 → **sem** colisão dragao-onca) |
-| **1810–1819** | Outorgas MP747, ADPF 165, lacunas rádio, cartórios BA (main) |
-| **T-248** | Editorial cartórios BA (ex-T-1820 — colisão main) |
-| **1821–1824** | Cluster Lula/Flávio “traidor” (ex `_hold` 1749–1752) |
-| **1825–1826** | Havengate / Mercury Legacy (ex `_hold` 1767–1768) |
-| **T-247** | Dedo na Balança T2 — vídeo IA convenção PL |
+| **1857** | X Brazil2026ElectionFilter (P12-B) |
+| **1858** | Mendonça / IterCast — competência penal originária |
+| **1859–1860** | Baptista Júnior / Airbus + filho na AEL |
+| **1861–1864** | Âncoras P13 (Burnier, Campos Neto, Faria/BTG, agregada 67%) |
+| **T-253** | AP 470 — critério evidencial STF |
+| **T-254** | P13 Porta Giratória (proposta de promoção) |
 
-**Scripts:** `reassign_todo_batch_ids.py` · `fix_havengate_1826_main.py` · `fix_thematic_sync_track.py` · patch `sync_todo_current.py` (main ≥1000 ≠ temático)
+**Script:** `scripts/merge_todo_queue_1857_1864.py`
 
 ---
 
@@ -48,13 +44,12 @@
 
 | Item | Prioridade |
 |------|------------|
-| `_hold/` Lula/Havengate | ✅ Arquivado em `processados/` (IDs **1821–1826**; README-hold-resolvido) |
-| T-252 lacuna coordenação entre frentes | ✅ Resolvida 13/08 (achado negativo) |
-| Renomear estudos mislabel `T-1512`/`T-1765`/`T-1766` → faixa T-253+ (opcional; sync já os ignora) | Baixa |
-| Gap main **1820** (editorial → T-248, não entra em lawfare.json) | Informativo |
-| Batch Pantera/Severino/Gugu | ✅ **1836–1838** (05/08/2026) |
-| Jonathan Macedo (SP) — 2ª fonte | Baixa |
+| Formalizar **P13 Porta Giratória** em METHODOLOGY.md (T-254; distinto do P13 arquivado 18/07) | Média |
 | Formalizar P04b em METHODOLOGY | Média |
+| Renomear estudos mislabel `T-1512`/`T-1765`/`T-1766` → faixa T-255+ | Baixa |
+| Gap main **1820** (editorial → T-248) | Informativo |
+| Jonathan Macedo (SP) — 2ª fonte | Baixa |
+| Staging `todo/p13-porta-giratoria.html` + `prompt-tratamento-pdfs-mensalao.md` | Baixa |
 | `bundle exec jekyll build` | Rodar após esta rodada |
 
 ---
@@ -64,7 +59,6 @@
 ```bash
 python scripts/reassign_todo_batch_ids.py   # antes de sync, se batch conflitar
 python scripts/sync_todo_current.py
-python scripts/fix_thematic_sync_track.py   # se thematic.last_id divergir
 python tools/sync_corpus_ids.py
 pwsh -File tools/validate-ids.ps1
 bundle exec jekyll build
@@ -74,8 +68,7 @@ bundle exec jekyll build
 
 ## Referências
 
-- Corpus: `_data/lawfare.json` (**1817** entradas · main até **1856**)
+- Corpus: `_data/lawfare.json` (**1825** entradas · main até **1864**)
 - Unified: `_data/lawfare-unified-corpus.json`
 - Sidecar dragão: `_data/dragao-onca.json` (151 · **1763/1764** = CEEE-T / JMEV intactos)
 - Hold resolvido: `_data/processados/README-hold-resolvido-1749-1768.md`
-- T-252: `_data/processados/lawfare-thematic-T252-escalada-anonimizacao-criptografia.json`
