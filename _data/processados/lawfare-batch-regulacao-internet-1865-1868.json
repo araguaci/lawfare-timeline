@@ -1,0 +1,224 @@
+[
+  {
+    "id": 1865,
+    "date": "2024-04-09",
+    "date_precision": "day",
+    "title": "Arthur Lira arquiva PL 2630/2020 ('PL das Fake News') na Câmara dos Deputados",
+    "summary": "Após 4 anos de tramitação sem votação em plenário — aprovado no Senado em 2020, relatoria de Orlando Silva (PCdoB-SP) na Câmara —, o presidente da Câmara dos Deputados, Arthur Lira (PP-AL), anuncia o arquivamento do PL 2630/2020, que instituiria a Lei Brasileira de Liberdade, Responsabilidade e Transparência na Internet. Lira alega 'falta de consenso' e propõe grupo de trabalho substituto, que não chega a se reunir formalmente nos meses seguintes.",
+    "category": "ato_legislativo",
+    "actors": [
+      {
+        "name": "Arthur Lira",
+        "role": "Presidente da Câmara dos Deputados",
+        "institution": "Câmara dos Deputados"
+      },
+      {
+        "name": "Orlando Silva",
+        "role": "Relator do PL 2630/2020 na Câmara",
+        "institution": "Câmara dos Deputados"
+      }
+    ],
+    "institutions": [
+      "Câmara dos Deputados"
+    ],
+    "legal_basis": [
+      "PL 2630/2020 — Lei Brasileira de Liberdade, Responsabilidade e Transparência na Internet (aprovado no Senado em 30/06/2020, nunca votado em plenário na Câmara)"
+    ],
+    "patterns": [
+      "P09",
+      "P04b"
+    ],
+    "evidence_status": "ev-confirmed",
+    "sources": [
+      {
+        "title": "Projeto de Lei 2630/2020",
+        "url": "https://pt.wikipedia.org/wiki/Projeto_de_Lei_2630/2020",
+        "outlet": "Wikipédia",
+        "date": "2024-04-09"
+      },
+      {
+        "title": "Arthur Lira matou o PL das fake news",
+        "url": "https://www.intercept.com.br/2024/04/10/arthur-lira-matou-o-pl-das-fake-news/",
+        "outlet": "The Intercept Brasil",
+        "date": "2024-04-10"
+      }
+    ],
+    "result": "Projeto arquivado sem votação em plenário; GT substituto criado em junho/2024 não sai do papel (Brasil de Fato, 12/10/2024); vácuo regulatório sobre plataformas digitais mantido até decisão do STF em 2025.",
+    "connections": [
+      "id_808",
+      "id_981"
+    ],
+    "status": "confirmado",
+    "lacuna_investigativa": "O papel específico do lobby de Google e Meta na decisão de arquivamento é afirmado por veículos (Intercept, SINDSPREV) mas não corroborado por evidência primária (comunicações formais, registros de audiência) — permanece ev-alleged na cobertura jornalística, não promovido a ev-confirmed no corpus.",
+    "analise": "Arquivamento por decisão unilateral do Presidente da Câmara, sem votação em plenário, após 4 anos de tramitação — mecanismo P09 (parlamentarismo de fato): decisão individual substitui deliberação coletiva sobre matéria de repercussão social ampla. Este arquivamento é o ponto de origem da cadeia documentada em id_1866–id_1868: o vácuo legislativo aqui criado é preenchido, sequencialmente, pelo Judiciário (STF, 2025) e depois pelo Executivo (decretos, 2026) — nenhum dos dois substitutos passa por votação do Congresso."
+  },
+  {
+    "id": 1866,
+    "date": "2025-06-26",
+    "date_precision": "day",
+    "title": "STF declara inconstitucionalidade parcial e progressiva do art. 19 do Marco Civil da Internet (Temas 987 e 533)",
+    "summary": "Em julgamento conjunto dos RE 1.037.396 (Tema 987, rel. Dias Toffoli) e RE 1.057.258 (Tema 533, rel. Luiz Fux), o STF decide por 8 votos a 3 que o art. 19 da Lei 12.965/2014 — que condicionava a responsabilização civil de plataformas à existência de ordem judicial prévia para remoção de conteúdo — é parcialmente inconstitucional. A tese fixada institui regime diferenciado: remoção imediata sem necessidade de notificação para lista taxativa de crimes graves (atos antidemocráticos, terrorismo, indução a suicídio/automutilação, discriminação, crimes contra mulher e criança); notificação extrajudicial (não judicial) para demais ilícitos; manutenção do art. 19 original apenas para crimes contra a honra. Vencidos: André Mendonça, Edson Fachin, Nunes Marques. Acórdão publicado em 06/11/2025.",
+    "category": "chokepoint_judicial",
+    "actors": [
+      {
+        "name": "Dias Toffoli",
+        "role": "Relator do Tema 987",
+        "institution": "STF"
+      },
+      {
+        "name": "Luiz Fux",
+        "role": "Relator do Tema 533",
+        "institution": "STF"
+      },
+      {
+        "name": "Luís Roberto Barroso",
+        "role": "Presidente do STF durante o julgamento",
+        "institution": "STF"
+      }
+    ],
+    "institutions": [
+      "STF"
+    ],
+    "legal_basis": [
+      "Lei 12.965/2014 (Marco Civil da Internet), art. 19 — declarado parcialmente inconstitucional",
+      "RE 1.037.396 (Tema 987 de repercussão geral)",
+      "RE 1.057.258 (Tema 533 de repercussão geral)"
+    ],
+    "patterns": [
+      "P03"
+    ],
+    "evidence_status": "ev-confirmed",
+    "sources": [
+      {
+        "title": "STF define parâmetros para responsabilização de plataformas por conteúdos de terceiros",
+        "url": "https://noticias.stf.jus.br/postsnoticias/stf-vai-analisar-recursos-contra-tese-fixada-no-julgamento-do-marco-civil-da-internet/",
+        "outlet": "STF Notícias",
+        "date": "2025-06-26"
+      },
+      {
+        "title": "STF redes respondem por posts mesmo sem ordem judicial; veja tese",
+        "url": "https://www.migalhas.com.br/quentes/433462/stf-redes-respondem-por-posts-mesmo-sem-ordem-judicial-veja-tese",
+        "outlet": "Migalhas",
+        "date": "2025-06-27"
+      }
+    ],
+    "result": "Quatro regimes distintos de responsabilização civil fixados; tese vale a partir de 26/06/2025 até edição de lei específica pelo Congresso; STF inicia análise de embargos de declaração em 29/05/2026, com potencial de modulação.",
+    "connections": [
+      "id_1865",
+      "id_1867",
+      "id_1868"
+    ],
+    "status": "confirmado",
+    "lacuna_investigativa": "Efeito prático da tese sobre pequenos provedores e imprensa alternativa (fora do escopo das grandes plataformas discutidas no julgamento) não mensurado empiricamente — corpus carece de casos concretos de aplicação a veículos de menor porte.",
+    "analise": "O STF reconhece expressamente 'estado de omissão parcial' do Legislativo para justificar intervenção judicial direta em política regulatória geral — não resolução de lide concreta isolada, mas fixação de tese vinculante para todo o país. Barroso declara que 'o tribunal não está legislando', mas o efeito prático (norma geral e abstrata com vigência até edição de lei) tensiona essa autodescrição. Estruturalmente: o vácuo criado por P09 (id_1865, neutralização legislativa) é preenchido por P03 (chokepoint judicial expandido de caso concreto para política pública geral), sem que o Legislativo participe em nenhuma etapa do processo decisório."
+  },
+  {
+    "id": 1867,
+    "date": "2025-09-17",
+    "date_precision": "day",
+    "title": "Lula sanciona Lei 15.211/2025 (ECA Digital / 'Lei Felca'); ANPD convertida em agência reguladora",
+    "summary": "Após pressão pública gerada por vídeo viral do influenciador Felipe Bressanin Pereira ('Felca') sobre adultização de crianças em redes sociais, o Congresso aprova e o presidente Lula sanciona a Lei 15.211/2025, o Estatuto Digital da Criança e do Adolescente. A norma veda autodeclaração de idade, exige verificação confiável (CPF, biometria, Face ID), obriga controle parental para menores de 16 anos e transforma a ANPD em agência reguladora independente com poder de aplicar multas de até R$ 50 milhões. Vigência entra em vigor em 17/03/2026, com fiscalização em duas etapas: lojas de aplicativos e sistemas operacionais desde março/2026; demais setores a partir de agosto/2026.",
+    "category": "ato_legislativo",
+    "actors": [
+      {
+        "name": "Luiz Inácio Lula da Silva",
+        "role": "Presidente da República — sanção da lei",
+        "institution": "Presidência da República"
+      },
+      {
+        "name": "Felipe Bressanin Pereira ('Felca')",
+        "role": "Influenciador — catalisador social do debate legislativo",
+        "institution": null
+      }
+    ],
+    "institutions": [
+      "Congresso Nacional",
+      "Presidência da República",
+      "ANPD"
+    ],
+    "legal_basis": [
+      "Lei 15.211/2025 — Estatuto Digital da Criança e do Adolescente ('ECA Digital')"
+    ],
+    "patterns": [
+      "P10",
+      "P05"
+    ],
+    "evidence_status": "ev-confirmed",
+    "sources": [
+      {
+        "title": "Estatuto Digital da Criança e do Adolescente entra em vigor em 17 de março de 2026",
+        "url": "https://www.machadomeyer.com.br/pt/inteligencia-juridica/publicacoes-ij/direito-digital/estatuto-digital-da-crianca-e-do-adolescente-lei-n-15-211-2025-entra-em-vigor-em-17-de-marco-de-2026",
+        "outlet": "Machado Meyer",
+        "date": "2026-03-18"
+      },
+      {
+        "title": "ECA Digital entra em vigor e obriga redes a verificar idade de usuários",
+        "url": "https://oimparcial.com.br/noticias/2026/03/eca-digital-entra-em-vigor-e-obriga-redes-a-verificar-idade-de-usuarios/",
+        "outlet": "O Imparcial",
+        "date": "2026-03-17"
+      }
+    ],
+    "result": "Autodeclaração de idade proibida desde 17/03/2026; ANPD com poder de multa de até R$ 50 milhões ou 10% do faturamento no Brasil; Centro Nacional de Proteção à Criança e ao Adolescente criado para centralizar denúncias.",
+    "connections": [
+      "id_1866",
+      "id_1868"
+    ],
+    "status": "confirmado",
+    "lacuna_investigativa": "Fonte secundária (portalbregabregoso, 17/03/2026) afirma que a vigência foi antecipada de setembro/2026 para março/2026 'por medida provisória... devido à urgência do tema' — mecanismo formal e justificativa política dessa antecipação não confirmados no corpus contra fonte primária (Diário Oficial da União).",
+    "analise": "Diferente do art. 19/MCI (id_1866, chokepoint judicial), este é um caso de regulação efetivamente aprovada pelo Congresso, sob pressão popular direta — funcionalmente o inverso de P04 (mídia/influenciador como catalisador de accountability, não como arma). Mas o resultado institucional converge: concentração de poder fiscalizatório e sancionador em única autoridade administrativa (ANPD), sem revisão judicial automática das decisões, reproduz o padrão P10 já documentado em outros contextos do corpus (INSS, CNJ) — agências regulatórias tendem a acumular funções de fiscal + investigador + sancionador no mesmo órgão."
+  },
+  {
+    "id": 1868,
+    "date": "2026-05-20",
+    "date_precision": "day",
+    "title": "Lula assina Decretos 12.975/2026 e 12.976/2026, regulamentando o Marco Civil da Internet após decisão do STF",
+    "summary": "O presidente Lula assina os Decretos 12.975/2026 (altera o Decreto 8.771/2016, detalhando deveres de moderação de conteúdo, transparência e mitigação de circulação de conteúdo criminoso pelas plataformas) e 12.976/2026 (diretrizes específicas contra violência digital de gênero, incluindo remoção de conteúdo íntimo não consentido em até 2 horas após notificação). Publicados no DOU em 21/05/2026, com vacatio legis de 60 dias — vigência em 20/07/2026. A ANPD recebe competência para regular, fiscalizar e apurar infrações ao Marco Civil, avaliando atuação sistêmica das plataformas (não posts individuais). Oposição protocola questionamento no Congresso alegando que a ANPD extrapola competências previstas em lei e que a regulação ocorreu por decreto, sem debate prévio no Legislativo.",
+    "category": "ato_legislativo",
+    "actors": [
+      {
+        "name": "Luiz Inácio Lula da Silva",
+        "role": "Presidente da República — assinatura dos decretos",
+        "institution": "Presidência da República"
+      }
+    ],
+    "institutions": [
+      "Presidência da República",
+      "Casa Civil",
+      "ANPD"
+    ],
+    "legal_basis": [
+      "Decreto 12.975/2026 — altera Decreto 8.771/2016, regulamenta Lei 12.965/2014 (Marco Civil da Internet)",
+      "Decreto 12.976/2026 — proteção de mulheres no ambiente digital"
+    ],
+    "patterns": [
+      "P03",
+      "P05",
+      "P10"
+    ],
+    "evidence_status": "ev-confirmed",
+    "sources": [
+      {
+        "title": "Governo do Brasil publica decretos que atualizam regras do Marco Civil da Internet",
+        "url": "https://www.gov.br/casacivil/pt-br/assuntos/noticias/2026/maio/governo-do-brasil-publica-decretos-que-atualizam-regras-do-marco-civil-da-internet-e-reforca-protecao-as-mulheres-no-ambiente-digital",
+        "outlet": "Casa Civil",
+        "date": "2026-05-21"
+      },
+      {
+        "title": "NOTA PÚBLICA sobre os Decretos nos. 12.975/2026 e 12.976/2026",
+        "url": "https://www.cgi.br/esclarecimento/nota-publica-sobre-os-decretos-nos-12-975-2026-e-12-976-2026-regulamentacao-do-marco-civil-da-internet/",
+        "outlet": "CGI.br",
+        "date": "2026-05-21"
+      }
+    ],
+    "result": "ANPD passa a regular, fiscalizar e apurar infrações ao MCI a partir de 20/07/2026; AGU autorizada a notificar plataformas sobre publicidade enganosa em políticas públicas; oposição protocola contestação formal no Congresso (07/2026) — primeiro embate legislativo formal sobre o tema desde o arquivamento de 2024.",
+    "connections": [
+      "id_1865",
+      "id_1866",
+      "id_1867"
+    ],
+    "status": "confirmado",
+    "lacuna_investigativa": "O CGI.br alertou, em nota pública de 21/05/2026, que o STF iniciaria em 29/05/2026 análise de embargos de declaração que 'podem resultar em modificações da decisão inicial e exigir ajustes nos decretos regulamentadores' — desfecho desses embargos e eventual necessidade de revisão dos decretos não documentado no corpus até a data desta entrada.",
+    "ponto_de_inflexao": "A partir da vigência dos decretos (20/07/2026), a disputa sobre regulação de plataformas deixa de ser sobre 'se' regular e passa a ser sobre 'quem fiscaliza o fiscalizador' — nenhum mecanismo de revisão judicial automática das decisões da ANPD foi identificado nas fontes consultadas até o momento desta entrada.",
+    "analise": "Fecha o ciclo de três etapas do vetor (a) da tese central: (1) Legislativo se autoparalisa — arquivamento do PL 2630 (id_1865, P09); (2) Judiciário preenche o vácuo com tese vinculante de repercussão geral (id_1866, P03); (3) Executivo converte a tese judicial em regulamento administrativo via decreto presidencial, sem submissão a votação no Congresso (P03 estendido ao Executivo, convergindo com P10 na concentração de poder fiscalizatório na ANPD). Em nenhuma das três etapas houve deliberação legislativa formal sobre o mérito da regulação de plataformas digitais, apesar de o resultado final — ampliação de poder de fiscalização do Estado sobre o discurso online — ser substancialmente equivalente ao que o PL 2630 buscava por via legislativa em 2020. A contestação formal da oposição no Congresso (07/2026) é o primeiro momento de disputa legislativa desde 2024, mas ocorre depois do fato consumado, não antes — ilustra o padrão geral do corpus: o Legislativo reage a decisões já tomadas por outros Poderes em vez de as antecipar."
+  }
+]

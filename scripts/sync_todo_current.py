@@ -43,6 +43,8 @@ IMAGE_BY_CATEGORY = {
     "bancos": "/assets/solid/landmark.svg",
     "lawfare": "/assets/solid/weight-scale.svg",
     "crise-diplomatica": "/assets/solid/globe.svg",
+    "vazatoga": "/assets/solid/shield-virus.svg",
+    "tse": "/assets/solid/gavel.svg",
 }
 
 
@@ -131,6 +133,10 @@ def resolve_category(entry: dict) -> str:
         "impunidade": "impunidade",
         "abuso_processual": "impunidade",
         "erro-judiciario": "impunidade",
+        "chokepoint_judicial": "stf",
+        "ato_legislativo": "lawfare",
+        "vazatoga": "vazatoga",
+        "tse": "tse",
     }
     if cat in mapping:
         return mapping[cat]
@@ -138,6 +144,16 @@ def resolve_category(entry: dict) -> str:
         return "operacoes"
     if "moraes" in title or "stf" in title or "calunia" in title:
         return "stf"
+    lawfare_kw = (
+        "fake news",
+        "pl 2630",
+        "marco civil",
+        "eca digital",
+        "lei 15.211",
+        "anpd",
+    )
+    if any(k in title for k in lawfare_kw):
+        return "lawfare"
     if "pcc" in title or "cv" in title or "garimpo" in title:
         return "operacoes"
     if "master" in title or "vorcaro" in title:

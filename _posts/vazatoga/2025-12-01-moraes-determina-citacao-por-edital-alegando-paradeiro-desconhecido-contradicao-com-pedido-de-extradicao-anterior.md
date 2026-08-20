@@ -4,7 +4,7 @@ description: "Moraes determina a citação de Tagliaferro por edital, alegando q
 date: 2025-12-01T12:00:00.000Z
 image:
   path: "/assets/solid/shield-virus.svg"
-tags: []
+tags: ['vazatoga', 'stf', 'alexandre-de-moraes']
 categories: vazatoga
 ---
 

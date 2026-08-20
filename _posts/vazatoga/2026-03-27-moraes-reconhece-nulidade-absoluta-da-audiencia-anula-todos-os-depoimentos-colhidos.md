@@ -4,7 +4,7 @@ description: "Alexandre de Moraes declara nulidade absoluta da audiência de ins
 date: 2026-03-27T12:00:00.000Z
 image:
   path: "/assets/solid/shield-virus.svg"
-tags: []
+tags: ['vazatoga', 'stf', 'alexandre-de-moraes']
 categories: vazatoga
 ---
 

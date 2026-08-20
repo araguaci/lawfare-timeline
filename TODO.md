@@ -1,6 +1,6 @@
 # Próximos passos · lawfare-timeline
 
-**Atualizado:** 2026-08-19 (merge 1857–1864 + T-253/T-254; colisões resolvidas)
+**Atualizado:** 2026-08-20 (merge 1874–1888 Vaza Toga 5/2/3)
 
 > Espelho: `docs/TODO.md` · Notas: `_data/processados/todo.md` · Legado: `docs/TODO-LEGACY.md`
 
@@ -10,33 +10,42 @@
 
 | Track | Last | Próximo | Validação |
 |-------|------|---------|-----------|
-| Main | **1864** | **1865** | lawfare.json **1825** entradas |
+| Main | **1888** | **1889** | lawfare.json **1849** entradas |
 | Thematic | **T-254** | **T-255** | sync 100–254 |
 | Dragão e a Onça | **1770** / **T-246** | — | `dragao-onca.json` **151** |
-| Fila `_data/todo/` | staging HTML/MD | — | JSON arquivado 19/08 |
+| Fila `_data/todo/` | staging HTML/MD | — | JSON 1874–1888 arquivado 20/08 |
 
 ---
 
-## Rodada 19/08/2026 ✅ — Fila 1857–1864 + T-253/T-254
+## Rodada 20/08/2026 (c) ✅ — Vaza Toga 5 + 2 + 3 (IDs atrasados)
 
-Colisões evitadas:
+A fila reapresentou 4 batches com numeração antiga. **VT4 era duplicata** de 1869–1873 — não mergeado. VT5/VT2/VT3 realocados a partir de **1874**.
 
-| Conflito | Resolução |
-|----------|-----------|
-| **1857** ×3 (revisões do filtro X) | Canônico = revisão 5 / arquivo `(2)` |
-| **T-253** ×2 | AP 470 permanece **T-253**; P13 Porta Giratória → **T-254** |
-| Main 1857–1864 vs corpus | Livres (last era **1856**) |
+| Faixa | Batch | Conteúdo |
+|-------|-------|----------|
+| **1874–1876** | VT5 (era 1865–1867) | 2.119 CPFs; PET 11228 Dino; sigilo Exército |
+| **1877–1882** | VT2 (era 1873–1878) | Certidões GestBio / Dia da Mulher |
+| **1883–1888** | VT3 (era 1879–1884) | Fraude exposta (Constantino/Fiuza, Gettr, Zambelli, Palver) |
+| — | VT4 (1868–1872) | **Skip** — já publicado como 1869–1873 |
 
-| Faixa | Conteúdo |
-|-------|----------|
-| **1857** | X Brazil2026ElectionFilter (P12-B) |
-| **1858** | Mendonça / IterCast — competência penal originária |
-| **1859–1860** | Baptista Júnior / Airbus + filho na AEL |
-| **1861–1864** | Âncoras P13 (Burnier, Campos Neto, Faria/BTG, agregada 67%) |
-| **T-253** | AP 470 — critério evidencial STF |
-| **T-254** | P13 Porta Giratória (proposta de promoção) |
+Conexões internas apontam para os IDs reais (VT4 → 1869–1873; VT5 → 1874+). id_1865 continua sendo o PL 2630.
 
-**Script:** `scripts/merge_todo_queue_1857_1864.py`
+---
+
+## Rodada 20/08/2026 (b) ✅ — Vaza Toga 4 (1869–1873)
+
+Colisão: o batch chegou como **1868–1872**, mas **1868** já era os decretos do MCI. Realocado para **1869–1873**.
+
+---
+
+## Rodada 20/08/2026 (a) ✅ — Fila 1865–1868 (regulação internet)
+
+| ID | Conteúdo |
+|----|----------|
+| **1865** | Lira arquiva PL 2630/2020 |
+| **1866** | STF art. 19 MCI (Temas 987 e 533) |
+| **1867** | Lei 15.211/2025 ECA Digital |
+| **1868** | Decretos 12.975 e 12.976/2026 |
 
 ---
 
@@ -44,11 +53,11 @@ Colisões evitadas:
 
 | Item | Prioridade |
 |------|------------|
-| Formalizar **P13 Porta Giratória** em METHODOLOGY.md (T-254; distinto do P13 arquivado 18/07) | Média |
+| Formalizar **P13 Porta Giratória** em METHODOLOGY.md (T-254) | Média |
 | Formalizar P04b em METHODOLOGY | Média |
+| Stubs **725 / 728 / 729** vs registro definitivo 1869–1873 — decidir patch ou arquivar | Média |
 | Renomear estudos mislabel `T-1512`/`T-1765`/`T-1766` → faixa T-255+ | Baixa |
 | Gap main **1820** (editorial → T-248) | Informativo |
-| Jonathan Macedo (SP) — 2ª fonte | Baixa |
 | Staging `todo/p13-porta-giratoria.html` + `prompt-tratamento-pdfs-mensalao.md` | Baixa |
 | `bundle exec jekyll build` | Rodar após esta rodada |
 
@@ -68,7 +77,6 @@ bundle exec jekyll build
 
 ## Referências
 
-- Corpus: `_data/lawfare.json` (**1825** entradas · main até **1864**)
+- Corpus: `_data/lawfare.json` (**1849** entradas · main até **1888**)
 - Unified: `_data/lawfare-unified-corpus.json`
 - Sidecar dragão: `_data/dragao-onca.json` (151 · **1763/1764** = CEEE-T / JMEV intactos)
-- Hold resolvido: `_data/processados/README-hold-resolvido-1749-1768.md`

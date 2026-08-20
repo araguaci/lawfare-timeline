@@ -4,7 +4,7 @@ description: "A Folha de S.Paulo, via jornalistas Fábio Serapião e Glenn Green
 date: 2024-08-01T12:00:00.000Z
 image:
   path: "/assets/solid/shield-virus.svg"
-tags: []
+tags: ['vazatoga', 'stf', 'tse', 'censura', 'alexandre-de-moraes']
 categories: vazatoga
 ---
 

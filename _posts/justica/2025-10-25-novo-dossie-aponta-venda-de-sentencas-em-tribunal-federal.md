@@ -4,7 +4,7 @@ description: "Investigação revela grupo de magistrados envolvidos na comercial
 date: 2025-10-25T13:40:00.000Z
 image:
   path: "/assets/solid/file-alt.svg"
-tags: [justica, corrupcao, vazatoga, dossie, escandalos, 'decisao-judicial']
+tags: [justica, corrupcao, dossie, escandalos, 'decisao-judicial']
 categories: justica
 ---
 

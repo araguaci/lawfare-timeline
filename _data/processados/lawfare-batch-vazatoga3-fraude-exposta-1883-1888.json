@@ -1,0 +1,298 @@
+{
+  "_meta": {
+    "batch": "vazatoga3-fraude-exposta",
+    "generated": "2026-08-20",
+    "id_range": [
+      1883,
+      1888
+    ],
+    "origem": "Reportagem 'A fraude exposta' (Edilson Salgueiro, Rachel Díaz, Carlo Cauti — Revista Oeste, Edição 285, 30-31/08/2025) e reportagens satélite da mesma edição — cobrindo a Vaza Toga 3, com documentos exclusivos do celular de Eduardo Tagliaferro.",
+    "depende_de": "Batches anteriores (1865-1878) devem ser mergeados primeiro.",
+    "destino": "_data/todo/ — processar via merge_todo_pending.py, validar via validate-ids.ps1",
+    "nota": "Fecha a lacuna F1 identificada no plano de 20/08/2026 (plano-tematica-vazatoga.md) — Vaza Toga 3 estava com zero entradas no corpus.",
+    "reassigned_from": "lawfare-batch-vazatoga3-fraude-exposta-1879-1884.json",
+    "collision_note": "IDs originais atrasados: 1865-1868 ja eram regulacao de internet; VT4 1868-1872 ja publicado como 1869-1873. Este arquivo realocado para 1883-1888."
+  },
+  "entries": [
+    {
+      "titulo": "Gabinete paralelo ordena bloqueio dos colunistas Rodrigo Constantino e Guilherme Fiuza por críticas ao TSE",
+      "data_evento": "2022-11-22",
+      "data_iso": "2022-11-22T12:00:00Z",
+      "categoria": "vazatoga",
+      "tags": [
+        "vazatoga",
+        "liberdade-de-imprensa",
+        "constantino",
+        "fiuza",
+        "p02",
+        "p04",
+        "ev-confirmed"
+      ],
+      "descricao": "Mensagens obtidas por Revista Oeste mostram que, em 22/11/2022, o juiz auxiliar Airton Vieira compartilhou no grupo de WhatsApp do gabinete paralelo um vídeo do colunista Rodrigo Constantino (Gazeta do Povo) criticando medidas do TSE contra a chamada 'desordem informacional', e determinou: 'Vamos bloquear tudo desse cara e prever multa.' Tagliaferro, então chefe da AEED/TSE, pediu orientação sobre como justificar o relatório contra Constantino; Vieira respondeu que explicaria por telefone e reforçou: 'Bloqueio e multa pelo STF.' Em 27/12/2022, o mesmo grupo discutiu o colunista Guilherme Fiuza; Tagliaferro enviou relatório contra ele ('Esse não precisou de muito para se comprometer'), recebendo emojis de aplausos de Marco Antônio Vargas e Airton Vieira. Vargas classificou o conteúdo de Fiuza como 'vários posts golpistas'; Tagliaferro concluiu: 'Vamos mandar bala.' Os bloqueios efetivamente ocorreram em 30/12/2022 (Constantino, id_1780) e 02/01/2023 (Fiuza, id_1779) no âmbito do INQ 4.781/DF — até esta revelação, o corpus registrava apenas o resultado (bloqueio), não a ordem interna que o originou.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "perseguicao_processual",
+      "fontes": [
+        "https://revistaoeste.com/politica/gabinete-paralelo-de-moraes-tinha-constantino-e-fiuza-como-alvos-vamos-bloquear-tudo/",
+        "https://claudiodantas.com.br/vaza-toga-2-mensagens-indicam-ordens-contra-jornalistas-no-gabinete-de-moraes/"
+      ],
+      "pessoas_envolvidas": [
+        "Airton Vieira (Ordenou bloqueio de Constantino; classificou Fiuza)",
+        "Eduardo Tagliaferro (Produziu os relatórios que fundamentaram os bloqueios)",
+        "Marco Antônio Vargas (Classificou posts de Fiuza como 'golpistas')",
+        "Rodrigo Constantino (Alvo — colunista Gazeta do Povo)",
+        "Guilherme Fiuza (Alvo — colunista Gazeta do Povo)"
+      ],
+      "instituicoes_envolvidas": [
+        "STF",
+        "TSE"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_data/todo/lawfare-batch-vazatoga3-fraude-exposta-1883-1888.json",
+      "id": 1883,
+      "evidence_status": "ev-confirmed",
+      "status": "documentado",
+      "connections": [
+        "id_1780 — Constantino tem bloqueio multiplataforma no INQ 4.781/DF (execução da ordem aqui documentada)",
+        "id_1779 — Fiuza tem perfil bloqueado no âmbito do INQ 4.781/DF (execução da ordem aqui documentada)",
+        "id_1869 — mesmo padrão de ordem informal seguida de relatório formal, aplicado a empresários (Vaza Toga 4)"
+      ],
+      "patterns": [
+        "P02",
+        "P04"
+      ],
+      "ponto_de_inflexao": "A ordem de bloqueio ('vamos bloquear tudo desse cara') precede e determina o relatório técnico — não o contrário. O relatório formal é produzido para justificar uma decisão já tomada informalmente, não para fundamentá-la.",
+      "result": "Ambos os colunistas tiveram perfis e/ou conteúdo bloqueados nas semanas seguintes por decisão do STF no INQ 4.781/DF."
+    },
+    {
+      "titulo": "Gabinete paralelo aciona tenente-coronel da PM-BA para identificar e multar caminhoneiros em protesto contra eleição de Lula",
+      "data_evento": "2022-11-01",
+      "data_iso": "2022-11-01T12:00:00Z",
+      "categoria": "vazatoga",
+      "tags": [
+        "vazatoga",
+        "caminhoneiros",
+        "eleicoes-2022",
+        "p02",
+        "p10",
+        "ev-confirmed"
+      ],
+      "descricao": "Mensagens de 08/11/2022, obtidas com exclusividade por Revista Oeste, mostram os juízes auxiliares Airton Vieira e Marco Antônio Vargas e o chefe da AEED, Eduardo Tagliaferro, articulando a aplicação de multas a caminhoneiros que seguiam para Brasília em protesto contra a eleição de Lula. O gabinete paralelo pediu ajuda ao tenente-coronel José Luiz Santos Silva, da Polícia Militar da Bahia, para identificar placas de veículos a multar e mapear possível vínculo dos caminhoneiros com 'financiadores' da manifestação. Em 01/11/2022, início das manifestações, o mesmo grupo já havia determinado a derrubada de grupos de Telegram que organizavam os protestos — cumprida em menos de 10 minutos, conforme confirmação de Tagliaferro ('Cumpridos!').",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "perseguicao_processual",
+      "fontes": [
+        "https://revistaoeste.com/politica/tenente-coronel-da-pmba-ajudou-gabinete-paralelo-de-moraes-a-censurar-pessoas/",
+        "https://revistaoeste.com/politica/gabinete-paralelo-de-moraes-agiu-contra-protestos-de-caminhoneiros-em-2022/"
+      ],
+      "pessoas_envolvidas": [
+        "Airton Vieira",
+        "Marco Antônio Vargas",
+        "Eduardo Tagliaferro",
+        "José Luiz Santos Silva (Tenente-coronel da PM-BA — forneceu dados de veículos e empresas a pedido do gabinete)"
+      ],
+      "instituicoes_envolvidas": [
+        "STF",
+        "TSE",
+        "Polícia Militar da Bahia"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_data/todo/lawfare-batch-vazatoga3-fraude-exposta-1883-1888.json",
+      "id": 1884,
+      "evidence_status": "ev-confirmed",
+      "status": "documentado",
+      "connections": [
+        "id_1883",
+        "id_1877 — mesma arquitetura de mobilização de agentes externos ao TSE"
+      ],
+      "patterns": [
+        "P02",
+        "P10"
+      ],
+      "result": "Grupos de Telegram derrubados em menos de 10 minutos. Multas aplicadas a caminhoneiros com base em dados obtidos via um oficial de polícia militar estadual sem vínculo formal com o TSE.",
+      "lacuna_investigativa": "Não há registro público de qual base legal amparava a solicitação de dados de veículos e empresas a um tenente-coronel da PM-BA por parte de assessores do TSE, nem de eventual contrapartida ou fundamento formal para o pedido."
+    },
+    {
+      "titulo": "Gabinete paralelo avança contra o Gettr para calar Allan dos Santos; frase 'use sua criatividade' se torna símbolo da perseguição a veículos independentes",
+      "data_evento": "2022-12-01",
+      "data_iso": "2022-12-01T12:00:00Z",
+      "date_precision": "month",
+      "categoria": "vazatoga",
+      "tags": [
+        "vazatoga",
+        "gettr",
+        "allan-dos-santos",
+        "liberdade-de-imprensa",
+        "p04",
+        "ev-confirmed"
+      ],
+      "descricao": "A reportagem 'A fraude exposta' (Revista Oeste, Edição 285) revelou que o gabinete paralelo de Moraes avançou contra a rede social Gettr (criada por Jason Miller, ex-assessor de Donald Trump) especificamente para dificultar a circulação de conteúdo do jornalista Allan dos Santos, então nos EUA e alvo do inquérito das fake news. Em episódio anterior já documentado nas mensagens, quando Tagliaferro questionou o que reportar sobre um alvo sem conteúdo incriminador ('Não estão falando nada, o que vamos colocar?'), Airton Vieira instruiu: 'Use sua criatividade' — instrução que a reportagem registra como tradução literal, ainda que involuntária, da máxima atribuída a Lavrenti Beria ('Mostre-me o homem e eu lhe direi o crime'). A mesma reportagem documenta que a própria Revista Oeste foi desmonetizada no YouTube por mais de um ano, sem acesso a receita publicitária na plataforma, atribuindo a medida à sua cobertura crítica do STF.",
+      "relevancia": "media",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "abuso_processual",
+      "fontes": [
+        "https://revistaoeste.com/revista/edicao-285/a-fraude-exposta/"
+      ],
+      "pessoas_envolvidas": [
+        "Airton Vieira (Autor da instrução 'use sua criatividade')",
+        "Eduardo Tagliaferro (Destinatário da instrução; executor dos relatórios)",
+        "Allan dos Santos (Alvo indireto — bloqueio de circulação via Gettr)"
+      ],
+      "instituicoes_envolvidas": [
+        "STF",
+        "TSE",
+        "Gettr",
+        "YouTube"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 2,
+      "fonte_arquivo": "_data/todo/lawfare-batch-vazatoga3-fraude-exposta-1883-1888.json",
+      "id": 1885,
+      "evidence_status": "ev-confirmed",
+      "status": "documentado",
+      "connections": [
+        "id_1787 — Allan dos Santos tem perfis bloqueados"
+      ],
+      "patterns": [
+        "P04"
+      ],
+      "analise": "A frase 'use sua criatividade' documenta, de forma quase literal, o mecanismo central de P04b: quando não há fato a reportar, a instrução não é encerrar a apuração — é gerar um enquadramento. A menção paralela à desmonetização da própria Oeste no YouTube (sem alegação de vínculo causal direto documentado com o gabinete de Moraes nas fontes disponíveis) é registrada aqui como dado factual da reportagem, não como conexão causal estabelecida — a causalidade entre a cobertura crítica e a desmonetização não é demonstrada por documento nas fontes usadas nesta entrada.",
+      "lacuna_investigativa": "A reportagem não apresenta evidência documental direta ligando a desmonetização da Revista Oeste no YouTube a uma ação específica do gabinete de Moraes — a conexão é sugerida editorialmente, não documentada com a mesma cadeia de mensagens usada para os outros casos desta reportagem."
+    },
+    {
+      "titulo": "Gabinete paralelo monitora Carla Zambelli e discute bloqueio de conta antes de sua diplomação",
+      "data_evento": "2022-12-01",
+      "data_iso": "2022-12-01T12:00:00Z",
+      "date_precision": "month",
+      "categoria": "vazatoga",
+      "tags": [
+        "vazatoga",
+        "carla-zambelli",
+        "p02",
+        "p04",
+        "ev-confirmed"
+      ],
+      "descricao": "Mensagens do gabinete paralelo, reveladas na Vaza Toga 3, mostram Marco Antônio Vargas compartilhando publicações de Carla Zambelli no Instagram, com o grupo discutindo se as postagens configurariam critério para bloqueio de conta antes de sua diplomação como deputada federal eleita. As mensagens registram menção a preservação de conteúdo via ferramenta de verificação e a expectativa de que 'o ministro' assinaria o bloqueio da conta.",
+      "relevancia": "media",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "perseguicao_processual",
+      "fontes": [
+        "https://revistaoeste.com/revista/edicao-285/a-fraude-exposta/"
+      ],
+      "pessoas_envolvidas": [
+        "Marco Antônio Vargas (Compartilhou publicações de Zambelli no grupo)",
+        "Carla Zambelli (Alvo — deputada federal eleita)"
+      ],
+      "instituicoes_envolvidas": [
+        "STF",
+        "TSE"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 3,
+      "fonte_arquivo": "_data/todo/lawfare-batch-vazatoga3-fraude-exposta-1883-1888.json",
+      "id": 1886,
+      "evidence_status": "ev-contested",
+      "status": "documentado",
+      "connections": [
+        "id_1883",
+        "id_1884"
+      ],
+      "patterns": [
+        "P02",
+        "P04"
+      ],
+      "lacuna_investigativa": "Não foi possível, com as fontes desta sessão, confirmar se o bloqueio efetivamente discutido nas mensagens chegou a ser executado, nem localizar decisão pública específica do STF bloqueando conta de Zambelli neste período. Classificado como ev-contested até verificação do desfecho processual."
+    },
+    {
+      "titulo": "Instituto Democracia em Xeque e Palver monitoram termos ligados às eleições de 2022 a pedido da AEED/TSE e comemoram vitória de Lula",
+      "data_evento": "2022-10-30",
+      "data_iso": "2022-10-30T12:00:00Z",
+      "categoria": "vazatoga",
+      "tags": [
+        "vazatoga",
+        "palver",
+        "democracia-em-xeque",
+        "eleicoes-2022",
+        "p10",
+        "ev-confirmed"
+      ],
+      "descricao": "Mensagens reveladas na Vaza Toga 3 mostram integrante do Instituto Democracia em Xeque (DX) — identificado nas mensagens como Fernando/Fabiano Garrido — coordenando com a AEED/TSE termos de busca para monitoramento de conteúdo relacionado às eleições ('urna eletrônica', 'voto impresso', 'eleições presidenciais'), inicialmente descrito como relatório específico sobre 7 de setembro mas estendido a monitoramento de rotina do processo eleitoral. A consultoria Palver — empresa de análise de redes que hoje presta serviço comercial a veículos como Folha de S.Paulo, Lupa e CNN Brasil — aparece nas mensagens fornecendo levantamentos sobre volume de menções em grupos de direita. Em 30/10/2022, dia da vitória eleitoral de Lula, mensagens do grupo, incluindo de representantes do Instituto Democracia em Xeque, celebraram o resultado nos termos de 'vitória contra a desinformação', agradecendo o 'trabalho incansável do TSE em defesa da democracia'.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://revistaoeste.com/politica/deputado-coleta-assinaturas-para-cpmi-da-vaza-toga/",
+        "https://imediatoonline.com/brasil/investigacao-revela-ligacoes-entre-instituto-democracia-em-xeque-palver-itau-e-usaid-em-parceria-com-tse-para-censurar-oposicao-ao-lula-nas-eleicoes/"
+      ],
+      "pessoas_envolvidas": [
+        "Fernando/Fabiano Garrido (Instituto Democracia em Xeque — coordenou termos de busca eleitoral)",
+        "Eduardo Tagliaferro (Recebeu e processou os relatórios)"
+      ],
+      "instituicoes_envolvidas": [
+        "TSE",
+        "Instituto Democracia em Xeque",
+        "Palver"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_data/todo/lawfare-batch-vazatoga3-fraude-exposta-1883-1888.json",
+      "id": 1887,
+      "evidence_status": "ev-confirmed",
+      "status": "documentado",
+      "connections": [
+        "id_1881",
+        "id_1877"
+      ],
+      "patterns": [
+        "P10"
+      ],
+      "analise": "O caso ilustra diretamente o candidato a subpadrão P10-B (terceirização privada de vigilância política) proposto no plano de 20/08/2026: a mesma infraestrutura (Palver) que monitorava grupos por encomenda informal da AEED em 2022 opera hoje comercialmente, de forma pública e para clientes de perfis editoriais distintos (checagem de fatos, imprensa tradicional) — a ferramenta é neutra; o uso institucional sem transparência em 2022 é o que configura o padrão.",
+      "lacuna_investigativa": "Não há, nas fontes desta sessão, confirmação de remuneração formal, contrato público ou base legal para a coordenação entre TSE/AEED e o Instituto Democracia em Xeque na definição de termos de busca eleitoral."
+    },
+    {
+      "titulo": "Tagliaferro relata publicamente que veículo internacional postergou por meses a publicação da Vaza Toga 3, citando processo de verificação sem prazo definido",
+      "data_evento": "2025-08-28",
+      "data_iso": "2025-08-28T12:00:00Z",
+      "categoria": "vazatoga",
+      "tags": [
+        "vazatoga",
+        "midia-tradicional",
+        "p04b",
+        "ev-alleged"
+      ],
+      "descricao": "Em publicação pública, Eduardo Tagliaferro relatou que um veículo de comunicação internacional (identificado por comentaristas, não pela reportagem original, como a CNN) havia negociado com ele a divulgação exclusiva de parte do material da Vaza Toga, mas vinha adiando a publicação sob a alegação de necessidade de 'perícia' e um processo interno de verificação em várias etapas ('tríade'), sem oferecer prazo definido. Segundo Tagliaferro, a proximidade do julgamento de Jair Bolsonaro no STF (iniciado na semana seguinte) tornava a demora suspeita. Diante da falta de prazo e de compromissos já assumidos com o Senado e a Câmara, Tagliaferro optou por liberar o material via Revista Oeste em vez de aguardar o veículo internacional.",
+      "relevancia": "media",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "N/A",
+      "fontes": [
+        "https://www.youtube.com/watch?v=ytUNWb5bLrk"
+      ],
+      "pessoas_envolvidas": [
+        "Eduardo Tagliaferro (Relatou publicamente a demora do veículo internacional)"
+      ],
+      "instituicoes_envolvidas": [
+        "Veículo internacional não identificado por fonte primária"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 3,
+      "fonte_arquivo": "_data/todo/lawfare-batch-vazatoga3-fraude-exposta-1883-1888.json",
+      "id": 1888,
+      "evidence_status": "ev-alleged",
+      "status": "analise_editorial",
+      "connections": [
+        "id_1883"
+      ],
+      "patterns": [],
+      "lacuna_investigativa": "A identificação do veículo internacional (mencionado como CNN por comentaristas) não vem de fonte primária jornalística nesta entrada. O motivo da demora — verificação forense legítima vs. tentativa deliberada de segurar a publicação até o julgamento de Bolsonaro — é interpretação do próprio Tagliaferro, não fato demonstrado por documento.",
+      "analise": "Registrar esta entrada como ev-alleged, e não promovê-la a ev-confirmed, é aplicação direta da regra de ouro do corpus: a alegação é conveniente à narrativa de Tagliaferro/Oeste, o que exige redobrar o rigor, não relaxá-lo. Sem resposta do veículo mencionado nem documentação do processo interno alegado, a entrada permanece como relato de parte, não como fato estabelecido."
+    }
+  ]
+}

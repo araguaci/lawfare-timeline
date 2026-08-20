@@ -4,7 +4,7 @@ description: "No mesmo dia dos embargos de declaração, os advogados Paulo Fari
 date: 2026-04-02T12:00:00.000Z
 image:
   path: "/assets/solid/shield-virus.svg"
-tags: []
+tags: ['vazatoga', 'stf', 'alexandre-de-moraes']
 categories: vazatoga
 ---
 

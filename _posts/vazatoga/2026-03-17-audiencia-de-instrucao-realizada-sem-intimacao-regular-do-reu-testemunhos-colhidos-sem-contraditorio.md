@@ -4,7 +4,7 @@ description: "Audiência de instrução na AP 2720/DF é realizada por videoconf
 date: 2026-03-17T12:00:00.000Z
 image:
   path: "/assets/solid/shield-virus.svg"
-tags: []
+tags: ['vazatoga', 'stf', 'alexandre-de-moraes']
 categories: vazatoga
 ---
 

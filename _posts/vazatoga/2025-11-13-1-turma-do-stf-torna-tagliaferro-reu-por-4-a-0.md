@@ -4,7 +4,7 @@ description: "A Primeira Turma do STF aceita a denúncia da PGR e torna Eduardo 
 date: 2025-11-13T12:00:00.000Z
 image:
   path: "/assets/solid/shield-virus.svg"
-tags: []
+tags: ['vazatoga', 'stf', 'alexandre-de-moraes']
 categories: vazatoga
 ---
 

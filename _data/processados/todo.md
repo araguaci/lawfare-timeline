@@ -1,32 +1,35 @@
 # Notas de processamento · `_data/todo/`
 
-**Atualizado:** 2026-08-19 (merge 1857–1864 + T-253/T-254)
+**Atualizado:** 2026-08-20 (merge 1874–1888 Vaza Toga 5/2/3)
 
 ## Fila
 
-- `_data/todo/` — **sem batches JSON** (19/08)
+- `_data/todo/` — **sem batches JSON** (20/08)
 - Staging: `p13-porta-giratoria.html`, `prompt-tratamento-pdfs-mensalao.md`
-- `_hold/` — **removido** 13/08/2026
 
-## Colisões resolvidas (19/08/2026)
+## Merge 20/08/2026 (c)
 
-| Conflito | Resolução |
-|----------|-----------|
-| 1857 ×3 | Canônico = `1857(2)` (5ª revisão, Res. TSE 23.732/2024) |
-| T-253 ×2 | AP 470 = **T-253**; P13 = **T-254** |
+| Batch | IDs na fila | IDs finais |
+|-------|-------------|------------|
+| Vaza Toga 5 (devassa CPFs) | 1865–1867 | **1874–1876** |
+| Vaza Toga 2 (certidões) | 1873–1878 | **1877–1882** |
+| Vaza Toga 3 (fraude exposta) | 1879–1884 | **1883–1888** |
+| Vaza Toga 4 (empresários) | 1868–1872 | **não mergeado** — duplicata de **1869–1873** |
 
-## Merge 19/08/2026
+## Merge 20/08/2026 (b)
 
 | Batch | IDs finais |
 |-------|------------|
-| X filtro eleitoral | **1857** |
-| Mendonça / IterCast | **1858** |
-| Baptista Júnior | **1859–1860** |
-| P13 âncoras | **1861–1864** |
-| AP 470 evidencial | **T-253** |
-| P13 Porta Giratória | **T-254** |
+| Vaza Toga 4 | **1869–1873** (era 1868–1872) |
 
-## Sync (19/08)
+## Merge 20/08/2026 (a)
 
-- main **1864** · next **1865**
+| Batch | IDs finais |
+|-------|------------|
+| Regulação internet | **1865–1868** |
+
+## Sync (20/08)
+
+- main **1888** · next **1889**
 - thematic **T-254** · next **T-255**
+- lawfare.json **1849** assuntos

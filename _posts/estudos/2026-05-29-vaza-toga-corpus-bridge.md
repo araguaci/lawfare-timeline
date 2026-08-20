@@ -6,7 +6,7 @@ description: Ponte T-108 — gabinete paralelo Moraes, mensagens TSE/STF, INQ 47
 date: 2026-05-29T12:00:00-03:00
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["estudo", "vaza-toga", "inq4781", "moraes", "p03", "p04", "lawfare"]
+tags: ["estudo", "vazatoga", "inq4781", "moraes", "p03", "p04", "lawfare"]
 categories: lawfare
 mermaid: false
 pin: false

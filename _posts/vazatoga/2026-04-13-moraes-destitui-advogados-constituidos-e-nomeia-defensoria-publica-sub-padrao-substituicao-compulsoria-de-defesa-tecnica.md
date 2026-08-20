@@ -4,7 +4,7 @@ description: "Alexandre de Moraes determina compulsoriamente a destituição dos
 date: 2026-04-13T12:00:00.000Z
 image:
   path: "/assets/solid/shield-virus.svg"
-tags: []
+tags: ['vazatoga', 'stf', 'alexandre-de-moraes']
 categories: vazatoga
 ---
 

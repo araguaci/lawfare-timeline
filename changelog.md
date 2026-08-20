@@ -7,6 +7,71 @@ Formato: data (ISO) → resumo → arquivos de fonte.
 
 ---
 
+## 2026-08-20 (c) — Merge 1874–1888 (Vaza Toga 5, 2 e 3; VT4 duplicado ignorado)
+
+Fila com 4 batches Vaza Toga e IDs atrasados. **VT4 (1868–1872)** era duplicata exata de **1869–1873** (já publicado) — arquivado sem merge. **VT5** (1865–1867) colidia com regulação de internet. Sequência realocada a partir de **1874**. Tracks: main **1888** / next **1889** · temático **T-254**.
+
+| Faixa | Origem (IDs atrasados) | Conteúdo |
+|-------|------------------------|----------|
+| **1874–1876** | VT5 1865–1867 | Devassa 2.119 CPFs; PET 11228 Dino; sigilo Exército |
+| **1877–1882** | VT2 1873–1878 | Certidões GestBio / Dia da Mulher |
+| **1883–1888** | VT3 1879–1884 | Fraude exposta (Constantino/Fiuza, PM-BA, Gettr, Zambelli, Palver) |
+| — | VT4 1868–1872 | **Não mergeado** (já é 1869–1873) |
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Criado** | `_posts/vazatoga/` | +15 posts |
+| **Alterado** | `_data/lawfare.json` | +15 assuntos; total **1849**; max **1888** |
+| **Arquivado** | `processados/` | VT5/VT2/VT3 realocados + VT4 fonte duplicada |
+| **Sync** | `claude.ai-corpus-ids-sync.json` | Main **1888**; Drive |
+
+---
+
+## 2026-08-20 (b) — Merge 1869–1873 (Vaza Toga 4)
+
+Fila `_data/todo/` processada. O batch vinha como **1868–1872**, mas **1868** já era os decretos MCI. Realocado para **1869–1873**. O batch Vaza Toga 5 (previsto 1865–1867, devassa de CPFs) **não estava na fila** — a conexão foi desligada do id_1865 atual (PL 2630). Stubs 725/728/729 **não** foram sobrescritos. Tracks: main **1873** / next **1874** · temático **T-254** / next **T-255**.
+
+| ID | Conteúdo |
+|----|----------|
+| **1869** | Busca 23/08/2022 contra empresários (Hang, Nigri, etc.) |
+| **1870** | Fabricação retroativa de provas (Tagliaferro / Sallorenzo / Shor) |
+| **1871** | CNJ afasta juiz Marlos Melek |
+| **1872** | Arquivamento seletivo (Hang e Nigri mantidos) |
+| **1873** | Moraes arquiva ação de Sallorenzo contra jornalistas da Vaza Toga |
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Alterado** | batch JSON | IDs 1868–1872 → **1869–1873** |
+| **Alterado** | `scripts/sync_todo_current.py` | Categoria `vazatoga` |
+| **Alterado** | `_data/lawfare.json` | +5 assuntos; total **1834**; max **1873** |
+| **Criado** | `_posts/vazatoga/` | 5 posts |
+| **Arquivado** | `processados/` | `lawfare-batch-vazatoga4-fabricacao-empresarios-1869-1873.json` |
+| **Sync** | `claude.ai-corpus-ids-sync.json` | Main **1873**; Drive |
+
+---
+
+## 2026-08-20 — Merge 1865–1868 (regulação internet)
+
+Fila `_data/todo/` processada. Main **1865–1868** estava livre (last **1864**). Refs internas do JSON que apontavam para 1857/1858 (já ocupados) foram corrigidas para **1865/1866**. Tracks: main **1868** / next **1869** · temático **T-254** / next **T-255**.
+
+| ID | Conteúdo |
+|----|----------|
+| **1865** | Lira arquiva PL 2630/2020 (P09) — `_posts/lawfare/` |
+| **1866** | STF Temas 987/533 — art. 19 MCI parcialmente inconstitucional (P03) — `_posts/stf/` |
+| **1867** | Lei 15.211/2025 ECA Digital / ANPD agência (P10) — `_posts/lawfare/` |
+| **1868** | Decretos 12.975 e 12.976/2026 regulamentam o MCI — `_posts/lawfare/` |
+
+| Ação | Arquivo | Descrição |
+|------|---------|-----------|
+| **Alterado** | `_data/todo/lawfare-batch-regulacao-internet-1865-1868.json` | Refs 1857/1858 → 1865/1866 |
+| **Alterado** | `scripts/sync_todo_current.py` | Categorias `ato_legislativo` → lawfare; `chokepoint_judicial` → stf |
+| **Alterado** | `_data/lawfare.json` | +4 assuntos (**1865–1868**); total **1829**; max **1868** |
+| **Criado** | `_posts/lawfare/` + `_posts/stf/` | 4 posts; conexões irmãs linkadas |
+| **Arquivado** | `_data/processados/` | `lawfare-batch-regulacao-internet-1865-1868.json` |
+| **Sync** | `claude.ai-corpus-ids-sync.json` | Main **1868**; Drive + `sync_status_2026-08-20.html` |
+
+---
+
 ## 2026-08-19 — Merge 1857–1864 + T-253/T-254 (colisões resolvidas)
 
 Fila `_data/todo/` processada. **1857** tinha 3 revisões do mesmo filtro X (canônico: revisão 5 / `(2)`). **T-253** estava duplicado (AP 470 vs P13) → AP 470 permanece T-253; P13 Porta Giratória realocado para **T-254**. Main 1857–1864 estava livre (last **1856**). Tracks: main **1864** / next **1865** · temático **T-254** / next **T-255**.

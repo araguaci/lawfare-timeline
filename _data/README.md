@@ -1,6 +1,6 @@
 # `_data/` — Corpus Lawfare Timeline
 
-**Última revisão:** 2026-08-19  
+**Última revisão:** 2026-08-20  
 **Site:** [lawfare-timeline.vercel.app](https://lawfare-timeline.vercel.app)  
 **Painel de sync:** [`sync_status_latest.html`](./sync_status_latest.html)
 
@@ -8,16 +8,16 @@ Este diretório concentra **dados tabulares do corpus editorial** e **metadados 
 
 ---
 
-## Estado atual (2026-08-19)
+## Estado atual (2026-08-20)
 
 | Track | Último confirmado | Próximo livre | Fonte |
 |-------|-------------------|---------------|-------|
-| **Main** | **1864** | **1865** | `lawfare.json` |
+| **Main** | **1888** | **1889** | `lawfare.json` |
 | **Temático (T-)** | **T-254** | **T-255** | `claude.ai-corpus-ids-sync.json` |
 | **Dragão e a Onça** | 132 main + 19 temáticos | — | `dragao-onca.json` + `_posts/dragao-onca/` (151 posts) |
 
-- **`lawfare.json`:** **1825** assuntos · max ID **1864** (gap intencional **1820** → **T-248**)
-- **`todo/`:** sem batches JSON (19/08: 1857–1864 + T-253/T-254 arquivados) · staging HTML/MD permanece
+- **`lawfare.json`:** **1849** assuntos · max ID **1888** (gap intencional **1820** → **T-248**)
+- **`todo/`:** sem batches JSON (20/08: 1874–1888 + VT4 duplicado arquivados) · staging HTML/MD permanece
 - **Drive:** `python tools/gdrive_sync_export.py` → `G:/Meu Drive/claude.ai-corpus-ids-sync.json` (+ `lawfare.json`)
 
 Regenerar dashboard + sync Drive: `python tools/sync_corpus_ids.py`
@@ -35,6 +35,7 @@ _data/
 ├── claude.ai-corpus-ids-sync.json     Mapa IDs main + temático, batches, session_log
 ├── lawfare-unified-corpus.json        Entradas unificadas (id_corpus, fontes_verificadas)
 ├── dragao-onca.json                   Export série (124 main + 18 temáticos)
+├── export-vazatoga.json               Export série Vaza Toga 1–5 (_posts + IDs do corpus)
 ├── dragao_onca_thematic_order.yml     Ordem temática hub /dragao-onca/
 ├── precedentes-republica.json         Sidecar PREC-AAAA-NN (1890–1930)
 ├── precedentes-pos-1990.json          Sidecar pos-1990 (PREC-1997-05)
@@ -125,6 +126,12 @@ Export dedicado da série **O Dragão e a Onça**. Inclui entradas temáticas (T
 
 Regenerar: `python scripts/export_dragao_onca_json.py`
 
+### `export-vazatoga.json`
+
+Export dedicado da série **Vaza Toga 1–5**. Fonte primária: `_posts/vazatoga/` + posts relacionados (jornalistas Ágape/Vieira, crise INQ 4781, índice T-207). Campo `id` / `id_corpus` = ID do corpus (`lawfare.json`); **não** reutiliza os IDs posicionais de `export-vazatoga-methodology.json`.
+
+Regenerar: `python scripts/export_vazatoga_json.py`
+
 ### Sidecars (`precedentes-*.json`)
 
 Namespace `PREC-AAAA-NN`. Indexados em T-224. Não mesclados ao main track.
@@ -159,6 +166,7 @@ Namespace `PREC-AAAA-NN`. Indexados em T-224. Não mesclados ao main track.
 | Atualizar mapa IDs + HTML | `python tools/sync_corpus_ids.py` |
 | Validar IDs | `pwsh -File tools/validate-ids.ps1` |
 | Export Dragão e a Onça | `python scripts/export_dragao_onca_json.py` |
+| Export Vaza Toga 1–5 | `python scripts/export_vazatoga_json.py` |
 | Reconciliar batch vs lawfare | `python tools/reconcile_lawfare_batch.py` |
 | Sync Google Drive | automático via `tools/gdrive_sync_export.py` |
 
@@ -191,7 +199,7 @@ Objetivo: reduzir ruído na raiz de `_data/`, separar **corpus**, **tema Jekyll*
 ### Fase 0 — Documentação (concluída)
 
 - [x] Criar `_data/README.md` (este ficheiro)
-- [x] Atualizar secção `_data/` em [`README.md`](../README.md) com link para aqui e IDs atuais (**1864** / **T-254**)
+- [x] Atualizar secção `_data/` em [`README.md`](../README.md) com link para aqui e IDs atuais (**1888** / **T-254**)
 
 ### Fase 1 — Higiene imediata (baixo risco)
 
@@ -261,11 +269,11 @@ Integrar no fluxo pós-merge junto com `validate-ids.ps1`.
 
 ## Fila atual (`todo/`)
 
-**Sem batches JSON** (19/08/2026): 1857–1864 + T-253/T-254 em `processados/`.
+**Sem batches JSON** (20/08/2026): 1865–1868, 1869–1873 e 1874–1888 em `processados/`.
 
 | Local | Conteúdo |
 |-------|----------|
-| `_data/todo/*.html` / `*.md` | Staging (`p13-porta-giratoria.html`, `prompt-tratamento-pdfs-mensalao.md`) |
+| `_data/todo/*.html` / `*.md` | Staging (`p13-porta-giratoria.html`, `prompt-tratamento-pdfs-mensalao.md`, `CR-0006.md`) |
 | `_data/processados/lawfare-thematic-T254-*.json` | P13 Porta Giratória (reassign de T-253) |
 | `_data/processados/README-hold-resolvido-1749-1768.md` | `_hold/` encerrado: Lula/Havengate publicados como **1821–1826** |
 

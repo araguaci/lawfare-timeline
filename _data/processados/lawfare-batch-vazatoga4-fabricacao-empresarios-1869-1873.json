@@ -1,0 +1,283 @@
+{
+  "_meta": {
+    "batch": "vazatoga4-fabricacao-empresarios",
+    "generated": "2026-08-20",
+    "id_range": [
+      1869,
+      1873
+    ],
+    "depende_de": "Batch anterior lawfare-batch-vazatoga5-devassa-cnj-1865-1867.json (IDs 1865-1867) deve ser mergeado primeiro para manter sequência.",
+    "destino": "_data/todo/ — processar via merge_todo_pending.py, validar via validate-ids.ps1",
+    "gap_de_qualidade_sinalizado": "Entradas legadas 725 ('Busca contra empresários bolsonaristas...', data_evento 2022-08-10), 728 ('Bloqueio de salários...', 2022-09-02) e 729 ('Busca contra Luciano Hang...', 2022-09-06) são stubs vazios (fontes: N/A, pessoas_envolvidas com labels-placeholder tipo 'Data'/'Ano'/'Gravidade' em vez de dados reais). A data real da operação principal, confirmada por múltiplas fontes independentes, é 23/08/2022 — não 10/08. Recomendo que Araguaci decida entre (a) patch direto dessas 3 entradas com o conteúdo agora disponível, ou (b) mantê-las como estão e usar 1868-1872 como registro definitivo, arquivando 725/728/729 como versão obsoleta. Não sobrescrevi essas entradas para não apagar rastreabilidade sem decisão editorial explícita.",
+    "reassigned_from": [
+      1868,
+      1872
+    ],
+    "collision_note": "1868 ja ocupado pelos decretos MCI (merge 20/08). Faixa realocada para 1869-1873. Batch vazatoga5 (previsto 1865-1867) nao estava na fila; 1865-1868 ja sao regulacao de internet. Conexao textual a devassa de CPFs nao aponta mais para id_1865."
+  },
+  "entries": [
+    {
+      "titulo": "Moraes ordena busca e apreensão contra empresários bolsonaristas em 5 estados, com base em reportagem única do Metrópoles",
+      "data_evento": "2022-08-23",
+      "data_iso": "2022-08-23T12:00:00Z",
+      "categoria": "vazatoga",
+      "tags": [
+        "vazatoga",
+        "empresarios-bolsonaristas",
+        "8-de-janeiro-precedente",
+        "eleicoes-2022",
+        "p01",
+        "p04",
+        "ev-confirmed"
+      ],
+      "descricao": "Em 23/08/2022, dez dias antes do primeiro debate presidencial, a PF cumpriu mandados de busca e apreensão em cinco estados contra empresários ligados a Jair Bolsonaro — entre eles Luciano Hang, Meyer Nigri (Tecnisa), José Koury (Barra World Shopping), Nelson Piquet, Flávio Rocha e Afrânio Barreira —, com bloqueio de contas bancárias e perfis em redes sociais. A justificativa formal citava vínculo com o inquérito da PF sobre atos antidemocráticos, mas a única base fática pública era uma reportagem de Guilherme Amado (Metrópoles, 17/08/2022) sobre mensagens do grupo de WhatsApp 'Empresários & Política'. Segundo o ex-assessor Eduardo Tagliaferro, em depoimento ao Senado (02/09/2025), a ordem partiu do gabinete com urgência: o plano original era executar as buscas na segunda-feira, mas a operação só ocorreu na terça (23/08) por atraso na montagem do material de sustentação. Hang já havia sido alvo de vazamento anterior do mesmo grupo em maio de 2022, que resultou em sua condenação por danos morais contra o padre Julio Lancellotti — ocasião em que o próprio Hang escreveu no grupo: 'Pessoal aqui no grupo temos um X9, um dedo duro...'.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "abuso_processual",
+      "fontes": [
+        "https://www.ainvestigacao.com/p/vaza-toga-a-bruxa-o-infiltrado-e",
+        "https://www.caoquefuma.com/2025/09/vaza-toga-witch-infiltrator-and.html",
+        "https://saobentoemfoco.com.br/revelado-o-infiltrado-no-grupo-de-whatsapp-dos-empresarios-de-direita/",
+        "https://www.aliadosbrasilnoticias.com.br/noticia/revelado-quem-era-o-infiltrado-que-entregou-conversas-do-grupo-de-empresarios-para-moraes"
+      ],
+      "pessoas_envolvidas": [
+        "Alexandre de Moraes (Ordenou a operação de busca e apreensão)",
+        "Luciano Hang (Alvo — redes bloqueadas por mais de 2 anos)",
+        "Meyer Nigri (Alvo — Tecnisa)",
+        "José Koury (Alvo — Barra World Shopping)"
+      ],
+      "instituicoes_envolvidas": [
+        "STF",
+        "Polícia Federal",
+        "TSE"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_data/todo/lawfare-batch-vazatoga4-fabricacao-empresarios-1869-1873.json",
+      "id": 1869,
+      "evidence_status": "ev-confirmed",
+      "status": "documentado",
+      "connections": [
+        "id_1870 — fabricação retroativa de provas para a mesma operação",
+        "id_1872 — desfecho seletivo do caso"
+      ],
+      "patterns": [
+        "P01",
+        "P04"
+      ],
+      "result": "Contas bancárias e perfis em redes sociais bloqueados imediatamente. Hang permaneceu bloqueado por mais de dois anos.",
+      "lacuna_investigativa": "Não há, até a data desta entrada, esclarecimento oficial do STF sobre por que uma única reportagem jornalística — sem lastro investigativo prévio documentado — foi suficiente para autorizar busca e apreensão em cinco estados dez dias antes de um debate presidencial decisivo."
+    },
+    {
+      "titulo": "Fabricação retroativa de provas: infiltrado, colaboradora informal e delegado produzem relatório com metadados falsificados para justificar operação já executada",
+      "data_evento": "2022-08-27",
+      "data_iso": "2022-08-27T20:30:00Z",
+      "categoria": "vazatoga",
+      "tags": [
+        "vazatoga",
+        "cadeia-de-custodia",
+        "fraude-processual",
+        "p01",
+        "p03",
+        "ev-confirmed"
+      ],
+      "descricao": "Conversas de WhatsApp entre Eduardo Tagliaferro (então chefe da AEED/TSE) e a jornalista Letícia Sallorenzo ('Bruxa') mostram que, na noite de 27/08/2022, quatro dias após a operação de 23/08 (id_1869), o gabinete de Moraes pressionava por material que justificasse retroativamente a ação já realizada. Segundo Tagliaferro, a ordem para montar os documentos partiu de Airton Vieira, assessor sênior de Moraes no STF, que teria instruído a falsificação de relatórios para dar 'verniz de legalidade' à operação — sem que Moraes soubesse do envolvimento direto de Vieira, segundo o próprio Tagliaferro. Sallorenzo atuava como ponte entre o TSE e um infiltrado no grupo 'Empresários & Política', identificado por A Investigação como o jornalista e documentarista Lucas Mesquita — hoje assessor no governo Lula (Ministério do Empreendedorismo desde jan/2024), com histórico de infiltração em outros grupos de WhatsApp de direita (caso 'Parlatório'). Sallorenzo enviou prints e a exportação integral do grupo à 1h da noite de 27/08, com o objetivo declarado de 'sossegar o amigo' (Moraes). O material foi consolidado em relatório assinado pelo delegado da PF Fábio Alvarez Shor, datado formalmente de 19/08/2022 — antes da operação. Perícia forense independente contratada por A Investigação (revelada 08/10/2025) constatou que os metadados de criação do arquivo correspondem a 29/08/2022 — o mesmo dia em que Moraes levantou o sigilo do processo, não à data formal alegada. Nenhum registro formal de cadeia de custódia (arts. 158-A a 158-F do CPP) foi produzido para o material informal repassado via WhatsApp/Signal.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "abuso_processual",
+      "fontes": [
+        "https://www.ainvestigacao.com/p/vaza-toga-a-bruxa-o-infiltrado-e",
+        "https://www.ainvestigacao.com/p/exclusivo-pericia-aponta-fraude-temporal",
+        "https://www.ainvestigacao.com/p/exclusivo-alegacoes-finais-do-caso",
+        "https://claudiodantas.com.br/assessor-do-governo-lula-apontado-como-x9-empresarios/"
+      ],
+      "pessoas_envolvidas": [
+        "Eduardo Tagliaferro (Chefe da AEED/TSE à época — montou o relatório sob ordem)",
+        "Airton Vieira (Assessor sênior de Moraes no STF — segundo Tagliaferro, ordenou a falsificação)",
+        "Letícia Sallorenzo ('Bruxa' — colaboradora informal, ponte entre infiltrado e TSE)",
+        "Lucas Mesquita (Infiltrado no grupo 'Empresários & Política' — identificado por A Investigação)",
+        "Fábio Alvarez Shor (Delegado da PF — assinou relatório com metadados de criação incompatíveis com a data formal)"
+      ],
+      "instituicoes_envolvidas": [
+        "STF",
+        "TSE",
+        "Polícia Federal"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_data/todo/lawfare-batch-vazatoga4-fabricacao-empresarios-1869-1873.json",
+      "id": 1870,
+      "evidence_status": "ev-confirmed",
+      "status": "documentado",
+      "legal_basis": [
+        "CPP arts. 158-A a 158-F — cadeia de custódia da prova, não observada no repasse informal via WhatsApp/Signal",
+        "CPP art. 157 — nulidade de prova ilícita e de sua derivação ('fruto da árvore envenenada')",
+        "CP art. 299 — falsidade ideológica, potencialmente configurada pela datação retroativa do relatório",
+        "Lei nº 13.869/2019 (Lei de Abuso de Autoridade)"
+      ],
+      "connections": [
+        "id_1869 — operação que o relatório fabricado buscava justificar retroativamente",
+        "id_1262 — Vaza Toga expõe gabinete paralelo de Alexandre de Moraes",
+        "id_1303 — Tagliaferro depõe no Senado sobre operações paralelas do gabinete de Moraes",
+        "id_1871 — juiz Melek, identificado no mesmo fluxo de mensagens, alvo de processo disciplinar"
+      ],
+      "patterns": [
+        "P01",
+        "P03"
+      ],
+      "result": "Fraude temporal no relatório de Shor confirmada por perícia forense independente (out/2025) e citada em alegações finais de defesa em processo penal correlato (caso Filipe Martins, out/2025) como precedente de vício processual equivalente ao debatido na Lava Jato.",
+      "ponto_de_inflexao": "29/08/2022 — data real de criação do relatório de Shor (por perícia de metadados), coincidente com o dia em que Moraes levantou o sigilo do processo; a datação formal alegada (19/08) antecede a própria operação (23/08), tornando a cronologia oficial logicamente impossível mesmo se a data formal fosse verdadeira.",
+      "lacuna_investigativa": "Delegado Fábio Shor e gabinete de Moraes não se manifestaram até o fechamento das reportagens que embasam esta entrada. Não há resposta institucional do STF ou da PF sobre a discrepância de metadados apontada pela perícia independente. Airton Vieira não teve manifestação pública registrada nas fontes disponíveis.",
+      "analise": "Padrão P01 em sua forma inversa e mais grave: não é anulação de prova real por vício técnico, é produção de prova formal para preencher, a posteriori, uma decisão já tomada sem lastro. A cadeia de comando documentada — Vieira ordena, Tagliaferro executa, Sallorenzo intermedeia, Mesquita infiltra, Shor assina — reproduz a arquitetura informal já documentada no gabinete paralelo de Moraes (id_1262), mas aqui aplicada não a manifestantes do 8 de Janeiro, e sim a financiadores empresariais do campo político oposto — evidência de que a infraestrutura é reutilizável independentemente do alvo político, consistente com P10."
+    },
+    {
+      "titulo": "CNJ afasta juiz Marlos Melek por participar do mesmo grupo de WhatsApp alvo da operação de agosto de 2022",
+      "data_evento": "2023-09-01",
+      "data_iso": "2023-09-01T12:00:00Z",
+      "date_precision": "month",
+      "categoria": "vazatoga",
+      "tags": [
+        "vazatoga",
+        "cnj",
+        "melek",
+        "p02",
+        "p10",
+        "ev-confirmed"
+      ],
+      "descricao": "Nas conversas de agosto de 2022 entre Tagliaferro e Sallorenzo, o assessor pede especificamente informações sobre o juiz do Trabalho Marlos Augusto Melek (TRT da 9ª Região, Araucária/PR), então integrante do grupo 'Empresários & Política'. Em setembro de 2023 — a partir de reclamação da Associação Brasileira de Juristas pela Democracia sobre a participação de Melek no mesmo grupo —, o CNJ determinou seu afastamento cautelar por decisão unânime relatada por Luis Felipe Salomão, então corregedor nacional. A conduta concreta atribuída a Melek foi chamar uma reportagem de 'ideológica' e reagir a mensagens alheias com emojis de aprovação — o próprio Salomão registrou nos autos que 'é de menor importância a quantidade de vezes' que o juiz se manifestou no grupo. Mesmo assim, Melek permaneceu afastado por cerca de nove meses. Em junho de 2024, ao julgar o mérito, o CNJ aplicou censura (sanção mais branda que a disponibilidade por 90 dias defendida por Salomão) e determinou seu retorno imediato ao cargo.",
+      "relevancia": "media",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "perseguicao_processual",
+      "fontes": [
+        "https://www.ainvestigacao.com/p/vaza-toga-a-bruxa-o-infiltrado-e",
+        "https://bnbrasil.com.br/noticia/7381/vaza-toga-bruxa-delator-bandido-infiltrado",
+        "https://www.ainvestigacao.com/p/vaza-toga-5-devassa-stf-cnj"
+      ],
+      "pessoas_envolvidas": [
+        "Marlos Augusto Melek (Juiz do Trabalho — afastado por 9 meses, depois censurado e reintegrado)",
+        "Luis Felipe Salomão (Relator do afastamento cautelar no CNJ; defendeu sanção mais dura que a aplicada)",
+        "Eduardo Tagliaferro (Solicitou dados sobre Melek na mesma cadeia de mensagens da operação contra empresários)"
+      ],
+      "instituicoes_envolvidas": [
+        "CNJ",
+        "TRT da 9ª Região"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 2,
+      "fonte_arquivo": "_data/todo/lawfare-batch-vazatoga4-fabricacao-empresarios-1869-1873.json",
+      "id": 1871,
+      "evidence_status": "ev-confirmed",
+      "status": "confirmado",
+      "connections": [
+        "id_1870 — mesmo fluxo de mensagens que originou o interesse institucional em Melek",
+        "id_1786 — Ludmila Lins Grilo, mesmo padrão Salomão/CNJ de afastamento por manifestação crítica",
+        "Vaza Toga 5 — devassa nacional de CPFs (CNJ/gabinete Moraes); batch ainda nao mergeado. Nao confundir com o id_1865 atual (arquivamento do PL 2630)."
+      ],
+      "patterns": [
+        "P02",
+        "P10"
+      ],
+      "result": "Melek afastado por 9 meses, depois censurado (sanção reduzida) e reintegrado em junho de 2024.",
+      "lacuna_investigativa": "Não é possível estabelecer, com as fontes disponíveis, se a reclamação da Associação Brasileira de Juristas pela Democracia partiu de conhecimento independente da participação de Melek no grupo, ou se foi de alguma forma informada pelo mesmo fluxo de informação que já havia identificado Melek como alvo de interesse do gabinete de Moraes em agosto de 2022 — a defasagem de um ano entre a menção nas mensagens e a abertura formal do processo disciplinar não permite inferir causalidade direta.",
+      "analise": "O próprio reconhecimento do CNJ de que a conduta de Melek era de 'menor importância' — mas ainda assim suficiente para 9 meses de afastamento cautelar — ilustra a desproporção entre a intensidade da medida cautelar e a gravidade material do fato disciplinar, mesmo pelos critérios do próprio órgão julgador. Reforça o padrão já documentado (id_1786 e o cluster Vaza Toga 5 ainda nao mergeado (devassa de CPFs; nao e o id_1865 atual)) de uso do aparato disciplinar do CNJ, sob Salomão, como instrumento de resposta a manifestações críticas de magistrados — desproporcional na fase cautelar, corrigido apenas no julgamento de mérito, quando o dano à carreira e à reputação já havia ocorrido."
+    },
+    {
+      "titulo": "Desfecho seletivo do caso: Moraes arquiva a maioria após posse de Lula, mantém Hang e Nigri como alvos sob sigilo",
+      "data_evento": "2023-06-01",
+      "data_iso": "2023-06-01T12:00:00Z",
+      "date_precision": "month",
+      "categoria": "vazatoga",
+      "tags": [
+        "vazatoga",
+        "luciano-hang",
+        "meyer-nigri",
+        "p01",
+        "p06",
+        "ev-confirmed"
+      ],
+      "descricao": "Cerca de um ano após a operação de 23/08/2022 (id_1869) e já com Lula empossado, Moraes arquivou o caso para seis dos oito empresários investigados, reconhecendo ausência de provas para justificar prosseguimento. Meyer Nigri e Luciano Hang permaneceram como alvos: no caso de Nigri, a PF alegou vínculo direto com Bolsonaro na disseminação de mensagens antissistema eleitoral; no caso de Hang, Moraes alegou pendência de análise de celular protegido por senha. As redes sociais de Hang permaneceram bloqueadas por mais de dois anos, até Moraes suspender a restrição em setembro de 2024. O processo permanece integralmente sob sigilo.",
+      "relevancia": "media",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "chokepoint_judicial",
+      "fontes": [
+        "https://www.ainvestigacao.com/p/vaza-toga-a-bruxa-o-infiltrado-e",
+        "https://www.aliadosbrasilnoticias.com.br/noticia/revelado-quem-era-o-infiltrado-que-entregou-conversas-do-grupo-de-empresarios-para-moraes"
+      ],
+      "pessoas_envolvidas": [
+        "Alexandre de Moraes (Arquivou o caso para 6 de 8 alvos; manteve Hang e Nigri)",
+        "Luciano Hang (Redes bloqueadas por mais de 2 anos, liberadas set/2024)",
+        "Meyer Nigri (Mantido como alvo — vínculo alegado com Bolsonaro)"
+      ],
+      "instituicoes_envolvidas": [
+        "STF",
+        "Polícia Federal"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 2,
+      "fonte_arquivo": "_data/todo/lawfare-batch-vazatoga4-fabricacao-empresarios-1869-1873.json",
+      "id": 1872,
+      "evidence_status": "ev-confirmed",
+      "status": "em_andamento",
+      "connections": [
+        "id_1869",
+        "id_1870"
+      ],
+      "patterns": [
+        "P01",
+        "P06"
+      ],
+      "result": "6 de 8 empresários arquivados sem provas reconhecidas pelo próprio relator. Hang teve redes bloqueadas por 2+ anos sem processo concluído. Nigri segue sob apuração sigilosa.",
+      "lacuna_investigativa": "Não há decisão pública final sobre Nigri. Não é possível verificar, com fontes abertas, o estado atual da 'análise pendente' do celular de Hang que justificou a manutenção do bloqueio por dois anos, nem se essa análise foi de fato concluída antes da liberação em set/2024 ou se a liberação ocorreu por outro motivo (ex.: pressão pública, decurso de prazo razoável)."
+    },
+    {
+      "titulo": "Moraes arquiva ação criminal de Letícia Sallorenzo contra jornalistas da Vaza Toga por falta de indícios",
+      "data_evento": "2026-01-26",
+      "data_iso": "2026-01-26T12:00:00Z",
+      "categoria": "vazatoga",
+      "tags": [
+        "vazatoga",
+        "liberdade-de-imprensa",
+        "sallorenzo",
+        "contraexemplo",
+        "ev-confirmed"
+      ],
+      "descricao": "Em 26/01/2026, Moraes arquivou a ação criminal movida por Letícia Sallorenzo contra os jornalistas David Ágape e Eli Vieira (autores da série Vaza Toga) e o ex-assessor Eduardo Tagliaferro, acatando parecer da PGR de que não havia 'indícios mínimos da ocorrência de ilícito penal'. Sallorenzo alegava campanha difamatória sistemática pelo uso de termos como 'bruxa do TSE', 'infiltrada' e 'X-9' — apelidos que, segundo os jornalistas, ela própria usa publicamente (perfil @bruxaOD) e reconhece em currículo Lattes ao descrever-se como 'colaboradora informal' do TSE desde 2022. O TSE, consultado via LAI, negou qualquer vínculo institucional formal com Sallorenzo.",
+      "relevancia": "media",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "N/A",
+      "fontes": [
+        "https://www.gazetadopovo.com.br/republica/moraes-arquiva-acao-contra-autores-da-vaza-toga-e-tagliaferro/",
+        "https://www.poder360.com.br/opiniao/jornalismo-nao-e-milicia-acao-mira-autores-da-vaza-toga-no-stf/"
+      ],
+      "pessoas_envolvidas": [
+        "Alexandre de Moraes (Arquivou a ação, acatando parecer da PGR)",
+        "Letícia Sallorenzo (Autora da ação arquivada)",
+        "David Ágape, Eli Vieira, Eduardo Tagliaferro (Alvos da ação arquivada)"
+      ],
+      "instituicoes_envolvidas": [
+        "STF",
+        "PGR",
+        "TSE"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 3,
+      "fonte_arquivo": "_data/todo/lawfare-batch-vazatoga4-fabricacao-empresarios-1869-1873.json",
+      "id": 1873,
+      "evidence_status": "ev-confirmed",
+      "status": "confirmado",
+      "connections": [
+        "id_1312 — jornalistas alvo de queixa-crime no STF por revelações da Vaza Toga",
+        "id_1870"
+      ],
+      "patterns": [],
+      "result": "Ação arquivada. Jornalistas e Tagliaferro não processados a partir dessa petição.",
+      "analise": "Contraexemplo relevante para o protocolo anti-confirmation-bias do corpus: neste caso específico, o mesmo relator que concentra o padrão de chokepoint judicial documentado em outras entradas decidiu contra a parte alinhada ao próprio gabinete (Sallorenzo, identificada como colaboradora informal do TSE) e a favor dos jornalistas que o expõem. Registrar isso com o mesmo rigor aplicado aos casos de padrão contrário é exigência do próprio protocolo — não enfraquece a tese central, mas evita generalização indevida de que toda decisão do relator segue automaticamente um viés de proteção a aliados.",
+      "lacuna_investigativa": "Não incluído."
+    }
+  ]
+}
