@@ -5,7 +5,7 @@ title: "T-227 · P04 Pela Direita"
 description: "Estudo de caso do relatório 'O Crime Organizado como Ameaça à Soberania e Unidade Política do Brasil' (Observatório para um Brasil Soberano, Análise Mensal, ..."
 date: 2026-07-20T12:00:00-03:00
 image:
-  path: "/assets/solid/book-open.svg"
+  path: "/assets/img/t227-p04-pela-direita-xarticle-hero.webp"
 tags: ["estudo", "lawfare", "p04", "p04b"]
 categories: estudos
 mermaid: false

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vaza Toga 5 — Purga Institucional | lawfare-timeline</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080c10; --bg2:#0d1319; --bg3:#131b22;
+  --red:#c53d4f; --gold:#d4af5a; --green:#4caf7d; --gray:#7f8c98;
+  --text:#e7e9ec; --dim:#8b95a1; --border:#1e2830;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--text);font-family:'Crimson Pro',serif;font-size:16px;line-height:1.75;}
+a{color:var(--gold);}
+.navbar{position:sticky;top:0;z-index:50;background:rgba(8,12,16,0.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:14px 32px;display:flex;gap:24px;align-items:center;overflow-x:auto;}
+.navbar .brand{font-family:'Bebas Neue',sans-serif;letter-spacing:2px;color:var(--red);font-size:18px;white-space:nowrap;}
+.navbar a{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--dim);text-decoration:none;white-space:nowrap;padding:6px 0;border-bottom:2px solid transparent;transition:.2s;}
+.navbar a:hover,.navbar a.active{color:var(--text);border-bottom-color:var(--red);}
+.hero{padding:64px 32px 40px;max-width:1100px;margin:0 auto;border-bottom:1px solid var(--border);}
+.hero .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--red);margin-bottom:16px;}
+.hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(32px,5.5vw,58px);line-height:1.05;letter-spacing:-0.01em;margin-bottom:20px;}
+.hero h1 span{color:var(--red);}
+.hero .sub{font-style:italic;color:var(--dim);font-size:18px;max-width:760px;margin-bottom:28px;}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);margin-top:24px;}
+.stat{background:var(--bg2);padding:18px 20px;}
+.stat .n{font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:var(--gold);}
+.stat .l{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--dim);margin-top:4px;}
+main{max-width:1100px;margin:0 auto;padding:0 32px;}
+.section{padding:56px 0;border-bottom:1px solid var(--border);}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:28px;display:flex;align-items:center;gap:16px;}
+.section-title::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--gold),transparent);opacity:.35;}
+.evidence-badge{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;padding:2px 8px;border-radius:3px;margin-right:6px;}
+.ev-confirmed{background:rgba(76,175,125,0.14);color:var(--green);border:1px solid rgba(76,175,125,0.35);}
+.pattern-tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.08em;padding:2px 7px;border:1px solid var(--red);color:var(--red);border-radius:3px;margin-right:6px;}
+.tl{position:relative;padding-left:28px;}
+.tl::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--red),var(--gold));opacity:.5;}
+.tl-item{position:relative;margin-bottom:28px;padding:18px 20px;background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--red);}
+.tl-item::before{content:'';position:absolute;left:-33px;top:22px;width:9px;height:9px;border-radius:50%;background:var(--bg);border:2px solid var(--red);}
+.tl-date{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:1px;margin-bottom:6px;}
+.tl-title{font-family:'Syne',sans-serif;font-weight:700;font-size:16px;margin-bottom:8px;}
+.tl-desc{color:var(--dim);font-size:14.5px;}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;}
+.card{background:var(--bg2);border:1px solid var(--border);padding:20px;border-top:3px solid var(--gold);}
+.card h4{font-family:'Syne',sans-serif;font-size:15px;margin-bottom:8px;}
+.card p{color:var(--dim);font-size:14px;}
+.pullquote{background:var(--bg3);border-left:4px solid var(--red);padding:24px 28px;margin:32px 0;font-style:italic;font-size:17px;color:#f0f1f3;}
+.pullquote cite{display:block;margin-top:12px;font-style:normal;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--dim);}
+.lacuna{background:rgba(212,175,90,0.06);border:1px dashed rgba(212,175,90,0.4);padding:16px 20px;font-size:13.5px;color:var(--dim);margin-top:10px;}
+.lacuna b{color:var(--gold);}
+table{width:100%;border-collapse:collapse;font-size:13.5px;}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);}
+th{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);}
+footer{padding:40px 32px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--dim);border-top:1px solid var(--border);}
+footer .cc0{color:var(--gold);letter-spacing:.1em;margin-bottom:8px;}
+#gotop{position:fixed;bottom:24px;right:24px;width:42px;height:42px;border-radius:50%;background:var(--bg3);border:1px solid var(--border);color:var(--gold);display:none;align-items:center;justify-content:center;cursor:pointer;font-size:18px;z-index:60;}
+#gotop.show{display:flex;}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <span class="brand">VAZA TOGA 5</span>
+  <a href="#devassa">A devassa</a>
+  <a href="#dino">O caso Dino</a>
+  <a href="#exercito">Réplica no Exército</a>
+  <a href="#padroes">Padrões</a>
+  <a href="#fontes">Fontes</a>
+</nav>
+
+<header class="hero">
+  <div class="eyebrow">Eixo Selva · lawfare-timeline · Série Vaza Toga — Capítulo 5 de 5</div>
+  <h1>Purga <span>Institucional</span></h1>
+  <p class="sub">Quando a vigilância informal do gabinete de Moraes se formaliza: 2.119 CPFs extraídos e cruzados contra todo o funcionalismo do Judiciário brasileiro — inclusive um futuro colega de banca no STF.</p>
+  <div class="stats-row">
+    <div class="stat"><div class="n">2.119</div><div class="l">CPFs extraídos e distribuídos</div></div>
+    <div class="stat"><div class="n">711</div><div class="l">Sem status de investigado ou réu</div></div>
+    <div class="stat"><div class="n">1</div><div class="l">Colega de STF na mesma lista (Dino)</div></div>
+    <div class="stat"><div class="n">3+</div><div class="l">Anos sem desfecho na PET sigilosa</div></div>
+  </div>
+</header>
+
+<main>
+
+<section class="section" id="devassa">
+  <div class="section-title">01 — A devassa</div>
+  <div class="tl">
+    <div class="tl-item">
+      <div class="tl-date">05/12/2023 <span class="evidence-badge ev-confirmed">ev-confirmed</span></div>
+      <div class="tl-title">Gabinete de Moraes ordena extração de 2.119 CPFs</div>
+      <div class="tl-desc">O pedido original do CNJ/Salomão era limitado — informações sobre integrantes do Judiciário nos processos do 8 de Janeiro. O gabinete de Moraes ampliou unilateralmente: extração de todos os CPFs de ações penais, inquéritos e 124 petições. Resultado: 2.119 CPFs distintos — 1.355 ocorrências como "investigado", 2.452 como "requerido", 12 como "réu". 711 pessoas apareciam <em>exclusivamente</em> como "requeridas".</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">15/12/2023 <span class="evidence-badge ev-confirmed">ev-confirmed</span></div>
+      <div class="tl-title">Ofício-circular nacional</div>
+      <div class="tl-desc">Assinado "de ordem" por Cristina Kusahara. Todos os tribunais do país receberam a lista, com prazo de 15 dias para informar nome, cargo e qualificação de eventuais coincidências — mesmo quando o resultado fosse negativo. A lista incluía nomes de três inquéritos sigilosos.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="dino">
+  <div class="section-title">02 — O caso Dino</div>
+  <p style="color:var(--dim);margin-bottom:16px;">Flávio Dino, então ministro da Justiça, aparece na lista via PET 11228 sigilosa — aberta em 20/04/2023 a partir de notícia-crime por omissão diante do 8 de Janeiro. A cronologia é o dado mais forte:</p>
+  <table>
+    <thead><tr><th>Data</th><th>Evento</th></tr></thead>
+    <tbody>
+      <tr><td>27/11/2023</td><td>Lula indica Dino ao STF</td></tr>
+      <tr><td>05/12/2023 (+8 dias)</td><td>Gabinete ordena extração de CPFs — inclui o de Dino</td></tr>
+      <tr><td>13/12/2023</td><td>Senado aprova a indicação de Dino</td></tr>
+      <tr><td>15/12/2023 (+2 dias)</td><td>Lista distribuída aos tribunais</td></tr>
+      <tr><td>22/02/2024</td><td>Dino toma posse — colega de Moraes no STF</td></tr>
+    </tbody>
+  </table>
+  <div class="lacuna"><b>Lacuna investigativa:</b> a PET 11228 não teve desfecho público até a data desta reportagem — nem recebimento, nem arquivamento, nem conversão em inquérito. Comparativamente, uma petição similar contra Dino (PET 10829) foi arquivada em curto prazo e com decisão pública.</div>
+</section>
+
+<section class="section" id="exercito">
+  <div class="section-title">03 — A réplica no Exército</div>
+  <div class="tl">
+    <div class="tl-item">
+      <div class="tl-date">Mar/2025 <span class="evidence-badge ev-confirmed">ev-confirmed</span></div>
+      <div class="tl-title">Sigilo do STF vira escudo para o Exército</div>
+      <div class="tl-desc">A CMRI julgou recurso pedindo, via LAI, os nomes de militares punidos pelo Comando Militar do Planalto por causa do 8 de Janeiro. O Comando confirmou 4 inquéritos e 4 processos administrativos concluídos (2 com punição) — mas recusou os nomes citando sigilo de inquérito sob relatoria de Moraes. A mesma arquitetura de opacidade se propagou do Judiciário ao Executivo/Forças Armadas sem precisar ser reconstruída.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="padroes">
+  <div class="section-title">04 — Padrões aplicados</div>
+  <table>
+    <thead><tr><th>Padrão</th><th>Aplicação neste capítulo</th></tr></thead>
+    <tbody>
+      <tr><td><span class="pattern-tag">P02</span></td><td>Investigador-investigado: até um futuro ministro do STF fica sob checagem funcional sem saber o desfecho.</td></tr>
+      <tr><td><span class="pattern-tag">P03</span></td><td>Captura judicial de emergência: sigilo de um processo vira ferramenta de controle de informação em outra esfera de poder.</td></tr>
+      <tr><td><span class="pattern-tag">P10</span></td><td>Infraestrutura compartilhada: mesmo mecanismo de sigilo, uma única decisão a montante blindando decisões a jusante em instituições distintas.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+</main>
+
+<footer id="fontes">
+  <div class="cc0">CC0 1.0 · Domínio Público · Eixo Selva</div>
+  <span>Fontes: A Investigação · Public (Michael Shellenberger) · Gazeta do Povo</span><br>
+  <span>Jornalistas: David Ágape, Eli Vieira — origem da série: <a href="https://www.ainvestigacao.com/" target="_blank">ainvestigacao.com</a></span><br>
+  <span>Parte da série Vaza Toga (5/5) · lawfare-timeline · Compilado agosto/2026</span>
+</footer>
+
+<div id="gotop">↑</div>
+<script>
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.navbar a');
+const gotop = document.getElementById('gotop');
+const obs = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      navLinks.forEach(a=>a.classList.remove('active'));
+      const link = document.querySelector(`.navbar a[href="#${e.target.id}"]`);
+      if(link) link.classList.add('active');
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+sections.forEach(s=>obs.observe(s));
+window.addEventListener('scroll',()=>{gotop.classList.toggle('show', window.scrollY > 600);});
+gotop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+</script>
+</body>
+</html>

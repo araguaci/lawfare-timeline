@@ -4,7 +4,7 @@ description: "Cerca de um ano após a operação de 23/08/2022 (id_1869) e já c
 date: 2023-06-01T12:00:00.000Z
 image:
   path: "/assets/solid/shield-virus.svg"
-tags: ["P01", "P06", "vazatoga", "luciano-hang", "meyer-nigri", "p01", "p06", "ev-confirmed"]
+tags: ["P01", "p06", "vazatoga", "luciano-hang", "meyer-nigri", "p01", "p06", "ev-confirmed"]
 categories: vazatoga
 permalink: /posts/2023-06-01-desfecho-seletivo-do-caso-moraes-arquiva-a-maioria-apos-posse-de-lula-mantem-hang-e-nigri-/
 id_corpus: "1872"

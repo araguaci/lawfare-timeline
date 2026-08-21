@@ -4,7 +4,7 @@ description: "Nas conversas de agosto de 2022 entre Tagliaferro e Sallorenzo, o 
 date: 2023-09-01T12:00:00.000Z
 image:
   path: "/assets/solid/shield-virus.svg"
-tags: ["P02", "P10", "vazatoga", "cnj", "melek", "p02", "p10", "ev-confirmed"]
+tags: ["P02", "p10", "vazatoga", "cnj", "melek", "p02", "p10", "ev-confirmed"]
 categories: vazatoga
 permalink: /posts/2023-09-01-cnj-afasta-juiz-marlos-melek-por-participar-do-mesmo-grupo-de-whatsapp-alvo-da-operacao-de/
 id_corpus: "1871"

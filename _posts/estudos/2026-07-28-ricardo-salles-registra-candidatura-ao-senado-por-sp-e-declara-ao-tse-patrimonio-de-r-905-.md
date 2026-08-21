@@ -5,7 +5,7 @@ title: "T-1766 · Ricardo Salles registra candidatura ao Senado por SP e declara
 description: "O deputado federal Ricardo Salles (Novo-SP), ex-ministro do Meio Ambiente (2019-2021), registrou candidatura ao Senado por São Paulo no TSE em 28/07/2026. Se..."
 date: 2026-07-28T12:00:00-03:00
 image:
-  path: "/assets/solid/book-open.svg"
+  path: "/assets/img/t1766-salles-patrimonio-tse-xarticle-hero.webp"
 tags: ["estudo", "lawfare"]
 categories: estudos
 mermaid: false

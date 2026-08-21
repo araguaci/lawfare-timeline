@@ -5,7 +5,7 @@ title: "T-220 · Convergência estrutural: vetor PCC-OFAC × rede Arpar × Farra
 description: "A sanção OFAC de 01/07/2026 contra Victor Shimada/Victory Trading (id_1609) e o elo reportado entre a Victory Trading e a Wave Intermediações — operador cita..."
 date: 2026-07-01T12:00:00-03:00
 image:
-  path: "/assets/solid/book-open.svg"
+  path: "/assets/img/t220-pcc-ofac-arpar-inss-xarticle-hero.webp"
 tags: ["estudo", "lawfare", "p08", "p10", "p04b"]
 categories: lawfare
 mermaid: false

@@ -5,7 +5,7 @@ title: "T-224 · Precedentes República 1891–1930"
 description: "Índice editorial de 14 precedentes históricos (sidecar PREC-*) da Primavera Republicana e República Velha, com lacuna Castilhos (PREC-1891-14) e paralelos P03/P05/P06-B/P11."
 date: 2026-07-19T23:00:00-03:00
 image:
-  path: "/assets/solid/book-open.svg"
+  path: "/assets/img/t224-precedentes-republica-xarticle-hero.webp"
 tags: [estudos, precedente-historico, captura-institucional, republica-velha, castilhismo, p03, p05, p06-b, p11]
 categories: estudos
 mermaid: true

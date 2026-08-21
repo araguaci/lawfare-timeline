@@ -4,7 +4,7 @@ description: "Em 08/03/2023, Dia Internacional da Mulher, o STF anunciou publica
 date: 2023-03-08T12:00:00.000Z
 image:
   path: "/assets/solid/shield-virus.svg"
-tags: ["P04", "P10", "vazatoga", "dia-da-mulher", "certidoes", "p04", "p10", "ev-confirmed"]
+tags: ["P04", "p10", "vazatoga", "dia-da-mulher", "certidoes", "p04", "p10", "ev-confirmed"]
 categories: vazatoga
 permalink: /posts/2023-03-08-show-do-dia-da-mulher-moraes-anuncia-soltura-de-149-presas-em-08032023-enquanto-gabinete-f/
 id_corpus: "1878"

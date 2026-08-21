@@ -3,7 +3,7 @@ title: "T-254 — P13 promovido a padrão: Porta Giratória como conversão de a
 description: "Proposta de promoção formal do padrão candidato P13 (Porta Giratória) a padrão autônomo do corpus, com base em cinco âncoras documentadas em `ev-confirmed` d…"
 date: 2026-08-18T12:00:00.000Z
 image:
-  path: "/assets/img/t254-p13-porta-giratoria-xarticle-hero.png"
+  path: "/assets/img/t254-p13-porta-giratoria-xarticle-hero.webp"
 tags: ["estudos", "p13", "p07", "p05", "p06", "ev-inference"]
 categories: estudos
 permalink: /posts/2026-08-18-t-254-p13-porta-giratoria/

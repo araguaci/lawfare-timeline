@@ -5,7 +5,7 @@ title: "T-247 · Episódio: vídeo de IA de Bolsonaro na convenção do PL deton
 description: "Em 25/07/2026, a convenção nacional do PL que oficializou a pré-candidatura de Flávio Bolsonaro à Presidência exibiu vídeo com simulação de imagem e voz de J..."
 date: 2026-07-25T12:00:00-03:00
 image:
-  path: "/assets/solid/book-open.svg"
+  path: "/assets/img/t247-video-ia-stf-tse-xarticle-hero.webp"
 tags: ["estudo", "lawfare", "p03", "p04", "p04b", "p10"]
 categories: estudos
 mermaid: false

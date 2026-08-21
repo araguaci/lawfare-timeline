@@ -17,17 +17,18 @@ Valores abaixo vêm de `_data/lawfare.json` e `_data/claude.ai-corpus-ids-sync.j
 | Track | Último ID | Próximo | Fonte de verdade |
 |---|---:|---:|---|
 | **Main timeline** | **1888** | 1889 | `_data/lawfare.json` → `assuntos[].id` (**1849** assuntos) |
-| **Temático (T-)** | **254** | 255 | `_data/claude.ai-corpus-ids-sync.json` + `_posts/` |
+| **Temático (T-)** | **262** | 263 | `_data/claude.ai-corpus-ids-sync.json` + `_posts/` |
 | **Estudos T em disco** | — | — | ~45+ posts com `id_corpus` temático (registry ≤500) |
 | **Posts `_posts/`** | — | — | ~400+ entradas Jekyll |
 | **Série Dragão e a Onça** | **1770** / **T-246** | — | `_posts/dragao-onca/` (151 posts); main pós-série usa **1888+** |
+| **Série Vaza Toga** | **1888** / **T-262** | T-263 | `_posts/vazatoga/` · hub [/vazatoga/](https://lawfare-timeline.vercel.app/vazatoga/) |
 
 ### Dois tracks de ID (não confundir)
 
 | Track | Namespace | Onde vive | Exemplo |
 |---|---|---|---|
 | Main | inteiros 1–1888+ | `lawfare.json`, posts timeline | `id_corpus: "1888"` |
-| Temático | T-100+ (registry 100–254) | `_posts/estudos/`, `_posts/dragao-onca/`, sync JSON | `id_corpus: "T-254"` |
+| Temático | T-100+ (registry 100–262) | `_posts/estudos/`, `_posts/dragao-onca/`, `_posts/vazatoga/`, sync JSON | `id_corpus: "T-262"` |
 
 Posts **corpus-bridge** (T-205–T-209) ligam artefatos HTML do [gosurf.site](https://gosurf.site) ao índice Jekyll. Detalhes em [TODO.md](./TODO.md).
 
@@ -110,6 +111,34 @@ URLs na produção: `https://lawfare-timeline.vercel.app/dragao-onca-[slug].html
 Scripts da série: `scripts/gerar_artigos_dragao_onca.py`, `scripts/fix_dragao_onca_*.py`, `scripts/validate_dragao_onca_yaml.py`.
 
 Batches arquivados: `_data/processados/lawfare-*dragao-onca*`.
+
+---
+
+## Série Vaza Toga
+
+Hub Jekyll no mesmo padrão de `/dragao-onca/`: capítulos temáticos T-255–T-262 + timeline da categoria `vazatoga`.
+
+| Artefato | Caminho | URL |
+|---|---|---|
+| Hub | `_tabs/vazatoga.md` + `_layouts/vazatoga.html` | [/vazatoga/](https://lawfare-timeline.vercel.app/vazatoga/) |
+| Ordem de leitura | `_data/vazatoga_thematic_order.yml` | T-255 → T-262 |
+| Export | `_data/export-vazatoga.json` | `python scripts/export_vazatoga_json.py` |
+| HTML dos capítulos 1–5 | `vazatoga/vt1–vt5.html` | `/vazatoga/vt1-censura-criticos.html` … |
+| Dossiê INQ 4781 (legado) | `vazatoga/dossie-inq4781.html` | [/vazatoga/dossie-inq4781.html](https://lawfare-timeline.vercel.app/vazatoga/dossie-inq4781.html) |
+| Ponte INQ 4781 | `_posts/estudos/2026-05-29-vaza-toga-corpus-bridge.md` | [T-207](https://lawfare-timeline.vercel.app/posts/2026-05-29-vaza-toga-corpus-bridge/) |
+
+| Capítulo | T- | Foco |
+|---|:---:|---|
+| Síntese geral | 255 | Cronologia Folha → Ágape/Vieira → Oeste |
+| VT2 Certidões | 256 | GestBio, Dia da Mulher, Vildete / Ana Priscila |
+| VT3 Fraude exposta | 257 | Constantino/Fiuza, PM-BA, Gettr, Palver/DX |
+| VT4 Fabricação | 258 | Shor, Sallorenzo, Hang/Nigri, Melek |
+| VT5 Purga | 259 | 2.119 CPFs, PET 11228, sigilo no Exército |
+| Padrão Salomão | 260 | Seletividade da Corregedoria |
+| Tagliaferro | 261 | Senado → réu → nulidade 27/03/2026 |
+| Padrões + P10-B | 262 | Cinco âncoras de infraestrutura privada |
+
+Scripts: `scripts/gerar_artigos_vazatoga.py`, `scripts/export_vazatoga_json.py`. Plano: `_data/todo/plano-tematica-vazatoga.md`.
 
 ---
 
@@ -346,6 +375,140 @@ Ver [TODO.md](./TODO.md) — seção 404s (29/05/2026) para casos corrigidos.
 | Novo post Jekyll | `.cursorrules` + `REGRAS-CURSOR.md` |
 | Lacunas editoriais | `_data/relatorio-top30-sem-estudo.md` + [T-196](/posts/2026-05-28-top30-alertas-criticos-operacoes-sem-dossie/) |
 | Sync claude.ai | `tools/sync_corpus_ids.py` + `tools/instrucao-claude-ai-ids.md` |
+
+### Prompts de imagem (X Articles)
+
+Sessão 2026-08-20 — hero T-255 (1200×675, 16:9, share card X):
+
+```
+Hero image for an X.com Article titled "VAZA TOGA". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still, not a poster collage. Background: near-black navy (#080c10) with a faint grain, a vertical red accent bar on the left like a judicial file stripe. Centered editorial block: large bold condensed sans-serif title "VAZA TOGA" in off-white, smaller gold subtitle "síntese 2022–2026" underneath, tiny monospace line "T-255 · LAWFARE TIMELINE". Visual motif: overlapping translucent WhatsApp-style message bubbles (no readable names, no logos, no brand marks) fading into a blurred Supreme Court column and a folded toga silhouette. Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks, no flags as decoration.
+```
+
+Sessão 2026-08-20 — hero T-256 (1200×675, 16:9, share card X):
+
+```
+Hero image for an X.com Article titled "CERTIDÕES POSITIVAS". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, a thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif "CERTIDÕES POSITIVAS" in off-white, gold subtitle "Vaza Toga 2" underneath, tiny monospace "T-256 · 1.398 em 4 dias". Visual motif: abstract biometric fingerprint ridges dissolving into stacked paper certificates and a blurred TSE/STF colonnade, no readable names, no logos, no brand marks, no real faces. Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
+```
+
+Sessão 2026-08-20 — hero T-257 (1200×675, 16:9, share card X):
+
+```
+Hero image for an X.com Article titled "USE SUA CRIATIVIDADE". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "USE SUA CRIATIVIDADE" in off-white (title must be fully readable), gold subtitle "Vaza Toga 3" underneath, tiny monospace "T-257 · A fraude exposta". Visual motif: a silenced microphone and a blurred newspaper column dissolving into WhatsApp-style message bubbles (no readable names, no logos, no brand marks, no real faces), distant courthouse columns. Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
+```
+
+Sessão 2026-08-20 — hero T-258 (1200×675, 16:9, share card X):
+
+```
+Hero image for an X.com Article titled "SOSSEGAR O AMIGO". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "SOSSEGAR O AMIGO" in off-white (fully readable), gold subtitle "Vaza Toga 4" underneath, tiny monospace "T-258 · relatório datado antes da busca". Visual motif: a police folder and a digital document with mismatched calendar dates (19 and 29) overlapping a blurred WhatsApp chat (no readable names, no logos, no brand marks, no real faces), courthouse columns in fog. Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
+```
+
+Sessão 2026-08-20 — hero T-259 (1200×675, 16:9, share card X):
+
+```
+Hero image for an X.com Article titled "2.119 CPFS". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "2.119 CPFS" in off-white (fully readable, the number is the title), gold subtitle "Vaza Toga 5" underneath, tiny monospace "T-259 · varredura nacional". Visual motif: a dense grid of blurred ID cards and CPF number fields dissolving into courthouse columns and a sealed petition folder (no readable names, no real CPF digits, no logos, no brand marks, no real faces). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
+```
+
+Sessão 2026-08-20 — hero T-260 (1200×675, 16:9, share card X):
+
+```
+Hero image for an X.com Article titled "DE MENOR IMPORTÂNCIA". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "DE MENOR IMPORTÂNCIA" in off-white (fully readable), gold subtitle "Vaza Toga" underneath, tiny monospace "T-260 · padrão Salomão". Visual motif: unbalanced judicial scales dissolving into a CNJ file folder and a blurred courthouse colonnade (no readable names, no logos, no brand marks, no real faces). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
+```
+
+Sessão 2026-08-20 — hero T-261 (1200×675, 16:9, share card X):
+
+```
+Hero image for an X.com Article titled "A FONTE VIROU RÉU". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "A FONTE VIROU RÉU" in off-white (fully readable), gold subtitle "Vaza Toga" underneath, tiny monospace "T-261 · nulidade 27/03/2026". Visual motif: a sealed court file and a torn witness statement dissolving into a blurred empty defendant's chair and distant STF colonnade (no readable names, no logos, no brand marks, no real faces). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
+```
+
+Sessão 2026-08-20 — hero T-262 (1200×675, 16:9, share card X):
+
+```
+Hero image for an X.com Article titled "P10-B". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "P10-B" in off-white (fully readable), gold subtitle "Vaza Toga" underneath, tiny monospace "T-262 · cinco âncoras". Visual motif: overlapping translucent network nodes and a biometric fingerprint dissolving into a private-office glass facade and courthouse columns (no readable names, no logos, no brand marks, no real faces, no company marks). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
+```
+
+Sessão 2026-08-20 — hero T-252 (1200×675, 16:9, share card X):
+
+```
+Hero image for an X.com Article titled "NÃO ISENTA". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "NÃO ISENTA" in off-white (fully readable), gold subtitle "T-252" underneath, tiny monospace "duas frentes · 06–12/08/2026". Visual motif: a padlock and a journalist notebook dissolving into a circuit board and blurred courthouse columns (no readable names, no logos, no brand marks, no real faces, no platform logos). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
+```
+
+Sessão 2026-08-20 — hero T-251 (1200×675, 16:9, share card X):
+
+```
+Hero image for an X.com Article titled "O MESMO COLEGIADO". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "O MESMO COLEGIADO" in off-white (fully readable), gold subtitle "T-251" underneath, tiny monospace "STF · família · Master". Visual motif: three overlapping courthouse columns and a blurred bank ledger dissolving into a family-office folder (no readable names, no logos, no brand marks, no real faces, no bank logos). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
+```
+
+Sessão 2026-08-20 — hero T-253 (1200×675, 16:9, share card X):
+
+```
+Hero image for an X.com Article titled "SEM LASTRO". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "SEM LASTRO" in off-white (fully readable), gold subtitle "T-253" underneath, tiny monospace "AP 470 · Mensalão". Visual motif: empty evidence folders stacked beside a gavel and STF colonnade in fog (no readable names, no logos, no brand marks, no real faces). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
+```
+
+Sessão 2026-08-20 — hero T-207 (1200×675, 16:9, share card X):
+
+```
+Hero image for an X.com Article titled "INQ 4.781". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "INQ 4.781" in off-white (fully readable), gold subtitle "T-207" underneath, tiny monospace "ponte · Vaza Toga". Visual motif: a sealed inquiry folder and a WhatsApp-style chat silhouette dissolving into STF and TSE colonnades (no readable names, no logos, no brand marks, no real faces, no app logos). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
+```
+
+Sessão 2026-08-20 — hero T-250 (1200×675, 16:9, share card X):
+
+```
+Hero image for an X.com Article titled "ERRA TODO DIA". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "ERRA TODO DIA" in off-white (fully readable), gold subtitle "T-250" underneath, tiny monospace "dois pesos · indenização". Visual motif: unbalanced judicial scales, one pan empty prison bars and the other a boarding pass, dissolving into courthouse columns (no readable names, no logos, no brand marks, no real faces, no airline logos). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
+```
+
+Sessão 2026-08-20 — hero T-249 (1200×675, 16:9, share card X):
+
+```
+Hero image for an X.com Article titled "SORTEIO CORRETO". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "SORTEIO CORRETO" in off-white (fully readable), gold subtitle "T-249" underneath, tiny monospace "juiz natural · universo". Visual motif: a lottery drum or spinning wheel of eleven identical courthouse chairs dissolving into STF colonnades, one chair slightly gold-tinted, no readable names, no logos, no brand marks, no real faces. Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
+```
+
+Sessão 2026-08-20 — hero T-248 (1200×675, 16:9, share card X):
+
+```
+Hero image for an X.com Article titled "14 ANOS". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "14 ANOS" in off-white (fully readable), gold subtitle "T-248" underneath, tiny monospace "ADI · cartórios Bahia". Visual motif: a notary seal and a stopped clock dissolving into STF colonnades and stacked unread case files (no readable names, no logos, no brand marks, no real faces). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
+```
+
+Sessão 2026-08-20 — hero T-1766 (1200×675, 16:9, share card X):
+
+```
+Hero image for an X.com Article titled "R$ 9,05 MI". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "R$ 9,05 MI" in off-white (fully readable), gold subtitle "T-1766" underneath, tiny monospace "DivulgaCand · Senado SP". Visual motif: a rural property silhouette and a faded Portuguese cadastral map fragment dissolving into TSE colonnades and a stamped declaration folder (no readable names, no logos, no brand marks, no real faces, no party logos). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
+```
+
+Sessão 2026-08-20 — hero T-1765 (1200×675, 16:9, share card X):
+
+```
+Hero image for an X.com Article titled "100 ANOS". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "100 ANOS" in off-white (fully readable), gold subtitle "T-1765" underneath, tiny monospace "P10 · até 2126". Visual motif: a sealed visitor logbook and a padlocked prison/senate gate dissolving into STF-like colonnades and a faded calendar ending in 2126 (no readable names, no logos, no brand marks, no real faces). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
+```
+
+Sessão 2026-08-20 — hero T-247 (1200×675, 16:9, share card X):
+
+```
+Hero image for an X.com Article titled "STF x TSE". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "STF x TSE" in off-white (fully readable), gold subtitle "T-247" underneath, tiny monospace "IA · convenção PL". Visual motif: a cracked video frame with a faceless silhouette and a waveform dissolving into two courthouse colonnades facing each other (no readable names, no logos, no brand marks, no real faces, no party logos, no AI company logos). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
+```
+
+Sessão 2026-08-20 — hero T-227 (1200×675, 16:9, share card X):
+
+```
+Hero image for an X.com Article titled "ART. 144". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "ART. 144" in off-white (fully readable), gold subtitle "T-227" underneath, tiny monospace "P04 · espelho". Visual motif: a cracked Brazil map silhouette with two facing mirrors and blurred state police shields dissolving into courthouse colonnades (no readable names, no logos, no brand marks, no real faces, no party logos). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
+```
+
+Sessão 2026-08-20 — hero T-224 (1200×675, 16:9, share card X):
+
+```
+Hero image for an X.com Article titled "14 MESES". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "14 MESES" in off-white (fully readable), gold subtitle "T-224" underneath, tiny monospace "1891–1930 · PREC". Visual motif: a 1890s Brazilian constitution booklet and a broken gubernatorial sash dissolving into republican colonnades and a faded railway map of the South (no readable names, no logos, no brand marks, no real faces). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
+```
+
+Sessão 2026-08-20 — hero T-226 (1200×675, 16:9, share card X):
+
+```
+Hero image for an X.com Article titled "O CICLO". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "O CICLO" in off-white (fully readable), gold subtitle "T-226" underneath, tiny monospace "penduricalho · P11-B". Visual motif: a closed circular arrow of stamped pay slips and a judicial gavel dissolving into STF colonnades (no readable names, no logos, no brand marks, no real faces). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
+```
+
+Sessão 2026-08-20 — hero T-220 (1200×675, 16:9, share card X):
+
+```
+Hero image for an X.com Article titled "SEM RELATÓRIO". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "SEM RELATÓRIO" in off-white (fully readable), gold subtitle "T-220" underneath, tiny monospace "OFAC · Arpar · INSS". Visual motif: an unsigned parliamentary binder and a SWIFT-style payment ribbon dissolving into US Treasury and Brazilian courthouse colonnades (no readable names, no logos, no brand marks, no real faces, no bank logos). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
+```
 
 ---
 

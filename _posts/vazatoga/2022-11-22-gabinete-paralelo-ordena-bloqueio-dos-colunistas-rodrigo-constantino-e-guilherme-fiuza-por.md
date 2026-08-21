@@ -4,7 +4,7 @@ description: "Mensagens obtidas por Revista Oeste mostram que, em 22/11/2022, o 
 date: 2022-11-22T12:00:00.000Z
 image:
   path: "/assets/solid/shield-virus.svg"
-tags: ["P02", "P04", "vazatoga", "liberdade-de-imprensa", "constantino", "fiuza", "p02", "p04", "ev-confirmed"]
+tags: ["P02", "p04", "vazatoga", "liberdade-de-imprensa", "constantino", "fiuza", "p02", "p04", "ev-confirmed"]
 categories: vazatoga
 permalink: /posts/2022-11-22-gabinete-paralelo-ordena-bloqueio-dos-colunistas-rodrigo-constantino-e-guilherme-fiuza-por/
 id_corpus: "1883"

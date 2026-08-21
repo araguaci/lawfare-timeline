@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vaza Toga 1 — Censura a Críticos | lawfare-timeline</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080c10; --bg2:#0d1319; --bg3:#131b22;
+  --red:#c53d4f; --red-glow:rgba(197,61,79,0.35);
+  --gold:#d4af5a; --green:#4caf7d; --gray:#7f8c98;
+  --text:#e7e9ec; --dim:#8b95a1; --border:#1e2830;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--text);font-family:'Crimson Pro',serif;font-size:16px;line-height:1.75;}
+a{color:var(--gold);}
+.mono{font-family:'IBM Plex Mono',monospace;}
+.navbar{position:sticky;top:0;z-index:50;background:rgba(8,12,16,0.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:14px 32px;display:flex;gap:24px;align-items:center;overflow-x:auto;}
+.navbar .brand{font-family:'Bebas Neue',sans-serif;letter-spacing:2px;color:var(--red);font-size:18px;white-space:nowrap;}
+.navbar a{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--dim);text-decoration:none;white-space:nowrap;padding:6px 0;border-bottom:2px solid transparent;transition:.2s;}
+.navbar a:hover,.navbar a.active{color:var(--text);border-bottom-color:var(--red);}
+.hero{padding:64px 32px 40px;max-width:1100px;margin:0 auto;border-bottom:1px solid var(--border);}
+.hero .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--red);margin-bottom:16px;}
+.hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(32px,5.5vw,58px);line-height:1.05;letter-spacing:-0.01em;margin-bottom:20px;}
+.hero h1 span{color:var(--red);}
+.hero .sub{font-style:italic;color:var(--dim);font-size:18px;max-width:760px;margin-bottom:28px;}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);margin-top:24px;}
+.stat{background:var(--bg2);padding:18px 20px;}
+.stat .n{font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:var(--gold);}
+.stat .l{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--dim);margin-top:4px;}
+main{max-width:1100px;margin:0 auto;padding:0 32px;}
+.section{padding:56px 0;border-bottom:1px solid var(--border);}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:28px;display:flex;align-items:center;gap:16px;}
+.section-title::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--gold),transparent);opacity:.35;}
+.evidence-badge{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;padding:2px 8px;border-radius:3px;margin-right:6px;}
+.ev-confirmed{background:rgba(76,175,125,0.14);color:var(--green);border:1px solid rgba(76,175,125,0.35);}
+.ev-alleged{background:rgba(212,175,90,0.14);color:var(--gold);border:1px solid rgba(212,175,90,0.35);}
+.ev-contested{background:rgba(127,140,152,0.14);color:var(--gray);border:1px solid rgba(127,140,152,0.35);}
+.pattern-tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.08em;padding:2px 7px;border:1px solid var(--red);color:var(--red);border-radius:3px;margin-right:6px;}
+.tl{position:relative;padding-left:28px;}
+.tl::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--red),var(--gold));opacity:.5;}
+.tl-item{position:relative;margin-bottom:28px;padding:18px 20px;background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--red);}
+.tl-item::before{content:'';position:absolute;left:-33px;top:22px;width:9px;height:9px;border-radius:50%;background:var(--bg);border:2px solid var(--red);}
+.tl-date{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:1px;margin-bottom:6px;}
+.tl-title{font-family:'Syne',sans-serif;font-weight:700;font-size:16px;margin-bottom:8px;}
+.tl-desc{color:var(--dim);font-size:14.5px;}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;}
+.card{background:var(--bg2);border:1px solid var(--border);padding:20px;border-top:3px solid var(--gold);}
+.card h4{font-family:'Syne',sans-serif;font-size:15px;margin-bottom:8px;}
+.card p{color:var(--dim);font-size:14px;}
+.pullquote{background:var(--bg3);border-left:4px solid var(--red);padding:24px 28px;margin:32px 0;font-style:italic;font-size:17px;color:#f0f1f3;}
+.pullquote cite{display:block;margin-top:12px;font-style:normal;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--dim);}
+.lacuna{background:rgba(212,175,90,0.06);border:1px dashed rgba(212,175,90,0.4);padding:16px 20px;font-size:13.5px;color:var(--dim);margin-top:10px;}
+.lacuna b{color:var(--gold);}
+table{width:100%;border-collapse:collapse;font-size:13.5px;}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);}
+th{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);}
+footer{padding:40px 32px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--dim);border-top:1px solid var(--border);}
+footer .cc0{color:var(--gold);letter-spacing:.1em;margin-bottom:8px;}
+#gotop{position:fixed;bottom:24px;right:24px;width:42px;height:42px;border-radius:50%;background:var(--bg3);border:1px solid var(--border);color:var(--gold);display:none;align-items:center;justify-content:center;cursor:pointer;font-size:18px;z-index:60;}
+#gotop.show{display:flex;}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="https://lawfare-timeline.vercel.app/vazatoga/">Hub</a>
+  <span class="brand">VAZA TOGA 1</span>
+  <a href="#origem">Origem</a>
+  <a href="#mecanismo">Mecanismo</a>
+  <a href="#saga">Saga Tagliaferro</a>
+  <a href="#padroes">Padrões</a>
+  <a href="#fontes">Fontes</a>
+</nav>
+
+<header class="hero">
+  <div class="eyebrow">Eixo Selva · lawfare-timeline · Série Vaza Toga — Capítulo 1 de 5</div>
+  <h1>Censura a <span>Críticos</span></h1>
+  <p class="sub">A origem da série: como um "assessoria de combate à desinformação" do TSE virou o chancelador informal das vontades de um único ministro do STF — e como o denunciante virou réu.</p>
+  <div class="stats-row">
+    <div class="stat"><div class="n">2024</div><div class="l">Ano da revelação (Folha)</div></div>
+    <div class="stat"><div class="n">4</div><div class="l">Pessoas no núcleo do gabinete</div></div>
+    <div class="stat"><div class="n">3+</div><div class="l">Anos até réu virar fonte pública</div></div>
+    <div class="stat"><div class="n">4</div><div class="l">Capítulos derivados (VT2–5)</div></div>
+  </div>
+</header>
+
+<main>
+
+<section class="section" id="origem">
+  <div class="section-title">01 — Origem</div>
+  <div class="tl">
+    <div class="tl-item">
+      <div class="tl-date">Ago/2024 <span class="evidence-badge ev-confirmed">ev-confirmed</span></div>
+      <div class="tl-title">Folha de S.Paulo publica as primeiras mensagens</div>
+      <div class="tl-desc">Fábio Serapião e Glenn Greenwald publicam mensagens de WhatsApp de assessores de Alexandre de Moraes mostrando o uso da estrutura da AEED/TSE fora dos ritos formais para monitorar e reportar críticos do STF. A fonte do material é o celular de Eduardo Tagliaferro, então chefe da AEED — mas isso só se tornaria público depois.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">15/08/2025 <span class="evidence-badge ev-confirmed">ev-confirmed</span></div>
+      <div class="tl-title">"Vaza Toga" ganha nome e escala — juristas se manifestam</div>
+      <div class="tl-desc">Juristas consultados por Revista Oeste e Gazeta do Povo classificam publicamente a conduta revelada como usurpação de funções, censura à imprensa e violação constitucional — não mais um incidente isolado, mas um padrão institucional nomeado.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="mecanismo">
+  <div class="section-title">02 — O mecanismo</div>
+  <p style="color:var(--dim);margin-bottom:20px;">Não era a AEED buscando e identificando problemas por conta própria. Era o ministro que mandava o pedido — via seu assessor sênior, Airton Vieira — para Eduardo Tagliaferro, que pesquisava e montava um relatório, <em>mesmo quando não encontrava nada incriminador.</em></p>
+  <div class="pullquote">
+    "Use sua criatividade."
+    <cite>— Airton Vieira, instruindo Tagliaferro sobre o que reportar quando não havia conteúdo incriminador. (Documentado com fonte primária em Vaza Toga 3, id_1883-1888)</cite>
+  </div>
+  <div class="card-grid">
+    <div class="card"><h4>Cadeia de comando</h4><p>Moraes → Airton Vieira (ordem verbal/WhatsApp) → Eduardo Tagliaferro (execução) → relatório formal produzido a posteriori.</p></div>
+    <div class="card"><h4>Definição de "desinformação"</h4><p>Categoria elástica o suficiente para enquadrar qualquer opinião contrária ao STF ou ao governo — inclusive posts antigos, descontextualizados ou já apagados pelo autor.</p></div>
+    <div class="card"><h4>Ausência de contraditório</h4><p>Nenhum dos alvos documentados nesta fase teve acesso ao relatório que fundamentou a medida contra si antes de ela ser executada.</p></div>
+  </div>
+</section>
+
+<section class="section" id="saga">
+  <div class="section-title">03 — A saga processual de Tagliaferro</div>
+  <div class="tl">
+    <div class="tl-item">
+      <div class="tl-date">02/09/2025 <span class="evidence-badge ev-confirmed">ev-confirmed</span></div>
+      <div class="tl-title">Depõe no Senado</div>
+      <div class="tl-desc">Confirma publicamente a legitimidade do material vazado e detalha os métodos usados para incriminar alvos sem devido processo. Declara que o TSE silenciou milhares de perfis no período eleitoral de 2022 — número que o corpus registra como alegação da fonte, não como contagem verificada por terceiros.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">25/10/2025 <span class="evidence-badge ev-confirmed">ev-confirmed</span></div>
+      <div class="tl-title">Jornalistas viram alvo de queixa-crime</div>
+      <div class="tl-desc">David Ágape e Eli Vieira, autores da série Vaza Toga, são alvo de queixa-crime no STF por suas revelações — movida por Letícia Sallorenzo, colaboradora informal do TSE citada nas próprias mensagens vazadas.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">09/11/2025 <span class="evidence-badge ev-confirmed">ev-confirmed</span></div>
+      <div class="tl-title">STF forma maioria para tornar Tagliaferro réu</div>
+      <div class="tl-desc">1ª Turma vota 4 a 0. O ex-assessor que revelou o funcionamento do gabinete paralelo se torna réu no mesmo tribunal cujo gabinete denunciou.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">01/12/2025 – 02/03/2026 <span class="evidence-badge ev-confirmed">ev-confirmed</span></div>
+      <div class="tl-title">Citação por edital com paradeiro "incerto"</div>
+      <div class="tl-desc">Moraes determina citação por edital tratando o paradeiro de Tagliaferro como desconhecido — apesar de comparecimentos públicos no Senado brasileiro e em tribunais na Itália, onde aguardava decisão sobre extradição.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">17/03/2026 <span class="evidence-badge ev-confirmed">ev-confirmed</span></div>
+      <div class="tl-title">Audiência de instrução sem intimação regular</div>
+      <div class="tl-desc">Testemunhos são colhidos em audiência presidida por juíza auxiliar do próprio gabinete de Moraes, sem que a defesa tenha sido regularmente intimada.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">27/03/2026 <span class="evidence-badge ev-confirmed">ev-confirmed</span></div>
+      <div class="tl-title">Moraes reconhece nulidade absoluta — contraexemplo obrigatório</div>
+      <div class="tl-desc">O próprio relator anula todos os depoimentos colhidos na audiência de 17/03. Registrado aqui com o mesmo peso dado aos abusos: o sistema também se corrigiu.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">02/04/2026 – 13/04/2026 <span class="evidence-badge ev-confirmed">ev-confirmed</span></div>
+      <div class="tl-title">Defesa denuncia "abandono de causa"; Moraes destitui advogados</div>
+      <div class="tl-desc">Após representação da defesa à OAB contra acusação de abandono de causa, Moraes destitui os advogados constituídos e nomeia a Defensoria Pública — subpadrão de esvaziamento da defesa técnica escolhida pelo réu.</div>
+    </div>
+  </div>
+  <div class="lacuna"><b>Lacuna investigativa:</b> não há, nas fontes disponíveis, decisão pública final sobre o mérito da ação penal contra Tagliaferro. A cronologia documentada mostra oscilação entre abuso processual e correção judicial — não permite prever desfecho.</div>
+</section>
+
+<section class="section" id="padroes">
+  <div class="section-title">04 — Padrões aplicados</div>
+  <table>
+    <thead><tr><th>Padrão</th><th>Aplicação neste capítulo</th></tr></thead>
+    <tbody>
+      <tr><td><span class="pattern-tag">P02</span></td><td>Investigador-investigado: a fonte que revela o mecanismo se torna alvo do mesmo mecanismo.</td></tr>
+      <tr><td><span class="pattern-tag">P03</span></td><td>Captura judicial de emergência: relator do processo original também preside (via gabinete) a ação contra a fonte.</td></tr>
+      <tr><td><span class="pattern-tag">P04</span></td><td>Arma midiática: rótulo "desinformação" aplicado de forma elástica e assimétrica.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+</main>
+
+<footer id="fontes">
+  <div class="cc0">CC0 1.0 · Domínio Público · Eixo Selva</div>
+  <span>Fontes: Folha de S.Paulo · Revista Oeste · Gazeta do Povo · A Investigação (ainvestigacao.com) · Depoimento ao Senado (02/09/2025)</span><br>
+  <span>Jornalistas: David Ágape, Eli Vieira, Glenn Greenwald, Fábio Serapião — origem da série: <a href="https://www.ainvestigacao.com/" target="_blank">ainvestigacao.com</a></span><br>
+  <span>Parte da série Vaza Toga (1/5) · lawfare-timeline · Compilado agosto/2026</span>
+</footer>
+
+<div id="gotop">↑</div>
+<script>
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.navbar a');
+const gotop = document.getElementById('gotop');
+const obs = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      navLinks.forEach(a=>a.classList.remove('active'));
+      const link = document.querySelector(`.navbar a[href="#${e.target.id}"]`);
+      if(link) link.classList.add('active');
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+sections.forEach(s=>obs.observe(s));
+window.addEventListener('scroll',()=>{
+  gotop.classList.toggle('show', window.scrollY > 600);
+});
+gotop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+</script>
+</body>
+</html>

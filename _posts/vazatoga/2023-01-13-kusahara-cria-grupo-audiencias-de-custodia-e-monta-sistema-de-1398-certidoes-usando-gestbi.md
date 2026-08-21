@@ -4,7 +4,7 @@ description: "Às 14h12 de 13/01/2023 — cinco dias após os atos —, Cristina
 date: 2023-01-13T12:00:00.000Z
 image:
   path: "/assets/solid/shield-virus.svg"
-tags: ["P03", "P10", "vazatoga", "certidoes", "gestbio", "8-de-janeiro", "p03", "p10", "ev-confirmed"]
+tags: ["P03", "p10", "vazatoga", "certidoes", "gestbio", "8-de-janeiro", "p03", "p10", "ev-confirmed"]
 categories: vazatoga
 permalink: /posts/2023-01-13-kusahara-cria-grupo-audiencias-de-custodia-e-monta-sistema-de-1398-certidoes-usando-gestbi/
 id_corpus: "1877"

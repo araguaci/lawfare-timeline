@@ -6,6 +6,8 @@ David Ágape e Eli Vieira (A Investigação, em parceria com Michael Shellenberg
 
 **Origem da série (portal de referência):** https://www.ainvestigacao.com/
 
+**Hub publicado 20/08/2026:** [/vazatoga/](/vazatoga/) (padrão `/dragao-onca/`), capítulos **T-255–T-262** em `_posts/vazatoga/`, artefatos HTML em `vazatoga/vt1–vt5.html`. T-207 permanece ponte INQ 4781; T-255 é o índice de leitura da série consolidada.
+
 ---
 
 ## 1. Estado real do corpus (fonte: `export-vazatoga.json`, sincronizado por Araguaci)

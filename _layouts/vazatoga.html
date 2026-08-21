@@ -1,0 +1,100 @@
+---
+layout: page
+---
+
+{% include lang.html %}
+
+{% assign df_strftime_m = site.data.locales[lang].df.archives.strftime | default: '/ %m' %}
+{% assign df_dayjs_m = site.data.locales[lang].df.archives.dayjs | default: '/ MM' %}
+
+{%- assign vazatoga_cat = site.featured_categories | where: "slug", "vazatoga" | first -%}
+{%- if vazatoga_cat and vazatoga_cat.description -%}
+  <p class="category-description">{{ vazatoga_cat.description }}</p>
+{%- endif -%}
+
+<section id="vazatoga-tematicos">
+  <h2 class="mt-4 mb-3">⚖️ Capítulos Temáticos</h2>
+  <p class="text-muted small">Sínteses da série Vaza Toga 1–5 — ordem de leitura do índice à análise de padrões</p>
+
+  <div id="post-list" class="post-list flex-grow-1 px-xl-1">
+    {% assign thematic_ids = site.data.vazatoga_thematic_order.ids %}
+    {% assign vazatoga_posts = site.posts | where_exp: "post", "post.categories contains 'vazatoga'" %}
+    {% for tid in thematic_ids %}
+      {% assign post = vazatoga_posts | where: "timeline_id", tid | first %}
+      {% if post %}
+        {% include post-card.html %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section id="vazatoga-timeline">
+  <h2 class="mt-5 mb-3">📅 Timeline Completa</h2>
+  <p class="text-muted small">Entradas da série organizadas por data (mais recentes primeiro)</p>
+
+  <div id="archives" class="pl-xl-3 mt-4">
+    {% assign vazatoga_posts = site.posts | where_exp: "post", "post.categories contains 'vazatoga'" %}
+    {% assign last_year = "" %}
+
+    {% for post in vazatoga_posts %}
+      {% assign cur_year = post.date | date: '%Y' %}
+
+      {% if cur_year != last_year %}
+        {% unless forloop.first %}</ul>{% endunless %}
+
+        <time class="year lead d-block">{{ cur_year }}</time>
+        <ul class="list-unstyled">
+
+        {% assign last_year = cur_year %}
+      {% endif %}
+
+      <li>
+        {% assign ts = post.date | date: '%s' %}
+        <span class="date day" data-ts="{{ ts }}" data-df="DD">{{ post.date | date: '%d' }}</span>
+        <span class="date month small text-muted ms-1" data-ts="{{ ts }}" data-df="{{ df_dayjs_m }}">
+          {{ post.date | date: df_strftime_m }}
+        </span>
+        <a href="{{ post.url | relative_url }}" title="{{ post.description }}">{{ post.title }}</a>
+        {% if post.description %}
+          <div class="text-muted small ms-4 mt-1 archive-desc">{{ post.description | truncate: 150 }}</div>
+        {% endif %}
+        {% if post.timeline_id %}
+          <span class="badge rounded-pill text-bg-secondary ms-4 mt-1">T-{{ post.timeline_id }}</span>
+        {% endif %}
+      </li>
+
+      {% if forloop.last %}</ul>{% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section id="vazatoga-related" class="mt-5">
+  <h3 class="mb-3">🔗 Categorias Relacionadas</h3>
+  <div class="row g-2">
+    <div class="col-auto">
+      <a href="/categories/stf/" class="btn btn-outline-secondary btn-sm">
+        <i class="fas fa-balance-scale"></i> STF
+      </a>
+    </div>
+    <div class="col-auto">
+      <a href="/categories/tse/" class="btn btn-outline-secondary btn-sm">
+        <i class="fas fa-vote-yea"></i> TSE
+      </a>
+    </div>
+    <div class="col-auto">
+      <a href="/categories/lawfare/" class="btn btn-outline-secondary btn-sm">
+        <i class="fas fa-gavel"></i> Lawfare
+      </a>
+    </div>
+    <div class="col-auto">
+      <a href="/categories/crise-diplomatica/" class="btn btn-outline-secondary btn-sm">
+        <i class="fas fa-handshake-slash"></i> Crise Diplomática
+      </a>
+    </div>
+    <div class="col-auto">
+      <a href="/posts/2026-05-29-vaza-toga-corpus-bridge/" class="btn btn-outline-secondary btn-sm">
+        <i class="fas fa-bridge"></i> T-207 · INQ 4781
+      </a>
+    </div>
+  </div>
+</section>

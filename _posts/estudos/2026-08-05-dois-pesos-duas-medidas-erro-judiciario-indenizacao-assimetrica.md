@@ -5,7 +5,7 @@ title: "T-250 · Dois pesos, duas medidas — erro judiciário e indenização a
 description: "Síntese temática: quando o erro é do Estado contra o cidadão, 'risco normal'; quando magistrados são parte interessada, dano moral indenizável. Corpus id_1511–1513, id_1834–1835."
 date: 2026-08-05T12:00:00-03:00
 image:
-  path: "/assets/solid/weight-scale.svg"
+  path: "/assets/img/t250-dois-pesos-duas-medidas-xarticle-hero.webp"
 tags: [estudo, lawfare, erro-judiciario, duplo-padrao, justica]
 categories: estudos
 mermaid: false

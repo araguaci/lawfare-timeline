@@ -3,7 +3,7 @@ title: "T-253 · AP 470 (Mensalão) — STF exige 'base documental e probatória
 description: "Na Ação Penal 470/STF, a Procuradoria-Geral da República não denunciou o então Presidente Luiz Inácio Lula da Silva, apesar de a denúncia ter sido recebida c…"
 date: 2010-04-08T12:00:00.000Z
 image:
-  path: "/assets/solid/book-open.svg"
+  path: "/assets/img/t253-ap-470-mensalao-xarticle-hero.webp"
 tags: ["estudos", "ev-confirmed"]
 categories: estudos
 permalink: /posts/2010-04-08-t-253-ap-470-mensalao-stf-exige-base-documental-e-probatoria-para-recusar-reiteradamente-a/

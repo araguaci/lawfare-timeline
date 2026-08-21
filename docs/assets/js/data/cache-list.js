@@ -18,13 +18,15 @@ const include = [
   
     '/dragao-onca/',
   
-    '/lawfare/',
+    '/vazatoga/',
+  
+    '/crise-diplomatica/',
   
     '/estudos/',
   
-    '/stf/',
+    '/lawfare/',
   
-    '/crise-diplomatica/',
+    '/stf/',
   
     '/tse/',
   

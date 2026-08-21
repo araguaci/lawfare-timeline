@@ -4,7 +4,7 @@ description: "Mensagens do gabinete paralelo, reveladas na Vaza Toga 3, mostram 
 date: 2022-12-01T12:00:00.000Z
 image:
   path: "/assets/solid/shield-virus.svg"
-tags: ["P02", "P04", "vazatoga", "carla-zambelli", "p02", "p04", "ev-confirmed"]
+tags: ["P02", "p04", "vazatoga", "carla-zambelli", "p02", "p04", "ev-confirmed"]
 categories: vazatoga
 permalink: /posts/2022-12-01-gabinete-paralelo-monitora-carla-zambelli-e-discute-bloqueio-de-conta-antes-de-sua-diploma/
 id_corpus: "1886"

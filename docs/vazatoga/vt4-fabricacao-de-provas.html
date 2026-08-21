@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vaza Toga 4 — Fabricação de Provas | lawfare-timeline</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080c10; --bg2:#0d1319; --bg3:#131b22;
+  --red:#c53d4f; --gold:#d4af5a; --green:#4caf7d; --gray:#7f8c98;
+  --text:#e7e9ec; --dim:#8b95a1; --border:#1e2830;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--text);font-family:'Crimson Pro',serif;font-size:16px;line-height:1.75;}
+a{color:var(--gold);}
+.navbar{position:sticky;top:0;z-index:50;background:rgba(8,12,16,0.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:14px 32px;display:flex;gap:24px;align-items:center;overflow-x:auto;}
+.navbar .brand{font-family:'Bebas Neue',sans-serif;letter-spacing:2px;color:var(--red);font-size:18px;white-space:nowrap;}
+.navbar a{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--dim);text-decoration:none;white-space:nowrap;padding:6px 0;border-bottom:2px solid transparent;transition:.2s;}
+.navbar a:hover,.navbar a.active{color:var(--text);border-bottom-color:var(--red);}
+.hero{padding:64px 32px 40px;max-width:1100px;margin:0 auto;border-bottom:1px solid var(--border);}
+.hero .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--red);margin-bottom:16px;}
+.hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(32px,5.5vw,58px);line-height:1.05;letter-spacing:-0.01em;margin-bottom:20px;}
+.hero h1 span{color:var(--red);}
+.hero .sub{font-style:italic;color:var(--dim);font-size:18px;max-width:760px;margin-bottom:28px;}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);margin-top:24px;}
+.stat{background:var(--bg2);padding:18px 20px;}
+.stat .n{font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:var(--gold);}
+.stat .l{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--dim);margin-top:4px;}
+main{max-width:1100px;margin:0 auto;padding:0 32px;}
+.section{padding:56px 0;border-bottom:1px solid var(--border);}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:28px;display:flex;align-items:center;gap:16px;}
+.section-title::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--gold),transparent);opacity:.35;}
+.evidence-badge{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;padding:2px 8px;border-radius:3px;margin-right:6px;}
+.ev-confirmed{background:rgba(76,175,125,0.14);color:var(--green);border:1px solid rgba(76,175,125,0.35);}
+.pattern-tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.08em;padding:2px 7px;border:1px solid var(--red);color:var(--red);border-radius:3px;margin-right:6px;}
+.tl{position:relative;padding-left:28px;}
+.tl::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--red),var(--gold));opacity:.5;}
+.tl-item{position:relative;margin-bottom:28px;padding:18px 20px;background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--red);}
+.tl-item::before{content:'';position:absolute;left:-33px;top:22px;width:9px;height:9px;border-radius:50%;background:var(--bg);border:2px solid var(--red);}
+.tl-date{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:1px;margin-bottom:6px;}
+.tl-title{font-family:'Syne',sans-serif;font-weight:700;font-size:16px;margin-bottom:8px;}
+.tl-desc{color:var(--dim);font-size:14.5px;}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;}
+.card{background:var(--bg2);border:1px solid var(--border);padding:20px;border-top:3px solid var(--gold);}
+.card h4{font-family:'Syne',sans-serif;font-size:15px;margin-bottom:8px;}
+.card p{color:var(--dim);font-size:14px;}
+.pullquote{background:var(--bg3);border-left:4px solid var(--red);padding:24px 28px;margin:32px 0;font-style:italic;font-size:17px;color:#f0f1f3;}
+.pullquote cite{display:block;margin-top:12px;font-style:normal;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--dim);}
+.lacuna{background:rgba(212,175,90,0.06);border:1px dashed rgba(212,175,90,0.4);padding:16px 20px;font-size:13.5px;color:var(--dim);margin-top:10px;}
+.lacuna b{color:var(--gold);}
+.counter{background:rgba(76,175,125,0.06);border:1px dashed rgba(76,175,125,0.4);padding:16px 20px;font-size:13.5px;color:var(--dim);margin-top:10px;}
+.counter b{color:var(--green);}
+.pipeline{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:20px 0;}
+.pipe-node{background:var(--bg2);border:1px solid var(--red);color:var(--text);font-family:'IBM Plex Mono',monospace;font-size:12px;padding:8px 14px;border-radius:4px;}
+.pipe-arrow{color:var(--gold);font-size:14px;}
+table{width:100%;border-collapse:collapse;font-size:13.5px;}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);}
+th{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);}
+footer{padding:40px 32px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--dim);border-top:1px solid var(--border);}
+footer .cc0{color:var(--gold);letter-spacing:.1em;margin-bottom:8px;}
+#gotop{position:fixed;bottom:24px;right:24px;width:42px;height:42px;border-radius:50%;background:var(--bg3);border:1px solid var(--border);color:var(--gold);display:none;align-items:center;justify-content:center;cursor:pointer;font-size:18px;z-index:60;}
+#gotop.show{display:flex;}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="https://lawfare-timeline.vercel.app/vazatoga/">Hub</a>
+  <span class="brand">VAZA TOGA 4</span>
+  <a href="#operacao">Operação</a>
+  <a href="#fabricacao">Fabricação</a>
+  <a href="#melek">Caso Melek</a>
+  <a href="#desfecho">Desfecho</a>
+  <a href="#padroes">Padrões</a>
+  <a href="#fontes">Fontes</a>
+</nav>
+
+<header class="hero">
+  <div class="eyebrow">Eixo Selva · lawfare-timeline · Série Vaza Toga — Capítulo 4 de 5</div>
+  <h1>Fabricação de <span>Provas</span></h1>
+  <p class="sub">A operação de 23/08/2022 contra empresários bolsonaristas não teve prova real por trás — teve prova fabricada depois, com metadados que a perícia forense conseguiu desmontar.</p>
+  <div class="stats-row">
+    <div class="stat"><div class="n">5</div><div class="l">Estados na operação simultânea</div></div>
+    <div class="stat"><div class="n">1</div><div class="l">Reportagem como base fática pública</div></div>
+    <div class="stat"><div class="n">10</div><div class="l">Dias entre o vazamento e a operação</div></div>
+    <div class="stat"><div class="n">6/8</div><div class="l">Empresários arquivados por falta de provas</div></div>
+  </div>
+</header>
+
+<main>
+
+<section class="section" id="operacao">
+  <div class="section-title">01 — A operação</div>
+  <div class="tl">
+    <div class="tl-item">
+      <div class="tl-date">23/08/2022 <span class="evidence-badge ev-confirmed">ev-confirmed</span></div>
+      <div class="tl-title">Busca e apreensão em 5 estados, 10 dias antes do debate presidencial</div>
+      <div class="tl-desc">PF cumpre mandados contra Luciano Hang, Meyer Nigri (Tecnisa), José Koury, Nelson Piquet, Flávio Rocha e Afrânio Barreira — bloqueio de contas bancárias e perfis em redes. Base fática pública: uma única reportagem do Metrópoles (17/08/2022) sobre o grupo de WhatsApp "Empresários & Política".</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="fabricacao">
+  <div class="section-title">02 — A cadeia de fabricação</div>
+  <div class="pipeline">
+    <div class="pipe-node">Airton Vieira (ordena)</div><span class="pipe-arrow">→</span>
+    <div class="pipe-node">Tagliaferro (executa)</div><span class="pipe-arrow">→</span>
+    <div class="pipe-node">Sallorenzo (intermedeia)</div><span class="pipe-arrow">→</span>
+    <div class="pipe-node">Lucas Mesquita (infiltra)</div><span class="pipe-arrow">→</span>
+    <div class="pipe-node">Delegado Shor (assina)</div>
+  </div>
+  <div class="tl">
+    <div class="tl-item">
+      <div class="tl-date">27/08/2022, 1h da noite <span class="evidence-badge ev-confirmed">ev-confirmed</span></div>
+      <div class="tl-title">Material entregue sem cadeia de custódia</div>
+      <div class="tl-desc">Quatro dias após a operação já executada, Sallorenzo ("Bruxa") envia prints e exportação integral do grupo — obtidos por um infiltrado identificado como o jornalista Lucas Mesquita, hoje assessor no governo Lula. Objetivo declarado: "sossegar o amigo" (Moraes). Nenhum registro formal de cadeia de custódia foi produzido.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">Datado 19/08 · criado 29/08 <span class="evidence-badge ev-confirmed">ev-confirmed</span></div>
+      <div class="tl-title">A fraude temporal no relatório do delegado Shor</div>
+      <div class="tl-desc">O relatório que formalmente sustentava a operação tem data de 19/08/2022 — antes até da própria operação (23/08), o que já tornava a cronologia oficial logicamente impossível. Perícia forense independente contratada por A Investigação (revelada 08/10/2025) apurou que os metadados de criação do arquivo correspondem a 29/08/2022 — o mesmo dia em que Moraes levantou o sigilo do processo.</div>
+    </div>
+  </div>
+  <div class="pullquote">
+    "Sossegar o amigo."
+    <cite>— objetivo declarado da entrega de material sem cadeia de custódia, 27/08/2022</cite>
+  </div>
+</section>
+
+<section class="section" id="melek">
+  <div class="section-title">03 — Efeito colateral: o juiz Melek</div>
+  <p style="color:var(--dim);margin-bottom:16px;">O mesmo fluxo de mensagens que buscava incriminar os empresários também levantou dados sobre o juiz do Trabalho Marlos Melek, integrante do mesmo grupo. Um ano depois, o CNJ o afastou cautelarmente por 9 meses — pela conduta de reagir com emoji a mensagens no grupo. O próprio relator, Salomão, registrou nos autos que a conduta era "de menor importância". Em junho de 2024, censura (sanção mais branda) e retorno imediato.</p>
+</section>
+
+<section class="section" id="desfecho">
+  <div class="section-title">04 — O desfecho seletivo</div>
+  <table>
+    <thead><tr><th>Alvo</th><th>Desfecho</th></tr></thead>
+    <tbody>
+      <tr><td>6 dos 8 empresários</td><td>Arquivados cerca de 1 ano depois, sem provas reconhecidas pelo próprio relator</td></tr>
+      <tr><td>Meyer Nigri</td><td>Mantido — vínculo alegado com Bolsonaro na disseminação de mensagens</td></tr>
+      <tr><td>Luciano Hang</td><td>Redes bloqueadas por mais de 2 anos; liberadas set/2024 sob alegação de "análise pendente" de celular</td></tr>
+      <tr><td>Letícia Sallorenzo (ação contra jornalistas)</td><td>Arquivada por Moraes em jan/2026, por falta de indícios</td></tr>
+    </tbody>
+  </table>
+  <div class="counter"><b>Contraponto obrigatório:</b> o mesmo relator que concentra o padrão de chokepoint judicial arquivou a ação de Sallorenzo contra os jornalistas que revelaram este caso — registrado com o mesmo rigor aplicado aos abusos.</div>
+</section>
+
+<section class="section" id="padroes">
+  <div class="section-title">05 — Padrões aplicados</div>
+  <table>
+    <thead><tr><th>Padrão</th><th>Aplicação neste capítulo</th></tr></thead>
+    <tbody>
+      <tr><td><span class="pattern-tag">P01</span></td><td>Anulação/fabricação processual: prova formal produzida a posteriori para preencher uma decisão já tomada.</td></tr>
+      <tr><td><span class="pattern-tag">P03</span></td><td>Captura judicial de emergência: operação executada sem lastro investigativo prévio documentado.</td></tr>
+      <tr><td><span class="pattern-tag">P10</span></td><td>Infraestrutura compartilhada: mesma arquitetura informal (gabinete → assessor → colaboradora → infiltrado) reaplicada de alvos do 8/1 para financiadores empresariais opostos.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+</main>
+
+<footer id="fontes">
+  <div class="cc0">CC0 1.0 · Domínio Público · Eixo Selva</div>
+  <span>Fontes: A Investigação · Public (Michael Shellenberger) · Civilization Works</span><br>
+  <span>Jornalistas: David Ágape, Eli Vieira — origem da série: <a href="https://www.ainvestigacao.com/" target="_blank">ainvestigacao.com</a></span><br>
+  <span>Parte da série Vaza Toga (4/5) · lawfare-timeline · Compilado agosto/2026</span>
+</footer>
+
+<div id="gotop">↑</div>
+<script>
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.navbar a');
+const gotop = document.getElementById('gotop');
+const obs = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      navLinks.forEach(a=>a.classList.remove('active'));
+      const link = document.querySelector(`.navbar a[href="#${e.target.id}"]`);
+      if(link) link.classList.add('active');
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+sections.forEach(s=>obs.observe(s));
+window.addEventListener('scroll',()=>{gotop.classList.toggle('show', window.scrollY > 600);});
+gotop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+</script>
+</body>
+</html>

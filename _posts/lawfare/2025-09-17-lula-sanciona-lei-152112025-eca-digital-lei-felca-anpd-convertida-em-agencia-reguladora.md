@@ -4,7 +4,7 @@ description: "Após pressão pública gerada por vídeo viral do influenciador F
 date: 2025-09-17T12:00:00.000Z
 image:
   path: "/assets/solid/weight-scale.svg"
-tags: ["lawfare", "P10", "P05"]
+tags: ["lawfare", "p10", "p05"]
 categories: lawfare
 permalink: /posts/2025-09-17-lula-sanciona-lei-152112025-eca-digital-lei-felca-anpd-convertida-em-agencia-reguladora/
 id_corpus: "1867"

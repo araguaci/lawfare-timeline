@@ -4,7 +4,7 @@ description: "Após 4 anos de tramitação sem votação em plenário — aprova
 date: 2024-04-09T12:00:00.000Z
 image:
   path: "/assets/solid/weight-scale.svg"
-tags: ["lawfare", "P09", "P04b"]
+tags: ["lawfare", "p09", "p04b"]
 categories: lawfare
 permalink: /posts/2024-04-09-arthur-lira-arquiva-pl-26302020-pl-das-fake-news-na-camara-dos-deputados/
 id_corpus: "1865"

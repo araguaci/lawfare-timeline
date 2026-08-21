@@ -4,7 +4,7 @@ description: "O presidente Lula assina os Decretos 12.975/2026 (altera o Decreto
 date: 2026-05-20T12:00:00.000Z
 image:
   path: "/assets/solid/weight-scale.svg"
-tags: ["lawfare", "P03", "P05", "P10"]
+tags: ["lawfare", "p03", "p05", "p10"]
 categories: lawfare
 permalink: /posts/2026-05-20-lula-assina-decretos-129752026-e-129762026-regulamentando-o-marco-civil-da-internet-apos-d/
 id_corpus: "1868"

@@ -4,7 +4,7 @@ description: "Em julgamento conjunto dos RE 1.037.396 (Tema 987, rel. Dias Toffo
 date: 2025-06-26T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P03"]
+tags: ["stf", "p03"]
 categories: stf
 permalink: /posts/2025-06-26-stf-declara-inconstitucionalidade-parcial-e-progressiva-do-art-19-do-marco-civil-da-intern/
 id_corpus: "1866"

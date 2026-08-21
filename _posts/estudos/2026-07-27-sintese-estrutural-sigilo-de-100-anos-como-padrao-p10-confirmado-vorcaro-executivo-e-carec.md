@@ -5,7 +5,7 @@ title: "T-1765 · Síntese estrutural: sigilo de 100 anos como padrão P10 confi
 description: "Análise editorial consolidando dois casos independentes de sigilo de 100 anos sobre registros de visitação/entrada a figuras centrais de escândalos financeir..."
 date: 2026-07-27T12:00:00-03:00
 image:
-  path: "/assets/solid/book-open.svg"
+  path: "/assets/img/t1765-sigilo-100-anos-p10-xarticle-hero.webp"
 tags: ["estudo", "lawfare", "p10", "p06"]
 categories: estudos
 mermaid: false

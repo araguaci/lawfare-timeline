@@ -13,7 +13,7 @@ Este diretório concentra **dados tabulares do corpus editorial** e **metadados 
 | Track | Último confirmado | Próximo livre | Fonte |
 |-------|-------------------|---------------|-------|
 | **Main** | **1888** | **1889** | `lawfare.json` |
-| **Temático (T-)** | **T-254** | **T-255** | `claude.ai-corpus-ids-sync.json` |
+| **Temático (T-)** | **T-262** | **T-263** | `claude.ai-corpus-ids-sync.json` |
 | **Dragão e a Onça** | 132 main + 19 temáticos | — | `dragao-onca.json` + `_posts/dragao-onca/` (151 posts) |
 
 - **`lawfare.json`:** **1849** assuntos · max ID **1888** (gap intencional **1820** → **T-248**)
@@ -36,6 +36,7 @@ _data/
 ├── lawfare-unified-corpus.json        Entradas unificadas (id_corpus, fontes_verificadas)
 ├── dragao-onca.json                   Export série (124 main + 18 temáticos)
 ├── export-vazatoga.json               Export série Vaza Toga 1–5 (_posts + IDs do corpus)
+├── vazatoga_thematic_order.yml        Ordem T-255→T-262 no hub /vazatoga/
 ├── dragao_onca_thematic_order.yml     Ordem temática hub /dragao-onca/
 ├── precedentes-republica.json         Sidecar PREC-AAAA-NN (1890–1930)
 ├── precedentes-pos-1990.json          Sidecar pos-1990 (PREC-1997-05)
@@ -114,7 +115,7 @@ Fonte de verdade do **main track**. Cada `assunto` tem:
 Mapa operacional entre sessões editoriais e o repo:
 
 - `tracks.main` — batches confirmados, `last_confirmed`, `next_available`
-- `tracks.thematic` — entradas T-100+, capítulos Dragão T-228–T-246; estudos **T-248–T-254** (mislabels T-1512/1765/1766 fora do registry)
+- `tracks.thematic` — entradas T-100+, capítulos Dragão T-228–T-246; estudos **T-248–T-254**; hub Vaza Toga **T-255–T-262** (mislabels T-1512/1765/1766 fora do registry)
 - `sync_status` — contadores e fila
 - `session_log` — histórico de merges
 
@@ -131,6 +132,8 @@ Regenerar: `python scripts/export_dragao_onca_json.py`
 Export dedicado da série **Vaza Toga 1–5**. Fonte primária: `_posts/vazatoga/` + posts relacionados (jornalistas Ágape/Vieira, crise INQ 4781, índice T-207). Campo `id` / `id_corpus` = ID do corpus (`lawfare.json`); **não** reutiliza os IDs posicionais de `export-vazatoga-methodology.json`.
 
 Regenerar: `python scripts/export_vazatoga_json.py`
+
+Hub Jekyll: `/vazatoga/` (`_layouts/vazatoga.html` + `_data/vazatoga_thematic_order.yml`). Regenerar capítulos temáticos: `python scripts/gerar_artigos_vazatoga.py`
 
 ### Sidecars (`precedentes-*.json`)
 

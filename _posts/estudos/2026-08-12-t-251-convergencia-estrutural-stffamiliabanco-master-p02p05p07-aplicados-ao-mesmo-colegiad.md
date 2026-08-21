@@ -3,7 +3,7 @@ title: "T-251 · Convergência estrutural STF–família–Banco Master: P02/P05
 description: "Síntese analítica do cluster de sete entradas (id_1843–id_1849) que documenta a intersecção entre o Banco Master (liquidado em 18/11/2025, rombo estimado em …"
 date: 2026-08-12T12:00:00.000Z
 image:
-  path: "/assets/solid/book-open.svg"
+  path: "/assets/img/t251-convergencia-stf-master-xarticle-hero.webp"
 tags: ["estudos", "p02", "p05", "p07"]
 categories: estudos
 permalink: /posts/2026-08-12-t-251-convergencia-estrutural-stffamiliabanco-master-p02p05p07-aplicados-ao-mesmo-colegiad/

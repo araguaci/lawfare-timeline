@@ -5,11 +5,12 @@ title: "T-207 · Vaza Toga — Índice Corpus INQ 4781"
 description: Ponte T-108 — gabinete paralelo Moraes, mensagens TSE/STF, INQ 4781; weaponized legalism e perseguição a jornalistas.
 date: 2026-05-29T12:00:00-03:00
 image:
-  path: "/assets/solid/gavel.svg"
+  path: "/assets/img/t207-vaza-toga-corpus-bridge-xarticle-hero.webp"
 tags: ["estudo", "vazatoga", "inq4781", "moraes", "p03", "p04", "lawfare"]
 categories: lawfare
 mermaid: false
 pin: false
+permalink: /posts/2026-05-29-vaza-toga-corpus-bridge/
 ---
 
 - &nbsp;
@@ -17,13 +18,16 @@ pin: false
 
 # T-207 · Vaza Toga — índice corpus INQ 4781
 
-Entrada canônica do **registry T-108** no track temático Jekyll. O artefato HTML consolida o dossiê do inquérito 4.781 e a arquitetura de **produção paralela de provas** entre STF e TSE.
+Entrada canônica do **registry T-108** no track temático Jekyll (maio/2026). A leitura consolidada da série após os capítulos 2–5 está no hub **[/vazatoga/](/vazatoga/)** e na síntese **[T-255](/posts/2026-08-20-t-255-vaza-toga-sintese-geral/)**. Este T-207 permanece como ponte do INQ 4.781.
+
+O artefato HTML consolida o dossiê do inquérito 4.781 e a arquitetura de **produção paralela de provas** entre STF e TSE.
 
 | Camada | Recurso |
 | --- | --- |
-| Artefato HTML | [gosurf.site/vaza-toga](https://gosurf.site/vaza-toga) |
+| Hub da série (ago/2026) | [/vazatoga/](/vazatoga/) — T-255→T-262 |
+| Artefato HTML (INQ 4781) | [gosurf.site/vaza-toga](https://gosurf.site/vaza-toga) · [dossie local](/vazatoga/dossie-inq4781.html) |
 | Top 10 gosurf | [Posição #2 — mai/2026](/posts/top10-artigos-gosurf/) |
-| Categoria timeline | [vazatoga/](/categories/vazatoga/) — 8+ entradas |
+| Categoria timeline | [vazatoga/](/categories/vazatoga/) |
 
 > Mecanismo espelho: **weaponized legalism** ativo — inquérito sem prazo, relator investigado e investigador.
 

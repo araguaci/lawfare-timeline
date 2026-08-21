@@ -5,7 +5,7 @@ title: "T-248 · STF defende publicamente tramitação de 14 anos da ADI dos car
 description: "Em nota à imprensa, a assessoria do STF afirmou que o tempo de tramitação da ADI sobre cartórios da Bahia (14 anos, placar 6x0 pela inconstitucionalidade, ai..."
 date: 2026-08-03T12:00:00-03:00
 image:
-  path: "/assets/solid/book-open.svg"
+  path: "/assets/img/t248-adi-cartorios-bahia-xarticle-hero.webp"
 tags: ["estudo", "lawfare", "p04b", "p03"]
 categories: estudos
 mermaid: false

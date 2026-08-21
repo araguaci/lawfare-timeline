@@ -5,7 +5,7 @@ title: "T-226 · O Ciclo do Penduricalho"
 description: "Estudo consolidando id_1633 e id_1634 como ciclo fechado de P11 no Judiciario: restricao (mar/2026) -> liberacao parcial em plenario virtual pelos proprios b..."
 date: 2026-07-06T12:00:00-03:00
 image:
-  path: "/assets/solid/book-open.svg"
+  path: "/assets/img/t226-ciclo-penduricalho-xarticle-hero.webp"
 tags: ["estudo", "lawfare", "p11", "p03"]
 categories: estudos
 mermaid: false

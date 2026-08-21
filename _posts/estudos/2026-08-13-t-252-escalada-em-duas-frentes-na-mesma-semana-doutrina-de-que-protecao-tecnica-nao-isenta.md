@@ -3,7 +3,7 @@ title: "T-252 · Escalada em duas frentes na mesma semana: doutrina de que prote
 description: "Entre 06/08/2026 e 12/08/2026, o mesmo princípio estrutural — mecanismo de proteção técnica não isenta o Estado/operador de encontrar via de acesso equivalen…"
 date: 2026-08-13T12:00:00.000Z
 image:
-  path: "/assets/solid/book-open.svg"
+  path: "/assets/img/t252-escalada-em-duas-frentes-xarticle-hero.webp"
 tags: ["estudos", "p03", "p04b", "p02", "ev-inference"]
 categories: estudos
 permalink: /posts/2026-08-13-t-252-escalada-em-duas-frentes-na-mesma-semana-doutrina-de-que-protecao-tecnica-nao-isenta/

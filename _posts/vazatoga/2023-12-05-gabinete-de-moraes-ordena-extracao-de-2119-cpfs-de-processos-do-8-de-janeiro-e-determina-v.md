@@ -4,7 +4,7 @@ description: "Em 05/12/2023, o gabinete do ministro Alexandre de Moraes determin
 date: 2023-12-05T12:00:00.000Z
 image:
   path: "/assets/solid/shield-virus.svg"
-tags: ["P02", "P03", "P10", "vazatoga", "cnj", "stf", "8-de-janeiro", "p02", "p03", "p10", "ev-confirmed"]
+tags: ["P02", "p03", "p10", "vazatoga", "cnj", "stf", "8-de-janeiro", "p02", "p03", "p10", "ev-confirmed"]
 categories: vazatoga
 permalink: /posts/2023-12-05-gabinete-de-moraes-ordena-extracao-de-2119-cpfs-de-processos-do-8-de-janeiro-e-determina-v/
 id_corpus: "1874"

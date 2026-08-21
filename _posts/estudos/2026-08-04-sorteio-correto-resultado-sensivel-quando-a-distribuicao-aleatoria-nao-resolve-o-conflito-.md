@@ -5,7 +5,7 @@ title: "T-249 · Sorteio correto, resultado sensível: quando a distribuição a
 description: "Síntese analítica do caso Lulinha/Mendonça/Dino como estudo de caso sobre os limites do sorteio eletrônico como salvaguarda de imparcialidade quando a compos..."
 date: 2026-08-04T12:00:00-03:00
 image:
-  path: "/assets/solid/book-open.svg"
+  path: "/assets/img/t249-sorteio-correto-xarticle-hero.webp"
 tags: ["estudo", "lawfare"]
 categories: estudos
 mermaid: false

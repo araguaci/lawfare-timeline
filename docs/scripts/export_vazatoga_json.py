@@ -248,7 +248,19 @@ def source_capitulo(source_data: str) -> int | None:
     return None
 
 
-def classify(stem: str, source_data: str, id_int: int | None) -> tuple[int, str]:
+def classify(stem: str, source_data: str, id_int: int | None, timeline_id: int | None = None) -> tuple[int, str]:
+    thematic_papel = {
+        255: (0, "indice"),
+        256: (2, "sintese"),
+        257: (3, "sintese"),
+        258: (4, "sintese"),
+        259: (5, "sintese"),
+        260: (0, "indice"),
+        261: (1, "desdobramento"),
+        262: (0, "indice"),
+    }
+    if timeline_id in thematic_papel:
+        return thematic_papel[timeline_id]
     cap = source_capitulo(source_data)
     if cap is not None:
         return cap, PAPEL_POR_SOURCE[cap]
@@ -311,6 +323,11 @@ def post_to_entry(
     permalink = permalink_from(fm, path)
 
     id_int, thematic_id, track = parse_id_corpus(fm.get("id_corpus"))
+    timeline_raw = fm.get("timeline_id")
+    try:
+        timeline_id = int(timeline_raw) if timeline_raw is not None else None
+    except (TypeError, ValueError):
+        timeline_id = None
 
     lf = None
     if id_int is not None and track == "main":
@@ -321,8 +338,13 @@ def post_to_entry(
         id_int = lf["id"]
         track = "main"
 
-    cap, papel = classify(path.stem, source_data, id_int if track == "main" else None)
-    if track == "thematic":
+    cap, papel = classify(
+        path.stem,
+        source_data,
+        id_int if track == "main" else None,
+        timeline_id=timeline_id,
+    )
+    if track == "thematic" and timeline_id not in {255, 256, 257, 258, 259, 260, 261, 262}:
         papel = "indice"
         cap = 0
 
