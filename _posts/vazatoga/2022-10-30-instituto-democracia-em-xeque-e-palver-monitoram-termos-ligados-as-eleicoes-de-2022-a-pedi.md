@@ -4,7 +4,7 @@ description: "Mensagens reveladas na Vaza Toga 3 mostram integrante do Instituto
 date: 2022-10-30T12:00:00.000Z
 image:
   path: "/assets/solid/shield-virus.svg"
-tags: ["P10", "vazatoga", "palver", "democracia-em-xeque", "eleicoes-2022", "p10", "ev-confirmed"]
+tags: ["vazatoga", "palver", "democracia-em-xeque", "eleicoes-2022", "p10", "ev-confirmed"]
 categories: vazatoga
 permalink: /posts/2022-10-30-instituto-democracia-em-xeque-e-palver-monitoram-termos-ligados-as-eleicoes-de-2022-a-pedi/
 id_corpus: "1887"
