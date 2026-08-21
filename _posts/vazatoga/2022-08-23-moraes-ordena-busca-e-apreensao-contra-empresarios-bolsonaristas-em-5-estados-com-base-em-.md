@@ -4,7 +4,7 @@ description: "Em 23/08/2022, dez dias antes do primeiro debate presidencial, a P
 date: 2022-08-23T12:00:00.000Z
 image:
   path: "/assets/solid/shield-virus.svg"
-tags: ["P01", "p04", "vazatoga", "empresarios-bolsonaristas", "8-de-janeiro-precedente", "eleicoes-2022", "p01", "p04", "ev-confirmed"]
+tags: ["p01", "p04", "vazatoga", "empresarios-bolsonaristas", "8-de-janeiro-precedente", "eleicoes-2022", "p01", "p04", "ev-confirmed"]
 categories: vazatoga
 permalink: /posts/2022-08-23-moraes-ordena-busca-e-apreensao-contra-empresarios-bolsonaristas-em-5-estados-com-base-em-/
 id_corpus: "1869"

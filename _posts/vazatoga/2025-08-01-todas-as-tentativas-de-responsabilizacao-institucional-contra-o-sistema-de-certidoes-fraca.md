@@ -4,7 +4,7 @@ description: "Após as revelações da Vaza Toga 2 (04/08/2025), a maior movimen
 date: 2025-08-01T12:00:00.000Z
 image:
   path: "/assets/solid/shield-virus.svg"
-tags: ["P06", "p10", "vazatoga", "cnj", "cpi", "impeachment", "impunidade", "p06", "ev-confirmed"]
+tags: ["p06", "p10", "vazatoga", "cnj", "cpi", "impeachment", "impunidade", "p06", "ev-confirmed"]
 categories: vazatoga
 permalink: /posts/2025-08-01-todas-as-tentativas-de-responsabilizacao-institucional-contra-o-sistema-de-certidoes-fraca/
 id_corpus: "1881"

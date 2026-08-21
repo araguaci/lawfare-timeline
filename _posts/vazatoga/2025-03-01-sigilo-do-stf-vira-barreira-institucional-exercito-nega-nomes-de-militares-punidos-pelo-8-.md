@@ -4,7 +4,7 @@ description: "Em março de 2025, a Comissão Mista de Reavaliação de Informaç
 date: 2025-03-01T12:00:00.000Z
 image:
   path: "/assets/solid/shield-virus.svg"
-tags: ["P03", "p10", "vazatoga", "forcas-armadas", "transparencia", "stf", "p03", "p10", "ev-confirmed"]
+tags: ["p03", "p10", "vazatoga", "forcas-armadas", "transparencia", "stf", "p03", "p10", "ev-confirmed"]
 categories: vazatoga
 permalink: /posts/2025-03-01-sigilo-do-stf-vira-barreira-institucional-exercito-nega-nomes-de-militares-punidos-pelo-8-/
 id_corpus: "1876"

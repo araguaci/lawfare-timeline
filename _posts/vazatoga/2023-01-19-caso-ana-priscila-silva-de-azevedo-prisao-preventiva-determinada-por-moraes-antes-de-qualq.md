@@ -4,7 +4,7 @@ description: "Em 19/01/2023, enquanto Tagliaferro ainda listava nomes com certid
 date: 2023-01-19T12:00:00.000Z
 image:
   path: "/assets/solid/shield-virus.svg"
-tags: ["P01", "vazatoga", "certidoes", "contraexemplo", "p01", "ev-confirmed"]
+tags: ["p01", "vazatoga", "certidoes", "contraexemplo", "p01", "ev-confirmed"]
 categories: vazatoga
 permalink: /posts/2023-01-19-caso-ana-priscila-silva-de-azevedo-prisao-preventiva-determinada-por-moraes-antes-de-qualq/
 id_corpus: "1880"

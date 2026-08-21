@@ -4,7 +4,7 @@ description: "Em 02/03/2026, Moraes rejeitou todos os pedidos pendentes da defes
 date: 2026-03-02T12:00:00.000Z
 image:
   path: "/assets/solid/shield-virus.svg"
-tags: ["P03", "vazatoga", "tagliaferro", "devido-processo", "p03", "ev-confirmed"]
+tags: ["p03", "vazatoga", "tagliaferro", "devido-processo", "p03", "ev-confirmed"]
 categories: vazatoga
 permalink: /posts/2026-03-02-tagliaferro-citado-por-edital-com-paradeiro-incerto-apesar-de-comparecimentos-publicos-aud/
 id_corpus: "1882"

@@ -4,7 +4,7 @@ description: "Em 13/01/2023, às 16h53, Tagliaferro escreveu ao grupo 'Audiênci
 date: 2023-01-13T12:00:00.000Z
 image:
   path: "/assets/solid/shield-virus.svg"
-tags: ["P01", "p10", "vazatoga", "certidoes", "erro-judiciario", "idosos", "p01", "p10", "ev-confirmed"]
+tags: ["p01", "p10", "vazatoga", "certidoes", "erro-judiciario", "idosos", "p01", "p10", "ev-confirmed"]
 categories: vazatoga
 permalink: /posts/2023-01-13-caso-vildete-da-silva-guardia-erro-de-identidade-em-certidao-corrigido-em-3-minutos-mas-pr/
 id_corpus: "1879"

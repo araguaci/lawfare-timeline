@@ -4,7 +4,7 @@ description: "Mensagens de 08/11/2022, obtidas com exclusividade por Revista Oes
 date: 2022-11-01T12:00:00.000Z
 image:
   path: "/assets/solid/shield-virus.svg"
-tags: ["P02", "p10", "vazatoga", "caminhoneiros", "eleicoes-2022", "p02", "p10", "ev-confirmed"]
+tags: ["p02", "p10", "vazatoga", "caminhoneiros", "eleicoes-2022", "p02", "p10", "ev-confirmed"]
 categories: vazatoga
 permalink: /posts/2022-11-01-gabinete-paralelo-aciona-tenente-coronel-da-pm-ba-para-identificar-e-multar-caminhoneiros-/
 id_corpus: "1884"

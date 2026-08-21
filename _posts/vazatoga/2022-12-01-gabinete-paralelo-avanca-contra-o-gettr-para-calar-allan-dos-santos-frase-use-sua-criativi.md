@@ -4,7 +4,7 @@ description: "A reportagem 'A fraude exposta' (Revista Oeste, Edição 285) reve
 date: 2022-12-01T12:00:00.000Z
 image:
   path: "/assets/solid/shield-virus.svg"
-tags: ["P04", "vazatoga", "gettr", "allan-dos-santos", "liberdade-de-imprensa", "p04", "ev-confirmed"]
+tags: ["p04", "vazatoga", "gettr", "allan-dos-santos", "liberdade-de-imprensa", "p04", "ev-confirmed"]
 categories: vazatoga
 permalink: /posts/2022-12-01-gabinete-paralelo-avanca-contra-o-gettr-para-calar-allan-dos-santos-frase-use-sua-criativi/
 id_corpus: "1885"

@@ -4,7 +4,7 @@ description: "Em 19/04/2023 o deputado estadual Leandro de Jesus (PL) protocolou
 date: 2023-04-20T12:00:00.000Z
 image:
   path: "/assets/solid/shield-virus.svg"
-tags: ["P02", "p06", "vazatoga", "flavio-dino", "stf", "8-de-janeiro", "p02", "p06", "ev-confirmed"]
+tags: ["p02", "p06", "vazatoga", "flavio-dino", "stf", "8-de-janeiro", "p02", "p06", "ev-confirmed"]
 categories: vazatoga
 permalink: /posts/2023-04-20-cpf-de-flavio-dino-entao-ministro-da-justica-extraido-para-a-varredura-via-pet-11228-sigil/
 id_corpus: "1875"

@@ -4,7 +4,7 @@ description: "Conversas de WhatsApp entre Eduardo Tagliaferro (então chefe da A
 date: 2022-08-27T12:00:00.000Z
 image:
   path: "/assets/solid/shield-virus.svg"
-tags: ["P01", "p03", "vazatoga", "cadeia-de-custodia", "fraude-processual", "p01", "p03", "ev-confirmed"]
+tags: ["p01", "p03", "vazatoga", "cadeia-de-custodia", "fraude-processual", "p01", "p03", "ev-confirmed"]
 categories: vazatoga
 permalink: /posts/2022-08-27-fabricacao-retroativa-de-provas-infiltrado-colaboradora-informal-e-delegado-produzem-relat/
 id_corpus: "1870"
