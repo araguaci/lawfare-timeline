@@ -4,7 +4,7 @@ description: "Em 07/11/2023, o procurador Marcelo Rocha Monteiro teve perfil blo
 date: 2023-11-07T12:00:00.000Z
 image:
   path: "/assets/solid/skull.svg"
-tags: ["escandalos", "p04", "p06", "p10"]
+tags: ["escandalos", "p04", "p06", "p10", "inq4781"]
 categories: escandalos
 permalink: /posts/2023-11-07-procurador-marcelo-rocha-monteiro-bloqueado-por-discurso-proferido-14-meses-antes/
 id_corpus: "1781"

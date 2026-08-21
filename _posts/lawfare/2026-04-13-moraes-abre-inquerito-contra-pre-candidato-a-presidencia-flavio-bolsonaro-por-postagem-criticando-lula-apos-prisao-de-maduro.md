@@ -4,7 +4,7 @@ description: "Alexandre de Moraes determina à PF abertura de inquérito contra 
 date: 2026-04-13T12:00:00-03:00
 image:
   path: "/assets/solid/gavel.svg"
-tags: ['lawfare', 'stf', 'alexandre-de-moraes', 'censura', 'liberdade de expressão', 'eleicoes', 'bolsonaro', 'perseguicao-politica']
+tags: ['lawfare', 'stf', 'alexandre-de-moraes', 'censura', 'liberdade de expressão', 'eleicoes', 'bolsonaro', 'perseguicao-politica', 'inq4781']
 categories: lawfare
 permalink: /posts/moraes-abre-inquerito-contra-pre-candidato-a-presidencia-flavio-bolsonaro-por-postagem-criticando-lula-apos-prisao-de-maduro/
 ---

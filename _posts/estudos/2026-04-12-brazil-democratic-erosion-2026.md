@@ -4,7 +4,7 @@ description: This report is not based on political claims or opposition narrativ
 date: 2026-04-12T12:00:00-03:00
 image:
   path: "/assets/img/estudos/brazil-democratic-erosion-2026.webp"
-tags: ["brasil", "censura", "crime", "justica", "lawfare", "report", "timeline"]
+tags: ["brasil", "censura", "crime", "justica", "lawfare", "report", "timeline", "inq4781"]
 categories: estudos
 mermaid: false
 pin: false

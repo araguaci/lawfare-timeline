@@ -4,7 +4,7 @@ description: "Guia sem jargão para navegar o corpus: por que o projeto existe, 
 date: 2026-07-21T10:00:00-03:00
 image:
   path: "/assets/img/como-ler-lawfare-timeline-guia-brasileiro-xarticle-hero.webp"
-tags: ["lawfare", "estudos", "diagnostico", "censura", "guia", "corrupcao", "justica", "impunidade"]
+tags: ["lawfare", "estudos", "diagnostico", "censura", "guia", "corrupcao", "justica", "impunidade", "inq4781"]
 categories: estudos
 mermaid: false
 pin: true

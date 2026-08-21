@@ -4,7 +4,7 @@ description: "P1 a P12 — da anulação processual ao loop de extração perpé
 date: 2026-05-05T12:00:00.000Z
 image:
   path: "/assets/img/og-padroes-sistemicos-dashboard.webp"
-tags: [operacoes, corrupcao, impunidade, lawfare, investigacao-criminal, lavagem-de-dinheiro, pcc, crime-organizado, bancos, coaf, fintechs, carbono, narco-fluxo, compliance-zero, "p01", "p02", "p03", "p04", "p05", "p06", "p07", "p08", "p09", "p10", "p11", "p12"]
+tags: [operacoes, corrupcao, impunidade, lawfare, investigacao-criminal, lavagem-de-dinheiro, pcc, crime-organizado, bancos, coaf, fintechs, carbono, narco-fluxo, compliance-zero, "p01", "p02", "p03", "p04", "p05", "p06", "p07", "p08", "p09", "p10", "p11", "p12", "inq4781"]
 categories: estudos
 mermaid: false
 pin: true

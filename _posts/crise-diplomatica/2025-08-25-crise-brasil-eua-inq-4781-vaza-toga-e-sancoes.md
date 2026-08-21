@@ -5,7 +5,7 @@ date: 2025-08-25T20:32:27.741Z
 preview: ""
 image:
   path: assets/img/crise-brasil-eua-inq-4781-vaza-toga-e-sancoes.png
-tags: [soberania, 'big-techs', 'liberdade de expressão', 'plataformas', 'secao301', vazatoga]
+tags: [soberania, 'big-techs', 'liberdade de expressão', 'plataformas', 'secao301', vazatoga, 'inq4781']
 categories: crise-diplomatica
 ---
 

@@ -4,7 +4,7 @@ description: "Análise comparativa do modelo SPLC aplicado ao Brasil: seis funç
 date: 2026-04-23T12:00:00-03:00
 image:
   path: "/assets/img/estudos/splc-modelo-brasil.webp"
-tags: ["brasa", "lawfare", "p02", "p03", "p04", "p05", "p07", "p08"]
+tags: ["brasa", "lawfare", "p02", "p03", "p04", "p05", "p07", "p08", "inq4781"]
 categories: estudos
 mermaid: false
 pin: false

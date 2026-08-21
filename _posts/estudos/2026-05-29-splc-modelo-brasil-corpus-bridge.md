@@ -6,7 +6,7 @@ description: Ponte T-129 — transferência estrutural SPLC→Brasil, weaponiza�
 date: 2026-05-29T12:00:00-03:00
 image:
   path: "/assets/img/estudos/splc-modelo-brasil.webp"
-tags: ["estudo", "splc", "weaponization", "p04", "netlab", "lawfare"]
+tags: ["estudo", "splc", "weaponization", "p04", "netlab", "lawfare", "inq4781"]
 categories: lawfare
 mermaid: false
 pin: false

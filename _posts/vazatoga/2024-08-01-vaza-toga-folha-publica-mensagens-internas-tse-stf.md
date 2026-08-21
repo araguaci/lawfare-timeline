@@ -4,7 +4,7 @@ description: "Folha de S.Paulo e Glenn Greenwald publicam mensagens de WhatsApp 
 date: 2024-08-01T12:00:00.000Z
 image:
   path: "/assets/solid/newspaper.svg"
-tags: [vazatoga, alexandre-de-moraes, stf, tse, lawfare, imprensa, 'liberdade de expressão', gravidade-alta]
+tags: [vazatoga, alexandre-de-moraes, stf, tse, lawfare, imprensa, 'liberdade de expressão', gravidade-alta, inq4781]
 categories: vazatoga
 timeline_id: 153
 source_data: lawfare-export-timeline-15abr2026.json

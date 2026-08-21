@@ -16,15 +16,15 @@ const include = [
   '/index.html',
   '/404.html',
   
-    '/dragao-onca/',
-  
     '/vazatoga/',
+  
+    '/lawfare/',
   
     '/crise-diplomatica/',
   
-    '/estudos/',
+    '/dragao-onca/',
   
-    '/lawfare/',
+    '/estudos/',
   
     '/stf/',
   

@@ -6,7 +6,7 @@ description: "Em 25/07/2026, a convenção nacional do PL que oficializou a pré
 date: 2026-07-25T12:00:00-03:00
 image:
   path: "/assets/img/t247-video-ia-stf-tse-xarticle-hero.webp"
-tags: ["estudo", "lawfare", "p03", "p04", "p04b", "p10"]
+tags: ["estudo", "lawfare", "p03", "p04", "p04b", "p10", "inq4781"]
 categories: estudos
 mermaid: false
 pin: false

@@ -4,7 +4,7 @@ description: "Em 02/01/2023, foi determinado o bloqueio do perfil do jornalista 
 date: 2023-01-02T12:00:00.000Z
 image:
   path: "/assets/solid/skull.svg"
-tags: ["escandalos", "p04", "p10"]
+tags: ["escandalos", "p04", "p10", "inq4781"]
 categories: escandalos
 permalink: /posts/2023-01-02-jornalista-guilherme-fiuza-tem-perfil-bloqueado-no-ambito-do-inq-4781df/
 id_corpus: "1779"

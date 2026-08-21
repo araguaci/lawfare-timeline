@@ -4,7 +4,7 @@ description: "Por unanimidade (4×0: Moraes, Zanin, Cármen Lúcia, Dino), a Pri
 date: 2026-06-16T12:00:00.000Z
 image:
   path: "/assets/solid/skull.svg"
-tags: ["escandalos", "p02", "p03", "p12-b", "lawfare"]
+tags: ["escandalos", "p02", "p03", "p12-b", "lawfare", "inq4781"]
 categories: lawfare
 permalink: /posts/2026-06-16-primeira-turma-condena-eduardo-bolsonaro-a-4-anos-e-2-meses-por-coacao-no-curso-do-process/
 id_corpus: "1614"

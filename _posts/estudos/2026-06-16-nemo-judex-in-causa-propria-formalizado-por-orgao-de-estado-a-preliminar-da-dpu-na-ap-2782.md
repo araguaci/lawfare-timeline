@@ -6,7 +6,7 @@ description: "No julgamento da AP 2782 (16/06/2026), a Defensoria Pública da Un
 date: 2026-06-16T12:00:00-03:00
 image:
   path: "/assets/solid/book-open.svg"
-tags: ["estudo", "lawfare", "p02", "p03"]
+tags: ["estudo", "lawfare", "p02", "p03", "inq4781"]
 categories: lawfare
 mermaid: false
 pin: false

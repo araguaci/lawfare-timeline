@@ -4,7 +4,7 @@ description: "Em 22/10/2022, no âmbito do INQ 4.781/DF, foi determinado o bloqu
 date: 2022-10-22T12:00:00.000Z
 image:
   path: "/assets/solid/skull.svg"
-tags: ["escandalos", "p04", "p10"]
+tags: ["escandalos", "p04", "p10", "inq4781"]
 categories: escandalos
 permalink: /posts/2022-10-22-cristiane-brasil-tem-perfil-bloqueado-no-mesmo-dia-da-operacao-da-pf-contra-o-pai-roberto-/
 id_corpus: "1778"

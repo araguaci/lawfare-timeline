@@ -4,7 +4,7 @@ description: "O então presidente do STF, Dias Toffoli, instaurou de ofício o I
 date: 2019-03-14T12:00:00.000Z
 image:
   path: "/assets/solid/skull.svg"
-tags: ["escandalos", "p02", "p03", "p10"]
+tags: ["escandalos", "p02", "p03", "p10", "inq4781"]
 categories: escandalos
 permalink: /posts/2019-03-14-toffoli-abre-de-oficio-o-inq-4781df-apos-ofensas-de-procurador-da-lava-jato-ao-judiciario/
 id_corpus: "1777"

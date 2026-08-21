@@ -5,7 +5,7 @@ date: 2025-08-25T19:53:48.208Z
 preview: ""
 image:
   path: "/assets/solid/globe.svg"
-tags: [soberania, 'big-techs', 'liberdade de expressão', 'plataformas', 'secao301']
+tags: [soberania, 'big-techs', 'liberdade de expressão', 'plataformas', 'secao301', 'inq4781']
 categories: crise-diplomatica
 ---
 

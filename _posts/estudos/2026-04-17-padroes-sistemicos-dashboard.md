@@ -4,7 +4,7 @@ description: Análise transversal de 12 padrões confirmados em 25 anos de opera
 date: 2026-07-18T22:22:22-22:22
 image:
   path: "/assets/img/estudos/padroes_sistemicos_dashboard_hero_xarticle.webp"
-tags: ["dashboard", "operacao", "corrupcao", "pcc", "diagnostico", "trafico", "brasil"]
+tags: ["dashboard", "operacao", "corrupcao", "pcc", "diagnostico", "trafico", "brasil", "inq4781"]
 categories: estudos
 mermaid: false
 pin: false

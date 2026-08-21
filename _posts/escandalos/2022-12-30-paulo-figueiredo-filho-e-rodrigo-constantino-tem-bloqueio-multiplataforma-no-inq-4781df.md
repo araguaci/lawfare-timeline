@@ -4,7 +4,7 @@ description: "Em 30/12/2022, foi determinado bloqueio multiplataforma (X, YouTub
 date: 2022-12-30T12:00:00.000Z
 image:
   path: "/assets/solid/skull.svg"
-tags: ["escandalos", "p04", "p10"]
+tags: ["escandalos", "p04", "p10", "inq4781"]
 categories: escandalos
 permalink: /posts/2022-12-30-paulo-figueiredo-filho-e-rodrigo-constantino-tem-bloqueio-multiplataforma-no-inq-4781df/
 id_corpus: "1780"
