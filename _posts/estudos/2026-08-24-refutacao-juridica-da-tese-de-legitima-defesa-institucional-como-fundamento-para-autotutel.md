@@ -5,7 +5,7 @@ title: "T-266 · Refutação jurídica da tese de 'legítima defesa instituciona
 description: "Em publicação no X, o professor de Economia e Direito Fábio Talhari argumentou que não existe, na Constituição Federal de 1988 nem no Código Penal, instituto..."
 date: 2026-08-24T12:00:00-03:00
 image:
-  path: "/assets/solid/book-open.svg"
+  path: "/assets/img/t266-legitima-defesa-institucional-xarticle-hero.webp"
 tags: ["estudo", "lawfare", "p03"]
 categories: estudos
 mermaid: false

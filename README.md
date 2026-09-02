@@ -528,6 +528,12 @@ Sessão 2026-09-01 — hero T-263 (1200×675, 16:9, share card X):
 Hero image for an X.com Article titled "A ARESTA". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "A ARESTA" in off-white (fully readable), gold subtitle "T-263" underneath, tiny monospace "MCD-05/2024 · P04b". Visual motif: a network diagram of faint dashed lines connecting unlabeled nodes dissolving into courthouse colonnades and a stamped audit folder (no readable names, no logos, no brand marks, no real faces, no foundation logos, no flags). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
 ```
 
+Sessão 2026-09-02 — hero T-266 (1200×675, 16:9, share card X):
+
+```
+Hero image for an X.com Article titled "ART. 25". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "ART. 25" in off-white (fully readable), gold subtitle "T-266" underneath, tiny monospace "CF/88 · Título V · INQ 4781". Visual motif: an open 1988 Brazilian constitution booklet and a faded criminal code page dissolving into courthouse colonnades and a stamped folder marked AUTOTUTELA (no readable names, no logos, no brand marks, no real faces, no party logos). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
+```
+
 ---
 
 **Mantenedor:** Artes do Sul / AI Nativo Brasil · [@araguaci](https://github.com/araguaci) · Bombinhas/SC  
