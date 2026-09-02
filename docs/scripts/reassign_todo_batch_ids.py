@@ -16,12 +16,9 @@ SYNC = ROOT / "_data" / "claude.ai-corpus-ids-sync.json"
 
 # Ordem de merge (arquivo relativo a TODO ou HOLD)
 MERGE_ORDER: list[tuple[str, list[int] | None]] = [
-    ("lawfare-batch-1827-1828-coronel-pcc-visto-embaixadora.json", [1827, 1828]),
-    ("lawfare-batch-1829-1830-maridt-toffoli-ratinho-parana.json", [1829, 1830]),
-    ("lawfare-batch-hardt-argentina-PENDENTE_SYNC.json", None),
-    ("lawfare-batch-lulinha-sorteio-1763-T247.json", None),
-    ("lawfare-batch-1768-1769-jornalista-juizas-aeroporto.json", None),
-    ("lawfare-batch-erro-judiciario-pantera-severino-gugu-PENDENTE.json", None),
+    ("lawfare-batch-radiolao-machado-1889-1897.json", [1889, 1890, 1891, 1892, 1893, 1894, 1895, 1896, 1897]),
+    ("lawfare-batch-auditoria-mapa-conexoes-T263.json", None),
+    ("lawfare-batch-inq4781-cronologia-1889-1898.json", None),
 ]
 
 
@@ -57,6 +54,14 @@ def parse_thematic_num(val) -> int | None:
     return None
 
 
+def coerce_main_id(val):
+    if isinstance(val, int):
+        return val
+    if isinstance(val, str) and val.isdigit():
+        return int(val)
+    return val
+
+
 def batch_slices(raw: dict | list) -> tuple[list[dict], list[dict], dict | list]:
     """Retorna (main_items, thematic_items, raw) para escrita."""
     if isinstance(raw, list):
@@ -71,6 +76,16 @@ def batch_slices(raw: dict | list) -> tuple[list[dict], list[dict], dict | list]
         main.extend(raw["entries"])
     if isinstance(raw.get("entradas"), list):
         main.extend(raw["entradas"])
+    if isinstance(raw.get("assuntos"), list):
+        for item in raw["assuntos"]:
+            if not isinstance(item, dict):
+                continue
+            if item.get("id") is None and item.get("id_corpus"):
+                item["id"] = item["id_corpus"]
+            if parse_thematic_num(item.get("id") or item.get("id_corpus")) is not None:
+                thematic.append(item)
+            else:
+                main.append(item)
     if isinstance(raw.get("entry"), dict):
         main.append(raw["entry"])
     if isinstance(raw.get("thematic"), list):
@@ -93,10 +108,15 @@ def save_items(path: Path, items: list[dict], original: dict | list) -> None:
         out["entry"] = items[0] if len(items) == 1 else items
         path.write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         return
-    if isinstance(original, dict) and ("entries" in original or "entradas" in original):
+    if isinstance(original, dict) and (
+        "entries" in original or "entradas" in original or "assuntos" in original
+    ):
         out = deepcopy(original)
-        key = "entries" if "entries" in original else "entradas"
-        out[key] = items
+        if "assuntos" in original:
+            out["assuntos"] = items
+        else:
+            key = "entries" if "entries" in original else "entradas"
+            out[key] = items
         path.write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         return
     if isinstance(original, dict) and ("main" in original or "thematic" in original):
@@ -122,8 +142,10 @@ def remap_connections(text: str, mapping: dict[int, int]) -> str:
 
 
 def apply_id_map(item: dict, id_map: dict[int, int]) -> None:
-    old = item.get("id")
-    if isinstance(old, int) and old in id_map:
+    old = coerce_main_id(item.get("id"))
+    if isinstance(item.get("id"), str) and parse_thematic_num(item.get("id")) is not None:
+        pass
+    elif isinstance(old, int) and old in id_map:
         item["id"] = id_map[old]
     elif old == "__PENDENTE_SYNC__":
         pass
@@ -159,26 +181,45 @@ def main() -> None:
             continue
 
         id_map: dict[int, int] = {}
+        leftover_thematic: list[dict] = []
         if fixed_ids is not None:
             if len(fixed_ids) != len(main_items):
                 raise SystemExit(f"{rel}: esperado {len(fixed_ids)} main, tem {len(main_items)}")
             for item, nid in zip(main_items, fixed_ids):
-                old = item.get("id")
+                old = coerce_main_id(item.get("id"))
                 if isinstance(old, int) and old != nid:
                     id_map[old] = nid
                 item["id"] = nid
                 taken.add(nid)
             cursor = max(cursor, max(fixed_ids) + 1)
         else:
+            kept_main: list[dict] = []
             for item in main_items:
-                old = item.get("id")
+                cat = (
+                    item.get("category")
+                    or item.get("categoria")
+                    or item.get("tipo")
+                    or ""
+                ).lower()
+                old = coerce_main_id(item.get("id"))
+                if cat == "analise_editorial" and parse_thematic_num(item.get("id")) is None:
+                    new_t = th_cursor
+                    while new_t in th_taken:
+                        new_t += 1
+                    item["id"] = f"T-{new_t}"
+                    th_taken.add(new_t)
+                    th_cursor = new_t + 1
+                    leftover_thematic.append(item)
+                    continue
                 if is_pending_id(old):
                     nid = next_free(cursor, taken)
                     item["id"] = nid
                     taken.add(nid)
                     cursor = nid + 1
+                    kept_main.append(item)
                     continue
                 if not isinstance(old, int):
+                    kept_main.append(item)
                     continue
                 if old in taken:
                     nid = next_free(cursor, taken)
@@ -187,12 +228,23 @@ def main() -> None:
                     taken.add(nid)
                     cursor = nid + 1
                 else:
+                    item["id"] = old
                     taken.add(old)
                     cursor = max(cursor, old + 1)
+                kept_main.append(item)
+            main_items[:] = kept_main
+            thematic_items.extend(leftover_thematic)
+            items[:] = main_items + thematic_items
 
+        assigned_this_file = {
+            parse_thematic_num(it.get("id"))
+            for it in leftover_thematic
+        } if fixed_ids is None else set()
         for item in thematic_items:
             old_t = parse_thematic_num(item.get("id"))
             if old_t is None:
+                continue
+            if old_t in assigned_this_file:
                 continue
             if old_t in th_taken:
                 new_t = th_cursor
