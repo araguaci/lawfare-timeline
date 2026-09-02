@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auditoria — Mapa das Conexões Documentadas | lawfare-timeline</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#080c10;--bg2:#0d1319;--bg3:#121a22;
+  --red:#c53d4f;--red-dim:rgba(197,61,79,0.14);
+  --gold:#d4af5a;--gold-dim:rgba(212,175,90,0.12);
+  --green:#4a9f6e;--green-dim:rgba(74,159,110,0.12);
+  --blue:#4a7fa9;--blue-dim:rgba(74,127,169,0.12);
+  --text:#e8e6e1;--text2:#8b95a1;--text3:#5c6773;
+  --border:rgba(255,255,255,0.07);
+  --f:'Syne',sans-serif;--mono:'IBM Plex Mono',monospace;
+  --serif:'Crimson Pro',serif;--display:'Bebas Neue',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--serif);font-size:16px;line-height:1.65}
+::selection{background:var(--red-dim);color:#fff}
+a{color:var(--gold)}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+
+/* NAVBAR */
+nav{position:sticky;top:0;z-index:100;background:rgba(8,12,16,0.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:980px;margin:0 auto;padding:12px 24px;display:flex;gap:18px;overflow-x:auto;font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase}
+nav a{color:var(--text2);text-decoration:none;white-space:nowrap;padding:4px 0;border-bottom:2px solid transparent;transition:.2s}
+nav a.active,nav a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+/* HEADER */
+header{padding:56px 0 40px;border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+header::before{content:'';position:absolute;top:-40%;right:-10%;width:420px;height:420px;background:radial-gradient(circle,rgba(197,61,79,0.10),transparent 70%)}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.eyebrow::before{content:'▮'}
+h1{font-family:var(--display);font-size:clamp(34px,5vw,58px);letter-spacing:1px;line-height:1;color:#fff;margin-bottom:14px}
+h1 span{color:var(--red)}
+.subtitle{font-size:18px;color:var(--text2);max-width:640px;font-family:var(--serif);font-style:italic}
+.meta-row{margin-top:24px;display:flex;gap:24px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:0.5px}
+.meta-row b{color:var(--gold);font-weight:600}
+
+/* SECTIONS */
+section{padding:44px 0;border-bottom:1px solid var(--border)}
+h2{font-family:var(--f);font-weight:800;font-size:26px;color:#fff;margin-bottom:6px;display:flex;align-items:center;gap:10px}
+h2 .n{font-family:var(--display);font-size:34px;color:var(--red);opacity:0.5}
+.lede{color:var(--text2);font-size:15px;margin-bottom:24px;max-width:680px}
+h3{font-family:var(--f);font-weight:700;font-size:16px;color:var(--gold);margin:26px 0 10px;letter-spacing:0.3px}
+p{margin-bottom:14px;max-width:720px}
+ul,ol{margin:0 0 14px 20px;max-width:700px}
+li{margin-bottom:6px}
+
+/* EVIDENCE BADGES */
+.badge{display:inline-block;font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;padding:2px 8px;border-radius:3px;white-space:nowrap}
+.b-confirmed{background:var(--green-dim);color:var(--green);border:1px solid rgba(74,159,110,0.35)}
+.b-alleged{background:var(--gold-dim);color:var(--gold);border:1px solid rgba(212,175,90,0.35)}
+.b-inference{background:var(--blue-dim);color:var(--blue);border:1px solid rgba(74,127,169,0.35)}
+.b-lacuna{background:var(--red-dim);color:var(--red);border:1px solid rgba(197,61,79,0.35)}
+.b-correction{background:rgba(255,255,255,0.06);color:var(--text2);border:1px solid var(--border)}
+
+/* TABLE */
+.table-wrap{overflow-x:auto;margin:18px 0 24px;border:1px solid var(--border);border-radius:6px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:680px}
+th{font-family:var(--mono);font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--text3);text-align:left;padding:10px 14px;background:var(--bg3);border-bottom:1px solid var(--border)}
+td{padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;font-family:var(--serif)}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(255,255,255,0.015)}
+td.src{font-family:var(--mono);font-size:11.5px;color:var(--text2)}
+
+/* CARDS */
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:18px 20px;margin-bottom:14px}
+.card.alert{border-left:3px solid var(--red)}
+.card.gold{border-left:3px solid var(--gold)}
+.card-label{font-family:var(--mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--red);margin-bottom:8px}
+.card.gold .card-label{color:var(--gold)}
+
+/* SOVEREIGNTY SUMMARY BOX */
+.sov-box{background:linear-gradient(135deg,var(--bg2),var(--bg3));border:1px solid var(--gold-dim);border-radius:8px;padding:28px;position:relative;overflow:hidden}
+.sov-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.sov-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+@media(max-width:700px){.sov-grid{grid-template-columns:1fr}}
+.sov-col h4{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+.sov-no h4{color:var(--red)}
+.sov-yes h4{color:var(--green)}
+.sov-col ul{margin-left:16px}
+.sov-col li{font-size:14px;color:var(--text2)}
+
+/* REFERENCES */
+.ref-list{list-style:none;margin:0}
+.ref-list li{padding:10px 0;border-bottom:1px solid var(--border);font-size:13.5px}
+.ref-list li:last-child{border-bottom:none}
+.ref-tag{font-family:var(--mono);font-size:9.5px;color:var(--text3);text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:3px}
+.ref-list a{text-decoration:none;word-break:break-all}
+.ref-list a:hover{text-decoration:underline}
+
+/* FOOTER */
+footer{padding:32px 0 60px;text-align:center}
+.cc0{font-family:var(--mono);font-size:11px;color:var(--text3);letter-spacing:0.5px}
+.cc0 a{color:var(--text3);text-decoration:underline}
+
+/* GO TOP */
+#top-btn{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:var(--bg3);border:1px solid var(--border);color:var(--gold);font-size:18px;cursor:pointer;display:none;align-items:center;justify-content:center;z-index:99;font-family:var(--mono)}
+#top-btn.show{display:flex}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#contexto" data-sec="contexto">Contexto</a>
+    <a href="#metodologia" data-sec="metodologia">Metodologia</a>
+    <a href="#auditoria" data-sec="auditoria">Auditoria</a>
+    <a href="#correcoes" data-sec="correcoes">Correções</a>
+    <a href="#alertas" data-sec="alertas">Alertas</a>
+    <a href="#soberania" data-sec="soberania">Resumo Soberania</a>
+    <a href="#lacunas" data-sec="lacunas">Lacunas</a>
+    <a href="#referencias" data-sec="referencias">Referências</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Dossiê Público · Auditoria Evidencial</div>
+    <h1>Mapa das Conexões <span>Documentadas</span></h1>
+    <p class="subtitle">Auditoria aresta-a-aresta do infográfico "Mapa das Conexões Documentadas" (Ref. MCD-05/2024) — Judiciário, mídia, ONGs e financiadores internacionais.</p>
+    <div class="meta-row">
+      <div>Ref. original: <b>MCD-05/2024</b></div>
+      <div>Data auditoria: <b>26/08/2026</b></div>
+      <div>Padrão aplicado: <b>P04b · P09 · P10</b></div>
+      <div>Licença: <b>CC0 1.0</b></div>
+    </div>
+  </div>
+</header>
+
+<section id="contexto">
+  <div class="wrap">
+    <h2><span class="n">01</span>Contexto</h2>
+    <p class="lede">O artefato auditado é um infográfico em circulação que conecta programas oficiais anti-desinformação do STF e do TSE a uma rede de checadores de mídia, plataformas tecnológicas, ONGs de direitos humanos/segurança pública e fundações filantrópicas internacionais, com uma camada de fundo geopolítico (Rússia, China, "guerra informacional").</p>
+    <p>A tese implícita do mapa — mesmo com o disclaimer próprio de que a camada geopolítica "não indica parceria direta" — é de rede coordenada de influência externa sobre o aparato judicial-midiático brasileiro. Esta auditoria testa essa tese aresta por aresta, contra a taxonomia evidencial do corpus lawfare-timeline, e não aceita nem rejeita o mapa em bloco.</p>
+  </div>
+</section>
+
+<section id="metodologia">
+  <div class="wrap">
+    <h2><span class="n">02</span>Metodologia</h2>
+    <p class="lede">Protocolo anti-confirmation-bias: nenhuma aresta descartada por metadado de fonte (domínio, tom político) sem verificação de conteúdo específico; nenhuma aresta promovida a fato por coincidência temática.</p>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Código</th><th>Critério aplicado nesta auditoria</th></tr>
+        <tr><td><span class="badge b-confirmed">ev-confirmed</span></td><td>Fonte primária (norma, portaria, relatório institucional da própria organização, declaração pública datada) confirmando a aresta específica.</td></tr>
+        <tr><td><span class="badge b-alleged">ev-alleged</span></td><td>Indício plausível (ex.: vínculo pessoal, coincidência temática) sem confirmação institucional direta.</td></tr>
+        <tr><td><span class="badge b-inference">ev-inference</span></td><td>Padrão estrutural/estatístico agregado (ex.: estudo regional), não atribuível a um nó nomeado específico do mapa.</td></tr>
+        <tr><td><span class="badge b-lacuna">lacuna</span></td><td>Busca não retornou fonte verificável nesta sessão. Não é negação — é ausência de dado.</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="auditoria">
+  <div class="wrap">
+    <h2><span class="n">03</span>Auditoria aresta-a-aresta</h2>
+    <p class="lede">Cobertura: núcleo institucional (bloco 1), jornalismo/checagem (bloco 2), e segurança pública/direitos humanos (bloco 4). Bloco 3 (plataformas) e bloco 5 (financiadores/fundações como nós autônomos) não auditados nesta rodada.</p>
+
+    <h3>Núcleo institucional</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Aresta</th><th>Status</th><th>Fonte</th></tr>
+        <tr><td>PCD (STF) ↔ TSE ↔ checadores (incl. Lupa)</td><td><span class="badge b-confirmed">confirmed</span></td><td class="src">Lançamento 18/05/2022, 35 instituições — Agência Lupa / Lente #56</td></tr>
+        <tr><td>PPED (TSE) — programa permanente</td><td><span class="badge b-confirmed">confirmed</span></td><td class="src">Portaria-TSE nº 510/2021; 150+ parceiros — tse.jus.br</td></tr>
+      </table>
+    </div>
+
+    <h3>Jornalismo / checagem</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Aresta</th><th>Status</th><th>Fonte</th></tr>
+        <tr><td>Agência Pública ↔ Ford Foundation, Open Society Foundations, Oak Foundation, Fund. Betty e Jacob Lafer</td><td><span class="badge b-confirmed">confirmed</span></td><td class="src">Financiadores nomeados pela própria organização (Wikipedia, citando a Pública) — corroborar com relatório anual próprio</td></tr>
+        <tr><td>ABRAJI ↔ Knight Center for Journalism in the Americas / Univ. Texas Austin</td><td><span class="badge b-confirmed">confirmed</span></td><td class="src">Vínculo <b>fundacional</b> — seminário de origem da ABRAJI organizado pelo Knight Center, dirigido por Rosental Alves</td></tr>
+        <tr><td>ABRAJI ↔ Meta (Facebook Journalism Program)</td><td><span class="badge b-confirmed">confirmed</span></td><td class="src">Patrocínio direto do 15º Congresso (2020) — boletim oficial ABRAJI</td></tr>
+        <tr><td>Comprova ↔ Google (GNI)</td><td><span class="badge b-correction">correção</span></td><td class="src">GNI é programa global (US$300M, ~60 parceiros incl. Grupo Globo); nenhuma evidência de repasse direto ao Comprova. Ver seção Correções.</td></tr>
+        <tr><td>US Embassy Brasil ↔ checagem de fatos (linha de edital 2024)</td><td><span class="badge b-confirmed">confirmed</span></td><td class="src">Edital público "Expand Brazilians' Access to Fact-Based Reporting to Counter Misinformation" — Small Grants Program 2024</td></tr>
+      </table>
+    </div>
+
+    <h3>Segurança pública / direitos humanos</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Aresta</th><th>Status</th><th>Fonte</th></tr>
+        <tr><td>Instituto Igarapé ↔ Open Society Foundations</td><td><span class="badge b-confirmed">confirmed</span></td><td class="src">Relatório Anual 2024 do próprio Igarapé — parceria declarada no I Fórum Brasileiro de Finanças Climáticas (fev/2024)</td></tr>
+        <tr><td>Instituto Igarapé ↔ Fundação Rockefeller</td><td><span class="badge b-confirmed">confirmed</span></td><td class="src">Relatório Anual 2024 — encontro estratégico no Bellagio Center (mai/2024)</td></tr>
+        <tr><td>Instituto Igarapé ↔ Ministério da Justiça / Polícia Federal / Senasp-Senad</td><td><span class="badge b-confirmed">confirmed — achado adicional</span></td><td class="src">Relatório Anual 2024 — acordo de cooperação formal com o Estado brasileiro, não capturado pelo mapa original</td></tr>
+        <tr><td>Conectas ↔ Open Society Foundations</td><td><span class="badge b-alleged">alleged</span></td><td class="src">Vínculo pessoal (ex-diretora executiva é fellow da OSF) — não é financiamento institucional confirmado</td></tr>
+        <tr><td>IDDD, ISA, IBCCRIM, Instituto Palavra Aberta, Instituto Sou da Paz, Coalizão Brasileira pelo Fim da Violência contra Crianças e Adolescentes, Fórum Brasileiro de Segurança Pública ↔ qualquer financiador do mapa</td><td><span class="badge b-lacuna">lacuna</span></td><td class="src">Sem fonte primária localizada nesta sessão — ver Lacunas</td></tr>
+      </table>
+    </div>
+
+    <h3>Padrão estrutural regional (não é aresta específica)</h3>
+    <div class="card gold">
+      <div class="card-label">ev-inference</div>
+      <p style="margin-bottom:0">Estudo do Reuters Institute (via Knight Center), sobre 40 veículos independentes latino-americanos financiados por doadores estrangeiros, encontrou que <b>26 dos 40</b> receberam subsídios da OSF e <b>13 dos 40</b> da Fundação Ford. É um dado estatístico agregado e regional — confirma um padrão de concentração de financiadores, mas não confirma nenhuma aresta nomeada específica do mapa. Vai para <code>analise</code>, nunca para <code>summary</code> de uma entrada isolada.</p>
+    </div>
+  </div>
+</section>
+
+<section id="correcoes">
+  <div class="wrap">
+    <h2><span class="n">04</span>Correções ao mapa original</h2>
+    <div class="card">
+      <div class="card-label" style="color:var(--gold)">Comprova ≠ nó financeiro estrangeiro</div>
+      <p style="margin-bottom:0">O mapa desenha o Comprova como dependente da malha de fundações internacionais. Isso não se sustenta: Comprova é uma coalizão de <b>28+ veículos de mídia domésticos</b> (Folha, Estadão, UOL, Nexo, RBS etc.), coordenada pela ABRAJI, financiada primariamente pelos próprios veículos-membros. Se a intenção era apontar "checagem financiada pelo exterior", os nós corretos são <b>ABRAJI</b> (vínculo fundacional com o Knight Center) e <b>Agência Pública</b> (Ford/OSF/Oak) — não Comprova.</p>
+    </div>
+  </div>
+</section>
+
+<section id="alertas">
+  <div class="wrap">
+    <h2><span class="n">05</span>Alertas metodológicos</h2>
+
+    <div class="card alert">
+      <div class="card-label">Gênero do artefato</div>
+      <p style="margin-bottom:0">O mapa segue um formato reconhecível — "diagrama de financiamento cruzado" — que circula desde 2022–2024 em ambientes anti-PCD/anti-checagem, tipicamente para sustentar a tese "STF+TSE+ONGs+fundações estrangeiras = aparato de censura". O mesmo esqueleto visual (nó central institucional, halos concêntricos, cauda geopolítica simétrica) é usado, invertido, por narrativas que apontam financiamento estrangeiro de direita. O protocolo anti-confirmation-bias exige rigor simétrico em ambos os casos.</p>
+    </div>
+
+    <div class="card alert">
+      <div class="card-label">Uniformidade gráfica das arestas oculta heterogeneidade evidencial</div>
+      <p style="margin-bottom:0">O mapa usa a mesma notação visual (linha pontilhada = "financiamento/patrocínio/grant") para conectar grants públicos auditáveis, parcerias institucionais formais e vínculos nomeados sem fonte por aresta. O olho lê "rede única, mesmo grau de certeza" — o rodapé do próprio mapa admite o contrário para a camada geopolítica, mas o desenho neutraliza esse disclaimer perceptualmente.</p>
+    </div>
+
+    <div class="card alert">
+      <div class="card-label">Qualidade de fonte terciária usada nesta auditoria</div>
+      <p style="margin-bottom:0">Uma das fontes fornecidas (gibanet.com) confirma o fato bruto Igarapé↔OSF, mas está embutida em conteúdo abertamente conspiratório e não sourced ("agenda globalista"). O fato foi <b>corroborado de forma independente via fonte primária</b> (Relatório Anual 2024 do próprio Igarapé) antes de entrar nesta auditoria como confirmed. A interpretação do artigo foi descartada; o dado factual, verificado à parte, foi mantido — exatamente o protocolo correto: não importar o roteiro da fonte junto com o fato que ela contém.</p>
+    </div>
+  </div>
+</section>
+
+<section id="soberania">
+  <div class="wrap">
+    <h2><span class="n">06</span>Resumo Soberania</h2>
+    <p class="lede">O que esta auditoria sustenta sobre capacidade decisória nacional — e o que não sustenta.</p>
+    <div class="sov-box">
+      <p style="max-width:none">Nem a tese do mapa ("aparato de censura coordenado por potências estrangeiras via ONGs e fundações") nem a negação simétrica ("não há financiamento estrangeiro relevante de sociedade civil brasileira") resistem à auditoria. O quadro real é mais estreito e mais estrutural:</p>
+      <div class="sov-grid">
+        <div class="sov-col sov-no">
+          <h4>Não confirmado / rejeitado</h4>
+          <ul>
+            <li>Rede única e coordenada ligando STF/TSE a fundações via ONGs nomeadas</li>
+            <li>Comprova como veículo de financiamento estrangeiro</li>
+            <li>Causalidade "financiamento → captura de conteúdo institucional"</li>
+            <li>Camada geopolítica (Rússia/China) como parceria operacional real</li>
+          </ul>
+        </div>
+        <div class="sov-col sov-yes">
+          <h4>Confirmado / estruturalmente sustentado</h4>
+          <ul>
+            <li>Cooperação formal, pública e disclosed entre STF/TSE e sociedade civil (não é conspiração — é política declarada)</li>
+            <li>Concentração de financiadores: OSF/Ford presentes em maioria significativa de veículos independentes latino-americanos (26/40, 13/40)</li>
+            <li>ONGs de segurança/direitos humanos operam como parceiras formais do próprio aparato de segurança federal (Igarapé↔PF/MJSP), não como oposição a ele</li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin-top:18px;margin-bottom:0">A questão de soberania real não é "captura por agente estrangeiro" — é <b>concentração da infraestrutura de financiamento da sociedade civil brasileira em um número pequeno de doadores extraterritoriais</b>, o que é uma vulnerabilidade estrutural genuína (agenda-setting assimétrico, dependência de continuidade de grants), mas categoricamente distinta de operação de influência coordenada. Isso é P08/P09/P10 — infraestrutura compartilhada e captura cultural via financiamento — não controle direto de decisão judicial. Tratar isso como controle direto é o mesmo erro de sobre-inferência que o corpus recusa em qualquer outra direção política.</p>
+    </div>
+  </div>
+</section>
+
+<section id="lacunas">
+  <div class="wrap">
+    <h2><span class="n">07</span>Lacunas investigativas nomeadas</h2>
+    <p class="lede">Ausência de dado, não ausência de vínculo. Requer <code>web_fetch</code> direto em página de transparência/relatório anual de cada organização.</p>
+    <ul>
+      <li>IDDD (Instituto de Defesa do Direito de Defesa) — financiadores não verificados</li>
+      <li>ISA (Instituto Socioambiental) — financiadores não verificados</li>
+      <li>IBCCRIM — financiadores não verificados</li>
+      <li>Instituto Palavra Aberta — financiadores não verificados</li>
+      <li>Instituto Sou da Paz — financiadores não verificados (citado como recebedor de OSF em fonte terciária não corroborada nesta sessão)</li>
+      <li>Coalizão Brasileira pelo Fim da Violência contra Crianças e Adolescentes — financiadores não verificados</li>
+      <li>Fórum Brasileiro de Segurança Pública — financiadores não verificados (idem — citado em fonte terciária não corroborada)</li>
+      <li>Conectas ↔ OSF/Ford — apenas indício pessoal, sem confirmação institucional</li>
+      <li>Bloco 3 (plataformas/tecnologia) e bloco 5 (fundações como nós autônomos: Luminate/Omidyar, NED, USAID/CEPPS, IFES/IRI/NDI, UE) — não auditados nesta rodada</li>
+    </ul>
+  </div>
+</section>
+
+<section id="referencias">
+  <div class="wrap">
+    <h2><span class="n">08</span>Referências</h2>
+    <ul class="ref-list">
+      <li><span class="ref-tag">TSE — PPED</span><a href="https://www.tse.jus.br/comunicacao/noticias/2021/Agosto/portaria-do-tse-torna-permanente-o-programa-de-enfrentamento-a-desinformacao" target="_blank">Portaria-TSE nº 510/2021 — tse.jus.br</a></li>
+      <li><span class="ref-tag">TSE — resultados PPED 2024</span><a href="https://www.tse.jus.br/comunicacao/noticias/2024/Dezembro/tse-publica-resultados-do-programa-permanente-de-enfrentamento-a-desinformacao-nas-eleicoes-2024" target="_blank">tse.jus.br — resultados 2024</a></li>
+      <li><span class="ref-tag">STF — PCD</span><a href="https://agencialupa.substack.com/p/13501712_lente-56-20-5-22" target="_blank">Agência Lupa — Lente #56 (lançamento PCD, 35 instituições)</a></li>
+      <li><span class="ref-tag">Agência Pública — financiadores</span><a href="https://en.wikipedia.org/wiki/Ag%C3%AAncia_P%C3%BAblica" target="_blank">Wikipedia — Agência Pública</a></li>
+      <li><span class="ref-tag">ABRAJI — origem</span><a href="https://en.wikipedia.org/wiki/Brazilian_Association_of_Investigative_Journalism" target="_blank">Wikipedia — ABRAJI / Knight Center</a></li>
+      <li><span class="ref-tag">US Embassy Brasil — edital 2024</span><a href="https://education.asu.edu/funding-calendar/us-mission-brazil-small-grants-program" target="_blank">U.S. Mission to Brazil Small Grants Program 2024</a></li>
+      <li><span class="ref-tag">Padrão regional OSF/Ford</span><a href="https://gilscofield.substack.com/p/qual-o-estado-do-jornalismo-financiado" target="_blank">Reuters Institute / Knight Center — financiamento de mídia independente na América Latina</a></li>
+      <li><span class="ref-tag">Instituto Igarapé — Relatório Anual 2024</span><a href="https://igarape.org.br/relatorio-anual-2024-web/" target="_blank">igarape.org.br/relatorio-anual-2024-web</a> · <a href="https://igarape.org.br/wp-content/uploads/2025/04/Relatorio-Anual-Igarape-2024.pdf" target="_blank">PDF completo</a></li>
+      <li><span class="ref-tag">Fonte terciária (uso restrito ao fato, ver Alertas)</span><a href="https://gibanet.com/instituto-igarape-open-society-foundations-1/" target="_blank">gibanet.com — Instituto Igarapé e a OSF</a></li>
+      <li><span class="ref-tag">Comprova — composição</span><a href="https://en.wikipedia.org/wiki/Projeto_Comprova" target="_blank">Wikipedia — Projeto Comprova</a></li>
+      <li><span class="ref-tag">Google News Initiative</span><a href="https://en.wikipedia.org/wiki/Digital_News_Initiative" target="_blank">Wikipedia — Digital News Initiative / GNI</a></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cc0">CC0 1.0 Universal — Domínio Público · corpus lawfare-timeline · <a href="https://lawfare-timeline.vercel.app" target="_blank">lawfare-timeline.vercel.app</a> · Este documento é auditoria evidencial, não veredito definitivo — lacunas nomeadas permanecem abertas a verificação adicional.</div>
+  </div>
+</footer>
+
+<button id="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('nav a');
+const obs = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      navLinks.forEach(l=>l.classList.remove('active'));
+      const active = document.querySelector('nav a[data-sec="'+e.target.id+'"]');
+      if(active) active.classList.add('active');
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+sections.forEach(s=>obs.observe(s));
+
+const topBtn = document.getElementById('top-btn');
+window.addEventListener('scroll',()=>{
+  topBtn.classList.toggle('show', window.scrollY > 500);
+});
+</script>
+</body>
+</html>

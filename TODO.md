@@ -1,6 +1,6 @@
 # Próximos passos · lawfare-timeline
 
-**Atualizado:** 2026-08-20 (merge 1874–1888 Vaza Toga 5/2/3)
+**Atualizado:** 2026-09-01 (merge 1889–1904 + T-263–T-266)
 
 > Espelho: `docs/TODO.md` · Notas: `_data/processados/todo.md` · Legado: `docs/TODO-LEGACY.md`
 
@@ -10,10 +10,25 @@
 
 | Track | Last | Próximo | Validação |
 |-------|------|---------|-----------|
-| Main | **1888** | **1889** | lawfare.json **1849** entradas |
-| Thematic | **T-254** | **T-255** | sync 100–254 |
+| Main | **1904** | **1905** | lawfare.json **1865** entradas · sem IDs duplicados |
+| Thematic | **T-266** | **T-267** | sync 100–266 contínuo |
 | Dragão e a Onça | **1770** / **T-246** | — | `dragao-onca.json` **151** |
-| Fila `_data/todo/` | staging HTML/MD | — | JSON 1874–1888 arquivado 20/08 |
+| Fila `_data/todo/` | staging HTML/MD | — | JSON 1889–1904 arquivado 01/09 |
+
+---
+
+## Rodada 01/09/2026 ✅ — Fila com colisão 1889
+
+Dois batches pediam **1889+**. Realocados antes do merge.
+
+| Faixa | Batch | Conteúdo |
+|-------|-------|----------|
+| **1889–1897** | Radiolão / Machado | Denúncia de inserções, exoneração, PAD, CNJ, plano de mídia 2026 |
+| **1898–1904** | INQ 4781 cronologia | Receita 133 contribuintes → ADC 43/44/54 → validação do inquérito → Toffoli/Moro → Reino Unido → bloqueio do X |
+| **T-263** | Auditoria MCD-05/2024 | Mapa das Conexões (P04b/P09/P10) |
+| **T-264–T-266** | Editoriais do lote INQ | Transparência Internacional/Dallagnol; Estadão «Sete anos de exceção»; Talhari / legítima defesa institucional |
+
+`lawfare-batch-inq4781-cronologia-1889-1898.json` **não** manteve 1889–1898.
 
 ---
 
@@ -26,26 +41,7 @@ A fila reapresentou 4 batches com numeração antiga. **VT4 era duplicata** de 1
 | **1874–1876** | VT5 (era 1865–1867) | 2.119 CPFs; PET 11228 Dino; sigilo Exército |
 | **1877–1882** | VT2 (era 1873–1878) | Certidões GestBio / Dia da Mulher |
 | **1883–1888** | VT3 (era 1879–1884) | Fraude exposta (Constantino/Fiuza, Gettr, Zambelli, Palver) |
-| — | VT4 (1868–1872) | **Skip** — já publicado como 1869–1873 |
-
-Conexões internas apontam para os IDs reais (VT4 → 1869–1873; VT5 → 1874+). id_1865 continua sendo o PL 2630.
-
----
-
-## Rodada 20/08/2026 (b) ✅ — Vaza Toga 4 (1869–1873)
-
-Colisão: o batch chegou como **1868–1872**, mas **1868** já era os decretos do MCI. Realocado para **1869–1873**.
-
----
-
-## Rodada 20/08/2026 (a) ✅ — Fila 1865–1868 (regulação internet)
-
-| ID | Conteúdo |
-|----|----------|
-| **1865** | Lira arquiva PL 2630/2020 |
-| **1866** | STF art. 19 MCI (Temas 987 e 533) |
-| **1867** | Lei 15.211/2025 ECA Digital |
-| **1868** | Decretos 12.975 e 12.976/2026 |
+| — | VT4 (1868–1872) | **Skip** — já publicado como **1869–1873** |
 
 ---
 
@@ -53,12 +49,12 @@ Colisão: o batch chegou como **1868–1872**, mas **1868** já era os decretos 
 
 | Item | Prioridade |
 |------|------------|
+| **1899** sem `fontes_verificadas` (ADC 43/44/54 — `ev-contested` no lote) | Alta |
 | Formalizar **P13 Porta Giratória** em METHODOLOGY.md (T-254) | Média |
 | Formalizar P04b em METHODOLOGY | Média |
 | Stubs **725 / 728 / 729** vs registro definitivo 1869–1873 — decidir patch ou arquivar | Média |
-| Renomear estudos mislabel `T-1512`/`T-1765`/`T-1766` → faixa T-255+ | Baixa |
-| Gap main **1820** (editorial → T-248) | Informativo |
-| Staging `todo/p13-porta-giratoria.html` + `prompt-tratamento-pdfs-mensalao.md` | Baixa |
+| Staging `todo/p13-porta-giratoria.html` + HTML Radiolão/INQ/MCD + `prompt-tratamento-pdfs-mensalao.md` | Baixa |
+| `/tags/p10/` em produção lista 1 post — colisão `p10`/`P10` (plugin local; falta deploy) | Média |
 | `bundle exec jekyll build` | Rodar após esta rodada |
 
 ---
@@ -77,6 +73,6 @@ bundle exec jekyll build
 
 ## Referências
 
-- Corpus: `_data/lawfare.json` (**1849** entradas · main até **1888**)
+- Corpus: `_data/lawfare.json` (**1865** entradas · main até **1904**)
 - Unified: `_data/lawfare-unified-corpus.json`
 - Sidecar dragão: `_data/dragao-onca.json` (151 · **1763/1764** = CEEE-T / JMEV intactos)

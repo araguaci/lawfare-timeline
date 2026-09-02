@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radiolão &amp; o Caso Machado — TSE 2022–2026 | lawfare-timeline</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080c10; --surface:#0d1218; --surface2:#111820; --border:#1e2a35;
+  --red:#c53d4f; --gold:#d4af5a; --text:#d8d3cb; --text-dim:#7d8a95; --text-bright:#f2efe9;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Crimson Pro',serif;line-height:1.65;font-size:17px}
+h1,h2,h3,.label{font-family:'Syne',sans-serif}
+.mono{font-family:'IBM Plex Mono',monospace}
+a{color:var(--gold)}
+.navbar{position:sticky;top:0;z-index:50;background:rgba(8,12,16,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;gap:22px;flex-wrap:wrap;align-items:center}
+.navbar .brand{font-family:'Bebas Neue',sans-serif;letter-spacing:2px;color:var(--red);font-size:22px;margin-right:auto}
+.navbar a{color:var(--text-dim);text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase}
+.navbar a.active,.navbar a:hover{color:var(--gold)}
+header.hero{padding:70px 24px 50px;max-width:980px;margin:0 auto;border-bottom:1px solid var(--border)}
+.eyebrow{font-family:'IBM Plex Mono',monospace;color:var(--red);font-size:12px;letter-spacing:3px;text-transform:uppercase}
+h1.title{font-family:'Bebas Neue',sans-serif;font-size:52px;letter-spacing:1px;color:var(--text-bright);margin:10px 0 18px;line-height:1.05}
+.dek{color:var(--text-dim);font-size:19px;max-width:760px}
+.meta-row{display:flex;gap:26px;flex-wrap:wrap;margin-top:26px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--text-dim)}
+.meta-row b{color:var(--gold)}
+main{max-width:980px;margin:0 auto;padding:40px 24px 80px}
+section{margin-bottom:56px;scroll-margin-top:70px}
+h2.sec{font-size:26px;color:var(--text-bright);border-left:3px solid var(--red);padding-left:14px;margin-bottom:22px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:22px 24px;margin-bottom:16px}
+.card h3{font-size:18px;color:var(--text-bright);margin-bottom:8px}
+.tagrow{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.tag{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.5px;padding:3px 9px;border-radius:20px;border:1px solid var(--border);text-transform:uppercase}
+.ev-confirmed{color:#7fbf7f;border-color:#2f5c34}
+.ev-contested{color:var(--gold);border-color:#6b5722}
+.ev-alleged{color:#e08a7d;border-color:#5c3229}
+.ev-inference{color:#8ab4d8;border-color:#2a4256}
+.pattern-tag{color:var(--gold);background:rgba(212,175,90,.08)}
+.date{font-family:'IBM Plex Mono',monospace;color:var(--text-dim);font-size:12.5px}
+.analise{border-left:2px solid var(--gold);padding-left:14px;margin-top:12px;font-style:italic;color:#c9c2b6}
+.lacuna{border-left:2px solid var(--red);padding-left:14px;margin-top:10px;font-size:15px;color:var(--text-dim)}
+.lacuna b{color:var(--red)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:720px){.grid2{grid-template-columns:1fr}h1.title{font-size:38px}}
+table{width:100%;border-collapse:collapse;font-family:'IBM Plex Mono',monospace;font-size:13px;margin-top:12px}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left}
+th{color:var(--gold);background:var(--surface2)}
+.warn{background:rgba(197,61,79,.08);border:1px solid var(--red);border-radius:4px;padding:16px 20px;font-size:15px;margin-bottom:20px}
+.warn b{color:var(--red)}
+footer{border-top:1px solid var(--border);padding:36px 24px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--text-dim)}
+#topbtn{position:fixed;bottom:24px;right:24px;background:var(--surface);border:1px solid var(--gold);color:var(--gold);width:42px;height:42px;border-radius:50%;cursor:pointer;font-family:'IBM Plex Mono',monospace;display:none;align-items:center;justify-content:center;z-index:60}
+#topbtn.show{display:flex}
+blockquote{border-left:2px solid var(--border);padding-left:16px;color:var(--text-dim);font-style:italic;margin:14px 0}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <span class="brand">EIXO SELVA</span>
+  <a href="#contexto" class="navlink">Contexto</a>
+  <a href="#linha-do-tempo" class="navlink">Linha do Tempo</a>
+  <a href="#voto" class="navlink">O Voto Silenciado</a>
+  <a href="#2026" class="navlink">2026</a>
+  <a href="#padroes" class="navlink">Padrões</a>
+  <a href="#lacunas" class="navlink">Lacunas</a>
+</nav>
+
+<header class="hero">
+  <div class="eyebrow">lawfare-timeline · dossiê · main track id_1889–id_1897</div>
+  <h1 class="title">Radiolão &amp; o Caso Machado</h1>
+  <p class="dek">Um servidor comunica uma falha de fiscalização eleitoral em outubro de 2022. Trinta minutos depois, está do lado de fora do prédio, sob escolta. Quase quatro anos, duas demissões e um voto interno nunca tornado público depois, o CNJ ainda cobra resposta do TSE e do TRE-DF — enquanto a lacuna regulatória que ele apontou em 2018 segue sem solução na resolução do plano de mídia de 2026.</p>
+  <div class="meta-row">
+    <span><b>Período</b> 24/10/2022 – 28/08/2026</span>
+    <span><b>Padrões</b> P02 · P03 · P04 · P04b · P06</span>
+    <span><b>Fonte primária</b> A Investigação (David Ágape), documentos inéditos do PAD/TSE</span>
+    <span><b>Corroboração</b> CNN Brasil, Agência Brasil, Metrópoles, TSE (comunicação oficial)</span>
+    <span>CC0 1.0 — domínio público</span>
+  </div>
+</header>
+
+<main>
+
+<section id="contexto">
+  <h2 class="sec">Contexto</h2>
+  <p style="margin-bottom:14px">Seis dias antes do segundo turno de 2022, a campanha de Jair Bolsonaro (PL) denunciou ao TSE que rádios do Norte e Nordeste deixavam de veicular inserções obrigatórias de sua propaganda eleitoral, favorecendo Lula (PT). O presidente do TSE, Alexandre de Moraes, deu 24 horas para provas — sob ameaça simultânea de abrir inquérito contra a própria campanha caso a denúncia não se sustentasse. No mesmo intervalo, o coordenador do pool de emissoras do TSE, Alexandre Gomes Machado, repassou à chefia um e-mail em que uma rádio admitia não ter veiculado cem inserções de Bolsonaro — e foi retirado do prédio sob escolta em menos de meia hora.</p>
+  <p>Este dossiê não confirma nem descarta a tese de boicote nacional às inserções do PL — a checagem independente por audição humana (168h de áudio, 7 rádios) não sustenta fraude generalizada na amostra analisada. O que o dossiê documenta, com evidência de qualidade distinta em cada ponto, é o que aconteceu a quem comunicou uma falha real: retaliação administrativa, um voto interno de absolvição nunca publicizado, e uma lacuna regulatória que sobrevive intacta até a resolução do plano de mídia de 2026.</p>
+</section>
+
+<section id="linha-do-tempo">
+  <h2 class="sec">Linha do Tempo Documentada</h2>
+
+  <div class="card">
+    <div class="date">24/10/2022</div>
+    <h3>Denúncia + prazo de 24h com ameaça de crime eleitoral</h3>
+    <p>Fábio Faria e Fabio Wajngarten denunciam boicote de rádios. Moraes intima a campanha a provar em 24h, sob risco de caracterizar crime eleitoral caso a denúncia não se sustente.</p>
+    <div class="tagrow"><span class="tag ev-confirmed">ev-confirmed</span><span class="tag pattern-tag">P04</span></div>
+  </div>
+
+  <div class="card">
+    <div class="date">25/10/2022, tarde</div>
+    <h3>Machado repassa e-mail sobre 100 inserções não veiculadas — e é retirado sob escolta em ~30 min</h3>
+    <p>Sem processo formal, sem justificativa escrita. O próprio PAD do TSE registraria depois: procedimento sem precedente na história do tribunal.</p>
+    <div class="tagrow"><span class="tag ev-confirmed">ev-confirmed</span><span class="tag pattern-tag">P02</span></div>
+  </div>
+
+  <div class="card">
+    <div class="date">26/10/2022</div>
+    <h3>Moraes arquiva a denúncia com base em estudo que cita perfil apócrifo do Twitter</h3>
+    <p>Estudo do prof. Miguel Freitas (PUC-Rio), classificado por Moraes como "direto e certeiro", usou como referência a conta anônima "@desmentindobozo". Checagem independente identificaria depois erro material verificável no estudo — sem, no entanto, confirmar a tese de fraude generalizada da campanha do PL.</p>
+    <div class="tagrow"><span class="tag ev-contested">ev-contested</span><span class="tag pattern-tag">P04</span><span class="tag pattern-tag">P04b</span></div>
+  </div>
+
+  <div class="card">
+    <div class="date">30/06/2023 → 23/04/2024</div>
+    <h3>Duas demissões, mesmo desembargador, fundamentos que a nota de 2022 tinha fundido</h3>
+    <p>Portaria nº 135/2023: demissão por "revelar segredo" (o e-mail das cem inserções). Portaria nº 95/2024: demissão por "assédio moral" — o processo que a nota pública de outubro/2022 já havia anunciado como motivo, dez meses antes de existir uma decisão sobre ele.</p>
+    <div class="tagrow"><span class="tag ev-confirmed">ev-confirmed</span><span class="tag pattern-tag">P02</span></div>
+  </div>
+
+  <div class="card">
+    <div class="date">09/09/2024</div>
+    <h3>Colegiado do TRE-DF reverte a segunda demissão por 4×1 — mas a primeira permanece</h3>
+    <p>Contraexemplo parcial: o sistema corrige, por via colegiada, um dos dois atos. Machado não retorna ao cargo porque a primeira demissão (2023) já havia extinguido o vínculo.</p>
+    <div class="tagrow"><span class="tag ev-alleged">ev-alleged</span></div>
+  </div>
+
+</section>
+
+<section id="voto">
+  <h2 class="sec">O Voto Silenciado</h2>
+  <div class="card">
+    <p>A comissão do PAD tinha três membros. Dois — o juiz auxiliar Marco Antonio Martin Vargas e o delegado Disney Rosseti — eram nomes cedidos ao gabinete de Moraes por outras instituições. O terceiro, Yuri Sampaio Zuvanov, era o único servidor efetivo de carreira do TSE no colegiado. Foi o único a divergir: votou pela absolvição integral de Machado e apontou indícios de que o vazamento do depoimento à imprensa — antes mesmo de o termo dar entrada oficial no tribunal — teria partido de dentro do próprio TSE.</p>
+    <blockquote>A nota pública do TSE, divulgada às 16h17 de 26/10/2022, antecipou uma acusação de assédio que as duas únicas testemunhas ouvidas não confirmaram nos termos anunciados — e jornalistas já tinham o conteúdo do depoimento antes de o termo chegar oficialmente ao tribunal, às 17h32.</blockquote>
+    <p>A proposta de Zuvanov — apurar o vazamento, reouvir testemunhas — foi arquivada pela Assessoria Consultiva da Presidência, e Moraes aprovou integralmente essa conclusão. O órgão apontado como possível origem do vazamento decidiu, ele mesmo, não investigar o próprio vazamento.</p>
+    <div class="tagrow"><span class="tag ev-alleged">ev-alleged — fonte única</span><span class="tag pattern-tag">P02</span><span class="tag pattern-tag">P03</span></div>
+    <div class="lacuna"><b>Nota de checagem de nomes:</b> uma Portaria TSE nº 537/2017 localizada nesta sessão lista "Paschoal Rosseti Neto" — não "Disney Rosseti" — ao lado de Zuvanov em comissão de PAD anterior. Pode ser pessoa distinta, nome incompleto na fonte, ou erro de grafia num dos dois documentos. Não resolvido; registrado para não silenciar a divergência.</div>
+  </div>
+</section>
+
+<section id="2026">
+  <h2 class="sec">O Que Está em Aberto Agora (08/2026)</h2>
+  <div class="grid2">
+    <div class="card">
+      <h3>CNJ cobra TSE e TRE-DF</h3>
+      <p>Prazo do TRE-DF venceu 24/08/2026; TSE tem até 31/08 para tomar ciência do pedido de retorno provisório de Machado. A Ascom do TRE-DF recusou-se a comentar o mérito dos próprios atos administrativos, alegando que o desembargador que os assinou "não integra atualmente a Corte" — sem negar nem confirmar a vigência das portarias.</p>
+      <div class="tagrow"><span class="tag ev-alleged">ev-alleged</span><span class="tag pattern-tag">P06</span></div>
+    </div>
+    <div class="card">
+      <h3>Plano de mídia 2026 repete a lacuna de 2022</h3>
+      <p>O PL propôs, em audiência pública de 20/08/2026, mecanismo de comprovação de exibição — a mesma lacuna que o Radiolão expôs. A Abert rejeitou por inviabilidade técnica de canal de retorno automático — objeção que não alcança a alternativa das gravações já obrigatórias pelo art. 71 do CBT. Em 25/08/2026, o TSE aprovou por unanimidade a Resolução nº 23.776/2026 sem o mecanismo.</p>
+      <div class="tagrow"><span class="tag ev-confirmed">ev-confirmed — TSE + CNN Brasil</span><span class="tag pattern-tag">P06</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="padroes">
+  <h2 class="sec">Padrões Aplicados</h2>
+  <table>
+    <tr><th>Código</th><th>Aplicação neste caso</th></tr>
+    <tr><td>P02</td><td>Quem comunica a irregularidade é retaliado antes de qualquer apuração da irregularidade em si.</td></tr>
+    <tr><td>P03</td><td>O órgão apontado como origem do vazamento decide, ele mesmo, não investigar o próprio vazamento.</td></tr>
+    <tr><td>P04 / P04b</td><td>Estudo metodologicamente frágil é usado para arquivar denúncia; nenhum dos dois lados do caso (fraude alegada / instrumento de arquivamento) deve ser tratado como equivalente ao outro sem checagem própria.</td></tr>
+    <tr><td>P06</td><td>Quatro anos sem decisão definitiva sobre fato simples de verificar; lacuna regulatória de 2022 sobrevive intacta até a resolução de 2026.</td></tr>
+  </table>
+</section>
+
+<section id="lacunas">
+  <h2 class="sec">Lacunas Investigativas</h2>
+  <div class="warn"><b>Nível de evidência desigual nesta entrada:</b> os fatos de 2022–2024 (exoneração, demissões, teor das notas do TSE) têm corroboração de múltiplas fontes independentes (CNN Brasil, Agência Brasil, Metrópoles). Os fatos específicos de 2026 — teor do voto de Zuvanov, pressão do CNJ, portaria de promoção de Zuvanov — vêm de fonte única (A Investigação, com alegado acesso exclusivo a documentos do PAD) e permanecem <b>ev-alleged</b> até corroboração independente ou acesso a documento primário.</div>
+  <ul style="padding-left:20px; line-height:2">
+    <li>Resultado da VPI da PF sobre a denúncia original (aberta 30/11/2022) segue sem informação pública.</li>
+    <li>Quem determinou especificamente a forma da retirada de Machado (escolta, confisco de crachá) nunca foi identificado.</li>
+    <li>Número da portaria de 24/08/2026 que promoveu Zuvanov não localizado em fonte primária.</li>
+    <li>Acórdão do TRE-DF de 09/09/2024 (conversão da segunda demissão) não localizado em fonte primária.</li>
+    <li>Status da ação de Machado na 18ª Vara Federal Cível do DF não verificado em consulta processual direta.</li>
+  </ul>
+</section>
+
+</main>
+
+<button id="topbtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<footer>
+  Eixo SELVA — lawfare-timeline · CC0 1.0 Universal — Domínio Público Total<br>
+  Compilado a partir de A Investigação, CNN Brasil, Agência Brasil, Metrópoles, TSE (comunicação oficial) e documentos do processo administrativo disciplinar referenciados pela fonte primária.
+</footer>
+
+<script>
+const links=document.querySelectorAll('.navlink');
+const secs=document.querySelectorAll('section');
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      links.forEach(l=>l.classList.remove('active'));
+      const id=e.target.getAttribute('id');
+      const l=document.querySelector('.navlink[href="#'+id+'"]');
+      if(l) l.classList.add('active');
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+secs.forEach(s=>io.observe(s));
+window.addEventListener('scroll',()=>{
+  document.getElementById('topbtn').classList.toggle('show', window.scrollY>500);
+});
+</script>
+</body>
+</html>

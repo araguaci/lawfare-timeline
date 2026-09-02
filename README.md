@@ -510,6 +510,24 @@ Sessão 2026-08-20 — hero T-220 (1200×675, 16:9, share card X):
 Hero image for an X.com Article titled "SEM RELATÓRIO". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "SEM RELATÓRIO" in off-white (fully readable), gold subtitle "T-220" underneath, tiny monospace "OFAC · Arpar · INSS". Visual motif: an unsigned parliamentary binder and a SWIFT-style payment ribbon dissolving into US Treasury and Brazilian courthouse colonnades (no readable names, no logos, no brand marks, no real faces, no bank logos). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
 ```
 
+Sessão 2026-09-01 — hero T-265 (1200×675, 16:9, share card X):
+
+```
+Hero image for an X.com Article titled "7 ANOS". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "7 ANOS" in off-white (fully readable), gold subtitle "T-265" underneath, tiny monospace "Estadão · INQ 4781". Visual motif: a broadsheet newspaper folded on a dark desk dissolving into STF-like colonnades and a faded sealed court file stamped EXCEÇÃO (no readable names, no logos, no brand marks, no real faces, no newspaper masthead logos). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
+```
+
+Sessão 2026-09-01 — hero T-264 (1200×675, 16:9, share card X):
+
+```
+Hero image for an X.com Article titled "AQUI NÃO". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "AQUI NÃO" in off-white (fully readable), gold subtitle "T-264" underneath, tiny monospace "Southwark · SFO · STF". Visual motif: a sealed court file and a faded Union Jack-adjacent red-white ribbon dissolving into Brazilian courthouse colonnades and a stamped evidence folder (no readable names, no logos, no brand marks, no real faces, no flags as decoration, no party logos). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
+```
+
+Sessão 2026-09-01 — hero T-263 (1200×675, 16:9, share card X):
+
+```
+Hero image for an X.com Article titled "A ARESTA". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "A ARESTA" in off-white (fully readable), gold subtitle "T-263" underneath, tiny monospace "MCD-05/2024 · P04b". Visual motif: a network diagram of faint dashed lines connecting unlabeled nodes dissolving into courthouse colonnades and a stamped audit folder (no readable names, no logos, no brand marks, no real faces, no foundation logos, no flags). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
+```
+
 ---
 
 **Mantenedor:** Artes do Sul / AI Nativo Brasil · [@araguaci](https://github.com/araguaci) · Bombinhas/SC  

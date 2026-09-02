@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INQ 4.781 — Sete Anos de Exceção | Cronologia Completa 2019–2026</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@400;600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#080c10; --bg1:#0d1218; --bg2:#121820; --bg3:#1a2230;
+  --border:rgba(255,255,255,0.06); --border2:rgba(255,255,255,0.12);
+  --fg:#e8ecf0; --fg2:#8a9ab0; --fg3:#4a5a6a;
+  --red:#c53d4f; --red2:rgba(197,61,79,0.15);
+  --amber:#d4af5a; --amber2:rgba(212,175,90,0.15);
+  --blue:#3090e8; --blue2:rgba(48,144,232,0.12);
+  --green:#28c880; --green2:rgba(40,200,128,0.12);
+  --purple:#a060e8; --purple2:rgba(160,96,232,0.12);
+  --font-mono:'IBM Plex Mono',monospace;
+  --font-display:'Syne',sans-serif;
+  --font-serif:'Crimson Pro',serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-mono);font-size:13px;line-height:1.6;min-height:100vh}
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-track{background:var(--bg1)}
+::-webkit-scrollbar-thumb{background:var(--bg3);border-radius:2px}
+
+/* HEADER */
+.header{background:var(--bg1);border-bottom:1px solid var(--border2);padding:24px 20px;position:relative;overflow:hidden}
+@media(min-width:768px){.header{padding:36px 40px 28px}}
+.header::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--red),var(--amber),var(--red),var(--amber),var(--red));
+  background-size:300% 100%;animation:scanline 5s linear infinite}
+@keyframes scanline{to{background-position:300% 0}}
+
+.meta-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:20px}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:3px 8px;border-radius:3px;
+  font-size:10px;font-weight:600;letter-spacing:.10em;text-transform:uppercase;font-family:var(--font-mono)}
+.b-red{background:var(--red2);color:var(--red);border:1px solid rgba(197,61,79,.35)}
+.b-amber{background:var(--amber2);color:var(--amber);border:1px solid rgba(212,175,90,.35)}
+.b-blue{background:var(--blue2);color:var(--blue);border:1px solid rgba(48,144,232,.3)}
+.b-purple{background:var(--purple2);color:var(--purple);border:1px solid rgba(160,96,232,.3)}
+.b-green{background:var(--green2);color:var(--green);border:1px solid rgba(40,200,128,.3)}
+.b-muted{background:transparent;color:var(--fg3);border:1px solid var(--border2)}
+.badge-pulse{display:inline-flex;align-items:center;gap:6px}
+.pulse-dot{width:7px;height:7px;border-radius:50%;animation:pulse-anim 2s infinite}
+.pulse-dot.red{background:var(--red)}
+@keyframes pulse-anim{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
+
+.hero-title{font-family:var(--font-display);font-size:clamp(26px,4.4vw,48px);font-weight:800;
+  letter-spacing:-.02em;line-height:1.08;margin-bottom:10px}
+.hero-title .accent-red{color:var(--red)}
+.hero-title .accent-amber{color:var(--amber)}
+.hero-subtitle{font-family:var(--font-serif);font-size:16px;color:var(--fg2);line-height:1.65;max-width:760px;margin-bottom:24px;font-style:italic}
+
+/* STATS GRID (dashboard count) */
+.stat-icon-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+  background:var(--border2);border:1px solid var(--border2);border-radius:6px;overflow:hidden;max-width:900px}
+@media(max-width:640px){.stat-icon-grid{grid-template-columns:repeat(2,1fr)}}
+.sic{background:var(--bg1);padding:16px;display:flex;flex-direction:column;gap:6px;transition:background .15s}
+.sic:hover{background:var(--bg2)}
+.sic-num{font-family:var(--font-display);font-size:clamp(18px,3vw,26px);font-weight:700;letter-spacing:-.02em;line-height:1}
+.sic-lbl{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg3);line-height:1.4}
+
+/* STICKY NAV */
+.sticky-nav{position:sticky;top:0;z-index:100;background:rgba(8,12,16,.95);
+  backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.snav-inner{display:flex;align-items:center;overflow-x:auto;scrollbar-width:none;padding:0 20px}
+.snav-inner::-webkit-scrollbar{display:none}
+@media(min-width:768px){.snav-inner{padding:0 40px}}
+.nav-brand{font-size:10px;font-weight:600;letter-spacing:.1em;color:var(--red);
+  text-transform:uppercase;white-space:nowrap;padding:14px 14px 14px 0;
+  border-right:1px solid var(--border2);margin-right:4px;flex-shrink:0}
+.snav-tab{padding:14px 12px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--fg3);border:none;background:none;border-bottom:2px solid transparent;
+  white-space:nowrap;transition:all .15s;cursor:pointer;font-family:var(--font-mono)}
+.snav-tab:hover{color:var(--fg2)}
+.snav-tab.active{color:var(--fg);border-bottom-color:var(--red)}
+
+/* MAIN */
+.main{max-width:1400px;margin:0 auto;padding:0 20px 80px}
+@media(min-width:768px){.main{padding:0 40px 80px}}
+.sec{padding-top:44px}
+.section-title{font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--fg3);margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+
+/* PROSE / TEXTO CORRIDO */
+.prose{font-family:var(--font-serif);font-size:16px;line-height:1.8;color:var(--fg);max-width:820px}
+.prose p{margin-bottom:16px}
+.prose strong{color:var(--amber);font-weight:600}
+.prose em{color:var(--fg2)}
+
+/* CARDS */
+.card{background:var(--bg1);border:1px solid var(--border);border-radius:6px;padding:20px}
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px}
+
+.alert-red{background:var(--red2);border:1px solid rgba(197,61,79,.3);border-radius:6px;padding:16px 20px;display:flex;gap:12px;margin-bottom:14px}
+.alert-amber{background:var(--amber2);border:1px solid rgba(212,175,90,.3);border-radius:6px;padding:16px 20px;display:flex;gap:12px;margin-bottom:14px}
+.alert-blue{background:var(--blue2);border:1px solid rgba(48,144,232,.25);border-radius:6px;padding:16px 20px;display:flex;gap:12px;margin-bottom:14px}
+.alert-icon{font-size:18px;flex-shrink:0;line-height:1.4}
+.alert-title{font-size:12px;font-weight:600;margin-bottom:4px}
+.alert-body{font-size:12px;color:var(--fg2);line-height:1.7}
+
+/* EVIDENCE BADGES */
+.ev{font-size:9px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:2px 7px;border-radius:3px;display:inline-block}
+.ev-confirmed{background:var(--green2);color:var(--green);border:1px solid rgba(40,200,128,.35)}
+.ev-contested{background:var(--amber2);color:var(--amber);border:1px solid rgba(212,175,90,.35)}
+.ev-alleged{background:var(--blue2);color:var(--blue);border:1px solid rgba(48,144,232,.3)}
+.ev-inference{background:var(--purple2);color:var(--purple);border:1px solid rgba(160,96,232,.3)}
+
+/* TIMELINE */
+.timeline{position:relative;padding-left:26px}
+.timeline::before{content:'';position:absolute;left:7px;top:6px;bottom:6px;width:1px;background:var(--border2)}
+.tl-item{position:relative;margin-bottom:26px}
+.tl-dot{position:absolute;left:-25px;top:5px;width:11px;height:11px;border-radius:50%;border:2px solid var(--bg);box-shadow:0 0 0 1px var(--border2)}
+.tl-dot.critical{background:var(--red)}
+.tl-dot.high{background:var(--amber)}
+.tl-dot.medium{background:var(--blue)}
+.tl-dot.info{background:var(--green)}
+.tl-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:6px}
+.tl-date{font-size:10px;color:var(--fg3);letter-spacing:.07em;font-weight:600}
+.tl-sev{font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border-radius:3px}
+.tl-sev.critical{background:var(--red2);color:var(--red)}
+.tl-sev.high{background:var(--amber2);color:var(--amber)}
+.tl-sev.medium{background:var(--blue2);color:var(--blue)}
+.tl-sev.info{background:var(--green2);color:var(--green)}
+.tl-title{font-family:var(--font-display);font-size:14.5px;font-weight:700;margin-bottom:5px}
+.tl-desc{font-size:12.5px;color:var(--fg2);line-height:1.7;margin-bottom:8px}
+.tl-src{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.tl-src a{font-size:10px;color:var(--fg3);text-decoration:none;border-bottom:1px dotted var(--fg3);transition:color .15s}
+.tl-src a:hover{color:var(--amber);border-color:var(--amber)}
+.tl-pattern{font-size:9px;font-weight:700;color:var(--purple);background:var(--purple2);padding:1px 6px;border-radius:3px;letter-spacing:.05em}
+
+/* ACTOR CARDS */
+.actor-card{background:var(--bg1);border:1px solid var(--border);border-radius:6px;padding:16px;display:flex;flex-direction:column;gap:6px}
+.actor-role{font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--fg3)}
+.actor-name{font-family:var(--font-display);font-size:14px;font-weight:700}
+.actor-desc{font-size:11.5px;color:var(--fg2);line-height:1.6}
+
+/* PATTERN CARDS */
+.pcard{background:var(--bg1);border:1px solid var(--border);border-radius:6px;padding:18px;position:relative;overflow:hidden}
+.pcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--red)}
+.pcard.amber::before{background:var(--amber)}
+.pcard.purple::before{background:var(--purple)}
+.pcard-id{font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--fg3);margin-bottom:4px}
+.pcard-name{font-family:var(--font-display);font-size:13.5px;font-weight:700;margin-bottom:8px}
+.pcard-desc{font-size:12px;color:var(--fg2);line-height:1.65}
+
+/* QUOTE */
+.quote-block{background:var(--bg3);border-left:3px solid var(--amber);border-radius:0 6px 6px 0;padding:16px 20px;margin:16px 0}
+.quote-text{font-family:var(--font-serif);font-size:15px;color:var(--fg);line-height:1.7;font-style:italic;margin-bottom:8px}
+.quote-source{font-size:10px;color:var(--fg3);letter-spacing:.06em;text-transform:uppercase}
+
+/* LACUNA */
+.lacuna-card{background:var(--bg2);border:1px solid rgba(212,175,90,.2);border-radius:6px;padding:16px 20px}
+.lacuna-num{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);margin-bottom:6px}
+.lacuna-text{font-size:12px;color:var(--fg2);line-height:1.65}
+
+/* CODE BLOCK */
+.code-titled{background:var(--bg2);border:1px solid var(--border);border-radius:6px;overflow:hidden}
+.code-titled-head{background:var(--bg3);border-bottom:1px solid var(--border);padding:7px 14px;font-size:10px;color:var(--fg3);display:flex;align-items:center;gap:8px}
+.code-titled-head::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--amber);display:inline-block}
+.code-titled-body{padding:16px;font-size:11px;line-height:1.75;color:var(--fg2);overflow-x:auto;white-space:pre-wrap}
+
+/* CONN / RELATED */
+.conn-list{display:flex;flex-direction:column;gap:8px}
+.conn-item{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;background:var(--bg1);border:1px solid var(--border);border-radius:6px}
+.conn-item-id{font-size:11px;font-weight:700;color:var(--amber);min-width:100px;flex-shrink:0;padding-top:2px}
+.conn-item-desc{font-size:12px;color:var(--fg2);line-height:1.6}
+
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:700px){.rel-grid{grid-template-columns:1fr}}
+@media(min-width:480px) and (max-width:700px){.rel-grid{grid-template-columns:repeat(2,1fr)}}
+.rel-card{background:var(--bg1);border:1px solid var(--border);border-radius:6px;padding:16px;display:flex;flex-direction:column;gap:8px;text-decoration:none;color:inherit;transition:background .15s,border-color .15s}
+.rel-card:hover{background:var(--bg2);border-color:var(--border2)}
+.rel-card-id{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber)}
+.rel-card-title{font-family:var(--font-display);font-size:13px;font-weight:700}
+.rel-card-body{font-size:11px;color:var(--fg2);line-height:1.6}
+
+.gap-12{margin-bottom:12px} .gap-16{margin-bottom:16px} .gap-24{margin-bottom:24px} .gap-32{margin-bottom:32px}
+.label-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+
+/* GO TOP */
+#gotop{position:fixed;bottom:28px;right:24px;z-index:200;width:42px;height:42px;border-radius:6px;
+  background:var(--bg2);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;
+  opacity:0;transform:translateY(10px);transition:opacity .2s,transform .2s,background .15s;pointer-events:none;cursor:pointer}
+#gotop.show{opacity:1;transform:translateY(0);pointer-events:auto}
+#gotop:hover{background:var(--bg3);border-color:var(--red)}
+
+/* FOOTER */
+.footer{margin-top:48px;padding:20px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+@media(min-width:768px){.footer{padding:20px 40px}}
+.footer-text{font-size:11px;color:var(--fg3)}
+
+@media print{
+  body{background:#fff;color:#111}
+  .sticky-nav,#gotop{display:none!important}
+  :root{--bg:#fff;--bg1:#f8f8f8;--bg2:#f0f0f0;--bg3:#e8e8e8;--border:rgba(0,0,0,.12);--border2:rgba(0,0,0,.2);--fg:#111;--fg2:#444;--fg3:#888}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="meta-row">
+    <span class="badge b-red badge-pulse"><span class="pulse-dot red"></span>ATIVO — 7+ ANOS</span>
+    <span class="badge b-amber">P01 · P02 · P03-A · P04b · P06</span>
+    <span class="badge b-blue">INQ 4.781/DF</span>
+    <span class="badge b-muted">CORPUS IDs 1299 · 1777 · 1779 · 1780</span>
+    <span class="badge b-muted">CC0 1.0</span>
+  </div>
+  <h1 class="hero-title">
+    Sete Anos de <span class="accent-red">Exceção</span><br>
+    <span class="accent-amber">INQ 4.781</span> — Cronologia Completa
+  </h1>
+  <p class="hero-subtitle">
+    De uma portaria assinada sem provocação do Ministério Público, em 14 de março de 2019, a um confronto
+    aberto com a Justiça britânica em 2026 — a trajetória de um inquérito que nunca teve prazo para acabar,
+    e da imprensa que primeiro aplaudiu, depois se calou, e só reagiu quando a exceção bateu à sua própria porta.
+  </p>
+  <div class="stat-icon-grid">
+    <div class="sic"><div class="sic-num" style="color:var(--red)">7+</div><div class="sic-lbl">anos de tramitação<br>sem prazo definido</div></div>
+    <div class="sic"><div class="sic-num" style="color:var(--amber)">10×1</div><div class="sic-lbl">validação plenária<br>jun/2020</div></div>
+    <div class="sic"><div class="sic-num" style="color:var(--blue)">133</div><div class="sic-lbl">contribuintes com<br>fiscalização suspensa</div></div>
+    <div class="sic"><div class="sic-num" style="color:var(--red)">5</div><div class="sic-lbl">países que ignoram<br>anulações do STF</div></div>
+    <div class="sic"><div class="sic-num" style="color:var(--amber)">23+</div><div class="sic-lbl">alvos beneficiados por<br>anulações de Toffoli (2026)</div></div>
+    <div class="sic"><div class="sic-num" style="color:var(--green)">0</div><div class="sic-lbl">beneficiário final<br>identificado</div></div>
+  </div>
+</div>
+
+<!-- STICKY NAV -->
+<nav class="sticky-nav" id="nav">
+  <div class="snav-inner">
+    <div class="nav-brand">INQ-4781</div>
+    <button class="snav-tab active" onclick="scrollToId('resumo')" data-section="resumo">Resumo</button>
+    <button class="snav-tab" onclick="scrollToId('alertas')" data-section="alertas">Alertas</button>
+    <button class="snav-tab" onclick="scrollToId('cronologia')" data-section="cronologia">Cronologia</button>
+    <button class="snav-tab" onclick="scrollToId('atores')" data-section="atores">Atores</button>
+    <button class="snav-tab" onclick="scrollToId('imprensa')" data-section="imprensa">Imprensa</button>
+    <button class="snav-tab" onclick="scrollToId('padroes')" data-section="padroes">Padrões</button>
+    <button class="snav-tab" onclick="scrollToId('lacunas')" data-section="lacunas">Lacunas</button>
+    <button class="snav-tab" onclick="scrollToId('corpus')" data-section="corpus">Corpus</button>
+  </div>
+</nav>
+
+<div class="main">
+
+<!-- ═══ RESUMO ═══ -->
+<section class="sec" id="resumo">
+  <div class="section-title">00 — Resumo Executivo</div>
+  <div class="prose">
+    <p>Em <strong>14 de março de 2019</strong>, o então presidente do STF, Dias Toffoli, assinou a Portaria GP nº 69,
+    abrindo de ofício — sem provocação do Ministério Público, sem sorteio de relator — o Inquérito nº 4.781.
+    Designou diretamente Alexandre de Moraes para presidi-lo. Nasceu ali o que a imprensa viria a apelidar,
+    sete anos depois, de <em>"inquérito sem fim"</em>: um procedimento em que a suposta vítima (o STF) acumula
+    os papéis de investigador, acusador e julgador — a geometria 535×1 em sua forma mais crua.</p>
+    <p>O que se segue é uma cronologia documentada de sete anos: censura a veículos de imprensa nos primeiros
+    trinta dias, suspensão de investigações fiscais da Receita Federal contra os próprios investigados,
+    validação plenária por 10 votos a 1, o fim da execução da pena após segunda instância (ADCs 43/44/54),
+    anulações em cadeia de provas e condenações da Lava Jato — e, em 2026, um episódio revelador: a Justiça
+    britânica recusou-se a reconhecer a anulação decretada por Toffoli, classificando-a como <strong>"altamente
+    incomum"</strong>, e manteve o confisco de valores ligados à Petrobras. Cinco países, ao todo, seguem
+    aplicando suas próprias leis sobre provas que o STF brasileiro já declarou nulas.</p>
+    <p>Em nenhum momento dessa cronologia um beneficiário final foi identificado. Esse é o dado central que este
+    dossiê documenta: <strong>o mecanismo se perpetua, mas não aponta para lugar nenhum</strong> — exceto para a
+    concentração de poder no próprio mecanismo.</p>
+  </div>
+</section>
+
+<!-- ═══ ALERTAS ═══ -->
+<section class="sec" id="alertas">
+  <div class="section-title">01 — Alertas de Gravidade</div>
+
+  <div class="alert-red">
+    <div class="alert-icon">🔴</div>
+    <div>
+      <div class="alert-title" style="color:var(--red)">CRÍTICO — P03-A: Captura Judicial de Emergência Permanente</div>
+      <div class="alert-body">O INQ 4.781 nunca teve prazo de conclusão fixado. Prorrogado sucessivamente desde 2019,
+      opera como estado de exceção sem decreto, sem prazo, sem controle externo — o inverso exato do que a CF/88,
+      Título V (arts. 136–144), estabelece para mecanismos excepcionais legítimos.</div>
+    </div>
+  </div>
+
+  <div class="alert-red">
+    <div class="alert-icon">🔴</div>
+    <div>
+      <div class="alert-title" style="color:var(--red)">CRÍTICO — P02: Investigador-Investigado</div>
+      <div class="alert-body">Desde a portaria de abertura, a suposta vítima do inquérito (o STF, seus membros)
+      é também quem investiga, determina diligências e julga a legalidade do próprio ato. A PGR, órgão
+      constitucionalmente titular da ação penal, foi excluída da condução desde o primeiro dia.</div>
+    </div>
+  </div>
+
+  <div class="alert-amber">
+    <div class="alert-icon">🟡</div>
+    <div>
+      <div class="alert-title" style="color:var(--amber)">ALTO — P01: Anulação Processual Retroativa em Cadeia</div>
+      <div class="alert-body">Decisões monocráticas de Toffoli desde 2023 anularam sucessivamente provas,
+      condenações e atos de cooperação internacional da Lava Jato — incluindo, em março de 2026, a própria
+      autorização de compartilhamento de provas com o Reino Unido. Cortes estrangeiras (Reino Unido, Suíça,
+      Peru, Equador, EUA) recusam-se a reconhecer essas anulações.</div>
+    </div>
+  </div>
+
+  <div class="alert-amber">
+    <div class="alert-icon">🟡</div>
+    <div>
+      <div class="alert-title" style="color:var(--amber)">ALTO — P04b: Both-sidesism Funcional da Imprensa (2019–2025)</div>
+      <div class="alert-body">O Globo e O Estado de S. Paulo endossaram e comemoraram a abertura do INQ 4.781
+      em 2019. A crítica editorial só se tornou consistente quando as mesmas ferramentas de exceção passaram
+      a atingir jornalistas dos próprios veículos — não quando os abusos institucionais contra terceiros
+      já estavam documentados havia anos.</div>
+    </div>
+  </div>
+
+  <div class="alert-blue">
+    <div class="alert-icon">🔵</div>
+    <div>
+      <div class="alert-title" style="color:var(--blue)">MÉDIO — P06: Prescrição Estratégica / Exaustão Cognitiva</div>
+      <div class="alert-body">A duração indefinida do inquérito (7+ anos, sigiloso) dilui a capacidade de
+      escrutínio público e normaliza, por exaustão, o que seria excepcional. Cada nova prorrogação recebe
+      cobertura decrescente — até o ponto em que a continuidade deixa de ser notícia.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CRONOLOGIA ═══ -->
+<section class="sec" id="cronologia">
+  <div class="section-title">02 — Cronologia Completa (2019–2026)</div>
+
+  <div class="timeline">
+
+    <div class="tl-item">
+      <div class="tl-dot critical"></div>
+      <div class="tl-head"><span class="tl-date">14 MAR 2019</span><span class="tl-sev critical">CRÍTICO</span><span class="ev ev-confirmed">EV-CONFIRMED</span><span class="tl-pattern">P02 · P03-A</span></div>
+      <div class="tl-title">Toffoli abre o INQ 4.781 de ofício, sem sorteio de relator</div>
+      <div class="tl-desc">Portaria GP nº 69/2019, assinada pelo presidente do STF, Dias Toffoli, instaura inquérito
+      para apurar "fake news" e ofensas contra a Corte, com base em interpretação ampliada do art. 43 do RISTF.
+      Designa diretamente Alexandre de Moraes como relator, sem observar o art. 66 do Regimento (sorteio ou
+      prevenção). O contexto imediato: ofensas de um procurador da Lava Jato ao Judiciário.</div>
+      <div class="tl-src">Fontes: <a href="https://pt.wikipedia.org/wiki/Inqu%C3%A9rito_das_Fake_News" target="_blank">Wikipédia</a> ·
+      <a href="https://www.poder360.com.br/poder-justica/entenda-o-que-e-o-inquerito-das-fake-news-aberto-em-2019/" target="_blank">Poder360</a> ·
+      <a href="https://www.conjur.com.br/2019-mar-15/pgr-esclarecimentos-inquerito-anunciado-toffoli/" target="_blank">ConJur</a> ·
+      Corpus <span class="conn-item-id" style="display:inline">ID 1777</span></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot high"></div>
+      <div class="tl-head"><span class="tl-date">15 MAR 2019</span><span class="tl-sev high">ALTO</span><span class="ev ev-confirmed">EV-CONFIRMED</span></div>
+      <div class="tl-title">PGR pede esclarecimentos sobre o escopo do inquérito</div>
+      <div class="tl-desc">A procuradora-geral Raquel Dodge questiona a designação de relator sem sorteio e reafirma
+      que a presidência de investigação só pode ser atribuída a magistrado quando o investigado é outro magistrado —
+      não quando a vítima alegada é a própria Corte.</div>
+      <div class="tl-src">Fonte: <a href="https://conjur.com.br/2019-mar-15/pgr-esclarecimentos-inquerito-anunciado-toffoli/" target="_blank">ConJur</a></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot critical"></div>
+      <div class="tl-head"><span class="tl-date">ABR 2019</span><span class="tl-sev critical">CRÍTICO</span><span class="ev ev-confirmed">EV-CONFIRMED</span><span class="tl-pattern">P04b</span></div>
+      <div class="tl-title">Censura à Crusoé e ao Antagonista</div>
+      <div class="tl-desc">No âmbito do INQ 4.781, Moraes determina a retirada do ar de reportagem que associava
+      Toffoli a delações da Odebrecht (codinome "amigo do amigo de meu pai"). Recua parcialmente dias depois,
+      após repercussão negativa ampla — inclusive dentro da própria magistratura (crítica pública do decano
+      Celso de Mello).</div>
+      <div class="tl-src">Fontes: <a href="https://revistaoeste.com/revista/edicao-248/ato-institucional-no-4-781/" target="_blank">Revista Oeste</a> ·
+      <a href="https://leandroruschel.substack.com/p/ato-institucional-n-1-do-supremo" target="_blank">Leandro Ruschel</a></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot medium"></div>
+      <div class="tl-head"><span class="tl-date">16 ABR 2019</span><span class="tl-sev medium">MÉDIO</span><span class="ev ev-contested">EV-CONTESTED</span></div>
+      <div class="tl-title">PGR arquiva inquérito correlato (INQ 4.817) por vícios insanáveis</div>
+      <div class="tl-desc">Raquel Dodge arquiva o INQ 4.817 — procedimento correlato, não o próprio 4.781 —
+      citando afronta à separação de poderes, à livre distribuição e ao juiz natural. <strong>Nota de rigor:</strong>
+      fontes de imprensa também registram recomendações de Dodge para o encerramento direto do 4.781; a
+      numeração exata dos dois procedimentos exige verificação de fonte primária antes de tratamento como
+      evento único.</div>
+      <div class="tl-src">Fonte: <a href="https://www.conjur.com.br/2019-abr-16/pgr-arquiva-inquerito-instaurado-toffoli-ofensas-stf/" target="_blank">ConJur</a></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot critical"></div>
+      <div class="tl-head"><span class="tl-date">01 AGO 2019</span><span class="tl-sev critical">CRÍTICO</span><span class="ev ev-confirmed">EV-CONFIRMED</span><span class="tl-pattern">P02 · P05</span></div>
+      <div class="tl-title">Moraes suspende investigações da Receita Federal sobre 133 contribuintes</div>
+      <div class="tl-desc">Com base na Nota Copes nº 48/2018, a Receita Federal investigava 133 agentes públicos —
+      entre eles ministros do STF e cônjuges, incluindo a esposa de Toffoli. Moraes determina, dentro do INQ 4.781,
+      a suspensão imediata de todos os procedimentos e afasta cautelarmente dois auditores fiscais por alegada
+      quebra de sigilo, citando "graves indícios de ilegalidade no direcionamento das apurações".</div>
+      <div class="tl-src">Fontes: <a href="https://www.poder360.com.br/justica/moraes-suspende-investigacoes-da-receita-sobre-133-contribuintes/" target="_blank">Poder360</a> ·
+      <a href="https://www.jota.info/stf/do-supremo/ministro-suspende-apuracoes-da-receita-federal-sobre-133-contribuintes-01082019" target="_blank">JOTA</a> ·
+      <a href="https://agenciabrasil.ebc.com.br/justica/noticia/2019-08/ministro-do-stf-suspende-investigacao-da-receita-contra-autoridades" target="_blank">Agência Brasil</a></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot medium"></div>
+      <div class="tl-head"><span class="tl-date">06 AGO 2019</span><span class="tl-sev medium">MÉDIO</span><span class="ev ev-confirmed">EV-CONFIRMED</span></div>
+      <div class="tl-title">PGR recorre da suspensão das investigações fiscais</div>
+      <div class="tl-desc">Dodge contesta a decisão que suspendeu os procedimentos da Receita, apontando que o
+      sigilo do inquérito impede saber com precisão o que está sendo investigado — somando-se aos vícios já
+      apontados.</div>
+      <div class="tl-src">Fonte: <a href="https://www.conjur.com.br/2019-ago-06/pgr-recorre-decisao-stf-suspendeu-investigacoes-receita/" target="_blank">ConJur</a></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot info"></div>
+      <div class="tl-head"><span class="tl-date">05 NOV 2019</span><span class="tl-sev info">INFO</span><span class="ev ev-confirmed">EV-CONFIRMED</span></div>
+      <div class="tl-title">Moraes revoga afastamento dos auditores fiscais</div>
+      <div class="tl-desc">Após oitiva dos servidores, Moraes autoriza o retorno dos dois auditores da Receita
+      afastados em agosto — sem reverter a suspensão das investigações sobre os 133 contribuintes.</div>
+      <div class="tl-src">Fonte: <a href="https://agenciabrasil.ebc.com.br/justica/noticia/2019-11/ministro-do-stf-revoga-afastamento-de-auditores-da-receita" target="_blank">Agência Brasil</a></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot critical"></div>
+      <div class="tl-head"><span class="tl-date">07 NOV 2019</span><span class="tl-sev critical">CRÍTICO</span><span class="ev ev-confirmed">EV-CONFIRMED</span><span class="tl-pattern">SISTÊMICO</span></div>
+      <div class="tl-title">STF encerra execução da pena após 2ª instância (ADCs 43/44/54)</div>
+      <div class="tl-desc">Por 6 votos a 5, o plenário declara inconstitucional a prisão antes do trânsito em
+      julgado, revertendo jurisprudência de 2016. Impacto estimado pelo CNJ à época: cerca de 5 mil presos,
+      incluindo condenados da Lava Jato. Evento paralelo ao INQ 4.781, mas parte do mesmo período de
+      remodelação da jurisprudência penal pela Corte.</div>
+      <div class="tl-src">Consolidado historicamente — recomendável checagem de acórdão literal antes de uso como <span class="ev ev-confirmed" style="font-size:8px">EV-CONFIRMED</span> em entrada formal de corpus.</div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot critical"></div>
+      <div class="tl-head"><span class="tl-date">10 JUN 2020</span><span class="tl-sev critical">CRÍTICO</span><span class="ev ev-confirmed">EV-CONFIRMED</span><span class="tl-pattern">P03-A</span></div>
+      <div class="tl-title">Plenário valida o INQ 4.781 por 10 votos a 1</div>
+      <div class="tl-desc">Mais de um ano após a abertura, o STF referenda a legalidade do inquérito e sua
+      condução por Moraes. Único voto dissidente: Marco Aurélio Mello. A partir daqui, o inquérito segue
+      sem contestação formal de sua legalidade dentro da própria Corte.</div>
+      <div class="tl-src">Fonte: <a href="https://www.poder360.com.br/poder-justica/entenda-o-que-e-o-inquerito-das-fake-news-aberto-em-2019/" target="_blank">Poder360</a></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot high"></div>
+      <div class="tl-head"><span class="tl-date">2021</span><span class="tl-sev high">ALTO</span><span class="ev ev-alleged">EV-ALLEGED</span><span class="tl-pattern">P01</span></div>
+      <div class="tl-title">Incompetência da 13ª Vara de Curitiba e suspeição de Moro (8×3)</div>
+      <div class="tl-desc">O STF declara a incompetência territorial da 13ª Vara Federal de Curitiba para julgar
+      casos ligados a Lula e reconhece suspeição do então juiz Sergio Moro — decisões amplamente noticiadas
+      à época, citadas aqui a partir da cronologia de Talhari; recomenda-se checagem de fonte primária
+      (acórdãos específicos) antes de entrada formal `ev-confirmed`.</div>
+      <div class="tl-src">Fonte primária: postagens de Fábio Talhari (@fabio_talhari) — <a href="https://x.com/fabio_talhari/status/2091835410397712440" target="_blank">X, ago/2026</a></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot high"></div>
+      <div class="tl-head"><span class="tl-date">2023–2025</span><span class="tl-sev high">ALTO</span><span class="ev ev-confirmed">EV-CONFIRMED</span><span class="tl-pattern">P01</span></div>
+      <div class="tl-title">Anulações em cadeia de provas e condenações da Lava Jato</div>
+      <div class="tl-desc">Decisões monocráticas de Toffoli anulam sistematicamente provas (sistemas Drousys e
+      My Web Day da Odebrecht), condenações e atos processuais, sob argumento de incompetência de origem e
+      conluio revelado pela Operação Spoofing. Em março de 2026, Toffoli reverte decisões de Moro que afetavam
+      23 pessoas ligadas à Lava Jato e às Operações Integração, Quadro Negro e Piloto, com 11 pedidos ainda
+      pendentes de análise.</div>
+      <div class="tl-src">Fonte: <a href="https://revistaexilio.substack.com/p/ministro-toffoli-stf-beneficia-mais" target="_blank">Revista Exílio</a></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot high"></div>
+      <div class="tl-head"><span class="tl-date">30 AGO – 08 OUT 2024</span><span class="tl-sev high">ALTO</span><span class="ev ev-confirmed">EV-CONFIRMED</span></div>
+      <div class="tl-title">Bloqueio do X (Twitter) no Brasil</div>
+      <div class="tl-desc">Moraes ordena a suspensão do X após recusa de Elon Musk em nomear representante
+      legal no país; congela ativos da Starlink; multa a X Corp. em US$5,2 milhões. Medida confirmada pela
+      1ª Turma do STF. Plataforma retorna após cumprimento das exigências.</div>
+      <div class="tl-src">Fonte: <a href="https://en.wikipedia.org/wiki/Blocking_of_X_in_Brazil" target="_blank">Wikipedia (EN)</a></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot medium"></div>
+      <div class="tl-head"><span class="tl-date">DEZ 2025</span><span class="tl-sev medium">MÉDIO</span><span class="ev ev-confirmed">EV-CONFIRMED</span><span class="tl-pattern">P04b</span></div>
+      <div class="tl-title">O Estado de S. Paulo publica editorial "Sete anos de exceção"</div>
+      <div class="tl-desc">O jornal — que apoiara a abertura do inquérito em 2019 como resposta emergencial —
+      passa a descrevê-lo como instrumento de poder pessoal do relator e símbolo de deterioração institucional.
+      Primeiro marco documentado da guinada editorial que dá título a este dossiê.</div>
+      <div class="tl-src">Fonte: <a href="https://pt.wikipedia.org/wiki/Inqu%C3%A9rito_das_Fake_News" target="_blank">Wikipédia</a></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot medium"></div>
+      <div class="tl-head"><span class="tl-date">16 JAN 2026</span><span class="tl-sev medium">MÉDIO</span><span class="ev ev-confirmed">EV-CONFIRMED</span><span class="tl-pattern">TANGENCIAL</span></div>
+      <div class="tl-title">Toffoli prorroga inquérito do Banco Master em meio a desgaste com a PF</div>
+      <div class="tl-desc">Já como relator do inquérito que investiga fraudes no Banco Master, Toffoli prorroga
+      o prazo por 60 dias e retira da PF a custódia das provas, transferindo-a à PGR — medida criticada por
+      advogados e pela Associação Nacional dos Peritos Criminais Federais. Evento tangencial ao INQ 4.781, mas
+      no mesmo eixo de concentração de poder monocrático.</div>
+      <div class="tl-src">Fonte: <a href="https://tagteam.harvard.edu/hub_feeds/3884/feed_items/17188598/content" target="_blank">JOTA</a></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot critical"></div>
+      <div class="tl-head"><span class="tl-date">25 MAR 2026</span><span class="tl-sev critical">CRÍTICO</span><span class="ev ev-confirmed">EV-CONFIRMED</span><span class="tl-pattern">P01</span></div>
+      <div class="tl-title">Toffoli anula compartilhamento de provas da Lava Jato com o Reino Unido</div>
+      <div class="tl-desc">Em decisão sob sigilo, Toffoli declara nula a autorização de 2021 da 13ª Vara Federal
+      de Curitiba para envio de cópia integral do processo contra Mário Ildeu de Miranda (ex-engenheiro da
+      Petrobras) ao Serious Fraud Office britânico. O Ministério da Justiça comunica a anulação ao Reino Unido
+      ainda em março.</div>
+      <div class="tl-src">Fontes: <a href="https://www.cnnbrasil.com.br/politica/justica-inglesa-contraria-stf-e-mantem-uso-de-provas-da-lava-jato/" target="_blank">CNN Brasil</a> ·
+      <a href="https://www.cartacapital.com.br/justica/justica-de-londres-autoriza-uso-de-material-da-lava-jato-anuladas-pelo-stf/" target="_blank">CartaCapital</a></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot high"></div>
+      <div class="tl-head"><span class="tl-date">20 MAI 2026</span><span class="tl-sev high">ALTO</span><span class="ev ev-confirmed">EV-CONFIRMED</span><span class="tl-pattern">P01</span></div>
+      <div class="tl-title">Justiça britânica classifica anulação de Toffoli como "altamente incomum" e mantém provas</div>
+      <div class="tl-desc">O juiz Mark Weekes, do Tribunal da Coroa de Southwark, decide que a anulação brasileira
+      não vincula tribunais ingleses; mantém o confisco de valores de Miranda (cifras entre R$40 e R$51 milhões,
+      a depender da fonte — divergência não resolvida na imprensa) e autoriza o SFO a seguir usando o material,
+      recebido "de boa-fé" sob tratado de assistência jurídica mútua. O despacho só se torna público em agosto
+      de 2026, após reportagem da Global Investigations Review.</div>
+      <div class="tl-src">Fontes: <a href="https://www.poder360.com.br/poder-justica/justica-em-londres-ignora-decisao-do-supremo-e-segue-com-lava-jato/" target="_blank">Poder360</a> ·
+      <a href="https://www.gazetadopovo.com.br/mundo/justica-britanica-considera-decisao-toffoli-incomum-mantem-uso-provas-lava-jato/" target="_blank">Gazeta do Povo</a> ·
+      <a href="https://timesbrasil.com.br/brasil/justica-inglesa-mantem-provas-da-lava-jato-contra-ex-executivo-da-petrobras-mesmo-apos-stf-anular-compartilhamento/" target="_blank">Times Brasil/CNBC</a></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot medium"></div>
+      <div class="tl-head"><span class="tl-date">18 AGO 2026</span><span class="tl-sev medium">MÉDIO</span><span class="ev ev-confirmed">EV-CONFIRMED</span></div>
+      <div class="tl-title">Transparência Internacional e Deltan Dallagnol reagem ao caso britânico</div>
+      <div class="tl-desc">A ONG, sediada em Berlim, critica publicamente a decisão de Toffoli e observa que o
+      STF não julga há quase três anos os recursos contra as anulações relacionadas à Odebrecht. O ex-procurador
+      da Lava Jato e candidato ao Senado Deltan Dallagnol classifica o episódio como derrota da "canetada"
+      brasileira perante a Justiça britânica.</div>
+      <div class="tl-src">Fonte: <a href="https://www.poder360.com.br/poder-justica/outros-paises-nao-toleram-impunidade-diz-ong-sobre-toffoli/" target="_blank">Poder360</a></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot high"></div>
+      <div class="tl-head"><span class="tl-date">AGO 2026</span><span class="tl-sev high">ALTO</span><span class="ev ev-alleged">EV-ALLEGED — NÃO VERIFICADO NESTA RODADA</span><span class="tl-pattern">P04b</span></div>
+      <div class="tl-title">Busca e apreensão de equipamento de jornalista no Maranhão (caso Dino) e virada editorial de O Globo</div>
+      <div class="tl-desc">Segundo relato de Fábio Talhari, Moraes autoriza busca que resulta na quebra de sigilo
+      de fonte de jornalista investigado por suposta perseguição ao ministro Flávio Dino; O Globo classifica o
+      episódio como retrocesso à liberdade de imprensa e passa a apoiar publicamente o encerramento do INQ 4.781.
+      <strong>Este item não foi verificado com fonte independente nesta sessão</strong> — tratar como `ev-alleged`
+      até checagem direta do editorial e da decisão judicial citada.</div>
+      <div class="tl-src">Fonte primária: postagem de Fábio Talhari — <a href="https://x.com/fabio_talhari/status/2091835410397712440" target="_blank">X, ago/2026</a></div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-dot medium"></div>
+      <div class="tl-head"><span class="tl-date">AGO 2026</span><span class="tl-sev medium">MÉDIO</span><span class="ev ev-confirmed">EV-CONFIRMED (fonte primária = a própria postagem)</span></div>
+      <div class="tl-title">Fábio Talhari publica cronologia e réplica sobre "legítima defesa institucional"</div>
+      <div class="tl-desc">Em duas postagens no X, o professor de Economia e Direito reconstrói a cronologia
+      do INQ 4.781 e refuta, com base na CF/88 (Título V, arts. 136–144) e no art. 25 do Código Penal, a
+      construção retórica de "legítima defesa institucional" — argumentando que não há instituto jurídico
+      correspondente e que a tese funciona como carta em branco para autotutela do Judiciário.</div>
+      <div class="tl-src"><a href="https://x.com/fabio_talhari/status/2091845974243020972" target="_blank">X — Post 1</a> ·
+      <a href="https://x.com/fabio_talhari/status/2091835410397712440" target="_blank">X — Post 2</a></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ ATORES ═══ -->
+<section class="sec" id="atores">
+  <div class="section-title">03 — Atores</div>
+  <div class="grid-3">
+    <div class="actor-card">
+      <div class="actor-role">Abertura do inquérito · 2019</div>
+      <div class="actor-name">Dias Toffoli</div>
+      <div class="actor-desc">Presidente do STF em 2019; assina a portaria de ofício. Relator, a partir de 2023,
+      da cadeia de anulações de provas e condenações da Lava Jato, incluindo o episódio britânico de 2026.</div>
+    </div>
+    <div class="actor-card">
+      <div class="actor-role">Relator designado · 2019–</div>
+      <div class="actor-name">Alexandre de Moraes</div>
+      <div class="actor-desc">Conduz o INQ 4.781 desde a abertura, sem sorteio. Determina censura, suspensão
+      de investigações fiscais e bloqueios de perfis e plataformas ao longo dos anos.</div>
+    </div>
+    <div class="actor-card">
+      <div class="actor-role">PGR · 2019</div>
+      <div class="actor-name">Raquel Dodge</div>
+      <div class="actor-desc">Questiona a legalidade do inquérito desde os primeiros dias, recorre da suspensão
+      das investigações fiscais e recomenda encerramento — sem êxito.</div>
+    </div>
+    <div class="actor-card">
+      <div class="actor-role">Dissidente · 2020</div>
+      <div class="actor-name">Marco Aurélio Mello</div>
+      <div class="actor-desc">Único voto contrário à validação do inquérito no julgamento de 2020 (10×1).</div>
+    </div>
+    <div class="actor-card">
+      <div class="actor-role">Justiça britânica · 2026</div>
+      <div class="actor-name">Mark Weekes (Tribunal da Coroa de Southwark)</div>
+      <div class="actor-desc">Recusa-se a reconhecer a anulação de Toffoli; mantém provas e confisco relacionados
+      à Petrobras, classificando o ato como "altamente incomum".</div>
+    </div>
+    <div class="actor-card">
+      <div class="actor-role">Comentarista · 2026</div>
+      <div class="actor-name">Fábio Talhari</div>
+      <div class="actor-desc">Professor de Economia e Direito; fonte primária da cronologia consolidada e da
+      refutação jurídica de "legítima defesa institucional" que originam este dossiê.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ IMPRENSA ═══ -->
+<section class="sec" id="imprensa">
+  <div class="section-title">04 — O Despertar Tardio da Imprensa</div>
+  <div class="prose">
+    <p>O ponto mais incômodo desta cronologia não é jurídico — é editorial. Em 2019, grande parte da imprensa
+    tradicional tratou a abertura do INQ 4.781 como resposta legítima a um "momento excepcional". A censura
+    à Crusoé foi criticada, mas isoladamente; a suspensão das investigações da Receita, pouco questionada
+    fora do círculo técnico. O padrão se repetiu ao longo de anos: cobertura tímida quando as ferramentas de
+    exceção atingiam opositores políticos, influenciadores ou cidadãos comuns.</p>
+    <p>A mudança de tom só se consolida quando a mesma arquitetura passa a atingir a própria imprensa — a
+    quebra de sigilo de fonte jornalística no caso relatado por Talhari, e o editorial "Sete anos de exceção"
+    de dezembro de 2025, são os marcos dessa virada. <strong>Isso não invalida a crítica atual</strong> — ela é
+    juridicamente correta e bem-vinda — mas documenta um padrão de aplicação seletiva do escrutínio institucional
+    que é, ele próprio, objeto de análise (P04b).</p>
+  </div>
+  <div class="quote-block">
+    <div class="quote-text">O tribunal britânico descreveu como "altamente incomum" o ato de uma autoridade
+    judicial revogar, posteriormente, a base legal doméstica de um compartilhamento de provas já realizado
+    de boa-fé.</div>
+    <div class="quote-source">Paráfrase do despacho do juiz Mark Weekes, Tribunal da Coroa de Southwark — 20/05/2026</div>
+  </div>
+</section>
+
+<!-- ═══ PADRÕES ═══ -->
+<section class="sec" id="padroes">
+  <div class="section-title">05 — Padrões Sistêmicos Ativados</div>
+  <div class="grid-2">
+    <div class="pcard">
+      <div class="pcard-id">P02</div>
+      <div class="pcard-name">Investigador-Investigado</div>
+      <div class="pcard-desc">A instituição que se declara vítima conduz a própria investigação — presente
+      desde a portaria de abertura até as decisões mais recentes de 2026.</div>
+    </div>
+    <div class="pcard amber">
+      <div class="pcard-id">P03-A</div>
+      <div class="pcard-name">Execução Penal como Vetor Normativo</div>
+      <div class="pcard-desc">Um inquérito nascido como medida de emergência se torna infraestrutura permanente
+      de poder — sem prazo de conclusão em sete anos de tramitação.</div>
+    </div>
+    <div class="pcard">
+      <div class="pcard-id">P01</div>
+      <div class="pcard-name">Anulação Processual Retroativa</div>
+      <div class="pcard-desc">Cadeia de anulações de provas e condenações (2023–2026) que cortes estrangeiras
+      se recusam a reconhecer — cinco países mantêm efeitos práticos das decisões anuladas no Brasil.</div>
+    </div>
+    <div class="pcard amber">
+      <div class="pcard-id">P04b</div>
+      <div class="pcard-name">Both-sidesism Funcional</div>
+      <div class="pcard-desc">Endosso editorial em 2019, silêncio relativo por anos, crítica firme só quando a
+      exceção atinge a própria categoria profissional que a legitimou.</div>
+    </div>
+    <div class="pcard purple">
+      <div class="pcard-id">P06</div>
+      <div class="pcard-name">Prescrição Estratégica / Exaustão Cognitiva</div>
+      <div class="pcard-desc">Sete anos de prorrogações sucessivas sob sigilo dissolvem a capacidade de
+      escrutínio público contínuo — a permanência deixa de ser, ela mesma, notícia.</div>
+    </div>
+    <div class="pcard purple">
+      <div class="pcard-id">OIS</div>
+      <div class="pcard-name">Operador Inconsciente do Sistema</div>
+      <div class="pcard-desc">Ministros, procuradores e editorialistas que racionalizam a excepcionalidade como
+      necessidade objetiva, sem dissimulação consciente — parte estrutural do mecanismo, não exceção a ele.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LACUNAS ═══ -->
+<section class="sec" id="lacunas">
+  <div class="section-title">06 — Lacunas Investigativas</div>
+  <div class="grid-2">
+    <div class="lacuna-card">
+      <div class="lacuna-num">Lacuna 01 — Numeração processual</div>
+      <div class="lacuna-text">O arquivamento por Dodge em abril/2019 refere-se ao INQ 4.817 ou ao próprio
+      4.781? Fontes de imprensa tratam os dois de forma ambígua. Necessário checar a petição/decisão original
+      antes de qualquer entrada `ev-confirmed` no corpus.</div>
+    </div>
+    <div class="lacuna-card">
+      <div class="lacuna-num">Lacuna 02 — Valores do confisco britânico</div>
+      <div class="lacuna-text">Ao menos três valores diferentes circulam na imprensa (R$40 mi, R$45 mi, R$51 mi)
+      para o mesmo confisco. Necessário acessar o despacho original de Mark Weekes para valor exato em libras
+      e conversão na data do despacho.</div>
+    </div>
+    <div class="lacuna-card">
+      <div class="lacuna-num">Lacuna 03 — Caso Maranhão/Dino</div>
+      <div class="lacuna-text">Busca e apreensão de equipamento de jornalista citada por Talhari não foi
+      verificada com fonte independente. Necessário localizar a decisão judicial e cobertura factual —
+      distinta da cobertura editorial de O Globo sobre o caso.</div>
+    </div>
+    <div class="lacuna-card">
+      <div class="lacuna-num">Lacuna 04 — Beneficiário final</div>
+      <div class="lacuna-text">Como em outras frentes do corpus: nenhuma das duas trajetórias documentadas aqui
+      — a captura judicial via INQ 4.781 e a cadeia de anulações da Lava Jato — aponta para um beneficiário
+      final identificável. O poder se concentra no mecanismo, não em um agente localizável fora dele.</div>
+    </div>
+    <div class="lacuna-card">
+      <div class="lacuna-num">Lacuna 05 — Editoriais recentes</div>
+      <div class="lacuna-text">Datas e títulos exatos dos editoriais recentes de O Globo e O Estado de S. Paulo
+      sobre PGR/Banco Master e sigilo de fonte não foram verificados individualmente nesta rodada.</div>
+    </div>
+    <div class="lacuna-card">
+      <div class="lacuna-num">Lacuna 06 — Prazo atual de vigência</div>
+      <div class="lacuna-text">Qual a data da prorrogação mais recente do INQ 4.781 e o prazo formalmente
+      declarado (se houver)? Necessário checar andamento processual atualizado no portal do STF.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CORPUS ═══ -->
+<section class="sec" id="corpus">
+  <div class="section-title">07 — Entrada no Corpus &amp; Conexões</div>
+
+  <div class="code-titled gap-24">
+    <div class="code-titled-head">_data/todo/lawfare-1889-inq4781-cronologia.json — proposta de entrada</div>
+    <div class="code-titled-body">{
+  "id": "1889",
+  "date": "2026-08-24",
+  "date_precision": "day",
+  "title": "INQ 4.781 — Sete Anos de Exceção: cronologia consolidada 2019-2026",
+  "category": "captura_judicial",
+  "patterns": ["P01", "P02", "P03-A", "P04b", "P06"],
+  "evidence_status": "ev-confirmed",
+  "status": "confirmado",
+  "connections": ["id_1299", "id_1777", "id_1779", "id_1780"],
+  "lacuna_investigativa": [
+    "INQ 4.817 vs INQ 4.781 na numeração do arquivamento de Dodge (abr/2019)",
+    "Valor exato do confisco britânico em libras — despacho original de Weekes",
+    "Caso Maranhão/Dino — não verificado com fonte independente",
+    "Data e prazo formal da prorrogação mais recente do INQ 4.781"
+  ],
+  "ponto_de_inflexao": "Justiça britânica recusa reconhecer anulação de Toffoli (mai/2026) — primeira ruptura pública e documentada entre STF e cooperação internacional sobre a mesma base fática",
+  "analise": "P04b operando na cobertura de imprensa entre 2019-2025: endosso editorial na abertura, silêncio relativo por anos, virada crítica coincidente com o momento em que a exceção passou a atingir a própria categoria profissional. O mecanismo (INQ 4.781) segue ativo independentemente da guinada editorial."
+}</div>
+  </div>
+
+  <div class="section-title">Conexões com o Corpus</div>
+  <div class="conn-list gap-24">
+    <div class="conn-item"><div class="conn-item-id">ID 1299</div><div class="conn-item-desc">Crise Brasil-EUA × INQ 4781 × Vaza Toga e Sanções — sobreposição com a frente diplomática americana.</div></div>
+    <div class="conn-item"><div class="conn-item-id">ID 1777</div><div class="conn-item-desc">Abertura de ofício do INQ 4.781/DF após ofensas de procurador da Lava Jato — o evento fundador desta cronologia.</div></div>
+    <div class="conn-item"><div class="conn-item-id">ID 1779</div><div class="conn-item-desc">Bloqueio de perfil do jornalista Guilherme Fiuza no âmbito do INQ 4.781/DF.</div></div>
+    <div class="conn-item"><div class="conn-item-id">ID 1780</div><div class="conn-item-desc">Bloqueio multiplataforma de Paulo Figueiredo Filho e Rodrigo Constantino no âmbito do INQ 4.781/DF.</div></div>
+  </div>
+
+  <div class="gap-32"></div>
+  <div class="section-title">Dossiês Relacionados</div>
+  <div class="rel-grid">
+    <a class="rel-card" href="alem-da-toga.html">
+      <div class="rel-card-id">DOSSIÊ</div>
+      <div class="rel-card-title">Além da Toga</div>
+      <div class="rel-card-body">Série Vaza Toga — captura institucional documentada por fonte primária.</div>
+      <div class="label-row"><span class="badge b-red">P02</span><span class="badge b-amber">P03</span></div>
+    </a>
+    <a class="rel-card" href="paradoxo-constitucional.html">
+      <div class="rel-card-id">JUDICIAL</div>
+      <div class="rel-card-title">Paradoxo Constitucional</div>
+      <div class="rel-card-body">Os dois vetores autoritários que se co-legitimam — moldura teórica da tese central.</div>
+      <div class="label-row"><span class="badge b-purple">P03</span><span class="badge b-amber">P04b</span></div>
+    </a>
+    <a class="rel-card" href="lava-jato-mapa-mental.html">
+      <div class="rel-card-id">MAPA MENTAL</div>
+      <div class="rel-card-title">Lava Jato — Mapa Mental</div>
+      <div class="rel-card-body">Rede completa de atores, decisões e desdobramentos da Operação Lava Jato.</div>
+      <div class="label-row"><span class="badge b-red">P01</span></div>
+    </a>
+    <a class="rel-card" href="republica-capturada.html">
+      <div class="rel-card-id">ANÁLISE</div>
+      <div class="rel-card-title">República Capturada</div>
+      <div class="rel-card-body">Mapeamento estrutural da captura institucional transversal a ideologias.</div>
+      <div class="label-row"><span class="badge b-purple">P10</span><span class="badge b-red">P11</span></div>
+    </a>
+    <a class="rel-card" href="satiagraha.html">
+      <div class="rel-card-id">DOSSIÊ</div>
+      <div class="rel-card-title">Satiagraha</div>
+      <div class="rel-card-body">Precedente histórico de captura judicial de emergência — série de operações
+      com desfecho similar de impunidade.</div>
+      <div class="label-row"><span class="badge b-amber">P03</span></div>
+    </a>
+    <a class="rel-card" href="inq4781.html">
+      <div class="rel-card-id">MAPA MENTAL</div>
+      <div class="rel-card-title">INQ 4.781 — Rede de Atores</div>
+      <div class="rel-card-body">Visualização em rede dos investigados, aliados e instrumentos legislativos
+      conectados ao inquérito.</div>
+      <div class="label-row"><span class="badge b-red">P02</span></div>
+    </a>
+  </div>
+</section>
+
+</div><!-- /main -->
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-text">INQ 4.781 — Sete Anos de Exceção · lawfare-timeline · Proposta corpus ID 1889 · 24/08/2026</div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap">
+    <span class="badge b-muted">CC0 1.0 Universal — Domínio Público</span>
+    <span class="badge b-muted">Fontes: Poder360 · ConJur · JOTA · CNN Brasil · CartaCapital · Gazeta do Povo · Agência Brasil · Wikipédia</span>
+  </div>
+</footer>
+
+<!-- GO TOP -->
+<button id="gotop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Voltar ao topo">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script>
+var gotop = document.getElementById('gotop');
+var tabs = document.querySelectorAll('.snav-tab');
+window.addEventListener('scroll', function(){
+  if(window.scrollY > 320) gotop.classList.add('show');
+  else gotop.classList.remove('show');
+}, {passive:true});
+
+function scrollToId(id){
+  var el = document.getElementById(id);
+  if(el){ var y = el.getBoundingClientRect().top + window.scrollY - 80; window.scrollTo({top:y,behavior:'smooth'}); }
+}
+
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(en){
+    if(en.isIntersecting){
+      var id = en.target.id;
+      tabs.forEach(function(t){ t.classList.toggle('active', t.getAttribute('data-section') === id); });
+    }
+  });
+}, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
+document.querySelectorAll('.sec').forEach(function(s){ io.observe(s); });
+</script>
+<script src="https://gosurf.site/counter.js"></script>
+</body>
+</html>

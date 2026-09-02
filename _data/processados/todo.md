@@ -1,11 +1,19 @@
 # Notas de processamento · `_data/todo/`
 
-**Atualizado:** 2026-08-20 (merge 1874–1888 Vaza Toga 5/2/3)
+**Atualizado:** 2026-09-01 (merge 1889–1904 + T-263–T-266)
 
 ## Fila
 
-- `_data/todo/` — **sem batches JSON** (20/08)
-- Staging: `p13-porta-giratoria.html`, `prompt-tratamento-pdfs-mensalao.md`
+- `_data/todo/` — **sem batches JSON** (01/09)
+- Staging: HTML Radiolão / INQ 4781 / MCD, `p13-porta-giratoria.html`, `prompt-tratamento-pdfs-mensalao.md`
+
+## Merge 01/09/2026
+
+| Batch | IDs na fila | IDs finais |
+|-------|-------------|------------|
+| Radiolão / Machado | 1889–1897 | **1889–1897** (livres) |
+| INQ 4781 cronologia | 1889–1898 | **1898–1904** + **T-264–T-266** (colisão com Radiolão) |
+| Auditoria MCD-05/2024 | T-263 | **T-263** |
 
 ## Merge 20/08/2026 (c)
 
@@ -16,20 +24,9 @@
 | Vaza Toga 3 (fraude exposta) | 1879–1884 | **1883–1888** |
 | Vaza Toga 4 (empresários) | 1868–1872 | **não mergeado** — duplicata de **1869–1873** |
 
-## Merge 20/08/2026 (b)
+## Sync (01/09)
 
-| Batch | IDs finais |
-|-------|------------|
-| Vaza Toga 4 | **1869–1873** (era 1868–1872) |
-
-## Merge 20/08/2026 (a)
-
-| Batch | IDs finais |
-|-------|------------|
-| Regulação internet | **1865–1868** |
-
-## Sync (20/08)
-
-- main **1888** · next **1889**
-- thematic **T-254** · next **T-255**
-- lawfare.json **1849** assuntos
+- main **1904** · next **1905**
+- thematic **T-266** · next **T-267**
+- lawfare.json **1865** assuntos
+- validate-ids: sem duplicatas; **1899** sem fontes (herdado do lote)

@@ -78,6 +78,8 @@ def thematic_id_from_file(path: Path, data: dict) -> int | None:
 def thematic_id_from_entry(entry: dict) -> int | None:
     eid = entry.get("id")
     if eid is None:
+        eid = entry.get("id_corpus")
+    if eid is None:
         return None
     if isinstance(eid, str):
         m = re.match(r"^T-(\d+)$", eid.strip(), re.I)
@@ -415,7 +417,8 @@ def render_estudos_post(data: dict, tid: int) -> tuple[str, str]:
     )
     desc = yaml_escape((resumo[:157] + "...") if len(resumo) > 157 else resumo)
     padroes = data.get("padroes_ativados") or data.get("patterns") or []
-    tags = ["estudo", "lawfare"] + [str(p).lower() for p in padroes]
+    extra = data.get("tags") or []
+    tags = ["estudo", "lawfare"] + [str(p).lower() for p in padroes] + [str(t).lower() for t in extra]
     if data.get("slug"):
         tags.append(data["slug"][:35])
     tags = list(dict.fromkeys(tags))[:12]
@@ -566,6 +569,11 @@ def process_all(dry_run: bool) -> tuple[list[dict], list[tuple[int, str, str]], 
                 items.extend(data["thematic_entries"])
             if isinstance(data.get("thematic"), list):
                 thematic_only.extend(data["thematic"])
+            if isinstance(data.get("assuntos"), list):
+                for assunto in data["assuntos"]:
+                    if isinstance(assunto, dict) and assunto.get("id") is None and assunto.get("id_corpus"):
+                        assunto["id"] = assunto["id_corpus"]
+                    items.append(assunto)
         elif isinstance(data, list):
             items = data
         else:
