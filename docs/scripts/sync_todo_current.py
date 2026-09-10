@@ -139,6 +139,10 @@ def resolve_category(entry: dict) -> str:
         "ato_legislativo": "lawfare",
         "vazatoga": "vazatoga",
         "tse": "tse",
+        "stf": "stf",
+        "escandalos": "escandalos",
+        "congresso": "escandalos",
+        "bancos": "bancos",
     }
     if cat in mapping:
         return mapping[cat]
@@ -284,9 +288,9 @@ def normalize_main_entry(entry: dict, source: str) -> dict | None:
         "_cadeia": entry.get("cadeia_logica") or "",
         "_ponto_inflexao": entry.get("ponto_de_inflexao") or "",
         "_connections": entry.get("connections") or [],
-        "_evidence_status": entry.get("evidence_status") or "",
+        "_evidence_status": entry.get("evidence_status") or entry.get("evidencia") or "",
         "_nota_correcao": entry.get("nota_correcao_midiatica"),
-        "padroes": entry.get("patterns") or entry.get("padroes") or [],
+        "padroes": entry.get("patterns") or entry.get("padroes") or entry.get("padroes_sistemicos") or [],
         "_source": source,
     }
 
