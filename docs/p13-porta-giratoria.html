@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P13 — Porta Giratória | República Sequestrada</title>
+<meta name="description" content="Dossiê do padrão P13 do corpus lawfare-timeline: conversão de autoridade pública em capital relacional privado. Cinco âncoras documentadas em defesa, regulação financeira e telecomunicações. CC0.">
+<link rel="canonical" href="https://gosurf.site/p13-porta-giratoria">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://gosurf.site/p13-porta-giratoria">
+<meta property="og:title" content="P13 — Porta Giratória: a decisão como ativo transferível">
+<meta property="og:description" content="Cinco âncoras documentadas. Em nenhuma delas a norma faltava. O padrão persiste por não-execução, não por vácuo normativo.">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="P13 — Porta Giratória: a decisão como ativo transferível">
+<meta name="twitter:description" content="Cinco âncoras documentadas em defesa, regulação financeira e telecom. A norma nunca faltou.">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#080c10;
+    --bg2:#0d1319;
+    --surface:#131b22;
+    --border:#1f2b34;
+    --text:#e6ecf1;
+    --muted:#7d8f9d;
+    --red:#c53d4f;
+    --gold:#d4af5a;
+    --blue:#5b8db8;
+    --green:#6fa87c;
+    --amber:#c98a4b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);color:var(--text);
+    font-family:'Crimson Pro',Georgia,serif;
+    font-size:17px;line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .mono{font-family:'IBM Plex Mono',monospace}
+
+  /* NAV */
+  nav{
+    position:sticky;top:0;z-index:100;
+    background:rgba(8,12,16,.94);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+  }
+  .nav-in{
+    max-width:1180px;margin:0 auto;padding:11px 22px;
+    display:flex;align-items:center;gap:22px;flex-wrap:wrap;
+  }
+  .nav-brand{
+    font-family:'Syne',sans-serif;font-weight:800;font-size:14px;
+    letter-spacing:.02em;color:var(--gold);text-decoration:none;
+    white-space:nowrap;
+  }
+  .nav-links{display:flex;gap:16px;flex-wrap:wrap}
+  .nav-links a{
+    font-family:'IBM Plex Mono',monospace;font-size:11px;
+    text-transform:uppercase;letter-spacing:.08em;
+    color:var(--muted);text-decoration:none;
+    padding:3px 0;border-bottom:2px solid transparent;
+    transition:color .2s,border-color .2s;
+  }
+  .nav-links a:hover{color:var(--text)}
+  .nav-links a.on{color:var(--red);border-bottom-color:var(--red)}
+
+  /* LAYOUT */
+  main{max-width:1180px;margin:0 auto;padding:0 22px 90px}
+  section{padding:62px 0 8px;scroll-margin-top:70px}
+  h1{
+    font-family:'Syne',sans-serif;font-weight:800;
+    font-size:clamp(2.1rem,5.4vw,3.9rem);line-height:1.04;
+    letter-spacing:-.02em;margin-bottom:18px;
+  }
+  h2{
+    font-family:'Syne',sans-serif;font-weight:700;
+    font-size:clamp(1.4rem,3vw,2.05rem);line-height:1.15;
+    margin-bottom:8px;letter-spacing:-.01em;
+  }
+  h3{
+    font-family:'Syne',sans-serif;font-weight:600;
+    font-size:1.13rem;margin-bottom:9px;line-height:1.3;
+  }
+  h4{
+    font-family:'IBM Plex Mono',monospace;font-weight:600;
+    font-size:11px;text-transform:uppercase;letter-spacing:.13em;
+    color:var(--muted);margin-bottom:13px;
+  }
+  p{margin-bottom:15px;max-width:74ch}
+  a{color:var(--blue)}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;font-size:11px;
+    text-transform:uppercase;letter-spacing:.17em;
+    color:var(--red);margin-bottom:14px;display:block;
+  }
+  .lead{font-size:1.19rem;color:#c8d4dd;max-width:70ch}
+  .rule{height:1px;background:var(--border);margin:44px 0 0}
+
+  /* HERO */
+  header.hero{
+    padding:76px 0 30px;
+    border-bottom:1px solid var(--border);
+  }
+  .hero-meta{
+    display:flex;gap:9px;flex-wrap:wrap;margin-top:26px;
+  }
+  .tag{
+    font-family:'IBM Plex Mono',monospace;font-size:10.5px;
+    text-transform:uppercase;letter-spacing:.09em;
+    padding:5px 11px;border:1px solid var(--border);
+    border-radius:3px;color:var(--muted);background:var(--bg2);
+  }
+  .tag.red{border-color:rgba(197,61,79,.5);color:#e08a96}
+  .tag.gold{border-color:rgba(212,175,90,.45);color:var(--gold)}
+
+  /* DEFINIÇÃO */
+  .defbox{
+    background:var(--bg2);border-left:3px solid var(--gold);
+    padding:26px 28px;margin:26px 0;border-radius:0 5px 5px 0;
+  }
+  .defbox p:last-child{margin-bottom:0}
+  .defbox .q{
+    font-family:'Syne',sans-serif;font-weight:600;
+    font-size:1.16rem;line-height:1.4;color:var(--text);
+  }
+
+  /* GRID */
+  .grid{
+    display:grid;gap:17px;margin-top:24px;
+    grid-template-columns:repeat(auto-fit,minmax(268px,1fr));
+  }
+  .card{
+    background:var(--surface);border:1px solid var(--border);
+    border-radius:6px;padding:22px;
+  }
+  .card-top{
+    display:flex;align-items:baseline;gap:9px;margin-bottom:11px;
+    flex-wrap:wrap;
+  }
+  .code{
+    font-family:'IBM Plex Mono',monospace;font-weight:600;
+    font-size:12.5px;letter-spacing:.05em;color:var(--red);
+  }
+  .card p{font-size:15.5px;margin-bottom:11px;max-width:none}
+  .card p:last-child{margin-bottom:0}
+  .anchor-list{
+    list-style:none;font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;color:var(--muted);line-height:1.75;
+    border-top:1px solid var(--border);padding-top:11px;margin-top:13px;
+  }
+  .anchor-list li:before{content:"↳ ";color:var(--gold)}
+
+  /* ÂNCORAS / TIMELINE */
+  .anchors{margin-top:30px;display:flex;flex-direction:column;gap:0}
+  .anchor{
+    display:grid;grid-template-columns:98px 1fr;gap:24px;
+    padding:26px 0;border-top:1px solid var(--border);
+  }
+  .anchor:last-child{border-bottom:1px solid var(--border)}
+  .a-date{
+    font-family:'Bebas Neue',sans-serif;font-size:1.6rem;
+    line-height:1;color:var(--gold);letter-spacing:.02em;
+  }
+  .a-date span{
+    display:block;font-family:'IBM Plex Mono',monospace;
+    font-size:10px;color:var(--muted);letter-spacing:.09em;
+    margin-top:5px;text-transform:uppercase;
+  }
+  .a-body h3{margin-bottom:7px}
+  .a-body p{font-size:16px;margin-bottom:11px}
+  .a-flow{
+    font-family:'IBM Plex Mono',monospace;font-size:12.5px;
+    background:var(--bg2);border:1px solid var(--border);
+    border-radius:4px;padding:13px 15px;margin:13px 0;
+    color:#b6c6d2;line-height:1.7;
+  }
+  .a-flow .arw{color:var(--red);padding:0 5px}
+  .ev{
+    font-family:'IBM Plex Mono',monospace;font-size:10px;
+    text-transform:uppercase;letter-spacing:.1em;
+    padding:3px 8px;border-radius:3px;white-space:nowrap;
+  }
+  .ev-confirmed{background:rgba(111,168,124,.14);color:#8fc79c;border:1px solid rgba(111,168,124,.35)}
+  .ev-alleged{background:rgba(201,138,75,.14);color:#dda772;border:1px solid rgba(201,138,75,.35)}
+  .ev-inference{background:rgba(91,141,184,.14);color:#86b3d8;border:1px solid rgba(91,141,184,.35)}
+
+  /* TABELA */
+  .tw{overflow-x:auto;margin-top:22px;border:1px solid var(--border);border-radius:6px}
+  table{width:100%;border-collapse:collapse;min-width:600px}
+  th,td{
+    text-align:left;padding:12px 15px;
+    border-bottom:1px solid var(--border);vertical-align:top;
+  }
+  th{
+    font-family:'IBM Plex Mono',monospace;font-size:10.5px;
+    text-transform:uppercase;letter-spacing:.1em;color:var(--muted);
+    background:var(--bg2);font-weight:500;
+  }
+  td{font-size:15px}
+  tr:last-child td{border-bottom:none}
+  td.mono{font-size:12.5px;color:#b6c6d2}
+
+  /* NÚMEROS */
+  .stats{
+    display:grid;gap:15px;margin-top:24px;
+    grid-template-columns:repeat(auto-fit,minmax(178px,1fr));
+  }
+  .stat{
+    background:var(--bg2);border:1px solid var(--border);
+    border-radius:6px;padding:20px;
+  }
+  .stat b{
+    display:block;font-family:'Bebas Neue',sans-serif;
+    font-size:2.5rem;line-height:1;color:var(--red);
+    letter-spacing:.01em;margin-bottom:7px;
+  }
+  .stat span{
+    font-family:'IBM Plex Mono',monospace;font-size:11.5px;
+    color:var(--muted);line-height:1.55;display:block;
+  }
+
+  /* ALERTA METODOLÓGICO */
+  .warn{
+    background:rgba(197,61,79,.07);
+    border:1px solid rgba(197,61,79,.32);
+    border-radius:6px;padding:24px 26px;margin-top:24px;
+  }
+  .warn h3{color:#e08a96}
+  .warn p:last-child{margin-bottom:0}
+  .ok{
+    background:rgba(111,168,124,.06);
+    border:1px solid rgba(111,168,124,.28);
+    border-radius:6px;padding:24px 26px;margin-top:20px;
+  }
+  .ok h3{color:#8fc79c}
+  .ok p:last-child{margin-bottom:0}
+
+  /* LACUNAS */
+  .gaps{list-style:none;margin-top:20px}
+  .gaps li{
+    padding:15px 0 15px 26px;border-top:1px solid var(--border);
+    position:relative;font-size:16px;max-width:82ch;
+  }
+  .gaps li:last-child{border-bottom:1px solid var(--border)}
+  .gaps li:before{
+    content:"?";position:absolute;left:0;top:15px;
+    font-family:'Syne',sans-serif;font-weight:800;
+    color:var(--gold);font-size:15px;
+  }
+
+  /* FOOTER */
+  footer{
+    border-top:1px solid var(--border);background:var(--bg2);
+    padding:44px 22px 54px;margin-top:26px;
+  }
+  .foot-in{max-width:1180px;margin:0 auto}
+  .foot-links{
+    display:flex;gap:20px;flex-wrap:wrap;margin:18px 0 26px;
+  }
+  .foot-links a{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;
+    color:var(--blue);text-decoration:none;
+  }
+  .foot-links a:hover{text-decoration:underline}
+  .cc0{
+    font-family:'IBM Plex Mono',monospace;font-size:11.5px;
+    color:var(--muted);line-height:1.85;max-width:78ch;
+  }
+  .cc0 b{color:var(--gold);font-weight:600}
+
+  /* GOTOP */
+  #gotop{
+    position:fixed;right:20px;bottom:20px;z-index:200;
+    width:42px;height:42px;border-radius:50%;
+    background:var(--surface);border:1px solid var(--border);
+    color:var(--gold);font-size:17px;cursor:pointer;
+    display:none;align-items:center;justify-content:center;
+    transition:background .2s,transform .2s;
+  }
+  #gotop:hover{background:var(--border);transform:translateY(-2px)}
+  #gotop.show{display:flex}
+
+  @media(max-width:640px){
+    body{font-size:16px}
+    .anchor{grid-template-columns:1fr;gap:11px}
+    .a-date{font-size:1.35rem}
+    section{padding:44px 0 8px}
+    header.hero{padding:48px 0 24px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a href="#top" class="nav-brand">REPÚBLICA SEQUESTRADA</a>
+    <div class="nav-links">
+      <a href="#definicao">Definição</a>
+      <a href="#variantes">Variantes</a>
+      <a href="#ancoras">Âncoras</a>
+      <a href="#no-ael">O nó AEL</a>
+      <a href="#escala">Escala</a>
+      <a href="#norma">A norma</a>
+      <a href="#metodo">Método</a>
+      <a href="#lacunas">Lacunas</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+
+<header class="hero">
+  <span class="eyebrow">Corpus lawfare-timeline · Padrão P13 · T-253</span>
+  <h1>Porta Giratória:<br>a decisão como ativo transferível</h1>
+  <p class="lead">Cinco âncoras documentadas em três domínios institucionais — defesa, regulação financeira, telecomunicações. Em nenhuma delas a norma faltava. O padrão não persiste por vácuo normativo; persiste por não-execução da norma existente — e, num dos casos, porque o próprio órgão de aplicação removeu a barreira.</p>
+  <div class="hero-meta">
+    <span class="tag gold">P13 · promovido a padrão autônomo</span>
+    <span class="tag">4 subvariantes: A · B · C · D</span>
+    <span class="tag red">5 âncoras ev-confirmed</span>
+    <span class="tag">1990–2026</span>
+    <span class="tag">CC0 1.0 · domínio público</span>
+  </div>
+</header>
+
+<section id="definicao">
+  <h4>01 · Definição</h4>
+  <h2>Nem informação, nem dinheiro: autoridade</h2>
+  <div class="defbox">
+    <p class="q">P13 — Porta Giratória: mecanismo pelo qual autoridade sobre decisões públicas de compra, concessão ou regulação é convertida em posição remunerada no ente privado afetado por essas decisões, sem que a conversão exija ilegalidade, dissimulação ou coordenação.</p>
+  </div>
+  <p>O ativo transferido não é informação de curta validade. É <strong>capital relacional</strong> e <strong>conhecimento estrutural do órgão</strong> — ambos duráveis. Essa é a razão pela qual prazos curtos de quarentena são inoperantes por desenho, e não por falha de aplicação: seis meses não depreciam uma rede de contatos nem apagam o mapa interno de como um regulador decide.</p>
+
+  <h4 style="margin-top:34px">Critério distintivo — o que P13 não é</h4>
+  <div class="tw">
+    <table>
+      <thead><tr><th>Padrão vizinho</th><th>Distinção</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">P05 · fundos públicos como vetor</td><td>Em P05 o objeto capturado é recurso orçamentário. Em P13 é a autoridade decisória <em>sobre</em> o recurso. Juntos descrevem extração em dois níveis: o dinheiro e a decisão sobre o dinheiro.</td></tr>
+        <tr><td class="mono">P02 · investigador-investigado</td><td>P02 exige inversão adversarial. P13 é o oposto: continuidade de interesse, sem ruptura.</td></tr>
+        <tr><td class="mono">P10 · infraestrutura compartilhada</td><td>P10 requer arquitetura jurídico-financeira comum. P13 requer apenas a existência do cargo.</td></tr>
+        <tr><td class="mono">P07 · captura transgeracional</td><td>Sobrepõem-se em P13-D. Quando o beneficiário é familiar, catalogar com ambos os códigos.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="margin-top:18px;font-size:15.5px;color:var(--muted)">Transições público→público — militarização de estatais, recontratação de reservistas via PTTC — estão <strong>explicitamente fora</strong> do escopo do P13. Não há ente privado afetado; o mecanismo é outro.</p>
+  <div class="rule"></div>
+</section>
+
+<section id="variantes">
+  <h4>02 · Subvariantes</h4>
+  <h2>Quatro modos de atravessar a porta</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="card-top"><span class="code">P13-A</span><h3 style="margin:0">Sequencial</h3></div>
+      <p>A autoridade deixa o cargo público e assume posição no ente privado afetado por suas decisões anteriores. Quarentena aplicável — cumprida ou não.</p>
+      <ul class="anchor-list">
+        <li>id_1859 — Baptista Júnior → Airbus</li>
+        <li>id_1862 — Campos Neto → Nubank</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-top"><span class="code">P13-B</span><h3 style="margin:0">Simultânea</h3></div>
+      <p>A autoridade acumula cargo público <em>ativo</em> e posição deliberativa ou remunerada no fornecedor. Variante mais severa: a quarentena é inaplicável por definição, porque não há saída a partir da qual contar prazo.</p>
+      <ul class="anchor-list">
+        <li>id_1861 — Burnier, brigadeiro da ativa, conselho consultivo da AEL</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-top"><span class="code">P13-C</span><h3 style="margin:0">Barreira neutralizada</h3></div>
+      <p>A quarentena não é cumprida nem burlada — é <strong>dispensada pelo órgão encarregado de aplicá-la</strong>. Caracteriza captura do regulador da porta giratória, não apenas uso da porta.</p>
+      <ul class="anchor-list">
+        <li>id_1863 — Fábio Faria → BTG, dispensa concedida pela CEP</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-top"><span class="code">P13-D</span><h3 style="margin:0">Por interposta pessoa</h3></div>
+      <p>O beneficiário direto não é a autoridade, mas familiar posicionado no ente afetado. Sobrepõe-se a P07.</p>
+      <ul class="anchor-list">
+        <li>id_1860 — Bruno Baptista → AEL, na presidência do pai na COPAC</li>
+        <li>id_1861 — filho de Burnier; Pondé, concunhado de Saito</li>
+      </ul>
+    </div>
+  </div>
+  <div class="rule"></div>
+</section>
+
+<section id="ancoras">
+  <h4>03 · Âncoras documentadas</h4>
+  <h2>Cinco casos, três domínios, quatro governos</h2>
+  <p>A distribuição temporal e político-partidária das âncoras não é acidental — é requisito metodológico do corpus. Burnier em 2011 sob governo Dilma; Baptista Júnior, Faria e Campos Neto com origem no governo Bolsonaro; Campos Neto consumando a transição já sob governo Lula, cujo próprio Executivo propôs endurecer a regra. O padrão opera sob qualquer administração.</p>
+
+  <div class="anchors">
+
+    <div class="anchor">
+      <div class="a-date">2011<span>mar · P13-B + D</span></div>
+      <div class="a-body">
+        <div style="display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-bottom:7px">
+          <span class="ev ev-confirmed">ev-confirmed</span>
+          <span class="tag">id_1861</span>
+        </div>
+        <h3>Brigadeiro da ativa em conselho de fornecedor da própria Força</h3>
+        <p>O brigadeiro Gilberto Antônio Saboya Burnier recebeu assento no conselho diretor consultivo da AEL Sistemas — subsidiária da israelense Elbit, fornecedora de aviônicos da FAB — com poder de opinar em planos estratégicos, <strong>enquanto ainda estava na ativa</strong>. A ata de assembleia estabelece remuneração a conselheiros, sem especificar valores.</p>
+        <div class="a-flow">Cargo público ativo <span class="arw">+</span> assento deliberativo no fornecedor <span class="arw">→</span> nenhuma apuração disciplinar identificada</div>
+        <p style="font-size:15px;color:var(--muted)">Fonte: DefesaNet reproduzindo IstoÉ · Inquérito Civil MPF nº 1.16.000.004707/2014-83, arquivado em 2015 (Promoção nº 865/2015).</p>
+      </div>
+    </div>
+
+    <div class="anchor">
+      <div class="a-date">2011<span>mar · P13-D</span></div>
+      <div class="a-body">
+        <div style="display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-bottom:7px">
+          <span class="ev ev-confirmed">ev-confirmed</span>
+          <span class="tag">id_1860</span>
+        </div>
+        <h3>Filho do presidente da COPAC contratado pela fornecedora do caça em disputa</h3>
+        <p>Enquanto Carlos de Almeida Baptista Júnior presidia a Comissão Coordenadora do Programa Aeronave de Combate — que conduziu a seleção do Gripen NG —, seu filho Bruno Baptista foi contratado como analista pela AEL, fabricante do sistema WAD do próprio Gripen e do datalink Link-BR2. Progressão posterior: especialista (2022), Gerente de Relações Institucionais (2024).</p>
+        <div class="a-flow">Autoridade de compra (pai) <span class="arw">·</span> emprego no fornecedor (filho) <span class="arw">→</span> inquérito MPF aberto 2014, arquivado 2015</div>
+      </div>
+    </div>
+
+    <div class="anchor">
+      <div class="a-date">2023<span>mar · P13-C</span></div>
+      <div class="a-body">
+        <div style="display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-bottom:7px">
+          <span class="ev ev-confirmed">ev-confirmed</span>
+          <span class="tag">id_1863</span>
+          <span class="tag red">variante mais grave</span>
+        </div>
+        <h3>Ministro autoriza captação de R$ 2,5 bi pela controlada do banco — e vai trabalhar no banco</h3>
+        <p>Fábio Faria foi Ministro das Comunicações (2020–2022) e supervisionou o leilão do 5G (R$ 46,8 bi entre arrecadação e compromissos). Um dia antes de deixar o cargo, autorizou a V.tal — rede neutra de fibra cujo principal acionista é o BTG Pactual — a captar R$ 2,5 bilhões. Assumiu relações institucionais do BTG em 1º/mar/2023, com a missão de dialogar com os Três Poderes.</p>
+        <div class="a-flow">Leilão 5G <span class="arw">→</span> autorização V.tal/BTG (R$ 2,5 bi, véspera da saída) <span class="arw">→</span> quarentena <strong>dispensada</strong> pela CEP <span class="arw">→</span> cargo no BTG</div>
+        <p>A dispensa foi concedida pela Comissão de Ética Pública da Presidência, cujos membros à época eram indicados do governo que Faria integrava. A mesma decisão liberou Bruno Bianco, ex-AGU, também contratado pelo BTG. Dois membros da CEP foram dispensados por publicação no DOU seis dias depois.</p>
+        <p>A condicionante imposta — não atuar na área de comunicações do BTG — é frágil quando o cargo é relações institucionais e o principal ativo do contratante no setor regulado é a V.tal. Em 2024, Faria renunciou à direção da Skylink justamente por conflito com a V.tal: reconhecimento prático de que o conflito permaneceu operante.</p>
+      </div>
+    </div>
+
+    <div class="anchor">
+      <div class="a-date">2023<span>nov · P13-A</span></div>
+      <div class="a-body">
+        <div style="display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-bottom:7px">
+          <span class="ev ev-confirmed">ev-confirmed</span>
+          <span class="tag">id_1859</span>
+        </div>
+        <h3>Comandante da FAB restringe concorrência à Airbus — e vira consultor da Airbus</h3>
+        <p>Como Comandante da Aeronáutica (abr/2021–jan/2023), Baptista Júnior conduziu concorrência para dois A330-200 usados (orçamento US$ 80,6 mi) com requisitos que restringiram a disputa ao equipamento Airbus, excluindo Boeing KC-46 e a conversão da IAI. Escolhido o A330, a conversão em avião-tanque MRTT ficou direcionada à própria Airbus — única fornecedora do serviço. Os jatos chegaram em 2022 e seguem sem conversão, operando como transporte e aeronave presidencial.</p>
+        <div class="a-flow">Concorrência restrita ao A330 (2022) <span class="arw">→</span> saída do comando (jan/2023) <span class="arw">→</span> Senior Advisor for Strategy, Airbus (nov/2023)</div>
+        <p style="font-size:15px;color:var(--muted)">Airbus declarou que colaboradores seguem princípios de conformidade e que contratos com o governo brasileiro são públicos. Tentativa de contato com Baptista Júnior sem sucesso (Airway).</p>
+      </div>
+    </div>
+
+    <div class="anchor">
+      <div class="a-date">2025<span>jul · P13-A</span></div>
+      <div class="a-body">
+        <div style="display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-bottom:7px">
+          <span class="ev ev-confirmed">ev-confirmed</span>
+          <span class="tag">id_1862</span>
+          <span class="tag gold">âncora metodologicamente decisiva</span>
+        </div>
+        <h3>Ex-presidente do Banco Central assume conselho de fintech no primeiro dia legalmente possível</h3>
+        <p>Roberto Campos Neto presidiu o BC de fev/2019 a dez/2024 — autarquia que regula o regime aplicável a fintechs, o Pix, o Open Finance e o Drex. No período, fintechs autorizadas passaram de 34 (abr/2019) a 258 (2024). Em mai/2025 a Nu Holdings, sediada em Grand Cayman, anunciou sua contratação como Vice Chairman e Chefe Global de Políticas Públicas, com atribuição de relacionamento com reguladores globais. Comunicado à SEC. Posse em <strong>1º de julho de 2025 — primeiro dia após o fim da quarentena de seis meses</strong>.</p>
+        <div class="a-flow">Regulação de fintechs (2019–2024) <span class="arw">→</span> quarentena de 6 meses <strong>cumprida integralmente</strong> <span class="arw">→</span> vice-presidência do conselho da regulada</div>
+        <p>Nenhuma irregularidade apontada. O caso deu tração à proposta do governo federal de ampliar a quarentena de 6 para 18 meses — reconhecimento institucional explícito, por parte de quem administra a regra, de que ela é insuficiente.</p>
+      </div>
+    </div>
+
+  </div>
+  <div class="rule"></div>
+</section>
+
+<section id="no-ael">
+  <h4>04 · Convergência</h4>
+  <h2>A AEL Sistemas em 2011 não era só uma fornecedora</h2>
+  <p>A ata de assembleia de março de 2011 é o documento mais denso do conjunto porque registra, <strong>no mesmo ato</strong>, três vetores distintos de captura convergindo sobre uma única empresa:</p>
+  <div class="grid">
+    <div class="card">
+      <h4>Autoridade de compra</h4>
+      <p>Brigadeiro Burnier, <strong>na ativa</strong>, no conselho consultivo. Coronel reformado Luiz Guimarães Pondé, concunhado do Comandante da Aeronáutica Juniti Saito, como diretor de relações institucionais. Bruno Baptista, filho do presidente da COPAC, no quadro técnico. Filho de Burnier também empregado.</p>
+    </div>
+    <div class="card">
+      <h4>Autoridade orçamentária</h4>
+      <p>General Darke Figueiredo, assessor especial do senador Fernando Collor de Mello, nomeado ao conselho <strong>um mês após</strong> Collor assumir a presidência da Comissão de Defesa do Senado — colegiado que aprecia projetos de interesse do setor, incluindo subsídios à indústria bélica.</p>
+    </div>
+    <div class="card">
+      <h4>Capital privado estrangeiro</h4>
+      <p>AEL Sistemas: subsidiária da israelense Elbit Systems desde 2001, com 25% detido pela divisão de defesa da Embraer. Fornecedora do sistema WAD do Gripen e do datalink Link-BR2, usado pelas três Forças.</p>
+    </div>
+  </div>
+  <p style="margin-top:22px">Um relatório de inteligência da Polícia Federal enviado ao Palácio do Planalto apontou interesses pessoais de Saito com a AEL/Elbit. Saito respondeu que a contratação de Pondé seguiu &ldquo;critérios técnicos&rdquo;. O inquérito do MPF foi aberto em 2014 e arquivado em 2015 — sem instrução probatória aprofundada visível nas fontes públicas, sem alcançar a estrutura decisória e sem produzir qualquer alteração normativa sobre acumulação de cargos por militares da ativa em fornecedores de defesa.</p>
+  <p style="color:var(--muted);font-size:15.5px">Leitura estrutural: no período documentado, a AEL opera menos como fornecedora que como <strong>nó de convergência</strong> entre autoridade de compra, autoridade orçamentária e capital privado. O objeto de análise é a arquitetura do nó — não a moralidade dos ocupantes.</p>
+  <div class="rule"></div>
+</section>
+
+<section id="escala">
+  <h4>05 · Dimensão sistêmica</h4>
+  <h2>O padrão tem escala mensurável e direção definida</h2>
+  <p>Levantamento do Poder360 (2023) sobre contratos federais com empresas que têm militares em quadros societários. Estes números existem no dossiê para impedir que o P13 seja lido como conjunto de anedotas.</p>
+  <div class="stats">
+    <div class="stat"><b>67%</b><span>dos R$ 308 mi pagos a empresas de militares em 2022 saíram das próprias Forças Armadas ou do Ministério da Defesa</span></div>
+    <div class="stat"><b>33.749</b><span>ocorrências de militares da reserva em quadros societários de empresas ou entidades</span></div>
+    <div class="stat"><b>16.956</b><span>ocorrências de militares <strong>da ativa</strong> em quadros societários</span></div>
+    <div class="stat"><b>584</b><span>empresas com contratos públicos de ao menos R$ 50 mil nos últimos dez anos</span></div>
+    <div class="stat"><b>R$ 23,6 mi</b><span>pagos em 2022 a empresas cujos sócios <strong>ainda trabalhavam</strong> no governo federal — versão agregada da variante P13-B</span></div>
+  </div>
+  <p style="margin-top:22px">Em geral, as empresas prestam serviços para a mesma Força em que o sócio serviu. Pesquisador da UnB (Rodrigo Lentz) registra a hipótese de porta giratória como objeto já estabelecido na literatura acadêmica — não como suspeita jornalística.</p>
+  <div class="rule"></div>
+</section>
+
+<section id="norma">
+  <h4>06 · O achado transversal</h4>
+  <h2>Em nenhum dos cinco casos a norma faltava</h2>
+  <p>Este é o dado analítico mais relevante do padrão. O diagnóstico corrente — &ldquo;falta regulamentação&rdquo; — não sobrevive ao inventário normativo:</p>
+  <div class="tw">
+    <table>
+      <thead><tr><th>Norma</th><th>Vigência</th><th>O que prevê</th><th>Casos de aplicação identificados</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="mono">Lei 12.813/2013</td><td class="mono">desde 2013</td>
+          <td>Conflito de interesses; quarentena de seis meses para ex-dirigentes; vedação ao uso de informação privilegiada</td>
+          <td class="mono">Cumprida em id_1862 · dispensada em id_1863</td>
+        </tr>
+        <tr>
+          <td class="mono">Lei 14.133/2021</td><td class="mono">desde 2021</td>
+          <td>Criminaliza o uso posterior de informação relevante obtida em diálogo competitivo</td>
+          <td class="mono">Nenhum caso localizado</td>
+        </tr>
+        <tr>
+          <td class="mono">Lei 6.880/1980</td><td class="mono">desde 1980</td>
+          <td>Estatuto dos Militares — restrições ao exercício de atividade privada por militar da ativa</td>
+          <td class="mono">Nenhuma apuração disciplinar identificada em id_1861</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="margin-top:20px">O padrão persiste por <strong>ausência de execução</strong> da norma existente. E no caso id_1863 o próprio órgão de aplicação removeu a barreira. Isso aproxima estruturalmente o P13 do <span class="mono">P06</span> — prazo e inércia como forma de proteção — e o afasta da leitura de lacuna legislativa.</p>
+  <div class="rule"></div>
+</section>
+
+<section id="metodo">
+  <h4>07 · Protocolo anti-confirmation-bias</h4>
+  <h2>Regras de classificação — não negociáveis</h2>
+
+  <div class="ok">
+    <h3>Legalidade formal cumprida NÃO é contraexemplo ao P13</h3>
+    <p>O caso Campos Neto cumpriu integralmente a quarentena de seis meses, sem qualquer irregularidade apontada, e é por isso a âncora <strong>mais forte</strong> do conjunto: demonstra que o padrão opera dentro da lei. Aplica-se a distinção já consolidada no corpus entre simetria formal e simetria substantiva — um prazo de seis meses é formalmente uma barreira, mas não neutraliza um ativo que não expira.</p>
+  </div>
+
+  <div class="warn">
+    <h3>É proibido classificar qualquer transição público→privado como P13</h3>
+    <p>A classificação exige, cumulativamente: <strong>(a)</strong> decisão pública documentada que afetou o ente privado especificamente; <strong>(b)</strong> posição posterior ou simultânea no mesmo ente ou grupo. Ausente qualquer um dos dois, a entrada não é P13. Sequência temporal documentada não é motivação demonstrada — e o corpus registra essa distinção em cada entrada.</p>
+  </div>
+
+  <div class="warn">
+    <h3>Contraexemplo ausente é lacuna, não confirmação</h3>
+    <p>O corpus não localizou, até esta sessão, nenhum caso documentado de quarentena que efetivamente bloqueou uma contratação, nem de autoridade que declinou posição em ente afetado. Enquanto isso não existir, a generalização do P13 é <strong>mais fraca do que parece</strong> — e o dossiê diz isso em voz alta em vez de tratar a ausência de contraexemplo como prova de universalidade.</p>
+  </div>
+  <div class="rule"></div>
+</section>
+
+<section id="lacunas">
+  <h4>08 · Lacunas investigativas</h4>
+  <h2>O que não se sabe</h2>
+  <p>Lacunas são dados de primeira classe no corpus. Cada item abaixo nomeia com precisão o que está ausente — sem transformar ausência em insinuação.</p>
+  <ul class="gaps">
+    <li><strong>Remunerações.</strong> Nenhum dos cinco casos tem valor divulgado. A ata da AEL (2011) estabelece remuneração a conselheiros sem especificar montantes. A Nu Holdings, como companhia aberta, deverá informar a de Campos Neto em demonstrações futuras — dado verificável a posteriori.</li>
+    <li><strong>Contratos AEL–FAB no comando de Baptista Júnior.</strong> A cifra de R$ 300 milhões circula em fonte jornalística única, refere-se ao &ldquo;governo Bolsonaro&rdquo; inteiro (jan/2019–dez/2022, janela mais ampla que o comando abr/2021–jan/2023) e não cita documento primário. Classificada <span class="ev ev-alleged">ev-alleged</span> — não promovida sem Portal da Transparência, DOU ou Comprasnet.</li>
+    <li><strong>Acordo MRTT.</strong> Não há confirmação pública de contrato Airbus–FAB para a conversão dos KC-30. A reportagem-fonte registra que, se existe, não foi tornado público.</li>
+    <li><strong>Fundamentação da dispensa de quarentena.</strong> A decisão da CEP que liberou Faria não foi localizada em fonte primária — apenas noticiada. Idem o motivo da dispensa de dois membros da CEP seis dias depois.</li>
+    <li><strong>Fiscalização de condicionantes.</strong> Não há registro de mecanismo que verifique se Faria efetivamente não atuou na área de comunicações do BTG.</li>
+    <li><strong>Motivo do arquivamento do inquérito MPF (2015).</strong> Se por ausência de tipicidade ou por insuficiência probatória — a distinção muda a leitura de todo o cluster AEL.</li>
+    <li><strong>Participação acionária.</strong> Nenhuma foi localizada em nome de Baptista Júnior ou do filho. Os vínculos documentados são empregatícios e consultivos, não societários. Registrado como ausência verificada, não como omissão.</li>
+    <li><strong>Sócio-administrador vs. sócio-cotista passivo.</strong> O dado de 16.956 militares da ativa em quadros societários não faz essa distinção — juridicamente decisiva.</li>
+    <li><strong>Série de dados desatualizada.</strong> O levantamento sobre empresas de militares é de 2022/2023; não há série verificada até 2026. Também não foi verificado o status atual da proposta de quarentena de 18 meses.</li>
+  </ul>
+  <div class="rule"></div>
+</section>
+
+<section id="fecho">
+  <h4>09 · Síntese</h4>
+  <h2>P13 fecha o circuito</h2>
+  <p>O corpus já documentava, de forma fragmentada, o recurso público sendo capturado — <span class="mono">P05</span>. O P13 documenta a <em>autoridade sobre esse recurso</em> sendo capturada. Juntos, descrevem extração em dois níveis: o dinheiro e a decisão sobre o dinheiro.</p>
+  <p>Nenhuma das cinco âncoras exige conspiração, coordenação ou dissimulação para funcionar. Bastam a existência do cargo, a duração do capital relacional e a não-execução de normas que já estão em vigor. É por isso que o padrão é transideológico e atravessa administrações de orientações opostas sem alteração de forma — e é por isso que, mais uma vez, <strong>nenhum vetor chega ao beneficiário final</strong>.</p>
+  <p class="mono" style="font-size:13px;color:var(--muted);margin-top:26px">Entradas de corpus: id_1859 · id_1860 · id_1861 · id_1862 · id_1863 · id_1864 · T-253 (proposta de promoção)<br>Status: <strong style="color:var(--gold)">__PENDENTE_SYNC__</strong> — IDs sujeitos a reconciliação com lawfare.json antes do merge</p>
+</section>
+
+</main>
+
+<footer>
+  <div class="foot-in">
+    <h4>Fontes primárias e secundárias</h4>
+    <div class="foot-links">
+      <a href="https://www.airway.com.br/ex-comandante-da-fab-que-aprovou-compra-dos-jatos-kc-30-virou-consultor-da-airbus/" target="_blank" rel="noopener">Airway — KC-30 / Airbus</a>
+      <a href="https://iclnoticias.com.br/ex-comandante-da-fab-fechou-contratos-airbus/" target="_blank" rel="noopener">ICL — contratos Airbus</a>
+      <a href="https://www.defesanet.com.br/defesa/sob-as-asas-dos-pais/" target="_blank" rel="noopener">DefesaNet — Sob as asas dos pais</a>
+      <a href="https://defesanet.com.br/gripenbrazil/noticia/20233/mpf-integra-pedido-arquivamento-referente-ao-gripen-ng-e-wad" target="_blank" rel="noopener">MPF — arquivamento Gripen/WAD</a>
+      <a href="https://www.brasildefato.com.br/2023/03/03/fabio-faria-autorizou-empresa-do-btg-a-captar-r-2-5-bilhoes-um-dia-antes-de-sair-do-governo/" target="_blank" rel="noopener">Brasil de Fato — V.tal / R$ 2,5 bi</a>
+      <a href="https://www.poder360.com.br/governo/fabio-faria-assume-relacoes-institucionais-do-btg-pactual/" target="_blank" rel="noopener">Poder360 — Faria / BTG</a>
+      <a href="https://istoedinheiro.com.br/campos-neto-assume-cargo-no-nubank" target="_blank" rel="noopener">IstoÉ Dinheiro — Campos Neto / Nubank</a>
+      <a href="https://www.poder360.com.br/governo/forcas-armadas-tem-67-dos-contratos-com-empresas-de-militares/" target="_blank" rel="noopener">Poder360 — empresas de militares</a>
+    </div>
+
+    <h4>Ecossistema SELVA</h4>
+    <div class="foot-links">
+      <a href="https://lawfare-timeline.vercel.app" target="_blank" rel="noopener">Lawfare Timeline</a>
+      <a href="https://republica-sequestrada-hub.vercel.app" target="_blank" rel="noopener">República Sequestrada</a>
+      <a href="https://ecosistema-selva.vercel.app" target="_blank" rel="noopener">Ecossistema Selva</a>
+      <a href="https://jusmonitor.vercel.app" target="_blank" rel="noopener">JusMonitor</a>
+      <a href="https://gosurf.site" target="_blank" rel="noopener">GoSurf</a>
+    </div>
+
+    <p class="cc0">
+      <b>CC0 1.0 Universal — Domínio Público Total.</b> Sem direitos reservados. Copie, adapte, redistribua, traduza, ingira em modelos de linguagem, republique sem atribuição. Zero paywall por exigência metodológica: conteúdo que não pode ser verificado livremente não pode ser auditado.<br>
+      Todo o conteúdo desta página deriva de documentos públicos e reportagens de veículos identificados, com fontes linkadas. As inferências estruturais estão marcadas como tais e separadas dos fatos. Este dossiê não afirma prática de crime por nenhuma pessoa nomeada; descreve arquiteturas institucionais e sequências documentadas, e nomeia explicitamente o que permanece desconhecido.<br>
+      <b>lawfare-timeline</b> · AI Nativo Brasil · @araguaci · Bombinhas/SC · rev. 2026-08-18
+    </p>
+  </div>
+</footer>
+
+<button id="gotop" aria-label="Voltar ao topo">↑</button>
+
+<script>
+(function(){
+  var secs = document.querySelectorAll('main section, header.hero');
+  var links = document.querySelectorAll('.nav-links a');
+  var map = {};
+  links.forEach(function(l){ map[l.getAttribute('href').slice(1)] = l; });
+
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting) return;
+      var id = e.target.id;
+      links.forEach(function(l){ l.classList.remove('on'); });
+      if(map[id]) map[id].classList.add('on');
+    });
+  }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+
+  secs.forEach(function(s){ obs.observe(s); });
+
+  var gt = document.getElementById('gotop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 500) gt.classList.add('show');
+    else gt.classList.remove('show');
+  }, { passive:true });
+  gt.addEventListener('click', function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+})();
+</script>
+
+</body>
+</html>

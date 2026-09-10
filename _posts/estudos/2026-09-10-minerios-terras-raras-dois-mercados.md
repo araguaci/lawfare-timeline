@@ -23,7 +23,7 @@ Em 17 de setembro de 2025 a Polícia Federal prendeu 22 pessoas na [Operação R
 
 Em 22 de janeiro de 2026 o último preso saiu. Das 22 preventivas, nenhuma restava. O TRF-6 fechou o que [Toffoli abriu em 19 de dezembro](/posts/2025-12-19-toffoli-revoga-preventivas-lideres-rejeito/): soltar os quatro líderes contra o parecer do PGR.
 
-No mesmo semestre a USA Rare Earth comprou a [Serra Verde](/posts/2026-04-20-id1715-usa-rare-earth-compra-serra-verde/) (Minaçu, GO) por US$ 2,8 bi. Até a venda, a produção ia para a China. Depois, offtake de 15 anos com veículo capitalizado por entidades do governo americano. Caiado chamou o manifesto com os EUA de "talvez o mais importante geoeconômico já assinado por um governador". Três meses depois o ativo virou faixa de campanha.
+No mesmo semestre a USA Rare Earth comprou a [Serra Verde](/posts/id1715-usa-rare-earth-anuncia-aquisicao-da-serra-verde-goias-por-us-28-bilhoes-inverten/) (Minaçu, GO) por US$ 2,8 bi. Até a venda, a produção ia para a China. Depois, offtake de 15 anos com veículo capitalizado por entidades do governo americano. Caiado chamou o manifesto com os EUA de "talvez o mais importante geoeconômico já assinado por um governador". Três meses depois o ativo virou faixa de campanha.
 
 Este estudo indexa o extrato `_data/minerios-terras-raras.json`: **80 IDs** do corpus principal. Não é dossiê de "entreguismo" genérico. São dois mercados no mesmo país. Um vende o óxido. O outro vende o licenciamento.
 
@@ -33,13 +33,13 @@ O artigo longo para X está em `artigos/minerios-terras-raras-xarticle.md`. A ca
 
 O minério estratégico muda de bandeira em contrato internacional no mesmo intervalo em que o licenciamento mineiro, já capturado, esvazia a prisão.
 
-O [T-197](/posts/2026-05-28-operacao-rejeito-serra-curral-manuscritos/) cobre o cluster Rejeito 1552–1571. O [T-192](/posts/2026-05-28-vorcaro-triangulo-carbono-mineracao-banco/) cobre o triângulo carbono–mineração–banco. O T-267 não substitui esses dossiês. Cruza Rejeito, Topázio, lítio, Taboca, PL 2.780 e terras raras de Goiás numa só ficha.
+O [T-197](/posts/operacao-rejeito-serra-curral-manuscritos/) cobre o cluster Rejeito 1552–1571. O [T-192](/posts/vorcaro-triangulo-carbono-mineracao-banco/) cobre o triângulo carbono–mineração–banco. O T-267 não substitui esses dossiês. Cruza Rejeito, Topázio, lítio, Taboca, PL 2.780 e terras raras de Goiás numa só ficha.
 
 ## O que o lote confirma
 
 A Serra do Curral já estava aberta em 2019 ([1552](/posts/2019-07-18-poeira-vermelha-terraplanagem-nova-lima/)). Manuscritos retidos em 2021 ([1553](/posts/2021-02-26-manuscritos-serra-curral-teixeira-retencao/)). Iepha presidido por prima do diretor da Tamisa ([1547](/posts/2022-05-01-governo-zema-nomeou-ao-iepha-prima-de-diretor-responsavel-pela-tamisa/)). TACs/TCs triplicados, Tamisa no fundo Victoria Falls do Master ([1548](/posts/2023-01-01-governo-zema-triplicou-uso-de-tacs-e-tcs-permitindo-mineracao-sem-licenca-ambiental-defini/)). Voto da ANM no WhatsApp uma hora antes da sessão ([1558](/posts/2024-11-22-caio-seabra-voto-whatsapp-propina-anm/)). Teixeira operava a Gmais de facto: 557 de 587 mensagens ([1556](/posts/2025-09-17-teixeira-celular-gmais-557-mensagens/)). Em 6 de setembro de 2026 a telemetria nomeia o arquivo [Projeto Topázio](/posts/2026-09-06-extracao-forense-confirma-nome-de-arquivo-projeto-topazio-no-grupo-gmais-operado-por-teixe/).
 
-A ponta geopolítica é outra cadeia. Plano de mineração Brasil–China ([1653](/posts/2025-05-13-id1653-governo-lula-assina-36-acordos-com-a-china-em-pequim-incluindo-plano-de-acao-par/)). Taboca com a China Nonferrous ([1667](/posts/2024-01-01-id1667-mineracao-taboca-e-adquirida-pela-estatal-chinesa-china-nonferrous-metal-mining/)). Vale do Lítio na Nasdaq ([1679](/posts/2025-05-09-id1679-zema-lanca-mundialmente-o-projeto-vale-do-litio-na-nasdaq-em-nova-york/)). BYD no Jequitinhonha ([1750](/posts/2025-02-16-id1750-byd-adquire-direitos-minerais-de-litio-em-coronel-murta-mg-no-mesmo-vale-do-jequ/)). JOGMEC e manifesto EUA–Goiás ([1741](/posts/2025-07-01-id1741-jogmec-japao-negociacao-inicio/), [1745](/posts/2026-04-17-id1745-manifesto-entendimento-goias-eua/)). PL 2.780 aprovado na Câmara com FGAM de R$ 2 bi ([1707](/posts/2026-05-06-id1707-camara-aprova-o-pl-27802024-na-forma-do-substitutivo-fgam-de-r2bi-incentivos-de/)), urgência parada no Senado em julho ([1712](/posts/2026-07-06-id1712-pl-27802024-aguarda-votacao-de-urgencia-no-senado-especialista-ja-defende-suspen/)).
+A ponta geopolítica é outra cadeia. Plano de mineração Brasil–China ([1653](/posts/2025-05-13-id1653-governo-lula-assina-36-acordos-com-a-china-em-pequim-incluindo-plano-de-acao-par/)). Taboca com a China Nonferrous ([1667](/posts/2024-01-01-id1667-mineracao-taboca-e-adquirida-pela-estatal-chinesa-china-nonferrous-metal-mining/)). Vale do Lítio na Nasdaq ([1679](/posts/2025-05-09-id1679-zema-lanca-mundialmente-o-projeto-vale-do-litio-na-nasdaq-em-nova-york/)). BYD no Jequitinhonha ([1750](/posts/2025-02-16-id1750-byd-adquire-direitos-minerais-de-litio-em-coronel-murta-mg-no-mesmo-vale-do-jequ/)). JOGMEC e manifesto EUA–Goiás ([1741](/posts/2025-07-01-id1741-jogmec-japao-negociacao-inicio/), [1745](/posts/2026-04-17-id1745-manifesto-entendimento-goias-eua/)). PL 2.780 aprovado na Câmara com FGAM de R$ 2 bi ([1707](/posts/id1707-camara-aprova-o-pl-27802024-na-forma-do-substitutivo-fgam-de-r2bi-incentivos-de/)), urgência parada no Senado em julho ([1712](/posts/id1712-pl-27802024-aguarda-votacao-de-urgencia-no-senado-especialista-ja-defende-suspen/)).
 
 ## O que o lote não faz
 
@@ -53,20 +53,20 @@ Não trata Caiado, Zema, Lula ou o G7 como um só bloco. Goiás pivota para EUA 
 
 **P03** — chokepoints (PF, ANM, FEAM, Semad, STF) convertidos em ativo do grupo. Teixeira na Gmais. Seabra no voto. Toffoli no sigilo e na soltura.
 
-**P06** — 22 preventivas a zero em 118 dias; autos inacessíveis à própria PF; devolução à 1ª instância sem condenação ([1565](/posts/2026-01-14-trf6-soltura-massa-22-preventivas-zero/), [1569](/posts/2026-04-15-toffoli-retorno-1a-instancia-rejeito/)).
+**P06** — 22 preventivas a zero em 118 dias; autos inacessíveis à própria PF; devolução à 1ª instância sem condenação ([1565](/posts/2026-01-14-trf6-soltura-massa-22-preventivas-zero/), [1569](/posts/toffoli-retorno-1a-instancia-rejeito/)).
 
 **P08** — terraplanagem, PRAD e blendagem como cobertura. Terceiro manuscrito nomeia Vale, Gerdau e Trafigura ([1571](/posts/2026-05-27-terceiro-manuscrito-vale-gerdau-trafigura/)).
 
 **P09** — ativo mineral vira campanha. Caiado leva terras raras à pré-candidatura ([1748](/posts/2026-06-18-id1748-caiado-terras-raras-campanha/)). Zema lança o Vale do Lítio e convive, no mesmo mandato, com FDI chinês no Jequitinhonha.
 
-**P11** — extração estrutural: R$ 18 bi potenciais na Rejeito; FGAM de R$ 2 bi para o investidor no PL 2.780, sem fundo equivalente para comunidade atingida ([1711](/posts/2026-05-01-id1711-assimetria-estrutural-fundo-garantidor-da-atividade-mineral-fgam-protege-investi/)).
+**P11** — extração estrutural: R$ 18 bi potenciais na Rejeito; FGAM de R$ 2 bi para o investidor no PL 2.780, sem fundo equivalente para comunidade atingida ([1711](/posts/id1711-assimetria-estrutural-fundo-garantidor-da-atividade-mineral-fgam-protege-investi/)).
 
 ## Integração no corpus
 
 | Dossiê | Papel |
 | --- | --- |
-| [T-197 Rejeito](/posts/2026-05-28-operacao-rejeito-serra-curral-manuscritos/) | Cluster 1552–1571, três manuscritos, 22→0 |
-| [T-192 Vorcaro](/posts/2026-05-28-vorcaro-triangulo-carbono-mineracao-banco/) | Tamisa / Master / carbono |
+| [T-197 Rejeito](/posts/operacao-rejeito-serra-curral-manuscritos/) | Cluster 1552–1571, três manuscritos, 22→0 |
+| [T-192 Vorcaro](/posts/vorcaro-triangulo-carbono-mineracao-banco/) | Tamisa / Master / carbono |
 | [T-218 ouro ilegal](/posts/2026-06-29-ouro-ilegal-vetor-p08-amazonia-pcc-cv-venezuela/) | Camada P08 de garimpo; o T-267 soma [1607](/posts/2026-06-28-comando-vermelho-assume-controle-de-garimpo-ilegal-na-terra-indigena-sarare-mt-e-usa-ouro-/) |
 | Série Dragão e a Onça | 1653–1750, 1714–1717, 1740–1748 |
 | [1909](/posts/2026-09-01-nikolas-ferreira-pede-prisao-e-afastamento-de-moraes-citando-mensagens-de-vorcaro-audios-d/) / [1912](/posts/2026-09-06-extracao-forense-confirma-nome-de-arquivo-projeto-topazio-no-grupo-gmais-operado-por-teixe/) | Áudio Nikolas + arquivo Topázio |
@@ -79,9 +79,9 @@ Fonte: `_data/minerios-terras-raras.json` (extraído de `_data/lawfare.json` em 
 
 | ID | Data | Evento |
 | ---: | --- | --- |
-| 33 | 1990-01-01 | [Operação Diamante Negro](/posts/1990-01-01-operacao-diamante-negro/) |
-| 430 | 2019-01-01 | [Operação Alerta Mínimo](/posts/2019-01-01-operacao-alerta-minimo/) |
-| 649 | 2021-06-28 | [Operação Munduruku](/posts/2021-06-28-operacao-munduruku/) |
+| 33 | 1990-01-01 | [Operação Diamante Negro](/posts/operacao-diamante-negro/) |
+| 430 | 2019-01-01 | [Operação Alerta Mínimo](/posts/operacao-alerta-minimo/) |
+| 649 | 2021-06-28 | [Operação Munduruku](/posts/operacao-munduruku/) |
 | 1607 | 2026-06-28 | [Comando Vermelho assume controle de garimpo ilegal na Terra Indígena …](/posts/2026-06-28-comando-vermelho-assume-controle-de-garimpo-ilegal-na-terra-indigena-sarare-mt-e-usa-ouro-/) |
 
 ### Operação Rejeito / Serra do Curral
@@ -109,7 +109,7 @@ Fonte: `_data/minerios-terras-raras.json` (extraído de `_data/lawfare.json` em 
 | 1566 | 2026-01-20 | [Esposa de ministro do STF assume defesa de investigado da Rejeito no …](/posts/2026-01-20-viviane-barci-defesa-kallas-stf/) |
 | 1567 | 2026-02-01 | [Corregedoria PF instaura PAD contra Teixeira; MPF pede bloqueio de R$…](/posts/2026-02-01-pad-teixeira-corregedoria-pf-fev2026/) |
 | 1568 | 2026-03-01 | [Justiça Federal suspende 57 processos minerários na Serra do Curral e…](/posts/2026-03-01-jf-57-processos-anm-multada-serra-curral/) |
-| 1569 | 2026-04-15 | [Toffoli devolve operações Rejeito/Parcours à 1ª instância — sem nenhu…](/posts/2026-04-15-toffoli-retorno-1a-instancia-rejeito/) |
+| 1569 | 2026-04-15 | [Toffoli devolve operações Rejeito/Parcours à 1ª instância — sem nenhu…](/posts/toffoli-retorno-1a-instancia-rejeito/) |
 | 1570 | 2026-04-28 | [Cedro Participações vende Biomm e Latache Capital — Kallas se desvinc…](/posts/2026-04-28-kallas-vorcaro-desinvestimento-biomm-latache/) |
 | 1571 | 2026-05-27 | [Terceiro manuscrito revelado — cadeia do minério ilegal até Vale, Ger…](/posts/2026-05-27-terceiro-manuscrito-vale-gerdau-trafigura/) |
 | 1912 | 2026-09-06 | [Extração forense confirma nome de arquivo 'Projeto Topázio' no grupo …](/posts/2026-09-06-extracao-forense-confirma-nome-de-arquivo-projeto-topazio-no-grupo-gmais-operado-por-teixe/) |
@@ -162,10 +162,10 @@ Fonte: `_data/minerios-terras-raras.json` (extraído de `_data/lawfare.json` em 
 | 1696 | 2026-04-08 | [APIB protocola manifestação no STF contra regulamentação de mineração…](/posts/2026-04-08-id1696-apib-protocola-manifestacao-no-stf-contra-regulamentacao-de-mineracao-em-terra-c/) |
 | 1708 | 2026-05-01 | [INESC: Certificado Mineral de Baixo Carbono (CMBC) cria mercado de ca…](/posts/2026-05-01-id1708-inesc-certificado-mineral-de-baixo-carbono-cmbc-cria-mercado-de-carbono-paralelo/) |
 | 1709 | 2026-05-01 | [Substitutivo cria acesso preferencial das mineradoras ao Fundo Clima …](/posts/2026-05-01-id1709-substitutivo-cria-acesso-preferencial-das-mineradoras-ao-fundo-clima-fundo-nacio/) |
-| 1711 | 2026-05-01 | [Assimetria estrutural: Fundo Garantidor da Atividade Mineral (FGAM) p…](/posts/2026-05-01-id1711-assimetria-estrutural-fundo-garantidor-da-atividade-mineral-fgam-protege-investi/) |
+| 1711 | 2026-05-01 | [Assimetria estrutural: Fundo Garantidor da Atividade Mineral (FGAM) p…](/posts/id1711-assimetria-estrutural-fundo-garantidor-da-atividade-mineral-fgam-protege-investi/) |
 | 1706 | 2026-05-04 | [Comissão Especial apresenta parecer/substitutivo do relator Arnaldo J…](/posts/2026-05-04-id1706-comissao-especial-apresenta-parecersubstitutivo-do-relator-arnaldo-jardim-projet/) |
-| 1707 | 2026-05-06 | [Câmara aprova o PL 2.780/2024 na forma do substitutivo: FGAM de R$2bi…](/posts/2026-05-06-id1707-camara-aprova-o-pl-27802024-na-forma-do-substitutivo-fgam-de-r2bi-incentivos-de/) |
-| 1712 | 2026-07-06 | [PL 2.780/2024 aguarda votação de urgência no Senado; especialista já …](/posts/2026-07-06-id1712-pl-27802024-aguarda-votacao-de-urgencia-no-senado-especialista-ja-defende-suspen/) |
+| 1707 | 2026-05-06 | [Câmara aprova o PL 2.780/2024 na forma do substitutivo: FGAM de R$2bi…](/posts/id1707-camara-aprova-o-pl-27802024-na-forma-do-substitutivo-fgam-de-r2bi-incentivos-de/) |
+| 1712 | 2026-07-06 | [PL 2.780/2024 aguarda votação de urgência no Senado; especialista já …](/posts/id1712-pl-27802024-aguarda-votacao-de-urgencia-no-senado-especialista-ja-defende-suspen/) |
 
 ### Lítio — Minas Gerais
 
@@ -188,7 +188,7 @@ Fonte: `_data/minerios-terras-raras.json` (extraído de `_data/lawfare.json` em 
 | 1742 | 2025-08-01 | [Caiado declara que "Goiás não quer ser apenas exportador de matéria-p…](/posts/2025-08-01-id1742-caiado-discurso-agregacao-valor/) |
 | 1714 | 2026-02-06 | [EUA articulam bloco de minerais críticos para reduzir dependência da …](/posts/2026-02-06-id1714-eua-clube-minerais-criticos-reacao-china/) |
 | 1745 | 2026-04-17 | ["Manifesto de Entendimento" entre Goiás e o governo dos EUA sobre ter…](/posts/2026-04-17-id1745-manifesto-entendimento-goias-eua/) |
-| 1715 | 2026-04-20 | [USA Rare Earth anuncia aquisição da Serra Verde (Goiás) por US$ 2,8 b…](/posts/2026-04-20-id1715-usa-rare-earth-compra-serra-verde/) |
+| 1715 | 2026-04-20 | [USA Rare Earth anuncia aquisição da Serra Verde (Goiás) por US$ 2,8 b…](/posts/id1715-usa-rare-earth-anuncia-aquisicao-da-serra-verde-goias-por-us-28-bilhoes-inverten/) |
 | 1710 | 2026-05-01 | [INESC cita explicitamente o caso Serra Verde (Goiás) como exemplo de …](/posts/2026-05-01-id1710-inesc-cita-explicitamente-o-caso-serra-verde-goias-como-exemplo-de-risco-dos-con/) |
 | 1575 | 2026-05-27 | [Flávio Bolsonaro posiciona minerais críticos brasileiros como alterna…](/posts/2026-05-27-minerais-criticos-brasil-eua-alternativa-china/) |
 | 1716 | 2026-06-17 | [G7 fecha acordo para limitar dependência de terras raras da China; Br…](/posts/2026-06-17-id1716-g7-acordo-terras-raras/) |
@@ -206,7 +206,7 @@ Fonte: `_data/minerios-terras-raras.json` (extraído de `_data/lawfare.json` em 
 
 - Extrato `_data/minerios-terras-raras.json` (80 assuntos de `_data/lawfare.json`)
 - Artigo X: `artigos/minerios-terras-raras-xarticle.md`
-- [T-197](/posts/2026-05-28-operacao-rejeito-serra-curral-manuscritos/) · [T-192](/posts/2026-05-28-vorcaro-triangulo-carbono-mineracao-banco/)
+- [T-197](/posts/operacao-rejeito-serra-curral-manuscritos/) · [T-192](/posts/vorcaro-triangulo-carbono-mineracao-banco/)
 - Agência Pública, Observatório da Mineração, Brasilmineral, G1, Fantástico/TV Globo, A Investigação
 
 *Dossiê T-267 · 80 IDs · CC0 · lawfare-timeline*

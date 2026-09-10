@@ -8,6 +8,7 @@ tags: ["dragao-onca", "2026", "brasil-federal", "p05", "p11"]
 categories: dragao-onca
 timeline_id: 1715
 status: confirmado
+permalink: /posts/id1715-usa-rare-earth-anuncia-aquisicao-da-serra-verde-goias-por-us-28-bilhoes-inverten/
 ---
 
 # USA Rare Earth anuncia aquisição da Serra Verde (Goiás) por US$ 2,8 bilhões, invertendo destino da produção que ia para a China

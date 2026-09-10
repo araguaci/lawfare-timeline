@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vaza Toga 3 — Caçando Jornalistas | lawfare-timeline</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080c10; --bg2:#0d1319; --bg3:#131b22;
+  --red:#c53d4f; --gold:#d4af5a; --green:#4caf7d; --gray:#7f8c98;
+  --text:#e7e9ec; --dim:#8b95a1; --border:#1e2830;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--text);font-family:'Crimson Pro',serif;font-size:16px;line-height:1.75;}
+a{color:var(--gold);}
+.navbar{position:sticky;top:0;z-index:50;background:rgba(8,12,16,0.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:14px 32px;display:flex;gap:24px;align-items:center;overflow-x:auto;}
+.navbar .brand{font-family:'Bebas Neue',sans-serif;letter-spacing:2px;color:var(--red);font-size:18px;white-space:nowrap;}
+.navbar a{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--dim);text-decoration:none;white-space:nowrap;padding:6px 0;border-bottom:2px solid transparent;transition:.2s;}
+.navbar a:hover,.navbar a.active{color:var(--text);border-bottom-color:var(--red);}
+.hero{padding:64px 32px 40px;max-width:1100px;margin:0 auto;border-bottom:1px solid var(--border);}
+.hero .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--red);margin-bottom:16px;}
+.hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(32px,5.5vw,58px);line-height:1.05;letter-spacing:-0.01em;margin-bottom:20px;}
+.hero h1 span{color:var(--red);}
+.hero .sub{font-style:italic;color:var(--dim);font-size:18px;max-width:760px;margin-bottom:28px;}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);margin-top:24px;}
+.stat{background:var(--bg2);padding:18px 20px;}
+.stat .n{font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:var(--gold);}
+.stat .l{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--dim);margin-top:4px;}
+main{max-width:1100px;margin:0 auto;padding:0 32px;}
+.section{padding:56px 0;border-bottom:1px solid var(--border);}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:28px;display:flex;align-items:center;gap:16px;}
+.section-title::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--gold),transparent);opacity:.35;}
+.evidence-badge{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;padding:2px 8px;border-radius:3px;margin-right:6px;}
+.ev-confirmed{background:rgba(76,175,125,0.14);color:var(--green);border:1px solid rgba(76,175,125,0.35);}
+.ev-contested{background:rgba(127,140,152,0.14);color:var(--gray);border:1px solid rgba(127,140,152,0.35);}
+.ev-alleged{background:rgba(212,175,90,0.14);color:var(--gold);border:1px solid rgba(212,175,90,0.35);}
+.pattern-tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.08em;padding:2px 7px;border:1px solid var(--red);color:var(--red);border-radius:3px;margin-right:6px;}
+.tl{position:relative;padding-left:28px;}
+.tl::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--red),var(--gold));opacity:.5;}
+.tl-item{position:relative;margin-bottom:28px;padding:18px 20px;background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--red);}
+.tl-item::before{content:'';position:absolute;left:-33px;top:22px;width:9px;height:9px;border-radius:50%;background:var(--bg);border:2px solid var(--red);}
+.tl-date{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:1px;margin-bottom:6px;}
+.tl-title{font-family:'Syne',sans-serif;font-weight:700;font-size:16px;margin-bottom:8px;}
+.tl-desc{color:var(--dim);font-size:14.5px;}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;}
+.card{background:var(--bg2);border:1px solid var(--border);padding:20px;border-top:3px solid var(--gold);}
+.card h4{font-family:'Syne',sans-serif;font-size:15px;margin-bottom:8px;}
+.card p{color:var(--dim);font-size:14px;}
+.pullquote{background:var(--bg3);border-left:4px solid var(--red);padding:24px 28px;margin:32px 0;font-style:italic;font-size:17px;color:#f0f1f3;}
+.pullquote cite{display:block;margin-top:12px;font-style:normal;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--dim);}
+.lacuna{background:rgba(212,175,90,0.06);border:1px dashed rgba(212,175,90,0.4);padding:16px 20px;font-size:13.5px;color:var(--dim);margin-top:10px;}
+.lacuna b{color:var(--gold);}
+table{width:100%;border-collapse:collapse;font-size:13.5px;}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);}
+th{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);}
+footer{padding:40px 32px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--dim);border-top:1px solid var(--border);}
+footer .cc0{color:var(--gold);letter-spacing:.1em;margin-bottom:8px;}
+#gotop{position:fixed;bottom:24px;right:24px;width:42px;height:42px;border-radius:50%;background:var(--bg3);border:1px solid var(--border);color:var(--gold);display:none;align-items:center;justify-content:center;cursor:pointer;font-size:18px;z-index:60;}
+#gotop.show{display:flex;}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <span class="brand">VAZA TOGA 3</span>
+  <a href="#imprensa">Imprensa</a>
+  <a href="#caminhoneiros">Caminhoneiros</a>
+  <a href="#infraestrutura">Infraestrutura</a>
+  <a href="#atraso">Atraso editorial</a>
+  <a href="#padroes">Padrões</a>
+  <a href="#fontes">Fontes</a>
+</nav>
+
+<header class="hero">
+  <div class="eyebrow">Eixo Selva · lawfare-timeline · Série Vaza Toga — Capítulo 3 de 5</div>
+  <h1>Caçando <span>Jornalistas</span></h1>
+  <p class="sub">"A fraude exposta" (Revista Oeste): a fase em que o gabinete paralelo deixa de mirar só manifestantes do 8 de Janeiro e passa a mirar colunistas, caminhoneiros e deputadas eleitas — com uma frase que virou símbolo do método.</p>
+  <div class="stats-row">
+    <div class="stat"><div class="n">2</div><div class="l">Colunistas com ordem documentada de bloqueio</div></div>
+    <div class="stat"><div class="n">&lt;10min</div><div class="l">Para derrubar grupo de Telegram de protesto</div></div>
+    <div class="stat"><div class="n">1</div><div class="l">Tenente-coronel da PM-BA mobilizado</div></div>
+    <div class="stat"><div class="n">3+</div><div class="l">Empresas/institutos privados envolvidos</div></div>
+  </div>
+</header>
+
+<main>
+
+<section class="section" id="imprensa">
+  <div class="section-title">01 — A imprensa como alvo direto</div>
+  <div class="tl">
+    <div class="tl-item">
+      <div class="tl-date">22/11/2022 <span class="evidence-badge ev-confirmed">ev-confirmed</span></div>
+      <div class="tl-title">"Vamos bloquear tudo desse cara"</div>
+      <div class="tl-desc">Airton Vieira compartilha vídeo do colunista Rodrigo Constantino (Gazeta do Povo) criticando o TSE e determina o bloqueio com multa. Tagliaferro pede orientação sobre como justificar o relatório — a ordem vem antes da justificativa técnica, não depois.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">27/12/2022 <span class="evidence-badge ev-confirmed">ev-confirmed</span></div>
+      <div class="tl-title">"Vamos mandar bala"</div>
+      <div class="tl-desc">Mesmo grupo discute o colunista Guilherme Fiuza. Tagliaferro envia relatório ("esse não precisou de muito para se comprometer"), recebe emojis de aplausos de Marco Antônio Vargas e Airton Vieira. Vargas classifica os posts como "golpistas".</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">30/12/2022 e 02/01/2023 <span class="evidence-badge ev-confirmed">ev-confirmed</span></div>
+      <div class="tl-title">Bloqueios executados</div>
+      <div class="tl-desc">Constantino (30/12) e Fiuza (02/01) têm perfis bloqueados no âmbito do INQ 4.781/DF. Até esta reportagem, o corpus só tinha o resultado — não a ordem interna que o originou.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">Dez/2022 <span class="evidence-badge ev-confirmed">ev-confirmed</span></div>
+      <div class="tl-title">Gettr e Allan dos Santos</div>
+      <div class="tl-desc">O gabinete avança contra a rede Gettr especificamente para dificultar a circulação de conteúdo de Allan dos Santos, então nos EUA. Quando Tagliaferro questiona o que reportar sem conteúdo incriminador, recebe a instrução que se tornaria símbolo do método.</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-date">Dez/2022 <span class="evidence-badge ev-contested">ev-contested</span></div>
+      <div class="tl-title">Carla Zambelli monitorada antes da diplomação</div>
+      <div class="tl-desc">Marco Antônio Vargas compartilha publicações da deputada eleita no grupo, discute-se bloqueio de conta. Não confirmado, com as fontes disponíveis, se o bloqueio chegou a ser executado — classificado como contestado até verificação do desfecho processual.</div>
+    </div>
+  </div>
+  <div class="pullquote">
+    "Use sua criatividade."
+    <cite>— Airton Vieira, instrução a Tagliaferro quando não havia conteúdo incriminador contra um alvo — tradução quase literal da máxima atribuída a Lavrenti Beria ("mostre-me o homem e eu lhe direi o crime")</cite>
+  </div>
+</section>
+
+<section class="section" id="caminhoneiros">
+  <div class="section-title">02 — Fora da imprensa: caminhoneiros</div>
+  <div class="tl">
+    <div class="tl-item">
+      <div class="tl-date">01/11/2022 – 08/11/2022 <span class="evidence-badge ev-confirmed">ev-confirmed</span></div>
+      <div class="tl-title">PM-BA fornece dados para multar manifestantes</div>
+      <div class="tl-desc">O gabinete paralelo pede ao tenente-coronel José Luiz Santos Silva (PM-BA) identificação de placas de veículos e mapeamento de possíveis "financiadores" de caminhoneiros protestando contra a eleição de Lula. Grupos de Telegram organizando os protestos são derrubados em menos de 10 minutos — Tagliaferro confirma: "Cumpridos!"</div>
+    </div>
+  </div>
+  <div class="lacuna"><b>Lacuna investigativa:</b> não há registro público de base legal para a solicitação de dados de veículos e empresas a um oficial de polícia militar estadual por assessores do TSE.</div>
+</section>
+
+<section class="section" id="infraestrutura">
+  <div class="section-title">03 — A infraestrutura por trás</div>
+  <div class="card-grid">
+    <div class="card">
+      <h4>Instituto Democracia em Xeque</h4>
+      <p>Coordena com a AEED/TSE termos de busca sobre "urna eletrônica", "voto impresso", "eleições presidenciais" — inicialmente sobre 7 de setembro, depois estendido a monitoramento eleitoral de rotina. Comemorou a vitória de Lula em 30/10/2022 como "vitória contra a desinformação".</p>
+    </div>
+    <div class="card">
+      <h4>Palver</h4>
+      <p>Consultoria de análise de redes fornecendo levantamento de volume de menções em grupos de direita. Hoje opera comercialmente para Folha de S.Paulo, Lupa e CNN Brasil — a mesma ferramenta, sem transparência em 2022, com uso público e legítimo hoje.</p>
+    </div>
+    <div class="card">
+      <h4>Revista Oeste desmonetizada</h4>
+      <p>Mais de um ano sem receita publicitária no YouTube. A reportagem sugere vínculo com a cobertura crítica do STF — mas não apresenta documento que estabeleça essa causalidade, apenas o fato da desmonetização em si.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="atraso">
+  <div class="section-title">04 — Por que só saiu agora</div>
+  <div class="tl">
+    <div class="tl-item">
+      <div class="tl-date">28/08/2025 <span class="evidence-badge ev-alleged">ev-alleged</span></div>
+      <div class="tl-title">Veículo internacional segura a publicação</div>
+      <div class="tl-desc">Tagliaferro relata publicamente que um veículo internacional (identificado por comentaristas, não por fonte primária, como a CNN) vinha adiando a publicação sob alegação de "perícia" e processo de verificação sem prazo definido. Diante da proximidade do julgamento de Bolsonaro e de compromissos já assumidos com Senado e Câmara, optou por liberar via Revista Oeste.</div>
+    </div>
+  </div>
+  <div class="lacuna"><b>Por que ev-alleged, não ev-confirmed:</b> a identificação do veículo não vem de fonte primária jornalística — vem de interpretação de terceiros sobre a fala do próprio Tagliaferro. É alegação conveniente à narrativa da fonte, o que exige mais rigor, não menos.</div>
+</section>
+
+<section class="section" id="padroes">
+  <div class="section-title">05 — Padrões aplicados</div>
+  <table>
+    <thead><tr><th>Padrão</th><th>Aplicação neste capítulo</th></tr></thead>
+    <tbody>
+      <tr><td><span class="pattern-tag">P02</span></td><td>Investigador-investigado: crítica vira gatilho de investigação, não conteúdo de debate público.</td></tr>
+      <tr><td><span class="pattern-tag">P04</span></td><td>Arma midiática: "use sua criatividade" como manual de instrução para gerar enquadramento onde não há fato.</td></tr>
+      <tr><td><span class="pattern-tag">P10 (candidato P10-B)</span></td><td>Terceirização privada de vigilância política: Palver, Instituto Democracia em Xeque — infraestrutura reutilizável, hoje com uso comercial legítimo.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+</main>
+
+<footer id="fontes">
+  <div class="cc0">CC0 1.0 · Domínio Público · Eixo Selva</div>
+  <span>Fontes: Revista Oeste ("A fraude exposta", Ed. 285) · Edilson Salgueiro, Rachel Díaz, Carlo Cauti</span><br>
+  <span>Origem da série: <a href="https://www.ainvestigacao.com/" target="_blank">ainvestigacao.com</a> (David Ágape, Eli Vieira)</span><br>
+  <span>Parte da série Vaza Toga (3/5) · lawfare-timeline · Compilado agosto/2026</span>
+</footer>
+
+<div id="gotop">↑</div>
+<script>
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.navbar a');
+const gotop = document.getElementById('gotop');
+const obs = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      navLinks.forEach(a=>a.classList.remove('active'));
+      const link = document.querySelector(`.navbar a[href="#${e.target.id}"]`);
+      if(link) link.classList.add('active');
+    }
+  });
+},{rootMargin:'-40% 0px -50% 0px'});
+sections.forEach(s=>obs.observe(s));
+window.addEventListener('scroll',()=>{gotop.classList.toggle('show', window.scrollY > 600);});
+gotop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+</script>
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Duas Caras</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+
+  :root{
+    --ink: #eae6da;
+    --ink-dim: #a7a291;
+    --bg: #14161b;
+    --bg-card: #1b1e25;
+    --bg-card2: #1f232b;
+    --rust: #b8442f;
+    --brass: #c69a3d;
+    --line: #34384280;
+  }
+
+  *{ box-sizing: border-box; margin:0; padding:0; }
+
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+  }
+
+  .sheet{
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 64px 28px 90px;
+  }
+
+  /* ---------- HEADER ---------- */
+  .kicker{
+    font-size: 13px;
+    letter-spacing: .04em;
+    color: var(--brass);
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+
+  h1{
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: clamp(56px, 11vw, 108px);
+    line-height: .92;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+
+  h1 span{
+    color: var(--rust);
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  .subtitle{
+    margin-top: 26px;
+    max-width: 560px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 22px;
+    color: var(--ink-dim);
+    line-height: 1.4;
+    border-left: 2px solid var(--rust);
+    padding-left: 20px;
+  }
+
+  .divider{
+    height: 1px;
+    background: var(--line);
+    margin: 56px 0;
+  }
+
+  /* ---------- FACT GRID ---------- */
+  .grid-label{
+    font-size: 13px;
+    color: var(--ink-dim);
+    letter-spacing: .03em;
+    margin-bottom: 22px;
+  }
+
+  .facts{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .fact{
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    padding: 22px 22px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .fact-num{
+    font-family: 'Fraunces', serif;
+    font-size: 15px;
+    color: var(--brass);
+    font-weight: 600;
+  }
+
+  .fact-title{
+    font-family: 'Fraunces', serif;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .fact-body{
+    font-size: 14px;
+    color: var(--ink-dim);
+    line-height: 1.55;
+  }
+
+  .fact-date{
+    font-size: 12px;
+    color: var(--ink-dim);
+    opacity: .7;
+    margin-top: auto;
+    padding-top: 6px;
+  }
+
+  @media (max-width: 620px){
+    .facts{ grid-template-columns: 1fr; }
+  }
+
+  /* ---------- PATTERN SECTION ---------- */
+  .pattern-wrap{
+    margin-top: 70px;
+    background: var(--bg-card2);
+    border: 1px solid var(--line);
+    padding: 40px 32px;
+  }
+
+  .pattern-head{
+    font-family: 'Fraunces', serif;
+    font-size: 15px;
+    color: var(--rust);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .pattern-title{
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 28px;
+    max-width: 480px;
+  }
+
+  .pattern-list{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+  }
+
+  .pattern-item{
+    border-top: 2px solid var(--rust);
+    padding-top: 14px;
+  }
+
+  .pattern-item .n{
+    font-family: 'Fraunces', serif;
+    color: var(--ink-dim);
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .pattern-item .t{
+    font-size: 14.5px;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 760px){
+    .pattern-list{ grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* ---------- VERDICT BANNER ---------- */
+  .verdict{
+    margin-top: 70px;
+    text-align: center;
+    padding: 56px 20px;
+    position: relative;
+  }
+
+  .verdict::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent, rgba(184,68,47,.06), transparent);
+  }
+
+  .verdict-eyebrow{
+    font-size: 14px;
+    color: var(--ink-dim);
+    margin-bottom: 22px;
+    position: relative;
+  }
+
+  .verdict-line{
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: clamp(28px, 5.4vw, 46px);
+    line-height: 1.22;
+    max-width: 720px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .verdict-line em{
+    font-style: italic;
+    color: var(--brass);
+    font-weight: 500;
+  }
+
+  .verdict-attrib{
+    margin-top: 22px;
+    font-size: 14px;
+    color: var(--ink-dim);
+    position: relative;
+  }
+
+  /* ---------- FOOTNOTE ---------- */
+  .footnote{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    font-size: 12px;
+    color: var(--ink-dim);
+    flex-wrap: wrap;
+  }
+
+  .footnote b{ color: var(--ink); }
+
+</style>
+</head>
+<body>
+
+<div class="sheet">
+
+  <div class="kicker">PADRÃO COMPORTAMENTAL · 2023–2026</div>
+  <h1>Duas<br><span>caras.</span></h1>
+  <p class="subtitle">Melhor um inimigo declarado do que um aliado traiçoeiro.</p>
+
+  <div class="divider"></div>
+
+  <div class="grid-label">O registro — dez movimentos, um único padrão</div>
+
+  <div class="facts">
+    <div class="fact">
+      <div class="fact-num">01</div>
+      <div class="fact-title">Silêncio na Magnitsky</div>
+      <div class="fact-body">Eduardo Bolsonaro articula as sanções americanas contra Alexandre de Moraes. Nikolas não se posiciona ao lado do movimento.</div>
+      <div class="fact-date">2025</div>
+    </div>
+    <div class="fact">
+      <div class="fact-num">02</div>
+      <div class="fact-title">Base parada</div>
+      <div class="fact-body">Apesar de comandar uma das maiores audiências digitais da direita, não mobiliza seguidores nos momentos de maior pressão sobre o campo.</div>
+      <div class="fact-date">recorrente</div>
+    </div>
+    <div class="fact">
+      <div class="fact-num">03</div>
+      <div class="fact-title">"Resolvam por si"</div>
+      <div class="fact-body">Em entrevista nos EUA, declara que o Brasil deveria resolver seus próprios problemas internamente — distanciando-se da articulação internacional do campo.</div>
+      <div class="fact-date">2025</div>
+    </div>
+    <div class="fact">
+      <div class="fact-num">04</div>
+      <div class="fact-title">Fogo amigo</div>
+      <div class="fact-body">Quando as sanções chegam, a crítica pública de Nikolas mira Eduardo — acusado de "culpar o povo" — e não quem pressiona o campo de fora.</div>
+      <div class="fact-date">2025</div>
+    </div>
+    <div class="fact">
+      <div class="fact-num">05</div>
+      <div class="fact-title">Marçal sobre o indicado</div>
+      <div class="fact-body">Em 2024, apoia Pablo Marçal contra o candidato de preferência de Bolsonaro — normalizando a ideia de que projeto pessoal pode superar o projeto do grupo.</div>
+      <div class="fact-date">2024</div>
+    </div>
+    <div class="fact">
+      <div class="fact-num">06</div>
+      <div class="fact-title">Rede própria</div>
+      <div class="fact-body">Constrói para 2026 sua própria bancada de "candidatos do Nikolas" — capital político paralelo, não subordinado à liderança do PL.</div>
+      <div class="fact-date">2025–26</div>
+    </div>
+    <div class="fact">
+      <div class="fact-num">07</div>
+      <div class="fact-title">Flagrado pelo drone</div>
+      <div class="fact-body">Filmado usando celular durante visita a Bolsonaro em prisão domiciliar, descumprindo restrição judicial expressa do STF — depois culpa a emissora pela filmagem.</div>
+      <div class="fact-date">21/11/2025</div>
+    </div>
+    <div class="fact">
+      <div class="fact-num">08</div>
+      <div class="fact-title">"Sumido"</div>
+      <div class="fact-body">Chama Mário Frias de sumido durante os atos de 7 de setembro, mesmo com o deputado presente nas manifestações.</div>
+      <div class="fact-date">set/2025</div>
+    </div>
+    <div class="fact">
+      <div class="fact-num">09</div>
+      <div class="fact-title">PF dois dias depois</div>
+      <div class="fact-body">A Polícia Federal deflagra operação envolvendo Mário Frias dois dias após a fala pública de Nikolas — proximidade temporal que levanta pergunta, não prova.</div>
+      <div class="fact-date">set/2025</div>
+    </div>
+    <div class="fact">
+      <div class="fact-num">10</div>
+      <div class="fact-title">"Vencemos o bolsonarismo"</div>
+      <div class="fact-body">O ambiente institucional segue tenso — um ministro do STF declara publicamente, em evento da UNE, ter derrotado o bolsonarismo. O campo segue sob pressão; Nikolas segue sem confrontá-la.</div>
+      <div class="fact-date">2023 · contexto</div>
+    </div>
+  </div>
+
+  <div class="pattern-wrap">
+    <div class="pattern-head">HÁ UM PADRÃO</div>
+    <div class="pattern-title">Cinco movimentos que se repetem em todos os episódios</div>
+    <div class="pattern-list">
+      <div class="pattern-item">
+        <div class="n">01</div>
+        <div class="t">Evitar o confronto direto com quem pressiona o campo</div>
+      </div>
+      <div class="pattern-item">
+        <div class="n">02</div>
+        <div class="t">Cultivar ambiguidade quanto à própria lealdade</div>
+      </div>
+      <div class="pattern-item">
+        <div class="n">03</div>
+        <div class="t">Construir estrutura própria dentro do grupo</div>
+      </div>
+      <div class="pattern-item">
+        <div class="n">04</div>
+        <div class="t">Omitir-se quando a união teria custo político</div>
+      </div>
+      <div class="pattern-item">
+        <div class="n">05</div>
+        <div class="t">Reaparecer só quando o silêncio custa mais que o engajamento</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="verdict">
+    <div class="verdict-eyebrow">Isso pode ser chamado de "independência política."</div>
+    <div class="verdict-line">Ou, em outras palavras: <em>melhor um inimigo declarado do que um aliado traiçoeiro.</em></div>
+    <div class="verdict-attrib">— o registro público, 2023–2026</div>
+  </div>
+
+  <div class="footnote">
+    <div><b>Fontes:</b> Congresso em Foco, Metrópoles, Revista Fórum, Diário Carioca, Senado Federal, Câmara dos Deputados, cobertura pública 2023–2025.</div>
+    <div><b>Nota metodológica:</b> os dez pontos acima são fatos documentados publicamente. A leitura de padrão comportamental é interpretação; hipóteses de negociação ou coação nos bastidores não têm fonte confirmada e não constam aqui.</div>
+  </div>
+
+</div>
+
+</body>
+</html>
