@@ -1,5 +1,13 @@
 # Lawfare Timeline
 
+## 🛡️ Sentinel Status
+- **Status:** 🟡 MVP / Em Desenvolvimento
+- **Tier:** A
+- **Health:** 50% / **ROI Potencial:** Dossiês jurídicos e linha do tempo
+- **Stack:** HTML, JS, Dados públicos
+
+---
+
 Site estático (**Jekyll** + tema **Chirpy**) que documenta eventos e análises sobre erosão institucional e lawfare no Brasil (contexto 1990–2026).
 
 **Produção:** [lawfare-timeline.vercel.app](https://lawfare-timeline.vercel.app)  
@@ -17,7 +25,7 @@ Valores abaixo vêm de `_data/lawfare.json` e `_data/claude.ai-corpus-ids-sync.j
 | Track | Último ID | Próximo | Fonte de verdade |
 |---|---:|---:|---|
 | **Main timeline** | **1888** | 1889 | `_data/lawfare.json` → `assuntos[].id` (**1849** assuntos) |
-| **Temático (T-)** | **262** | 263 | `_data/claude.ai-corpus-ids-sync.json` + `_posts/` |
+| **Temático (T-)** | **267** | 268 | `_data/claude.ai-corpus-ids-sync.json` + `_posts/` |
 | **Estudos T em disco** | — | — | ~45+ posts com `id_corpus` temático (registry ≤500) |
 | **Posts `_posts/`** | — | — | ~400+ entradas Jekyll |
 | **Série Dragão e a Onça** | **1770** / **T-246** | — | `_posts/dragao-onca/` (151 posts); main pós-série usa **1888+** |
@@ -28,7 +36,7 @@ Valores abaixo vêm de `_data/lawfare.json` e `_data/claude.ai-corpus-ids-sync.j
 | Track | Namespace | Onde vive | Exemplo |
 |---|---|---|---|
 | Main | inteiros 1–1888+ | `lawfare.json`, posts timeline | `id_corpus: "1888"` |
-| Temático | T-100+ (registry 100–262) | `_posts/estudos/`, `_posts/dragao-onca/`, `_posts/vazatoga/`, sync JSON | `id_corpus: "T-262"` |
+| Temático | T-100+ (registry 100–267) | `_posts/estudos/`, `_posts/dragao-onca/`, `_posts/vazatoga/`, sync JSON | `id_corpus: "T-267"` |
 
 Posts **corpus-bridge** (T-205–T-209) ligam artefatos HTML do [gosurf.site](https://gosurf.site) ao índice Jekyll. Detalhes em [TODO.md](./TODO.md).
 
@@ -526,6 +534,12 @@ Sessão 2026-09-01 — hero T-263 (1200×675, 16:9, share card X):
 
 ```
 Hero image for an X.com Article titled "A ARESTA". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "A ARESTA" in off-white (fully readable), gold subtitle "T-263" underneath, tiny monospace "MCD-05/2024 · P04b". Visual motif: a network diagram of faint dashed lines connecting unlabeled nodes dissolving into courthouse colonnades and a stamped audit folder (no readable names, no logos, no brand marks, no real faces, no foundation logos, no flags). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
+```
+
+Sessão 2026-09-10 — hero minérios/terras raras (1200×675, 16:9, share card X):
+
+```
+Hero image for an X.com Article titled "118 DIAS". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "118 DIAS" in off-white (fully readable), gold subtitle "minério · terras raras" underneath, tiny monospace "Rejeito · Serra Verde · PL 2780". Visual motif: an open iron-ore pit and a faded rare-earth oxide sample tray dissolving into courthouse colonnades and a stamped mining license folder (no readable names, no logos, no brand marks, no real faces, no company marks, no flags). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a), rust iron oxide. Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
 ```
 
 Sessão 2026-09-02 — hero T-266 (1200×675, 16:9, share card X):

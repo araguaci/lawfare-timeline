@@ -1,6 +1,6 @@
 # Próximos passos · lawfare-timeline
 
-**Atualizado:** 2026-09-01 (merge 1889–1904 + T-263–T-266)
+**Atualizado:** 2026-09-10 (T-267 minérios / terras raras)
 
 > Espelho: `docs/TODO.md` · Notas: `_data/processados/todo.md` · Legado: `docs/TODO-LEGACY.md`
 
@@ -10,10 +10,43 @@
 
 | Track | Last | Próximo | Validação |
 |-------|------|---------|-----------|
-| Main | **1904** | **1905** | lawfare.json **1865** entradas · sem IDs duplicados |
-| Thematic | **T-266** | **T-267** | sync 100–266 contínuo |
+| Main | **1912** | **1913** | lawfare.json **1873** entradas · sem IDs duplicados |
+| Thematic | **T-267** | **T-268** | sync 100–267 contínuo |
 | Dragão e a Onça | **1770** / **T-246** | — | `dragao-onca.json` **151** |
-| Fila `_data/todo/` | staging HTML/MD | — | JSON 1889–1904 arquivado 01/09 |
+| Fila `_data/todo/` | staging HTML/MD | — | JSON 1910–1912 arquivado 10/09 |
+
+---
+
+## Rodada 10/09/2026 (c) ✅ — T-267 minérios / terras raras
+
+Estudo temático do extrato `_data/minerios-terras-raras.json` (**80 IDs**). Hero do X Article `118 DIAS`. Próximo temático: **T-268**.
+
+| ID | Post |
+|----|------|
+| **T-267** | `_posts/estudos/2026-09-10-minerios-terras-raras-dois-mercados.md` |
+
+---
+
+## Rodada 10/09/2026 (b) ✅ — Fachin / Temer / Projeto Topázio
+
+| Faixa | Batch | Conteúdo |
+|-------|-------|----------|
+| **1910** | `fachin-pf-temer-topazio` | Fachin suspende Mendonça/Dino sobre a PF e tira Moraes do INQ 4.781 |
+| **1911** | mesmo lote | Temer pede «serenidade» após aconselhar Moraes em privado (URLs Metrópoles/247 inseridas no merge) |
+| **1912** | mesmo lote | Extração forense Gmais confirma «Projeto Topázio» (elo Nikolas/Vorcaro) |
+
+IDs 1910–1912 estavam livres. Sem realocação.
+
+---
+
+## Rodada 10/09/2026 ✅ — Crise Moraes / Mendonça / INQ 4781
+
+| Faixa | Batch | Conteúdo |
+|-------|-------|----------|
+| **1905–1908** | `crise-moraes-mendonca-inq4781` | Sigilo do relatório Master; Moraes encaminha Fachin via 4.781; PF aponta risco de nulidade; relatório de inteligência prévio (`ev-alleged`) |
+| **1909** | mesmo lote | Nikolas pede prisão de Moraes e os áudios com Vorcaro (P04b) |
+
+IDs pediam 1905–1909 e estavam livres. Sem realocação.
 
 ---
 
@@ -50,6 +83,7 @@ A fila reapresentou 4 batches com numeração antiga. **VT4 era duplicata** de 1
 | Item | Prioridade |
 |------|------------|
 | **1899** sem `fontes_verificadas` (ADC 43/44/54 — `ev-contested` no lote) | Alta |
+| **1907** / **1908** `ev-alleged` (fonte única / coluna) — corroborar | Alta |
 | Formalizar **P13 Porta Giratória** em METHODOLOGY.md (T-254) | Média |
 | Formalizar P04b em METHODOLOGY | Média |
 | Stubs **725 / 728 / 729** vs registro definitivo 1869–1873 — decidir patch ou arquivar | Média |
@@ -73,6 +107,6 @@ bundle exec jekyll build
 
 ## Referências
 
-- Corpus: `_data/lawfare.json` (**1865** entradas · main até **1904**)
+- Corpus: `_data/lawfare.json` (**1873** entradas · main até **1912**)
 - Unified: `_data/lawfare-unified-corpus.json`
 - Sidecar dragão: `_data/dragao-onca.json` (151 · **1763/1764** = CEEE-T / JMEV intactos)

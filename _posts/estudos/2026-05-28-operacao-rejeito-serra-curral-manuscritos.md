@@ -90,6 +90,7 @@ A omissão do 3º manuscrito durante set–dez/2025 é dado analítico: nomear a
 
 | Dossiê | Conexão |
 | --- | --- |
+| [T-267 Minérios / terras raras](/posts/2026-09-10-minerios-terras-raras-dois-mercados/) | Índice dos 80 IDs (Rejeito + lítio + Taboca + PL 2.780 + Serra Verde + Topázio) |
 | [T-192 Vorcaro](/posts/vorcaro-triangulo-carbono-mineracao-banco/) | Caio Seabra/ANM · Viviane Barci/Master · blendagem = UECs fictícias |
 | [Compliance Zero](/posts/banco-master-compliance-zero/) | Daniel Vorcaro sócio Kallas · Master R$ 129 mi escritório Barci |
 | [Carbono Oculto](/posts/carbono-oculto/) | P08 greenwashing · lavagem por documento legítimo |

@@ -1,0 +1,172 @@
+{
+  "_meta": {
+    "batch": "crise-moraes-mendonca-inq4781",
+    "gerado_em": "2026-09-03",
+    "id_range": [1905, 1909],
+    "verificacao": "web_search realizado nesta sessão — 3 buscas independentes, eventos dentro da janela de 90 dias, mínimo 2 fontes por entrada",
+    "protocolo_ids": "MAX_ID confirmado via leitura direta de lawfare.json local (1904); sync file (claude_ai-corpus-ids-sync.json) desatualizado em 'main last_confirmed: 1888' — não usado como referência de alocação, conforme regra de ouro do projeto.",
+    "destino": "_data/todo/ — processar via merge_todo_pending.py"
+  },
+  "assuntos": [
+    {
+      "id": 1905,
+      "titulo": "Mendonça retira sigilo de relatório da PF que expõe 188 das 218 páginas do inquérito Master tratando de Alexandre de Moraes",
+      "data_evento": "2026-09-01",
+      "data_iso": "2026-09-01T12:00:00.000Z",
+      "categoria": "stf",
+      "tags": ["stf", "banco-master", "inq4781", "P02", "compliance-zero"],
+      "descricao": "Em 1º de setembro de 2026, o ministro André Mendonça (relator do inquérito do Banco Master desde fevereiro de 2026) retirou o sigilo de decisão e do relatório de inteligência produzido pela Polícia Federal por sua determinação. O documento, de 218 páginas, dedica 188 delas a elementos envolvendo o ministro Alexandre de Moraes — incluindo mensagens em que Daniel Vorcaro pede a Moraes que interviesse junto ao diretor-geral da PF, Andrei Rodrigues, e ao PGR, Paulo Gonet, para travar as investigações do Banco Master. O ato que determinou a investigação data de 24 de agosto de 2026, segundo nota do PGR.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "P02_investigador_investigado",
+      "fontes": [
+        "https://apublica.org/2026/09/analise-as-revelacoes-sobre-master-vorcaro-moraes-e-mendonca/",
+        "https://terrabrasilnoticias.com/2026/09/estadao-mensagens-mostram-pedidos-de-vorcaro-a-moraes-para-travar-investigacoes-do-banco-master/",
+        "https://www.blogdogbu.com.br/2026/09/pgr-quer-nulidade-da-decisao-de.html"
+      ],
+      "pessoas_envolvidas": [
+        "André Mendonça (Ministro STF, relator do inquérito Master)",
+        "Alexandre de Moraes (Ministro STF)",
+        "Daniel Vorcaro (ex-controlador Banco Master, preso)",
+        "Andrei Rodrigues (Diretor-geral da PF)",
+        "Paulo Gonet (Procurador-Geral da República)"
+      ],
+      "instituicoes_envolvidas": ["STF", "Polícia Federal", "PGR", "Banco Master"],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "evidencia": "ev-confirmed",
+      "lacuna_investigativa": "Não localizado, até o fechamento desta entrada, posicionamento formal de Moraes sobre o conteúdo específico das mensagens antes da retirada de sigilo — apenas nota do escritório Barci de Moraes sobre impedimentos.",
+      "analise": "ev-inference: a decisão de tornar público o relatório antes de qualquer manifestação formal de Moraes inverte a sequência processual usual (regra seria contraditório prévio) — funciona simultaneamente como exposição pública e como blindagem preventiva de Mendonça, que passa a deter o registro público de ter agido primeiro.",
+      "padroes_sistemicos": ["P02"],
+      "connections": ["id_1602", "id_1906", "id_1907"],
+      "fonte_arquivo": "_data/todo/pendente"
+    },
+    {
+      "id": 1906,
+      "titulo": "Moraes retira sigilo de decisão própria e encaminha a Fachin, via INQ 4.781, pedido de investigação contra Mendonça por crime de responsabilidade",
+      "data_evento": "2026-09-03",
+      "data_iso": "2026-09-03T12:00:00.000Z",
+      "categoria": "stf",
+      "tags": ["stf", "inq4781", "banco-master", "P02", "P04b"],
+      "descricao": "Em 3 de setembro de 2026, Alexandre de Moraes retirou o sigilo de decisão apontando supostas irregularidades na atuação de André Mendonça na relatoria dos processos das operações Sem Desconto e Compliance Zero (Banco Master). Moraes encaminhou a decisão e relatórios de inteligência da PF que a fundamentam ao presidente do STF, Edson Fachin, com base no Inquérito 4.781 — aberto em 2019 para apurar fake news, denunciações caluniosas e ameaças contra integrantes do Supremo. Moraes determinou que o material seja avaliado por Fachin \"para as providências que entender necessárias\" e que a PGR seja comunicada. A legislação citada por Moraes poderia, em tese, levar a processo de impeachment de Mendonça.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "P02_investigador_investigado",
+      "fontes": [
+        "https://agenciabrasil.ebc.com.br/justica/noticia/2026-09/moraes-encaminha-fachin-pedido-de-investigacao-contra-mendonca",
+        "https://www.correiobraziliense.com.br/politica/2026/09/7493633-moraes-usa-inquerito-das-fake-news-para-acusar-mendonca.html"
+      ],
+      "pessoas_envolvidas": [
+        "Alexandre de Moraes (Ministro STF)",
+        "André Mendonça (Ministro STF)",
+        "Edson Fachin (Presidente do STF)"
+      ],
+      "instituicoes_envolvidas": ["STF", "Polícia Federal", "PGR"],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "evidencia": "ev-confirmed",
+      "lacuna_investigativa": "Decisão de Fachin sobre o encaminhamento ainda não proferida no momento desta entrada — acompanhar prazo de 5 dias úteis fixado para esclarecimentos (id_1907).",
+      "analise": "ev-inference: o uso do INQ 4.781 — instrumento historicamente direcionado a alvos externos ao STF (jornalistas, políticos, empresários) — para instrumentalizar apuração contra um colega de Corte é extensão do próprio inquérito além do escopo original, mesmo mecanismo estrutural (concentração de competências incompatíveis, 535×1) documentado alhures no corpus, agora voltado par a par entre ministros.",
+      "padroes_sistemicos": ["P02", "P04b"],
+      "connections": ["id_1905", "id_1907"],
+      "fonte_arquivo": "_data/todo/pendente"
+    },
+    {
+      "id": 1907,
+      "titulo": "PF aponta risco de nulidade nos atos de Mendonça contra Moraes por vício de competência; Fachin dá 5 dias úteis para esclarecimentos",
+      "data_evento": "2026-09-03",
+      "data_iso": "2026-09-03T18:00:00.000Z",
+      "categoria": "stf",
+      "tags": ["stf", "inq4781", "banco-master", "P01", "P02"],
+      "descricao": "Relatórios de inteligência da Polícia Federal enviados a Alexandre de Moraes classificam como \"ato de investigação amplo, dirigido a pessoas determinadas, produzido sem autorização específica e perante juízo que, quanto a duas delas, não detém a competência\" as diligências determinadas por André Mendonça contra Moraes. A PF avalia como \"moderada\" a probabilidade de nulidade dos atos e como \"muito alto\" o impacto potencial sobre a validade da apuração. Em meio ao agravamento da crise, Edson Fachin determinou prazo de 5 dias úteis para que Mendonça, a PGR e a PF prestem esclarecimentos formais sobre a sequência de decisões.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "P01_anulacao_processual_potencial",
+      "fontes": [
+        "https://www.spacemoney.com.br/economia/legislacao/pf-relatorios-mendonca-moraes-stf"
+      ],
+      "pessoas_envolvidas": [
+        "André Mendonça (Ministro STF)",
+        "Alexandre de Moraes (Ministro STF)",
+        "Edson Fachin (Presidente do STF)",
+        "Andrei Rodrigues (Diretor-geral da PF)"
+      ],
+      "instituicoes_envolvidas": ["STF", "Polícia Federal", "PGR"],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "evidencia": "ev-alleged",
+      "lacuna_investigativa": "Fonte única localizada até o momento (SpaceMoney) para o conteúdo específico do relatório PF sobre risco de nulidade — classificado ev-alleged até corroboração por segunda fonte independente; checar Estadão/Metrópoles/JOTA nas próximas 48h. Prazo de 5 dias úteis para esclarecimentos ainda em curso — não fechar entrada até decisão de Fachin.",
+      "analise": "ev-inference: a avaliação de nulidade produzida pela própria PF — instituição que executou os atos sob determinação de Mendonça — sobre os atos do investigador que a comanda no caso é, em si, instância adicional do padrão de ator institucional avaliando a legalidade de ordens que ele mesmo cumpriu, distinto do P02 clássico (investigador-investigado) mas estruturalmente correlato.",
+      "padroes_sistemicos": ["P01", "P02"],
+      "connections": ["id_1905", "id_1906", "id_1908"],
+      "fonte_arquivo": "_data/todo/pendente"
+    },
+    {
+      "id": 1908,
+      "titulo": "Moraes usa relatório de inteligência da PF sobre Mendonça produzido antes de pedido formal de investigação contra ele — apuração ilegal prévia documentada",
+      "data_evento": "2026-09-03",
+      "data_iso": "2026-09-03T20:00:00.000Z",
+      "categoria": "stf",
+      "tags": ["stf", "inq4781", "banco-master", "P02"],
+      "descricao": "Análise publicada em 3 de setembro de 2026 aponta que o relatório de inteligência policial usado por Alexandre de Moraes para fundamentar o pedido de investigação contra André Mendonça — intitulado \"Relatório de Inteligência – Tópico de Análise de Cenário: Possível avanço sobre competência do plenário e sobre prerrogativa de membro do Ministério Público\" — começou a ser produzido a partir do momento em que Mendonça assumiu a relatoria do caso Master e determinou trocas de equipe e blindagem contra vazamentos, isto é, antes de qualquer pedido formal de Mendonça sobre Moraes. A produção do relatório inclui apuração sobre a intenção de Mendonça de afastar o diretor-geral da PF, Andrei Rodrigues — o mesmo diretor denunciado por Vorcaro por engavetamento de propostas de delação e citado por ter viajado a eventos do Banco Master.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "P02_investigador_investigado",
+      "fontes": [
+        "https://tvfloridausa.com/2026/09/03/moraes-usa-relatorio-ilegal-de-inteligencia-da-pf-contra-mendonca/"
+      ],
+      "pessoas_envolvidas": [
+        "Alexandre de Moraes (Ministro STF)",
+        "André Mendonça (Ministro STF)",
+        "Andrei Rodrigues (Diretor-geral da PF)"
+      ],
+      "instituicoes_envolvidas": ["STF", "Polícia Federal"],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "evidencia": "ev-alleged",
+      "lacuna_investigativa": "Fonte única (coluna de opinião/análise, não veículo estritamente factual) — classificar ev-alleged até corroboração por reportagem factual independente sobre a data exata de início da produção do relatório de inteligência. A alegação central — que o relatório sobre Mendonça é anterior à investigação de Mendonça sobre Moraes — é o ponto que mais precisa de checagem cronológica documental (datas de produção interna da PF raramente são públicas).",
+      "analise": "ev-inference: se a cronologia alegada se confirmar, o padrão documentado é P02 bidirecional simultâneo — cada ministro investigado por relatórios que precedem sua própria iniciativa de investigar o outro — o que aprofunda, e não resolve, a tese central do corpus: nenhum vetor de apuração parece ter se originado de fato típico externo aos próprios ministros envolvidos; ambos os lados operam com material de inteligência de origem e cronologia não totalmente transparentes.",
+      "padroes_sistemicos": ["P02"],
+      "connections": ["id_1905", "id_1906", "id_1907"],
+      "fonte_arquivo": "_data/todo/pendente"
+    },
+    {
+      "id": 1909,
+      "titulo": "Nikolas Ferreira pede prisão e afastamento de Moraes citando mensagens de Vorcaro; áudios do mesmo dia revelam tom subserviente do deputado com o banqueiro",
+      "data_evento": "2026-09-01",
+      "data_iso": "2026-09-01T16:53:00.000Z",
+      "categoria": "congresso",
+      "tags": ["congresso", "banco-master", "P04b", "vorcaro"],
+      "descricao": "Em 1º de setembro de 2026, o deputado federal Nikolas Ferreira (PL-MG) anunciou que acionaria o STF pedindo abertura de investigação, afastamento cautelar e prisão preventiva de Alexandre de Moraes, com base em mensagens do celular de Vorcaro indicando ao menos seis referências a encontros presenciais com o ministro. Nos dias seguintes (2 e 3/09), vieram a público áudios e mensagens do próprio Nikolas com Vorcaro, em tom subserviente — chamando o banqueiro de \"lindão\", pedindo intervenção para liberar ativo minerário em nome de seu advogado e ex-assessor Thiago Rodrigues de Faria, e confirmando uso de aeronaves financiadas por Vorcaro na campanha de 2022. Nikolas admitiu os contatos, negou contratos ou repasses financeiros, e classificou a repercussão do caso como \"cortina de fumaça\" para desviar atenção dos contratos entre empresas de Vorcaro e o escritório da esposa de Moraes.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "P04b_bothsidesism_funcional",
+      "fontes": [
+        "https://ndmais.com.br/politica/nikolas-pede-prisao-moraes-vorcaro/",
+        "https://ohoje.com/2026/09/01/nikolas-ferreira-pede-investigacao-e-afastamento-de-alexandre-de-moraes-no-caso-banco-master/",
+        "https://www.brasilemfolhas.com.br/2026/09/nikolas-ferreira-pede-favores-a-dono-do-banco-master-em-audio/",
+        "https://www.brasilemfolhas.com.br/2026/09/nikolas-ferreira-admite-contatos-com-fundador-do-banco-master/"
+      ],
+      "pessoas_envolvidas": [
+        "Nikolas Ferreira (Deputado Federal, PL-MG)",
+        "Alexandre de Moraes (Ministro STF)",
+        "Daniel Vorcaro (ex-controlador Banco Master)",
+        "Thiago Rodrigues de Faria (advogado/ex-assessor de Nikolas Ferreira)"
+      ],
+      "instituicoes_envolvidas": ["Câmara dos Deputados", "STF", "Banco Master"],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 2,
+      "evidencia": "ev-confirmed",
+      "lacuna_investigativa": "Extensão exata da relação comercial entre o advogado de Nikolas (Thiago Rodrigues de Faria) e Vorcaro no episódio do ativo minerário não detalhada nas fontes disponíveis; valor e desfecho da negociação não confirmados.",
+      "analise": "ev-inference: caso de manual para P04b — o mesmo material probatório (mensagens/áudios do celular de Vorcaro) é simultaneamente arma de ataque (Nikolas contra Moraes) e evidência de exposição do próprio atacante, publicada no mesmo ciclo de 72 horas. A aplicação do rótulo 'cortina de fumaça' por ambos os lados do espectro político no mesmo evento é o próprio padrão P04b em ação — cada ator usa a mesma acusação para apontar para o adversário.",
+      "padroes_sistemicos": ["P04b"],
+      "connections": ["id_1602", "id_1905"],
+      "fonte_arquivo": "_data/todo/pendente"
+    }
+  ]
+}

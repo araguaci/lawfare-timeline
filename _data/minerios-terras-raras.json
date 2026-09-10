@@ -1,0 +1,3869 @@
+{
+  "meta": {
+    "fonte": "_data/lawfare.json",
+    "gerado_em": "2026-09-10T19:00:56Z",
+    "criterio": "Assuntos do corpus principal com relação a minérios, mineração, terras raras, minerais críticos, lítio, nióbio, garimpo, Operação Rejeito / Serra do Curral e Projeto Topázio. Campos originais preservados; rótulos de match só em indice.",
+    "total_corpus": 1873,
+    "total_extraidas": 80,
+    "ids": [
+      33,
+      430,
+      1552,
+      1553,
+      649,
+      1547,
+      1548,
+      1657,
+      1655,
+      1740,
+      1550,
+      1667,
+      1697,
+      1668,
+      1701,
+      1658,
+      1549,
+      1702,
+      1558,
+      1680,
+      1750,
+      1554,
+      1659,
+      1679,
+      1653,
+      1741,
+      1193,
+      1669,
+      1742,
+      1703,
+      1555,
+      1556,
+      1557,
+      1559,
+      1560,
+      1670,
+      1561,
+      1682,
+      1704,
+      1705,
+      1562,
+      1746,
+      1563,
+      1564,
+      1671,
+      1672,
+      1681,
+      1684,
+      1565,
+      1566,
+      1567,
+      1714,
+      1568,
+      1743,
+      1700,
+      1683,
+      1744,
+      1673,
+      1696,
+      1569,
+      1745,
+      1715,
+      1570,
+      1708,
+      1709,
+      1710,
+      1711,
+      1706,
+      1707,
+      1571,
+      1575,
+      1747,
+      1716,
+      1748,
+      1607,
+      1717,
+      1674,
+      1712,
+      1909,
+      1912
+    ],
+    "ids_incompletos": [],
+    "clusters": {
+      "garimpo-ouro-ilegal": [
+        33,
+        430,
+        649,
+        1607
+      ],
+      "operacao-rejeito-serra-curral": [
+        1552,
+        1553,
+        1547,
+        1548,
+        1550,
+        1549,
+        1558,
+        1554,
+        1555,
+        1556,
+        1557,
+        1559,
+        1560,
+        1561,
+        1562,
+        1563,
+        1564,
+        1565,
+        1566,
+        1567,
+        1568,
+        1569,
+        1570,
+        1571,
+        1912
+      ],
+      "para-vale-hydro": [
+        1657,
+        1655,
+        1658,
+        1659
+      ],
+      "terras-raras-goias-diplomacia": [
+        1740,
+        1193,
+        1746,
+        1743,
+        1744,
+        1747,
+        1748
+      ],
+      "taboca-amazonas": [
+        1667,
+        1668,
+        1669,
+        1670,
+        1671,
+        1672,
+        1673,
+        1674
+      ],
+      "pl-2780-minerais-criticos": [
+        1697,
+        1701,
+        1702,
+        1703,
+        1704,
+        1705,
+        1700,
+        1696,
+        1708,
+        1709,
+        1711,
+        1706,
+        1707,
+        1712
+      ],
+      "litio-minas-gerais": [
+        1680,
+        1750,
+        1679,
+        1682,
+        1681,
+        1684,
+        1683
+      ],
+      "minerais-criticos-geopolitica": [
+        1653,
+        1741,
+        1742,
+        1714,
+        1745,
+        1715,
+        1710,
+        1575,
+        1716,
+        1717
+      ],
+      "topazio-vorcaro": [
+        1909
+      ]
+    }
+  },
+  "indice": [
+    {
+      "id": 33,
+      "titulo": "Operação Diamante Negro",
+      "data_evento": "1990-01-01",
+      "categoria": "operacoes",
+      "labels": [
+        "garimpo",
+        "garimpo-ilegal"
+      ],
+      "cluster": "garimpo-ouro-ilegal",
+      "incompleto": false
+    },
+    {
+      "id": 430,
+      "titulo": "Operação Alerta Mínimo",
+      "data_evento": "2019-01-01",
+      "categoria": "operacoes",
+      "labels": [
+        "mineracao",
+        "garimpo-ilegal"
+      ],
+      "cluster": "garimpo-ouro-ilegal",
+      "incompleto": false
+    },
+    {
+      "id": 1552,
+      "titulo": "Operação Poeira Vermelha — extração de minério sob cobertura de terraplanagem em Nova Lima",
+      "data_evento": "2019-07-18",
+      "categoria": "operacoes",
+      "labels": [
+        "minerio",
+        "poeira-vermelha"
+      ],
+      "cluster": "operacao-rejeito-serra-curral",
+      "incompleto": false
+    },
+    {
+      "id": 1553,
+      "titulo": "Manuscritos da Serra do Curral retidos por delegado da PF — sem instauração de investigação",
+      "data_evento": "2021-02-26",
+      "categoria": "operacoes",
+      "labels": [
+        "operacao-rejeito",
+        "serra-do-curral",
+        "anm",
+        "feam"
+      ],
+      "cluster": "operacao-rejeito-serra-curral",
+      "incompleto": false
+    },
+    {
+      "id": 649,
+      "titulo": "Operação Munduruku",
+      "data_evento": "2021-06-28",
+      "categoria": "operacoes",
+      "labels": [
+        "garimpo",
+        "garimpo-ilegal"
+      ],
+      "cluster": "garimpo-ouro-ilegal",
+      "incompleto": false
+    },
+    {
+      "id": 1547,
+      "titulo": "Governo Zema nomeou ao Iepha prima de diretor responsável pela Tamisa",
+      "data_evento": "2022-05-01",
+      "categoria": "escandalos",
+      "labels": [
+        "mineracao",
+        "mineradora",
+        "serra-do-curral"
+      ],
+      "cluster": "operacao-rejeito-serra-curral",
+      "incompleto": false
+    },
+    {
+      "id": 1548,
+      "titulo": "Governo Zema triplicou uso de TACs e TCs permitindo mineração sem licença ambiental definitiva — favorecimento documentado à Tamisa",
+      "data_evento": "2023-01-01",
+      "categoria": "escandalos",
+      "labels": [
+        "mineracao",
+        "mineradora"
+      ],
+      "cluster": "operacao-rejeito-serra-curral",
+      "incompleto": false
+    },
+    {
+      "id": 1657,
+      "titulo": "Vale e Pará firmam \"Programa Estrutura\": até 40% de dívida da mineradora convertida em obras públicas escolhidas com o governo",
+      "data_evento": "2023-01-01",
+      "categoria": "dragao-onca",
+      "labels": [
+        "mineradora"
+      ],
+      "cluster": "para-vale-hydro",
+      "incompleto": false
+    },
+    {
+      "id": 1655,
+      "titulo": "Barbalho, CCCC e Vale assinam MoU da Ferrovia do Pará em Pequim (R$10 bilhões / US$2 bilhões)",
+      "data_evento": "2023-04-14",
+      "categoria": "dragao-onca",
+      "labels": [],
+      "cluster": "para-vale-hydro",
+      "incompleto": false
+    },
+    {
+      "id": 1740,
+      "titulo": "Caiado lidera missões à China (2023-2024): CMOC, Chint Power, Weichai, Huawei e China Railway",
+      "data_evento": "2023-11-14",
+      "categoria": "dragao-onca",
+      "labels": [
+        "mineracao",
+        "niobio"
+      ],
+      "cluster": "terras-raras-goias-diplomacia",
+      "incompleto": false
+    },
+    {
+      "id": 1550,
+      "titulo": "Vorcaro comprou 50% da Itaminas em 2024 e vendeu por ~R$ 700 mi dias antes de ser preso — Zema e Fernando Passalio (futuro presidente da Copasa) presentes na inauguração",
+      "data_evento": "2024-01-01",
+      "categoria": "operacoes",
+      "labels": [
+        "mineradora",
+        "operacao-rejeito",
+        "feam",
+        "mina"
+      ],
+      "cluster": "operacao-rejeito-serra-curral",
+      "incompleto": false
+    },
+    {
+      "id": 1667,
+      "titulo": "Mineração Taboca é adquirida pela estatal chinesa China Nonferrous Metal Mining Group",
+      "data_evento": "2024-01-01",
+      "categoria": "dragao-onca",
+      "labels": [
+        "terras-raras",
+        "mineracao",
+        "niobio",
+        "cassiterita",
+        "tantalo",
+        "taboca"
+      ],
+      "cluster": "taboca-amazonas",
+      "incompleto": false
+    },
+    {
+      "id": 1697,
+      "titulo": "PL 2.780/2024 institui a Política Nacional de Minerais Críticos e Estratégicos",
+      "data_evento": "2024-01-01",
+      "categoria": "dragao-onca",
+      "labels": [
+        "mineracao",
+        "minerais-criticos",
+        "politica-mineral",
+        "pl-2780"
+      ],
+      "cluster": "pl-2780-minerais-criticos",
+      "incompleto": false
+    },
+    {
+      "id": 1668,
+      "titulo": "MPF arquiva inquérito sobre Taboca com base em pareceres técnicos que atribuem danos a \"chuvas extraordinárias\"",
+      "data_evento": "2024-06-06",
+      "categoria": "dragao-onca",
+      "labels": [
+        "mineracao",
+        "anm",
+        "taboca"
+      ],
+      "cluster": "taboca-amazonas",
+      "incompleto": false
+    },
+    {
+      "id": 1701,
+      "titulo": "Dep. Zé Silva (Solidariedade-MG) apresenta o PL 2.780/2024, instituindo a Política Nacional de Minerais Críticos e Estratégicos",
+      "data_evento": "2024-07-08",
+      "categoria": "dragao-onca",
+      "labels": [
+        "minerais-criticos",
+        "politica-mineral",
+        "pnmce",
+        "pl-2780"
+      ],
+      "cluster": "pl-2780-minerais-criticos",
+      "incompleto": false
+    },
+    {
+      "id": 1658,
+      "titulo": "Comunidades do Vale do Acará denunciam mineroduto da Norsk Hydro sem consulta prévia",
+      "data_evento": "2024-09-01",
+      "categoria": "dragao-onca",
+      "labels": [
+        "mineroduto",
+        "norsk-hydro"
+      ],
+      "cluster": "para-vale-hydro",
+      "incompleto": false
+    },
+    {
+      "id": 1549,
+      "titulo": "Operação Rejeito — PF desmantela esquema de R$ 1,5 bi em licenciamentos ambientais fraudulentos em MG com captura da FEAM e ANM",
+      "data_evento": "2024-09-17",
+      "categoria": "operacoes",
+      "labels": [
+        "mineracao",
+        "operacao-rejeito",
+        "serra-do-curral",
+        "anm",
+        "feam"
+      ],
+      "cluster": "operacao-rejeito-serra-curral",
+      "incompleto": false
+    },
+    {
+      "id": 1702,
+      "titulo": "Tramitação inicial estagna: relator designado deixa a função sem apresentar parecer",
+      "data_evento": "2024-10-30",
+      "categoria": "dragao-onca",
+      "labels": [
+        "pl-2780"
+      ],
+      "cluster": "pl-2780-minerais-criticos",
+      "incompleto": false
+    },
+    {
+      "id": 1558,
+      "titulo": "Diretor da ANM recebe voto por WhatsApp 1h antes da sessão — propina de R$ 2,7 mi documentada",
+      "data_evento": "2024-11-22",
+      "categoria": "operacoes",
+      "labels": [
+        "mineracao",
+        "operacao-rejeito",
+        "anm"
+      ],
+      "cluster": "operacao-rejeito-serra-curral",
+      "incompleto": false
+    },
+    {
+      "id": 1680,
+      "titulo": "Sigma Lithium opera com R$3 bilhões investidos no complexo Grota do Cirilo e acordo de fornecimento com a LG (Coreia do Sul)",
+      "data_evento": "2025-01-01",
+      "categoria": "dragao-onca",
+      "labels": [
+        "mineradora",
+        "litio",
+        "sigma-lithium",
+        "mina"
+      ],
+      "cluster": "litio-minas-gerais",
+      "incompleto": false
+    },
+    {
+      "id": 1750,
+      "titulo": "BYD adquire direitos minerais de lítio em Coronel Murta (MG), no mesmo Vale do Jequitinhonha da Sigma Lithium",
+      "data_evento": "2025-02-16",
+      "categoria": "dragao-onca",
+      "labels": [
+        "litio",
+        "sigma-lithium",
+        "direitos-minerais"
+      ],
+      "cluster": "litio-minas-gerais",
+      "incompleto": false
+    },
+    {
+      "id": 1554,
+      "titulo": "Operação Parcours — PRAD usado como cobertura jurídica para extração na Serra do Curral",
+      "data_evento": "2025-03-28",
+      "categoria": "operacoes",
+      "labels": [
+        "serra-do-curral",
+        "anm"
+      ],
+      "cluster": "operacao-rejeito-serra-curral",
+      "incompleto": false
+    },
+    {
+      "id": 1659,
+      "titulo": "Trem de minério da Vale já matou 39 pessoas em 8 anos na Terra Indígena Mãe Maria (Marabá)",
+      "data_evento": "2025-05-01",
+      "categoria": "dragao-onca",
+      "labels": [
+        "minerio"
+      ],
+      "cluster": "para-vale-hydro",
+      "incompleto": false
+    },
+    {
+      "id": 1679,
+      "titulo": "Zema lança mundialmente o projeto \"Vale do Lítio\" na Nasdaq, em Nova York",
+      "data_evento": "2025-05-09",
+      "categoria": "dragao-onca",
+      "labels": [
+        "mineracao",
+        "litio",
+        "vale-do-litio"
+      ],
+      "cluster": "litio-minas-gerais",
+      "incompleto": false
+    },
+    {
+      "id": 1653,
+      "titulo": "Governo Lula assina 36 acordos com a China em Pequim, incluindo Plano de Ação para Mineração Sustentável 2025-2026",
+      "data_evento": "2025-05-13",
+      "categoria": "dragao-onca",
+      "labels": [
+        "minerio",
+        "mineracao",
+        "litio",
+        "niobio"
+      ],
+      "cluster": "minerais-criticos-geopolitica",
+      "incompleto": false
+    },
+    {
+      "id": 1741,
+      "titulo": "Início da negociação com a JOGMEC (Japão) para terras raras em Goiás",
+      "data_evento": "2025-07-01",
+      "categoria": "dragao-onca",
+      "labels": [
+        "terras-raras",
+        "minerais-criticos",
+        "usa-rare-earth",
+        "jogmec"
+      ],
+      "cluster": "minerais-criticos-geopolitica",
+      "incompleto": false
+    },
+    {
+      "id": 1193,
+      "titulo": "Exportações de terras raras do Brasil para China triplicam",
+      "data_evento": "2025-07-27",
+      "categoria": "crise-diplomatica",
+      "labels": [
+        "terras-raras",
+        "mineracao"
+      ],
+      "cluster": "terras-raras-goias-diplomacia",
+      "incompleto": false
+    },
+    {
+      "id": 1669,
+      "titulo": "Relatório da FUNAI (elaborado pela startup Aqua Viridi) reacende denúncia de contaminação",
+      "data_evento": "2025-08-01",
+      "categoria": "dragao-onca",
+      "labels": [],
+      "cluster": "taboca-amazonas",
+      "incompleto": false
+    },
+    {
+      "id": 1742,
+      "titulo": "Caiado declara que \"Goiás não quer ser apenas exportador de matéria-prima\"",
+      "data_evento": "2025-08-01",
+      "categoria": "dragao-onca",
+      "labels": [
+        "terras-raras",
+        "ativo-minerario",
+        "serra-verde",
+        "usa-rare-earth"
+      ],
+      "cluster": "minerais-criticos-geopolitica",
+      "incompleto": false
+    },
+    {
+      "id": 1703,
+      "titulo": "Aprovado requerimento de urgência para o PL 2.780/2024, mudando o regime de tramitação",
+      "data_evento": "2025-09-01",
+      "categoria": "dragao-onca",
+      "labels": [
+        "pl-2780"
+      ],
+      "cluster": "pl-2780-minerais-criticos",
+      "incompleto": false
+    },
+    {
+      "id": 1555,
+      "titulo": "Operação Rejeito — 22 prisões preventivas por corrupção no licenciamento mineral em MG",
+      "data_evento": "2025-09-17",
+      "categoria": "operacoes",
+      "labels": [
+        "licenciamento-mineral",
+        "operacao-rejeito",
+        "anm",
+        "feam"
+      ],
+      "cluster": "operacao-rejeito-serra-curral",
+      "incompleto": false
+    },
+    {
+      "id": 1556,
+      "titulo": "Extração forense do celular de Teixeira — Gmais Ambiental operada de facto por delegado da PF",
+      "data_evento": "2025-09-17",
+      "categoria": "operacoes",
+      "labels": [
+        "mineracao",
+        "operacao-rejeito",
+        "topazio",
+        "gmais"
+      ],
+      "cluster": "operacao-rejeito-serra-curral",
+      "incompleto": false
+    },
+    {
+      "id": 1557,
+      "titulo": "Serra do Curral — cavas em área tombada, córrego destruído, R$ 830 mi em minério extraído",
+      "data_evento": "2025-09-17",
+      "categoria": "operacoes",
+      "labels": [
+        "minerio",
+        "operacao-rejeito",
+        "serra-do-curral"
+      ],
+      "cluster": "operacao-rejeito-serra-curral",
+      "incompleto": false
+    },
+    {
+      "id": 1559,
+      "titulo": "FEAM capturada — presidente preso, TACs firmados com empresa autuada 17 vezes",
+      "data_evento": "2025-09-17",
+      "categoria": "operacoes",
+      "labels": [
+        "operacao-rejeito",
+        "feam"
+      ],
+      "cluster": "operacao-rejeito-serra-curral",
+      "incompleto": false
+    },
+    {
+      "id": 1560,
+      "titulo": "Ministro de Minas e Energia participa de evento patrocinado pela Cedro Mineração 5 dias após prisões",
+      "data_evento": "2025-09-22",
+      "categoria": "governo",
+      "labels": [
+        "mineracao",
+        "operacao-rejeito",
+        "anm",
+        "cedro-mineracao"
+      ],
+      "cluster": "operacao-rejeito-serra-curral",
+      "incompleto": false
+    },
+    {
+      "id": 1670,
+      "titulo": "Povo Waimiri Atroari denuncia contaminação do rio Alalaú por mercúrio e rejeitos industriais",
+      "data_evento": "2025-09-29",
+      "categoria": "dragao-onca",
+      "labels": [
+        "mineracao",
+        "taboca"
+      ],
+      "cluster": "taboca-amazonas",
+      "incompleto": false
+    },
+    {
+      "id": 1561,
+      "titulo": "Operação Rejeito remetida ao STF — citação a senadores aciona foro privilegiado",
+      "data_evento": "2025-10-01",
+      "categoria": "stf",
+      "labels": [
+        "mineradora",
+        "operacao-rejeito"
+      ],
+      "cluster": "operacao-rejeito-serra-curral",
+      "incompleto": false
+    },
+    {
+      "id": 1682,
+      "titulo": "Sigma Lithium paralisa única mina em operação para reestruturação de equipamentos; liquidez questionada",
+      "data_evento": "2025-10-01",
+      "categoria": "dragao-onca",
+      "labels": [
+        "sigma-lithium"
+      ],
+      "cluster": "litio-minas-gerais",
+      "incompleto": false
+    },
+    {
+      "id": 1704,
+      "titulo": "Múltiplos projetos são apensados ao PL 2.780/2024, incluindo Política Nacional de Terras Raras",
+      "data_evento": "2025-10-01",
+      "categoria": "dragao-onca",
+      "labels": [
+        "terras-raras",
+        "pl-2780"
+      ],
+      "cluster": "pl-2780-minerais-criticos",
+      "incompleto": false
+    },
+    {
+      "id": 1705,
+      "titulo": "Dep. João Daniel requer audiência pública para debater PNMCE e Política Nacional de Terras Raras",
+      "data_evento": "2025-10-15",
+      "categoria": "dragao-onca",
+      "labels": [
+        "terras-raras",
+        "minerais-criticos",
+        "politica-mineral",
+        "pnmce",
+        "pl-2780"
+      ],
+      "cluster": "pl-2780-minerais-criticos",
+      "incompleto": false
+    },
+    {
+      "id": 1562,
+      "titulo": "STF impõe sigilo absoluto — PF e advogados dos presos sem acesso aos autos",
+      "data_evento": "2025-11-15",
+      "categoria": "stf",
+      "labels": [
+        "operacao-rejeito",
+        "poeira-vermelha"
+      ],
+      "cluster": "operacao-rejeito-serra-curral",
+      "incompleto": false
+    },
+    {
+      "id": 1746,
+      "titulo": "CMOC (China) compra ativos de ouro da Equinox Gold no Brasil por US$1,015 bilhão",
+      "data_evento": "2025-12-15",
+      "categoria": "dragao-onca",
+      "labels": [
+        "terras-raras",
+        "mineracao",
+        "niobio"
+      ],
+      "cluster": "terras-raras-goias-diplomacia",
+      "incompleto": false
+    },
+    {
+      "id": 1563,
+      "titulo": "Toffoli revoga prisões dos 4 líderes da Rejeito contrariando parecer expresso da PGR",
+      "data_evento": "2025-12-19",
+      "categoria": "stf",
+      "labels": [
+        "operacao-rejeito"
+      ],
+      "cluster": "operacao-rejeito-serra-curral",
+      "incompleto": false
+    },
+    {
+      "id": 1564,
+      "titulo": "Secretária de Meio Ambiente de MG deixa pasta e é nomeada diretora-presidente da Copasa no mesmo dia",
+      "data_evento": "2025-12-23",
+      "categoria": "operacoes",
+      "labels": [
+        "operacao-rejeito"
+      ],
+      "cluster": "operacao-rejeito-serra-curral",
+      "incompleto": false
+    },
+    {
+      "id": 1671,
+      "titulo": "Taboca anuncia investimento de US$100 milhões para dobrar produção até 2028",
+      "data_evento": "2026-01-01",
+      "categoria": "dragao-onca",
+      "labels": [
+        "mineracao",
+        "minerais-criticos",
+        "taboca"
+      ],
+      "cluster": "taboca-amazonas",
+      "incompleto": false
+    },
+    {
+      "id": 1672,
+      "titulo": "Taboca firma Termo de Cooperação nº 01/2026 com R$12,3 milhões à ACWA, dois dias após lideranças expressarem desconfiança total",
+      "data_evento": "2026-01-01",
+      "categoria": "dragao-onca",
+      "labels": [
+        "mineracao",
+        "taboca"
+      ],
+      "cluster": "taboca-amazonas",
+      "incompleto": false
+    },
+    {
+      "id": 1681,
+      "titulo": "Assembleia Legislativa de Minas Gerais requer vistoria de segurança no complexo Grota do Cirilo (Sigma Lithium)",
+      "data_evento": "2026-01-01",
+      "categoria": "dragao-onca",
+      "labels": [
+        "mineracao",
+        "litio",
+        "sigma-lithium",
+        "mina"
+      ],
+      "cluster": "litio-minas-gerais",
+      "incompleto": false
+    },
+    {
+      "id": 1684,
+      "titulo": "Sigma Lithium nomeia Katia Abreu (ex-senadora, ex-ministra da Agricultura) para conselho de administração",
+      "data_evento": "2026-01-01",
+      "categoria": "dragao-onca",
+      "labels": [
+        "sigma-lithium"
+      ],
+      "cluster": "litio-minas-gerais",
+      "incompleto": false
+    },
+    {
+      "id": 1565,
+      "titulo": "TRF-6 solta restantes da Rejeito — 22 prisões preventivas chegam a zero em 118 dias",
+      "data_evento": "2026-01-14",
+      "categoria": "justica",
+      "labels": [
+        "operacao-rejeito"
+      ],
+      "cluster": "operacao-rejeito-serra-curral",
+      "incompleto": false
+    },
+    {
+      "id": 1566,
+      "titulo": "Esposa de ministro do STF assume defesa de investigado da Rejeito no mesmo tribunal",
+      "data_evento": "2026-01-20",
+      "categoria": "stf",
+      "labels": [
+        "operacao-rejeito"
+      ],
+      "cluster": "operacao-rejeito-serra-curral",
+      "incompleto": false
+    },
+    {
+      "id": 1567,
+      "titulo": "Corregedoria PF instaura PAD contra Teixeira; MPF pede bloqueio de R$ 4,2 mi",
+      "data_evento": "2026-02-01",
+      "categoria": "operacoes",
+      "labels": [
+        "operacao-rejeito"
+      ],
+      "cluster": "operacao-rejeito-serra-curral",
+      "incompleto": false
+    },
+    {
+      "id": 1714,
+      "titulo": "EUA articulam bloco de minerais críticos para reduzir dependência da China; Pequim reage e Brasil é posicionado como ativo geopolítico",
+      "data_evento": "2026-02-06",
+      "categoria": "dragao-onca",
+      "labels": [
+        "terras-raras",
+        "minerais-criticos",
+        "litio",
+        "niobio",
+        "grafite",
+        "pl-2780"
+      ],
+      "cluster": "minerais-criticos-geopolitica",
+      "incompleto": false
+    },
+    {
+      "id": 1568,
+      "titulo": "Justiça Federal suspende 57 processos minerários na Serra do Curral e multa ANM em R$ 4 mi",
+      "data_evento": "2026-03-01",
+      "categoria": "justica",
+      "labels": [
+        "processo-minerario",
+        "serra-do-curral",
+        "anm"
+      ],
+      "cluster": "operacao-rejeito-serra-curral",
+      "incompleto": false
+    },
+    {
+      "id": 1743,
+      "titulo": "Acordo de cooperação Goiás-Japão formalizado (modelo JOGMEC)",
+      "data_evento": "2026-03-01",
+      "categoria": "dragao-onca",
+      "labels": [
+        "terras-raras",
+        "jogmec"
+      ],
+      "cluster": "terras-raras-goias-diplomacia",
+      "incompleto": false
+    },
+    {
+      "id": 1700,
+      "titulo": "Observatório do Clima cataloga 70 projetos do \"Pacote da Destruição\" em tramitação no Congresso para 2026",
+      "data_evento": "2026-03-04",
+      "categoria": "dragao-onca",
+      "labels": [
+        "mineracao",
+        "minerais-criticos",
+        "pl-2780"
+      ],
+      "cluster": "pl-2780-minerais-criticos",
+      "incompleto": false
+    },
+    {
+      "id": 1683,
+      "titulo": "Sigma Lithium retoma operações, fecha US$146 milhões em contratos e ações saltam 41% na Nasdaq",
+      "data_evento": "2026-03-30",
+      "categoria": "dragao-onca",
+      "labels": [
+        "mineracao",
+        "sigma-lithium"
+      ],
+      "cluster": "litio-minas-gerais",
+      "incompleto": false
+    },
+    {
+      "id": 1744,
+      "titulo": "Caiado deixa o governo de Goiás para concorrer à Presidência; Daniel Vilela assume",
+      "data_evento": "2026-03-30",
+      "categoria": "dragao-onca",
+      "labels": [
+        "ativo-minerario"
+      ],
+      "cluster": "terras-raras-goias-diplomacia",
+      "incompleto": false
+    },
+    {
+      "id": 1673,
+      "titulo": "Waimiri Atroari enviam novo ofício ao MPF-AM com suspeitas adicionais de contaminação",
+      "data_evento": "2026-04-08",
+      "categoria": "dragao-onca",
+      "labels": [
+        "mineracao",
+        "taboca"
+      ],
+      "cluster": "taboca-amazonas",
+      "incompleto": false
+    },
+    {
+      "id": 1696,
+      "titulo": "APIB protocola manifestação no STF contra regulamentação de mineração em terra Cinta Larga sem consulta ampla",
+      "data_evento": "2026-04-08",
+      "categoria": "dragao-onca",
+      "labels": [
+        "mineracao"
+      ],
+      "cluster": "pl-2780-minerais-criticos",
+      "incompleto": false
+    },
+    {
+      "id": 1569,
+      "titulo": "Toffoli devolve operações Rejeito/Parcours à 1ª instância — sem nenhuma condenação proferida no STF",
+      "data_evento": "2026-04-15",
+      "categoria": "stf",
+      "labels": [
+        "operacao-rejeito",
+        "poeira-vermelha"
+      ],
+      "cluster": "operacao-rejeito-serra-curral",
+      "incompleto": false
+    },
+    {
+      "id": 1745,
+      "titulo": "\"Manifesto de Entendimento\" entre Goiás e o governo dos EUA sobre terras raras",
+      "data_evento": "2026-04-17",
+      "categoria": "dragao-onca",
+      "labels": [
+        "terras-raras",
+        "ativo-minerario",
+        "serra-verde",
+        "usa-rare-earth",
+        "mina"
+      ],
+      "cluster": "minerais-criticos-geopolitica",
+      "incompleto": false
+    },
+    {
+      "id": 1715,
+      "titulo": "USA Rare Earth anuncia aquisição da Serra Verde (Goiás) por US$ 2,8 bilhões, invertendo destino da produção que ia para a China",
+      "data_evento": "2026-04-20",
+      "categoria": "dragao-onca",
+      "labels": [
+        "terras-raras",
+        "minerais-criticos",
+        "politica-mineral",
+        "serra-verde",
+        "usa-rare-earth",
+        "pl-2780",
+        "mina"
+      ],
+      "cluster": "minerais-criticos-geopolitica",
+      "incompleto": false
+    },
+    {
+      "id": 1570,
+      "titulo": "Cedro Participações vende Biomm e Latache Capital — Kallas se desvincula formalmente de Vorcaro",
+      "data_evento": "2026-04-28",
+      "categoria": "operacoes",
+      "labels": [],
+      "cluster": "operacao-rejeito-serra-curral",
+      "incompleto": false
+    },
+    {
+      "id": 1708,
+      "titulo": "INESC: Certificado Mineral de Baixo Carbono (CMBC) cria mercado de carbono paralelo à revelia da regulamentação do SBCE",
+      "data_evento": "2026-05-01",
+      "categoria": "dragao-onca",
+      "labels": [
+        "cmbc",
+        "certificado-mineral"
+      ],
+      "cluster": "pl-2780-minerais-criticos",
+      "incompleto": false
+    },
+    {
+      "id": 1709,
+      "titulo": "Substitutivo cria acesso preferencial das mineradoras ao Fundo Clima (Fundo Nacional sobre Mudança do Clima)",
+      "data_evento": "2026-05-01",
+      "categoria": "dragao-onca",
+      "labels": [
+        "terras-raras",
+        "minerio",
+        "mineradora",
+        "litio"
+      ],
+      "cluster": "pl-2780-minerais-criticos",
+      "incompleto": false
+    },
+    {
+      "id": 1710,
+      "titulo": "INESC cita explicitamente o caso Serra Verde (Goiás) como exemplo de risco dos contratos de streaming previstos no PL",
+      "data_evento": "2026-05-01",
+      "categoria": "dragao-onca",
+      "labels": [
+        "terras-raras",
+        "minerio",
+        "serra-verde",
+        "usa-rare-earth"
+      ],
+      "cluster": "minerais-criticos-geopolitica",
+      "incompleto": false
+    },
+    {
+      "id": 1711,
+      "titulo": "Assimetria estrutural: Fundo Garantidor da Atividade Mineral (FGAM) protege investidor, sem fundo equivalente para comunidades",
+      "data_evento": "2026-05-01",
+      "categoria": "dragao-onca",
+      "labels": [
+        "fgam",
+        "atividade-mineral"
+      ],
+      "cluster": "pl-2780-minerais-criticos",
+      "incompleto": false
+    },
+    {
+      "id": 1706,
+      "titulo": "Comissão Especial apresenta parecer/substitutivo do relator Arnaldo Jardim: projeto salta de 21 para 51 artigos",
+      "data_evento": "2026-05-04",
+      "categoria": "dragao-onca",
+      "labels": [
+        "pl-2780"
+      ],
+      "cluster": "pl-2780-minerais-criticos",
+      "incompleto": false
+    },
+    {
+      "id": 1707,
+      "titulo": "Câmara aprova o PL 2.780/2024 na forma do substitutivo: FGAM de R$2bi, incentivos de R$5bi/5 anos, CMCE",
+      "data_evento": "2026-05-06",
+      "categoria": "dragao-onca",
+      "labels": [
+        "minerio",
+        "minerais-criticos",
+        "fgam",
+        "pl-2780",
+        "atividade-mineral"
+      ],
+      "cluster": "pl-2780-minerais-criticos",
+      "incompleto": false
+    },
+    {
+      "id": 1571,
+      "titulo": "Terceiro manuscrito revelado — cadeia do minério ilegal até Vale, Gerdau e Trafigura",
+      "data_evento": "2026-05-27",
+      "categoria": "operacoes",
+      "labels": [
+        "minerio",
+        "operacao-rejeito"
+      ],
+      "cluster": "operacao-rejeito-serra-curral",
+      "incompleto": false
+    },
+    {
+      "id": 1575,
+      "titulo": "Flávio Bolsonaro posiciona minerais críticos brasileiros como alternativa ao monopólio chinês em negociação com Trump",
+      "data_evento": "2026-05-27",
+      "categoria": "",
+      "labels": [
+        "minerais-criticos"
+      ],
+      "cluster": "minerais-criticos-geopolitica",
+      "incompleto": false
+    },
+    {
+      "id": 1747,
+      "titulo": "Cota de exportação de carne goiana à China quase esgotada; tarifa de 55% sobre excedentes",
+      "data_evento": "2026-06-13",
+      "categoria": "dragao-onca",
+      "labels": [
+        "terras-raras",
+        "minerio"
+      ],
+      "cluster": "terras-raras-goias-diplomacia",
+      "incompleto": false
+    },
+    {
+      "id": 1716,
+      "titulo": "G7 fecha acordo para limitar dependência de terras raras da China; Brasil recebe medida como oportunidade de barganha",
+      "data_evento": "2026-06-17",
+      "categoria": "dragao-onca",
+      "labels": [
+        "terras-raras",
+        "minerais-criticos",
+        "politica-mineral",
+        "pl-2780"
+      ],
+      "cluster": "minerais-criticos-geopolitica",
+      "incompleto": false
+    },
+    {
+      "id": 1748,
+      "titulo": "Caiado, já candidato, associa terras raras à plataforma de campanha presidencial",
+      "data_evento": "2026-06-18",
+      "categoria": "dragao-onca",
+      "labels": [
+        "terras-raras",
+        "minerais-criticos",
+        "ativo-minerario"
+      ],
+      "cluster": "terras-raras-goias-diplomacia",
+      "incompleto": false
+    },
+    {
+      "id": 1607,
+      "titulo": "Comando Vermelho assume controle de garimpo ilegal na Terra Indígena Sararé (MT) e usa ouro como moeda de troca por armas e drogas",
+      "data_evento": "2026-06-28",
+      "categoria": "operacoes",
+      "labels": [
+        "mineracao",
+        "garimpo",
+        "garimpo-ilegal"
+      ],
+      "cluster": "garimpo-ouro-ilegal",
+      "incompleto": false
+    },
+    {
+      "id": 1717,
+      "titulo": "Lula anuncia lançamento de negociação de parceria econômica com o Japão e avanço no diálogo Mercosul-China durante cúpula no Paraguai",
+      "data_evento": "2026-06-30",
+      "categoria": "dragao-onca",
+      "labels": [
+        "minerais-criticos"
+      ],
+      "cluster": "minerais-criticos-geopolitica",
+      "incompleto": false
+    },
+    {
+      "id": 1674,
+      "titulo": "Polícia Federal passa a investigar a Mineração Taboca por contaminação em terra indígena",
+      "data_evento": "2026-07-05",
+      "categoria": "dragao-onca",
+      "labels": [
+        "mineracao",
+        "taboca"
+      ],
+      "cluster": "taboca-amazonas",
+      "incompleto": false
+    },
+    {
+      "id": 1712,
+      "titulo": "PL 2.780/2024 aguarda votação de urgência no Senado; especialista já defende suspensão de licenciamento de terras raras em Minas Gerais",
+      "data_evento": "2026-07-06",
+      "categoria": "dragao-onca",
+      "labels": [
+        "terras-raras",
+        "pl-2780"
+      ],
+      "cluster": "pl-2780-minerais-criticos",
+      "incompleto": false
+    },
+    {
+      "id": 1909,
+      "titulo": "Nikolas Ferreira pede prisão e afastamento de Moraes citando mensagens de Vorcaro; áudios do mesmo dia revelam tom subserviente do deputado com o banqueiro",
+      "data_evento": "2026-09-01",
+      "categoria": "escandalos",
+      "labels": [
+        "ativo-minerario"
+      ],
+      "cluster": "topazio-vorcaro",
+      "incompleto": false
+    },
+    {
+      "id": 1912,
+      "titulo": "Extração forense confirma nome de arquivo 'Projeto Topázio' no grupo Gmais operado por Teixeira — elo com Nikolas Ferreira/Vorcaro deixa de ser circunstancial",
+      "data_evento": "2026-09-06",
+      "categoria": "operacoes",
+      "labels": [
+        "mineracao",
+        "mineradora",
+        "ativo-minerario",
+        "topazio",
+        "projeto-topazio",
+        "gmais"
+      ],
+      "cluster": "operacao-rejeito-serra-curral",
+      "incompleto": false
+    }
+  ],
+  "assuntos": [
+    {
+      "titulo": "Operação Diamante Negro",
+      "data_evento": "1990-01-01",
+      "data_iso": "1990-01-01T00:00:00Z",
+      "categoria": "operacoes",
+      "tags": [
+        "operacoes",
+        "ambiental",
+        "garimpo-ilegal",
+        "ambiental"
+      ],
+      "descricao": "1990-01-01-Roraima, RR-garimpo ilegal-ambiental",
+      "relevancia": "media",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "N/A",
+      "fontes": [
+        "N/A"
+      ],
+      "pessoas_envolvidas": [
+        "Ano",
+        "Data",
+        "Descrição",
+        "Tema",
+        "Alvo",
+        "Tipo",
+        "Local",
+        "Envolvidos",
+        "Consequências",
+        "Tópicos",
+        "Fontes"
+      ],
+      "instituicoes_envolvidas": [
+        "PF"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 2,
+      "fonte_arquivo": "_posts\\operacoes\\1990-01-01-operacao-diamante-negro.md",
+      "id": 33
+    },
+    {
+      "titulo": "Operação Alerta Mínimo",
+      "data_evento": "2019-01-01",
+      "data_iso": "2019-01-01T00:00:00Z",
+      "categoria": "operacoes",
+      "tags": [
+        "operacoes",
+        "ambiental",
+        "mineracao-ilegal",
+        "ambiental"
+      ],
+      "descricao": "2019-01-01-Manaus, AM-mineração ilegal-ambiental",
+      "relevancia": "media",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "N/A",
+      "fontes": [
+        "N/A"
+      ],
+      "pessoas_envolvidas": [
+        "Ano",
+        "Data",
+        "Descrição",
+        "Tema",
+        "Alvo",
+        "Tipo",
+        "Local",
+        "Envolvidos",
+        "Consequências",
+        "Tópicos",
+        "Fontes"
+      ],
+      "instituicoes_envolvidas": [
+        "PF"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 2,
+      "fonte_arquivo": "_posts\\operacoes\\2019-01-01-operacao-alerta-minimo.md",
+      "id": 430
+    },
+    {
+      "titulo": "Operação Poeira Vermelha — extração de minério sob cobertura de terraplanagem em Nova Lima",
+      "data_evento": "2019-07-18",
+      "data_iso": "2019-07-18T12:00:00Z",
+      "categoria": "operacoes",
+      "tags": [
+        "P08",
+        "operacao-rejeito"
+      ],
+      "descricao": "PF identifica empresas que simulavam obras de terraplanagem em terrenos urbanos de Nova Lima enquanto extraíam ilegalmente minério de ferro para revenda a siderúrgicas. Mesmo estratagema replicado em mai/2021 e confirmado no 3º manuscrito apreendido em 2025.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "Operação Poeira Vermelha",
+      "fontes": [
+        "Polícia Federal — Operação Poeira Vermelha"
+      ],
+      "pessoas_envolvidas": [
+        "Fleurs Global",
+        "Gute Sicht"
+      ],
+      "instituicoes_envolvidas": [],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\operacoes\\2019-07-18-poeira-vermelha-terraplanagem-nova-lima.md",
+      "id": 1552
+    },
+    {
+      "titulo": "Manuscritos da Serra do Curral retidos por delegado da PF — sem instauração de investigação",
+      "data_evento": "2021-02-26",
+      "data_iso": "2021-02-26T12:00:00Z",
+      "categoria": "operacoes",
+      "tags": [
+        "P03",
+        "P05",
+        "operacao-rejeito"
+      ],
+      "descricao": "Em 26/fev/2021 às 21h31, Daniela Wandeck envia via WhatsApp três organogramas manuscritos ao marido, delegado Rodrigo de Melo Teixeira. Documentos mapeavam esquema de R$ 18 bi em MG: captura de ANM, Semad, FEAM, blindagem judicial e cadeia comercial até compradoras finais. Teixeira não instaurou investigação. Registrado em relatório SINTE SR/MG de 01/out/2025.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "Operação Rejeito (antecedente)",
+      "fontes": [
+        "https://www.ainvestigacao.com/p/o-terceiro-manuscrito-omitido",
+        "Relatório SINTE SR/MG — 01/out/2025; A Investigação (mai/2026)"
+      ],
+      "pessoas_envolvidas": [
+        "Rodrigo de Melo Teixeira",
+        "Daniela Wandeck"
+      ],
+      "instituicoes_envolvidas": [],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\operacoes\\2021-02-26-manuscritos-serra-curral-teixeira-retencao.md",
+      "id": 1553
+    },
+    {
+      "titulo": "Operação Munduruku",
+      "data_evento": "2021-06-28",
+      "data_iso": "2021-06-28T00:00:00Z",
+      "categoria": "operacoes",
+      "tags": [
+        "operacoes",
+        "ambiental",
+        "garimpo-ilegal",
+        "ambiental"
+      ],
+      "descricao": "2021-06-28-Jacareacanga, PA-garimpo ilegal-ambiental",
+      "relevancia": "media",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "N/A",
+      "fontes": [
+        "N/A"
+      ],
+      "pessoas_envolvidas": [
+        "Ano",
+        "Data",
+        "Descrição",
+        "Tema",
+        "Alvo",
+        "Tipo",
+        "Local",
+        "Envolvidos",
+        "Consequências",
+        "Tópicos",
+        "Fontes"
+      ],
+      "instituicoes_envolvidas": [
+        "PF"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 2,
+      "fonte_arquivo": "_posts\\operacoes\\2021-06-28-operacao-munduruku.md",
+      "id": 649
+    },
+    {
+      "titulo": "Governo Zema nomeou ao Iepha prima de diretor responsável pela Tamisa",
+      "data_evento": "2022-05-01",
+      "data_iso": "2022-05-01T12:00:00Z",
+      "categoria": "escandalos",
+      "tags": [
+        "iepha",
+        "tamisa",
+        "zema",
+        "licenciamento",
+        "conflito-interesse",
+        "serra-do-curral",
+        "minas-gerais"
+      ],
+      "descricao": "Em maio de 2022, Zema empossou Marília Palhares Machado na presidência do Instituto Estadual do Patrimônio Histórico e Artístico de Minas Gerais (Iepha), cargo que ocupou até maio de 2024. Marília é prima em primeiro grau de Guilherme Augusto Gonçalves Machado, que consta no CNPJ da Taquaril Mineração S/A (Tamisa) como diretor responsável. O Iepha é órgão consultivo obrigatório no processo de licenciamento de mineradoras e integrava o conjunto de instâncias cujas decisões impactavam diretamente a viabilidade operacional da Tamisa na Serra do Curral.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "Conflito de interesse Iepha/Tamisa",
+      "fontes": [
+        "https://apublica.org/2026/04/as-digitais-de-vorcaro-zettel-e-do-governo-zema-na-destruicao-da-serra-do-curral-em-minas/"
+      ],
+      "pessoas_envolvidas": [
+        "Romeu Zema",
+        "Marília Palhares Machado",
+        "Guilherme Augusto Gonçalves Machado"
+      ],
+      "instituicoes_envolvidas": [
+        "Iepha",
+        "Tamisa / Taquaril Mineração S/A"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\escandalos\\2022-05-01-governo-zema-nomeou-ao-iepha-prima-de-diretor-responsavel-pela-tamisa.md",
+      "id": 1547
+    },
+    {
+      "titulo": "Governo Zema triplicou uso de TACs e TCs permitindo mineração sem licença ambiental definitiva — favorecimento documentado à Tamisa",
+      "data_evento": "2023-01-01",
+      "data_iso": "2023-01-01T12:00:00Z",
+      "categoria": "escandalos",
+      "tags": [
+        "tac",
+        "tc",
+        "licenciamento-ambiental",
+        "tamisa",
+        "victoria-falls",
+        "banco-master",
+        "vorcaro",
+        "zettel",
+        "zema",
+        "doacao-eleitoral",
+        "serra-do-curral",
+        "mineracao"
+      ],
+      "descricao": "O governo Zema expandiu de forma sistemática o uso de Termos de Ajustamento de Conduta (TACs) e Termos de Compromisso (TCs) como instrumentos que permitem a mineradoras operar sem licença ambiental definitiva. O uso desses instrumentos triplicou no período, transformando exceção em método. A Tamisa (Taquaril Mineração), controlada pelo fundo Victoria Falls administrado pelo Banco Master de Daniel Vorcaro e pela WJ Consultoria de Fabiano Zettel (cunhado de Vorcaro), figura entre as mineradoras beneficiadas. O fundo Victoria Falls detinha mais de 90% do capital social da Tamisa. Henrique Moura Vorcaro, pai de Daniel Vorcaro, consta como doador de R$ 1 milhão à campanha eleitoral de Zema — doação declarada nos registros do TSE.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "Flexibilização ambiental TAC/TC",
+      "fontes": [
+        "https://apublica.org/2026/04/as-digitais-de-vorcaro-zettel-e-do-governo-zema-na-destruicao-da-serra-do-curral-em-minas/",
+        "https://www.otempo.com.br/opiniao/bella-goncalves/2025/11/27/entenda-relacoes-do-governo-com-crimes-financeiros-e-mineracao",
+        "https://www.otempo.com.br/economia/2026/2/11/banco-master-financiou-maior-aquisicao-de-areas-de-minerais-criticos-do-pais"
+      ],
+      "pessoas_envolvidas": [
+        "Romeu Zema",
+        "Daniel Vorcaro",
+        "Fabiano Campos Zettel",
+        "Henrique Moura Vorcaro"
+      ],
+      "instituicoes_envolvidas": [
+        "Tamisa / Taquaril Mineração S/A",
+        "Fundo Victoria Falls",
+        "Banco Master",
+        "WJ Consultoria"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "R$ 1 milhão (doação TSE)",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\escandalos\\2023-01-01-governo-zema-triplicou-uso-de-tacs-e-tcs-permitindo-mineracao-sem-licenca-ambiental-defini.md",
+      "id": 1548
+    },
+    {
+      "titulo": "Vale e Pará firmam \"Programa Estrutura\": até 40% de dívida da mineradora convertida em obras públicas escolhidas com o governo",
+      "data_evento": "2023-01-01",
+      "data_iso": "2023-01-01T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "bancos",
+        "P05",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "Regulamentação do Programa Estrutura permite que a Vale e outras mineradoras convertam até 40% de valores devidos ao estado em obras públicas definidas em conjunto com o governo, em vez de pagamento direto ao erário.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://sumauma.com/en/vale-tudo-para-maquiar-belem-para-a-cop-30/"
+      ],
+      "pessoas_envolvidas": [
+        "Helder Barbalho (Governador do Pará)"
+      ],
+      "instituicoes_envolvidas": [
+        "Governo do Pará",
+        "Vale S.A."
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2023-01-01-id1657-vale-e-para-firmam-programa-estrutura-ate-40-de-divida-da-mineradora-convertida.md",
+      "id": 1657
+    },
+    {
+      "titulo": "Barbalho, CCCC e Vale assinam MoU da Ferrovia do Pará em Pequim (R$10 bilhões / US$2 bilhões)",
+      "data_evento": "2023-04-14",
+      "data_iso": "2023-04-14T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "crise-diplomatica",
+        "P05",
+        "P10",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "Durante a comitiva de Lula à China, o governador Helder Barbalho, o vice-presidente da CCCC Sun Liqiang, e o vice-presidente executivo da Vale Alexandre Silva D'Ambrosio assinam Memorando de Entendimento para avaliar o modelo de negócio do corredor ferroviário Marabá-Barcarena, com valor revisado para R$10 bilhões (US$2bi).",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "incidente_diplomatico",
+      "fontes": [
+        "https://www.oliberal.com/politica/ferrovia-do-para-helder-assina-acordo-na-china-para-construcao-de-ferrovia-entre-maraba-e-barcarena-1.668574",
+        "https://observatoriodamineracao.com.br/vale-e-uma-das-grandes-beneficiadas-pela-visita-de-lula-a-china-nova-ferrovia-no-para-com-capital-chines-atendera-a-varias-mineradoras-e-ao-agronegocio/"
+      ],
+      "pessoas_envolvidas": [
+        "Helder Barbalho (Governador do Pará)",
+        "Sun Liqiang (Vice-presidente CCCC)",
+        "Alexandre Silva D'Ambrosio (Vice-presidente executivo de Assuntos Corporativos e Institucionais)"
+      ],
+      "instituicoes_envolvidas": [
+        "Governo do Pará",
+        "CCCC",
+        "Vale S.A.",
+        "Presidência da República"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2023-04-14-id1655-barbalho-cccc-e-vale-assinam-mou-da-ferrovia-do-para-em-pequim-r10-bilhoes-us2-b.md",
+      "id": 1655
+    },
+    {
+      "titulo": "Caiado lidera missões à China (2023-2024): CMOC, Chint Power, Weichai, Huawei e China Railway",
+      "data_evento": "2023-11-14",
+      "data_iso": "2023-11-14T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "dragao-onca",
+        "china",
+        "goias",
+        "P05",
+        "retroativo"
+      ],
+      "descricao": "Entrada retroativa consolidando a 'Fase 1' do capítulo Goiás (dossiê original 2023-2024, nunca antes mesclado ao corpus). Governador Ronaldo Caiado lidera missões à China resultando em: expansão da CMOC (2º maior produtor mundial de nióbio, operando em Catalão/Ouvidor desde 2016) para o segmento de ouro no Brasil; instalação da Chint Power (disjuntores) em Itumbiara, primeira planta do grupo na América do Sul; operação da Weichai Power/Shandong Heavy Industry em Itumbiara (~R$100mi), com anúncio de trazer Sinotruk, Shantui e Lowval; parceria com a Huawei (tecnologia/5G/IA) anunciada em conjunto com Minas Gerais; MOU de estudos com a China Railway (Crec) para infraestrutura/logística, sem projeto executivo público identificado. Articulação teria envolvido a Associação Sino-Brasileira de Mineração (ASBN), via Luís Guimarães e Zheng Wei (ev-alleged, sem verificação cruzada nesta rodada).",
+      "relevancia": "alta",
+      "impacto_diplomatico": "Governador estadual em fim de mandato consolida rede de investimentos chineses multissetoriais (mineração, energia, máquinas, tecnologia, infraestrutura) sem coordenação federal aparente — padrão que se repete em outros capítulos da série.",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://goias.gov.br/em-pequim-caiado-formaliza-acordos-com-china-railway/",
+        "https://agenciacoradenoticias.go.gov.br/101988-caiado-lidera-missao-a-china-para-consolidar-investimentos-em-goias",
+        "https://omundodiplomatico.com.br/2023/11/14/governadores-de-goias-e-minas-fecham-parceria-com-a-huawei-durante-missao-a-china/",
+        "https://goias.gov.br/institucional/caiado-assina-contrato-e-traz-gigante-chinesa-para-goias/"
+      ],
+      "pessoas_envolvidas": [
+        "Ronaldo Caiado (Governador de Goiás, 2019-31/03/2026)",
+        "Luís Guimarães (Presidente da ASBN)",
+        "Zheng Wei (Vice-presidente da ASBN na Ásia)"
+      ],
+      "instituicoes_envolvidas": [
+        "CMOC Group / CMOC Brasil",
+        "Chint Power",
+        "Weichai Power / Shandong Heavy Industry",
+        "Huawei",
+        "China Railway (Crec)",
+        "Governo do Estado de Goiás"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "R$3,1 bilhões+ (CMOC+Weichai+Chint, parcial, não discriminado por incentivo)",
+      "prioridade": 1,
+      "lacuna_investigativa": "Valor total de renúncia fiscal/ICMS concedido a CMOC, Chint Power e Weichai não publicamente quantificado. Situação operacional do escritório de representação de Goiás em Hebei (China) não confirmada.",
+      "connections": [
+        "id_1741",
+        "id_1745"
+      ],
+      "fonte_arquivo": "_posts\\dragao-onca\\2023-11-14-id1740-caiado-missoes-china-fase1.md",
+      "id": 1740
+    },
+    {
+      "titulo": "Vorcaro comprou 50% da Itaminas em 2024 e vendeu por ~R$ 700 mi dias antes de ser preso — Zema e Fernando Passalio (futuro presidente da Copasa) presentes na inauguração",
+      "data_evento": "2024-01-01",
+      "data_iso": "2024-01-01T12:00:00Z",
+      "categoria": "operacoes",
+      "tags": [
+        "itaminas",
+        "vorcaro",
+        "zema",
+        "copasa",
+        "passalio",
+        "privatizacao",
+        "inhotim",
+        "bernardo-paz",
+        "mina-jangada",
+        "brumadinho",
+        "feam",
+        "operacao-rejeito"
+      ],
+      "descricao": "Daniel Vorcaro adquiriu participação de aproximadamente 50% na Itaminas — mineradora histórica de Minas Gerais fundada por Bernardo de Mello Paz (fundador do Inhotim, acusado de lavagem de dinheiro, evasão fiscal e crimes ambientais) — em 2024. Vorcaro vendeu sua participação por cerca de R$ 700 milhões (valor exato reportado como US$ 300 milhões pela Brasilmineral) poucos dias antes de ser preso na Operação Compliance Zero em novembro de 2025. A inauguração de uma planta da Itaminas em Sarzedo (MG), ao final de 2024, contou com a presença de Romeu Zema e de Fernando Passalio, então secretário de Desenvolvimento do governo Zema e atualmente presidente da Copasa — empresa que Zema tenta privatizar. Em 2020, a Itaminas firmou acordo com a Vale para explorar a mina de Jangada, próxima à área do rompimento de Brumadinho; a Feam deu aval ao acordo. Fernando Baliani da Silva, então diretor da Feam, foi posteriormente alvo da Operação Rejeito (set/2025) por suspeita de participação em licenciamentos irregulares. O governo Zema nomeou Edson Resende, ex-promotor do MPMG apontado como tendo prestado serviços à Itaminas, para a presidência da Feam após a operação.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "Captura mineral Itaminas/Vorcaro",
+      "fontes": [
+        "https://www.brasilmineral.com.br/noticias/com-pagamento-de-us-300-milhoes-compra-da-itaminas-e-antecipada",
+        "https://observatoriodamineracao.com.br/dono-do-banco-master-vendeu-participacao-na-mineradora-itaminas-de-brumadinho-pouco-antes-de-fraude-multibilionaria-vir-a-tona/",
+        "https://apublica.org/2026/04/as-digitais-de-vorcaro-zettel-e-do-governo-zema-na-destruicao-da-serra-do-curral-em-minas/"
+      ],
+      "pessoas_envolvidas": [
+        "Daniel Vorcaro",
+        "Romeu Zema",
+        "Fernando Passalio",
+        "Bernardo de Mello Paz",
+        "Fernando Baliani da Silva",
+        "Edson Resende",
+        "Cristiano Pinto Caetano da Cruz"
+      ],
+      "instituicoes_envolvidas": [
+        "Itaminas",
+        "Vale",
+        "FEAM",
+        "Copasa",
+        "Inhotim"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "~R$ 700 mi / US$ 300 mi",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\operacoes\\2024-01-01-vorcaro-comprou-50-da-itaminas-em-2024-e-vendeu-por-r-700-mi-dias-antes-de-ser-preso-zema-.md",
+      "id": 1550
+    },
+    {
+      "titulo": "Mineração Taboca é adquirida pela estatal chinesa China Nonferrous Metal Mining Group",
+      "data_evento": "2024-01-01",
+      "data_iso": "2024-01-01T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "bancos",
+        "P05",
+        "P10",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "A Mineração Taboca S.A., que opera a mina de Pitinga (Presidente Figueiredo, AM) extraindo cassiterita, tântalo e nióbio, e estuda extração de terras raras, é adquirida pela holding estatal China Nonferrous Metal Mining Group, que assume o comando administrativo e define diretrizes de expansão operacional na região.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://www.brasilmineral.com.br/noticias/mineracao-taboca-investira-us-100-milhoes-e-nova-gestao-reposiciona-a-estrategia"
+      ],
+      "pessoas_envolvidas": [],
+      "instituicoes_envolvidas": [
+        "Mineração Taboca S.A.",
+        "China Nonferrous Metal Mining Group"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2024-01-01-id1667-mineracao-taboca-e-adquirida-pela-estatal-chinesa-china-nonferrous-metal-mining.md",
+      "id": 1667
+    },
+    {
+      "titulo": "PL 2.780/2024 institui a Política Nacional de Minerais Críticos e Estratégicos",
+      "data_evento": "2024-01-01",
+      "data_iso": "2024-01-01T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "escandalos",
+        "P05",
+        "P10",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "Tramita no Congresso o PL 2.780/2024, que institui a Política Nacional de Minerais Críticos e Estratégicos — o veículo legislativo que, em conjunto com o MoU federal de mineração sustentável Brasil-China (mai/2025, já documentado no capítulo federal da série) e as leis de licenciamento flexibilizado, forma a arquitetura jurídica de base para a corrida mineral documentada em Goiás, Pará, Amazonas e Minas Gerais.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "ato_legislativo",
+      "fontes": [
+        "https://www.socioambiental.org/noticias-socioambientais/retrocessos-ambientais-dominam-agenda-do-congresso-para-2026-aponta-oc"
+      ],
+      "pessoas_envolvidas": [],
+      "instituicoes_envolvidas": [
+        "Congresso Nacional"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2024-01-01-id1697-pl-27802024-institui-a-politica-nacional-de-minerais-criticos-e-estrategicos.md",
+      "id": 1697
+    },
+    {
+      "titulo": "MPF arquiva inquérito sobre Taboca com base em pareceres técnicos que atribuem danos a \"chuvas extraordinárias\"",
+      "data_evento": "2024-06-06",
+      "data_iso": "2024-06-06T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "bancos",
+        "P04b",
+        "P06",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "O Ministério Público Federal arquiva inquérito inicial sobre denúncias de contaminação por metais pesados na bacia hidrográfica próxima à Mineração Taboca, com a decisão baseada exclusivamente em pareceres técnicos da Agência Nacional de Mineração (ANM) e do Instituto de Proteção Ambiental do Amazonas (Ipaam) — órgão estadual responsável pelo próprio licenciamento da atividade — que atribuíram os danos a \"chuvas extraordinárias\", não a falhas operacionais da empresa.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://revistacenarium.com.br/mpf-investiga-mineracao-taboca-por-colapso-ambiental-no-amazonas/"
+      ],
+      "pessoas_envolvidas": [],
+      "instituicoes_envolvidas": [
+        "Ministério Público Federal",
+        "Agência Nacional de Mineração",
+        "Ipaam"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2024-06-06-id1668-mpf-arquiva-inquerito-sobre-taboca-com-base-em-pareceres-tecnicos-que-atribuem-d.md",
+      "id": 1668
+    },
+    {
+      "titulo": "Dep. Zé Silva (Solidariedade-MG) apresenta o PL 2.780/2024, instituindo a Política Nacional de Minerais Críticos e Estratégicos",
+      "data_evento": "2024-07-08",
+      "data_iso": "2024-07-08T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "escandalos",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "Protocolado na Câmara dos Deputados, o PL 2.780/2024 institui a Política Nacional de Minerais Críticos e Estratégicos (PNMCE) e o Comitê de Minerais Críticos e Estratégicos (CMCE), vinculado ao Conselho Nacional de Política Mineral. Texto original possui 21 artigos, incluindo obrigação de grandes empresas do setor aplicarem 0,40% da receita bruta anual em P&D tecnológico (art. 14 da versão original). Distribuído a 5 comissões temáticas (Desenvolvimento Econômico, Meio Ambiente, Minas e Energia, Finanças e Tributação, CCJ) em regime ordinário.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "ato_legislativo",
+      "fontes": [
+        "https://www.congressonacional.leg.br/materias/materias-bicamerais/-/ver/pl-2780-2024",
+        "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3122535&filename=Tramitacao-67-PL-2780-2024"
+      ],
+      "pessoas_envolvidas": [
+        "Zé Silva (Deputado Federal (Solidariedade-MG), autor)"
+      ],
+      "instituicoes_envolvidas": [
+        "Câmara dos Deputados"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2024-07-08-id1701-dep-ze-silva-solidariedade-mg-apresenta-o-pl-27802024-instituindo-a-politica-nac.md",
+      "id": 1701
+    },
+    {
+      "titulo": "Comunidades do Vale do Acará denunciam mineroduto da Norsk Hydro sem consulta prévia",
+      "data_evento": "2024-09-01",
+      "data_iso": "2024-09-01T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "bancos",
+        "P05",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "Associações de indígenas, quilombolas e ribeirinhos do Vale do Acará assinam manifesto denunciando que o mineroduto de 244km da Norsk Hydro (Paragominas-Barcarena) devastou rios e florestas, esgotou recursos hídricos e comprometeu condições de vida de mais de 600 famílias, sem respeito ao direito de consulta prévia.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://observatoriodamineracao.com.br/gigante-norueguesa-norsk-hydro-reforca-discurso-de-aluminio-verde-em-acoes-vinculadas-a-cop-30-e-ignora-impactos-socioambientais-no-para/"
+      ],
+      "pessoas_envolvidas": [
+        "Comunidades do Vale do Acará (denunciantes)"
+      ],
+      "instituicoes_envolvidas": [
+        "Norsk Hydro",
+        "Governo do Pará"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2024-09-01-id1658-comunidades-do-vale-do-acara-denunciam-mineroduto-da-norsk-hydro-sem-consulta-pr.md",
+      "id": 1658
+    },
+    {
+      "titulo": "Operação Rejeito — PF desmantela esquema de R$ 1,5 bi em licenciamentos ambientais fraudulentos em MG com captura da FEAM e ANM",
+      "data_evento": "2024-09-17",
+      "data_iso": "2024-09-17T12:00:00Z",
+      "categoria": "operacoes",
+      "tags": [
+        "operacao-rejeito",
+        "feam",
+        "anm",
+        "mineracao",
+        "serra-do-curral",
+        "licenciamento-fraudulento",
+        "zema",
+        "toffoli",
+        "stf-sigilo",
+        "vorcaro-kallas",
+        "minas-gerais",
+        "P02"
+      ],
+      "descricao": "Em 17 de setembro de 2024, a Polícia Federal deflagrou a Operação Rejeito em Minas Gerais, desmantelando organização criminosa que movimentou R$ 1,5 bilhão via licenciamentos ambientais fraudulentos para mineração na Serra do Curral e outras áreas. A operação resultou em 22 prisões, 79 mandados de busca e apreensão, bloqueio patrimonial de R$ 1,043 bilhão e suspensão de atividades de 42 empresas. A corrupção atingiu sistematicamente FEAM, ANM, IEF e Copam. O governo Zema modificou o Decreto 47.749/2019 por meio do Decreto 48.935/2024 (01/11/2024) para retirar exigência de pagamento de multas como condição ao licenciamento — decisão que beneficiou diretamente empresa investigada (Patrimônio Mineração). Lucas Kallas, sócio de Vorcaro, é investigado por suposto controle da Empabra. A operação migrou para o STF sob sigilo com Toffoli como relator — mesma dinâmica da Operação Compliance Zero (Banco Master).",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "Operação Rejeito",
+      "fontes": [
+        "https://observatoriodamineracao.com.br/diretor-da-anm-ex-chefe-da-pf-e-ex-deputado-mineiro-estao-entre-os-alvos-de-megaoperacao-que-desmantela-fraudes-bilionarias-no-setor-mineral-em-mg/",
+        "https://apublica.org/2026/03/sigilo-supremo-sob-toffoli-acao-contra-mineracao-ilegal-em-minas-tem-futuro-incerto/",
+        "https://www.brasilmineral.com.br/noticias/esquema-bilionario-de-fraudes-em-licenciamento-ambiental-e-desarticulado-pela-pf-em-minas",
+        "https://sindrede.org.br/operacao-rejeito-revela-esquema-bilionario-de-corrupcao-da-mineracao-em-minas-gerais/"
+      ],
+      "pessoas_envolvidas": [
+        "Romeu Zema",
+        "Rodrigo Gonçalves Franco",
+        "Fernando Baliani da Silva",
+        "Arthur Ferreira Rezende Delfim",
+        "Caio Mário Trivellato Seabra Filho",
+        "Guilherme Santana Lopes Gomes",
+        "Alan Cavalcante do Nascimento",
+        "Helder Freitas",
+        "João Alberto Lages",
+        "Lucas Kallas",
+        "Dias Toffoli"
+      ],
+      "instituicoes_envolvidas": [
+        "Polícia Federal",
+        "FEAM",
+        "ANM",
+        "IEF",
+        "Copam",
+        "STF",
+        "Fleurs Global Mineração Ltda.",
+        "Minerar Participações S/A",
+        "Patrimônio Mineração Ltda."
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "R$ 1,5 bi",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\operacoes\\2024-09-17-operacao-rejeito-pf-desmantela-esquema-de-r-15-bi-em-licenciamentos-ambientais-fraudulento.md",
+      "id": 1549
+    },
+    {
+      "titulo": "Tramitação inicial estagna: relator designado deixa a função sem apresentar parecer",
+      "data_evento": "2024-10-30",
+      "data_iso": "2024-10-30T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "escandalos",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "Após prazo de emendas encerrado em 30/out/2024, a tramitação do PL 2.780/2024 entra em período de baixa movimentação. Embora tenha sido designado relator nas comissões temáticas, este deixa a função sem apresentar parecer, e o projeto permanece praticamente parado por quase um ano.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "ato_legislativo",
+      "fontes": [
+        "https://apiboficial.org/files/2026/05/Alerta-Congresso-PL-2780_24-Minerais-Cr%C3%ADticos-e-Estrat%C3%A9gicos.pdf"
+      ],
+      "pessoas_envolvidas": [],
+      "instituicoes_envolvidas": [
+        "Câmara dos Deputados"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2024-10-30-id1702-tramitacao-inicial-estagna-relator-designado-deixa-a-funcao-sem-apresentar-parec.md",
+      "id": 1702
+    },
+    {
+      "titulo": "Diretor da ANM recebe voto por WhatsApp 1h antes da sessão — propina de R$ 2,7 mi documentada",
+      "data_evento": "2024-11-22",
+      "data_iso": "2024-11-22T12:00:00Z",
+      "categoria": "operacoes",
+      "tags": [
+        "P03",
+        "P08",
+        "operacao-rejeito"
+      ],
+      "descricao": "Em 22/nov/2024, 1h antes de sessão da ANM, Allan Cavalcante envia por WhatsApp a Caio Seabra o trecho exato do voto a ser proferido. Seabra segue a orientação. Intervenção beneficia Aiga Mineração em disputa com a Vale por rejeitos minerais avaliados em ~R$ 200 mi. PF aponta pagamento de R$ 2,7 mi em propina. Seabra é também relator que permitiu 3D Minerals reduzir lance de R$ 37 mi para R$ 3,7 mi por 'erro de digitação', contrariando parecer técnico interno.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "Operação Rejeito",
+      "fontes": [
+        "PF — interceptação telemática"
+      ],
+      "pessoas_envolvidas": [
+        "Caio Seabra",
+        "Allan Cavalcante",
+        "Daniel Vorcaro"
+      ],
+      "instituicoes_envolvidas": [],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\operacoes\\2024-11-22-caio-seabra-voto-whatsapp-propina-anm.md",
+      "id": 1558
+    },
+    {
+      "titulo": "Sigma Lithium opera com R$3 bilhões investidos no complexo Grota do Cirilo e acordo de fornecimento com a LG (Coreia do Sul)",
+      "data_evento": "2025-01-01",
+      "data_iso": "2025-01-01T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "bancos",
+        "P10",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "A Sigma Lithium, mineradora brasileira-canadense listada na Nasdaq, TSXV e B3 (via BDR), já investiu R$3 bilhões no complexo Grota do Cirilo (Itinga, MG) e mantém acordo de fornecimento de lítio com a fabricante sul-coreana de baterias LG.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://brasilenergia.com.br/energia/mobilidade/sigma-lithium-preve-iniciar-em-abril-producao-de-litio-em-minas-gerais"
+      ],
+      "pessoas_envolvidas": [
+        "Ana Cabral Gardner (CEO e fundadora)"
+      ],
+      "instituicoes_envolvidas": [
+        "Sigma Lithium",
+        "LG"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2025-01-01-id1680-sigma-lithium-opera-com-r3-bilhoes-investidos-no-complexo-grota-do-cirilo-e-acor.md",
+      "id": 1680
+    },
+    {
+      "titulo": "BYD adquire direitos minerais de lítio em Coronel Murta (MG), no mesmo Vale do Jequitinhonha da Sigma Lithium",
+      "data_evento": "2025-02-16",
+      "data_iso": "2025-02-16T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "dragao-onca",
+        "china",
+        "minas-gerais",
+        "soberania",
+        "P05"
+      ],
+      "descricao": "Reportagem baseada em apuração da Reuters revela que a montadora chinesa BYD, via subsidiária Exploração Mineral do Brasil, adquiriu em 2023 direitos minerais sobre dois terrenos em Coronel Murta, no Vale do Jequitinhonha — mesma macrorregião onde a Sigma Lithium opera em Itinga (id_1680), mas projeto e município distintos. Veículos de imprensa alinhados à esquerda (Brasil 247, Revista Fórum) tratam a aquisição sob a moldura de 'entreguismo' de reserva mineral estratégica por parte de Zema, em paralelo à medida do governo Bolsonaro que facilitou a compra.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "Contradiz a leitura de que o capítulo mineiro do lítio é puramente ocidental (Sigma Lithium/Nasdaq/TSXV/B3, fornecimento à LG sul-coreana). Há capital chinês direto na mesma região mineral, sob regime de exploração distinto e com cobertura estatal muito menor que a dada à Sigma pelo governo de Minas.",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://www.brasil247.com/mundo/byd-e-vale-do-litio-bolsonaro-e-a-entrega-da-riqueza-mineral-para-a-china/",
+        "https://revistaforum.com.br/global/chinaemfoco/2025/2/14/byd-vale-do-litio-bolsonaro-entrega-da-riqueza-mineral-para-china-174111.html"
+      ],
+      "pessoas_envolvidas": [
+        "Romeu Zema (Governador de Minas Gerais)"
+      ],
+      "instituicoes_envolvidas": [
+        "BYD",
+        "Exploração Mineral do Brasil"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "analise": "ev-confirmed (aquisição, via Reuters) + ev-alleged (caracterização de 'entreguismo', enquadramento de imprensa partidária, não conclusão factual de irregularidade).",
+      "lacuna_investigativa": "Data exata da transação de 2023 não confirmada em fonte primária — apenas a data de revelação jornalística (fev/2025). Termos do regime de exploração (incentivos, contrapartidas, cronograma) não discriminados publicamente, em contraste com a cobertura extensa dada à Sigma Lithium.",
+      "connections": [
+        "id_1679",
+        "id_1680"
+      ],
+      "fonte_arquivo": "_posts\\dragao-onca\\2025-02-16-id1750-byd-adquire-direitos-minerais-de-litio-em-coronel-murta-mg-no-mesmo-vale-do-jequ.md",
+      "id": 1750
+    },
+    {
+      "titulo": "Operação Parcours — PRAD usado como cobertura jurídica para extração na Serra do Curral",
+      "data_evento": "2025-03-28",
+      "data_iso": "2025-03-28T12:00:00Z",
+      "categoria": "operacoes",
+      "tags": [
+        "P08",
+        "P01",
+        "operacao-rejeito"
+      ],
+      "descricao": "PF deflagra Operação Parcours investigando uso do Plano de Recuperação de Área Degradada (PRAD, aprovado MPMG em 2008) como cobertura jurídica para extração contínua pela Empabra na Serra do Curral. CGU confirma em auditoria que extração extrapolou os limites do título minerário. Leandro César Ferreira de Carvalho (gerente regional ANM-MG, que enviava minutas ao grupo para aprovação prévia) é exonerado 4 dias depois.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "Operação Parcours",
+      "fontes": [
+        "https://www.ainvestigacao.com/p/o-terceiro-manuscrito-omitido",
+        "PF; CGU; A Investigação (mai/2026)"
+      ],
+      "pessoas_envolvidas": [
+        "Lucas Kallas",
+        "Empabra",
+        "Leandro César Ferreira de Carvalho"
+      ],
+      "instituicoes_envolvidas": [],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\operacoes\\2025-03-28-parcours-serra-curral-prad-fachada.md",
+      "id": 1554
+    },
+    {
+      "titulo": "Trem de minério da Vale já matou 39 pessoas em 8 anos na Terra Indígena Mãe Maria (Marabá)",
+      "data_evento": "2025-05-01",
+      "data_iso": "2025-05-01T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "bancos",
+        "P05",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "Reportagem documenta que o trem de carga da Vale que atravessa a Terra Indígena Mãe Maria, em Marabá, na mesma região servida pela futura Ferrovia do Pará, já causou 39 mortes em 8 anos.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://www.brasildefato.com.br/2019/11/28/governo-do-para-anuncia-ferrovia-e-comunidades-temem-mais-mortes-e-mais-sofrimento/"
+      ],
+      "pessoas_envolvidas": [],
+      "instituicoes_envolvidas": [
+        "Vale S.A.",
+        "Terra Indígena Mãe Maria"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2025-05-01-id1659-trem-de-minerio-da-vale-ja-matou-39-pessoas-em-8-anos-na-terra-indigena-mae-mari.md",
+      "id": 1659
+    },
+    {
+      "titulo": "Zema lança mundialmente o projeto \"Vale do Lítio\" na Nasdaq, em Nova York",
+      "data_evento": "2025-05-09",
+      "data_iso": "2025-05-09T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "bancos",
+        "P05",
+        "P09",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "Governador Romeu Zema lança em cerimônia na Nasdaq (Nova York) a iniciativa Lithium Valley Brazil, cobrindo 14 municípios do Nordeste e Norte de Minas Gerais (Araçuaí, Capelinha, Coronel Murta, Itaobim, Itinga, Malacacheta, Medina, Minas Novas, Pedra Azul, Virgem da Lapa, Teófilo Otoni, Turmalina, Rubelita e Salinas) — região que concentra a maior reserva nacional de lítio e é historicamente uma das mais pobres do país (Vale do Jequitinhonha).",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://www.agenciaminas.mg.gov.br/noticia/governo-de-minas-realiza-lancamento-mundial-do-projeto-vale-do-litio",
+        "https://eixos.com.br/energia-eletrica/brasil-se-lanca-no-mapa-global-do-litio/"
+      ],
+      "pessoas_envolvidas": [
+        "Romeu Zema (Governador de Minas Gerais)",
+        "Vitor Saback (Secretário de Mineração)"
+      ],
+      "instituicoes_envolvidas": [
+        "Governo de Minas Gerais",
+        "Ministério de Minas e Energia",
+        "Nasdaq",
+        "Invest Minas"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2025-05-09-id1679-zema-lanca-mundialmente-o-projeto-vale-do-litio-na-nasdaq-em-nova-york.md",
+      "id": 1679
+    },
+    {
+      "titulo": "Governo Lula assina 36 acordos com a China em Pequim, incluindo Plano de Ação para Mineração Sustentável 2025-2026",
+      "data_evento": "2025-05-13",
+      "data_iso": "2025-05-13T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "bancos",
+        "P05",
+        "P10",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "Lula encerra quarta visita de Estado à China com a assinatura de 36 acordos cobrindo energia, sustentabilidade, agronegócio, finanças e tecnologia — incluindo o Plano de Ação de Cooperação para o Desenvolvimento Sustentável da Mineração (2025-2026) entre o Ministério de Minas e Energia e a Comissão Nacional de Desenvolvimento e Reforma da China, com foco em minério de ferro verde, nióbio, lítio e níquel, além de swap de moedas locais entre os bancos centrais. Brasil torna-se, ao final de 2025, o maior destino global de investimento direto chinês (US$6,1bi em 52 projetos, alta de 45%).",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://www.poder360.com.br/poder-china/governo-brasileiro-assina-36-acordos-com-a-china-leia-a-lista/",
+        "https://observatoriodamineracao.com.br/comunidades-tradicionais-e-salvaguardas-sociais-ficam-de-fora-do-acordo-entre-brasil-e-china-para-ampliar-exploracao-de-minerais-criticos/"
+      ],
+      "pessoas_envolvidas": [
+        "Luiz Inácio Lula da Silva (Presidente da República)",
+        "Rui Costa (Ministro da Casa Civil)"
+      ],
+      "instituicoes_envolvidas": [
+        "Presidência da República",
+        "Ministério de Minas e Energia",
+        "Banco Central do Brasil",
+        "Banco Popular da China"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2025-05-13-id1653-governo-lula-assina-36-acordos-com-a-china-em-pequim-incluindo-plano-de-acao-par.md",
+      "id": 1653
+    },
+    {
+      "titulo": "Início da negociação com a JOGMEC (Japão) para terras raras em Goiás",
+      "data_evento": "2025-07-01",
+      "data_iso": "2025-07-01T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "dragao-onca",
+        "japao",
+        "goias",
+        "terras-raras",
+        "P05"
+      ],
+      "descricao": "A JOGMEC (estatal japonesa vinculada ao Ministério da Economia, Comércio e Indústria) inicia tratativas de cooperação com o governo de Goiás para exploração e processamento de terras raras — marco inicial da 'Fase 2' do capítulo, que sucede o ciclo chinês (2023-2024) com diversificação para EUA e Japão.",
+      "relevancia": "media",
+      "impacto_diplomatico": "Início do pivô estratégico de Goiás para além da China em minerais críticos, antecipando o padrão observado depois no braço diplomático federal (WAICO vs. venda à USA Rare Earth, id_1715/id_1718).",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://agenciabrasil.ebc.com.br/economia/noticia/2026-04/goias-defende-acordo-com-eua-para-exploracao-de-minerais-criticos"
+      ],
+      "pessoas_envolvidas": [],
+      "instituicoes_envolvidas": [
+        "JOGMEC (Japan Organization for Metals and Energy Security)",
+        "Governo do Estado de Goiás"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 2,
+      "connections": [
+        "id_1740",
+        "id_1743"
+      ],
+      "fonte_arquivo": "_posts\\dragao-onca\\2025-07-01-id1741-jogmec-japao-negociacao-inicio.md",
+      "id": 1741
+    },
+    {
+      "titulo": "Exportações de terras raras do Brasil para China triplicam",
+      "data_evento": "2025-07-27",
+      "data_iso": "2025-07-27T00:00:00Z",
+      "categoria": "crise-diplomatica",
+      "tags": [
+        "crise-diplomatica",
+        "governo-do-brasil",
+        "governo-da-china",
+        "setor-de-mineracao",
+        "gravidade-baixa"
+      ],
+      "descricao": ">",
+      "relevancia": "media",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "N/A",
+      "fontes": [
+        "N/A"
+      ],
+      "pessoas_envolvidas": [
+        "Data",
+        "Ano",
+        "Gravidade",
+        "Violações",
+        "Envolvidos",
+        "Fontes"
+      ],
+      "instituicoes_envolvidas": [],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 2,
+      "fonte_arquivo": "_posts\\crise-diplomatica\\2025-07-27-exportacoes-de-terras-raras-do-brasil-para-china-triplicam.md",
+      "id": 1193
+    },
+    {
+      "titulo": "Relatório da FUNAI (elaborado pela startup Aqua Viridi) reacende denúncia de contaminação",
+      "data_evento": "2025-08-01",
+      "data_iso": "2025-08-01T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "bancos",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "Relatório técnico elaborado pela biotech Aqua Viridi para a Fundação Nacional dos Povos Indígenas (FUNAI) é encaminhado ao Ministério Público Federal, reacendendo formalmente a denúncia de contaminação por atividade minerária na Terra Indígena Waimiri Atroari.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://jornalimpressobrasil.com.br/mineracao-waimiri-atroari-contaminacao-amazonas/"
+      ],
+      "pessoas_envolvidas": [],
+      "instituicoes_envolvidas": [
+        "FUNAI",
+        "Aqua Viridi",
+        "Ministério Público Federal"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2025-08-01-id1669-relatorio-da-funai-elaborado-pela-startup-aqua-viridi-reacende-denuncia-de-conta.md",
+      "id": 1669
+    },
+    {
+      "titulo": "Caiado declara que \"Goiás não quer ser apenas exportador de matéria-prima\"",
+      "data_evento": "2025-08-01",
+      "data_iso": "2025-08-01T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "dragao-onca",
+        "goias",
+        "terras-raras",
+        "P04b"
+      ],
+      "descricao": "Declaração pública de Caiado antecipando reorientação da política mineral estadual para agregação de valor (separação/processamento de óxidos de terras raras), em contraste com o padrão histórico de exportação de concentrado/carbonato bruto observado até então.",
+      "relevancia": "baixa",
+      "impacto_diplomatico": "Discurso de agregação de valor precede por meses a venda do principal ativo mineral do estado (Serra Verde) a controle estrangeiro — tensão entre retórica e prática que se repete em outros capítulos da série (ex: WAICO/id_1718).",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://agenciacoradenoticias.go.gov.br/140057-caiado-reforca-parceria-estrategica-com-a-china"
+      ],
+      "pessoas_envolvidas": [
+        "Ronaldo Caiado (Governador de Goiás)"
+      ],
+      "instituicoes_envolvidas": [
+        "Governo do Estado de Goiás"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 3,
+      "analise": "ev-inference: declaração de intenção de agregação de valor não se concretiza — oito meses depois, o ativo mineral central do estado é vendido em sua totalidade a controle estrangeiro (id relacionado à venda Serra Verde/USA Rare Earth, já documentada no Capítulo Diplomático Federal, id_1715).",
+      "connections": [
+        "id_1745"
+      ],
+      "fonte_arquivo": "_posts\\dragao-onca\\2025-08-01-id1742-caiado-discurso-agregacao-valor.md",
+      "id": 1742
+    },
+    {
+      "titulo": "Aprovado requerimento de urgência para o PL 2.780/2024, mudando o regime de tramitação",
+      "data_evento": "2025-09-01",
+      "data_iso": "2025-09-01T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "escandalos",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "Em setembro de 2025, é aprovado requerimento de urgência que retira o PL 2.780/2024 do rito lento das comissões temáticas, permitindo apreciação direta pelo Plenário. A partir deste momento, a tramitação se acelera drasticamente.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "ato_legislativo",
+      "fontes": [
+        "https://apiboficial.org/files/2026/05/Alerta-Congresso-PL-2780_24-Minerais-Cr%C3%ADticos-e-Estrat%C3%A9gicos.pdf"
+      ],
+      "pessoas_envolvidas": [],
+      "instituicoes_envolvidas": [
+        "Câmara dos Deputados"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2025-09-01-id1703-aprovado-requerimento-de-urgencia-para-o-pl-27802024-mudando-o-regime-de-tramita.md",
+      "id": 1703
+    },
+    {
+      "titulo": "Operação Rejeito — 22 prisões preventivas por corrupção no licenciamento mineral em MG",
+      "data_evento": "2025-09-17",
+      "data_iso": "2025-09-17T12:00:00Z",
+      "categoria": "operacoes",
+      "tags": [
+        "P03",
+        "P08",
+        "P11",
+        "operacao-rejeito"
+      ],
+      "descricao": "PF com apoio CGU cumpre 22 mandados de prisão preventiva, 79 de busca e apreensão, bloqueia R$ 1,5 bi. Presos: Rodrigo Teixeira (3º posto PF/governo Lula), João Alberto Paixão Lages (ex-dep. MDB), Caio Seabra (dir. ANM), Rodrigo Franco (pres. FEAM), Gilberto Horta de Carvalho e outros. Esquema movimentou R$ 4,3 bi por uma só empresa; potencial ilícito total estimado em R$ 18 bi.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "Operação Rejeito",
+      "fontes": [
+        "PF; CGU"
+      ],
+      "pessoas_envolvidas": [
+        "Rodrigo de Melo Teixeira",
+        "João Alberto Paixão Lages",
+        "Caio Seabra",
+        "Rodrigo Gonçalves Franco",
+        "Gilberto Horta de Carvalho"
+      ],
+      "instituicoes_envolvidas": [],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\operacoes\\2025-09-17-operacao-rejeito-22-prisoes-set-2025.md",
+      "id": 1555
+    },
+    {
+      "titulo": "Extração forense do celular de Teixeira — Gmais Ambiental operada de facto por delegado da PF",
+      "data_evento": "2025-09-17",
+      "data_iso": "2025-09-17T12:00:00Z",
+      "categoria": "operacoes",
+      "tags": [
+        "P03",
+        "P08",
+        "operacao-rejeito"
+      ],
+      "descricao": "Extração forense revela: 557 mensagens de Teixeira no grupo WhatsApp da Gmais (37% do total) vs. 30 de Daniela Wandeck sócia formal (3%); e-mail Yahoo com procurações e documentos da Topázio Imperial; decisão judicial registra recebimento de R$ 27 mi da Brava Mineração 'sem nunca terem investido qualquer quantia'. Nota apreendida no celular de Horta: 'NÃO FALE DE RODRIGO DA PF'.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "Operação Rejeito",
+      "fontes": [
+        "Decisão Justiça Federal MG; PF"
+      ],
+      "pessoas_envolvidas": [
+        "Rodrigo de Melo Teixeira",
+        "Daniela Wandeck",
+        "Gilberto Horta de Carvalho"
+      ],
+      "instituicoes_envolvidas": [],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\operacoes\\2025-09-17-teixeira-celular-gmais-557-mensagens.md",
+      "id": 1556
+    },
+    {
+      "titulo": "Serra do Curral — cavas em área tombada, córrego destruído, R$ 830 mi em minério extraído",
+      "data_evento": "2025-09-17",
+      "data_iso": "2025-09-17T12:00:00Z",
+      "categoria": "operacoes",
+      "tags": [
+        "P08",
+        "P11",
+        "operacao-rejeito"
+      ],
+      "descricao": "PF documenta: cavas Sump 3 e Sump 4 abertas entre 2014–2019 em área tombada pelo IPHAN desde 1960; Córrego Taquaril destruído e seco desde 2017; CGU confirma extração além dos limites do título minerário. Dano financeiro calculado: R$ 830 mi. CFEM não recolhida 2012–2019: R$ 11,4 mi. Barragem Água Fria (Ouro Preto, vinculada ao grupo) entre as 7 de maior risco de rompimento do Brasil.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "Operação Rejeito / Parcours",
+      "fontes": [
+        "PF; CGU; MPF"
+      ],
+      "pessoas_envolvidas": [
+        "Empabra",
+        "Lucas Kallas"
+      ],
+      "instituicoes_envolvidas": [],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\operacoes\\2025-09-17-serra-curral-dano-ambiental-cavas-corrego.md",
+      "id": 1557
+    },
+    {
+      "titulo": "FEAM capturada — presidente preso, TACs firmados com empresa autuada 17 vezes",
+      "data_evento": "2025-09-17",
+      "data_iso": "2025-09-17T12:00:00Z",
+      "categoria": "operacoes",
+      "tags": [
+        "P03",
+        "P08",
+        "operacao-rejeito"
+      ],
+      "descricao": "Presidente da FEAM Rodrigo Franco preso na Rejeito. PF aponta cobrança de R$ 50 mil repassados ao diretor Arthur Delfim como compensação por licença à Fleurs Global. Fleurs recebeu 2 TACs do governo Zema (nov/2020 e fev/2022) mesmo com 17 autuações por desmatamento e intervenção em APP. Segundo TAC assinado um dia após equipe técnica da Supram concluir pelo indeferimento. Servidores depuseram ao MPMG descrevendo 'possível pressão' para retirada do caso da pauta do Copam.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "Operação Rejeito",
+      "fontes": [
+        "PF; Agência Pública; O Fator; MPMG"
+      ],
+      "pessoas_envolvidas": [
+        "Rodrigo Gonçalves Franco",
+        "Arthur Ferreira Rezende Delfim",
+        "Marília Carvalho de Melo",
+        "Fleurs Global"
+      ],
+      "instituicoes_envolvidas": [],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\operacoes\\2025-09-17-feam-tac-maquina-fleurs-global.md",
+      "id": 1559
+    },
+    {
+      "titulo": "Ministro de Minas e Energia participa de evento patrocinado pela Cedro Mineração 5 dias após prisões",
+      "data_evento": "2025-09-22",
+      "data_iso": "2025-09-22T12:00:00Z",
+      "categoria": "governo",
+      "tags": [
+        "P03",
+        "P09",
+        "operacao-rejeito"
+      ],
+      "descricao": "Alexandre Silveira declara ter sido 'surpreendido' pelas prisões da Rejeito. Cinco dias depois, participa de evento patrocinado pela Cedro Mineração (empresa de Lucas Kallas, preso na operação) e anuncia criação do Conselho Nacional de Política Mineral. João Alberto Paixão Lages (preso na mesma operação) doou R$ 100 mil à campanha de Silveira em 2022; filha de Lages doou outros R$ 100 mil. Silveira havia indicado: Teixeira (CPRM), Caio Seabra (ANM) e Kallas (Conselhão de Lula).",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "Operação Rejeito",
+      "fontes": [
+        "https://www.ainvestigacao.com/p/o-terceiro-manuscrito-omitido",
+        "Imprensa; MME (nota oficial); A Investigação (mai/2026)"
+      ],
+      "pessoas_envolvidas": [
+        "Alexandre Silveira",
+        "João Alberto Paixão Lages",
+        "Lucas Kallas"
+      ],
+      "instituicoes_envolvidas": [],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\governo\\2025-09-22-silveira-evento-cedro-cinco-dias-rejeito.md",
+      "id": 1560
+    },
+    {
+      "titulo": "Povo Waimiri Atroari denuncia contaminação do rio Alalaú por mercúrio e rejeitos industriais",
+      "data_evento": "2025-09-29",
+      "data_iso": "2025-09-29T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "bancos",
+        "P05",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "Representantes do povo Waimiri Atroari (Kinja) denunciam sinais de contaminação no rio Alalaú, em Presidente Figueiredo (AM), na fronteira com Roraima: odor fétido, espuma, peixes mortos e casos de crianças adoecendo. Laudos preliminares indicam presença de mercúrio em níveis alarmantes. 22 aldeias dependem diretamente do rio para alimentação, caça, água potável e sobrevivência cultural.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://www.business-humanrights.org/en/latest-news/brasil-povo-waimiri-atroari-denuncia-contamina%C3%A7%C3%A3o-do-rio-alala%C3%BA-no-amazonas-por-mineradora-chinesa/",
+        "https://reporterbrasil.org.br/2026/03/mineradora-investigada-contaminacao-rio-terra-indigena-waimiri-atroari/"
+      ],
+      "pessoas_envolvidas": [
+        "Akynamy (Anciã Waimiri Atroari)"
+      ],
+      "instituicoes_envolvidas": [
+        "Povo Waimiri Atroari (Kinja)",
+        "Mineração Taboca S.A."
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2025-09-29-id1670-povo-waimiri-atroari-denuncia-contaminacao-do-rio-alalau-por-mercurio-e-rejeitos.md",
+      "id": 1670
+    },
+    {
+      "titulo": "Operação Rejeito remetida ao STF — citação a senadores aciona foro privilegiado",
+      "data_evento": "2025-10-01",
+      "data_iso": "2025-10-01T12:00:00Z",
+      "categoria": "stf",
+      "tags": [
+        "P03",
+        "P06",
+        "operacao-rejeito"
+      ],
+      "descricao": "Citação aos senadores Rodrigo Pacheco (PSD-MG) e Carlos Viana (Podemos-MG) nos manuscritos obriga remessa ao STF por foro privilegiado. Caso distribuído a Dias Toffoli por conexão com investigações anteriores da mineradora Gute Sicht. Pacheco declara não poder 'comentar sobre papel manuscrito de autoria incerta'. Manuscrito o posicionava como canal de blindagem em 2ª instância/TRF, conectado a João Alberto.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "Operação Rejeito",
+      "fontes": [
+        "STF"
+      ],
+      "pessoas_envolvidas": [
+        "Rodrigo Pacheco",
+        "Dias Toffoli"
+      ],
+      "instituicoes_envolvidas": [],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\stf\\2025-10-01-rejeito-remessa-stf-pacheco-viana.md",
+      "id": 1561
+    },
+    {
+      "titulo": "Sigma Lithium paralisa única mina em operação para reestruturação de equipamentos; liquidez questionada",
+      "data_evento": "2025-10-01",
+      "data_iso": "2025-10-01T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "bancos",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "A Sigma Lithium paralisa a Mina 1 no Vale do Jequitinhonha para reestruturação de equipamentos, buscando triplicar a capacidade de movimentação de material via nova frota \"off-road\". Analistas e investidores questionam a liquidez da companhia; dívida total encerra 2025 em US$141 milhões.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://minerabrasil.com.br/sigma-lithium-avanca-na-retomada-das-operacoes/2026/01/13/",
+        "https://investnews.com.br/negocios/sigma-lithium-contratos-2026/"
+      ],
+      "pessoas_envolvidas": [],
+      "instituicoes_envolvidas": [
+        "Sigma Lithium"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2025-10-01-id1682-sigma-lithium-paralisa-unica-mina-em-operacao-para-reestruturacao-de-equipamento.md",
+      "id": 1682
+    },
+    {
+      "titulo": "Múltiplos projetos são apensados ao PL 2.780/2024, incluindo Política Nacional de Terras Raras",
+      "data_evento": "2025-10-01",
+      "data_iso": "2025-10-01T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "escandalos",
+        "P10",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "São apensados ao PL 2.780/2024 os projetos PL 3659/2025, PL 3699/2025, PL 3829/2025, PL 4404/2025, PL 4428/2025, PL 4429/2025, PL 4430/2025, PL 4442/2025, PL 5445/2025 e PL 737/2025 — incluindo a chamada Política Nacional de Terras Raras (PL 3659/2025). Em razão da distribuição a mais de 4 comissões de mérito (incluindo a nova Comissão da Amazônia e dos Povos Originários e Tradicionais), é criada Comissão Especial para analisar a matéria conforme art. 34, II do RICD.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "ato_legislativo",
+      "fontes": [
+        "https://www.congressonacional.leg.br/materias/materias-bicamerais/-/ver/pl-2780-2024"
+      ],
+      "pessoas_envolvidas": [],
+      "instituicoes_envolvidas": [
+        "Câmara dos Deputados"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2025-10-01-id1704-multiplos-projetos-sao-apensados-ao-pl-27802024-incluindo-politica-nacional-de-t.md",
+      "id": 1704
+    },
+    {
+      "titulo": "Dep. João Daniel requer audiência pública para debater PNMCE e Política Nacional de Terras Raras",
+      "data_evento": "2025-10-15",
+      "data_iso": "2025-10-15T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "escandalos",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "O deputado João Daniel requer, no âmbito da Comissão Especial, a realização de audiência pública destinada a debater conjuntamente o PL 2.780/2024, o PL 3.659/2025 e o PL 3.699/2025 — que tratam da instituição da Política Nacional de Minerais Críticos e Estratégicos e da Política Nacional de Terras Raras.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "ato_legislativo",
+      "fontes": [
+        "https://www.congressonacional.leg.br/materias/materias-bicamerais/-/ver/pl-2780-2024"
+      ],
+      "pessoas_envolvidas": [
+        "João Daniel (Deputado Federal)"
+      ],
+      "instituicoes_envolvidas": [
+        "Câmara dos Deputados"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2025-10-15-id1705-dep-joao-daniel-requer-audiencia-publica-para-debater-pnmce-e-politica-nacional.md",
+      "id": 1705
+    },
+    {
+      "titulo": "STF impõe sigilo absoluto — PF e advogados dos presos sem acesso aos autos",
+      "data_evento": "2025-11-15",
+      "data_iso": "2025-11-15T12:00:00Z",
+      "categoria": "stf",
+      "tags": [
+        "P03",
+        "P06",
+        "operacao-rejeito"
+      ],
+      "descricao": "Ministro Dias Toffoli amplia sigilo das operações Rejeito, Intrafortis, Contrassabotagem, Parcours e Poeira Vermelha ao ponto em que nem a própria PF nem os advogados dos investigados presos podiam consultar os autos. Em dez/2025, investigadores foram obrigados a pedir formalmente ao STF o número do processo.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "Operação Rejeito",
+      "fontes": [
+        "https://www.ainvestigacao.com/p/o-terceiro-manuscrito-omitido",
+        "Imprensa; A Investigação (mai/2026)"
+      ],
+      "pessoas_envolvidas": [
+        "Dias Toffoli"
+      ],
+      "instituicoes_envolvidas": [],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\stf\\2025-11-15-toffoli-sigilo-absoluto-rejeito.md",
+      "id": 1562
+    },
+    {
+      "titulo": "CMOC (China) compra ativos de ouro da Equinox Gold no Brasil por US$1,015 bilhão",
+      "data_evento": "2025-12-15",
+      "data_iso": "2025-12-15T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "dragao-onca",
+        "china",
+        "mineracao",
+        "P05",
+        "P11"
+      ],
+      "descricao": "A estatal chinesa CMOC (já presente em Goiás desde 2016, nióbio/fosfato em Catalão/Ouvidor) adquire os ativos de ouro Aurizona, RDM e Bahia Complex da canadense Equinox Gold — fechamento previsto para o 1º trimestre de 2026. Operação fora do território goiano, mas contextualiza o capítulo: o capital chinês não recua do Brasil quando Goiás pivota para terras raras via EUA/Japão — apenas se redireciona para outro metal (ouro) em outros estados.",
+      "relevancia": "media",
+      "impacto_diplomatico": "Mostra que a relação Brasil-China em mineração é multissetorial e não se reduz à disputa terras raras vs. EUA — mesmo enquanto Goiás diversifica parceiros, a mesma estatal chinesa que já opera no estado expande presença em outro segmento mineral do país.",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://minerabrasil.com.br/equinox-gold-vende-operacoes-no-brasil-para-chinesa-cmoc-por-us-1015-bilhao/2025/12/15/",
+        "https://en.wikipedia.org/wiki/CMOC_Group_Limited"
+      ],
+      "pessoas_envolvidas": [],
+      "instituicoes_envolvidas": [
+        "CMOC Group",
+        "Equinox Gold"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "US$ 1,015 bilhão",
+      "prioridade": 2,
+      "connections": [
+        "id_1740"
+      ],
+      "fonte_arquivo": "_posts\\dragao-onca\\2025-12-15-id1746-cmoc-compra-equinox-gold.md",
+      "id": 1746
+    },
+    {
+      "titulo": "Toffoli revoga prisões dos 4 líderes da Rejeito contrariando parecer expresso da PGR",
+      "data_evento": "2025-12-19",
+      "data_iso": "2025-12-19T12:00:00Z",
+      "categoria": "stf",
+      "tags": [
+        "P03",
+        "P06",
+        "operacao-rejeito"
+      ],
+      "descricao": "Ministro Dias Toffoli revoga prisões preventivas de Alan Cavalcante, Helder Freitas, João Alberto Paixão Lages e Rodrigo de Melo Teixeira. Decisão contraria expressamente parecer do PGR Paulo Gonet, que havia defendido manutenção das preventivas. Teixeira liberado com tornozeleira eletrônica, recolhimento noturno, retenção de passaporte e afastamento da PF.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "Operação Rejeito",
+      "fontes": [
+        "STF; PGR"
+      ],
+      "pessoas_envolvidas": [
+        "Dias Toffoli",
+        "Paulo Gonet",
+        "Rodrigo de Melo Teixeira"
+      ],
+      "instituicoes_envolvidas": [],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\stf\\2025-12-19-toffoli-revoga-preventivas-lideres-rejeito.md",
+      "id": 1563
+    },
+    {
+      "titulo": "Secretária de Meio Ambiente de MG deixa pasta e é nomeada diretora-presidente da Copasa no mesmo dia",
+      "data_evento": "2025-12-23",
+      "data_iso": "2025-12-23T12:00:00Z",
+      "categoria": "operacoes",
+      "tags": [
+        "P03",
+        "P09",
+        "operacao-rejeito"
+      ],
+      "descricao": "Em 23/dez/2025, três meses após a Rejeito, Marília Carvalho de Melo deixa a Semad. No mesmo dia, governador Romeu Zema sanciona lei autorizando privatização da Copasa e a nomeia diretora-presidente da estatal. Manuscrito 1 a posicionava como responsável por 'dar um jeito de licenciar' a MGB. Filha de sócios da Crono Engenharia (prestadora de Vale e CSN).",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "Operação Rejeito",
+      "fontes": [
+        "https://www.ainvestigacao.com/p/o-terceiro-manuscrito-omitido",
+        "Governo de Minas; Diário Oficial MG; A Investigação (mai/2026)"
+      ],
+      "pessoas_envolvidas": [
+        "Marília Carvalho de Melo",
+        "Romeu Zema"
+      ],
+      "instituicoes_envolvidas": [],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\governo\\2025-12-23-marilia-melo-semad-copasa.md",
+      "id": 1564
+    },
+    {
+      "titulo": "Taboca anuncia investimento de US$100 milhões para dobrar produção até 2028",
+      "data_evento": "2026-01-01",
+      "data_iso": "2026-01-01T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "bancos",
+        "P05",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "Sob nova gestão da China Nonferrous, a Mineração Taboca anuncia ciclo de investimentos de US$100 milhões (R$523 milhões) até 2028, com modernização das plantas de Pitinga e Pirapora, buscando dobrar a produção de minerais críticos para atender demanda internacional.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://reporterbrasil.org.br/2026/03/mineradora-investigada-contaminacao-rio-terra-indigena-waimiri-atroari/"
+      ],
+      "pessoas_envolvidas": [],
+      "instituicoes_envolvidas": [
+        "Mineração Taboca S.A.",
+        "China Nonferrous Metal Mining Group"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-01-01-id1671-taboca-anuncia-investimento-de-us100-milhoes-para-dobrar-producao-ate-2028.md",
+      "id": 1671
+    },
+    {
+      "titulo": "Taboca firma Termo de Cooperação nº 01/2026 com R$12,3 milhões à ACWA, dois dias após lideranças expressarem desconfiança total",
+      "data_evento": "2026-01-01",
+      "data_iso": "2026-01-01T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "bancos",
+        "P05",
+        "P06",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "A Mineração Taboca firma diretamente com a Associação Comunidade Waimiri Atroari (ACWA) o Termo de Cooperação nº 01/2026, repassando R$12,3 milhões, sem qualquer participação, anuência ou mediação institucional dos procuradores federais da República. A assinatura ocorre apenas dois dias depois de lideranças indígenas manifestarem desconfiança total contra a empresa. O MPF vê o acordo com preocupação.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://revistacenarium.com.br/mpf-investiga-mineracao-taboca-por-colapso-ambiental-no-amazonas/",
+        "https://vocativo.com/2026/07/05/mineracao-taboca-e-investigada-por-possivel-contaminacao-na-ti-waimiri-atroari-no-amazonas/"
+      ],
+      "pessoas_envolvidas": [],
+      "instituicoes_envolvidas": [
+        "Mineração Taboca S.A.",
+        "Associação Comunidade Waimiri Atroari (ACWA)",
+        "Ministério Público Federal"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-01-01-id1672-taboca-firma-termo-de-cooperacao-no-012026-com-r123-milhoes-a-acwa-dois-dias-apo.md",
+      "id": 1672
+    },
+    {
+      "titulo": "Assembleia Legislativa de Minas Gerais requer vistoria de segurança no complexo Grota do Cirilo (Sigma Lithium)",
+      "data_evento": "2026-01-01",
+      "data_iso": "2026-01-01T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "bancos",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "Requerimento (RQC 19563/2026) na ALMG solicita visita técnica às estruturas do complexo de mineração e beneficiamento de lítio Grota do Cirilo, em Itinga, para verificar condições de segurança do complexo para o meio ambiente e a população local.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://www.almg.gov.br/atividade-parlamentar/projetos-de-lei/projeto/?tipo=RQC&ano=2026&num=19563"
+      ],
+      "pessoas_envolvidas": [],
+      "instituicoes_envolvidas": [
+        "Assembleia Legislativa de Minas Gerais",
+        "Sigma Lithium"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-01-01-id1681-assembleia-legislativa-de-minas-gerais-requer-vistoria-de-seguranca-no-complexo.md",
+      "id": 1681
+    },
+    {
+      "titulo": "Sigma Lithium nomeia Katia Abreu (ex-senadora, ex-ministra da Agricultura) para conselho de administração",
+      "data_evento": "2026-01-01",
+      "data_iso": "2026-01-01T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "bancos",
+        "P09",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "A Sigma Lithium aprova por unanimidade a nomeação de Katia Abreu, ex-presidente da CNA e ex-senadora pelo Tocantins (2007-2022), com experiência em relações exteriores e defesa no Senado, para o conselho de administração da companhia.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://www.sec.gov/Archives/edgar/data/1848309/000129281426000094/ex99-1.htm"
+      ],
+      "pessoas_envolvidas": [
+        "Katia Abreu (Membro independente do Conselho)"
+      ],
+      "instituicoes_envolvidas": [
+        "Sigma Lithium"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-01-01-id1684-sigma-lithium-nomeia-katia-abreu-ex-senadora-ex-ministra-da-agricultura-para-con.md",
+      "id": 1684
+    },
+    {
+      "titulo": "TRF-6 solta restantes da Rejeito — 22 prisões preventivas chegam a zero em 118 dias",
+      "data_evento": "2026-01-14",
+      "data_iso": "2026-01-14T12:00:00Z",
+      "categoria": "justica",
+      "tags": [
+        "P03",
+        "P06",
+        "operacao-rejeito"
+      ],
+      "descricao": "TRF-6 determina soltura de todos os investigados da Rejeito ainda presos, seguindo lógica fixada por Toffoli: manter parte do grupo presa enquanto líderes respondem em liberdade seria desproporcional. Último a sair: Gilberto Horta de Carvalho, em 22/jan/2026, após 129 dias. Das 22 preventivas decretadas em 17/set/2025, nenhuma em vigor em 22/jan/2026.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "Operação Rejeito",
+      "fontes": [
+        "TRF-6; imprensa"
+      ],
+      "pessoas_envolvidas": [
+        "Gilberto Horta de Carvalho",
+        "Dias Toffoli"
+      ],
+      "instituicoes_envolvidas": [],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\justica\\2026-01-14-trf6-soltura-massa-22-preventivas-zero.md",
+      "id": 1565
+    },
+    {
+      "titulo": "Esposa de ministro do STF assume defesa de investigado da Rejeito no mesmo tribunal",
+      "data_evento": "2026-01-20",
+      "data_iso": "2026-01-20T12:00:00Z",
+      "categoria": "stf",
+      "tags": [
+        "P03",
+        "P09",
+        "operacao-rejeito"
+      ],
+      "descricao": "Viviane Barci de Moraes — esposa do ministro Alexandre de Moraes — assume por substabelecimento a defesa de Lucas Kallas no STF. Petição assinada também pelos filhos do casal. O mesmo escritório havia sido contratado pelo Banco Master (Daniel Vorcaro, sócio de Kallas) por R$ 129 milhões meses antes.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "Operação Rejeito / Parcours",
+      "fontes": [
+        "https://www.ainvestigacao.com/p/o-terceiro-manuscrito-omitido",
+        "STF — petição protocolada; A Investigação (mai/2026)"
+      ],
+      "pessoas_envolvidas": [
+        "Viviane Barci de Moraes",
+        "Alexandre de Moraes",
+        "Lucas Kallas",
+        "Daniel Vorcaro"
+      ],
+      "instituicoes_envolvidas": [],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\stf\\2026-01-20-viviane-barci-defesa-kallas-stf.md",
+      "id": 1566
+    },
+    {
+      "titulo": "Corregedoria PF instaura PAD contra Teixeira; MPF pede bloqueio de R$ 4,2 mi",
+      "data_evento": "2026-02-01",
+      "data_iso": "2026-02-01T12:00:00Z",
+      "categoria": "operacoes",
+      "tags": [
+        "P03",
+        "operacao-rejeito"
+      ],
+      "descricao": "Corregedoria da PF instaura Processo Administrativo Disciplinar contra Rodrigo de Melo Teixeira. MPF pede bloqueio de bens no valor de R$ 4,2 milhões. Teixeira permanece com tornozeleira eletrônica, recolhimento noturno, afastamento compulsório e vedação de contato com servidores da PF e CPRM.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "Operação Rejeito",
+      "fontes": [
+        "Corregedoria PF; MPF"
+      ],
+      "pessoas_envolvidas": [
+        "Rodrigo de Melo Teixeira"
+      ],
+      "instituicoes_envolvidas": [],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\operacoes\\2026-02-01-pad-teixeira-corregedoria-pf-fev2026.md",
+      "id": 1567
+    },
+    {
+      "titulo": "EUA articulam bloco de minerais críticos para reduzir dependência da China; Pequim reage e Brasil é posicionado como ativo geopolítico",
+      "data_evento": "2026-02-06",
+      "data_iso": "2026-02-06T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "dragao-onca",
+        "china",
+        "eua",
+        "P11",
+        "P04b"
+      ],
+      "descricao": "Washington propõe um bloco multilateral de minerais críticos visando diversificar fornecedores fora da China. O Ministério das Relações Exteriores chinês reage publicamente classificando iniciativas 'exclusivas' como potencialmente perturbadoras da ordem econômica e comercial internacional. Análises internas ao governo brasileiro passam a defender o uso do interesse externo (terras raras, lítio, nióbio, grafite, cobre, níquel) como moeda de troca para condicionar parcerias a compromissos de industrialização e transferência de tecnologia — debate que dialoga diretamente com a tramitação do PL 2.780/2024 (ids 1697-1712).",
+      "relevancia": "alta",
+      "impacto_diplomatico": "Brasil passa de 'promessa geológica' a 'ativo geopolítico' disputado simultaneamente por EUA e China, sem posição de barganha consolidada nem marco legal em vigor.",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://brazileconomy.com.br/internacional/2026/02/eua-articulam-clube-de-minerais-criticos-e-colocam-terras-raras-do-brasil-no-centro/"
+      ],
+      "pessoas_envolvidas": [],
+      "instituicoes_envolvidas": [
+        "Ministério das Relações Exteriores da China",
+        "Itamaraty",
+        "Departamento de Estado dos EUA"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 2,
+      "lacuna_investigativa": "Fonte única identificada; posição oficial do Itamaraty sobre a proposta americana ainda não localizada — checar nota formal do MRE brasileiro.",
+      "connections": [
+        "id_1697",
+        "id_1712"
+      ],
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-02-06-id1714-eua-clube-minerais-criticos-reacao-china.md",
+      "id": 1714
+    },
+    {
+      "titulo": "Justiça Federal suspende 57 processos minerários na Serra do Curral e multa ANM em R$ 4 mi",
+      "data_evento": "2026-03-01",
+      "data_iso": "2026-03-01T12:00:00Z",
+      "categoria": "justica",
+      "tags": [
+        "P03",
+        "P11",
+        "operacao-rejeito"
+      ],
+      "descricao": "Justiça Federal suspende todos os 57 processos minerários na Serra do Curral, restaura proteção integral da área e multa a ANM em R$ 4 milhões por descumprimento deliberado de ordem judicial que proibia novos direitos minerários desde fins de 2018. ANM havia autorizado ao menos 4 novos empreendimentos ciente da proibição. Portaria do IPHAN que reduziu área protegida de 42 para 9 hectares declarada ilegal.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "Operação Parcours",
+      "fontes": [
+        "Justiça Federal MG; MPF"
+      ],
+      "pessoas_envolvidas": [
+        "ANM",
+        "IPHAN"
+      ],
+      "instituicoes_envolvidas": [],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\justica\\2026-03-01-jf-57-processos-anm-multada-serra-curral.md",
+      "id": 1568
+    },
+    {
+      "titulo": "Acordo de cooperação Goiás-Japão formalizado (modelo JOGMEC)",
+      "data_evento": "2026-03-01",
+      "data_iso": "2026-03-01T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "dragao-onca",
+        "japao",
+        "goias",
+        "terras-raras",
+        "P05"
+      ],
+      "descricao": "Governo goiano formaliza acordo de cooperação internacional com o Japão, incluindo instalação de capacidade de separação/processamento de óxidos de terras raras (OTR) em território goiano — nos moldes das tratativas iniciadas com a JOGMEC em julho de 2025.",
+      "relevancia": "media",
+      "impacto_diplomatico": "Formalização ocorre no mesmo mês em que Caiado deixa o governo para concorrer à Presidência (id_1744) — sobreposição temporal entre fechamento de acordos internacionais e viabilização de candidatura.",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://agenciabrasil.ebc.com.br/economia/noticia/2026-04/goias-defende-acordo-com-eua-para-exploracao-de-minerais-criticos"
+      ],
+      "pessoas_envolvidas": [],
+      "instituicoes_envolvidas": [
+        "JOGMEC",
+        "Governo do Estado de Goiás"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 2,
+      "connections": [
+        "id_1741",
+        "id_1744"
+      ],
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-03-01-id1743-goias-japao-acordo-formalizado.md",
+      "id": 1743
+    },
+    {
+      "titulo": "Observatório do Clima cataloga 70 projetos do \"Pacote da Destruição\" em tramitação no Congresso para 2026",
+      "data_evento": "2026-03-04",
+      "data_iso": "2026-03-04T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "escandalos",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "O Observatório do Clima, rede da qual a APIB faz parte, publica levantamento identificando 70 projetos legislativos que ameaçam salvaguardas ambientais e direitos territoriais em 2026, incluindo a PEC 48/2023 (marco temporal), PL que retira competência da União sobre terrenos de marinha, PL que enfraquece o Ibama, PL que viabiliza mineração marinha, e o PL 2.780/2024 (minerais críticos).",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "analise_editorial",
+      "fontes": [
+        "https://www.socioambiental.org/noticias-socioambientais/retrocessos-ambientais-dominam-agenda-do-congresso-para-2026-aponta-oc"
+      ],
+      "pessoas_envolvidas": [],
+      "instituicoes_envolvidas": [
+        "Observatório do Clima"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-03-04-id1700-observatorio-do-clima-cataloga-70-projetos-do-pacote-da-destruicao-em-tramitacao.md",
+      "id": 1700
+    },
+    {
+      "titulo": "Sigma Lithium retoma operações, fecha US$146 milhões em contratos e ações saltam 41% na Nasdaq",
+      "data_evento": "2026-03-30",
+      "data_iso": "2026-03-30T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "bancos",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "Sigma Lithium anuncia retomada da mineração no Vale do Jequitinhonha, dois novos contratos de venda antecipada somando US$146 milhões, e planos de retomar construção da segunda planta industrial (Greentech Plant 2), elevando capacidade a 520 mil toneladas/ano até 2027, com terceira unidade prevista para 2028.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://investnews.com.br/negocios/sigma-lithium-contratos-2026/"
+      ],
+      "pessoas_envolvidas": [
+        "Ana Cabral Gardner (CEO)"
+      ],
+      "instituicoes_envolvidas": [
+        "Sigma Lithium"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-03-30-id1683-sigma-lithium-retoma-operacoes-fecha-us146-milhoes-em-contratos-e-acoes-saltam-4.md",
+      "id": 1683
+    },
+    {
+      "titulo": "Caiado deixa o governo de Goiás para concorrer à Presidência; Daniel Vilela assume",
+      "data_evento": "2026-03-30",
+      "data_iso": "2026-03-30T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "dragao-onca",
+        "goias",
+        "eleicoes-2026",
+        "P09"
+      ],
+      "descricao": "Ronaldo Caiado é confirmado pré-candidato à Presidência pelo PSD, substituindo Ratinho Jr (que desistiu). Encerra mandato de governador em 31/03/2026 para viabilizar a candidatura; vice-governador Daniel Vilela assume a gestão, incluindo os contratos internacionais em andamento (China, Japão, EUA).",
+      "relevancia": "alta",
+      "impacto_diplomatico": "Transição de governo ocorre no mesmo período em que se fecham os acordos mais significativos do capítulo (Japão em março, Manifesto EUA em abril) — sobreposição temporal entre negociação internacional e viabilização eleitoral, sem evidência de irregularidade formal identificada, mas sinalizada como padrão a monitorar.",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://www.congressoemfoco.com.br/noticia/117684/quem-e-ronaldo-caiado-aposta-do-psd-para-o-planalto-em-2026"
+      ],
+      "pessoas_envolvidas": [
+        "Ronaldo Caiado (ex-Governador de Goiás)",
+        "Daniel Vilela (Governador de Goiás a partir de 31/03/2026)"
+      ],
+      "instituicoes_envolvidas": [
+        "Governo do Estado de Goiás",
+        "PSD"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "analise": "ev-inference (P09, análogo): ativo estratégico negociado por governador em fim de mandato torna-se, semanas depois, bandeira central de sua candidatura presidencial (id_1748). Padrão de captura simbólico-eleitoral do ativo mineral.",
+      "lacuna_investigativa": "Conflito de interesse na transição de mandato: sobreposição temporal entre acordos (mar-abr/2026) e pré-candidatura (30/03/2026) — sem evidência de irregularidade nas fontes consultadas, mas a monitorar.",
+      "connections": [
+        "id_1743",
+        "id_1745",
+        "id_1748"
+      ],
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-03-30-id1744-caiado-deixa-governo-candidatura.md",
+      "id": 1744
+    },
+    {
+      "titulo": "Waimiri Atroari enviam novo ofício ao MPF-AM com suspeitas adicionais de contaminação",
+      "data_evento": "2026-04-08",
+      "data_iso": "2026-04-08T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "bancos",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "Lideranças Waimiri Atroari protocolam ofício junto ao MPF-AM relatando novas suspeitas de contaminação de rio por atividade da Mineração Taboca, anexado ao inquérito civil em curso.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://reporterbrasil.org.br/2026/04/indigenas-novas-suspeitas-contaminacao-de-rio-por-mineradora-no-am/"
+      ],
+      "pessoas_envolvidas": [],
+      "instituicoes_envolvidas": [
+        "Povo Waimiri Atroari",
+        "Ministério Público Federal do Amazonas"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-04-08-id1673-waimiri-atroari-enviam-novo-oficio-ao-mpf-am-com-suspeitas-adicionais-de-contami.md",
+      "id": 1673
+    },
+    {
+      "titulo": "APIB protocola manifestação no STF contra regulamentação de mineração em terra Cinta Larga sem consulta ampla",
+      "data_evento": "2026-04-08",
+      "data_iso": "2026-04-08T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "stf",
+        "P09",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "A Articulação dos Povos Indígenas do Brasil (Apib) protocola manifestação em processo no STF sobre mineração de diamantes em terra do povo Cinta Larga, destacando que o pedido de regulamentação partiu de uma única associação que, segundo relatório do próprio Ministério dos Povos Indígenas, não representa a totalidade do povo Cinta Larga. A Apib argumenta que não houve consulta aos 391 povos indígenas do Brasil nos termos da Convenção 169 da OIT.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "chokepoint_judicial",
+      "fontes": [
+        "https://apiboficial.org/2026/04/08/lobby-da-mineracao-avanca-sobre-terras-indigenas-e-pressiona-stf-aponta-relatorio-da-apib/"
+      ],
+      "pessoas_envolvidas": [],
+      "instituicoes_envolvidas": [
+        "APIB",
+        "STF",
+        "Ministério dos Povos Indígenas"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-04-08-id1696-apib-protocola-manifestacao-no-stf-contra-regulamentacao-de-mineracao-em-terra-c.md",
+      "id": 1696
+    },
+    {
+      "titulo": "Toffoli devolve operações Rejeito/Parcours à 1ª instância — sem nenhuma condenação proferida no STF",
+      "data_evento": "2026-04-15",
+      "data_iso": "2026-04-15T12:00:00Z",
+      "categoria": "stf",
+      "tags": [
+        "P06",
+        "operacao-rejeito"
+      ],
+      "descricao": "Toffoli determina retorno das operações Rejeito, Intrafortis, Contrassabotagem, Parcours e Poeira Vermelha à 3ª Vara Federal Criminal de Belo Horizonte. Motivo: PF e PGR concluem não haver 'qualquer elemento mínimo' vinculando o dep. Luiz Fernando Faria (União-MG) ao esquema — único fundamento que havia levado o conjunto ao STF. Nenhuma condenação proferida durante os 6+ meses no Supremo.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "Operação Rejeito",
+      "fontes": [
+        "STF; PGR"
+      ],
+      "pessoas_envolvidas": [
+        "Dias Toffoli",
+        "Paulo Gonet"
+      ],
+      "instituicoes_envolvidas": [],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\stf\\2026-04-15-toffoli-retorno-1a-instancia-rejeito.md",
+      "id": 1569
+    },
+    {
+      "titulo": "\"Manifesto de Entendimento\" entre Goiás e o governo dos EUA sobre terras raras",
+      "data_evento": "2026-04-17",
+      "data_iso": "2026-04-17T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "dragao-onca",
+        "eua",
+        "goias",
+        "terras-raras",
+        "P05",
+        "P04b"
+      ],
+      "descricao": "Caiado anuncia acordo classificado por ele como 'talvez o mais importante geoeconômico já assinado por um governador', referente à exploração de terras raras em Goiás com o governo dos Estados Unidos. Três dias depois, é anunciada a aquisição da Serra Verde (mina Pela Ema, Minaçu) pela USA Rare Earth por US$2,8bi — já documentada no Capítulo Diplomático Federal (id_1715).",
+      "relevancia": "alta",
+      "impacto_diplomatico": "Precede em três dias o anúncio da venda do principal ativo mineral do estado a controle americano — o 'Manifesto' parece ser o instrumento político-diplomático que viabiliza ou acompanha a transação comercial documentada em id_1715.",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://www.brasil247.com/economia/goias-ja-fechou-com-os-estados-unidos-disse-caiado-ao-firmar-acordo-sobre-terras-raras"
+      ],
+      "pessoas_envolvidas": [
+        "Ronaldo Caiado (Governador de Goiás)"
+      ],
+      "instituicoes_envolvidas": [
+        "Governo do Estado de Goiás",
+        "Governo dos Estados Unidos"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "lacuna_investigativa": "Texto integral do 'Manifesto de Entendimento' não localizado — apenas declarações de Caiado em entrevistas/redes sociais. Identidade exata da SPV do governo dos EUA no contrato de fornecimento de 15 anos com a Serra Verde não identificada nas fontes primárias.",
+      "connections": [
+        "id_1715",
+        "id_1742",
+        "id_1744"
+      ],
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-04-17-id1745-manifesto-entendimento-goias-eua.md",
+      "id": 1745
+    },
+    {
+      "titulo": "USA Rare Earth anuncia aquisição da Serra Verde (Goiás) por US$ 2,8 bilhões, invertendo destino da produção que ia para a China",
+      "data_evento": "2026-04-20",
+      "data_iso": "2026-04-20T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "dragao-onca",
+        "china",
+        "eua",
+        "goias",
+        "P05",
+        "P11"
+      ],
+      "descricao": "A norte-americana USA Rare Earth (Nasdaq: USAR) firma acordo definitivo para adquirir 100% da Serra Verde Group, dona da mina Pela Ema em Minaçu (GO) — única operação fora da Ásia capaz de fornecer as quatro terras raras magnéticas em escala. A transação envolve US$300 milhões em dinheiro e cerca de 126,8 milhões de ações da USAR, com fechamento previsto para o 3º trimestre de 2026. Até a venda, toda a produção da mina era exportada para a China; a aquisição redireciona o fornecimento prioritário para os EUA, incluindo contrato de offtake de 15 anos com veículo de propósito específico capitalizado por entidades do governo americano.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "Ativo estratégico brasileiro de terras raras muda de mãos entre potências (China→EUA) sem que o Estado brasileiro apareça como parte negociadora — captura de valor ocorre inteiramente fora do território de decisão nacional.",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://www.sec.gov/Archives/edgar/data/0001970622/000121390026045339/ea028691001ex99-1.htm",
+        "https://apublica.org/2026/04/terras-raras-mineradora-em-goias-vira-negocio-bilionario/",
+        "https://jornalgrandebahia.com.br/2026/05/compra-da-serra-verde-por-empresa-dos-eua-coloca-goias-no-centro-da-disputa-global-por-terras-raras/"
+      ],
+      "pessoas_envolvidas": [
+        "Barbara Humpton (CEO, USA Rare Earth)",
+        "Thras Moraitis (CEO, Serra Verde)"
+      ],
+      "instituicoes_envolvidas": [
+        "USA Rare Earth Inc.",
+        "Serra Verde Group",
+        "Governo dos Estados Unidos (via SPV de offtake)"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "US$ 2,8 bilhões",
+      "prioridade": 1,
+      "connections": [
+        "id_1710"
+      ],
+      "analise": "ev-inference: entrada complementa id_1710 (INESC citando Serra Verde como exemplo de risco regulatório do PL 2.780) — aqui documenta-se o evento concreto que a análise do INESC antecipava: transferência do controle do ativo sem participação da política nacional de minerais críticos, ainda em tramitação no Senado.",
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-04-20-id1715-usa-rare-earth-compra-serra-verde.md",
+      "id": 1715
+    },
+    {
+      "titulo": "Cedro Participações vende Biomm e Latache Capital — Kallas se desvincula formalmente de Vorcaro",
+      "data_evento": "2026-04-28",
+      "data_iso": "2026-04-28T12:00:00Z",
+      "categoria": "operacoes",
+      "tags": [
+        "P08",
+        "operacao-rejeito"
+      ],
+      "descricao": "Cedro Participações (Lucas Kallas) anuncia venda de participação na Biomm e de fatia de 33,33% na gestora Latache Capital. Alaska Asset Management (Luiz Alves Paes de Barros) assume 26,15% da Biomm como maior acionista individual. Venda ocorre após investigações Rejeito/Parcours e prisão de Henrique Moura Vorcaro (pai de Daniel) na Operação Compliance Zero (mai/2026).",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "Operação Compliance Zero",
+      "fontes": [
+        "https://www.ainvestigacao.com/p/o-terceiro-manuscrito-omitido",
+        "Fatos relevantes CVM; A Investigação (mai/2026)"
+      ],
+      "pessoas_envolvidas": [
+        "Lucas Kallas",
+        "Daniel Vorcaro",
+        "Luiz Alves Paes de Barros"
+      ],
+      "instituicoes_envolvidas": [],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\escandalos\\2026-04-28-kallas-vorcaro-desinvestimento-biomm-latache.md",
+      "id": 1570
+    },
+    {
+      "titulo": "INESC: Certificado Mineral de Baixo Carbono (CMBC) cria mercado de carbono paralelo à revelia da regulamentação do SBCE",
+      "data_evento": "2026-05-01",
+      "data_iso": "2026-05-01T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "escandalos",
+        "P05",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "Nota técnica do INESC (Instituto de Estudos Socioeconômicos) aponta que o substitutivo cria, nos Artigos 23 a 27, o Certificado Mineral de Baixo Carbono (CMBC) — instrumento de certificação com autoridade competente exercida pelo próprio CMCE — que impõe institucionalidade própria voltada a um futuro mercado de carbono mineral, à revelia do processo de regulamentação em curso da Lei 15.042/2024 (Sistema Brasileiro de Comércio de Emissões, SBCE), que ainda define quais setores e empresas serão regulados.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "analise_editorial",
+      "fontes": [
+        "https://inesc.org.br/wp-content/uploads/2026/05/nt-substitutivo-pl-minerais-criticos.pdf"
+      ],
+      "pessoas_envolvidas": [],
+      "instituicoes_envolvidas": [
+        "INESC",
+        "CMCE"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-05-01-id1708-inesc-certificado-mineral-de-baixo-carbono-cmbc-cria-mercado-de-carbono-paralelo.md",
+      "id": 1708
+    },
+    {
+      "titulo": "Substitutivo cria acesso preferencial das mineradoras ao Fundo Clima (Fundo Nacional sobre Mudança do Clima)",
+      "data_evento": "2026-05-01",
+      "data_iso": "2026-05-01T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "escandalos",
+        "P05",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "O Artigo 20 do substitutivo autoriza o BNDES a destinar parcela dos recursos do Fundo Nacional sobre Mudança do Clima (FNMC) para financiamento reembolsável do beneficiamento e transformação mineral. Segundo o INESC, a definição vaga dos minerais beneficiados no PL permitiria, em tese, o desvio de recursos climáticos para a produção de concentrado de minério de ferro, e mesmo se restrito a lítio/terras raras, não há instrumento de comprovação do uso final desses minerais — nada impede uso para indústria de armamentos, data centers, ou redução de emissões fora do país (não contabilizadas domesticamente).",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "ato_legislativo",
+      "fontes": [
+        "https://inesc.org.br/wp-content/uploads/2026/05/nt-substitutivo-pl-minerais-criticos.pdf"
+      ],
+      "pessoas_envolvidas": [],
+      "instituicoes_envolvidas": [
+        "BNDES",
+        "Fundo Nacional sobre Mudança do Clima"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-05-01-id1709-substitutivo-cria-acesso-preferencial-das-mineradoras-ao-fundo-clima-fundo-nacio.md",
+      "id": 1709
+    },
+    {
+      "titulo": "INESC cita explicitamente o caso Serra Verde (Goiás) como exemplo de risco dos contratos de streaming previstos no PL",
+      "data_evento": "2026-05-01",
+      "data_iso": "2026-05-01T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "escandalos",
+        "P05",
+        "P10",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "A nota técnica do INESC, ao analisar a Seção X do substitutivo (contratos de Streaming e Royalties Minerários Privados), cita nominalmente o projeto Serra Verde, em Goiás, como exemplo concreto do risco desses mecanismos: o recente rearranjo do controle acionário do projeto — em favor de empresas americanas e com participação do governo dos EUA (aquisição pela USA Rare Earth, já documentada no capítulo Goiás da série) — trouxe consigo mecanismos de controle de acesso a 100% do minério extraído. Contratos de streaming, segundo o INESC, podem amplificar arranjos que garantem fornecimento de minerais a baixo preço para empresas fora do país.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "analise_editorial",
+      "fontes": [
+        "https://inesc.org.br/wp-content/uploads/2026/05/nt-substitutivo-pl-minerais-criticos.pdf"
+      ],
+      "pessoas_envolvidas": [],
+      "instituicoes_envolvidas": [
+        "INESC",
+        "Serra Verde",
+        "USA Rare Earth"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-05-01-id1710-inesc-cita-explicitamente-o-caso-serra-verde-goias-como-exemplo-de-risco-dos-con.md",
+      "id": 1710
+    },
+    {
+      "titulo": "Assimetria estrutural: Fundo Garantidor da Atividade Mineral (FGAM) protege investidor, sem fundo equivalente para comunidades",
+      "data_evento": "2026-05-01",
+      "data_iso": "2026-05-01T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "escandalos",
+        "P05",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "O substitutivo cria o FGAM com aporte de até R$2 bilhões de recursos públicos para reduzir riscos de investidores em pesquisa mineral — atividade de natureza incerta e frequentemente financiada por capital especulativo. Segundo o INESC, não existe instrumento equivalente de proteção para os direitos das comunidades afetadas pelos mesmos empreendimentos. O dispositivo original do PL (art. 14: obrigação de 0,40% da receita bruta em P&D) foi reformulado no substitutivo (art. 15), reduzindo a parcela líquida de tributos destinada a P&D genuíno e desviando parte do valor para capitalizar o próprio FGAM.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "ato_legislativo",
+      "fontes": [
+        "https://inesc.org.br/wp-content/uploads/2026/05/nt-substitutivo-pl-minerais-criticos.pdf"
+      ],
+      "pessoas_envolvidas": [],
+      "instituicoes_envolvidas": [
+        "FGAM"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-05-01-id1711-assimetria-estrutural-fundo-garantidor-da-atividade-mineral-fgam-protege-investi.md",
+      "id": 1711
+    },
+    {
+      "titulo": "Comissão Especial apresenta parecer/substitutivo do relator Arnaldo Jardim: projeto salta de 21 para 51 artigos",
+      "data_evento": "2026-05-04",
+      "data_iso": "2026-05-04T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "escandalos",
+        "P05",
+        "P10",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "O deputado Arnaldo Jardim, relator da Comissão Especial, apresenta parecer que não se limita a manifestação opinativa: é, na prática, um substitutivo que reorganiza radicalmente o projeto original, incorporando as proposições apensadas. O texto original de 21 artigos é substituído por um texto de 51 artigos, com lógica e estrutura muito diferentes, incluindo conexão com potencial mercado de carbono, Fundo Garantidor de natureza privada, contratos de streaming e royalties minerários privados, reforço ao mecanismo de leilão com bônus de assinatura, e criação de Conselho Especial.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "ato_legislativo",
+      "fontes": [
+        "https://inesc.org.br/wp-content/uploads/2026/05/nt-substitutivo-pl-minerais-criticos.pdf"
+      ],
+      "pessoas_envolvidas": [
+        "Arnaldo Jardim (Deputado Federal, Relator da Comissão Especial)"
+      ],
+      "instituicoes_envolvidas": [
+        "Câmara dos Deputados",
+        "Comissão Especial do PL 2.780/2024"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-05-04-id1706-comissao-especial-apresenta-parecersubstitutivo-do-relator-arnaldo-jardim-projet.md",
+      "id": 1706
+    },
+    {
+      "titulo": "Câmara aprova o PL 2.780/2024 na forma do substitutivo: FGAM de R$2bi, incentivos de R$5bi/5 anos, CMCE",
+      "data_evento": "2026-05-06",
+      "data_iso": "2026-05-06T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "escandalos",
+        "P05",
+        "P10",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "A Câmara dos Deputados aprova o PL 2.780/2024 na forma do substitutivo Arnaldo Jardim. Principais pontos: criação do Fundo Garantidor da Atividade Mineral (FGAM), com aporte de até R$2 bilhões da União para garantir financiamentos a empreendimentos minerais; incentivos federais estimados em R$5 bilhões ao longo de 5 anos para projetos de beneficiamento/transformação mineral no país; criação do Conselho Especial de Minerais Críticos e Estratégicos (CMCE), responsável por definir e atualizar a lista de minerais críticos e estratégicos; limitação à exportação de minério bruto sem processamento, com incentivos fiscais progressivos conforme nível de beneficiamento; criação do Cadastro Nacional de Projetos de Minerais Críticos e Estratégicos — só projetos cadastrados acessam financiamento e incentivos.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "ato_legislativo",
+      "fontes": [
+        "https://revistamineracao.com.br/2026/05/07/camara-aprova-pl-2780-2024-que-cria-politica-nacional-para-minerais-criticos-e-estrategicos/"
+      ],
+      "pessoas_envolvidas": [
+        "Arnaldo Jardim (Relator)",
+        "Zé Silva (Autor original)"
+      ],
+      "instituicoes_envolvidas": [
+        "Câmara dos Deputados"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-05-06-id1707-camara-aprova-o-pl-27802024-na-forma-do-substitutivo-fgam-de-r2bi-incentivos-de.md",
+      "id": 1707
+    },
+    {
+      "titulo": "Terceiro manuscrito revelado — cadeia do minério ilegal até Vale, Gerdau e Trafigura",
+      "data_evento": "2026-05-27",
+      "data_iso": "2026-05-27T12:00:00Z",
+      "categoria": "operacoes",
+      "tags": [
+        "P08",
+        "P11",
+        "operacao-rejeito"
+      ],
+      "descricao": "A Investigação publica o 3º manuscrito apreendido no celular de Teixeira em set/2025 — único dos três não publicado por nenhum veículo durante cobertura da Rejeito (set–dez/2025). Título: 'Esquema Zé Nilton Cury (Terraplanagem RMBH → Nova Lima)'. Detalha: terraplanagem em condomínios de luxo → desvio para Fleurs Global e plantas de beneficiamento → blendagem com Cedro/Extrativa → venda via GSM/Grupo Avante (operador: Gabriel Thadeu Baya Andrade) → Vale, Gerdau, Trafigura como compradoras finais.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "Operação Rejeito",
+      "fontes": [
+        "https://www.ainvestigacao.com/p/o-terceiro-manuscrito-omitido",
+        "A Investigação (mai/2026); manuscritos SINTE SR/MG PF"
+      ],
+      "pessoas_envolvidas": [
+        "Gabriel Thadeu Baya Andrade",
+        "Zé Nilton Cury",
+        "Fleurs Global",
+        "Vale S.A.",
+        "Gerdau",
+        "Trafigura"
+      ],
+      "instituicoes_envolvidas": [],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\operacoes\\2026-05-27-terceiro-manuscrito-vale-gerdau-trafigura.md",
+      "id": 1571
+    },
+    {
+      "id": 1575,
+      "slug": "minerais-criticos-brasil-eua-alternativa-china",
+      "tipo": "instancia_padrao",
+      "data_evento": "2026-05-27",
+      "data_registro": "2026-05-27",
+      "titulo": "Flávio Bolsonaro posiciona minerais críticos brasileiros como alternativa ao monopólio chinês em negociação com Trump",
+      "operacao_referencia": "Geopolítica mineral Brasil–EUA",
+      "padroes_ativados": [
+        "P09",
+        "P11"
+      ],
+      "evidencia_primaria": {
+        "tipo": "declaração",
+        "descricao": "Flávio Bolsonaro afirma a Trump que o Brasil, por suas grandes reservas de minerais críticos de interesse de Washington, deve ser uma 'alternativa' ao monopólio chinês no setor. A declaração é feita no mesmo encontro em que promete adesão ao Escudo das Américas e solicita designação terrorista do PCC/CV.",
+        "classificacao": "primária",
+        "fonte": "Infobae; EFE",
+        "url_referencia": "https://www.infobae.com/america/america-latina/2026/05/27/flavio-bolsonaro-le-prometio-a-donald-trump-adherirse-a-la-alianza-escudo-de-las-americas-si-gana-las-elecciones-en-brasil/"
+      },
+      "cadeia_logica": "Flávio Bolsonaro → oferta de acesso a minerais críticos brasileiros aos EUA como alternativa à China → em contexto de disputa geopolítica EUA–China por cadeias de fornecimento de minerais estratégicos → posiciona o Brasil (sob governo Bolsonaro) como parceiro mineral preferencial de Washington",
+      "observacao_analitica": "A oferta de minerais críticos como ativo de negociação geopolítica fecha o círculo entre os três temas do encontro: Escudo das Américas (segurança), designação PCC/CV (crime organizado) e minerais críticos (economia). O timing é relevante: o corpus documenta o maior leilão de minerais críticos da ANM em 2024 (3D Minerals/Vorcaro) — agora o mesmo recurso é apresentado a Trump como ativo estratégico. A Serra do Curral, cujos 57 processos foram suspensos em mar/2026 (ID 1568), é parte do mesmo ecossistema mineral que Flávio promete entregar à cadeia americana.",
+      "atores": [
+        {
+          "nome": "Flávio Bolsonaro",
+          "funcao_estrutural": "ofertante de acesso a minerais críticos a potência estrangeira",
+          "cargo_na_epoca": "Senador — pré-candidato"
+        },
+        {
+          "nome": "Donald Trump",
+          "funcao_estrutural": "receptor da oferta de acesso mineral",
+          "cargo_na_epoca": "Presidente dos EUA"
+        }
+      ],
+      "conexoes_corpus": [
+        {
+          "id_ref": 1558,
+          "descricao": "leilão ANM de minerais críticos — 3D Minerals/Vorcaro — o mesmo ativo mineral ofertado a Trump"
+        },
+        {
+          "id_ref": 1568,
+          "descricao": "Serra do Curral: 57 processos suspensos — parte do ecossistema mineral em disputa"
+        },
+        {
+          "id_ref": 1555,
+          "descricao": "Rejeito documentou captura do licenciamento mineral — contexto do setor que Flávio promete 'abrir' aos EUA"
+        },
+        {
+          "id_ref": 128,
+          "descricao": "Brasil Sangra P11: extração de patrimônio mineral como padrão estrutural"
+        }
+      ],
+      "status": "confirmado",
+      "visibilidade": "público",
+      "licenca": "CC0 1.0",
+      "fonte_arquivo": "_posts\\crise-diplomatica\\2026-05-27-minerais-criticos-brasil-eua-alternativa-china.md"
+    },
+    {
+      "titulo": "Cota de exportação de carne goiana à China quase esgotada; tarifa de 55% sobre excedentes",
+      "data_evento": "2026-06-13",
+      "data_iso": "2026-06-13T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "dragao-onca",
+        "china",
+        "goias",
+        "agro",
+        "P04b"
+      ],
+      "descricao": "Cota de exportação de carne de Goiás à China (1,1 milhão de toneladas para 2026) está perto de ser atingida já em junho, com tarifa de 55% sobre excedentes. Sinaliza fricção comercial simultânea ao estreitamento de laços do estado com EUA e Japão em minério — a relação Goiás-China é multissetorial e não unidirecionalmente amistosa.",
+      "relevancia": "media",
+      "impacto_diplomatico": "Enquanto Goiás pivota para EUA/Japão em terras raras, mantém dependência comercial relevante da China no agronegócio — evidencia que o 'rompimento' com a China é setorial (minério), não uma reorientação geopolítica completa.",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://www.jornalopcao.com.br/ultimas-noticias/china-fecha-o-cerco-para-exportacoes-de-carne-e-soja-e-coloca-goias-na-corda-bamba-835751/"
+      ],
+      "pessoas_envolvidas": [],
+      "instituicoes_envolvidas": [
+        "Governo do Estado de Goiás"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 2,
+      "analise": "ev-inference: fricção comercial paralela ao pivô mineral qualifica a narrativa de 'ruptura com a China' — Goiás segue comercialmente dependente da China no agro mesmo enquanto diversifica parceiros em minério crítico.",
+      "connections": [
+        "id_1745"
+      ],
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-06-13-id1747-cota-carne-china-esgotada.md",
+      "id": 1747
+    },
+    {
+      "titulo": "G7 fecha acordo para limitar dependência de terras raras da China; Brasil recebe medida como oportunidade de barganha",
+      "data_evento": "2026-06-17",
+      "data_iso": "2026-06-17T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "dragao-onca",
+        "china",
+        "g7",
+        "P11"
+      ],
+      "descricao": "Líderes do G7 estabelecem meta de limitar a dependência de qualquer fornecedor único a menos de 60% em terras raras e ímãs permanentes até 2030, com ambição de longo prazo de chegar a 50%. O plano prevê estoques estratégicos coordenados, diversificação de fornecedores, reciclagem e apoio da Agência Internacional de Energia. A medida mira diretamente a China, que domina processamento, separação e produção de ímãs permanentes; Pequim reage defendendo seus controles de exportação. No Brasil, o grupo que defende a política nacional de minerais críticos passa a advogar que o país condicione parcerias externas a compromissos de industrialização e transferência de tecnologia — debate paralelo à tramitação do PL 2.780/2024 no Senado.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "Reorganização das cadeias globais de minerais críticos pelo G7 cria janela de negociação para o Brasil, mas sem marco legal nacional em vigor (PL 2.780 ainda pendente de votação no Senado) para capturar a oportunidade de forma coordenada.",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://www.cnnbrasil.com.br/infra/g7-fecha-acordo-de-terras-raras-irrita-china-e-brasil-ve-oportunidade/",
+        "https://portalterradaluz.com.br/economia-negocios/geopolitica-g7-ve-terras-raras-como-disputa-estrategica/"
+      ],
+      "pessoas_envolvidas": [],
+      "instituicoes_envolvidas": [
+        "G7",
+        "Agência Internacional de Energia",
+        "Itamaraty",
+        "Ministério das Relações Exteriores da China"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 2,
+      "connections": [
+        "id_1712",
+        "id_1714"
+      ],
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-06-17-id1716-g7-acordo-terras-raras.md",
+      "id": 1716
+    },
+    {
+      "titulo": "Caiado, já candidato, associa terras raras à plataforma de campanha presidencial",
+      "data_evento": "2026-06-18",
+      "data_iso": "2026-06-18T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "dragao-onca",
+        "goias",
+        "eleicoes-2026",
+        "terras-raras",
+        "P09"
+      ],
+      "descricao": "Em entrevista de campanha, Caiado defende reindustrialização via minerais críticos e ajuste fiscal como eixos centrais de sua pré-candidatura presidencial, mantendo segurança pública como bandeira histórica. Fecha o arco do capítulo: do ativo mineral negociado como governador à plataforma nacional de campanha.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "Confirma o padrão de 'captura simbólico-eleitoral do ativo mineral' (análogo P09): terras raras, negociadas como governador em fim de mandato, tornam-se bandeira central da candidatura presidencial menos de três meses depois.",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://neofeed.com.br/videos/eleicoes-2026/caiado-promete-cortar-na-carne-e-aposta-em-terras-raras-e-afina-discurso-contra-pt-lula-e-o-melhor-presidente-que-o-paraguai-ja-teve/en/"
+      ],
+      "pessoas_envolvidas": [
+        "Ronaldo Caiado (pré-candidato à Presidência, PSD)"
+      ],
+      "instituicoes_envolvidas": [
+        "PSD"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "ponto_de_inflexao": "Fecha o arco do capítulo Goiás: mina negociada como governador (id_1745) vira bandeira de campanha presidencial (este evento) — ciclo completo de conversão de ativo estadual em capital político nacional.",
+      "connections": [
+        "id_1744",
+        "id_1745"
+      ],
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-06-18-id1748-caiado-terras-raras-campanha.md",
+      "id": 1748
+    },
+    {
+      "titulo": "Comando Vermelho assume controle de garimpo ilegal na Terra Indígena Sararé (MT) e usa ouro como moeda de troca por armas e drogas",
+      "data_evento": "2026-06-28",
+      "data_iso": "2026-06-28T12:00:00.000Z",
+      "categoria": "operacoes",
+      "tags": [
+        "operacoes",
+        "P08",
+        "P10"
+      ],
+      "descricao": "Reportagem do Fantástico (TV Globo, 28/06/2026), baseada em investigações da Polícia Federal, revela que o Comando Vermelho (CV) passou de prestador de segurança armada a administrador direto de áreas de mineração ilegal no Garimpo Cururu, na Terra Indígena Sararé (povo Nambikwara, MT, demarcada em 1985, 67 mil hectares, 1.117 pontos de garimpo). A presença da facção começou em 2023. Megaoperação coordenada pela Casa Civil desde março de 2026 resultou em 72 prisões, apreensão de 153kg de ouro e 42.000+ litros de diesel, destruição de 33 túneis, ~4 toneladas de explosivos, ~200 acampamentos, 800+ motores e 31 escavadeiras; prejuízo estimado ao garimpo ilegal superior a R$110 milhões. Segundo o delegado da PF Rodrigo Vitorino, o ouro é trocado por drogas e armas com países vizinhos. O Ibama já havia apontado presença do CV na área em outubro de 2025; o PCC também é citado como presente na mesma terra indígena desde 2019, segundo o Ibama.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "operacao_policial",
+      "fontes": [
+        "https://www.poder360.com.br/poder-seguranca-publica/cv-usa-ouro-de-garimpo-ilegal-para-financiar-crimes-diz-pf/",
+        "https://revistaoeste.com/brasil/comando-vermelho-domina-garimpo-ilegal-em-terra-indigena-de-mt-diz-pf/",
+        "https://www.midianews.com.br/cotidiano/fantastico-revela-atuacao-de-faccao-em-garimpo-ilegal-de-mt/523943"
+      ],
+      "pessoas_envolvidas": [
+        "Comando Vermelho (organização criminosa — controle de mineração ilegal)",
+        "Rodrigo Vitorino (delegado da Polícia Federal — operação Sararé)",
+        "Nilton Tubino (coordenador da operação)"
+      ],
+      "instituicoes_envolvidas": [
+        "Polícia Federal",
+        "Casa Civil",
+        "Ibama",
+        "Governo de Mato Grosso"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\operacoes\\2026-06-28-comando-vermelho-assume-controle-de-garimpo-ilegal-na-terra-indigena-sarare-mt-e-usa-ouro-.md",
+      "id": 1607
+    },
+    {
+      "titulo": "Lula anuncia lançamento de negociação de parceria econômica com o Japão e avanço no diálogo Mercosul-China durante cúpula no Paraguai",
+      "data_evento": "2026-06-30",
+      "data_iso": "2026-06-30T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "dragao-onca",
+        "china",
+        "japao",
+        "mercosul",
+        "P05"
+      ],
+      "descricao": "Na cúpula do Mercosul no Paraguai, Lula anuncia o lançamento de negociações de parceria econômica com o Japão e defende que o bloco inicie negociações formais de acordo comercial com a China, nos moldes dos acordos já firmados com Canadá, Índia, Vietnã e União Europeia. Lula também anuncia aumento do aporte brasileiro no Focem (Fundo para a Convergência Estrutural do Mercosul) de US$70 milhões para US$100 milhões anuais, e defende que minerais críticos sejam tratados como questão de segurança nacional para desenvolver cadeias regionais com agregação de valor.",
+      "relevancia": "media",
+      "impacto_diplomatico": "Brasil busca diversificar parcerias comerciais (Japão, China) via bloco Mercosul, ampliando simultaneamente compromissos financeiros multilaterais (Focem 2) sem posição unificada sobre minerais críticos.",
+      "tipo_escandalo": "mecanismo_sistemico",
+      "fontes": [
+        "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-06/lula-defende-acordo-do-mercosul-com-china-durante-cupula-do-bloco",
+        "https://www.dgabc.com.br/Noticia/4332294/lula-diz-que-mercosul-busca-uma-negociacao-com-a-china-por-um-acordo-comercial"
+      ],
+      "pessoas_envolvidas": [
+        "Luiz Inácio Lula da Silva (Presidente da República)"
+      ],
+      "instituicoes_envolvidas": [
+        "Mercosul",
+        "Focem",
+        "Governo do Japão",
+        "Governo da China"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "US$ 100 milhões/ano (aporte Focem 2)",
+      "prioridade": 3,
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-06-30-id1717-mercosul-china-japao-focem2.md",
+      "id": 1717
+    },
+    {
+      "titulo": "Polícia Federal passa a investigar a Mineração Taboca por contaminação em terra indígena",
+      "data_evento": "2026-07-05",
+      "data_iso": "2026-07-05T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "operacoes",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "Além do inquérito civil do MPF, a Polícia Federal abre investigação própria sobre a Mineração Taboca por suspeita de contaminação de rios que abastecem a Terra Indígena Waimiri Atroari.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "operacao_policial",
+      "fontes": [
+        "https://reporterbrasil.org.br/2026/07/pf-vai-investigar-contaminacao-mineradora-terra-indigena-am/"
+      ],
+      "pessoas_envolvidas": [],
+      "instituicoes_envolvidas": [
+        "Polícia Federal",
+        "Mineração Taboca S.A."
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-07-05-id1674-policia-federal-passa-a-investigar-a-mineracao-taboca-por-contaminacao-em-terra.md",
+      "id": 1674
+    },
+    {
+      "titulo": "PL 2.780/2024 aguarda votação de urgência no Senado; especialista já defende suspensão de licenciamento de terras raras em Minas Gerais",
+      "data_evento": "2026-07-06",
+      "data_iso": "2026-07-06T12:00:00.000Z",
+      "categoria": "dragao-onca",
+      "tags": [
+        "escandalos",
+        "dragao-onca",
+        "china",
+        "soberania"
+      ],
+      "descricao": "Após aprovação na Câmara, o PL 2.780/2024 é autuado no Senado Federal. A senadora Roberta Acioly requer tramitação conjunta com o PL 2.210/2021; requerimento de urgência (nº 506/2026) aguarda inclusão em Ordem do Dia até 6/jul/2026, sem votação até esta rodada. Em paralelo, especialista já defende publicamente a suspensão de licenciamento para exploração de terras raras em Minas Gerais — tema diretamente relacionado ao capítulo Minas Gerais da série (vistoria de segurança requerida na ALMG, RQC 19563/2026).",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "ato_legislativo",
+      "fontes": [
+        "https://www25.senado.leg.br/web/atividade/materias/-/materia/174060",
+        "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2447259"
+      ],
+      "pessoas_envolvidas": [
+        "Roberta Acioly (Senadora)"
+      ],
+      "instituicoes_envolvidas": [
+        "Senado Federal"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\dragao-onca\\2026-07-06-id1712-pl-27802024-aguarda-votacao-de-urgencia-no-senado-especialista-ja-defende-suspen.md",
+      "id": 1712
+    },
+    {
+      "titulo": "Nikolas Ferreira pede prisão e afastamento de Moraes citando mensagens de Vorcaro; áudios do mesmo dia revelam tom subserviente do deputado com o banqueiro",
+      "data_evento": "2026-09-01",
+      "data_iso": "2026-09-01T12:00:00.000Z",
+      "categoria": "escandalos",
+      "tags": [
+        "escandalos",
+        "congresso",
+        "banco-master",
+        "P04b",
+        "vorcaro"
+      ],
+      "descricao": "Em 1º de setembro de 2026, o deputado federal Nikolas Ferreira (PL-MG) anunciou que acionaria o STF pedindo abertura de investigação, afastamento cautelar e prisão preventiva de Alexandre de Moraes, com base em mensagens do celular de Vorcaro indicando ao menos seis referências a encontros presenciais com o ministro. Nos dias seguintes (2 e 3/09), vieram a público áudios e mensagens do próprio Nikolas com Vorcaro, em tom subserviente — chamando o banqueiro de \"lindão\", pedindo intervenção para liberar ativo minerário em nome de seu advogado e ex-assessor Thiago Rodrigues de Faria, e confirmando uso de aeronaves financiadas por Vorcaro na campanha de 2022. Nikolas admitiu os contatos, negou contratos ou repasses financeiros, e classificou a repercussão do caso como \"cortina de fumaça\" para desviar atenção dos contratos entre empresas de Vorcaro e o escritório da esposa de Moraes.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "congresso",
+      "fontes": [
+        "https://ndmais.com.br/politica/nikolas-pede-prisao-moraes-vorcaro/",
+        "https://ohoje.com/2026/09/01/nikolas-ferreira-pede-investigacao-e-afastamento-de-alexandre-de-moraes-no-caso-banco-master/",
+        "https://www.brasilemfolhas.com.br/2026/09/nikolas-ferreira-pede-favores-a-dono-do-banco-master-em-audio/",
+        "https://www.brasilemfolhas.com.br/2026/09/nikolas-ferreira-admite-contatos-com-fundador-do-banco-master/"
+      ],
+      "pessoas_envolvidas": [
+        "Nikolas Ferreira (Deputado Federal, PL-MG)",
+        "Alexandre de Moraes (Ministro STF)",
+        "Daniel Vorcaro (ex-controlador Banco Master)",
+        "Thiago Rodrigues de Faria (advogado/ex-assessor de Nikolas Ferreira)"
+      ],
+      "instituicoes_envolvidas": [
+        "Câmara dos Deputados",
+        "STF",
+        "Banco Master"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\escandalos\\2026-09-01-nikolas-ferreira-pede-prisao-e-afastamento-de-moraes-citando-mensagens-de-vorcaro-audios-d.md",
+      "id": 1909
+    },
+    {
+      "titulo": "Extração forense confirma nome de arquivo 'Projeto Topázio' no grupo Gmais operado por Teixeira — elo com Nikolas Ferreira/Vorcaro deixa de ser circunstancial",
+      "data_evento": "2026-09-06",
+      "data_iso": "2026-09-06T12:00:00.000Z",
+      "categoria": "operacoes",
+      "tags": [
+        "operacoes",
+        "P02",
+        "P05",
+        "operacao-rejeito",
+        "banco-master",
+        "topazio-imperial"
+      ],
+      "descricao": "Reportagem de 6 de setembro de 2026 (A Investigação) detalha que, no grupo de WhatsApp interno da Gmais Ambiental, Rodrigo de Melo Teixeira — delegado da PF e operador de fato da empresa (557 das 587 mensagens do grupo, 37% do total, contra 30 da esposa e sócia formal Daniela Wandeck) — compartilhou procurações e documentos da Topázio Imperial e sugeriu manter 'um arquivo digital de todos os documentos do Projeto Topázio' no próprio grupo. O dado resolve, por evidência documental de telemetria da PF (não por coincidência de datas), a questão até então em aberto sobre se o 'ativo minerário' citado por Nikolas Ferreira no áudio a Daniel Vorcaro (30/03/2025, ver id_1909) correspondia à mesma lavra da Topázio Imperial/Barragem Água Fria — o áudio em si não menciona a mineradora pelo nome.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "operacoes",
+      "fontes": [
+        "https://www.ainvestigacao.com/p/o-terceiro-manuscrito-omitido",
+        "https://ocafezinho.com/2026/09/06/exclusivo-o-amigo-de-nikolas-e-as-minas-do-rei-vorcaro"
+      ],
+      "pessoas_envolvidas": [
+        "Rodrigo de Melo Teixeira (Delegado da PF, ex-Diretor de Polícia Administrativa)",
+        "Daniela Santos Wandeck (sócia formal da Gmais Ambiental)",
+        "Nikolas Ferreira (Deputado Federal, PL-MG)",
+        "Thiago Rodrigues de Faria (advogado/ex-assessor de Nikolas Ferreira)",
+        "Daniel Vorcaro (ex-controlador Banco Master)"
+      ],
+      "instituicoes_envolvidas": [
+        "Polícia Federal",
+        "Gmais Ambiental",
+        "Topázio Imperial Mineração"
+      ],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": "_posts\\operacoes\\2026-09-06-extracao-forense-confirma-nome-de-arquivo-projeto-topazio-no-grupo-gmais-operado-por-teixe.md",
+      "id": 1912
+    }
+  ]
+}

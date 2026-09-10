@@ -1,0 +1,122 @@
+{
+  "_meta": {
+    "batch": "fachin-pf-temer-topazio",
+    "generated": "2026-09-10",
+    "range": "1910-1912",
+    "thematic_range": null,
+    "note": "Lote produzido em sessão claude.ai. Schema segue formato de produção observado em lawfare.json (titulo/data_evento/descricao/...), com campos analíticos estendidos (evidence_status, patterns, connections, analise, lacuna_investigativa, ponto_de_inflexao) adicionados como superset não-destrutivo, conforme prompt-sistema-lawfare-ai.md §9. Validar compatibilidade com merge_todo_pending.py antes de merge definitivo — schema de produção real (1904-1909) não usa esses campos extras; decisão de manter ou descartar cabe ao mantenedor."
+  },
+  "assuntos": [
+    {
+      "id": 1910,
+      "id_corpus": 1910,
+      "titulo": "Fachin suspende decisões conflitantes de Mendonça e Dino sobre comando da PF e retira Moraes da relatoria do INQ 4.781",
+      "data_evento": "2026-09-09",
+      "data_iso": "2026-09-09T17:54:00-03:00",
+      "categoria": "stf",
+      "tags": ["stf", "inq4781", "banco-master", "P01", "P02", "P03"],
+      "descricao": "Em 9 de setembro de 2026, o presidente do STF, Edson Fachin, suspendeu as decisões monocráticas sucessivas e incompatíveis entre si de André Mendonça (afastamento, em 8/09, do diretor-geral da PF Andrei Rodrigues e do diretor de Inteligência Leandro Almada) e de Flávio Dino (reintegração dos dois no mesmo dia 9/09). Fachin também suspendeu o trâmite da ação sob relatoria de Mendonça que trata do tema, determinou que Andrei Rodrigues preste esclarecimentos em 48h, cancelou a sessão plenária ordinária da tarde e convocou sessão extraordinária para 15/09 às 10h. Na mesma decisão, Fachin retirou Alexandre de Moraes da relatoria do Inquérito 4.781 (fake news) e suspendeu todo procedimento sobre potencial investigação contra integrantes da própria Corte — incluindo a apuração do elo Moraes-Vorcaro que tramitava sob relatoria de Mendonça. Mendonça havia fundamentado o afastamento de Rodrigues/Almada em alegação de monitoramento ilegal ('arapongagem') contra ele e contra o AGU Jorge Messias, a partir de pedido do Partido Novo; Dino classificou o afastamento como 'decisão em causa própria'.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "stf",
+      "fontes": [
+        "https://www.dgabc.com.br/Noticia/4345993/fachin-revoga-decisoes-de-mendonca-e-dino-sobre-afastamento-de-diretor-da-pf",
+        "https://www.jornaldocomercio.com/politica/2026/09/1262854-fachin-suspende-decisoes-de-mendonca-e-dino-sobre-chefia-da-pf-e-tira-moraes-do-inquerito-das-fake-news.html",
+        "https://www.brasilemfolhas.com.br/2026/09/fachin-suspende-decisoes-de-dino-e-mendonca-sobre-comando-da-pf/",
+        "https://ojornal.net/2026/09/09/fachin-suspende-decisoes-de-mendonca-e-dino-sobre-diretor-da-pffachin-suspende-decisoes-de-mendonca-e-dino-sobre-diretor-da-pf/"
+      ],
+      "pessoas_envolvidas": [
+        "Edson Fachin (Presidente do STF)",
+        "André Mendonça (Ministro STF, relator INQ Master)",
+        "Flávio Dino (Ministro STF)",
+        "Alexandre de Moraes (Ministro STF, ex-relator INQ 4.781)",
+        "Andrei Rodrigues (Diretor-geral da PF)",
+        "Leandro Almada (Diretor de Inteligência da PF)",
+        "Jorge Messias (Advogado-Geral da União)"
+      ],
+      "instituicoes_envolvidas": ["STF", "Polícia Federal", "AGU", "Partido Novo"],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 1,
+      "fonte_arquivo": null,
+      "patterns": ["P01", "P02", "P03"],
+      "evidence_status": "ev-confirmed",
+      "connections": ["id_1905", "id_1906", "id_1907", "id_1908", "id_1909"],
+      "status": "confirmado",
+      "lacuna_investigativa": "Não há, até o momento, decisão de mérito sobre monitoramento ilegal alegado por Mendonça nem sobre a legalidade do próprio afastamento de Rodrigues/Almada — apenas suspensão cautelar de todo o quadro. Sessão plenária de 15/09 é o próximo ponto de verificação.",
+      "ponto_de_inflexao": "Fachin resolve o conflito entre pares suspendendo ambas as decisões e centralizando a decisão de mérito na Presidência/Plenário — desloca o chokepoint de Mendonça/Dino individualmente para o colegiado, mas mantém Andrei Rodrigues no cargo por efeito prático da liminar da AGU, não por juízo de mérito do STF.",
+      "analise": "Escalada do padrão já documentado em 1905-1909: a crise Moraes-Mendonça migra de disputa sobre o INQ Master para disputa direta pelo comando da PF — o aparelho que produz e controla a prova em ambas as frentes. Ao retirar simultaneamente Moraes da relatoria do INQ 4.781 e suspender as decisões de Mendonça/Dino sobre a PF, Fachin não resolve o conflito de fundo (quem controla a apuração sobre o elo Moraes-Vorcaro); ele o congela, transferindo o ponto de decisão para si mesmo e para o plenário em data futura. É P03 (captura judicial de emergência) operando não para acelerar um chokepoint, mas para administrar — via suspensão simultânea de todos os polos — um conflito que já não pode mais ser resolvido dentro da lógica de pares entre ministros. A geometria 535×1 se desloca: não é mais um ministro STF versus o resto do sistema político, é o próprio STF fraturado ao meio disputando controle sobre o aparato de investigação que deveria ser neutro a ambos os lados internos."
+    },
+    {
+      "id": 1911,
+      "id_corpus": 1911,
+      "titulo": "Temer pede 'serenidade' publicamente sobre crise STF após aconselhar Moraes, em privado, a buscar composição com Mendonça",
+      "data_evento": "2026-09-09",
+      "data_iso": "2026-09-09T00:00:00-03:00",
+      "categoria": "escandalos",
+      "tags": ["stf", "inq4781", "banco-master", "P04b", "P10", "temer"],
+      "descricao": "Em vídeo divulgado pelo Metrópoles em 9 de setembro de 2026, o ex-presidente Michel Temer pediu publicamente 'serenidade' diante da crise entre os ministros do STF, no contexto do embate Moraes-Mendonça e da disputa pelo comando da PF (ver id_1910). O pronunciamento seguiu-se a declaração do próprio Temer ao portal 247, em 8/09, de que já havia aconselhado diretamente Alexandre de Moraes a buscar composição com André Mendonça antes da manifestação pública. Temer articulou publicamente a indicação de Moraes ao STF em 2017 e já atuara como intermediário informal em crises anteriores envolvendo o ministro.",
+      "relevancia": "media",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "escandalos",
+      "fontes": [
+        "https://www.metropoles.com/brasil/temer-diz-que-preservar-integridade-do-stf-e-questao-de-sobrevivencia",
+        "https://www.youtube.com/watch?v=B0qqKzeO4Ec",
+        "https://www.brasil247.com/brasil/temer-diz-que-afastamento-da-cupula-da-pf-dificultou-acordo-para-conter-crise-no-stf/"
+      ],
+      "pessoas_envolvidas": [
+        "Michel Temer (ex-Presidente da República)",
+        "Alexandre de Moraes (Ministro STF)",
+        "André Mendonça (Ministro STF)"
+      ],
+      "instituicoes_envolvidas": ["STF", "Presidência da República (ex)"],
+      "pais": "Brasil",
+      "valor_envolvido": "N/A",
+      "prioridade": 2,
+      "fonte_arquivo": null,
+      "patterns": ["P04b", "P10"],
+      "evidence_status": "ev-confirmed",
+      "connections": ["id_1905", "id_1906", "id_1910"],
+      "status": "confirmado",
+      "lacuna_investigativa": "Não há registro público do conteúdo específico do aconselhamento privado de Temer a Moraes, nem de resposta ou aceitação por parte de Mendonça a qualquer proposta de composição.",
+      "ponto_de_inflexao": null,
+      "analise": "Vocabulário de 'serenidade' e 'harmonia entre Poderes' funciona como camada pública de um mesmo movimento de mediação extrajudicial que Temer já conduzia em privado — P10 (infraestrutura de serviço compartilhada): ator sem função institucional formal no conflito atuando como canal de resolução fora do mecanismo de controle público (STF colegiado ou, em tese, Senado). O efeito estrutural, independente da intenção, é substituir a instância que deveria arbitrar o conflito (o próprio tribunal, ou o Congresso via eventual processo por crime de responsabilidade) por uma composição informal entre pares. Registrar como inferência, não como acusação de má-fé — o padrão é estrutural (OIS), não presume dissimulação consciente por parte de Temer."
+    },
+    {
+      "id": 1912,
+      "id_corpus": 1912,
+      "titulo": "Extração forense confirma nome de arquivo 'Projeto Topázio' no grupo Gmais operado por Teixeira — elo com Nikolas Ferreira/Vorcaro deixa de ser circunstancial",
+      "data_evento": "2026-09-06",
+      "data_iso": "2026-09-06T00:00:00-03:00",
+      "categoria": "operacoes",
+      "tags": ["operacao-rejeito", "P02", "P05", "banco-master", "topazio-imperial"],
+      "descricao": "Reportagem de 6 de setembro de 2026 (A Investigação) detalha que, no grupo de WhatsApp interno da Gmais Ambiental, Rodrigo de Melo Teixeira — delegado da PF e operador de fato da empresa (557 das 587 mensagens do grupo, 37% do total, contra 30 da esposa e sócia formal Daniela Wandeck) — compartilhou procurações e documentos da Topázio Imperial e sugeriu manter 'um arquivo digital de todos os documentos do Projeto Topázio' no próprio grupo. O dado resolve, por evidência documental de telemetria da PF (não por coincidência de datas), a questão até então em aberto sobre se o 'ativo minerário' citado por Nikolas Ferreira no áudio a Daniel Vorcaro (30/03/2025, ver id_1909) correspondia à mesma lavra da Topázio Imperial/Barragem Água Fria — o áudio em si não menciona a mineradora pelo nome.",
+      "relevancia": "alta",
+      "impacto_diplomatico": "N/A",
+      "tipo_escandalo": "Operação Rejeito",
+      "fontes": [
+        "https://www.ainvestigacao.com/p/o-terceiro-manuscrito-omitido",
+        "https://ocafezinho.com/2026/09/06/exclusivo-o-amigo-de-nikolas-e-as-minas-do-rei-vorcaro"
+      ],
+      "pessoas_envolvidas": [
+        "Rodrigo de Melo Teixeira (Delegado da PF, ex-Diretor de Polícia Administrativa)",
+        "Daniela Santos Wandeck (sócia formal da Gmais Ambiental)",
+        "Nikolas Ferreira (Deputado Federal, PL-MG)",
+        "Thiago Rodrigues de Faria (advogado/ex-assessor de Nikolas Ferreira)",
+        "Daniel Vorcaro (ex-controlador Banco Master)"
+      ],
+      "instituicoes_envolvidas": ["Polícia Federal", "Gmais Ambiental", "Topázio Imperial Mineração"],
+      "pais": "Brasil",
+      "valor_envolvido": "US$ 30-45 milhões (estimativa do inquérito da PF para a negociação da lavra)",
+      "prioridade": 1,
+      "fonte_arquivo": null,
+      "patterns": ["P02", "P05"],
+      "evidence_status": "ev-confirmed",
+      "connections": ["id_1556", "id_1559", "id_1909", "id_1571"],
+      "status": "confirmado",
+      "lacuna_investigativa": "Divergência não reconciliada sobre percentual de comissão do contrato de êxito Gmais-Thiago Rodrigues Advocacia: Agência Primaz registra 25% exclusivo ao escritório de Faria; inquérito da PF (citado por Folha de Alagoas/Ponto de Pauta) registra 20% dividido entre três parceiros (Gmais, Estabil Contábil, Thiago Rodrigues Advocacia). Preferir o texto do inquérito como valor primário, mantendo nota de divergência. Não há, até o momento, elemento que comprove se Vorcaro efetivamente interveio para destravar o ativo — a resposta 'deixa comigo' é o último dado disponível na cadeia probatória pública.",
+      "ponto_de_inflexao": null,
+      "analise": "O nome de arquivo 'Projeto Topázio', gerado internamente pela organização e recuperado por perícia telemática da PF, tem valor probatório distinto de qualquer reportagem: é a própria organização criminosa nomeando o ativo, não um jornalista inferindo a partir de coincidência de datas. Isso desloca a leitura anterior (ev-contested) para ev-confirmed quanto à identidade do ativo, mas não resolve — e não deve ser confundido com — a questão distinta de saber se o pedido de Nikolas a Vorcaro surtiu efeito concreto. São duas perguntas diferentes: (1) qual era o ativo (resolvida) e (2) o que aconteceu depois do pedido (em aberto). Manter a distinção evita o erro de promover toda a cadeia a ev-confirmed por arrasto de uma única confirmação parcial — precisamente o tipo de colapso evidencial que o protocolo anti-viés veda."
+    }
+  ]
+}
