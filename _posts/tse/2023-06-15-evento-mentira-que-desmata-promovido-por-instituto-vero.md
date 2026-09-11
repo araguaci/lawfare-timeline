@@ -5,9 +5,10 @@ categories: tse
 description: > 
   "Instituto Vero organizou evento com ONGs financiadas por Soros e Ford, focado em desinformação ambiental, com ligações a influências estrangeiras em políticas brasileiras."
 faicon: fa-tree
-tags: ['liberdade-de-expressao', 'liberdade-de-imprensa', 'censura', 'instituto-vero', 'felipe-neto', 'open-society-foundations', 'ford-foundation', 'gravidade-media', 'evento-ambiental', 'desinformacao', 'financiamento-soros', 'ongs']
+tags: ['liberdade-de-expressao', 'liberdade-de-imprensa', 'instituto-vero', 'felipe-neto', 'open-society-foundations', 'ford-foundation', 'desinformacao', 'financiamento-internacional', 'evento-ambiental']
 image:
   path: "/assets/solid/tree.svg"
+
 ---
 
 # Ação em 2023/06/15 com violações, envolvidos, fontes e gravidade media

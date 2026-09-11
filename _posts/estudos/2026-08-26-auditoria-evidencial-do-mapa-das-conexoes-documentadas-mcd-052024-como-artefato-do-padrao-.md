@@ -13,6 +13,7 @@ pin: false
 permalink: /posts/2026-08-26-auditoria-evidencial-do-mapa-das-conexoes-documentadas-mcd-052024-como-artefato-do-padrao-/
 source_data: "lawfare-batch-auditoria-mapa-conexoes-T263.json"
 addendum: "addendum-t263.md"
+
 ---
 
 - &nbsp;

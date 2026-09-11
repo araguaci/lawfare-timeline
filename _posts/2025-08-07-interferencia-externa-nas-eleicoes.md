@@ -4,8 +4,9 @@ description: "Análise Jurídica da Cooperação entre TSE e USAID no Combate à
 date: 2025-08-11T00:32:28.544Z
 image:
   path: /assets/img/usaid.webp
-tags: ['estudos', 'usaid', 'tse', 'ongs', 'cepps', 'mpf', 'mavs', 'bots', 'influenciadores', 'felipe-neto', 'anitta', 'justica']
+tags: ['usaid', 'tse', 'cepps', 'mpf', 'mavs', 'bots', 'influenciadores', 'felipe-neto', 'financiamento-internacional', 'ongs']
 categories: estudos
+
 ---
 
 - &nbsp;

@@ -5,9 +5,10 @@ categories: tse
 description: > 
   "Mike Benz, ex-secretário de Trump, afirmou que a USAID influenciou eleições de 2022 no Brasil via financiamentos a ONGs como Instituto Vero, vendo Bolsonaro como 'Trump tropical' e promovendo censura online."
 faicon: fa-microphone-alt
-tags: ['liberdade-de-expressao', 'liberdade-de-imprensa', 'separacao-de-poderes', 'mike-benz', 'usaid', 'instituto-vero', 'jair-bolsonaro', 'gravidade-alta', 'declaracoes', 'influencia-eua', 'censura', 'eleicoes-2022']
+tags: ['liberdade-de-expressao', 'liberdade-de-imprensa', 'separacao-de-poderes', 'mike-benz', 'usaid', 'instituto-vero', 'jair-bolsonaro', 'financiamento-internacional', 'declaracoes']
 image:
   path: "/assets/solid/microphone-alt.svg"
+
 ---
 
 # Ação em 2025/02/05 com violações, envolvidos, fontes e gravidade alta

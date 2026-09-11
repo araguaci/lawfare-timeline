@@ -5,7 +5,7 @@ categories: tse
 description: > 
   "Em 26 de abril de 2024, Felipe Neto anunciou colaboração com a Embaixada dos EUA para realizar palestras focadas em educação na Amazônia, financiadas por recursos estrangeiros, incluindo treinamentos para funcionários do TSE sobre identificação e combate à desinformação, no contexto de influência política pós-eleições 2022."
 faicon: fa-globe-americas
-tags: ['liberdade-de-expressao', 'seguranca-juridica', 'separacao-de-poderes', 'felipe-neto', 'embaixada-dos-eua', 'instituto-vero', 'tribunal-superior-eleitoral', 'gravidade-alta', 'financiamento-estrangeiro', 'educacao', 'desinformacao', 'amazonia']
+tags: ['liberdade-de-expressao', 'seguranca-juridica', 'separacao-de-poderes', 'felipe-neto', 'embaixada-dos-eua', 'instituto-vero', 'tribunal-superior-eleitoral', 'desinformacao', 'amazonia', 'financiamento-internacional']
 image:
   path: "/assets/solid/globe-americas.svg"
 ---

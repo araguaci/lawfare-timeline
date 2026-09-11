@@ -5,9 +5,10 @@ categories: tse
 description: > 
   "Felipe Neto debateu em evento da Open Society sobre liberdade de expressão, marcando conexão com entidade que financia Instituto Vero."
 faicon: fa-microphone
-tags: ['liberdade-de-expressao', 'liberdade-de-imprensa', 'separacao-de-poderes', 'instituto-vero', 'felipe-neto', 'open-society-foundations', 'gravidade-media', 'debate', 'liberdade-expressao', 'soros', 'censura']
+tags: ['liberdade-de-expressao', 'liberdade-de-imprensa', 'separacao-de-poderes', 'instituto-vero', 'felipe-neto', 'open-society-foundations', 'soros', 'financiamento-internacional', 'debate']
 image:
   path: "/assets/solid/microphone.svg"
+
 ---
 
 # Ação em 2021/07/13 com violações, envolvidos, fontes e gravidade media

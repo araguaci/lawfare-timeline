@@ -5,7 +5,7 @@ categories: tse
 description: > 
   "Instituto Vero anunciou parceria com Embaixada EUA para oficinas na Amazônia, financiadas externamente, incluindo treinamentos TSE sobre desinformação, no contexto pós-2022."
 faicon: fa-globe-americas
-tags: ['liberdade-de-expressao', 'seguranca-juridica', 'separacao-de-poderes', 'instituto-vero', 'felipe-neto', 'embaixada-eua', 'tse', 'gravidade-alta', 'colaboracao', 'financiamento', 'amazonia', 'desinformacao']
+tags: ['liberdade-de-expressao', 'seguranca-juridica', 'separacao-de-poderes', 'instituto-vero', 'felipe-neto', 'embaixada-eua', 'tse', 'amazonia', 'desinformacao', 'financiamento-internacional']
 image:
   path: "/assets/solid/globe-americas.svg"
 ---

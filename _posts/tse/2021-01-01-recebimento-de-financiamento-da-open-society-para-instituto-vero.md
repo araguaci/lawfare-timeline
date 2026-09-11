@@ -5,9 +5,10 @@ categories: tse
 description: > 
   "Instituto Vero recebeu US$250 mil da Open Society para projetos de direitos humanos e anti-desinformação, com implicações pré-eleições 2022."
 faicon: fa-handshake
-tags: ['liberdade-de-expressao', 'imparcialidade', 'seguranca-juridica', 'instituto-vero', 'felipe-neto', 'open-society-foundations', 'gravidade-alta', 'financiamento', 'soros', 'direitos-humanos', 'desinformacao']
+tags: ['liberdade-de-expressao', 'imparcialidade', 'seguranca-juridica', 'instituto-vero', 'felipe-neto', 'open-society-foundations', 'soros', 'financiamento-internacional']
 image:
   path: "/assets/solid/handshake.svg"
+
 ---
 
 # Ação em 2021/01/01 com violações, envolvidos, fontes e gravidade alta

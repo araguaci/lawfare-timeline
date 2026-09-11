@@ -3,7 +3,8 @@ layout: post
 title:  Implementação do Programa Permanente de Enfrentamento à Desinformação
 categories: tse
 description: Durante o período eleitoral, o TSE, com apoio da USAID e ONGs locais (beneficiadas com recursos internacionais), estruturou campanhas de combate à desinformação e treinamento de servidores e públicos-alvo. Foram realizados acordos de cooperação técnico-institucional, incluindo produção de material educativo e envolvimento de plataformas digitais.
-tags: ['tse', 'tse', 'nacional-brasil', 'usaid', 'cepps']
+tags: ['tse', 'nacional-brasil', 'usaid', 'cepps', 'financiamento-internacional']
+
 ---
 
 # Implementação do Programa Permanente de Enfrentamento à Desinformação

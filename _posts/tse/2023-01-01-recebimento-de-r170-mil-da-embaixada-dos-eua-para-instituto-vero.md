@@ -5,9 +5,10 @@ categories: tse
 description: > 
   "Entre 2023 e 2024, o Instituto Vero de Felipe Neto recebeu R$170 mil da Embaixada dos EUA para combater desinformação, enquanto ele integrava grupos governamentais contra discurso de ódio e fazia campanha influenciadora nas eleições de 2022."
 faicon: fa-dollar-sign
-tags: ['liberdade-de-expressao', 'imparcialidade', 'seguranca-juridica', 'felipe-neto', 'instituto-vero', 'embaixada-dos-eua', 'usaid', 'gravidade-alta', 'financiamento', 'desinformacao', 'censura', 'eleicoes', 'felipe-neto', 'ongs']
+tags: ['liberdade-de-expressao', 'imparcialidade', 'seguranca-juridica', 'felipe-neto', 'instituto-vero', 'embaixada-dos-eua', 'usaid', 'desinformacao', 'financiamento-internacional']
 image:
   path: "/assets/solid/dollar-sign.svg"
+
 ---
 
 # Ação em 2023/01/01 com violações, envolvidos, fontes e gravidade alta

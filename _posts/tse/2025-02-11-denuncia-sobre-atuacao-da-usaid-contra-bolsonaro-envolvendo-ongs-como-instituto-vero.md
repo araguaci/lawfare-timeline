@@ -5,9 +5,10 @@ categories: tse
 description: > 
   "Em fevereiro de 2025, denúncias baseadas em declarações de Mike Benz ressuscitaram teorias sobre interferência da USAID nas eleições de 2022 via financiamento a ONGs brasileiras, incluindo o Instituto Vero de Felipe Neto, para combater desinformação e influenciar o cenário político."
 faicon: fa-exclamation-triangle
-tags: ['liberdade-de-expressao', 'separacao-de-poderes', 'imparcialidade', 'felipe-neto', 'instituto-vero', 'usaid', 'mike-benz', 'eduardo-bolsonaro', 'gravidade-alta', 'interferencia-estrangeira', 'desinformacao', 'eleicoes-2022', 'censura']
+tags: ['liberdade-de-expressao', 'separacao-de-poderes', 'imparcialidade', 'felipe-neto', 'instituto-vero', 'usaid', 'mike-benz', 'eduardo-bolsonaro', 'interferencia-estrangeira', 'financiamento-internacional']
 image:
   path: "/assets/solid/exclamation-triangle.svg"
+
 ---
 
 # Ação em 2025/02/11 com violações, envolvidos, fontes e gravidade alta

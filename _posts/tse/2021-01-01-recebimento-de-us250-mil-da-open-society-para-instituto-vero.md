@@ -5,9 +5,10 @@ categories: tse
 description: > 
   "Em 2021, o Instituto Vero recebeu US$250 mil da Open Society Foundations, financiado por George Soros, para projetos relacionados a direitos humanos e combate à desinformação, com implicações em influência política pré-eleições de 2022."
 faicon: fa-handshake
-tags: ['liberdade-de-expressao', 'imparcialidade', 'seguranca-juridica', 'felipe-neto', 'instituto-vero', 'open-society-foundations', 'george-soros', 'gravidade-alta', 'financiamento', 'ongs', 'direitos-humanos', 'desinformacao']
+tags: ['liberdade-de-expressao', 'imparcialidade', 'seguranca-juridica', 'felipe-neto', 'instituto-vero', 'open-society-foundations', 'george-soros', 'financiamento-internacional']
 image:
   path: "/assets/solid/handshake.svg"
+
 ---
 
 # Ação em 2021/01/01 com violações, envolvidos, fontes e gravidade alta

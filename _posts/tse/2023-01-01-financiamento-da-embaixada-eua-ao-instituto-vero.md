@@ -5,9 +5,10 @@ categories: tse
 description: > 
   "Instituto Vero recebeu R$170 mil da Embaixada EUA para projetos anti-desinformação, enquanto Felipe Neto integrava grupos governamentais, com impactos em eleições."
 faicon: fa-dollar-sign
-tags: ['liberdade-de-expressao', 'imparcialidade', 'seguranca-juridica', 'instituto-vero', 'felipe-neto', 'embaixada-eua', 'usaid', 'gravidade-alta', 'financiamento', 'eua', 'desinformacao', 'governo-lula']
+tags: ['liberdade-de-expressao', 'imparcialidade', 'seguranca-juridica', 'instituto-vero', 'felipe-neto', 'embaixada-eua', 'usaid', 'desinformacao', 'financiamento-internacional']
 image:
   path: "/assets/solid/dollar-sign.svg"
+
 ---
 
 # Ação em 2023/01/01 com violações, envolvidos, fontes e gravidade alta

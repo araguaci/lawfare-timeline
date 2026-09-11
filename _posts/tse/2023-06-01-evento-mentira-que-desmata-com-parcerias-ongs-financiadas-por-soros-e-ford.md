@@ -5,9 +5,10 @@ categories: tse
 description: > 
   "Em junho de 2023, Felipe Neto promoveu evento na Câmara dos Deputados com Intervozes e COIAB, ONGs financiadas pela Open Society Foundations e Ford Foundation, focado em combater desinformação ambiental, com ligações indiretas a influências estrangeiras em pautas políticas brasileiras."
 faicon: fa-tree
-tags: ['liberdade-de-expressao', 'liberdade-de-imprensa', 'censura', 'felipe-neto', 'instituto-vero', 'intervozes', 'coiab', 'open-society-foundations', 'ford-foundation', 'gravidade-media', 'ambientalismo', 'desinformacao', 'ongs', 'imperialismo']
+tags: ['liberdade-de-expressao', 'liberdade-de-imprensa', 'felipe-neto', 'instituto-vero', 'intervozes', 'coiab', 'open-society-foundations', 'ford-foundation', 'desinformacao', 'financiamento-internacional']
 image:
   path: "/assets/solid/tree.svg"
+
 ---
 
 # Ação em 2023/06/01 com violações, envolvidos, fontes e gravidade media

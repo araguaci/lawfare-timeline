@@ -3,7 +3,8 @@ layout: post
 title:  Implementação de campanhas e treinamentos institucionais
 categories: tse
 description: Durante o processo eleitoral de 2022, TSE executa programas permanentes contra desinformação em parceria com USAID e CEPPS, envolvendo treinamentos internos, produção de manuais e colaboração com ONGs e plataformas digitais.
-tags: ['tse', 'tse', 'nacional-brasil', 'usaid', 'cepps']
+tags: ['tse', 'nacional-brasil', 'usaid', 'cepps', 'financiamento-internacional']
+
 ---
 
 # Implementação de campanhas e treinamentos institucionais

@@ -5,9 +5,10 @@ categories: tse
 description: > 
   "Instituto Vero apoiou campanhas contra Bolsonaro nas eleições de 2022, com financiamentos estrangeiros, configurando potencial interferência em mobilização eleitoral."
 faicon: fa-vote-yea
-tags: ['imparcialidade', 'presuncao-de-inocencia', 'principio-acusatorio', 'instituto-vero', 'felipe-neto', 'jair-bolsonaro', 'luiz-inacio-lula-da-silva', 'gravidade-alta', 'campanha-eleitoral', 'apoio-lula', 'interferencia', 'financiamento-estrangeiro']
+tags: ['imparcialidade', 'presuncao-de-inocencia', 'principio-acusatorio', 'instituto-vero', 'felipe-neto', 'jair-bolsonaro', 'luiz-inacio-lula-da-silva', 'financiamento-internacional', 'campanha-eleitoral']
 image:
   path: "/assets/solid/vote-yea.svg"
+
 ---
 
 # Ação em 2022/10/02 com violações, envolvidos, fontes e gravidade alta

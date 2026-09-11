@@ -5,9 +5,10 @@ categories: tse
 description: > 
   "Eduardo Bolsonaro acusou sem provas ONGs, incluindo conexões com Instituto Vero, e USAID de interferir nas eleições de 2022, defendendo CPI para investigar financiamentos estrangeiros que supostamente beneficiaram campanhas contra Bolsonaro."
 faicon: fa-gavel
-tags: ['separacao-de-poderes', 'liberdade-de-expressao', 'seguranca-juridica', 'eduardo-bolsonaro', 'usaid', 'instituto-vero', 'felipe-neto', 'gravidade-alta', 'acusacoe', 'interferencia', 'cpi', 'financiamento-estrangeiro']
+tags: ['separacao-de-poderes', 'liberdade-de-expressao', 'seguranca-juridica', 'eduardo-bolsonaro', 'usaid', 'instituto-vero', 'felipe-neto', 'financiamento-internacional', 'acusacoe']
 image:
   path: "/assets/solid/gavel.svg"
+
 ---
 
 # Ação em 2025/02/06 com violações, envolvidos, fontes e gravidade alta

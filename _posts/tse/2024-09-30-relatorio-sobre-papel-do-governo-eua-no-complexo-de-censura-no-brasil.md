@@ -5,9 +5,10 @@ categories: tse
 description: > 
   "Relatório PDF detalha como DFRLab, financiado por USAID, influenciou TSE em eleições de 2022, com conexões ao Instituto Vero via parcerias anti-desinformação."
 faicon: fa-file-pdf
-tags: ['liberdade-de-expressao', 'separacao-de-poderes', 'proibicao-de-censura-previa', 'usaid', 'dfrlab', 'tse', 'instituto-vero', 'gravidade-alta', 'relatorio', 'censura-industrial', 'influencia-eua', 'tse']
+tags: ['liberdade-de-expressao', 'separacao-de-poderes', 'proibicao-de-censura-previa', 'usaid', 'dfrlab', 'instituto-vero', 'tse', 'financiamento-internacional', 'relatorio']
 image:
   path: "/assets/solid/file-pdf.svg"
+
 ---
 
 # Ação em 2024/09/30 com violações, envolvidos, fontes e gravidade alta

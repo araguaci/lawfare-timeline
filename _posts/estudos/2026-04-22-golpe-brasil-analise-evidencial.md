@@ -4,10 +4,11 @@ description: "Síntese analítica baseada nos documentos primários: dois vetore
 date: 2026-04-22T12:00:00-03:00
 image:
   path: "/assets/img/estudos/quem-dou-o-golpe.webp"
-tags: ["lawfare", "vazatoga", "choquei", "fakenews", "usaid", "netlab"]
+tags: ["lawfare", "vazatoga", "choquei", "fakenews", "usaid", "netlab", "financiamento-internacional"]
 categories: estudos
 mermaid: false
 pin: false
+
 ---
 
 - &nbsp;

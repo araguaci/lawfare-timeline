@@ -6,12 +6,13 @@ description: "Acordo TSE-USAID (2021) para combate a desinformacao eleitoral. Re
 date: 2026-06-29T12:00:00-03:00
 image:
   path: "/assets/solid/book-open.svg"
-tags: ["estudo", "p04", "p04b", "p09", "tse", "usaid", "censura-seletiva"]
+tags: ["estudo", "p04", "p04b", "p09", "tse", "usaid", "censura-seletiva", "financiamento-internacional"]
 categories: tse
 mermaid: false
 pin: false
 permalink: /posts/2026-06-29-tse-usaid-parceria-censura-seletiva/
 source_data: "T-216-tse-usaid-parceria-censura-seletiva.json"
+
 ---
 
 Entre 2021 e 2025, o TSE manteve parceria formal com a USAID (agência de cooperação dos EUA) voltada ao combate à desinformação eleitoral. Parte dos recursos dessa cooperação — e de outras fontes externas — foi repassada a ONGs intermediárias, com destaque para o **Instituto Vero**, que recebeu **US$ 250 mil da Open Society** (2021) e **R$ 170 mil da Embaixada dos EUA** (2023). O total movimentado no ecossistema de combate à desinformação ligado a esse cluster é estimado em **R$ 267 milhões**.
