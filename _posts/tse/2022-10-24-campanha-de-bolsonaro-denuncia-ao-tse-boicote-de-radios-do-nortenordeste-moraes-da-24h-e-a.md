@@ -4,7 +4,7 @@ description: "Em coletiva no Palácio da Alvorada, o ministro das Comunicações
 date: 2022-10-24T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["P04", "tse", "eleicoes-2022", "radiolao", "p04", "ev-confirmed"]
+tags: ["p04", "tse", "eleicoes-2022", "radiolao", "p04", "ev-confirmed"]
 categories: tse
 permalink: /posts/2022-10-24-campanha-de-bolsonaro-denuncia-ao-tse-boicote-de-radios-do-nortenordeste-moraes-da-24h-e-a/
 id_corpus: "1889"

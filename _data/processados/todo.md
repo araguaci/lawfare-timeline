@@ -1,11 +1,17 @@
 # Notas de processamento · `_data/todo/`
 
-**Atualizado:** 2026-09-10 (T-267 minérios / terras raras)
+**Atualizado:** 2026-09-11 (1913 sigilo Master / Fachin)
 
 ## Fila
 
-- `_data/todo/` — **sem batches JSON** (10/09, após Fachin/Temer/Topázio)
-- Staging: HTML Radiolão / INQ 4781 / MCD, `p13-porta-giratoria.html`, `prompt-tratamento-pdfs-mensalao.md`
+- `_data/todo/` — **sem batches JSON** (11/09, após 1913)
+- Staging: `addendum-t263.md` (já incorporado no post T-263), HTML Radiolão / INQ 4781 / MCD, `prompt-tratamento-pdfs-mensalao.md`
+
+## Merge 11/09/2026
+
+| Batch | IDs na fila | IDs finais |
+|-------|-------------|------------|
+| Sigilo Master / Fachin | 1913 | **1913** (livre) |
 
 ## Merge 10/09/2026 (b)
 

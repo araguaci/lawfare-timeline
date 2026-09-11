@@ -4,7 +4,7 @@ description: "Em 1º de setembro de 2026, o deputado federal Nikolas Ferreira (P
 date: 2026-09-01T12:00:00.000Z
 image:
   path: "/assets/solid/skull.svg"
-tags: ["escandalos", "congresso", "banco-master", "P04b", "vorcaro"]
+tags: ["escandalos", "congresso", "banco-master", "p04b", "vorcaro"]
 categories: escandalos
 permalink: /posts/2026-09-01-nikolas-ferreira-pede-prisao-e-afastamento-de-moraes-citando-mensagens-de-vorcaro-audios-d/
 id_corpus: "1909"

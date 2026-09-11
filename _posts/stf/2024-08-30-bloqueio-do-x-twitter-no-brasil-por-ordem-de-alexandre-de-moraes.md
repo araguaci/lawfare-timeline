@@ -4,7 +4,7 @@ description: "Entre 30 de agosto e 8 de outubro de 2024, Alexandre de Moraes det
 date: 2024-08-30T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P03"]
+tags: ["stf", "p03"]
 categories: stf
 permalink: /posts/2024-08-30-bloqueio-do-x-twitter-no-brasil-por-ordem-de-alexandre-de-moraes/
 id_corpus: "1904"

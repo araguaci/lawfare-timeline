@@ -4,7 +4,7 @@ description: "Em 15/06/2023, Moraes remeteu o processo ao TRE-DF \"para proceder
 date: 2023-06-30T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["P02", "tse", "tre-df", "p02", "ev-confirmed"]
+tags: ["p02", "tse", "tre-df", "p02", "ev-confirmed"]
 categories: tse
 permalink: /posts/2023-06-30-machado-e-demitido-duas-vezes-em-dez-meses-pelo-mesmo-presidente-do-tre-df-por-fundamentos/
 id_corpus: "1893"

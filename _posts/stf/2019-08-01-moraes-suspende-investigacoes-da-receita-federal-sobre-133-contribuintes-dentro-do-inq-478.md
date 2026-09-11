@@ -4,7 +4,7 @@ description: "Alexandre de Moraes, relator do INQ 4.781, determinou a suspensão
 date: 2019-08-01T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P02", "P05"]
+tags: ["stf", "p02", "p05"]
 categories: stf
 permalink: /posts/2019-08-01-moraes-suspende-investigacoes-da-receita-federal-sobre-133-contribuintes-dentro-do-inq-478/
 id_corpus: "1898"

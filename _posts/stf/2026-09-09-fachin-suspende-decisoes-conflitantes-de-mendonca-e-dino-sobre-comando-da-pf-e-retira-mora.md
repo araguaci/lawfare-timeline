@@ -4,7 +4,7 @@ description: "Em 9 de setembro de 2026, o presidente do STF, Edson Fachin, suspe
 date: 2026-09-09T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["P01", "P02", "P03", "stf", "inq4781", "banco-master"]
+tags: ["p01", "p02", "p03", "stf", "inq4781", "banco-master"]
 categories: stf
 permalink: /posts/2026-09-09-fachin-suspende-decisoes-conflitantes-de-mendonca-e-dino-sobre-comando-da-pf-e-retira-mora/
 id_corpus: "1910"

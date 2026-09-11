@@ -93,7 +93,7 @@ Se você só vai ler cinco coisas neste site, leia estas — elas cobrem o maior
 
 4. **[Anatomia da Liminar Monocrática — Quando um Ministro do STF Decide Sozinho](/posts/anatomia-liminar-monocratica-stf-poder-individual-sem-controle/)** — explica, com dois exemplos concretos e nomeados, como um único ministro pode suspender uma lei ou uma investigação sozinho — e depois acabar relatando o próprio caso que essa decisão beneficiou.
 
-5. **["P04 Pela Direita" — Espelhos Estruturais do Both-Sidesism](/posts/2026-07-20-p04-pela-direita-narco-soberania-eleitoral-e-diplomacia-das-sombras-como-espelhos-estrutur/)** — mostra que a manipulação de narrativa (P04/P04b) não tem lado político fixo: o mesmo mecanismo de diluir fato em "opinião" aparece em observatórios de direita e de esquerda. É o artigo que mais diretamente explica o viés deste guia.
+5. **["p04 Pela Direita" — Espelhos Estruturais do Both-Sidesism](/posts/2026-07-20-p04-pela-direita-narco-soberania-eleitoral-e-diplomacia-das-sombras-como-espelhos-estrutur/)** — mostra que a manipulação de narrativa (P04/P04b) não tem lado político fixo: o mesmo mecanismo de diluir fato em "opinião" aparece em observatórios de direita e de esquerda. É o artigo que mais diretamente explica o viés deste guia.
 
 ***
 

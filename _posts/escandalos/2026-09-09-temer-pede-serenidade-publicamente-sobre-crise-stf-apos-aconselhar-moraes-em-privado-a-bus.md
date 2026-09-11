@@ -4,7 +4,7 @@ description: "Em vídeo divulgado pelo Metrópoles em 9 de setembro de 2026, o e
 date: 2026-09-09T12:00:00.000Z
 image:
   path: "/assets/solid/skull.svg"
-tags: ["escandalos", "P04b", "P10", "stf", "inq4781", "banco-master", "temer"]
+tags: ["escandalos", "p04b", "P10", "stf", "inq4781", "banco-master", "temer"]
 categories: escandalos
 permalink: /posts/2026-09-09-temer-pede-serenidade-publicamente-sobre-crise-stf-apos-aconselhar-moraes-em-privado-a-bus/
 id_corpus: "1911"

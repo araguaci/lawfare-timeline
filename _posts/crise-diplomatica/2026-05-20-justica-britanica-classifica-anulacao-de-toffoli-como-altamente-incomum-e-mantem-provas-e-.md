@@ -4,7 +4,7 @@ description: "O juiz Mark Weekes, do Tribunal da Coroa de Southwark (Londres), d
 date: 2026-05-20T12:00:00.000Z
 image:
   path: "/assets/solid/globe.svg"
-tags: ["crise-diplomatica", "P01"]
+tags: ["crise-diplomatica", "p01"]
 categories: crise-diplomatica
 permalink: /posts/2026-05-20-justica-britanica-classifica-anulacao-de-toffoli-como-altamente-incomum-e-mantem-provas-e-/
 id_corpus: "1903"

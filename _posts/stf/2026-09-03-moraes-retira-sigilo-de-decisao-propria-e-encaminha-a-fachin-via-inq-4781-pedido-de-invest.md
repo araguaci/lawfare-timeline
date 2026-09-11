@@ -4,7 +4,7 @@ description: "Em 3 de setembro de 2026, Alexandre de Moraes retirou o sigilo de 
 date: 2026-09-03T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "inq4781", "banco-master", "P02", "P04b"]
+tags: ["stf", "inq4781", "banco-master", "p02", "p04b"]
 categories: stf
 permalink: /posts/2026-09-03-moraes-retira-sigilo-de-decisao-propria-e-encaminha-a-fachin-via-inq-4781-pedido-de-invest/
 id_corpus: "1906"

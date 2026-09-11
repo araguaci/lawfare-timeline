@@ -1,6 +1,6 @@
 # Próximos passos · lawfare-timeline
 
-**Atualizado:** 2026-09-10 (T-267 minérios / terras raras)
+**Atualizado:** 2026-09-11 (1913 sigilo Master / Fachin)
 
 > Espelho: `docs/TODO.md` · Notas: `_data/processados/todo.md` · Legado: `docs/TODO-LEGACY.md`
 
@@ -10,10 +10,20 @@
 
 | Track | Last | Próximo | Validação |
 |-------|------|---------|-----------|
-| Main | **1912** | **1913** | lawfare.json **1873** entradas · sem IDs duplicados |
+| Main | **1913** | **1914** | lawfare.json **1874** entradas · sem IDs duplicados |
 | Thematic | **T-267** | **T-268** | sync 100–267 contínuo |
 | Dragão e a Onça | **1770** / **T-246** | — | `dragao-onca.json` **151** |
-| Fila `_data/todo/` | staging HTML/MD | — | JSON 1910–1912 arquivado 10/09 |
+| Fila `_data/todo/` | staging HTML/MD | — | JSON 1913 arquivado 11/09 |
+
+---
+
+## Rodada 11/09/2026 ✅ — Sigilo Master / Fachin
+
+| Faixa | Batch | Conteúdo |
+|-------|-------|----------|
+| **1913** | `1905-sigilo-master-fachin` | Mendonça levanta sigilo da PET 15.556 e 14 conexos a pedido de Fachin (véspera da sessão de 15/09) |
+
+ID 1913 estava livre. Sem realocação. Dark Horse / Ciro Nogueira / Jaques Wagner permanece `ev-contested` (1 de 8 fontes).
 
 ---
 
@@ -107,6 +117,6 @@ bundle exec jekyll build
 
 ## Referências
 
-- Corpus: `_data/lawfare.json` (**1873** entradas · main até **1912**)
+- Corpus: `_data/lawfare.json` (**1874** entradas · main até **1913**)
 - Unified: `_data/lawfare-unified-corpus.json`
 - Sidecar dragão: `_data/dragao-onca.json` (151 · **1763/1764** = CEEE-T / JMEV intactos)

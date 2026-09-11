@@ -4,7 +4,7 @@ description: "Análise publicada em 3 de setembro de 2026 aponta que o relatóri
 date: 2026-09-03T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "inq4781", "banco-master", "P02"]
+tags: ["stf", "inq4781", "banco-master", "p02"]
 categories: stf
 permalink: /posts/2026-09-03-moraes-usa-relatorio-de-inteligencia-da-pf-sobre-mendonca-produzido-antes-de-pedido-formal/
 id_corpus: "1908"

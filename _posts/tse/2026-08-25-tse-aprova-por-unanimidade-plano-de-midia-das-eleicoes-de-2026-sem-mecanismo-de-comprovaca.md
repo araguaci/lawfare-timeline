@@ -4,7 +4,7 @@ description: "Em audiência pública de 20/08/2026, a advogada Maria Cláudia Bu
 date: 2026-08-25T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["P06", "tse", "eleicoes-2026", "p06", "ev-confirmed"]
+tags: ["p06", "tse", "eleicoes-2026", "p06", "ev-confirmed"]
 categories: tse
 permalink: /posts/2026-08-25-tse-aprova-por-unanimidade-plano-de-midia-das-eleicoes-de-2026-sem-mecanismo-de-comprovaca/
 id_corpus: "1897"

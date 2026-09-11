@@ -4,7 +4,7 @@ description: "Reportagem de 6 de setembro de 2026 (A Investigação) detalha que
 date: 2026-09-06T12:00:00.000Z
 image:
   path: "/assets/solid/bullseye.svg"
-tags: ["operacoes", "P02", "P05", "operacao-rejeito", "banco-master", "topazio-imperial"]
+tags: ["operacoes", "p02", "p05", "operacao-rejeito", "banco-master", "topazio-imperial"]
 categories: operacoes
 permalink: /posts/2026-09-06-extracao-forense-confirma-nome-de-arquivo-projeto-topazio-no-grupo-gmais-operado-por-teixe/
 id_corpus: "1912"

@@ -4,7 +4,7 @@ description: "O PAD instaurado por determinação de Moraes (então presidente d
 date: 2023-04-03T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["P02", "P03", "tse", "p02", "p03", "ev-alleged"]
+tags: ["p02", "p03", "tse", "p02", "p03", "ev-alleged"]
 categories: tse
 permalink: /posts/2023-04-03-comissao-do-pad-contra-machado-se-divide-unico-servidor-de-carreira-vota-pela-absolvicao-e/
 id_corpus: "1892"

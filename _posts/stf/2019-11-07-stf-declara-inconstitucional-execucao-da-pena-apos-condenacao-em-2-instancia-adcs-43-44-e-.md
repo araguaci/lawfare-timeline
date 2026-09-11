@@ -4,7 +4,7 @@ description: "Por 6 votos a 5, o plenário do STF julgou as ADCs 43, 44 e 54 e d
 date: 2019-11-07T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P01"]
+tags: ["stf", "p01"]
 categories: stf
 permalink: /posts/2019-11-07-stf-declara-inconstitucional-execucao-da-pena-apos-condenacao-em-2-instancia-adcs-43-44-e-/
 id_corpus: "1899"

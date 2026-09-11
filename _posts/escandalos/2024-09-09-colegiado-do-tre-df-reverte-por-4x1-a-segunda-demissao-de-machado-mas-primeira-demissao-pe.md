@@ -4,7 +4,7 @@ description: "Em 09/09/2024, o colegiado do TRE-DF julgou o recurso de Machado c
 date: 2024-09-09T12:00:00.000Z
 image:
   path: "/assets/solid/skull.svg"
-tags: ["escandalos", "P02", "tre-df", "ev-alleged"]
+tags: ["escandalos", "p02", "tre-df", "ev-alleged"]
 categories: escandalos
 permalink: /posts/2024-09-09-colegiado-do-tre-df-reverte-por-4x1-a-segunda-demissao-de-machado-mas-primeira-demissao-pe/
 id_corpus: "1894"

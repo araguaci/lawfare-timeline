@@ -4,7 +4,7 @@ description: "Mais de um ano após a abertura de ofício, o plenário do STF jul
 date: 2020-06-10T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "P02", "P03"]
+tags: ["stf", "p02", "p03"]
 categories: stf
 permalink: /posts/2020-06-10-plenario-do-stf-valida-legalidade-do-inq-4781-por-10-votos-a-1/
 id_corpus: "1900"

@@ -4,7 +4,7 @@ description: "Entre 5 e 7 de março de 2026, o ministro Dias Toffoli reverteu de
 date: 2026-03-07T12:00:00.000Z
 image:
   path: "/assets/solid/circle-exclamation.svg"
-tags: ["impunidade", "P01", "P07"]
+tags: ["impunidade", "p01", "p07"]
 categories: impunidade
 permalink: /posts/2026-03-07-toffoli-anula-decisoes-de-moro-e-beneficia-23-alvos-da-lava-jato-incluindo-caso-beto-richa/
 id_corpus: "1901"

@@ -4,7 +4,7 @@ description: "Na tarde de 25/10/2022, a Rádio JM FM (Uberaba/MG) enviou ao pool
 date: 2022-10-25T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["P02", "tse", "p02", "ev-confirmed"]
+tags: ["p02", "tse", "p02", "ev-confirmed"]
 categories: tse
 permalink: /posts/2022-10-25-alexandre-gomes-machado-coordenador-do-pool-de-emissoras-do-tse-e-retirado-sob-escolta-e-e/
 id_corpus: "1890"

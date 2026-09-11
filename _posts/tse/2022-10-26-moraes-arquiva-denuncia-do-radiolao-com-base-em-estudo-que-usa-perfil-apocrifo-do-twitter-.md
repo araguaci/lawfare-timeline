@@ -4,7 +4,7 @@ description: "Dois dias após a denúncia, Moraes arquivou o caso classificando-
 date: 2022-10-26T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["P04", "P04b", "tse", "p04", "p04b", "ev-confirmed"]
+tags: ["p04", "p04b", "tse", "p04", "p04b", "ev-confirmed"]
 categories: tse
 permalink: /posts/2022-10-26-moraes-arquiva-denuncia-do-radiolao-com-base-em-estudo-que-usa-perfil-apocrifo-do-twitter-/
 id_corpus: "1891"

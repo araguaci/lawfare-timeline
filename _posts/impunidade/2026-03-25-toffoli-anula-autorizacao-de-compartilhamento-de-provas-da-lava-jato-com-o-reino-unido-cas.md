@@ -4,7 +4,7 @@ description: "Em decisão sob sigilo, o ministro Dias Toffoli declarou nula a au
 date: 2026-03-25T12:00:00.000Z
 image:
   path: "/assets/solid/circle-exclamation.svg"
-tags: ["impunidade", "P01"]
+tags: ["impunidade", "p01"]
 categories: impunidade
 permalink: /posts/2026-03-25-toffoli-anula-autorizacao-de-compartilhamento-de-provas-da-lava-jato-com-o-reino-unido-cas/
 id_corpus: "1902"

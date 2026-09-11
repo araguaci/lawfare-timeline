@@ -4,7 +4,7 @@ description: "Relatórios de inteligência da Polícia Federal enviados a Alexan
 date: 2026-09-03T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "inq4781", "banco-master", "P01", "P02"]
+tags: ["stf", "inq4781", "banco-master", "p01", "p02"]
 categories: stf
 permalink: /posts/2026-09-03-pf-aponta-risco-de-nulidade-nos-atos-de-mendonca-contra-moraes-por-vicio-de-competencia-fa/
 id_corpus: "1907"
