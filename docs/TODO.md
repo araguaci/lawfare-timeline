@@ -24,9 +24,9 @@
 | **1914** | `turma-lauro-jardim` | 3ª fase: milícia «A Turma» e plano de agressão a Lauro Jardim |
 | **1915** | `morte-sicario-custodia` | Morte de Mourão sob custódia da PF (`ev-contested`) |
 | **1916** | `prisao-henrique-vorcaro` | 6ª fase: prisão de Henrique Vorcaro |
-| **1917** | `hc-henrique-felipe-vorcaro` | 2ª Turma mantém prisões 3×1; cruza T-215 |
+| **1917** | `hc-henrique-felipe-vorcaro` | 2ª Turma mantém prisões 3×1; cruza [T-215](/posts/2026-06-16-2-turma-do-stf-mantem-prisao-de-pai-e-primo-de-daniel-vorcaro-por-31-gilmar-mendes-diverge/) |
 
-IDs 1914–1917 estavam livres. Sem realocação.
+IDs 1914–1917 estavam livres. Sem realocação. Data do 1917 alinhada a 17/06 (fontes do resultado; sessão exata segue lacuna).
 
 ---
 
