@@ -1,6 +1,6 @@
 # Próximos passos · lawfare-timeline
 
-**Atualizado:** 2026-09-11 (1913 sigilo Master / Fachin)
+**Atualizado:** 2026-09-11 (1914–1917 A Turma / Compliance Zero)
 
 > Espelho: `docs/TODO.md` · Notas: `_data/processados/todo.md` · Legado: `docs/TODO-LEGACY.md`
 
@@ -10,10 +10,23 @@
 
 | Track | Last | Próximo | Validação |
 |-------|------|---------|-----------|
-| Main | **1913** | **1914** | lawfare.json **1874** entradas · sem IDs duplicados |
+| Main | **1917** | **1918** | lawfare.json **1878** entradas · sem IDs duplicados |
 | Thematic | **T-267** | **T-268** | sync 100–267 contínuo |
 | Dragão e a Onça | **1770** / **T-246** | — | `dragao-onca.json` **151** |
-| Fila `_data/todo/` | staging HTML/MD | — | JSON 1913 arquivado 11/09 |
+| Fila `_data/todo/` | staging HTML/MD | — | JSON 1914–1917 arquivados 11/09 |
+
+---
+
+## Rodada 11/09/2026 (b) ✅ — A Turma / Compliance Zero
+
+| Faixa | Batch | Conteúdo |
+|-------|-------|----------|
+| **1914** | `turma-lauro-jardim` | 3ª fase: milícia «A Turma» e plano de agressão a Lauro Jardim |
+| **1915** | `morte-sicario-custodia` | Morte de Mourão sob custódia da PF (`ev-contested`) |
+| **1916** | `prisao-henrique-vorcaro` | 6ª fase: prisão de Henrique Vorcaro |
+| **1917** | `hc-henrique-felipe-vorcaro` | 2ª Turma mantém prisões 3×1; cruza [T-215](/posts/2026-06-16-2-turma-do-stf-mantem-prisao-de-pai-e-primo-de-daniel-vorcaro-por-31-gilmar-mendes-diverge/) |
+
+IDs 1914–1917 estavam livres. Sem realocação. Data do 1917 alinhada a 17/06 (fontes do resultado; sessão exata segue lacuna).
 
 ---
 
@@ -117,6 +130,6 @@ bundle exec jekyll build
 
 ## Referências
 
-- Corpus: `_data/lawfare.json` (**1874** entradas · main até **1913**)
+- Corpus: `_data/lawfare.json` (**1878** entradas · main até **1917**)
 - Unified: `_data/lawfare-unified-corpus.json`
 - Sidecar dragão: `_data/dragao-onca.json` (151 · **1763/1764** = CEEE-T / JMEV intactos)

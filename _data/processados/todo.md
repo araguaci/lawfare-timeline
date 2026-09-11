@@ -1,11 +1,20 @@
 # Notas de processamento · `_data/todo/`
 
-**Atualizado:** 2026-09-11 (1913 sigilo Master / Fachin)
+**Atualizado:** 2026-09-11 (1914–1917 A Turma / Compliance Zero)
 
 ## Fila
 
-- `_data/todo/` — **sem batches JSON** (11/09, após 1913)
-- Staging: `addendum-t263.md` (já incorporado no post T-263), HTML Radiolão / INQ 4781 / MCD, `prompt-tratamento-pdfs-mensalao.md`
+- `_data/todo/` — **sem batches JSON** (11/09, após 1914–1917)
+- Staging: `addendum-t263.md`, `prompt-tratamento-pdfs-mensalao.md`, `thread-vazatoga-diploma-impunidade.md`
+
+## Merge 11/09/2026 (b)
+
+| Batch | IDs na fila | IDs finais |
+|-------|-------------|------------|
+| A Turma / Lauro Jardim | 1914 | **1914** |
+| Morte Sicário / custódia PF | 1915 | **1915** |
+| Prisão Henrique Vorcaro | 1916 | **1916** |
+| HC Henrique / Felipe | 1917 | **1917** |
 
 ## Merge 11/09/2026
 

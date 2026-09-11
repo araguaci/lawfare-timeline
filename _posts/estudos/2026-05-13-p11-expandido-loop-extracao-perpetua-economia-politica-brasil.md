@@ -1,5 +1,5 @@
 ---
-title: "P11 Expandido — O Loop de Extração Perpétua: a economia política que transforma proteção social em serviço de dívida"
+title: "p11 Expandido — O Loop de Extração Perpétua: a economia política que transforma proteção social em serviço de dívida"
 description: "Selic cronicamente elevada → desindustrialização → desemprego estrutural → R$160 bilhões em transferências → captura do fluxo pelo sistema financeiro → rentistas sem incentivo produtivo → loop fecha. O P11 não é conspiração — é equilíbrio de Nash de um sistema que ninguém precisa coordenar para reproduzir."
 date: 2026-05-13T19:00:00.000Z
 image:

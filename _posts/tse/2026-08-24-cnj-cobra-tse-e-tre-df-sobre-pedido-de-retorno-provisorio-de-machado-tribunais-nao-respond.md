@@ -4,7 +4,7 @@ description: "Quase quatro anos após a retirada sob escolta, o CNJ abriu prazo 
 date: 2026-08-24T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: [6", "tse", "cnj", "tre-df", "p06", "ev-alleged"]
+tags: ["p06", "tse", "cnj", "tre-df", "p06", "ev-alleged"]
 categories: tse
 permalink: /posts/2026-08-24-cnj-cobra-tse-e-tre-df-sobre-pedido-de-retorno-provisorio-de-machado-tribunais-nao-respond/
 id_corpus: "1895"

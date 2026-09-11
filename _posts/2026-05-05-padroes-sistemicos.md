@@ -1,6 +1,6 @@
 ---
 title: "Doze padrões, vinte e cinco anos: a matriz de indulgência sistêmica que não para de se repetir"
-description: "P1 a P12 — da anulação processual ao loop de extração perpétua. Doze padrões identificados em 17 operações anticorrupção brasileiras (2000–2026), R$ 156 bilhões documentados e uma hipótese incômoda: a falha não é acidental."
+description: "p1 a P12 — da anulação processual ao loop de extração perpétua. Doze padrões identificados em 17 operações anticorrupção brasileiras (2000–2026), R$ 156 bilhões documentados e uma hipótese incômoda: a falha não é acidental."
 date: 2026-05-05T12:00:00.000Z
 image:
   path: "/assets/img/og-padroes-sistemicos-dashboard.webp"

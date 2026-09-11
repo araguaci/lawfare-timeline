@@ -11,12 +11,12 @@
     "tracks": {
       "main": {
         "description": "Track principal — eventos institucionais, decisões judiciais, episódios políticos",
-        "id_range": "1–1913 (confirmed)",
+        "id_range": "1–1917 (confirmed)",
         "id_format": "integer",
-        "last_confirmed": 1913,
-        "last_jekyll_published": 1913,
+        "last_confirmed": 1917,
+        "last_jekyll_published": 1917,
         "last_session_produced": 1762,
-        "notes": "lawfare.json confirmado até 1913. Próximo ID livre: 1914."
+        "notes": "lawfare.json confirmado até 1917. Próximo ID livre: 1918."
       },
       "thematic": {
         "description": "Sub-corpus temático — análise estrutural de operações e padrões",
@@ -541,14 +541,22 @@
           ],
           "status": "confirmed",
           "notes": "Merge todo 2026-09-11: main IDs 1913-1913."
+        },
+        {
+          "range": [
+            1914,
+            1917
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-09-11: main IDs 1914-1917."
         }
       ],
-      "last_id": 1913,
-      "last_jekyll_published": 1913,
+      "last_id": 1917,
+      "last_jekyll_published": 1917,
       "last_produced": 1770,
-      "next_available": 1914,
+      "next_available": 1918,
       "merge_queue": [],
-      "last_confirmed": 1913,
+      "last_confirmed": 1917,
       "last_session_produced": 1770
     },
     "thematic": {
@@ -1876,7 +1884,7 @@
     "thematic_track_last_sync": "2026-09-11",
     "dragao_onca_series_sync": "2026-07-27T12:00:00-03:00",
     "ids_confirmed_total": {
-      "main_track": "1913 (Jekyll + lawfare.json)",
+      "main_track": "1917 (Jekyll + lawfare.json)",
       "thematic_track": 267
     },
     "ids_pending_production": [],
@@ -2361,7 +2369,8 @@
       "T-220 PCC-OFAC Arpar publicado (2026-09-11)",
       "T-221 Nemo judex DPU publicado (2026-09-11)",
       "T-196 Radar Top 30 publicado em estudos/ (2026-09-11)",
-      "Próximo thematic: T-268; main next=1914"
+      "lawfare.json last_id=1917; próximo ID livre=1918",
+      "Próximo thematic: T-268; main next=1918"
     ],
     "notes": [
       "Correção 2026-07-18: ID 1520→P04b imprensa; revisão criminal Bolsonaro→1621; duplicata lawfare/ removida.",
@@ -2699,13 +2708,13 @@
       "date": "2026-09-11",
       "session": "cursor — sync corpus IDs + Drive",
       "produced": [
-        "Main track sync last_id=1913 next=1914",
+        "Main track sync last_id=1917 next=1918",
         "Thematic sync last=T-267 next=T-268",
         "Export gdrive_sync_export.py (claude.ai-corpus-ids-sync.json + lawfare.json)"
       ],
       "summary": {
-        "lawfare_max_id": 1913,
-        "next_main_id": 1914,
+        "lawfare_max_id": 1917,
+        "next_main_id": 1918,
         "thematic_last": "T-267",
         "next_thematic": "T-268",
         "t_studies_on_disk": 53,
@@ -2718,7 +2727,7 @@
       "status": "completed"
     }
   ],
-  "last_main_id": 1913,
-  "next_available": 1914,
+  "last_main_id": 1917,
+  "next_available": 1918,
   "updated": "2026-09-11"
 }
