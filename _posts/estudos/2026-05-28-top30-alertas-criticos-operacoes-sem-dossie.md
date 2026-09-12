@@ -38,7 +38,7 @@ Rodadas editoriais **T-191–T-207** (mai/2026) mantêm **0 alertas críticos** 
 | --- | --- | --- |
 | T-205 | [Duplo padrão judicial](/posts/duplo-padrao-judicial-corpus-bridge/) | T-143 |
 | T-206 | [SPLC modelo Brasil](/posts/splc-modelo-brasil-corpus-bridge/) | T-129 |
-| T-207 | [Vaza Toga INQ 4781](/posts/vaza-toga-corpus-bridge/) | T-108 |
+| T-207 | [Vaza Toga INQ 4781](/posts/2026-05-29-vaza-toga-corpus-bridge/) | T-108 |
 
 ## Rodada T-202–T-204 ✅ (29/05/2026)
 
