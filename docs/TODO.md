@@ -1,6 +1,6 @@
 # Próximos passos · lawfare-timeline
 
-**Atualizado:** 2026-09-11 (1914–1917 A Turma / Compliance Zero)
+**Atualizado:** 2026-09-12 (1918–1925 / T-268 O Negócio da Lama)
 
 > Espelho: `docs/TODO.md` · Notas: `_data/processados/todo.md` · Legado: `docs/TODO-LEGACY.md`
 
@@ -10,10 +10,28 @@
 
 | Track | Last | Próximo | Validação |
 |-------|------|---------|-----------|
-| Main | **1917** | **1918** | lawfare.json **1878** entradas · sem IDs duplicados |
-| Thematic | **T-267** | **T-268** | sync 100–267 contínuo |
+| Main | **1925** | **1926** | lawfare.json **1886** entradas · sem IDs duplicados |
+| Thematic | **T-268** | **T-269** | sync 100–268 contínuo |
 | Dragão e a Onça | **1770** / **T-246** | — | `dragao-onca.json` **151** |
-| Fila `_data/todo/` | staging HTML/MD | — | JSON 1914–1917 arquivados 11/09 |
+| Fila `_data/todo/` | staging HTML/MD | — | JSON 1918–1925 / T-268 arquivado 12/09 |
+
+---
+
+## Rodada 12/09/2026 ✅ — O Negócio da Lama / Brumadinho
+
+| Faixa | Batch | Conteúdo |
+|-------|-------|----------|
+| **1918** | `brumadinho-negocio-lama` | Acordo de confidencialidade Vale–Green Metals–Flapa (20/07/2017) |
+| **1919** | mesmo lote | LAC1 COPAM + anúncio New Steel US$ 500 mi no mesmo dia (11/12/2018) |
+| **1920** | mesmo lote | Laudos TÜV SÜD e arquivamento do MP de Brumadinho |
+| **1921** | mesmo lote | Perícia da PF: perfuração da Vale como gatilho da B1 |
+| **1922** | mesmo lote | Declaração à CVM (rejeito ≠ ativo) vs. tese ao CADE |
+| **1923** | mesmo lote | Incorporação/extinção da New Steel (R$ 78,5 mi vs. R$ 1,9 bi) |
+| **1924** | mesmo lote | STJ mantém reabertura da ação penal contra Schvartsman |
+| **1925** | mesmo lote | Audiências em Munique contra a TÜV SÜD (`ev-alleged`) |
+| **T-268** | mesmo lote | [O Loop da Lama](/posts/2026-06-12-o-loop-da-lama-rejeito-como-ativo-bilionario-perante-o-cade-passivo-inexistente-perante-a-/) |
+
+IDs 1918–1925 e T-268 estavam livres. Sem realocação. Datas mês-only (1920, 1925) normalizadas para o dia 01. **1925** permanece `ev-alleged` (fonte única).
 
 ---
 
@@ -107,6 +125,7 @@ A fila reapresentou 4 batches com numeração antiga. **VT4 era duplicata** de 1
 |------|------------|
 | **1899** sem `fontes_verificadas` (ADC 43/44/54 — `ev-contested` no lote) | Alta |
 | **1907** / **1908** `ev-alleged` (fonte única / coluna) — corroborar | Alta |
+| **1925** `ev-alleged` (TÜV SÜD / Munique — fonte única A Investigação) — corroborar | Alta |
 | Formalizar **P13 Porta Giratória** em METHODOLOGY.md (T-254) | Média |
 | Formalizar P04b em METHODOLOGY | Média |
 | Stubs **725 / 728 / 729** vs registro definitivo 1869–1873 — decidir patch ou arquivar | Média |
@@ -130,6 +149,6 @@ bundle exec jekyll build
 
 ## Referências
 
-- Corpus: `_data/lawfare.json` (**1878** entradas · main até **1917**)
+- Corpus: `_data/lawfare.json` (**1886** entradas · main até **1925**)
 - Unified: `_data/lawfare-unified-corpus.json`
 - Sidecar dragão: `_data/dragao-onca.json` (151 · **1763/1764** = CEEE-T / JMEV intactos)

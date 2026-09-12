@@ -1,11 +1,19 @@
 # Notas de processamento · `_data/todo/`
 
-**Atualizado:** 2026-09-11 (1914–1917 A Turma / Compliance Zero)
+**Atualizado:** 2026-09-12 (1918–1925 / T-268 O Negócio da Lama)
 
 ## Fila
 
-- `_data/todo/` — **sem batches JSON** (11/09, após 1914–1917)
-- Staging: `addendum-t263.md`, `prompt-tratamento-pdfs-mensalao.md`, `thread-vazatoga-diploma-impunidade.md`
+- `_data/todo/` — **sem batches JSON** (12/09, após 1918–1925 / T-268)
+- Staging: `prompt-tratamento-pdfs-mensalao.md`, `thread-vazatoga-diploma-impunidade.md`, `notas-clubes-militares.html`, `compass_artifact_*.md`
+
+## Merge 12/09/2026
+
+| Batch | IDs na fila | IDs finais |
+|-------|-------------|------------|
+| O Negócio da Lama / Brumadinho | 1918–1925 + T-268 | **1918–1925** + **T-268** (livres) |
+
+Datas mês-only 1920 (`2018-09`) e 1925 (`2026-05`) → dia 01. **1925** permanece `ev-alleged`.
 
 ## Merge 11/09/2026 (b)
 
@@ -51,9 +59,9 @@
 | Vaza Toga 3 (fraude exposta) | 1879–1884 | **1883–1888** |
 | Vaza Toga 4 (empresários) | 1868–1872 | **não mergeado** — duplicata de **1869–1873** |
 
-## Sync (10/09, tarde)
+## Sync (12/09)
 
-- main **1912** · next **1913**
-- thematic **T-267** · next **T-268**
-- lawfare.json **1873** assuntos
-- validate-ids: sem duplicatas; **1899** sem fontes (herdado do lote)
+- main **1925** · next **1926**
+- thematic **T-268** · next **T-269**
+- lawfare.json **1886** assuntos
+- validate-ids: sem duplicatas; **1899** sem fontes (herdado do lote); gaps antigos 1449–1480 etc.

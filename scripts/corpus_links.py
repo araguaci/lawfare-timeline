@@ -16,6 +16,10 @@ SPECIAL_REFS: dict[str, dict[str, str]] = {
         "url": "/posts/operacao-rejeito-serra-curral-manuscritos/",
         "title": "Operação Rejeito — cluster 1552–1571 (T-197)",
     },
+    "1552-1571": {
+        "url": "/posts/operacao-rejeito-serra-curral-manuscritos/",
+        "title": "Operação Rejeito — cluster 1552–1571 (T-197)",
+    },
     "1400-1448": {
         "url": "/posts/farra-do-inss-rede-completa-conafer-careca-do-inss-nucleo-politico-e-o-nucleo-internaciona/",
         "title": "CPI / Farra do INSS — cluster 1400–1448",

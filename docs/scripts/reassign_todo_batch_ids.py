@@ -74,6 +74,8 @@ def batch_slices(raw: dict | list) -> tuple[list[dict], list[dict], dict | list]
         main.extend(raw["main"])
     if isinstance(raw.get("entries"), list):
         main.extend(raw["entries"])
+    if isinstance(raw.get("entries_main"), list):
+        main.extend(raw["entries_main"])
     if isinstance(raw.get("entradas"), list):
         main.extend(raw["entradas"])
     if isinstance(raw.get("assuntos"), list):
@@ -90,6 +92,10 @@ def batch_slices(raw: dict | list) -> tuple[list[dict], list[dict], dict | list]
         main.append(raw["entry"])
     if isinstance(raw.get("thematic"), list):
         thematic.extend(raw["thematic"])
+    if isinstance(raw.get("entries_thematic"), list):
+        thematic.extend(raw["entries_thematic"])
+    if isinstance(raw.get("thematic_entries"), list):
+        thematic.extend(raw["thematic_entries"])
     return main, thematic, raw
 
 

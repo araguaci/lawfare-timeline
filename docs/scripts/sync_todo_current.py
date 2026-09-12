@@ -40,6 +40,7 @@ IMAGE_BY_CATEGORY = {
     "escandalos": "/assets/solid/skull.svg",
     "stf": "/assets/solid/gavel.svg",
     "justica": "/assets/solid/hammer.svg",
+    "impunidade": "/assets/solid/scale-balanced.svg",
     "bancos": "/assets/solid/landmark.svg",
     "lawfare": "/assets/solid/weight-scale.svg",
     "crise-diplomatica": "/assets/solid/globe.svg",
@@ -116,7 +117,21 @@ def parse_main_id(eid) -> int | None:
     return None
 
 
+def normalize_date(d: str) -> str:
+    raw = (d or "").strip()
+    if re.fullmatch(r"\d{4}-\d{2}$", raw):
+        return raw + "-01"
+    if re.fullmatch(r"\d{4}$", raw):
+        return raw + "-01-01"
+    return raw[:10] if raw else "2026-01-01"
+
+
 def resolve_category(entry: dict) -> str:
+    override = entry.get("jekyll_category") or entry.get("jekyll_categories")
+    if isinstance(override, list) and override:
+        return str(override[0]).strip().lower()
+    if isinstance(override, str) and override.strip():
+        return override.strip().lower()
     cat = (entry.get("category") or entry.get("categoria") or entry.get("tipo") or "").lower()
     title = (entry.get("title") or entry.get("titulo") or "").lower()
     tags = [str(t).lower() for t in entry.get("tags") or entry.get("padroes_ativados") or []]
@@ -171,12 +186,12 @@ def build_tags(entry: dict, category: str) -> list[str]:
     tags: list[str] = []
     for src in (entry.get("padroes_ativados"), entry.get("patterns"), entry.get("tags")):
         if src:
-            tags.extend(str(x) for x in src)
+            tags.extend(str(x).lower() for x in src)
     if entry.get("slug"):
         tags.append(entry["slug"][:40])
     if category not in tags:
         tags.insert(0, category)
-    return list(dict.fromkeys(tags))[:12]
+    return list(dict.fromkeys(tags))[:10]
 
 
 def parse_actors(raw_actors) -> list[str]:
@@ -228,13 +243,13 @@ def normalize_main_entry(entry: dict, source: str) -> dict | None:
     if not title:
         return None
 
-    jdate = (
+    jdate = normalize_date(
         entry.get("date")
         or entry.get("data_evento")
         or entry.get("data_registro")
         or entry.get("jekyll_date")
         or ""
-    )[:10]
+    )
 
     ev = entry.get("evidencia_primaria") or {}
     resumo = (
@@ -403,7 +418,9 @@ def study_title(data: dict) -> str:
 
 
 def study_date(data: dict) -> str:
-    return (data.get("data_registro") or data.get("data_evento") or data.get("date") or "2026-01-01")[:10]
+    return normalize_date(
+        data.get("data_registro") or data.get("data_evento") or data.get("date") or "2026-01-01"
+    )
 
 
 def render_estudos_post(data: dict, tid: int) -> tuple[str, str]:
@@ -425,7 +442,7 @@ def render_estudos_post(data: dict, tid: int) -> tuple[str, str]:
     tags = ["estudo", "lawfare"] + [str(p).lower() for p in padroes] + [str(t).lower() for t in extra]
     if data.get("slug"):
         tags.append(data["slug"][:35])
-    tags = list(dict.fromkeys(tags))[:12]
+    tags = list(dict.fromkeys(tags))[:10]
     fm_tags = json.dumps(tags, ensure_ascii=False)
 
     parts = [
@@ -567,12 +584,16 @@ def process_all(dry_run: bool) -> tuple[list[dict], list[tuple[int, str, str]], 
                 items.extend(data["main"])
             if isinstance(data.get("entries"), list):
                 items.extend(data["entries"])
+            if isinstance(data.get("entries_main"), list):
+                items.extend(data["entries_main"])
             if isinstance(data.get("entradas"), list):
                 items.extend(data["entradas"])
             if isinstance(data.get("thematic_entries"), list):
                 items.extend(data["thematic_entries"])
             if isinstance(data.get("thematic"), list):
                 thematic_only.extend(data["thematic"])
+            if isinstance(data.get("entries_thematic"), list):
+                thematic_only.extend(data["entries_thematic"])
             if isinstance(data.get("assuntos"), list):
                 for assunto in data["assuntos"]:
                     if isinstance(assunto, dict) and assunto.get("id") is None and assunto.get("id_corpus"):
@@ -583,7 +604,25 @@ def process_all(dry_run: bool) -> tuple[list[dict], list[tuple[int, str, str]], 
         else:
             items = [data]
         batch_had_output = False
-        for item in thematic_only:
+        pending_thematic: list[dict] = list(thematic_only)
+        for item in items:
+            tid = thematic_id_from_entry(item)
+            if tid is not None:
+                pending_thematic.append(item)
+                continue
+            u = normalize_main_entry(item, fpath.name)
+            if not u:
+                continue
+            main_entries.append(u)
+            target = POSTS / u["jekyll_categories"][0] / u["jekyll_filename"]
+            if dry_run:
+                print(f"  [dry-run] ID {u['id_corpus']}: {target.relative_to(ROOT)}")
+            else:
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_text(render_timeline_post(u), encoding="utf-8")
+                print(f"  OK {target.relative_to(ROOT)}")
+            batch_had_output = True
+        for item in pending_thematic:
             tid = thematic_id_from_entry(item)
             if tid is None:
                 continue
@@ -597,33 +636,6 @@ def process_all(dry_run: bool) -> tuple[list[dict], list[tuple[int, str, str]], 
                 target.write_text(content, encoding="utf-8")
                 print(f"  OK {target.relative_to(ROOT)}")
             thematic.append((tid, fpath.name, md_fname))
-            batch_had_output = True
-        for item in items:
-            tid = thematic_id_from_entry(item)
-            if tid is not None:
-                item["_source_file"] = fpath.name
-                content, md_fname = render_estudos_post(item, tid)
-                target = POSTS / "estudos" / md_fname
-                if dry_run:
-                    print(f"  [dry-run] T-{tid}: {target.relative_to(ROOT)}")
-                else:
-                    target.parent.mkdir(parents=True, exist_ok=True)
-                    target.write_text(content, encoding="utf-8")
-                    print(f"  OK {target.relative_to(ROOT)}")
-                thematic.append((tid, fpath.name, md_fname))
-                batch_had_output = True
-                continue
-            u = normalize_main_entry(item, fpath.name)
-            if not u:
-                continue
-            main_entries.append(u)
-            target = POSTS / u["jekyll_categories"][0] / u["jekyll_filename"]
-            if dry_run:
-                print(f"  [dry-run] ID {u['id_corpus']}: {target.relative_to(ROOT)}")
-            else:
-                target.parent.mkdir(parents=True, exist_ok=True)
-                target.write_text(render_timeline_post(u), encoding="utf-8")
-                print(f"  OK {target.relative_to(ROOT)}")
             batch_had_output = True
         if batch_had_output or not isinstance(data, dict) or not data.get("_staging_note"):
             archived.append(fpath.name)
