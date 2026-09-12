@@ -17,7 +17,7 @@ categories: governo
 
 ## 🧭 Resumo
 
-Lula veta integralmente o PL da Dosimetria durante cerimônia alusiva aos três anos do 8 de janeiro. Os presidentes da Câmara (Hugo Motta) e do Senado (Davi Alcolumbre) boicotam o evento. Motta cobra "acordos efetivos" e "transparência". Alcolumbre demonstra irritação com a indicação de Jorge Messias ao STF. Analistas apontam que o governo substituiu a negociação parlamentar pela busca de decisões no STF.
+Lula veta integralmente o PL da Dosimetria durante cerimônia alusiva aos três anos do 8 de janeiro. Os presidentes da Câmara (Hugo Motta) e do Senado (Davi Alcolumbre) boicotam o evento. Motta cobra "acordos efetivos" e "transparencia". Alcolumbre demonstra irritação com a indicação de Jorge Messias ao STF. Analistas apontam que o governo substituiu a negociação parlamentar pela busca de decisões no STF.
 
 **Impacto Diplomático:** Baixo  
 **Tipo de Escândalo:** Político
@@ -39,7 +39,7 @@ Em 8 de janeiro de 2026, durante cerimônia que marcava os três anos dos atos d
 
 ### Boicote do Congresso
 
-- **Hugo Motta** (Câmara): Ausente, cobrou "acordos efetivos" e "transparência"
+- **Hugo Motta** (Câmara): Ausente, cobrou "acordos efetivos" e "transparencia"
 - **Davi Alcolumbre** (Senado): Ausente, demonstrou irritação com indicação de Jorge Messias ao STF
 - **Sinal**: Congresso independente e crítico ao governo em ano eleitoral
 

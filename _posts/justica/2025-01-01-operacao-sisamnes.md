@@ -5,7 +5,7 @@ categories: justica
 image:
   path: "/assets/solid/balance-scale-left.svg"
 description: Investigação da Polícia Federal sobre esquema milionário de vazamento de informações sigilosas e venda de sentenças judiciais✧  iniciado em 2020 e intensificado após o assassinato do advogado Roberto Zampieri em 2023✧  em Cuiabá (MT). 
-tags: ['judiciario','ms', 'venda-de-sentencas']
+tags: ['judiciario', 'ms', 'venda-de-sentencas', 'sigilo']
 ---
 
 # Investigação da Polícia Federal sobre esquema milionário de vazamento de informações sigilosas e venda de sentenças judiciais, iniciado em 2020 e intensificado após o assassinato do advogado Roberto Zampieri em 2023, em Cuiabá (MT). Envolve corrupção, violação de sigilo funcional, exploração de prestígio, lavagem de dinheiro, obstrução de Justiça e homicídios por encomenda, com indícios de acesso privilegiado a decisões judiciais e possíveis envolvimentos de servidores e gabinetes do STJ.

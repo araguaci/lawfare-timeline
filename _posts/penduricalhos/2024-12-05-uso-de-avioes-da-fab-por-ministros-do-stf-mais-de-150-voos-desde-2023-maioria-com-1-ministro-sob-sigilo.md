@@ -7,7 +7,7 @@ image:
 article_id: 20241205
 description: >
   2024-12-05-Brazil-penduricalho-viagem
-tags: ['magistrado', 'brasil']
+tags: ['magistrado', 'brasil', 'sigilo']
 ---
 
 # Uso De Aviões Da Fab Por Ministros Do Stf - Mais de 150 voos desde 2023, maioria com 1 ministro, sob sigilo - Concessão de Penduricalho

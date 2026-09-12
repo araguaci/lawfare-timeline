@@ -4,7 +4,7 @@ description: "A CPI do Senado aprovou a quebra de sigilo de empresa ligada a Tof
 date: 2024-05-01T12:00:00.000Z
 image:
   path: "/assets/solid/scale-unbalanced.svg"
-tags: ['gilmar-mendes', stf, 'banco-master', 'decisao-judicial', impunidade, decano, gravidade-alta]
+tags: ['gilmar-mendes', 'banco-master', 'decisao-judicial', 'sigilo']
 categories: decano
 timeline_id: 1435
 source_data: lawfare-export-timeline-15abr2026.json

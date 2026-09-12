@@ -3,7 +3,7 @@ layout: post
 title:  Escândalo da Quebra do Sigilo Bancário do Caseiro Francenildo
 categories: escandalos
 description: Violação de sigilo.
-tags: ['governo-lula', '2006']
+tags: ['governo-lula', '2006', 'sigilo']
 date: 2006-01-01
 ---
 

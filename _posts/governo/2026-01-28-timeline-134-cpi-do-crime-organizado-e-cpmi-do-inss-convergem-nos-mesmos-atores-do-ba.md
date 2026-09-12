@@ -4,7 +4,7 @@ description: "A CPI do Crime Organizado aprova quebra de sigilos de Fabiano Zett
 date: 2026-01-28T12:00:00.000Z
 image:
   path: "/assets/solid/landmark.svg"
-tags: ['governo', 'ato-legislativo', 'CPI', 'cpi', 'inss', 'zettel', 'vorcaro', 'reag', 'sem-desconto']
+tags: ['governo', 'ato-legislativo', 'CPI', 'inss', 'zettel', 'vorcaro', 'reag', 'sem-desconto', 'sigilo']
 categories: governo
 timeline_id: 134
 source_data: lawfare-timeline-124-145.json

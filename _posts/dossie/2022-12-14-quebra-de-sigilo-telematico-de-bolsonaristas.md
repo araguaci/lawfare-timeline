@@ -3,7 +3,7 @@ layout: post
 title:  Quebra de sigilo telemático de bolsonaristas
 categories: dossie
 description: Ação em 2022/12/14 com violações, envolvidos, fontes e gravidade alta
-tags: ['direito-a-privacidade', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'bolsonaristas', 'gravidade-alta']
+tags: ['direito-a-privacidade', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'bolsonaristas', 'gravidade-alta', 'sigilo']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:

@@ -3,7 +3,7 @@ layout: post
 title:  Quebra de sigilo de Carla Zambelli por invasão hacker
 categories: dossie
 description: Ação em 2024/06/06 com violações, envolvidos, fontes e gravidade alta
-tags: ['direito-a-privacidade', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'carla-zambelli', 'gravidade-alta']
+tags: ['direito-a-privacidade', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'carla-zambelli', 'gravidade-alta', 'sigilo']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:

@@ -4,7 +4,7 @@ description: "O ministro André Mendonça, relator da Operação Compliance Zero
 date: 2026-09-10T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "p03", "p04b", "inq4781", "banco-master"]
+tags: ["stf", "p03", "p04b", "inq4781", "banco-master", "sigilo"]
 categories: stf
 permalink: /posts/2026-09-10-mendonca-levanta-sigilo-da-pet-15556-e-de-14-processos-conexos-do-caso-master-a-pedido-de-/
 id_corpus: "1913"

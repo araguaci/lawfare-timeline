@@ -4,7 +4,7 @@ description: "Reportagem da CNN Brasil revela que o presidente Lula se reuniu co
 date: 2025-12-01T12:00:00.000Z
 image:
   path: "/assets/solid/skull.svg"
-tags: ["toffoli", "lula", "compliance-zero", "banco-master", "stf", "independencia-judicial", "conflito-de-interesses", "sigilo", "separacao-de-poderes", "captura-institucional", "inq-5026"]
+tags: ["toffoli", "lula", "compliance-zero", "banco-master", "independencia-judicial", "conflito-de-interesses", "sigilo", "separacao-de-poderes", "captura-institucional", "inq-5026"]
 categories: escandalos
 permalink: /posts/2025-12-01-toffoli-reune-se-com-lula-durante-investigacao-sigilosa-do-master-relator-e-presidente-do-/
 id_corpus: "1545"

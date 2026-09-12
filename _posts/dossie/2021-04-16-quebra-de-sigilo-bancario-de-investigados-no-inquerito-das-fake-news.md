@@ -3,7 +3,7 @@ layout: post
 title:  Quebra de sigilo bancário de investigados no inquérito das fake news
 categories: dossie
 description: Ação em 2021/04/16 com violações, envolvidos, fontes e gravidade alta
-tags: ['direito-a-privacidade', 'devido-processo-legal', 'proporcionalidade', 'legalidade', 'alexandre-de-moraes', 'investigados', 'gravidade-alta']
+tags: ['direito-a-privacidade', 'devido-processo-legal', 'proporcionalidade', 'legalidade', 'alexandre-de-moraes', 'investigados', 'gravidade-alta', 'sigilo']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:

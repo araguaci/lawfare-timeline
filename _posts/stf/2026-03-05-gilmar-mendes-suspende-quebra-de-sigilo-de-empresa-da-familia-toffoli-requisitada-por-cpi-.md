@@ -4,7 +4,7 @@ description: "O ministro Gilmar Mendes suspendeu liminarmente decisão que autor
 date: 2026-03-05T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "p02", "p03", "p07"]
+tags: ["stf", "p02", "p03", "p07", "sigilo"]
 categories: stf
 permalink: /posts/2026-03-05-gilmar-mendes-suspende-quebra-de-sigilo-de-empresa-da-familia-toffoli-requisitada-por-cpi-/
 id_corpus: "1848"

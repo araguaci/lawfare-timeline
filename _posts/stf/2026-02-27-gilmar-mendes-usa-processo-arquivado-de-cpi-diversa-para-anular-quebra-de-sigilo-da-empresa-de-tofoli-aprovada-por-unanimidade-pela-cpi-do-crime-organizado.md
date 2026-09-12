@@ -4,7 +4,7 @@ description: "O ministro Gilmar Mendes concede habeas corpus de ofício para anu
 date: 2026-02-27T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ['stf', 'gilmar-mendes', 'tofoli', 'banco-master', 'cpi-crime-organizado', 'manobra-processual', 'blindagem', 'gravidade-alta']
+tags: ['stf', 'gilmar-mendes', 'tofoli', 'banco-master', 'cpi-crime-organizado', 'manobra-processual', 'blindagem', 'gravidade-alta', 'sigilo']
 categories: stf
 ---
 

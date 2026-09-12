@@ -4,7 +4,7 @@ description: "O ministro da Justiça e Segurança Pública, Wellington César Li
 date: 2026-07-27T12:00:00.000Z
 image:
   path: "/assets/solid/landmark.svg"
-tags: ["bancos", "p06", "p10"]
+tags: ["bancos", "p06", "p10", "sigilo"]
 categories: bancos
 permalink: /posts/2026-07-27-ministerio-da-justica-mantem-sigilo-de-100-anos-sobre-lista-de-visitantes-de-daniel-vorcar/
 id_corpus: "1775"

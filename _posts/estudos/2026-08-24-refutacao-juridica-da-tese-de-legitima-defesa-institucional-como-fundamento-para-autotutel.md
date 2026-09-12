@@ -1,7 +1,7 @@
 ---
 id_corpus: "T-266"
 thematic_track: true
-title: "T-266 · Refutação jurídica da tese de 'legítima defesa institucional' como fun"
+title: "T-266 · Refutação jurídica da tese de 'legítima defesa institucional' como fundamento para autotutela"
 description: "Em publicação no X, o professor de Economia e Direito Fábio Talhari argumentou que não existe, na Constituição Federal de 1988 nem no Código Penal, instituto..."
 date: 2026-08-24T12:00:00-03:00
 image:
@@ -17,7 +17,7 @@ source_data: "lawfare-batch-inq4781-cronologia-1889-1898.json"
 - &nbsp;
 {:toc .large-only}
 
-# T-266 · Refutação jurídica da tese de 'legítima defesa institucional' como fun
+# T-266 · Refutação jurídica da tese de 'legítima defesa institucional' como fundamento para autotutela
 
 Em publicação no X, o professor de Economia e Direito Fábio Talhari argumentou que não existe, na Constituição Federal de 1988 nem no Código Penal, instituto jurídico correspondente a 'legítima defesa institucional'. A legítima defesa está prevista exclusivamente no art. 25 do Código Penal, como instituto de direito penal individual (ou de terceiro), com requisitos de atualidade/iminência da agressão, necessidade e moderação dos meios — inaplicável a pessoas jurídicas de direito público. A CF/88 prevê mecanismos excepcionais formalizados no Título V (arts. 136-144): estado de defesa, estado de sítio, intervenção federal e emprego das Forças Armadas — todos com procedimentos rígidos, prazos e envolvimento de Presidência, Congresso e Conselho da República/Defesa Nacional.
 

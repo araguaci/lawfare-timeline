@@ -4,7 +4,7 @@ description: "Estudo técnico apresentado por Thiago Ayú, professor Pedro Marco
 date: 2025-06-01T12:00:00.000Z
 image:
   path: "/assets/solid/weight-scale.svg"
-tags: ["lawfare", "bloqueio-internet", "censura-digital", "anatel", "operadoras", "transparencia", "infraestrutura"]
+tags: ["lawfare", "bloqueio-internet", "censura-digital", "anatel", "operadoras", "transparencia", "infraestrutura", "sigilo"]
 categories: lawfare
 permalink: /posts/2025-06-01-estudo-tecnico-documenta-46000-sites-bloqueados-na-internet-brasileira-maioria-sob-sigilo/
 id_corpus: "1590"

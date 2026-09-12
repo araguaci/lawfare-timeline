@@ -3,7 +3,7 @@ layout: post
 title:  Quebra de sigilo de Bolsonaro e aliados por atos de 8/1
 categories: dossie
 description: Ação em 2023/02/22 com violações, envolvidos, fontes e gravidade alta
-tags: ['direito-a-privacidade', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'jair-bolsonaro', 'aliados', 'gravidade-alta']
+tags: ['direito-a-privacidade', 'devido-processo-legal', 'proporcionalidade', 'alexandre-de-moraes', 'jair-bolsonaro', 'aliados', 'gravidade-alta', 'sigilo']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:

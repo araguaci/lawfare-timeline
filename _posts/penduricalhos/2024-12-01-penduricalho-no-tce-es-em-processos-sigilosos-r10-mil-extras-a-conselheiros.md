@@ -7,7 +7,7 @@ image:
 article_id: 20241201
 description: >
   2024-12-01-Espírito Santo-penduricalho-supersalario
-tags: ['conselheiro', 'espirito santo']
+tags: ['conselheiro', 'espirito santo', 'sigilo']
 ---
 
 # Penduricalho No Tce-Es Em Processos Sigilosos - R$10 mil extras a conselheiros - Concessão de Penduricalho

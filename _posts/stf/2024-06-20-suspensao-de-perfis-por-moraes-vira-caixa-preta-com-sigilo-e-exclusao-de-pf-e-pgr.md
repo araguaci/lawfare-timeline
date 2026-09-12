@@ -3,7 +3,7 @@ layout: post
 title:  Suspensão de perfis por Moraes vira caixa-preta com sigilo e exclusão de PF e PGR
 categories: stf
 article_id: id206
-tags: ['stf', 'abuso-de-autoridade', 'censura', 'transparencia', 'eleicoes', 'liberdade-de-expressao']
+tags: ['stf', 'abuso-de-autoridade', 'censura', 'transparencia', 'eleicoes', 'liberdade-de-expressao', 'sigilo']
 ---
 
 # Suspensão de perfis por Moraes vira caixa-preta com sigilo e exclusão de PF e PGR

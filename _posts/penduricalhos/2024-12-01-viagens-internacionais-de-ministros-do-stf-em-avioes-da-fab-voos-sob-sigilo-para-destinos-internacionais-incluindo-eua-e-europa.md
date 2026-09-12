@@ -7,7 +7,7 @@ image:
 article_id: 20241201
 description: >
   2024-12-01-Brazil-penduricalho-viagem internacional
-tags: ['magistrado', 'brasil']
+tags: ['magistrado', 'brasil', 'sigilo']
 ---
 
 # Viagens Internacionais De Ministros Do Stf Em Aviões Da Fab - Voos sob sigilo para destinos internacionais, incluindo EUA e Europa - Concessão de Penduricalho

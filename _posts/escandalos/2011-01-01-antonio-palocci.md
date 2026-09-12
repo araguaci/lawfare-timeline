@@ -3,7 +3,7 @@ layout: post
 title:  Antonio Palocci
 categories: escandalos
 description: Repetição, quebra de sigilo.
-tags: ['governo-lula', '2011']
+tags: ['governo-lula', '2011', 'sigilo']
 date: 2011-01-01
 ---
 

@@ -4,7 +4,7 @@ description: "Flávio Dino atende Roberta Luchsinger e invalida quebras de sigil
 date: 2026-03-04T00:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ['stf', 'inss', 'lawfare', 'devido-processo-legal', 'impunidade', 'gravidade-alta']
+tags: ['stf', 'inss', 'lawfare', 'devido-processo-legal', 'impunidade', 'gravidade-alta', 'sigilo']
 categories: stf
 ---
 

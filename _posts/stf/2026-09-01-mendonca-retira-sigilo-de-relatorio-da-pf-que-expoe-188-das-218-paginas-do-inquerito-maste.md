@@ -4,7 +4,7 @@ description: "Em 1º de setembro de 2026, o ministro André Mendonça (relator d
 date: 2026-09-01T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ["stf", "banco-master", "inq4781", "p02", "compliance-zero"]
+tags: ["stf", "banco-master", "inq4781", "p02", "compliance-zero", "sigilo"]
 categories: stf
 permalink: /posts/2026-09-01-mendonca-retira-sigilo-de-relatorio-da-pf-que-expoe-188-das-218-paginas-do-inquerito-maste/
 id_corpus: "1905"

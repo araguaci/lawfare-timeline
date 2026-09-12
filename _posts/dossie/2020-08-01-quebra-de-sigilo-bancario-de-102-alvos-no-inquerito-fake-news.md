@@ -3,7 +3,7 @@ layout: post
 title:  Quebra de sigilo bancário de 102 alvos no inquérito fake news
 categories: dossie
 description: Ação em 2020/08/01 com violações, envolvidos, fontes e gravidade alta
-tags: ['direito-a-privacidade', 'devido-processo-legal', 'proporcionalidade', 'legalidade', 'alexandre-de-moraes', '102-alvos', 'gravidade-alta']
+tags: ['direito-a-privacidade', 'devido-processo-legal', 'proporcionalidade', 'legalidade', 'alexandre-de-moraes', '102-alvos', 'gravidade-alta', 'sigilo']
 gravidade: alta
 faicon: fas fa-skull-crossbones
 image:

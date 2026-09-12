@@ -4,7 +4,7 @@ description: "Segunda proposta de delação de Vorcaro, rejeitada pela PF em 11/
 date: 2026-06-11T12:00:00.000Z
 image:
   path: "/assets/solid/landmark.svg"
-tags: ["bancos", "delação_premiada", "rejeitada", "offshore", "STF"]
+tags: ["bancos", "delação_premiada", "rejeitada", "offshore", "stf"]
 categories: bancos
 permalink: /posts/2026-06-11-delacao-de-vorcaro-cita-propina-de-us30mi-a-alcolumbre-rejeitada-pela-pf/
 id_corpus: "1602"

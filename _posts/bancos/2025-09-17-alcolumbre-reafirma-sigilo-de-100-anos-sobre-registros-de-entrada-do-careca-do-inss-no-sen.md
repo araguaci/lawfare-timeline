@@ -4,7 +4,7 @@ description: "O presidente do Senado, Davi Alcolumbre (União Brasil-AP), declar
 date: 2025-09-17T12:00:00.000Z
 image:
   path: "/assets/solid/landmark.svg"
-tags: ["bancos", "p06", "p10"]
+tags: ["bancos", "p06", "p10", "sigilo"]
 categories: bancos
 permalink: /posts/2025-09-17-alcolumbre-reafirma-sigilo-de-100-anos-sobre-registros-de-entrada-do-careca-do-inss-no-sen/
 id_corpus: "1776"

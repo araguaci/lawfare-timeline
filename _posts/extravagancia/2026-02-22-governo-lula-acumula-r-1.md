@@ -11,7 +11,7 @@ tipo_escandalo: gastos
 pais: "Brasil"
 valor_envolvido: "R$ 1,437 bilhão"
 prioridade: 4
-tags: ['extravagancia', 'gastos-publicos', 'verba-publica', 'escandalos', 'lula', 'lula', 'relevancia-alta']
+tags: ['extravagancia', 'gastos-publicos', 'verba-publica', 'escandalos', 'lula', 'relevancia-alta', 'sigilo']
 image:
   path: "/assets/solid/money-bill-wave.svg"
 ---

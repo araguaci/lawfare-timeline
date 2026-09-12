@@ -4,7 +4,7 @@ description: "A CPMI do INSS aprova quebras de sigilos fiscal e bancário de Lul
 date: 2026-02-26T00:00:00.000Z
 image:
   path: "/assets/solid/exclamation-triangle.svg"
-tags: ['escandalos', 'inss', 'corrupcao', 'lula', 'gravidade-alta', 'impunidade']
+tags: ['escandalos', 'inss', 'corrupcao', 'lula', 'gravidade-alta', 'impunidade', 'sigilo']
 categories: escandalos
 ---
 

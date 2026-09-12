@@ -4,7 +4,7 @@ description: "Utilizando a mesma lógica da decisão de 27 de fevereiro, o minis
 date: 2026-03-19T12:00:00.000Z
 image:
   path: "/assets/solid/gavel.svg"
-tags: ['stf', 'gilmar-mendes', 'tofoli', 'fabiano-zetel', 'banco-master', 'resort-trancoso', 'blindagem', 'gravidade-alta']
+tags: ['stf', 'gilmar-mendes', 'tofoli', 'fabiano-zetel', 'banco-master', 'resort-trancoso', 'blindagem', 'gravidade-alta', 'sigilo']
 categories: stf
 ---
 
