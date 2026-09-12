@@ -548,6 +548,12 @@ Sessão 2026-09-02 — hero T-266 (1200×675, 16:9, share card X):
 Hero image for an X.com Article titled "ART. 25". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "ART. 25" in off-white (fully readable), gold subtitle "T-266" underneath, tiny monospace "CF/88 · Título V · INQ 4781". Visual motif: an open 1988 Brazilian constitution booklet and a faded criminal code page dissolving into courthouse colonnades and a stamped folder marked AUTOTUTELA (no readable names, no logos, no brand marks, no real faces, no party logos). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
 ```
 
+Sessão 2026-09-12 — hero resumo corpus 18/07–12/09 (1200×675, 16:9, share card X):
+
+```
+Hero image for an X.com Article titled "298 FICHAS". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still, not a poster collage. Background: near-black navy (#080c10) with faint film grain, a thin vertical red accent bar on the left like a judicial file stripe. Centered editorial block: large bold condensed sans-serif title "298 FICHAS" in off-white (fully readable), gold subtitle "18/07–12/09/2026" underneath, tiny monospace line "1626–1925 · T-224–T-268 · LAWFARE TIMELINE". Visual motif: stacked translucent case-file folders and a faint timeline ruler dissolving into blurred courthouse colonnades and an iron-ore pit silhouette (no readable names, no logos, no brand marks, no real faces, no flags, no party symbols). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a), rust iron oxide. Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
+```
+
 ---
 
 **Mantenedor:** Artes do Sul / AI Nativo Brasil · [@araguaci](https://github.com/araguaci) · Bombinhas/SC  
