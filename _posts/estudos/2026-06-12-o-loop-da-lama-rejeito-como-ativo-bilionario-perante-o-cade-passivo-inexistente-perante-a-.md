@@ -3,7 +3,7 @@ id_corpus: "T-268"
 thematic_track: true
 title: "T-268 · O Loop da Lama: rejeito como ativo bilionário perante o CADE, passivo "
 description: "Síntese estrutural da cadeia Acordo de Confidencialidade (jul/2017) → licenciamento acelerado + aquisição da New Steel (dez/2018) → laudos fraudados e perfur..."
-date: 2026-06-12T12:00:00-03:00
+date: 2026-09-12T18:00:00-03:00
 image:
   path: "/assets/solid/book-open.svg"
 tags: ["estudo", "lawfare", "p04b", "p05", "p09", "p10"]

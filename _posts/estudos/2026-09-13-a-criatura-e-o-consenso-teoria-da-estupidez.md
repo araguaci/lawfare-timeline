@@ -3,7 +3,7 @@ id_corpus: "T-269"
 thematic_track: true
 title: "T-269 · A criatura e o consenso — teoria da estupidez, Moraes 2021–2026"
 description: "O mesmo Moraes: apoio partidário em 2021, recusa editorial em 2026. Bonhoeffer: o poder precisa da estupidez alheia. A criatura já não cabe no consenso."
-date: 2026-09-13T12:00:00-03:00
+date: 2026-09-13T00:30:00-03:00
 image:
   path: "/assets/img/a-criatura-e-o-consenso-teoria-da-estupidez-xarticle-hero.png"
 tags: ["estudo", "lawfare", "p09", "p04", "p02", "stf", "justica"]
