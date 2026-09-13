@@ -548,6 +548,12 @@ Sessão 2026-09-02 — hero T-266 (1200×675, 16:9, share card X):
 Hero image for an X.com Article titled "ART. 25". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still. Background: near-black navy (#080c10), faint film grain, thin red vertical file stripe on the left. Centered editorial block: large bold condensed sans-serif title "ART. 25" in off-white (fully readable), gold subtitle "T-266" underneath, tiny monospace "CF/88 · Título V · INQ 4781". Visual motif: an open 1988 Brazilian constitution booklet and a faded criminal code page dissolving into courthouse colonnades and a stamped folder marked AUTOTUTELA (no readable names, no logos, no brand marks, no real faces, no party logos). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
 ```
 
+Sessão 2026-09-13 — hero T-269 A criatura e o consenso (1200×675, 16:9, share card X):
+
+```
+Hero image for an X.com Article titled "A CRIATURA". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still, not a poster collage. Background: near-black navy (#080c10) with faint film grain, a thin vertical red accent bar on the left like a judicial file stripe. Centered editorial block: large bold condensed sans-serif title "A CRIATURA" in off-white (fully readable), gold subtitle "T-269" underneath, tiny monospace line "2021 apoio · 2026 recusa". Visual motif: a broken wax consensus seal on a dark desk, a faded Frankenstein-like silhouette of a judicial robe without a face, dissolving into blurred STF-like colonnades and stacked case-file folders (no readable names, no logos, no brand marks, no real faces, no flags, no party symbols). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
+```
+
 Sessão 2026-09-12 — hero resumo corpus 18/07–12/09 (1200×675, 16:9, share card X):
 
 ```

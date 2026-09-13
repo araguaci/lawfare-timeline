@@ -9,19 +9,26 @@
     "artifact_content": "jusmonitor.vercel.app",
     "source": "T-209 · bridge lawfare-timeline/_data/justicewatch/",
     "generated": "2026-05-28",
-    "updated": "2026-08-06",
+    "updated": "2026-09-12",
+    "revisao_anterior": "2026-08-06",
     "licenca": "CC0 1.0",
-    "periodo": "2005–2025",
-    "enrichment": "_data/jusmonitor/enrichment-patches.json"
+    "periodo": "2005–2026",
+    "enrichment": "_data/jusmonitor/enrichment-patches.json",
+    "nota_revisao": "Incorpora lote P01-B (1804–1809) e cautelares 2026 (1798–1799). Mantém 9.166 (dossiê Seif) e 10.127 (ConJur/STJ) em paralelo, sem colapso."
   },
   "titulo": "JustiçaWatch Brasil — Conheça as decisões. Exija prestação de contas.",
   "descricao": "Banco de dados de decisões judiciais brasileiras que resultaram em soltura, progressão de regime ou arquivamento de processos contra réus condenados ou investigados por crimes violentos.",
   "estatisticas": {
     "hc_traficantes_stj_2024": 9166,
+    "hc_stj_2024_conjur": 10127,
+    "hc_stj_2024_privilegiado": 1578,
+    "hc_stj_2024_concessoes_total": 20114,
     "hc_trafico_stf_2024": 577,
     "taxa_reincidencia_br": "42%",
     "populacao_carceraria": 834000,
-    "foragidos_hc_marco_aurelio_2020": 21
+    "foragidos_hc_marco_aurelio_2020": 21,
+    "casos_ancora": 17,
+    "hc_stj_2024_nota": "9.166 (dossiê Seif) e 10.127 (ConJur/STJ, HC+RHC até 26/dez/2024, 49,1% de 20.114 concessões). 1.578 para tráfico privilegiado. Metodologias distintas — não colapsar."
   },
   "casos": [
     {
@@ -150,6 +157,25 @@
       "evidence_status": "ev-confirmed"
     },
     {
+      "ano": 2021,
+      "tribunal": "STJ",
+      "nome": "EREsp 1.887.511 — quantidade de droga não afasta tráfico privilegiado",
+      "tipo": "Embargos de divergência",
+      "tags": [
+        "trafico",
+        "p01-B"
+      ],
+      "ref": "EREsp 1.887.511 — 3ª Seção, Rel. Min. Ribeiro Dantas",
+      "id_corpus": "1804",
+      "permalink": "/posts/2021-06-01-stj-3-secao-fixa-em-eresp-1887511-que-quantidade-de-droga-nao-afasta-por-si-so-trafico-pri/",
+      "fontes": [
+        "https://www.stj.jus.br/sites/portalp/Paginas/Comunicacao/Noticias/18072022-E-possivel-valorar-quantidade-e-natureza-da-droga-tanto-para-fixar-pena-base-quanto-para-modular-diminuicao-.aspx"
+      ],
+      "descricao_resumo": "A 3ª Seção do STJ firmou que natureza e quantidade da droga, isoladamente, não afastam o redutor do art. 33, §4º da Lei 11.343/2006.",
+      "descricao_detalhada": "O EREsp 1.887.511 (rel. Ribeiro Dantas) consolidou o eixo jurisprudencial do padrão P01-B: apreensões descritas como gigantescas continuam elegíveis ao tráfico privilegiado se os demais requisitos do §4º estiverem presentes.",
+      "evidence_status": "ev-confirmed"
+    },
+    {
       "ano": 2022,
       "tribunal": "STJ",
       "nome": "Anulação por busca pessoal — 122 porções de droga devolvidas",
@@ -167,38 +193,104 @@
       "evidence_status": "ev-confirmed"
     },
     {
+      "ano": 2022,
+      "tribunal": "STJ",
+      "nome": "311 kg de cocaína em Goiás — liberdade mantida por unanimidade",
+      "tipo": "HC / agravo regimental",
+      "tags": [
+        "trafico",
+        "p01-B"
+      ],
+      "ref": "STJ 6ª Turma, Rel. Min. Olindo Menezes, 26/set/2022",
+      "id_corpus": "1805",
+      "permalink": "/posts/2022-09-26-stj-mantem-por-unanimidade-liberdade-de-motorista-preso-com-311kg-de-cocaina-em-goias/",
+      "fontes": [
+        "https://www.conjur.com.br/2022-set-26/stj-mantem-liberdade-acusado-transportar-311-kg-cocaina/",
+        "https://diariodopoder.com.br/justica/stj-solta-traficante-alegando-que-posse-de-311kg-de-cocaina-nao-e-suficiente-para-prisao"
+      ],
+      "descricao_resumo": "A 6ª Turma do STJ manteve, por unanimidade, a liberdade de motorista flagrado com 311 kg de cocaína em Goiás.",
+      "descricao_detalhada": "Relator Olindo Menezes: quantidade expressiva, isoladamente, não justifica preventiva. O MP-GO recorreu e foi vencido. Réu confessara ter recebido R$ 50 mil pelo transporte.",
+      "evidence_status": "ev-confirmed"
+    },
+    {
       "ano": 2023,
       "tribunal": "STF",
-      "nome": "Anulação de apreensão de 695 kg de cocaína",
+      "nome": "Anulação de apreensão de 695 kg de cocaína — Porto de Itaguaí",
       "tipo": "Nulidade de prova",
       "tags": [
-        "trafico"
+        "trafico",
+        "p01-B"
       ],
-      "ref": "Dossiê Ascensão do Narcoestado, Sen. Jorge Seif",
+      "ref": "STF 2ª Turma, jun/2023 — dossiê Seif; corpus 1806",
+      "id_corpus": "1806",
+      "permalink": "/posts/2023-06-01-stf-2-turma-anula-apreensao-de-695kg-de-cocaina-no-porto-de-itaguai-por-vicio-de-fundada-s/",
       "fontes": [
         "https://www12.senado.leg.br/noticias",
         "https://www.estadao.com.br/politica"
       ],
-      "descricao_resumo": "Decisão superior anulou apreensão de centenas de quilos de cocaína por vício processual/nulidade de prova.",
-      "descricao_detalhada": "O episódio é citado em dossiês parlamentares sobre assimetria entre volume de droga e resultado processual.",
+      "descricao_resumo": "A 2ª Turma do STF anulou a apreensão de 695 kg de cocaína no Porto de Itaguaí (RJ) por ausência de fundada suspeita individualizada (art. 240, §2º, CPP).",
+      "descricao_detalhada": "Operação da PF a partir de denúncia anônima; dois flagrantes. A irregularidade na origem da suspeita anulou o resultado independentemente da materialidade. Número do HC não localizado na verificação do corpus 1806.",
+      "evidence_status": "ev-confirmed"
+    },
+    {
+      "ano": 2023,
+      "tribunal": "STJ",
+      "nome": "Controle — STJ nega privilegiado a réu com 110 kg de maconha",
+      "tipo": "Caso de controle",
+      "tags": [
+        "trafico",
+        "p01-B",
+        "controle"
+      ],
+      "ref": "STJ, recurso do MPF provido, 11/set/2023",
+      "id_corpus": "1809",
+      "permalink": "/posts/2023-09-11-caso-de-controle-stj-nega-trafico-privilegiado-a-reu-preso-com-110kg-de-maconha-recurso-do/",
+      "fontes": [
+        "https://www.mpf.mp.br/pgr/noticias-pgr2/2023/stj-afasta-reducao-de-pena-em-caso-de-traficante-preso-com-grande-quantidade-de-droga"
+      ],
+      "descricao_resumo": "Em sentido contrário a 1805/1807, o STJ afastou o redutor de tráfico privilegiado após recurso do MPF.",
+      "descricao_detalhada": "Caso de controle (anti-viés): o mecanismo P01-B não é absoluto. O vetor de correção (recurso do MPF) funcionou neste caso específico — 110 kg de maconha sem redução de pena.",
       "evidence_status": "ev-confirmed"
     },
     {
       "ano": 2024,
       "tribunal": "STJ",
-      "nome": "9.166 habeas corpus concedidos a traficantes — em 1 ano",
+      "nome": "9.166 (Seif) e 10.127 (ConJur/STJ) HCs em matéria de tráfico — 2024",
       "tipo": "Levantamento anual",
       "tags": [
         "trafico",
-        "pcc"
+        "pcc",
+        "p01-B"
       ],
-      "ref": "Dossiê Sen. Jorge Seif, 2025",
+      "ref": "Dossiê Sen. Jorge Seif, 2025 · ConJur/STJ, jan/2025",
+      "id_corpus": "1808",
+      "permalink": "/posts/2024-12-26-stj-concede-10127-hcsrhcs-a-acusados-de-trafico-em-2024-quase-metade-de-todas-as-concessoe/",
       "fontes": [
-        "https://www12.senado.leg.br/noticias",
-        "https://www.estadao.com.br/politica"
+        "https://www.conjur.com.br/2025-jan-07/stj-concedeu-15-mil-hcs-para-aplicar-jurisprudencia-de-trafico-privilegiado-em-2024/",
+        "https://www.gazetadopovo.com.br/republica/dossie-de-senador-diz-que-stj-concedeu-9-mil-habeas-corpus-a-traficantes-em-2024/"
       ],
-      "descricao_resumo": "Levantamento parlamentar/jornalístico apontou milhares de HCs concedidos em matéria de tráfico no STJ em um ano.",
-      "descricao_detalhada": "O número agrega o volume de concessões e alimenta o debate sobre tráfico privilegiado e reincidência — estatística de impacto, não julgamento individual.",
+      "descricao_resumo": "Duas contagens independentes de concessões do STJ em 2024: 9.166 (dossiê Seif) e 10.127 HC/RHC (ConJur, dado do próprio tribunal até 26/dez).",
+      "descricao_detalhada": "Os 10.127 correspondem a 49,1% das 20.114 concessões do ano; 1.578 foram especificamente para aplicar tráfico privilegiado. A divergência 9.166 vs 10.127 permanece aberta (possível diferença HC vs RHC ou corte de datas) e não deve ser silenciada.",
+      "evidence_status": "ev-confirmed"
+    },
+    {
+      "ano": 2024,
+      "tribunal": "STJ",
+      "nome": "832 kg de cocaína PR–SP — liberdade a motorista",
+      "tipo": "HC liminar",
+      "tags": [
+        "trafico",
+        "p01-B"
+      ],
+      "ref": "STJ 6ª Turma, Rel. Min. Sebastião Reis Júnior, 30/out/2024",
+      "id_corpus": "1807",
+      "permalink": "/posts/2024-10-30-stj-concede-liberdade-a-motorista-flagrado-com-832kg-de-cocaina-entre-parana-e-sao-paulo/",
+      "fontes": [
+        "https://revistaoeste.com/brasil/stj-concede-liberdade-a-traficante-que-transportava-832-kg-de-cocaina/",
+        "https://diariodopoder.com.br/brasil-e-regioes/csa-brasil/stj-solta-traficante-preso-com-832-kg-de-cocaina-gravidade-insuficiente"
+      ],
+      "descricao_resumo": "Liminar do min. Sebastião Reis Júnior revogou a preventiva de Victor Gabriel Alves, flagrado com 832 kg de cocaína na Raposo Tavares.",
+      "descricao_detalhada": "O réu já havia sido solto em audiência de custódia; o TJSP restabeleceu a prisão a pedido do MP; o STJ restaurou a liberdade. Fundamento: gravidade em concreto, isoladamente, não basta; réu primário com vínculos familiares.",
       "evidence_status": "ev-confirmed"
     },
     {
@@ -217,6 +309,49 @@
       "descricao_resumo": "Turma do STJ afastou tipificação/condena em estupro de vulnerável com base em erro de proibição (distinguishing).",
       "descricao_detalhada": "A decisão gerou controvérsia pública por aplicar excludente em crime sexual contra vulnerável; registro de impacto social, não endosso.",
       "evidence_status": "ev-confirmed"
+    },
+    {
+      "ano": 2026,
+      "tribunal": "TJ-RJ",
+      "nome": "Oruam — revoga preventiva por tentativa de homicídio; permanece foragido",
+      "tipo": "Revogação de preventiva",
+      "tags": [
+        "homicidio",
+        "foragido",
+        "lavagem-de-dinheiro"
+      ],
+      "ref": "3ª Vara Criminal do Rio — juíza Tula Corrêa de Mello, 31/jul/2026",
+      "id_corpus": "1798",
+      "permalink": "/posts/2026-07-31-justica-do-rio-revoga-prisao-preventiva-de-oruam-por-tentativa-de-homicidio-mas-rapper-per/",
+      "fontes": [
+        "https://www.cnnbrasil.com.br/nacional/sudeste/rj/justica-do-rio-revoga-prisao-de-oruam-por-tentativa-de-homicidio/",
+        "https://www.portaltela.com/brasil/2026/08/01/justica-revoga-prisao-preventiva-de-oruam-mas-rapper-segue-foragido/",
+        "https://sbtnews.sbt.com.br/noticia/brasil/tribunal-de-justica-do-rj-revoga-prisao-de-oruam"
+      ],
+      "descricao_resumo": "A 3ª Vara Criminal do Rio revogou a preventiva de Oruam (Mauro Davi dos Santos Nepomuceno) no processo de tentativa de homicídio; ele permanece foragido por lavagem.",
+      "descricao_detalhada": "A juíza desclassificou a conduta para lesões e infrações com pena máxima inferior a 4 anos. Mandado distinto de lavagem de dinheiro segue ativo. Checagem em fontes independentes (CNN, SBT, Band, Portal Tela, Metrópoles) corrige a leitura de que ele 'deixou de ser foragido'.",
+      "evidence_status": "ev-confirmed"
+    },
+    {
+      "ano": 2026,
+      "tribunal": "TJ-SP",
+      "nome": "Karen Tanaka ('Japa do PCC') — revoga tornozeleira em investigação de R$ 35 mi",
+      "tipo": "Revogação de medida cautelar",
+      "tags": [
+        "pcc",
+        "lavagem-de-dinheiro",
+        "trafico"
+      ],
+      "ref": "Vara Estadual das Garantias de Orcrim e Lavagem/SP — juíza Paula Regina Schempf Cattan, 01/ago/2026",
+      "id_corpus": "1799",
+      "permalink": "/posts/2026-08-01-justica-de-sp-revoga-tornozeleira-eletronica-de-karen-tanaka-a-japa-do-pcc-suspeita-de-lav/",
+      "fontes": [
+        "https://www.metropoles.com/distrito-federal/na-mira/justica-de-sp-revoga-uso-de-tornozeleira-eletronica-de-japa-do-pcc",
+        "https://bhaz.com.br/primeiramao/justica-revoga-tornozeleira-e-recolhimento-noturno-da-japa-do-pcc/"
+      ],
+      "descricao_resumo": "TJSP revogou tornozeleira e recolhimento noturno de Karen de Moura Tanaka Mori, investigada por lavar mais de R$ 35 milhões ligados ao PCC.",
+      "descricao_detalhada": "Fundamento: risco de pena antecipada após mais de dois anos de cautelar sem denúncia formal do MP-SP. Substitutos: passaporte, comparecimento mensal e proibição de deixar o estado. Monitorada desde fevereiro de 2024.",
+      "evidence_status": "ev-confirmed"
     }
   ],
   "alertas_sistemicos": [
@@ -228,12 +363,17 @@
     {
       "nivel": "alto",
       "titulo": "Tráfico Privilegiado Desfigurado",
-      "descricao": "Benefício para réus primários aplicado em apreensões de 200–700 kg de drogas."
+      "descricao": "EREsp 1.887.511 (2021) fixou que quantidade isolada não afasta o §4º. Aplicações documentadas em 311 kg (2022) e 832 kg (2024). Em 2024, 1.578 HCs do STJ aplicaram o privilegiado (ConJur). O caso 1809 (110 kg, MPF provido) mostra que o mecanismo não é absoluto."
     },
     {
       "nivel": "alto",
       "titulo": "Ausência de Banco Nacional de Solturas",
       "descricao": "BNMP 3.0 não correlaciona solturas com reincidência."
+    },
+    {
+      "nivel": "medio",
+      "titulo": "Cautelares 2026 — desclassificação e pena antecipada",
+      "descricao": "Oruam (TJRJ, 1798): revoga preventiva de tentativa de homicídio e permanece foragido por lavagem. Karen Tanaka (TJSP, 1799): revoga tornozeleira após 2 anos sem denúncia em investigação de R$ 35 mi ligada ao PCC."
     }
   ],
   "integracao_corpus": [
@@ -248,6 +388,38 @@
     {
       "id_ref": 206,
       "descricao": "SPLC modelo Brasil — T-206"
+    },
+    {
+      "id_ref": 1804,
+      "descricao": "P01-B · EREsp 1.887.511 — quantidade não afasta privilegiado"
+    },
+    {
+      "id_ref": 1805,
+      "descricao": "P01-B · STJ 311 kg cocaína GO — liberdade unânime"
+    },
+    {
+      "id_ref": 1806,
+      "descricao": "P01-B · STF 695 kg Itaguaí — nulidade fundada suspeita"
+    },
+    {
+      "id_ref": 1807,
+      "descricao": "P01-B · STJ 832 kg cocaína PR–SP — liberdade"
+    },
+    {
+      "id_ref": 1808,
+      "descricao": "P01-B · 10.127 HC/RHC tráfico STJ 2024 (vs 9.166 Seif)"
+    },
+    {
+      "id_ref": 1809,
+      "descricao": "P01-B · controle — STJ nega privilegiado 110 kg maconha"
+    },
+    {
+      "id_ref": 1798,
+      "descricao": "TJRJ · Oruam — revoga preventiva; permanece foragido por lavagem"
+    },
+    {
+      "id_ref": 1799,
+      "descricao": "TJSP · Karen Tanaka (Japa do PCC) — revoga tornozeleira"
     }
   ]
 }

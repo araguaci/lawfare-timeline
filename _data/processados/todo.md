@@ -1,11 +1,27 @@
 # Notas de processamento · `_data/todo/`
 
-**Atualizado:** 2026-09-12 (1918–1925 / T-268 O Negócio da Lama)
+**Atualizado:** 2026-09-13 (1926–1942 mortalidade 8/1 · P05 · Madame Satã)
 
 ## Fila
 
-- `_data/todo/` — **sem batches JSON** (12/09, após 1918–1925 / T-268)
-- Staging: `prompt-tratamento-pdfs-mensalao.md`, `thread-vazatoga-diploma-impunidade.md`, `notas-clubes-militares.html`, `compass_artifact_*.md`
+- `_data/todo/` — staging HTML/MD (JSON 1926–1942 arquivado)
+- T-269 unificado 13/09
+
+## Merge 13/09/2026 (b)
+
+| Batch | IDs na fila | IDs finais |
+|-------|-------------|------------|
+| Mortalidade 8/1 · P05 · Madame Satã | 1918–1934 (colisão) | **1926–1942** |
+
+1918–1925 já eram Brumadinho. Sem overwrite.
+
+## Merge 13/09/2026
+
+| Batch | IDs na fila | IDs finais |
+|-------|-------------|------------|
+| Premissa protetora (3 rascunhos → 1) | T-268* / T-269 / T-269 | **T-269** (T-268 já era Loop da Lama) |
+
+Só `ev-confirmed`. Descartes: autoria do vídeo, audiência, 2000 exilados, «toda a imprensa», Economist secundária.
 
 ## Merge 12/09/2026
 

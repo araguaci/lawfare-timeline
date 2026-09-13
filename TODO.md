@@ -1,6 +1,6 @@
 # Próximos passos · lawfare-timeline
 
-**Atualizado:** 2026-09-12 (1918–1925 / T-268 O Negócio da Lama)
+**Atualizado:** 2026-09-13 (1926–1942 mortalidade 8/1 · P05 · Madame Satã)
 
 > Espelho: `docs/TODO.md` · Notas: `_data/processados/todo.md` · Legado: `docs/TODO-LEGACY.md`
 
@@ -10,12 +10,26 @@
 
 | Track | Last | Próximo | Validação |
 |-------|------|---------|-----------|
-| Main | **1925** | **1926** | lawfare.json **1886** entradas · sem IDs duplicados |
-| Thematic | **T-268** | **T-269** | sync 100–268 contínuo |
+| Main | **1942** | **1943** | lawfare.json **1903** entradas · sem IDs duplicados |
+| Thematic | **T-269** | **T-270** | sync 100–269 contínuo |
 | Dragão e a Onça | **1770** / **T-246** | — | `dragao-onca.json` **151** |
-| Fila `_data/todo/` | staging HTML/MD | — | JSON 1918–1925 / T-268 arquivado 12/09 |
+| Fila `_data/todo/` | staging HTML/MD | — | JSON 1926–1942 arquivado 13/09 |
 
 ---
+
+## Rodada 13/09/2026 (b) ✅ — Mortalidade 8/1 · P05 · Madame Satã
+
+Lote na fila veio como `1918-1934` e **colidia** com Brumadinho. Realocado para **1926–1942** (17 fichas). Sem overwrite. `ev-alleged`: 1934 (Cláudio Fernando), 1938 (Rebeca Ramagem). `ev-contested`: 1929 (Eder Jacinto), 1941 (festa Madame Satã / presença de autoridades).
+
+| Faixa | Conteúdo |
+|-------|----------|
+| **1926–1936** | Óbitos da coorte 8/1 (Papuda, tornozeleira, ANPP, exílio) |
+| **1937–1940** | Bloqueios patrimoniais (Paola Daniel, Rebeca Ramagem, Allan dos Santos, Marcos do Val) |
+| **1941–1942** | Vorcaro / Madame Satã e derrubada do perfil @anatrackid |
+
+## Rodada 13/09/2026 ✅ — T-269 premissa protetora (só confirmado)
+
+Três rascunhos (`suspensao-simetrica`, `captura-cultural-bonhoeffer`, `selectividade-imprensa-stf`) unificados em [T-269](/posts/2026-09-13-premissa-protetora-julgamento-critico-o-que-se-confirma/). T-268 permanece O Loop da Lama. Descartadas alegações sem fonte primária (autoria do vídeo, audiência, 2000 exilados, «toda a imprensa», The Economist secundária). JSON em `_data/processados/thematic-T269-premissa-protetora-confirmado.json`.
 
 ## Rodada 12/09/2026 ✅ — O Negócio da Lama / Brumadinho
 
