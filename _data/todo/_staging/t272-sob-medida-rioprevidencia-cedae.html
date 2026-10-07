@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T-271 — Sob Medida: a captura relâmpago do Rioprevidência e da Cedae</title>
+<meta name="description" content="Síntese temática: cronologia nomeação-credenciamento-aporte no Rioprevidência e Cedae, Cláudio Castro e a rede de Vorcaro. Corpus lawfare-timeline, CC0.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#080c10; --surface:#10161c; --surface2:#141b22; --border:#232c35;
+    --gold:#e8c84a; --red:#e05a4a; --blue:#4a9ee8; --green:#7ee8a2; --purple:#b78ae8;
+    --text:#e8e4d8; --muted:#8a8f9a;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:'Crimson Pro',serif;line-height:1.6}
+  .mono{font-family:'IBM Plex Mono',monospace}
+  .display{font-family:'Syne',sans-serif}
+
+  header.hero{padding:4rem 1.5rem 3rem;text-align:center;border-bottom:1px solid var(--border);background:radial-gradient(ellipse at top,rgba(224,90,74,.08),transparent 60%)}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--red);margin-bottom:1.2rem}
+  h1.display{font-size:clamp(2rem,6vw,3.6rem);font-weight:800;line-height:1.08;max-width:900px;margin:0 auto 1rem}
+  h1.display .accent{color:var(--red)}
+  .subtitle{max-width:660px;margin:0 auto;color:var(--muted);font-size:1.1rem;font-style:italic}
+  .meta-row{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:1.8rem;font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--muted)}
+  .meta-row span b{color:var(--text)}
+
+  main{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+  section{padding:3rem 0;border-bottom:1px solid var(--border)}
+  h2.display{font-size:clamp(1.4rem,3.5vw,2rem);font-weight:700;margin-bottom:.5rem}
+  .section-note{color:var(--muted);font-size:.95rem;margin-bottom:2rem;max-width:70ch}
+
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--border);border:1px solid var(--border)}
+  .stat{background:var(--surface);padding:1.5rem 1rem;text-align:center}
+  .stat .n{font-family:'Syne',sans-serif;font-weight:800;font-size:2rem;color:var(--red)}
+  .stat .l{font-family:'IBM Plex Mono',monospace;font-size:.6rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:.3rem}
+
+  /* people grid */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:1.2rem;transition:border-color .2s}
+  .card:hover{border-color:var(--red)}
+  .card .name{font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:.4rem}
+  .card .role{font-family:'IBM Plex Mono',monospace;font-size:.63rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:.7rem}
+  .card p{font-size:.92rem;color:#c9c5b8}
+  .card .ids{margin-top:.7rem;font-family:'IBM Plex Mono',monospace;font-size:.62rem;color:var(--red)}
+  .tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:.6rem;padding:.15rem .5rem;border-radius:3px;background:var(--surface2);color:var(--muted);margin-top:.4rem}
+  .tag.ev-confirmed{color:var(--green);border:1px solid rgba(126,232,162,.3)}
+
+  /* critical path */
+  .cpath{display:flex;flex-direction:column;gap:0}
+  .cp-item{display:grid;grid-template-columns:110px 1fr;gap:1rem;padding:1rem 0;border-bottom:1px dashed var(--border);align-items:start}
+  .cp-item:last-child{border-bottom:none}
+  .cp-date{font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:var(--red);font-weight:600}
+  .cp-title{font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;margin-bottom:.2rem}
+  .cp-desc{color:#c9c5b8;font-size:.9rem}
+  .cp-item.critical .cp-title{color:var(--gold)}
+  .cp-gap{font-family:'IBM Plex Mono',monospace;font-size:.65rem;color:var(--red);text-align:center;padding:.3rem 0;opacity:.8}
+
+  table{width:100%;border-collapse:collapse;font-size:.88rem}
+  th,td{text-align:left;padding:.6rem .8rem;border-bottom:1px solid var(--border)}
+  th{font-family:'IBM Plex Mono',monospace;font-size:.6rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+  td.pcode{font-family:'IBM Plex Mono',monospace;color:var(--red);white-space:nowrap}
+
+  .compare{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+  @media(max-width:640px){.compare{grid-template-columns:1fr}}
+  .compare-col{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:1.3rem}
+  .compare-col h3{font-family:'Syne',sans-serif;font-size:1rem;margin-bottom:.8rem}
+  .compare-col.stf h3{color:var(--blue)}
+  .compare-col.rj h3{color:var(--red)}
+  .compare-col ul{list-style:none;display:grid;gap:.6rem;font-size:.88rem}
+  .compare-col li{padding-left:1rem;border-left:2px solid var(--border);color:#c9c5b8}
+
+  .callout{background:var(--surface2);border:1px solid var(--border);border-left:3px solid var(--purple);border-radius:4px;padding:1.2rem 1.4rem;margin-top:1.5rem}
+  .callout .k{font-family:'IBM Plex Mono',monospace;font-size:.62rem;text-transform:uppercase;letter-spacing:.08em;color:var(--purple);margin-bottom:.4rem}
+
+  .lacunas ul{list-style:none;display:grid;gap:.7rem}
+  .lacunas li{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:.9rem 1.1rem;font-size:.9rem;color:#c9c5b8}
+  .lacunas li b{color:var(--red);font-family:'IBM Plex Mono',monospace;font-size:.7rem;display:block;margin-bottom:.3rem}
+
+  footer{padding:2.5rem 1.5rem;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--muted)}
+  footer a{color:var(--red)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="eyebrow">Eixo SELVA · lawfare-timeline · Síntese Temática T-271</div>
+  <h1 class="display">Sob <span class="accent">Medida</span></h1>
+  <p class="subtitle">A captura relâmpago do Rioprevidência e da Cedae: não é escritório de família construído ao longo de anos — é substituição cirúrgica de cúpula em três meses, com uma nomeação coincidindo, no mesmo dia, com o pedido do beneficiário. Contraponto processual a T-270: aqui a Justiça já autorizou busca e apreensão e a PGR já fala em coautoria.</p>
+  <div class="meta-row">
+    <span>Janela: <b>mai/2023 – set/2026</b></span>
+    <span>Entradas-base: <b>id_1932, id_1939–1944</b> (6)</span>
+    <span>Atualizado: <b>17/09/2026</b></span>
+    <span>Licença: <b>CC0 1.0</b></span>
+  </div>
+</header>
+
+<main>
+
+<section>
+  <h2 class="display">O dado agregado</h2>
+  <p class="section-note">Diferente do STF (T-270), aqui não há uma década de proximidade social acumulada para explicar a captura. Há uma janela de cinco meses em 2023 e uma sequência de três dias em 2024 — e isso é, sozinho, mais difícil de explicar como coincidência.</p>
+  <div class="stats">
+    <div class="stat"><div class="n">3 dias</div><div class="l">entre encontro presencial e primeiro aporte (dez/2024)</div></div>
+    <div class="stat"><div class="n">R$3bi+</div><div class="l">Rioprevidência, mais de 25% do patrimônio da autarquia</div></div>
+    <div class="stat"><div class="n">R$222mi</div><div class="l">prejuízo estimado da Cedae — 2ª estatal capturada</div></div>
+    <div class="stat"><div class="n">8</div><div class="l">encontros Castro-Vorcaro documentados em 1 ano</div></div>
+  </div>
+</section>
+
+<section>
+  <h2 class="display">Quem</h2>
+  <p class="section-note">Diferente do STF, aqui há nomes, cargos e datas de nomeação exatos — trilha administrativa, não vazamento pericial.</p>
+  <div class="grid">
+    <div class="card">
+      <div class="name">Cláudio Castro</div>
+      <div class="role">Governador do RJ, 2021–mar/2026</div>
+      <p>8 encontros documentados com Vorcaro em 1 ano, incluindo jantares em NY custeados pelo banqueiro. Nomeou os três dirigentes do Rioprevidência entre jul-out/2023. STF autorizou busca e apreensão contra ele em 11/09/2026; PGR formalizou indícios de coautoria — enquadramento mais grave que qualquer caso do STF até aqui.</p>
+      <span class="tag ev-confirmed">ev-confirmed</span>
+      <div class="ids">id_1932 · id_1941 · id_1944</div>
+    </div>
+    <div class="card">
+      <div class="name">Deivis Marcon Antunes</div>
+      <div class="role">Diretor-presidente, jul/2023–jan/2026</div>
+      <p>17 anos de carreira na Previ (BB), sem vínculo prévio identificado com Vorcaro. "Dava guarita" aos demais diretores segundo a PF. Renunciou no dia da Operação Barco de Papel; alvo de suspeita de obstrução e ocultação de valores — mala de dinheiro jogada de janela durante busca em Balneário Camboriú.</p>
+      <span class="tag ev-confirmed">ev-confirmed</span>
+      <div class="ids">id_1941 · id_1942</div>
+    </div>
+    <div class="card">
+      <div class="name">Euchério Lerner Rodrigues</div>
+      <div class="role">Diretor de Investimentos, out/2023–jan/2026</div>
+      <p>Nomeado em 04/10/2023 — no mesmo dia em que o Banco Master enviou e-mail solicitando credenciamento junto ao Rioprevidência. Credenciamento aprovado em 12 dias.</p>
+      <span class="tag ev-confirmed">ev-confirmed</span>
+      <div class="ids">id_1941</div>
+    </div>
+    <div class="card">
+      <div class="name">Pedro Pinheiro Guerra Leal</div>
+      <div class="role">Gerente de Investimentos</div>
+      <p>Abriu o processo interno de análise do pedido de credenciamento do Master no mesmo dia em que ele chegou.</p>
+      <span class="tag ev-confirmed">ev-confirmed</span>
+      <div class="ids">id_1941 · id_1942</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="display">O caminho crítico</h2>
+  <p class="section-note">Cada intervalo aqui é curto o suficiente para funcionar como prova circunstancial por si só — é a sequência, não qualquer evento isolado, que a PGR chama de "coautoria".</p>
+  <div class="cpath">
+    <div class="cp-item"><div class="cp-date">12 mai 2023</div><div><div class="cp-title">Jantar em Nova York</div><div class="cp-desc">Vorcaro paga R$66 mil de jantar com Castro.</div></div></div>
+    <div class="cp-gap">↓ 5 dias</div>
+    <div class="cp-item"><div class="cp-date">mai 2023</div><div><div class="cp-title">Tratativas Cedae começam</div><div class="cp-desc">Auditoria interna: início das tratativas entre Cedae e executivos do Master.</div></div></div>
+    <div class="cp-gap">↓ ~7 semanas</div>
+    <div class="cp-item critical"><div class="cp-date">05 jul 2023</div><div><div class="cp-title">Nomeação de Antunes</div><div class="cp-desc">Castro nomeia Deivis Marcon Antunes diretor-presidente do Rioprevidência.</div></div></div>
+    <div class="cp-gap">↓ 3 semanas</div>
+    <div class="cp-item"><div class="cp-date">27 jul 2023</div><div><div class="cp-title">Novo encontro Castro-Vorcaro</div><div class="cp-desc">Três meses antes do primeiro aporte.</div></div></div>
+    <div class="cp-gap">↓ ~10 semanas</div>
+    <div class="cp-item critical"><div class="cp-date">04 out 2023</div><div><div class="cp-title">Mesmo dia: nomeação + credenciamento</div><div class="cp-desc">Rodrigues é nomeado diretor de Investimentos NO MESMO DIA em que o Master pede credenciamento. Leal abre o processo de análise.</div></div></div>
+    <div class="cp-gap">↓ 12 dias</div>
+    <div class="cp-item"><div class="cp-date">16 out 2023</div><div><div class="cp-title">Credenciamento aprovado</div><div class="cp-desc">Rito classificado pela auditoria como "meramente burocrático" — sem análise qualitativa prévia da solidez do emissor.</div></div></div>
+    <div class="cp-gap">↓ ~3 semanas</div>
+    <div class="cp-item"><div class="cp-date">06 nov 2023</div><div><div class="cp-title">Novo encontro Castro-Vorcaro</div><div class="cp-desc">Dias após o primeiro aporte do Rioprevidência.</div></div></div>
+    <div class="cp-gap">↓ 13 meses</div>
+    <div class="cp-item critical"><div class="cp-date">17 dez 2024</div><div><div class="cp-title">Encontro na casa de Vorcaro, Brasília</div><div class="cp-desc">Castro e Vorcaro combinam encontro presencial.</div></div></div>
+    <div class="cp-gap">↓ 1 dia</div>
+    <div class="cp-item critical"><div class="cp-date">18 dez 2024</div><div><div class="cp-title">Fundo Arena entra em operação</div><div class="cp-desc">Administrado pela corretora do Master.</div></div></div>
+    <div class="cp-gap">↓ 1 dia</div>
+    <div class="cp-item critical"><div class="cp-date">19 dez 2024</div><div><div class="cp-title">Primeiro aporte no Arena: R$50mi</div><div class="cp-desc">Rioprevidência acabaria investindo R$1,37bi só neste fundo.</div></div></div>
+    <div class="cp-gap">↓ ~5 meses</div>
+    <div class="cp-item"><div class="cp-date">14 mai 2025</div><div><div class="cp-title">TCE-RJ emite alerta formal</div><div class="cp-desc">Decisão plenária avisa diretor-presidente sobre risco pessoal de manter os aportes.</div></div></div>
+    <div class="cp-gap">↓ alerta ignorado</div>
+    <div class="cp-item critical"><div class="cp-date">2025</div><div><div class="cp-title">16 aportes em 66 dias — após o alerta</div><div class="cp-desc">Rioprevidência mantém e amplia exposição mesmo avisado. R$2,6bi permanecem expostos.</div></div></div>
+    <div class="cp-gap">↓ 6 meses</div>
+    <div class="cp-item"><div class="cp-date">18 nov 2025</div><div><div class="cp-title">Liquidação do Master</div><div class="cp-desc">Banco Central decreta liquidação extrajudicial; Vorcaro preso.</div></div></div>
+    <div class="cp-gap">↓ 2 meses</div>
+    <div class="cp-item"><div class="cp-date">23 jan 2026</div><div><div class="cp-title">Operação Barco de Papel</div><div class="cp-desc">Antunes renuncia; mala de dinheiro jogada de janela em Balneário Camboriú.</div></div></div>
+    <div class="cp-gap">↓ 2 meses</div>
+    <div class="cp-item"><div class="cp-date">23 mar 2026</div><div><div class="cp-title">Castro deixa o governo</div><div class="cp-desc">Substituído interinamente por Ricardo Couto. Causalidade direta com o caso não confirmada nas fontes.</div></div></div>
+    <div class="cp-gap">↓ ~6 meses</div>
+    <div class="cp-item critical"><div class="cp-date">11 set 2026</div><div><div class="cp-title">STF autoriza busca e apreensão contra Castro</div><div class="cp-desc">PGR formaliza indícios de "coautoria" — primeira imputação desse nível em toda a rede documentada.</div></div></div>
+  </div>
+</section>
+
+<section>
+  <h2 class="display">Padrões P0X identificados</h2>
+  <table>
+    <thead><tr><th>Código</th><th>Padrão</th><th>Como aparece aqui</th></tr></thead>
+    <tbody>
+      <tr><td class="pcode">P03</td><td>Captura de emergência</td><td>Substituição cirúrgica de três diretores em três meses, sem histórico de relação prévia — captura por desenho de nomeação, não por proximidade acumulada</td></tr>
+      <tr><td class="pcode">P05</td><td>Fundos públicos como vetor</td><td>Rioprevidência (previdência) e Cedae (saneamento) — o mecanismo mirava qualquer caixa estatal com liquidez e governança de cúpula, não só previdência</td></tr>
+      <tr><td class="pcode">P06</td><td>Persistência apesar de alerta</td><td>16 aportes em 66 dias após o TCE-RJ avisar formalmente o diretor-presidente sobre risco pessoal</td></tr>
+      <tr><td class="pcode">P07</td><td>Captura transgeracional / de cúpula</td><td>Não aplica no sentido familiar — mas a "guarita" institucional de Antunes aos subordinados é o equivalente hierárquico</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2 class="display">Contraponto a T-270: velocidade processual</h2>
+  <p class="section-note">A comparação mais reveladora do corpus inteiro não está dentro deste caso — está entre este caso e o STF.</p>
+  <div class="compare">
+    <div class="compare-col stf">
+      <h3>Eixo STF (T-270)</h3>
+      <ul>
+        <li>7 de 11 ministros com vínculo documentado desde jun/2025</li>
+        <li>Zero declarações espontâneas de impedimento</li>
+        <li>Sessão de 15/09/2026 termina em pedido de vista — decisão empurrada para pós-eleição via prazo regimental de 90 dias</li>
+        <li>Nenhum ministro formalmente enquadrado como investigado até 17/09/2026</li>
+        <li>Controle do material pericial concentrado em um único relator há 6+ meses</li>
+      </ul>
+    </div>
+    <div class="compare-col rj">
+      <h3>Eixo RJ (T-271)</h3>
+      <ul>
+        <li>Nomeações trocadas, credenciamento aprovado e primeiro aporte em menos de 4 meses (jul-out/2023)</li>
+        <li>Alerta formal do TCE-RJ emitido e documentado — mecanismo de controle funcionou</li>
+        <li>Busca e apreensão autorizada contra o ex-governador em 11/09/2026</li>
+        <li>PGR formaliza "coautoria" — enquadramento mais grave já atingido em toda a rede</li>
+        <li>Três dirigentes afastados/renunciados em operação policial nomeada</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout">
+    <div class="k">Leitura estrutural</div>
+    O caso que andou mais rápido no sistema de Justiça não foi nenhum dos sete ministros do STF — foi o governador. A hipótese mais simples é a que a tese central do corpus prevê: quando o alvo está <i>fora</i> do mecanismo de autofiscalização entre pares, a Justiça se move. Quando está <i>dentro</i>, como a sessão de 15/09 documenta, o próprio colegiado emperra a si mesmo por meio de instrumentos regimentais neutros (pedido de vista) aplicados a um caso que não é neutro.
+  </div>
+</section>
+
+<section class="lacunas">
+  <h2 class="display">Lacunas</h2>
+  <ul>
+    <li><b>Cadeia de decisão na Cedae</b> — diferente do Rioprevidência, ainda não há nomes individuais de executivos responsáveis pela mudança de política de investimento da estatal.</li>
+    <li><b>Motivo exato da saída de Castro do governo (23/03/2026)</b> — coincidência temporal com o agravamento das investigações é notável, mas causalidade direta não confirmada nas fontes.</li>
+    <li><b>Extensão real do dano na Cedae além dos R$222,1mi estimados</b> — auditoria segue em curso sob a gestão interina de Ricardo Couto.</li>
+    <li><b>Outros estados/municípios com padrão de "nomeação relâmpago"</b> — dos 18 RPPS expostos (CADPREV), só o Rioprevidência teve a cadeia de nomeação investigada a este nível de detalhe. Amprev (Amapá, R$400mi, segunda maior exposição) é candidato natural à próxima verificação.</li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  lawfare-timeline · Eixo SELVA · CC0 1.0 — domínio público · consolidado a partir de id_1932, id_1939–id_1944 · atualizado 17/09/2026 · eixo Executivo estadual RJ — ver T-270 para o eixo Judiciário federal
+</footer>
+
+</body>
+</html>

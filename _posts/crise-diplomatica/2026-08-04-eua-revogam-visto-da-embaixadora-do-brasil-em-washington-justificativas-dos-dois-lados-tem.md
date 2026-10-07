@@ -7,9 +7,9 @@ image:
 tags: ["crise-diplomatica", "p04"]
 categories: crise-diplomatica
 permalink: /posts/2026-08-04-eua-revogam-visto-da-embaixadora-do-brasil-em-washington-justificativas-dos-dois-lados-tem/
-id_corpus: "1828"
+id_corpus: "1971"
 corpus_unificado: true
-source_data: "lawfare-batch-1827-1828-coronel-pcc-visto-embaixadora.json"
+source_data: "lawfare-batch-coronel-pcc-visto-embaixadora-1970-1971.json"
 ---
 
 - &nbsp;
@@ -29,7 +29,7 @@ Departamento de Estado dos EUA revogou em 04/08/2026 o visto da embaixadora do B
 
 | Campo | Valor |
 | --- | --- |
-| `id_corpus` | **1828** |
+| `id_corpus` | **1971** |
 | Categoria analitica | incidente_diplomatico |
 | Evidencia | ev-confirmed para os fatos objetivos (nomes, datas, negativas e revogações de visto, declarações públicas de ambos os lados) — ev-contested para a caracterização do motivo da viagem de Barnes/Samson, tratada isoladamente no campo analise |
 

@@ -7,9 +7,9 @@ image:
 tags: ["bancos", "p10"]
 categories: bancos
 permalink: /posts/2026-08-04-coronel-pm-descrito-por-pf-como-amigo-de-operadores-financeiros-do-pcc-chefiou-assessoria-/
-id_corpus: "1827"
+id_corpus: "1970"
 corpus_unificado: true
-source_data: "lawfare-batch-1827-1828-coronel-pcc-visto-embaixadora.json"
+source_data: "lawfare-batch-coronel-pcc-visto-embaixadora-1970-1971.json"
 ---
 
 - &nbsp;
@@ -29,7 +29,7 @@ Coronel da reserva Luiz Carlos Pereira Martins, identificado em relatório da De
 
 | Campo | Valor |
 | --- | --- |
-| `id_corpus` | **1827** |
+| `id_corpus` | **1970** |
 | Categoria analitica | mecanismo_sistemico |
 | Evidencia | ev-confirmed |
 

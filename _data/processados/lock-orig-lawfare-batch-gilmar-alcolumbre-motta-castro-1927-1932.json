@@ -1,0 +1,167 @@
+[
+  {
+    "id": "1927",
+    "date": "2026-09-17",
+    "date_precision": "day",
+    "title": "Vorcaro contratou ex-cunhado de Gilmar Mendes, que atuou por reunião do Master com o ministro; Gilmar votou contra interesses do banco em duas ações",
+    "summary": "O Estadão revelou, em 17/09/2026, que Daniel Vorcaro contratou Chiquinho Feitosa — ex-senador, ex-deputado e, à época, cunhado do ministro Gilmar Mendes (irmão de Guiomar Feitosa, então esposa do ministro) — por R$500 mil mensais, via prestação de serviços à Super Empreendimentos, empresa de Vorcaro sob suspeita de lavagem. Feitosa admitiu ter prestado serviço à empresa e, segundo mensagens da investigação, tratou de assuntos do Master em jantar com o ministro e articulou uma reunião entre Vorcaro e Gilmar Mendes em 11/04, chamando o banqueiro de 'irmão' e recomendando a aproximação como 'importante para o futuro'. Gilmar votou contra os interesses do Master nas duas ações relacionadas identificadas pela reportagem, inclusive na disputa bilionária de precatórios do setor sucroalcooleiro. O gabinete do ministro afirma que ele desconhecia qualquer relação comercial entre Feitosa e Vorcaro. Em 10/09, antecipando a exposição, Gilmar já havia reagido publicamente a uma tentativa de constrangê-lo por associação ao ex-cunhado: 'não se faz pacto com chantagista […] ou você mata ou morre' — declaração que chegou ao conhecimento do presidente do STF, Edson Fachin.",
+    "category": "mecanismo_sistemico",
+    "actors": [
+      {"name": "Chiquinho Feitosa", "role": "Ex-senador, ex-deputado, ex-cunhado do ministro — contratado por R$500 mil/mês pela Super Empreendimentos de Vorcaro; articulou reunião e recomendou aproximação com o ministro", "institution": "Super Empreendimentos"},
+      {"name": "Gilmar Mendes", "role": "Ministro do STF — reunião articulada por seu então ex-cunhado; votou contra os interesses do Master nas ações identificadas; gabinete nega conhecimento da relação comercial", "institution": "STF"},
+      {"name": "Daniel Vorcaro", "role": "Controlador do Master — contratou o ex-cunhado do ministro e articulou proximidade", "institution": "Banco Master"}
+    ],
+    "institutions": ["STF", "Super Empreendimentos", "Banco Master"],
+    "legal_basis": ["RISTF — normas de suspeição e impedimento"],
+    "patterns": ["P02", "P07"],
+    "evidence_status": "ev-confirmed",
+    "sources": [
+      {"title": "Vorcaro contratou ex-cunhado de Gilmar Mendes, que atuou por reunião do Master com ministro", "url": "https://www.estadao.com.br", "outlet": "O Estadão", "date": "2026-09-17"},
+      {"title": "Cunhado de Gilmar chamava Vorcaro de irmão e recomendou aproximação com ministro: 'Importante para o futuro'", "url": "https://www.estadao.com.br", "outlet": "O Estadão", "date": "2026-09-17"},
+      {"title": "Após encontro com Vorcaro, Gilmar Mendes votou contra interesse bilionário do banqueiro", "url": "https://revistaforum.com.br/revista-forum/vorcaro-gilmar-mendes-votou/", "outlet": "Revista Fórum", "date": "2026-09-17"},
+      {"title": "Sob ameaça de ser envolvido no caso Master, Gilmar avisa: 'Não se faz pacto com chantagista'", "url": "https://www.diariodocentrodomundo.com.br/sob-ameaca-de-ser-envolvido-no-caso-master-gilmar-avisa-nao-se-faz-pacto-com-chantagista", "outlet": "Diário do Centro do Mundo", "date": "2026-09-10"}
+    ],
+    "result": "Gilmar Mendes torna-se o quinto ministro do STF (após Moraes, Toffoli, Lewandowski, Nunes Marques) com vínculo documentado entre seu entorno familiar e Vorcaro. Voto contrário aos interesses do Master nas ações citadas é apontado pela reportagem como dado que distingue este caso dos demais — proximidade documentada sem indício de decisão favorável correspondente.",
+    "connections": ["id_1843", "id_1920", "id_1925"],
+    "status": "confirmado",
+    "lacuna_investigativa": "Não está estabelecido se Gilmar tinha conhecimento da relação comercial entre Feitosa e Vorcaro no momento da reunião de 11/04. Conteúdo integral do jantar em que Feitosa teria tratado de 'assuntos do dono do Master' com o ministro não detalhado nas fontes disponíveis. Identidade de quem articulou a tentativa de constrangimento mencionada por Gilmar em 10/09 não esclarecida.",
+    "ponto_de_inflexao": "Diferente dos demais casos da série (Moraes, Toffoli, Nunes Marques), aqui a proximidade documentada não corresponde a voto favorável — Gilmar votou contra o Master nas duas ações citadas. É o primeiro caso da série que funciona como controle negativo: proximidade familiar não implica automaticamente decisão capturada.",
+    "analise": "Este caso serve de teste ao próprio protocolo anti-confirmation-bias do corpus: a tentação analítica seria colapsar automaticamente 'proximidade documentada' em 'decisão capturada', mas os votos de Gilmar contradizem essa hipótese nos casos específicos levantados. Isso não invalida a preocupação estrutural (a ausência de declaração de impedimento permanece, e o próprio Gilmar reconhece a tentativa de uso político do fato para constrangê-lo) — mas distingue analiticamente 'vínculo exposto a manipulação por terceiros' de 'vínculo que efetivamente capturou uma decisão', reforçando que a regra de ouro do corpus (rigor redobrado quando a distinção é inconveniente) vale nas duas direções."
+  },
+  {
+    "id": "1928",
+    "date": "2025-07-18",
+    "date_precision": "day",
+    "title": "Vorcaro veta Antônio Rueda como moderador de fórum em Londres citando reação atribuída a Moraes: 'Alexandre morre se vc fizer isso'",
+    "summary": "Relatório da PF revela série de mensagens, entre fevereiro/2025 e julho/2025, em que Daniel Vorcaro e sua equipe de marketing (Ana Matos) alinham a lista de convidados e a programação do II Fórum Jurídico Londres Brasil de Ideias — evento realizado entre 24 e 27 de abril de 2024 — de acordo com o que é descrito nas mensagens como preferências do ministro Alexandre de Moraes. Em fevereiro de 2025, Vorcaro afirma precisar 'aprovar com Alexandre' a lista de convidados. Em 18/07/2025, ao ser questionado se o presidente do União Brasil, Antônio Rueda, poderia moderar um painel, Vorcaro responde: 'Rueda não, né? De jeito nenhum. Alexandre morre se vc fizer isso. Aliás, nos mata' — expressão coloquial de desagrado extremo, não ameaça literal. Em outra troca, um ex-ministro do governo Bolsonaro (Fábio Faria) comenta que 'Alexandre gosta que ele saiba que ele vetou. Ego dele', ao que Vorcaro responde 'no final ele vetou mesmo, ficou claro'. A investigação não esclarece quem exatamente teria sido vetado nessa segunda menção. Em março de 2025, mensagens registram reclamação atribuída a Moraes sobre convidados que não haviam recebido convite para o evento em Londres.",
+    "category": "mecanismo_sistemico",
+    "actors": [
+      {"name": "Alexandre de Moraes", "role": "Citado nas mensagens como referência de aprovação/veto sobre convidados e programação do evento custeado por Vorcaro", "institution": "STF"},
+      {"name": "Daniel Vorcaro", "role": "Organizador do fórum — alinha convites e programação segundo o que descreve como preferências de Moraes", "institution": "Banco Master"},
+      {"name": "Ana Matos", "role": "Funcionária de marketing de Vorcaro — interlocutora nas trocas sobre a lista de convidados", "institution": "N/A"}
+    ],
+    "institutions": ["STF", "Banco Master", "II Fórum Jurídico Londres Brasil de Ideias"],
+    "legal_basis": [],
+    "patterns": ["P02", "P09"],
+    "evidence_status": "ev-contested",
+    "sources": [
+      {"title": "'Alexandre morre se você fizer isso': mensagens indicam controle de Moraes sobre evento de Vorcaro", "url": "https://ndmais.com.br/justica/mensagens-indicam-controle-de-moraes-sobre-evento-de-vorcaro/", "outlet": "ND+", "date": "2026-09-01"},
+      {"title": "'Rueda não': Vorcaro barrou presidente do União Brasil de evento e disse que 'Alexandre nos mata'", "url": "https://terrabrasilnoticias.com/2026/09/rueda-nao-vorcaro-barrou-presidente-do-uniao-brasil-de-evento-e-disse-que-alexandre-nos-mata/", "outlet": "Terra Brasil Notícias", "date": "2026-09-01"},
+      {"title": "Mensagens revelam Vorcaro decidindo quem teria viagem paga para fórum com ministros em Londres", "url": "https://tmc.com.br/politica/mensagens-revelam-vorcaro-decidindo-quem-teria-viagem-paga-para-forum-com-ministros-em-londres/", "outlet": "TMC", "date": "2026-09-01"}
+    ],
+    "result": "Rueda não participou como moderador. O documento policial classifica a decisão como alinhada 'de acordo com interesses de Alexandre', mas não mostra Moraes determinando diretamente a exclusão — a atribuição de intenção a Moraes vem das mensagens internas da equipe de Vorcaro, não de comunicação direta do próprio ministro.",
+    "connections": ["id_1843", "id_1792", "id_1919"],
+    "status": "documentado",
+    "lacuna_investigativa": "Não há, nas fontes disponíveis, mensagem direta de Moraes determinando o veto — a atribuição é inferida pela equipe de Vorcaro, o que é exatamente a distinção entre ev-confirmed e ev-contested que a regra de ouro do corpus exige preservar. Não está esclarecido quem foi 'vetado' na menção de Fábio Faria em 18/04/2024, anterior à do próprio Rueda.",
+    "ponto_de_inflexao": null,
+    "analise": "O dado estruturalmente relevante não é a frase (que tem tom hiperbólico, não ameaçador) — é o padrão revelado por trás dela: um ministro do STF tendo, segundo a equipe organizadora, poder de curadoria sobre quem participa de um fórum jurídico privado custeado pelo controlador de uma instituição financeira que, meses depois, estaria sob investigação da própria Corte. Isso é P09 (captura cultural / legitimidade simbólica) na direção oposta ao uso habitual do padrão: aqui não é o investigado comprando legitimidade através de eventos — é o ministro usando o evento privado do investigado como extensão de sua própria esfera de influência social, antes de o Master virar alvo formal de investigação."
+  },
+  {
+    "id": "1929",
+    "date": "2026-09-15",
+    "date_precision": "day",
+    "title": "Gilmar Mendes acusa Mendonça de 'relação de máfia' e diz 'até a máfia tem ética'; Fachin suspende sessão sem decisão",
+    "summary": "Durante a sessão extraordinária de 15/09/2026 (id_1925), Gilmar Mendes pediu a palavra e acusou André Mendonça de conduzir os processos do caso Master com 'inequívoco viés político-eleitoral', classificando a condução como 'digna de máfia, covarde, vil' e declarando: 'Até a máfia tem ética. É preciso ter decência, não se comporta desta forma. Um tribunal que isso admite já não delibera com liberdade'. A crítica específica de Gilmar mirou o afastamento, determinado por Mendonça, do diretor-geral da PF Andrei Rodrigues do acesso a informações do caso — decisão que Gilmar descreveu como 'relação de máfia' e 'atitude covarde, vil'. Gilmar também chamou o processo de 'pixuleco, boneco eleitoral', argumentando que a deliberação não podia ocorrer 'em pleno ciclo eleitoral' nos termos ditados por Mendonça. Mendonça reagiu chamando Gilmar de 'leviano' e pedindo respeito ao tribunal; Gilmar retrucou: 'Quem não se dá respeito não merece respeito'. Fachin suspendeu a sessão em seguida, sem decisão de mérito.",
+    "category": "chokepoint_judicial",
+    "actors": [
+      {"name": "Gilmar Mendes", "role": "Decano do STF — acusa Mendonça de conduta imprópria e viés eleitoral na condução do caso Master", "institution": "STF"},
+      {"name": "André Mendonça", "role": "Relator — afastou Andrei Rodrigues do acesso ao caso; rebate a acusação chamando Gilmar de 'leviano'", "institution": "STF"},
+      {"name": "Edson Fachin", "role": "Presidente do STF — suspende a sessão após o embate, sem decisão", "institution": "STF"}
+    ],
+    "institutions": ["STF", "Polícia Federal"],
+    "legal_basis": ["RISTF — normas de colegialidade e condução processual"],
+    "patterns": ["P02", "P04b"],
+    "evidence_status": "ev-confirmed",
+    "sources": [
+      {"title": "'Até a máfia tem ética', diz Gilmar sobre atuação de Mendonça no STF", "url": "https://www.metropoles.com/brasil/ate-a-mafia-tem-etica-diz-gilmar-sobre-atuacao-de-mendonca-no-stf", "outlet": "Metrópoles", "date": "2026-09-15"},
+      {"title": "'Até máfia tem código de ética', disse Gilmar sobre Mendonça", "url": "https://www.em.com.br/politica/2026/09/7500939-ate-mafia-tem-codigo-de-etica-disse-gilmar-sobre-mendonca.html", "outlet": "Estado de Minas", "date": "2026-09-15"},
+      {"title": "'Até a máfia tem ética': o bate-boca que travou o STF antes de julgar Moraes", "url": "https://painelpolitico.com/ate-a-mafia-tem-etica-o-bate-boca-que-travou-o-stf-antes-de-julgar-moraes", "outlet": "Painel Político", "date": "2026-09-15"}
+    ],
+    "result": "Sessão suspensa sem decisão de mérito sobre a abertura de investigação contra Moraes. Episódio amplamente noticiado como o embate público mais áspero já registrado no plenário do STF em anos recentes.",
+    "connections": ["id_1905", "id_1919", "id_1925"],
+    "status": "confirmado",
+    "lacuna_investigativa": "Não está estabelecido publicamente qual foi a justificativa técnica formal de Mendonça para restringir o acesso de Andrei Rodrigues ao caso, além da referência genérica a 'falha no cumprimento das regras internas de atividade de inteligência policial' mencionada por Gilmar.",
+    "ponto_de_inflexao": "O ataque de Gilmar não contesta os fatos revelados sobre Moraes — desloca o eixo da discussão para a conduta processual de Mendonça como relator. É o padrão P04b em estado quase didático: ao reformular 'proximidade documentada de um ministro com o investigado' como 'perseguição político-eleitoral movida por outro ministro', a substância do relatório da PF (id_1843, id_1846) sai de cena e a disputa passa a ser sobre quem tem legitimidade para investigar, não sobre o que foi encontrado.",
+    "analise": "O episódio é o retrato mais nítido da tese central disponível no corpus: um ministro (Gilmar) com vínculo familiar próprio já exposto na mesma investigação (id_1927, revelado dois dias depois) ataca publicamente o relator que conduz essa mesma investigação, usando linguagem que desloca o debate de 'o que Moraes fez' para 'como Mendonça está conduzindo o processo'. Isso não prova coordenação entre Moraes e Gilmar — mas documenta que o efeito prático da intervenção de Gilmar foi proteger a posição de Moraes e atacar a legitimidade do único mecanismo interno de apuração em curso, no mesmo dia em que a sessão foi de fato suspensa sem decisão."
+  },
+  {
+    "id": "1930",
+    "date": "2026-06-11",
+    "date_precision": "day",
+    "title": "Vorcaro sinaliza, em proposta de delação, repasse de R$155 milhões (US$30 milhões) ao presidente do Senado Davi Alcolumbre",
+    "summary": "Segundo reportagem da revista Veja de 11/06/2026, a proposta de delação premiada apresentada pela defesa de Daniel Vorcaro inclui a alegação de que o ex-banqueiro repassou US$30 milhões (cerca de R$155 milhões) ao senador Davi Alcolumbre (União Brasil-AP), presidente do Congresso Nacional, depositados em conta secreta no exterior como contrapartida por apoio a uma demanda de interesse do Banco Master. A operação teria sido intermediada por Augusto Lima, ex-sócio de Vorcaro. Alcolumbre negou categoricamente em nota, classificando as informações como 'absolutamente falsas' e afirmando que 'jamais recebeu valores, no Brasil ou no exterior', prometendo enfrentar as acusações 'com a máxima firmeza'. A alegação depende de corroboração documental — registros bancários e outros elementos de prova — não disponibilizada publicamente até a data das fontes consultadas.",
+    "category": "abuso_processual",
+    "actors": [
+      {"name": "Davi Alcolumbre", "role": "Presidente do Senado/Congresso Nacional — nega categoricamente o recebimento de valores", "institution": "Senado Federal"},
+      {"name": "Daniel Vorcaro", "role": "Fonte da alegação — proposta de delação premiada", "institution": "Banco Master"},
+      {"name": "Augusto Lima", "role": "Ex-sócio de Vorcaro — apontado como intermediário da operação alegada", "institution": "N/A"}
+    ],
+    "institutions": ["Senado Federal", "Banco Master", "PF", "PGR"],
+    "legal_basis": ["Lei 12.850/2013 — colaboração premiada"],
+    "patterns": ["P02", "P05"],
+    "evidence_status": "ev-alleged",
+    "sources": [
+      {"title": "Alcolumbre teria recebido R$ 155 milhões de Vorcaro, diz revista", "url": "https://www.metropoles.com/brasil/alcolumbre-teria-recebido-r-155-milhoes-de-vorcaro-diz-revista", "outlet": "Metrópoles", "date": "2026-06-11"},
+      {"title": "Caso Banco Master: Davi Alcolumbre é acusado de ter recebido R$155 milhões", "url": "https://diariocarioca.com/2026/06/12/politica/delacao-vorcaro-davi-alcolumbre/", "outlet": "Diário Carioca", "date": "2026-06-12"}
+    ],
+    "result": "Nenhuma confirmação documental pública até a data das fontes. Alcolumbre nega. Alegação permanece no âmbito da proposta de delação, sem homologação confirmada.",
+    "connections": ["id_1917", "id_1931", "id_1932"],
+    "status": "em_andamento",
+    "lacuna_investigativa": "Não há confirmação de registros bancários, comprovantes de transferência ou qualquer elemento além do relato atribuído a Vorcaro na proposta de delação. Status de homologação da delação (aceita, rejeitada, em negociação) não esclarecido nas fontes.",
+    "ponto_de_inflexao": null,
+    "analise": "É o caso de maior valor nominal de toda a série documentada no corpus sobre o Master (R$155mi, acima até do contrato de Moraes) e, precisamente por isso, o que exige mais rigor evidencial — é alegação de parte interessada (delator buscando benefício processual) contra o ocupante do cargo que decide o destino de qualquer CPMI ou investigação legislativa sobre o próprio caso. A tentação de tratar como fato consumado é máxima; a regra de ouro do corpus exige o oposto: manter como ev-alleged até corroboração independente, exatamente porque a acusação recai sobre quem tem o poder formal de travar a apuração que a confirmaria ou desmentiria."
+  },
+  {
+    "id": "1931",
+    "date": "2026-06-17",
+    "date_precision": "day",
+    "title": "PF encontra mensagens indicando que Hugo Motta intermediou empréstimo de R$22 milhões do Master para empresa da cunhada; Motta recusa-se a confirmar",
+    "summary": "A Polícia Federal encontrou, no celular de Daniel Vorcaro, diálogos com um número atribuído ao presidente da Câmara dos Deputados, Hugo Motta (Republicanos-PB), relativos à liberação de um empréstimo de pelo menos R$22 milhões do Banco Master para uma empresa de Bianca Medeiros, cunhada de Motta (irmã de sua esposa, Luana Motta). A operação ocorreu em março de 2024, antes de Motta assumir a presidência da Câmara, e o valor foi usado para comprar um terreno em João Pessoa (PB) destinado a um novo bairro; a empresa deu apenas R$100 mil em garantia para o empréstimo de R$22 milhões. As mesmas mensagens tratam de uma viagem de Motta a Lisboa em 2024, custeada por Vorcaro — fato que o próprio deputado confirmou, incluindo hospedagem paga pelo banqueiro por dois dias, embora negando irregularidades. Questionado cinco vezes pela imprensa (Estadão) sobre se havia falado diretamente com Vorcaro para liberar o valor, Motta recusou-se a confirmar ou negar, limitando-se a afirmar que a operação seguiu 'critérios legais e de mercado' e que 'não tem ilegalidade de nada'.",
+    "category": "mecanismo_sistemico",
+    "actors": [
+      {"name": "Hugo Motta", "role": "Presidente da Câmara dos Deputados — recusa-se a confirmar ou negar intermediação do empréstimo; confirma viagem a Lisboa custeada por Vorcaro", "institution": "Câmara dos Deputados"},
+      {"name": "Bianca Medeiros", "role": "Cunhada de Motta — beneficiária do empréstimo de R$22 milhões", "institution": "N/A"},
+      {"name": "Daniel Vorcaro", "role": "Controlador do Master — libera o empréstimo e custeia viagem a Lisboa", "institution": "Banco Master"}
+    ],
+    "institutions": ["Câmara dos Deputados", "Banco Master", "TCU"],
+    "legal_basis": ["Regimento Interno da Câmara — decoro parlamentar"],
+    "patterns": ["P02", "P05"],
+    "evidence_status": "ev-contested",
+    "sources": [
+      {"title": "Vorcaro emprestou R$22 milhões para cunhada de Hugo Motta", "url": "https://ndmais.com.br/politica/vorcaro-emprestou-r-22-milhoes-para-cunhada-de-hugo-motta/", "outlet": "ND+", "date": "2026-06-17"},
+      {"title": "Cunhada de Motta fez empréstimo de R$22 milhões de Vorcaro dando empresa de R$100 mil como garantia", "url": "https://www.gazetadopovo.com.br/republica/cunhada-de-motta-que-emprestou-r-22-milhoes-de-vorcaro-tinha-empresa-de-r-100-mil/", "outlet": "Gazeta do Povo", "date": "2026-06-22"},
+      {"title": "Hugo Motta pediu a Vorcaro empréstimo para empresa de cunhada, diz PF", "url": "https://jornaldebrasilia.com.br/noticias/economia/hugo-motta-pediu-a-vorcaro-emprestimo-para-empresa-de-cunhada-diz-pf", "outlet": "Jornal de Brasília", "date": "2026-06-18"}
+    ],
+    "result": "Ministério Público solicitou ao TCU apuração de possíveis favorecimentos no empréstimo. Motta permanece na presidência da Câmara sem confirmar ou desmentir a intermediação direta.",
+    "connections": ["id_1917", "id_1930"],
+    "status": "em_andamento",
+    "lacuna_investigativa": "Conversas ainda em análise pela PF não foram, até a data das fontes, enviadas formalmente ao relator do caso no STF (Mendonça). Não está determinado se o valor da garantia (R$100 mil para R$22 milhões) seguiu critérios normais de concessão de crédito do Master ou se constitui indício adicional de tratamento privilegiado.",
+    "ponto_de_inflexao": "A desproporção entre garantia (R$100 mil) e valor emprestado (R$22 milhões) — 220x — é, por si, um dado técnico que qualquer análise de crédito padrão sinalizaria como anômalo, independentemente de qualquer vínculo político.",
+    "analise": "Diferente dos casos STF, aqui o problema não é ausência de declaração de impedimento (Motta não é magistrado) — é o uso da posição de presidente da Câmara, com poder sobre a agenda de CPMIs e projetos que afetam a regulação financeira, simultâneo a benefícios financeiros diretos (empréstimo em condições atípicas, viagem internacional custeada) do controlador de uma instituição sob escrutínio regulatório. A recusa repetida de Motta em confirmar ou negar — cinco vezes seguidas — é, no vocabulário do corpus, funcionalmente equivalente ao silêncio estratégico documentado em outros padrões (P06): nem confirma, nem desmente, deixando o fato em suspenso indefinidamente."
+  },
+  {
+    "id": "1932",
+    "date": "2026-06-10",
+    "date_precision": "month",
+    "title": "PF investiga governador Cláudio Castro por aporte de R$3 bilhões da Rioprevidência em produtos do Banco Master",
+    "summary": "Nova fase da Operação Compliance Zero tem o então governador do Rio de Janeiro, Cláudio Castro, como alvo por aportes de aproximadamente R$3 bilhões da Rioprevidência (Fundo Único de Previdência Social do estado) em produtos financeiros ligados ao Banco Master. A PF apura possíveis crimes financeiros envolvendo o fundo previdenciário estadual, com mandados de busca e apreensão cumpridos no Rio de Janeiro e em Brasília. A exposição total do fundo ao Master, monitorada desde 2023, foi elevada para cerca de R$3 bilhões após novos aportes de R$2,01 bilhões.",
+    "category": "operacao_policial",
+    "actors": [
+      {"name": "Cláudio Castro", "role": "Ex-governador do RJ — alvo da nova fase da Compliance Zero pelos aportes da Rioprevidência", "institution": "Governo do Estado do Rio de Janeiro"},
+      {"name": "Daniel Vorcaro", "role": "Controlador do Master — instituição destinatária dos aportes", "institution": "Banco Master"}
+    ],
+    "institutions": ["Rioprevidência", "Governo do Estado do Rio de Janeiro", "Banco Master", "Polícia Federal"],
+    "legal_basis": ["Lei de Responsabilidade Fiscal — aplicações de recursos previdenciários públicos"],
+    "patterns": ["P05", "P07"],
+    "evidence_status": "ev-confirmed",
+    "sources": [
+      {"title": "Cláudio Castro é alvo da PF por aporte de R$3 bi da Rioprevidência no Banco Master", "url": "https://bpmoney.com.br/brasil/claudio-castro-e-alvo-da-pf-por-aporte-de-r-3-bi-da-rioprevidencia-no-banco-master/", "outlet": "BP Money", "date": "2026-06-10"}
+    ],
+    "result": "Mandados de busca e apreensão cumpridos. Investigação em curso sobre possíveis crimes financeiros no manejo do fundo previdenciário estadual.",
+    "connections": ["id_1917"],
+    "status": "em_andamento",
+    "lacuna_investigativa": "Não está esclarecido publicamente se os aportes seguiram os critérios normais de diversificação de risco de um fundo previdenciário público ou se houve concentração anômala de exposição a uma única instituição sob risco crescente conhecido desde 2023.",
+    "ponto_de_inflexao": null,
+    "analise": "Este é o caso que mais diretamente evidencia P05 (fundos públicos como vetor de extração) na série: um fundo previdenciário estadual — dinheiro de servidores públicos aposentados e futuros aposentados — concentrou R$3 bilhões em produtos de uma instituição que colapsaria por fraude, sob monitoramento próprio desde 2023 sem que a exposição fosse reduzida. Já documentado no corpus (id_1600-1605 região) o padrão de outros fundos de previdência estaduais (Amapá, entre outros) com exposição similar ao Master — Rioprevidência é o de maior valor nominal identificado até agora."
+  }
+]

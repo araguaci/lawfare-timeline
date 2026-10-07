@@ -1,11 +1,26 @@
 # Notas de processamento · `_data/todo/`
 
-**Atualizado:** 2026-09-13 (1926–1942 mortalidade 8/1 · P05 · Madame Satã)
+**Atualizado:** 2026-10-06 (1943–1973 · T-271/T-272)
 
 ## Fila
 
-- `_data/todo/` — staging HTML/MD (JSON 1926–1942 arquivado)
-- T-269 unificado 13/09
+- `_data/todo/_staging/` — HTML/MD (rascunhos; não mergear como ID)
+- JSON 1943–1973 + T-271/T-272 arquivados 06/10
+- Duplicata `lawfare-batch-1943-1959.json` = conteúdo de 1926–1942 — sem merge
+
+## Merge 06/10/2026 (b)
+
+| Batch | IDs na fila | IDs finais |
+|-------|-------------|------------|
+| lock Master/STF/RPPS/Cedae | 1918–1944 (colisão) | **1943–1969** (+25) |
+| PENDENTE_SYNC coronel + visto | `__PENDENTE_SYNC__` | **1970–1971** |
+| Gilmarpalooza | pendente | **1972** |
+| Comparação P05 | 1960 | **1973** |
+| Sete de Onze HTML | rótulo T-270 | **T-271** |
+| Sob Medida HTML | rótulo T-271 | **T-272** |
+| batch 1943–1959 (8/1) | 1943–1959 | **skip** — duplicata de 1926–1942 |
+
+1918–1942 intactos. Sem overwrite.
 
 ## Merge 13/09/2026 (b)
 

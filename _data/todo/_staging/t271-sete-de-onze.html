@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T-270 — Sete de Onze: o retrato estrutural do STF na crise Banco Master</title>
+<meta name="description" content="Síntese temática: sete dos onze ministros do STF com vínculo documentado a Daniel Vorcaro/Banco Master. Corpus lawfare-timeline, CC0.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#080c10; --surface:#10161c; --surface2:#141b22; --border:#232c35;
+    --gold:#e8c84a; --red:#e05a4a; --blue:#4a9ee8; --green:#7ee8a2; --purple:#b78ae8;
+    --text:#e8e4d8; --muted:#8a8f9a;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:'Crimson Pro',serif;line-height:1.6}
+  .mono{font-family:'IBM Plex Mono',monospace}
+  .display{font-family:'Syne',sans-serif}
+
+  header.hero{padding:4rem 1.5rem 3rem;text-align:center;border-bottom:1px solid var(--border);background:radial-gradient(ellipse at top,rgba(232,200,74,.08),transparent 60%)}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem}
+  h1.display{font-size:clamp(2rem,6vw,4rem);font-weight:800;line-height:1.05;max-width:900px;margin:0 auto 1rem}
+  h1.display .num{color:var(--gold)}
+  .subtitle{max-width:640px;margin:0 auto;color:var(--muted);font-size:1.1rem;font-style:italic}
+  .meta-row{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:1.8rem;font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--muted)}
+  .meta-row span b{color:var(--text)}
+
+  main{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+  section{padding:3rem 0;border-bottom:1px solid var(--border)}
+  h2.display{font-size:clamp(1.4rem,3.5vw,2rem);font-weight:700;margin-bottom:.5rem}
+  .section-note{color:var(--muted);font-size:.95rem;margin-bottom:2rem;max-width:70ch}
+
+  /* stat strip */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:0}
+  .stat{background:var(--surface);padding:1.5rem 1rem;text-align:center}
+  .stat .n{font-family:'Syne',sans-serif;font-weight:800;font-size:2.2rem;color:var(--gold)}
+  .stat .l{font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:.3rem}
+
+  /* minister grid */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:1.2rem;transition:border-color .2s}
+  .card:hover{border-color:var(--gold)}
+  .card .name{font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:.4rem}
+  .card .role{font-family:'IBM Plex Mono',monospace;font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.7rem}
+  .card p{font-size:.92rem;color:#c9c5b8}
+  .card .ids{margin-top:.7rem;font-family:'IBM Plex Mono',monospace;font-size:.62rem;color:var(--gold)}
+  .card.negcontrol{border-left:3px solid var(--green)}
+  .card.arbiter{border-left:3px solid var(--blue);opacity:.85}
+  .tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:.6rem;padding:.15rem .5rem;border-radius:3px;background:var(--surface2);color:var(--muted);margin-right:.3rem;margin-top:.4rem}
+  .tag.ev-confirmed{color:var(--green);border:1px solid rgba(126,232,162,.3)}
+  .tag.ev-contested{color:var(--gold);border:1px solid rgba(232,200,74,.3)}
+  .tag.ev-alleged{color:var(--red);border:1px solid rgba(224,90,74,.3)}
+
+  /* cross-ideological */
+  .cross-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+  @media(max-width:640px){.cross-grid{grid-template-columns:1fr}}
+  .cross-col h3{font-family:'Syne',sans-serif;font-size:.95rem;margin-bottom:.8rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
+  .cross-col.left h3{color:var(--red)}
+  .cross-col.right h3{color:var(--blue)}
+  .cross-item{padding:.6rem 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:.9rem}
+  .cross-item b{color:var(--text)}
+  .cross-item .val{color:var(--gold);font-family:'IBM Plex Mono',monospace;font-size:.82rem}
+
+  /* pattern table */
+  table{width:100%;border-collapse:collapse;font-size:.88rem}
+  th,td{text-align:left;padding:.6rem .8rem;border-bottom:1px solid var(--border)}
+  th{font-family:'IBM Plex Mono',monospace;font-size:.62rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+  td.pcode{font-family:'IBM Plex Mono',monospace;color:var(--gold);white-space:nowrap}
+
+  /* timeline */
+  .timeline{position:relative;padding-left:1.5rem;border-left:2px solid var(--border)}
+  .tl-item{position:relative;margin-bottom:1.4rem}
+  .tl-item::before{content:'';position:absolute;left:-1.58rem;top:.3rem;width:9px;height:9px;border-radius:50%;background:var(--gold)}
+  .tl-date{font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--gold)}
+  .tl-title{font-family:'Syne',sans-serif;font-weight:700;font-size:.98rem;margin:.2rem 0}
+  .tl-desc{color:var(--muted);font-size:.87rem}
+
+  .callout{background:var(--surface2);border:1px solid var(--border);border-left:3px solid var(--purple);border-radius:4px;padding:1.2rem 1.4rem;margin-top:1.5rem}
+  .callout .k{font-family:'IBM Plex Mono',monospace;font-size:.62rem;text-transform:uppercase;letter-spacing:.08em;color:var(--purple);margin-bottom:.4rem}
+
+  .lacunas ul{list-style:none;display:grid;gap:.7rem}
+  .lacunas li{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:.9rem 1.1rem;font-size:.9rem;color:#c9c5b8}
+  .lacunas li b{color:var(--gold);font-family:'IBM Plex Mono',monospace;font-size:.7rem;display:block;margin-bottom:.3rem}
+
+  footer{padding:2.5rem 1.5rem;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--muted)}
+  footer a{color:var(--gold)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="eyebrow">Eixo SELVA · lawfare-timeline · Síntese Temática T-270</div>
+  <h1 class="display">Sete de <span class="num">Onze</span></h1>
+  <p class="subtitle">O retrato estrutural do Supremo Tribunal Federal na crise Banco Master — não mais uma sucessão de fatos, mas o mapa de uma Corte em que a maioria de seus membros tem algum vínculo documentado com o mesmo investigado.</p>
+  <div class="meta-row">
+    <span>Janela: <b>mai/2025 – set/2026</b></span>
+    <span>Entradas-base: <b>id_1843–id_1940</b> (Judiciário federal)</span>
+    <span>Atualizado: <b>17/09/2026 · rev.3</b></span>
+    <span>Licença: <b>CC0 1.0</b></span>
+  </div>
+</header>
+
+<main>
+
+<section>
+  <h2 class="display">O dado agregado</h2>
+  <p class="section-note">Nenhuma entrada isolada do corpus prova captura sistêmica. A soma prova. Este é o objetivo da síntese temática: mostrar o que só aparece quando as 19 entradas são lidas juntas.</p>
+  <div class="stats">
+    <div class="stat"><div class="n">7/11</div><div class="l">ministros do STF com vínculo documentado</div></div>
+    <div class="stat"><div class="n">0</div><div class="l">autodeclarações espontâneas de impedimento</div></div>
+    <div class="stat"><div class="n">R$ 3,4bi+</div><div class="l">soma dos valores citados (confirmados + alegados)</div></div>
+    <div class="stat"><div class="n">90 dias</div><div class="l">prazo regimental que empurra decisão p/ pós-eleição</div></div>
+  </div>
+</section>
+
+<section>
+  <h2 class="display">Atualização rev.3 — escopo individualizado</h2>
+  <p class="section-note">Esta página passa a tratar exclusivamente do eixo Judiciário federal (STF). O eixo Executivo estadual do Rio de Janeiro — Cláudio Castro, Rioprevidência, Cedae — tem dinâmica processual própria e destino institucional já mais avançado (busca e apreensão autorizada, indícios formais de coautoria). Foi desmembrado para <b>T-271</b>, sua própria síntese temática.</p>
+  <div class="callout">
+    <div class="k">Resolvido · a delação de Vorcaro nunca vingou</div>
+    PGR encerrou definitivamente as negociações em 02/07/2026 — duas propostas rejeitadas por falta de corroboração. Isso rebaixa retroativamente as alegações contra Alcolumbre e ACM Neto/Rueda: vieram de uma colaboração que fracassou por completo. Em contraste, a delação homologada de um sócio financeiro (Freixo Junior, R$1,3bi movimentados, 09/09/2026) cita o mesmo fundo do "Dark Horse" com estrutura via Bahamas — e essa, sim, passou pelo crivo formal. <span class="val mono">id_1938</span>
+  </div>
+  <div class="callout">
+    <div class="k">Em aberto · quem controla o material bruto</div>
+    Mendonça detém o HD pericial completo do celular de Vorcaro há mais de seis meses. Zanin e Gilmar tiveram que requisitar acesso via ofício formal a Fachin — Gilmar chegou a perguntar publicamente se existe "hierarquia entre ministros". Dino propôs, na sessão de 15/09, identificar formalmente <i>todos</i> os magistrados com indícios de vínculo — primeira tentativa de tratamento sistemático, não mais caso a caso. <span class="val mono">id_1940</span>
+  </div>
+</section>
+
+<section>
+  <h2 class="display">Os sete — e os quatro que restam</h2>
+  <p class="section-note">Cada card resume o vínculo, não o veredito. A cor da barra lateral marca a leitura estrutural: dourado é o padrão dominante (proximidade → sem declaração espontânea), verde é controle negativo (proximidade sem decisão favorável identificada), azul é posição de árbitro — ainda sem vínculo próprio revelado.</p>
+  <div class="grid">
+    <div class="card">
+      <div class="name">Alexandre de Moraes</div>
+      <div class="role">Relator · caso original</div>
+      <p>Contrato de R$129-131mi do Master com o escritório da esposa. Metadados indicam última edição da minuta com login atribuído ao próprio ministro. Controle informal sobre lista de convidados de fórum em Londres.</p>
+      <span class="tag ev-confirmed">ev-confirmed</span>
+      <div class="ids">id_1843 · id_1928</div>
+    </div>
+    <div class="card">
+      <div class="name">Dias Toffoli</div>
+      <div class="role">Relator até fev/2026</div>
+      <p>Resort de luxo da família vendido a fundo ligado ao Master. Declarou-se impedido só após ser citado em relatório da PF — não espontaneamente.</p>
+      <span class="tag ev-confirmed">ev-confirmed</span>
+      <div class="ids">id_1846–1847</div>
+    </div>
+    <div class="card">
+      <div class="name">Ricardo Lewandowski</div>
+      <div class="role">Ex-ministro STF · Min. da Justiça</div>
+      <p>R$5,25-6mi ao escritório da família, 21 meses como Ministro da Justiça. Consultor de Vorcaro na tentativa de venda ao BRB. Presente em eventos patrocinados (NY, Londres).</p>
+      <span class="tag ev-confirmed">ev-confirmed</span>
+      <div class="ids">id_1843 · id_1933</div>
+    </div>
+    <div class="card">
+      <div class="name">Kássio Nunes Marques</div>
+      <div class="role">Ministro STF</div>
+      <p>Filho recebeu R$500mil/mês (R$6,6mi total) via Consult Inteligência Tributária. Negou em plenário — declarou-se suspeito no mesmo dia em que as mensagens vazaram.</p>
+      <span class="tag ev-contested">ev-contested</span>
+      <div class="ids">id_1920</div>
+    </div>
+    <div class="card">
+      <div class="name">André Mendonça</div>
+      <div class="role">Relator desde fev/2026</div>
+      <p>Convidou Vorcaro para eventos do Instituto Iter (fundação própria) antes de assumir a relatoria. Instituto recebeu R$5,2mi de sócio de negócios de Vorcaro. Encontro pessoal mar/2025, intermediado por deputado-pastor.</p>
+      <span class="tag ev-confirmed">ev-confirmed</span>
+      <div class="ids">id_1919 · id_1934</div>
+    </div>
+    <div class="card">
+      <div class="name">Luiz Fux</div>
+      <div class="role">Ministro STF</div>
+      <p>Filho trocou mensagens com Vorcaro por 15 meses, articulou encontro em Londres. Escritório nega contrato. Nenhuma declaração de impedimento localizada.</p>
+      <span class="tag ev-contested">ev-contested</span>
+      <div class="ids">id_1918</div>
+    </div>
+    <div class="card negcontrol">
+      <div class="name">Gilmar Mendes</div>
+      <div class="role">Decano</div>
+      <p>Ex-cunhado contratado por R$500mil/mês, articulou reunião com Vorcaro — mas Gilmar votou <b>contra</b> os interesses do Master nas ações identificadas. Único caso de controle negativo da série.</p>
+      <span class="tag ev-confirmed">ev-confirmed</span>
+      <div class="ids">id_1927</div>
+    </div>
+    <div class="card arbiter">
+      <div class="name">Edson Fachin</div>
+      <div class="role">Presidente do STF</div>
+      <p>Sem vínculo próprio revelado até a data. Centraliza as petições cruzadas Moraes-Mendonça na Presidência — posição de árbitro depende justamente dessa ausência.</p>
+      <span class="tag ev-confirmed">sem vínculo até 17/09</span>
+    </div>
+    <div class="card arbiter">
+      <div class="name">Flávio Dino</div>
+      <div class="role">Ministro STF</div>
+      <p>Sem vínculo próprio revelado. Pediu vista na sessão de 15/09 (empurrando decisão pós-eleição) e, separadamente, pediu apuração da conexão Instituto Iter–contratos públicos.</p>
+      <span class="tag ev-confirmed">sem vínculo até 17/09</span>
+    </div>
+    <div class="card arbiter">
+      <div class="name">Cristiano Zanin</div>
+      <div class="role">Ministro STF</div>
+      <p>Sem vínculo próprio revelado até a data. Votou ao lado de Moraes na questão de ordem de 15/09.</p>
+      <span class="tag ev-confirmed">sem vínculo até 17/09</span>
+    </div>
+    <div class="card arbiter">
+      <div class="name">Cármen Lúcia</div>
+      <div class="role">Ministra STF</div>
+      <p>Sem vínculo próprio revelado até a data. Votou contra a unificação dos processos Moraes-Mendonça em 15/09.</p>
+      <span class="tag ev-confirmed">sem vínculo até 17/09</span>
+    </div>
+  </div>
+  <div class="callout">
+    <div class="k">Leitura estrutural</div>
+    O ponto de virada do corpus não é o próximo ministro exposto — é se algum dos quatro sem vínculo (Fachin, Dino, Zanin, Cármen Lúcia) aparecer. Enquanto a minoria de árbitros permanece "limpa", a Corte ainda tem, ao menos formalmente, um mecanismo interno de fiscalização. Se essa minoria some, o padrão deixa de ser "maioria capturada, minoria fiscaliza" e passa a ser "não há minoria" — colapso funcional do princípio de autofiscalização colegiada.
+  </div>
+</section>
+
+<section>
+  <h2 class="display">O vetor transcende o espectro</h2>
+  <p class="section-note">A tese central do corpus — que a extração transcende linhas ideológicas — não é afirmação retórica aqui. É dado nominal: o mesmo banco financiou simultaneamente a magistratura que condenou Bolsonaro e a cinebiografia do próprio Bolsonaro.</p>
+  <div class="cross-grid">
+    <div class="cross-col left">
+      <h3>Espectro alinhado a Bolsonaro/direita</h3>
+      <div class="cross-item"><b>Flávio Bolsonaro</b> — negociou R$134mi para "Dark Horse", R$61mi repassados <span class="val">id_1936</span></div>
+      <div class="cross-item"><b>Eduardo Bolsonaro</b> — citado na administração de recursos do filme nos EUA <span class="val">id_1936</span></div>
+      <div class="cross-item"><b>Ciro Nogueira</b> — admitiu pedido de patrocínio, reunião com Vorcaro <span class="val">id_1922</span></div>
+      <div class="cross-item"><b>Cláudio Castro</b> — Rioprevidência, R$3bi em aportes <span class="val">id_1932</span></div>
+      <div class="cross-item"><b>Davi Alcolumbre</b> — R$155mi alegados (delação, negado) <span class="val">id_1930</span></div>
+      <div class="cross-item"><b>Hugo Motta</b> — R$22mi à cunhada + viagem Lisboa <span class="val">id_1931</span></div>
+    </div>
+    <div class="cross-col right">
+      <h3>Espectro alinhado ao STF/centro-esquerda</h3>
+      <div class="cross-item"><b>Jaques Wagner</b> — R$5,95mi citados <span class="val">corpus prévio</span></div>
+      <div class="cross-item"><b>Alexandre de Moraes</b> — R$129-131mi ao escritório da esposa <span class="val">id_1843</span></div>
+      <div class="cross-item"><b>Ricardo Lewandowski</b> — R$6mi ao escritório familiar <span class="val">id_1843</span></div>
+      <div class="cross-item"><b>André Mendonça</b> — R$5,2mi ao instituto próprio <span class="val">id_1934</span></div>
+      <div class="cross-item"><b>Rui Costa</b> — citado por Vorcaro em negociações <span class="val">corpus prévio</span></div>
+    </div>
+  </div>
+  <div class="callout">
+    <div class="k">O que isso documenta</div>
+    Não coordenação entre esquerda e direita — o oposto: atores em conflito aberto (a ala que julgou Bolsonaro e o próprio clã Bolsonaro) recorrendo à mesma fonte de liquidez, de forma independente uma da outra. É evidência mais forte de "sistema de extração" transversal do que qualquer alinhamento partidário isolado seria — exatamente o dado que a formulação proibida "narrativa bolsonarista/petista" existe para obscurecer.
+  </div>
+</section>
+
+<section>
+  <h2 class="display">Padrões P0X identificados na série</h2>
+  <table>
+    <thead><tr><th>Código</th><th>Padrão</th><th>Onde aparece na série 1918–1936</th></tr></thead>
+    <tbody>
+      <tr><td class="pcode">P02</td><td>Investigador-investigado</td><td>Mendonça relatorando o caso que toca a si próprio via Instituto Iter; Moraes abrindo INQ contra Mendonça</td></tr>
+      <tr><td class="pcode">P03</td><td>Captura judicial de emergência</td><td>Toffoli tomando controle do inquérito de ofício; Mendonça ampliando/restringindo acesso da PF conforme conveniência</td></tr>
+      <tr><td class="pcode">P04b</td><td>Both-sidesism funcional</td><td>Ataque de Gilmar a Mendonça desloca o debate de "o que Moraes fez" para "como Mendonça conduz o processo"</td></tr>
+      <tr><td class="pcode">P05</td><td>Fundos públicos como vetor</td><td>Rioprevidência R$3bi; institutos de previdência citados na delação rejeitada (R$2bi)</td></tr>
+      <tr><td class="pcode">P06</td><td>Prescrição estratégica</td><td>Pedido de vista de Dino empurra decisão sobre Moraes para depois das eleições via prazo regimental de 90 dias</td></tr>
+      <tr><td class="pcode">P07</td><td>Captura transgeracional</td><td>Filhos/cunhados como veículo em 5 dos 7 casos (Moraes, Fux, Nunes Marques, Gilmar, Motta)</td></tr>
+      <tr><td class="pcode">P09</td><td>Captura cultural</td><td>Padrão de patrocínio de eventos de elite (NY/Paris/Londres) desde 2022, anterior à crise — infraestrutura social pré-existente</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2 class="display">Linha do tempo condensada</h2>
+  <div class="timeline">
+    <div class="tl-item"><div class="tl-date">01–02/09/2026</div><div class="tl-title">Editoriais convergentes</div><div class="tl-desc">Folha, Estadão, Gazeta do Povo e Globo pedem saída/investigação de Moraes. 55 pedidos de impeachment no Senado até 03/09.</div></div>
+    <div class="tl-item"><div class="tl-date">03–04/09/2026</div><div class="tl-title">Petições cruzadas</div><div class="tl-desc">Moraes abre INQ 4.781 contra Mendonça; Fachin retira do inquérito das fake news e centraliza na Presidência.</div></div>
+    <div class="tl-item"><div class="tl-date">08–09/09/2026</div><div class="tl-title">OAB se move</div><div class="tl-desc">17 de 27 seccionais pedem investigação de Moraes; OAB/RS pede também afastamento de Gonet.</div></div>
+    <div class="tl-item"><div class="tl-date">10/09/2026</div><div class="tl-title">"Ou você mata ou morre"</div><div class="tl-desc">Gilmar reage a tentativa de constrangimento envolvendo ex-cunhado, antecipando a exposição de 17/09.</div></div>
+    <div class="tl-item"><div class="tl-date">15/09/2026</div><div class="tl-title">A sessão</div><div class="tl-desc">Fux e Nunes Marques expostos; Gilmar x Mendonça ("até a máfia tem ética"); votação 4×3 rejeita unificação; Dino pede vista — decisão empurrada pós-eleição; fotógrafos barrados "como marginais".</div></div>
+    <div class="tl-item"><div class="tl-date">16–17/09/2026</div><div class="tl-title">Gilmar e o ex-cunhado</div><div class="tl-desc">Estadão revela contrato de Chiquinho Feitosa com a Super Empreendimentos e reunião articulada com Gilmar — que votou contra o Master nas ações identificadas.</div></div>
+  </div>
+</section>
+
+<section class="lacunas">
+  <h2 class="display">Lacunas — escopo STF</h2>
+  <p class="section-note">Itens específicos do eixo Judiciário federal. Achados sobre Rioprevidência, Cedae e a cadeia de decisão estadual estão em T-271.</p>
+  <ul>
+    <li><b>✓ FECHADA — status da delação de Vorcaro</b> — encerrada definitivamente em 02/07/2026, sem homologação. Alcolumbre e ACM Neto/Rueda permanecem `ev-alleged` de uma colaboração que fracassou (id_1938).</li>
+    <li><b>PARCIAL — os quatro sem vínculo</b> — Fachin, Dino, Zanin, Cármen Lúcia seguem sem vínculo pessoal encontrado. Mas o quadro institucional mudou: Dino propôs apuração sistemática de todos os magistrados citados; Zanin briga por acesso ao material pericial retido por Mendonça (id_1940). Vale nova checagem a cada novo vazamento.</li>
+    <li><b>ABERTA — rota internacional "Dark Horse"</b> — delação homologada de Freixo Junior (id_1938) aponta Bahamas; papel de Eduardo Bolsonaro na administração dos recursos nos EUA ainda não esclarecido em detalhe.</li>
+    <li><b>ABERTA — rede de intimidação a jornalistas</b> — PF menciona genericamente a estrutura (id_1926); nomes, métodos e alvos específicos seguem não detalhados publicamente.</li>
+    <li><b>ABERTA — concentração de acesso pericial em Mendonça</b> — HD completo do celular de Vorcaro sob controle do relator há mais de seis meses; resultado do pedido formal de Zanin a Fachin não confirmado (id_1940).</li>
+  </ul>
+  <div class="callout" style="margin-top:1.5rem">
+    <div class="k">Ver também</div>
+    <b>T-271 — Sob Medida: a captura relâmpago do Rioprevidência e da Cedae</b> — Cláudio Castro, Deivis Marcon Antunes, Euchério Lerner Rodrigues, Pedro Pinheiro Guerra Leal. Contraponto processual a esta página: fora do mecanismo de autofiscalização entre pares do STF, a mesma rede de Vorcaro já produziu busca e apreensão autorizada e indícios formais de coautoria pela PGR.
+  </div>
+</section>
+
+</main>
+
+<footer>
+  lawfare-timeline · Eixo SELVA · CC0 1.0 — domínio público · consolidado a partir de id_1843, id_1905, id_1917–id_1920, id_1927–id_1930, id_1933–id_1936, id_1938, id_1940 · atualizado 17/09/2026 · rev.3 · eixo Judiciário federal — ver T-271 para o eixo estadual RJ
+</footer>
+
+</body>
+</html>

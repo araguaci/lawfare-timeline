@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1939",
+    "date": "2026-05-28",
+    "date_precision": "day",
+    "title": "TCE-RJ confirma que Rioprevidência manteve R$2,6 bilhões expostos ao Master mesmo após alerta formal do próprio Tribunal em maio de 2025",
+    "summary": "Acórdão do Tribunal de Contas do Estado do Rio de Janeiro (TCE-RJ), tornado público em maio/2026, resolve a discrepância entre a exposição declarada do Rioprevidência ao Banco Master em novembro/2025 (R$970 milhões, id_1937) e o valor apurado pela PF em junho/2026 (~R$3 bilhões, id_1932): o acórdão comprova que a autarquia manteve R$2,6 bilhões em títulos e fundos ligados ao Master mesmo após o TCE-RJ ter dado ciência formal, em decisão plenária de 14/05/2025, ao diretor-presidente do Rioprevidência sobre irregularidades no processo de alocação de recursos. Isto é: a exposição bilionária não terminou com o alerta — continuou depois dele. O documento aponta ainda aplicações fragmentadas de R$301,2 milhões em letras financeiras sem informação suficiente sobre emissor, prazo, taxa ou carência, e classifica como irregularidade grave a ausência de documentação de Autorização de Aplicação e Resgate. Até 31/07/2025 (data de corte do acórdão), a exposição total representava mais de 25% de todo o patrimônio da autarquia à época. Somente em 28/07/2026 — após a crise pública e a nova fase da Operação Compliance Zero — o Rioprevidência publicou portaria restringindo aplicações a instituições financeiras classificadas no segmento S1 do Banco Central.",
+    "category": "chokepoint_judicial",
+    "actors": [
+      {"name": "TCE-RJ", "role": "Emitiu alerta formal em maio/2025, ignorado pela gestão da autarquia; posteriormente confirma em acórdão a continuidade da exposição", "institution": "Tribunal de Contas do Estado do Rio de Janeiro"},
+      {"name": "Cláudio Castro", "role": "Governador à época da gestão questionada — já alvo de investigação da PF pelo mesmo aporte (id_1932)", "institution": "Governo do Estado do Rio de Janeiro"},
+      {"name": "Rioprevidência", "role": "Manteve exposição de R$2,6bi mesmo após alerta formal do TCE-RJ", "institution": "Governo do Estado do Rio de Janeiro"}
+    ],
+    "institutions": ["TCE-RJ", "Rioprevidência", "Banco Master", "Polícia Federal"],
+    "legal_basis": ["Lei de Responsabilidade Fiscal", "Normas de fiscalização de Tribunais de Contas estaduais"],
+    "patterns": ["P05", "P06"],
+    "evidence_status": "ev-confirmed",
+    "sources": [
+      {"title": "Pedro Duarte diz que os danos ao Rioprevidência vão além dos R$3 bilhões já apontados pela imprensa", "url": "https://diariodorio.com/pedro-duarte-diz-que-os-danos-ao-rioprevidencia-vai-alem-dos-r-3-bilhoes-ja-apontados-pela-imprensa/", "outlet": "Diário do Rio", "date": "2026-05-28"},
+      {"title": "Entenda como o Rio investiu R$3 bi no Master e para onde foi o dinheiro", "url": "https://www.cnnbrasil.com.br/economia/money/macroeconomia/entenda-como-o-rio-investiu-r-3-bi-no-master-e-para-onde-foi-o-dinheiro/", "outlet": "CNN Brasil", "date": "2026-05-27"},
+      {"title": "Rioprevidência impõe novas e rigorosas barreiras contra investimentos de alto risco", "url": "https://povonarua.com.br/rioprevidencia-regras-investimento-alto-risco/", "outlet": "Povo na Rua", "date": "2026-07-28"}
+    ],
+    "result": "Exposição de R$2,6-3bi confirmada por três fontes independentes (TCE-RJ, PF, imprensa). Novas regras restritivas do Rioprevidência publicadas apenas em julho/2026 — mais de um ano após o primeiro alerta formal do TCE-RJ.",
+    "connections": ["id_1932", "id_1937"],
+    "status": "confirmado",
+    "lacuna_investigativa": "Não está esclarecido quem, na cadeia de decisão do Rioprevidência entre maio/2025 e a liquidação do Master em novembro/2025, teve acesso direto ao alerta do TCE-RJ e decidiu manter ou ampliar a exposição. O acórdão aponta a irregularidade mas não nomeia individualmente os responsáveis pela decisão de continuidade.",
+    "ponto_de_inflexao": "Resolve definitivamente a lacuna identificada na síntese T-270: a discrepância de valores entre nov/2025 e jun/2026 não era erro de medição — era continuidade real de exposição após alerta formal explícito, documentada pelo próprio órgão de controle externo do estado.",
+    "analise": "Este é o caso mais claramente documentado de P06 (nesta variante, não prescrição penal, mas persistência administrativa apesar de alerta formal) em todo o corpus do Master: diferente de MORAES/TOFFOLI/etc., em que a proximidade pode ser lida como capturada por desenho institucional falho (ausência de mecanismo de verificação ex ante), aqui há um mecanismo de controle que funcionou — o TCE-RJ emitiu o alerta corretamente e a tempo — mas cuja recomendação foi administrativamente ignorada por mais de um ano. Isso desloca o ponto de falha de 'a regra não previa verificação' (como no caso dos ministros) para 'a verificação existiu e foi desconsiderada' — variante mais grave, porque elimina a defesa de que a estrutura de controle não estava disponível."
+  },
+  {
+    "id": "1940",
+    "date": "2026-09-15",
+    "date_precision": "day",
+    "title": "Dino propõe, na sessão de 15/09, identificação formal de todos os magistrados com indícios de recebimento de recursos do Master; Fachin, Fux, Cármen Lúcia e Mendonça votam pela separação dos processos",
+    "summary": "Na mesma sessão de 15/09/2026 (id_1925, id_1929), o ministro Flávio Dino propôs, na questão de ordem, que o STF identificasse formalmente todos os magistrados contra os quais existam indícios de recebimento de recursos ou vantagens provenientes do Banco Master — proposta mais ampla que o litígio bilateral Moraes-Mendonça, potencialmente alcançando qualquer um dos demais casos já documentados no corpus (Toffoli, Lewandowski, Nunes Marques, Fux, Gilmar). O placar da questão de ordem sobre unificação dos processos: Fachin, Fux, Cármen Lúcia e Mendonça votaram pela tramitação separada; Gilmar Mendes, Cristiano Zanin e Moraes defenderam a análise conjunta. Separadamente, o ministro Cristiano Zanin enviou ofício formal a Fachin em 11/09/2026 solicitando acesso integral, via HD específico, a todos os dados periciados do celular de Vorcaro — alegando que Mendonça detinha o material há mais de seis meses sem compartilhamento pleno com os demais ministros. Gilmar Mendes apoiou publicamente o pedido de Zanin, questionando se há 'hierarquia entre ministros' no acesso ao material.",
+    "category": "chokepoint_judicial",
+    "actors": [
+      {"name": "Flávio Dino", "role": "Propõe identificação formal de todos os magistrados com indícios de vínculo ao Master, para além do litígio Moraes-Mendonça", "institution": "STF"},
+      {"name": "Cristiano Zanin", "role": "Pede acesso integral aos dados periciados do celular de Vorcaro, alegando retenção do material por Mendonça", "institution": "STF"},
+      {"name": "André Mendonça", "role": "Detém o material pericial desde março/2026; alega ter se atido apenas ao que constava na investigação da PF", "institution": "STF"}
+    ],
+    "institutions": ["STF", "Polícia Federal"],
+    "legal_basis": ["RISTF — normas de colegialidade e acesso a provas periciais"],
+    "patterns": ["P02", "P03"],
+    "evidence_status": "ev-confirmed",
+    "sources": [
+      {"title": "Dino pede investigação de magistrados com indícios de ligação com o Banco Master", "url": "https://ncnews.com.br/2026/09/17/dino-investigacao-magistrados-banco-master/", "outlet": "NC News", "date": "2026-09-17"},
+      {"title": "Zanin pede a Fachin acesso integral aos dados do celular de Vorcaro", "url": "https://www.brasil247.com/brasil/zanin-pede-a-fachin-acesso-integral-aos-dados-do-celular-de-vorcaro/", "outlet": "Brasil 247", "date": "2026-09-11"},
+      {"title": "Diálogos de Vorcaro sobre filhos de Kassio e Fux são vazados", "url": "https://sbtnews.sbt.com.br/colunas/coluna-da-carla/dialogos-de-vorcaro-sobre-filhos-de-kassio-e-fux-sao-vazados", "outlet": "SBT News", "date": "2026-09-15"}
+    ],
+    "result": "Proposta de Dino registrada na questão de ordem, sem decisão de mérito na sessão (suspensa por seu próprio pedido de vista, id_1925). Disputa por acesso ao material pericial completo do celular de Vorcaro permanece em aberto entre os ministros — material já compartilhado parcialmente com Gilmar, Zanin e Moraes mediante requisição direta à PF, à margem da relatoria de Mendonça.",
+    "connections": ["id_1918", "id_1920", "id_1925", "id_1929"],
+    "status": "em_andamento",
+    "lacuna_investigativa": "Não está estabelecido se a proposta de Dino de identificação formal de 'todos os magistrados com indícios' avançará como procedimento autônomo após o retorno do prazo de vista, nem se abrangerá tribunais estaduais/federais além do próprio STF. Resultado do pedido de acesso integral de Zanin ao HD pericial não confirmado até a data das fontes.",
+    "ponto_de_inflexao": "É a primeira proposta formal, dentro do próprio STF, de tratar o conjunto dos vínculos ministeriais como objeto de apuração sistemática única — em vez do tratamento caso a caso (Moraes isolado, depois Mendonça, depois os demais por vazamento avulso) que caracterizou toda a crise até aqui. Se prosperar, essa seria a primeira medida institucional a corresponder ao nível de agregação que a própria síntese T-270 documenta.",
+    "analise": "O fato de o acesso ao material pericial completo estar concentrado em Mendonça há mais de seis meses, com outros ministros tendo que requisitar acesso via ofício formal e comparando a situação a uma 'hierarquia' inexistente no RISTF, é por si um dado sobre a arquitetura de poder informal da Corte: controle de informação bruta (o HD do celular) equivale, na prática, a controle sobre quais vínculos se tornam públicos e quando. A proposta de Dino de indexação sistemática dos magistrados citados é, estruturalmente, uma tentativa de retirar esse controle informacional das mãos de um único relator e devolvê-lo ao colegiado — precisamente o tipo de correção institucional que o próprio corpus, na análise de P03, identifica como ausente na maior parte dos casos documentados."
+  }
+]

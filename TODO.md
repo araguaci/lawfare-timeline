@@ -1,6 +1,6 @@
 # Próximos passos · lawfare-timeline
 
-**Atualizado:** 2026-09-13 (1926–1942 mortalidade 8/1 · P05 · Madame Satã)
+**Atualizado:** 2026-10-06 (main 1973 · T-272)
 
 > Espelho: `docs/TODO.md` · Notas: `_data/processados/todo.md` · Legado: `docs/TODO-LEGACY.md`
 
@@ -10,10 +10,38 @@
 
 | Track | Last | Próximo | Validação |
 |-------|------|---------|-----------|
-| Main | **1942** | **1943** | lawfare.json **1903** entradas · sem IDs duplicados |
-| Thematic | **T-269** | **T-270** | sync 100–269 contínuo |
+| Main | **1973** | **1974** | lawfare.json **1934** entradas · sem IDs duplicados |
+| Thematic | **T-272** | **T-273** | sync 100–272 contínuo · T-270 Compilado intacto |
 | Dragão e a Onça | **1770** / **T-246** | — | `dragao-onca.json` **151** |
-| Fila `_data/todo/` | staging HTML/MD | — | JSON 1926–1942 arquivado 13/09 |
+| Fila `_data/todo/` | `_staging/` HTML/MD | — | JSON 1943–1973 + T-271/T-272 arquivados 06/10 |
+
+---
+
+## Rodada 06/10/2026 (b) ✅ — Fila lock/todo sem colidir IDs
+
+Lote em `_data/lock/` pedia **1918–1944** (Master/RPPS/Cedae/STF) e colidia com Brumadinho **1918–1925** e mortalidade 8/1 **1926–1942**. Realocado **+25 → 1943–1969**. `PENDENTE_SYNC` → **1970–1971**. Gilmarpalooza → **1972**. Comparação P05 → **1973**. HTML rotulados T-270/T-271 viraram **T-271** (Sete de Onze) e **T-272** (Sob Medida); T-270 permanece o Compilado. Batch `1943–1959` da fila era **duplicata** de 1926–1942 — arquivado sem merge.
+
+| Faixa | Conteúdo |
+|-------|----------|
+| **1943–1946** | Impedimento STF / Rodrigo Fux / Iter / Kassio |
+| **1947–1951** | Crise Moraes (editoriais, OAB, Fachin, sessão 15/09, imprensa) |
+| **1952–1957** | Gilmar–Alcolumbre–Motta–Castro |
+| **1958–1961** | Patrocínios / Iter / Dark Horse |
+| **1962–1963** | RPPS + encerramento da delação Vorcaro |
+| **1964–1969** | Rioprevidência / Cedae / Castro |
+| **1970–1971** | Coronel PCC/SSP + visto da embaixadora Viotti |
+| **1972** | Gilmarpalooza / Four Seasons Lisboa |
+| **1973** | Comparação P05 (bloqueios 8/1 vs. acesso Vorcaro) · `ev-inference` |
+| **T-271** | [Sete de Onze](/posts/2026-09-17-sete-de-onze-stf-banco-master/) |
+| **T-272** | [Sob Medida](/posts/2026-09-17-sob-medida-rioprevidencia-cedae/) |
+
+Sem overwrite de 1918–1942. Próximo main **1974** · próximo temático **T-273**. HTML/EPUB em `docs/` ainda não republicados nesta rodada.
+
+---
+
+## Rodada 06/10/2026 ✅ — T-270 Compilado Lawfare
+
+Estudo-livro em [`_posts/estudos/2026-10-06-compilado-lawfare.md`](_posts/estudos/2026-10-06-compilado-lawfare.md): **Parte A** síntese por eixos + catálogo com URL canônica; **Parte B** texto integral dos **128** estudos de `_posts/estudos`, links internos absolutos. Gerador: `tools/build_compilado_lawfare.py`. JSON: `_data/processados/thematic-T270-compilado-lawfare.json`. Não altera `lawfare.json`. Permalink: `/posts/2026-10-06-compilado-lawfare/`.
 
 ---
 
@@ -138,6 +166,7 @@ A fila reapresentou 4 batches com numeração antiga. **VT4 era duplicata** de 1
 | Item | Prioridade |
 |------|------------|
 | **1899** sem `fontes_verificadas` (ADC 43/44/54 — `ev-contested` no lote) | Alta |
+| Publicar HTML em `docs/` dos posts 1943–1973 e estudos T-271/T-272 | Alta |
 | **1907** / **1908** `ev-alleged` (fonte única / coluna) — corroborar | Alta |
 | **1925** `ev-alleged` (TÜV SÜD / Munique — fonte única A Investigação) — corroborar | Alta |
 | Formalizar **P13 Porta Giratória** em METHODOLOGY.md (T-254) | Média |
@@ -163,6 +192,6 @@ bundle exec jekyll build
 
 ## Referências
 
-- Corpus: `_data/lawfare.json` (**1886** entradas · main até **1925**)
+- Corpus: `_data/lawfare.json` (**1934** entradas · main até **1973**)
 - Unified: `_data/lawfare-unified-corpus.json`
 - Sidecar dragão: `_data/dragao-onca.json` (151 · **1763/1764** = CEEE-T / JMEV intactos)
