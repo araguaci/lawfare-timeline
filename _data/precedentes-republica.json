@@ -3,12 +3,13 @@
     "track": "historical_precedents",
     "escopo": "pre-1990",
     "id_format": "PREC-AAAA-NN",
-    "total": 14,
-    "periodo": "1890-1930",
+    "total": 34,
+    "periodo": "1889-1988",
     "gerado": "2026-07-19",
     "nota": "Sidecar — não mesclado em lawfare.json main track. Índice editorial T-224.",
-    "main_track_next_livre": 1629,
-    "revisao": "2026-07-19 — PREC-1891-14 (lacuna Castilhos); fontes CPDOC PREC-1891-01/1895-04"
+    "main_track_next_livre": 1980,
+    "revisao": "2026-10-07 — PREC-1889-15 a PREC-1988-34 adicionados (série T-273 Caserna e Poder); status sidecar-pendente-revisao; fontes CPDOC a vincular por verbete",
+    "ultimo_nn": 34
   },
   "entradas": [
     {
@@ -620,6 +621,995 @@
       ],
       "revisao_humana_necessaria": false,
       "status_publicacao": "sidecar-revisado"
+    },
+    {
+      "id": "PREC-1889-15",
+      "titulo": "Golpe militar depõe a Monarquia e instala o Governo Provisório sob Deodoro da Fonseca",
+      "data_evento": "1889-11-15",
+      "data_iso": "1889-11-15T00:00:00.000Z",
+      "categoria": "captura-institucional",
+      "tags": [
+        "deodoro",
+        "benjamin-constant",
+        "proclamacao-republica",
+        "positivismo",
+        "precedente-historico",
+        "caserna-poder",
+        "t-273"
+      ],
+      "descricao": "Em 15/11/1889 tropas lideradas pelo marechal Deodoro da Fonseca, monarquista até a véspera, depõem o gabinete Ouro Preto; a República é proclamada no mesmo dia e a família imperial é banida. O tenente-coronel Benjamin Constant, professor da Escola Militar da Praia Vermelha, articula a adesão de oficiais formados no positivismo. A participação popular foi mínima. Marco inicial da tutela militar republicana.",
+      "pessoas_envolvidas": [
+        "Deodoro da Fonseca",
+        "Benjamin Constant",
+        "Visconde de Ouro Preto"
+      ],
+      "instituicoes_envolvidas": [
+        "Exército",
+        "Escola Militar da Praia Vermelha"
+      ],
+      "pais": "Brasil",
+      "escopo": "precedente-historico-pre-1990",
+      "evidence_status": "ev-confirmed",
+      "tipo_evento_caserna": "ruptura",
+      "meta": {
+        "observacao": "Origem do 'padrão moderador' (Stepan, 1971): Exército assume o papel de árbitro antes exercido pelo Poder Moderador imperial.",
+        "padrao_paralelo_sugerido": "PM — Tutela Moderadora (candidato, T-273)",
+        "entradas_relacionadas": [
+          "PREC-1891-16"
+        ],
+        "serie": "T-273 Ciclos do Brasil — Caserna e Poder"
+      },
+      "fontes_verificadas": [
+        {
+          "url": "https://cpdoc.fgv.br",
+          "titulo": "CPDOC/FGV — Dicionário Histórico-Biográfico Brasileiro (verbete a vincular)"
+        }
+      ],
+      "revisao_humana_necessaria": true,
+      "status_publicacao": "sidecar-pendente-revisao"
+    },
+    {
+      "id": "PREC-1891-16",
+      "titulo": "Deodoro dissolve o Congresso Nacional e renuncia vinte dias depois sob ameaça da Armada",
+      "data_evento": "1891-11-03",
+      "data_iso": "1891-11-03T00:00:00.000Z",
+      "categoria": "captura-institucional",
+      "tags": [
+        "deodoro",
+        "floriano",
+        "dissolucao-congresso",
+        "estado-de-sitio",
+        "precedente-historico",
+        "caserna-poder",
+        "t-273"
+      ],
+      "descricao": "Em 03/11/1891, nove meses após a promulgação da Constituição, o presidente Deodoro da Fonseca decreta a dissolução do Congresso e estado de sítio. Diante da reação da Marinha (primeira Revolta da Armada, liderada por Custódio de Melo) e de unidades do Exército, renuncia em 23/11/1891. O vice Floriano Peixoto assume e não convoca nova eleição, contrariando o art. 42 da Constituição. A deposição em cadeia de governadores alinhados a Deodoro, incluindo Júlio de Castilhos, está registrada em PREC-1891-14.",
+      "pessoas_envolvidas": [
+        "Deodoro da Fonseca",
+        "Floriano Peixoto",
+        "Custódio de Melo"
+      ],
+      "instituicoes_envolvidas": [
+        "Congresso Nacional",
+        "Marinha",
+        "Exército"
+      ],
+      "pais": "Brasil",
+      "escopo": "precedente-historico-pre-1990",
+      "evidence_status": "ev-confirmed",
+      "tipo_evento_caserna": "ruptura",
+      "meta": {
+        "observacao": "Primeiro fechamento do Legislativo da República; sucessão resolvida por pressão armada, não por norma.",
+        "padrao_paralelo_sugerido": "PM — Tutela Moderadora (candidato, T-273)",
+        "entradas_relacionadas": [
+          "PREC-1889-15",
+          "PREC-1891-14",
+          "PREC-1893-17"
+        ],
+        "serie": "T-273 Ciclos do Brasil — Caserna e Poder"
+      },
+      "fontes_verificadas": [
+        {
+          "url": "https://cpdoc.fgv.br",
+          "titulo": "CPDOC/FGV — Dicionário Histórico-Biográfico Brasileiro (verbete a vincular)"
+        }
+      ],
+      "revisao_humana_necessaria": true,
+      "status_publicacao": "sidecar-pendente-revisao"
+    },
+    {
+      "id": "PREC-1893-17",
+      "titulo": "Revolta da Armada contra Floriano Peixoto",
+      "data_evento": "1893-09-06",
+      "data_iso": "1893-09-06T00:00:00.000Z",
+      "categoria": "captura-institucional",
+      "tags": [
+        "revolta-da-armada",
+        "floriano",
+        "custodio-de-melo",
+        "saldanha-da-gama",
+        "precedente-historico",
+        "caserna-poder",
+        "t-273"
+      ],
+      "descricao": "Em 06/09/1893 a Marinha, sob o almirante Custódio de Melo e depois Saldanha da Gama, rebela-se contra Floriano Peixoto e bombardeia o Rio de Janeiro. O movimento se articula com a Revolução Federalista no Sul (PREC-1893-02) e é derrotado em março de 1894. Primeira cisão armada aberta entre Forças sobre quem exerce a tutela da República.",
+      "pessoas_envolvidas": [
+        "Floriano Peixoto",
+        "Custódio de Melo",
+        "Luís Filipe Saldanha da Gama"
+      ],
+      "instituicoes_envolvidas": [
+        "Marinha",
+        "Exército"
+      ],
+      "pais": "Brasil",
+      "escopo": "precedente-historico-pre-1990",
+      "evidence_status": "ev-confirmed",
+      "tipo_evento_caserna": "tentativa",
+      "meta": {
+        "observacao": "A caserna não age em bloco: disputas entre Forças são parte do padrão.",
+        "padrao_paralelo_sugerido": "PM — Tutela Moderadora (candidato, T-273)",
+        "entradas_relacionadas": [
+          "PREC-1891-16",
+          "PREC-1893-02"
+        ],
+        "serie": "T-273 Ciclos do Brasil — Caserna e Poder"
+      },
+      "fontes_verificadas": [
+        {
+          "url": "https://cpdoc.fgv.br",
+          "titulo": "CPDOC/FGV — Dicionário Histórico-Biográfico Brasileiro (verbete a vincular)"
+        }
+      ],
+      "revisao_humana_necessaria": true,
+      "status_publicacao": "sidecar-pendente-revisao"
+    },
+    {
+      "id": "PREC-1922-18",
+      "titulo": "Revolta dos 18 do Forte de Copacabana inaugura o tenentismo",
+      "data_evento": "1922-07-05",
+      "data_iso": "1922-07-05T00:00:00.000Z",
+      "categoria": "captura-institucional",
+      "tags": [
+        "tenentismo",
+        "18-do-forte",
+        "artur-bernardes",
+        "eduardo-gomes",
+        "precedente-historico",
+        "caserna-poder",
+        "t-273"
+      ],
+      "descricao": "Em 05/07/1922 oficiais do Forte de Copacabana se rebelam contra a posse de Artur Bernardes, após o episódio das 'cartas falsas' e a punição do marechal Hermes da Fonseca. A marcha pela Avenida Atlântica termina com mortos e feridos; Eduardo Gomes e Siqueira Campos sobrevivem. O tenentismo reúne oficiais jovens que se veem como reformadores morais da República.",
+      "pessoas_envolvidas": [
+        "Siqueira Campos",
+        "Eduardo Gomes",
+        "Hermes da Fonseca",
+        "Artur Bernardes"
+      ],
+      "instituicoes_envolvidas": [
+        "Exército"
+      ],
+      "pais": "Brasil",
+      "escopo": "precedente-historico-pre-1990",
+      "evidence_status": "ev-confirmed",
+      "tipo_evento_caserna": "tentativa",
+      "meta": {
+        "observacao": "Geração tenentista ocupará o centro do poder de 1930 a 1964.",
+        "padrao_paralelo_sugerido": "PM — Tutela Moderadora (candidato, T-273)",
+        "entradas_relacionadas": [
+          "PREC-1924-19",
+          "PREC-1930-07"
+        ],
+        "serie": "T-273 Ciclos do Brasil — Caserna e Poder"
+      },
+      "fontes_verificadas": [
+        {
+          "url": "https://cpdoc.fgv.br",
+          "titulo": "CPDOC/FGV — Dicionário Histórico-Biográfico Brasileiro (verbete a vincular)"
+        }
+      ],
+      "revisao_humana_necessaria": true,
+      "status_publicacao": "sidecar-pendente-revisao"
+    },
+    {
+      "id": "PREC-1924-19",
+      "titulo": "Revolta tenentista ocupa São Paulo; remanescentes formam a Coluna Prestes (1925–1927)",
+      "data_evento": "1924-07-05",
+      "data_iso": "1924-07-05T00:00:00.000Z",
+      "categoria": "captura-institucional",
+      "tags": [
+        "tenentismo",
+        "coluna-prestes",
+        "isidoro-dias-lopes",
+        "juarez-tavora",
+        "precedente-historico",
+        "caserna-poder",
+        "t-273"
+      ],
+      "descricao": "Em 05/07/1924 militares liderados pelo general Isidoro Dias Lopes ocupam a cidade de São Paulo por cerca de três semanas; o governo federal bombardeia a capital paulista. Os rebeldes recuam e, unidos a tropas do Rio Grande do Sul, formam a Coluna Miguel Costa-Prestes, que percorre cerca de 25 mil km até se exilar na Bolívia em 1927. Juarez Távora e outros integrantes estarão no núcleo do governo após 1930.",
+      "pessoas_envolvidas": [
+        "Isidoro Dias Lopes",
+        "Luís Carlos Prestes",
+        "Miguel Costa",
+        "Juarez Távora"
+      ],
+      "instituicoes_envolvidas": [
+        "Exército",
+        "Força Pública de São Paulo"
+      ],
+      "pais": "Brasil",
+      "escopo": "precedente-historico-pre-1990",
+      "evidence_status": "ev-confirmed",
+      "tipo_evento_caserna": "tentativa",
+      "meta": {
+        "observacao": "Distância de 6 anos entre o levante derrotado e a tomada do poder (1930) pelos mesmos atores.",
+        "padrao_paralelo_sugerido": "PM — Tutela Moderadora (candidato, T-273)",
+        "entradas_relacionadas": [
+          "PREC-1922-18",
+          "PREC-1930-07"
+        ],
+        "serie": "T-273 Ciclos do Brasil — Caserna e Poder"
+      },
+      "fontes_verificadas": [
+        {
+          "url": "https://cpdoc.fgv.br",
+          "titulo": "CPDOC/FGV — Dicionário Histórico-Biográfico Brasileiro (verbete a vincular)"
+        }
+      ],
+      "revisao_humana_necessaria": true,
+      "status_publicacao": "sidecar-pendente-revisao"
+    },
+    {
+      "id": "PREC-1935-20",
+      "titulo": "Levante comunista em quartéis de Natal, Recife e Rio de Janeiro",
+      "data_evento": "1935-11-23",
+      "data_iso": "1935-11-23T00:00:00.000Z",
+      "categoria": "captura-institucional",
+      "tags": [
+        "levante-1935",
+        "anl",
+        "prestes",
+        "intentona",
+        "precedente-historico",
+        "caserna-poder",
+        "t-273"
+      ],
+      "descricao": "Entre 23 e 27/11/1935 militares ligados à Aliança Nacional Libertadora e ao PCB, sob direção de Luís Carlos Prestes, sublevam unidades em Natal, Recife e no 3º Regimento de Infantaria (Rio). O levante é derrotado em dias e serve de justificativa para estado de guerra, Lei de Segurança Nacional ampliada e repressão que prepara o Estado Novo. Mostra que a rebeldia de quartel não tem lado ideológico fixo.",
+      "pessoas_envolvidas": [
+        "Luís Carlos Prestes"
+      ],
+      "instituicoes_envolvidas": [
+        "Exército",
+        "ANL",
+        "PCB"
+      ],
+      "pais": "Brasil",
+      "escopo": "precedente-historico-pre-1990",
+      "evidence_status": "ev-confirmed",
+      "tipo_evento_caserna": "tentativa",
+      "meta": {
+        "observacao": "Usado pelo próprio Exército como data comemorativa anticomunista até a década de 1990.",
+        "padrao_paralelo_sugerido": "PM — Tutela Moderadora (candidato, T-273)",
+        "entradas_relacionadas": [
+          "PREC-1937-21"
+        ],
+        "serie": "T-273 Ciclos do Brasil — Caserna e Poder"
+      },
+      "fontes_verificadas": [
+        {
+          "url": "https://cpdoc.fgv.br",
+          "titulo": "CPDOC/FGV — Dicionário Histórico-Biográfico Brasileiro (verbete a vincular)"
+        }
+      ],
+      "revisao_humana_necessaria": true,
+      "status_publicacao": "sidecar-pendente-revisao"
+    },
+    {
+      "id": "PREC-1937-21",
+      "titulo": "Golpe do Estado Novo com apoio da cúpula do Exército; Plano Cohen admitido depois como forjado",
+      "data_evento": "1937-11-10",
+      "data_iso": "1937-11-10T00:00:00.000Z",
+      "categoria": "captura-institucional",
+      "tags": [
+        "estado-novo",
+        "vargas",
+        "plano-cohen",
+        "gois-monteiro",
+        "mourao-filho",
+        "precedente-historico",
+        "caserna-poder",
+        "t-273"
+      ],
+      "descricao": "Em 10/11/1937 Getúlio Vargas fecha o Congresso, cancela a eleição de 1938 e outorga a Constituição de 1937, com apoio do chefe do Estado-Maior Góis Monteiro e do ministro da Guerra Eurico Dutra. O pretexto público foi o Plano Cohen, documento sobre suposta insurreição comunista divulgado em setembro; em 1945 Góis Monteiro reconheceu que o plano era fraudulento, redigido pelo capitão Olímpio Mourão Filho — o mesmo que deflagraria o golpe de 1964.",
+      "pessoas_envolvidas": [
+        "Getúlio Vargas",
+        "Góis Monteiro",
+        "Eurico Gaspar Dutra",
+        "Olímpio Mourão Filho"
+      ],
+      "instituicoes_envolvidas": [
+        "Exército",
+        "Congresso Nacional"
+      ],
+      "pais": "Brasil",
+      "escopo": "precedente-historico-pre-1990",
+      "evidence_status": "ev-confirmed",
+      "tipo_evento_caserna": "ruptura",
+      "meta": {
+        "observacao": "Pretexto forjado como mecanismo de ruptura; elo pessoal direto com 1964 (Mourão Filho).",
+        "padrao_paralelo_sugerido": "PM — Tutela Moderadora (candidato, T-273)",
+        "entradas_relacionadas": [
+          "PREC-1935-20",
+          "PREC-1945-22",
+          "PREC-1964-27"
+        ],
+        "serie": "T-273 Ciclos do Brasil — Caserna e Poder"
+      },
+      "fontes_verificadas": [
+        {
+          "url": "https://cpdoc.fgv.br",
+          "titulo": "CPDOC/FGV — Dicionário Histórico-Biográfico Brasileiro (verbete a vincular)"
+        }
+      ],
+      "revisao_humana_necessaria": true,
+      "status_publicacao": "sidecar-pendente-revisao"
+    },
+    {
+      "id": "PREC-1945-22",
+      "titulo": "Generais do Estado Novo depõem Getúlio Vargas",
+      "data_evento": "1945-10-29",
+      "data_iso": "1945-10-29T00:00:00.000Z",
+      "categoria": "captura-institucional",
+      "tags": [
+        "deposicao-vargas",
+        "gois-monteiro",
+        "dutra",
+        "jose-linhares",
+        "precedente-historico",
+        "caserna-poder",
+        "t-273"
+      ],
+      "descricao": "Em 29/10/1945 o ministro da Guerra Góis Monteiro e o general Eurico Dutra, os mesmos que sustentaram o golpe de 1937, depõem Vargas, cuja nomeação do irmão Benjamim Vargas para a chefia de polícia do DF foi o estopim. O poder é entregue ao presidente do STF, José Linhares, até a posse de Dutra, eleito em dezembro.",
+      "pessoas_envolvidas": [
+        "Getúlio Vargas",
+        "Góis Monteiro",
+        "Eurico Gaspar Dutra",
+        "José Linhares"
+      ],
+      "instituicoes_envolvidas": [
+        "Exército",
+        "STF"
+      ],
+      "pais": "Brasil",
+      "escopo": "precedente-historico-pre-1990",
+      "evidence_status": "ev-confirmed",
+      "tipo_evento_caserna": "ruptura",
+      "meta": {
+        "observacao": "Mesma cúpula instala e remove o regime: a tutela é sobre o sistema, não sobre um governante.",
+        "padrao_paralelo_sugerido": "PM — Tutela Moderadora (candidato, T-273)",
+        "entradas_relacionadas": [
+          "PREC-1937-21",
+          "PREC-1954-23"
+        ],
+        "serie": "T-273 Ciclos do Brasil — Caserna e Poder"
+      },
+      "fontes_verificadas": [
+        {
+          "url": "https://cpdoc.fgv.br",
+          "titulo": "CPDOC/FGV — Dicionário Histórico-Biográfico Brasileiro (verbete a vincular)"
+        }
+      ],
+      "revisao_humana_necessaria": true,
+      "status_publicacao": "sidecar-pendente-revisao"
+    },
+    {
+      "id": "PREC-1954-23",
+      "titulo": "Manifesto de generais exige a renúncia de Vargas; presidente se suicida em 24/08/1954",
+      "data_evento": "1954-08-22",
+      "data_iso": "1954-08-22T00:00:00.000Z",
+      "categoria": "captura-institucional",
+      "tags": [
+        "vargas",
+        "republica-do-galeao",
+        "tonelero",
+        "lacerda",
+        "precedente-historico",
+        "caserna-poder",
+        "t-273"
+      ],
+      "descricao": "Após o atentado da Rua Tonelero (05/08/1954) contra Carlos Lacerda, que matou o major da FAB Rubens Vaz, a Aeronáutica instala investigação própria (a 'República do Galeão'). Em 22/08 um manifesto de generais pede a renúncia de Vargas; em 24/08, após reunião ministerial que aceita uma licença, Vargas se mata no Palácio do Catete.",
+      "pessoas_envolvidas": [
+        "Getúlio Vargas",
+        "Carlos Lacerda",
+        "Rubens Vaz"
+      ],
+      "instituicoes_envolvidas": [
+        "Exército",
+        "FAB"
+      ],
+      "pais": "Brasil",
+      "escopo": "precedente-historico-pre-1990",
+      "evidence_status": "ev-confirmed",
+      "tipo_evento_caserna": "tentativa",
+      "meta": {
+        "observacao": "Investigação conduzida por Força Armada em paralelo à polícia civil: precedente de inquérito militar sobre crise política.",
+        "padrao_paralelo_sugerido": "PM — Tutela Moderadora (candidato, T-273)",
+        "entradas_relacionadas": [
+          "PREC-1945-22",
+          "PREC-1955-24"
+        ],
+        "serie": "T-273 Ciclos do Brasil — Caserna e Poder"
+      },
+      "fontes_verificadas": [
+        {
+          "url": "https://cpdoc.fgv.br",
+          "titulo": "CPDOC/FGV — Dicionário Histórico-Biográfico Brasileiro (verbete a vincular)"
+        }
+      ],
+      "revisao_humana_necessaria": true,
+      "status_publicacao": "sidecar-pendente-revisao"
+    },
+    {
+      "id": "PREC-1955-24",
+      "titulo": "Novembrada: Lott afasta o presidente interino para garantir a posse de Juscelino Kubitschek",
+      "data_evento": "1955-11-11",
+      "data_iso": "1955-11-11T00:00:00.000Z",
+      "categoria": "captura-institucional",
+      "tags": [
+        "lott",
+        "novembrada",
+        "jk",
+        "carlos-luz",
+        "contragolpe",
+        "precedente-historico",
+        "caserna-poder",
+        "t-273"
+      ],
+      "descricao": "Em 11/11/1955 o ministro da Guerra, general Henrique Teixeira Lott, mobiliza tropas e afasta o presidente interino Carlos Luz, acusado de articular com setores militares e udenistas o impedimento da posse de JK e João Goulart, eleitos em outubro. O Congresso declara Luz e depois Café Filho impedidos. JK toma posse em 31/01/1956.",
+      "pessoas_envolvidas": [
+        "Henrique Teixeira Lott",
+        "Carlos Luz",
+        "Café Filho",
+        "Juscelino Kubitschek"
+      ],
+      "instituicoes_envolvidas": [
+        "Exército",
+        "Congresso Nacional"
+      ],
+      "pais": "Brasil",
+      "escopo": "precedente-historico-pre-1990",
+      "evidence_status": "ev-contested",
+      "tipo_evento_caserna": "recusa",
+      "meta": {
+        "observacao": "Fato incontroverso; classificação disputada (contragolpe preventivo legalista × intervenção militar). Mostra que a defesa da eleição também se fez pela via da tutela.",
+        "padrao_paralelo_sugerido": "PM — Tutela Moderadora (candidato, T-273)",
+        "entradas_relacionadas": [
+          "PREC-1954-23",
+          "PREC-1956-25"
+        ],
+        "serie": "T-273 Ciclos do Brasil — Caserna e Poder"
+      },
+      "fontes_verificadas": [
+        {
+          "url": "https://cpdoc.fgv.br",
+          "titulo": "CPDOC/FGV — Dicionário Histórico-Biográfico Brasileiro (verbete a vincular)"
+        }
+      ],
+      "revisao_humana_necessaria": true,
+      "status_publicacao": "sidecar-pendente-revisao"
+    },
+    {
+      "id": "PREC-1956-25",
+      "titulo": "Revoltas de oficiais da FAB em Jacareacanga (1956) e Aragarças (1959) contra o governo JK",
+      "data_evento": "1956-02-10",
+      "data_iso": "1956-02-10T00:00:00.000Z",
+      "categoria": "captura-institucional",
+      "tags": [
+        "jacareacanga",
+        "aragarcas",
+        "fab",
+        "haroldo-veloso",
+        "anistia",
+        "precedente-historico",
+        "caserna-poder",
+        "t-273"
+      ],
+      "descricao": "Em 10/02/1956, dias após a posse de JK, oficiais da Aeronáutica liderados pelo major Haroldo Veloso ocupam a base de Jacareacanga (PA); o levante termina em fevereiro. Em 02/12/1959 oficiais da FAB sequestram aviões e se instalam em Aragarças (GO), em novo levante debelado em 36 horas. Os envolvidos de 1956 foram anistiados pelo Congresso.",
+      "pessoas_envolvidas": [
+        "Haroldo Veloso",
+        "Juscelino Kubitschek"
+      ],
+      "instituicoes_envolvidas": [
+        "FAB",
+        "Congresso Nacional"
+      ],
+      "pais": "Brasil",
+      "escopo": "precedente-historico-pre-1990",
+      "evidence_status": "ev-confirmed",
+      "tipo_evento_caserna": "tentativa",
+      "meta": {
+        "observacao": "Anistia rápida a militares rebeldes: incentivo à repetição.",
+        "padrao_paralelo_sugerido": "PM — Tutela Moderadora (candidato, T-273)",
+        "entradas_relacionadas": [
+          "PREC-1955-24",
+          "PREC-1961-26"
+        ],
+        "serie": "T-273 Ciclos do Brasil — Caserna e Poder"
+      },
+      "fontes_verificadas": [
+        {
+          "url": "https://cpdoc.fgv.br",
+          "titulo": "CPDOC/FGV — Dicionário Histórico-Biográfico Brasileiro (verbete a vincular)"
+        }
+      ],
+      "revisao_humana_necessaria": true,
+      "status_publicacao": "sidecar-pendente-revisao"
+    },
+    {
+      "id": "PREC-1961-26",
+      "titulo": "Ministros militares vetam a posse de João Goulart; Campanha da Legalidade e parlamentarismo contornam o veto",
+      "data_evento": "1961-08-25",
+      "data_iso": "1961-08-25T00:00:00.000Z",
+      "categoria": "captura-institucional",
+      "tags": [
+        "jango",
+        "legalidade",
+        "brizola",
+        "veto-militar",
+        "parlamentarismo",
+        "precedente-historico",
+        "caserna-poder",
+        "t-273"
+      ],
+      "descricao": "Após a renúncia de Jânio Quadros (25/08/1961), os ministros militares Odílio Denys (Guerra), Sílvio Heck (Marinha) e Grün Moss (Aeronáutica) declaram inconveniente a volta do vice João Goulart, em viagem à China. O governador Leonel Brizola lança a Campanha da Legalidade a partir de Porto Alegre, com adesão do III Exército. A crise se resolve com a Emenda Constitucional nº 4 (parlamentarismo); Goulart toma posse em 07/09/1961 com poderes reduzidos.",
+      "pessoas_envolvidas": [
+        "João Goulart",
+        "Leonel Brizola",
+        "Odílio Denys",
+        "Sílvio Heck",
+        "Gabriel Grün Moss",
+        "Machado Lopes"
+      ],
+      "instituicoes_envolvidas": [
+        "Ministérios Militares",
+        "III Exército",
+        "Congresso Nacional"
+      ],
+      "pais": "Brasil",
+      "escopo": "precedente-historico-pre-1990",
+      "evidence_status": "ev-confirmed",
+      "tipo_evento_caserna": "tentativa",
+      "meta": {
+        "observacao": "Veto militar convertido em reforma constitucional improvisada.",
+        "padrao_paralelo_sugerido": "PM — Tutela Moderadora (candidato, T-273)",
+        "entradas_relacionadas": [
+          "PREC-1964-27"
+        ],
+        "serie": "T-273 Ciclos do Brasil — Caserna e Poder"
+      },
+      "fontes_verificadas": [
+        {
+          "url": "https://cpdoc.fgv.br",
+          "titulo": "CPDOC/FGV — Dicionário Histórico-Biográfico Brasileiro (verbete a vincular)"
+        }
+      ],
+      "revisao_humana_necessaria": true,
+      "status_publicacao": "sidecar-pendente-revisao"
+    },
+    {
+      "id": "PREC-1964-27",
+      "titulo": "Golpe de 31 de março–1º de abril depõe João Goulart",
+      "data_evento": "1964-03-31",
+      "data_iso": "1964-03-31T00:00:00.000Z",
+      "categoria": "captura-institucional",
+      "tags": [
+        "golpe-1964",
+        "mourao-filho",
+        "castelo-branco",
+        "jango",
+        "auro-de-moura-andrade",
+        "precedente-historico",
+        "caserna-poder",
+        "t-273"
+      ],
+      "descricao": "Em 31/03/1964 o general Olímpio Mourão Filho desloca tropas de Juiz de Fora para o Rio; em 01/04 Goulart deixa Brasília e o presidente do Senado, Auro de Moura Andrade, declara vaga a Presidência com o presidente ainda no território nacional. O golpe teve apoio de governadores (Lacerda, Magalhães Pinto, Ademar de Barros), de parte da imprensa, de entidades empresariais e de setores da sociedade civil. O Ato Institucional de 09/04 suspende garantias e abre cassações. A eleição presidencial de 1965 não ocorreu.",
+      "pessoas_envolvidas": [
+        "Olímpio Mourão Filho",
+        "Humberto Castelo Branco",
+        "João Goulart",
+        "Auro de Moura Andrade",
+        "Carlos Lacerda",
+        "Magalhães Pinto"
+      ],
+      "instituicoes_envolvidas": [
+        "Exército",
+        "Senado Federal",
+        "Congresso Nacional"
+      ],
+      "pais": "Brasil",
+      "escopo": "precedente-historico-pre-1990",
+      "evidence_status": "ev-confirmed",
+      "tipo_evento_caserna": "ruptura",
+      "meta": {
+        "observacao": "Início do único período (1964–1985) em que a corporação militar governa diretamente, e não apenas tutela.",
+        "padrao_paralelo_sugerido": "PM — Tutela Moderadora (candidato, T-273)",
+        "entradas_relacionadas": [
+          "PREC-1937-21",
+          "PREC-1961-26",
+          "PREC-1965-28",
+          "PREC-1965-29"
+        ],
+        "serie": "T-273 Ciclos do Brasil — Caserna e Poder"
+      },
+      "fontes_verificadas": [
+        {
+          "url": "https://cpdoc.fgv.br",
+          "titulo": "CPDOC/FGV — Dicionário Histórico-Biográfico Brasileiro (verbete a vincular)"
+        },
+        {
+          "url": "http://cnv.memoriasreveladas.gov.br",
+          "titulo": "Comissão Nacional da Verdade — Relatório Final (2014)"
+        }
+      ],
+      "revisao_humana_necessaria": false,
+      "status_publicacao": "sidecar-pendente-revisao"
+    },
+    {
+      "id": "PREC-1965-28",
+      "titulo": "Regime militar cassa as concessões da Panair do Brasil; rotas passam à Varig no mesmo dia",
+      "data_evento": "1965-02-10",
+      "data_iso": "1965-02-10T00:00:00.000Z",
+      "categoria": "captura-institucional",
+      "tags": [
+        "panair",
+        "varig",
+        "simonsen",
+        "rocha-miranda",
+        "ruben-berta",
+        "favorecimento",
+        "precedente-historico",
+        "caserna-poder",
+        "t-273"
+      ],
+      "descricao": "Em 10/02/1965 decreto do governo Castelo Branco cancela as linhas da Panair do Brasil, então a maior companhia aérea do país, controlada desde 1961 por Mario Wallace Simonsen e Celso da Rocha Miranda, que haviam apoiado a posse de Goulart em 1961. A Varig, de Ruben Berta, assume as rotas internacionais na mesma noite. Em 15/02 a Justiça decreta a falência com base em alegações do Ministério da Aeronáutica; cerca de 5 mil funcionários perdem o emprego. Simonsen morre de infarto em março de 1965. A Comissão Nacional da Verdade examinou o caso em 2013 e a Comissão de Anistia reconheceu perseguição política, com pedido formal de desculpas do Estado.",
+      "pessoas_envolvidas": [
+        "Mario Wallace Simonsen",
+        "Celso da Rocha Miranda",
+        "Ruben Berta",
+        "Eduardo Gomes"
+      ],
+      "instituicoes_envolvidas": [
+        "Ministério da Aeronáutica",
+        "Panair do Brasil",
+        "Varig",
+        "Comissão Nacional da Verdade",
+        "Comissão de Anistia"
+      ],
+      "pais": "Brasil",
+      "escopo": "precedente-historico-pre-1990",
+      "evidence_status": "ev-confirmed",
+      "tipo_evento_caserna": "tutela",
+      "meta": {
+        "observacao": "Caso-modelo de seleção estatal de vencedores privados por alinhamento político. Acusação de corrupção de brigadeiros pela Varig (Saulo Ramos) permanece ev-alleged.",
+        "padrao_paralelo_sugerido": "Paralelo estrutural ao cluster de favorecimento regulatório do corpus (sem P formal); ver Encilhamento PREC-1890-11",
+        "entradas_relacionadas": [
+          "PREC-1964-27",
+          "PREC-1890-11"
+        ],
+        "serie": "T-273 Ciclos do Brasil — Caserna e Poder"
+      },
+      "fontes_verificadas": [
+        {
+          "url": "https://ihu.unisinos.br/518457-comissao-da-verdade-examinara-caso-panair-extinta-pela-ditadura",
+          "titulo": "IHU Unisinos — CNV examinará caso Panair (2013)"
+        },
+        {
+          "url": "https://www.migalhas.com.br/depeso/398630/neste-7-de-dezembro-lembremo-nos-da-panair-do-brasil",
+          "titulo": "Migalhas — caso Panair e relatório da CNV"
+        },
+        {
+          "url": "https://www.congressoemfoco.com.br/noticia/6562/brasil-pede-perdao-a-5-mil-funcionarios-da-panair-empresa-aerea-fechada-pela-ditadura",
+          "titulo": "Congresso em Foco — pedido de desculpas do Estado"
+        },
+        {
+          "url": "https://anpuh.org.br/uploads/anais-simposios/pdf/2019-01/1548875182_c2d26fe282ba46571d6252dd0025cc83.pdf",
+          "titulo": "ANPUH — O turismo brasileiro sob as asas da Panair"
+        }
+      ],
+      "revisao_humana_necessaria": false,
+      "status_publicacao": "sidecar-pendente-revisao"
+    },
+    {
+      "id": "PREC-1965-29",
+      "titulo": "Ato Institucional nº 2 extingue os partidos e torna indireta a eleição presidencial",
+      "data_evento": "1965-10-27",
+      "data_iso": "1965-10-27T00:00:00.000Z",
+      "categoria": "captura-institucional",
+      "tags": [
+        "ai-2",
+        "bipartidarismo",
+        "stf-ampliacao",
+        "justica-militar",
+        "precedente-historico",
+        "caserna-poder",
+        "t-273"
+      ],
+      "descricao": "Em 27/10/1965, após vitórias oposicionistas nas eleições estaduais de Guanabara e Minas Gerais, o AI-2 extingue os partidos políticos, estabelece eleição indireta para presidente, amplia o STF de 11 para 16 ministros e transfere para a Justiça Militar o julgamento de civis por crimes contra a segurança nacional.",
+      "pessoas_envolvidas": [
+        "Humberto Castelo Branco"
+      ],
+      "instituicoes_envolvidas": [
+        "Presidência da República",
+        "STF",
+        "Justiça Militar"
+      ],
+      "pais": "Brasil",
+      "escopo": "precedente-historico-pre-1990",
+      "evidence_status": "ev-confirmed",
+      "tipo_evento_caserna": "tutela",
+      "meta": {
+        "observacao": "Ampliação do STF por ato do Executivo para formar maioria: mecanismo documentado de captura judicial.",
+        "padrao_paralelo_sugerido": "PM — Tutela Moderadora (candidato, T-273)",
+        "entradas_relacionadas": [
+          "PREC-1964-27",
+          "PREC-1968-30"
+        ],
+        "serie": "T-273 Ciclos do Brasil — Caserna e Poder"
+      },
+      "fontes_verificadas": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/ait/ait-02-65.htm",
+          "titulo": "Planalto — texto do AI-2"
+        }
+      ],
+      "revisao_humana_necessaria": false,
+      "status_publicacao": "sidecar-pendente-revisao"
+    },
+    {
+      "id": "PREC-1968-30",
+      "titulo": "Ato Institucional nº 5 fecha o Congresso e suspende o habeas corpus para crimes políticos",
+      "data_evento": "1968-12-13",
+      "data_iso": "1968-12-13T00:00:00.000Z",
+      "categoria": "captura-institucional",
+      "tags": [
+        "ai-5",
+        "costa-e-silva",
+        "habeas-corpus",
+        "marcio-moreira-alves",
+        "precedente-historico",
+        "caserna-poder",
+        "t-273"
+      ],
+      "descricao": "Em 13/12/1968, após a Câmara negar licença para processar o deputado Márcio Moreira Alves, o governo Costa e Silva edita o AI-5: recesso do Congresso, cassações e suspensão de direitos políticos sem processo, suspensão do habeas corpus para crimes políticos e exclusão de apreciação judicial dos atos praticados com base no Ato. Vigora até 31/12/1978.",
+      "pessoas_envolvidas": [
+        "Artur da Costa e Silva",
+        "Márcio Moreira Alves"
+      ],
+      "instituicoes_envolvidas": [
+        "Presidência da República",
+        "Congresso Nacional",
+        "Câmara dos Deputados"
+      ],
+      "pais": "Brasil",
+      "escopo": "precedente-historico-pre-1990",
+      "evidence_status": "ev-confirmed",
+      "tipo_evento_caserna": "tutela",
+      "meta": {
+        "observacao": "Exclusão expressa do controle judicial (art. 11 do AI-5).",
+        "padrao_paralelo_sugerido": "PM — Tutela Moderadora (candidato, T-273)",
+        "entradas_relacionadas": [
+          "PREC-1965-29",
+          "PREC-1969-31"
+        ],
+        "serie": "T-273 Ciclos do Brasil — Caserna e Poder"
+      },
+      "fontes_verificadas": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/ait/ait-05-68.htm",
+          "titulo": "Planalto — texto do AI-5"
+        },
+        {
+          "url": "http://cnv.memoriasreveladas.gov.br",
+          "titulo": "Comissão Nacional da Verdade — Relatório Final (2014)"
+        }
+      ],
+      "revisao_humana_necessaria": false,
+      "status_publicacao": "sidecar-pendente-revisao"
+    },
+    {
+      "id": "PREC-1969-31",
+      "titulo": "Junta militar impede a posse do vice-presidente civil Pedro Aleixo",
+      "data_evento": "1969-08-31",
+      "data_iso": "1969-08-31T00:00:00.000Z",
+      "categoria": "captura-institucional",
+      "tags": [
+        "junta-militar",
+        "pedro-aleixo",
+        "ai-12",
+        "medici",
+        "precedente-historico",
+        "caserna-poder",
+        "t-273"
+      ],
+      "descricao": "Com o derrame de Costa e Silva em agosto de 1969, os ministros militares Aurélio de Lyra Tavares (Exército), Augusto Rademaker (Marinha) e Márcio de Souza Melo (Aeronáutica) assumem o governo em 31/08/1969 pelo AI-12, impedindo a posse do vice Pedro Aleixo, que havia votado contra o AI-5. A junta outorga a Emenda Constitucional nº 1 e conduz a escolha de Médici.",
+      "pessoas_envolvidas": [
+        "Aurélio de Lyra Tavares",
+        "Augusto Rademaker",
+        "Márcio de Souza Melo",
+        "Pedro Aleixo"
+      ],
+      "instituicoes_envolvidas": [
+        "Ministérios Militares",
+        "Presidência da República"
+      ],
+      "pais": "Brasil",
+      "escopo": "precedente-historico-pre-1990",
+      "evidence_status": "ev-confirmed",
+      "tipo_evento_caserna": "ruptura",
+      "meta": {
+        "observacao": "Linha sucessória constitucional anulada pela cúpula das três Forças.",
+        "padrao_paralelo_sugerido": "PM — Tutela Moderadora (candidato, T-273)",
+        "entradas_relacionadas": [
+          "PREC-1968-30",
+          "PREC-1977-32"
+        ],
+        "serie": "T-273 Ciclos do Brasil — Caserna e Poder"
+      },
+      "fontes_verificadas": [
+        {
+          "url": "https://cpdoc.fgv.br",
+          "titulo": "CPDOC/FGV — Dicionário Histórico-Biográfico Brasileiro (verbete a vincular)"
+        }
+      ],
+      "revisao_humana_necessaria": true,
+      "status_publicacao": "sidecar-pendente-revisao"
+    },
+    {
+      "id": "PREC-1977-32",
+      "titulo": "Geisel demite o ministro do Exército Sylvio Frota, líder da linha dura",
+      "data_evento": "1977-10-12",
+      "data_iso": "1977-10-12T00:00:00.000Z",
+      "categoria": "captura-institucional",
+      "tags": [
+        "geisel",
+        "sylvio-frota",
+        "linha-dura",
+        "abertura",
+        "precedente-historico",
+        "caserna-poder",
+        "t-273"
+      ],
+      "descricao": "Em 12/10/1977 o presidente Ernesto Geisel exonera o ministro do Exército, general Sylvio Frota, que articulava a própria candidatura à sucessão e se opunha à abertura 'lenta, gradual e segura'. Geisel neutraliza a reação ao convocar os comandantes de área a Brasília antes do anúncio. Caso de contenção da caserna a partir de dentro do próprio regime.",
+      "pessoas_envolvidas": [
+        "Ernesto Geisel",
+        "Sylvio Frota",
+        "Hugo Abreu"
+      ],
+      "instituicoes_envolvidas": [
+        "Presidência da República",
+        "Ministério do Exército"
+      ],
+      "pais": "Brasil",
+      "escopo": "precedente-historico-pre-1990",
+      "evidence_status": "ev-confirmed",
+      "tipo_evento_caserna": "recusa",
+      "meta": {
+        "observacao": "Referência histórica para id_1976 (recusa de 2022): contenção vinda da hierarquia, não de controle civil.",
+        "padrao_paralelo_sugerido": "PM — Tutela Moderadora (candidato, T-273)",
+        "entradas_relacionadas": [
+          "PREC-1969-31",
+          "PREC-1981-33"
+        ],
+        "serie": "T-273 Ciclos do Brasil — Caserna e Poder"
+      },
+      "fontes_verificadas": [
+        {
+          "url": "https://cpdoc.fgv.br",
+          "titulo": "CPDOC/FGV — Dicionário Histórico-Biográfico Brasileiro (verbete a vincular)"
+        }
+      ],
+      "revisao_humana_necessaria": true,
+      "status_publicacao": "sidecar-pendente-revisao"
+    },
+    {
+      "id": "PREC-1981-33",
+      "titulo": "Bomba explode no colo de militares do DOI no Riocentro durante show do 1º de Maio",
+      "data_evento": "1981-04-30",
+      "data_iso": "1981-04-30T00:00:00.000Z",
+      "categoria": "captura-institucional",
+      "tags": [
+        "riocentro",
+        "doi-codi",
+        "ipm",
+        "terrorismo-de-estado",
+        "precedente-historico",
+        "caserna-poder",
+        "t-273"
+      ],
+      "descricao": "Na noite de 30/04/1981, durante show comemorativo do Dia do Trabalhador no Riocentro (Rio de Janeiro), uma bomba explode dentro de um Puma ocupado pelo sargento Guilherme Pereira do Rosário, que morre, e pelo capitão Wilson Machado, ferido, ambos do DOI-CODI do I Exército. O Inquérito Policial Militar concluiu que os dois foram vítimas e foi arquivado. O relatório final da Comissão Nacional da Verdade (2014) atribuiu o atentado a agentes do Estado.",
+      "pessoas_envolvidas": [
+        "Guilherme Pereira do Rosário",
+        "Wilson Machado"
+      ],
+      "instituicoes_envolvidas": [
+        "DOI-CODI",
+        "I Exército",
+        "Comissão Nacional da Verdade"
+      ],
+      "pais": "Brasil",
+      "escopo": "precedente-historico-pre-1990",
+      "evidence_status": "ev-confirmed",
+      "tipo_evento_caserna": "tentativa",
+      "meta": {
+        "observacao": "Investigação conduzida pela própria Força concluiu pela vitimização dos autores: precedente de autoinvestigação corporativa.",
+        "padrao_paralelo_sugerido": "PM — Tutela Moderadora (candidato, T-273)",
+        "entradas_relacionadas": [
+          "PREC-1977-32"
+        ],
+        "serie": "T-273 Ciclos do Brasil — Caserna e Poder"
+      },
+      "fontes_verificadas": [
+        {
+          "url": "http://cnv.memoriasreveladas.gov.br",
+          "titulo": "Comissão Nacional da Verdade — Relatório Final (2014)"
+        },
+        {
+          "url": "https://cpdoc.fgv.br",
+          "titulo": "CPDOC/FGV — Dicionário Histórico-Biográfico Brasileiro (verbete a vincular)"
+        }
+      ],
+      "revisao_humana_necessaria": true,
+      "status_publicacao": "sidecar-pendente-revisao"
+    },
+    {
+      "id": "PREC-1988-34",
+      "titulo": "Constituição de 1988 mantém no art. 142 as Forças Armadas como garantes dos poderes constitucionais e da lei e da ordem",
+      "data_evento": "1988-10-05",
+      "data_iso": "1988-10-05T00:00:00.000Z",
+      "categoria": "captura-institucional",
+      "tags": [
+        "constituinte",
+        "art-142",
+        "garantia-da-lei-e-da-ordem",
+        "poder-moderador",
+        "precedente-historico",
+        "caserna-poder",
+        "t-273"
+      ],
+      "descricao": "A Constituição promulgada em 05/10/1988 define, no art. 142, que as Forças Armadas 'destinam-se à defesa da Pátria, à garantia dos poderes constitucionais e, por iniciativa de qualquer destes, da lei e da ordem'. A redação foi negociada na Constituinte com os ministros militares do governo Sarney, que resistiram à supressão da função interna. A fórmula foi invocada entre 2020 e 2022 como suposto 'poder moderador' militar, tese rejeitada por unanimidade pelo STF em 2024 (id_1975).",
+      "pessoas_envolvidas": [
+        "José Sarney",
+        "Leônidas Pires Gonçalves"
+      ],
+      "instituicoes_envolvidas": [
+        "Assembleia Nacional Constituinte",
+        "Ministérios Militares"
+      ],
+      "pais": "Brasil",
+      "escopo": "precedente-historico-pre-1990",
+      "evidence_status": "ev-contested",
+      "tipo_evento_caserna": "tutela",
+      "meta": {
+        "observacao": "Texto: ev-confirmed. Grau de influência dos ministros militares na redação: ev-contested (Carvalho 2005 e literatura da transição).",
+        "padrao_paralelo_sugerido": "PM — Tutela Moderadora (candidato, T-273)",
+        "entradas_relacionadas": [
+          "PREC-1889-15",
+          "id_1975"
+        ],
+        "serie": "T-273 Ciclos do Brasil — Caserna e Poder"
+      },
+      "fontes_verificadas": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+          "titulo": "Planalto — CF/1988, art. 142"
+        },
+        {
+          "url": "https://cpdoc.fgv.br",
+          "titulo": "CPDOC/FGV — Dicionário Histórico-Biográfico Brasileiro (verbete a vincular)"
+        }
+      ],
+      "revisao_humana_necessaria": true,
+      "status_publicacao": "sidecar-pendente-revisao"
     }
   ]
 }

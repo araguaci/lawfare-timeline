@@ -1,7 +1,6 @@
 ---
 layout: post
-title:  >
-  Julgamento do Marco Civil da Internet no STF: Entenda em 8 Pontos
+title: "Julgamento do Marco Civil da Internet no STF: Entenda em 8 Pontos"
 categories: stf
 article_id: id204
 tags: ['stf', 'censura', 'liberdade-de-expressao', 'eleicoes', 'abuso-de-autoridade', 'regulacao-das-redes-sociais']

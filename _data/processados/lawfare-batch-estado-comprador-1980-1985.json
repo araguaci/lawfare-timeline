@@ -1,0 +1,218 @@
+{
+  "_meta": {
+    "batch": "estado-comprador",
+    "titulo_serie": "Privatizaram para Estados. Estatizaram a conta.",
+    "range": [1980, 1985],
+    "thematic_index": "T-274",
+    "generated": "2026-10-10",
+    "destino": "_data/todo/",
+    "license": "CC0 1.0 Universal",
+    "origem_triagem": "Observatório de Ativos Públicos (observatorio-ativos-publicos.vercel.app) — usado como índice de fontes primárias; enquadramento editorial do site tratado como ev-alleged e não importado.",
+    "sobreposicao_verificada": "Ponte Salvador–Itaparica já coberta em id_1719, id_1722 (nota de simetria TIR 13%→10,88%), id_1723, id_1725 — não duplicada aqui, apenas conectada. State Grid/CEEE-T em id_1763. CNPC/Chevron Foz do Amazonas em id_1759.",
+    "regra_dos_tres_elos": "Cada entrada responde: (1) quem recebe a renda; (2) qual Estado controla o recebedor; (3) quem paga. Entrada que não fecha os três elos é marcada como contraexemplo, não forçada no enquadramento."
+  },
+  "assuntos": [
+    {
+      "id": 1980,
+      "date": "2025-06-04",
+      "date_precision": "day",
+      "title": "TCU aprova solução consensual do Galeão (Acórdão 1.260/2025): saída da Infraero, fim da obrigação da terceira pista e outorga variável",
+      "summary": "Por meio do Acórdão 1.260/2025-TCU-Plenário (TC 007.309/2024-4), o TCU aprovou a proposta de solução consensual construída na Comissão de Solução Consensual (SecexConsenso) instalada em 14/08/2024 a pedido do Ministério de Portos e Aeroportos. O termo de autocomposição prevê: exclusão do gatilho de investimento da terceira pista; saída da Infraero, que detinha 49% da concessionária RIOgaleão; substituição das outorgas fixas por contribuição variável; e submissão do contrato repactuado a um processo competitivo de 'venda assistida' da totalidade das ações. A concessão original (2013/2014) havia sido arrematada pelo consórcio Changi/Odebrecht com oferta de R$ 19 bilhões; a qualificação para relicitação ocorreu pelo Decreto 11.171/2022. Galeão estreou o modelo de troca de controle por solução consensual no setor aeroportuário; a tentativa equivalente em Viracopos não chegou a acordo.",
+      "category": "mecanismo_sistemico",
+      "actors": [
+        { "name": "Augusto Nardes", "role": "Relator do processo de relicitação do Galeão no TCU", "institution": "TCU" },
+        { "name": "Silvio Costa Filho", "role": "Ministro de Portos e Aeroportos — poder concedente que solicitou a solução consensual", "institution": "Ministério de Portos e Aeroportos" }
+      ],
+      "institutions": ["TCU", "SecexConsenso/TCU", "ANAC", "Ministério de Portos e Aeroportos", "Infraero", "AGU", "Concessionária Aeroporto Rio de Janeiro S.A. (RIOgaleão)"],
+      "legal_basis": [
+        "Lei 13.448/2017 — relicitação de contratos de parceria",
+        "Decreto 11.171/2022 — qualificação do Galeão para relicitação",
+        "Acórdão 1.593/2023-TCU-Plenário — possibilidade de solução consensual em relicitação",
+        "Acórdão 1.260/2025-TCU-Plenário — aprovação do termo de autocomposição"
+      ],
+      "patterns": ["P10", "P11", "P06"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        { "title": "Relatório de Diretoria ANAC — Processo 00058.078972/2025-19 (cita Acórdão 1.260/2025)", "url": "https://www.gov.br/anac/pt-br/acesso-a-informacao/institucional/reunioes-da-diretoria/reunioes-deliberativas/2025/arquivos-12a-redir-del/1-relatorio-de-diretoria.pdf", "outlet": "ANAC", "date": "2025-09-18" },
+        { "title": "Nota Técnica nº 30/2025/SRA — Consulta Pública 11/2025, venda assistida do Galeão", "url": "https://www.gov.br/anac/pt-br/acesso-a-informacao/participacao-social/consultas-publicas/consultas/2025/cp-11-2025/cp-11-2025-nota-tecnica.pdf", "outlet": "ANAC", "date": "2025-09-19" },
+        { "title": "TCU aprova acordo de solução consensual do Aeroporto do Galeão", "url": "https://agenciainfra.com/blog/?p=22486", "outlet": "Agência iNFRA", "date": "2025-06-04" },
+        { "title": "Acompanhamento TC 014.498/2023-5 — relicitação do Galeão (cronologia)", "url": "https://static.poder360.com.br/2025/10/014.498-2023-5-AN-ACOM_relicitacao_Galeao.pdf", "outlet": "TCU via Poder360", "date": "2025-10-01" }
+      ],
+      "result": "Contrato repactuado submetido à venda assistida; leilão realizado em 30/03/2026 (ver id_1981). Infraero programada para sair da concessão; obrigação da terceira pista extinta; outorga passa a 20% da receita bruta até 2039.",
+      "connections": ["id_1981", "id_1982"],
+      "status": "confirmado",
+      "lacuna_investigativa": "(1) Valor econômico da obrigação de investimento extinta (terceira pista) não quantificado publicamente nas fontes localizadas — quanto o concessionário deixou de investir e quem absorve esse custo. (2) Saldo final entre a União e a RIOgaleão relativo às outorgas fixas não pagas no contrato de 2014 (R$ 19 bi ofertados). (3) A restrição de voos no Santos Dumont, imposta para redirecionar demanda ao Galeão, gera compensação à União segundo o acordo — valor e prazo não localizados. (4) Composição do bloco privado de 51% no momento do acordo: fontes divergem entre Changi, 'Vinci Compass' (gestora brasileira) e 'grupo francês Vinci'; não resolvido.",
+      "ponto_de_inflexao": "A repactuação ocorre fora de licitação nova e fora do Judiciário: o mecanismo de controle externo (TCU) passa a atuar como mesa de negociação do contrato que fiscaliza. A partir daqui, o custo do fracasso da concessão de 2014 deixa de ser cobrado e passa a ser reprecificado.",
+      "analise": "ev-inference: a SecexConsenso converte o TCU de órgão de controle em co-autor da reestruturação contratual. O desenho é tecnicamente defensável (evita litígio e relicitação demorada) e foi validado pelo mercado no leilão. Mas a mesma solução que elimina obrigação de investimento e encerra a participação estatal brasileira (Infraero) é a que abre caminho para o controle integral por um operador de capital estatal estrangeiro (id_1981). Padrão P10: a infraestrutura de 'solução consensual' é neutra quanto ao beneficiário e serve igualmente a qualquer arranjo. P11: o fracasso de uma concessão de 2014 (ágio de quase 300%) é absorvido pela União via perda de outorga fixa e dispensa de investimento, enquanto o novo controlador entra com obrigação reduzida. A continuidade transgovernamental é documental: qualificação em 2022, solicitação em 2024, acórdão em 2025, leilão em 2026."
+    },
+    {
+      "id": 1981,
+      "date": "2026-03-30",
+      "date_precision": "day",
+      "title": "Aena, controlada pelo Estado espanhol (51% via ENAIRE), vence venda assistida de 100% da concessionária do Galeão por R$ 2,9 bi; Infraero deixa a concessão",
+      "summary": "Em leilão na B3 em 30/03/2026, a Aena, por meio da subsidiária Aena Desarrollo Internacional, venceu a venda assistida de 100% das ações da concessionária do Aeroporto Internacional do Galeão com oferta de R$ 2,9 bilhões, ágio de 210,88% sobre o mínimo de R$ 932 milhões. Na etapa de propostas escritas, Zurich Airport e Aena haviam ofertado R$ 1,5 bilhão cada; a RIOgaleão também participou. A Aena é controlada pelo Estado espanhol, que detém 51% do capital por meio da entidade pública ENAIRE. O contrato repactuado prevê contribuição variável de 20% da receita bruta até 2039 e dispensa a terceira pista. A ANAC adjudicou o resultado em 04/05/2026 (Decisão nº 745/2026). Em 06/10/2026, a Aena assinou o contrato de compra e venda de ações e assumiu a gestão; a Infraero, que detinha 49%, saiu do empreendimento. Com o Galeão, a Aena passa a operar 18 aeroportos no Brasil, incluindo Congonhas.",
+      "category": "mecanismo_sistemico",
+      "actors": [
+        { "name": "Maurici Lucena", "role": "Presidente e CEO da Aena", "institution": "Aena S.M.E., S.A." },
+        { "name": "Silvio Costa Filho", "role": "Ministro de Portos e Aeroportos no leilão", "institution": "Ministério de Portos e Aeroportos" },
+        { "name": "Emilio Rotondo", "role": "Diretor-geral da Aena Internacional", "institution": "Aena" }
+      ],
+      "institutions": ["Aena", "ENAIRE (Espanha)", "ANAC", "Ministério de Portos e Aeroportos", "Infraero", "B3", "Zurich Airport", "RIOgaleão"],
+      "legal_basis": [
+        "Acórdão 1.260/2025-TCU-Plenário — solução consensual que originou a venda assistida",
+        "Edital de Leilão nº 01/2025-ANAC — procedimento de venda assistida",
+        "Decisão ANAC nº 745/2026 — adjudicação do resultado"
+      ],
+      "patterns": ["P10", "P11"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        { "title": "Aena has been awarded the concession for Galeão International Airport (nota oficial)", "url": "https://www.aena.es/doc/pressdetail/260330-enaena--aeropuerto-internacional-de-galeao.pdf", "outlet": "Aena", "date": "2026-03-30" },
+        { "title": "Aena vence concessão do Aeroporto do Galeão por R$ 2,9 bi de outorga", "url": "https://agenciainfra.com/blog/aena-vence-concessao-do-aeroporto-do-galeao-por-r-29-bi-de-outorga/", "outlet": "Agência iNFRA", "date": "2026-03-30" },
+        { "title": "Aena reitera que la gestión de los aeropuertos es exclusivamente suya (Estado controla 51% via Enaire)", "url": "https://es.ara.cat/economia/aena-reitera-gestion-aeropuertos-exclusivamente_1_5709188.html", "outlet": "Ara", "date": "2026-04-16" },
+        { "title": "Aena vence Zurich e assume operações do Galeão até 2039 (fechamento 06/10)", "url": "https://www.correiodamanha.com.br/estado-do-rio/2026/10/325455-aena-vence-zurich-e-assume-operacoes-do-galeao-ate-2039.html", "outlet": "Correio da Manhã", "date": "2026-10-06" },
+        { "title": "Aena assume Galeão após operação de R$ 2,9 bilhões", "url": "https://timesbrasil.com.br/empresas-e-negocios/aviacao/aena-assume-galeao-apos-operacao-de-r-29-bilhoes/", "outlet": "Times Brasil / CNBC", "date": "2026-10-06" },
+        { "title": "Aena assume gestão do Aeroporto Internacional do Galeão", "url": "https://mercadoeconsumo.com.br/06/10/2026/economia/aena-assume-gestao-do-aeroporto-internacional-do-galeao/", "outlet": "Mercado & Consumo (Estadão Conteúdo)", "date": "2026-10-06" }
+      ],
+      "result": "Controle integral da concessionária do terceiro maior aeroporto do país passa a operador controlado pelo Estado espanhol, com prazo até 2039. Participação estatal brasileira (Infraero, 49%) encerrada. União passa a receber 20% da receita bruta em vez de outorgas fixas.",
+      "connections": ["id_1980", "id_1982"],
+      "status": "confirmado",
+      "lacuna_investigativa": "(1) Fechamento de 06/10/2026 confirmado por três veículos independentes, mas sem documento primário localizado (ANAC ou comunicado regulatório da Aena à CNMV) — completar antes de publicação final. (2) Quanto a Infraero recebeu, se recebeu, pela saída de seus 49% — o lance de R$ 2,9 bi remunera as ações; a divisão entre acionistas privados e Infraero não foi localizada. (3) Ambos os finalistas (Aena e Zurich) têm ente público como acionista de referência; nenhum consórcio sem controle estatal estrangeiro chegou à fase final — registrar como dado, não como conclusão. (4) Concentração: Aena opera Congonhas e Galeão; avaliação do CADE sobre o eixo Rio–São Paulo não localizada.",
+      "ponto_de_inflexao": "06/10/2026: a saída da Infraero zera a participação do Estado brasileiro no ativo no mesmo ato em que um Estado estrangeiro passa a controlar 100% dele.",
+      "analise": "ev-inference: a operação é apresentada como privatização/concessão, mas a cadeia de controle termina em um Tesouro: o espanhol, via ENAIRE (51%). A Aena distribui historicamente parcela elevada do lucro em dividendos, dos quais a maior fatia vai ao Estado espanhol. Os três elos fecham: (1) renda — tarifas aeroportuárias e receitas comerciais do Galeão até 2039; (2) Estado controlador do recebedor — Espanha; (3) quem paga — passageiros e companhias aéreas que operam no Galeão, e a União, que trocou outorga fixa (R$ 19 bi ofertados em 2013) por 20% da receita. Nota de simetria obrigatória: o ágio de 210,88% indica disputa real e preço acima do mínimo; o modelo de venda assistida foi validado pelo mercado. A questão estrutural não é o preço do leilão, mas a natureza do comprador: 'desestatização' que transfere controle de Estado para Estado."
+    },
+    {
+      "id": 1982,
+      "date": "2023-05-19",
+      "date_precision": "day",
+      "title": "Zurich Airport, com o Cantão de Zurique como acionista de referência (33,33% + 1 ação), vence a primeira relicitação do país (Aeroporto de Natal); União paga a diferença da indenização à Inframérica",
+      "summary": "A Zurich Airport venceu em 19/05/2023, na B3, a relicitação do Aeroporto de São Gonçalo do Amarante (ASGA/Natal) com oferta de R$ 320 milhões e contrato de 30 anos — a primeira relicitação de ativo de infraestrutura concedido no país, sob a Lei 13.448/2017. A Inframérica havia pedido a devolução amigável em 2020 (Decreto 10.472/2020). A ANAC fixou a indenização por bens reversíveis não amortizados em R$ 554,55 milhões; como o valor supera a outorga, o contrato prevê que a União quite a diferença antes que a Zurich pague sua oferta diretamente à concessionária de saída. Em dezembro de 2023 a parcela da União, estimada em R$ 219,9 milhões, ainda não havia sido paga por falta de orçamento; o pagamento foi depois realizado (R$ 199,7 milhões, segundo o setor) e a Zurich assumiu a operação em 19/02/2024. A Flughafen Zürich AG tem o Cantão de Zurique como acionista com um terço mais uma ação, mínimo fixado em lei cantonal, e a cidade de Zurique com 5%.",
+      "category": "mecanismo_sistemico",
+      "actors": [
+        { "name": "Márcio França", "role": "Ministro de Portos e Aeroportos no leilão de 2023", "institution": "Ministério de Portos e Aeroportos" },
+        { "name": "Tiago Pereira", "role": "Diretor relator da indenização na ANAC", "institution": "ANAC" }
+      ],
+      "institutions": ["ANAC", "Ministério de Portos e Aeroportos", "Zurich Airport / Flughafen Zürich AG", "Cantão de Zurique", "Inframérica", "B3", "TCU"],
+      "legal_basis": [
+        "Lei 13.448/2017 — relicitação",
+        "Decreto 9.957/2019 — regulamenta a relicitação",
+        "Decreto 10.472/2020 — qualificação do ASGA para relicitação",
+        "Acórdão 8/2023-TCU-Plenário — relicitação do ASGA",
+        "Flughafengesetz do Cantão de Zurique, § 8 — participação mínima de um terço"
+      ],
+      "patterns": ["P05", "P11"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        { "title": "Assinado novo contrato do Aeroporto de São Gonçalo do Amarante, o ASGA", "url": "https://agenciagov.ebc.com.br/noticias/202309/assinado-novo-contrato-do-aeroporto-de-sao-goncalo-do-amarante-o-asga", "outlet": "Agência Gov / ANAC", "date": "2023-09-12" },
+        { "title": "ANAC define indenização do ASGA em R$ 554,55 mi", "url": "https://agenciainfra.com/blog/?p=12857", "outlet": "Agência iNFRA", "date": "2023-06-14" },
+        { "title": "Sem orçamento de R$ 219 milhões, governo não paga indenização, e primeira relicitação ainda segue inconclusa", "url": "https://agenciainfra.com/blog/sem-orcamento-de-r-219-milhoes-governo-nao-paga-indenizacao-e-primeira-relicitacao-ainda-segue-inconclusa/", "outlet": "Agência iNFRA", "date": "2023-12-02" },
+        { "title": "Beteiligung am Flughafen — Kanton hält 33 Prozent plus eine Aktie", "url": "https://www.zh.ch/de/mobilitaet/luftverkehr/flughafenpolitik/beteiligung-am-flughafen.html", "outlet": "Kanton Zürich", "date": "2026-01-01" },
+        { "title": "Flughafen Zürich hebt Dividende kräftig an — Kanton und Stadt profitieren", "url": "https://www.cash.ch/news/flughafen-zurich-hebt-dividende-kraftig-an-kanton-und-stadt-zurich-profitieren-916801", "outlet": "cash.ch", "date": "2026-03-01" }
+      ],
+      "result": "Concessão de 30 anos transferida a operador com ente público suíço como acionista de referência. A União pagou a parcela da indenização não coberta pela outorga, convertendo o fracasso da concessão de 2011 em despesa orçamentária.",
+      "connections": ["id_1980", "id_1981"],
+      "status": "confirmado",
+      "lacuna_investigativa": "(1) Registro contraditório da disputa: o MPor/setor reportam ágio de 41% sobre mínimo de R$ 226,9 mi e segundo lance da NK 230 Empreendimentos e Participações de R$ 320.000.011,00 — um real abaixo do vencedor (R$ 320.000.012,00); a Agência iNFRA reportou proponente única no valor mínimo. Divergência não resolvida; quem controla a NK 230 não foi identificado. (2) Valor final pago pela União: fontes citam R$ 199,7 mi e R$ 219,9 mi — confirmar no SIAFI/ANAC. (3) Ministro sugeriu compensar a indenização com outorga devida pela mesma Inframérica no Aeroporto de Brasília — verificar se o abatimento ocorreu e seus efeitos na repactuação de Brasília (leilão previsto 17/12/2026).",
+      "ponto_de_inflexao": "Dez/2023: a relicitação trava por falta de orçamento da União para indenizar a concessionária que devolveu o ativo — o custo da devolução é público e precede a entrada do novo operador.",
+      "analise": "ev-inference: o caso fecha os três elos em forma mais branda que o Galeão — o acionista público suíço é de referência (um terço), não majoritário, e a Zurich é listada em bolsa. Ainda assim, a lei cantonal obriga a manutenção desse terço e o Cantão indica conselheiros: há um ente estatal estrangeiro com poder de bloqueio na cadeia de controle. A parte mais relevante para P11 é a ordem dos pagamentos: a União paga primeiro (indenização acima da outorga), o operador estrangeiro paga depois e ao concessionário que saiu. O fracasso da concessão de 2011 é socializado; o novo contrato começa limpo. Mesmo padrão estrutural da relicitação/venda assistida do Galeão (id_1980), três anos antes, em outro governo do mesmo ciclo do PPI."
+    },
+    {
+      "id": 1983,
+      "date": "2023-12-15",
+      "date_precision": "day",
+      "title": "State Grid, estatal chinesa sob a SASAC, vence o Lote 1 do Leilão de Transmissão 2/2023 (bipolo Graça Aranha–Silvânia, ~R$ 18,1 bi) com RAP de R$ 1,94 bi/ano por 30 anos; financiamento articulado com o Banco do BRICS",
+      "summary": "No Leilão de Transmissão nº 2/2023 da ANEEL, realizado na B3 em 15/12/2023, a State Grid Brazil Holding, subsidiária da State Grid Corporation of China, arrematou o Lote 1 com Receita Anual Permitida (RAP) de R$ 1.936.529.074,68, deságio de 39,90% sobre o teto de R$ 3.222.178.160,86. O lote inclui a linha de ±800 kV em corrente contínua Graça Aranha (MA)–Silvânia (GO), com cerca de 1.468 km, as conversoras das duas subestações e trechos de 500 kV, com investimento estimado em R$ 18,1 bilhões (83% do total do leilão). A ANEEL homologou o resultado em 30/01/2024; o contrato nº 01/2024-ANEEL foi assinado em 03/04/2024, com prazo de 72 meses para conclusão. A State Grid Corporation of China é empresa central estatal supervisionada pela SASAC do Conselho de Estado chinês. Em 03/07/2025 a State Grid Brazil Holding assinou memorando de entendimento com o Novo Banco de Desenvolvimento (NDB/BRICS), presidido por Dilma Rousseff, para financiar o projeto (GATE), após articulação do ministro Alexandre Silveira.",
+      "category": "mecanismo_sistemico",
+      "actors": [
+        { "name": "Sun Tao", "role": "Chairman da State Grid Brazil Holding", "institution": "State Grid Brazil Holding" },
+        { "name": "Alexandre Silveira", "role": "Ministro de Minas e Energia — assinatura dos contratos e articulação com o NDB", "institution": "MME" },
+        { "name": "Dilma Rousseff", "role": "Presidente do NDB na assinatura do memorando de financiamento", "institution": "Novo Banco de Desenvolvimento (NDB)" },
+        { "name": "Sandoval Feitosa", "role": "Diretor-geral da ANEEL no leilão", "institution": "ANEEL" }
+      ],
+      "institutions": ["ANEEL", "MME", "State Grid Brazil Holding", "State Grid Corporation of China", "SASAC (China)", "NDB/BRICS", "B3", "TCU", "EPE"],
+      "legal_basis": [
+        "Edital do Leilão nº 2/2023-ANEEL",
+        "Acórdão 2.348/2023-TCU-Plenário — Leilão de Transmissão nº 2/2023",
+        "Contrato de Concessão nº 01/2024-ANEEL — Graça Aranha Silvânia Transmissora de Energia S.A."
+      ],
+      "patterns": ["P10", "P11"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        { "title": "ANEEL homologa resultado dos três lotes do Leilão de Transmissão 2/2023", "url": "https://www.osetoreletrico.com.br/?p=159352", "outlet": "O Setor Elétrico (reproduz ANEEL)", "date": "2024-01-30" },
+        { "title": "State Grid wins Ultra-High Voltage Transmission System at Aneel Auction", "url": "https://stategrid.com.br/en/state-grid-arremata-sistema-de-transmissao-de-ultra-alta-tensao-no-leilao-da-aneel/", "outlet": "State Grid Brazil Holding", "date": "2023-12-15" },
+        { "title": "State Grid Brazil Holding e New Development Bank assinam memorando de entendimento", "url": "https://stategrid.com.br/en/state-grid-brazil-holding-e-new-development-bank-assinam-memorando-de-entendimento/", "outlet": "State Grid Brazil Holding", "date": "2025-07-03" },
+        { "title": "Governo busca apoio do banco do Brics para megaprojeto energético", "url": "https://www.poder360.com.br/poder-economia/governo-busca-apoio-do-banco-do-brics-para-megaprojeto-energetico/", "outlet": "Poder360", "date": "2025-05-07" },
+        { "title": "State Grid Corporation of China — corporate profile (SASAC)", "url": "https://govt.chinadaily.com.cn/a/201904/19/WS5cb995b0498e079e6801e9b8.html", "outlet": "China Daily — Directory of Central SOEs", "date": "2019-04-19" }
+      ],
+      "result": "Maior concessão de transmissão já licitada no país sob controle de estatal chinesa por 30 anos, com receita garantida de R$ 1,94 bi/ano paga via tarifa pelos consumidores do SIN. Financiamento em estruturação com banco multilateral do qual o Brasil é membro fundador.",
+      "connections": ["id_1763", "id_1980"],
+      "status": "confirmado",
+      "lacuna_investigativa": "(1) Valor, prazo e condições do financiamento do NDB efetivamente contratado — o memorando de 2025 e a menção de 'projeto aprovado' em jan/2026 não trazem números públicos localizados. (2) Participação do Brasil no capital do NDB e, portanto, fração do risco de crédito do projeto que recai sobre o Estado brasileiro. (3) Por que a Eletrobras, cobrada publicamente pelo ministro na véspera, não disputou o lote. (4) Remessas de dividendos da State Grid Brazil Holding à matriz chinesa — demonstrações financeiras 2024–2025 listadas pelo Observatório; não lidas nesta sessão.",
+      "ponto_de_inflexao": "",
+      "analise": "ev-inference: os três elos fecham com nitidez: (1) renda — RAP de R$ 1,94 bi/ano por 30 anos, receita regulada e indexada, de risco de demanda praticamente nulo; (2) Estado controlador — República Popular da China via SASAC; (3) quem paga — o consumidor de energia elétrica, via encargo tarifário de transmissão. Camada adicional: o financiamento é articulado por ministro brasileiro junto a um banco multilateral presidido por ex-presidente brasileira, para uma estatal estrangeira. Nota de simetria obrigatória: o deságio de 39,90% é real e reduz a conta do consumidor frente ao teto; o leilão foi competitivo no sentido regulatório. A questão não é sobrepreço, é a natureza do titular: infraestrutura crítica de interligação Nordeste–Centro-Sul passa a ter como controlador final um Estado estrangeiro, com o crédito parcialmente intermediado por instituição em que o Estado brasileiro é sócio. Conecta com id_1763 (State Grid/CPFL na CEEE-T, governo Leite/PSDB, 2021): mesma estatal, governos de campos opostos — continuidade transgovernamental documentada."
+    },
+    {
+      "id": 1984,
+      "date": "2026-10-07",
+      "date_precision": "day",
+      "title": "4º Ciclo da Oferta Permanente de Partilha: 7 blocos do pré-sal arrematados, todos com oferta única; Jade fica 100% com estatais chinesas (CNOOC/Sinopec) e Rubi 100% com a Equinor (67% Estado norueguês)",
+      "summary": "No 4º Ciclo da Oferta Permanente de Partilha da ANP, realizado em 07/10/2026 no Rio de Janeiro, 7 dos 13 blocos ofertados foram arrematados, com R$ 530,47 milhões em bônus de assinatura (fixado em edital) e R$ 778,43 milhões em investimentos mínimos na fase exploratória. A variável disputada é o percentual de excedente em óleo destinado à União. Resultados: Magnetita (Prio, 32,80%), Hematita (Prio, 7,18%), Azurita (Petrobras 100%, 30,00%), Cruzeiro do Sul (Petrobras 100%, 15,27%), Rubi (Equinor, 25,02%), Jade (CNOOC 70% / Sinopec 30%, 18,20%) e Rodocrosita (Equinor 70% / Galp 30%, 15,52%). Cada bloco recebeu uma única oferta. A Equinor tem o Estado norueguês como acionista de 67%; CNOOC e Sinopec são empresas estatais chinesas. Adjudicação prevista até 18/11/2026 e assinatura dos contratos até 26/02/2027.",
+      "category": "mecanismo_sistemico",
+      "actors": [
+        { "name": "Fernando Moura", "role": "Diretor da ANP relator do ciclo de partilha", "institution": "ANP" }
+      ],
+      "institutions": ["ANP", "PPSA", "CNPE", "Petrobras", "Prio", "Equinor", "CNOOC", "Sinopec", "Galp"],
+      "legal_basis": [
+        "Lei 12.351/2010 — regime de partilha de produção",
+        "Resolução CNPE nº 7/2024 — Rubi e Granada",
+        "Resolução CNPE nº 3/2025 — Hematita, Magnetita e outros",
+        "Edital da Oferta Permanente de Partilha — versão 02.02 (ANP, abr/2026)"
+      ],
+      "patterns": ["P11"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        { "title": "ANP arremata sete blocos do Pré-Sal e registra maior número de áreas vendidas na OPP", "url": "https://cenarioenergia.com.br/2026/10/07/anp-arremata-sete-blocos-do-pre-sal-e-registra-maior-numero-de-areas-vendidas-na-opp/", "outlet": "Cenário Energia (reproduz ANP)", "date": "2026-10-07" },
+        { "title": "4º ciclo da OPP: resultados consolidados", "url": "https://eixos.com.br/?p=541063", "outlet": "eixos", "date": "2026-10-07" },
+        { "title": "Maior leilão do pré-sal termina com sete dos 13 blocos arrematados", "url": "https://www.dgabc.com.br/Noticia/4351453/maior-leilao-do-pre-sal-termina-com-sete-dos-13-blocos-arrematados", "outlet": "Agência Brasil via DGABC", "date": "2026-10-07" },
+        { "title": "Petrobras registra bônus de R$ 3,2 bi em leilões da ANP (fato relevante)", "url": "https://visnoinvest.com.br/news/15608/petrobras-petr4-registra-bonus-de-r-32-bi-em-leiloes-da-anp", "outlet": "Visno Invest (reproduz comunicado Petrobras)", "date": "2026-10-08" },
+        { "title": "Equinor — Our shareholders (Estado norueguês 67%)", "url": "https://www.equinor.com/en/investors/our-shareholders.html", "outlet": "Equinor", "date": "2026-06-30" }
+      ],
+      "result": "Dois blocos do pré-sal passam integralmente a grupos controlados por Estados estrangeiros (Jade: China; Rubi: Noruega) e um terceiro majoritariamente (Rodocrosita: 70% Equinor). A União retém, por contrato, de 15,52% a 25,02% do excedente em óleo nesses três blocos. Contratos ainda não assinados.",
+      "connections": ["id_1759", "id_1762", "id_1983"],
+      "status": "em_andamento",
+      "lacuna_investigativa": "(1) Nenhum dos 7 blocos teve disputa; o 'ágio' (médio de 108,38%) é medido contra o mínimo de excedente fixado no edital, não contra um concorrente — avaliar se o mínimo foi calibrado abaixo do valor econômico. (2) Petrobras tinha direito de preferência para atuar como operadora com 30% nos blocos do polígono — se manifestou e renunciou em Jade e Rubi? Não localizado. (3) Documento primário da ANP (página de resultados do ciclo) citado pelos veículos mas não lido diretamente nesta sessão — anexar antes da publicação. (4) Classificação do Observatório ('três blocos 100% grupos estrangeiros') inclui Rodocrosita, cuja fatia de 30% é da Galp (privada, com acionista estatal português minoritário — verificar) — a afirmação correta é 'dois blocos 100% sob controle estatal estrangeiro; um majoritariamente'.",
+      "ponto_de_inflexao": "",
+      "analise": "ev-inference: este é o caso em que a frase-tese precisa de mais cuidado. No regime de partilha, o Estado brasileiro não sai: a União fica com parcela do excedente em óleo, a PPSA participa da gestão dos consórcios e a Petrobras — controlada pela União — levou dois blocos com 100%. Logo, 'para o Estado tudo' aqui é literal nos dois lados: o Estado brasileiro recebe óleo-lucro; Estados estrangeiros (China, Noruega) recebem o restante da produção e o direito de operar. O cidadão aparece na conta de forma indireta — pelo custo em óleo reembolsado antes da divisão do excedente. O dado mais relevante para o corpus não é a nacionalidade, é a ausência total de competição: sete blocos, sete ofertas únicas. P11 opera aqui como precificação sem mercado."
+    },
+    {
+      "id": 1985,
+      "date": "2024-12-18",
+      "date_precision": "day",
+      "title": "ITG02 (Porto de Itaguaí): Cedro Participações, de capital privado nacional, é proponente única e vence com outorga de R$ 1 milhão para terminal com CAPEX de R$ 3,58 bi — contraexemplo no enquadramento 'Estado comprador'",
+      "summary": "Em leilão na B3 em 18/12/2024, a Cedro Participações S.A., mineradora de Minas Gerais presidida no conselho por Lucas Kallas, foi a única participante do arrendamento do terminal ITG02 ('Área do Meio') no Porto de Itaguaí (RJ) e venceu com outorga de R$ 1 milhão. O terminal tem cerca de 250 mil m² e capacidade de 21,4 milhões de toneladas de minério de ferro por ano; o investimento previsto é de R$ 3,58 bilhões. O critério do edital era maior valor de outorga. O Ministério de Portos e Aeroportos classificou o certame como o maior leilão portuário da história pelo volume de investimento. O contrato foi assinado em 21/02/2025 em cerimônia com o presidente Lula. A Cedro se apresenta como mineradora de ferro 100% brasileira e de capital fechado.",
+      "category": "mecanismo_sistemico",
+      "actors": [
+        { "name": "Lucas Kallas", "role": "Presidente do conselho de administração da Cedro Participações", "institution": "Cedro Participações S.A." },
+        { "name": "Silvio Costa Filho", "role": "Ministro de Portos e Aeroportos no leilão e na assinatura", "institution": "Ministério de Portos e Aeroportos" }
+      ],
+      "institutions": ["ANTAQ", "Ministério de Portos e Aeroportos", "Cedro Participações S.A.", "B3"],
+      "legal_basis": [
+        "Lei 12.815/2013 — arrendamentos portuários",
+        "Resolução MPor nº 217/2025 — Cedro Participações S.A. e projeto ITG02"
+      ],
+      "patterns": ["P05"],
+      "evidence_status": "ev-confirmed",
+      "sources": [
+        { "title": "Cedro dá lance único e vence o maior leilão portuário do Brasil", "url": "https://www.poder360.com.br/poder-infra/cedro-vence-leilao-historico-de-terminal-no-porto-de-itaguai/", "outlet": "Poder360", "date": "2024-12-18" },
+        { "title": "Cedro vence leilão de terminal portuário de minério no RJ e pode ampliar concorrência no setor", "url": "https://agenciainfra.com/blog/?p=19707", "outlet": "Agência iNFRA", "date": "2024-12-19" },
+        { "title": "Cedro Participações leva principal lote no leilão do porto de Itaguaí", "url": "https://investnews.com.br/negocios/cedro-participacoes-vence-principal-lote-no-porto-de-itaguai-rj/amp/", "outlet": "InvestNews", "date": "2024-12-18" },
+        { "title": "Cedro assume concessão de terminal no Porto de Itaguaí", "url": "https://timesbrasil.com.br/brasil/cedro-concessao-terminal-porto-itaguai", "outlet": "Times Brasil / CNBC", "date": "2025-02-21" }
+      ],
+      "result": "Área portuária estratégica para exportação de minério arrendada por valor simbólico de outorga a grupo privado nacional, sem concorrência. Obrigação de investimento de R$ 3,58 bi permanece.",
+      "connections": ["id_1983"],
+      "status": "confirmado",
+      "lacuna_investigativa": "(1) Prazo do arrendamento divergente entre fontes (25 vs 35 anos) — conferir contrato. (2) Por que Vale e CSN, já operadoras em Itaguaí, e nenhum grupo estrangeiro apresentaram proposta. (3) Valor mínimo de outorga definido no edital e premissas do estudo de viabilidade que o sustentaram. (4) Estrutura societária completa da Cedro Participações e eventual financiamento público (FMM, BNDES) do CAPEX — o anúncio do contrato ocorreu junto a liberação de recursos do Fundo da Marinha Mercante.",
+      "ponto_de_inflexao": "",
+      "analise": "ev-inference: incluído deliberadamente como contraexemplo, conforme a regra dos três elos. O recebedor da renda é privado e nacional; não há Estado estrangeiro na cadeia. A frase-tese 'privatizaram para Estados' NÃO se aplica aqui, e forçá-la seria importar o enquadramento do próprio corpus como template (protocolo anti-confirmation-bias). O que se aplica é outra parte do padrão: ativo público de alto valor econômico cedido por R$ 1 milhão, em leilão sem competição, com o próprio ministro estimando R$ 25 bi de movimentação para o porto em 25 anos. Se o critério é 'maior outorga' e só há um proponente, o critério deixa de existir. O dado comum com id_1984 é a ausência de disputa — não a nacionalidade do comprador."
+    }
+  ]
+}

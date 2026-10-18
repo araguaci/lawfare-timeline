@@ -1,0 +1,33 @@
+{
+  "id": 274,
+  "tipo": "analise_estrutural",
+  "track": "thematic",
+  "date": "2026-10-10",
+  "data_registro": "2026-10-10",
+  "date_precision": "day",
+  "titulo": "Privatizaram para Estados, estatizaram a conta — o pipeline de desestatização transgovernamental e o beneficiário estatal estrangeiro",
+  "title": "Privatizaram para Estados, estatizaram a conta — o pipeline de desestatização transgovernamental e o beneficiário estatal estrangeiro (T-274)",
+  "slug": "estado-comprador-privatizaram-para-estados",
+  "summary": "Síntese temática de seis entradas novas (id_1980–id_1985) e quatro já existentes (id_1719, id_1722, id_1725, id_1763). Mapeia, para cada operação de concessão, relicitação ou venda de ativo público 2019–2026, três elos documentados: quem recebe a renda, qual Estado controla o recebedor e quem paga. Em quatro dos casos verificados o controlador final do recebedor é um Estado estrangeiro (Espanha via ENAIRE 51% no Galeão; China via SASAC na transmissão Graça Aranha–Silvânia e via CCCC/CR20 na Ponte Salvador–Itaparica; China via CNOOC/Sinopec e Noruega via Equinor 67% em blocos do pré-sal). Em um caso há ente público estrangeiro como acionista de referência (Cantão de Zurique, 33,33% + 1 ação, no Aeroporto de Natal). Em um caso (ITG02/Cedro) o recebedor é privado nacional — contraexemplo registrado. As operações atravessam governos: qualificações em 2019–2022, solicitação de soluções consensuais em 2024, acórdãos em 2023–2025, leilões e fechamentos em 2023–2026.",
+  "category": "analise_estrutural",
+  "padroes_ativados": ["P10", "P11", "P05", "P04b"],
+  "entries": ["id_1980", "id_1981", "id_1982", "id_1983", "id_1984", "id_1985"],
+  "connections": ["id_1719", "id_1722", "id_1723", "id_1725", "id_1759", "id_1762", "id_1763"],
+  "patterns": ["P10", "P11", "P05", "P04b"],
+  "evidence_status": "ev-inference",
+  "tabela_tres_elos": [
+    { "caso": "Galeão (id_1980–1981)", "renda": "Tarifas e receitas do aeroporto até 2039", "estado_controlador": "Espanha — ENAIRE 51% da Aena", "quem_paga": "Passageiros/companhias; União troca outorga fixa por 20% da receita; dispensa da 3ª pista", "simetria": "Ágio de 210,88% — disputa real" },
+    { "caso": "Natal/ASGA (id_1982)", "renda": "Concessão de 30 anos", "estado_controlador": "Cantão de Zurique 33,33%+1 (referência, não maioria)", "quem_paga": "União paga a diferença da indenização (R$ 554,55 mi > R$ 320 mi)", "simetria": "Controle estatal parcial; empresa listada" },
+    { "caso": "Graça Aranha–Silvânia (id_1983)", "renda": "RAP R$ 1,94 bi/ano × 30 anos", "estado_controlador": "China — State Grid sob SASAC", "quem_paga": "Consumidor de energia via tarifa de transmissão", "simetria": "Deságio de 39,90% sobre o teto" },
+    { "caso": "Ponte Salvador–Itaparica (id_1719, 1722, 1725)", "renda": "Pedágio e contraprestação até 2060", "estado_controlador": "China — CCCC / CR20", "quem_paga": "R$ 5,3 bi de aporte público (Bahia R$ 2,3 bi + União R$ 3 bi via Novo PAC) + usuário", "simetria": "TIR chinesa reduzida de 13% para 10,88% na renegociação" },
+    { "caso": "Pré-sal OPP-4 (id_1984)", "renda": "Óleo-custo + parcela do excedente", "estado_controlador": "China (Jade 100%); Noruega (Rubi 100%; Rodocrosita 70%)", "quem_paga": "Indireto — custo em óleo reembolsado antes da divisão", "simetria": "União retém 15,52%–25,02% do excedente; Petrobras levou 2 blocos" },
+    { "caso": "ITG02 Itaguaí (id_1985)", "renda": "Terminal de minério", "estado_controlador": "Nenhum — privado nacional", "quem_paga": "Outorga de R$ 1 mi sem concorrência", "simetria": "CONTRAEXEMPLO — tese de Estado estrangeiro não se aplica" }
+  ],
+  "lacuna_investigativa": "(1) Remessas de dividendos das subsidiárias brasileiras (State Grid Brazil Holding, Aena Brasil, Equinor Brasil) às matrizes estatais — demonstrações listadas pelo Observatório de Ativos Públicos, não lidas. (2) Fração do risco de crédito do NDB que recai sobre o Brasil como sócio fundador. (3) Ausência de competição em série: 7/7 blocos da OPP-4 e o ITG02 com oferta única — mínimo de edital calibrado como? (4) Fonte primária do fechamento do Galeão (06/10/2026). (5) Divergência sobre a composição privada da RIOgaleão (Changi / Vinci Compass / 'Vinci francês').",
+  "ponto_de_inflexao": "A saída da Infraero do Galeão em 06/10/2026 é o marco mais nítido: no mesmo ato, a participação do Estado brasileiro vai a zero e a de um Estado estrangeiro vai a 100%.",
+  "analise": "ev-inference: 'Desestatização' no Brasil 2019–2026 não é, em parte relevante, transferência do Estado para o mercado; é transferência de um Estado para outro, intermediada por leilão. Nem o enquadramento privatista (o mercado assume) nem o soberanista (o PT entrega / o bolsonarismo entrega) captura isso — cada vetor político usa a metade do pipeline executada pelo outro como munição, enquanto a infraestrutura técnica (PPI, ANAC, ANEEL, ANP, SecexConsenso/TCU) é a mesma (P10). O custo de transição é socializado — indenizações pagas pela União, aportes do Novo PAC, outorgas fixas convertidas em variáveis, obrigações de investimento extintas — e a renda de longo prazo flui para Tesouros externos (P11 com beneficiário extraterritorial). Notas de simetria obrigatórias: houve deságio e ágio reais em vários certames; a renegociação da Ponte reduziu o retorno chinês; no regime de partilha a União fica com parcela do óleo; e o maior caso de outorga simbólica (ITG02) beneficia capital privado nacional, não estrangeiro. O dado transversal mais forte não é a nacionalidade: é a frequência de certames sem competição. Fórmula de síntese: 'Para o Estado — o nacional e o estrangeiro — o ativo e a renda; para o cidadão, a conta de 30 anos; para nenhum governo, a autoria.'",
+  "nota_fonte_triagem": "Observatório de Ativos Públicos: autoria não declarada ('P&C'), recorte 'Governos do PT 2023–2026', linha editorial conservadora declarada. Metodologia de atribuição por etapa e não-soma de grandezas é tecnicamente sólida e foi aproveitada; manchetes atribuem integralmente ao governo atual operações iniciadas em 2019–2022 (função estrutural do padrão P04 aplicada pelo Observatório em 2026). Os documentos primários listados foram usados; o enquadramento não.",
+  "artifact": "privatizaram-para-estados.html",
+  "jekyll_categories": ["estudos", "dossie"],
+  "status": "analise_editorial"
+}

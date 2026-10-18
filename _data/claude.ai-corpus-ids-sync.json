@@ -1,8 +1,8 @@
 {
   "_meta": {
     "schema_version": "1.1.0",
-    "generated": "2026-10-06",
-    "updated": "2026-10-06",
+    "generated": "2026-10-18",
+    "updated": "2026-10-18",
     "session": "claude.ai — sessão editorial 2026-05-28 (Operação Rejeito, T-191, T-192, Flávio/Trump, posts P11)",
     "purpose": "Mapa de sincronização de IDs — lawfare-timeline corpus",
     "source_project": "gosurf.site / lawfare-timeline.vercel.app",
@@ -11,20 +11,20 @@
     "tracks": {
       "main": {
         "description": "Track principal — eventos institucionais, decisões judiciais, episódios políticos",
-        "id_range": "1–1973 (confirmed)",
+        "id_range": "1–1985 (confirmed)",
         "id_format": "integer",
-        "last_confirmed": 1973,
-        "last_jekyll_published": 1973,
+        "last_confirmed": 1985,
+        "last_jekyll_published": 1985,
         "last_session_produced": 1762,
-        "notes": "lawfare.json confirmado até 1973. Próximo ID livre: 1974."
+        "notes": "lawfare.json confirmado até 1985. Próximo ID livre: 1986."
       },
       "thematic": {
         "description": "Sub-corpus temático — análise estrutural de operações e padrões",
-        "id_range": "100–272",
+        "id_range": "100–274",
         "id_format": "integer",
-        "last_confirmed": 272,
-        "last_session_produced": 272,
-        "notes": "T-272 confirmado. Próximo thematic livre: T-273."
+        "last_confirmed": 274,
+        "last_session_produced": 274,
+        "notes": "T-274 confirmado. Próximo thematic livre: T-275."
       }
     }
   },
@@ -79,7 +79,7 @@
           ],
           "status": "confirmed",
           "merge_pending": false,
-          "notes": "Merge lawfare.json 2026-10-06: Biomm 1527-1546, Zema 1547-1550, Homeschooling 1551.",
+          "notes": "Merge lawfare.json 2026-10-18: Biomm 1527-1546, Zema 1547-1550, Homeschooling 1551.",
           "source_files": [
             "_data/processados/lawfare-1527-1546-biomm-renumerado.json",
             "_data/processados/zema-1547-1550-renumerado.json"
@@ -92,7 +92,7 @@
           ],
           "status": "confirmed",
           "merge_pending": false,
-          "notes": "Merge lawfare.json 2026-10-06: Operação Rejeito 1552-1571.",
+          "notes": "Merge lawfare.json 2026-10-18: Operação Rejeito 1552-1571.",
           "source_files": [
             "_data/processados/lawfare-batch-rejeito-1552-1571.json"
           ]
@@ -573,14 +573,22 @@
           ],
           "status": "confirmed",
           "notes": "Merge todo 2026-10-06: main IDs 1943-1973."
+        },
+        {
+          "range": [
+            1974,
+            1985
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-10-18: main IDs 1974-1985."
         }
       ],
-      "last_id": 1973,
-      "last_jekyll_published": 1973,
+      "last_id": 1985,
+      "last_jekyll_published": 1985,
       "last_produced": 1770,
-      "next_available": 1974,
+      "next_available": 1986,
       "merge_queue": [],
-      "last_confirmed": 1973,
+      "last_confirmed": 1985,
       "last_session_produced": 1770
     },
     "thematic": {
@@ -1723,28 +1731,28 @@
           "status": "confirmed",
           "topic": "T-251 — Convergência estrutural STF–família–Banco Master (P02/P05/P07)",
           "artifact": "2026-08-12-t-251-convergencia-estrutural-stffamiliabanco-master-p02p05p07-aplicados-ao-mesmo-colegiad.md",
-          "notes": "Estudo Jekyll _posts/estudos/2026-08-12-t-251-convergencia-estrutural-stffamiliabanco-master-p02p05p07-aplicados-ao-mesmo-colegiad.md (auto-sync 2026-10-06)"
+          "notes": "Estudo Jekyll _posts/estudos/2026-08-12-t-251-convergencia-estrutural-stffamiliabanco-master-p02p05p07-aplicados-ao-mesmo-colegiad.md (auto-sync 2026-10-18)"
         },
         {
           "id": 252,
           "status": "confirmed",
           "topic": "T-252 — Escalada em duas frentes: proteção técnica não isenta (plataforma + sigilo de fonte)",
           "artifact": "2026-08-13-t-252-escalada-em-duas-frentes-na-mesma-semana-doutrina-de-que-protecao-tecnica-nao-isenta.md",
-          "notes": "Estudo Jekyll _posts/estudos/2026-08-13-t-252-escalada-em-duas-frentes-na-mesma-semana-doutrina-de-que-protecao-tecnica-nao-isenta.md (auto-sync 2026-10-06)"
+          "notes": "Estudo Jekyll _posts/estudos/2026-08-13-t-252-escalada-em-duas-frentes-na-mesma-semana-doutrina-de-que-protecao-tecnica-nao-isenta.md (auto-sync 2026-10-18)"
         },
         {
           "id": 253,
           "status": "confirmed",
           "topic": "T-253 — AP 470 Mensalão — critério evidencial STF (Lula fora do polo passivo)",
           "artifact": "2010-04-08-t-253-ap-470-mensalao-stf-exige-base-documental-e-probatoria-para-recusar-reiteradamente-a.md",
-          "notes": "Estudo Jekyll _posts/estudos/2010-04-08-t-253-ap-470-mensalao-stf-exige-base-documental-e-probatoria-para-recusar-reiteradamente-a.md (auto-sync 2026-10-06)"
+          "notes": "Estudo Jekyll _posts/estudos/2010-04-08-t-253-ap-470-mensalao-stf-exige-base-documental-e-probatoria-para-recusar-reiteradamente-a.md (auto-sync 2026-10-18)"
         },
         {
           "id": 254,
           "status": "confirmed",
           "topic": "T-254 — P13 Porta Giratória — proposta de promoção (âncoras 1859–1864)",
           "artifact": "2026-08-18-t-254-p13-porta-giratoria.md",
-          "notes": "Estudo Jekyll _posts/estudos/2026-08-18-t-254-p13-porta-giratoria.md (auto-sync 2026-10-06)"
+          "notes": "Estudo Jekyll _posts/estudos/2026-08-18-t-254-p13-porta-giratoria.md (auto-sync 2026-10-18)"
         },
         {
           "id": 255,
@@ -1871,13 +1879,27 @@
           "topic": "T-272 (thematic-T272-sob-medida-rioprevidencia-cedae.json)",
           "artifact": "2026-09-17-sob-medida-rioprevidencia-cedae.md",
           "notes": "Estudo Jekyll _posts/estudos/2026-09-17-sob-medida-rioprevidencia-cedae.md"
+        },
+        {
+          "id": 273,
+          "status": "confirmed",
+          "topic": "T-273 (thematic-T273-ciclos-do-brasil-caserna-poder.json)",
+          "artifact": "2026-10-07-ciclos-do-brasil-caserna-poder.md",
+          "notes": "Estudo Jekyll _posts/estudos/2026-10-07-ciclos-do-brasil-caserna-poder.md"
+        },
+        {
+          "id": 274,
+          "status": "confirmed",
+          "topic": "T-274 (thematic-T274-estado-comprador.json)",
+          "artifact": "2026-10-10-estado-comprador-privatizaram-para-estados.md",
+          "notes": "Estudo Jekyll _posts/estudos/2026-10-10-estado-comprador-privatizaram-para-estados.md"
         }
       ],
-      "last_id": 272,
-      "next_available": 273,
+      "last_id": 274,
+      "next_available": 275,
       "pending": [],
       "pending_notes": {},
-      "last_confirmed": 272,
+      "last_confirmed": 274,
       "mislabeled_on_disk": [
         {
           "id": 1512,
@@ -1939,12 +1961,12 @@
     }
   },
   "sync_status": {
-    "main_track_last_sync": "2026-10-06",
-    "thematic_track_last_sync": "2026-10-06",
+    "main_track_last_sync": "2026-10-18",
+    "thematic_track_last_sync": "2026-10-18",
     "dragao_onca_series_sync": "2026-07-27T12:00:00-03:00",
     "ids_confirmed_total": {
-      "main_track": "1973 (Jekyll + lawfare.json)",
-      "thematic_track": 272
+      "main_track": "1985 (Jekyll + lawfare.json)",
+      "thematic_track": 274
     },
     "ids_pending_production": [],
     "artifacts_without_thematic_id": [],
@@ -2513,7 +2535,35 @@
       "T-220 PCC-OFAC Arpar publicado (2026-10-06)",
       "T-221 Nemo judex DPU publicado (2026-10-06)",
       "T-196 Radar Top 30 publicado em estudos/ (2026-10-06)",
-      "Próximo thematic: T-273; main next=1974"
+      "lawfare.json last_id=1985; próximo ID livre=1986",
+      "Fila editorial 2026-10-18: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-10-18)",
+      "T-198 COAF × Moraes publicado (2026-10-18)",
+      "T-199 Lojas Americanas publicado (2026-10-18)",
+      "T-200 Estatais rombo P11 publicado (2026-10-18)",
+      "T-201 PCC transnacional publicado (2026-10-18)",
+      "T-202 Delegada × PCC publicado (2026-10-18)",
+      "T-203 Zelotes CARF publicado (2026-10-18)",
+      "T-204 Gastos Paris publicado (2026-10-18)",
+      "T-205 Duplo padrão corpus publicado (2026-10-18)",
+      "T-206 SPLC corpus publicado (2026-10-18)",
+      "T-207 Vaza Toga corpus publicado (2026-10-18)",
+      "T-208 Narrativa vs Evidência publicado (2026-10-18)",
+      "T-209 JustiçaWatch Brasil publicado (2026-10-18)",
+      "T-210 Cluster Sepse Parasitas publicado (2026-10-18)",
+      "T-211 Sepse 2ª fase publicado (2026-10-18)",
+      "T-212 Sepse UTI publicado (2026-10-18)",
+      "T-213 CGU Sepse publicado (2026-10-18)",
+      "T-214 Status Sepse publicado (2026-10-18)",
+      "T-215 Vorcaro STF publicado (2026-10-18)",
+      "T-216 TSE USAID publicado (2026-10-18)",
+      "T-217 Seletividade TSE publicado (2026-10-18)",
+      "T-218 Ouro ilegal P08 publicado (2026-10-18)",
+      "T-219 Farra INSS publicado (2026-10-18)",
+      "T-220 PCC-OFAC Arpar publicado (2026-10-18)",
+      "T-221 Nemo judex DPU publicado (2026-10-18)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-10-18)",
+      "Próximo thematic: T-275; main next=1986"
     ],
     "notes": [
       "Correção 2026-07-18: ID 1520→P04b imprensa; revisão criminal Bolsonaro→1621; duplicata lawfare/ removida.",
@@ -2552,7 +2602,7 @@
     "custeio_vs_top30": {
       "T-191": "Custeio P11 — estudo canônico",
       "T-196": "Radar Top 30 — renumerado do antigo T-191",
-      "date": "2026-10-06"
+      "date": "2026-10-18"
     },
     "pcc_namespace": {
       "range": "1481-1500",
@@ -2934,9 +2984,31 @@
         ]
       },
       "status": "completed"
+    },
+    {
+      "date": "2026-10-18",
+      "session": "cursor — sync corpus IDs + Drive",
+      "produced": [
+        "Main track sync last_id=1985 next=1986",
+        "Thematic sync last=T-274 next=T-275",
+        "Export gdrive_sync_export.py (claude.ai-corpus-ids-sync.json + lawfare.json)"
+      ],
+      "summary": {
+        "lawfare_max_id": 1985,
+        "next_main_id": 1986,
+        "thematic_last": "T-274",
+        "next_thematic": "T-275",
+        "t_studies_on_disk": 60,
+        "thematic_mislabeled_ignored": [
+          "T-1512",
+          "T-1765",
+          "T-1766"
+        ]
+      },
+      "status": "completed"
     }
   ],
-  "last_main_id": 1973,
-  "next_available": 1974,
-  "updated": "2026-10-06"
+  "last_main_id": 1985,
+  "next_available": 1986,
+  "updated": "2026-10-18"
 }

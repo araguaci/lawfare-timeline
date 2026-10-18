@@ -5,13 +5,13 @@ layout: compress
 [
   {% for post in site.posts %}
   {
-    "title": "{{ post.title | escape }}",
-    "url": "{{ site.baseurl }}{{ post.url }}",
-    "categories": "{{ post.categories | join: ', '}}",
-    "tags": "{{ post.tags | join: ', ' }}",
-    "date": "{{ post.date }}",
+    "title": {{ post.title | strip_html | strip_newlines | strip | jsonify }},
+    "url": {{ post.url | relative_url | jsonify }},
+    "categories": {{ post.categories | join: ', ' | jsonify }},
+    "tags": {{ post.tags | join: ', ' | jsonify }},
+    "date": {{ post.date | jsonify }},
     {% include no-linenos.html content=post.content %}
-    "snippet": "{{ content | strip_html | strip_newlines | remove_chars | escape | truncate: 300 | replace: '\', '\\\\' }}"
+    "snippet": {{ content | strip_html | strip_newlines | remove_chars | strip | truncate: 300 | jsonify }}
   }{% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]

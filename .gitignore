@@ -31,3 +31,19 @@ package-lock.json
 assets/js/dist
 
 .firecrawl/
+.jekyll-metadata
+.history/
+
+# PDFs e backups locais — já cobertos por *.pdf/*.zip; reforço de pastas
+_data/mensalao/
+_draft/pdf/
+
+# Fonte Jekyll e listagens geradas — o site ao vivo é docs/
+# (cópia publicada fica em docs/artigos e docs/assets)
+/artigos/
+/assets/
+!/assets/js/
+!/assets/js/data/
+!/assets/js/data/search.json
+/docs/tags/
+/docs/page[0-9]*/

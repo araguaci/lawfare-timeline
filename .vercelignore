@@ -1,0 +1,46 @@
+# Fonte Jekyll — o site ao vivo é docs/
+_posts/
+_draft/
+_sass/
+_includes/
+_layouts/
+_plugins/
+scripts/
+tools/
+.history/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/
+node_modules/
+
+# Corpus e arquivos de trabalho (não são o site)
+_data/
+*.pdf
+*.zip
+*.rar
+*.epub
+
+# Duplicata da raiz: já está em docs/artigos e docs/assets
+artigos/
+assets/
+vazatoga/
+dragao-onca/
+suntzu/
+odragaoeaonca/
+
+# HTML solto na raiz (espelho de docs/)
+/*.html
+/*.jpeg
+/*.jpg
+/*.png
+/*.ico
+
+# Listagens de tag (~500 MB) — /tags/:nome deixa de ir para a Vercel
+docs/tags/
+
+# Paginação da home (~29 MB)
+docs/page*/
+
+# Subprojeto com deploy próprio
+docs/odragaoeaonca/

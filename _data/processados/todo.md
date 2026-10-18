@@ -1,12 +1,23 @@
 # Notas de processamento · `_data/todo/`
 
-**Atualizado:** 2026-10-06 (1943–1973 · T-271/T-272)
+**Atualizado:** 2026-10-18 (1974–1985 · T-273/T-274)
 
 ## Fila
 
 - `_data/todo/_staging/` — HTML/MD (rascunhos; não mergear como ID)
-- JSON 1943–1973 + T-271/T-272 arquivados 06/10
+- JSON 1974–1985 + T-273/T-274 arquivados 18/10
 - Duplicata `lawfare-batch-1943-1959.json` = conteúdo de 1926–1942 — sem merge
+
+## Merge 18/10/2026
+
+| Batch | IDs na fila | IDs finais |
+|-------|-------------|------------|
+| Caserna e poder | 1974–1979 | **1974–1979** (livres) |
+| Estado comprador | 1980–1985 | **1980–1985** (livres) |
+| Ciclos do Brasil | T-273 | **T-273** |
+| Estado comprador (síntese) | T-274 | **T-274** |
+
+Sem overwrite. Ponte Itaparica / CEEE-T / Foz do Amazonas só conectadas (já no corpus).
 
 ## Merge 06/10/2026 (b)
 

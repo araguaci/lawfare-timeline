@@ -1,6 +1,6 @@
 # Próximos passos · lawfare-timeline
 
-**Atualizado:** 2026-10-06 (main 1973 · T-272)
+**Atualizado:** 2026-10-18 (main 1985 · T-274)
 
 > Espelho: `docs/TODO.md` · Notas: `_data/processados/todo.md` · Legado: `docs/TODO-LEGACY.md`
 
@@ -10,10 +10,25 @@
 
 | Track | Last | Próximo | Validação |
 |-------|------|---------|-----------|
-| Main | **1973** | **1974** | lawfare.json **1934** entradas · sem IDs duplicados |
-| Thematic | **T-272** | **T-273** | sync 100–272 contínuo · T-270 Compilado intacto |
+| Main | **1985** | **1986** | lawfare.json **1946** entradas · sem IDs duplicados |
+| Thematic | **T-274** | **T-275** | sync 100–274 contínuo · T-270 Compilado intacto |
 | Dragão e a Onça | **1770** / **T-246** | — | `dragao-onca.json` **151** |
-| Fila `_data/todo/` | `_staging/` HTML/MD | — | JSON 1943–1973 + T-271/T-272 arquivados 06/10 |
+| Fila `_data/todo/` | `_staging/` HTML/MD | — | JSON 1974–1985 + T-273/T-274 arquivados 18/10 |
+
+---
+
+## Rodada 18/10/2026 ✅ — Caserna/Poder + Estado comprador
+
+Lote já vinha numerado no próximo livre (**1974** / **T-273**). Sem realocação. HTML `privatizaram-para-estados.html` foi para `_staging/` (não é ID). T-274 recebeu `tipo: analise_estrutural` para o sync não explodir em `entries` string.
+
+| Faixa | Conteúdo |
+|-------|----------|
+| **1974–1979** | Caserna e poder: Villas Bôas/Twitter, ADI 6457, recusa da minuta, AP 2668, execução das penas, STM |
+| **1980–1985** | Estado comprador: Galeão/TCU, Aena, Zurich/Natal, State Grid, OPP-4, ITG02 (contraexemplo) |
+| **T-273** | [Ciclos do Brasil — Caserna e Poder](/posts/2026-10-07-ciclos-do-brasil-caserna-poder/) |
+| **T-274** | [Estado comprador](/posts/2026-10-10-estado-comprador-privatizaram-para-estados/) |
+
+Ponte Itaparica / CEEE-T / Foz do Amazonas **não** duplicadas (já 1719–1725, 1763, 1759). IDs 1918–1973 intactos. Próximo main **1986** · próximo temático **T-275**.
 
 ---
 
@@ -192,6 +207,6 @@ bundle exec jekyll build
 
 ## Referências
 
-- Corpus: `_data/lawfare.json` (**1934** entradas · main até **1973**)
+- Corpus: `_data/lawfare.json` (**1946** entradas · main até **1985**)
 - Unified: `_data/lawfare-unified-corpus.json`
 - Sidecar dragão: `_data/dragao-onca.json` (151 · **1763/1764** = CEEE-T / JMEV intactos)
