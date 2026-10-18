@@ -510,5 +510,15 @@
       "destination": "/posts/kallas-vorcaro-desinvestimento-biomm-latache/",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/tags/:name",
+      "destination": "/tags/"
+    },
+    {
+      "source": "/tags/:name/",
+      "destination": "/tags/"
+    }
   ]
 }

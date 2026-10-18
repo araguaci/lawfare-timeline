@@ -37,8 +37,9 @@ _data/
 /*.png
 /*.ico
 
-# Listagens de tag (~500 MB) — /tags/:nome deixa de ir para a Vercel
-docs/tags/
+# Listagens de tag geradas (~500 MB); o índice /tags/index.html fica no ar
+docs/tags/*
+!docs/tags/index.html
 
 # Paginação da home (~29 MB)
 docs/page*/
