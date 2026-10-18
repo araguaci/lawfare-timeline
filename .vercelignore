@@ -21,13 +21,14 @@ _data/
 *.rar
 *.epub
 
-# Duplicata da raiz: já está em docs/artigos e docs/assets
-artigos/
-assets/
-vazatoga/
-dragao-onca/
-suntzu/
-odragaoeaonca/
+# Duplicata só na raiz do repo — NÃO usar "assets/" sem barra
+# (gitignore-style: "assets/" também ignora docs/assets e tira o CSS do ar)
+/artigos/
+/assets/
+/vazatoga/
+/dragao-onca/
+/suntzu/
+/odragaoeaonca/
 
 # HTML solto na raiz (espelho de docs/)
 /*.html
