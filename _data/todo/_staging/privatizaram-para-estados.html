@@ -1,0 +1,274 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Privatizaram para Estados</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@600;700;800&display=swap">
+<style>
+/* Layout: dossiê de corpus — hero-tese, cadeia de três elos por caso, linha do tempo transgovernamental, lacunas, fontes. Design system lawfare-timeline (dark-first, tema único por escolha). */
+:root{
+  --bg:#080c10; --panel:#0e141a; --panel-2:#121a22; --line:#1f2a35;
+  --fg:#e3e8ec; --muted:#8a98a6; --dim:#5d6b78;
+  --accent:#d9a441;      /* ouro de outorga */
+  --foreign:#e0574a;     /* Estado estrangeiro */
+  --national:#4f9ad1;    /* Estado brasileiro */
+  --citizen:#c9ced3;     /* cidadão / conta */
+  --ok:#5fb58a;          /* simetria / contraexemplo */
+  --f-display:"Bebas Neue","Oswald",Impact,"Arial Narrow",sans-serif;
+  --f-head:"Syne","Segoe UI",system-ui,sans-serif;
+  --f-body:"Crimson Pro",Georgia,"Times New Roman",serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:19px;line-height:1.55;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:0}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.mono{font-family:var(--f-mono)}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1,h2,h3{text-wrap:balance;margin:0}
+h2{font-family:var(--f-head);font-weight:800;font-size:clamp(24px,3.2vw,34px);letter-spacing:-.01em}
+h3{font-family:var(--f-head);font-weight:700;font-size:19px}
+p{margin:0}
+section{padding-block:56px;border-top:1px solid var(--line)}
+.lede{max-width:66ch;color:var(--muted)}
+
+/* HERO */
+header.hero{padding-block:56px 48px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-bottom:28px}
+.hero h1{font-family:var(--f-display);font-weight:400;line-height:.92;font-size:clamp(56px,11vw,138px);letter-spacing:.005em}
+.hero h1 .l1{display:block;color:var(--fg)}
+.hero h1 .l2{display:block;color:var(--accent)}
+.hero .thesis{margin-top:28px;max-width:64ch;font-size:clamp(19px,2vw,22px)}
+.legend{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:28px;font-family:var(--f-mono);font-size:12.5px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.sw{width:12px;height:12px;border-radius:2px;display:inline-block}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:40px}
+.stat{background:var(--panel);padding:20px 18px;min-width:0}
+.stat b{display:block;font-family:var(--f-display);font-weight:400;font-size:44px;line-height:1;font-variant-numeric:tabular-nums}
+.stat span{display:block;margin-top:8px;font-family:var(--f-mono);font-size:12px;color:var(--muted);line-height:1.45}
+
+/* CASE CHAINS */
+.cases{display:grid;gap:18px;margin-top:32px}
+.case{background:var(--panel);border:1px solid var(--line);padding:22px;display:grid;gap:16px;min-width:0}
+.case-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;align-items:baseline}
+.case-head .ids{font-family:var(--f-mono);font-size:12px;color:var(--dim)}
+.chain{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.link{background:var(--panel-2);padding:14px;border-top:3px solid var(--dim);min-width:0}
+.link .k{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.link p{margin-top:6px;font-size:17px;line-height:1.45}
+.link.renda{border-top-color:var(--accent)}
+.link.estado.foreign{border-top-color:var(--foreign)}
+.link.estado.national{border-top-color:var(--national)}
+.link.estado.none{border-top-color:var(--ok)}
+.link.conta{border-top-color:var(--citizen)}
+.sym{font-family:var(--f-mono);font-size:13px;color:var(--ok);line-height:1.5}
+.sym::before{content:"simetria · ";color:var(--dim)}
+.tag{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border:1px solid currentColor;white-space:nowrap}
+.tag.f{color:var(--foreign)} .tag.p{color:var(--accent)} .tag.c{color:var(--ok)}
+.case.counter{border-color:#24402f}
+
+/* TIMELINE */
+.tl{margin-top:32px;display:grid;gap:0}
+.tl-row{display:grid;grid-template-columns:96px 120px minmax(0,1fr);gap:16px;padding-block:14px;border-bottom:1px solid var(--line);align-items:baseline}
+.tl-row .d{font-family:var(--f-mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.gov{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg);padding:3px 7px;background:var(--panel-2);border:1px solid var(--line);justify-self:start}
+.tl-row p{font-size:17px}
+.tl-row p small{display:block;font-family:var(--f-mono);font-size:12px;color:var(--dim);margin-top:2px}
+
+/* QUOTE */
+.formula{margin-top:8px;padding:28px;border-left:3px solid var(--accent);background:var(--panel);font-size:clamp(21px,2.4vw,27px);font-style:italic;max-width:900px}
+.formula small{display:block;margin-top:12px;font-style:normal;font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+
+/* LISTS */
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:28px}
+.gap{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.gap li{padding:14px 16px;background:var(--panel);border:1px solid var(--line);font-size:17px}
+.gap li b{font-family:var(--f-mono);font-weight:500;font-size:12px;color:var(--accent);display:block;margin-bottom:4px;letter-spacing:.06em;text-transform:uppercase}
+.src{font-family:var(--f-mono);font-size:13px;line-height:1.7;columns:2 320px;column-gap:32px;margin-top:20px;padding:0;list-style:none}
+.src li{break-inside:avoid;margin-bottom:6px;color:var(--muted)}
+.src a{color:var(--fg)}
+.note{font-family:var(--f-mono);font-size:12.5px;color:var(--muted);line-height:1.6;max-width:90ch}
+
+footer{border-top:1px solid var(--line);padding-block:32px 48px;font-family:var(--f-mono);font-size:12px;color:var(--dim);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+
+@media (max-width:720px){
+  .chain{grid-template-columns:minmax(0,1fr)}
+  .tl-row{grid-template-columns:minmax(0,1fr);gap:6px}
+  body{font-size:18px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .hero h1 .l2{animation:rise .7s ease-out both .1s}
+  @keyframes rise{from{transform:translateY(6px);opacity:.4}to{transform:none;opacity:1}}
+}
+</style>
+
+<div class="wrap">
+<header class="hero">
+  <div class="meta">
+    <span class="eyebrow">lawfare-timeline · T-273</span>
+    <span class="eyebrow">main ids 1974–1979</span>
+    <span class="eyebrow">10/10/2026</span>
+    <span class="eyebrow">CC0 1.0</span>
+  </div>
+  <h1><span class="l1">Privatizaram para Estados.</span><span class="l2">Estatizaram a conta.</span></h1>
+  <p class="thesis">Entre 2019 e 2026, parte relevante das concessões de infraestrutura brasileiras não passou do Estado para o mercado. Passou do Estado brasileiro para Estados estrangeiros, por leilão. O custo de transição ficou com a União e com o usuário. A renda de longo prazo segue para Tesouros em Madri, Pequim, Oslo e Zurique.</p>
+  <div class="legend" aria-label="Legenda de cores">
+    <span><i class="sw" style="background:var(--accent)"></i>quem recebe a renda</span>
+    <span><i class="sw" style="background:var(--foreign)"></i>Estado estrangeiro controlador</span>
+    <span><i class="sw" style="background:var(--national)"></i>Estado brasileiro</span>
+    <span><i class="sw" style="background:var(--citizen)"></i>quem paga</span>
+    <span><i class="sw" style="background:var(--ok)"></i>simetria / contraexemplo</span>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>51%</b><span>ENAIRE (Estado espanhol) na Aena, nova dona de 100% do Galeão</span></div>
+    <div class="stat"><b>R$ 1,94 bi</b><span>RAP anual da State Grid (SASAC) por 30 anos, paga na tarifa de energia</span></div>
+    <div class="stat"><b>R$ 5,3 bi</b><span>aporte público na Ponte Salvador–Itaparica, concessão de grupos estatais chineses</span></div>
+    <div class="stat"><b>7 de 7</b><span>blocos do pré-sal arrematados em 07/10/2026 com oferta única</span></div>
+  </div>
+</header>
+
+<section id="cadeias">
+  <span class="eyebrow">Regra dos três elos</span>
+  <h2 style="margin-top:10px">Quem recebe, quem controla, quem paga</h2>
+  <p class="lede" style="margin-top:12px">Cada caso só entra no enquadramento se os três elos fecharem com documento. O caso que não fecha fica registrado como contraexemplo, não como confirmação.</p>
+
+  <div class="cases">
+    <article class="case">
+      <div class="case-head"><h3>Galeão (RJ)</h3><span class="ids">id_1974 · id_1975</span><span class="tag f">Espanha</span></div>
+      <div class="chain">
+        <div class="link renda"><div class="k">Renda</div><p>Tarifas e receitas comerciais do 3º maior aeroporto do país até 2039.</p></div>
+        <div class="link estado foreign"><div class="k">Controlador final</div><p>Aena, 51% do Estado espanhol via ENAIRE. Infraero (49%) saiu em 06/10/2026.</p></div>
+        <div class="link conta"><div class="k">Conta</div><p>Usuário. A União trocou outorga fixa por 20% da receita e dispensou a terceira pista.</p></div>
+      </div>
+      <p class="sym">ágio de 210,88% sobre o mínimo de R$ 932 mi. Houve disputa real.</p>
+    </article>
+
+    <article class="case">
+      <div class="case-head"><h3>Linhão Graça Aranha–Silvânia (MA–GO)</h3><span class="ids">id_1977</span><span class="tag f">China</span></div>
+      <div class="chain">
+        <div class="link renda"><div class="k">Renda</div><p>RAP de R$ 1,94 bi por ano, por 30 anos. Risco de demanda quase nulo.</p></div>
+        <div class="link estado foreign"><div class="k">Controlador final</div><p>State Grid Corporation of China, empresa central sob a SASAC.</p></div>
+        <div class="link conta"><div class="k">Conta</div><p>Consumidor de energia, via encargo de transmissão. Crédito articulado com o Banco do BRICS.</p></div>
+      </div>
+      <p class="sym">deságio de 39,90% sobre o teto de R$ 3,22 bi/ano.</p>
+    </article>
+
+    <article class="case">
+      <div class="case-head"><h3>Ponte Salvador–Itaparica (BA)</h3><span class="ids">id_1719 · id_1722 · id_1725</span><span class="tag f">China</span></div>
+      <div class="chain">
+        <div class="link renda"><div class="k">Renda</div><p>Pedágio e contraprestação pública até 2060.</p></div>
+        <div class="link estado foreign"><div class="k">Controlador final</div><p>CCCC e CR20, grupos estatais chineses.</p></div>
+        <div class="link conta"><div class="k">Conta</div><p>R$ 5,3 bi públicos: R$ 2,3 bi da Bahia e R$ 3 bi da União via Novo PAC.</p></div>
+      </div>
+      <p class="sym">a renegociação de 2026 cortou a TIR do consórcio de 13% para 10,88%.</p>
+    </article>
+
+    <article class="case">
+      <div class="case-head"><h3>Pré-sal, 4º ciclo de partilha</h3><span class="ids">id_1978</span><span class="tag f">China · Noruega</span></div>
+      <div class="chain">
+        <div class="link renda"><div class="k">Renda</div><p>Óleo-custo e parte do excedente de Jade, Rubi e Rodocrosita.</p></div>
+        <div class="link estado foreign"><div class="k">Controlador final</div><p>Jade: CNOOC 70% e Sinopec 30%. Rubi: Equinor 100% (Estado norueguês 67%). Rodocrosita: Equinor 70%.</p></div>
+        <div class="link estado national"><div class="k">Parte do Estado brasileiro</div><p>A União fica com 15,52% a 25,02% do excedente. A Petrobras levou Azurita e Cruzeiro do Sul.</p></div>
+      </div>
+      <p class="sym">no regime de partilha o Estado brasileiro não sai. O problema aqui é outro: sete blocos, sete ofertas únicas.</p>
+    </article>
+
+    <article class="case">
+      <div class="case-head"><h3>Aeroporto de Natal (RN)</h3><span class="ids">id_1976</span><span class="tag p">Suíça (parcial)</span></div>
+      <div class="chain">
+        <div class="link renda"><div class="k">Renda</div><p>Concessão de 30 anos, primeira relicitação do país.</p></div>
+        <div class="link estado foreign"><div class="k">Controlador final</div><p>Zurich Airport, com o Cantão de Zurique como acionista de referência (33,33% + 1 ação, mínimo legal).</p></div>
+        <div class="link conta"><div class="k">Conta</div><p>A União pagou a parte da indenização de R$ 554,55 mi que a outorga de R$ 320 mi não cobria.</p></div>
+      </div>
+      <p class="sym">controle estatal parcial, não majoritário. Empresa listada em bolsa.</p>
+    </article>
+
+    <article class="case counter">
+      <div class="case-head"><h3>Terminal ITG02, Porto de Itaguaí (RJ)</h3><span class="ids">id_1979</span><span class="tag c">contraexemplo</span></div>
+      <div class="chain">
+        <div class="link renda"><div class="k">Renda</div><p>Terminal de 21,4 Mt/ano de minério de ferro.</p></div>
+        <div class="link estado none"><div class="k">Controlador final</div><p>Cedro Participações, capital privado nacional. Nenhum Estado na cadeia.</p></div>
+        <div class="link conta"><div class="k">Conta</div><p>Outorga de R$ 1 milhão, proponente única, para CAPEX de R$ 3,58 bi.</p></div>
+      </div>
+      <p class="sym">a tese de Estado estrangeiro não se aplica. O que se repete é a falta de concorrência.</p>
+    </article>
+  </div>
+</section>
+
+<section id="linha">
+  <span class="eyebrow">Continuidade documentada</span>
+  <h2 style="margin-top:10px">Um pipeline, quatro governos</h2>
+  <p class="lede" style="margin-top:12px">As mesmas operações atravessam gestões de campos opostos. A infraestrutura técnica (PPI, agências, SecexConsenso do TCU) é a mesma em todas as etapas.</p>
+  <div class="tl" role="list">
+    <div class="tl-row" role="listitem"><span class="d">dez/2019</span><span class="gov">BA · Rui Costa (PT)</span><p>Consórcio chinês vence a PPP da Ponte Salvador–Itaparica<small>id_1719</small></p></div>
+    <div class="tl-row" role="listitem"><span class="d">ago/2020</span><span class="gov">União · Bolsonaro</span><p>Decreto 10.472 qualifica o Aeroporto de Natal para relicitação<small>id_1976</small></p></div>
+    <div class="tl-row" role="listitem"><span class="d">jul/2021</span><span class="gov">RS · Leite (PSDB)</span><p>CPFL, do grupo State Grid, compra o controle da CEEE-T<small>id_1763</small></p></div>
+    <div class="tl-row" role="listitem"><span class="d">ago/2022</span><span class="gov">União · Bolsonaro</span><p>Decreto 11.171 qualifica o Galeão para relicitação<small>id_1974</small></p></div>
+    <div class="tl-row" role="listitem"><span class="d">mai/2023</span><span class="gov">União · Lula</span><p>Zurich Airport vence a relicitação de Natal; União assume a diferença da indenização<small>id_1976</small></p></div>
+    <div class="tl-row" role="listitem"><span class="d">dez/2023</span><span class="gov">União · Lula</span><p>State Grid leva o Lote 1 do Leilão de Transmissão 2/2023<small>id_1977</small></p></div>
+    <div class="tl-row" role="listitem"><span class="d">dez/2024</span><span class="gov">União · Lula</span><p>ITG02 arrendado por R$ 1 milhão a proponente única<small>id_1979</small></p></div>
+    <div class="tl-row" role="listitem"><span class="d">jun/2025</span><span class="gov">TCU</span><p>Acórdão 1.260/2025 aprova a solução consensual do Galeão<small>id_1974</small></p></div>
+    <div class="tl-row" role="listitem"><span class="d">fev/2026</span><span class="gov">BA · Jerônimo (PT)</span><p>Aditivo da Ponte: valor sobe a R$ 10,6 bi com R$ 5,3 bi públicos<small>id_1722</small></p></div>
+    <div class="tl-row" role="listitem"><span class="d">mar/2026</span><span class="gov">União · Lula</span><p>Aena vence a venda assistida do Galeão por R$ 2,9 bi<small>id_1975</small></p></div>
+    <div class="tl-row" role="listitem"><span class="d">06/10/2026</span><span class="gov">União · Lula</span><p>Infraero sai do Galeão; a Aena assume 100%<small>id_1975</small></p></div>
+    <div class="tl-row" role="listitem"><span class="d">07/10/2026</span><span class="gov">União · Lula</span><p>Pré-sal: Jade vai 100% a estatais chinesas e Rubi 100% à Equinor<small>id_1978</small></p></div>
+  </div>
+</section>
+
+<section id="sintese">
+  <span class="eyebrow">Análise · ev-inference</span>
+  <h2 style="margin-top:10px">O que o enquadramento partidário esconde</h2>
+  <p class="lede" style="margin-top:12px">O discurso privatista diz que o mercado assumiu. O discurso soberanista diz que o governo do outro lado entregou o país. Os documentos mostram outra coisa. Cada lado executa metade do pipeline e usa a metade do outro como argumento. Enquanto isso, o controle passa de um Estado para outro, e a conta de transição fica com quem usa o serviço.</p>
+  <div class="formula" style="margin-top:28px">Para o Estado, o nacional e o estrangeiro, o ativo e a renda. Para o cidadão, a conta de 30 anos. Para nenhum governo, a autoria.<small>Fórmula de síntese do T-273 · campo analise · ev-inference</small></div>
+</section>
+
+<section id="lacunas">
+  <span class="eyebrow">Lacunas investigativas</span>
+  <h2 style="margin-top:10px">O que ainda não está documentado</h2>
+  <div class="two">
+    <ul class="gap">
+      <li><b>Dividendos</b>Quanto as subsidiárias brasileiras da State Grid, da Aena e da Equinor remetem às matrizes estatais.</li>
+      <li><b>Banco do BRICS</b>Valor, prazo e condições do crédito do NDB para a State Grid, e a fração desse risco que cabe ao Brasil como sócio.</li>
+      <li><b>Concorrência</b>Como foram calibrados os mínimos de edital em certames que terminaram com oferta única: OPP-4 e ITG02.</li>
+    </ul>
+    <ul class="gap">
+      <li><b>Galeão</b>Documento primário do fechamento de 06/10/2026 e valor recebido pela Infraero pelos seus 49%.</li>
+      <li><b>Natal</b>Registros divergentes do leilão: ágio de 41% com segundo lance R$ 1 abaixo do vencedor, ou proponente única no mínimo. Quem controla a NK 230.</li>
+      <li><b>Pré-sal</b>Se a Petrobras exerceu ou renunciou ao direito de preferência em Jade e Rubi.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="fontes">
+  <span class="eyebrow">Fontes primárias e corroboração</span>
+  <h2 style="margin-top:10px">Fontes</h2>
+  <ul class="src">
+    <li><a href="https://www.gov.br/anac/pt-br/acesso-a-informacao/institucional/reunioes-da-diretoria/reunioes-deliberativas/2025/arquivos-12a-redir-del/1-relatorio-de-diretoria.pdf">ANAC · Relatório de Diretoria, Acórdão TCU 1.260/2025</a></li>
+    <li><a href="https://www.aena.es/doc/pressdetail/260330-enaena--aeropuerto-internacional-de-galeao.pdf">Aena · nota oficial do Galeão, 30/03/2026</a></li>
+    <li><a href="https://agenciainfra.com/blog/aena-vence-concessao-do-aeroporto-do-galeao-por-r-29-bi-de-outorga/">Agência iNFRA · Aena vence o Galeão</a></li>
+    <li><a href="https://www.correiodamanha.com.br/estado-do-rio/2026/10/325455-aena-vence-zurich-e-assume-operacoes-do-galeao-ate-2039.html">Correio da Manhã · fechamento, 06/10/2026</a></li>
+    <li><a href="https://timesbrasil.com.br/empresas-e-negocios/aviacao/aena-assume-galeao-apos-operacao-de-r-29-bilhoes/">Times Brasil · fechamento, 06/10/2026</a></li>
+    <li><a href="https://es.ara.cat/economia/aena-reitera-gestion-aeropuertos-exclusivamente_1_5709188.html">Ara · Estado controla 51% da Aena via Enaire</a></li>
+    <li><a href="https://agenciagov.ebc.com.br/noticias/202309/assinado-novo-contrato-do-aeroporto-de-sao-goncalo-do-amarante-o-asga">Agência Gov · contrato do ASGA</a></li>
+    <li><a href="https://agenciainfra.com/blog/?p=12857">Agência iNFRA · indenização do ASGA, R$ 554,55 mi</a></li>
+    <li><a href="https://www.zh.ch/de/mobilitaet/luftverkehr/flughafenpolitik/beteiligung-am-flughafen.html">Kanton Zürich · participação no aeroporto</a></li>
+    <li><a href="https://www.osetoreletrico.com.br/?p=159352">ANEEL via O Setor Elétrico · homologação do Leilão 2/2023</a></li>
+    <li><a href="https://stategrid.com.br/en/state-grid-brazil-holding-e-new-development-bank-assinam-memorando-de-entendimento/">State Grid Brazil · memorando com o NDB</a></li>
+    <li><a href="https://cenarioenergia.com.br/2026/10/07/anp-arremata-sete-blocos-do-pre-sal-e-registra-maior-numero-de-areas-vendidas-na-opp/">Cenário Energia · resultado da OPP-4</a></li>
+    <li><a href="https://www.dgabc.com.br/Noticia/4351453/maior-leilao-do-pre-sal-termina-com-sete-dos-13-blocos-arrematados">Agência Brasil via DGABC · ofertas únicas na OPP-4</a></li>
+    <li><a href="https://www.equinor.com/en/investors/our-shareholders.html">Equinor · acionistas, Estado norueguês 67%</a></li>
+    <li><a href="https://www.poder360.com.br/poder-infra/cedro-vence-leilao-historico-de-terminal-no-porto-de-itaguai/">Poder360 · ITG02, lance único</a></li>
+  </ul>
+  <p class="note" style="margin-top:24px">Triagem a partir do Observatório de Ativos Públicos (autoria não declarada, recorte "Governos do PT 2023–2026"). Os documentos primários listados pelo site foram usados. O enquadramento editorial das manchetes, que atribui ao governo atual operações iniciadas em 2019–2022, não foi importado.</p>
+</section>
+
+<footer>
+  <span>lawfare-timeline · República Sequestrada · T-273</span>
+  <span>CC0 1.0 Universal · domínio público · copie, adapte, distribua</span>
+</footer>
+</div>
+
+</body></html>

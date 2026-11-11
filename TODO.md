@@ -1,6 +1,6 @@
 # Próximos passos · lawfare-timeline
 
-**Atualizado:** 2026-10-18 (main 1985 · T-274)
+**Atualizado:** 2026-11-11 (main 2031 · T-276)
 
 > Espelho: `docs/TODO.md` · Notas: `_data/processados/todo.md` · Legado: `docs/TODO-LEGACY.md`
 
@@ -10,10 +10,41 @@
 
 | Track | Last | Próximo | Validação |
 |-------|------|---------|-----------|
-| Main | **1985** | **1986** | lawfare.json **1946** entradas · sem IDs duplicados |
-| Thematic | **T-274** | **T-275** | sync 100–274 contínuo · T-270 Compilado intacto |
-| Dragão e a Onça | **1770** / **T-246** | — | `dragao-onca.json` **151** |
-| Fila `_data/todo/` | `_staging/` HTML/MD | — | JSON 1974–1985 + T-273/T-274 arquivados 18/10 |
+| Main | **2031** | **2032** | lawfare.json **1992** entradas · sem IDs duplicados |
+| Thematic | **T-276** | **T-277** | sync 100–276 contínuo · T-270 Compilado intacto |
+| Dragão e a Onça | **2031** / **T-276** | — | `dragao-onca.json` capítulo 19 Sun Tzu |
+| Fila `_data/todo/` | `_staging/` HTML/MD | — | JSON 2021–2024 + T-275 arquivados 11/11 |
+
+---
+
+## Rodada 11/11/2026 (b) ✅ — T-276 Sun Tzu
+
+Capítulo 19 de O Dragão e a Onça. Os IDs provisórios **1986–1992** colidiam com o corpus (já em 2024). Renumerados para **2025–2031**. T-276 estava livre. T-275 permanece no sync.
+
+| Final | Conteúdo |
+|-------|----------|
+| **2025–2031** | Camargo/CPFL, Concremat/CCCC, fechamento CPFL, Cotton, BNDES–Cexim, CEBC 2025, UHV State Grid |
+| **T-276** | [Vencer sem lutar](/posts/2026-11-11-t276-dragao-onca-suntzu/) |
+
+Dossiê: `odragaoeaonca/dragao-onca-suntzu.html`. **2025** segue `ev-alleged` no nexo Lava Jato → venda. Próximo main **2032** · próximo temático **T-277**.
+
+---
+
+## Rodada 11/11/2026 ✅ — Fila 9/jan + Fé e voto sem colidir IDs
+
+A fila pedia **1986–1988** (dia 9/jan e imagens) e outro **1986** (Fé e voto). Esses números já estavam no corpus, de Stoppe/COP28 (**1986**) a Gilmar/impeachment (**2020**). O sync ainda marcava last **1985**. Sem overwrite. Referências internas do lote do 9/jan foram reescritas para os IDs novos.
+
+| Na fila | Final | Conteúdo |
+|---------|-------|----------|
+| 1986 | **2021** | Exército barra a PM na noite de 8/1; prisões adiadas para 9/1 |
+| 1987 | **2022** | ~1.200 levados ao ginásio da ANP; 599 liberados |
+| 1988 | **2023** | Imagens do Palácio da Justiça apagadas (4 de 185 câmeras) |
+| 1986 | **2024** | Estudo «Fé e voto» (More in Common / Passagens-UFRJ) |
+| T-275 | **T-275** | [Quem falou e quem calou](/posts/2026-10-21-quem-falou-quem-calou-8jan-oab-ongs/) |
+
+Posts: [2021](/posts/2023-01-08-comando-do-exercito-barra-pm-em-frente-ao-qg-na-noite-de-81-e-operacao-de-retirada-e-adiad/) · [2022](/posts/2023-01-09-cerca-de-1200-pessoas-do-acampamento-do-qg-sao-levadas-em-mais-de-40-onibus-ao-ginasio-da-/) · [2023](/posts/2023-08-29-pf-confirma-a-cpmi-que-imagens-das-cameras-do-palacio-da-justica-de-81-foram-apagadas-mini/) · [2024](/posts/2026-10-11-more-in-common-brasil-e-passagensufrj-publicam-estudo-fe-e-voto-propaganda-eleitoral-em-32/).
+
+Catch-up do sync: **1986–2020** anotados como já presentes em `lawfare.json`, sem reescrever fichas. Próximo main **2025** · próximo temático **T-276**.
 
 ---
 

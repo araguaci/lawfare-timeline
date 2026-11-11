@@ -554,6 +554,12 @@ Sessão 2026-09-13 — hero T-269 A criatura e o consenso (1200×675, 16:9, shar
 Hero image for an X.com Article titled "A CRIATURA". Exact final use: 1200×675 pixels (16:9 share card / article preview). Composition: critical content centered with safe margins for aggressive center crop in X timeline preview. Dark investigative documentary still, not a poster collage. Background: near-black navy (#080c10) with faint film grain, a thin vertical red accent bar on the left like a judicial file stripe. Centered editorial block: large bold condensed sans-serif title "A CRIATURA" in off-white (fully readable), gold subtitle "T-269" underneath, tiny monospace line "2021 apoio · 2026 recusa". Visual motif: a broken wax consensus seal on a dark desk, a faded Frankenstein-like silhouette of a judicial robe without a face, dissolving into blurred STF-like colonnades and stacked case-file folders (no readable names, no logos, no brand marks, no real faces, no flags, no party symbols). Palette: charcoal, blood red (#c53d4f), muted gold (#d4af5a). Style: investigative data journalism, high-contrast typography, cinematic grain. No emojis, no clipart, no white background, no watermarks.
 ```
 
+Sessão 2026-11-11 — hero T-276 Sun Tzu (1200×675, 16:9, share card X; capa `dragao-onca-suntzu.webp`):
+
+```
+Cinematic investigative poster, exact 16:9 share card, dark documentary still matching a Brazil-China series. Near-black navy background with film grain. Left third: empty high-voltage transmission corridor at night, steel lattice towers receding, cold blue light, no people, no logos. Center: a gold line-art jaguar walking across a faint map of Brazil made of power lines. Right third: a deep red field with five gold stars, not a flat flag graphic, more like a stained industrial wall. Huge condensed off-white title centered and fully readable: VENCER SEM LUTAR. Gold subtitle underneath: 33 DIAS. Tiny monospace top-left: T-276 · CAP. 19. A thin gold rule and a small red stamp reading SEM CERCO. Safe margins, critical type centered so a center crop still keeps the title. Palette charcoal, blood red, muted gold. No emojis, no clipart, no white background, no watermarks, no real faces, no company logos, no readable fine print besides the specified title.
+```
+
 Sessão 2026-09-12 — hero resumo corpus 18/07–12/09 (1200×675, 16:9, share card X):
 
 ```

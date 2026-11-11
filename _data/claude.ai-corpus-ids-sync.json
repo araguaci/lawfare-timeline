@@ -2,7 +2,7 @@
   "_meta": {
     "schema_version": "1.1.0",
     "generated": "2026-10-18",
-    "updated": "2026-10-18",
+    "updated": "2026-11-11",
     "session": "claude.ai — sessão editorial 2026-05-28 (Operação Rejeito, T-191, T-192, Flávio/Trump, posts P11)",
     "purpose": "Mapa de sincronização de IDs — lawfare-timeline corpus",
     "source_project": "gosurf.site / lawfare-timeline.vercel.app",
@@ -11,20 +11,20 @@
     "tracks": {
       "main": {
         "description": "Track principal — eventos institucionais, decisões judiciais, episódios políticos",
-        "id_range": "1–1985 (confirmed)",
+        "id_range": "1–2031 (confirmed)",
         "id_format": "integer",
-        "last_confirmed": 1985,
-        "last_jekyll_published": 1985,
+        "last_confirmed": 2031,
+        "last_jekyll_published": 2031,
         "last_session_produced": 1762,
-        "notes": "lawfare.json confirmado até 1985. Próximo ID livre: 1986."
+        "notes": "lawfare.json confirmado até 2031. Próximo ID livre: 2032."
       },
       "thematic": {
         "description": "Sub-corpus temático — análise estrutural de operações e padrões",
-        "id_range": "100–274",
+        "id_range": "100–276",
         "id_format": "integer",
-        "last_confirmed": 274,
-        "last_session_produced": 274,
-        "notes": "T-274 confirmado. Próximo thematic livre: T-275."
+        "last_confirmed": 276,
+        "last_session_produced": 276,
+        "notes": "T-276 confirmado. Próximo thematic livre: T-277."
       }
     }
   },
@@ -581,14 +581,38 @@
           ],
           "status": "confirmed",
           "notes": "Merge todo 2026-10-18: main IDs 1974-1985."
+        },
+        {
+          "range": [
+            1986,
+            2020
+          ],
+          "status": "confirmed",
+          "notes": "Catch-up 2026-11-11: IDs 1986-2020 já estavam em lawfare.json; o sync estava atrás. Sem reescrita de fichas."
+        },
+        {
+          "range": [
+            2021,
+            2024
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-11-11: main IDs 2021-2024."
+        },
+        {
+          "range": [
+            2025,
+            2031
+          ],
+          "status": "confirmed",
+          "notes": "2026-11-11: Dragão e a Onça cap. 19 Sun Tzu (T-276)."
         }
       ],
-      "last_id": 1985,
-      "last_jekyll_published": 1985,
+      "last_id": 2031,
+      "last_jekyll_published": 2031,
       "last_produced": 1770,
-      "next_available": 1986,
+      "next_available": 2032,
       "merge_queue": [],
-      "last_confirmed": 1985,
+      "last_confirmed": 2031,
       "last_session_produced": 1770
     },
     "thematic": {
@@ -1893,13 +1917,27 @@
           "topic": "T-274 (thematic-T274-estado-comprador.json)",
           "artifact": "2026-10-10-estado-comprador-privatizaram-para-estados.md",
           "notes": "Estudo Jekyll _posts/estudos/2026-10-10-estado-comprador-privatizaram-para-estados.md"
+        },
+        {
+          "id": 275,
+          "status": "confirmed",
+          "topic": "T-275 (thematic-T275-memoria-institucional-8jan.json)",
+          "artifact": "2026-10-21-quem-falou-quem-calou-8jan-oab-ongs.md",
+          "notes": "Estudo Jekyll _posts/estudos/2026-10-21-quem-falou-quem-calou-8jan-oab-ongs.md"
+        },
+        {
+          "id": 276,
+          "status": "confirmed",
+          "topic": "T-276 Dragão e a Onça — Sun Tzu: vencer sem lutar",
+          "artifact": "2026-11-11-t276-dragao-onca-suntzu.md",
+          "notes": "dragao-onca-suntzu.html · main 2025-2031"
         }
       ],
-      "last_id": 274,
-      "next_available": 275,
+      "last_id": 276,
+      "next_available": 277,
       "pending": [],
       "pending_notes": {},
-      "last_confirmed": 274,
+      "last_confirmed": 276,
       "mislabeled_on_disk": [
         {
           "id": 1512,
@@ -1961,12 +1999,12 @@
     }
   },
   "sync_status": {
-    "main_track_last_sync": "2026-10-18",
-    "thematic_track_last_sync": "2026-10-18",
-    "dragao_onca_series_sync": "2026-07-27T12:00:00-03:00",
+    "main_track_last_sync": "2026-11-11",
+    "thematic_track_last_sync": "2026-11-11",
+    "dragao_onca_series_sync": "2026-11-11",
     "ids_confirmed_total": {
-      "main_track": "1985 (Jekyll + lawfare.json)",
-      "thematic_track": 274
+      "main_track": "2024 (Jekyll + lawfare.json)",
+      "thematic_track": 275
     },
     "ids_pending_production": [],
     "artifacts_without_thematic_id": [],
@@ -3006,9 +3044,25 @@
         ]
       },
       "status": "completed"
+    },
+    {
+      "date": "2026-11-11",
+      "session": "cursor — fila todo sem colisao de ID",
+      "produced": [
+        "Main track 2021-2024",
+        "Thematic T-275–T-275"
+      ],
+      "summary": {
+        "lawfare_max_id": 2024,
+        "next_main_id": 2025,
+        "thematic_last": "T-275",
+        "next_thematic": "T-276",
+        "t_studies_on_disk": 135
+      },
+      "status": "completed"
     }
   ],
-  "last_main_id": 1985,
-  "next_available": 1986,
-  "updated": "2026-10-18"
+  "last_main_id": 2031,
+  "next_available": 2032,
+  "updated": "2026-11-11"
 }

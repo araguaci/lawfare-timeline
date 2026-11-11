@@ -1,0 +1,447 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Sala de Situação · República Sequestrada</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: mesma identidade de "A Arte do Silêncio" — tira de bambu, seções por faixa, bronze como único acento; mapa em camadas verticais que empilham no celular */
+:root{
+  --paper:#e9ece6; --paper-2:#dde2da; --paper-3:#d2d9cf; --ink:#17201c; --ink-2:#47524c; --rule:#b9c2ba;
+  --bronze:#8a5a1c; --bronze-soft:#e5d3b4; --go:#2f6b4a; --hold:#9a6b12; --stop:#9b2f24; --info:#2f5a78;
+  --display:"Shippori Mincho","Songti SC","Georgia",serif;
+  --body:"Work Sans","Helvetica Neue",Arial,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#111714; --paper-2:#18201c; --paper-3:#1f2924; --ink:#e3e8e3; --ink-2:#a3aea7; --rule:#2c3832;
+  --bronze:#d4a35a; --bronze-soft:#3a2e1c; --go:#6fbf8f; --hold:#e0b250; --stop:#e57a6c; --info:#7fb2d6; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#111714; --paper-2:#18201c; --paper-3:#1f2924; --ink:#e3e8e3; --ink-2:#a3aea7; --rule:#2c3832;
+  --bronze:#d4a35a; --bronze-soft:#3a2e1c; --go:#6fbf8f; --hold:#e0b250; --stop:#e57a6c; --info:#7fb2d6; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;padding-inline:20px;padding-block:0 64px}
+.wrap{max-width:960px;margin-inline:auto}
+.read{max-width:68ch}
+h1,h2,h3{font-family:var(--display);line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:800}
+h3{font-size:1.15rem;font-weight:700}
+p{margin:0}
+ul{margin:0}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bronze)}
+section{padding-block:56px;border-top:1px solid var(--rule);display:grid;gap:22px}
+:focus-visible{outline:2px solid var(--bronze);outline-offset:3px}
+.muted{color:var(--ink-2)}
+.mono{font-family:var(--mono);font-size:.8rem}
+
+/* nav */
+.toc{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--rule);padding-block:10px;display:flex;gap:6px 16px;flex-wrap:wrap;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase}
+.toc a{color:var(--ink-2);text-decoration:none}
+.toc a:hover{color:var(--bronze)}
+
+/* hero */
+.hero{padding-block:48px;display:grid;gap:20px}
+.seal{width:64px;height:64px;border:3px solid var(--bronze);border-radius:6px;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:1.8rem;color:var(--bronze);transform:rotate(-4deg)}
+.hero h1{font-size:clamp(2.4rem,7vw,4.2rem);font-weight:800}
+.lede{font-size:1.12rem;color:var(--ink-2)}
+.thesis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.thesis div{background:var(--paper);padding:16px;display:grid;gap:4px;align-content:start}
+.thesis b{font-family:var(--display);font-size:1.05rem}
+.thesis span{font-size:.92rem;color:var(--ink-2)}
+
+/* system map */
+.flow{display:grid;gap:0}
+.layer{display:grid;grid-template-columns:150px 1fr;gap:18px;padding:18px;background:var(--paper-2);border:1px solid var(--rule);border-radius:6px}
+.layer .tag{display:grid;gap:4px;align-content:start}
+.layer .tag b{font-family:var(--display);font-size:1.25rem}
+.layer .tag small{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--bronze)}
+.layer .q{font-size:.88rem;color:var(--ink-2)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;align-content:start;min-width:0}
+.chip{font-size:.85rem;padding:5px 10px;border-radius:4px;background:var(--paper);border:1px solid var(--rule)}
+.chip i{font-style:normal;font-family:var(--mono);font-size:.7rem;color:var(--ink-2);margin-left:6px}
+.layer.core{background:var(--bronze-soft);border-color:var(--bronze)}
+.layer.gate{border:2px solid var(--bronze)}
+.arrow{display:grid;place-items:center;height:34px;color:var(--bronze);font-family:var(--mono);font-size:.72rem;letter-spacing:.06em}
+.arrow span::before{content:"↓ ";font-size:1rem}
+.loop{border:1px dashed var(--bronze);border-radius:6px;padding:12px 16px;font-size:.92rem;color:var(--ink-2);margin-top:14px}
+.loop b{color:var(--bronze);font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;margin-right:8px}
+@media (max-width:620px){.layer{grid-template-columns:1fr}}
+
+/* fronts */
+.fronts{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}
+.front{border:1px solid var(--rule);border-radius:6px;padding:18px;display:grid;gap:10px;align-content:start}
+.front .code{font-family:var(--mono);font-size:.72rem;color:var(--bronze);letter-spacing:.1em}
+.front p{font-size:.93rem;color:var(--ink-2)}
+.front ul{padding-left:1.1em;font-size:.92rem;display:grid;gap:3px}
+.front .hook{font-size:.88rem;border-top:1px solid var(--rule);padding-top:8px}
+.front .hook b{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);display:block}
+
+/* inventory */
+.tablewrap{overflow-x:auto;border:1px solid var(--rule);border-radius:6px}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:.92rem}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--rule)}
+tbody tr:last-child td{border-bottom:0}
+th{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);font-weight:600;background:var(--paper-2);position:sticky;top:0}
+td:first-child{font-weight:600}
+td.layer-c{font-family:var(--mono);font-size:.74rem;color:var(--ink-2);white-space:nowrap}
+.pill{display:inline-block;font-family:var(--mono);font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;padding:2px 8px;border-radius:99px;border:1px solid currentColor;white-space:nowrap}
+.s-live{color:var(--go)} .s-work{color:var(--hold)} .s-audit{color:var(--info)} .s-new{color:var(--stop)}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.filters button{font:600 .74rem var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border:1px solid var(--rule);background:transparent;color:var(--ink-2);border-radius:4px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* principles */
+.principles{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.pr{display:grid;gap:6px;align-content:start}
+.pr small{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--bronze)}
+.pr p{font-size:.94rem;color:var(--ink-2)}
+
+/* phases */
+.phases{display:grid;gap:16px}
+.phase{display:grid;grid-template-columns:170px 1fr;gap:20px;border:1px solid var(--rule);border-radius:6px;padding:20px}
+.phase .when{display:grid;gap:6px;align-content:start}
+.phase .when .n{font-family:var(--display);font-weight:800;font-size:2.2rem;color:var(--bronze);line-height:1}
+.phase .when .d{font-family:var(--mono);font-size:.74rem;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.phase .what{display:grid;gap:12px;min-width:0}
+.phase .what ul{padding-left:1.1em;display:grid;gap:4px;font-size:.94rem}
+.done{font-size:.9rem;background:var(--paper-2);border-radius:4px;padding:10px 12px}
+.done b{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--go);margin-right:6px}
+.bar{display:grid;grid-template-columns:2fr 4fr 4fr 3fr;gap:3px;font-family:var(--mono);font-size:.68rem;letter-spacing:.04em;text-transform:uppercase}
+.bar div{background:var(--paper-3);padding:8px 6px;border-radius:3px;text-align:center;color:var(--ink-2)}
+.bar div:first-child{background:var(--bronze);color:var(--paper)}
+@media (max-width:640px){.phase{grid-template-columns:1fr}.bar{grid-template-columns:1fr 1fr}}
+
+/* calendar */
+.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.day{border:1px solid var(--rule);border-radius:4px;padding:10px;display:grid;gap:4px;align-content:start;min-width:0}
+.day .dn{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--bronze)}
+.day b{font-size:.9rem;line-height:1.3}
+.day span{font-size:.8rem;color:var(--ink-2)}
+.day.rest{background:var(--paper-2)}
+@media (max-width:760px){.week{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* risks */
+.risks{display:grid;gap:10px}
+.risk{display:grid;grid-template-columns:110px 1fr 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule);align-items:start}
+.risk:last-child{border-bottom:0}
+.risk .lv{justify-self:start}
+.risk b{display:block;font-family:var(--display)}
+.risk p{font-size:.92rem;color:var(--ink-2)}
+@media (max-width:640px){.risk{grid-template-columns:1fr;gap:6px}}
+
+/* kpis */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.kpi{background:var(--paper-2);border-radius:6px;padding:16px;display:grid;gap:4px;align-content:start}
+.kpi .t{font-family:var(--mono);font-size:1.15rem;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+.kpi .l{font-size:.9rem}
+.kpi .h{font-size:.8rem;color:var(--ink-2)}
+
+/* actions */
+.actions{list-style:none;padding:0;margin:0;display:grid;gap:0;counter-reset:a}
+.actions li{counter-increment:a;border-bottom:1px solid var(--rule)}
+.actions label{display:grid;grid-template-columns:28px 34px 1fr;gap:10px;align-items:start;padding:12px 0;cursor:pointer}
+.actions label::before{content:counter(a,decimal-leading-zero);grid-column:2;grid-row:1;font-family:var(--mono);font-size:.8rem;color:var(--bronze);padding-top:2px}
+.actions input{grid-column:1;grid-row:1;width:18px;height:18px;margin:3px 0 0;accent-color:var(--bronze)}
+.actions .tx{grid-column:3;grid-row:1}
+.actions .tx b{display:block;font-weight:600}
+.actions .tx span{font-size:.88rem;color:var(--ink-2)}
+.actions input:checked ~ .tx b{text-decoration:line-through;color:var(--ink-2)}
+.progress{font-family:var(--mono);font-size:.8rem;color:var(--ink-2)}
+.progress b{color:var(--bronze)}
+
+.note{background:var(--bronze-soft);border-radius:6px;padding:16px 18px;display:grid;gap:6px;font-size:.95rem}
+.note b{font-family:var(--display)}
+footer{padding-block:40px 0;border-top:1px solid var(--rule);color:var(--ink-2);font-size:.85rem;display:grid;gap:6px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+</style>
+
+<div class="wrap">
+
+<nav class="toc" aria-label="Seções">
+  <a href="#mapa">Mapa</a><a href="#frentes">Frentes</a><a href="#ativos">Ativos</a><a href="#principios">Princípios</a><a href="#plano">Plano 90 dias</a><a href="#calendario">Calendário</a><a href="#riscos">Riscos</a><a href="#metricas">Métricas</a><a href="#acoes">Próximas ações</a>
+</nav>
+
+<header class="hero">
+  <div class="seal" aria-hidden="true">圖</div>
+  <p class="eyebrow">Plano estratégico de execução · hub República Sequestrada · out/2026 – jan/2027</p>
+  <h1>Sala de Situação</h1>
+  <p class="lede read">Hoje o acervo é um conjunto de propriedades fortes que funcionam isoladas. Este plano transforma o hub em um sistema único: a mesma evidência, classificada uma vez, alimenta análise, filtro e distribuição, e o retorno do público volta para a base. Treze semanas, quatro fases, uma regra: nada sai sem passar pela taxonomia de evidência e pelo filtro de A Arte do Silêncio.</p>
+  <div class="thesis">
+    <div><b>Credibilidade é o ativo</b><span>Cada post é uma porta para uma ficha com fonte e classificação ev-*. Quem checar, confirma.</span></div>
+    <div><b>Um fato, um endereço</b><span>Toda evidência tem ID único e URL canônica no hub. Propriedades e posts apontam para ela.</span></div>
+    <div><b>Padrões, não episódios</b><span>P01–P13 ligam casos que a imprensa trata separados. O hub vende a conexão.</span></div>
+    <div><b>Silêncio sobre o que está em preparo</b><span>Pauta em apuração não aparece em público. Anuncia-se o dossiê pronto.</span></div>
+  </div>
+</header>
+
+<section id="mapa">
+  <p class="eyebrow">Mapa do sistema</p>
+  <h2>Da fonte primária ao público, e de volta</h2>
+  <p class="read">Seis camadas em sequência. A quarta é um portão: o que não passa por ela não é publicado. Cada camada responde a uma pergunta.</p>
+  <div class="flow">
+    <div class="layer">
+      <div class="tag"><small>Camada 1</small><b>Coleta</b><span class="q">O que aconteceu, segundo quem?</span></div>
+      <div class="chips"><span class="chip">firecrawl CLI<i>notícias</i></span><span class="chip">Agentes n8n<i>monitoramento</i></span><span class="chip">OpenDataSUS / SIM<i>dados</i></span><span class="chip">@impostometrobot<i>diário</i></span><span class="chip">Diários oficiais, STF, TSE<i>primária</i></span><span class="chip">CEBC, ARPEN, Receita<i>séries</i></span></div>
+    </div>
+    <div class="arrow"><span>triagem e ficha</span></div>
+    <div class="layer core">
+      <div class="tag"><small>Camada 2 · núcleo</small><b>Evidência</b><span class="q">É verdade? Com que grau?</span></div>
+      <div class="chips"><span class="chip">Taxonomia ev-confirmed / contested / alleged / inference</span><span class="chip">Padrões P01–P13</span><span class="chip">Relações REL-*</span><span class="chip">Correlações CR-*</span><span class="chip">Teste de genericização</span><span class="chip">Registro central de IDs</span></div>
+    </div>
+    <div class="arrow"><span>consulta e cruzamento</span></div>
+    <div class="layer">
+      <div class="tag"><small>Camada 3</small><b>Análise</b><span class="q">O que isso significa? O que vem depois?</span></div>
+      <div class="chips"><span class="chip">HORIZONTE<i>previsão</i></span><span class="chip">discourse-analyzer<i>enquadramento</i></span><span class="chip">PsychoProfiler<i>discurso público</i></span><span class="chip">Arsenal Estratégico<i>47 frameworks</i></span><span class="chip">Matriz FE01–FE04</span></div>
+    </div>
+    <div class="arrow"><span>proposta de pauta</span></div>
+    <div class="layer gate">
+      <div class="tag"><small>Camada 4 · portão</small><b>Filtro</b><span class="q">Publicar agora ajuda ou entrega?</span></div>
+      <div class="chips"><span class="chip">A Arte do Silêncio<i>7 perguntas</i></span><span class="chip">Revisão jurídica<i>skill direito-brasileiro</i></span><span class="chip">LGPD<i>dados de não-públicos</i></span><span class="chip">Checagem de fonte primária</span></div>
+    </div>
+    <div class="arrow"><span>aprovado</span></div>
+    <div class="layer">
+      <div class="tag"><small>Camada 5</small><b>Distribuição</b><span class="q">Em que terreno, em que formato?</span></div>
+      <div class="chips"><span class="chip">x-lawfare-playbook<i>templates A–E</i></span><span class="chip">O Que Daria Pra Comprar</span><span class="chip">Conta da Peça</span><span class="chip">Dossiês longform no hub</span><span class="chip">Diário dev / Jekyll</span></div>
+    </div>
+    <div class="arrow"><span>reação do público</span></div>
+    <div class="layer">
+      <div class="tag"><small>Camada 6</small><b>Retorno</b><span class="q">O que funcionou? O que estava errado?</span></div>
+      <div class="chips"><span class="chip">Métricas por eixo</span><span class="chip">Cliques no 1º reply → hub</span><span class="chip">Contestações recebidas</span><span class="chip">Log público de correções</span></div>
+    </div>
+  </div>
+  <p class="loop"><b>Ciclo</b>Contestação procedente rebaixa ou corrige a ficha na Camada 2, e a correção é publicada. Uma correção pública aumenta a credibilidade do hub mais do que dez posts certos.</p>
+</section>
+
+<section id="frentes">
+  <p class="eyebrow">Arquitetura temática</p>
+  <h2>Cinco frentes e uma doutrina</h2>
+  <p class="read">O hub deixa de ser organizado por site e passa a ser organizado por tema. Cada frente tem propriedades, padrões dominantes e um gancho que traduz o assunto para quem não acompanha.</p>
+  <div class="fronts">
+    <div class="front"><span class="code">F1 · INSTITUIÇÕES</span><h3>Justiça e poder</h3><p>Abuso institucional, lawfare e operações anticorrupção como série histórica desde 1990.</p><ul><li>Lawfare Timeline (1.700+ entradas)</li><li>O Ministro Paladino · INQ 4.781</li><li>Moraes · Arte da Guerra 2026</li><li>Série anticorrupção: Castelo de Areia → Compliance Zero; próximas Sem Desconto e Carbono Oculto</li></ul><p class="hook"><b>Gancho</b>Os mesmos atores aparecem em operações diferentes. A linha do tempo mostra quem.</p></div>
+    <div class="front"><span class="code">F2 · DINHEIRO PÚBLICO</span><h3>Quanto custa e quem paga</h3><p>Arrecadação, gasto, privilégios e o efeito disso em quem empreende.</p><ul><li>O Que Daria Pra Comprar</li><li>Conta da Peça</li><li>Fiscalizando a Janja</li><li>Migração fiscal (CR-0004 a CR-0006)</li><li>Turismo nos planos de governo 2026</li></ul><p class="hook"><b>Gancho</b>Valor abstrato convertido em hospital, creche, ambulância.</p></div>
+    <div class="front"><span class="code">F3 · SOBERANIA</span><h3>Geopolítica e ativos</h3><p>Presença estrangeira em infraestrutura, terra e energia, estado por estado.</p><ul><li>O Dragão e a Onça (17 capítulos, 12 estados)</li><li>Dossiês de investimento chinês (CEBC 2007–2025)</li><li>Matriz de Falhas Estruturantes FE01–FE04</li><li>Reposicionamento de Minas Gerais (Cemig, PCHs)</li></ul><p class="hook"><b>Gancho</b>Mapa do seu estado: o que já tem dono estrangeiro.</p></div>
+    <div class="front"><span class="code">F4 · CRIME ORGANIZADO</span><h3>Facções como ameaça transnacional</h3><p>PCC e CV como estruturas financeiras, culturais e políticas.</p><ul><li>gosurf.site (corpus de inteligência)</li><li>Padrões P11 (setor cultural) e P12 (administração fiduciária)</li><li>Carbono Oculto e vínculos financeiros</li></ul><p class="hook"><b>Gancho</b>Siga o dinheiro, não o tiroteio.</p></div>
+    <div class="front"><span class="code">F5 · VIDA E CONSUMO</span><h3>O que os dados oficiais não dizem</h3><p>Estatística vital, rotulagem e regulação que afetam o cotidiano.</p><ul><li>Série Demográfica (SIM/OpenDataSUS, subnotificação)</li><li>Sabor Brazil (14 entradas, 3 trilhas)</li><li>Observatório Civil BR</li><li>Ciclos do Brasil</li></ul><p class="hook"><b>Gancho</b>O número caiu, ou o dado ainda não chegou?</p></div>
+    <div class="front" style="background:var(--paper-2)"><span class="code">D0 · DOUTRINA</span><h3>Como o hub pensa e fala</h3><p>Camada transversal: metodologia de evidência e disciplina de comunicação.</p><ul><li>A Arte do Silêncio</li><li>Arsenal Estratégico</li><li>Página pública de metodologia ev-*</li><li>Política de correções</li></ul><p class="hook"><b>Gancho</b>Mostre o método. Ele é o que diferencia o hub de perfil de opinião.</p></div>
+  </div>
+</section>
+
+<section id="ativos">
+  <p class="eyebrow">Inventário</p>
+  <h2>Todos os ativos, onde se encaixam e o próximo passo</h2>
+  <p class="read">"A auditar" marca o que precisa de levantamento antes de qualquer decisão: o estado atual não está registrado.</p>
+  <div class="filters" role="group" aria-label="Filtrar por estado">
+    <button type="button" data-f="all" aria-pressed="true">Todos</button>
+    <button type="button" data-f="live" aria-pressed="false">No ar</button>
+    <button type="button" data-f="work" aria-pressed="false">Em obra</button>
+    <button type="button" data-f="audit" aria-pressed="false">A auditar</button>
+    <button type="button" data-f="new" aria-pressed="false">A criar</button>
+  </div>
+  <div class="tablewrap">
+    <table id="inv">
+      <thead><tr><th>Ativo</th><th>Frente</th><th>Camada</th><th>Estado</th><th>Próxima ação</th></tr></thead>
+      <tbody>
+        <tr data-s="live"><td>Hub República Sequestrada</td><td>Todas</td><td class="layer-c">2 Evidência</td><td><span class="pill s-live">No ar</span></td><td>Virar índice temático por frente, não por site</td></tr>
+        <tr data-s="work"><td>Lawfare Timeline</td><td>F1</td><td class="layer-c">2 Evidência</td><td><span class="pill s-work">Migração Astro</span></td><td>Concluir migração; expor JSON público por ID</td></tr>
+        <tr data-s="live"><td>O Ministro Paladino · INQ 4.781</td><td>F1</td><td class="layer-c">5 Distribuição</td><td><span class="pill s-live">No ar</span></td><td>Ligar cada marco a ID da Lawfare Timeline</td></tr>
+        <tr data-s="live"><td>Moraes · Arte da Guerra 2026</td><td>F1</td><td class="layer-c">3 Análise</td><td><span class="pill s-live">No ar</span></td><td>Referenciar A Arte do Silêncio como doutrina-mãe</td></tr>
+        <tr data-s="work"><td>Série anticorrupção</td><td>F1</td><td class="layer-c">3 Análise</td><td><span class="pill s-work">Em curso</span></td><td>Sem Desconto e Carbono Oculto; matriz de atores transversais</td></tr>
+        <tr data-s="live"><td>O Que Daria Pra Comprar</td><td>F2</td><td class="layer-c">5 Distribuição</td><td><span class="pill s-live">No ar</span></td><td>Automatizar leitura diária via n8n</td></tr>
+        <tr data-s="live"><td>Conta da Peça</td><td>F2</td><td class="layer-c">5 Distribuição</td><td><span class="pill s-live">No ar</span></td><td>Padronizar rodapé com fonte e link ao hub</td></tr>
+        <tr data-s="audit"><td>Fiscalizando a Janja</td><td>F2</td><td class="layer-c">2 Evidência</td><td><span class="pill s-audit">A auditar</span></td><td>Revisar classificação ev-* de cada entrada</td></tr>
+        <tr data-s="work"><td>Pesquisa migração fiscal</td><td>F2</td><td class="layer-c">2 Evidência</td><td><span class="pill s-work">Em curso</span></td><td>Investigação MEI/ME/EPP no Paraguai (CR-0007)</td></tr>
+        <tr data-s="live"><td>Turismo nos planos 2026</td><td>F2</td><td class="layer-c">3 Análise</td><td><span class="pill s-live">No ar</span></td><td>Arquivar como registro pós-eleição</td></tr>
+        <tr data-s="live"><td>O Dragão e a Onça</td><td>F3</td><td class="layer-c">3 Análise</td><td><span class="pill s-live">No ar</span></td><td>Versão por estado, para distribuição local</td></tr>
+        <tr data-s="live"><td>gosurf.site</td><td>F4</td><td class="layer-c">2 Evidência</td><td><span class="pill s-live">No ar</span></td><td>Unificar IDs REL-* com registro central</td></tr>
+        <tr data-s="live"><td>Série Demográfica</td><td>F5</td><td class="layer-c">2 Evidência</td><td><span class="pill s-live">No ar</span></td><td>Atualização quando ARPEN/SIM liberar 2025</td></tr>
+        <tr data-s="live"><td>Sabor Brazil</td><td>F5</td><td class="layer-c">2 Evidência</td><td><span class="pill s-live">No ar</span></td><td>catalog.json já é o modelo para as outras propriedades</td></tr>
+        <tr data-s="audit"><td>Observatório Civil BR</td><td>F5</td><td class="layer-c">2 Evidência</td><td><span class="pill s-audit">A auditar</span></td><td>Levantar escopo, entradas e estado</td></tr>
+        <tr data-s="live"><td>Ciclos do Brasil</td><td>F5</td><td class="layer-c">3 Análise</td><td><span class="pill s-live">No ar</span></td><td>Ligar ao hub como contexto histórico</td></tr>
+        <tr data-s="live"><td>A Arte do Silêncio</td><td>D0</td><td class="layer-c">4 Filtro</td><td><span class="pill s-live">No ar</span></td><td>Embutir o filtro como etapa do pipeline</td></tr>
+        <tr data-s="audit"><td>Arsenal Estratégico</td><td>D0</td><td class="layer-c">3 Análise</td><td><span class="pill s-audit">A auditar</span></td><td>Definir uso interno vs. público</td></tr>
+        <tr data-s="audit"><td>HORIZONTE</td><td>D0</td><td class="layer-c">3 Análise</td><td><span class="pill s-audit">A auditar</span></td><td>Gerar alerta semanal de janelas de pauta</td></tr>
+        <tr data-s="audit"><td>discourse-analyzer · PsychoProfiler</td><td>D0</td><td class="layer-c">3 Análise</td><td><span class="pill s-audit">A auditar</span></td><td>Restringir a discurso público de figuras públicas</td></tr>
+        <tr data-s="live"><td>x-lawfare-playbook</td><td>Todas</td><td class="layer-c">5 Distribuição</td><td><span class="pill s-live">No ar</span></td><td>Um template por frente; banco de ganchos por padrão P</td></tr>
+        <tr data-s="new"><td>Registro central de evidências</td><td>Todas</td><td class="layer-c">2 Evidência</td><td><span class="pill s-new">A criar</span></td><td>JSON único com ID global, ev-*, padrão P, propriedade</td></tr>
+        <tr data-s="new"><td>Página de metodologia + correções</td><td>D0</td><td class="layer-c">6 Retorno</td><td><span class="pill s-new">A criar</span></td><td>Publicar taxonomia, teste de genericização e log</td></tr>
+        <tr data-s="new"><td>Pipeline n8n de pauta</td><td>Todas</td><td class="layer-c">1 → 4</td><td><span class="pill s-new">A criar</span></td><td>Coleta → ficha → análise → filtro → fila de publicação</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="principios">
+  <p class="eyebrow">Princípios de operação</p>
+  <h2>Sun Tzu aplicado ao hub</h2>
+  <div class="principles">
+    <div class="pr"><small>Cap. IV · invulnerabilidade</small><h3>Primeiro se defende, depois ataca</h3><p>Nenhuma afirmação sem fonte primária e classificação. O adversário só pode atacar o que está mal sustentado.</p></div>
+    <div class="pr"><small>Cap. VI · terreno</small><h3>Ocupe o tema antes</h3><p>Quando HORIZONTE indicar uma janela (julgamento, votação, data oficial), o dossiê já deve estar pronto na fila.</p></div>
+    <div class="pr"><small>Cap. V · ordinário e extraordinário</small><h3>Ritmo e golpe</h3><p>Presença diária com dados (F2, F5). Dossiê grande lançado sem aviso, completo, uma vez por mês.</p></div>
+    <div class="pr"><small>Cap. VII · sinais</small><h3>Uma voz por frente</h3><p>Mesmo vocabulário, mesmos códigos P, mesma identidade visual em todas as propriedades.</p></div>
+    <div class="pr"><small>Cap. XI · a tropa</small><h3>Apuração fica no núcleo</h3><p>Repositórios de trabalho em curso privados. Só o publicado vai para o repo aberto.</p></div>
+    <div class="pr"><small>Cap. XII · não por raiva</small><h3>Regra das 24 horas</h3><p>Nenhuma resposta a ataque ou polêmica do dia antes de passar pelo filtro no dia seguinte.</p></div>
+  </div>
+  <div class="note"><b>Linha que não se cruza</b><p>O hub é jornalismo de evidência sobre agentes públicos e estruturas de poder. Ele não publica dado pessoal de cidadão privado, não fabrica fato e não usa os perfis psicológicos como acusação. Essa disciplina é o que mantém o hub defensável em juízo e crível para quem ainda não concorda.</p></div>
+</section>
+
+<section id="plano">
+  <p class="eyebrow">Plano de execução</p>
+  <h2>Treze semanas, quatro fases</h2>
+  <div class="bar" aria-hidden="true"><div>F0 · 2 sem</div><div>F1 · 4 sem</div><div>F2 · 4 sem</div><div>F3 · 3 sem</div></div>
+  <div class="phases">
+    <div class="phase">
+      <div class="when"><span class="n">0</span><b>Base e auditoria</b><span class="d">12 out – 25 out 2026</span></div>
+      <div class="what">
+        <ul>
+          <li>Auditar Observatório Civil BR, Fiscalizando a Janja, Arsenal, HORIZONTE e os analisadores: escopo, entradas, estado.</li>
+          <li>Definir o esquema do registro central: <span class="mono">id, propriedade, frente, ev, padrao[], rel[], fonte_primaria, data, url_canonica</span>.</li>
+          <li>Fechar a lista oficial P01–P13 com definição de uma linha cada.</li>
+          <li>Separar repositórios: trabalho em curso privado, publicado aberto.</li>
+          <li>Durante o 2º turno (25 out), publicar só a partir de base já verificada. Nada de propriedade nova nesse período.</li>
+        </ul>
+        <p class="done"><b>Pronto quando</b>todo ativo do inventário tem estado conhecido e o esquema do registro está escrito.</p>
+      </div>
+    </div>
+    <div class="phase">
+      <div class="when"><span class="n">1</span><b>Integração</b><span class="d">26 out – 22 nov 2026</span></div>
+      <div class="what">
+        <ul>
+          <li>Concluir a migração Astro da Lawfare Timeline e expor o JSON por ID.</li>
+          <li>Cada propriedade publica um <span class="mono">catalog.json</span> no padrão do Sabor Brazil.</li>
+          <li>O hub agrega os catálogos no build e gera o registro central.</li>
+          <li>Busca única com Pagefind sobre todas as propriedades.</li>
+          <li>Reorganizar a home do hub por frente (F1–F5 + D0).</li>
+          <li>Publicar a página de metodologia e o log de correções.</li>
+        </ul>
+        <p class="done"><b>Pronto quando</b>qualquer evidência de qualquer propriedade abre por URL canônica no hub e aparece na busca.</p>
+      </div>
+    </div>
+    <div class="phase">
+      <div class="when"><span class="n">2</span><b>Motor de pauta</b><span class="d">23 nov – 20 dez 2026</span></div>
+      <div class="what">
+        <ul>
+          <li>Fluxo n8n: coleta (firecrawl, fontes oficiais) → rascunho de ficha → fila de revisão humana.</li>
+          <li>Etapa obrigatória de filtro: as 7 perguntas de A Arte do Silêncio registradas na ficha antes de liberar.</li>
+          <li>Revisão jurídica automática de rascunho com a skill direito-brasileiro para F1 e F2.</li>
+          <li>HORIZONTE gera, toda segunda, as janelas de pauta da semana.</li>
+          <li>Automatizar O Que Daria Pra Comprar a partir do post diário.</li>
+        </ul>
+        <p class="done"><b>Pronto quando</b>uma pauta vai da fonte à fila de publicação sem passo manual além da revisão.</p>
+      </div>
+    </div>
+    <div class="phase">
+      <div class="when"><span class="n">3</span><b>Distribuição e retorno</b><span class="d">21 dez 2026 – 10 jan 2027</span></div>
+      <div class="what">
+        <ul>
+          <li>Playbook do X com um template por frente e ganchos por padrão P.</li>
+          <li>Calendário semanal em operação (abaixo), no limite de 2 posts/dia por conta.</li>
+          <li>Primeiro dossiê extraordinário: série anticorrupção com matriz de atores transversais.</li>
+          <li>Painel de métricas por frente e revisão mensal de correções.</li>
+          <li>Retrospectiva do 1º trimestre e plano do seguinte.</li>
+        </ul>
+        <p class="done"><b>Pronto quando</b>o ciclo completo roda por 3 semanas seguidas e a primeira revisão de métricas está registrada.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="calendario">
+  <p class="eyebrow">Ritmo semanal</p>
+  <h2>Calendário editorial</h2>
+  <p class="read">Ordinário de segunda a sexta, extraordinário no sábado, silêncio no domingo. Respeita o limite de 2 posts/dia, link sempre no primeiro reply e mídia obrigatória.</p>
+  <div class="week">
+    <div class="day"><span class="dn">Seg</span><b>F2 Dinheiro público</b><span>Equivalência do dia + janela HORIZONTE</span></div>
+    <div class="day"><span class="dn">Ter</span><b>F1 Instituições</b><span>Marco da Lawfare Timeline ligado ao noticiário</span></div>
+    <div class="day"><span class="dn">Qua</span><b>F5 Vida e consumo</b><span>Dado oficial com leitura correta</span></div>
+    <div class="day"><span class="dn">Qui</span><b>F3 Soberania</b><span>Um estado, um ativo</span></div>
+    <div class="day"><span class="dn">Sex</span><b>F4 Crime organizado</b><span>Siga o dinheiro</span></div>
+    <div class="day"><span class="dn">Sáb</span><b>Dossiê</b><span>Longform ou thread de padrão P (quinzenal)</span></div>
+    <div class="day rest"><span class="dn">Dom</span><b>Silêncio</b><span>Métricas, correções e fila da semana</span></div>
+  </div>
+</section>
+
+<section id="riscos">
+  <p class="eyebrow">Riscos e defesas</p>
+  <h2>O que pode derrubar o hub</h2>
+  <div class="risks">
+    <div class="risk"><span class="pill lv s-new">Alto</span><div><b>Ação judicial</b><p>Afirmação sobre pessoa sem sustentação suficiente.</p></div><p>Classificação ev-* visível em cada ficha, fonte primária linkada, revisão jurídica em F1/F2, canal de direito de resposta.</p></div>
+    <div class="risk"><span class="pill lv s-new">Alto</span><div><b>Erro factual viral</b><p>Um número errado anula meses de trabalho.</p></div><p>Teste de genericização, checagem antes do filtro, log público de correções com data.</p></div>
+    <div class="risk"><span class="pill lv s-work">Médio</span><div><b>Operador único</b><p>Todo o sistema depende de uma pessoa.</p></div><p>Automação n8n até a fila, documentação de cada etapa, metodologia pública que permite colaboração.</p></div>
+    <div class="risk"><span class="pill lv s-work">Médio</span><div><b>Plataforma</b><p>Redução de alcance, suspensão de conta.</p></div><p>Hub próprio como destino, regras do playbook, conteúdo replicável em outras redes.</p></div>
+    <div class="risk"><span class="pill lv s-work">Médio</span><div><b>Vazamento de pauta</b><p>Apuração exposta antes da hora.</p></div><p>Repos privados, nada de pauta em grupo grande, anúncio só do dossiê pronto.</p></div>
+    <div class="risk"><span class="pill lv s-audit">Baixo</span><div><b>LGPD</b><p>Dado pessoal de cidadão comum em fichas.</p></div><p>Somente agentes públicos e pessoas jurídicas; revisão com a skill lgpd-checker antes do build.</p></div>
+  </div>
+</section>
+
+<section id="metricas">
+  <p class="eyebrow">Indicadores</p>
+  <h2>Como saber se está funcionando</h2>
+  <p class="read">As metas ficam em aberto até a auditoria da Fase 0 dar a linha de base. Sem número de partida, meta é chute.</p>
+  <div class="kpis">
+    <div class="kpi"><span class="t">fichas/mês</span><span class="l">Evidências novas no registro</span><span class="h">Capacidade do motor</span></div>
+    <div class="kpi"><span class="t">% ev-confirmed</span><span class="l">Proporção de fichas confirmadas</span><span class="h">Solidez da base</span></div>
+    <div class="kpi"><span class="t">horas</span><span class="l">Tempo do fato à publicação</span><span class="h">Chegar primeiro ao terreno</span></div>
+    <div class="kpi"><span class="t">correções</span><span class="l">Correções publicadas por mês</span><span class="h">Zero não é a meta; esconder é o erro</span></div>
+    <div class="kpi"><span class="t">cliques</span><span class="l">Do 1º reply para o hub</span><span class="h">O post leva à evidência?</span></div>
+    <div class="kpi"><span class="t">citações</span><span class="l">Menções externas ao hub</span><span class="h">Autoridade conquistada</span></div>
+  </div>
+</section>
+
+<section id="acoes">
+  <p class="eyebrow">Próximas ações</p>
+  <h2>As dez primeiras tarefas</h2>
+  <p class="progress" id="prog" aria-live="polite"><b>0</b> de 10 concluídas</p>
+  <ol class="actions" id="actions">
+    <li><label><input type="checkbox" id="a1"><span class="tx"><b>Levantar estado de Observatório Civil BR e Fiscalizando a Janja</b><span>Número de entradas, última atualização, classificação usada</span></span></label></li>
+    <li><label><input type="checkbox" id="a2"><span class="tx"><b>Auditar Arsenal, HORIZONTE e analisadores</b><span>O que roda, onde, e o que é uso interno</span></span></label></li>
+    <li><label><input type="checkbox" id="a3"><span class="tx"><b>Escrever o esquema do registro central</b><span>JSON Schema com ID global, ev, padrão, rel, fonte, URL canônica</span></span></label></li>
+    <li><label><input type="checkbox" id="a4"><span class="tx"><b>Fechar a lista P01–P13</b><span>Uma linha de definição e um caso exemplar por padrão</span></span></label></li>
+    <li><label><input type="checkbox" id="a5"><span class="tx"><b>Separar repositórios privados e públicos</b><span>Apuração em curso fora do repo aberto</span></span></label></li>
+    <li><label><input type="checkbox" id="a6"><span class="tx"><b>Concluir migração Astro da Lawfare Timeline</b><span>Verificar o maior ID real no JSON antes de novas entradas</span></span></label></li>
+    <li><label><input type="checkbox" id="a7"><span class="tx"><b>Gerar catalog.json em cada propriedade</b><span>Copiar o formato do Sabor Brazil</span></span></label></li>
+    <li><label><input type="checkbox" id="a8"><span class="tx"><b>Reorganizar a home do hub por frente</b><span>F1–F5 e D0, cada uma com ganchos e últimas fichas</span></span></label></li>
+    <li><label><input type="checkbox" id="a9"><span class="tx"><b>Publicar metodologia e log de correções</b><span>Taxonomia ev-*, teste de genericização, como contestar</span></span></label></li>
+    <li><label><input type="checkbox" id="a10"><span class="tx"><b>Desenhar o fluxo n8n de pauta</b><span>Coleta → ficha → análise → filtro → fila</span></span></label></li>
+  </ol>
+  <p class="muted" style="font-size:.85rem">As marcações ficam salvas só neste navegador.</p>
+</section>
+
+<footer>
+  <p>Plano montado a partir do inventário de projetos existente. Ativos marcados "a auditar" precisam de levantamento antes de decisão.</p>
+  <p>Artes do Sul ◈</p>
+</footer>
+</div>
+
+<script>
+(function(){
+  // filtros do inventário
+  const btns=[...document.querySelectorAll('.filters button')];
+  const rows=[...document.querySelectorAll('#inv tbody tr')];
+  btns.forEach(b=>b.addEventListener('click',()=>{
+    btns.forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'));
+    const f=b.dataset.f;
+    rows.forEach(r=>{r.hidden=!(f==='all'||r.dataset.s===f);});
+  }));
+  // checklist com memória local
+  const KEY='sala-situacao-acoes';
+  const boxes=[...document.querySelectorAll('#actions input')];
+  const prog=document.getElementById('prog');
+  let saved={};
+  try{saved=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){saved={};}
+  boxes.forEach(b=>{b.checked=!!saved[b.id];});
+  function upd(){
+    const n=boxes.filter(b=>b.checked).length;
+    prog.innerHTML='<b>'+n+'</b> de '+boxes.length+' concluídas';
+  }
+  boxes.forEach(b=>b.addEventListener('change',()=>{
+    saved[b.id]=b.checked;
+    try{localStorage.setItem(KEY,JSON.stringify(saved));}catch(e){}
+    upd();
+  }));
+  upd();
+})();
+</script>
+
+</body></html>

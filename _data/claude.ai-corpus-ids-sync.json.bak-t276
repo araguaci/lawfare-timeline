@@ -1,0 +1,3053 @@
+{
+  "_meta": {
+    "schema_version": "1.1.0",
+    "generated": "2026-10-18",
+    "updated": "2026-11-11",
+    "session": "claude.ai — sessão editorial 2026-05-28 (Operação Rejeito, T-191, T-192, Flávio/Trump, posts P11)",
+    "purpose": "Mapa de sincronização de IDs — lawfare-timeline corpus",
+    "source_project": "gosurf.site / lawfare-timeline.vercel.app",
+    "maintainer": "@araguaci · AI Nativo Brasil · Artes do Sul Desenvolvimento Web",
+    "license": "CC0 1.0 Universal — Domínio Público Total",
+    "tracks": {
+      "main": {
+        "description": "Track principal — eventos institucionais, decisões judiciais, episódios políticos",
+        "id_range": "1–2024 (confirmed)",
+        "id_format": "integer",
+        "last_confirmed": 2024,
+        "last_jekyll_published": 2024,
+        "last_session_produced": 1762,
+        "notes": "lawfare.json confirmado até 2024. Próximo ID livre: 2025."
+      },
+      "thematic": {
+        "description": "Sub-corpus temático — análise estrutural de operações e padrões",
+        "id_range": "100–275",
+        "id_format": "integer",
+        "last_confirmed": 275,
+        "last_session_produced": 275,
+        "notes": "T-275 confirmado. Próximo thematic livre: T-276."
+      }
+    }
+  },
+  "tracks": {
+    "main": {
+      "description": "Track principal — IDs sequenciais do corpus histórico 1990–2026",
+      "confirmed_batches": [
+        {
+          "range": [
+            1,
+            999
+          ],
+          "status": "confirmed",
+          "notes": "Corpus histórico — operações, decisões, episódios 1990–2020."
+        },
+        {
+          "range": [
+            1000,
+            1399
+          ],
+          "status": "confirmed",
+          "notes": "Expansão 2020–2024. Lava Jato reversal, INQ 4781 origem, TSE/censura digital."
+        },
+        {
+          "range": [
+            1400,
+            1448
+          ],
+          "status": "confirmed",
+          "notes": "Batch confirmado em lawfare.json. Último ID verificado: 1448. Banco Master, CPI INSS, Op. Hydra 2026, penduricalhos 2025-2026."
+        },
+        {
+          "range": [
+            1449,
+            1510
+          ],
+          "status": "confirmed_partial",
+          "notes": "Merge 2026-05-29: IDs 1481-1505 (25 entries PCC/Ndrangheta + Carbono Oculto + crime organizado transnacional) integrados em lawfare.json. IDs 1449-1480 e 1506-1510 sem entradas (gap permanente aceito)."
+        },
+        {
+          "range": [
+            1511,
+            1526
+          ],
+          "status": "confirmed",
+          "notes": "Merge 2026-05-26. Biazucci 1511-1513; crise diplomática Brasil-EUA 1514-1524; Ramagem/ICE 1525-1526."
+        },
+        {
+          "range": [
+            1527,
+            1551
+          ],
+          "status": "confirmed",
+          "merge_pending": false,
+          "notes": "Merge lawfare.json 2026-10-18: Biomm 1527-1546, Zema 1547-1550, Homeschooling 1551.",
+          "source_files": [
+            "_data/processados/lawfare-1527-1546-biomm-renumerado.json",
+            "_data/processados/zema-1547-1550-renumerado.json"
+          ]
+        },
+        {
+          "range": [
+            1552,
+            1571
+          ],
+          "status": "confirmed",
+          "merge_pending": false,
+          "notes": "Merge lawfare.json 2026-10-18: Operação Rejeito 1552-1571.",
+          "source_files": [
+            "_data/processados/lawfare-batch-rejeito-1552-1571.json"
+          ]
+        },
+        {
+          "range": [
+            1572,
+            1576
+          ],
+          "status": "confirmed",
+          "merge_pending": false,
+          "notes": "Merge lawfare.json 2026-05-28: Flávio Bolsonaro / Trump / Escudo das Américas.",
+          "source_files": [
+            "_data/processados/lawfare-batch-flavio-trump-1572-1576.json"
+          ],
+          "entries_summary": [
+            {
+              "id": 1572,
+              "data": "2026-05-27",
+              "titulo": "Flávio Bolsonaro recebido por Trump na Casa Branca — promessa Escudo das Américas"
+            },
+            {
+              "id": 1573,
+              "data": "2026-05-27",
+              "titulo": "Flávio solicita a Trump designação do PCC e CV como organizações terroristas"
+            },
+            {
+              "id": 1574,
+              "data": "2026-05-27",
+              "titulo": "Viagem a Washington após filtração que vincula Flávio a Daniel Vorcaro"
+            },
+            {
+              "id": 1575,
+              "data": "2026-05-27",
+              "titulo": "Minerais críticos brasileiros como alternativa ao monopólio chinês — oferta a Trump"
+            },
+            {
+              "id": 1576,
+              "data": "2026-05-27",
+              "titulo": "Escudo das Américas — governo Lula opõe soberania; Flávio promete adesão se eleito"
+            }
+          ]
+        },
+        {
+          "range": [
+            1577,
+            1594
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo batches 2026-06-20: retroativo 1577-1583; fto 1584-1589; bloqueio-internet 1590-1594."
+        },
+        {
+          "range": [
+            1595,
+            1600
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo batches 2026-06-20: Acrônimo & Transcooper renumeração 1595-1600."
+        },
+        {
+          "range": [
+            1601,
+            1605
+          ],
+          "status": "confirmed",
+          "notes": "Merge teia-master 2026-06-29: IDs 1601–1605 (renumeração 1511–1515)."
+        },
+        {
+          "range": [
+            1606,
+            1608
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-06-29: main IDs 1606-1608."
+        },
+        {
+          "range": [
+            1609,
+            1611
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-07-09: main IDs 1609-1611."
+        },
+        {
+          "range": [
+            1612,
+            1612
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-07-09: main IDs 1612-1612."
+        },
+        {
+          "range": [
+            1612,
+            1612
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-07-09: main IDs 1612-1612."
+        },
+        {
+          "range": [
+            1613,
+            1618
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-07-09: main IDs 1613-1618."
+        },
+        {
+          "range": [
+            1619,
+            1619
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-07-09: main IDs 1619-1619."
+        },
+        {
+          "range": [
+            1577,
+            1620
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-07-18: main IDs 1577-1620."
+        },
+        {
+          "range": [
+            1577,
+            1578
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-07-18: main IDs 1577-1578."
+        },
+        {
+          "range": [
+            1621,
+            1623
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-07-18: main IDs 1621-1623."
+        },
+        {
+          "range": [
+            1625,
+            1625
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-07-18: main IDs 1625-1625."
+        },
+        {
+          "range": [
+            1626,
+            1627
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-07-19: main IDs 1626-1627."
+        },
+        {
+          "range": [
+            1628,
+            1628
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-07-19: main IDs 1628-1628."
+        },
+        {
+          "range": [
+            1629,
+            1630
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-07-20: main IDs 1629-1630."
+        },
+        {
+          "range": [
+            1631,
+            1634
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-07-20: main IDs 1631-1634."
+        },
+        {
+          "range": [
+            1635,
+            1635
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-07-21: main IDs 1635-1635."
+        },
+        {
+          "range": [
+            1636,
+            1638
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-07-22: main IDs 1636-1638."
+        },
+        {
+          "range": [
+            1639,
+            1653
+          ],
+          "status": "confirmed",
+          "merge_date": "2026-07-24",
+          "series": "O Dragão e a Onça — Brasil/Federal",
+          "notes": "Geração automatizada série O Dragão e a Onça (Brasil/Federal regional batch). 15 entradas (1639-1653). Período: 2003-2012. Assets: dragao-onca-brasil-federal.webp.",
+          "source_files": [
+            "_data/processados/lawfare-batch-dragao-onca-brasil-1639-1653.json"
+          ]
+        },
+        {
+          "range": [
+            1654,
+            1666
+          ],
+          "status": "confirmed",
+          "merge_date": "2026-07-24",
+          "series": "O Dragão e a Onça — Pará",
+          "notes": "Geração automatizada série O Dragão e a Onça (Pará regional batch). 13 entradas (1654-1666). Período: 2007-2018. Assets: dragao-onca-para.webp.",
+          "source_files": [
+            "_data/processados/lawfare-batch-dragao-onca-para-1654-1666.json"
+          ]
+        },
+        {
+          "range": [
+            1667,
+            1678
+          ],
+          "status": "confirmed",
+          "merge_date": "2026-07-24",
+          "series": "O Dragão e a Onça — Amazonas",
+          "notes": "Geração automatizada série O Dragão e a Onça (Amazonas regional batch). 12 entradas (1667-1678). Período: 2010-2020. Assets: dragao-onca-amazonas.webp.",
+          "source_files": [
+            "_data/processados/lawfare-batch-dragao-onca-amazonas-1667-1678.json"
+          ]
+        },
+        {
+          "range": [
+            1679,
+            1688
+          ],
+          "status": "confirmed",
+          "merge_date": "2026-07-24",
+          "series": "O Dragão e a Onça — Minas Gerais",
+          "notes": "Geração automatizada série O Dragão e a Onça (Minas Gerais regional batch). 10 entradas (1679-1688). Período: 2008-2019. Assets: dragao-onca-minas-gerais.webp.",
+          "source_files": [
+            "_data/processados/lawfare-batch-dragao-onca-minas-1679-1688.json"
+          ]
+        },
+        {
+          "range": [
+            1689,
+            1700
+          ],
+          "status": "confirmed",
+          "merge_date": "2026-07-24",
+          "series": "O Dragão e a Onça — Braco Jurídico",
+          "notes": "Geração automatizada série O Dragão e a Onça (aspecto jurídico/institucional). 12 entradas (1689-1700). Período: 2005-2021. Assets: dragao-onca-braco-juridico.webp.",
+          "source_files": [
+            "_data/processados/lawfare-batch-dragao-onca-juridico-1689-1700.json"
+          ]
+        },
+        {
+          "range": [
+            1701,
+            1712
+          ],
+          "status": "confirmed",
+          "merge_date": "2026-07-24",
+          "series": "O Dragão e a Onça — PL2780",
+          "notes": "Geração automatizada série O Dragão e a Onça (aspecto legislativo PL2780). 12 entradas (1701-1712). Período: 2011-2023. Assets: dragao-onca-pl2780.webp.",
+          "source_files": [
+            "_data/processados/lawfare-batch-dragao-onca-pl2780-1701-1712.json"
+          ]
+        },
+        {
+          "range": [
+            1713,
+            1748
+          ],
+          "status": "confirmed",
+          "notes": "Dragão e a Onça merge 2026-07-25: lawfare-batch-dragao-onca-bahia-1719-1725.json, lawfare-batch-dragao-onca-diplomatico-1713-1718.json, lawfare-batch-dragao-onca-es-1738-1739.json, lawfare-batch-dragao-onca-goias-retroativo-1740-1748.json, lawfare-batch-dragao-onca-pr-1731-1734.json…"
+        },
+        {
+          "range": [
+            1749,
+            1756
+          ],
+          "status": "confirmed",
+          "notes": "Dragão e a Onça merge 2026-07-26: lawfare-batch-dragao-onca-mg-expansao-1750-1755.json, lawfare-batch-dragao-onca-rs-day-1756.json, lawfare-batch-dragao-onca-rs-gwm-1749.json"
+        },
+        {
+          "range": [
+            1757,
+            1759
+          ],
+          "status": "confirmed",
+          "notes": "Dragão e a Onça merge 2026-07-26: lawfare-batch-dragao-onca-amapa-1757-1758.json, lawfare-batch-dragao-onca-amapa-1759-cnpc-chevron.json, lawfare-thematic-T244-dragao-onca-amapa-controle.json"
+        },
+        {
+          "range": [
+            1760,
+            1762
+          ],
+          "status": "confirmed",
+          "notes": "Dragão e a Onça merge 2026-07-26: lawfare-batch-dragao-onca-rj-1760-1761.json, lawfare-batch-dragao-onca-rj-1762-cnooc-petrochina.json, lawfare-thematic-T245-dragao-onca-rj.json"
+        },
+        {
+          "range": [
+            1763,
+            1770
+          ],
+          "status": "confirmed",
+          "notes": "Dragão e a Onça merge 2026-07-27: lawfare-batch-dragao-onca-rs-ceee-t-1763.json, lawfare-batch-dragao-onca-santa-catarina-1764-1770.json, lawfare-thematic-T246-dragao-onca-santa-catarina.json"
+        },
+        {
+          "range": [
+            1771,
+            1774
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-07-28: main IDs 1771-1774."
+        },
+        {
+          "range": [
+            1763,
+            1764
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-07-29: main IDs 1763-1764."
+        },
+        {
+          "range": [
+            1777,
+            1796
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-07-29: main IDs 1777-1796."
+        },
+        {
+          "range": [
+            1797,
+            1826
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-08-04: main IDs 1797-1826."
+        },
+        {
+          "range": [
+            1827,
+            1835
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-08-05: main IDs 1827-1835."
+        },
+        {
+          "range": [
+            1836,
+            1838
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-08-05: main IDs 1836-1838."
+        },
+        {
+          "range": [
+            1839,
+            1849
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-08-13: main IDs 1839-1849."
+        },
+        {
+          "range": [
+            1850,
+            1855
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-08-13: main IDs 1850-1855."
+        },
+        {
+          "range": [
+            1856,
+            1856
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-08-13: main IDs 1856-1856."
+        },
+        {
+          "range": [
+            1857,
+            1864
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-08-19: main IDs 1857-1864."
+        },
+        {
+          "range": [
+            1865,
+            1868
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-08-20: main IDs 1865-1868."
+        },
+        {
+          "range": [
+            1869,
+            1873
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-08-20: main IDs 1869-1873."
+        },
+        {
+          "range": [
+            1874,
+            1888
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-08-20: main IDs 1874-1888."
+        },
+        {
+          "range": [
+            1889,
+            1904
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-09-01: main IDs 1889-1904."
+        },
+        {
+          "range": [
+            1905,
+            1909
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-09-10: main IDs 1905-1909."
+        },
+        {
+          "range": [
+            1910,
+            1912
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-09-10: main IDs 1910-1912."
+        },
+        {
+          "range": [
+            1913,
+            1913
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-09-11: main IDs 1913-1913."
+        },
+        {
+          "range": [
+            1914,
+            1917
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-09-11: main IDs 1914-1917."
+        },
+        {
+          "range": [
+            1918,
+            1925
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-09-12: main IDs 1918-1925."
+        },
+        {
+          "range": [
+            1926,
+            1942
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-09-13: main IDs 1926-1942."
+        },
+        {
+          "range": [
+            1943,
+            1973
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-10-06: main IDs 1943-1973."
+        },
+        {
+          "range": [
+            1974,
+            1985
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-10-18: main IDs 1974-1985."
+        },
+        {
+          "range": [
+            1986,
+            2020
+          ],
+          "status": "confirmed",
+          "notes": "Catch-up 2026-11-11: IDs 1986-2020 já estavam em lawfare.json; o sync estava atrás. Sem reescrita de fichas."
+        },
+        {
+          "range": [
+            2021,
+            2024
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-11-11: main IDs 2021-2024."
+        }
+      ],
+      "last_id": 2024,
+      "last_jekyll_published": 2024,
+      "last_produced": 1770,
+      "next_available": 2025,
+      "merge_queue": [],
+      "last_confirmed": 2024,
+      "last_session_produced": 1770
+    },
+    "thematic": {
+      "description": "Sub-corpus temático — análise estrutural e padrões sistêmicos",
+      "entries": [
+        {
+          "id": 100,
+          "status": "confirmed",
+          "topic": "Padrões sistêmicos — definição P01–P08 inicial",
+          "artifact": "padroes-sistemicos-dashboard.html"
+        },
+        {
+          "id": 101,
+          "status": "confirmed",
+          "topic": "INQ 4.781 — abertura sem provocação da PGR",
+          "artifact": "inq4781.html"
+        },
+        {
+          "id": 102,
+          "status": "confirmed",
+          "topic": "INQ 4.781 — acumulação de funções: vítima + investigador + julgador",
+          "artifact": "inq4781.html"
+        },
+        {
+          "id": 103,
+          "status": "confirmed",
+          "topic": "INQ 4.781 — ausência de revisão independente (P03 chokepoint)",
+          "artifact": "inq4781.html"
+        },
+        {
+          "id": 104,
+          "status": "confirmed",
+          "topic": "Lava Jato — anulação retrospectiva por suspeição (P01)",
+          "artifact": "operacao_lava_jato.html"
+        },
+        {
+          "id": 105,
+          "status": "confirmed",
+          "topic": "Lava Jato — inversão: alvo vira investigador do investigador (P02)",
+          "artifact": "operacao_lava_jato.html"
+        },
+        {
+          "id": 106,
+          "status": "confirmed",
+          "topic": "Lava Jato — captura do chokepoint STF (P03)",
+          "artifact": "operacao_lava_jato.html"
+        },
+        {
+          "id": 107,
+          "status": "confirmed",
+          "topic": "Satiagraha — captura e reversão STJ/STF (P01/P03)",
+          "artifact": "satiagraha.html"
+        },
+        {
+          "id": 108,
+          "status": "confirmed",
+          "topic": "Vaza Toga — mecanismo espelho: weaponized legalism ativo",
+          "artifact": "vaza-toga.html"
+        },
+        {
+          "id": 109,
+          "status": "confirmed",
+          "topic": "Gilmar Mendes — início documentação episódios (alem-da-toga)",
+          "artifact": "alem-da-toga.html"
+        },
+        {
+          "id": 110,
+          "status": "confirmed",
+          "topic": "P03 — Padrão chokepoint: definição e primeiros casos",
+          "artifact": "padroes-sistemicos-dashboard.html"
+        },
+        {
+          "id": 111,
+          "status": "confirmed",
+          "topic": "P06 — Prescrição estratégica: casos documentados 1993–2010",
+          "artifact": "padroes-sistemicos-dashboard.html"
+        },
+        {
+          "id": 112,
+          "status": "confirmed",
+          "topic": "Castelo de Areia — anulação por ilicitude de provas (P01)",
+          "artifact": "operacao_castelo_de_areia.html"
+        },
+        {
+          "id": 113,
+          "status": "confirmed",
+          "topic": "Poço de Lobato — reversão e extinção (P01/P06)",
+          "artifact": "operacao_poco_de_lobato.html"
+        },
+        {
+          "id": 114,
+          "status": "confirmed",
+          "topic": "Banco Master — ascensão atípica: compliance zero documentado",
+          "artifact": "banco-master-compliance-zero.html"
+        },
+        {
+          "id": 115,
+          "status": "confirmed",
+          "topic": "Banco Master — donos e estrutura societária opaca",
+          "artifact": "banco-master-os-donos.html"
+        },
+        {
+          "id": 116,
+          "status": "confirmed",
+          "topic": "Faixa Tropical — P08 fintech como veículo de lavagem",
+          "artifact": "faixa-tropical.html"
+        },
+        {
+          "id": 117,
+          "status": "confirmed",
+          "topic": "PCC/CV — inteligência operacional e expansão transnacional",
+          "artifact": "PCC-CV-Intel-Dashboard-2026.html"
+        },
+        {
+          "id": 118,
+          "status": "confirmed",
+          "topic": "Cocaína Vermelha — fusão narco-política documentada",
+          "artifact": "cocaina-vermelha.html"
+        },
+        {
+          "id": 119,
+          "status": "confirmed",
+          "topic": "Carbono Oculto — greenwashing como P08 (lavagem via ESG)",
+          "artifact": "carbono_oculto.html"
+        },
+        {
+          "id": 120,
+          "status": "confirmed",
+          "topic": "Corrida dos Ratos — mapa mental: estrutura de fuga de capitais",
+          "artifact": "corrida-dos-ratos-mindmap.html"
+        },
+        {
+          "id": 121,
+          "status": "confirmed",
+          "topic": "Oliver Ortiz — timeline: P08 + P10 aplicado a ator individual",
+          "artifact": "oliver-ortiz-timeline.html"
+        },
+        {
+          "id": 122,
+          "status": "confirmed",
+          "topic": "República Capturada — tese central: sistema de extração estrutural",
+          "artifact": "republica-capturada.html"
+        },
+        {
+          "id": 123,
+          "status": "confirmed",
+          "topic": "Zero x Zero — tabela comparativa assimetria punitiva",
+          "artifact": "zero-x-zero.html"
+        },
+        {
+          "id": 124,
+          "status": "confirmed",
+          "topic": "Paralelos — análise comparada: Brasil vs padrões internacionais",
+          "artifact": "paralelos.html"
+        },
+        {
+          "id": 125,
+          "status": "confirmed",
+          "topic": "Thread Operações — nexo entre operações 1993–2026",
+          "artifact": "thread-operacoes-brasil.html"
+        },
+        {
+          "id": 126,
+          "status": "confirmed",
+          "topic": "Paradoxo Constitucional — STF entre guardião e vetor de captura",
+          "artifact": "paradoxo-constitucional.html"
+        },
+        {
+          "id": 127,
+          "status": "confirmed",
+          "topic": "Obediência e Caos — dinâmica sistêmica de conformidade institucional",
+          "artifact": "obediencia-e-caos.html"
+        },
+        {
+          "id": 128,
+          "status": "confirmed",
+          "topic": "Brasil Sangra — extração macroeconômica P11 documentada",
+          "artifact": "brasil-sangra.html"
+        },
+        {
+          "id": 129,
+          "status": "confirmed",
+          "topic": "SPLC Modelo Brasil — infraestrutura narrativa e weaponização",
+          "artifact": "splc-modelo-brasil.html"
+        },
+        {
+          "id": 130,
+          "status": "confirmed",
+          "topic": "Greenwashing — Operação: crimes ambientais + P08",
+          "artifact": "operacao-greenwashing.html"
+        },
+        {
+          "id": 131,
+          "status": "confirmed",
+          "topic": "Lava Jato Mapa Mental — estrutura e atores",
+          "artifact": "lava-jato-mapa-mental.html"
+        },
+        {
+          "id": 132,
+          "status": "confirmed",
+          "topic": "Lava Jato Mapa Mental Analítico — padrões P01–P03 projetados",
+          "artifact": "lava-jato-mapa-mental-analitico.html"
+        },
+        {
+          "id": 133,
+          "status": "confirmed",
+          "topic": "Padrões Sistêmicos Dashboard — P01–P11 consolidado",
+          "artifact": "padroes-sistemicos-dashboard.html"
+        },
+        {
+          "id": 134,
+          "status": "confirmed",
+          "topic": "P09 — Parlamentarismo de fato: neutralização legislativa documentada",
+          "artifact": "padroes-sistemicos-dashboard.html"
+        },
+        {
+          "id": 135,
+          "status": "confirmed",
+          "topic": "P10 — Infraestrutura de serviço compartilhada: definição e casos",
+          "artifact": "padroes-sistemicos-dashboard.html"
+        },
+        {
+          "id": 136,
+          "status": "confirmed",
+          "topic": "P11 — Loop macroeconômico: pobreza como input estrutural",
+          "artifact": "padroes-sistemicos-dashboard.html"
+        },
+        {
+          "id": 137,
+          "status": "confirmed",
+          "topic": "Alem da Toga — dossiê Gilmar Mendes 90+ episódios (atualizado abr/2026)",
+          "artifact": "alem-da-toga.html"
+        },
+        {
+          "id": 138,
+          "status": "confirmed",
+          "topic": "INQ 4781 — análise completa do inquérito reflexivo",
+          "artifact": "inq4781.html"
+        },
+        {
+          "id": 139,
+          "status": "confirmed",
+          "topic": "Operação Hydra 2026 — CPI INSS + P10 ativo",
+          "artifact": "operacao-hydra-2026.html"
+        },
+        {
+          "id": 140,
+          "status": "confirmed",
+          "topic": "Operação Armadilha ICE — P08 fintech + crime organizado transnacional",
+          "artifact": "operacao-armadilha-ice.html"
+        },
+        {
+          "id": 141,
+          "status": "confirmed",
+          "topic": "Insolvência Brasil — P11: macrodados de colapso fiscal estrutural",
+          "artifact": "insolvencia-brasil.html"
+        },
+        {
+          "id": 142,
+          "status": "confirmed",
+          "topic": "Prisão Econômica — endividamento como mecanismo de controle (P11)",
+          "artifact": "prisao-economica.html"
+        },
+        {
+          "id": 143,
+          "status": "confirmed",
+          "topic": "Duplo Padrão Judicial — tabela comparativa assimetria de tratamento",
+          "artifact": "duplo-padrao-judicial.html"
+        },
+        {
+          "id": 144,
+          "status": "confirmed",
+          "topic": "Narrativa vs Evidência — metodologia anti-viés confirmada",
+          "artifact": "narrativa-vs-evidencia.html"
+        },
+        {
+          "id": 145,
+          "status": "confirmed",
+          "topic": "Banco Master — dossiê completo consolidado",
+          "artifact": "banco-master.html"
+        },
+        {
+          "id": 146,
+          "status": "confirmed",
+          "topic": "Mare Liberum — liberdade de imprensa e 404 como arma",
+          "artifact": "mare-liberum.html"
+        },
+        {
+          "id": 147,
+          "status": "confirmed",
+          "topic": "Emaranhamento de Operações — nexo Lava Jato/Hydra/Master/Carbono",
+          "artifact": "emaranhamento-operacoes.html"
+        },
+        {
+          "id": 148,
+          "status": "confirmed",
+          "topic": "P07 — Fintech/Cultural como veículo: lavagem-as-a-service ampliado",
+          "artifact": "padroes-sistemicos-dashboard.html"
+        },
+        {
+          "id": 149,
+          "status": "confirmed",
+          "topic": "P04 — Weaponização midiática: fake news e narrativa como arma",
+          "artifact": "padroes-sistemicos-dashboard.html"
+        },
+        {
+          "id": 150,
+          "status": "confirmed",
+          "topic": "P05 — Fundos públicos como amplificadores de risco",
+          "artifact": "padroes-sistemicos-dashboard.html"
+        },
+        {
+          "id": 151,
+          "status": "confirmed",
+          "topic": "P08 — Infraestrutura cultural/cripto como canal de lavagem",
+          "artifact": "padroes-sistemicos-dashboard.html"
+        },
+        {
+          "id": 152,
+          "status": "confirmed",
+          "topic": "Banco Master — CRI/CRA como instrumento P05",
+          "artifact": "banco-master-compliance-zero.html"
+        },
+        {
+          "id": 153,
+          "status": "confirmed",
+          "topic": "METHODOLOGY v1 — primeira versão publicada",
+          "artifact": "METHODOLOGY.md"
+        },
+        {
+          "id": 154,
+          "status": "confirmed",
+          "topic": "METHODOLOGY v2.2 — expansão com P04b e testes de viés AI",
+          "artifact": "METHODOLOGY-v2_2.md"
+        },
+        {
+          "id": 155,
+          "status": "confirmed",
+          "topic": "Observatório Civil BR — arquitetura do site de inteligência cívica",
+          "artifact": "observatorio-civil-br.vercel.app"
+        },
+        {
+          "id": 156,
+          "status": "confirmed",
+          "topic": "JustiçaWatch Brasil — schema JSON + data file definidos",
+          "artifact": "justicawatch-brasil.html"
+        },
+        {
+          "id": 157,
+          "status": "confirmed",
+          "topic": "Lawfare Design System — typography/color/grid formalizados",
+          "artifact": "lawfare-design-system.json"
+        },
+        {
+          "id": 158,
+          "status": "confirmed",
+          "topic": "P01 — Anulação processual retrospectiva: 15 casos documentados",
+          "artifact": "padroes-sistemicos-dashboard.html"
+        },
+        {
+          "id": 159,
+          "status": "confirmed",
+          "topic": "P02 — Investigador-alvo: mecanismo de reversão documentado",
+          "artifact": "padroes-sistemicos-dashboard.html"
+        },
+        {
+          "id": 160,
+          "status": "confirmed",
+          "topic": "Operação Castelo de Areia — dossiê completo",
+          "artifact": "operacao_castelo_de_areia.html"
+        },
+        {
+          "id": 161,
+          "status": "confirmed",
+          "topic": "Operação Poço de Lobato — dossiê completo",
+          "artifact": "operacao_poco_de_lobato.html"
+        },
+        {
+          "id": 162,
+          "status": "confirmed",
+          "topic": "Satiagraha — dossiê completo com análise P01/P03",
+          "artifact": "satiagraha.html"
+        },
+        {
+          "id": 163,
+          "status": "confirmed",
+          "topic": "404 como arma — remoção sistemática de conteúdo investigativo",
+          "artifact": "mare-liberum.html"
+        },
+        {
+          "id": 164,
+          "status": "confirmed",
+          "topic": "IPFS/archive.org — protocolo de espelhamento fora-jurisdição (pendente implementação)",
+          "artifact": null
+        },
+        {
+          "id": 165,
+          "status": "confirmed",
+          "topic": "Shadowban @araguaci — protocolo de recuperação (em andamento)",
+          "artifact": null
+        },
+        {
+          "id": 166,
+          "status": "confirmed",
+          "topic": "Benedito Gonçalves — 'Missão dada, missão cumprida → CNJ → Missão paga' (P03/P08)",
+          "artifact": null,
+          "patterns": [
+            "P03",
+            "P08"
+          ]
+        },
+        {
+          "id": 167,
+          "status": "confirmed",
+          "topic": "STF — geometria 535×1: Congresso override vs. suspensão monocrática",
+          "artifact": null,
+          "patterns": [
+            "P03"
+          ]
+        },
+        {
+          "id": 168,
+          "status": "confirmed",
+          "topic": "Moraes — suspensão monocrática de lei válida para réu específico (P03/P02)",
+          "artifact": null,
+          "patterns": [
+            "P03",
+            "P02"
+          ]
+        },
+        {
+          "id": 169,
+          "status": "confirmed",
+          "topic": "Operação Hydra 2026 — CPI INSS + P10 ativo (entrada complementar)",
+          "artifact": "operacao-hydra-2026.html",
+          "patterns": [
+            "P10",
+            "P05"
+          ]
+        },
+        {
+          "id": 170,
+          "status": "confirmed",
+          "topic": "Toffoli — suspensão COAF/dados sigilosos: origem do padrão de sigilo processual",
+          "artifact": null,
+          "patterns": [
+            "P03",
+            "P06"
+          ]
+        },
+        {
+          "id": 171,
+          "status": "confirmed",
+          "topic": "Alexandre de Moraes — inquérito sobre inquérito: P03 documentado em ciclo fechado",
+          "artifact": null,
+          "patterns": [
+            "P03"
+          ]
+        },
+        {
+          "id": 172,
+          "status": "confirmed",
+          "topic": "Pandemia — CPI Pandemia: captura regulatória P03 em contexto sanitário",
+          "artifact": "pandemia-capturada.html",
+          "patterns": [
+            "P03",
+            "P05"
+          ]
+        },
+        {
+          "id": 173,
+          "status": "confirmed",
+          "topic": "Pandemia — Consórcio Nordeste: P05 como canal de extração",
+          "artifact": "pandemia-capturada.html",
+          "patterns": [
+            "P05"
+          ]
+        },
+        {
+          "id": 174,
+          "status": "confirmed",
+          "topic": "Pandemia — respiradores superfaturados: P08 em contexto sanitário",
+          "artifact": "pandemia-capturada.html",
+          "patterns": [
+            "P08"
+          ]
+        },
+        {
+          "id": 175,
+          "status": "confirmed",
+          "topic": "Pandemia — P03 emergencial: suspensão de controle no estado de exceção",
+          "artifact": "pandemia-capturada.html",
+          "patterns": [
+            "P03"
+          ]
+        },
+        {
+          "id": 176,
+          "status": "confirmed",
+          "topic": "Assimetria Punitiva — tabela comparativa entre réus com e sem conexão institucional",
+          "artifact": "assimetria-punitiva.html",
+          "patterns": [
+            "P03"
+          ]
+        },
+        {
+          "id": 177,
+          "status": "confirmed",
+          "topic": "Pandemia — P01: anulação retroativa de autuações por vício processual",
+          "artifact": "pandemia-capturada.html",
+          "patterns": [
+            "P01"
+          ]
+        },
+        {
+          "id": 178,
+          "status": "confirmed",
+          "topic": "Pandemia — P11: extração macroeconômica em contexto de exceção sanitária",
+          "artifact": "pandemia-capturada.html",
+          "patterns": [
+            "P11"
+          ]
+        },
+        {
+          "id": 179,
+          "status": "confirmed",
+          "topic": "Pandemia — P04: weaponização narrativa anti-ciência como instrumento político",
+          "artifact": "pandemia-capturada.html",
+          "patterns": [
+            "P04"
+          ]
+        },
+        {
+          "id": 180,
+          "status": "confirmed",
+          "topic": "TSE — seletividade em inelegibilidade e cassação (T-180)",
+          "artifact": "tse-seletividade-inelegibilidade-cassacao",
+          "patterns": [
+            "P03",
+            "P02"
+          ],
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-tse-seletividade-inelegibilidade-cassacao)."
+        },
+        {
+          "id": 181,
+          "status": "confirmed",
+          "topic": "Moraes — acumulação 535×1 documentada em caso específico (P03)",
+          "artifact": null,
+          "patterns": [
+            "P03"
+          ],
+          "date": "2026-05-09"
+        },
+        {
+          "id": 182,
+          "status": "confirmed",
+          "topic": "Dosimetria — acumulação de funções: juiz original + condenação + execução + relator ADIs = mesmo ator",
+          "artifact": null,
+          "patterns": [
+            "P03"
+          ]
+        },
+        {
+          "id": 183,
+          "status": "confirmed",
+          "topic": "Dosimetria — geometria 535×1 como formulação analítica documentada",
+          "artifact": null,
+          "patterns": [
+            "P03"
+          ]
+        },
+        {
+          "id": 184,
+          "status": "confirmed",
+          "topic": "P04b (candidato) — both-sidesism funcional: falsa-equivalência mainstream como mecanismo de proteção",
+          "artifact": null,
+          "patterns": [
+            "P04"
+          ],
+          "notes": "Decisão pendente: formalizar subcategoria em METHODOLOGY-v2.2.md"
+        },
+        {
+          "id": 185,
+          "status": "confirmed",
+          "topic": "Dosimetria — Lei 15.402/2026 promulgada por Alcolumbre após derrubada do veto Lula (318×144 / 49×24)",
+          "artifact": null,
+          "patterns": [
+            "P03"
+          ],
+          "date": "2026-05-08",
+          "notes": "Renumerado de 173"
+        },
+        {
+          "id": 186,
+          "status": "confirmed",
+          "topic": "Dosimetria — ADIs 7966/7967 a AM por prevenção: vítima + acusador + relator ADI = mesmo ator",
+          "artifact": null,
+          "patterns": [
+            "P03"
+          ],
+          "date": "2026-05-08",
+          "notes": "Renumerado de 174"
+        },
+        {
+          "id": 187,
+          "status": "confirmed",
+          "topic": "Dosimetria — Sequestro de Pauta: 1.402 condenados em limbo por relator impedido sem prazo regimental",
+          "artifact": null,
+          "patterns": [
+            "P01",
+            "P03",
+            "P07"
+          ],
+          "date": "2026-05-08",
+          "notes": "Renumerado de 175"
+        },
+        {
+          "id": 188,
+          "status": "confirmed",
+          "topic": "Dosimetria — Bolsonaro protocola revisão criminal: erro judiciário, delação Cid não voluntária",
+          "artifact": null,
+          "patterns": [],
+          "date": "2026-05-08",
+          "notes": "Renumerado de 176"
+        },
+        {
+          "id": 189,
+          "status": "confirmed",
+          "topic": "Reforma Tributária — captura regulatória split payment (T-189)",
+          "artifact": "reforma-tributaria-captura-regulatoria",
+          "notes": "Estudo Jekyll publicado 2026-05-26"
+        },
+        {
+          "id": 190,
+          "status": "confirmed",
+          "topic": "Direita Permitida — gatekeeping oposicionista (T-190)",
+          "artifact": "direita-permitida-dossie",
+          "notes": "Estudo Jekyll 2026-05-22. Renumerado de T-189 — conflito Reforma Tributária."
+        },
+        {
+          "id": 191,
+          "status": "confirmed",
+          "topic": "Custeio administrativo federal — P11 (T-191)",
+          "artifact": "custeio-administrativo-federal-p11",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-27-custeio-administrativo-federal-p11)."
+        },
+        {
+          "id": 192,
+          "status": "confirmed",
+          "topic": "Vorcaro triângulo carbono–mineração–banco (T-192)",
+          "artifact": "vorcaro-triangulo-carbono-mineracao-banco",
+          "patterns": [
+            "P08",
+            "P11",
+            "P03",
+            "P04",
+            "P09"
+          ],
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-vorcaro-triangulo-carbono-mineracao-banco).",
+          "source_files": [
+            "t192-vorcaro-triangulo-carbono-mineracao-banco.html",
+            "T-192-vorcaro-triangulo-carbono-mineracao-banco.json"
+          ]
+        },
+        {
+          "id": 193,
+          "status": "confirmed",
+          "topic": "Viagens/gastos sigilo — complemento T-191 (T-193)",
+          "artifact": "viagens-gastos-sigilo-complemento-p11",
+          "patterns": [
+            "P03",
+            "P08",
+            "P11"
+          ],
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-viagens-gastos-sigilo-complemento-p11)."
+        },
+        {
+          "id": 194,
+          "status": "confirmed",
+          "topic": "Máquina de Gastos P11 — índice cluster (T-194)",
+          "artifact": "maquina-gastos-p11-indice-cluster",
+          "patterns": [
+            "P08",
+            "P10"
+          ],
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-maquina-gastos-p11-indice-cluster)."
+        },
+        {
+          "id": 195,
+          "status": "confirmed",
+          "topic": "CPI Crime Organizado × PCC eleitoral (T-195)",
+          "artifact": "cpi-crime-organizado-pcc-infiltracao-eleitoral",
+          "patterns": [
+            "P11"
+          ],
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-cpi-crime-organizado-pcc-infiltracao-eleitoral)."
+        },
+        {
+          "id": 196,
+          "status": "confirmed",
+          "topic": "Radar de Lacunas — Top 30 sem dossiê (T-196)",
+          "artifact": "top30-alertas-criticos-operacoes-sem-dossie",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-top30-alertas-criticos-operacoes-sem-dossie)."
+        },
+        {
+          "id": 197,
+          "status": "confirmed",
+          "topic": "Operação Rejeito / Serra do Curral / 3 manuscritos (T-197)",
+          "artifact": "operacao-rejeito-serra-curral-manuscritos",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-operacao-rejeito-serra-curral-manuscritos)."
+        },
+        {
+          "id": 198,
+          "status": "confirmed",
+          "topic": "COAF × Moraes — acumulação de funções / dosimetria (T-198)",
+          "artifact": "coaf-moraes-acumulacao-funcoes-dosimetria",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-coaf-moraes-acumulacao-funcoes-dosimetria)."
+        },
+        {
+          "id": 199,
+          "status": "confirmed",
+          "topic": "Fraude Lojas Americanas — risco sacado (T-199)",
+          "artifact": "fraude-lojas-americanas-risco-sacado",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-fraude-lojas-americanas-risco-sacado)."
+        },
+        {
+          "id": 200,
+          "status": "confirmed",
+          "topic": "Estatais federais rombo P11 — complemento (T-200)",
+          "artifact": "estatais-rombo-p11-complemento",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-estatais-rombo-p11-complemento)."
+        },
+        {
+          "id": 201,
+          "status": "confirmed",
+          "topic": "PCC transnacional — OFAC/EUA/eixo luso (T-201)",
+          "artifact": "pcc-transnacional-ofac-eua-luso",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-pcc-transnacional-ofac-eua-luso)."
+        },
+        {
+          "id": 202,
+          "status": "confirmed",
+          "topic": "Delegada × PCC — infiltração institucional SP (T-202)",
+          "artifact": "delegada-pcc-infiltracao-institucional-sp",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-29-delegada-pcc-infiltracao-institucional-sp)."
+        },
+        {
+          "id": 203,
+          "status": "confirmed",
+          "topic": "Operação Zelotes — captura CARF (T-203)",
+          "artifact": "operacao-zelotes-carf-captura-fiscal",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-29-operacao-zelotes-carf-captura-fiscal)."
+        },
+        {
+          "id": 204,
+          "status": "confirmed",
+          "topic": "Gastos Paris — cluster extravância Janja (T-204)",
+          "artifact": "gastos-paris-cluster-extravagancia-janja",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-29-gastos-paris-cluster-extravagancia-janja)."
+        },
+        {
+          "id": 205,
+          "status": "confirmed",
+          "topic": "Duplo Padrão Judicial — índice corpus (T-205)",
+          "artifact": "duplo-padrao-judicial-corpus-bridge",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-29-duplo-padrao-judicial-corpus-bridge)."
+        },
+        {
+          "id": 206,
+          "status": "confirmed",
+          "topic": "SPLC Modelo Brasil — índice corpus (T-206)",
+          "artifact": "splc-modelo-brasil-corpus-bridge",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-29-splc-modelo-brasil-corpus-bridge)."
+        },
+        {
+          "id": 207,
+          "status": "confirmed",
+          "topic": "Vaza Toga INQ 4781 — índice corpus (T-207)",
+          "artifact": "vaza-toga-corpus-bridge",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-29-vaza-toga-corpus-bridge)."
+        },
+        {
+          "id": 208,
+          "status": "confirmed",
+          "topic": "Narrativa vs Evidência — índice corpus (T-208)",
+          "artifact": "narrativa-vs-evidencia-corpus-bridge",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-narrativa-vs-evidencia-corpus-bridge)."
+        },
+        {
+          "id": 209,
+          "status": "confirmed",
+          "topic": "JustiçaWatch Brasil — índice corpus (T-209)",
+          "artifact": "justicawatch-brasil-corpus-bridge",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-05-28-justicawatch-brasil-corpus-bridge)."
+        },
+        {
+          "id": 210,
+          "status": "confirmed",
+          "topic": "Operação Parasitas / cluster Sepse HMAP (T-210)",
+          "artifact": "operacao-parasitas-pc-go-identifica-fraude-em-materiais-hospitalares-no-hmap",
+          "notes": "Estudo Jekyll _posts/estudos/ (2023-01-01-operacao-parasitas-pc-go-identifica-fraude-em-materiais-hospitalares-no-hmap)."
+        },
+        {
+          "id": 211,
+          "status": "confirmed",
+          "topic": "2ª fase Operação Sepse — PF/MPF rede lavagem HMAP (T-211)",
+          "artifact": "mpf-e-pf-deflagram-2-fase-da-operacao-sepse-contra-rede-de-lavagem-ligada-ao-hmap",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-04-23-mpf-e-pf-deflagram-2-fase-da-operacao-sepse-contra-rede-de-lavagem-ligada-ao-hmap)."
+        },
+        {
+          "id": 212,
+          "status": "confirmed",
+          "topic": "Esquema Sepse — UTI superfaturada e repasse OS (T-212)",
+          "artifact": "esquema-na-operacao-sepse-contratos-superfaturados-de-uti-com-repasse-de-10-a-cupula-da-os",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-04-23-esquema-na-operacao-sepse-contratos-superfaturados-de-uti-com-repasse-de-10-a-cupula-da-os)."
+        },
+        {
+          "id": 213,
+          "status": "confirmed",
+          "topic": "CGU irregularidades OS Sepse em outros estados (T-213)",
+          "artifact": "cgu-confirma-historico-de-irregularidades-da-mesma-os-em-outros-estados-fixacao-de-compete",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-04-25-cgu-confirma-historico-de-irregularidades-da-mesma-os-em-outros-estados-fixacao-de-compete)."
+        },
+        {
+          "id": 214,
+          "status": "confirmed",
+          "topic": "Status Operação Sepse sem denúncia formal (T-214)",
+          "artifact": "status-atual-da-operacao-sepse-sem-denuncia-formal-ou-desfecho-judicial-ate-a-data-de-regi",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-06-20-status-atual-da-operacao-sepse-sem-denuncia-formal-ou-desfecho-judicial-ate-a-data-de-regi)."
+        },
+        {
+          "id": 215,
+          "status": "confirmed",
+          "topic": "Vorcaro STF — 2ª Turma mantém prisão familiares (T-215)",
+          "artifact": "2-turma-do-stf-mantem-prisao-de-pai-e-primo-de-daniel-vorcaro-por-31-gilmar-mendes-diverge",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-06-16-2-turma-do-stf-mantem-prisao-de-pai-e-primo-de-daniel-vorcaro-por-31-gilmar-mendes-diverge)."
+        },
+        {
+          "id": 216,
+          "status": "confirmed",
+          "topic": "TSE × USAID — parceria e censura seletiva (T-216)",
+          "artifact": "tse-usaid-parceria-censura-seletiva",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-06-29-tse-usaid-parceria-censura-seletiva)."
+        },
+        {
+          "id": 217,
+          "status": "confirmed",
+          "topic": "Seletividade punitiva TSE/Câmara — lacuna metodológica (T-217)",
+          "artifact": "seletividade-punitiva-tse-casos-isolados",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-06-29-seletividade-punitiva-tse-casos-isolados)."
+        },
+        {
+          "id": 218,
+          "status": "confirmed",
+          "topic": "Ouro ilegal — vetor P08 Amazônia PCC/CV/Venezuela (T-218)",
+          "artifact": "ouro-ilegal-vetor-p08-amazonia-pcc-cv-venezuela",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-06-29-ouro-ilegal-vetor-p08-amazonia-pcc-cv-venezuela)."
+        },
+        {
+          "id": 219,
+          "status": "confirmed",
+          "topic": "Farra do INSS — rede completa Conafer/Careca/CPMI (T-219)",
+          "artifact": "farra-inss-rede-completa",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-03-28-farra-do-inss-rede-completa-conafer-careca-do-inss-nucleo-politico-e-o-nucleo-internaciona)."
+        },
+        {
+          "id": 220,
+          "status": "confirmed",
+          "topic": "Convergência PCC-OFAC × rede Arpar × INSS (T-220)",
+          "artifact": "pcc-ofac-arpar-farra-inss-convergencia",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-07-01-convergencia-estrutural-vetor-pcc-ofac-rede-arpar-farra-do-inss-via-infraestrutura-finance)."
+        },
+        {
+          "id": 221,
+          "status": "confirmed",
+          "topic": "Nemo judex formalizado — preliminar DPU AP 2782 (T-221)",
+          "artifact": "nemo-judex-formalizado-dpu",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-06-16-nemo-judex-in-causa-propria-formalizado-por-orgao-de-estado-a-preliminar-da-dpu-na-ap-2782)."
+        },
+        {
+          "id": 222,
+          "status": "confirmed",
+          "topic": "P10 promovido a padrão autônomo (T-222)",
+          "artifact": "p10-promovido-padrao-autonomo",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-07-16-p10-promovido-a-padrao-autonomo-infraestrutura-de-servico-compartilhada-com-dois-nos-verif)."
+        },
+        {
+          "id": 223,
+          "status": "confirmed",
+          "topic": "P12-B assimetria de capacidade analítica (T-223)",
+          "artifact": "p12-b-assimetria-capacidade-analitica",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-07-16-p12-b-instanciado-como-assimetria-de-capacidade-analitica-camada-oficial-aberta-tse-camada)."
+        },
+        {
+          "id": 224,
+          "status": "confirmed",
+          "topic": "Precedentes República 1891–1930 — sidecar PREC-* (T-224)",
+          "artifact": "precedentes-republica-1891-1930",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-07-19-precedentes-republica-1891-1930)."
+        },
+        {
+          "id": 225,
+          "status": "confirmed",
+          "topic": "GI-TOC — crime organizado tipo máfia 8/10, resiliência 4,92/10 (T-225)",
+          "artifact": "gi-toc-brasil-crime-organizado-resiliencia",
+          "notes": "Estudo Jekyll _posts/estudos/ (2023-01-01-global-organized-crime-index-gi-toc-atribui-ao-brasil-pontuacao-810-em-ator-criminoso-tipo)."
+        },
+        {
+          "id": 226,
+          "status": "confirmed",
+          "topic": "Ciclo do Penduricalho — P11 Judiciário mar-jul/2026 (T-226)",
+          "artifact": "ciclo-penduricalho-p11-judiciario",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-07-06-o-ciclo-do-penduricalho-restricao-burla-e-autolegitimacao-mar-jul2026)."
+        },
+        {
+          "id": 227,
+          "status": "confirmed",
+          "topic": "P04 pela Direita — espelhos P04b OBS narco-soberania (T-227)",
+          "artifact": "p04-pela-direita-espelho-p04b",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-07-20-p04-pela-direita-narco-soberania-eleitoral-e-diplomacia-das-sombras-como-espelhos-estrutur)."
+        },
+        {
+          "id": 228,
+          "status": "confirmed",
+          "topic": "O Dragão e a Onça — Capítulo 1: Síntese da série (T-228)",
+          "artifact": "dragao-onca-capitulo-1-sintese",
+          "series": "O Dragão e a Onça",
+          "merge_date": "2026-07-24",
+          "patterns": [
+            "P04b",
+            "P08",
+            "P09"
+          ],
+          "notes": "Tema estruturante: síntese e navegação da série completa (142 posts Jekyll: 124 main + 18 temáticos, período 1993-2026)."
+        },
+        {
+          "id": 229,
+          "status": "confirmed",
+          "topic": "O Dragão e a Onça — Capítulo 2: Brasil/Federal (T-229)",
+          "artifact": "dragao-onca-capitulo-2-brasil-federal",
+          "series": "O Dragão e a Onça",
+          "merge_date": "2026-07-24",
+          "patterns": [
+            "P03",
+            "P05"
+          ],
+          "notes": "Tema regional: operações federais e dinâmicas nacionais (1639-1653, 15 entradas)."
+        },
+        {
+          "id": 230,
+          "status": "confirmed",
+          "topic": "O Dragão e a Onça — Capítulo 3: Pará (T-230)",
+          "artifact": "dragao-onca-capitulo-3-para",
+          "series": "O Dragão e a Onça",
+          "merge_date": "2026-07-24",
+          "patterns": [
+            "P08",
+            "P11"
+          ],
+          "notes": "Tema regional: Pará, recursos, crime organizado (1654-1666, 13 entradas)."
+        },
+        {
+          "id": 231,
+          "status": "confirmed",
+          "topic": "O Dragão e a Onça — Capítulo 4: Amazonas (T-231)",
+          "artifact": "dragao-onca-capitulo-4-amazonas",
+          "series": "O Dragão e a Onça",
+          "merge_date": "2026-07-24",
+          "patterns": [
+            "P08",
+            "P11"
+          ],
+          "notes": "Tema regional: Amazonas, mineração, soberania (1667-1678, 12 entradas)."
+        },
+        {
+          "id": 232,
+          "status": "confirmed",
+          "topic": "O Dragão e a Onça — Capítulo 5: Minas Gerais (T-232)",
+          "artifact": "dragao-onca-capitulo-5-minas-gerais",
+          "series": "O Dragão e a Onça",
+          "merge_date": "2026-07-24",
+          "patterns": [
+            "P03",
+            "P08"
+          ],
+          "notes": "Tema regional: Minas Gerais, JBS, economia (1679-1688, 10 entradas)."
+        },
+        {
+          "id": 233,
+          "status": "confirmed",
+          "topic": "O Dragão e a Onça — Capítulo 6: Síntese Estrutural (T-233)",
+          "artifact": "dragao-onca-capitulo-6-sintese-estrutural",
+          "series": "O Dragão e a Onça",
+          "merge_date": "2026-07-24",
+          "patterns": [
+            "P04b",
+            "P10",
+            "P11"
+          ],
+          "notes": "Tema analítico: padrões sistêmicos consolidados (metodologia P01-P11)."
+        },
+        {
+          "id": 234,
+          "status": "confirmed",
+          "topic": "O Dragão e a Onça — Capítulo 7: Braco Jurídico (T-234)",
+          "artifact": "dragao-onca-capitulo-7-braco-juridico",
+          "series": "O Dragão e a Onça",
+          "merge_date": "2026-07-24",
+          "patterns": [
+            "P03",
+            "P06"
+          ],
+          "notes": "Tema institucional: justiça, STF, captura regulatória (1689-1700, 12 entradas)."
+        },
+        {
+          "id": 235,
+          "status": "confirmed",
+          "topic": "O Dragão e a Onça — Capítulo 8: PL2780 e Legislativo (T-235)",
+          "artifact": "dragao-onca-capitulo-8-pl2780",
+          "series": "O Dragão e a Onça",
+          "merge_date": "2026-07-24",
+          "patterns": [
+            "P09",
+            "P04b"
+          ],
+          "notes": "Tema legislativo: parlamentarismo de fato, PL2780, neutralização legislativa (1701-1712, 12 entradas)."
+        },
+        {
+          "id": 236,
+          "status": "confirmed",
+          "topic": "T-236 dragao-onca",
+          "artifact": "2026-07-24-t236-dragao-onca.md",
+          "notes": "Dragão e a Onça merge 2026-07-25: lawfare-batch-dragao-onca-bahia-1719-1725.json, lawfare-batch-dragao-onca-diplomatico-1713-1718.json, lawfare-batch-dragao-onca-es-1738-1739.json, lawfare-batch-dragao-onca-goias-retroativo-1740-1748.json, lawfare-batch-dragao-onca-pr-1731-1734.json…"
+        },
+        {
+          "id": 237,
+          "status": "confirmed",
+          "topic": "T-237 dragao-onca",
+          "artifact": "2026-07-24-t237-dragao-onca.md",
+          "notes": "Dragão e a Onça merge 2026-07-25: lawfare-batch-dragao-onca-bahia-1719-1725.json, lawfare-batch-dragao-onca-diplomatico-1713-1718.json, lawfare-batch-dragao-onca-es-1738-1739.json, lawfare-batch-dragao-onca-goias-retroativo-1740-1748.json, lawfare-batch-dragao-onca-pr-1731-1734.json…"
+        },
+        {
+          "id": 238,
+          "status": "confirmed",
+          "topic": "T-238 dragao-onca",
+          "artifact": "2026-07-24-t238-dragao-onca.md",
+          "notes": "Dragão e a Onça merge 2026-07-25: lawfare-batch-dragao-onca-bahia-1719-1725.json, lawfare-batch-dragao-onca-diplomatico-1713-1718.json, lawfare-batch-dragao-onca-es-1738-1739.json, lawfare-batch-dragao-onca-goias-retroativo-1740-1748.json, lawfare-batch-dragao-onca-pr-1731-1734.json…"
+        },
+        {
+          "id": 239,
+          "status": "confirmed",
+          "topic": "T-239 dragao-onca",
+          "artifact": "2026-07-24-t239-dragao-onca.md",
+          "notes": "Dragão e a Onça merge 2026-07-25: lawfare-batch-dragao-onca-bahia-1719-1725.json, lawfare-batch-dragao-onca-diplomatico-1713-1718.json, lawfare-batch-dragao-onca-es-1738-1739.json, lawfare-batch-dragao-onca-goias-retroativo-1740-1748.json, lawfare-batch-dragao-onca-pr-1731-1734.json…"
+        },
+        {
+          "id": 240,
+          "status": "confirmed",
+          "topic": "T-240 dragao-onca",
+          "artifact": "2026-07-24-t240-dragao-onca.md",
+          "notes": "Dragão e a Onça merge 2026-07-25: lawfare-batch-dragao-onca-bahia-1719-1725.json, lawfare-batch-dragao-onca-diplomatico-1713-1718.json, lawfare-batch-dragao-onca-es-1738-1739.json, lawfare-batch-dragao-onca-goias-retroativo-1740-1748.json, lawfare-batch-dragao-onca-pr-1731-1734.json…"
+        },
+        {
+          "id": 241,
+          "status": "confirmed",
+          "topic": "T-241 dragao-onca",
+          "artifact": "2026-07-24-t241-dragao-onca.md",
+          "notes": "Dragão e a Onça merge 2026-07-25: lawfare-batch-dragao-onca-bahia-1719-1725.json, lawfare-batch-dragao-onca-diplomatico-1713-1718.json, lawfare-batch-dragao-onca-es-1738-1739.json, lawfare-batch-dragao-onca-goias-retroativo-1740-1748.json, lawfare-batch-dragao-onca-pr-1731-1734.json…"
+        },
+        {
+          "id": 242,
+          "status": "confirmed",
+          "topic": "T-242 dragao-onca",
+          "artifact": "2026-07-24-t242-dragao-onca-ranking-cebc.md",
+          "notes": "Dragão e a Onça merge 2026-07-25: lawfare-thematic-T242-dragao-onca-ranking-cebc.json"
+        },
+        {
+          "id": 243,
+          "status": "confirmed",
+          "topic": "T-243 dragao-onca",
+          "artifact": "2026-07-24-t243-dragao-onca.md",
+          "notes": "Dragão e a Onça merge 2026-07-25: lawfare-batch-dragao-onca-bahia-1719-1725.json, lawfare-batch-dragao-onca-diplomatico-1713-1718.json, lawfare-batch-dragao-onca-es-1738-1739.json, lawfare-batch-dragao-onca-goias-retroativo-1740-1748.json, lawfare-batch-dragao-onca-pr-1731-1734.json…"
+        },
+        {
+          "id": 244,
+          "status": "confirmed",
+          "topic": "T-244 dragao-onca",
+          "artifact": "2026-07-24-t244-dragao-onca.md",
+          "notes": "Dragão e a Onça merge 2026-07-26: lawfare-batch-dragao-onca-amapa-1757-1758.json, lawfare-batch-dragao-onca-amapa-1759-cnpc-chevron.json, lawfare-thematic-T244-dragao-onca-amapa-controle.json"
+        },
+        {
+          "id": 245,
+          "status": "confirmed",
+          "topic": "T-245 dragao-onca",
+          "artifact": "2026-07-24-t245-dragao-onca.md",
+          "notes": "Dragão e a Onça merge 2026-07-26: lawfare-batch-dragao-onca-rj-1760-1761.json, lawfare-batch-dragao-onca-rj-1762-cnooc-petrochina.json, lawfare-thematic-T245-dragao-onca-rj.json"
+        },
+        {
+          "id": 246,
+          "status": "confirmed",
+          "topic": "T-246 dragao-onca — Santa Catarina",
+          "artifact": "2026-07-24-t246-dragao-onca-santa-catarina.md",
+          "series": "O Dragão e a Onça",
+          "notes": "Dossiê HTML gosurf.site/dragao-onca-santa-catarina · main IDs 1764–1770 · backfill CEEE-T 1763"
+        },
+        {
+          "id": 247,
+          "status": "confirmed",
+          "topic": "T-247 (lawfare-thematic-T247-dedo-na-balanca-t2-video-ia.json)",
+          "artifact": "2026-07-25-episodio-video-de-ia-de-bolsonaro-na-convencao-do-pl-detona-disputa-de-competencia-stftse-.md",
+          "notes": "Estudo Jekyll _posts/estudos/2026-07-25-episodio-video-de-ia-de-bolsonaro-na-convencao-do-pl-detona-disputa-de-competencia-stftse-.md"
+        },
+        {
+          "id": 248,
+          "status": "confirmed",
+          "topic": "ADI cartórios BA — nota STF P04b (ex-id 1820 editorial)",
+          "artifact": "2026-08-03-stf-defende-publicamente-tramitacao-de-14-anos-da-adi-dos-cartorios-da-bahia-como-decorren.md",
+          "patterns": [
+            "P04b",
+            "P03"
+          ],
+          "notes": "Renumerado de T-1820 (colisão main track). Main 1819 = IEPTBA; gap intencional 1820 no lawfare.json."
+        },
+        {
+          "id": 249,
+          "status": "confirmed",
+          "topic": "T-249 (lawfare-batch-lulinha-sorteio-1763-T247.json)",
+          "artifact": "2026-08-04-sorteio-correto-resultado-sensivel-quando-a-distribuicao-aleatoria-nao-resolve-o-conflito-.md",
+          "notes": "Estudo Jekyll _posts/estudos/2026-08-04-sorteio-correto-resultado-sensivel-quando-a-distribuicao-aleatoria-nao-resolve-o-conflito-.md"
+        },
+        {
+          "id": 250,
+          "status": "confirmed",
+          "topic": "T-250 — Dois pesos, duas medidas (erro judiciário / indenização assimétrica)",
+          "artifact": "2026-08-05-dois-pesos-duas-medidas-erro-judiciario-indenizacao-assimetrica.md",
+          "notes": "Síntese id_1511-1513 + id_1834-1835; dossiê dois-pesos-duas-medidas.html. Distinto de T-248 (cartórios BA)."
+        },
+        {
+          "id": 251,
+          "status": "confirmed",
+          "topic": "T-251 — Convergência estrutural STF–família–Banco Master (P02/P05/P07)",
+          "artifact": "2026-08-12-t-251-convergencia-estrutural-stffamiliabanco-master-p02p05p07-aplicados-ao-mesmo-colegiad.md",
+          "notes": "Estudo Jekyll _posts/estudos/2026-08-12-t-251-convergencia-estrutural-stffamiliabanco-master-p02p05p07-aplicados-ao-mesmo-colegiad.md (auto-sync 2026-10-18)"
+        },
+        {
+          "id": 252,
+          "status": "confirmed",
+          "topic": "T-252 — Escalada em duas frentes: proteção técnica não isenta (plataforma + sigilo de fonte)",
+          "artifact": "2026-08-13-t-252-escalada-em-duas-frentes-na-mesma-semana-doutrina-de-que-protecao-tecnica-nao-isenta.md",
+          "notes": "Estudo Jekyll _posts/estudos/2026-08-13-t-252-escalada-em-duas-frentes-na-mesma-semana-doutrina-de-que-protecao-tecnica-nao-isenta.md (auto-sync 2026-10-18)"
+        },
+        {
+          "id": 253,
+          "status": "confirmed",
+          "topic": "T-253 — AP 470 Mensalão — critério evidencial STF (Lula fora do polo passivo)",
+          "artifact": "2010-04-08-t-253-ap-470-mensalao-stf-exige-base-documental-e-probatoria-para-recusar-reiteradamente-a.md",
+          "notes": "Estudo Jekyll _posts/estudos/2010-04-08-t-253-ap-470-mensalao-stf-exige-base-documental-e-probatoria-para-recusar-reiteradamente-a.md (auto-sync 2026-10-18)"
+        },
+        {
+          "id": 254,
+          "status": "confirmed",
+          "topic": "T-254 — P13 Porta Giratória — proposta de promoção (âncoras 1859–1864)",
+          "artifact": "2026-08-18-t-254-p13-porta-giratoria.md",
+          "notes": "Estudo Jekyll _posts/estudos/2026-08-18-t-254-p13-porta-giratoria.md (auto-sync 2026-10-18)"
+        },
+        {
+          "id": 255,
+          "status": "confirmed",
+          "topic": "T-255 — Vaza Toga síntese geral (hub /vazatoga/)",
+          "artifact": "2026-08-20-t-255-vaza-toga-sintese-geral.md",
+          "notes": "Hub temático Vaza Toga; suplanta T-207 como índice de leitura"
+        },
+        {
+          "id": 256,
+          "status": "confirmed",
+          "topic": "T-256 — Vaza Toga 2 Certidões positivas (GestBio / Dia da Mulher)",
+          "artifact": "2026-08-20-t-256-vaza-toga-2-certidoes-positivas.md",
+          "notes": "Main 1877-1882; HTML vazatoga/vt2-certidoes-positivas.html"
+        },
+        {
+          "id": 257,
+          "status": "confirmed",
+          "topic": "T-257 — Vaza Toga 3 Caçando jornalistas (A fraude exposta)",
+          "artifact": "2026-08-20-t-257-vaza-toga-3-cacando-jornalistas.md",
+          "notes": "Main 1883-1888; HTML vazatoga/vt3-cacando-jornalistas.html"
+        },
+        {
+          "id": 258,
+          "status": "confirmed",
+          "topic": "T-258 — Vaza Toga 4 Fabricação de provas (Shor / empresários)",
+          "artifact": "2026-08-20-t-258-vaza-toga-4-fabricacao-de-provas.md",
+          "notes": "Main 1869-1873; HTML vazatoga/vt4-fabricacao-de-provas.html"
+        },
+        {
+          "id": 259,
+          "status": "confirmed",
+          "topic": "T-259 — Vaza Toga 5 Purga institucional (2.119 CPFs / PET 11228)",
+          "artifact": "2026-08-20-t-259-vaza-toga-5-purga-institucional.md",
+          "notes": "Main 1874-1876; HTML vazatoga/vt5-purga-institucional.html"
+        },
+        {
+          "id": 260,
+          "status": "confirmed",
+          "topic": "T-260 — Padrão Salomão (seletividade da Corregedoria)",
+          "artifact": "2026-08-20-t-260-vaza-toga-padrao-salomao.md",
+          "notes": "Transversal VT4+VT5"
+        },
+        {
+          "id": 261,
+          "status": "confirmed",
+          "topic": "T-261 — Desdobramentos Tagliaferro (revelação → nulidade 27/03/2026)",
+          "artifact": "2026-08-20-t-261-vaza-toga-desdobramentos-tagliaferro.md",
+          "notes": "Inclui contraexemplo de nulidade absoluta"
+        },
+        {
+          "id": 262,
+          "status": "confirmed",
+          "topic": "T-262 — Padrões P01-P12 + proposta P10-B (5 âncoras)",
+          "artifact": "2026-08-20-t-262-vaza-toga-padroes-p10b.md",
+          "notes": "Palver, GestBio, certidões, DX, Sallorenzo"
+        },
+        {
+          "id": 263,
+          "status": "confirmed",
+          "topic": "T-263 (lawfare-batch-auditoria-mapa-conexoes-T263.json)",
+          "artifact": "2026-08-26-auditoria-evidencial-do-mapa-das-conexoes-documentadas-mcd-052024-como-artefato-do-padrao-.md",
+          "notes": "Estudo Jekyll _posts/estudos/2026-08-26-auditoria-evidencial-do-mapa-das-conexoes-documentadas-mcd-052024-como-artefato-do-padrao-.md"
+        },
+        {
+          "id": 264,
+          "status": "confirmed",
+          "topic": "T-264 (lawfare-batch-inq4781-cronologia-1889-1898.json)",
+          "artifact": "2026-08-18-transparencia-internacional-e-deltan-dallagnol-reagem-a-decisao-britanica-sobre-provas-da-.md",
+          "notes": "Estudo Jekyll _posts/estudos/2026-08-18-transparencia-internacional-e-deltan-dallagnol-reagem-a-decisao-britanica-sobre-provas-da-.md"
+        },
+        {
+          "id": 265,
+          "status": "confirmed",
+          "topic": "T-265 (lawfare-batch-inq4781-cronologia-1889-1898.json)",
+          "artifact": "2025-12-01-o-estado-de-s-paulo-publica-editorial-sete-anos-de-excecao-criticando-manutencao-do-inq-47.md",
+          "notes": "Estudo Jekyll _posts/estudos/2025-12-01-o-estado-de-s-paulo-publica-editorial-sete-anos-de-excecao-criticando-manutencao-do-inq-47.md"
+        },
+        {
+          "id": 266,
+          "status": "confirmed",
+          "topic": "T-266 (lawfare-batch-inq4781-cronologia-1889-1898.json)",
+          "artifact": "2026-08-24-refutacao-juridica-da-tese-de-legitima-defesa-institucional-como-fundamento-para-autotutel.md",
+          "notes": "Estudo Jekyll _posts/estudos/2026-08-24-refutacao-juridica-da-tese-de-legitima-defesa-institucional-como-fundamento-para-autotutel.md"
+        },
+        {
+          "id": 267,
+          "status": "confirmed",
+          "topic": "Minérios e terras raras — dois mercados, um país (T-267)",
+          "artifact": "minerios-terras-raras-dois-mercados",
+          "notes": "Estudo Jekyll _posts/estudos/ (2026-09-10-minerios-terras-raras-dois-mercados)."
+        },
+        {
+          "id": 268,
+          "status": "confirmed",
+          "topic": "T-268 (lawfare-batch-brumadinho-negocio-lama-1918-1925.json)",
+          "artifact": "2026-06-12-o-loop-da-lama-rejeito-como-ativo-bilionario-perante-o-cade-passivo-inexistente-perante-a-.md",
+          "notes": "Estudo Jekyll _posts/estudos/2026-06-12-o-loop-da-lama-rejeito-como-ativo-bilionario-perante-o-cade-passivo-inexistente-perante-a-.md"
+        },
+        {
+          "id": 269,
+          "status": "confirmed",
+          "topic": "T-269 — 2026-09-13-premissa-protetora-julgamento-critico-o-que-se-confirma",
+          "artifact": "2026-09-13-premissa-protetora-julgamento-critico-o-que-se-confirma.md",
+          "notes": "Estudo Jekyll _posts/estudos/2026-09-13-premissa-protetora-julgamento-critico-o-que-se-confirma.md (auto-sync 2026-09-13)"
+        },
+        {
+          "id": 270,
+          "status": "confirmed",
+          "topic": "T-270 — 2026-10-06-compilado-lawfare",
+          "artifact": "2026-10-06-compilado-lawfare.md",
+          "notes": "Estudo Jekyll _posts/estudos/2026-10-06-compilado-lawfare.md (auto-sync 2026-10-06)"
+        },
+        {
+          "id": 271,
+          "status": "confirmed",
+          "topic": "T-271 (thematic-T271-sete-de-onze.json)",
+          "artifact": "2026-09-17-sete-de-onze-stf-banco-master.md",
+          "notes": "Estudo Jekyll _posts/estudos/2026-09-17-sete-de-onze-stf-banco-master.md"
+        },
+        {
+          "id": 272,
+          "status": "confirmed",
+          "topic": "T-272 (thematic-T272-sob-medida-rioprevidencia-cedae.json)",
+          "artifact": "2026-09-17-sob-medida-rioprevidencia-cedae.md",
+          "notes": "Estudo Jekyll _posts/estudos/2026-09-17-sob-medida-rioprevidencia-cedae.md"
+        },
+        {
+          "id": 273,
+          "status": "confirmed",
+          "topic": "T-273 (thematic-T273-ciclos-do-brasil-caserna-poder.json)",
+          "artifact": "2026-10-07-ciclos-do-brasil-caserna-poder.md",
+          "notes": "Estudo Jekyll _posts/estudos/2026-10-07-ciclos-do-brasil-caserna-poder.md"
+        },
+        {
+          "id": 274,
+          "status": "confirmed",
+          "topic": "T-274 (thematic-T274-estado-comprador.json)",
+          "artifact": "2026-10-10-estado-comprador-privatizaram-para-estados.md",
+          "notes": "Estudo Jekyll _posts/estudos/2026-10-10-estado-comprador-privatizaram-para-estados.md"
+        },
+        {
+          "id": 275,
+          "status": "confirmed",
+          "topic": "T-275 (thematic-T275-memoria-institucional-8jan.json)",
+          "artifact": "2026-10-21-quem-falou-quem-calou-8jan-oab-ongs.md",
+          "notes": "Estudo Jekyll _posts/estudos/2026-10-21-quem-falou-quem-calou-8jan-oab-ongs.md"
+        }
+      ],
+      "last_id": 275,
+      "next_available": 276,
+      "pending": [],
+      "pending_notes": {},
+      "last_confirmed": 274,
+      "mislabeled_on_disk": [
+        {
+          "id": 1512,
+          "artifact": "2026-05-28-designacao-terrorista-pcc-cv.md",
+          "notes": "Mislabel: id_corpus T-1512 coincide com main track. Não avança next_available. Renomear opcionalmente para T-sequencial."
+        },
+        {
+          "id": 1765,
+          "artifact": "2026-07-27-sintese-estrutural-sigilo-de-100-anos-como-padrao-p10-confirmado-vorcaro-executivo-e-carec.md",
+          "notes": "Mislabel: id_corpus T-1765 coincide com main track. Não avança next_available. Renomear opcionalmente para T-sequencial."
+        },
+        {
+          "id": 1766,
+          "artifact": "2026-07-28-ricardo-salles-registra-candidatura-ao-senado-por-sp-e-declara-ao-tse-patrimonio-de-r-905-.md",
+          "notes": "Mislabel: id_corpus T-1766 coincide com main track. Não avança next_available. Renomear opcionalmente para T-sequencial."
+        }
+      ]
+    },
+    "historical_precedents": {
+      "description": "Sidecar pre-1990 — namespace PREC-AAAA-NN (não mesclado em lawfare.json)",
+      "id_format": "PREC-AAAA-NN",
+      "source_file": "_data/precedentes-republica.json",
+      "periodo": "1890-1930",
+      "total": 14,
+      "last_id": "PREC-1930-07",
+      "index_thematic": "T-224",
+      "entries": [
+        "PREC-1890-11",
+        "PREC-1891-01",
+        "PREC-1891-14",
+        "PREC-1893-02",
+        "PREC-1893-03",
+        "PREC-1895-04",
+        "PREC-1899-05",
+        "PREC-1902-06",
+        "PREC-1904-12",
+        "PREC-1908-08",
+        "PREC-1912-09",
+        "PREC-1916-10",
+        "PREC-1926-13",
+        "PREC-1930-07"
+      ],
+      "status": "confirmed",
+      "last_sync": "2026-07-19",
+      "nota_revisao": "PREC-1891-14 lacuna Castilhos; fontes CPDOC reforçadas em PREC-1891-01/1895-04"
+    },
+    "historical_precedents_pos1990": {
+      "description": "Sidecar pos-1990 (pre-corpus 1990+) — namespace PREC-AAAA-NN",
+      "id_format": "PREC-AAAA-NN",
+      "source_file": "_data/precedentes-pos-1990.json",
+      "periodo": "1997+",
+      "total": 1,
+      "last_id": "PREC-1997-05",
+      "entries": [
+        "PREC-1997-05"
+      ],
+      "status": "confirmed",
+      "last_sync": "2026-07-21"
+    }
+  },
+  "sync_status": {
+    "main_track_last_sync": "2026-11-11",
+    "thematic_track_last_sync": "2026-11-11",
+    "dragao_onca_series_sync": "2026-07-27T12:00:00-03:00",
+    "ids_confirmed_total": {
+      "main_track": "2024 (Jekyll + lawfare.json)",
+      "thematic_track": 275
+    },
+    "ids_pending_production": [],
+    "artifacts_without_thematic_id": [],
+    "artifacts_id_reserved_pending_formalization": [
+      208,
+      209
+    ],
+    "open_items": [
+      "Formalizar P04b como subcategoria em METHODOLOGY-v2.2.md",
+      "Publicar T-192 (Vorcaro): _posts/estudos/2026-05-28-t192-vorcaro-triangulo.md + gosurf.site",
+      "Copiar 9 posts P11 cluster para _posts/governo/ e _posts/escandalos/ (jekyll-posts-p11-cluster.tar.gz)",
+      "Implementar espelhamento IPFS/archive.org (pendente recorrente)",
+      "Recuperação shadowban @araguaci",
+      "Fila editorial 2026-05-28: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-05-28)",
+      "T-198 COAF × Moraes publicado (2026-05-28)",
+      "T-199 Lojas Americanas publicado (2026-05-28)",
+      "T-200 Estatais rombo P11 publicado (2026-05-28)",
+      "T-201 PCC transnacional publicado (2026-05-28)",
+      "T-202 Delegada × PCC publicado (2026-05-28)",
+      "T-203 Zelotes CARF publicado (2026-05-28)",
+      "T-204 Gastos Paris publicado (2026-05-28)",
+      "T-205 Duplo padrão corpus publicado (2026-05-28)",
+      "T-206 SPLC corpus publicado (2026-05-28)",
+      "T-207 Vaza Toga corpus publicado (2026-05-28)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-05-28)",
+      "T-208 Narrativa vs Evidência publicado (2026-05-28)",
+      "T-209 JustiçaWatch Brasil publicado (2026-05-28)",
+      "Fila editorial 2026-05-29: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-05-29)",
+      "T-198 COAF × Moraes publicado (2026-05-29)",
+      "T-199 Lojas Americanas publicado (2026-05-29)",
+      "T-200 Estatais rombo P11 publicado (2026-05-29)",
+      "T-201 PCC transnacional publicado (2026-05-29)",
+      "T-202 Delegada × PCC publicado (2026-05-29)",
+      "T-203 Zelotes CARF publicado (2026-05-29)",
+      "T-204 Gastos Paris publicado (2026-05-29)",
+      "T-205 Duplo padrão corpus publicado (2026-05-29)",
+      "T-206 SPLC corpus publicado (2026-05-29)",
+      "T-207 Vaza Toga corpus publicado (2026-05-29)",
+      "T-208 Narrativa vs Evidência publicado (2026-05-29)",
+      "T-209 JustiçaWatch Brasil publicado (2026-05-29)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-05-29)",
+      "Fila editorial 2026-06-20: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-06-20)",
+      "T-198 COAF × Moraes publicado (2026-06-20)",
+      "T-199 Lojas Americanas publicado (2026-06-20)",
+      "T-200 Estatais rombo P11 publicado (2026-06-20)",
+      "T-201 PCC transnacional publicado (2026-06-20)",
+      "T-202 Delegada × PCC publicado (2026-06-20)",
+      "T-203 Zelotes CARF publicado (2026-06-20)",
+      "T-204 Gastos Paris publicado (2026-06-20)",
+      "T-205 Duplo padrão corpus publicado (2026-06-20)",
+      "T-206 SPLC corpus publicado (2026-06-20)",
+      "T-207 Vaza Toga corpus publicado (2026-06-20)",
+      "T-208 Narrativa vs Evidência publicado (2026-06-20)",
+      "T-209 JustiçaWatch Brasil publicado (2026-06-20)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-06-20)",
+      "Fila editorial 2026-07-09: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-07-09)",
+      "T-198 COAF × Moraes publicado (2026-07-09)",
+      "T-199 Lojas Americanas publicado (2026-07-09)",
+      "T-200 Estatais rombo P11 publicado (2026-07-09)",
+      "T-201 PCC transnacional publicado (2026-07-09)",
+      "T-202 Delegada × PCC publicado (2026-07-09)",
+      "T-203 Zelotes CARF publicado (2026-07-09)",
+      "T-204 Gastos Paris publicado (2026-07-09)",
+      "T-205 Duplo padrão corpus publicado (2026-07-09)",
+      "T-206 SPLC corpus publicado (2026-07-09)",
+      "T-207 Vaza Toga corpus publicado (2026-07-09)",
+      "T-208 Narrativa vs Evidência publicado (2026-07-09)",
+      "T-209 JustiçaWatch Brasil publicado (2026-07-09)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-07-09)",
+      "T-210 Cluster Sepse Parasitas publicado (2026-07-09)",
+      "T-211 Sepse 2ª fase publicado (2026-07-09)",
+      "T-212 Sepse UTI publicado (2026-07-09)",
+      "T-213 CGU Sepse publicado (2026-07-09)",
+      "T-214 Status Sepse publicado (2026-07-09)",
+      "T-215 Vorcaro STF publicado (2026-07-09)",
+      "T-216 TSE USAID publicado (2026-07-09)",
+      "T-217 Seletividade TSE publicado (2026-07-09)",
+      "T-218 Ouro ilegal P08 publicado (2026-07-09)",
+      "T-219 Farra INSS publicado (2026-07-09)",
+      "T-220 PCC-OFAC Arpar publicado (2026-07-09)",
+      "T-221 Nemo judex DPU publicado (2026-07-09)",
+      "Fila editorial 2026-07-18: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-07-18)",
+      "T-198 COAF × Moraes publicado (2026-07-18)",
+      "T-199 Lojas Americanas publicado (2026-07-18)",
+      "T-200 Estatais rombo P11 publicado (2026-07-18)",
+      "T-201 PCC transnacional publicado (2026-07-18)",
+      "T-202 Delegada × PCC publicado (2026-07-18)",
+      "T-203 Zelotes CARF publicado (2026-07-18)",
+      "T-204 Gastos Paris publicado (2026-07-18)",
+      "T-205 Duplo padrão corpus publicado (2026-07-18)",
+      "T-206 SPLC corpus publicado (2026-07-18)",
+      "T-207 Vaza Toga corpus publicado (2026-07-18)",
+      "T-208 Narrativa vs Evidência publicado (2026-07-18)",
+      "T-209 JustiçaWatch Brasil publicado (2026-07-18)",
+      "T-210 Cluster Sepse Parasitas publicado (2026-07-18)",
+      "T-211 Sepse 2ª fase publicado (2026-07-18)",
+      "T-212 Sepse UTI publicado (2026-07-18)",
+      "T-213 CGU Sepse publicado (2026-07-18)",
+      "T-214 Status Sepse publicado (2026-07-18)",
+      "T-215 Vorcaro STF publicado (2026-07-18)",
+      "T-216 TSE USAID publicado (2026-07-18)",
+      "T-217 Seletividade TSE publicado (2026-07-18)",
+      "T-218 Ouro ilegal P08 publicado (2026-07-18)",
+      "T-219 Farra INSS publicado (2026-07-18)",
+      "T-220 PCC-OFAC Arpar publicado (2026-07-18)",
+      "T-221 Nemo judex DPU publicado (2026-07-18)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-07-18)",
+      "Fila editorial 2026-07-19: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-07-19)",
+      "T-198 COAF × Moraes publicado (2026-07-19)",
+      "T-199 Lojas Americanas publicado (2026-07-19)",
+      "T-200 Estatais rombo P11 publicado (2026-07-19)",
+      "T-201 PCC transnacional publicado (2026-07-19)",
+      "T-202 Delegada × PCC publicado (2026-07-19)",
+      "T-203 Zelotes CARF publicado (2026-07-19)",
+      "T-204 Gastos Paris publicado (2026-07-19)",
+      "T-205 Duplo padrão corpus publicado (2026-07-19)",
+      "T-206 SPLC corpus publicado (2026-07-19)",
+      "T-207 Vaza Toga corpus publicado (2026-07-19)",
+      "T-208 Narrativa vs Evidência publicado (2026-07-19)",
+      "T-209 JustiçaWatch Brasil publicado (2026-07-19)",
+      "T-210 Cluster Sepse Parasitas publicado (2026-07-19)",
+      "T-211 Sepse 2ª fase publicado (2026-07-19)",
+      "T-212 Sepse UTI publicado (2026-07-19)",
+      "T-213 CGU Sepse publicado (2026-07-19)",
+      "T-214 Status Sepse publicado (2026-07-19)",
+      "T-215 Vorcaro STF publicado (2026-07-19)",
+      "T-216 TSE USAID publicado (2026-07-19)",
+      "T-217 Seletividade TSE publicado (2026-07-19)",
+      "T-218 Ouro ilegal P08 publicado (2026-07-19)",
+      "T-219 Farra INSS publicado (2026-07-19)",
+      "T-220 PCC-OFAC Arpar publicado (2026-07-19)",
+      "T-221 Nemo judex DPU publicado (2026-07-19)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-07-19)",
+      "T-224 Precedentes República 1891-1930 publicado (2026-07-19) — sidecar historical_precedents",
+      "lawfare.json last_id=1628; próximo ID livre=1629",
+      "lawfare.json last_id=1630; próximo ID livre=1631",
+      "Fila editorial 2026-07-20: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-07-20)",
+      "T-198 COAF × Moraes publicado (2026-07-20)",
+      "T-199 Lojas Americanas publicado (2026-07-20)",
+      "T-200 Estatais rombo P11 publicado (2026-07-20)",
+      "T-201 PCC transnacional publicado (2026-07-20)",
+      "T-202 Delegada × PCC publicado (2026-07-20)",
+      "T-203 Zelotes CARF publicado (2026-07-20)",
+      "T-204 Gastos Paris publicado (2026-07-20)",
+      "T-205 Duplo padrão corpus publicado (2026-07-20)",
+      "T-206 SPLC corpus publicado (2026-07-20)",
+      "T-207 Vaza Toga corpus publicado (2026-07-20)",
+      "T-208 Narrativa vs Evidência publicado (2026-07-20)",
+      "T-209 JustiçaWatch Brasil publicado (2026-07-20)",
+      "T-210 Cluster Sepse Parasitas publicado (2026-07-20)",
+      "T-211 Sepse 2ª fase publicado (2026-07-20)",
+      "T-212 Sepse UTI publicado (2026-07-20)",
+      "T-213 CGU Sepse publicado (2026-07-20)",
+      "T-214 Status Sepse publicado (2026-07-20)",
+      "T-215 Vorcaro STF publicado (2026-07-20)",
+      "T-216 TSE USAID publicado (2026-07-20)",
+      "T-217 Seletividade TSE publicado (2026-07-20)",
+      "T-218 Ouro ilegal P08 publicado (2026-07-20)",
+      "T-219 Farra INSS publicado (2026-07-20)",
+      "T-220 PCC-OFAC Arpar publicado (2026-07-20)",
+      "T-221 Nemo judex DPU publicado (2026-07-20)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-07-20)",
+      "lawfare.json last_id=1634; próximo ID livre=1635",
+      "lawfare.json last_id=1635; próximo ID livre=1636",
+      "Fila editorial 2026-07-21: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-07-21)",
+      "T-198 COAF × Moraes publicado (2026-07-21)",
+      "T-199 Lojas Americanas publicado (2026-07-21)",
+      "T-200 Estatais rombo P11 publicado (2026-07-21)",
+      "T-201 PCC transnacional publicado (2026-07-21)",
+      "T-202 Delegada × PCC publicado (2026-07-21)",
+      "T-203 Zelotes CARF publicado (2026-07-21)",
+      "T-204 Gastos Paris publicado (2026-07-21)",
+      "T-205 Duplo padrão corpus publicado (2026-07-21)",
+      "T-206 SPLC corpus publicado (2026-07-21)",
+      "T-207 Vaza Toga corpus publicado (2026-07-21)",
+      "T-208 Narrativa vs Evidência publicado (2026-07-21)",
+      "T-209 JustiçaWatch Brasil publicado (2026-07-21)",
+      "T-210 Cluster Sepse Parasitas publicado (2026-07-21)",
+      "T-211 Sepse 2ª fase publicado (2026-07-21)",
+      "T-212 Sepse UTI publicado (2026-07-21)",
+      "T-213 CGU Sepse publicado (2026-07-21)",
+      "T-214 Status Sepse publicado (2026-07-21)",
+      "T-215 Vorcaro STF publicado (2026-07-21)",
+      "T-216 TSE USAID publicado (2026-07-21)",
+      "T-217 Seletividade TSE publicado (2026-07-21)",
+      "T-218 Ouro ilegal P08 publicado (2026-07-21)",
+      "T-219 Farra INSS publicado (2026-07-21)",
+      "T-220 PCC-OFAC Arpar publicado (2026-07-21)",
+      "T-221 Nemo judex DPU publicado (2026-07-21)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-07-21)",
+      "lawfare.json last_id=1638; próximo ID livre=1639",
+      "Fila editorial 2026-07-22: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-07-22)",
+      "T-198 COAF × Moraes publicado (2026-07-22)",
+      "T-199 Lojas Americanas publicado (2026-07-22)",
+      "T-200 Estatais rombo P11 publicado (2026-07-22)",
+      "T-201 PCC transnacional publicado (2026-07-22)",
+      "T-202 Delegada × PCC publicado (2026-07-22)",
+      "T-203 Zelotes CARF publicado (2026-07-22)",
+      "T-204 Gastos Paris publicado (2026-07-22)",
+      "T-205 Duplo padrão corpus publicado (2026-07-22)",
+      "T-206 SPLC corpus publicado (2026-07-22)",
+      "T-207 Vaza Toga corpus publicado (2026-07-22)",
+      "T-208 Narrativa vs Evidência publicado (2026-07-22)",
+      "T-209 JustiçaWatch Brasil publicado (2026-07-22)",
+      "T-210 Cluster Sepse Parasitas publicado (2026-07-22)",
+      "T-211 Sepse 2ª fase publicado (2026-07-22)",
+      "T-212 Sepse UTI publicado (2026-07-22)",
+      "T-213 CGU Sepse publicado (2026-07-22)",
+      "T-214 Status Sepse publicado (2026-07-22)",
+      "T-215 Vorcaro STF publicado (2026-07-22)",
+      "T-216 TSE USAID publicado (2026-07-22)",
+      "T-217 Seletividade TSE publicado (2026-07-22)",
+      "T-218 Ouro ilegal P08 publicado (2026-07-22)",
+      "T-219 Farra INSS publicado (2026-07-22)",
+      "T-220 PCC-OFAC Arpar publicado (2026-07-22)",
+      "T-221 Nemo judex DPU publicado (2026-07-22)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-07-22)",
+      "Fila editorial 2026-07-24: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-07-24)",
+      "T-198 COAF × Moraes publicado (2026-07-24)",
+      "T-199 Lojas Americanas publicado (2026-07-24)",
+      "T-200 Estatais rombo P11 publicado (2026-07-24)",
+      "T-201 PCC transnacional publicado (2026-07-24)",
+      "T-202 Delegada × PCC publicado (2026-07-24)",
+      "T-203 Zelotes CARF publicado (2026-07-24)",
+      "T-204 Gastos Paris publicado (2026-07-24)",
+      "T-205 Duplo padrão corpus publicado (2026-07-24)",
+      "T-206 SPLC corpus publicado (2026-07-24)",
+      "T-207 Vaza Toga corpus publicado (2026-07-24)",
+      "T-208 Narrativa vs Evidência publicado (2026-07-24)",
+      "T-209 JustiçaWatch Brasil publicado (2026-07-24)",
+      "T-210 Cluster Sepse Parasitas publicado (2026-07-24)",
+      "T-211 Sepse 2ª fase publicado (2026-07-24)",
+      "T-212 Sepse UTI publicado (2026-07-24)",
+      "T-213 CGU Sepse publicado (2026-07-24)",
+      "T-214 Status Sepse publicado (2026-07-24)",
+      "T-215 Vorcaro STF publicado (2026-07-24)",
+      "T-216 TSE USAID publicado (2026-07-24)",
+      "T-217 Seletividade TSE publicado (2026-07-24)",
+      "T-218 Ouro ilegal P08 publicado (2026-07-24)",
+      "T-219 Farra INSS publicado (2026-07-24)",
+      "T-220 PCC-OFAC Arpar publicado (2026-07-24)",
+      "T-221 Nemo judex DPU publicado (2026-07-24)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-07-24)",
+      "lawfare.json last_id=1756; próximo ID livre=1757 (série Dragão e a Onça expandida 26/jul)",
+      "Fila editorial 2026-07-25: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-07-25)",
+      "T-198 COAF × Moraes publicado (2026-07-25)",
+      "T-199 Lojas Americanas publicado (2026-07-25)",
+      "T-200 Estatais rombo P11 publicado (2026-07-25)",
+      "T-201 PCC transnacional publicado (2026-07-25)",
+      "T-202 Delegada × PCC publicado (2026-07-25)",
+      "T-203 Zelotes CARF publicado (2026-07-25)",
+      "T-204 Gastos Paris publicado (2026-07-25)",
+      "T-205 Duplo padrão corpus publicado (2026-07-25)",
+      "T-206 SPLC corpus publicado (2026-07-25)",
+      "T-207 Vaza Toga corpus publicado (2026-07-25)",
+      "T-208 Narrativa vs Evidência publicado (2026-07-25)",
+      "T-209 JustiçaWatch Brasil publicado (2026-07-25)",
+      "T-210 Cluster Sepse Parasitas publicado (2026-07-25)",
+      "T-211 Sepse 2ª fase publicado (2026-07-25)",
+      "T-212 Sepse UTI publicado (2026-07-25)",
+      "T-213 CGU Sepse publicado (2026-07-25)",
+      "T-214 Status Sepse publicado (2026-07-25)",
+      "T-215 Vorcaro STF publicado (2026-07-25)",
+      "T-216 TSE USAID publicado (2026-07-25)",
+      "T-217 Seletividade TSE publicado (2026-07-25)",
+      "T-218 Ouro ilegal P08 publicado (2026-07-25)",
+      "T-219 Farra INSS publicado (2026-07-25)",
+      "T-220 PCC-OFAC Arpar publicado (2026-07-25)",
+      "T-221 Nemo judex DPU publicado (2026-07-25)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-07-25)",
+      "Série Dragão e a Onça: main 1639-1756 (118), thematic T-228-T-243 (16), 134 posts; próximo main=1757, thematic=T-244",
+      "lawfare.json last_id=1770; próximo ID livre=1771",
+      "Fila editorial 2026-07-27: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-07-27)",
+      "T-198 COAF × Moraes publicado (2026-07-27)",
+      "T-199 Lojas Americanas publicado (2026-07-27)",
+      "T-200 Estatais rombo P11 publicado (2026-07-27)",
+      "T-201 PCC transnacional publicado (2026-07-27)",
+      "T-202 Delegada × PCC publicado (2026-07-27)",
+      "T-203 Zelotes CARF publicado (2026-07-27)",
+      "T-204 Gastos Paris publicado (2026-07-27)",
+      "T-205 Duplo padrão corpus publicado (2026-07-27)",
+      "T-206 SPLC corpus publicado (2026-07-27)",
+      "T-207 Vaza Toga corpus publicado (2026-07-27)",
+      "T-208 Narrativa vs Evidência publicado (2026-07-27)",
+      "T-209 JustiçaWatch Brasil publicado (2026-07-27)",
+      "T-210 Cluster Sepse Parasitas publicado (2026-07-27)",
+      "T-211 Sepse 2ª fase publicado (2026-07-27)",
+      "T-212 Sepse UTI publicado (2026-07-27)",
+      "T-213 CGU Sepse publicado (2026-07-27)",
+      "T-214 Status Sepse publicado (2026-07-27)",
+      "T-215 Vorcaro STF publicado (2026-07-27)",
+      "T-216 TSE USAID publicado (2026-07-27)",
+      "T-217 Seletividade TSE publicado (2026-07-27)",
+      "T-218 Ouro ilegal P08 publicado (2026-07-27)",
+      "T-219 Farra INSS publicado (2026-07-27)",
+      "T-220 PCC-OFAC Arpar publicado (2026-07-27)",
+      "T-221 Nemo judex DPU publicado (2026-07-27)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-07-27)",
+      "lawfare.json last_id=1774; próximo ID livre=1775",
+      "Fila editorial 2026-07-28: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-07-28)",
+      "T-198 COAF × Moraes publicado (2026-07-28)",
+      "T-199 Lojas Americanas publicado (2026-07-28)",
+      "T-200 Estatais rombo P11 publicado (2026-07-28)",
+      "T-201 PCC transnacional publicado (2026-07-28)",
+      "T-202 Delegada × PCC publicado (2026-07-28)",
+      "T-203 Zelotes CARF publicado (2026-07-28)",
+      "T-204 Gastos Paris publicado (2026-07-28)",
+      "T-205 Duplo padrão corpus publicado (2026-07-28)",
+      "T-206 SPLC corpus publicado (2026-07-28)",
+      "T-207 Vaza Toga corpus publicado (2026-07-28)",
+      "T-208 Narrativa vs Evidência publicado (2026-07-28)",
+      "T-209 JustiçaWatch Brasil publicado (2026-07-28)",
+      "T-210 Cluster Sepse Parasitas publicado (2026-07-28)",
+      "T-211 Sepse 2ª fase publicado (2026-07-28)",
+      "T-212 Sepse UTI publicado (2026-07-28)",
+      "T-213 CGU Sepse publicado (2026-07-28)",
+      "T-214 Status Sepse publicado (2026-07-28)",
+      "T-215 Vorcaro STF publicado (2026-07-28)",
+      "T-216 TSE USAID publicado (2026-07-28)",
+      "T-217 Seletividade TSE publicado (2026-07-28)",
+      "T-218 Ouro ilegal P08 publicado (2026-07-28)",
+      "T-219 Farra INSS publicado (2026-07-28)",
+      "T-220 PCC-OFAC Arpar publicado (2026-07-28)",
+      "T-221 Nemo judex DPU publicado (2026-07-28)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-07-28)",
+      "lawfare.json last_id=1849; próximo ID livre=1850",
+      "Fila editorial 2026-08-13: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-08-13)",
+      "T-198 COAF × Moraes publicado (2026-08-13)",
+      "T-199 Lojas Americanas publicado (2026-08-13)",
+      "T-200 Estatais rombo P11 publicado (2026-08-13)",
+      "T-201 PCC transnacional publicado (2026-08-13)",
+      "T-202 Delegada × PCC publicado (2026-08-13)",
+      "T-203 Zelotes CARF publicado (2026-08-13)",
+      "T-204 Gastos Paris publicado (2026-08-13)",
+      "T-205 Duplo padrão corpus publicado (2026-08-13)",
+      "T-206 SPLC corpus publicado (2026-08-13)",
+      "T-207 Vaza Toga corpus publicado (2026-08-13)",
+      "T-208 Narrativa vs Evidência publicado (2026-08-13)",
+      "T-209 JustiçaWatch Brasil publicado (2026-08-13)",
+      "T-210 Cluster Sepse Parasitas publicado (2026-08-13)",
+      "T-211 Sepse 2ª fase publicado (2026-08-13)",
+      "T-212 Sepse UTI publicado (2026-08-13)",
+      "T-213 CGU Sepse publicado (2026-08-13)",
+      "T-214 Status Sepse publicado (2026-08-13)",
+      "T-215 Vorcaro STF publicado (2026-08-13)",
+      "T-216 TSE USAID publicado (2026-08-13)",
+      "T-217 Seletividade TSE publicado (2026-08-13)",
+      "T-218 Ouro ilegal P08 publicado (2026-08-13)",
+      "T-219 Farra INSS publicado (2026-08-13)",
+      "T-220 PCC-OFAC Arpar publicado (2026-08-13)",
+      "T-221 Nemo judex DPU publicado (2026-08-13)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-08-13)",
+      "lawfare.json last_id=1855; próximo ID livre=1856",
+      "lawfare.json last_id=1856; próximo ID livre=1857",
+      "lawfare.json last_id=1864; próximo ID livre=1865",
+      "Fila editorial 2026-08-19: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-08-19)",
+      "T-198 COAF × Moraes publicado (2026-08-19)",
+      "T-199 Lojas Americanas publicado (2026-08-19)",
+      "T-200 Estatais rombo P11 publicado (2026-08-19)",
+      "T-201 PCC transnacional publicado (2026-08-19)",
+      "T-202 Delegada × PCC publicado (2026-08-19)",
+      "T-203 Zelotes CARF publicado (2026-08-19)",
+      "T-204 Gastos Paris publicado (2026-08-19)",
+      "T-205 Duplo padrão corpus publicado (2026-08-19)",
+      "T-206 SPLC corpus publicado (2026-08-19)",
+      "T-207 Vaza Toga corpus publicado (2026-08-19)",
+      "T-208 Narrativa vs Evidência publicado (2026-08-19)",
+      "T-209 JustiçaWatch Brasil publicado (2026-08-19)",
+      "T-210 Cluster Sepse Parasitas publicado (2026-08-19)",
+      "T-211 Sepse 2ª fase publicado (2026-08-19)",
+      "T-212 Sepse UTI publicado (2026-08-19)",
+      "T-213 CGU Sepse publicado (2026-08-19)",
+      "T-214 Status Sepse publicado (2026-08-19)",
+      "T-215 Vorcaro STF publicado (2026-08-19)",
+      "T-216 TSE USAID publicado (2026-08-19)",
+      "T-217 Seletividade TSE publicado (2026-08-19)",
+      "T-218 Ouro ilegal P08 publicado (2026-08-19)",
+      "T-219 Farra INSS publicado (2026-08-19)",
+      "T-220 PCC-OFAC Arpar publicado (2026-08-19)",
+      "T-221 Nemo judex DPU publicado (2026-08-19)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-08-19)",
+      "lawfare.json last_id=1868; próximo ID livre=1869",
+      "Fila editorial 2026-08-20: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-08-20)",
+      "T-198 COAF × Moraes publicado (2026-08-20)",
+      "T-199 Lojas Americanas publicado (2026-08-20)",
+      "T-200 Estatais rombo P11 publicado (2026-08-20)",
+      "T-201 PCC transnacional publicado (2026-08-20)",
+      "T-202 Delegada × PCC publicado (2026-08-20)",
+      "T-203 Zelotes CARF publicado (2026-08-20)",
+      "T-204 Gastos Paris publicado (2026-08-20)",
+      "T-205 Duplo padrão corpus publicado (2026-08-20)",
+      "T-206 SPLC corpus publicado (2026-08-20)",
+      "T-207 Vaza Toga corpus publicado (2026-08-20)",
+      "T-208 Narrativa vs Evidência publicado (2026-08-20)",
+      "T-209 JustiçaWatch Brasil publicado (2026-08-20)",
+      "T-210 Cluster Sepse Parasitas publicado (2026-08-20)",
+      "T-211 Sepse 2ª fase publicado (2026-08-20)",
+      "T-212 Sepse UTI publicado (2026-08-20)",
+      "T-213 CGU Sepse publicado (2026-08-20)",
+      "T-214 Status Sepse publicado (2026-08-20)",
+      "T-215 Vorcaro STF publicado (2026-08-20)",
+      "T-216 TSE USAID publicado (2026-08-20)",
+      "T-217 Seletividade TSE publicado (2026-08-20)",
+      "T-218 Ouro ilegal P08 publicado (2026-08-20)",
+      "T-219 Farra INSS publicado (2026-08-20)",
+      "T-220 PCC-OFAC Arpar publicado (2026-08-20)",
+      "T-221 Nemo judex DPU publicado (2026-08-20)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-08-20)",
+      "lawfare.json last_id=1873; próximo ID livre=1874",
+      "lawfare.json last_id=1888; próximo ID livre=1889",
+      "lawfare.json last_id=1909; próximo ID livre=1910",
+      "Fila editorial 2026-09-10: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-09-10)",
+      "T-198 COAF × Moraes publicado (2026-09-10)",
+      "T-199 Lojas Americanas publicado (2026-09-10)",
+      "T-200 Estatais rombo P11 publicado (2026-09-10)",
+      "T-201 PCC transnacional publicado (2026-09-10)",
+      "T-202 Delegada × PCC publicado (2026-09-10)",
+      "T-203 Zelotes CARF publicado (2026-09-10)",
+      "T-204 Gastos Paris publicado (2026-09-10)",
+      "T-205 Duplo padrão corpus publicado (2026-09-10)",
+      "T-206 SPLC corpus publicado (2026-09-10)",
+      "T-207 Vaza Toga corpus publicado (2026-09-10)",
+      "T-208 Narrativa vs Evidência publicado (2026-09-10)",
+      "T-209 JustiçaWatch Brasil publicado (2026-09-10)",
+      "T-210 Cluster Sepse Parasitas publicado (2026-09-10)",
+      "T-211 Sepse 2ª fase publicado (2026-09-10)",
+      "T-212 Sepse UTI publicado (2026-09-10)",
+      "T-213 CGU Sepse publicado (2026-09-10)",
+      "T-214 Status Sepse publicado (2026-09-10)",
+      "T-215 Vorcaro STF publicado (2026-09-10)",
+      "T-216 TSE USAID publicado (2026-09-10)",
+      "T-217 Seletividade TSE publicado (2026-09-10)",
+      "T-218 Ouro ilegal P08 publicado (2026-09-10)",
+      "T-219 Farra INSS publicado (2026-09-10)",
+      "T-220 PCC-OFAC Arpar publicado (2026-09-10)",
+      "T-221 Nemo judex DPU publicado (2026-09-10)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-09-10)",
+      "lawfare.json last_id=1912; próximo ID livre=1913",
+      "lawfare.json last_id=1913; próximo ID livre=1914",
+      "Fila editorial 2026-09-11: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-09-11)",
+      "T-198 COAF × Moraes publicado (2026-09-11)",
+      "T-199 Lojas Americanas publicado (2026-09-11)",
+      "T-200 Estatais rombo P11 publicado (2026-09-11)",
+      "T-201 PCC transnacional publicado (2026-09-11)",
+      "T-202 Delegada × PCC publicado (2026-09-11)",
+      "T-203 Zelotes CARF publicado (2026-09-11)",
+      "T-204 Gastos Paris publicado (2026-09-11)",
+      "T-205 Duplo padrão corpus publicado (2026-09-11)",
+      "T-206 SPLC corpus publicado (2026-09-11)",
+      "T-207 Vaza Toga corpus publicado (2026-09-11)",
+      "T-208 Narrativa vs Evidência publicado (2026-09-11)",
+      "T-209 JustiçaWatch Brasil publicado (2026-09-11)",
+      "T-210 Cluster Sepse Parasitas publicado (2026-09-11)",
+      "T-211 Sepse 2ª fase publicado (2026-09-11)",
+      "T-212 Sepse UTI publicado (2026-09-11)",
+      "T-213 CGU Sepse publicado (2026-09-11)",
+      "T-214 Status Sepse publicado (2026-09-11)",
+      "T-215 Vorcaro STF publicado (2026-09-11)",
+      "T-216 TSE USAID publicado (2026-09-11)",
+      "T-217 Seletividade TSE publicado (2026-09-11)",
+      "T-218 Ouro ilegal P08 publicado (2026-09-11)",
+      "T-219 Farra INSS publicado (2026-09-11)",
+      "T-220 PCC-OFAC Arpar publicado (2026-09-11)",
+      "T-221 Nemo judex DPU publicado (2026-09-11)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-09-11)",
+      "lawfare.json last_id=1917; próximo ID livre=1918",
+      "lawfare.json last_id=1925; próximo ID livre=1926",
+      "Fila editorial 2026-09-12: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-09-12)",
+      "T-198 COAF × Moraes publicado (2026-09-12)",
+      "T-199 Lojas Americanas publicado (2026-09-12)",
+      "T-200 Estatais rombo P11 publicado (2026-09-12)",
+      "T-201 PCC transnacional publicado (2026-09-12)",
+      "T-202 Delegada × PCC publicado (2026-09-12)",
+      "T-203 Zelotes CARF publicado (2026-09-12)",
+      "T-204 Gastos Paris publicado (2026-09-12)",
+      "T-205 Duplo padrão corpus publicado (2026-09-12)",
+      "T-206 SPLC corpus publicado (2026-09-12)",
+      "T-207 Vaza Toga corpus publicado (2026-09-12)",
+      "T-208 Narrativa vs Evidência publicado (2026-09-12)",
+      "T-209 JustiçaWatch Brasil publicado (2026-09-12)",
+      "T-210 Cluster Sepse Parasitas publicado (2026-09-12)",
+      "T-211 Sepse 2ª fase publicado (2026-09-12)",
+      "T-212 Sepse UTI publicado (2026-09-12)",
+      "T-213 CGU Sepse publicado (2026-09-12)",
+      "T-214 Status Sepse publicado (2026-09-12)",
+      "T-215 Vorcaro STF publicado (2026-09-12)",
+      "T-216 TSE USAID publicado (2026-09-12)",
+      "T-217 Seletividade TSE publicado (2026-09-12)",
+      "T-218 Ouro ilegal P08 publicado (2026-09-12)",
+      "T-219 Farra INSS publicado (2026-09-12)",
+      "T-220 PCC-OFAC Arpar publicado (2026-09-12)",
+      "T-221 Nemo judex DPU publicado (2026-09-12)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-09-12)",
+      "Fila editorial 2026-09-13: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-09-13)",
+      "T-198 COAF × Moraes publicado (2026-09-13)",
+      "T-199 Lojas Americanas publicado (2026-09-13)",
+      "T-200 Estatais rombo P11 publicado (2026-09-13)",
+      "T-201 PCC transnacional publicado (2026-09-13)",
+      "T-202 Delegada × PCC publicado (2026-09-13)",
+      "T-203 Zelotes CARF publicado (2026-09-13)",
+      "T-204 Gastos Paris publicado (2026-09-13)",
+      "T-205 Duplo padrão corpus publicado (2026-09-13)",
+      "T-206 SPLC corpus publicado (2026-09-13)",
+      "T-207 Vaza Toga corpus publicado (2026-09-13)",
+      "T-208 Narrativa vs Evidência publicado (2026-09-13)",
+      "T-209 JustiçaWatch Brasil publicado (2026-09-13)",
+      "T-210 Cluster Sepse Parasitas publicado (2026-09-13)",
+      "T-211 Sepse 2ª fase publicado (2026-09-13)",
+      "T-212 Sepse UTI publicado (2026-09-13)",
+      "T-213 CGU Sepse publicado (2026-09-13)",
+      "T-214 Status Sepse publicado (2026-09-13)",
+      "T-215 Vorcaro STF publicado (2026-09-13)",
+      "T-216 TSE USAID publicado (2026-09-13)",
+      "T-217 Seletividade TSE publicado (2026-09-13)",
+      "T-218 Ouro ilegal P08 publicado (2026-09-13)",
+      "T-219 Farra INSS publicado (2026-09-13)",
+      "T-220 PCC-OFAC Arpar publicado (2026-09-13)",
+      "T-221 Nemo judex DPU publicado (2026-09-13)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-09-13)",
+      "lawfare.json last_id=1942; próximo ID livre=1943",
+      "lawfare.json last_id=1973; próximo ID livre=1974",
+      "Fila editorial 2026-10-06: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-10-06)",
+      "T-198 COAF × Moraes publicado (2026-10-06)",
+      "T-199 Lojas Americanas publicado (2026-10-06)",
+      "T-200 Estatais rombo P11 publicado (2026-10-06)",
+      "T-201 PCC transnacional publicado (2026-10-06)",
+      "T-202 Delegada × PCC publicado (2026-10-06)",
+      "T-203 Zelotes CARF publicado (2026-10-06)",
+      "T-204 Gastos Paris publicado (2026-10-06)",
+      "T-205 Duplo padrão corpus publicado (2026-10-06)",
+      "T-206 SPLC corpus publicado (2026-10-06)",
+      "T-207 Vaza Toga corpus publicado (2026-10-06)",
+      "T-208 Narrativa vs Evidência publicado (2026-10-06)",
+      "T-209 JustiçaWatch Brasil publicado (2026-10-06)",
+      "T-210 Cluster Sepse Parasitas publicado (2026-10-06)",
+      "T-211 Sepse 2ª fase publicado (2026-10-06)",
+      "T-212 Sepse UTI publicado (2026-10-06)",
+      "T-213 CGU Sepse publicado (2026-10-06)",
+      "T-214 Status Sepse publicado (2026-10-06)",
+      "T-215 Vorcaro STF publicado (2026-10-06)",
+      "T-216 TSE USAID publicado (2026-10-06)",
+      "T-217 Seletividade TSE publicado (2026-10-06)",
+      "T-218 Ouro ilegal P08 publicado (2026-10-06)",
+      "T-219 Farra INSS publicado (2026-10-06)",
+      "T-220 PCC-OFAC Arpar publicado (2026-10-06)",
+      "T-221 Nemo judex DPU publicado (2026-10-06)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-10-06)",
+      "lawfare.json last_id=1985; próximo ID livre=1986",
+      "Fila editorial 2026-10-18: merge 1527-1571; T-192–T-201 + T-196 radar em _posts/estudos/",
+      "T-197 Operação Rejeito publicado (2026-10-18)",
+      "T-198 COAF × Moraes publicado (2026-10-18)",
+      "T-199 Lojas Americanas publicado (2026-10-18)",
+      "T-200 Estatais rombo P11 publicado (2026-10-18)",
+      "T-201 PCC transnacional publicado (2026-10-18)",
+      "T-202 Delegada × PCC publicado (2026-10-18)",
+      "T-203 Zelotes CARF publicado (2026-10-18)",
+      "T-204 Gastos Paris publicado (2026-10-18)",
+      "T-205 Duplo padrão corpus publicado (2026-10-18)",
+      "T-206 SPLC corpus publicado (2026-10-18)",
+      "T-207 Vaza Toga corpus publicado (2026-10-18)",
+      "T-208 Narrativa vs Evidência publicado (2026-10-18)",
+      "T-209 JustiçaWatch Brasil publicado (2026-10-18)",
+      "T-210 Cluster Sepse Parasitas publicado (2026-10-18)",
+      "T-211 Sepse 2ª fase publicado (2026-10-18)",
+      "T-212 Sepse UTI publicado (2026-10-18)",
+      "T-213 CGU Sepse publicado (2026-10-18)",
+      "T-214 Status Sepse publicado (2026-10-18)",
+      "T-215 Vorcaro STF publicado (2026-10-18)",
+      "T-216 TSE USAID publicado (2026-10-18)",
+      "T-217 Seletividade TSE publicado (2026-10-18)",
+      "T-218 Ouro ilegal P08 publicado (2026-10-18)",
+      "T-219 Farra INSS publicado (2026-10-18)",
+      "T-220 PCC-OFAC Arpar publicado (2026-10-18)",
+      "T-221 Nemo judex DPU publicado (2026-10-18)",
+      "T-196 Radar Top 30 publicado em estudos/ (2026-10-18)",
+      "Próximo thematic: T-275; main next=1986"
+    ],
+    "notes": [
+      "Correção 2026-07-18: ID 1520→P04b imprensa; revisão criminal Bolsonaro→1621; duplicata lawfare/ removida.",
+      "lawfare.json last_id=1621; próximo ID livre=1622"
+    ]
+  },
+  "id_conflict_resolutions": {
+    "generated": "2026-05-28",
+    "biomm": {
+      "old_range": "1481-1500",
+      "new_range": "1527-1546",
+      "reason": "1481-1500 = PCC/Ndrangheta canônico"
+    },
+    "zema": {
+      "old_ids": "185-188",
+      "new_ids": "1547-1550",
+      "reason": "thematic 185-188 = Dosimetria"
+    },
+    "homeschooling": {
+      "old_id": 1425,
+      "new_id": 1551,
+      "reason": "1425 = Mare Liberum Galeão"
+    },
+    "direita_permitida": {
+      "old_id": "T-189",
+      "new_id": "T-190",
+      "reason": "T-189 reservado à Reforma Tributária"
+    },
+    "t192_decisao": {
+      "old_pending_notes_192": "Operação Rejeito / Serra do Curral / manuscritos",
+      "new_t192": "Vorcaro triângulo carbono–mineração–banco",
+      "new_t193": "Operação Rejeito / Serra do Curral dossiê consolidado",
+      "reason": "T-192 produzido nesta sessão como Vorcaro. Rejeito/Serra do Curral coberto pelos batches 1552-1571 — dossiê consolidado vai para T-193.",
+      "date": "2026-05-28"
+    },
+    "custeio_vs_top30": {
+      "T-191": "Custeio P11 — estudo canônico",
+      "T-196": "Radar Top 30 — renumerado do antigo T-191",
+      "date": "2026-10-18"
+    },
+    "pcc_namespace": {
+      "range": "1481-1500",
+      "status": "canonical_pcc_ndrangheta",
+      "do_not_overwrite": true
+    },
+    "americanas_id": {
+      "sessao_decidiu": "T-197 = Americanas",
+      "repo_ja_tinha": "T-197 = Rejeito/Serra Curral/manuscritos",
+      "resolucao": "Americanas = T-199 (confirmado). JSON renomeado T-197→T-199 em _data/todo/ em 2026-05-28.",
+      "date": "2026-05-28"
+    },
+    "splc_id": {
+      "sessao_decidiu": "T-202 = SPLC Modelo Brasil",
+      "repo_ja_tinha": "T-202 = Delegada × PCC; T-206 = SPLC Modelo Brasil",
+      "resolucao": "SPLC = T-206 (canônico no repo). Entrada da sessão descartada em favor do repo.",
+      "date": "2026-05-28"
+    },
+    "1520_176_revisao_criminal_2026-07-18": {
+      "issue": "Duplicata revisão criminal Bolsonaro (08/05/2026) com id_corpus 176 e 1520",
+      "resolution": {
+        "1520": "Restaurado ao post P04b imprensa (batch 1513-1520 canônico)",
+        "1621": "Revisão criminal — post canônico _posts/stf/2026-05-08-bolsonaro-revisao-criminal-...",
+        "removed": "_posts/lawfare/2026-05-08-bolsonaro-protocola-revisao-criminal-... (duplicata)"
+      }
+    }
+  },
+  "session_log": [
+    {
+      "date": "2026-05-28",
+      "session": "claude.ai — sessão editorial Operação Rejeito + dossiês temáticos",
+      "produced": [
+        "lawfare-batch-rejeito-1552-1571.json (20 entradas — IDs 1552-1571)",
+        "lawfare-batch-flavio-trump-1572-1576.json (5 entradas — IDs 1572-1576)",
+        "t191-custeio-administrativo-federal-p11.html + T-191.json",
+        "t192-vorcaro-triangulo-carbono-mineracao-banco.html + T-192.json",
+        "jekyll-posts-p11-cluster.tar.gz (9 posts: timeline-167,170,172,174,175,176,177,178 + orçamento-secreto)"
+      ],
+      "decisions": [
+        "T-192 = Vorcaro triângulo (não Rejeito/Serra Curral)",
+        "T-193 = Rejeito/Serra do Curral dossiê consolidado",
+        "IDs 197-201 reservados para 5 artefatos deployed sem thematic_id",
+        "Batch 1425-1444 descartado (conflito com corpus canônico) — substituído por 1552-1571"
+      ]
+    },
+    {
+      "date": "2026-05-28",
+      "session": "sync lawfare-timeline desenvolvimento — reconciliação repo vs sessão",
+      "reconciliation": {
+        "repo_thematic_last_id": 209,
+        "session_thematic_last_id_before": 202,
+        "delta_ids_in_repo_not_in_session": [
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          209
+        ],
+        "conflict_resolutions": [
+          "T-197: sessão=Americanas → repo=Rejeito/Serra Curral. Americanas = T-199.",
+          "T-202: sessão=SPLC → repo=Delegada×PCC. SPLC = T-206."
+        ],
+        "result": "Repo é canônico. Sync unificado com last_id=209, next_available=210."
+      },
+      "action_items_completed": [
+        "Merge batch 1572-1576 em lawfare.json (total: 1514 entradas, last_id: 1576)",
+        "Batches rejeito+flavio movidos para _data/processados/",
+        "T-197-americanas*.json renomeado para T-199-americanas*.json",
+        "claude.ai-corpus-ids-sync.json atualizado para schema 1.1.0 com last_id thematic=209"
+      ]
+    },
+    {
+      "date": "2026-07-24",
+      "session": "claude.ai — geração completa série O Dragão e a Onça",
+      "produced": [
+        "lawfare-batch-dragao-onca-brasil-1639-1653.json (15 entradas)",
+        "lawfare-batch-dragao-onca-para-1654-1666.json (13 entradas)",
+        "lawfare-batch-dragao-onca-amazonas-1667-1678.json (12 entradas)",
+        "lawfare-batch-dragao-onca-minas-1679-1688.json (10 entradas)",
+        "lawfare-batch-dragao-onca-juridico-1689-1700.json (12 entradas)",
+        "lawfare-batch-dragao-onca-pl2780-1701-1712.json (12 entradas)",
+        "lawfare-thematic-T228-T235-dragao-onca.json (8 entradas temáticas)",
+        "90 artigos Jekyll em _posts/dragao-onca/",
+        "_tabs/dragao-onca.md (navegação série)",
+        "_featured_categories/dragao-onca.md (metadados)",
+        "_layouts/dragao-onca.html (layout customizado 4 seções)",
+        "scripts/gerar_artigos_dragao_onca.py (426 linhas, 100% taxa sucesso)"
+      ],
+      "summary": {
+        "total_entries": 82,
+        "batch_entries": 74,
+        "thematic_entries": 8,
+        "period": "1993-2026",
+        "main_track_range": "1639-1712",
+        "thematic_track_range": "T228-T235"
+      },
+      "integrations": [
+        "Adicionada série ao menu principal (_tabs/dragao-onca.md) com emoji 🐉",
+        "Layout customizado com 4 seções (descrição, capítulos, timeline, relacionadas)",
+        "Miniaturas de imagens em timeline (dragao-onca-*.webp regional assets)",
+        "Descrições truncadas em timeline (150 chars) com tooltips",
+        "Responsive grid layout (Bootstrap col-md-9/col-md-3)"
+      ],
+      "fixes_applied": [
+        "archives.html: adicionado suporte a descrição em timeline",
+        "dragao-onca.html: adicionado renderização de miniaturas de imagens",
+        "Jekyll rebuild para aplicar mudanças em layouts"
+      ],
+      "decisions": [
+        "IDs 1639-1712 (74 entradas) reservados para batch O Dragão e a Onça",
+        "IDs T228-T235 (8 temáticos) reservados para capítulos da série",
+        "Assets regionais: 9 WebP (brasil-federal, goias, para, amazonas, minas-gerais, pl2780, juridico, sintese) + 1 default",
+        "Padrões analíticos por capítulo: P03, P04b, P05, P06, P08, P09, P10, P11"
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2026-07-25",
+      "session": "claude.ai — conclusão série O Dragão e a Onça",
+      "produced": [
+        "Merge batches 1713-1748 (BA, diplomático, PR, RS, SP, ES, GO retroativo)",
+        "lawfare-thematic-T242-dragao-onca-ranking-cebc.json (T-242 ranking CEBC)",
+        "126 artigos Jekyll em _posts/dragao-onca/ (110 main + 16 temáticos)",
+        "Heroes webp regionais (BA, SP, PR, RS, ES, ranking-cebc)",
+        "X Articles: parana-xarticle.md, rs-es-ranking-xarticle.md",
+        "odragaoeaonca/index.html reorganizado (transversal → UFs CEBC → sínteses)"
+      ],
+      "summary": {
+        "total_entries": 126,
+        "batch_entries": 110,
+        "thematic_entries": 16,
+        "period": "1993-2026",
+        "main_track_range": "1639-1748",
+        "thematic_track_range": "T228-T243"
+      },
+      "integrations": [
+        "lawfare.json e claude.ai-corpus-ids-sync.json sincronizados e validados (validate-ids.ps1: 0 erros)",
+        "Todos os batches arquivados em _data/processados/",
+        "_data/todo/ vazia"
+      ],
+      "decisions": [
+        "T-243 síntese final cross-state mantida como capítulo de fechamento",
+        "T-233 (síntese estrutural v1) preservado como capítulo analítico intermediário",
+        "jekyll build pausado aguardando autorização"
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2026-07-26",
+      "session": "claude.ai — expansão MG + RS (investigação profunda)",
+      "produced": [
+        "lawfare-batch-dragao-onca-rs-gwm-1749.json (critérios GWM / instabilidade institucional)",
+        "lawfare-batch-dragao-onca-mg-expansao-1750-1755.json (BYD, Wondfo, CRRC, Midea)",
+        "lawfare-batch-dragao-onca-rs-day-1756.json (RS Day Pequim 2024)",
+        "8 posts Jekyll em _posts/dragao-onca/"
+      ],
+      "summary": {
+        "total_entries": 8,
+        "batch_entries": 8,
+        "main_track_range": "1749-1756",
+        "correcao": "Lote 1749-1759 anterior descartado — GWM×RS×ES já coberto em 1735-1739"
+      },
+      "decisions": [
+        "RS Day renumerado 1760→1756 (continuidade de IDs)",
+        "MG: capítulo ampliado além do eixo Sigma Lítio ocidental"
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2026-07-27",
+      "session": "cursor — auditoria sincronização corpus",
+      "produced": [
+        "Verificação lawfare.json vs _posts/dragao-onca/ (124 main 1639-1762: OK)",
+        "Verificação claude.ai-corpus-ids-sync.json tracks.main/thematic vs posts (OK)",
+        "Correção _meta.tracks stale (main 1600→1762, thematic 215→245)",
+        "Correção sync_status.ids_confirmed_total.thematic_track (243→245)",
+        "_data/dragao-onca.json export dedicado (142 assuntos: 124 main + 18 temáticos T-228–T-245)"
+      ],
+      "summary": {
+        "lawfare_total": 1725,
+        "lawfare_max_id": 1762,
+        "next_main_id": 1763,
+        "thematic_last": "T-245",
+        "next_thematic": "T-246",
+        "dragao_posts": 142,
+        "thematic_not_in_lawfare_json": "T-228–T-245 ficam em dragao-onca.json (IDs 228–245 ocupados por entradas históricas no corpus principal)"
+      },
+      "status": "completed"
+    },
+    {
+      "date": "2026-08-13",
+      "session": "cursor — sync corpus IDs + Drive",
+      "produced": [
+        "Main track sync last_id=1856 next=1857",
+        "Thematic sync last=T-252 next=T-253",
+        "Export gdrive_sync_export.py (claude.ai-corpus-ids-sync.json + lawfare.json)"
+      ],
+      "summary": {
+        "lawfare_max_id": 1856,
+        "next_main_id": 1857,
+        "thematic_last": "T-252",
+        "next_thematic": "T-253",
+        "t_studies_on_disk": 46,
+        "thematic_mislabeled_ignored": [
+          "T-1512",
+          "T-1765",
+          "T-1766"
+        ]
+      },
+      "status": "completed"
+    },
+    {
+      "date": "2026-08-19",
+      "session": "cursor — sync corpus IDs + Drive",
+      "produced": [
+        "Main track sync last_id=1864 next=1865",
+        "Thematic sync last=T-254 next=T-255",
+        "Export gdrive_sync_export.py (claude.ai-corpus-ids-sync.json + lawfare.json)"
+      ],
+      "summary": {
+        "lawfare_max_id": 1864,
+        "next_main_id": 1865,
+        "thematic_last": "T-254",
+        "next_thematic": "T-255",
+        "t_studies_on_disk": 48,
+        "thematic_mislabeled_ignored": [
+          "T-1512",
+          "T-1765",
+          "T-1766"
+        ]
+      },
+      "status": "completed"
+    },
+    {
+      "date": "2026-08-20",
+      "session": "cursor — sync corpus IDs + Drive",
+      "produced": [
+        "Main track sync last_id=1888 next=1889",
+        "Thematic sync last=T-254 next=T-255",
+        "Export gdrive_sync_export.py (claude.ai-corpus-ids-sync.json + lawfare.json)"
+      ],
+      "summary": {
+        "lawfare_max_id": 1888,
+        "next_main_id": 1889,
+        "thematic_last": "T-254",
+        "next_thematic": "T-255",
+        "t_studies_on_disk": 48,
+        "thematic_mislabeled_ignored": [
+          "T-1512",
+          "T-1765",
+          "T-1766"
+        ]
+      },
+      "status": "completed"
+    },
+    {
+      "date": "2026-08-20",
+      "session": "cursor — hub temático /vazatoga/ T-255–T-262",
+      "produced": [
+        "T-255 a T-262 posts em _posts/vazatoga/",
+        "layout+tab+featured_categories vazatoga",
+        "HTML vt1–vt5 em vazatoga/"
+      ],
+      "summary": {
+        "thematic_last": "T-262",
+        "next_thematic": "T-263",
+        "hub": "/vazatoga/"
+      },
+      "status": "completed"
+    },
+    {
+      "date": "2026-09-10",
+      "session": "cursor — sync corpus IDs + Drive",
+      "produced": [
+        "Main track sync last_id=1912 next=1913",
+        "Thematic sync last=T-267 next=T-268",
+        "Export gdrive_sync_export.py (claude.ai-corpus-ids-sync.json + lawfare.json)"
+      ],
+      "summary": {
+        "lawfare_max_id": 1912,
+        "next_main_id": 1913,
+        "thematic_last": "T-267",
+        "next_thematic": "T-268",
+        "t_studies_on_disk": 53,
+        "thematic_mislabeled_ignored": [
+          "T-1512",
+          "T-1765",
+          "T-1766"
+        ]
+      },
+      "status": "completed"
+    },
+    {
+      "date": "2026-09-11",
+      "session": "cursor — sync corpus IDs + Drive",
+      "produced": [
+        "Main track sync last_id=1917 next=1918",
+        "Thematic sync last=T-267 next=T-268",
+        "Export gdrive_sync_export.py (claude.ai-corpus-ids-sync.json + lawfare.json)"
+      ],
+      "summary": {
+        "lawfare_max_id": 1917,
+        "next_main_id": 1918,
+        "thematic_last": "T-267",
+        "next_thematic": "T-268",
+        "t_studies_on_disk": 53,
+        "thematic_mislabeled_ignored": [
+          "T-1512",
+          "T-1765",
+          "T-1766"
+        ]
+      },
+      "status": "completed"
+    },
+    {
+      "date": "2026-09-12",
+      "session": "cursor — sync corpus IDs + Drive",
+      "produced": [
+        "Main track sync last_id=1925 next=1926",
+        "Thematic sync last=T-268 next=T-269",
+        "Export gdrive_sync_export.py (claude.ai-corpus-ids-sync.json + lawfare.json)"
+      ],
+      "summary": {
+        "lawfare_max_id": 1925,
+        "next_main_id": 1926,
+        "thematic_last": "T-268",
+        "next_thematic": "T-269",
+        "t_studies_on_disk": 54,
+        "thematic_mislabeled_ignored": [
+          "T-1512",
+          "T-1765",
+          "T-1766"
+        ]
+      },
+      "status": "completed"
+    },
+    {
+      "date": "2026-09-13",
+      "session": "cursor — sync corpus IDs + Drive",
+      "produced": [
+        "Main track sync last_id=1942 next=1943",
+        "Thematic sync last=T-269 next=T-270",
+        "Export gdrive_sync_export.py (claude.ai-corpus-ids-sync.json + lawfare.json)"
+      ],
+      "summary": {
+        "lawfare_max_id": 1942,
+        "next_main_id": 1943,
+        "thematic_last": "T-269",
+        "next_thematic": "T-270",
+        "t_studies_on_disk": 55,
+        "thematic_mislabeled_ignored": [
+          "T-1512",
+          "T-1765",
+          "T-1766"
+        ]
+      },
+      "status": "completed"
+    },
+    {
+      "date": "2026-10-06",
+      "session": "cursor — sync corpus IDs + Drive",
+      "produced": [
+        "Main track sync last_id=1973 next=1974",
+        "Thematic sync last=T-272 next=T-273",
+        "Export gdrive_sync_export.py (claude.ai-corpus-ids-sync.json + lawfare.json)"
+      ],
+      "summary": {
+        "lawfare_max_id": 1973,
+        "next_main_id": 1974,
+        "thematic_last": "T-272",
+        "next_thematic": "T-273",
+        "t_studies_on_disk": 58,
+        "thematic_mislabeled_ignored": [
+          "T-1512",
+          "T-1765",
+          "T-1766"
+        ]
+      },
+      "status": "completed"
+    },
+    {
+      "date": "2026-10-18",
+      "session": "cursor — sync corpus IDs + Drive",
+      "produced": [
+        "Main track sync last_id=1985 next=1986",
+        "Thematic sync last=T-274 next=T-275",
+        "Export gdrive_sync_export.py (claude.ai-corpus-ids-sync.json + lawfare.json)"
+      ],
+      "summary": {
+        "lawfare_max_id": 1985,
+        "next_main_id": 1986,
+        "thematic_last": "T-274",
+        "next_thematic": "T-275",
+        "t_studies_on_disk": 60,
+        "thematic_mislabeled_ignored": [
+          "T-1512",
+          "T-1765",
+          "T-1766"
+        ]
+      },
+      "status": "completed"
+    },
+    {
+      "date": "2026-11-11",
+      "session": "cursor — fila todo sem colisao de ID",
+      "produced": [
+        "Main track 2021-2024",
+        "Thematic T-275–T-275"
+      ],
+      "summary": {
+        "lawfare_max_id": 2024,
+        "next_main_id": 2025,
+        "thematic_last": "T-275",
+        "next_thematic": "T-276",
+        "t_studies_on_disk": 135
+      },
+      "status": "completed"
+    }
+  ],
+  "last_main_id": 2024,
+  "next_available": 2025,
+  "updated": "2026-11-11"
+}

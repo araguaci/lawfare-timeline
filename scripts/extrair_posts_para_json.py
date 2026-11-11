@@ -19,6 +19,10 @@ import sys
 from pathlib import Path
 from datetime import datetime
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+# parse_front_matter fica exposto aqui porque outros scripts o carregam deste módulo
+from lawfare_post_parser import extract_fontes, is_block_marker, parse_front_matter  # noqa: E402
+
 
 def _relpath(filepath: Path, base: Path) -> str:
     """Retorna caminho relativo ou nome do arquivo."""
@@ -26,34 +30,6 @@ def _relpath(filepath: Path, base: Path) -> str:
         return str(filepath.relative_to(base))
     except ValueError:
         return filepath.name
-
-
-def parse_front_matter(content: str) -> tuple[dict, str]:
-    """Extrai front matter YAML e retorna (dict, corpo)."""
-    match = re.match(r'^---\s*\n(.*?)\n---\s*\n(.*)$', content, re.DOTALL)
-    if not match:
-        return {}, content
-
-    fm_str, body = match.groups()
-    front = {}
-
-    # Parse simples de YAML para campos comuns
-    for line in fm_str.split('\n'):
-        line = line.strip()
-        if not line or line.startswith('#'):
-            continue
-        if ':' in line:
-            key, _, val = line.partition(':')
-            key = key.strip().lower()
-            val = val.strip()
-            if val.startswith('"') or val.startswith("'"):
-                val = val[1:-1].replace('\\"', '"')
-            elif val.startswith('['):
-                # Tags como ['a','b'] ou ["a","b"]
-                val = re.findall(r"['\"]([^'\"]+)['\"]", val)
-            front[key] = val
-
-    return front, body
 
 
 def extract_date(front: dict, filepath: Path) -> tuple[str, str]:
@@ -117,17 +93,8 @@ def extract_from_body(body: str) -> dict:
         if vr:
             out['valor_envolvido'] = vr.group(0)
 
-    # Referências: URLs em ## Referências
-    ref_section = re.search(
-        r'##\s*Referências\s*\n(.*?)(?=\n##|\Z)',
-        body, re.DOTALL | re.IGNORECASE
-    )
-    if ref_section:
-        urls = re.findall(r'\[([^\]]+)\]\((https?://[^\)]+)\)', ref_section.group(1))
-        out['fontes'] = [url for _, url in urls if not url.startswith('https://www.perplexity') 
-                        and 'google.com/search' not in url and 'wikipedia.org' not in url]
-        if not out['fontes']:
-            out['fontes'] = [url for _, url in urls]
+    # Fontes: seções de fontes/referências; sem elas, links do corpo
+    out['fontes'] = extract_fontes(body)
 
     # Pessoas (padrão - Nome em negrito em listas)
     pessoas = re.findall(r'-\s*\*\*([^*]+)\*\*[:\s]', body)
@@ -188,7 +155,9 @@ def process_post(filepath: Path, base: Path, posts_dir: Path) -> dict | None:
     if isinstance(titulo, str) and (titulo.startswith('"') or titulo.startswith("'")):
         titulo = titulo[1:-1]
 
-    descricao = front.get('description') or front.get('descricao') or extracted.get('resumo', '')[:300]
+    descricao = front.get('description') or front.get('descricao')
+    if not isinstance(descricao, str) or not descricao.strip() or is_block_marker(descricao):
+        descricao = extracted.get('resumo', '')[:300]
     if isinstance(descricao, str) and len(descricao) > 500:
         descricao = descricao[:500] + '...'
 

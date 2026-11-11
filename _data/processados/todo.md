@@ -1,12 +1,23 @@
 # Notas de processamento · `_data/todo/`
 
-**Atualizado:** 2026-10-18 (1974–1985 · T-273/T-274)
+**Atualizado:** 2026-11-11 (2021–2024 · T-275)
 
 ## Fila
 
 - `_data/todo/_staging/` — HTML/MD (rascunhos; não mergear como ID)
-- JSON 1974–1985 + T-273/T-274 arquivados 18/10
+- JSON 2021–2024 + T-275 arquivados 11/11
+- `auditoria-ids-2026-10-18.md` permanece em `_data/todo/` (nota, não é ficha)
 - Duplicata `lawfare-batch-1943-1959.json` = conteúdo de 1926–1942 — sem merge
+
+## Merge 11/11/2026
+
+| Batch | IDs na fila | IDs finais |
+|-------|-------------|------------|
+| 9/jan imagens | 1986–1988 (colisão com corpus) | **2021–2023** |
+| Fé e voto | 1986 (colisão) | **2024** |
+| Memória institucional 8/jan | T-275 | **T-275** |
+
+1986–2020 intactos (Stoppe/COP28 até Gilmar/impeachment). Sync atrasado em 1985 recebeu catch-up dessa faixa, sem reescrita. Próximo main **2025** · próximo temático **T-276**.
 
 ## Merge 18/10/2026
 
