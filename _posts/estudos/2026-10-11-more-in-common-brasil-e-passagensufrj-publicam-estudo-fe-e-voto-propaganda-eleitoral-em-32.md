@@ -66,9 +66,9 @@ Não aplicável no sentido clássico (não há investigação estatal). O ponto 
 
 ## Conexoes
 
-- T-216 — TSE × USAID: parceria e censura seletiva
-- T-223 — P12-B assimetria de capacidade analítica
-- T-227 — P04 pela direita
+- [T-216 — TSE × USAID: parceria e censura seletiva](/posts/2026-06-29-tse-usaid-parceria-censura-seletiva/)
+- [T-223 — P12-B assimetria de capacidade analítica](/posts/2026-07-16-p12-b-instanciado-como-assimetria-de-capacidade-analitica-camada-oficial-aberta-tse-camada/)
+- [T-227 — P04 pela direita](/posts/2026-07-20-p04-pela-direita-narco-soberania-eleitoral-e-diplomacia-das-sombras-como-espelhos-estrutur/)
 
 ## Lacunas investigativas
 
