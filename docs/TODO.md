@@ -1,6 +1,6 @@
 # Próximos passos · lawfare-timeline
 
-**Atualizado:** 2026-11-11 (main 2024 · T-275)
+**Atualizado:** 2026-11-11 (main 2031 · T-276)
 
 > Espelho: `docs/TODO.md` · Notas: `_data/processados/todo.md` · Legado: `docs/TODO-LEGACY.md`
 
@@ -10,10 +10,23 @@
 
 | Track | Last | Próximo | Validação |
 |-------|------|---------|-----------|
-| Main | **2024** | **2025** | lawfare.json **1985** entradas · sem IDs duplicados |
-| Thematic | **T-275** | **T-276** | sync 100–275 contínuo · T-270 Compilado intacto |
-| Dragão e a Onça | **1770** / **T-246** | — | `dragao-onca.json` **151** |
+| Main | **2031** | **2032** | lawfare.json **1992** entradas · sem IDs duplicados |
+| Thematic | **T-276** | **T-277** | sync 100–276 contínuo · T-270 Compilado intacto |
+| Dragão e a Onça | **2031** / **T-276** | — | `dragao-onca.json` capítulo 19 Sun Tzu |
 | Fila `_data/todo/` | `_staging/` HTML/MD | — | JSON 2021–2024 + T-275 arquivados 11/11 |
+
+---
+
+## Rodada 11/11/2026 (b) ✅ — T-276 Sun Tzu
+
+Capítulo 19 de O Dragão e a Onça. Os IDs provisórios **1986–1992** colidiam com o corpus (já em 2024). Renumerados para **2025–2031**. T-276 estava livre. T-275 permanece no sync.
+
+| Final | Conteúdo |
+|-------|----------|
+| **2025–2031** | Camargo/CPFL, Concremat/CCCC, fechamento CPFL, Cotton, BNDES–Cexim, CEBC 2025, UHV State Grid |
+| **T-276** | [Vencer sem lutar](/posts/2026-11-11-t276-dragao-onca-suntzu/) |
+
+Dossiê: `odragaoeaonca/dragao-onca-suntzu.html`. **2025** segue `ev-alleged` no nexo Lava Jato → venda. Próximo main **2032** · próximo temático **T-277**.
 
 ---
 

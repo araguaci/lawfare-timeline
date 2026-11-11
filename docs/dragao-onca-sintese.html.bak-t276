@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Dragão e a Onça — Síntese Comparativa (v1 atualizada) | República Sequestrada</title>
+<meta name="description" content="Síntese cross-estadual atualizada 27/jul/2026: 12 UFs + eixos. Amapá (controle + federal) e RJ (Porto do Açu + Castro). Corpus T-228→T-246 · IDs 1639–1770 (+ SC + backfill CEEE-T).">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gosurf.site/dragao-onca-sintese">
+<meta property="og:title" content="O Dragão e a Onça — Síntese Comparativa (v1 atualizada)">
+<meta property="og:description" content="12 UFs + eixos · Amapá e RJ integrados · T-245 · ~150 posts · soberania na conta do governador — com nuance.">
+<meta property="og:image" content="https://gosurf.site/dragao-onca-sintese.webp">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="O Dragão e a Onça — Síntese Comparativa (v1 atualizada)">
+<meta name="twitter:description" content="Soberania na conta do governador — síntese de 12 UFs + eixos transversais.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --bg:#080c10;--bg2:#0f151b;--bg3:#161e26;
+  --dragon:#d4342c;--dragon2:#ff6b5f;--dragon-dim:#5c1512;
+  --jaguar:#e8b23d;--jaguar2:#ffd270;--jaguar-dim:#6b4e12;
+  --gr:#3ecb6f;--gr2:#78f5a8;--blue:#4a9eff;--blue2:#7ab8ff;
+  --purple:#b07aff;--purple2:#d0a8ff;--teal:#2ecfb0;--teal2:#60ffd8;
+  --border:rgba(255,255,255,0.07);--text:#e8edf0;--text2:#8a99a8;
+  --font:'Syne',sans-serif;--mono:'JetBrains Mono',monospace;
+}
+body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh}
+header{padding:26px 30px 18px;border-bottom:2px solid var(--dragon-dim);background:linear-gradient(135deg,#080c10 0%,#160f1a 55%,#080c10 100%);position:relative;overflow:hidden}
+header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(212,52,44,0.08) 0%,transparent 55%),radial-gradient(ellipse at 50% 50%,rgba(232,178,61,0.06) 0%,transparent 55%),radial-gradient(ellipse at 80% 50%,rgba(74,158,255,0.06) 0%,transparent 55%)}
+.hbadge{display:inline-flex;align-items:center;gap:6px;background:rgba(176,122,255,0.12);border:1px solid var(--purple);border-radius:4px;padding:4px 12px;font-size:11px;font-weight:700;letter-spacing:2px;color:var(--purple2);text-transform:uppercase;margin-bottom:12px}
+.live-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(212,52,44,0.15);border:1px solid var(--dragon-dim);border-radius:4px;padding:3px 12px;font-size:12px;font-weight:700;letter-spacing:1.5px;color:var(--dragon2);text-transform:uppercase;margin-left:8px}
+.live-dot{width:6px;height:6px;border-radius:50%;background:var(--dragon2);animation:pulse 1.2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+header h1{font-size:27px;font-weight:800;letter-spacing:-0.5px;color:#fff;line-height:1.15}
+header h1 span{color:var(--dragon2)}
+header h1 em{font-style:normal;color:var(--purple2)}
+.hmeta{display:flex;gap:18px;margin-top:12px;flex-wrap:wrap}
+.hm{font-size:12px;color:var(--text2);font-family:var(--mono)}
+.hm b{color:var(--purple2)}
+nav{display:flex;gap:4px;padding:12px 26px;background:rgba(10,14,18,0.96);border-bottom:2px solid var(--dragon-dim);box-shadow:0 6px 18px rgba(0,0,0,0.35);overflow-x:auto;flex-wrap:wrap;position:sticky;top:0;z-index:200;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.nb{padding:7px 14px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--text2);font-family:var(--font);font-size:12px;font-weight:600;cursor:pointer;transition:all .2s;white-space:nowrap;text-decoration:none;display:inline-block}
+.nb:hover{border-color:var(--dragon-dim);color:var(--dragon2)}
+.nb.act{background:linear-gradient(90deg,rgba(212,52,44,0.18),rgba(176,122,255,0.14));border-color:var(--purple);color:#fff;font-weight:800;box-shadow:0 0 0 1px var(--purple) inset}
+main{padding:0 20px 32px;max-width:1240px;margin:0 auto}
+.sec{padding:34px 0 12px;border-bottom:1px solid var(--border);scroll-margin-top:70px}
+.sec:last-of-type{border-bottom:none}
+.sec-title{font-size:20px;font-weight:800;color:#fff;margin-bottom:4px;display:flex;align-items:center;gap:12px}
+.sec-title .flag{font-size:15px}
+.sec-sub{font-size:12px;color:var(--text2);font-family:var(--mono);margin-bottom:16px}
+.kgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;padding:16px 0 12px}
+@media(max-width:1000px){.kgrid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.kgrid{grid-template-columns:repeat(2,1fr)}}
+.kcard{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:14px 15px;position:relative;overflow:hidden}
+.kcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.kd::before{background:linear-gradient(90deg,var(--dragon),var(--dragon2))}
+.kj::before{background:linear-gradient(90deg,var(--jaguar),var(--jaguar2))}
+.kt::before{background:linear-gradient(90deg,var(--teal),var(--teal2))}
+.kb::before{background:linear-gradient(90deg,var(--blue),var(--blue2))}
+.kp::before{background:linear-gradient(90deg,var(--purple),var(--purple2))}
+.klabel{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);margin-bottom:5px}
+.kval{font-size:22px;font-weight:800;line-height:1.1}
+.ksub{font-size:11px;color:var(--text2);margin-top:3px;font-family:var(--mono)}
+.kd .kval{color:var(--dragon2)}.kj .kval{color:var(--jaguar2)}.kt .kval{color:var(--teal2)}.kb .kval{color:var(--blue2)}.kp .kval{color:var(--purple2)}
+.panel{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:12px}
+.ptitle{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.dd{background:var(--dragon)}.dj{background:var(--jaguar)}.dt{background:var(--teal)}.db{background:var(--blue)}.dp{background:var(--purple)}
+.tag{display:inline-block;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:600;margin:2px 2px 2px 0;font-family:var(--mono)}
+.tg{background:rgba(62,203,111,0.1);color:#78f5a8;border:1px solid rgba(62,203,111,0.2)}
+.tgo{background:rgba(232,178,61,0.12);color:var(--jaguar2);border:1px solid rgba(232,178,61,0.25)}
+.tr{background:rgba(212,52,44,0.12);color:var(--dragon2);border:1px solid rgba(212,52,44,0.25)}
+p.body{font-size:14px;color:var(--text2);line-height:1.75;margin-bottom:12px}
+table.cmp{width:100%;border-collapse:collapse;font-size:12.5px}
+table.cmp th{text-align:left;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text2);padding:8px 12px;border-bottom:2px solid var(--border)}
+table.cmp td{padding:12px 12px;border-bottom:1px solid var(--border);vertical-align:top;color:var(--text2);line-height:1.5}
+table.cmp td.gov{color:#fff;font-weight:700}
+table.cmp tr:hover td{background:rgba(255,255,255,0.02)}
+.chartwrap{overflow-x:auto}
+svg{max-width:100%;height:auto}
+.alert{padding:14px 15px;border-radius:8px;margin-bottom:8px;border-left:3px solid;background:var(--bg3)}
+.acrit{border-color:var(--dragon)}
+.aalto{border-color:var(--jaguar2)}
+.amed{border-color:var(--blue)}
+.aok{border-color:var(--gr)}
+.aheader{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;flex-wrap:wrap;gap:6px}
+.aname{font-size:14px;font-weight:700}
+.abadge{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;border-radius:3px;font-family:var(--mono)}
+.bcrit{background:rgba(212,52,44,0.2);color:var(--dragon2)}.balto{background:rgba(232,178,61,0.2);color:var(--jaguar2)}.bmed{background:rgba(74,158,255,0.15);color:var(--blue2)}.bok{background:rgba(62,203,111,0.18);color:var(--gr2)}
+.adesc{font-size:12px;color:var(--text2);line-height:1.6}
+.horizonte{display:inline-block;padding:6px 14px;border-radius:6px;background:var(--bg3);border:1px solid var(--border);font-size:12px;font-weight:600;margin:3px 4px 3px 0}
+.horizonte.novo{border-color:var(--gr);color:var(--gr2)}
+.horizonte.done{border-color:var(--teal);color:var(--teal2)}
+.horizonte.juridico{border-color:var(--purple);color:var(--purple2)}
+.esq-note{font-size:11px;color:var(--text2);font-style:italic;margin-top:8px}
+.bridge{margin-top:12px;padding:14px 16px;border-radius:10px;background:rgba(176,122,255,0.08);border:1px solid rgba(176,122,255,0.25);font-size:13px;color:var(--text2);line-height:1.65}
+.bridge a{color:var(--purple2);font-weight:700;text-decoration:none}
+.bridge a:hover{color:#fff}
+footer{padding:22px 26px 40px;border-top:2px solid var(--dragon-dim);text-align:center}
+.footcc0{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;color:var(--text2);letter-spacing:1px}
+.footcc0 b{color:var(--purple2)}
+.footnote{font-size:11px;color:var(--text2);margin-top:8px;font-family:var(--mono)}
+#gotop{position:fixed;right:20px;bottom:20px;z-index:300;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--dragon),var(--purple));color:#fff;border:none;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,0.45);opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .25s,transform .25s}
+#gotop.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+#gotop:hover{filter:brightness(1.15)}
+.footdev{font-size:11px;color:var(--text2);margin-top:10px;font-family:var(--mono)}
+.footdev a{color:var(--jaguar2,var(--gold,var(--gr2,#e8b23d)));text-decoration:none}
+.footdev a:hover{color:#fff;text-decoration:underline}
+.series-nav{margin:0 auto;max-width:1200px;padding:28px 20px 0;border-top:2px solid var(--border)}
+.series-nav-title{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--text2);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.series-nav-title::before{content:'';flex:1;height:1px;background:var(--border)}
+.series-nav-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:14px}
+@media(max-width:720px){.series-nav-grid{grid-template-columns:1fr}}
+.series-card{display:block;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 16px;text-decoration:none;color:inherit;transition:border-color .2s,transform .15s;position:relative;overflow:hidden}
+.series-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--dragon,var(--red,#d4342c)),var(--jaguar,var(--gold,#e8b23d)))}
+.series-card:hover{border-color:rgba(232,178,61,.45);transform:translateY(-1px)}
+.series-card.is-current{border-color:var(--jaguar,var(--gold,#e8b23d));box-shadow:0 0 0 1px rgba(232,178,61,.35) inset;pointer-events:none;opacity:.92}
+.series-card-id{font-family:var(--mono);font-size:10px;color:var(--jaguar2,var(--gold2,var(--gold,#e8b23d)));letter-spacing:1px;margin-bottom:4px}
+.series-card-chapter{font-size:14px;font-weight:800;color:#fff;margin-bottom:4px;line-height:1.2}
+.series-card-desc{font-size:12px;color:var(--text2);line-height:1.55}
+.series-hub{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--jaguar2,var(--gold2,var(--gold,#e8b23d)));text-decoration:none;font-family:var(--mono);margin-bottom:8px}
+.series-hub:hover{color:#fff}
+</style>
+</head>
+<body>
+<header>
+  <div style="display:flex;align-items:center;gap:0;flex-wrap:wrap">
+    <div class="hbadge">Síntese Comparativa v1 · Atualizada 27/jul/2026</div>
+    <div class="live-badge"><span class="live-dot"></span>12 UFs + Eixos Transversais</div>
+  </div>
+  <h1>O <span>Dragão</span> e a Onça — <em>Síntese</em></h1>
+  <div class="hmeta">
+    <span class="hm"><b>Consolidados:</b> Federal · Diplomático · SP · GO · MG · BA · PA · AM · PR · RS · ES · AP · RJ · Ranking CEBC</span>
+    <span class="hm"><b>Corpus:</b> T-228 → T-246 · IDs 1639–1770 (+ SC + backfill CEEE-T) · 150 posts</span>
+    <span class="hm"><b>Tese:</b> soberania na conta do governador — com nuance</span>
+    <span class="hm"><b>Novos:</b> Amapá (controle) · RJ (Açu + Castro)</span>
+  </div>
+</header>
+
+<nav id="mainnav">
+  <a class="nb" href="#tese" data-target="tese">Tese Central</a>
+  <a class="nb" href="#kpis" data-target="kpis">KPIs Consolidados</a>
+  <a class="nb" href="#comparativo" data-target="comparativo">Quadro Comparativo</a>
+  <a class="nb" href="#graficos" data-target="graficos">Gráficos</a>
+  <a class="nb" href="#alertas" data-target="alertas">Alertas Cross-Estaduais</a>
+  <a class="nb" href="#horizontes" data-target="horizontes">Próximos Horizontes</a>
+  <a class="nb" href="#refs" data-target="refs">Fontes por Capítulo</a>
+</nav>
+
+<main>
+
+<section id="tese" class="sec">
+  <div class="sec-title"><span class="flag">🎯</span>Tese Central — Soberania na Conta do Governador</div>
+  <div class="sec-sub">Releitura 27/jul/2026 — + Amapá (T-244) · + Rio de Janeiro (T-245)</div>
+  <div class="panel">
+    <p class="body">A União negocia os marcos amplos — tratados, MoUs, cúpulas, WAICO, planos de mineração. Quem <b style="color:var(--jaguar2)">assina o contrato específico, enfrenta a comunidade atingida e responde eleitoralmente</b> é, na maioria dos casos, o governador estadual. A soberania operacional foi <b style="color:var(--dragon2)">terceirizada para os executivos estaduais</b> — com graus de transparência e accountability muito diferentes entre si.</p>
+    <p class="body">Nos cinco capítulos originais (GO, PA, AM, MG + federal), o mecanismo de três etapas era o padrão dominante: <b style="color:var(--teal2)">negociar → excluir comunidade → converter ativo em campanha</b>. Os artefatos de 25–26/jul <b>refinam e limitam</b> essa leitura:</p>
+    <p class="body"><b style="color:var(--gr2)">Confirma-se</b> onde há extração mineral com custo ambiental local (Pará, Amazonas) e na captura simbólico-eleitoral (Goiás/Caiado; MG/Zema — ativo-vitrine Ocidente, conversão eleitoral depois descartada).<br>
+    <b style="color:var(--jaguar2)">Enfraquece-se</b> em infraestrutura/manufatura por mercado ou continuidade institucional (São Paulo/CRRC; Paraná/CMPort — único com coordenação estado–união explícita). Em MG, a leitura “capítulo sem China” <em>não resiste</em>: CRRC R$700mi, Midea R$828mi, BYD com direitos de lítio no Jequitinhonha — camada paralela ao Vale do Lítio/Sigma.<br>
+    <b style="color:var(--dragon2)">Contraria-se ou não confirma</b> na Bahia (TIR chinesa <em>reduzida</em>); no par RS/ES (Leite perde GWM apesar do cortejo); no Amapá-açaí (cooperativa vende direto — controle metodológico); no Amapá-petróleo e no RJ-Porto do Açu (infraestrutura crítica sem governador na transação societária).</p>
+    <p class="body" style="margin-bottom:0"><b style="color:var(--purple2)">Rio de Janeiro (T-245)</b> combina padrões: CMPort/Vast (US$714mi, ~30% exportações petróleo, P10) + missão Castro/Hikvision-Dahua (diplomacia pessoal clássica). No federal, WAICO + Serra Verde EUA = alinhamento assimétrico duplo. Horizonte crítico mantido — agora com <b>12 UFs tipificadas</b>.</p>
+    <div class="bridge">Tipologia ampliada e tabela 12 UFs: <a href="/dragao-onca-sintese-final-cross-state.html">Síntese final T-243 →</a> · <a href="/dragao-onca-amapa.html">Amapá</a> · <a href="/dragao-onca-rj.html">RJ</a></div>
+  </div>
+</section>
+
+<section id="kpis" class="sec">
+  <div class="sec-title"><span class="flag">📊</span>KPIs Consolidados</div>
+  <div class="sec-sub">Números agregados até 27/jul/2026 — 12 UFs + eixos · + AP (T-244) · + RJ (T-245)</div>
+  <div class="kgrid">
+    <div class="kcard kd"><div class="klabel">UFs com capítulo na série</div><div class="kval">12</div><div class="ksub">SP · MG · GO · BA · PA · RS · PR · AM · ES · AP · RJ · SC (+ federal)</div></div>
+    <div class="kcard kj"><div class="klabel">Valor aproximado rastreado</div><div class="kval">~R$81bi+</div><div class="ksub">+ Açu US$714mi · CNPC R$582mi · MG China ~R$1,4bi+</div></div>
+    <div class="kcard kt"><div class="klabel">CEBC 2007–2025</div><div class="kval">US$85,5bi</div><div class="ksub">355 projetos · SP 151 · RJ 5º (21 proj.) · RS 20</div></div>
+    <div class="kcard kb"><div class="klabel">Padrões dominantes</div><div class="kval">P05 · P10 · P11</div><div class="ksub">ativos públicos + infra portuária/petróleo + mercado</div></div>
+    <div class="kcard kp"><div class="klabel">Casos que quebram a tese</div><div class="kval">5+</div><div class="ksub">BA (TIR↓) · RS/ES · AP-açaí · AP/RJ infra sem gov. · SC (cortejo sem captura)</div></div>
+  </div>
+  <div class="esq-note">Nota metodológica: valores misturam investimento anunciado, PPP, aquisição societária e contratos. Soma ilustrativa ~R$81bi+ (GO~18 + PA~11 + MG~4,4 + AM~2,5 + SP~22 + BA~10,6 + PR~4,4 + ES~5 + RS CEEE-T~2,67 + CNPC AP~0,58 + Açu ~US$714mi). GWM perdida pelo RS <b>não</b> entra como captura gaúcha. CEBC (US$85,5bi) é série histórica oficial — métrica distinta. Detalhe tipológico em T-243.</div>
+</section>
+
+<section id="comparativo" class="sec">
+  <div class="sec-title"><span class="flag">🗺️</span>Quadro Comparativo — 12 UFs</div>
+  <div class="sec-sub">Mecanismo · resultado · leitura da tese (ordem aproximada de importância / CEBC)</div>
+  <div class="panel">
+    <div class="chartwrap">
+    <table class="cmp">
+      <tr><th>UF / Governador</th><th>Mecanismo</th><th>Ativo / escala</th><th>Resultado</th><th>Tese</th></tr>
+      <tr><td class="gov">SP · Tarcísio</td><td>Mercado / leilão técnico</td><td>CRRC + COFCO · R$22bi+</td><td>Domínio material rodante; terminal Santos</td><td>Enfraquece — captura via mercado, sem diplomacia pessoal</td></tr>
+      <tr><td class="gov">MG · Zema</td><td>Vitrine Ocidente + China paralela</td><td>Sigma R$3bi · CRRC/Midea/BYD ~R$1,4bi+</td><td>Paralisa mina; abandona bandeira lítio; sai p/ Presidência</td><td>Confirma P09 (eleitoral) · corrige “MG sem China”</td></tr>
+      <tr><td class="gov">GO · Caiado</td><td>Pivô China→EUA + P09</td><td>Serra Verde · US$2,8bi</td><td>Venda USA Rare Earth; sai p/ Presidência</td><td>Confirma — captura simbólico-eleitoral</td></tr>
+      <tr><td class="gov">BA · Jerônimo</td><td>Diplomacia pessoal (Xi)</td><td>Ponte Itaparica · R$10,6bi</td><td>TIR chinesa 13%→10,88%</td><td>Contraria — captura com benefício ao estado</td></tr>
+      <tr><td class="gov">PA · Barbalho</td><td>MoU + exclusão comunitária</td><td>Ferrovia CCCC/Vale · R$10bi</td><td>Consulta 7 anos depois; 39 mortes na região</td><td>Confirma — custo ambiental local</td></tr>
+      <tr><td class="gov">RS · Leite</td><td>Energia (State Grid) + cortejo GWM</td><td>CEEE-T R$2,67bi · GWM perdida</td><td>Rede elétrica capturada; fábrica vai ao ES</td><td>Contraria — captura ≠ vitória industrial</td></tr>
+      <tr><td class="gov">PR · Ratinho Jr</td><td>Continuidade institucional</td><td>CMPort 90% TCP · +R$1,5bi</td><td>Acordos gêmeos estado+união (2 dias)</td><td>Enfraquece — coordenação, não “venda”</td></tr>
+      <tr><td class="gov">AM · Wilson Lima</td><td>Mineração + ZFM</td><td>Taboca/CNMC</td><td>MPF+PF ativos; R$12,3mi pós-desconfiança</td><td>Confirma — custo local, benefício distante</td></tr>
+      <tr><td class="gov">ES · Casagrande/Ferraço</td><td>Logística portuária</td><td>GWM Aracruz · R$4,6–5bi</td><td>1ª fábrica GWM fora da Ásia</td><td>Contraria o “diplomacia = vitória” — geografia decide</td></tr>
+      <tr><td class="gov">AP · (facilitador)</td><td>Cooperativa + leilão federal</td><td>Amazonbai 15 mil t · CNPC/Chevron 9 blocos</td><td>Açaí: vendedor é a cooperativa; petróleo: ANP/União</td><td>Não confirma — controle + captura federal sem gov.</td></tr>
+      <tr><td class="gov">RJ · Castro</td><td>Composição infra + governador</td><td>CMPort 70% Vast · Hikvision/Dahua · CNOOC cliente</td><td>Açu ~30% export. petróleo; vigilância 92 municípios</td><td>Misto — P10 sem Castro + P09 clássico na missão</td></tr>
+      <tr><td class="gov">SC · Jorginho Mello / Alesc</td><td>Cortejo legislativo (JMEV) + ferrovias exploratórias</td><td>JMEV (SC×ES, sem valor) · ferrovias ~US$300mi</td><td>Nenhuma fábrica confirmada (nem SC, nem ES) até mar/2026</td><td>Não confirma — cortejo duplo sem captura em nenhuma ponta</td></tr>
+    </table>
+    </div>
+    <div class="bridge">Novos capítulos: <a href="/dragao-onca-amapa.html">Amapá T-244</a> · <a href="/dragao-onca-rj.html">RJ T-245</a> · <a href="/dragao-onca-santa-catarina.html">Santa Catarina T-246</a> · Federal: <a href="/dragao-onca-braco-diplomatico.html">Braço Diplomático</a> · <a href="/dragao-onca-rs-es-ranking-nacional.html">CEBC T-242</a></div>
+  </div>
+</section>
+
+<section id="graficos" class="sec">
+  <div class="sec-title"><span class="flag">📈</span>Gráficos</div>
+  <div class="sec-sub">Ordem de grandeza (R$ bi) + padrões + marcos 2025–2026</div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dd"></span>Escala aproximada de capital mobilizado por UF (capítulos da série)</div>
+    <div class="chartwrap">
+    <svg viewBox="0 0 720 420" xmlns="http://www.w3.org/2000/svg">
+      <line x1="130" y1="16" x2="130" y2="380" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+      <text x="8" y="38" fill="#8a99a8" font-size="11" font-family="JetBrains Mono">São Paulo</text>
+      <rect x="130" y="24" width="520" height="22" fill="#d4342c" opacity="0.9" rx="3"/>
+      <text x="660" y="40" fill="#ff6b5f" font-size="11" font-family="JetBrains Mono">~22</text>
+      <text x="8" y="78" fill="#8a99a8" font-size="11" font-family="JetBrains Mono">Goiás</text>
+      <rect x="130" y="64" width="425" height="22" fill="#e8b23d" opacity="0.9" rx="3"/>
+      <text x="565" y="80" fill="#ffd270" font-size="11" font-family="JetBrains Mono">~18</text>
+      <text x="8" y="118" fill="#8a99a8" font-size="11" font-family="JetBrains Mono">Pará</text>
+      <rect x="130" y="104" width="260" height="22" fill="#b07aff" opacity="0.9" rx="3"/>
+      <text x="400" y="120" fill="#d0a8ff" font-size="11" font-family="JetBrains Mono">~11</text>
+      <text x="8" y="158" fill="#8a99a8" font-size="11" font-family="JetBrains Mono">Bahia</text>
+      <rect x="130" y="144" width="250" height="22" fill="#3ecb6f" opacity="0.9" rx="3"/>
+      <text x="390" y="160" fill="#78f5a8" font-size="11" font-family="JetBrains Mono">~10,6</text>
+      <text x="8" y="198" fill="#8a99a8" font-size="11" font-family="JetBrains Mono">Espírito Santo</text>
+      <rect x="130" y="184" width="118" height="22" fill="#2ecfb0" opacity="0.9" rx="3"/>
+      <text x="258" y="200" fill="#60ffd8" font-size="11" font-family="JetBrains Mono">~5</text>
+      <text x="8" y="238" fill="#8a99a8" font-size="11" font-family="JetBrains Mono">Minas Gerais</text>
+      <rect x="130" y="224" width="104" height="22" fill="#ff6b5f" opacity="0.9" rx="3"/>
+      <text x="244" y="240" fill="#ff6b5f" font-size="11" font-family="JetBrains Mono">~4,4</text>
+      <text x="8" y="278" fill="#8a99a8" font-size="11" font-family="JetBrains Mono">Paraná</text>
+      <rect x="130" y="264" width="104" height="22" fill="#4a9eff" opacity="0.9" rx="3"/>
+      <text x="244" y="280" fill="#7ab8ff" font-size="11" font-family="JetBrains Mono">~4,4</text>
+      <text x="8" y="318" fill="#8a99a8" font-size="11" font-family="JetBrains Mono">Rio Grande do Sul</text>
+      <rect x="130" y="304" width="63" height="22" fill="#b07aff" opacity="0.9" rx="3"/>
+      <text x="203" y="320" fill="#d0a8ff" font-size="11" font-family="JetBrains Mono">~2,67</text>
+      <text x="8" y="358" fill="#8a99a8" font-size="11" font-family="JetBrains Mono">Amazonas</text>
+      <rect x="130" y="344" width="59" height="22" fill="#8a99a8" opacity="0.85" rx="3"/>
+      <text x="199" y="360" fill="#c5d0da" font-size="11" font-family="JetBrains Mono">~2,5</text>
+      <text x="130" y="400" fill="#8a99a8" font-size="10" font-family="JetBrains Mono">R$ bi · MG = Sigma~3 + China~1,4 · RS = CEEE-T (GWM perdida não entra)</text>
+    </svg>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dp"></span>Padrões estruturais recorrentes (capítulos com o padrão)</div>
+    <div class="chartwrap">
+    <svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="190" x2="720" y2="190" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+      <rect x="30" y="20" width="60" height="170" fill="#d4342c" opacity="0.85" rx="3"/>
+      <text x="45" y="205" fill="#8a99a8" font-size="12" font-family="JetBrains Mono">P05</text>
+      <text x="48" y="14" fill="#ff6b5f" font-size="13" font-weight="700" font-family="JetBrains Mono">9</text>
+      <rect x="130" y="54" width="60" height="136" fill="#2ecfb0" opacity="0.85" rx="3"/>
+      <text x="145" y="205" fill="#8a99a8" font-size="12" font-family="JetBrains Mono">P11</text>
+      <text x="148" y="48" fill="#60ffd8" font-size="13" font-weight="700" font-family="JetBrains Mono">6</text>
+      <rect x="230" y="70" width="60" height="120" fill="#e8b23d" opacity="0.85" rx="3"/>
+      <text x="245" y="205" fill="#8a99a8" font-size="12" font-family="JetBrains Mono">P09</text>
+      <text x="248" y="64" fill="#ffd270" font-size="13" font-weight="700" font-family="JetBrains Mono">5</text>
+      <rect x="330" y="70" width="60" height="120" fill="#b07aff" opacity="0.85" rx="3"/>
+      <text x="345" y="205" fill="#8a99a8" font-size="12" font-family="JetBrains Mono">P10</text>
+      <text x="348" y="64" fill="#d0a8ff" font-size="13" font-weight="700" font-family="JetBrains Mono">5</text>
+      <rect x="430" y="102" width="60" height="88" fill="#4a9eff" opacity="0.85" rx="3"/>
+      <text x="440" y="205" fill="#8a99a8" font-size="12" font-family="JetBrains Mono">P04b</text>
+      <text x="448" y="96" fill="#7ab8ff" font-size="13" font-weight="700" font-family="JetBrains Mono">4</text>
+      <rect x="530" y="134" width="60" height="56" fill="#78f5a8" opacity="0.7" rx="3"/>
+      <text x="540" y="205" fill="#8a99a8" font-size="12" font-family="JetBrains Mono">P06</text>
+      <text x="548" y="128" fill="#78f5a8" font-size="13" font-weight="700" font-family="JetBrains Mono">2</text>
+      <text x="30" y="12" fill="#8a99a8" font-size="10" font-family="JetBrains Mono">P05: CEEE-T (RS) + CRRC/Midea (MG) · P11: SP, PR, ranking CEBC</text>
+    </svg>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dt"></span>Marcos 2025–2026 — eleição, diplomacia e mercado</div>
+    <div class="chartwrap">
+    <svg viewBox="0 0 720 180" xmlns="http://www.w3.org/2000/svg">
+      <line x1="30" y1="90" x2="690" y2="90" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+      <circle cx="90" cy="90" r="6" fill="#4a9eff"/>
+      <text x="55" y="60" fill="#7ab8ff" font-size="10" font-family="JetBrains Mono">nov/2025</text>
+      <text x="40" y="118" fill="#e8edf0" font-size="10">PR: acordos gêmeos</text>
+      <circle cx="200" cy="90" r="6" fill="#e8b23d"/>
+      <text x="165" y="60" fill="#ffd270" font-size="10" font-family="JetBrains Mono">fev–mar/2026</text>
+      <text x="155" y="118" fill="#e8edf0" font-size="10">BA TIR↓ · Zema/Caiado saem</text>
+      <circle cx="340" cy="90" r="6" fill="#d4342c"/>
+      <text x="310" y="60" fill="#ff6b5f" font-size="10" font-family="JetBrains Mono">abr/2026</text>
+      <text x="290" y="118" fill="#e8edf0" font-size="10">Serra Verde → EUA</text>
+      <circle cx="470" cy="90" r="6" fill="#2ecfb0"/>
+      <text x="440" y="60" fill="#60ffd8" font-size="10" font-family="JetBrains Mono">jun/2026</text>
+      <text x="420" y="118" fill="#e8edf0" font-size="10">GWM→ES · RS perde</text>
+      <circle cx="600" cy="90" r="6" fill="#b07aff"/>
+      <text x="570" y="60" fill="#d0a8ff" font-size="10" font-family="JetBrains Mono">jul/2026</text>
+      <text x="530" y="118" fill="#e8edf0" font-size="10">WAICO · AP (T-244) · RJ (T-245)</text>
+      <text x="30" y="160" fill="#8a99a8" font-size="10" font-family="JetBrains Mono">Fev/2025: CMPort/Vast Açu · Abr/2025: Castro/Hikvision · Jun/2025: CNPC Margem Equatorial</text>
+    </svg>
+    </div>
+  </div>
+</section>
+
+<section id="alertas" class="sec">
+  <div class="sec-title"><span class="flag">🚨</span>Alertas Cross-Estaduais</div>
+  <div class="sec-sub">Sinais mais graves + novos capítulos AP/RJ (27/jul)</div>
+  <div class="panel">
+    <div class="alert acrit"><div class="aheader"><div class="aname">Infraestrutura crítica — Porto do Açu (RJ)</div><div class="abadge bcrit">CRÍTICO</div></div><div class="adesc">CMPort adquire 70% da Vast (US$714mi, fev/2025) — terminal VLCC escoa ~30% das exportações de petróleo do país. Transação de mercado sem Castro na negociação; CADE pendente. Precedente TCP Paraná (2018).</div></div>
+    <div class="alert acrit"><div class="aheader"><div class="aname">Escalada institucional ativa — Amazonas</div><div class="abadge bcrit">CRÍTICO</div></div><div class="adesc">MPF (inquérito civil) + Polícia Federal (investigação criminal) sobre Taboca/China Nonferrous em jul/2026 — único caso da série com investigação criminal federal em curso.</div></div>
+    <div class="alert acrit"><div class="aheader"><div class="aname">Alinhamento assimétrico duplo — Federal</div><div class="abadge bcrit">CRÍTICO</div></div><div class="adesc">Mesmo semestre: Brasil na WAICO (governança de IA liderada pela China) e Serra Verde vendida à USA Rare Earth (US$2,8bi) — zero estratégia nacional coordenada de captura de valor.</div></div>
+    <div class="alert acrit"><div class="aheader"><div class="aname">Pagamento direto pós-desconfiança — Amazonas</div><div class="abadge bcrit">CRÍTICO</div></div><div class="adesc">R$12,3mi à ACWA dois dias após desconfiança total da comunidade, sem mediação do MPF.</div></div>
+    <div class="alert aalto"><div class="aheader"><div class="aname">Infra crítica estadual sob State Grid — Rio Grande do Sul</div><div class="abadge balto">ALTO</div></div><div class="adesc">CEEE-T privatizada em leilão público na B3 (16/jul/2021, R$2,67bi, ágio 57,13% — id_1763, backfill verificado 27/jul) para CPFL/State Grid, sob gestão Leite. Mais de 6 mil km de transmissão. Mecanismo distinto do padrão "governador-negociador": licitação competitiva, não tratativa bilateral direta — mas convergente no resultado. Captura energética concreta <b>antes</b> do cortejo GWM perdido (id_1737).</div></div>
+    <div class="alert aalto"><div class="aheader"><div class="aname">Camada chinesa paralela — Minas Gerais</div><div class="abadge balto">ALTO</div></div><div class="adesc">Correção: MG não é “capítulo sem China”. CRRC R$700mi (Metrô BH), Midea R$828mi, Wondfo/Celer, BYD com direitos de lítio em Coronel Murta (mesmo Jequitinhonha da Sigma). Vitrine Ocidente + FDI chinês sob o mesmo Zema.</div></div>
+    <div class="alert aalto"><div class="aheader"><div class="aname">Domínio de mercado sem diplomacia — São Paulo</div><div class="abadge balto">ALTO</div></div><div class="adesc">CRRC consolida material rodante (TIC, Linha 5, fábrica Araraquara) via leilões “neutros”; COFCO triplica capacidade em Santos. R$22bi+ rastreados — variante mercado do padrão.</div></div>
+    <div class="alert aalto"><div class="aheader"><div class="aname">Sequência invertida (acordo antes de consulta) — Pará</div><div class="abadge balto">ALTO</div></div><div class="adesc">Traçado da Ferrovia do Pará em 2019/2023; audiências públicas só em 2026 — 7 anos de defasagem.</div></div>
+    <div class="alert aalto"><div class="aheader"><div class="aname">Rede familiar em 3 pontos de poder — Pará</div><div class="abadge balto">ALTO</div></div><div class="adesc">Esposa no TCE-PA, irmão ministro federal, primo prefeito de Belém (COP30) — controle estruturalmente reduzido.</div></div>
+    <div class="alert aalto"><div class="aheader"><div class="aname">Fragilidade do operador-vitrine — Minas Gerais</div><div class="abadge balto">ALTO</div></div><div class="adesc">Sigma Lithium paralisa mina 5 meses após Nasdaq; dívida US$141mi — distância anúncio × entrega. Zema abandona a bandeira do lítio na campanha presidencial.</div></div>
+    <div class="alert aalto"><div class="aheader"><div class="aname">Governador-negociador + entity list — Rio de Janeiro</div><div class="abadge balto">ALTO</div></div><div class="adesc">Missão Castro (abr/2025): acordos Hikvision/Dahua para videomonitoramento em 92 municípios — empresas na entity list dos EUA desde 2019. Padrão clássico “soberania na conta do governador”, distinto do Açu.</div></div>
+    <div class="alert aalto"><div class="aheader"><div class="aname">Captura federal offshore — Amapá</div><div class="abadge balto">ALTO</div></div><div class="adesc">Consórcio Chevron/CNPC arremata 9 blocos na Foz do Amazonas (R$582,2mi bônus) — decisão ANP/União sobre litoral amapaense, sem interlocução estadual documentada. Arquitetura análoga ao Açu.</div></div>
+    <div class="alert aok"><div class="aheader"><div class="aname">Caso de controle — Amapá (açaí)</div><div class="abadge bok">CONTROLE</div></div><div class="adesc">Amazonbai vende 15 mil t de açaí direto à China — cooperativa extrativista como vendedor; Estado facilita (MIDR/Selo Amapá). Pendência GACC. Não confirma tese do governador-negociador.</div></div>
+    <div class="alert aok"><div class="aheader"><div class="aname">Caso de controle — Bahia</div><div class="abadge bok">CONTROLE</div></div><div class="adesc">Jerônimo × Xi: PPP sobe a R$10,6bi, mas TIR dos acionistas chineses cai 13%→10,88%. Captura com benefício comprovada ao estado.</div></div>
+    <div class="alert aok"><div class="aheader"><div class="aname">Par de controle — RS × ES (GWM) + paradoxo CEEE-T</div><div class="abadge bok">CONTROLE</div></div><div class="adesc">Mesma disputa GWM, desfechos opostos (logística &gt; diplomacia). No RS: State Grid na transmissão + 22,5% das exportações — e ainda assim sem fábrica. Captura energética ≠ vitória manufatureira.</div></div>
+    <div class="alert amed"><div class="aheader"><div class="aname">Coordenação estado–união — Paraná</div><div class="abadge bmed">MÉDIO (distintivo)</div></div><div class="adesc">APPA e Ministério de Portos assinam com CMPort na China com 2 dias de diferença (nov/2025). Único capítulo com articulação explícita nos dois níveis.</div></div>
+    <div class="alert amed"><div class="aheader"><div class="aname">Opacidade de incentivos fiscais — recorrente</div><div class="abadge bmed">MÉDIO</div></div><div class="adesc">Renúncia fiscal/ICMS raramente discriminada nos capítulos — lacuna estrutural que sobrevive à expansão do corpus.</div></div>
+    <div class="alert aalto"><div class="aheader"><div class="aname">Cortejo legislativo duplo, sem captura em nenhuma ponta — Santa Catarina</div><div class="abadge balto">ALTO (distintivo)</div></div><div class="adesc">Deputados da Alesc (não o governador) assinam termo de intenção com a JMEV em Pequim (jun/2025) — mas a montadora já tinha acordo prévio com o ES (mai/2025). Até mar/2026, nenhum dos dois estados confirma fábrica operacional. Variante mais severa que RS/GWM: aqui ninguém captura.</div></div>
+    <div class="alert amed"><div class="aheader"><div class="aname">PL 2.780/2024 no Senado</div><div class="abadge bmed">MÉDIO (legislativo)</div></div><div class="adesc">FGAM R$2bi para investidores, zero mecanismo equivalente para comunidades. INESC cita Serra Verde. Votação final pendente — teste regulatório da tese.</div></div>
+  </div>
+</section>
+
+<section id="horizontes" class="sec">
+  <div class="sec-title"><span class="flag">🧭</span>Próximos Horizontes</div>
+  <div class="sec-sub">O que já fechou · + Amapá e RJ (27/jul)</div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dt"></span>Entregues nesta rodada</div>
+    <div>
+      <span class="horizonte done">São Paulo</span>
+      <span class="horizonte done">Bahia</span>
+      <span class="horizonte done">Paraná</span>
+      <span class="horizonte done">RS dedicado (T-240)</span>
+      <span class="horizonte done">RS · ES · CEBC</span>
+      <span class="horizonte done">MG releitura (China paralela)</span>
+      <span class="horizonte done">Braço Diplomático</span>
+      <span class="horizonte done">Amapá (T-244)</span>
+      <span class="horizonte done">Rio de Janeiro (T-245)</span>
+      <span class="horizonte done">Santa Catarina (T-246)</span>
+      <span class="horizonte done">Síntese final T-243</span>
+    </div>
+    <p class="body" style="margin-top:12px">Amapá testa limites da tese (controle cooperativista + captura federal offshore). RJ combina Açu (infra sem governador) + Castro/Hikvision (padrão clássico). SC adiciona variante inédita: cortejo liderado pelo Legislativo (Alesc), não pelo governador — e sem captura confirmada em nenhuma ponta (JMEV nem em SC, nem no "vencedor" ES). Corpus agora cobre <b>12 UFs</b>.</p>
+  </div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dj"></span>Próximos estados candidatos</div>
+    <div><span class="horizonte novo">Maranhão</span></div>
+    <p class="body" style="margin-top:12px">Priorizar UFs com volume CEBC ou disputa pontual recente ainda sem capítulo. MA aparece nas perguntas de engajamento dos posts X.</p>
+  </div>
+  <div class="panel">
+    <div class="ptitle"><span class="dot dp"></span>Eixos já publicados (manter monitoramento)</div>
+    <div>
+      <span class="horizonte juridico">Braço Jurídico</span>
+      <span class="horizonte juridico">PL 2.780/2024</span>
+      <span class="horizonte juridico">WAICO / minerais críticos</span>
+    </div>
+    <p class="body" style="margin-top:12px">Gatilhos: votação do PL no Senado; obrigações concretas da WAICO; CADE CMPort/Vast; certificação GACC (Amazonbai); andamento Taboca (AM).</p>
+    <div class="bridge">Fechamento tipológico da série: <a href="/dragao-onca-sintese-final-cross-state.html">Síntese final cross-state (T-243) →</a></div>
+  </div>
+</section>
+
+<section id="refs" class="sec">
+  <div class="sec-title"><span class="flag">📚</span>Fontes por Capítulo</div>
+  <div class="sec-sub">Consolida os dossiês — fontes primárias nos artefatos individuais</div>
+  <div class="panel">
+    <p class="body"><b style="color:var(--purple2)">Eixos transversais</b><br>
+    • Federal — <a href="/dragao-onca-brasil-federal.html" style="color:var(--blue2)">dragao-onca-brasil-federal.html</a><br>
+    • Diplomático — <a href="/dragao-onca-braco-diplomatico.html" style="color:var(--blue2)">dragao-onca-braco-diplomatico.html</a> (IDs 1713–1718)<br>
+    • Jurídico — <a href="/dragao-onca-braco-juridico.html" style="color:var(--blue2)">dragao-onca-braco-juridico.html</a><br>
+    • PL 2.780 — <a href="/dragao-onca-pl2780.html" style="color:var(--blue2)">dragao-onca-pl2780.html</a></p>
+    <p class="body"><b style="color:var(--jaguar2)">Estados (ordem de importância / CEBC)</b><br>
+    • São Paulo — <a href="/dragao-onca-sao-paulo.html" style="color:var(--blue2)">dragao-onca-sao-paulo.html</a> (IDs 1726–1730 · T-238)<br>
+    • Goiás — <a href="/dragao-onca-goias.html" style="color:var(--blue2)">dragao-onca-goias.html</a> (T-228 · backfill 1740–1748)<br>
+    • Minas Gerais — <a href="/dragao-onca-minas-gerais.html" style="color:var(--blue2)">dragao-onca-minas-gerais.html</a> (T-232 · Sigma + CRRC/Midea/BYD)<br>
+    • Bahia — <a href="/dragao-onca-bahia.html" style="color:var(--blue2)">dragao-onca-bahia.html</a> (IDs 1719–1725 · T-237)<br>
+    • Pará — <a href="/dragao-onca-para.html" style="color:var(--blue2)">dragao-onca-para.html</a><br>
+    • Amazonas — <a href="/dragao-onca-amazonas.html" style="color:var(--blue2)">dragao-onca-amazonas.html</a><br>
+    • Paraná — <a href="/dragao-onca-parana.html" style="color:var(--blue2)">dragao-onca-parana.html</a> (IDs 1731–1734 · T-239)<br>
+    • Rio Grande do Sul — <a href="/dragao-onca-rio-grande-do-sul.html" style="color:var(--blue2)">dragao-onca-rio-grande-do-sul.html</a> (T-240 · CEEE-T id_1763 (backfill 27/jul) · RS Day 1756 · GWM 1735–1737)<br>
+    • RS · ES · Ranking — <a href="/dragao-onca-rs-es-ranking-nacional.html" style="color:var(--blue2)">dragao-onca-rs-es-ranking-nacional.html</a> (T-240–242)<br>
+    • Amapá — <a href="/dragao-onca-amapa.html" style="color:var(--blue2)">dragao-onca-amapa.html</a> (IDs 1757–1759 · T-244)<br>
+    • Rio de Janeiro — <a href="/dragao-onca-rj.html" style="color:var(--blue2)">dragao-onca-rj.html</a> (IDs 1760–1762 · T-245)<br>
+    • Santa Catarina — <a href="/dragao-onca-santa-catarina.html" style="color:var(--blue2)">dragao-onca-santa-catarina.html</a> (IDs 1764–1770 · T-246)</p>
+    <p class="body" style="margin-bottom:0"><b style="color:var(--gr2)">Fechamento</b><br>
+    • Síntese final — <a href="/dragao-onca-sintese-final-cross-state.html" style="color:var(--blue2)">dragao-onca-sintese-final-cross-state.html</a> (T-243)<br>
+    • Hub — <a href="./" style="color:var(--blue2)">índice da série</a></p>
+  </div>
+</section>
+
+<section class="series-nav" id="serie">
+  <div class="series-nav-title">Artefatos da Série: O Dragão e a Onça</div>
+  <div class="series-nav-grid">
+    <a class="series-card" href="index.html"><div class="series-card-id">0 · Hub</div><div class="series-card-chapter">Índice da série</div><div class="series-card-desc">Mapa completo + tese · 19 artefatos · 12 UFs</div></a>
+    <a class="series-card" href="/dragao-onca-brasil-federal.html"><div class="series-card-id">1 · T-229 · Crítico</div><div class="series-card-chapter">🇧🇷 BR Brasil (Federal)</div><div class="series-card-desc">Pano de fundo 1993–2026 · Doria–Sinovac</div></a>
+    <a class="series-card" href="/dragao-onca-braco-diplomatico.html"><div class="series-card-id">2 · T-236 · Crítico</div><div class="series-card-chapter">🌐 Braço Diplomático</div><div class="series-card-desc">WAICO + Serra Verde + alinhamento duplo</div></a>
+    <a class="series-card" href="/dragao-onca-sao-paulo.html"><div class="series-card-id">3 · T-238 · Alto</div><div class="series-card-chapter">🇧🇷 SP São Paulo</div><div class="series-card-desc">Variante “mercado” — CRRC/COFCO</div></a>
+    <a class="series-card" href="/dragao-onca-goias.html"><div class="series-card-id">4 · T-228 · Alto</div><div class="series-card-chapter">🇧🇷 GO Goiás</div><div class="series-card-desc">Pivô China→EUA/Japão, terras raras</div></a>
+    <a class="series-card" href="/dragao-onca-minas-gerais.html"><div class="series-card-id">5 · T-232 · Alto</div><div class="series-card-chapter">🇧🇷 MG Minas Gerais</div><div class="series-card-desc">Sigma + China paralela (CRRC/Midea/BYD)</div></a>
+    <a class="series-card" href="/dragao-onca-bahia.html"><div class="series-card-id">6 · T-237 · Alto</div><div class="series-card-chapter">🇧🇷 BA Bahia</div><div class="series-card-desc">Caso de controle — padrão falha</div></a>
+    <a class="series-card" href="/dragao-onca-para.html"><div class="series-card-id">7 · T-230 · Alto</div><div class="series-card-chapter">🇧🇷 PA Pará</div><div class="series-card-desc">Ferrovia + COP30 + 39 mortes</div></a>
+    <a class="series-card" href="/dragao-onca-amazonas.html"><div class="series-card-id">8 · T-231 · Alto</div><div class="series-card-chapter">🇧🇷 AM Amazonas</div><div class="series-card-desc">Taboca/MPF/PF — mais grave</div></a>
+    <a class="series-card" href="/dragao-onca-parana.html"><div class="series-card-id">9 · T-239 · Médio</div><div class="series-card-chapter">🇧🇷 PR Paraná</div><div class="series-card-desc">Coordenação estado–união (TCP)</div></a>
+    <a class="series-card" href="/dragao-onca-rio-grande-do-sul.html"><div class="series-card-id">10 · T-240 · Médio</div><div class="series-card-chapter">🇧🇷 RS Rio Grande do Sul</div><div class="series-card-desc">CEEE-T + cortejo GWM sem captura</div></a>
+    <a class="series-card" href="/dragao-onca-rs-es-ranking-nacional.html"><div class="series-card-id">11 · T-240–242 · Médio</div><div class="series-card-chapter">🇧🇷 RS · ES · Ranking CEBC</div><div class="series-card-desc">Par de controle + ranking nacional</div></a>
+    <a class="series-card is-current" href="/dragao-onca-sintese.html"><div class="series-card-id">12 · T-233 · Consolidação</div><div class="series-card-chapter">📊 Síntese v1</div><div class="series-card-desc">KPIs · 12 UFs · soberania do governador</div></a>
+    <a class="series-card" href="/dragao-onca-pl2780.html"><div class="series-card-id">13 · T-235 · Legislativo</div><div class="series-card-chapter">📜 PL 2.780/2024</div><div class="series-card-desc">FGAM R$ 2 bi · minerais críticos</div></a>
+    <a class="series-card" href="/dragao-onca-braco-juridico.html"><div class="series-card-id">14 · T-234 · Transversal</div><div class="series-card-chapter">⚖️ Braço Jurídico</div><div class="series-card-desc">STF, marco temporal, ADI 7919</div></a>
+    <a class="series-card" href="/dragao-onca-sintese-final-cross-state.html"><div class="series-card-id">15 · T-243 · Fechamento</div><div class="series-card-chapter">🎯 Síntese final · 12 UFs</div><div class="series-card-desc">Onde a tese confirma, enfraquece ou falha</div></a>
+    <a class="series-card" href="/dragao-onca-amapa.html"><div class="series-card-id">16 · T-244 · Controle</div><div class="series-card-chapter">🇧🇷 AP Amapá</div><div class="series-card-desc">Amazonbai + Chevron/CNPC federal</div></a>
+    <a class="series-card" href="/dragao-onca-rj.html"><div class="series-card-id">17 · T-245 · Alto</div><div class="series-card-chapter">🇧🇷 RJ Rio de Janeiro</div><div class="series-card-desc">Açu/CMPort + Castro/Hikvision</div></a>
+    <a class="series-card" href="/dragao-onca-santa-catarina.html"><div class="series-card-id">18 · T-246 · Distintivo</div><div class="series-card-chapter">🇧🇷 SC Santa Catarina</div><div class="series-card-desc">JMEV: cortejo duplo, captura zero</div></a>
+  </div>
+  <a class="series-hub" href="index.html">← Índice da série · O Dragão e a Onça</a>
+</section>
+
+</main>
+
+<footer>
+  <div class="footcc0">⚖ <b>CC0 1.0</b> — Domínio Público · lawfare-timeline · série "O Dragão e a Onça" — Síntese v1</div>
+  <div class="footnote">Atualizada 27/jul/2026 · + Amapá (T-244) · + RJ (T-245) · corpus T-228→T-246 · 150 posts (+ CEEE-T backfill 1763) · tipologia em T-243</div>
+  <div class="footdev">Desenvolvido por <a href="https://www.artesdosul.com/" target="_blank" rel="noopener">Artes do Sul</a></div>
+</footer>
+
+<button id="gotop" title="Voltar ao topo" aria-label="Voltar ao topo">↑</button>
+
+<script>
+const links = document.querySelectorAll('.nb');
+const sections = document.querySelectorAll('main .sec');
+const map = {};
+links.forEach(l=>{map[l.dataset.target]=l});
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      links.forEach(l=>l.classList.remove('act'));
+      const id = entry.target.id;
+      if(map[id]) map[id].classList.add('act');
+    }
+  });
+},{rootMargin:'-30% 0px -60% 0px',threshold:0});
+sections.forEach(s=>observer.observe(s));
+const gotop = document.getElementById('gotop');
+window.addEventListener('scroll',()=>{
+  gotop.classList.toggle('show', window.scrollY > 400);
+});
+gotop.addEventListener('click',()=>{
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+</script>
+</body>
+</html>

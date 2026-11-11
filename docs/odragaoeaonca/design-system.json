@@ -1,0 +1,337 @@
+{
+  "metadata": {
+    "name": "Sun Tzu",
+    "slug": "sun-tzu",
+    "schemaVersion": "2.0.0",
+    "sourceProject": "D:\\ai-projects\\lawfare-timeline\\odragaoeaonca",
+    "archetype": "Editorial & Publicação",
+    "frameworks": [
+      "HTML5",
+      "Vanilla CSS3",
+      "Vanilla JS"
+    ],
+    "referenceThemes": [
+      {
+        "slug": "sunset-dourado",
+        "name": "Sunset Dourado",
+        "similarity": 78.3
+      },
+      {
+        "slug": "cyberpunk-brazil",
+        "name": "Neo-Sertão Cyberpunk",
+        "similarity": 76.9
+      },
+      {
+        "slug": "lord-of-rings",
+        "name": "The One Design System",
+        "similarity": 75.7
+      }
+    ],
+    "colorMode": "dark",
+    "targetMarket": "Brazil"
+  },
+  "visualIdentity": {
+    "tagline": "Amazonbai (açaí→China), pendência GACC e consórcio Chevron/CNPC na Margem Equatorial — três arquiteturas distintas no Amapá. Caso de controle + captura federal.",
+    "aesthetic": "Editorial & Publicação — Tipografia expressiva, hierarquia de leitura calma e densidade informacional estruturada.",
+    "prompt": "Tema escuro e imersivo inspirado no projeto Sun Tzu (Editorial & Publicação), combinando fundo #080C10, texto principal #E8EDF0 e acento característico #E8B23D. Tipografia guiada por Syne para títulos e Syne para leitura contínua, atendendo ao domínio de china, https, boolean, nan com contraste WCAG AA validado.",
+    "tone": "escuro",
+    "keywords": [
+      "china",
+      "https",
+      "boolean",
+      "nan",
+      "enabled",
+      "brasil"
+    ],
+    "referenceMatches": [
+      "sunset-dourado",
+      "cyberpunk-brazil",
+      "lord-of-rings"
+    ]
+  },
+  "foundations": {
+    "colors": {
+      "semantic": {
+        "background": {
+          "primary": "#080C10",
+          "secondary": "#181C20",
+          "elevated": "#24292C",
+          "sunken": "#111519"
+        },
+        "foreground": {
+          "primary": "#E8EDF0",
+          "secondary": "#C0C4C8",
+          "muted": "#767A7E",
+          "faint": "#8E9396",
+          "accent": "#E8B23D",
+          "accentSecondary": "#3ECB6F",
+          "onAccent": "#0F172A"
+        },
+        "borders": {
+          "subtle": "#23272B",
+          "default": "#E8B23D",
+          "strong": "#505458"
+        },
+        "status": {
+          "success": "#22C55E",
+          "warning": "#F59E0B",
+          "error": "#EF4444",
+          "info": "#3ECB6F"
+        }
+      },
+      "palette": {
+        "signature": [
+          "#E8B23D",
+          "#3ECB6F",
+          "#080C10",
+          "#181C20"
+        ],
+        "topExtracted": [
+          "#080C10",
+          "#E8B23D",
+          "#3ECB6F",
+          "#B07AFF",
+          "#2ECFB0",
+          "#4A9EFF",
+          "#D4342C",
+          "#E8EDF0"
+        ]
+      }
+    },
+    "themes": {
+      "dark": {
+        "name": "Tema Escuro (Extraído)",
+        "selector": "[data-theme=\"dark\"]",
+        "colors": {
+          "background": "#080C10",
+          "surface": "#181C20",
+          "foreground": "#E8EDF0",
+          "accent": "#E8B23D",
+          "border": "#E8B23D"
+        }
+      },
+      "default": {
+        "name": "Variante default",
+        "selector": "[data-theme=\"default\"]",
+        "colors": {
+          "background": "#0B0F0A",
+          "surface": "#181C17",
+          "foreground": "#E8F0E8",
+          "accent": "#E8B23D",
+          "border": "#E8B23D"
+        }
+      }
+    },
+    "typography": {
+      "fontFamilies": {
+        "display": "'Syne', system-ui, sans-serif",
+        "body": "'Syne', sans-serif",
+        "mono": "'JetBrains Mono', monospace"
+      },
+      "googleFonts": [
+        "Syne",
+        "JetBrains Mono",
+        "IBM Plex Mono",
+        "Crimson Pro",
+        "Bebas Neue"
+      ],
+      "fontSizes": {
+        "xs": "0.75rem",
+        "sm": "0.875rem",
+        "base": "1rem",
+        "lg": "1.25rem",
+        "xl": "1.5rem",
+        "2xl": "2rem",
+        "display": "clamp(2.25rem, 4.5vw, 3.75rem)"
+      },
+      "fontWeights": {
+        "normal": 400,
+        "medium": 500,
+        "semibold": 600,
+        "bold": 700
+      },
+      "lineHeights": {
+        "tight": 1.15,
+        "snug": 1.3,
+        "normal": 1.6,
+        "relaxed": 1.75
+      }
+    },
+    "spacing": {
+      "0": "0px",
+      "1": "4px",
+      "2": "8px",
+      "3": "12px",
+      "4": "16px",
+      "5": "20px",
+      "6": "24px",
+      "8": "32px",
+      "10": "40px",
+      "12": "48px",
+      "16": "64px",
+      "unit": "4px",
+      "sectionY": "clamp(3rem, 6vw, 5.5rem)",
+      "containerMax": "1200px",
+      "cardGap": "1.25rem"
+    },
+    "borderRadius": {
+      "none": "0px",
+      "sm": "3px",
+      "md": "8px",
+      "lg": "12px",
+      "xl": "20px",
+      "pill": "9999px"
+    },
+    "shadows": {
+      "strategy": "subtle-elevation",
+      "tokens": {
+        "none": "none",
+        "sm": "0 0 0 1px rgba(232,178,61,.35) inset",
+        "md": "0 6px 18px rgba(0,0,0,0.35)",
+        "lg": "0 4px 14px rgba(0,0,0,0.45)"
+      }
+    },
+    "zIndex": {
+      "base": 0,
+      "dropdown": 100,
+      "sticky": 200,
+      "overlay": 300,
+      "modal": 300,
+      "popover": 500,
+      "tooltip": 600,
+      "toast": 700,
+      "cursor": 9999
+    }
+  },
+  "navigationExperience": {
+    "pattern": "Cabeçalho limpo com atalhos diretos e navegação ancorada",
+    "stickyHeader": true,
+    "focusManagement": "focus-visible obrigatório com anel de contraste >= 3:1",
+    "breadcrumbs": true
+  },
+  "components": {
+    "button": {
+      "base": {
+        "fontFamily": "var(--font-body)",
+        "borderRadius": "8px",
+        "fontWeight": 600
+      },
+      "variants": {
+        "primary": {
+          "background": "#E8B23D",
+          "color": "#0F172A",
+          "focusRing": "2px solid #E8B23D"
+        },
+        "ghost": {
+          "background": "transparent",
+          "color": "#E8EDF0",
+          "border": "1px solid #E8B23D"
+        }
+      }
+    },
+    "card": {
+      "base": {
+        "background": "#181C20",
+        "border": "1px solid #E8B23D",
+        "borderRadius": "12px",
+        "shadow": "0 0 0 1px rgba(232,178,61,.35) inset",
+        "padding": "1.25rem"
+      }
+    },
+    "badge": {
+      "background": "#111519",
+      "color": "#767A7E",
+      "border": "1px solid #23272B",
+      "borderRadius": "9999px"
+    },
+    "modal": {
+      "overlay": {
+        "background": "rgba(0, 0, 0, 0.65)",
+        "zIndex": "var(--z-overlay)"
+      },
+      "content": {
+        "background": "#24292C",
+        "border": "1px solid #505458",
+        "borderRadius": "20px",
+        "shadow": "0 4px 14px rgba(0,0,0,0.45)",
+        "zIndex": "var(--z-modal)"
+      }
+    },
+    "tooltip": {
+      "background": "#24292C",
+      "color": "#E8EDF0",
+      "borderRadius": "3px"
+    },
+    "apex-card": {
+      "description": "Cartão principal de destaque temático do projeto",
+      "style": {
+        "background": "#181C20",
+        "border": "1px solid #E8B23D",
+        "borderRadius": "12px"
+      }
+    },
+    "specs-table": {
+      "description": "Grade de tokens e especificações",
+      "style": {
+        "fontFamily": "var(--font-mono)",
+        "borderColor": "#E8B23D",
+        "background": "#080C10"
+      }
+    },
+    "technical-card": {
+      "description": "Bloco técnico com acento de marca",
+      "style": {
+        "background": "#181C20",
+        "border": "1px solid #E8B23D",
+        "color": "#E8EDF0"
+      }
+    }
+  },
+  "animations": {
+    "durationFast": "150ms",
+    "durationBase": "260ms",
+    "easing": "cubic-bezier(0.22, 1, 0.36, 1)",
+    "keyframesDetected": [
+      "pulse",
+      "card-glow"
+    ],
+    "reducedMotion": {
+      "strategy": "disable-loops-keep-fades",
+      "disable": [
+        "ambient-loops"
+      ],
+      "detectedInSource": true,
+      "fallback": "Respeitar @media (prefers-reduced-motion: reduce) reduzindo transições e desativando animações contínuas."
+    }
+  },
+  "iconography": {
+    "library": "Lucide",
+    "style": "Clean stroke (1.5px-2px) alinhado ao peso da tipografia",
+    "sizes": {
+      "sm": "16px",
+      "md": "20px",
+      "lg": "24px"
+    }
+  },
+  "designPrinciples": {
+    "principles": [
+      "Contraste mínimo WCAG AA (16.63:1 entre texto primário e fundo).",
+      "Identidade alinhada ao domínio 'Editorial & Publicação' com foco em china, https, boolean.",
+      "Tipografia consistente entre display (Syne) e corpo (Syne).",
+      "Respeito explícito a prefers-reduced-motion e navegação completa por teclado."
+    ],
+    "accessibility": {
+      "focusRing": "0 0 0 2px var(--fg-accent)",
+      "minTouchTarget": "44px",
+      "contrastTarget": "WCAG AA"
+    }
+  },
+  "brazilianMarket": {
+    "localization": {
+      "language": "pt-BR",
+      "currency": "BRL",
+      "dateFormat": "DD/MM/YYYY"
+    },
+    "localContext": "Terminologia e fluxos adaptados ao ecossistema brasileiro (Sun Tzu)."
+  }
+}

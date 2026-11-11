@@ -5,8 +5,8 @@ title: "T-274 · Privatizaram para Estados, estatizaram a conta"
 description: "Síntese temática de seis entradas novas (id_1980–id_1985) e quatro já existentes (id_1719, id_1722, id_1725, id_1763). Mapeia, para cada operação de concessã..."
 date: 2026-10-10T12:00:00-03:00
 image:
-  path: "/assets/solid/book-open.svg"
-tags: ["estudo", "lawfare", "p10", "p11", "p05", "p04b", "estado-comprador-privatizaram-para-"]
+  path: "/assets/img/privatizaram-para-estados-hero.webp"
+tags: ["estudo", "lawfare", "p10", "p11", "p05", "p04b", "para"]
 categories: estudos
 mermaid: false
 pin: false

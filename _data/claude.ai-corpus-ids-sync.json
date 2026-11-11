@@ -11,20 +11,20 @@
     "tracks": {
       "main": {
         "description": "Track principal — eventos institucionais, decisões judiciais, episódios políticos",
-        "id_range": "1–2024 (confirmed)",
+        "id_range": "1–2031 (confirmed)",
         "id_format": "integer",
-        "last_confirmed": 2024,
-        "last_jekyll_published": 2024,
+        "last_confirmed": 2031,
+        "last_jekyll_published": 2031,
         "last_session_produced": 1762,
-        "notes": "lawfare.json confirmado até 2024. Próximo ID livre: 2025."
+        "notes": "lawfare.json confirmado até 2031. Próximo ID livre: 2032."
       },
       "thematic": {
         "description": "Sub-corpus temático — análise estrutural de operações e padrões",
-        "id_range": "100–275",
+        "id_range": "100–276",
         "id_format": "integer",
-        "last_confirmed": 275,
-        "last_session_produced": 275,
-        "notes": "T-275 confirmado. Próximo thematic livre: T-276."
+        "last_confirmed": 276,
+        "last_session_produced": 276,
+        "notes": "T-276 confirmado. Próximo thematic livre: T-277."
       }
     }
   },
@@ -597,14 +597,22 @@
           ],
           "status": "confirmed",
           "notes": "Merge todo 2026-11-11: main IDs 2021-2024."
+        },
+        {
+          "range": [
+            2025,
+            2031
+          ],
+          "status": "confirmed",
+          "notes": "2026-11-11: Dragão e a Onça cap. 19 Sun Tzu (T-276)."
         }
       ],
-      "last_id": 2024,
-      "last_jekyll_published": 2024,
+      "last_id": 2031,
+      "last_jekyll_published": 2031,
       "last_produced": 1770,
-      "next_available": 2025,
+      "next_available": 2032,
       "merge_queue": [],
-      "last_confirmed": 2024,
+      "last_confirmed": 2031,
       "last_session_produced": 1770
     },
     "thematic": {
@@ -1916,13 +1924,20 @@
           "topic": "T-275 (thematic-T275-memoria-institucional-8jan.json)",
           "artifact": "2026-10-21-quem-falou-quem-calou-8jan-oab-ongs.md",
           "notes": "Estudo Jekyll _posts/estudos/2026-10-21-quem-falou-quem-calou-8jan-oab-ongs.md"
+        },
+        {
+          "id": 276,
+          "status": "confirmed",
+          "topic": "T-276 Dragão e a Onça — Sun Tzu: vencer sem lutar",
+          "artifact": "2026-11-11-t276-dragao-onca-suntzu.md",
+          "notes": "dragao-onca-suntzu.html · main 2025-2031"
         }
       ],
-      "last_id": 275,
-      "next_available": 276,
+      "last_id": 276,
+      "next_available": 277,
       "pending": [],
       "pending_notes": {},
-      "last_confirmed": 274,
+      "last_confirmed": 276,
       "mislabeled_on_disk": [
         {
           "id": 1512,
@@ -1986,7 +2001,7 @@
   "sync_status": {
     "main_track_last_sync": "2026-11-11",
     "thematic_track_last_sync": "2026-11-11",
-    "dragao_onca_series_sync": "2026-07-27T12:00:00-03:00",
+    "dragao_onca_series_sync": "2026-11-11",
     "ids_confirmed_total": {
       "main_track": "2024 (Jekyll + lawfare.json)",
       "thematic_track": 275
@@ -3047,7 +3062,7 @@
       "status": "completed"
     }
   ],
-  "last_main_id": 2024,
-  "next_available": 2025,
+  "last_main_id": 2031,
+  "next_available": 2032,
   "updated": "2026-11-11"
 }

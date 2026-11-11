@@ -6,7 +6,7 @@ description: "Linha do tempo das manifestações públicas localizadas de cinco 
 date: 2026-10-21T12:00:00-03:00
 image:
   path: "/assets/solid/book-open.svg"
-tags: ["estudo", "lawfare", "p03", "p03-b", "p04b", "p06", "quem-falou-quem-calou-8jan-oab-ongs"]
+tags: ["estudo", "lawfare", "p03", "p03-b", "p04b", "p06", "oab", "ongs"]
 categories: estudos
 mermaid: false
 pin: false

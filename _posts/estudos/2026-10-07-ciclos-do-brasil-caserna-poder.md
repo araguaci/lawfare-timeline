@@ -5,8 +5,8 @@ title: "T-273 · Ciclos do Brasil"
 description: "Série de 26 intervenções, tentativas, tutelas e recusas militares de 1889 a 2026, carimbadas por grau de evidência. Testa a tese de que a 'rebeldia nasceu na..."
 date: 2026-10-07T12:00:00-03:00
 image:
-  path: "/assets/solid/book-open.svg"
-tags: ["estudo", "lawfare", "ciclos-do-brasil-caserna-poder"]
+  path: "/assets/img/ciclos-xarticle-hero.webp"
+tags: ["estudo", "lawfare", "caserna", "poder"]
 categories: estudos
 mermaid: false
 pin: false
