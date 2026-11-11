@@ -152,6 +152,8 @@ def resolve_category(entry: dict) -> str:
         "erro-judiciario": "impunidade",
         "chokepoint_judicial": "stf",
         "ato_legislativo": "lawfare",
+        "lacuna_investigativa": "justica",
+        "analise_editorial": "estudos",
         "vazatoga": "vazatoga",
         "tse": "tse",
         "stf": "stf",
@@ -225,10 +227,63 @@ def parse_fontes(entry: dict) -> list[dict]:
     return fontes
 
 
+def occupied_main_ids() -> set[int]:
+    if not LAWFARE.is_file():
+        return set()
+    data = json.loads(LAWFARE.read_text(encoding="utf-8"))
+    return {int(a["id"]) for a in data.get("assuntos") or [] if isinstance(a.get("id"), int)}
+
+
+def occupied_thematic_ids() -> set[int]:
+    taken: set[int] = set()
+    if SYNC.is_file():
+        sync = json.loads(SYNC.read_text(encoding="utf-8"))
+        for e in sync.get("tracks", {}).get("thematic", {}).get("entries") or []:
+            if isinstance(e.get("id"), int):
+                taken.add(int(e["id"]))
+    for p in (POSTS / "estudos").glob("*.md"):
+        text = p.read_text(encoding="utf-8", errors="replace")
+        m = re.search(r'^id_corpus:\s*["\']?T-(\d+)["\']?\s*$', text, re.M)
+        if m:
+            taken.add(int(m.group(1)))
+    return taken
+
+
+def allocate_id(requested: int, taken: set[int]) -> tuple[int, int | None]:
+    """Devolve (id_final, id_antigo) sem reutilizar ocupados. id_antigo só vem preenchido se houve realocação."""
+    if requested not in taken:
+        taken.add(requested)
+        return requested, None
+    nxt = requested + 1
+    while nxt in taken:
+        nxt += 1
+    taken.add(nxt)
+    return nxt, requested
+
+
+def remap_id_refs(value, id_map: dict[int, int]):
+    if not id_map:
+        return value
+
+    def repl(m: re.Match) -> str:
+        old = int(m.group(1))
+        return f"id_{id_map.get(old, old)}"
+
+    if isinstance(value, str):
+        return re.sub(r"id_(\d+)", repl, value)
+    if isinstance(value, list):
+        return [remap_id_refs(v, id_map) for v in value]
+    return value
+
+
 def normalize_main_entry(entry: dict, source: str) -> dict | None:
     cat_raw = (entry.get("category") or entry.get("categoria") or entry.get("tipo") or "").lower()
+    # IDs < 1000 com categoria editorial viram estudo temático em outro caminho.
+    # IDs de track principal (>= 1000) publicam como evento, senão a ficha some da fila.
     if cat_raw == "analise_editorial":
-        return None
+        main_probe = parse_main_id(entry.get("id"))
+        if main_probe is None or main_probe < 1000:
+            return None
 
     eid = entry.get("id")
     if eid is None:
@@ -304,6 +359,7 @@ def normalize_main_entry(entry: dict, source: str) -> dict | None:
         "_ponto_inflexao": entry.get("ponto_de_inflexao") or "",
         "_connections": entry.get("connections") or [],
         "_evidence_status": entry.get("evidence_status") or entry.get("evidencia") or "",
+        "_evidence_note": entry.get("evidence_note") or "",
         "_nota_correcao": entry.get("nota_correcao_midiatica"),
         "padroes": entry.get("patterns") or entry.get("padroes") or entry.get("padroes_sistemicos") or [],
         "_source": source,
@@ -343,6 +399,8 @@ def render_timeline_post(u: dict) -> str:
     if u.get("_evidence_status"):
         parts.append(f"| Evidencia | {u['_evidence_status']} |")
     parts.append("")
+    if u.get("_evidence_note"):
+        parts.extend([u["_evidence_note"], ""])
     if u.get("conflito_nota"):
         parts.extend([f"> **Nota de conflito ID:** {u['conflito_nota']}", ""])
     if u.get("_cadeia"):
@@ -464,8 +522,34 @@ def render_estudos_post(data: dict, tid: int) -> tuple[str, str]:
                 f"| {c.get('item', '-')} | {c.get('citado_incorretamente_como', '-')} | {c.get('correto', '-')} |"
             )
         parts.append("")
+    linha = data.get("linha_do_tempo") or []
+    if isinstance(linha, list) and linha:
+        parts.extend([
+            "## Linha do tempo",
+            "",
+            "| Data | Ator | Tipo | Evidencia | Conteudo |",
+            "| --- | --- | --- | --- | --- |",
+        ])
+        for row in linha:
+            if not isinstance(row, dict):
+                continue
+            conteudo = str(row.get("conteudo", "")).replace("|", "/").replace("\n", " ")
+            parts.append(
+                "| {data} | {ator} | {tipo} | {evidencia} | {conteudo} |".format(
+                    data=row.get("data", ""),
+                    ator=str(row.get("ator", "")).replace("|", "/"),
+                    tipo=row.get("tipo", ""),
+                    evidencia=str(row.get("evidencia", "")).replace("|", "/"),
+                    conteudo=conteudo,
+                )
+            )
+        parts.append("")
     if data.get("analise"):
         parts.extend(["## Analise", "", data["analise"], ""])
+    if data.get("result"):
+        parts.extend(["## Resultado documentado", "", data["result"], ""])
+    if data.get("ponto_de_inflexao"):
+        parts.extend(["## Ponto de inflexao", "", data["ponto_de_inflexao"], ""])
     if data.get("lacuna_investigativa"):
         parts.extend(["## Lacuna investigativa", "", data["lacuna_investigativa"], ""])
     pats = data.get("patterns_cruzados") or padroes
@@ -496,6 +580,17 @@ def render_estudos_post(data: dict, tid: int) -> tuple[str, str]:
         if isinstance(s, dict) and s.get("url"):
             tit = s.get("title") or s.get("titulo") or s.get("outlet") or "Fonte"
             fonte_lines.append(f"- [{tit}]({s['url']})")
+    seen_urls = set(re.findall(r"\((https?://[^)]+)\)", "\n".join(fonte_lines)))
+    for row in data.get("linha_do_tempo") or []:
+        if not isinstance(row, dict):
+            continue
+        ator = row.get("ator") or "Fonte"
+        for src in row.get("fontes") or []:
+            if isinstance(src, str) and src.startswith("http") and src not in seen_urls:
+                fonte_lines.append(f"- [{ator}]({src})")
+                seen_urls.add(src)
+            elif isinstance(src, str) and src and not src.startswith("http"):
+                fonte_lines.append(f"- {ator}: {src}")
     if fonte_lines:
         parts.extend(["## Fontes", ""] + fonte_lines + [""])
     parts.append(f"*Dossie T-{tid} · CC0 · lawfare-timeline*")
@@ -550,10 +645,13 @@ def load_todo_files() -> list[Path]:
     return sorted(TODO.glob("*.json"))
 
 
-def process_all(dry_run: bool) -> tuple[list[dict], list[tuple[int, str, str]], list[str]]:
+def process_all(dry_run: bool) -> tuple[list[dict], list[tuple[int, str, str]], list[str], list[str]]:
     main_entries: list[dict] = []
     thematic: list[tuple[int, str, str]] = []
     archived: list[str] = []
+    remaps: list[str] = []
+    taken_main = occupied_main_ids()
+    taken_t = occupied_thematic_ids()
 
     for fpath in load_todo_files():
         try:
@@ -564,16 +662,26 @@ def process_all(dry_run: bool) -> tuple[list[dict], list[tuple[int, str, str]], 
 
         tid = thematic_id_from_file(fpath, data)
         if tid is not None:
+            final_t, old_t = allocate_id(tid, taken_t)
+            if old_t is not None:
+                note = f"{fpath.name}: T-{old_t} → T-{final_t}"
+                remaps.append(note)
+                print(f"  REALOCA {note}")
+                data["id"] = final_t
+                if not dry_run:
+                    fpath.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             data["_source_file"] = fpath.name
-            content, md_fname = render_estudos_post(data, tid)
+            content, md_fname = render_estudos_post(data, final_t)
             target = POSTS / "estudos" / md_fname
+            if target.exists():
+                raise SystemExit(f"post ja existe, sem overwrite: {target.relative_to(ROOT)}")
             if dry_run:
-                print(f"  [dry-run] T-{tid}: {target.relative_to(ROOT)}")
+                print(f"  [dry-run] T-{final_t}: {target.relative_to(ROOT)}")
             else:
                 target.parent.mkdir(parents=True, exist_ok=True)
                 target.write_text(content, encoding="utf-8")
                 print(f"  OK {target.relative_to(ROOT)}")
-            thematic.append((tid, fpath.name, md_fname))
+            thematic.append((final_t, fpath.name, md_fname))
             archived.append(fpath.name)
             continue
 
@@ -605,16 +713,49 @@ def process_all(dry_run: bool) -> tuple[list[dict], list[tuple[int, str, str]], 
             items = [data]
         batch_had_output = False
         pending_thematic: list[dict] = list(thematic_only)
+        file_id_map: dict[int, int] = {}
+        main_items: list[dict] = []
         for item in items:
             tid = thematic_id_from_entry(item)
             if tid is not None:
                 pending_thematic.append(item)
                 continue
+            requested = parse_main_id(item.get("id"))
+            if requested is not None:
+                final_id, old_id = allocate_id(requested, taken_main)
+                if old_id is not None:
+                    file_id_map[old_id] = final_id
+                    note = f"{fpath.name}: {old_id} → {final_id}"
+                    remaps.append(note)
+                    print(f"  REALOCA {note}")
+                item["id"] = final_id
+            main_items.append(item)
+        if file_id_map:
+            ref_keys = (
+                "connections",
+                "lacuna_investigativa",
+                "analise",
+                "summary",
+                "descricao",
+                "resumo",
+                "result",
+                "ponto_de_inflexao",
+                "evidence_note",
+                "title",
+                "titulo",
+            )
+            for item in main_items:
+                for key in ref_keys:
+                    if key in item:
+                        item[key] = remap_id_refs(item[key], file_id_map)
+        for item in main_items:
             u = normalize_main_entry(item, fpath.name)
             if not u:
                 continue
             main_entries.append(u)
             target = POSTS / u["jekyll_categories"][0] / u["jekyll_filename"]
+            if target.exists():
+                raise SystemExit(f"post ja existe, sem overwrite: {target.relative_to(ROOT)}")
             if dry_run:
                 print(f"  [dry-run] ID {u['id_corpus']}: {target.relative_to(ROOT)}")
             else:
@@ -626,21 +767,36 @@ def process_all(dry_run: bool) -> tuple[list[dict], list[tuple[int, str, str]], 
             tid = thematic_id_from_entry(item)
             if tid is None:
                 continue
+            final_t, old_t = allocate_id(tid, taken_t)
+            if old_t is not None:
+                note = f"{fpath.name}: T-{old_t} → T-{final_t}"
+                remaps.append(note)
+                print(f"  REALOCA {note}")
+                item["id"] = final_t
             item["_source_file"] = fpath.name
-            content, md_fname = render_estudos_post(item, tid)
+            content, md_fname = render_estudos_post(item, final_t)
             target = POSTS / "estudos" / md_fname
+            if target.exists():
+                raise SystemExit(f"post ja existe, sem overwrite: {target.relative_to(ROOT)}")
             if dry_run:
-                print(f"  [dry-run] T-{tid}: {target.relative_to(ROOT)}")
+                print(f"  [dry-run] T-{final_t}: {target.relative_to(ROOT)}")
             else:
                 target.parent.mkdir(parents=True, exist_ok=True)
                 target.write_text(content, encoding="utf-8")
                 print(f"  OK {target.relative_to(ROOT)}")
-            thematic.append((tid, fpath.name, md_fname))
+            thematic.append((final_t, fpath.name, md_fname))
             batch_had_output = True
+        if file_id_map and not dry_run:
+            if isinstance(data, dict):
+                meta = data.setdefault("_meta", {})
+                if isinstance(meta, dict):
+                    meta["realocado_em"] = date.today().isoformat()
+                    meta["realocacao"] = {str(k): v for k, v in file_id_map.items()}
+            fpath.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         if batch_had_output or not isinstance(data, dict) or not data.get("_staging_note"):
             archived.append(fpath.name)
 
-    return main_entries, thematic, archived
+    return main_entries, thematic, archived, remaps
 
 
 def update_lawfare(entries: list[dict], dry_run: bool) -> None:
@@ -649,7 +805,12 @@ def update_lawfare(entries: list[dict], dry_run: bool) -> None:
     lf_data = json.loads(LAWFARE.read_text(encoding="utf-8"))
     assuntos = lf_data.get("assuntos", [])
     new_ids = {int(u["id_corpus"]) for u in entries}
-    assuntos = [a for a in assuntos if a.get("id") not in new_ids]
+    if len(new_ids) != len(entries):
+        raise SystemExit("IDs duplicados na fila apos alocacao — merge abortado")
+    occupied = {a.get("id") for a in assuntos}
+    collision = sorted(i for i in new_ids if i in occupied)
+    if collision:
+        raise SystemExit(f"colisao com lawfare.json (sem overwrite): {collision}")
     for u in entries:
         assuntos.append(to_lawfare_assunto(u, u["jekyll_categories"][0]))
     assuntos.sort(key=lambda x: x.get("id") or 0)
@@ -690,16 +851,45 @@ def update_sync(main_entries: list[dict], thematic: list[tuple[int, str, str]], 
 
     if main_entries:
         new_ids = [int(u["id_corpus"]) for u in main_entries]
-        last_main = max(new_ids)
+        new_id_set = set(new_ids)
+        lf_ids = sorted(
+            int(a["id"])
+            for a in json.loads(LAWFARE.read_text(encoding="utf-8")).get("assuntos") or []
+            if isinstance(a.get("id"), int)
+        )
+        last_main = lf_ids[-1] if lf_ids else max(new_ids)
         main = sync_data.setdefault("tracks", {}).setdefault("main", {})
+        batches = main.setdefault("confirmed_batches", [])
+        max_batch_end = max((b["range"][1] for b in batches if b.get("range")), default=0)
+        orphans = [i for i in lf_ids if i > max_batch_end and i not in new_id_set]
+        if orphans:
+            run_start = orphans[0]
+            prev = orphans[0]
+            runs: list[tuple[int, int]] = []
+            for i in orphans[1:]:
+                if i == prev + 1:
+                    prev = i
+                    continue
+                runs.append((run_start, prev))
+                run_start = prev = i
+            runs.append((run_start, prev))
+            for start, end in runs:
+                batches.append({
+                    "range": [start, end],
+                    "status": "confirmed",
+                    "notes": (
+                        f"Catch-up {date.today().isoformat()}: IDs {start}-{end} "
+                        "já estavam em lawfare.json; o sync estava atrás. Sem reescrita de fichas."
+                    ),
+                })
         main["last_id"] = last_main
         main["next_available"] = last_main + 1
         main["last_confirmed"] = last_main
         main["last_jekyll_published"] = last_main
-        main.setdefault("confirmed_batches", []).append({
-            "range": [min(new_ids), last_main],
+        batches.append({
+            "range": [min(new_ids), max(new_ids)],
             "status": "confirmed",
-            "notes": f"{batch_note}: main IDs {min(new_ids)}-{last_main}.",
+            "notes": f"{batch_note}: main IDs {min(new_ids)}-{max(new_ids)}.",
         })
 
     if thematic:
@@ -734,6 +924,58 @@ def update_sync(main_entries: list[dict], thematic: list[tuple[int, str, str]], 
         )
     if thematic:
         sync_status.setdefault("ids_confirmed_total", {})["thematic_track"] = max(t[0] for t in thematic)
+
+    today = date.today().isoformat()
+    meta = sync_data.setdefault("_meta", {})
+    meta["updated"] = today
+    meta_tracks = meta.setdefault("tracks", {})
+    if main_entries:
+        last_main = int(sync_data["tracks"]["main"]["last_id"])
+        sync_data["last_main_id"] = last_main
+        sync_data["next_available"] = last_main + 1
+        sync_data["updated"] = today
+        meta_main = meta_tracks.setdefault("main", {})
+        meta_main["id_range"] = f"1–{last_main} (confirmed)"
+        meta_main["last_confirmed"] = last_main
+        meta_main["last_jekyll_published"] = last_main
+        meta_main["notes"] = (
+            f"lawfare.json confirmado até {last_main}. Próximo ID livre: {last_main + 1}."
+        )
+    if thematic:
+        last_t = max(t[0] for t in thematic)
+        meta_t = meta_tracks.setdefault("thematic", {})
+        meta_t["id_range"] = f"100–{last_t}"
+        meta_t["last_confirmed"] = last_t
+        meta_t["last_session_produced"] = last_t
+        meta_t["notes"] = f"T-{last_t} confirmado. Próximo thematic livre: T-{last_t + 1}."
+    t_on_disk = len(list((POSTS / "estudos").glob("*.md")))
+    sync_data.setdefault("session_log", []).append({
+        "date": today,
+        "session": "cursor — fila todo sem colisao de ID",
+        "produced": [
+            (
+                f"Main track {min(int(u['id_corpus']) for u in main_entries)}-"
+                f"{max(int(u['id_corpus']) for u in main_entries)}"
+                if main_entries else "Main track sem entradas novas"
+            ),
+            (
+                f"Thematic T-{min(t[0] for t in thematic)}–T-{max(t[0] for t in thematic)}"
+                if thematic else "Thematic sem entradas novas"
+            ),
+        ],
+        "summary": {
+            "lawfare_max_id": sync_data.get("last_main_id"),
+            "next_main_id": sync_data.get("next_available"),
+            "thematic_last": (
+                f"T-{max(t[0] for t in thematic)}" if thematic else None
+            ),
+            "next_thematic": (
+                f"T-{max(t[0] for t in thematic) + 1}" if thematic else None
+            ),
+            "t_studies_on_disk": t_on_disk,
+        },
+        "status": "completed",
+    })
 
     SYNC.write_text(json.dumps(sync_data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if not dry_run:
@@ -770,7 +1012,7 @@ def main() -> int:
         return 0
 
     print(f"=== Processando {len(files)} arquivo(s) em _data/todo/ ===")
-    main_entries, thematic, archived = process_all(args.dry_run)
+    main_entries, thematic, archived, remaps = process_all(args.dry_run)
 
     update_lawfare(main_entries, args.dry_run)
     update_unified(main_entries, args.dry_run)
@@ -779,6 +1021,10 @@ def main() -> int:
     print("\n=== Arquivar JSON processados ===")
     archive_files(list(dict.fromkeys(archived)), args.dry_run)
 
+    if remaps:
+        print("\nRealocacoes:")
+        for line in remaps:
+            print(f"  - {line}")
     print(f"\nConcluido: {len(main_entries)} posts timeline, {len(thematic)} estudos.")
     return 0
 

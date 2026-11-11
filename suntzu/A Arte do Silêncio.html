@@ -1,0 +1,294 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>A Arte do Silêncio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: tira de bambu — coluna estreita de leitura, faixas horizontais por seção, selo de bronze como único acento */
+:root{
+  --paper:#e9ece6; --paper-2:#dde2da; --ink:#17201c; --ink-2:#47524c; --rule:#b9c2ba;
+  --bronze:#8a5a1c; --bronze-soft:#e5d3b4; --go:#2f6b4a; --hold:#9a6b12; --stop:#9b2f24;
+  --display:"Shippori Mincho","Songti SC","Georgia",serif;
+  --body:"Work Sans","Helvetica Neue",Arial,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#111714; --paper-2:#18201c; --ink:#e3e8e3; --ink-2:#a3aea7; --rule:#2c3832;
+  --bronze:#d4a35a; --bronze-soft:#3a2e1c; --go:#6fbf8f; --hold:#e0b250; --stop:#e57a6c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#111714; --paper-2:#18201c; --ink:#e3e8e3; --ink-2:#a3aea7; --rule:#2c3832;
+  --bronze:#d4a35a; --bronze-soft:#3a2e1c; --go:#6fbf8f; --hold:#e0b250; --stop:#e57a6c; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;padding-inline:20px;padding-block:0 64px}
+.wrap{max-width:880px;margin-inline:auto}
+.read{max-width:66ch}
+h1,h2,h3{font-family:var(--display);line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:800}
+h3{font-size:1.2rem;font-weight:700}
+p{margin:0}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bronze)}
+section{padding-block:56px;border-top:1px solid var(--rule);display:grid;gap:22px}
+a{color:var(--bronze)}
+:focus-visible{outline:2px solid var(--bronze);outline-offset:3px}
+
+/* hero */
+.hero{padding-block:56px 48px;display:grid;gap:22px}
+.seal{width:68px;height:68px;border:3px solid var(--bronze);border-radius:6px;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:1.9rem;color:var(--bronze);transform:rotate(-4deg)}
+.hero h1{font-size:clamp(2.6rem,8vw,4.6rem);font-weight:800;letter-spacing:-.01em}
+.lede{font-size:1.15rem;color:var(--ink-2)}
+.maxim{font-family:var(--display);font-size:clamp(1.25rem,3vw,1.6rem);font-weight:700;border-left:3px solid var(--bronze);padding-left:18px}
+.maxim small{display:block;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;color:var(--ink-2);font-weight:400;margin-top:6px}
+
+/* diagnosis */
+.diag{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.diag div{background:var(--paper);padding:18px;display:grid;gap:6px;align-content:start}
+.diag b{font-family:var(--display);font-size:1.05rem}
+.diag span{color:var(--ink-2);font-size:.95rem}
+
+/* chapters */
+.chapters{display:grid;gap:0}
+.ch{display:grid;grid-template-columns:64px 1fr;gap:18px;padding-block:18px;border-bottom:1px solid var(--rule)}
+.ch:last-child{border-bottom:0}
+.ch .num{font-family:var(--display);font-weight:800;font-size:1.5rem;color:var(--bronze)}
+.ch .body{display:grid;gap:8px;min-width:0}
+.ch .orig{font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;color:var(--ink-2);text-transform:uppercase}
+.ch .rule{font-weight:500}
+.ch .err{font-size:.93rem;color:var(--ink-2)}
+.ch .err::before{content:"Erro comum · ";font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--stop);text-transform:uppercase}
+
+/* five factors */
+.factors{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.factor{background:var(--paper-2);padding:16px;border-radius:4px;display:grid;gap:6px;align-content:start}
+.factor b{font-family:var(--display);font-size:1.1rem}
+.factor small{font-family:var(--mono);font-size:.7rem;color:var(--bronze);letter-spacing:.08em;text-transform:uppercase}
+.factor p{font-size:.92rem;color:var(--ink-2)}
+
+/* matrix */
+.matrix{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:.95rem}
+th,td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--rule)}
+th{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);font-weight:600}
+td:first-child{font-weight:600;white-space:nowrap}
+.pill{display:inline-block;font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:99px;border:1px solid currentColor}
+.p-go{color:var(--go)} .p-hold{color:var(--hold)} .p-stop{color:var(--stop)}
+
+/* antipatterns */
+.anti{display:grid;gap:14px}
+.ap{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--rule);border-radius:4px;overflow:hidden}
+.ap > div{padding:16px;display:grid;gap:6px;align-content:start;min-width:0}
+.ap .bad{background:var(--paper-2)}
+.ap .lbl{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
+.ap .bad .lbl{color:var(--stop)} .ap .good .lbl{color:var(--go)}
+.ap .src{font-size:.85rem;color:var(--ink-2);font-style:italic}
+@media (max-width:620px){.ap{grid-template-columns:1fr}}
+
+/* filter tool */
+.tool{background:var(--paper-2);border:1px solid var(--rule);border-radius:6px;padding:22px;display:grid;gap:18px}
+.q{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;padding-block:10px;border-bottom:1px solid var(--rule)}
+.q:last-of-type{border-bottom:0}
+.q label{font-size:.98rem}
+.q label small{display:block;color:var(--ink-2);font-size:.84rem}
+.seg{display:inline-flex;border:1px solid var(--rule);border-radius:4px;overflow:hidden}
+.seg button{font:600 .8rem var(--mono);letter-spacing:.06em;padding:8px 14px;background:transparent;color:var(--ink-2);border:0;cursor:pointer}
+.seg button + button{border-left:1px solid var(--rule)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.verdict{border-radius:4px;padding:18px;display:grid;gap:6px;border:2px solid var(--rule);background:var(--paper)}
+.verdict b{font-family:var(--display);font-size:1.4rem}
+.verdict[data-v="go"]{border-color:var(--go)} .verdict[data-v="go"] b{color:var(--go)}
+.verdict[data-v="hold"]{border-color:var(--hold)} .verdict[data-v="hold"] b{color:var(--hold)}
+.verdict[data-v="stop"]{border-color:var(--stop)} .verdict[data-v="stop"] b{color:var(--stop)}
+.reset{justify-self:start;font:500 .85rem var(--body);background:none;border:1px solid var(--rule);color:var(--ink-2);padding:6px 12px;border-radius:4px;cursor:pointer}
+@media (max-width:520px){.q{grid-template-columns:1fr}}
+
+/* doctrine */
+.doctrine{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
+.doc{display:grid;gap:8px;align-content:start}
+.doc ul{margin:0;padding-left:1.1em;display:grid;gap:4px;color:var(--ink-2);font-size:.95rem}
+
+/* crisis protocol — real sequence */
+.steps{counter-reset:s;display:grid;gap:12px;list-style:none;padding:0;margin:0}
+.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:12px}
+.steps li::before{content:counter(s);font-family:var(--display);font-weight:800;font-size:1.3rem;color:var(--bronze);border:2px solid var(--bronze);border-radius:50%;width:38px;height:38px;display:grid;place-items:center}
+.steps b{display:block}
+.steps span{color:var(--ink-2);font-size:.95rem}
+
+.ethic{background:var(--bronze-soft);border-radius:4px;padding:18px;display:grid;gap:6px}
+.ethic b{font-family:var(--display)}
+footer{padding-block:40px 0;border-top:1px solid var(--rule);color:var(--ink-2);font-size:.85rem;display:grid;gap:6px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+
+<header class="hero">
+  <div class="seal" aria-hidden="true">兵</div>
+  <p class="eyebrow">Manual de comunicação estratégica · baseado em Sun Tzu, A Arte da Guerra (séc. V a.C.)</p>
+  <h1>A Arte do Silêncio</h1>
+  <p class="lede read">Um movimento político que anuncia seus planos antes de executá-los entrega ao adversário o único recurso que não se recupera: tempo para reagir. Este manual traduz os treze capítulos de Sun Tzu em regras de conduta para quem fala em nome de uma causa, seja porta-voz, parlamentar, influenciador ou militante.</p>
+  <p class="maxim">"O vitorioso vence primeiro e só depois vai à batalha. O derrotado vai à batalha e só depois procura a vitória."<small>CAP. IV · DISPOSIÇÕES TÁTICAS</small></p>
+</header>
+
+<section>
+  <p class="eyebrow">Diagnóstico</p>
+  <h2>Os quatro vazamentos que entregam a guerra</h2>
+  <p class="read">Quase toda derrota de comunicação começa por um destes padrões. Nenhum exige espião do outro lado: a própria tropa entrega a informação de graça, em público, com data e hora.</p>
+  <div class="diag">
+    <div><b>Anunciar o plano</b><span>"Vamos protocolar X na semana que vem." O adversário tem sete dias para preparar a resposta, a narrativa e a obstrução.</span></div>
+    <div><b>Expor a divisão interna</b><span>Briga de aliados em rede social mostra onde a linha é fina. Sun Tzu manda atacar exatamente ali.</span></div>
+    <div><b>Morder toda isca</b><span>Responder a cada provocação deixa o adversário escolher o terreno, o horário e o tema da batalha.</span></div>
+    <div><b>Contar a força real</b><span>Revelar números, recursos e apoios permite ao outro lado medir o que precisa para vencer.</span></div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Fundamento</p>
+  <h2>Os cinco fatores, como auditoria de mensagem</h2>
+  <p class="read">Sun Tzu abre o livro com cinco fatores que decidem o resultado antes do confronto. Aplicados à comunicação, viram cinco perguntas para qualquer campanha.</p>
+  <div class="factors">
+    <div class="factor"><small>道 Caminho</small><b>Causa</b><p>O público entende e compartilha o porquê? Sem adesão moral, nenhuma tática segura a tropa.</p></div>
+    <div class="factor"><small>天 Céu</small><b>Momento</b><p>Ciclo de notícias, calendário legislativo, humor do eleitor. A mesma frase vence numa semana e perde na outra.</p></div>
+    <div class="factor"><small>地 Terra</small><b>Terreno</b><p>Em qual plataforma, para qual público, em qual formato você é mais forte que o adversário?</p></div>
+    <div class="factor"><small>將 Comandante</small><b>Porta-voz</b><p>Quem fala tem credibilidade, disciplina e autorização? Sabedoria, sinceridade e coragem, nessa ordem.</p></div>
+    <div class="factor"><small>法 Método</small><b>Disciplina</b><p>Existe cadeia de aprovação, mensagem-chave e consequência para quem fala fora de hora?</p></div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Os treze capítulos</p>
+  <h2>A Arte da Guerra aplicada à comunicação</h2>
+  <p class="read">A ordem segue o livro original. Cada capítulo traz a regra para quem comunica e o erro mais comum que ela evita.</p>
+  <div class="chapters">
+    <div class="ch"><div class="num">I</div><div class="body"><p class="orig">Planejamento</p><p class="rule">Faça a conta antes de falar. Quem calcula mais no gabinete vence; quem improvisa no microfone perde.</p><p class="err">Postar reação a quente sem medir quem ganha com aquilo.</p></div></div>
+    <div class="ch"><div class="num">II</div><div class="body"><p class="orig">Fazendo a guerra</p><p class="rule">Campanhas longas esgotam a atenção do público e o caixa. Prefira ofensivas curtas, decisivas e com começo, meio e fim.</p><p class="err">Manter a mesma polêmica no ar por semanas até o público cansar e o tema virar contra você.</p></div></div>
+    <div class="ch"><div class="num">III</div><div class="body"><p class="orig">Ataque estratégico</p><p class="rule">A vitória suprema é desarmar o plano do adversário sem confronto direto. Antecipe a pauta dele e ocupe o espaço antes.</p><p class="err">Esperar o outro lado lançar a narrativa para só então rebater.</p></div></div>
+    <div class="ch"><div class="num">IV</div><div class="body"><p class="orig">Disposições táticas</p><p class="rule">Torne-se invulnerável primeiro: coerência, fontes checadas, histórico limpo. Depois espere o erro do adversário.</p><p class="err">Atacar com um dado errado e passar a semana se defendendo do próprio post.</p></div></div>
+    <div class="ch"><div class="num">V</div><div class="body"><p class="orig">Energia</p><p class="rule">Combine o ordinário (presença constante, previsível) com o extraordinário (o movimento que ninguém viu chegar). A força está no momento do golpe.</p><p class="err">Gastar todo o material em teaser e chegar ao lançamento sem novidade.</p></div></div>
+    <div class="ch"><div class="num">VI</div><div class="body"><p class="orig">Pontos fracos e fortes</p><p class="rule">Chegue primeiro ao terreno. Ataque onde o adversário não defende e não se exponha onde ele é forte.</p><p class="err">Disputar o tema em que o outro lado tem mais autoridade e mais dados.</p></div></div>
+    <div class="ch"><div class="num">VII</div><div class="body"><p class="orig">Manobra</p><p class="rule">O caminho indireto às vezes é o mais curto. Coordene a tropa com sinais claros: uma mensagem-chave, repetida por todos.</p><p class="err">Dez porta-vozes, dez versões diferentes da mesma posição.</p></div></div>
+    <div class="ch"><div class="num">VIII</div><div class="body"><p class="orig">Variação tática</p><p class="rule">Há estradas que não se tomam e cidades que não se atacam. Saber quando não falar é parte da estratégia.</p><p class="err">Comentar todo assunto do dia por medo de parecer ausente.</p></div></div>
+    <div class="ch"><div class="num">IX</div><div class="body"><p class="orig">O exército em marcha</p><p class="rule">Leia os sinais: quando o adversário fala manso e prepara terreno, está avançando. Quando provoca muito, quer que você reaja.</p><p class="err">Tratar provocação calculada como se fosse espontânea.</p></div></div>
+    <div class="ch"><div class="num">X</div><div class="body"><p class="orig">Terreno</p><p class="rule">Cada plataforma é um terreno. Alguns favorecem quem chega primeiro, outros quem resiste. Escolha onde combater.</p><p class="err">Levar uma discussão técnica para um formato de 15 segundos.</p></div></div>
+    <div class="ch"><div class="num">XI</div><div class="body"><p class="orig">Os nove terrenos</p><p class="rule">Mantenha a própria tropa sem saber mais do que precisa. Plano completo só para o núcleo; à base, a ordem do dia.</p><p class="err">Compartilhar estratégia em grupo grande de mensagens, de onde ela vaza em horas.</p></div></div>
+    <div class="ch"><div class="num">XII</div><div class="body"><p class="orig">Ataque pelo fogo</p><p class="rule">Não lance ofensiva por raiva nem por vaidade. A raiva passa; a declaração gravada fica.</p><p class="err">Responder a um insulto pessoal com uma frase que vira peça de campanha do adversário.</p></div></div>
+    <div class="ch"><div class="num">XIII</div><div class="body"><p class="orig">Uso de espiões</p><p class="rule">Informação é o recurso decisivo. Assuma que tudo o que é dito em público, e quase tudo em privado, chega ao adversário.</p><p class="err">Acreditar que "só os nossos" leem o que é postado.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Matriz de divulgação</p>
+  <h2>O que mostrar, o que guardar</h2>
+  <p class="read">"Que seus planos sejam escuros e impenetráveis como a noite; quando agir, caia como um raio" (cap. VII). A regra prática: fale do que já está feito, nunca do que ainda depende de o adversário não saber.</p>
+  <div class="matrix">
+    <table>
+      <thead><tr><th>Tipo de informação</th><th>Decisão</th><th>Por quê</th></tr></thead>
+      <tbody>
+        <tr><td>Valores e causa</td><td><span class="pill p-go">Revelar sempre</span></td><td>É o "Caminho": une a tropa e atrai aliados. Não dá vantagem tática a ninguém.</td></tr>
+        <tr><td>Resultados consumados</td><td><span class="pill p-go">Revelar</span></td><td>Vitória entregue não pode mais ser bloqueada. Anuncie depois do fato.</td></tr>
+        <tr><td>Diagnóstico do problema</td><td><span class="pill p-go">Revelar</span></td><td>Constrói apoio público sem expor como você pretende agir.</td></tr>
+        <tr><td>Intenção genérica</td><td><span class="pill p-hold">Com cautela</span></td><td>"Vamos agir sobre X" é aceitável. Como, quando e com quem, não.</td></tr>
+        <tr><td>Datas e cronogramas</td><td><span class="pill p-stop">Guardar</span></td><td>Dar a data é dar ao adversário o prazo de preparo.</td></tr>
+        <tr><td>Alvos e próximos passos</td><td><span class="pill p-stop">Guardar</span></td><td>Alvo anunciado é alvo protegido.</td></tr>
+        <tr><td>Aliados e negociações em curso</td><td><span class="pill p-stop">Guardar</span></td><td>Expõe quem pode ser pressionado a recuar.</td></tr>
+        <tr><td>Divergências internas</td><td><span class="pill p-stop">Guardar</span></td><td>Mostra onde a linha é mais fina. Resolva dentro, nunca em público.</td></tr>
+        <tr><td>Recursos, números, limites</td><td><span class="pill p-stop">Guardar</span></td><td>Permite ao outro lado calcular exatamente o que precisa para vencer.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ethic">
+    <b>Engano estratégico não é mentir para o público</b>
+    <p>Sun Tzu diz que toda guerra se baseia no engano. Em comunicação pública, isso significa não telegrafar movimentos, manter ambiguidade sobre o momento e preservar a surpresa. Inventar fatos, fabricar dados ou espalhar boato destrói o primeiro fator, a confiança da causa, e entrega ao adversário a munição mais barata que existe: o desmentido.</p>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Antipadrões</p>
+  <h2>O erro, o princípio violado, a correção</h2>
+  <div class="anti">
+    <div class="ap"><div class="bad"><span class="lbl">Erro</span><p>"Semana que vem vamos apresentar o pedido de CPI com 200 assinaturas."</p><p class="src">Viola cap. VI: chegar primeiro ao terreno.</p></div><div class="good"><span class="lbl">Correção</span><p>Colher as assinaturas em silêncio, protocolar, e só então anunciar: "Protocolamos hoje, com 200 assinaturas."</p></div></div>
+    <div class="ap"><div class="bad"><span class="lbl">Erro</span><p>Dois aliados trocam acusações em público sobre quem deve liderar a pauta.</p><p class="src">Viola cap. III: atacar as alianças do inimigo começa pelas suas falhas.</p></div><div class="good"><span class="lbl">Correção</span><p>Divergência tratada em reunião fechada. Em público, uma voz e uma mensagem.</p></div></div>
+    <div class="ap"><div class="bad"><span class="lbl">Erro</span><p>Responder em minutos a cada ataque, ofensa ou meme do adversário.</p><p class="src">Viola cap. IX e XII: a provocação é armadilha; não aja por raiva.</p></div><div class="good"><span class="lbl">Correção</span><p>Triagem: só responda o que move opinião de quem ainda não decidiu. O resto, silêncio.</p></div></div>
+    <div class="ap"><div class="bad"><span class="lbl">Erro</span><p>"Temos maioria garantida, eles não têm como barrar."</p><p class="src">Viola cap. IV e cap. I: arrogância convida o ataque; mostre-se fraco quando forte.</p></div><div class="good"><span class="lbl">Correção</span><p>Não comente placar antes do voto. Deixe o adversário subestimar a força.</p></div></div>
+    <div class="ap"><div class="bad"><span class="lbl">Erro</span><p>Vazar documento em partes, uma por dia, para "manter o assunto vivo".</p><p class="src">Viola cap. II: campanha longa dá tempo ao outro lado de preparar a defesa.</p></div><div class="good"><span class="lbl">Correção</span><p>Material checado, completo, lançado de uma vez, com resposta às objeções já pronta.</p></div></div>
+    <div class="ap"><div class="bad"><span class="lbl">Erro</span><p>Postar o planejamento estratégico em live "para mostrar transparência à base".</p><p class="src">Viola cap. XI e XIII: a tropa recebe a ordem, não o mapa; o adversário assiste tudo.</p></div><div class="good"><span class="lbl">Correção</span><p>Transparência sobre valores e resultados. Planejamento fica no núcleo.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Ferramenta</p>
+  <h2>Filtro antes de publicar</h2>
+  <p class="read">Responda às sete perguntas antes de postar, gravar ou dar entrevista. O veredito aparece abaixo.</p>
+  <div class="tool" id="tool">
+    <div class="q"><label>Revela data, alvo, aliado ou próximo passo?<small>Cap. VI e XI</small></label><div class="seg" data-q="0" data-bad="sim"><button type="button" data-a="sim" aria-pressed="false">SIM</button><button type="button" data-a="nao" aria-pressed="true">NÃO</button></div></div>
+    <div class="q"><label>Expõe divergência dentro do próprio campo?<small>Cap. III</small></label><div class="seg" data-q="1" data-bad="sim"><button type="button" data-a="sim" aria-pressed="false">SIM</button><button type="button" data-a="nao" aria-pressed="true">NÃO</button></div></div>
+    <div class="q"><label>Está sendo escrito com raiva ou como resposta imediata a provocação?<small>Cap. IX e XII</small></label><div class="seg" data-q="2" data-bad="sim"><button type="button" data-a="sim" aria-pressed="false">SIM</button><button type="button" data-a="nao" aria-pressed="true">NÃO</button></div></div>
+    <div class="q"><label>Os fatos e números foram checados em fonte primária?<small>Cap. IV</small></label><div class="seg" data-q="3" data-bad="nao"><button type="button" data-a="sim" aria-pressed="true">SIM</button><button type="button" data-a="nao" aria-pressed="false">NÃO</button></div></div>
+    <div class="q"><label>A mensagem é a mesma que os demais porta-vozes estão usando?<small>Cap. VII</small></label><div class="seg" data-q="4" data-bad="nao"><button type="button" data-a="sim" aria-pressed="true">SIM</button><button type="button" data-a="nao" aria-pressed="false">NÃO</button></div></div>
+    <div class="q"><label>Este é o melhor momento, ou esperar aumenta o impacto?<small>Cap. V · responda SIM se agora é o melhor momento</small></label><div class="seg" data-q="5" data-bad="nao"><button type="button" data-a="sim" aria-pressed="true">SIM</button><button type="button" data-a="nao" aria-pressed="false">NÃO</button></div></div>
+    <div class="q"><label>Se o adversário ler isto, ele ganha alguma vantagem?<small>Cap. XIII</small></label><div class="seg" data-q="6" data-bad="sim"><button type="button" data-a="sim" aria-pressed="false">SIM</button><button type="button" data-a="nao" aria-pressed="true">NÃO</button></div></div>
+    <div class="verdict" id="verdict" data-v="go" aria-live="polite"><b>Publique</b><p>Nenhum sinal de vazamento estratégico. Siga em frente.</p></div>
+    <button type="button" class="reset" id="reset">Recomeçar o filtro</button>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Doutrina</p>
+  <h2>Como organizar a tropa</h2>
+  <div class="doctrine">
+    <div class="doc"><h3>Cadeia de mensagem</h3><ul><li>Um núcleo decide o quê e quando.</li><li>Porta-vozes recebem a mensagem-chave, não o plano.</li><li>Base recebe a ordem do dia: o que compartilhar, o que ignorar.</li><li>Quem fala fora da linha perde a função de porta-voz.</li></ul></div>
+    <div class="doc"><h3>Silêncio disciplinado</h3><ul><li>Regra das 24 horas para qualquer resposta a provocação.</li><li>Nenhum assunto interno em grupo com mais de 10 pessoas.</li><li>"Não comentamos estratégia" é resposta completa.</li><li>Ausência num tema raramente custa o que uma frase errada custa.</li></ul></div>
+    <div class="doc"><h3>Ritmo de ofensiva</h3><ul><li>Presença ordinária: conteúdo regular de valores e diagnóstico.</li><li>Golpe extraordinário: anúncio de fato consumado, sem aviso.</li><li>Uma ofensiva por vez, com fim definido.</li><li>Material de resposta às objeções pronto antes do lançamento.</li></ul></div>
+    <div class="doc"><h3>Leitura do adversário</h3><ul><li>Mapeie os temas em que ele é forte e evite disputá-los.</li><li>Note quando ele provoca: costuma ser desvio de pauta.</li><li>Registre contradições, use no momento certo, não no mesmo dia.</li><li>Conheça o outro e a si mesmo; cem batalhas sem perigo (cap. III).</li></ul></div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Protocolo de crise</p>
+  <h2>Quando o vazamento já aconteceu</h2>
+  <ol class="steps read">
+    <li><div><b>Pare de alimentar</b><span>Ninguém do campo comenta até haver posição única. Cada nova fala vira nova manchete.</span></div></li>
+    <li><div><b>Avalie o dano real</b><span>O que o adversário pode fazer agora que não podia antes? Esse é o problema, não o barulho.</span></div></li>
+    <li><div><b>Mude o terreno</b><span>Se o plano vazou, altere data, alvo ou forma. Plano conhecido é plano a refazer.</span></div></li>
+    <li><div><b>Fale uma vez</b><span>Uma nota, um porta-voz, uma mensagem. Depois, silêncio.</span></div></li>
+    <li><div><b>Corrija a origem</b><span>Descubra por onde saiu e feche o canal. Sem punição pública: isso reabre a ferida.</span></div></li>
+  </ol>
+</section>
+
+<footer>
+  <p>Paráfrases de A Arte da Guerra, atribuída a Sun Tzu, adaptadas ao português. Princípios aplicáveis a qualquer campo político, partido, movimento ou campanha.</p>
+  <p>Artes do Sul ◈</p>
+</footer>
+</div>
+
+<script>
+(function(){
+  const segs=[...document.querySelectorAll('.seg')];
+  const defaults=segs.map(s=>s.querySelector('[aria-pressed="true"]').dataset.a);
+  const v=document.getElementById('verdict');
+  function update(){
+    let critical=0,soft=0;
+    segs.forEach(s=>{
+      const a=s.querySelector('[aria-pressed="true"]').dataset.a;
+      if(a===s.dataset.bad){ const q=+s.dataset.q; if(q===0||q===1||q===6) critical++; else soft++; }
+    });
+    let state,title,text;
+    if(critical>0){state='stop';title='Não publique';text='A mensagem entrega informação ao adversário ou expõe o próprio campo. Reescreva só com valores e fatos consumados, ou guarde.';}
+    else if(soft>0){state='hold';title='Segure';text= soft===1?'Há um ponto a resolver antes: checagem, alinhamento, momento ou temperatura. Corrija e passe de novo pelo filtro.':'Há '+soft+' pontos a resolver antes: checagem, alinhamento, momento ou temperatura. Corrija e passe de novo pelo filtro.';}
+    else{state='go';title='Publique';text='Nenhum sinal de vazamento estratégico. Siga em frente.';}
+    v.dataset.v=state; v.innerHTML='<b>'+title+'</b><p>'+text+'</p>';
+  }
+  segs.forEach(s=>s.addEventListener('click',e=>{
+    const b=e.target.closest('button'); if(!b) return;
+    s.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'));
+    update();
+  }));
+  document.getElementById('reset').addEventListener('click',()=>{
+    segs.forEach((s,i)=>s.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x.dataset.a===defaults[i]?'true':'false')));
+    update();
+  });
+  update();
+})();
+</script>
+
+</body></html>
