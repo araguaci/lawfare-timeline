@@ -1,6 +1,6 @@
 # Próximos passos · lawfare-timeline
 
-**Atualizado:** 2026-11-11 (main 2031 · T-276)
+**Atualizado:** 2026-11-11 (main 2040 · T-277)
 
 > Espelho: `docs/TODO.md` · Notas: `_data/processados/todo.md` · Legado: `docs/TODO-LEGACY.md`
 
@@ -10,10 +10,31 @@
 
 | Track | Last | Próximo | Validação |
 |-------|------|---------|-----------|
-| Main | **2031** | **2032** | lawfare.json **1992** entradas · sem IDs duplicados |
-| Thematic | **T-276** | **T-277** | sync 100–276 contínuo · T-270 Compilado intacto |
+| Main | **2040** | **2041** | lawfare.json **2001** entradas · sem IDs duplicados |
+| Thematic | **T-277** | **T-278** | sync 100–277 contínuo · T-270 Compilado intacto · T-276 Sun Tzu intacto |
 | Dragão e a Onça | **2031** / **T-276** | — | `dragao-onca.json` capítulo 19 Sun Tzu |
-| Fila `_data/todo/` | `_staging/` HTML/MD | — | JSON 2021–2024 + T-275 arquivados 11/11 |
+| Fila `_data/todo/` | `_staging/` HTML/MD | — | JSON raspagem + T-276 arquivados 11/11 |
+
+---
+
+## Rodada 11/11/2026 (c) ✅ — Raspagem out–nov sem colidir IDs
+
+A fila pedia **2025–2033** (2º turno, INQ 4.781, Vorcaro×Moraes) e **T-276**. Essa faixa já era o capítulo Sun Tzu (**2025–2031** / **T-276**). Sem overwrite. Referências internas reescritas para os IDs novos. **2037** e **2038** (mensagens e encontros) seguem `ev-contested`. **2040** (temor no STF / Brasil 247) segue `ev-alleged`.
+
+| Na fila | Final | Conteúdo |
+|---------|-------|----------|
+| 2025 | **2032** | PF envia ao STF segundo inquérito contra Flávio Bolsonaro (Willer Tomaz); relatoria Moraes |
+| 2026 | **2033** | Zanin prorroga o 2º turno até 19h; TSE pausa a divulgação |
+| 2027 | **2034** | Flávio não reconhece o resultado e desiste da anulação no dia seguinte |
+| 2028 | **2035** | Fachin arquiva três investigações do INQ 4.781 (Malafaia, Eduardo, Fiuza) |
+| 2029 | **2036** | Fachin arquiva mais cinco e revoga preventiva de Flávia Cordeiro Magalhães |
+| 2030 | **2037** | UOL recupera 316 interações Vorcaro–contato atribuído a Moraes |
+| 2031 | **2038** | Encontros de 14 e 16/11/2025; pesquisa sobre Tremembé |
+| 2032 | **2039** | Fachin arquiva o INQ 4.781 após 2.797 dias e preserva ações derivadas |
+| 2033 | **2040** | PCO cobra abertura integral dos autos |
+| T-276 | **T-277** | [INQ 4.781 — ciclo fechado](/posts/2026-11-11-inq-4781-ciclo-fechado-20192026-arquivado-por-conflito-interno-nao-por-controle-externo/) |
+
+2025–2031 e T-276 intactos (CPFL/State Grid e Sun Tzu). Próximo main **2041** · próximo temático **T-278**.
 
 ---
 

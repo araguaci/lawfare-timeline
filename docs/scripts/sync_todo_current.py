@@ -26,7 +26,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
 sys.path.insert(0, str(ROOT / "scripts"))
-from corpus_links import build_corpus_index, build_thematic_index, format_connection
+from corpus_links import (
+    build_corpus_index,
+    build_thematic_index,
+    fix_conexoes_section,
+    format_connection,
+)
 from gdrive_sync_export import export_sync_to_gdrive
 TODO = ROOT / "_data" / "todo"
 PROC = ROOT / "_data" / "processados"
@@ -261,6 +266,21 @@ def allocate_id(requested: int, taken: set[int]) -> tuple[int, int | None]:
     return nxt, requested
 
 
+REF_KEYS = (
+    "connections",
+    "lacuna_investigativa",
+    "analise",
+    "summary",
+    "descricao",
+    "resumo",
+    "result",
+    "ponto_de_inflexao",
+    "evidence_note",
+    "title",
+    "titulo",
+)
+
+
 def remap_id_refs(value, id_map: dict[int, int]):
     if not id_map:
         return value
@@ -274,6 +294,44 @@ def remap_id_refs(value, id_map: dict[int, int]):
     if isinstance(value, list):
         return [remap_id_refs(v, id_map) for v in value]
     return value
+
+
+def remap_known_mentions(value, id_map: dict[int, int]):
+    """Reescreve id_N, 'ver N' e pares '(N/M)' quando N/M foram realocados.
+
+    Anos soltos (2026, 17/11/2025) ficam intactos.
+    """
+    if not id_map:
+        return value
+    if isinstance(value, list):
+        return [remap_known_mentions(v, id_map) for v in value]
+    if not isinstance(value, str):
+        return value
+    value = remap_id_refs(value, id_map)
+
+    def repl_ver(m: re.Match) -> str:
+        old = int(m.group(1))
+        if old not in id_map:
+            return m.group(0)
+        return f"ver {id_map[old]}"
+
+    value = re.sub(r"\bver (\d+)\b", repl_ver, value)
+
+    def repl_pair(m: re.Match) -> str:
+        a, b = int(m.group(1)), int(m.group(2))
+        if a not in id_map and b not in id_map:
+            return m.group(0)
+        return f"({id_map.get(a, a)}/{id_map.get(b, b)})"
+
+    return re.sub(r"\((\d{4})/(\d{4})\)", repl_pair, value)
+
+
+def apply_id_map(item: dict, id_map: dict[int, int]) -> None:
+    if not id_map:
+        return
+    for key in REF_KEYS:
+        if key in item:
+            item[key] = remap_known_mentions(item[key], id_map)
 
 
 def normalize_main_entry(entry: dict, source: str) -> dict | None:
@@ -650,8 +708,10 @@ def process_all(dry_run: bool) -> tuple[list[dict], list[tuple[int, str, str]], 
     thematic: list[tuple[int, str, str]] = []
     archived: list[str] = []
     remaps: list[str] = []
+    written_posts: list[Path] = []
     taken_main = occupied_main_ids()
     taken_t = occupied_thematic_ids()
+    global_id_map: dict[int, int] = {}
 
     for fpath in load_todo_files():
         try:
@@ -707,6 +767,13 @@ def process_all(dry_run: bool) -> tuple[list[dict], list[tuple[int, str, str]], 
                     if isinstance(assunto, dict) and assunto.get("id") is None and assunto.get("id_corpus"):
                         assunto["id"] = assunto["id_corpus"]
                     items.append(assunto)
+            if (
+                not items
+                and not thematic_only
+                and data.get("id") is not None
+                and (data.get("title") or data.get("titulo"))
+            ):
+                items = [data]
         elif isinstance(data, list):
             items = data
         else:
@@ -731,23 +798,9 @@ def process_all(dry_run: bool) -> tuple[list[dict], list[tuple[int, str, str]], 
                 item["id"] = final_id
             main_items.append(item)
         if file_id_map:
-            ref_keys = (
-                "connections",
-                "lacuna_investigativa",
-                "analise",
-                "summary",
-                "descricao",
-                "resumo",
-                "result",
-                "ponto_de_inflexao",
-                "evidence_note",
-                "title",
-                "titulo",
-            )
+            global_id_map.update(file_id_map)
             for item in main_items:
-                for key in ref_keys:
-                    if key in item:
-                        item[key] = remap_id_refs(item[key], file_id_map)
+                apply_id_map(item, file_id_map)
         for item in main_items:
             u = normalize_main_entry(item, fpath.name)
             if not u:
@@ -761,8 +814,10 @@ def process_all(dry_run: bool) -> tuple[list[dict], list[tuple[int, str, str]], 
             else:
                 target.parent.mkdir(parents=True, exist_ok=True)
                 target.write_text(render_timeline_post(u), encoding="utf-8")
+                written_posts.append(target)
                 print(f"  OK {target.relative_to(ROOT)}")
             batch_had_output = True
+        thematic_touched = False
         for item in pending_thematic:
             tid = thematic_id_from_entry(item)
             if tid is None:
@@ -772,7 +827,11 @@ def process_all(dry_run: bool) -> tuple[list[dict], list[tuple[int, str, str]], 
                 note = f"{fpath.name}: T-{old_t} → T-{final_t}"
                 remaps.append(note)
                 print(f"  REALOCA {note}")
-                item["id"] = final_t
+                item["id"] = f"T-{final_t}" if isinstance(item.get("id"), str) else final_t
+                thematic_touched = True
+            if global_id_map:
+                apply_id_map(item, global_id_map)
+                thematic_touched = True
             item["_source_file"] = fpath.name
             content, md_fname = render_estudos_post(item, final_t)
             target = POSTS / "estudos" / md_fname
@@ -783,18 +842,32 @@ def process_all(dry_run: bool) -> tuple[list[dict], list[tuple[int, str, str]], 
             else:
                 target.parent.mkdir(parents=True, exist_ok=True)
                 target.write_text(content, encoding="utf-8")
+                written_posts.append(target)
                 print(f"  OK {target.relative_to(ROOT)}")
             thematic.append((final_t, fpath.name, md_fname))
             batch_had_output = True
-        if file_id_map and not dry_run:
+        if (file_id_map or thematic_touched) and not dry_run:
             if isinstance(data, dict):
                 meta = data.setdefault("_meta", {})
                 if isinstance(meta, dict):
                     meta["realocado_em"] = date.today().isoformat()
-                    meta["realocacao"] = {str(k): v for k, v in file_id_map.items()}
+                    if file_id_map:
+                        meta["realocacao"] = {str(k): v for k, v in file_id_map.items()}
+                    elif global_id_map:
+                        meta["refs_realocadas"] = {str(k): v for k, v in global_id_map.items()}
             fpath.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         if batch_had_output or not isinstance(data, dict) or not data.get("_staging_note"):
             archived.append(fpath.name)
+
+    if not dry_run and written_posts:
+        conn_index = build_corpus_index()
+        theme_index = build_thematic_index()
+        for path in written_posts:
+            text = path.read_text(encoding="utf-8")
+            new_text, n = fix_conexoes_section(text, conn_index, theme_index)
+            if n:
+                path.write_text(new_text, encoding="utf-8")
+                print(f"  links {path.name}: {n}")
 
     return main_entries, thematic, archived, remaps
 

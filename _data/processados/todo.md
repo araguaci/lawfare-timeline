@@ -1,13 +1,22 @@
 # Notas de processamento · `_data/todo/`
 
-**Atualizado:** 2026-11-11 (2021–2024 · T-275)
+**Atualizado:** 2026-11-11 (2032–2040 · T-277)
 
 ## Fila
 
 - `_data/todo/_staging/` — HTML/MD (rascunhos; não mergear como ID)
-- JSON 2021–2024 + T-275 arquivados 11/11
+- JSON raspagem out–nov + T-276 arquivados 11/11 (IDs finais 2032–2040 e T-277)
 - `auditoria-ids-2026-10-18.md` permanece em `_data/todo/` (nota, não é ficha)
 - Duplicata `lawfare-batch-1943-1959.json` = conteúdo de 1926–1942 — sem merge
+
+## Merge 11/11/2026 (c)
+
+| Batch | IDs na fila | IDs finais |
+|-------|-------------|------------|
+| Raspagem out–nov (2º turno, INQ 4.781, Vorcaro×Moraes) | 2025–2033 (colisão com Sun Tzu) | **2032–2040** |
+| Ciclo fechado do INQ 4.781 | T-276 (colisão com Sun Tzu) | **T-277** |
+
+2025–2031 e T-276 intactos. **2037–2038** seguem `ev-contested`. **2040** segue `ev-alleged`. Próximo main **2041** · próximo temático **T-278**.
 
 ## Merge 11/11/2026
 
