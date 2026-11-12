@@ -11,20 +11,20 @@
     "tracks": {
       "main": {
         "description": "Track principal — eventos institucionais, decisões judiciais, episódios políticos",
-        "id_range": "1–2031 (confirmed)",
+        "id_range": "1–2040 (confirmed)",
         "id_format": "integer",
-        "last_confirmed": 2031,
-        "last_jekyll_published": 2031,
+        "last_confirmed": 2040,
+        "last_jekyll_published": 2040,
         "last_session_produced": 1762,
-        "notes": "lawfare.json confirmado até 2031. Próximo ID livre: 2032."
+        "notes": "lawfare.json confirmado até 2040. Próximo ID livre: 2041."
       },
       "thematic": {
         "description": "Sub-corpus temático — análise estrutural de operações e padrões",
-        "id_range": "100–276",
+        "id_range": "100–277",
         "id_format": "integer",
-        "last_confirmed": 276,
-        "last_session_produced": 276,
-        "notes": "T-276 confirmado. Próximo thematic livre: T-277."
+        "last_confirmed": 277,
+        "last_session_produced": 277,
+        "notes": "T-277 confirmado. Próximo thematic livre: T-278."
       }
     }
   },
@@ -605,14 +605,22 @@
           ],
           "status": "confirmed",
           "notes": "2026-11-11: Dragão e a Onça cap. 19 Sun Tzu (T-276)."
+        },
+        {
+          "range": [
+            2032,
+            2040
+          ],
+          "status": "confirmed",
+          "notes": "Merge todo 2026-11-11: main IDs 2032-2040."
         }
       ],
-      "last_id": 2031,
-      "last_jekyll_published": 2031,
+      "last_id": 2040,
+      "last_jekyll_published": 2040,
       "last_produced": 1770,
-      "next_available": 2032,
+      "next_available": 2041,
       "merge_queue": [],
-      "last_confirmed": 2031,
+      "last_confirmed": 2040,
       "last_session_produced": 1770
     },
     "thematic": {
@@ -1931,10 +1939,17 @@
           "topic": "T-276 Dragão e a Onça — Sun Tzu: vencer sem lutar",
           "artifact": "2026-11-11-t276-dragao-onca-suntzu.md",
           "notes": "dragao-onca-suntzu.html · main 2025-2031"
+        },
+        {
+          "id": 277,
+          "status": "confirmed",
+          "topic": "T-277 (thematic-T276-inq4781-ciclo-fechado.json)",
+          "artifact": "2026-11-11-inq-4781-ciclo-fechado-20192026-arquivado-por-conflito-interno-nao-por-controle-externo.md",
+          "notes": "Estudo Jekyll _posts/estudos/2026-11-11-inq-4781-ciclo-fechado-20192026-arquivado-por-conflito-interno-nao-por-controle-externo.md"
         }
       ],
-      "last_id": 276,
-      "next_available": 277,
+      "last_id": 277,
+      "next_available": 278,
       "pending": [],
       "pending_notes": {},
       "last_confirmed": 276,
@@ -2003,8 +2018,8 @@
     "thematic_track_last_sync": "2026-11-11",
     "dragao_onca_series_sync": "2026-11-11",
     "ids_confirmed_total": {
-      "main_track": "2024 (Jekyll + lawfare.json)",
-      "thematic_track": 275
+      "main_track": "2040 (Jekyll + lawfare.json)",
+      "thematic_track": 277
     },
     "ids_pending_production": [],
     "artifacts_without_thematic_id": [],
@@ -3060,9 +3075,25 @@
         "t_studies_on_disk": 135
       },
       "status": "completed"
+    },
+    {
+      "date": "2026-11-11",
+      "session": "cursor — fila todo sem colisao de ID",
+      "produced": [
+        "Main track 2032-2040",
+        "Thematic T-277–T-277"
+      ],
+      "summary": {
+        "lawfare_max_id": 2040,
+        "next_main_id": 2041,
+        "thematic_last": "T-277",
+        "next_thematic": "T-278",
+        "t_studies_on_disk": 137
+      },
+      "status": "completed"
     }
   ],
-  "last_main_id": 2031,
-  "next_available": 2032,
+  "last_main_id": 2040,
+  "next_available": 2041,
   "updated": "2026-11-11"
 }
